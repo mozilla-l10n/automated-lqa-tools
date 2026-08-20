@@ -19,13 +19,15 @@ prompts/             the review prompts and the finding schema
 tools/               the pipeline
 locales/<code>/      conventions.md + suppressions.yaml  (you edit these)
 state/<code>/        snapshot, findings, metadata          (the pipeline owns these)
-reports/<code>.md    the generated report                  (read this)
+(reports live at ../reports/<locale>/firefox.md)
 ```
 
 ## Reading the output
 
-Start at [`reports/00-summary.md`](reports/00-summary.md), then the
-per-locale report. Each one opens with what changed in this run — new,
+Start at [`../reports/firefox.md`](../reports/firefox.md), then the
+per-locale report at `../reports/<locale>/firefox.md`. Each locale
+directory also holds that locale's report for the other projects, and the
+reports link to each other. Each one opens with what changed in this run — new,
 fixed, needs re-read, retired — before the full open backlog.
 
 Findings carry two axes. **Category** A–E says what kind of defect it is;

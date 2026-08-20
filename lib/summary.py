@@ -70,7 +70,8 @@ def render(project) -> str:
     for r in sorted(checked, key=lambda r: (-r["urgent"], -r["open"])):
         m = r["meta"]
         out.append(
-            f"| [{r['locale']}]({r['locale']}.md) | {m.get('last_run', '')} | "
+            f"| [{r['locale']}]({r['locale']}/{project.name}.md) | "
+            f"{m.get('last_run', '')} | "
             f"{m.get('mode', '')} | `{m.get('l10n_sha', '')[:8]}` | "
             f"{m.get('strings', 0):,} | {m.get('missing', 0):,} | "
             f"**{r['open']}** | {r['urgent']} | {r['fixed']} | {r['suppressed']} |"
@@ -114,7 +115,7 @@ def main(argv=None) -> int:
     if args.stdout:
         print(text)
         return 0
-    path = os.path.join(project.root, "reports", "00-summary.md")
+    path = project.summary_path
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as fh:
         fh.write(text)

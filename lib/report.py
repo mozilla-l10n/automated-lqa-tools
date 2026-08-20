@@ -179,6 +179,27 @@ def _delta_section(delta_report: dict) -> str:
     return "\n".join(parts)
 
 
+def _siblings(locale: str, project: str) -> str:
+    """Links to the same locale's reports for the other projects.
+
+    Reports are grouped by locale, so a reviewer who works on Italian has
+    everything about Italian in one directory; this makes that navigable.
+    """
+    import glob
+
+    here = os.path.dirname(os.path.abspath(__file__))
+    root = os.path.join(os.path.dirname(here), "reports", locale)
+    others = sorted(
+        os.path.basename(p)[:-3]
+        for p in glob.glob(os.path.join(root, "*.md"))
+        if os.path.basename(p)[:-3] != project
+    )
+    if not others:
+        return ""
+    links = " · ".join(f"[{name}]({name}.md)" for name in others)
+    return f"Also for {locale}: {links}"
+
+
 def render(locale, meta, health, counts, findings, systemic, delta_report, counts_conv, rules) -> str:
     open_findings = [f for f in findings if f.is_open]
     suppressed = [f for f in findings if f.status == "suppressed"]
@@ -190,7 +211,7 @@ def render(locale, meta, health, counts, findings, systemic, delta_report, count
         by_impact[f.impact] = by_impact.get(f.impact, 0) + 1
 
     lines = [
-        f"# Firefox l10n QA — {locale}",
+        f"# {meta.get('project', '').capitalize() or 'l10n'} l10n QA — {locale}",
         "",
         "| | |",
         "|---|---|",
@@ -203,7 +224,9 @@ def render(locale, meta, health, counts, findings, systemic, delta_report, count
         f"| **Strings reviewed this run** | {meta.get('reviewed', 0):,} of {health.strings:,} |",
         "",
         "Findings are keyed by string id, never by line number. The locale is "
-        "assessed against en-US only.",
+        "assessed against its source only.",
+        "",
+        _siblings(locale, meta.get("project", "")),
         "",
         "---",
         "",

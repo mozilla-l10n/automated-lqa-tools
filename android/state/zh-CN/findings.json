@@ -1,0 +1,22 @@
+[
+ {
+  "category": "A",
+  "check": "placeholders",
+  "current": "{$quantity ->} [other] 删除 %d 个文件？",
+  "fid": "50caf0f34c05",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-08-20",
+  "impact": 1,
+  "last_seen": "2026-08-20",
+  "locale": "zh-CN",
+  "origin": {},
+  "rationale": "The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.",
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "134b14ec",
+  "string_id": "downloads_delete_dialog_title",
+  "suggest": "",
+  "summary": "`downloads_delete_dialog_title` has placeholders %d where the source has none",
+  "suppressed_by": ""
+ }
+]

@@ -76,8 +76,20 @@ class Project:
     def locale_dir(self, locale: str) -> str:
         return os.path.join(self.root, "locales", locale)
 
+    # Reports live at the repository root, grouped by locale rather than by
+    # project: reports/it/firefox.md beside reports/it/android.md. A locale
+    # usually has one team, and they want everything about their language in
+    # one place rather than split across project directories.
+    @property
+    def reports_root(self) -> str:
+        return os.path.join(REPO_ROOT, "reports")
+
     def report_path(self, locale: str) -> str:
-        return os.path.join(self.root, "reports", f"{locale}.md")
+        return os.path.join(self.reports_root, locale, f"{self.name}.md")
+
+    @property
+    def summary_path(self) -> str:
+        return os.path.join(self.reports_root, f"{self.name}.md")
 
     @property
     def tools_dir(self) -> str:

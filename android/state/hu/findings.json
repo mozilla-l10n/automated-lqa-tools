@@ -1,0 +1,42 @@
+[
+ {
+  "category": "D",
+  "check": "ui_references",
+  "current": "{ <p> }A böngésző kapcsolat nélküli módban van, ezért nem tud csatlakozni a kért elemhez.{ </p> }\n{ <ul> }\n{ <li> }Csatlakoztatva van a számítógép a hálózathoz?{ </li> }\n{ <li> }Nyomja meg a „Próbálja újra” gombot az online módba váltáshoz és az oldal újratöltéséhez.{ </li> }\n{ </ul> }",
+  "fid": "5e3e98a088ee",
+  "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+  "first_seen": "2026-08-20",
+  "impact": 2,
+  "last_seen": "2026-08-20",
+  "locale": "hu",
+  "origin": {},
+  "rationale": "In the source this string quotes “Try Again”, which is exactly the value of `mozac_browser_errorpages_page_refresh` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "48f49536",
+  "string_id": "mozac_browser_errorpages_offline_message",
+  "suggest": "Újrapróbálkozás",
+  "summary": "`mozac_browser_errorpages_offline_message` quotes “Próbálja újra” but the string it names, `mozac_browser_errorpages_page_refresh`, reads “Újrapróbálkozás”",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "ui_references",
+  "current": "Térjen vissza gyorsan a kedvenc oldalaihoz a %1$sban. Csak válassza a „Hozzáadás a kezdőképernyőre” lehetőséget a %1$s menüből.",
+  "fid": "f1cd7fc4ff24",
+  "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-08-20",
+  "impact": 2,
+  "last_seen": "2026-08-20",
+  "locale": "hu",
+  "origin": {},
+  "rationale": "In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "a4bb4bd9",
+  "string_id": "firstrun_shortcut_text",
+  "suggest": "Kezdőképernyőhöz adás",
+  "summary": "`firstrun_shortcut_text` quotes “Hozzáadás a kezdőképernyőre” but the string it names, `menu_add_to_home_screen`, reads “Kezdőképernyőhöz adás”",
+  "suppressed_by": ""
+ }
+]

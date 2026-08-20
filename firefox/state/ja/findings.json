@@ -1052,6 +1052,26 @@
   "suppressed_by": ""
  },
  {
+  "category": "D",
+  "check": "ui_references",
+  "current": "ステップ 1: Windows の [設定] > [アプリ] > [既定のアプリ] を開きます\nステップ 2: “Web ブラウザー” まで下へスクロールします\nステップ 3: アイコンをクリックし、{ -brand-short-name } を選んでください",
+  "fid": "115189ea52f6",
+  "file": "browser/browser/defaultBrowserNotification.ftl",
+  "first_seen": "2026-08-20",
+  "impact": 2,
+  "last_seen": "2026-08-20",
+  "locale": "ja",
+  "origin": {},
+  "rationale": "In the source this string quotes “Web browser”, which is exactly the value of `desktop-entry-generic-name` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "a6086bea",
+  "string_id": "default-browser-guidance-notification-body-instruction-win10",
+  "suggest": "ウェブブラウザー",
+  "summary": "`default-browser-guidance-notification-body-instruction-win10` quotes “Web ブラウザー” but the string it names, `desktop-entry-generic-name`, reads “ウェブブラウザー”",
+  "suppressed_by": ""
+ },
+ {
   "category": "E",
   "check": "legacy",
   "current": "",

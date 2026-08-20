@@ -5,12 +5,23 @@ state, so a run only looks at what changed since the last one.
 
 [`lib/`](lib/) holds the pipeline. Each project is a directory beside it
 holding only what differs: its configuration, prompts, docs, locale
-instructions, state, reports, and the checks its file format needs.
+instructions, state, and the checks its file format needs.
+
+Reports are the exception: they live in [`reports/`](reports/) at the root,
+grouped by **locale** rather than by project, because a locale usually has
+one team and they want everything about their language together.
+
+```
+reports/firefox.md        every locale, one project
+reports/android.md
+reports/it/firefox.md     one locale, one project
+reports/it/android.md
+```
 
 | Project | What it covers | |
 |---|---|---|
-| [`firefox/`](firefox/) | Firefox desktop, plus shared `toolkit` and `dom` strings | [README](firefox/README.md) · [reports](firefox/reports/00-summary.md) |
-| [`android/`](android/) | Firefox for Android, Focus, and Android Components | [README](android/README.md) · [reports](android/reports/00-summary.md) |
+| [`firefox/`](firefox/) | Firefox desktop, plus shared `toolkit` and `dom` strings | [README](firefox/README.md) · [reports](reports/firefox.md) |
+| [`android/`](android/) | Firefox for Android, Focus, and Android Components | [README](android/README.md) · [reports](reports/android.md) |
 
 Each has its own workflow and opens its own pull request, so a reviewer only
 sees the project they work on.
@@ -48,8 +59,8 @@ is new and what got fixed rather than restating everything every time.
 
 ## What the automation can and cannot touch
 
-A run writes only its own project's `state/`, `reports/`, and — on first
-sight of a locale — a draft under `locales/`. It never edits the content it
+A run writes only its own project's `state/`, its own files under
+`reports/`, and — on first sight of a locale — a draft under `locales/`. It never edits the content it
 reviews, and it never edits itself.
 
 That holds structurally, not by convention. The incremental reviewer is a
@@ -65,7 +76,8 @@ project's self-test, commit. A run never improvises its own logic.
 ## Adding another automation
 
 Create a sibling directory with `config.yaml`, `prompts/`, `tools/checks.py`
-and `docs/`; the pipeline maintains `locales/`, `state/` and `reports/`.
+and `docs/`; the pipeline maintains `locales/` and `state/`, and writes
+into the shared `reports/` tree at the root.
 Give it its own workflow in `.github/workflows/` and its own README.
 
 `config.yaml` declares the three things that vary:

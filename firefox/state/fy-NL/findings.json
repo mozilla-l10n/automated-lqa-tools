@@ -10934,9 +10934,9 @@
    "section": "E. Developer comment not followed / should stay English",
    "severity": "S1"
   },
-  "rationale": "",
-  "resolved_on": "",
-  "status": "open",
+  "rationale": "(Retired: the suggested text is identical to the current text.)",
+  "resolved_on": "2026-08-20",
+  "status": "withdrawn",
   "string_hash": "c634f51e",
   "string_id": "webconsole-commands-usage-block",
   "suggest": "URLSTRING",

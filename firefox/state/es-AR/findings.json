@@ -4524,6 +4524,26 @@
   "suppressed_by": ""
  },
  {
+  "category": "D",
+  "check": "ui_references",
+  "current": "Haga clic derecho en un elemento en el %S y seleccione “Romper en...” para agregar un punto de interrupción",
+  "fid": "052d1cddf8e5",
+  "file": "devtools/client/debugger.properties",
+  "first_seen": "2026-08-20",
+  "impact": 2,
+  "last_seen": "2026-08-20",
+  "locale": "es-AR",
+  "origin": {},
+  "rationale": "In the source this string quotes “Break on…”, which is exactly the value of `watchpoints.submenu` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "e52edd6c",
+  "string_id": "noDomMutationBreakpoints",
+  "suggest": "Interrumpir en…",
+  "summary": "`noDomMutationBreakpoints` quotes “Romper en...” but the string it names, `watchpoints.submenu`, reads “Interrumpir en…”",
+  "suppressed_by": ""
+ },
+ {
   "category": "E",
   "check": "typography",
   "current": "Haga clic derecho en un elemento en el %S y seleccione “Romper en...” para agregar un punto de interrupción",
@@ -5090,7 +5110,7 @@
  {
   "category": "D",
   "check": "llm",
-  "current": "Registros presistentes",
+  "current": "console.clear() se evitó debido a “Registros presistentes”",
   "fid": "d2d2683795e7",
   "file": "devtools/client/webconsole.properties",
   "first_seen": "2026-08-20",
@@ -5100,13 +5120,13 @@
   "origin": {
    "confidence": "high"
   },
-  "rationale": "The quoted text must match the setting label webconsole.console.settings.menu.item.enablePersistentLogs.label, which is “Registros persistentes”. Same typo in devtools/shared/webconsole.properties.",
+  "rationale": "In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
   "resolved_on": "",
   "status": "open",
   "string_hash": "d7b2d2ee",
   "string_id": "preventedConsoleClear",
   "suggest": "Registros persistentes",
-  "summary": "Typo “presistentes” in the quoted setting name",
+  "summary": "`preventedConsoleClear` quotes “Registros presistentes” but the string it names, `webconsole.console.settings.menu.item.enablePersistentLogs.label`, reads “Registros persistentes”",
   "suppressed_by": ""
  },
  {
@@ -5129,6 +5149,26 @@
   "string_id": "whypaused-exception",
   "suggest": "Pausado en excepción",
   "summary": "Pause reason uses the infinitive “Pausar” instead of the state “Pausado”",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "ui_references",
+  "current": "console.clear() se evitó debido a “Registros presistentes”",
+  "fid": "522690e99915",
+  "file": "devtools/shared/webconsole.properties",
+  "first_seen": "2026-08-20",
+  "impact": 2,
+  "last_seen": "2026-08-20",
+  "locale": "es-AR",
+  "origin": {},
+  "rationale": "In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "d7b2d2ee",
+  "string_id": "preventedConsoleClear",
+  "suggest": "Registros persistentes",
+  "summary": "`preventedConsoleClear` quotes “Registros presistentes” but the string it names, `webconsole.console.settings.menu.item.enablePersistentLogs.label`, reads “Registros persistentes”",
   "suppressed_by": ""
  },
  {

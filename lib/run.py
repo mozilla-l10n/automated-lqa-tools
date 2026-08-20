@@ -232,6 +232,7 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
     )
 
     new_meta = {
+        "project": project.name,
         "locale": locale,
         "mode": mode,
         "last_run": today(),

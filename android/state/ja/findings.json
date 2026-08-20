@@ -1,0 +1,22 @@
+[
+ {
+  "category": "A",
+  "check": "plurals",
+  "current": "{$quantity ->} [one] ファイルを削除しますか？ [other] %d 個のファイルを削除しますか？",
+  "fid": "c4d0ce66f1b2",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-08-20",
+  "impact": 4,
+  "last_seen": "2026-08-20",
+  "locale": "ja",
+  "origin": {},
+  "rationale": "ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "27fbf41b",
+  "string_id": "downloads_delete_dialog_title",
+  "suggest": "",
+  "summary": "`downloads_delete_dialog_title` has plural variant ['one'], which ja does not have",
+  "suppressed_by": ""
+ }
+]

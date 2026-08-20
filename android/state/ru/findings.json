@@ -1,0 +1,42 @@
+[
+ {
+  "category": "E",
+  "check": "typography",
+  "current": "Сетевой адрес должен содержать \"https://\" or \"http://\"",
+  "fid": "736fac105508",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-08-20",
+  "impact": 4,
+  "last_seen": "2026-08-20",
+  "locale": "ru",
+  "origin": {},
+  "rationale": "The locale's quote convention is `guillemet` (46 occurrences).",
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "d33df93c",
+  "string_id": "add_login_hostname_invalid_text_3",
+  "suggest": "",
+  "summary": "`add_login_hostname_invalid_text_3` uses straight double quotes",
+  "suppressed_by": ""
+ },
+ {
+  "category": "E",
+  "check": "typography",
+  "current": "Автоматически удаляет данные просмотра сети, когда вы выбираете \"Выйти\" в главном меню",
+  "fid": "a54a58314c94",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-08-20",
+  "impact": 4,
+  "last_seen": "2026-08-20",
+  "locale": "ru",
+  "origin": {},
+  "rationale": "The locale's quote convention is `guillemet` (46 occurrences).",
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "c3b8568a",
+  "string_id": "preference_summary_delete_browsing_data_on_quit_2",
+  "suggest": "",
+  "summary": "`preference_summary_delete_browsing_data_on_quit_2` uses straight double quotes",
+  "suppressed_by": ""
+ }
+]

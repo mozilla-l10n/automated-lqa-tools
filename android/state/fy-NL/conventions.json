@@ -1,0 +1,35 @@
+{
+ "_meta": {
+  "locale": "fy-NL",
+  "prose_chunks": 2908,
+  "strings": 2908
+ },
+ "apostrophe": {
+  "straight": 8,
+  "typographic": 101
+ },
+ "dash": {
+  "em": 0,
+  "en": 7
+ },
+ "ellipsis": {
+  "ascii": 0,
+  "char": 21
+ },
+ "fullwidth": {
+  "punctuation": 0
+ },
+ "inverted_marks": {
+  "open-exclamation": 0,
+  "open-question": 0
+ },
+ "nbsp": {
+  "before-punctuation": 0,
+  "narrow": 0,
+  "space-before-punctuation": 0,
+  "total": 0
+ },
+ "quotes": {
+  "curly-single": 17
+ }
+}

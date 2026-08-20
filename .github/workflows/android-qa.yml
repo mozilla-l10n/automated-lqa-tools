@@ -52,8 +52,8 @@ jobs:
     outputs:
       locales: ${{ steps.pick.outputs.locales }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: '3.12'
       - run: pip install PyYAML
@@ -91,9 +91,9 @@ jobs:
       matrix:
         locale: ${{ fromJson(needs.plan.outputs.locales) }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: '3.12'
           cache: pip
@@ -101,7 +101,7 @@ jobs:
       - run: pip install -r requirements.txt
 
       - name: Cache the upstream clones
-        uses: actions/cache@v4
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: work
           key: repos-${{ matrix.locale }}-${{ github.run_id }}
@@ -138,12 +138,12 @@ jobs:
 
       - name: Upload this locale's state and report
         if: ${{ !inputs.dry_run }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: result-${{ matrix.locale }}
           path: |
             android/state/${{ matrix.locale }}/
-            android/reports/${{ matrix.locale }}.md
+            reports/${{ matrix.locale }}/android.md
             android/locales/${{ matrix.locale }}/
           if-no-files-found: ignore
           retention-days: 7
@@ -157,11 +157,11 @@ jobs:
       BRANCH: l10n-qa/android
       BASE: ${{ github.ref_name }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: '3.12'
       - run: pip install -r requirements.txt
@@ -183,7 +183,7 @@ jobs:
               # human-edited, so the base wins those; state and reports are
               # rewritten by this run anyway, so the branch keeps them.
               git checkout --theirs -- android/locales 2>/dev/null || true
-              git checkout --ours   -- android/state android/reports 2>/dev/null || true
+              git checkout --ours   -- android/state reports 2>/dev/null || true
               git add -A
               git commit --no-edit
             fi
@@ -192,7 +192,7 @@ jobs:
           fi
 
       - name: Collect the per-locale results
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
           pattern: result-*
           merge-multiple: true
@@ -205,7 +205,11 @@ jobs:
             echo "no artifacts produced; nothing to propose"
             exit 0
           fi
-          cp -R incoming/. android/
+          # upload-artifact roots each artifact at the common ancestor of the
+          # paths it was given. Those are now `android/state`, `android/locales`
+          # and `reports/`, which diverge at the top, so the artifact carries
+          # full workspace-relative paths and unpacks at the root.
+          cp -R incoming/. ./
           rm -rf incoming
 
       - name: Refresh the cross-locale summary
@@ -215,7 +219,7 @@ jobs:
         id: commit
         run: |
           set -euo pipefail
-          git add android/state android/reports android/locales
+          git add android/state reports android/locales
           if git diff --cached --quiet; then
             echo "no changes: every locale is where it was"
             echo 'changed=false' >> "$GITHUB_OUTPUT"
@@ -242,7 +246,7 @@ jobs:
             echo
             echo '---'
             echo
-            sed -n '1,40p' android/reports/00-summary.md
+            sed -n '1,40p' reports/android.md
           } > /tmp/pr-body.md
 
           if gh pr view "$BRANCH" --json state --jq .state 2>/dev/null | grep -qx OPEN; then
@@ -262,5 +266,5 @@ jobs:
           {
             echo '## Android l10n QA'
             echo
-            sed -n '1,40p' android/reports/00-summary.md
+            sed -n '1,40p' reports/android.md
           } >> "$GITHUB_STEP_SUMMARY"

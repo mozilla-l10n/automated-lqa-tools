@@ -9,6 +9,7 @@
  "open": 20,
  "previous_run": "2026-08-20",
  "previous_sha": "afd16223d876",
+ "project": "android",
  "reviewed": 0,
  "source_repo": "https://github.com/mozilla-l10n/android-l10n",
  "source_sha": "afd16223d876",

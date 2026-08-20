@@ -16,6 +16,10 @@ library they are built on.
 Results arrive as a pull request on `l10n-qa/android`, separate from the
 Firefox one so the two teams do not have to read each other's findings.
 
+Start at [`../reports/android.md`](../reports/android.md), then the
+per-locale report at `../reports/<locale>/android.md`, which sits beside
+that locale's Firefox report.
+
 ## How this differs from the Firefox project
 
 Everything format-agnostic is shared, in [`../lib/`](../lib/). Three things

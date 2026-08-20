@@ -118,6 +118,6 @@ missing count, not 4,000 defects.
 
 ## Removing a locale
 
-Take it out of `config.yaml`. Its `state/` and `reports/` files stay where
-they are; delete them by hand if you want them gone. Nothing will run
+Take it out of `config.yaml`. Its `state/` entry and its file under
+`reports/<locale>/` stay where they are; delete them by hand if you want them gone. Nothing will run
 against it again.

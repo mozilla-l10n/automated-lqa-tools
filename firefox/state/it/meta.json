@@ -9,6 +9,7 @@
  "open": 9,
  "previous_run": "2026-08-20",
  "previous_sha": "fef20cd7efc2",
+ "project": "firefox",
  "reviewed": 0,
  "source_repo": "https://github.com/mozilla-l10n/firefox-l10n-source",
  "source_sha": "9277403f174f",

@@ -1,0 +1,42 @@
+[
+ {
+  "category": "D",
+  "check": "ui_references",
+  "current": "Untuk menambahkan situs baru: Kunjungi dan pilih “Jangan terjemahkan situs ini” dari menu terjemahan.",
+  "fid": "9b899f4e670b",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-08-20",
+  "impact": 2,
+  "last_seen": "2026-08-20",
+  "locale": "id",
+  "origin": {},
+  "rationale": "In the source this string quotes “Never translate this site”, which is exactly the value of `translation_option_bottom_sheet_never_translate_site` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "cb0cfabe",
+  "string_id": "never_translate_site_header_preference",
+  "suggest": "Jangan pernah terjemahkan situs ini",
+  "summary": "`never_translate_site_header_preference` quotes “Jangan terjemahkan situs ini” but the string it names, `translation_option_bottom_sheet_never_translate_site`, reads “Jangan pernah terjemahkan situs ini”",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "ui_references",
+  "current": "Kembali ke situs favorit Anda di %1$s dengan cepat. Cukup pilih \"Tambahkan ke layar Beranda\" dari menu %1$s.",
+  "fid": "894fa6151aea",
+  "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-08-20",
+  "impact": 2,
+  "last_seen": "2026-08-20",
+  "locale": "id",
+  "origin": {},
+  "rationale": "In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "a4bb4345",
+  "string_id": "firstrun_shortcut_text",
+  "suggest": "Tambahkan ke Beranda",
+  "summary": "`firstrun_shortcut_text` quotes “Tambahkan ke layar Beranda” but the string it names, `menu_add_to_home_screen`, reads “Tambahkan ke Beranda”",
+  "suppressed_by": ""
+ }
+]
