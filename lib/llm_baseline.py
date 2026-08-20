@@ -304,6 +304,10 @@ def review(project, locale, l10n_root, source_root, l10n, trees=None, only=None,
 
     results: list[Finding] = []
     empty: list[str] = []
+    covered: set[str] = set()
+
+    for _name, files in partitions:
+        covered.update(files)
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         futures = {
@@ -329,4 +333,4 @@ def review(project, locale, l10n_root, source_root, l10n, trees=None, only=None,
                     results.append(finding)
 
     log(f"    baseline: {len(results)} findings from {len(partitions)} partitions")
-    return results, empty
+    return results, empty, covered

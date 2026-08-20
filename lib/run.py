@@ -151,6 +151,7 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
     # --- model layer ------------------------------------------------------
     llm_findings: list = []
     reviewed = 0
+    reviewed_keys: set = set()
     if args.no_llm:
         log("  model review skipped (--no-llm)")
     elif mode == "baseline" and project.baseline_strategy == "batched":
@@ -165,14 +166,18 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
         )
         log(f"  model usage: {usage}")
         reviewed = len(keys)
+        reviewed_keys = set(keys)
     elif mode == "baseline":
         import llm_baseline
         log("  baseline review of the whole tree")
-        llm_findings, empty = llm_baseline.review(
+        llm_findings, empty, reviewed_files = llm_baseline.review(
             project, locale, l10n_root, source_root, l10n, trees,
             only=args.partitions, log=log,
         )
-        reviewed = len(l10n)
+        # Only the partitions that actually ran count as reviewed.
+        covered = set(reviewed_files or trees.l10n_files)
+        reviewed_keys = {k for k in l10n if k[0] in covered}
+        reviewed = len(reviewed_keys)
         if empty:
             log(f"  partitions returning nothing: {', '.join(sorted(empty))}")
     else:
@@ -188,6 +193,7 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
             )
             log(f"  model usage: {usage}")
             reviewed = len(keys)
+            reviewed_keys = set(keys)
         else:
             log("  nothing changed since the last run; no model call")
 
@@ -260,7 +266,10 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
         changed = report.write(project, locale, text)
         log(f"  report {'updated' if changed else 'unchanged'}")
         findings_mod.save(project, locale, stored)
-        snapshot.save(os.path.join(project.state_dir(locale), "strings.json"), current)
+        snapshot.save(
+            os.path.join(project.state_dir(locale), "strings.json"),
+            snapshot.merge(previous, current, reviewed_keys),
+        )
         conventions.save(project, locale, counts_conv)
         save_meta(project, locale, new_meta)
         _ensure_locale_files(project, locale, counts_conv, log)

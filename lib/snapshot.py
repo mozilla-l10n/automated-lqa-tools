@@ -101,6 +101,32 @@ def diff(previous: dict, current: dict) -> Delta:
     return d
 
 
+def merge(previous: dict, current: dict, reviewed: set) -> dict:
+    """Advance the snapshot only for strings the model actually reviewed.
+
+    The snapshot means "content the reviewer has already seen", so a partial
+    run must not claim more than it did. Running one partition of a
+    baseline, or capping the batch with --limit, or skipping the model
+    entirely with --no-llm, all used to write a complete snapshot -- which
+    silently marked everything unreviewed as seen, and the skipped strings
+    would never be looked at again.
+
+    A string is recorded at its current hash if it was reviewed, or if it
+    has not changed since the last snapshot. Otherwise it keeps its old hash
+    -- so it still reads as changed next time -- or is left out entirely if
+    it is new, so it reads as new.
+    """
+    out: dict[str, dict[str, str]] = {}
+    for file, ids in current.items():
+        prev_ids = previous.get(file, {})
+        for mid, value in ids.items():
+            if (file, mid) in reviewed or prev_ids.get(mid) == value:
+                out.setdefault(file, {})[mid] = value
+            elif mid in prev_ids:
+                out.setdefault(file, {})[mid] = prev_ids[mid]
+    return out
+
+
 def load(path: str) -> dict:
     if not os.path.exists(path):
         return {}
