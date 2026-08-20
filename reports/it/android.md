@@ -86,13 +86,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (10)
+## 3. Open findings (0)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 9 |
-| 3 | Degraded language (grammar, spelling, terminology) | 1 |
+| 2 | Wrong content (says something other than the English) | 0 |
+| 3 | Degraded language (grammar, spelling, terminology) | 0 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -101,51 +101,7 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `browser_custom_tab_menu_handlebar_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — "custom tab" (a browser feature: a tab opened by another app) is mistranslated as "personalizzazione schede" (tab customization).
-  - Current: `Chiudi il menu per la personalizzazione schede`
-  - Source: `Close custom tab menu sheet`
-  - Suggest: `Chiudi il pannello del menu della scheda personalizzata`
-  - The source refers to the bottom sheet menu of a Custom Tab, not to a menu for customizing tabs; the meaning is reversed/altered.
-- `help_catch_trackers` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — "Help catch trackers" is translated as "Cattura i traccianti", dropping the "help" sense.
-  - Current: `Cattura i traccianti`
-  - Source: `Help catch trackers`
-  - Suggest: `Aiuta a individuare i traccianti`
-  - The source invites the user to help catch trackers; the Italian turns it into a direct command to catch them.
-- `opening_screen_last_tab_summary` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — "Open on last tab" is rendered as "Apri scheda più recente" (most recent tab) instead of the last open tab, inconsistent with opening_screen_last_tab "Ultima scheda".
-  - Current: `Apri scheda più recente`
-  - Source: `Open on last tab`
-  - Suggest: `Apri ultima scheda`
-  - The source says "Open on last tab", matching the option label "Last tab" translated as "Ultima scheda"; "scheda più recente" changes the wording and breaks consistency on the same preference surface.
-- `preference_enhanced_tracking_protection_custom_cookies_4` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — The translation adds "alcuni" (some) and softens the source's "will cause websites to break".
-  - Current: `Tutti i cookie (alcuni siti non funzioneranno correttamente)`
-  - Source: `All cookies (will cause websites to break)`
-  - Suggest: `Tutti i cookie (i siti web non funzioneranno correttamente)`
-  - The source states websites will break, without limiting it to some sites.
-- `preference_experiments_summary_2` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — Descriptive summary "Allows Mozilla to…" rendered as an imperative "Consenti a Mozilla…".
-  - Current: `Consenti a Mozilla di installare e condurre studi`
-  - Source: `Allows Mozilla to install and run studies`
-  - Suggest: `Consente a Mozilla di installare e condurre studi`
-  - The developer comment marks this as a summary describing what the preference does, not a command to the user.
-- `preferences_tab_strip` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — "Tab bar display" is rendered as "Visualizzazione barra delle schede" which reverses the word order/meaning of the preference title.
-  - Current: `Visualizzazione barra delle schede`
-  - Source: `Tab bar display`
-  - Suggest: `Mostra barra delle schede`
-  - The developer comment says the preference is for showing the tab strip; the Italian noun phrase is acceptable but ambiguous. Low value.
-- `protection_panel_banner_not_secure_description` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — "Your connection" is rendered as "Questa connessione" (this connection).
-  - Current: `Questa connessione non è sicura.`
-  - Source: `Your connection is not secure.`
-  - Suggest: `La tua connessione non è sicura.`
-  - The source says "Your connection is not secure."; the possessive was changed to a demonstrative.
-- `recent_tabs_header` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — Section header "Jump back in" is rendered as a singular call to action "Torna a questa scheda" (Go back to this tab).
-  - Current: `Torna a questa scheda`
-  - Source: `Jump back in`
-  - Suggest: `Riprendi da dove eri`
-  - This is a home-screen section header for recent tabs, not a per-tab action label referring to "this tab".
-- `sign_in_with_email` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — "Use email instead" is translated without the contrastive "instead", losing the alternative-method meaning.
-  - Current: `Accedi con l’email`
-  - Source: `Use email instead`
-  - Suggest: `Usa invece l’email`
-  - The source offers an alternative sign-in method ("instead"); the Italian drops that contrast.
+_Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
@@ -153,11 +109,7 @@ _Nothing in this category._
 
 ### D. Terminology, register & consistency
 
-- `sports_widget_final_results_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — "World Cup" is rendered as "Mondiali" here but as "Coppa del mondo" in the sibling strings, an inconsistency on the same surface.
-  - Current: `Risultati finali dei Mondiali`
-  - Source: `World Cup final results`
-  - Suggest: `Risultati finali della Coppa del mondo`
-  - sports_widget_final_results_page_content_description translates the same source phrase "World Cup final results" as "Risultati finali della Coppa del mondo"; the two accessibility strings for the same page must match.
+_Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
@@ -167,9 +119,19 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (1)
+### Dismissed by hand (11)
 
+- `browser_custom_tab_menu_handlebar_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — There is no ”custom tab” function
 - `browser_menu_summarize_page_badge` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — "Novità" is the agreed wording for this badge
+- `help_catch_trackers` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — This is part of a game in new tab.
+- `opening_screen_last_tab_summary` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — "scheda più recente" is clearer in the UI
+- `preference_enhanced_tracking_protection_custom_cookies_4` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — "alcuni siti" is a deliberate softening; the source overstates the effect
+- `preference_experiments_summary_2` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — the imperative matches the surrounding preference summaries in this screen
+- `preferences_tab_strip` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — "Visualizzazione barra delle schede" is the agreed title for this preference
+- `protection_panel_banner_not_secure_description` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — Avoid possessive where unnecessary
+- `recent_tabs_header` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — “Torna a questa scheda” is a choice based on the UI
+- `sign_in_with_email` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — the contrast is already clear from the surrounding buttons
+- `sports_widget_final_results_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — "Mondiali" is a shorter alternative here
 
 _One line each in `locales/it/dismissed.txt`. Delete the line and the finding returns._
 

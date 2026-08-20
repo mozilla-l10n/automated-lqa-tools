@@ -1,1 +1,11 @@
 browser_menu_summarize_page_badge — "Novità" is the agreed wording for this badge
+browser_custom_tab_menu_handlebar_content_description — There is no ”custom tab” function
+help_catch_trackers — This is part of a game in new tab.
+opening_screen_last_tab_summary — "scheda più recente" is clearer in the UI
+preference_enhanced_tracking_protection_custom_cookies_4 — "alcuni siti" is a deliberate softening; the source overstates the effect
+preference_experiments_summary_2 — the imperative matches the surrounding preference summaries in this screen
+preferences_tab_strip — "Visualizzazione barra delle schede" is the agreed title for this preference
+protection_panel_banner_not_secure_description — Avoid possessive where unnecessary
+recent_tabs_header — “Torna a questa scheda” is a choice based on the UI
+sign_in_with_email — the contrast is already clear from the surrounding buttons
+sports_widget_final_results_content_description — "Mondiali" is a shorter alternative here
