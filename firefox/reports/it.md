@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-20 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `443328fa7930` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `df73d5f2a722` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
 | **Previous run** | 2026-08-20 @ `443328fa7930` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,350 |
+| **Strings reviewed this run** | 3 of 18,350 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against en-US only.
 
@@ -15,8 +15,15 @@ Findings are keyed by string id, never by line number. The locale is assessed ag
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (0)
 
+_No new findings._
+
+### ✅ Fixed since the last run (4)
+
+- `felt-error-warning-elevation-attempt-failed-contact-admin` — `browser/browser/enterprise/felt.ftl` — `felt-error-warning-elevation-attempt-failed-contact-admin` uses a straight apostrophe
+  - Current: `Impossibile installare un aggiornamento a causa di privilegi di sistema insufficienti. Contattare l'amministratore per assistenza.`
+  - The tree uses ’ 1923 times against 8 straight.
 - `smartwindow-onboarding-title` — `browser/browser/newtab/onboarding.ftl` — `smartwindow-onboarding-title` calls `-smart-window-brand-name` with ['capitalization', 'plural-form'], but that term selects on ['form']
   - Current: `Rendi { -smart-window-brand-name } il tuo punto di partenza`
   - The term falls back to its catch-all variant, so the intended form is never selected.
@@ -24,16 +31,9 @@ Findings are keyed by string id, never by line number. The locale is assessed ag
   - Current: `Per consultare l’elenco dei dati raccolti da { -glean-brand-name } per applicazione, fare riferimento al <a data-l10n-name="glean-dictionary-link">Dizionario { -glean-brand-name }</a >.`
   - en-US: `To browse the list of data collected by { -glean-brand-name } per application, please consult the <a data-l10n-name="glean-dictionary-link">{ -glean-brand-name } Dictionary</a>.`
   - Whitespace inside a closing tag makes it render as literal text.
-- `felt-error-warning-elevation-attempt-failed-contact-admin` — `browser/browser/enterprise/felt.ftl` — `felt-error-warning-elevation-attempt-failed-contact-admin` uses a straight apostrophe
-  - Current: `Impossibile installare un aggiornamento a causa di privilegi di sistema insufficienti. Contattare l'amministratore per assistenza.`
-  - The tree uses ’ 1923 times against 8 straight.
 - `felt-error-warning-elevation-attempt-failed-contact-admin` — `toolkit/toolkit/enterprise/felt.ftl` — `felt-error-warning-elevation-attempt-failed-contact-admin` uses a straight apostrophe
   - Current: `Impossibile installare un aggiornamento a causa di privilegi di sistema insufficienti. Contattare l'amministratore per assistenza.`
   - The tree uses ’ 1923 times against 8 straight.
-
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
 
 ### 🔁 String changed, defect not verifiable — needs a re-read (0)
 
@@ -57,10 +57,10 @@ _Nothing retired._
 | Fluent / properties syntax errors | 0 |
 | Variable & placeholder mismatches | 0 |
 | Plural / select selector mismatches | 0 |
-| Term parameter mismatches | 1 |
+| Term parameter mismatches | 0 |
 | Access keys not in their label | 0 |
-| Markup & `data-l10n-name` defects | 1 |
-| Typography deviations from this locale's own norm | 2 |
+| Markup & `data-l10n-name` defects | 0 |
+| Typography deviations from this locale's own norm | 0 |
 
 ### Completeness
 
@@ -73,7 +73,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 1046, `straight-double` 25 | **curly-double** |
-| apostrophe | `typographic` 1923, `straight` 8 | **typographic** |
+| apostrophe | `typographic` 1925, `straight` 6 | **typographic** |
 | ellipsis | `char` 481 | **char** |
 | dash | `em` 75, `en` 18 | **em** |
 | nbsp | `total` 12, `before-punctuation` 4, `space-before-punctuation` 6 | _mixed_ |
@@ -87,24 +87,18 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (9)
+## 3. Open findings (5)
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 2 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 0 |
 | 3 | Degraded language (grammar, spelling, terminology) | 5 |
-| 4 | Cosmetic (typography, spacing) | 2 |
+| 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
 
-- `smartwindow-onboarding-title` — `browser/browser/newtab/onboarding.ftl` — `smartwindow-onboarding-title` calls `-smart-window-brand-name` with ['capitalization', 'plural-form'], but that term selects on ['form']
-  - Current: `Rendi { -smart-window-brand-name } il tuo punto di partenza`
-  - The term falls back to its catch-all variant, so the intended form is never selected.
-- `about-glean-about-data-list-item-dictionary` — `toolkit/toolkit/about/aboutGlean.ftl` — Malformed closing tag `</a >` in `about-glean-about-data-list-item-dictionary`
-  - Current: `Per consultare l’elenco dei dati raccolti da { -glean-brand-name } per applicazione, fare riferimento al <a data-l10n-name="glean-dictionary-link">Dizionario { -glean-brand-name }</a >.`
-  - en-US: `To browse the list of data collected by { -glean-brand-name } per application, please consult the <a data-l10n-name="glean-dictionary-link">{ -glean-brand-name } Dictionary</a>.`
-  - Whitespace inside a closing tag makes it render as literal text.
+_Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -123,12 +117,7 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
-- `felt-error-warning-elevation-attempt-failed-contact-admin` — `browser/browser/enterprise/felt.ftl` — `felt-error-warning-elevation-attempt-failed-contact-admin` uses a straight apostrophe
-  - Current: `Impossibile installare un aggiornamento a causa di privilegi di sistema insufficienti. Contattare l'amministratore per assistenza.`
-  - The tree uses ’ 1923 times against 8 straight.
-- `felt-error-warning-elevation-attempt-failed-contact-admin` — `toolkit/toolkit/enterprise/felt.ftl` — `felt-error-warning-elevation-attempt-failed-contact-admin` uses a straight apostrophe
-  - Current: `Impossibile installare un aggiornamento a causa di privilegi di sistema insufficienti. Contattare l'amministratore per assistenza.`
-  - The tree uses ’ 1923 times against 8 straight.
+_Nothing in this category._
 
 ---
 
@@ -143,8 +132,12 @@ _Nothing in this category._
 
 _Suppressions live in `locales/it/suppressions.yaml`. Removing a rule brings its findings back._
 
-### Resolved to date (51)
+### Resolved to date (55)
 
+- `felt-error-warning-elevation-attempt-failed-contact-admin` — `browser/browser/enterprise/felt.ftl` — fixed 2026-08-20
+- `smartwindow-onboarding-title` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-20
+- `about-glean-about-data-list-item-dictionary` — `toolkit/toolkit/about/aboutGlean.ftl` — fixed 2026-08-20
+- `felt-error-warning-elevation-attempt-failed-contact-admin` — `toolkit/toolkit/enterprise/felt.ftl` — fixed 2026-08-20
 - `aiwindow-firstrun-memories-privacy-title` — `browser/browser/aiWindow.ftl` — fixed 2026-07-26
 - `action-log-searching-tabs` — `browser/browser/aiWindowContent.ftl` — fixed 2026-07-26
 - `appmenuitem-banner-update-unsupported` — `browser/browser/appmenu.ftl` — fixed 2026-07-26
@@ -181,7 +174,3 @@ _Suppressions live in `locales/it/suppressions.yaml`. Removing a rule brings its
 - `about-translations-policy-disabled-info-message` — `toolkit/toolkit/about/aboutTranslations.ftl` — fixed 2026-07-26
 - `about-webrtc-remote-send-ssrc` — `toolkit/toolkit/about/aboutWebrtc.ftl` — fixed 2026-07-26
 - `about-webrtc-rtp-stats-heading` — `toolkit/toolkit/about/aboutWebrtc.ftl` — fixed 2026-07-26
-- `abuse-report-broken-suggestions-sitepermission` — `toolkit/toolkit/about/abuseReports.ftl` — fixed 2026-07-26
-- `choose-dialog-privatebrowsing-disabled` — `toolkit/toolkit/global/handlerDialog.ftl` — fixed 2026-07-26
-- `process-type-utility-actor-windows-file-dialog` — `toolkit/toolkit/global/processTypes.ftl` — fixed 2026-07-26
-- `language-name-tw` — `toolkit/toolkit/intl/languageNames.ftl` — fixed 2026-07-26
