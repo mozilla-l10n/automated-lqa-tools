@@ -131,14 +131,16 @@ def normalize(text: str) -> str:
 
 
 def loose(text: str) -> str:
-    """Collapse whitespace and case, but keep punctuation.
+    """Collapse whitespace, and nothing else.
 
     Fix detection must **not** use :func:`normalize`: that strips
-    punctuation, so a repaired ``</a >`` compares equal to ``</a>`` and a
-    markup or typography fix looks like no change at all. Identity hashing
-    still uses the aggressive form, where punctuation noise is unwanted.
+    punctuation, so a repaired ``</a >`` compares equal to ``</a>``. It must
+    not fold case either -- "INDIRIZZO" corrected to "Indirizzo" is a real
+    fix, and casefolding makes it invisible. Identity hashing keeps the
+    aggressive form, where that noise is unwanted; comparison here has to be
+    literal.
     """
-    return _WS.sub(" ", (text or "")).strip().casefold()
+    return _WS.sub(" ", (text or "")).strip()
 
 
 def still_present(fragment: str, text: str) -> bool:
@@ -147,6 +149,29 @@ def still_present(fragment: str, text: str) -> bool:
     if not frag or len(frag) < 3:
         return False
     return frag in loose(text)
+
+
+def verdict(fragment: str, text: str) -> str:
+    """What the current text says about a finding: gone, unchanged, or unclear.
+
+    Three outcomes, because substring matching alone gives wrong answers in
+    both directions.
+
+    ``gone``      the quoted text is no longer there; the defect is fixed.
+    ``unchanged`` the string is still exactly what was flagged.
+    ``unclear``   the string has changed but the quoted text survives inside
+                  it. That is *not* evidence the defect survived: a fragment
+                  stays a substring when the fix was to add words around it.
+                  "Traduzione", flagged for losing the in-progress sense, is
+                  still inside the corrected "Traduzione in corso".
+    """
+    if not fragment:
+        return "unclear"
+    if loose(text).strip() == loose(fragment).strip():
+        return "unchanged"
+    if not still_present(fragment, text):
+        return "gone"
+    return "unclear"
 
 
 def merge(existing: list[Finding], fresh: list[Finding], today: str) -> tuple[list[Finding], list[Finding]]:
@@ -210,6 +235,36 @@ def drop_noop(findings: list[Finding], today: str) -> list[Finding]:
     return out
 
 
+def close_reviewed(
+    findings: list[Finding],
+    reviewed: set,
+    raised: set,
+    changed: set,
+    today: str,
+) -> list[Finding]:
+    """Close findings the reviewer looked at again and did not repeat.
+
+    A model finding cannot be re-derived the way a check can, so without
+    this a `needs-recheck` item would stay open for ever: nothing would ever
+    say the defect had gone. If the reviewer read the string this run and
+    did not raise it again, it is resolved.
+
+    Limited to strings whose content actually changed. The reviewer is not
+    deterministic, and staying quiet about an unchanged string is weaker
+    evidence than staying quiet about one somebody has just edited.
+    """
+    out = []
+    for f in findings:
+        if not f.is_open or f.key not in reviewed or f.key not in changed:
+            continue
+        if f.fid in raised:
+            continue
+        f.status = "fixed"
+        f.resolved_on = today
+        out.append(f)
+    return out
+
+
 def resolve(
     findings: list[Finding],
     messages: dict,
@@ -217,6 +272,7 @@ def resolve(
     today: str,
     rerunnable: set[str] | None = None,
     still_raised: set[str] | None = None,
+    recheck: bool = False,
 ) -> dict[str, list[Finding]]:
     """Update the status of stored findings against the current tree.
 
@@ -229,11 +285,12 @@ def resolve(
 
     A finding from the **model** or from an **imported report** cannot be
     re-derived, so it is judged on whether the fragment it quoted survives.
-    ``delta_keys`` limits that to strings whose content actually changed,
-    which keeps the work small and stops an untouched string from flapping. A
-    finding that quoted nothing checkable is moved to ``needs-recheck``
-    rather than being silently closed -- the honest answer is "a human or
-    the model has to look again", not "fixed".
+    Whether the string moved is judged against the hash stored on the
+    finding when it was raised, so it holds however long ago that was and
+    whatever the snapshot has done since. A finding that quoted nothing
+    checkable is moved to ``needs-recheck`` rather than being silently
+    closed -- the honest answer is "somebody has to look again", not
+    "fixed".
     """
     rerunnable = rerunnable or set()
     still_raised = still_raised or set()
@@ -274,20 +331,39 @@ def resolve(
                 buckets["fixed"].append(f)
             continue
 
-        if f.key not in delta_keys:
-            continue  # string untouched: nothing can have changed
-        if f.current and still_present(f.current, msg.text()):
-            f.status = "open"
-            f.string_hash = msg.hash()
+        # Has the string moved since this finding was raised? Answered from
+        # the hash recorded on the finding itself, not from this run's
+        # delta. The delta only says what changed since the last *snapshot*,
+        # and the snapshot advances when the reviewer reads a string --
+        # which meant a finding raised before an edit could have its
+        # evidence quietly absorbed and never be looked at again.
+        moved = bool(f.string_hash) and f.string_hash != msg.hash()
+        if recheck:
+            # Re-read every open finding against the tree as it stands,
+            # whatever the delta says.
+            call = verdict(f.current, msg.text())
+            if call == "gone":
+                f.status = "fixed"
+                f.resolved_on = today
+                buckets["fixed"].append(f)
+            elif call == "unclear":
+                f.status = "needs-recheck"
+                f.string_hash = msg.hash()
+                buckets["recheck"].append(f)
             continue
-        if f.current:
+        if not moved and f.key not in delta_keys:
+            continue  # string untouched since the finding was raised
+        call = verdict(f.current, msg.text())
+        if call == "gone":
             f.status = "fixed"
             f.resolved_on = today
             buckets["fixed"].append(f)
-        else:
-            f.status = "needs-recheck"
-            f.string_hash = msg.hash()
-            buckets["recheck"].append(f)
+            continue
+        if call == "unchanged":
+            continue  # the string is still exactly what was flagged
+        f.status = "needs-recheck"
+        f.string_hash = msg.hash()
+        buckets["recheck"].append(f)
     return buckets
 
 

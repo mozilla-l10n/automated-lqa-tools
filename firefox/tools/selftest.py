@@ -264,6 +264,52 @@ def run(l10n_dir, source_dir, project) -> int:
     check(plurals.is_numeric_key("1") and not plurals.is_numeric_key("one"),
           "numeric keys are told apart from category keys")
 
+    print("\nFix detection")
+    check(not findings_mod.still_present("INDIRIZZO", "Indirizzo"),
+          "a capitalisation fix is detected (case is not folded away)")
+    check(findings_mod.still_present("Traduzione", "Traduzione"),
+          "an unchanged string still reads as unfixed")
+
+    class _M:
+        def __init__(self, t): self.t = t
+        def text(self): return self.t
+        def hash(self): return "now"
+
+    check(findings_mod.verdict("Traduzione", "Traduzione") == "unchanged",
+          "a string still exactly as flagged reads as unchanged")
+    check(findings_mod.verdict("Traduzione", "Traduzione in corso") == "unclear",
+          "a fragment surviving an addition is unclear, not still-present")
+    check(findings_mod.verdict("vecchio", "nuovo testo") == "gone",
+          "text that has gone reads as gone")
+
+    f_moved = Finding(locale="it", file="a.ftl", string_id="s", category="B",
+                      summary="x", current="Traduzione", string_hash="then")
+    findings_mod.resolve([f_moved], {("a.ftl", "s"): _M("Traduzione in corso")},
+                         set(), "2026-01-01")
+    check(f_moved.status == "needs-recheck",
+          "a surviving substring after an edit asks for a re-read, not a verdict")
+
+    f_same = Finding(locale="it", file="a.ftl", string_id="s", category="B",
+                     summary="x", current="Traduzione", string_hash="then")
+    findings_mod.resolve([f_same], {("a.ftl", "s"): _M("Traduzione")},
+                         set(), "2026-01-01")
+    check(f_same.status == "open",
+          "an unchanged string keeps its finding open, not re-queued")
+
+    f_stale = Finding(locale="it", file="a.ftl", string_id="s", category="B",
+                      summary="x", current="vecchio", string_hash="now")
+    findings_mod.resolve([f_stale], {("a.ftl", "s"): _M("nuovo testo")},
+                         set(), "2026-01-01", recheck=True)
+    check(f_stale.status == "fixed",
+          "--recheck closes a defect whose text has gone, whatever the delta says")
+
+    f_open = Finding(locale="it", file="a.ftl", string_id="s", category="B",
+                     summary="x", current="Traduzione", string_hash="now")
+    findings_mod.close_reviewed([f_open], {("a.ftl", "s")}, set(),
+                                {("a.ftl", "s")}, "2026-01-01")
+    check(f_open.status == "fixed",
+          "a finding the reviewer re-read and did not repeat is closed")
+
     print("\nSuppression rules")
     from suppress import Rule
     rule = Rule({"id": "r", "reason": "because", "match": {"check": "typography",

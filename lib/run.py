@@ -148,6 +148,8 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
     health, check_findings = checks.run_all(project, locale, trees, counts_conv)
     log(f"  checks: {health.counts}")
 
+    stored = findings_mod.load(project, locale)
+
     # --- model layer ------------------------------------------------------
     llm_findings: list = []
     reviewed = 0
@@ -182,6 +184,16 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
             log(f"  partitions returning nothing: {', '.join(sorted(empty))}")
     else:
         keys = delta.to_review
+        if args.recheck:
+            # Substring matching cannot close a finding whose quoted text
+            # survives an edit that fixed it -- "Traduzione" is still inside
+            # "Traduzione in corso". Those need reading, so re-queue every
+            # string that still carries an open finding.
+            pending = [f.key for f in stored if f.is_open and f.key in l10n]
+            extra = [k for k in dict.fromkeys(pending) if k not in set(keys)]
+            if extra:
+                log(f"  --recheck: re-queueing {len(extra)} string(s) with open findings")
+            keys = list(keys) + extra
         if args.limit:
             keys = keys[: args.limit]
             log(f"  limited to {len(keys)} strings (--limit)")
@@ -198,7 +210,6 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
             log("  nothing changed since the last run; no model call")
 
     # --- fold into the backlog -------------------------------------------
-    stored = findings_mod.load(project, locale)
     delta_keys = set(delta.to_review)
     # Deterministic checks just ran over the whole tree, so their output is
     # the ground truth for their own findings. Captured before the systemic
@@ -211,12 +222,29 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
     rerunnable = {c for c in checks.CHECKS if c not in health.skipped}
     still_raised = {f.fid for f in check_findings}
     resolved = findings_mod.resolve(
-        stored, l10n, delta_keys, today(), rerunnable, still_raised
+        stored, l10n, delta_keys, today(), rerunnable, still_raised,
+        recheck=args.recheck,
     )
+    if args.recheck:
+        log(f"  re-read {sum(1 for f in stored if f.is_open) + len(resolved['fixed'])} "
+            f"open findings against the current tree")
 
     fresh = check_findings + llm_findings
     systemic, fresh = build_systemic(project, locale, fresh, health)
+    llm_fids = {f.fid for f in llm_findings}
     stored, raised = findings_mod.merge(stored, fresh, today())
+
+    # A model finding the reviewer re-read and did not repeat is resolved;
+    # otherwise a needs-recheck item could never close.
+    # With --recheck, silence about a string we deliberately re-read is
+    # itself the answer; normally we only trust it for a string that changed.
+    trusted = reviewed_keys if args.recheck else set(delta.to_review)
+    reclosed = findings_mod.close_reviewed(
+        stored, reviewed_keys, llm_fids, trusted, today()
+    )
+    if reclosed:
+        log(f"  closed {len(reclosed)} finding(s) the reviewer did not repeat")
+    resolved["fixed"].extend(reclosed)
 
     rules = suppress.load(project, locale)
     hits = suppress.apply(rules, stored)
@@ -343,6 +371,11 @@ def main(argv=None) -> int:
                          "strings through the API")
     ap.add_argument("--limit", type=int, default=0,
                     help="review at most this many changed strings (for testing)")
+    ap.add_argument("--recheck", action="store_true",
+                    help="re-verify every open finding against the tree as it "
+                         "stands: close the ones whose quoted text has gone, "
+                         "and send the rest back to the reviewer even if the "
+                         "delta says nothing changed")
     ap.add_argument("--no-llm", action="store_true",
                     help="deterministic checks only; no API calls")
     ap.add_argument("--dry-run", action="store_true", help="write nothing")

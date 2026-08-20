@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-20 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `afd16223d876` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `afd16223d876` |
-| **Previous run** | 2026-08-20 @ `afd16223d876` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `81c3d1941037` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `81c3d1941037` |
+| **Previous run** | 2026-08-20 @ `81c3d1941037` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 2,908 |
 
@@ -29,9 +29,23 @@ _Nothing was fixed._
 
 _Nothing withdrawn._
 
-### 🔁 String changed, defect not verifiable — needs a re-read (0)
+### 🔁 String changed, defect not verifiable — needs a re-read (3)
 
-_Nothing to re-read._
+- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-it/strings.xml` — Message quotes a button label that does not match the actual button text
+  - Current: `Selezionare “Riprova” per passare alla modalità in linea e ricaricare la pagina.`
+  - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
+  - Suggest: `Selezionare “Riprovare” per passare alla modalità in linea e ricaricare la pagina.`
+  - The button on the error page (mozac_browser_errorpages_page_refresh) is labelled "Riprovare"; the message tells the user to press "Riprova", so the quoted label does not exist on screen.
+- `sync_connect_device_dialog` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — Translation adds "account" not present in the source ("sign in to Firefox" becomes "accedi all’account Firefox").
+  - Current: `accedi all’account Firefox`
+  - Source: `To send a tab, sign in to Firefox on at least one other device.`
+  - Suggest: `accedi a Firefox`
+  - The source says "sign in to Firefox on at least one other device", referring to signing in to the browser, not to an "account Firefox".
+- `translations_bottom_sheet_translating_in_progress` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — "Translating" (action in progress) is translated as the noun "Traduzione", losing the in-progress meaning.
+  - Current: `Traduzione`
+  - Source: `Translating`
+  - Suggest: `Traduzione in corso`
+  - The developer comment says the button text indicates a translation is currently in progress; the accompanying content description uses "Traduzione in corso".
 
 ### 🗑 Retired — the string no longer exists upstream (0)
 
@@ -86,13 +100,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (20)
+## 3. Open findings (14)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 1 |
 | 2 | Wrong content (says something other than the English) | 12 |
-| 3 | Degraded language (grammar, spelling, terminology) | 7 |
+| 3 | Degraded language (grammar, spelling, terminology) | 1 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -164,39 +178,10 @@ _Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
-- `link_shared_snackbar_message` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — Word order makes the snackbar read as an imperative-ish fragment instead of the past-participle status message "Link shared".
-  - Current: `Condiviso link`
-  - Source: `Link shared`
-  - Suggest: `Link condiviso`
-  - Source is a confirmation message "Link shared"; Italian requires "Link condiviso" (noun + participle), not the inverted "Condiviso link".
+_Nothing in this category._
 
 ### D. Terminology, register & consistency
 
-- `bookmark_url_label` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — "URL" is rendered in all caps as "INDIRIZZO", inconsistent with the sibling field label "Nome" and with the term used elsewhere.
-  - Current: `INDIRIZZO`
-  - Source: `URL`
-  - Suggest: `Indirizzo`
-  - The source is the field label "URL"; the adjacent label "Name" is translated "Nome" in normal case, so the all-caps form is an unjustified deviation in the same screen.
-- `credit_cards_biometric_prompt_message` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — "saved cards" translated as "carte di credito salvate", inconsistent with "Carte salvate" elsewhere.
-  - Current: `Sblocca per visualizzare le carte di credito salvate`
-  - Source: `Unlock to view your saved cards`
-  - Suggest: `Sblocca per visualizzare le carte salvate`
-  - Source is "Unlock to view your saved cards"; the app consistently uses "carte" (see credit_cards_saved_cards "Carte salvate").
-- `dialog_delete_positive` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — "Delete" is rendered as "Rimuovi" (Remove) while the identical source elsewhere in the same surface uses "Elimina".
-  - Current: `Rimuovi`
-  - Source: `Delete`
-  - Suggest: `Elimina`
-  - Source is "Delete"; search_engine_delete and other delete actions in this batch use "Elimina", and "Rimuovi" is the standard rendering of "Remove" (see browser_menu_remove_from_shortcuts), creating an inconsistency.
-- `download_languages_item_content_description_downloaded_state` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — "Delete" is rendered as "Rimuovi" here while the same source term is translated "Elimina" in the neighbouring delete strings.
-  - Current: `Rimuovi`
-  - Source: `Delete`
-  - Suggest: `Elimina`
-  - Inconsistent with download_language_all_languages_item_preference_to_delete ("Elimina tutte le lingue") and delete_language_file_dialog_positive_button_text ("Elimina") on the same screen.
-- `preferences_credit_cards_sync_cards` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — "Sync cards" rendered as "carte di credito" while the parallel string uses just "carte".
-  - Current: `Sincronizza carte di credito`
-  - Source: `Sync cards`
-  - Suggest: `Sincronizza carte`
-  - Source is "Sync cards" and the sibling string preferences_credit_cards_sync_cards_across_devices uses "le carte"; adding "di credito" is inconsistent with the other card strings (Aggiungi carta, Gestisci carte).
 - `sports_widget_final_results_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — "World Cup" is rendered as "Mondiali" here but as "Coppa del mondo" in the sibling strings, an inconsistency on the same surface.
   - Current: `Risultati finali dei Mondiali`
   - Source: `World Cup final results`
@@ -233,7 +218,7 @@ _Suppressions live in `locales/it/suppressions.yaml`. Removing a rule brings its
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Resolved to date (33)
+### Resolved to date (39)
 
 - `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `mozac_feature_addons_status_unsigned` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-it/strings.xml` — fixed 2026-08-20
@@ -241,23 +226,29 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `mozac_feature_contextmenu_open_image_in_new_tab` — `mozilla-mobile/android-components/components/feature/contextmenu/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `action_bar_up_description` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `addresses_department` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
+- `bookmark_url_label` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `certificate_warning_push_notification_pnw3_message` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `clear_site_data_dialog_description` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `content_description_gallery` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
+- `credit_cards_biometric_prompt_message` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `debug_drawer_add_new_address` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `debug_drawer_addresses_debug_locales_header` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `debug_drawer_cfr_tools_reset_cfr_title` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `debug_drawer_override_home_region_permanently` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `delete_history_prompt_button_today_and_yesterday` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
+- `dialog_delete_positive` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `download_item_in_progress_description_pending` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
+- `download_languages_item_content_description_downloaded_state` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `download_rename_error_invalid_name_error` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `etp_redirect_trackers_description` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `ip_protection_locations_unavailable_description` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `ip_protection_settings_description` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
+- `link_shared_snackbar_message` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `nova_onboarding_customize_prompt_title` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `open_in_app_cfr_info_message_2` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `preference_accessibility_auto_size_summary` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `preference_enhanced_tracking_protection_strict_description_4` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
+- `preferences_credit_cards_sync_cards` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `preferences_downloads_remove_from_download_history_description` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `preferences_google_lens_availability_caption` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `preferences_inactive_tabs_title` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
