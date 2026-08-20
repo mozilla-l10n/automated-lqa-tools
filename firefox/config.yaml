@@ -56,6 +56,13 @@ check_overrides:
   # Access keys are not adapted in CJK locales: the platform appends "(W)".
   accesskey:
     skip_locales: [ja, zh-CN, zh-TW, ko]
+  # Files that are legitimately byte-identical to en-US in every locale:
+  # brand names and keyboard shortcut definitions.
+  untranslated:
+    skip_paths:
+      - "browser/branding/*/brand.properties"
+      - "devtools/startup/key-shortcuts.ftl"
+      - "toolkit/chrome/global-platform/**"
   typography:
     skip_paths:
       # NSIS installer strings wrap values in straight quotes as syntax, and

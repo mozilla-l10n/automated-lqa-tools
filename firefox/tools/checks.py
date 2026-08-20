@@ -249,6 +249,8 @@ def check_completeness(project, l10n_root, source_root, l10n, source) -> Health:
         by_file.setdefault(key[0], []).append(msg.text().strip() == src.text().strip())
     for file, flags in by_file.items():
         if len(flags) >= 3 and all(flags):
+            if project.check_skips_path("untranslated", file):
+                continue
             h.untranslated_files.append(file)
     h.untranslated_files.sort()
 
@@ -434,7 +436,7 @@ def check_accesskeys(locale, l10n, source) -> list[Finding]:
     for (file, mid), msg in l10n.items():
         flat[mid] = msg.value or next(iter(msg.props.values()), "")
 
-    ref = re.compile(r"\{\{REF:([^}]+)\}\}")
+    ref = re.compile(r"\{\s*(-[^}\s]+)\s*\}")
 
     def expand(text: str, depth: int = 0) -> str:
         if depth > 3:

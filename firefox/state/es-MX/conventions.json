@@ -1,0 +1,42 @@
+{
+ "_meta": {
+  "locale": "es-MX",
+  "prose_chunks": 18587,
+  "strings": 17843
+ },
+ "apostrophe": {
+  "straight": 38,
+  "typographic": 96
+ },
+ "dash": {
+  "em": 75,
+  "en": 1
+ },
+ "ellipsis": {
+  "ascii": 21,
+  "char": 433
+ },
+ "fullwidth": {
+  "punctuation": 0
+ },
+ "inverted_marks": {
+  "open-exclamation": 84,
+  "open-question": 367
+ },
+ "nbsp": {
+  "before-punctuation": 10,
+  "narrow": 10,
+  "space-before-punctuation": 8,
+  "total": 14
+ },
+ "quotes": {
+  "curly-double": 504,
+  "curly-single": 84,
+  "guillemet": 1,
+  "straight-double": 158
+ },
+ "register": {
+  "formal": 237,
+  "informal": 1359
+ }
+}

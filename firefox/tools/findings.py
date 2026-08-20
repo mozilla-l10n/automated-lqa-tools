@@ -117,12 +117,23 @@ def normalize(text: str) -> str:
     return _WS.sub(" ", _PUNCT.sub(" ", (text or "").lower())).strip()
 
 
+def loose(text: str) -> str:
+    """Collapse whitespace and case, but keep punctuation.
+
+    Fix detection must **not** use :func:`normalize`: that strips
+    punctuation, so a repaired ``</a >`` compares equal to ``</a>`` and a
+    markup or typography fix looks like no change at all. Identity hashing
+    still uses the aggressive form, where punctuation noise is unwanted.
+    """
+    return _WS.sub(" ", (text or "")).strip().casefold()
+
+
 def still_present(fragment: str, text: str) -> bool:
     """Is the defective fragment still in the string?"""
-    frag = normalize(fragment)
+    frag = loose(fragment)
     if not frag or len(frag) < 3:
         return False
-    return frag in normalize(text)
+    return frag in loose(text)
 
 
 def merge(existing: list[Finding], fresh: list[Finding], today: str) -> tuple[list[Finding], list[Finding]]:
@@ -163,14 +174,35 @@ def merge(existing: list[Finding], fresh: list[Finding], today: str) -> tuple[li
     return existing, raised
 
 
-def resolve(findings: list[Finding], messages: dict, delta_keys: set, today: str) -> dict[str, list[Finding]]:
+def resolve(
+    findings: list[Finding],
+    messages: dict,
+    delta_keys: set,
+    today: str,
+    rerunnable: set[str] | None = None,
+    still_raised: set[str] | None = None,
+) -> dict[str, list[Finding]]:
     """Update the status of stored findings against the current tree.
 
-    ``delta_keys`` is the set of ``(file, id)`` whose content changed this
-    run; only those can possibly have been fixed, which keeps this cheap and
-    stops an unchanged string from flapping.
+    There are two kinds of finding and they are resolved differently.
+
+    A finding from a **deterministic check** is authoritative, because that
+    check just ran again over the whole tree: if it did not re-raise the
+    finding and the string still exists, the defect is genuinely gone. No
+    text matching, no guessing.
+
+    A finding from the **model** or from an **imported report** cannot be
+    re-derived, so it is judged on whether the fragment it quoted survives.
+    ``delta_keys`` limits that to strings whose content actually changed,
+    which keeps it cheap and stops an untouched string from flapping. A
+    finding that quoted nothing checkable is moved to ``needs-recheck``
+    rather than being silently closed -- the honest answer is "a human or
+    the model has to look again", not "fixed".
     """
+    rerunnable = rerunnable or set()
+    still_raised = still_raised or set()
     buckets: dict[str, list[Finding]] = {"fixed": [], "obsolete": [], "recheck": []}
+
     for f in findings:
         if not f.is_open:
             continue
@@ -180,10 +212,20 @@ def resolve(findings: list[Finding], messages: dict, delta_keys: set, today: str
             f.resolved_on = today
             buckets["obsolete"].append(f)
             continue
+
+        if f.check in rerunnable:
+            if f.fid in still_raised:
+                f.status = "open"
+                f.string_hash = msg.hash()
+            else:
+                f.status = "fixed"
+                f.resolved_on = today
+                buckets["fixed"].append(f)
+            continue
+
         if f.key not in delta_keys:
             continue  # string untouched: nothing can have changed
         if f.current and still_present(f.current, msg.text()):
-            # Text moved but the exact defect survives: keep it open and say so.
             f.status = "open"
             f.string_hash = msg.hash()
             continue
@@ -192,7 +234,6 @@ def resolve(findings: list[Finding], messages: dict, delta_keys: set, today: str
             f.resolved_on = today
             buckets["fixed"].append(f)
         else:
-            # Nothing quotable to verify against -- do not guess.
             f.status = "needs-recheck"
             f.string_hash = msg.hash()
             buckets["recheck"].append(f)

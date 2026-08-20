@@ -1,0 +1,21 @@
+# Suppressions for pl
+#
+# Every rule needs an `id` and a `reason`. Conditions inside `match` are
+# ANDed. `string_id` and `file` accept a trailing `*` or a `re:` prefix;
+# `text` is a case-insensitive substring of the finding.
+#
+# Rules are re-applied to the whole backlog on every run, so adding one here
+# retires matching findings that were raised in the past too. Nothing is
+# deleted -- suppressed findings move to the report appendix with the rule id
+# next to them.
+#
+# Prefer writing locale knowledge as prose in conventions.md when you can:
+# that stops the finding being raised at all, instead of filtering it after.
+
+rules:
+  - id: pl-brand-case-params
+    reason: >-
+      Brand terms carry grammatical-case parameters; correct Polish.
+    match:
+      check: 'term_params'
+      text: 'case'

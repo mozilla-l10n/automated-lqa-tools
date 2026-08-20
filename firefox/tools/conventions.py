@@ -23,7 +23,7 @@ import re
 # .style attributes, HTML attribute values, URLs, code-ish tokens.
 _SKIP_PROPS = {"style", "accesskey"}
 _URL = re.compile(r"https?://\S+|chrome://\S+|about:[a-z-]+")
-_PLACEHOLDER = re.compile(r"\{\{[^}]*\}\}")
+_PLACEHOLDER = re.compile(r"\{\s*[$-][^}]*\}")
 _TAG = re.compile(r"</?[a-zA-Z][^>]*>")
 _VARIANT_TAG = re.compile(r"\[[a-zA-Z0-9_*-]+\]|\{\$[^}]*->\}")
 
@@ -213,10 +213,10 @@ def load(project, locale: str) -> dict:
 
 DRAFT_HEADER = """# {locale} — conventions and review instructions
 
-_Draft generated from counts over the whole {locale} tree on {date}. Review
-it, correct anything the counting got wrong, and add prose instructions for
-the reviewer. This file is injected verbatim into every review prompt, so
-anything written here is what the model is told to treat as correct._
+_Counted over the whole {locale} tree on {date}. Review this, correct
+anything the counting got wrong, and add prose instructions for the reviewer
+below. This file is injected verbatim into every review prompt, so anything
+written here is what the model is told to treat as correct._
 
 ## Detected conventions
 

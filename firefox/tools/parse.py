@@ -23,11 +23,11 @@ from moz.l10n.model import (
 )
 from moz.l10n.resource import parse_resource
 
-# A message reference inside a pattern is serialized as this placeholder so
-# that {-brand-short-name} and friends stay recognizable but never leak the
-# brand's actual text into a hash.
-REF = "{{REF:%s}}"
-VAR = "{{$%s}}"
+# Placeholders are rendered back in native Fluent syntax rather than an
+# invented marker: it is what the strings actually look like, so reports read
+# naturally and the model sees the syntax it knows.
+REF = "{ %s }"
+VAR = "{ $%s }"
 
 
 @dataclass

@@ -1,0 +1,216 @@
+name: Firefox l10n QA
+
+# Manual dispatch only for now. Uncomment the schedule below once a few runs
+# have been watched; the pipeline is already safe to run unattended.
+on:
+  workflow_dispatch:
+    inputs:
+      locales:
+        description: 'Comma-separated locale codes, or "all"'
+        required: false
+        default: 'all'
+      mode:
+        description: 'auto = baseline for a new locale, incremental otherwise'
+        required: false
+        default: 'auto'
+        type: choice
+        options: [auto, incremental, baseline]
+      dry_run:
+        description: 'Run everything but write nothing'
+        required: false
+        default: false
+        type: boolean
+      no_llm:
+        description: 'Deterministic checks only; no API calls'
+        required: false
+        default: false
+        type: boolean
+  # schedule:
+  #   - cron: '17 5 * * *'   # daily, 05:17 UTC
+
+concurrency:
+  # Runs commit to main, so never let two overlap.
+  group: firefox-l10n-qa
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      locales: ${{ steps.pick.outputs.locales }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install PyYAML
+      - id: pick
+        name: Resolve the locale list
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os, yaml
+          requested = os.environ["REQUESTED"].strip()
+          config = yaml.safe_load(open("firefox/config.yaml"))
+          known = config["locales"]
+          if not requested or requested == "all":
+              picked = known
+          else:
+              picked = [x.strip() for x in requested.split(",") if x.strip()]
+              unknown = [x for x in picked if x not in known]
+              if unknown:
+                  raise SystemExit(
+                      f"not in firefox/config.yaml: {', '.join(unknown)}"
+                  )
+          print("locales=" + json.dumps(picked))
+          PY
+        env:
+          REQUESTED: ${{ inputs.locales }}
+
+  review:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      # One locale per job so a single failure cannot take the rest down, and
+      # so a slow baseline does not block the cheap incrementals.
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        locale: ${{ fromJson(needs.plan.outputs.locales) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Install the Claude CLI
+        # Only the from-scratch baseline path shells out to it.
+        if: inputs.mode == 'baseline'
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Cache the upstream clones
+        uses: actions/cache@v4
+        with:
+          path: work
+          key: repos-${{ matrix.locale }}-${{ github.run_id }}
+          restore-keys: |
+            repos-${{ matrix.locale }}-
+
+      - name: Check out the en-US source strings
+        run: |
+          set -euo pipefail
+          if [ -d work/source/.git ]; then
+            git -C work/source fetch --depth 1 origin main
+            git -C work/source reset --hard origin/main
+          else
+            git clone --depth 1 --filter=blob:none \
+              https://github.com/mozilla-l10n/firefox-l10n-source work/source
+          fi
+
+      - name: Check out one locale from firefox-l10n
+        # A blobless, depth-1, sparse clone of a single locale: the full repo
+        # is 1.6 GB and 380k commits, and the delta engine needs no history
+        # because it compares hashes it stored itself.
+        run: |
+          set -euo pipefail
+          if [ ! -d work/l10n/.git ]; then
+            git clone --depth 1 --filter=blob:none --sparse \
+              https://github.com/mozilla-l10n/firefox-l10n work/l10n
+          else
+            git -C work/l10n fetch --depth 1 origin main
+            git -C work/l10n reset --hard origin/main
+          fi
+          git -C work/l10n sparse-checkout set --no-cone '/${{ matrix.locale }}/'
+          du -sh work/l10n
+
+      - name: Review
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python firefox/tools/run.py \
+            --locale '${{ matrix.locale }}' \
+            --mode '${{ inputs.mode }}' \
+            --l10n-dir work/l10n \
+            --source-dir work/source \
+            ${{ inputs.dry_run && '--dry-run' || '' }} \
+            ${{ inputs.no_llm && '--no-llm' || '' }} \
+            < /dev/null
+
+      - name: Upload this locale's state and report
+        if: ${{ !inputs.dry_run }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: result-${{ matrix.locale }}
+          path: |
+            firefox/state/${{ matrix.locale }}/
+            firefox/reports/${{ matrix.locale }}.md
+            firefox/locales/${{ matrix.locale }}/
+          if-no-files-found: ignore
+          retention-days: 7
+
+  commit:
+    needs: review
+    # Land whatever succeeded, even if some locales failed.
+    if: ${{ always() && !inputs.dry_run }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+
+      - name: Collect the per-locale results
+        uses: actions/download-artifact@v4
+        with:
+          pattern: result-*
+          merge-multiple: true
+          path: incoming
+
+      - name: Apply them
+        run: |
+          set -euo pipefail
+          if [ ! -d incoming ]; then
+            echo "no artifacts; nothing to commit"
+            exit 0
+          fi
+          cp -R incoming/. firefox/ 2>/dev/null || true
+          rm -rf incoming
+
+      - name: Refresh the cross-locale summary
+        run: python firefox/tools/summary.py
+
+      - name: Commit
+        run: |
+          set -euo pipefail
+          git config user.name  'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add firefox/state firefox/reports firefox/locales
+          if git diff --cached --quiet; then
+            echo "no changes: every locale is where it was"
+            exit 0
+          fi
+          git commit -m "Firefox l10n QA: ${{ inputs.locales }} ($(date -u +%Y-%m-%d)) [skip ci]"
+          # Another run may have landed while this one was working.
+          for attempt in 1 2 3; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && \
+              git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            echo "push attempt $attempt failed, retrying"
+            sleep 5
+          done
+          exit 1
+
+      - name: Summarize the run
+        run: |
+          {
+            echo '## Firefox l10n QA'
+            echo
+            sed -n '1,40p' firefox/reports/00-summary.md
+          } >> "$GITHUB_STEP_SUMMARY"
