@@ -28,16 +28,20 @@ import re
 
 import yaml
 
-MATCH_FIELDS = ("check", "category", "file", "string_id", "text")
+MATCH_FIELDS = ("check", "category", "file", "string_id", "text", "suggest")
 
 
 class Rule:
     """One suppression rule.
 
     All conditions present must match (AND). ``string_id`` and ``file``
-    accept a trailing ``*`` glob or a ``re:`` prefix for a full regex;
-    ``text`` is a case-insensitive substring test against the finding's
-    summary, rationale and current value.
+    accept a trailing ``*`` glob or a ``re:`` prefix for a full regex.
+    ``text`` tests the finding's summary, rationale and current value;
+    ``suggest`` tests the proposed replacement, which is what you want when
+    the rule is about a correction that should never be accepted rather than
+    about the string being corrected. Both are case-insensitive substrings,
+    or a full regex with a ``re:`` prefix -- needed when a substring would
+    over-match, as "attivat" does inside "disattivato".
     """
 
     def __init__(self, raw: dict, index: int):
@@ -77,12 +81,17 @@ class Rule:
             want = self.match.get(field)
             if want is not None and not self._matches(want, getattr(finding, field)):
                 return False
-        text = self.match.get("text")
-        if text is not None:
-            haystack = " ".join(
-                (finding.summary, finding.rationale, finding.current)
-            ).lower()
-            if text.lower() not in haystack:
+        for field, haystack in (
+            ("text", " ".join((finding.summary, finding.rationale, finding.current))),
+            ("suggest", finding.suggest or ""),
+        ):
+            want = self.match.get(field)
+            if want is None:
+                continue
+            if want.startswith("re:"):
+                if re.search(want[3:], haystack, re.IGNORECASE) is None:
+                    return False
+            elif want.lower() not in haystack.lower():
                 return False
         return True
 

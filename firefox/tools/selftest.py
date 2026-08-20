@@ -280,6 +280,16 @@ def run(l10n_dir, source_dir, project) -> int:
     suppress.apply([], [g, h])
     check(g.status == "open" and not g.suppressed_by, "removing the rule restores the finding")
 
+    rule_suggest = Rule({"id": "s", "reason": "r",
+                         "match": {"suggest": r"re:\battivat[aoie]\b"}}, 0)
+    yes = Finding(locale="it", file="a.ftl", string_id="x", category="D",
+                  summary="s", current="Attivo", suggest="Attivato")
+    no = Finding(locale="it", file="a.ftl", string_id="x", category="D",
+                 summary="s", current="Disattiva", suggest="Disattivato")
+    check(rule_suggest.applies(yes), "a rule can match the proposed replacement")
+    check(not rule_suggest.applies(no),
+          "a word-anchored regex spares disattivato, which contains attivat")
+
     for bad, why in (
         ({"id": "x", "match": {"check": "typography"}}, "a rule with no reason"),
         ({"id": "x", "reason": "r"}, "a rule that matches nothing"),

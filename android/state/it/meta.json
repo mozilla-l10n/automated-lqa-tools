@@ -6,13 +6,13 @@
  "locale": "it",
  "missing": 0,
  "mode": "incremental",
- "open": 21,
+ "open": 20,
  "previous_run": "2026-08-20",
- "previous_sha": "8c439c8dbd76",
+ "previous_sha": "afd16223d876",
  "reviewed": 0,
  "source_repo": "https://github.com/mozilla-l10n/android-l10n",
  "source_sha": "afd16223d876",
  "strings": 2908,
- "suppressed": 3,
+ "suppressed": 4,
  "withdrawn_total": 2
 }

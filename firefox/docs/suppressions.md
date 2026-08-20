@@ -74,7 +74,13 @@ Conditions inside `match` are ANDed.
 | `category` | the report category, `A`–`E` |
 | `string_id` | exact, `prefix*`, or `re:<regex>` |
 | `file` | exact, `prefix*`, or `re:<regex>` |
-| `text` | case-insensitive substring of the summary, rationale or current value |
+| `text` | the summary, rationale or current value |
+| `suggest` | the proposed replacement — use this when the rule is about a correction that must never be accepted, rather than about the string being corrected |
+
+`text` and `suggest` are case-insensitive substrings, or a full regex with a
+`re:` prefix. Reach for the regex when a substring would over-match: the
+Italian rule against proposing `Attivato` has to be written
+`re:\battivat[aoie]\b`, because plain `attivat` also matches `disattivato`.
 
 Be as narrow as the truth allows. `check: typography` silences every
 typography finding for the locale forever, including ones you would want to

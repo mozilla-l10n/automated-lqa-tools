@@ -31,3 +31,7 @@ _Carried over from the hand-written review; these are maintainer decisions, not 
 - `crittare`, and its forms `critta`, `crittato`, `crittati`, is the correct
   Italian verb for "to encrypt". It is not a typo for `criptare`, and it is
   not a truncation of anything. Never report it as a misspelling.
+- The expected pair is `Attiva`/`Attivo`/`Attivi` for the positive and
+  `Disattivata`/`Disattivato`/`Disattivati` for the negative. The asymmetry
+  is intentional: never propose `Attivata`/`Attivato`/`Attivati` to make the
+  two sides match.

@@ -232,12 +232,12 @@
   },
   "rationale": "The pair browser_feature_desktop_site_on/off describes the toggle state; \"Attiva\" reads as an imperative or adjective mismatching \"Disattivata\" used for the off state.",
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "90136931",
   "string_id": "browser_feature_desktop_site_on",
   "suggest": "Attivata",
   "summary": "Gender/form inconsistency: \"On\" toggle state rendered as imperative/feminine \"Attiva\" while the matching \"Off\" string uses \"Disattivata\".",
-  "suppressed_by": ""
+  "suppressed_by": "it-attiva-not-attivata"
  },
  {
   "category": "B",

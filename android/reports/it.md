@@ -5,7 +5,7 @@
 | **Generated** | 2026-08-20 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `afd16223d876` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `afd16223d876` |
-| **Previous run** | 2026-08-20 @ `8c439c8dbd76` |
+| **Previous run** | 2026-08-20 @ `afd16223d876` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 2,908 |
 
@@ -19,49 +19,13 @@ Findings are keyed by string id, never by line number. The locale is assessed ag
 
 _No new findings._
 
-### ✅ Fixed since the last run (6)
+### ✅ Fixed since the last run (0)
 
-- `clear_site_data_dialog_description` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — The translation says "disconnetterti dal sito" (singular, this site) while the source says it might log you out of websites in general.
-  - Current: `potrebbe disconnetterti dal sito o svuotare eventuali carrelli in sospeso`
-  - Source: `Removing cookies and site data for { <b> }%s{ </b> } might log you out of websites and clear shopping carts.`
-  - Suggest: `potrebbe disconnetterti dai siti web e svuotare eventuali carrelli della spesa`
-  - en-US: "might log you out of websites and clear shopping carts" — plural "websites" and coordinating "and", not "or" with a singular site.
-- `debug_drawer_add_new_address` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — "selected locale" translated as "lingua selezionata" (selected language), inconsistent with the locale terminology in this feature.
-  - Current: `per la lingua selezionata`
-  - Source: `Add new address for selected locale`
-  - Suggest: `per il locale selezionato`
-  - The debug feature works with locales (region/format), not languages; source says "locale".
-- `debug_drawer_addresses_debug_locales_header` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — "Debug locales to enable" is rendered as a generic "choice of languages", dropping the "debug" qualifier and mistranslating "locales".
-  - Current: `Scelta delle lingue da attivare`
-  - Source: `Debug locales to enable`
-  - Suggest: `Locale di debug da attivare`
-  - The source names the list of debug locales; the translation says "choice of languages" and loses the debug qualifier.
-- `debug_drawer_cfr_tools_reset_cfr_title` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — "Reset CFRs" translated as "Ripristina CFR" where elsewhere reset/override wording differs; "Ripristina" means restore, acceptable, but the plural marker is lost — see rationale.
-  - Current: `Ripristina CFR`
-  - Source: `Reset CFRs`
-  - Suggest: `Reimposta CFR`
-  - "Reset" in this debug context means reimpostare/azzerare the CFR state, not restoring a previous state.
-- `ip_protection_settings_description` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — The translation replaces "make your browsing more private" with "protect your privacy while browsing", changing the wording of the source.
-  - Current: `Attiva la VPN per proteggere la tua privacy durante la navigazione e rendere più difficile il tracciamento.`
-  - Source: `Turn VPN on to make your browsing more private and harder to trace.`
-  - Suggest: `Attiva la VPN per rendere la tua navigazione più privata e difficile da tracciare.`
-  - The source says "make your browsing more private and harder to trace"; the same sentence is correctly rendered in ip_protection_onboarding_body_promo as "rendere la tua navigazione più privata e difficile da tracciare", so this variant is both inaccurate and inconsistent.
-- `preferences_google_lens_availability_caption` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — The translation drops "above" and renders "active search engine" as "motore di ricerca predefinito" (default search engine).
-  - Current: `Disponibile solo se Google è attivo ed è impostato come motore di ricerca predefinito durante la navigazione.`
-  - Source: `Available only when Google is enabled above and is your active search engine while browsing.`
-  - Suggest: `Disponibile solo se Google è attivo qui sopra ed è il motore di ricerca attivo durante la navigazione.`
-  - The source says "enabled above" (referring to the setting above) and "your active search engine", not the default search engine; the Italian changes the meaning.
+_Nothing was fixed._
 
-### ↩︎ Withdrawn — no longer considered a defect (2)
+### ↩︎ Withdrawn — no longer considered a defect (0)
 
-- `automatic_translation_header_preference` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — The quoted preference names are capitalized differently from the source, breaking the match with the actual UI labels.
-  - Current: `“Traduci sempre” e “Non tradurre mai”`
-  - Source: `Select a language to manage ”always translate“ and ”never translate“ preferences.`
-  - Minor: source uses lowercase quoted labels; the Italian labels match the UI strings, so this is acceptable. (Retired: the suggested text is identical to the current text.)
-- `preferences_delete_browsing_data_browsing_data_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — "%d addresses" is translated as "%d indirizzi" but the developer comment says it is the number of history items; however the literal source word is "addresses".
-  - Current: `%d indirizzi`
-  - Source: `%d addresses`
-  - Placeholder-level check: source says "addresses" and target says "indirizzi", which matches; no defect. (Retired: the suggested text is identical to the current text.)
+_Nothing withdrawn._
 
 ### 🔁 String changed, defect not verifiable — needs a re-read (0)
 
@@ -120,13 +84,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (21)
+## 3. Open findings (20)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 1 |
 | 2 | Wrong content (says something other than the English) | 12 |
-| 3 | Degraded language (grammar, spelling, terminology) | 8 |
+| 3 | Degraded language (grammar, spelling, terminology) | 7 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -198,11 +162,6 @@ _Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
-- `browser_feature_desktop_site_on` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — Gender/form inconsistency: "On" toggle state rendered as imperative/feminine "Attiva" while the matching "Off" string uses "Disattivata".
-  - Current: `Attiva`
-  - Source: `On`
-  - Suggest: `Attivata`
-  - The pair browser_feature_desktop_site_on/off describes the toggle state; "Attiva" reads as an imperative or adjective mismatching "Disattivata" used for the off state.
 - `link_shared_snackbar_message` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — Word order makes the snackbar read as an imperative-ish fragment instead of the past-participle status message "Link shared".
   - Current: `Condiviso link`
   - Source: `Link shared`
@@ -254,8 +213,10 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Suppressed as false positives (3)
+### Suppressed as false positives (4)
 
+- **`it-attiva-not-attivata`** (1) — The expected pair is `Attiva`/`Attivo`/`Attivi` with `Disattivata`/`Disattivato`/`Disattivati`. The asymmetry is deliberate and borne out by the tree, which uses `attiva` 279 times against 35 for the participle forms. A suggestion to "restore symmetry" with `Attivata`/`Attivato`/`Attivi` is wrong. The regex is word-anchored because a plain substring would also match `disattivato`.
+  - `browser_feature_desktop_site_on`
 - **`it-crittare`** (1) — `crittare` and its forms (`critta`, `crittato`) are the correct Italian verb for "to encrypt" — not a typo for `criptare`. Confirmed by the maintainer. Scoped to spelling findings so a mistranslation in the same string still reports.
   - `preferences_credit_cards_save_and_autofill_cards_summary_2`
 - **`it-final-exclamation`** (2) — Ending a sentence with `.` where the source ends with `!` is a deliberate register choice; Italian UI text uses the exclamation mark far more sparingly than English. Scoped to typography findings so a real punctuation defect in the same string still reports.

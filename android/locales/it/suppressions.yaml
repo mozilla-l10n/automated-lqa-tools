@@ -31,3 +31,13 @@ rules:
     match:
       category: 'C'
       text: 'critt'
+  - id: it-attiva-not-attivata
+    reason: >-
+      The expected pair is `Attiva`/`Attivo`/`Attivi` with
+      `Disattivata`/`Disattivato`/`Disattivati`. The asymmetry is deliberate
+      and borne out by the tree, which uses `attiva` 279 times against 35
+      for the participle forms. A suggestion to "restore symmetry" with
+      `Attivata`/`Attivato`/`Attivi` is wrong. The regex is word-anchored
+      because a plain substring would also match `disattivato`.
+    match:
+      suggest: 're:\battivat[aoie]\b'
