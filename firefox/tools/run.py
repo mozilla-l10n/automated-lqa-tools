@@ -309,7 +309,16 @@ def main(argv=None) -> int:
 
     l10n_root, source_root = resolve_trees(project, args, log)
     source = parse.parse_tree(source_root, project.extensions, project.exclude)
-    log(f"en-US reference: {len(source):,} strings @ {repos.head_sha(source_root)}")
+    log(f"locale tree      {l10n_root}")
+    log(f"                 {repos.describe(l10n_root)}")
+    log(f"en-US reference  {source_root}")
+    log(f"                 {repos.describe(source_root)} "
+        f"({len(source):,} strings)")
+    if args.l10n_dir or args.source_dir:
+        # A local checkout is used exactly as it is on disk. Saying so
+        # matters: an unpulled tree quietly produces an empty delta and a
+        # run that looks like "nothing changed".
+        log("                 (local checkout, used as-is -- pull it yourself)")
 
     results, failed = [], []
     for locale in locales:

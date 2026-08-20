@@ -58,9 +58,24 @@ export ANTHROPIC_API_KEY=...
     --source-dir ~/mozilla/git/firefox-quarantine
 ```
 
-Without `--l10n-dir` / `--source-dir` the run makes its own clones under
-`work/`: blobless, depth 1, and sparse to the locales being checked, which
-is 16 MB rather than the repository's full 2.1 GB.
+`--l10n-dir` and `--source-dir` point at checkouts you already have, which
+is the usual way to run this locally. They are used **exactly as they are on
+disk** — nothing is fetched or checked out for you, so pull them first:
+
+```bash
+git -C ~/mozilla/git/firefox-l10n       pull --ff-only
+git -C ~/mozilla/git/firefox-quarantine pull --ff-only
+```
+
+The run prints the sha, branch and commit date of both trees before it
+starts, so a stale or off-branch checkout is visible rather than silently
+producing an empty delta. Getting this wrong is not destructive: the delta
+is computed from content hashes, so anything missed by a stale run simply
+shows up as changed on the next one.
+
+Omit both flags and the run makes its own clones under `work/` instead:
+blobless, depth 1, and sparse to the locales being checked, which is 16 MB
+rather than the repository's full 2.1 GB.
 
 Useful flags: `--limit N` caps how many changed strings go to the model,
 `--mode baseline` forces a from-scratch pass, `--partitions devtools`

@@ -44,6 +44,20 @@ def head_date(path: str) -> str:
         return ""
 
 
+def current_branch(path: str) -> str:
+    try:
+        return run(["git", "-C", path, "rev-parse", "--abbrev-ref", "HEAD"])
+    except Exception:
+        return ""
+
+
+def describe(path: str) -> str:
+    """`<sha> on <branch>, <date>` -- enough to spot a stale checkout."""
+    sha, br, date = head_sha(path), current_branch(path), head_date(path)
+    bits = [b for b in (sha, f"on {br}" if br and br != "HEAD" else "", date) if b]
+    return ", ".join(bits) or "not a git checkout"
+
+
 def ensure_clone(url: str, branch: str, dest: str, sparse: list[str] | None) -> str:
     """Clone if absent, otherwise fast-forward. Returns ``dest``."""
     if not os.path.exists(os.path.join(dest, ".git")):
