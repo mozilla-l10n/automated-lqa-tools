@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-20 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d411ef0407f1` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b95608d528c8` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
 | **Previous run** | 2026-08-20 @ `d411ef0407f1` |
 | **Mode** | incremental |
@@ -15,53 +15,9 @@ Findings are keyed by string id, never by line number. The locale is assessed ag
 
 ## Changes in this run
 
-### 🆕 New findings (15)
+### 🆕 New findings (0)
 
-- `appmenu-new-tab-controlled-changes` — `browser/browser/appMenuNotifications.ftl` — Access key `K` of `appmenu-new-tab-controlled-changes` is not present in its label
-  - Current: `K`
-  - The label is “Mantener los cambios”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `appmenu-homepage-controlled-changes` — `browser/browser/appMenuNotifications.ftl` — Access key `K` of `appmenu-homepage-controlled-changes` is not present in its label
-  - Current: `K`
-  - The label is “Mantener los cambios”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `appmenu-help-more-troubleshooting-info` — `browser/browser/appmenu.ftl` — Access key `T` of `appmenu-help-more-troubleshooting-info` is not present in its label
-  - Current: `T`
-  - The label is “Más información para solucionar problemas”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `bookmarks-toolbar` — `browser/browser/browser.ftl` — Access key `B` of `bookmarks-toolbar` is not present in its label
-  - Current: `B`
-  - The label is “Marcadores”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `picture-in-picture-hide-toggle` — `browser/browser/browser.ftl` — Access key `H` of `picture-in-picture-hide-toggle` is not present in its label
-  - Current: `H`
-  - The label is “Ocultar botón de Picture-in-Picture”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `downloads-cmd-always-use-system-default` — `browser/browser/downloads.ftl` — Access key `w` of `downloads-cmd-always-use-system-default` is not present in its label
-  - Current: `w`
-  - The label is “Abrir siempre en el visor del sistema”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `menu-edit-find-in-page` — `browser/browser/menubar.ftl` — Access key `F` of `menu-edit-find-in-page` is not present in its label
-  - Current: `F`
-  - The label is “Buscar en la página…”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `menu-help-more-troubleshooting-info` — `browser/browser/menubar.ftl` — Access key `T` of `menu-help-more-troubleshooting-info` is not present in its label
-  - Current: `T`
-  - The label is “Más información para solucionar problemas”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `protections-panel-content-blocking-manage-settings` — `browser/browser/protectionsPanel.ftl` — Access key `M` of `protections-panel-content-blocking-manage-settings` is not present in its label
-  - Current: `M`
-  - The label is “Gestionar los ajustes de protección”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `tab-context-play-tabs` — `browser/browser/tabContextMenu.ftl` — Access key `y` of `tab-context-play-tabs` is not present in its label
-  - Current: `y`
-  - The label is “Reproducir pestañas”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `unpin-selected-tabs` — `browser/browser/tabContextMenu.ftl` — Access key `b` of `unpin-selected-tabs` is not present in its label
-  - Current: `b`
-  - The label is “Soltar pestañas”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `bookmark-selected-tabs` — `browser/browser/tabContextMenu.ftl` — Access key `k` of `bookmark-selected-tabs` is not present in its label
-  - Current: `k`
-  - The label is “Añadir pestañas a marcadores…”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `confirm-on-quit-with-key` — `browser/browser/preferences/preferences.ftl` — Access key `b` of `confirm-on-quit-with-key` is not present in its label
-  - Current: `b`
-  - The label is “Confirmar antes de salir con { $quitKey }”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `forms-primary-pw-change` — `browser/browser/preferences/preferences.ftl` — Access key `P` of `forms-primary-pw-change` is not present in its label
-  - Current: `P`
-  - The label is “Cambiar la contraseña maestra…”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `styleeditor-visibility-toggle` — `devtools/client/styleeditor.ftl` — Access key `G` of `styleeditor-visibility-toggle` is not present in its label
-  - Current: `G`
-  - The label is “Cambiar la visibilidad de la hoja de estilos”. An access key not in the label cannot be underlined and is unreachable by keyboard.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -95,6 +51,7 @@ _Nothing retired._
 | Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
+| Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 15 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 106 |

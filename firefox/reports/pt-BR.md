@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-20 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d411ef0407f1` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b95608d528c8` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
 | **Previous run** | 2026-08-20 @ `d411ef0407f1` |
 | **Mode** | incremental |
@@ -51,6 +51,7 @@ _Nothing retired._
 | Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
+| Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 3 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 28 |

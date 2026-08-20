@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-20 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d411ef0407f1` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b95608d528c8` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
 | **Previous run** | 2026-08-20 @ `d411ef0407f1` |
 | **Mode** | incremental |
@@ -15,11 +15,9 @@ Findings are keyed by string id, never by line number. The locale is assessed ag
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `xpinstall-prompt-never-allow-and-report` — `browser/browser/addonNotifications.ftl` — Access key `m` of `xpinstall-prompt-never-allow-and-report` is not present in its label
-  - Current: `m`
-  - The label is “Verdachte website rapporteren”. An access key not in the label cannot be underlined and is unreachable by keyboard.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -53,6 +51,7 @@ _Nothing retired._
 | Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
+| Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 1 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 0 |

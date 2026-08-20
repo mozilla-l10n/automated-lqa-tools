@@ -424,6 +424,28 @@
   "suppressed_by": ""
  },
  {
+  "category": "E",
+  "check": "llm",
+  "current": "Nalaganje …",
+  "fid": "46c8b5ef3694",
+  "file": "browser/browser/newtab/newtab.ftl",
+  "first_seen": "2026-08-20",
+  "impact": 4,
+  "last_seen": "2026-08-20",
+  "locale": "sl",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The en-US source is \"Loading…\" with no space before the ellipsis; Slovenian does not insert a space before the ellipsis in such loading strings.",
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "7b2ef640",
+  "string_id": "newtab-stocks-search-loading",
+  "suggest": "Nalaganje…",
+  "summary": "Space inserted before the ellipsis character.",
+  "suppressed_by": ""
+ },
+ {
   "category": "D",
   "check": "legacy",
   "current": "-input-menu-edit2",

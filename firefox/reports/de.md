@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-20 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d411ef0407f1` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b95608d528c8` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
 | **Previous run** | 2026-08-20 @ `d411ef0407f1` |
 | **Mode** | incremental |
@@ -15,18 +15,9 @@ Findings are keyed by string id, never by line number. The locale is assessed ag
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `main-context-menu-send-to-device` — `browser/browser/browserContext.ftl` — Access key `X` of `main-context-menu-send-to-device` is not present in its label
-  - Current: `X`
-  - The label is “Seite an Gerät senden”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `main-context-menu-link-send-to-device` — `browser/browser/browserContext.ftl` — Access key `X` of `main-context-menu-link-send-to-device` is not present in its label
-  - Current: `X`
-  - The label is “Link an Gerät senden”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `about-logins-import-dialog-items-no-change2` — `browser/browser/aboutLogins.ftl` — Malformed closing tag `</span >` in `about-logins-import-dialog-items-no-change2`
-  - Current: `{$count ->} [one] <span>Doppelte Einträge gefunden:</span> <span data-l10n-name="count">{ $count }</span> <span data-l10n-name="meta">(nicht importiert)</span > [other] <span>Doppelte Einträge gefunden:</span> <span dat…`
-  - en-US: `{$count ->} [other] <span>Duplicate entries found:</span> <span data-l10n-name="count">{ $count }</span> <span data-l10n-name="meta">(not imported)</span>`
-  - Whitespace inside a closing tag makes it render as literal text.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -60,6 +51,7 @@ _Nothing retired._
 | Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
+| Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 2 |
 | Markup & `data-l10n-name` defects | 1 |
 | Typography deviations from this locale's own norm | 0 |

@@ -47,10 +47,15 @@ variants:
 locales:
   - cs
   - de
+  - en-CA
+  - en-GB
+  - es-AR
   - es-ES
   - es-MX
   - fr
   - fy-NL
+  - hu
+  - id
   - it
   - ja
   - nl
@@ -60,8 +65,6 @@ locales:
   - sl
   - tr
   - zh-CN
-  - en-GB
-  - en-CA
 
 # Deterministic checks that are meaningless for some locales or paths.
 check_overrides:

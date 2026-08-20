@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-20 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d411ef0407f1` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b95608d528c8` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
 | **Previous run** | 2026-08-20 @ `d411ef0407f1` |
 | **Mode** | incremental |
@@ -15,31 +15,9 @@ Findings are keyed by string id, never by line number. The locale is assessed ag
 
 ## Changes in this run
 
-### 🆕 New findings (7)
+### 🆕 New findings (0)
 
-- `about-networking-ssl-tokens-summary-compression` — `toolkit/toolkit/about/aboutNetworking.ftl` — `about-networking-ssl-tokens-summary-compression` switches on ['total'], which en-US does not pass (it provides ['compressedLength', 'decompressedLength', 'saved'])
-  - Current: `{$total ->} [one] { $decompressedLength } → { $compressedLength } o ({ $saved } % économisé) [other] { $decompressedLength } → { $compressedLength } o ({ $saved } % économisés)`
-  - en-US: `{ $decompressedLength } → { $compressedLength } B ({ $saved }% saved)`
-  - Selecting on a variable the code does not pass makes every variant unreachable and the number render blank.
-- `bookmarks-toolbar` — `browser/browser/browser.ftl` — Access key `B` of `bookmarks-toolbar` is not present in its label
-  - Current: `B`
-  - The label is “Marque-pages”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `sidebar-callout-survey-productive-question` — `browser/browser/featureCallout.ftl` — Unbalanced markup in `sidebar-callout-survey-productive-question`
-  - Current: `Jusqu’à quel point êtes-vous d’accord ou non avec cette affirmation :</br> « Le panneau latéral de { -brand-short-name } m’aide à être plus productif·tive » ?`
-  - en-US: `To what extent do you agree or disagree with this statement:<br/> “The { -brand-short-name } sidebar helps me be more productive”?`
-  - Tags must open and close in the same order as en-US.
-- `felt-error-warning-download-attempt-failed-contact-admin` — `browser/browser/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
-  - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
-  - The tree uses ’ 5633 times against 10 straight.
-- `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
-  - Current: `L’évènement « key » n’est pas disponible dans GTK2 : key="%S" modifiers="%S" id="%S"`
-  - The locale's quote convention is `guillemet` (1132 occurrences).
-- `WinConflict2` — `dom/chrome/dom/dom.properties` — `WinConflict2` uses straight double quotes
-  - Current: `L’évènement « key » n’est pas disponible pour certaines dispositions de clavier : key="%S" modifiers="%S" id="%S"`
-  - The locale's quote convention is `guillemet` (1132 occurrences).
-- `felt-error-warning-download-attempt-failed-contact-admin` — `toolkit/toolkit/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
-  - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
-  - The tree uses ’ 5633 times against 10 straight.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -73,6 +51,7 @@ _Nothing retired._
 | Plural / select selector mismatches | 1 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
+| Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 1 |
 | Markup & `data-l10n-name` defects | 1 |
 | Typography deviations from this locale's own norm | 4 |

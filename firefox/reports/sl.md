@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-20 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d411ef0407f1` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b95608d528c8` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
 | **Previous run** | 2026-08-20 @ `d411ef0407f1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 17,521 |
+| **Strings reviewed this run** | 12 of 17,533 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against en-US only.
 
@@ -17,9 +17,10 @@ Findings are keyed by string id, never by line number. The locale is assessed ag
 
 ### 🆕 New findings (1)
 
-- `main-context-menu-media-video-leave-fullscreen` — `browser/browser/browserContext.ftl` — Access key `j` of `main-context-menu-media-video-leave-fullscreen` is not present in its label
-  - Current: `j`
-  - The label is “Izhod iz celozaslonskega načina”. An access key not in the label cannot be underlined and is unreachable by keyboard.
+- `newtab-stocks-search-loading` — `browser/browser/newtab/newtab.ftl` — Space inserted before the ellipsis character.
+  - Current: `Nalaganje …`
+  - en-US: `Nalaganje…`
+  - The en-US source is "Loading…" with no space before the ellipsis; Slovenian does not insert a space before the ellipsis in such loading strings.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 17,521 |
-| Missing strings | 642 |
+| Strings | 17,533 |
+| Missing strings | 630 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -53,25 +54,26 @@ _Nothing retired._
 | Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 1 |
 | Plural variants (dead or missing forms) | 0 |
+| Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 1 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 34 |
 
 ### Completeness
 
-**642 strings** are not translated yet, concentrated in:
+**630 strings** are not translated yet, concentrated in:
 
 - `browser/browser/aiWindow.ftl` — 136
 - `browser/browser/aiWindowContent.ftl` — 71
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 48
 - `dom/chrome/dom/dom.properties` — 45
 - `browser/browser/ipProtection.ftl` — 37
-- `browser/browser/newtab/newtab.ftl` — 30
+- `browser/browser/newtab/newtab.ftl` — 28
 - `browser/browser/aiFeatures.ftl` — 26
 - `devtools/client/toolbox-options.ftl` — 24
 - `dom/chrome/security/security.properties` — 23
-- `browser/browser/preferences/preferences.ftl` — 21
 - `toolkit/toolkit/about/aboutNetworking.ftl` — 20
+- `browser/browser/preferences/preferences.ftl` — 19
 - `devtools/client/debugger.properties` — 17
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
@@ -84,7 +86,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 303, `straight-double` 285, `curly-single` 54, `guillemet` 7 | _mixed_ |
 | apostrophe | `typographic` 54, `straight` 52 | _mixed_ |
-| ellipsis | `char` 420, `ascii` 40 | **char** |
+| ellipsis | `char` 421, `ascii` 40 | **char** |
 | dash | `em` 13, `en` 150 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 9 | _mixed_ |
 | register | `informal` 11, `formal` 605 | **formal** |
@@ -98,14 +100,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (32)
+## 3. Open findings (33)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 2 |
 | 3 | Degraded language (grammar, spelling, terminology) | 24 |
-| 4 | Cosmetic (typography, spacing) | 6 |
+| 4 | Cosmetic (typography, spacing) | 7 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -174,6 +176,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 - `restore-from-backup-profiles-disabled-message` — `browser/browser/backupSettings.ftl` — Double space before "zamenjali".
 - `firefox-relay-and-fxa-popup-notification-first-sentence-basic-info` — `browser/browser/firefoxRelay.ftl` — Missing space/preposition before the link → renders "Sporočilatega spletnega mesta". → "Sporočila s <label…>tega spletnega mesta</label>".
+- `newtab-stocks-search-loading` — `browser/browser/newtab/newtab.ftl` — Space inserted before the ellipsis character.
+  - Current: `Nalaganje …`
+  - en-US: `Nalaganje…`
+  - The en-US source is "Loading…" with no space before the ellipsis; Slovenian does not insert a space before the ellipsis in such loading strings.
 - `policy-PictureInPicture` — `browser/browser/policies/policies-descriptions.ftl` — Missing sentence-final period (every other policy description ends with one).
 - `inactive-css-not-display-block-on-floated-fix` — `devtools/client/tooltips.ftl` — devtools/client/tooltips.ftl — Missing space before markup: "odstraniti<strong>float</strong>" → "odstraniti <strong>float</strong>" (renders "odstranitifloat").
 - `network-connection-status-connecting` — `netwerk/netwerk/necko.ftl` — netwerk/netwerk/necko.ftl — Stray space before the ellipsis: "{ $host } …" → "{ $host }…" (siblings looking-up, sending-request, waiting are correct).

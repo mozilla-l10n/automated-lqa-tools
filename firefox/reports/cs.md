@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-20 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d411ef0407f1` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b95608d528c8` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
-| **Previous run** | _none — this is the baseline_ @ `—` |
-| **Mode** | baseline |
-| **Strings reviewed this run** | 18,131 of 18,131 |
+| **Previous run** | 2026-08-20 @ `d411ef0407f1` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 0 of 18,131 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against en-US only.
 
@@ -15,239 +15,9 @@ Findings are keyed by string id, never by line number. The locale is assessed ag
 
 ## Changes in this run
 
-### 🆕 New findings (252)
+### 🆕 New findings (0)
 
-- `browser-data-cookies-checkbox` — `browser/browser/migration.ftl` — `browser-data-cookies-checkbox` (`.label`) switches on ['browser'], which en-US does not pass (it provides nothing)
-  - Current: `{$browser ->} [firefox] Cookies [chrome] Soubory cookie [edge] Soubory cookie [safari] Cookies [other] Cookies`
-  - en-US: `Cookies`
-  - Selecting on a variable the code does not pass makes every variant unreachable and the number render blank.
-- `browser-data-cookies-label` — `browser/browser/migration.ftl` — `browser-data-cookies-label` (`.value`) switches on ['browser'], which en-US does not pass (it provides nothing)
-  - Current: `{$browser ->} [firefox] Cookies [chrome] Soubory cookie [edge] Soubory cookie [safari] Cookies [other] Cookies`
-  - en-US: `Cookies`
-  - Selecting on a variable the code does not pass makes every variant unreachable and the number render blank.
-- `browser-data-formdata-checkbox` — `browser/browser/migration.ftl` — `browser-data-formdata-checkbox` (`.label`) switches on ['browser'], which en-US does not pass (it provides nothing)
-  - Current: `{$browser ->} [firefox] Uložená historie formulářů [chrome] Uložená historie formulářů [edge] Vyplňování formulářů [safari] Vyplňování formulářů [other] Uložená historie formulářů`
-  - en-US: `Saved Form History`
-  - Selecting on a variable the code does not pass makes every variant unreachable and the number render blank.
-- `browser-data-formdata-label` — `browser/browser/migration.ftl` — `browser-data-formdata-label` (`.value`) switches on ['browser'], which en-US does not pass (it provides nothing)
-  - Current: `{$browser ->} [firefox] Uložená historie formulářů [chrome] Uložená historie formulářů [edge] Vyplňování formulářů [safari] Vyplňování formulářů [other] Uložená historie formulářů`
-  - en-US: `Saved Form History`
-  - Selecting on a variable the code does not pass makes every variant unreachable and the number render blank.
-- `browser-data-passwords-checkbox` — `browser/browser/migration.ftl` — `browser-data-passwords-checkbox` (`.label`) switches on ['browser'], which en-US does not pass (it provides nothing)
-  - Current: `{$browser ->} [firefox] Uložená uživatelská jména a hesla [chrome] Uložená hesla [edge] Uložená hesla [safari] Hesla [other] Uložená uživatelská jména a hesla`
-  - en-US: `Saved Logins and Passwords`
-  - Selecting on a variable the code does not pass makes every variant unreachable and the number render blank.
-- `browser-data-passwords-label` — `browser/browser/migration.ftl` — `browser-data-passwords-label` (`.value`) switches on ['browser'], which en-US does not pass (it provides nothing)
-  - Current: `{$browser ->} [firefox] Uložená uživatelská jména a hesla [chrome] Uložená hesla [edge] Uložená hesla [safari] Hesla [other] Uložená uživatelská jména a hesla`
-  - en-US: `Saved Logins and Passwords`
-  - Selecting on a variable the code does not pass makes every variant unreachable and the number render blank.
-- `protections-panel-cookie-banner-blocker-view-turn-on-for-site` — `browser/browser/protectionsPanel.ftl` — `protections-panel-cookie-banner-blocker-view-turn-on-for-site` references ['host'], which en-US does not pass
-  - Current: `Zapnout blokování lišť cookie pro { $host }?`
-  - en-US: `Turn on Cookie Banner Blocker for this site?`
-  - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
-- `appmenuitem-new-ai-window` — `browser/browser/aiWindow.ftl` — `appmenuitem-new-ai-window` (`.value`) calls `-smart-window-brand-name` with ['capitalization'], but that term selects on ['case', 'plural-form']
-  - Current: `Nové { -smart-window-brand-name }`
-  - The term falls back to its catch-all variant, so the intended form is never selected.
-- `menu-file-new-ai-window` — `browser/browser/aiWindow.ftl` — `menu-file-new-ai-window` (`.label`) calls `-smart-window-brand-name` with ['capitalization'], but that term selects on ['case', 'plural-form']
-  - Current: `Nové { -smart-window-brand-name }`
-  - The term falls back to its catch-all variant, so the intended form is never selected.
-- `appmenu-help-not-deceptive` — `browser/browser/appmenu.ftl` — Access key `l` of `appmenu-help-not-deceptive` is not present in its label
-  - Current: `l`
-  - The label is “Tato stránka není podvodná…”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `main-context-menu-reveal-password` — `browser/browser/browserContext.ftl` — Access key `v` of `main-context-menu-reveal-password` is not present in its label
-  - Current: `v`
-  - The label is “Zobrazit heslo”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `menu-help-not-deceptive` — `browser/browser/menubar.ftl` — Access key `l` of `menu-help-not-deceptive` is not present in its label
-  - Current: `l`
-  - The label is “Tato stránka není podvodná…”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `safeb-palm-notdeceptive` — `browser/browser/safebrowsing/blockedSite.ftl` — Access key `l` of `safeb-palm-notdeceptive` is not present in its label
-  - Current: `l`
-  - The label is “Tato stránka není podvodná…”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `netmonitor.context.perfTools` — `devtools/client/netmonitor.properties` — `netmonitor.context.perfTools` uses three dots where this locale uses …
-  - Current: `Zahájit analýzu výkonu...`
-  - The tree uses … 450 times against 4 ASCII runs.
-- `crashreporter-submit-waiting-hardware-tests` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-submit-waiting-hardware-tests` uses three dots where this locale uses …
-  - Current: `Probíhá kontrola problémů s hardwarem a konfigurací...`
-  - The tree uses … 450 times against 4 ASCII runs.
-- `pdfjs-free-text2` — `toolkit/toolkit/pdfviewer/viewer.ftl` — `pdfjs-free-text2` uses three dots where this locale uses …
-  - Current: `Začněte psát...`
-  - The tree uses … 450 times against 4 ASCII runs.
-- `pdfjs-editor-alt-text-settings-downloading-model-button` — `toolkit/toolkit/pdfviewer/viewer.ftl` — `pdfjs-editor-alt-text-settings-downloading-model-button` uses three dots where this locale uses …
-  - Current: `Probíhá stahování...`
-  - The tree uses … 450 times against 4 ASCII runs.
-- `onboarding-new-user-survey-time-based-option-3` — `browser/browser/newtab/onboarding.ftl` — "More than 1 month" translated as "Less than 1 month", duplicating the previous survey option.
-  - Current: `Méně než 1 měsíc, pravidelně`
-  - en-US: `Více než 1 měsíc, pravidelně`
-  - en-US is "More than 1 month, regularly"; the Czech says "Less than", so options 2, 3 and 4 all read "Méně než 1 měsíc" and the survey answers become indistinguishable.
-- `onboarding-new-user-survey-time-based-option-4` — `browser/browser/newtab/onboarding.ftl` — "More than 1 month" translated as "Less than 1 month".
-  - Current: `Méně než 1 měsíc, příležitostně`
-  - en-US: `Více než 1 měsíc, příležitostně`
-  - en-US is "More than 1 month, occasionally"; reversed comparison.
-- `UN_SURVEY_CHECKBOX_LABEL` — `browser/installer/custom.properties` — Uninstall survey label says "why you installed" instead of "why you uninstalled".
-  - Current: `Řekněte Mozille, proč jste si aplikaci $BrandShortName nainstalovali`
-  - en-US: `Řekněte Mozille, proč jste si aplikaci $BrandShortName odinstalovali`
-  - en-US: "Tell Mozilla why you uninstalled $BrandShortName". The string appears in the uninstaller, so the Czech asks the opposite question.
-- `fxa-adoption-addresses-backup-subtitle` — `browser/browser/newtab/asrouter.ftl` — Talks about protecting passwords, while the message and its title are about saved addresses.
-  - Current: `Chraňte svá hesla synchronizací se zařízeními pomocí šifrování.`
-  - en-US: `Chraňte své uložené adresy tím, že je synchronizujete se svými zařízeními pomocí šifrování.`
-  - en-US: "Protect your saved addresses by syncing them to your devices with encryption." The sibling strings (credit cards, bookmarks) correctly name their own data type; only this one names the wrong one.
-- `mr2022-upgrade-onboarding-pin-private-window-subtitle` — `browser/browser/newtab/onboarding.ftl` — The whole sentence is duplicated in two slightly different wordings, with no space between them.
-  - Current: `Žádné uložené cookies ani historie, přímo z vaší plochy. Prohlížejte, jako když se nikdo nedívá.Žádné uložené soubory cookies ani historie, přímo z vaší plochy. Prohlížejte, jako by se nikdo nedíval.`
-  - en-US: `Žádné uložené soubory cookies ani historie, přímo z vaší plochy. Prohlížejte, jako by se nikdo nedíval.`
-  - en-US contains a single sentence pair; the Czech leftover duplicate is displayed to the user.
-- `fxa-menu-message-sign-up-button` — `browser/browser/newtab/asrouter.ftl` — "Sign up" rendered as "Přihlásit se", identical to the "Sign in" button.
-  - Current: `Přihlásit se`
-  - en-US: `Zaregistrovat se`
-  - en-US distinguishes fxa-menu-message-sign-up-button ("Sign up") from fxa-menu-message-sign-in-button ("Sign in"); both are "Přihlásit se" in Czech, so the account-creation action is mislabelled. The locale uses "Zaregistrovat se" for Sign up in fxa-adoption-primary-button-label in the same file.
-- `FileError` — `browser/installer/override.properties` — The third button option is described as "Cancel to stop the installation" instead of "Ignore to skip this file".
-  - Current: `nebo na Storno pro ukončení instalace.`
-  - en-US: `nebo na Ignorovat pro přeskočení tohoto souboru.`
-  - en-US: "Click Abort to stop the installation, Retry to try again, or Ignore to skip this file." The Czech repeats the abort meaning and never explains the Ignore button; it also duplicates the FileError_NoIgnore wording.
-- `colorways-cfr-primarybutton` — `browser/browser/newtab/asrouter.ftl` — "baletu" (ballet) instead of "paletu" (palette).
-  - Current: `Zvolit baletu barev`
-  - en-US: `Zvolit paletu barev`
-  - Typo; the neighbouring colorways-cfr-header-* strings all use "Paleta barev".
-- `newtab-privacy-message-info-13` — `browser/browser/newtab/newtab.ftl` — Trackers rendered as "sledovací soubory" (tracking files) instead of the established "sledovací prvky".
-  - Current: `{ -brand-short-name } blokuje sledovací soubory, čímž uvolňuje šířku pásma pro plynulejší streamování.`
-  - en-US: `{ -brand-short-name } blokuje sledovací prvky, čímž uvolňuje šířku pásma pro plynulejší streamování.`
-  - Every other message in the Privacy widget group renders "trackers" as "sledovací prvky"; "sledovací soubory" additionally misstates what a tracker is (it is not a file).
-- `onboarding-sign-up-secondary-button` — `browser/browser/newtab/onboarding.ftl` — "pohlížet" instead of "prohlížet".
-  - Current: `Začít pohlížet`
-  - en-US: `Začít prohlížet`
-  - Typo; every other "Start browsing" button in the file is "Začít prohlížet".
-- `onboarding-personalization-subtitle` — `browser/browser/newtab/onboarding.ftl` — "odporučíme" is not a Czech word; should be "doporučíme".
-  - Current: `my vám odporučíme funkce a rozšíření`
-  - en-US: `my vám doporučíme funkce a rozšíření`
-  - Spelling error in both the with-cases and no-cases variants of the string.
-- `newtab-label-sponsored` — `browser/browser/newtab/newtab.ftl` — "sponzrováno" is misspelled.
-  - Current: `{ $sponsorOrSource } · sponzrováno`
-  - en-US: `{ $sponsorOrSource } · Sponzorováno`
-  - Missing "o"; the parallel labels newtab-topsite-sponsored and newtab-label-sponsored-fixed use "Sponzorováno".
-- `mr2022-onboarding-import-header` — `browser/browser/newtab/onboarding.ftl` — "nastaveni" is missing its accent.
-  - Current: `Bleskové nastaveni`
-  - en-US: `Bleskové nastavení`
-  - Czech spelling requires "nastavení".
-- `newtab-wallpaper-suspension-bridge` — `browser/browser/newtab/newtab.ftl` — The wallpaper description is grammatically broken and does not parse as Czech.
-  - Current: `Šedivé fotografování celé visuté můstky během dne`
-  - en-US: `Fotografie šedého visutého mostu za denního světla`
-  - en-US: "Grey full-suspension bridge photography during daytime". "celé visuté můstky" has no agreement with anything in the sentence and "můstky" (small footbridges, plural) does not match "bridge".
-- `newtab-pocket-new-topics-title` — `browser/browser/newtab/newtab.ftl` — Adjective does not agree with the neuter plural noun "témata".
-  - Current: `Podívejte se na oblíbené témata`
-  - en-US: `Podívejte se na oblíbená témata`
-  - "téma" is neuter; the accusative plural requires "oblíbená témata".
-- `onboarding-infrequent-import-title` — `browser/browser/newtab/onboarding.ftl` — "Buďte se" is ungrammatical — a stray reflexive pronoun.
-  - Current: `Buďte se jako doma`
-  - en-US: `Buďte jako doma`
-  - The verb "být" is not reflexive; either "Buďte jako doma" or "Ciťte se jako doma" is correct.
-- `WARN_DISK_SPACE_QUIT2` — `browser/installer/nsisstrings.properties` — Wrong case after "na": "na instalace" should be "na instalaci".
-  - Current: `dostatek úložného prostoru na instalace aplikace $BrandShortName`
-  - en-US: `dostatek úložného prostoru na instalaci aplikace $BrandShortName`
-  - "na" with this meaning takes the accusative singular "instalaci".
-- `CopyDetails` — `browser/installer/override.properties` — Wrong case: "podrobnosti" should be genitive plural "podrobností".
-  - Current: `Zkopírování podrobnosti do schránky`
-  - en-US: `Zkopírování podrobností do schránky`
-  - The verbal noun "zkopírování" governs the genitive.
-- `newtab-widget-section-minimize` — `browser/browser/newtab/newtab.ftl` — "wigety" is a typo for "widgety".
-  - Current: `Minimalizovat wigety`
-  - en-US: `Minimalizovat widgety`
-  - Every other widget string in the file spells it "widgety".
-- `policy-PrivateBrowsingModeAvailability` — `browser/browser/policies/policies-descriptions.ftl` — Says "set availability in private browsing mode" instead of "set availability of private browsing mode".
-  - Current: `Nastaví dostupnost v režimu anonymního prohlížení.`
-  - en-US: `Nastaví dostupnost režimu anonymního prohlížení.`
-  - en-US: "Set availability of private browsing mode." The policy controls whether the mode itself is available, not something inside it; the extra "v" inverts what an administrator would expect.
-- `newtab-sports-widget-world-cup-champions` — `browser/browser/newtab/newtab.ftl` — "2026 World Cup Champions" rendered as just the tournament name, dropping "Champions".
-  - Current: `Mistrovství světa ve fotbale 2026`
-  - en-US: `Mistři světa 2026`
-  - The label is shown over the winning team on the result card; as translated it names the tournament rather than the champions, unlike the short variant newtab-sports-widget-world-cup-champions-short ("Mistři pro rok 2026").
-- `home-custom-homepage-replace-with-prompt` — `browser/browser/newtab/newtab.ftl` — "Nahradit s" is a calque of "Replace with"; Czech "nahradit" takes the instrumental without "s".
-  - Current: `Nahradit s`
-  - en-US: `Nahradit čím:`
-  - "Nahradit s" is ungrammatical in Czech; the verb requires a bare instrumental object.
-- `newtab-sports-widget-message-wallpapers-semifinals-title` — `browser/browser/newtab/newtab.ftl` — "semi-finále" is written with a hyphen.
-  - Current: `Získejte novou tapetu pro semi-finále`
-  - en-US: `Získejte novou tapetu pro semifinále`
-  - Czech spells it "semifinále" as one word; the same file already uses "Semifinále" in newtab-sports-widget-semi-finals.
-- `newtab-clock-widget-menu-switch-to-24h` — `browser/browser/newtab/newtab.ftl` — "24-hodinový" is hyphenated, unlike "12hodinový" in the adjacent string.
-  - Current: `Přepnout na 24-hodinový formát`
-  - en-US: `Přepnout na 24hodinový formát`
-  - Czech joins a numeral to the adjective without a hyphen; newtab-clock-widget-menu-switch-to-12h correctly writes "12hodinový".
-- `windows-10-eos-global-infobar-title` — `browser/browser/newtab/asrouter.ftl` — Missing space after the closing </strong> tag, so two sentences run together.
-  - Current: `systém Windows 10.</strong>Zálohujte si svá data`
-  - en-US: `systém Windows 10.</strong> Zálohujte si svá data`
-  - en-US has a space after </strong>; without it the rendered text reads "…Windows 10.Zálohujte…".
-- `newtab-weather-sponsored` — `browser/browser/newtab/newtab.ftl` — Missing space after the separator character.
-  - Current: `{ $provider } ∙Sponzorované`
-  - en-US: `{ $provider } ∙ Sponzorované`
-  - en-US has spaces on both sides of "∙"; the same defect is repeated in newtab-weather-see-forecast-description.
-- `launch-on-login-infobar-final-message` — `browser/browser/newtab/asrouter.ftl` — Uses ASCII straight quotes where the file otherwise uses Czech quotation marks.
-  - Current: `vyhledejte v nastavení položku "spuštění"`
-  - en-US: `vyhledejte v nastavení položku „spuštění“`
-  - set-default-pdf-handler-headline in the same file correctly uses „PDF“; straight ASCII quotes are not Czech typography.
-- `home-homepage-new-tabs` — `browser/browser/newtab/newtab.ftl` — "New tabs" rendered as "In a new tab", breaking the parallel with "Nová okna".
-  - Current: `V novém panelu`
-  - en-US: `Nové panely`
-  - en-US label is the plural noun phrase "New tabs", matching "New windows" ("Nová okna") in the row above; the Czech turns it into a prepositional phrase and makes it singular.
-- `fonts-langgroup-canadian` — `browser/browser/preferences/fonts.ftl` — "Unified Canadian Syllabary" is translated as "Kannadština" (Kannada), the same label already used for fonts-langgroup-kannada.
-  - Current: `Kannadština`
-  - en-US: `Sjednocené kanadské slabičné písmo`
-  - The Canadian Aboriginal syllabics script is named as the Kannada language; the font-group list then shows two identical "Kannadština" entries, so the user cannot pick fonts for either script correctly.
-- `autofill-address-state` — `browser/browser/preferences/formAutofill.ftl` — "State" is translated as "Země" (country), the same word used for the Country field.
-  - Current: `Země`
-  - en-US: `Stát`
-  - autofill-address-country-only is also "Země"; labelling the state/province level as "country" is a reversed level in the address hierarchy and collides with the actual country field.
-- `preferences-doh-enabled-detailed-desc-2` — `browser/browser/preferences/preferences.ftl` — Verb form "se použijte" (imperative) instead of "se použije" (3rd person singular).
-  - Current: `Výchozí překladač DNS se použijte jen v případě problému se zabezpečeným DNS`
-  - en-US: `Výchozí překladač DNS se použije jen v případě problému se zabezpečeným DNS`
-  - The subject is "překladač DNS", so the verb must be 3rd person singular; the imperative makes the descriptive bullet ungrammatical.
-- `certs-devices2` — `browser/browser/preferences/preferences.ftl` — "bezpečností" should be the adjective "bezpečnostní".
-  - Current: `Spravovat bezpečností zařízení`
-  - en-US: `Spravovat bezpečnostní zařízení`
-  - "bezpečností" is the instrumental of the noun "bezpečnost"; the phrase needs the adjective, as used correctly in certs-devices ("Bezpečnostní zařízení…").
-- `search-suggestions-cant-show-2` — `browser/browser/preferences/preferences.ftl` — Missing preposition "v" before "adresním řádku".
-  - Current: `se nebudou adresním řádku zobrazovat`
-  - en-US: `se nebudou v adresním řádku zobrazovat`
-  - "adresním řádku" is locative and requires "v"; without it the sentence is ungrammatical. The same defect is in search-suggestions-cant-show.
-- `website-advertising-private-attribution` — `browser/browser/preferences/preferences.ftl` — "privacy-preserving ad measurement" is rendered as allowing "tracking advertising".
-  - Current: `Umožnit webům použití sledující reklamy, která je šetrná k soukromí`
-  - en-US: `Umožnit webům měření výkonu reklamy šetrné k soukromí`
-  - The checkbox permits measurement of ad performance, not the use of tracking ads; the description below correctly speaks about measuring how ads perform, so the label misstates what the user is enabling.
-- `security-privacy-issue-warning-third-party-cookies` — `browser/browser/preferences/preferences.ftl` — Verb "sledovali" (masculine animate) does not agree with the subject "cookies".
-  - Current: `aby vás sledovali na různých webových stránkách`
-  - en-US: `aby vás sledovaly na různých webových stránkách`
-  - The subject of the subordinate clause is "cookies třetích stran"; the participle must be inanimate plural "sledovaly".
-- `addressbar-locbar-suggest-all-option-2` — `browser/browser/preferences/preferences.ftl` — Case/agreement error: "z webu souvisejícím".
-  - Current: `Získat návrhy z webu souvisejícím s vaším vyhledáváním.`
-  - en-US: `Získat návrhy z webu související s vaším vyhledáváním.`
-  - The participle is meant to modify "návrhy" (accusative plural) but is inflected as instrumental singular, agreeing with nothing in the sentence. Same text in addressbar-locbar-suggest-nonsponsored-desc.
-- `home-custom-homepage-header` — `browser/browser/preferences/preferences.ftl` — Heading uses the accusative "Vlastní domovskou stránku" instead of the nominative.
-  - Current: `Vlastní domovskou stránku`
-  - en-US: `Vlastní domovská stránka`
-  - "Custom Homepage" is a page title, which in Czech takes the nominative; the accusative reads as a sentence fragment. The same string is used for home-custom-homepage-subpage.
-- `home-custom-homepage-replace-with-prompt` — `browser/browser/preferences/preferences.ftl` — "Nahradit s" uses the wrong preposition/case for "Replace with".
-  - Current: `Nahradit s`
-  - en-US: `Nahradit:`
-  - In Czech "nahradit" takes a bare instrumental (nahradit něčím); "nahradit s" is a calque from English and is ungrammatical before the buttons that follow.
-- `autofill-address-townland` — `browser/browser/preferences/formAutofill.ftl` — Irish "Townland" is translated as "Město" (city), identical to the City field.
-  - Current: `Město`
-  - en-US: `Townland (katastrální osada)`
-  - A townland is a rural land division below the locality level; using "Město" duplicates autofill-address-city and mislabels the sublocality field for Irish addresses.
-- `fonts-langgroup-odia` — `browser/browser/preferences/fonts.ftl` — "Odia" is rendered as "Udijština", which names the Udi language of the Caucasus.
-  - Current: `Udijština`
-  - en-US: `Urijština`
-  - The Indic language Odia/Oriya is "urijština" (or "odijština") in Czech; "udijština" is a different, unrelated language.
-- `content-blocking-cross-site-cookies-in-all-windows2` — `browser/browser/preferences/preferences.ftl` — "Cross-site cookies" rendered as "Cookies třetích stran" (third-party cookies) while neighbouring items keep "cross-site cookies".
-  - Current: `Cookies třetích stran ve všech oknech`
-  - en-US: `Cross-site cookies ve všech oknech`
-  - In the same blocked-items list content-blocking-all-cross-site-cookies uses "cross-site cookies"; third-party and cross-site are distinct concepts, so one of the two renderings is wrong on the same surface.
-- `preferences-etp-level-strict` — `browser/browser/preferences/preferences.ftl` — "may cause some sites to break" translated as damaging websites.
-  - Current: `mohou způsobit poškození některých webových stránek`
-  - en-US: `mohou omezit fungování některých webových stránek`
-  - "Poškození webových stránek" says the browser damages the sites themselves; elsewhere in the file the same source idea is correctly rendered as "může omezit fungování některých stránek".
-- `autofill-address-name` — `browser/browser/preferences/formAutofill.ftl` — The person's "Name" field is labelled "Název" (name of a thing).
-  - Current: `Název`
-  - en-US: `Jméno`
-  - This is the full-name field of an address record; Czech uses "Jméno" for people (as in autofill-passport-name), while "Název" denotes a title of an object.
-- _…and 192 more._
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -281,6 +51,7 @@ _Nothing retired._
 | Plural / select selector mismatches | 6 |
 | Term parameter mismatches | 3 |
 | Plural variants (dead or missing forms) | 77 |
+| Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 4 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 4 |
