@@ -8,8 +8,16 @@ neighbouring string. That is what the manual reviews did well, so the
 baseline reuses their shape: eight partitions of the tree, one headless
 `claude` invocation each, run in parallel.
 
-Each partition writes its own JSON. A partition that fails or times out
-does not lose the others, and `--partitions` re-runs just that one.
+The agent is given **read-only tools only** -- no Write, no Edit, no Bash.
+It cannot touch the locale tree, the reference tree, or this repository's
+own scripts; it returns its findings as its final message and the driver
+parses them. That is a structural guarantee rather than an instruction in a
+prompt, which matters because this is the one path where a model has file
+access at all. Changing the tooling is a commit someone makes and
+`selftest.py` re-pins, never something a run does.
+
+A partition that fails or times out does not lose the others, and
+`--partitions` re-runs just that one.
 
 This path is expensive -- on the order of 2.5-3M input tokens for a full
 Firefox locale -- so it runs once per locale and never again; from then on
@@ -21,6 +29,7 @@ from __future__ import annotations
 import concurrent.futures
 import json
 import os
+import re
 import shutil
 import subprocess
 import tempfile
@@ -68,8 +77,8 @@ context.
 
 ## Output
 
-Write your findings as JSON to `{outfile}` -- nothing else, no report, no
-commentary. The file must contain a single JSON object:
+Your final message must be a single JSON object and nothing else -- no
+report, no commentary, no code fence:
 
 {{"findings": [{{"string_id": "...", "file": "...", "category": "A|B|C|D|E",
   "impact": 1, "summary": "...", "current": "...", "suggest": "...",
@@ -79,8 +88,10 @@ commentary. The file must contain a single JSON object:
 defective fragment, copied verbatim from the localized string, because a
 later run uses it to verify whether the defect is gone.
 
-Write `{{"findings": []}}` if the partition is clean. Do not modify any file
-in the locale tree or the reference tree.
+Reply `{{"findings": []}}` if the partition is clean. That is a normal
+result, not a failure.
+
+You have read-only tools. Read the files, do not try to change anything.
 """
 
 
@@ -150,58 +161,99 @@ def partition_files(l10n_root: str, extensions=(".ftl", ".properties", ".ini")) 
     return {name: files for name, files in buckets.items() if files}
 
 
-def _run_partition(project, locale, l10n_root, source_root, name, files, outdir, log):
-    outfile = os.path.join(outdir, f"{name}.json")
+# Everything the agent is allowed to do. No Write, no Edit, no Bash: the
+# baseline reads and reports, and cannot alter the trees it is reviewing or
+# the scripts reviewing them.
+READ_ONLY_TOOLS = "Read,Grep,Glob"
+
+_FENCE = re.compile(r"^\s*```(?:json)?\s*|\s*```\s*$")
+
+
+def _parse_result(text: str):
+    """Pull the findings object out of the agent's final message."""
+    text = _FENCE.sub("", (text or "").strip())
+    try:
+        return json.loads(text), None
+    except json.JSONDecodeError:
+        pass
+    # Tolerate a stray sentence around the object.
+    start, end = text.find("{"), text.rfind("}")
+    if start != -1 and end > start:
+        try:
+            return json.loads(text[start : end + 1]), None
+        except json.JSONDecodeError as exc:
+            return None, str(exc)
+    return None, "no JSON object in the reply"
+
+
+def _run_partition(project, locale, l10n_root, source_root, name, files, log):
     if not files:
         log(f"    partition {name}: no files, skipped")
-        return []
+        return [], 0.0
 
     listing = "\n".join(f"- {f}" for f in files)
-    if len(files) > 400:
-        listing = "\n".join(f"- {f}" for f in files[:400]) + (
-            f"\n- …and {len(files) - 400} more matching the same patterns; "
-            "review all of them."
-        )
     prompt = INSTRUCTIONS.format(
         language=language_of(locale), locale=locale,
         l10n=l10n_root, source=source_root, partition=name,
-        files=listing, rules=_rules(project, locale), outfile=outfile,
+        files=listing, rules=_rules(project, locale),
     )
 
     cmd = [
         _claude_bin(),
         "-p", prompt,
         "--output-format", "json",
-        "--permission-mode", "acceptEdits",
-        "--allowedTools", "Read,Grep,Glob,Write",
+        "--permission-mode", "default",
+        "--allowedTools", READ_ONLY_TOOLS,
+        "--disallowedTools", "Write,Edit,NotebookEdit,Bash,WebFetch,WebSearch,Task",
         "--add-dir", l10n_root,
         "--add-dir", source_root,
-        "--add-dir", outdir,
     ]
     model = project.llm.get("baseline_model")
     if model:
         cmd += ["--model", model]
 
     log(f"    partition {name}: {len(files)} files")
-    proc = subprocess.run(
-        cmd,
-        cwd=outdir,
-        stdin=subprocess.DEVNULL,
-        capture_output=True,
-        text=True,
-        timeout=int(project.llm.get("baseline_timeout_seconds", 3600)),
-    )
-    if not os.path.exists(outfile):
-        log(f"    partition {name}: produced no output (exit {proc.returncode})")
-        log(f"      stderr: {proc.stderr[-500:]}")
-        return []
-    with open(outfile, encoding="utf-8") as fh:
-        try:
-            data = json.load(fh)
-        except json.JSONDecodeError as exc:
-            log(f"    partition {name}: unreadable JSON ({exc})")
-            return []
-    return data.get("findings", [])
+    try:
+        proc = subprocess.run(
+            cmd,
+            cwd=tempfile.gettempdir(),
+            stdin=subprocess.DEVNULL,
+            capture_output=True,
+            text=True,
+            timeout=int(project.llm.get("baseline_timeout_seconds", 3600)),
+        )
+    except subprocess.TimeoutExpired:
+        log(f"    partition {name}: timed out; re-run it with --partitions {name}")
+        return [], 0.0
+
+    if proc.returncode != 0:
+        log(f"    partition {name}: exit {proc.returncode}: {proc.stderr[-400:]}")
+        return [], 0.0
+
+    try:
+        envelope = json.loads(proc.stdout)
+    except json.JSONDecodeError:
+        log(f"    partition {name}: unreadable CLI output: {proc.stdout[:300]}")
+        return [], 0.0
+
+    cost = float(envelope.get("total_cost_usd") or 0.0)
+    if envelope.get("is_error"):
+        log(f"    partition {name}: agent reported an error: "
+            f"{str(envelope.get('result'))[:300]}")
+        return [], cost
+
+    denials = envelope.get("permission_denials") or []
+    if denials:
+        # The agent tried to use a tool it does not have. Worth surfacing:
+        # it means the prompt is steering it somewhere it should not go.
+        log(f"    partition {name}: {len(denials)} tool denials (expected none)")
+
+    data, error = _parse_result(envelope.get("result"))
+    if data is None:
+        log(f"    partition {name}: reply was not JSON ({error}); "
+            f"re-run it with --partitions {name}")
+        return [], cost
+    return data.get("findings", []), cost
 
 
 def _claude_bin() -> str:
@@ -214,37 +266,51 @@ def _claude_bin() -> str:
 
 
 def review(project, locale, l10n_root, source_root, l10n, only=None, log=print):
-    """Run every partition and return the findings, plus the partitions that
-    produced nothing so a caller can tell 'clean' from 'failed'."""
+    """Run every partition and return the findings.
+
+    Also returns the partitions that produced nothing, so a caller can tell
+    "clean" from "failed", and the total cost the CLI reported.
+    """
     from llm_incremental import _to_finding
 
     buckets = partition_files(l10n_root, tuple(project.extensions))
+    if only:
+        unknown = [name for name in only if name not in buckets]
+        if unknown:
+            raise RuntimeError(
+                f"unknown partition(s): {', '.join(unknown)}; "
+                f"available: {', '.join(buckets)}"
+            )
     partitions = [(n, f) for n, f in buckets.items() if not only or n in only]
-    outdir = tempfile.mkdtemp(prefix=f"l10nqa-{locale}-")
+
     results: list[Finding] = []
     empty: list[str] = []
+    total_cost = 0.0
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         futures = {
             pool.submit(
                 _run_partition, project, locale, l10n_root, source_root,
-                name, files, outdir, log,
+                name, files, log,
             ): name
             for name, files in partitions
         }
         for future in concurrent.futures.as_completed(futures):
             name = futures[future]
             try:
-                raw_findings = future.result()
+                raw_findings, cost = future.result()
             except Exception as exc:  # noqa: BLE001
                 log(f"    partition {name} failed: {exc}")
                 empty.append(name)
                 continue
+            total_cost += cost
             if not raw_findings:
                 empty.append(name)
             for raw in raw_findings:
                 finding = _to_finding(locale, raw, l10n)
                 if finding is not None:
                     results.append(finding)
-    log(f"    baseline produced {len(results)} findings from {len(partitions)} partitions")
+
+    log(f"    baseline: {len(results)} findings from {len(partitions)} partitions, "
+        f"${total_cost:.2f}")
     return results, empty

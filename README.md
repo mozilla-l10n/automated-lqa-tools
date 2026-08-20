@@ -39,7 +39,8 @@ firefox/
    what became obsolete, what needs another look.
 6. **Suppress** anything matching the locale's false-positive rules, across
    the entire backlog, not just this run's findings.
-7. **Write** the report — only if it actually changed — and the new state.
+7. **Write** the report — only if it actually changed — and the new state,
+   then open or update a pull request. Nothing lands on `main` unreviewed.
 
 ## Reading the output
 
@@ -56,6 +57,11 @@ and wrong content — is the queue worth working through first.
 Manual dispatch: **Actions → Firefox l10n QA → Run workflow**. Pick locales
 (or `all`), and use `dry_run` the first time to see what it would do. The
 daily schedule is present in the workflow but commented out.
+
+Results arrive as a pull request on the branch `l10n-qa/firefox`. The branch
+is reused, so successive runs add commits to the same open PR rather than
+piling up one per run; merge it whenever you have read the diffs. If a run
+finds nothing new, it pushes nothing.
 
 Locally:
 
@@ -79,11 +85,32 @@ re-runs one slice of a baseline, `--no-llm` skips the API entirely.
 Everything is non-interactive. Subprocesses get a closed stdin, nothing
 prompts, and one locale failing does not stop the others.
 
+## What the automation can and cannot touch
+
+It writes only `firefox/state/`, `firefox/reports/`, and — on a locale's
+first run — a draft `firefox/locales/<code>/`. It never edits a locale file
+in `firefox-l10n`, and it never edits itself.
+
+That holds structurally, not just by convention. The incremental reviewer is
+a plain API request: the model returns findings and has no tools at all. The
+baseline reviewer is the only path where a model sees the filesystem, and it
+runs with `Read,Grep,Glob` and an explicit deny-list covering `Write`,
+`Edit`, and `Bash`, so it cannot modify the trees it is reviewing or the
+scripts reviewing them.
+
+Changing the checks is therefore a human job: edit `tools/`, re-run
+`tools/selftest.py`, commit. A run never improvises its own logic. If the
+incremental pass is too narrow for some situation — a big terminology
+overhaul, say, where the point is cross-file consistency rather than
+individual changed strings — force the agentic path on an existing locale
+with `--mode baseline`.
+
 ## Two things you will want to do
 
 **Add a locale** — put its code in `firefox/config.yaml`. Its first run has
-no state, so it takes the baseline path over the whole tree, which is
-expensive (~2.5–3M input tokens); every run after that is incremental. See
+no state, so it takes the baseline path over the whole tree. That is the
+expensive one: **roughly $50–70** for a full Firefox locale, measured from a
+real partition run. Every run after that is incremental. See
 [`firefox/docs/adding-a-locale.md`](firefox/docs/adding-a-locale.md).
 
 **Flag a false positive** — add a sentence to
@@ -93,21 +120,3 @@ fact. Both are re-applied to the whole backlog on the next run, so a rule
 written today retires findings raised months ago, and deleting a rule brings
 them back. See
 [`firefox/docs/suppressions.md`](firefox/docs/suppressions.md).
-
-## Where the current state came from
-
-Fourteen locales were reviewed by hand between July and August 2026. Those
-reviews were imported rather than redone: `firefox/tools/import_legacy.py`
-read the reports into `state/`, classified each finding against the current
-tree as open or already fixed, and turned the maintainer decisions recorded
-in them — Japanese ASCII ellipsis, Dutch en dashes, Polish and Slovenian
-case-parameterized brand terms, CJK access keys — into the seeded
-conventions and suppressions. That import runs once; it is kept in the tree
-as the record of where the baseline came from.
-
-## Cost
-
-An incremental run costs roughly in proportion to how much changed. A quiet
-day across all fourteen locales is a handful of batches; a large Pontoon
-sync is more. `--limit` and `--no-llm` bound it, and a locale with an empty
-delta makes no API call at all.

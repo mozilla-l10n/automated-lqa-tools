@@ -29,12 +29,13 @@ on:
   #   - cron: '17 5 * * *'   # daily, 05:17 UTC
 
 concurrency:
-  # Runs commit to main, so never let two overlap.
+  # Runs push to a shared branch, so never let two overlap.
   group: firefox-l10n-qa
   cancel-in-progress: false
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   plan:
@@ -155,17 +156,48 @@ jobs:
           if-no-files-found: ignore
           retention-days: 7
 
-  commit:
+  propose:
     needs: review
-    # Land whatever succeeded, even if some locales failed.
+    # Propose whatever succeeded, even if some locales failed.
     if: ${{ always() && !inputs.dry_run }}
     runs-on: ubuntu-latest
+    env:
+      BRANCH: l10n-qa/firefox
+      BASE: ${{ github.ref_name }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - run: pip install -r requirements.txt
+
+      - name: Switch to the rolling QA branch
+        # One long-lived branch, so runs accumulate into a single open pull
+        # request instead of opening one per run. Done before the artifacts
+        # are applied so there is nothing in the tree to stash.
+        run: |
+          set -euo pipefail
+          git config user.name  'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+
+          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null 2>&1; then
+            git fetch origin "$BRANCH"
+            git checkout -B "$BRANCH" "origin/$BRANCH"
+            if ! git merge --no-edit "origin/$BASE"; then
+              # Only generated files can conflict. Locale instructions are
+              # human-edited, so the base wins those; state and reports are
+              # rewritten by this run anyway, so the branch keeps them.
+              git checkout --theirs -- firefox/locales 2>/dev/null || true
+              git checkout --ours   -- firefox/state firefox/reports 2>/dev/null || true
+              git add -A
+              git commit --no-edit
+            fi
+          else
+            git checkout -B "$BRANCH"
+          fi
 
       - name: Collect the per-locale results
         uses: actions/download-artifact@v4
@@ -178,34 +210,60 @@ jobs:
         run: |
           set -euo pipefail
           if [ ! -d incoming ]; then
-            echo "no artifacts; nothing to commit"
+            echo "no artifacts produced; nothing to propose"
             exit 0
           fi
-          cp -R incoming/. firefox/ 2>/dev/null || true
+          cp -R incoming/. firefox/
           rm -rf incoming
 
       - name: Refresh the cross-locale summary
         run: python firefox/tools/summary.py
 
       - name: Commit
+        id: commit
         run: |
           set -euo pipefail
-          git config user.name  'github-actions[bot]'
-          git config user.email 'github-actions[bot]@users.noreply.github.com'
           git add firefox/state firefox/reports firefox/locales
           if git diff --cached --quiet; then
             echo "no changes: every locale is where it was"
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          git commit -m "Firefox l10n QA: ${{ inputs.locales }} ($(date -u +%Y-%m-%d)) [skip ci]"
-          # Another run may have landed while this one was working.
-          for attempt in 1 2 3; do
-            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && \
-              git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
-            echo "push attempt $attempt failed, retrying"
-            sleep 5
-          done
-          exit 1
+          git commit -m "Firefox l10n QA: ${{ inputs.locales }} ($(date -u +%Y-%m-%d))"
+          git push --force-with-lease origin "$BRANCH"
+          echo 'changed=true' >> "$GITHUB_OUTPUT"
+
+      - name: Open or update the pull request
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          {
+            echo 'Automated localization QA: findings, state and reports only.'
+            echo 'This workflow never modifies a locale file, and the review'
+            echo 'agent runs with read-only tools.'
+            echo
+            echo 'Review the report diffs, then merge. The branch is reused, so'
+            echo 'later runs add commits here rather than opening more pull'
+            echo 'requests.'
+            echo
+            echo '---'
+            echo
+            sed -n '1,40p' firefox/reports/00-summary.md
+          } > /tmp/pr-body.md
+
+          if gh pr view "$BRANCH" --json state --jq .state 2>/dev/null | grep -qx OPEN; then
+            gh pr edit "$BRANCH" --body-file /tmp/pr-body.md
+            gh pr comment "$BRANCH" \
+              --body "Refreshed $(date -u +%Y-%m-%d) — locales: \`${{ inputs.locales }}\`"
+          else
+            gh pr create \
+              --base "$BASE" --head "$BRANCH" \
+              --title "Firefox l10n QA" \
+              --body-file /tmp/pr-body.md
+          fi
+          gh pr view "$BRANCH" --json url --jq .url >> "$GITHUB_STEP_SUMMARY"
 
       - name: Summarize the run
         run: |

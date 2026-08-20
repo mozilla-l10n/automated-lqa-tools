@@ -17,9 +17,14 @@ the **baseline** path instead of the incremental one.
 
 It is a different job from an incremental run. There is no delta to work
 from and no accumulated knowledge, so it reads the tree the way the manual
-reviews did: eight thematic partitions, one headless `claude` invocation
+reviews did: nine thematic partitions, one headless `claude` invocation
 each, running in parallel, each reading the localized file and its en-US
-counterpart together and writing findings as JSON.
+counterpart together and returning findings as JSON.
+
+The agent has **read-only tools** — `Read`, `Grep`, `Glob`, with `Write`,
+`Edit` and `Bash` explicitly denied. It reports its findings as its final
+message rather than writing them anywhere, so it cannot alter the locale
+tree, the reference tree, or this repository.
 
 Partitioning is verified to be total — every file lands in exactly one
 partition, and anything the patterns do not claim goes to `other`. A
@@ -34,8 +39,9 @@ python firefox/tools/run.py --locale cs --mode baseline --partitions devtools
 
 ## Cost, and how to bound it
 
-A full Firefox locale is roughly 18,000 strings, on the order of **2.5–3M
-input tokens**. It happens once per locale; every run afterwards is
+A full Firefox locale is roughly 18,000 strings across ~370 files. A
+measured 13-file partition cost **$2.30**, which puts a whole locale at
+roughly **$50–70**. It happens once per locale; every run afterwards is
 incremental and cheap.
 
 To spread it out, run a few partitions at a time with `--partitions`. To see
