@@ -93,6 +93,18 @@ class.
   `state/<code>/findings.json` and appear in the report appendix, grouped by
   rule, with their reason. A wrong rule is visible rather than silent.
 
+## When a check itself was wrong
+
+Suppressions are for correct localization that a check misreads. If the
+*check* is wrong — it would misfire the same way on any locale — fix the
+check instead, and add the case to `tools/selftest.py` so it cannot come
+back.
+
+Findings that disappear because a check changed its mind are recorded as
+**withdrawn**, not fixed: the string never moved, so nobody fixed anything.
+They are listed separately in the report appendix, which keeps the fixed
+count honest.
+
 ## Things that are not false positives
 
 A few classes are handled elsewhere; do not write rules for them.

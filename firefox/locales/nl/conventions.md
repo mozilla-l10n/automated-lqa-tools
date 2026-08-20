@@ -9,12 +9,12 @@ written here is what the model is told to treat as correct._
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-single` 890, `straight-double` 25, `curly-double` 9 | **curly-single** |
-| apostrophe | `typographic` 1136 | **typographic** |
-| ellipsis | `char` 460 | **char** |
+| quotes | `curly-single` 891, `straight-double` 25, `curly-double` 9 | **curly-single** |
+| apostrophe | `typographic` 1137 | **typographic** |
+| ellipsis | `char` 461 | **char** |
 | dash | `en` 135 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `formal` 3089 | **formal** |
+| register | `formal` 3090 | **formal** |
 
 ## Instructions for the reviewer
 

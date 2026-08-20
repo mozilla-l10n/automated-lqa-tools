@@ -14,7 +14,7 @@ written here is what the model is told to treat as correct._
 | ellipsis | `char` 472 | **char** |
 | dash | `em` 68, `en` 8 | **em** |
 | nbsp | `total` 4446, `before-punctuation` 1997 | _mixed_ |
-| register | `formal` 3186 | **formal** |
+| register | `formal` 3187 | **formal** |
 
 ## Instructions for the reviewer
 

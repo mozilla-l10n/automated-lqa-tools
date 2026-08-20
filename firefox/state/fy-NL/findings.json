@@ -12855,9 +12855,9 @@
    "severity": "S4"
   },
   "rationale": "",
-  "resolved_on": "2026-08-11",
-  "status": "fixed",
-  "string_hash": "35e0775f",
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "a3fd19f1",
   "string_id": "shortcuts-remove-button",
   "suggest": "fluchkeppeling",
   "summary": "Keyboard shortcut — fluchtoets vs fluchkeppeling: customkeys-shortcut-unassigned, customkeys-shortcut-input, customkeys-conflict-confirm-title (customkeys.ftl); shortcuts-remove-button.aria-label, shortcuts-duplicate, shortcuts-duplicate-warning-message, -message2 (aboutAddons.ftl). Also customkeys-conflict-unusable-title / -body use kaai (cryptographic key) where toets is meant.",

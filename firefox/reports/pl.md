@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-20 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `443328fa7930` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d411ef0407f1` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
-| **Previous run** | 2026-08-20 @ `443328fa7930` |
+| **Previous run** | 2026-08-20 @ `d411ef0407f1` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 17,836 |
 
@@ -15,8 +15,12 @@ Findings are keyed by string id, never by line number. The locale is assessed ag
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (3)
 
+- `pdfjs-editor-comments-sidebar-title` — `toolkit/toolkit/pdfviewer/viewer.ftl` — `pdfjs-editor-comments-sidebar-title` is missing the ['few', 'many'] plural forms
+  - Current: `{$count ->} [one] Komentarz [other] Komentarze`
+  - en-US: `{$count ->} [one] Comment [other] Comments`
+  - This locale uses ['few', 'many', 'one'] in most of its plurals, and en-US pluralizes this string. The catch-all variant will be shown instead, giving the wrong grammatical form.
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
   - Current: `Zdarzenie klawisza jest niedostępne dla GTK2: key="%S" modifiers="%S" id="%S"`
   - The locale's quote convention is `polish-double` (1552 occurrences).
@@ -27,6 +31,10 @@ Findings are keyed by string id, never by line number. The locale is assessed ag
 ### ✅ Fixed since the last run (0)
 
 _Nothing was fixed._
+
+### ↩︎ Withdrawn — no longer considered a defect (0)
+
+_Nothing withdrawn._
 
 ### 🔁 String changed, defect not verifiable — needs a re-read (0)
 
@@ -51,6 +59,7 @@ _Nothing retired._
 | Variable & placeholder mismatches | 2 |
 | Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 0 |
+| Plural variants (dead or missing forms) | 1 |
 | Access keys not in their label | 0 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 2 |
@@ -100,11 +109,11 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (81)
+## 3. Open findings (82)
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 12 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 13 |
 | 2 | Wrong content (says something other than the English) | 33 |
 | 3 | Degraded language (grammar, spelling, terminology) | 32 |
 | 4 | Cosmetic (typography, spacing) | 4 |
@@ -147,6 +156,10 @@ _Nothing reported._
 - `download-ui-confirm-quit-cancel-downloads-mac` — `toolkit/toolkit/downloads/downloadUI.ftl` — A6, plural. All five use only [1] + [other] with "{ $downloadsCount } plików", so 2/3/4 render as "2 plików" instead of "2 pliki". Add a [few] variant to each.
   - Current: `[1]`
   - en-US: `[other]`
+- `pdfjs-editor-comments-sidebar-title` — `toolkit/toolkit/pdfviewer/viewer.ftl` — `pdfjs-editor-comments-sidebar-title` is missing the ['few', 'many'] plural forms
+  - Current: `{$count ->} [one] Komentarz [other] Komentarze`
+  - en-US: `{$count ->} [one] Comment [other] Comments`
+  - This locale uses ['few', 'many', 'one'] in most of its plurals, and en-US pluralizes this string. The catch-all variant will be shown instead, giving the wrong grammatical form.
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -283,7 +296,13 @@ _Nothing reported._
 
 _No suppression rules have matched._
 
-### Resolved to date (126)
+### Withdrawn to date (0)
+
+_Nothing withdrawn._
+
+_A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
+
+### Resolved to date (125)
 
 - `about-private-browsing-felt-privacy-v1-info-link` — `browser/browser/aboutPrivateBrowsing.ftl` — fixed 2026-08-06
 - `about-private-browsing-nova-info-link` — `browser/browser/aboutPrivateBrowsing.ftl` — fixed 2026-08-06

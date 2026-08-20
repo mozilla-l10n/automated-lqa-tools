@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-20 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `443328fa7930` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d411ef0407f1` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
-| **Previous run** | 2026-08-20 @ `443328fa7930` |
+| **Previous run** | 2026-08-20 @ `d411ef0407f1` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 18,131 |
 
@@ -22,6 +22,10 @@ _No new findings._
 ### ✅ Fixed since the last run (0)
 
 _Nothing was fixed._
+
+### ↩︎ Withdrawn — no longer considered a defect (0)
+
+_Nothing withdrawn._
 
 ### 🔁 String changed, defect not verifiable — needs a re-read (0)
 
@@ -46,6 +50,7 @@ _Nothing retired._
 | Variable & placeholder mismatches | 0 |
 | Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 0 |
+| Plural variants (dead or missing forms) | 0 |
 | Access keys not in their label | 0 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 2 |
@@ -84,13 +89,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (593)
+## 3. Open findings (594)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 27 |
 | 2 | Wrong content (says something other than the English) | 151 |
-| 3 | Degraded language (grammar, spelling, terminology) | 257 |
+| 3 | Degraded language (grammar, spelling, terminology) | 258 |
 | 4 | Cosmetic (typography, spacing) | 158 |
 
 ### A. Functional, markup, variables & plurals
@@ -529,6 +534,9 @@ _Nothing reported._
 - `addon-detail-homepage-label` — `toolkit/toolkit/about/aboutAddons.ftl` — Homepage — Startside vs Begjinside: home-homepage-title.label, detail-home.label, addon-detail-homepage-label, navbar-home (label vs tooltiptext), toolbar-drop-on-home-msg vs -multiple.
   - Current: `Startside`
   - en-US: `Begjinside`
+- `shortcuts-remove-button` — `toolkit/toolkit/about/aboutAddons.ftl` — Keyboard shortcut — fluchtoets vs fluchkeppeling: customkeys-shortcut-unassigned, customkeys-shortcut-input, customkeys-conflict-confirm-title (customkeys.ftl); shortcuts-remove-button.aria-label, shortcuts-duplicate, shortcuts-duplicate-warning-message, -message2 (aboutAddons.ftl). Also customkeys-conflict-unusable-title / -body use kaai (cryptographic key) where toets is meant.
+  - Current: `fluchtoets`
+  - en-US: `fluchkeppeling`
 
 ### E. Typography, punctuation & spacing
 
@@ -612,7 +620,13 @@ _Nothing reported._
 
 _No suppression rules have matched._
 
-### Resolved to date (245)
+### Withdrawn to date (0)
+
+_Nothing withdrawn._
+
+_A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
+
+### Resolved to date (244)
 
 - `aboutdialog-update-downloading` — `browser/browser/aboutDialog.ftl` — fixed 2026-08-11
 - `helpus-referrals` — `browser/browser/aboutDialog.ftl` — fixed 2026-08-11

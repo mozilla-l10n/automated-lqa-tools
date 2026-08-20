@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-20 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `443328fa7930` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d411ef0407f1` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
-| **Previous run** | 2026-08-20 @ `443328fa7930` |
+| **Previous run** | 2026-08-20 @ `d411ef0407f1` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 18,127 |
 
@@ -22,6 +22,10 @@ _No new findings._
 ### ✅ Fixed since the last run (0)
 
 _Nothing was fixed._
+
+### ↩︎ Withdrawn — no longer considered a defect (0)
+
+_Nothing withdrawn._
 
 ### 🔁 String changed, defect not verifiable — needs a re-read (0)
 
@@ -46,6 +50,7 @@ _Nothing retired._
 | Variable & placeholder mismatches | 0 |
 | Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 0 |
+| Plural variants (dead or missing forms) | 0 |
 | Access keys not in their label | 3 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 28 |
@@ -705,6 +710,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 ### Suppressed as false positives (0)
 
 _No suppression rules have matched._
+
+### Withdrawn to date (0)
+
+_Nothing withdrawn._
+
+_A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
 ### Resolved to date (131)
 

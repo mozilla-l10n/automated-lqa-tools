@@ -36,12 +36,19 @@ import suppress  # noqa: E402
 # broke" and "the defect is gone" is the whole point of the system.
 MUST_FIND = [
     ("tr", "term_params", "fxa-signout-dialog-body-aiwindow"),
+    # Polish needs one/few/many; with only one/other, five comments render
+    # the `few` form. en-US selects on the `one` *category* here, so this is
+    # real grammatical agreement rather than a one-versus-many choice.
+    ("pl", "plurals", "pdfjs-editor-comments-sidebar-title"),
     ("sl", "term_params", "firefox-relay-must-login-to-fxa"),
     ("de", "markup", "about-logins-import-dialog-items-no-change2"),
-    ("it", "markup", "about-glean-about-data-list-item-dictionary"),
 ]
 
 FIXED_UPSTREAM = [
+    # Repaired by the Italian team in a Pontoon sync on 2026-08-20, between
+    # two runs of this suite -- which is the tracking working, not a
+    # regression in the check.
+    ("it", "markup", "about-glean-about-data-list-item-dictionary"),
     # The Turkish string no longer passes `plural-form` to the brand term.
     ("tr", "term_params", "ai-window-learn-from-browsing-activity"),
     # The Dutch team repaired all three malformed closing tags the nl review
@@ -49,6 +56,27 @@ FIXED_UPSTREAM = [
     ("nl", "markup", "genai-settings-chat-gemini-links"),
     ("nl", "markup", "about-logins-import-dialog-items-no-change2"),
     ("nl", "markup", "cfr-doorhanger-milestone-heading2"),
+]
+
+# Correct localization that earlier versions of these checks misread. Each
+# one is a false positive that was actually reported, kept here so it cannot
+# come back.
+NOT_A_DEFECT = [
+    # Fluent passes arguments per message, not per attribute: en-US uses
+    # $extensionsCount in .heading, so .message may use it too. Comparing
+    # attribute-to-attribute called this an undefined variable.
+    ("es-MX", "variables", "unified-extensions-mb-blocklist-warning-multiple"),
+    ("es-MX", "variables", "unified-extensions-mb-blocklist-error-multiple"),
+    # The locale adding [one] where en-US has only [other] is what
+    # localizing a plural *is*, and must never be flagged.
+    ("es-MX", "plurals", "unified-extensions-mb-blocklist-warning-multiple2"),
+    # en-US keys on the exact number 1 ("Remove" / "Remove All"): a
+    # one-versus-many choice, not agreement. Mirroring it is correct, and
+    # demanding few/many here flagged most of Polish and Russian.
+    ("pl", "plurals", "about-logins-confirm-remove-all-dialog-confirm-button-label"),
+    ("sl", "plurals", "places-delete-page"),
+    ("ru", "plurals", "places-delete-page"),
+    ("es-MX", "plurals", "download-ui-cancel-downloads-ok"),
 ]
 
 # Conventions the reviews established as correct. These checks must be
@@ -65,6 +93,11 @@ MUST_BE_SILENT = [
     ("it", "selectors", "Italian has no selector mismatches"),
     ("sl", "variables", "Slovenian sklon case params are not mismatches"),
     ("sl", "selectors", "Slovenian sklon case params are not mismatches"),
+    ("it", "plurals", "Italian mirrors en-US plurals correctly"),
+    ("nl", "plurals", "Dutch mirrors en-US plurals correctly"),
+    ("es-MX", "plurals", "Mexican Spanish plurals are correct"),
+    ("ru", "plurals", "Russian plurals are correct"),
+    ("sl", "plurals", "Slovenian plurals are correct"),
 ]
 
 # Health numbers that should stay in the right neighbourhood. Completeness
@@ -81,8 +114,10 @@ def run(l10n_dir, source_dir, project) -> int:
     src = parse.parse_tree(source_dir, project.extensions, project.exclude)
     print(f"en-US reference: {len(src):,} strings\n")
 
-    needed = sorted({loc for loc, *_ in MUST_FIND + MUST_BE_SILENT + FIXED_UPSTREAM}
-                    | {loc for loc, *_ in HEALTH_BOUNDS})
+    needed = sorted(
+        {loc for loc, *_ in MUST_FIND + MUST_BE_SILENT + FIXED_UPSTREAM + NOT_A_DEFECT}
+        | {loc for loc, *_ in HEALTH_BOUNDS}
+    )
     results = {}
     for locale in needed:
         root = os.path.join(l10n_dir, project.locale_subpath(locale))
@@ -115,6 +150,12 @@ def run(l10n_dir, source_dir, project) -> int:
         hit = any(f.check == kind and f.string_id == string_id for f in found)
         check(not hit, f"{locale}: {kind} on {string_id} is gone")
 
+    print("\nCorrect localization that must not be flagged")
+    for locale, kind, string_id in NOT_A_DEFECT:
+        _, found, _ = results[locale]
+        hit = any(f.check == kind and f.string_id == string_id for f in found)
+        check(not hit, f"{locale}: {kind} on {string_id}")
+
     print("\nConventions established as correct — must stay silent")
     for locale, kind, why in MUST_BE_SILENT:
         health, _, _ = results[locale]
@@ -139,6 +180,51 @@ def run(l10n_dir, source_dir, project) -> int:
           "a punctuation-only repair is detected as fixed")
     check(f.identity() == Finding(**{**f.__dict__, "fid": ""}).identity(),
           "identity is stable across reconstruction")
+
+    print("\nFixed versus withdrawn")
+
+    class _Msg:
+        def __init__(self, text, digest):
+            self._t, self._h = text, digest
+
+        def text(self):
+            return self._t
+
+        def hash(self):
+            return self._h
+
+    def _resolve(store, digest):
+        found = [store]
+        findings_mod.resolve(
+            found, {("a.ftl", "s"): _Msg("text", digest)}, {("a.ftl", "s")},
+            "2026-01-01", rerunnable={"markup"}, still_raised=set(),
+        )
+        return store.status
+
+    from findings import Finding as _F
+    moved = _F(locale="xx", file="a.ftl", string_id="s", category="A",
+               check="markup", summary="bad tag", string_hash="oldhash")
+    check(_resolve(moved, "newhash") == "fixed",
+          "a check finding whose string changed is fixed")
+    stayed = _F(locale="xx", file="a.ftl", string_id="s", category="A",
+                check="markup", summary="bad tag", string_hash="samehash")
+    check(_resolve(stayed, "samehash") == "withdrawn",
+          "a check finding dropped while the string never moved is withdrawn, not fixed")
+
+    print("\nPlural categories")
+    import plurals
+    check(plurals.categories_for("ja") == frozenset({"other"}),
+          "Japanese has only the `other` category")
+    check("few" in (plurals.categories_for("pl") or set()),
+          "Polish has a `few` category")
+    check(plurals.categories_for("not-a-locale-xyz") is None,
+          "an unresolvable locale disables the check rather than guessing")
+    check(plurals.covered_categories("es-MX", {"1", "other"}) == frozenset({"one", "other"}),
+          "the exact key [1] covers the `one` category in Spanish")
+    check(plurals.covered_categories("ja", {"1", "other"}) == frozenset({"other"}),
+          "the exact key [1] covers `other` in Japanese")
+    check(plurals.is_numeric_key("1") and not plurals.is_numeric_key("one"),
+          "numeric keys are told apart from category keys")
 
     print("\nSuppression rules")
     from suppress import Rule

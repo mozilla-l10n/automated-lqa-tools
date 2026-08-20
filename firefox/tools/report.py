@@ -67,6 +67,7 @@ def _health_table(h, counts) -> str:
         "variables": "Variable & placeholder mismatches",
         "selectors": "Plural / select selector mismatches",
         "term_params": "Term parameter mismatches",
+        "plurals": "Plural variants (dead or missing forms)",
         "accesskey": "Access keys not in their label",
         "markup": "Markup & `data-l10n-name` defects",
         "typography": "Typography deviations from this locale's own norm",
@@ -128,6 +129,8 @@ def _delta_section(delta_report: dict) -> str:
     for key, title, empty in (
         ("new", "🆕 New findings", "No new findings."),
         ("fixed", "✅ Fixed since the last run", "Nothing was fixed."),
+        ("withdrawn", "↩︎ Withdrawn — no longer considered a defect",
+         "Nothing withdrawn."),
         ("recheck", "🔁 String changed, defect not verifiable — needs a re-read", "Nothing to re-read."),
         ("obsolete", "🗑 Retired — the string no longer exists upstream", "Nothing retired."),
     ):
@@ -146,6 +149,7 @@ def render(locale, meta, health, counts, findings, systemic, delta_report, count
     open_findings = [f for f in findings if f.is_open]
     suppressed = [f for f in findings if f.status == "suppressed"]
     fixed_total = [f for f in findings if f.status == "fixed"]
+    withdrawn_total = [f for f in findings if f.status == "withdrawn"]
 
     by_impact = {}
     for f in open_findings:
@@ -250,6 +254,22 @@ def render(locale, meta, health, counts, findings, systemic, delta_report, count
         lines.append("_No suppression rules have matched._")
 
     lines += [
+        "",
+        f"### Withdrawn to date ({len(withdrawn_total)})",
+        "",
+        (
+            "\n".join(
+                f"- `{f.string_id}` — `{f.file}` — raised by `{f.check}`, "
+                f"withdrawn {f.resolved_on}"
+                for f in sorted(withdrawn_total, key=lambda f: f.resolved_on, reverse=True)[:20]
+            )
+            or "_Nothing withdrawn._"
+        ),
+        "",
+        "_A finding is withdrawn when a check stops raising it while the "
+        "string itself never changed: the check was wrong, not the "
+        "translation. Kept separate from fixes so the fixed count stays "
+        "honest._",
         "",
         f"### Resolved to date ({len(fixed_total)})",
         "",

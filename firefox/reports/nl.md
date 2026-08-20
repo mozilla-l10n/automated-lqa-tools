@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-20 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `443328fa7930` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d411ef0407f1` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
-| **Previous run** | 2026-08-20 @ `443328fa7930` |
+| **Previous run** | 2026-08-20 @ `d411ef0407f1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,131 |
+| **Strings reviewed this run** | 0 of 18,148 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against en-US only.
 
@@ -25,6 +25,10 @@ Findings are keyed by string id, never by line number. The locale is assessed ag
 
 _Nothing was fixed._
 
+### ↩︎ Withdrawn — no longer considered a defect (0)
+
+_Nothing withdrawn._
+
 ### 🔁 String changed, defect not verifiable — needs a re-read (0)
 
 _Nothing to re-read._
@@ -40,26 +44,26 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,131 |
-| Missing strings | 32 |
+| Strings | 18,148 |
+| Missing strings | 15 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
 | Variable & placeholder mismatches | 0 |
 | Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 0 |
+| Plural variants (dead or missing forms) | 0 |
 | Access keys not in their label | 1 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 0 |
 
 ### Completeness
 
-**32 strings** are not translated yet, concentrated in:
+**15 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 15
-- `browser/browser/preferences/containers.ftl` — 7
-- `browser/browser/preferences/preferences.ftl` — 4
-- `browser/browser/aboutPrivateBrowsing.ftl` — 3
+- `browser/browser/newtab/newtab.ftl` — 9
+- `browser/browser/aboutPrivateBrowsing.ftl` — 2
+- `browser/browser/preferences/preferences.ftl` — 1
 - `toolkit/toolkit/about/aboutProcesses.ftl` — 1
 - `toolkit/toolkit/global/mozBoxBase.ftl` — 1
 - `toolkit/toolkit/global/processTypes.ftl` — 1
@@ -72,12 +76,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-single` 890, `straight-double` 25, `curly-double` 9 | **curly-single** |
-| apostrophe | `typographic` 1136 | **typographic** |
-| ellipsis | `char` 460 | **char** |
+| quotes | `curly-single` 891, `straight-double` 25, `curly-double` 9 | **curly-single** |
+| apostrophe | `typographic` 1137 | **typographic** |
+| ellipsis | `char` 461 | **char** |
 | dash | `en` 135 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `formal` 3089 | **formal** |
+| register | `formal` 3090 | **formal** |
 
 ---
 
@@ -467,6 +471,12 @@ _Nothing reported._
 ### Suppressed as false positives (0)
 
 _No suppression rules have matched._
+
+### Withdrawn to date (0)
+
+_Nothing withdrawn._
+
+_A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
 ### Resolved to date (115)
 

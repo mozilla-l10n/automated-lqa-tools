@@ -10,7 +10,7 @@ written here is what the model is told to treat as correct._
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 1046, `straight-double` 25 | **curly-double** |
-| apostrophe | `typographic` 1923, `straight` 8 | **typographic** |
+| apostrophe | `typographic` 1925, `straight` 6 | **typographic** |
 | ellipsis | `char` 481 | **char** |
 | dash | `em` 75, `en` 18 | **em** |
 | nbsp | `total` 12, `before-punctuation` 4, `space-before-punctuation` 6 | _mixed_ |

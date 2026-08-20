@@ -86,13 +86,38 @@ re-runs one slice of a baseline, `--no-llm` skips the API entirely.
 Deterministic, so they run over the whole tree every time and cost nothing:
 completeness, Fluent and `.properties` syntax, variable and placeholder
 mismatches, plural and select selector mismatches, term-parameter
-mismatches, access keys against their labels, markup and `data-l10n-name`
-parity, and typography measured against the locale's own conventions.
+mismatches, plural variants, access keys against their labels, markup and
+`data-l10n-name` parity, and typography measured against the locale's own
+conventions.
 
-Three of those exist because the hand-written reviews found defects nothing
-was checking for: a selector switching on a variable the code never passes
-(the number renders blank), a term called with a parameter its definition
-does not select on, and malformed closing tags like `</a >`.
+Two subtleties are worth knowing, because getting them wrong is what makes
+most l10n checkers noisy.
+
+**Fluent arguments are scoped to the message, not the attribute.**
+`l10n.setAttributes(el, id, { count })` makes `count` available to every
+attribute of that id, so a locale using it in `.message` where en-US used it
+in `.heading` is perfectly fine. Comparing attribute-to-attribute reports
+that as an undefined variable.
+
+**Plural completeness is not a CLDR question.** CLDR is used only to decide
+whether a variant is *reachable* — Japanese has no `one` category, so a
+`[one]` variant there is dead text. It is deliberately not used to decide a
+variant is missing: CLDR gives Mexican Spanish a `many` category that no
+Firefox Spanish string uses, so requiring the full set would flag every
+plural in the locale. Expected forms are measured from what the locale does
+across its own tree, and only where en-US selects on a *category*
+(`[one]`) rather than an exact number (`[1] Remove / [other] Remove All`,
+which is a one-versus-many choice that locales are right to mirror). A
+locale adding forms en-US lacks is never flagged — that is what localizing a
+plural means.
+
+Several of those exist because the hand-written reviews found defects
+nothing was checking for: a selector switching on a variable the code never
+passes (the number renders blank), a term called with a parameter its
+definition does not select on, and malformed closing tags like `</a >`. The
+plural check found one they missed — Polish
+`pdfjs-editor-comments-sidebar-title` has only `one`/`other`, so five
+comments render the *few* form.
 
 Nothing here assumes what is correct for a language. Conventions — quote
 family, apostrophe, ellipsis, dash, no-break space, register — are counted

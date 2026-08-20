@@ -11,6 +11,13 @@ roughly the same words -- and when it does not, the fallback in
 :func:`merge` matches on (string id, category) so the model rephrasing
 itself does not create a duplicate.
 
+There is also a difference between a defect being *fixed* and this system
+deciding it was never a defect. When a check stops raising a finding but
+the string never changed, the check changed its mind -- a false positive
+being corrected -- and the finding is ``withdrawn``, not ``fixed``.
+Crediting the locale team with work they did not do would make the fixed
+count meaningless.
+
 Whether something is *fixed* is deliberately stricter than the ad-hoc
 tooling that preceded this system, which counted any change to the string
 as a fix. A Pontoon sync routinely rewrites a string for unrelated reasons.
@@ -201,7 +208,9 @@ def resolve(
     """
     rerunnable = rerunnable or set()
     still_raised = still_raised or set()
-    buckets: dict[str, list[Finding]] = {"fixed": [], "obsolete": [], "recheck": []}
+    buckets: dict[str, list[Finding]] = {
+        "fixed": [], "obsolete": [], "recheck": [], "withdrawn": [],
+    }
 
     for f in findings:
         if not f.is_open:
@@ -217,6 +226,15 @@ def resolve(
             if f.fid in still_raised:
                 f.status = "open"
                 f.string_hash = msg.hash()
+            elif f.string_hash and f.string_hash == msg.hash():
+                # The check stopped raising it while the string never moved,
+                # so the check changed its mind -- most likely a false
+                # positive that has since been corrected. Reporting that as
+                # "fixed" would credit the locale team with work they did
+                # not do and quietly inflate the fixed count.
+                f.status = "withdrawn"
+                f.resolved_on = today
+                buckets["withdrawn"].append(f)
             else:
                 f.status = "fixed"
                 f.resolved_on = today

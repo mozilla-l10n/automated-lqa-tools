@@ -2,26 +2,26 @@
 
 - **Generated:** 2026-08-20
 - **Locales tracked:** 14 (14 with recorded state)
-- **Findings:** 4,382 raised, 1,384 resolved (31%), 2,995 open
+- **Findings:** 4,408 raised, 1,382 resolved (31%), 3,023 open
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
 | Locale | Last run | Mode | Commit | Strings | Missing | Open | Impact 1–2 | Fixed | Suppressed |
 |---|---|---|---|---|---|---|---|---|---|
-| [ru](ru.md) | 2026-08-20 | incremental | `443328fa` | 18,161 | 2 | **591** | 313 | 172 | 0 |
-| [pt-BR](pt-BR.md) | 2026-08-20 | incremental | `443328fa` | 18,127 | 36 | **570** | 206 | 131 | 0 |
-| [fy-NL](fy-NL.md) | 2026-08-20 | incremental | `443328fa` | 18,131 | 32 | **593** | 178 | 245 | 0 |
-| [nl](nl.md) | 2026-08-20 | incremental | `443328fa` | 18,131 | 32 | **400** | 160 | 115 | 0 |
-| [ja](ja.md) | 2026-08-20 | incremental | `443328fa` | 18,127 | 36 | **155** | 68 | 191 | 0 |
-| [tr](tr.md) | 2026-08-20 | incremental | `443328fa` | 18,001 | 162 | **194** | 66 | 91 | 0 |
-| [es-MX](es-MX.md) | 2026-08-20 | incremental | `443328fa` | 17,843 | 320 | **134** | 51 | 89 | 0 |
-| [pl](pl.md) | 2026-08-20 | incremental | `443328fa` | 17,836 | 327 | **81** | 45 | 126 | 0 |
-| [es-ES](es-ES.md) | 2026-08-20 | incremental | `443328fa` | 17,184 | 979 | **98** | 40 | 39 | 0 |
-| [zh-CN](zh-CN.md) | 2026-08-20 | incremental | `443328fa` | 17,969 | 194 | **61** | 18 | 26 | 0 |
-| [de](de.md) | 2026-08-20 | incremental | `443328fa` | 18,131 | 32 | **40** | 16 | 35 | 0 |
-| [fr](fr.md) | 2026-08-20 | incremental | `443328fa` | 18,348 | 2 | **37** | 9 | 31 | 0 |
-| [sl](sl.md) | 2026-08-20 | incremental | `443328fa` | 17,521 | 642 | **32** | 2 | 42 | 1 |
-| [it](it.md) | 2026-08-20 | incremental | `443328fa` | 18,350 | 0 | **9** | 2 | 51 | 2 |
+| [ru](ru.md) | 2026-08-20 | incremental | `d411ef04` | 18,161 | 2 | **591** | 313 | 172 | 0 |
+| [pt-BR](pt-BR.md) | 2026-08-20 | incremental | `d411ef04` | 18,127 | 36 | **570** | 206 | 131 | 0 |
+| [fy-NL](fy-NL.md) | 2026-08-20 | incremental | `d411ef04` | 18,131 | 32 | **594** | 178 | 244 | 0 |
+| [nl](nl.md) | 2026-08-20 | incremental | `d411ef04` | 18,148 | 15 | **400** | 160 | 115 | 0 |
+| [ja](ja.md) | 2026-08-20 | incremental | `d411ef04` | 18,127 | 36 | **176** | 68 | 191 | 0 |
+| [tr](tr.md) | 2026-08-20 | incremental | `d411ef04` | 18,001 | 162 | **194** | 66 | 91 | 0 |
+| [es-MX](es-MX.md) | 2026-08-20 | incremental | `d411ef04` | 17,843 | 320 | **132** | 49 | 89 | 0 |
+| [pl](pl.md) | 2026-08-20 | incremental | `d411ef04` | 17,836 | 327 | **82** | 46 | 125 | 0 |
+| [es-ES](es-ES.md) | 2026-08-20 | incremental | `d411ef04` | 17,184 | 979 | **98** | 40 | 39 | 0 |
+| [zh-CN](zh-CN.md) | 2026-08-20 | incremental | `d411ef04` | 17,969 | 194 | **72** | 18 | 26 | 0 |
+| [de](de.md) | 2026-08-20 | incremental | `d411ef04` | 18,131 | 32 | **40** | 16 | 35 | 0 |
+| [fr](fr.md) | 2026-08-20 | incremental | `d411ef04` | 18,348 | 2 | **37** | 9 | 31 | 0 |
+| [sl](sl.md) | 2026-08-20 | incremental | `d411ef04` | 17,521 | 642 | **32** | 2 | 42 | 1 |
+| [it](it.md) | 2026-08-20 | incremental | `d411ef04` | 18,350 | 0 | **5** | 0 | 51 | 2 |
 
 **Impact 1–2** is the queue that matters: broken output and wrong content. Impact 3–4 is language polish and typography.
 

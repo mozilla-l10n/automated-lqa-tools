@@ -41,6 +41,12 @@ from moz.l10n.resource import parse_resource
 
 import conventions
 from findings import Finding
+from plurals import (
+    categories_for,
+    covered_categories,
+    is_numeric_key,
+    plural_selectors,
+)
 from parse import is_excluded, list_files
 
 
@@ -117,6 +123,14 @@ def _interpolated(msg) -> set[str]:
     both Japanese and Chinese.
     """
     return _vars(msg) - set(_selectors(msg))
+
+
+def _message_vars(msg) -> set[str]:
+    """Every variable the message uses, across its value and attributes."""
+    out: set[str] = set()
+    for raw in msg.raw.values():
+        out |= _vars(raw)
+    return out
 
 
 def _selectors(msg) -> tuple[str, ...]:
@@ -284,7 +298,14 @@ def check_variables(locale, l10n, source) -> list[Finding]:
             if want == got:
                 continue
             label = f"`{msg.id}`" + (f" (`.{prop}`)" if prop else "")
-            undefined = sorted(got - want)
+            # Fluent arguments are passed per *message*, not per attribute:
+            # `l10n.setAttributes(el, id, {extensionsCount})` makes the
+            # variable available to every attribute of that id. So a
+            # variable is only undefined if the source message does not use
+            # it *anywhere*. Comparing attribute-to-attribute reported
+            # es-MX's `.message` as broken merely because en-US happened to
+            # use the count in `.heading` instead.
+            undefined = sorted(got - _message_vars(src))
             # Only a variable the source actually renders can be "dropped".
             dropped = sorted((want - got) & _interpolated(src.raw[prop]))
             if undefined:
@@ -351,7 +372,7 @@ def check_selectors(locale, l10n, source) -> list[Finding]:
             got = _selectors(raw)
             if not got or set(want) == set(got):
                 continue
-            available = _vars(src.raw[prop])
+            available = _message_vars(src)
             undefined = set(got) - available
             if want and not undefined:
                 continue  # both select, and the locale's selector is passed
@@ -607,9 +628,112 @@ def check_typography(project, locale, l10n, counts) -> list[Finding]:
     return out
 
 
+def check_plurals(locale, l10n, source) -> list[Finding]:
+    """Plural variants, judged against CLDR and the locale's own habits.
+
+    Two different questions, and conflating them is what makes naive plural
+    checks useless:
+
+    *Is a variant reachable?* Answered by CLDR. A category that does not
+    exist in the language can never match, so the variant is dead text --
+    `[two]` in Spanish, or a typo like `[ony]`.
+
+    *Is a variant missing?* **Not** answered by CLDR, which is why this is
+    measured instead. CLDR says Mexican Spanish has a `many` category, but
+    no Firefox Spanish string uses it, so requiring the CLDR set would flag
+    every plural in the locale. The expectation comes from what this locale
+    actually does across its own tree, and only applies where en-US treats
+    the string as a real plural in the first place -- en-US often writes a
+    single `*[other]` for a count that is always greater than one, and a
+    locale is free to follow suit or to add forms.
+
+    Adding categories en-US does not have is never a defect: that is
+    precisely what localizing a plural means.
+    """
+    valid = categories_for(locale)
+    if valid is None:
+        return []
+
+    # What this locale habitually does: categories present in most of its
+    # own number-selects.
+    seen: dict[str, int] = {}
+    total = 0
+    for msg in l10n.values():
+        for raw in msg.raw.values():
+            for cats in plural_selectors(raw):
+                total += 1
+                for cat in covered_categories(locale, cats):
+                    seen[cat] = seen.get(cat, 0) + 1
+    norm = {c for c, n in seen.items() if total >= 5 and n >= total * 0.5}
+
+    out = []
+    for key, msg in l10n.items():
+        src = source.get(key)
+        for prop, raw in msg.raw.items():
+            for cats in plural_selectors(raw):
+                label = f"`{msg.id}`" + (f" (`.{prop}`)" if prop else "")
+
+                dead = sorted(c for c in cats if c not in valid and not is_numeric_key(c))
+                if dead:
+                    out.append(_mk(
+                        locale, msg, "A", "plurals",
+                        f"{label} has plural {'variants' if len(dead) > 1 else 'variant'} "
+                        f"{dead}, which {locale} does not have",
+                        current=msg.props.get(prop, ""),
+                        rationale=(
+                            f"{locale} has the categories {sorted(valid)}. A variant whose "
+                            "category the language never produces is never selected, so "
+                            "the text written there never appears. Nothing is broken -- "
+                            "the catch-all is shown -- but the variant is dead."
+                        ),
+                        impact=4,
+                    ))
+
+                if src is None or not norm:
+                    continue
+                src_raw = src.raw.get(prop)
+                if src_raw is None:
+                    continue
+                src_columns = plural_selectors(src_raw)
+                src_keys = set().union(*src_columns) if src_columns else set()
+                if not src_keys:
+                    continue
+                # en-US keying on an exact number (`[1] Remove [other] Remove
+                # All`) is a one-versus-many *choice*, not grammatical
+                # agreement, and a locale that mirrors it is right to. Only a
+                # source that selects on a category (`[one]`) is really
+                # pluralizing, and only then should the locale supply its own
+                # full set of forms.
+                if not any(
+                    not is_numeric_key(k) and k != "other" for k in src_keys
+                ):
+                    continue
+                if len(covered_categories(locale, src_keys)) < 2:
+                    continue
+                missing = sorted(norm - covered_categories(locale, cats))
+                if missing:
+                    out.append(_mk(
+                        locale, msg, "A", "plurals",
+                        f"{label} is missing the {missing} plural "
+                        f"{'forms' if len(missing) > 1 else 'form'}",
+                        current=msg.props.get(prop, ""),
+                        suggest=src.props.get(prop, ""),
+                        rationale=(
+                            f"This locale uses {sorted(norm)} in most of its plurals, and "
+                            "en-US pluralizes this string. The catch-all variant will be "
+                            "shown instead, giving the wrong grammatical form."
+                        ),
+                        impact=3,
+                    ))
+    return out
+
+
 # --- entry point ---------------------------------------------------------
 
-ALL_CHECKS = ("variables", "selectors", "term_params", "accesskey", "markup", "typography")
+ALL_CHECKS = (
+    "variables", "selectors", "term_params", "plurals", "accesskey", "markup",
+    "typography",
+)
 
 
 def run_all(project, locale, l10n_root, source_root, l10n, source, counts) -> tuple[Health, list[Finding]]:
@@ -626,6 +750,8 @@ def run_all(project, locale, l10n_root, source_root, l10n, source, counts) -> tu
             found = check_selectors(locale, l10n, source)
         elif name == "term_params":
             found = check_term_params(locale, l10n, source)
+        elif name == "plurals":
+            found = check_plurals(locale, l10n, source)
         elif name == "accesskey":
             found = check_accesskeys(locale, l10n, source)
         elif name == "markup":

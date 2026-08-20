@@ -89,6 +89,11 @@ def build_systemic(project, locale, fresh, health):
             "These deviate from the convention the rest of the tree follows. "
             "Whether to normalize them is one decision."
         ),
+        "plurals": (
+            "The locale's plural variants differ from what the rest of its "
+            "tree does. At this scale it is a convention to settle once, not "
+            "a defect per string."
+        ),
     }
     for check, group in by_check.items():
         if len(group) >= threshold and check in notes:
@@ -186,6 +191,7 @@ def process(project, locale, l10n_root, source_root, source, args, log) -> dict:
     open_now = [f for f in stored if f.is_open]
     log(
         f"  findings: {len(raised)} new, {len(resolved['fixed'])} fixed, "
+        f"{len(resolved['withdrawn'])} withdrawn, "
         f"{len(resolved['obsolete'])} retired, {len(open_now)} open"
     )
 
@@ -204,6 +210,7 @@ def process(project, locale, l10n_root, source_root, source, args, log) -> dict:
         "missing": health.missing,
         "open": len(open_now),
         "fixed_total": sum(1 for f in stored if f.status == "fixed"),
+        "withdrawn_total": sum(1 for f in stored if f.status == "withdrawn"),
         "suppressed": sum(1 for f in stored if f.status == "suppressed"),
     }
 
@@ -212,6 +219,7 @@ def process(project, locale, l10n_root, source_root, source, args, log) -> dict:
         {
             "new": raised,
             "fixed": resolved["fixed"],
+            "withdrawn": resolved["withdrawn"],
             "recheck": resolved["recheck"],
             "obsolete": resolved["obsolete"],
         },
@@ -232,7 +240,8 @@ def process(project, locale, l10n_root, source_root, source, args, log) -> dict:
 
     return {
         "locale": locale, "mode": mode, "new": len(raised),
-        "fixed": len(resolved["fixed"]), "open": len(open_now),
+        "fixed": len(resolved["fixed"]),
+        "withdrawn": len(resolved["withdrawn"]), "open": len(open_now),
         "missing": health.missing, "reviewed": reviewed,
     }
 
@@ -336,10 +345,11 @@ def main(argv=None) -> int:
             failed.append(locale)
 
     log("\n" + "=" * 62)
-    log(f"{'locale':8} {'mode':12} {'reviewed':>9} {'new':>5} {'fixed':>6} {'open':>6}")
+    log(f"{'locale':8} {'mode':12} {'reviewed':>9} {'new':>5} {'fixed':>6} "
+        f"{'withdrn':>8} {'open':>6}")
     for r in results:
         log(f"{r['locale']:8} {r['mode']:12} {r['reviewed']:9,} {r['new']:5} "
-            f"{r['fixed']:6} {r['open']:6}")
+            f"{r['fixed']:6} {r['withdrawn']:8} {r['open']:6}")
     if failed:
         log(f"\nfailed: {', '.join(failed)}")
     return 1 if failed else 0

@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-20 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `443328fa7930` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d411ef0407f1` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
-| **Previous run** | 2026-08-20 @ `443328fa7930` |
+| **Previous run** | 2026-08-20 @ `d411ef0407f1` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 18,127 |
 
@@ -15,13 +15,79 @@ Findings are keyed by string id, never by line number. The locale is assessed ag
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (21)
 
-_No new findings._
+- `about-logins-confirm-remove-all-dialog-title` — `browser/browser/aboutLogins.ftl` — `about-logins-confirm-remove-all-dialog-title` has plural variant ['one'], which ja does not have
+  - Current: `{$count ->} [one] { $count } 件のログイン情報を消去しますか？ [other] { $count } 件のすべてのログイン情報を消去しますか？`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `about-logins-confirm-remove-all-sync-dialog-title` — `browser/browser/aboutLogins.ftl` — `about-logins-confirm-remove-all-sync-dialog-title` has plural variant ['one'], which ja does not have
+  - Current: `{$count ->} [one] すべての端末から { $count } 件のログイン情報を消去しますか？ [other] すべての端末から { $count } 件のすべてのログイン情報を消去しますか？`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `about-logins-confirm-remove-all-dialog-title2` — `browser/browser/aboutLogins.ftl` — `about-logins-confirm-remove-all-dialog-title2` has plural variant ['one'], which ja does not have
+  - Current: `{$count ->} [one] { $count } 件のパスワードを消去しますか？ [other] { $count } 件のすべてのパスワードを消去しますか？`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `about-logins-confirm-remove-all-sync-dialog-title2` — `browser/browser/aboutLogins.ftl` — `about-logins-confirm-remove-all-sync-dialog-title2` has plural variant ['one'], which ja does not have
+  - Current: `{$count ->} [one] { $count } 件のパスワードを全端末から消去しますか？ [other] { $count } 件のすべてのパスワードを全端末から消去しますか？`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `fxa-menu-device-view-all-synced-tabs` — `browser/browser/appmenu.ftl` — `fxa-menu-device-view-all-synced-tabs` (`.label`) has plural variant ['one'], which ja does not have
+  - Current: `{$tabCount ->} [one] { $tabCount } 個の同期したタブを表示 [other] 全 { $tabCount } 個の同期したタブを表示`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `menu-share-copy-links` — `browser/browser/browser.ftl` — `menu-share-copy-links` (`.label`) has plural variant ['one'], which ja does not have
+  - Current: `{$count ->} [one] リンクをコピー [other] { $count } 個のリンクをコピー`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `content-sharing-tabs-title` — `browser/browser/contentSharing.ftl` — `content-sharing-tabs-title` has plural variant ['one'], which ja does not have
+  - Current: `{$count ->} [one] { $count } 個のタブ [other] { $count } 個のタブ`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `downloads-files-not-downloaded` — `browser/browser/downloads.ftl` — `downloads-files-not-downloaded` has plural variant ['one'], which ja does not have
+  - Current: `{$num ->} [one] ファイルのダウンロードを中止しました。 [other] { $num } 個のファイルのダウンロードを中止しました。`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `migration-wizard-progress-success-new-passwords` — `browser/browser/migrationWizard.ftl` — `migration-wizard-progress-success-new-passwords` has plural variant ['one'], which ja does not have
+  - Current: `{$newEntries ->} [one] { $newEntries } 件追加しました [other] { $newEntries } 件追加しました`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `migration-wizard-progress-success-updated-passwords` — `browser/browser/migrationWizard.ftl` — `migration-wizard-progress-success-updated-passwords` has plural variant ['one'], which ja does not have
+  - Current: `{$updatedEntries ->} [one] { $updatedEntries } 件更新しました [other] { $updatedEntries } 件更新しました`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `recently-closed-window-panel-tooltip` — `browser/browser/recentlyClosed.ftl` — `recently-closed-window-panel-tooltip` has plural variant ['one'], which ja does not have
+  - Current: `{$tabCount ->} [0] { $winTitle } [one] { $winTitle } ({ $tabCount } 個のタブ、{ $closedAt } に閉じた) [other] { $winTitle } ({ $tabCount } 個のタブ、{ $closedAt } に閉じた)`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `protections-milestone` — `browser/browser/siteProtections.ftl` — `protections-milestone` has plural variant ['one'], which ja does not have
+  - Current: `{$trackerCount ->} [one] { $date } 以降、{ -brand-short-name } は { $trackerCount } 個のトラッカーをブロックしました [other] { $date } 以降、{ -brand-short-name } は { $trackerCount } 個以上のトラッカーをブロックしました`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `tabbrowser-close-tabs-button` — `browser/browser/tabbrowser.ftl` — `tabbrowser-close-tabs-button` (`.tooltiptext`) has plural variant ['one'], which ja does not have
+  - Current: `{$tabCount ->} [one] タブを閉じます [other] { $tabCount } 個のタブを閉じます`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `tabbrowser-close-tabs-tooltip` — `browser/browser/tabbrowser.ftl` — `tabbrowser-close-tabs-tooltip` (`.label`) has plural variant ['one'], which ja does not have
+  - Current: `{$tabCount ->} [one] タブを閉じます [other] { $tabCount } 個のタブを閉じます`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `tabbrowser-mute-tab-audio-tooltip` — `browser/browser/tabbrowser.ftl` — `tabbrowser-mute-tab-audio-tooltip` (`.label`) has plural variant ['one'], which ja does not have
+  - Current: `{$tabCount ->} [one] タブをミュートにします ({ $shortcut }) [other] { $tabCount } 個のタブをミュートにします ({ $shortcut })`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `tabbrowser-unmute-tab-audio-tooltip` — `browser/browser/tabbrowser.ftl` — `tabbrowser-unmute-tab-audio-tooltip` (`.label`) has plural variant ['one'], which ja does not have
+  - Current: `{$tabCount ->} [one] タブのミュートを解除します ({ $shortcut }) [other] { $tabCount } 個のタブのミュートを解除します ({ $shortcut })`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `tabbrowser-mute-tab-audio-background-tooltip` — `browser/browser/tabbrowser.ftl` — `tabbrowser-mute-tab-audio-background-tooltip` (`.label`) has plural variant ['one'], which ja does not have
+  - Current: `{$tabCount ->} [one] タブをミュートにします [other] { $tabCount } 個のタブをミュートにします`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `tabbrowser-unmute-tab-audio-background-tooltip` — `browser/browser/tabbrowser.ftl` — `tabbrowser-unmute-tab-audio-background-tooltip` (`.label`) has plural variant ['one'], which ja does not have
+  - Current: `{$tabCount ->} [one] タブのミュートを解除します [other] { $tabCount } 個のタブのミュートを解除します`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `tabbrowser-unblock-tab-audio-tooltip` — `browser/browser/tabbrowser.ftl` — `tabbrowser-unblock-tab-audio-tooltip` (`.label`) has plural variant ['one'], which ja does not have
+  - Current: `{$tabCount ->} [one] タブの音声を再生します [other] { $tabCount } 個のタブの音声を再生します`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `about-webauthn-results-pin-invalid-error` — `toolkit/toolkit/about/aboutWebauthn.ftl` — `about-webauthn-results-pin-invalid-error` has plural variant ['one'], which ja does not have
+  - Current: `{$retriesLeft ->} [0] エラー: PIN が正しくありません。もう一度試してください。 [one] エラー: PIN が正しくありません。もう一度試してください。試行回数は残り 1 回です。 [other] エラー: PIN が正しくありません。もう一度試してください。試行回数は残り { $retriesLeft } 回です。`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `about-webauthn-samples-still-needed` — `toolkit/toolkit/about/aboutWebauthn.ftl` — `about-webauthn-samples-still-needed` has plural variant ['one'], which ja does not have
+  - Current: `{$repeatCount ->} [one] あと { $repeatCount } 個のサンプルが必要です。 [other] あと { $repeatCount } 個のサンプルが必要です。`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
 
 ### ✅ Fixed since the last run (0)
 
 _Nothing was fixed._
+
+### ↩︎ Withdrawn — no longer considered a defect (0)
+
+_Nothing withdrawn._
 
 ### 🔁 String changed, defect not verifiable — needs a re-read (0)
 
@@ -46,6 +112,7 @@ _Nothing retired._
 | Variable & placeholder mismatches | 0 |
 | Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 0 |
+| Plural variants (dead or missing forms) | 21 |
 | Access keys not in their label | _skipped for this locale_ |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 0 |
@@ -93,17 +160,47 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (155)
+## 3. Open findings (176)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 12 |
 | 2 | Wrong content (says something other than the English) | 56 |
 | 3 | Degraded language (grammar, spelling, terminology) | 43 |
-| 4 | Cosmetic (typography, spacing) | 44 |
+| 4 | Cosmetic (typography, spacing) | 65 |
 
 ### A. Functional, markup, variables & plurals
 
+- `about-logins-confirm-remove-all-dialog-title` — `browser/browser/aboutLogins.ftl` — `about-logins-confirm-remove-all-dialog-title` has plural variant ['one'], which ja does not have
+  - Current: `{$count ->} [one] { $count } 件のログイン情報を消去しますか？ [other] { $count } 件のすべてのログイン情報を消去しますか？`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `about-logins-confirm-remove-all-dialog-title2` — `browser/browser/aboutLogins.ftl` — `about-logins-confirm-remove-all-dialog-title2` has plural variant ['one'], which ja does not have
+  - Current: `{$count ->} [one] { $count } 件のパスワードを消去しますか？ [other] { $count } 件のすべてのパスワードを消去しますか？`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `about-logins-confirm-remove-all-sync-dialog-title` — `browser/browser/aboutLogins.ftl` — `about-logins-confirm-remove-all-sync-dialog-title` has plural variant ['one'], which ja does not have
+  - Current: `{$count ->} [one] すべての端末から { $count } 件のログイン情報を消去しますか？ [other] すべての端末から { $count } 件のすべてのログイン情報を消去しますか？`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `about-logins-confirm-remove-all-sync-dialog-title2` — `browser/browser/aboutLogins.ftl` — `about-logins-confirm-remove-all-sync-dialog-title2` has plural variant ['one'], which ja does not have
+  - Current: `{$count ->} [one] { $count } 件のパスワードを全端末から消去しますか？ [other] { $count } 件のすべてのパスワードを全端末から消去しますか？`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `fxa-menu-device-view-all-synced-tabs` — `browser/browser/appmenu.ftl` — `fxa-menu-device-view-all-synced-tabs` (`.label`) has plural variant ['one'], which ja does not have
+  - Current: `{$tabCount ->} [one] { $tabCount } 個の同期したタブを表示 [other] 全 { $tabCount } 個の同期したタブを表示`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `menu-share-copy-links` — `browser/browser/browser.ftl` — `menu-share-copy-links` (`.label`) has plural variant ['one'], which ja does not have
+  - Current: `{$count ->} [one] リンクをコピー [other] { $count } 個のリンクをコピー`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `content-sharing-tabs-title` — `browser/browser/contentSharing.ftl` — `content-sharing-tabs-title` has plural variant ['one'], which ja does not have
+  - Current: `{$count ->} [one] { $count } 個のタブ [other] { $count } 個のタブ`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `downloads-files-not-downloaded` — `browser/browser/downloads.ftl` — `downloads-files-not-downloaded` has plural variant ['one'], which ja does not have
+  - Current: `{$num ->} [one] ファイルのダウンロードを中止しました。 [other] { $num } 個のファイルのダウンロードを中止しました。`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `migration-wizard-progress-success-new-passwords` — `browser/browser/migrationWizard.ftl` — `migration-wizard-progress-success-new-passwords` has plural variant ['one'], which ja does not have
+  - Current: `{$newEntries ->} [one] { $newEntries } 件追加しました [other] { $newEntries } 件追加しました`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `migration-wizard-progress-success-updated-passwords` — `browser/browser/migrationWizard.ftl` — `migration-wizard-progress-success-updated-passwords` has plural variant ['one'], which ja does not have
+  - Current: `{$updatedEntries ->} [one] { $updatedEntries } 件更新しました [other] { $updatedEntries } 件更新しました`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
 - `newtab-privacy-trackers-blocked-today` — `browser/browser/newtab/newtab.ftl` — comment states this is the standalone label under the big number; ja is a fragment ending in 、 that depends on the separate newtab-privacy-across-sites. → a self-contained label, e.g. 今日ブロックしたトラッカー
   - en-US: `今日ブロックしたトラッカー`
 - `info-exposed-passwords-found` — `browser/browser/protections.ftl` — { $count } 件のパスワードが全漏洩データから見つかりました — 件のパスワードが全漏洩データから見つかりました
@@ -115,9 +212,36 @@ _Nothing reported._
 - `info-monitored-emails` — `browser/browser/protections.ftl` — { $count } 個のメールアドレスを監視しています — 個のメールアドレスを監視しています
   - Current: `{ $count } 個のメールアドレスを監視しています`
   - en-US: `個のメールアドレスを監視しています`
+- `recently-closed-window-panel-tooltip` — `browser/browser/recentlyClosed.ftl` — `recently-closed-window-panel-tooltip` has plural variant ['one'], which ja does not have
+  - Current: `{$tabCount ->} [0] { $winTitle } [one] { $winTitle } ({ $tabCount } 個のタブ、{ $closedAt } に閉じた) [other] { $winTitle } ({ $tabCount } 個のタブ、{ $closedAt } に閉じた)`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `protections-milestone` — `browser/browser/siteProtections.ftl` — `protections-milestone` has plural variant ['one'], which ja does not have
+  - Current: `{$trackerCount ->} [one] { $date } 以降、{ -brand-short-name } は { $trackerCount } 個のトラッカーをブロックしました [other] { $date } 以降、{ -brand-short-name } は { $trackerCount } 個以上のトラッカーをブロックしました`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
 - `synced-tabs-context-open-in-window` — `browser/browser/syncedTabs.ftl` — group comment requires these to match places.ftl; en-US is "Open in New Window" with no "link". Current リンクを新しいウィンドウで開く → 新しいウィンドウで開く.
   - Current: `リンクを新しいウィンドウで開く`
   - en-US: `新しいウィンドウで開く`
+- `tabbrowser-close-tabs-button` — `browser/browser/tabbrowser.ftl` — `tabbrowser-close-tabs-button` (`.tooltiptext`) has plural variant ['one'], which ja does not have
+  - Current: `{$tabCount ->} [one] タブを閉じます [other] { $tabCount } 個のタブを閉じます`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `tabbrowser-close-tabs-tooltip` — `browser/browser/tabbrowser.ftl` — `tabbrowser-close-tabs-tooltip` (`.label`) has plural variant ['one'], which ja does not have
+  - Current: `{$tabCount ->} [one] タブを閉じます [other] { $tabCount } 個のタブを閉じます`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `tabbrowser-mute-tab-audio-background-tooltip` — `browser/browser/tabbrowser.ftl` — `tabbrowser-mute-tab-audio-background-tooltip` (`.label`) has plural variant ['one'], which ja does not have
+  - Current: `{$tabCount ->} [one] タブをミュートにします [other] { $tabCount } 個のタブをミュートにします`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `tabbrowser-mute-tab-audio-tooltip` — `browser/browser/tabbrowser.ftl` — `tabbrowser-mute-tab-audio-tooltip` (`.label`) has plural variant ['one'], which ja does not have
+  - Current: `{$tabCount ->} [one] タブをミュートにします ({ $shortcut }) [other] { $tabCount } 個のタブをミュートにします ({ $shortcut })`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `tabbrowser-unblock-tab-audio-tooltip` — `browser/browser/tabbrowser.ftl` — `tabbrowser-unblock-tab-audio-tooltip` (`.label`) has plural variant ['one'], which ja does not have
+  - Current: `{$tabCount ->} [one] タブの音声を再生します [other] { $tabCount } 個のタブの音声を再生します`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `tabbrowser-unmute-tab-audio-background-tooltip` — `browser/browser/tabbrowser.ftl` — `tabbrowser-unmute-tab-audio-background-tooltip` (`.label`) has plural variant ['one'], which ja does not have
+  - Current: `{$tabCount ->} [one] タブのミュートを解除します [other] { $tabCount } 個のタブのミュートを解除します`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `tabbrowser-unmute-tab-audio-tooltip` — `browser/browser/tabbrowser.ftl` — `tabbrowser-unmute-tab-audio-tooltip` (`.label`) has plural variant ['one'], which ja does not have
+  - Current: `{$tabCount ->} [one] タブのミュートを解除します ({ $shortcut }) [other] { $tabCount } 個のタブのミュートを解除します ({ $shortcut })`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
 - `about-debugging-worker-status-stopped` — `devtools/client/aboutdebugging.ftl` — "Stopped" is 停止 here but 停止中 in about-debugging-extension-backgroundscript-status-stopped and in application.ftl serviceworker-worker-status-stopped, whose comment requires the two files to stay synchronized. → 停止中
   - en-US: `停止中`
 - `xpath-binary-expected` — `dom/dom/xslt.ftl` — A6 — Fluent value-concatenation format broken (dom/dom/xslt.ftl). These strings are concatenated at runtime with the offending URL / character / expression, so en-US ends each with :. ja replaced the colon with 。, orphaning the appended detail. Affects xslt-load-recursion, xpath-illegal-char, xpath-binary-expected. Sibling xpath- strings in the same file correctly keep the colon, confirming these…
@@ -126,6 +250,12 @@ _Nothing reported._
   - en-US: `:`
 - `xslt-load-recursion` — `dom/dom/xslt.ftl` — A6 — Fluent value-concatenation format broken (dom/dom/xslt.ftl). These strings are concatenated at runtime with the offending URL / character / expression, so en-US ends each with :. ja replaced the colon with 。, orphaning the appended detail. Affects xslt-load-recursion, xpath-illegal-char, xpath-binary-expected. Sibling xpath- strings in the same file correctly keep the colon, confirming these…
   - en-US: `:`
+- `about-webauthn-results-pin-invalid-error` — `toolkit/toolkit/about/aboutWebauthn.ftl` — `about-webauthn-results-pin-invalid-error` has plural variant ['one'], which ja does not have
+  - Current: `{$retriesLeft ->} [0] エラー: PIN が正しくありません。もう一度試してください。 [one] エラー: PIN が正しくありません。もう一度試してください。試行回数は残り 1 回です。 [other] エラー: PIN が正しくありません。もう一度試してください。試行回数は残り { $retriesLeft } 回です。`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `about-webauthn-samples-still-needed` — `toolkit/toolkit/about/aboutWebauthn.ftl` — `about-webauthn-samples-still-needed` has plural variant ['one'], which ja does not have
+  - Current: `{$repeatCount ->} [one] あと { $repeatCount } 個のサンプルが必要です。 [other] あと { $repeatCount } 個のサンプルが必要です。`
+  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
 - `experimental-features-web-gpu-description3` — `toolkit/toolkit/featuregates/features.ftl` — A5 — experimental-features-web-gpu-description3 (toolkit/toolkit/featuregates/features.ftl) — stale bug reference. ja links bug 1602129; en-US says bug 1616739. Users are sent to the wrong bug. Verified.
 - `wizard-win-button-back` — `toolkit/toolkit/global/wizard.ftl` — A3 — wizard-win-button-back.label / wizard-win-button-next.label (toolkit/toolkit/global/wizard.ftl) — Windows chevrons dropped. en-US distinguishes the Windows variants as < Back / Next >; ja renders both as 戻る / 次へ, identical to the Linux variants. Suggest < 戻る / 次へ >. Verified.
 - `wizard-win-button-next` — `toolkit/toolkit/global/wizard.ftl` — A3 — wizard-win-button-back.label / wizard-win-button-next.label (toolkit/toolkit/global/wizard.ftl) — Windows chevrons dropped. en-US distinguishes the Windows variants as < Back / Next >; ja renders both as 戻る / 次へ, identical to the Linux variants. Suggest < 戻る / 次へ >. Verified.
@@ -403,6 +533,12 @@ _Nothing reported._
 ### Suppressed as false positives (0)
 
 _No suppression rules have matched._
+
+### Withdrawn to date (0)
+
+_Nothing withdrawn._
+
+_A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
 ### Resolved to date (191)
 

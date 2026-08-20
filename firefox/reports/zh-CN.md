@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-20 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `443328fa7930` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d411ef0407f1` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
-| **Previous run** | 2026-08-20 @ `443328fa7930` |
+| **Previous run** | 2026-08-20 @ `d411ef0407f1` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 17,969 |
 
@@ -15,13 +15,49 @@ Findings are keyed by string id, never by line number. The locale is assessed ag
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (11)
 
-_No new findings._
+- `about-logins-confirm-remove-all-dialog-title` — `browser/browser/aboutLogins.ftl` — `about-logins-confirm-remove-all-dialog-title` has plural variant ['one'], which zh-CN does not have
+  - Current: `{$count ->} [one] 确定要移除 { $count } 条登录信息吗？ [other] 确定要移除全部共 { $count } 条登录信息吗？`
+  - zh-CN has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `pending-crash-reports-message-new` — `browser/browser/contentCrash.ftl` — `pending-crash-reports-message-new` has plural variant ['one'], which zh-CN does not have
+  - Current: `{$reportCount ->} [one] 您最近有一份未发送的崩溃报告 [other] 您最近有 { $reportCount } 份未发送的崩溃报告`
+  - zh-CN has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `downloads-files-not-downloaded` — `browser/browser/downloads.ftl` — `downloads-files-not-downloaded` has plural variant ['one'], which zh-CN does not have
+  - Current: `{$num ->} [other] 未下载 { $num } 个文件。 [one] 未下载文件。`
+  - zh-CN has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `firefoxview-search-results-count` — `browser/browser/firefoxView.ftl` — `firefoxview-search-results-count` has plural variant ['one'], which zh-CN does not have
+  - Current: `{$count ->} [one] { $count } 个网站 [other] { $count } 个网站`
+  - zh-CN has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `migration-wizard-progress-success-history` — `browser/browser/migrationWizard.ftl` — `migration-wizard-progress-success-history` has plural variant ['one'], which zh-CN does not have
+  - Current: `{$maxAgeInDays ->} [one] 昨天以来的数据 [other] 过去 { $maxAgeInDays } 天内的数据`
+  - zh-CN has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `general-meta-tags` — `browser/browser/pageInfo.ftl` — `general-meta-tags` (`.value`) has plural variant ['one'], which zh-CN does not have
+  - Current: `{$tags ->} [one] 元信息（1 个标签） [other] 元信息（{ $tags } 个标签）`
+  - zh-CN has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `security-visits-number` — `browser/browser/pageInfo.ftl` — `security-visits-number` has plural variant ['one'], which zh-CN does not have
+  - Current: `{$visits ->} [0] 否 [one] 是，1 次 [other] 是，{ $visits } 次`
+  - zh-CN has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `properties-general-size` — `browser/browser/pageInfo.ftl` — `properties-general-size` (`.value`) has plural variant ['one'], which zh-CN does not have
+  - Current: `{$bytes ->} [one] { $kb } KB ({ $bytes } 字节) [other] { $kb } KB ({ $bytes } 字节)`
+  - zh-CN has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `media-animated-image-type` — `browser/browser/pageInfo.ftl` — `media-animated-image-type` (`.value`) has plural variant ['one'], which zh-CN does not have
+  - Current: `{$frames ->} [one] { $type } 图像（动画，{ $frames } 帧） [other] { $type } 图像（动画，{ $frames } 帧）`
+  - zh-CN has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `containers-disable-alert-desc` — `browser/browser/preferences/preferences.ftl` — `containers-disable-alert-desc` has plural variant ['one'], which zh-CN does not have
+  - Current: `{$tabCount ->} [one] 如果您现在禁用身份标签页，将有 { $tabCount } 个容器标签页被关闭。您确实要禁用身份标签页吗？ [other] 如果您现在禁用身份标签页，将有 { $tabCount } 个容器标签页被关闭。您确实要禁用身份标签页吗？`
+  - zh-CN has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `containers-disable-alert-ok-button` — `browser/browser/preferences/preferences.ftl` — `containers-disable-alert-ok-button` has plural variant ['one'], which zh-CN does not have
+  - Current: `{$tabCount ->} [one] 关闭 { $tabCount } 个身份标签页 [other] 关闭 { $tabCount } 个身份标签页`
+  - zh-CN has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
 
 ### ✅ Fixed since the last run (0)
 
 _Nothing was fixed._
+
+### ↩︎ Withdrawn — no longer considered a defect (0)
+
+_Nothing withdrawn._
 
 ### 🔁 String changed, defect not verifiable — needs a re-read (0)
 
@@ -46,6 +82,7 @@ _Nothing retired._
 | Variable & placeholder mismatches | 0 |
 | Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 0 |
+| Plural variants (dead or missing forms) | 11 |
 | Access keys not in their label | _skipped for this locale_ |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 27 |
@@ -95,21 +132,54 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (61)
+## 3. Open findings (72)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 6 |
 | 2 | Wrong content (says something other than the English) | 12 |
 | 3 | Degraded language (grammar, spelling, terminology) | 19 |
-| 4 | Cosmetic (typography, spacing) | 24 |
+| 4 | Cosmetic (typography, spacing) | 35 |
 
 ### A. Functional, markup, variables & plurals
 
+- `about-logins-confirm-remove-all-dialog-title` — `browser/browser/aboutLogins.ftl` — `about-logins-confirm-remove-all-dialog-title` has plural variant ['one'], which zh-CN does not have
+  - Current: `{$count ->} [one] 确定要移除 { $count } 条登录信息吗？ [other] 确定要移除全部共 { $count } 条登录信息吗？`
+  - zh-CN has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `pending-crash-reports-message-new` — `browser/browser/contentCrash.ftl` — `pending-crash-reports-message-new` has plural variant ['one'], which zh-CN does not have
+  - Current: `{$reportCount ->} [one] 您最近有一份未发送的崩溃报告 [other] 您最近有 { $reportCount } 份未发送的崩溃报告`
+  - zh-CN has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `downloads-files-not-downloaded` — `browser/browser/downloads.ftl` — `downloads-files-not-downloaded` has plural variant ['one'], which zh-CN does not have
+  - Current: `{$num ->} [other] 未下载 { $num } 个文件。 [one] 未下载文件。`
+  - zh-CN has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `firefoxview-search-results-count` — `browser/browser/firefoxView.ftl` — `firefoxview-search-results-count` has plural variant ['one'], which zh-CN does not have
+  - Current: `{$count ->} [one] { $count } 个网站 [other] { $count } 个网站`
+  - zh-CN has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
 - `genai-settings-chat-localhost-links` — `browser/browser/genai.ftl` — genai-settings-chat-localhost-links (genai.ftl) — leftover English possessive: "{ -vendor-short-name }’s Innovation…" → drop the ’s.
   - en-US: `’s`
+- `migration-wizard-progress-success-history` — `browser/browser/migrationWizard.ftl` — `migration-wizard-progress-success-history` has plural variant ['one'], which zh-CN does not have
+  - Current: `{$maxAgeInDays ->} [one] 昨天以来的数据 [other] 过去 { $maxAgeInDays } 天内的数据`
+  - zh-CN has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
 - `origin-controls-toolbar-button-permission-needed` — `browser/browser/originControls.ftl` — origin-controls-toolbar-button-permission-needed (originControls.ftl) — dev-comment: the second line is intentional; ZH dropped "Permission needed" → add second line 需要授权.
   - en-US: `add second line 需要授权.`
+- `general-meta-tags` — `browser/browser/pageInfo.ftl` — `general-meta-tags` (`.value`) has plural variant ['one'], which zh-CN does not have
+  - Current: `{$tags ->} [one] 元信息（1 个标签） [other] 元信息（{ $tags } 个标签）`
+  - zh-CN has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `media-animated-image-type` — `browser/browser/pageInfo.ftl` — `media-animated-image-type` (`.value`) has plural variant ['one'], which zh-CN does not have
+  - Current: `{$frames ->} [one] { $type } 图像（动画，{ $frames } 帧） [other] { $type } 图像（动画，{ $frames } 帧）`
+  - zh-CN has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `properties-general-size` — `browser/browser/pageInfo.ftl` — `properties-general-size` (`.value`) has plural variant ['one'], which zh-CN does not have
+  - Current: `{$bytes ->} [one] { $kb } KB ({ $bytes } 字节) [other] { $kb } KB ({ $bytes } 字节)`
+  - zh-CN has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `security-visits-number` — `browser/browser/pageInfo.ftl` — `security-visits-number` has plural variant ['one'], which zh-CN does not have
+  - Current: `{$visits ->} [0] 否 [one] 是，1 次 [other] 是，{ $visits } 次`
+  - zh-CN has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `containers-disable-alert-desc` — `browser/browser/preferences/preferences.ftl` — `containers-disable-alert-desc` has plural variant ['one'], which zh-CN does not have
+  - Current: `{$tabCount ->} [one] 如果您现在禁用身份标签页，将有 { $tabCount } 个容器标签页被关闭。您确实要禁用身份标签页吗？ [other] 如果您现在禁用身份标签页，将有 { $tabCount } 个容器标签页被关闭。您确实要禁用身份标签页吗？`
+  - zh-CN has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `containers-disable-alert-ok-button` — `browser/browser/preferences/preferences.ftl` — `containers-disable-alert-ok-button` has plural variant ['one'], which zh-CN does not have
+  - Current: `{$tabCount ->} [one] 关闭 { $tabCount } 个身份标签页 [other] 关闭 { $tabCount } 个身份标签页`
+  - zh-CN has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
 - `safeb-blocked-addon-page-short-desc` — `browser/browser/safebrowsing/blockedSite.ftl` — stray trailing </p> not in source → remove.
   - en-US: `remove.`
 - `plugins-openh264-description` — `toolkit/toolkit/about/aboutAddons.ftl` — plugins-openh264-description (aboutPlugins.ftl and aboutAddons.ftl) — http://www.openh264.org/ → https:// (matches source).
@@ -236,6 +306,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 ### Suppressed as false positives (0)
 
 _No suppression rules have matched._
+
+### Withdrawn to date (0)
+
+_Nothing withdrawn._
+
+_A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
 ### Resolved to date (26)
 

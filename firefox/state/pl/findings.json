@@ -4794,25 +4794,25 @@
  {
   "category": "A",
   "check": "legacy",
-  "current": "[many]",
+  "current": "{$count ->} [one] Komentarz [other] Komentarze",
   "fid": "507fb389f84c",
   "file": "toolkit/toolkit/pdfviewer/viewer.ftl",
   "first_seen": "2026-08-06",
   "impact": 1,
-  "last_seen": "2026-08-06",
+  "last_seen": "2026-08-20",
   "locale": "pl",
   "origin": {
    "report": "legacy",
    "section": "3. A — Functional / markup",
    "severity": "S1"
   },
-  "rationale": "",
-  "resolved_on": "2026-08-06",
-  "status": "fixed",
+  "rationale": "This locale uses ['few', 'many', 'one'] in most of its plurals, and en-US pluralizes this string. The catch-all variant will be shown instead, giving the wrong grammatical form.",
+  "resolved_on": "",
+  "status": "open",
   "string_hash": "8392e962",
   "string_id": "pdfjs-editor-comments-sidebar-title",
-  "suggest": "\"Komentarzy\" for 5+.",
-  "summary": "A7, plural. Only [one]/[other] (\"Komentarz\" / \"Komentarze\"). Polish needs [many] → \"Komentarzy\" for 5+.",
+  "suggest": "{$count ->} [one] Comment [other] Comments",
+  "summary": "`pdfjs-editor-comments-sidebar-title` is missing the ['few', 'many'] plural forms",
   "suppressed_by": ""
  },
  {
