@@ -346,7 +346,12 @@ def resolve(
                 f.status = "fixed"
                 f.resolved_on = today
                 buckets["fixed"].append(f)
-            elif call == "unclear":
+            elif call == "unclear" and moved:
+                # Only re-queue where the string demonstrably moved. Most
+                # findings quote a fragment rather than a whole value, so
+                # "unclear" is the common case and re-queueing all of them
+                # would have sent 534 of fy-NL's 593 back for a re-read on
+                # no evidence at all.
                 f.status = "needs-recheck"
                 f.string_hash = msg.hash()
                 buckets["recheck"].append(f)

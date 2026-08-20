@@ -104,6 +104,32 @@ Findings that disappear because a check changed its mind are recorded as
 They are listed separately in the report appendix, which keeps the fixed
 count honest.
 
+## Re-checking an existing backlog
+
+`--recheck` re-verifies every open finding against the tree as it stands,
+instead of only those the run's delta points at:
+
+```bash
+python lib/run.py --project firefox --locale it --recheck \
+    --l10n-dir ... --source-dir ...
+```
+
+It closes findings whose quoted text has gone, and sends back to the
+reviewer the ones where the string moved but text matching cannot settle
+whether the defect went with it.
+
+**Do not put it in the scheduled workflow.** A normal run already resolves
+a finding whenever its string changes -- that is judged against the hash
+recorded when the finding was raised, so it holds however long ago that
+was. `--recheck` exists for the case a normal run cannot cover: the
+*checking logic itself* changed, so conclusions reached under the old logic
+need revisiting. That is a thing you do deliberately after editing
+`lib/findings.py` or importing a backlog, not every night.
+
+It is also the more expensive path. It re-queues moved strings for the
+reviewer regardless of the delta, and on a large backlog that is a much
+bigger batch than the handful a normal run looks at.
+
 ## Things that are not false positives
 
 A few classes are handled elsewhere; do not write rules for them.

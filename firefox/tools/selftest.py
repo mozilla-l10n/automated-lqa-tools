@@ -303,6 +303,13 @@ def run(l10n_dir, source_dir, project) -> int:
     check(f_stale.status == "fixed",
           "--recheck closes a defect whose text has gone, whatever the delta says")
 
+    f_quiet = Finding(locale="it", file="a.ftl", string_id="s", category="B",
+                      summary="x", current="Trad", string_hash="now")
+    findings_mod.resolve([f_quiet], {("a.ftl", "s"): _M("Traduzione")},
+                         set(), "2026-01-01", recheck=True)
+    check(f_quiet.status == "open",
+          "--recheck leaves alone a finding whose string shows no sign of moving")
+
     f_open = Finding(locale="it", file="a.ftl", string_id="s", category="B",
                      summary="x", current="Traduzione", string_hash="now")
     findings_mod.close_reviewed([f_open], {("a.ftl", "s")}, set(),

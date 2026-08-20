@@ -189,7 +189,11 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
             # survives an edit that fixed it -- "Traduzione" is still inside
             # "Traduzione in corso". Those need reading, so re-queue every
             # string that still carries an open finding.
-            pending = [f.key for f in stored if f.is_open and f.key in l10n]
+            pending = [
+                f.key for f in stored
+                if f.is_open and f.key in l10n
+                and f.string_hash and f.string_hash != l10n[f.key].hash()
+            ]
             extra = [k for k in dict.fromkeys(pending) if k not in set(keys)]
             if extra:
                 log(f"  --recheck: re-queueing {len(extra)} string(s) with open findings")

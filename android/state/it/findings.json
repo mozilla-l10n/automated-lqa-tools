@@ -33,8 +33,8 @@
    "confidence": "medium"
   },
   "rationale": "The button on the error page (mozac_browser_errorpages_page_refresh) is labelled \"Riprovare\"; the message tells the user to press \"Riprova\", so the quoted label does not exist on screen.",
-  "resolved_on": "",
-  "status": "needs-recheck",
+  "resolved_on": "2026-08-20",
+  "status": "fixed",
   "string_hash": "9fad580e",
   "string_id": "mozac_browser_errorpages_offline_message",
   "suggest": "Selezionare “Riprovare” per passare alla modalità in linea e ricaricare la pagina.",
@@ -208,13 +208,13 @@
   "origin": {
    "confidence": "medium"
   },
-  "rationale": "\"Custom tab\" is a specific Android feature (scheda personalizzata); the Italian says \"menu for customizing tabs\", which is a different thing.",
-  "resolved_on": "",
-  "status": "open",
+  "rationale": "The source refers to the bottom sheet menu of a Custom Tab, not to a menu for customizing tabs; the meaning is reversed/altered.",
+  "resolved_on": "2026-08-20",
+  "status": "fixed",
   "string_hash": "754634a7",
   "string_id": "browser_custom_tab_menu_handlebar_content_description",
   "suggest": "Chiudi il pannello del menu della scheda personalizzata",
-  "summary": "\"Custom tab menu sheet\" is mistranslated as a menu for customizing tabs.",
+  "summary": "\"custom tab\" (a browser feature: a tab opened by another app) is mistranslated as \"personalizzazione schede\" (tab customization).",
   "suppressed_by": ""
  },
  {
@@ -253,8 +253,8 @@
    "confidence": "medium"
   },
   "rationale": "The source is the adjective \"New\" used as a badge on a new feature; \"Novità\" means \"news/novelty\".",
-  "resolved_on": "",
-  "status": "open",
+  "resolved_on": "2026-08-20",
+  "status": "fixed",
   "string_hash": "b12dbf41",
   "string_id": "browser_menu_summarize_page_badge",
   "suggest": "Nuovo",
@@ -604,13 +604,13 @@
   "origin": {
    "confidence": "medium"
   },
-  "rationale": "The source asks the user to help catch trackers; the Italian tells the user to catch them, dropping \"help\". It also uses \"traccianti\" instead of the \"elementi traccianti\" used consistently in the surrounding strings.",
-  "resolved_on": "",
-  "status": "open",
+  "rationale": "The source invites the user to help catch trackers; the Italian turns it into a direct command to catch them.",
+  "resolved_on": "2026-08-20",
+  "status": "fixed",
   "string_hash": "c730fc17",
   "string_id": "help_catch_trackers",
-  "suggest": "Aiuta a catturare gli elementi traccianti",
-  "summary": "\"Help catch trackers\" is rendered as an imperative \"catch trackers\" losing the \"help\" (contribute to catching) meaning.",
+  "suggest": "Aiuta a individuare i traccianti",
+  "summary": "\"Help catch trackers\" is translated as \"Cattura i traccianti\", dropping the \"help\" sense.",
   "suppressed_by": ""
  },
  {
@@ -737,8 +737,8 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"Open on last tab\", matching the option label \"Last tab\" translated as \"Ultima scheda\"; \"scheda più recente\" changes the wording and breaks consistency on the same preference surface.",
-  "resolved_on": "",
-  "status": "open",
+  "resolved_on": "2026-08-20",
+  "status": "fixed",
   "string_hash": "bbc537b8",
   "string_id": "opening_screen_last_tab_summary",
   "suggest": "Apri ultima scheda",
@@ -780,13 +780,13 @@
   "origin": {
    "confidence": "medium"
   },
-  "rationale": "The source distinguishes cookies_3 (\"may cause websites to break\") from cookies_4 (\"will cause websites to break\"); the Italian for _4 adds \"alcuni\", weakening the certainty of the warning.",
-  "resolved_on": "",
-  "status": "open",
+  "rationale": "The source states websites will break, without limiting it to some sites.",
+  "resolved_on": "2026-08-20",
+  "status": "fixed",
   "string_hash": "c70ddc0e",
   "string_id": "preference_enhanced_tracking_protection_custom_cookies_4",
   "suggest": "Tutti i cookie (i siti web non funzioneranno correttamente)",
-  "summary": "\"will cause websites to break\" weakened to \"alcuni siti non funzioneranno\" (some sites), mirroring the previous string's \"may\".",
+  "summary": "The translation adds \"alcuni\" (some) and softens the source's \"will cause websites to break\".",
   "suppressed_by": ""
  },
  {
@@ -824,13 +824,13 @@
   "origin": {
    "confidence": "medium"
   },
-  "rationale": "The source is a third-person description of what the setting does (\"Allows Mozilla…\"), not a command to the user; compare preferences_daily_usage_ping_description translated as \"Questo consente a Mozilla…\".",
-  "resolved_on": "",
-  "status": "open",
+  "rationale": "The developer comment marks this as a summary describing what the preference does, not a command to the user.",
+  "resolved_on": "2026-08-20",
+  "status": "fixed",
   "string_hash": "9d325cf4",
   "string_id": "preference_experiments_summary_2",
   "suggest": "Consente a Mozilla di installare e condurre studi",
-  "summary": "The descriptive summary \"Allows Mozilla to install and run studies\" is rendered as an imperative addressed to the user.",
+  "summary": "Descriptive summary \"Allows Mozilla to…\" rendered as an imperative \"Consenti a Mozilla…\".",
   "suppressed_by": ""
  },
  {
@@ -979,8 +979,8 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says the preference is for showing the tab strip; the Italian noun phrase is acceptable but ambiguous. Low value.",
-  "resolved_on": "",
-  "status": "open",
+  "resolved_on": "2026-08-20",
+  "status": "fixed",
   "string_hash": "398af2ad",
   "string_id": "preferences_tab_strip",
   "suggest": "Mostra barra delle schede",
@@ -1001,8 +1001,8 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"Your connection is not secure.\"; the possessive was changed to a demonstrative.",
-  "resolved_on": "",
-  "status": "open",
+  "resolved_on": "2026-08-20",
+  "status": "fixed",
   "string_hash": "b59bb595",
   "string_id": "protection_panel_banner_not_secure_description",
   "suggest": "La tua connessione non è sicura.",
@@ -1044,13 +1044,13 @@
   "origin": {
    "confidence": "medium"
   },
-  "rationale": "The source is a generic header for the \"Jump back in\" section on the home screen; the Italian refers to one specific tab (\"this tab\"), which does not match the header's meaning.",
-  "resolved_on": "",
-  "status": "open",
+  "rationale": "This is a home-screen section header for recent tabs, not a per-tab action label referring to \"this tab\".",
+  "resolved_on": "2026-08-20",
+  "status": "fixed",
   "string_hash": "8ff24883",
   "string_id": "recent_tabs_header",
-  "suggest": "Riprendi da dove eri rimasto",
-  "summary": "\"Jump back in\" is a section header for resuming recent tabs, but the Italian says \"Torna a questa scheda\" (\"Go back to this tab\"), naming a single specific tab.",
+  "suggest": "Riprendi da dove eri",
+  "summary": "Section header \"Jump back in\" is rendered as a singular call to action \"Torna a questa scheda\" (Go back to this tab).",
   "suppressed_by": ""
  },
  {
@@ -1066,13 +1066,13 @@
   "origin": {
    "confidence": "medium"
   },
-  "rationale": "The source offers an alternative to camera pairing (\"instead\"); the Italian drops that meaning.",
-  "resolved_on": "",
-  "status": "open",
+  "rationale": "The source offers an alternative sign-in method (\"instead\"); the Italian drops that contrast.",
+  "resolved_on": "2026-08-20",
+  "status": "fixed",
   "string_hash": "84b97b10",
   "string_id": "sign_in_with_email",
   "suggest": "Usa invece l’email",
-  "summary": "\"Use email instead\" is translated as \"Accedi con l’email\", losing the \"instead\" contrast.",
+  "summary": "\"Use email instead\" is translated without the contrastive \"instead\", losing the alternative-method meaning.",
   "suppressed_by": ""
  },
  {
@@ -1111,8 +1111,8 @@
    "confidence": "medium"
   },
   "rationale": "sports_widget_final_results_page_content_description translates the same source phrase \"World Cup final results\" as \"Risultati finali della Coppa del mondo\"; the two accessibility strings for the same page must match.",
-  "resolved_on": "",
-  "status": "open",
+  "resolved_on": "2026-08-20",
+  "status": "fixed",
   "string_hash": "cb3a0fb7",
   "string_id": "sports_widget_final_results_content_description",
   "suggest": "Risultati finali della Coppa del mondo",
@@ -1133,8 +1133,8 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"sign in to Firefox on at least one other device\", referring to signing in to the browser, not to an \"account Firefox\".",
-  "resolved_on": "",
-  "status": "needs-recheck",
+  "resolved_on": "2026-08-20",
+  "status": "fixed",
   "string_hash": "b95ca990",
   "string_id": "sync_connect_device_dialog",
   "suggest": "accedi a Firefox",
@@ -1243,8 +1243,8 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says the button text indicates a translation is currently in progress; the accompanying content description uses \"Traduzione in corso\".",
-  "resolved_on": "",
-  "status": "needs-recheck",
+  "resolved_on": "2026-08-20",
+  "status": "fixed",
   "string_hash": "ed7edd2c",
   "string_id": "translations_bottom_sheet_translating_in_progress",
   "suggest": "Traduzione in corso",
