@@ -204,6 +204,10 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
     # the ground truth for their own findings. Captured before the systemic
     # collapse below, which removes findings from `fresh` without meaning
     # they stopped being true.
+    noop = findings_mod.drop_noop(stored, today())
+    if noop:
+        log(f"  retired {len(noop)} finding(s) that proposed no change")
+
     rerunnable = {c for c in checks.CHECKS if c not in health.skipped}
     still_raised = {f.fid for f in check_findings}
     resolved = findings_mod.resolve(
@@ -253,7 +257,7 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
         {
             "new": raised,
             "fixed": resolved["fixed"],
-            "withdrawn": resolved["withdrawn"],
+            "withdrawn": resolved["withdrawn"] + noop,
             "recheck": resolved["recheck"],
             "obsolete": resolved["obsolete"],
         },

@@ -5,7 +5,7 @@
 | **Generated** | 2026-08-20 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `fef20cd7efc2` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
-| **Previous run** | 2026-08-20 @ `b95608d528c8` |
+| **Previous run** | 2026-08-20 @ `fef20cd7efc2` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 18,350 |
 
@@ -15,28 +15,9 @@ Findings are keyed by string id, never by line number. The locale is assessed ag
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (0)
 
-- `default-browser-guidance-notification-body-instruction-win10` — `browser/browser/defaultBrowserNotification.ftl` — `default-browser-guidance-notification-body-instruction-win10` quotes “Web browser” but the string it names, `desktop-entry-generic-name`, reads “Browser web”
-  - Current: `Passo 1: Apri Impostazioni > App predefinite Passo 2: Vai a “Web browser” Passo 3: Seleziona e scegli { -brand-short-name }`
-  - Source: `Step 1: Go to Settings > Default apps Step 2: Scroll down to “Web browser” Step 3: Select and choose { -brand-short-name }`
-  - Suggest: `Browser web`
-  - In the source this string quotes “Web browser”, which is exactly the value of `desktop-entry-generic-name` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `noDomMutationBreakpoints.notice` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints.notice` quotes “Interrompi per…” but the string it names, `watchpoints.submenu`, reads “Sospendi su…”
-  - Current: `Fare clic con il tasto destro in Analisi pagina e selezionare “Interrompi per…” per aggiungere un punto di interruzione`
-  - Source: `Right click an element in the Inspector and select “Break on…” to add a breakpoint`
-  - Suggest: `Sospendi su…`
-  - In the source this string quotes “Break on…”, which is exactly the value of `watchpoints.submenu` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `noDomMutationBreakpoints` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints` quotes “Interrompi per…” but the string it names, `watchpoints.submenu`, reads “Sospendi su…”
-  - Current: `Fare clic con il tasto destro in “%S” e selezionare “Interrompi per…” per aggiungere un punto di interruzione`
-  - Source: `Right click an element in the %S and select “Break on…” to add a breakpoint`
-  - Suggest: `Sospendi su…`
-  - In the source this string quotes “Break on…”, which is exactly the value of `watchpoints.submenu` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `toolbox-local-mode-notice` — `devtools/client/toolbox.ftl` — `toolbox-local-mode-notice` quotes “Local Mode” but the string it names, `options-local-mode-label`, reads “Modalità locale”
-  - Current: `È possibile caricare questo documento anche da “{ $url }” utilizzando la funzione “Local Mode” di DevTools, attivabile dal pannello delle impostazioni.`
-  - Source: `This document could also be loaded from “{ $url }” using DevTools “Local Mode”, which can be enabled in the settings panel.`
-  - Suggest: `Modalità locale`
-  - In the source this string quotes “Local Mode”, which is exactly the value of `options-local-mode-label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

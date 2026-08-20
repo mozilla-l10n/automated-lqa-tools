@@ -172,10 +172,15 @@ def review(project, locale, keys, l10n, source, log=print) -> tuple[list[Finding
 
 
 def _to_finding(locale, raw: dict, l10n) -> Finding | None:
-    """Convert one model finding, dropping anything that does not resolve.
+    """Convert one model finding, dropping anything that is not one.
 
-    A hallucinated string id is silently discarded rather than reported: the
-    backlog must only contain strings that exist.
+    Two things get discarded here. A hallucinated string id, because the
+    backlog must only contain strings that exist. And a finding whose
+    suggested text is identical to the current text, because a reviewer who
+    proposes no change has concluded there is no defect -- their own
+    rationale usually says so outright ("no defect", "this is acceptable")
+    while the tool call still reports it. About one model finding in twenty
+    was of that kind.
     """
     string_id = (raw.get("string_id") or "").strip().strip("`")
     file = (raw.get("file") or "").strip().strip("`")
@@ -195,6 +200,11 @@ def _to_finding(locale, raw: dict, l10n) -> Finding | None:
             msg = l10n[key]
         else:
             key = (file, base)
+    current = (raw.get("current") or "").strip()
+    suggest = (raw.get("suggest") or "").strip()
+    if suggest and current and suggest == current:
+        return None
+
     return Finding(
         locale=locale,
         file=key[0],
@@ -203,8 +213,8 @@ def _to_finding(locale, raw: dict, l10n) -> Finding | None:
         check="llm",
         impact=int(raw.get("impact") or 0),
         summary=(raw.get("summary") or "").strip(),
-        current=(raw.get("current") or "").strip(),
-        suggest=(raw.get("suggest") or "").strip(),
+        current=current,
+        suggest=suggest,
         rationale=(raw.get("rationale") or "").strip(),
         string_hash=msg.hash(),
         origin={"confidence": raw.get("confidence", "")},

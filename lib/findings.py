@@ -187,6 +187,29 @@ def merge(existing: list[Finding], fresh: list[Finding], today: str) -> tuple[li
     return existing, raised
 
 
+def drop_noop(findings: list[Finding], today: str) -> list[Finding]:
+    """Retire stored findings that propose no change.
+
+    A reviewer whose suggestion equals the current text has concluded there
+    is nothing wrong. Such an item should never have been raised; retiring
+    it as ``withdrawn`` says that plainly, rather than deleting it and
+    leaving no trace of the judgement.
+    """
+    out = []
+    for f in findings:
+        if not f.is_open or not f.suggest or not f.current:
+            continue
+        if f.suggest.strip() != f.current.strip():
+            continue
+        f.status = "withdrawn"
+        f.resolved_on = today
+        f.rationale = (
+            f.rationale + " " if f.rationale else ""
+        ) + "(Retired: the suggested text is identical to the current text.)"
+        out.append(f)
+    return out
+
+
 def resolve(
     findings: list[Finding],
     messages: dict,

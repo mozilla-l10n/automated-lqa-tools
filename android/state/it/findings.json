@@ -164,9 +164,9 @@
   "origin": {
    "confidence": "medium"
   },
-  "rationale": "Minor: source uses lowercase quoted labels; the Italian labels match the UI strings, so this is acceptable.",
-  "resolved_on": "",
-  "status": "open",
+  "rationale": "Minor: source uses lowercase quoted labels; the Italian labels match the UI strings, so this is acceptable. (Retired: the suggested text is identical to the current text.)",
+  "resolved_on": "2026-08-20",
+  "status": "withdrawn",
   "string_hash": "d0430379",
   "string_id": "automatic_translation_header_preference",
   "suggest": "“Traduci sempre” e “Non tradurre mai”",
@@ -297,8 +297,8 @@
    "confidence": "medium"
   },
   "rationale": "en-US: \"might log you out of websites and clear shopping carts\" — plural \"websites\" and coordinating \"and\", not \"or\" with a singular site.",
-  "resolved_on": "",
-  "status": "open",
+  "resolved_on": "2026-08-20",
+  "status": "fixed",
   "string_hash": "6495409a",
   "string_id": "clear_site_data_dialog_description",
   "suggest": "potrebbe disconnetterti dai siti web e svuotare eventuali carrelli della spesa",
@@ -363,8 +363,8 @@
    "confidence": "medium"
   },
   "rationale": "The debug feature works with locales (region/format), not languages; source says \"locale\".",
-  "resolved_on": "",
-  "status": "open",
+  "resolved_on": "2026-08-20",
+  "status": "fixed",
   "string_hash": "3c9f4363",
   "string_id": "debug_drawer_add_new_address",
   "suggest": "per il locale selezionato",
@@ -385,8 +385,8 @@
    "confidence": "medium"
   },
   "rationale": "The source names the list of debug locales; the translation says \"choice of languages\" and loses the debug qualifier.",
-  "resolved_on": "",
-  "status": "open",
+  "resolved_on": "2026-08-20",
+  "status": "fixed",
   "string_hash": "c4eec095",
   "string_id": "debug_drawer_addresses_debug_locales_header",
   "suggest": "Locale di debug da attivare",
@@ -407,8 +407,8 @@
    "confidence": "medium"
   },
   "rationale": "\"Reset\" in this debug context means reimpostare/azzerare the CFR state, not restoring a previous state.",
-  "resolved_on": "",
-  "status": "open",
+  "resolved_on": "2026-08-20",
+  "status": "fixed",
   "string_hash": "afdf7f17",
   "string_id": "debug_drawer_cfr_tools_reset_cfr_title",
   "suggest": "Reimposta CFR",
@@ -649,8 +649,8 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"make your browsing more private and harder to trace\"; the same sentence is correctly rendered in ip_protection_onboarding_body_promo as \"rendere la tua navigazione più privata e difficile da tracciare\", so this variant is both inaccurate and inconsistent.",
-  "resolved_on": "",
-  "status": "open",
+  "resolved_on": "2026-08-20",
+  "status": "fixed",
   "string_hash": "0b52bd92",
   "string_id": "ip_protection_settings_description",
   "suggest": "Attiva la VPN per rendere la tua navigazione più privata e difficile da tracciare.",
@@ -890,9 +890,9 @@
   "origin": {
    "confidence": "medium"
   },
-  "rationale": "Placeholder-level check: source says \"addresses\" and target says \"indirizzi\", which matches; no defect.",
-  "resolved_on": "",
-  "status": "open",
+  "rationale": "Placeholder-level check: source says \"addresses\" and target says \"indirizzi\", which matches; no defect. (Retired: the suggested text is identical to the current text.)",
+  "resolved_on": "2026-08-20",
+  "status": "withdrawn",
   "string_hash": "8714b7c8",
   "string_id": "preferences_delete_browsing_data_browsing_data_subtitle",
   "suggest": "%d indirizzi",
@@ -935,8 +935,8 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"enabled above\" (referring to the setting above) and \"your active search engine\", not the default search engine; the Italian changes the meaning.",
-  "resolved_on": "",
-  "status": "open",
+  "resolved_on": "2026-08-20",
+  "status": "fixed",
   "string_hash": "e032b363",
   "string_id": "preferences_google_lens_availability_caption",
   "suggest": "Disponibile solo se Google è attivo qui sopra ed è il motore di ricerca attivo durante la navigazione.",

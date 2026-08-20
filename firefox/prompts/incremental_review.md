@@ -65,5 +65,11 @@ Assign exactly one:
 - `3` — degraded language: grammar, spelling, terminology
 - `4` — cosmetic: typography, spacing
 
+**If you conclude a string is acceptable, do not report it.** Writing a
+rationale that ends "no defect", "this is acceptable" or "this matches" and
+reporting it anyway puts work on someone else to re-derive that judgement.
+A finding whose suggested text is identical to the current text is not a
+finding, and is discarded.
+
 Call the `report_findings` tool exactly once. If the batch is clean, call it
 with an empty list — that is a normal and expected result.
