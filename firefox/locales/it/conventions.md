@@ -24,3 +24,10 @@ _Carried over from the hand-written review; these are maintainer decisions, not 
 - `Elenco lettura` for Safari's Reading List is correct; it is not an inconsistency with Edge's `Elenco di lettura`.
 - In DevTools, the CSS keyword `grid` stays English — do not suggest `griglia`.
 - The `enterprise/` and FELT files exist only in this locale and are legitimate; they have no en-US counterpart.
+- Dropping a trailing `!` from the source and ending the sentence with `.`
+  is a deliberate choice, not an omission. Italian UI text uses the
+  exclamation mark far more sparingly than English. Never report a missing
+  or changed final `!`.
+- `crittare`, and its forms `critta`, `crittato`, `crittati`, is the correct
+  Italian verb for "to encrypt". It is not a typo for `criptare`, and it is
+  not a truncation of anything. Never report it as a misspelling.
