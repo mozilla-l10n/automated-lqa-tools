@@ -1,5 +1,25 @@
 [
  {
+  "category": "D",
+  "check": "ui_references",
+  "current": "{ <p> }Il browser si trova in modalità non in linea e non è possibile connettersi con l’elemento richiesto.{ </p> }\n{ <ul> }\n{ <li> }Il dispositivo è collegato a una rete attiva?{ </li> }\n{ <li> }Selezionare “Riprova” per passare alla modalità in linea e ricaricare la pagina.{ </li> }\n{ </ul> }",
+  "fid": "20546dc7fe45",
+  "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+  "first_seen": "2026-08-20",
+  "impact": 2,
+  "last_seen": "2026-08-20",
+  "locale": "it",
+  "origin": {},
+  "rationale": "In the source this string quotes “Try Again”, which is exactly the value of `mozac_browser_errorpages_page_refresh` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "resolved_on": "2026-08-20",
+  "status": "withdrawn",
+  "string_hash": "0557bcc3",
+  "string_id": "mozac_browser_errorpages_offline_message",
+  "suggest": "Riprovare",
+  "summary": "`mozac_browser_errorpages_offline_message` quotes “Riprova” but the string it names, `mozac_browser_errorpages_page_refresh`, reads “Riprovare”",
+  "suppressed_by": ""
+ },
+ {
   "category": "E",
   "check": "llm",
   "current": "Selezionare “Riprova” per passare alla modalità in linea e ricaricare la pagina.",

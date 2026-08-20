@@ -35,6 +35,11 @@ MUST_FIND = [
     ("zh-CN", "placeholders", "downloads_delete_dialog_title"),
     # Japanese has no `one` category, so that variant is unreachable.
     ("ja", "plurals", "downloads_delete_dialog_title"),
+    # The offline message tells the user to press "Riprova"; the button it
+    # names reads "Riprovare". A cross-string defect, so it is a check
+    # rather than a model finding -- the pair is re-derived every run, and
+    # fixing *either* string closes it.
+    ("it", "ui_references", "mozac_browser_errorpages_offline_message"),
 ]
 
 # Locales and checks that must produce nothing.
@@ -44,6 +49,8 @@ MUST_BE_SILENT = [
     ("it", "plurals", "Italian plurals are correct"),
     ("it", "markup", "Italian markup is correct"),
     ("fr", "placeholders", "French placeholders are correct"),
+    ("de", "ui_references", "German UI references are consistent"),
+    ("ja", "ui_references", "Japanese UI references are consistent"),
     ("pt-BR", "placeholders", "Brazilian Portuguese placeholders are correct"),
 ]
 
@@ -101,6 +108,17 @@ def run(l10n_dir, project) -> int:
     check(_unescaped(r"Don\'t") is None, "an escaped apostrophe is accepted")
     check(_unescaped('"Don\'t"') is None, "a fully quoted value is accepted")
     check(_unescaped("<![CDATA[Don't]]>") is None, "CDATA content is left alone")
+
+    print("\nCross-string UI references")
+    from common_checks import _is_label, _nearest
+    check(_is_label("Try Again") and not _is_label("SameSite"),
+          "a multi-word label is told from a technical token")
+    check(not _is_label("%1$s items"), "a placeholder is not a label")
+    check(_nearest(("a.xml", "foo_message"),
+                   [("a.xml", "foo_button"), ("b.xml", "bar_button")]) == ("a.xml", "foo_button"),
+          "the candidate in the same file wins")
+    check(_nearest(("a.xml", "foo"), [("b.xml", "x"), ("c.xml", "y")]) is None,
+          "an ambiguous reference across files is not guessed at")
 
     print("\nProject wiring")
     check("variables" not in project.checks,

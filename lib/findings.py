@@ -58,6 +58,12 @@ DEFAULT_IMPACT = {"A": 1, "B": 2, "C": 3, "D": 3, "E": 4}
 
 OPEN_STATUSES = {"open", "needs-recheck"}
 
+# Checks whose finding is about a *relation* between strings rather than one
+# string's content. When such a check stops firing it is because the
+# relation was repaired -- possibly by editing the other string -- so the
+# finding is fixed, not withdrawn, even though its own string never moved.
+CROSS_STRING_CHECKS = {"ui_references"}
+
 
 @dataclass
 class Finding:
@@ -226,7 +232,11 @@ def resolve(
             if f.fid in still_raised:
                 f.status = "open"
                 f.string_hash = msg.hash()
-            elif f.string_hash and f.string_hash == msg.hash():
+            elif (
+                f.string_hash
+                and f.string_hash == msg.hash()
+                and f.check not in CROSS_STRING_CHECKS
+            ):
                 # The check stopped raising it while the string never moved,
                 # so the check changed its mind -- most likely a false
                 # positive that has since been corrected. Reporting that as

@@ -34,6 +34,8 @@ does more damage than a missed nitpick. When you are not sure, say nothing.
 - **A string being identical to {source_locale}.** That is the normal case.
   Only say something when this variant genuinely requires a difference, and
   say which rule requires it.
+- **A string quoting a UI label that no longer matches it.** The
+  `ui_references` check owns that.
 - **Preferences between forms both current in this variant.** `-ise` and
   `-ize` are both valid British spelling; report only a departure from what
   the locale does consistently elsewhere, never your own preference.

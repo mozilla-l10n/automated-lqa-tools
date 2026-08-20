@@ -395,6 +395,138 @@ def check_selectors(locale, l10n, source) -> list[Finding]:
     return out
 
 
+# Quote characters a locale might use to set off a UI label. Single curly
+# quotes are deliberately excluded: U+2019 is also the apostrophe in French,
+# Italian and English, so treating it as a delimiter cuts "Ajouter à
+# l\u2019écran d\u2019accueil" down to "Ajouter à l".
+_OPEN = "\u201c\u201e\u00ab\u300c\""
+_CLOSE = "\u201d\u201c\u00bb\u300d\""
+_QUOTED = re.compile(f"[{_OPEN}]([^{_OPEN}{_CLOSE}]{{2,40}})[{_CLOSE}]")
+
+
+def _is_label(value: str) -> bool:
+    """Could this plausibly be a piece of UI being named?
+
+    A multi-word run of letters. The space matters: without it the check
+    matches technical tokens that merely coincide with some other string --
+    `SameSite`, `secure`, `count` -- and produced over a hundred false
+    positives per Firefox locale.
+    """
+    if not value or "%" in value or "{" in value or "<" in value:
+        return False
+    return " " in value.strip() and any(c.isalpha() for c in value)
+
+
+def _nearest(key, candidates):
+    """Which of several identically-worded strings this one is naming.
+
+    A label is often reused: five Android strings read "Try Again". Text
+    quoting one of them almost always means the control defined beside it,
+    so candidates in the same file win, and among those the one sharing the
+    longest id prefix. Returning None when that still does not single one
+    out is deliberate -- an ambiguous reference supports no conclusion.
+    """
+    file, ident = key
+    same_file = [k for k in candidates if k[0] == file]
+    pool = same_file or candidates
+    if len(pool) == 1:
+        return pool[0]
+
+    def shared(other: str) -> int:
+        n = 0
+        for a, b in zip(ident, other):
+            if a != b:
+                break
+            n += 1
+        return n
+
+    ranked = sorted(pool, key=lambda k: -shared(k[1]))
+    if len(ranked) > 1 and shared(ranked[0][1]) == shared(ranked[1][1]):
+        return None
+    if not same_file and shared(ranked[0][1]) < 6:
+        # A different file and no meaningful shared prefix is a guess, not a
+        # reference: "Web browser" happens to be some desktop entry's
+        # generic name, which says nothing about the notification quoting it.
+        return None
+    return ranked[0]
+
+
+def check_ui_references(locale, l10n, source) -> list[Finding]:
+    """A string that quotes another string's text, where the two disagree.
+
+    "Select \u201cTry Again\u201d to go back online" only works while the button
+    really says "Try Again". Translate the two independently and they drift,
+    and the message then tells the user to press something that is not on
+    screen.
+
+    The relation is discovered rather than declared: a source string that
+    quotes the exact value of another source string is taken to be naming
+    that piece of UI, and the same must then hold in the locale. Nothing is
+    hardcoded, and the pairing is re-derived from the source every run --
+    which is the point, because it means fixing *either* string closes the
+    finding. A finding that named only one of them could never notice the
+    other being fixed.
+
+    Deliberately conservative: the quoted text must look like a label rather
+    than a technical token, and must match exactly one other string, because
+    an ambiguous match says nothing.
+    """
+    by_value: dict[str, list] = {}
+    for key, msg in source.items():
+        value = msg.text().strip()
+        if _is_label(value) and len(value) <= 40:
+            by_value.setdefault(value.casefold(), []).append(key)
+
+    out = []
+    seen: set = set()
+    for key, src in source.items():
+        msg = l10n.get(key)
+        if msg is None:
+            continue
+        for fragment in _QUOTED.findall(conventions.clean(src.text())):
+            if not _is_label(fragment):
+                continue
+            candidates = [k for k in by_value.get(fragment.strip().casefold(), []) if k != key]
+            target = _nearest(key, candidates) if candidates else None
+            if target is None:
+                continue  # nothing to point at, or too ambiguous to judge
+            targets = [target]
+            referenced = l10n.get(target)
+            if referenced is None:
+                continue
+            label = referenced.text().strip()
+            if not label or label.casefold() == fragment.strip().casefold():
+                continue  # untranslated on both sides; nothing to compare
+            # Not filtered by _is_label: the whole point is that the locale
+            # may have quoted a single word ("Riprova") where the source
+            # quoted two ("Try Again"). Only placeholders are dropped.
+            here = [
+                q.strip() for q in _QUOTED.findall(conventions.clean(msg.text()))
+                if "%" not in q and "{" not in q
+            ]
+            if not here or label in here:
+                continue
+            if (key, target) in seen:
+                continue  # the same label quoted twice is one defect
+            seen.add((key, target))
+            out.append(_mk(
+                locale, msg, "D", "ui_references",
+                f"`{msg.id}` quotes \u201c{here[0]}\u201d but the string it names, "
+                f"`{targets[0][1]}`, reads \u201c{label}\u201d",
+                current=msg.text(),
+                suggest=label,
+                rationale=(
+                    f"In the source this string quotes \u201c{fragment.strip()}\u201d, which is "
+                    f"exactly the value of `{targets[0][1]}` -- it is naming a piece of "
+                    "UI. The two have been translated differently, so the message "
+                    "points at a label the user cannot see. Fixing either string "
+                    "resolves this, and the check is re-derived every run."
+                ),
+                impact=2,
+            ))
+    return out
+
+
 def check_typography(project, locale, l10n, counts, source=None) -> list[Finding]:
     """Deviations from the locale's *own* majority convention.
 
@@ -680,6 +812,7 @@ CHECKS = {
     "selectors": lambda c: check_selectors(c.locale, c.l10n, c.source),
     "plurals": lambda c: check_plurals(c.locale, c.l10n, c.source),
     "markup": lambda c: check_markup(c.locale, c.l10n, c.source),
+    "ui_references": lambda c: check_ui_references(c.locale, c.l10n, c.source),
     "typography": lambda c: check_typography(
         c.project, c.locale, c.l10n, c.counts, c.source
     ),

@@ -47,6 +47,7 @@ checks:
   - plurals
   - escaping
   - markup
+  - ui_references
   - typography
 
 check_overrides: {}
