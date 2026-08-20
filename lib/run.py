@@ -240,9 +240,13 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
 
     # A model finding the reviewer re-read and did not repeat is resolved;
     # otherwise a needs-recheck item could never close.
-    # With --recheck, silence about a string we deliberately re-read is
-    # itself the answer; normally we only trust it for a string that changed.
-    trusted = reviewed_keys if args.recheck else set(delta.to_review)
+    # Silence from the reviewer only means something for a string that has
+    # actually moved. --recheck widens what gets *re-read*, never what a
+    # quiet answer is allowed to conclude.
+    trusted = set(delta.to_review) | {
+        f.key for f in stored
+        if f.key in l10n and f.string_hash and f.string_hash != l10n[f.key].hash()
+    }
     reclosed = findings_mod.close_reviewed(
         stored, reviewed_keys, llm_fids, trusted, today()
     )

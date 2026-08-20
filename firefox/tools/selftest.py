@@ -317,6 +317,13 @@ def run(l10n_dir, source_dir, project) -> int:
     check(f_open.status == "fixed",
           "a finding the reviewer re-read and did not repeat is closed")
 
+    f_quiet2 = Finding(locale="it", file="a.ftl", string_id="s", category="B",
+                       summary="x", current="Traduzione", string_hash="now")
+    findings_mod.close_reviewed([f_quiet2], {("a.ftl", "s")}, set(),
+                                set(), "2026-01-01")
+    check(f_quiet2.status == "open",
+          "silence about an unchanged string closes nothing")
+
     print("\nSuppression rules")
     from suppress import Rule
     rule = Rule({"id": "r", "reason": "because", "match": {"check": "typography",

@@ -250,8 +250,11 @@ def close_reviewed(
     did not raise it again, it is resolved.
 
     Limited to strings whose content actually changed. The reviewer is not
-    deterministic, and staying quiet about an unchanged string is weaker
-    evidence than staying quiet about one somebody has just edited.
+    deterministic, and staying quiet about an unchanged string is not
+    evidence of anything -- it may simply not have spotted the defect this
+    time. No flag may relax this: ``--recheck`` once passed every reviewed
+    string as trusted and closed thirteen Italian findings whose text was
+    byte-identical to what had been flagged.
     """
     out = []
     for f in findings:

@@ -2,13 +2,13 @@
 
 - **Generated:** 2026-08-20
 - **Locales tracked:** 20 (20 with recorded state)
-- **Findings:** 114 raised, 33 resolved (28%), 75 open
+- **Findings:** 114 raised, 42 resolved (36%), 66 open
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
 | Locale | Last run | Mode | Commit | Strings | Missing | Open | Impact 1–2 | Fixed | Suppressed |
 |---|---|---|---|---|---|---|---|---|---|
-| [it](it/android.md) | 2026-08-20 | incremental | `afd16223` | 2,908 | 0 | **20** | 13 | 33 | 4 |
+| [it](it/android.md) | 2026-08-20 | incremental | `81c3d194` | 2,908 | 0 | **11** | 10 | 42 | 4 |
 | [es-MX](es-MX/android.md) | 2026-08-20 | baseline | `afd16223` | 2,886 | 22 | **7** | 3 | 0 | 0 |
 | [cs](cs/android.md) | 2026-08-20 | baseline | `afd16223` | 2,897 | 11 | **3** | 3 | 0 | 0 |
 | [hu](hu/android.md) | 2026-08-20 | baseline | `afd16223` | 2,897 | 11 | **2** | 2 | 0 | 0 |

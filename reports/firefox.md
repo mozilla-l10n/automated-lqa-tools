@@ -2,7 +2,7 @@
 
 - **Generated:** 2026-08-20
 - **Locales tracked:** 20 (20 with recorded state)
-- **Findings:** 5,772 raised, 1,395 resolved (24%), 4,345 open
+- **Findings:** 5,772 raised, 1,393 resolved (24%), 4,347 open
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
@@ -17,7 +17,7 @@ Counts come from `state/`, not from the rendered reports, so they always reflect
 | [hu](hu/firefox.md) | 2026-08-20 | incremental | `fef20cd7` | 18,116 | 47 | **273** | 153 | 0 | 0 |
 | [nl](nl/firefox.md) | 2026-08-20 | incremental | `fef20cd7` | 18,156 | 7 | **377** | 149 | 115 | 0 |
 | [tr](tr/firefox.md) | 2026-08-20 | incremental | `fef20cd7` | 18,001 | 162 | **199** | 71 | 91 | 0 |
-| [ja](ja/firefox.md) | 2026-08-20 | incremental | `fef20cd7` | 18,127 | 36 | **177** | 69 | 191 | 0 |
+| [ja](ja/firefox.md) | 2026-08-20 | incremental | `fef20cd7` | 18,127 | 36 | **179** | 69 | 189 | 0 |
 | [es-MX](es-MX/firefox.md) | 2026-08-20 | incremental | `fef20cd7` | 17,843 | 320 | **136** | 53 | 89 | 0 |
 | [pl](pl/firefox.md) | 2026-08-20 | incremental | `fef20cd7` | 17,836 | 327 | **84** | 49 | 125 | 0 |
 | [es-ES](es-ES/firefox.md) | 2026-08-20 | incremental | `fef20cd7` | 17,184 | 979 | **101** | 43 | 39 | 0 |

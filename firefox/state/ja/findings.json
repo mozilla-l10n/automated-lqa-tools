@@ -2779,8 +2779,8 @@
    "severity": "S3"
   },
   "rationale": "",
-  "resolved_on": "2026-07-27",
-  "status": "fixed",
+  "resolved_on": "",
+  "status": "open",
   "string_hash": "f9a3753e",
   "string_id": "autofill-address-family-name",
   "suggest": "姓",
@@ -5719,8 +5719,8 @@
    "severity": "S4"
   },
   "rationale": "",
-  "resolved_on": "2026-07-27",
-  "status": "fixed",
+  "resolved_on": "",
+  "status": "open",
   "string_hash": "3d2a3418",
   "string_id": "options-context-inspector",
   "suggest": "インスペクター",
