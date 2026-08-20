@@ -24,10 +24,11 @@ carry over.
    which matters when the repository is gigabytes of sync commits.
 3. **Check** deterministically over the whole tree: syntax, placeholders,
    plural selectors, markup, completeness, and typography measured against
-   the locale's own conventions. Free, so it always runs in full.
-4. **Review** only the changed strings with the model. This is what makes
-   frequent runs affordable; a project or locale with no stored state gets a
-   one-off from-scratch pass instead.
+   the locale's own conventions. No model is involved, so this always runs
+   in full.
+4. **Review** only the changed strings with the model. Reviewing the delta
+   rather than the tree is what makes frequent runs practical; a project or
+   locale with no stored state gets a one-off from-scratch pass instead.
 5. **Reconcile** with the stored backlog — what is new, what got fixed, what
    became obsolete, what needs another look.
 6. **Suppress** anything matching the project's false-positive rules, across
@@ -79,6 +80,9 @@ actually common.
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 ```
 
-Runs need an `ANTHROPIC_API_KEY`; in CI it comes from the repository
-secrets. Every entry point is non-interactive — subprocesses get a closed
-stdin, nothing prompts, and one failure does not stop the rest.
+The incremental reviewer needs an `ANTHROPIC_API_KEY`; in CI it comes from
+the repository secrets. A from-scratch run does not, because it drives the
+`claude` CLI, which carries its own credentials.
+
+Every entry point is non-interactive — subprocesses get a closed stdin,
+nothing prompts, and one failure does not stop the rest.

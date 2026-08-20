@@ -5,8 +5,8 @@ stopped:
 
 1. ``locales/<code>/conventions.md`` is prose, injected verbatim into every
    review prompt. It stops the model raising the finding in the first place
-   -- the cheapest and cleanest outcome, and where locale knowledge like
-   "access keys are deliberately English" belongs.
+   -- the cleanest outcome, and where locale knowledge like "access keys
+   are deliberately English" belongs.
 2. ``locales/<code>/suppressions.yaml`` is structured and applied *after*
    the fact, to deterministic checks (which have no prompt) and to anything
    the model raises anyway.

@@ -37,15 +37,15 @@ that one:
 python firefox/tools/run.py --locale cs --mode baseline --partitions devtools
 ```
 
-## Cost, and how to bound it
+## Scale, and how to bound it
 
-A full Firefox locale is roughly 18,000 strings across ~370 files. A
-measured 13-file partition cost **$2.30**, which puts a whole locale at
-roughly **$50–70**. It happens once per locale; every run afterwards is
-incremental and cheap.
+A full Firefox locale is roughly 18,000 strings across ~370 files, reviewed
+in nine parallel partitions. It is far heavier than an incremental run, and
+it happens once per locale; every run afterwards works on the delta only.
 
-To spread it out, run a few partitions at a time with `--partitions`. To see
-the shape of the work before spending anything:
+To spread it over several runs, take a few partitions at a time with
+`--partitions`. To see the shape of the work before involving the model at
+all:
 
 ```bash
 python firefox/tools/run.py --locale cs --no-llm --dry-run
@@ -73,9 +73,9 @@ fill in as false positives turn up.
 ## If the locale is only partly translated
 
 Nothing special is needed. Untranslated strings are dropped before the model
-sees them — paying to have it rediscover that a string is still English on
-every run is waste — and completeness is reported in the health check rather
-than raised as findings. A locale that is 4,000 strings behind produces a
+sees them — having it rediscover that a string is still English on every run
+is pointless — and completeness is reported in the health check rather than
+raised as findings. A locale that is 4,000 strings behind produces a
 missing count, not 4,000 defects.
 
 ## Removing a locale

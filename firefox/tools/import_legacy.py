@@ -2,8 +2,8 @@
 """One-time seeding from the hand-written reviews.
 
 Fourteen Firefox locales were reviewed by hand between July and August 2026.
-Throwing that away and re-reviewing from scratch would cost a lot of tokens
-and, worse, would lose the judgement calls: the maintainer decisions, the
+Throwing that away and re-reviewing from scratch would be wasteful and,
+worse, would lose the judgement calls: the maintainer decisions, the
 "this is correct, stop flagging it" notes, the upstream-en-US exemptions.
 
 So this script reads those reports and produces, per locale:
@@ -15,7 +15,7 @@ So this script reads those reports and produces, per locale:
 * ``locales/<loc>/conventions.md`` -- the counted conventions plus the
   locale's standing instructions, injected into every future prompt;
 * ``state/<loc>/strings.json`` and ``meta.json`` at the current tip, so the
-  first automated run is a cheap incremental rather than a baseline.
+  first automated run is an incremental one rather than a full baseline.
 
 Extraction reuses ``.summarize.py``'s registry and heuristics, which were
 tuned against these exact reports: the section-to-category map, the rule

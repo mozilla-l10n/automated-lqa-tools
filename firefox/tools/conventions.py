@@ -2,7 +2,7 @@
 
 The single most productive rule from the manual reviews: *never assume what
 is correct for a language -- count what the locale actually does, then flag
-deviations from its own majority.* Assuming cost real false positives:
+deviations from its own majority.* Assuming produced real false positives:
 
 * ``ja`` writes ellipsis as three ASCII dots (367) not ``…`` (6)
 * ``nl``'s house dash is the en dash ``–`` (100) not ``—`` (42)

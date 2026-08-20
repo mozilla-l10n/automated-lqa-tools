@@ -19,9 +19,9 @@ access at all. Changing the tooling is a commit someone makes and
 A partition that fails or times out does not lose the others, and
 `--partitions` re-runs just that one.
 
-This path is expensive -- on the order of 2.5-3M input tokens for a full
-Firefox locale -- so it runs once per locale and never again; from then on
-the locale is on the cheap incremental path.
+This path reads the whole tree, so it is far heavier than a normal run.
+It happens once per locale and never again; from then on the locale is on
+the incremental path.
 """
 
 from __future__ import annotations
@@ -189,7 +189,7 @@ def _parse_result(text: str):
 def _run_partition(project, locale, l10n_root, source_root, name, files, log):
     if not files:
         log(f"    partition {name}: no files, skipped")
-        return [], 0.0
+        return []
 
     listing = "\n".join(f"- {f}" for f in files)
     prompt = INSTRUCTIONS.format(
@@ -224,23 +224,22 @@ def _run_partition(project, locale, l10n_root, source_root, name, files, log):
         )
     except subprocess.TimeoutExpired:
         log(f"    partition {name}: timed out; re-run it with --partitions {name}")
-        return [], 0.0
+        return []
 
     if proc.returncode != 0:
         log(f"    partition {name}: exit {proc.returncode}: {proc.stderr[-400:]}")
-        return [], 0.0
+        return []
 
     try:
         envelope = json.loads(proc.stdout)
     except json.JSONDecodeError:
         log(f"    partition {name}: unreadable CLI output: {proc.stdout[:300]}")
-        return [], 0.0
+        return []
 
-    cost = float(envelope.get("total_cost_usd") or 0.0)
     if envelope.get("is_error"):
         log(f"    partition {name}: agent reported an error: "
             f"{str(envelope.get('result'))[:300]}")
-        return [], cost
+        return []
 
     denials = envelope.get("permission_denials") or []
     if denials:
@@ -252,8 +251,8 @@ def _run_partition(project, locale, l10n_root, source_root, name, files, log):
     if data is None:
         log(f"    partition {name}: reply was not JSON ({error}); "
             f"re-run it with --partitions {name}")
-        return [], cost
-    return data.get("findings", []), cost
+        return []
+    return data.get("findings", [])
 
 
 def _claude_bin() -> str:
@@ -269,7 +268,7 @@ def review(project, locale, l10n_root, source_root, l10n, only=None, log=print):
     """Run every partition and return the findings.
 
     Also returns the partitions that produced nothing, so a caller can tell
-    "clean" from "failed", and the total cost the CLI reported.
+    "clean" from "failed".
     """
     from llm_incremental import _to_finding
 
@@ -285,7 +284,6 @@ def review(project, locale, l10n_root, source_root, l10n, only=None, log=print):
 
     results: list[Finding] = []
     empty: list[str] = []
-    total_cost = 0.0
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         futures = {
@@ -298,12 +296,11 @@ def review(project, locale, l10n_root, source_root, l10n, only=None, log=print):
         for future in concurrent.futures.as_completed(futures):
             name = futures[future]
             try:
-                raw_findings, cost = future.result()
+                raw_findings = future.result()
             except Exception as exc:  # noqa: BLE001
                 log(f"    partition {name} failed: {exc}")
                 empty.append(name)
                 continue
-            total_cost += cost
             if not raw_findings:
                 empty.append(name)
             for raw in raw_findings:
@@ -311,6 +308,5 @@ def review(project, locale, l10n_root, source_root, l10n, only=None, log=print):
                 if finding is not None:
                     results.append(finding)
 
-    log(f"    baseline: {len(results)} findings from {len(partitions)} partitions, "
-        f"${total_cost:.2f}")
+    log(f"    baseline: {len(results)} findings from {len(partitions)} partitions")
     return results, empty

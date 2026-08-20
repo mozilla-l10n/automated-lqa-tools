@@ -15,8 +15,8 @@ There are two places to record that, and the difference matters.
 every review prompt. Anything written there is what the model is told to
 treat as correct.
 
-**Prefer this.** It is cheaper (no finding is ever created), it explains the
-*why* to the next reader, and it generalizes — "access keys are deliberately
+**Prefer this.** No finding is ever created, it explains the *why* to the
+next reader, and it generalizes — "access keys are deliberately
 English" covers strings that do not exist yet.
 
 The top of the file is a table of conventions counted over the whole tree.

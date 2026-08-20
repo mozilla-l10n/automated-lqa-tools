@@ -201,7 +201,7 @@ def resolve(
     A finding from the **model** or from an **imported report** cannot be
     re-derived, so it is judged on whether the fragment it quoted survives.
     ``delta_keys`` limits that to strings whose content actually changed,
-    which keeps it cheap and stops an untouched string from flapping. A
+    which keeps the work small and stops an untouched string from flapping. A
     finding that quoted nothing checkable is moved to ``needs-recheck``
     rather than being silently closed -- the honest answer is "a human or
     the model has to look again", not "fixed".

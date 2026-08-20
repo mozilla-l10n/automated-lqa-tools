@@ -141,7 +141,7 @@ def process(project, locale, l10n_root, source_root, source, args, log) -> dict:
         log("  model review skipped (--no-llm)")
     elif mode == "baseline":
         import llm_baseline
-        log("  baseline review (this is the expensive path)")
+        log("  baseline review of the whole tree")
         llm_findings, empty = llm_baseline.review(
             project, locale, l10n_root, source_root, l10n,
             only=args.partitions, log=log,

@@ -5,7 +5,7 @@ with its en-US source and, where one exists, the developer comment.
 
 Report **only high-confidence, concrete defects**. This output goes into a
 tracked backlog that a localization team works through, so a false positive
-costs more than a missed nitpick. When you are not sure, say nothing.
+does more damage than a missed nitpick. When you are not sure, say nothing.
 
 ## What to report
 

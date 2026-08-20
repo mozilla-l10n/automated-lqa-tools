@@ -3,7 +3,7 @@
 This is the path that runs on almost every execution. It is deliberately
 *not* agentic: the strings to review are already known, so there is nothing
 to explore. A plain batched Messages call with a forced tool schema is
-cheaper, reproducible, and testable with recorded fixtures.
+leaner, reproducible, and testable with recorded fixtures.
 
 Structured output is enforced by ``tool_choice``, so a malformed response is
 a retryable API-level error rather than something to parse out of prose.

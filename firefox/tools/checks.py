@@ -1,5 +1,5 @@
-"""Deterministic checks. No model involved, so they run over the whole tree
-on every run and cost nothing.
+"""Deterministic checks. No model is involved, so they run over the whole
+tree on every run.
 
 These are ports of phase 1 of the manual runbook, plus the three checks the
 per-locale reviews proved were missing:

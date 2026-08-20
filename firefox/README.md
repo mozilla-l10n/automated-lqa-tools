@@ -83,8 +83,8 @@ re-runs one slice of a baseline, `--no-llm` skips the API entirely.
 
 ## The checks
 
-Deterministic, so they run over the whole tree every time and cost nothing:
-completeness, Fluent and `.properties` syntax, variable and placeholder
+Deterministic, and involving no model at all, so they run over the whole
+tree every time: completeness, Fluent and `.properties` syntax, variable and placeholder
 mismatches, plural and select selector mismatches, term-parameter
 mismatches, plural variants, access keys against their labels, markup and
 `data-l10n-name` parity, and typography measured against the locale's own
@@ -130,9 +130,8 @@ results.
 ## Two things you will want to do
 
 **Add a locale** — put its code in [`config.yaml`](config.yaml). Its first
-run has no state, so it takes the baseline path over the whole tree. That is
-the expensive one: **roughly $50–70** for a full Firefox locale, measured
-from a real partition run. Every run after that is incremental. See
+run has no state, so it reviews the whole tree from scratch, which is much
+heavier than a normal run; every run after that is incremental. See
 [`docs/adding-a-locale.md`](docs/adding-a-locale.md).
 
 **Flag a false positive** — add a sentence to

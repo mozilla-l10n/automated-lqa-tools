@@ -81,7 +81,7 @@ jobs:
     timeout-minutes: 180
     strategy:
       # One locale per job so a single failure cannot take the rest down, and
-      # so a slow baseline does not block the cheap incrementals.
+      # so a slow baseline does not block the incremental runs.
       fail-fast: false
       max-parallel: 4
       matrix:
