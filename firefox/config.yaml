@@ -1,0 +1,69 @@
+# Firefox l10n QA configuration.
+project: firefox
+name: Firefox (desktop + shared toolkit/dom strings)
+
+repos:
+  # Localized strings: one top-level directory per locale.
+  l10n:
+    url: https://github.com/mozilla-l10n/firefox-l10n
+    branch: main
+    # Locale trees live directly at <root>/<locale>/
+    locale_path: "{locale}"
+  # en-US reference with matching relative paths (the "source"/quarantine repo).
+  source:
+    url: https://github.com/mozilla-l10n/firefox-l10n-source
+    branch: main
+    locale_path: ""
+
+# File extensions to parse. .dtd is gone from this project.
+extensions: [".ftl", ".properties", ".ini"]
+
+# Paths (relative to a locale tree) excluded from every check and review.
+exclude:
+  - "extensions/spellcheck/**"      # hunspell dictionaries, not translations
+  - "**/*.dic"
+  - "**/*.aff"
+
+llm:
+  model: claude-opus-5
+  # Incremental reviews batch this many strings per request.
+  batch_size: 40
+  max_output_tokens: 16000
+  # Baseline (from-scratch) reviews run headless `claude` per partition.
+  baseline_model: claude-opus-5
+  baseline_timeout_seconds: 3600
+
+# Locales checked by this project. Adding a code here triggers a full
+# from-scratch baseline on the next run (see docs/adding-a-locale.md).
+locales:
+  - de
+  - es-ES
+  - es-MX
+  - fr
+  - fy-NL
+  - it
+  - ja
+  - nl
+  - pl
+  - pt-BR
+  - ru
+  - sl
+  - tr
+  - zh-CN
+
+# Deterministic checks that are meaningless for some locales or paths.
+check_overrides:
+  # Access keys are not adapted in CJK locales: the platform appends "(W)".
+  accesskey:
+    skip_locales: [ja, zh-CN, zh-TW, ko]
+  typography:
+    skip_paths:
+      # NSIS installer strings wrap values in straight quotes as syntax, and
+      # use "..." and $\n escapes that are not prose typography.
+      - "browser/installer/**"
+
+# A check that fires on more strings than this in one locale is reported as a
+# single systemic decision listing the affected IDs, not as N separate
+# findings. Unadapted access keys and a house quote style are choices for the
+# locale team to make once, not hundreds of bugs.
+systemic_threshold: 25
