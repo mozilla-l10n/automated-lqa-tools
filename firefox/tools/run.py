@@ -312,9 +312,18 @@ def main(argv=None) -> int:
         log(f"error: not in {args.project}/config.yaml: {', '.join(unknown)}")
         return 2
 
-    if not args.no_llm and not os.environ.get("ANTHROPIC_API_KEY"):
-        log("error: ANTHROPIC_API_KEY is not set (use --no-llm for checks only)")
-        return 2
+    # Only the incremental reviewer talks to the API directly; the baseline
+    # shells out to the `claude` CLI, which carries its own credentials. So
+    # a from-scratch run works without an API key in the environment, and
+    # the incremental path reports the problem itself, per locale, rather
+    # than aborting a whole run that might not need a key at all.
+    if (
+        not args.no_llm
+        and args.mode != "baseline"
+        and not os.environ.get("ANTHROPIC_API_KEY")
+    ):
+        log("note: ANTHROPIC_API_KEY is not set — any locale needing the")
+        log("      incremental reviewer will fail. Baseline runs are fine.")
 
     l10n_root, source_root = resolve_trees(project, args, log)
     source = parse.parse_tree(source_root, project.extensions, project.exclude)

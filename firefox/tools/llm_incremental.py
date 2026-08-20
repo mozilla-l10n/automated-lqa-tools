@@ -120,6 +120,12 @@ def review(project, locale, keys, l10n, source, log=print) -> tuple[list[Finding
         conventions=project.conventions(locale).strip()
         or "_No conventions recorded yet for this locale._",
     )
+    if not os.environ.get("ANTHROPIC_API_KEY"):
+        raise RuntimeError(
+            "the incremental reviewer needs ANTHROPIC_API_KEY. Export it, or "
+            "use --no-llm for deterministic checks only, or --mode baseline "
+            "which uses the `claude` CLI's own credentials instead."
+        )
     client = anthropic.Anthropic()
     batch_size = int(cfg.get("batch_size", 40))
     model = cfg["model"]
