@@ -2,6 +2,11 @@ name: Firefox l10n QA
 
 # Manual dispatch only for now. Uncomment the schedule below once a few runs
 # have been watched; the pipeline is already safe to run unattended.
+#
+# Monthly rather than daily: findings are a backlog a locale team works
+# through over weeks, not a build to babysit. A month of Pontoon syncs is
+# still a small delta next to the 18,000 strings in a locale, and the pull
+# request is cumulative anyway, so nothing is lost by looking less often.
 on:
   workflow_dispatch:
     inputs:
@@ -26,7 +31,7 @@ on:
         default: false
         type: boolean
   # schedule:
-  #   - cron: '17 5 * * *'   # daily, 05:17 UTC
+  #   - cron: '17 5 1 * *'   # 1st of the month, 05:17 UTC
 
 concurrency:
   # Runs push to a shared branch, so never let two overlap.

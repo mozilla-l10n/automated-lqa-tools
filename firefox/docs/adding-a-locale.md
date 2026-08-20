@@ -1,6 +1,6 @@
 # Adding a locale
 
-Add the code to the `locales:` list in `firefox/config.yaml`:
+Add the code to the `locales:` list in [`../config.yaml`](../config.yaml):
 
 ```yaml
 locales:
