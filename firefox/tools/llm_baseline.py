@@ -97,7 +97,8 @@ You have read-only tools. Read the files, do not try to change anything.
 
 def _rules(project, locale: str) -> str:
     """Reuse the incremental prompt's rules so both paths judge alike."""
-    text = project.prompt("incremental_review.md")
+    name = "variant_review.md" if project.is_variant(locale) else "incremental_review.md"
+    text = project.prompt(name)
     start = text.index("## What to report")
     end = text.index("## Categories")
     body = text[start:end]
@@ -105,7 +106,12 @@ def _rules(project, locale: str) -> str:
         "_No conventions recorded yet for this locale. Infer them by counting "
         "what the tree does, and do not impose conventions from outside it._"
     )
-    return body.format(language=language_of(locale), locale=locale, conventions=conventions)
+    return body.format(
+        language=language_of(locale),
+        locale=locale,
+        source_locale=project.variant_of(locale) or "en-US",
+        conventions=conventions,
+    )
 
 
 def partition_files(l10n_root: str, extensions=(".ftl", ".properties", ".ini")) -> dict[str, list[str]]:

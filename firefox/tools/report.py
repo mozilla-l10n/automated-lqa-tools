@@ -68,6 +68,7 @@ def _health_table(h, counts) -> str:
         "selectors": "Plural / select selector mismatches",
         "term_params": "Term parameter mismatches",
         "plurals": "Plural variants (dead or missing forms)",
+        "variant_spelling": "Source-language spellings left unchanged",
         "accesskey": "Access keys not in their label",
         "markup": "Markup & `data-l10n-name` defects",
         "typography": "Typography deviations from this locale's own norm",

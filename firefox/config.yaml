@@ -33,6 +33,15 @@ llm:
   baseline_model: claude-opus-5
   baseline_timeout_seconds: 3600
 
+# Locales that are variants of the source language rather than
+# translations of it. Most of their strings are identical to en-US and
+# correct, so the usual "identical means untranslated" rule is inverted:
+# identical strings are reviewed rather than skipped, and the interesting
+# defect is a string that failed to diverge. See tools/variants.py.
+variants:
+  en-GB: en-US
+  en-CA: en-US
+
 # Locales checked by this project. Adding a code here triggers a full
 # from-scratch baseline on the next run (see docs/adding-a-locale.md).
 locales:
@@ -51,6 +60,8 @@ locales:
   - sl
   - tr
   - zh-CN
+  - en-GB
+  - en-CA
 
 # Deterministic checks that are meaningless for some locales or paths.
 check_overrides:

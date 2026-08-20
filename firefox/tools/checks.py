@@ -40,6 +40,7 @@ from moz.l10n.model import (
 from moz.l10n.resource import parse_resource
 
 import conventions
+import variants
 from findings import Finding
 from plurals import (
     categories_for,
@@ -234,7 +235,7 @@ def _mk(locale, msg, category, check, summary, current="", suggest="", rationale
 
 # --- individual checks ---------------------------------------------------
 
-def check_completeness(project, l10n_root, source_root, l10n, source) -> Health:
+def check_completeness(project, locale, l10n_root, source_root, l10n, source) -> Health:
     """Missing / obsolete strings and whole files, plus a syntax pass."""
     h = Health()
     h.strings = len(l10n)
@@ -261,11 +262,14 @@ def check_completeness(project, l10n_root, source_root, l10n, source) -> Health:
         if src is None:
             continue
         by_file.setdefault(key[0], []).append(msg.text().strip() == src.text().strip())
-    for file, flags in by_file.items():
-        if len(flags) >= 3 and all(flags):
-            if project.check_skips_path("untranslated", file):
-                continue
-            h.untranslated_files.append(file)
+    # For a variant of the source language a file identical to en-US is the
+    # normal case, not a signal, so the whole notion is skipped.
+    if not project.is_variant(locale):
+        for file, flags in by_file.items():
+            if len(flags) >= 3 and all(flags):
+                if project.check_skips_path("untranslated", file):
+                    continue
+                h.untranslated_files.append(file)
     h.untranslated_files.sort()
 
     for rel in sorted(l_files):
@@ -566,12 +570,19 @@ def check_markup(locale, l10n, source) -> list[Finding]:
     return out
 
 
-def check_typography(project, locale, l10n, counts) -> list[Finding]:
+def check_typography(project, locale, l10n, counts, source=None) -> list[Finding]:
     """Deviations from the locale's *own* majority convention.
 
     Nothing here is language knowledge -- every rule is "the locale does X
     almost everywhere, and these strings do Y instead". Groups that came out
     mixed produce no findings at all.
+
+    A deviation the en-US string shares is never reported. Developer console
+    messages in `dom/chrome/*.properties` are full of straight quotes and
+    apostrophes that the locale inherited verbatim, and blaming the locale
+    for its source's typography is exactly the mistake the manual runbook
+    warns about. It matters most for a variant of the source language, where
+    almost every string is inherited.
     """
     out = []
     ellipsis = conventions.preferred(counts, "ellipsis")
@@ -582,14 +593,17 @@ def check_typography(project, locale, l10n, counts) -> list[Finding]:
     straight_apostrophe = re.compile(r"(?<=\w)'(?=\w)")
     straight_pair = re.compile(r'"[^"]{1,200}?"')
 
+    source = source or {}
     for key, msg in l10n.items():
         if project.check_skips_path("typography", msg.file):
             continue
+        src = source.get(key)
         for prop, value in msg.props.items():
             if prop in ("style", "accesskey") or not value:
                 continue
             text = conventions.clean(value)
-            if ellipsis == "char" and ascii_ellipsis.search(text):
+            src_text = conventions.clean((src.props.get(prop, "") if src else ""))
+            if ellipsis == "char" and ascii_ellipsis.search(text) and not ascii_ellipsis.search(src_text):
                 out.append(_mk(
                     locale, msg, "E", "typography",
                     f"`{msg.id}` uses three dots where this locale uses …",
@@ -598,7 +612,7 @@ def check_typography(project, locale, l10n, counts) -> list[Finding]:
                               f"against {counts['ellipsis']['ascii']} ASCII runs.",
                     impact=4,
                 ))
-            elif ellipsis == "ascii" and "…" in text:
+            elif ellipsis == "ascii" and "…" in text and "…" not in src_text:
                 out.append(_mk(
                     locale, msg, "E", "typography",
                     f"`{msg.id}` uses … where this locale uses three dots",
@@ -607,7 +621,8 @@ def check_typography(project, locale, l10n, counts) -> list[Finding]:
                               f"against {counts['ellipsis']['char']} ….",
                     impact=4,
                 ))
-            if quotes and quotes != "straight-double" and straight_pair.search(text):
+            if (quotes and quotes != "straight-double" and straight_pair.search(text)
+                    and not straight_pair.search(src_text)):
                 out.append(_mk(
                     locale, msg, "E", "typography",
                     f"`{msg.id}` uses straight double quotes",
@@ -616,7 +631,8 @@ def check_typography(project, locale, l10n, counts) -> list[Finding]:
                               f"({counts['quotes'].get(quotes)} occurrences).",
                     impact=4,
                 ))
-            if apostrophe == "typographic" and straight_apostrophe.search(text):
+            if (apostrophe == "typographic" and straight_apostrophe.search(text)
+                    and not straight_apostrophe.search(src_text)):
                 out.append(_mk(
                     locale, msg, "E", "typography",
                     f"`{msg.id}` uses a straight apostrophe",
@@ -728,16 +744,50 @@ def check_plurals(locale, l10n, source) -> list[Finding]:
     return out
 
 
+def check_variant_spelling(project, locale, l10n, source) -> list[Finding]:
+    """Strings a language variant left identical when they should not be.
+
+    Only meaningful for a variant of the source language, and silent for
+    every other locale. The substitutions are learned from the locale's own
+    divergences rather than from a word list, so nothing here encodes an
+    opinion about British versus American English -- it reports only where
+    the locale contradicts itself.
+    """
+    if not project.is_variant(locale):
+        return []
+    rules = variants.learn(l10n, source)
+    if not rules:
+        return []
+    out = []
+    for key, word, replacement in variants.unapplied(l10n, source, rules):
+        msg = l10n[key]
+        _, applied, retained = rules[word]
+        out.append(_mk(
+            locale, msg, "C", "variant_spelling",
+            f"`{msg.id}` still uses the en-US form \u201c{word}\u201d",
+            current=msg.text(),
+            suggest=replacement,
+            rationale=(
+                f"This locale writes \u201c{replacement}\u201d for \u201c{word}\u201d in "
+                f"{applied} other strings and keeps \u201c{word}\u201d in {retained}. "
+                "This string is byte-identical to en-US, so the substitution looks "
+                "simply to have been missed."
+            ),
+            impact=3,
+        ))
+    return out
+
+
 # --- entry point ---------------------------------------------------------
 
 ALL_CHECKS = (
     "variables", "selectors", "term_params", "plurals", "accesskey", "markup",
-    "typography",
+    "typography", "variant_spelling",
 )
 
 
 def run_all(project, locale, l10n_root, source_root, l10n, source, counts) -> tuple[Health, list[Finding]]:
-    health = check_completeness(project, l10n_root, source_root, l10n, source)
+    health = check_completeness(project, locale, l10n_root, source_root, l10n, source)
     out: list[Finding] = []
     for name in ALL_CHECKS:
         if project.check_skipped(name, locale):
@@ -752,12 +802,14 @@ def run_all(project, locale, l10n_root, source_root, l10n, source, counts) -> tu
             found = check_term_params(locale, l10n, source)
         elif name == "plurals":
             found = check_plurals(locale, l10n, source)
+        elif name == "variant_spelling":
+            found = check_variant_spelling(project, locale, l10n, source)
         elif name == "accesskey":
             found = check_accesskeys(locale, l10n, source)
         elif name == "markup":
             found = check_markup(locale, l10n, source)
         else:
-            found = check_typography(project, locale, l10n, counts)
+            found = check_typography(project, locale, l10n, counts, source)
         health.counts[name] = len(found)
         out.extend(found)
     return health, out

@@ -50,12 +50,17 @@ def language_of(locale: str) -> str:
     return LANGUAGE_NAMES.get(locale, locale)
 
 
-def render_batch(keys, l10n, source) -> str:
+def render_batch(keys, l10n, source, keep_identical: bool = False) -> str:
     """Format one batch of strings for review.
 
-    Untranslated strings are dropped here rather than in the prompt: an
-    identical value is a completeness gap, and paying tokens to have the
-    model rediscover that on every run is waste.
+    Strings identical to the source are normally dropped here rather than in
+    the prompt: an identical value is a completeness gap, and having the
+    model rediscover that on every run is pointless.
+
+    For a variant of the source language that rule inverts. Most of en-GB is
+    identical to en-US and correct, and the defect worth finding is a string
+    that should have diverged and did not -- so ``keep_identical`` keeps
+    them in.
     """
     blocks = []
     for key in keys:
@@ -63,17 +68,20 @@ def render_batch(keys, l10n, source) -> str:
         if msg is None:
             continue
         src = source.get(key)
-        if src is not None and msg.text().strip() == src.text().strip():
+        identical = src is not None and msg.text().strip() == src.text().strip()
+        if identical and not keep_identical:
             continue
         block = [f"### {msg.id}", f"file: {msg.file}"]
         if msg.comment:
             comment = "\n".join(f"  {line}" for line in msg.comment.splitlines())
             block.append(f"developer comment:\n{comment}")
         if src is not None:
-            block.append(f"en-US: {src.text()}")
+            block.append(f"source: {src.text()}")
         else:
-            block.append("en-US: (no source string; locale-only)")
+            block.append("source: (no source string; locale-only)")
         block.append(f"target: {msg.text()}")
+        if identical:
+            block.append("note: identical to the source string")
         blocks.append("\n".join(block))
     return "\n\n".join(blocks)
 
@@ -106,6 +114,21 @@ def _call(client, model, system, batch, tool, max_tokens, attempts=4):
     raise RuntimeError(f"LLM call failed after {attempts} attempts: {last}")
 
 
+def system_prompt(project, locale: str, filename: str | None = None) -> str:
+    """The review instructions for a locale, variant-aware."""
+    source_locale = project.variant_of(locale)
+    name = filename or (
+        "variant_review.md" if source_locale else "incremental_review.md"
+    )
+    return project.prompt(name).format(
+        language=language_of(locale),
+        locale=locale,
+        source_locale=source_locale or "en-US",
+        conventions=project.conventions(locale).strip()
+        or "_No conventions recorded yet for this locale._",
+    )
+
+
 def review(project, locale, keys, l10n, source, log=print) -> tuple[list[Finding], Usage]:
     """Review the given strings and return the findings they produced."""
     usage = Usage()
@@ -114,12 +137,8 @@ def review(project, locale, keys, l10n, source, log=print) -> tuple[list[Finding
 
     cfg = project.llm
     tool = _schema(project)
-    system = project.prompt("incremental_review.md").format(
-        language=language_of(locale),
-        locale=locale,
-        conventions=project.conventions(locale).strip()
-        or "_No conventions recorded yet for this locale._",
-    )
+    system = system_prompt(project, locale)
+    keep_identical = project.is_variant(locale)
     if not os.environ.get("ANTHROPIC_API_KEY"):
         raise RuntimeError(
             "the incremental reviewer needs ANTHROPIC_API_KEY. Export it, or "
@@ -135,7 +154,7 @@ def review(project, locale, keys, l10n, source, log=print) -> tuple[list[Finding
     batches = [keys[i : i + batch_size] for i in range(0, len(keys), batch_size)]
     out: list[Finding] = []
     for index, batch_keys in enumerate(batches, 1):
-        body = render_batch(batch_keys, l10n, source)
+        body = render_batch(batch_keys, l10n, source, keep_identical)
         if not body.strip():
             continue
         log(f"    batch {index}/{len(batches)} ({len(batch_keys)} strings)")

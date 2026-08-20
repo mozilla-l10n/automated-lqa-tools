@@ -42,6 +42,13 @@ class Project:
     def locale_subpath(self, locale: str) -> str:
         return self.data["repos"]["l10n"]["locale_path"].format(locale=locale)
 
+    def variant_of(self, locale: str) -> str | None:
+        """The source locale this one is a variant of, if any."""
+        return (self.data.get("variants") or {}).get(locale)
+
+    def is_variant(self, locale: str) -> bool:
+        return self.variant_of(locale) is not None
+
     def check_skipped(self, check: str, locale: str) -> bool:
         ov = self.data.get("check_overrides", {}).get(check, {})
         return locale in ov.get("skip_locales", [])

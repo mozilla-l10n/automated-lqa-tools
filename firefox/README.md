@@ -99,6 +99,15 @@ attribute of that id, so a locale using it in `.message` where en-US used it
 in `.heading` is perfectly fine. Comparing attribute-to-attribute reports
 that as an undefined variable.
 
+**A variant of the source language inverts the core assumption.** `en-GB`
+and `en-CA` are 93% and 97% identical to en-US and correct, so an identical
+string is the normal case rather than an untranslated one, and the defect
+worth finding is a string that should have diverged and did not. Declaring
+them under `variants:` in `config.yaml` switches the reviewer to a
+variant-specific prompt, stops "identical to en-US" being reported, and
+enables a spelling check whose substitution map is learned from the locale's
+own divergences. See [`docs/adding-a-locale.md`](docs/adding-a-locale.md).
+
 **Plural completeness is not a CLDR question.** CLDR is used only to decide
 whether a variant is *reachable* — Japanese has no `one` category, so a
 `[one]` variant there is dead text. It is deliberately not used to decide a

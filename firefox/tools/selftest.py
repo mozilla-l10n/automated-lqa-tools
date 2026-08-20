@@ -93,6 +93,7 @@ MUST_BE_SILENT = [
     ("it", "selectors", "Italian has no selector mismatches"),
     ("sl", "variables", "Slovenian sklon case params are not mismatches"),
     ("sl", "selectors", "Slovenian sklon case params are not mismatches"),
+    ("it", "variant_spelling", "the variant check is silent for a translation"),
     ("it", "plurals", "Italian mirrors en-US plurals correctly"),
     ("nl", "plurals", "Dutch mirrors en-US plurals correctly"),
     ("es-MX", "plurals", "Mexican Spanish plurals are correct"),
@@ -117,8 +118,10 @@ def run(l10n_dir, source_dir, project) -> int:
     needed = sorted(
         {loc for loc, *_ in MUST_FIND + MUST_BE_SILENT + FIXED_UPSTREAM + NOT_A_DEFECT}
         | {loc for loc, *_ in HEALTH_BOUNDS}
+        | {loc for loc in ("en-GB", "en-CA") if loc in project.locales}
     )
     results = {}
+    trees = {}
     for locale in needed:
         root = os.path.join(l10n_dir, project.locale_subpath(locale))
         tree = parse.parse_tree(root, project.extensions, project.exclude)
@@ -127,6 +130,7 @@ def run(l10n_dir, source_dir, project) -> int:
             project, locale, root, source_dir, tree, src, counts
         )
         results[locale] = (health, found, counts)
+        trees[locale] = tree
 
     passed = failed = 0
 
@@ -180,6 +184,39 @@ def run(l10n_dir, source_dir, project) -> int:
           "a punctuation-only repair is detected as fixed")
     check(f.identity() == Finding(**{**f.__dict__, "fid": ""}).identity(),
           "identity is stable across reconstruction")
+
+    print("\nLanguage variants")
+    import llm_incremental as _li
+    import variants as _v
+    src_tree = src
+    for loc in ("en-GB", "en-CA"):
+        if loc not in project.locales:
+            continue
+        health, found, _ = results[loc]
+        check(project.is_variant(loc), f"{loc} is configured as a variant")
+        check(not health.untranslated_files,
+              f"{loc}: files identical to the source are not reported")
+        spelling = [f for f in found if f.check == "variant_spelling"]
+        check(bool(spelling), f"{loc}: unadapted source spellings are found ({len(spelling)})")
+        prompt = _li.system_prompt(project, loc)
+        check("variant of" in prompt, f"{loc}: the variant prompt is selected")
+    check(not project.is_variant("it"), "an ordinary locale is not a variant")
+    check("variant of" not in _li.system_prompt(project, "it"),
+          "an ordinary locale gets the ordinary prompt")
+
+    if "en-GB" in project.locales:
+        gb = trees["en-GB"]
+        rules = _v.learn(gb, src_tree)
+        check(rules.get("color", ("",))[0] == "colour",
+              "the colour rule is learned from the corpus, not hardcoded")
+        check("forward" not in rules,
+              "a contextual swap (forward/forwards) is not treated as a rule")
+        check(_v.in_code_token("color", "Animations of \u2018background-color\u2019 cannot"),
+              "a word inside a hyphenated identifier is left alone")
+        check(_v.in_code_token("color", 'MathML attributes \u201cbackground\u201d, \u201ccolor\u201d'),
+              "a word quoted as a literal is left alone")
+        check(not _v.in_code_token("colour", "Choose a colour for the theme"),
+              "a word used as prose is not mistaken for code")
 
     print("\nFixed versus withdrawn")
 
