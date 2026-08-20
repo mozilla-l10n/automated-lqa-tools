@@ -141,9 +141,10 @@ def review(project, locale, keys, l10n, source, log=print) -> tuple[list[Finding
     keep_identical = project.is_variant(locale)
     if not os.environ.get("ANTHROPIC_API_KEY"):
         raise RuntimeError(
-            "the incremental reviewer needs ANTHROPIC_API_KEY. Export it, or "
-            "use --no-llm for deterministic checks only, or --mode baseline "
-            "which uses the `claude` CLI's own credentials instead."
+            "reviewing through the API needs ANTHROPIC_API_KEY. Export it, or "
+            "use --no-llm for deterministic checks only, or run a from-scratch "
+            "review with --baseline-strategy agent, which drives the `claude` "
+            "CLI and uses its credentials instead."
         )
     client = anthropic.Anthropic()
     batch_size = int(cfg.get("batch_size", 40))

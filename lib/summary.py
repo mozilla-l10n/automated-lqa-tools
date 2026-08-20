@@ -52,7 +52,7 @@ def render(project) -> str:
     pct = f"{100 * total_fixed // total_all}%" if total_all else "—"
 
     out = [
-        f"# Firefox l10n QA — all locales",
+        f"# {project.data.get('name', project.name)} — l10n QA",
         "",
         f"- **Generated:** {datetime.date.today().isoformat()}",
         f"- **Locales tracked:** {len(project.locales)} "
@@ -88,14 +88,14 @@ def render(project) -> str:
         "",
         "## Adding a locale",
         "",
-        "Add its code to `firefox/config.yaml` and run the workflow. The first "
+        f"Add its code to `{project.name}/config.yaml` and run the workflow. The first "
         "run has no stored state, so it takes the from-scratch baseline path "
         "over the whole tree; every run after that reviews only what changed.",
         "",
         "## Flagging a false positive",
         "",
-        "Write a rule in `firefox/locales/<code>/suppressions.yaml`, or better, "
-        "a sentence in `firefox/locales/<code>/conventions.md`. Both are "
+        f"Write a rule in `{project.name}/locales/<code>/suppressions.yaml`, or "
+        f"better, a sentence in `{project.name}/locales/<code>/conventions.md`. Both are "
         "re-applied to the entire backlog on the next run, so a rule added "
         "today retires findings raised months ago. See `docs/suppressions.md`.",
         "",

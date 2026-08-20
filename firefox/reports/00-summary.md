@@ -1,4 +1,4 @@
-# Firefox l10n QA — all locales
+# Firefox (desktop + shared toolkit/dom strings) — l10n QA
 
 - **Generated:** 2026-08-20
 - **Locales tracked:** 20 (20 with recorded state)

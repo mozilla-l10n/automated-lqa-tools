@@ -3,12 +3,17 @@
 Automation for localization quality: LLM-assisted review with per-project
 state, so a run only looks at what changed since the last one.
 
-Each automation lives in its own top-level directory and is self-contained —
-its own configuration, prompts, tooling, state and reports.
+[`lib/`](lib/) holds the pipeline. Each project is a directory beside it
+holding only what differs: its configuration, prompts, docs, locale
+instructions, state, reports, and the checks its file format needs.
 
 | Project | What it covers | |
 |---|---|---|
 | [`firefox/`](firefox/) | Firefox desktop, plus shared `toolkit` and `dom` strings | [README](firefox/README.md) · [reports](firefox/reports/00-summary.md) |
+| [`android/`](android/) | Firefox for Android, Focus, and Android Components | [README](android/README.md) · [reports](android/reports/00-summary.md) |
+
+Each has its own workflow and opens its own pull request, so a reviewer only
+sees the project they work on.
 
 ## The shape of a run
 
@@ -59,20 +64,27 @@ project's self-test, commit. A run never improvises its own logic.
 
 ## Adding another automation
 
-Create a sibling directory and keep it self-contained, the way `firefox/`
-is: `config.yaml`, `prompts/`, `tools/`, `docs/`, plus the `locales/`,
-`state/` and `reports/` trees the pipeline maintains. Give it its own
-workflow in `.github/workflows/`, and its own README describing what it
-covers and how to run it.
+Create a sibling directory with `config.yaml`, `prompts/`, `tools/checks.py`
+and `docs/`; the pipeline maintains `locales/`, `state/` and `reports/`.
+Give it its own workflow in `.github/workflows/` and its own README.
 
-There is deliberately **no shared library yet**. Everything currently lives
-under `firefox/`, because factoring a framework out of a single example
-tends to produce the wrong abstraction. The parts most likely to be worth
-extracting when a second project arrives are the snapshot and delta engine,
-the finding lifecycle, the suppression layer, and the report renderer —
-`config.py` already takes the project directory as a parameter, so that is
-the natural seam. Copy first; extract once the duplication shows what is
-actually common.
+`config.yaml` declares the three things that vary:
+
+- **`layout`** — how localized files relate to source files. `mirrored` is
+  two repositories with identical relative paths (Firefox); `android` is one
+  repository with compare-locales TOML mappings. A new shape means a loader
+  in [`lib/layout.py`](lib/layout.py), not changes to the pipeline.
+- **`checks`** — which checks run, in report order. Shared ones come from
+  `lib/common_checks.py`; the project's `tools/checks.py` composes them with
+  its own and an unknown name fails loudly.
+- **`baseline`** — `agent` hands whole files to a subagent, which catches
+  drift across a surface; `batched` sends strings through the API, which is
+  what you need when a single file is too large for one agent to read.
+
+The library was extracted when the second project arrived rather than
+designed up front, so its seams follow the differences that actually turned
+up. Keep doing that: copy, then extract once duplication shows what is
+genuinely common.
 
 ## Setup
 

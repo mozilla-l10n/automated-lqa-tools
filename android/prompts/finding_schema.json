@@ -1,0 +1,59 @@
+{
+  "name": "report_findings",
+  "description": "Report every concrete localization defect found in this batch. Call exactly once, with an empty list if the batch is clean.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "findings": {
+        "type": "array",
+        "description": "One entry per defect. Empty when nothing is wrong.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "string_id": {
+              "type": "string",
+              "description": "The exact string id as given in the batch, including any attribute suffix."
+            },
+            "file": {
+              "type": "string",
+              "description": "The exact file path as given in the batch."
+            },
+            "category": {
+              "type": "string",
+              "enum": ["A", "B", "C", "D", "E"],
+              "description": "A functional/markup, B mistranslation/wrong name/brand, C grammar/spelling, D terminology/register, E typography."
+            },
+            "impact": {
+              "type": "integer",
+              "enum": [1, 2, 3, 4],
+              "description": "1 broken output, 2 wrong content, 3 degraded language, 4 cosmetic."
+            },
+            "summary": {
+              "type": "string",
+              "description": "One sentence stating the defect. No preamble."
+            },
+            "current": {
+              "type": "string",
+              "description": "The exact defective fragment copied verbatim from the localized string. Used to verify later whether the defect is gone, so it must appear literally in the current text."
+            },
+            "suggest": {
+              "type": "string",
+              "description": "The corrected text for that fragment."
+            },
+            "rationale": {
+              "type": "string",
+              "description": "Why it is wrong, referring to the en-US meaning or the developer comment."
+            },
+            "confidence": {
+              "type": "string",
+              "enum": ["high", "medium"],
+              "description": "Use medium only if you would still stand behind reporting it; anything lower should not be reported at all."
+            }
+          },
+          "required": ["string_id", "file", "category", "impact", "summary", "current", "suggest", "rationale", "confidence"]
+        }
+      }
+    },
+    "required": ["findings"]
+  }
+}

@@ -57,7 +57,7 @@ from plurals import (
     is_numeric_key,
     plural_selectors,
 )
-from parse import is_excluded, list_files
+from parse import is_excluded  # noqa: F401
 
 
 @dataclass
@@ -160,6 +160,54 @@ def _selectors(msg) -> tuple[str, ...]:
     return tuple(out)
 
 
+_TAG = re.compile(r"<\s*(/?)\s*([a-zA-Z][a-zA-Z0-9]*)([^>]*?)(/?)\s*>")
+_MALFORMED = re.compile(r"<\s*/\s*([a-zA-Z][a-zA-Z0-9]*)\s+>")
+_DLN = re.compile(r"data-l10n-name\s*=\s*[\"']([^\"']+)[\"']")
+
+# Elements that never carry a closing tag.
+VOID_TAGS = {"img", "br", "hr", "input", "wbr"}
+
+# Only these are treated as markup. Firefox strings are full of angle-bracket
+# *text* that is not markup at all -- `<anonymous>`, `<inline style sheet>`,
+# `<unavailable>` in the legacy .properties files, all of which a bare
+# ``<\w+>`` regex reads as an unclosed tag. moz.l10n does not help here: it
+# parses Fluent HTML as plain text, so there is no node type to key off.
+KNOWN_TAGS = {
+    "a", "abbr", "b", "br", "button", "code", "div", "em", "h1", "h2", "h3",
+    "h4", "h5", "h6", "hr", "i", "img", "input", "label", "li", "ol", "p",
+    "small", "span", "strong", "sub", "sup", "u", "ul", "wbr",
+}
+
+
+def _tags(text: str) -> list[tuple[str, str]]:
+    """(closing?, name) for every real tag, skipping self-closing and void."""
+    out = []
+    for m in _TAG.finditer(text):
+        closing, name, _attrs, self_closing = m.groups()
+        name = name.lower()
+        if name not in KNOWN_TAGS:
+            continue
+        if self_closing or (not closing and name in VOID_TAGS):
+            continue
+        out.append((closing, name))
+    return out
+
+
+def _has_markup(text: str) -> bool:
+    return any(m.group(2).lower() in KNOWN_TAGS for m in _TAG.finditer(text))
+
+
+def _unbalanced(text: str) -> bool:
+    opened: list[str] = []
+    for closing, name in _tags(text):
+        if closing:
+            if not opened or opened.pop() != name:
+                return True
+        else:
+            opened.append(name)
+    return bool(opened)
+
+
 def _mk(locale, msg, category, check, summary, current="", suggest="", rationale="", impact=0):
     return Finding(
         locale=locale,
@@ -178,13 +226,14 @@ def _mk(locale, msg, category, check, summary, current="", suggest="", rationale
 
 # --- individual checks ---------------------------------------------------
 
-def check_completeness(project, locale, l10n_root, source_root, l10n, source) -> Health:
+def check_completeness(project, locale, trees) -> Health:
     """Missing / obsolete strings and whole files, plus a syntax pass."""
+    l10n, source = trees.l10n, trees.source
     h = Health()
     h.strings = len(l10n)
 
-    l_files = list_files(l10n_root, project.extensions, project.exclude)
-    s_files = list_files(source_root, project.extensions, project.exclude)
+    l_files = trees.l10n_files
+    s_files = trees.source_files
     h.files = len(l_files)
     h.missing_files = sorted(s_files - l_files)
     h.locale_only_files = sorted(l_files - s_files)
@@ -216,7 +265,7 @@ def check_completeness(project, locale, l10n_root, source_root, l10n, source) ->
     h.untranslated_files.sort()
 
     for rel in sorted(l_files):
-        path = os.path.join(l10n_root, rel)
+        path = os.path.join(trees.root, trees.locale_paths.get(rel, rel))
         try:
             parse_resource(path)
         except Exception as exc:  # noqa: BLE001 - we want the message verbatim
@@ -554,6 +603,62 @@ def check_variant_spelling(project, locale, l10n, source) -> list[Finding]:
     return out
 
 
+def check_markup(locale, l10n, source) -> list[Finding]:
+    """Broken tags, unbalanced tags, and dropped ``data-l10n-name`` hooks.
+
+    Everything is judged against the en-US string: a locale is only expected
+    to carry markup where the source has it, and only the same
+    ``data-l10n-name`` hooks, because those are what the code matches on.
+    """
+    out = []
+    for key, msg in l10n.items():
+        src = source.get(key)
+        if src is None:
+            continue
+        for prop, value in msg.props.items():
+            if prop in ("style", "accesskey") or not value:
+                continue
+            source_text = src.props.get(prop)
+            if source_text is None or not _has_markup(source_text):
+                continue
+
+            bad = _MALFORMED.search(value)
+            if bad and bad.group(1).lower() in KNOWN_TAGS:
+                out.append(_mk(
+                    locale, msg, "A", "markup",
+                    f"Malformed closing tag `{bad.group(0)}` in `{msg.id}`"
+                    + (f" (`.{prop}`)" if prop else ""),
+                    current=value, suggest=source_text,
+                    rationale="Whitespace inside a closing tag makes it render as literal text.",
+                    impact=1,
+                ))
+
+            if _unbalanced(value) and not _unbalanced(source_text):
+                out.append(_mk(
+                    locale, msg, "A", "markup",
+                    f"Unbalanced markup in `{msg.id}`" + (f" (`.{prop}`)" if prop else ""),
+                    current=value, suggest=source_text,
+                    rationale="Tags must open and close in the same order as en-US.",
+                    impact=1,
+                ))
+
+            want = set(_DLN.findall(source_text))
+            got = set(_DLN.findall(value))
+            if want and want != got:
+                out.append(_mk(
+                    locale, msg, "A", "markup",
+                    f"`data-l10n-name` mismatch in `{msg.id}`: en-US has "
+                    f"{sorted(want)}, the locale has {sorted(got) or 'none'}",
+                    current=value, suggest=source_text,
+                    rationale=(
+                        "The element is matched by its data-l10n-name; a missing or "
+                        "renamed one drops the link, icon or button entirely."
+                    ),
+                    impact=1,
+                ))
+    return out
+
+
 # --- registry ------------------------------------------------------------
 
 # Every check has the same shape: it takes a Context and returns findings.
@@ -567,12 +672,14 @@ class Context:
     source: dict
     counts: dict
     health: "Health"
+    trees: object = None
 
 
 CHECKS = {
     "variables": lambda c: check_variables(c.locale, c.l10n, c.source),
     "selectors": lambda c: check_selectors(c.locale, c.l10n, c.source),
     "plurals": lambda c: check_plurals(c.locale, c.l10n, c.source),
+    "markup": lambda c: check_markup(c.locale, c.l10n, c.source),
     "typography": lambda c: check_typography(
         c.project, c.locale, c.l10n, c.counts, c.source
     ),
@@ -582,11 +689,11 @@ CHECKS = {
 }
 
 
-def run_all(project, locale, l10n_root, source_root, l10n, source, counts, registry=None):
+def run_all(project, locale, trees, counts, registry=None):
     """Run the checks this project declares, in the order it declares them."""
     registry = registry or CHECKS
-    health = check_completeness(project, locale, l10n_root, source_root, l10n, source)
-    ctx = Context(project, locale, l10n, source, counts, health)
+    health = check_completeness(project, locale, trees)
+    ctx = Context(project, locale, trees.l10n, trees.source, counts, health, trees)
 
     names = project.checks or list(registry)
     unknown = [n for n in names if n not in registry]

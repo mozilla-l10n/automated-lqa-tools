@@ -37,10 +37,14 @@ import tempfile
 from findings import Finding
 from llm_incremental import language_of
 
-# The eight-way split the manual reviews used. It balances file counts and
-# keeps each partition thematically coherent, which matters because a
-# reviewer spots terminology drift only within what it can see at once.
-PARTITIONS = [
+# A project declares its own split under `partitions:` in config.yaml. The
+# point is thematic coherence: a reviewer spots terminology drift only
+# within what it can see at once, so a partition should be one surface, not
+# an arbitrary slice.
+#
+# This is the eight-way split the manual Firefox reviews used, kept as the
+# default for a project that declares none.
+DEFAULT_PARTITIONS = [
     ("preferences", ["browser/browser/preferences/"]),
     ("browser-a-l", ["browser/browser/*.ftl:a-l"]),
     ("browser-m-z", ["browser/browser/*.ftl:m-z"]),
@@ -114,22 +118,27 @@ def _rules(project, locale: str) -> str:
     )
 
 
-def partition_files(l10n_root: str, extensions=(".ftl", ".properties", ".ini")) -> dict[str, list[str]]:
+def partition_files(l10n_root: str, extensions=(".ftl", ".properties", ".ini"),
+                    files=None, partitions=None) -> dict[str, list[str]]:
     """Assign every file in the tree to exactly one partition.
 
     Coverage is the point: a baseline that quietly skips a directory looks
     like a clean locale. Each file goes to the first partition that claims
     it, and whatever is left over goes to ``other``.
     """
-    everything = []
-    for dirpath, dirnames, filenames in os.walk(l10n_root):
-        dirnames[:] = [d for d in dirnames if d != ".git"]
-        for fn in filenames:
-            if fn.endswith(tuple(extensions)):
-                everything.append(os.path.relpath(os.path.join(dirpath, fn), l10n_root))
-    everything.sort()
+    if files is not None:
+        everything = sorted(files)
+    else:
+        everything = []
+        for dirpath, dirnames, filenames in os.walk(l10n_root):
+            dirnames[:] = [d for d in dirnames if d != ".git"]
+            for fn in filenames:
+                if fn.endswith(tuple(extensions)):
+                    everything.append(os.path.relpath(os.path.join(dirpath, fn), l10n_root))
+        everything.sort()
 
-    buckets: dict[str, list[str]] = {name: [] for name, _ in PARTITIONS}
+    partitions = partitions or DEFAULT_PARTITIONS
+    buckets: dict[str, list[str]] = {name: [] for name, _ in partitions}
     buckets[CATCHALL] = []
 
     def claims(patterns: list[str], rel: str) -> bool:
@@ -152,7 +161,7 @@ def partition_files(l10n_root: str, extensions=(".ftl", ".properties", ".ini")) 
         return False
 
     for rel in everything:
-        for name, patterns in PARTITIONS:
+        for name, patterns in partitions:
             if claims(patterns, rel):
                 buckets[name].append(rel)
                 break
@@ -270,7 +279,7 @@ def _claude_bin() -> str:
     return found
 
 
-def review(project, locale, l10n_root, source_root, l10n, only=None, log=print):
+def review(project, locale, l10n_root, source_root, l10n, trees=None, only=None, log=print):
     """Run every partition and return the findings.
 
     Also returns the partitions that produced nothing, so a caller can tell
@@ -278,7 +287,12 @@ def review(project, locale, l10n_root, source_root, l10n, only=None, log=print):
     """
     from llm_incremental import _to_finding
 
-    buckets = partition_files(l10n_root, tuple(project.extensions))
+    configured = project.data.get("partitions")
+    buckets = partition_files(
+        l10n_root, tuple(project.extensions),
+        files=sorted(trees.locale_paths.values()) if trees and trees.locale_paths else None,
+        partitions=[(p["name"], p["paths"]) for p in configured] if configured else None,
+    )
     if only:
         unknown = [name for name in only if name not in buckets]
         if unknown:

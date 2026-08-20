@@ -1,0 +1,78 @@
+# Android l10n QA configuration.
+project: android
+name: Firefox for Android, Focus, and the shared Android Components
+
+# Source and every locale live in one repository, side by side as
+# res/values/ and res/values-<android_locale>/. The mapping comes from
+# compare-locales TOML configs, which moz.l10n reads directly -- including
+# the Android locale codes, where pt-BR becomes pt-rBR.
+layout: android
+
+configs:
+  - firefox.toml   # android-components + fenix
+  - focus.toml     # focus-android
+
+repos:
+  l10n:
+    url: https://github.com/mozilla-l10n/android-l10n
+    branch: main
+    locale_path: ""
+  # The same repository is its own reference: res/values/ is the source.
+  source:
+    url: https://github.com/mozilla-l10n/android-l10n
+    branch: main
+    locale_path: ""
+
+extensions: [".xml"]
+
+exclude: []
+
+llm:
+  model: claude-opus-5
+  batch_size: 40
+  max_output_tokens: 16000
+  baseline_model: claude-opus-5
+  baseline_timeout_seconds: 3600
+
+# Checks this project runs, in report order. Shared ones come from
+# lib/common_checks.py; the rest are Android-specific and live in
+# tools/checks.py. There are no access keys and no Fluent terms here.
+checks:
+  # `variables` is deliberately absent: for Android it reports the same
+  # defects as `placeholders`, in terms of moz.l10n's derived argument names
+  # (`arg1`) rather than the `%1$s` the file actually contains. Verified to
+  # catch nothing extra across fourteen locales.
+  - placeholders
+  - selectors
+  - plurals
+  - escaping
+  - markup
+  - typography
+
+check_overrides: {}
+
+systemic_threshold: 25
+
+# A from-scratch review batches strings through the API rather than handing
+# whole files to an agent. Fenix keeps all 1,918 of its strings in one
+# 375 KB strings.xml, so source and target together are more than one agent
+# can read; and unlike Fluent, an Android string carries its context in its
+# own developer comment rather than in neighbouring entries, so little is
+# lost by reviewing them in batches.
+baseline: batched
+
+# Used when a from-scratch review is forced onto the agent strategy with
+# --baseline-strategy agent. One partition per app: a reviewer only spots
+# terminology drift within what it can see at once, and the three apps have
+# separate string sets and separate teams.
+partitions:
+  - name: android-components
+    paths: ["mozilla-mobile/android-components/"]
+  - name: fenix
+    paths: ["mozilla-mobile/fenix/"]
+  - name: focus
+    paths: ["mozilla-mobile/focus-android/"]
+
+# Start with Italian; add codes here to widen coverage.
+locales:
+  - it

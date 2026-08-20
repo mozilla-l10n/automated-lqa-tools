@@ -33,54 +33,6 @@ def _term_calls(msg) -> dict[str, frozenset]:
     return calls
 
 
-_TAG = re.compile(r"<\s*(/?)\s*([a-zA-Z][a-zA-Z0-9]*)([^>]*?)(/?)\s*>")
-_MALFORMED = re.compile(r"<\s*/\s*([a-zA-Z][a-zA-Z0-9]*)\s+>")
-_DLN = re.compile(r"data-l10n-name\s*=\s*[\"']([^\"']+)[\"']")
-
-# Elements that never carry a closing tag.
-VOID_TAGS = {"img", "br", "hr", "input", "wbr"}
-
-# Only these are treated as markup. Firefox strings are full of angle-bracket
-# *text* that is not markup at all -- `<anonymous>`, `<inline style sheet>`,
-# `<unavailable>` in the legacy .properties files, all of which a bare
-# ``<\w+>`` regex reads as an unclosed tag. moz.l10n does not help here: it
-# parses Fluent HTML as plain text, so there is no node type to key off.
-KNOWN_TAGS = {
-    "a", "abbr", "b", "br", "button", "code", "div", "em", "h1", "h2", "h3",
-    "h4", "h5", "h6", "hr", "i", "img", "input", "label", "li", "ol", "p",
-    "small", "span", "strong", "sub", "sup", "u", "ul", "wbr",
-}
-
-
-def _tags(text: str) -> list[tuple[str, str]]:
-    """(closing?, name) for every real tag, skipping self-closing and void."""
-    out = []
-    for m in _TAG.finditer(text):
-        closing, name, _attrs, self_closing = m.groups()
-        name = name.lower()
-        if name not in KNOWN_TAGS:
-            continue
-        if self_closing or (not closing and name in VOID_TAGS):
-            continue
-        out.append((closing, name))
-    return out
-
-
-def _has_markup(text: str) -> bool:
-    return any(m.group(2).lower() in KNOWN_TAGS for m in _TAG.finditer(text))
-
-
-def _unbalanced(text: str) -> bool:
-    opened: list[str] = []
-    for closing, name in _tags(text):
-        if closing:
-            if not opened or opened.pop() != name:
-                return True
-        else:
-            opened.append(name)
-    return bool(opened)
-
-
 def check_term_params(locale, l10n, source) -> list[Finding]:
     """A term called with parameters its definition does not select on."""
     out = []
@@ -192,73 +144,14 @@ def check_accesskeys(locale, l10n, source) -> list[Finding]:
     return out
 
 
-def check_markup(locale, l10n, source) -> list[Finding]:
-    """Broken tags, unbalanced tags, and dropped ``data-l10n-name`` hooks.
-
-    Everything is judged against the en-US string: a locale is only expected
-    to carry markup where the source has it, and only the same
-    ``data-l10n-name`` hooks, because those are what the code matches on.
-    """
-    out = []
-    for key, msg in l10n.items():
-        src = source.get(key)
-        if src is None:
-            continue
-        for prop, value in msg.props.items():
-            if prop in ("style", "accesskey") or not value:
-                continue
-            source_text = src.props.get(prop)
-            if source_text is None or not _has_markup(source_text):
-                continue
-
-            bad = _MALFORMED.search(value)
-            if bad and bad.group(1).lower() in KNOWN_TAGS:
-                out.append(_mk(
-                    locale, msg, "A", "markup",
-                    f"Malformed closing tag `{bad.group(0)}` in `{msg.id}`"
-                    + (f" (`.{prop}`)" if prop else ""),
-                    current=value, suggest=source_text,
-                    rationale="Whitespace inside a closing tag makes it render as literal text.",
-                    impact=1,
-                ))
-
-            if _unbalanced(value) and not _unbalanced(source_text):
-                out.append(_mk(
-                    locale, msg, "A", "markup",
-                    f"Unbalanced markup in `{msg.id}`" + (f" (`.{prop}`)" if prop else ""),
-                    current=value, suggest=source_text,
-                    rationale="Tags must open and close in the same order as en-US.",
-                    impact=1,
-                ))
-
-            want = set(_DLN.findall(source_text))
-            got = set(_DLN.findall(value))
-            if want and want != got:
-                out.append(_mk(
-                    locale, msg, "A", "markup",
-                    f"`data-l10n-name` mismatch in `{msg.id}`: en-US has "
-                    f"{sorted(want)}, the locale has {sorted(got) or 'none'}",
-                    current=value, suggest=source_text,
-                    rationale=(
-                        "The element is matched by its data-l10n-name; a missing or "
-                        "renamed one drops the link, icon or button entirely."
-                    ),
-                    impact=1,
-                ))
-    return out
-
-
 
 
 CHECKS = {
     **common.CHECKS,
     "term_params": lambda c: check_term_params(c.locale, c.l10n, c.source),
     "accesskey": lambda c: check_accesskeys(c.locale, c.l10n, c.source),
-    "markup": lambda c: check_markup(c.locale, c.l10n, c.source),
 }
 
 
-def run_all(project, locale, l10n_root, source_root, l10n, source, counts):
-    return common.run_all(
-        project, locale, l10n_root, source_root, l10n, source, counts, CHECKS
-    )
+def run_all(project, locale, trees, counts):
+    return common.run_all(project, locale, trees, counts, CHECKS)

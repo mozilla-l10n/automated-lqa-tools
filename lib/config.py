@@ -28,6 +28,7 @@ class Project:
     name: str
     root: str
     data: dict
+    _baseline_override: str = ""
 
     # --- config accessors -------------------------------------------------
     @property
@@ -81,6 +82,18 @@ class Project:
     @property
     def tools_dir(self) -> str:
         return os.path.join(self.root, "tools")
+
+    @property
+    def baseline_strategy(self) -> str:
+        """How a from-scratch review is run: "agent" or "batched".
+
+        "agent" gives a subagent whole files to read, which is what the
+        manual Firefox reviews did and what catches drift across a surface.
+        It needs files small enough to read: Android's fenix strings.xml is
+        375 KB, so source and target together exceed what one agent can
+        take in, and that project batches instead.
+        """
+        return self._baseline_override or self.data.get("baseline", "agent")
 
     @property
     def checks(self) -> list[str]:

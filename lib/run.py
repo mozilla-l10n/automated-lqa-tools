@@ -27,6 +27,7 @@ import traceback
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import config  # noqa: E402
+import layout  # noqa: E402
 import conventions  # noqa: E402
 import findings as findings_mod  # noqa: E402
 import parse  # noqa: E402
@@ -122,7 +123,7 @@ def build_systemic(project, locale, fresh, health):
     return systemic, remaining
 
 
-def process(project, locale, l10n_root, source_root, source, args, log) -> dict:
+def process(project, locale, l10n_root, source_root, args, log) -> dict:
     log(f"\n=== {locale}")
     meta = load_meta(project, locale)
     is_new = not meta
@@ -130,10 +131,11 @@ def process(project, locale, l10n_root, source_root, source, args, log) -> dict:
     if mode == "auto":
         mode = "baseline" if is_new else "incremental"
 
-    l10n = parse.parse_tree(l10n_root, project.extensions, project.exclude)
+    trees = layout.load(project, locale, l10n_root, source_root)
+    l10n, source = trees.l10n, trees.source
     if not l10n:
-        raise RuntimeError(f"no strings parsed under {l10n_root}")
-    log(f"  parsed {len(l10n):,} strings, mode={mode}")
+        raise RuntimeError(f"no strings parsed for {locale} under {l10n_root}")
+    log(f"  parsed {len(l10n):,} strings from {len(trees.l10n_files)} files, mode={mode}")
 
     counts_conv = conventions.detect(locale, l10n)
     current = snapshot.build(l10n, source)
@@ -143,9 +145,7 @@ def process(project, locale, l10n_root, source_root, source, args, log) -> dict:
 
     # --- deterministic layer: always over the whole tree ------------------
     checks = load_checks(project)
-    health, check_findings = checks.run_all(
-        project, locale, l10n_root, source_root, l10n, source, counts_conv
-    )
+    health, check_findings = checks.run_all(project, locale, trees, counts_conv)
     log(f"  checks: {health.counts}")
 
     # --- model layer ------------------------------------------------------
@@ -153,11 +153,23 @@ def process(project, locale, l10n_root, source_root, source, args, log) -> dict:
     reviewed = 0
     if args.no_llm:
         log("  model review skipped (--no-llm)")
+    elif mode == "baseline" and project.baseline_strategy == "batched":
+        import llm_incremental
+        keys = sorted(l10n)
+        if args.limit:
+            keys = keys[: args.limit]
+            log(f"  limited to {len(keys)} strings (--limit)")
+        log(f"  baseline review of all {len(keys):,} strings, in batches")
+        llm_findings, usage = llm_incremental.review(
+            project, locale, keys, l10n, source, log=log
+        )
+        log(f"  model usage: {usage}")
+        reviewed = len(keys)
     elif mode == "baseline":
         import llm_baseline
         log("  baseline review of the whole tree")
         llm_findings, empty = llm_baseline.review(
-            project, locale, l10n_root, source_root, l10n,
+            project, locale, l10n_root, source_root, l10n, trees,
             only=args.partitions, log=log,
         )
         reviewed = len(l10n)
@@ -228,6 +240,7 @@ def process(project, locale, l10n_root, source_root, source, args, log) -> dict:
         "suppressed": sum(1 for f in stored if f.status == "suppressed"),
     }
 
+    report.use_paths(trees.locale_paths)
     text = report.render(
         locale, new_meta, health, health.counts, stored, systemic,
         {
@@ -309,6 +322,10 @@ def main(argv=None) -> int:
     ap.add_argument("--mode", choices=("auto", "incremental", "baseline"), default="auto")
     ap.add_argument("--partitions", action="append",
                     help="baseline only: run just these partitions")
+    ap.add_argument("--baseline-strategy", choices=("agent", "batched"),
+                    help="override how a from-scratch review runs: `agent` "
+                         "hands whole files to the claude CLI, `batched` sends "
+                         "strings through the API")
     ap.add_argument("--limit", type=int, default=0,
                     help="review at most this many changed strings (for testing)")
     ap.add_argument("--no-llm", action="store_true",
@@ -321,6 +338,8 @@ def main(argv=None) -> int:
 
     log = Log(args.quiet)
     project = config.load(args.project)
+    if args.baseline_strategy:
+        project._baseline_override = args.baseline_strategy
     locales = args.locales or project.locales
     unknown = [loc for loc in locales if loc not in project.locales]
     if unknown:
@@ -341,12 +360,10 @@ def main(argv=None) -> int:
         log("      incremental reviewer will fail. Baseline runs are fine.")
 
     l10n_root, source_root = resolve_trees(project, args, log)
-    source = parse.parse_tree(source_root, project.extensions, project.exclude)
     log(f"locale tree      {l10n_root}")
     log(f"                 {repos.describe(l10n_root)}")
-    log(f"en-US reference  {source_root}")
-    log(f"                 {repos.describe(source_root)} "
-        f"({len(source):,} strings)")
+    log(f"source reference {source_root}")
+    log(f"                 {repos.describe(source_root)}")
     if args.l10n_dir or args.source_dir:
         # A local checkout is used exactly as it is on disk. Saying so
         # matters: an unpulled tree quietly produces an empty delta and a
@@ -355,14 +372,9 @@ def main(argv=None) -> int:
 
     results, failed = [], []
     for locale in locales:
-        tree = os.path.join(l10n_root, project.locale_subpath(locale))
-        if not os.path.isdir(tree):
-            log(f"\n=== {locale}\n  no directory at {tree}; skipped")
-            failed.append(locale)
-            continue
         try:
             results.append(
-                process(project, locale, tree, source_root, source, args, log)
+                process(project, locale, l10n_root, source_root, args, log)
             )
         except Exception:  # noqa: BLE001 - one locale must not sink the run
             log(f"  FAILED:\n{traceback.format_exc()}")

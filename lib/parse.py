@@ -77,7 +77,15 @@ def _flatten(pattern) -> str:
         if isinstance(part, str):
             out.append(part)
         elif isinstance(part, Expression):
-            if isinstance(part.arg, VariableRef):
+            # Android keeps the original printf spec on the expression, so a
+            # placeholder renders as `%1$s` rather than an invented
+            # `{ $arg1 }`. Reports read like the file, and the reviewer sees
+            # the syntax it will be asked about. Fluent has no `source`
+            # attribute, so nothing changes there.
+            literal = (part.attributes or {}).get("source")
+            if isinstance(literal, str) and literal:
+                out.append(literal)
+            elif isinstance(part.arg, VariableRef):
                 out.append(VAR % part.arg.name)
             elif isinstance(part.arg, str):
                 out.append(REF % part.arg)

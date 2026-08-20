@@ -1,0 +1,134 @@
+[
+ {
+  "category": "E",
+  "check": "llm",
+  "current": "Selezionare “Riprova” per passare alla modalità in linea e ricaricare la pagina.",
+  "fid": "a3e69fbae77b",
+  "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+  "first_seen": "2026-08-20",
+  "impact": 1,
+  "last_seen": "2026-08-20",
+  "locale": "it",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The button on the error page (mozac_browser_errorpages_page_refresh) is labelled \"Riprovare\"; the message tells the user to press \"Riprova\", so the quoted label does not exist on screen.",
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "0557bcc3",
+  "string_id": "mozac_browser_errorpages_offline_message",
+  "suggest": "Selezionare “Riprovare” per passare alla modalità in linea e ricaricare la pagina.",
+  "summary": "Message quotes a button label that does not match the actual button text",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "%1$s è stato disattivato in quanto non è può essere verificato come sicuro.",
+  "fid": "d58aaaefb489",
+  "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+  "first_seen": "2026-08-20",
+  "impact": 2,
+  "last_seen": "2026-08-20",
+  "locale": "it",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "\"non è può\" is a leftover word; the verb sequence is broken.",
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "bbb6c47e",
+  "string_id": "mozac_feature_addons_status_unsigned",
+  "suggest": "%1$s è stato disattivato in quanto non può essere verificato come sicuro.",
+  "summary": "Ungrammatical sequence \"non è può essere verificato\"",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
+  "current": "Informazioni sull‘aggiornamento",
+  "fid": "eb5893e106a1",
+  "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+  "first_seen": "2026-08-20",
+  "impact": 1,
+  "last_seen": "2026-08-20",
+  "locale": "it",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The whole tree uses the right single quotation mark U+2019 as apostrophe (e.g. \"sull’aggiornamento\" pattern in dell’estensione, l’estensione); here a left quote glyph is used.",
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "eb237a92",
+  "string_id": "mozac_feature_addons_updater_dialog_title",
+  "suggest": "Informazioni sull’aggiornamento",
+  "summary": "Wrong apostrophe character (opening quote U+2018 instead of ’)",
+  "suppressed_by": ""
+ },
+ {
+  "category": "A",
+  "check": "llm",
+  "current": "Apri immagine in nuova finestra",
+  "fid": "8ebcc87216b1",
+  "file": "mozilla-mobile/android-components/components/feature/contextmenu/src/main/res/values/strings.xml",
+  "first_seen": "2026-08-20",
+  "impact": 3,
+  "last_seen": "2026-08-20",
+  "locale": "it",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The source says \"new tab\", and every other entry in this context menu renders \"tab\" as \"scheda\" (e.g. mozac_feature_contextmenu_open_link_in_new_tab). The action opens a tab, not a window.",
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "b0ac752e",
+  "string_id": "mozac_feature_contextmenu_open_image_in_new_tab",
+  "suggest": "Apri immagine in nuova scheda",
+  "summary": "\"Open image in new tab\" translated as \"open image in new window\"",
+  "suppressed_by": ""
+ },
+ {
+  "category": "E",
+  "check": "llm",
+  "current": "Numero di tracciamenti bloccati",
+  "fid": "d382910441ab",
+  "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-08-20",
+  "impact": 2,
+  "last_seen": "2026-08-20",
+  "locale": "it",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The same surface uses \"Traccianti bloccati\" (menu_trackers_blocked_title) and \"Elementi traccianti bloccati\" (trackers_count_note); \"tracciamenti\" denotes tracking actions, not trackers.",
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "4f8f6cd7",
+  "string_id": "content_description_trackers_blocked",
+  "suggest": "Numero di elementi traccianti bloccati",
+  "summary": "\"trackers\" rendered as \"tracciamenti\" (tracking events) instead of the term used everywhere else in the file.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
+  "current": "Trova un app per aprire il link",
+  "fid": "9b4980593f55",
+  "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-08-20",
+  "impact": 3,
+  "last_seen": "2026-08-20",
+  "locale": "it",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "\"App\" is feminine in Italian, so the article must be elided as \"un’app\"; \"un app\" is a spelling/agreement error.",
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "0c2db4cd",
+  "string_id": "external_app_prompt_no_app_title",
+  "suggest": "Trova un’app per aprire il link",
+  "summary": "Missing elision/wrong article before the feminine noun \"app\".",
+  "suppressed_by": ""
+ }
+]

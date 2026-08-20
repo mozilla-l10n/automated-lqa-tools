@@ -23,6 +23,21 @@ from findings import CATEGORIES, IMPACT
 
 MAX_LISTED = 60  # per category, before collapsing to a count
 
+# A finding is keyed by the *reference* path, because that is the one
+# identifier every locale shares and so the one that state can be stored
+# against. A reader wants the file they would actually edit, though, so
+# reports translate it back. For a mirrored layout the two are the same.
+_PATHS: dict = {}
+
+
+def use_paths(mapping: dict) -> None:
+    global _PATHS
+    _PATHS = mapping or {}
+
+
+def _path(rel: str) -> str:
+    return _PATHS.get(rel, rel)
+
 
 def _esc(text: str, limit: int = 220) -> str:
     text = (text or "").replace("|", "\\|").replace("\n", " ").strip()
@@ -32,7 +47,7 @@ def _esc(text: str, limit: int = 220) -> str:
 
 
 def _item(f) -> str:
-    bits = [f"- `{f.string_id}` — `{f.file}` — {f.summary}"]
+    bits = [f"- `{f.string_id}` — `{_path(f.file)}` — {f.summary}"]
     if f.current:
         bits.append(f"  - Current: `{_esc(f.current)}`")
     if f.suggest and f.suggest != f.current:
@@ -90,14 +105,14 @@ def _missing_detail(h) -> str:
     out = []
     if h.missing:
         top = sorted(h.missing_by_file.items(), key=lambda kv: -kv[1])[:12]
-        listed = "\n".join(f"- `{f}` — {n}" for f, n in top)
+        listed = "\n".join(f"- `{_path(f)}` — {n}" for f, n in top)
         out.append(
             f"**{h.missing:,} strings** are not translated yet, concentrated in:\n\n{listed}\n"
         )
     if h.missing_files:
         out.append(
             "**Files absent from the locale:**\n\n"
-            + "\n".join(f"- `{f}`" for f in h.missing_files[:20])
+            + "\n".join(f"- `{_path(f)}`" for f in h.missing_files[:20])
             + "\n"
         )
     if h.untranslated_files:
@@ -263,7 +278,7 @@ def render(locale, meta, health, counts, findings, systemic, delta_report, count
         "",
         (
             "\n".join(
-                f"- `{f.string_id}` — `{f.file}` — raised by `{f.check}`, "
+                f"- `{f.string_id}` — `{_path(f.file)}` — raised by `{f.check}`, "
                 f"withdrawn {f.resolved_on}"
                 for f in sorted(withdrawn_total, key=lambda f: f.resolved_on, reverse=True)[:20]
             )
@@ -279,7 +294,7 @@ def render(locale, meta, health, counts, findings, systemic, delta_report, count
         "",
         (
             "\n".join(
-                f"- `{f.string_id}` — `{f.file}` — fixed {f.resolved_on}"
+                f"- `{f.string_id}` — `{_path(f.file)}` — fixed {f.resolved_on}"
                 for f in sorted(fixed_total, key=lambda f: f.resolved_on, reverse=True)[:40]
             )
             or "_Nothing resolved yet._"

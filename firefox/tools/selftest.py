@@ -27,6 +27,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(_HERE)), "lib"))
 
 import checks  # noqa: E402
 import config  # noqa: E402
+import layout  # noqa: E402
 import conventions  # noqa: E402
 import findings as findings_mod  # noqa: E402
 import parse  # noqa: E402
@@ -117,6 +118,7 @@ def run(l10n_dir, source_dir, project) -> int:
     src = parse.parse_tree(source_dir, project.extensions, project.exclude)
     print(f"en-US reference: {len(src):,} strings\n")
 
+
     needed = sorted(
         {loc for loc, *_ in MUST_FIND + MUST_BE_SILENT + FIXED_UPSTREAM + NOT_A_DEFECT}
         | {loc for loc, *_ in HEALTH_BOUNDS}
@@ -125,14 +127,11 @@ def run(l10n_dir, source_dir, project) -> int:
     results = {}
     trees = {}
     for locale in needed:
-        root = os.path.join(l10n_dir, project.locale_subpath(locale))
-        tree = parse.parse_tree(root, project.extensions, project.exclude)
-        counts = conventions.detect(locale, tree)
-        health, found = checks.run_all(
-            project, locale, root, source_dir, tree, src, counts
-        )
+        loaded = layout.load(project, locale, l10n_dir, source_dir)
+        counts = conventions.detect(locale, loaded.l10n)
+        health, found = checks.run_all(project, locale, loaded, counts)
         results[locale] = (health, found, counts)
-        trees[locale] = tree
+        trees[locale] = loaded.l10n
 
     passed = failed = 0
 
