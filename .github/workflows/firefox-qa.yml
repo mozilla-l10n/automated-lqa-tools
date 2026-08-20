@@ -142,7 +142,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          python firefox/tools/run.py \
+          python lib/run.py --project firefox \
             --locale '${{ matrix.locale }}' \
             --mode '${{ inputs.mode }}' \
             --l10n-dir work/l10n \
@@ -224,7 +224,7 @@ jobs:
           rm -rf incoming
 
       - name: Refresh the cross-locale summary
-        run: python firefox/tools/summary.py
+        run: python lib/summary.py --project firefox
 
       - name: Commit
         id: commit

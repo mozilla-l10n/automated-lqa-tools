@@ -13,11 +13,18 @@ from fnmatch import fnmatch
 
 import yaml
 
-REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 @dataclass
 class Project:
+    """One automation: its config, prompts, locale instructions and state.
+
+    Everything format-agnostic lives in ``lib/``; a project directory holds
+    only what differs -- its configuration, its prompts, and the checks that
+    are specific to its file format.
+    """
+
     name: str
     root: str
     data: dict
@@ -70,6 +77,15 @@ class Project:
 
     def report_path(self, locale: str) -> str:
         return os.path.join(self.root, "reports", f"{locale}.md")
+
+    @property
+    def tools_dir(self) -> str:
+        return os.path.join(self.root, "tools")
+
+    @property
+    def checks(self) -> list[str]:
+        """Checks this project runs, in report order."""
+        return list(self.data.get("checks", []))
 
     def prompt(self, name: str) -> str:
         with open(os.path.join(self.root, "prompts", name), encoding="utf-8") as fh:

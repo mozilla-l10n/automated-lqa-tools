@@ -66,6 +66,19 @@ locales:
   - tr
   - zh-CN
 
+# Checks this project runs, in report order. Shared ones come from
+# lib/common_checks.py; term_params, accesskey and markup are Fluent-specific
+# and defined in tools/checks.py.
+checks:
+  - variables
+  - selectors
+  - term_params
+  - plurals
+  - accesskey
+  - markup
+  - typography
+  - variant_spelling
+
 # Deterministic checks that are meaningless for some locales or paths.
 check_overrides:
   # Access keys are not adapted in CJK locales: the platform appends "(W)".

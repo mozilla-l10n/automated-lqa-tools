@@ -21,7 +21,9 @@ import argparse
 import os
 import sys
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+_HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, _HERE)
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(_HERE)), "lib"))
 
 import checks  # noqa: E402
 import config  # noqa: E402

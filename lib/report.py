@@ -65,6 +65,9 @@ def _health_table(h, counts) -> str:
     ]
     labels = {
         "variables": "Variable & placeholder mismatches",
+        "escaping": "Android escaping (apostrophes, quotes, ampersands)",
+        "translatable": "Strings marked untranslatable in the source",
+        "placeholders": "printf placeholder mismatches",
         "selectors": "Plural / select selector mismatches",
         "term_params": "Term parameter mismatches",
         "plurals": "Plural variants (dead or missing forms)",

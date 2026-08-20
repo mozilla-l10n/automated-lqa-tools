@@ -26,7 +26,6 @@ import traceback
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-import checks  # noqa: E402
 import config  # noqa: E402
 import conventions  # noqa: E402
 import findings as findings_mod  # noqa: E402
@@ -35,6 +34,20 @@ import report  # noqa: E402
 import repos  # noqa: E402
 import snapshot  # noqa: E402
 import suppress  # noqa: E402
+
+
+def load_checks(project):
+    """Import the project's own checks module.
+
+    Each project composes the shared checks in `lib/common_checks.py` with
+    whatever its file format needs, so the module lives next to the project
+    rather than here.
+    """
+    if project.tools_dir not in sys.path:
+        sys.path.insert(0, project.tools_dir)
+    import importlib
+
+    return importlib.import_module("checks")
 
 
 def today() -> str:
@@ -129,6 +142,7 @@ def process(project, locale, l10n_root, source_root, source, args, log) -> dict:
     log(f"  delta: {delta.summary()}")
 
     # --- deterministic layer: always over the whole tree ------------------
+    checks = load_checks(project)
     health, check_findings = checks.run_all(
         project, locale, l10n_root, source_root, l10n, source, counts_conv
     )
@@ -172,7 +186,7 @@ def process(project, locale, l10n_root, source_root, source, args, log) -> dict:
     # the ground truth for their own findings. Captured before the systemic
     # collapse below, which removes findings from `fresh` without meaning
     # they stopped being true.
-    rerunnable = {c for c in checks.ALL_CHECKS if c not in health.skipped}
+    rerunnable = {c for c in checks.CHECKS if c not in health.skipped}
     still_raised = {f.fid for f in check_findings}
     resolved = findings_mod.resolve(
         stored, l10n, delta_keys, today(), rerunnable, still_raised
@@ -287,7 +301,8 @@ def resolve_trees(project, args, log):
 
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    ap.add_argument("--project", default="firefox")
+    ap.add_argument("--project", default="firefox",
+                    help="the project directory to run: firefox, android, ...")
     ap.add_argument("--locale", dest="locales", action="append",
                     help="repeatable; defaults to every locale in config.yaml")
     ap.add_argument("--all", action="store_true", help="explicitly run every locale")
