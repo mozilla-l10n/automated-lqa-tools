@@ -309,7 +309,7 @@ def check_variables(locale, l10n, source) -> list[Finding]:
                     locale, msg, "A", "variables",
                     f"{label} references {undefined}, which en-US does not pass",
                     current=msg.props.get(prop, ""),
-                    suggest=src.props.get(prop, ""),
+
                     rationale=(
                         "A variable the code does not pass renders as an empty string, "
                         "so the sentence loses the value it was built around."
@@ -321,7 +321,7 @@ def check_variables(locale, l10n, source) -> list[Finding]:
                     locale, msg, "A", "variables",
                     f"{label} drops {dropped}, which en-US passes",
                     current=msg.props.get(prop, ""),
-                    suggest=src.props.get(prop, ""),
+
                     rationale=(
                         "The string renders, but the value en-US shows the user -- a "
                         "count, a name, a size -- never appears."
@@ -384,7 +384,7 @@ def check_selectors(locale, l10n, source) -> list[Finding]:
                     f"{label} switches on {sorted(undefined)}, which en-US does not "
                     f"pass (it provides {sorted(available) or 'nothing'})",
                     current=msg.props.get(prop, ""),
-                    suggest=src.props.get(prop, ""),
+
                     rationale=(
                         "Selecting on a variable the code does not pass makes every "
                         "variant unreachable and the number render blank."
@@ -558,7 +558,7 @@ def check_plurals(locale, l10n, source) -> list[Finding]:
                         f"{label} is missing the {missing} plural "
                         f"{'forms' if len(missing) > 1 else 'form'}",
                         current=msg.props.get(prop, ""),
-                        suggest=src.props.get(prop, ""),
+
                         rationale=(
                             f"This locale uses {sorted(norm)} in most of its plurals, and "
                             "en-US pluralizes this string. The catch-all variant will be "
@@ -628,7 +628,7 @@ def check_markup(locale, l10n, source) -> list[Finding]:
                     locale, msg, "A", "markup",
                     f"Malformed closing tag `{bad.group(0)}` in `{msg.id}`"
                     + (f" (`.{prop}`)" if prop else ""),
-                    current=value, suggest=source_text,
+                    current=value,
                     rationale="Whitespace inside a closing tag makes it render as literal text.",
                     impact=1,
                 ))
@@ -637,7 +637,7 @@ def check_markup(locale, l10n, source) -> list[Finding]:
                 out.append(_mk(
                     locale, msg, "A", "markup",
                     f"Unbalanced markup in `{msg.id}`" + (f" (`.{prop}`)" if prop else ""),
-                    current=value, suggest=source_text,
+                    current=value,
                     rationale="Tags must open and close in the same order as en-US.",
                     impact=1,
                 ))
@@ -649,7 +649,7 @@ def check_markup(locale, l10n, source) -> list[Finding]:
                     locale, msg, "A", "markup",
                     f"`data-l10n-name` mismatch in `{msg.id}`: en-US has "
                     f"{sorted(want)}, the locale has {sorted(got) or 'none'}",
-                    current=value, suggest=source_text,
+                    current=value,
                     rationale=(
                         "The element is matched by its data-l10n-name; a missing or "
                         "renamed one drops the link, icon or button entirely."

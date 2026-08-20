@@ -107,7 +107,7 @@ def check_placeholders(locale, l10n, source) -> list[Finding]:
                 out.append(_mk(
                     locale, msg, "A", "placeholders",
                     f"{label} changes a placeholder's type: {detail}",
-                    current=msg.props.get(prop, ""), suggest=src.props.get(prop, ""),
+                    current=msg.props.get(prop, ""),
                     rationale=(
                         "Android formats these through String.format, which throws "
                         "IllegalFormatConversionException when the conversion does not "
@@ -123,7 +123,7 @@ def check_placeholders(locale, l10n, source) -> list[Finding]:
                 out.append(_mk(
                     locale, msg, "A", "placeholders",
                     f"{label} mixes numbered and unnumbered placeholders",
-                    current=msg.props.get(prop, ""), suggest=src.props.get(prop, ""),
+                    current=msg.props.get(prop, ""),
                     rationale=(
                         "String.format rejects a format string that mixes `%s` with "
                         "`%1$s`. Number every placeholder or none of them."
@@ -136,7 +136,7 @@ def check_placeholders(locale, l10n, source) -> list[Finding]:
                     locale, msg, "A", "placeholders",
                     f"{label} has placeholders {_describe(sorted(got))} where the "
                     f"source has {_describe(sorted(want))}",
-                    current=msg.props.get(prop, ""), suggest=src.props.get(prop, ""),
+                    current=msg.props.get(prop, ""),
                     rationale=(
                         "The set of placeholders must match the source: a missing one "
                         "drops a value the user should see, an extra one throws."

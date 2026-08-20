@@ -247,6 +247,7 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
     }
 
     report.use_paths(trees.locale_paths)
+    report.use_source(source)
     text = report.render(
         locale, new_meta, health, health.counts, stored, systemic,
         {

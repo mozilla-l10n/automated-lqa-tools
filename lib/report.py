@@ -29,10 +29,20 @@ MAX_LISTED = 60  # per category, before collapsing to a count
 # reports translate it back. For a mirrored layout the two are the same.
 _PATHS: dict = {}
 
+# The source-language text, looked up per finding rather than stored on it.
+# `suggest` means one thing -- a proposed correction -- and the source string
+# is shown separately; conflating them labelled Italian suggestions "en-US".
+_SOURCE: dict = {}
+
 
 def use_paths(mapping: dict) -> None:
     global _PATHS
     _PATHS = mapping or {}
+
+
+def use_source(messages: dict) -> None:
+    global _SOURCE
+    _SOURCE = messages or {}
 
 
 def _path(rel: str) -> str:
@@ -50,8 +60,12 @@ def _item(f) -> str:
     bits = [f"- `{f.string_id}` — `{_path(f.file)}` — {f.summary}"]
     if f.current:
         bits.append(f"  - Current: `{_esc(f.current)}`")
+    src = _SOURCE.get(f.key)
+    source_text = src.text() if src is not None else ""
+    if source_text and source_text.strip() != (f.current or "").strip():
+        bits.append(f"  - Source: `{_esc(source_text)}`")
     if f.suggest and f.suggest != f.current:
-        bits.append(f"  - en-US: `{_esc(f.suggest)}`")
+        bits.append(f"  - Suggest: `{_esc(f.suggest)}`")
     if f.rationale:
         bits.append(f"  - {_esc(f.rationale, 400)}")
     return "\n".join(bits)

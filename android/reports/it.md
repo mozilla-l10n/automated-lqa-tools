@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-20 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `2d2a35f255d4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `2d2a35f255d4` |
-| **Previous run** | 2026-08-20 @ `2d2a35f255d4` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `11bf53751a76` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `11bf53751a76` |
+| **Previous run** | 2026-08-20 @ `11bf53751a76` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,937 |
+| **Strings reviewed this run** | 0 of 2,908 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against en-US only.
 
@@ -42,7 +42,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,937 |
+| Strings | 2,908 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -70,10 +70,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 25 | **curly-double** |
-| apostrophe | `typographic` 171 | **typographic** |
+| apostrophe | `typographic` 173 | **typographic** |
 | ellipsis | `char` 24 | **char** |
 | dash | `em` 2 | **em** |
-| register | `informal` 90, `formal` 4 | **informal** |
+| register | `informal` 89, `formal` 4 | **informal** |
 
 ---
 
@@ -83,54 +83,65 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (6)
+## 3. Open findings (7)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 2 |
 | 2 | Wrong content (says something other than the English) | 2 |
-| 3 | Degraded language (grammar, spelling, terminology) | 2 |
+| 3 | Degraded language (grammar, spelling, terminology) | 3 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
 
-- `mozac_feature_contextmenu_open_image_in_new_tab` — `mozilla-mobile/android-components/components/feature/contextmenu/src/main/res/values-it/strings.xml` — "Open image in new tab" translated as "open image in new window"
-  - Current: `Apri immagine in nuova finestra`
-  - en-US: `Apri immagine in nuova scheda`
-  - The source says "new tab", and every other entry in this context menu renders "tab" as "scheda" (e.g. mozac_feature_contextmenu_open_link_in_new_tab). The action opens a tab, not a window.
+- `open_in_app_cfr_info_message_2` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — Says the app must be set as default browser; the source is about opening links in apps automatically.
+  - Current: `È possibile impostare %1$s come browser predefinito per aprire i link nelle app.`
+  - Source: `You can set %1$s to automatically open links in apps.`
+  - Suggest: `Puoi impostare %1$s in modo che apra automaticamente i link nelle app.`
+  - Source: "You can set %1$s to automatically open links in apps." The CFR points to the "Open links in apps" setting, not to the default-browser setting; the Italian introduces "come browser predefinito" and drops "automatically", pointing the user at a different feature.
+- `tab_manager_empty_private_tabs_page_description` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — Adds "per questa finestra", a concept absent from the source and from the Android UI.
+  - Current: `%1$s non salverà alcuna cronologia o cookie per questa finestra. I segnalibri aggiunti verranno comunque conservati sul dispositivo.`
+  - Source: `%1$s won’t remember any of your history or cookies, but new bookmarks will be saved.`
+  - Suggest: `%1$s non salverà la cronologia o i cookie, ma i nuovi segnalibri verranno conservati.`
+  - Source: "%1$s won’t remember any of your history or cookies, but new bookmarks will be saved." The scope is private browsing, not a "window"; Android has no browser windows, so the added qualifier misstates what is not saved.
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-_Nothing in this category._
+- `addresses_department` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — "Department" as an administrative division is rendered "Reparto" (store/hospital department).
+  - Current: `Reparto`
+  - Source: `Department`
+  - Suggest: `Dipartimento`
+  - The developer comment states this is the administrative division used in countries like Nicaragua and Colombia; the Italian name for that division is "dipartimento". "Reparto" means a section of a shop or hospital ward and names the wrong thing in an address form.
 
 ### C. Grammar, agreement & spelling
 
-- `mozac_feature_addons_status_unsigned` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-it/strings.xml` — Ungrammatical sequence "non è può essere verificato"
-  - Current: `%1$s è stato disattivato in quanto non è può essere verificato come sicuro.`
-  - en-US: `%1$s è stato disattivato in quanto non può essere verificato come sicuro.`
-  - "non è può" is a leftover word; the verb sequence is broken.
+_Nothing in this category._
 
 ### D. Terminology, register & consistency
 
-- `mozac_feature_addons_updater_dialog_title` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-it/strings.xml` — Wrong apostrophe character (opening quote U+2018 instead of ’)
-  - Current: `Informazioni sull‘aggiornamento`
-  - en-US: `Informazioni sull’aggiornamento`
-  - The whole tree uses the right single quotation mark U+2019 as apostrophe (e.g. "sull’aggiornamento" pattern in dell’estensione, l’estensione); here a left quote glyph is used.
-- `external_app_prompt_no_app_title` — `mozilla-mobile/focus-android/app/src/main/res/values-it/strings.xml` — Missing elision/wrong article before the feminine noun "app".
-  - Current: `Trova un app per aprire il link`
-  - en-US: `Trova un’app per aprire il link`
-  - "App" is feminine in Italian, so the article must be elided as "un’app"; "un app" is a spelling/agreement error.
+- `ip_protection_locations_unavailable_description` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — Dangling feminine participle with no subject: "Passata alla posizione consigliata."
+  - Current: `Passata alla posizione consigliata.`
+  - Source: `Switched to the recommended location.`
+  - Suggest: `Si è passati alla posizione consigliata.`
+  - Source is "Switched to the recommended location." In Italian a bare "Passata" has no antecedent to agree with, making the sentence ungrammatical as a standalone card description.
+- `preferences_inactive_tabs_title` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — Wrong article: "La schede" instead of "Le schede" (plural feminine).
+  - Current: `La schede che non visualizzi da due settimane vengono spostate nella sezione Inattive.`
+  - Source: `Tabs you haven’t viewed for two weeks get moved to the inactive section.`
+  - Suggest: `Le schede che non visualizzi da due settimane vengono spostate nella sezione Inattive.`
+  - "schede" is plural, so the article must be "Le"; "La schede" is ungrammatical and visible in the Tabs settings screen.
+- `tabs_header_tab_group_counter_title` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — Past participle not agreeing with the plural noun in the plural variant.
+  - Current: `Aperto %1$d gruppi di schede. Tocca per cambiare scheda.`
+  - Source: `{$quantity ->} [one] %1$d tab group open. Tap to switch tabs. [other] %1$d tab groups open. Tap to switch tabs.`
+  - Suggest: `Aperti %1$d gruppi di schede. Tocca per cambiare scheda.`
+  - "gruppi" is masculine plural, so the participle must be "Aperti"; the singular item correctly uses "Aperto". This string is read aloud by screen readers.
 
 ### E. Typography, punctuation & spacing
 
 - `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-it/strings.xml` — Message quotes a button label that does not match the actual button text
   - Current: `Selezionare “Riprova” per passare alla modalità in linea e ricaricare la pagina.`
-  - en-US: `Selezionare “Riprovare” per passare alla modalità in linea e ricaricare la pagina.`
+  - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
+  - Suggest: `Selezionare “Riprovare” per passare alla modalità in linea e ricaricare la pagina.`
   - The button on the error page (mozac_browser_errorpages_page_refresh) is labelled "Riprovare"; the message tells the user to press "Riprova", so the quoted label does not exist on screen.
-- `content_description_trackers_blocked` — `mozilla-mobile/focus-android/app/src/main/res/values-it/strings.xml` — "trackers" rendered as "tracciamenti" (tracking events) instead of the term used everywhere else in the file.
-  - Current: `Numero di tracciamenti bloccati`
-  - en-US: `Numero di elementi traccianti bloccati`
-  - The same surface uses "Traccianti bloccati" (menu_trackers_blocked_title) and "Elementi traccianti bloccati" (trackers_count_note); "tracciamenti" denotes tracking actions, not trackers.
 
 ---
 
@@ -146,6 +157,10 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Resolved to date (0)
+### Resolved to date (5)
 
-_Nothing resolved yet._
+- `mozac_feature_addons_status_unsigned` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-it/strings.xml` — fixed 2026-08-20
+- `mozac_feature_addons_updater_dialog_title` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-it/strings.xml` — fixed 2026-08-20
+- `mozac_feature_contextmenu_open_image_in_new_tab` — `mozilla-mobile/android-components/components/feature/contextmenu/src/main/res/values-it/strings.xml` — fixed 2026-08-20
+- `content_description_trackers_blocked` — `mozilla-mobile/focus-android/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
+- `external_app_prompt_no_app_title` — `mozilla-mobile/focus-android/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
