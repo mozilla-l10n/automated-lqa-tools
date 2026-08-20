@@ -145,7 +145,8 @@ run has no state, so it reviews the whole tree from scratch, which is much
 heavier than a normal run; every run after that is incremental. See
 [`docs/adding-a-locale.md`](docs/adding-a-locale.md).
 
-**Flag a false positive** — add a sentence to
+**Say a finding is fine** — one line in `locales/<code>/dismissed.txt` for
+a single string you have read. For something that will recur, add a sentence to
 `locales/<code>/conventions.md` so the model stops raising it, or a rule to
 `locales/<code>/suppressions.yaml` to filter it after the fact. Both are
 re-applied to the whole backlog on the next run, so a rule written today

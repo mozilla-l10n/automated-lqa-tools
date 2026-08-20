@@ -27,6 +27,7 @@ import traceback
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import config  # noqa: E402
+import dismiss  # noqa: E402
 import layout  # noqa: E402
 import conventions  # noqa: E402
 import findings as findings_mod  # noqa: E402
@@ -258,7 +259,12 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
     hits = suppress.apply(rules, stored)
     if hits:
         log(f"  suppressed: {hits}")
-    raised = [f for f in raised if f.status != "suppressed"]
+
+    dismissals = dismiss.load(project, locale)
+    dropped = dismiss.apply(dismissals, stored)
+    if dropped:
+        log(f"  dismissed by hand: {sum(dropped.values())}")
+    raised = [f for f in raised if f.status not in ("suppressed", "dismissed")]
 
     open_now = [f for f in stored if f.is_open]
     log(
@@ -285,6 +291,7 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
         "fixed_total": sum(1 for f in stored if f.status == "fixed"),
         "withdrawn_total": sum(1 for f in stored if f.status == "withdrawn"),
         "suppressed": sum(1 for f in stored if f.status == "suppressed"),
+        "dismissed": sum(1 for f in stored if f.status == "dismissed"),
     }
 
     report.use_paths(trees.locale_paths)
@@ -337,6 +344,10 @@ def _ensure_locale_files(project, locale, counts_conv, log) -> None:
     if not os.path.exists(sup_path):
         with open(sup_path, "w", encoding="utf-8") as fh:
             fh.write(suppress.TEMPLATE.format(locale=locale))
+    dis_path = dismiss.path(project, locale)
+    if not os.path.exists(dis_path):
+        with open(dis_path, "w", encoding="utf-8") as fh:
+            fh.write(dismiss.TEMPLATE)
 
 
 def resolve_trees(project, args, log):

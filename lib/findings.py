@@ -11,6 +11,12 @@ roughly the same words -- and when it does not, the fallback in
 :func:`merge` matches on (string id, category) so the model rephrasing
 itself does not create a duplicate.
 
+A finding can also be closed by a person: ``dismissed`` means a reviewer
+read it and judged the string acceptable, recorded one line in the locale's
+``dismissed.txt``. That is distinct from ``suppressed``, which is a rule
+about a whole class, and from ``fixed``, which is a claim about the string
+having changed.
+
 There is also a difference between a defect being *fixed* and this system
 deciding it was never a defect. When a check stops raising a finding but
 the string never changed, the check changed its mind -- a false positive
@@ -83,6 +89,7 @@ class Finding:
     last_seen: str = ""
     resolved_on: str = ""
     suppressed_by: str = ""
+    dismissed_because: str = ""
     # Hash of the message when the finding was raised; drives fix detection.
     string_hash: str = ""
     # Free-form provenance, e.g. the legacy report and section it came from.

@@ -1,4 +1,48 @@
-# Flagging false positives
+# Saying a finding is fine
+
+Three mechanisms, and the difference is scope. Reach for the narrowest one
+that fits.
+
+## One string you have read — `dismissed.txt`
+
+You looked at the finding, the translation is fine, move on. One line in
+`android/locales/<code>/dismissed.txt`:
+
+```
+browser_menu_summarize_page_badge — "Novità" is the agreed wording
+```
+
+No id to invent, no match expression, no scope to get wrong. Where the same
+string id exists in more than one file, qualify it:
+
+```
+recent_tabs_header @ mozilla-mobile/fenix/ — fine in this context
+```
+
+The text after the dash is kept with the finding and printed in the report,
+so the next person can see why it was dropped.
+
+## A class of finding that will recur — `suppressions.yaml`
+
+Not one string but a kind: every access key, anything quoting `critta`, a
+whole file that is deliberately untranslated. Worth the ceremony of an id, a
+reason and a match expression, because it will apply to strings nobody has
+written yet. See below.
+
+## Something the reviewer should never raise at all — `conventions.md`
+
+Best of the three when it fits. Prose, injected into every review prompt, so
+no finding is created and no tokens are spent. "The ellipsis is three ASCII
+dots." "Access keys are deliberately English."
+
+---
+
+All three are re-applied to the whole backlog on every run, so any of them
+retires findings raised months ago, and removing an entry brings them back.
+Nothing is deleted from `state/`: a dismissed or suppressed finding keeps
+its reason and appears in the report appendix.
+
+# Rules for a whole class
 
 Every locale does something that looks like a defect and is not — a
 deliberate ellipsis style, a house dash, a term left in English on purpose.

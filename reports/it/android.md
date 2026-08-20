@@ -86,12 +86,12 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (11)
+## 3. Open findings (10)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 10 |
+| 2 | Wrong content (says something other than the English) | 9 |
 | 3 | Degraded language (grammar, spelling, terminology) | 1 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -106,11 +106,6 @@ _Nothing in this category._
   - Source: `Close custom tab menu sheet`
   - Suggest: `Chiudi il pannello del menu della scheda personalizzata`
   - The source refers to the bottom sheet menu of a Custom Tab, not to a menu for customizing tabs; the meaning is reversed/altered.
-- `browser_menu_summarize_page_badge` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — Badge text "New" rendered as "Novità" (news) instead of "Novità"/"Nuovo" label meaning new feature.
-  - Current: `Novità`
-  - Source: `New`
-  - Suggest: `Nuovo`
-  - The source is the adjective "New" used as a badge on a new feature; "Novità" means "news/novelty".
 - `help_catch_trackers` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — "Help catch trackers" is translated as "Cattura i traccianti", dropping the "help" sense.
   - Current: `Cattura i traccianti`
   - Source: `Help catch trackers`
@@ -171,6 +166,12 @@ _Nothing in this category._
 ---
 
 ## 4. Appendix
+
+### Dismissed by hand (1)
+
+- `browser_menu_summarize_page_badge` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — "Novità" is the agreed wording for this badge
+
+_One line each in `locales/it/dismissed.txt`. Delete the line and the finding returns._
 
 ### Suppressed as false positives (4)
 

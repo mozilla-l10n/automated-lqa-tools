@@ -1,4 +1,5 @@
 {
+ "dismissed": 1,
  "fixed_total": 42,
  "l10n_repo": "https://github.com/mozilla-l10n/android-l10n",
  "l10n_sha": "81c3d1941037",
@@ -6,7 +7,7 @@
  "locale": "it",
  "missing": 0,
  "mode": "incremental",
- "open": 11,
+ "open": 10,
  "previous_run": "2026-08-20",
  "previous_sha": "81c3d1941037",
  "project": "android",

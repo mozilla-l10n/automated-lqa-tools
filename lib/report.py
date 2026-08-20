@@ -203,6 +203,7 @@ def _siblings(locale: str, project: str) -> str:
 def render(locale, meta, health, counts, findings, systemic, delta_report, counts_conv, rules) -> str:
     open_findings = [f for f in findings if f.is_open]
     suppressed = [f for f in findings if f.status == "suppressed"]
+    dismissed = [f for f in findings if f.status == "dismissed"]
     fixed_total = [f for f in findings if f.status == "fixed"]
     withdrawn_total = [f for f in findings if f.status == "withdrawn"]
 
@@ -288,6 +289,19 @@ def render(locale, meta, health, counts, findings, systemic, delta_report, count
         "---",
         "",
         "## 4. Appendix",
+        "",
+        f"### Dismissed by hand ({len(dismissed)})",
+        "",
+        (
+            "\n".join(
+                f"- `{f.string_id}` — `{_path(f.file)}` — {f.dismissed_because}"
+                for f in sorted(dismissed, key=lambda f: f.string_id)[:40]
+            )
+            or "_Nothing dismissed._"
+        ),
+        "",
+        "_One line each in `locales/"
+        f"{locale}/dismissed.txt`. Delete the line and the finding returns._",
         "",
         f"### Suppressed as false positives ({len(suppressed)})",
         "",

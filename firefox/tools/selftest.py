@@ -324,6 +324,41 @@ def run(l10n_dir, source_dir, project) -> int:
     check(f_quiet2.status == "open",
           "silence about an unchanged string closes nothing")
 
+    print("\nDismissing one finding by hand")
+    import dismiss as _d
+    parsed = _d.load.__wrapped__ if hasattr(_d.load, "__wrapped__") else None
+    import tempfile, os as _os
+    tmp = tempfile.mkdtemp()
+    _os.makedirs(_os.path.join(tmp, "locales", "it"), exist_ok=True)
+    with open(_os.path.join(tmp, "locales", "it", "dismissed.txt"), "w") as fh:
+        fh.write("# a comment\n\nmy_string — looked at it, it is fine\n"
+                 "other_string @ some/path — fine here only\n")
+
+    class _P:
+        def locale_dir(self, loc): return _os.path.join(tmp, "locales", loc)
+
+    entries = _d.load(_P(), "it")
+    check(entries.get(("my_string", None)) == "looked at it, it is fine",
+          "a plain line parses, with its reason")
+    check(("other_string", "some/path") in entries,
+          "a line can be qualified by file")
+    check(len(entries) == 2, "comments and blank lines are ignored")
+
+    a = Finding(locale="it", file="x/y.ftl", string_id="my_string",
+                category="B", summary="s")
+    b = Finding(locale="it", file="x/y.ftl", string_id="untouched",
+                category="B", summary="s")
+    c = Finding(locale="it", file="other/place.ftl", string_id="other_string",
+                category="B", summary="s")
+    _d.apply(entries, [a, b, c])
+    check(a.status == "dismissed" and a.dismissed_because.startswith("looked at"),
+          "the named finding is dismissed, with its reason kept")
+    check(b.status == "open", "other findings are untouched")
+    check(c.status == "open", "a file-qualified line does not match another file")
+    _d.apply({}, [a, b, c])
+    check(a.status == "open" and not a.dismissed_because,
+          "removing the line brings the finding back")
+
     print("\nSuppression rules")
     from suppress import Rule
     rule = Rule({"id": "r", "reason": "because", "match": {"check": "typography",
