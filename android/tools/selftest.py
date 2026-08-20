@@ -35,10 +35,16 @@ MUST_FIND = [
     ("zh-CN", "placeholders", "downloads_delete_dialog_title"),
     # Japanese has no `one` category, so that variant is unreachable.
     ("ja", "plurals", "downloads_delete_dialog_title"),
-    # The offline message tells the user to press "Riprova"; the button it
-    # names reads "Riprovare". A cross-string defect, so it is a check
-    # rather than a model finding -- the pair is re-derived every run, and
-    # fixing *either* string closes it.
+]
+
+# Defects these checks caught that have since been fixed upstream. Kept
+# rather than deleted, so "the check broke" stays distinguishable from "the
+# defect is gone" -- which is the whole point of tracking findings.
+FIXED_UPSTREAM = [
+    # The offline message told the user to press "Riprova" while the button
+    # read "Riprovare". A cross-string defect, so it is a check rather than
+    # a model finding: the pair is re-derived every run, which is what let
+    # fixing the *button* close it.
     ("it", "ui_references", "mozac_browser_errorpages_offline_message"),
 ]
 
@@ -51,6 +57,7 @@ MUST_BE_SILENT = [
     ("fr", "placeholders", "French placeholders are correct"),
     ("de", "ui_references", "German UI references are consistent"),
     ("ja", "ui_references", "Japanese UI references are consistent"),
+    ("it", "ui_references", "Italian UI references are consistent again"),
     ("pt-BR", "placeholders", "Brazilian Portuguese placeholders are correct"),
 ]
 
@@ -66,7 +73,7 @@ def run(l10n_dir, project) -> int:
         else:
             failed += 1
 
-    needed = sorted({loc for loc, *_ in MUST_FIND + MUST_BE_SILENT})
+    needed = sorted({loc for loc, *_ in MUST_FIND + MUST_BE_SILENT + FIXED_UPSTREAM})
     results = {}
     for locale in needed:
         trees = layout.load(project, locale, l10n_dir, l10n_dir)
@@ -92,6 +99,12 @@ def run(l10n_dir, project) -> int:
         _, found, _ = results[locale]
         hit = any(f.check == kind and f.string_id == string_id for f in found)
         check(hit, f"{locale}: {kind} on {string_id}")
+
+    print("\nFixed upstream — must no longer be reported")
+    for locale, kind, string_id in FIXED_UPSTREAM:
+        _, found, _ = results[locale]
+        hit = any(f.check == kind and f.string_id == string_id for f in found)
+        check(not hit, f"{locale}: {kind} on {string_id} is gone")
 
     print("\nMust stay silent")
     for locale, kind, why in MUST_BE_SILENT:
@@ -119,6 +132,17 @@ def run(l10n_dir, project) -> int:
           "the candidate in the same file wins")
     check(_nearest(("a.xml", "foo"), [("b.xml", "x"), ("c.xml", "y")]) is None,
           "an ambiguous reference across files is not guessed at")
+
+    print("\nLanguage variants")
+    import variants as _v
+    for loc in ("en-GB", "en-CA"):
+        if loc not in project.locales:
+            continue
+        trees = layout.load(project, loc, l10n_dir, l10n_dir)
+        rules = _v.learn(trees.l10n, trees.source)
+        check(project.is_variant(loc), f"{loc} is configured as a variant")
+        check(bool(rules), f"{loc}: spelling rules are learned from the corpus ({len(rules)})")
+    check(_v.learn.__module__ == "variants", "the variant machinery is shared, not duplicated")
 
     print("\nProject wiring")
     check("variables" not in project.checks,

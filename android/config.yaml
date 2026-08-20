@@ -49,6 +49,7 @@ checks:
   - markup
   - ui_references
   - typography
+  - variant_spelling
 
 check_overrides: {}
 
@@ -74,6 +75,33 @@ partitions:
   - name: focus
     paths: ["mozilla-mobile/focus-android/"]
 
-# Start with Italian; add codes here to widen coverage.
+# Locales that are variants of the source language rather than
+# translations of it: most strings are identical to en-US and correct, so
+# identical strings are reviewed rather than skipped. See lib/variants.py.
+variants:
+  en-GB: en-US
+  en-CA: en-US
+
+# Matches the Firefox locale list, so the two projects report on the same
+# set of teams.
 locales:
+  - cs
+  - de
+  - en-CA
+  - en-GB
+  - es-AR
+  - es-ES
+  - es-MX
+  - fr
+  - fy-NL
+  - hu
+  - id
   - it
+  - ja
+  - nl
+  - pl
+  - pt-BR
+  - ru
+  - sl
+  - tr
+  - zh-CN
