@@ -2,61 +2,53 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-20 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `fef20cd7efc2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
-| **Previous run** | 2026-08-20 @ `b95608d528c8` |
+| **Generated** | 2026-08-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a9b9a116b725` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
+| **Previous run** | 2026-08-20 @ `fef20cd7efc2` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 18,127 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-
+Also for pt-BR: [android](android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `noDomMutationBreakpoints.notice` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints.notice` quotes “Interromper em…” but the string it names, `watchpoints.submenu`, reads “Interromper ao…”
-  - Current: `Clique com o botão direito em um elemento no Inspetor e selecione “Interromper em…” para adicionar um breakpoint`
-  - Source: `Right click an element in the Inspector and select “Break on…” to add a breakpoint`
-  - Suggest: `Interromper ao…`
-  - In the source this string quotes “Break on…”, which is exactly the value of `watchpoints.submenu` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `noDomMutationBreakpoints` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints` quotes “Interromper em…” but the string it names, `watchpoints.submenu`, reads “Interromper ao…”
-  - Current: `Clique com o botão direito em um elemento no %S e selecione “Interromper em…” para adicionar um breakpoint`
-  - Source: `Right click an element in the %S and select “Break on…” to add a breakpoint`
-  - Suggest: `Interromper ao…`
-  - In the source this string quotes “Break on…”, which is exactly the value of `watchpoints.submenu` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `toolbox-local-mode-notice` — `devtools/client/toolbox.ftl` — `toolbox-local-mode-notice` quotes “modo local” but the string it names, `options-local-mode-label`, reads “Modo local”
-  - Current: `Este documento também pode ser carregado a partir de “{ $url }” usando o “modo local” das ferramentas de desenvolvimento, que pode ser ativado no painel de configurações.`
-  - Source: `This document could also be loaded from “{ $url }” using DevTools “Local Mode”, which can be enabled in the settings panel.`
-  - Suggest: `Modo local`
-  - In the source this string quotes “Local Mode”, which is exactly the value of `options-local-mode-label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
 _Nothing was fixed._
 
-### ↩︎ Withdrawn — no longer considered a defect (3)
+### ↩︎ Withdrawn — no longer considered a defect (0)
 
-- `firefoxview-history-context-forget-site` — `browser/browser/firefoxView.ftl` — Access key `F` of `firefoxview-history-context-forget-site` is not present in its label
-  - Current: `F`
-  - Source: `(value): Forget About This Site… accesskey: F`
-  - The label is “Esquecer este site…”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `webconsole-commands-usage-block` — `devtools/shared/webconsole-commands.ftl` — the underscore was dropped from the literal argument name, so the prose no longer matches the :block URLSTRING usage line two lines above. Current: um argumento URLSTRING → Suggest: um argumento URLSTRING
-  - Current: `um argumento URLSTRING`
-  - Source: `:block URL_STRING  Start blocking network requests    It accepts only one URL_STRING argument, an unquoted string which will be used to block all requests whose URL includes this string.   Use :unblock or the Network Mo…`
-  - (Retired: the suggested text is identical to the current text.)
-- `neterror-proxy-connect-failure-contact-admin` — `toolkit/toolkit/neterror/netError.ftl` — stray NBSP: está funcionando → está funcionando
-  - Current: `está funcionando`
-  - Source: `Contact your network administrator to make sure the proxy server is working.`
-  - (Retired: the suggested text is identical to the current text.)
+_Nothing withdrawn._
 
-### 🔁 String changed, defect not verifiable — needs a re-read (0)
+### 🔁 String changed, defect not verifiable — needs a re-read (7)
 
-_Nothing to re-read._
+- `firefox-relay-offer-legal-notice-1` — `browser/browser/browser.ftl` — broken closing tag. Current: …>Aviso de privacidade</label label>. → Suggest: …>Aviso de privacidade</label>.
+  - Source: `By signing up and creating an email mask, you agree to the <label data-l10n-name="tos-url">Terms of Service</label> and <label data-l10n-name="privacy-url">Privacy Notice</label>.`
+- `popup-warning-exceeded-with-redirect-message` — `browser/browser/browser.ftl` — the count is attached to the wrong noun; en-US counts pop-up windows. Suggest: …impediu que este site abrisse mais de { $popupCount } janelas, além de redirecionamentos.
+  - Source: `{$popupCount ->} [other] { -brand-short-name } prevented this site from opening more than { $popupCount } pop-up windows and redirecting.`
+- `firefox-relay-offer-legal-notice-control` — `browser/browser/firefoxRelay.ftl` — same broken tag: </label label> → </label>
+  - Source: `By signing up and creating an email mask, you agree to the <label data-l10n-name="tos-url">Terms of Service</label> and <label data-l10n-name="privacy-url">Privacy Notice</label>.`
+- `report-broken-site-panel-reason-choose` — `browser/browser/reportBrokenSite.ftl` — en-US "Choose reason". Current: Escolha → Suggest: Escolha um motivo
+  - Current: `Escolha`
+  - Source: `label: Choose reason`
+  - Suggest: `Escolha um motivo`
+- `split-view-menuitem-reverse-tabs` — `browser/browser/tabbrowser.ftl` — "Reverse Tabs": Inverter abas (tab-context-reverse-split-view) vs Reverter abas (split-view-menuitem-reverse-tabs) — see §C, Inverter is correct
+  - Current: `Inverter abas`
+  - Source: `label: Reverse Tabs`
+- `about-glean-about-data-list-item-dictionary` — `toolkit/toolkit/about/aboutGlean.ftl` — missing space renders as "GleanDicionário". Current: <a …>{ -glean-brand-name }Dicionário</a> → Suggest: <a …>Dicionário do { -glean-brand-name }</a>
+  - Source: `To browse the list of data collected by { -glean-brand-name } per application, please consult the <a data-l10n-name="glean-dictionary-link">{ -glean-brand-name } Dictionary</a>.`
+- `sec-error-cert-not-in-name-space` — `toolkit/toolkit/neterror/nsserrors.ftl` — sec-error-cert-not-in-name-space uses Autoridade de Certificação; the rest of the tree uses autoridade certificadora
+  - Source: `The Certifying Authority for this certificate is not permitted to issue a certificate with this name.`
+  - Suggest: `Autoridade de Certificação`
 
 ### 🗑 Retired — the string no longer exists upstream (0)
 
@@ -70,7 +62,7 @@ _Nothing retired._
 |---|---|
 | Files | 360 |
 | Strings | 18,127 |
-| Missing strings | 36 |
+| Missing strings | 46 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -89,18 +81,20 @@ _Nothing retired._
 
 ### Completeness
 
-**36 strings** are not translated yet, concentrated in:
+**46 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 15
+- `browser/browser/newtab/newtab.ftl` — 16
 - `browser/browser/preferences/containers.ftl` — 7
-- `browser/browser/preferences/preferences.ftl` — 5
+- `browser/browser/preferences/preferences.ftl` — 7
 - `browser/browser/aboutPrivateBrowsing.ftl` — 3
+- `browser/browser/appmenu.ftl` — 2
+- `browser/browser/menubar.ftl` — 2
+- `browser/browser/aboutDialog.ftl` — 1
 - `browser/browser/profiles.ftl` — 1
 - `browser/browser/sidebar.ftl` — 1
+- `browser/browser/preferences/formAutofill.ftl` — 1
+- `dom/chrome/accessibility/AccessFu.properties` — 1
 - `toolkit/toolkit/about/aboutPDF.ftl` — 1
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 1
-- `toolkit/toolkit/global/mozBoxBase.ftl` — 1
-- `toolkit/toolkit/global/processTypes.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -126,13 +120,13 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (570)
+## 3. Open findings (565)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 15 |
 | 2 | Wrong content (says something other than the English) | 192 |
-| 3 | Degraded language (grammar, spelling, terminology) | 292 |
+| 3 | Degraded language (grammar, spelling, terminology) | 287 |
 | 4 | Cosmetic (typography, spacing) | 71 |
 
 ### A. Functional, markup, variables & plurals
@@ -492,14 +486,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
   - Current: `o máximo possivel`
   - Source: `{ -brand-product-name } thinks companies should follow you less. We block as many trackers as we can when you turn on protections.`
   - Suggest: `possível`
-- `urlbar-dismissal-acknowledgment-weather` — `browser/browser/browser.ftl` — urlbar-dismissal-acknowledgment-weather, urlbar-trending-dismissal-acknowledgment, urlbar-result-dismissal-acknowledgment-market, urlbar-result-dismissal-acknowledgment-all — browser.ftl — postposed plural subject: Não irá mais aparecer sugestões → Não irão mais aparecer sugestões; Não aparecerá mais pesquisas populares → Não aparecerão
-  - Current: `Não irá mais aparecer sugestões`
-  - Source: `Thanks for your feedback. You won’t see weather suggestions anymore.`
-  - Suggest: `Não irão mais aparecer sugestões`
-- `urlbar-result-dismissal-acknowledgment-market` — `browser/browser/browser.ftl` — urlbar-dismissal-acknowledgment-weather, urlbar-trending-dismissal-acknowledgment, urlbar-result-dismissal-acknowledgment-market, urlbar-result-dismissal-acknowledgment-all — browser.ftl — postposed plural subject: Não irá mais aparecer sugestões → Não irão mais aparecer sugestões; Não aparecerá mais pesquisas populares → Não aparecerão
-  - Current: `Não irá mais aparecer sugestões`
-  - Source: `Thanks for your feedback. You won’t see market suggestions anymore.`
-  - Suggest: `Não irão mais aparecer sugestões`
 - `content-sharing-modal-generic-error-2` — `browser/browser/contentSharing.ftl` — missing space: Tente novamentemais tarde. → Tente novamente mais tarde.
   - Current: `Tente novamentemais tarde.`
   - Source: `heading: Something went wrong message: We couldn’t create your shared page this time. Try again later.`
@@ -624,7 +610,15 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
   - Current: `Alterne facilmente entre navegação de trabalho ou diversão.`
   - Source: `Easily switch between browsing for work and fun. Profiles keep your browsing info, including search history and passwords, totally separate so you can stay organized.`
   - Suggest: `…entre navegação de trabalho e diversão.`
-- _…and 107 more; see `state/` for the full list._
+- `onboarding-infrequent-import-subtitle` — `browser/browser/newtab/onboarding.ftl` — lembre que pode importar → lembre-se de que pode importar
+  - Current: `lembre que pode importar`
+  - Source: `Whether you’re settling in or just stopping by, remember you can import your bookmarks, passwords, and more.`
+  - Suggest: `lembre-se de que pode importar`
+- `origin-controls-options` — `browser/browser/originControls.ftl` — en-US ends with a colon because the options follow directly: A extensão pode ler e alterar dados → …dados:
+  - Current: `A extensão pode ler e alterar dados`
+  - Source: `label: Extension Can Read and Change Data:`
+  - Suggest: `…dados:`
+- _…and 105 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -717,19 +711,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
   - Current: `bloqueia mineração de criptomoedas`
   - Source: `{ -brand-product-name } blocks cryptominers, social media trackers, and fingerprinters.`
   - Suggest: `bloqueia mineradores de criptomoedas`
-- `newtab-menu-dismiss` — `browser/browser/newtab/newtab.ftl` — newtab.ftl widget terms — "Dismiss": Dispensar (newtab-menu-dismiss) vs Descartar (4 other strings); "Unfollow": Parar de seguir (newtab-section-unfollow-button) vs Deixar de seguir (3 others); "feed": canal de notícias / canal de informações / feed; "break": Intervalo vs pausa in the timer strings; "teams": equipes (newtab-sports-widget-follow-teams-title) vs times everywhere else
-  - Source: `Dismiss`
-  - Suggest: `Dispensar`
 - `newtab-search-box-input` — `browser/browser/newtab/newtab.ftl` — "Search the web": Pesquisar na web vs Pesquisar na internet — adjacent strings about-private-browsing-search-placeholder/-search-btn.title and newtab-search-box-input/newtab-search-box-text
   - Current: `Pesquisar na web`
   - Source: `aria-label: Search the web placeholder: Search the web`
   - Suggest: `Pesquisar na internet`
-- `newtab-section-unfollow-button` — `browser/browser/newtab/newtab.ftl` — newtab.ftl widget terms — "Dismiss": Dispensar (newtab-menu-dismiss) vs Descartar (4 other strings); "Unfollow": Parar de seguir (newtab-section-unfollow-button) vs Deixar de seguir (3 others); "feed": canal de notícias / canal de informações / feed; "break": Intervalo vs pausa in the timer strings; "teams": equipes (newtab-sports-widget-follow-teams-title) vs times everywhere else
-  - Source: `Unfollow`
-  - Suggest: `Dispensar`
-- `newtab-sports-widget-follow-teams-title` — `browser/browser/newtab/newtab.ftl` — newtab.ftl widget terms — "Dismiss": Dispensar (newtab-menu-dismiss) vs Descartar (4 other strings); "Unfollow": Parar de seguir (newtab-section-unfollow-button) vs Deixar de seguir (3 others); "feed": canal de notícias / canal de informações / feed; "break": Intervalo vs pausa in the timer strings; "teams": equipes (newtab-sports-widget-follow-teams-title) vs times everywhere else
-  - Source: `{$number ->} [other] Follow up to { $number } teams`
-  - Suggest: `Dispensar`
 - `desktop-to-mobile-subtitle` — `browser/browser/newtab/onboarding.ftl` — `desktop-to-mobile-subtitle` quotes “Sincronizar com dispositivos móveis” but the string it names, `sync-to-mobile-button-label`, reads “Sincronização com dispositivos móveis”
   - Current: `Capture o código QR para instalar o { -brand-product-name } para dispositivos móveis. Após instalar, selecione “Sincronizar com dispositivos móveis” para acessar suas senhas, favoritos e muito mais em qualquer lugar.`
   - Source: `Scan the QR code to download { -brand-product-name } for mobile. Once installed, select “Sync to mobile” to access your passwords, bookmarks, and more on the go.`
@@ -804,7 +789,13 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
   - Source: `Picture`
 - `picture-avatar-tooltip` — `browser/browser/profiles.ftl` — profiles.ftl avatar labels — edit-profile-page-avatar-header-2 uses Símbolo where the file uses avatar; sparkle-single-avatar-tooltip says brilho while sparkle-single-avatar says Faísca; video-game-controller-avatar-tooltip says controle de videogame while video-game-controller-avatar says Controlador de videogame; picture-avatar-tooltip says de imagem while picture-avatar says Foto; folder-avata…
   - Source: `tooltiptext: Apply picture avatar`
-- _…and 68 more; see `state/` for the full list._
+- `sparkle-single-avatar` — `browser/browser/profiles.ftl` — profiles.ftl avatar labels — edit-profile-page-avatar-header-2 uses Símbolo where the file uses avatar; sparkle-single-avatar-tooltip says brilho while sparkle-single-avatar says Faísca; video-game-controller-avatar-tooltip says controle de videogame while video-game-controller-avatar says Controlador de videogame; picture-avatar-tooltip says de imagem while picture-avatar says Foto; folder-avata…
+  - Source: `Sparkle`
+- `sparkle-single-avatar-tooltip` — `browser/browser/profiles.ftl` — profiles.ftl avatar labels — edit-profile-page-avatar-header-2 uses Símbolo where the file uses avatar; sparkle-single-avatar-tooltip says brilho while sparkle-single-avatar says Faísca; video-game-controller-avatar-tooltip says controle de videogame while video-game-controller-avatar says Controlador de videogame; picture-avatar-tooltip says de imagem while picture-avatar says Foto; folder-avata…
+  - Source: `tooltiptext: Apply sparkle avatar`
+- `video-game-controller-avatar` — `browser/browser/profiles.ftl` — profiles.ftl avatar labels — edit-profile-page-avatar-header-2 uses Símbolo where the file uses avatar; sparkle-single-avatar-tooltip says brilho while sparkle-single-avatar says Faísca; video-game-controller-avatar-tooltip says controle de videogame while video-game-controller-avatar says Controlador de videogame; picture-avatar-tooltip says de imagem while picture-avatar says Foto; folder-avata…
+  - Source: `Video game controller`
+- _…and 65 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -993,6 +984,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 ---
 
 ## 4. Appendix
+
+### Dismissed by hand (5)
+
+- `newtab-menu-dismiss` — `browser/browser/newtab/newtab.ftl` — newtab.ftl widget terms — "Dismiss": Dispensar (newtab-menu-dismiss) vs Descartar (4 other strings); "Unfollow": Parar de seguir (newtab-section-unfollow-button) vs Deixar de seguir (3 others); "feed": canal de notícias / canal de informações / feed; "break": Intervalo vs pausa in the timer strings; "teams": equipes (newtab-sports-widget-follow-teams-title) vs times everywhere else
+- `newtab-section-unfollow-button` — `browser/browser/newtab/newtab.ftl` — newtab.ftl widget terms — "Dismiss": Dispensar (newtab-menu-dismiss) vs Descartar (4 other strings); "Unfollow": Parar de seguir (newtab-section-unfollow-button) vs Deixar de seguir (3 others); "feed": canal de notícias / canal de informações / feed; "break": Intervalo vs pausa in the timer strings; "teams": equipes (newtab-sports-widget-follow-teams-title) vs times everywhere else
+- `newtab-sports-widget-follow-teams-title` — `browser/browser/newtab/newtab.ftl` — newtab.ftl widget terms — "Dismiss": Dispensar (newtab-menu-dismiss) vs Descartar (4 other strings); "Unfollow": Parar de seguir (newtab-section-unfollow-button) vs Deixar de seguir (3 others); "feed": canal de notícias / canal de informações / feed; "break": Intervalo vs pausa in the timer strings; "teams": equipes (newtab-sports-widget-follow-teams-title) vs times everywhere else
+- `urlbar-dismissal-acknowledgment-weather` — `browser/browser/browser.ftl` — urlbar-dismissal-acknowledgment-weather, urlbar-trending-dismissal-acknowledgment, urlbar-result-dismissal-acknowledgment-market, urlbar-result-dismissal-acknowledgment-all — browser.ftl — postposed plural subject: Não irá mais aparecer sugestões → Não irão mais aparecer sugestões; Não aparecerá mais pesquisas populares → Não aparecerão
+- `urlbar-result-dismissal-acknowledgment-market` — `browser/browser/browser.ftl` — urlbar-dismissal-acknowledgment-weather, urlbar-trending-dismissal-acknowledgment, urlbar-result-dismissal-acknowledgment-market, urlbar-result-dismissal-acknowledgment-all — browser.ftl — postposed plural subject: Não irá mais aparecer sugestões → Não irão mais aparecer sugestões; Não aparecerá mais pesquisas populares → Não aparecerão
+
+_One line each in `locales/pt-BR/dismissed.txt`. Delete the line and the finding returns._
 
 ### Suppressed as false positives (0)
 

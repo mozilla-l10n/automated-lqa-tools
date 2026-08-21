@@ -2,53 +2,135 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-20 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `fef20cd7efc2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
-| **Previous run** | 2026-08-20 @ `b95608d528c8` |
+| **Generated** | 2026-08-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a9b9a116b725` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
+| **Previous run** | 2026-08-20 @ `fef20cd7efc2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 17,836 |
+| **Strings reviewed this run** | 0 of 17,853 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-
+Also for pl: [android](android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — `backup-file-moz-browser-restore-step-2-1` quotes “Przywróć dane” but the string it names, `restore-from-backup-header`, reads “Przywracanie danych”
-  - Current: `Kliknij „Przywróć dane” i wybierz ten plik`
-  - Source: `Click “Restore your data” and select this file`
-  - Suggest: `Przywracanie danych`
-  - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — `backup-file-other-browser-restore-step-3-1` quotes “Przywróć dane” but the string it names, `restore-from-backup-header`, reads “Przywracanie danych”
-  - Current: `Kliknij „Przywróć dane” i wybierz ten plik`
-  - Source: `Click “Restore your data” and select this file`
-  - Suggest: `Przywracanie danych`
-  - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `toolbox-local-mode-notice` — `devtools/client/toolbox.ftl` — `toolbox-local-mode-notice` quotes “trybu lokalnego” but the string it names, `options-local-mode-label`, reads “Tryb lokalny”
-  - Current: `Ten dokument można także wczytać z „{ $url }” za pomocą „trybu lokalnego” narzędzi dla programistów, który można włączyć w panelu ustawień.`
-  - Source: `This document could also be loaded from “{ $url }” using DevTools “Local Mode”, which can be enabled in the settings panel.`
-  - Suggest: `Tryb lokalny`
-  - In the source this string quotes “Local Mode”, which is exactly the value of `options-local-mode-label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
 _Nothing was fixed._
 
-### ↩︎ Withdrawn — no longer considered a defect (1)
+### ↩︎ Withdrawn — no longer considered a defect (0)
 
-- `cfr-doorhanger-extension-total-users` — `browser/browser/newtab/asrouter.ftl` — [few] = "{ $total } użytkowników"; 2/3/4 take the nominative plural. → [few] = "{ $total } użytkownicy" (the adjacent cfr-doorhanger-extension-rating handles this correctly).
-  - Current: `[few]`
-  - Source: `{$total ->} [one] { $total } user [other] { $total } users`
-  - (Retired: the suggested text is identical to the current text.)
+_Nothing withdrawn._
 
-### 🔁 String changed, defect not verifiable — needs a re-read (0)
+### 🔁 String changed, defect not verifiable — needs a re-read (36)
 
-_Nothing to re-read._
+- `backup-file-intro` — `browser/browser/backupSettings.ftl` — lists the wrong data category: "zakładki, hasła i pozostałe dane" for "bookmarks, history, and other data". settings-data-backup-header2 in the same file has it right. → "zakładki, historię i pozostałe dane".
+  - Source: `Get back to browsing and recover all your bookmarks, history, and other data. <a data-l10n-name="backup-file-support-link">Learn more</a>`
+  - Suggest: `"zakładki, historię i pozostałe dane".`
+- `refresh-blocked-redirect-label` — `browser/browser/browser.ftl` — "uniemożliwić" takes a noun phrase, not an infinitive. Current: "…uniemożliwił tej stronie automatycznie odświeżyć stronę." / "…automatycznie przekierować…" → Suggest: "…uniemożliwił automatyczne odświeżenie tej strony." / "…uniemożliwił tej stronie automatyczne przekierowanie do innej strony."
+  - Source: `{ -brand-short-name } prevented this page from automatically redirecting to another page.`
+- `refresh-blocked-refresh-label` — `browser/browser/browser.ftl` — "uniemożliwić" takes a noun phrase, not an infinitive. Current: "…uniemożliwił tej stronie automatycznie odświeżyć stronę." / "…automatycznie przekierować…" → Suggest: "…uniemożliwił automatyczne odświeżenie tej strony." / "…uniemożliwił tej stronie automatyczne przekierowanie do innej strony."
+  - Source: `{ -brand-short-name } prevented this page from automatically reloading.`
+- `newtab-wallpaper-dark-green` — `browser/browser/newtab/newtab.ftl` — "Ciemnoniebieski" (= dark blue), duplicating newtab-wallpaper-dark-blue. → "Ciemnozielony".
+  - Source: `Dark green`
+  - Suggest: `"Ciemnozielony".`
+- `create-backup-screen-1-title` — `browser/browser/newtab/onboarding.ftl` — trailing space at the end of the first line of the multiline value ("Aktualizujesz system do Windows 11? "); Fluent preserves it. Same in psmerr-hostreusedissuerandserial (toolkit/toolkit/neterror/nsserrors.ftl), where en-US has no trailing space.
+  - Source: `Upgrading to Windows 11? Let’s back up your { -brand-product-name } data.`
+- `policy-ShowHomeButton` — `browser/browser/policies/policies-descriptions.ftl` — "przycisku strony domowej"; the product uses strona startowa everywhere else (including policy-Homepage in the same file). "Strona domowa" is reserved for add-on homepages in aboutAddons.ftl. → "przycisku strony startowej".
+  - Source: `Show the home button on the toolbar.`
+  - Suggest: `"przycisku strony startowej".`
+- `collection-usage-ping` — `browser/browser/preferences/preferences.ftl` — .label = "Wysyłaj dzienny sygnału o użyciu…" (adjective/noun case clash). The newer duplicate data-collection-usage-ping already has "dzienny sygnał". → "Wysyłaj dzienny sygnał o użyciu do…".
+  - Source: `accesskey: u label: Send daily usage ping to { -vendor-short-name }`
+  - Suggest: `"Wysyłaj dzienny sygnał o użyciu do…".`
+- `safeb-blocked-unwanted-page-short-desc` — `browser/browser/safebrowsing/blockedSite.ftl` — "ponieważ może one próbować" with a feminine singular subject ("ta strona"); the parallel malware/harmful strings use "może ona". → "ponieważ może ona próbować".
+  - Source: `{ -brand-short-name } blocked this page because it might try to trick you into installing programs that harm your browsing experience (for example, by changing your homepage or showing extra ads on sites you visit).`
+  - Suggest: `"ponieważ może ona próbować".`
+- `tab-group-editor-action-copy-links` — `browser/browser/tabbrowser.ftl` — A3, functional. The plural select keys on $tabCount, but the source (and the calling code) passes $linkCount. $tabCount is never supplied, so the selector cannot match and the message always falls through to [many] (and Fluent logs a resolver error). Current: { $tabCount -> [one] … [few] … [many] … } → Suggest: { $linkCount -> … }.
+  - Current: `[many]`
+  - Source: `label: {$linkCount ->} [1] Copy link in group [other] Copy { $linkCount } links in group`
+  - Suggest: `→ Suggest:`
+- `tab-group-label-tooltip-collapsed` — `browser/browser/tabbrowser.ftl` — the adjective refers to grupa (fem.): "— zamknięte", "— zwinięte", "— rozwinięte". The parallel tabbrowser-manager-closed-tab-group correctly uses "— zamknięta". → "— zamknięta", "— zwinięta", "— rozwinięta".
+  - Source: `{ $tabGroupName } — Collapsed`
+  - Suggest: `"— zamknięta", "— zwinięta", "— rozwinięta".`
+- `tab-group-label-tooltip-expanded` — `browser/browser/tabbrowser.ftl` — the adjective refers to grupa (fem.): "— zamknięte", "— zwinięte", "— rozwinięte". The parallel tabbrowser-manager-closed-tab-group correctly uses "— zamknięta". → "— zamknięta", "— zwinięta", "— rozwinięta".
+  - Source: `{ $tabGroupName } — Expanded`
+  - Suggest: `"— zamknięta", "— zwinięta", "— rozwinięta".`
+- `tab-group-menu-closed-tab-group` — `browser/browser/tabbrowser.ftl` — the adjective refers to grupa (fem.): "— zamknięte", "— zwinięte", "— rozwinięte". The parallel tabbrowser-manager-closed-tab-group correctly uses "— zamknięta". → "— zamknięta", "— zwinięta", "— rozwinięta".
+  - Source: `label: { $tabGroupName } title: { $tabGroupName } — Closed`
+  - Suggest: `"— zamknięta", "— zwinięta", "— rozwinięta".`
+- `inactive-css-property-because-of-display` — `devtools/client/tooltips.ftl` — "ponieważ wyświetla { $display }" for "since it has a display of…". → "ponieważ jego własność display ma wartość { $display }".
+  - Current: `{ $display }`
+  - Source: `<strong>{ $property }</strong> has no effect on this element since it has a display of <strong>{ $display }</strong>.`
+  - Suggest: `display`
+- `xslt-load-recursion` — `dom/dom/xslt.ftl` — the source ends with a colon because the offending stylesheet URI is appended; pl ends with a period, so the URI will follow a sentence-final dot. Siblings xslt-network-error, xslt-wrong-mime-type keep the colon. → end with ":".
+  - Source: `An XSLT stylesheet directly or indirectly imports or includes itself:`
+  - Suggest: `end with ":".`
+- `certmgr-begins-label` — `security/manager/security/certificates/certManager.ftl` — stray trailing colon on a tree column header: .label = "Ważny od dnia:"; the paired certmgr-expires-label has none. → "Ważny od dnia".
+  - Source: `label: Begins On`
+  - Suggest: `"Ważny od dnia".`
+- `permanent-override` — `security/manager/security/certificates/certManager.ftl` — the two values of one column mix an adverbial phrase and an adjective: "Na stałe" / "Tymczasowy". → "Stały" / "Tymczasowy" (both agreeing with wyjątek).
+  - Source: `Permanent`
+- `pkcs12-unknown-err-backup` — `security/manager/security/certificates/certManager.ftl` — "kopia bezpieczeństwa" (6 occurrences, all here) vs "kopia zapasowa" (79 elsewhere, including certmgr-backup in the same dialog). → standardize on "kopia zapasowa".
+  - Source: `Failed to create the PKCS #12 backup file for unknown reasons.`
+  - Suggest: `standardize on "kopia zapasowa".`
+- `pkcs12-unknown-err-restore` — `security/manager/security/certificates/certManager.ftl` — "kopia bezpieczeństwa" (6 occurrences, all here) vs "kopia zapasowa" (79 elsewhere, including certmgr-backup in the same dialog). → standardize on "kopia zapasowa".
+  - Source: `Failed to restore the PKCS #12 file for unknown reasons.`
+  - Suggest: `standardize on "kopia zapasowa".`
+- `unable-to-toggle-fips` — `security/manager/security/certificates/deviceManager.ftl` — the only occurrence of "urządzenie bezpieczeństwa" in the locale; everything else, including fips-nonempty-primary-password-required two entries above, says "urządzenie zabezpieczające".
+  - Source: `Unable to change the FIPS mode for the security device. It is recommended that you exit and restart this application.`
+- `set-password-backup-pw` — `security/manager/security/pippki/pippki.ftl` — "kopia bezpieczeństwa" (6 occurrences, all here) vs "kopia zapasowa" (79 elsewhere, including certmgr-backup in the same dialog). → standardize on "kopia zapasowa".
+  - Source: `value: Certificate backup password:`
+  - Suggest: `standardize on "kopia zapasowa".`
+- `set-password-repeat-backup-pw` — `security/manager/security/pippki/pippki.ftl` — "kopia bezpieczeństwa" (6 occurrences, all here) vs "kopia zapasowa" (79 elsewhere, including certmgr-backup in the same dialog). → standardize on "kopia zapasowa".
+  - Source: `value: Certificate backup password (again):`
+  - Suggest: `standardize on "kopia zapasowa".`
+- `set-password-window` — `security/manager/security/pippki/pippki.ftl` — "kopia bezpieczeństwa" (6 occurrences, all here) vs "kopia zapasowa" (79 elsewhere, including certmgr-backup in the same dialog). → standardize on "kopia zapasowa".
+  - Source: `title: Choose a Certificate Backup Password`
+  - Suggest: `standardize on "kopia zapasowa".`
+- `no-config-label` — `toolkit/crashreporter/aboutcrashes.ftl` — missing sentence-final period after <code>breakpad.reportURL</code>.
+  - Source: `This application has not been configured to display crash reports. The preference <code>breakpad.reportURL</code> must be set.`
+- `plugins-openh264-description` — `toolkit/toolkit/about/aboutAddons.ftl` — stale URL "http://www.openh264.org"; the source uses "https://www.openh264.org/".
+  - Source: `This plugin is automatically installed by Mozilla to comply with the WebRTC specification and to enable WebRTC calls with devices that require the H.264 video codec. Visit https://www.openh264.org/ to view the codec sou…`
+- `about-networking-networkid-status-known` — `toolkit/toolkit/about/aboutNetworking.ftl` — meaning reversed. "Stan łącza jest nieznany" for "Link status is known". It sits next to about-networking-networkid-is-up = "Łącze jest aktywne"; both are meant to be positive. → "Stan łącza jest znany".
+  - Source: `Link status is known`
+  - Suggest: `"Stan łącza jest znany".`
+- `state-dd-enabled` — `toolkit/toolkit/about/aboutPlugins.ftl` — A9, markup. Colon is inside the span and outside it, so the page renders "Stan:: włączony". Current: <span data-l10n-name="state">Stan:</span>: włączony → Suggest: <span data-l10n-name="state">Stan</span>: włączony (matching the three sibling state-dd- strings).
+  - Source: `<span data-l10n-name="state">State:</span> Enabled`
+- `media-audio-robustness` — `toolkit/toolkit/about/aboutSupport.ftl` — "Siła wideo" / "Siła dźwięku". EME robustness is the CDM security level. → "Poziom zabezpieczeń wideo" / "Poziom zabezpieczeń dźwięku".
+  - Source: `Audio Robustness`
+- `media-video-robustness` — `toolkit/toolkit/about/aboutSupport.ftl` — "Siła wideo" / "Siła dźwięku". EME robustness is the CDM security level. → "Poziom zabezpieczeń wideo" / "Poziom zabezpieczeń dźwięku".
+  - Source: `Video Robustness`
+- `about-telemetry-keyed-scalar-section` — `toolkit/toolkit/about/aboutTelemetry.ftl` — left in English ("Keyed scalars") while about-telemetry-scalar-section = "Skalary" and about-telemetry-keyed-histogram-section = "Indeksowane histogramy". → "Indeksowane skalary".
+  - Source: `Keyed Scalars`
+  - Suggest: `"Indeksowane skalary".`
+- `about-webrtc-aec-logging-msg-label` — `toolkit/toolkit/about/aboutWebrtc.ftl` — the group comment says "AEC is an abbreviation for Acoustic Echo Cancellation", but pl renders it as redukcja szumów otoczenia (ambient-noise reduction), a different feature. about-webrtc-aec-logging-unavailable-sandbox in the same file already keeps "AEC", so the file is internally inconsistent. → "…usuwania echa akustycznego (AEC)".
+  - Source: `AEC Logging`
+  - Suggest: `"…usuwania echa akustycznego`
+- `experimental-features-cookie-samesite-none-requires-secure2` — `toolkit/toolkit/featuregates/features.ftl` — "wymaga atrybutu bezpieczeństwa"; the source means the literal Secure cookie attribute. → "wymaga atrybutu Secure".
+  - Current: `Secure`
+  - Source: `label: Cookies: SameSite=None requires secure attribute`
+  - Suggest: `"wymaga atrybutu Secure".`
+- `autofill-insecure-field-warning-description` — `toolkit/toolkit/formautofill/formAutofill.ftl` — missing sentence-final period after "…wypełnianie formularzy".
+  - Source: `{ -brand-short-name } has detected an insecure site. Form Autofill is temporarily disabled.`
+- `csp-error-illegal-host-wildcard` — `toolkit/toolkit/global/cspErrors.ftl` — "nieogólną domenę" for "non-generic sub-domain"; the sub-domain level is the whole point (.example.com vs .com). → "nieogólną poddomenę".
+  - Current: `.com`
+  - Source: `{ $scheme }: wildcard sources in ‘{ $directive }’ directives must include at least one non-generic sub-domain (e.g., *.example.com rather than *.com)`
+  - Suggest: `"nieogólną poddomenę".`
+- `webext-perms-header-unsigned` — `toolkit/toolkit/global/extensions.ftl` — "Dodaj rozszerzanie jedynie…" (= expanding). Same typo in webext-perms-header-unsigned-with-perms, webext-perms-list-intro-unsigned and webext-site-perms-header-unsigned-with-perms. → "rozszerzenie".
+  - Source: `Add { $extension }? This extension is unverified. Malicious extensions can steal your private information or compromise your computer. Only add it if you trust the source.`
+  - Suggest: `"rozszerzenie".`
+- `language-name-ii` — `toolkit/toolkit/intl/languageNames.ftl` — "Syczuański" alone denotes Sichuanese Mandarin, a different language; the Yi/Nuosu qualifier identifies this entry. → "Yi syczuański".
+  - Source: `Sichuan Yi`
+  - Suggest: `"Yi syczuański".`
+- `password-manager-update-password-message` — `toolkit/toolkit/passwordmgr/passwordmgr.ftl` — "hasło dla { $host }?" without quotes, while the sibling password-manager-save-password-message in the same doorhanger uses „{ $host }”.
+  - Source: `Update password for { $host }?`
 
 ### 🗑 Retired — the string no longer exists upstream (0)
 
@@ -61,8 +143,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 357 |
-| Strings | 17,836 |
-| Missing strings | 327 |
+| Strings | 17,853 |
+| Missing strings | 320 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 3 |
 | Fluent / properties syntax errors | 0 |
@@ -81,19 +163,20 @@ _Nothing retired._
 
 ### Completeness
 
-**327 strings** are not translated yet, concentrated in:
+**320 strings** are not translated yet, concentrated in:
 
 - `browser/browser/aiWindow.ftl` — 159
 - `browser/browser/aiWindowContent.ftl` — 80
 - `browser/browser/aiFeatures.ftl` — 43
 - `browser/browser/newtab/newtab.ftl` — 15
 - `browser/browser/newtab/onboarding.ftl` — 13
-- `browser/browser/preferences/containers.ftl` — 7
-- `browser/browser/preferences/preferences.ftl` — 4
-- `browser/browser/aboutPrivateBrowsing.ftl` — 3
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 1
+- `browser/browser/appmenu.ftl` — 2
+- `browser/browser/menubar.ftl` — 2
+- `browser/browser/preferences/preferences.ftl` — 2
+- `browser/browser/aboutDialog.ftl` — 1
+- `browser/browser/preferences/formAutofill.ftl` — 1
+- `dom/chrome/accessibility/AccessFu.properties` — 1
 - `toolkit/toolkit/global/mozBoxBase.ftl` — 1
-- `toolkit/toolkit/global/processTypes.ftl` — 1
 
 **Files absent from the locale:**
 
@@ -113,7 +196,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | apostrophe | `straight` 1 | **straight** |
 | ellipsis | `char` 459 | **char** |
 | dash | `em` 170, `en` 12 | **em** |
-| nbsp | `total` 5383, `narrow` 3, `before-punctuation` 49, `space-before-punctuation` 21 | **total** |
+| nbsp | `total` 5386, `narrow` 3, `before-punctuation` 49, `space-before-punctuation` 21 | **total** |
 | register | `informal` 79 | **informal** |
 
 ---
@@ -400,6 +483,12 @@ _Nothing reported._
 ---
 
 ## 4. Appendix
+
+### Dismissed by hand (0)
+
+_Nothing dismissed._
+
+_One line each in `locales/pl/dismissed.txt`. Delete the line and the finding returns._
 
 ### Suppressed as false positives (0)
 

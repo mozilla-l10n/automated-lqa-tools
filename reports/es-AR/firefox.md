@@ -2,33 +2,24 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-20 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `fef20cd7efc2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
-| **Previous run** | 2026-08-20 @ `b95608d528c8` |
+| **Generated** | 2026-08-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a9b9a116b725` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
+| **Previous run** | 2026-08-20 @ `fef20cd7efc2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,128 |
+| **Strings reviewed this run** | 0 of 18,129 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-
+Also for es-AR: [android](android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `preventedConsoleClear` — `devtools/shared/webconsole.properties` — `preventedConsoleClear` quotes “Registros presistentes” but the string it names, `webconsole.console.settings.menu.item.enablePersistentLogs.label`, reads “Registros persistentes”
-  - Current: `console.clear() se evitó debido a “Registros presistentes”`
-  - Source: `console.clear() was prevented due to “Persist Logs”`
-  - Suggest: `Registros persistentes`
-  - In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `noDomMutationBreakpoints` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints` quotes “Romper en...” but the string it names, `watchpoints.submenu`, reads “Interrumpir en…”
-  - Current: `Haga clic derecho en un elemento en el %S y seleccione “Romper en...” para agregar un punto de interrupción`
-  - Source: `Right click an element in the %S and select “Break on…” to add a breakpoint`
-  - Suggest: `Interrumpir en…`
-  - In the source this string quotes “Break on…”, which is exactly the value of `watchpoints.submenu` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -53,8 +44,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,128 |
-| Missing strings | 35 |
+| Strings | 18,129 |
+| Missing strings | 44 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -73,19 +64,20 @@ _Nothing retired._
 
 ### Completeness
 
-**35 strings** are not translated yet, concentrated in:
+**44 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 11
+- `browser/browser/newtab/newtab.ftl` — 12
 - `toolkit/toolkit/about/url-classifier.ftl` — 7
+- `browser/browser/appmenu.ftl` — 5
+- `browser/browser/preferences/preferences.ftl` — 5
 - `browser/browser/featureCallout.ftl` — 4
-- `browser/browser/preferences/preferences.ftl` — 4
-- `browser/browser/appmenu.ftl` — 3
+- `browser/browser/menubar.ftl` — 2
+- `browser/browser/aboutDialog.ftl` — 1
 - `browser/browser/aiWindowContent.ftl` — 1
+- `browser/browser/preferences/formAutofill.ftl` — 1
 - `browser/browser/newtab/asrouter.ftl` — 1
+- `dom/chrome/accessibility/AccessFu.properties` — 1
 - `toolkit/toolkit/about/aboutAddons.ftl` — 1
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 1
-- `toolkit/toolkit/global/mozBoxBase.ftl` — 1
-- `toolkit/toolkit/global/processTypes.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -1369,6 +1361,12 @@ _Nothing reported._
 ---
 
 ## 4. Appendix
+
+### Dismissed by hand (0)
+
+_Nothing dismissed._
+
+_One line each in `locales/es-AR/dismissed.txt`. Delete the line and the finding returns._
 
 ### Suppressed as false positives (0)
 

@@ -2,58 +2,24 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-20 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `fef20cd7efc2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
-| **Previous run** | 2026-08-20 @ `b95608d528c8` |
+| **Generated** | 2026-08-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a9b9a116b725` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
+| **Previous run** | 2026-08-20 @ `fef20cd7efc2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 15,475 |
+| **Strings reviewed this run** | 0 of 15,484 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-
+Also for id: [android](android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (7)
+### 🆕 New findings (0)
 
-- `default-browser-guidance-notification-body-instruction-win10` — `browser/browser/defaultBrowserNotification.ftl` — `default-browser-guidance-notification-body-instruction-win10` quotes “Browser web” but the string it names, `desktop-entry-generic-name`, reads “Peramban Web”
-  - Current: `Langkah ke-1: Buka Pengaturan > Aplikasi default Langkah ke-2: Gulir ke bawah ke “Browser web” Langkah ke-3: Pilih { -brand-short-name }`
-  - Source: `Step 1: Go to Settings > Default apps Step 2: Scroll down to “Web browser” Step 3: Select and choose { -brand-short-name }`
-  - Suggest: `Peramban Web`
-  - In the source this string quotes “Web browser”, which is exactly the value of `desktop-entry-generic-name` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `genai-chatbot-summarize-sidebar-provider-subtitle` — `browser/browser/genai.ftl` — `genai-chatbot-summarize-sidebar-provider-subtitle` quotes “Ringkas Laman” but the string it names, `genai-chatbot-summarize-button`, reads “Ringkas laman”
-  - Current: `Klik kanan pada chatbot AI Anda di bilah samping dan pilih “Ringkas Laman”.`
-  - Source: `Right-click on your AI chatbot in the sidebar and choose “Summarize Page”.`
-  - Suggest: `Ringkas laman`
-  - In the source this string quotes “Summarize Page”, which is exactly the value of `genai-chatbot-summarize-button` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `genai-chatbot-summarize-sidebar-generic-subtitle` — `browser/browser/genai.ftl` — `genai-chatbot-summarize-sidebar-generic-subtitle` quotes “Ringkas Halaman” but the string it names, `genai-chatbot-summarize-button`, reads “Ringkas laman”
-  - Current: `Klik kanan tombol kelip di bilah sisi dan pilih "Ringkas Halaman". Pertama kali dijalankan, Anda juga akan memilih suatu chatbot AI.`
-  - Source: `Right-click the sparkles button in the sidebar and choose “Summarize Page”. The first time, you’ll also choose an AI chatbot.`
-  - Suggest: `Ringkas laman`
-  - In the source this string quotes “Summarize Page”, which is exactly the value of `genai-chatbot-summarize-button` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `genai-chatbot-summarize-footer-provider-subtitle` — `browser/browser/genai.ftl` — `genai-chatbot-summarize-footer-provider-subtitle` quotes “Ringkas halaman” but the string it names, `genai-chatbot-summarize-button`, reads “Ringkas laman”
-  - Current: `Buka chatbot AI Anda di bilah samping dan pilih "Ringkas halaman" di bagian bawah.`
-  - Source: `Open your AI chatbot in the sidebar and choose “Summarize page” at the bottom.`
-  - Suggest: `Ringkas laman`
-  - In the source this string quotes “Summarize page”, which is exactly the value of `genai-chatbot-summarize-button` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `desktop-to-mobile-subtitle` — `browser/browser/newtab/onboarding.ftl` — `desktop-to-mobile-subtitle` quotes “Sinkronkan ke seluler” but the string it names, `sync-to-mobile-button-label`, reads “Sinkronkan ke ponsel”
-  - Current: `Pindai kode QR untuk mengunduh { -brand-product-name } untuk seluler. Setelah dipasang, pilih “Sinkronkan ke seluler” untuk mengakses kata sandi, markah, dan lainnya saat bepergian.`
-  - Source: `Scan the QR code to download { -brand-product-name } for mobile. Once installed, select “Sync to mobile” to access your passwords, bookmarks, and more on the go.`
-  - Suggest: `Sinkronkan ke ponsel`
-  - In the source this string quotes “Sync to mobile”, which is exactly the value of `sync-to-mobile-button-label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `preventedConsoleClear` — `devtools/shared/webconsole.properties` — `preventedConsoleClear` quotes “Persist Logs” but the string it names, `webconsole.console.settings.menu.item.enablePersistentLogs.label`, reads “Simpan Log”
-  - Current: `console.clear() tidak dijalankan karena “Persist Logs” aktif`
-  - Source: `console.clear() was prevented due to “Persist Logs”`
-  - Suggest: `Simpan Log`
-  - In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `preventedConsoleClear` — `devtools/client/webconsole.properties` — `preventedConsoleClear` quotes “Persist Logs” but the string it names, `webconsole.console.settings.menu.item.enablePersistentLogs.label`, reads “Simpan Log”
-  - Current: `console.clear() tidak dijalankan karena “Persist Logs” aktif`
-  - Source: `console.clear() was prevented due to “Persist Logs”`
-  - Suggest: `Simpan Log`
-  - In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -77,11 +43,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 353 |
-| Strings | 15,475 |
-| Missing strings | 2,688 |
+| Files | 354 |
+| Strings | 15,484 |
+| Missing strings | 2,689 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 7 |
+| Files absent from the locale | 6 |
 | Fluent / properties syntax errors | 0 |
 | Variable & placeholder mismatches | 0 |
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
@@ -98,10 +64,10 @@ _Nothing retired._
 
 ### Completeness
 
-**2,688 strings** are not translated yet, concentrated in:
+**2,689 strings** are not translated yet, concentrated in:
 
-- `browser/browser/preferences/preferences.ftl` — 423
-- `browser/browser/newtab/newtab.ftl` — 409
+- `browser/browser/preferences/preferences.ftl` — 425
+- `browser/browser/newtab/newtab.ftl` — 410
 - `browser/browser/aiWindow.ftl` — 159
 - `browser/browser/ipProtection.ftl` — 146
 - `browser/browser/newtab/onboarding.ftl` — 98
@@ -109,13 +75,12 @@ _Nothing retired._
 - `browser/browser/aiWindowContent.ftl` — 80
 - `browser/browser/newtab/asrouter.ftl` — 79
 - `browser/browser/browser.ftl` — 67
-- `browser/browser/featureCallout.ftl` — 64
+- `browser/browser/featureCallout.ftl` — 61
 - `toolkit/toolkit/about/aboutAddons.ftl` — 61
 - `browser/browser/profiles.ftl` — 56
 
 **Files absent from the locale:**
 
-- `browser/browser/aiFeatures.ftl`
 - `browser/browser/aiWindow.ftl`
 - `browser/browser/aiWindowContent.ftl`
 - `browser/browser/ipProtection.ftl`
@@ -1195,6 +1160,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 ---
 
 ## 4. Appendix
+
+### Dismissed by hand (0)
+
+_Nothing dismissed._
+
+_One line each in `locales/id/dismissed.txt`. Delete the line and the finding returns._
 
 ### Suppressed as false positives (0)
 

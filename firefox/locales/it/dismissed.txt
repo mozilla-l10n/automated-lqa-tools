@@ -19,3 +19,5 @@ ssl-error-missing-extended-master-secret — “Extension” is there
 default-browser-guidance-notification-body-instruction-win10 — That's the OS string.
 imported-safari-reading-list — Elenco lettura is correct
 migration-imported-safari-reading-list — Elenco lettura is correct
+noDomMutationBreakpoints — Element is there
+noDomMutationBreakpoints.notice — Element is there

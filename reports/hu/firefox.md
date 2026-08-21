@@ -2,38 +2,24 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-20 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `fef20cd7efc2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
-| **Previous run** | 2026-08-20 @ `b95608d528c8` |
+| **Generated** | 2026-08-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a9b9a116b725` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
+| **Previous run** | 2026-08-20 @ `fef20cd7efc2` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 18,116 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-
+Also for hu: [android](android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `splitview-onboarding-callout-subtitle-1` — `browser/browser/featureCallout.ftl` — `splitview-onboarding-callout-subtitle-1` quotes “Hozzáadás osztott nézethez” but the string it names, `customkeys-view-add-split-view`, reads “Osztott nézet hozzáadása”
-  - Current: `Kattintson jobb gombbal erre a lapra, és válassza a „Hozzáadás osztott nézethez” lehetőséget, hogy egyszerre két lapot lásson.`
-  - Source: `Right-click this tab and choose “Add Split View” to see two tabs at once.`
-  - Suggest: `Osztott nézet hozzáadása`
-  - In the source this string quotes “Add Split View”, which is exactly the value of `customkeys-view-add-split-view` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `noDomMutationBreakpoints.notice` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints.notice` quotes “Töréspont…” but the string it names, `watchpoints.submenu`, reads “Szüneteltetés…”
-  - Current: `Kattintson a jobb gombbal egy elemre a Vizsgálóban, és válassza a „Töréspont…” lehetőséget`
-  - Source: `Right click an element in the Inspector and select “Break on…” to add a breakpoint`
-  - Suggest: `Szüneteltetés…`
-  - In the source this string quotes “Break on…”, which is exactly the value of `watchpoints.submenu` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `noDomMutationBreakpoints` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints` quotes “Töréspont…” but the string it names, `watchpoints.submenu`, reads “Szüneteltetés…”
-  - Current: `Kattintson a jobb gombbal egy elemre itt: %S, és válassza a „Töréspont…” lehetőséget`
-  - Source: `Right click an element in the %S and select “Break on…” to add a breakpoint`
-  - Suggest: `Szüneteltetés…`
-  - In the source this string quotes “Break on…”, which is exactly the value of `watchpoints.submenu` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -59,7 +45,7 @@ _Nothing retired._
 |---|---|
 | Files | 360 |
 | Strings | 18,116 |
-| Missing strings | 47 |
+| Missing strings | 57 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -78,20 +64,20 @@ _Nothing retired._
 
 ### Completeness
 
-**47 strings** are not translated yet, concentrated in:
+**57 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 15
+- `browser/browser/newtab/newtab.ftl` — 16
 - `browser/browser/preferences/containers.ftl` — 7
 - `toolkit/toolkit/neterror/netError.ftl` — 7
-- `browser/browser/preferences/preferences.ftl` — 4
+- `browser/browser/preferences/preferences.ftl` — 6
 - `devtools/client/inspector.ftl` — 4
 - `browser/browser/aboutPrivateBrowsing.ftl` — 3
+- `browser/browser/appmenu.ftl` — 2
+- `browser/browser/menubar.ftl` — 2
 - `toolkit/toolkit/global/theme-picker.ftl` — 2
+- `browser/browser/aboutDialog.ftl` — 1
 - `browser/browser/firefoxView.ftl` — 1
-- `toolkit/toolkit/about/aboutNetworking.ftl` — 1
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 1
-- `toolkit/toolkit/global/mozBoxBase.ftl` — 1
-- `toolkit/toolkit/global/processTypes.ftl` — 1
+- `browser/browser/preferences/formAutofill.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -1092,6 +1078,12 @@ _Nothing reported._
 ---
 
 ## 4. Appendix
+
+### Dismissed by hand (0)
+
+_Nothing dismissed._
+
+_One line each in `locales/hu/dismissed.txt`. Delete the line and the finding returns._
 
 ### Suppressed as false positives (0)
 

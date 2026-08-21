@@ -2,54 +2,37 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-20 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `fef20cd7efc2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
-| **Previous run** | 2026-08-20 @ `b95608d528c8` |
+| **Generated** | 2026-08-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a9b9a116b725` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
+| **Previous run** | 2026-08-20 @ `fef20cd7efc2` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 18,161 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-
+Also for en-GB: [android](android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `genai-chatbot-summarize-sidebar-provider-subtitle` — `browser/browser/genai.ftl` — `genai-chatbot-summarize-sidebar-provider-subtitle` quotes “Summarise Page” but the string it names, `genai-chatbot-summarize-button`, reads “Summarise page”
-  - Current: `Right-click on your AI chatbot in the sidebar and choose “Summarise Page”.`
-  - Source: `Right-click on your AI chatbot in the sidebar and choose “Summarize Page”.`
-  - Suggest: `Summarise page`
-  - In the source this string quotes “Summarize Page”, which is exactly the value of `genai-chatbot-summarize-button` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `genai-chatbot-summarize-sidebar-generic-subtitle` — `browser/browser/genai.ftl` — `genai-chatbot-summarize-sidebar-generic-subtitle` quotes “Summarise Page” but the string it names, `genai-chatbot-summarize-button`, reads “Summarise page”
-  - Current: `Right-click the sparkles button in the sidebar and choose “Summarise Page”. The first time, you’ll also choose an AI chatbot.`
-  - Source: `Right-click the sparkles button in the sidebar and choose “Summarize Page”. The first time, you’ll also choose an AI chatbot.`
-  - Suggest: `Summarise page`
-  - In the source this string quotes “Summarize Page”, which is exactly the value of `genai-chatbot-summarize-button` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+_No new findings._
 
-### ✅ Fixed since the last run (4)
+### ✅ Fixed since the last run (2)
 
-- `rights-webservices-term-6` — `toolkit/toolkit/about/aboutRights.ftl` — "canceled" keeps the en-US single-l spelling where this locale consistently writes "cancelled".
-  - Current: `modified or canceled without`
-  - Source: `{ -vendor-short-name } may update these terms as necessary from time to time. These terms may not be modified or canceled without { -vendor-short-name }’s written agreement.`
-  - Suggest: `modified or cancelled without`
-  - The locale uses "cancelled" everywhere else (toolkit/toolkit/downloads/downloadUI.ftl ×6, toolkit/toolkit/about/aboutWebauthn.ftl, toolkit/toolkit/neterror/netError.ftl, browser/browser/downloads.ftl, browser/chrome/browser/downloads/downloads.properties). Only two strings in the tree retain "canceled".
-- `rights-webservices-term-6` — `toolkit/toolkit/about/aboutRights.ftl` — `rights-webservices-term-6` still uses the en-US form “canceled”
-  - Current: `{ -vendor-short-name } may update these terms as necessary from time to time. These terms may not be modified or canceled without { -vendor-short-name }’s written agreement.`
-  - Suggest: `cancelled`
-  - This locale writes “cancelled” for “canceled” in 20 other strings and keeps “canceled” in 2. This string is byte-identical to en-US, so the substitution looks simply to have been missed.
-- `abuse-report-messagebar-aborted` — `toolkit/toolkit/about/abuseReports.ftl` — "canceled" keeps the en-US single-l spelling where this locale consistently writes "cancelled".
-  - Current: `</span> canceled.`
-  - Source: `Report for <span data-l10n-name="addon-name">{ $addon-name }</span> canceled.`
-  - Suggest: `</span> cancelled.`
-  - en-GB doubles the l before -ed here, and the locale does so consistently (downloadUI.ftl, aboutWebauthn.ftl, netError.ftl, downloads.ftl, newtab.ftl). This string and rights-webservices-term-6 are the only two holdouts.
-- `abuse-report-messagebar-aborted` — `toolkit/toolkit/about/abuseReports.ftl` — `abuse-report-messagebar-aborted` still uses the en-US form “canceled”
-  - Current: `Report for <span data-l10n-name="addon-name">{ $addon-name }</span> canceled.`
-  - Suggest: `cancelled`
-  - This locale writes “cancelled” for “canceled” in 20 other strings and keeps “canceled” in 2. This string is byte-identical to en-US, so the substitution looks simply to have been missed.
+- `permissions-exceptions-https-only-desc` — `browser/browser/preferences/permissions.ftl` — Uses en-US “websites” where this locale consistently writes “web sites”.
+  - Current: `for specific websites.`
+  - Source: `You can turn off HTTPS-Only Mode for specific websites. { -brand-short-name } won’t attempt to upgrade the connection to secure HTTPS for those sites. Exceptions do not apply to private windows.`
+  - Suggest: `for specific web sites.`
+  - en-GB writes “web site(s)” throughout the tree (251 occurrences across 45 files, including the immediately following string permissions-exceptions-https-only-desc2, which renders the same sentence as “for specific web sites”). This is the only user-visible “websites” left in the preferences partition.
+- `preferences-data-migration-description` — `browser/browser/preferences/preferences.ftl` — “auto-fill” hyphenated here but spelled “autofill” everywhere else in the locale.
+  - Current: `auto-fill data`
+  - Source: `Import bookmarks, passwords, history, and autofill data into { -brand-short-name }.`
+  - Suggest: `autofill data`
+  - This is the only occurrence of “auto-fill” in the whole en-GB tree; the sibling string preferences-data-migration-group in the same file says “autofill data”, and formAutofill.ftl/preferences.ftl use “autofill” consistently (180+ occurrences).
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -71,7 +54,7 @@ _Nothing retired._
 |---|---|
 | Files | 360 |
 | Strings | 18,161 |
-| Missing strings | 2 |
+| Missing strings | 12 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -90,9 +73,15 @@ _Nothing retired._
 
 ### Completeness
 
-**2 strings** are not translated yet, concentrated in:
+**12 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 1
+- `browser/browser/appmenu.ftl` — 2
+- `browser/browser/menubar.ftl` — 2
+- `browser/browser/preferences/preferences.ftl` — 2
+- `browser/browser/newtab/newtab.ftl` — 2
+- `browser/browser/aboutDialog.ftl` — 1
+- `browser/browser/preferences/formAutofill.ftl` — 1
+- `dom/chrome/accessibility/AccessFu.properties` — 1
 - `toolkit/toolkit/global/mozBoxBase.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
@@ -118,12 +107,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (33)
+## 3. Open findings (31)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 8 |
-| 2 | Wrong content (says something other than the English) | 13 |
+| 2 | Wrong content (says something other than the English) | 11 |
 | 3 | Degraded language (grammar, spelling, terminology) | 10 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
@@ -192,16 +181,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
   - Source: `Print using the system print dialog.`
   - Suggest: `Print using the system print dialog.`
   - toolkit/toolkit/printing/printUI.ftl and toolkit/chrome/global/printdialog.properties in this same tree use "print dialog" for the identical concept, so this string diverges from the locale's own printing terminology.
-- `permissions-exceptions-https-only-desc` — `browser/browser/preferences/permissions.ftl` — Uses en-US “websites” where this locale consistently writes “web sites”.
-  - Current: `for specific websites.`
-  - Source: `You can turn off HTTPS-Only Mode for specific websites. { -brand-short-name } won’t attempt to upgrade the connection to secure HTTPS for those sites. Exceptions do not apply to private windows.`
-  - Suggest: `for specific web sites.`
-  - en-GB writes “web site(s)” throughout the tree (251 occurrences across 45 files, including the immediately following string permissions-exceptions-https-only-desc2, which renders the same sentence as “for specific web sites”). This is the only user-visible “websites” left in the preferences partition.
-- `preferences-data-migration-description` — `browser/browser/preferences/preferences.ftl` — “auto-fill” hyphenated here but spelled “autofill” everywhere else in the locale.
-  - Current: `auto-fill data`
-  - Source: `Import bookmarks, passwords, history, and autofill data into { -brand-short-name }.`
-  - Suggest: `autofill data`
-  - This is the only occurrence of “auto-fill” in the whole en-GB tree; the sibling string preferences-data-migration-group in the same file says “autofill data”, and formAutofill.ftl/preferences.ftl use “autofill” consistently (180+ occurrences).
 - `shopping-avatar-tooltip` — `browser/browser/profiles.ftl` — The same shopping icon is called a "basket" in its label and alt text but a "trolley" in its tooltip.
   - Current: `Apply shopping trolley avatar`
   - Source: `tooltiptext: Apply shopping cart avatar`
@@ -308,6 +287,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ## 4. Appendix
 
+### Dismissed by hand (0)
+
+_Nothing dismissed._
+
+_One line each in `locales/en-GB/dismissed.txt`. Delete the line and the finding returns._
+
 ### Suppressed as false positives (0)
 
 _No suppression rules have matched._
@@ -318,8 +303,10 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Resolved to date (4)
+### Resolved to date (6)
 
+- `permissions-exceptions-https-only-desc` — `browser/browser/preferences/permissions.ftl` — fixed 2026-08-21
+- `preferences-data-migration-description` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-21
 - `rights-webservices-term-6` — `toolkit/toolkit/about/aboutRights.ftl` — fixed 2026-08-20
 - `rights-webservices-term-6` — `toolkit/toolkit/about/aboutRights.ftl` — fixed 2026-08-20
 - `abuse-report-messagebar-aborted` — `toolkit/toolkit/about/abuseReports.ftl` — fixed 2026-08-20

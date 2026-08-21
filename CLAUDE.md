@@ -68,6 +68,14 @@ it was written after getting it wrong:
 - **needs-recheck** — the string moved but text matching cannot tell whether
   the defect survived. Say so; do not guess. A quoted fragment stays a
   substring when the fix was to add words around it.
+
+  `string_hash` is what makes "moved" answerable, so it has to record the
+  content **when the finding was raised** — for an imported finding, the
+  review changeset, not the import date. Anchored to the wrong revision, a
+  finding on a string edited between the two reads as untouched and can
+  never be re-examined. Never backfill the missing `current` with the whole
+  value instead: any later edit would then read as a fix, which is the
+  optimistic heuristic this system exists to avoid.
 - **dismissed / suppressed** — a person said it is fine. Kept with the
   reason, never deleted.
 

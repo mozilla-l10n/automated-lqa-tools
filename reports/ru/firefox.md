@@ -2,33 +2,24 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-20 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `fef20cd7efc2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
-| **Previous run** | 2026-08-20 @ `b95608d528c8` |
+| **Generated** | 2026-08-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a9b9a116b725` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
+| **Previous run** | 2026-08-20 @ `fef20cd7efc2` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 18,161 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-
+Also for ru: [android](android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — `backup-file-moz-browser-restore-step-2-1` quotes “Восстановить ваши данные” but the string it names, `restore-from-backup-header`, reads “Восстановите свои данные”
-  - Current: `Нажмите «Восстановить ваши данные» и выберите этот файл`
-  - Source: `Click “Restore your data” and select this file`
-  - Suggest: `Восстановите свои данные`
-  - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — `backup-file-other-browser-restore-step-3-1` quotes “Восстановить ваши данные” but the string it names, `restore-from-backup-header`, reads “Восстановите свои данные”
-  - Current: `Нажмите «Восстановить ваши данные» и выберите этот файл`
-  - Source: `Click “Restore your data” and select this file`
-  - Suggest: `Восстановите свои данные`
-  - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -38,9 +29,10 @@ _Nothing was fixed._
 
 _Nothing withdrawn._
 
-### 🔁 String changed, defect not verifiable — needs a re-read (0)
+### 🔁 String changed, defect not verifiable — needs a re-read (1)
 
-_Nothing to re-read._
+- `mr2-onboarding-thank-you-text` — `browser/browser/newtab/onboarding.ftl` — the dash is U+4E00, the CJK ideograph for "one", not an em dash
+  - Source: `{ -brand-short-name } is an independent browser backed by a non-profit. Together, we’re making the web safer, healthier, and more private.`
 
 ### 🗑 Retired — the string no longer exists upstream (0)
 
@@ -54,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 360 |
 | Strings | 18,161 |
-| Missing strings | 2 |
+| Missing strings | 12 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -73,9 +65,15 @@ _Nothing retired._
 
 ### Completeness
 
-**2 strings** are not translated yet, concentrated in:
+**12 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 1
+- `browser/browser/appmenu.ftl` — 2
+- `browser/browser/menubar.ftl` — 2
+- `browser/browser/preferences/preferences.ftl` — 2
+- `browser/browser/newtab/newtab.ftl` — 2
+- `browser/browser/aboutDialog.ftl` — 1
+- `browser/browser/preferences/formAutofill.ftl` — 1
+- `dom/chrome/accessibility/AccessFu.properties` — 1
 - `toolkit/toolkit/global/mozBoxBase.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
@@ -988,6 +986,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 ---
 
 ## 4. Appendix
+
+### Dismissed by hand (0)
+
+_Nothing dismissed._
+
+_One line each in `locales/ru/dismissed.txt`. Delete the line and the finding returns._
 
 ### Suppressed as false positives (0)
 

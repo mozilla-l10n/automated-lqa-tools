@@ -2,16 +2,16 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-20 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `fef20cd7efc2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
-| **Previous run** | 2026-08-20 @ `b95608d528c8` |
+| **Generated** | 2026-08-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a9b9a116b725` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
+| **Previous run** | 2026-08-20 @ `fef20cd7efc2` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 18,348 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-
+Also for fr: [android](android.md)
 
 ---
 
@@ -29,9 +29,60 @@ _Nothing was fixed._
 
 _Nothing withdrawn._
 
-### 🔁 String changed, defect not verifiable — needs a re-read (0)
+### 🔁 String changed, defect not verifiable — needs a re-read (21)
 
-_Nothing to re-read._
+- `browser-main-window-window-titles` — `browser/browser/browser.ftl` — browser-main-window-window-titles (.data-content-title-private) — browser/browser/browser.ftl:20 — double regular space before "(navigation privée)".
+  - Source: `data-content-title-default: { $content-title } — { -brand-full-name } data-content-title-private: { $content-title } — { -brand-full-name } Private Browsing data-title-default: { -brand-full-name } data-title-private: {…`
+  - Suggest: `.data-content-title-private`
+- `contextual-manager-passwords-breached-origin-heading-and-message` — `browser/browser/contextual-manager.ftl` — contextual-manager-passwords-breached-origin-heading-and-message (.message) — browser/browser/contextual-manager.ftl:202 — FR: "…ou ayant fuités." → ayant fuité (participle with "ayant", no preceding object, invariable).
+  - Source: `heading: Password change recommended message: Passwords from this website were reported stolen or leaked. Change your password to protect your account.`
+  - Suggest: `ayant fuité`
+- `contextual-manager-passwords-remove-all-title` — `browser/browser/contextual-manager.ftl` — two consecutive spaces (U+00A0 + U+202F) between { $total } and "mots".
+  - Source: `{$total ->} [1] Remove password? [other] Remove all { $total } passwords?`
+- `customkeys-conflict-confirm` — `browser/browser/customkeys.ftl` — regular space before ? (siblings use NBSP).
+  - Source: `This key is already assigned to { $conflict }. Do you want to replace it?`
+- `sidebar-callout-survey-productive-question` — `browser/browser/featureCallout.ftl` — browser/browser/featureCallout.ftl:239,254 — FR: "êtes vous d'accord" → êtes-vous (inversion hyphen).
+  - Source: `To what extent do you agree or disagree with this statement:<br/> “The { -brand-short-name } sidebar helps me be more productive”?`
+  - Suggest: `êtes-vous`
+- `sidebar-genai-survey-productive-question` — `browser/browser/featureCallout.ftl` — browser/browser/featureCallout.ftl:239,254 — FR: "êtes vous d'accord" → êtes-vous (inversion hyphen).
+  - Source: `To what extent do you agree or disagree with this statement:<br/> “The AI chatbot in the sidebar helps me be more productive”?`
+  - Suggest: `êtes-vous`
+- `newtab-clock-widget-edit-item-with-nickname` — `browser/browser/newtab/newtab.ftl` — newtab-clock-widget-edit-item-with-nickname (.aria-label) — browser/browser/newtab/newtab.ftl:1608 — regular space before : (parallel string line 1629 uses NBSP).
+  - Source: `aria-label: { $city }, nickname: { $nickname }`
+  - Suggest: `.aria-label`
+- `multi-profile-spotlight-title` — `browser/browser/newtab/onboarding.ftl` — regular space before !.
+  - Source: `Say hello to { -brand-product-name } profiles`
+- `places-delete-bookmark` — `browser/browser/places.ftl` — FR: "Supprimer le marque page" / "les marques pages" → marque-page / marque-pages (hyphen; wrong plural).
+  - Source: `accesskey: D label: {$count ->} [1] Delete Bookmark [other] Delete Bookmarks`
+- `policy-GenerativeAI` — `browser/browser/policies/policies-descriptions.ftl` — browser/browser/policies/policies-descriptions.ftl:92,132 — missing trailing period (all sibling descriptions end with one).
+  - Source: `Configure generative AI features.`
+- `policy-PictureInPicture` — `browser/browser/policies/policies-descriptions.ftl` — browser/browser/policies/policies-descriptions.ftl:92,132 — missing trailing period (all sibling descriptions end with one).
+  - Source: `Enable or disable Picture-in-Picture.`
+- `app-manager-handle-file` — `browser/browser/preferences/applicationManager.ftl` — browser/browser/preferences/applicationManager.ftl:13,16 — FR: "…utilisées pour Liens { $type }." / "…pour Contenu { $type }." → …pour gérer les liens { $type }. / …pour gérer le contenu { $type }. (verb "handle/gérer" dropped, noun wrongly capitalized).
+  - Source: `The following applications can be used to handle { $type } content.`
+  - Suggest: `…pour gérer les liens { $type }.`
+- `app-manager-handle-protocol` — `browser/browser/preferences/applicationManager.ftl` — browser/browser/preferences/applicationManager.ftl:13,16 — FR: "…utilisées pour Liens { $type }." / "…pour Contenu { $type }." → …pour gérer les liens { $type }. / …pour gérer le contenu { $type }. (verb "handle/gérer" dropped, noun wrongly capitalized).
+  - Source: `The following applications can be used to handle { $type } links.`
+  - Suggest: `…pour gérer les liens { $type }.`
+- `content-blocking-rfp-incompatibility-warning` — `browser/browser/preferences/preferences.ftl` — browser/browser/preferences/preferences.ftl:1995,2702 — FR: "quelques uns" → quelques-uns (hyphen).
+  - Source: `You’re using Resist Fingerprinting (RFP), which replaces some of { -brand-short-name }’s fingerprinting protection settings. This might cause some sites to break.`
+- `preferences-etp-rfp-warning-message` — `browser/browser/preferences/preferences.ftl` — browser/browser/preferences/preferences.ftl:1995,2702 — FR: "quelques uns" → quelques-uns (hyphen).
+  - Source: `message: You’re using Resist Fingerprinting (RFP), which replaces some of { -brand-short-name }’s fingerprinting protection settings. This might cause some sites to break.`
+- `settings-redesign-promo` — `browser/browser/preferences/preferences.ftl` — settings-redesign-promo (.heading) — browser/browser/preferences/preferences.ftl:2251 — regular space before !.
+  - Source: `heading: Same settings, new look! message: We reorganized this page so it’s easier to scan and explore. Your personal settings haven’t changed, and everything’s still here. Tip: use search to jump straight to what you n…`
+  - Suggest: `.heading`
+- `urlbar-translations-button2` — `browser/browser/translations.ftl` — browser/browser/translations.ftl:12,16 — FR: "Bêta" → Beta (comment: must stay untranslated to match the un-localized BETA icon).
+  - Source: `tooltiptext: Translate this page - Beta`
+  - Suggest: `Beta`
+- `inactive-css-border-image` — `devtools/client/tooltips.ftl` — inverted <strong> tags: FR: "</strong>{ $property }<strong> n'a aucun effet…" → <strong>{ $property }</strong> … (property isn't bolded; following text wrongly is).
+  - Source: `<strong>{ $property }</strong> has no effect on this element since it cannot be applied to internal table elements where <strong>border-collapse</strong> is set to <strong>collapse</strong> on the parent table element.`
+- `learn-more` — `devtools/client/tooltips.ftl` — trailing space inside <span data-l10n-name="link">En savoir plus </span>.
+  - Source: `<span data-l10n-name="link">Learn more</span>`
+- `support-remote-experiments-see-about-studies` — `toolkit/toolkit/about/aboutSupport.ftl` — double space "ce type".
+  - Source: `See <a data-l10n-name="support-about-studies-link">about:studies</a> for more information, including how to disable individual experiments or to disable { -brand-short-name } from running this type of experiment in the…`
+- `third-party-detail-occurrences` — `toolkit/toolkit/about/aboutThirdParty.ftl` — third-party-detail-occurrences (.title) — toolkit/toolkit/about/aboutThirdParty.ftl:13 — FR: "Nombre de fois dont ce module a été chargé." → Nombre de fois que ce module a été chargé.
+  - Source: `(value): Occurrences title: How many times this module was loaded.`
+  - Suggest: `Nombre de fois que ce module a été chargé.`
 
 ### 🗑 Retired — the string no longer exists upstream (0)
 
@@ -45,7 +96,7 @@ _Nothing retired._
 |---|---|
 | Files | 370 |
 | Strings | 18,348 |
-| Missing strings | 2 |
+| Missing strings | 12 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -64,9 +115,15 @@ _Nothing retired._
 
 ### Completeness
 
-**2 strings** are not translated yet, concentrated in:
+**12 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 1
+- `browser/browser/appmenu.ftl` — 2
+- `browser/browser/menubar.ftl` — 2
+- `browser/browser/preferences/preferences.ftl` — 2
+- `browser/browser/newtab/newtab.ftl` — 2
+- `browser/browser/aboutDialog.ftl` — 1
+- `browser/browser/preferences/formAutofill.ftl` — 1
+- `dom/chrome/accessibility/AccessFu.properties` — 1
 - `toolkit/toolkit/global/mozBoxBase.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
@@ -220,6 +277,12 @@ _Nothing reported._
 ---
 
 ## 4. Appendix
+
+### Dismissed by hand (0)
+
+_Nothing dismissed._
+
+_One line each in `locales/fr/dismissed.txt`. Delete the line and the finding returns._
 
 ### Suppressed as false positives (0)
 

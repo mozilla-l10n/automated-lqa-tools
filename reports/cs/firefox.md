@@ -2,48 +2,24 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-20 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `fef20cd7efc2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
-| **Previous run** | 2026-08-20 @ `b95608d528c8` |
+| **Generated** | 2026-08-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a9b9a116b725` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
+| **Previous run** | 2026-08-20 @ `fef20cd7efc2` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 18,131 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-
+Also for cs: [android](android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (5)
+### 🆕 New findings (0)
 
-- `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — `backup-file-moz-browser-restore-step-2-1` quotes “Obnovit data” but the string it names, `restore-from-backup-header`, reads “Obnovení vašich dat”
-  - Current: `Klepněte na “Obnovit data” a vyberte tento soubor`
-  - Source: `Click “Restore your data” and select this file`
-  - Suggest: `Obnovení vašich dat`
-  - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — `backup-file-other-browser-restore-step-3-1` quotes “Obnovit data” but the string it names, `restore-from-backup-header`, reads “Obnovení vašich dat”
-  - Current: `Klepněte na “Obnovit data” a vyberte tento soubor`
-  - Source: `Click “Restore your data” and select this file`
-  - Suggest: `Obnovení vašich dat`
-  - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `desktop-to-mobile-subtitle` — `browser/browser/newtab/onboarding.ftl` — `desktop-to-mobile-subtitle` quotes “Synchronizovat s mobilním telefonem” but the string it names, `sync-to-mobile-button-label`, reads “Synchronizace s mobilem”
-  - Current: `{$sel_1 ->} [with-cases] Naskenujte QR kód a stáhněte si { -brand-product-name } pro mobily. Po instalaci vyberte možnost "Synchronizovat s mobilním telefonem" a získejte přístup ke svým heslům, záložkám a dalším údajům…`
-  - Source: `Scan the QR code to download { -brand-product-name } for mobile. Once installed, select “Sync to mobile” to access your passwords, bookmarks, and more on the go.`
-  - Suggest: `Synchronizace s mobilem`
-  - In the source this string quotes “Sync to mobile”, which is exactly the value of `sync-to-mobile-button-label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `toolbox-local-mode-notice` — `devtools/client/toolbox.ftl` — `toolbox-local-mode-notice` quotes “lokálního režimu” but the string it names, `options-local-mode-label`, reads “Lokální režim”
-  - Current: `Tento dokument lze také načíst z adresy „{ $url }“ pomocí „lokálního režimu“ v Nástrojích pro vývojáře, který lze aktivovat v panelu nastavení.`
-  - Source: `This document could also be loaded from “{ $url }” using DevTools “Local Mode”, which can be enabled in the settings panel.`
-  - Suggest: `Lokální režim`
-  - In the source this string quotes “Local Mode”, which is exactly the value of `options-local-mode-label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `colorway-removal-notice-message` — `toolkit/toolkit/about/aboutAddons.ftl` — `colorway-removal-notice-message` quotes “Uložené motivy” but the string it names, `theme-disabled-heading2`, reads “Uložené vzhledy”
-  - Current: `heading: Vaše palety barev byly odstraněny. message: {$sel_1 ->} [masculine] { -brand-product-name } aktualizoval svoji kolekci palet barev. Odstranili jsme staré verze z vašeho listu „Uložené motivy“. Získejte nové ver…`
-  - Source: `heading: Your colorway theme(s) were removed. message: { -brand-product-name } updated its colorways collection. We removed the old version(s) from your “Saved Themes” list. Get new versions on the add-ons site.`
-  - Suggest: `Uložené vzhledy`
-  - In the source this string quotes “Saved Themes”, which is exactly the value of `theme-disabled-heading2` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -69,7 +45,7 @@ _Nothing retired._
 |---|---|
 | Files | 360 |
 | Strings | 18,131 |
-| Missing strings | 32 |
+| Missing strings | 42 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -88,12 +64,17 @@ _Nothing retired._
 
 ### Completeness
 
-**32 strings** are not translated yet, concentrated in:
+**42 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 15
+- `browser/browser/newtab/newtab.ftl` — 16
 - `browser/browser/preferences/containers.ftl` — 7
-- `browser/browser/preferences/preferences.ftl` — 4
+- `browser/browser/preferences/preferences.ftl` — 6
 - `browser/browser/aboutPrivateBrowsing.ftl` — 3
+- `browser/browser/appmenu.ftl` — 2
+- `browser/browser/menubar.ftl` — 2
+- `browser/browser/aboutDialog.ftl` — 1
+- `browser/browser/preferences/formAutofill.ftl` — 1
+- `dom/chrome/accessibility/AccessFu.properties` — 1
 - `toolkit/toolkit/about/aboutProcesses.ftl` — 1
 - `toolkit/toolkit/global/mozBoxBase.ftl` — 1
 - `toolkit/toolkit/global/processTypes.ftl` — 1
@@ -1115,6 +1096,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 ---
 
 ## 4. Appendix
+
+### Dismissed by hand (0)
+
+_Nothing dismissed._
+
+_One line each in `locales/cs/dismissed.txt`. Delete the line and the finding returns._
 
 ### Suppressed as false positives (0)
 

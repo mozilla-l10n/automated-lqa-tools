@@ -2,16 +2,16 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-20 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `fef20cd7efc2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
-| **Previous run** | 2026-08-20 @ `b95608d528c8` |
+| **Generated** | 2026-08-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a9b9a116b725` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
+| **Previous run** | 2026-08-20 @ `fef20cd7efc2` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 18,156 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-
+Also for nl: [android](android.md)
 
 ---
 
@@ -25,104 +25,64 @@ _No new findings._
 
 _Nothing was fixed._
 
-### ↩︎ Withdrawn — no longer considered a defect (23)
+### ↩︎ Withdrawn — no longer considered a defect (0)
 
-- `addon-install-error-incorrect-hash` — `browser/browser/addonNotifications.ftl` — addon-install-error-incorrect-hash, addon-local-install-error-incorrect-hash — addonNotifications.ftl — relative clause collapsed. Current: "…niet overeenkomt met de verwachte add-on { -brand-short-name }." → Suggest: "…niet overeenkomt met de add-on die { -brand-short-name } verwachtte."
-  - Current: `{ -brand-short-name }`
-  - Source: `The add-on could not be installed because it does not match the add-on { -brand-short-name } expected.`
-  - (Retired: the suggested text is identical to the current text.)
-- `addon-local-install-error-incorrect-hash` — `browser/browser/addonNotifications.ftl` — addon-install-error-incorrect-hash, addon-local-install-error-incorrect-hash — addonNotifications.ftl — relative clause collapsed. Current: "…niet overeenkomt met de verwachte add-on { -brand-short-name }." → Suggest: "…niet overeenkomt met de add-on die { -brand-short-name } verwachtte."
-  - Current: `{ -brand-short-name }`
-  - Source: `This add-on could not be installed because it does not match the add-on { -brand-short-name } expected.`
-  - (Retired: the suggested text is identical to the current text.)
-- `smart-window-opened-tabs-summary-group` — `browser/browser/aiWindowContent.ftl` — subjectless finite verb; the parallel smart-window-grouped-tabs-summary is correct. Current: "Heeft de groep ‘{ $label }’ gemaakt…" → Suggest: "Groep ‘{ $label }’ gemaakt…"
-  - Current: `{ $label }`
-  - Source: `{$count ->} [other] Created the group “{ $label }” and opened { $count } tabs.`
-  - (Retired: the suggested text is identical to the current text.)
-- `smart-window-switched-tab-summary` — `browser/browser/aiWindowContent.ftl` — smart-window-switched-tab-label, smart-window-switched-tab-summary — aiWindowContent.ftl — "switched to" is not "swapped". Current: "Omgewisselde tabbladen" / "Omgewisseld naar ‘{ $title }’." → Suggest: "Van tabblad gewisseld" / "Overgeschakeld naar ‘{ $title }’."
-  - Current: `{ $title }`
-  - Source: `Switched to “{ $title }”.`
-  - (Retired: the suggested text is identical to the current text.)
-- `onboarding-aw-finish-setup-button` — `browser/browser/browser.ftl` — Current: "Instellen { -brand-short-name } voltooien" → Suggest: "Instellen van { -brand-short-name } voltooien" (as in onboarding-checklist-title)
-  - Current: `{ -brand-short-name }`
-  - Source: `label: Finish setup tooltiptext: Finish setting up { -brand-short-name }`
-  - (Retired: the suggested text is identical to the current text.)
-- `firefoxview-closed-tabs-dismiss-tab` — `browser/browser/firefoxView.ftl` — firefoxview-closed-tabs-dismiss-tab (.title), fxviewtabrow-dismiss-tab-button (.title) — firefoxView.ftl, fxviewTabList.ftl — these dismiss an already-closed tab from the list; "sluiten" collides with the real close action (fxviewtabrow-close-tab-button). Current: "{ $tabTitle } sluiten" → Suggest: "{ $tabTitle } uit de lijst verwijderen"
-  - Current: `{ $tabTitle }`
-  - Source: `title: Dismiss { $tabTitle }`
-  - (Retired: the suggested text is identical to the current text.)
-- `fxviewtabrow-dismiss-tab-button` — `browser/browser/fxviewTabList.ftl` — firefoxview-closed-tabs-dismiss-tab (.title), fxviewtabrow-dismiss-tab-button (.title) — firefoxView.ftl, fxviewTabList.ftl — these dismiss an already-closed tab from the list; "sluiten" collides with the real close action (fxviewtabrow-close-tab-button). Current: "{ $tabTitle } sluiten" → Suggest: "{ $tabTitle } uit de lijst verwijderen"
-  - Current: `{ $tabTitle }`
-  - Source: `title: Dismiss { $tabTitle }`
-  - (Retired: the suggested text is identical to the current text.)
-- `newtab-search-box-handoff-input` — `browser/browser/newtab/newtab.ftl` — newtab/newtab.ftl — infinitive and imperative coordinated. Current: "Met { $engine } zoeken of voer adres in" → Suggest: "Zoek met { $engine } of voer adres in"
-  - Current: `{ $engine }`
-  - Source: `aria-label: Search with { $engine } or enter address placeholder: Search with { $engine } or enter address title: Search with { $engine } or enter address`
-  - (Retired: the suggested text is identical to the current text.)
-- `newtab-search-box-handoff-text` — `browser/browser/newtab/newtab.ftl` — newtab/newtab.ftl — infinitive and imperative coordinated. Current: "Met { $engine } zoeken of voer adres in" → Suggest: "Zoek met { $engine } of voer adres in"
-  - Current: `{ $engine }`
-  - Source: `Search with { $engine } or enter address`
-  - (Retired: the suggested text is identical to the current text.)
-- `newtab-section-unblock-topic` — `browser/browser/newtab/newtab.ftl` — missing preposition. Current: "Blokkering { $topic } opheffen" → Suggest: "Blokkering van { $topic } opheffen"
-  - Current: `{ $topic }`
-  - Source: `aria-label: Unblock { $topic }`
-  - (Retired: the suggested text is identical to the current text.)
-- `newtab-weather-see-forecast` — `browser/browser/newtab/newtab.ftl` — newtab-weather-see-forecast (.title), newtab-weather-see-forecast-description (.title) — newtab/newtab.ftl — $provider is the weather service. Current: "…bekijken voor { $provider }" → Suggest: "…bekijken in { $provider }"
-  - Current: `{ $provider }`
-  - Source: `title: See forecast in { $provider }`
-  - (Retired: the suggested text is identical to the current text.)
-- `newtab-weather-see-forecast-description` — `browser/browser/newtab/newtab.ftl` — newtab-weather-see-forecast (.title), newtab-weather-see-forecast-description (.title) — newtab/newtab.ftl — $provider is the weather service. Current: "…bekijken voor { $provider }" → Suggest: "…bekijken in { $provider }"
-  - Current: `{ $provider }`
-  - Source: `aria-description: { $provider } ∙ Sponsored title: See forecast in { $provider }`
-  - (Retired: the suggested text is identical to the current text.)
-- `mr2022-onboarding-welcome-pin-subtitle` — `browser/browser/newtab/onboarding.ftl` — adverb wedged between verb and object. Current: "Start overal { -brand-short-name } met een enkele klik." → Suggest: "Start { -brand-short-name } overal met een enkele klik."
-  - Current: `{ -brand-short-name }`
-  - Source: `Launch { -brand-short-name } from anywhere with a single click. Every time you do, you’re choosing a more open and independent web.`
-  - (Retired: the suggested text is identical to the current text.)
-- `address-capture-save-doorhanger-description` — `browser/browser/preferences/formAutofill.ftl` — address-capture-save-doorhanger-description, passport-capture-save-doorhanger-description — browser/browser/preferences/formAutofill.ftl — anglicism "save to". Current: "Sla gegevens op naar { -brand-short-name }" → Suggest: "…op in { -brand-short-name }"
-  - Current: `{ -brand-short-name }`
-  - Source: `Save info to { -brand-short-name } so you can fill out forms quickly.`
-  - (Retired: the suggested text is identical to the current text.)
-- `passport-capture-save-doorhanger-description` — `browser/browser/preferences/formAutofill.ftl` — address-capture-save-doorhanger-description, passport-capture-save-doorhanger-description — browser/browser/preferences/formAutofill.ftl — anglicism "save to". Current: "Sla gegevens op naar { -brand-short-name }" → Suggest: "…op in { -brand-short-name }"
-  - Current: `{ -brand-short-name }`
-  - Source: `Save info to { -brand-short-name } so you can fill out forms quickly.`
-  - (Retired: the suggested text is identical to the current text.)
-- `tabbrowser-unmute-tab-audio-background-tooltip` — `browser/browser/tabbrowser.ftl` — tabbrowser-unmute-tab-audio-tooltip (.label, [other]), tabbrowser-unmute-tab-audio-background-tooltip (.label, [other]) — browser/browser/tabbrowser.ftl — the separable verb is split around the count. Current: "Dempen { $tabCount } tabbladen opheffen" → Suggest: "Dempen van { $tabCount } tabbladen opheffen"
-  - Current: `{ $tabCount }`
-  - Source: `label: {$tabCount ->} [one] Unmute tab [other] Unmute { $tabCount } tabs`
-  - (Retired: the suggested text is identical to the current text.)
-- `tabbrowser-unmute-tab-audio-tooltip` — `browser/browser/tabbrowser.ftl` — tabbrowser-unmute-tab-audio-tooltip (.label, [other]), tabbrowser-unmute-tab-audio-background-tooltip (.label, [other]) — browser/browser/tabbrowser.ftl — the separable verb is split around the count. Current: "Dempen { $tabCount } tabbladen opheffen" → Suggest: "Dempen van { $tabCount } tabbladen opheffen"
-  - Current: `{ $tabCount }`
-  - Source: `label: {$tabCount ->} [one] Unmute tab ({ $shortcut }) [other] Unmute { $tabCount } tabs ({ $shortcut })`
-  - (Retired: the suggested text is identical to the current text.)
-- `existing-user-privacy-notice-update-message` — `browser/browser/termsofuse.ftl` — "to reflect" lost. Current: "…bijgewerkt naar de nieuwste functies in { -brand-short-name }." → Suggest: "…bijgewerkt om de nieuwste functies in { -brand-short-name } te weerspiegelen."
-  - Current: `{ -brand-short-name }`
-  - Source: `We’ve updated our <a data-l10n-name="privacy-notice-link">Privacy Notice</a> to reflect the latest features in { -brand-short-name }.`
-  - (Retired: the suggested text is identical to the current text.)
-- `accessibility-progress-progressbar` — `devtools/client/accessibility.ftl` — verb-first is ungrammatical. Current: "Controleren { $nodeCount } nodes" → Suggest: "{ $nodeCount } nodes controleren"
-  - Current: `{ $nodeCount }`
-  - Source: `{$nodeCount ->} [one] Checking { $nodeCount } node [other] Checking { $nodeCount } nodes`
-  - (Retired: the suggested text is identical to the current text.)
-- `about-pdf-title` — `toolkit/toolkit/about/aboutPDF.ftl` — the editor (tool) rendered as an action. Current: "{ -brand-short-name }-PDF-bewerking" → Suggest: "{ -brand-short-name }-PDF-editor" (as in about-pdf-promo.heading)
-  - Current: `{ -brand-short-name }`
-  - Source: `{ -brand-short-name } PDF editor`
-  - (Retired: the suggested text is identical to the current text.)
-- `chooser-dialog-description` — `toolkit/toolkit/global/handlerDialog.ftl` — the noun is missing, leaving a broken sentence. Current: "Kies een toepassing om de { $scheme }-mee te openen." → Suggest: "Kies een toepassing om de { $scheme }-koppeling te openen." (en-US: "to open the { $scheme } link")
-  - Current: `{ $scheme }`
-  - Source: `Choose an application to open the { $scheme } link.`
-  - (Retired: the suggested text is identical to the current text.)
-- `moz-box-item-reorder-handle-named` — `toolkit/toolkit/global/mozBoxBase.ftl` — leftover word. Current: "…de volgorde van { $item } item te wijzigen" → Suggest: "…de volgorde van { $item } te wijzigen"
-  - Current: `{ $item }`
-  - Source: `aria-label: Reorder { $item } using Ctrl+Shift+ArrowUp or Ctrl+Shift+ArrowDown`
-  - (Retired: the suggested text is identical to the current text.)
-- `printui-sheets-count` — `toolkit/toolkit/printing/printUI.ftl` — sheets of paper counted as pages, destroying this dialog's sheet/page distinction. Current: "{ $sheetCount } pagina / pagina's" → Suggest: "{ $sheetCount } vel papier / vellen papier"
-  - Current: `{ $sheetCount }`
-  - Source: `{$sheetCount ->} [one] { $sheetCount } sheet of paper [other] { $sheetCount } sheets of paper`
-  - (Retired: the suggested text is identical to the current text.)
+_Nothing withdrawn._
 
-### 🔁 String changed, defect not verifiable — needs a re-read (0)
+### 🔁 String changed, defect not verifiable — needs a re-read (22)
 
-_Nothing to re-read._
+- `about-logins-import-dialog-items-no-change2` — `browser/browser/aboutLogins.ftl` — same defect in both plural variants: <span data-l10n-name="meta">(niet geïmporteerd)</span > → Suggest: </span>
+  - Source: `{$count ->} [other] <span>Duplicate entries found:</span> <span data-l10n-name="count">{ $count }</span> <span data-l10n-name="meta">(not imported)</span>`
+- `trustpanel-description-disabled` — `browser/browser/browser.ftl` — en-US "is off-duty", losing the contrast with trustpanel-header-enabled ("staat op wacht"). Current: "…heeft geen dienst." → Suggest: "…staat niet op wacht."
+  - Source: `{ -brand-product-name } is off-duty. We suggest turning protections back on.`
+  - Suggest: `"…staat niet op wacht."`
+- `urlbar-placeholder-search-mode-other-actions` — `browser/browser/browser.ftl` — urlbar-result-action-search-actions, urlbar-placeholder-search-mode-other-actions (.aria-label) — browser.ftl — "Search" is a verb here. Current: "Zoekacties" → Suggest: "Acties doorzoeken" / "Zoeken in acties"
+  - Source: `aria-label: Search actions placeholder: Enter search terms`
+- `urlbar-result-action-search-actions` — `browser/browser/browser.ftl` — urlbar-result-action-search-actions, urlbar-placeholder-search-mode-other-actions (.aria-label) — browser.ftl — "Search" is a verb here. Current: "Zoekacties" → Suggest: "Acties doorzoeken" / "Zoeken in acties"
+  - Source: `Search Actions`
+- `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — malformed closing tag </a > (space inside the tag), so the second link will not render. Current: …generatieve AI</a > en de… → Suggest: …generatieve AI</a> en de…
+  - Source: `By choosing Google Gemini, you agree to the <a data-l10n-name="link1">Google Terms of Service</a>, <a data-l10n-name="link2">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name="link3">Gemini Apps Privacy Not…`
+- `menu-help-share-ideas` — `browser/browser/menubar.ftl` — lost the trailing … that marks the item as opening a further page (en-US "Share Ideas and Feedback…").
+  - Source: `accesskey: S label: Share Ideas and Feedback…`
+- `cfr-doorhanger-milestone-heading2` — `browser/browser/newtab/asrouter.ftl` — cfr-doorhanger-milestone-heading2 ([one] variant) — browser/browser/newtab/asrouter.ftl — the opening <b> is corrupted to b>, and "over" is dropped. Current: … b>{ $blockedCount }</b> tracker geblokkeerd! → Suggest: … meer dan <b>{ $blockedCount }</b> tracker geblokkeerd!
+  - Source: `{$blockedCount ->} [other] { -brand-short-name } blocked over <b>{ $blockedCount }</b> trackers since { $date }!`
+- `settings-translations-subpage-never-translate-sites-description` — `browser/browser/preferences/preferences.ftl` — double space after <img data-l10n-name="translations-icon"/>.
+  - Source: `To add a site, open the <img data-l10n-name="translations-icon"/> translation panel, select <img data-l10n-name="settings-icon"/> translation settings, then choose “Never translate this site”`
+- `protections-vpn-header-content-subscribed` — `browser/browser/protections.ftl` — stray space inside the link text, producing a trailing underlined space. Current: <a data-l10n-name="appstore-link">Apple App Store </a> → Suggest: …Apple App Store</a>
+  - Source: `{$count ->} [other] Using the { -mozilla-vpn-brand-name } encrypts all your traffic and hides your location — on up to { $count } devices. Get the most from your subscription — add it from the <a data-l10n-name="playsto…`
+- `set-background-fill` — `browser/browser/setDesktopBackground.ftl` — uitvullen is the typographic term for justify. Current: "Uitvullen" → Suggest: "Vullen"
+  - Source: `label: Fill`
+  - Suggest: `"Vullen"`
+- `duplicate-tab2` — `browser/browser/tabContextMenu.ftl` — duplicate-tab2 (.label), duplicate-tabs2 (.label) — tabContextMenu.ftl — noun instead of the menu verb. Current: "Duplicaat" → Suggest: "Dupliceren"
+  - Source: `accesskey: D label: Duplicate`
+  - Suggest: `"Dupliceren"`
+- `duplicate-tabs2` — `browser/browser/tabContextMenu.ftl` — duplicate-tab2 (.label), duplicate-tabs2 (.label) — tabContextMenu.ftl — noun instead of the menu verb. Current: "Duplicaat" → Suggest: "Dupliceren"
+  - Source: `accesskey: D label: Duplicate`
+  - Suggest: `"Dupliceren"`
+- `inactive-css-not-grid-or-flex-container-or-multicol-container-fix` — `devtools/client/tooltips.ftl` — the CSS keyword inside <strong> is misspelled, so the suggested fix is wrong code. Current: <strong>colums:2</strong> → Suggest: <strong>columns:2</strong>
+  - Source: `Try adding either <strong>display:grid</strong>, <strong>display:flex</strong>, or <strong>columns:2</strong>. { learn-more }`
+- `inactive-css-not-grid-or-flex-container-or-multicol-container-fix` — `devtools/client/tooltips.ftl` — Also in this bucket: the CSS keyword items already listed in section A (inactive-css-not-grid-or-flex-container-or-multicol-container-fix, inactive-css-ruby-element-fix, webconsole-commands-usage-block).
+  - Source: `Try adding either <strong>display:grid</strong>, <strong>display:flex</strong>, or <strong>columns:2</strong>. { learn-more }`
+- `inactive-css-ruby-element-fix` — `devtools/client/tooltips.ftl` — inactive-css-ruby-element-fix, inactive-css-ruby-element-fix-1 — devtools/client/tooltips.ftl — the CSS property name inside <strong> was translated, against the section's developer comment. Current: <strong>lettergrootte</strong> → Suggest: <strong>font-size</strong>
+  - Source: `Try changing the <strong>font-size</strong> of the ruby text. { learn-more }`
+- `inactive-css-ruby-element-fix` — `devtools/client/tooltips.ftl` — Also in this bucket: the CSS keyword items already listed in section A (inactive-css-not-grid-or-flex-container-or-multicol-container-fix, inactive-css-ruby-element-fix, webconsole-commands-usage-block).
+  - Source: `Try changing the <strong>font-size</strong> of the ruby text. { learn-more }`
+- `inactive-css-ruby-element-fix-1` — `devtools/client/tooltips.ftl` — inactive-css-ruby-element-fix, inactive-css-ruby-element-fix-1 — devtools/client/tooltips.ftl — the CSS property name inside <strong> was translated, against the section's developer comment. Current: <strong>lettergrootte</strong> → Suggest: <strong>font-size</strong>
+  - Source: `Try changing the <strong>font-size</strong> of the ruby text.`
+- `webconsole-commands-usage-block` — `devtools/shared/webconsole-commands.ftl` — Also in this bucket: the CSS keyword items already listed in section A (inactive-css-not-grid-or-flex-container-or-multicol-container-fix, inactive-css-ruby-element-fix, webconsole-commands-usage-block).
+  - Source: `:block URL_STRING  Start blocking network requests    It accepts only one URL_STRING argument, an unquoted string which will be used to block all requests whose URL includes this string.   Use :unblock or the Network Mo…`
+- `devmgr-button-unload` — `security/manager/security/certificates/deviceManager.ftl` — ontladen = to discharge a battery. Suggest: "Uitladen" (paired with devmgr-button-load "Laden")
+  - Source: `accesskey: U label: Unload`
+  - Suggest: `.label`
+- `shortcuts-duplicate` — `toolkit/toolkit/about/aboutAddons.ftl` — shortcuts-remove-button (.aria-label), shortcuts-duplicate, shortcuts-duplicate-warning-message, -message2 — see S-4.
+  - Source: `Duplicate shortcut`
+  - Suggest: `.aria-label`
+- `shortcuts-duplicate-warning-message` — `toolkit/toolkit/about/aboutAddons.ftl` — shortcuts-remove-button (.aria-label), shortcuts-duplicate, shortcuts-duplicate-warning-message, -message2 — see S-4.
+  - Source: `{ $shortcut } is being used as a shortcut in more than one case. Duplicate shortcuts may cause unexpected behavior.`
+  - Suggest: `.aria-label`
+- `shortcuts-remove-button` — `toolkit/toolkit/about/aboutAddons.ftl` — shortcuts-remove-button (.aria-label), shortcuts-duplicate, shortcuts-duplicate-warning-message, -message2 — see S-4.
+  - Source: `aria-label: Remove shortcut`
+  - Suggest: `.aria-label`
 
 ### 🗑 Retired — the string no longer exists upstream (0)
 
@@ -136,7 +96,7 @@ _Nothing retired._
 |---|---|
 | Files | 360 |
 | Strings | 18,156 |
-| Missing strings | 7 |
+| Missing strings | 17 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -155,10 +115,16 @@ _Nothing retired._
 
 ### Completeness
 
-**7 strings** are not translated yet, concentrated in:
+**17 strings** are not translated yet, concentrated in:
 
+- `browser/browser/newtab/newtab.ftl` — 3
 - `browser/browser/aboutPrivateBrowsing.ftl` — 2
-- `browser/browser/newtab/newtab.ftl` — 2
+- `browser/browser/appmenu.ftl` — 2
+- `browser/browser/menubar.ftl` — 2
+- `browser/browser/preferences/preferences.ftl` — 2
+- `browser/browser/aboutDialog.ftl` — 1
+- `browser/browser/preferences/formAutofill.ftl` — 1
+- `dom/chrome/accessibility/AccessFu.properties` — 1
 - `toolkit/toolkit/about/aboutProcesses.ftl` — 1
 - `toolkit/toolkit/global/mozBoxBase.ftl` — 1
 - `toolkit/toolkit/global/processTypes.ftl` — 1
@@ -787,6 +753,12 @@ _Nothing reported._
 ---
 
 ## 4. Appendix
+
+### Dismissed by hand (0)
+
+_Nothing dismissed._
+
+_One line each in `locales/nl/dismissed.txt`. Delete the line and the finding returns._
 
 ### Suppressed as false positives (0)
 

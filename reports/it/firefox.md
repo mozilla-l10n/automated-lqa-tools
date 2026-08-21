@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ce9efca9167e` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a9b9a116b725` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
-| **Previous run** | 2026-08-21 @ `ce9efca9167e` |
+| **Previous run** | 2026-08-21 @ `a9b9a116b725` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 18,360 |
 
@@ -56,7 +56,7 @@ _Nothing retired._
 | Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
-| Text quoting a UI label that no longer matches | 4 |
+| Text quoting a UI label that no longer matches | 1 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 0 |
 | Markup & `data-l10n-name` defects | 0 |
@@ -87,12 +87,12 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (3)
+## 3. Open findings (0)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 3 |
+| 2 | Wrong content (says something other than the English) | 0 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -110,21 +110,7 @@ _Nothing in this category._
 
 ### D. Terminology, register & consistency
 
-- `noDomMutationBreakpoints` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints` quotes “Interrompi per…” but the string it names, `watchpoints.submenu`, reads “Sospendi su…”
-  - Current: `Fare clic con il tasto destro in “%S” e selezionare “Interrompi per…” per aggiungere un punto di interruzione`
-  - Source: `Right click an element in the %S and select “Break on…” to add a breakpoint`
-  - Suggest: `Sospendi su…`
-  - In the source this string quotes “Break on…”, which is exactly the value of `watchpoints.submenu` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `noDomMutationBreakpoints.notice` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints.notice` quotes “Interrompi per…” but the string it names, `watchpoints.submenu`, reads “Sospendi su…”
-  - Current: `Fare clic con il tasto destro in Analisi pagina e selezionare “Interrompi per…” per aggiungere un punto di interruzione`
-  - Source: `Right click an element in the Inspector and select “Break on…” to add a breakpoint`
-  - Suggest: `Sospendi su…`
-  - In the source this string quotes “Break on…”, which is exactly the value of `watchpoints.submenu` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `toolbox-local-mode-notice` — `devtools/client/toolbox.ftl` — `toolbox-local-mode-notice` quotes “Local Mode” but the string it names, `options-local-mode-label`, reads “Modalità locale”
-  - Current: `È possibile caricare questo documento anche da “{ $url }” utilizzando la funzione “Local Mode” di DevTools, attivabile dal pannello delle impostazioni.`
-  - Source: `This document could also be loaded from “{ $url }” using DevTools “Local Mode”, which can be enabled in the settings panel.`
-  - Suggest: `Modalità locale`
-  - In the source this string quotes “Local Mode”, which is exactly the value of `options-local-mode-label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+_Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
@@ -134,11 +120,13 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (4)
+### Dismissed by hand (6)
 
 - `default-browser-guidance-notification-body-instruction-win10` — `browser/browser/defaultBrowserNotification.ftl` — That's the OS string.
 - `imported-safari-reading-list` — `browser/browser/migration.ftl` — Elenco lettura is correct
 - `migration-imported-safari-reading-list` — `browser/browser/migrationWizard.ftl` — Elenco lettura is correct
+- `noDomMutationBreakpoints` — `devtools/client/debugger.properties` — Element is there
+- `noDomMutationBreakpoints.notice` — `devtools/client/debugger.properties` — Element is there
 - `ssl-error-missing-extended-master-secret` — `toolkit/toolkit/neterror/nsserrors.ftl` — “Extension” is there
 
 _One line each in `locales/it/dismissed.txt`. Delete the line and the finding returns._
@@ -158,10 +146,13 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Resolved to date (53)
+### Resolved to date (56)
 
 - `existing-user-privacy-notice-update-message` — `browser/browser/termsofuse.ftl` — fixed 2026-08-21
 - `select-translations-panel-try-another-language-label` — `browser/browser/translations.ftl` — fixed 2026-08-21
+- `noDomMutationBreakpoints` — `devtools/client/debugger.properties` — fixed 2026-08-21
+- `noDomMutationBreakpoints.notice` — `devtools/client/debugger.properties` — fixed 2026-08-21
+- `toolbox-local-mode-notice` — `devtools/client/toolbox.ftl` — fixed 2026-08-21
 - `aiwindow-firstrun-memories-privacy-title` — `browser/browser/aiWindow.ftl` — fixed 2026-07-26
 - `action-log-searching-tabs` — `browser/browser/aiWindowContent.ftl` — fixed 2026-07-26
 - `appmenuitem-banner-update-unsupported` — `browser/browser/appmenu.ftl` — fixed 2026-07-26
@@ -197,6 +188,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `third-party-button-open` — `toolkit/toolkit/about/aboutThirdParty.ftl` — fixed 2026-07-26
 - `about-translations-policy-disabled-info-message` — `toolkit/toolkit/about/aboutTranslations.ftl` — fixed 2026-07-26
 - `about-webrtc-remote-send-ssrc` — `toolkit/toolkit/about/aboutWebrtc.ftl` — fixed 2026-07-26
-- `about-webrtc-rtp-stats-heading` — `toolkit/toolkit/about/aboutWebrtc.ftl` — fixed 2026-07-26
-- `abuse-report-broken-suggestions-sitepermission` — `toolkit/toolkit/about/abuseReports.ftl` — fixed 2026-07-26
-- `choose-dialog-privatebrowsing-disabled` — `toolkit/toolkit/global/handlerDialog.ftl` — fixed 2026-07-26

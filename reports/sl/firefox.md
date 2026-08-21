@@ -2,53 +2,39 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-20 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `fef20cd7efc2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
-| **Previous run** | 2026-08-20 @ `b95608d528c8` |
+| **Generated** | 2026-08-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a9b9a116b725` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
+| **Previous run** | 2026-08-20 @ `fef20cd7efc2` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 17,533 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-
+Also for sl: [android](android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — `backup-file-moz-browser-restore-step-2-1` quotes “Obnovi podatke” but the string it names, `restore-from-backup-header`, reads “Obnovite podatke”
-  - Current: `Kliknite "Obnovi podatke" in izberite to datoteko`
-  - Source: `Click “Restore your data” and select this file`
-  - Suggest: `Obnovite podatke`
-  - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — `backup-file-other-browser-restore-step-3-1` quotes “Obnovi podatke” but the string it names, `restore-from-backup-header`, reads “Obnovite podatke”
-  - Current: `Kliknite "Obnovi podatke" in izberite to datoteko`
-  - Source: `Click “Restore your data” and select this file`
-  - Suggest: `Obnovite podatke`
-  - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `noDomMutationBreakpoints` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints` quotes “Zaustavi na ...” but the string it names, `watchpoints.submenu`, reads “Zaustavi na …”
-  - Current: `Z desno miškino tipko kliknite element v %Su in izberite "Zaustavi na ...", da dodate prekinitveno točko`
-  - Source: `Right click an element in the %S and select “Break on…” to add a breakpoint`
-  - Suggest: `Zaustavi na …`
-  - In the source this string quotes “Break on…”, which is exactly the value of `watchpoints.submenu` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
 _Nothing was fixed._
 
-### ↩︎ Withdrawn — no longer considered a defect (1)
+### ↩︎ Withdrawn — no longer considered a defect (0)
 
-- `accessibility-text-label-issue-document-title` — `devtools/client/accessibility.ftl` — The HTML element name inside <code> was translated: "…imeti <code>naslov</code>." → "<code>title</code>" (every other <code> element name in the file stays English).
-  - Current: `<code>`
-  - Source: `Documents must have a <code>title</code>. <a>Learn more</a>`
-  - (Retired: the suggested text is identical to the current text.)
+_Nothing withdrawn._
 
-### 🔁 String changed, defect not verifiable — needs a re-read (0)
+### 🔁 String changed, defect not verifiable — needs a re-read (2)
 
-_Nothing to re-read._
+- `tab-group-editor-action-copy-links` — `browser/browser/tabbrowser.ftl` — Label is "Copy links in group" but every plural form uses "Zapri" (Close) instead of "Kopiraj" (Copy). The verb is reversed across all variants.
+  - Source: `label: {$linkCount ->} [1] Copy link in group [other] Copy { $linkCount } links in group`
+- `pkcs12-decode-err` — `security/manager/security/certificates/certManager.ftl` — security/manager/security/certificates/certManager.ftl — Nonstandard participle "Vnešeno/vnešeno" → "Vneseno/vneseno" (also inconsistent with pippki-incorrect-pw, which is correct).
+  - Source: `Failed to decode the file. Either it is not in PKCS #12 format, has been corrupted, or the password you entered was incorrect.`
 
 ### 🗑 Retired — the string no longer exists upstream (0)
 
@@ -62,7 +48,7 @@ _Nothing retired._
 |---|---|
 | Files | 360 |
 | Strings | 17,533 |
-| Missing strings | 630 |
+| Missing strings | 640 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -81,19 +67,19 @@ _Nothing retired._
 
 ### Completeness
 
-**630 strings** are not translated yet, concentrated in:
+**640 strings** are not translated yet, concentrated in:
 
 - `browser/browser/aiWindow.ftl` — 136
 - `browser/browser/aiWindowContent.ftl` — 71
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 48
 - `dom/chrome/dom/dom.properties` — 45
 - `browser/browser/ipProtection.ftl` — 37
-- `browser/browser/newtab/newtab.ftl` — 28
+- `browser/browser/newtab/newtab.ftl` — 29
 - `browser/browser/aiFeatures.ftl` — 26
 - `devtools/client/toolbox-options.ftl` — 24
 - `dom/chrome/security/security.properties` — 23
+- `browser/browser/preferences/preferences.ftl` — 21
 - `toolkit/toolkit/about/aboutNetworking.ftl` — 20
-- `browser/browser/preferences/preferences.ftl` — 19
 - `devtools/client/debugger.properties` — 17
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
@@ -254,6 +240,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 ---
 
 ## 4. Appendix
+
+### Dismissed by hand (0)
+
+_Nothing dismissed._
+
+_One line each in `locales/sl/dismissed.txt`. Delete the line and the finding returns._
 
 ### Suppressed as false positives (1)
 
