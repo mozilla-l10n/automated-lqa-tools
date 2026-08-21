@@ -2,10 +2,10 @@
 //
 // The build script is Python and is checked by running it; this covers the
 // part of the site that is not: the dropdown logic. Coverage is ragged --
-// iOS has only Italian -- so the project list depends on the locale, and
-// moving to a locale that lacks the current project must fall back instead
-// of requesting a report that does not exist. That is easy to get wrong and
-// invisible until someone clicks it.
+// not every project reviews every locale -- so the project list depends on
+// the locale, and moving to a locale that lacks the current project must
+// fall back instead of requesting a report that does not exist. That is easy
+// to get wrong and invisible until someone clicks it.
 //
 // Reads _site/ off disk rather than over HTTP, so it needs no server:
 //
@@ -41,34 +41,64 @@ const opts = (s)=>s.children.map(o=>o.value);
 let fail=0;
 const check=(ok,label)=>{console.log(`  ${ok?'PASS':'FAIL'}  ${label}`); if(!ok)fail++;};
 
+// Which locale is the ragged one moves as coverage fills in -- iOS gained
+// eighteen locales in one run and the case that used to be cs became fy-NL.
+// So read the shape out of the manifest the page itself is driven by rather
+// than pinning locale codes here: what is being tested is the fallback, not
+// who happens to need it today.
+const manifest = JSON.parse(fs.readFileSync(BASE + 'index.json', 'utf8'));
+const PROJECTS = Object.keys(manifest.projects).sort();
+const covered = Object.entries(manifest.locales);
+const [FULL] = covered.find(([, p]) => p.length === PROJECTS.length) || [];
+const [PARTIAL, PARTIAL_HAS] = covered.find(([, p]) => p.length < PROJECTS.length) || [];
+const MISSING = PARTIAL && PROJECTS.find((p) => !PARTIAL_HAS.includes(p));
+
 console.log('The page, driven through app.js\n');
 console.log('Initial state');
 check(opts(els.locale)[0]==='all', 'locale dropdown leads with "all"');
-check(opts(els.locale).length===21, `20 locales plus All (${opts(els.locale).length})`);
-check(location.hash==='#/all/android', `defaults to a summary (${location.hash})`);
+check(opts(els.locale).length===covered.length+1,
+      `${covered.length} locales plus All (${opts(els.locale).length})`);
+check(location.hash===`#/all/${PROJECTS[0]}`, `defaults to a summary (${location.hash})`);
 
 console.log('\nRagged coverage');
-els.locale.value='it'; await els.locale.on.change(); await new Promise(r=>setTimeout(r,200));
-check(opts(els.project).length===3, `it offers all three (${opts(els.project).join(',')})`);
-els.project.value='firefox_ios'; await els.project.on.change(); await new Promise(r=>setTimeout(r,200));
-check(location.hash==='#/it/firefox_ios', `selected iOS (${location.hash})`);
-els.locale.value='cs'; await els.locale.on.change(); await new Promise(r=>setTimeout(r,300));
-check(opts(els.project).length===2, `cs offers two (${opts(els.project).join(',')})`);
-check(!location.hash.includes('firefox_ios'), `fell back instead of 404ing (${location.hash})`);
-check(!els.report.innerHTML.includes('No report'), 'and rendered a real report');
+if (!FULL || !PARTIAL) {
+  // Not a pass: with coverage this shape the fallback cannot be reached, and
+  // counting it as green would read as tested when it is only unexercised.
+  console.log(`  SKIP  every locale covers ${PROJECTS.length} projects, `
+              + 'so there is no fallback to exercise');
+} else {
+  els.locale.value=FULL; await els.locale.on.change(); await new Promise(r=>setTimeout(r,200));
+  check(opts(els.project).length===PROJECTS.length,
+        `${FULL} offers all ${PROJECTS.length} (${opts(els.project).join(',')})`);
+  els.project.value=MISSING; await els.project.on.change(); await new Promise(r=>setTimeout(r,200));
+  check(location.hash===`#/${FULL}/${MISSING}`, `selected ${MISSING} (${location.hash})`);
+  els.locale.value=PARTIAL; await els.locale.on.change(); await new Promise(r=>setTimeout(r,300));
+  check(opts(els.project).length===PARTIAL_HAS.length,
+        `${PARTIAL} offers ${PARTIAL_HAS.length} (${opts(els.project).join(',')})`);
+  check(!location.hash.includes(MISSING), `fell back instead of 404ing (${location.hash})`);
+  check(!els.report.innerHTML.includes('No report'), 'and rendered a real report');
+}
 
 console.log('\nKeeping the project across locales');
-els.project.value='firefox'; await els.project.on.change(); await new Promise(r=>setTimeout(r,200));
-els.locale.value='de'; await els.locale.on.change(); await new Promise(r=>setTimeout(r,300));
-check(els.project.value==='firefox', 'firefox stays selected moving cs -> de');
+const KEPT = PARTIAL_HAS ? PARTIAL_HAS[0] : PROJECTS[0];
+const OTHER = covered.find(([loc, p]) => loc !== PARTIAL && p.includes(KEPT))[0];
+els.project.value=KEPT; await els.project.on.change(); await new Promise(r=>setTimeout(r,200));
+els.locale.value=OTHER; await els.locale.on.change(); await new Promise(r=>setTimeout(r,300));
+check(els.project.value===KEPT, `${KEPT} stays selected moving to ${OTHER}`);
 
 console.log('\nHash navigation from a link inside a report');
-location.hash='#/ru/firefox'; await listeners.hashchange(); await new Promise(r=>setTimeout(r,400));
-check(els.locale.value==='ru' && els.project.value==='firefox', 'dropdowns follow the hash');
+// Somewhere other than where the dropdowns already are, so following the
+// hash is what moves them.
+const [LINKED, LINKED_HAS] = covered.find(([loc]) => loc !== OTHER && loc !== PARTIAL);
+const LINKED_PROJECT = LINKED_HAS[0];
+location.hash=`#/${LINKED}/${LINKED_PROJECT}`;
+await listeners.hashchange(); await new Promise(r=>setTimeout(r,400));
+check(els.locale.value===LINKED && els.project.value===LINKED_PROJECT,
+      'dropdowns follow the hash');
 check(els.report.innerHTML.includes('<h1>'), 'and the report is rendered');
 
 console.log('\nBad input');
-location.hash='#/nope/firefox'; await listeners.hashchange(); await new Promise(r=>setTimeout(r,300));
+location.hash=`#/nope/${PROJECTS[0]}`; await listeners.hashchange(); await new Promise(r=>setTimeout(r,300));
 check(els.locale.value==='all', 'an unknown locale falls back to All rather than erroring');
 console.log(`\n${fail} failed`);
 process.exit(fail?1:0);
