@@ -20,15 +20,15 @@ Also for hu: [firefox](firefox.md)
 ### 🆕 New findings (2)
 
 - `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hu/strings.xml` — `mozac_browser_errorpages_offline_message` quotes “Próbálja újra” but the string it names, `mozac_browser_errorpages_page_refresh`, reads “Újrapróbálkozás”
-  - Current: `{ <p> }A böngésző kapcsolat nélküli módban van, ezért nem tud csatlakozni a kért elemhez.{ </p> } { <ul> } { <li> }Csatlakoztatva van a számítógép a hálózathoz?{ </li> } { <li> }Nyomja meg a „Próbálja újra” gombot az on…`
-  - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
-  - Suggest: `Újrapróbálkozás`
-  - In the source this string quotes “Try Again”, which is exactly the value of `mozac_browser_errorpages_page_refresh` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+    - Current: `{ <p> }A böngésző kapcsolat nélküli módban van, ezért nem tud csatlakozni a kért elemhez.{ </p> } { <ul> } { <li> }Csatlakoztatva van a számítógép a hálózathoz?{ </li> } { <li> }Nyomja meg a „Próbálja újra” gombot az on…`
+    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
+    - Suggest: `Újrapróbálkozás`
+    - In the source this string quotes “Try Again”, which is exactly the value of `mozac_browser_errorpages_page_refresh` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-hu/strings.xml` — `firstrun_shortcut_text` quotes “Hozzáadás a kezdőképernyőre” but the string it names, `menu_add_to_home_screen`, reads “Kezdőképernyőhöz adás”
-  - Current: `Térjen vissza gyorsan a kedvenc oldalaihoz a %1$sban. Csak válassza a „Hozzáadás a kezdőképernyőre” lehetőséget a %1$s menüből.`
-  - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
-  - Suggest: `Kezdőképernyőhöz adás`
-  - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+    - Current: `Térjen vissza gyorsan a kedvenc oldalaihoz a %1$sban. Csak válassza a „Hozzáadás a kezdőképernyőre” lehetőséget a %1$s menüből.`
+    - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
+    - Suggest: `Kezdőképernyőhöz adás`
+    - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 
 ### ✅ Fixed since the last run (0)
 
@@ -121,15 +121,15 @@ _Nothing in this category._
 ### D. Terminology, register & consistency
 
 - `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hu/strings.xml` — `mozac_browser_errorpages_offline_message` quotes “Próbálja újra” but the string it names, `mozac_browser_errorpages_page_refresh`, reads “Újrapróbálkozás”
-  - Current: `{ <p> }A böngésző kapcsolat nélküli módban van, ezért nem tud csatlakozni a kért elemhez.{ </p> } { <ul> } { <li> }Csatlakoztatva van a számítógép a hálózathoz?{ </li> } { <li> }Nyomja meg a „Próbálja újra” gombot az on…`
-  - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
-  - Suggest: `Újrapróbálkozás`
-  - In the source this string quotes “Try Again”, which is exactly the value of `mozac_browser_errorpages_page_refresh` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+    - Current: `{ <p> }A böngésző kapcsolat nélküli módban van, ezért nem tud csatlakozni a kért elemhez.{ </p> } { <ul> } { <li> }Csatlakoztatva van a számítógép a hálózathoz?{ </li> } { <li> }Nyomja meg a „Próbálja újra” gombot az on…`
+    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
+    - Suggest: `Újrapróbálkozás`
+    - In the source this string quotes “Try Again”, which is exactly the value of `mozac_browser_errorpages_page_refresh` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-hu/strings.xml` — `firstrun_shortcut_text` quotes “Hozzáadás a kezdőképernyőre” but the string it names, `menu_add_to_home_screen`, reads “Kezdőképernyőhöz adás”
-  - Current: `Térjen vissza gyorsan a kedvenc oldalaihoz a %1$sban. Csak válassza a „Hozzáadás a kezdőképernyőre” lehetőséget a %1$s menüből.`
-  - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
-  - Suggest: `Kezdőképernyőhöz adás`
-  - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+    - Current: `Térjen vissza gyorsan a kedvenc oldalaihoz a %1$sban. Csak válassza a „Hozzáadás a kezdőképernyőre” lehetőséget a %1$s menüből.`
+    - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
+    - Suggest: `Kezdőképernyőhöz adás`
+    - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 
 ### E. Typography, punctuation & spacing
 

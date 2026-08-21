@@ -20,9 +20,9 @@ Also for sl: [firefox](firefox.md)
 ### 🆕 New findings (1)
 
 - `onboarding_first_screen_title` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — `onboarding_first_screen_title` has placeholders %s where the source has %1$s
-  - Current: `Dobrodošli v %su`
-  - Source: `Welcome to %1$s`
-  - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+    - Current: `Dobrodošli v %su`
+    - Source: `Welcome to %1$s`
+    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
 
 ### ✅ Fixed since the last run (0)
 
@@ -100,9 +100,9 @@ _Nothing reported._
 ### A. Functional, markup, variables & plurals
 
 - `onboarding_first_screen_title` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — `onboarding_first_screen_title` has placeholders %s where the source has %1$s
-  - Current: `Dobrodošli v %su`
-  - Source: `Welcome to %1$s`
-  - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+    - Current: `Dobrodošli v %su`
+    - Source: `Welcome to %1$s`
+    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 

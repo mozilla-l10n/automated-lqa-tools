@@ -19,7 +19,8 @@ HTML passthrough would let a translation inject markup into the page; a
 sanitiser that stripped unknown tags would delete the very text the finding
 is about. Escaping first shows it as text, which is what a reviewer needs to
 read. Escaping leaves markdown's own syntax characters alone, so tables and
-headings still work.
+headings still work. One round of it is undone again inside code spans, where
+the renderer escapes the same characters a second time -- see `_DOUBLED`.
 
     python site/build.py [--out _site]
 """
@@ -48,6 +49,15 @@ STATIC = ("index.html", "app.js", "style.css")
 # report. Both have to become in-page routes or they would leave the site.
 _LINK = re.compile(r'href="(?:\.\./)?(?:([A-Za-z0-9_-]+)/)?([A-Za-z0-9_]+)\.md"')
 
+# The source is escaped once here and a second time by the renderer, which
+# escapes the `&` of an entity inside a code span. Two rounds show the
+# reviewer `&lt;/span &gt;` where the string says `</span >`, so one round is
+# undone -- inside code spans only, where the doubling happens, and never on
+# the tags themselves. The result is still entities, so nothing becomes
+# markup: `&amp;lt;` -> `&lt;` -> the browser draws `<`.
+_CODE = re.compile(r"(?s)<code>(.*?)</code>")
+_DOUBLED = re.compile(r"&amp;(lt|gt|quot|amp|#x27|#39);")
+
 
 def discover_projects() -> list:
     """Every sibling directory that is a project.
@@ -72,6 +82,10 @@ def render(path: str, locale: str | None) -> str:
         html.escape(source),
         extensions=["tables", "sane_lists"],
         output_format="html5",
+    )
+
+    body = _CODE.sub(
+        lambda m: f"<code>{_DOUBLED.sub(r'&\1;', m.group(1))}</code>", body
     )
 
     def route(match: re.Match) -> str:

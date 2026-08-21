@@ -24,10 +24,10 @@ _No new findings._
 ### ✅ Fixed since the last run (1)
 
 - `ai_controls_blocked_info_banner` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — The distinction "New and current" AI enhancements is dropped in the Italian text.
-  - Current: `Le funzionalità basate sull’IA sono bloccate per impostazione predefinita.`
-  - Source: `New and current AI enhancements are blocked by default. Unblock specific features below.`
-  - Suggest: `Le funzionalità basate sull’IA, nuove e attuali, sono bloccate per impostazione predefinita.`
-  - The source specifies "New and current AI enhancements"; the translation omits this qualification, changing the scope of what is blocked.
+    - Current: `Le funzionalità basate sull’IA sono bloccate per impostazione predefinita.`
+    - Source: `New and current AI enhancements are blocked by default. Unblock specific features below.`
+    - Suggest: `Le funzionalità basate sull’IA, nuove e attuali, sono bloccate per impostazione predefinita.`
+    - The source specifies "New and current AI enhancements"; the translation omits this qualification, changing the scope of what is blocked.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -142,11 +142,11 @@ _One line each in `locales/it/dismissed.txt`. Delete the line and the finding re
 ### Suppressed as false positives (4)
 
 - **`it-attiva-not-attivata`** (1) — The expected pair is `Attiva`/`Attivo`/`Attivi` with `Disattivata`/`Disattivato`/`Disattivati`. The asymmetry is deliberate and borne out by the tree, which uses `attiva` 279 times against 35 for the participle forms. A suggestion to "restore symmetry" with `Attivata`/`Attivato`/`Attivi` is wrong. The regex is word-anchored because a plain substring would also match `disattivato`.
-  - `browser_feature_desktop_site_on`
+    - `browser_feature_desktop_site_on`
 - **`it-crittare`** (1) — `crittare` and its forms (`critta`, `crittato`) are the correct Italian verb for "to encrypt" — not a typo for `criptare`. Confirmed by the maintainer. Scoped to spelling findings so a mistranslation in the same string still reports.
-  - `preferences_credit_cards_save_and_autofill_cards_summary_2`
+    - `preferences_credit_cards_save_and_autofill_cards_summary_2`
 - **`it-final-exclamation`** (2) — Ending a sentence with `.` where the source ends with `!` is a deliberate register choice; Italian UI text uses the exclamation mark far more sparingly than English. Scoped to typography findings so a real punctuation defect in the same string still reports.
-  - `firefox_labs_banner_title_2`, `snackbar_added_to_shortcuts`
+    - `firefox_labs_banner_title_2`, `snackbar_added_to_shortcuts`
 
 _Suppressions live in `locales/it/suppressions.yaml`. Removing a rule brings its findings back._
 

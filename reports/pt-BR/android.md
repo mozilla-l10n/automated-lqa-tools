@@ -20,22 +20,22 @@ Also for pt-BR: [firefox](firefox.md)
 ### 🆕 New findings (4)
 
 - `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-pt-rBR/strings.xml` — `firstrun_shortcut_text` quotes “Adicionar à tela inicial” but the string it names, `menu_add_to_home_screen`, reads “Adicionar à tela do dispositivo”
-  - Current: `Volte rapidamente a seus sites preferidos no %1$s. Basta usar "Adicionar à tela inicial" no menu do %1$s.`
-  - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
-  - Suggest: `Adicionar à tela do dispositivo`
-  - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+    - Current: `Volte rapidamente a seus sites preferidos no %1$s. Basta usar "Adicionar à tela inicial" no menu do %1$s.`
+    - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
+    - Suggest: `Adicionar à tela do dispositivo`
+    - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — `preference_summary_delete_browsing_data_on_quit_2` uses straight double quotes
-  - Current: `Excluir automaticamente os dados de navegação selecionados abaixo ao tocar em "Sair" no menu principal`
-  - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
-  - The locale's quote convention is `curly-double` (13 occurrences).
+    - Current: `Excluir automaticamente os dados de navegação selecionados abaixo ao tocar em "Sair" no menu principal`
+    - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
+    - The locale's quote convention is `curly-double` (13 occurrences).
 - `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
-  - Current: `O endereço web deve conter "https://" ou "http://"`
-  - Source: `Web address must contain “https://” or “http://”`
-  - The locale's quote convention is `curly-double` (13 occurrences).
+    - Current: `O endereço web deve conter "https://" ou "http://"`
+    - Source: `Web address must contain “https://” or “http://”`
+    - The locale's quote convention is `curly-double` (13 occurrences).
 - `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-pt-rBR/strings.xml` — `firstrun_shortcut_text` uses straight double quotes
-  - Current: `Volte rapidamente a seus sites preferidos no %1$s. Basta usar "Adicionar à tela inicial" no menu do %1$s.`
-  - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
-  - The locale's quote convention is `curly-double` (13 occurrences).
+    - Current: `Volte rapidamente a seus sites preferidos no %1$s. Basta usar "Adicionar à tela inicial" no menu do %1$s.`
+    - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
+    - The locale's quote convention is `curly-double` (13 occurrences).
 
 ### ✅ Fixed since the last run (0)
 
@@ -129,25 +129,25 @@ _Nothing in this category._
 ### D. Terminology, register & consistency
 
 - `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-pt-rBR/strings.xml` — `firstrun_shortcut_text` quotes “Adicionar à tela inicial” but the string it names, `menu_add_to_home_screen`, reads “Adicionar à tela do dispositivo”
-  - Current: `Volte rapidamente a seus sites preferidos no %1$s. Basta usar "Adicionar à tela inicial" no menu do %1$s.`
-  - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
-  - Suggest: `Adicionar à tela do dispositivo`
-  - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+    - Current: `Volte rapidamente a seus sites preferidos no %1$s. Basta usar "Adicionar à tela inicial" no menu do %1$s.`
+    - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
+    - Suggest: `Adicionar à tela do dispositivo`
+    - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 
 ### E. Typography, punctuation & spacing
 
 - `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
-  - Current: `O endereço web deve conter "https://" ou "http://"`
-  - Source: `Web address must contain “https://” or “http://”`
-  - The locale's quote convention is `curly-double` (13 occurrences).
+    - Current: `O endereço web deve conter "https://" ou "http://"`
+    - Source: `Web address must contain “https://” or “http://”`
+    - The locale's quote convention is `curly-double` (13 occurrences).
 - `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — `preference_summary_delete_browsing_data_on_quit_2` uses straight double quotes
-  - Current: `Excluir automaticamente os dados de navegação selecionados abaixo ao tocar em "Sair" no menu principal`
-  - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
-  - The locale's quote convention is `curly-double` (13 occurrences).
+    - Current: `Excluir automaticamente os dados de navegação selecionados abaixo ao tocar em "Sair" no menu principal`
+    - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
+    - The locale's quote convention is `curly-double` (13 occurrences).
 - `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-pt-rBR/strings.xml` — `firstrun_shortcut_text` uses straight double quotes
-  - Current: `Volte rapidamente a seus sites preferidos no %1$s. Basta usar "Adicionar à tela inicial" no menu do %1$s.`
-  - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
-  - The locale's quote convention is `curly-double` (13 occurrences).
+    - Current: `Volte rapidamente a seus sites preferidos no %1$s. Basta usar "Adicionar à tela inicial" no menu do %1$s.`
+    - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
+    - The locale's quote convention is `curly-double` (13 occurrences).
 
 ---
 

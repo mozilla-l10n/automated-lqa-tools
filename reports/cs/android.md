@@ -20,18 +20,18 @@ Also for cs: [firefox](firefox.md)
 ### 🆕 New findings (3)
 
 - `recently_closed_tab` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — `recently_closed_tab` has placeholders none where the source has %d
-  - Current: `Jeden panel`
-  - Source: `%d tab`
-  - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+    - Current: `Jeden panel`
+    - Source: `%d tab`
+    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
 - `create_collection_save_to_collection_tab_selected` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — `create_collection_save_to_collection_tab_selected` has placeholders none where the source has %d
-  - Current: `Vybrán jeden panel`
-  - Source: `%d tab selected`
-  - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+    - Current: `Vybrán jeden panel`
+    - Source: `%d tab selected`
+    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
 - `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — `firstrun_shortcut_text` quotes “Přidat na plochu” but the string it names, `menu_add_to_home_screen`, reads “Přidat na domovskou obrazovku”
-  - Current: `S aplikací %1$s se můžete rychle vrátit ke svým oblíbeným stránkám. Použijte „Přidat na plochu“ z nabídky aplikace %1$s.`
-  - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
-  - Suggest: `Přidat na domovskou obrazovku`
-  - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+    - Current: `S aplikací %1$s se můžete rychle vrátit ke svým oblíbeným stránkám. Použijte „Přidat na plochu“ z nabídky aplikace %1$s.`
+    - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
+    - Suggest: `Přidat na domovskou obrazovku`
+    - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 
 ### ✅ Fixed since the last run (0)
 
@@ -112,13 +112,13 @@ _Nothing reported._
 ### A. Functional, markup, variables & plurals
 
 - `create_collection_save_to_collection_tab_selected` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — `create_collection_save_to_collection_tab_selected` has placeholders none where the source has %d
-  - Current: `Vybrán jeden panel`
-  - Source: `%d tab selected`
-  - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+    - Current: `Vybrán jeden panel`
+    - Source: `%d tab selected`
+    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
 - `recently_closed_tab` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — `recently_closed_tab` has placeholders none where the source has %d
-  - Current: `Jeden panel`
-  - Source: `%d tab`
-  - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+    - Current: `Jeden panel`
+    - Source: `%d tab`
+    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -131,10 +131,10 @@ _Nothing in this category._
 ### D. Terminology, register & consistency
 
 - `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — `firstrun_shortcut_text` quotes “Přidat na plochu” but the string it names, `menu_add_to_home_screen`, reads “Přidat na domovskou obrazovku”
-  - Current: `S aplikací %1$s se můžete rychle vrátit ke svým oblíbeným stránkám. Použijte „Přidat na plochu“ z nabídky aplikace %1$s.`
-  - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
-  - Suggest: `Přidat na domovskou obrazovku`
-  - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+    - Current: `S aplikací %1$s se můžete rychle vrátit ke svým oblíbeným stránkám. Použijte „Přidat na plochu“ z nabídky aplikace %1$s.`
+    - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
+    - Suggest: `Přidat na domovskou obrazovku`
+    - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 
 ### E. Typography, punctuation & spacing
 

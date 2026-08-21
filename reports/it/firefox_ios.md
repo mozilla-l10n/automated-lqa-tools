@@ -141,9 +141,9 @@ _One line each in `locales/it/dismissed.txt`. Delete the line and the finding re
 ### Suppressed as false positives (2)
 
 - **`it-attiva-not-attivata`** (1) — The expected pair is `Attiva`/`Attivo`/`Attivi` with `Disattivata`/`Disattivato`/`Disattivati`. The asymmetry is deliberate and borne out by the tree, which uses `attiva` 279 times against 35 for the participle forms. A suggestion to "restore symmetry" with `Attivata`/`Attivato`/`Attivi` is wrong. The regex is word-anchored because a plain substring would also match `disattivato`.
-  - `Settings.Translation.SettingOn.v145`
+    - `Settings.Translation.SettingOn.v145`
 - **`it-crittare`** (1) — `crittare` and its forms (`critta`, `crittato`) are the correct Italian verb for "to encrypt" — not a typo for `criptare`. Confirmed by the maintainer. Scoped to spelling findings so a mistranslation in the same string still reports.
-  - `CreditCard.RememberCard.Header.v122`
+    - `CreditCard.RememberCard.Header.v122`
 
 _Suppressions live in `locales/it/suppressions.yaml`. Removing a rule brings its findings back._
 

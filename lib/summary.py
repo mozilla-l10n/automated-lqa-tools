@@ -70,7 +70,10 @@ def render(project) -> str:
         "Impact 1–2 | Fixed | Dismissed | Suppressed |",
         "|---|---|---|---|---|---|---|---|---|---|---|",
     ]
-    for r in sorted(checked, key=lambda r: (-r["urgent"], -r["open"])):
+    # Alphabetical by locale code: the table is looked up ("where is pt-BR?"),
+    # not read as a ranking, and a worst-first order shuffles rows between
+    # runs so the same locale is never twice in the same place.
+    for r in sorted(checked, key=lambda r: r["locale"]):
         m = r["meta"]
         out.append(
             f"| [{r['locale']}]({r['locale']}/{project.name}.md) | "
@@ -80,7 +83,7 @@ def render(project) -> str:
             f"**{r['open']}** | {r['urgent']} | {r['fixed']} | "
             f"{r['dismissed']} | {r['suppressed']} |"
         )
-    for r in rows:
+    for r in sorted(rows, key=lambda r: r["locale"]):
         if r["state"]:
             out.append(
                 f"| {r['locale']} | — | — | — | — | — | — | — | — | — | _{r['state']}_ |"

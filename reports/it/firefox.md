@@ -134,9 +134,9 @@ _One line each in `locales/it/dismissed.txt`. Delete the line and the finding re
 ### Suppressed as false positives (2)
 
 - **`it-crittare`** (1) — `crittare` and its forms (`critta`, `crittato`) are the correct Italian verb for "to encrypt" — not a typo for `criptare`. Confirmed by the maintainer. Scoped to spelling findings so a mistranslation in the same string still reports.
-  - `credit-card-save-doorhanger-description`
+    - `credit-card-save-doorhanger-description`
 - **`it-disegnata`** (1) — `disegnata` in about-private-browsing-focus-promo-text is deliberate wording, confirmed by the maintainer.
-  - `about-private-browsing-focus-promo-text`
+    - `about-private-browsing-focus-promo-text`
 
 _Suppressions live in `locales/it/suppressions.yaml`. Removing a rule brings its findings back._
 

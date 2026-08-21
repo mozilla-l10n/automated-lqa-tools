@@ -20,13 +20,13 @@ Also for ru: [firefox](firefox.md)
 ### 🆕 New findings (2)
 
 - `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — `preference_summary_delete_browsing_data_on_quit_2` uses straight double quotes
-  - Current: `Автоматически удаляет данные просмотра сети, когда вы выбираете "Выйти" в главном меню`
-  - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
-  - The locale's quote convention is `guillemet` (46 occurrences).
+    - Current: `Автоматически удаляет данные просмотра сети, когда вы выбираете "Выйти" в главном меню`
+    - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
+    - The locale's quote convention is `guillemet` (46 occurrences).
 - `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
-  - Current: `Сетевой адрес должен содержать "https://" or "http://"`
-  - Source: `Web address must contain “https://” or “http://”`
-  - The locale's quote convention is `guillemet` (46 occurrences).
+    - Current: `Сетевой адрес должен содержать "https://" or "http://"`
+    - Source: `Web address must contain “https://” or “http://”`
+    - The locale's quote convention is `guillemet` (46 occurrences).
 
 ### ✅ Fixed since the last run (0)
 
@@ -120,13 +120,13 @@ _Nothing in this category._
 ### E. Typography, punctuation & spacing
 
 - `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
-  - Current: `Сетевой адрес должен содержать "https://" or "http://"`
-  - Source: `Web address must contain “https://” or “http://”`
-  - The locale's quote convention is `guillemet` (46 occurrences).
+    - Current: `Сетевой адрес должен содержать "https://" or "http://"`
+    - Source: `Web address must contain “https://” or “http://”`
+    - The locale's quote convention is `guillemet` (46 occurrences).
 - `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — `preference_summary_delete_browsing_data_on_quit_2` uses straight double quotes
-  - Current: `Автоматически удаляет данные просмотра сети, когда вы выбираете "Выйти" в главном меню`
-  - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
-  - The locale's quote convention is `guillemet` (46 occurrences).
+    - Current: `Автоматически удаляет данные просмотра сети, когда вы выбираете "Выйти" в главном меню`
+    - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
+    - The locale's quote convention is `guillemet` (46 occurrences).
 
 ---
 

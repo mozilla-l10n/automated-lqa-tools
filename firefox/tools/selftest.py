@@ -399,6 +399,56 @@ def run(l10n_dir, source_dir, project) -> int:
         check(f"| {n_fixed} |" in rendered or str(n_fixed) in rendered,
               f"the cross-locale page reports {locale}'s {n_fixed} fixed")
 
+    listed = [line.split("[", 1)[1].split("]", 1)[0]
+              for line in _summary.render(project).splitlines()
+              if line.startswith("| [")]
+    check(listed == sorted(listed),
+          "the cross-locale table is ordered by locale code, so a locale "
+          "stays put between runs")
+
+    # Detail lines are nested under their finding with four spaces: the
+    # published site renders with Python-Markdown, which flattens a
+    # two-space indent and turned every report into one undifferentiated
+    # list of bullets.
+    import report as report_mod
+    nested = report_mod._item(
+        Finding(locale="it", file="a.ftl", string_id="s", category="B",
+                summary="wrong content", current="testo", rationale="why"))
+    check(all(line.startswith("    - ") for line in nested.splitlines()[1:]),
+          "a finding's Current/Source/Suggest/rationale hang under it at a "
+          "full indent level")
+    try:
+        import markdown
+    except ImportError:
+        markdown = None
+    if markdown is not None:
+        html = markdown.markdown(nested, extensions=["tables", "sane_lists"],
+                                 output_format="html5")
+        check(html.count("<ul>") == 2,
+              "and the site's renderer really does nest them")
+
+    # The site escapes the source and the renderer escapes the `&` of every
+    # entity again inside a code span. One round is undone so the reviewer
+    # reads the markup the string actually contains -- but only one, and the
+    # text must stay text.
+    import importlib.util
+    import tempfile
+    _root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    spec = importlib.util.spec_from_file_location(
+        "site_build", os.path.join(_root, "site", "build.py"))
+    site_build = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(site_build)
+    with tempfile.TemporaryDirectory() as tmp:
+        sample = os.path.join(tmp, "x.md")
+        with open(sample, "w", encoding="utf-8") as fh:
+            fh.write("- Current: `<span data-l10n-name=\"a\">x</span >`\n"
+                     "\nA <b>bold</b> claim outside a code span.\n")
+        out = site_build.render(sample, "it")
+    check("<code>&lt;span data-l10n-name=&quot;a&quot;&gt;x&lt;/span &gt;</code>" in out,
+          "a quoted string shows its markup as markup, not as `&amp;lt;`")
+    check("<b>" not in out and "&lt;b&gt;bold" in out,
+          "and markup outside a code span is still inert text")
+
     print("\nSuppression rules")
     from suppress import Rule
     rule = Rule({"id": "r", "reason": "because", "match": {"check": "typography",

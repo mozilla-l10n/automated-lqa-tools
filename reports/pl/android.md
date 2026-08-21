@@ -20,9 +20,9 @@ Also for pl: [firefox](firefox.md)
 ### 🆕 New findings (1)
 
 - `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-pl/strings.xml` — `firstrun_shortcut_text` has placeholders %1$s where the source has %1$s, %1$s
-  - Current: `Szybko wracaj do ulubionych stron w %1$s. Po prostu wybierz „Dodaj do ekranu głównego” z menu.`
-  - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
-  - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+    - Current: `Szybko wracaj do ulubionych stron w %1$s. Po prostu wybierz „Dodaj do ekranu głównego” z menu.`
+    - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
+    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
 
 ### ✅ Fixed since the last run (0)
 
@@ -105,9 +105,9 @@ _Nothing reported._
 ### A. Functional, markup, variables & plurals
 
 - `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-pl/strings.xml` — `firstrun_shortcut_text` has placeholders %1$s where the source has %1$s, %1$s
-  - Current: `Szybko wracaj do ulubionych stron w %1$s. Po prostu wybierz „Dodaj do ekranu głównego” z menu.`
-  - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
-  - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+    - Current: `Szybko wracaj do ulubionych stron w %1$s. Po prostu wybierz „Dodaj do ekranu głównego” z menu.`
+    - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
+    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 

@@ -20,17 +20,17 @@ Also for de: [firefox](firefox.md)
 ### 🆕 New findings (3)
 
 - `mozac_feature_sitepermissions_storage_access_message` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-de/strings.xml` — `mozac_feature_sitepermissions_storage_access_message` has placeholders %1$s where the source has %s
-  - Current: `Möglicherweise möchten Sie den Zugriff blockieren, wenn nicht klar ist, warum %1$s diese Daten benötigt.`
-  - Source: `You may want to block access if it’s not clear why %s needs this data.`
-  - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+    - Current: `Möglicherweise möchten Sie den Zugriff blockieren, wenn nicht klar ist, warum %1$s diese Daten benötigt.`
+    - Source: `You may want to block access if it’s not clear why %s needs this data.`
+    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
 - `mozac_feature_findindpage_dismiss` — `mozilla-mobile/android-components/components/feature/findinpage/src/main/res/values-de/strings.xml` — `mozac_feature_findindpage_dismiss` uses straight double quotes
-  - Current: `"Seite durchsuchen" deaktivieren`
-  - Source: `Dismiss find in page`
-  - The locale's quote convention is `german-double` (25 occurrences).
+    - Current: `"Seite durchsuchen" deaktivieren`
+    - Source: `Dismiss find in page`
+    - The locale's quote convention is `german-double` (25 occurrences).
 - `accessibility_dismiss_find_in_page` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — `accessibility_dismiss_find_in_page` uses straight double quotes
-  - Current: `"Seite durchsuchen" deaktivieren`
-  - Source: `Dismiss find in page`
-  - The locale's quote convention is `german-double` (25 occurrences).
+    - Current: `"Seite durchsuchen" deaktivieren`
+    - Source: `Dismiss find in page`
+    - The locale's quote convention is `german-double` (25 occurrences).
 
 ### ✅ Fixed since the last run (0)
 
@@ -108,9 +108,9 @@ _Nothing reported._
 ### A. Functional, markup, variables & plurals
 
 - `mozac_feature_sitepermissions_storage_access_message` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-de/strings.xml` — `mozac_feature_sitepermissions_storage_access_message` has placeholders %1$s where the source has %s
-  - Current: `Möglicherweise möchten Sie den Zugriff blockieren, wenn nicht klar ist, warum %1$s diese Daten benötigt.`
-  - Source: `You may want to block access if it’s not clear why %s needs this data.`
-  - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+    - Current: `Möglicherweise möchten Sie den Zugriff blockieren, wenn nicht klar ist, warum %1$s diese Daten benötigt.`
+    - Source: `You may want to block access if it’s not clear why %s needs this data.`
+    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -127,13 +127,13 @@ _Nothing in this category._
 ### E. Typography, punctuation & spacing
 
 - `mozac_feature_findindpage_dismiss` — `mozilla-mobile/android-components/components/feature/findinpage/src/main/res/values-de/strings.xml` — `mozac_feature_findindpage_dismiss` uses straight double quotes
-  - Current: `"Seite durchsuchen" deaktivieren`
-  - Source: `Dismiss find in page`
-  - The locale's quote convention is `german-double` (25 occurrences).
+    - Current: `"Seite durchsuchen" deaktivieren`
+    - Source: `Dismiss find in page`
+    - The locale's quote convention is `german-double` (25 occurrences).
 - `accessibility_dismiss_find_in_page` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — `accessibility_dismiss_find_in_page` uses straight double quotes
-  - Current: `"Seite durchsuchen" deaktivieren`
-  - Source: `Dismiss find in page`
-  - The locale's quote convention is `german-double` (25 occurrences).
+    - Current: `"Seite durchsuchen" deaktivieren`
+    - Source: `Dismiss find in page`
+    - The locale's quote convention is `german-double` (25 occurrences).
 
 ---
 

@@ -20,15 +20,15 @@ Also for id: [firefox](firefox.md)
 ### 🆕 New findings (2)
 
 - `never_translate_site_header_preference` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — `never_translate_site_header_preference` quotes “Jangan terjemahkan situs ini” but the string it names, `translation_option_bottom_sheet_never_translate_site`, reads “Jangan pernah terjemahkan situs ini”
-  - Current: `Untuk menambahkan situs baru: Kunjungi dan pilih “Jangan terjemahkan situs ini” dari menu terjemahan.`
-  - Source: `To add a new site: Visit it and select “Never translate this site” from the translation menu.`
-  - Suggest: `Jangan pernah terjemahkan situs ini`
-  - In the source this string quotes “Never translate this site”, which is exactly the value of `translation_option_bottom_sheet_never_translate_site` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+    - Current: `Untuk menambahkan situs baru: Kunjungi dan pilih “Jangan terjemahkan situs ini” dari menu terjemahan.`
+    - Source: `To add a new site: Visit it and select “Never translate this site” from the translation menu.`
+    - Suggest: `Jangan pernah terjemahkan situs ini`
+    - In the source this string quotes “Never translate this site”, which is exactly the value of `translation_option_bottom_sheet_never_translate_site` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-in/strings.xml` — `firstrun_shortcut_text` quotes “Tambahkan ke layar Beranda” but the string it names, `menu_add_to_home_screen`, reads “Tambahkan ke Beranda”
-  - Current: `Kembali ke situs favorit Anda di %1$s dengan cepat. Cukup pilih "Tambahkan ke layar Beranda" dari menu %1$s.`
-  - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
-  - Suggest: `Tambahkan ke Beranda`
-  - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+    - Current: `Kembali ke situs favorit Anda di %1$s dengan cepat. Cukup pilih "Tambahkan ke layar Beranda" dari menu %1$s.`
+    - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
+    - Suggest: `Tambahkan ke Beranda`
+    - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 
 ### ✅ Fixed since the last run (0)
 
@@ -124,15 +124,15 @@ _Nothing in this category._
 ### D. Terminology, register & consistency
 
 - `never_translate_site_header_preference` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — `never_translate_site_header_preference` quotes “Jangan terjemahkan situs ini” but the string it names, `translation_option_bottom_sheet_never_translate_site`, reads “Jangan pernah terjemahkan situs ini”
-  - Current: `Untuk menambahkan situs baru: Kunjungi dan pilih “Jangan terjemahkan situs ini” dari menu terjemahan.`
-  - Source: `To add a new site: Visit it and select “Never translate this site” from the translation menu.`
-  - Suggest: `Jangan pernah terjemahkan situs ini`
-  - In the source this string quotes “Never translate this site”, which is exactly the value of `translation_option_bottom_sheet_never_translate_site` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+    - Current: `Untuk menambahkan situs baru: Kunjungi dan pilih “Jangan terjemahkan situs ini” dari menu terjemahan.`
+    - Source: `To add a new site: Visit it and select “Never translate this site” from the translation menu.`
+    - Suggest: `Jangan pernah terjemahkan situs ini`
+    - In the source this string quotes “Never translate this site”, which is exactly the value of `translation_option_bottom_sheet_never_translate_site` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-in/strings.xml` — `firstrun_shortcut_text` quotes “Tambahkan ke layar Beranda” but the string it names, `menu_add_to_home_screen`, reads “Tambahkan ke Beranda”
-  - Current: `Kembali ke situs favorit Anda di %1$s dengan cepat. Cukup pilih "Tambahkan ke layar Beranda" dari menu %1$s.`
-  - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
-  - Suggest: `Tambahkan ke Beranda`
-  - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+    - Current: `Kembali ke situs favorit Anda di %1$s dengan cepat. Cukup pilih "Tambahkan ke layar Beranda" dari menu %1$s.`
+    - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
+    - Suggest: `Tambahkan ke Beranda`
+    - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 
 ### E. Typography, punctuation & spacing
 

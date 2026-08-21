@@ -20,9 +20,9 @@ Also for zh-CN: [firefox](firefox.md)
 ### 🆕 New findings (1)
 
 - `downloads_delete_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — `downloads_delete_dialog_title` has placeholders %d where the source has none
-  - Current: `{$quantity ->} [other] 删除 %d 个文件？`
-  - Source: `{$quantity ->} [one] Delete file? [other] Delete %d files?`
-  - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+    - Current: `{$quantity ->} [other] 删除 %d 个文件？`
+    - Source: `{$quantity ->} [one] Delete file? [other] Delete %d files?`
+    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
 
 ### ✅ Fixed since the last run (0)
 
@@ -106,9 +106,9 @@ _Nothing reported._
 ### A. Functional, markup, variables & plurals
 
 - `downloads_delete_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — `downloads_delete_dialog_title` has placeholders %d where the source has none
-  - Current: `{$quantity ->} [other] 删除 %d 个文件？`
-  - Source: `{$quantity ->} [one] Delete file? [other] Delete %d files?`
-  - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+    - Current: `{$quantity ->} [other] 删除 %d 个文件？`
+    - Source: `{$quantity ->} [one] Delete file? [other] Delete %d files?`
+    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 

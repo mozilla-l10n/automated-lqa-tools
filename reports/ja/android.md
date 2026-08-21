@@ -20,9 +20,9 @@ Also for ja: [firefox](firefox.md)
 ### 🆕 New findings (1)
 
 - `downloads_delete_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — `downloads_delete_dialog_title` has plural variant ['one'], which ja does not have
-  - Current: `{$quantity ->} [one] ファイルを削除しますか？ [other] %d 個のファイルを削除しますか？`
-  - Source: `{$quantity ->} [one] Delete file? [other] Delete %d files?`
-  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+    - Current: `{$quantity ->} [one] ファイルを削除しますか？ [other] %d 個のファイルを削除しますか？`
+    - Source: `{$quantity ->} [one] Delete file? [other] Delete %d files?`
+    - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
 
 ### ✅ Fixed since the last run (0)
 
@@ -103,9 +103,9 @@ _Nothing reported._
 ### A. Functional, markup, variables & plurals
 
 - `downloads_delete_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — `downloads_delete_dialog_title` has plural variant ['one'], which ja does not have
-  - Current: `{$quantity ->} [one] ファイルを削除しますか？ [other] %d 個のファイルを削除しますか？`
-  - Source: `{$quantity ->} [one] Delete file? [other] Delete %d files?`
-  - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+    - Current: `{$quantity ->} [one] ファイルを削除しますか？ [other] %d 個のファイルを削除しますか？`
+    - Source: `{$quantity ->} [one] Delete file? [other] Delete %d files?`
+    - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 

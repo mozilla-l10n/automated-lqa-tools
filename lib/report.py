@@ -23,6 +23,13 @@ from findings import CATEGORIES, IMPACT
 
 MAX_LISTED = 60  # per category, before collapsing to a count
 
+# Detail lines hang under their finding. Four spaces, not two: the published
+# site renders with Python-Markdown, which needs a full indent level to see a
+# nested list and silently flattens two spaces into one long run of siblings
+# -- every finding, its quoted string and its rationale all at the same
+# level. GitHub accepts four spaces too, so both renderings agree.
+SUB = "    - "
+
 # A finding is keyed by the *reference* path, because that is the one
 # identifier every locale shares and so the one that state can be stored
 # against. A reader wants the file they would actually edit, though, so
@@ -59,15 +66,15 @@ def _esc(text: str, limit: int = 220) -> str:
 def _item(f) -> str:
     bits = [f"- `{f.string_id}` — `{_path(f.file)}` — {f.summary}"]
     if f.current:
-        bits.append(f"  - Current: `{_esc(f.current)}`")
+        bits.append(f"{SUB}Current: `{_esc(f.current)}`")
     src = _SOURCE.get(f.key)
     source_text = src.text() if src is not None else ""
     if source_text and source_text.strip() != (f.current or "").strip():
-        bits.append(f"  - Source: `{_esc(source_text)}`")
+        bits.append(f"{SUB}Source: `{_esc(source_text)}`")
     if f.suggest and f.suggest != f.current:
-        bits.append(f"  - Suggest: `{_esc(f.suggest)}`")
+        bits.append(f"{SUB}Suggest: `{_esc(f.suggest)}`")
     if f.rationale:
-        bits.append(f"  - {_esc(f.rationale, 400)}")
+        bits.append(f"{SUB}{_esc(f.rationale, 400)}")
     return "\n".join(bits)
 
 
@@ -153,7 +160,7 @@ def _systemic(systemic: list[dict]) -> str:
         more = f" …and {len(ids) - 12} more" if len(ids) > 12 else ""
         out.append(
             f"- **{item['title']}** — {item['count']} strings. {item['note']}\n"
-            f"  - Affected: {sample}{more}"
+            f"{SUB}Affected: {sample}{more}"
         )
     return "\n".join(out) + "\n"
 
@@ -315,7 +322,9 @@ def render(locale, meta, health, counts, findings, systemic, delta_report, count
             reason = active.get(rule_id, "_rule no longer defined_")
             sample = ", ".join(f"`{f.string_id}`" for f in group[:10])
             more = f" …and {len(group) - 10} more" if len(group) > 10 else ""
-            lines.append(f"- **`{rule_id}`** ({len(group)}) — {reason}\n  - {sample}{more}")
+            lines.append(
+                f"- **`{rule_id}`** ({len(group)}) — {reason}\n{SUB}{sample}{more}"
+            )
         lines.append("")
         lines.append(
             "_Suppressions live in `locales/"

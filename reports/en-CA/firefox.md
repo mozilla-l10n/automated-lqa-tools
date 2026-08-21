@@ -20,33 +20,33 @@ Also for en-CA: [android](android.md)
 ### 🆕 New findings (3)
 
 - `ImageMapRectBoundsError` — `dom/chrome/layout/layout_errors.properties` — The quoted format literal is mangled: "left,top,right,bottom" became "”“eft,top,right,bottom".
-  - Current: `”“eft,top,right,bottom”`
-  - Source: `The “coords” attribute of the <area shape="rect"> tag is not in the “left,top,right,bottom” format.`
-  - Suggest: `“left,top,right,bottom”`
-  - The en-US source names the literal attribute format "left,top,right,bottom"; the target lost the initial "l" and has stray/reversed quote marks, making the message wrong and unreadable.
+    - Current: `”“eft,top,right,bottom”`
+    - Source: `The “coords” attribute of the <area shape="rect"> tag is not in the “left,top,right,bottom” format.`
+    - Suggest: `“left,top,right,bottom”`
+    - The en-US source names the literal attribute format "left,top,right,bottom"; the target lost the initial "l" and has stray/reversed quote marks, making the message wrong and unreadable.
 - `PINotInProlog` — `dom/chrome/layout/xul.properties` — "anymore" was needlessly reworded to "any longer", a change not required by en-CA.
-  - Current: `does not have any effect outside the prolog any longer`
-  - Source: `<?%1$S?> processing instruction does not have any effect outside the prolog anymore (see bug 360119).`
-  - Suggest: `does not have any effect outside the prolog anymore`
-  - en-CA does not differ from en-US here; the substitution is an unnecessary divergence from the source wording.
+    - Current: `does not have any effect outside the prolog any longer`
+    - Source: `<?%1$S?> processing instruction does not have any effect outside the prolog anymore (see bug 360119).`
+    - Suggest: `does not have any effect outside the prolog anymore`
+    - en-CA does not differ from en-US here; the substitution is an unnecessary divergence from the source wording.
 - `about-reader-color-scheme-auto` — `toolkit/toolkit/about/aboutReader.ftl` — Only the title was adapted to "Colour" while the related value remains inconsistent; "Color Scheme" here refers to the UI feature name shown alongside untouched sibling labels.
-  - Current: `title: Colour Scheme Auto`
-  - Source: `(value): Auto title: Color Scheme Auto`
-  - Suggest: `title: Color Scheme Auto`
-  - Reader Mode's colour-scheme labels are inconsistent if only this one is adapted; the en-US term is used for the same control elsewhere in the file.
+    - Current: `title: Colour Scheme Auto`
+    - Source: `(value): Auto title: Color Scheme Auto`
+    - Suggest: `title: Color Scheme Auto`
+    - Reader Mode's colour-scheme labels are inconsistent if only this one is adapted; the en-US term is used for the same control elsewhere in the file.
 
 ### ✅ Fixed since the last run (2)
 
 - `PINotInProlog` — `dom/chrome/layout/xul.properties` — "anymore" was needlessly reworded to "any longer", a change not required by en-CA.
-  - Current: `does not have any effect outside the prolog any longer`
-  - Source: `<?%1$S?> processing instruction does not have any effect outside the prolog anymore (see bug 360119).`
-  - Suggest: `does not have any effect outside the prolog anymore`
-  - en-CA does not differ from en-US here; the substitution is an unnecessary divergence from the source wording.
+    - Current: `does not have any effect outside the prolog any longer`
+    - Source: `<?%1$S?> processing instruction does not have any effect outside the prolog anymore (see bug 360119).`
+    - Suggest: `does not have any effect outside the prolog anymore`
+    - en-CA does not differ from en-US here; the substitution is an unnecessary divergence from the source wording.
 - `about-reader-color-scheme-auto` — `toolkit/toolkit/about/aboutReader.ftl` — Only the title was adapted to "Colour" while the related value remains inconsistent; "Color Scheme" here refers to the UI feature name shown alongside untouched sibling labels.
-  - Current: `title: Colour Scheme Auto`
-  - Source: `(value): Auto title: Color Scheme Auto`
-  - Suggest: `title: Color Scheme Auto`
-  - Reader Mode's colour-scheme labels are inconsistent if only this one is adapted; the en-US term is used for the same control elsewhere in the file.
+    - Current: `title: Colour Scheme Auto`
+    - Source: `(value): Auto title: Color Scheme Auto`
+    - Suggest: `title: Color Scheme Auto`
+    - Reader Mode's colour-scheme labels are inconsistent if only this one is adapted; the en-US term is used for the same control elsewhere in the file.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -136,10 +136,10 @@ _Nothing reported._
 ### A. Functional, markup, variables & plurals
 
 - `ImageMapRectBoundsError` — `dom/chrome/layout/layout_errors.properties` — The quoted format literal is mangled: "left,top,right,bottom" became "”“eft,top,right,bottom".
-  - Current: `”“eft,top,right,bottom”`
-  - Source: `The “coords” attribute of the <area shape="rect"> tag is not in the “left,top,right,bottom” format.`
-  - Suggest: `“left,top,right,bottom”`
-  - The en-US source names the literal attribute format "left,top,right,bottom"; the target lost the initial "l" and has stray/reversed quote marks, making the message wrong and unreadable.
+    - Current: `”“eft,top,right,bottom”`
+    - Source: `The “coords” attribute of the <area shape="rect"> tag is not in the “left,top,right,bottom” format.`
+    - Suggest: `“left,top,right,bottom”`
+    - The en-US source names the literal attribute format "left,top,right,bottom"; the target lost the initial "l" and has stray/reversed quote marks, making the message wrong and unreadable.
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -148,9 +148,9 @@ _Nothing in this category._
 ### C. Grammar, agreement & spelling
 
 - `recommended-theme-1` — `toolkit/toolkit/about/aboutAddons.ftl` — `recommended-theme-1` still uses the en-US form “color”
-  - Current: `Feeling creative? <a data-l10n-name="link">Build your own theme with Firefox Color.</a>`
-  - Suggest: `colour`
-  - This locale writes “colour” for “color” in 69 other strings and keeps “color” in 4. This string is byte-identical to en-US, so the substitution looks simply to have been missed.
+    - Current: `Feeling creative? <a data-l10n-name="link">Build your own theme with Firefox Color.</a>`
+    - Suggest: `colour`
+    - This locale writes “colour” for “color” in 69 other strings and keeps “color” in 4. This string is byte-identical to en-US, so the substitution looks simply to have been missed.
 
 ### D. Terminology, register & consistency
 
@@ -159,15 +159,15 @@ _Nothing in this category._
 ### E. Typography, punctuation & spacing
 
 - `Kilo` — `browser/installer/override.properties` — The NSIS kilobyte unit prefix was changed from "K" to "k", a change no en-CA convention calls for.
-  - Current: `Kilo = k`
-  - Source: `K`
-  - Suggest: `Kilo = K`
-  - This value is concatenated by NSIS into the byte-size readout (e.g. "1.5 KB"); the sibling values Byte/Mega/Giga were left as B/M/G. Canadian English has no convention that requires lowercasing this symbol, so the single-letter change is an unnecessary deviation from the source.
+    - Current: `Kilo = k`
+    - Source: `K`
+    - Suggest: `Kilo = K`
+    - This value is concatenated by NSIS into the byte-size readout (e.g. "1.5 KB"); the sibling values Byte/Mega/Giga were left as B/M/G. Canadian English has no convention that requires lowercasing this symbol, so the single-letter change is an unnecessary deviation from the source.
 - `rights-intro-point-1` — `toolkit/toolkit/about/aboutRights.ftl` — The proper name of the licence document "Mozilla Public License" has been respelled as "Mozilla Public Licence".
-  - Current: `Mozilla Public Licence`
-  - Source: `{ -brand-short-name } is made available to you under the terms of the <a data-l10n-name="mozilla-public-license-link">Mozilla Public License</a>. This means you may use, copy and distribute { -brand-short-name } to othe…`
-  - Suggest: `Mozilla Public License`
-  - "Mozilla Public License" is the official title of a specific legal document (as used in the MPL header of every file in this tree, including this one); the -ce/-se spelling rule for the common noun does not apply to a proper name. Both occurrences in the string are affected, including the linked <a data-l10n-name="mozilla-public-license-link"> text.
+    - Current: `Mozilla Public Licence`
+    - Source: `{ -brand-short-name } is made available to you under the terms of the <a data-l10n-name="mozilla-public-license-link">Mozilla Public License</a>. This means you may use, copy and distribute { -brand-short-name } to othe…`
+    - Suggest: `Mozilla Public License`
+    - "Mozilla Public License" is the official title of a specific legal document (as used in the MPL header of every file in this tree, including this one); the -ce/-se spelling rule for the common noun does not apply to a proper name. Both occurrences in the string are affected, including the linked <a data-l10n-name="mozilla-public-license-link"> text.
 
 ---
 
