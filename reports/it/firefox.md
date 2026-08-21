@@ -5,9 +5,9 @@
 | **Generated** | 2026-08-21 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ce9efca9167e` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
-| **Previous run** | 2026-08-21 @ `1fee6e3cbe1b` |
+| **Previous run** | 2026-08-21 @ `ce9efca9167e` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 5 of 18,360 |
+| **Strings reviewed this run** | 0 of 18,360 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -87,13 +87,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (9)
+## 3. Open findings (3)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 4 |
-| 3 | Degraded language (grammar, spelling, terminology) | 5 |
+| 2 | Wrong content (says something other than the English) | 3 |
+| 3 | Degraded language (grammar, spelling, terminology) | 0 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -106,24 +106,10 @@ _Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
-- `ssl-error-missing-extended-master-secret` — `toolkit/toolkit/neterror/nsserrors.ftl` — drop leftover correct — ✅
-  - Source: `The peer tried to resume without a correct extended_master_secret extension.`
+_Nothing in this category._
 
 ### D. Terminology, register & consistency
 
-- `default-browser-guidance-notification-body-instruction-win10` — `browser/browser/defaultBrowserNotification.ftl` — `default-browser-guidance-notification-body-instruction-win10` quotes “Web browser” but the string it names, `desktop-entry-generic-name`, reads “Browser web”
-  - Current: `Passo 1: Apri Impostazioni > App predefinite Passo 2: Vai a “Web browser” Passo 3: Seleziona e scegli { -brand-short-name }`
-  - Source: `Step 1: Go to Settings > Default apps Step 2: Scroll down to “Web browser” Step 3: Select and choose { -brand-short-name }`
-  - Suggest: `Browser web`
-  - In the source this string quotes “Web browser”, which is exactly the value of `desktop-entry-generic-name` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `imported-safari-reading-list` — `browser/browser/migration.ftl` — Elenco lettura is correct. Dismissed.
-  - Source: `Reading List (From Safari)`
-- `migration-imported-safari-reading-list` — `browser/browser/migrationWizard.ftl` — Elenco lettura is correct. Dismissed.
-  - Source: `Reading List (From Safari)`
-- `existing-user-privacy-notice-update-message` — `browser/browser/termsofuse.ftl` — ⚠️ existing-user-privacy-notice-update-message — browser/browser/termsofuse.ftl:11 — still Informativa sulla privacy mid-sentence vs lowercase in lines 9/20.
-  - Source: `We’ve updated our <a data-l10n-name="privacy-notice-link">Privacy Notice</a> to reflect the latest features in { -brand-short-name }.`
-- `select-translations-panel-try-another-language-label` — `browser/browser/translations.ftl` — ⚠️ select-translations-panel-try-another-language-label — browser/browser/translations.ftl:213 — still lingua sorgente vs lingua di origine (line 85).
-  - Source: `Try another source language`
 - `noDomMutationBreakpoints` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints` quotes “Interrompi per…” but the string it names, `watchpoints.submenu`, reads “Sospendi su…”
   - Current: `Fare clic con il tasto destro in “%S” e selezionare “Interrompi per…” per aggiungere un punto di interruzione`
   - Source: `Right click an element in the %S and select “Break on…” to add a breakpoint`
@@ -148,9 +134,12 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (0)
+### Dismissed by hand (4)
 
-_Nothing dismissed._
+- `default-browser-guidance-notification-body-instruction-win10` — `browser/browser/defaultBrowserNotification.ftl` — That's the OS string.
+- `imported-safari-reading-list` — `browser/browser/migration.ftl` — Elenco lettura is correct
+- `migration-imported-safari-reading-list` — `browser/browser/migrationWizard.ftl` — Elenco lettura is correct
+- `ssl-error-missing-extended-master-secret` — `toolkit/toolkit/neterror/nsserrors.ftl` — “Extension” is there
 
 _One line each in `locales/it/dismissed.txt`. Delete the line and the finding returns._
 
@@ -169,8 +158,10 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Resolved to date (51)
+### Resolved to date (53)
 
+- `existing-user-privacy-notice-update-message` — `browser/browser/termsofuse.ftl` — fixed 2026-08-21
+- `select-translations-panel-try-another-language-label` — `browser/browser/translations.ftl` — fixed 2026-08-21
 - `aiwindow-firstrun-memories-privacy-title` — `browser/browser/aiWindow.ftl` — fixed 2026-07-26
 - `action-log-searching-tabs` — `browser/browser/aiWindowContent.ftl` — fixed 2026-07-26
 - `appmenuitem-banner-update-unsupported` — `browser/browser/appmenu.ftl` — fixed 2026-07-26
@@ -209,5 +200,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `about-webrtc-rtp-stats-heading` — `toolkit/toolkit/about/aboutWebrtc.ftl` — fixed 2026-07-26
 - `abuse-report-broken-suggestions-sitepermission` — `toolkit/toolkit/about/abuseReports.ftl` — fixed 2026-07-26
 - `choose-dialog-privatebrowsing-disabled` — `toolkit/toolkit/global/handlerDialog.ftl` — fixed 2026-07-26
-- `process-type-utility-actor-windows-file-dialog` — `toolkit/toolkit/global/processTypes.ftl` — fixed 2026-07-26
-- `language-name-tw` — `toolkit/toolkit/intl/languageNames.ftl` — fixed 2026-07-26

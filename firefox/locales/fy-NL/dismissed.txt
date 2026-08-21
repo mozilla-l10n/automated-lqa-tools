@@ -1,0 +1,21 @@
+# Findings you have read and judged acceptable, one per line.
+#
+#   <string-id> — <why>
+#
+# Where the same id exists in more than one file, qualify it:
+#
+#   <string-id> @ <part of the path> — <why>
+#
+# Re-applied to the whole backlog on every run: adding a line retires a
+# finding raised months ago, and deleting one brings it straight back.
+# Nothing is lost -- dismissed findings stay in state/ and are listed in the
+# report appendix with the reason.
+#
+# This is for *one string you have looked at*. For something that will keep
+# recurring across strings -- a house convention, a term that is correct
+# everywhere -- write a rule in suppressions.yaml instead, or better, a
+# sentence in conventions.md so the reviewer never raises it.
+expand-sidebar-on-hover — Sidebar — sydbalke vs sidebalke: sidebar-resize-splitter, sidebar-open-tools-from-sidebar, expand-sidebar-on-hover, sidebar-context-menu-unpin-extension (sidebar.ftl); sidebar-customization-callout-callout-button, -dismiss-button, sidebar-callout-survey- (featureCallout.ftl); genai-onboarding-description (genai.ftl); pdfjs-views-manager-sidebar (viewer.ftl)
+sidebar-context-menu-unpin-extension — Sidebar — sydbalke vs sidebalke: sidebar-resize-splitter, sidebar-open-tools-from-sidebar, expand-sidebar-on-hover, sidebar-context-menu-unpin-extension (sidebar.ftl); sidebar-customization-callout-callout-button, -dismiss-button, sidebar-callout-survey- (featureCallout.ftl); genai-onboarding-description (genai.ftl); pdfjs-views-manager-sidebar (viewer.ftl)
+sidebar-open-tools-from-sidebar — Sidebar — sydbalke vs sidebalke: sidebar-resize-splitter, sidebar-open-tools-from-sidebar, expand-sidebar-on-hover, sidebar-context-menu-unpin-extension (sidebar.ftl); sidebar-customization-callout-callout-button, -dismiss-button, sidebar-callout-survey- (featureCallout.ftl); genai-onboarding-description (genai.ftl); pdfjs-views-manager-sidebar (viewer.ftl)
+sidebar-resize-splitter — Sidebar — sydbalke vs sidebalke: sidebar-resize-splitter, sidebar-open-tools-from-sidebar, expand-sidebar-on-hover, sidebar-context-menu-unpin-extension (sidebar.ftl); sidebar-customization-callout-callout-button, -dismiss-button, sidebar-callout-survey- (featureCallout.ftl); genai-onboarding-description (genai.ftl); pdfjs-views-manager-sidebar (viewer.ftl)

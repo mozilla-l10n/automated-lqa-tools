@@ -52,6 +52,7 @@ import findings as findings_mod  # noqa: E402
 import parse  # noqa: E402
 import repos  # noqa: E402
 import snapshot  # noqa: E402
+import dismiss  # noqa: E402
 import suppress  # noqa: E402
 from findings import Finding  # noqa: E402
 
@@ -302,11 +303,23 @@ def convert(locale, records, index, l10n, summ, date) -> tuple[list[Finding], in
             # Trust the report's own verdict when it recorded one; otherwise
             # decide against the tree below.
             if record["dismissed"]:
-                status = "suppressed"
+                # A maintainer decision, recorded per finding. It used to be
+                # stored as `suppressed` with the invented rule id
+                # `legacy-dismissed`; because no rule file defines that id,
+                # suppress.apply correctly restored the finding on the very
+                # next run and eleven maintainer decisions came back from
+                # the dead. Dismissals belong in dismissed.txt, which did
+                # not exist when this importer was written.
+                status = "dismissed"
             elif record["fixed_in_report"]:
                 status = "fixed"
             elif current and not findings_mod.still_present(current, msg.text()):
                 status = "fixed"
+            elif not current:
+                # The report described the defect but left nothing quotable,
+                # so no later run can tell mechanically whether it survived.
+                # Say that rather than asserting an open defect for ever.
+                status = "needs-recheck"
             else:
                 status = "open"
             out.append(Finding(
@@ -323,7 +336,10 @@ def convert(locale, records, index, l10n, summ, date) -> tuple[list[Finding], in
                 first_seen=date,
                 last_seen=date,
                 resolved_on=date if status == "fixed" else "",
-                suppressed_by="legacy-dismissed" if status == "suppressed" else "",
+                dismissed_because=(
+                    "carried over from the hand-written review"
+                    if status == "dismissed" else ""
+                ),
                 string_hash=msg.hash(),
                 origin={"report": "legacy", "section": record["heading"],
                         "severity": record["severity"]},
@@ -622,6 +638,22 @@ def main(argv=None) -> int:
 
         counts_conv = conventions.detect(locale, l10n)
         write_locale_files(project, locale, counts_conv, today, print)
+
+        # Record the maintainer's dismissals where a person can see and
+        # undo them, rather than as state nothing owns.
+        dismissed = [f for f in found if f.status == "dismissed"]
+        if dismissed:
+            path_ = dismiss.path(project, locale)
+            os.makedirs(os.path.dirname(path_), exist_ok=True)
+            existing = open(path_).read() if os.path.exists(path_) else dismiss.TEMPLATE
+            lines = [
+                f"{f.string_id} — {f.dismissed_because}"
+                for f in dismissed if f.string_id not in existing
+            ]
+            if lines:
+                with open(path_, "w", encoding="utf-8") as fh:
+                    fh.write(existing.rstrip("\n") + "\n" + "\n".join(lines) + "\n")
+            print(f"    {len(dismissed)} maintainer dismissal(s) -> {os.path.basename(path_)}")
 
         rules = suppress.load(project, locale)
         hits = suppress.apply(rules, found)

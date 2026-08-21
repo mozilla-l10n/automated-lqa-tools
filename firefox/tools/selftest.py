@@ -359,6 +359,22 @@ def run(l10n_dir, source_dir, project) -> int:
     check(a.status == "open" and not a.dismissed_because,
           "removing the line brings the finding back")
 
+    print("\nA maintainer's dismissal must survive")
+    from suppress import Rule as _R
+    revived = Finding(locale="it", file="a.ftl", string_id="s", category="D",
+                      summary="x", status="suppressed",
+                      suppressed_by="legacy-dismissed")
+    suppress.apply([], [revived])
+    check(revived.status == "open",
+          "a suppression whose rule no longer exists is correctly restored")
+    kept = Finding(locale="it", file="a.ftl", string_id="s", category="D",
+                   summary="x", status="dismissed",
+                   dismissed_because="maintainer said so")
+    suppress.apply([], [kept])
+    check(kept.status == "dismissed",
+          "which is why an imported dismissal must be `dismissed`, not a "
+          "`suppressed` pointing at a rule id no file defines")
+
     print("\nReporting a run honestly")
     # The bug this pins: resolve() marked a finding fixed, the reviewer
     # raised it again in the same run so merge() reopened it, and the

@@ -15,3 +15,7 @@
 # recurring across strings -- a house convention, a term that is correct
 # everywhere -- write a rule in suppressions.yaml instead, or better, a
 # sentence in conventions.md so the reviewer never raises it.
+ssl-error-missing-extended-master-secret — “Extension” is there
+default-browser-guidance-notification-body-instruction-win10 — That's the OS string.
+imported-safari-reading-list — Elenco lettura is correct
+migration-imported-safari-reading-list — Elenco lettura is correct

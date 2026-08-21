@@ -1,0 +1,22 @@
+# Findings you have read and judged acceptable, one per line.
+#
+#   <string-id> — <why>
+#
+# Where the same id exists in more than one file, qualify it:
+#
+#   <string-id> @ <part of the path> — <why>
+#
+# Re-applied to the whole backlog on every run: adding a line retires a
+# finding raised months ago, and deleting one brings it straight back.
+# Nothing is lost -- dismissed findings stay in state/ and are listed in the
+# report appendix with the reason.
+#
+# This is for *one string you have looked at*. For something that will keep
+# recurring across strings -- a house convention, a term that is correct
+# everywhere -- write a rule in suppressions.yaml instead, or better, a
+# sentence in conventions.md so the reviewer never raises it.
+urlbar-dismissal-acknowledgment-weather — urlbar-dismissal-acknowledgment-weather, urlbar-trending-dismissal-acknowledgment, urlbar-result-dismissal-acknowledgment-market, urlbar-result-dismissal-acknowledgment-all — browser.ftl — postposed plural subject: Não irá mais aparecer sugestões → Não irão mais aparecer sugestões; Não aparecerá mais pesquisas populares → Não aparecerão
+urlbar-result-dismissal-acknowledgment-market — urlbar-dismissal-acknowledgment-weather, urlbar-trending-dismissal-acknowledgment, urlbar-result-dismissal-acknowledgment-market, urlbar-result-dismissal-acknowledgment-all — browser.ftl — postposed plural subject: Não irá mais aparecer sugestões → Não irão mais aparecer sugestões; Não aparecerá mais pesquisas populares → Não aparecerão
+newtab-menu-dismiss — newtab.ftl widget terms — "Dismiss": Dispensar (newtab-menu-dismiss) vs Descartar (4 other strings); "Unfollow": Parar de seguir (newtab-section-unfollow-button) vs Deixar de seguir (3 others); "feed": canal de notícias / canal de informações / feed; "break": Intervalo vs pausa in the timer strings; "teams": equipes (newtab-sports-widget-follow-teams-title) vs times everywhere else
+newtab-section-unfollow-button — newtab.ftl widget terms — "Dismiss": Dispensar (newtab-menu-dismiss) vs Descartar (4 other strings); "Unfollow": Parar de seguir (newtab-section-unfollow-button) vs Deixar de seguir (3 others); "feed": canal de notícias / canal de informações / feed; "break": Intervalo vs pausa in the timer strings; "teams": equipes (newtab-sports-widget-follow-teams-title) vs times everywhere else
+newtab-sports-widget-follow-teams-title — newtab.ftl widget terms — "Dismiss": Dispensar (newtab-menu-dismiss) vs Descartar (4 other strings); "Unfollow": Parar de seguir (newtab-section-unfollow-button) vs Deixar de seguir (3 others); "feed": canal de notícias / canal de informações / feed; "break": Intervalo vs pausa in the timer strings; "teams": equipes (newtab-sports-widget-follow-teams-title) vs times everywhere else
