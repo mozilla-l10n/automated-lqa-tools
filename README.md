@@ -27,6 +27,26 @@ reports/it/android.md
 Each has its own workflow and opens its own pull request, so a reviewer only
 sees the project they work on.
 
+## Reading the reports
+
+Published at
+**<https://mozilla-l10n.github.io/automated-lqa-tools/>** — one page, two
+dropdowns: pick a locale and a project. Choosing **All locales** shows that
+project's cross-locale summary. Not every project covers every locale, so
+the project list follows the locale you pick.
+
+The same reports are plain markdown under [`reports/`](reports/) if you
+would rather read them on GitHub.
+
+To preview the site locally:
+
+```bash
+pip install markdown
+python site/build.py
+python -m http.server -d _site
+node site/selftest.mjs      # exercises the dropdown logic
+```
+
 ## The shape of a run
 
 The Firefox pipeline is the only one so far, but the approach is meant to

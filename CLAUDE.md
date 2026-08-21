@@ -94,6 +94,26 @@ Two invariants that were violated once each and must not be again:
   The model is not deterministic; not spotting a defect twice is not
   evidence it is gone. No flag may relax this.
 
+## The published site
+
+`site/` builds `_site/` from `reports/` and is deployed to GitHub Pages by
+`.github/workflows/pages.yml` on push to `main`. Two things there are
+deliberate and easy to undo by accident:
+
+- Markdown is rendered **at build time**, and the source is HTML-escaped
+  **before** rendering. Reports quote the strings they criticise, and those
+  quotes contain real markup (`<span data-l10n-name=…>`, `<img>`, `<br>`),
+  some outside code spans. Passthrough would let a translation inject markup
+  into a public page; a stripping sanitiser would delete the text the
+  finding is about. Escaping shows it as text, which is what a reviewer
+  needs.
+- The artifact is built from `reports/` alone. `firefox/state` is 24 MB and
+  must not be published.
+
+`node site/selftest.mjs` covers the dropdown logic, which is where the real
+complexity is: coverage is ragged, so the project list depends on the locale
+and must fall back rather than request a report that does not exist.
+
 ## Cost and scope
 
 Do not write dollar figures or token estimates anywhere in the repository —
