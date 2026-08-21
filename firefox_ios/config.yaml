@@ -78,4 +78,23 @@ variants:
 # Starting with Italian, as Android did. Nineteen of the twenty locales the
 # other projects track exist here; fy-NL has no iOS localization.
 locales:
+  - cs
+  - de
+  - en-CA
+  - en-GB
+  - es-AR
+  - es-ES
+  - es-MX
+  - fr
+  - fy-NL
+  - hu
+  - id
   - it
+  - ja
+  - nl
+  - pl
+  - pt-BR
+  - ru
+  - sl
+  - tr
+  - zh-CN

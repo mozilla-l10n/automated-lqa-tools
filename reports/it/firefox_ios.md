@@ -3,13 +3,14 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `8ec9ec7885bf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `8ec9ec7885bf` |
-| **Previous run** | 2026-08-21 @ `8ec9ec7885bf` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7e1ae61658ad` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7e1ae61658ad` |
+| **Previous run** | 2026-08-21 @ `7e1ae61658ad` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 1,910 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
+
 
 Also for it: [android](android.md) · [firefox](firefox.md)
 
@@ -73,7 +74,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 15 | **curly-double** |
-| apostrophe | `typographic` 72 | **typographic** |
+| apostrophe | `typographic` 71 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 1 | **em** |
 | register | `informal` 71, `formal` 4 | **informal** |

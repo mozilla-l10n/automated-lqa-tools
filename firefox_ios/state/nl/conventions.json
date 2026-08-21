@@ -1,0 +1,39 @@
+{
+ "_meta": {
+  "locale": "nl",
+  "prose_chunks": 1906,
+  "strings": 1906
+ },
+ "apostrophe": {
+  "straight": 0,
+  "typographic": 31
+ },
+ "dash": {
+  "em": 0,
+  "en": 4
+ },
+ "ellipsis": {
+  "ascii": 0,
+  "char": 19
+ },
+ "fullwidth": {
+  "punctuation": 0
+ },
+ "inverted_marks": {
+  "open-exclamation": 0,
+  "open-question": 0
+ },
+ "nbsp": {
+  "before-punctuation": 0,
+  "narrow": 0,
+  "space-before-punctuation": 0,
+  "total": 0
+ },
+ "quotes": {
+  "curly-single": 14
+ },
+ "register": {
+  "formal": 279,
+  "informal": 0
+ }
+}

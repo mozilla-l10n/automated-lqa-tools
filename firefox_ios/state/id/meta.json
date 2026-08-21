@@ -1,0 +1,21 @@
+{
+ "dismissed": 0,
+ "display_name": "Firefox iOS l10n",
+ "fixed_total": 0,
+ "l10n_repo": "https://github.com/mozilla-l10n/firefoxios-l10n",
+ "l10n_sha": "7e1ae61658ad",
+ "last_run": "2026-08-21",
+ "locale": "id",
+ "missing": 19,
+ "mode": "incremental",
+ "open": 91,
+ "previous_run": "2026-08-21",
+ "previous_sha": "7e1ae61658ad",
+ "project": "firefox_ios",
+ "reviewed": 0,
+ "source_repo": "https://github.com/mozilla-l10n/firefoxios-l10n",
+ "source_sha": "7e1ae61658ad",
+ "strings": 1891,
+ "suppressed": 0,
+ "withdrawn_total": 0
+}

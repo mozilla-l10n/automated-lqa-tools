@@ -819,7 +819,7 @@
  "Shared/Supporting Files/en.lproj/ScanQRCode.strings": {
   "ScanQRCode.ConfirmOpenURL.AllowButton.v129": "728b56ba b13665d9",
   "ScanQRCode.ConfirmOpenURL.DenyButton.v129": "492699a3 0d648c94",
-  "ScanQRCode.ConfirmOpenURL.Message.v129": "a068b3e1 d7d541e1"
+  "ScanQRCode.ConfirmOpenURL.Message.v129": "28a8f533 d7d541e1"
  },
  "Shared/Supporting Files/en.lproj/SearchEngineSelection.strings": {
   "UnifiedSearch.SearchEngineSelection.AccessibilityLabels.CloseButton.Label.v133": "88aa1f72 0e7c6115",
