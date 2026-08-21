@@ -449,6 +449,100 @@ def run(l10n_dir, source_dir, project) -> int:
     check("<b>" not in out and "&lt;b&gt;bold" in out,
           "and markup outside a code span is still inert text")
 
+    # The bug this pins: nineteen Android locales were run with --no-llm and
+    # every report called the result a completed baseline. The deterministic
+    # checks had run; nothing had read a string.
+    import run as run_mod
+    check(run_mod.pick_mode("auto", {}) == "baseline",
+          "a locale with no state gets a baseline")
+    check(run_mod.pick_mode("auto", {"mode": "incremental"}) == "incremental",
+          "a reviewed locale gets an incremental run")
+    check(run_mod.pick_mode("auto", {"mode": "checks-only"}) == "baseline",
+          "a locale whose only run skipped the model is still owed its "
+          "baseline, state or no state")
+    check(run_mod.pick_mode("incremental", {}) == "incremental",
+          "an explicit --mode is never second-guessed")
+    check(report_mod._reviewer_warning({"mode": "checks-only"}).startswith(">"),
+          "and its report says outright that the reviewer did not run")
+    check(report_mod._reviewer_warning({"mode": "baseline"}) == "",
+          "while a real baseline says nothing of the sort")
+
+    # fy-NL lost twenty-seven completed batches when one item in a tool call
+    # came back as a bare string instead of an object.
+    import llm_incremental as _llm
+
+    class _Block:
+        type = "tool_use"
+
+        def __init__(self, payload):
+            self.input = payload
+
+    real = {"string_id": "s", "file": "a.ftl", "category": "B", "impact": 2,
+            "summary": "wrong", "current": "vecchio", "suggest": "nuovo",
+            "rationale": "r", "confidence": "high"}
+
+    class _Msg:
+        file, id, comment = "a.ftl", "s", ""
+
+        def text(self):
+            return "vecchio"
+
+        def hash(self):
+            return "h"
+
+    tree = {("a.ftl", "s"): _Msg()}
+    got, bad = _llm.collect(
+        [_Block({"findings": ["not a finding", real]})], "it", tree)
+    check(len(got) == 1 and bad == 1,
+          "a malformed item is dropped and counted, and the rest of the "
+          "batch survives it")
+    got, bad = _llm.collect([_Block({"findings": "everything is fine"})],
+                            "it", tree)
+    check(got == [] and bad == 1, "so is a findings list that is not a list")
+
+    # A batch that fails after its retries used to discard every batch
+    # before it. It ends the pass now, but what was read is kept -- and,
+    # just as importantly, only what was read counts as reviewed.
+    calls = {"n": 0}
+
+    class _Response:
+        content = [_Block({"findings": [real]})]
+
+        class usage:
+            input_tokens = output_tokens = 1
+
+    def _flaky(*a, **kw):
+        calls["n"] += 1
+        if calls["n"] > 2:
+            raise RuntimeError("LLM call failed after 4 attempts: timeout")
+        return _Response()
+
+    saved_call, saved_key = _llm._call, os.environ.get("ANTHROPIC_API_KEY")
+    saved_llm = dict(project.data.get("llm", {}))
+    _llm._call = _flaky
+    os.environ["ANTHROPIC_API_KEY"] = "test"
+    try:
+        keys = [("a.ftl", "s")] * 0 + [(f"f{i}.ftl", f"s{i}") for i in range(5)]
+        fake_tree = {k: _Msg() for k in keys}
+        fake_tree[("a.ftl", "s")] = _Msg()  # what the fake response reports
+        project.data["llm"] = dict(project.data.get("llm", {}), batch_size=1)
+        found, usage, prog = _llm.review(
+            project, "it", keys, fake_tree, {}, log=lambda *a: None)
+    finally:
+        _llm._call = saved_call
+        project.data["llm"] = saved_llm
+        if saved_key is None:
+            os.environ.pop("ANTHROPIC_API_KEY", None)
+        else:
+            os.environ["ANTHROPIC_API_KEY"] = saved_key
+
+    check(len(found) == 2, "the findings from before the failure are kept")
+    check(prog.reviewed == set(keys[:2]),
+          "and only the strings actually read count as reviewed, so the "
+          "snapshot cannot mark the rest as seen")
+    check("batch 3 of 5" in prog.stopped,
+          "the run records where it stopped, not just that it did")
+
     print("\nSuppression rules")
     from suppress import Rule
     rule = Rule({"id": "r", "reason": "because", "match": {"check": "typography",

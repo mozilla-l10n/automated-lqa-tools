@@ -14,6 +14,7 @@ from __future__ import annotations
 import json
 import os
 import time
+from dataclasses import dataclass, field
 
 import anthropic
 
@@ -129,11 +130,34 @@ def system_prompt(project, locale: str, filename: str | None = None) -> str:
     )
 
 
-def review(project, locale, keys, l10n, source, log=print) -> tuple[list[Finding], Usage]:
-    """Review the given strings and return the findings they produced."""
+@dataclass
+class Progress:
+    """What a review actually got through.
+
+    ``reviewed`` is the set of keys a batch returned an answer for, not the
+    set it was asked about, and it is what the snapshot and the
+    did-the-reviewer-stay-silent logic are advanced by. ``stopped`` holds the
+    reason the pass ended early, or "" if it ran to the end.
+    """
+
+    reviewed: set = field(default_factory=set)
+    stopped: str = ""
+
+
+def review(project, locale, keys, l10n, source, log=print) -> tuple[list[Finding], Usage, Progress]:
+    """Review the given strings.
+
+    Returns the findings, the usage, and how far it got. A batch that fails
+    after its retries ends the pass, but everything already reviewed is
+    returned and kept: 2,900 strings is dozens of batches, and throwing away
+    an hour of completed review because the last call timed out is both
+    wasteful and, since the snapshot only advances for strings actually
+    read, unnecessary. The next run resumes at the first unread string.
+    """
     usage = Usage()
+    progress = Progress()
     if not keys:
-        return [], usage
+        return [], usage, progress
 
     cfg = project.llm
     tool = _schema(project)
@@ -162,18 +186,56 @@ def review(project, locale, keys, l10n, source, log=print) -> tuple[list[Finding
     for index, batch_keys in enumerate(batches, 1):
         body = render_batch(batch_keys, l10n, source, keep_identical)
         if not body.strip():
+            # Nothing in the batch needed the model -- every string in it is
+            # identical to its source. Seen, as it always was.
+            progress.reviewed.update(batch_keys)
             continue
         log(f"    batch {index}/{len(batches)} ({len(batch_keys)} strings)")
-        response = _call(client, model, system, body, tool, max_tokens)
+        try:
+            response = _call(client, model, system, body, tool, max_tokens)
+        except Exception as exc:  # noqa: BLE001 - keep what has been reviewed
+            progress.stopped = f"stopped at batch {index} of {len(batches)}: {exc}"
+            log(f"    {progress.stopped}")
+            log(f"    keeping {len(progress.reviewed):,} string(s) already reviewed")
+            break
         usage.add(response)
-        for block in response.content:
-            if getattr(block, "type", "") != "tool_use":
+        found, malformed = collect(response.content, locale, l10n)
+        out.extend(found)
+        progress.reviewed.update(batch_keys)
+        if malformed:
+            log(f"      discarded {malformed} malformed item(s) in this batch")
+    return out, usage, progress
+
+
+def collect(content, locale, l10n) -> tuple[list[Finding], int]:
+    """Findings from one response, plus a count of what was not one.
+
+    The tool schema says each finding is an object, and the model mostly
+    obliges -- but nothing enforces it, and a batch that answered with a
+    bare string in the list used to reach ``_to_finding`` and raise on
+    ``.get``. That killed the locale from inside the batch loop, discarding
+    twenty-seven batches of completed review over one item. A response that
+    is the wrong shape is a dropped item, counted and logged; it is not a
+    reason to throw away the work that was done.
+    """
+    out: list[Finding] = []
+    malformed = 0
+    for block in content:
+        if getattr(block, "type", "") != "tool_use":
+            continue
+        payload = block.input if isinstance(block.input, dict) else {}
+        items = payload.get("findings")
+        if not isinstance(items, list):
+            malformed += 1
+            continue
+        for raw in items:
+            if not isinstance(raw, dict):
+                malformed += 1
                 continue
-            for raw in block.input.get("findings", []):
-                finding = _to_finding(locale, raw, l10n)
-                if finding is not None:
-                    out.append(finding)
-    return out, usage
+            finding = _to_finding(locale, raw, l10n)
+            if finding is not None:
+                out.append(finding)
+    return out, malformed
 
 
 def _to_finding(locale, raw: dict, l10n) -> Finding | None:

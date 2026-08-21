@@ -5,9 +5,9 @@
 | **Generated** | 2026-08-21 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f2e9b7fce093` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
-| **Previous run** | 2026-08-21 @ `a9b9a116b725` |
+| **Previous run** | 2026-08-21 @ `f2e9b7fce093` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 30 of 18,161 |
+| **Strings reviewed this run** | 0 of 18,161 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -17,13 +17,9 @@ Also for de: [android](android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `containers-sites-card-header` — `browser/browser/preferences/preferences.ftl` — Pronoun does not agree with the feminine noun "Tab-Umgebung".
-    - Current: `verwendet ihn jedes Mal`
-    - Source: `description: Choose a container for a site and { -brand-short-name } will use it every time the site opens. label: Site-specific containers`
-    - Suggest: `verwendet sie jedes Mal`
-    - "Tab-Umgebung" is feminine, so the referring pronoun must be "sie", not "ihn".
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

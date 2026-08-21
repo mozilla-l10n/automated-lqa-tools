@@ -5,9 +5,9 @@
 | **Generated** | 2026-08-21 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f2e9b7fce093` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
-| **Previous run** | 2026-08-21 @ `a9b9a116b725` |
+| **Previous run** | 2026-08-21 @ `f2e9b7fce093` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 33 of 18,115 |
+| **Strings reviewed this run** | 0 of 18,115 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -17,36 +17,13 @@ Also for en-CA: [android](android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `ImageMapRectBoundsError` — `dom/chrome/layout/layout_errors.properties` — The quoted format literal is mangled: "left,top,right,bottom" became "”“eft,top,right,bottom".
-    - Current: `”“eft,top,right,bottom”`
-    - Source: `The “coords” attribute of the <area shape="rect"> tag is not in the “left,top,right,bottom” format.`
-    - Suggest: `“left,top,right,bottom”`
-    - The en-US source names the literal attribute format "left,top,right,bottom"; the target lost the initial "l" and has stray/reversed quote marks, making the message wrong and unreadable.
-- `PINotInProlog` — `dom/chrome/layout/xul.properties` — "anymore" was needlessly reworded to "any longer", a change not required by en-CA.
-    - Current: `does not have any effect outside the prolog any longer`
-    - Source: `<?%1$S?> processing instruction does not have any effect outside the prolog anymore (see bug 360119).`
-    - Suggest: `does not have any effect outside the prolog anymore`
-    - en-CA does not differ from en-US here; the substitution is an unnecessary divergence from the source wording.
-- `about-reader-color-scheme-auto` — `toolkit/toolkit/about/aboutReader.ftl` — Only the title was adapted to "Colour" while the related value remains inconsistent; "Color Scheme" here refers to the UI feature name shown alongside untouched sibling labels.
-    - Current: `title: Colour Scheme Auto`
-    - Source: `(value): Auto title: Color Scheme Auto`
-    - Suggest: `title: Color Scheme Auto`
-    - Reader Mode's colour-scheme labels are inconsistent if only this one is adapted; the en-US term is used for the same control elsewhere in the file.
+_No new findings._
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (0)
 
-- `PINotInProlog` — `dom/chrome/layout/xul.properties` — "anymore" was needlessly reworded to "any longer", a change not required by en-CA.
-    - Current: `does not have any effect outside the prolog any longer`
-    - Source: `<?%1$S?> processing instruction does not have any effect outside the prolog anymore (see bug 360119).`
-    - Suggest: `does not have any effect outside the prolog anymore`
-    - en-CA does not differ from en-US here; the substitution is an unnecessary divergence from the source wording.
-- `about-reader-color-scheme-auto` — `toolkit/toolkit/about/aboutReader.ftl` — Only the title was adapted to "Colour" while the related value remains inconsistent; "Color Scheme" here refers to the UI feature name shown alongside untouched sibling labels.
-    - Current: `title: Colour Scheme Auto`
-    - Source: `(value): Auto title: Color Scheme Auto`
-    - Suggest: `title: Color Scheme Auto`
-    - Reader Mode's colour-scheme labels are inconsistent if only this one is adapted; the en-US term is used for the same control elsewhere in the file.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

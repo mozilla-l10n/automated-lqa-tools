@@ -94,6 +94,32 @@ def render(project) -> str:
         "**Impact 1–2** is the queue that matters: broken output and wrong "
         "content. Impact 3–4 is language polish and typography.",
         "",
+    ]
+    partial = [r["locale"] for r in checked if r["meta"].get("incomplete")]
+    if partial:
+        out += [
+            "**Reviewed only in part:** "
+            + ", ".join(f"`{loc}`" for loc in partial)
+            + ". The reviewer stopped early; the strings it never reached "
+            "are unreviewed. Each locale's own page says where it stopped.",
+            "",
+        ]
+
+    unread = [r["locale"] for r in checked
+              if r["meta"].get("mode") == config.CHECKS_ONLY]
+    if unread:
+        # Their open counts are the check layer's alone, and a small number
+        # there is not good news -- it is the absence of an opinion.
+        out += [
+            f"**Not reviewed yet:** {', '.join(f'`{loc}`' for loc in unread)}. "
+            f"{'They have' if len(unread) > 1 else 'It has'} only been through "
+            "the deterministic checks; the reviewer has not read "
+            f"{'them' if len(unread) > 1 else 'it'}. The next run does the "
+            "baseline.",
+            "",
+        ]
+
+    out += [
         "## Adding a locale",
         "",
         f"Add its code to `{project.name}/config.yaml` and run the workflow. The first "

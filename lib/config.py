@@ -15,6 +15,11 @@ import yaml
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# The mode recorded for a run that skipped the model. Lives here because the
+# runner writes it, and the report and the cross-locale page both have to
+# recognise it and say so rather than print "baseline" over an unread tree.
+CHECKS_ONLY = "checks-only"
+
 
 @dataclass
 class Project:
@@ -146,4 +151,33 @@ def load(project: str = "firefox", root: str | None = None) -> Project:
     root = root or os.path.join(REPO_ROOT, project)
     with open(os.path.join(root, "config.yaml"), encoding="utf-8") as fh:
         data = yaml.safe_load(fh)
-    return Project(name=project, root=root, data=data)
+    p = Project(name=project, root=root, data=data)
+    _check_prompts(p)
+    return p
+
+
+def _check_prompts(project: Project) -> None:
+    """Every prompt the config commits to must exist, checked up front.
+
+    A prompt is opened at the moment the reviewer is about to be called,
+    which for a from-scratch run is after the whole tree has been parsed and
+    checked -- and for a variant, after every other locale has already
+    finished. Android declared `variants:` without shipping
+    `variant_review.md` and the two en-* locales died there, one at a time,
+    with nothing written. Missing files are a configuration error and belong
+    at load, next to the unknown-check error.
+    """
+    needed = ["incremental_review.md", "finding_schema.json"]
+    if project.data.get("variants"):
+        needed.append("variant_review.md")
+    missing = [
+        name for name in needed
+        if not os.path.exists(os.path.join(project.root, "prompts", name))
+    ]
+    if missing:
+        raise SystemExit(
+            f"{project.name}/prompts/: missing {', '.join(missing)}. "
+            "A project that declares `variants:` needs variant_review.md; "
+            "every project needs incremental_review.md and "
+            "finding_schema.json."
+        )

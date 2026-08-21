@@ -1,1 +1,25 @@
-[]
+[
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "Used to collect, analyze and measure activities like tapping and scrolling",
+  "dismissed_because": "",
+  "fid": "34fde15b020a",
+  "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-08-21",
+  "impact": 3,
+  "last_seen": "2026-08-21",
+  "locale": "en-CA",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "Canadian English conventionally spells this verb \"analyse\"; the en-CA locale should adapt the US \"analyze\" form.",
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "3cb14263",
+  "string_id": "preference_privacy_block_analytics_summary",
+  "suggest": "Used to collect, analyse and measure activities like tapping and scrolling",
+  "summary": "\"analyze\" is left in US spelling where Canadian English uses \"analyse\".",
+  "suppressed_by": ""
+ }
+]

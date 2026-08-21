@@ -5,9 +5,9 @@
 | **Generated** | 2026-08-21 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f2e9b7fce093` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
-| **Previous run** | 2026-08-21 @ `a9b9a116b725` |
+| **Previous run** | 2026-08-21 @ `f2e9b7fce093` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 10 of 18,141 |
+| **Strings reviewed this run** | 0 of 18,141 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -318,13 +318,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - en-US: "Tell Mozilla why you uninstalled $BrandShortName". The string appears in the uninstaller, so the Czech asks the opposite question.
 - `FileError` — `browser/installer/override.properties` — The third button option is described as "Cancel to stop the installation" instead of "Ignore to skip this file".
     - Current: `nebo na Storno pro ukončení instalace.`
-    - Source: `Error opening file for writing: 
- 
- $0
- 
- Click Abort to stop the installation,
- Retry to try again, or
- Ignore to skip this file.`
+    - Source: `Error opening file for writing:   $0  Click Abort to stop the installation, Retry to try again, or Ignore to skip this file.`
     - Suggest: `nebo na Ignorovat pro přeskočení tohoto souboru.`
     - en-US: "Click Abort to stop the installation, Retry to try again, or Ignore to skip this file." The Czech repeats the abort meaning and never explains the Ignore button; it also duplicates the FileError_NoIgnore wording.
 - `document_properties_page_size_name_legal` — `browser/pdfviewer/viewer.properties` — Paper-format name "Legal" translated as "legal document".

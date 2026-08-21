@@ -152,6 +152,15 @@ def run(l10n_dir, project) -> int:
           "the redundant variables check is not run for Android")
     check(project.baseline_strategy == "batched",
           "from-scratch reviews are batched, not agent-driven")
+    # en-CA and en-GB died on a missing prompt after the whole tree had been
+    # parsed, checked and queued -- the file is only opened at the moment
+    # the reviewer is called.
+    import llm_incremental as _llm
+    for loc in ("en-GB", "en-CA"):
+        if loc not in project.locales:
+            continue
+        check(bool(_llm.system_prompt(project, loc).strip()),
+              f"{loc}: the variant reviewer has a prompt to run with")
 
     print(f"\n{passed} passed, {failed} failed")
     return 1 if failed else 0

@@ -125,13 +125,32 @@ def build_systemic(project, locale, fresh, health):
     return systemic, remaining
 
 
+# A run where the model never read a string is not the mode it was asked
+# for. Recorded as itself so no report can claim a locale was reviewed from
+# scratch when only the deterministic checks ran over it.
+CHECKS_ONLY = config.CHECKS_ONLY
+
+
+def pick_mode(requested: str, meta: dict) -> str:
+    """The path this run takes, resolving `auto` against what came before.
+
+    A locale whose only run skipped the model has not been reviewed, whatever
+    it has in `state/`: its snapshot is empty and its findings are the check
+    layer's alone. So `auto` still owes it a baseline -- which for an agent
+    project is a different path entirely from replaying the whole tree
+    through the incremental reviewer.
+    """
+    if requested != "auto":
+        return requested
+    if not meta or meta.get("mode") == CHECKS_ONLY:
+        return "baseline"
+    return "incremental"
+
+
 def process(project, locale, l10n_root, source_root, args, log) -> dict:
     log(f"\n=== {locale}")
     meta = load_meta(project, locale)
-    is_new = not meta
-    mode = args.mode
-    if mode == "auto":
-        mode = "baseline" if is_new else "incremental"
+    mode = pick_mode(args.mode, meta)
 
     trees = layout.load(project, locale, l10n_root, source_root)
     l10n, source = trees.l10n, trees.source
@@ -156,6 +175,7 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
     llm_findings: list = []
     reviewed = 0
     reviewed_keys: set = set()
+    incomplete = ""
     if args.no_llm:
         log("  model review skipped (--no-llm)")
     elif mode == "baseline" and project.baseline_strategy == "batched":
@@ -165,12 +185,13 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
             keys = keys[: args.limit]
             log(f"  limited to {len(keys)} strings (--limit)")
         log(f"  baseline review of all {len(keys):,} strings, in batches")
-        llm_findings, usage = llm_incremental.review(
+        llm_findings, usage, progress = llm_incremental.review(
             project, locale, keys, l10n, source, log=log
         )
         log(f"  model usage: {usage}")
-        reviewed = len(keys)
-        reviewed_keys = set(keys)
+        reviewed_keys = progress.reviewed
+        reviewed = len(reviewed_keys)
+        incomplete = progress.stopped
     elif mode == "baseline":
         import llm_baseline
         log("  baseline review of the whole tree")
@@ -206,12 +227,13 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
         if keys:
             import llm_incremental
             log(f"  reviewing {len(keys):,} changed strings")
-            llm_findings, usage = llm_incremental.review(
+            llm_findings, usage, progress = llm_incremental.review(
                 project, locale, keys, l10n, source, log=log
             )
             log(f"  model usage: {usage}")
-            reviewed = len(keys)
-            reviewed_keys = set(keys)
+            reviewed_keys = progress.reviewed
+            reviewed = len(reviewed_keys)
+            incomplete = progress.stopped
         else:
             log("  nothing changed since the last run; no model call")
 
@@ -290,7 +312,7 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
         "project": project.name,
         "display_name": f"{project.display_name} l10n",
         "locale": locale,
-        "mode": mode,
+        "mode": CHECKS_ONLY if args.no_llm else mode,
         "last_run": today(),
         "previous_run": meta.get("last_run", ""),
         "previous_sha": meta.get("l10n_sha", ""),
@@ -307,6 +329,11 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
         "suppressed": sum(1 for f in stored if f.status == "suppressed"),
         "dismissed": sum(1 for f in stored if f.status == "dismissed"),
     }
+    if incomplete:
+        # Only present when it happened, so it does not add a line to every
+        # meta.json in the tree. The next run overwrites meta wholesale, so
+        # a locale that completes drops the key again.
+        new_meta["incomplete"] = incomplete
 
     report.use_paths(trees.locale_paths)
     report.use_source(source)
@@ -338,10 +365,11 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
         _ensure_locale_files(project, locale, counts_conv, log)
 
     return {
-        "locale": locale, "mode": mode, "new": len(raised),
+        "locale": locale, "mode": new_meta["mode"], "new": len(raised),
         "fixed": len(resolved["fixed"]),
         "withdrawn": len(resolved["withdrawn"]), "open": len(open_now),
         "missing": health.missing, "reviewed": reviewed,
+        "incomplete": incomplete,
     }
 
 
@@ -476,9 +504,18 @@ def main(argv=None) -> int:
         f"{'withdrn':>8} {'open':>6}")
     for r in results:
         log(f"{r['locale']:8} {r['mode']:12} {r['reviewed']:9,} {r['new']:5} "
-            f"{r['fixed']:6} {r['withdrawn']:8} {r['open']:6}")
+            f"{r['fixed']:6} {r['withdrawn']:8} {r['open']:6}"
+            + ("  (incomplete)" if r.get("incomplete") else ""))
     if failed:
         log(f"\nfailed: {', '.join(failed)}")
+    # Kept apart from `failed`: the work these locales did do is real and
+    # was written. They are not finished, though, and nothing else says so
+    # once the batch log has scrolled past.
+    partial = [r for r in results if r.get("incomplete")]
+    for r in partial:
+        log(f"\nincomplete: {r['locale']} — {r['incomplete']}")
+        log(f"            {r['reviewed']:,} string(s) reviewed and kept; "
+            "re-run the same command to resume")
     return 1 if failed else 0
 
 

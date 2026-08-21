@@ -3,13 +3,14 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `0d02c6c9f0f6` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `0d02c6c9f0f6` |
-| **Previous run** | 2026-08-21 @ `5dbfec9add98` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `7134a6c77a67` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `7134a6c77a67` |
+| **Previous run** | 2026-08-21 @ `0d02c6c9f0f6` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 2,908 |
+| **Strings reviewed this run** | 3 of 2,911 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
+
 
 Also for it: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
@@ -21,13 +22,9 @@ Also for it: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `ai_controls_blocked_info_banner` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — The distinction "New and current" AI enhancements is dropped in the Italian text.
-    - Current: `Le funzionalità basate sull’IA sono bloccate per impostazione predefinita.`
-    - Source: `New and current AI enhancements are blocked by default. Unblock specific features below.`
-    - Suggest: `Le funzionalità basate sull’IA, nuove e attuali, sono bloccate per impostazione predefinita.`
-    - The source specifies "New and current AI enhancements"; the translation omits this qualification, changing the scope of what is blocked.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -48,7 +45,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,908 |
+| Strings | 2,911 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |

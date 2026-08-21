@@ -15,3 +15,4 @@
 # recurring across strings -- a house convention, a term that is correct
 # everywhere -- write a rule in suppressions.yaml instead, or better, a
 # sentence in conventions.md so the reviewer never raises it.
+about-reader-color-scheme-auto — Color Scheme is technical

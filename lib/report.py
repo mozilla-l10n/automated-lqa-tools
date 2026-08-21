@@ -19,6 +19,7 @@ from __future__ import annotations
 import os
 
 import conventions as conv
+from config import CHECKS_ONLY
 from findings import CATEGORIES, IMPACT
 
 MAX_LISTED = 60  # per category, before collapsing to a count
@@ -186,6 +187,32 @@ def _delta_section(delta_report: dict) -> str:
     return "\n".join(parts)
 
 
+def _reviewer_warning(meta) -> str:
+    """Said outright when the model never read a string.
+
+    The deterministic checks still ran over the whole tree, so the report is
+    not empty -- which is exactly why this has to be stated. A page headed
+    "baseline" with a handful of typography findings reads as a locale that
+    was reviewed and came back nearly clean, when nothing has read it yet.
+    """
+    if meta.get("incomplete"):
+        return (
+            "> **The reviewer did not finish this run.** It "
+            f"{str(meta['incomplete']).rstrip('. ')}. What it read is here "
+            "and is kept; the "
+            "strings it never reached are unreviewed, and the next run "
+            "resumes at the first of them.\n"
+        )
+    if meta.get("mode") != CHECKS_ONLY:
+        return ""
+    return (
+        "> **The reviewer did not run for this report.** Only the "
+        "deterministic checks were applied; no string was read. The absence "
+        "of a finding here means nothing has looked, not that there is "
+        "nothing to find.\n"
+    )
+
+
 def _siblings(locale: str, project: str) -> str:
     """Links to the same locale's reports for the other projects.
 
@@ -234,6 +261,7 @@ def render(locale, meta, health, counts, findings, systemic, delta_report, count
         "Findings are keyed by string id, never by line number. The locale is "
         "assessed against its source only.",
         "",
+        _reviewer_warning(meta),
         _siblings(locale, meta.get("project", "")),
         "",
         "---",
