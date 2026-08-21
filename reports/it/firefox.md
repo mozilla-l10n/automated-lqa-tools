@@ -3,15 +3,15 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `fef20cd7efc2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
-| **Previous run** | 2026-08-20 @ `fef20cd7efc2` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ce9efca9167e` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
+| **Previous run** | 2026-08-21 @ `1fee6e3cbe1b` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,350 |
+| **Strings reviewed this run** | 5 of 18,360 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-Also for it: [android](android.md)
+Also for it: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ---
 
@@ -44,7 +44,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 370 |
-| Strings | 18,350 |
+| Strings | 18,360 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |

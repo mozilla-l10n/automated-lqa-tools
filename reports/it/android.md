@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `81c3d1941037` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `81c3d1941037` |
-| **Previous run** | 2026-08-21 @ `81c3d1941037` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `0d02c6c9f0f6` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `0d02c6c9f0f6` |
+| **Previous run** | 2026-08-21 @ `5dbfec9add98` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,908 |
+| **Strings reviewed this run** | 1 of 2,908 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -21,9 +21,13 @@ Also for it: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `ai_controls_blocked_info_banner` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — The distinction "New and current" AI enhancements is dropped in the Italian text.
+  - Current: `Le funzionalità basate sull’IA sono bloccate per impostazione predefinita.`
+  - Source: `New and current AI enhancements are blocked by default. Unblock specific features below.`
+  - Suggest: `Le funzionalità basate sull’IA, nuove e attuali, sono bloccate per impostazione predefinita.`
+  - The source specifies "New and current AI enhancements"; the translation omits this qualification, changing the scope of what is blocked.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -153,8 +157,9 @@ _Suppressions live in `locales/it/suppressions.yaml`. Removing a rule brings its
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Resolved to date (42)
+### Resolved to date (43)
 
+- `ai_controls_blocked_info_banner` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-21
 - `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `mozac_feature_addons_status_unsigned` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-it/strings.xml` — fixed 2026-08-20
@@ -194,4 +199,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `sync_sent_tabs_snackbar_2` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `tab_manager_empty_private_tabs_page_description` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `tabs_header_tab_group_counter_title` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
-- `translations_bottom_sheet_translating_in_progress` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20

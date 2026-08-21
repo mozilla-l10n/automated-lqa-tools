@@ -27,7 +27,7 @@ Counts come from `state/`, not from the rendered reports, so they always reflect
 | [zh-CN](zh-CN/firefox.md) | 2026-08-20 | incremental | `fef20cd7` | 17,969 | 194 | **72** | 18 | 26 | 0 | 0 |
 | [fr](fr/firefox.md) | 2026-08-20 | incremental | `fef20cd7` | 18,348 | 2 | **37** | 9 | 31 | 0 | 0 |
 | [sl](sl/firefox.md) | 2026-08-20 | incremental | `fef20cd7` | 17,533 | 630 | **35** | 5 | 42 | 0 | 1 |
-| [it](it/firefox.md) | 2026-08-21 | incremental | `fef20cd7` | 18,350 | 0 | **9** | 4 | 51 | 0 | 2 |
+| [it](it/firefox.md) | 2026-08-21 | incremental | `ce9efca9` | 18,360 | 0 | **9** | 4 | 51 | 0 | 2 |
 | [en-CA](en-CA/firefox.md) | 2026-08-20 | incremental | `fef20cd7` | 18,115 | 48 | **4** | 2 | 9 | 0 | 0 |
 
 **Impact 1–2** is the queue that matters: broken output and wrong content. Impact 3–4 is language polish and typography.

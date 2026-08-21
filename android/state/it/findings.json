@@ -161,6 +161,29 @@
  {
   "category": "B",
   "check": "llm",
+  "current": "Le funzionalità basate sull’IA sono bloccate per impostazione predefinita.",
+  "dismissed_because": "",
+  "fid": "7da00407e389",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-08-21",
+  "impact": 2,
+  "last_seen": "2026-08-21",
+  "locale": "it",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source specifies \"New and current AI enhancements\"; the translation omits this qualification, changing the scope of what is blocked.",
+  "resolved_on": "2026-08-21",
+  "status": "fixed",
+  "string_hash": "a284bbeb",
+  "string_id": "ai_controls_blocked_info_banner",
+  "suggest": "Le funzionalità basate sull’IA, nuove e attuali, sono bloccate per impostazione predefinita.",
+  "summary": "The distinction \"New and current\" AI enhancements is dropped in the Italian text.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
   "current": "“Traduci sempre” e “Non tradurre mai”",
   "dismissed_because": "",
   "fid": "2386d7812c9c",

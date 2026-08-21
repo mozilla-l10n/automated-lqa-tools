@@ -34,5 +34,5 @@ DefaultBrowserOnboarding.Description2 — “di default” mirrors the wording i
 DefaultBrowserOnboarding.Screenshot — “di default” mirrors the wording iOS itself shows in Settings
 DefaultBrowserPopup.SecondLabel.v114 —“di default” mirrors the wording iOS itself shows in Settings
 Onboarding.Welcome.Title.v114 — “Benvenuti” is inclusive and shorter than “Ti diamo il benvenuto”
-Open articles in Reader View by tapping the book icon when it appears in the title bar — False positive (“book” is there)
+Open articles in Reader View by tapping the book icon when it appears in the title bar. — False positive (“book” is there)
 Settings.Homepage.Shortcuts.ToggleOff.v100  — Refers to the section.

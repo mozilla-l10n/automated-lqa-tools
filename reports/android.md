@@ -2,7 +2,7 @@
 
 - **Generated:** 2026-08-21
 - **Locales tracked:** 20 (20 with recorded state)
-- **Findings:** 114 raised, 42 resolved (36%), 55 open
+- **Findings:** 115 raised, 43 resolved (37%), 55 open
 - **Closed by a person:** 11 dismissed, 4 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
@@ -27,7 +27,7 @@ Counts come from `state/`, not from the rendered reports, so they always reflect
 | [en-CA](en-CA/android.md) | 2026-08-20 | baseline | `afd16223` | 2,894 | 14 | **0** | 0 | 0 | 0 | 0 |
 | [en-GB](en-GB/android.md) | 2026-08-20 | baseline | `afd16223` | 2,908 | 0 | **0** | 0 | 0 | 0 | 0 |
 | [fr](fr/android.md) | 2026-08-20 | baseline | `afd16223` | 2,908 | 0 | **0** | 0 | 0 | 0 | 0 |
-| [it](it/android.md) | 2026-08-21 | incremental | `81c3d194` | 2,908 | 0 | **0** | 0 | 42 | 11 | 4 |
+| [it](it/android.md) | 2026-08-21 | incremental | `0d02c6c9` | 2,908 | 0 | **0** | 0 | 43 | 11 | 4 |
 | [nl](nl/android.md) | 2026-08-20 | baseline | `afd16223` | 2,908 | 0 | **0** | 0 | 0 | 0 | 0 |
 
 **Impact 1–2** is the queue that matters: broken output and wrong content. Impact 3–4 is language polish and typography.

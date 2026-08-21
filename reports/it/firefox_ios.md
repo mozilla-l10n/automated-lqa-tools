@@ -86,12 +86,12 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (1)
+## 3. Open findings (0)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 1 |
+| 2 | Wrong content (says something other than the English) | 0 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -101,11 +101,7 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `Open articles in Reader View by tapping the book icon when it appears in the title bar.` — `it/firefox-ios.xliff` — The word "book" is dropped: "the book icon" becomes just "l’icona".
-  - Current: `toccando l’icona quando appare`
-  - Source: `Open articles in Reader View by tapping the book icon when it appears in the title bar.`
-  - Suggest: `toccando l’icona a forma di libro quando appare`
-  - en-US specifies "the book icon"; the Italian omits which icon to tap.
+_Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
@@ -123,7 +119,7 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (13)
+### Dismissed by hand (14)
 
 - `ActivityStream.ContextMenu.UnpinTopsite` — `it/firefox-ios.xliff` — “Rilascia” is the established opposite of “Appunta” in this menu
 - `ContextualHints.Toolbar.GoogleLens.Description.v154` — `it/firefox-ios.xliff` — Better sounding variation, same meaning.
@@ -134,6 +130,7 @@ _Nothing in this category._
 - `Onboarding.Modern.Welcome.Title.v145` — `it/firefox-ios.xliff` — DRAFT: the Italian wording is the agreed rendering for this screen
 - `Onboarding.Welcome.Description.TreatementA.v120` — `it/firefox-ios.xliff` — “invadenti” might be more accurate, but it results in a weird phrase (need to be placed at the end)
 - `Onboarding.Welcome.Title.v114` — `it/firefox-ios.xliff` — “Benvenuti” is inclusive and shorter than “Ti diamo il benvenuto”
+- `Open articles in Reader View by tapping the book icon when it appears in the title bar.` — `it/firefox-ios.xliff` — False positive (“book” is there)
 - `Settings.AppIconSelection.AppIconNames.Retro2004.Title.v139` — `it/firefox-ios.xliff` — “Rétro” is correct https://www.treccani.it/vocabolario/retro_res-0f8f0e80-002f-11de-9d89-0016357eee51/
 - `Settings.AppIconSelection.AppIconNames.Retro2017.Title.v139` — `it/firefox-ios.xliff` — “Rétro” is correct https://www.treccani.it/vocabolario/retro_res-0f8f0e80-002f-11de-9d89-0016357eee51/
 - `Settings.AppIconSelection.AppIconNames.Yellow.Title.v137` — `it/firefox-ios.xliff` — Agrees with “icona”, which is feminine

@@ -1,5 +1,5 @@
 {
- "dismissed": 13,
+ "dismissed": 14,
  "display_name": "Firefox iOS l10n",
  "fixed_total": 16,
  "l10n_repo": "https://github.com/mozilla-l10n/firefoxios-l10n",
@@ -8,7 +8,7 @@
  "locale": "it",
  "missing": 0,
  "mode": "incremental",
- "open": 1,
+ "open": 0,
  "previous_run": "2026-08-21",
  "previous_sha": "8ec9ec7885bf",
  "project": "firefox_ios",
