@@ -47,9 +47,14 @@ MUST_BE_SILENT = [
 
 # Completeness, which the layout has to get right for an XLIFF where an
 # untranslated unit is present-but-empty rather than missing.
+#
+# Stated as relationships, not counts: the reference gains strings on every
+# import, and pinning 1,894 meant the suite broke the first time upstream
+# added sixteen. What must hold is that `it` is complete and `bo` has barely
+# started, whatever the totals are.
 COMPLETENESS = [
-    ("it", 1894, 0),        # fully translated
-    ("bo", 47, 1847),       # barely started
+    ("it", "complete"),
+    ("bo", "barely-started"),
 ]
 
 
@@ -75,9 +80,10 @@ def run(l10n_dir, project) -> int:
 
     print("XLIFF layout")
     trees = results["it"][2]
-    check(len(trees.l10n) == 1894, f"the locale file parses ({len(trees.l10n)} units)")
-    check(len(trees.source) == 1894, f"the source side comes from the same run ({len(trees.source)})")
-    check(len(trees.l10n_files) == 95,
+    check(len(trees.l10n) > 1500, f"the locale file parses ({len(trees.l10n)} units)")
+    check(len(trees.source) == len(trees.l10n),
+          f"the source side comes from the same run ({len(trees.source)})")
+    check(len(trees.l10n_files) > 50,
           f"units are grouped by their originating .strings file ({len(trees.l10n_files)})")
     sample = next(iter(trees.l10n))
     check(sample[0].endswith(".strings") or sample[0].endswith(".stringsdict"),
@@ -100,13 +106,19 @@ def run(l10n_dir, project) -> int:
           "and still accepts the Android forms")
 
     print("\nCompleteness")
-    for locale, translated, missing in COMPLETENESS:
-        health = results[locale][0]
-        check(health.strings == translated,
-              f"{locale}: {health.strings} translated (expected {translated})")
-        check(health.missing == missing,
-              f"{locale}: {health.missing} missing (expected {missing}) "
-              "-- an empty target counts as untranslated")
+    for locale, shape in COMPLETENESS:
+        health, _, trees_ = results[locale][0], None, results[locale][2]
+        units = len(trees_.source)
+        check(health.strings + health.missing == units,
+              f"{locale}: translated + missing = {health.strings}+{health.missing} "
+              f"accounts for all {units} units")
+        if shape == "complete":
+            check(health.missing == 0,
+                  f"{locale}: fully translated ({health.strings} of {units})")
+        else:
+            check(health.missing > units * 0.8,
+                  f"{locale}: barely started ({health.strings} of {units}) -- an "
+                  "empty target counts as untranslated, not as an empty string")
 
     print("\nDefects that are really there")
     for locale, kind, string_id in MUST_FIND:
