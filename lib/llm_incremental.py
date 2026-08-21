@@ -140,11 +140,16 @@ def review(project, locale, keys, l10n, source, log=print) -> tuple[list[Finding
     system = system_prompt(project, locale)
     keep_identical = project.is_variant(locale)
     if not os.environ.get("ANTHROPIC_API_KEY"):
+        ways_out = ["export it", "use --no-llm for the deterministic checks only"]
+        if project.supports_agent_baseline:
+            ways_out.append(
+                "or run a from-scratch review with --baseline-strategy agent, "
+                "which drives the `claude` CLI and uses its credentials instead"
+            )
         raise RuntimeError(
-            "reviewing through the API needs ANTHROPIC_API_KEY. Export it, or "
-            "use --no-llm for deterministic checks only, or run a from-scratch "
-            "review with --baseline-strategy agent, which drives the `claude` "
-            "CLI and uses its credentials instead."
+            "reviewing through the API needs ANTHROPIC_API_KEY: "
+            + ", ".join(ways_out)
+            + "."
         )
     client = anthropic.Anthropic()
     batch_size = int(cfg.get("batch_size", 40))
