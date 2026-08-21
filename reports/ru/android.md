@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `7134a6c77a67` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `7134a6c77a67` |
-| **Previous run** | 2026-08-20 @ `afd16223d876` |
-| **Mode** | baseline |
-| **Strings reviewed this run** | 2,908 of 2,908 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
+| **Previous run** | 2026-08-21 @ `7134a6c77a67` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 0 of 2,908 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,321 +18,21 @@ Also for ru: [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (167)
+### 🆕 New findings (2)
 
-- `mozac_browser_errorpages_content_crashed_title` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ru/strings.xml` — "Content crashed" is translated as "content is corrupted", duplicating the corrupted-content title and losing the crash meaning.
-    - Current: `Загружаемое содержимое повреждено`
-    - Source: `Content crashed`
-    - Suggest: `Сбой содержимого`
-    - The source says the content process crashed, not that the content is corrupted; the same Russian text is also used for mozac_browser_errorpages_corrupted_content_title, making the two error pages indistinguishable.
-- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ru/strings.xml` — "the requested item" is rendered as "сайтом" (site) instead of the generic requested resource.
-    - Current: `не может установить соединение с запрашиваемым сайтом`
-    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
-    - Suggest: `не может установить соединение с запрашиваемым ресурсом`
-    - The source says "the requested item", a generic resource, not specifically a website.
-- `mozac_browser_errorpages_unknown_socket_type_title` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ru/strings.xml` — Title mistranslates "Unexpected response" and leaves an untranslated alternative slash-variant in the UI.
-    - Current: `Неизвестный/неопознанный ответ сервера`
-    - Source: `Unexpected response from server`
-    - Suggest: `Неожиданный ответ сервера`
-    - Source is "Unexpected response from server"; the target says "unknown/unidentified" and additionally exposes two unresolved translation variants separated by a slash in a page heading.
-- `mozac_browser_errorpages_security_bad_cert_back` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ru/strings.xml` — "(Recommended)" is translated as "(желательно)" (desirable) instead of "(рекомендуется)".
-    - Current: `Назад (желательно)`
-    - Source: `Go Back (Recommended)`
-    - Suggest: `Назад (рекомендуется)`
-    - The source qualifier is "Recommended", the standard Mozilla rendering of which is "рекомендуется"; "желательно" weakens/changes the meaning.
-- `mozac_browser_errorpages_proxy_connection_refused_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ru/strings.xml` — "network administrator" is translated as "системному администратору" (system administrator).
-    - Current: `Обратитесь к своему системному администратору или Интернет-провайдеру`
-    - Source: `{ <p> }The browser is configured to use a proxy server, but the proxy refused a connection.{ </p> } { <ul> } { <li> }Is the browser’s proxy configuration correct? Check the settings and try again.{ </li> } { <li> }Does…`
-    - Suggest: `Обратитесь к своему сетевому администратору или Интернет-провайдеру`
-    - The source says "network administrator", not "system administrator".
-- `mozac_browser_errorpages_unknown_proxy_host_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ru/strings.xml` — "network administrator" is translated as "системному администратору" (system administrator).
-    - Current: `Обратитесь к своему системному администратору или Интернет-провайдеру`
-    - Source: `{ <p> }The browser is configured to use a proxy server, but the proxy could not be found.{ </p> } { <ul> } { <li> }Is the browser’s proxy configuration correct? Check the settings and try again.{ </li> } { <li> }Is the…`
-    - Suggest: `Обратитесь к своему сетевому администратору или Интернет-провайдеру`
-    - The source says "network administrator", not "system administrator".
-- `mozac_browser_errorpages_security_bad_cert_techInfo` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ru/strings.xml` — "self-signed" certificate is rendered as "подписан самим сайтом" (signed by the site itself) — inaccurate technical term.
-    - Current: `сертификат подписан самим сайтом`
-    - Source: `{ <label> }Someone could be trying to impersonate the site and you should not continue.{ </label> } { <br> }{ <br> } { <label> }Websites prove their identity via certificates. %1$s does not trust { <b> }%2$s{ </b> } bec…`
-    - Suggest: `сертификат является самоподписанным`
-    - "Self-signed certificate" is a standard term (самоподписанный сертификат); the current wording changes the technical meaning.
-- `mozac_browser_awesomebar_remove_suggestion` — `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-ru/strings.xml` — "suggestion" is rendered as «подсказку» in the adjacent string but as «предложение» here, an inconsistent and incorrect term for a search suggestion.
-    - Current: `Удалить предложение`
-    - Source: `Remove suggestion`
-    - Suggest: `Удалить подсказку`
-    - The sibling string mozac_browser_awesomebar_edit_suggestion translates "suggestion" as «подсказка»; «предложение» on the same surface is inconsistent and misleading (it reads as "offer/sentence").
-- `mozac_feature_addons_failed_to_uninstall` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Inconsistent formatting compared with the parallel "Failed to …" strings, which use "Ошибка при … %1$s" without a colon.
-    - Current: `Ошибка при удалении: %1$s`
-    - Source: `Failed to uninstall %1$s`
-    - Suggest: `Ошибка при удалении %1$s`
-    - mozac_feature_addons_failed_to_remove uses "Ошибка при удалении %1$s" for the same pattern; the colon here is an inconsistent rendering of the same construction on the same surface.
-- `mozac_feature_addons_not_yet_supported_caption2` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — "building support for an initial selection of Recommended Extensions" is mistranslated as building a "selection system".
-    - Current: `В данное время мы подготавливаем первоначальную систему выбора предлагаемых расширений.`
-    - Source: `We‘re currently building support for an initial selection of Recommended Extensions.`
-    - Suggest: `В настоящее время мы работаем над поддержкой первоначальной подборки рекомендуемых расширений.`
-    - The source says support is being built for an initial selection of Recommended Extensions, not that a "selection system" is being prepared.
-- `mozac_feature_addons_failed_to_load_extensions` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — "Try again later" is expanded into "Подождите некоторое время и попробуйте снова", adding content not in the source.
-    - Current: `Не удалось загрузить расширения. Подождите некоторое время и попробуйте снова.`
-    - Source: `Couldn’t load extensions. Try again later.`
-    - Suggest: `Не удалось загрузить расширения. Попробуйте позже.`
-    - The source simply says "Try again later"; the translation adds an instruction to wait.
-- `mozac_feature_addons_permissions_extra_domains_description_plural_2` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Wrong case ending: "вашим данных" instead of "вашим данным".
-    - Current: `Доступ к вашим данных на других доменах`
-    - Source: `Access your data on other domains`
-    - Suggest: `Доступ к вашим данным на других доменах`
-    - Dative plural after "к" requires "данным"; "данных" is genitive and does not agree with "вашим".
-- `mozac_feature_addons_permissions_extra_sites_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Wrong case ending: "вашим данных" instead of "вашим данным".
-    - Current: `Доступ к вашим данных на других сайтах.`
-    - Source: `Access your data on other sites.`
-    - Suggest: `Доступ к вашим данным на других сайтах.`
-    - Dative plural after "к" requires "данным"; the parallel string mozac_feature_addons_permissions_extra_sites_description_2 uses the correct form.
-- `mozac_feature_addons_permissions_devtools_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Meaning shifted: source says extend developer tools so they can access your data, not "extend the access of developer tools".
-    - Current: `Расширение доступа инструментов разработчика к вашим данным в открытых вкладках`
-    - Source: `Extend developer tools to access your data in open tabs`
-    - Suggest: `Расширение инструментов разработчика для доступа к вашим данным в открытых вкладках`
-    - "Extend developer tools to access your data" means extending the devtools themselves; the translation reverses the object of extension.
-- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Meaning shifted: source says extend developer tools so they can access your data, not "extend the access of developer tools".
-    - Current: `Расширение доступа инструментов разработчика к вашим данным в открытых вкладках.`
-    - Source: `Extend developer tools to access your data in open tabs.`
-    - Suggest: `Расширение инструментов разработчика для доступа к вашим данным в открытых вкладках.`
-    - "Extend developer tools to access your data" means extending the devtools themselves; the translation reverses the object of extension.
-- `mozac_feature_addons_permissions_native_messaging_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Inconsistent with the non-update variant and drops "other than this one" nuance.
-    - Current: `Обмен сообщениями с другими приложениями.`
-    - Source: `Exchange messages with apps other than this one.`
-    - Suggest: `Обмен сообщениями с приложениями, помимо этого.`
-    - The same source phrase "Exchange messages with apps other than this one" is rendered differently from mozac_feature_addons_permissions_native_messaging_description; the update variant loses the "other than this one" qualifier.
-- `mozac_feature_addons_permissions_declarative_net_request_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Accusative "Блокировку" used where the nominative list item form is required.
-    - Current: `Блокировку содержимого на любой странице`
-    - Source: `Block content on any page`
-    - Suggest: `Блокировка содержимого на любой странице`
-    - All other permission descriptions in this list use the nominative noun (e.g. the _for_update variant uses "Блокировка"); the accusative case is ungrammatical as a standalone list entry.
-- `mozac_feature_addons_permissions_history_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Renders "browsing history" differently from the non-update variant of the same source string.
-    - Current: `Доступ к истории просмотра.`
-    - Source: `Access browsing history.`
-    - Suggest: `Доступ к истории браузера.`
-    - mozac_feature_addons_permissions_history_description translates the identical source as "истории браузера"; the two variants of the same permission must match.
-- `mozac_feature_addons_permissions_declarative_net_request_feedback_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Renders "your browsing history" differently from the non-update variant of the same source string.
-    - Current: `Чтение истории просмотра.`
-    - Source: `Read your browsing history.`
-    - Suggest: `Чтение истории браузера.`
-    - mozac_feature_addons_permissions_declarative_net_request_feedback_description translates the identical source as "истории браузера"; the two variants must be consistent.
-- `mozac_feature_addons_permissions_management_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Uses "Мониторинг" where the non-update variant of the same source uses "Отслеживание".
-    - Current: `Мониторинг использования расширений и управление темами.`
-    - Source: `Monitor extension usage and manage themes.`
-    - Suggest: `Отслеживание использования расширений и управление темами.`
-    - The identical source "Monitor extension usage and manage themes" is translated inconsistently between the two variants of the same permission.
-- `mozac_feature_addons_permissions_dialog_technical_and_interaction_data` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — "разработчиком расширений" is plural where the source refers to the single extension's developer.
-    - Current: `с разработчиком расширений`
-    - Source: `Share technical and interaction data with extension developer`
-    - Suggest: `с разработчиком расширения`
-    - Source is "extension developer" (singular, the developer of this extension), matching the websiteContent string which uses "разработчику расширения".
-- `mozac_feature_addons_permissions_trial_ml_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Mixed verb forms: "Скачайте и запускайте" is imperative while the rest of the permission descriptions use nominal/infinitive form, and the two verbs disagree in aspect.
-    - Current: `Скачайте и запускайте ИИ-модели на вашем устройстве`
-    - Source: `Download and run AI models on your device`
-    - Suggest: `Скачивание и запуск ИИ-моделей на вашем устройстве`
-    - Source "Download and run AI models on your device" is a permission description, rendered elsewhere in this file with nominal forms ("Скрытие и отображение…", "Предоставление услуг…"); the current text is an imperative with inconsistent aspect.
-- `mozac_feature_addons_permissions_trial_ml_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Imperative with mismatched aspect instead of the nominal permission-description form.
-    - Current: `Скачайте и запускайте ИИ-модели на вашем устройстве.`
-    - Source: `Download and run AI models on your device.`
-    - Suggest: `Скачивание и запуск ИИ-моделей на вашем устройстве.`
-    - Source "Download and run AI models on your device." is a permission description; other update descriptions in this file use nominal forms, and "Скачайте и запускайте" mixes perfective and imperfective imperatives.
-- `mozac_feature_addons_permissions_top_sites_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — "Доступ к истории просмотра" differs from the non-update variant of the same permission, which uses "Доступ к истории браузера".
-    - Current: `Доступ к истории просмотра.`
-    - Source: `Access browsing history.`
-    - Suggest: `Доступ к истории браузера.`
-    - Same source string "Access browsing history" is rendered two different ways on the same permission surface (mozac_feature_addons_permissions_top_sites_description).
-- `mozac_feature_addons_permissions_one_site_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Inconsistent rendering of the same source string compared with mozac_feature_addons_permissions_one_site_description ("на %1$s" vs "для %1$s").
-    - Current: `Доступ к вашим данным для %1$s.`
-    - Source: `Access your data for %1$s.`
-    - Suggest: `Доступ к вашим данным на %1$s.`
-    - The identical source "Access your data for %1$s" is translated two different ways in the same permission list surface.
-- `mozac_feature_addons_permissions_privacy_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — "параметров приватности" is inconsistent with the non-update variant's "настроек приватности" for the same source term "privacy settings".
-    - Current: `Чтение и изменение параметров приватности.`
-    - Source: `Read and modify privacy settings.`
-    - Suggest: `Чтение и изменение настроек приватности.`
-    - Same permission, same source wording, translated with two different terms on the same surface.
-- `mozac_feature_addons_permissions_proxy_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Wording diverges from the non-update variant of the same "proxy" permission ("Контроль настроек прокси в браузере").
-    - Current: `Управление настройками прокси браузера.`
-    - Source: `Control browser proxy settings.`
-    - Suggest: `Контроль настроек прокси в браузере.`
-    - The identical source "Control browser proxy settings" is rendered two different ways for the same permission on the same surface.
-- `mozac_feature_addons_permissions_user_scripts_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Word order and phrasing diverge from the non-update variant of the same permission.
-    - Current: `Разрешение на доступ непроверенным сторонним скриптам к вашим данным.`
-    - Source: `Allow unverified third-party scripts to access your data.`
-    - Suggest: `Разрешение непроверенным сторонним скриптам доступа к вашим данным.`
-    - The same source "Allow unverified third-party scripts to access your data" is rendered differently, and the current split of "доступ … к вашим данным" around the dative phrase is awkward/ungrammatical.
-- `mozac_feature_addons_unavailable_section` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — "Ещё не доступно" should be written as one word "недоступно".
-    - Current: `Ещё не доступно`
-    - Source: `Not yet available`
-    - Suggest: `Ещё недоступно`
-    - In Russian the predicative adverb is spelled together as «недоступно» when there is no contrast/negation particle; «не доступно» here is a spelling error.
-- `mozac_feature_customtabs_menu_button` — `mozilla-mobile/android-components/components/feature/customtabs/src/main/res/values-ru/strings.xml` — "More options" is rendered as "Другие настройки" ("Other settings"), naming settings rather than options of the menu button.
-    - Current: `Другие настройки`
-    - Source: `More options`
-    - Suggest: `Дополнительные опции`
-    - The content description describes the menu button; the source says "More options", not "settings". Elsewhere in Firefox this is "Дополнительные опции"/"Ещё".
-- `mozac_feature_downloads_third_party_app_chooser_dialog_title` — `mozilla-mobile/android-components/components/feature/downloads/src/main/res/values-ru/strings.xml` — Missing comma before the adverbial participle «используя».
-    - Current: `Завершить действие используя`
-    - Source: `Complete action using`
-    - Suggest: `Завершить действие с помощью`
-    - In Russian a деепричастный оборот requires a comma («Завершить действие, используя»); the usual chooser-dialog wording is «Завершить действие с помощью».
-- `mozac_feature_prompt_folder_upload_confirm_positive_button_text` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-ru/strings.xml` — "Upload" is rendered as "Закачать", inconsistent with the dialog title/message which use "Загрузить".
-    - Current: `Закачать`
-    - Source: `Upload`
-    - Suggest: `Загрузить`
-    - The related strings mozac_feature_prompt_folder_upload_confirm_title ("Загрузить файлы?") and _message ("загружать") use "загрузить"; "Закачать" is colloquial and inconsistent on the same dialog.
-- `mozac_feature_prompt_folder_upload_confirm_message` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-ru/strings.xml` — Extraneous comma before "как" in "перед тем, как загружать" combined with dangling verb without object.
-    - Current: `перед тем, как загружать на «%1$s»`
-    - Source: `Make sure you trust this site before you upload from “%1$s”.`
-    - Suggest: `перед тем как загружать файлы из папки «%1$s»`
-    - The source means uploading from the folder "%1$s"; the Russian says uploading onto "%1$s", reversing the direction.
-- `mozac_feature_qr_scanner` — `mozilla-mobile/android-components/components/feature/qr/src/main/res/values-ru/strings.xml` — "QR scanner" is rendered as "barcode reader", naming a different technology.
-    - Current: `Считыватель штрих-кодов`
-    - Source: `QR scanner`
-    - Suggest: `Сканер QR-кодов`
-    - The source says QR scanner; штрих-код is a barcode, not a QR code.
-- `mozac_feature_relay_chip_text` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-ru/strings.xml` — Singular "email mask" rendered as plural and as an imperative sentence in a chip label.
-    - Current: `Используйте псевдонимы эл. почты`
-    - Source: `Use email mask`
-    - Suggest: `Использовать псевдоним эл. почты`
-    - The source is a chip action label "Use email mask" (singular); the translation pluralizes it and uses a suggestive imperative instead of an action label.
-- `mozac_protections_dashboard_trackers_blocked_this_week_title` — `mozilla-mobile/android-components/components/feature/protection-dashboard/src/main/res/values-ru/strings.xml` — Header reads as a sentence "Trackers were blocked this week" instead of the noun phrase heading.
-    - Current: `На этой неделе заблокированы трекеры`
-    - Source: `Trackers blocked this week`
-    - Suggest: `Заблокировано трекеров за эту неделю`
-    - Source is a dashboard header noun phrase "Trackers blocked this week" that labels a count; the Russian predicate form changes it into a statement.
-- `mozac_feature_sitepermissions_media_key_system_access_title` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-ru/strings.xml` — "DRM-controlled content" is rendered as "защищённое авторским правом содержимое" (copyright-protected), losing the DRM term.
-    - Current: `Разрешить %1$s воспроизводить защищённое авторским правом содержимое?`
-    - Source: `Allow %1$s to play DRM-controlled content?`
-    - Suggest: `Разрешить %1$s воспроизводить содержимое, защищённое DRM?`
-    - The source specifies content controlled by DRM, not merely copyrighted content; DRM is a technical term that should be kept.
-- `mozac_feature_summarize_loading_title` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ru/strings.xml` — "Summarizing…" is translated with a first-person verb "Резюмирую…" instead of an impersonal progress label.
-    - Current: `Резюмирую…`
-    - Source: `Summarizing…`
-    - Suggest: `Резюмирование…`
-    - UI progress labels in ru use impersonal noun forms; the first-person singular verb makes the app speak as "I", which conflicts with the locale's register.
-- `mozac_summarize_info_error_title` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ru/strings.xml` — First-person "Не могу" breaks the impersonal/formal register used for app messages.
-    - Current: `Не могу резюмировать прямо сейчас`
-    - Source: `Can’t summarize right now`
-    - Suggest: `Не удалось резюмировать прямо сейчас`
-    - The English "Can’t summarize right now" is impersonal; the Russian rendering makes the app speak in the first person singular, which conflicts with the locale's formal, impersonal register.
-- `mozac_summarize_settings_shake_to_summarize` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ru/strings.xml` — Toggle label translated as an imperative command instead of a feature name.
-    - Current: `Встряхните, чтобы резюмировать`
-    - Source: `Shake to summarize`
-    - Suggest: `Встряхивание для резюмирования`
-    - This is the label of a settings toggle naming the feature ("Shake to summarize"), not an instruction to the user; the imperative reads as a command and is inconsistent with the neighbouring noun-style labels.
-- `mozac_lib_crash_share` — `mozilla-mobile/android-components/components/lib/crash/src/main/res/values-ru/strings.xml` — "Share" is translated as "Сообщить" (Report) instead of "Поделиться".
-    - Current: `Сообщить`
-    - Source: `Share`
-    - Suggest: `Поделиться`
-    - The source is "Share" — a link that opens an app chooser to share the crash report; "Сообщить" means "Report" and duplicates mozac_lib_crash_notification_action_report.
-- `mozac_lib_crash_dialog_checkbox` — `mozilla-mobile/android-components/components/lib/crash/src/main/res/values-ru/strings.xml` — Singular one-time action "Send crash report" rendered as an imperfective plural "Отправлять сообщения о падениях".
-    - Current: `Отправлять сообщения о падениях в %1$s`
-    - Source: `Send crash report to %1$s`
-    - Suggest: `Отправить сообщение о падении в %1$s`
-    - The source is a one-off checkbox "Send crash report to %1$s" (singular, perfective), not a recurring setting to send reports repeatedly.
-- `mozac_open_tab_counter_tab_tray` — `mozilla-mobile/android-components/components/ui/tabcounter/src/main/res/values-ru/strings.xml` — "не приватных" should be written as one word "неприватных".
-    - Current: `Открытых не приватных вкладок`
-    - Source: `Non-private Tabs Open: %1$s. Tap to switch tabs.`
-    - Suggest: `Открытых неприватных вкладок`
-    - In Russian, the negative prefix не- with an adjective without contrast is written together: «неприватных».
-- `score` — `mozilla-mobile/fenix/app/longfox/src/main/res/values-ru/strings.xml` — "Счет" is missing the ё (should be "Счёт"), inconsistent with «счётчика» elsewhere.
-    - Current: `Счет: %1$d`
-    - Source: `Score: %1$d`
-    - Suggest: `Счёт: %1$d`
-    - The word for score is «счёт»; the tree uses ё consistently (e.g. «счётчика вкладок», «включён»).
-- `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — The English conjunction "or" was left untranslated and the typographic quotes were replaced with straight double quotes.
-    - Current: `Сетевой адрес должен содержать "https://" or "http://"`
-    - Source: `Web address must contain “https://” or “http://”`
-    - Suggest: `Сетевой адрес должен содержать «https://» или «http://»`
-    - The source reads “https://” or “http://”; the Russian keeps the English word "or" and uses straight quotes instead of the locale's guillemets.
-- `a11y_selected_locale_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "Selected language" is rendered as "Current language".
-    - Current: `Текущий язык`
-    - Source: `Selected language`
-    - Suggest: `Выбранный язык`
-    - The content description marks the tick on the selected language; "Текущий" means "current", not "selected".
-- `add_to_homescreen_continue` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "Continue to website" is translated as "Return to the site".
-    - Current: `Вернуться к сайту`
-    - Source: `Continue to website`
-    - Suggest: `Перейти на сайт`
-    - The source means continuing on to the website, not returning to it.
-- `add_tab` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "Add tab" is translated as "Open tab", inconsistent with add_private_tab which uses "Добавить".
-    - Current: `Открыть вкладку`
-    - Source: `Add tab`
-    - Suggest: `Добавить вкладку`
-    - Source is "Add tab"; the sibling string add_private_tab is correctly rendered "Добавить приватную вкладку".
-- `addresses_name` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "Name" here is a person's full name, but the translation means "title/designation".
-    - Current: `Название`
-    - Source: `Name`
-    - Suggest: `Имя`
-    - The developer comment states Name represents a person's full name (e.g. John Joe Doe); "Название" refers to the name of a thing, not a person.
-- `addresses_province` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "Province" is rendered as the generic "Регион", identical to the State label, losing the distinction.
-    - Current: `Регион`
-    - Source: `Province`
-    - Suggest: `Провинция`
-    - The source distinguishes Province from State (addresses_state), and "Регион" also duplicates the wording used for "Country or region"; Province should be "Провинция".
-- `addresses_townland` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "Townland" (an Irish rural land division) is rendered as "Городская земля" ("urban/town land"), which means the opposite.
-    - Current: `Городская земля`
-    - Source: `Townland`
-    - Suggest: `Таунленд`
-    - The developer comment states the Townland field is specific to Ireland and denotes a land division used in rural areas; "Городская земля" says "city land", the wrong concept.
-- `ai_controls_voice_search_description` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — The service name is mistyped as "Google Speech Service" instead of the source's "Google Speech Services".
-    - Current: `службами Google Speech Service`
-    - Source: `Audio is converted to text by Google Speech Services.`
-    - Suggest: `службами Google Speech Services`
-    - The source names the product "Google Speech Services"; product names must be reproduced exactly.
-- `automatic_translation_option_always_translate_summary_preference` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "translate this language" (i.e. translate pages in this language) is rendered as "translate into this language", reversing the translation direction.
-    - Current: `%1$s будет переводить на этот язык автоматически при загрузке страницы.`
-    - Source: `%1$s will translate this language automatically when the page loads.`
-    - Suggest: `%1$s будет автоматически переводить страницы на этом языке при их загрузке.`
-    - The source means Firefox will translate content written in this language; the Russian says it will translate into this language, the opposite direction, and is inconsistent with the sibling strings that use «сайтов на этом языке».
-- `alternative_app_icon_option_purple_dark` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — Missing "ё" in "Тёмно-фиолетовый", inconsistent with "Зелёный" in the same set.
-    - Current: `Темно-фиолетовый`
-    - Source: `Dark Purple`
-    - Suggest: `Тёмно-фиолетовый`
-    - The same batch uses ё ("Зелёный"), so the ё-spelling is the convention here.
-- `bookmark_item_menu_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "Item Menu for %s" is rendered as "Элемент меню" (menu item), reversing the meaning.
-    - Current: `Элемент меню для %s`
-    - Source: `Item Menu for %s`
-    - Suggest: `Меню элемента «%s»`
-    - The source means the overflow menu belonging to an item (a bookmark or folder); the translation says "menu item", which is the opposite relationship and misleads screen-reader users.
-- `bookmark_empty_list_guest_cta` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "Sign in to sync" is translated as "Войти в синхронизацию", which is not the intended meaning.
-    - Current: `Войти в синхронизацию`
-    - Source: `Sign in to sync`
-    - Suggest: `Войдите для синхронизации`
-    - The button navigates to sync authentication: the user signs in so that syncing can happen; "войти в синхронизацию" (log in to synchronization) is a nonsensical rendering in Russian.
-- `bookmark_moved_single_item` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — Snackbar message uses a neuter short participle with a name placeholder, producing incorrect agreement.
-    - Current: `Перемещено %1$s в %2$s`
-    - Source: `Moved %1$s to %2$s`
-    - Suggest: `«%1$s» перемещено в «%2$s»`
-    - The source "Moved %1$s to %2$s" places the item name as object; the Russian word order "Перемещено %1$s в %2$s" reads as broken grammar without quoting the item title.
-- `browser_custom_tab_menu_handlebar_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "sheet" (bottom sheet) is mistranslated as "страницу" (page), producing a confusing screen-reader description.
-    - Current: `Закрыть страницу меню пользовательских вкладок`
-    - Source: `Close custom tab menu sheet`
-    - Suggest: `Закрыть панель меню пользовательской вкладки`
-    - The source refers to closing the bottom-sheet of the custom tab menu, not a "page"; the developer comment says it is a bottom sheet handlebar.
-- `browser_menu_default_banner_dismiss_promotion` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "Dismiss promotion" is rendered as "Скрыть рекламу" (hide advertisement), which misstates the banner as an ad.
-    - Current: `Скрыть рекламу`
-    - Source: `Dismiss promotion`
-    - Suggest: `Закрыть предложение`
-    - The banner promotes making the app default; "реклама" (advertisement) is not what the source means by "promotion".
-- `browser_menu_summarize_page_badge` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "New" (a badge marking a new feature) is translated as "Создать" ("Create").
-    - Current: `Создать`
-    - Source: `New`
-    - Suggest: `Новое`
-    - The source is a badge label meaning "new feature", not the verb "create"; "Создать" says something entirely different.
-- _…and 107 more._
-
-### ✅ Fixed since the last run (2)
-
+- `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — `preference_summary_delete_browsing_data_on_quit_2` uses straight double quotes
+    - Current: `Автоматически удаляет данные просмотра сети, когда вы выбираете "Выйти" в главном меню`
+    - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
+    - Suggest: `«Выйти»`
+    - The locale's quote convention is `guillemet` (46 occurrences).
 - `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
     - Current: `Сетевой адрес должен содержать "https://" or "http://"`
     - Source: `Web address must contain “https://” or “http://”`
     - The locale's quote convention is `guillemet` (46 occurrences).
-- `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — Straight double quotes used instead of the locale's guillemets.
-    - Current: `"Выйти"`
-    - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
-    - Suggest: `«Выйти»`
-    - The ru convention is guillemets; the source uses curly quotes “Quit”.
+
+### ✅ Fixed since the last run (0)
+
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -398,14 +98,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (167)
+## 3. Open findings (169)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 100 |
 | 3 | Degraded language (grammar, spelling, terminology) | 65 |
-| 4 | Cosmetic (typography, spacing) | 2 |
+| 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -1028,11 +728,20 @@ _Nothing in this category._
     - Source: `Complete action using`
     - Suggest: `Завершить действие с помощью`
     - In Russian a деепричастный оборот requires a comma («Завершить действие, используя»); the usual chooser-dialog wording is «Завершить действие с помощью».
+- `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
+    - Current: `Сетевой адрес должен содержать "https://" or "http://"`
+    - Source: `Web address must contain “https://” or “http://”`
+    - The locale's quote convention is `guillemet` (46 occurrences).
 - `preference_search_address_bar_fx_suggest` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — Hyphen used instead of an em dash as separator.
     - Current: `Адресная строка - Firefox Suggest`
     - Source: `Address bar - Firefox Suggest`
     - Suggest: `Адресная строка — Firefox Suggest`
     - Russian typography uses an em dash as a separator; the locale's house dash is the em dash.
+- `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — `preference_summary_delete_browsing_data_on_quit_2` uses straight double quotes
+    - Current: `Автоматически удаляет данные просмотра сети, когда вы выбираете "Выйти" в главном меню`
+    - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
+    - Suggest: `«Выйти»`
+    - The locale's quote convention is `guillemet` (46 occurrences).
 
 ---
 
@@ -1054,7 +763,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Resolved to date (2)
+### Resolved to date (0)
 
-- `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — fixed 2026-08-21
-- `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — fixed 2026-08-21
+_Nothing resolved yet._

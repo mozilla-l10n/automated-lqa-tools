@@ -3,13 +3,14 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f2e9b7fce093` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
-| **Previous run** | 2026-08-21 @ `a9b9a116b725` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `5cbe42651962` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
+| **Previous run** | 2026-08-21 @ `f2e9b7fce093` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 17,843 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
+
 
 Also for es-MX: [android](android.md)
 
@@ -45,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 357 |
 | Strings | 17,843 |
-| Missing strings | 330 |
+| Missing strings | 337 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 3 |
 | Fluent / properties syntax errors | 0 |
@@ -64,17 +65,17 @@ _Nothing retired._
 
 ### Completeness
 
-**330 strings** are not translated yet, concentrated in:
+**337 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 68
+- `browser/browser/newtab/newtab.ftl` — 73
 - `toolkit/toolkit/about/url-classifier.ftl` — 26
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 23
 - `toolkit/toolkit/about/aboutNetworking.ftl` — 20
 - `toolkit/toolkit/about/aboutAddons.ftl` — 15
+- `browser/browser/sharePanel.ftl` — 14
 - `browser/browser/preferences/preferences.ftl` — 14
 - `browser/browser/newtab/onboarding.ftl` — 13
 - `toolkit/toolkit/neterror/netError.ftl` — 13
-- `browser/browser/sharePanel.ftl` — 12
 - `browser/browser/sidebar.ftl` — 12
 - `browser/browser/newtab/asrouter.ftl` — 11
 - `devtools/client/toolbox-options.ftl` — 11

@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `7134a6c77a67` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `7134a6c77a67` |
-| **Previous run** | 2026-08-20 @ `afd16223d876` |
-| **Mode** | baseline |
-| **Strings reviewed this run** | 2,871 of 2,871 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
+| **Previous run** | 2026-08-21 @ `7134a6c77a67` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 0 of 2,871 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,316 +18,16 @@ Also for zh-CN: [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (159)
-
-- `mozac_browser_errorpages_file_access_denied_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-zh-rCN/strings.xml` — The verbs "removed, moved" are rendered in swapped/incorrect order ("移走、移除" for "removed, moved").
-    - Current: `文件可能已被移走、移除，或者没有访问该文件的权限。`
-    - Source: `{ <ul> } { <li> }It may have been removed, moved, or file permissions may be preventing access.{ </li> } { </ul> }`
-    - Suggest: `文件可能已被移除、移动，或者文件权限阻止了访问。`
-    - Source says "removed, moved, or file permissions may be preventing access"; the translation reverses the order of removed/moved and renders "file permissions may be preventing access" as simply lacking permission.
-- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-zh-rCN/strings.xml` — "the device" is translated as "计算机" (computer) instead of "设备".
-    - Current: `计算机是否连接了可用的网络？`
-    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
-    - Suggest: `设备是否连接了可用的网络？`
-    - Source reads "Is the device connected to an active network?"; on Android the term is device (设备), not computer, and other strings in the same file use 设备.
-- `mozac_browser_errorpages_net_timeout_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-zh-rCN/strings.xml` — Missing measure word/particle in "请检查您网络连接".
-    - Current: `请检查您网络连接。`
-    - Source: `{ <p> }The requested site did not respond to a connection request and the browser has stopped waiting for a reply.{ </p> } { <ul> } { <li> }Could the server be experiencing high demand or a temporary outage? Try again l…`
-    - Suggest: `请检查您的网络连接。`
-    - Grammatically incomplete: 您 requires 的 before 网络连接 (source: "Check the device's network connection.").
-- `mozac_browser_errorpages_net_timeout_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-zh-rCN/strings.xml` — "Internet provider" mistranslated as "电信运营商" (telecom carrier).
-    - Current: `请联系您的网络管理员或者电信运营商以寻求协助。`
-    - Source: `{ <p> }The requested site did not respond to a connection request and the browser has stopped waiting for a reply.{ </p> } { <ul> } { <li> }Could the server be experiencing high demand or a temporary outage? Try again l…`
-    - Suggest: `请联系您的网络管理员或互联网服务提供商以寻求协助。`
-    - Source says "Internet provider" (ISP), which is not necessarily a telecom carrier.
-- `mozac_browser_engine_system_alert_title` — `mozilla-mobile/android-components/components/browser/engine-system/src/main/res/values-zh-rCN/strings.xml` — Placeholder holds a URL, but the translation calls it a domain name (域名).
-    - Current: `域名为 %1$s 的页面提示：`
-    - Source: `The page at %1$s says:`
-    - Suggest: `网址为 %1$s 的页面提示：`
-    - The developer comment states %1$s is replaced with the URL of the current page, not the domain name.
-- `mozac_browser_errorpages_port_blocked_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-zh-rCN/strings.xml` — The port-blocked message reverses the source meaning: the source says the port is normally used for purposes other than Web browsing, while the target says the port is "normally not used for web browsing".
-    - Current: `通常{ <em> }不是{ </em> }用于网络浏览`
-    - Source: `{ <p> }The requested address specified a port (e.g., { <q> }mozilla.org:80{ </q> } for port 80 on mozilla.org) normally used for purposes { <em> }other{ </em> } than Web browsing. The browser has canceled the request fo…`
-    - Suggest: `通常用于网络浏览{ <em> }以外{ </em> }的用途`
-    - Source: "normally used for purposes other than Web browsing" — the port does have a normal use, just not browsing; the translation states it is normally not used for browsing, losing/altering the meaning conveyed by <em>other</em>.
-- `mozac_browser_errorpages_safe_harmful_uri_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-zh-rCN/strings.xml` — "potentially harmful site" is rendered as "可能有攻击行为" (attack site), duplicating the malware string's wording instead of "有害".
-    - Current: `可能有攻击行为`
-    - Source: `{ <p> }The site at %1$s has been reported as a potentially harmful site and has been blocked based on your security preferences.{ </p> }`
-    - Suggest: `可能是有害网站`
-    - The source distinguishes "attack site" (malware string) from "potentially harmful site"; using 攻击行为 for both mistranslates and conflicts with the title 有恶意网站问题.
-- `mozac_browser_errorpages_security_bad_cert_techInfo` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-zh-rCN/strings.xml` — The reason clause drops "because", turning the alternative causes into a statement of fact instead of an explanation.
-    - Current: `不信任 { <b> }%2$s{ </b> }，其证书颁发者未知`
-    - Source: `{ <label> }Someone could be trying to impersonate the site and you should not continue.{ </label> } { <br> }{ <br> } { <label> }Websites prove their identity via certificates. %1$s does not trust { <b> }%2$s{ </b> } bec…`
-    - Suggest: `不信任 { <b> }%2$s{ </b> }，因为其证书颁发者未知`
-    - Source says "does not trust X because its certificate issuer is unknown, the certificate is self-signed, or..."; without 因为 the Chinese asserts these as facts rather than possible reasons.
-- `mozac_browser_errorpages_security_ssl_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-zh-rCN/strings.xml` — Ungrammatical phrase "建议联系向这个网站的拥有者反馈此问题" contains a stray 联系 before 向.
-    - Current: `建议联系向这个网站的拥有者反馈此问题。`
-    - Source: `{ <ul> } { <li> }The page you are trying to view cannot be shown because the authenticity of the received data could not be verified.{ </li> } { <li> }Please contact the website owners to inform them of this problem.{ <…`
-    - Suggest: `请向这个网站的拥有者反馈此问题。`
-    - "联系向" is not valid Chinese; the source is "Please contact the website owners to inform them of this problem."
-- `mozac_browser_errorpages_redirect_loop_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-zh-rCN/strings.xml` — "your device" is translated as "您计算机" (your computer) in a mobile browser string.
-    - Current: `而不是您计算机的问题`
-    - Source: `{ <p> }The browser has stopped trying to retrieve the requested item. The site is redirecting the request in a way that will never complete.{ </p> } { <ul> } { <li> }Have you disabled or blocked cookies required by this…`
-    - Suggest: `而不是您设备的问题`
-    - Source says "not your device"; the target says computer, which is wrong on Android.
-- `mozac_browser_errorpages_unknown_proxy_host_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-zh-rCN/strings.xml` — "Is the device connected to an active network?" is translated as "计算机" (computer) instead of device.
-    - Current: `计算机是否连接了可用的网络？`
-    - Source: `{ <p> }The browser is configured to use a proxy server, but the proxy could not be found.{ </p> } { <ul> } { <li> }Is the browser’s proxy configuration correct? Check the settings and try again.{ </li> } { <li> }Is the…`
-    - Suggest: `设备是否连接了可用的网络？`
-    - Source says "the device", not "the computer".
-- `mozac_browser_errorpages_proxy_connection_refused_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-zh-rCN/strings.xml` — "Internet provider" is translated as "电信运营商" (telecom carrier) instead of internet service provider, inconsistent with the parallel string which uses 互联网服务提供商.
-    - Current: `请联系您的网络管理员或者电信运营商以寻求协助。`
-    - Source: `{ <p> }The browser is configured to use a proxy server, but the proxy refused a connection.{ </p> } { <ul> } { <li> }Is the browser’s proxy configuration correct? Check the settings and try again.{ </li> } { <li> }Does…`
-    - Suggest: `请联系您的网络管理员或者互联网服务提供商以寻求协助。`
-    - The same source sentence in mozac_browser_errorpages_unknown_proxy_host_message is rendered 互联网服务提供商; 电信运营商 names a different entity.
-- `mozac_cfr_dismiss_button_content_description` — `mozilla-mobile/android-components/components/compose/cfr/src/main/res/values-zh-rCN/strings.xml` — "Dismiss" (close button content description) is rendered as "知道了" ("Got it"), which describes a different control.
-    - Current: `知道了`
-    - Source: `Dismiss`
-    - Suggest: `关闭`
-    - The developer comment says this is the content description for the close button of a CFR popup; screen readers should announce "Dismiss/Close", not an acknowledgement label. Other strings in the batch translate Dismiss as 关闭.
-- `mozac_feature_addons_not_yet_supported_caption2` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-zh-rCN/strings.xml` — Translation adds "请稍后再来" ("check back later"), which is not in the source.
-    - Current: `我们目前着重构建对部分“推荐扩展”的支持，请稍后再来。`
-    - Source: `We‘re currently building support for an initial selection of Recommended Extensions.`
-    - Suggest: `我们目前正在构建对首批“推荐扩展”的支持。`
-    - The source only says support for an initial selection of Recommended Extensions is being built; there is no invitation to come back later.
-- `mozac_feature_addons_permissions_all_domain_count_description_2` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-zh-rCN/strings.xml` — "Access your data for sites in %1$d domains" is rendered as accessing data "you use for" the domains, losing the "sites in domains" meaning.
-    - Current: `访问您用于 %1$d 个域名的数据`
-    - Source: `{$quantity ->} [other] Access your data for sites in %1$d domains`
-    - Suggest: `访问您在 %1$d 个域名下网站中的数据`
-    - The source refers to data for sites within the listed domains, not data the user uses for the domains.
-- `mozac_feature_addons_permissions_declarative_net_request_feedback_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-zh-rCN/strings.xml` — Inconsistent verb for "Read" vs. the paired _for_update string is fine, but "Access browsing history" and "Access browsing history." are rendered with two different verbs (获取 vs 访问).
-    - Current: `获取浏览历史`
-    - Source: `Read your browsing history`
-    - Suggest: `访问浏览历史`
-    - mozac_feature_addons_permissions_history_description ("Access browsing history") is translated as 获取浏览历史 while its _for_update twin with identical source wording uses 访问浏览历史; the same term must be rendered consistently on the same surface.
-- `mozac_feature_addons_permissions_extra_sites_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-zh-rCN/strings.xml` — "Access your data on other sites" is mistranslated as "data you use for other sites".
-    - Current: `访问您用于其他网站的数据。`
-    - Source: `Access your data on other sites.`
-    - Suggest: `访问您在其他网站的数据。`
-    - The source means data located on other sites, not data used for other sites; the parallel string mozac_feature_addons_permissions_extra_sites_description_2 correctly uses 访问您在其他网站的数据.
-- `mozac_feature_addons_permissions_extra_domains_description_plural_2` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-zh-rCN/strings.xml` — "other domains" is translated as "other sites" (网站) instead of domains (域名).
-    - Current: `访问您在其他网站的数据`
-    - Source: `Access your data on other domains`
-    - Suggest: `访问您在其他域名下的数据`
-    - The source distinguishes domains from sites; the parallel _for_update string correctly uses 域名, and this string is identical to the "other sites" string, erasing the distinction.
-- `mozac_feature_addons_permissions_devtools_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-zh-rCN/strings.xml` — "access" rendered as 存取 (Traditional Chinese/Taiwan usage) instead of the zh-CN term used in the twin string.
-    - Current: `让开发者工具可以存取您打开的标签页中的数据`
-    - Source: `Extend developer tools to access your data in open tabs`
-    - Suggest: `让开发者工具可以获取您打开的标签页中的数据`
-    - 存取 is not standard zh-CN terminology here; the paired _for_update string uses 获取 for the same source wording.
-- `mozac_feature_addons_permissions_show_fewer_sites` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-zh-rCN/strings.xml` — "Show fewer sites" is rendered as a generic "折叠" (collapse), dropping the "sites" content and mismatching the paired "显示所有网站" button.
-    - Current: `折叠`
-    - Source: `Show fewer sites`
-    - Suggest: `显示较少网站`
-    - The source reads "Show fewer sites" and the counterpart string is translated as "显示所有网站"; "折叠" omits the object and is inconsistent with the paired label.
-- `mozac_feature_addons_permissions_pkcs11_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-zh-rCN/strings.xml` — The pkcs11 permission is translated as "密码认证服务" (password authentication) here while the non-update variant uses "密码学身份认证服务" (cryptographic authentication).
-    - Current: `提供密码认证服务。`
-    - Source: `Provide cryptographic authentication services.`
-    - Suggest: `提供密码学身份认证服务。`
-    - Source is "Provide cryptographic authentication services."; "密码认证" means password authentication, which is a different concept and inconsistent with mozac_feature_addons_permissions_pkcs11_description.
-- `mozac_feature_addons_updater_notification_heading_data_collection_permissions` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-zh-rCN/strings.xml` — "New required data collection" is translated as "新必要权限" (new required permissions), losing the data-collection meaning and duplicating the adjacent permissions string.
-    - Current: `新必要权限：开发者称此扩展将收集%1$s。`
-    - Source: `New required data collection: The developer says the extension will collect %1$s.`
-    - Suggest: `新增必要数据收集：开发者称此扩展将收集%1$s。`
-    - Source distinguishes data collection from permissions; the sibling string mozac_feature_addons_updater_notification_heading_permissions already uses 新必要权限, so this rendering is both wrong and ambiguous.
-- `mozac_feature_addons_supported_checker_notification_channel` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-zh-rCN/strings.xml` — "Supported add-ons checker" is rendered as "新支持附加组件检查器", adding "新" which is not in the source.
-    - Current: `新支持附加组件检查器`
-    - Source: `Supported add-ons checker`
-    - Suggest: `受支持的附加组件检查器`
-    - The source names the channel "Supported add-ons checker"; "新" (new) is not present in the source string.
-- `mozac_feature_applinks_normal_confirm_dialog_title` — `mozilla-mobile/android-components/components/feature/app-links/src/main/res/values-zh-rCN/strings.xml` — Translation is missing the preposition/verb structure, reading as a fragment instead of "Open in another app".
-    - Current: `其他应用打开`
-    - Source: `Open in another app`
-    - Suggest: `在其他应用中打开`
-    - The source "Open in another app" requires "在……中打开" or at least "用其他应用打开"; the current text lacks any preposition and reads ungrammatically, inconsistent with the sibling string "用其他应用打开链接？".
-- `mozac_feature_autofill_search_suggestions` — `mozilla-mobile/android-components/components/feature/autofill/src/main/res/values-zh-rCN/strings.xml` — "Search %1$s" is expanded to "搜索保存于 %1$s 的登录信息", adding content not in the source.
-    - Current: `搜索保存于 %1$s 的登录信息`
-    - Source: `Search %1$s`
-    - Suggest: `搜索 %1$s`
-    - The source is simply "Search %1$s" where %1$s is the app name; the target adds "saved logins in" which is not in the source string.
-- `mozac_feature_ipprotection_unavaliable_dialog_body` — `mozilla-mobile/android-components/components/feature/ipprotection/src/main/res/values-zh-rCN/strings.xml` — "choose tabs to close" is mistranslated as "select tabs to close (them/the dialog)" with wrong structure.
-    - Current: `或者选择标签页以关闭`
-    - Source: `VPN isn’t working right now so your location may be visible. Continue browsing without VPN, or choose tabs to close.`
-    - Suggest: `或者选择要关闭的标签页`
-    - The source means the user picks which tabs to close; the Chinese reads as "select a tab in order to close", which is ambiguous/incorrect.
-- `mozac_feature_passwords_importer_dialog_title` — `mozilla-mobile/android-components/components/feature/password-importer/src/main/res/values-zh-rCN/strings.xml` — Progress title "Importing passwords" rendered as an imperative/action label instead of ongoing state.
-    - Current: `导入密码`
-    - Source: `Importing passwords`
-    - Suggest: `正在导入密码`
-    - The comment says it is the title of a loading dialog showing progress; the parallel bookmarks string uses 正在导入书签.
-- `mozac_feature_prompts_collapse_credit_cards_content_description_2` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-zh-rCN/strings.xml` — "Collapse saved cards" is rendered as "信用卡" (credit cards) instead of the generic "卡"/"银行卡".
-    - Current: `折叠保存的信用卡`
-    - Source: `Collapse saved cards`
-    - Suggest: `折叠已保存的卡片`
-    - The source deliberately says "cards", not "credit cards"; narrowing it to 信用卡 changes the meaning.
-- `mozac_feature_prompts_save_credit_card_prompt_body_2` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-zh-rCN/strings.xml` — Translation adds "保存" (save) that is not in the source, which says the app encrypts the card number.
-    - Current: `%s 会将卡号加密保存。`
-    - Source: `%s encrypts your card number. Your security code won’t be saved.`
-    - Suggest: `%s 会加密您的卡号。`
-    - Source: "%s encrypts your card number." — no mention of saving in that clause; the next sentence contrasts that the security code won't be saved.
-- `mozac_feature_prompts_identity_credentials_choose_provider` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-zh-rCN/strings.xml` — "login provider" is rendered as "登录方式" (login method) instead of a provider.
-    - Current: `选择一个登录方式`
-    - Source: `Choose a login provider`
-    - Suggest: `选择登录提供商`
-    - The source refers to an identity/login provider (a service), not a login method; the related string uses %1$s as the provider name.
-- `mozac_feature_prompts_identity_credentials_privacy_policy_title` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-zh-rCN/strings.xml` — "as a login provider" is dropped from the translation.
-    - Current: `使用 %1$s 登录`
-    - Source: `Use %1$s as a login provider`
-    - Suggest: `使用 %1$s 作为登录提供商`
-    - Source "Use %1$s as a login provider" states the provider role; the translation only says "log in with %1$s", losing the meaning.
-- `mozac_feature_sitepermissions_do_not_ask_again_on_this_site4` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-zh-rCN/strings.xml` — New shorter source "Remember for this site" is translated with the older, longer wording including "decision".
-    - Current: `记住对此网站的决定`
-    - Source: `Remember for this site`
-    - Suggest: `记住此网站的选择`
-    - The source was deliberately shortened from "Remember decision for this site" (v2 string) to "Remember for this site"; the target duplicates the v2 translation verbatim.
-- `mozac_feature_sitepermissions_notification_permission_rationale_dialog_message` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-zh-rCN/strings.xml` — Translation says the website must be allowed to show notifications in the app, while the source says the user must allow notifications for the app itself.
-    - Current: `您需要允许其在 %1$s 中显示通知`
-    - Source: `You’ll need to allow notifications in %1$s to receive them from this website.`
-    - Suggest: `您需要允许 %1$s 发送通知`
-    - Source: "You'll need to allow notifications in %1$s" — the Android app-level notification permission for the app (%1$s is the app name), not a per-site permission.
-- `mozac_feature_summarize_summary_model` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-zh-rCN/strings.xml` — "由 %1$s 摘要" is ungrammatical; "Summary by X" means the summary was generated by model X.
-    - Current: `由 %1$s 摘要`
-    - Source: `Summary by %1$s`
-    - Suggest: `由 %1$s 生成的摘要`
-    - In Chinese 摘要 as a verb after 由…is not idiomatic; the source is a noun phrase attributing the summary to the model.
-- `mozac_summarize_fxa_sign_in_message` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-zh-rCN/strings.xml` — "create one to get started" is rendered as "注册账户开始使用" but the sentence structure loses the meaning that the user can create a new account; more importantly "Use your Mozilla account to continue" is fine while the second clause omits "新".
-    - Current: `或注册账户开始使用`
-    - Source: `Use your Mozilla account to continue or create one to get started.`
-    - Suggest: `或注册新账户开始使用`
-    - The source offers creating a new account as the alternative to using an existing one; without "新" the contrast between the two options is lost.
-- `mozac_summarize_error_dissmiss` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-zh-rCN/strings.xml` — "Dismiss" is translated as "知道了" (Got it), which is a different action label.
-    - Current: `知道了`
-    - Source: `Dismiss`
-    - Suggest: `关闭`
-    - The source is a dismiss button; "知道了" means "Got it/OK", an acknowledgement rather than dismissal.
-- `mozac_summarize_shake_consent_off_device_title` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-zh-rCN/strings.xml` — "Summarize with a shake?" is rendered as "启用“摇动生成摘要”？" (Enable "Shake to summarize"?), adding "enable" not present in the source.
-    - Current: `启用“摇动生成摘要”？`
-    - Source: `Summarize with a shake?`
-    - Suggest: `摇一摇即可生成摘要？`
-    - The source asks whether the user wants to summarize with a shake; the translation converts it into a feature-enablement prompt wording that differs from the source.
-- `mozac_support_base_permissions_needed_negative_button` — `mozilla-mobile/android-components/components/support/base/src/main/res/values-zh-rCN/strings.xml` — "Dismiss" is translated as "隐藏" (hide) instead of dismissing/closing the dialog.
-    - Current: `隐藏`
-    - Source: `Dismiss`
-    - Suggest: `忽略`
-    - The developer comment says this button dismisses the dialog; 隐藏 means "hide", which is a different action.
-- `mozac_lib_crash_notification_action_report` — `mozilla-mobile/android-components/components/lib/crash/src/main/res/values-zh-rCN/strings.xml` — "Report" (send the crash report) is rendered as "反馈" (feedback) rather than reporting/sending the report.
-    - Current: `反馈`
-    - Source: `Report`
-    - Suggest: `报告`
-    - Per the developer comment the button sends the crash report to Mozilla; other strings in the same file use 崩溃报告 for "crash report", so 报告/发送报告 is the consistent term.
-- `mozac_ui_tabcounter_duplicate_tab` — `mozilla-mobile/android-components/components/ui/tabcounter/src/main/res/values-zh-rCN/strings.xml` — "Duplicate tab" is translated as "克隆标签页" (clone) instead of the standard 复制标签页.
-    - Current: `克隆标签页`
-    - Source: `Duplicate tab`
-    - Suggest: `复制标签页`
-    - The established zh-CN term for the Duplicate tab menu option is 复制标签页; 克隆 is inconsistent terminology.
-- `automatic_translation_error_warning_text` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "Couldn't load languages" is rendered as "无法加载语言包" (language packs), changing the meaning.
-    - Current: `无法加载语言包，请稍后再试。`
-    - Source: `Couldn’t load languages. Please check back later.`
-    - Suggest: `无法加载语言列表，请稍后再试。`
-    - The source refers to loading the list of languages in translation settings, not downloadable language packs.
-- `awesomebar_clipboard_title` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "Fill link from clipboard" translated as "打开剪贴板中的链接" (open the link), but the action fills the link into the search bar.
-    - Current: `打开剪贴板中的链接`
-    - Source: `Fill link from clipboard`
-    - Suggest: `填入剪贴板中的链接`
-    - Source says "Fill link from clipboard"; filling the URL bar differs from opening the link.
-- `automatic_translation_option_never_translate_summary_preference` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "will never offer to translate" translated as "将永不翻译", dropping "offer to".
-    - Current: `%1$s 将永不翻译使用此语言的网站。`
-    - Source: `%1$s will never offer to translate sites in this language.`
-    - Suggest: `%1$s 将永不询问是否翻译使用此语言的网站。`
-    - Source states the app will never offer (prompt) to translate, not that it will never translate; the parallel "offer to translate" string is rendered 询问是否翻译.
-- `app_name_private_4` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — Halfwidth parentheses used instead of the locale's fullwidth punctuation convention.
-    - Current: `%s (隐私模式)`
-    - Source: `%s (Private)`
-    - Suggest: `%s（隐私模式）`
-    - zh-CN convention is fullwidth punctuation, as used in e.g. 询问是否翻译（默认）.
-- `bookmark_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "Navigate back" (go back in the bookmarks navigation bar) is rendered as "browse the previous page".
-    - Current: `浏览上一页`
-    - Source: `Navigate back`
-    - Suggest: `返回`
-    - The developer comment says this is the content description for the bookmark navigation bar back button, i.e. navigating back to the previous bookmarks screen, not browsing a previous web page.
-- `browser_custom_tab_menu_handlebar_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "sheet" (bottom sheet) is mistranslated as "表单" (form).
-    - Current: `关闭定制标签页菜单表单`
-    - Source: `Close custom tab menu sheet`
-    - Suggest: `关闭自定义标签页菜单面板`
-    - The developer comment says this is a bottom sheet handlebar; "表单" means "form", not a bottom sheet panel (面板/底部弹出面板).
-- `browser_menu_read` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "Reader view" rendered as 阅读模式 while browser_menu_customize_reader_view_2 uses 阅读器视图 on the same menu.
-    - Current: `阅读模式`
-    - Source: `Reader view`
-    - Suggest: `阅读器视图`
-    - The same source term "Reader View" is translated inconsistently within the same browser menu surface (see "定制阅读器视图").
-- `browser_menu_remove_from_shortcuts` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "Remove from shortcuts" is rendered as "移除快捷方式" (remove the shortcut) instead of removing the item from the shortcuts list.
-    - Current: `移除快捷方式`
-    - Source: `Remove from shortcuts`
-    - Suggest: `从快捷方式中移除`
-    - The source means removing the current site from the shortcuts section on the home page; the current wording reads as deleting a shortcut object and loses the "from shortcuts" relation.
-- `change_file_extension_title` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — Halfwidth question mark used instead of the fullwidth question mark required by zh-CN punctuation convention.
-    - Current: `将文件类型更改为 %s?`
-    - Source: `Change file type to %s?`
-    - Suggest: `将文件类型更改为 %s？`
-    - The zh-CN convention is fullwidth punctuation; other dialog titles in this batch use “？” (e.g. 关闭标签页并删除群组？).
-- `close_tab_and_delete_group_confirmation_dialog_body` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — Tab "group" is rendered as 群组 (a social group), the wrong term for a tab group.
-    - Current: `将永久删除此群组。`
-    - Source: `This deletes the group permanently.`
-    - Suggest: `将永久删除此标签页分组。`
-    - Source refers to a tab group; 群组 in Firefox zh-CN means a group of people/chat group, while tab groups are 分组.
-- `close_tab_and_delete_group_confirmation_dialog_confirm` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — Tab "group" is rendered as 群组 instead of the tab-group term 分组.
-    - Current: `删除群组`
-    - Source: `Delete group`
-    - Suggest: `删除分组`
-    - The dialog concerns a tab group; 群组 is the term for a group of people, not a tab group.
-- `close_tab_and_delete_group_confirmation_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — Tab "group" is rendered as 群组 instead of the tab-group term 分组.
-    - Current: `关闭标签页并删除群组？`
-    - Source: `Close tab and delete group?`
-    - Suggest: `关闭标签页并删除分组？`
-    - The dialog concerns deleting a tab group; 群组 is the wrong term for tab groups in Firefox zh-CN.
-- `close_tabs_manually` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "Never" is translated as 手动 ("manually") instead of "从不".
-    - Current: `手动`
-    - Source: `Never`
-    - Suggest: `从不`
-    - The source option label is "Never"; the separate summary string already conveys "Close manually".
-- `content_description_settings_search_navigate_back` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "Navigate Back" (return to Settings screen) is rendered as "浏览上一页" (browse to previous page).
-    - Current: `浏览上一页`
-    - Source: `Navigate Back`
-    - Suggest: `返回`
-    - The developer comment says the button navigates back to the Settings page from the Settings Search screen; "浏览上一页" describes browsing a previous web page, not returning to the previous screen.
-- `create_tab_group_form_default_name` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — Default tab group name adds quotation marks around the number placeholder that are not in the source.
-    - Current: `群组“%d”`
-    - Source: `Group %d`
-    - Suggest: `群组 %d`
-    - Source is "Group %d", a plain default name (compare create_collection_default_name "收藏集 %d"); the added curly quotes are spurious and inconsistent.
-- `credit_cards_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "Navigate back" (back button content description) is rendered as "浏览上一页" (browse the previous page), which describes page navigation rather than going back.
-    - Current: `浏览上一页`
-    - Source: `Navigate back`
-    - Suggest: `返回`
-    - The comment says this is the content description for the top bar back button in the credit card feature; it should say "go back", not "browse the previous page".
-- `customize_toggle_contile` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "Sponsored shortcuts" is translated as "赞助商网站" (sponsor websites), losing the "shortcuts" concept.
-    - Current: `赞助商网站`
-    - Source: `Sponsored shortcuts`
-    - Suggest: `赞助商快捷方式`
-    - The source refers to sponsored shortcuts on the home screen, not sponsor websites.
-- `debug_drawer_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "Navigate back" (go back within the debug drawer) is rendered as "浏览上一页" (browse the previous page), which describes page navigation rather than returning in the drawer.
-    - Current: `浏览上一页`
-    - Source: `Navigate back`
-    - Suggest: `返回`
-    - The developer comment says this content description is for navigating back within the debug drawer, not browsing a previous web page.
-- `debug_drawer_addresses_debug_locales_header` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "Debug locales to enable" is translated as "选择要启用的调试区域设置", adding "选择" (choose) which is not in the source header.
-    - Current: `选择要启用的调试区域设置`
-    - Source: `Debug locales to enable`
-    - Suggest: `要启用的调试区域设置`
-    - The source is a section header listing debug locales; it contains no verb "select".
-- `default_locale_text` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — Translation adds a spurious "(ISO 3166/639)" not present in the source.
-    - Current: `依照设备语言显示 (ISO 3166/639)`
-    - Source: `Follow device language`
-    - Suggest: `跟随设备语言`
-    - Source is simply "Follow device language"; the standards reference is invented content shown to users.
-- _…and 99 more._
-
-### ✅ Fixed since the last run (1)
+### 🆕 New findings (1)
 
 - `downloads_delete_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — `downloads_delete_dialog_title` has placeholders %d where the source has none
     - Current: `{$quantity ->} [other] 删除 %d 个文件？`
     - Source: `{$quantity ->} [one] Delete file? [other] Delete %d files?`
     - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+
+### ✅ Fixed since the last run (0)
+
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -395,18 +95,21 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (159)
+## 3. Open findings (160)
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 1 |
 | 2 | Wrong content (says something other than the English) | 106 |
 | 3 | Degraded language (grammar, spelling, terminology) | 42 |
 | 4 | Cosmetic (typography, spacing) | 11 |
 
 ### A. Functional, markup, variables & plurals
 
-_Nothing in this category._
+- `downloads_delete_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — `downloads_delete_dialog_title` has placeholders %d where the source has none
+    - Current: `{$quantity ->} [other] 删除 %d 个文件？`
+    - Source: `{$quantity ->} [one] Delete file? [other] Delete %d files?`
+    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -971,6 +674,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Resolved to date (1)
+### Resolved to date (0)
 
-- `downloads_delete_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — fixed 2026-08-21
+_Nothing resolved yet._

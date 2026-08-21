@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `7134a6c77a67` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `7134a6c77a67` |
-| **Previous run** | 2026-08-21 @ `0d02c6c9f0f6` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
+| **Previous run** | 2026-08-21 @ `7134a6c77a67` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 3 of 2,911 |
+| **Strings reviewed this run** | 0 of 2,911 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,21 +18,9 @@ Also for de: [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `mozac_feature_sitepermissions_storage_access_message` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-de/strings.xml` — `mozac_feature_sitepermissions_storage_access_message` has placeholders %1$s where the source has %s
-    - Current: `Möglicherweise möchten Sie den Zugriff blockieren, wenn nicht klar ist, warum %1$s diese Daten benötigt.`
-    - Source: `You may want to block access if it’s not clear why %s needs this data.`
-    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
-- `mozac_feature_findindpage_dismiss` — `mozilla-mobile/android-components/components/feature/findinpage/src/main/res/values-de/strings.xml` — `mozac_feature_findindpage_dismiss` uses straight double quotes
-    - Current: `"Seite durchsuchen" deaktivieren`
-    - Source: `Dismiss find in page`
-    - Suggest: `„Seite durchsuchen“ schließen`
-    - The locale's quote convention is `german-double` (25 occurrences).
-- `accessibility_dismiss_find_in_page` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — `accessibility_dismiss_find_in_page` uses straight double quotes
-    - Current: `"Seite durchsuchen" deaktivieren`
-    - Source: `Dismiss find in page`
-    - The locale's quote convention is `german-double` (25 occurrences).
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

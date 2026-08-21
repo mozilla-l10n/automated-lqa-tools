@@ -3,13 +3,14 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f2e9b7fce093` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
-| **Previous run** | 2026-08-21 @ `a9b9a116b725` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `5cbe42651962` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
+| **Previous run** | 2026-08-21 @ `f2e9b7fce093` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 4 of 18,001 |
+| **Strings reviewed this run** | 0 of 18,001 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
+
 
 Also for tr: [android](android.md)
 
@@ -45,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 360 |
 | Strings | 18,001 |
-| Missing strings | 172 |
+| Missing strings | 179 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -64,9 +65,9 @@ _Nothing retired._
 
 ### Completeness
 
-**172 strings** are not translated yet, concentrated in:
+**179 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 47
+- `browser/browser/newtab/newtab.ftl` — 52
 - `browser/browser/ipProtection.ftl` — 14
 - `toolkit/toolkit/neterror/netError.ftl` — 12
 - `toolkit/toolkit/about/url-classifier.ftl` — 10

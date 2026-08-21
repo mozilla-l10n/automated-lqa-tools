@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `7134a6c77a67` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `7134a6c77a67` |
-| **Previous run** | 2026-08-20 @ `afd16223d876` |
-| **Mode** | baseline |
-| **Strings reviewed this run** | 2,908 of 2,908 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
+| **Previous run** | 2026-08-21 @ `7134a6c77a67` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 0 of 2,908 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,316 +18,16 @@ Also for pl: [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (93)
-
-- `mozac_browser_errorpages_net_reset_title` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-pl/strings.xml` — "The connection was reset" is rendered identically to the "connection was interrupted" title, losing the distinction between the two error pages.
-    - Current: `Przerwane połączenie`
-    - Source: `The connection was reset`
-    - Suggest: `Połączenie zostało zresetowane`
-    - The source says the connection was reset, not interrupted; the same Polish text is already used for mozac_browser_errorpages_net_interrupt_title, making two distinct errors indistinguishable.
-- `mozac_browser_errorpages_net_timeout_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-pl/strings.xml` — The third bullet mistranslates the firewall/proxy item, asking whether the program is allowed to connect instead of stating that incorrect settings can interfere with browsing.
-    - Current: `Jeśli to urządzenie jest chronione przez zaporę sieciową lub serwer proxy, sprawdź, czy ten program jest uprawniony do łączenia się z Internetem.`
-    - Source: `{ <p> }The requested site did not respond to a connection request and the browser has stopped waiting for a reply.{ </p> } { <ul> } { <li> }Could the server be experiencing high demand or a temporary outage? Try again l…`
-    - Suggest: `Czy to urządzenie lub sieć są chronione przez zaporę sieciową lub serwer proxy? Nieprawidłowe ustawienia mogą zakłócać przeglądanie sieci.`
-    - The source states that incorrect firewall/proxy settings can interfere with web browsing; the translation instead tells the user to check whether the program is permitted to connect, which is different content.
-- `mozac_browser_errorpages_unknown_host_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-pl/strings.xml` — "host server" rendered as "adres serwera", duplicating "adres" and losing the meaning of host.
-    - Current: `Przeglądarka nie mogła odnaleźć adresu serwera dla podanego adresu.`
-    - Source: `{ <p> }The browser could not find the host server for the provided address.{ </p> } { <ul> } { <li> }Check the address for typing errors such as { <strong> }ww{ </strong> }.example.com instead of { <strong> }www{ </stro…`
-    - Suggest: `Przeglądarka nie mogła odnaleźć serwera dla podanego adresu.`
-    - Source says the browser could not find the host server for the provided address; the Polish says it could not find the server's address for the provided address, which is redundant and inaccurate.
-- `mozac_browser_errorpages_port_blocked_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-pl/strings.xml` — Source says the port is normally used for purposes other than Web browsing; the Polish says it is normally not used for browsing, altering the meaning.
-    - Current: `który zazwyczaj { <em> }nie jest{ </em> } wykorzystywany do przeglądania witryn WWW`
-    - Source: `{ <p> }The requested address specified a port (e.g., { <q> }mozilla.org:80{ </q> } for port 80 on mozilla.org) normally used for purposes { <em> }other{ </em> } than Web browsing. The browser has canceled the request fo…`
-    - Suggest: `który zazwyczaj jest wykorzystywany { <em> }do innych celów{ </em> } niż przeglądanie witryn WWW`
-    - The emphasis in the source is on "other" purposes, i.e. the port serves a different function, not merely that it is unused for browsing.
-- `mozac_feature_addons_extension_failed_to_install_network_error` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-pl/strings.xml` — Source says the extension could not be downloaded, but the translation says it could not be installed.
-    - Current: `Nie udało się zainstalować tego rozszerzenia z powodu błędu połączenia.`
-    - Source: `This extension could not be downloaded because of a connection failure.`
-    - Suggest: `Nie udało się pobrać tego rozszerzenia z powodu błędu połączenia.`
-    - en-US: "This extension could not be downloaded because of a connection failure." — "downloaded" (pobrane), not "installed".
-- `mozac_feature_addons_admin_install_only` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-pl/strings.xml` — "enterprise policies" is rendered as "zasad organizacji", duplicating "organizacja" and losing the term; also the relative clause implies the policies are unsupported rather than the mechanism.
-    - Current: `wyłącznie organizacja korzystająca z zasad organizacji, które nie są obsługiwane na tej platformie`
-    - Source: `%1$s could not be installed because it can only be installed by an organization using enterprise policies, which isn‘t supported on this platform.`
-    - Suggest: `wyłącznie organizacja korzystająca z zasad firmowych, które nie są obsługiwane na tej platformie`
-    - The source term is "enterprise policies"; repeating "organizacja" twice is a terminology error in Polish Mozilla builds, where "zasady firmowe" is used.
-- `mozac_feature_addons_addons_manager` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-pl/strings.xml` — Noun phrase "Add-ons Manager" translated as an imperative verb phrase "Zarządzaj dodatkami".
-    - Current: `Zarządzaj dodatkami`
-    - Source: `Add-ons Manager`
-    - Suggest: `Menedżer dodatków`
-    - The developer comment identifies it as a label for the add-ons manager, a noun label, not an action.
-- `mozac_feature_addons_optional_permissions_with_data_collection_dialog_title` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-pl/strings.xml` — "additional settings" is rendered as "nowe ustawienia" (new settings) instead of "dodatkowe ustawienia".
-    - Current: `prosi o nowe ustawienia`
-    - Source: `%1$s requests additional settings`
-    - Suggest: `prosi o dodatkowe ustawienia`
-    - The source says "additional settings"; the parallel string uses "dodatkowe" for "additional", so "nowe" (new) changes the meaning and is inconsistent.
-- `mozac_feature_addons_permissions_data_collection_optional_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-pl/strings.xml` — "The developer says the extension wants to collect" is mistranslated as the extension "asking for" collection rather than wanting to collect.
-    - Current: `Autorzy rozszerzenia twierdzą, że prosi ono o zbieranie: %1$s`
-    - Source: `The developer says the extension wants to collect: %1$s`
-    - Suggest: `Autorzy rozszerzenia twierdzą, że chce ono zbierać: %1$s`
-    - The source states the extension wants to collect the listed data; "prosi o zbieranie" (asks for collection) alters the statement.
-- `mozac_feature_addons_permissions_top_sites_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-pl/strings.xml` — "topSites" permission description translated as access to browsing history instead of top sites.
-    - Current: `Dostęp do historii przeglądania`
-    - Source: `Access browsing history`
-    - Suggest: `Dostęp do najczęściej odwiedzanych stron`
-    - Source is "Access browsing history"… actually the source says browsing history; mirrors source.
-- `mozac_feature_downloads_cancel_active_downloads_warning_content_title` — `mozilla-mobile/android-components/components/feature/downloads/src/main/res/values-pl/strings.xml` — The word "private" is dropped from the dialog title about cancelling private downloads.
-    - Current: `Czy anulować pobieranie plików?`
-    - Source: `Cancel private downloads?`
-    - Suggest: `Czy anulować prywatne pobieranie?`
-    - Source is "Cancel private downloads?"; the Polish omits "private", losing the distinction that only private-mode downloads are affected.
-- `mozac_feature_prompt_repost_message` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-pl/strings.xml` — Ungrammatical clause: infinitives "wysłać"/"opublikować" do not agree with the sentence structure and the meaning is garbled.
-    - Current: `może spowodować powtórzenie ostatnich działań, na przykład jeszcze raz wysłać płatność lub opublikować komentarz dwa razy`
-    - Source: `Refreshing this page could duplicate recent actions, such as sending a payment or posting a comment twice.`
-    - Suggest: `może spowodować powtórzenie ostatnich działań, na przykład ponowne wysłanie płatności lub opublikowanie komentarza dwa razy`
-    - The source says refreshing could duplicate recent actions, such as sending a payment or posting a comment twice; the Polish mixes a noun phrase with bare infinitives, producing a broken sentence.
-- `mozac_feature_prompts_content_description_input_label` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-pl/strings.xml` — "Label for entering a text input field" is rendered as "label for navigating to the field", changing the meaning.
-    - Current: `Etykieta przechodzenia do pola wprowadzania tekstu`
-    - Source: `Label for entering a text input field`
-    - Suggest: `Etykieta pola wprowadzania tekstu`
-    - The source is a label for a text input field (where the user types text), not a label about "going to"/navigating to it.
-- `mozac_feature_prompts_identity_credentials_privacy_policy_title` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-pl/strings.xml` — Wrong case after "jako" and added word "konta" not in source.
-    - Current: `Używaj konta %1$s jako dostawcę logowania`
-    - Source: `Use %1$s as a login provider`
-    - Suggest: `Używaj %1$s jako dostawcy logowania`
-    - Source is "Use %1$s as a login provider" (the provider itself, not an account); Polish "jako" here requires the nominative/genitive agreement "jako dostawcy logowania".
-- `mozac_feature_prompts_mar` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-pl/strings.xml` — Polish abbreviation for March is "mar" instead of the standard "mar."/"marz" — inconsistent with other months.
-    - Current: `mar`
-    - Source: `Mar`
-    - Suggest: `mar.`
-    - The standard Polish short form for marzec is "mar."; "mar" is not a recognized abbreviation.
-- `mozac_feature_relay_email_masks_cfr` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-pl/strings.xml` — "on mobile" is rendered as "na telefonie" (on the phone), narrowing the meaning to phones only.
-    - Current: `są teraz dostępne na telefonie`
-    - Source: `New! %s email masks are now available on mobile.`
-    - Suggest: `są teraz dostępne na urządzeniach mobilnych`
-    - The source says the masks are available on mobile (mobile devices generally, including tablets), not specifically "on the phone".
-- `mozac_feature_prompts_suggest_strong_password_description_3` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-pl/strings.xml` — "for future use" is mistranslated as "aby zawsze mieć do niego dostęp" (so you always have access to it).
-    - Current: `aby zawsze mieć do niego dostęp`
-    - Source: `Protect your account by using a strong, randomly generated password. It’ll be saved into your account for future use.`
-    - Suggest: `do użycia w przyszłości`
-    - The source states the password will be saved into the account for future use; the Polish invents a claim about always having access.
-- `mozac_feature_pwa_copy_success` — `mozilla-mobile/android-components/components/feature/pwa/src/main/res/values-pl/strings.xml` — The final period of the source sentence is missing in the translation.
-    - Current: `Skopiowano adres`
-    - Source: `URL copied.`
-    - Suggest: `Skopiowano adres.`
-    - Source "URL copied." ends with a period; the toast text drops it.
-- `mozac_feature_sitepermissions_do_not_ask_again_on_this_site2` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-pl/strings.xml` — "Remember decision for this site" is rendered as "Nie pytaj ponownie na tej witrynie" ("Don't ask again on this site").
-    - Current: `Nie pytaj ponownie na tej witrynie`
-    - Source: `Remember decision for this site`
-    - Suggest: `Zapamiętaj decyzję dla tej witryny`
-    - The source says to remember the decision, not to stop asking; the parallel string ...site4 correctly uses "Zapamiętaj dla tej witryny".
-- `mozac_summarize_settings_summarize_pages_cloud` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-pl/strings.xml` — "stay private" was rendered as "są zawsze prywatne" (are always private), adding a claim not in the source.
-    - Current: `Strony i ich streszczenia są zawsze prywatne i nigdy nie są nigdzie przechowywane.`
-    - Source: `Create page summaries with AI. Pages and summaries stay private and are never stored.`
-    - Suggest: `Strony i ich streszczenia pozostają prywatne i nigdy nie są przechowywane.`
-    - The source says pages and summaries stay private and are never stored; the Polish adds "zawsze" and "nigdzie", changing the strength of the privacy claim.
-- `mozac_lib_crash_dialog_checkbox` — `mozilla-mobile/android-components/components/lib/crash/src/main/res/values-pl/strings.xml` — Wrong case: "Zgłoś awarię organizacji %1$s" reads as reporting the crash of the organization instead of to the organization.
-    - Current: `Zgłoś awarię organizacji %1$s`
-    - Source: `Send crash report to %1$s`
-    - Suggest: `Zgłoś awarię organizacji %1$s (np. „Wyślij zgłoszenie awarii do organizacji %1$s”)`
-    - Source is "Send crash report to %1$s"; the genitive "organizacji %1$s" attaches to "awarię", losing the "to Mozilla" recipient meaning.
-- `mozac_lib_send_crash_report_in_progress` — `mozilla-mobile/android-components/components/lib/crash/src/main/res/values-pl/strings.xml` — "Zgłaszanie awarii organizacji %1$s" implies reporting the organization's crash rather than sending the report to the organization.
-    - Current: `Zgłaszanie awarii organizacji %1$s`
-    - Source: `Sending crash report to %1$s`
-    - Suggest: `Wysyłanie zgłoszenia awarii do organizacji %1$s`
-    - Source is "Sending crash report to %1$s"; the recipient (dative/do + genitive) is required, otherwise the genitive attaches to "awarii".
-- `add_to_homescreen_continue` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Continue to website" is translated as "Wróć do strony" (Go back to the website).
-    - Current: `Wróć do strony`
-    - Source: `Continue to website`
-    - Suggest: `Przejdź do strony`
-    - The source means to continue on to the website, not to go back to it.
-- `ai_controls_block_ai_description` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "or pop-ups about them" is rendered as "czy nawet informacji o nich", adding "nawet" and dropping the pop-up notion.
-    - Current: `czy nawet informacji o nich`
-    - Source: `Blocking means you won’t see new or current AI enhancements in %s, or pop-ups about them.`
-    - Suggest: `ani wyskakujących okien na ich temat`
-    - The source says the user won't see pop-ups about the AI enhancements; the Polish says "or even information about them", changing the meaning and omitting "pop-ups".
-- `ai_controls_block_dialog_body` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "or pop-ups about them" mistranslated as "czy nawet informacji o nich".
-    - Current: `czy nawet informacji o nich`
-    - Source: `You won’t see new or current AI enhancements in %1$s, or pop-ups about them. Afterwards, you can unblock anything you want to keep using.  Blocking also affects extensions that use AI provided by %1$s.`
-    - Suggest: `ani wyskakujących okien na ich temat`
-    - Source refers to pop-ups about the AI enhancements, not to "even information about them".
-- `ai_controls_block_ai_title` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — AI is rendered inconsistently as "SI" here but as "sztuczna inteligencja" in neighbouring strings on the same screen.
-    - Current: `Blokuj ulepszenia SI`
-    - Source: `Block AI enhancements`
-    - Suggest: `Blokuj ulepszenia sztucznej inteligencji`
-    - ai_controls_ai_powered_features and ai_controls_block_dialog_body use "sztuczna inteligencja" while these toggles use the abbreviation "SI", creating inconsistent terminology on the same settings surface.
-- `alternative_app_icon_option_minimal` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Minimal" is rendered as the non-existent word "Minimalis".
-    - Current: `Minimalis`
-    - Source: `Minimal`
-    - Suggest: `Minimalistyczna`
-    - The source "Minimal" describes a simplified icon style; "Minimalis" is not a Polish word and does not convey the meaning.
-- `alternative_app_icon_option_pixelated` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Pixelated" is rendered as the non-existent word "Pikselis".
-    - Current: `Pikselis`
-    - Source: `Pixelated`
-    - Suggest: `Pikselowa`
-    - The source describes a pixel-art icon; "Pikselis" is not a Polish word.
-- `alternative_app_icon_option_retro_2004` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Retro 2004" is rendered as the non-existent word "Retrolis 2004".
-    - Current: `Retrolis 2004`
-    - Source: `Retro 2004`
-    - Suggest: `Retro 2004`
-    - "Retro" is used in Polish as-is; "Retrolis" is not a Polish word and misrepresents the source.
-- `app_name_private_5` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — Translation adds parentheses not present in the source "Private %s".
-    - Current: `%s (tryb prywatny)`
-    - Source: `Private %s`
-    - Suggest: `%s — tryb prywatny`
-    - app_name_private_5 is a distinct variant without parentheses; rendering it identically to app_name_private_4 loses the intended distinction.
-- `application_search_hint` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Enter search terms" is translated merely as "Szukaj" (Search).
-    - Current: `Szukaj`
-    - Source: `Enter search terms`
-    - Suggest: `Wpisz wyszukiwane słowa`
-    - The source is an instruction to enter search terms, not the label "Search".
-- `bookmark_item_menu_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — Singular "Item Menu" rendered as plural "Menu elementów" instead of "Menu elementu".
-    - Current: `Menu elementów „%s”`
-    - Source: `Item Menu for %s`
-    - Suggest: `Menu elementu „%s”`
-    - The source refers to the overflow menu of a single bookmark or folder item (%s is one item's name), so the genitive singular "elementu" is required.
-- `bookmark_sort_menu_custom` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "custom order" (user-defined order) translated as "innej kolejności" (another/different order).
-    - Current: `Sortuj według innej kolejności`
-    - Source: `Sort by custom order`
-    - Suggest: `Sortuj według własnej kolejności`
-    - The developer comment says sorting is by user-defined sort order; "inna kolejność" means simply a different order, losing the meaning of a user-defined/custom order.
-- `browser_menu_powered_by2` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Powered by %1$s" is rendered as "Funkcja przeglądarki %1$s" ("A feature of browser %1$s"), which changes the meaning.
-    - Current: `Funkcja przeglądarki %1$s`
-    - Source: `Powered by %1$s`
-    - Suggest: `Obsługiwane przez %1$s`
-    - The source indicates the custom tab is powered by the app; the Polish says it is a feature of the browser, a different statement.
-- `clear_site_data_dialog_description` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "log you out of websites and clear shopping carts" (plural, general) is rendered as singular "ze strony" and "koszyka w sklepie", and "and" becomes "lub".
-    - Current: `może spowodować wylogowanie ze strony lub opróżnienie koszyka w sklepie`
-    - Source: `Removing cookies and site data for { <b> }%s{ </b> } might log you out of websites and clear shopping carts.`
-    - Suggest: `może spowodować wylogowanie z witryn i opróżnienie koszyków w sklepach`
-    - Source says removing data may log the user out of websites and clear shopping carts (plural, conjunction "and"); the Polish narrows it to one page/one cart and changes the conjunction to "or".
-- `debug_drawer_add_new_address` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "for selected locale" mistranslated as "do wybranych ustawień regionalnych" (adding an address to the settings).
-    - Current: `Dodaj nowy adres do wybranych ustawień regionalnych`
-    - Source: `Add new address for selected locale`
-    - Suggest: `Dodaj nowy adres dla wybranych ustawień regionalnych`
-    - The source means adding an address formatted for the selected locale, not adding an address into the locale settings; the preposition "do" reverses the relationship.
-- `debug_drawer_regin_tools_description` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "home and current region values" rendered as "wartości lokalne i regionalne", losing the home/current region distinction.
-    - Current: `Tymczasowo zastępuje wartości lokalne i regionalne do celów testowych.`
-    - Source: `Temporarily overrides the home and current region values for testing.`
-    - Suggest: `Tymczasowo zastępuje wartości regionu lokalnego i obecnego do celów testowych.`
-    - The source refers to two region values (home region and current region); the translation says "local and regional values", which is a different meaning and inconsistent with the neighbouring strings that use "region lokalny" and "obecny region".
-- `customize_toggle_privacy_report` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Privacy report" translated as "Informacja o prywatności" (privacy notice) instead of a report.
-    - Current: `Informacja o prywatności`
-    - Source: `Privacy report`
-    - Suggest: `Raport prywatności`
-    - A privacy report is a summary of blocked trackers, not a privacy notice/information statement; "Informacja o prywatności" corresponds to a different feature.
-- `delete_language_file_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — Placeholder %1$s is the language name, but the Polish text renders it as an unnamed "this language" plus size, losing the language name reference.
-    - Current: `Czy usunąć ten język (%1$s – %2$s)?`
-    - Source: `Delete %1$s (%2$s)?`
-    - Suggest: `Czy usunąć język %1$s (%2$s)?`
-    - Per the developer comment %1$s is the language name (e.g. "Spanish") and %2$s the file size; the translation says "delete this language (Spanish – 5 MB)", changing the sentence structure and implying the placeholders are of the same kind.
-- `default_browser_experiment_card_text` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "messages" is narrowed to "SMS-ów" (text messages only).
-    - Current: `wiadomości e-mail i SMS-ów`
-    - Source: `Set links from websites, emails, and messages to open automatically in Firefox.`
-    - Suggest: `wiadomości e-mail i wiadomości`
-    - The source says "emails, and messages" generically, not specifically SMS.
-- `download_language_file_dialog_checkbox_text` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Always download" is rendered as "Pobieraj także" ("Download also"), losing the meaning of the checkbox.
-    - Current: `Pobieraj także w trybie oszczędzania danych`
-    - Source: `Always download in data saving mode`
-    - Suggest: `Zawsze pobieraj w trybie oszczędzania danych`
-    - The source says the download should always happen in data saving mode; "także" means "also/too", which is a different statement.
-- `etp_cryptominers_description` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — Wrong case after "uniemożliwia ... " — verb should be in infinitive complement with genitive noun, current "używania" is ungrammatical.
-    - Current: `Uniemożliwia złośliwym skryptom używania Twojego urządzenia`
-    - Source: `Prevents malicious scripts gaining access to your device to mine digital currency.`
-    - Suggest: `Uniemożliwia złośliwym skryptom używanie Twojego urządzenia`
-    - "Uniemożliwia komuś coś" requires the accusative/nominative verbal noun "używanie", not genitive "używania".
-- `email_masks_max_free_tier_reached` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "You've used your 5 free email masks" is rendered as "5 masks have already been created", losing the meaning of having used up the free allowance.
-    - Current: `5 bezpłatnych masek dla adresu e-mail zostało już utworzonych`
-    - Source: `You’ve used your 5 free email masks, so we picked one for you to reuse.`
-    - Suggest: `Wszystkie 5 bezpłatnych masek dla adresu e-mail zostało już wykorzystanych`
-    - The source says the user has used up all their free masks; the translation says they were created, which does not convey the exhausted quota.
-- `felt_privacy_info_card_subtitle_link_text` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — Missing comma before the subordinate clause in "Kto może zobaczyć co robię?".
-    - Current: `Kto może zobaczyć co robię?`
-    - Source: `Who might be able to see my activity?`
-    - Suggest: `Kto może zobaczyć, co robię?`
-    - Polish punctuation requires a comma before the subordinate clause introduced by "co".
-- `history_search_group_site_1` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — Singular form "%d page" is rendered with a plural-style label identical to the plural string.
-    - Current: `Strony: %d`
-    - Source: `%d page`
-    - Suggest: `Strona: %d`
-    - The source distinguishes singular (%d page) from plural (%d pages); the Polish singular string uses the same plural wording as history_search_group_sites_1, losing the distinction.
-- `fxa_tabs_closed_notification_title` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "%1$s tabs closed" is rendered as "tabs of the %1$s browser closed", altering the meaning.
-    - Current: `Zamknięto karty przeglądarki %1$s: %2$d`
-    - Source: `%1$s tabs closed: %2$d`
-    - Suggest: `%1$s — zamknięto karty: %2$d`
-    - The developer comment says %1$s is the app name and the notification reports the number of closed tabs; "karty przeglądarki Firefox" implies the tabs belong to a specific browser rather than being an app-name prefix, but the meaning shift is minor.
-- `ip_protection_navigate_settings` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — The content description drops the action verb "Open", describing the target as a label rather than the control's action.
-    - Current: `Ustawienia VPN`
-    - Source: `Open VPN settings`
-    - Suggest: `Otwórz ustawienia VPN`
-    - Source is "Open VPN settings" and the developer comment says it is a content description for a chevron button that opens the settings screen; the Polish only says "VPN settings".
-- `ip_protection_mozilla_vpn_upsell_button` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Get Mozilla VPN" is translated as "Wypróbuj Mozilla VPN" (Try Mozilla VPN).
-    - Current: `Wypróbuj Mozilla VPN`
-    - Source: `Get Mozilla VPN`
-    - Suggest: `Pobierz Mozilla VPN`
-    - The button takes the user to get the standalone product; "Wypróbuj" means "Try", which is a different call to action and duplicates the wording used for "Try it now" elsewhere.
-- `nova_onboarding_sync_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — Idiom misspelled: "w mgnieniu okna" instead of "w mgnieniu oka".
-    - Current: `w mgnieniu okna`
-    - Source: `Grab bookmarks, passwords, and more on any device in a snap. Your personal data stays safe and secure with encryption.`
-    - Suggest: `w mgnieniu oka`
-    - The Polish idiom for "in a snap" is "w mgnieniu oka"; "okna" (of the window) is a typo producing nonsense.
-- `nova_onboarding_marketing_body_4` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "the platform you came from" mistranslated as "the platform Firefox was downloaded from".
-    - Current: `platformę, z której pobrano Firefoksa`
-    - Source: `You can help us reach more people by allowing Mozilla to inform the platform you came from that you use Firefox.`
-    - Suggest: `platformę, z której trafiono do Firefoksa`
-    - Per the developer comment, the platform is the external app, website, store or campaign that directed the user to Firefox, not necessarily where it was downloaded from.
-- `nova_onboarding_marketing_body_5` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "the platform you came from" mistranslated as "the platform Firefox was downloaded from".
-    - Current: `platformę, z której pobrano Firefoksa`
-    - Source: `Help us reach more people by allowing Mozilla to inform the platform you came from that you use Firefox.`
-    - Suggest: `platformę, z której trafiono do Firefoksa`
-    - Per the developer comment, the platform is the source that directed the user to Firefox, not the download source.
-- `nova_onboarding_marketing_body_6` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "the platform you came from" mistranslated as "the platform Firefox was downloaded from".
-    - Current: `platformę, z której pobrano Firefoksa`
-    - Source: `Help us reach more people by allowing Mozilla to inform the platform you came from that you use Firefox. %1$s`
-    - Suggest: `platformę, z której trafiono do Firefoksa`
-    - Per the developer comment, the platform is the source that directed the user to Firefox, not the download source.
-- `nova_onboarding_marketing_body_7` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "the platform you came from" mistranslated as "the platform Firefox was downloaded from".
-    - Current: `platformę, z której pobrano Firefoksa`
-    - Source: `You can help us reach more people by allowing Mozilla to inform the platform you came from that you use Firefox. %1$s`
-    - Suggest: `platformę, z której trafiono do Firefoksa`
-    - Per the developer comment, the platform is the source that directed the user to Firefox, not the download source.
-- `onboarding_redesign_sync_body` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "tabs" was translated as "historii" (history) instead of "kart" (tabs).
-    - Current: `Korzystaj z zakładek, historii i haseł na każdym urządzeniu.`
-    - Source: `Get bookmarks, tabs, and passwords on any device. All protected with encryption.`
-    - Suggest: `Korzystaj z zakładek, kart i haseł na każdym urządzeniu.`
-    - Source says "bookmarks, tabs, and passwords"; "historii" means history, which is a different item.
-- `onboarding_preferences_dialog_usage_data_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — Case agreement error: "sposobu" should be "sposobie" to match the locative series after "o".
-    - Current: `Informacje o Twoim urządzeniu, konfiguracji sprzętowej i sposobu korzystania z Firefoksa`
-    - Source: `Data about your device, hardware configuration, and how you use Firefox helps improve features, performance, and stability for everyone.`
-    - Suggest: `Informacje o Twoim urządzeniu, konfiguracji sprzętowej i sposobie korzystania z Firefoksa`
-    - The enumeration after the preposition "o" requires the locative case (urządzeniu, konfiguracji, sposobie), not the genitive "sposobu".
-- `preferences_enable_gecko_logs` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — The translation drops "Enable", rendering the preference as just "Gecko logs".
-    - Current: `Dzienniki Gecko`
-    - Source: `Enable Gecko logs`
-    - Suggest: `Włącz dzienniki Gecko`
-    - Source is "Enable Gecko logs"; the verb "Enable" is missing in the Polish string, changing the meaning of the preference.
-- `preferences_google_lens_availability_caption` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — The clarification "enabled above" and "while browsing" is dropped/altered.
-    - Current: `Dostępne tylko wtedy, gdy wyszukiwarka Google jest włączona i w danej chwili aktywna.`
-    - Source: `Available only when Google is enabled above and is your active search engine while browsing.`
-    - Suggest: `Dostępne tylko wtedy, gdy wyszukiwarka Google jest włączona powyżej i jest aktywną wyszukiwarką podczas przeglądania.`
-    - Source specifies Google must be enabled in the setting above and be the active search engine while browsing; the Polish omits both qualifiers.
-- `preferences_inactive_tabs_title` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — Missing comma closing the relative clause before the predicate.
-    - Current: `Karty, których nie odwiedzono od dwóch tygodni są przenoszone`
-    - Source: `Tabs you haven’t viewed for two weeks get moved to the inactive section.`
-    - Suggest: `Karty, których nie odwiedzono od dwóch tygodni, są przenoszone`
-    - Polish punctuation requires the subordinate clause to be closed with a comma before "są przenoszone".
-- `preferences_privacy_report` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Privacy report" is rendered as "Inne funkcje" ("Other features"), which is unrelated to the source.
-    - Current: `Inne funkcje`
-    - Source: `Privacy report`
-    - Suggest: `Raport prywatności`
-    - The source is the category header "Privacy report"; the Polish says "Other features", a completely different meaning.
-- `preferences_privacy_report_title` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Enable privacy report" is translated as "Informacja o prywatności" ("Privacy information"), dropping the enable action and mistranslating "report".
-    - Current: `Informacja o prywatności`
-    - Source: `Enable privacy report`
-    - Suggest: `Włączenie raportu prywatności`
-    - The developer comment says this is the title of a preference to enable/disable the privacy report feature; the target neither mentions enabling nor the report.
-- _…and 33 more._
-
-### ✅ Fixed since the last run (1)
+### 🆕 New findings (1)
 
 - `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-pl/strings.xml` — `firstrun_shortcut_text` has placeholders %1$s where the source has %1$s, %1$s
     - Current: `Szybko wracaj do ulubionych stron w %1$s. Po prostu wybierz „Dodaj do ekranu głównego” z menu.`
     - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
     - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+
+### ✅ Fixed since the last run (0)
+
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -394,18 +94,21 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (93)
+## 3. Open findings (94)
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 1 |
 | 2 | Wrong content (says something other than the English) | 67 |
 | 3 | Degraded language (grammar, spelling, terminology) | 25 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
 
-_Nothing in this category._
+- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-pl/strings.xml` — `firstrun_shortcut_text` has placeholders %1$s where the source has %1$s, %1$s
+    - Current: `Szybko wracaj do ulubionych stron w %1$s. Po prostu wybierz „Dodaj do ekranu głównego” z menu.`
+    - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
+    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -850,6 +553,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Resolved to date (1)
+### Resolved to date (0)
 
-- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-pl/strings.xml` — fixed 2026-08-21
+_Nothing resolved yet._

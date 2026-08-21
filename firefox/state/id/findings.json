@@ -272,6 +272,29 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "Silakan coba lagi nanti.",
+  "dismissed_because": "",
+  "fid": "1a8d5791e6c0",
+  "file": "browser/browser/backupSettings.ftl",
+  "first_seen": "2026-08-21",
+  "impact": 2,
+  "last_seen": "2026-08-21",
+  "locale": "id",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The en-US says \"Please try again\" — invite to retry immediately; \"nanti\" means \"later\", changing the instruction.",
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "fb6bb7dd",
+  "string_id": "backup-error-retry",
+  "suggest": "Silakan coba lagi.",
+  "summary": "The translation adds \"nanti\" (later), which is not in the English \"Please try again\".",
+  "suppressed_by": ""
+ },
+ {
   "category": "A",
   "check": "accesskey",
   "current": "B",

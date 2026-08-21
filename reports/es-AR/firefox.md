@@ -3,13 +3,14 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f2e9b7fce093` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
-| **Previous run** | 2026-08-21 @ `a9b9a116b725` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `5cbe42651962` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
+| **Previous run** | 2026-08-21 @ `f2e9b7fce093` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 18,129 |
+| **Strings reviewed this run** | 0 of 18,129 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
+
 
 Also for es-AR: [android](android.md)
 
@@ -45,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 360 |
 | Strings | 18,129 |
-| Missing strings | 44 |
+| Missing strings | 51 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -64,20 +65,20 @@ _Nothing retired._
 
 ### Completeness
 
-**44 strings** are not translated yet, concentrated in:
+**51 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 12
+- `browser/browser/newtab/newtab.ftl` — 17
 - `toolkit/toolkit/about/url-classifier.ftl` — 7
 - `browser/browser/appmenu.ftl` — 5
 - `browser/browser/preferences/preferences.ftl` — 5
 - `browser/browser/featureCallout.ftl` — 4
 - `browser/browser/menubar.ftl` — 2
+- `browser/browser/sharePanel.ftl` — 2
 - `browser/browser/aboutDialog.ftl` — 1
 - `browser/browser/aiWindowContent.ftl` — 1
 - `browser/browser/preferences/formAutofill.ftl` — 1
 - `browser/browser/newtab/asrouter.ftl` — 1
 - `dom/chrome/accessibility/AccessFu.properties` — 1
-- `toolkit/toolkit/about/aboutAddons.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -297,13 +298,7 @@ _Nothing reported._
     - The English source tail was left in the string, producing a duplicated bilingual sentence in the installer dialog.
 - `FileError` — `browser/installer/override.properties` — English conjunction “or” left untranslated mid-sentence.
     - Current: `en Reintentar para tratar nuevamente or en`
-    - Source: `Error opening file for writing: 
- 
- $0
- 
- Click Abort to stop the installation,
- Retry to try again, or
- Ignore to skip this file.`
+    - Source: `Error opening file for writing:   $0  Click Abort to stop the installation, Retry to try again, or Ignore to skip this file.`
     - Suggest: `en Reintentar para tratar nuevamente o en`
     - Source “Retry to try again, or Ignore…”; “or” should be Spanish “o”. The parallel string FileError_NoIgnore correctly uses “o”.
 - `document_properties_page_size_orientation_portrait` — `browser/pdfviewer/viewer.properties` — "portrait" translated as "normal"

@@ -3,13 +3,14 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f2e9b7fce093` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `5cbe42651962` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
 | **Previous run** | 2026-08-21 @ `f2e9b7fce093` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,141 |
+| **Strings reviewed this run** | 21 of 18,161 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
+
 
 Also for cs: [android](android.md)
 
@@ -17,9 +18,13 @@ Also for cs: [android](android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `newtab-stocks-search-no-results` — `browser/browser/newtab/newtab.ftl` — Wrong quotation marks: English opening curly quotes used instead of Czech quotes.
+    - Current: `Žádné výsledky pro “{ $query }”`
+    - Source: `No results for “{ $query }”`
+    - Suggest: `Žádné výsledky pro „{ $query }“`
+    - Czech uses German-style double quotes („ “); the string copies the English “ ” pair, and the opening mark is a closing-style quote in Czech typography.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,141 |
-| Missing strings | 32 |
+| Strings | 18,161 |
+| Missing strings | 19 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -64,19 +69,17 @@ _Nothing retired._
 
 ### Completeness
 
-**32 strings** are not translated yet, concentrated in:
+**19 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 9
-- `browser/browser/preferences/containers.ftl` — 7
-- `browser/browser/preferences/preferences.ftl` — 6
+- `browser/browser/newtab/newtab.ftl` — 7
 - `browser/browser/appmenu.ftl` — 2
 - `browser/browser/menubar.ftl` — 2
+- `browser/browser/sharePanel.ftl` — 2
+- `browser/browser/preferences/preferences.ftl` — 2
 - `browser/browser/aboutDialog.ftl` — 1
 - `browser/browser/preferences/formAutofill.ftl` — 1
 - `dom/chrome/accessibility/AccessFu.properties` — 1
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 1
 - `toolkit/toolkit/global/mozBoxBase.ftl` — 1
-- `toolkit/toolkit/global/processTypes.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -86,9 +89,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `german-double` 526, `curly-double` 230, `curly-single` 60, `straight-double` 46, `polish-double` 3 | _mixed_ |
+| quotes | `german-double` 526, `curly-double` 231, `curly-single` 60, `straight-double` 46, `polish-double` 3 | _mixed_ |
 | apostrophe | `typographic` 74, `straight` 11 | **typographic** |
-| ellipsis | `char` 450, `ascii` 4 | **char** |
+| ellipsis | `char` 451, `ascii` 4 | **char** |
 | dash | `em` 101, `en` 30 | **em** |
 | nbsp | `total` 13, `before-punctuation` 3, `space-before-punctuation` 7 | _mixed_ |
 
@@ -101,14 +104,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (257)
+## 3. Open findings (258)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 54 |
 | 2 | Wrong content (says something other than the English) | 120 |
 | 3 | Degraded language (grammar, spelling, terminology) | 56 |
-| 4 | Cosmetic (typography, spacing) | 22 |
+| 4 | Cosmetic (typography, spacing) | 23 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -995,6 +998,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `{ -brand-short-name } blocks trackers, freeing up bandwidth for smoother streaming.`
     - Suggest: `{ -brand-short-name } blokuje sledovací prvky, čímž uvolňuje šířku pásma pro plynulejší streamování.`
     - Every other message in the Privacy widget group renders "trackers" as "sledovací prvky"; "sledovací soubory" additionally misstates what a tracker is (it is not a file).
+- `newtab-stocks-search-no-results` — `browser/browser/newtab/newtab.ftl` — Wrong quotation marks: English opening curly quotes used instead of Czech quotes.
+    - Current: `Žádné výsledky pro “{ $query }”`
+    - Source: `No results for “{ $query }”`
+    - Suggest: `Žádné výsledky pro „{ $query }“`
+    - Czech uses German-style double quotes („ “); the string copies the English “ ” pair, and the opening mark is a closing-style quote in Czech typography.
 - `newtab-weather-sponsored` — `browser/browser/newtab/newtab.ftl` — Missing space after the separator character.
     - Current: `{ $provider } ∙Sponzorované`
     - Source: `{ $provider } ∙ Sponsored`
@@ -1023,7 +1031,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `netmonitor.context.perfTools` — `devtools/client/netmonitor.properties` — `netmonitor.context.perfTools` uses three dots where this locale uses …
     - Current: `Zahájit analýzu výkonu...`
     - Source: `Start Performance Analysis…`
-    - The tree uses … 450 times against 4 ASCII runs.
+    - The tree uses … 451 times against 4 ASCII runs.
 - `styleeditor-stylesheet-rule-count` — `devtools/client/styleeditor.ftl` — Doubled period in the [few] plural variant
     - Current: `{ $ruleCount } pravidla..`
     - Source: `{$ruleCount ->} [one] { $ruleCount } rule. [other] { $ruleCount } rules.`
@@ -1037,7 +1045,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `crashreporter-submit-waiting-hardware-tests` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-submit-waiting-hardware-tests` uses three dots where this locale uses …
     - Current: `Probíhá kontrola problémů s hardwarem a konfigurací...`
     - Source: `Checking for hardware and configuration problems…`
-    - The tree uses … 450 times against 4 ASCII runs.
+    - The tree uses … 451 times against 4 ASCII runs.
 - `about-networking-dns-https-rr-lookup-table-column` — `toolkit/toolkit/about/aboutNetworking.ftl` — Adjacent RR column headers use opposite word order
     - Current: `RR HTTP`
     - Source: `HTTP RRs`
@@ -1086,11 +1094,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `pdfjs-editor-alt-text-settings-downloading-model-button` — `toolkit/toolkit/pdfviewer/viewer.ftl` — `pdfjs-editor-alt-text-settings-downloading-model-button` uses three dots where this locale uses …
     - Current: `Probíhá stahování...`
     - Source: `Downloading…`
-    - The tree uses … 450 times against 4 ASCII runs.
+    - The tree uses … 451 times against 4 ASCII runs.
 - `pdfjs-free-text2` — `toolkit/toolkit/pdfviewer/viewer.ftl` — `pdfjs-free-text2` uses three dots where this locale uses …
     - Current: `Začněte psát...`
     - Source: `aria-label: Text Editor default-content: Start typing…`
-    - The tree uses … 450 times against 4 ASCII runs.
+    - The tree uses … 451 times against 4 ASCII runs.
 
 ---
 

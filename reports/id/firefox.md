@@ -3,13 +3,14 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f2e9b7fce093` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
-| **Previous run** | 2026-08-21 @ `a9b9a116b725` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `5cbe42651962` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
+| **Previous run** | 2026-08-21 @ `f2e9b7fce093` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 10 of 15,485 |
+| **Strings reviewed this run** | 3 of 15,488 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
+
 
 Also for id: [android](android.md)
 
@@ -17,9 +18,13 @@ Also for id: [android](android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `backup-error-retry` — `browser/browser/backupSettings.ftl` — The translation adds "nanti" (later), which is not in the English "Please try again".
+    - Current: `Silakan coba lagi nanti.`
+    - Source: `Something went wrong. Please try again.`
+    - Suggest: `Silakan coba lagi.`
+    - The en-US says "Please try again" — invite to retry immediately; "nanti" means "later", changing the instruction.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 354 |
-| Strings | 15,485 |
-| Missing strings | 2,688 |
+| Strings | 15,488 |
+| Missing strings | 2,692 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 6 |
 | Fluent / properties syntax errors | 0 |
@@ -64,10 +69,10 @@ _Nothing retired._
 
 ### Completeness
 
-**2,688 strings** are not translated yet, concentrated in:
+**2,692 strings** are not translated yet, concentrated in:
 
 - `browser/browser/preferences/preferences.ftl` — 425
-- `browser/browser/newtab/newtab.ftl` — 410
+- `browser/browser/newtab/newtab.ftl` — 415
 - `browser/browser/aiWindow.ftl` — 159
 - `browser/browser/ipProtection.ftl` — 146
 - `browser/browser/newtab/onboarding.ftl` — 98
@@ -111,12 +116,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (328)
+## 3. Open findings (329)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 84 |
-| 2 | Wrong content (says something other than the English) | 172 |
+| 2 | Wrong content (says something other than the English) | 173 |
 | 3 | Degraded language (grammar, spelling, terminology) | 54 |
 | 4 | Cosmetic (typography, spacing) | 17 |
 
@@ -406,6 +411,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `backup-error-retry` — `browser/browser/backupSettings.ftl` — The translation adds "nanti" (later), which is not in the English "Please try again".
+    - Current: `Silakan coba lagi nanti.`
+    - Source: `Something went wrong. Please try again.`
+    - Suggest: `Silakan coba lagi.`
+    - The en-US says "Please try again" — invite to retry immediately; "nanti" means "later", changing the instruction.
 - `contextual-manager-passwords-os-auth-dialog-caption` — `browser/browser/contextual-manager.ftl` — Brand term duplicated in OS auth dialog caption
     - Current: `{ -brand-full-name }{ -brand-full-name }`
     - Source: `{ -brand-full-name }`

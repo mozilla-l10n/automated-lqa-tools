@@ -1,8 +1,8 @@
 {
  "_meta": {
   "locale": "cs",
-  "prose_chunks": 18944,
-  "strings": 18141
+  "prose_chunks": 18970,
+  "strings": 18161
  },
  "apostrophe": {
   "straight": 11,
@@ -14,7 +14,7 @@
  },
  "ellipsis": {
   "ascii": 4,
-  "char": 450
+  "char": 451
  },
  "fullwidth": {
   "punctuation": 0
@@ -30,7 +30,7 @@
   "total": 13
  },
  "quotes": {
-  "curly-double": 230,
+  "curly-double": 231,
   "curly-single": 60,
   "german-double": 526,
   "polish-double": 3,

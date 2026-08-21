@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `7134a6c77a67` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `7134a6c77a67` |
-| **Previous run** | 2026-08-20 @ `afd16223d876` |
-| **Mode** | baseline |
-| **Strings reviewed this run** | 2,897 of 2,897 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
+| **Previous run** | 2026-08-21 @ `7134a6c77a67` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 0 of 2,897 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,311 +18,7 @@ Also for hu: [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (163)
-
-- `mozac_browser_errorpages_net_timeout_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hu/strings.xml` — "Is your device or network protected by a firewall or proxy?" is translated as "számítógépe" (your computer).
-    - Current: `Lehetséges, hogy tűzfal vagy proxy mögött van a számítógépe vagy a helyi hálózata?`
-    - Source: `{ <p> }The requested site did not respond to a connection request and the browser has stopped waiting for a reply.{ </p> } { <ul> } { <li> }Could the server be experiencing high demand or a temporary outage? Try again l…`
-    - Suggest: `Lehetséges, hogy tűzfal vagy proxy mögött van az eszköze vagy a hálózata?`
-    - The source refers to the device, not a computer; this is a mobile browser error page.
-- `mozac_browser_errorpages_net_interrupt_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hu/strings.xml` — Adverb missing suffix: "ideiglenes" should be "ideiglenesen".
-    - Current: `Az oldal ideiglenes nem érhető el`
-    - Source: `{ <p> }The browser connected successfully, but the connection was interrupted while transferring information. Please try again.{ </p> } { <ul> } { <li> }The site could be temporarily unavailable or too busy. Try again i…`
-    - Suggest: `Az oldal ideiglenesen nem érhető el`
-    - "temporarily unavailable" requires the adverb "ideiglenesen"; the adjective form is ungrammatical here.
-- `mozac_browser_errorpages_net_reset_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hu/strings.xml` — Adverb missing suffix: "ideiglenes" should be "ideiglenesen".
-    - Current: `Az oldal ideiglenes nem érhető el`
-    - Source: `{ <p> }The network link was interrupted while negotiating a connection. Please try again.{ </p> } { <ul> } { <li> }The site could be temporarily unavailable or too busy. Try again in a few moments.{ </li> } { <li> }If y…`
-    - Suggest: `Az oldal ideiglenesen nem érhető el`
-    - "temporarily unavailable" requires the adverb "ideiglenesen".
-- `mozac_browser_errorpages_file_access_denied_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hu/strings.xml` — Missing comma in "Lehet hogy".
-    - Current: `Lehet hogy törölve lett`
-    - Source: `{ <ul> } { <li> }It may have been removed, moved, or file permissions may be preventing access.{ </li> } { </ul> }`
-    - Suggest: `Lehet, hogy törölve lett`
-    - Hungarian requires a comma before the subordinating "hogy".
-- `mozac_browser_errorpages_connection_failure_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hu/strings.xml` — "your device’s" is narrowed to "mobileszköz" (mobile device) unlike the parallel strings using "eszköz".
-    - Current: `ellenőrizze a mobileszköz adat- vagy Wi-Fi kapcsolatát`
-    - Source: `{ <ul> } { <li> }The site could be temporarily unavailable or too busy. Try again in a few moments.{ </li> } { <li> }If you are unable to load any pages, check your device’s data or Wi-Fi connection.{ </li> } { </ul> }`
-    - Suggest: `ellenőrizze az eszköz adat- vagy Wi-Fi kapcsolatát`
-    - The source says "your device’s data or Wi-Fi connection"; the same sentence elsewhere in this file is translated "az eszköz", so "mobileszköz" adds content and is inconsistent.
-- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hu/strings.xml` — "device" is translated as "számítógép" (computer) in a mobile browser string.
-    - Current: `Csatlakoztatva van a számítógép a hálózathoz?`
-    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
-    - Suggest: `Csatlakoztatva van az eszköz a hálózathoz?`
-    - The source says "Is the device connected to an active network?"; "számítógép" means computer, which is wrong on Android and diverges from the source term "device".
-- `mozac_browser_errorpages_unknown_proxy_host_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hu/strings.xml` — "device" is rendered as "számítógép" (computer).
-    - Current: `Csatlakoztatva van a számítógép a hálózathoz?`
-    - Source: `{ <p> }The browser is configured to use a proxy server, but the proxy could not be found.{ </p> } { <ul> } { <li> }Is the browser’s proxy configuration correct? Check the settings and try again.{ </li> } { <li> }Is the…`
-    - Suggest: `Csatlakoztatva van az eszköz a hálózathoz?`
-    - Source: "Is the device connected to an active network?" — "eszköz" (device) is meant, not computer.
-- `mozac_browser_errorpages_redirect_loop_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hu/strings.xml` — "disabled or blocked cookies" is reduced to only "letiltotta", dropping one alternative.
-    - Current: `Letiltotta a webhely által megkövetelt sütiket?`
-    - Source: `{ <p> }The browser has stopped trying to retrieve the requested item. The site is redirecting the request in a way that will never complete.{ </p> } { <ul> } { <li> }Have you disabled or blocked cookies required by this…`
-    - Suggest: `Kikapcsolta vagy letiltotta a webhely által megkövetelt sütiket?`
-    - Source lists two actions ("disabled or blocked"); the translation conveys only one.
-- `mozac_browser_errorpages_port_blocked_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hu/strings.xml` — "The browser has canceled the request" is rendered as "a böngésző nem engedélyezi ezt a lekérést" (does not allow), changing the meaning/tense.
-    - Current: `A böngésző nem engedélyezi ezt a lekérést az Ön védelme és biztonsága érdekében.`
-    - Source: `{ <p> }The requested address specified a port (e.g., { <q> }mozilla.org:80{ </q> } for port 80 on mozilla.org) normally used for purposes { <em> }other{ </em> } than Web browsing. The browser has canceled the request fo…`
-    - Suggest: `A böngésző megszakította a kérést az Ön védelme és biztonsága érdekében.`
-    - Source states the browser has canceled the request (past, completed action), not that it disallows it.
-- `mozac_browser_errorpages_redirect_loop_title` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hu/strings.xml` — Active "isn’t redirecting properly" turned into passive "nem megfelelően van átirányítva" (is not redirected properly).
-    - Current: `Az oldal nem megfelelően van átirányítva`
-    - Source: `The page isn’t redirecting properly`
-    - Suggest: `Az oldal nem megfelelően irányít át`
-    - The source says the page is doing the redirecting incorrectly; the Hungarian passive says the page is being redirected, which reverses the actor.
-- `mozac_browser_errorpages_safe_browsing_malware_uri_title` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hu/strings.xml` — Missing linking element in the compound noun phrase.
-    - Current: `Kártékony szoftvert terjesztő webhely probléma`
-    - Source: `Malware site issue`
-    - Suggest: `Kártékony szoftvert terjesztő webhely miatti probléma`
-    - "webhely probléma" is ungrammatical juxtaposition in Hungarian; compare the correctly formed sibling string "Nem kívánt webhely miatti probléma".
-- `mozac_browser_errorpages_safe_harmful_uri_title` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hu/strings.xml` — Missing linking element in the compound noun phrase.
-    - Current: `Káros webhely probléma`
-    - Source: `Harmful site issue`
-    - Suggest: `Káros webhely miatti probléma`
-    - "webhely probléma" is an ungrammatical noun juxtaposition; the parallel string uses "webhely miatti probléma".
-- `mozac_browser_errorpages_safe_phishing_uri_title` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hu/strings.xml` — Missing linking element in the compound noun phrase.
-    - Current: `Félrevezető oldal probléma`
-    - Source: `Deceptive site issue`
-    - Suggest: `Félrevezető oldal miatti probléma`
-    - "oldal probléma" is an ungrammatical juxtaposition; the parallel string uses "... miatti probléma".
-- `mozac_browser_errorpages_unknown_socket_type_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hu/strings.xml` — Translation adds "a párbeszédet" (the dialogue), which is not in the source.
-    - Current: `a böngésző nem tudja folytatni a párbeszédet`
-    - Source: `{ <p> }The site responded to the network request in an unexpected way and the browser cannot continue.{ </p> }`
-    - Suggest: `a böngésző nem tudja folytatni`
-    - Source is simply "the browser cannot continue"; the added object changes the meaning.
-- `mozac_browser_errorpages_security_bad_hsts_cert_back` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hu/strings.xml` — "Go Back" is rendered inconsistently with the parallel bad_cert string.
-    - Current: `Ugrás vissza`
-    - Source: `Go Back`
-    - Suggest: `Visszalépés`
-    - The same source label "Go Back" is translated "Visszalépés" in mozac_browser_errorpages_security_bad_cert_back on the same error-page surface; the two buttons should match.
-- `mozac_browser_awesomebar_stock_suggestion_increase` — `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-hu/strings.xml` — Case mismatch: "%s százalékot nőtt" uses the accusative with an intransitive verb; should be "%s százalékkal nőtt".
-    - Current: `%s százalékot nőtt`
-    - Source: `Gained %s percent`
-    - Suggest: `%s százalékkal nőtt`
-    - "Gained %s percent" means the value rose by that percentage; Hungarian requires the instrumental-comitative case ("százalékkal") with "nőtt". The parallel string uses "csökkent", which likewise takes "-kal/-kel".
-- `mozac_browser_awesomebar_stock_suggestion_decrease` — `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-hu/strings.xml` — Case mismatch: "%s százalékot csökkent" should be "%s százalékkal csökkent".
-    - Current: `%s százalékot csökkent`
-    - Source: `Dropped %s percent`
-    - Suggest: `%s százalékkal csökkent`
-    - "Dropped %s percent" expresses a decrease by a percentage; the Hungarian verb "csökkent" requires "-kal/-kel" ("százalékkal"), not the accusative.
-- `mozac_feature_addons_permissions_data_collection_financialAndPaymentInfo_long_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hu/strings.xml` — The long description drops "and payment" from "financial and payment information".
-    - Current: `Pénzügyi információk megosztása a kiegészítő fejlesztőjével`
-    - Source: `Share financial and payment information with extension developer`
-    - Suggest: `Pénzügyi és fizetési információk megosztása a kiegészítő fejlesztőjével`
-    - Source is "Share financial and payment information with extension developer"; the short description correctly uses "pénzügyi és fizetési információk", so the long form is missing part of the meaning and inconsistent.
-- `mozac_feature_addons_permissions_data_collection_personalCommunications_long_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hu/strings.xml` — "personal communications" is rendered as "személyes információk" (personal information) instead of "személyes kommunikáció".
-    - Current: `Személyes információk megosztása a kiegészítő fejlesztőjével`
-    - Source: `Share personal communications with extension developer`
-    - Suggest: `Személyes kommunikáció megosztása a kiegészítő fejlesztőjével`
-    - Source says "Share personal communications"; the matching short description correctly uses "személyes kommunikáció", so this states a different data category.
-- `mozac_feature_addons_permissions_data_collection_technicalAndInteraction_long_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hu/strings.xml` — Singular "extension developer" is rendered as plural "kiegészítőfejlesztőkkel", inconsistent with all sibling strings.
-    - Current: `Műszaki és interakciós adatok megosztása a kiegészítőfejlesztőkkel`
-    - Source: `Share technical and interaction data with extension developer`
-    - Suggest: `Műszaki és interakciós adatok megosztása a kiegészítő fejlesztőjével`
-    - Source is "with extension developer" (singular); every other data collection long description uses "a kiegészítő fejlesztőjével".
-- `mozac_feature_addons_permissions_data_collection_browsingActivity_long_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hu/strings.xml` — "browsing activity" is translated as "Böngészési információk" (browsing information) instead of "böngészési tevékenység".
-    - Current: `Böngészési információk megosztása a kiegészítő fejlesztőjével`
-    - Source: `Share browsing activity with extension developer`
-    - Suggest: `Böngészési tevékenység megosztása a kiegészítő fejlesztőjével`
-    - Source says "Share browsing activity"; the corresponding short description uses "böngészési tevékenység", so the long form is inconsistent and imprecise.
-- `mozac_feature_addons_permissions_devtools_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hu/strings.xml` — "Extend developer tools" is mistranslated as "opening" the developer tools.
-    - Current: `Fejlesztőeszközök kinyitása, hogy elérje a nyitott lapokon lévő adatokat`
-    - Source: `Extend developer tools to access your data in open tabs`
-    - Suggest: `Fejlesztőeszközök kiterjesztése, hogy elérjék a nyitott lapokon lévő adatokat`
-    - The source means extending (adding to) the developer tools, not opening them; "kinyitása" says the extension opens the devtools.
-- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hu/strings.xml` — "Extend developer tools" is mistranslated as "opening" the developer tools.
-    - Current: `Fejlesztőeszközök kinyitása, hogy elérje a nyitott lapokon lévő adatokat.`
-    - Source: `Extend developer tools to access your data in open tabs.`
-    - Suggest: `Fejlesztőeszközök kiterjesztése, hogy elérjék a nyitott lapokon lévő adatokat.`
-    - The source means extending (adding to) the developer tools, not opening them.
-- `mozac_feature_addons_permissions_management_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hu/strings.xml` — "extension" is rendered as "Bővítmény" here but as "Kiegészítő" in the non-update variant of the same permission.
-    - Current: `Bővítményhasználat monitorozása és témák kezelése.`
-    - Source: `Monitor extension usage and manage themes.`
-    - Suggest: `Kiegészítőhasználat monitorozása és témák kezelése.`
-    - mozac_feature_addons_permissions_management_description uses "Kiegészítőhasználat" for the identical source text; the two must be consistent.
-- `mozac_feature_addons_permissions_dialog_technical_and_interaction_data` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hu/strings.xml` — Plural "kiegészítőfejlesztőkkel" does not match the singular "extension developer" used in the source and in the parallel websiteContent string.
-    - Current: `a kiegészítőfejlesztőkkel`
-    - Source: `Share technical and interaction data with extension developer`
-    - Suggest: `a kiegészítő fejlesztőjével`
-    - Source is singular "extension developer"; the sibling string mozac_feature_addons_permissions_data_collection_websiteContent_long_description uses "a kiegészítő fejlesztőjével".
-- `mozac_feature_addons_permissions_sites_in_domain_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hu/strings.xml` — "sites" is translated as "lapok" (tabs) instead of "oldalak" (sites).
-    - Current: `Az adatai elérése a(z) %1$s tartományban lévő lapokhoz`
-    - Source: `Access your data for sites in the %1$s domain`
-    - Suggest: `Az adatai elérése a(z) %1$s tartományban lévő oldalakhoz`
-    - The source refers to web sites in a domain; "lap" means browser tab in Firefox terminology, and other strings in this batch use "oldal"/"weboldal" for site.
-- `mozac_feature_addons_permissions_sites_in_domain_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hu/strings.xml` — "sites" is translated as "lapokhoz" (tabs) instead of "oldalakhoz" (sites).
-    - Current: `Az adatai elérése a(z) %1$s tartományban lévő lapokhoz.`
-    - Source: `Access your data for sites in the %1$s domain.`
-    - Suggest: `Az adatai elérése a(z) %1$s tartományban lévő oldalakhoz.`
-    - The source refers to web sites in a domain; "lap" is the Firefox term for tab, inconsistent with the other site strings that use "oldal".
-- `mozac_feature_addons_permissions_proxy_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hu/strings.xml` — Compound noun written as separate words, inconsistent with the _for_update variant.
-    - Current: `Böngésző proxy beállítások vezérlése`
-    - Source: `Control browser proxy settings`
-    - Suggest: `Böngésző proxybeállításainak vezérlése`
-    - Hungarian orthography requires "proxybeállítások" as one word; the parallel string mozac_feature_addons_permissions_proxy_description_for_update already uses that form.
-- `mozac_feature_autofill_search_suggestions` — `mozilla-mobile/android-components/components/feature/autofill/src/main/res/values-hu/strings.xml` — Missing case ending/hyphen: "%1$s keresés" is ungrammatical for "Search %1$s".
-    - Current: `%1$s keresés`
-    - Source: `Search %1$s`
-    - Suggest: `Keresés a(z) %1$s alkalmazásban`
-    - The source is an imperative list item "Search Firefox"; the Hungarian noun phrase "%1$s keresés" reads as "Firefox search" and lacks any case marking, unlike the parallel strings which use "… keresése" or a prepositional construction.
-- `mozac_feature_customtabs_menu_button` — `mozilla-mobile/android-components/components/feature/customtabs/src/main/res/values-hu/strings.xml` — "More options" is rendered as "További beállítások" (more settings) instead of "További lehetőségek".
-    - Current: `További beállítások`
-    - Source: `More options`
-    - Suggest: `További lehetőségek`
-    - The source is "More options" for the overflow menu button; "beállítások" means "settings", which names a different concept.
-- `mozac_feature_prompt_folder_upload_confirm_title` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-hu/strings.xml` — Plural "files" rendered as singular "Fájl".
-    - Current: `Fájl feltöltése?`
-    - Source: `Upload files?`
-    - Suggest: `Feltölti a fájlokat?`
-    - Source is "Upload files?" (plural); the Hungarian says a single file.
-- `mozac_feature_passwords_importer_dialog_description` — `mozilla-mobile/android-components/components/feature/password-importer/src/main/res/values-hu/strings.xml` — "It should only take a few seconds" translated without the hedging "should only" and misses the sense of duration limit.
-    - Current: `Csak néhány másodpercig tart.`
-    - Source: `Keep this screen open. It should only take a few seconds.`
-    - Suggest: `Ez várhatóan csak néhány másodpercig tart.`
-    - Source expresses expectation ("should only take"), the target states it as fact.
-- `mozac_feature_prompts_identity_credentials_choose_account_for_provider` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-hu/strings.xml` — "Sign in with a %1$s account" is rendered as "sign in to your %1$s account", changing the meaning.
-    - Current: `Jelentkezzen be a %1$s-fiókjába`
-    - Source: `Sign in with a %1$s account`
-    - Suggest: `Jelentkezzen be egy %1$s-fiókkal`
-    - The source says to sign in *with* a provider account (the provider is the means of login), not to sign in *into* that account; the Hungarian also drops the required a(z) article handling for a placeholder.
-- `mozac_feature_prompts_identity_credentials_privacy_policy_description` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-hu/strings.xml` — Possessive suffix mismatch: "Adatvédelmi irányelvek" and "Szolgáltatási feltételei" are inconsistent, and the possessive form is ungrammatical here.
-    - Current: `Szolgáltatási feltételei`
-    - Source: `Logging in to %1$s with a %2$s account is subject to their <a href="%3$s">Privacy Policy{ </a> } and <a href="%4$s">Terms of Service{ </a> }`
-    - Suggest: `Szolgáltatási feltételek`
-    - The sentence subject is "az Adatvédelmi irányelvek és a Szolgáltatási feltételek ... vonatkoznak"; the third-person possessive -i on "feltételei" does not agree with the coordinated non-possessive "Adatvédelmi irányelvek".
-- `mozac_feature_relay_email_masks_cfr` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-hu/strings.xml` — The word "Relay" is duplicated because the placeholder already contains "Firefox Relay".
-    - Current: `A %s Relay e-mail-maszkok`
-    - Source: `New! %s email masks are now available on mobile.`
-    - Suggest: `A %s e-mail-maszkok`
-    - The developer comment states %s is the service name "Firefox Relay", so adding "Relay" after the placeholder yields "Firefox Relay Relay".
-- `webauthn_related_origin_create_message` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-hu/strings.xml` — "passkey" is rendered as "jelkód" (passcode) instead of the established Hungarian term "jelszó nélküli belépési kulcs"/"belépési kulcs".
-    - Current: `jelkódot akar létrehozni`
-    - Source: `%1$s wants to create a passkey for %2$s.`
-    - Suggest: `belépési kulcsot akar létrehozni`
-    - "jelkód" means passcode/PIN, not passkey; Mozilla Hungarian uses "belépési kulcs" for passkey.
-- `webauthn_related_origin_use_message` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-hu/strings.xml` — "passkey" is rendered as "jelkód" (passcode) instead of the established Hungarian term for passkey.
-    - Current: `jelkódot akar használni`
-    - Source: `%1$s wants to use a passkey for %2$s.`
-    - Suggest: `belépési kulcsot akar használni`
-    - "jelkód" means passcode/PIN, not passkey; Mozilla Hungarian uses "belépési kulcs" for passkey.
-- `mozac_protections_dashboard_trackers_blocked_this_week_title` — `mozilla-mobile/android-components/components/feature/protection-dashboard/src/main/res/values-hu/strings.xml` — Plural "Trackers blocked" rendered as singular subject without plural marking, reading oddly as a header.
-    - Current: `Nyomkövető blokkolva a héten`
-    - Source: `Trackers blocked this week`
-    - Suggest: `Blokkolt nyomkövetők a héten`
-    - The source is a plural noun phrase title "Trackers blocked this week"; the Hungarian reads like a fragment of a count sentence with the number missing.
-- `mozac_feature_prompts_suggest_strong_password_title` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-hu/strings.xml` — "Use strong password?" translated as a second-person question "Erős jelszót használ?" which asks whether the user uses one, rather than offering the action.
-    - Current: `Erős jelszót használ?`
-    - Source: `Use strong password?`
-    - Suggest: `Használ erős jelszót?`
-    - The dialog offers to use the generated strong password; the Hungarian word order states rather than asks the offer, and is inconsistent with the sibling string "Erős jelszó használata".
-- `mozac_feature_sitepermissions_notification_permission_rationale_dialog_message` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-hu/strings.xml` — Missing hyphen before the suffix attached to the app-name placeholder.
-    - Current: `a %1$sban`
-    - Source: `You’ll need to allow notifications in %1$s to receive them from this website.`
-    - Suggest: `a %1$s-ban`
-    - In Hungarian, a case suffix appended to a placeholder holding a proper/brand name (Firefox, Focus) must be joined with a hyphen: "a Firefox-ban"/"a %1$s-ban". Written solid as "%1$sban" it renders as "Firefoxban" without the required separator used elsewhere for placeholder-based names.
-- `mozac_summarize_download_nano_consent_message` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-hu/strings.xml` — Relative pronoun does not agree in number with its plural antecedent.
-    - Current: `oldalösszegzéseket tud készíteni, amelyet továbbra is Ön irányít`
-    - Source: `A one-time download lets %s create page summaries that stay in your control.`
-    - Suggest: `oldalösszegzéseket tud készíteni, amelyeket továbbra is Ön irányít`
-    - The antecedent "oldalösszegzéseket" is plural (source: "page summaries that stay in your control"), so the pronoun must be "amelyeket", not the singular "amelyet".
-- `mozac_summarize_shake_consent_off_device_message` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-hu/strings.xml` — Missing hyphen before the suffix attached to the app-name placeholder.
-    - Current: `a %1$stól`
-    - Source: `Shake your device, get a page summary from %1$s in seconds.`
-    - Suggest: `a %1$s-tól`
-    - In Hungarian a suffix appended to a placeholder standing for a proper name (Firefox) must be joined with a hyphen; other strings would render "Firefoxtól" incorrectly glued. Standard Mozilla hu practice is "%1$s-tól".
-- `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — The translated example scheme is „https:” instead of „https://”.
-    - Current: `„https:” vagy „http://”`
-    - Source: `Web address must contain “https://” or “http://”`
-    - Suggest: `„https://” vagy „http://”`
-    - Source says the web address must contain “https://” or “http://”; the Hungarian drops the slashes from the first variant, giving incorrect guidance.
-- `add_to_tab_group_title` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — Ellipsis added that is not in the source title "Add to".
-    - Current: `Hozzáadás…`
-    - Source: `Add to`
-    - Suggest: `Hozzáadás`
-    - Source is a plain title "Add to" with no ellipsis; the added ellipsis suggests a further dialog.
-- `addresses_department` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — "Department" as an administrative division (Nicaragua, Colombia) is rendered as "Részleg" (department of an organization).
-    - Current: `Részleg`
-    - Source: `Department`
-    - Suggest: `Megye`
-    - The developer comment states this is an address field for the administrative division "departamento"; "Részleg" means a section/unit of an organization, not a territorial division.
-- `addresses_post_town` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — "Post town" is translated as "Postaállomás" (post station/office), not the town name used in postal addresses.
-    - Current: `Postaállomás`
-    - Source: `Post town`
-    - Suggest: `Postaváros`
-    - The source refers to the postal town component of an address (UK/Norway/Sweden), not a post office facility.
-- `addresses_neighborhood` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — "Neighborhood" as an address subdivision is translated as "Szomszédság" (the abstract state of being neighbors).
-    - Current: `Szomszédság`
-    - Source: `Neighborhood`
-    - Suggest: `Városrész`
-    - In an address form the field designates a district/quarter (colonia, mahalle); "Szomszédság" does not name a place in Hungarian.
-- `ai_controls_block_ai_description` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — The translation drops "AI" from "AI enhancements", saying only "the app's new or current enhancements".
-    - Current: `nem fogja látni a %s új vagy jelenlegi fejlesztéseit`
-    - Source: `Blocking means you won’t see new or current AI enhancements in %s, or pop-ups about them.`
-    - Suggest: `nem fogja látni a %s új vagy jelenlegi MI funkcióbővítéseit`
-    - Source is "you won’t see new or current AI enhancements in %s"; the Hungarian omits "AI" and uses "fejlesztéseit" instead of the established "MI funkcióbővítések" used in the sibling strings.
-- `ai_controls_blocked_info_banner` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — "Unblock specific features below" is rendered as an instruction to use the controls below, adding content not in the source.
-    - Current: `Egy adott funkció blokkolásának feloldásához használja az alábbi vezérlőket.`
-    - Source: `New and current AI enhancements are blocked by default. Unblock specific features below.`
-    - Suggest: `Az egyes funkciók blokkolását alább oldhatja fel.`
-    - The source sentence is an imperative "Unblock specific features below."; the translation invents "use the controls below".
-- `alternative_app_icon_group_solid_colors` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — "Egyszínű színek" is a redundant/incorrect rendering of "Solid colors".
-    - Current: `Egyszínű színek`
-    - Source: `Solid colors`
-    - Suggest: `Egyszínű háttér`
-    - "Egyszínű" already means "solid-colored", so "Egyszínű színek" reads as "solid-colored colors"; a natural rendering is needed for this group title.
-- `bookmark_save_in_label` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — "Save in" label is translated as "Mentés máshová…" (Save elsewhere…), which says something different from the source.
-    - Current: `Mentés máshová…`
-    - Source: `Save in`
-    - Suggest: `Mentés ide:`
-    - The source is a label indicating which folder the bookmark will be saved in; "Mentés máshová…" means "Save somewhere else…" and adds an ellipsis not in the source.
-- `bookmark_sort_menu_a_to_z` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — Hyphen used instead of en dash / incorrect Hungarian suffix hyphenation in "A-tól Z-ig".
-    - Current: `Rendezés A-tól Z-ig`
-    - Source: `Sort by A to Z`
-    - Suggest: `Rendezés A–Z szerint`
-    - Hungarian orthography attaches suffixes to letters with a hyphen, which is used here, but the range convention in the locale uses an en dash; the string as written mixes conventions.
-- `browser_menu_bookmark_this_page_2` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — "Bookmark page" is translated as "Lap könyvjelzőzése" (bookmark tab) instead of referring to the page.
-    - Current: `Lap könyvjelzőzése`
-    - Source: `Bookmark page`
-    - Suggest: `Oldal könyvjelzőzése`
-    - The source refers to the currently visited page ("page"), which in Hungarian Firefox is "oldal"; "lap" is the term used for "tab".
-- `browser_menu_powered_by2` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — "Powered by %1$s" is rendered as a literal idiom about being "under the hood", losing the source meaning.
-    - Current: `A motorháztető alatt: %1$s`
-    - Source: `Powered by %1$s`
-    - Suggest: `Működteti: %1$s`
-    - The source states the tab is powered by the app; "A motorháztető alatt" ("under the hood") says something different.
-- `certificate_warning_homepage_card_hcw2_title` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — The Hungarian says "less than 7 days ago" instead of "less than 7 days left to update".
-    - Current: `Kevesebb mint 7 napja van a frissítésre`
-    - Source: `Less than 7 days to left to update`
-    - Suggest: `Kevesebb mint 7 nap van hátra a frissítésre`
-    - "7 napja van" reads as "it has been 7 days"/ambiguous; the source means there are fewer than 7 days remaining to update.
-- `close_tab_and_delete_group_confirmation_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — Singular "tab" translated as plural "lapokat".
-    - Current: `Bezárja a lapokat és törli a csoportot?`
-    - Source: `Close tab and delete group?`
-    - Suggest: `Bezárja a lapot és törli a csoportot?`
-    - Source is "Close tab and delete group?" — singular tab (the last tab), but the target uses the plural "lapokat".
-- `certificate_warning_push_notification_pnr1_message` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — "will stop working" rendered as "will not work properly", weakening the meaning, and "some features" expanded to "some other features".
-    - Current: `A kiegészítők és egyes egyéb funkciók március 14-től nem fognak megfelelően működni.`
-    - Source: `Add-ons and some features will stop working on March 14.`
-    - Suggest: `A kiegészítők és egyes funkciók március 14-én leállnak.`
-    - The source says add-ons and some features will stop working, not that they will work improperly; "egyéb" (other) is also not in the source.
-- `certificate_warning_push_notification_pnw2_title` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — Period added to a notification title that has no final punctuation in the source.
-    - Current: `A Firefox egy régebbi verzióját használja.`
-    - Source: `You’re on an older version of Firefox`
-    - Suggest: `A Firefox egy régebbi verzióját használja`
-    - The source title "You’re on an older version of Firefox" has no terminal punctuation; titles in this set (e.g. "Frissítés javasolt") are unpunctuated.
-- `connection_security_panel_qualified_certificate` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — Misspelled "rendeleteben" instead of "rendeletben".
-    - Current: `Az (EU) 2024/1183 rendeleteben meghatározottak szerint.`
-    - Source: `Qualified as specified in Regulation (EU) 2024/1183.`
-    - Suggest: `Az (EU) 2024/1183 rendeletben meghatározottak szerint.`
-    - The Hungarian inessive form of "rendelet" is "rendeletben"; "rendeleteben" is a spelling error.
-- `content_description_menu` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — "More options" translated as "További beállítások" (More settings).
-    - Current: `További beállítások`
-    - Source: `More options`
-    - Suggest: `További lehetőségek`
-    - The source says "More options" (the three-dot menu), not settings; "beállítások" means settings and is the established translation of "Settings".
-- _…and 103 more._
-
-### ✅ Fixed since the last run (2)
+### 🆕 New findings (2)
 
 - `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hu/strings.xml` — `mozac_browser_errorpages_offline_message` quotes “Próbálja újra” but the string it names, `mozac_browser_errorpages_page_refresh`, reads “Újrapróbálkozás”
     - Current: `{ <p> }A böngésző kapcsolat nélküli módban van, ezért nem tud csatlakozni a kért elemhez.{ </p> } { <ul> } { <li> }Csatlakoztatva van a számítógép a hálózathoz?{ </li> } { <li> }Nyomja meg a „Próbálja újra” gombot az on…`
@@ -334,6 +30,10 @@ Also for hu: [firefox](firefox.md)
     - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
     - Suggest: `Kezdőképernyőhöz adás`
     - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+
+### ✅ Fixed since the last run (0)
+
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -398,12 +98,12 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (163)
+## 3. Open findings (165)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 85 |
+| 2 | Wrong content (says something other than the English) | 87 |
 | 3 | Degraded language (grammar, spelling, terminology) | 71 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
@@ -960,6 +660,11 @@ _Nothing in this category._
 
 ### D. Terminology, register & consistency
 
+- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hu/strings.xml` — `mozac_browser_errorpages_offline_message` quotes “Próbálja újra” but the string it names, `mozac_browser_errorpages_page_refresh`, reads “Újrapróbálkozás”
+    - Current: `{ <p> }A böngésző kapcsolat nélküli módban van, ezért nem tud csatlakozni a kért elemhez.{ </p> } { <ul> } { <li> }Csatlakoztatva van a számítógép a hálózathoz?{ </li> } { <li> }Nyomja meg a „Próbálja újra” gombot az on…`
+    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
+    - Suggest: `Újrapróbálkozás`
+    - In the source this string quotes “Try Again”, which is exactly the value of `mozac_browser_errorpages_page_refresh` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `mozac_browser_errorpages_security_bad_hsts_cert_back` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hu/strings.xml` — "Go Back" is rendered inconsistently with the parallel bad_cert string.
     - Current: `Ugrás vissza`
     - Source: `Go Back`
@@ -1045,6 +750,11 @@ _Nothing in this category._
     - Source: `More options`
     - Suggest: `További lehetőségek`
     - "Options" here refers to menu options, not settings ("beállítások"); the established rendering for the three-dot menu content description is "További lehetőségek".
+- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-hu/strings.xml` — `firstrun_shortcut_text` quotes “Hozzáadás a kezdőképernyőre” but the string it names, `menu_add_to_home_screen`, reads “Kezdőképernyőhöz adás”
+    - Current: `Térjen vissza gyorsan a kedvenc oldalaihoz a %1$sban. Csak válassza a „Hozzáadás a kezdőképernyőre” lehetőséget a %1$s menüből.`
+    - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
+    - Suggest: `Kezdőképernyőhöz adás`
+    - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `snackbar_added_to_shortcuts` — `mozilla-mobile/focus-android/app/src/main/res/values-hu/strings.xml` — "shortcuts" is rendered as "indítóikonokhoz" (launcher icons) instead of the consistent term for shortcuts.
     - Current: `Hozzáadva az indítóikonokhoz.`
     - Source: `Added to shortcuts!`
@@ -1119,7 +829,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Resolved to date (2)
+### Resolved to date (0)
 
-- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hu/strings.xml` — fixed 2026-08-21
-- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-hu/strings.xml` — fixed 2026-08-21
+_Nothing resolved yet._

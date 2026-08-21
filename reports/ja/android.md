@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `7134a6c77a67` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `7134a6c77a67` |
-| **Previous run** | 2026-08-20 @ `afd16223d876` |
-| **Mode** | baseline |
-| **Strings reviewed this run** | 2,908 of 2,908 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
+| **Previous run** | 2026-08-21 @ `7134a6c77a67` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 0 of 2,908 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,316 +18,16 @@ Also for ja: [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (160)
-
-- `mozac_browser_errorpages_malformed_uri_message_alternative` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ja/strings.xml` — Markup tags are misplaced: text falls outside the { <li> } elements and the second bullet drops the "forward slashes" instruction.
-    - Current: `{ <li> }ウェブのアドレスは通常 { <strong> }http://www.example.com/{ </strong> }{ </li> } のようなものになります。 { <li> }スラッシュ ({ <strong> }/{ </strong> }) { </li> }が使われているか確認してください。`
-    - Source: `{ <ul> } { <li> }Web addresses are usually written like { <strong> }http://www.example.com/{ </strong> }{ </li> } { <li> }Make sure that you’re using forward slashes (i.e. { <strong> }/{ </strong> }).{ </li> } { </ul> }`
-    - Suggest: `{ <li> }ウェブのアドレスは通常 { <strong> }http://www.example.com/{ </strong> } のようなものになります。{ </li> } { <li> }スラッシュ ({ <strong> }/{ </strong> }) が使われているか確認してください。{ </li> }`
-    - The closing { </li> } tags appear before the trailing Japanese text, so the sentences render outside the list items, unlike the en-US source where each sentence is fully inside { <li> }.
-- `mozac_browser_errorpages_net_reset_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ja/strings.xml` — Missing sentence-final period after 再度試してください in the first paragraph.
-    - Current: `ネットワーク接続の確立中にリンクが切れました。再度試してください{ </p> }`
-    - Source: `{ <p> }The network link was interrupted while negotiating a connection. Please try again.{ </p> } { <ul> } { <li> }The site could be temporarily unavailable or too busy. Try again in a few moments.{ </li> } { <li> }If y…`
-    - Suggest: `ネットワーク接続の確立中にリンクが切れました。再度試してください。{ </p> }`
-    - The source sentence "Please try again." ends with a period; the ja text omits the fullwidth 。 used elsewhere in the same string set.
-- `mozac_browser_errorpages_net_timeout_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ja/strings.xml` — "the device's network connection" is rendered as コンピューターのネットワーク接続 (computer), wrong on a mobile browser.
-    - Current: `他のサイトも表示できない場合、コンピューターのネットワーク接続を確認してください。`
-    - Source: `{ <p> }The requested site did not respond to a connection request and the browser has stopped waiting for a reply.{ </p> } { <ul> } { <li> }Could the server be experiencing high demand or a temporary outage? Try again l…`
-    - Suggest: `他のサイトも表示できない場合、端末のネットワーク接続を確認してください。`
-    - The source says "Check the device’s network connection"; other strings in this file translate device as 端末.
-- `mozac_browser_errorpages_content_crashed_title` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ja/strings.xml` — "Content crashed" is translated as コンテンツデータのクラッシュ, introducing データ not in the source.
-    - Current: `コンテンツデータのクラッシュ`
-    - Source: `Content crashed`
-    - Suggest: `コンテンツがクラッシュしました`
-    - The source refers to the content process crashing, not to "content data"; the added データ changes the meaning.
-- `mozac_browser_errorpages_port_blocked_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ja/strings.xml` — The example domain mozilla.org was changed to mozilla.jp, altering the source's example.
-    - Current: `リクエストされたアドレスのポート (例えば mozilla.jp のポート 80 であれば { <q> }mozilla.jp:80{ </q> })`
-    - Source: `{ <p> }The requested address specified a port (e.g., { <q> }mozilla.org:80{ </q> } for port 80 on mozilla.org) normally used for purposes { <em> }other{ </em> } than Web browsing. The browser has canceled the request fo…`
-    - Suggest: `リクエストされたアドレスのポート (例えば mozilla.org のポート 80 であれば { <q> }mozilla.org:80{ </q> })`
-    - The source uses “mozilla.org:80” as the example; substituting a different domain (mozilla.jp) changes the content and misrepresents the brand's domain.
-- `mozac_browser_errorpages_security_bad_hsts_cert_advanced` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ja/strings.xml` — “Advanced…” is rendered as 詳細情報 here but 詳細設定 in the parallel bad_cert string, and uses ASCII dots instead of the ellipsis character.
-    - Current: `詳細情報...`
-    - Source: `Advanced…`
-    - Suggest: `詳細設定…`
-    - Same source string “Advanced…” in mozac_browser_errorpages_security_bad_cert_advanced is translated 詳細設定…; the two buttons on equivalent error pages should match.
-- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ja/strings.xml` — “device” is translated as コンピューター (computer) in a mobile browser context.
-    - Current: `コンピューターが有効なネットワークに接続されているか確認してください。`
-    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
-    - Suggest: `端末が有効なネットワークに接続されているか確認してください。`
-    - The source says “Is the device connected to an active network?”; ja renders it as “computer”, which names the wrong thing on a mobile app.
-- `mozac_browser_errorpages_unknown_proxy_host_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ja/strings.xml` — “device” is translated as コンピューター (computer) in a mobile browser context.
-    - Current: `コンピューターが有効なネットワークに接続されているか確認してください。`
-    - Source: `{ <p> }The browser is configured to use a proxy server, but the proxy could not be found.{ </p> } { <ul> } { <li> }Is the browser’s proxy configuration correct? Check the settings and try again.{ </li> } { <li> }Is the…`
-    - Suggest: `端末が有効なネットワークに接続されているか確認してください。`
-    - The source reads “Is the device connected to an active network?”; ja says “computer”, which is not what the source names (other strings in this batch use 端末 for device).
-- `mozac_browser_errorpages_redirect_loop_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ja/strings.xml` — “your device” is translated as ご利用のコンピューター (your computer).
-    - Current: `ご利用のコンピューターではなくサーバーの設定に問題がある`
-    - Source: `{ <p> }The browser has stopped trying to retrieve the requested item. The site is redirecting the request in a way that will never complete.{ </p> } { <ul> } { <li> }Have you disabled or blocked cookies required by this…`
-    - Suggest: `ご利用の端末ではなくサーバーの設定に問題がある`
-    - The source says “a server configuration issue and not your device”; ja renders device as computer, inconsistent with 端末 used elsewhere in the same file.
-- `mozac_feature_addons_admin_install_only` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — The reason clause is mistranslated: the source says the add-on can only be installed by an organization using enterprise policies, which isn't supported on this platform, but the Japanese reads as an unrelated contrastive statement.
-    - Current: `これはエンタープライズポリシーを使用する組織によってインストールすることができますが、このプラットフォームではサポートされていません。`
-    - Source: `%1$s could not be installed because it can only be installed by an organization using enterprise policies, which isn‘t supported on this platform.`
-    - Suggest: `これはエンタープライズポリシーを使用する組織によってのみインストールできますが、この方法はこのプラットフォームではサポートされていません。`
-    - The source's "only be installed by" (排他) is dropped, changing the meaning of why installation failed.
-- `mozac_feature_addons_migrated_from_a_previous_version_label` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — Missing possessive particle makes the phrase read as "the previous version %1$s" instead of "a previous version of %1$s".
-    - Current: `以前のバージョン %1$s から移行されました`
-    - Source: `This add-on was migrated from a previous version of %1$s`
-    - Suggest: `以前のバージョンの %1$s から移行されました`
-    - %1$s is the app name (Firefox); the source says "a previous version of %1$s", requiring の between バージョン and the app name.
-- `mozac_feature_addons_permissions_data_collection_optional_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — Double particle error: 「次のデータを収集を求めます」 uses を twice.
-    - Current: `この拡張機能は次のデータを収集を求めます`
-    - Source: `The developer says the extension wants to collect: %1$s`
-    - Suggest: `この拡張機能は次のデータの収集を求めます`
-    - Ungrammatical Japanese; the object marker を appears twice in the same clause. Source: "the extension wants to collect: ...".
-- `mozac_feature_addons_permissions_user_scripts_extra_warning` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — "extensions or sources you trust" is mistranslated so that "trusted" only modifies sources, allowing any extension's scripts.
-    - Current: `拡張機能や信頼できるソースからのスクリプト以外は実行しないでください。`
-    - Source: `Unverified scripts can pose security and privacy risks. Only run scripts from extensions or sources you trust.`
-    - Suggest: `信頼できる拡張機能やソースからのスクリプト以外は実行しないでください。`
-    - The source says to run only scripts from extensions or sources you trust; the Japanese reads "extensions, or trusted sources", dropping the trust qualifier from extensions and weakening the security warning.
-- `mozac_feature_addons_status_incompatible` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — The translation drops "your version of", changing the meaning to the add-on being incompatible with the app version generically.
-    - Current: `%1$s は %2$s のバージョン (%3$s) と互換性がありません。`
-    - Source: `%1$s is not compatible with your version of %2$s (version %3$s).`
-    - Suggest: `%1$s はお使いの %2$s のバージョン (%3$s) と互換性がありません。`
-    - Source is "%1$s is not compatible with your version of %2$s (version %3$s)." — the possessive "your version" indicates the user's installed version.
-- `mozac_feature_addons_updater_status_no_update_available` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — Adds "アドオン" not present in source; the status field refers to a single add-on's update status, not "no add-ons with updates".
-    - Current: `更新可能なアドオンはありません`
-    - Source: `No update available`
-    - Suggest: `更新はありません`
-    - Source "No update available" is a status value for one add-on; the translation says "There are no add-ons available for update".
-- `mozac_feature_addons_updater_status_successfully_updated` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — Adds "アドオン" which is not in the source status string.
-    - Current: `アドオンの更新が完了しました`
-    - Source: `Successfully updated`
-    - Suggest: `更新が完了しました`
-    - Source is "Successfully updated", a status field value with no subject noun.
-- `mozac_feature_addons_supported_checker_notification_channel` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — "Supported" is dropped from the notification channel name.
-    - Current: `アドオンチェッカー`
-    - Source: `Supported add-ons checker`
-    - Suggest: `対応アドオンチェッカー`
-    - Source is "Supported add-ons checker"; the channel is specifically about newly supported add-ons.
-- `mozac_feature_extensions_manager_notification_content_text` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — Cause and effect are reversed: the source says the extensions stopped working, which made the system unstable.
-    - Current: `システムを不安定にしている 1 個以上の拡張機能が動作を停止しました。`
-    - Source: `One or more extensions stopped working, making your system unstable.`
-    - Suggest: `1 個以上の拡張機能が動作を停止し、システムが不安定になりました。`
-    - Source "One or more extensions stopped working, making your system unstable." — the instability is the result of the stoppage, not an attribute of the extensions.
-- `mozac_feature_addons_updater_dialog_last_attempt` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — "Last attempt:" is rendered as "last check date", adding "日" (date) and changing "attempt" to "check".
-    - Current: `最終確認日:`
-    - Source: `Last attempt:`
-    - Suggest: `前回の試行:`
-    - Source label is "Last attempt:" for the last add-on update attempt.
-- `mozac_feature_applinks_destination_url` — `mozilla-mobile/android-components/components/feature/app-links/src/main/res/values-ja/strings.xml` — "Destination URL" is rendered as 送信先 URL ("send-to/recipient URL"), which implies sending data rather than the link's destination.
-    - Current: `送信先 URL`
-    - Source: `Destination URL`
-    - Suggest: `リンク先 URL`
-    - The developer comment says it is the label for the destination URL of the link in the details section; 送信先 means the recipient of something sent (e.g. mail), not a navigation target.
-- `switch_to_tab_description` — `mozilla-mobile/android-components/components/feature/awesomebar/src/main/res/values-ja/strings.xml` — "Switch to tab" is translated as タブを表示 ("Show tab"), losing the switch-to-an-already-open-tab meaning.
-    - Current: `タブを表示`
-    - Source: `Switch to tab`
-    - Suggest: `タブに切り替え`
-    - The comment states the suggestion represents an already opened tab and distinguishes it from history suggestions; 表示 does not convey switching.
-- `mozac_feature_downloads_cancel_active_private_downloads_warning_content_body` — `mozilla-mobile/android-components/components/feature/downloads/src/main/res/values-ja/strings.xml` — "Private tabs" is rendered as "プライベートウィンドウ" (private windows) instead of tabs.
-    - Current: `すべてのプライベートウィンドウを今すぐ閉じると`
-    - Source: `If you close all Private tabs now, %1$s download will be canceled. Are you sure you want to leave Private Browsing?`
-    - Suggest: `すべてのプライベートタブを今すぐ閉じると`
-    - The source says "If you close all Private tabs now"; on Android this refers to tabs, not windows.
-- `mozac_feature_ipprotection_unavaliable_dialog_body` — `mozilla-mobile/android-components/components/feature/ipprotection/src/main/res/values-ja/strings.xml` — "choose tabs to close" is mistranslated as simply "close tabs", losing the choice/selection meaning.
-    - Current: `タブを閉じてください`
-    - Source: `VPN isn’t working right now so your location may be visible. Continue browsing without VPN, or choose tabs to close.`
-    - Suggest: `閉じるタブを選択してください`
-    - The source offers the option of choosing which tabs to close (the companion button leads to the tabs tray to select sensitive tabs); the translation just orders closing tabs.
-- `mozac_feature_downloads_notification_channel` — `mozilla-mobile/android-components/components/feature/downloads/src/main/res/values-ja/strings.xml` — Notification channel name "Downloads" rendered as "ダウンロード一覧" (downloads list) instead of the standard "ダウンロード".
-    - Current: `ダウンロード一覧`
-    - Source: `Downloads`
-    - Suggest: `ダウンロード`
-    - This is the name of the notification channel for download notifications, not a list UI; the established term is ダウンロード.
-- `mozac_feature_prompts_suggest_strong_password_message` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-ja/strings.xml` — Dialog title "Use strong password: %1$s" is rendered as an imperative request to the user rather than a label introducing the generated password.
-    - Current: `強固なパスワードを使用してください: %1$s`
-    - Source: `Use strong password: %1$s`
-    - Suggest: `強固なパスワードを使用: %1$s`
-    - The source is a title labeling the suggested password, matching the sibling title "Use strong password?"; "〜してください" turns it into a command to the user.
-- `search_widget_content_description` — `mozilla-mobile/android-components/components/feature/search/src/main/res/values-ja/strings.xml` — "Open a new %1$s tab" is mistranslated as "open in a new tab of %1$s".
-    - Current: `%1$s の新しいタブで開く`
-    - Source: `Open a new %1$s tab`
-    - Suggest: `%1$s の新しいタブを開く`
-    - The source means opening a new tab, not opening something in an existing/new tab; the particle で changes the meaning.
-- `mozac_feature_sitepermissions_do_not_ask_again_on_this_site2` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-ja/strings.xml` — "Remember decision for this site" is translated without the "for this site" scope.
-    - Current: `今後も同様に処理する`
-    - Source: `Remember decision for this site`
-    - Suggest: `このサイトでの決定を記憶する`
-    - The source scopes the checkbox to the current site; the sibling string ...site4 correctly includes 「このサイトでは」. Dropping it changes the meaning to a global setting.
-- `mozac_summarize_download_nano_consent_message` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ja/strings.xml` — The translation misrenders "summaries that stay in your control" as the user managing the summaries app creates.
-    - Current: `一度ダウンロードしておけば、%s が作成するページの要約をユーザーが管理できます。`
-    - Source: `A one-time download lets %s create page summaries that stay in your control.`
-    - Suggest: `一度ダウンロードするだけで、%s はあなたの管理下にとどまるページ要約を作成できるようになります。`
-    - The source says the one-time download enables %s to create page summaries that remain under the user's control (i.e. processed on device); the Japanese instead states the user can manage the summaries created by %s.
-- `my_longest_fox_is` — `mozilla-mobile/fenix/app/longfox/src/main/res/values-ja/strings.xml` — "My longest fox is %1$d!" is rendered as "私の得点は最長 %1$d フォックスです", which mixes in "score" and mistranslates the sentence subject.
-    - Current: `私の得点は最長 %1$d フォックスです！`
-    - Source: `My longest fox is %1$d! #longfox %2$s`
-    - Suggest: `私の最長フォックスは %1$d です！`
-    - The source says the longest fox is N; the target says "my score is at most/longest N fox", changing the meaning by introducing 得点 (score) and misplacing 最長.
-- `mozac_lib_crash_no_crashes` — `mozilla-mobile/android-components/components/lib/crash/src/main/res/values-ja/strings.xml` — "No crash reports have been submitted." is translated as "送信したクラッシュレポートはありません" but the surrounding intent is a list of crashes; the passive source is fine, though the target implies the user submitted them.
-    - Current: `送信したクラッシュレポートはありません。`
-    - Source: `No crash reports have been submitted.`
-    - Suggest: `送信されたクラッシュレポートはありません。`
-    - The source is passive and does not attribute the action to the user; 送信した reads as "reports that (I) submitted".
-- `a11y_action_label_wallpaper_collection_learn_more` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — Talkback action label is translated as a full sentence instead of a verb phrase that completes "Double tap to…".
-    - Current: `このコレクションの詳細についてはリンク先をご覧ください`
-    - Source: `open link to learn more about this collection`
-    - Suggest: `このコレクションの詳細を見るためリンクを開く`
-    - Per the developer comment, Talkback appends this to "Double tap to…", so it must be an action phrase like the other labels (折りたたむ, 展開する), not an imperative sentence addressed to the user.
-- `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — Closing curly quotes are wrong: opening quote used as closing quote in both quoted URLs.
-    - Current: `“https://“ または “http://“`
-    - Source: `Web address must contain “https://” or “http://”`
-    - Suggest: `“https://” または “http://”`
-    - The source uses “https://” and “http://” with proper closing right double quotation marks; the target repeats the left quote as the closing mark.
-- `addresses_province` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "Province" is rendered as 都道府県, the Japan-specific term already used for both Prefecture and State, so the field name is wrong and indistinguishable.
-    - Current: `都道府県`
-    - Source: `Province`
-    - Suggest: `州・県`
-    - The developer comment says this label is used when "province" should be used (non-Japanese addresses); 都道府県 specifically denotes Japanese prefectures and duplicates addresses_prefecture/addresses_state.
-- `addresses_department` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "Department" as an administrative division (Nicaragua, Colombia) is translated as 部門 (organizational department).
-    - Current: `部門`
-    - Source: `Department`
-    - Suggest: `県 (デパルタメント)`
-    - The developer comment states this is a key administrative division in countries like Nicaragua and Colombia, not a corporate/organizational department; 部門 means a division of an organization.
-- `addresses_pin` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "Pin" (India's Postal Index Number) is rendered as PIN, which in Japanese reads as a security PIN code rather than a postal code.
-    - Current: `PIN`
-    - Source: `Pin`
-    - Suggest: `PIN コード (郵便番号)`
-    - The developer comment clarifies this is the Postal Index Number used in India, an address/postal field, but the bare "PIN" in Japanese UI conventionally means a personal identification number.
-- `ai_controls_banner_headline` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "You always have a choice in %s" is rendered as "%s has choices", dropping the user as the subject.
-    - Current: `%s には常に選択肢があります`
-    - Source: `You always have a choice in %s`
-    - Suggest: `%s では、常にあなたに選択肢があります`
-    - The source says the user always has a choice within the app; the translation reads as the app itself having options, losing the user-agency meaning.
-- `ai_controls_block_dialog_body` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "you can unblock anything you want to keep using" is turned into an imperative instruction to the user.
-    - Current: `引き続き使用したい機能はブロックを解除してください。`
-    - Source: `You won’t see new or current AI enhancements in %1$s, or pop-ups about them. Afterwards, you can unblock anything you want to keep using.  Blocking also affects extensions that use AI provided by %1$s.`
-    - Suggest: `その後、引き続き使用したい機能はいつでもブロックを解除できます。`
-    - The source states a capability ("you can unblock"), not a directive; the translation tells the user to unblock, changing the meaning.
-- `alternative_app_icon_option_gradient_golden_hour` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "Golden Hour" is translated as "マジックアワー" (magic hour), a different term.
-    - Current: `マジックアワー`
-    - Source: `Golden Hour`
-    - Suggest: `ゴールデンアワー`
-    - Golden hour and magic hour are distinct terms; the icon name should transliterate the source name, consistent with 「ブルーアワー」 for Blue Hour.
-- `alternative_app_icon_option_flaming` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "Flaming" is translated as 「炎上」, which in Japanese means an online backlash/flame war, not a flame-covered design.
-    - Current: `炎上`
-    - Source: `Flaming`
-    - Suggest: `フレイム`
-    - Per the developer comment the icon shows the logo surrounded by flames; 「炎上」 conveys an internet flaming scandal and is misleading.
-- `ai_controls_block_ai_title` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "AI enhancements" is rendered as 「AI 支援」 here but as 「AI 機能強化」 in the sibling description and banner strings.
-    - Current: `AI 支援をブロックする`
-    - Source: `Block AI enhancements`
-    - Suggest: `AI 機能強化をブロックする`
-    - ai_controls_block_ai_description and ai_controls_blocked_info_banner use 「AI 機能強化」 for the same source term on the same screen; the inconsistency is confusing.
-- `alternative_app_icon_option_purple_dark` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "Dark Purple" is rendered as 小紫, which is a plant name (Callicarpa dichotoma), not a dark shade of purple.
-    - Current: `小紫`
-    - Source: `Dark Purple`
-    - Suggest: `濃い紫`
-    - The source means a dark shade of purple for the app icon color variant; 小紫 names a shrub and does not convey "dark purple".
-- `automatic_translation_option_never_translate_summary_preference` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — The translation reverses the direction: source says Firefox will never offer to translate sites in this language, target says it won't offer to translate sites into this language.
-    - Current: `%1$s はサイトをこの言語に翻訳可能であることを通知しません。`
-    - Source: `%1$s will never offer to translate sites in this language.`
-    - Suggest: `%1$s はこの言語のサイトの翻訳を提案しません。`
-    - "sites in this language" means sites written in this language (source language), not translating into this language.
-- `automatic_translation_option_offer_to_translate_summary_preference` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "sites in this language" is mistranslated as translating sites into this language.
-    - Current: `%1$s がサイトをこの言語に翻訳可能であることを通知します。`
-    - Source: `%1$s will offer to translate sites in this language.`
-    - Suggest: `%1$s はこの言語のサイトの翻訳を提案します。`
-    - The source refers to sites written in this language being offered for translation, not translation into this language; the parallel string automatic_translation_option_always_translate_summary_preference correctly uses 「この言語のページ」.
-- `automatic_translation_header_preference` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — Added 「設定で」 and misstates the action: the source asks the user to select a language to manage the preferences, not to select languages in settings.
-    - Current: `設定で [常に翻訳する] 言語と [翻訳しない] 言語を選択します。`
-    - Source: `Select a language to manage ”always translate“ and ”never translate“ preferences.`
-    - Suggest: `[常に翻訳する] と [翻訳しない] の設定を管理する言語を選択してください。`
-    - The en-US string instructs the user to pick a language in order to manage the "always translate"/"never translate" preferences; the target changes the meaning and inserts "in settings".
-- `bookmark_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "Navigate back" is rendered as "go back to the previous page", which is wrong for a bookmarks navigation bar back button.
-    - Current: `前のページへ戻る`
-    - Source: `Navigate back`
-    - Suggest: `戻る`
-    - The developer comment says this is the content description for the bookmark navigation bar back button; it navigates back in the bookmark folder hierarchy/screen, not to a previous web page.
-- `browser_menu_sign_back_in_to_sync` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "Sign back in to sync" is rendered as "log in and return to Sync", mistranslating "back in" as returning to Sync.
-    - Current: `ログインして Sync に戻る`
-    - Source: `Sign back in to sync`
-    - Suggest: `再ログインして同期`
-    - The source means to sign in again in order to sync; the Japanese says "log in and go back to Sync", which changes the meaning (the caption string confirms the context is re-authentication for syncing).
-- `certificate_warning_push_notification_pnr1_message` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "on March 14" is rendered as "3 月 14 日以降" (from March 14 onward), changing the stated date semantics.
-    - Current: `アドオンと一部の機能が 3 月 14 日以降に動作しなくなります。`
-    - Source: `Add-ons and some features will stop working on March 14.`
-    - Suggest: `アドオンと一部の機能が 3 月 14 日に動作しなくなります。`
-    - The source says features stop working on March 14, not "from March 14 onward"; the added 以降 is not in the source.
-- `certificate_warning_push_notification_pnw3_message` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "tomorrow" is rendered as "明日以降" (from tomorrow onward), adding meaning not in the source.
-    - Current: `明日以降、一部の機能が動作しなくなります。`
-    - Source: `Some features will stop working tomorrow.`
-    - Suggest: `明日、一部の機能が動作しなくなります。`
-    - The source states features stop working tomorrow; 以降 adds "onward", which the source does not say.
-- `certificate_warning_push_notification_update_recommended_title` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — The noun phrase "Update recommended" is translated as an imperative "更新してください".
-    - Current: `更新してください`
-    - Source: `Update recommended`
-    - Suggest: `更新を推奨します`
-    - The developer comment states "Update" is a noun; the source is a recommendation notice, not a command.
-- `certificate_warning_homepage_card_hcw2_title` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "Less than 7 days to update" is rendered as "残り 7 日以内に更新してください", an awkward and imprecise rendering of the remaining-time statement.
-    - Current: `残り 7 日以内に更新してください`
-    - Source: `Less than 7 days to left to update`
-    - Suggest: `更新まで残り 7 日を切りました`
-    - The source is a statement that fewer than 7 days remain to update, not an instruction phrased as "within the remaining 7 days".
-- `content_description_gallery` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — Brand name "Google Lens" is partly translated as "Google レンズ".
-    - Current: `Google レンズに送信する`
-    - Source: `Choose from gallery to send to Google Lens`
-    - Suggest: `Google Lens に送信する`
-    - Product/brand names must stay untranslated; the source is "Google Lens".
-- `content_description_take_photo` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — Brand name "Google Lens" is partly translated as "Google レンズ".
-    - Current: `Google レンズに送信する`
-    - Source: `Take photo and send to Google Lens`
-    - Suggest: `Google Lens に送信する`
-    - Product/brand names must stay untranslated; the source is "Google Lens".
-- `context_menu_open_image_with_google_lens` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — Brand name "Google Lens" is partly translated as "Google レンズ".
-    - Current: `Google レンズで検索`
-    - Source: `Search with Google Lens`
-    - Suggest: `Google Lens で検索`
-    - Product/brand names must stay untranslated; the source is "Google Lens".
-- `collections_migration_homepage_card_message` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "a simpler way" is rendered as "さらに簡単な" (even easier), adding a comparison not in the source.
-    - Current: `タブをさらに簡単に整理する方法があります`
-    - Source: `There’s a simpler way to keep your tabs organized`
-    - Suggest: `タブをもっと簡単に整理する方法があります`
-    - The source says there is a simpler way to keep tabs organized; "さらに" implies an additional degree beyond an existing easy method.
-- `confirm_clear_permission_site` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "clear" is rendered as 削除 here but 消去 in the parallel confirm_clear_permissions_* strings.
-    - Current: `このサイトのこの許可設定を削除してもよろしいですか？`
-    - Source: `Are you sure that you want to clear this permission for this site?`
-    - Suggest: `このサイトのこの許可設定を消去してもよろしいですか？`
-    - Same source verb "clear" on the same dialog surface should use one term consistently.
-- `credit_cards_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "Navigate back" is rendered as "go back to the previous page", which refers to a web page rather than the settings screen back button.
-    - Current: `前のページへ戻る`
-    - Source: `Navigate back`
-    - Suggest: `前に戻る`
-    - The source is a generic "Navigate back" content description for the credit card feature top bar back button; "ページ" (page) introduces content not in the source and misdescribes the control.
-- `debug_drawer_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — Content description says "go back to the previous page" instead of navigating back within the debug drawer.
-    - Current: `前のページへ戻ります`
-    - Source: `Navigate back`
-    - Suggest: `前に戻ります`
-    - The developer comment says this navigates back within the debug drawer, not to a previous web page; "ページ" introduces content not in the source "Navigate back".
-- `debug_drawer_addresses_title` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "Addresses" (postal addresses feature) is rendered as "アドレス", which means email/URL address, inconsistent with the related strings that use "住所".
-    - Current: `アドレス`
-    - Source: `Addresses`
-    - Suggest: `住所`
-    - The Debug Drawer Addresses feature is about postal addresses; sibling strings debug_drawer_add_new_address, debug_drawer_addresses_management_header and debug_drawer_delete_all_addresses all translate address as "住所".
-- `debug_drawer_override_current_region_label` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — A text field label is rendered as a sentence with a verb ending, unlike the source noun-phrase label.
-    - Current: `現在のリージョンを上書きします`
-    - Source: `Override current region`
-    - Suggest: `現在のリージョンを上書き`
-    - Per the developer comment this is a text field label, not a descriptive sentence; the parallel button string debug_drawer_override_region uses the noun form "上書き".
-- `debug_drawer_override_home_region_label` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — A text field label is rendered as a sentence with a verb ending, unlike the source noun-phrase label.
-    - Current: `ホームリージョンを上書きします`
-    - Source: `Override home region`
-    - Suggest: `ホームリージョンを上書き`
-    - Per the developer comment this is a text field label; sibling strings use the noun form "上書き".
-- _…and 100 more._
-
-### ✅ Fixed since the last run (1)
+### 🆕 New findings (1)
 
 - `downloads_delete_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — `downloads_delete_dialog_title` has plural variant ['one'], which ja does not have
     - Current: `{$quantity ->} [one] ファイルを削除しますか？ [other] %d 個のファイルを削除しますか？`
     - Source: `{$quantity ->} [one] Delete file? [other] Delete %d files?`
     - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+
+### ✅ Fixed since the last run (0)
+
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -392,14 +92,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (160)
+## 3. Open findings (161)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 1 |
 | 2 | Wrong content (says something other than the English) | 123 |
 | 3 | Degraded language (grammar, spelling, terminology) | 27 |
-| 4 | Cosmetic (typography, spacing) | 9 |
+| 4 | Cosmetic (typography, spacing) | 10 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -408,6 +108,10 @@ _Nothing reported._
     - Source: `{ <ul> } { <li> }Web addresses are usually written like { <strong> }http://www.example.com/{ </strong> }{ </li> } { <li> }Make sure that you’re using forward slashes (i.e. { <strong> }/{ </strong> }).{ </li> } { </ul> }`
     - Suggest: `{ <li> }ウェブのアドレスは通常 { <strong> }http://www.example.com/{ </strong> } のようなものになります。{ </li> } { <li> }スラッシュ ({ <strong> }/{ </strong> }) が使われているか確認してください。{ </li> }`
     - The closing { </li> } tags appear before the trailing Japanese text, so the sentences render outside the list items, unlike the en-US source where each sentence is fully inside { <li> }.
+- `downloads_delete_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — `downloads_delete_dialog_title` has plural variant ['one'], which ja does not have
+    - Current: `{$quantity ->} [one] ファイルを削除しますか？ [other] %d 個のファイルを削除しますか？`
+    - Source: `{$quantity ->} [one] Delete file? [other] Delete %d files?`
+    - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -907,6 +611,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Resolved to date (1)
+### Resolved to date (0)
 
-- `downloads_delete_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — fixed 2026-08-21
+_Nothing resolved yet._

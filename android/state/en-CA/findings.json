@@ -14,8 +14,8 @@
    "confidence": "medium"
   },
   "rationale": "Canadian English conventionally spells this verb \"analyse\"; the en-CA locale should adapt the US \"analyze\" form.",
-  "resolved_on": "",
-  "status": "open",
+  "resolved_on": "2026-08-21",
+  "status": "fixed",
   "string_hash": "3cb14263",
   "string_id": "preference_privacy_block_analytics_summary",
   "suggest": "Used to collect, analyse and measure activities like tapping and scrolling",

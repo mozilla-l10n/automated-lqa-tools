@@ -2610,13 +2610,13 @@
   "last_seen": "2026-08-21",
   "locale": "sl",
   "origin": {},
-  "rationale": "The source uses %1$s; the translation drops the argument index, which does not match the source placeholder and can break formatting.",
-  "resolved_on": "2026-08-21",
-  "status": "fixed",
+  "rationale": "The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.",
+  "resolved_on": "",
+  "status": "open",
   "string_hash": "0f0067d4",
   "string_id": "onboarding_first_screen_title",
   "suggest": "Dobrodošli v %1$su",
-  "summary": "Placeholder %1$s was changed to %su, breaking the format argument.",
+  "summary": "`onboarding_first_screen_title` has placeholders %s where the source has %1$s",
   "suppressed_by": ""
  },
  {

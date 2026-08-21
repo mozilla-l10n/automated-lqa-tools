@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `7134a6c77a67` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `7134a6c77a67` |
-| **Previous run** | 2026-08-21 @ `0d02c6c9f0f6` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
+| **Previous run** | 2026-08-21 @ `7134a6c77a67` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 2,886 |
 
@@ -18,43 +18,9 @@ Also for es-MX: [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (7)
+### 🆕 New findings (0)
 
-- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-es-rMX/strings.xml` — `mozac_browser_errorpages_offline_message` quotes “Volver a intentarlo” but the string it names, `mozac_browser_errorpages_page_refresh`, reads “Intenta de nuevo”
-    - Current: `{ <p> }El navegador está operando en modo sin conexión y no puede conectarse con el elemento solicitado.{ </p> } { <ul> } { <li> }¿Estás conectado el equipo a una red activa?{ </li> } { <li> }Presiona "Volver a intentar…`
-    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
-    - Suggest: `Intenta de nuevo`
-    - In the source this string quotes “Try Again”, which is exactly the value of `mozac_browser_errorpages_page_refresh` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `never_translate_site_header_preference` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — `never_translate_site_header_preference` quotes “No traducir nunca este sitio” but the string it names, `translation_option_bottom_sheet_never_translate_site`, reads “Nunca traducir este sitio”
-    - Current: `Para añadir un sitio nuevo: visítalo y selecciona “No traducir nunca este sitio” en el menú de traducción.`
-    - Source: `To add a new site: Visit it and select “Never translate this site” from the translation menu.`
-    - Suggest: `Nunca traducir este sitio`
-    - In the source this string quotes “Never translate this site”, which is exactly the value of `translation_option_bottom_sheet_never_translate_site` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rMX/strings.xml` — `firstrun_shortcut_text` quotes “agregar a la página de inicio” but the string it names, `menu_add_to_home_screen`, reads “Agregar a la pantalla de inicio”
-    - Current: `Regresa rápidamente a tus sitios favoritos en %1$s. Selecciona "agregar a la página de inicio" desde el menú %1$s.`
-    - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
-    - Suggest: `Agregar a la pantalla de inicio`
-    - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-es-rMX/strings.xml` — `mozac_browser_errorpages_offline_message` uses straight double quotes
-    - Current: `{ <p> }El navegador está operando en modo sin conexión y no puede conectarse con el elemento solicitado.{ </p> } { <ul> } { <li> }¿Estás conectado el equipo a una red activa?{ </li> } { <li> }Presiona "Volver a intentar…`
-    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
-    - Suggest: `Presiona “Volver a intentarlo”`
-    - The locale's quote convention is `curly-double` (12 occurrences).
-- `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — `preference_summary_delete_browsing_data_on_quit_2` uses straight double quotes
-    - Current: `Eliminar automáticamente los datos de navegación cuando selecciones "Salir" en el menú principal`
-    - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
-    - Suggest: `“Salir”`
-    - The locale's quote convention is `curly-double` (12 occurrences).
-- `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
-    - Current: `La dirección web debe contener "https://" o "http://"`
-    - Source: `Web address must contain “https://” or “http://”`
-    - Suggest: `“https://” o “http://”`
-    - The locale's quote convention is `curly-double` (12 occurrences).
-- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rMX/strings.xml` — `firstrun_shortcut_text` uses straight double quotes
-    - Current: `Regresa rápidamente a tus sitios favoritos en %1$s. Selecciona "agregar a la página de inicio" desde el menú %1$s.`
-    - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
-    - Suggest: `“Agregar a la pantalla de inicio”`
-    - The locale's quote convention is `curly-double` (12 occurrences).
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

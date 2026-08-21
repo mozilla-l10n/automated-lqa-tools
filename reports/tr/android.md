@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `7134a6c77a67` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `7134a6c77a67` |
-| **Previous run** | 2026-08-20 @ `afd16223d876` |
-| **Mode** | baseline |
-| **Strings reviewed this run** | 2,897 of 2,897 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
+| **Previous run** | 2026-08-21 @ `7134a6c77a67` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 0 of 2,897 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,357 +18,57 @@ Also for tr: [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (146)
-
-- `mozac_browser_errorpages_security_bad_cert_techInfo` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-tr/strings.xml` — "doğu" is a typo for "doğru" (correct).
-    - Current: `sunucu doğu ara sertifikaları göndermiyor`
-    - Source: `{ <label> }Someone could be trying to impersonate the site and you should not continue.{ </label> } { <br> }{ <br> } { <label> }Websites prove their identity via certificates. %1$s does not trust { <b> }%2$s{ </b> } bec…`
-    - Suggest: `sunucu doğru ara sertifikaları göndermiyor`
-    - Source says "the server is not sending the correct intermediate certificates"; "doğu" (east) is a typo for "doğru".
-- `mozac_browser_errorpages_security_bad_hsts_cert_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-tr/strings.xml` — "çalıştığınızı sayfa" is a typo for "çalıştığınız sayfa".
-    - Current: `görüntülemeye çalıştığınızı sayfa gösterilemiyor`
-    - Source: `{ <ul> } { <li> }The page you are trying to view cannot be shown because this website requires a secure connection.{ </li> } { <li> }The issue is most likely with the website, and there is nothing you can do to resolve…`
-    - Suggest: `görüntülemeye çalıştığınız sayfa gösterilemiyor`
-    - Accusative suffix on the relative clause is ungrammatical; should be "çalıştığınız sayfa" (the page you are trying to view).
-- `mozac_browser_errorpages_port_blocked_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-tr/strings.xml` — Possessive mismatch: "sizi korumak ve güvenliğini sağlamak" should be "güvenliğinizi".
-    - Current: `sizi korumak ve güvenliğini sağlamak amacıyla`
-    - Source: `{ <p> }The requested address specified a port (e.g., { <q> }mozilla.org:80{ </q> } for port 80 on mozilla.org) normally used for purposes { <em> }other{ </em> } than Web browsing. The browser has canceled the request fo…`
-    - Suggest: `sizi korumak ve güvenliğinizi sağlamak amacıyla`
-    - Source: "for your protection and security"; the 2nd person possessive is missing, making it read "its security".
-- `mozac_browser_errorpages_safe_phishing_uri_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-tr/strings.xml` — Stray leading space before the placeholder.
-    - Current: `{ <p> } %1$s web sayfasının`
-    - Source: `{ <p> }This web page at %1$s has been reported as a deceptive site and has been blocked based on your security preferences.{ </p> }`
-    - Suggest: `{ <p> }%1$s web sayfasının`
-    - Extra space after the opening paragraph markup, inconsistent with the other error page strings.
-- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-tr/strings.xml` — "düğmesine tıklayın" (click) is wrong for a touch UI; source says "Press".
-    - Current: `“Yeniden dene” düğmesine tıklayın`
-    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
-    - Suggest: `“Yeniden dene” düğmesine basın`
-    - Source is "Press “Try Again”"; on Android the action is tapping/pressing, not clicking.
-- `mozac_browser_errorpages_unknown_protocol_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-tr/strings.xml` — The second half of the first bullet ("Check the site for extra requirements.") is omitted.
-    - Current: `Çoklu ortam barındıran veya metin içermeyen bir hizmete bağlanmak istiyor olabilirsiniz.`
-    - Source: `{ <p> }The address specifies a protocol (e.g., { <q> }wxyz://{ </q> }) the browser does not recognize, so the browser cannot properly connect to the site.{ </p> } { <ul> } { <li> }Are you trying to access multimedia or…`
-    - Suggest: `Çoklu ortam barındıran veya metin içermeyen bir hizmete bağlanmak istiyor olabilirsiniz. Sitede ek gereksinimler olup olmadığını kontrol edin.`
-    - Source bullet contains two sentences; the instruction to check the site for extra requirements is missing from the translation.
-- `mozac_browser_errorpages_unsafe_content_type_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-tr/strings.xml` — The imperative request "Please contact the website owners" is rendered as a tentative suggestion ("you might consider notifying them").
-    - Current: `Site sahipleriyle iletişim kurarak bu sorunu onlara bildirmeyi düşünebilirsiniz.`
-    - Source: `{ <ul> } { <li> }Please contact the website owners to inform them of this problem.{ </li> } { </ul> }`
-    - Suggest: `Lütfen bu sorunu bildirmek için site sahipleriyle iletişime geçin.`
-    - Source is a direct request ("Please contact the website owners to inform them of this problem."); the Turkish weakens it to "you may consider notifying them", changing the meaning.
-- `mozac_browser_awesomebar_remove_suggestion` — `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-tr/strings.xml` — "Remove suggestion" (remove from displayed results) is translated as "delete suggestion".
-    - Current: `Öneriyi sil`
-    - Source: `Remove suggestion`
-    - Suggest: `Öneriyi kaldır`
-    - The developer comment says the button removes the suggestion from the displayed results; "sil" (delete) implies permanent deletion, whereas "kaldır" matches "remove".
-- `mozac_feature_addons_optional_permissions_with_data_collection_only_dialog_title` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-tr/strings.xml` — "requests additional data collection" is rendered as the add-on itself wanting to collect data, changing the meaning of the permission request.
-    - Current: `%1$s ek veriler toplamak istiyor`
-    - Source: `%1$s requests additional data collection`
-    - Suggest: `%1$s ek veri toplama izni istiyor`
-    - The source asks the user to grant additional data collection permission; the Turkish drops the permission/request notion and also uses an ungrammatical plural object ("ek veriler toplamak" instead of "ek veri toplamak"), parallel to the sibling title string which uses "ek ayarlar istiyor".
-- `mozac_feature_addons_permissions_management_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-tr/strings.xml` — "extension" is rendered as "eklenti" (add-on) here but as "uzantı" in the parallel _for_update string and elsewhere in the file.
-    - Current: `Eklenti kullanımını izleme ve temaları yönetme`
-    - Source: `Monitor extension usage and manage themes`
-    - Suggest: `Uzantı kullanımını izleme ve temaları yönetme`
-    - Source says "Monitor extension usage"; the identical string mozac_feature_addons_permissions_management_description_for_update uses "Uzantı", and "uzantı" is the established term for "extension" ("eklenti" = add-on).
-- `mozac_feature_autofill_confirmation_authenticity` — `mozilla-mobile/android-components/components/feature/autofill/src/main/res/values-tr/strings.xml` — "authenticity" is rendered as "yetkinlik" (competence) instead of "gerçeklik/özgünlük" (authenticity).
-    - Current: `uygulamanın yetkinliğini doğrulayamadı`
-    - Source: `%1$s could not verify the authenticity of the application. Do you want to proceed with autofilling the selected credentials?`
-    - Suggest: `uygulamanın gerçekliğini doğrulayamadı`
-    - The source says the app's authenticity could not be verified; "yetkinlik" means competence/proficiency, which is a different concept. Turkish for authenticity here is "gerçeklik" or "özgünlük".
-- `mozac_feature_applinks_open_in` — `mozilla-mobile/android-components/components/feature/app-links/src/main/res/values-tr/strings.xml` — "Open in…" is translated as "Birlikte aç…" (Open with…), changing the meaning.
-    - Current: `Birlikte aç…`
-    - Source: `Open in…`
-    - Suggest: `Şununla aç…`
-    - The source is the title for a list of external apps to open the link in; "Birlikte aç" is a fragment meaning "open together/with" and does not convey "Open in…" correctly on its own.
-- `mozac_feature_findindpage_dismiss` — `mozilla-mobile/android-components/components/feature/findinpage/src/main/res/values-tr/strings.xml` — "Dismiss find in page" is rendered as "close finding a page" instead of closing the find-in-page UI.
-    - Current: `Sayfa bulmayı kapat`
-    - Source: `Dismiss find in page`
-    - Suggest: `Sayfada bul özelliğini kapat`
-    - The source refers to dismissing the "find in page" feature, which is translated elsewhere in this file as "Sayfada bul"; "Sayfa bulmayı" means "finding a page".
-- `mozac_feature_prompt_folder_upload_confirm_title` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-tr/strings.xml` — "Upload" is rendered as "gönderilsin" in the dialog title but as "Karşıya yükle" in the confirm button and message of the same dialog.
-    - Current: `Dosyalar gönderilsin mi?`
-    - Source: `Upload files?`
-    - Suggest: `Dosyalar karşıya yüklensin mi?`
-    - Same source term "upload" in one dialog must use one term; the message and positive button use "karşıya yükle".
-- `mozac_feature_passwords_importer_dialog_description` — `mozilla-mobile/android-components/components/feature/password-importer/src/main/res/values-tr/strings.xml` — "It should only take a few seconds" is translated as a definite statement, dropping the hedge "should only".
-    - Current: `İşlem birkaç saniye sürecek.`
-    - Source: `Keep this screen open. It should only take a few seconds.`
-    - Suggest: `İşlem yalnızca birkaç saniye sürmeli.`
-    - The source expresses an estimate ("should only take"), not a certainty.
-- `mozac_feature_prompts_no_more_dialogs` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-tr/strings.xml` — Wrong case suffix: "oluşturmasının önle" should be accusative "oluşturmasını önle".
-    - Current: `Bu sayfanın ek iletişim kutuları oluşturmasının önle`
-    - Source: `Prevent this page from creating additional dialogs`
-    - Suggest: `Bu sayfanın ek iletişim kutuları oluşturmasını önle`
-    - The verb "önlemek" takes the accusative; the genitive "-nın" is a grammatical error.
-- `mozac_feature_prompts_set_date` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-tr/strings.xml` — "Set" (button action) rendered as past participle "Ayarlandı" ("Set/Done" state) instead of an imperative.
-    - Current: `Ayarlandı`
-    - Source: `Set`
-    - Suggest: `Ayarla`
-    - The developer comment says this is the positive button label for selecting a date; it must be an action verb, not a statement that something was set.
-- `mozac_feature_prompts_identity_credentials_continue` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-tr/strings.xml` — "Continue" translated as "İleri" (Next) instead of "Devam".
-    - Current: `İleri`
-    - Source: `Continue`
-    - Suggest: `Devam`
-    - The source is the positive button "Continue"; "İleri" means "Next/Forward", a different action label.
-- `mozac_feature_relay_email_masks_cfr` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-tr/strings.xml` — The Turkish adds a literal "Relay" after the %s placeholder, which already holds the full service name "Firefox Relay", producing "Firefox Relay Relay".
-    - Current: `Yeni! %s Relay e-posta maskelerini`
-    - Source: `New! %s email masks are now available on mobile.`
-    - Suggest: `Yeni! %s e-posta maskelerini`
-    - The developer comment states %s is the name of the service, "Firefox Relay"; repeating "Relay" duplicates the brand name.
-- `mozac_feature_sitepermissions_storage_access_message` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-tr/strings.xml` — "if it's not clear why" is rendered as "if you don't know why", changing the meaning.
-    - Current: `bilmiyorsanız`
-    - Source: `You may want to block access if it’s not clear why %s needs this data.`
-    - Suggest: `belli değilse`
-    - The source says the user may block access if it is not clear why the site needs the data; the Turkish shifts this to the user's own lack of knowledge.
-- `mozac_summarize_download_nano_consent_message` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-tr/strings.xml` — "summaries that stay in your control" is mistranslated as "summaries that never leave your device".
-    - Current: `cihazınızdan asla dışarı çıkmayan sayfa özetleri`
-    - Source: `A one-time download lets %s create page summaries that stay in your control.`
-    - Suggest: `denetiminizde kalan sayfa özetleri`
-    - The source claims control over the summaries, not that they never leave the device; this adds a technical claim not in the en-US text.
-- `mozac_summarize_shake_consent_off_device_message` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-tr/strings.xml` — The Turkish reverses the sentence structure so the app "creates" the summary in seconds instead of the user "getting" a summary from the app.
-    - Current: `Cihazınızı sallayın, sayfanın özetini %1$s saniyeler içinde oluştursun.`
-    - Source: `Shake your device, get a page summary from %1$s in seconds.`
-    - Suggest: `Cihazınızı sallayın, saniyeler içinde %1$s tarayıcısından sayfa özeti alın.`
-    - Source: "Shake your device, get a page summary from %1$s in seconds." — the imperative addressed to the user is "get a page summary"; the translation turns it into a wish that the app produce it.
-- `mozac_lib_crash_background_process_notification_title` — `mozilla-mobile/android-components/components/lib/crash/src/main/res/values-tr/strings.xml` — The apology "Sorry." from the source is dropped in the Turkish translation.
-    - Current: `%1$s uygulamasında bir sorun oluştu.`
-    - Source: `Sorry. A problem occurred in %1$s.`
-    - Suggest: `Üzgünüz. %1$s uygulamasında bir sorun oluştu.`
-    - Source is "Sorry. A problem occurred in %1$s."; the first sentence is missing from the target.
-- `mozac_summarize_settings_shake_to_summarize` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-tr/strings.xml` — Imperative informal "salla" conflicts with the formal register used elsewhere in the same feature ("sallayın").
-    - Current: `Özetlemek için salla`
-    - Source: `Shake to summarize`
-    - Suggest: `Özetlemek için sallayın`
-    - The locale convention is formal address, and sibling strings use "sallayın"/"ayarlayın".
-- `mozac_lib_gathering_crash_telemetry_in_progress` — `mozilla-mobile/android-components/components/lib/crash/src/main/res/values-tr/strings.xml` — "Gathering crash telemetry data" is translated identically to the plain crash-data string, dropping "telemetry".
-    - Current: `Çökme verileri toplanıyor`
-    - Source: `Gathering crash telemetry data`
-    - Suggest: `Çökme telemetri verileri toplanıyor`
-    - The source distinguishes telemetry data from crash data; the Turkish text is identical to mozac_lib_gathering_crash_data_in_progress and omits "telemetry".
-- `mozac_support_ktx_menu_call_with` — `mozilla-mobile/android-components/components/support/ktx/src/main/res/values-tr/strings.xml` — "Bununla çağrı…" is ungrammatical/nonsensical for "Call with…".
-    - Current: `Bununla çağrı…`
-    - Source: `Call with…`
-    - Suggest: `Şununla ara…`
-    - The source is a verb phrase for choosing an app to place a call with; the Turkish uses a bare noun "çağrı" with "bununla", which is not grammatical Turkish for this action.
-- `mozac_support_ktx_menu_email_with` — `mozilla-mobile/android-components/components/support/ktx/src/main/res/values-tr/strings.xml` — "Bununla e-posta…" lacks a verb, rendering "Email with…" ungrammatically.
-    - Current: `Bununla e-posta…`
-    - Source: `Email with…`
-    - Suggest: `Şununla e-posta gönder…`
-    - The source is an action for choosing an app to send email with; the Turkish is a bare noun phrase with no verb.
-- `add_login_hostname_invalid_text_2` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "hostname" rendered as "sunucu" (server) instead of host/hostname.
-    - Current: `Geçerli bir sunucu gerekli`
-    - Source: `Valid hostname required`
-    - Suggest: `Geçerli bir sunucu adı gerekli`
-    - The source refers to a hostname field; "sunucu" means server, dropping the "name" part of hostname.
-- `add_login_save_new_login_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "login" translated as "hesap" (account) while the surrounding add-login screen uses "parola" (password).
-    - Current: `Yeni hesabı kaydet`
-    - Source: `Save new login`
-    - Suggest: `Yeni parolayı kaydet`
-    - add_login_2 renders the same feature as "Parola ekle"; using "hesap" here is inconsistent terminology on the same surface.
-- `addresses_district` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "District" is translated as "İl" (province), which is the wrong administrative level and duplicates the translation used for "Province".
-    - Current: `İl`
-    - Source: `District`
-    - Suggest: `İlçe`
-    - The source "District" denotes a sub-locality/secondary level below the country level; "İl" means province/state in Turkish and is already used for addresses_province, so the district field wrongly names a higher-level unit.
-- `ai_controls_block_dialog_body` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Afterwards, you can unblock anything you want to keep using" is rendered without the "afterwards" and as an ability statement, dropping part of the source meaning.
-    - Current: `Kullanmaya devam etmek istediğiniz özelliklerin engelini kaldırabilirsiniz.`
-    - Source: `You won’t see new or current AI enhancements in %1$s, or pop-ups about them. Afterwards, you can unblock anything you want to keep using.  Blocking also affects extensions that use AI provided by %1$s.`
-    - Suggest: `Daha sonra, kullanmaya devam etmek istediğiniz özelliklerin engelini kaldırabilirsiniz.`
-    - The source says "Afterwards, you can unblock anything you want to keep using."; the temporal qualifier is dropped.
-- `ai_controls_block_dialog_what_will_be_blocked` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — Source is a statement label ending with a colon, but the translation turns it into a question with a question mark.
-    - Current: `Neler engellenecek?`
-    - Source: `What will be blocked:`
-    - Suggest: `Engellenecekler:`
-    - The developer comment says this is a label shown above the list of features; the en-US uses "What will be blocked:" with a colon, not a question.
-- `ai_controls_voice_search_description` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — The service name "Google Speech Services" is rendered in the singular as "Google Speech Service".
-    - Current: `Google Speech Service`
-    - Source: `Audio is converted to text by Google Speech Services.`
-    - Suggest: `Google Speech Services`
-    - Product/service name must match the source brand name "Google Speech Services".
-- `alternative_app_icon_option_gradient_twilight` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Twilight" (evening dusk) is translated as "Şafak", which means dawn/daybreak.
-    - Current: `Şafak`
-    - Source: `Twilight`
-    - Suggest: `Alacakaranlık`
-    - The developer comment describes the purple sky color during twilight (evening dusk); Turkish "Şafak" means dawn/sunrise, the opposite time of day. "Alacakaranlık" is the standard term for twilight.
-- `bookmark_empty_list_guest_cta` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — Informal imperative used where the locale convention is formal address.
-    - Current: `Eşitlemek için giriş yap`
-    - Source: `Sign in to sync`
-    - Suggest: `Eşitlemek için giriş yapın`
-    - The tr locale uses the formal (-ın) imperative form, as in the surrounding strings ("Yeniden deneyin.", "Tüm yer imlerinizi bir arada tutun"); this button uses the informal "yap".
-- `bookmark_error_edit_bookmark` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — Past-tense failure message rendered as present/ongoing "cannot be edited" instead of "could not be edited".
-    - Current: `Yer imi düzenlenemiyor`
-    - Source: `Could not edit bookmark`
-    - Suggest: `Yer imi düzenlenemedi`
-    - Source "Could not edit bookmark" reports a completed failure; parallel snackbars use the -emedi form ("Klasör eklenemedi", "Üst klasör değiştirilemedi").
-- `bookmark_error_edit_folder` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — Past-tense failure message rendered as present tense "cannot be edited".
-    - Current: `Klasör düzenlenemiyor`
-    - Source: `Could not edit folder`
-    - Suggest: `Klasör düzenlenemedi`
-    - Source "Could not edit folder" is a completed failure; inconsistent with "Klasör eklenemedi" and "Üst klasör değiştirilemedi" in the same snackbar set.
-- `bookmark_sort_menu_newest` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Sort by newest" translated without the verb, unlike the sibling sort options.
-    - Current: `Yeniden eskiye`
-    - Source: `Sort by newest`
-    - Suggest: `En yeniye göre sırala`
-    - Source is "Sort by newest"; the other menu items are rendered as "... sırala", while this one drops the sorting verb and states a range "newest to oldest".
-- `bookmark_sort_menu_oldest` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Sort by oldest" is rendered without the verb, unlike the parallel sort menu items.
-    - Current: `Eskiden yeniye`
-    - Source: `Sort by oldest`
-    - Suggest: `Eskiden yeniye sırala`
-    - The source is an action label "Sort by oldest"; the sibling string bookmark_sort_menu_z_to_a is translated as "Z’den A’ya sırala", so the missing "sırala" makes this inconsistent and drops the action.
-- `bookmark_url_label` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — The label "URL" is translated and set in all caps as "ADRES".
-    - Current: `ADRES`
-    - Source: `URL`
-    - Suggest: `URL`
-    - URL is a standard technical term kept as-is elsewhere in the Turkish build; translating it to an all-caps "ADRES" changes the term and the casing without source support.
-- `browser_custom_tab_menu_handlebar_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Close custom tab menu sheet" loses the "sheet" element in the content description.
-    - Current: `Özel sekme menüsünü kapat`
-    - Source: `Close custom tab menu sheet`
-    - Suggest: `Özel sekme menüsü sayfasını kapat`
-    - The source describes closing the bottom-sheet of the custom tab menu; the translation drops "sheet", which the screen reader description needs to identify the control.
-- `browser_menu_recommended_extensions_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "More info" is rendered as an imperative "Get more info" instead of a noun phrase.
-    - Current: `Daha fazla bilgi al`
-    - Source: `More info`
-    - Suggest: `Daha fazla bilgi`
-    - The source is a noun phrase label/content description "More info"; "Daha fazla bilgi al" adds the verb "al" (get), changing it into a command.
-- `browser_menu_try_a_recommended_extension_description` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — Singular "a recommended extension" is translated as plural "önerilen uzantıları".
-    - Current: `Önerilen uzantıları deneyin`
-    - Source: `Try a recommended extension`
-    - Suggest: `Önerilen bir uzantıyı deneyin`
-    - Source says "Try a recommended extension" (singular); the Turkish uses the plural definite object.
-- `certificate_warning_homepage_card_hcr1_message` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — Definite statement "will stop working properly" is weakened to "may not work properly".
-    - Current: `Firefox sürümünüz artık düzgün çalışmayabilir`
-    - Source: `A root certificate will expire, causing your version of Firefox to stop working properly.`
-    - Suggest: `Firefox sürümünüz düzgün çalışmayacak`
-    - The source states the version will stop working properly; "çalışmayabilir" expresses possibility, altering the meaning.
-- `certificate_warning_homepage_card_hcw2_message` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "other Firefox features" is translated as "bazı Firefox özellikleri" (some Firefox features).
-    - Current: `eklentiler ve bazı Firefox özellikleri`
-    - Source: `On March 14, add-ons and other Firefox features will stop working because a root certificate is expiring.`
-    - Suggest: `eklentiler ve diğer Firefox özellikleri`
-    - The source says "add-ons and other Firefox features"; "bazı" means "some", not "other".
-- `certificate_warning_push_notification_pnr1_message` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — The date meaning is changed: source says features stop working on March 14, translation says after March 14.
-    - Current: `14 Mart’tan sonra çalışmayacak`
-    - Source: `Add-ons and some features will stop working on March 14.`
-    - Suggest: `14 Mart’ta çalışmayı durduracak`
-    - en-US "will stop working on March 14" means on that date, not after it.
-- `certificate_warning_push_notification_update_recommended_title` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Update recommended" (noun + past participle predicate) is rendered as the noun phrase "Recommended update".
-    - Current: `Önerilen güncelleme`
-    - Source: `Update recommended`
-    - Suggest: `Güncelleme öneriliyor`
-    - Source states that an update is recommended; the Turkish reads "the recommended update", changing the meaning.
-- `customize_toggle_jump_back_in` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Jump back in" is rendered as "Açık sekmeler" (Open tabs), which names a different homepage section.
-    - Current: `Açık sekmeler`
-    - Source: `Jump back in`
-    - Suggest: `Kaldığınız yerden devam edin`
-    - The source refers to the "Jump back in" section (recent tab), not "Open tabs"; the Turkish says something else.
-- `customize_toggle_pocket_3` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Stories" translated as "Haberler" (News) instead of "Hikâyeler"/"Öyküler".
-    - Current: `Haberler`
-    - Source: `Stories`
-    - Suggest: `Hikâyeler`
-    - Pocket "Stories" are recommended articles, not news; the Turkish term changes the meaning.
-- `customize_toggle_pocket_sponsored` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Sponsored stories" translated as "Sponsorlu haberler" (sponsored news).
-    - Current: `Sponsorlu haberler`
-    - Source: `Sponsored stories`
-    - Suggest: `Sponsorlu hikâyeler`
-    - "Stories" is not "haberler" (news); consistent with customize_toggle_pocket_3.
-- `debug_drawer_add_new_address` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "selected locale" translated as "Seçili dil" (selected language) instead of locale.
-    - Current: `Seçili dil için yeni adres ekle`
-    - Source: `Add new address for selected locale`
-    - Suggest: `Seçili yerel ayar için yeni adres ekle`
-    - A locale is a language/region combination; in this debug tool addresses depend on region, so "dil" is inaccurate.
-- `debug_drawer_addresses_debug_locales_header` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Debug locales to enable" translated as "Etkinleştirilebilen hata ayıklama dilleri" (enable-able debug languages), losing "locale" and altering the meaning.
-    - Current: `Etkinleştirilebilen hata ayıklama dilleri`
-    - Source: `Debug locales to enable`
-    - Suggest: `Etkinleştirilecek hata ayıklama yerel ayarları`
-    - Source lists locales to be enabled, not languages that can be enabled.
-- `deleting_browsing_data_in_progress` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "browsing data" is rendered as "Göz atma verileri" here while the same term is translated "gezinti verileri" in the related delete-browsing-data dialog string.
-    - Current: `Göz atma verileri siliniyor…`
-    - Source: `Deleting browsing data…`
-    - Suggest: `Gezinti verileri siliniyor…`
-    - delete_browsing_data_prompt_message_3 in the same surface uses “gezinti verileri” for "browsing data"; using a different term for the same feature is inconsistent.
-- `download_rename_error_cannot_rename_title` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — Present-tense inability "Can't rename file" rendered as past tense "could not be renamed".
-    - Current: `Dosya yeniden adlandırılamadı`
-    - Source: `Can’t rename file`
-    - Suggest: `Dosya yeniden adlandırılamıyor`
-    - Source is "Can’t rename file" (present inability), matching the description string which uses "adı değiştirilemiyor"; the past tense changes the meaning and is inconsistent with the dialog body.
-- `edit_tab_group_bottom_sheet_grabber_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "collapse drag handle" is rendered as "sürükleme tutamacını daralt", using "daralt" (narrow/shrink) instead of the UI sense of collapsing a sheet.
-    - Current: `Yeni grup, sürükleme tutamacını daralt`
-    - Source: `New group, collapse drag handle`
-    - Suggest: `Yeni grup, sürükleme tutamacını kapat`
-    - In the source the handle collapses the bottom sheet; Turkish "daralt" means to narrow, not collapse a sheet. Mozilla tr uses "daralt" for collapsing lists but here it is a sheet dismiss control; at minimum the current wording says the handle itself is narrowed.
-- `etp_cookies_description` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — The source says cookies are used to compile browsing data, but the translation says they are used to track your browsing.
-    - Current: `farklı siteler arasındaki gezintilerinizi izlemek için kullandığı çerezleri engeller`
-    - Source: `Blocks cookies that ad networks and analytics companies use to compile your browsing data across many sites.`
-    - Suggest: `birçok sitedeki gezinti verilerinizi derlemek için kullandığı çerezleri engeller`
-    - "compile your browsing data across many sites" means collecting/compiling data, not "izlemek" (to track).
-- `edit_login_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Edit login" is translated as "Hesabı düzenle" (edit account) rather than the login/password entry term.
-    - Current: `Hesabı düzenle`
-    - Source: `Edit login`
-    - Suggest: `Hesap bilgilerini düzenle`
-    - The string refers to a saved login entry, not a user account; "Hesabı düzenle" suggests editing an account, which conflicts with the related password terminology (e.g. edit_2 "Parola düzenle").
-- `exceptions_empty_message_description` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "tracking protection" rendered as "izlenme koruması" instead of the established "izleme koruması".
-    - Current: `izlenme korumasını`
-    - Source: `Exceptions let you disable tracking protection for selected sites.`
-    - Suggest: `izleme korumasını`
-    - Elsewhere in the same file "tracking" is rendered as "takip/izleme" (e.g. "Takip kodu", "Takip amaçlı içerikler"); "izlenme koruması" is inconsistent terminology for Tracking Protection.
-- `exceptions_empty_message_learn_more_link` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — Informal imperative used where the locale convention is formal address.
-    - Current: `Daha fazla bilgi al`
-    - Source: `Learn more`
-    - Suggest: `Daha fazla bilgi alın`
-    - The tr locale uses the formal (plural) imperative, as in the surrounding strings ("Ayarlara git" aside, e.g. "telemetriyi etkinleştirin", "yeniden başlatın"); "al" is the informal singular form.
-- `ip_protection_mozilla_vpn_upsell_body` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — Missing word in "300’den fazla konum arasından istediğiniz seçin" — should be "istediğinizi seçin".
-    - Current: `300’den fazla konum arasından istediğiniz seçin`
-    - Source: `Choose from 300+ locations and protect all your apps on up to 5 devices.`
-    - Suggest: `300’den fazla konum arasından istediğinizi seçin`
-    - The accusative object requires "istediğinizi"; as written the sentence is ungrammatical.
-- _…and 86 more._
-
-### ✅ Fixed since the last run (9)
+### 🆕 New findings (9)
 
 - `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-tr/strings.xml` — `mozac_browser_errorpages_offline_message` quotes “Yeniden dene” but the string it names, `mozac_browser_errorpages_page_refresh`, reads “Tekrar dene”
     - Current: `{ <p> }Tarayıcı şu an çevrimdışı kipte çalışıyor ve istenen öğeye bağlanamaz.{ </p> }{ <ul> }{ <li> }Cihazınız etkin bir ağa bağlı mı?{ </li> }{ <li> }Çevrimiçi kipe geçerek sayfayı tazelemek için “Yeniden dene” düğmesi…`
     - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
     - Suggest: `Tekrar dene`
     - In the source this string quotes “Try Again”, which is exactly the value of `mozac_browser_errorpages_page_refresh` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `mozac_lib_send_crash_report_in_progress` — `mozilla-mobile/android-components/components/lib/crash/src/main/res/values-tr/strings.xml` — Straight apostrophe used instead of the locale's typographic apostrophe.
-    - Current: `%1$s'ya`
+- `mozac_lib_send_crash_report_in_progress` — `mozilla-mobile/android-components/components/lib/crash/src/main/res/values-tr/strings.xml` — `mozac_lib_send_crash_report_in_progress` uses a straight apostrophe
+    - Current: `Çökme raporu %1$s'ya gönderiliyor`
     - Source: `Sending crash report to %1$s`
     - Suggest: `%1$s’ya`
-    - The tr convention is the typographic apostrophe (’), as used in the parallel string mozac_lib_crash_dialog_checkbox.
-- `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — Straight double quotes used instead of the locale's curly double quotes as in the source.
+    - The tree uses ’ 156 times against 5 straight.
+- `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — `preference_summary_delete_browsing_data_on_quit_2` uses straight double quotes
+    - Current: `Ana menüden "Çık"ı seçtiğinizde gezinti verilerini otomatik olarak siler`
+    - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
+    - Suggest: `“Çık”ı`
+    - The locale's quote convention is `curly-double` (14 occurrences).
+- `ip_protection_onboarding_body_promo` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — `ip_protection_onboarding_body_promo` uses a straight apostrophe
+    - Current: `Gezintinizi daha gizli ve izlemesi zor hale getirmek için VPN'i açın. %1$s tarihine kadar sınırsız bant genişliğine sahip olmak için hemen deneyin. %2$s`
+    - Source: `Turn it on to make your browsing more private and harder to trace. Try it now to get unlimited bandwidth through %1$s. %2$s`
+    - Suggest: `VPN’i açın`
+    - The tree uses ’ 156 times against 5 straight.
+- `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
     - Current: `Web adresi "https://" veya "http://" içermelidir`
     - Source: `Web address must contain “https://” or “http://”`
     - Suggest: `Web adresi “https://” veya “http://” içermelidir`
-    - Source uses curly quotes and the tr convention is curly-double quotes.
-- `ip_protection_onboarding_body_promo` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — Straight apostrophe used in "VPN'i" instead of the locale's typographic apostrophe.
-    - Current: `VPN'i açın`
-    - Source: `Turn it on to make your browsing more private and harder to trace. Try it now to get unlimited bandwidth through %1$s. %2$s`
-    - Suggest: `VPN’i açın`
-    - The tr convention is the typographic apostrophe (’), used elsewhere in the same batch (e.g. ip_protection_settings_description "VPN’i açın").
-- `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — Straight double quotes used instead of the locale's curly double quotes.
-    - Current: `"Çık"ı`
-    - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
-    - Suggest: `“Çık”ı`
-    - The source uses curly quotes “Quit” and the tr convention is curly-double quotes.
-- `external_app_prompt` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — Straight apostrophe used instead of the typographic apostrophe required by the locale convention.
-    - Current: `%1$s'tan çıkabilirsiniz.`
+    - The locale's quote convention is `curly-double` (14 occurrences).
+- `external_app_prompt` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — `external_app_prompt` uses a straight apostrophe
+    - Current: `Bu bağlantıyı %2$s ile açmak için %1$s'tan çıkabilirsiniz.`
     - Source: `You can leave %1$s to open this link in %2$s.`
     - Suggest: `%1$s’tan çıkabilirsiniz.`
-    - The tr convention is the typographic apostrophe (’), as used in other strings in this batch (e.g. “Mozilla’ya”, “Firefox’u”).
-- `external_app_prompt_no_app` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — Straight apostrophe used instead of the typographic apostrophe required by the locale convention.
-    - Current: `%1$s'tan çıkabilirsiniz.`
+    - The tree uses ’ 156 times against 5 straight.
+- `external_app_prompt_no_app` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — `external_app_prompt_no_app` uses a straight apostrophe
+    - Current: `Cihazınızdaki uygulamalar bu bağlantıyı açamıyor. %2$s mağazasında uygun bir uygulama aramak için %1$s'tan çıkabilirsiniz.`
     - Source: `None of the apps on your device are able to open this link. You can leave %1$s to search %2$s for an app that can.`
     - Suggest: `%1$s’tan çıkabilirsiniz.`
-    - The tr convention is the typographic apostrophe (’), used elsewhere in the same file.
-- `external_multiple_apps_matched_exit` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — Straight apostrophe used instead of the typographic apostrophe required by the locale convention.
+    - The tree uses ’ 156 times against 5 straight.
+- `external_multiple_apps_matched_exit` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — `external_multiple_apps_matched_exit` uses a straight apostrophe
     - Current: `Gizli Gezinti'den çıkılsın mı?`
     - Source: `Exit Private Browsing?`
     - Suggest: `Gizli Gezinti’den çıkılsın mı?`
-    - The tr convention is the typographic apostrophe (’).
-- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — Straight double quotes used instead of the locale's curly double quotes.
-    - Current: `"Ana ekrana ekle"`
+    - The tree uses ’ 156 times against 5 straight.
+- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — `firstrun_shortcut_text` uses straight double quotes
+    - Current: `%1$s’ta sevdiğiniz sitelere çabucak ulaşabilirsiniz. %1$s menüsünden "Ana ekrana ekle"yi seçmeniz yeterli.`
     - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
     - Suggest: `“Ana ekrana ekle”`
-    - The tr convention is curly double quotes, and the source uses “ ” as well.
+    - The locale's quote convention is `curly-double` (14 occurrences).
+
+### ✅ Fixed since the last run (0)
+
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -434,14 +134,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (146)
+## 3. Open findings (155)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 83 |
+| 2 | Wrong content (says something other than the English) | 84 |
 | 3 | Degraded language (grammar, spelling, terminology) | 59 |
-| 4 | Cosmetic (typography, spacing) | 4 |
+| 4 | Cosmetic (typography, spacing) | 12 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -851,6 +551,11 @@ _Nothing in this category._
 
 ### D. Terminology, register & consistency
 
+- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-tr/strings.xml` — `mozac_browser_errorpages_offline_message` quotes “Yeniden dene” but the string it names, `mozac_browser_errorpages_page_refresh`, reads “Tekrar dene”
+    - Current: `{ <p> }Tarayıcı şu an çevrimdışı kipte çalışıyor ve istenen öğeye bağlanamaz.{ </p> }{ <ul> }{ <li> }Cihazınız etkin bir ağa bağlı mı?{ </li> }{ <li> }Çevrimiçi kipe geçerek sayfayı tazelemek için “Yeniden dene” düğmesi…`
+    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
+    - Suggest: `Tekrar dene`
+    - In the source this string quotes “Try Again”, which is exactly the value of `mozac_browser_errorpages_page_refresh` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `mozac_feature_addons_permissions_management_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-tr/strings.xml` — "extension" is rendered as "eklenti" (add-on) here but as "uzantı" in the parallel _for_update string and elsewhere in the file.
     - Current: `Eklenti kullanımını izleme ve temaları yönetme`
     - Source: `Monitor extension usage and manage themes`
@@ -1004,16 +709,56 @@ _Nothing in this category._
     - Source: `{ <p> }This web page at %1$s has been reported as a deceptive site and has been blocked based on your security preferences.{ </p> }`
     - Suggest: `{ <p> }%1$s web sayfasının`
     - Extra space after the opening paragraph markup, inconsistent with the other error page strings.
+- `mozac_lib_send_crash_report_in_progress` — `mozilla-mobile/android-components/components/lib/crash/src/main/res/values-tr/strings.xml` — `mozac_lib_send_crash_report_in_progress` uses a straight apostrophe
+    - Current: `Çökme raporu %1$s'ya gönderiliyor`
+    - Source: `Sending crash report to %1$s`
+    - Suggest: `%1$s’ya`
+    - The tree uses ’ 156 times against 5 straight.
+- `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
+    - Current: `Web adresi "https://" veya "http://" içermelidir`
+    - Source: `Web address must contain “https://” or “http://”`
+    - Suggest: `Web adresi “https://” veya “http://” içermelidir`
+    - The locale's quote convention is `curly-double` (14 occurrences).
 - `ai_controls_block_dialog_what_will_be_blocked` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — Source is a statement label ending with a colon, but the translation turns it into a question with a question mark.
     - Current: `Neler engellenecek?`
     - Source: `What will be blocked:`
     - Suggest: `Engellenecekler:`
     - The developer comment says this is a label shown above the list of features; the en-US uses "What will be blocked:" with a colon, not a question.
+- `ip_protection_onboarding_body_promo` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — `ip_protection_onboarding_body_promo` uses a straight apostrophe
+    - Current: `Gezintinizi daha gizli ve izlemesi zor hale getirmek için VPN'i açın. %1$s tarihine kadar sınırsız bant genişliğine sahip olmak için hemen deneyin. %2$s`
+    - Source: `Turn it on to make your browsing more private and harder to trace. Try it now to get unlimited bandwidth through %1$s. %2$s`
+    - Suggest: `VPN’i açın`
+    - The tree uses ’ 156 times against 5 straight.
 - `onboarding_marketing_redesign_learn_more` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — A question mark is added to a statement-form link text.
     - Current: `Bu verileri nasıl kullanıyoruz?`
     - Source: `How we use the data`
     - Suggest: `Verileri nasıl kullanıyoruz`
     - The source "How we use the data" is a declarative link label with no question mark; the translation turns it into a question.
+- `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — `preference_summary_delete_browsing_data_on_quit_2` uses straight double quotes
+    - Current: `Ana menüden "Çık"ı seçtiğinizde gezinti verilerini otomatik olarak siler`
+    - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
+    - Suggest: `“Çık”ı`
+    - The locale's quote convention is `curly-double` (14 occurrences).
+- `external_app_prompt` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — `external_app_prompt` uses a straight apostrophe
+    - Current: `Bu bağlantıyı %2$s ile açmak için %1$s'tan çıkabilirsiniz.`
+    - Source: `You can leave %1$s to open this link in %2$s.`
+    - Suggest: `%1$s’tan çıkabilirsiniz.`
+    - The tree uses ’ 156 times against 5 straight.
+- `external_app_prompt_no_app` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — `external_app_prompt_no_app` uses a straight apostrophe
+    - Current: `Cihazınızdaki uygulamalar bu bağlantıyı açamıyor. %2$s mağazasında uygun bir uygulama aramak için %1$s'tan çıkabilirsiniz.`
+    - Source: `None of the apps on your device are able to open this link. You can leave %1$s to search %2$s for an app that can.`
+    - Suggest: `%1$s’tan çıkabilirsiniz.`
+    - The tree uses ’ 156 times against 5 straight.
+- `external_multiple_apps_matched_exit` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — `external_multiple_apps_matched_exit` uses a straight apostrophe
+    - Current: `Gizli Gezinti'den çıkılsın mı?`
+    - Source: `Exit Private Browsing?`
+    - Suggest: `Gizli Gezinti’den çıkılsın mı?`
+    - The tree uses ’ 156 times against 5 straight.
+- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — `firstrun_shortcut_text` uses straight double quotes
+    - Current: `%1$s’ta sevdiğiniz sitelere çabucak ulaşabilirsiniz. %1$s menüsünden "Ana ekrana ekle"yi seçmeniz yeterli.`
+    - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
+    - Suggest: `“Ana ekrana ekle”`
+    - The locale's quote convention is `curly-double` (14 occurrences).
 - `tip_disable_tips2` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — Stray zero-width/invisible character between "Başlangıç" and "ekranında".
     - Current: `Başlangıç ​​ekranında`
     - Source: `Turn off tips on the start screen`
@@ -1040,14 +785,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Resolved to date (9)
+### Resolved to date (0)
 
-- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-tr/strings.xml` — fixed 2026-08-21
-- `mozac_lib_send_crash_report_in_progress` — `mozilla-mobile/android-components/components/lib/crash/src/main/res/values-tr/strings.xml` — fixed 2026-08-21
-- `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — fixed 2026-08-21
-- `ip_protection_onboarding_body_promo` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — fixed 2026-08-21
-- `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — fixed 2026-08-21
-- `external_app_prompt` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — fixed 2026-08-21
-- `external_app_prompt_no_app` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — fixed 2026-08-21
-- `external_multiple_apps_matched_exit` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — fixed 2026-08-21
-- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — fixed 2026-08-21
+_Nothing resolved yet._

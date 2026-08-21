@@ -3,13 +3,14 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f2e9b7fce093` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `5cbe42651962` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
 | **Previous run** | 2026-08-21 @ `f2e9b7fce093` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,115 |
+| **Strings reviewed this run** | 20 of 18,131 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
+
 
 Also for en-CA: [android](android.md)
 
@@ -17,13 +18,36 @@ Also for en-CA: [android](android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `ImageMapRectBoundsError` — `dom/chrome/layout/layout_errors.properties` — Opening curly quote replaced with a closing curly quote before “left,top,right,bottom”.
+    - Current: `”left,top,right,bottom”`
+    - Source: `The “coords” attribute of the <area shape="rect"> tag is not in the “left,top,right,bottom” format.`
+    - Suggest: `“left,top,right,bottom”`
+    - The source uses a matched pair of curly double quotes (“…”); the target uses a right double quote on both sides, breaking the locale's curly-double quoting convention.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (4)
 
-_Nothing was fixed._
+- `Kilo` — `browser/installer/override.properties` — The NSIS kilobyte unit prefix was changed from "K" to "k", a change no en-CA convention calls for.
+    - Current: `Kilo = k`
+    - Source: `K`
+    - Suggest: `Kilo = K`
+    - This value is concatenated by NSIS into the byte-size readout (e.g. "1.5 KB"); the sibling values Byte/Mega/Giga were left as B/M/G. Canadian English has no convention that requires lowercasing this symbol, so the single-letter change is an unnecessary deviation from the source.
+- `ImageMapRectBoundsError` — `dom/chrome/layout/layout_errors.properties` — The quoted format literal is mangled: "left,top,right,bottom" became "”“eft,top,right,bottom".
+    - Current: `”“eft,top,right,bottom”`
+    - Source: `The “coords” attribute of the <area shape="rect"> tag is not in the “left,top,right,bottom” format.`
+    - Suggest: `“left,top,right,bottom”`
+    - The en-US source names the literal attribute format "left,top,right,bottom"; the target lost the initial "l" and has stray/reversed quote marks, making the message wrong and unreadable.
+- `rights-intro-point-1` — `toolkit/toolkit/about/aboutRights.ftl` — The proper name of the licence document "Mozilla Public License" has been respelled as "Mozilla Public Licence".
+    - Current: `Mozilla Public Licence`
+    - Source: `{ -brand-short-name } is made available to you under the terms of the <a data-l10n-name="mozilla-public-license-link">Mozilla Public License</a>. This means you may use, copy and distribute { -brand-short-name } to othe…`
+    - Suggest: `Mozilla Public License`
+    - "Mozilla Public License" is the official title of a specific legal document (as used in the MPL header of every file in this tree, including this one); the -ce/-se spelling rule for the common noun does not apply to a proper name. Both occurrences in the string are affected, including the linked <a data-l10n-name="mozilla-public-license-link"> text.
+- `ImageMapRectBoundsError` — `dom/chrome/layout/layout_errors.properties` — Opening curly quote replaced with a closing curly quote before “left,top,right,bottom”.
+    - Current: `”left,top,right,bottom”`
+    - Source: `The “coords” attribute of the <area shape="rect"> tag is not in the “left,top,right,bottom” format.`
+    - Suggest: `“left,top,right,bottom”`
+    - The source uses a matched pair of curly double quotes (“…”); the target uses a right double quote on both sides, breaking the locale's curly-double quoting convention.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -44,8 +68,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,115 |
-| Missing strings | 58 |
+| Strings | 18,131 |
+| Missing strings | 49 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -64,20 +88,20 @@ _Nothing retired._
 
 ### Completeness
 
-**58 strings** are not translated yet, concentrated in:
+**49 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 16
-- `browser/browser/preferences/containers.ftl` — 7
+- `browser/browser/newtab/newtab.ftl` — 21
 - `browser/browser/preferences/preferences.ftl` — 7
 - `browser/browser/appmenu.ftl` — 5
-- `browser/browser/sidebar.ftl` — 5
-- `browser/browser/aboutPrivateBrowsing.ftl` — 3
 - `browser/browser/ipProtection.ftl` — 2
 - `browser/browser/menubar.ftl` — 2
+- `browser/browser/sharePanel.ftl` — 2
 - `browser/browser/preferences/formAutofill.ftl` — 2
 - `devtools/client/debugger.properties` — 2
 - `browser/browser/aboutDialog.ftl` — 1
 - `browser/browser/profiles.ftl` — 1
+- `dom/chrome/accessibility/AccessFu.properties` — 1
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -87,7 +111,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 756, `curly-single` 68, `straight-double` 25 | **curly-double** |
+| quotes | `curly-double` 755, `curly-single` 68, `straight-double` 25 | **curly-double** |
 | apostrophe | `typographic` 1115, `straight` 4 | **typographic** |
 | ellipsis | `char` 460 | **char** |
 | dash | `em` 109, `en` 3 | **em** |
@@ -101,22 +125,18 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (4)
+## 3. Open findings (1)
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 2 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 0 |
-| 3 | Degraded language (grammar, spelling, terminology) | 2 |
+| 3 | Degraded language (grammar, spelling, terminology) | 1 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
 
-- `ImageMapRectBoundsError` — `dom/chrome/layout/layout_errors.properties` — The quoted format literal is mangled: "left,top,right,bottom" became "”“eft,top,right,bottom".
-    - Current: `”“eft,top,right,bottom”`
-    - Source: `The “coords” attribute of the <area shape="rect"> tag is not in the “left,top,right,bottom” format.`
-    - Suggest: `“left,top,right,bottom”`
-    - The en-US source names the literal attribute format "left,top,right,bottom"; the target lost the initial "l" and has stray/reversed quote marks, making the message wrong and unreadable.
+_Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -135,16 +155,7 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
-- `Kilo` — `browser/installer/override.properties` — The NSIS kilobyte unit prefix was changed from "K" to "k", a change no en-CA convention calls for.
-    - Current: `Kilo = k`
-    - Source: `K`
-    - Suggest: `Kilo = K`
-    - This value is concatenated by NSIS into the byte-size readout (e.g. "1.5 KB"); the sibling values Byte/Mega/Giga were left as B/M/G. Canadian English has no convention that requires lowercasing this symbol, so the single-letter change is an unnecessary deviation from the source.
-- `rights-intro-point-1` — `toolkit/toolkit/about/aboutRights.ftl` — The proper name of the licence document "Mozilla Public License" has been respelled as "Mozilla Public Licence".
-    - Current: `Mozilla Public Licence`
-    - Source: `{ -brand-short-name } is made available to you under the terms of the <a data-l10n-name="mozilla-public-license-link">Mozilla Public License</a>. This means you may use, copy and distribute { -brand-short-name } to othe…`
-    - Suggest: `Mozilla Public License`
-    - "Mozilla Public License" is the official title of a specific legal document (as used in the MPL header of every file in this tree, including this one); the -ce/-se spelling rule for the common noun does not apply to a proper name. Both occurrences in the string are affected, including the linked <a data-l10n-name="mozilla-public-license-link"> text.
+_Nothing in this category._
 
 ---
 
@@ -166,15 +177,18 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Resolved to date (10)
+### Resolved to date (13)
 
+- `Kilo` — `browser/installer/override.properties` — fixed 2026-08-21
 - `document_properties_kb` — `browser/pdfviewer/viewer.properties` — fixed 2026-08-21
+- `ImageMapRectBoundsError` — `dom/chrome/layout/layout_errors.properties` — fixed 2026-08-21
+- `ImageMapRectBoundsError` — `dom/chrome/layout/layout_errors.properties` — fixed 2026-08-21
 - `PINotInProlog` — `dom/chrome/layout/xul.properties` — fixed 2026-08-21
 - `about-reader-color-scheme-auto` — `toolkit/toolkit/about/aboutReader.ftl` — fixed 2026-08-21
+- `rights-intro-point-1` — `toolkit/toolkit/about/aboutRights.ftl` — fixed 2026-08-21
 - `newtab-picture-attribution-license` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-20
 - `media-file-size` — `browser/browser/pageInfo.ftl` — fixed 2026-08-20
 - `fontinspector.fontLicense` — `devtools/client/font-inspector.properties` — fixed 2026-08-20
 - `fontinspector.fontLicenseInfoUrl` — `devtools/client/font-inspector.properties` — fixed 2026-08-20
-- `ImageMapRectBoundsError` — `dom/chrome/layout/layout_errors.properties` — fixed 2026-08-20
 - `about-reader-color-scheme-auto` — `toolkit/toolkit/about/aboutReader.ftl` — fixed 2026-08-20
 - `download-utils-kilobyte` — `toolkit/toolkit/downloads/downloadUtils.ftl` — fixed 2026-08-20

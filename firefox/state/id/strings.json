@@ -362,6 +362,8 @@
   "about-private-browsing-pin-promo-title": "e4596b25 694a06e0",
   "about-private-browsing-prominent-cta": "430835cc c7316401",
   "about-private-browsing-promo-close-button": "19294939 5d841a09",
+  "about-private-browsing-relay-promo-header": "05dbca30 12955003",
+  "about-private-browsing-relay-promo-title": "dbc5422c 134101c9",
   "about-private-browsing-search-banner-close-button": "c3a2cf2f 68c35ec6",
   "about-private-browsing-search-banner-description": "ba47f260 df0a8a6a",
   "about-private-browsing-search-banner-title": "dfe6cd15 f9dd3940",
@@ -793,6 +795,7 @@
  },
  "browser/browser/backupSettings.ftl": {
   "backup-error-file-system": "73a6ac1e 60faf47e",
+  "backup-error-retry": "fb6bb7dd 23adccc6",
   "backup-file-encryption-state-label": "e6150d53 1ee9869a",
   "backup-file-encryption-state-value-encrypted": "d1ada51e 6a70a0d3",
   "backup-file-name": "34e4a84a fe851249",

@@ -3,13 +3,14 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f2e9b7fce093` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
-| **Previous run** | 2026-08-21 @ `a9b9a116b725` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `5cbe42651962` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
+| **Previous run** | 2026-08-21 @ `f2e9b7fce093` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 18,116 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
+
 
 Also for hu: [android](android.md)
 
@@ -45,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 360 |
 | Strings | 18,116 |
-| Missing strings | 57 |
+| Missing strings | 64 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -64,9 +65,9 @@ _Nothing retired._
 
 ### Completeness
 
-**57 strings** are not translated yet, concentrated in:
+**64 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 16
+- `browser/browser/newtab/newtab.ftl` — 21
 - `browser/browser/preferences/containers.ftl` — 7
 - `toolkit/toolkit/neterror/netError.ftl` — 7
 - `browser/browser/preferences/preferences.ftl` — 6
@@ -74,10 +75,10 @@ _Nothing retired._
 - `browser/browser/aboutPrivateBrowsing.ftl` — 3
 - `browser/browser/appmenu.ftl` — 2
 - `browser/browser/menubar.ftl` — 2
+- `browser/browser/sharePanel.ftl` — 2
 - `toolkit/toolkit/global/theme-picker.ftl` — 2
 - `browser/browser/aboutDialog.ftl` — 1
 - `browser/browser/firefoxView.ftl` — 1
-- `browser/browser/preferences/formAutofill.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

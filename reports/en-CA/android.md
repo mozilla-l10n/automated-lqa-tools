@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `7134a6c77a67` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `7134a6c77a67` |
-| **Previous run** | 2026-08-20 @ `afd16223d876` |
-| **Mode** | baseline |
-| **Strings reviewed this run** | 2,894 of 2,894 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
+| **Previous run** | 2026-08-21 @ `7134a6c77a67` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 1 of 2,894 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,16 +18,16 @@ Also for en-CA: [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
+
+_No new findings._
+
+### ✅ Fixed since the last run (1)
 
 - `preference_privacy_block_analytics_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-en-rCA/strings.xml` — "analyze" is left in US spelling where Canadian English uses "analyse".
     - Current: `Used to collect, analyze and measure activities like tapping and scrolling`
     - Suggest: `Used to collect, analyse and measure activities like tapping and scrolling`
     - Canadian English conventionally spells this verb "analyse"; the en-CA locale should adapt the US "analyze" form.
-
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -94,13 +94,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (1)
+## 3. Open findings (0)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 0 |
-| 3 | Degraded language (grammar, spelling, terminology) | 1 |
+| 3 | Degraded language (grammar, spelling, terminology) | 0 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -113,10 +113,7 @@ _Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
-- `preference_privacy_block_analytics_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-en-rCA/strings.xml` — "analyze" is left in US spelling where Canadian English uses "analyse".
-    - Current: `Used to collect, analyze and measure activities like tapping and scrolling`
-    - Suggest: `Used to collect, analyse and measure activities like tapping and scrolling`
-    - Canadian English conventionally spells this verb "analyse"; the en-CA locale should adapt the US "analyze" form.
+_Nothing in this category._
 
 ### D. Terminology, register & consistency
 
@@ -146,6 +143,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Resolved to date (0)
+### Resolved to date (1)
 
-_Nothing resolved yet._
+- `preference_privacy_block_analytics_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-en-rCA/strings.xml` — fixed 2026-08-21

@@ -3,13 +3,14 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f2e9b7fce093` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
-| **Previous run** | 2026-08-21 @ `a9b9a116b725` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `5cbe42651962` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
+| **Previous run** | 2026-08-21 @ `f2e9b7fce093` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 32 of 17,866 |
+| **Strings reviewed this run** | 0 of 17,866 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
+
 
 Also for pl: [android](android.md)
 
@@ -17,28 +18,13 @@ Also for pl: [android](android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `about-private-browsing-relay-promo-title` — `browser/browser/aboutPrivateBrowsing.ftl` — "when you sign up" mistranslated as "gdy się logujesz" (when you log in).
-    - Current: `gdy się logujesz`
-    - Source: `Hide your real address with an email mask when you sign up, shop, or share it online.`
-    - Suggest: `gdy się rejestrujesz`
-    - en-US "sign up" means creating an account (rejestracja), not signing in (logowanie).
-- `refresh-blocked-refresh-label` — `browser/browser/browser.ftl` — Redundant repetition of "strony" in the sentence.
-    - Current: `uniemożliwił tej stronie automatyczne odświeżenie strony`
-    - Source: `{ -brand-short-name } prevented this page from automatically reloading.`
-    - Suggest: `uniemożliwił tej stronie automatyczne odświeżenie się`
-    - The en-US is "prevented this page from automatically reloading"; the Polish duplicates "strona" awkwardly and adds an object not present in the source.
+_No new findings._
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (0)
 
-- `refresh-blocked-redirect-label` — `browser/browser/browser.ftl` — "uniemożliwić" takes a noun phrase, not an infinitive. Current: "…uniemożliwił tej stronie automatycznie odświeżyć stronę." / "…automatycznie przekierować…" → Suggest: "…uniemożliwił automatyczne odświeżenie tej strony." / "…uniemożliwił tej stronie automatyczne przekierowanie do innej strony."
-    - Source: `{ -brand-short-name } prevented this page from automatically redirecting to another page.`
-- `refresh-blocked-refresh-label` — `browser/browser/browser.ftl` — Redundant repetition of "strony" in the sentence.
-    - Current: `uniemożliwił tej stronie automatyczne odświeżenie strony`
-    - Source: `{ -brand-short-name } prevented this page from automatically reloading.`
-    - Suggest: `uniemożliwił tej stronie automatyczne odświeżenie się`
-    - The en-US is "prevented this page from automatically reloading"; the Polish duplicates "strona" awkwardly and adds an object not present in the source.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -60,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 357 |
 | Strings | 17,866 |
-| Missing strings | 307 |
+| Missing strings | 314 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 3 |
 | Fluent / properties syntax errors | 0 |
@@ -79,20 +65,20 @@ _Nothing retired._
 
 ### Completeness
 
-**307 strings** are not translated yet, concentrated in:
+**314 strings** are not translated yet, concentrated in:
 
 - `browser/browser/aiWindow.ftl` — 159
 - `browser/browser/aiWindowContent.ftl` — 80
 - `browser/browser/aiFeatures.ftl` — 43
 - `browser/browser/newtab/onboarding.ftl` — 13
+- `browser/browser/newtab/newtab.ftl` — 7
 - `browser/browser/appmenu.ftl` — 2
 - `browser/browser/menubar.ftl` — 2
+- `browser/browser/sharePanel.ftl` — 2
 - `browser/browser/preferences/preferences.ftl` — 2
-- `browser/browser/newtab/newtab.ftl` — 2
 - `browser/browser/aboutDialog.ftl` — 1
 - `browser/browser/preferences/formAutofill.ftl` — 1
 - `dom/chrome/accessibility/AccessFu.properties` — 1
-- `toolkit/toolkit/global/mozBoxBase.ftl` — 1
 
 **Files absent from the locale:**
 
