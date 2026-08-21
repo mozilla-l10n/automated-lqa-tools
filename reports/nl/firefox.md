@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a9b9a116b725` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f2e9b7fce093` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
-| **Previous run** | 2026-08-20 @ `fef20cd7efc2` |
+| **Previous run** | 2026-08-21 @ `a9b9a116b725` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,156 |
+| **Strings reviewed this run** | 8 of 18,156 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -29,60 +29,9 @@ _Nothing was fixed._
 
 _Nothing withdrawn._
 
-### 🔁 String changed, defect not verifiable — needs a re-read (22)
+### 🔁 String changed, defect not verifiable — needs a re-read (0)
 
-- `about-logins-import-dialog-items-no-change2` — `browser/browser/aboutLogins.ftl` — same defect in both plural variants: <span data-l10n-name="meta">(niet geïmporteerd)</span > → Suggest: </span>
-  - Source: `{$count ->} [other] <span>Duplicate entries found:</span> <span data-l10n-name="count">{ $count }</span> <span data-l10n-name="meta">(not imported)</span>`
-- `trustpanel-description-disabled` — `browser/browser/browser.ftl` — en-US "is off-duty", losing the contrast with trustpanel-header-enabled ("staat op wacht"). Current: "…heeft geen dienst." → Suggest: "…staat niet op wacht."
-  - Source: `{ -brand-product-name } is off-duty. We suggest turning protections back on.`
-  - Suggest: `"…staat niet op wacht."`
-- `urlbar-placeholder-search-mode-other-actions` — `browser/browser/browser.ftl` — urlbar-result-action-search-actions, urlbar-placeholder-search-mode-other-actions (.aria-label) — browser.ftl — "Search" is a verb here. Current: "Zoekacties" → Suggest: "Acties doorzoeken" / "Zoeken in acties"
-  - Source: `aria-label: Search actions placeholder: Enter search terms`
-- `urlbar-result-action-search-actions` — `browser/browser/browser.ftl` — urlbar-result-action-search-actions, urlbar-placeholder-search-mode-other-actions (.aria-label) — browser.ftl — "Search" is a verb here. Current: "Zoekacties" → Suggest: "Acties doorzoeken" / "Zoeken in acties"
-  - Source: `Search Actions`
-- `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — malformed closing tag </a > (space inside the tag), so the second link will not render. Current: …generatieve AI</a > en de… → Suggest: …generatieve AI</a> en de…
-  - Source: `By choosing Google Gemini, you agree to the <a data-l10n-name="link1">Google Terms of Service</a>, <a data-l10n-name="link2">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name="link3">Gemini Apps Privacy Not…`
-- `menu-help-share-ideas` — `browser/browser/menubar.ftl` — lost the trailing … that marks the item as opening a further page (en-US "Share Ideas and Feedback…").
-  - Source: `accesskey: S label: Share Ideas and Feedback…`
-- `cfr-doorhanger-milestone-heading2` — `browser/browser/newtab/asrouter.ftl` — cfr-doorhanger-milestone-heading2 ([one] variant) — browser/browser/newtab/asrouter.ftl — the opening <b> is corrupted to b>, and "over" is dropped. Current: … b>{ $blockedCount }</b> tracker geblokkeerd! → Suggest: … meer dan <b>{ $blockedCount }</b> tracker geblokkeerd!
-  - Source: `{$blockedCount ->} [other] { -brand-short-name } blocked over <b>{ $blockedCount }</b> trackers since { $date }!`
-- `settings-translations-subpage-never-translate-sites-description` — `browser/browser/preferences/preferences.ftl` — double space after <img data-l10n-name="translations-icon"/>.
-  - Source: `To add a site, open the <img data-l10n-name="translations-icon"/> translation panel, select <img data-l10n-name="settings-icon"/> translation settings, then choose “Never translate this site”`
-- `protections-vpn-header-content-subscribed` — `browser/browser/protections.ftl` — stray space inside the link text, producing a trailing underlined space. Current: <a data-l10n-name="appstore-link">Apple App Store </a> → Suggest: …Apple App Store</a>
-  - Source: `{$count ->} [other] Using the { -mozilla-vpn-brand-name } encrypts all your traffic and hides your location — on up to { $count } devices. Get the most from your subscription — add it from the <a data-l10n-name="playsto…`
-- `set-background-fill` — `browser/browser/setDesktopBackground.ftl` — uitvullen is the typographic term for justify. Current: "Uitvullen" → Suggest: "Vullen"
-  - Source: `label: Fill`
-  - Suggest: `"Vullen"`
-- `duplicate-tab2` — `browser/browser/tabContextMenu.ftl` — duplicate-tab2 (.label), duplicate-tabs2 (.label) — tabContextMenu.ftl — noun instead of the menu verb. Current: "Duplicaat" → Suggest: "Dupliceren"
-  - Source: `accesskey: D label: Duplicate`
-  - Suggest: `"Dupliceren"`
-- `duplicate-tabs2` — `browser/browser/tabContextMenu.ftl` — duplicate-tab2 (.label), duplicate-tabs2 (.label) — tabContextMenu.ftl — noun instead of the menu verb. Current: "Duplicaat" → Suggest: "Dupliceren"
-  - Source: `accesskey: D label: Duplicate`
-  - Suggest: `"Dupliceren"`
-- `inactive-css-not-grid-or-flex-container-or-multicol-container-fix` — `devtools/client/tooltips.ftl` — the CSS keyword inside <strong> is misspelled, so the suggested fix is wrong code. Current: <strong>colums:2</strong> → Suggest: <strong>columns:2</strong>
-  - Source: `Try adding either <strong>display:grid</strong>, <strong>display:flex</strong>, or <strong>columns:2</strong>. { learn-more }`
-- `inactive-css-not-grid-or-flex-container-or-multicol-container-fix` — `devtools/client/tooltips.ftl` — Also in this bucket: the CSS keyword items already listed in section A (inactive-css-not-grid-or-flex-container-or-multicol-container-fix, inactive-css-ruby-element-fix, webconsole-commands-usage-block).
-  - Source: `Try adding either <strong>display:grid</strong>, <strong>display:flex</strong>, or <strong>columns:2</strong>. { learn-more }`
-- `inactive-css-ruby-element-fix` — `devtools/client/tooltips.ftl` — inactive-css-ruby-element-fix, inactive-css-ruby-element-fix-1 — devtools/client/tooltips.ftl — the CSS property name inside <strong> was translated, against the section's developer comment. Current: <strong>lettergrootte</strong> → Suggest: <strong>font-size</strong>
-  - Source: `Try changing the <strong>font-size</strong> of the ruby text. { learn-more }`
-- `inactive-css-ruby-element-fix` — `devtools/client/tooltips.ftl` — Also in this bucket: the CSS keyword items already listed in section A (inactive-css-not-grid-or-flex-container-or-multicol-container-fix, inactive-css-ruby-element-fix, webconsole-commands-usage-block).
-  - Source: `Try changing the <strong>font-size</strong> of the ruby text. { learn-more }`
-- `inactive-css-ruby-element-fix-1` — `devtools/client/tooltips.ftl` — inactive-css-ruby-element-fix, inactive-css-ruby-element-fix-1 — devtools/client/tooltips.ftl — the CSS property name inside <strong> was translated, against the section's developer comment. Current: <strong>lettergrootte</strong> → Suggest: <strong>font-size</strong>
-  - Source: `Try changing the <strong>font-size</strong> of the ruby text.`
-- `webconsole-commands-usage-block` — `devtools/shared/webconsole-commands.ftl` — Also in this bucket: the CSS keyword items already listed in section A (inactive-css-not-grid-or-flex-container-or-multicol-container-fix, inactive-css-ruby-element-fix, webconsole-commands-usage-block).
-  - Source: `:block URL_STRING  Start blocking network requests    It accepts only one URL_STRING argument, an unquoted string which will be used to block all requests whose URL includes this string.   Use :unblock or the Network Mo…`
-- `devmgr-button-unload` — `security/manager/security/certificates/deviceManager.ftl` — ontladen = to discharge a battery. Suggest: "Uitladen" (paired with devmgr-button-load "Laden")
-  - Source: `accesskey: U label: Unload`
-  - Suggest: `.label`
-- `shortcuts-duplicate` — `toolkit/toolkit/about/aboutAddons.ftl` — shortcuts-remove-button (.aria-label), shortcuts-duplicate, shortcuts-duplicate-warning-message, -message2 — see S-4.
-  - Source: `Duplicate shortcut`
-  - Suggest: `.aria-label`
-- `shortcuts-duplicate-warning-message` — `toolkit/toolkit/about/aboutAddons.ftl` — shortcuts-remove-button (.aria-label), shortcuts-duplicate, shortcuts-duplicate-warning-message, -message2 — see S-4.
-  - Source: `{ $shortcut } is being used as a shortcut in more than one case. Duplicate shortcuts may cause unexpected behavior.`
-  - Suggest: `.aria-label`
-- `shortcuts-remove-button` — `toolkit/toolkit/about/aboutAddons.ftl` — shortcuts-remove-button (.aria-label), shortcuts-duplicate, shortcuts-duplicate-warning-message, -message2 — see S-4.
-  - Source: `aria-label: Remove shortcut`
-  - Suggest: `.aria-label`
+_Nothing to re-read._
 
 ### 🗑 Retired — the string no longer exists upstream (0)
 

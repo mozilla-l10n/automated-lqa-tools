@@ -138,6 +138,29 @@
   "suppressed_by": ""
  },
  {
+  "category": "A",
+  "check": "llm",
+  "current": "”“eft,top,right,bottom”",
+  "dismissed_because": "",
+  "fid": "f47099c76769",
+  "file": "dom/chrome/layout/layout_errors.properties",
+  "first_seen": "2026-08-21",
+  "impact": 1,
+  "last_seen": "2026-08-21",
+  "locale": "en-CA",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The en-US source names the literal attribute format \"left,top,right,bottom\"; the target lost the initial \"l\" and has stray/reversed quote marks, making the message wrong and unreadable.",
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "d149f704",
+  "string_id": "ImageMapRectBoundsError",
+  "suggest": "“left,top,right,bottom”",
+  "summary": "The quoted format literal is mangled: \"left,top,right,bottom\" became \"”“eft,top,right,bottom\".",
+  "suppressed_by": ""
+ },
+ {
   "category": "E",
   "check": "llm",
   "current": "”left,top,right,bottom”",
@@ -163,24 +186,24 @@
  {
   "category": "D",
   "check": "llm",
-  "current": "outside the prologue any longer",
+  "current": "does not have any effect outside the prolog any longer",
   "dismissed_because": "",
   "fid": "f3f662dd1681",
   "file": "dom/chrome/layout/xul.properties",
   "first_seen": "2026-08-20",
   "impact": 3,
-  "last_seen": "2026-08-20",
+  "last_seen": "2026-08-21",
   "locale": "en-CA",
   "origin": {
    "confidence": "high"
   },
-  "rationale": "\"Prolog\" here is the XML specification's term for the part of a document before the root element (the string ID is PINotInProlog). \"Prologue\" is the ordinary-English word and does not name this construct; en-CA also keeps \"prolog\" in PINotInProlog2 on the next line, so the tree is internally inconsistent. This is an over-correction inside a technical term, not a spelling variant.",
-  "resolved_on": "2026-08-20",
+  "rationale": "en-CA does not differ from en-US here; the substitution is an unnecessary divergence from the source wording.",
+  "resolved_on": "2026-08-21",
   "status": "fixed",
-  "string_hash": "01d9d074",
+  "string_hash": "447d0549",
   "string_id": "PINotInProlog",
-  "suggest": "outside the prolog any longer",
-  "summary": "The XML technical term \"prolog\" was changed to \"prologue\", which is not the name of the XML construct and contradicts the same term left as \"prolog\" in the adjacent string.",
+  "suggest": "does not have any effect outside the prolog anymore",
+  "summary": "\"anymore\" was needlessly reworded to \"any longer\", a change not required by en-CA.",
   "suppressed_by": ""
  },
  {
@@ -207,24 +230,24 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "Color Scheme Auto",
+  "current": "title: Colour Scheme Auto",
   "dismissed_because": "",
   "fid": "389bf42fdc6b",
   "file": "toolkit/toolkit/about/aboutReader.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-20",
+  "last_seen": "2026-08-21",
   "locale": "en-CA",
   "origin": {
    "confidence": "high"
   },
-  "rationale": "about-reader-color-scheme-light/dark/sepia all read \"Colour Scheme …\", and every other UI string in the tree that contains this word uses \"Colour\" (printUI, containers, colors.ftl, newtab, pdfviewer). The only exceptions are the brand name \"Firefox Color\", so this lone \"Color\" is an inconsistent adaptation.",
-  "resolved_on": "2026-08-20",
+  "rationale": "Reader Mode's colour-scheme labels are inconsistent if only this one is adapted; the en-US term is used for the same control elsewhere in the file.",
+  "resolved_on": "2026-08-21",
   "status": "fixed",
-  "string_hash": "bd71c78e",
+  "string_hash": "7dc17b2a",
   "string_id": "about-reader-color-scheme-auto",
-  "suggest": "Colour Scheme Auto",
-  "summary": "\"Color Scheme Auto\" keeps the en-US spelling while the three sibling strings in the same file use \"Colour Scheme\".",
+  "suggest": "title: Color Scheme Auto",
+  "summary": "Only the title was adapted to \"Colour\" while the related value remains inconsistent; \"Color Scheme\" here refers to the UI feature name shown alongside untouched sibling labels.",
   "suppressed_by": ""
  },
  {

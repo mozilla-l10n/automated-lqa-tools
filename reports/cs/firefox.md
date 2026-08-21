@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a9b9a116b725` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f2e9b7fce093` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
-| **Previous run** | 2026-08-20 @ `fef20cd7efc2` |
+| **Previous run** | 2026-08-21 @ `a9b9a116b725` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,131 |
+| **Strings reviewed this run** | 10 of 18,141 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -44,8 +44,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,131 |
-| Missing strings | 42 |
+| Strings | 18,141 |
+| Missing strings | 32 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -64,12 +64,11 @@ _Nothing retired._
 
 ### Completeness
 
-**42 strings** are not translated yet, concentrated in:
+**32 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 16
+- `browser/browser/newtab/newtab.ftl` — 9
 - `browser/browser/preferences/containers.ftl` — 7
 - `browser/browser/preferences/preferences.ftl` — 6
-- `browser/browser/aboutPrivateBrowsing.ftl` — 3
 - `browser/browser/appmenu.ftl` — 2
 - `browser/browser/menubar.ftl` — 2
 - `browser/browser/aboutDialog.ftl` — 1

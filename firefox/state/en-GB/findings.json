@@ -364,6 +364,29 @@
   "suppressed_by": ""
  },
  {
+  "category": "D",
+  "check": "llm",
+  "current": "for specific web sites",
+  "dismissed_because": "",
+  "fid": "7aafeb50d573",
+  "file": "browser/browser/preferences/permissions.ftl",
+  "first_seen": "2026-08-21",
+  "impact": 3,
+  "last_seen": "2026-08-21",
+  "locale": "en-GB",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "en-GB does not require splitting \"websites\"; the same string later uses \"sites\" and the rest of the tree uses \"websites\". This is an unnecessary, inconsistent alteration.",
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "fdcefbb5",
+  "string_id": "permissions-exceptions-https-only-desc",
+  "suggest": "for specific websites",
+  "summary": "\"websites\" was changed to \"web sites\", which is inconsistent with the source and the locale's usual single-word form.",
+  "suppressed_by": ""
+ },
+ {
   "category": "B",
   "check": "llm",
   "current": "auto-fill data",

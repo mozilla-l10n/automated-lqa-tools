@@ -3,7 +3,7 @@
  "display_name": "Firefox l10n",
  "fixed_total": 56,
  "l10n_repo": "https://github.com/mozilla-l10n/firefox-l10n",
- "l10n_sha": "a9b9a116b725",
+ "l10n_sha": "f2e9b7fce093",
  "last_run": "2026-08-21",
  "locale": "it",
  "missing": 0,

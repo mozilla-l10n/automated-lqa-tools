@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a9b9a116b725` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f2e9b7fce093` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
-| **Previous run** | 2026-08-20 @ `fef20cd7efc2` |
+| **Previous run** | 2026-08-21 @ `a9b9a116b725` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 17,969 |
 
@@ -29,65 +29,9 @@ _Nothing was fixed._
 
 _Nothing withdrawn._
 
-### 🔁 String changed, defect not verifiable — needs a re-read (21)
+### 🔁 String changed, defect not verifiable — needs a re-read (0)
 
-- `link-preview-onboarding-callout-title` — `browser/browser/featureCallout.ftl` — link-preview-onboarding-callout-title (featureCallout.ftl) — "预览连接" (connection) → SUGGEST: "预览链接" (link; the next string correctly uses 链接).
-  - Source: `New: Click and hold to preview links`
-  - Suggest: `"预览链接"`
-- `newtab-sports-widget-loading-more` — `browser/browser/newtab/newtab.ftl` — newtab-sports-widget-loading-more (newtab.ftl) — sports "matches" → "匹配项" (search-style "matching items") → SUGGEST: "比赛".
-  - Source: `Loading more matches…`
-  - Suggest: `"匹配项"`
-- `fxa-qrcode-pair-step2-signin` — `browser/browser/preferences/fxaPairDevice.ftl` — fxa-qrcode-pair-step2-signin (fxaPairDevice.ftl) — bold button "Sync and save data" → "登录同步服务" (Sign in to sync service) → SUGGEST: render "Sync and save data" (verify against the Firefox mobile string). Medium confidence.
-  - Source: `2. Go to the menu (<img data-l10n-name="ios-menu-icon"/> on iOS or <img data-l10n-name="android-menu-icon"/> on Android) and tap <strong>Sync and save data</strong>`
-  - Suggest: `"登录同步服务"`
-- `do-not-track-removal3` — `browser/browser/preferences/preferences.ftl` — tracker/Do-Not-Track: do-not-track-removal3 uses 追踪 vs siblings' 跟踪 (请勿跟踪); preferences-etp-level-warning-message & security-privacy-issue-warning-fingerprinters use 追踪器 vs the file's dominant 跟踪器. Standardize on 跟踪 / 跟踪器.
-  - Source: `message: We no longer support the “Do Not Track” feature.`
-- `preferences-etp-level-warning-message` — `browser/browser/preferences/preferences.ftl` — tracker/Do-Not-Track: do-not-track-removal3 uses 追踪 vs siblings' 跟踪 (请勿跟踪); preferences-etp-level-warning-message & security-privacy-issue-warning-fingerprinters use 追踪器 vs the file's dominant 跟踪器. Standardize on 跟踪 / 跟踪器.
-  - Source: `heading: Heads up! Some sites may not work as expected. message: Some sites build trackers into their features or content. When { -brand-short-name } blocks them, the site looks broken. Try using “Fix site issue” or tur…`
-- `security-browsing-protection` — `browser/browser/preferences/preferences.ftl` — deceptive content: security-browsing-protection 欺诈内容 vs browsing-protection-group2 诈骗内容 — pick one.
-  - Source: `Deceptive Content and Dangerous Software Protection`
-- `security-privacy-issue-warning-fingerprinters` — `browser/browser/preferences/preferences.ftl` — tracker/Do-Not-Track: do-not-track-removal3 uses 追踪 vs siblings' 跟踪 (请勿跟踪); preferences-etp-level-warning-message & security-privacy-issue-warning-fingerprinters use 追踪器 vs the file's dominant 跟踪器. Standardize on 跟踪 / 跟踪器.
-  - Source: `description: This may allow some trackers to follow you without cookies. label: Known fingerprinters are not blocked`
-- `custom-avatar-alt` — `browser/browser/profiles.ftl` — avatar: custom-avatar-alt (profiles.ftl) uses 头像 vs the file's 图标 → 图标.
-  - Source: `alt: Custom avatar`
-  - Suggest: `图标.`
-- `safeb-blocked-addon-page-short-desc` — `browser/browser/safebrowsing/blockedSite.ftl` — stray trailing </p> not in source → remove.
-  - Source: `{ -brand-short-name } blocked this page because one of your add-ons tried to open it. This site could be used to steal your info — like passwords or credit card numbers.`
-  - Suggest: `remove.`
-- `screenshots-overlay-preview-face-label` — `browser/browser/screenshots.ftl` — screenshots-overlay-preview-face-label (screenshots.ftl) — screenshot "region" → "此地区" (geographic) → SUGGEST: "此区域" (as elsewhere in the file).
-  - Source: `aria-label: Select this region`
-  - Suggest: `"此地区"`
-- `protocolhandler-mailto-handler-set` — `browser/browser/webProtocolHandler.ftl` — protocolhandler-mailto-handler-set (webProtocolHandler.ftl) — duplicated verb: "…{ -brand-short-name }打开{ $url }…打开吗？" → remove the trailing 打开.
-  - Source: `Use <strong>{ -brand-short-name } to open { $url }</strong> every time you click a link that opens your email?`
-  - Suggest: `remove the trailing 打开.`
-- `xpath-unknown-function` — `dom/dom/xslt.ftl` — en-US "Invalid XSLT/XPath function." rendered "XSLT/XPath 尝试调用位置函数。" (invents "attempted to call a position function") → SUGGEST: "无效的 XSLT/XPath 函数。"
-  - Source: `Invalid XSLT/XPath function.`
-- `delete-ca-cert-impact` — `security/manager/security/certificates/certManager.ftl` — delete-ca-cert-impact (certManager.ftl) — garbled word order: "删除或不信任证书一个颁发机构（CA）证书" → SUGGEST: "…一个证书颁发机构（CA）证书…".
-  - Source: `If you delete or distrust a certificate authority (CA) certificate, this application will no longer trust any certificates issued by that CA.`
-  - Suggest: `"…一个证书颁发机构（CA）证书…".`
-- `delete-user-cert-impact` — `security/manager/security/certificates/certManager.ftl` — delete-user-cert-impact (certManager.ftl) — "您将无法使用它来标识你自己" → 您自己.
-  - Source: `If you delete one of your own certificates, you can no longer use it to identify yourself.`
-  - Suggest: `您自己.`
-- `edit-trust-ca` — `security/manager/security/certificates/certManager.ftl` — Certificate Authority: download-cert-message 认证机构 vs download-cert-message-desc/edit-trust-ca 颁发机构 → 颁发机构.
-  - Source: `The certificate “{ $certName }” represents a Certificate Authority.`
-  - Suggest: `颁发机构.`
-- `import-email-cert-prompt` — `security/manager/security/certificates/certManager.ftl` — import-email-cert-prompt (certManager.ftl) — duplicated "包含": "请选择包含要导入的包含某人邮件证书的文件" → drop one 包含.
-  - Source: `Select File containing somebody’s Email certificate to import`
-  - Suggest: `drop one 包含.`
-- `client-auth-window` — `security/manager/security/pippki/pippki.ftl` — client-auth-window (pippki.ftl) — title "User Identification Request" → "使用确认请求" (usage-confirmation) → SUGGEST: "用户身份识别请求".
-  - Source: `title: User Identification Request`
-  - Suggest: `"使用确认请求"`
-- `download-cert-message` — `security/manager/security/pippki/pippki.ftl` — Certificate Authority: download-cert-message 认证机构 vs download-cert-message-desc/edit-trust-ca 颁发机构 → 颁发机构.
-  - Source: `You have been asked to trust a new Certificate Authority (CA).`
-  - Suggest: `颁发机构.`
-- `plugins-openh264-description` — `toolkit/toolkit/about/aboutAddons.ftl` — plugins-openh264-description (aboutPlugins.ftl and aboutAddons.ftl) — http://www.openh264.org/ → https:// (matches source).
-  - Source: `This plugin is automatically installed by Mozilla to comply with the WebRTC specification and to enable WebRTC calls with devices that require the H.264 video codec. Visit https://www.openh264.org/ to view the codec sou…`
-- `place-database-last-vacuum-date` — `toolkit/toolkit/about/aboutSupport.ftl` — place-database-last-vacuum-date (aboutSupport.ftl) — "上次 Vacumm 日期" → Vacuum.
-  - Source: `Last Vacuum Date`
-  - Suggest: `Vacuum.`
-- `contentanalysis-block-dialog-body-clipboard` — `toolkit/toolkit/contentanalysis/contentanalysis.ftl` — contentanalysis-block-dialog-body-clipboard (contentanalysis.ftl) — "您不无权粘贴此内容" (double negative) → 您无权粘贴此内容.
-  - Source: `Under your organization’s data protection policies, you’re not permitted to paste this content. Contact your administrator for more info.`
-  - Suggest: `您无权粘贴此内容.`
+_Nothing to re-read._
 
 ### 🗑 Retired — the string no longer exists upstream (0)
 

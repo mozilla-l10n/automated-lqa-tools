@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a9b9a116b725` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f2e9b7fce093` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
-| **Previous run** | 2026-08-20 @ `fef20cd7efc2` |
+| **Previous run** | 2026-08-21 @ `a9b9a116b725` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,161 |
+| **Strings reviewed this run** | 4 of 18,161 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -17,22 +17,17 @@ Also for en-GB: [android](android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
-
-### ✅ Fixed since the last run (2)
-
-- `permissions-exceptions-https-only-desc` — `browser/browser/preferences/permissions.ftl` — Uses en-US “websites” where this locale consistently writes “web sites”.
-  - Current: `for specific websites.`
+- `permissions-exceptions-https-only-desc` — `browser/browser/preferences/permissions.ftl` — "websites" was changed to "web sites", which is inconsistent with the source and the locale's usual single-word form.
+  - Current: `for specific web sites`
   - Source: `You can turn off HTTPS-Only Mode for specific websites. { -brand-short-name } won’t attempt to upgrade the connection to secure HTTPS for those sites. Exceptions do not apply to private windows.`
-  - Suggest: `for specific web sites.`
-  - en-GB writes “web site(s)” throughout the tree (251 occurrences across 45 files, including the immediately following string permissions-exceptions-https-only-desc2, which renders the same sentence as “for specific web sites”). This is the only user-visible “websites” left in the preferences partition.
-- `preferences-data-migration-description` — `browser/browser/preferences/preferences.ftl` — “auto-fill” hyphenated here but spelled “autofill” everywhere else in the locale.
-  - Current: `auto-fill data`
-  - Source: `Import bookmarks, passwords, history, and autofill data into { -brand-short-name }.`
-  - Suggest: `autofill data`
-  - This is the only occurrence of “auto-fill” in the whole en-GB tree; the sibling string preferences-data-migration-group in the same file says “autofill data”, and formAutofill.ftl/preferences.ftl use “autofill” consistently (180+ occurrences).
+  - Suggest: `for specific websites`
+  - en-GB does not require splitting "websites"; the same string later uses "sites" and the rest of the tree uses "websites". This is an unnecessary, inconsistent alteration.
+
+### ✅ Fixed since the last run (0)
+
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -107,13 +102,13 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (31)
+## 3. Open findings (32)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 8 |
 | 2 | Wrong content (says something other than the English) | 11 |
-| 3 | Degraded language (grammar, spelling, terminology) | 10 |
+| 3 | Degraded language (grammar, spelling, terminology) | 11 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
@@ -259,6 +254,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
   - Source: `Right-click on your AI chatbot in the sidebar and choose “Summarize Page”.`
   - Suggest: `Summarise page`
   - In the source this string quotes “Summarize Page”, which is exactly the value of `genai-chatbot-summarize-button` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `permissions-exceptions-https-only-desc` — `browser/browser/preferences/permissions.ftl` — "websites" was changed to "web sites", which is inconsistent with the source and the locale's usual single-word form.
+  - Current: `for specific web sites`
+  - Source: `You can turn off HTTPS-Only Mode for specific websites. { -brand-short-name } won’t attempt to upgrade the connection to secure HTTPS for those sites. Exceptions do not apply to private windows.`
+  - Suggest: `for specific websites`
+  - en-GB does not require splitting "websites"; the same string later uses "sites" and the rest of the tree uses "websites". This is an unnecessary, inconsistent alteration.
 - `recommended-theme-1` — `toolkit/toolkit/about/aboutAddons.ftl` — Product name "Firefox Color" was spelling-adapted to "Firefox Colour", against the explicit developer comment.
   - Current: `Build your own theme with Firefox Colour.`
   - Source: `Feeling creative? <a data-l10n-name="link">Build your own theme with Firefox Color.</a>`

@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a9b9a116b725` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f2e9b7fce093` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
-| **Previous run** | 2026-08-20 @ `fef20cd7efc2` |
+| **Previous run** | 2026-08-21 @ `a9b9a116b725` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 17,533 |
 
@@ -29,12 +29,9 @@ _Nothing was fixed._
 
 _Nothing withdrawn._
 
-### 🔁 String changed, defect not verifiable — needs a re-read (2)
+### 🔁 String changed, defect not verifiable — needs a re-read (0)
 
-- `tab-group-editor-action-copy-links` — `browser/browser/tabbrowser.ftl` — Label is "Copy links in group" but every plural form uses "Zapri" (Close) instead of "Kopiraj" (Copy). The verb is reversed across all variants.
-  - Source: `label: {$linkCount ->} [1] Copy link in group [other] Copy { $linkCount } links in group`
-- `pkcs12-decode-err` — `security/manager/security/certificates/certManager.ftl` — security/manager/security/certificates/certManager.ftl — Nonstandard participle "Vnešeno/vnešeno" → "Vneseno/vneseno" (also inconsistent with pippki-incorrect-pw, which is correct).
-  - Source: `Failed to decode the file. Either it is not in PKCS #12 format, has been corrupted, or the password you entered was incorrect.`
+_Nothing to re-read._
 
 ### 🗑 Retired — the string no longer exists upstream (0)
 

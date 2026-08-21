@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a9b9a116b725` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f2e9b7fce093` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
-| **Previous run** | 2026-08-20 @ `fef20cd7efc2` |
+| **Previous run** | 2026-08-21 @ `a9b9a116b725` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 15,484 |
+| **Strings reviewed this run** | 10 of 15,485 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -44,8 +44,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 354 |
-| Strings | 15,484 |
-| Missing strings | 2,689 |
+| Strings | 15,485 |
+| Missing strings | 2,688 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 6 |
 | Fluent / properties syntax errors | 0 |
@@ -64,7 +64,7 @@ _Nothing retired._
 
 ### Completeness
 
-**2,689 strings** are not translated yet, concentrated in:
+**2,688 strings** are not translated yet, concentrated in:
 
 - `browser/browser/preferences/preferences.ftl` — 425
 - `browser/browser/newtab/newtab.ftl` — 410

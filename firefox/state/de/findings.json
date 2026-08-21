@@ -947,6 +947,29 @@
   "suppressed_by": ""
  },
  {
+  "category": "C",
+  "check": "llm",
+  "current": "verwendet ihn jedes Mal",
+  "dismissed_because": "",
+  "fid": "f596c4133d45",
+  "file": "browser/browser/preferences/preferences.ftl",
+  "first_seen": "2026-08-21",
+  "impact": 3,
+  "last_seen": "2026-08-21",
+  "locale": "de",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "\"Tab-Umgebung\" is feminine, so the referring pronoun must be \"sie\", not \"ihn\".",
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "85ab51e5",
+  "string_id": "containers-sites-card-header",
+  "suggest": "verwendet sie jedes Mal",
+  "summary": "Pronoun does not agree with the feminine noun \"Tab-Umgebung\".",
+  "suppressed_by": ""
+ },
+ {
   "category": "D",
   "check": "legacy",
   "current": "",

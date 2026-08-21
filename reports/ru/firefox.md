@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a9b9a116b725` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f2e9b7fce093` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
-| **Previous run** | 2026-08-20 @ `fef20cd7efc2` |
+| **Previous run** | 2026-08-21 @ `a9b9a116b725` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,161 |
+| **Strings reviewed this run** | 3 of 18,161 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -29,10 +29,9 @@ _Nothing was fixed._
 
 _Nothing withdrawn._
 
-### 🔁 String changed, defect not verifiable — needs a re-read (1)
+### 🔁 String changed, defect not verifiable — needs a re-read (0)
 
-- `mr2-onboarding-thank-you-text` — `browser/browser/newtab/onboarding.ftl` — the dash is U+4E00, the CJK ideograph for "one", not an em dash
-  - Source: `{ -brand-short-name } is an independent browser backed by a non-profit. Together, we’re making the web safer, healthier, and more private.`
+_Nothing to re-read._
 
 ### 🗑 Retired — the string no longer exists upstream (0)
 

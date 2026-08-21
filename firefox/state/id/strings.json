@@ -533,6 +533,10 @@
   "xpinstall-prompt-never-allow": "d1f608fc 3f4bbfb1",
   "xpinstall-prompt-never-allow-and-report": "c2dd9250 47781ae1"
  },
+ "browser/browser/aiFeatures.ftl": {
+  "preferences-ai-controls-block-confirmation-smart-window": "279ff4e0 279ff4e0",
+  "smart-window-block-title": "abff0668 58c85d01"
+ },
  "browser/browser/allTabsMenu.ftl": {
   "all-tabs-menu-close-all-duplicate-tabs": "dde4056d ab3b1e2c",
   "all-tabs-menu-close-duplicate-tabs": "6a2f78b4 6659eed3",
@@ -783,10 +787,14 @@
   "default-browser-notification-body-text": "856420ea 39f315cf",
   "default-browser-notification-header-text": "79392513 7ae0a2c9",
   "default-browser-notification-no-button-text": "988d64b9 f4959fa8",
+  "default-browser-notification-privacy-header-text": "a969fa26 9b9576e8",
+  "default-browser-notification-privacy-no-button-text": "73838003 2255c399",
   "default-browser-notification-yes-button-text": "d1ada51e 6a70a0d3"
  },
  "browser/browser/backupSettings.ftl": {
   "backup-error-file-system": "73a6ac1e 60faf47e",
+  "backup-file-encryption-state-label": "e6150d53 1ee9869a",
+  "backup-file-encryption-state-value-encrypted": "d1ada51e 6a70a0d3",
   "backup-file-name": "34e4a84a fe851249",
   "backup-folder-name": "ee32cac1 0ea19283",
   "backup-service-error-corrupt-file": "552d808e c2591570",
@@ -797,6 +805,7 @@
   "backup-service-error-went-wrong2": "258156a1 420bf14c",
   "change-backup-encryption-header": "64fb198d 6f9edb59",
   "disable-backup-encryption-cancel-button": "8a511819 871d661d",
+  "disable-backup-encryption-confirm-button": "b5501e01 f3d1237d",
   "disable-backup-encryption-header": "99a46d12 3f2ea639",
   "disable-backup-encryption-support-link": "8275c48b a2de794e",
   "enable-backup-encryption-cancel-button": "8a511819 871d661d",
@@ -2002,7 +2011,10 @@
   "perplexity-callout-secondary-label-1": "24c52be0 b21634a9",
   "perplexity-callout-secondary-label-2": "e6e64eb1 ee20ad3f",
   "perplexity-callout-theme-1-subtitle-1": "cb24a087 216fca09",
+  "perplexity-callout-theme-1-subtitle-2": "c5a303ed 6ba7823f",
   "perplexity-callout-theme-1-title": "16d4fc32 104e2c01",
+  "perplexity-callout-theme-2-subtitle-1": "bd467ed4 70b5c668",
+  "perplexity-callout-theme-2-subtitle-2": "dd36b5b6 677fbe6f",
   "perplexity-callout-theme-2-title": "53c3a229 909264a1",
   "sidebar-button-callout-subtitle": "11b75a4d 16d84ffa",
   "sidebar-button-callout-title": "098a84f9 1325cbe3",

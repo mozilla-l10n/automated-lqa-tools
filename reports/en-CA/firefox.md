@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a9b9a116b725` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f2e9b7fce093` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `37560db2354a` |
-| **Previous run** | 2026-08-20 @ `fef20cd7efc2` |
+| **Previous run** | 2026-08-21 @ `a9b9a116b725` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,115 |
+| **Strings reviewed this run** | 33 of 18,115 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -17,17 +17,36 @@ Also for en-CA: [android](android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `ImageMapRectBoundsError` — `dom/chrome/layout/layout_errors.properties` — The quoted format literal is mangled: "left,top,right,bottom" became "”“eft,top,right,bottom".
+  - Current: `”“eft,top,right,bottom”`
+  - Source: `The “coords” attribute of the <area shape="rect"> tag is not in the “left,top,right,bottom” format.`
+  - Suggest: `“left,top,right,bottom”`
+  - The en-US source names the literal attribute format "left,top,right,bottom"; the target lost the initial "l" and has stray/reversed quote marks, making the message wrong and unreadable.
+- `PINotInProlog` — `dom/chrome/layout/xul.properties` — "anymore" was needlessly reworded to "any longer", a change not required by en-CA.
+  - Current: `does not have any effect outside the prolog any longer`
+  - Source: `<?%1$S?> processing instruction does not have any effect outside the prolog anymore (see bug 360119).`
+  - Suggest: `does not have any effect outside the prolog anymore`
+  - en-CA does not differ from en-US here; the substitution is an unnecessary divergence from the source wording.
+- `about-reader-color-scheme-auto` — `toolkit/toolkit/about/aboutReader.ftl` — Only the title was adapted to "Colour" while the related value remains inconsistent; "Color Scheme" here refers to the UI feature name shown alongside untouched sibling labels.
+  - Current: `title: Colour Scheme Auto`
+  - Source: `(value): Auto title: Color Scheme Auto`
+  - Suggest: `title: Color Scheme Auto`
+  - Reader Mode's colour-scheme labels are inconsistent if only this one is adapted; the en-US term is used for the same control elsewhere in the file.
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (2)
 
-- `document_properties_kb` — `browser/pdfviewer/viewer.properties` — PDF viewer file-size unit written "kB" here but "KB" in the identical Fluent-migrated string elsewhere in the locale, and inconsistent with the adjacent "MB" line.
-  - Current: `{{size_kb}} kB ({{size_b}} bytes)`
-  - Source: `{{size_kb}} KB ({{size_b}} bytes)`
-  - Suggest: `{{size_kb}} KB ({{size_b}} bytes)`
-  - The same PDF viewer document-properties string in toolkit/toolkit/pdfviewer/viewer.ftl:110 reads "{ NUMBER($kb, …) } KB ({ $b } bytes)", and the next entry here (document_properties_mb) uses the upper-case "MB". en-CA has no convention requiring lower-case "k"; browser/browser/pageInfo.ftl also uses "KB" for the same kind of file-size display. Using "kB" only in this one copy makes the same UI st…
+- `PINotInProlog` — `dom/chrome/layout/xul.properties` — "anymore" was needlessly reworded to "any longer", a change not required by en-CA.
+  - Current: `does not have any effect outside the prolog any longer`
+  - Source: `<?%1$S?> processing instruction does not have any effect outside the prolog anymore (see bug 360119).`
+  - Suggest: `does not have any effect outside the prolog anymore`
+  - en-CA does not differ from en-US here; the substitution is an unnecessary divergence from the source wording.
+- `about-reader-color-scheme-auto` — `toolkit/toolkit/about/aboutReader.ftl` — Only the title was adapted to "Colour" while the related value remains inconsistent; "Color Scheme" here refers to the UI feature name shown alongside untouched sibling labels.
+  - Current: `title: Colour Scheme Auto`
+  - Source: `(value): Auto title: Color Scheme Auto`
+  - Suggest: `title: Color Scheme Auto`
+  - Reader Mode's colour-scheme labels are inconsistent if only this one is adapted; the en-US term is used for the same control elsewhere in the file.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -105,18 +124,22 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (3)
+## 3. Open findings (4)
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 1 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 2 |
 | 2 | Wrong content (says something other than the English) | 0 |
 | 3 | Degraded language (grammar, spelling, terminology) | 2 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
 
-_Nothing in this category._
+- `ImageMapRectBoundsError` — `dom/chrome/layout/layout_errors.properties` — The quoted format literal is mangled: "left,top,right,bottom" became "”“eft,top,right,bottom".
+  - Current: `”“eft,top,right,bottom”`
+  - Source: `The “coords” attribute of the <area shape="rect"> tag is not in the “left,top,right,bottom” format.`
+  - Suggest: `“left,top,right,bottom”`
+  - The en-US source names the literal attribute format "left,top,right,bottom"; the target lost the initial "l" and has stray/reversed quote marks, making the message wrong and unreadable.
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -169,12 +192,12 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 ### Resolved to date (10)
 
 - `document_properties_kb` — `browser/pdfviewer/viewer.properties` — fixed 2026-08-21
+- `PINotInProlog` — `dom/chrome/layout/xul.properties` — fixed 2026-08-21
+- `about-reader-color-scheme-auto` — `toolkit/toolkit/about/aboutReader.ftl` — fixed 2026-08-21
 - `newtab-picture-attribution-license` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-20
 - `media-file-size` — `browser/browser/pageInfo.ftl` — fixed 2026-08-20
 - `fontinspector.fontLicense` — `devtools/client/font-inspector.properties` — fixed 2026-08-20
 - `fontinspector.fontLicenseInfoUrl` — `devtools/client/font-inspector.properties` — fixed 2026-08-20
 - `ImageMapRectBoundsError` — `dom/chrome/layout/layout_errors.properties` — fixed 2026-08-20
-- `PINotInProlog` — `dom/chrome/layout/xul.properties` — fixed 2026-08-20
-- `about-reader-color-scheme-auto` — `toolkit/toolkit/about/aboutReader.ftl` — fixed 2026-08-20
 - `about-reader-color-scheme-auto` — `toolkit/toolkit/about/aboutReader.ftl` — fixed 2026-08-20
 - `download-utils-kilobyte` — `toolkit/toolkit/downloads/downloadUtils.ftl` — fixed 2026-08-20
