@@ -275,6 +275,7 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
 
     new_meta = {
         "project": project.name,
+        "display_name": f"{project.display_name} l10n",
         "locale": locale,
         "mode": mode,
         "last_run": today(),
@@ -406,6 +407,11 @@ def main(argv=None) -> int:
     log = Log(args.quiet)
     project = config.load(args.project)
     if args.baseline_strategy:
+        if args.baseline_strategy == "agent" and not project.supports_agent_baseline:
+            log(f"error: --baseline-strategy agent is not available for "
+                f"{project.name}: a locale is a single file that no partition "
+                f"can make small enough for one agent to read.")
+            return 2
         project._baseline_override = args.baseline_strategy
     locales = args.locales or project.locales
     unknown = [loc for loc in locales if loc not in project.locales]

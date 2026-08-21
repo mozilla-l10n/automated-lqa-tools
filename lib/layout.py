@@ -7,6 +7,11 @@ Two shapes so far, and they are genuinely different.
 ``firefox-l10n-source/browser/browser/appmenu.ftl``. Walking both trees and
 matching on the relative path is enough.
 
+**xliff** -- firefoxios-l10n. One file per locale, and each trans-unit
+carries the English and the translation together, so there is no second
+tree to walk: one parse fills both sides. The `<file original="...">` group
+is part of the key, because a trans-unit id is only unique within its group.
+
 **android** -- android-l10n. One repository in which the source and every
 locale sit side by side, ``res/values/strings.xml`` next to
 ``res/values-it/strings.xml``, with the mapping declared in compare-locales
@@ -48,6 +53,8 @@ def load(project, locale: str, l10n_root: str, source_root: str) -> Trees:
         return _mirrored(project, locale, l10n_root, source_root)
     if kind == "android":
         return _android(project, locale, l10n_root)
+    if kind == "xliff":
+        return _xliff(project, locale, l10n_root)
     raise RuntimeError(f"unknown layout {kind!r} in {project.name}/config.yaml")
 
 
@@ -92,6 +99,90 @@ def _android(project, locale, root) -> Trees:
                 trees.locale_paths[rel] = os.path.relpath(localized, root)
                 for msg in parse.parse_file(localized, rel):
                     trees.l10n[msg.key] = msg
+    return trees
+
+
+def _xliff_messages(path: str, root: str):
+    """Yield ``(group, id, target_msg, source_text)`` from one XLIFF file.
+
+    moz.l10n gives the ``<target>`` as the entry value and puts the
+    ``<source>`` in the entry's metadata. An untranslated unit comes back
+    with an empty pattern rather than being absent, so the caller has to
+    look at the pattern to tell the two apart.
+    """
+    from moz.l10n.resource import parse_resource
+
+    resource = parse_resource(path)
+    for section in resource.sections:
+        group = "/".join(section.id) if section.id else os.path.basename(path)
+        for entry in section.entries:
+            if not hasattr(entry, "id"):
+                continue
+            meta = {m.key: m.value for m in (entry.meta or [])}
+            yield group, ".".join(entry.id), entry, meta.get("source")
+
+
+def _xliff(project, locale, root) -> Trees:
+    """One file per locale, source and target side by side inside it.
+
+    The reference is the dedicated reference locale (``en-US``) rather than
+    the ``<source>`` sitting next to each target. Upstream only rewrites a
+    locale's ``<source>`` in one of its three matching modes, so it can lag
+    behind the English; taking the reference from its own file is what lets
+    the snapshot notice that the source moved under a translation nobody
+    updated. Where a unit is missing from the reference -- an id the
+    reference has since dropped -- the in-file ``<source>`` is used instead.
+    """
+    from parse import Msg
+
+    trees = Trees(root=root)
+    template = project.data.get("locale_file", "{locale}/firefox-ios.xliff")
+    reference = project.data.get("reference_locale", "en-US")
+
+    # Keep the reference's *parsed* message, not just its text: the
+    # placeholder check reads the literal spec off each expression, so
+    # handing it the target's own message would compare a string with
+    # itself and report nothing, however wrong the translation was.
+    ref_path = os.path.join(root, template.format(locale=reference))
+    ref_msgs: dict[tuple[str, str], object] = {}
+    if os.path.exists(ref_path):
+        for group, mid, entry, _src in _xliff_messages(ref_path, root):
+            if getattr(entry.value, "pattern", None):
+                ref_msgs[(group, mid)] = entry.value
+
+    path = os.path.join(root, template.format(locale=locale))
+    if not os.path.exists(path):
+        return trees
+
+    for group, mid, entry, in_file_source in _xliff_messages(path, root):
+        key = (group, mid)
+        trees.source_files.add(group)
+        ref_value = ref_msgs.get(key)
+        source_text = (
+            parse.flatten(ref_value) if ref_value is not None else (in_file_source or "")
+        )
+        if source_text:
+            source_msg = Msg(
+                file=group, id=mid, comment=(entry.comment or "").strip(),
+                props={"": source_text},
+            )
+            # Only expose a parsed message where it really is the source's.
+            # Without one the placeholder check skips the unit, which is the
+            # right outcome for an id the reference no longer carries.
+            if ref_value is not None:
+                source_msg.raw = {"": ref_value}
+            trees.source[key] = source_msg
+        # An empty pattern is an untranslated unit: leave it out so
+        # completeness counts it as missing rather than as an empty string.
+        if not getattr(entry.value, "pattern", None):
+            continue
+        trees.l10n_files.add(group)
+        trees.locale_paths[group] = os.path.relpath(path, root)
+        trees.l10n[key] = Msg(
+            file=group, id=mid, comment=(entry.comment or "").strip(),
+            props={"": parse.flatten(entry.value)}, raw={"": entry.value},
+            line=getattr(getattr(entry, "linepos", None), "start", 0) or 0,
+        )
     return trees
 
 

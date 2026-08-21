@@ -96,6 +96,24 @@ class Project:
         return os.path.join(self.root, "tools")
 
     @property
+    def display_name(self) -> str:
+        """What to call this project in a report heading.
+
+        Falls back to the directory name capitalized, which is right for
+        `firefox` and `android` but renders `firefox_ios` as "Firefox_ios".
+        """
+        return self.data.get("display_name") or self.name.capitalize()
+
+    @property
+    def supports_agent_baseline(self) -> bool:
+        """Can a subagent be handed readable slices of this project?
+
+        False where a locale is one large file and no partition can make it
+        smaller -- an XLIFF holding every string, for instance.
+        """
+        return bool(self.data.get("supports_agent_baseline", True))
+
+    @property
     def baseline_strategy(self) -> str:
         """How a from-scratch review is run: "agent" or "batched".
 

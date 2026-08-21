@@ -22,6 +22,7 @@ reports/it/android.md
 |---|---|---|
 | [`firefox/`](firefox/) | Firefox desktop, plus shared `toolkit` and `dom` strings | [README](firefox/README.md) · [reports](reports/firefox.md) |
 | [`android/`](android/) | Firefox for Android, Focus, and Android Components | [README](android/README.md) · [reports](reports/android.md) |
+| [`firefox_ios/`](firefox_ios/) | Firefox for iOS | [README](firefox_ios/README.md) · [reports](reports/firefox_ios.md) |
 
 Each has its own workflow and opens its own pull request, so a reviewer only
 sees the project they work on.
@@ -84,8 +85,9 @@ Give it its own workflow in `.github/workflows/` and its own README.
 
 - **`layout`** — how localized files relate to source files. `mirrored` is
   two repositories with identical relative paths (Firefox); `android` is one
-  repository with compare-locales TOML mappings. A new shape means a loader
-  in [`lib/layout.py`](lib/layout.py), not changes to the pipeline.
+  repository with compare-locales TOML mappings; `xliff` is one file per
+  locale carrying source and target together (iOS). A new shape means a
+  loader in [`lib/layout.py`](lib/layout.py), not changes to the pipeline.
 - **`checks`** — which checks run, in report order. Shared ones come from
   `lib/common_checks.py`; the project's `tools/checks.py` composes them with
   its own and an unknown name fails loudly.

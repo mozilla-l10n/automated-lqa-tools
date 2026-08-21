@@ -212,7 +212,7 @@ def render(locale, meta, health, counts, findings, systemic, delta_report, count
         by_impact[f.impact] = by_impact.get(f.impact, 0) + 1
 
     lines = [
-        f"# {meta.get('project', '').capitalize() or 'l10n'} l10n QA — {locale}",
+        f"# {meta.get('display_name') or 'l10n'} QA — {locale}",
         "",
         "| | |",
         "|---|---|",

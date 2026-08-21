@@ -113,10 +113,13 @@ def run(l10n_dir, project) -> int:
         check(n == 0, f"{locale}: {kind} = {n} ({why})")
 
     print("\nAndroid check internals")
-    from checks import PRINTF, _specs, _unescaped
+    from checks import _unescaped
+    from common_checks import PRINTF
 
     check([m[4] for m in PRINTF.findall("%1$s and %2$,d")] == ["s", "d"],
           "printf specs parse, including flags like %2$,d")
+    check([m[4] for m in PRINTF.findall("%@ and %1$@")] == ["@", "@"],
+          "the shared regex also accepts iOS's %@, which Android never writes")
     check(_unescaped("Don't") == "'", "a bare apostrophe is caught")
     check(_unescaped(r"Don\'t") is None, "an escaped apostrophe is accepted")
     check(_unescaped('"Don\'t"') is None, "a fully quoted value is accepted")

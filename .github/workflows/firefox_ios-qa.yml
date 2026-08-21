@@ -1,0 +1,271 @@
+name: Firefox iOS l10n QA
+
+# Manual dispatch only for now. Uncomment the schedule below once a few runs
+# have been watched; the pipeline is already safe to run unattended.
+#
+# Separate from the other workflows on purpose: different reviewers, a
+# different repository, and its own pull request on l10n-qa/firefox_ios, so
+# no team has to read another's findings.
+#
+# Monthly rather than daily: findings are a backlog a locale team works
+# through over weeks, not a build to babysit. A month of Pontoon syncs is
+# still a small delta next to the 18,000 strings in a locale, and the pull
+# request is cumulative anyway, so nothing is lost by looking less often.
+on:
+  workflow_dispatch:
+    inputs:
+      locales:
+        description: 'Comma-separated locale codes, or "all"'
+        required: false
+        default: 'all'
+      mode:
+        description: 'auto = baseline for a new locale, incremental otherwise'
+        required: false
+        default: 'auto'
+        type: choice
+        options: [auto, incremental, baseline]
+      dry_run:
+        description: 'Run everything but write nothing'
+        required: false
+        default: false
+        type: boolean
+      no_llm:
+        description: 'Deterministic checks only; no API calls'
+        required: false
+        default: false
+        type: boolean
+  # schedule:
+  #   - cron: '11 6 1 * *'   # 1st of the month, 06:11 UTC
+
+concurrency:
+  # Runs push to a shared branch, so never let two overlap.
+  group: firefox-ios-l10n-qa
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      locales: ${{ steps.pick.outputs.locales }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+      - run: pip install PyYAML
+      - id: pick
+        name: Resolve the locale list
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os, yaml
+          requested = os.environ["REQUESTED"].strip()
+          config = yaml.safe_load(open("firefox_ios/config.yaml"))
+          known = config["locales"]
+          if not requested or requested == "all":
+              picked = known
+          else:
+              picked = [x.strip() for x in requested.split(",") if x.strip()]
+              unknown = [x for x in picked if x not in known]
+              if unknown:
+                  raise SystemExit(
+                      f"not in firefox_ios/config.yaml: {', '.join(unknown)}"
+                  )
+          print("locales=" + json.dumps(picked))
+          PY
+        env:
+          REQUESTED: ${{ inputs.locales }}
+
+  review:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      # One locale per job so a single failure cannot take the rest down, and
+      # so a slow baseline does not block the incremental runs.
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        locale: ${{ fromJson(needs.plan.outputs.locales) }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Cache the upstream clones
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: work
+          key: repos-${{ matrix.locale }}-${{ github.run_id }}
+          restore-keys: |
+            repos-${{ matrix.locale }}-
+
+      - name: Check out firefoxios-l10n
+        # One XLIFF per locale, source and target inside it, so there is no
+        # second repository and nothing to sparse-check-out. History is
+        # heavy -- 104 large XML files churned twice weekly for years --
+        # hence blobless and depth 1.
+        run: |
+          set -euo pipefail
+          if [ -d work/l10n/.git ]; then
+            git -C work/l10n fetch --depth 1 origin main
+            git -C work/l10n reset --hard origin/main
+          else
+            git clone --depth 1 --filter=blob:none \
+              https://github.com/mozilla-l10n/firefoxios-l10n work/l10n
+          fi
+          du -sh work/l10n
+
+      - name: Review
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python lib/run.py --project firefox_ios \
+            --locale '${{ matrix.locale }}' \
+            --mode '${{ inputs.mode }}' \
+            --l10n-dir work/l10n \
+            --source-dir work/l10n \
+            ${{ inputs.dry_run && '--dry-run' || '' }} \
+            ${{ inputs.no_llm && '--no-llm' || '' }} \
+            < /dev/null
+
+      - name: Upload this locale's state and report
+        if: ${{ !inputs.dry_run }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: result-${{ matrix.locale }}
+          path: |
+            firefox_ios/state/${{ matrix.locale }}/
+            reports/${{ matrix.locale }}/firefox_ios.md
+            firefox_ios/locales/${{ matrix.locale }}/
+          if-no-files-found: ignore
+          retention-days: 7
+
+  propose:
+    needs: review
+    # Propose whatever succeeded, even if some locales failed.
+    if: ${{ always() && !inputs.dry_run }}
+    runs-on: ubuntu-latest
+    env:
+      BRANCH: l10n-qa/firefox_ios
+      BASE: ${{ github.ref_name }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+
+      - name: Switch to the rolling QA branch
+        # One long-lived branch, so runs accumulate into a single open pull
+        # request instead of opening one per run. Done before the artifacts
+        # are applied so there is nothing in the tree to stash.
+        run: |
+          set -euo pipefail
+          git config user.name  'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+
+          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null 2>&1; then
+            git fetch origin "$BRANCH"
+            git checkout -B "$BRANCH" "origin/$BRANCH"
+            if ! git merge --no-edit "origin/$BASE"; then
+              # Only generated files can conflict. Locale instructions are
+              # human-edited, so the base wins those; state and reports are
+              # rewritten by this run anyway, so the branch keeps them.
+              git checkout --theirs -- firefox_ios/locales 2>/dev/null || true
+              git checkout --ours   -- firefox_ios/state reports 2>/dev/null || true
+              git add -A
+              git commit --no-edit
+            fi
+          else
+            git checkout -B "$BRANCH"
+          fi
+
+      - name: Collect the per-locale results
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          pattern: result-*
+          merge-multiple: true
+          path: incoming
+
+      - name: Apply them
+        run: |
+          set -euo pipefail
+          if [ ! -d incoming ]; then
+            echo "no artifacts produced; nothing to propose"
+            exit 0
+          fi
+          # upload-artifact roots each artifact at the common ancestor of the
+          # paths it was given. Those are now `firefox_ios/state`, `firefox_ios/locales`
+          # and `reports/`, which diverge at the top, so the artifact carries
+          # full workspace-relative paths and unpacks at the root.
+          cp -R incoming/. ./
+          rm -rf incoming
+
+      - name: Refresh the cross-locale summary
+        run: python lib/summary.py --project firefox_ios
+
+      - name: Commit
+        id: commit
+        run: |
+          set -euo pipefail
+          git add firefox_ios/state reports firefox_ios/locales
+          if git diff --cached --quiet; then
+            echo "no changes: every locale is where it was"
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git commit -m "Firefox iOS l10n QA: ${{ inputs.locales }} ($(date -u +%Y-%m-%d))"
+          git push --force-with-lease origin "$BRANCH"
+          echo 'changed=true' >> "$GITHUB_OUTPUT"
+
+      - name: Open or update the pull request
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          {
+            echo 'Automated localization QA: findings, state and reports only.'
+            echo 'This workflow never modifies a locale file, and the review'
+            echo 'agent runs with read-only tools.'
+            echo
+            echo 'Review the report diffs, then merge. The branch is reused, so'
+            echo 'later runs add commits here rather than opening more pull'
+            echo 'requests.'
+            echo
+            echo '---'
+            echo
+            sed -n '1,40p' reports/firefox_ios.md
+          } > /tmp/pr-body.md
+
+          if gh pr view "$BRANCH" --json state --jq .state 2>/dev/null | grep -qx OPEN; then
+            gh pr edit "$BRANCH" --body-file /tmp/pr-body.md
+            gh pr comment "$BRANCH" \
+              --body "Refreshed $(date -u +%Y-%m-%d) — locales: \`${{ inputs.locales }}\`"
+          else
+            gh pr create \
+              --base "$BASE" --head "$BRANCH" \
+              --title "Firefox l10n QA" \
+              --body-file /tmp/pr-body.md
+          fi
+          gh pr view "$BRANCH" --json url --jq .url >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Summarize the run
+        run: |
+          {
+            echo '## Firefox iOS l10n QA'
+            echo
+            sed -n '1,40p' reports/firefox_ios.md
+          } >> "$GITHUB_STEP_SUMMARY"

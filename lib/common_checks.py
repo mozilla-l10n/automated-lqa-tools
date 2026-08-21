@@ -451,6 +451,136 @@ def _nearest(key, candidates):
     return ranked[0]
 
 
+# %[argument_index$][flags][width][.precision]conversion
+#
+# `@` is in the conversion set for iOS, where every placeholder that matters
+# is `%@` or `%1$@`; Android never writes one, so including it costs nothing
+# there.
+PRINTF = re.compile(
+    r"%(?:(\d+)\$)?([-#+ 0,(]*)(\d+)?(?:\.(\d+))?([a-zA-Z@%])"
+)
+
+
+def _specs(msg) -> list[tuple[str, str]]:
+    """The printf placeholders of a message, as (index, conversion).
+
+    Read from the `source` attribute moz.l10n keeps on each expression, so
+    this is the literal text from the file rather than a reconstruction.
+    Index is "" for a non-positional `%s`.
+    """
+    out: list[tuple[str, str]] = []
+
+    def walk(pattern):
+        for part in pattern:
+            if not isinstance(part, Expression):
+                continue
+            literal = (part.attributes or {}).get("source")
+            if not isinstance(literal, str):
+                continue
+            for index, _flags, _width, _prec, conv in PRINTF.findall(literal):
+                if conv == "%":
+                    continue
+                out.append((index or "", conv.lower()))
+
+    if isinstance(msg, PatternMessage):
+        walk(msg.pattern)
+    elif isinstance(msg, SelectMessage):
+        # Every variant should carry the same placeholders; the first is
+        # representative, and a variant that disagrees is caught by the
+        # shared variable check.
+        for variant in msg.variants.values():
+            walk(variant)
+            break
+    return out
+
+
+def _describe(specs) -> str:
+    return ", ".join(f"%{i}${c}" if i else f"%{c}" for i, c in specs) or "none"
+
+
+def check_placeholders(locale, l10n, source) -> list[Finding]:
+    """Placeholder parity between a string and its source.
+
+    Both Android and iOS format through printf-style substitution, so a
+    placeholder carries a *type* and often a position as well. Getting
+    either wrong is a runtime failure rather than a rendering one: Android
+    throws `IllegalFormatConversionException` when `%1$s` meets an integer,
+    and both platforms reject a format string that mixes `%s` with `%1$s`.
+
+    The shared variable check compares the argument *names* moz.l10n derives
+    from position, so it sees a dropped or invented argument but not a
+    retyped one. This closes that gap, and reads the literal spec from the
+    `source` attribute moz.l10n keeps on each expression rather than
+    reconstructing it.
+    """
+    out = []
+    for key, msg in l10n.items():
+        src = source.get(key)
+        if src is None:
+            continue
+        for prop, raw in msg.raw.items():
+            if prop not in src.raw:
+                continue
+            want = _specs(src.raw[prop])
+            got = _specs(raw)
+            if not want and not got:
+                continue
+
+            label = f"`{msg.id}`" + (f" (`.{prop}`)" if prop else "")
+
+            # A retyped argument is a runtime crash, not a rendering bug.
+            by_index_src = {i: c for i, c in want if i}
+            by_index_loc = {i: c for i, c in got if i}
+            retyped = sorted(
+                i for i, c in by_index_loc.items()
+                if i in by_index_src and by_index_src[i] != c
+            )
+            if retyped:
+                detail = ", ".join(
+                    f"%{i}${by_index_src[i]} became %{i}${by_index_loc[i]}" for i in retyped
+                )
+                out.append(_mk(
+                    locale, msg, "A", "placeholders",
+                    f"{label} changes a placeholder's type: {detail}",
+                    current=msg.props.get(prop, ""),
+                    rationale=(
+                        "Android formats these through String.format, which throws "
+                        "IllegalFormatConversionException when the conversion does not "
+                        "match the argument. The string crashes rather than rendering."
+                    ),
+                    impact=1,
+                ))
+
+            # Mixing %s and %1$s in one string is also a runtime failure.
+            positional = {i for i, _ in got if i}
+            bare = sum(1 for i, _ in got if not i)
+            if positional and bare:
+                out.append(_mk(
+                    locale, msg, "A", "placeholders",
+                    f"{label} mixes numbered and unnumbered placeholders",
+                    current=msg.props.get(prop, ""),
+                    rationale=(
+                        "String.format rejects a format string that mixes `%s` with "
+                        "`%1$s`. Number every placeholder or none of them."
+                    ),
+                    impact=1,
+                ))
+
+            if sorted(want) != sorted(got) and not retyped:
+                out.append(_mk(
+                    locale, msg, "A", "placeholders",
+                    f"{label} has placeholders {_describe(sorted(got))} where the "
+                    f"source has {_describe(sorted(want))}",
+                    current=msg.props.get(prop, ""),
+                    rationale=(
+                        "The set of placeholders must match the source: a missing one "
+                        "drops a value the user should see, an extra one throws."
+                    ),
+                    impact=1,
+                ))
+    return out
+
+
 def check_ui_references(locale, l10n, source) -> list[Finding]:
     """A string that quotes another string's text, where the two disagree.
 
@@ -812,6 +942,7 @@ CHECKS = {
     "selectors": lambda c: check_selectors(c.locale, c.l10n, c.source),
     "plurals": lambda c: check_plurals(c.locale, c.l10n, c.source),
     "markup": lambda c: check_markup(c.locale, c.l10n, c.source),
+    "placeholders": lambda c: check_placeholders(c.locale, c.l10n, c.source),
     "ui_references": lambda c: check_ui_references(c.locale, c.l10n, c.source),
     "typography": lambda c: check_typography(
         c.project, c.locale, c.l10n, c.counts, c.source

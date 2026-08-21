@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-20 |
+| **Generated** | 2026-08-21 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `81c3d1941037` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `81c3d1941037` |
 | **Previous run** | 2026-08-20 @ `81c3d1941037` |

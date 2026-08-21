@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-20 |
+| **Generated** | 2026-08-21 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `fef20cd7efc2` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9277403f174f` |
 | **Previous run** | 2026-08-20 @ `fef20cd7efc2` |
@@ -147,6 +147,12 @@ _Nothing in this category._
 ---
 
 ## 4. Appendix
+
+### Dismissed by hand (0)
+
+_Nothing dismissed._
+
+_One line each in `locales/it/dismissed.txt`. Delete the line and the finding returns._
 
 ### Suppressed as false positives (2)
 

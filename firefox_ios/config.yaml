@@ -1,0 +1,81 @@
+# Firefox for iOS l10n QA configuration.
+project: firefox_ios
+name: Firefox for iOS
+display_name: Firefox iOS
+
+# One XLIFF file per locale, and each trans-unit carries the English and the
+# translation together -- there is no second tree to walk. See lib/layout.py.
+layout: xliff
+
+# Where a locale's file lives, and which locale is the reference. The
+# reference is used in preference to the <source> beside each target,
+# because upstream only rewrites that in one of its matching modes and it
+# can lag behind the English.
+locale_file: "{locale}/firefox-ios.xliff"
+reference_locale: en-US
+
+repos:
+  l10n:
+    url: https://github.com/mozilla-l10n/firefoxios-l10n
+    branch: main
+    locale_path: ""
+  # The same repository is its own reference: en-US/firefox-ios.xliff.
+  source:
+    url: https://github.com/mozilla-l10n/firefoxios-l10n
+    branch: main
+    locale_path: ""
+
+extensions: [".xliff"]
+
+exclude: []
+
+llm:
+  model: claude-opus-5
+  batch_size: 40
+  max_output_tokens: 16000
+  baseline_model: claude-opus-5
+  baseline_timeout_seconds: 3600
+
+# Checks this project runs, in report order. All of them are shared, from
+# lib/common_checks.py; tools/checks.py exists to compose the registry and
+# to record what is deliberately absent.
+#
+# Not run, and why -- each verified against the tree rather than assumed:
+#   variables, selectors, plurals  this project has no plurals at all; there
+#                                  is no .stringsdict and no plural trans-unit
+#   markup                         zero HTML tags in 1,894 Italian strings
+#   escaping, term_params,         Android and Fluent concepts with no
+#   accesskey                      counterpart in XLIFF
+checks:
+  - placeholders
+  - ui_references
+  - typography
+  - variant_spelling
+
+check_overrides: {}
+
+systemic_threshold: 25
+
+# A from-scratch review batches strings through the API. A locale is a
+# single 684 KB file holding all 1,894 units, so source and target together
+# are more than one agent can read -- the same reason fenix batches.
+baseline: batched
+
+# The agent strategy does not apply here, and saying so is better than
+# leaving a partition list that looks usable. Partitions exist to give an
+# agent a readable slice of the tree, but a locale is a single 684 KB file:
+# every one of the 95 groups resolves to the same path, so any split hands
+# the agent the whole thing. --baseline-strategy agent is refused for this
+# project rather than silently doing that.
+supports_agent_baseline: false
+
+# Locales that are variants of the source language rather than translations
+# of it. See lib/variants.py.
+variants:
+  en-GB: en-US
+  en-CA: en-US
+
+# Starting with Italian, as Android did. Nineteen of the twenty locales the
+# other projects track exist here; fy-NL has no iOS localization.
+locales:
+  - it
