@@ -3,27 +3,24 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
-| **Previous run** | 2026-08-21 @ `7134a6c77a67` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d368c9040c12` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d368c9040c12` |
+| **Previous run** | 2026-08-21 @ `ac24476c7ff2` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 2,908 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for ja: [firefox](firefox.md)
+Also for ja: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `downloads_delete_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — `downloads_delete_dialog_title` has plural variant ['one'], which ja does not have
-    - Current: `{$quantity ->} [one] ファイルを削除しますか？ [other] %d 個のファイルを削除しますか？`
-    - Source: `{$quantity ->} [one] Delete file? [other] Delete %d files?`
-    - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -611,6 +608,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Resolved to date (0)
+### Fixed to date (0)
 
-_Nothing resolved yet._
+_Nothing fixed yet._

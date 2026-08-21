@@ -3,16 +3,16 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
-| **Previous run** | 2026-08-21 @ `7134a6c77a67` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d368c9040c12` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d368c9040c12` |
+| **Previous run** | 2026-08-21 @ `ac24476c7ff2` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 2,908 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for nl: [firefox](firefox.md)
+Also for nl: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ---
 
@@ -476,6 +476,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Resolved to date (0)
+### Fixed to date (0)
 
-_Nothing resolved yet._
+_Nothing fixed yet._

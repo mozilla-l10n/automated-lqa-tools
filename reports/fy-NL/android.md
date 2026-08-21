@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
-| **Previous run** | 2026-08-21 @ `7134a6c77a67` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d368c9040c12` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d368c9040c12` |
+| **Previous run** | 2026-08-21 @ `ac24476c7ff2` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 2,908 |
 
@@ -18,47 +18,9 @@ Also for fy-NL: [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (9)
+### 🆕 New findings (0)
 
-- `search_suggestions_onboarding_text` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `search_suggestions_onboarding_text` has placeholders %1$s where the source has %s
-    - Current: `%1$s sil alles wat jo yn de adresbalke yntype mei jo standert sykmasine diele.`
-    - Source: `%s will share everything you type in the address bar with your default search engine.`
-    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
-- `tab_tray_inactive_auto_close_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `tab_tray_inactive_auto_close_body_2` uses a straight apostrophe
-    - Current: `%1$s kin ljepblêden dy't jo de ôfrûne moanne net besjoen hawwe slute.`
-    - Source: `%1$s can close tabs you haven’t viewed over the past month.`
-    - The tree uses ’ 101 times against 8 straight.
-- `onboarding_marketing_redesign_opt_out_checkbox` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `onboarding_marketing_redesign_opt_out_checkbox` uses a straight apostrophe
-    - Current: `Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht.`
-    - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
-    - Suggest: `Mozilla’s`
-    - The tree uses ’ 101 times against 8 straight.
-- `onboarding_marketing_body_1` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `onboarding_marketing_body_1` uses a straight apostrophe
-    - Current: `Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht.`
-    - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
-    - Suggest: `Mozilla’s`
-    - The tree uses ’ 101 times against 8 straight.
-- `nova_onboarding_marketing_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `nova_onboarding_marketing_body_2` uses a straight apostrophe
-    - Current: `Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht.`
-    - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
-    - The tree uses ’ 101 times against 8 straight.
-- `preferences_marketing_data_description_4` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `preferences_marketing_data_description_4` uses a straight apostrophe
-    - Current: `Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke.`
-    - Source: `Share how you discovered Firefox and that you use it with Mozilla’s marketing technology partners.`
-    - The tree uses ’ 101 times against 8 straight.
-- `download_content_type_filter_video` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `download_content_type_filter_video` uses a straight apostrophe
-    - Current: `Fideo's`
-    - Source: `Videos`
-    - The tree uses ’ 101 times against 8 straight.
-- `etp_known_fingerprinters_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `etp_known_fingerprinters_description` uses a straight apostrophe
-    - Current: `Foarkomt dat unyk identifisearbere gegevens oer jo apparaat sammele wurde dy't brûkt wurde kinne foar folchdoeleinen.`
-    - Source: `Stops uniquely identifiable data from being collected about your device that can be used for tracking purposes.`
-    - Suggest: `dy’t brûkt wurde kinne`
-    - The tree uses ’ 101 times against 8 straight.
-- `uninstall_survey_option_4_v2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `uninstall_survey_option_4_v2` uses a straight apostrophe
-    - Current: `Fideo's, downloads of media wurken net`
-    - Source: `Videos, downloads, or media didn’t work`
-    - The tree uses ’ 101 times against 8 straight.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -908,6 +870,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Resolved to date (0)
+### Fixed to date (0)
 
-_Nothing resolved yet._
+_Nothing fixed yet._

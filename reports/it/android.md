@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
-| **Previous run** | 2026-08-21 @ `7134a6c77a67` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d368c9040c12` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d368c9040c12` |
+| **Previous run** | 2026-08-21 @ `ac24476c7ff2` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 2,911 |
 
@@ -154,7 +154,7 @@ _Suppressions live in `locales/it/suppressions.yaml`. Removing a rule brings its
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Resolved to date (43)
+### Fixed to date (43)
 
 - `ai_controls_blocked_info_banner` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-21
 - `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-it/strings.xml` — fixed 2026-08-20

@@ -154,7 +154,7 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Resolved to date (16)
+### Fixed to date (16)
 
 - `Biometry.Screen.UniversalAuthenticationReason.v115` — `it/firefox-ios.xliff` — fixed 2026-08-21
 - `Menu.EnhancedTrackingProtection.ClearData.AlertText.v128` — `it/firefox-ios.xliff` — fixed 2026-08-21

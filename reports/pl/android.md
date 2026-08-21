@@ -3,27 +3,24 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
-| **Previous run** | 2026-08-21 @ `7134a6c77a67` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d368c9040c12` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d368c9040c12` |
+| **Previous run** | 2026-08-21 @ `ac24476c7ff2` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 2,908 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for pl: [firefox](firefox.md)
+Also for pl: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-pl/strings.xml` — `firstrun_shortcut_text` has placeholders %1$s where the source has %1$s, %1$s
-    - Current: `Szybko wracaj do ulubionych stron w %1$s. Po prostu wybierz „Dodaj do ekranu głównego” z menu.`
-    - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
-    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -553,6 +550,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Resolved to date (0)
+### Fixed to date (0)
 
-_Nothing resolved yet._
+_Nothing fixed yet._

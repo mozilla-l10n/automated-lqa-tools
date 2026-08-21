@@ -3,51 +3,28 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `5cbe42651962` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bd0ff4b2f741` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `f2e9b7fce093` |
+| **Previous run** | 2026-08-21 @ `5cbe42651962` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 20 of 18,131 |
+| **Strings reviewed this run** | 0 of 18,131 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for en-CA: [android](android.md)
+Also for en-CA: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `ImageMapRectBoundsError` — `dom/chrome/layout/layout_errors.properties` — Opening curly quote replaced with a closing curly quote before “left,top,right,bottom”.
-    - Current: `”left,top,right,bottom”`
-    - Source: `The “coords” attribute of the <area shape="rect"> tag is not in the “left,top,right,bottom” format.`
-    - Suggest: `“left,top,right,bottom”`
-    - The source uses a matched pair of curly double quotes (“…”); the target uses a right double quote on both sides, breaking the locale's curly-double quoting convention.
+_No new findings._
 
-### ✅ Fixed since the last run (4)
+### ✅ Fixed since the last run (0)
 
-- `Kilo` — `browser/installer/override.properties` — The NSIS kilobyte unit prefix was changed from "K" to "k", a change no en-CA convention calls for.
-    - Current: `Kilo = k`
-    - Source: `K`
-    - Suggest: `Kilo = K`
-    - This value is concatenated by NSIS into the byte-size readout (e.g. "1.5 KB"); the sibling values Byte/Mega/Giga were left as B/M/G. Canadian English has no convention that requires lowercasing this symbol, so the single-letter change is an unnecessary deviation from the source.
-- `ImageMapRectBoundsError` — `dom/chrome/layout/layout_errors.properties` — The quoted format literal is mangled: "left,top,right,bottom" became "”“eft,top,right,bottom".
-    - Current: `”“eft,top,right,bottom”`
-    - Source: `The “coords” attribute of the <area shape="rect"> tag is not in the “left,top,right,bottom” format.`
-    - Suggest: `“left,top,right,bottom”`
-    - The en-US source names the literal attribute format "left,top,right,bottom"; the target lost the initial "l" and has stray/reversed quote marks, making the message wrong and unreadable.
-- `rights-intro-point-1` — `toolkit/toolkit/about/aboutRights.ftl` — The proper name of the licence document "Mozilla Public License" has been respelled as "Mozilla Public Licence".
-    - Current: `Mozilla Public Licence`
-    - Source: `{ -brand-short-name } is made available to you under the terms of the <a data-l10n-name="mozilla-public-license-link">Mozilla Public License</a>. This means you may use, copy and distribute { -brand-short-name } to othe…`
-    - Suggest: `Mozilla Public License`
-    - "Mozilla Public License" is the official title of a specific legal document (as used in the MPL header of every file in this tree, including this one); the -ce/-se spelling rule for the common noun does not apply to a proper name. Both occurrences in the string are affected, including the linked <a data-l10n-name="mozilla-public-license-link"> text.
-- `ImageMapRectBoundsError` — `dom/chrome/layout/layout_errors.properties` — Opening curly quote replaced with a closing curly quote before “left,top,right,bottom”.
-    - Current: `”left,top,right,bottom”`
-    - Source: `The “coords” attribute of the <area shape="rect"> tag is not in the “left,top,right,bottom” format.`
-    - Suggest: `“left,top,right,bottom”`
-    - The source uses a matched pair of curly double quotes (“…”); the target uses a right double quote on both sides, breaking the locale's curly-double quoting convention.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -177,7 +154,7 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Resolved to date (13)
+### Fixed to date (13)
 
 - `Kilo` — `browser/installer/override.properties` — fixed 2026-08-21
 - `document_properties_kb` — `browser/pdfviewer/viewer.properties` — fixed 2026-08-21

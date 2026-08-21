@@ -455,6 +455,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Resolved to date (0)
+### Fixed to date (0)
 
-_Nothing resolved yet._
+_Nothing fixed yet._

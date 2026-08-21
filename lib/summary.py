@@ -58,7 +58,7 @@ def render(project) -> str:
         f"- **Generated:** {datetime.date.today().isoformat()}",
         f"- **Locales tracked:** {len(project.locales)} "
         f"({len(checked)} with recorded state)",
-        f"- **Findings:** {total_all:,} raised, {total_fixed:,} resolved "
+        f"- **Findings:** {total_all:,} raised, {total_fixed:,} fixed "
         f"({pct}), {total_open:,} open",
         f"- **Closed by a person:** {sum(r['dismissed'] for r in checked):,} "
         f"dismissed, {sum(r['suppressed'] for r in checked):,} suppressed by rule",

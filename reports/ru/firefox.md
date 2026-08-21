@@ -3,16 +3,16 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `5cbe42651962` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bd0ff4b2f741` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `f2e9b7fce093` |
+| **Previous run** | 2026-08-21 @ `5cbe42651962` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 18,161 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for ru: [android](android.md)
+Also for ru: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ---
 
@@ -1004,7 +1004,7 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Resolved to date (172)
+### Fixed to date (172)
 
 - `about-unloads-intro` — `browser/browser/aboutUnloads.ftl` — fixed 2026-08-07
 - `ai-window-learn-from-browsing-activity` — `browser/browser/aiFeatures.ftl` — fixed 2026-08-07

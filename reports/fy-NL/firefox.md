@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `5cbe42651962` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bd0ff4b2f741` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `f2e9b7fce093` |
+| **Previous run** | 2026-08-21 @ `5cbe42651962` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 18,131 |
 
@@ -853,7 +853,7 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Resolved to date (245)
+### Fixed to date (245)
 
 - `shortcuts-remove-button` — `toolkit/toolkit/about/aboutAddons.ftl` — fixed 2026-08-21
 - `aboutdialog-update-downloading` — `browser/browser/aboutDialog.ftl` — fixed 2026-08-11

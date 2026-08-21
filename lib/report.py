@@ -379,14 +379,14 @@ def render(locale, meta, health, counts, findings, systemic, delta_report, count
         "translation. Kept separate from fixes so the fixed count stays "
         "honest._",
         "",
-        f"### Resolved to date ({len(fixed_total)})",
+        f"### Fixed to date ({len(fixed_total)})",
         "",
         (
             "\n".join(
                 f"- `{f.string_id}` — `{_path(f.file)}` — fixed {f.resolved_on}"
                 for f in sorted(fixed_total, key=lambda f: f.resolved_on, reverse=True)[:40]
             )
-            or "_Nothing resolved yet._"
+            or "_Nothing fixed yet._"
         ),
         "",
     ]

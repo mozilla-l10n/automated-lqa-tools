@@ -3,32 +3,24 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
-| **Previous run** | 2026-08-21 @ `7134a6c77a67` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d368c9040c12` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d368c9040c12` |
+| **Previous run** | 2026-08-21 @ `ac24476c7ff2` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 2,908 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for ru: [firefox](firefox.md)
+Also for ru: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — `preference_summary_delete_browsing_data_on_quit_2` uses straight double quotes
-    - Current: `Автоматически удаляет данные просмотра сети, когда вы выбираете "Выйти" в главном меню`
-    - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
-    - Suggest: `«Выйти»`
-    - The locale's quote convention is `guillemet` (46 occurrences).
-- `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
-    - Current: `Сетевой адрес должен содержать "https://" or "http://"`
-    - Source: `Web address must contain “https://” or “http://”`
-    - The locale's quote convention is `guillemet` (46 occurrences).
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -763,6 +755,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Resolved to date (0)
+### Fixed to date (0)
 
-_Nothing resolved yet._
+_Nothing fixed yet._

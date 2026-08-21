@@ -3,33 +3,24 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ac24476c7ff2` |
-| **Previous run** | 2026-08-21 @ `7134a6c77a67` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d368c9040c12` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d368c9040c12` |
+| **Previous run** | 2026-08-21 @ `ac24476c7ff2` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 2,897 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for hu: [firefox](firefox.md)
+Also for hu: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hu/strings.xml` — `mozac_browser_errorpages_offline_message` quotes “Próbálja újra” but the string it names, `mozac_browser_errorpages_page_refresh`, reads “Újrapróbálkozás”
-    - Current: `{ <p> }A böngésző kapcsolat nélküli módban van, ezért nem tud csatlakozni a kért elemhez.{ </p> } { <ul> } { <li> }Csatlakoztatva van a számítógép a hálózathoz?{ </li> } { <li> }Nyomja meg a „Próbálja újra” gombot az on…`
-    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
-    - Suggest: `Újrapróbálkozás`
-    - In the source this string quotes “Try Again”, which is exactly the value of `mozac_browser_errorpages_page_refresh` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-hu/strings.xml` — `firstrun_shortcut_text` quotes “Hozzáadás a kezdőképernyőre” but the string it names, `menu_add_to_home_screen`, reads “Kezdőképernyőhöz adás”
-    - Current: `Térjen vissza gyorsan a kedvenc oldalaihoz a %1$sban. Csak válassza a „Hozzáadás a kezdőképernyőre” lehetőséget a %1$s menüből.`
-    - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
-    - Suggest: `Kezdőképernyőhöz adás`
-    - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -829,6 +820,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Resolved to date (0)
+### Fixed to date (0)
 
-_Nothing resolved yet._
+_Nothing fixed yet._
