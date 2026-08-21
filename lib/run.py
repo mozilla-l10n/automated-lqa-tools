@@ -35,6 +35,7 @@ import parse  # noqa: E402
 import report  # noqa: E402
 import repos  # noqa: E402
 import snapshot  # noqa: E402
+import summary  # noqa: E402
 import suppress  # noqa: E402
 
 
@@ -266,6 +267,18 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
         log(f"  dismissed by hand: {sum(dropped.values())}")
     raised = [f for f in raised if f.status not in ("suppressed", "dismissed")]
 
+    # The buckets were filled before suppressions, dismissals and merge had
+    # their say, and any of those can move a finding afterwards -- a defect
+    # resolved earlier in the run and then raised again by the reviewer ends
+    # up open, but was still sitting in the "fixed" list. Report what each
+    # finding actually ended up as.
+    _final = {
+        "fixed": "fixed", "withdrawn": "withdrawn",
+        "obsolete": "obsolete", "recheck": "needs-recheck",
+    }
+    for bucket, status in _final.items():
+        resolved[bucket] = [f for f in resolved[bucket] if f.status == status]
+
     open_now = [f for f in stored if f.is_open]
     log(
         f"  findings: {len(raised)} new, {len(resolved['fixed'])} fixed, "
@@ -452,6 +465,11 @@ def main(argv=None) -> int:
         except Exception:  # noqa: BLE001 - one locale must not sink the run
             log(f"  FAILED:\n{traceback.format_exc()}")
             failed.append(locale)
+
+    if results and not args.dry_run:
+        # Otherwise the cross-locale page keeps yesterday's numbers until
+        # somebody remembers to run summary.py by hand.
+        log(f"\nrefreshed {os.path.relpath(summary.write(project), config.REPO_ROOT)}")
 
     log("\n" + "=" * 62)
     log(f"{'locale':8} {'mode':12} {'reviewed':>9} {'new':>5} {'fixed':>6} "

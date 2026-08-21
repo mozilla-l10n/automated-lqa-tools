@@ -1,33 +1,34 @@
 # Firefox for Android, Focus, and the shared Android Components — l10n QA
 
-- **Generated:** 2026-08-20
+- **Generated:** 2026-08-21
 - **Locales tracked:** 20 (20 with recorded state)
-- **Findings:** 114 raised, 42 resolved (36%), 66 open
+- **Findings:** 114 raised, 42 resolved (36%), 55 open
+- **Closed by a person:** 11 dismissed, 4 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
-| Locale | Last run | Mode | Commit | Strings | Missing | Open | Impact 1–2 | Fixed | Suppressed |
-|---|---|---|---|---|---|---|---|---|---|
-| [it](it/android.md) | 2026-08-20 | incremental | `81c3d194` | 2,908 | 0 | **11** | 10 | 42 | 4 |
-| [es-MX](es-MX/android.md) | 2026-08-20 | baseline | `afd16223` | 2,886 | 22 | **7** | 3 | 0 | 0 |
-| [cs](cs/android.md) | 2026-08-20 | baseline | `afd16223` | 2,897 | 11 | **3** | 3 | 0 | 0 |
-| [hu](hu/android.md) | 2026-08-20 | baseline | `afd16223` | 2,897 | 11 | **2** | 2 | 0 | 0 |
-| [id](id/android.md) | 2026-08-20 | baseline | `afd16223` | 2,592 | 316 | **2** | 2 | 0 | 0 |
-| [fy-NL](fy-NL/android.md) | 2026-08-20 | baseline | `afd16223` | 2,908 | 0 | **9** | 1 | 0 | 0 |
-| [tr](tr/android.md) | 2026-08-20 | baseline | `afd16223` | 2,897 | 11 | **9** | 1 | 0 | 0 |
-| [es-AR](es-AR/android.md) | 2026-08-20 | baseline | `afd16223` | 2,908 | 0 | **5** | 1 | 0 | 0 |
-| [es-ES](es-ES/android.md) | 2026-08-20 | baseline | `afd16223` | 2,834 | 74 | **5** | 1 | 0 | 0 |
-| [pt-BR](pt-BR/android.md) | 2026-08-20 | baseline | `afd16223` | 2,897 | 11 | **4** | 1 | 0 | 0 |
-| [de](de/android.md) | 2026-08-20 | baseline | `afd16223` | 2,908 | 0 | **3** | 1 | 0 | 0 |
-| [pl](pl/android.md) | 2026-08-20 | baseline | `afd16223` | 2,897 | 11 | **1** | 1 | 0 | 0 |
-| [sl](sl/android.md) | 2026-08-20 | baseline | `afd16223` | 2,908 | 0 | **1** | 1 | 0 | 0 |
-| [zh-CN](zh-CN/android.md) | 2026-08-20 | baseline | `afd16223` | 2,871 | 37 | **1** | 1 | 0 | 0 |
-| [ru](ru/android.md) | 2026-08-20 | baseline | `afd16223` | 2,908 | 0 | **2** | 0 | 0 | 0 |
-| [ja](ja/android.md) | 2026-08-20 | baseline | `afd16223` | 2,892 | 16 | **1** | 0 | 0 | 0 |
-| [en-CA](en-CA/android.md) | 2026-08-20 | baseline | `afd16223` | 2,894 | 14 | **0** | 0 | 0 | 0 |
-| [en-GB](en-GB/android.md) | 2026-08-20 | baseline | `afd16223` | 2,908 | 0 | **0** | 0 | 0 | 0 |
-| [fr](fr/android.md) | 2026-08-20 | baseline | `afd16223` | 2,908 | 0 | **0** | 0 | 0 | 0 |
-| [nl](nl/android.md) | 2026-08-20 | baseline | `afd16223` | 2,908 | 0 | **0** | 0 | 0 | 0 |
+| Locale | Last run | Mode | Commit | Strings | Missing | Open | Impact 1–2 | Fixed | Dismissed | Suppressed |
+|---|---|---|---|---|---|---|---|---|---|---|
+| [es-MX](es-MX/android.md) | 2026-08-20 | baseline | `afd16223` | 2,886 | 22 | **7** | 3 | 0 | 0 | 0 |
+| [cs](cs/android.md) | 2026-08-20 | baseline | `afd16223` | 2,897 | 11 | **3** | 3 | 0 | 0 | 0 |
+| [hu](hu/android.md) | 2026-08-20 | baseline | `afd16223` | 2,897 | 11 | **2** | 2 | 0 | 0 | 0 |
+| [id](id/android.md) | 2026-08-20 | baseline | `afd16223` | 2,592 | 316 | **2** | 2 | 0 | 0 | 0 |
+| [fy-NL](fy-NL/android.md) | 2026-08-20 | baseline | `afd16223` | 2,908 | 0 | **9** | 1 | 0 | 0 | 0 |
+| [tr](tr/android.md) | 2026-08-20 | baseline | `afd16223` | 2,897 | 11 | **9** | 1 | 0 | 0 | 0 |
+| [es-AR](es-AR/android.md) | 2026-08-20 | baseline | `afd16223` | 2,908 | 0 | **5** | 1 | 0 | 0 | 0 |
+| [es-ES](es-ES/android.md) | 2026-08-20 | baseline | `afd16223` | 2,834 | 74 | **5** | 1 | 0 | 0 | 0 |
+| [pt-BR](pt-BR/android.md) | 2026-08-20 | baseline | `afd16223` | 2,897 | 11 | **4** | 1 | 0 | 0 | 0 |
+| [de](de/android.md) | 2026-08-20 | baseline | `afd16223` | 2,908 | 0 | **3** | 1 | 0 | 0 | 0 |
+| [pl](pl/android.md) | 2026-08-20 | baseline | `afd16223` | 2,897 | 11 | **1** | 1 | 0 | 0 | 0 |
+| [sl](sl/android.md) | 2026-08-20 | baseline | `afd16223` | 2,908 | 0 | **1** | 1 | 0 | 0 | 0 |
+| [zh-CN](zh-CN/android.md) | 2026-08-20 | baseline | `afd16223` | 2,871 | 37 | **1** | 1 | 0 | 0 | 0 |
+| [ru](ru/android.md) | 2026-08-20 | baseline | `afd16223` | 2,908 | 0 | **2** | 0 | 0 | 0 | 0 |
+| [ja](ja/android.md) | 2026-08-20 | baseline | `afd16223` | 2,892 | 16 | **1** | 0 | 0 | 0 | 0 |
+| [en-CA](en-CA/android.md) | 2026-08-20 | baseline | `afd16223` | 2,894 | 14 | **0** | 0 | 0 | 0 | 0 |
+| [en-GB](en-GB/android.md) | 2026-08-20 | baseline | `afd16223` | 2,908 | 0 | **0** | 0 | 0 | 0 | 0 |
+| [fr](fr/android.md) | 2026-08-20 | baseline | `afd16223` | 2,908 | 0 | **0** | 0 | 0 | 0 | 0 |
+| [it](it/android.md) | 2026-08-21 | incremental | `81c3d194` | 2,908 | 0 | **0** | 0 | 42 | 11 | 4 |
+| [nl](nl/android.md) | 2026-08-20 | baseline | `afd16223` | 2,908 | 0 | **0** | 0 | 0 | 0 | 0 |
 
 **Impact 1–2** is the queue that matters: broken output and wrong content. Impact 3–4 is language polish and typography.
 

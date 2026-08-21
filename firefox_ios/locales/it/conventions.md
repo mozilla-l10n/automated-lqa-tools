@@ -17,8 +17,14 @@ written here is what the model is told to treat as correct._
 
 ## Instructions for the reviewer
 
-<!-- Add rules here, e.g.:
-- Access keys are intentionally left as English letters; never flag them.
-- The en dash is the house dash; do not suggest an em dash.
-- "Primary Password" is deliberately translated with the legacy term.
--->
+- Dropping a trailing `!` from the source and ending the sentence with `.`
+  is a deliberate choice, not an omission. Italian UI text uses the
+  exclamation mark far more sparingly than English. Never report a missing
+  or changed final `!`.
+- `crittare`, and its forms `critta`, `crittato`, `crittati`, is the correct
+  Italian verb for "to encrypt". It is not a typo for `criptare`, and it is
+  not a truncation of anything. Never report it as a misspelling.
+- The expected pair is `Attiva`/`Attivo`/`Attivi` for the positive and
+  `Disattivata`/`Disattivato`/`Disattivati` for the negative. The asymmetry
+  is intentional: never propose `Attivata`/`Attivato`/`Attivati` to make the
+  two sides match.

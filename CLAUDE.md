@@ -71,6 +71,12 @@ it was written after getting it wrong:
 - **dismissed / suppressed** — a person said it is fine. Kept with the
   reason, never deleted.
 
+A run's delta buckets are reconciled against each finding's *final* status
+before rendering: a defect resolved early in a run and raised again by the
+reviewer ends up open, and must not also be counted as fixed. `run.py`
+refreshes the project's cross-locale page at the end of every write, so the
+counts on `reports/<project>.md` are never behind the state.
+
 Two invariants that were violated once each and must not be again:
 
 - Comparison for fix detection is **literal**. It must not fold case or

@@ -2,13 +2,14 @@
 
 - **Generated:** 2026-08-21
 - **Locales tracked:** 1 (1 with recorded state)
-- **Findings:** 0 raised, 0 resolved (—), 0 open
+- **Findings:** 32 raised, 16 resolved (50%), 1 open
+- **Closed by a person:** 13 dismissed, 2 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
-| Locale | Last run | Mode | Commit | Strings | Missing | Open | Impact 1–2 | Fixed | Suppressed |
-|---|---|---|---|---|---|---|---|---|---|
-| [it](it/firefox_ios.md) | 2026-08-21 | baseline | `6b4ba8b9` | 1,894 | 0 | **0** | 0 | 0 | 0 |
+| Locale | Last run | Mode | Commit | Strings | Missing | Open | Impact 1–2 | Fixed | Dismissed | Suppressed |
+|---|---|---|---|---|---|---|---|---|---|---|
+| [it](it/firefox_ios.md) | 2026-08-21 | incremental | `8ec9ec78` | 1,910 | 0 | **1** | 1 | 16 | 13 | 2 |
 
 **Impact 1–2** is the queue that matters: broken output and wrong content. Impact 3–4 is language polish and typography.
 

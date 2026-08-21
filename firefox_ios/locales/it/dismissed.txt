@@ -15,3 +15,24 @@
 # recurring across strings -- a house convention, a term that is correct
 # everywhere -- write a rule in suppressions.yaml instead, or better, a
 # sentence in conventions.md so the reviewer never raises it.
+
+# -------------------------------------------------------------------------
+# DRAFT reasons, written by the tooling and NOT reviewed by a maintainer.
+# Every line below needs editing or deleting before it means anything.
+# Delete a line to send the finding back to the open backlog.
+# -------------------------------------------------------------------------
+
+ActivityStream.ContextMenu.UnpinTopsite — “Rilascia” is the established opposite of “Appunta” in this menu
+ContextualHints.Toolbar.GoogleLens.Description.v154 — Better sounding variation, same meaning.
+Firefox won’t remember any of your history or cookies, but new bookmarks will be saved. — “invadenti” might be more accurate, but it results in a weird phrase (need to be placed at the end)
+Onboarding.Modern.Welcome.Title.v145 — DRAFT: the Italian wording is the agreed rendering for this screen
+Onboarding.Welcome.Description.TreatementA.v120 — “invadenti” might be more accurate, but it results in a weird phrase (need to be placed at the end)
+Settings.AppIconSelection.AppIconNames.Retro2004.Title.v139 — “Rétro” is correct https://www.treccani.it/vocabolario/retro_res-0f8f0e80-002f-11de-9d89-0016357eee51/
+Settings.AppIconSelection.AppIconNames.Retro2017.Title.v139 — “Rétro” is correct https://www.treccani.it/vocabolario/retro_res-0f8f0e80-002f-11de-9d89-0016357eee51/
+Settings.AppIconSelection.AppIconNames.Yellow.Title.v137 — Agrees with “icona”, which is feminine
+DefaultBrowserOnboarding.Description2 — “di default” mirrors the wording iOS itself shows in Settings
+DefaultBrowserOnboarding.Screenshot — “di default” mirrors the wording iOS itself shows in Settings
+DefaultBrowserPopup.SecondLabel.v114 —“di default” mirrors the wording iOS itself shows in Settings
+Onboarding.Welcome.Title.v114 — “Benvenuti” is inclusive and shorter than “Ti diamo il benvenuto”
+Open articles in Reader View by tapping the book icon when it appears in the title bar — False positive (“book” is there)
+Settings.Homepage.Shortcuts.ToggleOff.v100  — Refers to the section.

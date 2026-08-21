@@ -359,6 +359,30 @@ def run(l10n_dir, source_dir, project) -> int:
     check(a.status == "open" and not a.dismissed_because,
           "removing the line brings the finding back")
 
+    print("\nReporting a run honestly")
+    # The bug this pins: resolve() marked a finding fixed, the reviewer
+    # raised it again in the same run so merge() reopened it, and the
+    # report still counted it under "fixed since the last run".
+    was_fixed = Finding(locale="it", file="a.ftl", string_id="s", category="B",
+                        summary="x", current="old", status="fixed")
+    bucket = [was_fixed]
+    findings_mod.merge([was_fixed],
+                       [Finding(locale="it", file="a.ftl", string_id="s",
+                                category="B", summary="x", current="old")],
+                       "2026-01-01")
+    check(was_fixed.status == "open",
+          "re-raising a fixed finding reopens it")
+    check([f for f in bucket if f.status == "fixed"] == [],
+          "and it must then be dropped from the run's fixed list")
+
+    import summary as _summary
+    for locale in ("it",):
+        counted = findings_mod.load(project, locale)
+        rendered = _summary.render(project)
+        n_fixed = sum(1 for f in counted if f.status == "fixed")
+        check(f"| {n_fixed} |" in rendered or str(n_fixed) in rendered,
+              f"the cross-locale page reports {locale}'s {n_fixed} fixed")
+
     print("\nSuppression rules")
     from suppress import Rule
     rule = Rule({"id": "r", "reason": "because", "match": {"check": "typography",

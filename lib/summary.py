@@ -41,6 +41,7 @@ def render(project) -> str:
             "open": sum(1 for f in found if f.is_open),
             "fixed": sum(1 for f in found if f.status == "fixed"),
             "suppressed": sum(1 for f in found if f.status == "suppressed"),
+            "dismissed": sum(1 for f in found if f.status == "dismissed"),
             "total": len(found),
             "urgent": by_impact.get(1, 0) + by_impact.get(2, 0),
         })
@@ -59,13 +60,15 @@ def render(project) -> str:
         f"({len(checked)} with recorded state)",
         f"- **Findings:** {total_all:,} raised, {total_fixed:,} resolved "
         f"({pct}), {total_open:,} open",
+        f"- **Closed by a person:** {sum(r['dismissed'] for r in checked):,} "
+        f"dismissed, {sum(r['suppressed'] for r in checked):,} suppressed by rule",
         "",
         "Counts come from `state/`, not from the rendered reports, so they "
         "always reflect what the pipeline recorded.",
         "",
         "| Locale | Last run | Mode | Commit | Strings | Missing | Open | "
-        "Impact 1–2 | Fixed | Suppressed |",
-        "|---|---|---|---|---|---|---|---|---|---|",
+        "Impact 1–2 | Fixed | Dismissed | Suppressed |",
+        "|---|---|---|---|---|---|---|---|---|---|---|",
     ]
     for r in sorted(checked, key=lambda r: (-r["urgent"], -r["open"])):
         m = r["meta"]
@@ -74,12 +77,13 @@ def render(project) -> str:
             f"{m.get('last_run', '')} | "
             f"{m.get('mode', '')} | `{m.get('l10n_sha', '')[:8]}` | "
             f"{m.get('strings', 0):,} | {m.get('missing', 0):,} | "
-            f"**{r['open']}** | {r['urgent']} | {r['fixed']} | {r['suppressed']} |"
+            f"**{r['open']}** | {r['urgent']} | {r['fixed']} | "
+            f"{r['dismissed']} | {r['suppressed']} |"
         )
     for r in rows:
         if r["state"]:
             out.append(
-                f"| {r['locale']} | — | — | — | — | — | — | — | — | _{r['state']}_ |"
+                f"| {r['locale']} | — | — | — | — | — | — | — | — | — | _{r['state']}_ |"
             )
 
     out += [
@@ -104,6 +108,15 @@ def render(project) -> str:
     return "\n".join(out)
 
 
+def write(project) -> str:
+    """Render the cross-locale page and write it. Returns the path."""
+    path = project.summary_path
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", encoding="utf-8") as fh:
+        fh.write(render(project))
+    return path
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--project", default="firefox")
@@ -115,11 +128,7 @@ def main(argv=None) -> int:
     if args.stdout:
         print(text)
         return 0
-    path = project.summary_path
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, "w", encoding="utf-8") as fh:
-        fh.write(text)
-    print(f"wrote {path}")
+    print(f"wrote {write(project)}")
     return 0
 
 
