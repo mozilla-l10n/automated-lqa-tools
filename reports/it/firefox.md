@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-22 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `5cbe42651962` |
+| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,360 |
+| **Strings reviewed this run** | 7 of 18,367 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 370 |
-| Strings | 18,360 |
-| Missing strings | 7 |
+| Strings | 18,367 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -65,12 +65,7 @@ _Nothing retired._
 
 ### Completeness
 
-**7 strings** are not translated yet, concentrated in:
-
-- `browser/browser/newtab/newtab.ftl` — 5
-- `browser/browser/sharePanel.ftl` — 2
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -83,7 +78,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | ellipsis | `char` 481 | **char** |
 | dash | `em` 75, `en` 18 | **em** |
 | nbsp | `total` 12, `before-punctuation` 4, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 760, `formal` 59 | **informal** |
+| register | `informal` 761, `formal` 59 | **informal** |
 
 ---
 

@@ -50,6 +50,29 @@
   "suppressed_by": ""
  },
  {
+  "category": "E",
+  "check": "llm",
+  "current": "</label>, <label data-l10n-name=\"helpus-getInvolvedLink\">присоединяйтесь!</label>",
+  "dismissed_because": "",
+  "fid": "c009972a7146",
+  "file": "browser/browser/aboutDialog.ftl",
+  "first_seen": "2026-08-22",
+  "impact": 4,
+  "last_seen": "2026-08-22",
+  "locale": "ru",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "In Russian a comma is not placed before a single «или» joining homogeneous members; the en-US comma before \"or\" reflects English punctuation rules only. The comma should move: «Сделайте пожертвование, поделитесь … или присоединяйтесь!»",
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "43ea1a58",
+  "string_id": "helpus-referrals2",
+  "suggest": "</label> <label data-l10n-name=\"helpus-getInvolvedLink\">присоединяйтесь!</label>",
+  "summary": "Superfluous comma before the coordinating conjunction «или» in a two-part enumeration.",
+  "suppressed_by": ""
+ },
+ {
   "category": "C",
   "check": "legacy",
   "current": "всех отображаемых здесь предупреждениях о взломе",
@@ -133,7 +156,7 @@
   "file": "browser/browser/aboutLogins.ftl",
   "first_seen": "2026-08-07",
   "impact": 1,
-  "last_seen": "2026-08-21",
+  "last_seen": "2026-08-22",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -183,7 +206,7 @@
   "file": "browser/browser/aboutPocket.ftl",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-08-21",
+  "last_seen": "2026-08-22",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -976,6 +999,29 @@
  },
  {
   "category": "B",
+  "check": "llm",
+  "current": "Поделитесь { -brand-product-name }",
+  "dismissed_because": "",
+  "fid": "ce4d7a450216",
+  "file": "browser/browser/appmenu.ftl",
+  "first_seen": "2026-08-22",
+  "impact": 2,
+  "last_seen": "2026-08-22",
+  "locale": "ru",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The verb «поделиться» governs the instrumental case («поделиться Firefox'ом» / «поделиться браузером»); the brand term supports a $case parameter per the locale conventions, and omitting it produces an ungrammatical nominative form.",
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "4c0a1f5e",
+  "string_id": "appmenu-referrals2",
+  "suggest": "Поделитесь { -brand-product-name(case: \"ablative\") }",
+  "summary": "Menu label uses «Поделитесь { -brand-product-name }» without the required instrumental case, so the brand name is left in the wrong grammatical form.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
   "check": "legacy",
   "current": "Помощь и поддержка",
   "dismissed_because": "",
@@ -1058,7 +1104,7 @@
   "file": "browser/browser/backupSettings.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-21",
+  "last_seen": "2026-08-22",
   "locale": "ru",
   "origin": {},
   "rationale": "In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -1079,7 +1125,7 @@
   "file": "browser/browser/backupSettings.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-21",
+  "last_seen": "2026-08-22",
   "locale": "ru",
   "origin": {},
   "rationale": "In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -1225,7 +1271,7 @@
   "file": "browser/browser/backupSettings.ftl",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-08-21",
+  "last_seen": "2026-08-22",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -2800,7 +2846,7 @@
   "file": "browser/browser/genai.ftl",
   "first_seen": "2026-08-07",
   "impact": 1,
-  "last_seen": "2026-08-21",
+  "last_seen": "2026-08-22",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -5600,7 +5646,7 @@
   "file": "browser/browser/policies/policies-descriptions.ftl",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-08-21",
+  "last_seen": "2026-08-22",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -7500,7 +7546,7 @@
   "file": "browser/browser/preferences/preferences.ftl",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-08-21",
+  "last_seen": "2026-08-22",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -8975,7 +9021,7 @@
   "file": "browser/browser/termsofuse.ftl",
   "first_seen": "2026-08-07",
   "impact": 1,
-  "last_seen": "2026-08-21",
+  "last_seen": "2026-08-22",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -10450,7 +10496,7 @@
   "file": "devtools/client/debugger.properties",
   "first_seen": "2026-08-07",
   "impact": 3,
-  "last_seen": "2026-08-21",
+  "last_seen": "2026-08-22",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -13925,7 +13971,7 @@
   "file": "dom/chrome/dom/dom.properties",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-08-21",
+  "last_seen": "2026-08-22",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -18750,7 +18796,7 @@
   "file": "toolkit/toolkit/pdfviewer/viewer.ftl",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-08-21",
+  "last_seen": "2026-08-22",
   "locale": "ru",
   "origin": {
    "report": "legacy",

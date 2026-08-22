@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-22 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `5cbe42651962` |
+| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 17,184 |
+| **Strings reviewed this run** | 1 of 17,185 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 355 |
-| Strings | 17,184 |
-| Missing strings | 996 |
+| Strings | 17,185 |
+| Missing strings | 995 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 5 |
 | Fluent / properties syntax errors | 0 |
@@ -65,7 +65,7 @@ _Nothing retired._
 
 ### Completeness
 
-**996 strings** are not translated yet, concentrated in:
+**995 strings** are not translated yet, concentrated in:
 
 - `browser/browser/newtab/newtab.ftl` — 147
 - `browser/browser/aiWindow.ftl` — 131

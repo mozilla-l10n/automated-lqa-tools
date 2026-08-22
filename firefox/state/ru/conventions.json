@@ -1,8 +1,8 @@
 {
  "_meta": {
   "locale": "ru",
-  "prose_chunks": 18944,
-  "strings": 18161
+  "prose_chunks": 18953,
+  "strings": 18169
  },
  "apostrophe": {
   "straight": 16,
@@ -36,7 +36,7 @@
   "straight-double": 28
  },
  "register": {
-  "formal": 3592,
+  "formal": 3593,
   "informal": 1051
  }
 }

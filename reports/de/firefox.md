@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-22 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `5cbe42651962` |
+| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,161 |
+| **Strings reviewed this run** | 8 of 18,169 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for de: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `helpus-referrals2` — `browser/browser/aboutDialog.ftl` — Superfluous comma before "oder" in the enumeration.
+    - Current: `Teilen Sie { -brand-product-name }</label>, oder`
+    - Source: `Want to help? <label data-l10n-name="helpus-donateLink">Make a donation</label>, <label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>, or <label data-l10n-name="helpus-getInvolvedLink">g…`
+    - Suggest: `Teilen Sie { -brand-product-name }</label> oder`
+    - German does not use a comma before "oder" joining the last item of a simple enumeration; the comma is a direct carry-over of the English serial comma.
+- `helpus-referrals2` — `browser/browser/aboutDialog.ftl` — "share Firefox" is rendered as "Teilen Sie Firefox" here but as "Firefox empfehlen" in all other referral strings of this batch.
+    - Current: `Teilen Sie { -brand-product-name }`
+    - Source: `Want to help? <label data-l10n-name="helpus-donateLink">Make a donation</label>, <label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>, or <label data-l10n-name="helpus-getInvolvedLink">g…`
+    - Suggest: `empfehlen Sie { -brand-product-name }`
+    - The developer comments for the parallel referral strings state that "Share" means recommending/referring the browser; the de tree consistently uses "empfehlen", so "Teilen" (file sharing sense) is inconsistent and misleading.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +54,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,161 |
-| Missing strings | 19 |
+| Strings | 18,169 |
+| Missing strings | 11 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -65,17 +74,12 @@ _Nothing retired._
 
 ### Completeness
 
-**19 strings** are not translated yet, concentrated in:
+**11 strings** are not translated yet, concentrated in:
 
 - `browser/browser/newtab/newtab.ftl` — 7
-- `browser/browser/appmenu.ftl` — 2
-- `browser/browser/menubar.ftl` — 2
 - `browser/browser/sharePanel.ftl` — 2
-- `browser/browser/preferences/preferences.ftl` — 2
-- `browser/browser/aboutDialog.ftl` — 1
 - `browser/browser/preferences/formAutofill.ftl` — 1
 - `dom/chrome/accessibility/AccessFu.properties` — 1
-- `toolkit/toolkit/global/mozBoxBase.ftl` — 1
 
 **Files present but identical to en-US:**
 
@@ -94,7 +98,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | ellipsis | `char` 466 | **char** |
 | dash | `em` 16, `en` 87 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 12, `formal` 4244 | **formal** |
+| register | `informal` 12, `formal` 4249 | **formal** |
 
 ---
 
@@ -104,14 +108,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (48)
+## 3. Open findings (50)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 10 |
 | 2 | Wrong content (says something other than the English) | 13 |
-| 3 | Degraded language (grammar, spelling, terminology) | 25 |
-| 4 | Cosmetic (typography, spacing) | 0 |
+| 3 | Degraded language (grammar, spelling, terminology) | 26 |
+| 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -224,6 +228,11 @@ _Nothing reported._
 
 ### D. Terminology, register & consistency
 
+- `helpus-referrals2` — `browser/browser/aboutDialog.ftl` — "share Firefox" is rendered as "Teilen Sie Firefox" here but as "Firefox empfehlen" in all other referral strings of this batch.
+    - Current: `Teilen Sie { -brand-product-name }`
+    - Source: `Want to help? <label data-l10n-name="helpus-donateLink">Make a donation</label>, <label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>, or <label data-l10n-name="helpus-getInvolvedLink">g…`
+    - Suggest: `empfehlen Sie { -brand-product-name }`
+    - The developer comments for the parallel referral strings state that "Share" means recommending/referring the browser; the de tree consistently uses "empfehlen", so "Teilen" (file sharing sense) is inconsistent and misleading.
 - `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — `backup-file-moz-browser-restore-step-2-1` quotes “Ihre Daten wiederherstellen” but the string it names, `restore-from-backup-header`, reads “Daten wiederherstellen”
     - Current: `Klicken Sie auf "Ihre Daten wiederherstellen" und wählen Sie diese Datei`
     - Source: `Click “Restore your data” and select this file`
@@ -279,7 +288,11 @@ _Nothing reported._
 
 ### E. Typography, punctuation & spacing
 
-_Nothing in this category._
+- `helpus-referrals2` — `browser/browser/aboutDialog.ftl` — Superfluous comma before "oder" in the enumeration.
+    - Current: `Teilen Sie { -brand-product-name }</label>, oder`
+    - Source: `Want to help? <label data-l10n-name="helpus-donateLink">Make a donation</label>, <label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>, or <label data-l10n-name="helpus-getInvolvedLink">g…`
+    - Suggest: `Teilen Sie { -brand-product-name }</label> oder`
+    - German does not use a comma before "oder" joining the last item of a simple enumeration; the comma is a direct carry-over of the English serial comma.
 
 ---
 

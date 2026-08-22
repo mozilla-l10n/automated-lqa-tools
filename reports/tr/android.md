@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d368c9040c12` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d368c9040c12` |
-| **Previous run** | 2026-08-21 @ `ac24476c7ff2` |
+| **Generated** | 2026-08-22 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `eda9938ab8c3` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `eda9938ab8c3` |
+| **Previous run** | 2026-08-21 @ `d368c9040c12` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 15 of 2,911 |
+| **Strings reviewed this run** | 10 of 2,911 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,17 +18,36 @@ Also for tr: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `history_multi_select_title` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — History multi-select title says "bookmarks selected" instead of just "selected".
+    - Current: `%1$d yer imi seçildi`
+    - Source: `%1$d selected`
+    - Suggest: `%1$d seçildi`
+    - Source is "%1$d selected" on the History screen; adding "yer imi" (bookmark) states wrong content for history items.
+- `synced_tabs_sign_in_button` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — Informal imperative "giriş yap" violates the locale's formal register.
+    - Current: `Eşitlemek için giriş yap`
+    - Source: `Sign in to sync`
+    - Suggest: `Eşitlemek için giriş yapın`
+    - The tr locale convention is formal address (second-person plural imperative), as used elsewhere (e.g. "Bu ekranı açık tutun").
+- `mozac_browser_errorpages_page_refresh` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-tr/strings.xml` — Informal imperative "dene" violates the locale's formal register.
+    - Current: `Yeniden dene`
+    - Source: `Try Again`
+    - Suggest: `Yeniden deneyin`
+    - The tr locale convention is formal address; other imperatives in this batch use the -in form.
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (2)
 
-- `ip_protection_onboarding_body_promo` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — `ip_protection_onboarding_body_promo` uses a straight apostrophe
-    - Current: `Gezintinizi daha gizli ve izlemesi zor hale getirmek için VPN'i açın. %1$s tarihine kadar sınırsız bant genişliğine sahip olmak için hemen deneyin. %2$s`
-    - Source: `Turn it on to make your browsing more private and harder to trace. Try it now to get unlimited bandwidth through %1$s. %2$s`
-    - Suggest: `VPN’i açın`
-    - The tree uses ’ 156 times against 5 straight.
+- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-tr/strings.xml` — `mozac_browser_errorpages_offline_message` quotes “Yeniden dene” but the string it names, `mozac_browser_errorpages_page_refresh`, reads “Tekrar dene”
+    - Current: `{ <p> }Tarayıcı şu an çevrimdışı kipte çalışıyor ve istenen öğeye bağlanamaz.{ </p> }{ <ul> }{ <li> }Cihazınız etkin bir ağa bağlı mı?{ </li> }{ <li> }Çevrimiçi kipe geçerek sayfayı tazelemek için “Yeniden dene” düğmesi…`
+    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
+    - Suggest: `Tekrar dene`
+    - In the source this string quotes “Try Again”, which is exactly the value of `mozac_browser_errorpages_page_refresh` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `bookmark_url_label` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — The label "URL" is translated and set in all caps as "ADRES".
+    - Current: `ADRES`
+    - Source: `URL`
+    - Suggest: `URL`
+    - URL is a standard technical term kept as-is elsewhere in the Turkish build; translating it to an all-caps "ADRES" changes the term and the casing without source support.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -61,7 +80,7 @@ _Nothing retired._
 | Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
-| Text quoting a UI label that no longer matches | 1 |
+| Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 0 |
 | Markup & `data-l10n-name` defects | 0 |
@@ -78,7 +97,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 14, `straight-double` 3 | **curly-double** |
-| apostrophe | `typographic` 161, `straight` 4 | **typographic** |
+| apostrophe | `typographic` 160, `straight` 4 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | register | `informal` 2, `formal` 16 | **formal** |
 
@@ -90,13 +109,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (154)
+## 3. Open findings (155)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 84 |
-| 3 | Degraded language (grammar, spelling, terminology) | 59 |
+| 2 | Wrong content (says something other than the English) | 83 |
+| 3 | Degraded language (grammar, spelling, terminology) | 61 |
 | 4 | Cosmetic (typography, spacing) | 11 |
 
 ### A. Functional, markup, variables & plurals
@@ -235,11 +254,6 @@ _Nothing in this category._
     - Source: `Sort by oldest`
     - Suggest: `Eskiden yeniye sırala`
     - The source is an action label "Sort by oldest"; the sibling string bookmark_sort_menu_z_to_a is translated as "Z’den A’ya sırala", so the missing "sırala" makes this inconsistent and drops the action.
-- `bookmark_url_label` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — The label "URL" is translated and set in all caps as "ADRES".
-    - Current: `ADRES`
-    - Source: `URL`
-    - Suggest: `URL`
-    - URL is a standard technical term kept as-is elsewhere in the Turkish build; translating it to an all-caps "ADRES" changes the term and the casing without source support.
 - `browser_custom_tab_menu_handlebar_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Close custom tab menu sheet" loses the "sheet" element in the content description.
     - Current: `Özel sekme menüsünü kapat`
     - Source: `Close custom tab menu sheet`
@@ -315,6 +329,11 @@ _Nothing in this category._
     - Source: `Blocks cookies that ad networks and analytics companies use to compile your browsing data across many sites.`
     - Suggest: `birçok sitedeki gezinti verilerinizi derlemek için kullandığı çerezleri engeller`
     - "compile your browsing data across many sites" means collecting/compiling data, not "izlemek" (to track).
+- `history_multi_select_title` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — History multi-select title says "bookmarks selected" instead of just "selected".
+    - Current: `%1$d yer imi seçildi`
+    - Source: `%1$d selected`
+    - Suggest: `%1$d seçildi`
+    - Source is "%1$d selected" on the History screen; adding "yer imi" (bookmark) states wrong content for history items.
 - `ip_protection_mozilla_vpn_upsell_body` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "up to 5 devices" rendered as "5 ayrı cihazdaki", dropping "up to".
     - Current: `5 ayrı cihazdaki tüm uygulamalarınızı koruyun`
     - Source: `Choose from 300+ locations and protect all your apps on up to 5 devices.`
@@ -507,11 +526,11 @@ _Nothing in this category._
 
 ### D. Terminology, register & consistency
 
-- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-tr/strings.xml` — `mozac_browser_errorpages_offline_message` quotes “Yeniden dene” but the string it names, `mozac_browser_errorpages_page_refresh`, reads “Tekrar dene”
-    - Current: `{ <p> }Tarayıcı şu an çevrimdışı kipte çalışıyor ve istenen öğeye bağlanamaz.{ </p> }{ <ul> }{ <li> }Cihazınız etkin bir ağa bağlı mı?{ </li> }{ <li> }Çevrimiçi kipe geçerek sayfayı tazelemek için “Yeniden dene” düğmesi…`
-    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
-    - Suggest: `Tekrar dene`
-    - In the source this string quotes “Try Again”, which is exactly the value of `mozac_browser_errorpages_page_refresh` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `mozac_browser_errorpages_page_refresh` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-tr/strings.xml` — Informal imperative "dene" violates the locale's formal register.
+    - Current: `Yeniden dene`
+    - Source: `Try Again`
+    - Suggest: `Yeniden deneyin`
+    - The tr locale convention is formal address; other imperatives in this batch use the -in form.
 - `mozac_feature_addons_permissions_management_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-tr/strings.xml` — "extension" is rendered as "eklenti" (add-on) here but as "uzantı" in the parallel _for_update string and elsewhere in the file.
     - Current: `Eklenti kullanımını izleme ve temaları yönetme`
     - Source: `Monitor extension usage and manage themes`
@@ -607,6 +626,11 @@ _Nothing in this category._
     - Source: `Use email instead`
     - Suggest: `Bunun yerine e-posta kullanın`
     - Locale register is formal ("giriş yapın" is used in sign_in_with_camera and setup_checklist_task_account_sync); also the source is "Use email instead".
+- `synced_tabs_sign_in_button` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — Informal imperative "giriş yap" violates the locale's formal register.
+    - Current: `Eşitlemek için giriş yap`
+    - Source: `Sign in to sync`
+    - Suggest: `Eşitlemek için giriş yapın`
+    - The tr locale convention is formal address (second-person plural imperative), as used elsewhere (e.g. "Bu ekranı açık tutun").
 - `translation_settings_control_learn_more` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Learn more" link text uses the informal imperative "al", deviating from the locale's formal register.
     - Current: `Daha fazla bilgi al`
     - Source: `Learn more`
@@ -669,7 +693,7 @@ _Nothing in this category._
     - Current: `Çökme raporu %1$s'ya gönderiliyor`
     - Source: `Sending crash report to %1$s`
     - Suggest: `%1$s’ya`
-    - The tree uses ’ 161 times against 4 straight.
+    - The tree uses ’ 160 times against 4 straight.
 - `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
     - Current: `Web adresi "https://" veya "http://" içermelidir`
     - Source: `Web address must contain “https://” or “http://”`
@@ -694,17 +718,17 @@ _Nothing in this category._
     - Current: `Bu bağlantıyı %2$s ile açmak için %1$s'tan çıkabilirsiniz.`
     - Source: `You can leave %1$s to open this link in %2$s.`
     - Suggest: `%1$s’tan çıkabilirsiniz.`
-    - The tree uses ’ 161 times against 4 straight.
+    - The tree uses ’ 160 times against 4 straight.
 - `external_app_prompt_no_app` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — `external_app_prompt_no_app` uses a straight apostrophe
     - Current: `Cihazınızdaki uygulamalar bu bağlantıyı açamıyor. %2$s mağazasında uygun bir uygulama aramak için %1$s'tan çıkabilirsiniz.`
     - Source: `None of the apps on your device are able to open this link. You can leave %1$s to search %2$s for an app that can.`
     - Suggest: `%1$s’tan çıkabilirsiniz.`
-    - The tree uses ’ 161 times against 4 straight.
+    - The tree uses ’ 160 times against 4 straight.
 - `external_multiple_apps_matched_exit` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — `external_multiple_apps_matched_exit` uses a straight apostrophe
     - Current: `Gizli Gezinti'den çıkılsın mı?`
     - Source: `Exit Private Browsing?`
     - Suggest: `Gizli Gezinti’den çıkılsın mı?`
-    - The tree uses ’ 161 times against 4 straight.
+    - The tree uses ’ 160 times against 4 straight.
 - `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — `firstrun_shortcut_text` uses straight double quotes
     - Current: `%1$s’ta sevdiğiniz sitelere çabucak ulaşabilirsiniz. %1$s menüsünden "Ana ekrana ekle"yi seçmeniz yeterli.`
     - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
@@ -736,6 +760,8 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (1)
+### Fixed to date (3)
 
+- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-tr/strings.xml` — fixed 2026-08-22
+- `bookmark_url_label` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — fixed 2026-08-22
 - `ip_protection_onboarding_body_promo` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — fixed 2026-08-21

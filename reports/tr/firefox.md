@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-22 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `5cbe42651962` |
+| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,001 |
+| **Strings reviewed this run** | 7 of 18,007 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for tr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `ip-protection-vpn-upgrade-link` — `browser/browser/ipProtection.ftl` — "up to five devices" is rendered as "beş ayrı cihazda", dropping the "up to" limit.
+    - Current: `beş ayrı cihazda`
+    - Source: `description: Choose custom VPN locations and add protection to all your apps on up to five devices, whether you’re at home or on public Wi-Fi. label: Get even more protection outside { -brand-short-name } with { -mozill…`
+    - Suggest: `en fazla beş cihazda`
+    - The en-US says "on up to five devices"; the Turkish states flatly "on five separate devices", losing the maximum-limit meaning.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,001 |
-| Missing strings | 179 |
+| Strings | 18,007 |
+| Missing strings | 173 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -65,7 +69,7 @@ _Nothing retired._
 
 ### Completeness
 
-**179 strings** are not translated yet, concentrated in:
+**173 strings** are not translated yet, concentrated in:
 
 - `browser/browser/newtab/newtab.ftl` — 52
 - `browser/browser/ipProtection.ftl` — 14
@@ -73,9 +77,9 @@ _Nothing retired._
 - `toolkit/toolkit/about/url-classifier.ftl` — 10
 - `browser/browser/firefoxView.ftl` — 9
 - `browser/browser/preferences/preferences.ftl` — 9
-- `browser/browser/appmenu.ftl` — 8
 - `browser/browser/featureCallout.ftl` — 8
 - `browser/browser/preferences/containers.ftl` — 7
+- `browser/browser/appmenu.ftl` — 6
 - `browser/browser/newtab/onboarding.ftl` — 5
 - `toolkit/toolkit/about/aboutAddons.ftl` — 4
 - `toolkit/toolkit/global/theme-picker.ftl` — 4
@@ -104,12 +108,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (199)
+## 3. Open findings (200)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 4 |
-| 2 | Wrong content (says something other than the English) | 67 |
+| 2 | Wrong content (says something other than the English) | 68 |
 | 3 | Degraded language (grammar, spelling, terminology) | 88 |
 | 4 | Cosmetic (typography, spacing) | 40 |
 
@@ -139,6 +143,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `{ $region }, { $city }`
     - Source: `<strong>{ $temperature }°{ $unit }</strong> in { $city }, { $region }`
     - Suggest: `{ $city }, { $region }`
+- `ip-protection-vpn-upgrade-link` — `browser/browser/ipProtection.ftl` — "up to five devices" is rendered as "beş ayrı cihazda", dropping the "up to" limit.
+    - Current: `beş ayrı cihazda`
+    - Source: `description: Choose custom VPN locations and add protection to all your apps on up to five devices, whether you’re at home or on public Wi-Fi. label: Get even more protection outside { -brand-short-name } with { -mozill…`
+    - Suggest: `en fazla beş cihazda`
+    - The en-US says "on up to five devices"; the Turkish states flatly "on five separate devices", losing the maximum-limit meaning.
 - `mr2022-background-update-toast-title` — `browser/browser/newtab/asrouter.ftl` — the fourth sentence "No compromises." is dropped entirely.
     - Source: `New { -brand-short-name }. More private. Fewer trackers. No compromises.`
 - `windows-10-eos-challenger-callout-title` — `browser/browser/newtab/asrouter.ftl` — "gereksiz özelliklerle dolu halde gelmez" ≠ en "isn't preloaded like other Big Tech browsers" (= not pre-installed on the device). The second sentence "That's the point." is also dropped.
@@ -265,9 +274,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `SSL peer was unable to negotiate an acceptable set of security parameters.`
 - `ssl-error-md5-digest-failure` — `toolkit/toolkit/neterror/nsserrors.ftl` — ssl-error-md5-digest-failure, ssl-error-sha-digest-failure — "derleme" (compilation) → "özet" (en "digest"); sec-error-digest-not-found already uses "özet".
     - Source: `MD5 digest function failed.`
-- `ssl-error-sha-digest-failure` — `toolkit/toolkit/neterror/nsserrors.ftl` — ssl-error-md5-digest-failure, ssl-error-sha-digest-failure — "derleme" (compilation) → "özet" (en "digest"); sec-error-digest-not-found already uses "özet".
-    - Source: `SHA-1 digest function failed.`
-- _…and 2 more; see `state/` for the full list._
+- _…and 3 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

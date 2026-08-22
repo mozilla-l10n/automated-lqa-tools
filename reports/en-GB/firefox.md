@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-22 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `5cbe42651962` |
+| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,161 |
+| **Strings reviewed this run** | 19 of 18,180 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for en-GB: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `helpus-referrals2` — `browser/browser/aboutDialog.ftl` — Mid-sentence link text capitalised, unlike the en-US source and the surrounding link labels.
+    - Current: `<label data-l10n-name="helpus-shareFirefoxLink">Share { -brand-product-name }</label>`
+    - Source: `Want to help? <label data-l10n-name="helpus-donateLink">Make a donation</label>, <label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>, or <label data-l10n-name="helpus-getInvolvedLink">g…`
+    - Suggest: `<label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>`
+    - The source reads "share { -brand-product-name }" in lower case as part of the sentence "Make a donation, share Firefox, or get involved!"; the capital S breaks sentence flow and is inconsistent with the neighbouring "get involved!" link. No en-GB rule requires the change.
+- `statePartiallyChecked` — `dom/chrome/accessibility/AccessFu.properties` — Accessibility state name "checked" wrongly changed to "ticked".
+    - Current: `partially ticked`
+    - Source: `partially checked`
+    - Suggest: `partially checked`
+    - "Checked" is the standard ARIA/accessibility state term (aria-checked) reported by screen readers and is identical in en-GB; substituting "ticked" changes established terminology and breaks consistency with other checkbox state strings.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +54,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,161 |
-| Missing strings | 19 |
+| Strings | 18,180 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -65,19 +74,7 @@ _Nothing retired._
 
 ### Completeness
 
-**19 strings** are not translated yet, concentrated in:
-
-- `browser/browser/newtab/newtab.ftl` — 7
-- `browser/browser/appmenu.ftl` — 2
-- `browser/browser/menubar.ftl` — 2
-- `browser/browser/sharePanel.ftl` — 2
-- `browser/browser/preferences/preferences.ftl` — 2
-- `browser/browser/aboutDialog.ftl` — 1
-- `browser/browser/preferences/formAutofill.ftl` — 1
-- `dom/chrome/accessibility/AccessFu.properties` — 1
-- `toolkit/toolkit/global/mozBoxBase.ftl` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -86,7 +83,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 597, `curly-single` 101, `straight-double` 58 | **curly-double** |
-| apostrophe | `typographic` 1121, `straight` 56 | **typographic** |
+| apostrophe | `typographic` 1122, `straight` 56 | **typographic** |
 | ellipsis | `char` 461, `ascii` 1 | **char** |
 | dash | `em` 108, `en` 4 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
@@ -100,14 +97,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (32)
+## 3. Open findings (34)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 8 |
-| 2 | Wrong content (says something other than the English) | 11 |
+| 2 | Wrong content (says something other than the English) | 12 |
 | 3 | Degraded language (grammar, spelling, terminology) | 11 |
-| 4 | Cosmetic (typography, spacing) | 2 |
+| 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -179,6 +176,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `tooltiptext: Apply shopping cart avatar`
     - Suggest: `Apply shopping basket avatar`
     - In the same file, shopping-avatar and shopping-avatar-alt both render en-US "Shopping cart" as "Shopping basket", and the locale uses "shopping baskets" for "shopping carts" in browser/browser/sanitize.ftl (item-cookies-site-data-description) and browser/browser/protectionsPanel.ftl (protections-panel-cookie-banner-view-cookie-clear-warning). "Trolley" is an isolated departure describing the same…
+- `statePartiallyChecked` — `dom/chrome/accessibility/AccessFu.properties` — Accessibility state name "checked" wrongly changed to "ticked".
+    - Current: `partially ticked`
+    - Source: `partially checked`
+    - Suggest: `partially checked`
+    - "Checked" is the standard ARIA/accessibility state term (aria-checked) reported by screen readers and is identical in en-GB; substituting "ticked" changes established terminology and breaks consistency with other checkbox state strings.
 - `check` — `dom/chrome/accessibility/unix/accessible.properties` — The checkbox action is adapted to "Tick"/"Untick" in the parallel mac file but left as "Check"/"Uncheck" here.
     - Current: `check = Check`
     - Source: `Check`
@@ -270,6 +272,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### E. Typography, punctuation & spacing
 
+- `helpus-referrals2` — `browser/browser/aboutDialog.ftl` — Mid-sentence link text capitalised, unlike the en-US source and the surrounding link labels.
+    - Current: `<label data-l10n-name="helpus-shareFirefoxLink">Share { -brand-product-name }</label>`
+    - Source: `Want to help? <label data-l10n-name="helpus-donateLink">Make a donation</label>, <label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>, or <label data-l10n-name="helpus-getInvolvedLink">g…`
+    - Suggest: `<label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>`
+    - The source reads "share { -brand-product-name }" in lower case as part of the sentence "Make a donation, share Firefox, or get involved!"; the capital S breaks sentence flow and is inconsistent with the neighbouring "get involved!" link. No en-GB rule requires the change.
 - `migration-wizard-import-browser-no-browsers` — `browser/browser/migrationWizard.ftl` — "programs" over-corrected to "programmes", which in British English means broadcasts/schedules, not software.
     - Current: `couldn’t find any programmes that contain bookmark, history or password data`
     - Source: `{ -brand-short-name } couldn’t find any programs that contain bookmark, history or password data.`

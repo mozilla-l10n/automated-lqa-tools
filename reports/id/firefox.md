@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-22 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `5cbe42651962` |
+| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 15,488 |
+| **Strings reviewed this run** | 6 of 15,494 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for id: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `appmenu-referrals2` — `browser/browser/appmenu.ftl` — "Share" is translated as "Sembunyikan" (Hide), which is a completely different action.
+    - Current: `Sembunyikan { -brand-product-name }`
+    - Source: `accesskey: r label: Share { -brand-product-name }`
+    - Suggest: `Bagikan { -brand-product-name }`
+    - The en-US source is "Share { -brand-product-name }" and the developer comment says "Share" means recommending/referring the browser; "Sembunyikan" means "Hide". Other identical strings use "Bagikan".
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 354 |
-| Strings | 15,488 |
-| Missing strings | 2,692 |
+| Strings | 15,494 |
+| Missing strings | 2,686 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 6 |
 | Fluent / properties syntax errors | 0 |
@@ -65,7 +69,7 @@ _Nothing retired._
 
 ### Completeness
 
-**2,692 strings** are not translated yet, concentrated in:
+**2,686 strings** are not translated yet, concentrated in:
 
 - `browser/browser/preferences/preferences.ftl` — 425
 - `browser/browser/newtab/newtab.ftl` — 415
@@ -112,12 +116,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (329)
+## 3. Open findings (330)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 84 |
-| 2 | Wrong content (says something other than the English) | 173 |
+| 2 | Wrong content (says something other than the English) | 174 |
 | 3 | Degraded language (grammar, spelling, terminology) | 54 |
 | 4 | Cosmetic (typography, spacing) | 17 |
 
@@ -407,6 +411,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `appmenu-referrals2` — `browser/browser/appmenu.ftl` — "Share" is translated as "Sembunyikan" (Hide), which is a completely different action.
+    - Current: `Sembunyikan { -brand-product-name }`
+    - Source: `accesskey: r label: Share { -brand-product-name }`
+    - Suggest: `Bagikan { -brand-product-name }`
+    - The en-US source is "Share { -brand-product-name }" and the developer comment says "Share" means recommending/referring the browser; "Sembunyikan" means "Hide". Other identical strings use "Bagikan".
 - `backup-error-retry` — `browser/browser/backupSettings.ftl` — The translation adds "nanti" (later), which is not in the English "Please try again".
     - Current: `Silakan coba lagi nanti.`
     - Source: `Something went wrong. Please try again.`

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-22 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `5cbe42651962` |
+| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 17,866 |
+| **Strings reviewed this run** | 8 of 17,874 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 357 |
-| Strings | 17,866 |
-| Missing strings | 314 |
+| Strings | 17,874 |
+| Missing strings | 306 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 3 |
 | Fluent / properties syntax errors | 0 |
@@ -65,18 +65,14 @@ _Nothing retired._
 
 ### Completeness
 
-**314 strings** are not translated yet, concentrated in:
+**306 strings** are not translated yet, concentrated in:
 
 - `browser/browser/aiWindow.ftl` — 159
 - `browser/browser/aiWindowContent.ftl` — 80
 - `browser/browser/aiFeatures.ftl` — 43
 - `browser/browser/newtab/onboarding.ftl` — 13
 - `browser/browser/newtab/newtab.ftl` — 7
-- `browser/browser/appmenu.ftl` — 2
-- `browser/browser/menubar.ftl` — 2
 - `browser/browser/sharePanel.ftl` — 2
-- `browser/browser/preferences/preferences.ftl` — 2
-- `browser/browser/aboutDialog.ftl` — 1
 - `browser/browser/preferences/formAutofill.ftl` — 1
 - `dom/chrome/accessibility/AccessFu.properties` — 1
 
@@ -98,7 +94,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | apostrophe | `straight` 1 | **straight** |
 | ellipsis | `char` 460 | **char** |
 | dash | `em` 170, `en` 12 | **em** |
-| nbsp | `total` 5389, `narrow` 3, `before-punctuation` 49, `space-before-punctuation` 21 | **total** |
+| nbsp | `total` 5390, `narrow` 3, `before-punctuation` 49, `space-before-punctuation` 21 | **total** |
 | register | `informal` 79 | **informal** |
 
 ---

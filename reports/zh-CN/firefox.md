@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-22 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `5cbe42651962` |
+| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 17,969 |
+| **Strings reviewed this run** | 12 of 17,981 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,23 @@ Also for zh-CN: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `url-classifier-content-classifier-loading-url` — `toolkit/toolkit/about/url-classifier.ftl` — "Loading URL" is a noun phrase (the URL that loads the tested URL), but it is translated as the progress message "正在加载 URL".
+    - Current: `正在加载 URL`
+    - Source: `Loading URL`
+    - Suggest: `加载方 URL`
+    - Developer comment says this is the URL that loads the URL being tested (a frame's URL), i.e. a label, not a status message.
+- `moz-box-link-opens-in-new-tab` — `toolkit/toolkit/global/mozBoxBase.ftl` — "a new tab" is translated as "新建窗口" (new window) instead of a new tab.
+    - Current: `新建窗口打开`
+    - Source: `Opens in a new tab`
+    - Suggest: `在新标签页中打开`
+    - en-US says "Opens in a new tab"; the translation says window, which is a different UI concept.
+- `list-empty-get-extensions-promo` — `toolkit/toolkit/about/aboutAddons.ftl` — "improve focus, privacy and more" is rendered as "更专注、更隐私、更安全", inventing "security" in place of "and more".
+    - Current: `更专注、更隐私、更安全`
+    - Source: `heading: A few extensions go a long way message: We’ve got recommendations to help you improve focus, privacy and more.`
+    - Suggest: `更专注、更好保护隐私等`
+    - The en-US source lists focus, privacy and "more"; "更安全" (more secure) is content not present in the source.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +59,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 359 |
-| Strings | 17,969 |
-| Missing strings | 211 |
+| Strings | 17,981 |
+| Missing strings | 199 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Fluent / properties syntax errors | 0 |
@@ -65,20 +79,20 @@ _Nothing retired._
 
 ### Completeness
 
-**211 strings** are not translated yet, concentrated in:
+**199 strings** are not translated yet, concentrated in:
 
 - `browser/browser/newtab/newtab.ftl` — 41
 - `devtools/client/toolbox-options.ftl` — 18
 - `toolkit/toolkit/about/aboutNetworking.ftl` — 15
 - `browser/browser/sharePanel.ftl` — 14
-- `toolkit/toolkit/about/url-classifier.ftl` — 13
-- `toolkit/toolkit/neterror/netError.ftl` — 13
+- `toolkit/toolkit/about/url-classifier.ftl` — 12
+- `toolkit/toolkit/neterror/netError.ftl` — 12
 - `dom/chrome/dom/dom.properties` — 9
 - `browser/browser/aiWindow.ftl` — 7
 - `browser/browser/ipProtection.ftl` — 7
 - `browser/browser/preferences/containers.ftl` — 7
-- `browser/browser/preferences/preferences.ftl` — 7
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 7
+- `browser/browser/firefoxView.ftl` — 6
 
 **Files absent from the locale:**
 
@@ -96,8 +110,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | apostrophe | `typographic` 46, `straight` 20 | _mixed_ |
 | ellipsis | `char` 439, `ascii` 13 | **char** |
 | dash | `em` 78, `en` 2 | **em** |
-| fullwidth | `punctuation` 9514 | **punctuation** |
-| register | `informal` 15, `formal` 1742 | **formal** |
+| fullwidth | `punctuation` 9524 | **punctuation** |
+| register | `informal` 15, `formal` 1746 | **formal** |
 
 ---
 
@@ -108,12 +122,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (72)
+## 3. Open findings (75)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 6 |
-| 2 | Wrong content (says something other than the English) | 12 |
+| 2 | Wrong content (says something other than the English) | 15 |
 | 3 | Degraded language (grammar, spelling, terminology) | 19 |
 | 4 | Cosmetic (typography, spacing) | 35 |
 
@@ -212,11 +226,26 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `client-auth-window` — `security/manager/security/pippki/pippki.ftl` — client-auth-window (pippki.ftl) — title "User Identification Request" → "使用确认请求" (usage-confirmation) → SUGGEST: "用户身份识别请求".
     - Source: `title: User Identification Request`
     - Suggest: `"使用确认请求"`
+- `list-empty-get-extensions-promo` — `toolkit/toolkit/about/aboutAddons.ftl` — "improve focus, privacy and more" is rendered as "更专注、更隐私、更安全", inventing "security" in place of "and more".
+    - Current: `更专注、更隐私、更安全`
+    - Source: `heading: A few extensions go a long way message: We’ve got recommendations to help you improve focus, privacy and more.`
+    - Suggest: `更专注、更好保护隐私等`
+    - The en-US source lists focus, privacy and "more"; "更安全" (more secure) is content not present in the source.
 - `about-glean-label-for-ping-names` — `toolkit/toolkit/about/aboutGlean.ftl` — about-glean-label-for-ping-names (aboutGlean.ftl) — the <code> ping token was changed from events to event, the word "ping" dropped, and the sentence garbled. Restore: the default ping for <code>event</code> metrics is the <code>events</code> ping.
     - Source: `Select from the preceding list the ping your instrumentation is in. If it’s in a <a data-l10n-name="custom-ping-link">custom ping</a>, choose that one. Otherwise, the default for <code>event</code> metrics is the <code>…`
 - `certificate-viewer-modulus` — `toolkit/toolkit/about/certviewer.ftl` — certificate-viewer-modulus (certviewer.ftl) — RSA "Modulus" → "模块" (software module) → SUGGEST: "模数".
     - Source: `Modulus`
     - Suggest: `"模块"`
+- `url-classifier-content-classifier-loading-url` — `toolkit/toolkit/about/url-classifier.ftl` — "Loading URL" is a noun phrase (the URL that loads the tested URL), but it is translated as the progress message "正在加载 URL".
+    - Current: `正在加载 URL`
+    - Source: `Loading URL`
+    - Suggest: `加载方 URL`
+    - Developer comment says this is the URL that loads the URL being tested (a frame's URL), i.e. a label, not a status message.
+- `moz-box-link-opens-in-new-tab` — `toolkit/toolkit/global/mozBoxBase.ftl` — "a new tab" is translated as "新建窗口" (new window) instead of a new tab.
+    - Current: `新建窗口打开`
+    - Source: `Opens in a new tab`
+    - Suggest: `在新标签页中打开`
+    - en-US says "Opens in a new tab"; the translation says window, which is a different UI concept.
 
 ### C. Grammar, agreement & spelling
 

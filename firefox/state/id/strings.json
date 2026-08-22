@@ -34,6 +34,7 @@
   "community-exp": "52d29fdd d3e8f0e5",
   "helpus": "e1a5bea4 469bd1d2",
   "helpus-referrals": "0337ff7e c3a1169b",
+  "helpus-referrals2": "7fff67a3 f53f4b1f",
   "releaseNotes-link": "ec5b7591 e16106a3",
   "settings-update-applying": "a1500782 82a4756c",
   "settings-update-checking-failed": "34599c5e 01809d49",
@@ -645,6 +646,7 @@
   "appmenu-recently-closed-tabs": "9fefbc2d 3f71d889",
   "appmenu-recently-closed-windows": "0cd55b8a f6ff38d4",
   "appmenu-referrals": "f5d816e6 80000d06",
+  "appmenu-referrals2": "cb2afa2e e0a0d3ee",
   "appmenu-remote-tabs-connectdevice": "ccd8914b 584dfab7",
   "appmenu-remote-tabs-noclients": "4758ca82 0bcae2aa",
   "appmenu-remote-tabs-notabs": "6fe74497 36ab29ce",
@@ -709,6 +711,7 @@
   "appmenuitem-settings": "a35ab011 2cf0e539",
   "appmenuitem-share-firefox-description": "6cdb92ab efd91981",
   "appmenuitem-share-firefox-title": "52a34990 be58bcf4",
+  "appmenuitem-share-firefox-title2": "d409b693 e8765b85",
   "appmenuitem-sign-in-account": "3b79e726 bc849748",
   "appmenuitem-tab-groups": "c4d0d727 66617d09",
   "appmenuitem-translate": "60584e6b f6ba6f3f",
@@ -2422,6 +2425,7 @@
   "menu-application-hide-this": "d9fa4f04 d3474153",
   "menu-application-preferences": "a35ab011 feaa5f9d",
   "menu-application-referrals": "0a543282 0bbf7f7c",
+  "menu-application-referrals2": "3ed5ff8e 81c6072f",
   "menu-application-services": "7d162fa5 c064318c",
   "menu-application-set-as-default": "b194c9b5 1af4aa08",
   "menu-application-settings": "c6075a53 650db4e4",
@@ -2487,6 +2491,7 @@
   "menu-quit": "c96c4b54 d75b7079",
   "menu-quit-mac": "5ce4eaa8 fcc7fa3a",
   "menu-referrals": "0a543282 0bbf7f7c",
+  "menu-referrals2": "3ed5ff8e 81c6072f",
   "menu-report-broken-site": "eda6bd46 446a7616",
   "menu-settings": "40279d70 866d8519",
   "menu-tools": "799ad870 12a4493d",
@@ -14329,7 +14334,8 @@
   "moz-badge-new2": "4fa4183e f4c9e098"
  },
  "toolkit/toolkit/global/mozBoxBase.ftl": {
-  "moz-box-link-anchor": "193471a1 23a19e4b"
+  "moz-box-link-anchor": "193471a1 23a19e4b",
+  "moz-box-link-opens-in-new-tab": "16820071 cd5b5aec"
  },
  "toolkit/toolkit/global/mozBreadcrumbGroup.ftl": {
   "moz-breadcrumb-group-nav": "8cb4b316 b858a79b"

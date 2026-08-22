@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-22 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `5cbe42651962` |
+| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,156 |
+| **Strings reviewed this run** | 8 of 18,164 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,156 |
-| Missing strings | 24 |
+| Strings | 18,164 |
+| Missing strings | 16 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -65,19 +65,14 @@ _Nothing retired._
 
 ### Completeness
 
-**24 strings** are not translated yet, concentrated in:
+**16 strings** are not translated yet, concentrated in:
 
 - `browser/browser/newtab/newtab.ftl` — 8
 - `browser/browser/aboutPrivateBrowsing.ftl` — 2
-- `browser/browser/appmenu.ftl` — 2
-- `browser/browser/menubar.ftl` — 2
 - `browser/browser/sharePanel.ftl` — 2
-- `browser/browser/preferences/preferences.ftl` — 2
-- `browser/browser/aboutDialog.ftl` — 1
 - `browser/browser/preferences/formAutofill.ftl` — 1
 - `dom/chrome/accessibility/AccessFu.properties` — 1
 - `toolkit/toolkit/about/aboutProcesses.ftl` — 1
-- `toolkit/toolkit/global/mozBoxBase.ftl` — 1
 - `toolkit/toolkit/global/processTypes.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
@@ -93,7 +88,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | ellipsis | `char` 461 | **char** |
 | dash | `en` 135 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `formal` 3091 | **formal** |
+| register | `formal` 3092 | **formal** |
 
 ---
 

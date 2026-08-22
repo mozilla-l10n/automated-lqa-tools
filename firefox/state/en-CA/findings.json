@@ -1,5 +1,28 @@
 [
  {
+  "category": "E",
+  "check": "llm",
+  "current": "<label data-l10n-name=\"helpus-shareFirefoxLink\">Share { -brand-product-name }</label>",
+  "dismissed_because": "",
+  "fid": "ed7a7f314030",
+  "file": "browser/browser/aboutDialog.ftl",
+  "first_seen": "2026-08-22",
+  "impact": 4,
+  "last_seen": "2026-08-22",
+  "locale": "en-CA",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source has lowercase \"share\" because the label appears mid-sentence between \"Make a donation,\" and \"or get involved!\"; capitalizing it breaks the sentence flow and is inconsistent with the surrounding lowercase \"get involved!\".",
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "bf646e9d",
+  "string_id": "helpus-referrals2",
+  "suggest": "<label data-l10n-name=\"helpus-shareFirefoxLink\">share { -brand-product-name }</label>",
+  "summary": "Mid-sentence link text is capitalized in en-CA where en-US uses lowercase \"share\".",
+  "suppressed_by": ""
+ },
+ {
   "category": "B",
   "check": "llm",
   "current": "View the { $license } license",
@@ -215,7 +238,7 @@
   "file": "toolkit/toolkit/about/aboutAddons.ftl",
   "first_seen": "2026-08-20",
   "impact": 3,
-  "last_seen": "2026-08-21",
+  "last_seen": "2026-08-22",
   "locale": "en-CA",
   "origin": {},
   "rationale": "This locale writes “colour” for “color” in 69 other strings and keeps “color” in 4. This string is byte-identical to en-US, so the substitution looks simply to have been missed.",

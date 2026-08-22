@@ -2032,7 +2032,7 @@
   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 1,
-  "last_seen": "2026-08-21",
+  "last_seen": "2026-08-22",
   "locale": "pl",
   "origin": {},
   "rationale": "The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.",

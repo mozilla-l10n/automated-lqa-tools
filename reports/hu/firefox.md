@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-22 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `5cbe42651962` |
+| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,116 |
+| **Strings reviewed this run** | 8 of 18,124 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for hu: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `helpus-referrals2` — `browser/browser/aboutDialog.ftl` — Missing hyphen before the suffix attached to the brand term placeholder.
+    - Current: `Ossza meg a { -brand-product-name }ot`
+    - Source: `Want to help? <label data-l10n-name="helpus-donateLink">Make a donation</label>, <label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>, or <label data-l10n-name="helpus-getInvolvedLink">g…`
+    - Suggest: `Ossza meg a { -brand-product-name }-ot`
+    - In Hungarian, suffixes appended to a brand name rendered from a placeholder are joined with a hyphen (e.g. „a Firefox-ot” style used for term placeholders); „{ -brand-product-name }ot” concatenates the suffix directly, producing „Firefoxot” without the required separation and is inconsistent with the other referral strings that avoid suffixing the placeholder.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,116 |
-| Missing strings | 64 |
+| Strings | 18,124 |
+| Missing strings | 56 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -65,20 +69,20 @@ _Nothing retired._
 
 ### Completeness
 
-**64 strings** are not translated yet, concentrated in:
+**56 strings** are not translated yet, concentrated in:
 
 - `browser/browser/newtab/newtab.ftl` — 21
 - `browser/browser/preferences/containers.ftl` — 7
 - `toolkit/toolkit/neterror/netError.ftl` — 7
-- `browser/browser/preferences/preferences.ftl` — 6
+- `browser/browser/preferences/preferences.ftl` — 4
 - `devtools/client/inspector.ftl` — 4
 - `browser/browser/aboutPrivateBrowsing.ftl` — 3
-- `browser/browser/appmenu.ftl` — 2
-- `browser/browser/menubar.ftl` — 2
 - `browser/browser/sharePanel.ftl` — 2
 - `toolkit/toolkit/global/theme-picker.ftl` — 2
-- `browser/browser/aboutDialog.ftl` — 1
 - `browser/browser/firefoxView.ftl` — 1
+- `browser/browser/preferences/formAutofill.ftl` — 1
+- `dom/chrome/accessibility/AccessFu.properties` — 1
+- `toolkit/toolkit/about/aboutNetworking.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -102,13 +106,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (273)
+## 3. Open findings (274)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 34 |
 | 2 | Wrong content (says something other than the English) | 119 |
-| 3 | Degraded language (grammar, spelling, terminology) | 86 |
+| 3 | Degraded language (grammar, spelling, terminology) | 87 |
 | 4 | Cosmetic (typography, spacing) | 29 |
 
 ### A. Functional, markup, variables & plurals
@@ -469,6 +473,11 @@ _Nothing reported._
 
 ### C. Grammar, agreement & spelling
 
+- `helpus-referrals2` — `browser/browser/aboutDialog.ftl` — Missing hyphen before the suffix attached to the brand term placeholder.
+    - Current: `Ossza meg a { -brand-product-name }ot`
+    - Source: `Want to help? <label data-l10n-name="helpus-donateLink">Make a donation</label>, <label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>, or <label data-l10n-name="helpus-getInvolvedLink">g…`
+    - Suggest: `Ossza meg a { -brand-product-name }-ot`
+    - In Hungarian, suffixes appended to a brand name rendered from a placeholder are joined with a hyphen (e.g. „a Firefox-ot” style used for term placeholders); „{ -brand-product-name }ot” concatenates the suffix directly, producing „Firefoxot” without the required separation and is inconsistent with the other referral strings that avoid suffixing the placeholder.
 - `about-private-browsing-cookie-banners-promo-body` — `browser/browser/aboutPrivateBrowsing.ftl` — Wrong case on the quantifier: “kevesebbet nyomkövetést”.
     - Current: `így kevesebbet nyomkövetést kap`
     - Source: `We now automatically refuse many cookie banners so you can get tracked less and go back to distraction-free browsing.`

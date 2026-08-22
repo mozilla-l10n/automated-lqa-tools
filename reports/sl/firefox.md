@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-22 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `5cbe42651962` |
+| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 17,533 |
+| **Strings reviewed this run** | 8 of 17,541 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 17,533 |
-| Missing strings | 647 |
+| Strings | 17,541 |
+| Missing strings | 639 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -65,7 +65,7 @@ _Nothing retired._
 
 ### Completeness
 
-**647 strings** are not translated yet, concentrated in:
+**639 strings** are not translated yet, concentrated in:
 
 - `browser/browser/aiWindow.ftl` — 136
 - `browser/browser/aiWindowContent.ftl` — 71
@@ -76,8 +76,8 @@ _Nothing retired._
 - `browser/browser/aiFeatures.ftl` — 26
 - `devtools/client/toolbox-options.ftl` — 24
 - `dom/chrome/security/security.properties` — 23
-- `browser/browser/preferences/preferences.ftl` — 21
 - `toolkit/toolkit/about/aboutNetworking.ftl` — 20
+- `browser/browser/preferences/preferences.ftl` — 19
 - `devtools/client/debugger.properties` — 17
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-22 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `5cbe42651962` |
+| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 17,843 |
+| **Strings reviewed this run** | 4 of 17,847 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for es-MX: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `moz-box-link-opens-in-new-tab` — `toolkit/toolkit/global/mozBoxBase.ftl` — Descriptive text "Opens in a new tab" was rendered as an imperative/infinitive command "Abrir en una nueva pestaña".
+    - Current: `Abrir en una nueva pestaña`
+    - Source: `Opens in a new tab`
+    - Suggest: `Se abre en una nueva pestaña`
+    - The en-US string describes the link's behavior (third person, "Opens in a new tab"), typically used as an accessible label; the Spanish infinitive reads as an action command, changing the meaning.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 357 |
-| Strings | 17,843 |
-| Missing strings | 337 |
+| Strings | 17,847 |
+| Missing strings | 333 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 3 |
 | Fluent / properties syntax errors | 0 |
@@ -65,7 +69,7 @@ _Nothing retired._
 
 ### Completeness
 
-**337 strings** are not translated yet, concentrated in:
+**333 strings** are not translated yet, concentrated in:
 
 - `browser/browser/newtab/newtab.ftl` — 73
 - `toolkit/toolkit/about/url-classifier.ftl` — 26
@@ -99,7 +103,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | ellipsis | `char` 433, `ascii` 21 | **char** |
 | dash | `em` 75, `en` 1 | **em** |
 | nbsp | `total` 14, `narrow` 10, `before-punctuation` 10, `space-before-punctuation` 8 | _mixed_ |
-| inverted marks | `open-question` 367, `open-exclamation` 84 | **open-question** |
+| inverted marks | `open-question` 368, `open-exclamation` 85 | **open-question** |
 | register | `informal` 1359, `formal` 237 | **informal** |
 
 ---
@@ -113,12 +117,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (132)
+## 3. Open findings (133)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 9 |
-| 2 | Wrong content (says something other than the English) | 44 |
+| 2 | Wrong content (says something other than the English) | 45 |
 | 3 | Degraded language (grammar, spelling, terminology) | 61 |
 | 4 | Cosmetic (typography, spacing) | 18 |
 
@@ -213,6 +217,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Suggest: `"contraseña principal" → "contraseña actual".`
 - `about-webrtc-closed-peerconnection-disclosure-show-msg` — `toolkit/toolkit/about/aboutWebrtc.ftl` — "PeerConnections" translated to "conexiones de pares" in the hide-msg variant only (comment: keep PeerConnection).
     - Source: `Show Closed PeerConnections`
+- `moz-box-link-opens-in-new-tab` — `toolkit/toolkit/global/mozBoxBase.ftl` — Descriptive text "Opens in a new tab" was rendered as an imperative/infinitive command "Abrir en una nueva pestaña".
+    - Current: `Abrir en una nueva pestaña`
+    - Source: `Opens in a new tab`
+    - Suggest: `Se abre en una nueva pestaña`
+    - The en-US string describes the link's behavior (third person, "Opens in a new tab"), typically used as an accessible label; the Spanish infinitive reads as an action command, changing the meaning.
 - `language-name-ab` — `toolkit/toolkit/intl/languageNames.ftl` — language-name-af "Africano" → Afrikáans; language-name-ab "Abjasia" → Abjaso; language-name-hi "Hindú" → Hindi; language-name-hsb "Serbio superior" → Alto sorabo; language-name-wen "Serbio" → Sorabo; language-name-tg "Tayikistán" → Tayiko; language-name-uz "Uzbekistán" → Uzbeko; language-name-yi "Judío" → Yidis; language-name-fj "Fiji" → Fiyiano; language-name-ty "Tahití" → Tahitiano; language-na…
     - Source: `Abkhazian`
 - `language-name-af` — `toolkit/toolkit/intl/languageNames.ftl` — language-name-af "Africano" → Afrikáans; language-name-ab "Abjasia" → Abjaso; language-name-hi "Hindú" → Hindi; language-name-hsb "Serbio superior" → Alto sorabo; language-name-wen "Serbio" → Sorabo; language-name-tg "Tayikistán" → Tayiko; language-name-uz "Uzbekistán" → Uzbeko; language-name-yi "Judío" → Yidis; language-name-fj "Fiji" → Fiyiano; language-name-ty "Tahití" → Tahitiano; language-na…

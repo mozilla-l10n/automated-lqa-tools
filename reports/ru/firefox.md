@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-22 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `5cbe42651962` |
+| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,161 |
+| **Strings reviewed this run** | 8 of 18,169 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for ru: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `helpus-referrals2` — `browser/browser/aboutDialog.ftl` — Superfluous comma before the coordinating conjunction «или» in a two-part enumeration.
+    - Current: `</label>, <label data-l10n-name="helpus-getInvolvedLink">присоединяйтесь!</label>`
+    - Source: `Want to help? <label data-l10n-name="helpus-donateLink">Make a donation</label>, <label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>, or <label data-l10n-name="helpus-getInvolvedLink">g…`
+    - Suggest: `</label> <label data-l10n-name="helpus-getInvolvedLink">присоединяйтесь!</label>`
+    - In Russian a comma is not placed before a single «или» joining homogeneous members; the en-US comma before "or" reflects English punctuation rules only. The comma should move: «Сделайте пожертвование, поделитесь … или присоединяйтесь!»
+- `appmenu-referrals2` — `browser/browser/appmenu.ftl` — Menu label uses «Поделитесь { -brand-product-name }» without the required instrumental case, so the brand name is left in the wrong grammatical form.
+    - Current: `Поделитесь { -brand-product-name }`
+    - Source: `accesskey: r label: Share { -brand-product-name }`
+    - Suggest: `Поделитесь { -brand-product-name(case: "ablative") }`
+    - The verb «поделиться» governs the instrumental case («поделиться Firefox'ом» / «поделиться браузером»); the brand term supports a $case parameter per the locale conventions, and omitting it produces an ungrammatical nominative form.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +54,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,161 |
-| Missing strings | 19 |
+| Strings | 18,169 |
+| Missing strings | 11 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -65,17 +74,12 @@ _Nothing retired._
 
 ### Completeness
 
-**19 strings** are not translated yet, concentrated in:
+**11 strings** are not translated yet, concentrated in:
 
 - `browser/browser/newtab/newtab.ftl` — 7
-- `browser/browser/appmenu.ftl` — 2
-- `browser/browser/menubar.ftl` — 2
 - `browser/browser/sharePanel.ftl` — 2
-- `browser/browser/preferences/preferences.ftl` — 2
-- `browser/browser/aboutDialog.ftl` — 1
 - `browser/browser/preferences/formAutofill.ftl` — 1
 - `dom/chrome/accessibility/AccessFu.properties` — 1
-- `toolkit/toolkit/global/mozBoxBase.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -90,7 +94,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | ellipsis | `char` 463, `ascii` 6 | **char** |
 | dash | `em` 168, `en` 5 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 7 | _mixed_ |
-| register | `informal` 1051, `formal` 3592 | **formal** |
+| register | `informal` 1051, `formal` 3593 | **formal** |
 
 ---
 
@@ -101,14 +105,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (593)
+## 3. Open findings (595)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 50 |
-| 2 | Wrong content (says something other than the English) | 265 |
+| 2 | Wrong content (says something other than the English) | 266 |
 | 3 | Degraded language (grammar, spelling, terminology) | 214 |
-| 4 | Cosmetic (typography, spacing) | 64 |
+| 4 | Cosmetic (typography, spacing) | 65 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -271,6 +275,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `Помощь и поддержка`
     - Source: `title: Help and Report`
     - Suggest: `Справка и жалобы`
+- `appmenu-referrals2` — `browser/browser/appmenu.ftl` — Menu label uses «Поделитесь { -brand-product-name }» without the required instrumental case, so the brand name is left in the wrong grammatical form.
+    - Current: `Поделитесь { -brand-product-name }`
+    - Source: `accesskey: r label: Share { -brand-product-name }`
+    - Suggest: `Поделитесь { -brand-product-name(case: "ablative") }`
+    - The verb «поделиться» governs the instrumental case («поделиться Firefox'ом» / «поделиться браузером»); the brand term supports a $case parameter per the locale conventions, and omitting it produces an ungrammatical nominative form.
 - `appmenuitem-help-and-report` — `browser/browser/appmenu.ftl` — appmenu.ftl — the "Report" half is dropped. Current: Помощь и поддержка → Suggest: Справка и жалобы
     - Current: `Помощь и поддержка`
     - Source: `label: Help and Report`
@@ -433,9 +442,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Closeup photography of blue-petaled flowers in bloom`
 - `newtab-wallpaper-celestial-eclipse-time-lapse` — `browser/browser/newtab/newtab.ftl` — Wallpaper descriptions — newtab.ftl — newtab-wallpaper-light-landscape renders "mist" as дым (smoke); newtab-wallpaper-blue-flowers says цветов с голубыми цветами (repeats the word, loses "petaled"); newtab-wallpaper-celestial-eclipse-time-lapse renders "time lapse" as Хронометраж; newtab-wallpaper-celestial-river renders "satellite" as Космический
     - Source: `Lunar eclipse time lapse`
-- `newtab-wallpaper-celestial-river` — `browser/browser/newtab/newtab.ftl` — Wallpaper descriptions — newtab.ftl — newtab-wallpaper-light-landscape renders "mist" as дым (smoke); newtab-wallpaper-blue-flowers says цветов с голубыми цветами (repeats the word, loses "petaled"); newtab-wallpaper-celestial-eclipse-time-lapse renders "time lapse" as Хронометраж; newtab-wallpaper-celestial-river renders "satellite" as Космический
-    - Source: `Satellite image of river`
-- _…and 203 more; see `state/` for the full list._
+- _…and 204 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -822,6 +829,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 - `community-exp` — `browser/browser/aboutDialog.ftl` — Locale-only double spaces: community-exp (aboutDialog.ftl), inactive-css-no-size-containment-fix and -fix-1 (tooltips.ftl), rights-intro-point-1 (aboutRights.ftl), settings-pp-not-wanted (toolkit/preferences/preferences.ftl), perftools-onboarding-message (double space after the colon), genai-settings-chat-lechat-links (genai.ftl), languages-code-format (.label, languages.ftl), CSPROTrustedTypesPo…
     - Source: `<label data-l10n-name="community-exp-mozillaLink">{ -vendor-short-name }</label> is a <label data-l10n-name="community-exp-creditsLink">global community</label> working together to keep the Web open, public and accessib…`
+- `helpus-referrals2` — `browser/browser/aboutDialog.ftl` — Superfluous comma before the coordinating conjunction «или» in a two-part enumeration.
+    - Current: `</label>, <label data-l10n-name="helpus-getInvolvedLink">присоединяйтесь!</label>`
+    - Source: `Want to help? <label data-l10n-name="helpus-donateLink">Make a donation</label>, <label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>, or <label data-l10n-name="helpus-getInvolvedLink">g…`
+    - Suggest: `</label> <label data-l10n-name="helpus-getInvolvedLink">присоединяйтесь!</label>`
+    - In Russian a comma is not placed before a single «или» joining homogeneous members; the en-US comma before "or" reflects English punctuation rules only. The comma should move: «Сделайте пожертвование, поделитесь … или присоединяйтесь!»
 - `pocket-panel-home-most-recent-saves-loading` — `browser/browser/aboutPocket.ftl` — `pocket-panel-home-most-recent-saves-loading` uses three dots where this locale uses …
     - Current: `Загрузка недавних сохранений...`
     - Source: `Recent saves loading…`
@@ -980,9 +992,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Suggest: `Apple App Store .`
 - `neterror-load-error-connection` — `toolkit/toolkit/neterror/netError.ftl` — neterror-load-error-connection, neterror-load-error-firewall, neterror-proxy-resolve-failure-firewall — netError.ftl — – (en dash) used as the sentence dash where the tree uses — (163×)
     - Source: `If you are unable to load any pages, check your computer’s network connection.`
-- `neterror-load-error-firewall` — `toolkit/toolkit/neterror/netError.ftl` — neterror-load-error-connection, neterror-load-error-firewall, neterror-proxy-resolve-failure-firewall — netError.ftl — – (en dash) used as the sentence dash where the tree uses — (163×)
-    - Source: `If your computer or network is protected by a firewall or proxy, make sure that { -brand-short-name } is permitted to access the web.`
-- _…and 4 more; see `state/` for the full list._
+- _…and 5 more; see `state/` for the full list._
 
 ---
 

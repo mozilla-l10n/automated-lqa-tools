@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-22 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `5cbe42651962` |
+| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,161 |
+| **Strings reviewed this run** | 8 of 18,169 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,161 |
-| Missing strings | 19 |
+| Strings | 18,169 |
+| Missing strings | 11 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -65,17 +65,12 @@ _Nothing retired._
 
 ### Completeness
 
-**19 strings** are not translated yet, concentrated in:
+**11 strings** are not translated yet, concentrated in:
 
 - `browser/browser/newtab/newtab.ftl` — 7
-- `browser/browser/appmenu.ftl` — 2
-- `browser/browser/menubar.ftl` — 2
 - `browser/browser/sharePanel.ftl` — 2
-- `browser/browser/preferences/preferences.ftl` — 2
-- `browser/browser/aboutDialog.ftl` — 1
 - `browser/browser/preferences/formAutofill.ftl` — 1
 - `dom/chrome/accessibility/AccessFu.properties` — 1
-- `toolkit/toolkit/global/mozBoxBase.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -89,7 +84,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | apostrophe | `typographic` 74, `straight` 11 | **typographic** |
 | ellipsis | `char` 451, `ascii` 4 | **char** |
 | dash | `em` 101, `en` 30 | **em** |
-| nbsp | `total` 13, `before-punctuation` 3, `space-before-punctuation` 7 | _mixed_ |
+| nbsp | `total` 13, `before-punctuation` 3, `space-before-punctuation` 8 | _mixed_ |
 
 ---
 

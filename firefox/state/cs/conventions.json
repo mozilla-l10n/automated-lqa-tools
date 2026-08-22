@@ -1,8 +1,8 @@
 {
  "_meta": {
   "locale": "cs",
-  "prose_chunks": 18970,
-  "strings": 18161
+  "prose_chunks": 18979,
+  "strings": 18169
  },
  "apostrophe": {
   "straight": 11,
@@ -26,7 +26,7 @@
  "nbsp": {
   "before-punctuation": 3,
   "narrow": 0,
-  "space-before-punctuation": 7,
+  "space-before-punctuation": 8,
   "total": 13
  },
  "quotes": {

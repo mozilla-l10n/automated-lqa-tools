@@ -1,12 +1,12 @@
 {
  "_meta": {
   "locale": "fy-NL",
-  "prose_chunks": 18904,
-  "strings": 18131
+  "prose_chunks": 18913,
+  "strings": 18139
  },
  "apostrophe": {
   "straight": 0,
-  "typographic": 1645
+  "typographic": 1646
  },
  "dash": {
   "em": 26,

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-22 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `5cbe42651962` |
+| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,129 |
+| **Strings reviewed this run** | 19 of 18,148 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for es-AR: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `share-panel-missing-device` — `browser/browser/sharePanel.ftl` — "Don’t see your device?" is rendered as an impersonal "Can't the device be seen?" instead of addressing the user.
+    - Current: `¿No se puede ver el dispositivo?`
+    - Source: `label: Don’t see your device?`
+    - Suggest: `¿No ve su dispositivo?`
+    - The en-US asks the user directly whether they see their device; the translation turns it into an impersonal passive construction and loses the possessive reference to the user's device.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,129 |
-| Missing strings | 51 |
+| Strings | 18,148 |
+| Missing strings | 32 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -65,20 +69,18 @@ _Nothing retired._
 
 ### Completeness
 
-**51 strings** are not translated yet, concentrated in:
+**32 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 17
+- `browser/browser/newtab/newtab.ftl` — 10
 - `toolkit/toolkit/about/url-classifier.ftl` — 7
-- `browser/browser/appmenu.ftl` — 5
-- `browser/browser/preferences/preferences.ftl` — 5
 - `browser/browser/featureCallout.ftl` — 4
-- `browser/browser/menubar.ftl` — 2
-- `browser/browser/sharePanel.ftl` — 2
-- `browser/browser/aboutDialog.ftl` — 1
+- `browser/browser/appmenu.ftl` — 3
+- `browser/browser/preferences/preferences.ftl` — 3
 - `browser/browser/aiWindowContent.ftl` — 1
-- `browser/browser/preferences/formAutofill.ftl` — 1
 - `browser/browser/newtab/asrouter.ftl` — 1
-- `dom/chrome/accessibility/AccessFu.properties` — 1
+- `toolkit/toolkit/about/aboutAddons.ftl` — 1
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 1
+- `toolkit/toolkit/global/processTypes.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -93,7 +95,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | ellipsis | `char` 459, `ascii` 2 | **char** |
 | dash | `em` 86, `en` 1 | **em** |
 | nbsp | `total` 5, `before-punctuation` 3, `space-before-punctuation` 9 | _mixed_ |
-| inverted marks | `open-question` 368, `open-exclamation` 81 | **open-question** |
+| inverted marks | `open-question` 370, `open-exclamation` 82 | **open-question** |
 
 ---
 
@@ -103,12 +105,12 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (420)
+## 3. Open findings (421)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 70 |
-| 2 | Wrong content (says something other than the English) | 169 |
+| 2 | Wrong content (says something other than the English) | 170 |
 | 3 | Degraded language (grammar, spelling, terminology) | 135 |
 | 4 | Cosmetic (typography, spacing) | 40 |
 
@@ -419,6 +421,11 @@ _Nothing reported._
     - Source: `Oblast`
     - Suggest: `Óblast`
     - The developer comment identifies this as the primary administrative division used in Russia and Ukraine; an óblast is not an autonomous province, and neighbouring entries (Do/Si, Eircode, Townland) keep the local term.
+- `share-panel-missing-device` — `browser/browser/sharePanel.ftl` — "Don’t see your device?" is rendered as an impersonal "Can't the device be seen?" instead of addressing the user.
+    - Current: `¿No se puede ver el dispositivo?`
+    - Source: `label: Don’t see your device?`
+    - Suggest: `¿No ve su dispositivo?`
+    - The en-US asks the user directly whether they see their device; the translation turns it into an impersonal passive construction and loses the possessive reference to the user's device.
 - `DrawWindowCanvasRenderingContext2DWarning` — `dom/chrome/dom/dom.properties` — The API name tabs.captureTab was translated to “pestañas.captureTab”.
     - Current: `Usar las pestañas.captureTab extensions API en lugar de`
     - Source: `Use of drawWindow method from CanvasRenderingContext2D is deprecated. Use tabs.captureTab extensions API instead https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/tabs/captureTab`

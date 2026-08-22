@@ -34,6 +34,7 @@
   "community-exp": "6651eabd d3e8f0e5",
   "helpus": "0f7c73db 469bd1d2",
   "helpus-referrals": "3fc70469 c3a1169b",
+  "helpus-referrals2": "8d10d3e3 f53f4b1f",
   "releaseNotes-link": "8be4b676 e16106a3",
   "settings-update-applying": "b873111f 82a4756c",
   "settings-update-checking-failed": "d8024d24 01809d49",
@@ -936,6 +937,7 @@
   "appmenu-recently-closed-tabs": "a948839b 3f71d889",
   "appmenu-recently-closed-windows": "c3b65ec0 f6ff38d4",
   "appmenu-referrals": "d8a995e4 80000d06",
+  "appmenu-referrals2": "fe4ff730 e0a0d3ee",
   "appmenu-remote-tabs-connectdevice": "6c67bb11 584dfab7",
   "appmenu-remote-tabs-noclients": "d8c84979 0bcae2aa",
   "appmenu-remote-tabs-notabs": "5d4e279e 36ab29ce",
@@ -998,6 +1000,7 @@
   "appmenuitem-settings": "7824ebc1 2cf0e539",
   "appmenuitem-share-firefox-description": "d91fcb08 efd91981",
   "appmenuitem-share-firefox-title": "0a3111c4 be58bcf4",
+  "appmenuitem-share-firefox-title2": "50ad79b1 e8765b85",
   "appmenuitem-sign-in-account": "a5ef77b1 bc849748",
   "appmenuitem-tab-groups": "1e822c96 66617d09",
   "appmenuitem-translate": "eb71279a f6ba6f3f",
@@ -16554,7 +16557,8 @@
  "toolkit/toolkit/global/mozBoxBase.ftl": {
   "moz-box-item-reorder-handle": "33f3212f 276b2765",
   "moz-box-item-reorder-handle-named": "3f5a7026 6d10c149",
-  "moz-box-link-anchor": "30a46aea 23a19e4b"
+  "moz-box-link-anchor": "30a46aea 23a19e4b",
+  "moz-box-link-opens-in-new-tab": "44fd23a8 cd5b5aec"
  },
  "toolkit/toolkit/global/mozBreadcrumbGroup.ftl": {
   "moz-breadcrumb-group-nav": "004f0b1f b858a79b"

@@ -15926,7 +15926,8 @@
  "toolkit/toolkit/global/mozBoxBase.ftl": {
   "moz-box-item-reorder-handle": "13aecd6c 276b2765",
   "moz-box-item-reorder-handle-named": "346b64a6 6d10c149",
-  "moz-box-link-anchor": "7921e0a0 23a19e4b"
+  "moz-box-link-anchor": "7921e0a0 23a19e4b",
+  "moz-box-link-opens-in-new-tab": "2ad15fa6 cd5b5aec"
  },
  "toolkit/toolkit/global/mozBreadcrumbGroup.ftl": {
   "moz-breadcrumb-group-nav": "004f0b1f b858a79b"

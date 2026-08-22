@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-22 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `5cbe42651962` |
+| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,127 |
+| **Strings reviewed this run** | 8 of 18,135 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,23 @@ Also for pt-BR: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `referrals-section-header2` — `browser/browser/preferences/preferences.ftl` — "Share { -brand-product-name }" is rendered as "Recomendar" here but "Compartilhar" in the app menu and menu bar for the same feature.
+    - Current: `label: Recomendar o { -brand-product-name }`
+    - Source: `description: Invite someone to choose the browser that puts privacy first. label: Share { -brand-product-name }`
+    - Suggest: `label: Compartilhar o { -brand-product-name }`
+    - The identical en-US label "Share { -brand-product-name }" with the same developer comment is translated "Compartilhar o { -brand-product-name }" in appmenu.ftl and menubar.ftl; using a different verb in preferences makes the same feature inconsistently named across surfaces.
+- `referrals-link2` — `browser/browser/preferences/preferences.ftl` — "Share { -brand-product-name }" is rendered as "Recomendar" here but "Compartilhar" in the app menu and menu bar for the same feature.
+    - Current: `label: Recomendar o { -brand-product-name }`
+    - Source: `label: Share { -brand-product-name }`
+    - Suggest: `label: Compartilhar o { -brand-product-name }`
+    - The identical en-US label "Share { -brand-product-name }" is translated "Compartilhar o { -brand-product-name }" in appmenu.ftl and menubar.ftl; the differing verb here breaks terminology consistency for the same referral feature.
+- `referrals-section-header2` — `browser/browser/preferences/preferences.ftl` — The description drops the object "someone" from "Invite someone to choose the browser…".
+    - Current: `description: Convidar a usar o navegador que põe a privacidade em primeiro lugar.`
+    - Source: `description: Invite someone to choose the browser that puts privacy first. label: Share { -brand-product-name }`
+    - Suggest: `description: Convide alguém a escolher o navegador que põe a privacidade em primeiro lugar.`
+    - en-US reads "Invite someone to choose the browser that puts privacy first"; the translation omits "someone" and replaces "choose" with "use", leaving an incomplete sentence without a direct object.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +59,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,127 |
-| Missing strings | 53 |
+| Strings | 18,135 |
+| Missing strings | 45 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -65,20 +79,20 @@ _Nothing retired._
 
 ### Completeness
 
-**53 strings** are not translated yet, concentrated in:
+**45 strings** are not translated yet, concentrated in:
 
 - `browser/browser/newtab/newtab.ftl` — 21
 - `browser/browser/preferences/containers.ftl` — 7
-- `browser/browser/preferences/preferences.ftl` — 7
+- `browser/browser/preferences/preferences.ftl` — 5
 - `browser/browser/aboutPrivateBrowsing.ftl` — 3
-- `browser/browser/appmenu.ftl` — 2
-- `browser/browser/menubar.ftl` — 2
 - `browser/browser/sharePanel.ftl` — 2
-- `browser/browser/aboutDialog.ftl` — 1
 - `browser/browser/profiles.ftl` — 1
 - `browser/browser/sidebar.ftl` — 1
 - `browser/browser/preferences/formAutofill.ftl` — 1
 - `dom/chrome/accessibility/AccessFu.properties` — 1
+- `toolkit/toolkit/about/aboutPDF.ftl` — 1
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 1
+- `toolkit/toolkit/global/processTypes.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -104,13 +118,13 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (565)
+## 3. Open findings (568)
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 15 |
-| 2 | Wrong content (says something other than the English) | 192 |
-| 3 | Degraded language (grammar, spelling, terminology) | 287 |
+| 2 | Wrong content (says something other than the English) | 193 |
+| 3 | Degraded language (grammar, spelling, terminology) | 289 |
 | 4 | Cosmetic (typography, spacing) | 71 |
 
 ### A. Functional, markup, variables & plurals
@@ -350,6 +364,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `Convidar a usar o navegador que põe a privacidade em primeiro lugar.`
     - Source: `description: Invite someone to choose the browser that puts privacy first. label: Share { -brand-short-name }`
     - Suggest: `Convide alguém a escolher o navegador que põe a privacidade em primeiro lugar.`
+- `referrals-section-header2` — `browser/browser/preferences/preferences.ftl` — The description drops the object "someone" from "Invite someone to choose the browser…".
+    - Current: `description: Convidar a usar o navegador que põe a privacidade em primeiro lugar.`
+    - Source: `description: Invite someone to choose the browser that puts privacy first. label: Share { -brand-product-name }`
+    - Suggest: `description: Convide alguém a escolher o navegador que põe a privacidade em primeiro lugar.`
+    - en-US reads "Invite someone to choose the browser that puts privacy first"; the translation omits "someone" and replaces "choose" with "use", leaving an incomplete sentence without a direct object.
 - `report-broken-site-panel-reason-choose` — `browser/browser/reportBrokenSite.ftl` — en-US "Choose reason". Current: Escolha → Suggest: Escolha um motivo
     - Current: `Escolha`
     - Source: `label: Choose reason`
@@ -370,11 +389,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `Extrair dados da tela`
     - Source: `Extract canvas data`
     - Suggest: `Extrair dados do canvas`
-- `permission.popup-only.label` — `browser/chrome/browser/sitePermissions.properties` — permission.popup-only.label, permission.popup.label, permission.popup-and-framebusting.label (sitePermissions.properties) — the pop-up qualifier is dropped, so the permission reads as any window/tab opening: Abrir janelas ou abas → Abrir janelas popup; Abertura de janelas e redirecionamento de terceiros → Janelas popup e redirecionamentos de terceiros
-    - Current: `Abrir janelas ou abas`
-    - Source: `Open pop-up windows`
-    - Suggest: `Abrir janelas popup`
-- _…and 129 more; see `state/` for the full list._
+- _…and 130 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -755,6 +770,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `melhorias`
     - Source: `You won’t see new or current AI enhancements in { -brand-short-name }, or pop-ups about them. Afterwards, you can unblock anything you want to keep using.`
     - Suggest: `aprimoramentos de inteligência artificial`
+- `referrals-link2` — `browser/browser/preferences/preferences.ftl` — "Share { -brand-product-name }" is rendered as "Recomendar" here but "Compartilhar" in the app menu and menu bar for the same feature.
+    - Current: `label: Recomendar o { -brand-product-name }`
+    - Source: `label: Share { -brand-product-name }`
+    - Suggest: `label: Compartilhar o { -brand-product-name }`
+    - The identical en-US label "Share { -brand-product-name }" is translated "Compartilhar o { -brand-product-name }" in appmenu.ftl and menubar.ftl; the differing verb here breaks terminology consistency for the same referral feature.
+- `referrals-section-header2` — `browser/browser/preferences/preferences.ftl` — "Share { -brand-product-name }" is rendered as "Recomendar" here but "Compartilhar" in the app menu and menu bar for the same feature.
+    - Current: `label: Recomendar o { -brand-product-name }`
+    - Source: `description: Invite someone to choose the browser that puts privacy first. label: Share { -brand-product-name }`
+    - Suggest: `label: Compartilhar o { -brand-product-name }`
+    - The identical en-US label "Share { -brand-product-name }" with the same developer comment is translated "Compartilhar o { -brand-product-name }" in appmenu.ftl and menubar.ftl; using a different verb in preferences makes the same feature inconsistently named across surfaces.
 - `search-suggestions-cant-show` — `browser/browser/preferences/preferences.ftl` — search-suggestions-cant-show, search-suggestions-cant-show-2 (.message) — barra de endereço (singular); ~20 other strings use barra de endereços
     - Source: `Search suggestions will not be shown in location bar results because you have configured { -brand-short-name } to never remember history.`
 - `search-suggestions-cant-show-2` — `browser/browser/preferences/preferences.ftl` — search-suggestions-cant-show, search-suggestions-cant-show-2 (.message) — barra de endereço (singular); ~20 other strings use barra de endereços
@@ -775,11 +800,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `tooltiptext: Apply picture avatar`
 - `sparkle-single-avatar` — `browser/browser/profiles.ftl` — profiles.ftl avatar labels — edit-profile-page-avatar-header-2 uses Símbolo where the file uses avatar; sparkle-single-avatar-tooltip says brilho while sparkle-single-avatar says Faísca; video-game-controller-avatar-tooltip says controle de videogame while video-game-controller-avatar says Controlador de videogame; picture-avatar-tooltip says de imagem while picture-avatar says Foto; folder-avata…
     - Source: `Sparkle`
-- `sparkle-single-avatar-tooltip` — `browser/browser/profiles.ftl` — profiles.ftl avatar labels — edit-profile-page-avatar-header-2 uses Símbolo where the file uses avatar; sparkle-single-avatar-tooltip says brilho while sparkle-single-avatar says Faísca; video-game-controller-avatar-tooltip says controle de videogame while video-game-controller-avatar says Controlador de videogame; picture-avatar-tooltip says de imagem while picture-avatar says Foto; folder-avata…
-    - Source: `tooltiptext: Apply sparkle avatar`
-- `video-game-controller-avatar` — `browser/browser/profiles.ftl` — profiles.ftl avatar labels — edit-profile-page-avatar-header-2 uses Símbolo where the file uses avatar; sparkle-single-avatar-tooltip says brilho while sparkle-single-avatar says Faísca; video-game-controller-avatar-tooltip says controle de videogame while video-game-controller-avatar says Controlador de videogame; picture-avatar-tooltip says de imagem while picture-avatar says Foto; folder-avata…
-    - Source: `Video game controller`
-- _…and 65 more; see `state/` for the full list._
+- _…and 67 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 

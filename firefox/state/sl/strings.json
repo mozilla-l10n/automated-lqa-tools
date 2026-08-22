@@ -34,6 +34,7 @@
   "community-exp": "538bbe19 d3e8f0e5",
   "helpus": "d065ff90 469bd1d2",
   "helpus-referrals": "2ee53337 c3a1169b",
+  "helpus-referrals2": "e05a06fa f53f4b1f",
   "releaseNotes-link": "e4da31b3 e16106a3",
   "settings-update-applying": "283b143f 82a4756c",
   "settings-update-checking-failed": "37d681db 01809d49",
@@ -708,6 +709,7 @@
   "appmenu-recently-closed-tabs": "500229bb 3f71d889",
   "appmenu-recently-closed-windows": "b53cd0d0 f6ff38d4",
   "appmenu-referrals": "c9c7ee5b 80000d06",
+  "appmenu-referrals2": "7cdace3a e0a0d3ee",
   "appmenu-remote-tabs-connectdevice": "480d2496 584dfab7",
   "appmenu-remote-tabs-noclients": "bf82de65 0bcae2aa",
   "appmenu-remote-tabs-notabs": "75c85b8a 36ab29ce",
@@ -772,6 +774,7 @@
   "appmenuitem-settings": "83b10323 2cf0e539",
   "appmenuitem-share-firefox-description": "03652dab efd91981",
   "appmenuitem-share-firefox-title": "1dc841d5 be58bcf4",
+  "appmenuitem-share-firefox-title2": "5c12b635 e8765b85",
   "appmenuitem-sign-in-account": "2f942568 bc849748",
   "appmenuitem-tab-groups": "57977672 66617d09",
   "appmenuitem-translate": "6607f99d f6ba6f3f",
@@ -2861,6 +2864,7 @@
   "menu-application-hide-this": "dcfe183f d3474153",
   "menu-application-preferences": "83b10323 feaa5f9d",
   "menu-application-referrals": "87f5451e 0bbf7f7c",
+  "menu-application-referrals2": "9a287e29 81c6072f",
   "menu-application-services": "179ac538 c064318c",
   "menu-application-set-as-default": "36587a52 1af4aa08",
   "menu-application-settings": "ca4f20b3 650db4e4",
@@ -2926,6 +2930,7 @@
   "menu-quit": "24a39aea d75b7079",
   "menu-quit-mac": "2e9959af fcc7fa3a",
   "menu-referrals": "87f5451e 0bbf7f7c",
+  "menu-referrals2": "9a287e29 81c6072f",
   "menu-report-broken-site": "b4cca757 446a7616",
   "menu-settings": "05461c54 866d8519",
   "menu-tools": "a6dbab4c 12a4493d",
@@ -6204,7 +6209,9 @@
   "privacy-segmentation-section-header": "0fddbe3a 7cd98fee",
   "recommendations-group": "7d228974 f5e53332",
   "referrals-link": "6fd333ee 660c7bcf",
+  "referrals-link2": "9a287e29 81c6072f",
   "referrals-section-header": "8a0352cd 970d07de",
+  "referrals-section-header2": "e07db6d7 e6f92261",
   "related-settings-accessibility-link": "61feab6d c3eba798",
   "related-settings-group": "cd3f1e2f 98e00b9f",
   "related-settings-home-link": "27421b52 47285450",
@@ -16204,7 +16211,8 @@
  "toolkit/toolkit/global/mozBoxBase.ftl": {
   "moz-box-item-reorder-handle": "4396879e 276b2765",
   "moz-box-item-reorder-handle-named": "7a2efb5c 6d10c149",
-  "moz-box-link-anchor": "ecb1e69f 23a19e4b"
+  "moz-box-link-anchor": "ecb1e69f 23a19e4b",
+  "moz-box-link-opens-in-new-tab": "388a6b99 cd5b5aec"
  },
  "toolkit/toolkit/global/mozBreadcrumbGroup.ftl": {
   "moz-breadcrumb-group-nav": "a8041524 b858a79b"
