@@ -38,13 +38,17 @@ concurrency:
   group: firefox-l10n-qa
   cancel-in-progress: false
 
+# Read-only by default. Only `propose` writes, and it says so itself:
+# a job-level block replaces this one rather than adding to it, so
+# nothing here can widen a job that does not ask.
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
 
 jobs:
   plan:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     outputs:
       locales: ${{ steps.pick.outputs.locales }}
     steps:
@@ -78,6 +82,9 @@ jobs:
   review:
     needs: plan
     runs-on: ubuntu-latest
+    # Reads the tree and hands its findings back as an artifact.
+    permissions:
+      contents: read
     timeout-minutes: 180
     strategy:
       # One locale per job so a single failure cannot take the rest down, and
@@ -168,6 +175,11 @@ jobs:
     # Propose whatever succeeded, even if some locales failed.
     if: ${{ always() && !inputs.dry_run }}
     runs-on: ubuntu-latest
+    # The one job that writes: it pushes the branch and opens the
+    # pull request.
+    permissions:
+      contents: write
+      pull-requests: write
     env:
       BRANCH: l10n-qa/firefox
       BASE: ${{ github.ref_name }}
@@ -240,14 +252,17 @@ jobs:
             echo 'changed=false' >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          git commit -m "Firefox l10n QA: ${{ inputs.locales }} ($(date -u +%Y-%m-%d))"
+          git commit -m "Firefox l10n QA: ${INPUTS_LOCALES} ($(date -u +%Y-%m-%d))"
           git push --force-with-lease origin "$BRANCH"
           echo 'changed=true' >> "$GITHUB_OUTPUT"
+        env:
+          INPUTS_LOCALES: ${{ inputs.locales }}
 
       - name: Open or update the pull request
         if: steps.commit.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
+          INPUTS_LOCALES: ${{ inputs.locales }}
         run: |
           set -euo pipefail
           # The body leads with the two things that cannot wait for the
@@ -260,7 +275,7 @@ jobs:
           if gh pr view "$BRANCH" --json state --jq .state 2>/dev/null | grep -qx OPEN; then
             gh pr edit "$BRANCH" --body-file /tmp/pr-body.md
             gh pr comment "$BRANCH" \
-              --body "Refreshed $(date -u +%Y-%m-%d) — locales: \`${{ inputs.locales }}\`"
+              --body "Refreshed $(date -u +%Y-%m-%d) — locales: \`${INPUTS_LOCALES}\`"
           else
             gh pr create \
               --base "$BASE" --head "$BRANCH" \

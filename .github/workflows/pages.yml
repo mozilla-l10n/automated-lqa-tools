@@ -13,11 +13,10 @@ on:
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
-# Read the repository, mint a Pages deployment. Nothing writes to the repo.
+# Nothing here writes to the repository. The Pages permissions belong to
+# `deploy` alone -- `build` only reads the tree and uploads an artifact.
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 # Never let two deployments race; let a newer one win.
 concurrency:
@@ -27,6 +26,11 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      # configure-pages only reads the site's settings here;
+      # it is not being asked to enable Pages.
+      pages: read
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
@@ -44,20 +48,23 @@ jobs:
       - name: Check the dropdown logic
         run: node site/selftest.mjs
 
-      - uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
+      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
 
       # Uploads _site/ only: the repository carries 24 MB of pipeline state
       # that has no business being published.
-      - uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4.0.0
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: _site
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0
