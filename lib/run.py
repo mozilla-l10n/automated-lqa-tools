@@ -252,6 +252,7 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
     resolved = findings_mod.resolve(
         stored, l10n, delta_keys, today(), rerunnable, still_raised,
         recheck=args.recheck,
+        still_raised_loose={f.rekey for f in check_findings},
     )
     if args.recheck:
         log(f"  re-read {sum(1 for f in stored if f.is_open) + len(resolved['fixed'])} "

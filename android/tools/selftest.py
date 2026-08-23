@@ -26,11 +26,9 @@ import layout  # noqa: E402
 
 # Real defects in the repository, by (locale, check, string id).
 MUST_FIND = [
-    # The Czech and Arabic strings drop a placeholder the source passes.
+    # The Czech strings drop a placeholder the source passes -- from every
+    # category, so the count never reaches the user.
     ("cs", "placeholders", "recently_closed_tab"),
-    ("ar", "placeholders", "tab_group_tabs_count_subtitle"),
-    # Chinese added a placeholder the source does not have.
-    ("zh-CN", "placeholders", "downloads_delete_dialog_title"),
     # Japanese has no `one` category, so that variant is unreachable.
     ("ja", "plurals", "downloads_delete_dialog_title"),
 ]
@@ -66,6 +64,19 @@ MUST_BE_SILENT = [
     ("sl", "placeholders", "Slovenian leaves bare one en-US numbered"),
     ("fy-NL", "placeholders", "Frisian numbers a placeholder en-US left bare"),
     ("pl", "placeholders", "Polish uses one argument once where en-US used it twice"),
+    # en-US writes the count into `other` and not into `one` -- "Delete
+    # file?" beside "Delete %d files?" -- and Chinese has only `other`.
+    # Comparing one representative variant read that as an invented
+    # placeholder.
+    ("zh-CN", "placeholders", "Chinese uses the argument en-US passes in `other`"),
+    # The mirror image, and the reason the comparison is a union rather
+    # than a category-by-category pairing: Arabic writes the numeral into
+    # `few`, `many` and `other` and leaves it out of `zero`, `one` and
+    # `two`, where the category already says the count. en-US does the same
+    # thing in `one`. Pairing categories would call one of them a defect
+    # whichever way round it was done.
+    ("ar", "placeholders", "Arabic omits the numeral where the category "
+                           "already carries the count"),
 ]
 
 
@@ -182,6 +193,24 @@ def run(l10n_dir, project) -> int:
     check(cc._by_argument(_specs("%s %1$s")) is None,
           "a string that mixes the two forms has no argument order to read, "
           "and is left to the check that reports the mixing")
+
+    # A message's arguments are the union over its plural categories, not
+    # whichever category happened to come first.
+    def _args(*variants):
+        return cc._arguments([_specs(v) for v in variants])
+
+    check(_args("Delete file?", "Delete %d files?") == _args("删除 %d 个文件？"),
+          "a locale with only `other` passes the same argument as an en-US "
+          "plural that mentions the count in `other` alone")
+    check(_args("%d file", "%d files") == {"1": "d"},
+          "an argument named by every category is still one argument")
+    check(_args("none here", "none either") == {},
+          "and a plural that passes nothing reads as passing nothing")
+    check(_args("%d", "%s") == {"1": None},
+          "a position that means two things across categories still counts "
+          "as an argument, but there is nothing to compare it against")
+    check(_args("%s %1$s") is None,
+          "one bad variant makes the whole message uncomparable")
 
     print("\nProject wiring")
     check("variables" not in project.checks,

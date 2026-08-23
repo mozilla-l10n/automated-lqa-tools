@@ -97,6 +97,13 @@ Two invariants that were violated once each and must not be again:
 - Comparison for fix detection is **literal**. It must not fold case or
   strip punctuation — `INDIRIZZO` → `Indirizzo` and `</a >` → `</a>` are
   real fixes.
+- **Rewording a check is not the check changing its mind.** `fid` folds in
+  the summary, so renaming a message gives the same defect a new one. If
+  `resolve` matched on `fid` alone, the stored finding would read as
+  un-re-raised and be withdrawn, and `merge` would then refresh that
+  withdrawn record in place rather than reopening it — the defect leaves
+  the backlog with nobody deciding it should. `still_raised_loose` and
+  `Finding.rekey` exist for this; keep them fed.
 - **Silence from the reviewer closes nothing about an unchanged string.**
   The model is not deterministic; not spotting a defect twice is not
   evidence it is gone. No flag may relax this.

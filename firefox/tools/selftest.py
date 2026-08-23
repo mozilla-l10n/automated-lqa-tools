@@ -543,6 +543,47 @@ def run(l10n_dir, source_dir, project) -> int:
     check("batch 3 of 5" in prog.stopped,
           "the run records where it stopped, not just that it did")
 
+    # Rewording a check's own message used to retire its real findings.
+    # The fid folds in the summary, so the stored finding looked
+    # un-re-raised and was withdrawn; `merge` then matched the new one
+    # loosely, refreshed the withdrawn record in place, and the defect left
+    # the backlog without anyone deciding it had.
+    class _H:
+        def __init__(self, h="same"):
+            self._h = h
+
+        def hash(self):
+            return self._h
+
+        def text(self):
+            return "testo"
+
+    was = Finding(locale="cs", file="a.xml", string_id="s", category="A",
+                  check="placeholders", summary="has placeholders %d",
+                  string_hash="same")
+    now = Finding(locale="cs", file="a.xml", string_id="s", category="A",
+                  check="placeholders", summary="has placeholders %1$d",
+                  string_hash="same")
+    check(was.fid != now.fid, "rewording the message does give it a new fid")
+    check(was.rekey == now.rekey,
+          "but the same check on the same string is the same complaint")
+    buckets = findings_mod.resolve(
+        [was], {("a.xml", "s"): _H()}, set(), "2026-08-23",
+        rerunnable={"placeholders"}, still_raised={now.fid},
+        still_raised_loose={now.rekey},
+    )
+    check(was.status == "open" and not buckets["withdrawn"],
+          "so a reworded finding stays open instead of being withdrawn")
+
+    gone = Finding(locale="cs", file="a.xml", string_id="t", category="A",
+                   check="placeholders", summary="x", string_hash="same")
+    buckets = findings_mod.resolve(
+        [gone], {("a.xml", "t"): _H()}, set(), "2026-08-23",
+        rerunnable={"placeholders"}, still_raised=set(), still_raised_loose=set(),
+    )
+    check(gone.status == "withdrawn",
+          "while a check that really did stop raising it still withdraws it")
+
     print("\nEscalation to the pull request")
     # The pull request body leads with findings the reviewer flagged as
     # reading like a deliberate edit. Nothing can be flagged if the field

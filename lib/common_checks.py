@@ -461,16 +461,20 @@ PRINTF = re.compile(
 )
 
 
-def _specs(msg) -> list[tuple[str, str]]:
-    """The printf placeholders of a message, as (index, conversion).
+def _specs(msg) -> list[list[tuple[str, str]]]:
+    """The printf placeholders of a message, one list per variant.
 
-    Read from the `source` attribute moz.l10n keeps on each expression, so
-    this is the literal text from the file rather than a reconstruction.
-    Index is "" for a non-positional `%s`.
+    Each entry is (index, conversion), read from the `source` attribute
+    moz.l10n keeps on each expression, so this is the literal text from the
+    file rather than a reconstruction. Index is "" for a non-positional
+    `%s`.
+
+    Per variant, not per message, because a variant is its own format
+    string and only a whole variant has an argument order. The list has one
+    entry for a plain message and one per plural category for a select.
     """
-    out: list[tuple[str, str]] = []
-
-    def walk(pattern):
+    def specs_of(pattern) -> list[tuple[str, str]]:
+        out: list[tuple[str, str]] = []
         for part in pattern:
             if not isinstance(part, Expression):
                 continue
@@ -481,21 +485,26 @@ def _specs(msg) -> list[tuple[str, str]]:
                 if conv == "%":
                     continue
                 out.append((index or "", conv.lower()))
+        return out
 
     if isinstance(msg, PatternMessage):
-        walk(msg.pattern)
-    elif isinstance(msg, SelectMessage):
-        # Every variant should carry the same placeholders; the first is
-        # representative, and a variant that disagrees is caught by the
-        # shared variable check.
-        for variant in msg.variants.values():
-            walk(variant)
-            break
-    return out
+        return [specs_of(msg.pattern)]
+    if isinstance(msg, SelectMessage):
+        return [specs_of(v) for v in msg.variants.values()]
+    return []
 
 
-def _describe(specs) -> str:
-    return ", ".join(f"%{i}${c}" if i else f"%{c}" for i, c in specs) or "none"
+def _describe_args(args: dict) -> str:
+    """Name the arguments a message passes, by position.
+
+    Rendered from the normalized map rather than the literal text, so the
+    two sides of a comparison are described in the same terms even when one
+    numbered its placeholders and the other did not.
+    """
+    return ", ".join(
+        f"%{i}${args[i]}" if args[i] else f"argument {i}"
+        for i in sorted(args, key=int)
+    ) or "none"
 
 
 def _by_argument(specs) -> dict[str, str] | None:
@@ -523,6 +532,31 @@ def _by_argument(specs) -> dict[str, str] | None:
     return {str(n): c for n, (_, c) in enumerate(specs, 1)}
 
 
+def _arguments(variants) -> dict[str, str | None] | None:
+    """The arguments a whole message passes, position to conversion.
+
+    The union over its variants, because English routinely writes the count
+    into one plural category and not another -- "Delete file?" beside
+    "Delete %d files?" -- while a locale with a single category has only
+    the one that mentions it. Comparing a representative variant made every
+    such pair look like an invented placeholder; zh-CN was told it had
+    added the `%d` that en-US passes in `other`.
+
+    A position that carries two different conversions across variants maps
+    to None: it is still an argument the message passes, so it counts for
+    presence, but there is nothing to compare it against. None for the
+    whole message when any variant mixes numbered and unnumbered forms.
+    """
+    seen: dict[str, set] = {}
+    for specs in variants:
+        mapped = _by_argument(specs)
+        if mapped is None:
+            return None
+        for index, conv in mapped.items():
+            seen.setdefault(index, set()).add(conv)
+    return {i: (c.copy().pop() if len(c) == 1 else None) for i, c in seen.items()}
+
+
 def _nth(index: str) -> str:
     n = int(index)
     suffix = "th" if 10 <= n % 100 <= 20 else {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")
@@ -544,12 +578,21 @@ def check_placeholders(locale, l10n, source) -> list[Finding]:
     `source` attribute moz.l10n keeps on each expression rather than
     reconstructing it.
 
-    What it must not do is have an opinion about *notation*. `%s` and `%1$s`
-    are the same argument, and a locale numbering its placeholders because
-    the target word order differs from English is doing the one thing
-    numbering exists for. Everything is compared by argument position --
-    see :func:`_by_argument` -- so only the arguments themselves are
-    judged.
+    What it must not do is have an opinion about *notation* or about which
+    plural category should mention what. `%s` and `%1$s` are the same
+    argument, and a locale numbering its placeholders because the target
+    word order differs from English is doing the one thing numbering exists
+    for. Comparison is therefore by argument position -- see
+    :func:`_by_argument` -- over the union of a message's variants -- see
+    :func:`_arguments`.
+
+    The union costs a real case: a locale that writes the count into `one`
+    and drops it from `other` is not caught here. Nothing deterministic can
+    catch it, because the alternative -- pairing categories by name -- calls
+    Arabic's `zero`, `one` and `two` defective for leaving out a numeral
+    the category already carries, and calls en-US's own "Delete file?"
+    defective by the same rule. Which category needs the number is a
+    judgement about the language, so it belongs to the reviewer.
     """
     out = []
     for key, msg in l10n.items():
@@ -567,16 +610,17 @@ def check_placeholders(locale, l10n, source) -> list[Finding]:
             label = f"`{msg.id}`" + (f" (`.{prop}`)" if prop else "")
 
             # Both sides keyed by argument position, so the comparison is
-            # about which arguments are used and how, not about whether the
-            # translator wrote them numbered.
-            by_index_src = _by_argument(want)
-            by_index_loc = _by_argument(got)
+            # about which arguments the message passes, not about how the
+            # translator wrote them or which plural category mentions them.
+            by_index_src = _arguments(want)
+            by_index_loc = _arguments(got)
             mixed = by_index_src is None or by_index_loc is None
 
             # A retyped argument is a runtime crash, not a rendering bug.
             retyped = [] if mixed else sorted(
                 (i for i, c in by_index_loc.items()
-                 if i in by_index_src and by_index_src[i] != c),
+                 if c is not None and by_index_src.get(i) is not None
+                 and by_index_src[i] != c),
                 key=int,
             )
             if retyped:
@@ -597,9 +641,9 @@ def check_placeholders(locale, l10n, source) -> list[Finding]:
                 ))
 
             # Mixing %s and %1$s in one string is also a runtime failure.
-            positional = {i for i, _ in got if i}
-            bare = sum(1 for i, _ in got if not i)
-            if positional and bare:
+            # Per variant: each plural category is its own format string.
+            if any(any(i for i, _ in specs) and any(not i for i, _ in specs)
+                   for specs in got):
                 out.append(_mk(
                     locale, msg, "A", "placeholders",
                     f"{label} mixes numbered and unnumbered placeholders",
@@ -614,8 +658,8 @@ def check_placeholders(locale, l10n, source) -> list[Finding]:
             if not mixed and by_index_src.keys() != by_index_loc.keys():
                 out.append(_mk(
                     locale, msg, "A", "placeholders",
-                    f"{label} has placeholders {_describe(sorted(got))} where the "
-                    f"source has {_describe(sorted(want))}",
+                    f"{label} has placeholders {_describe_args(by_index_loc)} "
+                    f"where the source has {_describe_args(by_index_src)}",
                     current=msg.props.get(prop, ""),
                     rationale=(
                         "The set of placeholders must match the source: a missing one "

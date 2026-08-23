@@ -124,6 +124,19 @@ class Finding:
         return (self.file, self.string_id)
 
     @property
+    def rekey(self) -> tuple[str, str, str, str]:
+        """What the finding is about, with the wording left out.
+
+        ``identity`` folds in the summary, so rephrasing a check's message
+        gives the same defect a new ``fid``. That is wanted for dedup -- two
+        different complaints about one string are two findings -- but it
+        must not let a stored finding look abandoned when the check did
+        re-raise it. Same string, same category, same check is the same
+        complaint however it is worded this month.
+        """
+        return (self.file, self.string_id, self.category, self.check)
+
+    @property
     def is_open(self) -> bool:
         return self.status in OPEN_STATUSES
 
@@ -288,6 +301,7 @@ def resolve(
     rerunnable: set[str] | None = None,
     still_raised: set[str] | None = None,
     recheck: bool = False,
+    still_raised_loose: set[tuple] | None = None,
 ) -> dict[str, list[Finding]]:
     """Update the status of stored findings against the current tree.
 
@@ -309,6 +323,12 @@ def resolve(
     """
     rerunnable = rerunnable or set()
     still_raised = still_raised or set()
+    # Wording is not identity. A check that renames its own message must not
+    # thereby withdraw every finding it has ever raised -- and, because
+    # `merge` then matches the re-raised one loosely and refreshes it in
+    # place, the defect would leave the backlog without anyone deciding it
+    # had. Two Czech placeholder defects went this way in a dry run.
+    still_raised_loose = still_raised_loose or set()
     buckets: dict[str, list[Finding]] = {
         "fixed": [], "obsolete": [], "recheck": [], "withdrawn": [],
     }
@@ -324,7 +344,7 @@ def resolve(
             continue
 
         if f.check in rerunnable:
-            if f.fid in still_raised:
+            if f.fid in still_raised or f.rekey in still_raised_loose:
                 f.status = "open"
                 f.string_hash = msg.hash()
             elif (
