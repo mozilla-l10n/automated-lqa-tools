@@ -498,6 +498,37 @@ def _describe(specs) -> str:
     return ", ".join(f"%{i}${c}" if i else f"%{c}" for i, c in specs) or "none"
 
 
+def _by_argument(specs) -> dict[str, str] | None:
+    """Map argument position to conversion, so `%s` and `%1$s` compare equal.
+
+    Numbering every placeholder and numbering none of them are the same
+    format string: `%1$s %2$d` and `%s %d` pass the same arguments in the
+    same order. Translators reach for the numbered form when the target
+    word order differs, and half a dozen Android locales were being told
+    that was a defect.
+
+    Repeating an index is legal too -- `%1$s` twice is one argument used
+    twice -- so the map collapses it, and a locale that says the name once
+    where the source said it twice is left alone.
+
+    Returns None when the message mixes the two forms, which is a runtime
+    failure with a finding of its own; there is no argument order to read
+    off it.
+    """
+    numbered = [i for i, _ in specs if i]
+    if numbered and len(numbered) != len(specs):
+        return None
+    if numbered:
+        return {i: c for i, c in specs}
+    return {str(n): c for n, (_, c) in enumerate(specs, 1)}
+
+
+def _nth(index: str) -> str:
+    n = int(index)
+    suffix = "th" if 10 <= n % 100 <= 20 else {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")
+    return f"{n}{suffix}"
+
+
 def check_placeholders(locale, l10n, source) -> list[Finding]:
     """Placeholder parity between a string and its source.
 
@@ -512,6 +543,13 @@ def check_placeholders(locale, l10n, source) -> list[Finding]:
     retyped one. This closes that gap, and reads the literal spec from the
     `source` attribute moz.l10n keeps on each expression rather than
     reconstructing it.
+
+    What it must not do is have an opinion about *notation*. `%s` and `%1$s`
+    are the same argument, and a locale numbering its placeholders because
+    the target word order differs from English is doing the one thing
+    numbering exists for. Everything is compared by argument position --
+    see :func:`_by_argument` -- so only the arguments themselves are
+    judged.
     """
     out = []
     for key, msg in l10n.items():
@@ -528,16 +566,23 @@ def check_placeholders(locale, l10n, source) -> list[Finding]:
 
             label = f"`{msg.id}`" + (f" (`.{prop}`)" if prop else "")
 
+            # Both sides keyed by argument position, so the comparison is
+            # about which arguments are used and how, not about whether the
+            # translator wrote them numbered.
+            by_index_src = _by_argument(want)
+            by_index_loc = _by_argument(got)
+            mixed = by_index_src is None or by_index_loc is None
+
             # A retyped argument is a runtime crash, not a rendering bug.
-            by_index_src = {i: c for i, c in want if i}
-            by_index_loc = {i: c for i, c in got if i}
-            retyped = sorted(
-                i for i, c in by_index_loc.items()
-                if i in by_index_src and by_index_src[i] != c
+            retyped = [] if mixed else sorted(
+                (i for i, c in by_index_loc.items()
+                 if i in by_index_src and by_index_src[i] != c),
+                key=int,
             )
             if retyped:
                 detail = ", ".join(
-                    f"%{i}${by_index_src[i]} became %{i}${by_index_loc[i]}" for i in retyped
+                    f"the {_nth(i)} takes %{by_index_src[i]} in the source and "
+                    f"%{by_index_loc[i]} here" for i in retyped
                 )
                 out.append(_mk(
                     locale, msg, "A", "placeholders",
@@ -566,7 +611,7 @@ def check_placeholders(locale, l10n, source) -> list[Finding]:
                     impact=1,
                 ))
 
-            if sorted(want) != sorted(got) and not retyped:
+            if not mixed and by_index_src.keys() != by_index_loc.keys():
                 out.append(_mk(
                     locale, msg, "A", "placeholders",
                     f"{label} has placeholders {_describe(sorted(got))} where the "

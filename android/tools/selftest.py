@@ -29,8 +29,6 @@ MUST_FIND = [
     # The Czech and Arabic strings drop a placeholder the source passes.
     ("cs", "placeholders", "recently_closed_tab"),
     ("ar", "placeholders", "tab_group_tabs_count_subtitle"),
-    # German swapped %s for %1$s.
-    ("de", "placeholders", "mozac_feature_sitepermissions_storage_access_message"),
     # Chinese added a placeholder the source does not have.
     ("zh-CN", "placeholders", "downloads_delete_dialog_title"),
     # Japanese has no `one` category, so that variant is unreachable.
@@ -59,6 +57,15 @@ MUST_BE_SILENT = [
     ("ja", "ui_references", "Japanese UI references are consistent"),
     ("it", "ui_references", "Italian UI references are consistent again"),
     ("pt-BR", "placeholders", "Brazilian Portuguese placeholders are correct"),
+    # Numbering a placeholder the source left bare, or leaving bare one the
+    # source numbered, is the same format string -- translators reach for
+    # the numbered form when the target word order differs. All four of
+    # these were reported as defects until the check compared arguments by
+    # position instead of by how they were written.
+    ("de", "placeholders", "German numbers a placeholder en-US left bare"),
+    ("sl", "placeholders", "Slovenian leaves bare one en-US numbered"),
+    ("fy-NL", "placeholders", "Frisian numbers a placeholder en-US left bare"),
+    ("pl", "placeholders", "Polish uses one argument once where en-US used it twice"),
 ]
 
 
@@ -146,6 +153,35 @@ def run(l10n_dir, project) -> int:
         check(project.is_variant(loc), f"{loc} is configured as a variant")
         check(bool(rules), f"{loc}: spelling rules are learned from the corpus ({len(rules)})")
     check(_v.learn.__module__ == "variants", "the variant machinery is shared, not duplicated")
+
+    print("\nPlaceholder equivalence")
+    import common_checks as cc
+
+    def _specs(text):
+        return [(i or "", c.lower())
+                for i, _f, _w, _p, c in cc.PRINTF.findall(text) if c != "%"]
+
+    def _same(a, b):
+        return cc._by_argument(_specs(a)) == cc._by_argument(_specs(b))
+
+    check(_same("%s", "%1$s"),
+          "a lone %s and a lone %1$s are the same format string")
+    check(_same("%s %d", "%1$s %2$d"),
+          "and so is numbering every placeholder in source order")
+    check(_same("%1$s %2$s", "%2$s %1$s"),
+          "reordering numbered arguments is what numbering is for")
+    check(_same("%1$s %1$s", "%1$s"),
+          "using one argument once where the source used it twice is legal")
+    check(not _same("%s", ""),
+          "but a dropped argument is still a dropped argument")
+    check(not _same("%s", "%1$s %2$s"),
+          "and so is an invented one")
+    check(not _same("%s %d", "%d %s"),
+          "swapping two bare placeholders of different types retypes both: "
+          "String.format binds them by position, so it crashes")
+    check(cc._by_argument(_specs("%s %1$s")) is None,
+          "a string that mixes the two forms has no argument order to read, "
+          "and is left to the check that reports the mixing")
 
     print("\nProject wiring")
     check("variables" not in project.checks,
