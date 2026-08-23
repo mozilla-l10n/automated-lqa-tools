@@ -543,6 +543,78 @@ def run(l10n_dir, source_dir, project) -> int:
     check("batch 3 of 5" in prog.stopped,
           "the run records where it stopped, not just that it did")
 
+    print("\nEscalation to the pull request")
+    # The pull request body leads with findings the reviewer flagged as
+    # reading like a deliberate edit. Nothing can be flagged if the field
+    # never reaches the model, and the two files that carry it are per
+    # project, so each project pins its own.
+    import json as _json
+    _schema = _json.loads(project.prompt("finding_schema.json"))
+    _props = _schema["input_schema"]["properties"]["findings"]["items"]
+    check("reads_as_deliberate" in _props["required"],
+          "the reviewer is asked, on every finding, whether it reads as a "
+          "deliberate edit")
+    for _name in ("incremental_review.md", "variant_review.md"):
+        check("reads_as_deliberate" in project.prompt(_name),
+              f"{_name} tells it what that means")
+
+    # The reviewer's flag is the only way a finding reaches the top of the
+    # pull request body, so it has to survive the parser and it has to be
+    # refused where it could not mean anything.
+    import summary as summary_mod
+
+    abusive = dict(real, reads_as_deliberate=True,
+                   summary="says the browser lies", current="vecchio")
+    got, _ = _llm.collect([_Block({"findings": [abusive]})], "it", tree)
+    check(got and got[0].reads_as_deliberate,
+          "a B/2 finding the reviewer flagged keeps the flag")
+    cosmetic = dict(abusive, category="E", impact=4)
+    got, _ = _llm.collect([_Block({"findings": [cosmetic]})], "it", tree)
+    check(got and not got[0].reads_as_deliberate,
+          "the same flag on a typography finding is dropped: spacing cannot "
+          "put words in the product's mouth")
+    plain, _ = _llm.collect([_Block({"findings": [real]})], "it", tree)
+    check(plain and not plain[0].reads_as_deliberate,
+          "and an ordinary mistranslation is not flagged by default")
+
+    flagged = Finding(locale="it", file="a.ftl", string_id="x", category="B",
+                      impact=2, summary="s", reads_as_deliberate=True)
+    quiet = Finding(locale="it", file="a.ftl", string_id="y", category="B",
+                    impact=2, summary="s")
+    broke = Finding(locale="it", file="a.ftl", string_id="z", category="A",
+                    impact=1, summary="s")
+    check(findings_mod.deliberate([flagged, quiet, broke]) == [flagged],
+          "the escalation list is the flag, not the impact")
+    check(findings_mod.broken([flagged, quiet, broke]) == [broke],
+          "and impact 1 is its own axis, not a slice of the flagged ones")
+    closed = Finding(locale="it", file="a.ftl", string_id="w", category="B",
+                     impact=2, summary="s", reads_as_deliberate=True,
+                     status="fixed")
+    check(findings_mod.deliberate([closed]) == [],
+          "a flagged finding that was fixed does not stay at the top")
+
+    # Adding the flag must not re-key anything: a backlog of thousands would
+    # otherwise reappear as new findings the first time one was set.
+    check(flagged.identity() == Finding(
+              locale="it", file="a.ftl", string_id="x", category="B",
+              impact=2, summary="s").identity(),
+          "the flag is outside the finding's identity")
+
+    # The body quotes real UI text, which contains real backticks.
+    check(summary_mod._code("a `code` b").startswith("``"),
+          "an inline quote is fenced longer than the backticks inside it")
+    check("…" in summary_mod._code("x" * 400),
+          "and a long string is cut with a visible ellipsis")
+
+    many = [(loc, quiet) for loc in ("aa", "bb") for _ in range(5)]
+    listed = summary_mod._listing(many, cap=8, per_locale=2)
+    check(listed.count("**`aa`**") == 2 and listed.count("**`bb`**") == 2,
+          "the impact-1 sample gives every locale a turn instead of "
+          "spending its whole budget on the first one alphabetically")
+    check("and 6 more" in listed,
+          "and says how many it left out, so a capped list is not read as "
+          "the whole of it")
+
     print("\nSuppression rules")
     from suppress import Rule
     rule = Rule({"id": "r", "reason": "because", "match": {"check": "typography",

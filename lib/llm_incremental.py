@@ -238,6 +238,21 @@ def collect(content, locale, l10n) -> tuple[list[Finding], int]:
     return out, malformed
 
 
+def _deliberate(raw: dict) -> bool:
+    """Honour the reviewer's flag, but only where it can mean anything.
+
+    The flag is about the localized text saying something the source does
+    not, so it only applies to a finding that is already about content:
+    category B at impact 1 or 2. Set anywhere else it is the model reaching
+    for an emphasis marker -- a typography finding cannot put words in the
+    product's mouth -- and it is dropped rather than escalated.
+    """
+    if raw.get("reads_as_deliberate") is not True:
+        return False
+    return (raw.get("category") or "").strip().upper()[:1] == "B" and \
+        int(raw.get("impact") or 0) in (1, 2)
+
+
 def _to_finding(locale, raw: dict, l10n) -> Finding | None:
     """Convert one model finding, dropping anything that is not one.
 
@@ -283,6 +298,7 @@ def _to_finding(locale, raw: dict, l10n) -> Finding | None:
         current=current,
         suggest=suggest,
         rationale=(raw.get("rationale") or "").strip(),
+        reads_as_deliberate=_deliberate(raw),
         string_hash=msg.hash(),
         origin={"confidence": raw.get("confidence", "")},
     )

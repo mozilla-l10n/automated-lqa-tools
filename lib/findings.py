@@ -90,6 +90,11 @@ class Finding:
     resolved_on: str = ""
     suppressed_by: str = ""
     dismissed_because: str = ""
+    # The translation asserts something the source does not, in a way a
+    # reader could take as intentional rather than as a slip. Set by the
+    # reviewer, never by a deterministic check, and deliberately outside
+    # ``identity`` so flagging an existing finding does not fork it.
+    reads_as_deliberate: bool = False
     # Hash of the message when the finding was raised; drives fix detection.
     string_hash: str = ""
     # Free-form provenance, e.g. the legacy report and section it came from.
@@ -380,6 +385,24 @@ def resolve(
         f.string_hash = msg.hash()
         buckets["recheck"].append(f)
     return buckets
+
+
+# --- escalation ----------------------------------------------------------
+
+def deliberate(findings: list[Finding]) -> list[Finding]:
+    """Open findings the reviewer marked as reading like a deliberate edit.
+
+    A separate axis from impact. "AI can make mistakes" rendered as "AI can
+    tell lies" is impact 2 like any other wrong content, but it puts words
+    in the product's mouth, so it needs a person today rather than a place
+    in the queue.
+    """
+    return [f for f in findings if f.is_open and f.reads_as_deliberate]
+
+
+def broken(findings: list[Finding]) -> list[Finding]:
+    """Open impact-1 findings: the string does not render as intended."""
+    return [f for f in findings if f.is_open and f.impact == 1]
 
 
 # --- persistence ---------------------------------------------------------

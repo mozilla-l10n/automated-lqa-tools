@@ -26,6 +26,26 @@ does more damage than a missed nitpick. When you are not sure, say nothing.
 - **Broken adaptation** — a substitution applied so as to damage the string:
   a changed placeholder, a mangled brand name.
 
+## Meaning shifts that read as deliberate
+
+Some wrong content is worse than wrong. When the {language} makes the
+product assert something the en-US never said -- an admission, an
+accusation, a claim about what the software or the user does -- a reader
+has no way to tell a translation slip from an edit someone meant to make.
+"AI can make mistakes" rendered as "AI can tell lies" is impact 2 like any
+other mistranslation, but it is the product calling itself a liar.
+
+Set `reads_as_deliberate` to `true` on such a finding, in addition to
+reporting it normally. The test is what a user seeing only the {language}
+would conclude, not what you think the translator intended -- do not
+speculate about motive, and do not use this to mark a defect you merely
+consider severe.
+
+`false` is the answer for almost every finding, including almost every
+mistranslation. A missing negation that makes an instruction wrong is a
+plain impact-2 defect. Reserve `true` for text that changes what the
+product says about itself, its users, or its behaviour.
+
 ## What NOT to report
 
 - **A string being identical to {source_locale}.** That is the normal case.

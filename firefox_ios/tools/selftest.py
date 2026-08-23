@@ -139,6 +139,20 @@ def run(l10n_dir, project) -> int:
     check(project.baseline_strategy == "batched",
           "from-scratch reviews are batched, not agent-driven")
 
+    # The pull request body leads with findings the reviewer flagged as
+    # reading like a deliberate edit. Nothing can be flagged if the field
+    # never reaches the model, and the two files that carry it are per
+    # project, so each project pins its own.
+    import json as _json
+    _schema = _json.loads(project.prompt("finding_schema.json"))
+    _props = _schema["input_schema"]["properties"]["findings"]["items"]
+    check("reads_as_deliberate" in _props["required"],
+          "the reviewer is asked, on every finding, whether it reads as a "
+          "deliberate edit")
+    for _name in ("incremental_review.md", "variant_review.md"):
+        check("reads_as_deliberate" in project.prompt(_name),
+              f"{_name} tells it what that means")
+
     print(f"\n{passed} passed, {failed} failed")
     return 1 if failed else 0
 

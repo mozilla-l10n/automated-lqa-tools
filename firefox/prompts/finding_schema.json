@@ -48,9 +48,13 @@
               "type": "string",
               "enum": ["high", "medium"],
               "description": "Use medium only if you would still stand behind reporting it; anything lower should not be reported at all."
+            },
+            "reads_as_deliberate": {
+              "type": "boolean",
+              "description": "True only when the localized text makes the product assert something the source never said about itself, its users or its behaviour, so a reader could take it for an intentional edit rather than a translation slip. False for almost every finding, including almost every mistranslation."
             }
           },
-          "required": ["string_id", "file", "category", "impact", "summary", "current", "suggest", "rationale", "confidence"]
+          "required": ["string_id", "file", "category", "impact", "summary", "current", "suggest", "rationale", "confidence", "reads_as_deliberate"]
         }
       }
     },

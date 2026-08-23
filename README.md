@@ -70,7 +70,14 @@ carry over.
    became obsolete, what needs another look.
 6. **Suppress** anything matching the project's false-positive rules, across
    the whole backlog rather than just this run's findings.
-7. **Propose** the result as a pull request. Nothing lands unreviewed.
+7. **Propose** the result as a pull request. Nothing lands unreviewed. The
+   body leads with the two things that should not wait for the queue:
+   strings that do not render at all, and strings the reviewer flagged as
+   reading like a deliberate edit — where the translation makes the product
+   assert something the en-US never said. "AI can make mistakes" rendered
+   as "AI can tell lies" is wrong content like any other by the numbers,
+   but it is the product calling itself a liar, and a user has no way to
+   tell that from an edit someone meant to make.
 
 Two ideas do most of the work. **Conventions are counted, never assumed** —
 a check flags deviations from what the tree itself overwhelmingly does, and

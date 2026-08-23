@@ -86,7 +86,8 @@ report, no commentary, no code fence:
 
 {{"findings": [{{"string_id": "...", "file": "...", "category": "A|B|C|D|E",
   "impact": 1, "summary": "...", "current": "...", "suggest": "...",
-  "rationale": "...", "confidence": "high|medium"}}]}}
+  "rationale": "...", "confidence": "high|medium",
+  "reads_as_deliberate": false}}]}}
 
 `file` is the path relative to the locale tree. `current` must be the exact
 defective fragment, copied verbatim from the localized string, because a

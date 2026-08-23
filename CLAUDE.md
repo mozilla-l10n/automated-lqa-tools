@@ -78,6 +78,13 @@ it was written after getting it wrong:
   optimistic heuristic this system exists to avoid.
 - **dismissed / suppressed** — a person said it is fine. Kept with the
   reason, never deleted.
+- **reads_as_deliberate** — a reviewer-only flag, not a severity. It marks a
+  finding where the localized text makes the product assert something the
+  en-US never said, so a user cannot tell a slip from an intentional edit.
+  It is honoured only on category `B` at impact 1–2 and is outside
+  `identity()`, so setting it on an existing finding must not fork it. The
+  pull request body leads with these and with impact 1; everything else
+  stays in the queue.
 
 A run's delta buckets are reconciled against each finding's *final* status
 before rendering: a defect resolved early in a run and raised again by the

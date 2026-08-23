@@ -19,6 +19,7 @@ from __future__ import annotations
 import os
 
 import conventions as conv
+import findings as findings_mod
 from config import CHECKS_ONLY
 from findings import CATEGORIES, IMPACT
 
@@ -87,6 +88,30 @@ def _group(findings: list, title: str, empty: str = "_Nothing in this category._
     if len(findings) > MAX_LISTED:
         body += f"\n- _…and {len(findings) - MAX_LISTED} more; see `state/` for the full list._"
     return f"{title}\n\n{body}\n"
+
+
+def _deliberate_callout(open_findings: list) -> str:
+    """Lead with the findings that read as an intentional edit.
+
+    These are ordinary impact-2 mistranslations by the numbers, so they
+    would otherwise sit in the middle of section B behind hundreds of
+    others. They are repeated here rather than moved: the category listing
+    stays complete.
+    """
+    flagged = findings_mod.deliberate(open_findings)
+    if not flagged:
+        return ""
+    body = "\n".join(
+        _item(f) for f in sorted(flagged, key=lambda f: (f.file, f.string_id))
+    )
+    return (
+        f"> **Reads as a deliberate edit ({len(flagged)}).** The translation "
+        "makes the product assert something the en-US never said. Whether "
+        "that was intended cannot be told from the text, which is the "
+        "problem: a user cannot tell either. Read these first.\n\n"
+        f"{body}\n\n"
+        "_Also listed under their own category below._\n"
+    )
 
 
 def _health_table(h, counts) -> str:
@@ -306,6 +331,7 @@ def render(locale, meta, health, counts, findings, systemic, delta_report, count
         "",
         f"## 3. Open findings ({len(open_findings)})",
         "",
+        _deliberate_callout(open_findings),
         "| Impact | Meaning | Count |",
         "|---|---|---|",
     ]

@@ -235,19 +235,12 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          {
-            echo 'Automated localization QA: findings, state and reports only.'
-            echo 'This workflow never modifies a locale file, and the review'
-            echo 'agent runs with read-only tools.'
-            echo
-            echo 'Review the report diffs, then merge. The branch is reused, so'
-            echo 'later runs add commits here rather than opening more pull'
-            echo 'requests.'
-            echo
-            echo '---'
-            echo
-            sed -n '1,40p' reports/android.md
-          } > /tmp/pr-body.md
+          # The body leads with the two things that cannot wait for the
+          # queue: strings that do not render, and strings where the
+          # translation makes the product say something the en-US never
+          # said. Generated, not sliced out of the rendered page, so an
+          # edit to that page cannot quietly change what a reviewer sees.
+          python lib/summary.py --project android --pr-body > /tmp/pr-body.md
 
           if gh pr view "$BRANCH" --json state --jq .state 2>/dev/null | grep -qx OPEN; then
             gh pr edit "$BRANCH" --body-file /tmp/pr-body.md
@@ -256,7 +249,7 @@ jobs:
           else
             gh pr create \
               --base "$BASE" --head "$BRANCH" \
-              --title "Firefox l10n QA" \
+              --title "Firefox for Android l10n QA" \
               --body-file /tmp/pr-body.md
           fi
           gh pr view "$BRANCH" --json url --jq .url >> "$GITHUB_STEP_SUMMARY"

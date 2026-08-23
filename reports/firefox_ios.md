@@ -1,11 +1,32 @@
 # Firefox for iOS — l10n QA
 
-- **Generated:** 2026-08-22
+- **Generated:** 2026-08-23
 - **Locales tracked:** 19 (19 with recorded state)
 - **Findings:** 1,239 raised, 16 fixed (1%), 1,207 open
 - **Closed by a person:** 14 dismissed, 2 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
+
+## Read these first
+
+### Reads as a deliberate edit (0)
+
+_None. The reviewer sets this flag only on a finding where the localized text changes what the product says about itself, its users or its behaviour; it is left unset on the vast majority of mistranslations._
+
+### Broken output — impact 1 (1)
+
+The value does not render as intended: a blank string, broken markup, a variable the source never passes.
+
+`es-MX` 1
+
+- **`es-MX`** `Settings.Notifications.SystemNotificationsDisabledMessage.v112` — `Shared/Supporting Files/en.lproj/Settings.strings`
+  - A stray "$" character was appended after the final placeholder, which corrupts the placeholder/output.
+  - Current: `> %2$@$`
+  - Suggest: `> %2$@`
+
+### Wrong content — impact 2 (665)
+
+Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/firefox_ios.md`.
 
 | Locale | Last run | Mode | Commit | Strings | Missing | Open | Impact 1–2 | Fixed | Dismissed | Suppressed |
 |---|---|---|---|---|---|---|---|---|---|---|

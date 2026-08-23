@@ -1,11 +1,58 @@
 # Firefox for Android, Focus, and the shared Android Components — l10n QA
 
-- **Generated:** 2026-08-22
+- **Generated:** 2026-08-23
 - **Locales tracked:** 20 (20 with recorded state)
 - **Findings:** 2,490 raised, 47 fixed (1%), 2,426 open
 - **Closed by a person:** 11 dismissed, 4 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
+
+## Read these first
+
+### Reads as a deliberate edit (0)
+
+_None. The reviewer sets this flag only on a finding where the localized text changes what the product says about itself, its users or its behaviour; it is left unset on the vast majority of mistranslations._
+
+### Broken output — impact 1 (9)
+
+The value does not render as intended: a blank string, broken markup, a variable the source never passes.
+
+`cs` 2 · `de` 1 · `fy-NL` 1 · `id` 1 · `ja` 1 · `pl` 1 · `sl` 1 · `zh-CN` 1
+
+- **`cs`** `create_collection_save_to_collection_tab_selected` — `mozilla-mobile/fenix/app/src/main/res/values/strings.xml`
+  - `create_collection_save_to_collection_tab_selected` has placeholders none where the source has %d
+  - Current: `Vybrán jeden panel`
+- **`cs`** `recently_closed_tab` — `mozilla-mobile/fenix/app/src/main/res/values/strings.xml`
+  - `recently_closed_tab` has placeholders none where the source has %d
+  - Current: `Jeden panel`
+- **`de`** `mozac_feature_sitepermissions_storage_access_message` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values/strings.xml`
+  - `mozac_feature_sitepermissions_storage_access_message` has placeholders %1$s where the source has %s
+  - Current: `Möglicherweise möchten Sie den Zugriff blockieren, wenn nicht klar ist, warum %1$s diese Daten benötigt.`
+- **`fy-NL`** `search_suggestions_onboarding_text` — `mozilla-mobile/fenix/app/src/main/res/values/strings.xml`
+  - `search_suggestions_onboarding_text` has placeholders %1$s where the source has %s
+  - Current: `%1$s sil alles wat jo yn de adresbalke yntype mei jo standert sykmasine diele.`
+- **`id`** `preferences_delete_browsing_data_cookies_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values/strings.xml`
+  - Stray escaped backslash-space after "Anda" in the translation.
+  - Current: `Anda\ akan keluar`
+  - Suggest: `Anda akan keluar`
+- **`ja`** `mozac_browser_errorpages_malformed_uri_message_alternative` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml`
+  - Markup tags are misplaced: text falls outside the { <li> } elements and the second bullet drops the "forward slashes" instruction.
+  - Current: `{ <li> }ウェブのアドレスは通常 { <strong> }http://www.example.com/{ </strong> }{ </li> } のようなものになります。 { <li> }スラッシュ ({ <strong> }/{ </strong> }) { </li> }が使われているか確認してください。`
+  - Suggest: `{ <li> }ウェブのアドレスは通常 { <strong> }http://www.example.com/{ </strong> } のようなものになります。{ </li> } { <li> }スラッシュ ({ <strong> }/{ </strong> }) が使われているか確認してください。{ </li> }`
+- **`pl`** `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values/strings.xml`
+  - `firstrun_shortcut_text` has placeholders %1$s where the source has %1$s, %1$s
+  - Current: `Szybko wracaj do ulubionych stron w %1$s. Po prostu wybierz „Dodaj do ekranu głównego” z menu.`
+- **`sl`** `onboarding_first_screen_title` — `mozilla-mobile/focus-android/app/src/main/res/values/strings.xml`
+  - `onboarding_first_screen_title` has placeholders %s where the source has %1$s
+  - Current: `Dobrodošli v %su`
+  - Suggest: `Dobrodošli v %1$su`
+- **`zh-CN`** `downloads_delete_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values/strings.xml`
+  - `downloads_delete_dialog_title` has placeholders %d where the source has none
+  - Current: `{$quantity ->} [other] 删除 %d 个文件？`
+
+### Wrong content — impact 2 (1321)
+
+Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/android.md`.
 
 | Locale | Last run | Mode | Commit | Strings | Missing | Open | Impact 1–2 | Fixed | Dismissed | Suppressed |
 |---|---|---|---|---|---|---|---|---|---|---|
