@@ -112,23 +112,29 @@ def load(project, locale: str) -> list[Rule]:
 def apply(rules: list[Rule], findings: list) -> dict[str, int]:
     """Suppress matching findings and un-suppress ones no longer covered.
 
-    The second half matters: deleting a rule must bring its findings back,
-    otherwise the file stops being the single source of truth.
+    The second half matters: the file has to be the single source of truth,
+    so what brings a finding back is *no rule matching it now* -- not the
+    narrower question of whether the rule that retired it still exists.
+    Keying on the id meant narrowing a rule's ``match`` while keeping its id
+    left every finding it had ever matched suppressed for ever, which is the
+    one thing the retroactive-and-reversible promise rules out.
+
+    ``dismissed`` is left alone. A dismissal is a person saying they read
+    *this* string and it is fine; a class rule must not overwrite that, or
+    the reason they recorded disappears from the report behind a rule id.
     """
-    by_id = {r.id: r for r in rules}
     counts: dict[str, int] = {}
     for finding in findings:
-        if finding.status in ("fixed", "obsolete"):
+        if finding.status in ("fixed", "obsolete", "dismissed"):
             continue
         hit = next((r for r in rules if r.applies(finding)), None)
         if hit is not None:
-            if finding.status != "suppressed":
-                finding.status = "suppressed"
+            finding.status = "suppressed"
             finding.suppressed_by = hit.id
             hit.hits += 1
             counts[hit.id] = counts.get(hit.id, 0) + 1
-        elif finding.status == "suppressed" and finding.suppressed_by not in by_id:
-            # The rule that retired this was removed: put it back in view.
+        elif finding.status == "suppressed":
+            # Nothing covers it any more: put it back in view.
             finding.status = "open"
             finding.suppressed_by = ""
     return counts

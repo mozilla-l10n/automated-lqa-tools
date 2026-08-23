@@ -31,7 +31,6 @@ import dismiss  # noqa: E402
 import layout  # noqa: E402
 import conventions  # noqa: E402
 import findings as findings_mod  # noqa: E402
-import parse  # noqa: E402
 import report  # noqa: E402
 import repos  # noqa: E402
 import snapshot  # noqa: E402
@@ -82,7 +81,7 @@ def save_meta(project, locale: str, meta: dict) -> None:
         fh.write("\n")
 
 
-def build_systemic(project, locale, fresh, health):
+def build_systemic(project, fresh):
     """Collapse a check that fired on very many strings into one decision.
 
     The manual reviews learned this the hard way: 142 unadapted access keys
@@ -195,8 +194,10 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
     elif mode == "baseline":
         import llm_baseline
         log("  baseline review of the whole tree")
+        # trees.root, not l10n_root: partitions are written against the
+        # paths a message key uses, which are relative to the locale tree.
         llm_findings, empty, reviewed_files = llm_baseline.review(
-            project, locale, l10n_root, source_root, l10n, trees,
+            project, locale, trees.root, source_root, l10n, trees,
             only=args.partitions, log=log,
         )
         # Only the partitions that actually ran count as reviewed.
@@ -259,7 +260,7 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
             f"open findings against the current tree")
 
     fresh = check_findings + llm_findings
-    systemic, fresh = build_systemic(project, locale, fresh, health)
+    systemic, fresh = build_systemic(project, fresh)
     llm_fids = {f.fid for f in llm_findings}
     stored, raised = findings_mod.merge(stored, fresh, today())
 
@@ -273,21 +274,27 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
         if f.key in l10n and f.string_hash and f.string_hash != l10n[f.key].hash()
     }
     reclosed = findings_mod.close_reviewed(
-        stored, reviewed_keys, llm_fids, trusted, today()
+        stored, reviewed_keys, llm_fids, trusted, today(), rerunnable
     )
     if reclosed:
         log(f"  closed {len(reclosed)} finding(s) the reviewer did not repeat")
     resolved["fixed"].extend(reclosed)
 
-    rules = suppress.load(project, locale)
-    hits = suppress.apply(rules, stored)
-    if hits:
-        log(f"  suppressed: {hits}")
-
+    # Narrowest mechanism first, as `docs/suppressions.md` orders them: a
+    # dismissal is about one string somebody read, and `suppress.apply`
+    # leaves those alone, so a class rule can no longer overwrite one and
+    # lose the reason with it. Running dismissals first also means a finding
+    # whose dismissal line was deleted is available to a class rule in the
+    # same run rather than the next one.
     dismissals = dismiss.load(project, locale)
     dropped = dismiss.apply(dismissals, stored)
     if dropped:
         log(f"  dismissed by hand: {sum(dropped.values())}")
+
+    rules = suppress.load(project, locale)
+    hits = suppress.apply(rules, stored)
+    if hits:
+        log(f"  suppressed: {hits}")
     raised = [f for f in raised if f.status not in ("suppressed", "dismissed")]
 
     # The buckets were filled before suppressions, dismissals and merge had
@@ -336,10 +343,8 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
         # a locale that completes drops the key again.
         new_meta["incomplete"] = incomplete
 
-    report.use_paths(trees.locale_paths)
-    report.use_source(source)
     text = report.render(
-        locale, new_meta, health, health.counts, stored, systemic,
+        locale, new_meta, health, stored, systemic,
         {
             "new": raised,
             "fixed": resolved["fixed"],
@@ -348,6 +353,7 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
             "obsolete": resolved["obsolete"],
         },
         counts_conv, rules,
+        report.Ctx(paths=trees.locale_paths, source=source),
     )
 
     if args.dry_run:

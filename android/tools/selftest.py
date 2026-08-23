@@ -21,8 +21,8 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(_HERE)), "lib"))
 
 import checks  # noqa: E402
 import config  # noqa: E402
-import conventions  # noqa: E402
 import layout  # noqa: E402
+import selftest_lib  # noqa: E402
 
 # Real defects in the repository, by (locale, check, string id).
 MUST_FIND = [
@@ -81,22 +81,12 @@ MUST_BE_SILENT = [
 
 
 def run(l10n_dir, project) -> int:
-    passed = failed = 0
-
-    def check(ok, label):
-        nonlocal passed, failed
-        print(f"  {'PASS' if ok else 'FAIL'}  {label}")
-        if ok:
-            passed += 1
-        else:
-            failed += 1
-
-    needed = sorted({loc for loc, *_ in MUST_FIND + MUST_BE_SILENT + FIXED_UPSTREAM})
-    results = {}
-    for locale in needed:
-        trees = layout.load(project, locale, l10n_dir, l10n_dir)
-        counts = conventions.detect(locale, trees.l10n)
-        results[locale] = checks.run_all(project, locale, trees, counts) + (trees,)
+    suite = selftest_lib.Suite()
+    check = suite.check
+    results = selftest_lib.load_results(
+        project, checks, l10n_dir, l10n_dir,
+        [loc for loc, *_ in MUST_FIND + MUST_BE_SILENT + FIXED_UPSTREAM],
+    )
 
     print("Layout")
     trees = results["it"][2]
@@ -106,31 +96,17 @@ def run(l10n_dir, project) -> int:
     check("values-it/" in sample, f"the Android locale directory is used ({sample.split('/')[-2]})")
     check(len(trees.source) > 2000, f"the source side loaded ({len(trees.source)} strings)")
 
-    print("\nPlaceholders render as the file writes them")
+    suite.section("Placeholders render as the file writes them")
     key = next(
         (k for k, m in trees.l10n.items() if "%1$s" in m.text()), None
     )
     check(key is not None, "a `%1$s` placeholder survives parsing verbatim")
 
-    print("\nDefects that are really there")
-    for locale, kind, string_id in MUST_FIND:
-        _, found, _ = results[locale]
-        hit = any(f.check == kind and f.string_id == string_id for f in found)
-        check(hit, f"{locale}: {kind} on {string_id}")
+    selftest_lib.must_find(suite, results, MUST_FIND)
+    selftest_lib.fixed_upstream(suite, results, FIXED_UPSTREAM)
+    selftest_lib.must_be_silent(suite, results, MUST_BE_SILENT)
 
-    print("\nFixed upstream — must no longer be reported")
-    for locale, kind, string_id in FIXED_UPSTREAM:
-        _, found, _ = results[locale]
-        hit = any(f.check == kind and f.string_id == string_id for f in found)
-        check(not hit, f"{locale}: {kind} on {string_id} is gone")
-
-    print("\nMust stay silent")
-    for locale, kind, why in MUST_BE_SILENT:
-        health, _, _ = results[locale]
-        n = health.counts.get(kind, 0)
-        check(n == 0, f"{locale}: {kind} = {n} ({why})")
-
-    print("\nAndroid check internals")
+    suite.section("Android check internals")
     from checks import _unescaped
     from common_checks import PRINTF
 
@@ -143,7 +119,7 @@ def run(l10n_dir, project) -> int:
     check(_unescaped('"Don\'t"') is None, "a fully quoted value is accepted")
     check(_unescaped("<![CDATA[Don't]]>") is None, "CDATA content is left alone")
 
-    print("\nCross-string UI references")
+    suite.section("Cross-string UI references")
     from common_checks import _is_label, _nearest
     check(_is_label("Try Again") and not _is_label("SameSite"),
           "a multi-word label is told from a technical token")
@@ -154,7 +130,7 @@ def run(l10n_dir, project) -> int:
     check(_nearest(("a.xml", "foo"), [("b.xml", "x"), ("c.xml", "y")]) is None,
           "an ambiguous reference across files is not guessed at")
 
-    print("\nLanguage variants")
+    suite.section("Language variants")
     import variants as _v
     for loc in ("en-GB", "en-CA"):
         if loc not in project.locales:
@@ -165,7 +141,7 @@ def run(l10n_dir, project) -> int:
         check(bool(rules), f"{loc}: spelling rules are learned from the corpus ({len(rules)})")
     check(_v.learn.__module__ == "variants", "the variant machinery is shared, not duplicated")
 
-    print("\nPlaceholder equivalence")
+    suite.section("Placeholder equivalence")
     import common_checks as cc
 
     def _specs(text):
@@ -212,7 +188,7 @@ def run(l10n_dir, project) -> int:
     check(_args("%s %1$s") is None,
           "one bad variant makes the whole message uncomparable")
 
-    print("\nProject wiring")
+    suite.section("Project wiring")
     check("variables" not in project.checks,
           "the redundant variables check is not run for Android")
     check(project.baseline_strategy == "batched",
@@ -227,22 +203,8 @@ def run(l10n_dir, project) -> int:
         check(bool(_llm.system_prompt(project, loc).strip()),
               f"{loc}: the variant reviewer has a prompt to run with")
 
-    # The pull request body leads with findings the reviewer flagged as
-    # reading like a deliberate edit. Nothing can be flagged if the field
-    # never reaches the model, and the two files that carry it are per
-    # project, so each project pins its own.
-    import json as _json
-    _schema = _json.loads(project.prompt("finding_schema.json"))
-    _props = _schema["input_schema"]["properties"]["findings"]["items"]
-    check("reads_as_deliberate" in _props["required"],
-          "the reviewer is asked, on every finding, whether it reads as a "
-          "deliberate edit")
-    for _name in ("incremental_review.md", "variant_review.md"):
-        check("reads_as_deliberate" in project.prompt(_name),
-              f"{_name} tells it what that means")
-
-    print(f"\n{passed} passed, {failed} failed")
-    return 1 if failed else 0
+    selftest_lib.deliberate_flag_wiring(suite, project)
+    return suite.report()
 
 
 def main(argv=None) -> int:

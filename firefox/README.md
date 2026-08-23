@@ -160,7 +160,8 @@ by [`RUNBOOK.md`](RUNBOOK.md). Those reviews were imported rather than
 redone: `tools/import_legacy.py` read the reports into `state/`, classified
 each finding against the current tree as open or already fixed, and turned
 the maintainer decisions they recorded into the seeded conventions and
-suppressions.
+suppressions. It ran once and has since been removed; what it produced is
+in `state/` and is maintained by the pipeline like anything else.
 
 `tools/selftest.py` pins the result as 35 assertions — the defects those
 reviews found must still be caught, and the conventions they established

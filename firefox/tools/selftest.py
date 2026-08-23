@@ -27,8 +27,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(_HERE)), "lib"))
 
 import checks  # noqa: E402
 import config  # noqa: E402
-import layout  # noqa: E402
-import conventions  # noqa: E402
+import selftest_lib  # noqa: E402
 import findings as findings_mod  # noqa: E402
 import parse  # noqa: E402
 import suppress  # noqa: E402
@@ -124,57 +123,26 @@ def run(l10n_dir, source_dir, project) -> int:
         | {loc for loc, *_ in HEALTH_BOUNDS}
         | {loc for loc in ("en-GB", "en-CA") if loc in project.locales}
     )
-    results = {}
-    trees = {}
-    for locale in needed:
-        loaded = layout.load(project, locale, l10n_dir, source_dir)
-        counts = conventions.detect(locale, loaded.l10n)
-        health, found = checks.run_all(project, locale, loaded, counts)
-        results[locale] = (health, found, counts)
-        trees[locale] = loaded.l10n
+    results = selftest_lib.load_results(
+        project, checks, l10n_dir, source_dir, needed
+    )
+    trees = {loc: r[2] for loc, r in results.items()}
 
-    passed = failed = 0
+    suite = selftest_lib.Suite()
+    check = suite.check
 
-    def check(ok, label):
-        nonlocal passed, failed
-        print(f"  {'PASS' if ok else 'FAIL'}  {label}")
-        if ok:
-            passed += 1
-        else:
-            failed += 1
+    selftest_lib.must_find(suite, results, MUST_FIND)
+    selftest_lib.fixed_upstream(suite, results, FIXED_UPSTREAM)
+    selftest_lib.not_a_defect(suite, results, NOT_A_DEFECT)
+    selftest_lib.must_be_silent(suite, results, MUST_BE_SILENT)
 
-    print("Defects the manual reviews found — must still be caught")
-    for locale, kind, string_id in MUST_FIND:
-        _, found, _ = results[locale]
-        hit = any(f.check == kind and f.string_id == string_id for f in found)
-        check(hit, f"{locale}: {kind} on {string_id}")
-
-    print("\nDefects since fixed upstream — must NOT be reported any more")
-    for locale, kind, string_id in FIXED_UPSTREAM:
-        _, found, _ = results[locale]
-        hit = any(f.check == kind and f.string_id == string_id for f in found)
-        check(not hit, f"{locale}: {kind} on {string_id} is gone")
-
-    print("\nCorrect localization that must not be flagged")
-    for locale, kind, string_id in NOT_A_DEFECT:
-        _, found, _ = results[locale]
-        hit = any(f.check == kind and f.string_id == string_id for f in found)
-        check(not hit, f"{locale}: {kind} on {string_id}")
-
-    print("\nConventions established as correct — must stay silent")
-    for locale, kind, why in MUST_BE_SILENT:
-        health, _, _ = results[locale]
-        silent = kind in health.skipped or health.counts.get(kind, 0) == 0
-        state = "skipped" if kind in health.skipped else health.counts.get(kind, 0)
-        check(silent, f"{locale}: {kind} = {state} ({why})")
-
-    print("\nHealth numbers in range")
+    suite.section("Health numbers in range")
     for locale, metric, low, high in HEALTH_BOUNDS:
         health, _, _ = results[locale]
         value = len(health.syntax_errors) if metric == "syntax" else health.missing
         check(low <= value <= high, f"{locale}: {metric} = {value} (expected {low}–{high})")
 
-    print("\nFinding lifecycle")
+    suite.section("Finding lifecycle")
     from findings import Finding
     f = Finding(locale="xx", file="a.ftl", string_id="s", category="A",
                 summary="malformed tag", current="text</a >here")
@@ -186,7 +154,7 @@ def run(l10n_dir, source_dir, project) -> int:
     check(f.identity() == Finding(**{**f.__dict__, "fid": ""}).identity(),
           "identity is stable across reconstruction")
 
-    print("\nLanguage variants")
+    suite.section("Language variants")
     import llm_incremental as _li
     import variants as _v
     src_tree = src
@@ -206,7 +174,7 @@ def run(l10n_dir, source_dir, project) -> int:
           "an ordinary locale gets the ordinary prompt")
 
     if "en-GB" in project.locales:
-        gb = trees["en-GB"]
+        gb = trees["en-GB"].l10n
         rules = _v.learn(gb, src_tree)
         check(rules.get("color", ("",))[0] == "colour",
               "the colour rule is learned from the corpus, not hardcoded")
@@ -219,7 +187,7 @@ def run(l10n_dir, source_dir, project) -> int:
         check(not _v.in_code_token("colour", "Choose a colour for the theme"),
               "a word used as prose is not mistaken for code")
 
-    print("\nFixed versus withdrawn")
+    suite.section("Fixed versus withdrawn")
 
     class _Msg:
         def __init__(self, text, digest):
@@ -249,7 +217,30 @@ def run(l10n_dir, source_dir, project) -> int:
     check(_resolve(stayed, "samehash") == "withdrawn",
           "a check finding dropped while the string never moved is withdrawn, not fixed")
 
-    print("\nPlural categories")
+    suite.section("Silence from the reviewer closes nothing a check answers for")
+    # close_reviewed exists so a model finding can be closed when the
+    # reviewer re-reads the string and does not repeat it. It once ran over
+    # every open finding, so a typography or ui_references defect the check
+    # had just re-raised was closed as fixed on the sole evidence that the
+    # *model* had not also mentioned it.
+    _key = {("a.ftl", "s1")}
+
+    def _closed(check_name, rerunnable):
+        f = _F(locale="xx", file="a.ftl", string_id="s1", category="E",
+               check=check_name, summary="straight apostrophe",
+               string_hash="old", status="open")
+        findings_mod.close_reviewed([f], _key, set(), _key, "2026-01-01", rerunnable)
+        return f.status
+
+    check(_closed("typography", {"typography", "markup"}) == "open",
+          "a check finding stays open when its check ran and re-raised it, "
+          "however quiet the reviewer was")
+    check(_closed("typography", {"markup"}) == "fixed",
+          "but a check that was skipped this run falls back to the reviewer")
+    check(_closed("llm", {"typography"}) == "fixed",
+          "and a model finding the reviewer re-read in silence still closes")
+
+    suite.section("Plural categories")
     import plurals
     check(plurals.categories_for("ja") == frozenset({"other"}),
           "Japanese has only the `other` category")
@@ -264,7 +255,7 @@ def run(l10n_dir, source_dir, project) -> int:
     check(plurals.is_numeric_key("1") and not plurals.is_numeric_key("one"),
           "numeric keys are told apart from category keys")
 
-    print("\nFix detection")
+    suite.section("Fix detection")
     check(not findings_mod.still_present("INDIRIZZO", "Indirizzo"),
           "a capitalisation fix is detected (case is not folded away)")
     check(findings_mod.still_present("Traduzione", "Traduzione"),
@@ -324,7 +315,7 @@ def run(l10n_dir, source_dir, project) -> int:
     check(f_quiet2.status == "open",
           "silence about an unchanged string closes nothing")
 
-    print("\nDismissing one finding by hand")
+    suite.section("Dismissing one finding by hand")
     import dismiss as _d
     parsed = _d.load.__wrapped__ if hasattr(_d.load, "__wrapped__") else None
     import tempfile, os as _os
@@ -359,8 +350,7 @@ def run(l10n_dir, source_dir, project) -> int:
     check(a.status == "open" and not a.dismissed_because,
           "removing the line brings the finding back")
 
-    print("\nA maintainer's dismissal must survive")
-    from suppress import Rule as _R
+    suite.section("A maintainer's dismissal must survive")
     revived = Finding(locale="it", file="a.ftl", string_id="s", category="D",
                       summary="x", status="suppressed",
                       suppressed_by="legacy-dismissed")
@@ -375,7 +365,7 @@ def run(l10n_dir, source_dir, project) -> int:
           "which is why an imported dismissal must be `dismissed`, not a "
           "`suppressed` pointing at a rule id no file defines")
 
-    print("\nReporting a run honestly")
+    suite.section("Reporting a run honestly")
     # The bug this pins: resolve() marked a finding fixed, the reviewer
     # raised it again in the same run so merge() reopened it, and the
     # report still counted it under "fixed since the last run".
@@ -413,7 +403,8 @@ def run(l10n_dir, source_dir, project) -> int:
     import report as report_mod
     nested = report_mod._item(
         Finding(locale="it", file="a.ftl", string_id="s", category="B",
-                summary="wrong content", current="testo", rationale="why"))
+                summary="wrong content", current="testo", rationale="why"),
+        report_mod.Ctx())
     check(all(line.startswith("    - ") for line in nested.splitlines()[1:]),
           "a finding's Current/Source/Suggest/rationale hang under it at a "
           "full indent level")
@@ -584,20 +575,7 @@ def run(l10n_dir, source_dir, project) -> int:
     check(gone.status == "withdrawn",
           "while a check that really did stop raising it still withdraws it")
 
-    print("\nEscalation to the pull request")
-    # The pull request body leads with findings the reviewer flagged as
-    # reading like a deliberate edit. Nothing can be flagged if the field
-    # never reaches the model, and the two files that carry it are per
-    # project, so each project pins its own.
-    import json as _json
-    _schema = _json.loads(project.prompt("finding_schema.json"))
-    _props = _schema["input_schema"]["properties"]["findings"]["items"]
-    check("reads_as_deliberate" in _props["required"],
-          "the reviewer is asked, on every finding, whether it reads as a "
-          "deliberate edit")
-    for _name in ("incremental_review.md", "variant_review.md"):
-        check("reads_as_deliberate" in project.prompt(_name),
-              f"{_name} tells it what that means")
+    selftest_lib.deliberate_flag_wiring(suite, project)
 
     # The reviewer's flag is the only way a finding reaches the top of the
     # pull request body, so it has to survive the parser and it has to be
@@ -656,7 +634,7 @@ def run(l10n_dir, source_dir, project) -> int:
           "and says how many it left out, so a capped list is not read as "
           "the whole of it")
 
-    print("\nSuppression rules")
+    suite.section("Suppression rules")
     from suppress import Rule
     rule = Rule({"id": "r", "reason": "because", "match": {"check": "typography",
                                                            "string_id": "felt-*"}}, 0)
@@ -671,6 +649,23 @@ def run(l10n_dir, source_dir, project) -> int:
     check(h.status == "open", "non-matching finding stays open")
     suppress.apply([], [g, h])
     check(g.status == "open" and not g.suppressed_by, "removing the rule restores the finding")
+    # Editing a rule in place is the common case -- the id stays, the match
+    # narrows -- and keying the restore on the id meant those findings stayed
+    # suppressed for ever, which the retroactive-and-reversible promise rules
+    # out.
+    suppress.apply([rule], [g])
+    narrowed = Rule({"id": "r", "reason": "because",
+                     "match": {"check": "plurals"}}, 0)
+    suppress.apply([narrowed], [g])
+    check(g.status == "open" and not g.suppressed_by,
+          "narrowing a rule while keeping its id restores the finding too")
+    dismissed = Finding(locale="xx", file="a.ftl", string_id="felt-error-y",
+                        category="E", check="typography", summary="straight apostrophe",
+                        status="dismissed", dismissed_because="read it, it is fine")
+    suppress.apply([rule], [dismissed])
+    check(dismissed.status == "dismissed"
+          and dismissed.dismissed_because == "read it, it is fine",
+          "a class rule does not overwrite a hand dismissal or its reason")
 
     rule_suggest = Rule({"id": "s", "reason": "r",
                          "match": {"suggest": r"re:\battivat[aoie]\b"}}, 0)
@@ -693,8 +688,33 @@ def run(l10n_dir, source_dir, project) -> int:
         except ValueError:
             check(True, f"{why} is rejected")
 
-    print(f"\n{passed} passed, {failed} failed")
-    return 1 if failed else 0
+    suite.section("Baseline partitioning")
+    # The partition patterns are written against the paths a message key uses.
+    # Rooted at the localization *repository* instead of the locale tree,
+    # every path gains a locale prefix, nothing matches, and all 45,440 files
+    # of all 230 locales land in `other` -- the eight-way split silently
+    # stops existing, which nothing else notices.
+    import llm_baseline
+    it = trees["it"]
+    buckets = llm_baseline.partition_files(
+        it.root, tuple(project.extensions), files=sorted(it.l10n_files)
+    )
+    check(len(buckets) > 1,
+          f"the tree splits into {len(buckets)} partitions, not one bucket")
+    check(sum(len(v) for v in buckets.values()) == len(it.l10n_files),
+          "and every file in the tree is assigned to exactly one of them")
+    catchall = len(buckets.get(llm_baseline.CATCHALL, []))
+    check(catchall < len(it.l10n_files) // 4,
+          f"the catch-all holds {catchall} of {len(it.l10n_files)} files, "
+          "not the whole tree")
+    # What comes back as `covered` becomes `reviewed_keys`, so it has to be
+    # in the same path space as a message key.
+    covered = set().union(*buckets.values())
+    check(covered >= {k[0] for k in it.l10n},
+          "the partitioned paths are the ones messages are keyed by, so a "
+          "baseline can say which strings it reviewed")
+
+    return suite.report()
 
 
 def main(argv=None) -> int:

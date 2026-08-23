@@ -132,12 +132,13 @@ def is_excluded(rel: str, patterns: list[str]) -> bool:
     return any(fnmatch(rel, p) for p in patterns)
 
 
-def parse_tree(root: str, extensions: list[str], exclude: list[str]) -> dict:
+def parse_tree(root: str, extensions: list[str], exclude: list[str],
+               errors: dict | None = None) -> dict:
     """Parse a whole locale (or reference) tree.
 
-    Returns ``{(relpath, id): Msg}``. Files that fail to parse are reported
-    by the syntax check, not here; they are skipped silently so one broken
-    file cannot abort a run.
+    Returns ``{(relpath, id): Msg}``. A file that fails to parse is skipped so
+    one broken file cannot abort a run; pass ``errors`` to collect what went
+    wrong, which is what the health check's syntax row reports.
     """
     out: dict[tuple[str, str], Msg] = {}
     for dirpath, dirnames, filenames in os.walk(root):
@@ -149,15 +150,25 @@ def parse_tree(root: str, extensions: list[str], exclude: list[str]) -> dict:
             rel = os.path.relpath(path, root)
             if is_excluded(rel, exclude):
                 continue
-            for msg in parse_file(path, rel):
+            for msg in parse_file(path, rel, errors):
                 out[msg.key] = msg
     return out
 
 
-def parse_file(path: str, rel: str) -> list[Msg]:
+def parse_file(path: str, rel: str, errors: dict | None = None) -> list[Msg]:
+    """Parse one resource file into ``Msg`` records.
+
+    A file that does not parse yields nothing rather than raising, so one
+    broken file cannot abort a run. Pass ``errors`` to be told which files
+    those were and why: the syntax check used to answer that by parsing the
+    whole tree a second time, and for a layout where many keys resolve to one
+    large file it parsed that file once per key.
+    """
     try:
         res = parse_resource(path)
-    except Exception:
+    except Exception as exc:  # noqa: BLE001 - the message is the finding
+        if errors is not None:
+            errors[rel] = str(exc)
         return []
     msgs: list[Msg] = []
     for section in res.sections:

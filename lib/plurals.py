@@ -39,7 +39,35 @@ _ALWAYS = {"other"}
 
 _NUMERIC = re.compile(r"^-?\d+(\.\d+)?$")
 
-_cache: dict[str, frozenset[str] | None] = {}
+_cache: dict[str, object] = {}
+
+
+def _parse_locale(locale: str):
+    """babel's ``Locale`` for a Mozilla locale code, or None.
+
+    Mozilla codes are BCP-47-ish (``es-MX``, ``fy-NL``, ``ja-JP-mac``); babel
+    wants underscores and knows nothing of the ``-mac`` variant, so the code
+    is tried whole, then trimmed to two segments, then to the bare language.
+    One resolver for both the category set and the plural rule: they were
+    two loops that tried different candidate lists, so they could disagree
+    about a code like ``ja-JP-mac``.
+    """
+    if locale in _cache:
+        return _cache[locale]
+    parsed = None
+    if Locale is not None:
+        candidates = [locale.replace("-", "_")]
+        if locale.count("-") >= 2:
+            candidates.append("_".join(locale.split("-")[:2]))
+        candidates.append(locale.split("-")[0])
+        for candidate in candidates:
+            try:
+                parsed = Locale.parse(candidate)
+                break
+            except (UnknownLocaleError, ValueError, TypeError):
+                continue
+    _cache[locale] = parsed
+    return parsed
 
 
 def categories_for(locale: str) -> frozenset[str] | None:
@@ -49,25 +77,10 @@ def categories_for(locale: str) -> frozenset[str] | None:
     must disable the check, not produce findings against the wrong
     language's rules.
     """
-    if locale in _cache:
-        return _cache[locale]
-    result: frozenset[str] | None = None
-    if Locale is not None:
-        # Mozilla codes are BCP-47-ish (`es-MX`, `fy-NL`, `ja-JP-mac`);
-        # babel wants underscores and knows nothing of the `-mac` variant.
-        candidates = [locale.replace("-", "_")]
-        if locale.count("-") >= 2:
-            candidates.append("_".join(locale.split("-")[:2]))
-        candidates.append(locale.split("-")[0])
-        for candidate in candidates:
-            try:
-                parsed = Locale.parse(candidate)
-            except (UnknownLocaleError, ValueError, TypeError):
-                continue
-            result = frozenset(set(parsed.plural_form.tags) | _ALWAYS)
-            break
-    _cache[locale] = result
-    return result
+    parsed = _parse_locale(locale)
+    if parsed is None:
+        return None
+    return frozenset(set(parsed.plural_form.tags) | _ALWAYS)
 
 
 def is_numeric_key(key: str) -> bool:
@@ -75,21 +88,9 @@ def is_numeric_key(key: str) -> bool:
     return bool(_NUMERIC.match(key))
 
 
-_rule_cache: dict[str, object] = {}
-
-
 def _rule(locale: str):
-    if locale not in _rule_cache:
-        rule = None
-        if Locale is not None:
-            for candidate in (locale.replace("-", "_"), locale.split("-")[0]):
-                try:
-                    rule = Locale.parse(candidate).plural_form
-                    break
-                except (UnknownLocaleError, ValueError, TypeError):
-                    continue
-        _rule_cache[locale] = rule
-    return _rule_cache[locale]
+    parsed = _parse_locale(locale)
+    return parsed.plural_form if parsed is not None else None
 
 
 def covered_categories(locale: str, keys) -> frozenset[str]:

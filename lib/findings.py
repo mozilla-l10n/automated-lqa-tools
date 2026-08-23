@@ -266,6 +266,7 @@ def close_reviewed(
     raised: set,
     changed: set,
     today: str,
+    rerunnable: set[str] | None = None,
 ) -> list[Finding]:
     """Close findings the reviewer looked at again and did not repeat.
 
@@ -280,12 +281,21 @@ def close_reviewed(
     time. No flag may relax this: ``--recheck`` once passed every reviewed
     string as trusted and closed thirteen Italian findings whose text was
     byte-identical to what had been flagged.
+
+    ``rerunnable`` is the set of checks that ran over the whole tree this
+    run, and their findings are excluded outright. ``raised`` holds what the
+    *model* raised, so a check finding is never in it -- which meant a
+    typography or ui_references defect the check had just re-raised was
+    closed as fixed on the sole evidence that the model had not also
+    mentioned it. A check answers for itself, in :func:`resolve`; silence
+    from the reviewer says nothing about it either way.
     """
+    rerunnable = rerunnable or set()
     out = []
     for f in findings:
         if not f.is_open or f.key not in reviewed or f.key not in changed:
             continue
-        if f.fid in raised:
+        if f.check in rerunnable or f.fid in raised:
             continue
         f.status = "fixed"
         f.resolved_on = today

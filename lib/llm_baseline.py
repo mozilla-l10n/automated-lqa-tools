@@ -202,12 +202,18 @@ def _parse_result(text: str):
     return None, "no JSON object in the reply"
 
 
-def _run_partition(project, locale, l10n_root, source_root, name, files, log):
+def _run_partition(project, locale, l10n_root, source_root, name, files, log,
+                   locale_paths=None):
     if not files:
         log(f"    partition {name}: no files, skipped")
         return []
 
-    listing = "\n".join(f"- {f}" for f in files)
+    # Partitioning works in *reference* paths, because that is what a message
+    # key is made of and so what the caller can turn back into reviewed
+    # strings. The agent has to be handed a path that exists on disk, which
+    # for a layout where the two differ is the localized one.
+    locale_paths = locale_paths or {}
+    listing = "\n".join(f"- {locale_paths.get(f, f)}" for f in files)
     prompt = INSTRUCTIONS.format(
         language=language_of(locale), locale=locale,
         l10n=l10n_root, source=source_root, partition=name,
@@ -285,13 +291,21 @@ def review(project, locale, l10n_root, source_root, l10n, trees=None, only=None,
 
     Also returns the partitions that produced nothing, so a caller can tell
     "clean" from "failed".
+
+    ``l10n_root`` is the **locale tree**, not the localization repository:
+    the partition patterns are written against the paths a message key uses
+    (``browser/browser/preferences/``), and rooting this at the repository
+    instead prefixes every path with a locale code, so nothing matches, every
+    file falls into ``other``, and the split silently stops existing. It did:
+    45,440 files from 230 locales in one bucket.
     """
     from llm_incremental import _to_finding
 
     configured = project.data.get("partitions")
+    locale_paths = dict(trees.locale_paths) if trees else {}
     buckets = partition_files(
         l10n_root, tuple(project.extensions),
-        files=sorted(trees.locale_paths.values()) if trees and trees.locale_paths else None,
+        files=sorted(trees.l10n_files) if trees and trees.l10n_files else None,
         partitions=[(p["name"], p["paths"]) for p in configured] if configured else None,
     )
     if only:
@@ -314,7 +328,7 @@ def review(project, locale, l10n_root, source_root, l10n, trees=None, only=None,
         futures = {
             pool.submit(
                 _run_partition, project, locale, l10n_root, source_root,
-                name, files, log,
+                name, files, log, locale_paths,
             ): name
             for name, files in partitions
         }

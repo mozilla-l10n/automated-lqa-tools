@@ -45,6 +45,11 @@ class Trees:
     # Reference path -> the actual localized file, for reports and for the
     # baseline reviewer, which hands real paths to an agent.
     locale_paths: dict = field(default_factory=dict)
+    # Reference path -> the parser's complaint, for files that did not parse.
+    # Collected while loading, because parsing the tree a second time just to
+    # ask this doubled every run -- and for the XLIFF layout, where 95 keys
+    # resolve to one 684 KB file, it re-read that file 95 times.
+    syntax_errors: dict = field(default_factory=dict)
 
 
 def load(project, locale: str, l10n_root: str, source_root: str) -> Trees:
@@ -60,13 +65,15 @@ def load(project, locale: str, l10n_root: str, source_root: str) -> Trees:
 
 def _mirrored(project, locale, l10n_root, source_root) -> Trees:
     tree = os.path.join(l10n_root, project.locale_subpath(locale))
+    errors: dict = {}
     return Trees(
         root=tree,
-        l10n=parse.parse_tree(tree, project.extensions, project.exclude),
+        l10n=parse.parse_tree(tree, project.extensions, project.exclude, errors),
         source=parse.parse_tree(source_root, project.extensions, project.exclude),
         l10n_files=parse.list_files(tree, project.extensions, project.exclude),
         source_files=parse.list_files(source_root, project.extensions, project.exclude),
         locale_paths={},
+        syntax_errors=errors,
     )
 
 
@@ -97,12 +104,12 @@ def _android(project, locale, root) -> Trees:
             if os.path.exists(localized):
                 trees.l10n_files.add(rel)
                 trees.locale_paths[rel] = os.path.relpath(localized, root)
-                for msg in parse.parse_file(localized, rel):
+                for msg in parse.parse_file(localized, rel, trees.syntax_errors):
                     trees.l10n[msg.key] = msg
     return trees
 
 
-def _xliff_messages(path: str, root: str):
+def _xliff_messages(path: str):
     """Yield ``(group, id, target_msg, source_text)`` from one XLIFF file.
 
     moz.l10n gives the ``<target>`` as the entry value and puts the
@@ -146,7 +153,7 @@ def _xliff(project, locale, root) -> Trees:
     ref_path = os.path.join(root, template.format(locale=reference))
     ref_msgs: dict[tuple[str, str], object] = {}
     if os.path.exists(ref_path):
-        for group, mid, entry, _src in _xliff_messages(ref_path, root):
+        for group, mid, entry, _src in _xliff_messages(ref_path):
             if getattr(entry.value, "pattern", None):
                 ref_msgs[(group, mid)] = entry.value
 
@@ -154,7 +161,17 @@ def _xliff(project, locale, root) -> Trees:
     if not os.path.exists(path):
         return trees
 
-    for group, mid, entry, in_file_source in _xliff_messages(path, root):
+    rel = os.path.relpath(path, root)
+    try:
+        units = list(_xliff_messages(path))
+    except Exception as exc:  # noqa: BLE001 - the message is what gets reported
+        # One unparseable file is the whole locale here, so it has to be
+        # reported rather than raised: the health check says so and the run
+        # carries on to the next locale.
+        trees.syntax_errors[rel] = str(exc)
+        return trees
+
+    for group, mid, entry, in_file_source in units:
         key = (group, mid)
         trees.source_files.add(group)
         ref_value = ref_msgs.get(key)
@@ -184,8 +201,3 @@ def _xliff(project, locale, root) -> Trees:
             line=getattr(getattr(entry, "linepos", None), "start", 0) or 0,
         )
     return trees
-
-
-def locale_file(trees: Trees, rel: str) -> str:
-    """The localized file for a reference path, for display."""
-    return trees.locale_paths.get(rel, rel)

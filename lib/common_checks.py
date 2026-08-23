@@ -35,7 +35,6 @@ reported it separately.
 
 from __future__ import annotations
 
-import os
 import re
 from dataclasses import dataclass, field
 
@@ -46,8 +45,6 @@ from moz.l10n.model import (
     SelectMessage,
     VariableRef,
 )
-from moz.l10n.resource import parse_resource
-
 import conventions
 import variants
 from findings import Finding
@@ -264,12 +261,14 @@ def check_completeness(project, locale, trees) -> Health:
                 h.untranslated_files.append(file)
     h.untranslated_files.sort()
 
-    for rel in sorted(l_files):
-        path = os.path.join(trees.root, trees.locale_paths.get(rel, rel))
-        try:
-            parse_resource(path)
-        except Exception as exc:  # noqa: BLE001 - we want the message verbatim
-            h.syntax_errors.append(f"{rel}: {exc}")
+    # Recorded while the tree was loaded, verbatim. Re-parsing every file
+    # here to ask the same question doubled the work of a run, and where many
+    # keys resolve to one file -- 95 XLIFF groups in a single 684 KB file --
+    # it re-read that file once per key.
+    h.syntax_errors = [
+        f"{rel}: {message}"
+        for rel, message in sorted(getattr(trees, "syntax_errors", {}).items())
+    ]
     return h
 
 

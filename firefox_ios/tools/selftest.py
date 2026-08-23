@@ -22,8 +22,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(_HERE)), "lib"))
 
 import checks  # noqa: E402
 import config  # noqa: E402
-import conventions  # noqa: E402
-import layout  # noqa: E402
+import selftest_lib  # noqa: E402
 
 # Real defects in the repository today.
 MUST_FIND = [
@@ -59,24 +58,12 @@ COMPLETENESS = [
 
 
 def run(l10n_dir, project) -> int:
-    passed = failed = 0
-
-    def check(ok, label):
-        nonlocal passed, failed
-        print(f"  {'PASS' if ok else 'FAIL'}  {label}")
-        if ok:
-            passed += 1
-        else:
-            failed += 1
-
-    needed = sorted(
-        {loc for loc, *_ in MUST_FIND + MUST_BE_SILENT} | {loc for loc, *_ in COMPLETENESS}
+    suite = selftest_lib.Suite()
+    check = suite.check
+    results = selftest_lib.load_results(
+        project, checks, l10n_dir, l10n_dir,
+        [loc for loc, *_ in MUST_FIND + MUST_BE_SILENT + COMPLETENESS],
     )
-    results = {}
-    for locale in needed:
-        trees = layout.load(project, locale, l10n_dir, l10n_dir)
-        counts = conventions.detect(locale, trees.l10n)
-        results[locale] = checks.run_all(project, locale, trees, counts) + (trees,)
 
     print("XLIFF layout")
     trees = results["it"][2]
@@ -91,7 +78,7 @@ def run(l10n_dir, project) -> int:
     check(all(v.endswith("firefox-ios.xliff") for v in trees.locale_paths.values()),
           "every group maps back to the one physical file")
 
-    print("\nThe source is the reference locale, not the target's own copy")
+    suite.section("The source is the reference locale, not the target's own copy")
     key = next(k for k, m in trees.l10n.items() if "%1$@" in m.text())
     import common_checks as cc
     check(trees.source[key].raw[""] is not trees.l10n[key].raw[""],
@@ -99,13 +86,13 @@ def run(l10n_dir, project) -> int:
     check(cc._specs(trees.source[key].raw[""]),
           "the source message still carries its placeholder specs")
 
-    print("\nPlaceholders")
+    suite.section("Placeholders")
     check([m[4] for m in cc.PRINTF.findall("%@ and %1$@")] == ["@", "@"],
           "the shared regex accepts iOS's %@ and %1$@")
     check([m[4] for m in cc.PRINTF.findall("%d and %1$s")] == ["d", "s"],
           "and still accepts the Android forms")
 
-    print("\nCompleteness")
+    suite.section("Completeness")
     for locale, shape in COMPLETENESS:
         health, _, trees_ = results[locale][0], None, results[locale][2]
         units = len(trees_.source)
@@ -120,41 +107,18 @@ def run(l10n_dir, project) -> int:
                   f"{locale}: barely started ({health.strings} of {units}) -- an "
                   "empty target counts as untranslated, not as an empty string")
 
-    print("\nDefects that are really there")
-    for locale, kind, string_id in MUST_FIND:
-        _, found, _ = results[locale]
-        hit = any(f.check == kind and f.string_id == string_id for f in found)
-        check(hit, f"{locale}: {kind} on {string_id}")
+    selftest_lib.must_find(suite, results, MUST_FIND)
+    selftest_lib.must_be_silent(suite, results, MUST_BE_SILENT)
 
-    print("\nMust stay silent")
-    for locale, kind, why in MUST_BE_SILENT:
-        health = results[locale][0]
-        n = health.counts.get(kind, 0)
-        check(n == 0, f"{locale}: {kind} = {n} ({why})")
-
-    print("\nProject wiring")
+    suite.section("Project wiring")
     for absent in ("plurals", "selectors", "markup", "escaping", "variables"):
         check(absent not in project.checks,
               f"`{absent}` is not run: it cannot fire in this project")
     check(project.baseline_strategy == "batched",
           "from-scratch reviews are batched, not agent-driven")
 
-    # The pull request body leads with findings the reviewer flagged as
-    # reading like a deliberate edit. Nothing can be flagged if the field
-    # never reaches the model, and the two files that carry it are per
-    # project, so each project pins its own.
-    import json as _json
-    _schema = _json.loads(project.prompt("finding_schema.json"))
-    _props = _schema["input_schema"]["properties"]["findings"]["items"]
-    check("reads_as_deliberate" in _props["required"],
-          "the reviewer is asked, on every finding, whether it reads as a "
-          "deliberate edit")
-    for _name in ("incremental_review.md", "variant_review.md"):
-        check("reads_as_deliberate" in project.prompt(_name),
-              f"{_name} tells it what that means")
-
-    print(f"\n{passed} passed, {failed} failed")
-    return 1 if failed else 0
+    selftest_lib.deliberate_flag_wiring(suite, project)
+    return suite.report()
 
 
 def main(argv=None) -> int:

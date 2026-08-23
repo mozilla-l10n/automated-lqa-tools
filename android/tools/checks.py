@@ -82,7 +82,7 @@ def check_escaping(project, locale, l10n, trees) -> list[Finding]:
                 current=body.strip()[:200],
                 rationale=(
                     f"An unescaped {bad} in an Android string resource fails the build "
-                    f"(“Unescaped apostrophe in string”). Write \\\\{bad}, or "
+                    f"(“Unescaped apostrophe in string”). Write \\{bad}, or "
                     "wrap the whole value in double quotes."
                 ),
                 impact=1,

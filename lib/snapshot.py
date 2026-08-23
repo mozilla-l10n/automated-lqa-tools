@@ -48,9 +48,6 @@ class Delta:
             seen[k] = None
         return list(seen)
 
-    def is_empty(self) -> bool:
-        return not (self.new or self.changed or self.source_changed or self.removed)
-
     def summary(self) -> str:
         return (
             f"new={len(self.new)} changed={len(self.changed)} "

@@ -17,6 +17,7 @@ Three conventions are inherited from those reviews and are deliberate:
 from __future__ import annotations
 
 import os
+from dataclasses import dataclass, field
 
 import conventions as conv
 import findings as findings_mod
@@ -32,30 +33,30 @@ MAX_LISTED = 60  # per category, before collapsing to a count
 # level. GitHub accepts four spaces too, so both renderings agree.
 SUB = "    - "
 
-# A finding is keyed by the *reference* path, because that is the one
-# identifier every locale shares and so the one that state can be stored
-# against. A reader wants the file they would actually edit, though, so
-# reports translate it back. For a mirrored layout the two are the same.
-_PATHS: dict = {}
+@dataclass(frozen=True)
+class Ctx:
+    """What rendering needs about the tree, passed rather than stashed.
 
-# The source-language text, looked up per finding rather than stored on it.
-# `suggest` means one thing -- a proposed correction -- and the source string
-# is shown separately; conflating them labelled Italian suggestions "en-US".
-_SOURCE: dict = {}
+    ``paths`` maps a finding's *reference* path -- the one identifier every
+    locale shares, and so the one state can be stored against -- to the file
+    a reader would actually edit. For a mirrored layout the two are equal.
 
+    ``source`` is the source-language text, looked up per finding rather than
+    stored on it: ``suggest`` means one thing, a proposed correction, and the
+    source string is shown separately. Conflating them once labelled Italian
+    suggestions "en-US".
 
-def use_paths(mapping: dict) -> None:
-    global _PATHS
-    _PATHS = mapping or {}
+    These were module-level globals set by a pair of ``use_*`` functions the
+    caller had to remember to call in the right order before every render.
+    Forgetting one rendered a locale's report against the previous locale's
+    paths, and nothing said so.
+    """
 
+    paths: dict = field(default_factory=dict)
+    source: dict = field(default_factory=dict)
 
-def use_source(messages: dict) -> None:
-    global _SOURCE
-    _SOURCE = messages or {}
-
-
-def _path(rel: str) -> str:
-    return _PATHS.get(rel, rel)
+    def path(self, rel: str) -> str:
+        return self.paths.get(rel, rel)
 
 
 def _esc(text: str, limit: int = 220) -> str:
@@ -65,11 +66,11 @@ def _esc(text: str, limit: int = 220) -> str:
     return text
 
 
-def _item(f) -> str:
-    bits = [f"- `{f.string_id}` — `{_path(f.file)}` — {f.summary}"]
+def _item(f, ctx) -> str:
+    bits = [f"- `{f.string_id}` — `{ctx.path(f.file)}` — {f.summary}"]
     if f.current:
         bits.append(f"{SUB}Current: `{_esc(f.current)}`")
-    src = _SOURCE.get(f.key)
+    src = ctx.source.get(f.key)
     source_text = src.text() if src is not None else ""
     if source_text and source_text.strip() != (f.current or "").strip():
         bits.append(f"{SUB}Source: `{_esc(source_text)}`")
@@ -80,17 +81,17 @@ def _item(f) -> str:
     return "\n".join(bits)
 
 
-def _group(findings: list, title: str, empty: str = "_Nothing in this category._") -> str:
+def _group(findings: list, title: str, ctx, empty: str = "_Nothing in this category._") -> str:
     if not findings:
         return f"{title}\n\n{empty}\n"
     shown = findings[:MAX_LISTED]
-    body = "\n".join(_item(f) for f in shown)
+    body = "\n".join(_item(f, ctx) for f in shown)
     if len(findings) > MAX_LISTED:
         body += f"\n- _…and {len(findings) - MAX_LISTED} more; see `state/` for the full list._"
     return f"{title}\n\n{body}\n"
 
 
-def _deliberate_callout(open_findings: list) -> str:
+def _deliberate_callout(open_findings: list, ctx) -> str:
     """Lead with the findings that read as an intentional edit.
 
     These are ordinary impact-2 mistranslations by the numbers, so they
@@ -102,7 +103,7 @@ def _deliberate_callout(open_findings: list) -> str:
     if not flagged:
         return ""
     body = "\n".join(
-        _item(f) for f in sorted(flagged, key=lambda f: (f.file, f.string_id))
+        _item(f, ctx) for f in sorted(flagged, key=lambda f: (f.file, f.string_id))
     )
     return (
         f"> **Reads as a deliberate edit ({len(flagged)}).** The translation "
@@ -114,7 +115,7 @@ def _deliberate_callout(open_findings: list) -> str:
     )
 
 
-def _health_table(h, counts) -> str:
+def _health_table(h) -> str:
     rows = [
         "| Check | Result |",
         "|---|---|",
@@ -143,24 +144,24 @@ def _health_table(h, counts) -> str:
         if check in h.skipped:
             rows.append(f"| {label} | _skipped for this locale_ |")
         else:
-            rows.append(f"| {label} | {counts.get(check, 0)} |")
+            rows.append(f"| {label} | {h.counts.get(check, 0)} |")
     return "\n".join(rows)
 
 
-def _missing_detail(h) -> str:
+def _missing_detail(h, ctx) -> str:
     if not h.missing and not h.missing_files and not h.untranslated_files:
         return "The locale is complete against the en-US source.\n"
     out = []
     if h.missing:
         top = sorted(h.missing_by_file.items(), key=lambda kv: -kv[1])[:12]
-        listed = "\n".join(f"- `{_path(f)}` — {n}" for f, n in top)
+        listed = "\n".join(f"- `{ctx.path(f)}` — {n}" for f, n in top)
         out.append(
             f"**{h.missing:,} strings** are not translated yet, concentrated in:\n\n{listed}\n"
         )
     if h.missing_files:
         out.append(
             "**Files absent from the locale:**\n\n"
-            + "\n".join(f"- `{_path(f)}`" for f in h.missing_files[:20])
+            + "\n".join(f"- `{ctx.path(f)}`" for f in h.missing_files[:20])
             + "\n"
         )
     if h.untranslated_files:
@@ -191,7 +192,7 @@ def _systemic(systemic: list[dict]) -> str:
     return "\n".join(out) + "\n"
 
 
-def _delta_section(delta_report: dict) -> str:
+def _delta_section(delta_report: dict, ctx) -> str:
     parts = []
     for key, title, empty in (
         ("new", "🆕 New findings", "No new findings."),
@@ -203,7 +204,7 @@ def _delta_section(delta_report: dict) -> str:
     ):
         items = delta_report.get(key) or []
         if items:
-            body = "\n".join(_item(f) for f in items[:MAX_LISTED])
+            body = "\n".join(_item(f, ctx) for f in items[:MAX_LISTED])
             if len(items) > MAX_LISTED:
                 body += f"\n- _…and {len(items) - MAX_LISTED} more._"
         else:
@@ -259,7 +260,9 @@ def _siblings(locale: str, project: str) -> str:
     return f"Also for {locale}: {links}"
 
 
-def render(locale, meta, health, counts, findings, systemic, delta_report, counts_conv, rules) -> str:
+def render(locale, meta, health, findings, systemic, delta_report, counts_conv, rules,
+           ctx: Ctx | None = None) -> str:
+    ctx = ctx or Ctx()
     open_findings = [f for f in findings if f.is_open]
     suppressed = [f for f in findings if f.status == "suppressed"]
     dismissed = [f for f in findings if f.status == "dismissed"]
@@ -293,16 +296,16 @@ def render(locale, meta, health, counts, findings, systemic, delta_report, count
         "",
         f"## Changes in this run",
         "",
-        _delta_section(delta_report),
+        _delta_section(delta_report, ctx),
         "---",
         "",
         "## 1. Health check",
         "",
-        _health_table(health, counts),
+        _health_table(health),
         "",
         "### Completeness",
         "",
-        _missing_detail(health),
+        _missing_detail(health, ctx),
     ]
 
     if health.syntax_errors:
@@ -331,7 +334,7 @@ def render(locale, meta, health, counts, findings, systemic, delta_report, count
         "",
         f"## 3. Open findings ({len(open_findings)})",
         "",
-        _deliberate_callout(open_findings),
+        _deliberate_callout(open_findings, ctx),
         "| Impact | Meaning | Count |",
         "|---|---|---|",
     ]
@@ -344,7 +347,7 @@ def render(locale, meta, health, counts, findings, systemic, delta_report, count
             (f for f in open_findings if f.category == code),
             key=lambda f: (f.file, f.string_id),
         )
-        lines.append(_group(group, f"### {code}. {title}"))
+        lines.append(_group(group, f"### {code}. {title}", ctx))
 
     lines += [
         "---",
@@ -355,7 +358,7 @@ def render(locale, meta, health, counts, findings, systemic, delta_report, count
         "",
         (
             "\n".join(
-                f"- `{f.string_id}` — `{_path(f.file)}` — {f.dismissed_because}"
+                f"- `{f.string_id}` — `{ctx.path(f.file)}` — {f.dismissed_because}"
                 for f in sorted(dismissed, key=lambda f: f.string_id)[:40]
             )
             or "_Nothing dismissed._"
@@ -393,7 +396,7 @@ def render(locale, meta, health, counts, findings, systemic, delta_report, count
         "",
         (
             "\n".join(
-                f"- `{f.string_id}` — `{_path(f.file)}` — raised by `{f.check}`, "
+                f"- `{f.string_id}` — `{ctx.path(f.file)}` — raised by `{f.check}`, "
                 f"withdrawn {f.resolved_on}"
                 for f in sorted(withdrawn_total, key=lambda f: f.resolved_on, reverse=True)[:20]
             )
@@ -409,7 +412,7 @@ def render(locale, meta, health, counts, findings, systemic, delta_report, count
         "",
         (
             "\n".join(
-                f"- `{f.string_id}` — `{_path(f.file)}` — fixed {f.resolved_on}"
+                f"- `{f.string_id}` — `{ctx.path(f.file)}` — fixed {f.resolved_on}"
                 for f in sorted(fixed_total, key=lambda f: f.resolved_on, reverse=True)[:40]
             )
             or "_Nothing fixed yet._"
