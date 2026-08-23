@@ -70,6 +70,12 @@ OPEN_STATUSES = {"open", "needs-recheck"}
 # finding is fixed, not withdrawn, even though its own string never moved.
 CROSS_STRING_CHECKS = {"ui_references"}
 
+# `check` values that name no check of their own. When a deterministic check
+# turns out to be re-deriving one of these -- word for word, see
+# `unique_by_wording` -- it takes the record over, so the next run can resolve
+# it authoritatively instead of guessing from the text.
+UNATTRIBUTED_CHECKS = {"legacy"}
+
 
 @dataclass
 class Finding:
@@ -203,24 +209,86 @@ def merge(existing: list[Finding], fresh: list[Finding], today: str) -> tuple[li
     """Fold this run's findings into the stored backlog.
 
     Returns ``(all_findings, newly_raised)``. A fresh finding that matches a
-    stored one -- by identity, or failing that by (string id, category) --
-    refreshes it instead of duplicating it. Re-raising something that had
-    been marked fixed reopens it.
+    stored one refreshes it instead of duplicating it; re-raising something
+    that had been marked fixed reopens it.
+
+    Matching is by ``fid`` first. The fallback exists for one case only: a
+    check or the model rewording the *same* complaint, which changes the
+    ``fid`` because the summary is folded into it. So the fallback is
+    ``rekey`` -- file, string id, category **and check** -- and it is used
+    only when exactly one stored finding and exactly one fresh finding share
+    it. Anything else is two complaints, and two complaints are two findings.
+
+    Both halves of that were wrong before. The key left ``check`` out, so a
+    model finding could silently overwrite a typography one on the same
+    string; and it applied however many findings shared it, so the second of
+    two genuine defects on one string simply replaced the first. That is not
+    a hypothetical: an es-MX message with two different broken access keys,
+    en-GB strings carrying both a straight quote and a straight apostrophe,
+    and Czech strings flagged by both `variables` and `selectors` came to
+    thirteen real findings that never reached the backlog.
     """
     by_fid = {f.fid: f for f in existing}
-    by_loose: dict[tuple[str, str, str], Finding] = {}
-    for f in existing:
-        by_loose.setdefault((f.file, f.string_id, f.category), f)
 
+    def unique_by_rekey(items):
+        """Findings whose rekey belongs to exactly one of them."""
+        seen: dict[tuple, list] = {}
+        for f in items:
+            seen.setdefault(f.rekey, []).append(f)
+        return {k: v[0] for k, v in seen.items() if len(v) == 1}
+
+    stored_unique = unique_by_rekey(existing)
+    fresh_unique = unique_by_rekey(fresh)
+
+    def unique_by_wording(items):
+        """Stored findings indexed by what they actually say.
+
+        ``fid`` is assigned once and kept, but ``merge`` refreshes a
+        finding's summary without recomputing it, so a record that has ever
+        been reworded no longer hashes to its own text -- and an import
+        carries a ``fid`` from a scheme that no longer exists at all. Two
+        findings that say the identical thing about the identical string are
+        the same complaint whoever raised it, and this is what lets the
+        deterministic check that now derives a defect adopt the imported or
+        model-raised record instead of forking it.
+
+        Requiring the wording to match exactly is what makes this safe: it
+        cannot merge two *different* complaints, which is the whole point of
+        keeping them apart.
+        """
+        seen: dict[tuple, list] = {}
+        for f in items:
+            seen.setdefault(
+                (f.file, f.string_id, f.category, normalize(f.summary)), []
+            ).append(f)
+        return {k: v[0] for k, v in seen.items() if len(v) == 1}
+
+    by_wording = unique_by_wording(existing)
+
+    claimed = {g.fid for g in fresh}
     raised: list[Finding] = []
     for f in fresh:
-        match = by_fid.get(f.fid) or by_loose.get((f.file, f.string_id, f.category))
+        match = by_fid.get(f.fid)
+        if match is None and f.rekey in fresh_unique and fresh_unique[f.rekey] is f:
+            wording = (f.file, f.string_id, f.category, normalize(f.summary))
+            candidate = stored_unique.get(f.rekey) or by_wording.get(wording)
+            # Do not let the loose match steal a stored finding that some
+            # other fresh finding already claims by fid.
+            if candidate is not None and candidate.fid not in claimed:
+                match = candidate
+                if candidate.check in UNATTRIBUTED_CHECKS and f.check != "llm":
+                    # The check that derived it now owns it, so the next run
+                    # can resolve it authoritatively instead of guessing from
+                    # the text. Only for an import, which names no check: a
+                    # model finding keeps `llm`, because the model cannot
+                    # re-derive it and text matching must stay in charge.
+                    candidate.check = f.check
+                by_wording.pop(wording, None)
         if match is None:
             f.first_seen = f.first_seen or today
             f.last_seen = today
             existing.append(f)
             by_fid[f.fid] = f
-            by_loose.setdefault((f.file, f.string_id, f.category), f)
             raised.append(f)
             continue
         match.last_seen = today

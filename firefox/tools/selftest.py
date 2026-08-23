@@ -217,29 +217,6 @@ def run(l10n_dir, source_dir, project) -> int:
     check(_resolve(stayed, "samehash") == "withdrawn",
           "a check finding dropped while the string never moved is withdrawn, not fixed")
 
-    suite.section("Silence from the reviewer closes nothing a check answers for")
-    # close_reviewed exists so a model finding can be closed when the
-    # reviewer re-reads the string and does not repeat it. It once ran over
-    # every open finding, so a typography or ui_references defect the check
-    # had just re-raised was closed as fixed on the sole evidence that the
-    # *model* had not also mentioned it.
-    _key = {("a.ftl", "s1")}
-
-    def _closed(check_name, rerunnable):
-        f = _F(locale="xx", file="a.ftl", string_id="s1", category="E",
-               check=check_name, summary="straight apostrophe",
-               string_hash="old", status="open")
-        findings_mod.close_reviewed([f], _key, set(), _key, "2026-01-01", rerunnable)
-        return f.status
-
-    check(_closed("typography", {"typography", "markup"}) == "open",
-          "a check finding stays open when its check ran and re-raised it, "
-          "however quiet the reviewer was")
-    check(_closed("typography", {"markup"}) == "fixed",
-          "but a check that was skipped this run falls back to the reviewer")
-    check(_closed("llm", {"typography"}) == "fixed",
-          "and a model finding the reviewer re-read in silence still closes")
-
     suite.section("Plural categories")
     import plurals
     check(plurals.categories_for("ja") == frozenset({"other"}),
@@ -316,9 +293,10 @@ def run(l10n_dir, source_dir, project) -> int:
           "silence about an unchanged string closes nothing")
 
     suite.section("Dismissing one finding by hand")
+    import os as _os
+    import tempfile
+
     import dismiss as _d
-    parsed = _d.load.__wrapped__ if hasattr(_d.load, "__wrapped__") else None
-    import tempfile, os as _os
     tmp = tempfile.mkdtemp()
     _os.makedirs(_os.path.join(tmp, "locales", "it"), exist_ok=True)
     with open(_os.path.join(tmp, "locales", "it", "dismissed.txt"), "w") as fh:
@@ -482,12 +460,12 @@ def run(l10n_dir, source_dir, project) -> int:
             return "h"
 
     tree = {("a.ftl", "s"): _Msg()}
-    got, bad = _llm.collect(
+    got, bad, _ok = _llm.collect(
         [_Block({"findings": ["not a finding", real]})], "it", tree)
     check(len(got) == 1 and bad == 1,
           "a malformed item is dropped and counted, and the rest of the "
           "batch survives it")
-    got, bad = _llm.collect([_Block({"findings": "everything is fine"})],
+    got, bad, _ok = _llm.collect([_Block({"findings": "everything is fine"})],
                             "it", tree)
     check(got == [] and bad == 1, "so is a findings list that is not a list")
 
@@ -584,15 +562,15 @@ def run(l10n_dir, source_dir, project) -> int:
 
     abusive = dict(real, reads_as_deliberate=True,
                    summary="says the browser lies", current="vecchio")
-    got, _ = _llm.collect([_Block({"findings": [abusive]})], "it", tree)
+    got, _, _ok = _llm.collect([_Block({"findings": [abusive]})], "it", tree)
     check(got and got[0].reads_as_deliberate,
           "a B/2 finding the reviewer flagged keeps the flag")
     cosmetic = dict(abusive, category="E", impact=4)
-    got, _ = _llm.collect([_Block({"findings": [cosmetic]})], "it", tree)
+    got, _, _ok = _llm.collect([_Block({"findings": [cosmetic]})], "it", tree)
     check(got and not got[0].reads_as_deliberate,
           "the same flag on a typography finding is dropped: spacing cannot "
           "put words in the product's mouth")
-    plain, _ = _llm.collect([_Block({"findings": [real]})], "it", tree)
+    plain, _, _ok = _llm.collect([_Block({"findings": [real]})], "it", tree)
     check(plain and not plain[0].reads_as_deliberate,
           "and an ordinary mistranslation is not flagged by default")
 
@@ -649,23 +627,6 @@ def run(l10n_dir, source_dir, project) -> int:
     check(h.status == "open", "non-matching finding stays open")
     suppress.apply([], [g, h])
     check(g.status == "open" and not g.suppressed_by, "removing the rule restores the finding")
-    # Editing a rule in place is the common case -- the id stays, the match
-    # narrows -- and keying the restore on the id meant those findings stayed
-    # suppressed for ever, which the retroactive-and-reversible promise rules
-    # out.
-    suppress.apply([rule], [g])
-    narrowed = Rule({"id": "r", "reason": "because",
-                     "match": {"check": "plurals"}}, 0)
-    suppress.apply([narrowed], [g])
-    check(g.status == "open" and not g.suppressed_by,
-          "narrowing a rule while keeping its id restores the finding too")
-    dismissed = Finding(locale="xx", file="a.ftl", string_id="felt-error-y",
-                        category="E", check="typography", summary="straight apostrophe",
-                        status="dismissed", dismissed_because="read it, it is fine")
-    suppress.apply([rule], [dismissed])
-    check(dismissed.status == "dismissed"
-          and dismissed.dismissed_because == "read it, it is fine",
-          "a class rule does not overwrite a hand dismissal or its reason")
 
     rule_suggest = Rule({"id": "s", "reason": "r",
                          "match": {"suggest": r"re:\battivat[aoie]\b"}}, 0)
@@ -713,6 +674,11 @@ def run(l10n_dir, source_dir, project) -> int:
     check(covered >= {k[0] for k in it.l10n},
           "the partitioned paths are the ones messages are keyed by, so a "
           "baseline can say which strings it reviewed")
+
+    # Everything that needs no clone lives in one place, so CI can run it on
+    # a bare checkout. Run it here too: a suite nobody invokes locally rots.
+    import selftest_unit
+    selftest_unit.run(suite)
 
     return suite.report()
 

@@ -155,6 +155,17 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
     l10n, source = trees.l10n, trees.source
     if not l10n:
         raise RuntimeError(f"no strings parsed for {locale} under {l10n_root}")
+    if not source:
+        # Every check and every prompt is a comparison against en-US. With no
+        # source at all they all still "run", quietly: the model sees strings
+        # with no reference, the source hashes vanish from the snapshot so
+        # nothing looks stale again, and the health table reports a complete
+        # locale. A wrong --source-dir must not look like a clean run.
+        raise RuntimeError(
+            f"no source strings parsed under {source_root}; every check and "
+            "every review compares against en-US, so there is nothing to "
+            "review. Check --source-dir."
+        )
     log(f"  parsed {len(l10n):,} strings from {len(trees.l10n_files)} files, mode={mode}")
 
     counts_conv = conventions.detect(locale, l10n)
@@ -174,6 +185,9 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
     llm_findings: list = []
     reviewed = 0
     reviewed_keys: set = set()
+    # Strings whose review came back well formed. Only these may be read as
+    # reviewer silence; `reviewed_keys` merely advances the snapshot.
+    trusted_keys: set = set()
     incomplete = ""
     if args.no_llm:
         log("  model review skipped (--no-llm)")
@@ -189,6 +203,7 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
         )
         log(f"  model usage: {usage}")
         reviewed_keys = progress.reviewed
+        trusted_keys = progress.trusted
         reviewed = len(reviewed_keys)
         incomplete = progress.stopped
     elif mode == "baseline":
@@ -196,16 +211,26 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
         log("  baseline review of the whole tree")
         # trees.root, not l10n_root: partitions are written against the
         # paths a message key uses, which are relative to the locale tree.
-        llm_findings, empty, reviewed_files = llm_baseline.review(
+        pass_ = llm_baseline.review(
             project, locale, trees.root, source_root, l10n, trees,
             only=args.partitions, log=log,
         )
-        # Only the partitions that actually ran count as reviewed.
-        covered = set(reviewed_files or trees.l10n_files)
-        reviewed_keys = {k for k in l10n if k[0] in covered}
+        llm_findings = pass_.findings
+        # Only the partitions that actually succeeded count as reviewed. No
+        # fallback to the whole tree: `covered` being empty means every
+        # partition failed, and reading that as "all of it was reviewed" is
+        # how a locale used to be marked complete without a string being read.
+        reviewed_keys = {k for k in l10n if k[0] in pass_.covered}
+        trusted_keys = reviewed_keys
         reviewed = len(reviewed_keys)
-        if empty:
-            log(f"  partitions returning nothing: {', '.join(sorted(empty))}")
+        if pass_.clean:
+            log(f"  partitions returning nothing: {', '.join(sorted(pass_.clean))}")
+        if pass_.failed:
+            names = ", ".join(sorted(n for n, _ in pass_.failed))
+            incomplete = (
+                f"did not review {len(pass_.failed)} of {pass_.attempted} "
+                f"partition(s): {names}. Re-run with --partitions {names}"
+            )
     else:
         keys = delta.to_review
         if args.recheck:
@@ -233,6 +258,7 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
             )
             log(f"  model usage: {usage}")
             reviewed_keys = progress.reviewed
+            trusted_keys = progress.trusted
             reviewed = len(reviewed_keys)
             incomplete = progress.stopped
         else:
@@ -248,7 +274,11 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
     if noop:
         log(f"  retired {len(noop)} finding(s) that proposed no change")
 
-    rerunnable = {c for c in checks.CHECKS if c not in health.skipped}
+    # What actually ran, reported by the runner rather than reconstructed
+    # from the registry: `checks.CHECKS` is every check the module can offer,
+    # and a project runs the subset its config lists. Resolving against the
+    # registry withdrew or "fixed" findings from checks that never executed.
+    rerunnable = set(health.ran)
     still_raised = {f.fid for f in check_findings}
     resolved = findings_mod.resolve(
         stored, l10n, delta_keys, today(), rerunnable, still_raised,
@@ -274,7 +304,7 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
         if f.key in l10n and f.string_hash and f.string_hash != l10n[f.key].hash()
     }
     reclosed = findings_mod.close_reviewed(
-        stored, reviewed_keys, llm_fids, trusted, today(), rerunnable
+        stored, trusted_keys, llm_fids, trusted, today(), rerunnable
     )
     if reclosed:
         log(f"  closed {len(reclosed)} finding(s) the reviewer did not repeat")

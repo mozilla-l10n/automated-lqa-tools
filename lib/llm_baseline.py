@@ -33,6 +33,7 @@ import re
 import shutil
 import subprocess
 import tempfile
+from dataclasses import dataclass, field
 
 from findings import Finding
 from llm_incremental import language_of
@@ -202,11 +203,46 @@ def _parse_result(text: str):
     return None, "no JSON object in the reply"
 
 
+@dataclass
+class Baseline:
+    """The result of a whole baseline pass.
+
+    ``clean`` and ``failed`` are kept apart because they mean opposite
+    things: a clean partition is evidence, a failed one is the absence of it.
+    They used to share one list called ``empty``.
+    """
+
+    findings: list = field(default_factory=list)
+    clean: list = field(default_factory=list)
+    covered: set = field(default_factory=set)
+    failed: list = field(default_factory=list)
+    attempted: int = 0
+
+
+@dataclass
+class Outcome:
+    """What one partition did.
+
+    ``ok`` is the whole point. ``_run_partition`` used to return ``[]`` for a
+    clean partition *and* for a timeout, a non-zero exit, unreadable CLI
+    output, an agent error and an unparseable reply -- so the caller could not
+    tell "this surface is fine" from "nobody looked". It counted the files
+    either way, advanced their snapshot hashes, and the strings were never
+    offered to a reviewer again. A transient timeout permanently skipped a
+    ninth of the locale.
+    """
+
+    name: str
+    ok: bool
+    findings: list = field(default_factory=list)
+    reason: str = ""
+
+
 def _run_partition(project, locale, l10n_root, source_root, name, files, log,
                    locale_paths=None):
     if not files:
         log(f"    partition {name}: no files, skipped")
-        return []
+        return Outcome(name, True)
 
     # Partitioning works in *reference* paths, because that is what a message
     # key is made of and so what the caller can turn back into reviewed
@@ -246,22 +282,22 @@ def _run_partition(project, locale, l10n_root, source_root, name, files, log,
         )
     except subprocess.TimeoutExpired:
         log(f"    partition {name}: timed out; re-run it with --partitions {name}")
-        return []
+        return Outcome(name, False, reason="timed out")
 
     if proc.returncode != 0:
         log(f"    partition {name}: exit {proc.returncode}: {proc.stderr[-400:]}")
-        return []
+        return Outcome(name, False, reason=f"exit {proc.returncode}")
 
     try:
         envelope = json.loads(proc.stdout)
     except json.JSONDecodeError:
         log(f"    partition {name}: unreadable CLI output: {proc.stdout[:300]}")
-        return []
+        return Outcome(name, False, reason="unreadable CLI output")
 
     if envelope.get("is_error"):
         log(f"    partition {name}: agent reported an error: "
             f"{str(envelope.get('result'))[:300]}")
-        return []
+        return Outcome(name, False, reason="the agent reported an error")
 
     denials = envelope.get("permission_denials") or []
     if denials:
@@ -273,8 +309,8 @@ def _run_partition(project, locale, l10n_root, source_root, name, files, log,
     if data is None:
         log(f"    partition {name}: reply was not JSON ({error}); "
             f"re-run it with --partitions {name}")
-        return []
-    return data.get("findings", [])
+        return Outcome(name, False, reason=f"reply was not JSON ({error})")
+    return Outcome(name, True, findings=data.get("findings", []))
 
 
 def _claude_bin() -> str:
@@ -318,34 +354,43 @@ def review(project, locale, l10n_root, source_root, l10n, trees=None, only=None,
     partitions = [(n, f) for n, f in buckets.items() if not only or n in only]
 
     results: list[Finding] = []
-    empty: list[str] = []
+    clean: list[str] = []
+    failed: list[tuple[str, str]] = []
     covered: set[str] = set()
-
-    for _name, files in partitions:
-        covered.update(files)
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         futures = {
             pool.submit(
                 _run_partition, project, locale, l10n_root, source_root,
                 name, files, log, locale_paths,
-            ): name
+            ): (name, files)
             for name, files in partitions
         }
         for future in concurrent.futures.as_completed(futures):
-            name = futures[future]
+            name, files = futures[future]
             try:
-                raw_findings = future.result()
-            except Exception as exc:  # noqa: BLE001
+                outcome = future.result()
+            except Exception as exc:  # noqa: BLE001 - one partition, not the run
                 log(f"    partition {name} failed: {exc}")
-                empty.append(name)
+                failed.append((name, str(exc)))
                 continue
-            if not raw_findings:
-                empty.append(name)
-            for raw in raw_findings:
+            if not outcome.ok:
+                failed.append((name, outcome.reason))
+                continue
+            # Only now are these files reviewed. A partition that failed
+            # leaves its files out of `covered`, so their snapshot hashes do
+            # not advance and the next run offers them again.
+            covered.update(files)
+            if not outcome.findings:
+                clean.append(name)
+            for raw in outcome.findings:
                 finding = _to_finding(locale, raw, l10n)
                 if finding is not None:
                     results.append(finding)
 
-    log(f"    baseline: {len(results)} findings from {len(partitions)} partitions")
-    return results, empty, covered
+    log(f"    baseline: {len(results)} findings from "
+        f"{len(partitions) - len(failed)} of {len(partitions)} partitions")
+    if failed:
+        log("    did NOT review: "
+            + "; ".join(f"{n} ({why})" for n, why in sorted(failed)))
+    return Baseline(results, clean, covered, failed, len(partitions))

@@ -71,7 +71,12 @@ locales:
 # and defined in tools/checks.py.
 checks:
   - variables
-  - selectors
+  # `selectors` is deliberately absent: `_vars()` adds a message's selectors
+  # back into the variable set, and both checks compare against the same
+  # `_message_vars(src)`, so every selector `selectors` would report is
+  # already an undefined variable that `variables` reports. Verified across
+  # all twenty locales: 7 selectors findings, 0 of them missed by variables.
+  # Android is the mirror image -- it runs `selectors` and not `variables`.
   - term_params
   - plurals
   - accesskey

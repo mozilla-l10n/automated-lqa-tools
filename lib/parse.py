@@ -62,6 +62,12 @@ class Msg:
         )
 
     def hash(self) -> str:
+        """Content hash: the message's own text, and nothing else.
+
+        Deliberately not the comment. This is what a finding records as the
+        string it was raised against, so a comment edit must not make an
+        untouched translation read as fixed.
+        """
         h = hashlib.sha1()
         for k in sorted(self.props):
             h.update(k.encode())
@@ -69,6 +75,19 @@ class Msg:
             h.update(self.props[k].encode())
             h.update(b"\x01")
         return h.hexdigest()[:8]
+
+    def context_hash(self) -> str:
+        """Hash of the developer comment.
+
+        Used only on the source side, only to decide whether a translation is
+        worth re-reviewing. The comment goes into the review prompt and is
+        often the only thing that says what a string means, so a corrected
+        en-US comment can turn a plausible translation into a wrong one --
+        and with the text unchanged, nothing else would ever notice.
+        """
+        if not self.comment:
+            return ""
+        return hashlib.sha1(self.comment.encode()).hexdigest()[:8]
 
 
 def _flatten(pattern) -> str:

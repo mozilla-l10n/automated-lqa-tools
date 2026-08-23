@@ -17,6 +17,7 @@ Three conventions are inherited from those reviews and are deliberate:
 from __future__ import annotations
 
 import os
+import re
 from dataclasses import dataclass, field
 
 import conventions as conv
@@ -66,16 +67,39 @@ def _esc(text: str, limit: int = 220) -> str:
     return text
 
 
+def fence(text: str) -> str:
+    """Wrap a translation in a code span it cannot break out of.
+
+    The values quoted in a report are real UI strings and some of them
+    contain backticks. Wrapped in a fixed single backtick, such a value ends
+    its own span, and everything after it is read as markdown -- so a string
+    containing ``x` [click](javascript:alert(1))`` rendered an active link
+    into the published page. Escaping HTML, which the site does, does not
+    help: this is markdown, not HTML.
+
+    A fence longer than the longest run inside it cannot be terminated early,
+    which is the same rule ``summary.py`` uses for the pull request body.
+    """
+    longest = max((len(r) for r in re.findall(r"`+", text)), default=0)
+    pad = " " if text.startswith("`") or text.endswith("`") else ""
+    return f"{'`' * (longest + 1)}{pad}{text}{pad}{'`' * (longest + 1)}"
+
+
+def quoted(text: str, limit: int = 220) -> str:
+    """A translation, truncated for the report and safely fenced."""
+    return fence(_esc(text, limit))
+
+
 def _item(f, ctx) -> str:
     bits = [f"- `{f.string_id}` — `{ctx.path(f.file)}` — {f.summary}"]
     if f.current:
-        bits.append(f"{SUB}Current: `{_esc(f.current)}`")
+        bits.append(f"{SUB}Current: {quoted(f.current)}")
     src = ctx.source.get(f.key)
     source_text = src.text() if src is not None else ""
     if source_text and source_text.strip() != (f.current or "").strip():
-        bits.append(f"{SUB}Source: `{_esc(source_text)}`")
+        bits.append(f"{SUB}Source: {quoted(source_text)}")
     if f.suggest and f.suggest != f.current:
-        bits.append(f"{SUB}Suggest: `{_esc(f.suggest)}`")
+        bits.append(f"{SUB}Suggest: {quoted(f.suggest)}")
     if f.rationale:
         bits.append(f"{SUB}{_esc(f.rationale, 400)}")
     return "\n".join(bits)
@@ -125,6 +149,7 @@ def _health_table(h) -> str:
         f"| Obsolete strings | {h.obsolete:,} |",
         f"| Files absent from the locale | {len(h.missing_files)} |",
         f"| Fluent / properties syntax errors | {len(h.syntax_errors)} |",
+        f"| Reference files that did not parse | {len(h.source_errors)} |",
     ]
     labels = {
         "variables": "Variable & placeholder mismatches",
@@ -140,10 +165,14 @@ def _health_table(h) -> str:
         "markup": "Markup & `data-l10n-name` defects",
         "typography": "Typography deviations from this locale's own norm",
     }
+    # A check the project does not run is left out entirely rather than
+    # printed as zero. A zero is a result -- "we looked, there is nothing" --
+    # and the one thing this table must not do is report the absence of a
+    # check as the absence of defects.
     for check, label in labels.items():
         if check in h.skipped:
             rows.append(f"| {label} | _skipped for this locale_ |")
-        else:
+        elif check in h.ran:
             rows.append(f"| {label} | {h.counts.get(check, 0)} |")
     return "\n".join(rows)
 
@@ -294,7 +323,7 @@ def render(locale, meta, health, findings, systemic, delta_report, counts_conv, 
         "",
         "---",
         "",
-        f"## Changes in this run",
+        "## Changes in this run",
         "",
         _delta_section(delta_report, ctx),
         "---",
@@ -313,6 +342,20 @@ def render(locale, meta, health, findings, systemic, delta_report, counts_conv, 
             "### Syntax errors",
             "",
             "\n".join(f"- `{e}`" for e in health.syntax_errors[:20]),
+            "",
+        ]
+
+    if health.source_errors:
+        # Not the locale's defect, and said so plainly: until these parse,
+        # every comparison against them is missing.
+        lines += [
+            "### Reference files that did not parse",
+            "",
+            "\n".join(f"- `{e}`" for e in health.source_errors[:20]),
+            "",
+            "_These are en-US files, not this locale's. Nothing in them could "
+            "be compared against, so any finding they would have produced is "
+            "absent rather than clean._",
             "",
         ]
 

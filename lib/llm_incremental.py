@@ -18,7 +18,7 @@ from dataclasses import dataclass, field
 
 import anthropic
 
-from findings import Finding
+from findings import CATEGORIES, IMPACT, Finding
 
 LANGUAGE_NAMES = {
     "de": "German", "es-ES": "Spanish (Spain)", "es-MX": "Spanish (Mexico)",
@@ -111,7 +111,10 @@ def _call(client, model, system, batch, tool, max_tokens, attempts=4):
             status = getattr(exc, "status_code", None)
             if status is not None and 400 <= status < 500 and status != 429:
                 raise
-            time.sleep(min(2 ** attempt * 5, 60))
+            if attempt < attempts - 1:
+                # No point sleeping after the last one: the loop is over and
+                # the only thing the wait delays is the error report.
+                time.sleep(min(2 ** attempt * 5, 60))
     raise RuntimeError(f"LLM call failed after {attempts} attempts: {last}")
 
 
@@ -135,12 +138,21 @@ class Progress:
     """What a review actually got through.
 
     ``reviewed`` is the set of keys a batch returned an answer for, not the
-    set it was asked about, and it is what the snapshot and the
-    did-the-reviewer-stay-silent logic are advanced by. ``stopped`` holds the
-    reason the pass ended early, or "" if it ran to the end.
+    set it was asked about, and it is what the snapshot is advanced by.
+
+    ``trusted`` is the subset whose answer was *well formed*, and it is what
+    may be read as reviewer silence. The two came apart after a malformed
+    response -- no tool call, or a findings list with an unparseable item --
+    was counted as a clean review, closing an open finding on the strength of
+    an answer nobody could read. Discarding a malformed item is right;
+    treating the same answer as evidence of absence is not.
+
+    ``stopped`` holds the reason the pass ended early, or "" if it ran to the
+    end.
     """
 
     reviewed: set = field(default_factory=set)
+    trusted: set = field(default_factory=set)
     stopped: str = ""
 
 
@@ -189,6 +201,7 @@ def review(project, locale, keys, l10n, source, log=print) -> tuple[list[Finding
             # Nothing in the batch needed the model -- every string in it is
             # identical to its source. Seen, as it always was.
             progress.reviewed.update(batch_keys)
+            progress.trusted.update(batch_keys)
             continue
         log(f"    batch {index}/{len(batches)} ({len(batch_keys)} strings)")
         try:
@@ -199,43 +212,62 @@ def review(project, locale, keys, l10n, source, log=print) -> tuple[list[Finding
             log(f"    keeping {len(progress.reviewed):,} string(s) already reviewed")
             break
         usage.add(response)
-        found, malformed = collect(response.content, locale, l10n)
+        found, malformed, ok = collect(response.content, locale, l10n)
         out.extend(found)
-        progress.reviewed.update(batch_keys)
+        if ok:
+            progress.reviewed.update(batch_keys)
+            if not malformed:
+                progress.trusted.update(batch_keys)
         if malformed:
-            log(f"      discarded {malformed} malformed item(s) in this batch")
+            log(f"      discarded {malformed} malformed item(s) in this batch; "
+                "these strings are not counted as cleanly reviewed")
+        if not ok:
+            log("      the reply carried no readable findings list; "
+                "this batch is not counted as reviewed and will be retried")
     return out, usage, progress
 
 
-def collect(content, locale, l10n) -> tuple[list[Finding], int]:
-    """Findings from one response, plus a count of what was not one.
+def collect(content, locale, l10n) -> tuple[list[Finding], int, bool]:
+    """Findings from one response, what was not one, and whether it parsed.
 
-    The tool schema says each finding is an object, and the model mostly
-    obliges -- but nothing enforces it, and a batch that answered with a
-    bare string in the list used to reach ``_to_finding`` and raise on
-    ``.get``. That killed the locale from inside the batch loop, discarding
-    twenty-seven batches of completed review over one item. A response that
-    is the wrong shape is a dropped item, counted and logged; it is not a
-    reason to throw away the work that was done.
+    Returns ``(findings, malformed, ok)``. ``ok`` is False when the response
+    carried no tool call at all, or a ``findings`` field that is not a list --
+    there is no answer there to read, so the caller must not treat the batch
+    as reviewed.
+
+    Everything else is per item. The tool schema says each finding is an
+    object with an integer impact, and the model mostly obliges, but nothing
+    enforces it: a bare string in the list used to raise on ``.get``, and
+    ``"impact": "high"`` still raised on ``int()`` -- from outside the batch
+    loop, so a single bad item discarded every completed batch for the
+    locale. One malformed item is a dropped item, counted and logged.
     """
     out: list[Finding] = []
     malformed = 0
+    saw_tool_use = False
+    ok = True
     for block in content:
         if getattr(block, "type", "") != "tool_use":
             continue
+        saw_tool_use = True
         payload = block.input if isinstance(block.input, dict) else {}
         items = payload.get("findings")
         if not isinstance(items, list):
             malformed += 1
+            ok = False
             continue
         for raw in items:
             if not isinstance(raw, dict):
                 malformed += 1
                 continue
-            finding = _to_finding(locale, raw, l10n)
+            try:
+                finding = _to_finding(locale, raw, l10n)
+            except Exception:  # noqa: BLE001 - one bad item, not the batch
+                malformed += 1
+                continue
             if finding is not None:
                 out.append(finding)
-    return out, malformed
+    return out, malformed, ok and saw_tool_use
 
 
 def _deliberate(raw: dict) -> bool:
@@ -251,6 +283,33 @@ def _deliberate(raw: dict) -> bool:
         return False
     return (raw.get("category") or "").strip().upper()[:1] == "B" and \
         int(raw.get("impact") or 0) in (1, 2)
+
+
+def _category(raw: dict) -> str:
+    """The finding's category, forced into A-E.
+
+    Anything else is dropped rather than kept: the report groups open
+    findings by category, so a `Z` appears in no section at all while still
+    counting as open. Falling back to B matches the schema's own default and
+    at least puts it in front of somebody.
+    """
+    got = (raw.get("category") or "").strip().upper()[:1]
+    return got if got in CATEGORIES else "B"
+
+
+def _impact(raw: dict) -> int:
+    """The finding's impact, forced into 1-4.
+
+    ``int()`` on whatever arrived used to raise -- ``"impact": "high"`` is a
+    plausible thing for a model to say -- and an out-of-range number appeared
+    in no row of the impact table. 0 means "unset", which ``Finding`` fills
+    in from the category.
+    """
+    try:
+        got = int(raw.get("impact") or 0)
+    except (TypeError, ValueError):
+        return 0
+    return got if got in IMPACT else 0
 
 
 def _to_finding(locale, raw: dict, l10n) -> Finding | None:
@@ -286,14 +345,17 @@ def _to_finding(locale, raw: dict, l10n) -> Finding | None:
     suggest = (raw.get("suggest") or "").strip()
     if suggest and current and suggest == current:
         return None
+    if not (raw.get("summary") or "").strip():
+        # A finding with nothing to say cannot be triaged or reported.
+        return None
 
     return Finding(
         locale=locale,
         file=key[0],
         string_id=key[1],
-        category=(raw.get("category") or "B").strip().upper()[:1],
+        category=_category(raw),
         check="llm",
-        impact=int(raw.get("impact") or 0),
+        impact=_impact(raw),
         summary=(raw.get("summary") or "").strip(),
         current=current,
         suggest=suggest,

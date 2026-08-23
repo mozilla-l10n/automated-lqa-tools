@@ -57,8 +57,16 @@ function href(locale, project) {
   return locale === ALL ? `r/${project}.html` : `r/${locale}/${project}.html`;
 }
 
+// Which selection the user is actually on. Every fetch was independent and
+// unconditional, so changing locale twice quickly could let the first, slower
+// response land last and paint a report the dropdowns, the URL and the title
+// all disagree with. A response is only allowed to paint if its request is
+// still the current one.
+let latestRequest = 0;
+
 async function show(locale, project) {
   const url = href(locale, project);
+  const token = ++latestRequest;
   if (cache.has(url)) {
     els.report.innerHTML = cache.get(url);
     return;
@@ -69,13 +77,15 @@ async function show(locale, project) {
     if (!res.ok) throw new Error(`${res.status}`);
     const body = await res.text();
     cache.set(url, body);
+    if (token !== latestRequest) return;
     els.report.innerHTML = body;
   } catch (err) {
+    if (token !== latestRequest) return;
     els.report.innerHTML =
       `<p class="placeholder">No report for <code>${locale}</code> / ` +
       `<code>${project}</code>. It may not have been run yet.</p>`;
   } finally {
-    els.status.textContent = "";
+    if (token === latestRequest) els.status.textContent = "";
   }
 }
 

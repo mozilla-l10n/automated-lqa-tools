@@ -58,6 +58,54 @@ _LINK = re.compile(r'href="(?:\.\./)?(?:([A-Za-z0-9_-]+)/)?([A-Za-z0-9_]+)\.md"'
 _CODE = re.compile(r"(?s)<code>(.*?)</code>")
 _DOUBLED = re.compile(r"&amp;(lt|gt|quot|amp|#x27|#39);")
 
+# Escaping the source blocks literal HTML but not *markdown*: a report quotes
+# real translations, and a translation containing a backtick can close the
+# code span the renderer put it in, after which `[x](javascript:...)` is read
+# as a link and `![x](http://...)` as an automatic request. The report side
+# fences the values it quotes, but a finding's summary and rationale embed
+# translated fragments as prose, so the target of every link and image the
+# renderer produced is checked here too. Only in-page and plain http(s)
+# targets survive; anything else keeps its text and loses its destination.
+_ATTR = re.compile(r"""(?i)\s(href|src)\s*=\s*("|')(.*?)\2""")
+_SAFE_SCHEME = re.compile(r"(?i)^(?:https?:|mailto:)")
+
+
+def _safe_url(value: str, attr: str = "href") -> bool:
+    """Is this a target the page may keep?
+
+    An allowlist, because the dangerous set is open-ended: `javascript:`,
+    `data:`, `vbscript:`, and any of them obfuscated with entities, embedded
+    newlines or control characters. Relative and in-page links are what the
+    reports actually use, so nothing legitimate is lost by refusing the rest.
+
+    ``src`` is held to a stricter rule than ``href``: a link is inert until
+    somebody clicks it, but an image is fetched the moment the page renders,
+    which hands the reader's address to whoever chose the URL. Reports have
+    no legitimate remote images, so only local ones are kept.
+    """
+    raw = html.unescape(value or "")
+    raw = "".join(c for c in raw if c.isprintable()).strip()
+    if not raw:
+        return False
+    if raw.startswith(("#", "/", "./", "../")):
+        return True
+    if ":" not in raw.split("/")[0]:
+        return True  # no scheme at all: a relative path
+    if attr == "src":
+        return False
+    return bool(_SAFE_SCHEME.match(raw))
+
+
+def sanitize_urls(body: str) -> str:
+    """Drop every href/src the allowlist does not accept, keeping the text."""
+    def one(match):
+        attr, quote, value = match.group(1), match.group(2), match.group(3)
+        if _safe_url(value, attr.lower()):
+            return match.group(0)
+        return f" data-blocked-{attr.lower()}={quote}{html.escape(value)}{quote}"
+
+    return _ATTR.sub(one, body)
+
 
 def discover_projects() -> list:
     """Every sibling directory that is a project.
@@ -87,6 +135,7 @@ def render(path: str, locale: str | None) -> str:
     body = _CODE.sub(
         lambda m: f"<code>{_DOUBLED.sub(r'&\1;', m.group(1))}</code>", body
     )
+    body = sanitize_urls(body)
 
     def route(match: re.Match) -> str:
         where, project = match.group(1), match.group(2)
@@ -96,13 +145,51 @@ def render(path: str, locale: str | None) -> str:
     return _LINK.sub(route, body)
 
 
+# Written into every directory this script generates. Its presence is what
+# makes a later `rmtree` safe: the target is something this script made, not
+# something it was pointed at by mistake.
+MARKER = ".site-build"
+
+
+def _clear(out: str) -> None:
+    """Empty the output directory, refusing anything we did not create.
+
+    `--out` went straight to `shutil.rmtree`. A typo -- `--out .`, `--out
+    site`, the repository root -- would recursively delete real work before
+    writing the replacement, and the reports and state directories are not
+    reconstructible from the site.
+    """
+    target = os.path.realpath(out)
+    if target == os.path.realpath(_ROOT) or os.path.dirname(target) == target:
+        raise SystemExit(f"refusing to build into {target}: that is the repository root")
+    if os.path.commonpath([target, os.path.realpath(_HERE)]) == os.path.realpath(_HERE):
+        raise SystemExit(f"refusing to build into {target}: that is the site source")
+    if not os.path.isdir(target):
+        return
+    # The marker, or the artifacts a previous version of this script left --
+    # so an `_site` built before the marker existed is still recognised as
+    # ours rather than refused.
+    ours = os.path.exists(os.path.join(target, MARKER)) or all(
+        os.path.exists(os.path.join(target, name))
+        for name in (".nojekyll", "index.json", "index.html")
+    )
+    if not ours:
+        if os.listdir(target):
+            raise SystemExit(
+                f"refusing to delete {target}: it is not empty and was not "
+                f"built by this script (no {MARKER}). Remove it yourself, or "
+                "point --out somewhere else."
+            )
+        return
+    shutil.rmtree(target)
+
+
 def build(out: str) -> dict:
     projects = discover_projects()
     if not projects:
         raise SystemExit("no projects found: expected <name>/config.yaml")
 
-    if os.path.isdir(out):
-        shutil.rmtree(out)
+    _clear(out)
     os.makedirs(os.path.join(out, "r"), exist_ok=True)
 
     manifest = {
@@ -147,6 +234,7 @@ def build(out: str) -> dict:
     # Pages would otherwise hand the tree to Jekyll, which ignores anything
     # starting with an underscore and would rather we did not.
     open(os.path.join(out, ".nojekyll"), "w").close()
+    open(os.path.join(out, MARKER), "w").close()
 
     manifest["_written"] = written
     return manifest
@@ -165,7 +253,7 @@ def main(argv=None) -> int:
     print(f"  locales  : {len(locales)}")
     ragged = {loc: p for loc, p in locales.items() if len(p) != len(manifest["projects"])}
     if ragged:
-        print(f"  not every project covers every locale, which the page reflects:")
+        print("  not every project covers every locale, which the page reflects:")
         for loc, ps in list(ragged.items())[:4]:
             print(f"      {loc}: {', '.join(ps)}")
         if len(ragged) > 4:

@@ -3,6 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The reports quote real translations, and a report fragment is injected
+     with innerHTML. build.py escapes the source and drops any link target
+     outside an allowlist; this is the layer that does not depend on either
+     being right. No inline or remote script, and no remote image, so a
+     payload that did slip through can neither run nor phone home. -->
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self';
+               img-src 'self' data:; connect-src 'self'; base-uri 'none';
+               form-action 'none'; frame-ancestors 'none'">
 <title>Localization QA reports</title>
 <link rel="stylesheet" href="style.css">
 </head>

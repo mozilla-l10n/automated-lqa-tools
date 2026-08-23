@@ -6,6 +6,8 @@ so a run can tell, without any repository history:
 
 * the translation changed              -> re-review
 * the English changed under it         -> re-review (a stale translation)
+* the English *comment* changed        -> re-review (the string means
+                                          something else than was assumed)
 * the string is new                    -> review
 * the string is gone                   -> retire its findings
 
@@ -18,9 +20,17 @@ On disk it is grouped by file, one string per line::
      }
     }
 
-The value is ``"<locale-hash> <source-hash>"``; the source hash is omitted
-for strings with no en-US counterpart. Grouping by file keeps the payload
-around 1 MB per locale and makes git diffs read as "these strings moved".
+The value is ``"<locale-hash> <source-hash> <source-comment-hash>"``. The
+source hash is omitted for strings with no en-US counterpart, and the third
+field only appears where the source carries a developer comment. Grouping by
+file keeps the payload around 1 MB per locale and makes git diffs read as
+"these strings moved".
+
+The comment field is compared only when **both** snapshots have one, so
+adding it did not invalidate every stored snapshot and force a re-review of
+every locale. An older snapshot simply says nothing about comments; the
+first run after this writes them, and every run after that can see them
+change.
 """
 
 from __future__ import annotations
@@ -37,6 +47,7 @@ class Delta:
     new: list[Key] = field(default_factory=list)
     changed: list[Key] = field(default_factory=list)
     source_changed: list[Key] = field(default_factory=list)
+    context_changed: list[Key] = field(default_factory=list)
     removed: list[Key] = field(default_factory=list)
     unchanged: int = 0
 
@@ -44,7 +55,7 @@ class Delta:
     def to_review(self) -> list[Key]:
         """Strings an LLM pass should look at, de-duplicated, order-stable."""
         seen: dict[Key, None] = {}
-        for k in self.new + self.changed + self.source_changed:
+        for k in self.new + self.changed + self.source_changed + self.context_changed:
             seen[k] = None
         return list(seen)
 
@@ -52,6 +63,7 @@ class Delta:
         return (
             f"new={len(self.new)} changed={len(self.changed)} "
             f"source-changed={len(self.source_changed)} "
+            f"comment-changed={len(self.context_changed)} "
             f"removed={len(self.removed)} unchanged={self.unchanged}"
         )
 
@@ -64,13 +76,19 @@ def build(l10n: dict, source: dict) -> dict[str, dict[str, str]]:
         value = msg.hash()
         if src is not None:
             value = f"{value} {src.hash()}"
+            context = src.context_hash()
+            if context:
+                value = f"{value} {context}"
         snap.setdefault(file, {})[mid] = value
     return snap
 
 
-def _split(value: str) -> tuple[str, str | None]:
-    loc, _, src = value.partition(" ")
-    return loc, (src or None)
+def _split(value: str) -> tuple[str, str | None, str | None]:
+    parts = value.split(" ")
+    loc = parts[0]
+    src = parts[1] if len(parts) > 1 else None
+    ctx = parts[2] if len(parts) > 2 else None
+    return loc, src, ctx
 
 
 def diff(previous: dict, current: dict) -> Delta:
@@ -82,12 +100,17 @@ def diff(previous: dict, current: dict) -> Delta:
             if prev is None:
                 d.new.append((file, mid))
                 continue
-            cur_l, cur_s = _split(value)
-            prev_l, prev_s = _split(prev)
+            cur_l, cur_s, cur_c = _split(value)
+            prev_l, prev_s, prev_c = _split(prev)
             if cur_l != prev_l:
                 d.changed.append((file, mid))
             elif cur_s != prev_s:
                 d.source_changed.append((file, mid))
+            elif cur_c is not None and prev_c is not None and cur_c != prev_c:
+                # Only when both sides recorded one. A snapshot written before
+                # comments were tracked says nothing about them, and reading
+                # its silence as a change would re-review every locale once.
+                d.context_changed.append((file, mid))
             else:
                 d.unchanged += 1
     for file, ids in previous.items():

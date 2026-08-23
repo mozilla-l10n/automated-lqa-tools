@@ -3,6 +3,19 @@
 Everything that reasons about messages in the abstract is in `lib/checks.py`.
 What is left here needs Fluent itself: terms and their parameters, access
 keys paired with a label attribute, and HTML markup embedded in values.
+
+Not run, and why -- checked against the repository rather than assumed:
+
+``selectors``
+    Subsumed by ``variables`` here. ``_vars()`` folds a message's selectors
+    back into the variable set precisely so a plural message compares equal
+    to a flattened one, and both checks then measure the same thing against
+    the same ``_message_vars(src)``. Across all twenty locales `selectors`
+    raised 7 findings and `variables` had already raised every one of them,
+    on the same string. Two findings for one defect is a false positive with
+    extra steps, and this one was invisible until `merge` stopped letting
+    them overwrite each other. Android runs `selectors` and not `variables`,
+    which is the same trade made the other way round.
 """
 
 from __future__ import annotations

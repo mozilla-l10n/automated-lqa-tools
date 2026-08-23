@@ -69,9 +69,16 @@ class Health:
     locale_only_files: list[str] = field(default_factory=list)
     untranslated_files: list[str] = field(default_factory=list)
     syntax_errors: list[str] = field(default_factory=list)
+    source_errors: list[str] = field(default_factory=list)
     missing_by_file: dict[str, int] = field(default_factory=dict)
     counts: dict[str, int] = field(default_factory=dict)
     skipped: list[str] = field(default_factory=list)
+    # Checks that actually executed over this tree. The caller resolves
+    # stored findings against it, and used to rebuild it from the check
+    # *registry* -- which for iOS lists four checks the project deliberately
+    # never runs. A finding from a check that did not run must not be closed
+    # on the grounds that the check stayed silent.
+    ran: list[str] = field(default_factory=list)
 
 
 # --- helpers -------------------------------------------------------------
@@ -239,8 +246,14 @@ def check_completeness(project, locale, trees) -> Health:
         if key not in l10n:
             h.missing += 1
             h.missing_by_file[key[0]] = h.missing_by_file.get(key[0], 0) + 1
+    # A reference file that did not parse contributes no source messages, so
+    # every localized string in it would read as obsolete -- the file is in
+    # `s_files`, which is a directory listing, but not in `source`. That is a
+    # broken reference, not 18,000 obsolete strings, so those files are left
+    # out of the count and reported as what they are.
+    unparsed = set(getattr(trees, "source_errors", {}))
     for key in l10n:
-        if key not in source and key[0] in s_files:
+        if key not in source and key[0] in s_files and key[0] not in unparsed:
             h.obsolete += 1
 
     # A file that exists but whose every string is byte-identical to en-US
@@ -268,6 +281,10 @@ def check_completeness(project, locale, trees) -> Health:
     h.syntax_errors = [
         f"{rel}: {message}"
         for rel, message in sorted(getattr(trees, "syntax_errors", {}).items())
+    ]
+    h.source_errors = [
+        f"{rel}: {message}"
+        for rel, message in sorted(getattr(trees, "source_errors", {}).items())
     ]
     return h
 
@@ -1063,5 +1080,6 @@ def run_all(project, locale, trees, counts, registry=None):
             continue
         found = registry[name](ctx)
         health.counts[name] = len(found)
+        health.ran.append(name)
         out.extend(found)
     return health, out

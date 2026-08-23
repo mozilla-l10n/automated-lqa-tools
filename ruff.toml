@@ -1,0 +1,16 @@
+# Pinned explicitly rather than left to the default, which widens between
+# ruff releases: 0.16 turns on a preview set that reports 80-odd stylistic
+# opinions this repository has not adopted. What is selected here is the
+# classic default -- real errors and undefined or unused names -- so a CI
+# failure means something is broken, not that ruff changed its mind.
+line-length = 100
+
+[lint]
+select = ["E4", "E7", "E9", "F"]
+
+[lint.per-file-ignores]
+# The pipeline modules are imported by path after sys.path is extended, so
+# their imports cannot come first.
+"lib/*.py" = ["E402"]
+"*/tools/*.py" = ["E402"]
+"site/build.py" = ["E402"]

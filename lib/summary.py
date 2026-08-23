@@ -12,13 +12,13 @@ import argparse
 import datetime
 import json
 import os
-import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import config  # noqa: E402
 import findings as findings_mod  # noqa: E402
+import report  # noqa: E402
 
 
 def _rows(project) -> list[dict]:
@@ -57,17 +57,11 @@ MAX_LISTED = 15
 def _code(text: str, limit: int = 200) -> str:
     """Quote a translation inline without letting it end its own span.
 
-    The strings being quoted are real UI text and contain real markup and
-    backticks. A fence has to be longer than the longest run inside it, or
-    the rest of the finding renders as markup.
+    Shared with the report renderer -- see :func:`report.fence`. A fence has
+    to be longer than the longest run of backticks inside it, or the rest of
+    the finding renders as markdown.
     """
-    text = (text or "").replace("\n", " ").strip()
-    if len(text) > limit:
-        text = text[: limit - 1].rstrip() + "…"
-    longest = max((len(r) for r in re.findall(r"`+", text)), default=0)
-    fence = "`" * (longest + 1)
-    pad = " " if text.startswith("`") or text.endswith("`") else ""
-    return f"{fence}{pad}{text}{pad}{fence}"
+    return report.fence(report._esc(text, limit))
 
 
 def _one(f, locale: str) -> str:

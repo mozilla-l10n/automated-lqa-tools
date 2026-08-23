@@ -45,6 +45,11 @@ class Trees:
     # Reference path -> the actual localized file, for reports and for the
     # baseline reviewer, which hands real paths to an agent.
     locale_paths: dict = field(default_factory=dict)
+    # Same, for the reference side. Kept apart because they mean different
+    # things: a localized file that will not parse is the locale's defect, a
+    # reference file that will not parse invalidates every comparison made
+    # against it and is this pipeline's problem, not the team's.
+    source_errors: dict = field(default_factory=dict)
     # Reference path -> the parser's complaint, for files that did not parse.
     # Collected while loading, because parsing the tree a second time just to
     # ask this doubled every run -- and for the XLIFF layout, where 95 keys
@@ -66,14 +71,18 @@ def load(project, locale: str, l10n_root: str, source_root: str) -> Trees:
 def _mirrored(project, locale, l10n_root, source_root) -> Trees:
     tree = os.path.join(l10n_root, project.locale_subpath(locale))
     errors: dict = {}
+    source_errors: dict = {}
     return Trees(
         root=tree,
         l10n=parse.parse_tree(tree, project.extensions, project.exclude, errors),
-        source=parse.parse_tree(source_root, project.extensions, project.exclude),
+        source=parse.parse_tree(
+            source_root, project.extensions, project.exclude, source_errors
+        ),
         l10n_files=parse.list_files(tree, project.extensions, project.exclude),
         source_files=parse.list_files(source_root, project.extensions, project.exclude),
         locale_paths={},
         syntax_errors=errors,
+        source_errors=source_errors,
     )
 
 
@@ -98,7 +107,7 @@ def _android(project, locale, root) -> Trees:
                 continue
             if os.path.exists(ref):
                 trees.source_files.add(rel)
-                for msg in parse.parse_file(ref, rel):
+                for msg in parse.parse_file(ref, rel, trees.source_errors):
                     trees.source[msg.key] = msg
             localized = paths.format_target_path(target, locale)
             if os.path.exists(localized):
