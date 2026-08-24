@@ -14,6 +14,13 @@ import fs from 'node:fs';
 const src = fs.readFileSync(new URL('app.js', import.meta.url), 'utf8');
 
 const BASE = new URL('../_site/', import.meta.url).pathname;
+// Without this the missing build surfaces as a TypeError thrown from inside
+// app.js on a manifest that was never fetched, which reads as a bug in the
+// page rather than a step that did not run.
+if (!fs.existsSync(BASE + 'index.json')) {
+  console.error(`No build at ${BASE} -- run: python site/build.py`);
+  process.exit(1);
+}
 const mk = (tag) => ({tag, children:[], value:'', textContent:'', disabled:false,
   replaceChildren(...c){this.children=c;}, appendChild(c){this.children.push(c);},
   addEventListener(n,f){(this.on ||= {})[n]=f;}, get options(){return this.children;}});
