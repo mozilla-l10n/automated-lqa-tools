@@ -3,10 +3,10 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `907043d6ea4b` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
 | **Previous run** | 2026-08-24 @ `39e5663f3de7` |
-| **Mode** | recheck |
+| **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 18,169 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
@@ -22,10 +22,9 @@ Also for ru: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `mr2-onboarding-thank-you-text` — `browser/browser/newtab/onboarding.ftl` — the dash is U+4E00, the CJK ideograph for "one", not an em dash
-    - Source: `{ -brand-short-name } is an independent browser backed by a non-profit. Together, we’re making the web safer, healthier, and more private.`
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -67,8 +66,8 @@ _Nothing retired._
 
 - `browser/browser/newtab/newtab.ftl` — 7
 - `browser/browser/sharePanel.ftl` — 2
-- `browser/browser/preferences/formAutofill.ftl` — 1
 - `dom/chrome/accessibility/AccessFu.properties` — 1
+- `browser/browser/preferences/formAutofill.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

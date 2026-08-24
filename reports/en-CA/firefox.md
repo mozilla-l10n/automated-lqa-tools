@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e59d51071942` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
+| **Previous run** | 2026-08-24 @ `39e5663f3de7` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 18,139 |
+| **Strings reviewed this run** | 0 of 18,139 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,13 +22,9 @@ Also for en-CA: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `helpus-referrals2` — `browser/browser/aboutDialog.ftl` — Mid-sentence link text is capitalized in en-CA where en-US uses lowercase "share".
-    - Current: `<label data-l10n-name="helpus-shareFirefoxLink">Share { -brand-product-name }</label>`
-    - Source: `Want to help? <label data-l10n-name="helpus-donateLink">Make a donation</label>, <label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>, or <label data-l10n-name="helpus-getInvolvedLink">g…`
-    - Suggest: `<label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>`
-    - The source has lowercase "share" because the label appears mid-sentence between "Make a donation," and "or get involved!"; capitalizing it breaks the sentence flow and is inconsistent with the surrounding lowercase "get involved!".
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

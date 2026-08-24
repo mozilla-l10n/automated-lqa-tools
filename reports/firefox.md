@@ -2,7 +2,7 @@
 
 - **Generated:** 2026-08-24
 - **Locales tracked:** 20 (20 with recorded state)
-- **Findings:** 5,817 raised, 2,002 fixed (34%), 3,767 open
+- **Findings:** 5,832 raised, 2,012 fixed (34%), 3,772 open
 - **Closed by a person:** 15 dismissed, 3 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
@@ -13,11 +13,11 @@ Counts come from `state/`, not from the rendered reports, so they always reflect
 
 _None. The reviewer sets this flag only on a finding where the localized text changes what the product says about itself, its users or its behaviour; it is left unset on the vast majority of mistranslations._
 
-### Broken output — impact 1 (367)
+### Broken output — impact 1 (365)
 
 The value does not render as intended: a blank string, broken markup, a variable the source never passes.
 
-`id` 84 · `es-AR` 70 · `cs` 55 · `ru` 49 · `hu` 34 · `fy-NL` 13 · `nl` 12 · `pt-BR` 12 · `pl` 11 · `en-GB` 8 · `ja` 8 · `tr` 4 · `zh-CN` 4 · `fr` 2 · `de` 1
+`id` 84 · `es-AR` 70 · `cs` 55 · `ru` 49 · `hu` 34 · `fy-NL` 13 · `nl` 12 · `pt-BR` 12 · `pl` 11 · `en-GB` 8 · `ja` 8 · `tr` 4 · `zh-CN` 4 · `fr` 1
 
 - **`cs`** `appmenuitem-new-ai-window` — `browser/browser/aiWindow.ftl`
   - `appmenuitem-new-ai-window` (`.value`) calls `-smart-window-brand-name` with ['capitalization'], but that term selects on ['case', 'plural-form']
@@ -25,10 +25,6 @@ The value does not render as intended: a blank string, broken markup, a variable
 - **`cs`** `appmenuitem-new-ai-window` — `browser/browser/aiWindow.ftl`
   - `appmenuitem-new-ai-window` (`.label`) calls `-smart-window-brand-name` with ['capitalization'], but that term selects on ['case', 'plural-form']
   - Current: `Nové { -smart-window-brand-name }`
-- **`de`** `about-logins-import-dialog-items-no-change2` — `browser/browser/aboutLogins.ftl`
-  - Malformed closing tag `</span >` in `about-logins-import-dialog-items-no-change2`
-  - Current: `{$count ->} [one] <span>Doppelte Einträge gefunden:</span> <span data-l10n-name="count">{ $count }</span> <span data-l10n-name="meta">(nicht importiert)</span > [other] <span>Doppelte Einträge gefund…`
-  - Suggest: `{$count ->} [other] <span>Duplicate entries found:</span> <span data-l10n-name="count">{ $count }</span> <span data-l10n-name="meta">(not imported)</span>`
 - **`en-GB`** `fxa-menu-message-backup-sync-secondary-text` — `browser/browser/newtab/asrouter.ftl`
   - "Sync" left untranslated while every sibling string in the same block renders it "Synchronise".
   - Current: `Sync backs up most of your data`
@@ -45,10 +41,6 @@ The value does not render as intended: a blank string, broken markup, a variable
   - Typo “excluyeno” instead of “excluyendo”
   - Current: `excluyeno subgrupos`
   - Suggest: `excluyendo subgrupos`
-- **`fr`** `sidebar-callout-survey-productive-question` — `browser/browser/featureCallout.ftl`
-  - Unbalanced markup in `sidebar-callout-survey-productive-question`
-  - Current: `Jusqu’à quel point êtes-vous d’accord ou non avec cette affirmation :</br> « Le panneau latéral de { -brand-short-name } m’aide à être plus productif·tive » ?`
-  - Suggest: `To what extent do you agree or disagree with this statement:<br/> “The { -brand-short-name } sidebar helps me be more productive”?`
 - **`fr`** `about-networking-ssl-tokens-summary-compression` — `toolkit/toolkit/about/aboutNetworking.ftl`
   - `about-networking-ssl-tokens-summary-compression` references ['total'], which en-US does not pass
   - Current: `{$total ->} [one] { $decompressedLength } → { $compressedLength } o ({ $saved } % économisé) [other] { $decompressedLength } → { $compressedLength } o ({ $saved } % économisés)`
@@ -73,34 +65,41 @@ The value does not render as intended: a blank string, broken markup, a variable
   - macOS "TSV Document" rendered as "Berkas TSV" (File)
   - Current: `[macos] Berkas TSV`
   - Suggest: `[macos] Dokumen TSV`
-- _…and 352 more, in the per-locale reports linked below._
+- **`ja`** `newtab-privacy-trackers-blocked-today` — `browser/browser/newtab/newtab.ftl`
+  - comment states this is the standalone label under the big number; ja is a fragment ending in 、 that depends on the separate newtab-privacy-across-sites. → a self-contained label, e.g. 今日ブロックしたトラッカー
+  - Suggest: `今日ブロックしたトラッカー`
+- **`ja`** `info-exposed-passwords-found` — `browser/browser/protections.ftl`
+  - { $count } 件のパスワードが全漏洩データから見つかりました — 件のパスワードが全漏洩データから見つかりました
+  - Current: `{ $count } 件のパスワードが全漏洩データから見つかりました`
+  - Suggest: `件のパスワードが全漏洩データから見つかりました`
+- _…and 350 more, in the per-locale reports linked below._
 
-### Wrong content — impact 2 (1436)
+### Wrong content — impact 2 (1443)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/firefox.md`.
 
 | Locale | Last run | Mode | Commit | Strings | Missing | Open | Impact 1–2 | Fixed | Dismissed | Suppressed |
 |---|---|---|---|---|---|---|---|---|---|---|
-| [cs](cs/firefox.md) | 2026-08-24 | incremental | `39e5663f` | 18,180 | 0 | **259** | 175 | 0 | 0 | 0 |
-| [de](de/firefox.md) | 2026-08-24 | recheck | `39e5663f` | 18,180 | 0 | **18** | 12 | 69 | 0 | 0 |
-| [en-CA](en-CA/firefox.md) | 2026-08-24 | incremental | `39e5663f` | 18,139 | 41 | **1** | 0 | 14 | 0 | 0 |
-| [en-GB](en-GB/firefox.md) | 2026-08-24 | incremental | `39e5663f` | 18,180 | 0 | **33** | 20 | 7 | 0 | 0 |
-| [es-AR](es-AR/firefox.md) | 2026-08-24 | incremental | `39e5663f` | 18,150 | 30 | **421** | 240 | 0 | 0 | 0 |
-| [es-ES](es-ES/firefox.md) | 2026-08-24 | recheck | `39e5663f` | 17,185 | 995 | **30** | 18 | 110 | 0 | 0 |
-| [es-MX](es-MX/firefox.md) | 2026-08-24 | recheck | `39e5663f` | 17,847 | 333 | **21** | 6 | 205 | 0 | 0 |
-| [fr](fr/firefox.md) | 2026-08-24 | recheck | `39e5663f` | 18,367 | 0 | **17** | 5 | 54 | 0 | 0 |
-| [fy-NL](fy-NL/firefox.md) | 2026-08-24 | recheck | `39e5663f` | 18,180 | 0 | **505** | 138 | 332 | 4 | 0 |
-| [hu](hu/firefox.md) | 2026-08-24 | incremental | `39e5663f` | 18,124 | 56 | **274** | 153 | 0 | 0 | 0 |
-| [id](id/firefox.md) | 2026-08-24 | incremental | `39e5663f` | 15,494 | 2,686 | **330** | 258 | 0 | 0 | 0 |
-| [it](it/firefox.md) | 2026-08-24 | incremental | `39e5663f` | 18,397 | 6 | **0** | 0 | 56 | 6 | 2 |
-| [ja](ja/firefox.md) | 2026-08-24 | recheck | `39e5663f` | 18,135 | 45 | **98** | 37 | 269 | 0 | 0 |
-| [nl](nl/firefox.md) | 2026-08-24 | recheck | `39e5663f` | 18,180 | 0 | **356** | 132 | 137 | 0 | 0 |
-| [pl](pl/firefox.md) | 2026-08-24 | recheck | `39e5663f` | 17,885 | 295 | **45** | 35 | 165 | 0 | 0 |
-| [pt-BR](pt-BR/firefox.md) | 2026-08-24 | recheck | `39e5663f` | 18,180 | 0 | **564** | 205 | 138 | 5 | 0 |
-| [ru](ru/firefox.md) | 2026-08-24 | recheck | `39e5663f` | 18,169 | 11 | **594** | 315 | 173 | 0 | 0 |
-| [sl](sl/firefox.md) | 2026-08-24 | recheck | `39e5663f` | 17,550 | 630 | **34** | 4 | 43 | 0 | 1 |
-| [tr](tr/firefox.md) | 2026-08-24 | recheck | `39e5663f` | 18,064 | 116 | **113** | 38 | 183 | 0 | 0 |
-| [zh-CN](zh-CN/firefox.md) | 2026-08-24 | recheck | `39e5663f` | 17,981 | 199 | **54** | 12 | 47 | 0 | 0 |
+| [cs](cs/firefox.md) | 2026-08-24 | incremental | `e59d5107` | 18,180 | 0 | **259** | 175 | 0 | 0 | 0 |
+| [de](de/firefox.md) | 2026-08-24 | incremental | `e59d5107` | 18,180 | 0 | **16** | 11 | 71 | 0 | 0 |
+| [en-CA](en-CA/firefox.md) | 2026-08-24 | incremental | `e59d5107` | 18,139 | 41 | **1** | 0 | 14 | 0 | 0 |
+| [en-GB](en-GB/firefox.md) | 2026-08-24 | incremental | `e59d5107` | 18,180 | 0 | **33** | 20 | 7 | 0 | 0 |
+| [es-AR](es-AR/firefox.md) | 2026-08-24 | incremental | `e59d5107` | 18,150 | 30 | **421** | 240 | 0 | 0 | 0 |
+| [es-ES](es-ES/firefox.md) | 2026-08-24 | incremental | `e59d5107` | 17,185 | 995 | **30** | 18 | 111 | 0 | 0 |
+| [es-MX](es-MX/firefox.md) | 2026-08-24 | incremental | `e59d5107` | 17,847 | 333 | **21** | 6 | 205 | 0 | 0 |
+| [fr](fr/firefox.md) | 2026-08-24 | incremental | `e59d5107` | 18,367 | 0 | **16** | 4 | 55 | 0 | 0 |
+| [fy-NL](fy-NL/firefox.md) | 2026-08-24 | incremental | `e59d5107` | 18,180 | 0 | **505** | 138 | 334 | 4 | 0 |
+| [hu](hu/firefox.md) | 2026-08-24 | incremental | `e59d5107` | 18,165 | 15 | **277** | 154 | 0 | 0 | 0 |
+| [id](id/firefox.md) | 2026-08-24 | incremental | `e59d5107` | 15,494 | 2,686 | **330** | 258 | 0 | 0 | 0 |
+| [it](it/firefox.md) | 2026-08-24 | incremental | `e59d5107` | 18,397 | 6 | **0** | 0 | 56 | 6 | 2 |
+| [ja](ja/firefox.md) | 2026-08-24 | incremental | `e59d5107` | 18,135 | 45 | **98** | 37 | 269 | 0 | 0 |
+| [nl](nl/firefox.md) | 2026-08-24 | incremental | `907043d6` | 18,180 | 0 | **356** | 132 | 137 | 0 | 0 |
+| [pl](pl/firefox.md) | 2026-08-24 | incremental | `907043d6` | 17,885 | 295 | **48** | 37 | 166 | 0 | 0 |
+| [pt-BR](pt-BR/firefox.md) | 2026-08-24 | incremental | `907043d6` | 18,180 | 0 | **564** | 205 | 138 | 5 | 0 |
+| [ru](ru/firefox.md) | 2026-08-24 | incremental | `907043d6` | 18,169 | 11 | **594** | 315 | 173 | 0 | 0 |
+| [sl](sl/firefox.md) | 2026-08-24 | incremental | `907043d6` | 17,550 | 630 | **33** | 4 | 44 | 0 | 1 |
+| [tr](tr/firefox.md) | 2026-08-24 | incremental | `907043d6` | 18,080 | 100 | **116** | 42 | 185 | 0 | 0 |
+| [zh-CN](zh-CN/firefox.md) | 2026-08-24 | incremental | `907043d6` | 17,981 | 199 | **54** | 12 | 47 | 0 | 0 |
 
 **Impact 1–2** is the queue that matters: broken output and wrong content. Impact 3–4 is language polish and typography.
 

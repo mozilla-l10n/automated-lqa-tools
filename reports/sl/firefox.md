@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `907043d6ea4b` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
 | **Previous run** | 2026-08-24 @ `39e5663f3de7` |
-| **Mode** | recheck |
-| **Strings reviewed this run** | 0 of 17,550 |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 1 of 17,550 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -24,8 +24,8 @@ _No new findings._
 
 ### ✅ Fixed since the last run (1)
 
-- `tab-group-editor-action-copy-links` — `browser/browser/tabbrowser.ftl` — Label is "Copy links in group" but every plural form uses "Zapri" (Close) instead of "Kopiraj" (Copy). The verb is reversed across all variants.
-    - Source: `label: {$linkCount ->} [1] Copy link in group [other] Copy { $linkCount } links in group`
+- `pkcs12-decode-err` — `security/manager/security/certificates/certManager.ftl` — security/manager/security/certificates/certManager.ftl — Nonstandard participle "Vnešeno/vnešeno" → "Vneseno/vneseno" (also inconsistent with pippki-incorrect-pw, which is correct).
+    - Source: `Failed to decode the file. Either it is not in PKCS #12 format, has been corrupted, or the password you entered was incorrect.`
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -102,14 +102,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (34)
+## 3. Open findings (33)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 4 |
-| 3 | Degraded language (grammar, spelling, terminology) | 23 |
+| 3 | Degraded language (grammar, spelling, terminology) | 22 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
 ### A. Functional, markup, variables & plurals
@@ -142,8 +142,6 @@ _Nothing in this category._
     - Suggest: `[two] … zavihka`
 - `pk11-bad-password` — `security/manager/security/certificates/certManager.ftl` — security/manager/security/certificates/certManager.ftl — Nonstandard participle "Vnešeno/vnešeno" → "Vneseno/vneseno" (also inconsistent with pippki-incorrect-pw, which is correct).
     - Source: `The password entered was incorrect.`
-- `pkcs12-decode-err` — `security/manager/security/certificates/certManager.ftl` — security/manager/security/certificates/certManager.ftl — Nonstandard participle "Vnešeno/vnešeno" → "Vneseno/vneseno" (also inconsistent with pippki-incorrect-pw, which is correct).
-    - Source: `Failed to decode the file. Either it is not in PKCS #12 format, has been corrupted, or the password you entered was incorrect.`
 - `colorway-removal-notice-message` — `toolkit/toolkit/about/aboutAddons.ftl` — Wrong case. "…zbirko barvnih kombinacije." → "…kombinacij." (genitive plural).
     - Source: `heading: Your colorway theme(s) were removed. message: { -brand-product-name } updated its colorways collection. We removed the old version(s) from your “Saved Themes” list. Get new versions on the add-ons site.`
     - Suggest: `"…kombinacij."`
@@ -256,9 +254,10 @@ _Suppressions live in `locales/sl/suppressions.yaml`. Removing a rule brings its
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (43)
+### Fixed to date (44)
 
 - `tab-group-editor-action-copy-links` — `browser/browser/tabbrowser.ftl` — fixed 2026-08-24
+- `pkcs12-decode-err` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-08-24
 - `about-logins-confirm-export-dialog-message2` — `browser/browser/aboutLogins.ftl` — fixed 2026-07-29 (undated)
 - `restore-page-problem-desc` — `browser/browser/aboutSessionRestore.ftl` — fixed 2026-07-29 (undated)
 - `addon-mlmodel-removal-body` — `browser/browser/addonNotifications.ftl` — fixed 2026-07-29 (undated)
@@ -297,4 +296,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `region-name-tr` — `toolkit/toolkit/intl/regionNames.ftl` — fixed 2026-07-29 (undated)
 - `cert-error-symantec-distrust-description` — `toolkit/toolkit/neterror/certError.ftl` — fixed 2026-07-29 (undated)
 - `cert-error-trust-cert-invalid` — `toolkit/toolkit/neterror/certError.ftl` — fixed 2026-07-29 (undated)
-- `certerror-mitm-what-can-you-do-about-it-corporate` — `toolkit/toolkit/neterror/netError.ftl` — fixed 2026-07-29 (undated)
