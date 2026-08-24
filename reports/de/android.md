@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `eda9938ab8c3` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `eda9938ab8c3` |
-| **Previous run** | 2026-08-21 @ `d368c9040c12` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
+| **Previous run** | 2026-08-22 @ `eda9938ab8c3` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 2,911 |
 
@@ -26,9 +26,12 @@ _No new findings._
 
 _Nothing was fixed._
 
-### ↩︎ Withdrawn — no longer considered a defect (0)
+### ↩︎ Withdrawn — no longer considered a defect (1)
 
-_Nothing withdrawn._
+- `mozac_feature_sitepermissions_storage_access_message` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-de/strings.xml` — `mozac_feature_sitepermissions_storage_access_message` has placeholders %1$s where the source has %s
+    - Current: `Möglicherweise möchten Sie den Zugriff blockieren, wenn nicht klar ist, warum %1$s diese Daten benötigt.`
+    - Source: `You may want to block access if it’s not clear why %s needs this data.`
+    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
 
 ### 🔁 String changed, defect not verifiable — needs a re-read (0)
 
@@ -50,16 +53,13 @@ _Nothing retired._
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
-| Variable & placeholder mismatches | 0 |
+| Reference files that did not parse | 0 |
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
-| printf placeholder mismatches | 1 |
+| printf placeholder mismatches | 0 |
 | Plural / select selector mismatches | 0 |
-| Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 0 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 2 |
 
@@ -86,21 +86,19 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (117)
+## 3. Open findings (116)
+
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 1 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 66 |
 | 3 | Degraded language (grammar, spelling, terminology) | 37 |
 | 4 | Cosmetic (typography, spacing) | 13 |
 
 ### A. Functional, markup, variables & plurals
 
-- `mozac_feature_sitepermissions_storage_access_message` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-de/strings.xml` — `mozac_feature_sitepermissions_storage_access_message` has placeholders %1$s where the source has %s
-    - Current: `Möglicherweise möchten Sie den Zugriff blockieren, wenn nicht klar ist, warum %1$s diese Daten benötigt.`
-    - Source: `You may want to block access if it’s not clear why %s needs this data.`
-    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+_Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -668,9 +666,9 @@ _One line each in `locales/de/dismissed.txt`. Delete the line and the finding re
 
 _No suppression rules have matched._
 
-### Withdrawn to date (0)
+### Withdrawn to date (1)
 
-_Nothing withdrawn._
+- `mozac_feature_sitepermissions_storage_access_message` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-de/strings.xml` — raised by `placeholders`, withdrawn 2026-08-24
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 

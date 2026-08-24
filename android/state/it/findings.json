@@ -12,6 +12,7 @@
   "locale": "it",
   "origin": {},
   "rationale": "In the source this string quotes “Try Again”, which is exactly the value of `mozac_browser_errorpages_page_refresh` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "0557bcc3",
@@ -35,6 +36,7 @@
    "confidence": "medium"
   },
   "rationale": "The button on the error page (mozac_browser_errorpages_page_refresh) is labelled \"Riprovare\"; the message tells the user to press \"Riprova\", so the quoted label does not exist on screen.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "9fad580e",
@@ -58,6 +60,7 @@
    "confidence": "high"
   },
   "rationale": "\"non è può\" is a leftover word; the verb sequence is broken.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "bbb6c47e",
@@ -81,6 +84,7 @@
    "confidence": "high"
   },
   "rationale": "The whole tree uses the right single quotation mark U+2019 as apostrophe (e.g. \"sull’aggiornamento\" pattern in dell’estensione, l’estensione); here a left quote glyph is used.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "eb237a92",
@@ -104,6 +108,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"new tab\", and every other entry in this context menu renders \"tab\" as \"scheda\" (e.g. mozac_feature_contextmenu_open_link_in_new_tab). The action opens a tab, not a window.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "b0ac752e",
@@ -127,6 +132,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment states this is the content description for the action bar \"up\" button, i.e. navigate back to the parent screen; the sibling string stories_back_button_content_description correctly uses \"Torna indietro\". \"Vai su\" is misleading for screen-reader users.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "4585ecc7",
@@ -150,6 +156,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment states this is the administrative division used in countries like Nicaragua and Colombia; the Italian name for that division is \"dipartimento\". \"Reparto\" means a section of a shop or hospital ward and names the wrong thing in an address form.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "97c8c2e8",
@@ -173,6 +180,7 @@
    "confidence": "medium"
   },
   "rationale": "The source specifies \"New and current AI enhancements\"; the translation omits this qualification, changing the scope of what is blocked.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "a284bbeb",
@@ -196,6 +204,7 @@
    "confidence": "medium"
   },
   "rationale": "Minor: source uses lowercase quoted labels; the Italian labels match the UI strings, so this is acceptable. (Retired: the suggested text is identical to the current text.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "withdrawn",
   "string_hash": "d0430379",
@@ -219,6 +228,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is the field label \"URL\"; the adjacent label \"Name\" is translated \"Nome\" in normal case, so the all-caps form is an unjustified deviation in the same screen.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "5a15f3da",
@@ -242,6 +252,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to the bottom sheet menu of a Custom Tab, not to a menu for customizing tabs; the meaning is reversed/altered.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "754634a7",
@@ -265,6 +276,7 @@
    "confidence": "medium"
   },
   "rationale": "The pair browser_feature_desktop_site_on/off describes the toggle state; \"Attiva\" reads as an imperative or adjective mismatching \"Disattivata\" used for the off state.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "suppressed",
   "string_hash": "90136931",
@@ -288,6 +300,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is the adjective \"New\" used as a badge on a new feature; \"Novità\" means \"news/novelty\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "b12dbf41",
@@ -311,6 +324,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states the features stop working tomorrow; \"da domani\" adds \"starting from\", which is not in the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "e0afe017",
@@ -334,6 +348,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US: \"might log you out of websites and clear shopping carts\" — plural \"websites\" and coordinating \"and\", not \"or\" with a singular site.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "6495409a",
@@ -357,6 +372,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers generically to choosing from the gallery (images), not specifically a photo.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "61a83b39",
@@ -380,6 +396,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Unlock to view your saved cards\"; the app consistently uses \"carte\" (see credit_cards_saved_cards \"Carte salvate\").",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "38b8ff83",
@@ -403,6 +420,7 @@
    "confidence": "medium"
   },
   "rationale": "The debug feature works with locales (region/format), not languages; source says \"locale\".",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "3c9f4363",
@@ -426,6 +444,7 @@
    "confidence": "medium"
   },
   "rationale": "The source names the list of debug locales; the translation says \"choice of languages\" and loses the debug qualifier.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "c4eec095",
@@ -449,6 +468,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Reset\" in this debug context means reimpostare/azzerare the CFR state, not restoring a previous state.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "afdf7f17",
@@ -472,6 +492,7 @@
    "confidence": "medium"
   },
   "rationale": "Inconsistent rendering of the same source term \"Override\" within the same Region Tools surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "79f12bc8",
@@ -495,6 +516,7 @@
    "confidence": "medium"
   },
   "rationale": "The source order is \"Today and yesterday\"; the Italian inverts the two terms.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "707aa1aa",
@@ -518,6 +540,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Delete\"; search_engine_delete and other delete actions in this batch use \"Elimina\", and \"Rimuovi\" is the standard rendering of \"Remove\" (see browser_menu_remove_from_shortcuts), creating an inconsistency.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "00c87ee7",
@@ -541,6 +564,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"pending\", meaning the estimated remaining time is still being calculated; \"in corso\" means \"in progress\" and duplicates the wording used for download_header_in_progress.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "3bea7220",
@@ -564,6 +588,7 @@
    "confidence": "medium"
   },
   "rationale": "Inconsistent with download_language_all_languages_item_preference_to_delete (\"Elimina tutte le lingue\") and delete_language_file_dialog_positive_button_text (\"Elimina\") on the same screen.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "00c87ee7",
@@ -587,6 +612,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US \"File names can’t use “/”\" means the character is forbidden inside a file name, not that a name may not consist of it.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "6f75d3aa",
@@ -610,6 +636,7 @@
    "confidence": "medium"
   },
   "rationale": "\"cookies set by redirects to known tracking websites\" means the cookies are set by the redirect process, not that the cookies cause redirection.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "338378e6",
@@ -633,6 +660,7 @@
    "confidence": "medium"
   },
   "rationale": "Source ends with \"!\"; the punctuation of the banner title was changed without reason.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "suppressed",
   "string_hash": "6c4680df",
@@ -656,6 +684,7 @@
    "confidence": "medium"
   },
   "rationale": "The source invites the user to help catch trackers; the Italian turns it into a direct command to catch them.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "c730fc17",
@@ -679,6 +708,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Switched to the recommended location.\" In Italian a bare \"Passata\" has no antecedent to agree with, making the sentence ungrammatical as a standalone card description.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "1740027b",
@@ -702,6 +732,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"make your browsing more private and harder to trace\"; the same sentence is correctly rendered in ip_protection_onboarding_body_promo as \"rendere la tua navigazione più privata e difficile da tracciare\", so this variant is both inaccurate and inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "0b52bd92",
@@ -725,6 +756,7 @@
    "confidence": "high"
   },
   "rationale": "Source is a confirmation message \"Link shared\"; Italian requires \"Link condiviso\" (noun + participle), not the inverted \"Condiviso link\".",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "d6fd0139",
@@ -748,6 +780,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US onboarding title \"Easy to customize and more private with every tap\" has no terminating period; other onboarding titles in the batch also omit it.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "6efb012d",
@@ -771,6 +804,7 @@
    "confidence": "high"
   },
   "rationale": "Source: \"You can set %1$s to automatically open links in apps.\" The CFR points to the \"Open links in apps\" setting, not to the default-browser setting; the Italian introduces \"come browser predefinito\" and drops \"automatically\", pointing the user at a different feature.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "54ca0e5d",
@@ -794,6 +828,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"Open on last tab\", matching the option label \"Last tab\" translated as \"Ultima scheda\"; \"scheda più recente\" changes the wording and breaks consistency on the same preference surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "bbc537b8",
@@ -817,6 +852,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says to disable the option in order to manage font size \"here\" (in this screen), not \"separately\"; the locale also uses the informal imperative.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "8f5c3358",
@@ -840,6 +876,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states websites will break, without limiting it to some sites.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "c70ddc0e",
@@ -863,6 +900,7 @@
    "confidence": "medium"
   },
   "rationale": "The source contrasts the benefit with the drawback via \"but\"; the Italian drops the conjunction, degrading grammar and losing the contrast.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "9543a4fe",
@@ -886,6 +924,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment marks this as a summary describing what the preference does, not a command to the user.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "9d325cf4",
@@ -909,6 +948,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"%s encrypts all payment methods you save\"; the Italian verb is \"criptare\" (cripta) or \"cifrare\" (cifra); \"critta\" is a misspelling.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "suppressed",
   "string_hash": "23107577",
@@ -932,6 +972,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Sync cards\" and the sibling string preferences_credit_cards_sync_cards_across_devices uses \"le carte\"; adding \"di credito\" is inconsistent with the other card strings (Aggiungi carta, Gestisci carte).",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "60d99f32",
@@ -955,6 +996,7 @@
    "confidence": "medium"
   },
   "rationale": "Placeholder-level check: source says \"addresses\" and target says \"indirizzi\", which matches; no defect. (Retired: the suggested text is identical to the current text.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "withdrawn",
   "string_hash": "8714b7c8",
@@ -978,6 +1020,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"is removed from your download history\"; the sibling string preferences_downloads_delete_from_device_description uses \"eliminato\" for \"deleted\", so using \"eliminato\" here blurs the distinction between Delete (elimina) and Remove (rimuovi).",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "3256ad2f",
@@ -1001,6 +1044,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"enabled above\" (referring to the setting above) and \"your active search engine\", not the default search engine; the Italian changes the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "e032b363",
@@ -1024,6 +1068,7 @@
    "confidence": "high"
   },
   "rationale": "\"schede\" is plural, so the article must be \"Le\"; \"La schede\" is ungrammatical and visible in the Tabs settings screen.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "21279a39",
@@ -1047,6 +1092,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says the preference is for showing the tab strip; the Italian noun phrase is acceptable but ambiguous. Low value.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "398af2ad",
@@ -1070,6 +1116,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"Your connection is not secure.\"; the possessive was changed to a demonstrative.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "b59bb595",
@@ -1093,6 +1140,7 @@
    "confidence": "medium"
   },
   "rationale": "The it locale uses the informal register; also this is a touch device, where \"clic\" is inappropriate.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "33915ac1",
@@ -1116,6 +1164,7 @@
    "confidence": "medium"
   },
   "rationale": "This is a home-screen section header for recent tabs, not a per-tab action label referring to \"this tab\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "8ff24883",
@@ -1139,6 +1188,7 @@
    "confidence": "medium"
   },
   "rationale": "The source offers an alternative sign-in method (\"instead\"); the Italian drops that contrast.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "84b97b10",
@@ -1162,6 +1212,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Added to shortcuts!\" ends with an exclamation mark; the Italian ends with a period, altering the punctuation of the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "suppressed",
   "string_hash": "cc574056",
@@ -1185,6 +1236,7 @@
    "confidence": "medium"
   },
   "rationale": "sports_widget_final_results_page_content_description translates the same source phrase \"World Cup final results\" as \"Risultati finali della Coppa del mondo\"; the two accessibility strings for the same page must match.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "cb3a0fb7",
@@ -1208,6 +1260,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"sign in to Firefox on at least one other device\", referring to signing in to the browser, not to an \"account Firefox\".",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "b95ca990",
@@ -1231,6 +1284,7 @@
    "confidence": "medium"
   },
   "rationale": "The sync status label indicates the device/service is offline; Italian Mozilla localization uses \"Non connesso\" (or keeps \"Offline\"), not the literal \"Non in linea\".",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "62671624",
@@ -1254,6 +1308,7 @@
    "confidence": "high"
   },
   "rationale": "The source is the multi-tab variant (\"Tabs sent\", shown when multiple tabs have been sent), so the Italian must be plural.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "ecf039e8",
@@ -1277,6 +1332,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: \"%1$s won’t remember any of your history or cookies, but new bookmarks will be saved.\" The scope is private browsing, not a \"window\"; Android has no browser windows, so the added qualifier misstates what is not saved.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "679f6685",
@@ -1300,6 +1356,7 @@
    "confidence": "high"
   },
   "rationale": "\"gruppi\" is masculine plural, so the participle must be \"Aperti\"; the singular item correctly uses \"Aperto\". This string is read aloud by screen readers.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "e66c0781",
@@ -1323,6 +1380,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says the button text indicates a translation is currently in progress; the accompanying content description uses \"Traduzione in corso\".",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "ed7edd2c",
@@ -1346,6 +1404,7 @@
    "confidence": "medium"
   },
   "rationale": "The same surface uses \"Traccianti bloccati\" (menu_trackers_blocked_title) and \"Elementi traccianti bloccati\" (trackers_count_note); \"tracciamenti\" denotes tracking actions, not trackers.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "4f8f6cd7",
@@ -1369,6 +1428,7 @@
    "confidence": "high"
   },
   "rationale": "\"App\" is feminine in Italian, so the article must be elided as \"un’app\"; \"un app\" is a spelling/agreement error.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "0c2db4cd",

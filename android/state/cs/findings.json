@@ -14,6 +14,7 @@
    "confidence": "medium"
   },
   "rationale": "The source asks whether the user has sufficient access permissions to the requested item; the translation instead addresses the file's author and server-side existence.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6b58dc5d",
@@ -37,6 +38,7 @@
    "confidence": "medium"
   },
   "rationale": "The message body concerns an invalid or unsupported compression form, not a character set; \"znaková sada\" means charset and names the wrong thing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ca8aa36c",
@@ -60,6 +62,7 @@
    "confidence": "high"
   },
   "rationale": "The source says the site was reported as a potentially harmful site; \"útočná\" means \"attack site\", which is the wording of the separate malware error page (mozac_browser_errorpages_safe_browsing_malware_uri_message). The title of this same page already uses \"škodlivou stránkou\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4a63aaa4",
@@ -83,6 +86,7 @@
    "confidence": "high"
   },
   "rationale": "Source: \"The address specifies a protocol … the browser does not recognize\". The Czech accusative \"Adresu\" reverses the roles.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f22fc2b0",
@@ -106,6 +110,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says %1$s is the user's locale, not a region; \"region\" names the wrong concept.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a1c7ab1d",
@@ -129,6 +134,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: \"the extension wants to collect\" — a request for permission, not a statement of current behavior.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8dbbf3bf",
@@ -152,6 +158,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"personal communications\"; the matching short description string correctly uses \"osobní komunikace\". \"Osobní údaje\" means personal data, a different permission category.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "afaf1610",
@@ -175,6 +182,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is \"Access your data on another domain\"; the sibling string mozac_feature_addons_permissions_sites_in_domain_description uses \"na doméně %1$s\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "53673e29",
@@ -198,6 +206,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is \"Access your data on another domain.\"; the sibling domain string uses \"na doméně %1$s\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d0f8da59",
@@ -221,6 +230,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the extension controls the browser's proxy settings; the other permission descriptions in this set consistently use imperfective verbs (Číst a upravovat, Přistupovat) and keep \"prohlížeče\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b01a41ee",
@@ -244,6 +254,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to controlling the browser's proxy settings; the translation omits \"prohlížeče\" and uses a perfective one-off verb inconsistent with the rest of the permission list.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5be9c534",
@@ -267,6 +278,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this indicates the add-on is enabled — a toggle state; the same word is reused for the separate setting label, causing inconsistency on the same surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cfb7a948",
@@ -290,6 +302,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a settings label describing running the add-on in private browsing, not a status saying it is already allowed.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7d212c1d",
@@ -313,6 +326,7 @@
    "confidence": "medium"
   },
   "rationale": "The source uses the present tense \"says\"; the Czech past tense changes the statement's timeframe.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "df5a315f",
@@ -336,6 +350,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says an update is available for the add-on; the Czech says the add-on requires/demands an update, which reverses who needs what.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "312e31ff",
@@ -359,6 +374,7 @@
    "confidence": "high"
   },
   "rationale": "Source: \"Would you like to leave %s to view this content?\" — %s is the browser app being left, not an app being granted permission.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8bbc3d77",
@@ -382,6 +398,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: \"%1$s could not verify the authenticity of the application.\"",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bbdfaa6f",
@@ -405,6 +422,7 @@
    "confidence": "medium"
   },
   "rationale": "Source adds the email address to an existing contact, not creates a new contact.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "660c239f",
@@ -428,6 +446,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: \"Download link\" — the context menu item explicitly names the link target.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "027ad76a",
@@ -451,6 +470,7 @@
    "confidence": "medium"
   },
   "rationale": "mozac_feature_media_sharing_camera and mozac_feature_media_sharing_camera_and_microphone translate \"camera\" as \"kamera\", and the reminder string mozac_feature_media_sharing_camera_and_microphone_reminder_text_2 also uses \"kameru\"; using \"fotoaparát\" for the same WebRTC camera is inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ac0e8f3a",
@@ -474,6 +494,7 @@
    "confidence": "medium"
   },
   "rationale": "The locale convention is german-double quotes („…“); the string uses “…” taken from the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5f862a3b",
@@ -497,6 +518,7 @@
    "confidence": "high"
   },
   "rationale": "The source refers to multiple files being uploaded from a folder; the Czech says a single file.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "489beabd",
@@ -520,6 +542,7 @@
    "confidence": "medium"
   },
   "rationale": "The source term is \"passwords\", translated as \"hesla\" in the sibling strings (mozac_feature_prompts_saved_logins_2 \"Uložená hesla\", expand/collapse \"uložená hesla\"). Using \"přihlašovací údaje\" here is the legacy \"logins\" term and is inconsistent on the same surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b07c534f",
@@ -543,6 +566,7 @@
    "confidence": "medium"
   },
   "rationale": "Both mozac_feature_prompts_popup_dialog_title and this string use \"site\" in the source; rendering one as \"stránka\" and the other as \"server\" is inconsistent terminology on the same surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "afd7d41f",
@@ -566,6 +590,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is the default shortcut label for a website when it has no title; \"Server\" means a server machine, not a website.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9c979c8c",
@@ -589,6 +614,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to controls for the site shown in full screen; the Czech omits the site aspect.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dfe58dd4",
@@ -612,6 +638,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: \"Allow %1$s to use its cookies on %2$s?\" — the reflexive \"své\" refers to the subject of the clause; and \"také\" (also) is not in the source. Other dialogs in the same file use the \"Chcete … povolit\" pattern.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c01afa82",
@@ -635,6 +662,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is just \"Summary by %1$s\" where %1$s is the model name; \"Souhrn stránky\" adds content not present in the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bd9b08eb",
@@ -658,6 +686,7 @@
    "confidence": "medium"
   },
   "rationale": "All other strings in the same feature render the shake gesture as \"zatřást/zatřesením\" (e.g. mozac_summarize_settings_shake_to_summarize \"Vytvořit souhrn zatřesením\"); \"protřepání\" means shaking a container of liquid and is wrong for a device gesture.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4330f7c6",
@@ -681,6 +710,7 @@
    "confidence": "medium"
   },
   "rationale": "The radio-button option means \"never send\"; Czech requires the imperfective infinitive \"neodesílat\" for a repeated/ongoing setting, matching \"Odeslat automaticky\"/\"Zeptat se před odesláním\". \"Nikdy neodeslat\" (perfective) is not idiomatic Czech.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6119cf89",
@@ -704,6 +734,7 @@
    "confidence": "high"
   },
   "rationale": "Source is plural \"New extensions now available\"; Czech nominative plural of \"rozšíření\" requires the neuter plural adjective \"Nová\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f7e9e909",
@@ -727,6 +758,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment states Name represents a person's full name (e.g. John Joe Doe); Czech uses \"Jméno\" for a person's name, while \"Název\" is used for objects/titles.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0cd0afed",
@@ -750,6 +782,7 @@
    "confidence": "medium"
   },
   "rationale": "In an address form the field denotes a neighborhood/quarter of a city (Iran, Mexico); Czech \"Sousedství\" does not denote a place name and is wrong here.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a539c947",
@@ -773,6 +806,7 @@
    "confidence": "medium"
   },
   "rationale": "The source field is the generic organization name; \"Společnost\" means specifically a business company, which excludes non-business organizations.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d57577ce",
@@ -796,6 +830,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment states the Townland field is a specific type of rural land division in Ireland; \"Město\" means \"city/town\" and conflicts with the separate city field.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1abdfccc",
@@ -819,6 +854,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to a village or township (a rural settlement unit in Malaysia), not a district (okres), which is a higher-level administrative division.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0dcbaeee",
@@ -842,6 +878,7 @@
    "confidence": "high"
   },
   "rationale": "The source says the app will offer to translate sites written in this language (source language), matching the parallel never-translate string which correctly uses \"v tomto jazyce\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e3e68498",
@@ -865,6 +902,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says %s is a single folder name or bookmark title, so the menu belongs to one item, not to multiple items.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d6859547",
@@ -888,6 +926,7 @@
    "confidence": "high"
   },
   "rationale": "The locale convention is german-double quotes („…“); the target keeps the English curly opening/closing pair.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5956ae26",
@@ -911,6 +950,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to closing the bottom-sheet custom tab menu; \"seznam\" means \"list\", which is not what the source says.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fccabc42",
@@ -934,6 +974,7 @@
    "confidence": "medium"
   },
   "rationale": "browser_menu_add_app_to_homescreen and browser_menu_add_to_homescreen_xiaomi use \"domovská obrazovka\" for the same source term on the same surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "83057ef2",
@@ -957,6 +998,7 @@
    "confidence": "medium"
   },
   "rationale": "The menu item opens the customize homepage settings; the Czech omits \"homepage\", making the label ambiguous compared to the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cb71d945",
@@ -980,6 +1022,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is the imperative control label \"Stop\"; other content descriptions in the same set use the infinitive (e.g. \"Obnovit\" for Refresh). \"Zastaví\" is third-person indicative and inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "65791fe2",
@@ -1003,6 +1046,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says it is a menu label for navigating to the summarization feature; the source is a verb phrase, as with \"Translate page\" → \"Přeložit stránku\" in the same menu.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d0f8f6a7",
@@ -1026,6 +1070,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"all sites\"; other strings in this batch translate \"site(s)\"/\"websites\" as \"stránky\"/\"weby\" (e.g. clear_site_data_dialog_description). \"Servery\" means servers and is inconsistent terminology.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e39f0265",
@@ -1049,6 +1094,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"Regulation (EU) 2024/1183\"; in Czech the European Union abbreviation is \"EU\", while \"EÚ\" is Slovak.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "769499a7",
@@ -1066,16 +1112,17 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 1,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "cs",
   "origin": {},
   "rationale": "The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "809bedc4",
   "string_id": "create_collection_save_to_collection_tab_selected",
   "suggest": "",
-  "summary": "`create_collection_save_to_collection_tab_selected` has placeholders none where the source has %d",
+  "summary": "`create_collection_save_to_collection_tab_selected` has placeholders none where the source has %1$d",
   "suppressed_by": ""
  },
  {
@@ -1093,6 +1140,7 @@
    "confidence": "medium"
   },
   "rationale": "The source names the World Cup event; the standard Czech equivalent is \"Mistrovství světa\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "13bb9094",
@@ -1116,6 +1164,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a header for a list of debug locales that can be toggled on/off, not about enabling debugging for languages.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "560b3772",
@@ -1139,6 +1188,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"Tools\"; other debug drawer tool titles use \"Nástroje\" (e.g. Nástroje CFR, Nástroje pro doplňky).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5dcea7fc",
@@ -1162,6 +1212,7 @@
    "confidence": "high"
   },
   "rationale": "The source is \"links from websites, emails, and messages\" — the three nouns are sources of the links, not things being opened. The Czech makes e-mails and messages themselves open in Firefox.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "16791a57",
@@ -1185,6 +1236,7 @@
    "confidence": "medium"
   },
   "rationale": "The source wraps the group name in typographic quotes; cs convention is german-double quotes, which should be preserved.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c81fea39",
@@ -1208,6 +1260,7 @@
    "confidence": "medium"
   },
   "rationale": "The cs convention is german-double quotes („…“); the target keeps the English opening/closing curly quotes.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b25599ae",
@@ -1231,6 +1284,7 @@
    "confidence": "high"
   },
   "rationale": "The source shows the download state \"pending\" after the sizes; the Czech omits this status information entirely.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "455b44d9",
@@ -1254,6 +1308,7 @@
    "confidence": "high"
   },
   "rationale": "Source: \"The name you entered only changes uppercase or lowercase letters\" — the difference is only in casing, not that the name consists solely of letters.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "98ba127d",
@@ -1277,6 +1332,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"ad networks and analytics companies use to compile your browsing data\"; the Czech omits \"analytics\" and the notion of browsing data.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dc614377",
@@ -1300,6 +1356,7 @@
    "confidence": "high"
   },
   "rationale": "\"zabraňovat\" requires the preposition \"v\" + locative; also \"malicious\" is untranslated.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0469d7a6",
@@ -1323,6 +1380,7 @@
    "confidence": "high"
   },
   "rationale": "Czech neuter plural noun \"rozšíření\" requires the neuter participle ending -a; the same string already uses \"zakázána\" correctly in the title string.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "594c6ee6",
@@ -1346,6 +1404,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Leave no traces on this device\"; the qualifier \"on this device\" is essential to the meaning and is missing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e65d4c64",
@@ -1369,6 +1428,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Auto-close after one month?\" refers to closing inactive tabs after one month; the Czech reads \"tabs that are one month old\", shifting the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "38ddadf2",
@@ -1392,6 +1452,7 @@
    "confidence": "medium"
   },
   "rationale": "All other VPN location strings use \"umístění\"; using \"Poloha\" here is inconsistent with the same term in the same sentence and screen.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "31f84262",
@@ -1415,6 +1476,7 @@
    "confidence": "high"
   },
   "rationale": "The source \"Close survey\" is an action label; Czech convention (and the sibling string \"Zavřít\") uses the infinitive, not \"Zavře\" (\"it closes\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2cd25543",
@@ -1438,6 +1500,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Make Firefox your default browser\" addresses the user in second person; \"můj\" (my) is a first-person possessive and does not match.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a5f2462f",
@@ -1461,6 +1524,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says \"Allowing\" refers to the main \"Allow and Continue\" button — the user is asked to allow the data sharing; the Czech omits that and only asks them to consider being able to help.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a3735e49",
@@ -1484,6 +1548,7 @@
    "confidence": "high"
   },
   "rationale": "The three theme options must agree with the same noun; dark/light use masculine (vzhled), so \"Automatická\" (feminine) does not agree.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "494d7404",
@@ -1507,6 +1572,7 @@
    "confidence": "medium"
   },
   "rationale": "Source states the slowdown occurs while the pages are loading; that qualification is missing in Czech.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "40f63cf8",
@@ -1530,6 +1596,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Show all past explorations\" and the comment says the button navigates to show all of the user's history; \"nedávnou\" (recent) reverses the \"all\" meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8cfc558a",
@@ -1553,6 +1620,7 @@
    "confidence": "medium"
   },
   "rationale": "Source refers to private tabs, consistent with the other pbm_authentication_* strings that use \"anonymní panely\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a30e7c85",
@@ -1576,6 +1644,7 @@
    "confidence": "high"
   },
   "rationale": "Developer comment states %1$s is the name of the application; calling it a server misstates the source meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fadd5560",
@@ -1599,6 +1668,7 @@
    "confidence": "medium"
   },
   "rationale": "The related buttons preference_doh_exceptions_add and preference_doh_add_site_description translate \"Add site\" as \"Přidat web\"; the input field label for the same concept should use the same term.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9c979c8c",
@@ -1622,6 +1692,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"You’ll see a security risk warning before we use your system DNS\" — no \"always\" in this second sentence.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d081c788",
@@ -1645,6 +1716,7 @@
    "confidence": "medium"
   },
   "rationale": "The cs locale convention is german-double quotes („…“); the target keeps the source's English curly quotes.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5f302a7f",
@@ -1668,6 +1740,7 @@
    "confidence": "medium"
   },
   "rationale": "The source lists two tracker types (cross-site and social media); the target drops cross-site and turns social media into a mere example.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2edf966c",
@@ -1691,6 +1764,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Only in Private tabs\" is capitalized, and the sibling option \"Ve všech panelech\" starts with a capital letter.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0388fac4",
@@ -1714,6 +1788,7 @@
    "confidence": "medium"
   },
   "rationale": "Source states pages load normally but fewer trackers are blocked; the translation implies pages load normally except for some trackers, which changes the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b2eb0caf",
@@ -1737,6 +1812,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Nyní s funkcí … , naší dosud nejsilnější bariérou…\" – the appositive must be instrumental to agree with \"s funkcí\", not genitive.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "78a17972",
@@ -1760,6 +1836,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"browsing data\"; \"soukromá data\" (private data) is a different concept and inconsistent with the Delete browsing data feature naming.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c97905f9",
@@ -1783,6 +1860,7 @@
    "confidence": "high"
   },
   "rationale": "Source only mentions filling usernames and passwords in other apps, not saving them.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "25e2b8f6",
@@ -1806,6 +1884,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Ask when I delete files\" — the user deleting files; the Czech reads as an impersonal \"upon deletion of a file\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4c9b4ab6",
@@ -1829,6 +1908,7 @@
    "confidence": "medium"
   },
   "rationale": "The source describes moving old (unused) tabs into the inactive section; the Czech reverses it to moving tabs that are already inactive.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2c723144",
@@ -1852,6 +1932,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says tabs not viewed for two weeks; \"neotevřeli\" means not opened, which is a different condition.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2e867dbd",
@@ -1875,6 +1956,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"%s won’t save passwords for these sites.\" — there is no \"never\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2670f361",
@@ -1898,6 +1980,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"%s won’t save passwords for sites listed here.\" — no \"never\" in the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "26509971",
@@ -1921,6 +2004,7 @@
    "confidence": "medium"
   },
   "rationale": "The header labels the website a login belongs to; elsewhere in this batch \"sites\" is translated as \"stránky\", so \"Server\" is inconsistent and inaccurate.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9c979c8c",
@@ -1944,6 +2028,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"private tabs will also be visible\"; the Czech omits that it concerns private tabs specifically.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bee698be",
@@ -1967,6 +2052,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Search bookmarks\"; \"našeptávat\" means to suggest, which corresponds to a different term used for suggestions strings.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8eb6f6e6",
@@ -1990,6 +2076,7 @@
    "confidence": "high"
   },
   "rationale": "The source means suggestions related to your search; the participle must agree with \"návrhy\" (accusative plural), not with \"webu\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cde122a1",
@@ -2013,6 +2100,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Site\" in Firefox refers to a website, not a server; \"server\" is a wrong/legacy term inconsistent with other site-related strings.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "35ba3b8e",
@@ -2036,6 +2124,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to sites (web pages), and the rest of the batch consistently translates \"site\" as \"stránka\"; \"server\" names a different thing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "37fd16b3",
@@ -2059,6 +2148,7 @@
    "confidence": "medium"
   },
   "rationale": "The two related autoplay options are translated as \"Blokovat automatické přehrávání zvuků\"/\"...zvuků i videí\"; this one drops the autoplay notion, so the same setting group uses inconsistent terminology.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2ef417ba",
@@ -2076,16 +2166,17 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 1,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "cs",
   "origin": {},
   "rationale": "The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1d9b1d5c",
   "string_id": "recently_closed_tab",
   "suggest": "",
-  "summary": "`recently_closed_tab` has placeholders none where the source has %d",
+  "summary": "`recently_closed_tab` has placeholders none where the source has %1$d",
   "suppressed_by": ""
  },
  {
@@ -2103,6 +2194,7 @@
    "confidence": "high"
   },
   "rationale": "\"Leave feedback\" — the verb zanechat takes the accusative; \"zpětné vazby\" is genitive/plural and ungrammatical here.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "51d7de86",
@@ -2126,6 +2218,7 @@
    "confidence": "medium"
   },
   "rationale": "The source asks for a web address (URL), not a web page; the field is the hostname field.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "46fc0291",
@@ -2149,6 +2242,7 @@
    "confidence": "high"
   },
   "rationale": "The locale convention is german-double quotes („ “), used correctly in search_add_custom_engine_search_string_example.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2ba5171c",
@@ -2172,6 +2266,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says %1$s is the shortened URL OR the actual deleted search term; prefixing with \"Adresa\" (address) makes the message wrong for search terms.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "47d6aa09",
@@ -2195,6 +2290,7 @@
    "confidence": "medium"
   },
   "rationale": "The preposition \"na\" with a verb of location here requires \"na ni\" (accusative) — \"na ní podržet prst\" is incorrect; also the source's \"select remove\" step is missing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "91f0a8d9",
@@ -2218,6 +2314,7 @@
    "confidence": "medium"
   },
   "rationale": "The locale convention is german-double quotes („…“); the target keeps the English-style “…” pair.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "132edf52",
@@ -2241,6 +2338,7 @@
    "confidence": "high"
   },
   "rationale": "Source \"2026 World Cup Champions\" names the tournament winner on a champion scoreboard row; the target only says \"2026 World Cup\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5e7414f3",
@@ -2264,6 +2362,7 @@
    "confidence": "medium"
   },
   "rationale": "The source specifies that live updates are paused; the qualifier is dropped in the target.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5449fb25",
@@ -2287,6 +2386,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to refreshing the widget's match data, not reloading a web page; the parallel string sports_widget_error_load_failed_description renders the same sentence as \"Zkuste to za pár minut znovu.\"",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "28d951f5",
@@ -2310,6 +2410,7 @@
    "confidence": "medium"
   },
   "rationale": "Menu items in the Czech Firefox UI use the infinitive (cf. \"Odebrat\", \"Přeskočit\", \"Zobrazit výsledky\" in this same widget); \"Získejte\" is an imperative addressing the user, inconsistent with the surrounding menu labels.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9267e083",
@@ -2333,6 +2434,7 @@
    "confidence": "medium"
   },
   "rationale": "The source deliberately spells out \"versus\" because this string is read aloud by screen readers; a hyphen is silent or misread, losing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c5e456ad",
@@ -2356,6 +2458,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a match status label for the penalty shoot-out; Czech \"Penalty\" reads as a single penalty kick (and looks like the untranslated English word), whereas the established term is \"penaltový rozstřel\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a0bb6f2b",
@@ -2379,6 +2482,7 @@
    "confidence": "medium"
   },
   "rationale": "In Czech football terminology the round of 16 is \"osmifinále\"; \"Nejlepších 16\" is a literal, non-standard rendering, inconsistent with the neighbouring \"Čtvrtfinále\"/\"Semifinále\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "161b527d",
@@ -2402,6 +2506,7 @@
    "confidence": "medium"
   },
   "rationale": "Czech football terminology uses \"šestnáctifinále\" for the round of 32, consistent with \"osmifinále\", \"čtvrtfinále\", \"semifinále\" used elsewhere in the widget.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e0d74aea",
@@ -2425,6 +2530,7 @@
    "confidence": "medium"
   },
   "rationale": "This content description is read aloud; \"versus\" should be rendered in Czech (e.g. \"proti\") as the rest of the string is translated.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3b29f15c",
@@ -2448,6 +2554,7 @@
    "confidence": "high"
   },
   "rationale": "The source has one sentence \"There was a problem opening %s.\" followed by a blank line; the Czech puts a period after the placeholder and then continues the sentence on a new line, producing ungrammatical, broken output.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "47717c71",
@@ -2471,6 +2578,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"sign in to Firefox on at least one other device\"; the Czech omits \"at least one\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "41b63a3e",
@@ -2494,6 +2602,7 @@
    "confidence": "high"
   },
   "rationale": "\"zařízení\" is neuter; the plural determiner must be \"žádná\", not the feminine/masculine-inanimate \"žádné\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "239fbf02",
@@ -2517,6 +2626,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Please enable tab syncing.\" — there is no notion of \"first/before anything else\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "25498244",
@@ -2540,6 +2650,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"Normal Tabs Open: %1$s\" gives the count of open normal tabs; the parallel private/synced strings use \"Počet otevřených … panelů: %1$s\", while this one reads as \"normal open tabs\" with the count appended.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5861739b",
@@ -2563,6 +2674,7 @@
    "confidence": "medium"
   },
   "rationale": "Source asks for a reminder; \"upozornit\" means notify/alert, which is the wording used for notifications, not reminders.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9738d13f",
@@ -2586,6 +2698,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to the extension collection being modified, not to \"collection settings\"; \"rozšíření\" is missing and \"Nastavení\" is added.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2d52cd96",
@@ -2609,6 +2722,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Never translate %1$s\", parallel string \"Always translate %1$s\" is rendered \"Vždy překládat jazyk %1$s\"; the added \"z\" breaks parallelism and grammatical object structure.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8ab39667",
@@ -2632,6 +2746,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Websites didn’t work properly\" is past tense in an uninstall survey; the Czech present tense changes the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c5e42516",
@@ -2655,6 +2770,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Videos, downloads, or media didn’t work\" uses \"or\" and past tense; the Czech uses \"a\" (and) and present tense.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ed3076aa",
@@ -2678,6 +2794,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Speaks to you\" means appeals to/resonates with you; \"vás vyjadřuje\" means \"expresses you\", a different meaning and awkward in Czech.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a3577412",
@@ -2701,6 +2818,7 @@
    "confidence": "medium"
   },
   "rationale": "The subject is \"aplikace %1$s\", which is feminine in Czech, so the past participle must be \"byla\" and the adjective agreement follows.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0008a848",
@@ -2724,6 +2842,7 @@
    "confidence": "medium"
   },
   "rationale": "Source lists three items: pay, check out, shop; the Czech omits \"check out\" (dokončit objednávku).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8e851ad6",
@@ -2747,6 +2866,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means adding the URL into the custom autocomplete list; Czech requires \"do\" (into) rather than \"na\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "84d74793",
@@ -2770,6 +2890,7 @@
    "confidence": "high"
   },
   "rationale": "The source is a noun phrase label \"Fingerprint icon\"; Czech should use nominative \"Ikona otisku prstu\", not accusative \"Ikonu\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bc432ca7",
@@ -2793,6 +2914,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"to dismiss annoying cookie banners\" means to get rid of the banners; using \"odmítl\" twice is wrong and inconsistent with \"cookie lišty\" used elsewhere.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c918a78e",
@@ -2816,6 +2938,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Number of trackers blocked\"; there is no \"total\" in the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b2336d5c",
@@ -2839,6 +2962,7 @@
    "confidence": "high"
   },
   "rationale": "Czech requires a comma before the subordinating conjunction \"když\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fd90862e",
@@ -2862,6 +2986,7 @@
    "confidence": "high"
   },
   "rationale": "The extra \"a\" before \"za účelem\" is a leftover that breaks the sentence structure; the source reads \"review this website and add support in the future\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6c1b018a",
@@ -2885,6 +3010,7 @@
    "confidence": "medium"
   },
   "rationale": "Source uses \"Settings > Privacy & Security > Security\" with \">\" throughout; the Czech text mixes \"->\" and \">\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ce8e2790",
@@ -2902,10 +3028,11 @@
   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "cs",
   "origin": {},
   "rationale": "In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5783be4a",
@@ -2929,6 +3056,7 @@
    "confidence": "medium"
   },
   "rationale": "The menu item opens information about the application, not about the organisation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "12ffa8dd",
@@ -2952,6 +3080,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means the tab is powered by the app; the Czech word order makes the app the actor of an incomplete sentence and loses the passive meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "64e4a51f",
@@ -2975,6 +3104,7 @@
    "confidence": "medium"
   },
   "rationale": "The source only says the error may be temporary; the added suggestion to retry later is not in the en-US text.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e5e87399",
@@ -2998,6 +3128,7 @@
    "confidence": "high"
   },
   "rationale": "\"pokračovaní\" is a spelling error (correct: \"pokračování\"); \"zmiňovaný\" has no counterpart in the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b867b0af",
@@ -3021,6 +3152,7 @@
    "confidence": "medium"
   },
   "rationale": "The placeholder in the source modifies \"session\" (your %1$s session), not \"notifications\"; the Czech reassigns the app name and replaces \"session\" with \"history\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "33d4aeae",
@@ -3044,6 +3176,7 @@
    "confidence": "medium"
   },
   "rationale": "Source uses the domain mozilla.org as the example; mozilla.cz is a different domain and the sibling string preference_autocomplete_add_example keeps example.com unchanged.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b4184892",
@@ -3067,6 +3200,7 @@
    "confidence": "medium"
   },
   "rationale": "The source specifies autocompletion happens \"in the address bar\"; this information is missing in the Czech string.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "65c6dc65",
@@ -3090,6 +3224,7 @@
    "confidence": "medium"
   },
   "rationale": "The source contrasts \"Block audio only\" with \"Block audio and video\"; the Czech drops \"only\", so the two options no longer differ in meaning as intended.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "931acf66",
@@ -3113,6 +3248,7 @@
    "confidence": "medium"
   },
   "rationale": "This is a settings category heading alongside nouns like \"Výkon\", \"Soukromí\", \"Zabezpečení\"; the imperative verb form is inconsistent and wrong for a category label.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "014f9683",
@@ -3136,6 +3272,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says Mozilla \"strives to collect only what we need to provide and improve %1$s for everyone\"; the Czech omits \"strives\", \"provide\" and \"for everyone\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a1a88523",
@@ -3159,6 +3296,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to choices about data collection, not to reports.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b8dd27d7",
@@ -3182,6 +3320,7 @@
    "confidence": "medium"
   },
   "rationale": "The source blocks trackers used by ads, not the ads themselves; sibling strings render \"trackers\" as \"sledovací prvky\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6bbb10f5",
@@ -3205,6 +3344,7 @@
    "confidence": "medium"
   },
   "rationale": "Neighbouring settings render \"trackers\" as \"sledovací prvky\"; here the tracking notion is lost.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3a88d9d2",
@@ -3228,6 +3368,7 @@
    "confidence": "high"
   },
   "rationale": "Correct Czech spelling is \"shromažďování\"; a comma is required before the comparative clause \"jako je…\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "25bcd7b3",
@@ -3251,6 +3392,7 @@
    "confidence": "high"
   },
   "rationale": "Source is \"USB/Wi-Fi\" with a single slash; the duplicated slash is a typo.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bc420f9e",
@@ -3274,6 +3416,7 @@
    "confidence": "medium"
   },
   "rationale": "Elsewhere in this file \"sites\" is consistently translated as \"stránky\" (e.g. \"Blokovat potenciálně nebezpečné a podvodné stránky\"); \"servery\" means servers.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bb1e7cb6",
@@ -3297,6 +3440,7 @@
    "confidence": "high"
   },
   "rationale": "Czech requires a comma before a subordinate clause introduced by \"které\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a90366cd",
@@ -3320,6 +3464,7 @@
    "confidence": "high"
   },
   "rationale": "The source reads \"Regulation (EU) 2024/1183\"; the Czech abbreviation of Evropská unie is \"EU\", not the Slovak \"EÚ\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "769499a7",
@@ -3343,6 +3488,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a field label (noun phrase) naming the search string to be used, not a command to use it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "da4f02be",
@@ -3366,6 +3512,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Autocomplete URLs for sites you use most\" is an affirmative instruction; \"Nechcete\" (\"You don't want\") reverses/negates the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8de5aeeb",

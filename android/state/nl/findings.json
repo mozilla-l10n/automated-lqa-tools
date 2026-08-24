@@ -14,6 +14,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"in a few moments\", not \"in a few seconds\"; other strings in the same file use \"enkele ogenblikken\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f9b0cbbe",
@@ -37,6 +38,7 @@
    "confidence": "high"
   },
   "rationale": "Source \"check your device’s data or Wi-Fi connection\" requires the elided compound hyphen (\"gegevens-\"), as done correctly in mozac_browser_errorpages_net_reset_message.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f9b0cbbe",
@@ -60,6 +62,7 @@
    "confidence": "high"
   },
   "rationale": "Source says \"Is your device or network protected by a firewall or proxy?\" — device, not computer.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c4854120",
@@ -83,6 +86,7 @@
    "confidence": "high"
   },
   "rationale": "Source says “Press “Try Again””; on a mobile browser the action is tapping/pressing, not clicking.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "edbdc4f9",
@@ -106,6 +110,7 @@
    "confidence": "high"
   },
   "rationale": "Source: “not your device”; the Dutch names a computer instead of the device.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e3b13936",
@@ -129,6 +134,7 @@
    "confidence": "high"
   },
   "rationale": "Source: “The page you are trying to view”. The Dutch omits “u”, making the sentence ungrammatical; the parallel string mozac_browser_errorpages_security_ssl_message correctly has “De pagina die u wilt bekijken”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ab2ac6ec",
@@ -152,6 +158,7 @@
    "confidence": "medium"
   },
   "rationale": "Source “The issue is most likely with the website”; the same string translates “problem” as “probleem”, so “issue” is an inconsistent anglicism.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ab2ac6ec",
@@ -175,6 +182,7 @@
    "confidence": "high"
   },
   "rationale": "Source: “Is the device connected to an active network?”; “computer” is the wrong referent on Android.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "045d79d9",
@@ -198,6 +206,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is the author (developer) of an add-on; Dutch \"Schrijver\" refers to a writer of text and is the wrong term in a software context.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "85204a81",
@@ -221,6 +230,7 @@
    "confidence": "high"
   },
   "rationale": "Dutch \"vragen\" requires \"om\" here; the parallel string mozac_feature_addons_optional_permissions_with_data_collection_only_dialog_title correctly uses \"vraagt om aanvullende gegevensverzameling\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "09448c91",
@@ -244,6 +254,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is \"access to apps and services on devices connected to your local network\"; in the Dutch the phrase \"op apparaten…\" is detached from \"apps en services\" and attaches to \"toestaan\", changing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1e41d011",
@@ -267,6 +278,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a content description for a back button; Dutch \"bladeren\" means to browse/leaf through, not to navigate back. Compare action_bar_up_description usage of navigation wording.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e6ea73b4",
@@ -290,6 +302,7 @@
    "confidence": "medium"
   },
   "rationale": "The content description describes a back navigation button; \"bladeren\" means browsing/leafing through, not navigating. Standard Dutch Mozilla wording is \"Terugnavigeren\" or \"Teruggaan\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e6ea73b4",
@@ -313,6 +326,7 @@
    "confidence": "high"
   },
   "rationale": "The source refers to the menu sheet of a custom tab (aangepast tabblad), not to an action of customizing a tab.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8a2a2559",
@@ -336,6 +350,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is a future warning: they will stop working on March 14. \"werken niet meer op 14 maart\" reads as a present-tense statement and misplaces the date; \"vanaf 14 maart niet meer\" conveys the intended meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7b175ac5",
@@ -359,6 +374,7 @@
    "confidence": "medium"
   },
   "rationale": "The source option label is \"Never\"; the summary string separately renders \"Close manually\". Rendering the option itself as \"Handmatig\" changes the displayed content.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "244e6265",
@@ -382,6 +398,7 @@
    "confidence": "medium"
   },
   "rationale": "confirm_clear_permissions_site and confirm_clear_permissions_on_all_sites use \"machtigingen\" for the same source term \"permissions\" in the same dialog family.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1b25438a",
@@ -405,6 +422,7 @@
    "confidence": "medium"
   },
   "rationale": "The button navigates back to the Settings page; \"bladeren\" means browsing/leafing through, not navigating back. Mozilla nl uses \"Terug\" / \"Terug navigeren\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e6ea73b4",
@@ -428,6 +446,7 @@
    "confidence": "medium"
   },
   "rationale": "The content description describes a back button; Dutch Firefox uses ‘Terug navigeren’ / ‘Terug’. ‘Terug bladeren’ means paging/leafing backwards and misdescribes the control for screen-reader users.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e6ea73b4",
@@ -451,6 +470,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means navigating back within the debug drawer; \"bladeren\" means browsing/leafing through and is not the term used for navigation elsewhere in the product.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e6ea73b4",
@@ -474,6 +494,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a content description for the back button; \"bladeren\" means browsing/leafing, not navigating back, and is inconsistent with \"Naar Downloadinstellingen navigeren\" used for the sibling button.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e6ea73b4",
@@ -497,6 +518,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means navigating back (going back a screen); \"bladeren\" means browsing/leafing through and misdescribes the control for screen-reader users.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e6ea73b4",
@@ -520,6 +542,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the app picked a mask for the user to reuse; the omission of \"voor u\" loses part of the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a8e8d8c8",
@@ -543,6 +566,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means navigating back from the ETP detail screen; \"bladeren\" (leaf through/browse) is not the meaning of \"navigate\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e6ea73b4",
@@ -566,6 +590,7 @@
    "confidence": "medium"
   },
   "rationale": "The description string etp_redirect_trackers_description renders \"redirects\" as \"doorgeleidingen\"; the title uses the malformed \"Doorleidings-\", inconsistent with the same term on the same surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cd436654",
@@ -589,6 +614,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Firefox Suggest\" is a Mozilla feature/product name that stays untranslated per brand conventions.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6de0e127",
@@ -612,6 +638,7 @@
    "confidence": "high"
   },
   "rationale": "The related string homepage_shortcuts_add_shortcut uses \"Snelkoppeling\"; \"sneltoetsen\" means keyboard shortcuts, which is the wrong concept for home screen shortcut tiles.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3b4a6277",
@@ -635,6 +662,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a back button content description; \"bladeren\" means \"to browse/leaf through\" and misdescribes the control for screen-reader users. Mozilla nl uses \"Terug\"/\"Terugnavigeren\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e6ea73b4",
@@ -658,6 +686,7 @@
    "confidence": "medium"
   },
   "rationale": "The button takes the user to get the standalone paid product; \"downloaden\" states a specific action (download) not implied by \"Get\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "378950f8",
@@ -681,6 +710,7 @@
    "confidence": "medium"
   },
   "rationale": "The back button content description should say \"Terug\" (or \"Teruggaan\"); \"bladeren\" means to browse/leaf through and is the wrong verb for navigation in Mozilla nl, which uses \"Terug\" for back buttons.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e6ea73b4",
@@ -704,6 +734,7 @@
    "confidence": "medium"
   },
   "rationale": "%1$s is an end date; \"tot %1$s onbeperkte bandbreedte\" reads as a quantity limit rather than \"through <date>\", and \"tot en met\" correctly renders \"through\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "43f8856f",
@@ -727,6 +758,7 @@
    "confidence": "high"
   },
   "rationale": "\"persoonlijker\" means \"more personal\", the opposite emphasis of \"more private\"; the parallel string ip_protection_onboarding_body_promo correctly uses \"meer privé\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ed3edbca",
@@ -750,6 +782,7 @@
    "confidence": "medium"
   },
   "rationale": "The likert midpoint \"Neutral\" means neither satisfied nor dissatisfied; \"Gemiddeld\" means \"average\", a different concept.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4fd1d2b6",
@@ -773,6 +806,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Bladeren\" means browsing/leafing through; the control returns to the previous screen, and the parallel string logins_navigate_back_button_content_description uses \"Terug\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e6ea73b4",
@@ -796,6 +830,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: \"How satisfied are you with your Firefox homepage?\" — no \"experience\"; also \"Startpagina\" is wrongly capitalised mid-compound.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cf66eb32",
@@ -819,6 +854,7 @@
    "confidence": "high"
   },
   "rationale": "Source is \"Help make search in Firefox better\"; the parallel sync/printing strings do keep the feature name.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ead84e7e",
@@ -842,6 +878,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"Mozilla’s marketing partners\"; \"technology\" is not mentioned.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "daf9cdd1",
@@ -865,6 +902,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"Mozilla’s marketing partners\"; \"technology\" is not mentioned.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2d09ab1c",
@@ -888,6 +926,7 @@
    "confidence": "medium"
   },
   "rationale": "\"proudly independent\" requires an adverb construction; \"trots onafhankelijk\" is not idiomatic/grammatical Dutch.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cab6f8dc",
@@ -911,6 +950,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"Mozilla’s marketing partners\", not \"marketing technology partners\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2d09ab1c",
@@ -934,6 +974,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"Mozilla’s marketing partners\", not \"marketing technology partners\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2d09ab1c",
@@ -957,6 +998,7 @@
    "confidence": "high"
   },
   "rationale": "The Dutch clause has no subject; \"Met één tik voorkomen dat…\" is not a well-formed sentence, unlike the source \"One tap helps stop companies spying on your clicks.\"",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "33ccebaf",
@@ -980,6 +1022,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says the button navigates the user to their history; the source says \"explorations\", not searches.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d5b26c23",
@@ -1003,6 +1046,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Firefox Suggest\" is a product/feature brand name and must not be translated.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e13abb1b",
@@ -1026,6 +1070,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Firefox Suggest\" is a product/feature brand name and must not be translated.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "001095b7",
@@ -1049,6 +1094,7 @@
    "confidence": "high"
   },
   "rationale": "The source names a menu for sorting passwords; the Dutch reads as a command to sort a password menu.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f6c6455c",
@@ -1072,6 +1118,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says %s is the name of the suggested search engine; the string means to search using that engine, not to search inside it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "130d77d2",
@@ -1095,6 +1142,7 @@
    "confidence": "medium"
   },
   "rationale": "The source has an empty line between %1$s and the footer, matching the long template; the Dutch short template drops it, changing the shared message layout.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dbf291c9",
@@ -1118,6 +1166,7 @@
    "confidence": "medium"
   },
   "rationale": "Only the app name %1$s is a brand; the common noun \"essentials\" should be translated into Dutch.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "18dc2611",
@@ -1141,6 +1190,7 @@
    "confidence": "medium"
   },
   "rationale": "In Dutch soccer terminology the Round of 16 is called 'achtste finales'; 'Ronde van 16' is a literal, incorrect rendering (and inconsistent with 'Halve finales' used elsewhere).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1d11d035",
@@ -1164,6 +1214,7 @@
    "confidence": "medium"
   },
   "rationale": "Dutch soccer terminology for the Round of 32 is 'zestiende finales'; the literal 'Ronde van 32' is not the established term and is inconsistent with 'Halve finales'.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ba7725b8",
@@ -1187,6 +1238,7 @@
    "confidence": "medium"
   },
   "rationale": "The source labels the team the user follows; Dutch 'volgend' means 'next/following (in sequence)' and is misleading here.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d2996a17",
@@ -1210,6 +1262,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment specifies the full soccer tournament match schedule, which in Dutch is 'speelschema'; 'tijdschema' means timetable in a generic sense.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "34dca794",
@@ -1233,6 +1286,7 @@
    "confidence": "medium"
   },
   "rationale": "'Bladeren' means browsing/paging; the control is a back navigation button, and elsewhere Mozilla nl uses 'Terug' or 'Terugnavigeren'.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e6ea73b4",
@@ -1256,6 +1310,7 @@
    "confidence": "medium"
   },
   "rationale": "In Dutch (and in Mozilla nl terminology) ‘account’ is a het-woord: ‘dit account’, not ‘deze account’.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b6938462",
@@ -1279,6 +1334,7 @@
    "confidence": "high"
   },
   "rationale": "Per the developer comment the button goes to Settings for auto close tabs; \"View\" is a verb here, not \"display/beeld\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6c2292ca",
@@ -1302,6 +1358,7 @@
    "confidence": "medium"
   },
   "rationale": "The sibling strings render \"Tabs Open\" as \"Open ... tabbladen\"; here the modifiers are swapped, breaking consistency on the same surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "be64e7e2",
@@ -1325,6 +1382,7 @@
    "confidence": "medium"
   },
   "rationale": "%1$s is the link text \"hier\"; \"U vindt hier meer info\" splits oddly and the source is \"You can learn more here.\"",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ca395ba5",
@@ -1348,6 +1406,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means the setting takes precedence over the offer-to-translate setting; the parallel string translation_option_bottom_sheet_switch_never_translate_site_description uses \"Overschrijft\". \"Negeert\" means \"ignores\", a different meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0ace290f",
@@ -1371,6 +1430,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means the system's uninstall prompt (for the app), not a prompt to uninstall the system.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "30052622",
@@ -1394,6 +1454,7 @@
    "confidence": "high"
   },
   "rationale": "Source is \"It’s slow or unreliable\" — a disjunction, not a conjunction.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "411cec52",
@@ -1417,6 +1478,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: \"Sending it will help us improve %1$s.\" The Dutch mixes an implicit subject with \"het\"; the parallel plural string correctly uses \"Als u deze verzendt, helpt u ons…\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f02de2f2",
@@ -1440,6 +1502,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Browser is blocked or unsupported\"; the Dutch reverses the order of the two conditions.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ed57169f",
@@ -1463,6 +1526,7 @@
    "confidence": "medium"
   },
   "rationale": "The button adds the current URL to the custom autocomplete list; \"naar\" reads as direction (a link to autocomplete) rather than adding it to the list.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c53f5583",
@@ -1486,6 +1550,7 @@
    "confidence": "high"
   },
   "rationale": "Per the developer comment, tapping the overlay dismisses typing mode and returns to the browser; \"Verwijderen\" means \"delete\", which describes a destructive action, not dismissing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0e150093",
@@ -1509,6 +1574,7 @@
    "confidence": "high"
   },
   "rationale": "The button dismisses/closes a message; \"Verwijderen\" means \"Delete\", implying data removal rather than dismissing the prompt.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0e150093",
@@ -1532,6 +1598,7 @@
    "confidence": "high"
   },
   "rationale": "The source says 'Add shortcuts to your home screen'; 'koppelingen' means links, and elsewhere in this batch 'Shortcuts' is rendered as 'snelkoppelingen' (menu_add_to_shortcuts).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4ba24113",
@@ -1555,6 +1622,7 @@
    "confidence": "medium"
   },
   "rationale": "The source uses ‘but’ to join the clauses; the Dutch joins two main clauses with only a comma and repeats ‘nu’ in an ungrammatical position (‘van start gaan nu met’).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e99a7773",

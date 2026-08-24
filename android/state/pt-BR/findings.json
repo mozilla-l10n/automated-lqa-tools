@@ -14,6 +14,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"switch to online mode\"; the translation says \"leave offline mode\", altering the wording of the instruction.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "49559859",
@@ -37,6 +38,7 @@
    "confidence": "medium"
   },
   "rationale": "The relative clause modifies \"forma\" (feminine), so the participle must be \"concluída\"; as written the agreement is broken.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3d5a87aa",
@@ -60,6 +62,7 @@
    "confidence": "medium"
   },
   "rationale": "Portuguese requires the article here (\"para a área de transferência\"), as used in the corresponding update string.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f5cc794a",
@@ -83,6 +86,7 @@
    "confidence": "medium"
   },
   "rationale": "mozac_feature_addons_permissions_devtools_description translates the same source phrase as \"ferramentas do desenvolvedor ... nas abas abertas\"; the update variant must match for consistency on the same surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1786cfe7",
@@ -106,6 +110,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a setting label meaning the add-on is allowed to run in private browsing; \"Ativar\" changes the meaning to \"Enable\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "576c1131",
@@ -129,6 +134,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is the title for the list of external apps to open the link in; \"Abrir no…\" (in the) is ungrammatical without a following noun.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3b8b2215",
@@ -152,6 +158,7 @@
    "confidence": "medium"
   },
   "rationale": "Elsewhere in the same batch \"app\" is consistently translated as \"aplicativo\" (e.g. \"Abrir em aplicativo\", \"Sempre abrir links em aplicativos\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5ba2590d",
@@ -175,6 +182,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Open link in private tab\"; the object \"link\" is omitted while the sibling string keeps it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e84d196a",
@@ -198,6 +206,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says clicking the action switches to the newly opened tab; \"Mostrar\" means \"Show\", which is a different action word than \"Switch\" (\"Mudar\"/\"Alternar\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0f43af59",
@@ -221,6 +230,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a present-participle title of a loading dialog indicating the action in progress; \"Importação de favoritos\" loses the in-progress sense.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "37a8f206",
@@ -244,6 +254,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"the tab that’s using your microphone and camera\"; the sibling string mozac_feature_media_sharing_camera_text correctly uses \"está usando\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f73e97d9",
@@ -267,6 +278,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"Make sure you trust this site\"; \"Tenha certeza se confia\" is not grammatical Portuguese (the conjunction \"se\" cannot follow \"ter certeza\" in this affirmative construction).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a38ff87f",
@@ -290,6 +302,7 @@
    "confidence": "high"
   },
   "rationale": "\"provedor acesso a contas\" is ungrammatical (missing \"de\") and diverges from \"provedor de autenticação\" used for the same \"login provider\" term in mozac_feature_prompts_identity_credentials_choose_provider.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f7beefea",
@@ -313,6 +326,7 @@
    "confidence": "medium"
   },
   "rationale": "The Portuguese construction requires \"permitir que este site abra\"; \"Permitir a este site abrir\" is ungrammatical in pt-BR usage.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f296e0d2",
@@ -336,6 +350,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states the password will be saved after the action; the present tense changes the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4de8238e",
@@ -359,6 +374,7 @@
    "confidence": "high"
   },
   "rationale": "A passkey is not a password; Mozilla pt-BR uses \"chave de acesso\". Using \"senha\" confuses it with password prompts in the same file.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9f4d45a1",
@@ -382,6 +398,7 @@
    "confidence": "high"
   },
   "rationale": "A passkey is a distinct credential type; rendering it as \"senha\" says something other than the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b263705f",
@@ -405,6 +422,7 @@
    "confidence": "medium"
   },
   "rationale": "The source addresses the user in the future tense; the translation changes it to a generic present-tense passive statement.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4a13b3fa",
@@ -428,6 +446,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says DRM-controlled content; DRM is a specific technology term and is not equivalent to \"direitos autorais\" (copyright).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bac5f083",
@@ -451,6 +470,7 @@
    "confidence": "high"
   },
   "rationale": "%1$s is the app name; the source asks the user to enable notifications in the app so the website's notifications can be received, not to allow notifications coming from the app.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f71b8bdc",
@@ -474,6 +494,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is simply \"Sign in to summarize\"; the target adds a noun not present in the source, and elsewhere in the batch \"Sign in\" is translated as just \"Entrar\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "11f71426",
@@ -497,6 +518,7 @@
    "confidence": "medium"
   },
   "rationale": "The same source verb \"shake\" is translated as \"balançar\" in mozac_summarize_settings_shake_to_summarize and mozac_summarize_shake_consent_on_device_message; mixing verbs on the same feature surface is inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b58b0795",
@@ -520,6 +542,7 @@
    "confidence": "medium"
   },
   "rationale": "The feature label mozac_summarize_settings_shake_to_summarize uses \"Balançar para resumir\"; using a third verb for the same gesture is inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e651fe23",
@@ -543,6 +566,7 @@
    "confidence": "medium"
   },
   "rationale": "The same surface (crash reporter) uses \"travamento\" consistently elsewhere (mozac_lib_crash_channel, dialog_checkbox, no_crashes); \"falhou\" is inconsistent terminology.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "039e94b0",
@@ -566,6 +590,7 @@
    "confidence": "medium"
   },
   "rationale": "Inconsistent with mozac_lib_gathering_crash_telemetry_in_progress (\"dados de telemetria de travamentos\") and the other crash strings in the same file.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "63190847",
@@ -589,6 +614,7 @@
    "confidence": "medium"
   },
   "rationale": "The sibling string mozac_lib_gathering_crash_data_in_progress translates \"Gathering\" as \"Coletando\"; \"Recolhendo\" is also European Portuguese usage.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "091cc5d9",
@@ -612,6 +638,7 @@
    "confidence": "high"
   },
   "rationale": "This is a game (longfox) start prompt; \"reproduzir\" means to play back media, changing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "78303995",
@@ -635,6 +662,7 @@
    "confidence": "medium"
   },
   "rationale": "The action bar \"up\" button navigates to the parent screen, not scroll to the top of the page.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6824dbe4",
@@ -652,10 +680,11 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "pt-BR",
   "origin": {},
   "rationale": "The locale's quote convention is `curly-double` (13 occurrences).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c5c9d2e3",
@@ -679,6 +708,7 @@
    "confidence": "medium"
   },
   "rationale": "Related strings (add_login_2 \"Adicionar senha\") use \"senha\" for login; \"conta\" is inconsistent on the same surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "108db744",
@@ -702,6 +732,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"Home screen\"; the related description string correctly uses \"tela inicial do dispositivo\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c05061fe",
@@ -725,6 +756,7 @@
    "confidence": "medium"
   },
   "rationale": "The comment describes county lines used in postal addressing (US/UK-style counties); pt-BR standard rendering is \"Condado\". \"Município\" collides conceptually with city (\"Cidade\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2d759f1e",
@@ -748,6 +780,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this field is for Japanese prefectures; pt-BR uses \"Prefeitura\" for that. Using \"Província\" makes it identical to addresses_province, creating an ambiguous, wrong label.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "daaac3d9",
@@ -771,6 +804,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"or pop-ups about them\"; \"notificações\" refers to a different UI concept (notifications).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c6b41e4d",
@@ -794,6 +828,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"or pop-ups about them\"; notifications are a distinct concept in the app.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7a21babb",
@@ -817,6 +852,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment describes a playful, adorable design; \"Cuddling\" refers to snuggling/cuteness, not \"cozy\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "21f7ae8f",
@@ -840,6 +876,7 @@
    "confidence": "high"
   },
   "rationale": "The source names the color \"Dark Purple\"; \"Roxo com escuro\" (\"purple with dark\") is ungrammatical and wrong. The correct name is \"Roxo escuro\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "efd020c7",
@@ -863,6 +900,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a snackbar confirming a bookmark was deleted; \"Excluiu %1$s\" reads as \"(he/she/you) deleted %1$s\" rather than a status confirmation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a1ff6406",
@@ -886,6 +924,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"Moved %1$s to %2$s\" is a status confirmation, not an action performed by a third person; \"Moveu\" reads as \"he/she moved\" in pt-BR.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8dcfeb1f",
@@ -909,6 +948,7 @@
    "confidence": "high"
   },
   "rationale": "The source refers to closing the bottom sheet menu of a custom tab (aba personalizada), not a menu for customizing tabs.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "51b422ea",
@@ -932,6 +972,7 @@
    "confidence": "high"
   },
   "rationale": "Source is \"Add to Home screen\"; the translation says just \"device screen\", losing the \"Home\" qualifier used consistently elsewhere (e.g. browser_menu_add_app_to_homescreen).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c05061fe",
@@ -955,6 +996,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Tornar ... como\" is incorrect in Portuguese; the verb tornar does not take \"como\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dbba7961",
@@ -978,6 +1020,7 @@
    "confidence": "medium"
   },
   "rationale": "The source gives a concrete three-step instruction; the target generalizes it, losing the instructions the user needs.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b76d4c4b",
@@ -1001,6 +1044,7 @@
    "confidence": "high"
   },
   "rationale": "\"a partir\" requires \"de\" before the date; grammatical error.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2af81d40",
@@ -1024,6 +1068,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a neutral statement ending in a period; the exclamation mark changes the tone and punctuation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "76f2b018",
@@ -1047,6 +1092,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US string \"This page is stored on your device\" has no terminating punctuation; the other panel strings mirror source punctuation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "27541e3f",
@@ -1070,6 +1116,7 @@
    "confidence": "high"
   },
   "rationale": "The source indicates who verified the certificate; \"Homologado\" means approved/homologated, a different concept, and it is inconsistent with the standard Firefox term \"Verificado por\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f53e8a55",
@@ -1093,6 +1140,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a generic back-navigation content description for the credit card feature top bar; \"página anterior\" wrongly implies a web page.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4e18eed9",
@@ -1116,12 +1164,61 @@
    "confidence": "medium"
   },
   "rationale": "The source warns about someone else having (possessing) the device, not about other people using it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f0fd794e",
   "string_id": "credit_cards_warning_dialog_message_3",
   "suggest": "caso outra pessoa tenha acesso ao seu dispositivo",
   "summary": "The condition \"if someone else has your device\" is translated as \"caso outras pessoas usem seu dispositivo\", changing the meaning.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "Mover aba para esquerda",
+  "dismissed_because": "",
+  "fid": "871220fbbdcc",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-08-24",
+  "impact": 3,
+  "last_seen": "2026-08-24",
+  "locale": "pt-BR",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "In pt-BR the directional phrase requires the article: \"para a esquerda\"; the parallel string uses \"para a direita\" as well.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "adac11c7",
+  "string_id": "custom_accessibility_action_reorder_tab_left",
+  "suggest": "Mover aba para a esquerda",
+  "summary": "Missing contraction of preposition + article: \"para esquerda\" should be \"para a esquerda\".",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "Mover aba para direita",
+  "dismissed_because": "",
+  "fid": "9e72117316cd",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-08-24",
+  "impact": 3,
+  "last_seen": "2026-08-24",
+  "locale": "pt-BR",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "In pt-BR the directional phrase requires the article: \"para a direita\".",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "5c505052",
+  "string_id": "custom_accessibility_action_reorder_tab_right",
+  "suggest": "Mover aba para a direita",
+  "summary": "Missing article: \"para direita\" should be \"para a direita\".",
   "suppressed_by": ""
  },
  {
@@ -1139,6 +1236,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment states it navigates back within the debug drawer, not to a web page.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4e18eed9",
@@ -1162,6 +1260,7 @@
    "confidence": "high"
   },
   "rationale": "The source acronym is CFR (contextual feature recommendation); the letters were transposed, and the related string debug_drawer_cfr_tools_reset_cfr_title correctly uses \"CFRs\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "eee6e0d1",
@@ -1185,6 +1284,7 @@
    "confidence": "high"
   },
   "rationale": "Other strings (debug_drawer_home_region_label, debug_drawer_override_home_region_label, debug_drawer_override_region) translate \"home region\" as \"região inicial\"; this one is inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2b254c98",
@@ -1208,6 +1308,7 @@
    "confidence": "medium"
   },
   "rationale": "This is the active tab count category; sibling strings use \"Inativas\" and \"Privativas\" (feminine plural, agreeing with \"abas\"), so \"Ativo\" is inconsistent and mismatched.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "befc1fc2",
@@ -1231,6 +1332,7 @@
    "confidence": "high"
   },
   "rationale": "Source means setting links coming from websites, emails and messages to open in Firefox; the target implies opening emails and messages themselves in Firefox and drops the 'set' action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bad4c9c9",
@@ -1254,6 +1356,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"Navigate back\" is a toolbar navigation button content description; \"Página anterior\" says \"previous page\", which is different content and misleading for screen reader users.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a6b04a19",
@@ -1277,6 +1380,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is an action-style content description (\"collapse drag handle\"), not a description of a handle whose purpose is collapsing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dec3a914",
@@ -1300,6 +1404,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is the header \"Blocked\" with no punctuation; the trailing colon is added by the translation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bf513356",
@@ -1323,6 +1428,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"to stop suspected fingerprinters\"; the target omits the object noun, so the sentence says merely \"to stop suspects\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "edbd6b38",
@@ -1346,6 +1452,7 @@
    "confidence": "medium"
   },
   "rationale": "Firefox Suggest is a Mozilla feature brand name that stays untranslated.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "baee3621",
@@ -1369,6 +1476,7 @@
    "confidence": "medium"
   },
   "rationale": "The source specifies \"in a few minutes\"; the translation loses that information.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e38fe729",
@@ -1392,6 +1500,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states a specific day (the first), not a vague beginning of the month.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cc143f77",
@@ -1415,6 +1524,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says it is the label for the button that starts the VPN authentication flow; \"Introdução\" means \"Introduction\" and does not convey an action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ec0480f5",
@@ -1438,6 +1548,7 @@
    "confidence": "high"
   },
   "rationale": "The source \"Selects the fastest VPN location for you.\" is a description of what the option does, so pt-BR should use the third-person present \"Seleciona\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0c408a45",
@@ -1461,6 +1572,7 @@
    "confidence": "medium"
   },
   "rationale": "ip_protection_navigate_back_button_content_description has the same source \"Navigate back\" and is translated \"Voltar\"; this back button navigates within settings screens, not to a previous web page.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4e18eed9",
@@ -1484,6 +1596,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a passive/participial statement about the app having switched; \"Mudou para\" reads as \"(You/it) switched\", which is ambiguous and grammatically off for a status card.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "38064694",
@@ -1507,6 +1620,7 @@
    "confidence": "medium"
   },
   "rationale": "The source uses the official trademark spelling \"Wi-Fi\"; pt-BR strings elsewhere keep \"Wi-Fi\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6beeb976",
@@ -1530,6 +1644,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"unlimited bandwidth\"; the developer comment also states the promotion provides unlimited data bandwidth. \"dados ilimitados\" changes the meaning to unlimited data volume.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f8d9355e",
@@ -1553,6 +1668,7 @@
    "confidence": "medium"
   },
   "rationale": "The source uses the official trademark spelling \"Wi-Fi\"; pt-BR strings elsewhere keep \"Wi-Fi\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e1b03756",
@@ -1576,6 +1692,7 @@
    "confidence": "medium"
   },
   "rationale": "In this surface \"login\" refers to a saved login/password entry, not a user account; neighbouring strings use \"senha\"/\"credencial\". \"conta\" names the wrong thing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cc2cfbc7",
@@ -1599,6 +1716,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says the button goes back and exits the login detail view, not to a previous web page; the source is simply \"Navigate back\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4e18eed9",
@@ -1622,6 +1740,7 @@
    "confidence": "medium"
   },
   "rationale": "The button leaves the logins lock screen; \"Sair\" alone is ambiguous with quitting the app, but the meaning of leaving the section should be preserved.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4f16a535",
@@ -1645,6 +1764,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the survey takes a minute; the translation replaces it with a vague \"it's very quick\", and matches the \"sec\" variant instead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "16d2747e",
@@ -1668,6 +1788,7 @@
    "confidence": "medium"
   },
   "rationale": "The source specifies a minute; the translation drops that and duplicates the wording used for the \"only takes a sec\" string.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2bb8670c",
@@ -1691,6 +1812,7 @@
    "confidence": "medium"
   },
   "rationale": "The source instructs the user to visit the site; the translation invents an instruction about opening it in a tab.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "82567c0c",
@@ -1714,6 +1836,7 @@
    "confidence": "high"
   },
   "rationale": "\"permitr\" is a typo; the correct verb is \"permitir\", as in the parallel strings nova_onboarding_marketing_body_5 and _7.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "02272344",
@@ -1737,6 +1860,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Homepage after four hours of inactivity\"; the added \"Aba mais recente, ou\" states content not present in the source and conflicts with the separate \"Last tab\" option.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "70f1d412",
@@ -1760,6 +1884,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"Enable to allow pinch and zoom, even on websites that prevent this gesture.\" The target drops the \"Enable to\" instruction and changes \"prevent\" to \"tentam impedir\" (try to prevent).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8622f98f",
@@ -1783,6 +1908,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states categorically that sites will not load or function properly; the target adds \"alguns\" (some) and hedges with \"podem\" (may), changing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "038f77cb",
@@ -1806,6 +1932,7 @@
    "confidence": "medium"
   },
   "rationale": "The source explicitly addresses the user (\"You'll see\") and says \"before we use your system DNS\"; the target drops both agents, making it ambiguous who sees the warning and who uses the DNS.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "68c8af45",
@@ -1829,6 +1956,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"not to share & sell data\" without a possessive; adding \"meus\" changes the wording and mixes person with the rest of the settings UI.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8896a061",
@@ -1852,6 +1980,7 @@
    "confidence": "medium"
   },
   "rationale": "The source brand spelling is \"Wi-Fi\"; the same surface (autoplay settings) uses Wi-Fi elsewhere.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d3eedf04",
@@ -1875,6 +2004,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers specifically to DRM (digital rights management), not copyright; the established Mozilla pt-BR term is \"conteúdo controlado por DRM\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "68c39448",
@@ -1898,6 +2028,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is \"Automatically deletes browsing data when you select “Quit” from the main menu\" — there is no \"selected below\" qualifier, and the pt-BR quoting convention is curly double quotes.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "76b529e1",
@@ -1915,10 +2046,11 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "pt-BR",
   "origin": {},
   "rationale": "The locale's quote convention is `curly-double` (13 occurrences).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "76b529e1",
@@ -1942,6 +2074,7 @@
    "confidence": "high"
   },
   "rationale": "The source is a summary describing what is saved (\"Includes phone numbers and email addresses\"), not an action to perform.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0b047dca",
@@ -1965,6 +2098,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says to scan the QR code; \"capturar\" (capture/take a picture) is not the established pt-BR term for scanning a QR code, which is \"escanear\"/\"ler\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "60548d52",
@@ -1988,6 +2122,7 @@
    "confidence": "high"
   },
   "rationale": "The source says improvements happen between updates (remotely, without an app update); the translation reverses this to say they happen with each update.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "24eadf88",
@@ -2011,6 +2146,7 @@
    "confidence": "high"
   },
   "rationale": "Extra whitespace not present in the source text.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "24eadf88",
@@ -2034,6 +2170,7 @@
    "confidence": "medium"
   },
   "rationale": "The sorting option sorts by last used; \"Data de uso\" does not convey \"last\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d716fccb",
@@ -2057,6 +2194,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to the search string (the query URL template), not a \"code\"; \"código\" says something different from the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f166d4be",
@@ -2080,6 +2218,7 @@
    "confidence": "medium"
   },
   "rationale": "\"string\" here is the search query string, not a \"código\" (code); the rendering conveys a different meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a39fe2f8",
@@ -2103,6 +2242,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a description of what the toggle does (\"Sends images...\"), not an action label; pt-BR should use the third-person present \"Envia\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bc3ac8c3",
@@ -2126,6 +2266,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says \"search\" is a verb and the object is the folders; the target changes the meaning to searching within folders.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "face0179",
@@ -2149,6 +2290,7 @@
    "confidence": "medium"
   },
   "rationale": "The source specifies \"setup steps\"; the translation omits that the steps are configuration steps.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c367be1f",
@@ -2172,6 +2314,7 @@
    "confidence": "medium"
   },
   "rationale": "pt-BR Mozilla products use \"QR code\"/\"QR Code\"; \"Código QR\" is the pt-PT/es form and is inconsistent with the locale's terminology.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5db06230",
@@ -2195,6 +2338,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is a menu item action \"Get custom wallpaper\"; the translation omits the verb and no longer states the action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "18f11f93",
@@ -2218,6 +2362,7 @@
    "confidence": "high"
   },
   "rationale": "In pt-BR soccer terminology the knockout stage of 16 teams is \"oitavas de final\"; \"Rodada de 16\" is a literal calque that does not name the stage, and it is inconsistent with the sibling strings translated as \"Quartas de final\" and \"Semifinais\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a6ade4f4",
@@ -2241,6 +2386,7 @@
    "confidence": "medium"
   },
   "rationale": "Literal calque; pt-BR soccer terminology names knockout stages (oitavas, quartas, semifinais), and the sibling strings use those terms, so \"Rodada de 32\" is inconsistent and non-idiomatic.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "eae8685e",
@@ -2264,6 +2410,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment states Runners-up means second place; \"Finalistas\" includes the champion and so says something different from the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a2237a81",
@@ -2287,6 +2434,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means matches that have not yet started; \"Seguintes\" means \"the following\", not \"upcoming\". The related string sports_widget_upcoming_match_content_description uses \"Em breve\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f709f0ad",
@@ -2310,6 +2458,7 @@
    "confidence": "medium"
   },
   "rationale": "This is the back button on the Stories screen top app bar, not a web page navigation; the source is simply \"Navigate back\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4e18eed9",
@@ -2333,6 +2482,7 @@
    "confidence": "medium"
   },
   "rationale": "Per the developer comment this is the title of the section listing active studies, not an on/off state; \"Ativado\" duplicates studies_on and misrepresents the plural section heading.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "aada823b",
@@ -2356,6 +2506,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states that any device signed in and syncing will appear here; the translation asserts that all such devices already appear here.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cc7a2aad",
@@ -2379,6 +2530,7 @@
    "confidence": "high"
   },
   "rationale": "The source says the groups are saved \"here\" (on this page), not \"there\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d5927ff1",
@@ -2402,6 +2554,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Turn off in settings\" is a sentence-case action label; the pt-BR text lacks the initial capital.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9bc958f7",
@@ -2425,6 +2578,7 @@
    "confidence": "medium"
   },
   "rationale": "The menu opens settings for the user's own account, not multiple accounts.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "652a548c",
@@ -2448,6 +2602,7 @@
    "confidence": "medium"
   },
   "rationale": "The button opens a preview of the report (see webcompat_reporter_preview_bottom_sheet_header, translated as “Prévia do relatório”); “Ver relatório” means “View report”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "64aae598",
@@ -2471,6 +2626,7 @@
    "confidence": "high"
   },
   "rationale": "There is an extra space before “reproduzido”; the source has no such spacing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "be0ae4a7",
@@ -2494,6 +2650,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says the text should be as short as possible, max 68 chars; the current string is 70 characters and adds \"de tela inteira\", which is not in the source \"Drag from top & press back to exit\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "292999a3",
@@ -2511,10 +2668,11 @@
   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "pt-BR",
   "origin": {},
   "rationale": "In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c7357f0a",
@@ -2532,10 +2690,11 @@
   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "pt-BR",
   "origin": {},
   "rationale": "The locale's quote convention is `curly-double` (13 occurrences).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c7357f0a",
@@ -2559,6 +2718,7 @@
    "confidence": "high"
   },
   "rationale": "The source and developer comment refer to the device's home screen (launcher); firstrun_shortcut_text already translates \"Add to Home screen\" as \"Adicionar à tela inicial\", so this is both inaccurate and inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c05061fe",
@@ -2582,6 +2742,7 @@
    "confidence": "medium"
   },
   "rationale": "In the source, \"Automatically attempts to connect\" — the automation applies to the connection attempt, not to the use of the protocol.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "44a93a89",
@@ -2605,6 +2766,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers specifically to DRM (digital rights management) content, not to copyright control; the established Mozilla term is \"controlado por DRM\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "68c39448",
@@ -2628,6 +2790,7 @@
    "confidence": "medium"
   },
   "rationale": "The source specifies content trackers, distinguishing this option from the ad, analytics and social tracker settings.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a66f75bb",
@@ -2651,6 +2814,7 @@
    "confidence": "high"
   },
   "rationale": "\"com contendo\" is ungrammatical; the source reads \"unwanted software sites\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d82bf7d3",
@@ -2674,6 +2838,7 @@
    "confidence": "medium"
   },
   "rationale": "Source states \"%1$s will send what you type in the address bar to your search engine\" with no \"if enabled\" condition and no \"chosen\" qualifier.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9dd8e872",
@@ -2697,6 +2862,7 @@
    "confidence": "medium"
   },
   "rationale": "In Portuguese the European Union regulation designation is \"(UE)\"; \"EU\" is the English abbreviation and in pt means \"I\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4f801cd1",
@@ -2720,6 +2886,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"search string\", not \"search code\"; the related string search_add_manually_string translates it as \"Termo de pesquisa\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f166d4be",
@@ -2743,6 +2910,7 @@
    "confidence": "medium"
   },
   "rationale": "Same source term \"search string\" is rendered as \"termo de pesquisa\" in search_add_manually_string; \"código\" (code) is not the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e46fdec2",
@@ -2766,6 +2934,7 @@
    "confidence": "high"
   },
   "rationale": "The source is \"example.com/search/?q=%s\" with no space; the example must show the exact URL format users have to match.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f7c31fa3",
@@ -2789,6 +2958,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states who verified the certificate; \"homologado\" means approved/homologated, a different concept.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c751c34a",
@@ -2812,6 +2982,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"we never save and cannot restore this tab\"; the translation attributes the action to the browser instead of to us.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bd048486",

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `eda9938ab8c3` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `eda9938ab8c3` |
-| **Previous run** | 2026-08-21 @ `d368c9040c12` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
+| **Previous run** | 2026-08-22 @ `eda9938ab8c3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,592 |
+| **Strings reviewed this run** | 1 of 2,592 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,13 @@ Also for id: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `preferences_delete_browsing_data_cookies_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — Stray escaped backslash-space after "Anda" in the translation.
+    - Current: `Anda\ akan keluar`
+    - Source: `You’ll be logged out of most sites`
+    - Suggest: `Anda akan keluar`
+    - The source has no escape sequence here; the "\ " is an unintended escaped space that will render incorrectly.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -50,16 +54,13 @@ _Nothing retired._
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
-| Variable & placeholder mismatches | 0 |
+| Reference files that did not parse | 0 |
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
 | printf placeholder mismatches | 0 |
 | Plural / select selector mismatches | 0 |
-| Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 2 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 0 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 0 |
 
@@ -92,22 +93,19 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (166)
+## 3. Open findings (165)
+
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 1 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 96 |
 | 3 | Degraded language (grammar, spelling, terminology) | 65 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
 
-- `preferences_delete_browsing_data_cookies_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — Stray escaped backslash-space after "Anda" in the translation.
-    - Current: `Anda\ akan keluar`
-    - Source: `You’ll be logged out of most sites`
-    - Suggest: `Anda akan keluar`
-    - The source has no escape sequence here; the "\ " is an unintended escaped space that will render incorrectly.
+_Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -772,6 +770,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (1)
 
-_Nothing fixed yet._
+- `preferences_delete_browsing_data_cookies_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — fixed 2026-08-24

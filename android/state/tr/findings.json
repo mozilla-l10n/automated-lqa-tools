@@ -14,6 +14,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Press “Try Again”\"; on Android the action is tapping/pressing, not clicking.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9f9b7028",
@@ -35,6 +36,7 @@
   "locale": "tr",
   "origin": {},
   "rationale": "In the source this string quotes “Try Again”, which is exactly the value of `mozac_browser_errorpages_page_refresh` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-22",
   "status": "fixed",
   "string_hash": "9f9b7028",
@@ -58,6 +60,7 @@
    "confidence": "medium"
   },
   "rationale": "The tr locale convention is formal address; other imperatives in this batch use the -in form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bc4a5ec7",
@@ -81,6 +84,7 @@
    "confidence": "high"
   },
   "rationale": "Source: \"for your protection and security\"; the 2nd person possessive is missing, making it read \"its security\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2b4cba5c",
@@ -104,6 +108,7 @@
    "confidence": "medium"
   },
   "rationale": "Extra space after the opening paragraph markup, inconsistent with the other error page strings.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "58da2c65",
@@ -127,6 +132,7 @@
    "confidence": "high"
   },
   "rationale": "Source says \"the server is not sending the correct intermediate certificates\"; \"doğu\" (east) is a typo for \"doğru\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8664de4e",
@@ -150,6 +156,7 @@
    "confidence": "high"
   },
   "rationale": "Accusative suffix on the relative clause is ungrammatical; should be \"çalıştığınız sayfa\" (the page you are trying to view).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9222268e",
@@ -173,6 +180,7 @@
    "confidence": "medium"
   },
   "rationale": "Source bullet contains two sentences; the instruction to check the site for extra requirements is missing from the translation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8bf9c21a",
@@ -196,6 +204,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is a direct request (\"Please contact the website owners to inform them of this problem.\"); the Turkish weakens it to \"you may consider notifying them\", changing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "017e28e3",
@@ -219,6 +228,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says the button removes the suggestion from the displayed results; \"sil\" (delete) implies permanent deletion, whereas \"kaldır\" matches \"remove\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f5c6bba0",
@@ -242,6 +252,7 @@
    "confidence": "medium"
   },
   "rationale": "The source asks the user to grant additional data collection permission; the Turkish drops the permission/request notion and also uses an ungrammatical plural object (\"ek veriler toplamak\" instead of \"ek veri toplamak\"), parallel to the sibling title string which uses \"ek ayarlar istiyor\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6023db75",
@@ -265,6 +276,7 @@
    "confidence": "high"
   },
   "rationale": "Source says \"Monitor extension usage\"; the identical string mozac_feature_addons_permissions_management_description_for_update uses \"Uzantı\", and \"uzantı\" is the established term for \"extension\" (\"eklenti\" = add-on).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "691ca4e9",
@@ -288,6 +300,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is the title for a list of external apps to open the link in; \"Birlikte aç\" is a fragment meaning \"open together/with\" and does not convey \"Open in…\" correctly on its own.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "013d8ad8",
@@ -311,6 +324,7 @@
    "confidence": "high"
   },
   "rationale": "The source says the app's authenticity could not be verified; \"yetkinlik\" means competence/proficiency, which is a different concept. Turkish for authenticity here is \"gerçeklik\" or \"özgünlük\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4a4c762e",
@@ -334,6 +348,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to dismissing the \"find in page\" feature, which is translated elsewhere in this file as \"Sayfada bul\"; \"Sayfa bulmayı\" means \"finding a page\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6157452a",
@@ -357,6 +372,7 @@
    "confidence": "medium"
   },
   "rationale": "The source expresses an estimate (\"should only take\"), not a certainty.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "efb9bd7a",
@@ -380,6 +396,7 @@
    "confidence": "medium"
   },
   "rationale": "Same source term \"upload\" in one dialog must use one term; the message and positive button use \"karşıya yükle\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0140228c",
@@ -403,6 +420,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is the positive button \"Continue\"; \"İleri\" means \"Next/Forward\", a different action label.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9204ef52",
@@ -426,6 +444,7 @@
    "confidence": "high"
   },
   "rationale": "The verb \"önlemek\" takes the accusative; the genitive \"-nın\" is a grammatical error.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "76349ef3",
@@ -449,6 +468,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says this is the positive button label for selecting a date; it must be an action verb, not a statement that something was set.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "aa719ea2",
@@ -472,6 +492,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment states %s is the name of the service, \"Firefox Relay\"; repeating \"Relay\" duplicates the brand name.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "16e430a0",
@@ -495,6 +516,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the user may block access if it is not clear why the site needs the data; the Turkish shifts this to the user's own lack of knowledge.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f278bf28",
@@ -518,6 +540,7 @@
    "confidence": "medium"
   },
   "rationale": "The source claims control over the summaries, not that they never leave the device; this adds a technical claim not in the en-US text.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d1352cd9",
@@ -541,6 +564,7 @@
    "confidence": "medium"
   },
   "rationale": "The locale convention is formal address, and sibling strings use \"sallayın\"/\"ayarlayın\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "94ad96c0",
@@ -564,6 +588,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: \"Shake your device, get a page summary from %1$s in seconds.\" — the imperative addressed to the user is \"get a page summary\"; the translation turns it into a wish that the app produce it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9835a006",
@@ -587,6 +612,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Sorry. A problem occurred in %1$s.\"; the first sentence is missing from the target.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c68ec317",
@@ -610,6 +636,7 @@
    "confidence": "high"
   },
   "rationale": "The source distinguishes telemetry data from crash data; the Turkish text is identical to mozac_lib_gathering_crash_data_in_progress and omits \"telemetry\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6b47774f",
@@ -627,10 +654,11 @@
   "file": "mozilla-mobile/android-components/components/lib/crash/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "tr",
   "origin": {},
   "rationale": "The tree uses ’ 160 times against 4 straight.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ec3f8120",
@@ -654,6 +682,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a verb phrase for choosing an app to place a call with; the Turkish uses a bare noun \"çağrı\" with \"bununla\", which is not grammatical Turkish for this action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "612b5c03",
@@ -677,6 +706,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is an action for choosing an app to send email with; the Turkish is a bare noun phrase with no verb.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b492f040",
@@ -700,6 +730,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to a hostname field; \"sunucu\" means server, dropping the \"name\" part of hostname.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e54af8a7",
@@ -717,10 +748,11 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "tr",
   "origin": {},
   "rationale": "The locale's quote convention is `curly-double` (14 occurrences).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "97fcc922",
@@ -744,6 +776,7 @@
    "confidence": "medium"
   },
   "rationale": "add_login_2 renders the same feature as \"Parola ekle\"; using \"hesap\" here is inconsistent terminology on the same surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a2f4b57a",
@@ -767,6 +800,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"District\" denotes a sub-locality/secondary level below the country level; \"İl\" means province/state in Turkish and is already used for addresses_province, so the district field wrongly names a higher-level unit.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b2db28f6",
@@ -790,6 +824,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"Afterwards, you can unblock anything you want to keep using.\"; the temporal qualifier is dropped.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8bf39708",
@@ -813,6 +848,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is a label shown above the list of features; the en-US uses \"What will be blocked:\" with a colon, not a question.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "184d296c",
@@ -836,6 +872,7 @@
    "confidence": "high"
   },
   "rationale": "Product/service name must match the source brand name \"Google Speech Services\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7d84b6e5",
@@ -859,6 +896,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment describes the purple sky color during twilight (evening dusk); Turkish \"Şafak\" means dawn/sunrise, the opposite time of day. \"Alacakaranlık\" is the standard term for twilight.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9a6f84f0",
@@ -882,6 +920,7 @@
    "confidence": "high"
   },
   "rationale": "The tr locale uses the formal (-ın) imperative form, as in the surrounding strings (\"Yeniden deneyin.\", \"Tüm yer imlerinizi bir arada tutun\"); this button uses the informal \"yap\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b20e789d",
@@ -905,6 +944,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Could not edit bookmark\" reports a completed failure; parallel snackbars use the -emedi form (\"Klasör eklenemedi\", \"Üst klasör değiştirilemedi\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3de8e9aa",
@@ -928,6 +968,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Could not edit folder\" is a completed failure; inconsistent with \"Klasör eklenemedi\" and \"Üst klasör değiştirilemedi\" in the same snackbar set.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e40675e3",
@@ -951,6 +992,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Sort by newest\"; the other menu items are rendered as \"... sırala\", while this one drops the sorting verb and states a range \"newest to oldest\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a5cfd076",
@@ -974,6 +1016,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is an action label \"Sort by oldest\"; the sibling string bookmark_sort_menu_z_to_a is translated as \"Z’den A’ya sırala\", so the missing \"sırala\" makes this inconsistent and drops the action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "272b3053",
@@ -997,6 +1040,7 @@
    "confidence": "medium"
   },
   "rationale": "URL is a standard technical term kept as-is elsewhere in the Turkish build; translating it to an all-caps \"ADRES\" changes the term and the casing without source support.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-22",
   "status": "fixed",
   "string_hash": "291738ad",
@@ -1020,6 +1064,7 @@
    "confidence": "medium"
   },
   "rationale": "The source describes closing the bottom-sheet of the custom tab menu; the translation drops \"sheet\", which the screen reader description needs to identify the control.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ecc8ace4",
@@ -1043,6 +1088,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a noun phrase label/content description \"More info\"; \"Daha fazla bilgi al\" adds the verb \"al\" (get), changing it into a command.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ee0db254",
@@ -1066,6 +1112,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"Try a recommended extension\" (singular); the Turkish uses the plural definite object.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f599a1da",
@@ -1089,6 +1136,7 @@
    "confidence": "high"
   },
   "rationale": "The source states the version will stop working properly; \"çalışmayabilir\" expresses possibility, altering the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9f7aa59a",
@@ -1112,6 +1160,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"add-ons and other Firefox features\"; \"bazı\" means \"some\", not \"other\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bea59b41",
@@ -1135,6 +1184,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US \"will stop working on March 14\" means on that date, not after it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "24013aa1",
@@ -1158,6 +1208,7 @@
    "confidence": "medium"
   },
   "rationale": "Source states that an update is recommended; the Turkish reads \"the recommended update\", changing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9ffdf888",
@@ -1181,6 +1232,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to the \"Jump back in\" section (recent tab), not \"Open tabs\"; the Turkish says something else.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b1b4d165",
@@ -1204,6 +1256,7 @@
    "confidence": "medium"
   },
   "rationale": "Pocket \"Stories\" are recommended articles, not news; the Turkish term changes the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2e695f0d",
@@ -1227,6 +1280,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Stories\" is not \"haberler\" (news); consistent with customize_toggle_pocket_3.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "70a52f9a",
@@ -1250,6 +1304,7 @@
    "confidence": "medium"
   },
   "rationale": "A locale is a language/region combination; in this debug tool addresses depend on region, so \"dil\" is inaccurate.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "71cc4bf2",
@@ -1273,6 +1328,7 @@
    "confidence": "medium"
   },
   "rationale": "Source lists locales to be enabled, not languages that can be enabled.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bc4781ae",
@@ -1296,6 +1352,7 @@
    "confidence": "medium"
   },
   "rationale": "delete_browsing_data_prompt_message_3 in the same surface uses “gezinti verileri” for \"browsing data\"; using a different term for the same feature is inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e12ba5c3",
@@ -1319,6 +1376,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Can’t rename file\" (present inability), matching the description string which uses \"adı değiştirilemiyor\"; the past tense changes the meaning and is inconsistent with the dialog body.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fdf4149f",
@@ -1342,6 +1400,7 @@
    "confidence": "medium"
   },
   "rationale": "The string refers to a saved login entry, not a user account; \"Hesabı düzenle\" suggests editing an account, which conflicts with the related password terminology (e.g. edit_2 \"Parola düzenle\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "074ac2bc",
@@ -1365,6 +1424,7 @@
    "confidence": "medium"
   },
   "rationale": "In the source the handle collapses the bottom sheet; Turkish \"daralt\" means to narrow, not collapse a sheet. Mozilla tr uses \"daralt\" for collapsing lists but here it is a sheet dismiss control; at minimum the current wording says the handle itself is narrowed.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "15f7efe7",
@@ -1388,6 +1448,7 @@
    "confidence": "medium"
   },
   "rationale": "\"compile your browsing data across many sites\" means collecting/compiling data, not \"izlemek\" (to track).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "361ae801",
@@ -1411,6 +1472,7 @@
    "confidence": "medium"
   },
   "rationale": "Elsewhere in the same file \"tracking\" is rendered as \"takip/izleme\" (e.g. \"Takip kodu\", \"Takip amaçlı içerikler\"); \"izlenme koruması\" is inconsistent terminology for Tracking Protection.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3749e273",
@@ -1434,6 +1496,7 @@
    "confidence": "medium"
   },
   "rationale": "The tr locale uses the formal (plural) imperative, as in the surrounding strings (\"Ayarlara git\" aside, e.g. \"telemetriyi etkinleştirin\", \"yeniden başlatın\"); \"al\" is the informal singular form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ee0db254",
@@ -1457,6 +1520,7 @@
    "confidence": "high"
   },
   "rationale": "Source is \"%1$d selected\" on the History screen; adding \"yer imi\" (bookmark) states wrong content for history items.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3f5b28ca",
@@ -1480,6 +1544,7 @@
    "confidence": "medium"
   },
   "rationale": "The same auto-close feature on the same surface (inactive tabs auto-close message) uses two different terms; tr Firefox consistently uses \"kendiliğinden\" for auto-close.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "08275bba",
@@ -1503,6 +1568,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"up to 5 devices\"; the translation states exactly 5 separate devices, losing the \"up to\" limit.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "90f8560e",
@@ -1526,6 +1592,7 @@
    "confidence": "high"
   },
   "rationale": "The accusative object requires \"istediğinizi\"; as written the sentence is ungrammatical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "90f8560e",
@@ -1549,6 +1616,7 @@
    "confidence": "high"
   },
   "rationale": "Source says \"Get %2$d GB free every month\"; the Turkish omits \"GB\", leaving a bare number with no unit.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "29c8e87f",
@@ -1572,6 +1640,7 @@
    "confidence": "medium"
   },
   "rationale": "tr convention is the formal imperative; \"al\" is the informal singular form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ee0db254",
@@ -1593,6 +1662,7 @@
   "locale": "tr",
   "origin": {},
   "rationale": "The tree uses ’ 156 times against 5 straight.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "d1ac4136",
@@ -1616,6 +1686,7 @@
    "confidence": "medium"
   },
   "rationale": "The string labels the recommended server location option; Turkish uses the adjective \"Önerilen\", not \"Öneriliyor\" (\"is being recommended\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dcd07f30",
@@ -1639,6 +1710,7 @@
    "confidence": "medium"
   },
   "rationale": "tr convention is the formal imperative; other strings in the same feature use the -in form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "71539fa1",
@@ -1662,6 +1734,7 @@
    "confidence": "medium"
   },
   "rationale": "tr convention is the formal (plural) imperative, used in other buttons in this batch (e.g. \"VPN’i açın\", \"deneyin\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1b0579f8",
@@ -1685,6 +1758,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says one minute; the Turkish says \"a few minutes\", overstating the time required.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "30b9dc1e",
@@ -1708,6 +1782,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states the survey takes only a second; the sibling strings (search/sync) correctly use \"Yalnızca birkaç dakika sürer\". The verb \"alacağız\" (we will take) shifts subject and tense inconsistently.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8e35e7fc",
@@ -1731,6 +1806,7 @@
    "confidence": "medium"
   },
   "rationale": "The source shares two things: how the user discovered Firefox, and the fact that they use it — not how they use it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b46bedb1",
@@ -1754,6 +1830,7 @@
    "confidence": "medium"
   },
   "rationale": "The source shares two things: how the user discovered Firefox, and the fact that they use it — not how they use it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8c21aafc",
@@ -1777,6 +1854,7 @@
    "confidence": "high"
   },
   "rationale": "The locale's register convention is formal (siz); every other button/link in this batch uses the formal imperative (\"Bildirimleri aç\", \"Temanızı seçin\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ee0db254",
@@ -1800,6 +1878,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a passive statement about the data never being sold; the Turkish makes Mozilla the explicit seller-actor and changes the statement.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8c21aafc",
@@ -1823,6 +1902,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"How we use the data\" is a declarative link label with no question mark; the translation turns it into a question.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4e719f09",
@@ -1846,6 +1926,7 @@
    "confidence": "medium"
   },
   "rationale": "The source uses a passive statement that the data is never sold; the translation shifts it to a first-person claim.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8c21aafc",
@@ -1869,6 +1950,7 @@
    "confidence": "high"
   },
   "rationale": "Turkish requires the accusative case on the definite object: “menüsünü aç”. The source is “Open tabs menu”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2b323f2c",
@@ -1892,6 +1974,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is “Show all past explorations”; the button navigates to the full history, so “all” carries meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "22b50386",
@@ -1915,6 +1998,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says enabling allows pinch-and-zoom everywhere, even on sites that block the gesture; the Turkish limits it to sites that block it and omits the \"enable to allow\" framing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "23f82469",
@@ -1938,6 +2022,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: \"You’ll see a security risk warning before we use your system DNS.\" The word \"risk\" is dropped.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9d8d93ab",
@@ -1961,6 +2046,7 @@
    "confidence": "high"
   },
   "rationale": "\"kodlrı\" is a misspelling of \"kodları\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8ec2e461",
@@ -1984,6 +2070,7 @@
    "confidence": "high"
   },
   "rationale": "The source says all cookies WILL cause websites to break, unlike the previous option which says \"may cause\"; the translation weakens it and adds \"bazı\" (some), making the two options identical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a9039b02",
@@ -2007,6 +2094,7 @@
    "confidence": "medium"
   },
   "rationale": "The tr locale uses the formal (plural/polite) imperative; other strings in this batch use \"bilgi alın\" (preference_search_learn_about_fx_suggest).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ee0db254",
@@ -2024,10 +2112,11 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "tr",
   "origin": {},
   "rationale": "The locale's quote convention is `curly-double` (14 occurrences).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "218fa60b",
@@ -2051,6 +2140,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Delete or remove downloads\"; the Turkish only says \"deleting downloads\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b3cd580a",
@@ -2074,6 +2164,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"…and is your active search engine while browsing\"; the phrase \"while browsing\" is omitted in the Turkish text.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8e253ccd",
@@ -2097,6 +2188,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means autofilling inside the app (%1$s = app name); \"ile\" means \"with\", changing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "00f6a403",
@@ -2120,6 +2212,7 @@
    "confidence": "medium"
   },
   "rationale": "The option means the browser asks the user whether to save; \"Kaydetmeyi sor\" is not idiomatic Turkish for that prompt.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "34491dbb",
@@ -2143,6 +2236,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says the app itself is off-duty; the translation reads \"%s protections off\" without the required possessive suffix and changes the subject.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6e2a2b03",
@@ -2166,6 +2260,7 @@
    "confidence": "medium"
   },
   "rationale": "Source states the app is on guard (actively protecting); \"çalışıyor\" only means it is running.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "243192d1",
@@ -2189,6 +2284,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"Share link nearby\" is neutral; the first-person \"yakınımdakilerle\" (with those near me) is inconsistent with the body text which uses \"yakınınızdaki kişilerle\" (formal second person).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e4e1b6a8",
@@ -2212,6 +2308,7 @@
    "confidence": "medium"
   },
   "rationale": "The source header invites the user to resume a recent tab; the target states \"Open tabs\", a different meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b1b4d165",
@@ -2235,6 +2332,7 @@
    "confidence": "high"
   },
   "rationale": "The source says improvements happen between updates (remotely, without an update), whereas the target says they happen with each update — the opposite point.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "51320c80",
@@ -2258,6 +2356,7 @@
    "confidence": "medium"
   },
   "rationale": "The button clears the hostname field; \"Sunucu\" means server, not hostname, and is inconsistent with the sibling strings that name the field (e.g. \"Kullanıcı adını temizle\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2a7bfabe",
@@ -2281,6 +2380,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to the hostname field; \"Sunucu\" means \"server\", losing the \"name\" component and misnaming the field.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2e4df2af",
@@ -2304,6 +2404,7 @@
    "confidence": "medium"
   },
   "rationale": "Other strings in the same logins/passwords screen use \"parola\" (e.g. \"Parolaları sırala menüsü\"); \"hesap\" (account) is a different concept from a saved login.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "18e9c83e",
@@ -2327,6 +2428,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states the selection applies only to this search; the Turkish says \"Search here\", dropping the temporary scope.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2b2dc490",
@@ -2350,6 +2452,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the link was sent from the app; \"paylaşıldı\" means \"shared\", changing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d800cd5d",
@@ -2373,6 +2476,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the link was sent from the app; \"paylaşıldı\" means \"shared\", changing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fc47d18b",
@@ -2396,6 +2500,7 @@
    "confidence": "medium"
   },
   "rationale": "The same source phrase \"Almost there!\" on the same setup-checklist surface is rendered two different ways (setup_checklist_subtitle_3_steps_second_step uses \"Az kaldı!\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ab81b3ad",
@@ -2419,6 +2524,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a status/button label meaning the app is ready to scan; \"hazırım\" adds a first-person subject not present in the source and breaks the impersonal register.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "99451e16",
@@ -2442,6 +2548,7 @@
    "confidence": "medium"
   },
   "rationale": "Locale register is formal (\"giriş yapın\" is used in sign_in_with_camera and setup_checklist_task_account_sync); also the source is \"Use email instead\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9f0f56f5",
@@ -2465,6 +2572,7 @@
    "confidence": "high"
   },
   "rationale": "The source says browsing data, not browsing history.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2647bbb5",
@@ -2488,6 +2596,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment states CONCACAF is the abbreviation for \"Confederation of North, Central America and Caribbean Association Football\"; the target drops a letter.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "df90e1ab",
@@ -2511,6 +2620,7 @@
    "confidence": "medium"
   },
   "rationale": "Turkish abbreviates minute as \"dk\"; a bare \"D\" is ambiguous (commonly read as \"dakika\" only in this context) and the 2-character limit allows \"dk\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7017d26d",
@@ -2534,6 +2644,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"Get custom wallpaper\"; the target says \"Download the personal wallpaper\", changing the action and definiteness.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3a31323f",
@@ -2557,6 +2668,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says the status is shown during halftime; \"İlk yarı\" means \"first half\", a different match phase, and conflicts with sports_widget_second_half (\"İkinci yarı\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7e218279",
@@ -2580,6 +2692,7 @@
    "confidence": "medium"
   },
   "rationale": "This is a content description read aloud; the source word \"versus\" conveys the matchup and is lost as a silent hyphen.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c5e456ad",
@@ -2603,6 +2716,7 @@
    "confidence": "high"
   },
   "rationale": "Source states page X of Y; the target juxtaposes two numbers with no connecting word, which is unintelligible when read aloud.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "34089f10",
@@ -2626,6 +2740,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says to sign in to Firefox on at least one other device; the Turkish drops \"at least\" and uses \"cihazdan\" (from a device) instead of \"on a device\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1ecc516a",
@@ -2649,6 +2764,7 @@
    "confidence": "medium"
   },
   "rationale": "The tr locale convention is formal address (second-person plural imperative), as used elsewhere (e.g. \"Bu ekranı açık tutun\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b20e789d",
@@ -2672,6 +2788,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Sorry. %1$s can’t load that page.\"; the Turkish omits the first sentence and shifts the present tense to past.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5b2caa74",
@@ -2695,6 +2812,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"View tab group, collapse drag handle\" names the control (a collapse drag handle); the translation turns it into an instruction to collapse the drag handle itself.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a19e2508",
@@ -2718,6 +2836,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a neutral count label \"%1$d selected\"; adding \"sekme\" and the reported past tense changes the app-bar title's meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "850aa7f0",
@@ -2741,6 +2860,7 @@
    "confidence": "medium"
   },
   "rationale": "The source announces an update to the terms of use; \"haber\" (news) is not the same content.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "705120fc",
@@ -2764,6 +2884,7 @@
    "confidence": "medium"
   },
   "rationale": "The tr locale convention is formal address; other imperative UI strings in this batch use the formal plural (\"Dil seçin\", \"deneyin\", \"Kullanın\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ee0db254",
@@ -2787,6 +2908,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Translations\" (plural); the sibling string translation_settings_toolbar_title on the same dialog uses \"Çeviriler\", making this inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3da65b01",
@@ -2810,6 +2932,7 @@
    "confidence": "medium"
   },
   "rationale": "Source states the page has been translated from language 1 to language 2; the target reads like a label fragment \"%1$s > %2$s translation\" and uses a raw \">\" character not present in the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8f0856d6",
@@ -2833,6 +2956,7 @@
    "confidence": "medium"
   },
   "rationale": "The established tr register is formal; imperative verbs addressed to the user should take the formal plural ending.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ee0db254",
@@ -2856,6 +2980,7 @@
    "confidence": "medium"
   },
   "rationale": "The tr locale uses formal address for user-directed imperatives; compare \"Yeniden dene\"/\"Dil seçin\" conventions where formal plural is expected.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1866749c",
@@ -2879,6 +3004,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"It’s slow or unreliable\"; the Turkish mixes an adjective with a negated predicate, and \"stabil değil\" also renders \"unstable\" rather than \"unreliable\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a5b6ab61",
@@ -2902,6 +3028,7 @@
    "confidence": "high"
   },
   "rationale": "Source refers to multiple reports (\"Sending them\", \"these reports\"), but the translation speaks of a single report.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "64b4ba1b",
@@ -2925,6 +3052,7 @@
    "confidence": "high"
   },
   "rationale": "\"iyileştirmemize için\" combines a dative nominalization with \"için\"; only one is grammatical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6c488505",
@@ -2948,6 +3076,7 @@
    "confidence": "medium"
   },
   "rationale": "Mozilla tr consistently uses \"izleyici koruması\" (Gelişmiş İzleyici Koruması) for \"tracking protection\"; \"izlenme koruması\" is inconsistent with the rest of the product.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "41086e59",
@@ -2971,6 +3100,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to dismissing the \"find in page\" UI; \"Sayfa bulmayı\" means \"finding a page\", which names the wrong feature.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6157452a",
@@ -2994,6 +3124,7 @@
    "confidence": "medium"
   },
   "rationale": "\"%1$d out of %2$d\" indicates the current position, not a count; \"%2$d sonuçtan %1$d sonuç\" states a quantity of results rather than the position the user is at.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fd633cee",
@@ -3017,6 +3148,7 @@
    "confidence": "high"
   },
   "rationale": "The source means a request was submitted asking that the site be supported by the cookie banner reducer; the Turkish says the request was sent to a support site.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "46b286a9",
@@ -3040,6 +3172,7 @@
    "confidence": "high"
   },
   "rationale": "Per the developer comment this appears after the user reports a site where the cookie banner reducer failed; it means a request for the site to be supported was submitted, not that a request was sent to a support site.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "46b286a9",
@@ -3057,10 +3190,11 @@
   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "tr",
   "origin": {},
   "rationale": "The tree uses ’ 160 times against 4 straight.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e69cb314",
@@ -3078,10 +3212,11 @@
   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "tr",
   "origin": {},
   "rationale": "The tree uses ’ 160 times against 4 straight.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6f206df7",
@@ -3099,10 +3234,11 @@
   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "tr",
   "origin": {},
   "rationale": "The tree uses ’ 160 times against 4 straight.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fe56d06f",
@@ -3126,6 +3262,7 @@
    "confidence": "medium"
   },
   "rationale": "The source addresses the user; the Turkish turns it into a first-person statement about the developers, changing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "772fca32",
@@ -3143,10 +3280,11 @@
   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "tr",
   "origin": {},
   "rationale": "The locale's quote convention is `curly-double` (14 occurrences).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9d7b1867",
@@ -3170,6 +3308,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Powered by %1$s\" conveys branding attribution; the translation omits the entire phrase.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e0143c37",
@@ -3193,6 +3332,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Birlikte aç\" is ungrammatical on its own (it means \"open together\"); the sibling string uses \"%1$s ile aç\", so the generic form should be \"Şununla aç…\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "013d8ad8",
@@ -3216,6 +3356,7 @@
    "confidence": "high"
   },
   "rationale": "Source is a menu item action \"Remove from Shortcuts\"; the Turkish reads \"was removed from shortcuts\", a status message, and is inconsistent with the paired \"Kısayollara ekle\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a9cb7d3f",
@@ -3239,6 +3380,7 @@
    "confidence": "high"
   },
   "rationale": "Per the developer comment this is a label above a count of blocked trackers, not a command; the Turkish imperative changes the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "456a2fbe",
@@ -3262,6 +3404,7 @@
    "confidence": "high"
   },
   "rationale": "\"correct intermediate certificates\" should be \"doğru ara sertifikalar\"; \"doğu\" means \"east\" and is a misspelling.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7739bacf",
@@ -3285,6 +3428,7 @@
    "confidence": "medium"
   },
   "rationale": "The source distinguishes Remove from Delete; Turkish standard for \"Remove\" is \"Kaldır\", and \"Sil\" means \"Delete\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cb9bdb2d",
@@ -3308,6 +3452,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"Remove\"; Turkish equivalent is \"kaldır\", while \"sil\" corresponds to \"delete\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "83c73f43",
@@ -3331,6 +3476,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is \"Make %1$s default browser\", with no first-person possessive.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9ff03b9b",
@@ -3354,6 +3500,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: \"Mozilla strives to collect only what we need to provide and improve %1$s for everyone.\" The Turkish omits \"provide\" and \"for everyone\" and turns \"strives to collect\" into a flat \"collects\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f812bbfc",
@@ -3377,6 +3524,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Switch to link in new tab immediately\" describes automatically switching to the newly opened tab; the Turkish reads as \"immediately go to the link in the new tab\", altering the meaning of the preference.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "09f01c38",
@@ -3400,6 +3548,7 @@
    "confidence": "medium"
   },
   "rationale": "\"track site visits\" refers to the visits themselves, not to the sites; the current wording changes the object of tracking.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "811a0a81",
@@ -3423,6 +3572,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"collect, analyze and measure\"; \"kaydetmek\" means \"to record/save\", not \"to collect\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1d45042f",
@@ -3446,6 +3596,7 @@
    "confidence": "high"
   },
   "rationale": "The source says these trackers are embedded on sites to track your visits and to display functionality like share buttons; the Turkish instead claims that share buttons on social media also track the sites you visit.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d24f8161",
@@ -3469,6 +3620,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a neutral setting title (\"Use fingerprint to unlock app\"); the locale convention is formal address, not first-person \"my fingerprint\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "62a2a46b",
@@ -3492,6 +3644,7 @@
    "confidence": "medium"
   },
   "rationale": "The source uses second person (\"if you’ve added Shortcuts\"); the tr tree convention is formal second-person address.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "67325e7d",
@@ -3515,6 +3668,7 @@
    "confidence": "high"
   },
   "rationale": "Source is \"what you type\"; the Turkish switches between informal and formal second person within one string, which is inconsistent and ungrammatical in agreement.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2f45d417",
@@ -3538,6 +3692,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"For sites you add\"; the locale convention is formal second-person address, not first person.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "713f2b30",
@@ -3561,6 +3716,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US: \"we never save and cannot restore this tab\" refers to the specific crashed tab, not all tabs.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "69eebd77",
@@ -3584,6 +3740,7 @@
    "confidence": "medium"
   },
   "rationale": "The string contains invisible zero-width space characters that do not belong in the text.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "15844e29",
@@ -3607,6 +3764,7 @@
    "confidence": "high"
   },
   "rationale": "The postposition \"göre\" requires the dative case (-a/-e), not the accusative; \"ihtiyaçlarınızı göre\" is ungrammatical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "699157bb",

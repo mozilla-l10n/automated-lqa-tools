@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `eda9938ab8c3` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `eda9938ab8c3` |
-| **Previous run** | 2026-08-21 @ `d368c9040c12` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
+| **Previous run** | 2026-08-22 @ `eda9938ab8c3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 10 of 2,911 |
+| **Strings reviewed this run** | 0 of 2,911 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,36 +18,13 @@ Also for tr: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `history_multi_select_title` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — History multi-select title says "bookmarks selected" instead of just "selected".
-    - Current: `%1$d yer imi seçildi`
-    - Source: `%1$d selected`
-    - Suggest: `%1$d seçildi`
-    - Source is "%1$d selected" on the History screen; adding "yer imi" (bookmark) states wrong content for history items.
-- `synced_tabs_sign_in_button` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — Informal imperative "giriş yap" violates the locale's formal register.
-    - Current: `Eşitlemek için giriş yap`
-    - Source: `Sign in to sync`
-    - Suggest: `Eşitlemek için giriş yapın`
-    - The tr locale convention is formal address (second-person plural imperative), as used elsewhere (e.g. "Bu ekranı açık tutun").
-- `mozac_browser_errorpages_page_refresh` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-tr/strings.xml` — Informal imperative "dene" violates the locale's formal register.
-    - Current: `Yeniden dene`
-    - Source: `Try Again`
-    - Suggest: `Yeniden deneyin`
-    - The tr locale convention is formal address; other imperatives in this batch use the -in form.
+_No new findings._
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (0)
 
-- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-tr/strings.xml` — `mozac_browser_errorpages_offline_message` quotes “Yeniden dene” but the string it names, `mozac_browser_errorpages_page_refresh`, reads “Tekrar dene”
-    - Current: `{ <p> }Tarayıcı şu an çevrimdışı kipte çalışıyor ve istenen öğeye bağlanamaz.{ </p> }{ <ul> }{ <li> }Cihazınız etkin bir ağa bağlı mı?{ </li> }{ <li> }Çevrimiçi kipe geçerek sayfayı tazelemek için “Yeniden dene” düğmesi…`
-    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
-    - Suggest: `Tekrar dene`
-    - In the source this string quotes “Try Again”, which is exactly the value of `mozac_browser_errorpages_page_refresh` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `bookmark_url_label` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — The label "URL" is translated and set in all caps as "ADRES".
-    - Current: `ADRES`
-    - Source: `URL`
-    - Suggest: `URL`
-    - URL is a standard technical term kept as-is elsewhere in the Turkish build; translating it to an all-caps "ADRES" changes the term and the casing without source support.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -73,16 +50,13 @@ _Nothing retired._
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
-| Variable & placeholder mismatches | 0 |
+| Reference files that did not parse | 0 |
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
 | printf placeholder mismatches | 0 |
 | Plural / select selector mismatches | 0 |
-| Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 0 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 7 |
 
@@ -110,6 +84,7 @@ _Nothing reported._
 ---
 
 ## 3. Open findings (155)
+
 
 | Impact | Meaning | Count |
 |---|---|---|

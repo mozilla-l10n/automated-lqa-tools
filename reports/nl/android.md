@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `eda9938ab8c3` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `eda9938ab8c3` |
-| **Previous run** | 2026-08-21 @ `d368c9040c12` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
+| **Previous run** | 2026-08-22 @ `eda9938ab8c3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,908 |
+| **Strings reviewed this run** | 3 of 2,911 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,31 +45,24 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,908 |
-| Missing strings | 3 |
+| Strings | 2,911 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
-| Variable & placeholder mismatches | 0 |
+| Reference files that did not parse | 0 |
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
 | printf placeholder mismatches | 0 |
 | Plural / select selector mismatches | 0 |
-| Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 0 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 0 |
 
 ### Completeness
 
-**3 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — 3
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -92,6 +85,7 @@ _Nothing reported._
 ---
 
 ## 3. Open findings (68)
+
 
 | Impact | Meaning | Count |
 |---|---|---|
