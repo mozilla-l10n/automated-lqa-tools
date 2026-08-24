@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `112744e9d020` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `112744e9d020` |
-| **Previous run** | 2026-08-21 @ `7e1ae61658ad` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `a2ecb0a822be` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `a2ecb0a822be` |
+| **Previous run** | 2026-08-22 @ `112744e9d020` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,909 |
+| **Strings reviewed this run** | 2 of 1,910 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,31 +45,20 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 95 |
-| Strings | 1,909 |
-| Missing strings | 1 |
+| Strings | 1,910 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
-| Variable & placeholder mismatches | 0 |
-| Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
+| Reference files that did not parse | 0 |
 | printf placeholder mismatches | 0 |
-| Plural / select selector mismatches | 0 |
-| Term parameter mismatches | 0 |
-| Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 0 |
-| Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 0 |
 
 ### Completeness
 
-**1 strings** are not translated yet, concentrated in:
-
-- `fr/firefox-ios.xliff` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -93,6 +82,7 @@ _Nothing reported._
 ---
 
 ## 3. Open findings (44)
+
 
 | Impact | Meaning | Count |
 |---|---|---|

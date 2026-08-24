@@ -14,6 +14,7 @@
    "confidence": "medium"
   },
   "rationale": "The source subject is the action (\"This will remove the card...\"), not the card itself; the translation drops the reference to the confirmed action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "595361c9",
@@ -37,6 +38,7 @@
    "confidence": "high"
   },
   "rationale": "Twilight means dusk/alacakaranlık; \"Şafak\" means dawn/daybreak, a different time of day, and the icon set already has Sunrise (Gün doğumu) and Sunset (Gün batımı).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9a6f84f0",
@@ -60,6 +62,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a plural noun section heading meaning basic variants; \"Basit\" means \"simple\", not \"basics\", and is inconsistent with the other noun headings (Renkler, Renk geçişleri).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ed98384a",
@@ -83,6 +86,7 @@
    "confidence": "medium"
   },
   "rationale": "The source term is \"Stories\" (recommended articles/stories section), not \"News\". Related strings in the same file render Stories-type content as \"makaleler/yazılar\"; \"Haberler\" means news.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2e695f0d",
@@ -106,6 +110,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Top\" is not conveyed and \"Stories\" is rendered inconsistently with the other Stories options on the same settings screen (\"Haberler\", \"makaleler\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0d19ef51",
@@ -129,6 +134,7 @@
    "confidence": "medium"
   },
   "rationale": "Addresses.EditAddress.AutofillAddressCounty.v129 already uses \"İlçe\" for \"County\"; two separate address fields on the same screen must not share the same label.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "88715a3c",
@@ -152,6 +158,7 @@
    "confidence": "medium"
   },
   "rationale": "In this address form \"State\" is already \"Eyalet\" and \"Prefecture\" is \"Vilayet\"; \"Province\" normally maps to \"Eyalet/Bölge\" or \"Vilayet\". \"İl\" is the Turkish administrative unit used for the city/state field and creates ambiguity within the same screen.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b2db28f6",
@@ -175,6 +182,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US text is generic (\"Find something nearby\"); the translation narrows it to restaurants, adding content not in the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "075cd57f",
@@ -198,6 +206,7 @@
    "confidence": "high"
   },
   "rationale": "Register inconsistency within the same feature: all other Engagement notification strings address the user with the formal/plural imperative.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b3ac2d02",
@@ -221,6 +230,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"%1$@ tabs closed: %2$@\" where %2$@ is the number of tabs; the Turkish leaves the trailing number bare so it reads ambiguously, and ideally should mark it as a count.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fffeab4c",
@@ -244,6 +254,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to the header banner on top of the menu, not a notification; other strings in this file refer to the same element as \"banner\" (HeaderBanner).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "de119e4c",
@@ -267,6 +278,7 @@
    "confidence": "medium"
   },
   "rationale": "Turkish vowel harmony: \"Firefox\" final vowel is \"o\"… however the last pronounced syllable of \"Firefox\" in Turkish is \"foks\", a front-vowel-less form; standard Turkish usage is \"Firefox'taki\". Flagging low value.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bbdc446a",
@@ -290,6 +302,7 @@
    "confidence": "medium"
   },
   "rationale": "The app name is Firefox, whose last vowel \"o\" requires the front/back harmony form used with a hard consonant \"x\" — Turkish convention renders Firefox'taki. However for the generic placeholder the standard Mozilla tr rendering is \"%@ sürümündeki yenilikler\"; at minimum the current locked \"’taki\" is a hard-coded suffix that does not agree with all app names (Focus, Klar → Focus'taki/Klar'daki).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bbdc446a",
@@ -313,6 +326,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the survey takes only a minute; the Turkish says several minutes, overstating the time required.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "31d2c83a",
@@ -336,6 +350,7 @@
    "confidence": "medium"
   },
   "rationale": "The established Turkish Firefox term for Reload/Refresh is \"Yeniden yükle\"; \"Tazele\" is colloquial and inconsistent with the rest of the product.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ba2f8c75",
@@ -359,6 +374,7 @@
    "confidence": "high"
   },
   "rationale": "Sibling strings in the same popup (DefaultBrowserPopup.SecondLabel \"dokunun\", FirstLabel \"gidin\") use the formal plural form; this string switches to informal singular, an inconsistent register on the same screen.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a1aa2529",
@@ -382,6 +398,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"To help improve the browser\"; the Turkish says \"the app\", which is a different term than the source's \"browser\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8b86ecd3",
@@ -405,6 +422,7 @@
    "confidence": "medium"
   },
   "rationale": "The identical source \"Continue\" is translated \"Devam et\" in Onboarding.Modern.TermsOfService.AgreementButtonTitle.v140 for the same Terms of Service screen; \"İleri\" means \"Next\" and breaks consistency with the accompanying agreement text \"Devam ettiğinizde…\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9204ef52",
@@ -428,6 +446,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"To help improve the browser\"; the v140 counterpart correctly uses \"tarayıcıyı\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8b86ecd3",
@@ -451,6 +470,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US says the user will sign in (future), whereas the Turkish states the action is currently happening.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e718fa1b",
@@ -474,6 +494,7 @@
    "confidence": "medium"
   },
   "rationale": "Same as the visible title: the one-off nature of the engine selection (\"This time\") is not conveyed.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2b2dc490",
@@ -497,6 +518,7 @@
    "confidence": "medium"
   },
   "rationale": "The source emphasizes a one-time engine choice (\"This time\"); the Turkish only says \"Search here\", dropping that meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2b2dc490",
@@ -520,6 +542,7 @@
    "confidence": "medium"
   },
   "rationale": "The string is a section header parallel to Search.EngineSection.Title (\"%@ araması\"); rendering it as a command is inconsistent within the same screen.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "861ed502",
@@ -543,6 +566,7 @@
    "confidence": "medium"
   },
   "rationale": "The same feature (trending searches) is named differently across strings in the same feature file; \"Arama trendleri\" (search trends) reverses the head noun of \"trending searches\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "40e74df3",
@@ -566,6 +590,7 @@
    "confidence": "medium"
   },
   "rationale": "The verb \"erişmek\" governs the dative case; as written the accusative object of \"kaydedin\" is wrongly reused as the object of \"erişmek\", producing ungrammatical Turkish.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "93dc2850",
@@ -589,6 +614,7 @@
    "confidence": "medium"
   },
   "rationale": "The source qualifies the removal of downloaded models to on-device AI (\"For on-device AI, any downloaded models are removed.\"); the translation omits this qualifier.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ae0aa2a4",
@@ -612,6 +638,7 @@
    "confidence": "high"
   },
   "rationale": "En-US says this helps %@ (Mozilla) estimate active users; the Turkish says \"we can estimate the number of active %@ users\", changing both the subject and the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "07ddcdb3",
@@ -635,6 +662,7 @@
    "confidence": "medium"
   },
   "rationale": "En-US: \"Learn about useful features and how to get the most out of %@.\" Half of the source meaning is missing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ad2e138e",
@@ -658,6 +686,7 @@
    "confidence": "high"
   },
   "rationale": "En-US says improvements happen between updates (i.e. without an app update); the Turkish says they happen at every update, reversing the intended meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0e806970",
@@ -681,6 +710,7 @@
    "confidence": "medium"
   },
   "rationale": "The app name is Firefox, whose final syllable vowel (o... x) — the Turkish convention used elsewhere in Firefox iOS is \"Firefox’ten\". Consistency with other strings requires the front-vowel form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7365bcb0",
@@ -704,6 +734,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the link was sent from Firefox; \"paylaşıldı\" means \"was shared\", changing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1ed4949c",
@@ -727,6 +758,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the link was sent from Firefox; \"paylaşıldı\" means \"was shared\", changing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7151d477",
@@ -750,6 +782,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the link was sent from Firefox; \"paylaşıldı\" means \"was shared\", changing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "90bea7b5",
@@ -773,6 +806,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the link was sent from Firefox; \"paylaşıldı\" means \"was shared\", changing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "355c0594",
@@ -796,6 +830,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the page may be restricted or mostly visual; the current wording reads \"this page may contain restricted or mostly visual content\", shifting the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d6cab88b",
@@ -819,6 +854,7 @@
    "confidence": "medium"
   },
   "rationale": "\"not available\" is consistently rendered as \"kullanılamıyor\" in Firefox tr; \"mevcut değil\" is off-terminology.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ac37c171",
@@ -842,6 +878,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is the noun \"Sync\" as a tab-selector title; \"Eşitlenen\" is a dangling participle (\"the synced ...\") without a head noun.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4a521c39",
@@ -865,6 +902,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to a point in time (tabs older than 1 day ago); \"1 gün\" only means \"1 day\", losing \"ago\". Sibling strings (1 Week/Month Ago) share the same issue.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "58fe76b5",
@@ -888,6 +926,7 @@
    "confidence": "medium"
   },
   "rationale": "The label denotes a relative time point (\"ago\"); the Turkish only says \"1 month\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cf7dfd88",
@@ -911,6 +950,7 @@
    "confidence": "medium"
   },
   "rationale": "The label denotes a relative time point (\"ago\"); the Turkish only says \"1 week\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4652e944",
@@ -934,6 +974,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment states the title indicates there is an update to the terms of use; the Turkish says only \"we have news\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "705120fc",
@@ -957,6 +998,7 @@
    "confidence": "high"
   },
   "rationale": "\"-memize\" already carries the dative case required by \"yardımcı olmak\"; adding \"için\" is grammatically incorrect.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7c5089da",
@@ -980,6 +1022,7 @@
    "confidence": "medium"
   },
   "rationale": "Enhanced Tracking Protection is a Firefox feature name capitalized in Turkish Firefox localization as \"Gelişmiş İzlenme Koruması\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5f7a7645",
@@ -1003,6 +1046,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the captions are missing/absent, not that they are not displayed.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "497c0b5c",
@@ -1026,6 +1070,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says this is the generic label indicating the Group Stage phase; Turkish \"Grup maçı\" means \"group match\", not the stage/phase.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "099e31a0",
@@ -1049,6 +1094,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to obtaining a custom (özel) wallpaper, not downloading a specific personal one; \"kişisel\" and the definite accusative change the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3a31323f",
@@ -1072,6 +1118,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Round of 16\" in Turkish football usage is \"Son 16 Turu\"; \"16’LI TUR\" is not an established term and is inconsistent with the sibling string. The suffix also mismatches the sibling \"32’Lİ TUR\" pattern.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "95e5e8a8",
@@ -1095,6 +1142,7 @@
    "confidence": "medium"
   },
   "rationale": "The source distinguishes passcode from password; Turkish \"parola\" means password, which conflicts with the passcode terminology used on iOS.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "784c54cb",
@@ -1118,6 +1166,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"private data\", a distinct product term (Private Data / Özel veriler) in Firefox settings, not \"personal data\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7a50366e",
@@ -1141,6 +1190,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this clears passwords and login data; \"hesaplar\" means \"accounts\", which is a different concept from stored logins/credentials.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b0a935bb",
@@ -1164,6 +1214,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a play on \"default\" prompting the user to set Firefox as the default browser; the Turkish drops that meaning entirely and says \"always a better internet\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9272a0b5",
@@ -1187,6 +1238,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US states over 3,000 trackers per user per month; the Turkish states exactly 3,000, changing the factual claim.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "887ee0db",
@@ -1210,6 +1262,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment references Apple Wallet passes; \"pass\" is a Wallet card/ticket, not a password (\"parola\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4e508553",
@@ -1233,6 +1286,7 @@
    "confidence": "high"
   },
   "rationale": "Per the developer comment this is the Apple Wallet 'Add Pass Failed' alert; a Wallet pass is not a password.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1eafbe33",
@@ -1256,6 +1310,7 @@
    "confidence": "medium"
   },
   "rationale": "The source term is \"Logins\" (saved credentials), not \"Accounts\"; \"Hesaplar\" collides with the Firefox Account terminology used elsewhere in settings.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9faf35c2",
@@ -1279,6 +1334,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: \"To use the AutoFill feature for Firefox, you must have a device passcode enabled.\" — the requirement is that a passcode be enabled, not that the user configure a specific passcode.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1d56d3d1",
@@ -1302,6 +1358,7 @@
    "confidence": "medium"
   },
   "rationale": "Menu.RemovedFromShortcuts.v99 translates \"Shortcuts\" as \"Kısayollar\"; the confirmation toast for the same action must use the same term.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ab43cb10",
@@ -1325,6 +1382,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US title starts with \"Oops!\", which is omitted in the Turkish string.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "97403c2b",
@@ -1348,6 +1406,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US source is \"Privacy\" in sentence case; iOS applies its own capitalization to section headers, so hardcoded uppercase deviates from the source and from sibling titles like \"Hızlı arama motorları\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "13099883",
@@ -1371,6 +1430,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US source is \"Website Appearance\" in title case; the sibling section header Settings.Appearance.BrowserTheme uses normal casing, so all-caps is an inconsistent typographic deviation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d096d4b9",
@@ -1394,6 +1454,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says none of your browsing data will be deleted, not just browsing history.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7daabf67",
@@ -1417,6 +1478,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a noun-phrase section title naming the switching mode, not an instruction to change a mode; the Turkish imperative reverses the grammatical role.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b169f110",
@@ -1440,6 +1502,7 @@
    "confidence": "medium"
   },
   "rationale": "The setting toggles the \"Jump Back In\" section; \"Açık sekmeler\" means \"Open tabs\", which is a different feature name and inconsistent with the Firefox naming used elsewhere.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b1b4d165",
@@ -1463,6 +1526,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US string uses an em dash (—) as separator; the Turkish uses a plain hyphen.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "180bf4f5",
@@ -1486,6 +1550,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US says \"This page appears to be in %1$@\"; the Turkish sentence has no predicate and loses the meaning \"appears to be in [language]\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b6e8140d",
@@ -1509,6 +1574,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a relative date for items older than a month; the sibling string \"more than a week ago\" is rendered \"bir haftadan eski\", so this is both wrong and inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a8fb5950",
@@ -1532,6 +1598,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Logins\" means saved login credentials, not accounts; elsewhere in this file the concept is rendered as \"parola\"/login credentials, making \"Hesaplar\" inconsistent and inaccurate.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4d5f94b0",
@@ -1555,6 +1622,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Logins\" refers to stored credentials, not user accounts; the same file uses \"parola\" for the same concept, so \"Hesaplar\" is inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0bd64597",
@@ -1578,6 +1646,7 @@
    "confidence": "medium"
   },
   "rationale": "The string appears in the Logins list; \"logins\" are stored credentials, not accounts, and the parallel string NoLoginsFound.Title.v122 uses \"Parola\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2dd44292",
@@ -1601,6 +1670,7 @@
    "confidence": "high"
   },
   "rationale": "\"PDF\" is read as \"pedefe\", ending in a vowel sound, so the accusative suffix requires the buffer -y-: PDF’yi.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d5225c69",
@@ -1624,6 +1694,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says new bookmarks will be saved; the translation changes the meaning to \"the bookmarks you saved will be kept\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7371c7f8",
@@ -1647,6 +1718,7 @@
    "confidence": "medium"
   },
   "rationale": "Firefox Turkish consistently uses \"bağlantı\" for \"link\"; \"link\" is an unadapted anglicism inconsistent with product terminology.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cb40ba2c",
@@ -1670,6 +1742,7 @@
    "confidence": "medium"
   },
   "rationale": "Firefox Turkish consistently uses \"bağlantı\" for \"link\"; also the source is split over two lines for the widget layout while the translation is one line.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cb40ba2c",
@@ -1693,6 +1766,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Top Sites\" is the frequently/recently visited sites feature, not bookmarks/favorites; \"Sık Kullanılanlar\" names a different concept.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d8509699",
@@ -1716,6 +1790,7 @@
    "confidence": "high"
   },
   "rationale": "The menu item eHmH1H and the matching label fi3W24-eHmH1H both use \"Gizli sekmeleri temizle\"; this confirmation label must reference the same wording.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7f311b6f",
@@ -1739,6 +1814,7 @@
    "confidence": "high"
   },
   "rationale": "The verb \"onaylamak\" requires the accusative object marker, as used correctly in the parallel strings PzSrmZ-2GqvPe and PzSrmZ-eHmH1H.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6552d3d4",
@@ -1762,6 +1838,7 @@
    "confidence": "high"
   },
   "rationale": "The verb \"onaylamak\" requires the accusative object marker, as used correctly in the parallel strings PzSrmZ-2GqvPe and PzSrmZ-eHmH1H.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b4277df9",

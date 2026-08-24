@@ -14,6 +14,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"passwords\" and \"payment methods\"; the translation says \"logins\" and \"encrypted cards\", changing the content.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6e8daee1",
@@ -37,6 +38,7 @@
    "confidence": "medium"
   },
   "rationale": "Russian compounds with \"фото\" are written solid, not hyphenated; iOS uses \"Медиатека\" for the photo library.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7a316fdd",
@@ -60,6 +62,7 @@
    "confidence": "medium"
   },
   "rationale": "This is the affirmative action button; the source is an imperative verb phrase, not a noun (\"Restoring tabs\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1d651856",
@@ -83,6 +86,7 @@
    "confidence": "medium"
   },
   "rationale": "The same file uses ё consistently (Тёмный, Зелёный, Жёлтый); here the ё is dropped, making the spelling inconsistent within the same screen.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b611c760",
@@ -106,6 +110,7 @@
    "confidence": "high"
   },
   "rationale": "The short participle of \"удалить\" is \"удалена\"; the ё spelling is incorrect.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2f211276",
@@ -129,6 +134,7 @@
    "confidence": "medium"
   },
   "rationale": "The button opens a modal with more actions, not settings; \"настройки\" means settings.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dd204bd5",
@@ -152,6 +158,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment states a townland is a specific type of land division used in rural areas; \"Городская земля\" means \"city/urban land\", the opposite of rural.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4143adb2",
@@ -175,6 +182,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Family\" here refers to a product family (семейство продуктов), not a human family; \"семья\" is incorrect terminology in Russian.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8c75f4ef",
@@ -198,6 +206,7 @@
    "confidence": "high"
   },
   "rationale": "Per the developer comment %1$@ is the app name (e.g. Firefox) and %2$@ is the number of tabs; the Russian text places the app name where a number is expected (\"Закрыто Firefox вкладок: 5\"), producing nonsense.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ba3680aa",
@@ -221,6 +230,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to backing up data; «резервировать» in Russian normally means to reserve, not to create a backup.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a11aca4d",
@@ -244,6 +254,7 @@
    "confidence": "medium"
   },
   "rationale": "MainMenu.PanelLinkSection.History.Title.v131 translates the same source term \"History\" as «История»; the accessibility label for the same control must match.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "29c1ba31",
@@ -267,6 +278,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is an imperative action label for the item that summarizes the webpage content; the Russian noun phrase means \"summary of the page\", not the action, and is inconsistent with other action labels like \"Перевести страницу\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4375972a",
@@ -290,6 +302,7 @@
    "confidence": "medium"
   },
   "rationale": "The locale writes ё (e.g. \"займёт всего минуту\"), so \"Темный\" should be \"Тёмный\" for spelling consistency.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "06dedb53",
@@ -313,6 +326,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is the title for the action that will summarize the content of the webpage; the Russian noun phrase names a summary rather than the action, unlike the parallel item \"Перевести страницу\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4375972a",
@@ -336,6 +350,7 @@
    "confidence": "high"
   },
   "rationale": "The source means letting the app follow the device theme, not waiting for it; \"подождите, пока\" changes the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "28182f3b",
@@ -359,6 +374,7 @@
    "confidence": "high"
   },
   "rationale": "The source means letting the app follow the device theme, not waiting for it; \"подождите, пока\" introduces a meaning absent from en-US.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "28182f3b",
@@ -382,6 +398,7 @@
    "confidence": "high"
   },
   "rationale": "The short participle is spelled \"защищено\", not \"защищёно\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d9c1f221",
@@ -405,6 +422,7 @@
    "confidence": "medium"
   },
   "rationale": "In Russian the app name placeholder cannot precede the noun as an unmarked modifier; \"из %@ обучения\" is ungrammatical. The source means \"exit the %@ onboarding\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0d926d77",
@@ -428,6 +446,7 @@
    "confidence": "high"
   },
   "rationale": "Source is a singular action label \"Use email mask\", matching PasswordAutofill's \"Использовать сохранённый пароль\"; the translation uses an imperative verb and plural noun.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9cba367c",
@@ -451,6 +470,7 @@
    "confidence": "medium"
   },
   "rationale": "%@ is the app name; the source asks permission for the app to open the scanned URL, but the Russian reads \"Allow opening <app>?\"",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "17f868d9",
@@ -474,6 +494,7 @@
    "confidence": "medium"
   },
   "rationale": "The source specifies \"device Settings\" to distinguish iOS Settings from the app's own settings; the translation drops \"device\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a8ae95f1",
@@ -497,6 +518,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US string is the title of a toggle option naming the autohide feature (\"Scroll to Hide Tab and Address Bar\"), not a command to the user; the Russian imperative \"Прокрутите\" tells the user to scroll.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bb06fafb",
@@ -520,6 +542,7 @@
    "confidence": "high"
   },
   "rationale": "Source says \"Private Sessions\"; sibling strings Settings.Search.PrivateSession.Description.v125 and Settings.Search.Suggest.PrivateSession.Description.v125 translate it as \"приватных сеансах\", so this label is inconsistent and says \"windows\" instead of \"sessions\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b98c905c",
@@ -543,6 +566,7 @@
    "confidence": "medium"
   },
   "rationale": "Russian typography uses an em dash surrounded by spaces, not a hyphen, in this separator position.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "edc01e13",
@@ -566,6 +590,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"Allow Feature Studies\" (plural), matching the related string that uses \"исследования\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c20fa800",
@@ -589,6 +614,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a verb phrase for a toggle that enables summarizing pages; the translation reads as a noun \"summaries by pages\" and is confusable with the section title \"Резюме страниц\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "966250c3",
@@ -612,6 +638,7 @@
    "confidence": "high"
   },
   "rationale": "In en-US \"share a link on %2$@\" means sharing via the social media app (e.g. WhatsApp); the Russian «ссылкой на WhatsApp» reads as a link pointing to WhatsApp.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "59c0b5eb",
@@ -635,6 +662,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"Include %1$@ Download Link on %2$@ Shares\" is a setting label, not an instruction to the user; the imperative «Включите» misstates it as a command.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1beee5ef",
@@ -658,6 +686,7 @@
    "confidence": "medium"
   },
   "rationale": "En-US tells the user to wait for loading to finish and then press the summarize button; the Russian says \"wait for its completion, then tap to summarize\", which is ambiguous and drops the reference to the summarize control.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "221a7562",
@@ -681,6 +710,7 @@
    "confidence": "medium"
   },
   "rationale": "En-US \"Can’t handle this one at the moment\" is impersonal; Russian UI convention avoids the app speaking in first person singular.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7236d15f",
@@ -704,6 +734,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is simply \"Try again later.\"; the Russian invents an extra instruction to wait some time.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ebc057f4",
@@ -727,6 +758,7 @@
    "confidence": "high"
   },
   "rationale": "In Russian, a lowercase letter follows a colon when the following clause is not a quotation or proper noun.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "da60ffc6",
@@ -750,6 +782,7 @@
    "confidence": "medium"
   },
   "rationale": "The source specifies hostnames (домены/имена хостов), not just tracker names.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6a365778",
@@ -773,6 +806,7 @@
    "confidence": "medium"
   },
   "rationale": "The English hedges with \"have been known to cause\"; the Russian states it as fact.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1cd6ae61",
@@ -796,6 +830,7 @@
    "confidence": "medium"
   },
   "rationale": "The source uses the Latin letter A as a group identifier; the neighboring strings Group B and Group C keep Latin B and C, so the Cyrillic А here is inconsistent and can sort/display differently.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3e5c289b",
@@ -819,6 +854,7 @@
    "confidence": "medium"
   },
   "rationale": "The source asks whether the user still wants to follow the World Cup after their team was eliminated, not whether they want to subscribe to something.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "35bf35ef",
@@ -842,6 +878,7 @@
    "confidence": "high"
   },
   "rationale": "The widget is about football matches; \"совпадение\" means a coincidence/search match, not a sports match. Other strings in the same file correctly use \"матч\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9d66ace1",
@@ -865,6 +902,7 @@
    "confidence": "medium"
   },
   "rationale": "In the source \"live\" modifies \"match updates\"; the Russian word order makes it modify everything and changes the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bc2f5778",
@@ -888,6 +926,7 @@
    "confidence": "high"
   },
   "rationale": "The comment states the idiom means staying informed and must not be translated literally as physical 'tabs'; \"Оставить вкладки\" is meaningless in Russian here.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e411cc53",
@@ -911,6 +950,7 @@
    "confidence": "medium"
   },
   "rationale": "The button selects a provided themed wallpaper, not uploading the user's own image.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "80e3de96",
@@ -934,6 +974,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"Try refreshing in a few minutes\" with no mention of a page; the widget refreshes match data.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "14caf7fb",
@@ -957,6 +998,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"More options\", and the comment says it opens a panel with more options related to the widget, not settings.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dd204bd5",
@@ -980,6 +1022,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"now\" refers to the present prompt action; the Russian word order turns it into a change-of-behaviour statement, and \"Логинам\" is needlessly capitalized.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4fd07787",
@@ -1003,6 +1046,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"your synced devices\"; \"всех\" (all) is an added quantifier not present in en-US.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0b4b32f9",
@@ -1026,6 +1070,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment points to Apple Wallet: \"pass\" is a Wallet pass (ticket/card), not a password.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "610d2389",
@@ -1049,6 +1094,7 @@
    "confidence": "high"
   },
   "rationale": "The 'Add Pass Failed' alert refers to an Apple Wallet pass, not a password.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e8911507",
@@ -1072,6 +1118,7 @@
    "confidence": "medium"
   },
   "rationale": "The source specifies bookmarking a link URL (per developer comment), while other context-menu items in the same group keep the object (\"Копировать ссылку\", \"Поделиться ссылкой\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "59390bd7",
@@ -1095,6 +1142,7 @@
    "confidence": "medium"
   },
   "rationale": "In Russian, «может быть» as a parenthetical requires a comma before the following clause.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f8751027",
@@ -1118,6 +1166,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the connection is untrusted (certificate trust), not that it is unsecured; also \"This\" was changed to \"Your\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "262e847c",
@@ -1141,6 +1190,7 @@
    "confidence": "high"
   },
   "rationale": "Brand names such as Facebook must remain untranslated; the tile title should read \"Facebook\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "927abc50",
@@ -1164,6 +1214,7 @@
    "confidence": "medium"
   },
   "rationale": "Per the developer comment, this label identifies the synced-tab cell showing a recent tab from another device, not a tab chooser.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4022985d",
@@ -1187,6 +1238,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Turn on AutoFill\" is a button title; Russian UI buttons use the infinitive (\"Включить\"), not the addressed imperative \"Включите\", which reads as an instruction to the user.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "357abece",
@@ -1210,6 +1262,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is the crash dialog button; \"сообщение\" means message, not report.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "07b4c014",
@@ -1233,6 +1286,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the link you are trying to share cannot be shared; the Russian is a circular repetition that reads as an error.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9645a73e",
@@ -1256,6 +1310,7 @@
    "confidence": "medium"
   },
   "rationale": "The source specifies other devices besides this one; the translation says the user has no devices at all.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b9abdeba",
@@ -1279,6 +1334,7 @@
    "confidence": "medium"
   },
   "rationale": "The adjacent description string uses \"тёмный вид\" and the theme option uses \"Тёмная\"; this string spells it without ё, an inconsistent spelling on the same screen.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "06dedb53",
@@ -1302,6 +1358,7 @@
    "confidence": "medium"
   },
   "rationale": "The source specifies disconnecting Sync; the translation omits the object, making it identical to the plain \"Disconnect\" button string.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "26de65f8",
@@ -1325,6 +1382,7 @@
    "confidence": "medium"
   },
   "rationale": "The alert title in en-US names Sync as the thing being disconnected; the Russian drops it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f650be29",
@@ -1348,6 +1406,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is \"Use System Light/Dark Mode\"; the translation swaps light and dark.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ec6d7da7",
@@ -1371,6 +1430,7 @@
    "confidence": "medium"
   },
   "rationale": "The section title \"Jump Back In\" means resuming recent tabs; the Russian ends with a stranded preposition \"в\" and reads as broken text.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "052e2711",
@@ -1394,6 +1454,7 @@
    "confidence": "medium"
   },
   "rationale": "Other strings in this batch consistently use ё (тёмную, четырёх, посещённые); spelling should be вернётесь.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "90dea285",
@@ -1417,6 +1478,7 @@
    "confidence": "medium"
   },
   "rationale": "The source prompts the user to authenticate now with a fingerprint; the translation reads as an instruction that from now on a fingerprint should be used.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "62ea24b0",
@@ -1440,6 +1502,7 @@
    "confidence": "medium"
   },
   "rationale": "It is a persistent setting for link previews (plural in source), parallel to Settings.ShowLoginsInAppMenu.Title which correctly uses \"Показывать\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c8514c82",
@@ -1463,6 +1526,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says the setting shows the on-boarding screen again; \"Провести тур\" means to conduct/give a tour, not to display it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "12788136",
@@ -1486,6 +1550,7 @@
    "confidence": "medium"
   },
   "rationale": "The normative Russian spelling per the orthographic dictionary is \"офлайн\" with one \"ф\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9cb239eb",
@@ -1509,6 +1574,7 @@
    "confidence": "medium"
   },
   "rationale": "The source uses an em dash (—); the Russian uses an en dash (–), deviating from the source typography.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e047f5db",
@@ -1532,6 +1598,7 @@
    "confidence": "medium"
   },
   "rationale": "Twitter is a brand name and should remain untranslated, as in the source tile title.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "97d9200c",
@@ -1555,6 +1622,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US title ends with a period; the translation drops it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b99f6c09",
@@ -1578,6 +1646,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"Ready to Scan\"; the translation states a different action label than the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b151a7ff",
@@ -1601,6 +1670,7 @@
    "confidence": "medium"
   },
   "rationale": "Russian does not use English-style title case; \"Заполнить\" should be lowercase mid-sentence.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "de008b66",
@@ -1624,6 +1694,7 @@
    "confidence": "medium"
   },
   "rationale": "The source explicitly names the page being shared; the translation omits it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c63097d3",
@@ -1647,6 +1718,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Неподшитые\" (unfiled/unstitched) is not standard; Firefox ru uses \"Несортированные закладки\" for the unsorted bookmarks folder.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f71bc175",
@@ -1670,6 +1742,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means \"Add shortcuts to your open tabs\" i.e. shortcuts leading to open tabs; the Russian \"ярлыки на открытые вкладки\" is ungrammatical — the correct construction is genitive \"ярлыки открытых вкладок\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2bfa2bfd",
@@ -1693,6 +1766,7 @@
    "confidence": "medium"
   },
   "rationale": "The source verb is \"Clear\", not \"Close\"; closing and clearing are distinct actions in Firefox.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9b54a78f",
@@ -1716,6 +1790,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is singular \"Quick Action\" (title of the widget), while the neighbouring string eV8mOT correctly uses singular \"Тип быстрого действия\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c2d4022d",
@@ -1739,6 +1814,7 @@
    "confidence": "medium"
   },
   "rationale": "The source label is singular \"Quick Action\" for the dropdown menu label; the plural form does not match.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c2d4022d",

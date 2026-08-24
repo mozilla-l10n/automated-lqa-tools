@@ -14,6 +14,7 @@
    "confidence": "high"
   },
   "rationale": "The source distinguishes \"Prefecture\" (Japanese administrative division) from \"Province\"; both are rendered \"Província\", so the two address fields become indistinguishable on the same screen.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "daaac3d9",
@@ -37,6 +38,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this row reports how many analytics trackers were blocked; \"Conteúdo com rastreamento\" is the label for a different ETP category (tracking content) and would duplicate/mislabel this row.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b5738dd7",
@@ -60,6 +62,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US source says \"so you may see a lower tracker count\"; the parallel standard-mode string correctly uses \"pode aparecer\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5702aee9",
@@ -83,6 +86,7 @@
    "confidence": "medium"
   },
   "rationale": "The comment states %@ is the SSL certificate signer that verified the site; \"homologado\" means officially approved, a different concept from certificate verification.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f66ff25b",
@@ -106,6 +110,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Add a name\" is an instruction to the user, like \"Insira uma data...\" and \"Digite um número...\" in the same file; the infinitive reads as a button label instead of an error message.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6405a04d",
@@ -129,6 +134,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is an action title \"Switch to Desktop Site\"; the parallel string SwitchToMobileSite.Title.v131 keeps \"Mudar para…\", and the accessibility label uses \"Mudar para site de computador\". The current text only names the site type, not the action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d3b641d2",
@@ -152,6 +158,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US \"hasn’t set it up properly and a secure connection can’t be created\" requires an object and a coordinating conjunction; the current text drops both.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1a9f8366",
@@ -175,6 +182,7 @@
    "confidence": "medium"
   },
   "rationale": "The source instructs the user to tap \"Skip\"; \"Agora não\" means \"Not now\", which does not match the referenced button label.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b16e6f5c",
@@ -198,6 +206,7 @@
    "confidence": "medium"
   },
   "rationale": "In this Mozilla tagline, \"For good\" means for the common good, not \"permanently\"; \"Para sempre\" conveys a different meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d016132c",
@@ -221,6 +230,7 @@
    "confidence": "medium"
   },
   "rationale": "Inconsistent with Onboarding.Modern.Customization.Theme.Continue.Action.v140 and the Terms of Use continue button, which both use \"Continuar\" for the same source term on the same onboarding screens.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "64f0db30",
@@ -244,6 +254,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is \"Skip\" (skip the entire onboarding flow), not \"Not Now\"; the locale already uses \"Agora não\" for the distinct \"Not Now\" strings, so this conflates two different labels.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b66d5fab",
@@ -267,6 +278,7 @@
    "confidence": "medium"
   },
   "rationale": "The other strings in the same group render \"wallpaper\" as \"fundo de tela\"; \"fundo da tela\" is a different (and incorrect) construction.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f287ed76",
@@ -290,6 +302,7 @@
    "confidence": "medium"
   },
   "rationale": "Elsewhere in the same file \"wallpaper\" is \"fundo de tela\"; \"fundo da tela\" is inconsistent and reads as \"the screen's background\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "67a81367",
@@ -313,6 +326,7 @@
    "confidence": "medium"
   },
   "rationale": "The string is a descriptive subtitle explaining what the toggle covers, not an action; \"Includes\" is third-person present.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0b047dca",
@@ -336,6 +350,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"You’ll see the feature and can use it.\"; the extra \"e\" makes the sentence ungrammatical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0f76c8f1",
@@ -359,6 +374,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US says \"pop-ups about them\", referring to the AI enhancements (masculine plural \"aprimoramentos\"); \"notificações\" is a different concept and \"elas\" disagrees in gender.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f7efe137",
@@ -382,6 +398,7 @@
    "confidence": "high"
   },
   "rationale": "The source says changes happen between updates (remotely, without an app update); \"a cada atualização\" says the opposite — that improvements come with each update.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0e8cddc8",
@@ -405,6 +422,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Show suggestions from Firefox Suggest in private sessions\"; other strings on the same screen render Firefox Suggest as \"Sugestões Firefox\", so this one names the wrong thing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "568f6db8",
@@ -428,6 +446,7 @@
    "confidence": "high"
   },
   "rationale": "The verb must agree with the plural subject (\"recursos e ideias\"): \"antes de serem liberados\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7b184207",
@@ -451,6 +470,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a descriptive footer stating that the setting provides access, not an imperative to allow access.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3822b7a2",
@@ -474,6 +494,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"Touch and hold for Reader View.\"; the target adds \"mudar para\" (switch to), wording not present in the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "18ffe2f8",
@@ -497,6 +518,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"Sync\" is a tab-selector title parallel to \"Tabs\"; pt-BR uses the noun \"Sincronização\", not the past participle \"Sincronizado\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "36fda6e9",
@@ -520,6 +542,7 @@
    "confidence": "medium"
   },
   "rationale": "The phase is the bronze (third-place) final; \"FINAL DO BRONZE\" reads as 'final of the bronze', an incorrect construction for the match name.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "67871177",
@@ -543,6 +566,7 @@
    "confidence": "high"
   },
   "rationale": "The pt-BR term for 'Round of 16' is \"oitavas de final\" (matching the sibling string \"QUARTAS DE FINAL\"); the hyphen after OITAVAS is a spelling error.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d7ec7667",
@@ -566,6 +590,7 @@
    "confidence": "medium"
   },
   "rationale": "All sibling round-phase labels (QUARTAS DE FINAL, SEMIFINAIS, TERCEIRO LUGAR) are uppercase, mirroring the all-caps en-US source \"ROUND OF 32\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0ea8c03a",
@@ -589,6 +614,7 @@
    "confidence": "medium"
   },
   "rationale": "The comment says it labels an upcoming match; \"Seguintes\" is plural and means 'the following ones', not 'upcoming'.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f709f0ad",
@@ -612,6 +638,7 @@
    "confidence": "medium"
   },
   "rationale": "\"tornar automático\" must agree with the feminine plural nouns (velocidade, segurança, privacidade).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d6510d7b",
@@ -635,6 +662,7 @@
    "confidence": "high"
   },
   "rationale": "The source asks the user to make Firefox (us) the default browser; the translation reads as \"Make your default browser\" with no object, which is incomplete/incorrect.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "609d63c1",
@@ -658,6 +686,7 @@
    "confidence": "high"
   },
   "rationale": "The source says the pass (a Wallet pass) is being added to Wallet, not a password to Passbook; the sibling string AddPass.Error.Title correctly uses \"passe\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4898ea7a",
@@ -681,6 +710,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is \"Block Pop-up Windows\"; the target mentions tabs and drops the pop-up concept.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6281703d",
@@ -704,6 +734,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"trackers, ads, and popups\"; \"notificações\" means notifications, a different concept.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "baebf7ac",
@@ -727,6 +758,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"Decrease text size\" is an accessibility label for a button (an action name), which in pt-BR uses the infinitive; \"Diminui\" is the indicative third person, appropriate for hints, not labels.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "40067890",
@@ -750,6 +782,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is a context menu action to bookmark a site; the sibling string uses \"Remover favorito\". \"Favoritos\" names a section rather than the action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d8eebcdd",
@@ -773,6 +806,7 @@
    "confidence": "medium"
   },
   "rationale": "pt-BR uses sentence case; English title case should not be carried over, and the capital I appears mid-phrase inconsistently with the rest of the translated shortcut labels (e.g. \"Limpar histórico recente\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ab570be4",
@@ -796,6 +830,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states the site verifier (SSL certificate signer); \"homologado\" means approved/homologated, not verified.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f66ff25b",
@@ -819,6 +854,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to clearing data of all websites (Data Management screen); \"dados do site\" implies one specific site.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b23df4d1",
@@ -842,6 +878,7 @@
    "confidence": "medium"
   },
   "rationale": "Settings.DisplayTheme.SectionFooter translates \"threshold\" as \"limiar\"; the section header for the same slider should use the same term.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "93fb6118",
@@ -865,6 +902,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US source says \"Blocks more trackers, ads, and popups\"; \"notificações\" means notifications, a different concept.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "87e687de",
@@ -888,6 +926,7 @@
    "confidence": "high"
   },
   "rationale": "The source \"This will remove the password from all of your synced devices.\" is a warning describing what will happen; the translation reads as a command/label \"Remove this password from all your synced devices.\"",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6fab385a",
@@ -911,6 +950,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is an action label (\"Request Desktop Site\") for a menu button; the translation states only \"Desktop site\" and omits the request action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d3b641d2",
@@ -934,6 +974,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is an action label (\"Request Mobile Site\") for a menu button; the translation omits the request action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e1460804",
@@ -957,6 +998,7 @@
    "confidence": "high"
   },
   "rationale": "The source \"When Leaving Private Browsing\" is a settings label displayed under 'Close Private Tabs'; it should begin with a capital letter.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4e9b822f",
@@ -980,6 +1022,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US source is an imperative instruction to the user; \"Adiciona\" is a statement of what the widget does, inconsistent with the imperative in the rest of the same description set.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7e165bda",
@@ -1003,6 +1046,7 @@
    "confidence": "medium"
   },
   "rationale": "The source uses the imperative addressed to the user, and the rest of the same string already uses imperatives (\"mantenha pressionado\"), so \"Adiciona\" is inconsistent and wrong.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d19b58c2",
@@ -1026,6 +1070,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US \"Add shortcuts to…\" is imperative, and the parallel string TodayWidget.QuickViewGalleryDescriptionV2 uses \"Adicione\"; \"Adiciona\" is indicative and inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8a661efe",
@@ -1049,6 +1094,7 @@
    "confidence": "medium"
   },
   "rationale": "Top Sites in Firefox refers to frequently and recently visited sites, as the widget description states, not to user-selected favorites.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "74cd4d45",

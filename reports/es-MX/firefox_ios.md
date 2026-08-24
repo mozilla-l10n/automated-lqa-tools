@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `112744e9d020` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `112744e9d020` |
-| **Previous run** | 2026-08-21 @ `7e1ae61658ad` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `a2ecb0a822be` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `a2ecb0a822be` |
+| **Previous run** | 2026-08-22 @ `112744e9d020` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,883 |
+| **Strings reviewed this run** | 1 of 1,883 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,13 @@ Also for es-MX: [android](android.md) · [firefox](firefox.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `Settings.Notifications.SystemNotificationsDisabledMessage.v112` — `es-MX/firefox-ios.xliff` — A stray "$" character was appended after the final placeholder, which corrupts the placeholder/output.
+    - Current: `> %2$@$`
+    - Source: `You turned off all %1$@ notifications. Turn them on by going to device Settings > Notifications > %2$@`
+    - Suggest: `> %2$@`
+    - The en-US string ends with "%2$@"; the extra trailing "$" is not in the source and will render as a stray character or break placeholder parsing.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -50,17 +54,10 @@ _Nothing retired._
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
-| Variable & placeholder mismatches | 0 |
-| Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
+| Reference files that did not parse | 0 |
 | printf placeholder mismatches | 0 |
-| Plural / select selector mismatches | 0 |
-| Term parameter mismatches | 0 |
-| Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 0 |
-| Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 0 |
 
 ### Completeness
@@ -94,11 +91,12 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (115)
+## 3. Open findings (114)
+
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 1 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 64 |
 | 3 | Degraded language (grammar, spelling, terminology) | 41 |
 | 4 | Cosmetic (typography, spacing) | 9 |
@@ -110,11 +108,6 @@ _Nothing reported._
     - Source: `Share how you discovered %1$@, and that you use it, with %2$@’s marketing partners. This data is never sold.`
     - Suggest: `Comparte con los socios de marketing de %2$@ cómo descubriste %1$@ y que lo usas.`
     - Per the comment, %1$@ is the app name (Firefox) and %2$@ is the company name (Mozilla). The source says share with Mozilla's marketing partners how you discovered Firefox; the translation says share with Firefox's marketing partners how you discovered Mozilla.
-- `Settings.Notifications.SystemNotificationsDisabledMessage.v112` — `es-MX/firefox-ios.xliff` — A stray "$" character was appended after the final placeholder, which corrupts the placeholder/output.
-    - Current: `> %2$@$`
-    - Source: `You turned off all %1$@ notifications. Turn them on by going to device Settings > Notifications > %2$@`
-    - Suggest: `> %2$@`
-    - The en-US string ends with "%2$@"; the extra trailing "$" is not in the source and will render as a stray character or break placeholder parsing.
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -689,6 +682,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (1)
 
-_Nothing fixed yet._
+- `Settings.Notifications.SystemNotificationsDisabledMessage.v112` — `es-MX/firefox-ios.xliff` — fixed 2026-08-24
