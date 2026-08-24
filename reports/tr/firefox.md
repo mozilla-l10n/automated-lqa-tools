@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `907043d6ea4b` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
 | **Previous run** | 2026-08-24 @ `39e5663f3de7` |
-| **Mode** | recheck |
-| **Strings reviewed this run** | 0 of 18,064 |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 21 of 18,080 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,134 +18,41 @@ Also for tr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (5)
 
-_No new findings._
+- `theme-picker-dusk` — `toolkit/toolkit/global/theme-picker.ftl` — "Dusk" (just after sunset) is translated as "Şafak" (dawn), the opposite time of day.
+    - Current: `Şafak`
+    - Source: `label: Dusk`
+    - Suggest: `Alacakaranlık`
+    - The developer comment says the name refers to the sky just after sunset; "Şafak" means dawn/daybreak.
+- `theme-picker-dusk-aria-label` — `toolkit/toolkit/global/theme-picker.ftl` — "Dusk" (just after sunset) is translated as "Şafak" (dawn), the opposite time of day.
+    - Current: `Şafak`
+    - Source: `aria-label: Dusk`
+    - Suggest: `Alacakaranlık`
+    - The developer comment says the name refers to the sky just after sunset; "Şafak" means dawn/daybreak.
+- `extension-nova-dusk-name` — `browser/browser/appExtensionFields.ftl` — "Dusk" (just after sunset) is translated as "Şafak" (dawn), the opposite time of day.
+    - Current: `Şafak`
+    - Source: `Dusk`
+    - Suggest: `Alacakaranlık`
+    - The developer comment says the name refers to the sky just after sunset; "Şafak" means dawn/daybreak.
+- `webrtc-sharing-menu` — `browser/browser/webrtcIndicator.ftl` — "Tabs sharing devices" is rendered as "Sekme paylaşan cihazlar" (devices that share tabs), reversing subject and object.
+    - Current: `Sekme paylaşan cihazlar`
+    - Source: `accesskey: d label: Tabs sharing devices`
+    - Suggest: `Cihaz paylaşan sekmeler`
+    - The en-US means tabs that are sharing devices (camera/microphone); the Turkish says devices sharing tabs.
+- `containers-sites-card-header` — `browser/browser/preferences/preferences.ftl` — The description drops the meaning "choose a container for a site" and instead presupposes the container is already chosen.
+    - Current: `Özel kapsayıcı seçtiğiniz siteleri her açtığınızda { -brand-short-name } bu kapsayıcıyı kullanır.`
+    - Source: `description: Choose a container for a site and { -brand-short-name } will use it every time the site opens. label: Site-specific containers`
+    - Suggest: `Bir site için kapsayıcı seçin; { -brand-short-name } site her açıldığında bu kapsayıcıyı kullansın.`
+    - The en-US instructs the user to choose a container for a site; the Turkish only describes what happens afterwards, losing the instruction.
 
-### ✅ Fixed since the last run (91)
+### ✅ Fixed since the last run (2)
 
-- `popup-warning-exceeded-message` — `browser/browser/browser.ftl` — "more than" dropped; sibling popup-warning-exceeded-with-redirect-message includes "en az".
-    - Source: `{$popupCount ->} [other] { -brand-short-name } prevented this site from opening more than { $popupCount } pop-up windows.`
-- `reset-pbm-panel-description` — `browser/browser/browser.ftl` — "özel sekmeleri" vs "gizli" used for "private" everywhere, including reset-pbm-panel-description2 right above.
-    - Source: `Close all private tabs and delete history, cookies, and all other site data.`
-- `callout-firefox-view-tab-pickup-title` — `browser/browser/featureCallout.ftl` — Sekma taşıma — Sekme taşıma
-    - Source: `Hop between devices with tab pickup`
-- `pin-tabs-callout-1-subtitle` — `browser/browser/featureCallout.ftl` — pin-tabs-callout-1-subtitle, pin-tabs-callout-2-subtitle (browser/featureCallout.ftl); import-safari-permissions-string (browser/migration.ftl); tab-groups-onboarding-create-group-title-3, tab-groups-onboarding-saved-groups-title-3, tab-groups-onboarding-session-restore-title-2 (browser/newtab/onboarding.ftl); about-logging-invalid-output, about-logging-unknown-logging-preset, about-logging-unkno…
-    - Source: `Drag a tab to the start of the tab strip to pin it. Or right-click and choose Pin Tab.`
-- `pin-tabs-callout-2-subtitle` — `browser/browser/featureCallout.ftl` — pin-tabs-callout-1-subtitle, pin-tabs-callout-2-subtitle (browser/featureCallout.ftl); import-safari-permissions-string (browser/migration.ftl); tab-groups-onboarding-create-group-title-3, tab-groups-onboarding-saved-groups-title-3, tab-groups-onboarding-session-restore-title-2 (browser/newtab/onboarding.ftl); about-logging-invalid-output, about-logging-unknown-logging-preset, about-logging-unkno…
-    - Source: `To pin any tab, drag it to the start of the tab strip. Or right-click and choose Pin Tab.`
-- `firefox-relay-must-login-to-fxa` — `browser/browser/firefoxRelay.ftl` — kullanak için — kullanmak için
-    - Source: `You must log in to { -fxaccount-brand-name } in order to use { -relay-brand-name }.`
-- `import-safari-permissions-string` — `browser/browser/migration.ftl` — pin-tabs-callout-1-subtitle, pin-tabs-callout-2-subtitle (browser/featureCallout.ftl); import-safari-permissions-string (browser/migration.ftl); tab-groups-onboarding-create-group-title-3, tab-groups-onboarding-saved-groups-title-3, tab-groups-onboarding-session-restore-title-2 (browser/newtab/onboarding.ftl); about-logging-invalid-output, about-logging-unknown-logging-preset, about-logging-unkno…
-    - Source: `macOS requires you to explicitly allow { -brand-short-name } to access Safari’s data. Click “Continue”, select the “Safari“ folder in the Finder dialog that appears and then click “Open”.`
-- `newtab-shortcuts-highlight-title` — `browser/browser/newtab/newtab.ftl` — Favorileri siteleriniz — Favori siteleriniz
-    - Source: `Your favorites at your fingertips`
-- `newtab-sports-widget-message-survey-body` — `browser/browser/newtab/newtab.ftl` — Dünya Kupaları sona erdi — Dünya Kupası sona erdi (singular; verb disagrees)
-    - Source: `That’s a wrap on the World Cup. Share your feedback on the experience.`
-- `newtab-weather-menu-temperature-option-celsius` — `browser/browser/newtab/newtab.ftl` — Celcius — Celsius
-    - Source: `Celsius`
-- `onboarding-refresh-import-subtitle` — `browser/browser/newtab/onboarding.ftl` — "geçmişinizi ve ve diğer" — "…ve diğer"
-    - Source: `Bring over your passwords, bookmarks, history and more.`
-- `tab-groups-onboarding-create-group-title-3` — `browser/browser/newtab/onboarding.ftl` — pin-tabs-callout-1-subtitle, pin-tabs-callout-2-subtitle (browser/featureCallout.ftl); import-safari-permissions-string (browser/migration.ftl); tab-groups-onboarding-create-group-title-3, tab-groups-onboarding-saved-groups-title-3, tab-groups-onboarding-session-restore-title-2 (browser/newtab/onboarding.ftl); about-logging-invalid-output, about-logging-unknown-logging-preset, about-logging-unkno…
-    - Source: `Find your tab groups in the List All Tabs menu anytime.`
-- `tab-groups-onboarding-saved-groups-title-3` — `browser/browser/newtab/onboarding.ftl` — pin-tabs-callout-1-subtitle, pin-tabs-callout-2-subtitle (browser/featureCallout.ftl); import-safari-permissions-string (browser/migration.ftl); tab-groups-onboarding-create-group-title-3, tab-groups-onboarding-saved-groups-title-3, tab-groups-onboarding-session-restore-title-2 (browser/newtab/onboarding.ftl); about-logging-invalid-output, about-logging-unknown-logging-preset, about-logging-unkno…
-    - Source: `When you close a tab group, reopen it from the List All Tabs menu anytime.`
-- `tab-groups-onboarding-session-restore-title-2` — `browser/browser/newtab/onboarding.ftl` — pin-tabs-callout-1-subtitle, pin-tabs-callout-2-subtitle (browser/featureCallout.ftl); import-safari-permissions-string (browser/migration.ftl); tab-groups-onboarding-create-group-title-3, tab-groups-onboarding-saved-groups-title-3, tab-groups-onboarding-session-restore-title-2 (browser/newtab/onboarding.ftl); about-logging-invalid-output, about-logging-unknown-logging-preset, about-logging-unkno…
-    - Source: `Reopen your tab groups from the List All Tabs menu anytime.`
-- `places-view-sortby-name` — `browser/browser/places.ftl` — "İsme göre sırala" vs places-sortby-name "Ada göre sırala" for the same en string in the same file.
-    - Source: `accesskey: N label: Sort by Name`
-- `policy-FirefoxHome2` — `browser/browser/policies/policies-descriptions.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
-    - Source: `Configure { -firefox-home-brand-name }.`
-- `connection-proxy-noproxy-localhost-desc-2` — `browser/browser/preferences/connection.ftl` — serial comma before "ve" carried over from English: "127.0.0.1/8, ve ::1" → "127.0.0.1/8 ve ::1".
-    - Source: `Connections to localhost, 127.0.0.1/8, and ::1 are never proxied.`
-- `browsing-use-full-keyboard-navigation` — `browser/browser/preferences/preferences.ftl` — "Form düğmeleri" ≠ en "form controls"; also uses descriptive "kullanabilirsiniz" where every other checkbox in the pane uses the imperative.
-    - Source: `accesskey: t label: Use the tab key to move focus between form controls and links`
-- `content-blocking-cross-site-tracking-cookies-plus-isolate` — `browser/browser/preferences/preferences.ftl` — "takip kodları ve" added; en lists only "Cross-site tracking cookies".
-    - Source: `Cross-site tracking cookies, and isolate remaining cookies`
-- `pane-experimental-description4` — `browser/browser/preferences/preferences.ftl` — oldıkları — oldukları
-    - Source: `Give our experimental features a try! They’re in development and evolving, which could impact how { -brand-short-name } works. We only receive data about your use of these features if you have <a data-l10n-name="data-co…`
-- `preferences-ai-controls-on-device-group` — `browser/browser/preferences/preferences.ftl` — the condition "if you use the feature" dropped, implying unconditional downloads.
-    - Source: `description: These use small AI models that download to your device if you use the feature. This approach helps protect your privacy. label: On-device AI`
-- `preferences-copy-profile-header` — `browser/browser/preferences/preferences.ftl` — parolarar — parolalar
-    - Source: `description: The new profile will copy your settings, add-ons, history, and saved data like bookmarks and passwords — but not your account or sync info. label: Copy an existing profile`
-- `preferences-etp-advanced-settings-group` — `browser/browser/preferences/preferences.ftl` — "çoğu takip kodunu olarak engelleyerek" — "…otomatik olarak engelleyerek" (word dropped)
-    - Source: `description: Sites use trackers to follow you online and show creepy ads. { -brand-short-name } shields you as you browse, blocking most trackers automatically so you’re in control of your digital trail. label: Advanced…`
-- `preferences-text-zoom-override-warning2` — `browser/browser/preferences/preferences.ftl` — quotes the option as "Yalnızca metni yakınlaştır" but its actual label preferences-zoom-text-only is "Sadece metni yakınlaştır".
-    - Source: `message: If “Zoom text only” is on and your default zoom isn’t 100%, some sites might not display content correctly.`
-- `sitedata-total-size` — `browser/browser/preferences/preferences.ftl` — "cookies" dropped from "Your stored cookies, site data, and cache".
-    - Source: `Your stored cookies, site data, and cache are currently using { $value } { $unit } of disk space.`
-- `space-alert-over-5gb-message2` — `browser/browser/preferences/preferences.ftl` — kulllanılabilen — kullanılabilen
-    - Source: `<strong>{ -brand-short-name } is running out of disk space.</strong> Website contents may not display properly. You can clear stored data in Settings > Privacy & Security > Cookies and Site Data.`
-- `space-alert-under-5gb-message2` — `browser/browser/preferences/preferences.ftl` — kulllanılabilen … deneyimi içi — kullanılabilen … için
-    - Source: `<strong>{ -brand-short-name } is running out of disk space.</strong> Website contents may not display properly. Visit “Learn more” to optimize your disk usage for better browsing experience.`
-- `site-data-settings-description` — `browser/browser/preferences/siteDataSettings.ftl` — "bilgisayarınızda ve çerez ve site verisi" — stray "ve"
-    - Source: `The following websites store cookies and site data on your computer. { -brand-short-name } keeps data from websites with persistent storage until you delete it, and deletes data from websites with non-persistent storage…`
-- `profiles-cyan-theme-title` — `browser/browser/profiles.ftl` — tooltip says "Cyan temayı uygula" but the theme's own label profiles-cyan-theme is "Açık mavi".
-    - Source: `title: Apply cyan theme`
-- `monitor-partial-breaches-motivation-description` — `browser/browser/protections.ftl` — ihallerinizi — ihlallerinizi
-    - Source: `Resolve the rest of your breaches on { -monitor-brand-short-name }.`
-- `protections-vpn-header-content-subscribed` — `browser/browser/protections.ftl` — set-password-reminder (security/…/pippki.ftl), protections-vpn-header-content-subscribed (browser/protections.ftl), permissions-block-popups-exceptions-button4.description (browser/preferences/preferences.ftl), mr2022-onboarding-pin-primary-button-label [macos variant] (browser/newtab/onboarding.ftl), profiles-delete-profile-confirm (toolkit/about/aboutProfiles.ftl), rights-webservices-term-3, ri…
-    - Source: `{$count ->} [other] Using the { -mozilla-vpn-brand-name } encrypts all your traffic and hides your location — on up to { $count } devices. Get the most from your subscription — add it from the <a data-l10n-name="playsto…`
-- `report-broken-site-panel-intro-text` — `browser/browser/reportBrokenSite.ftl` — extra "için" after a dative that is already the complement of "yardımcı oluyor".
-    - Source: `Your report helps us understand and fix issues in { -brand-product-name } to make it better for everyone.`
-- `set-background-stretch` — `browser/browser/setDesktopBackground.ftl` — "Genişlet", identical to set-background-span; two distinct wallpaper modes collide. → "Uzat".
-    - Source: `label: Stretch`
-    - Suggest: `"Uzat".`
-- `tou-existing-user-spotlight-body` — `browser/browser/termsofuse.ftl` — set-password-reminder (security/…/pippki.ftl), protections-vpn-header-content-subscribed (browser/protections.ftl), permissions-block-popups-exceptions-button4.description (browser/preferences/preferences.ftl), mr2022-onboarding-pin-primary-button-label [macos variant] (browser/newtab/onboarding.ftl), profiles-delete-profile-confirm (toolkit/about/aboutProfiles.ftl), rights-webservices-term-3, ri…
-    - Source: `We’ve introduced a <a data-l10n-name="terms-of-use">Terms of Use</a> and updated our <a data-l10n-name="privacy-notice">Privacy Notice</a>.<br><br> Please take a moment to review and accept. <a data-l10n-name="learn-mor…`
-- `webrtc-reason-for-no-permanent-allow-audio` — `browser/browser/webrtcIndicator.ftl` — paylacağınızı — paylaşacağınızı
-    - Source: `{ -brand-short-name } can not allow permanent access to your tab’s audio without asking which tab to share.`
-- `accessibility-text-label-issue-document-title` — `devtools/client/accessibility.ftl` — the token inside <code> is the HTML title attribute name and must stay English. Current <code>başlığı</code> → <code>title</code>.
-    - Source: `Documents must have a <code>title</code>. <a>Learn more</a>`
-- `storage-table-type-cache-hint` — `devtools/client/storage.ftl` — en "View and delete the cache storage entries by selecting a storage"; both the object and the verb are wrong.
-    - Source: `View and delete the cache storage entries by selecting a storage. <a data-l10n-name="learn-more-link">Learn more</a>`
-- `styleeditor-filter-input` — `devtools/client/styleeditor.ftl` — Stil dosyalarını filtrelere — …filtrele
-    - Source: `placeholder: Filter style sheets`
-- `styleeditor-filter-input` — `devtools/client/styleeditor.ftl` — "stil dosyası" vs "stil sayfası" for stylesheet in adjacent strings.
-    - Source: `placeholder: Filter style sheets`
-- `inactive-css-at-position-try-not-supported` — `devtools/client/tooltips.ftl` — { $property } is a CSS property, called a "kural" (rule) here.
-    - Source: `<strong>{ $property }</strong> is not supported in <strong>@position-try</strong> rules.`
-- `inactive-css-no-principal-box` — `devtools/client/tooltips.ftl` — wrong subject: the tr says the property does not create a principal box / is a ruby element; en says the element is.
-    - Source: `<strong>{ $property }</strong> has no effect on this element since it does not create a principal box.`
-- `inactive-css-ruby-element` — `devtools/client/tooltips.ftl` — wrong subject: the tr says the property does not create a principal box / is a ruby element; en says the element is.
-    - Source: `<strong>{ $property }</strong> has no effect on this element since it is a ruby element. Its size is determined by the font size of the ruby text.`
-- `xslt-call-to-key-not-allowed` — `dom/dom/xslt.ftl` — "işlev" vs "fonksiyon" used in xpath-unknown-function, xpath-bad-argument-count, xpath-bad-extension-function; also "the key function" is the XSLT key() function name, not a generic "anahtar işlev".
-    - Source: `Call to the key function not allowed.`
-- `console-stacktrace` — `mobile/android/mobile/android/geckoViewConsole.ftl` — missing ablative for en "Stack trace from { $filename }".
-    - Source: `Stack trace from { $filename }, function { $functionName }, line { $lineNumber }.`
-- `cert-format-base64-chain` — `security/manager/security/certificates/certManager.ftl` — "with chain" dropped; each is now byte-identical to its non-chain sibling, so the two export formats cannot be told apart.
-    - Source: `X.509 Certificate with chain (PEM)`
-- `cert-format-pkcs7-chain` — `security/manager/security/certificates/certManager.ftl` — "with chain" dropped; each is now byte-identical to its non-chain sibling, so the two export formats cannot be told apart.
-    - Source: `X.509 Certificate with chain (PKCS#7)`
-- `file-browse-pkcs12-spec` — `security/manager/security/certificates/certManager.ftl` — PKSC12 — PKCS12
-    - Source: `PKCS12 Files`
-- `pk11-bad-password` — `security/manager/security/certificates/certManager.ftl` — "Geçerli parola girişi hatalı" introduces a "current password" notion absent from en "The password entered was incorrect."
-    - Source: `The password entered was incorrect.`
-- `fips-nonempty-primary-password-required` — `security/manager/security/certificates/deviceManager.ftl` — "güvenlik cihazı" vs "güvenlik aygıtı" used in devmgr-window, unable-to-toggle-fips, pkcs12-dup-data, certmgr-token-name, change-password-token.
-    - Source: `FIPS mode requires that you have a Primary Password set for each security device. Please set the password before trying to enable FIPS mode.`
-- `load-device` — `security/manager/security/certificates/deviceManager.ftl` — "PKCS #11" with a space; en and the file's own load-device-modname-default / load-pk11-module-file-picker-title use "PKCS#11".
-    - Source: `title: Load PKCS#11 Device Driver`
-- `pippki-pw-change2empty-in-fips-mode` — `security/manager/security/pippki/pippki.ftl` — adds "ana" (Primary) where en says only "a non-empty password"; this is the security-device password dialog.
-    - Source: `You are currently in FIPS mode. FIPS requires a non-empty password.`
-- `set-password-reminder` — `security/manager/security/pippki/pippki.ftl` — set-password-reminder (security/…/pippki.ftl), protections-vpn-header-content-subscribed (browser/protections.ftl), permissions-block-popups-exceptions-button4.description (browser/preferences/preferences.ftl), mr2022-onboarding-pin-primary-button-label [macos variant] (browser/newtab/onboarding.ftl), profiles-delete-profile-confirm (toolkit/about/aboutProfiles.ftl), rights-webservices-term-3, ri…
-    - Source: `Important: If you forget your certificate backup password, you will not be able to restore this backup later. Please record it in a safe location.`
-- `details-notification-soft-blocked-other-disabled` — `toolkit/toolkit/about/aboutAddons.ftl` — this is the add-on ("other") variant but says "Uzantıyı"; …-disabled2 correctly says "Eklentiyi".
-    - Source: `message: This add-on is restricted for violating Mozilla’s policies and has been disabled. You can enable it, but this may be risky.`
-- `plugins-openh264-description` — `toolkit/toolkit/about/aboutAddons.ftl` — stale http://www.openh264.org/; en specifies https://.
-    - Source: `This plugin is automatically installed by Mozilla to comply with the WebRTC specification and to enable WebRTC calls with devices that require the H.264 video codec. Visit https://www.openh264.org/ to view the codec sou…`
-- `about-glean-label-for-tag-pings-with-requirements` — `toolkit/toolkit/about/aboutGlean.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
-    - Source: `Set a memorable debug tag <span>(20 characters or fewer, alphanumerics and - only)</span> so you can recognize your pings later.`
-- `about-logging-invalid-output` — `toolkit/toolkit/about/aboutLogging.ftl` — pin-tabs-callout-1-subtitle, pin-tabs-callout-2-subtitle (browser/featureCallout.ftl); import-safari-permissions-string (browser/migration.ftl); tab-groups-onboarding-create-group-title-3, tab-groups-onboarding-saved-groups-title-3, tab-groups-onboarding-session-restore-title-2 (browser/newtab/onboarding.ftl); about-logging-invalid-output, about-logging-unknown-logging-preset, about-logging-unkno…
-    - Source: `Invalid value “{ $v }“ for key “{ $k }“`
-- `about-logging-unknown-logging-preset` — `toolkit/toolkit/about/aboutLogging.ftl` — pin-tabs-callout-1-subtitle, pin-tabs-callout-2-subtitle (browser/featureCallout.ftl); import-safari-permissions-string (browser/migration.ftl); tab-groups-onboarding-create-group-title-3, tab-groups-onboarding-saved-groups-title-3, tab-groups-onboarding-session-restore-title-2 (browser/newtab/onboarding.ftl); about-logging-invalid-output, about-logging-unknown-logging-preset, about-logging-unkno…
-    - Source: `Unknown logging preset “{ $v }“`
-- `about-logging-unknown-option` — `toolkit/toolkit/about/aboutLogging.ftl` — pin-tabs-callout-1-subtitle, pin-tabs-callout-2-subtitle (browser/featureCallout.ftl); import-safari-permissions-string (browser/migration.ftl); tab-groups-onboarding-create-group-title-3, tab-groups-onboarding-saved-groups-title-3, tab-groups-onboarding-session-restore-title-2 (browser/newtab/onboarding.ftl); about-logging-invalid-output, about-logging-unknown-logging-preset, about-logging-unkno…
-    - Source: `Unknown about:logging option “{ $k }“`
-- `about-logging-unknown-profiler-preset` — `toolkit/toolkit/about/aboutLogging.ftl` — pin-tabs-callout-1-subtitle, pin-tabs-callout-2-subtitle (browser/featureCallout.ftl); import-safari-permissions-string (browser/migration.ftl); tab-groups-onboarding-create-group-title-3, tab-groups-onboarding-saved-groups-title-3, tab-groups-onboarding-session-restore-title-2 (browser/newtab/onboarding.ftl); about-logging-invalid-output, about-logging-unknown-logging-preset, about-logging-unkno…
-    - Source: `Unknown profiler preset “{ $v }“`
-- `profiles-delete-profile-confirm` — `toolkit/toolkit/about/aboutProfiles.ftl` — set-password-reminder (security/…/pippki.ftl), protections-vpn-header-content-subscribed (browser/protections.ftl), permissions-block-popups-exceptions-button4.description (browser/preferences/preferences.ftl), mr2022-onboarding-pin-primary-button-label [macos variant] (browser/newtab/onboarding.ftl), profiles-delete-profile-confirm (toolkit/about/aboutProfiles.ftl), rights-webservices-term-3, ri…
-    - Source: `Deleting a profile will remove the profile from the list of available profiles and cannot be undone. You may also choose to delete the profile data files, including your settings, certificates and other user-related dat…`
-- _…and 31 more._
+- `webrtc-sharing-menu` — `browser/browser/webrtcIndicator.ftl` — subject/object inverted. "Sekme paylaşan cihazlar" → "Cihaz paylaşan sekmeler" (en "Tabs sharing devices"; the menu lists tabs).
+    - Source: `accesskey: d label: Tabs sharing devices`
+    - Suggest: `"Cihaz paylaşan sekmeler"`
+- `about-telemetry-data-details-current` — `toolkit/toolkit/about/aboutTelemetry.ftl` — pin-tabs-callout-1-subtitle, pin-tabs-callout-2-subtitle (browser/featureCallout.ftl); import-safari-permissions-string (browser/migration.ftl); tab-groups-onboarding-create-group-title-3, tab-groups-onboarding-saved-groups-title-3, tab-groups-onboarding-session-restore-title-2 (browser/newtab/onboarding.ftl); about-logging-invalid-output, about-logging-unknown-logging-preset, about-logging-unkno…
+    - Source: `Each piece of information is sent bundled into “<a data-l10n-name="ping-link">pings</a>“. You are looking at the current data.`
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -166,8 +73,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,064 |
-| Missing strings | 116 |
+| Strings | 18,080 |
+| Missing strings | 100 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -183,20 +90,20 @@ _Nothing retired._
 
 ### Completeness
 
-**116 strings** are not translated yet, concentrated in:
+**100 strings** are not translated yet, concentrated in:
 
 - `browser/browser/newtab/newtab.ftl` — 39
 - `browser/browser/ipProtection.ftl` — 13
 - `toolkit/toolkit/about/url-classifier.ftl` — 10
-- `browser/browser/firefoxView.ftl` — 9
+- `browser/browser/firefoxView.ftl` — 5
 - `browser/browser/newtab/onboarding.ftl` — 5
-- `browser/browser/appmenu.ftl` — 4
-- `browser/browser/preferences/preferences.ftl` — 4
 - `toolkit/toolkit/about/aboutAddons.ftl` — 4
-- `toolkit/toolkit/global/theme-picker.ftl` — 4
+- `browser/browser/appmenu.ftl` — 4
 - `browser/browser/aiFeatures.ftl` — 3
-- `browser/browser/appExtensionFields.ftl` — 3
 - `browser/browser/featureCallout.ftl` — 3
+- `devtools/client/inspector.ftl` — 3
+- `toolkit/toolkit/about/aboutNetworking.ftl` — 2
+- `toolkit/toolkit/neterror/netError.ftl` — 2
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -222,15 +129,15 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (113)
+## 3. Open findings (116)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 4 |
-| 2 | Wrong content (says something other than the English) | 34 |
+| 2 | Wrong content (says something other than the English) | 38 |
 | 3 | Degraded language (grammar, spelling, terminology) | 59 |
-| 4 | Cosmetic (typography, spacing) | 16 |
+| 4 | Cosmetic (typography, spacing) | 15 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -262,6 +169,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `extension-colorways-bold-name` — `browser/browser/appExtensionFields.ftl` — developer comment not followed. The comment states "Bold" is used in the sense of bravery. Current "Koyu" means dark and duplicates extension-firefox-compact-dark-name. → "Cesur".
     - Source: `{ $colorway-name } — Bold`
     - Suggest: `"Cesur".`
+- `extension-nova-dusk-name` — `browser/browser/appExtensionFields.ftl` — "Dusk" (just after sunset) is translated as "Şafak" (dawn), the opposite time of day.
+    - Current: `Şafak`
+    - Source: `Dusk`
+    - Suggest: `Alacakaranlık`
+    - The developer comment says the name refers to the sky just after sunset; "Şafak" means dawn/daybreak.
 - `urlbar-result-weather-title` — `browser/browser/browser.ftl` — city and region swapped: { $region }, { $city } → { $city }, { $region } (cf. urlbar-result-weather-title-with-country).
     - Current: `{ $region }, { $city }`
     - Source: `<strong>{ $temperature }°{ $unit }</strong> in { $city }, { $region }`
@@ -292,13 +204,20 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `(value): Fonts for accesskey: F`
 - `more-from-moz-mozilla-monitor-us-description` — `browser/browser/preferences/moreFromMozilla.ftl` — "Automatically" dropped.
     - Source: `Automatically take back your exposed personal info.`
+- `containers-sites-card-header` — `browser/browser/preferences/preferences.ftl` — The description drops the meaning "choose a container for a site" and instead presupposes the container is already chosen.
+    - Current: `Özel kapsayıcı seçtiğiniz siteleri her açtığınızda { -brand-short-name } bu kapsayıcıyı kullanır.`
+    - Source: `description: Choose a container for a site and { -brand-short-name } will use it every time the site opens. label: Site-specific containers`
+    - Suggest: `Bir site için kapsayıcı seçin; { -brand-short-name } site her açıldığında bu kapsayıcıyı kullansın.`
+    - The en-US instructs the user to choose a container for a site; the Turkish only describes what happens afterwards, losing the instruction.
 - `settings-keyboard-shortcuts-group` — `browser/browser/preferences/preferences.ftl` — "kolaylaştırın" (make it easier) ≠ en "Control how you move around and interact with".
     - Source: `description: Control how you move around and interact with { -brand-short-name }. label: Keyboard shortcuts`
 - `should-restart-ok` — `browser/browser/preferences/preferences.ftl` — "now" dropped; the OK button is now byte-identical to should-restart-title.
     - Source: `Restart { -brand-short-name } now`
-- `webrtc-sharing-menu` — `browser/browser/webrtcIndicator.ftl` — subject/object inverted. "Sekme paylaşan cihazlar" → "Cihaz paylaşan sekmeler" (en "Tabs sharing devices"; the menu lists tabs).
+- `webrtc-sharing-menu` — `browser/browser/webrtcIndicator.ftl` — "Tabs sharing devices" is rendered as "Sekme paylaşan cihazlar" (devices that share tabs), reversing subject and object.
+    - Current: `Sekme paylaşan cihazlar`
     - Source: `accesskey: d label: Tabs sharing devices`
-    - Suggest: `"Cihaz paylaşan sekmeler"`
+    - Suggest: `Cihaz paylaşan sekmeler`
+    - The en-US means tabs that are sharing devices (camera/microphone); the Turkish says devices sharing tabs.
 - `exception-mgr-supplemental-warning` — `security/manager/security/certificates/certManager.ftl` — "Legitimate" dropped; the whole point of the warning is that legitimate sites never ask this.
     - Source: `Legitimate banks, stores, and other public sites will not ask you to do this.`
 - `devmgr-button-unload` — `security/manager/security/certificates/deviceManager.ftl` — "Boşalt" (empty/pour out) → "Kaldır" (en "Unload" a PKCS#11 module).
@@ -318,6 +237,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `{ $scheme }`
     - Source: `‘{ $directive }’ directive contains a forbidden { $scheme }: protocol source`
     - Suggest: `"yasaklı bir { $scheme }: protokol kaynağı içeriyor".`
+- `theme-picker-dusk` — `toolkit/toolkit/global/theme-picker.ftl` — "Dusk" (just after sunset) is translated as "Şafak" (dawn), the opposite time of day.
+    - Current: `Şafak`
+    - Source: `label: Dusk`
+    - Suggest: `Alacakaranlık`
+    - The developer comment says the name refers to the sky just after sunset; "Şafak" means dawn/daybreak.
+- `theme-picker-dusk-aria-label` — `toolkit/toolkit/global/theme-picker.ftl` — "Dusk" (just after sunset) is translated as "Şafak" (dawn), the opposite time of day.
+    - Current: `Şafak`
+    - Source: `aria-label: Dusk`
+    - Suggest: `Alacakaranlık`
+    - The developer comment says the name refers to the sky just after sunset; "Şafak" means dawn/daybreak.
 - `language-name-si` — `toolkit/toolkit/intl/languageNames.ftl` — Sinhala — Seylanca — Sinhalaca — outdated exonym from "Ceylon".
     - Source: `Sinhala`
 - `sec-error-ocsp-bad-http-response` — `toolkit/toolkit/neterror/nsserrors.ftl` — sec-error-ocsp-bad-http-response, sec-error-ocsp-unknown-response-status — "aldı"/"karşılaştı" → "döndürdü" (en "returned").
@@ -518,8 +447,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `{ -vendor-short-name } may update these terms as necessary from time to time. These terms may not be modified or canceled without { -vendor-short-name }’s written agreement.`
 - `show-dir-label` — `toolkit/toolkit/about/aboutSupport.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
     - Source: `{$sel_1 ->} [macos] Show in Finder [windows] Open Folder [other] Open Directory`
-- `about-telemetry-data-details-current` — `toolkit/toolkit/about/aboutTelemetry.ftl` — pin-tabs-callout-1-subtitle, pin-tabs-callout-2-subtitle (browser/featureCallout.ftl); import-safari-permissions-string (browser/migration.ftl); tab-groups-onboarding-create-group-title-3, tab-groups-onboarding-saved-groups-title-3, tab-groups-onboarding-session-restore-title-2 (browser/newtab/onboarding.ftl); about-logging-invalid-output, about-logging-unknown-logging-preset, about-logging-unkno…
-    - Source: `Each piece of information is sent bundled into “<a data-l10n-name="ping-link">pings</a>“. You are looking at the current data.`
 - `about-webrtc-save-page-dialog-title` — `toolkit/toolkit/about/aboutWebrtc.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
     - Source: `save about:webrtc as`
 - `experimental-features-media-jxl-description` — `toolkit/toolkit/firefoxlabs/features.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
@@ -547,7 +474,7 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (183)
+### Fixed to date (185)
 
 - `about-logins-confirm-remove-all-sync-dialog-title` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-24
 - `popup-warning-exceeded-message` — `browser/browser/browser.ftl` — fixed 2026-08-24
@@ -585,7 +512,7 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `set-background-stretch` — `browser/browser/setDesktopBackground.ftl` — fixed 2026-08-24
 - `tou-existing-user-spotlight-body` — `browser/browser/termsofuse.ftl` — fixed 2026-08-24
 - `webrtc-reason-for-no-permanent-allow-audio` — `browser/browser/webrtcIndicator.ftl` — fixed 2026-08-24
+- `webrtc-sharing-menu` — `browser/browser/webrtcIndicator.ftl` — fixed 2026-08-24
 - `accessibility-text-label-issue-document-title` — `devtools/client/accessibility.ftl` — fixed 2026-08-24
 - `storage-table-type-cache-hint` — `devtools/client/storage.ftl` — fixed 2026-08-24
-- `styleeditor-filter-input` — `devtools/client/styleeditor.ftl` — fixed 2026-08-24
 - `styleeditor-filter-input` — `devtools/client/styleeditor.ftl` — fixed 2026-08-24

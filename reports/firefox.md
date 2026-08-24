@@ -2,7 +2,7 @@
 
 - **Generated:** 2026-08-24
 - **Locales tracked:** 20 (20 with recorded state)
-- **Findings:** 5,827 raised, 2,010 fixed (34%), 3,769 open
+- **Findings:** 5,832 raised, 2,012 fixed (34%), 3,772 open
 - **Closed by a person:** 15 dismissed, 3 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
@@ -74,7 +74,7 @@ The value does not render as intended: a blank string, broken markup, a variable
   - Suggest: `件のパスワードが全漏洩データから見つかりました`
 - _…and 350 more, in the per-locale reports linked below._
 
-### Wrong content — impact 2 (1439)
+### Wrong content — impact 2 (1443)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/firefox.md`.
 
@@ -98,7 +98,7 @@ Too many to list here; the per-locale counts are in the table below and every on
 | [pt-BR](pt-BR/firefox.md) | 2026-08-24 | incremental | `907043d6` | 18,180 | 0 | **564** | 205 | 138 | 5 | 0 |
 | [ru](ru/firefox.md) | 2026-08-24 | incremental | `907043d6` | 18,169 | 11 | **594** | 315 | 173 | 0 | 0 |
 | [sl](sl/firefox.md) | 2026-08-24 | incremental | `907043d6` | 17,550 | 630 | **33** | 4 | 44 | 0 | 1 |
-| [tr](tr/firefox.md) | 2026-08-24 | recheck | `39e5663f` | 18,064 | 116 | **113** | 38 | 183 | 0 | 0 |
+| [tr](tr/firefox.md) | 2026-08-24 | incremental | `907043d6` | 18,080 | 100 | **116** | 42 | 185 | 0 | 0 |
 | [zh-CN](zh-CN/firefox.md) | 2026-08-24 | incremental | `907043d6` | 17,981 | 199 | **54** | 12 | 47 | 0 | 0 |
 
 **Impact 1–2** is the queue that matters: broken output and wrong content. Impact 3–4 is language polish and typography.
