@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e59d51071942` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
+| **Previous run** | 2026-08-24 @ `39e5663f3de7` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 11 of 18,180 |
+| **Strings reviewed this run** | 0 of 18,180 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,12 +18,9 @@ Also for cs: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `appmenuitem-new-ai-window` — `browser/browser/aiWindow.ftl` — `appmenuitem-new-ai-window` (`.value`) calls `-smart-window-brand-name` with ['capitalization'], but that term selects on ['case', 'plural-form']
-    - Current: `Nové { -smart-window-brand-name }`
-    - Source: `label: New { -smart-window-brand-name } value: New { -smart-window-brand-name }`
-    - The term falls back to its catch-all variant, so the intended form is never selected.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -105,11 +102,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `We’ll erase every search and sign-in when you close all your Private Windows. { -brand-short-name }’s built-in protections are on here too, like blocking trackers.`
     - Suggest: `jako třeba blokování sledovacích prvků, jsou zapnuté`
     - en-US: “…built-in protections are on here too, like blocking trackers.” The sibling string about-private-browsing-nova-info-subheader renders it correctly as “blokování sledovacích prvků”.
-- `appmenuitem-new-ai-window` — `browser/browser/aiWindow.ftl` — `appmenuitem-new-ai-window` (`.label`) calls `-smart-window-brand-name` with ['capitalization'], but that term selects on ['case', 'plural-form']
+- `appmenuitem-new-ai-window` — `browser/browser/aiWindow.ftl` — `appmenuitem-new-ai-window` (`.value`) calls `-smart-window-brand-name` with ['capitalization'], but that term selects on ['case', 'plural-form']
     - Current: `Nové { -smart-window-brand-name }`
     - Source: `label: New { -smart-window-brand-name } value: New { -smart-window-brand-name }`
     - The term falls back to its catch-all variant, so the intended form is never selected.
-- `appmenuitem-new-ai-window` — `browser/browser/aiWindow.ftl` — `appmenuitem-new-ai-window` (`.value`) calls `-smart-window-brand-name` with ['capitalization'], but that term selects on ['case', 'plural-form']
+- `appmenuitem-new-ai-window` — `browser/browser/aiWindow.ftl` — `appmenuitem-new-ai-window` (`.label`) calls `-smart-window-brand-name` with ['capitalization'], but that term selects on ['case', 'plural-form']
     - Current: `Nové { -smart-window-brand-name }`
     - Source: `label: New { -smart-window-brand-name } value: New { -smart-window-brand-name }`
     - The term falls back to its catch-all variant, so the intended form is never selected.

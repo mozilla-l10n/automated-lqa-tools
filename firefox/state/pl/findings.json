@@ -3084,6 +3084,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "i niepotrzebne już kodowania",
+  "dismissed_because": "",
+  "fid": "6c3d2e8af2c6",
+  "file": "security/manager/chrome/pipnss/nsserrors.properties",
+  "first_seen": "2026-08-24",
+  "impact": 2,
+  "last_seen": "2026-08-24",
+  "locale": "pl",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The source describes encodings longer than necessary, not obsolete encodings.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "06d58a7a",
+  "string_id": "MOZILLA_PKIX_ERROR_INVALID_INTEGER_ENCODING",
+  "suggest": "i kodowania dłuższe niż to konieczne",
+  "summary": "\"encodings that are longer than necessary\" mistranslated as \"niepotrzebne już kodowania\" (encodings no longer needed).",
+  "suppressed_by": ""
+ },
+ {
   "category": "D",
   "check": "legacy",
   "current": "end with \"podszywanie się pod stronę\" while the first half of the same sentence, and the whole locale, use witryna.",
@@ -4140,6 +4164,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "D",
+  "check": "llm",
+  "current": "Moduł",
+  "dismissed_because": "",
+  "fid": "6feeb7206e61",
+  "file": "toolkit/toolkit/about/certviewer.ftl",
+  "first_seen": "2026-08-24",
+  "impact": 3,
+  "last_seen": "2026-08-24",
+  "locale": "pl",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "In the certificate viewer this is the RSA modulus; Polish cryptographic terminology uses \"modulus\", while \"Moduł\" reads as a software module.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "b8516923",
+  "string_id": "certificate-viewer-modulus",
+  "suggest": "Modulus",
+  "summary": "Mathematical term \"Modulus\" rendered as \"Moduł\" (module) instead of \"Moduł\" in the RSA sense; ambiguous with software module.",
+  "suppressed_by": ""
+ },
+ {
   "category": "B",
   "check": "legacy",
   "current": "\"Wycofano\" as a status in a column of timestamps.",
@@ -5107,6 +5155,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "i niepotrzebne już kodowania",
+  "dismissed_because": "",
+  "fid": "f26efc161d4a",
+  "file": "toolkit/toolkit/neterror/certError.ftl",
+  "first_seen": "2026-08-24",
+  "impact": 2,
+  "last_seen": "2026-08-24",
+  "locale": "pl",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The en-US says the encodings are longer than necessary, not that they are obsolete/no longer needed.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "17f1989d",
+  "string_id": "cert-error-invalid-integer-encoding",
+  "suggest": "i kodowania dłuższe niż to konieczne",
+  "summary": "\"encodings that are longer than necessary\" mistranslated as \"niepotrzebne już kodowania\" (encodings that are no longer needed).",
+  "suppressed_by": ""
+ },
+ {
   "category": "C",
   "check": "legacy",
   "current": "\"ujemne moduli RSA\" leaves the English plural of modulus.",
@@ -5202,8 +5274,8 @@
   },
   "rationale": "",
   "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
+  "resolved_on": "2026-08-24",
+  "status": "fixed",
   "string_hash": "2a3d3aea",
   "string_id": "netReset-title",
   "suggest": "\"Połączenie zostało zresetowane\".",
@@ -5260,6 +5332,30 @@
   "string_id": "neterror-clock-skew-error",
   "suggest": "",
   "summary": "wrong case on the verbal noun after \"uniemożliwia\": \"…nawiązania bezpiecznego połączenia.\" → \"…nawiązanie bezpiecznego połączenia.\" (cf. certerror-expired-cert-second-para).",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "i niepotrzebne już kodowania",
+  "dismissed_because": "",
+  "fid": "23451ed6c4c4",
+  "file": "toolkit/toolkit/neterror/nsserrors.ftl",
+  "first_seen": "2026-08-24",
+  "impact": 2,
+  "last_seen": "2026-08-24",
+  "locale": "pl",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The source describes encodings longer than necessary, not obsolete encodings.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "06d58a7a",
+  "string_id": "mozilla-pkix-error-invalid-integer-encoding",
+  "suggest": "i kodowania dłuższe niż to konieczne",
+  "summary": "\"encodings that are longer than necessary\" mistranslated as \"niepotrzebne już kodowania\" (encodings no longer needed).",
   "suppressed_by": ""
  },
  {

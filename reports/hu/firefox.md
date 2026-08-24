@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e59d51071942` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
+| **Previous run** | 2026-08-24 @ `39e5663f3de7` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,124 |
+| **Strings reviewed this run** | 41 of 18,165 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,23 @@ Also for hu: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `containers-site-container-label` — `browser/browser/preferences/containers.ftl` — Singular "Container" label rendered as plural "Konténerek".
+    - Current: `label: Konténerek`
+    - Source: `label: Container`
+    - Suggest: `label: Konténer`
+    - The en-US source is the singular field label "Container" for a single-select field; the Hungarian uses the plural form.
+- `newtab-recent-searches-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Recent searches options" mistranslated as "recent search options" (options of the widget, not options for searching).
+    - Current: `aria-label: Legutóbbi keresési lehetőségek`
+    - Source: `aria-label: Recent searches options`
+    - Suggest: `aria-label: Legutóbbi keresések beállításai`
+    - The source names the options/menu of the "Recent searches" widget; the Hungarian reads as "recent search possibilities", changing the meaning.
+- `containers-site-invalid-error` — `browser/browser/preferences/containers.ftl` — "website" rendered as "weboldalt" while the surrounding container strings consistently use "webhely".
+    - Current: `Adjon meg egy érvényes, biztonságos weboldalt`
+    - Source: `Enter a valid, secure website`
+    - Suggest: `Adjon meg egy érvényes, biztonságos webhelyet`
+    - The same en-US term "website" is translated "webhely" in containers-site-label, containers-site-window and containers-site-duplicate-error; this string breaks that consistency.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +59,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,124 |
-| Missing strings | 56 |
+| Strings | 18,165 |
+| Missing strings | 15 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -62,20 +76,14 @@ _Nothing retired._
 
 ### Completeness
 
-**56 strings** are not translated yet, concentrated in:
+**15 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 21
-- `toolkit/toolkit/neterror/netError.ftl` — 7
-- `browser/browser/preferences/containers.ftl` — 7
-- `browser/browser/preferences/preferences.ftl` — 4
+- `toolkit/toolkit/neterror/netError.ftl` — 6
 - `devtools/client/inspector.ftl` — 4
-- `browser/browser/aboutPrivateBrowsing.ftl` — 3
 - `toolkit/toolkit/global/theme-picker.ftl` — 2
-- `browser/browser/sharePanel.ftl` — 2
 - `toolkit/toolkit/about/aboutNetworking.ftl` — 1
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 1
 - `toolkit/toolkit/global/processTypes.ftl` — 1
-- `dom/chrome/accessibility/AccessFu.properties` — 1
+- `browser/browser/firefoxView.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -85,9 +93,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `polish-double` 874, `straight-double` 33, `german-double` 2, `curly-single` 1 | **polish-double** |
+| quotes | `polish-double` 875, `straight-double` 33, `german-double` 2, `curly-single` 1 | **polish-double** |
 | apostrophe | `typographic` 1, `straight` 1 | _mixed_ |
-| ellipsis | `char` 459, `ascii` 7 | **char** |
+| ellipsis | `char` 460, `ascii` 7 | **char** |
 | dash | `em` 2, `en` 164 | **en** |
 | nbsp | `total` 6, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
@@ -99,14 +107,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (274)
+## 3. Open findings (277)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 34 |
-| 2 | Wrong content (says something other than the English) | 119 |
-| 3 | Degraded language (grammar, spelling, terminology) | 87 |
+| 2 | Wrong content (says something other than the English) | 120 |
+| 3 | Degraded language (grammar, spelling, terminology) | 89 |
 | 4 | Cosmetic (typography, spacing) | 29 |
 
 ### A. Functional, markup, variables & plurals
@@ -419,6 +427,16 @@ _Nothing reported._
     - Source: `Learn more about Copilot`
     - Suggest: `Tudjon meg többet a Copilotról`
     - Copilot is a brand name and must be spelled correctly; the same file spells it correctly elsewhere.
+- `newtab-recent-searches-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Recent searches options" mistranslated as "recent search options" (options of the widget, not options for searching).
+    - Current: `aria-label: Legutóbbi keresési lehetőségek`
+    - Source: `aria-label: Recent searches options`
+    - Suggest: `aria-label: Legutóbbi keresések beállításai`
+    - The source names the options/menu of the "Recent searches" widget; the Hungarian reads as "recent search possibilities", changing the meaning.
+- `containers-site-container-label` — `browser/browser/preferences/containers.ftl` — Singular "Container" label rendered as plural "Konténerek".
+    - Current: `label: Konténerek`
+    - Source: `label: Container`
+    - Suggest: `label: Konténer`
+    - The en-US source is the singular field label "Container" for a single-select field; the Hungarian uses the plural form.
 - `autofill-address-department` — `browser/browser/preferences/formAutofill.ftl` — Administrative division rendered as an organizational "department".
     - Current: `Részleg`
     - Source: `Department`
@@ -775,6 +793,11 @@ _Nothing reported._
     - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
     - Suggest: `Állítsa üresre ezt a házirendet`
     - "Állít" requires the sublative -re on the resulting state; cf. the parallel policy-OverrideFirstRunPage which uses "Állítsa üres értékre".
+- `containers-site-invalid-error` — `browser/browser/preferences/containers.ftl` — "website" rendered as "weboldalt" while the surrounding container strings consistently use "webhely".
+    - Current: `Adjon meg egy érvényes, biztonságos weboldalt`
+    - Source: `Enter a valid, secure website`
+    - Suggest: `Adjon meg egy érvényes, biztonságos webhelyet`
+    - The same en-US term "website" is translated "webhely" in containers-site-label, containers-site-window and containers-site-duplicate-error; this string breaks that consistency.
 - `fxa-qrcode-pair-step2-signin` — `browser/browser/preferences/fxaPairDevice.ftl` — Wrong definite article before a vowel-initial word.
     - Current: `koppintson a <strong>Adatok szinkronizálása és mentése</strong> elemre`
     - Source: `2. Go to the menu (<img data-l10n-name="ios-menu-icon"/> on iOS or <img data-l10n-name="android-menu-icon"/> on Android) and tap <strong>Sync and save data</strong>`
@@ -970,12 +993,7 @@ _Nothing reported._
     - Source: `<strong>{ $property }</strong> has no effect on this element since it cannot be applied to internal table elements where <strong>border-collapse</strong> is set to <strong>collapse</strong> on the parent table element.`
     - Suggest: `<strong>collapse</strong> értékre van állítva a szülő táblázatelemen.`
     - en-US: "…where border-collapse is set to collapse on the parent table element"; the Hungarian leaves the noun phrase unattached and unmarked.
-- `inactive-text-overflow-when-no-overflow` — `devtools/client/tooltips.ftl` — Ungrammatical clause: "mivel nem megadva az overflow:hidden".
-    - Current: `mivel nem megadva az <strong>overflow:hidden</strong>`
-    - Source: `<strong>{ $property }</strong> has no effect on this element since <strong>overflow:hidden</strong> is not set.`
-    - Suggest: `mivel nincs megadva az <strong>overflow:hidden</strong>`
-    - "nem megadva" is not a valid predicate here; the negated existential form is "nincs megadva".
-- _…and 23 more; see `state/` for the full list._
+- _…and 24 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -1012,7 +1030,7 @@ _Nothing reported._
 - `Strings.InfoText` — `browser/updater/updater.ini` — `Strings.InfoText` uses three dots where this locale uses …
     - Current: `A %MOZ_APP_DISPLAYNAME% telepíti a frissítéseket, és pár pillanat múlva elindul...`
     - Source: `%MOZ_APP_DISPLAYNAME% is installing your updates and will start in a few moments…`
-    - The tree uses … 459 times against 7 ASCII runs.
+    - The tree uses … 460 times against 7 ASCII runs.
 - `heading` — `dom/chrome/accessibility/AccessFu.properties` — “heading” is translated as “fejléc”, the same word used for “header”, collapsing two distinct roles.
     - Current: `heading = fejléc`
     - Source: `heading`
@@ -1021,43 +1039,43 @@ _Nothing reported._
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `A billentyűesemény nem érhető el GTK2 alatt: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (874 occurrences).
+    - The locale's quote convention is `polish-double` (875 occurrences).
 - `WinConflict2` — `dom/chrome/dom/dom.properties` — `WinConflict2` uses straight double quotes
     - Current: `A billentyűesemény nem érhető el egyes billentyűzetkiosztások esetén: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on some keyboard layouts: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (874 occurrences).
+    - The locale's quote convention is `polish-double` (875 occurrences).
 - `TooLargeDashedRadius` — `dom/chrome/layout/css.properties` — `TooLargeDashedRadius` uses straight double quotes
     - Current: `A szegélysugár túl nagy a "dashed" stílushoz (a korlát 100000px). Megjelenítés tömörként.`
     - Source: `Border radius is too large for ‘dashed’ style (the limit is 100000px). Rendering as solid.`
-    - The locale's quote convention is `polish-double` (874 occurrences).
+    - The locale's quote convention is `polish-double` (875 occurrences).
 - `TooLargeDottedRadius` — `dom/chrome/layout/css.properties` — `TooLargeDottedRadius` uses straight double quotes
     - Current: `A szegélysugár túl nagy a "dotted" stílushoz (a korlát 100000px). Megjelenítés tömörként.`
     - Source: `Border radius is too large for ‘dotted’ style (the limit is 100000px). Rendering as solid.`
-    - The locale's quote convention is `polish-double` (874 occurrences).
+    - The locale's quote convention is `polish-double` (875 occurrences).
 - `crashreporter-button-details` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-button-details` uses three dots where this locale uses …
     - Current: `Részletek...`
     - Source: `Details…`
-    - The tree uses … 459 times against 7 ASCII runs.
+    - The tree uses … 460 times against 7 ASCII runs.
 - `crashreporter-resubmit-status` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-resubmit-status` uses three dots where this locale uses …
     - Current: `A korábban sikertelenül elküldött bejelentések újraküldése...`
     - Source: `Resending reports that previously failed to send…`
-    - The tree uses … 459 times against 7 ASCII runs.
+    - The tree uses … 460 times against 7 ASCII runs.
 - `crashreporter-submit-in-progress` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-submit-in-progress` uses three dots where this locale uses …
     - Current: `Bejelentés elküldése...`
     - Source: `Submitting your report…`
-    - The tree uses … 459 times against 7 ASCII runs.
+    - The tree uses … 460 times against 7 ASCII runs.
 - `Strings.Details` — `toolkit/crashreporter/crashreporter.ini` — `Strings.Details` uses three dots where this locale uses …
     - Current: `Részletek...`
     - Source: `Details…`
-    - The tree uses … 459 times against 7 ASCII runs.
+    - The tree uses … 460 times against 7 ASCII runs.
 - `Strings.ReportDuringSubmit2` — `toolkit/crashreporter/crashreporter.ini` — `Strings.ReportDuringSubmit2` uses three dots where this locale uses …
     - Current: `Bejelentés elküldése...`
     - Source: `Submitting your report…`
-    - The tree uses … 459 times against 7 ASCII runs.
+    - The tree uses … 460 times against 7 ASCII runs.
 - `Strings.ReportResubmit` — `toolkit/crashreporter/crashreporter.ini` — `Strings.ReportResubmit` uses three dots where this locale uses …
     - Current: `A korábban sikertelenül elküldött bejelentések újraküldése...`
     - Source: `Resending reports that previously failed to send…`
-    - The tree uses … 459 times against 7 ASCII runs.
+    - The tree uses … 460 times against 7 ASCII runs.
 - `about-webrtc-consecutive-frames` — `toolkit/toolkit/about/aboutWebrtc.ftl` — Video "frames" rendered as "keretek" (borders) instead of "képkockák" used elsewhere in the file.
     - Current: `Egymást követő keretek`
     - Source: `Consecutive Frames`

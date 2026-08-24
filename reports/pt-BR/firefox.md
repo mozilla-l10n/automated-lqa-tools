@@ -3,10 +3,10 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `907043d6ea4b` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
 | **Previous run** | 2026-08-24 @ `39e5663f3de7` |
-| **Mode** | recheck |
+| **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 18,180 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
@@ -22,26 +22,9 @@ Also for pt-BR: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (7)
+### ✅ Fixed since the last run (0)
 
-- `firefox-relay-offer-legal-notice-1` — `browser/browser/browser.ftl` — broken closing tag. Current: …>Aviso de privacidade</label label>. → Suggest: …>Aviso de privacidade</label>.
-    - Source: `By signing up and creating an email mask, you agree to the <label data-l10n-name="tos-url">Terms of Service</label> and <label data-l10n-name="privacy-url">Privacy Notice</label>.`
-- `popup-warning-exceeded-with-redirect-message` — `browser/browser/browser.ftl` — the count is attached to the wrong noun; en-US counts pop-up windows. Suggest: …impediu que este site abrisse mais de { $popupCount } janelas, além de redirecionamentos.
-    - Source: `{$popupCount ->} [other] { -brand-short-name } prevented this site from opening more than { $popupCount } pop-up windows and redirecting.`
-- `firefox-relay-offer-legal-notice-control` — `browser/browser/firefoxRelay.ftl` — same broken tag: </label label> → </label>
-    - Source: `By signing up and creating an email mask, you agree to the <label data-l10n-name="tos-url">Terms of Service</label> and <label data-l10n-name="privacy-url">Privacy Notice</label>.`
-- `report-broken-site-panel-reason-choose` — `browser/browser/reportBrokenSite.ftl` — en-US "Choose reason". Current: Escolha → Suggest: Escolha um motivo
-    - Current: `Escolha`
-    - Source: `label: Choose reason`
-    - Suggest: `Escolha um motivo`
-- `split-view-menuitem-reverse-tabs` — `browser/browser/tabbrowser.ftl` — "Reverse Tabs": Inverter abas (tab-context-reverse-split-view) vs Reverter abas (split-view-menuitem-reverse-tabs) — see §C, Inverter is correct
-    - Current: `Inverter abas`
-    - Source: `label: Reverse Tabs`
-- `about-glean-about-data-list-item-dictionary` — `toolkit/toolkit/about/aboutGlean.ftl` — missing space renders as "GleanDicionário". Current: <a …>{ -glean-brand-name }Dicionário</a> → Suggest: <a …>Dicionário do { -glean-brand-name }</a>
-    - Source: `To browse the list of data collected by { -glean-brand-name } per application, please consult the <a data-l10n-name="glean-dictionary-link">{ -glean-brand-name } Dictionary</a>.`
-- `sec-error-cert-not-in-name-space` — `toolkit/toolkit/neterror/nsserrors.ftl` — sec-error-cert-not-in-name-space uses Autoridade de Certificação; the rest of the tree uses autoridade certificadora
-    - Source: `The Certifying Authority for this certificate is not permitted to issue a certificate with this name.`
-    - Suggest: `Autoridade de Certificação`
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

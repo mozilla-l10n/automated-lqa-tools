@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e59d51071942` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
 | **Previous run** | 2026-08-24 @ `39e5663f3de7` |
-| **Mode** | recheck |
-| **Strings reviewed this run** | 0 of 18,180 |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 2 of 18,180 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,142 +18,29 @@ Also for fy-NL: [android](android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
-
-### ✅ Fixed since the last run (87)
-
-- `addon-confirm-install-some-unsigned-message` — `browser/browser/addonNotifications.ftl` — Entire string is Dutch: "Waarschuwing: deze website wil … Ga verder op eigen risico."
-    - Source: `{$addonCount ->} [other] Caution: This site would like to install { $addonCount } add-ons in { -brand-short-name }, some of which are unverified. Proceed at your own risk.`
-- `eme-notifications-drm-content-playing` — `browser/browser/browser.ftl` — Relation inverted: as written Firefox is what gets limited. en-US: "…which may limit what { -brand-short-name } can let you do with it."
-    - Source: `Some audio or video on this site uses DRM software, which may limit what { -brand-short-name } can let you do with it.`
-- `downloads-files-not-downloaded` — `browser/browser/downloads.ftl` — "{ $num } bestanden niet gedownload." — the [one] variant is Frisian
-    - Source: `{$num ->} [one] File not downloaded. [other] { $num } files not downloaded.`
-- `split-dismiss-button-show-fewer-option` — `browser/browser/featureCallout.ftl` — "Mear oanrekommandaasjes toane" — en-US: "Show fewer recommendations"
-    - Source: `label: Show fewer recommendations`
-- `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — </a > — stray space inside the closing tag.
-    - Source: `By choosing Google Gemini, you agree to the <a data-l10n-name="link1">Google Terms of Service</a>, <a data-l10n-name="link2">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name="link3">Gemini Apps Privacy Not…`
-- `genai-shortcuts-selected-warning` — `browser/browser/genai.ftl` — Entire string is Dutch
-    - Source: `heading: { $provider } won’t get your full selection message: {$selectionLength ->} [other] You’ve selected about { $selectionLength } characters. The number of characters we can send to { $provider } is about { $maxLen…`
-- `genai-shortcuts-selected-warning-generic` — `browser/browser/genai.ftl` — Entire string is Dutch: "U hebt ongeveer … kunnen sturen is ongeveer …" (also has a doubled period geselecteerd..)
-    - Source: `heading: AI chatbot won’t get your full selection message: {$selectionLength ->} [other] You’ve selected about { $selectionLength } characters. The number of characters we can send to the AI chatbot is about { $maxLengt…`
-- `cfr-doorhanger-milestone-heading2` — `browser/browser/newtab/asrouter.ftl` — [one] variant has b>{ $blockedCount }</b> — the opening < is missing, so the raw text b> shows. The [other] variant is correct.
-    - Current: `[one]`
-    - Source: `{$blockedCount ->} [other] { -brand-short-name } blocked over <b>{ $blockedCount }</b> trackers since { $date }!`
-- `firefoxview-spotlight-promo-primarybutton` — `browser/browser/newtab/asrouter.ftl` — places-locked-prompt · protections-panel-cross-site-tracking-cookies · screenshots-generic-error-title · tabbrowser-confirm-caretbrowsing-message · security-browsing-protection · firefoxview-spotlight-promo-primarybutton · fxa-menu-message-sync-devices-secondary-text2 · mr2022-onboarding-pin-image-alt.aria-label · safeb-blocked-unwanted-page-title · about-debugging-setup-intro · webauthn-register…
-    - Source: `See how it works`
-- `fxa-adoption-addresses-backup-subtitle` — `browser/browser/newtab/asrouter.ftl` — "jo bewarre wachtwurden" on the addresses card — en-US: "your saved addresses"
-    - Source: `Protect your saved addresses by syncing them to your devices with encryption.`
-- `fxa-menu-message-sync-devices-secondary-text2` — `browser/browser/newtab/asrouter.ftl` — places-locked-prompt · protections-panel-cross-site-tracking-cookies · screenshots-generic-error-title · tabbrowser-confirm-caretbrowsing-message · security-browsing-protection · firefoxview-spotlight-promo-primarybutton · fxa-menu-message-sync-devices-secondary-text2 · mr2022-onboarding-pin-image-alt.aria-label · safeb-blocked-unwanted-page-title · about-debugging-setup-intro · webauthn-register…
-    - Source: `Instantly get your bookmarks, passwords, and more — everywhere you’re signed in to { -brand-short-name }.`
-- `newtab-topsites-edit-topsites-header` — `browser/browser/newtab/newtab.ftl` — "Topwebsite tafoegje" — en-US: "Edit Top Site"
-    - Source: `Edit Top Site`
-- `mr2022-onboarding-pin-image-alt` — `browser/browser/newtab/onboarding.ftl` — places-locked-prompt · protections-panel-cross-site-tracking-cookies · screenshots-generic-error-title · tabbrowser-confirm-caretbrowsing-message · security-browsing-protection · firefoxview-spotlight-promo-primarybutton · fxa-menu-message-sync-devices-secondary-text2 · mr2022-onboarding-pin-image-alt.aria-label · safeb-blocked-unwanted-page-title · about-debugging-setup-intro · webauthn-register…
-    - Source: `aria-label: Person working on a laptop surrounded by stars and flowers`
-- `return-to-amo-addon-title` — `browser/browser/newtab/onboarding.ftl` — Both spaces around <img data-l10n-name="icon"/> were dropped: Litte wy no<img …/><b>…</b> ophelje.
-    - Source: `Now let’s get you <img data-l10n-name="icon"/> <b>{ $addon-name }</b>.`
-- `places-locked-prompt` — `browser/browser/places.ftl` — places-locked-prompt · protections-panel-cross-site-tracking-cookies · screenshots-generic-error-title · tabbrowser-confirm-caretbrowsing-message · security-browsing-protection · firefoxview-spotlight-promo-primarybutton · fxa-menu-message-sync-devices-secondary-text2 · mr2022-onboarding-pin-image-alt.aria-label · safeb-blocked-unwanted-page-title · about-debugging-setup-intro · webauthn-register…
+- `places-locked-prompt` — `browser/browser/places.ftl` — "ien de bestannen fan" is ungrammatical; should be "ien fan de bestannen fan" (one of the files).
+    - Current: `omdat ien de bestannen fan { -brand-short-name } yn gebrûk is`
     - Source: `The bookmarks and history system will not be functional because one of { -brand-short-name }’s files is in use by another application. Some security software can cause this problem.`
-- `permissions-site-microphone-desc` — `browser/browser/preferences/permissions.ftl` — Says "jo kamera" in the microphone dialog — copy-paste from the camera string
-    - Source: `The following websites have requested to access your microphone. You can specify which websites are allowed to access your microphone. You can also block new requests asking to access your microphone.`
-- `performance-allow-hw-accel` — `browser/browser/preferences/preferences.ftl` — hardware-acceleratie → hardwarefersnelling
-    - Source: `accesskey: r label: Use hardware acceleration when available`
-    - Suggest: `hardwarefersnelling`
-- `security-browsing-protection` — `browser/browser/preferences/preferences.ftl` — places-locked-prompt · protections-panel-cross-site-tracking-cookies · screenshots-generic-error-title · tabbrowser-confirm-caretbrowsing-message · security-browsing-protection · firefoxview-spotlight-promo-primarybutton · fxa-menu-message-sync-devices-secondary-text2 · mr2022-onboarding-pin-image-alt.aria-label · safeb-blocked-unwanted-page-title · about-debugging-setup-intro · webauthn-register…
-    - Source: `Deceptive Content and Dangerous Software Protection`
-- `protections-panel-cross-site-tracking-cookies` — `browser/browser/protectionsPanel.ftl` — places-locked-prompt · protections-panel-cross-site-tracking-cookies · screenshots-generic-error-title · tabbrowser-confirm-caretbrowsing-message · security-browsing-protection · firefoxview-spotlight-promo-primarybutton · fxa-menu-message-sync-devices-secondary-text2 · mr2022-onboarding-pin-image-alt.aria-label · safeb-blocked-unwanted-page-title · about-debugging-setup-intro · webauthn-register…
-    - Source: `These cookies follow you from site to site to gather data about what you do online. They are set by third parties such as advertisers and analytics companies.`
-- `safeb-blocked-addon-page-short-desc` — `browser/browser/safebrowsing/blockedSite.ftl` — Stray trailing </p> with no opening tag; not present in en-US.
-    - Source: `{ -brand-short-name } blocked this page because one of your add-ons tried to open it. This site could be used to steal your info — like passwords or credit card numbers.`
-- `safeb-blocked-unwanted-page-title` — `browser/browser/safebrowsing/blockedSite.ftl` — places-locked-prompt · protections-panel-cross-site-tracking-cookies · screenshots-generic-error-title · tabbrowser-confirm-caretbrowsing-message · security-browsing-protection · firefoxview-spotlight-promo-primarybutton · fxa-menu-message-sync-devices-secondary-text2 · mr2022-onboarding-pin-image-alt.aria-label · safeb-blocked-unwanted-page-title · about-debugging-setup-intro · webauthn-register…
-    - Source: `The site ahead may contain harmful programs`
-- `screenshots-generic-error-title` — `browser/browser/screenshots.ftl` — places-locked-prompt · protections-panel-cross-site-tracking-cookies · screenshots-generic-error-title · tabbrowser-confirm-caretbrowsing-message · security-browsing-protection · firefoxview-spotlight-promo-primarybutton · fxa-menu-message-sync-devices-secondary-text2 · mr2022-onboarding-pin-image-alt.aria-label · safeb-blocked-unwanted-page-title · about-debugging-setup-intro · webauthn-register…
-    - Source: `Whoa! { -screenshots-brand-name } went haywire.`
-- `tabbrowser-confirm-caretbrowsing-message` — `browser/browser/tabbrowser.ftl` — places-locked-prompt · protections-panel-cross-site-tracking-cookies · screenshots-generic-error-title · tabbrowser-confirm-caretbrowsing-message · security-browsing-protection · firefoxview-spotlight-promo-primarybutton · fxa-menu-message-sync-devices-secondary-text2 · mr2022-onboarding-pin-image-alt.aria-label · safeb-blocked-unwanted-page-title · about-debugging-setup-intro · webauthn-register…
-    - Source: `Pressing F7 turns Caret Browsing on or off. This feature places a moveable cursor in web pages, allowing you to select text with the keyboard. Do you want to turn Caret Browsing on?`
-- `tabbrowser-empty-private-tab-title` — `browser/browser/tabbrowser.ftl` — Soft hyphen inside privee­ljepblêd. Possibly intentional for line breaking — verify before removing.
-    - Source: `New Private Tab`
-- `webrtc-sharing-menu` — `browser/browser/webrtcIndicator.ftl` — "Apparaten dy’t ljepblêden diele" — en-US: "Tabs sharing devices". Subject/object swapped.
-    - Source: `accesskey: d label: Tabs sharing devices`
-- `about-debugging-setup-intro` — `devtools/client/aboutdebugging.ftl` — places-locked-prompt · protections-panel-cross-site-tracking-cookies · screenshots-generic-error-title · tabbrowser-confirm-caretbrowsing-message · security-browsing-protection · firefoxview-spotlight-promo-primarybutton · fxa-menu-message-sync-devices-secondary-text2 · mr2022-onboarding-pin-image-alt.aria-label · safeb-blocked-unwanted-page-title · about-debugging-setup-intro · webauthn-register…
-    - Source: `Configure the connection method you wish to remotely debug your device with.`
-- `css-compatibility-default-message` — `devtools/client/tooltips.ftl` — Same stray spaces inside <strong>.
-    - Source: `<strong>{ $property }</strong> is not supported in the following browsers:`
-- `inactive-css-cue-pseudo-element-not-supported` — `devtools/client/tooltips.ftl` — pseudo-elementen → pseudo-eleminten
-    - Source: `<strong>{ $property }</strong> is not supported on ::cue pseudo-elements.`
-- `inactive-css-not-grid-or-flex-container-or-multicol-container` — `devtools/client/tooltips.ftl` — <strong> { $property } </strong> — stray spaces inside the tag; en-US has none.
-    - Source: `<strong>{ $property }</strong> has no effect on this element since it’s not a flex container, a grid container, or a multi-column container.`
-- `inactive-css-not-table-fix` — `devtools/client/tooltips.ftl` — Wrong CSS keyword — see section C
-    - Source: `Try adding <strong>display:table</strong> or <strong>display:inline-table</strong>. { learn-more }`
-- `inactive-css-placeholder-pseudo-element-not-supported` — `devtools/client/tooltips.ftl` — pseudo-elementen → pseudo-eleminten
-    - Source: `<strong>{ $property }</strong> is not supported on ::placeholder pseudo-elements.`
-- `delete-ca-cert-impact` — `security/manager/security/certificates/certManager.ftl` — Triple negation "net langer gjin inkelt sertifikaat mear fertrouwe" garbles the sense.
-    - Source: `If you delete or distrust a certificate authority (CA) certificate, this application will no longer trust any certificates issued by that CA.`
-- `load-module-help-root-certs-module-name` — `security/manager/security/certificates/deviceManager.ftl` — load-module-help-root-certs-module-name.value (‘Root Certs‘ — inherited from en-US) · protocolhandler-mailto-handler-set (dy‘t) · mr1-onboarding-theme-tooltip-light.title, mr1-onboarding-theme-description-light.aria-description, mr1-onboarding-theme-tooltip-dark.title, mr1-onboarding-theme-description-dark.aria-description (all menu‘s).
-    - Source: `value: ‘Root Certs‘ is reserved and cannot be used as the module name.`
-    - Suggest: `‘Root Certs‘`
-- `account-client-name` — `toolkit/services/accounts.ftl` — places-locked-prompt · protections-panel-cross-site-tracking-cookies · screenshots-generic-error-title · tabbrowser-confirm-caretbrowsing-message · security-browsing-protection · firefoxview-spotlight-promo-primarybutton · fxa-menu-message-sync-devices-secondary-text2 · mr2022-onboarding-pin-image-alt.aria-label · safeb-blocked-unwanted-page-title · about-debugging-setup-intro · webauthn-register…
-    - Source: `{ $user }’s { -brand-short-name } on { $system }`
-- `discopane-intro` — `toolkit/toolkit/about/aboutAddons.ftl` — places-locked-prompt · protections-panel-cross-site-tracking-cookies · screenshots-generic-error-title · tabbrowser-confirm-caretbrowsing-message · security-browsing-protection · firefoxview-spotlight-promo-primarybutton · fxa-menu-message-sync-devices-secondary-text2 · mr2022-onboarding-pin-image-alt.aria-label · safeb-blocked-unwanted-page-title · about-debugging-setup-intro · webauthn-register…
-    - Source: `Extensions and themes are like apps for your browser, and they let you protect passwords, download videos, find deals, block annoying ads, change how your browser looks, and much more. These small software programs are…`
-- `extensions-warning-update-security` — `toolkit/toolkit/about/aboutAddons.ftl` — "Jo kinne efterrinne mei fernijingen" = "you may fall behind on updates". en-US: "You may be compromised by updates." Security warning defused.
-    - Source: `Add-on update security checking is disabled. You may be compromised by updates.`
-- `extensions-warning-update-security2` — `toolkit/toolkit/about/aboutAddons.ftl` — Same
-    - Source: `message: Add-on update security checking is disabled. You may be compromised by updates.`
-- `recommended-theme-1` — `toolkit/toolkit/about/aboutAddons.ftl` — Stray leading space inside the <a data-l10n-name="link"> text — renders as underlined whitespace.
-    - Source: `Feeling creative? <a data-l10n-name="link">Build your own theme with Firefox Color.</a>`
-- `recommended-theme-1` — `toolkit/toolkit/about/aboutAddons.ftl` — about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…
-    - Source: `Feeling creative? <a data-l10n-name="link">Build your own theme with Firefox Color.</a>`
-- `about-httpsonly-explanation-iframe` — `toolkit/toolkit/about/aboutHttpsOnlyError.ftl` — "…net mooglik om dit frame hânmjittich te laden" — en-US: "not possible to manually allow this frame to load"
-    - Source: `Due to mixed content blocking, it is not possible to manually allow this frame to load.`
-- `rights-webservices-term-5` — `toolkit/toolkit/about/aboutRights.ftl` — Final clause copied from term-4 ("…of ymplisite garânsjes…"); en-US is about certain damages
-    - Source: `<strong>Except as required by law, { -vendor-short-name }, its contributors, licensors, and distributors will not be liable for any indirect, special, incidental, consequential, punitive, or exemplary damages arising ou…`
-- `rights-webservices-term-5` — `toolkit/toolkit/about/aboutRights.ftl` — about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…
-    - Source: `<strong>Except as required by law, { -vendor-short-name }, its contributors, licensors, and distributors will not be liable for any indirect, special, incidental, consequential, punitive, or exemplary damages arising ou…`
-- `third-party-button-to-unblock-module` — `toolkit/toolkit/about/aboutThirdParty.ftl` — Label reads "Dizze module blokkearje" but the button unblocks — its own .title says "Klik om te deblokkearjen". en-US: "Unblock this module".
-    - Source: `(value): Unblock this module aria-label: Currently blocked. Click to unblock it. title: Currently blocked. Click to unblock it.`
-- `abuse-report-broken-suggestions-sitepermission` — `toolkit/toolkit/about/abuseReports.ftl` — Link text "Besykje de website fan it tema" — copy-paste from the theme variant
-    - Source: `It sounds like you’ve identified a bug. In addition to submitting a report here, the best way to get a functionality issue resolved is to contact the website developer. <a data-l10n-name="support-link">Visit the website…`
-- `download-ui-dont-go-offline-button` — `toolkit/toolkit/downloads/downloadUI.ftl` — "Ferbining beëinige" ("End connection") — en-US: "Stay Online". This is the cancel button; as written it says the opposite.
-    - Source: `Stay Online`
-- `experimental-features-ime-search-description` — `toolkit/toolkit/firefoxlabs/features.ftl` — places-locked-prompt · protections-panel-cross-site-tracking-cookies · screenshots-generic-error-title · tabbrowser-confirm-caretbrowsing-message · security-browsing-protection · firefoxview-spotlight-promo-primarybutton · fxa-menu-message-sync-devices-secondary-text2 · mr2022-onboarding-pin-image-alt.aria-label · safeb-blocked-unwanted-page-title · about-debugging-setup-intro · webauthn-register…
-    - Source: `An IME (Input Method Editor) is a tool that allows you to enter complex symbols, such as those used in East Asian or Indic written languages, using a standard keyboard. Enabling this experiment will keep the address bar…`
-- `autofill-insecure-field-warning-description` — `toolkit/toolkit/formautofill/formAutofill.ftl` — appmenuitem-monitor-description2 · bookmark-overlay-tags-empty-description.placeholder · choose-language-description · confirm-browser-language-change-description · download-always-ask-where2.label · home-prefs-weather-description · forms-master-pw-fips-desc · preferences-doh-status-item-not-active.message · preferences-doh-status-item-not-active-local.message · onboarding-refresh-import-title ·…
-    - Source: `{ -brand-short-name } has detected an insecure site. Form Autofill is temporarily disabled.`
-- `webext-perms-description-nativeMessaging` — `toolkit/toolkit/global/extensionPermissions.ftl` — places-locked-prompt · protections-panel-cross-site-tracking-cookies · screenshots-generic-error-title · tabbrowser-confirm-caretbrowsing-message · security-browsing-protection · firefoxview-spotlight-promo-primarybutton · fxa-menu-message-sync-devices-secondary-text2 · mr2022-onboarding-pin-image-alt.aria-label · safeb-blocked-unwanted-page-title · about-debugging-setup-intro · webauthn-register…
-    - Source: `Exchange messages with programs other than { -brand-short-name }`
-- `webext-perms-extra-warning-userScripts-short` — `toolkit/toolkit/global/extensionPermissions.ftl` — places-locked-prompt · protections-panel-cross-site-tracking-cookies · screenshots-generic-error-title · tabbrowser-confirm-caretbrowsing-message · security-browsing-protection · firefoxview-spotlight-promo-primarybutton · fxa-menu-message-sync-devices-secondary-text2 · mr2022-onboarding-pin-image-alt.aria-label · safeb-blocked-unwanted-page-title · about-debugging-setup-intro · webauthn-register…
-    - Source: `Unverified scripts can pose security and privacy risks. Only run scripts from extensions or sources you trust.`
-- `language-name-be` — `toolkit/toolkit/intl/languageNames.ftl` — Wit-Russysk → Wyt-Russysk — wit is Dutch
-    - Source: `Belarusian`
-- `language-name-br` — `toolkit/toolkit/intl/languageNames.ftl` — Bretons → Bretonsk — Dutch -s ending
-    - Current: `Bretons`
-    - Source: `Breton`
-    - Suggest: `Bretonsk`
-- `language-name-hsb` — `toolkit/toolkit/intl/languageNames.ftl` — Two different patterns for a paired term
-    - Source: `Upper Sorbian`
-- `language-name-uz` — `toolkit/toolkit/intl/languageNames.ftl` — Oezbeeks → Oezbeeksk — Dutch -s; the file's pattern is -sk
-    - Current: `Oezbeeks`
-    - Source: `Uzbek`
-    - Suggest: `Oezbeeksk`
-- `region-name-ne` — `toolkit/toolkit/intl/regionNames.ftl` — Value is Nigeria, identical to region-name-ng. Niger has no correct name in the list. → Niger
-    - Source: `Niger`
-    - Suggest: `Niger`
-- `region-name-za` — `toolkit/toolkit/intl/regionNames.ftl` — Zuid-Afrika → Súd-Afrika — Dutch; the file uses Súd- for kr, ss, gs
-    - Source: `South Africa`
-    - Suggest: `Súd-Afrika`
-- `cert-error-mitm-connection` — `toolkit/toolkit/neterror/certError.ftl` — Negation dropped: "…in troch in CA útjûn sertifikaat dat him yn it CA-argyf fan Mozilla stiet" — en-US: "…issued by a CA that is not in the Mozilla CA store". Also dat him … stiet is ungrammatical.
-    - Source: `{ -brand-short-name } uses the Mozilla CA store to verify that a connection is secure, rather than certificates supplied by the user’s operating system. So, if an antivirus program or a network is intercepting a connect…`
-- `fp-neterror-content-encoding-intro` — `toolkit/toolkit/neterror/netError.ftl` — places-locked-prompt · protections-panel-cross-site-tracking-cookies · screenshots-generic-error-title · tabbrowser-confirm-caretbrowsing-message · security-browsing-protection · firefoxview-spotlight-promo-primarybutton · fxa-menu-message-sync-devices-secondary-text2 · mr2022-onboarding-pin-image-alt.aria-label · safeb-blocked-unwanted-page-title · about-debugging-setup-intro · webauthn-register…
-    - Source: `The page you are trying to view cannot be shown because it uses an invalid or unsupported form of compression.`
-- `sec-error-ckl-conflict` — `toolkit/toolkit/neterror/nsserrors.ftl` — about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…
-    - Source: `New CKL has different issuer than current CKL. Delete current CKL.`
-- `sec-error-crl-expired` — `toolkit/toolkit/neterror/nsserrors.ftl` — about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…
-    - Source: `The CRL for the certificate’s issuer has expired. Update it or check your system date and time.`
-- `sec-error-expired-issuer-certificate` — `toolkit/toolkit/neterror/nsserrors.ftl` — about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…
-    - Source: `The certificate issuer’s certificate has expired. Check your system date and time.`
-- _…and 27 more._
+    - Suggest: `omdat ien fan de bestannen fan { -brand-short-name } yn gebrûk is`
+    - en-US says "one of { -brand-short-name }’s files"; the partitive "fan" is missing, making the clause grammatically broken.
+- `ssl-error-us-only-server` — `toolkit/toolkit/neterror/nsserrors.ftl` — "wurd" should be the verb form "wurdt" in "hokker net stipe wurd".
+    - Current: `hokker net stipe wurd`
+    - Source: `Unable to communicate securely. Peer requires high-grade encryption which is not supported.`
+    - Suggest: `dat net stipe wurdt`
+    - Spelling/grammar error: the finite verb is "wurdt", not the noun "wurd"; also the relative pronoun should be "dat".
+
+### ✅ Fixed since the last run (2)
+
+- `places-locked-prompt` — `browser/browser/places.ftl` — omdat ien de bestannen → omdat ien fan de bestannen
+    - Current: `omdat ien de bestannen`
+    - Source: `The bookmarks and history system will not be functional because one of { -brand-short-name }’s files is in use by another application. Some security software can cause this problem.`
+    - Suggest: `omdat ien fan de bestannen`
+- `ssl-error-us-only-server` — `toolkit/toolkit/neterror/nsserrors.ftl` — net stipe wurd → net stipe wurdt
+    - Current: `net stipe wurd`
+    - Source: `Unable to communicate securely. Peer requires high-grade encryption which is not supported.`
+    - Suggest: `net stipe wurdt`
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -961,7 +848,7 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (332)
+### Fixed to date (334)
 
 - `addon-confirm-install-some-unsigned-message` — `browser/browser/addonNotifications.ftl` — fixed 2026-08-24
 - `eme-notifications-drm-content-playing` — `browser/browser/browser.ftl` — fixed 2026-08-24
@@ -977,6 +864,7 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `newtab-topsites-edit-topsites-header` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-24
 - `mr2022-onboarding-pin-image-alt` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-24
 - `return-to-amo-addon-title` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-24
+- `places-locked-prompt` — `browser/browser/places.ftl` — fixed 2026-08-24
 - `places-locked-prompt` — `browser/browser/places.ftl` — fixed 2026-08-24
 - `permissions-site-microphone-desc` — `browser/browser/preferences/permissions.ftl` — fixed 2026-08-24
 - `performance-allow-hw-accel` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
@@ -1002,4 +890,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `extensions-warning-update-security2` — `toolkit/toolkit/about/aboutAddons.ftl` — fixed 2026-08-24
 - `recommended-theme-1` — `toolkit/toolkit/about/aboutAddons.ftl` — fixed 2026-08-24
 - `recommended-theme-1` — `toolkit/toolkit/about/aboutAddons.ftl` — fixed 2026-08-24
-- `about-httpsonly-explanation-iframe` — `toolkit/toolkit/about/aboutHttpsOnlyError.ftl` — fixed 2026-08-24
