@@ -11,5 +11,37 @@
 #
 # Prefer writing locale knowledge as prose in conventions.md when you can:
 # that stops the finding being raised at all, instead of filtering it after.
+#
+# The three rules below back the house forms recorded in conventions.md.
+# Each is keyed on the *suggestion* as well as the current text, because the
+# suggestion is what must never be accepted -- and because the reviewer also
+# raises the mirror image (a lone "website" in a file that writes "web site"
+# everywhere else), which is a legitimate finding under these conventions and
+# has to stay open.
 
-rules: []
+rules:
+  - id: en-GB-web-site-two-words
+    reason: >-
+      "web site" / "web sites" is the en-GB house form; a suggestion to close
+      it up to the en-US "website" must never be accepted. See conventions.md.
+    match:
+      text: 're:\bweb[ -]sites?\b'
+      suggest: 're:\bwebsites?\b'
+
+  - id: en-GB-backwards-forwards
+    reason: >-
+      "Backwards" and "Forwards" are the en-GB house forms for the en-US
+      "Back" and "Forward", in navigation labels and accessibility
+      descriptions alike. See conventions.md.
+    match:
+      text: 're:\b(backwards|forwards)\b'
+      suggest: 're:\b(back|forward)\b'
+
+  - id: en-GB-post-code
+    reason: >-
+      "Post Code" is the deliberate en-GB rendering of the en-US "Postal
+      Code"; "Postcode" must not be suggested in its place. See
+      conventions.md.
+    match:
+      text: 're:\bpost code\b'
+      suggest: 're:\bpostcode\b'

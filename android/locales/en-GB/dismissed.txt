@@ -15,3 +15,7 @@
 # recurring across strings -- a house convention, a term that is correct
 # everywhere -- write a rule in suppressions.yaml instead, or better, a
 # sentence in conventions.md so the reviewer never raises it.
+
+mozac_feature_prompts_no_more_dialogs — "dialogues" is the house form here; reviewed and accepted
+share_hiscore — "hi-score" is the house form here; reviewed and accepted
+cookie_banner_exception_panel_description_state_on_for_site — "shopping baskets" is the house form here; reviewed and accepted

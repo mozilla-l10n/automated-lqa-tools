@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e59d51071942` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-24 @ `39e5663f3de7` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e64b3ff936c9` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9497278a786f` |
+| **Previous run** | 2026-08-24 @ `e64b3ff936c9` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 18,180 |
 
@@ -46,9 +46,9 @@ _Nothing retired._
 |---|---|
 | Files | 360 |
 | Strings | 18,180 |
-| Missing strings | 0 |
-| Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Missing strings | 36 |
+| Obsolete strings | 6 |
+| Files absent from the locale | 2 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
@@ -62,7 +62,18 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**36 strings** are not translated yet, concentrated in:
+
+- `toolkit/services/aboutSyncLog.ftl` — 26
+- `browser/browser/newtab/newtab.ftl` — 8
+- `toolkit/toolkit/pdfviewer/embedFallback.ftl` — 2
+
+**Files absent from the locale:**
+
+- `toolkit/services/aboutSyncLog.ftl`
+- `toolkit/toolkit/pdfviewer/embedFallback.ftl`
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -85,14 +96,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (33)
+## 3. Open findings (27)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 8 |
-| 2 | Wrong content (says something other than the English) | 12 |
-| 3 | Degraded language (grammar, spelling, terminology) | 11 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 6 |
+| 2 | Wrong content (says something other than the English) | 9 |
+| 3 | Degraded language (grammar, spelling, terminology) | 10 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
@@ -140,11 +151,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `tooltiptext: You have blocked pop-ups and third-party redirects for this website.`
     - Suggest: `for this web site.`
     - browser.ftl contains 22 visible-string occurrences of "web site"/"web sites" and this is the only visible-string occurrence of "website"; the adjacent urlbar-popup-blocked, which differs only by the redirect clause, reads "You have blocked pop-ups for this web site."
-- `customkeys-nav-forward` — `browser/browser/customkeys.ftl` — The Forward navigation action is labelled "Forwards" while its paired Back action on the preceding line is left as "Back", so the pair is inconsistent.
-    - Current: `Forwards`
-    - Source: `Forward`
-    - Suggest: `Forward`
-    - customkeys-nav-back immediately above reads "Back", not "Backwards"; the two shortcut labels appear side by side in the same list and must use the same form (browser/browser/browserContext.ftl adapts both members of the pair together, as "Backwards"/"Forwards").
 - `fxa-menu-message-backup-sync-secondary-text` — `browser/browser/newtab/asrouter.ftl` — "Sync" left untranslated while every sibling string in the same block renders it "Synchronise".
     - Current: `Sync backs up most of your data`
     - Source: `Sync backs up most of your data so you can access it everywhere you use { -brand-short-name }.`
@@ -180,11 +186,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Check`
     - Suggest: `check = Tick`
     - Same inconsistency as the unix file: mac/accessible.properties renders these very IDs as "Tick"/"Untick", and AccessFu.properties uses "tick button"/"tick menu item", so the win file diverges from the locale's own choice for the same action.
-- `back` — `toolkit/chrome/global/narrate.properties` — Skip-back/skip-forward controls named both "Backwards/Forwards" and "Back/Forward" in the same file.
-    - Current: `back = Backwards`
-    - Source: `Back`
-    - Suggest: `back = Back`
-    - `back` and `previous-label` label the same Narrate control, as do `forward` and `next-label`. The first pair was changed to "Backwards"/"Forwards" while the second pair kept "Back (%S)"/"Forward (%S)", so one control carries two names. The en-US source for `back` is "Back" (not "Backward"), so no en-GB adverb adaptation was required here.
 - `fp-certerror-revoked-why-dangerous-body` — `toolkit/toolkit/neterror/certError.ftl` — "any more" here versus "anymore" in four sibling strings carrying the identical clause.
     - Current: `isn’t trusted any more.`
     - Source: `{ -brand-short-name } is warning you about this site because the certificate provided for { $hostname } has been revoked and isn’t trusted anymore.`
@@ -193,11 +194,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### C. Grammar, agreement & spelling
 
-- `autofill-address-postal-code` — `browser/browser/preferences/formAutofill.ftl` — “Post Code” is not the British form of the term; en-GB writes “Postcode” as one word.
-    - Current: `Post Code`
-    - Source: `Postal Code`
-    - Suggest: `Postcode`
-    - The locale deliberately adapted en-US “Postal Code”, but the UK term (Royal Mail, and the locale's own bundled en-GB dictionary, which lists only “postcode”) is the single word “Postcode”; “Post Code” is neither the en-US source form nor the en-GB convention.
 - `prefs-syncing-off` — `browser/browser/preferences/preferences.ftl` — `prefs-syncing-off` still uses the en-US form “syncing”
     - Current: `Syncing: OFF`
     - Suggest: `synchronising`
@@ -206,16 +202,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `Syncing: ON`
     - Suggest: `synchronising`
     - This locale writes “synchronising” for “syncing” in 22 other strings and keeps “syncing” in 2. This string is byte-identical to en-US, so the substitution looks simply to have been missed.
-- `safeb-palm-accept-label` — `browser/browser/safebrowsing/blockedSite.ftl` — Button label reads "Go backwards" where the locale consistently labels this action "Go back"
-    - Current: `Go backwards`
-    - Source: `Go back`
-    - Suggest: `Go back`
-    - Every other standalone back-button label in the en-GB tree uses "Go back" (toolkit/toolkit/global/mozPageHeader.ftl, toolkit/toolkit/about/abuseReports.ftl:32, toolkit/toolkit/about/aboutAddons.ftl:265, toolkit/toolkit/neterror/certError.ftl:75, browser/browser/places.ftl:241). "Go backwards" as a button label is unidiomatic in en-GB and inconsistent with the locale's own usage; the adverbial "ba…
-- `tabHistory.goBack` — `browser/chrome/browser/browser.properties` — "Go backwards to this page" is unidiomatic; en-GB uses "Go back to" with a destination
-    - Current: `Go backwards to this page`
-    - Source: `Go back to this page`
-    - Suggest: `Go back to this page`
-    - In en-GB "backwards" is a directional adverb ("Go backwards one page", browserContext.ftl:17) but takes "back" before a destination phrase: the locale writes "Go back to aggregates" (devtools/client/memory.properties:53) and "Go back" for the Back tooltip in places.ftl:241. "Go backwards to this page" mixes the two patterns.
 - `discopane-intro` — `toolkit/toolkit/about/aboutAddons.ftl` — "software programmes" uses the broadcast/schedule sense; British English spells computer programs "programs".
     - Current: `These small software programmes are`
     - Source: `Extensions and themes are like apps for your browser, and they let you protect passwords, download videos, find deals, block annoying ads, change how your browser looks, and much more. These small software programs are…`
@@ -243,11 +229,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Right-click on your AI chatbot in the sidebar and choose “Summarize Page”.`
     - Suggest: `Summarise page`
     - In the source this string quotes “Summarize Page”, which is exactly the value of `genai-chatbot-summarize-button` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `permissions-exceptions-https-only-desc` — `browser/browser/preferences/permissions.ftl` — "websites" was changed to "web sites", which is inconsistent with the source and the locale's usual single-word form.
-    - Current: `for specific web sites`
-    - Source: `You can turn off HTTPS-Only Mode for specific websites. { -brand-short-name } won’t attempt to upgrade the connection to secure HTTPS for those sites. Exceptions do not apply to private windows.`
-    - Suggest: `for specific websites`
-    - en-GB does not require splitting "websites"; the same string later uses "sites" and the rest of the tree uses "websites". This is an unnecessary, inconsistent alteration.
 - `recommended-theme-1` — `toolkit/toolkit/about/aboutAddons.ftl` — Product name "Firefox Color" was spelling-adapted to "Firefox Colour", against the explicit developer comment.
     - Current: `Build your own theme with Firefox Colour.`
     - Source: `Feeling creative? <a data-l10n-name="link">Build your own theme with Firefox Color.</a>`
@@ -282,9 +263,16 @@ _Nothing dismissed._
 
 _One line each in `locales/en-GB/dismissed.txt`. Delete the line and the finding returns._
 
-### Suppressed as false positives (0)
+### Suppressed as false positives (6)
 
-_No suppression rules have matched._
+- **`en-GB-backwards-forwards`** (4) — "Backwards" and "Forwards" are the en-GB house forms for the en-US "Back" and "Forward", in navigation labels and accessibility descriptions alike. See conventions.md.
+    - `customkeys-nav-forward`, `safeb-palm-accept-label`, `tabHistory.goBack`, `back`
+- **`en-GB-post-code`** (1) — "Post Code" is the deliberate en-GB rendering of the en-US "Postal Code"; "Postcode" must not be suggested in its place. See conventions.md.
+    - `autofill-address-postal-code`
+- **`en-GB-web-site-two-words`** (1) — "web site" / "web sites" is the en-GB house form; a suggestion to close it up to the en-US "website" must never be accepted. See conventions.md.
+    - `permissions-exceptions-https-only-desc`
+
+_Suppressions live in `locales/en-GB/suppressions.yaml`. Removing a rule brings its findings back._
 
 ### Withdrawn to date (0)
 

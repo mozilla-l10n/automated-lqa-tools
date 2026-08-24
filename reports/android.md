@@ -2,8 +2,8 @@
 
 - **Generated:** 2026-08-24
 - **Locales tracked:** 20 (20 with recorded state)
-- **Findings:** 2,492 raised, 48 fixed (1%), 2,422 open
-- **Closed by a person:** 11 dismissed, 4 suppressed by rule
+- **Findings:** 2,492 raised, 48 fixed (1%), 2,361 open
+- **Closed by a person:** 14 dismissed, 62 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
@@ -30,7 +30,7 @@ The value does not render as intended: a blank string, broken markup, a variable
   - Current: `{ <li> }ウェブのアドレスは通常 { <strong> }http://www.example.com/{ </strong> }{ </li> } のようなものになります。 { <li> }スラッシュ ({ <strong> }/{ </strong> }) { </li> }が使われているか確認してください。`
   - Suggest: `{ <li> }ウェブのアドレスは通常 { <strong> }http://www.example.com/{ </strong> } のようなものになります。{ </li> } { <li> }スラッシュ ({ <strong> }/{ </strong> }) が使われているか確認してください。{ </li> }`
 
-### Wrong content — impact 2 (1321)
+### Wrong content — impact 2 (1316)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/android.md`.
 
@@ -38,8 +38,8 @@ Too many to list here; the per-locale counts are in the table below and every on
 |---|---|---|---|---|---|---|---|---|---|---|
 | [cs](cs/android.md) | 2026-08-24 | incremental | `e8622a90` | 2,911 | 0 | **147** | 85 | 0 | 0 | 0 |
 | [de](de/android.md) | 2026-08-24 | incremental | `e8622a90` | 2,911 | 0 | **116** | 66 | 0 | 0 | 0 |
-| [en-CA](en-CA/android.md) | 2026-08-24 | incremental | `e8622a90` | 2,894 | 17 | **0** | 0 | 1 | 0 | 0 |
-| [en-GB](en-GB/android.md) | 2026-08-24 | incremental | `e8622a90` | 2,911 | 0 | **68** | 7 | 0 | 0 | 0 |
+| [en-CA](en-CA/android.md) | 2026-08-24 | incremental | `85004d56` | 2,894 | 17 | **0** | 0 | 1 | 0 | 0 |
+| [en-GB](en-GB/android.md) | 2026-08-24 | incremental | `85004d56` | 2,911 | 0 | **7** | 2 | 0 | 3 | 58 |
 | [es-AR](es-AR/android.md) | 2026-08-24 | incremental | `e8622a90` | 2,911 | 0 | **138** | 47 | 0 | 0 | 0 |
 | [es-ES](es-ES/android.md) | 2026-08-24 | incremental | `e8622a90` | 2,834 | 77 | **133** | 62 | 0 | 0 | 0 |
 | [es-MX](es-MX/android.md) | 2026-08-24 | incremental | `e8622a90` | 2,886 | 25 | **177** | 95 | 0 | 0 | 0 |

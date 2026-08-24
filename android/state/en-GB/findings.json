@@ -16,12 +16,12 @@
   "rationale": "The en-US source says \"website\"; en-GB uses \"website\" elsewhere (e.g. connection failure, HTTPS-only strings refer to websites). \"web site\" is not a British-English adaptation.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "6db57930",
   "string_id": "mozac_browser_errorpages_content_crashed_message",
   "suggest": "Please contact the website owners to inform them of this problem.",
   "summary": "\"website\" was changed to the outdated two-word form \"web site\", inconsistent with the rest of the locale.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -40,12 +40,12 @@
   "rationale": "The en-US source says \"website\" and en-GB does not require splitting it into two words; this is an unnecessary and inconsistent alteration.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "6db57930",
   "string_id": "mozac_browser_errorpages_corrupted_content_message",
   "suggest": "Please contact the website owners to inform them of this problem.",
   "summary": "\"website\" was changed to the outdated two-word form \"web site\".",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -64,12 +64,12 @@
   "rationale": "The en-US source says \"website\"; en-GB consistently uses \"website\" elsewhere in this file, so this deviation is inconsistent.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "d0f6e9b6",
   "string_id": "mozac_browser_errorpages_invalid_content_encoding_message",
   "suggest": "Please contact the website owners to inform them of this problem.",
   "summary": "\"website\" was changed to the outdated two-word form \"web site\".",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -88,12 +88,12 @@
   "rationale": "en-US source uses \"Websites\"; en-GB uses the same single-word modern form and other strings in this file keep \"website\" (e.g. unknown_host, safe browsing strings). The split form is an unnecessary and inconsistent alteration.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "ac228e98",
   "string_id": "mozac_browser_errorpages_security_bad_cert_techInfo",
   "suggest": "Websites prove their identity via certificates.",
   "summary": "\"Websites\" was changed to the outdated two-word form \"Web sites\", which is not a British/American spelling difference.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -112,12 +112,12 @@
   "rationale": "The source uses \"website\"; this is not a US/GB spelling difference, and other en-GB strings in this same file retain \"website\".",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "bc72c1e1",
   "string_id": "mozac_browser_errorpages_security_bad_hsts_cert_message",
   "suggest": "because this website requires a secure connection.{ </li> }\n{ <li> }The issue is most likely with the website, and there is nothing you can do to resolve it.{ </li> }\n{ <li> }You can notify the website’s administrator about the problem.",
   "summary": "\"website\" rendered as \"web site\" three times, inconsistent with the rest of the locale.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -136,12 +136,12 @@
   "rationale": "The source reads \"website\"; splitting it is not an en-GB convention and conflicts with the \"website\" form used elsewhere in this locale's file.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "2a2db83b",
   "string_id": "mozac_browser_errorpages_security_bad_hsts_cert_title",
   "suggest": "This website requires a secure connection.",
   "summary": "\"This website\" changed to \"This web site\", inconsistent with other en-GB strings in the file.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -160,12 +160,12 @@
   "rationale": "The source uses \"website\"; the split spelling is not a British variant requirement and is inconsistent with other strings in this file that keep \"website\".",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "9b139fb6",
   "string_id": "mozac_browser_errorpages_security_ssl_message",
   "suggest": "Please contact the website owners to inform them of this problem.",
   "summary": "\"website owners\" changed to \"web site owners\", inconsistent with the rest of the locale.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -184,12 +184,12 @@
   "rationale": "The en-US source says \"website\"; en-GB also uses the single word \"website\" and elsewhere in the locale. \"web site\" is an unnecessary and inconsistent alteration.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "017e7208",
   "string_id": "mozac_browser_errorpages_unsafe_content_type_message",
   "suggest": "website owners",
   "summary": "\"website\" was changed to the non-standard two-word form \"web site\".",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -208,12 +208,12 @@
   "rationale": "British English uses \"website\" as one word, just like en-US; there is no en-GB rule requiring \"web site\", and other en-GB strings keep \"website\".",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "97392127",
   "string_id": "mozac_feature_addons_permissions_all_urls_description",
   "suggest": "Access your data for all websites",
   "summary": "\"websites\" has been changed to \"web sites\", which is not a British English convention and is inconsistent with the rest of the locale.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -232,12 +232,12 @@
   "rationale": "en-GB does not split \"website\" into two words; this is an unwarranted departure from the source and from the rest of the locale.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "0a6d2cfb",
   "string_id": "mozac_feature_addons_permissions_all_urls_description_for_update",
   "suggest": "Access your data for all websites.",
   "summary": "\"websites\" rendered as \"web sites\" without any en-GB justification.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -256,12 +256,12 @@
   "rationale": "The permission name is websiteActivity; en-GB spells \"website\" as one word, matching the source.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "11b0c93a",
   "string_id": "mozac_feature_addons_permissions_data_collection_websiteActivity_long_description",
   "suggest": "Share website activity with extension developer",
   "summary": "\"website activity\" changed to \"web site activity\" with no en-GB basis.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -280,12 +280,12 @@
   "rationale": "en-GB uses \"website\" as a single word; splitting it is an unjustified change from the source.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "bb998ff1",
   "string_id": "mozac_feature_addons_permissions_data_collection_websiteActivity_short_description",
   "suggest": "website activity",
   "summary": "\"website activity\" changed to \"web site activity\" with no en-GB basis.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -304,12 +304,12 @@
   "rationale": "en-GB uses \"website\" as one word, consistent with other strings in this locale (e.g. \"sites\"/\"website\" usages); \"web site\" is an unwarranted deviation from the source term.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "1ddaeae5",
   "string_id": "mozac_feature_addons_permissions_data_collection_websiteContent_long_description",
   "suggest": "Share website content with extension developer",
   "summary": "\"website\" was needlessly split into \"web site\", which is not the en-GB house form used elsewhere in the locale.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -328,18 +328,18 @@
   "rationale": "The source term is \"website content\"; en-GB does not split \"website\" into two words, so this is an unnecessary and inconsistent deviation.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "dd43a611",
   "string_id": "mozac_feature_addons_permissions_data_collection_websiteContent_short_description",
   "suggest": "website content",
   "summary": "\"website\" rendered as \"web site\", inconsistent with the locale's one-word form.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
   "check": "llm",
   "current": "Prevent this page from creating additional dialogues",
-  "dismissed_because": "",
+  "dismissed_because": "\"dialogues\" is the house form here; reviewed and accepted",
   "fid": "a25b8d0e73d0",
   "file": "mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml",
   "first_seen": "2026-08-21",
@@ -352,7 +352,7 @@
   "rationale": "In software UI, \"dialog\" (a dialog box) is the standard term in en-GB as well; \"dialogue\" means a conversation. Elsewhere in this locale the developer comments and related strings use \"dialog\" (e.g. month chooser dialog, time picker dialog).",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "dismissed",
   "string_hash": "967da8aa",
   "string_id": "mozac_feature_prompts_no_more_dialogs",
   "suggest": "Prevent this page from creating additional dialogs",
@@ -376,12 +376,12 @@
   "rationale": "The en-US source reads \"Website\"; British English uses the same closed compound. Splitting it is an over-correction that changes the term for no locale reason.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "5b74023f",
   "string_id": "mozac_feature_pwa_default_shortcut_label",
   "suggest": "Website",
   "summary": "\"Website\" was needlessly split into \"Web site\", which is not an en-GB convention and is inconsistent with the rest of the locale.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -400,18 +400,18 @@
   "rationale": "en-US source uses \"website\", the standard form in en-GB as well; the tree uses \"website\" elsewhere (e.g. developer comments and other site permission strings), so splitting it into \"web site\" is an unnecessary and inconsistent alteration.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "0c264b24",
   "string_id": "mozac_feature_sitepermissions_notification_permission_rationale_dialog_message",
   "suggest": "website",
   "summary": "\"website\" was changed to \"web site\", which is not an en-GB convention and is inconsistent with the rest of the locale.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
   "check": "llm",
   "current": "Share hi-score",
-  "dismissed_because": "",
+  "dismissed_because": "\"hi-score\" is the house form here; reviewed and accepted",
   "fid": "2d28c49b89a0",
   "file": "mozilla-mobile/fenix/app/longfox/src/main/res/values/strings.xml",
   "first_seen": "2026-08-21",
@@ -424,7 +424,7 @@
   "rationale": "The developer comment states hiscore is an abbreviation for \"Highest Score\"; the sibling string `hiscore` keeps \"HISCORE\" unchanged, so hyphenating here is an inconsistent, unnecessary alteration with no en-GB rule requiring it.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "dismissed",
   "string_hash": "61779669",
   "string_id": "share_hiscore",
   "suggest": "Share hiscore",
@@ -448,12 +448,12 @@
   "rationale": "The en-US source is \"Navigate back\", describing the back button. \"Navigate backwards\" is not a British variant form and changes the wording of a screen-reader description unnecessarily; elsewhere in the locale (e.g. action_bar_up_description) the source wording is kept.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "bef74329",
   "string_id": "add_login_navigate_back_button_content_description",
   "suggest": "Navigate back",
   "summary": "\"Navigate back\" was changed to \"Navigate backwards\", altering the meaning of the back-navigation control description with no British-English justification.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-backwards-forwards"
  },
  {
   "category": "D",
@@ -472,12 +472,12 @@
   "rationale": "British English uses \"website\" as one word, exactly as in the en-US source; \"web site\" is an unwarranted change.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "06534086",
   "string_id": "add_to_homescreen_continue",
   "suggest": "Continue to website",
   "summary": "\"website\" was split into \"web site\", which is not standard British usage and is inconsistent with the rest of the locale.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -496,12 +496,12 @@
   "rationale": "The en-US source reads \"website\"; British English also writes it as one word, so this alteration degrades the language and is inconsistent.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "fb841ad7",
   "string_id": "add_to_homescreen_description_2",
   "suggest": "add this website to",
   "summary": "\"website\" was split into \"web site\", which is not standard British usage.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -520,12 +520,12 @@
   "rationale": "en-GB does not use \"web site\" as a variant spelling; the source's \"website\" is standard in British English and used elsewhere in the locale.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "4f42e5f6",
   "string_id": "addons_permissions_allow_for_all_sites_subtitle",
   "suggest": "every website",
   "summary": "\"website\" was split into \"web site\", which is not a British spelling difference and is inconsistent with the rest of the locale.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "E",
@@ -544,12 +544,12 @@
   "rationale": "In en-GB the standard term is the single word \"Postcode\"; \"Post Code\" as two capitalised words is not the British form.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "dd1ed01d",
   "string_id": "addresses_postal_code",
   "suggest": "Postcode",
   "summary": "\"Post Code\" is inconsistently capitalised/spelled; British usage is \"Postcode\".",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-post-code"
  },
  {
   "category": "B",
@@ -616,12 +616,12 @@
   "rationale": "\"Navigate back\" is equally idiomatic in en-GB; the change departs from the source wording used elsewhere for back-button content descriptions with no British-English justification.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "bef74329",
   "string_id": "bookmark_navigate_back_button_content_description",
   "suggest": "Navigate back",
   "summary": "\"Navigate back\" was needlessly reworded to \"Navigate backwards\".",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-backwards-forwards"
  },
  {
   "category": "D",
@@ -640,12 +640,12 @@
   "rationale": "en-US source uses \"websites\"; en-GB uses the same single-word form throughout the tree, so \"web sites\" is an inconsistent, unwarranted change.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "8019682c",
   "string_id": "clear_site_data_dialog_description",
   "suggest": "might log you out of websites",
   "summary": "\"websites\" was needlessly split into \"web sites\", which is not the en-GB house form.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "B",
@@ -664,12 +664,12 @@
   "rationale": "The en-US source is \"Navigate back\"; \"back\" is equally standard in British English, so the change is an unnecessary and inconsistent deviation from the source wording used for back-navigation content descriptions.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "bef74329",
   "string_id": "debug_drawer_back_button_content_description",
   "suggest": "Navigate back",
   "summary": "Content description reworded from \"Navigate back\" to \"Navigate backwards\" without any en-GB reason.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-backwards-forwards"
  },
  {
   "category": "D",
@@ -688,12 +688,12 @@
   "rationale": "en-US source uses \"websites\"; British English also writes \"websites\" as one word, and other en-GB strings use \"sites\"/\"websites\". The split form is an over-correction.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "b4a21d84",
   "string_id": "default_browser_experiment_card_text",
   "suggest": "websites",
   "summary": "\"websites\" was needlessly split into \"web sites\", which is not an en-GB adaptation and conflicts with the locale's usual \"websites\".",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -736,12 +736,12 @@
   "rationale": "The en-US source is \"Navigate back\"; British English requires no change here, and the sibling string etp_back_button_content_description keeps \"Navigate back\", so this is an inconsistent, unnecessary alteration.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "bef74329",
   "string_id": "edit_login_navigate_back_button_content_description",
   "suggest": "Navigate back",
   "summary": "\"Navigate back\" was changed to \"Navigate backwards\", diverging from the source and from the identical en-GB string etp_back_button_content_description.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-backwards-forwards"
  },
  {
   "category": "D",
@@ -760,12 +760,12 @@
   "rationale": "\"Website\" is the standard single-word form in en-GB as well as en-US; splitting it introduces an inconsistent, dated spelling not used elsewhere in the locale.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "13b9b049",
   "string_id": "enhanced_tracking_protection_exceptions",
   "suggest": "Enhanced Tracking Protection is off for these websites",
   "summary": "\"websites\" was changed to \"web sites\", which is not a British English convention and is inconsistent with the rest of the locale.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -784,12 +784,12 @@
   "rationale": "en-GB uses \"website\" as one word, same as the en-US source; the split form is inconsistent even within this string, which later says \"the site\".",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "e89fbc2c",
   "string_id": "errorpage_httpsonly_message_summary",
   "suggest": "If you continue to the website, you should not enter any sensitive info.",
   "summary": "\"website\" was changed to \"web site\", an unnecessary and inconsistent alteration.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -808,12 +808,12 @@
   "rationale": "en-GB writes \"website\" as one word, matching the en-US source and the rest of the locale.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "d118b096",
   "string_id": "errorpage_httpsonly_message_title",
   "suggest": "Most likely, the website simply does not support HTTPS.",
   "summary": "\"website\" was changed to \"web site\", an unnecessary and inconsistent alteration.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -832,12 +832,12 @@
   "rationale": "British English uses \"website\" as one word, exactly as en-US does; \"web sites\" is an unnecessary and inconsistent alteration of the source.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "8cb49497",
   "string_id": "etp_redirect_trackers_description",
   "suggest": "known tracking websites",
   "summary": "\"websites\" was needlessly split into \"web sites\", which is not an en-GB adaptation.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -856,12 +856,12 @@
   "rationale": "\"Website\" is a single word in en-GB as in en-US; splitting it departs from the source without any locale justification.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "7dca0312",
   "string_id": "etp_tracking_content_description",
   "suggest": "May affect some website functionality.",
   "summary": "\"website functionality\" rendered as \"web site functionality\".",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -880,12 +880,12 @@
   "rationale": "\"Website\" is one word in en-GB; also the serial comma before \"and how browsing history is saved\" present in the source was dropped, changing the list punctuation unnecessarily.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "b6d23f39",
   "string_id": "firefox_labs_website_isolation_description",
   "suggest": "An extra barrier between websites that helps protect your data across tabs. May affect performance, stability, website compatibility, and how browsing history is saved.",
   "summary": "\"websites\"/\"website compatibility\" split into \"web sites\"/\"web site compatibility\".",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -904,12 +904,12 @@
   "rationale": "\"Website\" is a single word in British English too; the split form is a non-standard alteration of the feature name.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "cbbf724f",
   "string_id": "firefox_labs_website_isolation_title",
   "suggest": "Website isolation",
   "summary": "Feature title \"Website isolation\" changed to \"Web site isolation\".",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -928,12 +928,12 @@
   "rationale": "en-GB uses \"website\" as one word, the same as en-US; splitting it is an unwarranted over-correction and also drops the capitalisation pattern of the source.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "8aad1180",
   "string_id": "homepage_shortcuts_add_website",
   "suggest": "Add website",
   "summary": "\"Website\" has been changed to \"Web site\", which is not en-GB usage and is inconsistent with the rest of the locale.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -952,12 +952,12 @@
   "rationale": "en-GB writes \"website\" as a single word, matching en-US; the split form is an over-correction inconsistent with the locale.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "a1c1f2f8",
   "string_id": "homepage_shortcuts_add_website_title",
   "suggest": "Enter a Website URL",
   "summary": "\"Website\" has been changed to \"Web site\", which is not en-GB usage.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -976,12 +976,12 @@
   "rationale": "The en-US source is \"Navigate back\"; en-GB uses the same wording for back-button content descriptions and no spelling or vocabulary rule requires \"backwards\" here.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "bef74329",
   "string_id": "ip_protection_locations_navigate_back_button_content_description",
   "suggest": "Navigate back",
   "summary": "\"Navigate back\" was needlessly changed to \"Navigate backwards\", which is not a British-English requirement and diverges from the standard back-button content description.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-backwards-forwards"
  },
  {
   "category": "D",
@@ -1000,12 +1000,12 @@
   "rationale": "The en-US source is \"Navigate back\"; British English uses the same phrase for a back-button content description, so the alteration is an unnecessary and inconsistent divergence.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "bef74329",
   "string_id": "ip_protection_navigate_back_button_content_description",
   "suggest": "Navigate back",
   "summary": "\"Navigate back\" was needlessly changed to \"Navigate backwards\", which is not a British-English requirement and diverges from the source wording used elsewhere for back buttons.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-backwards-forwards"
  },
  {
   "category": "B",
@@ -1024,12 +1024,12 @@
   "rationale": "The en-US source is \"Navigate back\"; \"back\" is equally standard in British English, and the related string logins_navigate_back_button_content_description uses \"Back\". The alteration is an unwarranted change of wording.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "bef74329",
   "string_id": "login_details_navigate_back_button_content_description",
   "suggest": "Navigate back",
   "summary": "Content description changed from \"Navigate back\" to \"Navigate backwards\" without any en-GB reason.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-backwards-forwards"
  },
  {
   "category": "D",
@@ -1096,12 +1096,12 @@
   "rationale": "en-GB uses \"websites\" as one word, as elsewhere in the locale (e.g. preference_doh strings use \"sites\"/\"website\"); splitting it is not a British convention and departs from the source without reason.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "f4652888",
   "string_id": "preference_accessibility_force_enable_zoom",
   "suggest": "Zoom on all websites",
   "summary": "\"websites\" was split into \"web sites\", an unnecessary and inconsistent change for en-GB.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -1120,12 +1120,12 @@
   "rationale": "British English writes \"websites\" as a single word; the split form is an unwarranted departure from the en-US source and inconsistent with other strings.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "8d6ea08b",
   "string_id": "preference_accessibility_force_enable_zoom_summary",
   "suggest": "even on websites that prevent this gesture",
   "summary": "\"websites\" rendered as \"web sites\" without justification in en-GB.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -1144,12 +1144,12 @@
   "rationale": "British English writes \"websites\" as one word; the split form is an unwarranted change from the source and inconsistent with the rest of the locale.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "55717b28",
   "string_id": "preference_accessibility_text_size_summary",
   "suggest": "Make text on websites larger or smaller",
   "summary": "\"websites\" rendered as \"web sites\" without justification in en-GB.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -1168,12 +1168,12 @@
   "rationale": "en-US source uses \"website\"; en-GB uses the same single-word form throughout (e.g. \"Cookies from unvisited sites\", other website strings). \"web site\" is an unnecessary and inconsistent alteration.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "4b544e06",
   "string_id": "preference_doh_summary",
   "suggest": "which website you’re about to access",
   "summary": "\"website\" was changed to \"web site\", a form not used in en-GB and inconsistent with the rest of the locale.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -1192,12 +1192,12 @@
   "rationale": "The en-US source reads \"websites\"; British English uses the same one-word spelling, and the locale is otherwise consistent with \"website\".",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "f7048aa1",
   "string_id": "preference_enhanced_tracking_protection_custom_cookies_3",
   "suggest": "All third-party cookies (may cause websites to break)",
   "summary": "\"websites\" was changed to \"web sites\", an inconsistent and unidiomatic form for en-GB.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -1216,12 +1216,12 @@
   "rationale": "The en-US source reads \"websites\"; British English uses the same one-word spelling, and the locale is otherwise consistent with \"website\".",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "d80c1a92",
   "string_id": "preference_enhanced_tracking_protection_custom_cookies_4",
   "suggest": "All cookies (will cause websites to break)",
   "summary": "\"websites\" was changed to \"web sites\", an inconsistent and unidiomatic form for en-GB.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -1240,12 +1240,12 @@
   "rationale": "en-GB uses \"websites\" as a single word, as elsewhere in this file (e.g. preference_exceptions, preference_phone_feature_camera developer comments and other strings). Splitting it into \"web sites\" is an unnecessary and inconsistent alteration of the en-US source.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "119bbf55",
   "string_id": "preference_enhanced_tracking_protection_custom_global_privacy_control",
   "suggest": "Tell websites not to share & sell data",
   "summary": "\"websites\" was changed to \"web sites\", which is not an en-GB convention and is inconsistent with the rest of the locale.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -1264,12 +1264,12 @@
   "rationale": "The en-US source uses \"websites\", and elsewhere in en-GB (e.g. sibling password strings) the single-word form is used; \"web sites\" is not a British-English adaptation.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "52bb3304",
   "string_id": "preferences_passwords_autofill_description",
   "suggest": "websites",
   "summary": "\"websites\" was split into \"web sites\", which is inconsistent with the rest of the locale.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "B",
@@ -1288,12 +1288,12 @@
   "rationale": "The en-US source is \"Navigate back\"; no en-GB convention requires \"backwards\" here, and the change makes the screen-reader label inconsistent with the standard control name.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "bef74329",
   "string_id": "stories_back_button_content_description",
   "suggest": "Navigate back",
   "summary": "The content description for the back button was changed from \"Navigate back\" to \"Navigate backwards\", which is not a British-English requirement and alters the standard accessibility label.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-backwards-forwards"
  },
  {
   "category": "D",
@@ -1360,12 +1360,12 @@
   "rationale": "en-GB uses the closed compound \"websites\" exactly as en-US does; \"Web sites\" is an unnecessary and inconsistent alteration of the source.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "f895ab10",
   "string_id": "uninstall_survey_option_2_v2",
   "suggest": "Websites didn’t work properly",
   "summary": "\"Websites\" has been split into \"Web sites\", which is not an en-GB convention and is inconsistent with the rest of the locale.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -1384,12 +1384,12 @@
   "rationale": "en-GB writes \"website\" as one word, consistent with other strings in this locale (e.g. broken site/website usage); \"web site\" is an unnecessary and inconsistent alteration of the source.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "3b8de13c",
   "string_id": "webcompat_reporter_edit_url_dialog_title",
   "suggest": "Edit website URL",
   "summary": "\"website\" was split into \"web site\", which is not the form used elsewhere in en-GB.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -1408,12 +1408,12 @@
   "rationale": "en-GB uses \"website\" exactly as en-US does; there is no spelling difference. Other strings in this file (e.g. cfr_for_toolbar_shield_icon2 uses \"site\", content_description_lock) do not use the split form, so this is an inconsistent over-correction.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "bd5e5ab8",
   "string_id": "accessibility_announcement_loading_finished",
   "suggest": "Website loaded",
   "summary": "\"Website\" was needlessly split into \"Web site\", which is not a British-English convention and is inconsistent with other en-GB strings.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -1432,12 +1432,12 @@
   "rationale": "The source is \"Navigate back\" (the back button label). \"Back\" is equally standard in British English; the added \"-wards\" is an unnecessary deviation and is inconsistent with the paired forward string.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "bef74329",
   "string_id": "content_description_back",
   "suggest": "Navigate back",
   "summary": "\"Navigate back\" changed to \"Navigate backwards\", which alters the source wording without any en-GB requirement.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-backwards-forwards"
  },
  {
   "category": "D",
@@ -1456,12 +1456,12 @@
   "rationale": "The source is \"Navigate forward\", describing the forward button. \"Forward\" is standard in British English too; the change is an unnecessary deviation from the source wording.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "c92f9ff6",
   "string_id": "content_description_forward",
   "suggest": "Navigate forward",
   "summary": "\"Navigate forward\" changed to \"Navigate forwards\" without any en-GB requirement.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-backwards-forwards"
  },
  {
   "category": "D",
@@ -1480,12 +1480,12 @@
   "rationale": "British English spells \"website\" as one word, identical to en-US; splitting it is an over-correction and inconsistent with the rest of the locale.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "7e0f439a",
   "string_id": "content_description_reload",
   "suggest": "Reload website",
   "summary": "\"Reload website\" rendered as \"Reload web site\", an unnecessary and inconsistent change.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -1504,18 +1504,18 @@
   "rationale": "British English spells \"website\" as one word, identical to en-US; splitting it is an over-correction and inconsistent with the rest of the locale.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "0ec24188",
   "string_id": "content_description_stop",
   "suggest": "Stop loading website",
   "summary": "\"Stop loading website\" rendered as \"Stop loading web site\", an unnecessary and inconsistent change.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
   "check": "llm",
   "current": "empty shopping baskets",
-  "dismissed_because": "",
+  "dismissed_because": "\"shopping baskets\" is the house form here; reviewed and accepted",
   "fid": "b1a1b524cc86",
   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-21",
@@ -1528,7 +1528,7 @@
   "rationale": "The source term \"shopping cart\" is the standard term in Mozilla UI strings and is understood in en-GB; the substitution introduces an inconsistent vocabulary variant.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "dismissed",
   "string_hash": "aea27038",
   "string_id": "cookie_banner_exception_panel_description_state_on_for_site",
   "suggest": "empty shopping carts",
@@ -1552,12 +1552,12 @@
   "rationale": "The source \"Go back\" describes navigating back in history; \"Go backwards\" is a directional phrase and is not standard British usage for this control. No en-GB convention requires the change.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "06fff0ee",
   "string_id": "go_back",
   "suggest": "Go back",
   "summary": "\"Go back\" was changed to \"Go backwards\", altering the meaning of the navigate-back button's content description with no en-GB requirement.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-backwards-forwards"
  },
  {
   "category": "D",
@@ -1576,12 +1576,12 @@
   "rationale": "en-GB uses \"websites\" as one word, same as the en-US source; splitting it is an unnecessary and inconsistent change.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "e915df4f",
   "string_id": "preference_exceptions_description",
   "suggest": "these websites",
   "summary": "\"websites\" rendered as two words \"web sites\", which is not an en-GB adaptation and is inconsistent with the rest of the locale.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -1600,12 +1600,12 @@
   "rationale": "The en-US source is \"Remove all websites\"; en-GB does not split \"websites\" into two words, and other strings in the locale use \"websites\".",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "e8acd51f",
   "string_id": "preference_exceptions_remove_all_button_label",
   "suggest": "Remove all websites",
   "summary": "\"websites\" rendered as two words \"web sites\".",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "D",
@@ -1624,11 +1624,11 @@
   "rationale": "en-US source says \"website\"; British English also writes \"website\" as one word. \"web site\" is an over-correction and inconsistent with other en-GB strings that use \"sites\"/\"website\".",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "ff3ebae0",
   "string_id": "preference_security_biometric_summary2",
   "suggest": "when a website is already open in %s",
   "summary": "\"website\" was needlessly split into \"web site\", an unidiomatic form not used in en-GB.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  }
 ]

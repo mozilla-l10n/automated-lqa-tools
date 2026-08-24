@@ -2,8 +2,8 @@
 
 - **Generated:** 2026-08-24
 - **Locales tracked:** 20 (20 with recorded state)
-- **Findings:** 5,832 raised, 2,012 fixed (34%), 3,772 open
-- **Closed by a person:** 15 dismissed, 3 suppressed by rule
+- **Findings:** 5,832 raised, 2,012 fixed (34%), 3,765 open
+- **Closed by a person:** 16 dismissed, 9 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
@@ -13,11 +13,11 @@ Counts come from `state/`, not from the rendered reports, so they always reflect
 
 _None. The reviewer sets this flag only on a finding where the localized text changes what the product says about itself, its users or its behaviour; it is left unset on the vast majority of mistranslations._
 
-### Broken output — impact 1 (365)
+### Broken output — impact 1 (363)
 
 The value does not render as intended: a blank string, broken markup, a variable the source never passes.
 
-`id` 84 · `es-AR` 70 · `cs` 55 · `ru` 49 · `hu` 34 · `fy-NL` 13 · `nl` 12 · `pt-BR` 12 · `pl` 11 · `en-GB` 8 · `ja` 8 · `tr` 4 · `zh-CN` 4 · `fr` 1
+`id` 84 · `es-AR` 70 · `cs` 55 · `ru` 49 · `hu` 34 · `fy-NL` 13 · `nl` 12 · `pt-BR` 12 · `pl` 11 · `ja` 8 · `en-GB` 6 · `tr` 4 · `zh-CN` 4 · `fr` 1
 
 - **`cs`** `appmenuitem-new-ai-window` — `browser/browser/aiWindow.ftl`
   - `appmenuitem-new-ai-window` (`.value`) calls `-smart-window-brand-name` with ['capitalization'], but that term selects on ['case', 'plural-form']
@@ -72,9 +72,9 @@ The value does not render as intended: a blank string, broken markup, a variable
   - { $count } 件のパスワードが全漏洩データから見つかりました — 件のパスワードが全漏洩データから見つかりました
   - Current: `{ $count } 件のパスワードが全漏洩データから見つかりました`
   - Suggest: `件のパスワードが全漏洩データから見つかりました`
-- _…and 350 more, in the per-locale reports linked below._
+- _…and 348 more, in the per-locale reports linked below._
 
-### Wrong content — impact 2 (1443)
+### Wrong content — impact 2 (1440)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/firefox.md`.
 
@@ -82,8 +82,8 @@ Too many to list here; the per-locale counts are in the table below and every on
 |---|---|---|---|---|---|---|---|---|---|---|
 | [cs](cs/firefox.md) | 2026-08-24 | incremental | `e59d5107` | 18,180 | 0 | **259** | 175 | 0 | 0 | 0 |
 | [de](de/firefox.md) | 2026-08-24 | incremental | `e59d5107` | 18,180 | 0 | **16** | 11 | 71 | 0 | 0 |
-| [en-CA](en-CA/firefox.md) | 2026-08-24 | incremental | `e59d5107` | 18,139 | 41 | **1** | 0 | 14 | 0 | 0 |
-| [en-GB](en-GB/firefox.md) | 2026-08-24 | incremental | `e59d5107` | 18,180 | 0 | **33** | 20 | 7 | 0 | 0 |
+| [en-CA](en-CA/firefox.md) | 2026-08-24 | incremental | `e64b3ff9` | 18,139 | 77 | **0** | 0 | 14 | 1 | 0 |
+| [en-GB](en-GB/firefox.md) | 2026-08-24 | incremental | `e64b3ff9` | 18,180 | 36 | **27** | 15 | 7 | 0 | 6 |
 | [es-AR](es-AR/firefox.md) | 2026-08-24 | incremental | `e59d5107` | 18,150 | 30 | **421** | 240 | 0 | 0 | 0 |
 | [es-ES](es-ES/firefox.md) | 2026-08-24 | incremental | `e59d5107` | 17,185 | 995 | **30** | 18 | 111 | 0 | 0 |
 | [es-MX](es-MX/firefox.md) | 2026-08-24 | incremental | `e59d5107` | 17,847 | 333 | **21** | 6 | 205 | 0 | 0 |

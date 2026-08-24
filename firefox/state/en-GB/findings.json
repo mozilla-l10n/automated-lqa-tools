@@ -184,12 +184,12 @@
   "rationale": "customkeys-nav-back immediately above reads \"Back\", not \"Backwards\"; the two shortcut labels appear side by side in the same list and must use the same form (browser/browser/browserContext.ftl adapts both members of the pair together, as \"Backwards\"/\"Forwards\").",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "f99c3583",
   "string_id": "customkeys-nav-forward",
   "suggest": "Forward",
   "summary": "The Forward navigation action is labelled \"Forwards\" while its paired Back action on the preceding line is left as \"Back\", so the pair is inconsistent.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-backwards-forwards"
  },
  {
   "category": "D",
@@ -372,12 +372,12 @@
   "rationale": "The locale deliberately adapted en-US “Postal Code”, but the UK term (Royal Mail, and the locale's own bundled en-GB dictionary, which lists only “postcode”) is the single word “Postcode”; “Post Code” is neither the en-US source form nor the en-GB convention.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "dd1ed01d",
   "string_id": "autofill-address-postal-code",
   "suggest": "Postcode",
   "summary": "“Post Code” is not the British form of the term; en-GB writes “Postcode” as one word.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-post-code"
  },
  {
   "category": "B",
@@ -420,12 +420,12 @@
   "rationale": "en-GB does not require splitting \"websites\"; the same string later uses \"sites\" and the rest of the tree uses \"websites\". This is an unnecessary, inconsistent alteration.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "fdcefbb5",
   "string_id": "permissions-exceptions-https-only-desc",
   "suggest": "for specific websites",
   "summary": "\"websites\" was changed to \"web sites\", which is inconsistent with the source and the locale's usual single-word form.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-web-site-two-words"
  },
  {
   "category": "B",
@@ -536,12 +536,12 @@
   "rationale": "Every other standalone back-button label in the en-GB tree uses \"Go back\" (toolkit/toolkit/global/mozPageHeader.ftl, toolkit/toolkit/about/abuseReports.ftl:32, toolkit/toolkit/about/aboutAddons.ftl:265, toolkit/toolkit/neterror/certError.ftl:75, browser/browser/places.ftl:241). \"Go backwards\" as a button label is unidiomatic in en-GB and inconsistent with the locale's own usage; the adverbial \"backwards/forwards\" form appears only in longer tooltips (\"Go backwards one page\").",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "06fff0ee",
   "string_id": "safeb-palm-accept-label",
   "suggest": "Go back",
   "summary": "Button label reads \"Go backwards\" where the locale consistently labels this action \"Go back\"",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-backwards-forwards"
  },
  {
   "category": "C",
@@ -560,12 +560,12 @@
   "rationale": "In en-GB \"backwards\" is a directional adverb (\"Go backwards one page\", browserContext.ftl:17) but takes \"back\" before a destination phrase: the locale writes \"Go back to aggregates\" (devtools/client/memory.properties:53) and \"Go back\" for the Back tooltip in places.ftl:241. \"Go backwards to this page\" mixes the two patterns.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "cc270d2b",
   "string_id": "tabHistory.goBack",
   "suggest": "Go back to this page",
   "summary": "\"Go backwards to this page\" is unidiomatic; en-GB uses \"Go back to\" with a destination",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-backwards-forwards"
  },
  {
   "category": "B",
@@ -704,12 +704,12 @@
   "rationale": "`back` and `previous-label` label the same Narrate control, as do `forward` and `next-label`. The first pair was changed to \"Backwards\"/\"Forwards\" while the second pair kept \"Back (%S)\"/\"Forward (%S)\", so one control carries two names. The en-US source for `back` is \"Back\" (not \"Backward\"), so no en-GB adverb adaptation was required here.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "921e8621",
   "string_id": "back",
   "suggest": "back = Back",
   "summary": "Skip-back/skip-forward controls named both \"Backwards/Forwards\" and \"Back/Forward\" in the same file.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-backwards-forwards"
  },
  {
   "category": "C",

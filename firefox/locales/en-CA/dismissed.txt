@@ -16,3 +16,4 @@
 # everywhere -- write a rule in suppressions.yaml instead, or better, a
 # sentence in conventions.md so the reviewer never raises it.
 about-reader-color-scheme-auto — Color Scheme is technical
+recommended-theme-1 — Firefox Color is the same of the feature
