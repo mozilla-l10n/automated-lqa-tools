@@ -1,6 +1,6 @@
 # Firefox for iOS — l10n QA
 
-- **Generated:** 2026-08-23
+- **Generated:** 2026-08-24
 - **Locales tracked:** 19 (19 with recorded state)
 - **Findings:** 1,239 raised, 16 fixed (1%), 1,207 open
 - **Closed by a person:** 14 dismissed, 2 suppressed by rule
