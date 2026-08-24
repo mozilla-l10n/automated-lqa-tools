@@ -14,6 +14,7 @@
    "confidence": "medium"
   },
   "rationale": "The source names the icon \"System Theme\"; the Hungarian omits the \"Theme\" part.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b5368f19",
@@ -37,6 +38,7 @@
    "confidence": "medium"
   },
   "rationale": "The comment says this heading covers all other miscellaneous icon variants; Hungarian \"Több\" means \"more (in quantity)\" and is not used as a section heading for additional/other items.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ad5e75b2",
@@ -60,6 +62,7 @@
    "confidence": "high"
   },
   "rationale": "The source is a section label \"Save in\" indicating the destination folder, not an action to save somewhere else; the trailing ellipsis also implies a further dialog.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "195828bf",
@@ -83,6 +86,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says the button opens a modal with more actions; \"beállítások\" means settings, which is a different concept.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8fa5ae34",
@@ -106,6 +110,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means searching for the thing you see (visual search), not searching within it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "47eab5f4",
@@ -129,6 +134,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment specifies an administrative division like in France or Colombia; \"Részleg\" means a section/unit of an organization, not a territorial division.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0dc689e1",
@@ -152,6 +158,7 @@
    "confidence": "medium"
   },
   "rationale": "The comment describes a named district/quarter within a city; Hungarian \"szomszédság\" means proximity/neighborly relation, not a named urban district.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "160e9c11",
@@ -175,6 +182,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment states this is the PIN (Postal Index Number) field used in India, a postal code, not the act of pinning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1524dd65",
@@ -198,6 +206,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says this is the state field of an address, especially in the USA. \"Állapot\" means status/condition, not a federal state.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5094546e",
@@ -221,6 +230,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this shows how many analytics trackers were blocked; the Hungarian says \"tracking content\" which is a different tracker category shown separately in ETP.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "27a79c34",
@@ -244,6 +254,7 @@
    "confidence": "medium"
   },
   "rationale": "The sibling string LoginsHelper.PromptSaveLogin.Title.v122 (\"Save username?\") uses the nominal form \"Felhasználónév mentése?\"; the same construction should be used for \"Save password?\", as is also done in the update prompts (\"Jelszó frissítése?\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6000f610",
@@ -267,6 +278,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US \"Powered by Pocket\" means the content is provided/powered by Pocket; \"A motorháztető alatt\" (\"under the bonnet\") is a literal, misleading rendering.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "088b0447",
@@ -290,6 +302,7 @@
    "confidence": "high"
   },
   "rationale": "Hungarian orthography requires a comma before a subordinate clause introduced by \"amire\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "47ceec68",
@@ -313,6 +326,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US \"Sign back in to sync\" means signing in again so syncing resumes; the Hungarian turns \"sync\" into a destination product name, and elsewhere in this file \"sync\" is rendered \"szinkronizálás\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9846fbb8",
@@ -336,6 +350,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Top sites\" is an established Firefox feature term (Kiemelt/leggyakrabban látogatott oldalak), not \"favorites\"; \"kedvenc\" suggests bookmarks/favorites, which are listed separately in the same sentence.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0639ea61",
@@ -359,6 +374,7 @@
    "confidence": "high"
   },
   "rationale": "The source only shares the fact that the user uses the app, not how they use it; the translation overstates the data shared.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7f721d5e",
@@ -382,6 +398,7 @@
    "confidence": "medium"
   },
   "rationale": "Hungarian orthography requires a hyphen when adding a case suffix to a proper name/placeholder whose form is unknown.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7f721d5e",
@@ -405,6 +422,7 @@
    "confidence": "medium"
   },
   "rationale": "In Hungarian, case suffixes attached to foreign/proper brand names in UI placeholders must be joined with a hyphen; \"%@szal\" also fails for any app name not ending in a consonant sound matching -szal (e.g. \"Focus\"). The en-US is \"stay safer with %@\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7c3e32e6",
@@ -428,6 +446,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says bookmarks and passwords are available on any device, not retrieved from another device.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "84c46dfc",
@@ -451,6 +470,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US means the browser will not betray/sell out the user; \"nem adja el\" without an object reads as \"doesn't sell it\" and loses the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "abfd3da8",
@@ -474,6 +494,7 @@
    "confidence": "medium"
   },
   "rationale": "Hungarian punctuation does not place a comma after an introductory adverbial phrase like this; the comma is an anglicism.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ad067dbf",
@@ -497,6 +518,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Top sites\" is a specific Firefox feature (most visited sites), not \"favorites\"; the translation also adds \"megtalálja\" which is not in the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "10689619",
@@ -520,6 +542,7 @@
    "confidence": "medium"
   },
   "rationale": "In Hungarian, a suffix appended to a proper name/placeholder ending in a non-Hungarian form requires a hyphen (e.g. „Firefoxot” is written „%@-ot” when the name comes from a placeholder). Other strings in the same file avoid direct suffixing; here „%@ot” produces incorrect output such as „Firefoxot” only by accident and is orthographically wrong with a placeholder.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9d4bbaf1",
@@ -543,6 +566,7 @@
    "confidence": "medium"
   },
   "rationale": "A suffix added to a placeholder holding a brand name must be separated with a hyphen in Hungarian orthography.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "79718170",
@@ -566,6 +590,7 @@
    "confidence": "medium"
   },
   "rationale": "In Hungarian, a suffix appended to a proper/brand name placeholder must be joined with a hyphen (e.g. „Firefox-szal”); „%@szal” produces „Firefoxszal” which is incorrect for a brand name and the pattern is inconsistent with other strings.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7c3e32e6",
@@ -589,6 +614,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is a button to continue onboarding; \"Kezdő lépések\" means \"first steps/getting started guide\", not the action \"Get started\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c4d5a1d3",
@@ -612,6 +638,7 @@
    "confidence": "medium"
   },
   "rationale": "The source offers the user the generated password; \"Erős jelszót használ?\" reads as asking whether the user currently uses a strong password, not as a proposal.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a79b4183",
@@ -635,6 +662,7 @@
    "confidence": "medium"
   },
   "rationale": "The label follows a bold number above it, so it should read as a continuation (lowercase, e.g. \"12 / nyomkövető blokkolva a héten\"); capitalized standalone \"Nyomkövető\" reads as an isolated singular noun.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "953ff9de",
@@ -658,6 +686,7 @@
    "confidence": "medium"
   },
   "rationale": "On the same Privacy Dashboard screen, \"trackers\" is translated as \"nyomkövető\" (Webhelyek közötti nyomkövető sütik, Nyomkövető tartalom, Nyomkövető blokkolva a héten); \"követők\" is inconsistent and can read as \"followers\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c1f634bc",
@@ -681,6 +710,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is \"%1$@ since %2$@\"; adding \"darab\" injects a word not in the source and reads oddly with a date-based footer.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f92d98b7",
@@ -704,6 +734,7 @@
    "confidence": "high"
   },
   "rationale": "The source is singular \"Address for %@\" — the accessibility label for one address list item; the Hungarian uses the plural \"Címek\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "83349e00",
@@ -727,6 +758,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a descriptive statement telling the user that the feature includes phone numbers and email addresses; the Hungarian reads like a toggle title \"Including phone numbers and email addresses\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "43eab880",
@@ -750,6 +782,7 @@
    "confidence": "high"
   },
   "rationale": "Source says \"new or current AI enhancements in %@\"; the Hungarian omits the AI qualifier, and other strings in this section render it as \"MI funkcióbővítések\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2600db6c",
@@ -773,6 +806,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a short imperative \"Unblock specific features below\"; the translation adds \"use the controls below\", which is not in the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "be342f94",
@@ -796,6 +830,7 @@
    "confidence": "medium"
   },
   "rationale": "The \"van + -va/-ve\" passive with a transitive verb is a grammatical error in Hungarian; the state-passive is not licensed here.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cee48014",
@@ -819,6 +854,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"Scroll to Hide Tab and Address Bar\" is the title of a settings option (a feature name), not a command telling the user to scroll; Hungarian settings titles use the nominal form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0756bf30",
@@ -842,6 +878,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"to summarize a page\" (singular); the Hungarian says \"summarize the pages\". Also the feature elsewhere in this file uses \"oldal\" (Oldalak összegzése), not \"lap\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4d76136e",
@@ -865,6 +902,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Top\" here refers to the highest-ranked entry in the preferred languages list, not frequency of preference.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2c19a831",
@@ -888,6 +926,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means the listed languages are the choices offered when a translation is performed; \"fordítás közben\" (while translating) shifts the meaning slightly and reads awkwardly.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2d528b0d",
@@ -911,6 +950,7 @@
    "confidence": "medium"
   },
   "rationale": "In Hungarian a case ending appended to a variable/proper name placeholder must be joined with a hyphen (e.g. %2$@-ból); writing \"%2$@ból\" is ungrammatical, and the vowel harmony is unpredictable for an unknown app name.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5a0e4482",
@@ -934,6 +974,7 @@
    "confidence": "medium"
   },
   "rationale": "A case ending appended to a placeholder must be joined with a hyphen in Hungarian; \"%2$@ból\" is ungrammatical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c412ec46",
@@ -957,6 +998,7 @@
    "confidence": "medium"
   },
   "rationale": "A case ending appended to a placeholder must be separated with a hyphen in Hungarian; \"%2$@ból\" is ungrammatical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "15000cbf",
@@ -980,6 +1022,7 @@
    "confidence": "medium"
   },
   "rationale": "A case ending appended to a placeholder must be joined with a hyphen in Hungarian; \"%2$@ból\" is ungrammatical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4d215130",
@@ -1003,6 +1046,7 @@
    "confidence": "medium"
   },
   "rationale": "All other Summarizer strings translate summary/summarize as \"összegzés\"; this inconsistent term appears on the same screen.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "65502c1a",
@@ -1026,6 +1070,7 @@
    "confidence": "medium"
   },
   "rationale": "The same screen (e.g. Summarizer.CloseButton.Accessibility.Label) renders \"summary\" as \"összegzés\"; this term is inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "eb527007",
@@ -1049,6 +1094,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says it is the title of the button to look at synced tabs, a section label, not an action to perform syncing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7ab6b7e7",
@@ -1072,6 +1118,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"You can learn more %@.\" where %@ is the lowercase link word 'here'. The Hungarian places the link at sentence start, forcing the link text to be capitalized (\"Itt\"), which conflicts with the lowercase source link and produces an unnatural sentence.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "15316209",
@@ -1095,6 +1142,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment states this is the link text for 'here' within the sentence 'You can learn more here.', so it should not be capitalized mid-sentence.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "af24fa7f",
@@ -1118,6 +1166,7 @@
    "confidence": "medium"
   },
   "rationale": "'Remind' is 'emlékeztet' in Hungarian; 'figyelmeztetés' means warning/alert, changing the meaning of the postpone button.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "513e8682",
@@ -1141,6 +1190,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says the title indicates that there is an update to the terms of use; the Hungarian says only that there is 'news'.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "27fe8f06",
@@ -1164,6 +1214,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means a short message from the product (e.g., Firefox); \"Jegyzet innen:\" reads as a note originating from a location and is misleading.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "14ac84b9",
@@ -1187,6 +1238,7 @@
    "confidence": "medium"
   },
   "rationale": "The source title states that the page has been translated to a language; the Hungarian omits \"Page\", leaving an ambiguous fragment as an action sheet title.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "00c9a57f",
@@ -1210,6 +1262,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is \"Translate Page to…\", an action sheet title introducing a list of target languages; the Hungarian drops \"to\" and collides with Translations.Sheet.LoadingButton / Toolbar.Translation.LoadingButton which use the same wording for \"Translating page\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "21378b2c",
@@ -1233,6 +1286,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a single phase label (\"Group Stage\"); the Hungarian plural genitive construction says \"phase of the group rounds\", which is not the same designation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "81366837",
@@ -1256,6 +1310,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US asks whether the user still wants to follow along after their team was eliminated; the Hungarian states an ongoing action rather than the desire/intent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e9a36212",
@@ -1279,6 +1334,7 @@
    "confidence": "medium"
   },
   "rationale": "Hungarian punctuation requires a comma after \"Kérjük\" when it introduces a request clause.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "45dfe32c",
@@ -1302,6 +1358,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"More options\", not \"More settings\"; the panel is a more-options panel per the developer comment.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8fa5ae34",
@@ -1325,6 +1382,7 @@
    "confidence": "high"
   },
   "rationale": "Hungarian orthography requires a comma before the conjunction \"hogyan\" introducing the clause.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "74c692ab",
@@ -1348,6 +1406,7 @@
    "confidence": "high"
   },
   "rationale": "Typo: the definite article \"a\" is repeated.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fb21aa75",
@@ -1371,6 +1430,7 @@
    "confidence": "medium"
   },
   "rationale": "The source asks \"Open this link in external app?\"; the parallel string ExternalLink.AppStore.ConfirmationTitle uses \"Megnyitja ezt a hivatkozást az App Store appban?\". The current word order shifts the focus to \"in an external app\" rather than asking whether to open the link, and is inconsistent with the sibling string.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "66d4d07c",
@@ -1394,6 +1454,7 @@
    "confidence": "high"
   },
   "rationale": "The object of \"követik\" must be in the accusative case (Önt); \"követik Ön\" is ungrammatical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9066b61f",
@@ -1417,6 +1478,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"your browser and computer\"; the possessive must apply to both nouns (számítógépe).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e3c4221c",
@@ -1440,6 +1502,7 @@
    "confidence": "high"
   },
   "rationale": "\"zolgáltatás\" is a misspelling of \"szolgáltatás\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b8cf7c07",
@@ -1463,6 +1526,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment states this is a label for an action used to view tabs, so a verbal noun is required, not \"Nézet\" (a view/layout).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "aa77b963",
@@ -1486,6 +1550,7 @@
    "confidence": "high"
   },
   "rationale": "\"fényesség\" + possessive suffix is \"fényességének\"; the current form is a typo.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "318842c6",
@@ -1509,6 +1574,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US says \"twilight hills\"; \"napnyugta\" means sunset, and the parallel wallpaper string already uses \"napkelte\" for sunrise, so twilight should be \"alkonyat\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f7afa891",
@@ -1532,6 +1598,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment explicitly says to consider View as a verb — dismissing settings and seeing the wallpaper; \"Nézet\" is the noun \"view/layout\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "aa77b963",
@@ -1555,6 +1622,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a title preceding the chosen mail app: \"Open mail links with\". \"Társítása\" means \"associating\", which is a different action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5ddb3e1d",
@@ -1578,6 +1646,7 @@
    "confidence": "medium"
   },
   "rationale": "In Hungarian a compound noun of two nouns must be written as one word or hyphenated, not as two separate words.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "41c4a88f",
@@ -1601,6 +1670,7 @@
    "confidence": "medium"
   },
   "rationale": "Settings.TrackingProtectionOption.BasicBlockList translates \"Standard (default)\" as \"Normál (alapértelmezett)\"; the status label for the same option must use the same term.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6fa9250e",
@@ -1624,6 +1694,7 @@
    "confidence": "medium"
   },
   "rationale": "In Hungarian, a suffix attached directly to a variable/placeholder must be joined with a hyphen; \"%2$@ra\" renders as e.g. \"magyarra\" only by luck and is ungrammatical/unreadable for other values.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "af863c9f",
@@ -1647,6 +1718,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"Something went wrong with your download.\" The Hungarian third-person possessive suffix -ével makes it \"with its download\", which refers to nothing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6196fba4",
@@ -1670,6 +1742,7 @@
    "confidence": "medium"
   },
   "rationale": "The comment says the label is displayed when no logins are found after searching; the parallel string NoLoginsFound.Title.v122 correctly uses \"Nem találhatók jelszavak\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8ad1b114",
@@ -1693,6 +1766,7 @@
    "confidence": "high"
   },
   "rationale": "The source is \"Open & Fill\", two parallel actions; the Hungarian second verb carries a 3rd-person possessive suffix (-e) with no antecedent, so the phrase is ungrammatical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "99e503af",
@@ -1716,6 +1790,7 @@
    "confidence": "high"
   },
   "rationale": "The Hungarian direct object of \"kapcsolja\" requires the accusative suffix -ot; \"a privát mód\" is ungrammatical here.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e768547a",
@@ -1739,6 +1814,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US \"Firefox Shortcuts\" refers to shortcuts, normally \"parancsikonok\" in Hungarian; \"indítóikon\" is a nonstandard term and is inconsistent with \"Webhelyindítók\" used for the same source word elsewhere in the same file.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1e8ebfbc",
@@ -1762,6 +1838,7 @@
    "confidence": "medium"
   },
   "rationale": "The same source term \"Shortcuts\" is rendered three different ways in this file; \"Webhelyindítók\" (website launchers) does not convey \"shortcuts\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dd9c861f",
@@ -1785,6 +1862,7 @@
    "confidence": "high"
   },
   "rationale": "Hungarian requires \"az\" before words starting with a vowel; the quoted item begins with \"U\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fc9983df",
@@ -1808,6 +1886,7 @@
    "confidence": "high"
   },
   "rationale": "Hungarian requires \"az\" before words starting with a vowel; the quoted item begins with \"Ú\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4d111625",
@@ -1831,6 +1910,7 @@
    "confidence": "high"
   },
   "rationale": "Hungarian requires \"az\" before words starting with a vowel; the quoted item begins with \"Ú\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b9a085bb",

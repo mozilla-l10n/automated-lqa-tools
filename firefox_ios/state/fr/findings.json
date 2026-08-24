@@ -14,6 +14,7 @@
    "confidence": "high"
   },
   "rationale": "The French noun for sunrise is \"lever de soleil\"; \"levé\" is a past participle and is incorrect here.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f6d5f2a0",
@@ -37,6 +38,7 @@
    "confidence": "high"
   },
   "rationale": "Source says \"To save and autofill credit cards\"; this message is shown when entering Payment Methods, not passwords.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f7b3c23c",
@@ -60,6 +62,7 @@
    "confidence": "medium"
   },
   "rationale": "The source field is generic (\"the organization's name related to the address\"), covering non-business organizations; \"Entreprise\" means specifically a business.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "63bbaa83",
@@ -83,6 +86,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment specifies \"a specific type of land division used in rural areas\"; \"Commune\" is the French term for a municipality/township, which conflicts with the separate Village/Township field and misnames the concept.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f8651f61",
@@ -106,6 +110,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is simply \"ZIP Code\"; the added parenthetical is extra content, and duplicating \"Code postal\" collides with the separate Postal Code label.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "95bfd215",
@@ -129,6 +134,7 @@
    "confidence": "medium"
   },
   "rationale": "%1$@ is the app name (e.g. Firefox) qualifying \"tabs\"; \"Onglets Firefox fermés\" reads as if Firefox were an adjective placed oddly and the meaning \"Firefox tabs closed\" is garbled in French word order.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "53dda1f1",
@@ -152,6 +158,7 @@
    "confidence": "high"
   },
   "rationale": "The French idiom for \"pick up where you left off\" is \"reprenez là où vous en étiez\"; the relative pronoun \"où\" is missing, leaving an ungrammatical sentence.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "304eb4fb",
@@ -175,6 +182,7 @@
    "confidence": "medium"
   },
   "rationale": "The source and developer comment say the section groups items older than thirty days; \"Avant le mois dernier\" states a different time frame (before last month).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "17921018",
@@ -198,6 +206,7 @@
    "confidence": "medium"
   },
   "rationale": "MainMenu.ToolsSection.AccessibilityLabels.SwitchToDesktopSite.v132 uses \"Passer en version pour ordinateur\" and MainMenu.ToolsSection.DesktopSite.Title.v141 uses \"Version ordinateur\" for the same concept on the same screen; \"classique\" is inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8ae974da",
@@ -221,6 +230,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is just \"Translated…\"; the parallel string MainMenu.ToolsSection.Translation.Translated.Title.v145 is translated as \"Traduit\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "de8afd5a",
@@ -244,6 +254,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US source says \"a secure connection can’t be created\" (present), not \"could not be established\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cf080c59",
@@ -267,6 +278,7 @@
    "confidence": "medium"
   },
   "rationale": "The string quotes an actual iOS Settings item; the French system wording is \"Application par défaut du navigateur\", and \"App du navigateur par défaut\" also mistakenly makes \"par défaut\" modify \"navigateur\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "45f13ea1",
@@ -290,6 +302,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Configurez … à …\" is not valid French; the source means setting theme and toolbar to match one's browsing style, which requires a verb like \"adapter\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a632fd42",
@@ -313,6 +326,7 @@
    "confidence": "medium"
   },
   "rationale": "Minor omission of \"stays\"; acceptable rendering.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "063a98f1",
@@ -336,6 +350,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US phrase means the browser will not betray the user / sell their data; \"digne de confiance\" is a generic, weaker claim that does not convey it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5587a347",
@@ -359,6 +374,7 @@
    "confidence": "medium"
   },
   "rationale": "The source uses an en dash (–); the translation substitutes an em dash, deviating from the source typography.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8d6327e0",
@@ -382,6 +398,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US says \"on any device\"; the v140 sibling string correctly uses \"n’importe quel appareil\". \"tous vos appareils\" changes the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2d280cd0",
@@ -405,6 +422,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Brought to you by\" means offered/provided by, not designed by.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "15608f0a",
@@ -428,6 +446,7 @@
    "confidence": "high"
   },
   "rationale": "\"édition\" is feminine, so the adjective must be \"limitée\" (Limited Edition Wallpaper).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e3558d93",
@@ -451,6 +470,7 @@
    "confidence": "medium"
   },
   "rationale": "Per the developer comment, %@ is the app name; the source asks permission for the app to open the scanned URL, not permission to open the app itself.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "381bead0",
@@ -474,6 +494,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to hiding both the tab bar and the address bar; the French merges them into a single \"barre d’adresse et d’onglets\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "50bbee44",
@@ -497,6 +518,7 @@
    "confidence": "high"
   },
   "rationale": "\"Firefox Suggest\" is a product/feature brand name and must remain untranslated; it is kept in English elsewhere in the same file.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "95d0a9b0",
@@ -520,6 +542,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"is your active search engine while browsing\", not the main/primary one.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dab0776e",
@@ -543,6 +566,7 @@
    "confidence": "high"
   },
   "rationale": "\"Firefox Suggest\" is a product/feature brand name and must stay untranslated; the same file renders it correctly as \"Firefox Suggest\" in Settings.Search.Suggest.PrivateSession.Description.v125.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7f15bc0c",
@@ -566,6 +590,7 @@
    "confidence": "high"
   },
   "rationale": "\"Firefox Suggest\" is a product/feature brand name and must remain untranslated; it is kept in English elsewhere in the same file.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "95d0a9b0",
@@ -589,6 +614,7 @@
    "confidence": "medium"
   },
   "rationale": "The setting enables searching synced tabs; the French adds \"dans\" which changes it to \"search inside the synced tabs\". Other setting titles in this screen are noun/verb labels matching the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "be77ad04",
@@ -612,6 +638,7 @@
    "confidence": "high"
   },
   "rationale": "The source is \"Get suggestions from %@ related to your search\"; without \"de\", the app name is juxtaposed ungrammatically to \"suggestions\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "48043b6c",
@@ -635,6 +662,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to the top entry of the Preferred Languages list, not any language the user picks each time.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "323a3b79",
@@ -658,6 +686,7 @@
    "confidence": "medium"
   },
   "rationale": "This is an iOS touch interface; elsewhere in the same feature the French uses « Appuyez » for tap (e.g. ContextualHints.Summarize.Description). \"cliquez\" refers to a mouse click and is inconsistent terminology.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "85edda7a",
@@ -681,6 +710,7 @@
    "confidence": "medium"
   },
   "rationale": "Terminology inconsistency within the same screen: the feature is consistently called « résumé »/« résumer » in the other Summarizer strings.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "42b8295a",
@@ -704,6 +734,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers specifically to website data stored for offline use; the French omits \"des sites web\", making the settings item vaguer than the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "37ec6afe",
@@ -727,6 +758,7 @@
    "confidence": "medium"
   },
   "rationale": "The source label is simply \"Older\", meaning items older than thirty days; \"Avant le mois dernier\" means \"before last month\" and misstates the section's scope.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "17921018",
@@ -750,6 +782,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US source says \"the AutoFill feature for Firefox\"; the French omits Firefox entirely.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9f9647dd",
@@ -773,6 +806,7 @@
    "confidence": "high"
   },
   "rationale": "In French, \"moteur de recherche\" keeps \"recherche\" in the singular; the adjective \"rapides\" agrees with \"moteurs\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f4b54a41",
@@ -796,6 +830,7 @@
    "confidence": "high"
   },
   "rationale": "The source is the brand feature name \"Firefox Suggest\"; rendering it as \"Firefox suggère\" turns the name into a sentence and loses the brand.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ea7063b0",
@@ -819,6 +854,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"The search provider could not be added.\" reports a failure that already occurred, not a general inability.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ac400e7a",
@@ -842,6 +878,7 @@
    "confidence": "medium"
   },
   "rationale": "Search.ThirdPartyEngines.DuplicateErrorTitle and FailedTitle use \"Échec\" for the same source \"Failed\"; inconsistent within the same feature.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5cf957c6",
@@ -865,6 +902,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is the title of the wallpaper settings section; the French reuses the unrelated Start-at-Home \"Opening screen\" wording, which describes a different feature. (Source string itself is odd, but the French duplicates a different screen's label.)",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7ac1c1f7",
@@ -888,6 +926,7 @@
    "confidence": "medium"
   },
   "rationale": "The comment says it is the title on an info view showing a list of all blocked websites, so the source is the plural noun/participle, not the third-person verb.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9ea16daa",
@@ -911,6 +950,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US source uses an em dash (—) as separator; French typography also uses the em/en dash here, not a plain hyphen.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ca6c4dcc",
@@ -934,6 +974,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US source is a generic confirmation question \"Are you sure?\"; the French states \"Continue with the deletion?\", which is different content.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e9651047",
@@ -957,6 +998,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says the button clears the search and exits search mode, not deletes multiple searches.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ce2c8e7a",
@@ -980,6 +1022,7 @@
    "confidence": "medium"
   },
   "rationale": "The source names the UI element (search input field); the French turns it into an action label with different content.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cbf9608f",
@@ -1003,6 +1046,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Marque-pages\" is plural, so the qualifying adjective should be \"mobiles\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8a4167b5",

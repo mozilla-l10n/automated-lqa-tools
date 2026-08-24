@@ -14,6 +14,7 @@
    "confidence": "high"
   },
   "rationale": "The sibling header Bookmarks.Menu.EditBookmarkDesktopBookmarksLabel.v136 uses \"MARKAH DESKTOP\", and all other strings in this file translate \"bookmark(s)\" as \"markah\"; using \"BOOKMARK\" on the same screen is inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "126fafef",
@@ -37,6 +38,7 @@
    "confidence": "high"
   },
   "rationale": "Source \"Post town\" is a town name used for mail sorting in the UK; \"Kode kota\" means \"city code\", a different concept and easily confused with the postal code field.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "56931e03",
@@ -60,6 +62,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment states a townland is a rural land division, not a small town; \"Kota kecil\" means small town.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8f32b0b4",
@@ -83,6 +86,7 @@
    "confidence": "medium"
   },
   "rationale": "The source lists menu capabilities ranging from private browsing to save actions; the Indonesian reverses the noun phrase into \"saving actions\", which says something different.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4528dd64",
@@ -106,6 +110,7 @@
    "confidence": "medium"
   },
   "rationale": "In Firefox UI the back navigation control is consistently \"Kembali\" in Indonesian; \"Mundur\" (move backwards/reverse) is not the established term for this accessibility label.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2d00ffd5",
@@ -129,6 +134,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is shown transiently while the user is being signed out, so the progressive state must be conveyed.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bfa122c3",
@@ -152,6 +158,7 @@
    "confidence": "medium"
   },
   "rationale": "MainMenu.SiteProtection.ProtectionsOn/Off use \"Perlindungan\" for the same source term on the same top-of-menu area; the term should be consistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e0a6d852",
@@ -175,6 +182,7 @@
    "confidence": "medium"
   },
   "rationale": "The corresponding visible string MainMenu.Submenus.Save.SaveToReadingList.Subtitle.v131 uses \"Daftar Bacaan\"; the accessibility label should match the visible term.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bc8e508d",
@@ -198,6 +206,7 @@
    "confidence": "medium"
   },
   "rationale": "The corresponding visible string MainMenu.Submenus.Save.SaveToReadingList.Title.v131 uses \"Daftar Bacaan\"; inconsistent term for the same feature on the same screen.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e711db0c",
@@ -221,6 +230,7 @@
    "confidence": "medium"
   },
   "rationale": "Within the same Save submenu group, MainMenu.Submenus.Save.SaveToReadingList.Title/Subtitle use \"Daftar Bacaan\"; the same source term must be consistent on the same screen.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0356e924",
@@ -244,6 +254,7 @@
    "confidence": "medium"
   },
   "rationale": "MainMenu.Submenus.Tools.NightMode.Off.Title.v131 translates \"Turn off\" as \"Nonaktifkan\"; the same term should be used consistently in the same Tools submenu.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2a8a8eae",
@@ -267,6 +278,7 @@
    "confidence": "medium"
   },
   "rationale": "The string labels the current zoom level (a noun), and MainMenu.Submenus.Tools.Zoom.Subtitle.v131 translates \"Zoom\" as \"Perbesaran\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ede654f1",
@@ -290,6 +302,7 @@
    "confidence": "medium"
   },
   "rationale": "MainMenu.Submenus.Tools.PageZoomV2.Title.v141 renders the same source term \"Page Zoom\" as \"Zum Laman\"; the two labels refer to the same feature and must match.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "568fc48a",
@@ -313,6 +326,7 @@
    "confidence": "high"
   },
   "rationale": "MainMenu.Submenus.Tools.ReaderView.Subtitle.v131 and the On/Off titles use \"Tampilan Pembaca\" for the same source term \"Reader View\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f3d2f9ad",
@@ -336,6 +350,7 @@
    "confidence": "high"
   },
   "rationale": "In Indonesian the head noun comes first, so \"Simpan sub menu\" reads as the imperative \"save the submenu\"; the parallel string Tools submenu is correctly \"Sub menu alat\". Also \"submenu\" is written as one word.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "87bc9139",
@@ -359,6 +374,7 @@
    "confidence": "medium"
   },
   "rationale": "Indonesian standard spelling joins the prefix: \"submenu\", not \"sub menu\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "beaffb78",
@@ -382,6 +398,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US string ends with a period; the translation drops the sentence-final punctuation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0cd013e4",
@@ -405,6 +422,7 @@
    "confidence": "high"
   },
   "rationale": "The correct Indonesian spelling is \"berisiko\" (one r), not \"berrisiko\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8984f4af",
@@ -428,6 +446,7 @@
    "confidence": "high"
   },
   "rationale": "\"Wayback Machine\" is the Internet Archive's product name and is left untranslated elsewhere in this same file (Wayback.Error.Description, WaybackButtonA11yHint), creating an inconsistency.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d1ca1bd4",
@@ -451,6 +470,7 @@
    "confidence": "high"
   },
   "rationale": "The source refers to placing the toolbar at the bottom of the screen; Indonesian for that position is \"Bawah\". \"Dasar\" means base/foundation/basic and is misleading here.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2497fbee",
@@ -474,6 +494,7 @@
    "confidence": "high"
   },
   "rationale": "The source refers to placing the toolbar at the top of the screen; the standard Indonesian term for that position is \"Atas\". \"Puncak\" means summit/peak and is wrong in a UI position control.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "eaa70f43",
@@ -497,6 +518,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Not Now\" means postponing; the standard Indonesian rendering is \"Nanti Saja\" or \"Tidak Sekarang\". \"Jangan Sekarang\" is an imperative prohibition and is not idiomatic.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "13df911e",
@@ -520,6 +542,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Not Now\" means postponing; the standard Indonesian rendering is \"Nanti Saja\" or \"Tidak Sekarang\". \"Jangan Sekarang\" is an imperative prohibition and is not idiomatic.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "13df911e",
@@ -543,6 +566,7 @@
    "confidence": "high"
   },
   "rationale": "\"Sell you out\" is an idiom meaning betray/give away your data, not literally selling the person.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e4c3ecca",
@@ -566,6 +590,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Not Now\" means postponing; the standard Indonesian rendering is \"Nanti Saja\" or \"Tidak Sekarang\". \"Jangan Sekarang\" is an imperative prohibition and is not idiomatic.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "13df911e",
@@ -589,6 +614,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"have %@ match your device\" means letting the app follow the device setting automatically; the translation makes it a manual user action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "54c7db60",
@@ -612,6 +638,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says this sets the toolbar at the bottom of the screen; Indonesian uses \"Bawah\" for that position, and \"Dasar\" also commonly means \"basic\", which is misleading.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2497fbee",
@@ -635,6 +662,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says this sets the toolbar to the bottom of the screen; Indonesian uses \"Bawah\" for that position.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2497fbee",
@@ -658,6 +686,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says this sets the toolbar at the top of the screen; Indonesian uses \"Atas\" for that position, while \"Puncak\" means a summit.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "eaa70f43",
@@ -681,6 +710,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says this sets the toolbar to the top of the screen; Indonesian uses \"Atas\" for that position.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "eaa70f43",
@@ -704,6 +734,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Your bookmarks, passwords, and more\" — the possessive covers the whole list, not just passwords.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b4e1265c",
@@ -727,6 +758,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Brought to you by the non-profit %@\"; in Indonesian \"%@ nirlaba\" reads as if the company name is a common noun being modified, which is ungrammatical for a proper name.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d76ddb45",
@@ -750,6 +782,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US refers to the onboarding (introductory) screens, not a process of joining/membership.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9acac03d",
@@ -773,6 +806,7 @@
    "confidence": "medium"
   },
   "rationale": "In Firefox privacy UI, \"fingerprinters\" are scripts that fingerprint the browser; \"penyidik jari\" is a literal, incorrect rendering and is also inconsistent with the title-case style of the sibling labels.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "91cd34e2",
@@ -796,6 +830,7 @@
    "confidence": "medium"
   },
   "rationale": "Source refers to content that tracks (tracking content); the Indonesian reverses the head noun to say \"tracking of content\", parallel to the other entries like \"Pelacak Media Sosial\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f4e55db8",
@@ -819,6 +854,7 @@
    "confidence": "high"
   },
   "rationale": "The same feature term must be consistent within the RelayMask screen; the file otherwise uses \"masker surel\" (e.g. Masker Surel, Gunakan masker surel).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "47a55e38",
@@ -842,6 +878,7 @@
    "confidence": "high"
   },
   "rationale": "Terminology inconsistency within the RelayMask feature strings, which elsewhere use \"masker surel\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e1f546b9",
@@ -865,6 +902,7 @@
    "confidence": "high"
   },
   "rationale": "Terminology inconsistency within the same feature/screen; the settings title is \"Masker Surel\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0b36f479",
@@ -888,6 +926,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Allow %@ to open?\" asks permission for the app (%@) to open the scanned URL; \"untuk dibuka\" (passive) means allowing the app itself to be opened.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cbf0c9b2",
@@ -911,6 +950,7 @@
    "confidence": "medium"
   },
   "rationale": "\"whether\" in this context is \"apakah\"; \"jikalau\" means \"if/in case\" and produces an ungrammatical sentence.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a1676a8b",
@@ -934,6 +974,7 @@
    "confidence": "medium"
   },
   "rationale": "Settings.AIControls.HeaderCard.Link.v151 in the same file renders the identical source \"Learn more\" as \"Pelajari selengkapnya\"; Firefox id standard is \"Pelajari selengkapnya\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "232978c4",
@@ -957,6 +998,7 @@
    "confidence": "high"
   },
   "rationale": "In en-US \"device\" modifies \"Settings\" (the first item of the path); placing \"perangkat\" after the app-name placeholder corrupts the settings path instruction.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3ae1e2f0",
@@ -980,6 +1022,7 @@
    "confidence": "medium"
   },
   "rationale": "Other strings in the Notifications settings section consistently use \"Notifikasi\"; using two different terms in one string is inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3ae1e2f0",
@@ -1003,6 +1046,7 @@
    "confidence": "high"
   },
   "rationale": "en-US \"occasional sponsored suggestions\" means suggestions shown from time to time; \"sesaat\" means brief/momentary, which changes the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6006db37",
@@ -1026,6 +1070,7 @@
    "confidence": "high"
   },
   "rationale": "The source and the developer comment specify empty lines separating the first link parameter from the rest of the text; here the URL runs directly into the following word, breaking the shared message formatting (the parallel string ShareMessageB.Title.v137 keeps the line breaks).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "88f124a9",
@@ -1049,6 +1094,7 @@
    "confidence": "medium"
   },
   "rationale": "The source instructs the user to press the \"summarize\" button; \"tekan meringkas\" reads as \"press summarizing\" and does not name the control.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ecc8b0bd",
@@ -1072,6 +1118,7 @@
    "confidence": "medium"
   },
   "rationale": "Summarizer.AppleBrand.Label.v142 uses \"Dirangkum oleh Apple Intelligence\" for the identical source phrase \"Summarized by\"; the two labels appear in the same summary report and must match.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d56f5db0",
@@ -1095,6 +1142,7 @@
    "confidence": "medium"
   },
   "rationale": "TermsOfUse.Link.TermsOfUse.v142, TermsOfUse.Description.v142 and TermsOfUse.TermsOfUseHasOpened.v142 all use \"Ketentuan Penggunaan\" for the same source term on the same sheet; this variant title is inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2d71e5df",
@@ -1118,6 +1166,7 @@
    "confidence": "high"
   },
   "rationale": "The source is a noun phrase \"Hostnames of trackers blocked on this page\"; without \"yang\" the Indonesian reads as a sentence \"Tracker hostnames are blocked on this page\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9660c5b6",
@@ -1141,6 +1190,7 @@
    "confidence": "medium"
   },
   "rationale": "The label indicates the match has ended; Indonesian \"Penuh Waktu\" is a calque with reversed head-modifier order and does not convey end of match.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ceb84c82",
@@ -1164,6 +1214,7 @@
    "confidence": "medium"
   },
   "rationale": "The label indicates the match has ended; \"Penuh Waktu\" reverses Indonesian head-modifier order and reads as \"full-time\" in the employment sense.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e4af96dd",
@@ -1187,6 +1238,7 @@
    "confidence": "high"
   },
   "rationale": "The source refers to World Cup match data; other strings in the same file translate \"match\" as \"pertandingan\". \"Kecocokan\" means compatibility/similarity.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8ba74d15",
@@ -1210,6 +1262,7 @@
    "confidence": "medium"
   },
   "rationale": "In a tournament context the source means third-place finisher; \"tempat\" means a physical place in Indonesian, not a ranking position.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "89fc8bf1",
@@ -1233,6 +1286,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"history from your synced devices\"; the possessive is dropped, making it ambiguous which devices are meant.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e141409e",
@@ -1256,6 +1310,7 @@
    "confidence": "medium"
   },
   "rationale": "The rest of this file consistently translates \"default browser\" as \"peramban baku\"; \"App Browser Default\" is neither English nor correct Indonesian word order.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d9c2e21b",
@@ -1279,6 +1334,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to the iOS setting \"Default Browser App\"; the Indonesian word order makes \"Default\" modify \"Browser App\" incorrectly and mixes untranslated English. Also inconsistent with \"Peramban Baku\" used in Settings.DefaultBrowserMenuItem.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3b477ff6",
@@ -1302,6 +1358,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"cookies, and other browsing data\"; the translation drops the qualifier \"browsing\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7be30710",
@@ -1325,6 +1382,7 @@
    "confidence": "high"
   },
   "rationale": "Source is \"Added page to Reading List\"; \"page\" is dropped, and \"Reading List\" is elsewhere translated \"Daftar Bacaan\" (see 'Add to Reading List').",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "67081b32",
@@ -1348,6 +1406,7 @@
    "confidence": "high"
   },
   "rationale": "Source says the page could not be added to the Reading List; the translation omits \"laman ke\", changing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e1fb6260",
@@ -1371,6 +1430,7 @@
    "confidence": "medium"
   },
   "rationale": "Inconsistent terminology: CoverSheet.v24.ETP.Settings.Button, ContextualHints.SearchBarPlacement.CallToAction and others use \"Pengaturan\" for Settings.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "af7ebfc0",
@@ -1394,6 +1454,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Proceed if you accept the potential risk.\" — no \"only\" restriction and \"potential\" is dropped.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "46c129b6",
@@ -1417,6 +1478,7 @@
    "confidence": "high"
   },
   "rationale": "The source says Firefox protects your information from being stolen; the Indonesian literally says it protects the theft of your information.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f27a0123",
@@ -1440,6 +1502,7 @@
    "confidence": "high"
   },
   "rationale": "The source is a toast confirming the item has been added (passive past), matching sibling toasts \"Ditambahkan ke Daftar Bacaan\" and \"Dihapus dari Pintasan\". \"Tambahkan ke Pintasan\" is the imperative button label used for Menu.AddToShortcuts.v99.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "36f88228",
@@ -1463,6 +1526,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means content that contains trackers; the Indonesian reverses the head noun, saying \"content tracking\" instead of \"tracking content\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d0de0b7e",
@@ -1486,6 +1550,7 @@
    "confidence": "high"
   },
   "rationale": "The source refers to the trackers (fingerprinters), not fingerprints; the sibling title string uses \"Pelacak Sidik\", so this is inconsistent and factually wrong.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "20c6aaac",
@@ -1509,6 +1574,7 @@
    "confidence": "high"
   },
   "rationale": "Source is \"see what you do online\"; the translation dropped the verb \"lakukan\", making it ungrammatical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4efe412d",
@@ -1532,6 +1598,7 @@
    "confidence": "medium"
   },
   "rationale": "Inconsistent with 'Reading list' → 'Daftar bacaan' and 'Remove from Reading List' → 'Hapus dari Daftar Bacaan' in the same screen group.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cfa6c4c6",
@@ -1555,6 +1622,7 @@
    "confidence": "high"
   },
   "rationale": "The source uses ‘…’ pairs; the target repeats the left quote U+2018 as the closing mark instead of U+2019.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c86f601e",
@@ -1578,6 +1646,7 @@
    "confidence": "high"
   },
   "rationale": "The source says a search engine with this title or URL 'has already been added' — an error. 'telah berhasil ditambahkan' means 'was successfully added', reversing the meaning of an error dialog.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6fcdcef5",
@@ -1601,6 +1670,7 @@
    "confidence": "medium"
   },
   "rationale": "The two toggle-state strings appear on the same settings screen; \"Aktif\" is used for On, so the opposite state should be \"Nonaktif\" for a consistent pair.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "74ae0708",
@@ -1624,6 +1694,7 @@
    "confidence": "medium"
   },
   "rationale": "The v2 string deliberately uses sentence case (contrast with Settings.ShowLinkPreviews.Status which is title case); the translation keeps title case.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2bf0b5b4",
@@ -1647,6 +1718,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"to quickly open Firefox\"; \"membuat\" means \"to make/create\", reversing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "832d8192",
@@ -1670,6 +1742,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"Allows some ad tracking\"; the translation says \"allows some trackers\", losing the \"ad\" qualifier and changing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "929c275c",
@@ -1693,6 +1766,7 @@
    "confidence": "high"
   },
   "rationale": "\"di Belakang\" means physically behind; the intended sense is background loading, which in Indonesian is \"latar belakang\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "207d1d2a",
@@ -1716,6 +1790,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says this is the title for the tab tray, i.e. the list of currently open tabs, not a command to open a tab.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ce04f8ec",
@@ -1739,6 +1814,7 @@
    "confidence": "medium"
   },
   "rationale": "Indonesian does not use the English plural -s; the sibling string \"Tab %1$@ dari %2$@\" uses \"Tab\", making this inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a70716f6",
@@ -1762,6 +1838,7 @@
    "confidence": "medium"
   },
   "rationale": "The source uses an em dash (—) as separator; the translation uses a plain hyphen.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f3a3cf3c",
@@ -1785,6 +1862,7 @@
    "confidence": "high"
   },
   "rationale": "%2$@ is the target language; without \"ke\" the sentence says to translate the language itself, changing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "039fe888",
@@ -1808,6 +1886,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Instead\" means using email as an alternative to the camera/QR sign-in, not \"only\". Indonesian \"saja\" means \"only/just\", which is a different meaning; a correct rendering is e.g. \"Gunakan Surel Saja\" → \"Gunakan Surel\" / \"Gunakan Surel sebagai gantinya\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a4c344a5",
@@ -1831,6 +1910,7 @@
    "confidence": "high"
   },
   "rationale": "The source is \"Search Input Field\"; \"Bidan\" means midwife, the correct word is \"Bidang\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0000028d",
@@ -1854,6 +1934,7 @@
    "confidence": "medium"
   },
   "rationale": "\"tidak akan mengingat semua\" is ambiguous/implies \"will not remember all\", whereas the source states none of the history or cookies will be remembered.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "62bf1cb8",
@@ -1877,6 +1958,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says this is a toggled OFF accessibility value, i.e. a state, not an action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b59f7099",
@@ -1900,6 +1982,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says this is a toggled ON accessibility value, i.e. a state, not an action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a8fffeb2",
@@ -1923,6 +2006,7 @@
    "confidence": "medium"
   },
   "rationale": "String 2GqvPe in the same file translates the identical menu item \"Go to Copied Link\" as \"Buka Tautan yang Disalin\"; the confirmation label must quote the same wording.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bcf92fac",
@@ -1946,6 +2030,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US uses ‘…’ (U+2018/U+2019); the target closes with U+2018 again.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bcf92fac",
@@ -1969,6 +2054,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US uses ‘…’ (U+2018/U+2019); the target closes with U+2018 again.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7f33141f",
@@ -1992,6 +2078,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US uses ‘…’ (U+2018/U+2019); the target closes with U+2018 again.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cdd917a8",
@@ -2015,6 +2102,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US uses ‘…’ (U+2018/U+2019); the target closes with U+2018 again.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9ce914d8",
@@ -2038,6 +2126,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US source uses ‘...’; the translation closes with an opening quote character.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c56d9945",
@@ -2061,6 +2150,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US source uses ‘...’; the translation closes with an opening quote character.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "36bc8871",
@@ -2084,6 +2174,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US source uses ‘...’; the translation closes with an opening quote character.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8fec03d6",

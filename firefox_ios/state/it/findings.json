@@ -14,6 +14,7 @@
    "confidence": "medium"
   },
   "rationale": "Italian spells the word \"retro\" without an acute accent; \"Rétro\" is the French form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "df45f639",
@@ -37,6 +38,7 @@
    "confidence": "medium"
   },
   "rationale": "Italian spells the word \"retro\" without an acute accent; \"Rétro\" is the French form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "880bed45",
@@ -60,6 +62,7 @@
    "confidence": "medium"
   },
   "rationale": "The Colors section lists colour names in the standard masculine form (Rosso, Arancio, Viola); \"Gialla\" is inconsistent agreement within the same screen.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "7edb58a1",
@@ -83,6 +86,7 @@
    "confidence": "medium"
   },
   "rationale": "The locale convention is informal direct address; the sibling string v122 uses \"Effettua l’autenticazione\", making this impersonal form inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "c93c39b7",
@@ -106,6 +110,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US source is \"Use your camera or choose a photo to search what you see.\"; the Italian adds \"dalla galleria\" and changes \"use your camera\" into \"take a photo\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "db37ea5b",
@@ -129,6 +134,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US says removing data \"might log you out of websites and clear shopping carts\"; the Italian narrows it to a single site and adds \"in sospeso\" (pending), which is not in the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "5352f478",
@@ -152,6 +158,7 @@
    "confidence": "medium"
   },
   "rationale": "The same screen uses \"browser predefinito\" (Title and DescriptionFooter); iOS Italian settings label is \"App browser predefinita\". Mixing \"di default\" and \"predefinito\" is inconsistent terminology.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "87a6ba6e",
@@ -175,6 +182,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US \"creepy\" means intrusive/unsettling, not merely \"annoying\" (fastidiosi); the sibling v140 string correctly uses \"intrusive\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "90f10cef",
@@ -198,6 +206,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US \"helps stop companies\" is a hedged statement; \"blocca automaticamente\" asserts an absolute automatic blocking that is not in the source, and \"automatically\" appears nowhere.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "1148a4f8",
@@ -221,6 +230,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US \"helps stop companies\" is hedged; \"blocca automaticamente\" adds an assertion of automatic blocking not present in the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "1148a4f8",
@@ -244,6 +254,7 @@
    "confidence": "medium"
   },
   "rationale": "The locale's register is informal singular (see Onboarding.TermsOfService.Title.v135 \"Ti diamo il benvenuto\", \"Aiutaci\", \"Scegli\"); \"Benvenuti\" addresses a plural/impersonal audience, and the source uses the indefinite \"an independent internet\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "1f8cbd9b",
@@ -267,6 +278,7 @@
    "confidence": "medium"
   },
   "rationale": "\"encrypts\" is rendered with a non-standard/incorrect verb; the established Italian Mozilla term is \"cifra\"/\"crittografa\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "suppressed",
   "string_hash": "5688aea6",
@@ -290,6 +302,7 @@
    "confidence": "medium"
   },
   "rationale": "Per the developer comment, %@ is the app name (e.g. Firefox) and the prompt asks the user to allow the app to open a URL from a scanned QR code. The Italian says \"Allow opening of Firefox?\", making Firefox the object being opened.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "a068b3e1",
@@ -313,6 +326,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US says \"New and current AI enhancements are blocked by default\"; the Italian omits the distinction between new and current enhancements.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "2bb0320d",
@@ -336,6 +350,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to the highest-ranked language in the preferred languages list (\"top preferred language\"); the Italian loses that distinction, which matters since the screen has a list of multiple preferred languages.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "d9a98a28",
@@ -359,6 +374,7 @@
    "confidence": "medium"
   },
   "rationale": "The paired string Settings.Translation.SettingOff.v145 is translated \"Disattivata\" (past participle, feminine). \"Attiva\" reads as an imperative/adjective and is inconsistent; the matching state label should be \"Attivata\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "suppressed",
   "string_hash": "90136931",
@@ -382,6 +398,7 @@
    "confidence": "medium"
   },
   "rationale": "The locale convention is informal direct address (as in \"Scegli tra queste lingue…\" in the same screen); the infinitive form is a formal/impersonal register.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "6374c8c4",
@@ -405,6 +422,7 @@
    "confidence": "medium"
   },
   "rationale": "The same screen uses \"browser predefinito\" (DefaultBrowserCard.Title, Settings.DefaultBrowserMenuItem); the iOS system settings label in Italian is \"App browser predefinita\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "1c9cd70e",
@@ -428,6 +446,7 @@
    "confidence": "medium"
   },
   "rationale": "This must match the actual iOS system settings label, which in Italian is \"App browser predefinita\"; it is also inconsistent with \"browser predefinito\" elsewhere in the same file.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "dfcadb46",
@@ -451,6 +470,7 @@
    "confidence": "medium"
   },
   "rationale": "The paired string \"Pin\" is \"Appunta\"; \"Rilascia\" does not convey unpinning and is inconsistent with the pin terminology on the same screen.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "9816c780",
@@ -474,6 +494,7 @@
    "confidence": "medium"
   },
   "rationale": "Hotkeys.ShowNextTab.DiscoveryTitle translates \"Show Next Tab\" as \"Mostra scheda successiva\"; the same term should be consistent within the same Discoverability overlay.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "58f9587a",
@@ -497,6 +518,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US specifies \"the book icon\"; the Italian omits which icon to tap.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "c873cb89",
@@ -520,6 +542,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"Please open Firefox, go to Settings and sign in to continue\", i.e. two separate steps.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "1d8e9886",
@@ -543,6 +566,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a past participle stating that a tab was received; the Italian noun phrase means \"tab reception\".",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "8b3a43be",
@@ -566,6 +590,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states a tab was received; \"Ricezione scheda\" means \"tab reception\", altering the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "c486b70b",
@@ -589,6 +614,7 @@
    "confidence": "medium"
   },
   "rationale": "The same source term \"Opening screen\" is rendered \"Schermata di apertura\" elsewhere in the same settings area; \"Schermata iniziale\" also collides with \"Pagina iniziale\" used for Homepage.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "54fb02f0",
@@ -612,6 +638,7 @@
    "confidence": "medium"
   },
   "rationale": "The pair Off/On refers to the same object (le scorciatoie); \"Disattivata\" (singular feminine) does not agree with the plural \"Scorciatoie\" and is inconsistent with the paired \"Attiva\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "27b8a267",
@@ -635,6 +662,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says the tabs tray is the panel accessed from the homepage, not a bar; \"barra\" also conflicts with \"Barra degli strumenti\" used for Toolbar in the same settings screen.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "0189be4f",
@@ -658,6 +686,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is the accessibility label for the Tabs Tray view (the grid of open tabs), not a toolbar/bar. Elsewhere the tray is referred to as \"Schede aperte\"/schede, so \"Barra\" misidentifies the element.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "5bfd8746",
@@ -681,6 +710,7 @@
    "confidence": "medium"
   },
   "rationale": "The source and developer comment state the label appears when no logins are found after searching; \"disponibile\" (available) changes the meaning, and the parallel string NoLoginsFound.Title.v122 correctly uses \"trovata\".",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "7311af5a",
@@ -704,6 +734,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US text only says new bookmarks will be saved; it does not state where they are stored.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "46678135",
@@ -727,6 +758,7 @@
    "confidence": "medium"
   },
   "rationale": "TodayWidget.FirefoxShortcutGalleryDescription and TodayWidget.QuickViewGalleryDescriptionV2 translate \"shortcuts\" as \"collegamenti\"; inconsistent term for the same source word on the same widget-gallery screen.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "24e00a47",

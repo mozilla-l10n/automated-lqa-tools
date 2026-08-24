@@ -14,6 +14,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US says \"Websites you visit may request your location\"; the qualifier \"you visit\" is omitted.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "14bbba07",
@@ -37,6 +38,7 @@
    "confidence": "medium"
   },
   "rationale": "NSCameraUsageDescription in the same file uses \"kode QR\"; the same term should be consistent within the screen/file.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2a1ef8ba",
@@ -60,6 +62,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Select the %@ app icon\"; %@ is the app name. Appending an inflectional \"a\" directly to the placeholder produces forms like \"Firefoxa\" glued to the substituted brand string, altering the brand name and breaking for other app names (e.g. Klar, Focus).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "23b0d961",
@@ -83,6 +86,7 @@
    "confidence": "medium"
   },
   "rationale": "The source uses curly quotes “%@”; the translation uses straight ASCII quotes, inconsistent with the other toast strings in the same file which keep typographic quotes.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a7340522",
@@ -106,6 +110,7 @@
    "confidence": "medium"
   },
   "rationale": "The same source term \"site data\" appears in AlertTitle, ButtonTitle and AlertText as \"podatki strani\"; the toast uses a different rendering on the same screen.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3310ad39",
@@ -129,6 +134,7 @@
    "confidence": "medium"
   },
   "rationale": "The source's idiom means protections are currently paused/off-duty; the target asserts the app does not protect you at all.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "83b2a8c1",
@@ -152,6 +158,7 @@
    "confidence": "high"
   },
   "rationale": "The source asks for a valid expiration date, not just the year.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c1439311",
@@ -175,6 +182,7 @@
    "confidence": "medium"
   },
   "rationale": "The object of \"open\" in the source is the email, opened in the default mail application; the target drops the email.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "249cad3f",
@@ -198,6 +206,7 @@
    "confidence": "medium"
   },
   "rationale": "The source opens the SMS in an external app; the target drops the SMS object.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "112fc9f7",
@@ -221,6 +230,7 @@
    "confidence": "high"
   },
   "rationale": "Per the developer comment %1$@ is the app name (e.g. Firefox) and %2$@ is the number of tabs; the Slovenian places the app name where a number belongs (\"Zaprtih Firefox zavihkov: 5\"), producing nonsense.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f92a5bb9",
@@ -244,6 +254,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US source uses curly quotes “%@”; the Slovenian uses straight ASCII double quotes, deviating from the source typography.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f9bcfd2e",
@@ -267,6 +278,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says it takes seconds (a few seconds), not one second.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0472f076",
@@ -290,6 +302,7 @@
    "confidence": "medium"
   },
   "rationale": "Slovenian orthography writes indefinite pronoun/adverb + koli separately: 'kadar koli'.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0472f076",
@@ -313,6 +326,7 @@
    "confidence": "medium"
   },
   "rationale": "Within the same Tools section, MainMenu.ToolsSection.SwitchToDesktopSite.Title.v131 and its accessibility label translate \"desktop site\" as \"stran za računalnike\"; this string uses a different term for the same source concept.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "67c283e4",
@@ -336,6 +350,7 @@
    "confidence": "medium"
   },
   "rationale": "%@ is substituted with the app name verbatim; appending a case ending to a placeholder is not valid and yields wrong output for names that do not take -a (e.g. Focus, Klar).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e3fed8a2",
@@ -359,6 +374,7 @@
    "confidence": "medium"
   },
   "rationale": "En-US \"For good.\" in this Mozilla context means acting for good/benefit, not 'permanently'; \"Za vedno\" reverses the sense to a time expression.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9d0c1963",
@@ -382,6 +398,7 @@
    "confidence": "high"
   },
   "rationale": "The source says only \"%2$@’s marketing partners\"; \"tehnološkim\" (technology) adds content that is not in the English string.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "03f9f574",
@@ -405,6 +422,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Manage settings\", a link that takes the user to manage data collection preferences; the translation says just \"Settings\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6e5f433a",
@@ -428,6 +446,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US v149 title adds \"all\" (\"Open all your links\") compared to the v2 title; the translation omits it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "37708f06",
@@ -451,6 +470,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says your bookmarks and passwords sync on any device (they are available on all devices), not that they sync with some other single device.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "16386405",
@@ -474,6 +494,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states the non-profit has been trusted (by people generally) for over 20 years; the translation asserts the individual user has trusted it for 20 years.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a7a5cb1e",
@@ -497,6 +518,7 @@
    "confidence": "high"
   },
   "rationale": "The source is \"Manage settings\", a link to manage data collection preferences; the translation omits \"Manage\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6e5f433a",
@@ -520,6 +542,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the data helps improve features, performance and stability \"for everyone\", not \"for users all over the world\", which adds meaning not present in the en-US text.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bdef871b",
@@ -543,6 +566,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Limited Edition Wallpaper\"; the sibling string \"Classic Wallpaper\" is translated as \"Klasično ozadje\", so this accessibility label should also state that it is a wallpaper.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "23e7a415",
@@ -566,6 +590,7 @@
    "confidence": "medium"
   },
   "rationale": "In Firefox Slovenian the term for \"Fingerprinters\" is \"Sledilci prstnih odtisov naprav\"; the shortened form loses the meaning of device fingerprinting.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ce7c27ce",
@@ -589,6 +614,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment states %@ is the app name (e.g. Firefox); the source asks permission for the app to open a URL. The Slovenian reads as permission to open the app itself.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ecdd0a0a",
@@ -612,6 +638,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US restricts model removal to on-device AI (\"For on-device AI, any downloaded models are removed.\"); the translation omits this condition.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "335db6a0",
@@ -635,6 +662,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says to unblock specific features; the section otherwise uses \"prepoved/prepovedano\" terminology, so \"omogočite\" is inconsistent with the block/unblock wording.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "01387bc8",
@@ -658,6 +686,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US lists features, performance and stability; the translation omits \"features\" and renders the remaining items inaccurately.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e87187aa",
@@ -681,6 +710,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a settings option title (\"Scroll to Hide Tab and Address Bar\"), a label rather than an instruction addressed to the user; it also conflates the tab bar and address bar into one bar.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b581f424",
@@ -704,6 +734,7 @@
    "confidence": "high"
   },
   "rationale": "The source refers to browsing history (zgodovina brskanja), not search history (zgodovina iskanja).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c9b35434",
@@ -727,6 +758,7 @@
    "confidence": "medium"
   },
   "rationale": "Elsewhere in this same file \"features\" is translated as \"funkcije\" (e.g. Settings.Studies.Message.v136 \"Preizkusite funkcije in ideje\"); \"značilnosti\" is inconsistent and misleading here.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "51a535c6",
@@ -750,6 +782,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US says \"Shake your device from side to side\"; the manner of the gesture is omitted in the translation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2346b69e",
@@ -773,6 +806,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to the first/top language in the Preferred Languages list, not just any selected language.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b565a8cf",
@@ -796,6 +830,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US \"Spread the word about %1$@\" means to tell others about the app; \"širite besedo\" is a literal word-for-word calque that does not carry that meaning in Slovenian.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "88d0728e",
@@ -819,6 +854,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US \"Can’t handle this one at the moment.\" is impersonal; the Slovenian introduces a first-person \"I can't\", a register the app does not use elsewhere.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5388e5a3",
@@ -842,6 +878,7 @@
    "confidence": "medium"
   },
   "rationale": "The visible button label (Summarizer.RetryButton.Label.v142) is \"Poskusi znova\"; the accessibility label for the same control should use the same imperative form for consistency.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0148e86d",
@@ -865,6 +902,7 @@
    "confidence": "medium"
   },
   "rationale": "The menu items follow \"Zapri zavihke, starejše od …\", so the correct genitive singular is \"enega dne\"/\"1 dneva\" is wrong agreement with numeral 1; as a standalone label it should read \"1 dan\" (or \"pred 1 dnevom\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2e7846e5",
@@ -888,6 +926,7 @@
    "confidence": "medium"
   },
   "rationale": "Slovenian typography requires an en dash (–) with spaces for parenthetical/appositive dashes, not a hyphen.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cc49be20",
@@ -911,6 +950,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to searching for a single image (the one right-clicked), not images in general.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "354c0e4f",
@@ -934,6 +974,7 @@
    "confidence": "medium"
   },
   "rationale": "The English means the country picker belonging to the World Cup widget; \"na svetovnem prvenstvu\" states the picker is located at the championship.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "41395d8e",
@@ -957,6 +998,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US says \"Choose another team to keep up with the World Cup\"; the Slovenian shifts the object of following to the team's progress and renders \"another\" as \"some other/one more\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7b39273d",
@@ -980,6 +1022,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US \"Still want to Follow Along?\" asks whether the user wants to keep following the World Cup; the translation only says \"Are you still interested?\", losing the follow/track meaning central to this widget.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4a76e58d",
@@ -1003,6 +1046,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says only \"Please refresh.\" without specifying the widget; the added noun changes the instruction's content.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2e80cc60",
@@ -1026,6 +1070,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"Hide World Cup updates\" refers to updates/news, not generic data.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7f28cae6",
@@ -1049,6 +1094,7 @@
    "confidence": "medium"
   },
   "rationale": "In the source \"live\" modifies the matches/updates, not the act of receiving; the Slovenian word order attaches \"v živo\" to the receiving.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "76e9ceb8",
@@ -1072,6 +1118,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to the info of the displayed match (singular); the widget shows one match at a time.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2aaf65aa",
@@ -1095,6 +1142,7 @@
    "confidence": "high"
   },
   "rationale": "The source refers to navigating between matches in the widget; \"zadetki\" means goals or search hits, and the rest of the file uses \"tekma\" for match.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "daa87f04",
@@ -1118,6 +1166,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US source is a noun-phrase settings item \"Offline Website Data\"; the Slovenian uses the accusative \"Podatke\" instead of the nominative and drops \"website\" entirely.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "38255219",
@@ -1141,6 +1190,7 @@
    "confidence": "medium"
   },
   "rationale": "Slovenian typography uses „ “ quotation marks, and the same iOS setting is rendered as \"Privzet brskalnik\" in DefaultBrowserOnboarding.Screenshot, making the two references inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "483b3ac3",
@@ -1164,6 +1214,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US source is \"This Connection is Untrusted\", which is about trust, not privacy.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "26c112d1",
@@ -1187,6 +1238,7 @@
    "confidence": "medium"
   },
   "rationale": "Slovenian does not capitalize the common noun mid-phrase, and the standard rendering of \"Firefox Account\" is \"Račun Firefox\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f7b01f8a",
@@ -1210,6 +1262,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"Firefox logo\"; the Slovenian word is \"logotip\", not \"Logtip\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9b7a95a9",
@@ -1233,6 +1286,7 @@
    "confidence": "medium"
   },
   "rationale": "The source specifies trackers that follow users across sites; \"Spletni sledilci\" just means \"web trackers\" and drops the cross-site distinction, which is the key differentiator from the other categories on the same screen.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9f321f40",
@@ -1256,6 +1310,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US says \"Go to device ‘Settings’ > ‘Firefox’\", clarifying it is the iOS device settings, not the app's own settings.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "61235826",
@@ -1279,6 +1334,7 @@
    "confidence": "high"
   },
   "rationale": "\"isklanik\" is a typo; the correct Slovenian word for search engine is \"iskalnik\", as used in the neighbouring strings.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cebef387",
@@ -1302,6 +1358,7 @@
    "confidence": "medium"
   },
   "rationale": "In Slovenian the noun follows the brand name; \"Firefox Računom\" is an English word-order calque with wrong capitalization of the common noun.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6edbf1d4",
@@ -1325,6 +1382,7 @@
    "confidence": "medium"
   },
   "rationale": "Slovenian requires the reflexive possessive \"svoj\" and places the common noun before the brand name; \"Firefox Račun\" is an English calque.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "544ad93a",
@@ -1348,6 +1406,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US \"Clear All Website Data\" clears data for all sites; the Slovenian says \"all data of the website\" (one site).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "68490992",
@@ -1371,6 +1430,7 @@
    "confidence": "medium"
   },
   "rationale": "The source distinguishes \"Disconnect Sync\" from \"Disconnect\" (Settings.Disconnect.DestructiveButton); both are rendered identically, dropping the Sync reference.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ea56b1bf",
@@ -1394,6 +1454,7 @@
    "confidence": "medium"
   },
   "rationale": "Slovenian does not place a brand name attributively before a noun with capitalized common noun; the standard rendering is \"Račun Firefox\" (or \"Firefoxov račun\"). \"Račun\" should also not be capitalized mid-phrase.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f7b01f8a",
@@ -1417,6 +1478,7 @@
    "confidence": "medium"
   },
   "rationale": "Same source term \"Opening screen\" is rendered inconsistently within the same settings area.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "beafdbbd",
@@ -1440,6 +1502,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US source says \"Use Siri shortcuts\"; the Slovenian says only \"Uporabi bližnjice\", losing the Siri qualifier used elsewhere (Settings.Siri.SectionName: \"Bližnjice Siri\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "24c5d52f",
@@ -1463,6 +1526,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to tabs not viewed for two weeks, not tabs not opened.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6ef4e42a",
@@ -1486,6 +1550,7 @@
    "confidence": "medium"
   },
   "rationale": "The header labels a list of blocked websites/trackers; \"zavrnjeno\" means rejected/refused, not blocked, and is inconsistent with blocking terminology.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0a12b5e2",
@@ -1509,6 +1574,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to data of all websites (plural); the singular genitive suggests a single site.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c5a736d6",
@@ -1532,6 +1598,7 @@
    "confidence": "high"
   },
   "rationale": "The source says the user has no tabs open at all on other devices; \"drugih zavihkov\" implies no *other* tabs are open.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "41550f73",
@@ -1555,6 +1622,7 @@
    "confidence": "medium"
   },
   "rationale": "The source specifies opening in a *new* private tab; the target says only \"in a private tab\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a58df76e",
@@ -1578,6 +1646,7 @@
    "confidence": "medium"
   },
   "rationale": "Slovenian requires the definite adjective form for the fixed term \"domači zaslon\" (Home screen); \"domač zaslon\" is ungrammatical here.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "130482f3",
@@ -1601,6 +1670,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Top Sites\" refers to frequently visited sites; \"Glavne strani\" means \"main pages\" and does not convey the source meaning nor the term used elsewhere in Firefox sl.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0d804a58",
@@ -1624,6 +1694,7 @@
    "confidence": "medium"
   },
   "rationale": "The source uses typographic quotes ‘…’; Slovenian typography requires „…“ rather than straight ASCII quotes.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "984e0ea4",
@@ -1647,6 +1718,7 @@
    "confidence": "medium"
   },
   "rationale": "The source uses typographic quotes ‘…’; Slovenian typography requires „…“ rather than straight ASCII quotes.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b8f37ed5",
@@ -1670,6 +1742,7 @@
    "confidence": "medium"
   },
   "rationale": "The source uses typographic quotes ‘…’; Slovenian typography requires „…“ rather than straight ASCII quotes.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9076ae3b",
@@ -1693,6 +1766,7 @@
    "confidence": "medium"
   },
   "rationale": "The source uses typographic quotes ‘…’; Slovenian typography requires „…“ rather than straight ASCII quotes.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a772c74b",

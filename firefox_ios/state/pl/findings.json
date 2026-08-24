@@ -14,6 +14,7 @@
    "confidence": "high"
   },
   "rationale": "The source \"Deleted “%@”\" is a toast shown after a bookmark was deleted; \"Usuń\" is the imperative \"Delete\", reversing the meaning to an action prompt.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8c6d0560",
@@ -37,6 +38,7 @@
    "confidence": "medium"
   },
   "rationale": "Logins.DevicePasscodeRequired.Message.v122 in the same file renders the identical source phrase \"a device passcode\" as \"kod urządzenia\"; the inconsistency mislabels the iOS passcode as a password.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "31a6377a",
@@ -60,6 +62,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to a Privacy Report (tracker blocker summary), not a privacy notice/statement; \"Informacja o prywatności\" suggests a privacy policy notice.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7de84051",
@@ -83,6 +86,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US \"Village or Township\" names two administrative units; \"township\" is an untranslated English word that Polish users will not recognize as an address field label.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "91a2161b",
@@ -106,6 +110,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this counts analytics trackers; \"Treści z elementami śledzącymi\" means \"tracking content\", a different ETP category.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "83cbe98d",
@@ -129,6 +134,7 @@
    "confidence": "high"
   },
   "rationale": "In the source \"it\" is the enhanced tracking protection switch; in Polish the feminine pronoun \"ją\" attaches to \"witrynę\", telling users to turn off the site.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4bd50f1e",
@@ -152,6 +158,7 @@
    "confidence": "high"
   },
   "rationale": "The Save submenu title (MainMenu.ToolsSection.SaveSubmenu.Title.v131) and the Save accessibility label (…Save.v132) both use \"Zapisz\"; using \"Zachowaj\" for the same source term on the same screen is inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "005f1ae6",
@@ -175,6 +182,7 @@
    "confidence": "high"
   },
   "rationale": "Polish spelling rules require the negation particle \"nie\" to be joined with adjectival participles: \"niezaznaczone\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "be4bf9c8",
@@ -198,6 +206,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US: \"have %@ match your device, putting you in control\" — Firefox matches the device; the Polish imperative tells the user to adapt the browser and omits \"putting you in control\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f19f8a30",
@@ -221,6 +230,7 @@
    "confidence": "high"
   },
   "rationale": "The enumeration governed by the preposition \"o\" requires the locative case (urządzeniu, konfiguracji, sposobie); \"sposobu\" is genitive and ungrammatical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ac3ac26b",
@@ -244,6 +254,7 @@
    "confidence": "high"
   },
   "rationale": "The preposition \"o\" governs the locative case for all coordinated nouns (urządzeniu, konfiguracji, sposobie), so \"sposobu\" is a grammatical error.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ac3ac26b",
@@ -267,6 +278,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Wypróbuj\" takes the accusative: \"odrobinę koloru\". \"Wypróbuj odrobiny koloru\" is grammatically incorrect.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "879e6e20",
@@ -290,6 +302,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"Protect your account\" (singular), referring to the account being created; the Polish plural \"konta\" changes the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2fe87887",
@@ -313,6 +326,7 @@
    "confidence": "medium"
   },
   "rationale": "\"on mobile\" was rendered as \"na telefonie\" (on the phone), narrowing the meaning to phones only; the product is available on mobile devices generally.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8f0597fc",
@@ -336,6 +350,7 @@
    "confidence": "high"
   },
   "rationale": "The source says the user won't see pop-ups about the AI enhancements; the Polish drops \"pop-ups\" and adds \"even\", changing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a529c3f8",
@@ -359,6 +374,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US: \"That includes whether to use features enhanced with AI.\" — the choice is whether or not to use the features, not merely \"in using\" them.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4f752983",
@@ -382,6 +398,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to studies (experiments) that test features, not to monitoring how the user uses features; the developer comment confirms this is the opt-in/out toggle for studies.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0bc66316",
@@ -405,6 +422,7 @@
    "confidence": "high"
   },
   "rationale": "The source is the brand name \"X\" (formerly Twitter); brand names must not be replaced with the outdated name.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "96465390",
@@ -428,6 +446,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to the Reader View feature; the Polish says \"to improve its readability\", which names no feature and changes the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "33bb341f",
@@ -451,6 +470,7 @@
    "confidence": "high"
   },
   "rationale": "The source says content is limited (little text), not that it is unsafe/inappropriate for the user.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "18d3c856",
@@ -474,6 +494,7 @@
    "confidence": "medium"
   },
   "rationale": "Placeholder finding removed",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "48e18f64",
@@ -497,6 +518,7 @@
    "confidence": "medium"
   },
   "rationale": "With the verbal noun \"ustawienie\" the phrase \"jako\" takes the case of the governed noun \"Firefoksa\" (genitive), so it must be \"jako domyślnej przeglądarki\"; the accusative form is ungrammatical here.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c4f416e9",
@@ -520,6 +542,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says password, not login credentials.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1c117191",
@@ -543,6 +566,7 @@
    "confidence": "high"
   },
   "rationale": "The context menu item is an action to download the target of the link, not a label naming a link; other items in the same menu use imperative verbs (Kopiuj, Zapisz, Udostępnij).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1866c231",
@@ -566,6 +590,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US specifies \"your connection to this website is secure\"; the reference to the website is omitted.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8a44a1d6",
@@ -589,6 +614,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the connection is untrusted (certificate trust), not insecure; Firefox uses \"niezaufane\" for untrusted.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1746e898",
@@ -612,6 +638,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment states this label points out the cell showing a synced tab from another device; an imperative verb phrase misrepresents a section label.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c4227584",
@@ -635,6 +662,7 @@
    "confidence": "high"
   },
   "rationale": "The source says the device has been disconnected; \"odłączone do\" is ungrammatical and reverses the sense, as the parallel strings use \"odłączone od synchronizacji\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d8e0f126",
@@ -658,6 +686,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is the navigation command \"Forward\"; \"Następna strona\" (next page) names something else and conflicts with the shortcut's meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "676feb25",
@@ -681,6 +710,7 @@
    "confidence": "medium"
   },
   "rationale": "The source specifies recent history; the translation says \"browsing history\", which implies clearing all history and omits \"recent\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c15b60aa",
@@ -704,6 +734,7 @@
    "confidence": "medium"
   },
   "rationale": "The shortcut switches to an existing tab, it does not open a new one; other \"Show ... Tab\" strings in the same group use \"Wyświetl\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "174b4ee4",
@@ -727,6 +758,7 @@
    "confidence": "medium"
   },
   "rationale": "The shortcut switches to the last existing tab; \"Otwórz\" implies opening a new tab and is inconsistent with \"Wyświetl następną/poprzednią kartę\" in the same overlay.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "00f7d5c0",
@@ -750,6 +782,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is the generic affirmative \"Okay\"; \"Przywróć\" means \"Restore\", which says something different from the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a8dfd74a",
@@ -773,6 +806,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US title is \"Oops! Firefox crashed\"; the Polish drops the interjection and substitutes a text emoticon, which is not standard UI typography.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e8ee7cae",
@@ -796,6 +830,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US says \"title bar\", not address bar.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9fccaff5",
@@ -819,6 +854,7 @@
    "confidence": "high"
   },
   "rationale": "Polish punctuation requires a comma before an imiesłowowy równoważnik zdania (\"stukając…\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9fccaff5",
@@ -842,6 +878,7 @@
    "confidence": "high"
   },
   "rationale": "Polish punctuation requires a comma before an imiesłowowy równoważnik zdania (\"stukając…\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d4ecedf1",
@@ -865,6 +902,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US source only says \"The new search engine will appear in the quick search bar.\"; the clause \"i będzie można nią zarządzać poprzez ustawienia\" is invented.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "548ac175",
@@ -888,6 +926,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment states %@ is the placeholder for the device name, not an application name.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "04216131",
@@ -911,6 +950,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is the Save button for saving a custom search engine; \"Gotowe\" means \"Done\", which is a different label (Polish for Save is \"Zapisz\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a9a2df16",
@@ -934,6 +974,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US says \"Use your fingerprint to access passwords now.\" — it refers to the fingerprint, not the branded Touch ID feature, and the word \"now\" is also dropped.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "83378ea5",
@@ -957,6 +998,7 @@
    "confidence": "medium"
   },
   "rationale": "The source and the companion status string refer to previews of links (odnośników), not of a page; the target says \"page preview\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ea25931d",
@@ -980,6 +1022,7 @@
    "confidence": "high"
   },
   "rationale": "Polish punctuation requires the subordinate clause to be closed with a comma on both sides.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "99bc7547",
@@ -1003,6 +1046,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Sync is offline\" — a Sync status message; the Polish only says \"Offline\" with no mention of Sync.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b079f85a",
@@ -1026,6 +1070,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US string ends with a period; the Polish translation drops the final punctuation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b4961b2a",
