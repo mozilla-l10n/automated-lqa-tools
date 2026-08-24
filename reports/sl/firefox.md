@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
+| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 8 of 17,541 |
+| **Strings reviewed this run** | 9 of 17,550 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,16 +45,13 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 17,541 |
-| Missing strings | 639 |
+| Strings | 17,550 |
+| Missing strings | 630 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
+| Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
-| Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
-| printf placeholder mismatches | 0 |
-| Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 1 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 3 |
@@ -65,14 +62,14 @@ _Nothing retired._
 
 ### Completeness
 
-**639 strings** are not translated yet, concentrated in:
+**630 strings** are not translated yet, concentrated in:
 
 - `browser/browser/aiWindow.ftl` — 136
 - `browser/browser/aiWindowContent.ftl` — 71
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 48
 - `dom/chrome/dom/dom.properties` — 45
 - `browser/browser/ipProtection.ftl` — 37
-- `browser/browser/newtab/newtab.ftl` — 34
+- `browser/browser/newtab/newtab.ftl` — 28
 - `browser/browser/aiFeatures.ftl` — 26
 - `devtools/client/toolbox-options.ftl` — 24
 - `dom/chrome/security/security.properties` — 23
@@ -105,6 +102,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 ---
 
 ## 3. Open findings (35)
+
 
 | Impact | Meaning | Count |
 |---|---|---|

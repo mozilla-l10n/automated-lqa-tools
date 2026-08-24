@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
+| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 7 of 18,367 |
+| **Strings reviewed this run** | 36 of 18,397 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -44,17 +44,14 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 370 |
-| Strings | 18,367 |
-| Missing strings | 0 |
-| Obsolete strings | 0 |
+| Files | 372 |
+| Strings | 18,397 |
+| Missing strings | 6 |
+| Obsolete strings | 8 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
+| Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
-| Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
-| printf placeholder mismatches | 0 |
-| Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 1 |
@@ -65,7 +62,11 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**6 strings** are not translated yet, concentrated in:
+
+- `browser/browser/browser.ftl` — 6
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -89,6 +90,7 @@ _Nothing reported._
 ---
 
 ## 3. Open findings (0)
+
 
 | Impact | Meaning | Count |
 |---|---|---|

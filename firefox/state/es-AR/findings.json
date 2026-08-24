@@ -14,6 +14,7 @@
    "confidence": "high"
   },
   "rationale": "Demonstrative adjective «esta» carries no accent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d53112d1",
@@ -37,6 +38,7 @@
    "confidence": "high"
   },
   "rationale": "Reflexive «se» must be unaccented; the accented «sé» is the verb «saber». Occurs in all three plural variants of this message.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1ce98051",
@@ -60,6 +62,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “Only links can be saved.” The current wording says something else and is not grammatical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0ca97aff",
@@ -83,6 +86,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “It’s free.” «gratis» is a llana word ending in -s and carries no accent; «En» should be «Es».",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4ebdadc3",
@@ -106,6 +110,7 @@
    "confidence": "high"
   },
   "rationale": "en-US macOS variant is “Keep in Dock”; macOS has no taskbar, and the variant is now identical to the *[other] one.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3653ae3c",
@@ -129,6 +134,7 @@
    "confidence": "high"
   },
   "rationale": "Every other string in about:privatebrowsing uses usted («Oculte», «Use», «su»).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9fe44ea5",
@@ -152,6 +158,7 @@
    "confidence": "medium"
   },
   "rationale": "The rest of the Firefox es-AR UI addresses the user with usted; the sibling string window-restoration-info also uses «Tus».",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "010be51d",
@@ -175,6 +182,7 @@
    "confidence": "high"
   },
   "rationale": "Neighbouring strings in the same page use usted («Mire las pestañas», «vuelva a intentarlo»).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "56b659e0",
@@ -198,6 +206,7 @@
    "confidence": "high"
   },
   "rationale": "Adjective is plural, noun is singular; the companion string uses «Ocultar pestañas anteriores».",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5bf0ea1f",
@@ -221,6 +230,7 @@
    "confidence": "high"
   },
   "rationale": "Plural noun requires plural article.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "acd1508f",
@@ -244,6 +254,7 @@
    "confidence": "high"
   },
   "rationale": "Missing letter in «descargado».",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8ee2db63",
@@ -267,6 +278,7 @@
    "confidence": "high"
   },
   "rationale": "en-US says “Click Enable and try again.” and the adjacent button is labelled «Habilitar»; the current text instructs the user to use a control that isn't there.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8dbc3133",
@@ -290,6 +302,7 @@
    "confidence": "high"
   },
   "rationale": "Letter transposition in «puede».",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3b9fc92f",
@@ -313,6 +326,7 @@
    "confidence": "high"
   },
   "rationale": "The companion string aiwindow-firstrun-model-subtitle uses «Elija… Se puede cambiar», and the firstrun title uses «para usted».",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b0057521",
@@ -336,6 +350,7 @@
    "confidence": "high"
   },
   "rationale": "Adjacent error headers use «Intente de nuevo», «Espere un momento», «Pruebe una red diferente».",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "594291bd",
@@ -353,10 +368,11 @@
   "file": "browser/browser/appMenuNotifications.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "es-AR",
   "origin": {},
   "rationale": "The label is “Mantener los cambios”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9f4bce51",
@@ -380,6 +396,7 @@
    "confidence": "high"
   },
   "rationale": "Missing letter.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9f4bce51",
@@ -397,10 +414,11 @@
   "file": "browser/browser/appMenuNotifications.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "es-AR",
   "origin": {},
   "rationale": "The label is “Mantener los cambios”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "206d76cd",
@@ -424,6 +442,7 @@
    "confidence": "high"
   },
   "rationale": "Surrounding app-menu strings use usted («Administre», «Proteja y acceda a sus marcadores»).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6579b62e",
@@ -447,6 +466,7 @@
    "confidence": "high"
   },
   "rationale": "«pestañas» carries no written accent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8bc6ed1e",
@@ -470,6 +490,7 @@
    "confidence": "high"
   },
   "rationale": "The same panel uses «Proteja y acceda a sus marcadores» and «Administrar cuenta».",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "52122575",
@@ -493,6 +514,7 @@
    "confidence": "high"
   },
   "rationale": "Missing space plus stray letter.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ecec72b8",
@@ -516,6 +538,7 @@
    "confidence": "high"
   },
   "rationale": "«dispositivos» is masculine.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0df95aa0",
@@ -539,6 +562,7 @@
    "confidence": "high"
   },
   "rationale": "All other profiler strings in this file use usted or impersonal forms («no la use», «Editar Preferencias»).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5f653e20",
@@ -556,10 +580,11 @@
   "file": "browser/browser/browser.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "es-AR",
   "origin": {},
   "rationale": "The label is “Marcadores”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "adde7344",
@@ -583,6 +608,7 @@
    "confidence": "high"
   },
   "rationale": "«Ö» and «Ä» are not Spanish letters; the intended characters are Ó and Á.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "99ab5b93",
@@ -606,6 +632,7 @@
    "confidence": "high"
   },
   "rationale": "en-US “Choose What I Share”; the indirect interrogative requires the accent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6dd70b05",
@@ -629,6 +656,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “…is not secure and could be compromised.” The sentence is ungrammatical as written.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "35a76fe8",
@@ -652,6 +680,7 @@
    "confidence": "high"
   },
   "rationale": "Neighbouring identity-panel strings use «Su conexión», «Está conectado».",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c2c2791d",
@@ -675,6 +704,7 @@
    "confidence": "high"
   },
   "rationale": "«lo mismo» means “the same thing”; the button enables PiP despite the site's recommendation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d836d9f4",
@@ -698,6 +728,7 @@
    "confidence": "high"
   },
   "rationale": "about-private-browsing-info-title translates the identical en-US sentence as «Está en una ventana privada»; the panel body below also uses usted.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7d5225d2",
@@ -721,6 +752,7 @@
    "confidence": "high"
   },
   "rationale": "Interrogative «cómo» requires the accent; without it the label reads “show me as/like”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5d151994",
@@ -744,6 +776,7 @@
    "confidence": "high"
   },
   "rationale": "Demonstrative adjective carries no accent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4c2a1419",
@@ -767,6 +800,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “Removing cookies and site data might log you out of websites…”; the dangling preposition breaks the clause.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4cf8b530",
@@ -790,6 +824,7 @@
    "confidence": "high"
   },
   "rationale": "Letter transposition.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f9c4c9dc",
@@ -813,6 +848,7 @@
    "confidence": "high"
   },
   "rationale": "urlbar-dismissal-acknowledgment-weather and urlbar-result-dismissal-acknowledgment-all in the same file read «Gracias por su opinión. Ya no verá…».",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "083f87a1",
@@ -836,6 +872,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is “Manage sharing other speakers with the site”; the tooltip is for audio output, and it duplicates the microphone tooltip above it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "51077a64",
@@ -859,6 +896,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment requires crashed-subframe-title to match this message; the title uses the usted form, so the two now differ.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0b3367f1",
@@ -882,6 +920,7 @@
    "confidence": "high"
   },
   "rationale": "The heading right above is «Guarde las contraseñas en un lugar seguro»; the voseo form would also require an accent («Agregalas» → «Agregalas» is unaccented as written).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4e7b65fd",
@@ -905,6 +944,7 @@
    "confidence": "high"
   },
   "rationale": "Every other string in this file uses usted («Guarde las contraseñas», «Ingrese la contraseña»).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d19b3f58",
@@ -928,6 +968,7 @@
    "confidence": "high"
   },
   "rationale": "Reflexive «se» must be unaccented. Present in all three variants of this message.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bab14233",
@@ -951,6 +992,7 @@
    "confidence": "high"
   },
   "rationale": "Demonstrative adjective carries no accent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8b1bbc3f",
@@ -974,6 +1016,7 @@
    "confidence": "high"
   },
   "rationale": "This dialog is about a keyboard key; customkeys-conflict-confirm and customkeys-key-invalid use «tecla», and «clave» reads as “password” in this product.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9c341e9b",
@@ -997,6 +1040,7 @@
    "confidence": "high"
   },
   "rationale": "Editing artifact; «ControlaControlar» is not a word.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0cf7863a",
@@ -1020,6 +1064,7 @@
    "confidence": "high"
   },
   "rationale": "The comment states Location refers to the bookmark's position among bookmarks, not its URL; «Dirección» collides with the URL field right above.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c9d3355e",
@@ -1043,6 +1088,7 @@
    "confidence": "high"
   },
   "rationale": "The infinitive «agregar» takes no written accent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "73029a78",
@@ -1066,6 +1112,7 @@
    "confidence": "high"
   },
   "rationale": "Esdrújula formed by the enclitic pronoun requires a written accent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "337dc6ba",
@@ -1089,6 +1136,7 @@
    "confidence": "high"
   },
   "rationale": "The other survey strings use «¿Qué tan satisfecho está…?» and «Ayude a mejorar».",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3f9bafc1",
@@ -1112,6 +1160,7 @@
    "confidence": "high"
   },
   "rationale": "The Perplexity callouts immediately above use «Pruebe», as does the rest of the file.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "51fc3ecc",
@@ -1135,6 +1184,7 @@
    "confidence": "high"
   },
   "rationale": "«cualquier» requires a singular noun; en-US is “Launch any site”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "732eadbe",
@@ -1158,6 +1208,7 @@
    "confidence": "high"
   },
   "rationale": "windows-10-eos-sync-tour-subtitle-1 says «Arrastre una pestaña…»; the accent is also missing for the voseo form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1ee752a3",
@@ -1181,6 +1232,7 @@
    "confidence": "high"
   },
   "rationale": "en-US “what { -brand-short-name } remembers”; indirect interrogative needs the accent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b6482f93",
@@ -1204,6 +1256,7 @@
    "confidence": "high"
   },
   "rationale": "The replacement string firefoxview-history-empty-description-2 and the rest of the page use usted/impersonal forms.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "80912c0d",
@@ -1227,6 +1280,7 @@
    "confidence": "high"
   },
   "rationale": "Word run-on with an inserted character.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "970071b2",
@@ -1250,6 +1304,7 @@
    "confidence": "high"
   },
   "rationale": "Possessive «mi» is unaccented; «seguir con» needs a space.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fcf21045",
@@ -1273,6 +1328,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “read the beginning of the page”; the typo yields a different word.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "991213a8",
@@ -1296,6 +1352,7 @@
    "confidence": "high"
   },
   "rationale": "The verbs must agree; the rest of the file uses usted.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "188bd6e4",
@@ -1319,6 +1376,7 @@
    "confidence": "high"
   },
   "rationale": "The two halves of the same sentence use different persons; the file's convention is usted.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b7c0897b",
@@ -1342,6 +1400,7 @@
    "confidence": "high"
   },
   "rationale": "Missing space and extra letters garble the product term.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8c81e8cc",
@@ -1365,6 +1424,7 @@
    "confidence": "high"
   },
   "rationale": "ipprotection-feature-introduction-description-summer-promo and the rest of the file use usted.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a62bd8c4",
@@ -1388,6 +1448,7 @@
    "confidence": "high"
   },
   "rationale": "en-US aria-label is “Unavailable, disabled”; the typo produces a different real word.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "74146226",
@@ -1411,6 +1472,7 @@
    "confidence": "high"
   },
   "rationale": "The preposition appears both before and inside the link.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9de0d6a4",
@@ -1434,6 +1496,7 @@
    "confidence": "high"
   },
   "rationale": "\"sé\" is the verb \"saber\"; the impersonal reflexive requires unaccented \"se\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0b018da0",
@@ -1457,6 +1520,7 @@
    "confidence": "high"
   },
   "rationale": "The step tells the user to pick the previously saved file; the localization inverts it into a file yet to be saved.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "554cb495",
@@ -1480,6 +1544,7 @@
    "confidence": "high"
   },
   "rationale": "Indirect interrogative \"cómo\" is written with an accent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3a6e9691",
@@ -1503,6 +1568,7 @@
    "confidence": "high"
   },
   "rationale": "Verb plus enclitic pronoun becomes esdrújula and must carry the accent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a3bcbee2",
@@ -1526,6 +1592,7 @@
    "confidence": "high"
   },
   "rationale": "“See how it works” requires the accented interrogative “cómo”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4ee8a15a",
@@ -1549,6 +1616,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “like bookmarks and passwords”. “contrato” is a different concept and makes the sentence nonsensical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5bc874e2",
@@ -1572,6 +1640,7 @@
    "confidence": "high"
   },
   "rationale": "“Mas” without accent is the archaic conjunction “but”; the comparative requires “Más”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e9bf6eea",
@@ -1595,6 +1664,7 @@
    "confidence": "high"
   },
   "rationale": "“tus” (tú) and “vaya” (usted) refer to the same addressee in one sentence; the surrounding strings in this file use usted.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "56ba07fa",
@@ -1618,6 +1688,7 @@
    "confidence": "high"
   },
   "rationale": "“caught up” means having read everything; “atrapado” means trapped/caught, reversing the intended positive meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3c08afde",
@@ -1641,6 +1712,7 @@
    "confidence": "high"
   },
   "rationale": "Both attributes render “Picture of the day options” in en-US; the tooltip says “Opción” (one option) while the aria-label says “Opciones de fotos del día”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b87afa99",
@@ -1664,6 +1736,7 @@
    "confidence": "high"
   },
   "rationale": "en-US states the browsing data never leaves the user's copy of Firefox; “la seguridad de” is spurious and also breaks agreement with the plural verb “dejan”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2f877de8",
@@ -1687,6 +1760,7 @@
    "confidence": "high"
   },
   "rationale": "The adjacent button newtab-section-manage-topics-button-v2 is “Administrar temas” and home-prefs-manage-topics-link2 is “Administrar temas”; “Tópicos” is an anglicism inconsistent with the same surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "46f12618",
@@ -1710,6 +1784,7 @@
    "confidence": "high"
   },
   "rationale": "Developer comment: “Status shown when more matches are being fetched.” The rest of the sports widget consistently uses “partidos”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "483eb6b8",
@@ -1733,6 +1808,7 @@
    "confidence": "high"
   },
   "rationale": "en-US “Thanks. Your feedback will help us improve your feed.” has two sentences.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "49feaf88",
@@ -1756,6 +1832,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says the word refers to astronomy; “Celeste” is used in this same file as the color name (newtab-wallpaper-light-blue = Celeste), so as a category title it reads as a color, not as an astronomy category.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "14ba03c0",
@@ -1779,6 +1856,7 @@
    "confidence": "high"
   },
   "rationale": "Both words require written accents (“satélite”, “río”).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a24ca82b",
@@ -1802,6 +1880,7 @@
    "confidence": "high"
   },
   "rationale": "“Reniciar” is not a Spanish word (typo for “Reiniciar”); en-US is “Reset to default”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e4e80c97",
@@ -1825,6 +1904,7 @@
    "confidence": "high"
   },
   "rationale": "“Tell us what you think” requires the accented interrogative “qué”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d1b26986",
@@ -1848,6 +1928,7 @@
    "confidence": "high"
   },
   "rationale": "This is the play/pause control of the Pomodoro-style timer (paired with newtab-widget-timer-label-pause = Pausa), not a game.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ceedc7c7",
@@ -1871,6 +1952,7 @@
    "confidence": "high"
   },
   "rationale": "en-US “Make { -firefox-home-brand-name } your colorful homepage”; the tree elsewhere translates homepage as “página de inicio” (see home-homepage-title in newtab.ftl).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d69719c1",
@@ -1894,6 +1976,7 @@
    "confidence": "high"
   },
   "rationale": "“See what's new” requires the accented interrogative “qué”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1f9aa686",
@@ -1917,6 +2000,7 @@
    "confidence": "high"
   },
   "rationale": "“más” is repeated; en-US reads “safer and more accessible”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "12eef5de",
@@ -1940,6 +2024,7 @@
    "confidence": "high"
   },
   "rationale": "Same duplication as in onboarding-gratitude-security-and-privacy-subtitle.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5d62dbe2",
@@ -1963,6 +2048,7 @@
    "confidence": "high"
   },
   "rationale": "The subject “toda la información importante” is singular, so “disponibles” must agree in the singular (or the whole clause be pluralized).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2edc6f84",
@@ -1986,6 +2072,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"Can read and change data for this visit\"; adding \"Siempre\" and \"cada visita\" reverses the temporary nature of the grant and duplicates origin-controls-state-always-on.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2bf33e93",
@@ -2009,6 +2096,7 @@
    "confidence": "high"
   },
   "rationale": "The affirmative adverb requires the accent; security-visits-number in the same file uses \"Sí\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "915727a2",
@@ -2032,6 +2120,7 @@
    "confidence": "high"
   },
   "rationale": "The field shows the certificate/site owner, not an author; page-info-security-no-owner in the same file uses \"propietario\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "882f5542",
@@ -2055,6 +2144,7 @@
    "confidence": "high"
   },
   "rationale": "\"es historial\" is ungrammatical; the definite article \"el\" is required.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b850e268",
@@ -2078,6 +2168,7 @@
    "confidence": "high"
   },
   "rationale": "en-US refers to the menu command named “Set as Desktop Background”; “configurado como” turns it into “the menu command configured as…”, changing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6dcb88d4",
@@ -2101,6 +2192,7 @@
    "confidence": "high"
   },
   "rationale": "policy-MicrosoftEntraSSO in the same file uses the correct term “inicio de sesión único”; “un solo inicio de sesión” reads as a numeric limit rather than the SSO feature.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4beb7723",
@@ -2124,6 +2216,7 @@
    "confidence": "high"
   },
   "rationale": "“y” and “desbloquee” are run together and the verb is misspelled; en-US is “Complete and unlock bonus fox icons”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "83656f68",
@@ -2147,6 +2240,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “Will require websites to reload images and data”. The subject/object are swapped, producing a nonsensical sentence.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ca7858ed",
@@ -2170,6 +2264,7 @@
    "confidence": "medium"
   },
   "rationale": "Same defect as colors-text-background: this label is the website background colour, not the desktop wallpaper.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6fb84952",
@@ -2193,6 +2288,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “with your selections above”. The controls referenced are above this checkbox, so “debajo” points the user to the wrong place.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7b43a1b4",
@@ -2216,6 +2312,7 @@
    "confidence": "medium"
   },
   "rationale": "The prefix sobre- plus escribir contracts to “sobrescribir”; “sobreescribir” is not a valid spelling.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7b43a1b4",
@@ -2239,6 +2336,7 @@
    "confidence": "medium"
   },
   "rationale": "In the Colors dialog “Background” is the page background colour paired with “Texto”; “fondo de pantalla” means wallpaper (see home-prefs-choose-wallpaper-link, “Elegir un fondo de pantalla”).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d679f49f",
@@ -2262,6 +2360,7 @@
    "confidence": "high"
   },
   "rationale": "“cuand” and “gardado” are typos for “cuando” and “guardado”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fb574300",
@@ -2285,6 +2384,7 @@
    "confidence": "high"
   },
   "rationale": "Duplicate of the connection-proxy-autologin tooltip; both need the same spelling fix.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c2020cad",
@@ -2308,6 +2408,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says: Do not translate \"localhost\", \"127.0.0.1/8\" and \"::1\". The CIDR suffix /8 was dropped, changing the technical statement.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5a30a9f4",
@@ -2331,6 +2432,7 @@
    "confidence": "medium"
   },
   "rationale": "All the other icon names in this list are nouns (Maletín, Regalo, Árbol); “Fence” here is the object, not the action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d35103b4",
@@ -2354,6 +2456,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment identifies this as the primary administrative division used in Russia and Ukraine; an óblast is not an autonomous province, and neighbouring entries (Do/Si, Eircode, Townland) keep the local term.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7b27794e",
@@ -2377,6 +2480,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “Form autofill is currently available only for certain countries.” The sibling string autofill-country-warning-message-2 already uses the correct “El autocompletado de formularios”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e1897f29",
@@ -2400,6 +2504,7 @@
    "confidence": "medium"
   },
   "rationale": "The rest of the dialog uses the informal address (“tu dispositivo móvil”, “sostené el teléfono”), so this step is inconsistent within the same screen.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7676868b",
@@ -2423,6 +2528,7 @@
    "confidence": "medium"
   },
   "rationale": "The dialog title permissions-exceptions-etp-window2 uses “protección de rastreo aumentada”, which is also the form used in preferences.ftl (content-blocking-enhanced-tracking-protection, preferences-etp-status-header).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e48b3a30",
@@ -2446,6 +2552,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “any websites not listed above”; the site list is above the checkbox, and sibling strings such as permissions-site-notification-disable-desc use “no incluidos en la lista”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b16303fc",
@@ -2469,6 +2576,7 @@
    "confidence": "high"
   },
   "rationale": "Same inversion as the camera description; en-US reads “any websites not listed above”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "12c3cb2d",
@@ -2492,6 +2600,7 @@
    "confidence": "medium"
   },
   "rationale": "Every other permission description in this file uses usted (“Puede especificar qué sitios web…”); “cuales” also needs its accent in an indirect question.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "240846dc",
@@ -2515,6 +2624,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “…from requesting permission to access your virtual reality devices. Blocking access to your virtual reality devices…”. The string was copied from the Location pane and describes the wrong permission.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "50127b58",
@@ -2538,6 +2648,7 @@
    "confidence": "high"
   },
   "rationale": "“información” is feminine, so the participle must agree; compare data-collection-health-report-disabled in the same file, “El envío de informes de datos está desactivado.”",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e55a4186",
@@ -2561,6 +2672,7 @@
    "confidence": "high"
   },
   "rationale": "en-US “Allow Firefox to install and run studies”; Spanish requires “permitir que + subjuntivo”, as used in collection-health-report (“Permitir que { -brand-short-name } envíe…”).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c83e5676",
@@ -2584,6 +2696,7 @@
    "confidence": "high"
   },
   "rationale": "Accidental repetition; en-US “Separate cookies by container so you can use…”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "99d0e0f2",
@@ -2607,6 +2720,7 @@
    "confidence": "medium"
   },
   "rationale": "The surrounding content-blocking and ETP strings consistently use usted (“Elija…”, “protege al navegar… usted tenga el control”).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ca4bdd44",
@@ -2630,6 +2744,7 @@
    "confidence": "high"
   },
   "rationale": "The same en-US term is rendered “Detectores de huellas digitales” in content-blocking-fingerprinters and in the ETP custom labels in this file, so the English label is inconsistent in the same surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b6f33835",
@@ -2653,6 +2768,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment states the known fingerprinters are the trackers that are known; content-blocking-known-and-suspected-fingerprinters in the same file correctly uses “conocidos y sospechosos”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1f2d6332",
@@ -2676,6 +2792,7 @@
    "confidence": "high"
   },
   "rationale": "All other fingerprinter strings in this file (including preferences-etp-custom-suspect-fingerprinting-protection-enabled) use “huellas digitales”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b2547e56",
@@ -2699,6 +2816,7 @@
    "confidence": "high"
   },
   "rationale": "Typo; en-US “helps improve quality for everyone”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "703e149a",
@@ -2722,6 +2840,7 @@
    "confidence": "high"
   },
   "rationale": "The parallel string extension-controlling-web-notifications correctly reads “controla esta configuración.”",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7ca21043",
@@ -2745,6 +2864,7 @@
    "confidence": "high"
   },
   "rationale": "The subject is the singular brand name, so the verb must be “se conecta”; the interrogative “cómo” also needs its accent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0877f9e1",
@@ -2768,6 +2888,7 @@
    "confidence": "high"
   },
   "rationale": "Same accent error as extension-controlling-password-saving; the demonstrative adjective carries no accent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7ca21043",
@@ -2791,6 +2912,7 @@
    "confidence": "medium"
   },
   "rationale": "forms-master-pw-change is the string that intentionally keeps the former “Master Password” name; forms-primary-pw-change is the current label and should match forms-primary-pw-set / forms-primary-pw-change-2, which use “contraseña primaria”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a3200166",
@@ -2814,6 +2936,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “Changing these settings may cause connections issues”; the demonstrative adjective must be “esta”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "99e8b903",
@@ -2837,6 +2960,7 @@
    "confidence": "high"
   },
   "rationale": "The adjacent performance-limit-content-process-enabled-desc correctly uses “procesos de contenido”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b7bfc02e",
@@ -2860,6 +2984,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “this adds descriptions to make them accessible”; the purpose clause needs “para”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c08c8323",
@@ -2883,6 +3008,7 @@
    "confidence": "high"
   },
   "rationale": "Syllable duplicated in “verificados”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6b466ec1",
@@ -2906,6 +3032,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “with control over your provider and fallback behavior”; “el del” leaves the phrase without a referent. The same fragment appears in preferences-doh-radio-custom.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "aa467970",
@@ -2929,6 +3056,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “Use your default DNS resolver”. Compare preferences-doh-overview-off in the same file, which reads “Usar el resolvedor de DNS predeterminado.”",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "35129d79",
@@ -2952,6 +3080,7 @@
    "confidence": "high"
   },
   "rationale": "“dentro” requires “de” before a noun phrase.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c2f9e19b",
@@ -2975,6 +3104,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “some sites might not display content correctly”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e4833440",
@@ -2998,6 +3128,7 @@
    "confidence": "high"
   },
   "rationale": "“sé” is the verb “saber”; the impersonal pronoun is “se”. Compare the neighbouring settings-translations-subpage-no-languages-added, “No se agregaron idiomas”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0633353a",
@@ -3021,6 +3152,7 @@
    "confidence": "high"
   },
   "rationale": "The clitic “-le” is third person (usted) but “salgas” is second person; the file otherwise uses usted.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "63d965bc",
@@ -3044,6 +3176,7 @@
    "confidence": "medium"
   },
   "rationale": "The imperative “Busque” is coordinated with the infinitive “dejarme”; en-US: “Check for updates but let you choose to install them”. Compare update-application-check-choose-2, “Buscar actualizaciones, pero elegir cuándo instalarlas”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1c3873eb",
@@ -3067,6 +3200,7 @@
    "confidence": "high"
   },
   "rationale": "\"LeeLea\" is a leftover from an edit (voseo \"Leé\"/tuteo \"Lee\" merged with \"Lea\"); it is not a word and appears as a visible header.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2b94f9e8",
@@ -3090,6 +3224,7 @@
    "confidence": "medium"
   },
   "rationale": "The neighbouring bookmark titles use the Argentine voseo imperative (\"Obtené ayuda\", \"Personalizá Firefox\"); \"Participa\" is the tuteo form and breaks that form of address within the same surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8d03cd50",
@@ -3113,6 +3248,7 @@
    "confidence": "high"
   },
   "rationale": "Two separate words were run together.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "59e3c53b",
@@ -3136,6 +3272,7 @@
    "confidence": "high"
   },
   "rationale": "en-US says \"in Private Windows\"; the localized text drops \"privadas\" (and leaves a stray space), changing the meaning to all windows. privacy-metrics-private-window in the same file translates it correctly.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "608cfd66",
@@ -3159,6 +3296,7 @@
    "confidence": "high"
   },
   "rationale": "\"ocultattlal\" is corrupted; the parallel string protections-vpn-header-content-subscribed uses \"oculta la ubicación\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a03032d1",
@@ -3182,6 +3320,7 @@
    "confidence": "high"
   },
   "rationale": "The English refers to the fingerprint itself, not the detector; fingerprinter-tab-content in protections.ftl translates the same sentence as \"Usando esta huella digital\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "96e68c7d",
@@ -3205,6 +3344,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"while you're on this site\"; the localized clause lacks the preposition and capitalizes \"Este\" mid-sentence.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "60366cfe",
@@ -3228,6 +3368,7 @@
    "confidence": "high"
   },
   "rationale": "The demonstrative adjective is unaccented \"este\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cc7f3a5e",
@@ -3251,6 +3392,7 @@
    "confidence": "high"
   },
   "rationale": "The .title attribute of the same message correctly reads \"Informar sitio roto\"; \"rotor\" is a typo.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c47750c4",
@@ -3274,6 +3416,7 @@
    "confidence": "high"
   },
   "rationale": "The neuter demonstrative \"esto\" never takes a written accent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e2ba49c9",
@@ -3297,6 +3440,7 @@
    "confidence": "high"
   },
   "rationale": "The rest of the file uses usted (\"Sus complementos\", \"Puede intentar\"), and usted is overwhelmingly dominant across the locale.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b422d983",
@@ -3320,6 +3464,7 @@
    "confidence": "high"
   },
   "rationale": "A coordinated masculine + feminine subject takes the masculine plural participle \"deshabilitados\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5b0fff46",
@@ -3343,6 +3488,7 @@
    "confidence": "high"
   },
   "rationale": "\"página\" is esdrújula and always accented; the surrounding strings in the same file spell it correctly.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f176374b",
@@ -3366,6 +3512,7 @@
    "confidence": "high"
   },
   "rationale": "en-US says \"revealing personal information\"; \"información personas\" is ungrammatical and loses the meaning of the security warning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "36ac3e49",
@@ -3389,6 +3536,7 @@
    "confidence": "high"
   },
   "rationale": "\"está\" is the verb \"estar\"; the demonstrative adjective is unaccented \"esta\". Same error in safeb-blocked-addon-page-short-desc.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6458b367",
@@ -3412,6 +3560,7 @@
    "confidence": "high"
   },
   "rationale": "The verb is \"intentar\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2e364a2c",
@@ -3435,6 +3584,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US asks the user directly whether they see their device; the translation turns it into an impersonal passive construction and loses the possessive reference to the user's device.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d9f04355",
@@ -3458,6 +3608,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"blocked over { $trackerCount } trackers since\"; the localized text runs the brand into \"más de\" and shows a literal \"# 2\" instead of the number.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e3ab6360",
@@ -3481,6 +3632,7 @@
    "confidence": "high"
   },
   "rationale": "\"bloqueado\" is a past participle; the sentence needs the preterite \"bloqueó\" as in graph-week-summary.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e3ab6360",
@@ -3504,6 +3656,7 @@
    "confidence": "high"
   },
   "rationale": "The correct spelling is \"marcadores\", used everywhere else in the same file.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b047f6b4",
@@ -3527,6 +3680,7 @@
    "confidence": "high"
   },
   "rationale": "tab-context-unload-n-tabs in the same file translates \"Unload\" as \"Liberar\"; \"Descargar\" reads as \"Download\" in a tab context menu that also has download entries.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a650ae7b",
@@ -3550,6 +3704,7 @@
    "confidence": "high"
   },
   "rationale": "The article and noun were run together.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "359bf36a",
@@ -3573,6 +3728,7 @@
    "confidence": "high"
   },
   "rationale": "The neuter demonstrative \"esto\" never takes a written accent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a3e1cf3b",
@@ -3596,6 +3752,7 @@
    "confidence": "high"
   },
   "rationale": "\"pestaña\" is repeated before the count; the parallel mute tooltip has the correct form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "65e92082",
@@ -3613,10 +3770,11 @@
   "file": "browser/browser/termsofuse.ftl",
   "first_seen": "2026-08-20",
   "impact": 1,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "es-AR",
   "origin": {},
   "rationale": "Whitespace inside a closing tag makes it render as literal text.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e34787c6",
@@ -3640,6 +3798,7 @@
    "confidence": "high"
   },
   "rationale": "The demonstrative adjective is unaccented \"Esta\"; \"Está\" is the verb, producing \"Is page is translated\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a98a4361",
@@ -3663,6 +3822,7 @@
    "confidence": "high"
   },
   "rationale": "The demonstrative adjective is unaccented \"Esta\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ad69960e",
@@ -3686,6 +3846,7 @@
    "confidence": "high"
   },
   "rationale": "The demonstrative adjective is unaccented \"Esta\"; the -single2 variant correctly reads \"Esta extensión\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2266237b",
@@ -3709,6 +3870,7 @@
    "confidence": "high"
   },
   "rationale": "The demonstrative adjective is unaccented \"este\"; webrtc-allow-share-camera-with-file in the same section spells it correctly.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fbe30e3b",
@@ -3732,6 +3894,7 @@
    "confidence": "high"
   },
   "rationale": "The gerund is \"Compartiendo\", as in every sibling string.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "abf4549c",
@@ -3755,6 +3918,7 @@
    "confidence": "high"
   },
   "rationale": "\"pestañas\" carries no accent; all parallel strings spell it correctly.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "be67f8fa",
@@ -3778,6 +3942,7 @@
    "confidence": "high"
   },
   "rationale": "\"Estás\" (vos/tú) clashes with \"su\"; the adjacent webrtc-sharing-window and webrtc-sharing-browser-window use \"Está\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d7114884",
@@ -3801,6 +3966,7 @@
    "confidence": "high"
   },
   "rationale": "The adjective is plural while the noun it modifies is singular; en-US is \"Unvisited Site Cookies\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d254c5ca",
@@ -3824,6 +3990,7 @@
    "confidence": "high"
   },
   "rationale": "en-US \"Learn how\"; the indirect interrogative requires an accent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "308c7e72",
@@ -3847,6 +4014,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"Yes, take me to %S\"; unaccented \"si\" is the conditional conjunction \"if\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a87d7a6a",
@@ -3870,6 +4038,7 @@
    "confidence": "high"
   },
   "rationale": "Spanish writes language names in lowercase; \"Inglés\" is capitalized twice in this string.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0000dbec",
@@ -3893,6 +4062,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: \"A web page is slowing down %1$S\". With \"se\", the sentence reads as the page slowing itself; the parallel strings processHang.selected_tab.label and processHang.specific_tab.label correctly omit it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "278ede0d",
@@ -3916,6 +4086,7 @@
    "confidence": "high"
   },
   "rationale": "The verb is \"anonimizar\"; only the adjective \"anónimo\" carries the accent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fb5e4faa",
@@ -3939,6 +4110,7 @@
    "confidence": "high"
   },
   "rationale": "Indirect interrogative pronoun requires an accent (\"Select which to use\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "acc4438c",
@@ -3962,6 +4134,7 @@
    "confidence": "high"
   },
   "rationale": "The adverb formed from \"común\" keeps the accent: \"comúnmente\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "053da593",
@@ -3985,6 +4158,7 @@
    "confidence": "high"
   },
   "rationale": "en-US \"This may sign you out of websites\" refers to the whole preceding action, which requires the neuter demonstrative \"Esto\"; \"Este\" would have to agree with a masculine noun.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "27828ee4",
@@ -4008,6 +4182,7 @@
    "confidence": "high"
   },
   "rationale": "\"Acceder\" governs \"a\"; the neighbouring permission.serial.label correctly reads \"Acceder a puertos serie\". Same defect in permission.midi-sysex.label.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3e859b89",
@@ -4031,6 +4206,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment explicitly says \"Open as a verb. 'This site may open applications'.\" \"Aplicaciones abiertas\" means \"opened applications\", so the permission label reads as a state instead of an action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5673f87a",
@@ -4054,6 +4230,7 @@
    "confidence": "high"
   },
   "rationale": "Indirect interrogative \"cómo\" requires the accent; the identical text in unknownSocketType has the same defect.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "32bc6930",
@@ -4077,6 +4254,7 @@
    "confidence": "high"
   },
   "rationale": "\"evitar\" requires \"que\" before the subordinate clause; the parallel string xfoBlocked correctly writes \"evita que se cargue\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "83edf4e8",
@@ -4100,6 +4278,7 @@
    "confidence": "high"
   },
   "rationale": "\"Apliación\" is a typo for \"Aplicación\"; the same string also has \"a menos que este seguro\", which needs the subjunctive \"esté\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cfebf5c4",
@@ -4123,6 +4302,7 @@
    "confidence": "high"
   },
   "rationale": "Indirect interrogative \"cómo\" is always accented. Same error in clientSocketMisconfiguration and unknownSocketType (\"no sabe como comunicarse\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b0ae302c",
@@ -4146,6 +4326,7 @@
    "confidence": "high"
   },
   "rationale": "en-US \"Require Linux authentication…\"; the Mac and Windows variants of the same checkbox both use \"Requerir\", so this one reads as a statement of fact instead of a setting.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4adcbc33",
@@ -4169,6 +4350,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"is trying to use stored credit card information\"; the Windows variant in the same file correctly says \"usar la información almacenada\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4d57f140",
@@ -4192,6 +4374,7 @@
    "confidence": "high"
   },
   "rationale": "The correct Spanish term for “user interface” is “interfaz”; “interfase” is a biology/physics term.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f53f7d8d",
@@ -4215,6 +4398,7 @@
    "confidence": "high"
   },
   "rationale": "Indirect interrogative requires the accented “qué”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6e5d6030",
@@ -4238,6 +4422,7 @@
    "confidence": "high"
   },
   "rationale": "en-US “Refresh $BrandShortName Instead?”; “en su lugar” requires the preposition “en”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0bfe0918",
@@ -4261,6 +4446,7 @@
    "confidence": "high"
   },
   "rationale": "Typo for “espacio”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b694aaf1",
@@ -4284,6 +4470,7 @@
    "confidence": "high"
   },
   "rationale": "The English source tail was left in the string, producing a duplicated bilingual sentence in the installer dialog.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "df1eb632",
@@ -4307,6 +4494,7 @@
    "confidence": "high"
   },
   "rationale": "“Choose which features…” requires the accented interrogative “qué”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "191a7732",
@@ -4330,6 +4518,7 @@
    "confidence": "high"
   },
   "rationale": "The neuter demonstrative “esto” never takes a written accent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f48ba990",
@@ -4353,6 +4542,7 @@
    "confidence": "high"
   },
   "rationale": "Truncated verb form “pued” instead of “puede”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "81f89b44",
@@ -4376,6 +4566,7 @@
    "confidence": "high"
   },
   "rationale": "Source “Retry to try again, or Ignore…”; “or” should be Spanish “o”. The parallel string FileError_NoIgnore correctly uses “o”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2b275c45",
@@ -4399,6 +4590,7 @@
    "confidence": "high"
   },
   "rationale": "Missing letter; \"cotiene\" is not a Spanish word.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b45c622b",
@@ -4422,6 +4614,7 @@
    "confidence": "high"
   },
   "rationale": "Typo for \"archivo\"; the line above correctly uses \"Nombre de archivo:\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "26fafe55",
@@ -4445,6 +4638,7 @@
    "confidence": "high"
   },
   "rationale": "\"normal\" does not name a page orientation; paired with \"apaisado\" for landscape, the expected term is \"vertical\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ff035049",
@@ -4468,6 +4662,7 @@
    "confidence": "high"
   },
   "rationale": "en-US \"in\" is the abbreviation for inches; \"en\" is the Spanish preposition and displays as e.g. \"8,5 × 11 en (apaisado)\", which is not a unit of measure.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "50948f56",
@@ -4491,6 +4686,7 @@
    "confidence": "high"
   },
   "rationale": "en-US \"PDF Producer:\"; Spanish places the modifier after the noun, as the next line already does (\"Versión de PDF:\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c3ebbf68",
@@ -4514,6 +4710,7 @@
    "confidence": "high"
   },
   "rationale": "en-US [one] is \"match\" (singular); the singular category displays \"1 de 1 coincidencias\". find_match_count_limit[one] has the mirror-image defect (\"Más de {{limit}} coinciden\", a verb instead of a noun).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bed8f112",
@@ -4537,6 +4734,7 @@
    "confidence": "high"
   },
   "rationale": "Gerund used where the past participle is required; find_reached_top correctly uses \"alcanzado\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4aa3f19b",
@@ -4560,6 +4758,7 @@
    "confidence": "high"
   },
   "rationale": "Typo for \"corrupto\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b8da3e4e",
@@ -4583,6 +4782,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"Use Horizontal Scrolling\"; the label right below correctly says \"Desplazamiento horizontal\", so the tooltip duplicates the vertical-scrolling tooltip and names the wrong option.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "76ce8502",
@@ -4606,6 +4806,7 @@
    "confidence": "high"
   },
   "rationale": "en-US “Profile performance” is a verb+object button label; the translation inverts it into “performance of the profile”, which does not describe the button’s action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "154343be",
@@ -4629,6 +4830,7 @@
    "confidence": "high"
   },
   "rationale": "Missing “s”: the verb is “descubrieron”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "83b98f0d",
@@ -4652,6 +4854,7 @@
    "confidence": "high"
   },
   "rationale": "“Best Practices” is the accessibility-audit category; “costumbres” means customs/manners and is not the established term for practices.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "91139de2",
@@ -4675,6 +4878,7 @@
    "confidence": "high"
   },
   "rationale": "Typo/agreement error: “tienen que ser”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e0b371e0",
@@ -4698,6 +4902,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “Does not meet WCAG standards for accessible text.” The badge flags a failure; the current text reads as if the criterion were met.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "da16a4e4",
@@ -4721,6 +4926,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is “Meets WCAG AAA standards for accessible text.”; as translated it is identical to accessibility.contrast.annotation.AA, so the user can no longer tell AA from AAA contrast.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0737eeab",
@@ -4744,6 +4950,7 @@
    "confidence": "high"
   },
   "rationale": "Spanish is “dominios”, with no accent; the correct form is used in serviceworker-empty-suggestions-aboutdebugging2 in the same file.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b776a38f",
@@ -4761,10 +4968,11 @@
   "file": "devtools/client/debugger.properties",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "es-AR",
   "origin": {},
   "rationale": "In the source this string quotes “Break on…”, which is exactly the value of `watchpoints.submenu` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e52edd6c",
@@ -4782,10 +4990,11 @@
   "file": "devtools/client/debugger.properties",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "es-AR",
   "origin": {},
   "rationale": "The tree uses … 459 times against 2 ASCII runs.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e52edd6c",
@@ -4809,6 +5018,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says it “refers to a block of code in the scopes pane”; “Bloquear” means “to block”, showing a verb where a scope name is expected.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e9110033",
@@ -4832,6 +5042,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “Unignore files outside this directory”. Identical to unignoreAllInDir.label, so the user cannot distinguish the two opposite menu entries.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3dbab8a6",
@@ -4855,6 +5066,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “Unignore files outside this group”. As translated it is identical to unignoreAllInGroup.label, so two context-menu items with opposite effects read the same.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cb7a9d9b",
@@ -4878,6 +5090,7 @@
    "confidence": "high"
   },
   "rationale": "en-US says “grid model … grid overlay”; hovering the display badge of a `display:grid` element states the wrong layout model and the wrong highlighter.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "63950c20",
@@ -4901,6 +5114,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “behaves like an inline element”; the translation duplicates the flex (block) string, so inline-flex and flex tooltips are indistinguishable. “de bloqueo” (blocking) is also the wrong rendering of “block”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "63950c20",
@@ -4924,6 +5138,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “behaves like an inline element and lays out its content according to the grid model … grid overlay”. Both the display type and the layout model are wrong.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "63950c20",
@@ -4947,6 +5162,7 @@
    "confidence": "high"
   },
   "rationale": "en-US “Overlay Grid”; “cuadrilla” is a different word (work crew) and the rest of the file uses “cuadrícula”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "999cc598",
@@ -4970,6 +5186,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of “error” in a user-facing error message.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e505ff4d",
@@ -4993,6 +5210,7 @@
    "confidence": "high"
   },
   "rationale": "en-US value is “Dominator”; the translator rendered the key name (label) instead of the string, mislabelling the dominator column in the memory tool.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e0cfb245",
@@ -5016,6 +5234,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelled gerund; the parallel string heapview.field.bytes.tooltip uses “excluyendo”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "84307da3",
@@ -5039,6 +5258,7 @@
    "confidence": "high"
   },
   "rationale": "Ungrammatical; the sibling string network-menu-summary-tooltip-domcontentloaded has “en el que”. The same error exists in networkMenu.summary.tooltip.load in netmonitor.properties.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "667695ce",
@@ -5062,6 +5282,7 @@
    "confidence": "high"
   },
   "rationale": "“que” is repeated in the security tooltip.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6422ef6b",
@@ -5085,6 +5306,7 @@
    "confidence": "high"
   },
   "rationale": "DOMContentLoaded is a Web platform event name and must not be altered; netmonitor.ftl keeps it correct.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7581b67a",
@@ -5108,6 +5330,7 @@
    "confidence": "high"
   },
   "rationale": "profiler.firefox.com is a domain name and must not be altered; the string points users to a non-existent host (perftools-description-intro in the same file has it right).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "87c092bf",
@@ -5131,6 +5354,7 @@
    "confidence": "high"
   },
   "rationale": "Missing “n” in “encontrado”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "34ac4c07",
@@ -5154,6 +5378,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “View and edit the local storage by selecting a host.” The string was copied from the cookies hint, so the Local Storage panel describes the wrong storage type.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cc2fd7da",
@@ -5177,6 +5402,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “View and edit the session storage by selecting a host.” Copied from the cookies hint; the Session Storage panel names the wrong storage type.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cc2fd7da",
@@ -5194,10 +5420,11 @@
   "file": "devtools/client/styleeditor.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "es-AR",
   "origin": {},
   "rationale": "The label is “Alternar visibilidad de la hoja de estilo”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f6bfed96",
@@ -5221,6 +5448,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of “formateadores”, which is spelled correctly in the matching label string.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d7dad0a3",
@@ -5244,6 +5472,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “Maximum request and response body size (set to 0 for unlimited):”. The opening “(” is missing and “de la” is written as one word.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0c9c9e60",
@@ -5267,6 +5496,7 @@
    "confidence": "high"
   },
   "rationale": "The verb is “elegir”; the non-Mac variant toolbox.elementPicker.tooltip uses “Seleccionar”, so this also breaks consistency in the same tooltip pair.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "87fa6e5f",
@@ -5284,10 +5514,11 @@
   "file": "devtools/client/tooltips.ftl",
   "first_seen": "2026-08-20",
   "impact": 1,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "es-AR",
   "origin": {},
   "rationale": "Whitespace inside a closing tag makes it render as literal text.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6a3efb6d",
@@ -5305,10 +5536,11 @@
   "file": "devtools/client/tooltips.ftl",
   "first_seen": "2026-08-20",
   "impact": 1,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "es-AR",
   "origin": {},
   "rationale": "Whitespace inside a closing tag makes it render as literal text.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2b3c2449",
@@ -5332,6 +5564,7 @@
    "confidence": "high"
   },
   "rationale": "Stray “l” at the end of “etiqueta”; visible in console count output. The same typo exists in devtools/shared/webconsole.properties.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ede2eb09",
@@ -5355,6 +5588,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “Parent process Browser Console”. The window is the Browser Console, not the Browser Toolbox; multiProcessBrowserConsole.title in the same file correctly uses “Consola”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ae91c112",
@@ -5372,12 +5606,13 @@
   "file": "devtools/client/webconsole.properties",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "es-AR",
   "origin": {
    "confidence": "high"
   },
   "rationale": "In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d7b2d2ee",
@@ -5401,6 +5636,7 @@
    "confidence": "high"
   },
   "rationale": "en-US “Paused on exception” describes the current state, like every other whypaused-* string in the file (“Pausado en…”); the infinitive reads as a command/setting.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0b049ffc",
@@ -5418,10 +5654,11 @@
   "file": "devtools/shared/webconsole.properties",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "es-AR",
   "origin": {},
   "rationale": "In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d7b2d2ee",
@@ -5445,6 +5682,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment states this is “the term used to describe the primary thread of execution in the page”; “Parte superior” renders it as “upper part”, losing the meaning in the evaluation-context selector.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3aa63a0a",
@@ -5468,6 +5706,7 @@
    "confidence": "high"
   },
   "rationale": "The role is the cell of a grid, not the grid itself; screen-reader users would hear the container role instead of the cell role.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "48fcbf3a",
@@ -5491,6 +5730,7 @@
    "confidence": "medium"
   },
   "rationale": "“mat” is not a Spanish word; this role name is spoken aloud by screen readers.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9c29a40a",
@@ -5514,6 +5754,7 @@
    "confidence": "high"
   },
   "rationale": "Indirect interrogative requires the accented form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "acfe2286",
@@ -5537,6 +5778,7 @@
    "confidence": "high"
   },
   "rationale": "The English source phrase was pasted into the middle of the Spanish sentence, producing visibly broken user-facing text.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9ec49fcb",
@@ -5560,6 +5802,7 @@
    "confidence": "high"
   },
   "rationale": "Spelling/capitalization error in a user-facing error page.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "41630e9c",
@@ -5583,6 +5826,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “TestingDeprecatedInterface.deprecatedAttribute is a testing-only attribute…”. The identifier was altered.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "08edc0f2",
@@ -5606,6 +5850,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of “ignorada”. The same typo appears in IgnoringWillChangeOverBudgetWarning (“ingoradas”).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "71779aca",
@@ -5629,6 +5874,7 @@
    "confidence": "high"
   },
   "rationale": "Developer comment: “Do not translate CanvasRenderingContext2D, drawWindow and tabs.captureTab.”",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "27521d66",
@@ -5652,6 +5898,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of “Seleccione” in a form-validation bubble shown to end users.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bc18e37d",
@@ -5675,6 +5922,7 @@
    "confidence": "high"
   },
   "rationale": "Leftover from the English source; the noun is duplicated.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3f38bc0e",
@@ -5698,6 +5946,7 @@
    "confidence": "high"
   },
   "rationale": "Developer comment: “do not localize key=“%S” modifiers=“%S” id=“%S””. WinConflict2 has the same problem.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9ea87721",
@@ -5721,6 +5970,7 @@
    "confidence": "high"
   },
   "rationale": "“sé” is the verb form; the impersonal pronoun “se” is required.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a07c8feb",
@@ -5744,6 +5994,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “An IndexedDB transaction that was not yet complete has been aborted due to page navigation.”",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "482bf5fc",
@@ -5767,6 +6018,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of “recuperada”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d7806c9a",
@@ -5790,6 +6042,7 @@
    "confidence": "high"
   },
   "rationale": "Duplicated article instead of the preposition “en”; appears in a user-facing dialog.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ef893c10",
@@ -5813,6 +6066,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “…includes repeated purpose(s): %3$S.” The translation copies ManifestImageUnsupportedPurposes, so both diagnostics read the same.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ee9ab702",
@@ -5836,6 +6090,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “The start URL is outside the scope, so the scope is invalid.” The subject is wrong and conflicts with ManifestScopeURLInvalid, which also uses “URL de alcance”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f007f513",
@@ -5859,6 +6114,7 @@
    "confidence": "high"
   },
   "rationale": "Developer comment: “Do not translate small, normal, big and mathsize.” The translated words do not match any real attribute value.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "adf27afd",
@@ -5882,6 +6138,7 @@
    "confidence": "high"
   },
   "rationale": "Developer comment: “Do not translate MathML, background, color, fontfamily, fontsize, fontstyle and fontweight.” Only fontweight was left intact.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "90fe8b09",
@@ -5905,6 +6162,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling; “Encrypted Media Extensions” becomes unreadable.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dad69c1b",
@@ -5928,6 +6186,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “The MediaStream passed to createMediaStreamSource has a cross-origin resource…”. The developer comment names MediaStream and createMediaStreamSource; the translation duplicates MediaElementAudioSourceNodeCrossOrigin instead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f6791cd2",
@@ -5951,6 +6210,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “onmozfullscreenerror is deprecated.” The developer comment says not to translate onmozfullscreenerror; here it was replaced by a different identifier, duplicating MozfullscreenchangeDeprecatedPrefixWarning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ec1bcf13",
@@ -5974,6 +6234,7 @@
    "confidence": "high"
   },
   "rationale": "en-US quotes the literal attribute names (“as”, “type”, “media”); “como”/“tipo” are not attributes a developer can look for.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "71e638c0",
@@ -5997,6 +6258,7 @@
    "confidence": "high"
   },
   "rationale": "Developer comment: “Do not translate navigator.sendBeacon, unload, pagehide, or XMLHttpRequest.”",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e1583f7b",
@@ -6020,6 +6282,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of “debido”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2a819878",
@@ -6043,6 +6306,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “…contains an unclosed data type name.” As translated it duplicates PEPRSyntaxFieldUnknownDataTypeName.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "785aa387",
@@ -6066,6 +6330,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of “declarada”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e214dadb",
@@ -6089,6 +6354,7 @@
    "confidence": "high"
   },
   "rationale": "Typo producing a nonsense token.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ba216245",
@@ -6112,6 +6378,7 @@
    "confidence": "high"
   },
   "rationale": "The doctype is code; “<! DOCTYPE html>” is not valid and misleads authors who copy it. errQuirkyDoctypeVerbose has the same defect, while errAlmostStandardsDoctype/errQuirkyDoctype are correct.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d4a0a949",
@@ -6135,6 +6402,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of “identificadores”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cb03723b",
@@ -6158,6 +6426,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “Named character reference was not terminated by a semicolon.” Without the negation the error message states the opposite of the actual problem.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f0a7e7c7",
@@ -6181,6 +6450,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “End tag “%1$S” seen, but there were open elements.” The sibling string errUnclosedElementsImplied correctly uses “pero había elementos abiertos”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ac27c5ed",
@@ -6204,6 +6474,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “Animations of ‘background-color’ cannot be run on the compositor with ‘current-color’ keyframe.” The surrounding strings in this file keep ‘transform’ and ‘opacity’ untranslated per the file’s notes.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "176b4306",
@@ -6221,10 +6492,11 @@
   "file": "dom/chrome/layout/layout_errors.properties",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "es-AR",
   "origin": {},
   "rationale": "The tree uses … 459 times against 2 ASCII runs.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "753ad34e",
@@ -6248,6 +6520,7 @@
    "confidence": "high"
   },
   "rationale": "Developer comment: “Do not translate <html>, <body>, CSS, \"writing-mode\", \"direction\", \"text-orientation\", :root, and \"The Principal Writing Mode\"”. The same string also renders :root as “la pseudoclase: raíz CSS”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "180e9f2a",
@@ -6271,6 +6544,7 @@
    "confidence": "high"
   },
   "rationale": "Verb form requires the accent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3215c521",
@@ -6294,6 +6568,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “29 = incomplete markup in parameter entity”. The code-to-message mapping is shifted, so the wrong error text is displayed.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "26fc8b70",
@@ -6317,6 +6592,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “30 = XML declaration not well-formed”. Wrong message mapped to this code.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3339353f",
@@ -6340,6 +6616,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “6 = partial character”. As translated it duplicates error 5 (“unclosed token”), so two different parser errors are indistinguishable.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cf0c0bf6",
@@ -6363,6 +6640,7 @@
    "confidence": "high"
   },
   "rationale": "Developer comment: “'strict-dynamic' should not be localized”. The neighbouring string strictDynamicButNoHashOrNonce correctly keeps ‘strict-dynamic’.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "98b0682f",
@@ -6386,6 +6664,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of “Ignorando”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d2b42f93",
@@ -6409,6 +6688,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “Blocked loading mixed active content”. As translated it is identical to BlockMixedDisplayContent, so the two distinct security conditions are indistinguishable.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a09df4e5",
@@ -6432,6 +6712,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of “error”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1354d963",
@@ -6455,6 +6736,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US: “The resource from “%1$S” was not rendered due to an unknown, incorrect or missing MIME type…”. As translated it duplicates MimeTypeMismatch2.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "92b0130b",
@@ -6478,6 +6760,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of “transformación”. The same typo appears in xslt-execution-failure in dom/dom/xslt.ftl.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ddd0e558",
@@ -6501,6 +6784,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of “transformación”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ddd0e558",
@@ -6524,6 +6808,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “directly or indirectly imports or includes itself”. The “o” is missing, leaving an ungrammatical clause. Same defect in xslt.properties id 12.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "99f69f70",
@@ -6547,6 +6832,7 @@
    "confidence": "medium"
   },
   "rationale": "The tree uses usted almost everywhere (140+ “Ingrese/Puede/Elija” vs. a handful of voseo forms); this string breaks the established form of address.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f978477d",
@@ -6570,6 +6856,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling in a prompt field label.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bdb65752",
@@ -6593,6 +6880,7 @@
    "confidence": "medium"
   },
   "rationale": "Inconsistent with the locale’s dominant usted register (config-new-pref-number has the same issue).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b85fa77e",
@@ -6616,6 +6904,7 @@
    "confidence": "medium"
   },
   "rationale": "The locale uses usted throughout (“Use … en su lugar” in dom.properties); this string switches address form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8de71b44",
@@ -6639,6 +6928,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of “establecer”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "717bab71",
@@ -6662,6 +6952,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “The client has encountered bad data from the server.” The subject is wrong, and the string becomes identical in sense to SSL_ERROR_BAD_CLIENT.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1f8c11a8",
@@ -6685,6 +6976,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “SSL peer selected a cipher suite disallowed for the selected protocol version.” “seeccionó” and “aunlada” are misspellings.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "23b514b8",
@@ -6708,6 +7000,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “SSL received a malformed Certificate Request handshake message.” As translated it is identical to SSL_ERROR_RX_MALFORMED_CERTIFICATE.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "021f69f3",
@@ -6731,6 +7024,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of “certificado” in a user-facing dialog.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d9869099",
@@ -6754,6 +7048,7 @@
    "confidence": "high"
   },
   "rationale": "“Módulos” requires the accent; “incluidos” takes none (RAE).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7b949a43",
@@ -6777,6 +7072,7 @@
    "confidence": "high"
   },
   "rationale": "Verb form requires the accent to distinguish it from the demonstrative.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "57961118",
@@ -6800,6 +7096,7 @@
    "confidence": "high"
   },
   "rationale": "Plural subject requires the plural verb.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cfa0ab7b",
@@ -6823,6 +7120,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “…because it hasn’t been verified as issued by a trusted authority using a secure signature.” The Spanish states the certificate was verified, contradicting the security warning it belongs to (and “fue sido” is also ungrammatical).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "36dd44dc",
@@ -6846,6 +7144,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of “certificado”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1269a417",
@@ -6869,6 +7168,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of “certificado”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2fc84ef9",
@@ -6892,6 +7192,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of “correo”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8ac4345a",
@@ -6915,6 +7216,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of “certificados”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0d4f5669",
@@ -6938,6 +7240,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of “seguridad”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "92433395",
@@ -6961,6 +7264,7 @@
    "confidence": "high"
   },
   "rationale": "The preterite verb requires the accent; the sibling strings use “Falló”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "db135e43",
@@ -6984,6 +7288,7 @@
    "confidence": "medium"
   },
   "rationale": "The rest of this dialog uses usted (“Autentíquese”, “Seleccionar…”), and certManager.ftl renders the same en-US string as “No enviar certificado de cliente”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "89360a30",
@@ -7007,6 +7312,7 @@
    "confidence": "medium"
   },
   "rationale": "This is the on-screen name of the Return key, not a navigation command; \"Volver\" is used elsewhere in the tree for \"go back\". The win/unix files use \"Intro\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b5b2247e",
@@ -7030,6 +7336,7 @@
    "confidence": "high"
   },
   "rationale": "en-US \"could be read by a third party\"; the past participle is \"leída\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "760a7d9d",
@@ -7053,6 +7360,7 @@
    "confidence": "high"
   },
   "rationale": "Missing written accent on \"página\"; the adjacent ScriptDlgHeading spells it correctly.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b2ad32a6",
@@ -7076,6 +7384,7 @@
    "confidence": "high"
   },
   "rationale": "The affirmative adverb is \"sí\" with an accent; unaccented \"si\" is the conjunction \"if\". printdialog.properties correctly uses \"Sí\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cfaa2937",
@@ -7099,6 +7408,7 @@
    "confidence": "high"
   },
   "rationale": "The next string in the same file (homepageControlled.message) uses \"ve\" and \"su página de inicio\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0987b662",
@@ -7122,6 +7432,7 @@
    "confidence": "high"
   },
   "rationale": "Typo for \"Quiere\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "233e62f6",
@@ -7145,6 +7456,7 @@
    "confidence": "high"
   },
   "rationale": "Typo for \"Perfil\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f5c799e5",
@@ -7168,6 +7480,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US is \"Close %S\"; the dialog asks the user to close the running process, so \"Reiniciar\" states the wrong action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6a670858",
@@ -7191,6 +7504,7 @@
    "confidence": "high"
   },
   "rationale": "en-US \"Update URL not available\" means the update URL itself is missing, not an update of a URL.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c9e90f5e",
@@ -7214,6 +7528,7 @@
    "confidence": "high"
   },
   "rationale": "\"incluir\" is a monosyllabic-diphthong infinitive and takes no accent (same in crashreporter.ini CheckIncludeURL).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d3006003",
@@ -7237,6 +7552,7 @@
    "confidence": "high"
   },
   "rationale": "Plural subject requires \"visibles\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "abf4d210",
@@ -7260,6 +7576,7 @@
    "confidence": "medium"
   },
   "rationale": "A query string is the part of a URL after “?”; “pedido” (request/order) names something else.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "722cd5d2",
@@ -7283,6 +7600,7 @@
    "confidence": "high"
   },
   "rationale": "“más” is repeated in the link text.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3c017096",
@@ -7306,6 +7624,7 @@
    "confidence": "high"
   },
   "rationale": "Missing “c” in “Seleccionar”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "81cc2378",
@@ -7329,6 +7648,7 @@
    "confidence": "high"
   },
   "rationale": "Missing letter in “actualizó”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2d76208b",
@@ -7352,6 +7672,7 @@
    "confidence": "high"
   },
   "rationale": "Extra “z” in “Finalice”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f9fd18dc",
@@ -7375,6 +7696,7 @@
    "confidence": "high"
   },
   "rationale": "Editing artifact visible in the UI; the heading “Encontre su próxima extensión favorita” should also be “Encuentre”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f4da4e73",
@@ -7398,6 +7720,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “Choose a style that makes Firefox feel like yours.” The translation breaks off, leaving an incomplete sentence in the UI.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "924d3e47",
@@ -7421,6 +7744,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US heading means a small number of extensions accomplishes a lot; the translation states past success of some extensions, which is a different claim.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8220e838",
@@ -7444,6 +7768,7 @@
    "confidence": "high"
   },
   "rationale": "“about:telemetry” is a browser URL and a do-not-translate identifier; with the inserted space it no longer names a valid page.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "621a898e",
@@ -7467,6 +7792,7 @@
    "confidence": "high"
   },
   "rationale": "The whole page renders “logging” as “registro”; “inicio de sesión” names a completely different concept (signing in).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5e0caeef",
@@ -7490,6 +7816,7 @@
    "confidence": "high"
   },
   "rationale": "In en-US “Reference works” is a noun phrase (reference works); the translation renders it as a conjugated verb, producing a sentence that does not parse.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c7da8098",
@@ -7513,6 +7840,7 @@
    "confidence": "high"
   },
   "rationale": "Missing “n” in “ganancia”; the adjacent row spells it correctly.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "37b7ad74",
@@ -7536,6 +7864,7 @@
    "confidence": "high"
   },
   "rationale": "“La raíz” requires a feminine adjective.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "350e5e2b",
@@ -7559,6 +7888,7 @@
    "confidence": "high"
   },
   "rationale": "“About pages” names the about: pages hosted by this process; the translation reads as a prepositional phrase and does not identify the process.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7840c68f",
@@ -7582,6 +7912,7 @@
    "confidence": "high"
   },
   "rationale": "Unaccented “si” means “if”; certviewer renders the same boolean value as “Sí”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bff28a1e",
@@ -7605,6 +7936,7 @@
    "confidence": "high"
   },
   "rationale": "en-US .title is “Gray theme”; the current text duplicates the tooltip of about-reader-color-auto-theme and misidentifies the control.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c6fb3720",
@@ -7628,6 +7960,7 @@
    "confidence": "medium"
   },
   "rationale": "The string group is font weights (Light/Regular/Bold); “Claro” is the colour term already used for the light theme in the same file.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cae80aa5",
@@ -7651,6 +7984,7 @@
    "confidence": "high"
   },
   "rationale": "Missing “s” in “deshabilitar”, which is spelled correctly elsewhere in the same file.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ced275fc",
@@ -7674,6 +8008,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US: “Blocked for your graphics card because of unresolved driver issues.” The blocked object is the card, not the driver, and the string is used in a list of block reasons where that distinction matters.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "eb2fbd48",
@@ -7697,6 +8032,7 @@
    "confidence": "high"
   },
   "rationale": "Two consecutive rows for the same graphics feature use different terms, and “baldosas” is not used for graphics tiling anywhere else in the tree.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0c9ba719",
@@ -7720,6 +8056,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “This application has not been configured to display crash reports.” The negation is missing and “fue sido” is also ungrammatical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "35df1236",
@@ -7743,6 +8080,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US “Effective Content Process Sandbox Level”: “effective” modifies the level, not the process; the adjacent content-sandbox-level row shows the intended pattern.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2fccd1db",
@@ -7766,6 +8104,7 @@
    "confidence": "high"
   },
   "rationale": "The parallel string fission-status-disabled-by-default reads “Deshabilitado de forma predeterminada”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "14d6e051",
@@ -7789,6 +8128,7 @@
    "confidence": "high"
   },
   "rationale": "Same trigger/verb confusion as in url-classifier; the button label as written is not parseable Spanish.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "aae49c3c",
@@ -7812,6 +8152,7 @@
    "confidence": "high"
   },
   "rationale": "Transposed letters in “hardware”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "df6fb4fb",
@@ -7835,6 +8176,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is “Size (KiB)”; the neighbouring headers all close the parenthesis.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "52031169",
@@ -7858,6 +8200,7 @@
    "confidence": "high"
   },
   "rationale": "The plural variant in the same message spells “últimos” correctly.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b9fe0b35",
@@ -7881,6 +8224,7 @@
    "confidence": "medium"
   },
   "rationale": "“Preferred” denotes the device's preferred rate, not a main/primary one.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "64c61ce7",
@@ -7904,6 +8248,7 @@
    "confidence": "high"
   },
   "rationale": "This is a status shown next to support-remote-settings-status-broken (“No funcionando”), not a dialog button; “Aceptar” reads as an action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "062a1645",
@@ -7927,6 +8272,7 @@
    "confidence": "high"
   },
   "rationale": "The accent distinguishes the adverb “sí” from the conjunction “si”; profiles-yes in aboutProfiles.ftl has the same defect.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "915727a2",
@@ -7950,6 +8296,7 @@
    "confidence": "high"
   },
   "rationale": "“Store” here is the Telemetry data store selected in the UI, not a retail store.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7a0b0172",
@@ -7973,6 +8320,7 @@
    "confidence": "high"
   },
   "rationale": "“release”/“pre-release” refer to the update channel, not to whether data was submitted; the current text tells the user the opposite thing about their data.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "95809107",
@@ -7996,6 +8344,7 @@
    "confidence": "high"
   },
   "rationale": "Late writes are writes that happen too late during shutdown; “últimas” means the most recent ones. Same issue in about-telemetry-late-writes-title (“Última escritura #”).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9d12e348",
@@ -8019,6 +8368,7 @@
    "confidence": "high"
   },
   "rationale": "en-US enumerates “performance, hardware, usage and customizations”; as written the two nouns are run together.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0b0e041d",
@@ -8042,6 +8392,7 @@
    "confidence": "high"
   },
   "rationale": "Injection into the running process is a different event from downloading; the page lists modules loaded into the process, not downloaded files.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "495ae44b",
@@ -8065,6 +8416,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “Check your internet connection and try again.” The preposition “en” makes the sentence ungrammatical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f57ad38f",
@@ -8088,6 +8440,7 @@
    "confidence": "high"
   },
   "rationale": "The label sits beside “Reinicios de ICE” (ICE restarts) and reports a count of rollbacks, not versions.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e8e06ca9",
@@ -8111,6 +8464,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says “Stats” is an abbreviation for Statistics; as translated it is identical to about-webrtc-ice-state (“ICE State”), so two different sections carry the same label.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c6a71398",
@@ -8134,6 +8488,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says this is a header for local SDP recording the time it was set; as translated it instructs the user to do something. Same problem in about-webrtc-sdp-set-at-timestamp-remote.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "22bde88b",
@@ -8157,6 +8512,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says this is the ID of the MediaStreamTrack; “rastreo” suggests user tracking, an unrelated and misleading concept in a privacy-sensitive product.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "52c81d79",
@@ -8180,6 +8536,7 @@
    "confidence": "high"
   },
   "rationale": "“acerca” requires “de”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fcdf0c58",
@@ -8203,6 +8560,7 @@
    "confidence": "high"
   },
   "rationale": "Doubled letter typo.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d44013f8",
@@ -8226,6 +8584,7 @@
    "confidence": "high"
   },
   "rationale": "abuse-report-messagebar-removed-extension and -removed-theme both use “Eliminó”; the whole tree addresses the user with usted.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f9e246e6",
@@ -8249,6 +8608,7 @@
    "confidence": "high"
   },
   "rationale": "The preceding string (abuse-report-settings-suggestions) and the rest of the dialog use usted; abuse-report-settings-suggestions-homepage (“Cambia la página de inicio…”) has the same defect.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e2d101cb",
@@ -8272,6 +8632,7 @@
    "confidence": "medium"
   },
   "rationale": "Common Name (CN) is a fixed certificate field name; “habitual” conveys frequency rather than the field.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d54ce930",
@@ -8295,6 +8656,7 @@
    "confidence": "high"
   },
   "rationale": "“Key” here is the cryptographic key (X.509 keyUsage extension), not the adjective “main”; the same error affects certificate-viewer-extended-key-usages (“Usos principales extendidos”).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "362f196d",
@@ -8318,6 +8680,7 @@
    "confidence": "high"
   },
   "rationale": "Stapling is a protocol feature name; “Principal” conveys an unrelated meaning and mirrors the mistaken “Usos principales” rendering of Key Usages.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2804e360",
@@ -8341,6 +8704,7 @@
    "confidence": "medium"
   },
   "rationale": "Within the same certificate viewer the X.509 subject is called “sujeto” in one label and “asunto” in two others (also certificate-viewer-subject-key-id); “asunto” names an email header, not the certificate subject.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "82d3abae",
@@ -8364,6 +8728,7 @@
    "confidence": "high"
   },
   "rationale": "Same page uses “navegación segura” for Safe Browsing in the neighbouring strings (url-classifier-debug-sb-modules, url-classifier-enable-sbjs-log); this one names a different feature.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "808e5a04",
@@ -8387,6 +8752,7 @@
    "confidence": "high"
   },
   "rationale": "“Próxima” is an esdrújula and always takes the accent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b630692e",
@@ -8410,6 +8776,7 @@
    "confidence": "high"
   },
   "rationale": "“Trigger” is the verb and “Update” the object; the button as translated describes updating a “trigger”, which does not exist on this page.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "af81709b",
@@ -8433,6 +8800,7 @@
    "confidence": "high"
   },
   "rationale": "The group comment above this block says the feature names must be treated as a brand and cannot be translated or transliterated; all other entries in the block are untranslated.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6673a8be",
@@ -8456,6 +8824,7 @@
    "confidence": "high"
   },
   "rationale": "The neuter demonstrative \"esto\" takes no accent; the same error repeats in the other slow-agent strings of this file.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ce499b77",
@@ -8479,6 +8848,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment states \"The title of the experiment should be kept in English as it may be referenced by various online articles\"; the neighbouring JPEG XL title was correctly left in English.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "722ff62e",
@@ -8502,6 +8872,7 @@
    "confidence": "high"
   },
   "rationale": "The leading \"e\" is a stray character, and en-US names the format \"JPEG XL (JXL)\"; dropping \"XL\" names a different format.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1157201e",
@@ -8525,6 +8896,7 @@
    "confidence": "high"
   },
   "rationale": "Every other description in the same file uses the usted imperative \"Consulte\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1564d1d9",
@@ -8548,6 +8920,7 @@
    "confidence": "high"
   },
   "rationale": "Same defect as in featuregates/features.ftl: stray leading character and the format name JPEG XL rendered as JPEG.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1157201e",
@@ -8571,6 +8944,7 @@
    "confidence": "high"
   },
   "rationale": "\"página\" is stressed on the antepenultimate syllable and always takes an accent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "14f57166",
@@ -8594,6 +8968,7 @@
    "confidence": "high"
   },
   "rationale": "These are two selectable swatches; identical labels make one colour unidentifiable, and user-context-color-violet already holds \"Violeta\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "26e9916c",
@@ -8617,6 +8992,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US \"Fence\" is the noun naming the icon; \"cercar\" is the verb \"to fence in\". All other icon labels in the block are nouns.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d35103b4",
@@ -8640,6 +9016,7 @@
    "confidence": "high"
   },
   "rationale": "All other permission descriptions in the file use \"su\" (e.g. \"Acceder a su ubicación\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e0a2d67f",
@@ -8663,6 +9040,7 @@
    "confidence": "high"
   },
   "rationale": "Infinitives ending in -ar carry no written accent; the same file uses \"Agregar\" everywhere else.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2da39015",
@@ -8686,6 +9064,7 @@
    "confidence": "high"
   },
   "rationale": "The infinitive is \"elegir\"; the same file uses \"Elegir aplicación\" correctly elsewhere.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3f2094ff",
@@ -8709,6 +9088,7 @@
    "confidence": "high"
   },
   "rationale": "The demonstrative \"esta\" carries no accent; \"está\" is the verb.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8dbc7b9a",
@@ -8732,6 +9112,7 @@
    "confidence": "high"
   },
   "rationale": "Every other string in this file and the surrounding tree uses usted (\"Elegir…\", \"se puede cambiar\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "91d68eac",
@@ -8755,6 +9136,7 @@
    "confidence": "high"
   },
   "rationale": "Same defect as browser.properties: participle \"leída\" mistyped.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "760a7d9d",
@@ -8778,6 +9160,7 @@
    "confidence": "high"
   },
   "rationale": "en-US \"Another copy of\"; \"copa\" means \"glass/cup\", a typo for \"copia\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c6be66d0",
@@ -8801,6 +9184,7 @@
    "confidence": "medium"
   },
   "rationale": "Spanish writes language names in lowercase; the string capitalizes \"Inglés\" twice, following English convention.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0000dbec",
@@ -8824,6 +9208,7 @@
    "confidence": "high"
   },
   "rationale": "The neuter demonstrative \"esto\" never carries a written accent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "78743c64",
@@ -8847,6 +9232,7 @@
    "confidence": "high"
   },
   "rationale": "\"Africano\" names the continent's inhabitants, not the language Afrikaans.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a83a7145",
@@ -8870,6 +9256,7 @@
    "confidence": "high"
   },
   "rationale": "\"hindú\" designates an adherent of Hinduism; the language is \"hindi\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6907f66c",
@@ -8893,6 +9280,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"Lao\" (the language); \"Laos\" is the country, already used as region-name-la.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6e73efee",
@@ -8916,6 +9304,7 @@
    "confidence": "high"
   },
   "rationale": "en-US ml is Malayalam and ms is Malay; both are \"Malayo\" here, so Malayalam names the wrong language.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d55dfff2",
@@ -8939,6 +9328,7 @@
    "confidence": "high"
   },
   "rationale": "en-US \"Sango\"; \"Sangro\" is not a language name.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "181f1f58",
@@ -8962,6 +9352,7 @@
    "confidence": "high"
   },
   "rationale": "en-US \"Sundanese\" is the language of Java; \"sudanés\" refers to Sudan.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f5c3260b",
@@ -8985,6 +9376,7 @@
    "confidence": "high"
   },
   "rationale": "en-US spells out \"United Arab Emirates\" and every other country in the file is given its Spanish name.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5bea7bae",
@@ -9008,6 +9400,7 @@
    "confidence": "high"
   },
   "rationale": "The Spanish exonym is \"Islas Feroe\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a5af13ac",
@@ -9031,6 +9424,7 @@
    "confidence": "high"
   },
   "rationale": "Truncated \"Nueva\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e04fba65",
@@ -9054,6 +9448,7 @@
    "confidence": "high"
   },
   "rationale": "The Spanish name is \"Islas Salomón\"; the locale translates every other island group in this file.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a69dc191",
@@ -9077,6 +9472,7 @@
    "confidence": "high"
   },
   "rationale": "The country name in Spanish is \"Somalia\", without a written accent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ca9bf4db",
@@ -9100,6 +9496,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US is \"Eswatini\"; the -2019 key suffix exists precisely because the country was renamed, so the old name is now the wrong name.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "609898a7",
@@ -9123,6 +9520,7 @@
    "confidence": "high"
   },
   "rationale": "Typo for \"solamente\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a1c00bfb",
@@ -9146,6 +9544,7 @@
    "confidence": "high"
   },
   "rationale": "The same sentence uses usted (\"su computadora\", \"Asegúrese\"); \"tu\" breaks the register mid-string.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "82d87b02",
@@ -9169,6 +9568,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US \"Try connecting on a different device\" means using another device; \"a un dispositivo\" says connect *to* a device. neterror-dns-not-found-offline-hint-different-device renders it correctly with \"en\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f9cd5b1d",
@@ -9192,6 +9592,7 @@
    "confidence": "high"
   },
   "rationale": "Typo for \"establecer\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "717bab71",
@@ -9215,6 +9616,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: \"The client has encountered bad data from the server.\" The locale copied the bad-client string, reversing client and server.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "050ce622",
@@ -9238,6 +9640,7 @@
    "confidence": "high"
   },
   "rationale": "\"seeccionó\" and \"aunlada\" are not Spanish words; en-US says \"a cipher suite disallowed for the selected protocol version\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "23b514b8",
@@ -9261,6 +9664,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: \"SSL received a malformed Server Hello handshake message.\" Names the wrong handshake message, duplicating the client-hello string.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dea9b659",
@@ -9284,6 +9688,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: \"SSL received an unexpected Hello Request handshake message.\" It duplicates ssl-error-rx-unexpected-hello-verify-request, naming a different protocol message.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f3584c8e",
@@ -9307,6 +9712,7 @@
    "confidence": "high"
   },
   "rationale": "en-US [other] is \"expired certificates\"; the localized [other] variant is identical to [one], so plural counts read as singular.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "148163e5",
@@ -9330,6 +9736,7 @@
    "confidence": "high"
   },
   "rationale": "Number agreement error in the [one] variant: plural noun with singular modifiers.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bb4d81fb",
@@ -9353,6 +9760,7 @@
    "confidence": "high"
   },
   "rationale": "Typo for \"archivo\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "26fafe55",
@@ -9376,6 +9784,7 @@
    "confidence": "high"
   },
   "rationale": "Spanish puts the qualifier after the noun; the neighbouring pdfjs-document-properties-version correctly says \"Versión de PDF:\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c3ebbf68",
@@ -9399,6 +9808,7 @@
    "confidence": "high"
   },
   "rationale": "The infinitive is \"elegir\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1bbecb41",
@@ -9422,6 +9832,7 @@
    "confidence": "high"
   },
   "rationale": "The file and the whole tree address the user with \"usted\"; \"Te\" is inconsistent even within this one sentence.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a3cf450e",
@@ -9445,6 +9856,7 @@
    "confidence": "high"
   },
   "rationale": "\"imagen\" is feminine; compare \"Firma eliminada\" in the same block and \"Imagen agregada\" above.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "442ee28e",
@@ -9468,6 +9880,7 @@
    "confidence": "high"
   },
   "rationale": "Gerund instead of past participle; the parallel string pdfjs-find-reached-top correctly uses \"alcanzado\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4aa3f19b",
@@ -9491,6 +9904,7 @@
    "confidence": "high"
   },
   "rationale": "Typo for \"corrupto\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b8da3e4e",
@@ -9514,6 +9928,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: \"Use Horizontal Scrolling\"; the tooltip duplicates the vertical-scrolling one, so the button describes the wrong action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "83596988",
@@ -9537,6 +9952,7 @@
    "confidence": "high"
   },
   "rationale": "en-US \"reset all layers\"; \"cañas\" (canes/reeds) is a typo for \"capas\", which the same file uses elsewhere.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "74eb04a0",
@@ -9560,6 +9976,7 @@
    "confidence": "high"
   },
   "rationale": "Two words run together; also \"contraseña principal\" here conflicts with \"contraseña maestra\" used in every other string of this file.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5aab7b55",
@@ -9583,6 +10000,7 @@
    "confidence": "high"
   },
   "rationale": "The pair should be “ … ”; the file (and tree) otherwise uses matched curly quotes.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "99a844ea",
@@ -9606,6 +10024,7 @@
    "confidence": "medium"
   },
   "rationale": "The paired string printui-two-sided-printing-short-edge uses \"borde\"; \"margen\" means margin, a different print concept already used for printui-margins.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "766260b9",
@@ -9629,6 +10048,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: \"A security and stability update\"; the localized text narrows it to a security-only update.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "79cd7f64",
@@ -9652,6 +10072,7 @@
    "confidence": "high"
   },
   "rationale": "Indirect interrogative pronouns take a written accent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e109aa4a",

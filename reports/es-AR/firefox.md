@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
+| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 19 of 18,148 |
+| **Strings reviewed this run** | 2 of 18,150 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for es-AR: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `share-panel-missing-device` — `browser/browser/sharePanel.ftl` — "Don’t see your device?" is rendered as an impersonal "Can't the device be seen?" instead of addressing the user.
-    - Current: `¿No se puede ver el dispositivo?`
-    - Source: `label: Don’t see your device?`
-    - Suggest: `¿No ve su dispositivo?`
-    - The en-US asks the user directly whether they see their device; the translation turns it into an impersonal passive construction and loses the possessive reference to the user's device.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,16 +45,13 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,148 |
-| Missing strings | 32 |
+| Strings | 18,150 |
+| Missing strings | 30 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
+| Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
-| Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
-| printf placeholder mismatches | 0 |
-| Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 3 |
@@ -69,18 +62,17 @@ _Nothing retired._
 
 ### Completeness
 
-**32 strings** are not translated yet, concentrated in:
+**30 strings** are not translated yet, concentrated in:
 
 - `browser/browser/newtab/newtab.ftl` — 10
-- `toolkit/toolkit/about/url-classifier.ftl` — 7
+- `toolkit/toolkit/about/url-classifier.ftl` — 6
 - `browser/browser/featureCallout.ftl` — 4
 - `browser/browser/appmenu.ftl` — 3
 - `browser/browser/preferences/preferences.ftl` — 3
+- `toolkit/toolkit/about/aboutAddons.ftl` — 1
+- `toolkit/toolkit/global/processTypes.ftl` — 1
 - `browser/browser/aiWindowContent.ftl` — 1
 - `browser/browser/newtab/asrouter.ftl` — 1
-- `toolkit/toolkit/about/aboutAddons.ftl` — 1
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 1
-- `toolkit/toolkit/global/processTypes.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -106,6 +98,7 @@ _Nothing reported._
 ---
 
 ## 3. Open findings (421)
+
 
 | Impact | Meaning | Count |
 |---|---|---|

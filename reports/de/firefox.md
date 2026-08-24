@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
+| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 8 of 18,169 |
+| **Strings reviewed this run** | 11 of 18,180 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -20,16 +20,16 @@ Also for de: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ### 🆕 New findings (2)
 
-- `helpus-referrals2` — `browser/browser/aboutDialog.ftl` — Superfluous comma before "oder" in the enumeration.
-    - Current: `Teilen Sie { -brand-product-name }</label>, oder`
-    - Source: `Want to help? <label data-l10n-name="helpus-donateLink">Make a donation</label>, <label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>, or <label data-l10n-name="helpus-getInvolvedLink">g…`
-    - Suggest: `Teilen Sie { -brand-product-name }</label> oder`
-    - German does not use a comma before "oder" joining the last item of a simple enumeration; the comma is a direct carry-over of the English serial comma.
-- `helpus-referrals2` — `browser/browser/aboutDialog.ftl` — "share Firefox" is rendered as "Teilen Sie Firefox" here but as "Firefox empfehlen" in all other referral strings of this batch.
-    - Current: `Teilen Sie { -brand-product-name }`
-    - Source: `Want to help? <label data-l10n-name="helpus-donateLink">Make a donation</label>, <label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>, or <label data-l10n-name="helpus-getInvolvedLink">g…`
-    - Suggest: `empfehlen Sie { -brand-product-name }`
-    - The developer comments for the parallel referral strings state that "Share" means recommending/referring the browser; the de tree consistently uses "empfehlen", so "Teilen" (file sharing sense) is inconsistent and misleading.
+- `statePartiallyChecked` — `dom/chrome/accessibility/AccessFu.properties` — "partially checked" is translated as "teilweise ausgewählt" (partially selected) instead of "teilweise aktiviert/angekreuzt".
+    - Current: `teilweise ausgewählt`
+    - Source: `partially checked`
+    - Suggest: `teilweise aktiviert`
+    - The accessibility state refers to a checkbox being checked, not selected; "ausgewählt" is the German term for "selected", a distinct accessibility state.
+- `newtab-stocks-watchlist-full` — `browser/browser/newtab/newtab.ftl` — The [one] plural variant uses the plural form "Aktien" instead of the singular "Aktie".
+    - Current: `[one] Sie können bis zu { $limit } Aktien hinzufügen.`
+    - Source: `{$limit ->} [one] You can add up to { $limit } stock. Remove one to add another. [other] You can add up to { $limit } stocks. Remove one to add another.`
+    - Suggest: `[one] Sie können bis zu { $limit } Aktie hinzufügen.`
+    - en-US [one] uses the singular "stock"; the German singular variant must agree with $limit = 1.
 
 ### ✅ Fixed since the last run (0)
 
@@ -54,16 +54,13 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,169 |
-| Missing strings | 11 |
+| Strings | 18,180 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
+| Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
-| Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
-| printf placeholder mismatches | 0 |
-| Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 7 |
@@ -73,13 +70,6 @@ _Nothing retired._
 | Typography deviations from this locale's own norm | 0 |
 
 ### Completeness
-
-**11 strings** are not translated yet, concentrated in:
-
-- `browser/browser/newtab/newtab.ftl` — 7
-- `browser/browser/sharePanel.ftl` — 2
-- `browser/browser/preferences/formAutofill.ftl` — 1
-- `dom/chrome/accessibility/AccessFu.properties` — 1
 
 **Files present but identical to en-US:**
 
@@ -98,7 +88,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | ellipsis | `char` 466 | **char** |
 | dash | `em` 16, `en` 87 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 12, `formal` 4249 | **formal** |
+| register | `informal` 12, `formal` 4254 | **formal** |
 
 ---
 
@@ -108,12 +98,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (50)
+## 3. Open findings (52)
+
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 10 |
-| 2 | Wrong content (says something other than the English) | 13 |
+| 2 | Wrong content (says something other than the English) | 15 |
 | 3 | Degraded language (grammar, spelling, terminology) | 26 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
@@ -147,6 +138,11 @@ _Nothing reported._
     - Source: `By choosing ChatGPT, you agree to the OpenAI <a data-l10n-name="link1">Terms of Use</a> and <a data-l10n-name="link2">Privacy Policy</a>.`
 - `menu-file-new-window` — `browser/browser/menubar.ftl` — same stray soft hyphen U+00AD before "Neues Fenster".
     - Source: `accesskey: N label: New Window`
+- `newtab-stocks-watchlist-full` — `browser/browser/newtab/newtab.ftl` — The [one] plural variant uses the plural form "Aktien" instead of the singular "Aktie".
+    - Current: `[one] Sie können bis zu { $limit } Aktien hinzufügen.`
+    - Source: `{$limit ->} [one] You can add up to { $limit } stock. Remove one to add another. [other] You can add up to { $limit } stocks. Remove one to add another.`
+    - Suggest: `[one] Sie können bis zu { $limit } Aktie hinzufügen.`
+    - en-US [one] uses the singular "stock"; the German singular variant must agree with $limit = 1.
 - `webauthn-uv-invalid-long-prompt` — `browser/browser/webauthnDialog.ftl` — the [one]/[other] plural variants are swapped ([one] shows "Versuche" plural, [other] shows "Versuch" singular). Swap them (cf. correct webauthn-pin-invalid-long-prompt).
     - Current: `[one]`
     - Source: `{$retriesLeft ->} [one] User verification failed. You have { $retriesLeft } attempt left. Try again. [other] User verification failed. You have { $retriesLeft } attempts left. Try again.`
@@ -166,6 +162,11 @@ _Nothing reported._
 - `preferences-etp-level-standard` — `browser/browser/preferences/preferences.ftl` — preferences-etp-level-standard (.label) — browser/browser/preferences/preferences.ftl:2674 — DE: "Standard" drops the "(default)" marker present in EN "Standard (default)" → e.g. "Standard (Voreinstellung)".
     - Source: `description: Strong, reliable protections that work smoothly with most websites. label: Standard (default)`
     - Suggest: `e.g. "Standard`
+- `statePartiallyChecked` — `dom/chrome/accessibility/AccessFu.properties` — "partially checked" is translated as "teilweise ausgewählt" (partially selected) instead of "teilweise aktiviert/angekreuzt".
+    - Current: `teilweise ausgewählt`
+    - Source: `partially checked`
+    - Suggest: `teilweise aktiviert`
+    - The accessibility state refers to a checkbox being checked, not selected; "ausgewählt" is the German term for "selected", a distinct accessibility state.
 - `pdfjs-text-annotation-type` — `toolkit/toolkit/pdfviewer/viewer.ftl` — pdfjs-text-annotation-type (.alt) — toolkit/toolkit/pdfviewer/viewer.ftl:302 — DE: "[Anlage: { $type }]" (= attachment) → "[{ $type }-Anmerkung]" (EN "annotation"; "Anmerkung" is used elsewhere in the file).
     - Source: `alt: [{ $type } Annotation]`
     - Suggest: `"[{ $type }-Anmerkung]"`

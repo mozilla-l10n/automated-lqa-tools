@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
+| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 8 of 18,169 |
+| **Strings reviewed this run** | 0 of 18,169 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for ru: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `helpus-referrals2` — `browser/browser/aboutDialog.ftl` — Superfluous comma before the coordinating conjunction «или» in a two-part enumeration.
-    - Current: `</label>, <label data-l10n-name="helpus-getInvolvedLink">присоединяйтесь!</label>`
-    - Source: `Want to help? <label data-l10n-name="helpus-donateLink">Make a donation</label>, <label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>, or <label data-l10n-name="helpus-getInvolvedLink">g…`
-    - Suggest: `</label> <label data-l10n-name="helpus-getInvolvedLink">присоединяйтесь!</label>`
-    - In Russian a comma is not placed before a single «или» joining homogeneous members; the en-US comma before "or" reflects English punctuation rules only. The comma should move: «Сделайте пожертвование, поделитесь … или присоединяйтесь!»
-- `appmenu-referrals2` — `browser/browser/appmenu.ftl` — Menu label uses «Поделитесь { -brand-product-name }» without the required instrumental case, so the brand name is left in the wrong grammatical form.
-    - Current: `Поделитесь { -brand-product-name }`
-    - Source: `accesskey: r label: Share { -brand-product-name }`
-    - Suggest: `Поделитесь { -brand-product-name(case: "ablative") }`
-    - The verb «поделиться» governs the instrumental case («поделиться Firefox'ом» / «поделиться браузером»); the brand term supports a $case parameter per the locale conventions, and omitting it produces an ungrammatical nominative form.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -59,11 +50,8 @@ _Nothing retired._
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
+| Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
-| Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
-| printf placeholder mismatches | 0 |
-| Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 3 |
@@ -78,8 +66,8 @@ _Nothing retired._
 
 - `browser/browser/newtab/newtab.ftl` — 7
 - `browser/browser/sharePanel.ftl` — 2
-- `browser/browser/preferences/formAutofill.ftl` — 1
 - `dom/chrome/accessibility/AccessFu.properties` — 1
+- `browser/browser/preferences/formAutofill.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -106,6 +94,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 ---
 
 ## 3. Open findings (595)
+
 
 | Impact | Meaning | Count |
 |---|---|---|
@@ -813,7 +802,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `styleinspector.contextmenu.copyDeclaration` — `devtools/shared/styleinspector.properties` — styleinspector.contextmenu.copyDeclaration and changes.contextmenu.copyDeclaration use декларацию where rule.jumpDeclaration.title uses объявление
     - Source: `Copy Declaration`
 - `evaluationNotifcation.noOriginalVariableMapping.msg` — `devtools/shared/webconsole.properties` — evaluationNotifcation.noOriginalVariableMapping.msg and webconsole.input.selector.tooltip use оценка (assessment) where JS evaluation is вычисление everywhere else — the only two occurrences in all of devtools
-    - Source: `Original variables name mapping in the debugger is disabled. Evaluation results might not be accurate. Click the `Show original variables` checkbox in the debugger scopes panel to enable.`
+    - Source: ``Original variables name mapping in the debugger is disabled. Evaluation results might not be accurate. Click the `Show original variables` checkbox in the debugger scopes panel to enable.``
 - `webconsole.input.selector.tooltip` — `devtools/shared/webconsole.properties` — evaluationNotifcation.noOriginalVariableMapping.msg and webconsole.input.selector.tooltip use оценка (assessment) where JS evaluation is вычисление everywhere else — the only two occurrences in all of devtools
     - Source: `Select evaluation context`
 - `webconsole.logsFilterButton.label` — `devtools/shared/webconsole.properties` — webconsole.logsFilterButton.label singular Лог vs plural siblings; netmonitor.headers.status Состояние vs Статус in adjacent labels; netmonitor.toolbar.resetColumns Восстановить колонки vs Сбросить сортировку/столбца; netmonitor.ws.context.copyFrameAsHex breaks the Копировать как X pattern
@@ -935,7 +924,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `print_progress_percent` — `browser/pdfviewer/viewer.properties` — Missing space between number and unit: timer.end (mobile/android/chrome/browser.properties), console-timer-end (geckoViewConsole.ftl), throttling.profile.label (network-throttling.properties — spaced in …description, unspaced here), newtab-wallpaper-error-max-file-size ({ $filesize }МБ), printprogresspercent (browser/pdfviewer/viewer.properties — space added before %), pdfjs-print-progress-percen…
     - Source: `{{progress}}%`
 - `editorNotificationFooter.noOriginalScopes` — `devtools/client/debugger.properties` — Stray space before punctuation: protections-vpn-header-content-subscribed (Apple App Store .), extension-controlled-enable and settings-translations-subpage-never-translate-sites-description (preferences.ftl), fp-certerror-not-yet-valid-why-dangerous-body (certError.ftl), PEAttSelNoBar and PEAttSelUnexpected (css.properties), networkMenu.ws.summary.framesCount2 and charts.totalSecondsNonBlocking…
-    - Source: `Original variables name mapping is turned off, so all inline and tooltip previews are disabled. Click the `%S` checkbox in the scopes panel to turn them on.`
+    - Source: ``Original variables name mapping is turned off, so all inline and tooltip previews are disabled. Click the `%S` checkbox in the scopes panel to turn them on.``
     - Suggest: `Apple App Store .`
 - `network-menu-summary-tooltip-load` — `devtools/client/netmonitor.ftl` — network-menu-summary-tooltip-domcontentloaded (.title) and network-menu-summary-tooltip-load (.title) — devtools/client/netmonitor.ftl — “DOMContentLoaded”, “load” → « »
     - Current: `“load”`

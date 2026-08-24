@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
+| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 6 of 15,494 |
+| **Strings reviewed this run** | 0 of 15,494 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for id: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `appmenu-referrals2` — `browser/browser/appmenu.ftl` — "Share" is translated as "Sembunyikan" (Hide), which is a completely different action.
-    - Current: `Sembunyikan { -brand-product-name }`
-    - Source: `accesskey: r label: Share { -brand-product-name }`
-    - Suggest: `Bagikan { -brand-product-name }`
-    - The en-US source is "Share { -brand-product-name }" and the developer comment says "Share" means recommending/referring the browser; "Sembunyikan" means "Hide". Other identical strings use "Bagikan".
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -54,11 +50,8 @@ _Nothing retired._
 | Obsolete strings | 0 |
 | Files absent from the locale | 6 |
 | Fluent / properties syntax errors | 0 |
+| Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
-| Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
-| printf placeholder mismatches | 0 |
-| Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 7 |
 | Text quoting a UI label that no longer matches | 7 |
@@ -80,8 +73,8 @@ _Nothing retired._
 - `browser/browser/aiWindowContent.ftl` — 80
 - `browser/browser/newtab/asrouter.ftl` — 79
 - `browser/browser/browser.ftl` — 67
-- `browser/browser/featureCallout.ftl` — 61
 - `toolkit/toolkit/about/aboutAddons.ftl` — 61
+- `browser/browser/featureCallout.ftl` — 61
 - `browser/browser/profiles.ftl` — 56
 
 **Files absent from the locale:**
@@ -117,6 +110,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 ---
 
 ## 3. Open findings (330)
+
 
 | Impact | Meaning | Count |
 |---|---|---|
@@ -735,9 +729,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Suggest: `“The Principal Writing Mode”`
     - The comment lists "The Principal Writing Mode" as a technical term that must be kept verbatim; the final "e" is missing.
 - `CORSAllowHeaderFromPreflightDeprecation` — `dom/chrome/security/security.properties` — CORS header name corrupted to `Access-Control-Allow -Header`.
-    - Current: ``Access-Control-Allow -Header``
-    - Source: `Cross-Origin Request Warning: The Same Origin Policy will disallow reading the remote resource at %1$S soon. (Reason: When the `Access-Control-Allow-Headers` is `*`, the `Authorization` header is not covered. To include…`
-    - Suggest: ``Access-Control-Allow-Headers``
+    - Current: `` `Access-Control-Allow -Header` ``
+    - Source: ``Cross-Origin Request Warning: The Same Origin Policy will disallow reading the remote resource at %1$S soon. (Reason: When the `Access-Control-Allow-Headers` is `*`, the `Authorization` header is not covered. To include…``
+    - Suggest: `` `Access-Control-Allow-Headers` ``
     - The comment lists Access-Control-Allow-Headers as do-not-translate; the localized form has a stray space and a singular "Header", so it names no real header.
 - `SanitizerAllowElementIgnored2` — `dom/chrome/security/security.properties` — The API name "Sanitizer" was translated as "Pembersih".
     - Current: `Pembersih: Memanggil allowElement()`

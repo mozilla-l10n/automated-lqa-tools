@@ -16,6 +16,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9b5ad65a",
@@ -33,10 +34,11 @@
   "file": "browser/browser/aboutLogins.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "ja",
   "origin": {},
   "rationale": "ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f26e8f78",
@@ -54,10 +56,11 @@
   "file": "browser/browser/aboutLogins.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "ja",
   "origin": {},
   "rationale": "ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e92b21c0",
@@ -75,10 +78,11 @@
   "file": "browser/browser/aboutLogins.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "ja",
   "origin": {},
   "rationale": "ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b62afc81",
@@ -96,10 +100,11 @@
   "file": "browser/browser/aboutLogins.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "ja",
   "origin": {},
   "rationale": "ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e1975159",
@@ -125,6 +130,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "ddfe0dbd",
@@ -150,6 +156,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "635d8377",
@@ -175,6 +182,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "d6553521",
@@ -200,6 +208,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6fdbe6cb",
@@ -225,6 +234,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "032ae3f1",
@@ -250,6 +260,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "24d543e2",
@@ -275,6 +286,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "833ee974",
@@ -300,6 +312,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "7e40816c",
@@ -325,6 +338,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "30f1fc65",
@@ -350,6 +364,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "7a3b1797",
@@ -375,6 +390,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "e4811ea2",
@@ -400,6 +416,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "91470747",
@@ -425,6 +442,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "f46ad9cc",
@@ -450,6 +468,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "bd401927",
@@ -475,6 +494,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "53561a4c",
@@ -500,6 +520,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "53561a4c",
@@ -525,6 +546,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "8c65a9eb",
@@ -550,6 +572,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "40d9b5b3",
@@ -575,6 +598,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "87d9a553",
@@ -600,6 +624,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d44b8fc6",
@@ -625,6 +650,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "c910386e",
@@ -650,6 +676,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "67c56006",
@@ -675,6 +702,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "6575d291",
@@ -700,6 +728,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "e08fcde4",
@@ -725,6 +754,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "50a29c63",
@@ -742,10 +772,11 @@
   "file": "browser/browser/appmenu.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "ja",
   "origin": {},
   "rationale": "ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "eb5fa91f",
@@ -771,6 +802,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5e7e2434",
@@ -796,6 +828,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0871ce50",
@@ -813,10 +846,11 @@
   "file": "browser/browser/browser.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "ja",
   "origin": {},
   "rationale": "ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "23e9a5a2",
@@ -842,6 +876,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "1cb6351b",
@@ -867,6 +902,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "590cba66",
@@ -892,6 +928,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "6f3a8dab",
@@ -917,6 +954,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4235fe5f",
@@ -942,6 +980,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "0d012674",
@@ -959,10 +998,11 @@
   "file": "browser/browser/contentSharing.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "ja",
   "origin": {},
   "rationale": "ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "02755ff1",
@@ -988,6 +1028,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4cf303e0",
@@ -1013,6 +1054,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "e296b400",
@@ -1038,6 +1080,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "e296b400",
@@ -1063,6 +1106,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "2294a8dd",
@@ -1088,6 +1132,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "4dbf45a9",
@@ -1105,10 +1150,11 @@
   "file": "browser/browser/defaultBrowserNotification.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "ja",
   "origin": {},
   "rationale": "In the source this string quotes “Web browser”, which is exactly the value of `desktop-entry-generic-name` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a6086bea",
@@ -1134,6 +1180,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "0701ed48",
@@ -1151,10 +1198,11 @@
   "file": "browser/browser/downloads.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "ja",
   "origin": {},
   "rationale": "ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5c81520a",
@@ -1180,6 +1228,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "e8cb746d",
@@ -1205,6 +1254,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "5faf6d5b",
@@ -1230,6 +1280,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "082266a5",
@@ -1255,6 +1306,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "9ec3a568",
@@ -1280,6 +1332,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "717ecd96",
@@ -1305,6 +1358,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "ef0ea221",
@@ -1330,6 +1384,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "ef9dcd7b",
@@ -1355,6 +1410,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "4725d432",
@@ -1380,6 +1436,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fa558164",
@@ -1405,6 +1462,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "70e1b3b9",
@@ -1430,6 +1488,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5ca0aa7a",
@@ -1455,6 +1514,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "91da162a",
@@ -1480,6 +1540,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "e01d9b84",
@@ -1505,6 +1566,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "05cfcc98",
@@ -1530,6 +1592,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "7442e5a5",
@@ -1555,6 +1618,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "2798ed49",
@@ -1580,6 +1644,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7d362dfe",
@@ -1605,6 +1670,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "704b1459",
@@ -1622,10 +1688,11 @@
   "file": "browser/browser/migrationWizard.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "ja",
   "origin": {},
   "rationale": "ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ed13895e",
@@ -1643,10 +1710,11 @@
   "file": "browser/browser/migrationWizard.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "ja",
   "origin": {},
   "rationale": "ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d2fe7738",
@@ -1672,6 +1740,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "ffaeda3e",
@@ -1697,6 +1766,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "0ac90a14",
@@ -1722,6 +1792,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "af0317b8",
@@ -1747,6 +1818,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "2ef1d974",
@@ -1772,6 +1844,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "e8ebc525",
@@ -1797,6 +1870,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "5d3ba5dd",
@@ -1822,6 +1896,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "7be221cf",
@@ -1847,6 +1922,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "a4c36307",
@@ -1872,6 +1948,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e3ae897d",
@@ -1897,6 +1974,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c331f9fe",
@@ -1922,6 +2000,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "43af02ac",
@@ -1947,6 +2026,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "7d10c36c",
@@ -1972,6 +2052,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "3d2f62d3",
@@ -1997,6 +2078,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "603c728d",
@@ -2022,6 +2104,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "30f7486d",
@@ -2047,6 +2130,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "7ad36977",
@@ -2072,6 +2156,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "2b19e622",
@@ -2097,6 +2182,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "cd622aeb",
@@ -2122,6 +2208,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "92cf3a5f",
@@ -2147,6 +2234,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "f8cc869a",
@@ -2172,6 +2260,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "8efc88fd",
@@ -2197,6 +2286,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "377def37",
@@ -2222,6 +2312,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "8a5df434",
@@ -2247,6 +2338,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "e6dbe731",
@@ -2272,6 +2364,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "1d51e12c",
@@ -2297,6 +2390,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "2915f030",
@@ -2322,6 +2416,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "7222919e",
@@ -2347,6 +2442,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "92bf4ceb",
@@ -2372,6 +2468,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "86d3fbd1",
@@ -2397,6 +2494,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "2c10a630",
@@ -2422,6 +2520,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0d4dd276",
@@ -2447,6 +2546,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "86d3fbd1",
@@ -2472,6 +2572,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "24f950e6",
@@ -2497,6 +2598,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "a8486fa0",
@@ -2522,6 +2624,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "97da49a2",
@@ -2547,6 +2650,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "ab1c484c",
@@ -2572,6 +2676,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "da1a71d6",
@@ -2597,6 +2702,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "169d314a",
@@ -2622,6 +2728,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "921b2dc8",
@@ -2647,6 +2754,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "1fe6ca13",
@@ -2672,6 +2780,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "58f9cc0d",
@@ -2697,6 +2806,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "0e8da5dc",
@@ -2722,6 +2832,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "bc8630ff",
@@ -2747,6 +2858,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "9c18508e",
@@ -2772,6 +2884,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "67deb5c6",
@@ -2797,6 +2910,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "cb5e412b",
@@ -2822,6 +2936,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "8cf8b16c",
@@ -2847,6 +2962,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "8cf8b16c",
@@ -2872,6 +2988,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "6aa92064",
@@ -2897,6 +3014,7 @@
    "severity": "S3"
   },
   "rationale": "(Retired: the suggested text is identical to the current text.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "withdrawn",
   "string_hash": "75fdbe54",
@@ -2922,6 +3040,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6cf3c2bf",
@@ -2947,6 +3066,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "30dda0b5",
@@ -2972,6 +3092,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "4374d653",
@@ -2997,6 +3118,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "f4a304d4",
@@ -3022,6 +3144,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "c30934c8",
@@ -3047,6 +3170,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "b53a9b19",
@@ -3072,6 +3196,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "074f3852",
@@ -3097,6 +3222,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "e9715ad5",
@@ -3122,6 +3248,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "a2c0eaea",
@@ -3147,6 +3274,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "c67bc8bd",
@@ -3172,6 +3300,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "a9ffb31c",
@@ -3197,6 +3326,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "a9ffb31c",
@@ -3222,6 +3352,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "795c9c40",
@@ -3247,6 +3378,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "06a6cd4c",
@@ -3272,6 +3404,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "b6dd1e4c",
@@ -3297,6 +3430,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "3167be28",
@@ -3322,6 +3456,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "209d76b1",
@@ -3347,6 +3482,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "caf910d9",
@@ -3372,6 +3508,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "41599cbc",
@@ -3397,6 +3534,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "12896a42",
@@ -3422,6 +3560,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "de8f7850",
@@ -3447,6 +3586,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "01bcb5e7",
@@ -3472,6 +3612,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "b3f58ca7",
@@ -3497,6 +3638,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "eead002d",
@@ -3522,6 +3664,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "f56928da",
@@ -3547,6 +3690,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "46a969f7",
@@ -3572,6 +3716,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f88ba749",
@@ -3597,6 +3742,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "e9c9691a",
@@ -3622,6 +3768,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "c3915e3e",
@@ -3647,6 +3794,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "173d3e7c",
@@ -3672,6 +3820,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "906f3c35",
@@ -3697,6 +3846,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "1e241934",
@@ -3722,6 +3872,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "338073a5",
@@ -3747,6 +3898,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "911d909d",
@@ -3772,6 +3924,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "24887d11",
@@ -3797,6 +3950,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3f83cc0a",
@@ -3822,6 +3976,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "7a070dfe",
@@ -3847,6 +4002,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "1bf9d4ff",
@@ -3872,6 +4028,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "2f31d108",
@@ -3897,6 +4054,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "8b4c78e1",
@@ -3922,6 +4080,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "740213c1",
@@ -3947,6 +4106,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "65b74a6e",
@@ -3972,6 +4132,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "0536e01e",
@@ -3997,6 +4158,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5169271d",
@@ -4022,6 +4184,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "cf48a0ac",
@@ -4047,6 +4210,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5482ab74",
@@ -4072,6 +4236,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "57dc634b",
@@ -4097,6 +4262,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "63540158",
@@ -4122,6 +4288,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "134d6f84",
@@ -4147,6 +4314,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bdb85292",
@@ -4172,6 +4340,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4269ed7d",
@@ -4197,6 +4366,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "05fe038b",
@@ -4214,10 +4384,11 @@
   "file": "browser/browser/recentlyClosed.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "ja",
   "origin": {},
   "rationale": "ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "11db9917",
@@ -4243,6 +4414,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "de874c74",
@@ -4268,6 +4440,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "df3e4565",
@@ -4293,6 +4466,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "4baf3133",
@@ -4318,6 +4492,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "05b0b874",
@@ -4343,6 +4518,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "eae2eedb",
@@ -4368,6 +4544,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "eae2eedb",
@@ -4393,6 +4570,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "3d0ad50b",
@@ -4418,6 +4596,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "5cd8201b",
@@ -4443,6 +4622,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3f030ced",
@@ -4468,6 +4648,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2ab21cbb",
@@ -4493,6 +4674,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "ae791707",
@@ -4518,6 +4700,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "81d8a2f3",
@@ -4543,6 +4726,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "f9a930f8",
@@ -4568,6 +4752,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "0d4a0c7f",
@@ -4593,6 +4778,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "8db8e055",
@@ -4618,6 +4804,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "ec332b40",
@@ -4643,6 +4830,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "0d4a0c7f",
@@ -4668,6 +4856,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "8b4c78e1",
@@ -4685,10 +4874,11 @@
   "file": "browser/browser/siteProtections.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "ja",
   "origin": {},
   "rationale": "ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8a5d5821",
@@ -4714,6 +4904,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "abdb11b0",
@@ -4739,6 +4930,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "a6d0bf19",
@@ -4764,6 +4956,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "b6934828",
@@ -4789,6 +4982,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "bd483d17",
@@ -4814,6 +5008,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6a969844",
@@ -4839,6 +5034,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5cbf3cb6",
@@ -4864,6 +5060,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "3960304a",
@@ -4889,6 +5086,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f072129a",
@@ -4914,6 +5112,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "5415a364",
@@ -4931,10 +5130,11 @@
   "file": "browser/browser/tabbrowser.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "ja",
   "origin": {},
   "rationale": "ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6d7fe100",
@@ -4952,10 +5152,11 @@
   "file": "browser/browser/tabbrowser.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "ja",
   "origin": {},
   "rationale": "ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c50c3990",
@@ -4981,6 +5182,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "34bdf6a0",
@@ -4998,10 +5200,11 @@
   "file": "browser/browser/tabbrowser.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "ja",
   "origin": {},
   "rationale": "ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "59ece3f3",
@@ -5019,10 +5222,11 @@
   "file": "browser/browser/tabbrowser.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "ja",
   "origin": {},
   "rationale": "ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c2e3b547",
@@ -5040,10 +5244,11 @@
   "file": "browser/browser/tabbrowser.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "ja",
   "origin": {},
   "rationale": "ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "14566043",
@@ -5061,10 +5266,11 @@
   "file": "browser/browser/tabbrowser.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "ja",
   "origin": {},
   "rationale": "ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1edc129b",
@@ -5082,10 +5288,11 @@
   "file": "browser/browser/tabbrowser.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "ja",
   "origin": {},
   "rationale": "ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b2633487",
@@ -5111,6 +5318,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "39c9a408",
@@ -5136,6 +5344,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "991c1a16",
@@ -5161,6 +5370,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "669a3fcb",
@@ -5186,6 +5396,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "5996f7c7",
@@ -5211,6 +5422,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "beef3b3f",
@@ -5236,6 +5448,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "9925b092",
@@ -5261,6 +5474,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "baa943f6",
@@ -5286,6 +5500,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "b1a133c8",
@@ -5311,6 +5526,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "279104de",
@@ -5336,6 +5552,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "9f2ad97e",
@@ -5361,6 +5578,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "759338fc",
@@ -5386,6 +5604,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "b490fa6c",
@@ -5411,6 +5630,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "974f5abe",
@@ -5436,6 +5656,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "2e7b9121",
@@ -5461,6 +5682,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "b37e288d",
@@ -5486,6 +5708,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "a17cb665",
@@ -5511,6 +5734,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "769345e8",
@@ -5536,6 +5760,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "39b17d1a",
@@ -5561,6 +5786,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "53a874af",
@@ -5586,6 +5812,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "f79453ed",
@@ -5611,6 +5838,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "d18ab80d",
@@ -5636,6 +5864,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "981dbedc",
@@ -5661,6 +5890,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "a8f7226f",
@@ -5686,6 +5916,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "5fb0d6ae",
@@ -5711,6 +5942,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "34cbd97f",
@@ -5736,6 +5968,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "50788a05",
@@ -5761,6 +5994,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "d80f85eb",
@@ -5786,6 +6020,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "bea8a3cb",
@@ -5811,6 +6046,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "bab27ab8",
@@ -5836,6 +6072,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "142c8417",
@@ -5861,6 +6098,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "0d355d35",
@@ -5886,6 +6124,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "96107807",
@@ -5911,6 +6150,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "1a5a9442",
@@ -5936,6 +6176,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "1e1092d9",
@@ -5961,6 +6202,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3d2a3418",
@@ -5986,6 +6228,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "20bb1996",
@@ -6011,6 +6254,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "4c1647d7",
@@ -6036,6 +6280,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f06f22e4",
@@ -6061,6 +6306,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "da214845",
@@ -6086,6 +6332,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "5fdad0f7",
@@ -6111,6 +6358,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "0faffa7c",
@@ -6136,6 +6384,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "a9c2faaf",
@@ -6161,6 +6410,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "f08c3309",
@@ -6186,6 +6436,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "134ba876",
@@ -6211,6 +6462,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "729bae5b",
@@ -6236,6 +6488,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "31e114b2",
@@ -6261,6 +6514,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3b27e9f3",
@@ -6286,6 +6540,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d0b8669a",
@@ -6311,6 +6566,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "556a20ed",
@@ -6336,6 +6592,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8f743b2f",
@@ -6361,6 +6618,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "a12521ab",
@@ -6386,6 +6644,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bac20de5",
@@ -6411,6 +6670,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "2d300096",
@@ -6436,6 +6696,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1597d8ff",
@@ -6461,6 +6722,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "6513741f",
@@ -6486,6 +6748,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "c4f03c25",
@@ -6511,6 +6774,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "b0d91414",
@@ -6536,6 +6800,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "56ff6dd7",
@@ -6561,6 +6826,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "adf1f9c4",
@@ -6586,6 +6852,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "f82b6cc3",
@@ -6611,6 +6878,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "33f632e6",
@@ -6636,6 +6904,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "6dd4fb9e",
@@ -6661,6 +6930,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "300db1a7",
@@ -6686,6 +6956,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "af08a460",
@@ -6711,6 +6982,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "5465b5df",
@@ -6736,6 +7008,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "208b4f33",
@@ -6761,6 +7034,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "9eb8d0d1",
@@ -6786,6 +7060,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "c059f4d5",
@@ -6811,6 +7086,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "4682f925",
@@ -6836,6 +7112,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fbb8d2c1",
@@ -6861,6 +7138,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0d7c64bc",
@@ -6886,6 +7164,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "e7659c09",
@@ -6911,6 +7190,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a9e8857c",
@@ -6936,6 +7216,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "c2a9bbf4",
@@ -6961,6 +7242,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "74a2c9ad",
@@ -6986,6 +7268,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "dce7d2da",
@@ -7011,6 +7294,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6f9c6c27",
@@ -7036,6 +7320,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "81e88a07",
@@ -7061,6 +7346,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4ccd5045",
@@ -7086,6 +7372,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "9d8d88a7",
@@ -7111,6 +7398,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "e37a9ae0",
@@ -7136,6 +7424,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "992705dc",
@@ -7161,6 +7450,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5b07bf21",
@@ -7186,6 +7476,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "841f320e",
@@ -7211,6 +7502,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "f69d7d3e",
@@ -7236,6 +7528,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fa822ded",
@@ -7261,6 +7554,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "4e42c409",
@@ -7286,6 +7580,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "b94d46d6",
@@ -7311,6 +7606,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fbcabf72",
@@ -7328,10 +7624,11 @@
   "file": "toolkit/toolkit/about/aboutWebauthn.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "ja",
   "origin": {},
   "rationale": "ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c4a312bc",
@@ -7349,10 +7646,11 @@
   "file": "toolkit/toolkit/about/aboutWebauthn.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "ja",
   "origin": {},
   "rationale": "ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "649a2c74",
@@ -7378,6 +7676,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "bb5a663d",
@@ -7403,6 +7702,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "886ef1f8",
@@ -7428,6 +7728,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "64b17952",
@@ -7453,6 +7754,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "9e1a0370",
@@ -7478,6 +7780,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3f9970ed",
@@ -7503,6 +7806,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "20b8eabb",
@@ -7528,6 +7832,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "bae46249",
@@ -7553,6 +7858,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "3ab9116f",
@@ -7578,6 +7884,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "5c917717",
@@ -7603,6 +7910,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "534713ab",
@@ -7628,6 +7936,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "a87a37f4",
@@ -7653,6 +7962,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "23a7578d",
@@ -7678,6 +7988,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "a520c201",
@@ -7703,6 +8014,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "8f2aef2f",
@@ -7728,6 +8040,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "3bc92b4e",
@@ -7753,6 +8066,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "2fb88ab7",
@@ -7778,6 +8092,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a31c9e9a",
@@ -7803,6 +8118,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a4deeb23",
@@ -7828,6 +8144,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "be7bcfec",
@@ -7853,6 +8170,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b5b0ddda",
@@ -7878,6 +8196,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "e9ae869f",
@@ -7903,6 +8222,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "f8d11a45",
@@ -7928,6 +8248,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "f5a3c97a",
@@ -7953,6 +8274,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "946f51a6",
@@ -7978,6 +8300,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "463e509b",
@@ -8003,6 +8326,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "778c8841",
@@ -8028,6 +8352,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "12fe73a2",
@@ -8053,6 +8378,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "87a4bd73",
@@ -8078,6 +8404,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "7b96bb5c",
@@ -8103,6 +8430,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6228aa39",
@@ -8128,6 +8456,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "cd34575b",
@@ -8153,6 +8482,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "c22d7cc0",
@@ -8178,6 +8508,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "1d44daac",
@@ -8203,6 +8534,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "9367ed74",
@@ -8228,6 +8560,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "e771fcb1",
@@ -8253,6 +8586,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "ab0b9ca1",
@@ -8278,6 +8612,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "df47c8bb",
@@ -8303,6 +8638,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "43b160de",
@@ -8328,6 +8664,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "2afb283f",
@@ -8353,6 +8690,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "1d7299cc",
@@ -8378,6 +8716,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "b7a8dc78",
@@ -8403,6 +8742,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "5847a7f4",
@@ -8428,6 +8768,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "2f235286",
@@ -8453,6 +8794,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "deb5c657",
@@ -8478,6 +8820,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "57ef569c",
@@ -8503,6 +8846,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "4fffce4e",
@@ -8528,6 +8872,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "4fffce4e",
@@ -8553,6 +8898,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "5ba9dfab",
@@ -8578,6 +8924,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "70e3fcfb",
@@ -8603,6 +8950,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "58e23879",
@@ -8628,6 +8976,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "f6328290",
@@ -8653,6 +9002,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "f6328290",
@@ -8678,6 +9028,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "590c0e60",
@@ -8703,6 +9054,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "3a189d5a",
@@ -8728,6 +9080,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "41dc6375",
@@ -8753,6 +9106,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "b0f71d49",
@@ -8778,6 +9132,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "e5a39d36",
@@ -8803,6 +9158,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "d41f9227",
@@ -8828,6 +9184,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "390a3aa1",
@@ -8853,6 +9210,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "6f1b4824",
@@ -8878,6 +9236,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cfce73ed",
@@ -8903,6 +9262,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cbeec966",
@@ -8928,6 +9288,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "aed753d7",
@@ -8953,6 +9314,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "82a9bbee",
@@ -8978,6 +9340,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "433e3aec",
@@ -9003,6 +9366,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "4539854e",
@@ -9028,6 +9392,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c225bd68",
@@ -9053,6 +9418,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "d13d612b",
@@ -9078,6 +9444,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8bb5690f",
@@ -9103,6 +9470,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "4a276c3f",

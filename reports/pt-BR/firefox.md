@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
+| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 8 of 18,135 |
+| **Strings reviewed this run** | 45 of 18,180 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -20,21 +20,21 @@ Also for pt-BR: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ### 🆕 New findings (3)
 
-- `referrals-section-header2` — `browser/browser/preferences/preferences.ftl` — "Share { -brand-product-name }" is rendered as "Recomendar" here but "Compartilhar" in the app menu and menu bar for the same feature.
-    - Current: `label: Recomendar o { -brand-product-name }`
-    - Source: `description: Invite someone to choose the browser that puts privacy first. label: Share { -brand-product-name }`
-    - Suggest: `label: Compartilhar o { -brand-product-name }`
-    - The identical en-US label "Share { -brand-product-name }" with the same developer comment is translated "Compartilhar o { -brand-product-name }" in appmenu.ftl and menubar.ftl; using a different verb in preferences makes the same feature inconsistently named across surfaces.
-- `referrals-link2` — `browser/browser/preferences/preferences.ftl` — "Share { -brand-product-name }" is rendered as "Recomendar" here but "Compartilhar" in the app menu and menu bar for the same feature.
-    - Current: `label: Recomendar o { -brand-product-name }`
-    - Source: `label: Share { -brand-product-name }`
-    - Suggest: `label: Compartilhar o { -brand-product-name }`
-    - The identical en-US label "Share { -brand-product-name }" is translated "Compartilhar o { -brand-product-name }" in appmenu.ftl and menubar.ftl; the differing verb here breaks terminology consistency for the same referral feature.
-- `referrals-section-header2` — `browser/browser/preferences/preferences.ftl` — The description drops the object "someone" from "Invite someone to choose the browser…".
-    - Current: `description: Convidar a usar o navegador que põe a privacidade em primeiro lugar.`
-    - Source: `description: Invite someone to choose the browser that puts privacy first. label: Share { -brand-product-name }`
-    - Suggest: `description: Convide alguém a escolher o navegador que põe a privacidade em primeiro lugar.`
-    - en-US reads "Invite someone to choose the browser that puts privacy first"; the translation omits "someone" and replaces "choose" with "use", leaving an incomplete sentence without a direct object.
+- `about-processes-utility-actor-hw-inference` — `toolkit/toolkit/about/aboutProcesses.ftl` — "Hardware Accelerated Inference" was rendered as "inference of hardware acceleration", inverting the modifier relationship.
+    - Current: `Inferência de aceleração de hardware`
+    - Source: `Hardware Accelerated Inference`
+    - Suggest: `Inferência acelerada por hardware`
+    - In en-US, "Hardware Accelerated" modifies "Inference": inference that is accelerated by hardware. The pt-BR reverses this to "inference of hardware acceleration".
+- `process-type-utility-actor-hw-inference` — `toolkit/toolkit/global/processTypes.ftl` — "Utility Hardware Accelerated Inference" rendered as "Utility of inference of hardware acceleration", inverting the modifier relationship.
+    - Current: `Utilitário de inferência de aceleração de hardware`
+    - Source: `Utility Hardware Accelerated Inference`
+    - Suggest: `Utilitário de inferência acelerada por hardware`
+    - "Hardware Accelerated" modifies "Inference"; the pt-BR turns it into "inference of hardware acceleration", which names a different thing.
+- `containers-sites-card-header` — `browser/browser/preferences/preferences.ftl` — Missing accent in "especificos".
+    - Current: `Contêineres de sites especificos`
+    - Source: `description: Choose a container for a site and { -brand-short-name } will use it every time the site opens. label: Site-specific containers`
+    - Suggest: `Contêineres de sites específicos`
+    - "específicos" requires the acute accent; "especificos" is a spelling error.
 
 ### ✅ Fixed since the last run (0)
 
@@ -59,16 +59,13 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,135 |
-| Missing strings | 45 |
+| Strings | 18,180 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
+| Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
-| Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
-| printf placeholder mismatches | 0 |
-| Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 4 |
@@ -79,22 +76,7 @@ _Nothing retired._
 
 ### Completeness
 
-**45 strings** are not translated yet, concentrated in:
-
-- `browser/browser/newtab/newtab.ftl` — 21
-- `browser/browser/preferences/containers.ftl` — 7
-- `browser/browser/preferences/preferences.ftl` — 5
-- `browser/browser/aboutPrivateBrowsing.ftl` — 3
-- `browser/browser/sharePanel.ftl` — 2
-- `browser/browser/profiles.ftl` — 1
-- `browser/browser/sidebar.ftl` — 1
-- `browser/browser/preferences/formAutofill.ftl` — 1
-- `dom/chrome/accessibility/AccessFu.properties` — 1
-- `toolkit/toolkit/about/aboutPDF.ftl` — 1
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 1
-- `toolkit/toolkit/global/processTypes.ftl` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -102,12 +84,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 645, `curly-single` 131, `straight-double` 73 | **curly-double** |
+| quotes | `curly-double` 646, `curly-single` 131, `straight-double` 73 | **curly-double** |
 | apostrophe | `typographic` 144, `straight` 108 | _mixed_ |
-| ellipsis | `char` 454, `ascii` 3 | **char** |
+| ellipsis | `char` 455, `ascii` 3 | **char** |
 | dash | `em` 78, `en` 1 | **em** |
 | nbsp | `total` 13, `narrow` 11, `before-punctuation` 5, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 1729 | **informal** |
+| register | `informal` 1735 | **informal** |
 
 ---
 
@@ -118,13 +100,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (568)
+## 3. Open findings (571)
+
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 15 |
-| 2 | Wrong content (says something other than the English) | 193 |
-| 3 | Degraded language (grammar, spelling, terminology) | 289 |
+| 2 | Wrong content (says something other than the English) | 195 |
+| 3 | Degraded language (grammar, spelling, terminology) | 290 |
 | 4 | Cosmetic (typography, spacing) | 71 |
 
 ### A. Functional, markup, variables & plurals
@@ -389,7 +372,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `Extrair dados da tela`
     - Source: `Extract canvas data`
     - Suggest: `Extrair dados do canvas`
-- _…and 130 more; see `state/` for the full list._
+- _…and 132 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -617,7 +600,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `A extensão pode ler e alterar dados`
     - Source: `label: Extension Can Read and Change Data:`
     - Suggest: `…dados:`
-- _…and 105 more; see `state/` for the full list._
+- _…and 106 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -1006,7 +989,7 @@ _No suppression rules have matched._
 
 ### Withdrawn to date (3)
 
-- `firefoxview-history-context-forget-site` — `browser/browser/firefoxView.ftl` — raised by `legacy`, withdrawn 2026-08-20
+- `firefoxview-history-context-forget-site` — `browser/browser/firefoxView.ftl` — raised by `accesskey`, withdrawn 2026-08-20
 - `webconsole-commands-usage-block` — `devtools/shared/webconsole-commands.ftl` — raised by `legacy`, withdrawn 2026-08-20
 - `neterror-proxy-connect-failure-contact-admin` — `toolkit/toolkit/neterror/netError.ftl` — raised by `legacy`, withdrawn 2026-08-20
 

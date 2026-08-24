@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
+| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 8 of 18,139 |
+| **Strings reviewed this run** | 41 of 18,180 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,28 @@ Also for fy-NL: [android](android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (4)
 
-_No new findings._
+- `process-type-utility-actor-hw-inference` — `toolkit/toolkit/global/processTypes.ftl` — Spelling error: "Helpprogamma" is missing an "r" (should be "Helpprogramma").
+    - Current: `Helpprogamma hardware-fersnelde ynferinsje`
+    - Source: `Utility Hardware Accelerated Inference`
+    - Suggest: `Helpprogramma hardware-fersnelde ynferinsje`
+    - "Utility" is rendered as "Helpprogramma" elsewhere; the letter r is dropped here.
+- `statePartiallyChecked` — `dom/chrome/accessibility/AccessFu.properties` — Wrong participle form: "oanfinkt" should be the past participle "oanfinkt" → "oanfinke"/"oanfinkt" mismatch with adjectival usage.
+    - Current: `foar in part oanfinkt`
+    - Source: `partially checked`
+    - Suggest: `foar in part oanfinke`
+    - "partially checked" is a state description requiring the past participle (oanfinke), not the third-person present form.
+- `newtab-recent-searches-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Recent searches options" is rendered as "Resinte-sykresultatenopsjes" (recent search *results* options) instead of "sykopdrachten" used consistently elsewhere.
+    - Current: `Resinte-sykresultatenopsjes`
+    - Source: `aria-label: Recent searches options`
+    - Suggest: `Opsjes foar resinte sykopdrachten`
+    - The widget is "Recent searches" = "Resinte sykopdrachten" in all other strings; "sykresultaten" means search results, a different thing.
+- `newtab-stocks-watchlist-full` — `browser/browser/newtab/newtab.ftl` — "Remove" is translated as "Ferwiderje" here while the sibling watchlist strings use "fuortsmite".
+    - Current: `Ferwiderje ien om in oare ta te foegjen.`
+    - Source: `{$limit ->} [one] You can add up to { $limit } stock. Remove one to add another. [other] You can add up to { $limit } stocks. Remove one to add another.`
+    - Suggest: `Smyt ien fuort om in oare ta te foegjen.`
+    - Same surface (stocks watchlist) uses "fuortsmite" for Remove in newtab-stocks-remove-from-watchlist and -removed-from-watchlist; "Ferwiderje" is inconsistent and not the Frisian standard term.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,16 +64,13 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,139 |
-| Missing strings | 41 |
+| Strings | 18,180 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
+| Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
-| Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
-| printf placeholder mismatches | 0 |
-| Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 0 |
@@ -65,19 +81,7 @@ _Nothing retired._
 
 ### Completeness
 
-**41 strings** are not translated yet, concentrated in:
-
-- `browser/browser/newtab/newtab.ftl` — 21
-- `browser/browser/preferences/containers.ftl` — 7
-- `browser/browser/preferences/preferences.ftl` — 4
-- `browser/browser/aboutPrivateBrowsing.ftl` — 3
-- `browser/browser/sharePanel.ftl` — 2
-- `browser/browser/preferences/formAutofill.ftl` — 1
-- `dom/chrome/accessibility/AccessFu.properties` — 1
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 1
-- `toolkit/toolkit/global/processTypes.ftl` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -85,9 +89,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-single` 875, `straight-double` 27, `curly-double` 18 | **curly-single** |
-| apostrophe | `typographic` 1646 | **typographic** |
-| ellipsis | `char` 461 | **char** |
+| quotes | `curly-single` 876, `straight-double` 27, `curly-double` 18 | **curly-single** |
+| apostrophe | `typographic` 1647 | **typographic** |
+| ellipsis | `char` 462 | **char** |
 | dash | `em` 26, `en` 95 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 7 | _mixed_ |
 
@@ -99,13 +103,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (588)
+## 3. Open findings (592)
+
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 26 |
-| 2 | Wrong content (says something other than the English) | 151 |
-| 3 | Degraded language (grammar, spelling, terminology) | 253 |
+| 2 | Wrong content (says something other than the English) | 152 |
+| 3 | Degraded language (grammar, spelling, terminology) | 256 |
 | 4 | Cosmetic (typography, spacing) | 158 |
 
 ### A. Functional, markup, variables & plurals
@@ -321,6 +326,11 @@ _Nothing reported._
     - Source: `Protect your saved addresses by syncing them to your devices with encryption.`
 - `newtab-privacy-message-streak` — `browser/browser/newtab/newtab.ftl` — "op rige" dropped in the singular variant only
     - Source: `{$count ->} [one] You’ve been protected { $count } day in a row. [other] You’ve been protected { $count } days in a row.`
+- `newtab-recent-searches-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Recent searches options" is rendered as "Resinte-sykresultatenopsjes" (recent search *results* options) instead of "sykopdrachten" used consistently elsewhere.
+    - Current: `Resinte-sykresultatenopsjes`
+    - Source: `aria-label: Recent searches options`
+    - Suggest: `Opsjes foar resinte sykopdrachten`
+    - The widget is "Recent searches" = "Resinte sykopdrachten" in all other strings; "sykresultaten" means search results, a different thing.
 - `newtab-section-following-button` — `browser/browser/newtab/newtab.ftl` — Folgjend ("next") → Folge ("following")
     - Current: `Folgjend`
     - Source: `Following`
@@ -390,11 +400,7 @@ _Nothing reported._
     - Current: `Wachtwurden beheare`
     - Source: `Manage passkeys in system settings`
     - Suggest: `Tagongskaaien beheare`
-- `profiles-pink-theme-title` — `browser/browser/profiles.ftl` — Rôze → Rôs (its own label is Rôs)
-    - Current: `Rôze`
-    - Source: `title: Apply pink theme`
-    - Suggest: `Rôs`
-- _…and 91 more; see `state/` for the full list._
+- _…and 92 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -628,7 +634,7 @@ _Nothing reported._
     - Current: `sybalkeynstellingen`
     - Source: `Switch it up whenever you want in the sidebar settings.`
     - Suggest: `sidebalkeynstellingen`
-- _…and 177 more; see `state/` for the full list._
+- _…and 179 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -638,6 +644,11 @@ _Nothing reported._
     - Suggest: `Begjinside`
 - `quickactions-cmd-manageai` — `browser/browser/browser.ftl` — Also: quickactions-cmd-manageai (browser/browser/browser.ftl) lists ai útskeakelje, ai útskeakelje, ai beheare — the first keyword is duplicated, so one of en-US's three search keywords ("off ai") is unreachable.
     - Source: `disable ai, off ai, manage ai`
+- `newtab-stocks-watchlist-full` — `browser/browser/newtab/newtab.ftl` — "Remove" is translated as "Ferwiderje" here while the sibling watchlist strings use "fuortsmite".
+    - Current: `Ferwiderje ien om in oare ta te foegjen.`
+    - Source: `{$limit ->} [one] You can add up to { $limit } stock. Remove one to add another. [other] You can add up to { $limit } stocks. Remove one to add another.`
+    - Suggest: `Smyt ien fuort om in oare ta te foegjen.`
+    - Same surface (stocks watchlist) uses "fuortsmite" for Remove in newtab-stocks-remove-from-watchlist and -removed-from-watchlist; "Ferwiderje" is inconsistent and not the Frisian standard term.
 - `more-from-moz-solo-description` — `browser/browser/preferences/moreFromMozilla.ftl` — Free (gratis) — fergees / fergese / fergeze: more-from-moz-firefox-relay-description, more-from-moz-mozilla-monitor-card, more-from-moz-solo-description (moreFromMozilla.ftl); newtab-privacy-message-promo-relay-2, -relay-3, -monitor-2 (newtab.ftl); relay-50-masks-announcement-subtitle (asrouter.ftl).
     - Current: `fergees`
     - Source: `Create your website instantly and connect your own custom domain for free.`

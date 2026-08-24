@@ -16,6 +16,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0f77d957",
@@ -41,6 +42,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "64737046",
@@ -66,6 +68,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "b2c75fce",
@@ -91,6 +94,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "96d38558",
@@ -116,6 +120,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "16a35942",
@@ -141,6 +146,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "b2139924",
@@ -166,6 +172,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b68f9d1c",
@@ -191,6 +198,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "95a8c601",
@@ -216,6 +224,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cae2a8f7",
@@ -241,6 +250,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "69a28221",
@@ -266,6 +276,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "05665c23",
@@ -291,6 +302,7 @@
    "severity": "S2"
   },
   "rationale": "(Retired: the suggested text is identical to the current text.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "withdrawn",
   "string_hash": "533ec30b",
@@ -316,6 +328,7 @@
    "severity": "S2"
   },
   "rationale": "(Retired: the suggested text is identical to the current text.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "withdrawn",
   "string_hash": "6733d52a",
@@ -333,10 +346,11 @@
   "file": "browser/browser/addonNotifications.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "nl",
   "origin": {},
   "rationale": "The label is “Verdachte website rapporteren”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b721553d",
@@ -362,6 +376,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1f3ce6ab",
@@ -387,6 +402,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2b19f349",
@@ -412,6 +428,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "dbdfc0f3",
@@ -437,6 +454,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "689982bc",
@@ -462,6 +480,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "235d6657",
@@ -487,6 +506,7 @@
    "severity": "S3"
   },
   "rationale": "(Retired: the suggested text is identical to the current text.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "withdrawn",
   "string_hash": "be7b3680",
@@ -512,6 +532,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "009a6f55",
@@ -537,6 +558,7 @@
    "severity": "S2"
   },
   "rationale": "(Retired: the suggested text is identical to the current text.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "withdrawn",
   "string_hash": "b7094983",
@@ -562,6 +584,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f2b5e7b6",
@@ -587,6 +610,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cf939803",
@@ -612,6 +636,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "ebc77918",
@@ -637,6 +662,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "d1b67fc5",
@@ -662,6 +688,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "99bf1fff",
@@ -687,6 +714,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "08ae3b5d",
@@ -712,6 +740,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "67f44818",
@@ -737,6 +766,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3d0dbc31",
@@ -762,6 +792,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f5cad935",
@@ -787,6 +818,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "f3967502",
@@ -812,6 +844,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "09163b49",
@@ -837,6 +870,7 @@
    "severity": "S3"
   },
   "rationale": "(Retired: the suggested text is identical to the current text.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "withdrawn",
   "string_hash": "765e245b",
@@ -862,6 +896,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8acef860",
@@ -887,6 +922,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "72ae8235",
@@ -912,6 +948,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "db95927b",
@@ -937,6 +974,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "e3a221c5",
@@ -962,6 +1000,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "1519ab2b",
@@ -987,6 +1026,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "1cc4a6d7",
@@ -1012,6 +1052,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "045b938f",
@@ -1037,6 +1078,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "df5d89ea",
@@ -1062,6 +1104,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "30d1e0c0",
@@ -1087,6 +1130,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "3bd53b64",
@@ -1112,6 +1156,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "741be3ca",
@@ -1137,6 +1182,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e175e0ed",
@@ -1162,6 +1208,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "b71f9091",
@@ -1187,6 +1234,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "61f80f81",
@@ -1212,6 +1260,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0f77d957",
@@ -1237,6 +1286,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7fde07ee",
@@ -1262,6 +1312,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cae2a8f7",
@@ -1287,6 +1338,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7daeeb9b",
@@ -1312,6 +1364,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "801d4336",
@@ -1337,6 +1390,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c1858463",
@@ -1362,6 +1416,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "16828aed",
@@ -1387,6 +1442,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e9532189",
@@ -1412,6 +1468,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "4fd1d2b6",
@@ -1437,6 +1494,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d38bfc84",
@@ -1462,6 +1520,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "29961c9f",
@@ -1487,6 +1546,7 @@
    "severity": "S2"
   },
   "rationale": "(Retired: the suggested text is identical to the current text.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "withdrawn",
   "string_hash": "b5bd6121",
@@ -1512,6 +1572,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c7d2ae60",
@@ -1537,6 +1598,7 @@
    "severity": "S2"
   },
   "rationale": "(Retired: the suggested text is identical to the current text.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "withdrawn",
   "string_hash": "b5bd6121",
@@ -1562,6 +1624,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6ff20445",
@@ -1587,6 +1650,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1ca50531",
@@ -1612,6 +1676,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c714db10",
@@ -1637,6 +1702,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "269a10ea",
@@ -1662,6 +1728,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "bbadaf1a",
@@ -1687,6 +1754,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9235d379",
@@ -1712,6 +1780,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1d66bc85",
@@ -1737,6 +1806,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "085f65e7",
@@ -1762,6 +1832,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5740da1f",
@@ -1787,6 +1858,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5740da1f",
@@ -1812,6 +1884,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ef467a4e",
@@ -1837,6 +1910,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d446c38f",
@@ -1862,6 +1936,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "85b6e6dc",
@@ -1887,6 +1962,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "dbdbf2e9",
@@ -1912,6 +1988,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e14c544e",
@@ -1937,6 +2014,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "97ee4071",
@@ -1962,6 +2040,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "670c517a",
@@ -1987,6 +2066,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "eb3c78e2",
@@ -2012,6 +2092,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6964fcc9",
@@ -2037,6 +2118,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "1dfe933d",
@@ -2062,6 +2144,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a717beab",
@@ -2087,6 +2170,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "eea1d1e4",
@@ -2112,6 +2196,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "85c07a1b",
@@ -2137,6 +2222,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4a5af5f9",
@@ -2162,6 +2248,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9cb81737",
@@ -2187,6 +2274,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "9c34d7d5",
@@ -2212,6 +2300,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "00fee569",
@@ -2237,6 +2326,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b32d49b7",
@@ -2262,6 +2352,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f8326fc6",
@@ -2287,6 +2378,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "73ccc389",
@@ -2312,6 +2404,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "dfbe88ca",
@@ -2337,6 +2430,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c365489a",
@@ -2362,6 +2456,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fd0e4e92",
@@ -2387,6 +2482,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f7440add",
@@ -2412,6 +2508,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "1e2f18f9",
@@ -2437,6 +2534,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "598d61ad",
@@ -2462,6 +2560,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2a68e126",
@@ -2487,6 +2586,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "37f4a471",
@@ -2512,6 +2612,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "308a976f",
@@ -2537,6 +2638,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8a5a628a",
@@ -2562,6 +2664,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "971adc45",
@@ -2587,6 +2690,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0b971f46",
@@ -2612,6 +2716,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "b83c7f62",
@@ -2637,6 +2742,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3bf05ed5",
@@ -2662,6 +2768,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "c2122053",
@@ -2687,6 +2794,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7ead48f2",
@@ -2712,6 +2820,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "50f8f16b",
@@ -2737,12 +2846,37 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "eb8744b6",
   "string_id": "newtab-privacy-trackers-blocked-today",
   "suggest": "\"Tracker vandaag geblokkeerd\"",
   "summary": "newtab-privacy-trackers-blocked-today ([one]) — newtab/newtab.ftl — the singular variant uses the plural noun, so the distinction is lost. Current: \"Trackers vandaag geblokkeerd\" → Suggest: \"Tracker vandaag geblokkeerd\"",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "aria-label: Recente-zoekresultatenopties",
+  "dismissed_because": "",
+  "fid": "fa2dd7e7c98e",
+  "file": "browser/browser/newtab/newtab.ftl",
+  "first_seen": "2026-08-24",
+  "impact": 2,
+  "last_seen": "2026-08-24",
+  "locale": "nl",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The en-US says \"searches\", not \"search results\"; all other strings for this widget use \"Recente zoekopdrachten\".",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "08e8997b",
+  "string_id": "newtab-recent-searches-widget-menu-button",
+  "suggest": "aria-label: Opties voor recente zoekopdrachten",
+  "summary": "\"Recent searches options\" is rendered as \"Recente-zoekresultatenopties\" (recent search results), inconsistent with \"Recente zoekopdrachten\" used elsewhere for the same widget.",
   "suppressed_by": ""
  },
  {
@@ -2762,6 +2896,7 @@
    "severity": "S3"
   },
   "rationale": "(Retired: the suggested text is identical to the current text.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "withdrawn",
   "string_hash": "616c9217",
@@ -2787,6 +2922,7 @@
    "severity": "S3"
   },
   "rationale": "(Retired: the suggested text is identical to the current text.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "withdrawn",
   "string_hash": "e691dcfb",
@@ -2812,6 +2948,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dd7bd9e2",
@@ -2837,6 +2974,7 @@
    "severity": "S3"
   },
   "rationale": "(Retired: the suggested text is identical to the current text.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "withdrawn",
   "string_hash": "384461b5",
@@ -2862,6 +3000,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "37f4a471",
@@ -2887,6 +3026,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6c4a0b95",
@@ -2912,6 +3052,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "c0eebbe4",
@@ -2937,6 +3078,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "aeaba6c7",
@@ -2962,6 +3104,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "298fb38a",
@@ -2987,6 +3130,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "34833657",
@@ -3012,6 +3156,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c4515597",
@@ -3037,6 +3182,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "02031140",
@@ -3062,6 +3208,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "54607df0",
@@ -3087,6 +3234,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "78ec2376",
@@ -3112,6 +3260,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "466de273",
@@ -3137,6 +3286,7 @@
    "severity": "S2"
   },
   "rationale": "(Retired: the suggested text is identical to the current text.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "withdrawn",
   "string_hash": "42d44b86",
@@ -3162,6 +3312,7 @@
    "severity": "S2"
   },
   "rationale": "(Retired: the suggested text is identical to the current text.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "withdrawn",
   "string_hash": "ac77d394",
@@ -3187,6 +3338,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "55ae7d3b",
@@ -3212,6 +3364,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6496c49b",
@@ -3237,6 +3390,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d05ee81e",
@@ -3262,6 +3416,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5c24753a",
@@ -3287,6 +3442,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "77048ff9",
@@ -3312,6 +3468,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2f3c3749",
@@ -3337,6 +3494,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "03c5f1f7",
@@ -3362,6 +3520,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d7e791b3",
@@ -3387,6 +3546,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "29eb7fd5",
@@ -3412,6 +3572,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0228f2e8",
@@ -3437,6 +3598,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b38e1731",
@@ -3462,6 +3624,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0546ce59",
@@ -3487,6 +3650,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a11307fc",
@@ -3512,6 +3676,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "6274fa35",
@@ -3537,6 +3702,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "f23b20e4",
@@ -3562,6 +3728,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2dc4a4ed",
@@ -3587,6 +3754,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d0ff4a6c",
@@ -3612,6 +3780,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fc198c05",
@@ -3637,6 +3806,7 @@
    "severity": "S3"
   },
   "rationale": "(Retired: the suggested text is identical to the current text.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "withdrawn",
   "string_hash": "df8697cd",
@@ -3662,6 +3832,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a11307fc",
@@ -3687,6 +3858,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "490d60eb",
@@ -3712,6 +3884,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "df070d07",
@@ -3737,6 +3910,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "4550f461",
@@ -3762,6 +3936,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2fedce18",
@@ -3787,6 +3962,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1c4038f4",
@@ -3812,6 +3988,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f77392ce",
@@ -3837,6 +4014,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "03f4ef7e",
@@ -3862,6 +4040,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "fdf0f4ad",
@@ -3887,6 +4066,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c9fd1a81",
@@ -3912,6 +4092,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "5881e5e6",
@@ -3937,6 +4118,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5099c98d",
@@ -3962,6 +4144,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8fc4b312",
@@ -3987,6 +4170,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "15341057",
@@ -4012,6 +4196,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "011979b4",
@@ -4037,6 +4222,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e99e34c8",
@@ -4062,6 +4248,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a0ded793",
@@ -4087,6 +4274,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "d3341c11",
@@ -4112,6 +4300,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3857b5ee",
@@ -4137,6 +4326,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7338e90d",
@@ -4162,6 +4352,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a1cfa92e",
@@ -4187,6 +4378,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "5715bc16",
@@ -4212,6 +4404,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cbc89f4e",
@@ -4237,6 +4430,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "3e191873",
@@ -4262,6 +4456,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3e191873",
@@ -4287,6 +4482,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "525854e8",
@@ -4312,6 +4508,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "c6a038ff",
@@ -4337,6 +4534,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "56112108",
@@ -4362,6 +4560,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3b62e985",
@@ -4387,6 +4586,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "4b03688a",
@@ -4412,6 +4612,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4b03688a",
@@ -4437,6 +4638,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "5c66d07c",
@@ -4462,6 +4664,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "2863eb81",
@@ -4487,6 +4690,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "72e5874a",
@@ -4512,6 +4716,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "24825c6c",
@@ -4537,6 +4742,7 @@
    "severity": "S3"
   },
   "rationale": "(Retired: the suggested text is identical to the current text.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "withdrawn",
   "string_hash": "0a52ab38",
@@ -4562,6 +4768,7 @@
    "severity": "S3"
   },
   "rationale": "(Retired: the suggested text is identical to the current text.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "withdrawn",
   "string_hash": "0a52ab38",
@@ -4587,6 +4794,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "012afef3",
@@ -4612,6 +4820,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b23a252e",
@@ -4637,6 +4846,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9d3b355e",
@@ -4662,6 +4872,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a0181e11",
@@ -4687,6 +4898,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7466fd70",
@@ -4712,6 +4924,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ced07c7a",
@@ -4737,6 +4950,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e4749534",
@@ -4762,6 +4976,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "224dbd0a",
@@ -4787,6 +5002,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "22bd2333",
@@ -4812,6 +5028,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4386d601",
@@ -4837,6 +5054,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1695c65c",
@@ -4862,6 +5080,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "bea79def",
@@ -4887,6 +5106,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3aeba902",
@@ -4912,6 +5132,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "c82a6e0f",
@@ -4937,6 +5158,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "3a0b2e68",
@@ -4962,6 +5184,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fd0e4e92",
@@ -4987,6 +5210,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "84f21658",
@@ -5012,6 +5236,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "348c1662",
@@ -5037,6 +5262,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a27a2c7b",
@@ -5062,6 +5288,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "25a6a4ab",
@@ -5087,6 +5314,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "39d2be14",
@@ -5112,6 +5340,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e9a2f083",
@@ -5137,6 +5366,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "77ac5fd9",
@@ -5162,6 +5392,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3a816f46",
@@ -5187,6 +5418,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d5e6bfdd",
@@ -5212,6 +5444,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "38ac6cdf",
@@ -5237,6 +5470,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9040c4c0",
@@ -5262,6 +5496,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9040c4c0",
@@ -5287,6 +5522,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "38ac6cdf",
@@ -5312,6 +5548,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "af91227f",
@@ -5337,6 +5574,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "af91227f",
@@ -5362,6 +5600,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bdc910c5",
@@ -5387,6 +5626,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "90b08263",
@@ -5412,6 +5652,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "89f21b09",
@@ -5437,6 +5678,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b82aa53f",
@@ -5462,6 +5704,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c630b84a",
@@ -5487,6 +5730,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ffa4ad06",
@@ -5512,6 +5756,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b2270024",
@@ -5537,6 +5782,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "01554c8a",
@@ -5562,6 +5808,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3a87360b",
@@ -5587,6 +5834,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3316cc5c",
@@ -5612,6 +5860,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f751dc71",
@@ -5637,6 +5886,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "93b07ad1",
@@ -5662,6 +5912,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "58b15166",
@@ -5687,6 +5938,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "12a371b2",
@@ -5712,6 +5964,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "8c04ec01",
@@ -5737,6 +5990,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1c6deca1",
@@ -5762,6 +6016,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "36a635c7",
@@ -5787,6 +6042,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e9c6ff50",
@@ -5812,6 +6068,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9bc63896",
@@ -5837,6 +6094,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "470304ff",
@@ -5862,6 +6120,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "b09eda7c",
@@ -5887,6 +6146,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7189c99f",
@@ -5912,6 +6172,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d621d1da",
@@ -5937,6 +6198,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fb406725",
@@ -5962,6 +6224,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e22e2f28",
@@ -5987,6 +6250,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4634b99c",
@@ -6012,6 +6276,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e3973082",
@@ -6037,6 +6302,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "54556974",
@@ -6062,6 +6328,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "8d94cdc5",
@@ -6087,6 +6354,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "d872091a",
@@ -6112,6 +6380,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e126a6ab",
@@ -6137,6 +6406,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1b444894",
@@ -6162,6 +6432,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6e580a85",
@@ -6187,6 +6458,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6e580a85",
@@ -6212,6 +6484,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "94b6fcfb",
@@ -6237,6 +6510,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "78d3a2e2",
@@ -6262,6 +6536,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "697f81bb",
@@ -6287,6 +6562,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "c9cb5d97",
@@ -6312,6 +6588,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a7bfb574",
@@ -6337,6 +6614,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "152d6911",
@@ -6362,6 +6640,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c76b9e95",
@@ -6387,6 +6666,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4d78a769",
@@ -6412,6 +6692,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "3a3ccaa5",
@@ -6437,6 +6718,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "3a3ccaa5",
@@ -6462,6 +6744,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "41a94e45",
@@ -6487,6 +6770,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "b6b3c342",
@@ -6512,6 +6796,7 @@
    "severity": "S3"
   },
   "rationale": "(Retired: the suggested text is identical to the current text.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "withdrawn",
   "string_hash": "121902ef",
@@ -6537,6 +6822,7 @@
    "severity": "S3"
   },
   "rationale": "(Retired: the suggested text is identical to the current text.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "withdrawn",
   "string_hash": "95b5653c",
@@ -6562,6 +6848,7 @@
    "severity": "S2"
   },
   "rationale": "(Retired: the suggested text is identical to the current text.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "withdrawn",
   "string_hash": "6ae8a7a0",
@@ -6587,6 +6874,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bff7f0ad",
@@ -6612,6 +6900,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6d346da2",
@@ -6637,6 +6926,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "27df3546",
@@ -6662,6 +6952,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1631e865",
@@ -6687,6 +6978,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1631e865",
@@ -6712,6 +7004,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "c2c5a3b6",
@@ -6737,6 +7030,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "629989b8",
@@ -6762,6 +7056,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "312f539e",
@@ -6787,6 +7082,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "03ff6ece",
@@ -6812,6 +7108,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a5990e67",
@@ -6837,6 +7134,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d3ee4fdb",
@@ -6862,6 +7160,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9891dd3c",
@@ -6887,6 +7186,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5ba458db",
@@ -6912,6 +7212,7 @@
    "severity": "S3"
   },
   "rationale": "(Retired: the suggested text is identical to the current text.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "withdrawn",
   "string_hash": "81faa5bb",
@@ -6937,6 +7238,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0917d0dd",
@@ -6962,6 +7264,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "fdde9d78",
@@ -6987,6 +7290,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "1f8a4ccb",
@@ -7012,6 +7316,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "73dfc486",
@@ -7037,6 +7342,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "0b2b7da5",
@@ -7062,6 +7368,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c8adfd99",
@@ -7087,6 +7394,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "3dfbb3ec",
@@ -7112,6 +7420,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0158f288",
@@ -7137,6 +7446,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4890f056",
@@ -7162,6 +7472,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "07f86a4b",
@@ -7187,6 +7498,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "44681ac4",
@@ -7212,6 +7524,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "67f44818",
@@ -7237,6 +7550,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8df6b4dd",
@@ -7262,6 +7576,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "92fb8dda",
@@ -7287,6 +7602,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1f3cfa8b",
@@ -7312,6 +7628,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "f5adeabf",
@@ -7337,6 +7654,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a3493d9f",
@@ -7362,6 +7680,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6d4ff406",
@@ -7387,6 +7706,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e37d881c",
@@ -7412,6 +7732,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f7a6d29c",
@@ -7437,6 +7758,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "41793593",
@@ -7462,6 +7784,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9a20317e",
@@ -7487,6 +7810,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "eee73df0",
@@ -7512,6 +7836,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0e517635",
@@ -7537,6 +7862,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "33c79658",
@@ -7562,6 +7888,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f5695c4f",
@@ -7587,6 +7914,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "740236a3",
@@ -7612,6 +7940,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "47a51eab",
@@ -7637,6 +7966,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "91099987",
@@ -7662,6 +7992,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "41642e0b",
@@ -7687,6 +8018,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "686eaf6b",
@@ -7712,6 +8044,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c0291b8c",
@@ -7737,6 +8070,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a4ba410a",
@@ -7762,6 +8096,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ab9e93aa",
@@ -7787,6 +8122,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f73ca614",
@@ -7812,6 +8148,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "cd3d8c10",
@@ -7837,6 +8174,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "cd3d8c10",
@@ -7862,6 +8200,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3acb67a3",
@@ -7887,6 +8226,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bab164bd",
@@ -7912,6 +8252,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "9358bb5e",
@@ -7937,6 +8278,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "9358bb5e",
@@ -7962,6 +8304,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "a29bddd6",
@@ -7987,6 +8330,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "69637231",
@@ -8012,6 +8356,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "7ced36f4",
@@ -8037,6 +8382,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "6112cd43",
@@ -8062,6 +8408,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "195a7118",
@@ -8087,6 +8434,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "acb24ceb",
@@ -8112,6 +8460,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "44c8495f",
@@ -8137,6 +8486,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "429ff0e9",
@@ -8162,6 +8512,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a5761ded",
@@ -8187,6 +8538,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "24195b6b",
@@ -8212,6 +8564,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "24195b6b",
@@ -8237,6 +8590,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c20258f8",
@@ -8262,6 +8616,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a80c5285",
@@ -8287,6 +8642,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "93c146c9",
@@ -8312,6 +8668,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b45e371c",
@@ -8337,6 +8694,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b18cb9ef",
@@ -8362,6 +8720,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "9d9a5a81",
@@ -8387,6 +8746,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "0504c74c",
@@ -8412,6 +8772,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "62cdbbab",
@@ -8437,6 +8798,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8eba21df",
@@ -8462,6 +8824,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "34fe9306",
@@ -8487,6 +8850,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fad946be",
@@ -8512,6 +8876,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "402c15ec",
@@ -8537,6 +8902,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e6e3a78b",
@@ -8562,6 +8928,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4c0b5713",
@@ -8587,6 +8954,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "467a3ef8",
@@ -8612,6 +8980,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8bdcfc72",
@@ -8637,6 +9006,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bc402460",
@@ -8662,6 +9032,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dca686d7",
@@ -8687,6 +9058,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "85204a81",
@@ -8712,6 +9084,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f15df424",
@@ -8737,6 +9110,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "151ffed4",
@@ -8762,6 +9136,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "ef6efbb2",
@@ -8787,6 +9162,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "9ae174f3",
@@ -8812,6 +9188,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "9fd38e54",
@@ -8837,6 +9214,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "5580d460",
@@ -8862,6 +9240,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "34e497dd",
@@ -8887,6 +9266,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b0889f9d",
@@ -8912,6 +9292,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f44924b0",
@@ -8937,6 +9318,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7263d9cd",
@@ -8962,6 +9344,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ef644052",
@@ -8987,6 +9370,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0edc5b18",
@@ -9012,6 +9396,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "4d991cf4",
@@ -9037,6 +9422,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "0f83201a",
@@ -9062,6 +9448,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "39c62696",
@@ -9087,6 +9474,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "6006cf65",
@@ -9112,6 +9500,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d0ea0c8d",
@@ -9137,6 +9526,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7bf7d866",
@@ -9162,6 +9552,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "065c660e",
@@ -9187,6 +9578,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "065c660e",
@@ -9212,6 +9604,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3b6f8493",
@@ -9237,6 +9630,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0fcd7911",
@@ -9262,6 +9656,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "9223c864",
@@ -9287,6 +9682,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7f5218e7",
@@ -9312,6 +9708,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "07682261",
@@ -9337,6 +9734,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a258470d",
@@ -9362,6 +9760,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "55bc4573",
@@ -9387,6 +9786,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "55bc4573",
@@ -9412,6 +9812,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ee01694a",
@@ -9437,6 +9838,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "dca4a597",
@@ -9462,6 +9864,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "d77f9be8",
@@ -9487,6 +9890,7 @@
    "severity": "S2"
   },
   "rationale": "(Retired: the suggested text is identical to the current text.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "withdrawn",
   "string_hash": "e88dfe6a",
@@ -9512,6 +9916,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5d45bd92",
@@ -9537,6 +9942,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7d48da45",
@@ -9562,6 +9968,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "963d6346",
@@ -9587,6 +9994,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0b492acf",
@@ -9612,6 +10020,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "54015a29",
@@ -9637,6 +10046,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "be7ae56b",
@@ -9662,6 +10072,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6c846e16",
@@ -9687,6 +10098,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "74c03873",
@@ -9712,6 +10124,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6b115464",
@@ -9737,6 +10150,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "03e93f54",
@@ -9762,6 +10176,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1cdee1dd",
@@ -9787,6 +10202,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a04192e1",
@@ -9812,6 +10228,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "07e08cc4",
@@ -9837,6 +10254,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4f31784e",
@@ -9862,6 +10280,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "487ccedd",
@@ -9887,6 +10306,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "4d3f4253",
@@ -9912,6 +10332,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "e5770c8c",
@@ -9937,6 +10358,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "825f297b",
@@ -9962,6 +10384,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "72dc20eb",
@@ -9987,6 +10410,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "b08c31cf",
@@ -10012,6 +10436,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "777504f5",
@@ -10037,6 +10462,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4fc0c0a1",
@@ -10062,6 +10488,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8c367b22",
@@ -10087,6 +10514,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "482c59d6",
@@ -10112,6 +10540,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "caf50ec8",
@@ -10137,6 +10566,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d24ad328",
@@ -10162,6 +10592,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e6c1979f",
@@ -10187,6 +10618,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "699c6e93",
@@ -10212,6 +10644,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c0d4ba08",
@@ -10237,6 +10670,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "723e28c9",
@@ -10262,6 +10696,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "d36e4c54",
@@ -10287,6 +10722,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "585fe90e",
@@ -10312,6 +10748,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "07b7b072",
@@ -10337,6 +10774,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ff768215",
@@ -10362,6 +10800,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "29a7519a",
@@ -10387,6 +10826,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "81cecc00",
@@ -10412,6 +10852,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c4a2f885",
@@ -10437,6 +10878,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6b0f1c38",
@@ -10462,6 +10904,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ea84dfda",
@@ -10487,6 +10930,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "926d3bdb",
@@ -10512,6 +10956,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0fb0a696",
@@ -10537,6 +10982,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "247131de",
@@ -10562,6 +11008,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "10940888",
@@ -10587,6 +11034,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1aa3b645",
@@ -10612,6 +11060,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "04ad5c95",
@@ -10637,6 +11086,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1f101b9b",
@@ -10662,6 +11112,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e5215ae5",
@@ -10687,6 +11138,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a8155eda",
@@ -10712,6 +11164,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "469ebbde",
@@ -10737,6 +11190,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b31a2cf9",
@@ -10762,6 +11216,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "acf0e7a5",
@@ -10787,6 +11242,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a47a409f",
@@ -10812,6 +11268,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7e625875",
@@ -10837,6 +11294,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "05361825",
@@ -10862,6 +11320,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "af08ea0f",
@@ -10887,6 +11346,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8f29cc0a",
@@ -10912,6 +11372,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a21dc2fe",
@@ -10937,6 +11398,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9bf2e99d",
@@ -10962,6 +11424,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e6163bce",
@@ -10987,6 +11450,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "78c8f9eb",
@@ -11012,6 +11476,7 @@
    "severity": "S1"
   },
   "rationale": "(Retired: the suggested text is identical to the current text.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "withdrawn",
   "string_hash": "9911ee00",
@@ -11037,6 +11502,7 @@
    "severity": "S3"
   },
   "rationale": "(Retired: the suggested text is identical to the current text.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "withdrawn",
   "string_hash": "889437bb",
@@ -11062,6 +11528,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "64e907ca",
@@ -11087,6 +11554,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7d2b9969",
@@ -11112,6 +11580,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "4c2c43f8",
@@ -11137,6 +11606,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0dd0a83b",
@@ -11162,6 +11632,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a3868983",
@@ -11187,6 +11658,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5a27c4f2",
@@ -11212,6 +11684,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f1c6aa1c",
@@ -11237,6 +11710,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "ac2382c6",
@@ -11262,6 +11736,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "879b0926",
@@ -11287,6 +11762,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "574c4a39",
@@ -11312,6 +11788,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "ce8fa4e9",
@@ -11337,6 +11814,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7f714af7",
@@ -11362,6 +11840,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "6bd906c1",
@@ -11387,6 +11866,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "c1971249",
@@ -11412,6 +11892,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "d2456279",
@@ -11437,6 +11918,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "9680df7c",
@@ -11462,6 +11944,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "716aa3ac",
@@ -11487,6 +11970,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "12dfc87f",
@@ -11512,6 +11996,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "f7055236",
@@ -11537,6 +12022,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "746699ee",
@@ -11562,6 +12048,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "51a2a230",
@@ -11587,6 +12074,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "2c53bf15",
@@ -11612,6 +12100,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "92c76618",
@@ -11637,6 +12126,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "5e66de80",
@@ -11662,6 +12152,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "28c86359",
@@ -11687,6 +12178,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "13df44e7",
@@ -11712,6 +12204,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ee8dc826",
@@ -11737,6 +12230,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "69b7b6b6",
@@ -11762,6 +12256,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2968cc26",
@@ -11787,6 +12282,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dd3d8c62",
@@ -11812,6 +12308,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "20b8db13",
@@ -11837,6 +12334,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fd08ad2f",
@@ -11862,6 +12360,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "26269870",
@@ -11887,6 +12386,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d12d962c",
@@ -11912,6 +12412,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8c40f7ee",
@@ -11937,6 +12438,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "59764702",
@@ -11962,6 +12464,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "6d02577e",
@@ -11987,6 +12490,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "44ba4455",
@@ -12012,6 +12516,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "99cdcadb",
@@ -12037,6 +12542,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "869ac64d",
@@ -12062,6 +12568,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "1c35b18b",
@@ -12087,6 +12594,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ee83e27a",
@@ -12112,6 +12620,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "70793234",
@@ -12137,6 +12646,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e1c940d1",
@@ -12162,6 +12672,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "570abd36",
@@ -12187,6 +12698,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8a087178",
@@ -12212,6 +12724,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "780354af",
@@ -12237,6 +12750,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b8850d9f",
@@ -12262,6 +12776,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "837209ec",
@@ -12287,6 +12802,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b93093d1",
@@ -12312,6 +12828,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2e2f7e75",
@@ -12337,6 +12854,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f38c662f",
@@ -12362,6 +12880,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3861a97e",
@@ -12387,6 +12906,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "14b3f5f4",
@@ -12412,6 +12932,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d9644c17",
@@ -12437,6 +12958,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "81738b3c",
@@ -12462,6 +12984,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b7b5963e",
@@ -12487,6 +13010,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6fc2d65c",
@@ -12512,6 +13036,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5ebab6ab",
@@ -12537,6 +13062,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6922d939",
@@ -12562,6 +13088,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "19c49c04",
@@ -12587,6 +13114,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b09ab40f",
@@ -12612,6 +13140,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0bc4c64f",
@@ -12637,6 +13166,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0b6ba348",
@@ -12662,6 +13192,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "351295a7",
@@ -12687,6 +13218,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c4de9953",
@@ -12712,6 +13244,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7207283f",
@@ -12737,6 +13270,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "de981f1f",
@@ -12762,6 +13296,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "5f34e756",
@@ -12787,6 +13322,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-10",
   "status": "fixed",
   "string_hash": "d8a94120",
@@ -12812,6 +13348,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b1d4f5af",
@@ -12837,6 +13374,7 @@
    "severity": "S2"
   },
   "rationale": "(Retired: the suggested text is identical to the current text.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "withdrawn",
   "string_hash": "b1f04091",
@@ -12862,6 +13400,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "43d360d9",

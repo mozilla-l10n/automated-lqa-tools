@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
+| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 19 of 18,367 |
+| **Strings reviewed this run** | 1 of 18,367 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,27 +18,22 @@ Also for fr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `newtab-stocks-watchlist-full` — `browser/browser/newtab/newtab.ftl` — The [one] plural variant is ungrammatical and mistranslated ("jusqu’à 1 d’actions").
-    - Current: `Vous pouvez ajouter jusqu’à { $limit } d’actions. Supprimez-en un pour en ajouter un autre.`
-    - Source: `{$limit ->} [one] You can add up to { $limit } stock. Remove one to add another. [other] You can add up to { $limit } stocks. Remove one to add another.`
-    - Suggest: `Vous pouvez ajouter jusqu’à { $limit } action. Supprimez-en une pour en ajouter une autre.`
-    - en-US says "You can add up to { $limit } stock."; the French inserts a spurious "d’" and uses a plural noun with a singular count, and the pronoun should agree with the feminine "action".
+_No new findings._
+
+### ✅ Fixed since the last run (2)
+
 - `newtab-stocks-watchlist-full` — `browser/browser/newtab/newtab.ftl` — The [other] variant renders "add up to" as "totaliser" instead of "ajouter", inconsistent with the [one] variant and the source.
     - Current: `Vous pouvez totaliser jusqu’à { $limit } actions. Supprimez-en un pour en ajouter un autre.`
     - Source: `{$limit ->} [one] You can add up to { $limit } stock. Remove one to add another. [other] You can add up to { $limit } stocks. Remove one to add another.`
     - Suggest: `Vous pouvez ajouter jusqu’à { $limit } actions. Supprimez-en une pour en ajouter une autre.`
     - en-US is "You can add up to { $limit } stocks."; also the pronouns should be feminine to agree with "actions".
-- `appmenuitem-share-firefox-title2` — `browser/browser/appmenu.ftl` — "Share { -brand-product-name }" is rendered "Partager" here while all other referral strings use "Recommander".
-    - Current: `Partager { -brand-product-name }`
-    - Source: `Share { -brand-product-name }`
-    - Suggest: `Recommander { -brand-product-name }`
-    - The developer comment says this button links to the Referrals page, the same surface as appmenu-referrals2, menu-referrals2 and referrals-link2, which all translate "Share" as "Recommander"; the inconsistent term is wrong here.
-
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
+- `newtab-stocks-watchlist-full` — `browser/browser/newtab/newtab.ftl` — The [one] plural variant is ungrammatical and mistranslated ("jusqu’à 1 d’actions").
+    - Current: `Vous pouvez ajouter jusqu’à { $limit } d’actions. Supprimez-en un pour en ajouter un autre.`
+    - Source: `{$limit ->} [one] You can add up to { $limit } stock. Remove one to add another. [other] You can add up to { $limit } stocks. Remove one to add another.`
+    - Suggest: `Vous pouvez ajouter jusqu’à { $limit } action. Supprimez-en une pour en ajouter une autre.`
+    - en-US says "You can add up to { $limit } stock."; the French inserts a spurious "d’" and uses a plural noun with a singular count, and the pronoun should agree with the feminine "action".
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -64,11 +59,8 @@ _Nothing retired._
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
+| Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 1 |
-| Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
-| printf placeholder mismatches | 0 |
-| Plural / select selector mismatches | 1 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 0 |
@@ -91,7 +83,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | apostrophe | `typographic` 5638, `straight` 10 | **typographic** |
 | ellipsis | `char` 472 | **char** |
 | dash | `em` 68, `en` 8 | **em** |
-| nbsp | `total` 4448, `before-punctuation` 1999 | _mixed_ |
+| nbsp | `total` 4449, `before-punctuation` 1999 | _mixed_ |
 | register | `formal` 3193 | **formal** |
 
 ---
@@ -102,13 +94,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (40)
+## 3. Open findings (38)
+
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 4 |
-| 2 | Wrong content (says something other than the English) | 6 |
-| 3 | Degraded language (grammar, spelling, terminology) | 19 |
+| 2 | Wrong content (says something other than the English) | 5 |
+| 3 | Degraded language (grammar, spelling, terminology) | 18 |
 | 4 | Cosmetic (typography, spacing) | 11 |
 
 ### A. Functional, markup, variables & plurals
@@ -126,21 +119,16 @@ _Nothing reported._
     - Source: `<strong>{ $property }</strong> has no effect on this element since it cannot be applied to internal table elements where <strong>border-collapse</strong> is set to <strong>collapse</strong> on the parent table element.`
 - `learn-more` — `devtools/client/tooltips.ftl` — trailing space inside <span data-l10n-name="link">En savoir plus </span>.
     - Source: `<span data-l10n-name="link">Learn more</span>`
-- `about-networking-ssl-tokens-summary-compression` — `toolkit/toolkit/about/aboutNetworking.ftl` — `about-networking-ssl-tokens-summary-compression` switches on ['total'], which en-US does not pass (it provides ['compressedLength', 'decompressedLength', 'saved'])
+- `about-networking-ssl-tokens-summary-compression` — `toolkit/toolkit/about/aboutNetworking.ftl` — `about-networking-ssl-tokens-summary-compression` references ['total'], which en-US does not pass
     - Current: `{$total ->} [one] { $decompressedLength } → { $compressedLength } o ({ $saved } % économisé) [other] { $decompressedLength } → { $compressedLength } o ({ $saved } % économisés)`
     - Source: `{ $decompressedLength } → { $compressedLength } B ({ $saved }% saved)`
     - Suggest: `{ $decompressedLength } → { $compressedLength } B ({ $saved }% saved)`
-    - Selecting on a variable the code does not pass makes every variant unreachable and the number render blank.
+    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
 - `aiwindow-firstrun-default-checkbox-label` — `browser/browser/aiWindow.ftl` — brand form lower-plural renders "dans une fenêtres intelligentes" → use lower-singular (EN is singular; matches line 164).
     - Source: `Always open { -brand-product-name } in { -smart-window-brand-name }`
-- `newtab-stocks-watchlist-full` — `browser/browser/newtab/newtab.ftl` — The [other] variant renders "add up to" as "totaliser" instead of "ajouter", inconsistent with the [one] variant and the source.
-    - Current: `Vous pouvez totaliser jusqu’à { $limit } actions. Supprimez-en un pour en ajouter un autre.`
-    - Source: `{$limit ->} [one] You can add up to { $limit } stock. Remove one to add another. [other] You can add up to { $limit } stocks. Remove one to add another.`
-    - Suggest: `Vous pouvez ajouter jusqu’à { $limit } actions. Supprimez-en une pour en ajouter une autre.`
-    - en-US is "You can add up to { $limit } stocks."; also the pronouns should be feminine to agree with "actions".
 - `app-manager-handle-file` — `browser/browser/preferences/applicationManager.ftl` — browser/browser/preferences/applicationManager.ftl:13,16 — FR: "…utilisées pour Liens { $type }." / "…pour Contenu { $type }." → …pour gérer les liens { $type }. / …pour gérer le contenu { $type }. (verb "handle/gérer" dropped, noun wrongly capitalized).
     - Source: `The following applications can be used to handle { $type } content.`
     - Suggest: `…pour gérer les liens { $type }.`
@@ -162,11 +150,6 @@ _Nothing reported._
 - `sidebar-genai-survey-productive-question` — `browser/browser/featureCallout.ftl` — browser/browser/featureCallout.ftl:239,254 — FR: "êtes vous d'accord" → êtes-vous (inversion hyphen).
     - Source: `To what extent do you agree or disagree with this statement:<br/> “The AI chatbot in the sidebar helps me be more productive”?`
     - Suggest: `êtes-vous`
-- `newtab-stocks-watchlist-full` — `browser/browser/newtab/newtab.ftl` — The [one] plural variant is ungrammatical and mistranslated ("jusqu’à 1 d’actions").
-    - Current: `Vous pouvez ajouter jusqu’à { $limit } d’actions. Supprimez-en un pour en ajouter un autre.`
-    - Source: `{$limit ->} [one] You can add up to { $limit } stock. Remove one to add another. [other] You can add up to { $limit } stocks. Remove one to add another.`
-    - Suggest: `Vous pouvez ajouter jusqu’à { $limit } action. Supprimez-en une pour en ajouter une autre.`
-    - en-US says "You can add up to { $limit } stock."; the French inserts a spurious "d’" and uses a plural noun with a singular count, and the pronoun should agree with the feminine "action".
 - `places-delete-bookmark` — `browser/browser/places.ftl` — FR: "Supprimer le marque page" / "les marques pages" → marque-page / marque-pages (hyphen; wrong plural).
     - Source: `accesskey: D label: {$count ->} [1] Delete Bookmark [other] Delete Bookmarks`
 - `content-blocking-rfp-incompatibility-warning` — `browser/browser/preferences/preferences.ftl` — browser/browser/preferences/preferences.ftl:1995,2702 — FR: "quelques uns" → quelques-uns (hyphen).
@@ -262,8 +245,10 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (31)
+### Fixed to date (33)
 
+- `newtab-stocks-watchlist-full` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-24
+- `newtab-stocks-watchlist-full` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-24
 - `migration-wizard-progress-success-bookmarks` — `browser/browser/migrationWizard.ftl` — fixed 2026-07-26
 - `newtab-privacy-message-info-7` — `browser/browser/newtab/newtab.ftl` — fixed 2026-07-26
 - `onboarding-new-user-survey-subtitle` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-07-26

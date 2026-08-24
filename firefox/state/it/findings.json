@@ -16,6 +16,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "suppressed",
   "string_hash": "bbdb713f",
@@ -41,6 +42,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "b221c93a",
@@ -66,6 +68,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "dee6adbd",
@@ -91,6 +94,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "bd55885c",
@@ -116,6 +120,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "b2cd4959",
@@ -141,6 +146,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "977c75b1",
@@ -166,6 +172,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "f47d6b7e",
@@ -183,10 +190,11 @@
   "file": "browser/browser/defaultBrowserNotification.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "it",
   "origin": {},
   "rationale": "In the source this string quotes “Web browser”, which is exactly the value of `desktop-entry-generic-name` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "fda0a4cb",
@@ -212,6 +220,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "840f698b",
@@ -237,6 +246,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "a6620f03",
@@ -262,6 +272,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "a6620f03",
@@ -287,6 +298,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "792ad8ff",
@@ -312,6 +324,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "523b0567",
@@ -337,6 +350,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "c930190c",
@@ -362,6 +376,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "410cbc2e",
@@ -387,6 +402,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "b1d288b3",
@@ -412,6 +428,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "74fa1160",
@@ -437,6 +454,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "b1c8469d",
@@ -462,6 +480,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "3ad24a73",
@@ -487,6 +506,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "3bfff30b",
@@ -512,6 +532,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "803cbbcc",
@@ -537,6 +558,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "5d3a74a4",
@@ -562,6 +584,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "e6cfc0a3",
@@ -587,6 +610,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "4c409883",
@@ -612,6 +636,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "3380232d",
@@ -637,6 +662,7 @@
    "severity": "S4"
   },
   "rationale": "(Verified by hand against the tree: the inconsistency this described is gone. The finding quoted no text, so no run could close it.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "6dccc5ea",
@@ -662,6 +688,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "ff1f5df5",
@@ -687,6 +714,7 @@
    "severity": "S4"
   },
   "rationale": "(Verified by hand against the tree: the inconsistency this described is gone. The finding quoted no text, so no run could close it.)",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "447046ba",
@@ -712,6 +740,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "5685b5b6",
@@ -735,6 +764,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US source says \"Right click an element in the %S\"; the Italian omits \"an element\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "7a8ad03a",
@@ -756,6 +786,7 @@
   "locale": "it",
   "origin": {},
   "rationale": "In the source this string quotes “Break on…”, which is exactly the value of `watchpoints.submenu` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "7e0847e9",
@@ -779,6 +810,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US source says \"Right click an element in the Inspector\"; the Italian omits \"an element\", losing what the user must click on.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "1a24c9f5",
@@ -800,6 +832,7 @@
   "locale": "it",
   "origin": {},
   "rationale": "In the source this string quotes “Break on…”, which is exactly the value of `watchpoints.submenu` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "31f99c22",
@@ -821,6 +854,7 @@
   "locale": "it",
   "origin": {},
   "rationale": "In the source this string quotes “Local Mode”, which is exactly the value of `options-local-mode-label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "45fa3888",
@@ -846,6 +880,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "b81d514b",
@@ -871,6 +906,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "3be9937c",
@@ -896,6 +932,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "46b74746",
@@ -921,6 +958,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "b03b88e0",
@@ -946,6 +984,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "6db88c3f",
@@ -971,6 +1010,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "c58d8f05",
@@ -996,6 +1036,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "bd375293",
@@ -1021,6 +1062,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "69677d02",
@@ -1046,6 +1088,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "e9b111a7",
@@ -1071,6 +1114,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "8455883a",
@@ -1096,6 +1140,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "f1abd731",
@@ -1121,6 +1166,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "afe72816",
@@ -1146,6 +1192,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "ea9429e8",
@@ -1171,6 +1218,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "46c179f9",
@@ -1196,6 +1244,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "suppressed",
   "string_hash": "f8b96f3d",
@@ -1221,6 +1270,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "ea99ebf6",
@@ -1246,6 +1296,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "efa88673",
@@ -1271,6 +1322,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "cb1b9171",
@@ -1296,6 +1348,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "bc53a3b5",
@@ -1321,6 +1374,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "7432df95",
@@ -1346,6 +1400,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "7432df95",
@@ -1371,6 +1426,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "b7929538",
@@ -1396,6 +1452,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "6eb4232e",
@@ -1421,6 +1478,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "ab68f3b4",
@@ -1446,6 +1504,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "e2937e77",
@@ -1471,6 +1530,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "3ebdd0ee",
@@ -1496,6 +1556,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "f5d061aa",
@@ -1521,6 +1582,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "dismissed",
   "string_hash": "ce893947",
@@ -1546,6 +1608,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "8a7d667c",
@@ -1571,6 +1634,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "a4657770",

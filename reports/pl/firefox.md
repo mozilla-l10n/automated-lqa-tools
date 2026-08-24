@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
+| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 8 of 17,874 |
+| **Strings reviewed this run** | 19 of 17,885 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,19 @@ Also for pl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (4)
 
-_Nothing was fixed._
+- `storage-add-button` — `devtools/client/storage.ftl` — "Item" is "obiekt" here and in storage-context-menu-add-item / storage-refresh-button, but "element" in storage-search-box; "obiekt" also collides with the JS sense of object.
+    - Source: `title: Add Item`
+- `protected-auth-alert` — `security/manager/security/pippki/pippki.ftl` — "uwierzytelnić się" governs "w" + locative. Current: "Proszę uwierzytelnić się do urządzenia zabezpieczającego…" / "…do tokenu „{ $tokenName }”." → Suggest: "…w urządzeniu zabezpieczającym ({ $tokenName })." / "…w tokenie „{ $tokenName }”."
+    - Source: `Please authenticate to the token “{ $tokenName }”. How to do so depends on the token (for example, using a fingerprint reader or entering a code with a keypad).`
+    - Suggest: `"…w urządzeniu zabezpieczającym`
+- `protected-auth-prompt` — `security/manager/security/pippki/pippki.ftl` — "uwierzytelnić się" governs "w" + locative. Current: "Proszę uwierzytelnić się do urządzenia zabezpieczającego…" / "…do tokenu „{ $tokenName }”." → Suggest: "…w urządzeniu zabezpieczającym ({ $tokenName })." / "…w tokenie „{ $tokenName }”."
+    - Source: `Please authenticate to the security device ({ $tokenName }). How to do so depends on the device (for example, using a fingerprint reader or entering a code with a keypad).`
+    - Suggest: `"…w urządzeniu zabezpieczającym`
+- `third-party-message-no-duration` — `toolkit/toolkit/about/aboutThirdParty.ftl` — "Nie nagrano" (audio/video sense) for "Not recorded". → "Nie zarejestrowano".
+    - Source: `Not recorded`
+    - Suggest: `"Nie zarejestrowano".`
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,16 +55,13 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 357 |
-| Strings | 17,874 |
-| Missing strings | 306 |
+| Strings | 17,885 |
+| Missing strings | 295 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 3 |
 | Fluent / properties syntax errors | 0 |
+| Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 2 |
-| Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
-| printf placeholder mismatches | 0 |
-| Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 1 |
 | Text quoting a UI label that no longer matches | 3 |
@@ -65,16 +72,12 @@ _Nothing retired._
 
 ### Completeness
 
-**306 strings** are not translated yet, concentrated in:
+**295 strings** are not translated yet, concentrated in:
 
 - `browser/browser/aiWindow.ftl` — 159
 - `browser/browser/aiWindowContent.ftl` — 80
 - `browser/browser/aiFeatures.ftl` — 43
 - `browser/browser/newtab/onboarding.ftl` — 13
-- `browser/browser/newtab/newtab.ftl` — 7
-- `browser/browser/sharePanel.ftl` — 2
-- `browser/browser/preferences/formAutofill.ftl` — 1
-- `dom/chrome/accessibility/AccessFu.properties` — 1
 
 **Files absent from the locale:**
 
@@ -94,7 +97,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | apostrophe | `straight` 1 | **straight** |
 | ellipsis | `char` 460 | **char** |
 | dash | `em` 170, `en` 12 | **em** |
-| nbsp | `total` 5390, `narrow` 3, `before-punctuation` 49, `space-before-punctuation` 21 | **total** |
+| nbsp | `total` 5392, `narrow` 3, `before-punctuation` 49, `space-before-punctuation` 21 | **total** |
 | register | `informal` 79 | **informal** |
 
 ---
@@ -105,13 +108,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (83)
+## 3. Open findings (79)
+
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 13 |
-| 2 | Wrong content (says something other than the English) | 37 |
-| 3 | Degraded language (grammar, spelling, terminology) | 29 |
+| 2 | Wrong content (says something other than the English) | 36 |
+| 3 | Degraded language (grammar, spelling, terminology) | 26 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
@@ -222,9 +226,6 @@ _Nothing reported._
     - Source: `Audio Robustness`
 - `media-video-robustness` — `toolkit/toolkit/about/aboutSupport.ftl` — "Siła wideo" / "Siła dźwięku". EME robustness is the CDM security level. → "Poziom zabezpieczeń wideo" / "Poziom zabezpieczeń dźwięku".
     - Source: `Video Robustness`
-- `third-party-message-no-duration` — `toolkit/toolkit/about/aboutThirdParty.ftl` — "Nie nagrano" (audio/video sense) for "Not recorded". → "Nie zarejestrowano".
-    - Source: `Not recorded`
-    - Suggest: `"Nie zarejestrowano".`
 - `about-webrtc-aec-logging-msg-label` — `toolkit/toolkit/about/aboutWebrtc.ftl` — the group comment says "AEC is an abbreviation for Acoustic Echo Cancellation", but pl renders it as redukcja szumów otoczenia (ambient-noise reduction), a different feature. about-webrtc-aec-logging-unavailable-sandbox in the same file already keeps "AEC", so the file is internally inconsistent. → "…usuwania echa akustycznego (AEC)".
     - Source: `AEC Logging`
     - Suggest: `"…usuwania echa akustycznego`
@@ -296,12 +297,6 @@ _Nothing reported._
     - Source: `Permanent`
 - `temporary-override` — `security/manager/security/certificates/certManager.ftl` — the two values of one column mix an adverbial phrase and an adjective: "Na stałe" / "Tymczasowy". → "Stały" / "Tymczasowy" (both agreeing with wyjątek).
     - Source: `Temporary`
-- `protected-auth-alert` — `security/manager/security/pippki/pippki.ftl` — "uwierzytelnić się" governs "w" + locative. Current: "Proszę uwierzytelnić się do urządzenia zabezpieczającego…" / "…do tokenu „{ $tokenName }”." → Suggest: "…w urządzeniu zabezpieczającym ({ $tokenName })." / "…w tokenie „{ $tokenName }”."
-    - Source: `Please authenticate to the token “{ $tokenName }”. How to do so depends on the token (for example, using a fingerprint reader or entering a code with a keypad).`
-    - Suggest: `"…w urządzeniu zabezpieczającym`
-- `protected-auth-prompt` — `security/manager/security/pippki/pippki.ftl` — "uwierzytelnić się" governs "w" + locative. Current: "Proszę uwierzytelnić się do urządzenia zabezpieczającego…" / "…do tokenu „{ $tokenName }”." → Suggest: "…w urządzeniu zabezpieczającym ({ $tokenName })." / "…w tokenie „{ $tokenName }”."
-    - Source: `Please authenticate to the security device ({ $tokenName }). How to do so depends on the device (for example, using a fingerprint reader or entering a code with a keypad).`
-    - Suggest: `"…w urządzeniu zabezpieczającym`
 - `no-config-label` — `toolkit/crashreporter/aboutcrashes.ftl` — missing sentence-final period after <code>breakpad.reportURL</code>.
     - Source: `This application has not been configured to display crash reports. The preference <code>breakpad.reportURL</code> must be set.`
 - `autofill-insecure-field-warning-description` — `toolkit/toolkit/formautofill/formAutofill.ftl` — missing sentence-final period after "…wypełnianie formularzy".
@@ -329,8 +324,6 @@ _Nothing reported._
 - `media-count` — `browser/browser/pageInfo.ftl` — .label = "Ilość" for a count of discrete items; the locale uses "Liczba" elsewhere (processes-count, place-database-stats-count, "Liczba wizyt" in places.ftl). → "Liczba".
     - Source: `label: Count`
     - Suggest: `"Liczba".`
-- `storage-add-button` — `devtools/client/storage.ftl` — "Item" is "obiekt" here and in storage-context-menu-add-item / storage-refresh-button, but "element" in storage-search-box; "obiekt" also collides with the JS sense of object.
-    - Source: `title: Add Item`
 - `toolbox-local-mode-notice` — `devtools/client/toolbox.ftl` — `toolbox-local-mode-notice` quotes “trybu lokalnego” but the string it names, `options-local-mode-label`, reads “Tryb lokalny”
     - Current: `Ten dokument można także wczytać z „{ $url }” za pomocą „trybu lokalnego” narzędzi dla programistów, który można włączyć w panelu ustawień.`
     - Source: `This document could also be loaded from “{ $url }” using DevTools “Local Mode”, which can be enabled in the settings panel.`
@@ -399,8 +392,12 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (127)
+### Fixed to date (131)
 
+- `storage-add-button` — `devtools/client/storage.ftl` — fixed 2026-08-24
+- `protected-auth-alert` — `security/manager/security/pippki/pippki.ftl` — fixed 2026-08-24
+- `protected-auth-prompt` — `security/manager/security/pippki/pippki.ftl` — fixed 2026-08-24
+- `third-party-message-no-duration` — `toolkit/toolkit/about/aboutThirdParty.ftl` — fixed 2026-08-24
 - `refresh-blocked-redirect-label` — `browser/browser/browser.ftl` — fixed 2026-08-21
 - `refresh-blocked-refresh-label` — `browser/browser/browser.ftl` — fixed 2026-08-21
 - `about-private-browsing-felt-privacy-v1-info-link` — `browser/browser/aboutPrivateBrowsing.ftl` — fixed 2026-08-06
@@ -437,7 +434,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `newtab-topic-selection-privacy-link` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-06
 - `newtab-widget-lists-empty-cta` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-06
 - `newtab-widget-timer-reset` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-06
-- `create-backup-screen-1-subtitle` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-06
-- `mr2022-onboarding-colorway-description-activist` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-06
-- `mr2022-onboarding-existing-pin-subtitle` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-06
-- `mr2022-onboarding-gratitude-primary-button-label` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-06

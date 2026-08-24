@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
+| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 17,185 |
+| **Strings reviewed this run** | 0 of 17,185 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -50,11 +50,8 @@ _Nothing retired._
 | Obsolete strings | 0 |
 | Files absent from the locale | 5 |
 | Fluent / properties syntax errors | 0 |
+| Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
-| Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
-| printf placeholder mismatches | 0 |
-| Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 3 |
@@ -73,10 +70,10 @@ _Nothing retired._
 - `browser/browser/aiWindowContent.ftl` — 51
 - `browser/browser/preferences/preferences.ftl` — 41
 - `browser/browser/browser.ftl` — 33
-- `devtools/client/toolbox-options.ftl` — 28
 - `toolkit/toolkit/global/theme-picker.ftl` — 28
-- `browser/browser/ipProtection.ftl` — 26
+- `devtools/client/toolbox-options.ftl` — 28
 - `toolkit/toolkit/about/url-classifier.ftl` — 26
+- `browser/browser/ipProtection.ftl` — 26
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 24
 - `browser/browser/firefoxView.ftl` — 23
 
@@ -114,6 +111,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 ---
 
 ## 3. Open findings (101)
+
 
 | Impact | Meaning | Count |
 |---|---|---|
