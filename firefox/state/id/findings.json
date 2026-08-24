@@ -14,6 +14,7 @@
    "confidence": "high"
   },
   "rationale": "Indonesian orthography requires the polite pronoun \"Anda\" to be capitalized; every other string in the file uses \"Anda\". (Same issue in settings-update-policy-disabled.)",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5c3ce47d",
@@ -37,6 +38,7 @@
    "confidence": "high"
   },
   "rationale": "en-US distinguishes \"TSV Document\" (macOS) from \"TSV File\"; the CSV filter right above correctly uses \"Dokumen CSV\" vs \"Berkas CSV\", so the TSV macOS variant is wrong.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ed374fca",
@@ -60,6 +62,7 @@
    "confidence": "high"
   },
   "rationale": "en-US \"Looking for your saved logins?\" — the Indonesian is ungrammatical; the passive form \"tersimpan\" is required (as used in login-list-intro-title2 and elsewhere).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9dfc3ec1",
@@ -83,6 +86,7 @@
    "confidence": "high"
   },
   "rationale": "The adjacent menu items use \"Info Masuk\" (Export Logins → \"Ekspor Info Masuk…\"); \"Log Masuk\" is an inconsistent rendering of the same term in the same menu (also in about-logins-confirm-remove-all-dialog-checkbox-label).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8467e933",
@@ -106,6 +110,7 @@
    "confidence": "high"
   },
   "rationale": "Simple misspelling of \"Aplikasi\" at the start of a user-visible promo sentence.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1bc38224",
@@ -129,6 +134,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of \"dibongkar\" (unloaded), the term used throughout the rest of the same paragraph.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "19adac23",
@@ -146,10 +152,11 @@
   "file": "browser/browser/accounts.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "id has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "22355421",
@@ -173,6 +180,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of \"Sunting\" (Edit) in a menu label; there is also a stray space before the ellipsis.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5ea1b75d",
@@ -190,10 +198,11 @@
   "file": "browser/browser/appmenu.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "The label is “Ini bukan situs tipuan…”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e6fee177",
@@ -217,6 +226,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"Share { -brand-shorter-name }\" (dev comment: opens the referral page, \"Share\" means recommending the browser). \"Sembunyikan\" means \"Hide\", a completely different action; the sibling string appmenuitem-referrals correctly uses \"Bagikan\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f5d816e6",
@@ -240,6 +250,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US source is \"Share { -brand-product-name }\" and the developer comment says \"Share\" means recommending/referring the browser; \"Sembunyikan\" means \"Hide\". Other identical strings use \"Bagikan\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cb2afa2e",
@@ -263,6 +274,7 @@
    "confidence": "high"
   },
   "rationale": "The dev comment says \"This allows to search through the browser's history\", so \"Search\" is a verb. \"Riwayat pencarian\" means \"history of searches\", i.e. a different concept.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fedecea9",
@@ -286,6 +298,7 @@
    "confidence": "high"
   },
   "rationale": "The task name is \"Default Browser Agent\"; the same string uses \"peramban baku\" correctly a few words later, so \"Baru\" names the wrong thing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a862f012",
@@ -309,6 +322,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US says \"Please try again\" — invite to retry immediately; \"nanti\" means \"later\", changing the instruction.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fb6bb7dd",
@@ -326,10 +340,11 @@
   "file": "browser/browser/browser.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "The label is “Markah”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cb22a706",
@@ -353,6 +368,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"MUTE { $count } TABS\"; the localized default variant is just \"S\", so the tab tooltip shows a meaningless single character for any count other than 1.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c679c280",
@@ -376,6 +392,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"PLAY { $count } TABS\"; the localized default variant is just \"P\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d3a02cfc",
@@ -399,6 +416,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"UNMUTE { $count } TABS\"; the localized default variant is just \"U\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "72affece",
@@ -422,6 +440,7 @@
    "confidence": "high"
   },
   "rationale": "en-US \"as the developer intended\". \"dinginkan\" means \"cool it down\"; the intended word is \"diinginkan\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e35c0ea9",
@@ -445,6 +464,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US \"Tracking content\" is a noun phrase naming a blocked category, alongside \"Kuki pelacak lintas situs\" and \"Pelacak media sosial\". \"Melacak konten\" reads as the action \"to track content\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bf9e2ab5",
@@ -468,6 +488,7 @@
    "confidence": "high"
   },
   "rationale": "Same misspelling as in the neighbouring placeholders, which correctly use \"Masukkan\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1b88468a",
@@ -491,6 +512,7 @@
    "confidence": "high"
   },
   "rationale": "\"Masukan\" is the noun \"input/feedback\"; the imperative \"Enter\" is \"Masukkan\", as used in the sibling placeholders urlbar-placeholder-search-mode-other-engine and -other-tabs.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c3fd84f2",
@@ -514,6 +536,7 @@
    "confidence": "high"
   },
   "rationale": "Same misspelling as in the neighbouring placeholders, which correctly use \"Masukkan\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0dc0a608",
@@ -537,6 +560,7 @@
    "confidence": "high"
   },
   "rationale": "\"query\" is spelled \"kueri\" in Indonesian and elsewhere in this tree (e.g. login-list.aria-label in aboutLogins.ftl); \"kuiri\" is not a word.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "39ca9120",
@@ -560,6 +584,7 @@
    "confidence": "high"
   },
   "rationale": "en-US says \"Start your search in the address bar\". \"bilah alat\" is the toolbar; the locale consistently uses \"bilah alamat\" for the address bar (e.g. urlbar-search-tips-onboard, bookmark-overlay-keyword-caption-label-2).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "14b675b0",
@@ -583,6 +608,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"Open Web Authentication panel\"; the Indonesian reads \"Web Authentication panel is open\". All neighbouring anchors in the same block use \"Buka panel …\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c42e7f74",
@@ -600,10 +626,11 @@
   "file": "browser/browser/confirmationHints.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "id has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7dc5bb3b",
@@ -627,6 +654,7 @@
    "confidence": "high"
   },
   "rationale": "Every other crash-report string in the same file uses \"laporan kerusakan\"; \"kemacetan\" means congestion/jam and is wrong in this context.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b4234960",
@@ -650,6 +678,7 @@
    "confidence": "high"
   },
   "rationale": "en-US macOS variant is \"TSV Document\"; the CSV filter in the same file uses \"Dokumen CSV\" for macOS, so this variant is inconsistent and wrong.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ed374fca",
@@ -673,6 +702,7 @@
    "confidence": "high"
   },
   "rationale": "en-US contains a single { -brand-full-name }; the duplication makes the OS authentication dialog caption read \"Mozilla FirefoxMozilla Firefox\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fb15c624",
@@ -690,10 +720,11 @@
   "file": "browser/browser/defaultBrowserNotification.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "In the source this string quotes “Web browser”, which is exactly the value of `desktop-entry-generic-name` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6143bc0e",
@@ -717,6 +748,7 @@
    "confidence": "high"
   },
   "rationale": "The parallel tooltip firefoxview-opentabs-bookmarked-pinned-tab uses \"(Dimarkahi)\", and the locale consistently uses \"markah\" for bookmarks; \"Ditandai\" just means \"marked\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5604a6f3",
@@ -734,10 +766,11 @@
   "file": "browser/browser/firefoxView.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "id has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "41eab5b2",
@@ -761,6 +794,7 @@
    "confidence": "high"
   },
   "rationale": "The dev comment explicitly states \"search\" is a verb; sibling placeholders correctly use \"Cari markah\", \"Cari tab\". The current text means \"history of searches\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ce3e7015",
@@ -778,10 +812,11 @@
   "file": "browser/browser/fxviewTabList.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "The label is “Lupakan Situs Ini…”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "067e8c36",
@@ -799,10 +834,11 @@
   "file": "browser/browser/fxviewTabList.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "The label is “Pindahkan Tab”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "455aeccf",
@@ -820,10 +856,11 @@
   "file": "browser/browser/fxviewTabList.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "The label is “Pindahkan ke Awal”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e021a6d9",
@@ -841,10 +878,11 @@
   "file": "browser/browser/fxviewTabList.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "The label is “Pindahkan ke Jendela Baru”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6cdc5272",
@@ -862,10 +900,11 @@
   "file": "browser/browser/fxviewTabList.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "The label is “Senyapkan Tab”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f8f8a129",
@@ -883,10 +922,11 @@
   "file": "browser/browser/fxviewTabList.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "The label is “Sematkan Tab”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dd0bd409",
@@ -904,10 +944,11 @@
   "file": "browser/browser/fxviewTabList.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "The label is “Bunyikan Tab”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "78974efc",
@@ -931,6 +972,7 @@
    "confidence": "high"
   },
   "rationale": "The dev comment requires consistency with genai-page-button-summarize, which is translated \"Ringkas laman\" (not \"halaman\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d9b667a0",
@@ -948,10 +990,11 @@
   "file": "browser/browser/genai.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "In the source this string quotes “Summarize page”, which is exactly the value of `genai-chatbot-summarize-button` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d9b667a0",
@@ -975,6 +1018,7 @@
    "confidence": "high"
   },
   "rationale": "The dev comment requires this quoted command to match genai-menu-summarize-page, which is translated \"Ringkaskan Laman\"; the sibling string genai-chatbot-summarize-sidebar-provider-subtitle uses yet another form (\"Ringkas Laman\"), so users are told to look for a menu entry that does not exist.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bf41be41",
@@ -992,10 +1036,11 @@
   "file": "browser/browser/genai.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "In the source this string quotes “Summarize Page”, which is exactly the value of `genai-chatbot-summarize-button` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bf41be41",
@@ -1013,10 +1058,11 @@
   "file": "browser/browser/genai.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "In the source this string quotes “Summarize Page”, which is exactly the value of `genai-chatbot-summarize-button` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d3671387",
@@ -1034,10 +1080,11 @@
   "file": "browser/browser/genai.ftl",
   "first_seen": "2026-08-20",
   "impact": 1,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "Whitespace inside a closing tag makes it render as literal text.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7da7ea05",
@@ -1055,10 +1102,11 @@
   "file": "browser/browser/menubar.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "The label is “Ini bukan situs tipuan…”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e6fee177",
@@ -1082,6 +1130,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment states \"Search\" is a verb, as in \"Search in History\"; the parallel item menu-bookmarks-search is correctly \"Cari Markah\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ea4f750f",
@@ -1105,6 +1154,7 @@
    "confidence": "high"
   },
   "rationale": "\"Suntiing\" is not a word; the correct form is \"Sunting\" (also, the space before the ellipsis is spurious).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a677b412",
@@ -1128,6 +1178,7 @@
    "confidence": "high"
   },
   "rationale": "\"Riwayat\" means history, not saved; migrationWizard.ftl renders the same concept as \"Info masuk dan sandi tersimpan\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bcb573f7",
@@ -1151,6 +1202,7 @@
    "confidence": "high"
   },
   "rationale": "Same defect as the checkbox variant; \"Riwayat\" (history) is not \"Saved\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b7aadc73",
@@ -1174,6 +1226,7 @@
    "confidence": "high"
   },
   "rationale": "en-US says \"select the “Safari“ folder\"; migrationWizard.ftl correctly uses \"folder Safari\". Instructing users to select a file makes the step unfollowable.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cf8000bd",
@@ -1197,6 +1250,7 @@
    "confidence": "high"
   },
   "rationale": "All neighbouring buttons use the imperative (\"Impor\", \"Pilih Berkas\"); \"Diimpor\" states a completed state rather than the action the button performs.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9af641a4",
@@ -1214,10 +1268,11 @@
   "file": "browser/browser/migrationWizard.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "id has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "068b6a26",
@@ -1235,10 +1290,11 @@
   "file": "browser/browser/migrationWizard.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "id has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7d5f7841",
@@ -1256,10 +1312,11 @@
   "file": "browser/browser/migrationWizard.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "id has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "81a954cd",
@@ -1277,10 +1334,11 @@
   "file": "browser/browser/migrationWizard.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "id has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1138018f",
@@ -1304,6 +1362,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is “.title = Close”; the aria-label above it is correctly “Tombol tutup”. “T” appears to be a stray access-key-style fragment and renders as a meaningless one-letter tooltip.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "02f2f394",
@@ -1321,10 +1380,11 @@
   "file": "browser/browser/newtab/asrouter.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "The label is “Nonaktifkan”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f3ddffe1",
@@ -1348,6 +1408,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment states that “shades” refers to the different colour options available in colorways, not to shadows.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "75588c0a",
@@ -1371,6 +1432,7 @@
    "confidence": "high"
   },
   "rationale": "KBBI spelling is “kedaluwarsa”, used correctly elsewhere in the tree.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "61e998dd",
@@ -1394,6 +1456,7 @@
    "confidence": "high"
   },
   "rationale": "KBBI spelling is “kedaluwarsa”, which the tree uses correctly elsewhere (newtab-report-content-outdated = “Kedaluwarsa”).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1e197a0f",
@@ -1417,6 +1480,7 @@
    "confidence": "high"
   },
   "rationale": "KBBI spelling is “kedaluwarsa”, used correctly elsewhere in the tree.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3987c5e7",
@@ -1440,6 +1504,7 @@
    "confidence": "high"
   },
   "rationale": "KBBI spelling is “kedaluwarsa”, used correctly elsewhere in the tree.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f8dd7aa2",
@@ -1457,10 +1522,11 @@
   "file": "browser/browser/newtab/asrouter.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "The label is “Ingatkan saya nanti”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "253d83a3",
@@ -1484,6 +1550,7 @@
    "confidence": "high"
   },
   "rationale": "en-US says loading almost succeeded; the id text says “we have not finished loading this section, but apparently not yet”, which repeats the negation and reads as nonsense.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4a8b7856",
@@ -1507,6 +1574,7 @@
    "confidence": "high"
   },
   "rationale": "en-US “You’ve caught up.” means there is no more new content; “tercegat” (intercepted/blocked) conveys an unrelated and confusing meaning, and the added “Maaf” has no source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9d831788",
@@ -1530,6 +1598,7 @@
    "confidence": "high"
   },
   "rationale": "Indonesian orthography (and the rest of this file, including the second half of this same string) capitalises “Anda”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dd9cf648",
@@ -1553,6 +1622,7 @@
    "confidence": "medium"
   },
   "rationale": "The reduplicated “warna-warni” means “multicoloured/assorted”, the opposite of the single solid colours this category contains.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "792a2faf",
@@ -1576,6 +1646,7 @@
    "confidence": "medium"
   },
   "rationale": "Same misspelling as newtab-weather-menu-temperature-option-celsius; the correct form is “Celsius”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9143acd8",
@@ -1599,6 +1670,7 @@
    "confidence": "medium"
   },
   "rationale": "The Indonesian spelling of the unit, like the English source, is “Celsius”; “Celcius” is a common misspelling.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "839d24bb",
@@ -1622,6 +1694,7 @@
    "confidence": "medium"
   },
   "rationale": "Every other occurrence of “browser” in this file is translated as “peramban” (e.g. mr1-return-to-amo-addon-title, mr2-onboarding-thank-you-text); leaving it untranslated here is inconsistent with the locale's established term.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "38b01cf8",
@@ -1639,10 +1712,11 @@
   "file": "browser/browser/newtab/onboarding.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "In the source this string quotes “Sync to mobile”, which is exactly the value of `sync-to-mobile-button-label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5a62d251",
@@ -1666,6 +1740,7 @@
    "confidence": "high"
   },
   "rationale": "The quoted string refers to sync-to-mobile-button-label, which is translated as “Sinkronkan ke ponsel”; users are told to look for a control that does not exist under that name.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5a62d251",
@@ -1689,6 +1764,7 @@
    "confidence": "medium"
   },
   "rationale": "Lily pads are the floating leaves of a water lily (“daun teratai”), not the “bakung” lily flower; the alt text describes the wrong image for screen-reader users.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2bb90e4a",
@@ -1712,6 +1788,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “Installing the language pack for { $negotiatedLanguage }…”. The id text is identical to onboarding-live-language-button-label-downloading, so the install phase is reported as a download.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c0ea940f",
@@ -1735,6 +1812,7 @@
    "confidence": "medium"
   },
   "rationale": "It is a button that opens the password manager; the sibling button security-view keeps its verb (\"Tampilkan Sertifikat\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0db7376d",
@@ -1758,6 +1836,7 @@
    "confidence": "high"
   },
   "rationale": "The trailing \"‚\" (U+201A) is not punctuation in the source and appears verbatim in the tooltip; same defect in places-maintenance-button-mac.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b3cbbf84",
@@ -1781,6 +1860,7 @@
    "confidence": "high"
   },
   "rationale": "The ampersand turns one criterion into two; the matching column places-view-sort-col-most-recent-visit is correctly \"Kunjungan Terakhir\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6530dfaa",
@@ -1804,6 +1884,7 @@
    "confidence": "high"
   },
   "rationale": "policy-AutofillAddressEnabled correctly uses “isi otomatis” for “autofill”; here the initial letters of the two words were swapped.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7380c28d",
@@ -1827,6 +1908,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “Display the Menu Bar by default.” The immediately preceding policy-DisplayBookmarksToolbar correctly renders the same “by default” as “secara baku”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "14955a66",
@@ -1850,6 +1932,7 @@
    "confidence": "medium"
   },
   "rationale": "“ia” cannot function as an object; the enclitic “-nya” is required. Compare the parallel policy-EncryptedMediaExtensions, which has the same problem with “dia”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5e6813bc",
@@ -1873,6 +1956,7 @@
    "confidence": "medium"
   },
   "rationale": "“dia” refers to persons and cannot be used as an object pronoun for an inanimate setting; the enclitic “-nya” is required.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "defd9576",
@@ -1896,6 +1980,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US: “Allow certain websites to display popups by default.” The policy sets a default permission, it does not make popups appear automatically.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "537aa55f",
@@ -1919,6 +2004,7 @@
    "confidence": "medium"
   },
   "rationale": "In this icon list \"Pride\" names the LGBTQ+ Pride (rainbow) icon, a proper name that is normally kept as \"Pride\" in Indonesian; \"Kebanggaan\" is the abstract feeling of pride and does not identify the icon.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b2da9d6c",
@@ -1942,6 +2028,7 @@
    "confidence": "medium"
   },
   "rationale": "In the same Connection Settings dialog, connection-dns-over-https-url-custom translates \"Custom\" as \"Khusus\" (as does addEngine's \"Tambahkan Mesin Khusus\"); this label uses \"Ubahsuai\" for the very same control.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "67ff49f2",
@@ -1965,6 +2052,7 @@
    "confidence": "high"
   },
   "rationale": "\"Resolving DNS over HTTPS\" is DNS name resolution, not troubleshooting; \"memecahkan masalah\" means \"solve a problem\". The sibling string connection-dns-over-https-url-custom correctly uses \"mendapatkan DNS lewat HTTPS\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3352e1d1",
@@ -1988,6 +2076,7 @@
    "confidence": "high"
   },
   "rationale": "The imperative of \"memasukkan\" is \"masukkan\" with double k; \"masukan\" is the noun \"input/feedback\". Other files in this partition use the correct form (e.g. permissions-doh-entry-field \"Masukkan nama domain situs web\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4a9e0422",
@@ -2011,6 +2100,7 @@
    "confidence": "high"
   },
   "rationale": "In standard Indonesian orthography the comparative conjunction is written as one word, \"daripada\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bc76562d",
@@ -2034,6 +2124,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Ethiopic\" is the writing system (Ge'ez script), not the country; additionally the Indonesian spelling of the country is \"Etiopia\", not the English \"Ethiopia\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "98575afc",
@@ -2057,6 +2148,7 @@
    "confidence": "high"
   },
   "rationale": "In Indonesian, \"Tiongkok\" is the country China; the language/script is \"Tionghoa\" (bahasa/aksara Tionghoa). The label names a font language group, so it must name the language, not the country.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "97b94470",
@@ -2080,6 +2172,7 @@
    "confidence": "medium"
   },
   "rationale": "The entry names a font language group (Thai). In Indonesian the language is \"bahasa Thai\"; \"Thailand\" is the country, matching the wrong-name category (country instead of language).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "309dfa59",
@@ -2103,6 +2196,7 @@
    "confidence": "high"
   },
   "rationale": "\"Tiongkok\" is the country China; the language/script name in Indonesian is \"Tionghoa\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0f89380e",
@@ -2126,6 +2220,7 @@
    "confidence": "high"
   },
   "rationale": "\"Tiongkok\" is the country China; the language/script name in Indonesian is \"Tionghoa\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d8aef12a",
@@ -2149,6 +2244,7 @@
    "confidence": "high"
   },
   "rationale": "\"Post town\" (GB/NO/SE) is the town name used in a postal address, not a numeric code; \"Kode kota\" means \"city code\" and collides conceptually with autofill-address-postal-code (\"Kode Pos\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "56931e03",
@@ -2172,6 +2268,7 @@
    "confidence": "medium"
   },
   "rationale": "Per the developer comment this is the Irish sublocality unit \"townland\", a rural land division, not a small town (\"kota kecil\"); it is normally kept as \"Townland\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8f32b0b4",
@@ -2195,6 +2292,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment states macOS prepends \"Firefox is trying to \" and adds a period at the end; en-US therefore has no final period. The localized variant ends with one, producing a double period in the OS dialog.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1a5024b0",
@@ -2218,6 +2316,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US is \"Automatically take back your exposed personal info.\" The Indonesian promises only discovery of breached info, dropping the removal action that is the product's selling point.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "089ea350",
@@ -2241,6 +2340,7 @@
    "confidence": "medium"
   },
   "rationale": "The two description strings in the same dialog use \"Mode HTTPS-Saja\", and preferences.ftl consistently uses \"Mode Hanya HTTPS\" (httpsonly-header and all httpsonly-radio-* strings). Leaving \"HTTPS-Only\" untranslated in the window title of the same surface is inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d29a8b71",
@@ -2264,6 +2364,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says the macOS string is preceded by \"Firefox is trying to \" and the OS supplies the sentence-final punctuation; en-US has no trailing period, so the added one duplicates it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "01fd7940",
@@ -2287,6 +2388,7 @@
    "confidence": "medium"
   },
   "rationale": "Same defect as content-blocking-private-windows: the blocked-items list entry \"Tracking content in all windows\" becomes an action phrase in Indonesian.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1bed6b47",
@@ -2310,6 +2412,7 @@
    "confidence": "medium"
   },
   "rationale": "This is an item in the list of what { -brand-short-name } blocks. \"Melacak konten\" reads as the action \"tracking content\", implying the browser tracks content; the source means content that tracks. The related label content-blocking-tracking-content-label correctly uses a noun phrase (\"Pelacakan konten\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4662f3cf",
@@ -2333,6 +2436,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US is \"Paste a URL…\" with an ellipsis character, and the rest of the localized file uses … consistently.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c1ca00ac",
@@ -2356,6 +2460,7 @@
    "confidence": "medium"
   },
   "rationale": "Every other \"Settings…\"-type label in this file (permissions-xr-settings, permissions-speaker-settings, history-clear-on-close-settings, …) uses the ellipsis character …, matching en-US.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fae088c0",
@@ -2379,6 +2484,7 @@
    "confidence": "high"
   },
   "rationale": "Both quoted phrases close with the left double quotation mark “ instead of the right one ”; en-US and the rest of the file use properly paired “…”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3eb4d2d5",
@@ -2402,6 +2508,7 @@
    "confidence": "high"
   },
   "rationale": "Same mismatched quotation marks as in startup-windows-launch-on-login-profile-disabled; the closing mark must be ”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b541d55c",
@@ -2425,6 +2532,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"The following websites store cookies and site data on your computer\" — it introduces the list below. \"Situs web ini\" means \"this website\", pointing at nothing and losing the reference to the list.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b29a84e7",
@@ -2448,6 +2556,7 @@
    "confidence": "medium"
   },
   "rationale": "termsofuse.ftl and the other preonboarding strings consistently use \"Ketentuan Penggunaan\" for the same legal document.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "42377058",
@@ -2471,6 +2580,7 @@
    "confidence": "medium"
   },
   "rationale": "The B-variant button sits in the same surface as preonboarding-terms-of-use-header-button-title (\"Ketentuan Penggunaan\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "375a7866",
@@ -2494,6 +2604,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says \"Open is an adjective, as in browser tabs currently open\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c9cc1c7b",
@@ -2517,6 +2628,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment explicitly says \"Open is an adjective, as in browser windows currently open\"; the string is a data row in the delete-profile table, not an action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a138633f",
@@ -2540,6 +2652,7 @@
    "confidence": "high"
   },
   "rationale": "All sibling aria-labels in the same section keep spaces around the count and the percentage.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e5052cd2",
@@ -2563,6 +2676,7 @@
    "confidence": "medium"
   },
   "rationale": "fingerprinter-tab-title in the same file uses \"Pelacak Sidik\"; \"Sidik Jari\" alone denotes the fingerprint, not the actor being counted.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b23f0ee7",
@@ -2586,6 +2700,7 @@
    "confidence": "high"
   },
   "rationale": "Indonesian capitalizes the honorific \"Anda\" and not common nouns mid-sentence; the rest of the file consistently writes \"komputer Anda\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1fcd900e",
@@ -2609,6 +2724,7 @@
    "confidence": "medium"
   },
   "rationale": "The tree renders \"browser\" as \"peramban\" throughout (menubar.ftl, migration.ftl, protections.ftl mobile-app-card-content).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7f5c8041",
@@ -2632,6 +2748,7 @@
    "confidence": "medium"
   },
   "rationale": "In Indonesian a bare noun followed by a name reads as a possessive, attributing the trackers to the browser.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4dbab47e",
@@ -2655,6 +2772,7 @@
    "confidence": "medium"
   },
   "rationale": "protections.ftl tracker-tab-title and siteProtections.ftl use \"Konten Pelacak(an)\" for the same category; \"Pelacakan Konten\" reverses head and modifier.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f4e55db8",
@@ -2678,6 +2796,7 @@
    "confidence": "high"
   },
   "rationale": "\"partially unblocked\" ≠ \"diblokir sebagian\"; the companion tooltip protections-panel-shim-allowed-indicator correctly says \"sebagian tidak diblokir\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "12535647",
@@ -2701,6 +2820,7 @@
    "confidence": "high"
   },
   "rationale": "\"infomasi\" is a typo; the correct spelling \"informasi\" is used in the parallel malware string.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "11bdbd12",
@@ -2718,10 +2838,11 @@
   "file": "browser/browser/safebrowsing/blockedSite.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "The label is “Ini bukan situs tipuan…”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e6fee177",
@@ -2745,6 +2866,7 @@
    "confidence": "medium"
   },
   "rationale": "sidebar-context-menu-hide-sidebar, sidebarMenu.ftl and menubar.ftl all use \"Bilah Samping\"; the two terms alternate inside one menu.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d0e98e0a",
@@ -2768,6 +2890,7 @@
    "confidence": "high"
   },
   "rationale": "\"Markahl\" is a typo of \"Markahi\", the form used everywhere else (places.ftl, tabContextMenu.ftl).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c5d317f7",
@@ -2791,6 +2914,7 @@
    "confidence": "medium"
   },
   "rationale": "sidebar-menu-genai-chat-label and menu-view-genai-chat in the same file use \"Bot obrolan AI\" for the identical item.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1f0d9e0a",
@@ -2814,6 +2938,7 @@
    "confidence": "high"
   },
   "rationale": "Same incomplete term as protections-not-blocking-cross-site-tracking-cookies; the full form is used in the labels above.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "805a1442",
@@ -2837,6 +2962,7 @@
    "confidence": "high"
   },
   "rationale": "\"lintas\" (across) needs its object; content-blocking-cookies-blocking-trackers-label in the same file correctly says \"Kuki Pelacakan Lintas Situs\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cb2b8b35",
@@ -2860,6 +2986,7 @@
    "confidence": "high"
   },
   "rationale": "All other strings in the file keep \"Speech Dispatcher\"; the header comment states the tool name shouldn't be localized.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "74458119",
@@ -2883,6 +3010,7 @@
    "confidence": "high"
   },
   "rationale": "$tabCount is documented as the number of tabs, so the placement makes the label state a wrong number of devices.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "52de5742",
@@ -2900,10 +3028,11 @@
   "file": "browser/browser/syncedTabs.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "The label is “Kelola Perangkat…”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8f212b6e",
@@ -2927,6 +3056,7 @@
    "confidence": "high"
   },
   "rationale": "$tabCount counts tabs affected by the action, not devices; with 3 tabs selected the menu claims 3 devices.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3e6b9fd2",
@@ -2950,6 +3080,7 @@
    "confidence": "medium"
   },
   "rationale": "pin-tab is \"Sematkan Tab\" and unpin-selected-tabs is \"Lepas Sematan Tab\" in the same menu.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d7974af8",
@@ -2973,6 +3104,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"quitting with {$quitKey}\"; the parallel string tabbrowser-ask-close-tabs-with-key-checkbox correctly uses \"dengan\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d4721d01",
@@ -2996,6 +3128,7 @@
    "confidence": "medium"
   },
   "rationale": "tabbrowser-context-mute-tab (shown in the same menu, and required by comment to share the access key) uses \"Bisukan Tab\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b4939008",
@@ -3013,10 +3146,11 @@
   "file": "browser/browser/tabbrowser.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "The label is “Bunyikan Tab”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5ac6cae2",
@@ -3040,6 +3174,7 @@
    "confidence": "high"
   },
   "rationale": "Every other string in the same file spells it \"mikrofon\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f0a23c01",
@@ -3063,6 +3198,7 @@
    "confidence": "medium"
   },
   "rationale": "The menu lists tabs currently sharing a device; the translation turns it into an action of sharing both tabs and devices.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "85da0cf3",
@@ -3086,6 +3222,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: \"will make you more difficult to identify\" — the user is the object, not the agent, of identification.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0ddc2587",
@@ -3109,6 +3246,7 @@
    "confidence": "high"
   },
   "rationale": "Inconsistent with contentBlocking.cookiesView.trackers2.label in the same panel, and \"Lintas\" without a noun is incomplete.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2b30a280",
@@ -3132,6 +3270,7 @@
    "confidence": "high"
   },
   "rationale": "Same panel uses \"Kuki Pelacakan Lintas Situs\"; the shortened form is incomplete.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fc88fbde",
@@ -3155,6 +3294,7 @@
    "confidence": "high"
   },
   "rationale": "This is a notification-bar label stating the site has been reported, matching safebrowsing.reportedAttackSite (\"Telah Dilaporkan Sebagai Situs Penyerang!\"); \"Laporkan\" is a command to the user.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3b507d13",
@@ -3178,6 +3318,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment states #1 is the number of tabs sent to the device; en-US is \"Send #1 tabs to device\". As translated it reads \"Send tab to #1 devices\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c0bde2c6",
@@ -3201,6 +3342,7 @@
    "confidence": "high"
   },
   "rationale": "Elsewhere in the same panel the term is \"Kuki Pelacakan Lintas Situs\" (contentBlocking.cookies.blockingTrackers3.label); \"lintas\" alone is a preposition-like modifier with no noun and is not a valid rendering.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cb2b8b35",
@@ -3224,6 +3366,7 @@
    "confidence": "high"
   },
   "rationale": "Every other shortcut tooltip in this file and in browser.properties places a space before \"(%S)\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e39304a5",
@@ -3247,6 +3390,7 @@
    "confidence": "high"
   },
   "rationale": "\"meungkin\" is not a word; the correct form \"mungkin\" is used throughout the rest of the file.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "09279999",
@@ -3270,6 +3414,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US is \"New Bookmarks\", a title parallel to dialogTitleAddBookmark/dialogTitleAddFolder; the translation retains the older action-phrase wording.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bb715617",
@@ -3293,6 +3438,7 @@
    "confidence": "high"
   },
   "rationale": "dialogTitleEditBookmark in the same file uses “%S”; en-US uses curly quotes throughout.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fcbbdce1",
@@ -3316,6 +3462,7 @@
    "confidence": "medium"
   },
   "rationale": "The two labels sit next to each other in the same list; the file otherwise uses \"Perangkat\" (e.g. permission.xr.label).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2bffde89",
@@ -3339,6 +3486,7 @@
    "confidence": "high"
   },
   "rationale": "The head noun in Indonesian comes first, so \"Sesi Diizinkan\" states that the session is allowed rather than that the permission is granted for the session; compare state.current.allowedTemporarily (\"Diizinkan sementara\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "227ed326",
@@ -3362,6 +3510,7 @@
    "confidence": "high"
   },
   "rationale": "\"Ingatkan\" means \"remind (someone)\"; the checkbox stores the choice. Comparable strings elsewhere use \"Ingat pilihan ini\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d77b1b85",
@@ -3385,6 +3534,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US is “$BrandShortName &Options”, i.e. the browser's Options/preferences; “komponen” adds a meaning that is not in the source and misdescribes the command.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "78df2ece",
@@ -3408,6 +3558,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: “Choose the type of setup you prefer, then click Next.” The page offers Standard/Custom setup types, not a list of extra components.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3064dc2c",
@@ -3431,6 +3582,7 @@
    "confidence": "high"
   },
   "rationale": "en-US “&Custom” pairs with “&Standard”; “Kesukaan” means “favourite/preference” and does not convey a custom installation. The tree uses “Ubahsuai”/“Khusus” for “custom” elsewhere (e.g. newtab-topsites-image-url-label “URL Gambar Khusus”).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "223569ad",
@@ -3454,6 +3606,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US says the setup process finished; the id text says the setup program itself was installed, which is not what happened.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d6581f9b",
@@ -3477,6 +3630,7 @@
    "confidence": "high"
   },
   "rationale": "The option restricts matching to entire words, not the entire text; \"teks\" names the wrong unit.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8343bb74",
@@ -3500,6 +3654,7 @@
    "confidence": "high"
   },
   "rationale": "The tooltip must mirror find_previous.title (\"Temukan kata sebelumnya\"); \"Temukan lebih lanjut\" reads as \"learn more\" and loses the next-occurrence meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "def4dfd6",
@@ -3523,6 +3678,7 @@
    "confidence": "high"
   },
   "rationale": "\"lamanan\" is not a word; the parallel string spread_even.title correctly reads \"Gabungkan lembar halaman\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0b10364c",
@@ -3546,6 +3702,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US is a verb phrase labelling a button that starts profiling; \"Kinerja profil\" reads as \"the profile's performance\" and also has the head noun in the wrong position.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "75a5d3ce",
@@ -3569,6 +3726,7 @@
    "confidence": "high"
   },
   "rationale": "Typo; the identical string in devtools/shared/accessibility.properties reads \"papan ketik\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0b16554e",
@@ -3592,6 +3750,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"Focusable element…\"; the shared counterpart reads \"Elemen yang dapat diberi fokus\", so \"diberi difokus\" is a broken form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "57ac406f",
@@ -3615,6 +3774,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"Documents must have a <code>title</code>\"; the content of <code> is the literal HTML element/attribute name and must stay in English, as it is kept in all sibling strings (fieldset, legend, alt, optgroup).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "02d2d621",
@@ -3638,6 +3798,7 @@
    "confidence": "high"
   },
   "rationale": "Typo; the shared/accessibility.properties counterpart spells it \"Jika\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1658767a",
@@ -3661,6 +3822,7 @@
    "confidence": "high"
   },
   "rationale": "The comment says this labels the animation endDelay value; \"Hentikan\" is the verb \"stop\", turning a value label into a command.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "06d9cf6f",
@@ -3684,6 +3846,7 @@
    "confidence": "high"
   },
   "rationale": "Typo in a top-level empty-state message.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "289a1076",
@@ -3707,6 +3870,7 @@
    "confidence": "high"
   },
   "rationale": "boxmodel.title in the same file uses \"Model Kotak\"; \"Kotak Model\" means \"model box\" and is inconsistent within the same panel.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "aa1ed7c8",
@@ -3730,6 +3894,7 @@
    "confidence": "high"
   },
   "rationale": "en-US \"Close settings\" is an imperative describing what the button does; the translation is a passive statement of state.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0a94ad6b",
@@ -3753,6 +3918,7 @@
    "confidence": "medium"
   },
   "rationale": "compatibility-issue-deprecated and compatibility-issue-deprecated-experimental use \"usang\" for the same en-US term in the same badge set, so the combined labels look like a different issue type.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f82e58cb",
@@ -3776,6 +3942,7 @@
    "confidence": "high"
   },
   "rationale": "All neighbouring copy commands use \"Salin <object>\" (Salin teks sumber, Salin URI sumber); \"Fungsi Salin\" is ungrammatical for the intended action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "397b94d4",
@@ -3799,6 +3966,7 @@
    "confidence": "high"
   },
   "rationale": "\"Expresi\" should be \"ekspresi\" and \"Pantuan\" is a typo for \"pemantau/pantauan\"; the same file spells it correctly in expressions.label and watchExpressions.header.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6adacd2f",
@@ -3822,6 +3990,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"Pause on any URL\"; the Indonesian repeats \"URL\" and leaves a dangling preposition.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "868eea70",
@@ -3845,6 +4014,7 @@
    "confidence": "high"
   },
   "rationale": "The comment says it refers to a block of code in the scopes pane; \"Blokir\" means \"block/ban (something)\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a35cccde",
@@ -3868,6 +4038,7 @@
    "confidence": "high"
   },
   "rationale": "\"Sumber Peta\" means \"map source\"; the same file uses the correct \"Peta Sumber\" in sourceFooter.sourceMapButton.* and in settings.enableSourceMapIgnoreList.tooltip.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a29f2016",
@@ -3891,6 +4062,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"Can’t pretty print generated sources with valid sourcemaps\"; \"aplikasi bersumber\" introduces an \"application\" that does not exist in the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "16fb4280",
@@ -3914,6 +4086,7 @@
    "confidence": "high"
   },
   "rationale": "\"cukup\" means \"enough\", not \"pretty\"; the same file renders pretty printing correctly as \"cetak cantik\" in settings.autoPrettyPrint.label.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d6c51f86",
@@ -3937,6 +4110,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"Unignore files in this group\"; the string is byte-identical to ignoreAllInGroup.label, while the parallel entries unignoreAllOutsideGroup/unignoreAllInDir correctly use \"Batalkan mengabaikan\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e9a509a1",
@@ -3960,6 +4134,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US \"(optimized away)\" means the variable was removed by the optimizer; the translation states the opposite (that it was not optimized).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c12bbbe1",
@@ -3983,6 +4158,7 @@
    "confidence": "high"
   },
   "rationale": "en-US \"x y radius color\" documents the required CSS argument order; reversing it tells the user to type the value backwards.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "80573d14",
@@ -4006,6 +4182,7 @@
    "confidence": "high"
   },
   "rationale": "The menu item copies the full CSS path of a node; \"Direktori\" means filesystem directory, which is not what is copied.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a6fe9bb9",
@@ -4029,6 +4206,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is an imperative context-menu command; \"Digunakan\" means \"is used\", not \"use\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e82fba1f",
@@ -4052,6 +4230,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"This element has scrollable overflow.\"; the translation says the element has a \"scrollable\" whose value is overflow, and the correct wording already exists in markupView.scrollableBadge.interactive.tooltip.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a8828b95",
@@ -4075,6 +4254,7 @@
    "confidence": "medium"
   },
   "rationale": "layout.header, layout.overlayGrid, layout.gridDisplaySettings and layout.cannotShowGridOutline.title all keep \"Grid\"; the toggle wording also differs from flexbox.togglesFlexboxHighlighter2 (\"Aktifkan/Nonaktifkan\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "58b449ad",
@@ -4098,6 +4278,7 @@
    "confidence": "high"
   },
   "rationale": "\"Hapuse\" is not a word; the correct form \"Hapus\" is used in snapshot.io.delete.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "40b000ca",
@@ -4121,6 +4302,7 @@
    "confidence": "high"
   },
   "rationale": "en-US says \"The number of bytes taken up by this group\"; the column itself is labelled \"Byte\", so reporting bits is a factual unit error (same problem in heapview.field.totalbytes.tooltip).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3857cc41",
@@ -4144,6 +4326,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"Save Snapshot\" (file-save dialog); \"Ambil snapshot\" is already the translation of take-snapshot, so the save dialog is mislabelled as the capture action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a85dfeae",
@@ -4167,6 +4350,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"Time when “load” event occurred\"; \"load\" is the literal event name, kept untranslated in the sibling string for “DOMContentLoaded”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e6bd6eda",
@@ -4190,6 +4374,7 @@
    "confidence": "high"
   },
   "rationale": "\"utas\" means thread; the chart label contrasts a primed cache with charts.cacheDisabled (\"Tembolok kosong\"), so \"utas\" is meaningless here.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "87fd4b95",
@@ -4213,6 +4398,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"Received\"; the sibling entry netmonitor.ws.type.received is correctly \"Diterima\", so the context-menu item shows a meaningless \"t\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3720146f",
@@ -4236,6 +4422,7 @@
    "confidence": "high"
   },
   "rationale": "Same defect as the Fluent counterpart: \"load\" is an event identifier and must not be translated.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "40c63c55",
@@ -4259,6 +4446,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"Size/transferred size of all requests\"; the English word \"transferred\" is left in the middle and the slash is detached, producing an unreadable string.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "787d6852",
@@ -4282,6 +4470,7 @@
    "confidence": "high"
   },
   "rationale": "\"Bawaan\" means default/built-in; the same file renders the counterpart responsePayload as \"Payload balasan\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0b2fe288",
@@ -4305,6 +4494,7 @@
    "confidence": "high"
   },
   "rationale": "en-US describes the thread that handles timers; the translation makes \"Timer\" the head noun, describing a timer instead of a thread in a list of threads.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2c748d29",
@@ -4328,6 +4518,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is an imperative menu item about logging function returns; the translation reads as a noun phrase \"the tracing function\" plus \"back\", losing the action entirely, unlike the neighbouring traceValues entry.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bf44519a",
@@ -4345,10 +4536,11 @@
   "file": "devtools/client/styleeditor.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "The label is “Aktifkan/Nonaktifkan keterlihatan lembar gaya”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "93eba7e2",
@@ -4372,6 +4564,7 @@
    "confidence": "high"
   },
   "rationale": "This label selects the CSS output unit; \"rgb()\"/\"rgba()\" are code identifiers, and neighbouring units HSL(A) and HWB were correctly left untouched.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5c3502f0",
@@ -4395,6 +4588,7 @@
    "confidence": "medium"
   },
   "rationale": "options-enable-service-workers-http-label in the same file keeps \"Service Worker\"; \"Layanan Pekerja\" (\"worker service\") is not recognisable as the API name.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f574c8b5",
@@ -4418,6 +4612,7 @@
    "confidence": "high"
   },
   "rationale": "\"Otomasis\" is a typo; the tooltip immediately below spells it \"otomatis\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d5810e81",
@@ -4441,6 +4636,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"is deprecated by W3C standards\"; the text was copied from css-compatibility-deprecated-experimental-message, wrongly telling the developer the property is experimental (also spells \"standard\" instead of \"standar\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "058abda1",
@@ -4464,6 +4660,7 @@
    "confidence": "high"
   },
   "rationale": "CSS display values inside <strong> must not be translated (see file comment); the other values in the same list were left in English, so the advice is unusable as written.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5c37ab5b",
@@ -4487,6 +4684,7 @@
    "confidence": "high"
   },
   "rationale": "The adjacent string inactive-css-not-multicol-container spells it \"multi-kolom\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7181ee66",
@@ -4510,6 +4708,7 @@
    "confidence": "high"
   },
   "rationale": "\"sebarus\" is a typo; \"sebaris\" is used throughout the tree for \"inline\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dee9bc90",
@@ -4533,6 +4732,7 @@
    "confidence": "high"
   },
   "rationale": "The section comment states CSS properties and values in <strong> tags must not be translated; inactive-css-column-span-fix in the same file keeps them in English.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "be2c8e07",
@@ -4556,6 +4756,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"…has no effect on this element since it doesn’t scroll\"; the causal \"karena\" present in every sibling string is missing here.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f20cbcf5",
@@ -4573,10 +4774,11 @@
   "file": "devtools/client/webconsole.properties",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "14549299",
@@ -4600,6 +4802,7 @@
    "confidence": "high"
   },
   "rationale": "Typo in the console table column header (also present in devtools/shared/webconsole.properties).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6c4ff724",
@@ -4623,6 +4826,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"Refresh the page to also see errors…\"; \"aman\" means \"safe\" and leaves the sentence without an object (same defect in devtools/shared/webconsole.properties).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "60d8cbb4",
@@ -4646,6 +4850,7 @@
    "confidence": "high"
   },
   "rationale": "`:block` is a literal Web Console command the user must type; the same string later refers to `:unblock` untranslated, so the usage text now documents a command that does not exist.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a3c7a582",
@@ -4669,6 +4874,7 @@
    "confidence": "high"
   },
   "rationale": "`:unblock` is a literal command name; \":buka blokir\" is not a valid command and even contains a space, so it cannot be typed as shown.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ae952159",
@@ -4686,10 +4892,11 @@
   "file": "devtools/shared/webconsole.properties",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "id",
   "origin": {},
   "rationale": "In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "14549299",
@@ -4713,6 +4920,7 @@
    "confidence": "high"
   },
   "rationale": "Line 17 of the same file translates table as \"tabel\"; \"table matematika\" is a spelling error.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "435efd83",
@@ -4736,6 +4944,7 @@
    "confidence": "high"
   },
   "rationale": "The paired entry close-fence is correctly \"kurung tutup\"; MathML fences are brackets, not fences/gates, and the role must be a noun.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b74b9dda",
@@ -4759,6 +4968,7 @@
    "confidence": "medium"
   },
   "rationale": "This file lists control roles (nouns) announced by screen readers; a verb misidentifies the control. Note the mac/unix/win files correctly use \"Ganti\" for the *action* named switch, which is a different entry.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7574d869",
@@ -4782,6 +4992,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of \"tersebut\" in a user-facing network error page.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5e0eaa81",
@@ -4805,6 +5016,7 @@
    "confidence": "high"
   },
   "rationale": "The comment says do not translate \"Response\" ... or \"follow\"; both were localized, and ‘follow’ is a literal API value.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2e8749d7",
@@ -4828,6 +5040,7 @@
    "confidence": "high"
   },
   "rationale": "Comment says do not translate \"DOMNodeInsertedIntoDocument\"; the localization substitutes a different event name.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "91b6811b",
@@ -4851,6 +5064,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says do not translate \"DOMNodeInserted\"; the string instead repeats DOMCharacterDataModified, so the console warning points developers at the wrong API.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "91b6811b",
@@ -4874,6 +5088,7 @@
    "confidence": "high"
   },
   "rationale": "The comment lists tabs.captureTab as untranslatable; the localized form names a nonexistent API.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9ac8c0a9",
@@ -4897,6 +5112,7 @@
    "confidence": "high"
   },
   "rationale": "\"dibantah\" means refuted; every other deprecation string in this file uses \"sudah usang\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7ec81abb",
@@ -4920,6 +5136,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: \"was called from inside a mouse event handler not triggered by left mouse button\"; the Indonesian negates the verb, inverting the stated cause of the denial.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ff5d3dec",
@@ -4943,6 +5160,7 @@
    "confidence": "high"
   },
   "rationale": "The comment reads \"do not localize key=“%S” modifiers=“%S” id=“%S”\"; the same defect occurs in WinConflict2.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8217e09c",
@@ -4966,6 +5184,7 @@
    "confidence": "medium"
   },
   "rationale": "A bare specifier is a non-empty specifier without a path prefix; \"kosong\" states it is empty, which is a different (and impossible) condition.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1acf1606",
@@ -4989,6 +5208,7 @@
    "confidence": "high"
   },
   "rationale": "The comment says do not translate accentunder; the same string keeps it untranslated earlier, so the sentence is also self-inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "390bfe55",
@@ -5012,6 +5232,7 @@
    "confidence": "high"
   },
   "rationale": "The comment says do not translate \"aesgcm128\"; the inserted space makes it an invalid token (and \"diijinkan\" is a nonstandard spelling of \"diizinkan\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5b19bce2",
@@ -5035,6 +5256,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says do not translate \"HTMLOptionsCollection.length\"; the localized identifier is missing the \"s\" and does not exist.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8e952371",
@@ -5058,6 +5280,7 @@
    "confidence": "high"
   },
   "rationale": "\"usangi\" is not a word; the parallel string UseOfCaptureEventsWarning correctly uses \"sudah usang\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1e2dbb63",
@@ -5081,6 +5304,7 @@
    "confidence": "high"
   },
   "rationale": "en-US recommends sendBeacon instead of synchronous XHR; the Indonesian reads \"instead of using navigator.sendBeacon\", advising the opposite.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f75857cd",
@@ -5104,6 +5328,7 @@
    "confidence": "high"
   },
   "rationale": "moz-extension is a protocol scheme and is case-significant as written in en-US; it must not be altered.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "aed9bdcd",
@@ -5127,6 +5352,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Ulangi\" means repeat/redo, not reset; the locale uses \"Setel Ulang\" for Reset elsewhere (e.g. aboutConfig.ftl config-pref-reset-button, pippki.ftl reset-password-button-label).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fc12cbe9",
@@ -5150,6 +5376,7 @@
    "confidence": "high"
   },
   "rationale": "Same duplication as ImageTitleWithDimensions2AndFile; the other two entries in the file correctly use only \"Gambar %S\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "45093744",
@@ -5173,6 +5400,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"%S (%S Image, ...)\"; the localized title duplicates the noun, producing e.g. \"Gambar PNG Image\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a3c96f57",
@@ -5196,6 +5424,7 @@
    "confidence": "high"
   },
   "rationale": "en-US names the at-rule @namespace; \"qnamespace\" is not a CSS construct and misleads authors debugging the rule.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bdfab8a4",
@@ -5219,6 +5448,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of \"wajib\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1f3bc40d",
@@ -5242,6 +5472,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Featureless\" is a specific CSS selector-matching concept; \"tidak berfungsi\" states the selector is broken, a different claim.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9fc5ace0",
@@ -5265,6 +5496,7 @@
    "confidence": "high"
   },
   "rationale": "The negation plus \"diharapkan\" (expected) reverses and distorts what en-US reports about the fallback behavior.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a7112ea4",
@@ -5288,6 +5520,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: \"so the encoding was guessed from content\"; the localization claims the opposite, misdescribing what the parser did.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f498e3d5",
@@ -5311,6 +5544,7 @@
    "confidence": "high"
   },
   "rationale": "Same inverted clause as EncNoDecl; en-US: \"so the encoding was guessed from content\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "69ef7d66",
@@ -5334,6 +5568,7 @@
    "confidence": "high"
   },
   "rationale": "en-US quotes the literal markup “<!--”; the em dash makes the quoted token wrong for an author searching their source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d3f3894c",
@@ -5357,6 +5592,7 @@
    "confidence": "high"
   },
   "rationale": "\"Quirks\" was read as \"quotes\"; the sibling string errQuirkyDoctype uses \"quirk\", so the surface is also inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "49348226",
@@ -5380,6 +5616,7 @@
    "confidence": "high"
   },
   "rationale": "The graphics compositor is not a typesetter; every other string in this file uses \"kompositor\" or \"compositor\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2d533c47",
@@ -5403,6 +5640,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of \"kompositor\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b3639fa4",
@@ -5426,6 +5664,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of \"bagian\"; the parallel string CompositorAnimationWarningTransformFrameInactive spells it correctly.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "28101f0c",
@@ -5449,6 +5688,7 @@
    "confidence": "high"
   },
   "rationale": "The comment lists \"The Principal Writing Mode\" as a technical term that must be kept verbatim; the final \"e\" is missing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "87098c6f",
@@ -5472,6 +5712,7 @@
    "confidence": "high"
   },
   "rationale": "en-US error 29 is \"incomplete markup in parameter entity\"; the Indonesian text describes the reserved-xml-prefix error instead, so the parser reports the wrong cause.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "aa96380f",
@@ -5495,6 +5736,7 @@
    "confidence": "high"
   },
   "rationale": "en-US error 30 is \"XML declaration not well-formed\"; the translation gives the xmlns-prefix message, mismatching the actual error code.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e4ba3580",
@@ -5518,6 +5760,7 @@
    "confidence": "high"
   },
   "rationale": "en-US error 31 is \"text declaration not well-formed\"; the translated text belongs to the reserved-namespace error.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8684f877",
@@ -5541,6 +5784,7 @@
    "confidence": "high"
   },
   "rationale": "Trailing extra \"n\" in a user-facing save error.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9cd8b62b",
@@ -5564,6 +5808,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: \"would block creating a Trusted Types policy\"; report-only never blocks, so the indicative tense is factually wrong.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "caf6548b",
@@ -5587,6 +5832,7 @@
    "confidence": "high"
   },
   "rationale": "en-US uses \"would block\" for report-only policies (nothing is actually blocked); the sibling strings CSPROEvalScriptViolation and CSPROGenericViolation correctly use \"akan memblokir\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4569ad32",
@@ -5610,6 +5856,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: \"(Not supported within ‘%2$S’)\". The Indonesian states the opposite, telling developers the source is supported in the very directive where it was ignored.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2a919650",
@@ -5633,6 +5880,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of \"atas\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e65eae13",
@@ -5656,6 +5904,7 @@
    "confidence": "high"
   },
   "rationale": "The comment lists Access-Control-Allow-Headers as do-not-translate; the localized form has a stray space and a singular \"Header\", so it names no real header.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "242e4d76",
@@ -5679,6 +5928,7 @@
    "confidence": "high"
   },
   "rationale": "Stray capital I; the two adjacent FeaturePolicy strings spell it \"Kebijakan Fitur\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bbd9e535",
@@ -5702,6 +5952,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US: \"Ignoring the less restricted referrer policy\"; the localization says the restricted policy is ignored, inverting which policies are affected. The companion string ReferrerPolicyDisallowRelaxingWarning correctly says \"kebijakan yang lebih sedikit dibatasi\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "98a2bb9b",
@@ -5725,6 +5976,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment explicitly says do not translate Sanitizer.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "666750b1",
@@ -5748,6 +6000,7 @@
    "confidence": "high"
   },
   "rationale": "The comment says do not translate \"X-Frame-Options\"; the sibling string XFrameOptionsInvalid spells it correctly.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0115f1e1",
@@ -5771,6 +6024,7 @@
    "confidence": "high"
   },
   "rationale": "Same defect as console-timer-start in geckoViewConsole.ftl; en-US is \"timer started\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8a045b7f",
@@ -5794,6 +6048,7 @@
    "confidence": "high"
   },
   "rationale": "English \"Name\" left in place of \"Nama\" in a login prompt label.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ef44d220",
@@ -5817,6 +6072,7 @@
    "confidence": "high"
   },
   "rationale": "The comment says $name is a user-defined name for the timer; \"weker\" means alarm clock and misnames the developer-tools concept.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a0e9afdc",
@@ -5840,6 +6096,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: \"has ‘SameSite’ policy set to ‘Lax’ because it is missing a ‘SameSite’ attribute\"; \"tetapi\" turns the explanation into an apparent contradiction.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "858b6049",
@@ -5863,6 +6120,7 @@
    "confidence": "high"
   },
   "rationale": "The comment explains %8$S is the prompt action (Allow/Deny); \"sapaan\" means greeting and is unrelated.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cb49a92b",
@@ -5886,6 +6144,7 @@
    "confidence": "high"
   },
   "rationale": "\"menilah\" is not a word; en-US is \"The server rejected the handshake\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8868089f",
@@ -5909,6 +6168,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: \"was enabled, but the callback was cleared\"; the negated version is self-contradictory.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5de2d72b",
@@ -5932,6 +6192,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: \"processing SSL Server Key Exchange handshake\"; the string is identical to SSL_ERROR_CLIENT_KEY_EXCHANGE_FAILURE, so the two distinct errors are indistinguishable.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4c8222fa",
@@ -5955,6 +6216,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: \"received a weak ephemeral Diffie-Hellman key\"; without \"lemah\" the error describes normal behavior rather than a failure.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "301a53db",
@@ -5978,6 +6240,7 @@
    "confidence": "high"
   },
   "rationale": "Same unit error as pageInfo_EncryptionWithBitsAndProtocol; en-US says \"%2$S bit keys\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4bd7f737",
@@ -6001,6 +6264,7 @@
    "confidence": "high"
   },
   "rationale": "en-US is \"%2$S bit keys\"; \"bita\" is the Indonesian word for byte, misstating the cipher strength by a factor of eight.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6bdf3fca",
@@ -6024,6 +6288,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of \"lemah\" in a user-facing security warning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "12896a3e",
@@ -6047,6 +6312,7 @@
    "confidence": "high"
   },
   "rationale": "Ungrammatical duplication of \"akan\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5d4008fd",
@@ -6070,6 +6336,7 @@
    "confidence": "high"
   },
   "rationale": "Every other string in the file uses \"Profil\" (e.g. profileMissingTitle = Profil Hilang).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "57ddb725",
@@ -6093,6 +6360,7 @@
    "confidence": "high"
   },
   "rationale": "The term reference expands immediately after \"Dictionary\" with no separator, producing the run-together string \"DictionaryGlean\"; the parallel string about-glean-about-data-explanation renders it as \"{ -glean-brand-name } Kamus\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0c04d6af",
@@ -6116,6 +6384,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says \"Do not translate strings between <code> </code> tags\"; <code>metrics</code> is the literal ping name. The sibling <code>events</code> was correctly left untranslated.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cde2126a",
@@ -6139,6 +6408,7 @@
    "confidence": "high"
   },
   "rationale": "The error is about overriding profiler *options*, not overwriting a profile; as translated it describes a different, destructive-sounding action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1f909ad2",
@@ -6162,6 +6432,7 @@
    "confidence": "high"
   },
   "rationale": "WebCodecs is the spec/API name and is kept correct in the accompanying description string in the same file.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ecd9e845",
@@ -6185,6 +6456,7 @@
    "confidence": "high"
   },
   "rationale": "\"Singgahan\" occurs exactly once in the whole locale tree, while \"Tembolok\" is the established term (used in the very next line, about-networking-dns-clear-cache-button, and throughout aboutSupport/url-classifier).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ccf93809",
@@ -6208,6 +6480,7 @@
    "confidence": "high"
   },
   "rationale": "\"Awalan\" means prefix. The locale itself uses \"Akhiran\" for suffix (about-networking-dns-suffix = Akhiran DNS).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "57baee3a",
@@ -6231,6 +6504,7 @@
    "confidence": "high"
   },
   "rationale": "\"Remote\" in this process list means out-of-process/remote, not internet-connected; the same file and aboutSupport render \"Remote\" as \"Jarak Jauh\" (processes-title = Proses Jarak Jauh).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b85d23e3",
@@ -6254,6 +6528,7 @@
    "confidence": "high"
   },
   "rationale": "None of the sibling labels in this group (Teks, Tautan yang dikunjungi, …) carry a colon, and the en-US source has none.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cf4d6f1b",
@@ -6277,6 +6552,7 @@
    "confidence": "high"
   },
   "rationale": "In typography controls a \"line\" is a text line; the same file uses \"Spasi baris\" for line spacing, so \"Tinggi Garis\" is both wrong and inconsistent. Same issue in about-reader-toolbar-lineheightplus.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f1e8174a",
@@ -6300,6 +6576,7 @@
    "confidence": "high"
   },
   "rationale": "Installed and enabled are distinct states in this diagnostic row; the locale uses \"Diaktifkan/Aktif\" for enabled elsewhere in the same file (support-addons-enabled = Diaktifkan).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "149fd284",
@@ -6323,6 +6600,7 @@
    "confidence": "high"
   },
   "rationale": "The heading pairs two process nouns; \"Internasional\" is an adjective and does not name the counterpart of \"Pelokalan\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9f5cc07c",
@@ -6346,6 +6624,7 @@
    "confidence": "medium"
   },
   "rationale": "The column reports the device sample rate; \"Nilai\" is the locale's word for \"Value\" (environment-variables-value, locked-prefs-value), so the column is mislabelled and collides with that term.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dafb6ad1",
@@ -6369,6 +6648,7 @@
    "confidence": "high"
   },
   "rationale": "In the Media output/input device table, \"State\" means the device's operational state, not a geographic state/province. Elsewhere in the same tree \"State\" is rendered \"Status\" (e.g. state-dd-enabled in aboutPlugins.ftl).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8b807a46",
@@ -6392,6 +6672,7 @@
    "confidence": "high"
   },
   "rationale": "The adjacent raw-data-copied string and the copy buttons in the same file all use \"papan klip\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6e5f334f",
@@ -6415,6 +6696,7 @@
    "confidence": "high"
   },
   "rationale": "This is the section listing session data; naming it \"Sistem\" points the user at the wrong section content.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9d944f85",
@@ -6438,6 +6720,7 @@
    "confidence": "high"
   },
   "rationale": "The placeholder expands to \"aktif\"/\"nonaktif\", so the sentence reads \"Telemetry collects X and uploads active\" instead of stating that upload is enabled or disabled.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6210bc76",
@@ -6461,6 +6744,7 @@
    "confidence": "high"
   },
   "rationale": "\"Sample\" here is the biometric scan sample, translated \"Sampel\" in every sibling string in the same section; \"Contoh\" reads as \"an example of an error\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f85e2e06",
@@ -6484,6 +6768,7 @@
    "confidence": "high"
   },
   "rationale": "The file's developer comment states PeerConnection is a proper noun that should not normally be translated, and the matching show-message (…-show-msg) keeps \"PeerConnections\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "df541457",
@@ -6507,6 +6792,7 @@
    "confidence": "medium"
   },
   "rationale": "The English head noun is \"Internals\" (the internals of WebRTC); the translation turns it into the adjective phrase \"internal WebRTC\", naming the wrong thing. A correct rendering is \"Internal WebRTC\" → \"Internal WebRTC\": use \"Internal WebRTC\" replaced by \"Internal WebRTC\" (e.g. \"Internal WebRTC\" → \"Internal WebRTC\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9eb0f390",
@@ -6530,6 +6816,7 @@
    "confidence": "high"
   },
   "rationale": "The report reason is about an add-on misrepresenting itself; \"Berpura-pura menjadi sesuatu\" (pretends to be something) loses the \"it's not\" clause, leaving the choice meaningless.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8ac93450",
@@ -6553,6 +6840,7 @@
    "confidence": "high"
   },
   "rationale": "\"dalama\" is not a word; the intended preposition is \"dalam\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "05adcbfb",
@@ -6576,6 +6864,7 @@
    "confidence": "medium"
   },
   "rationale": "The reported behaviour is changing the search engine; \"setelan pencarian\" is the locale's rendering of \"search settings\", used two lines below in abuse-report-settings-suggestions-search.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2ec23b14",
@@ -6599,6 +6888,7 @@
    "confidence": "high"
   },
   "rationale": "This is an action control that triggers an update; the translated noun phrase names an \"update of the trigger\" instead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a882508f",
@@ -6622,6 +6912,7 @@
    "confidence": "high"
   },
   "rationale": "The section comment states these feature names must be treated as a brand and cannot be transliterated or translated; every other entry in the block is left in English.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "074e0102",
@@ -6645,6 +6936,7 @@
    "confidence": "high"
   },
   "rationale": "All the sibling contentanalysis-slow-agent-dialog-body-* strings spell it \"memerlukan\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9e6214c3",
@@ -6668,6 +6960,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: \"If you go offline now, 1 download will be canceled. Are you sure you want to go offline?\" The string is a verbatim copy of download-ui-confirm-quit-cancel-downloads, and the paired button is \"Tetap Daring\" (Stay Online).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "56af4c0c",
@@ -6691,6 +6984,7 @@
    "confidence": "high"
   },
   "rationale": "The description string immediately below spells it \"kompatibilitas\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3637c49c",
@@ -6714,6 +7008,7 @@
    "confidence": "high"
   },
   "rationale": "en-US points to \"bug 1584464\"; the localized number resolves to a different (unrelated) bug for anyone following the reference.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5a28d0eb",
@@ -6737,6 +7032,7 @@
    "confidence": "high"
   },
   "rationale": "The correct form \"menonaktifkan\" is used elsewhere in the same file.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "507507b4",
@@ -6760,6 +7056,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: \"Lists on { -firefox-home-brand-name }\" names the widget; experimental-features-newtab-widget-lists-and-timer in the same file correctly uses the noun \"Daftar\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "83bcdc9a",
@@ -6783,6 +7080,7 @@
    "confidence": "high"
   },
   "rationale": "The parallel strings autofill-use-payment-method-os-prompt-windows/-other in the same file correctly spell \"menggunakan\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "de6940db",
@@ -6806,6 +7104,7 @@
    "confidence": "high"
   },
   "rationale": "The comment above the string says 'Do not translate \"bounce tracker\"'. The sibling string btp-warning-tracker-purged correctly keeps \"bounce tracker\" in English, so the two console messages are also inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4366fdab",
@@ -6829,6 +7128,7 @@
    "confidence": "high"
   },
   "rationale": "Every other occurrence in the file spells it \"Ekstensi\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2b7fbe2b",
@@ -6852,6 +7152,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US: \"will make you more difficult to identify\". As written, the Indonesian reads \"will make it harder for you to identify\", inverting who is identified and undercutting the privacy rationale.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0ddc2587",
@@ -6875,6 +7176,7 @@
    "confidence": "high"
   },
   "rationale": "en-US distinguishes text-action-copy-link-to-highlight from text-action-copy-clean-link-to-highlight; the locale renders both the same, so the tracker-stripping variant is indistinguishable in the menu. The file already uses \"Tautan Bersih\" for text-action-copy-clean-link.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "63b71903",
@@ -6898,6 +7200,7 @@
    "confidence": "high"
   },
   "rationale": "The next string in the same file correctly uses \"didukung\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "44ed3122",
@@ -6921,6 +7224,7 @@
    "confidence": "high"
   },
   "rationale": "The language name is \"Afrikaans\" in Indonesian as in English; \"Afrikaan\" is not a language name.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "60996bb3",
@@ -6944,6 +7248,7 @@
    "confidence": "high"
   },
   "rationale": "en-US `language-name-ce = Chechen`; the localized form is a misspelling of the place name Chechnya.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9e2402c5",
@@ -6967,6 +7272,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US `language-name-lo = Lao`; Indonesian uses \"bahasa Laos\" (cf. region-name-la = Laos). \"Laothia\" names nothing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a55cea82",
@@ -6990,6 +7296,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US `language-name-sco = Scots`. \"Skotlandia\" is the Indonesian name of the country, not of the Germanic language spoken there.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "abcf4646",
@@ -7013,6 +7320,7 @@
    "confidence": "high"
   },
   "rationale": "en-US `language-name-sg = Sango`, the national language of the Central African Republic; \"Sangro\" names an Italian river.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "181f1f58",
@@ -7036,6 +7344,7 @@
    "confidence": "high"
   },
   "rationale": "en-US `language-name-su = Sundanese`. In Indonesian the language is \"Sunda\"; \"Sudan\" is the African country (and is correctly used at region-name-sd).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b56abbaa",
@@ -7059,6 +7368,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US is `Chinese` (a language). \"Tiongkok\" is the country and is already used for region-name-cn; the language name in Indonesian is \"Tionghoa\" (or \"Mandarin\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c870b7f5",
@@ -7082,6 +7392,7 @@
    "confidence": "high"
   },
   "rationale": "en-US has `region-name-mf = Saint Martin` and `region-name-sx = Sint Maarten`; the locale gives both entries the same name, so the Dutch territory is mislabelled.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "47f163f8",
@@ -7105,6 +7416,7 @@
    "confidence": "high"
   },
   "rationale": "Every other island group in this file uses \"Kepulauan\" (e.g. region-name-cc, region-name-pn); this entry has transposed letters.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2ebf858f",
@@ -7128,6 +7440,7 @@
    "confidence": "high"
   },
   "rationale": "findbar-entire-word-status in the same file reads \"(Hanya seluruh kata)\"; the label and the status text of the same toggle contradict each other, and the label version is the wrong one.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "73421456",
@@ -7151,6 +7464,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US: \"The certificate for { $hostname } expired on …\". The explicit future marker \"akan\" contradicts the error condition being reported.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6c1a2447",
@@ -7174,6 +7488,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: \"The certificate for { $hostname } will not be valid until { $not-before-local-time }.\" The localized text states the certificate stops being valid at that date, the opposite of a not-yet-valid certificate.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bf237ee9",
@@ -7197,6 +7512,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US: \"certificates, which are issued by certificate authorities\". The rest of the file uses \"otoritas sertifikat\"; \"pewenang otoritas\" says \"authority authority\" and drops \"certificate\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f2f93ced",
@@ -7220,6 +7536,7 @@
    "confidence": "high"
   },
   "rationale": "The Indonesian adjective is \"berisiko\"; this appears on a prominent security-warning button.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "28c9ae32",
@@ -7243,6 +7560,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US: \"You can notify the website’s administrator about the problem.\" The neighbouring strings (certerror-expired-cert-what-can-you-do-about-it-contact-website) correctly use \"administrator situs web\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2357c2bf",
@@ -7266,6 +7584,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: \"DNS over HTTPS has been disabled on your network.\" DoH is a protocol name; naming plain HTTP misidentifies the feature.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "03c0bfc9",
@@ -7289,6 +7608,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US: \"Invalid or unsupported URL in CRL distribution point name.\" KRL (key revocation list) is a separate concept used by other sec-error-krl-* strings in this file.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "806b4fde",
@@ -7312,6 +7632,7 @@
    "confidence": "high"
   },
   "rationale": "All other entries in the file spell the standard \"PKCS #11\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8c73cd98",
@@ -7335,6 +7656,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: \"The server rejected the handshake…\"; \"menilah\" is not an Indonesian word.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8868089f",
@@ -7358,6 +7680,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: \"Unspecified failure while processing SSL Server Key Exchange handshake.\" The string duplicates the following entry (ssl-error-client-key-exchange-failure), making the two errors indistinguishable.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4c8222fa",
@@ -7381,6 +7704,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: \"SSL received a weak ephemeral Diffie-Hellman key in Server Key Exchange handshake message.\" Without \"lemah\" the string reads as a normal event rather than a failure.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "301a53db",
@@ -7404,6 +7728,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment states \"Type is a verb (you can type your name as signature)\"; the tab panel itself uses \"Ketik tanda tangan Anda\". \"Tipe\" labels the tab as \"category\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8a69092a",
@@ -7427,6 +7752,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: \"Whole Words\". The option restricts matches to entire words, not to the entire text.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8343bb74",
@@ -7450,6 +7776,7 @@
    "confidence": "high"
   },
   "rationale": "The sibling strings pdfjs-spread-none-button and pdfjs-spread-even-button both use \"lembar halaman\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5c60b290",
@@ -7473,6 +7800,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US: \"Custom…\" (also custom-prompt-title in the same file). \"Kesukaan\" means \"liking/favourite\", not user-defined; printUI.ftl uses \"Ubahsuai\"/\"Khusus\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1dc4accd",
@@ -7496,6 +7824,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US: \"Custom…\". \"Kesukaan\" means \"liking/favourite\"; printUI.ftl renders the same concept as \"Ubahsuai\"/\"Khusus\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1dc4accd",
@@ -7519,6 +7848,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: \"Fewer settings\". This is the collapse counterpart of printui-more-settings (\"Pengaturan lainnya\"); \"Beberapa\" means \"some\" and loses the comparative that makes the toggle meaningful.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a82bdc38",

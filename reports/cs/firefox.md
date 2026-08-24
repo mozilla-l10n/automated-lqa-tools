@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
+| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 8 of 18,169 |
+| **Strings reviewed this run** | 11 of 18,180 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,12 @@ Also for cs: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `appmenuitem-new-ai-window` — `browser/browser/aiWindow.ftl` — `appmenuitem-new-ai-window` (`.value`) calls `-smart-window-brand-name` with ['capitalization'], but that term selects on ['case', 'plural-form']
+    - Current: `Nové { -smart-window-brand-name }`
+    - Source: `label: New { -smart-window-brand-name } value: New { -smart-window-brand-name }`
+    - The term falls back to its catch-all variant, so the intended form is never selected.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,16 +48,13 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,169 |
-| Missing strings | 11 |
+| Strings | 18,180 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
+| Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 7 |
-| Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
-| printf placeholder mismatches | 0 |
-| Plural / select selector mismatches | 6 |
 | Term parameter mismatches | 3 |
 | Plural variants (dead or missing forms) | 77 |
 | Text quoting a UI label that no longer matches | 6 |
@@ -65,14 +65,7 @@ _Nothing retired._
 
 ### Completeness
 
-**11 strings** are not translated yet, concentrated in:
-
-- `browser/browser/newtab/newtab.ftl` — 7
-- `browser/browser/sharePanel.ftl` — 2
-- `browser/browser/preferences/formAutofill.ftl` — 1
-- `dom/chrome/accessibility/AccessFu.properties` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -95,11 +88,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (258)
+## 3. Open findings (259)
+
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 54 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 55 |
 | 2 | Wrong content (says something other than the English) | 120 |
 | 3 | Degraded language (grammar, spelling, terminology) | 56 |
 | 4 | Cosmetic (typography, spacing) | 23 |
@@ -111,6 +105,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `We’ll erase every search and sign-in when you close all your Private Windows. { -brand-short-name }’s built-in protections are on here too, like blocking trackers.`
     - Suggest: `jako třeba blokování sledovacích prvků, jsou zapnuté`
     - en-US: “…built-in protections are on here too, like blocking trackers.” The sibling string about-private-browsing-nova-info-subheader renders it correctly as “blokování sledovacích prvků”.
+- `appmenuitem-new-ai-window` — `browser/browser/aiWindow.ftl` — `appmenuitem-new-ai-window` (`.label`) calls `-smart-window-brand-name` with ['capitalization'], but that term selects on ['case', 'plural-form']
+    - Current: `Nové { -smart-window-brand-name }`
+    - Source: `label: New { -smart-window-brand-name } value: New { -smart-window-brand-name }`
+    - The term falls back to its catch-all variant, so the intended form is never selected.
 - `appmenuitem-new-ai-window` — `browser/browser/aiWindow.ftl` — `appmenuitem-new-ai-window` (`.value`) calls `-smart-window-brand-name` with ['capitalization'], but that term selects on ['case', 'plural-form']
     - Current: `Nové { -smart-window-brand-name }`
     - Source: `label: New { -smart-window-brand-name } value: New { -smart-window-brand-name }`
@@ -161,36 +159,36 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `l`
     - Source: `accesskey: D label: This Isn’t a Deceptive Site…`
     - The label is “Tato stránka není podvodná…”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `browser-data-cookies-checkbox` — `browser/browser/migration.ftl` — `browser-data-cookies-checkbox` (`.label`) switches on ['browser'], which en-US does not pass (it provides nothing)
+- `browser-data-cookies-checkbox` — `browser/browser/migration.ftl` — `browser-data-cookies-checkbox` (`.label`) references ['browser'], which en-US does not pass
     - Current: `{$browser ->} [firefox] Cookies [chrome] Soubory cookie [edge] Soubory cookie [safari] Cookies [other] Cookies`
     - Source: `label: Cookies`
     - Suggest: `Cookies`
-    - Selecting on a variable the code does not pass makes every variant unreachable and the number render blank.
-- `browser-data-cookies-label` — `browser/browser/migration.ftl` — `browser-data-cookies-label` (`.value`) switches on ['browser'], which en-US does not pass (it provides nothing)
+    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
+- `browser-data-cookies-label` — `browser/browser/migration.ftl` — `browser-data-cookies-label` (`.value`) references ['browser'], which en-US does not pass
     - Current: `{$browser ->} [firefox] Cookies [chrome] Soubory cookie [edge] Soubory cookie [safari] Cookies [other] Cookies`
     - Source: `value: Cookies`
     - Suggest: `Cookies`
-    - Selecting on a variable the code does not pass makes every variant unreachable and the number render blank.
-- `browser-data-formdata-checkbox` — `browser/browser/migration.ftl` — `browser-data-formdata-checkbox` (`.label`) switches on ['browser'], which en-US does not pass (it provides nothing)
+    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
+- `browser-data-formdata-checkbox` — `browser/browser/migration.ftl` — `browser-data-formdata-checkbox` (`.label`) references ['browser'], which en-US does not pass
     - Current: `{$browser ->} [firefox] Uložená historie formulářů [chrome] Uložená historie formulářů [edge] Vyplňování formulářů [safari] Vyplňování formulářů [other] Uložená historie formulářů`
     - Source: `label: Saved Form History`
     - Suggest: `Saved Form History`
-    - Selecting on a variable the code does not pass makes every variant unreachable and the number render blank.
-- `browser-data-formdata-label` — `browser/browser/migration.ftl` — `browser-data-formdata-label` (`.value`) switches on ['browser'], which en-US does not pass (it provides nothing)
+    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
+- `browser-data-formdata-label` — `browser/browser/migration.ftl` — `browser-data-formdata-label` (`.value`) references ['browser'], which en-US does not pass
     - Current: `{$browser ->} [firefox] Uložená historie formulářů [chrome] Uložená historie formulářů [edge] Vyplňování formulářů [safari] Vyplňování formulářů [other] Uložená historie formulářů`
     - Source: `value: Saved Form History`
     - Suggest: `Saved Form History`
-    - Selecting on a variable the code does not pass makes every variant unreachable and the number render blank.
-- `browser-data-passwords-checkbox` — `browser/browser/migration.ftl` — `browser-data-passwords-checkbox` (`.label`) switches on ['browser'], which en-US does not pass (it provides nothing)
+    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
+- `browser-data-passwords-checkbox` — `browser/browser/migration.ftl` — `browser-data-passwords-checkbox` (`.label`) references ['browser'], which en-US does not pass
     - Current: `{$browser ->} [firefox] Uložená uživatelská jména a hesla [chrome] Uložená hesla [edge] Uložená hesla [safari] Hesla [other] Uložená uživatelská jména a hesla`
     - Source: `label: Saved Logins and Passwords`
     - Suggest: `Saved Logins and Passwords`
-    - Selecting on a variable the code does not pass makes every variant unreachable and the number render blank.
-- `browser-data-passwords-label` — `browser/browser/migration.ftl` — `browser-data-passwords-label` (`.value`) switches on ['browser'], which en-US does not pass (it provides nothing)
+    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
+- `browser-data-passwords-label` — `browser/browser/migration.ftl` — `browser-data-passwords-label` (`.value`) references ['browser'], which en-US does not pass
     - Current: `{$browser ->} [firefox] Uložená uživatelská jména a hesla [chrome] Uložená hesla [edge] Uložená hesla [safari] Hesla [other] Uložená uživatelská jména a hesla`
     - Source: `value: Saved Logins and Passwords`
     - Suggest: `Saved Logins and Passwords`
-    - Selecting on a variable the code does not pass makes every variant unreachable and the number render blank.
+    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
 - `migration-wizard-progress-extensions-addons-link` — `browser/browser/migrationWizard.ftl` — "Browse extensions" rendered as "Prohledávat" (search through) instead of "Procházet" (browse).
     - Current: `Prohledávat rozšíření pro`
     - Source: `Browse extensions for { -brand-short-name }`
@@ -395,12 +393,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Change device pixel ratio of the viewport`
     - Suggest: `Změní poměr pixelů zařízení pro výřez`
     - en-US is "Change device pixel ratio of the viewport"; the Czech claims the control also changes the viewport itself, which it does not.
-- `storage-table-type-cache-hint` — `devtools/client/storage.ftl` — "delete the cache storage entries" translated as "edit"
-    - Current: `Pro zobrazení a úpravu položek úložiště mezipaměti vyberte úložiště.`
-    - Source: `View and delete the cache storage entries by selecting a storage. <a data-l10n-name="learn-more-link">Learn more</a>`
-    - Suggest: `Pro zobrazení a smazání položek úložiště mezipaměti vyberte úložiště.`
-    - en-US is "View and delete the cache storage entries…"; cache entries can only be deleted, not edited.
-- _…and 51 more; see `state/` for the full list._
+- _…and 52 more; see `state/` for the full list._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 

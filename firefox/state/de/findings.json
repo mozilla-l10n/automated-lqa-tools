@@ -14,6 +14,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comments for the parallel referral strings state that \"Share\" means recommending/referring the browser; the de tree consistently uses \"empfehlen\", so \"Teilen\" (file sharing sense) is inconsistent and misleading.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b7d232a4",
@@ -37,6 +38,7 @@
    "confidence": "medium"
   },
   "rationale": "German does not use a comma before \"oder\" joining the last item of a simple enumeration; the comma is a direct carry-over of the English serial comma.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b7d232a4",
@@ -54,10 +56,11 @@
   "file": "browser/browser/aboutLogins.ftl",
   "first_seen": "2026-08-20",
   "impact": 1,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "de",
   "origin": {},
   "rationale": "Whitespace inside a closing tag makes it render as literal text.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "49bc5a1d",
@@ -83,6 +86,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "d3087c09",
@@ -108,6 +112,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "a6396062",
@@ -133,6 +138,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "8356e891",
@@ -150,10 +156,11 @@
   "file": "browser/browser/backupSettings.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "de",
   "origin": {},
   "rationale": "In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1d1ac550",
@@ -171,10 +178,11 @@
   "file": "browser/browser/backupSettings.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "de",
   "origin": {},
   "rationale": "In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1d1ac550",
@@ -200,6 +208,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "5360e68f",
@@ -225,6 +234,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "b1f0b9f4",
@@ -250,6 +260,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "3c87fefc",
@@ -275,6 +286,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "25f1b4d6",
@@ -300,6 +312,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "82d44e47",
@@ -325,6 +338,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "a73ec20b",
@@ -342,10 +356,11 @@
   "file": "browser/browser/browserContext.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "de",
   "origin": {},
   "rationale": "The label is “Link an Gerät senden”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bf29933a",
@@ -363,10 +378,11 @@
   "file": "browser/browser/browserContext.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "de",
   "origin": {},
   "rationale": "The label is “Seite an Gerät senden”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "80218afa",
@@ -392,6 +408,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "4da8cf2c",
@@ -417,6 +434,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "80f6e736",
@@ -434,10 +452,11 @@
   "file": "browser/browser/defaultBrowserNotification.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "de",
   "origin": {},
   "rationale": "In the source this string quotes “Web browser”, which is exactly the value of `desktop-entry-generic-name` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "47f66f8b",
@@ -463,6 +482,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "05912808",
@@ -488,6 +508,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "a274ae05",
@@ -513,6 +534,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "c093e64d",
@@ -538,6 +560,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e3a2945a",
@@ -563,6 +586,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "cbe77e92",
@@ -588,6 +612,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "f589545f",
@@ -605,10 +630,11 @@
   "file": "browser/browser/migrationWizard.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "de",
   "origin": {},
   "rationale": "In the source this string quotes “Download file”, which is exactly the value of `downloadFile.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fa53790f",
@@ -634,6 +660,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "39ef4c1c",
@@ -659,6 +686,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "5b9a757b",
@@ -684,6 +712,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "c80bcda0",
@@ -709,6 +738,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "d6618714",
@@ -734,6 +764,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "006458ca",
@@ -759,6 +790,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "1746861e",
@@ -784,6 +816,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "f634ed70",
@@ -809,6 +842,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "dadd61de",
@@ -834,6 +868,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "509b1461",
@@ -859,12 +894,37 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "8363e456",
   "string_id": "newtab-sports-widget-suspended",
   "suggest": "\"Unterbrochen\"",
   "summary": "DE: \"Gesperrt\" (= locked/banned) → \"Unterbrochen\" (EN match status \"Suspended\"; the aria-label at line 1498 already uses \"unterbrochen\").",
+  "suppressed_by": ""
+ },
+ {
+  "category": "A",
+  "check": "llm",
+  "current": "[one] Sie können bis zu { $limit } Aktien hinzufügen.",
+  "dismissed_because": "",
+  "fid": "3689aa9ffec6",
+  "file": "browser/browser/newtab/newtab.ftl",
+  "first_seen": "2026-08-24",
+  "impact": 2,
+  "last_seen": "2026-08-24",
+  "locale": "de",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "en-US [one] uses the singular \"stock\"; the German singular variant must agree with $limit = 1.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "e227d08d",
+  "string_id": "newtab-stocks-watchlist-full",
+  "suggest": "[one] Sie können bis zu { $limit } Aktie hinzufügen.",
+  "summary": "The [one] plural variant uses the plural form \"Aktien\" instead of the singular \"Aktie\".",
   "suppressed_by": ""
  },
  {
@@ -884,6 +944,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "7c892bc2",
@@ -909,6 +970,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "bf75be43",
@@ -934,6 +996,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "06717275",
@@ -959,6 +1022,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "6de09fbd",
@@ -984,6 +1048,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "cea8b1e9",
@@ -1007,6 +1072,7 @@
    "confidence": "high"
   },
   "rationale": "\"Tab-Umgebung\" is feminine, so the referring pronoun must be \"sie\", not \"ihn\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "85ab51e5",
@@ -1032,6 +1098,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "3f7ff8ec",
@@ -1057,6 +1124,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "cac09565",
@@ -1082,6 +1150,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "5d74163d",
@@ -1107,6 +1176,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "618f8a55",
@@ -1132,6 +1202,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "be694913",
@@ -1157,6 +1228,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "5e7a69fb",
@@ -1182,6 +1254,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "4f90cb40",
@@ -1207,6 +1280,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "1fe97fee",
@@ -1232,6 +1306,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "b142d99c",
@@ -1257,6 +1332,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "b6b0f079",
@@ -1282,6 +1358,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "2592f680",
@@ -1307,6 +1384,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "1a1eedd5",
@@ -1332,6 +1410,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "4d864c0f",
@@ -1357,6 +1436,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "bd8d6ff3",
@@ -1382,6 +1462,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "25ee57f0",
@@ -1407,6 +1488,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "b60ce484",
@@ -1432,6 +1514,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "e9c40061",
@@ -1457,6 +1540,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "e9c40061",
@@ -1482,6 +1566,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "21c91c59",
@@ -1499,10 +1584,11 @@
   "file": "devtools/client/toolbox.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "de",
   "origin": {},
   "rationale": "In the source this string quotes “Local Mode”, which is exactly the value of `options-local-mode-label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fc9d2a5f",
@@ -1520,10 +1606,11 @@
   "file": "devtools/client/webconsole.properties",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "de",
   "origin": {},
   "rationale": "In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9e184b13",
@@ -1549,6 +1636,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "41758893",
@@ -1566,16 +1654,41 @@
   "file": "devtools/shared/webconsole.properties",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "de",
   "origin": {},
   "rationale": "In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9e184b13",
   "string_id": "preventedConsoleClear",
   "suggest": "Log nicht leeren",
   "summary": "`preventedConsoleClear` quotes “Logs nicht leeren” but the string it names, `webconsole.console.settings.menu.item.enablePersistentLogs.label`, reads “Log nicht leeren”",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "teilweise ausgewählt",
+  "dismissed_because": "",
+  "fid": "854000e3ab70",
+  "file": "dom/chrome/accessibility/AccessFu.properties",
+  "first_seen": "2026-08-24",
+  "impact": 2,
+  "last_seen": "2026-08-24",
+  "locale": "de",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The accessibility state refers to a checkbox being checked, not selected; \"ausgewählt\" is the German term for \"selected\", a distinct accessibility state.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "d661d6e0",
+  "string_id": "statePartiallyChecked",
+  "suggest": "teilweise aktiviert",
+  "summary": "\"partially checked\" is translated as \"teilweise ausgewählt\" (partially selected) instead of \"teilweise aktiviert/angekreuzt\".",
   "suppressed_by": ""
  },
  {
@@ -1595,6 +1708,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cfe5ead7",
@@ -1620,6 +1734,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "ccf538ff",
@@ -1645,6 +1760,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "e4904342",
@@ -1670,6 +1786,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "e37e287e",
@@ -1695,6 +1812,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "a700ab61",
@@ -1720,6 +1838,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "5e9007ba",
@@ -1745,6 +1864,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "66389357",
@@ -1770,6 +1890,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "51da0c6b",
@@ -1795,6 +1916,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "97c10a9e",
@@ -1820,6 +1942,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "c11b4ba1",
@@ -1845,6 +1968,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "f6ee1d45",
@@ -1870,6 +1994,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "708b2738",
@@ -1895,6 +2020,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "5f5f1c7f",
@@ -1920,6 +2046,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "76676063",
@@ -1945,6 +2072,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "bbe44b82",
@@ -1970,6 +2098,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "55ed2f57",
@@ -1995,6 +2124,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "2cedd9ab",
@@ -2020,6 +2150,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "25f9b917",
@@ -2045,6 +2176,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "25f9b917",
@@ -2070,6 +2202,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-27",
   "status": "fixed",
   "string_hash": "d7092b61",

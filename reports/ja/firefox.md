@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
+| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 8 of 18,135 |
+| **Strings reviewed this run** | 0 of 18,135 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -50,11 +50,8 @@ _Nothing retired._
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
+| Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
-| Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
-| printf placeholder mismatches | 0 |
-| Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 21 |
 | Text quoting a UI label that no longer matches | 1 |
@@ -72,13 +69,13 @@ _Nothing retired._
 - `browser/browser/preferences/preferences.ftl` — 5
 - `browser/browser/aboutPrivateBrowsing.ftl` — 3
 - `browser/browser/sharePanel.ftl` — 2
-- `browser/browser/profiles.ftl` — 1
-- `browser/browser/sidebar.ftl` — 1
-- `browser/browser/preferences/formAutofill.ftl` — 1
-- `dom/chrome/accessibility/AccessFu.properties` — 1
 - `toolkit/toolkit/about/aboutPDF.ftl` — 1
 - `toolkit/toolkit/about/aboutProcesses.ftl` — 1
 - `toolkit/toolkit/global/processTypes.ftl` — 1
+- `dom/chrome/accessibility/AccessFu.properties` — 1
+- `browser/browser/profiles.ftl` — 1
+- `browser/browser/sidebar.ftl` — 1
+- `browser/browser/preferences/formAutofill.ftl` — 1
 
 **Files present but identical to en-US:**
 
@@ -109,6 +106,7 @@ _Nothing reported._
 ---
 
 ## 3. Open findings (178)
+
 
 | Impact | Meaning | Count |
 |---|---|---|

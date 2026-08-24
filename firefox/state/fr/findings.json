@@ -16,6 +16,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "65702d34",
@@ -39,6 +40,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this button links to the Referrals page, the same surface as appmenu-referrals2, menu-referrals2 and referrals-link2, which all translate \"Share\" as \"Recommander\"; the inconsistent term is wrong here.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e42ec63e",
@@ -56,10 +58,11 @@
   "file": "browser/browser/browser.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "fr",
   "origin": {},
   "rationale": "The label is “Marque-pages”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3dcd7908",
@@ -85,6 +88,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "d1fa62d9",
@@ -110,6 +114,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "9021e9af",
@@ -135,6 +140,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "abd55a36",
@@ -160,6 +166,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "235cfdb9",
@@ -177,10 +184,11 @@
   "file": "browser/browser/enterprise/felt.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "fr",
   "origin": {},
   "rationale": "The tree uses ’ 5638 times against 10 straight.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b69c14d0",
@@ -198,10 +206,11 @@
   "file": "browser/browser/featureCallout.ftl",
   "first_seen": "2026-08-20",
   "impact": 1,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "fr",
   "origin": {},
   "rationale": "Tags must open and close in the same order as en-US.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "31a48b39",
@@ -227,6 +236,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "31a48b39",
@@ -252,6 +262,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "9d7d1524",
@@ -277,6 +288,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "fc4008cf",
@@ -302,6 +314,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "b5084062",
@@ -327,6 +340,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "c07934f7",
@@ -350,8 +364,9 @@
    "confidence": "medium"
   },
   "rationale": "en-US is \"You can add up to { $limit } stocks.\"; also the pronouns should be feminine to agree with \"actions\".",
-  "resolved_on": "",
-  "status": "open",
+  "reads_as_deliberate": false,
+  "resolved_on": "2026-08-24",
+  "status": "fixed",
   "string_hash": "b40d739e",
   "string_id": "newtab-stocks-watchlist-full",
   "suggest": "Vous pouvez ajouter jusqu’à { $limit } actions. Supprimez-en une pour en ajouter une autre.",
@@ -373,8 +388,9 @@
    "confidence": "high"
   },
   "rationale": "en-US says \"You can add up to { $limit } stock.\"; the French inserts a spurious \"d’\" and uses a plural noun with a singular count, and the pronoun should agree with the feminine \"action\".",
-  "resolved_on": "",
-  "status": "open",
+  "reads_as_deliberate": false,
+  "resolved_on": "2026-08-24",
+  "status": "fixed",
   "string_hash": "b40d739e",
   "string_id": "newtab-stocks-watchlist-full",
   "suggest": "Vous pouvez ajouter jusqu’à { $limit } action. Supprimez-en une pour en ajouter une autre.",
@@ -398,6 +414,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "31f523a0",
@@ -423,6 +440,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "30b89a1b",
@@ -448,6 +466,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "b7042329",
@@ -473,6 +492,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "012c2ab9",
@@ -498,6 +518,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "6f1d03f5",
@@ -523,6 +544,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "8147997d",
@@ -548,6 +570,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "8b52b25b",
@@ -573,6 +596,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bc03c67e",
@@ -598,6 +622,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c8d1069a",
@@ -623,6 +648,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0ebde28e",
@@ -648,6 +674,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "831fb3f8",
@@ -673,6 +700,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "f928f483",
@@ -698,6 +726,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "b66750ec",
@@ -723,6 +752,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "7240e283",
@@ -748,6 +778,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "b1e819fb",
@@ -773,6 +804,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "e2806def",
@@ -798,6 +830,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "3380232d",
@@ -823,6 +856,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "6bd95d41",
@@ -848,6 +882,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5280a801",
@@ -873,6 +908,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "04681453",
@@ -898,6 +934,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "74c33cb3",
@@ -923,6 +960,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "65bb9381",
@@ -948,6 +986,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5bffb1ab",
@@ -973,6 +1012,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "e4397cd8",
@@ -998,6 +1038,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "a1522c91",
@@ -1023,6 +1064,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "b771d75c",
@@ -1048,6 +1090,7 @@
    "severity": "S1"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "83591ec1",
@@ -1065,10 +1108,11 @@
   "file": "dom/chrome/dom/dom.properties",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "fr",
   "origin": {},
   "rationale": "The locale's quote convention is `guillemet` (1132 occurrences).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8360ea4e",
@@ -1086,10 +1130,11 @@
   "file": "dom/chrome/dom/dom.properties",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "fr",
   "origin": {},
   "rationale": "The locale's quote convention is `guillemet` (1132 occurrences).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b70cb64b",
@@ -1115,6 +1160,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "ddf4a85b",
@@ -1140,6 +1186,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "53fbdf30",
@@ -1165,6 +1212,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "ad1438ab",
@@ -1190,6 +1238,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "b1363f63",
@@ -1215,6 +1264,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7ffb1324",
@@ -1240,6 +1290,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "89276687",
@@ -1257,16 +1308,17 @@
   "file": "toolkit/toolkit/about/aboutNetworking.ftl",
   "first_seen": "2026-08-20",
   "impact": 1,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "fr",
   "origin": {},
-  "rationale": "Selecting on a variable the code does not pass makes every variant unreachable and the number render blank.",
+  "rationale": "A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f394a5c6",
   "string_id": "about-networking-ssl-tokens-summary-compression",
   "suggest": "{ $decompressedLength } → { $compressedLength } B ({ $saved }% saved)",
-  "summary": "`about-networking-ssl-tokens-summary-compression` switches on ['total'], which en-US does not pass (it provides ['compressedLength', 'decompressedLength', 'saved'])",
+  "summary": "`about-networking-ssl-tokens-summary-compression` references ['total'], which en-US does not pass",
   "suppressed_by": ""
  },
  {
@@ -1286,6 +1338,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "f394a5c6",
@@ -1311,6 +1364,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5302fc3d",
@@ -1336,6 +1390,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "e206f43d",
@@ -1361,6 +1416,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "5d3db2bd",
@@ -1386,6 +1442,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "9627e205",
@@ -1411,6 +1468,7 @@
    "severity": "S5"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "bc66a602",
@@ -1436,6 +1494,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "needs-recheck",
   "string_hash": "fe1f9e77",
@@ -1461,6 +1520,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "b8e2d9e8",
@@ -1486,6 +1546,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "b298ba76",
@@ -1511,6 +1572,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "ca15bfa2",
@@ -1536,6 +1598,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "0e806850",
@@ -1561,6 +1624,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "d1254efb",
@@ -1586,6 +1650,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "5a3a6e97",
@@ -1603,10 +1668,11 @@
   "file": "toolkit/toolkit/enterprise/felt.ftl",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "fr",
   "origin": {},
   "rationale": "The tree uses ’ 5638 times against 10 straight.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b69c14d0",
@@ -1632,6 +1698,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "65854e9b",
@@ -1657,6 +1724,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "02ec7d3d",
@@ -1682,6 +1750,7 @@
    "severity": "S2"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "eb773a82",
@@ -1707,6 +1776,7 @@
    "severity": "S3"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "6948abb2",
@@ -1732,6 +1802,7 @@
    "severity": "S4"
   },
   "rationale": "",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-07-26",
   "status": "fixed",
   "string_hash": "4b58c164",

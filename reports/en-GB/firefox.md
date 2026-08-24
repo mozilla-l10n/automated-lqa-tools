@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
+| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 19 of 18,180 |
+| **Strings reviewed this run** | 1 of 18,180 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,22 +18,17 @@ Also for en-GB: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
+
+_No new findings._
+
+### ✅ Fixed since the last run (1)
 
 - `helpus-referrals2` — `browser/browser/aboutDialog.ftl` — Mid-sentence link text capitalised, unlike the en-US source and the surrounding link labels.
     - Current: `<label data-l10n-name="helpus-shareFirefoxLink">Share { -brand-product-name }</label>`
     - Source: `Want to help? <label data-l10n-name="helpus-donateLink">Make a donation</label>, <label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>, or <label data-l10n-name="helpus-getInvolvedLink">g…`
     - Suggest: `<label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>`
     - The source reads "share { -brand-product-name }" in lower case as part of the sentence "Make a donation, share Firefox, or get involved!"; the capital S breaks sentence flow and is inconsistent with the neighbouring "get involved!" link. No en-GB rule requires the change.
-- `statePartiallyChecked` — `dom/chrome/accessibility/AccessFu.properties` — Accessibility state name "checked" wrongly changed to "ticked".
-    - Current: `partially ticked`
-    - Source: `partially checked`
-    - Suggest: `partially checked`
-    - "Checked" is the standard ARIA/accessibility state term (aria-checked) reported by screen readers and is identical in en-GB; substituting "ticked" changes established terminology and breaks consistency with other checkbox state strings.
-
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -59,11 +54,8 @@ _Nothing retired._
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
+| Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
-| Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
-| printf placeholder mismatches | 0 |
-| Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 2 |
@@ -97,14 +89,15 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (34)
+## 3. Open findings (33)
+
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 8 |
 | 2 | Wrong content (says something other than the English) | 12 |
 | 3 | Degraded language (grammar, spelling, terminology) | 11 |
-| 4 | Cosmetic (typography, spacing) | 3 |
+| 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -272,11 +265,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### E. Typography, punctuation & spacing
 
-- `helpus-referrals2` — `browser/browser/aboutDialog.ftl` — Mid-sentence link text capitalised, unlike the en-US source and the surrounding link labels.
-    - Current: `<label data-l10n-name="helpus-shareFirefoxLink">Share { -brand-product-name }</label>`
-    - Source: `Want to help? <label data-l10n-name="helpus-donateLink">Make a donation</label>, <label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>, or <label data-l10n-name="helpus-getInvolvedLink">g…`
-    - Suggest: `<label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>`
-    - The source reads "share { -brand-product-name }" in lower case as part of the sentence "Make a donation, share Firefox, or get involved!"; the capital S breaks sentence flow and is inconsistent with the neighbouring "get involved!" link. No en-GB rule requires the change.
 - `migration-wizard-import-browser-no-browsers` — `browser/browser/migrationWizard.ftl` — "programs" over-corrected to "programmes", which in British English means broadcasts/schedules, not software.
     - Current: `couldn’t find any programmes that contain bookmark, history or password data`
     - Source: `{ -brand-short-name } couldn’t find any programs that contain bookmark, history or password data.`
@@ -308,8 +296,9 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (6)
+### Fixed to date (7)
 
+- `helpus-referrals2` — `browser/browser/aboutDialog.ftl` — fixed 2026-08-24
 - `permissions-exceptions-https-only-desc` — `browser/browser/preferences/permissions.ftl` — fixed 2026-08-21
 - `preferences-data-migration-description` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-21
 - `rights-webservices-term-6` — `toolkit/toolkit/about/aboutRights.ftl` — fixed 2026-08-20

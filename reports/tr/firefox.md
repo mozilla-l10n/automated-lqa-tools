@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
+| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 7 of 18,007 |
+| **Strings reviewed this run** | 80 of 18,064 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,17 +18,38 @@ Also for tr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (5)
 
-- `ip-protection-vpn-upgrade-link` — `browser/browser/ipProtection.ftl` — "up to five devices" is rendered as "beş ayrı cihazda", dropping the "up to" limit.
-    - Current: `beş ayrı cihazda`
-    - Source: `description: Choose custom VPN locations and add protection to all your apps on up to five devices, whether you’re at home or on public Wi-Fi. label: Get even more protection outside { -brand-short-name } with { -mozill…`
-    - Suggest: `en fazla beş cihazda`
-    - The en-US says "on up to five devices"; the Turkish states flatly "on five separate devices", losing the maximum-limit meaning.
+- `neterror-search-cta-reload-button` — `toolkit/toolkit/neterror/netError.ftl` — "Reload" is rendered as "Tazele" instead of the established Firefox tr term "Yeniden yükle".
+    - Current: `label: Tazele`
+    - Source: `accesskey: R label: Reload`
+    - Suggest: `label: Yeniden yükle`
+    - In Firefox tr, "Reload" is consistently translated as "Yeniden yükle"; "Tazele" is not the product's terminology and is inconsistent with other reload controls.
+- `taskbar-tabs-email-callout-subtitle-v3` — `browser/browser/featureCallout.ftl` — "protected by { -brand-short-name }" is rendered as "{ -brand-short-name } güvencesiyle korunan" ("protected under the guarantee of"), adding a claim of assurance not in the source.
+    - Current: `{ -brand-short-name } güvencesiyle korunan yalın bir pencerede`
+    - Source: `Launch your email sites like an app in a streamlined window protected by { -brand-short-name }.`
+    - Suggest: `{ -brand-short-name } tarafından korunan yalın bir pencerede`
+    - The en-US only says the window is protected by the browser; "güvencesiyle" adds a guarantee/warranty claim the source never makes.
+- `taskbar-tabs-gaming-callout-subtitle-v3` — `browser/browser/featureCallout.ftl` — Adds a comparative "daha yalın" ("more streamlined") not present in the source, and renders "protected by" as "güvencesiyle".
+    - Current: `{ -brand-short-name } güvencesiyle korunan daha yalın bir pencerede`
+    - Source: `Launch your gaming sites like an app in a streamlined window protected by { -brand-short-name }.`
+    - Suggest: `{ -brand-short-name } tarafından korunan yalın bir pencerede`
+    - The en-US says "a streamlined window protected by { -brand-short-name }" with no comparison, and "güvencesiyle" adds a guarantee claim; it is also inconsistent with the parallel email/value-prop strings.
+- `about-logins-confirm-remove-all-sync-dialog-message3` — `browser/browser/aboutLogins.ftl` — The singular ([1]/[one]) variants say "all passwords" instead of "the password".
+    - Current: `[1] Bu işlem { -brand-short-name } tarayıcınıza kaydettiğiniz tüm parolaları eşitlenen tüm cihazlardan silecektir.`
+    - Source: `{$count ->} [1] This will remove the password saved to { -brand-short-name } on all your synced devices. This will also remove any breach alerts that appear here. You cannot undo this action. [other] This will remove al…`
+    - Suggest: `[1] Bu işlem { -brand-short-name } tarayıcınıza kaydettiğiniz parolayı eşitlenen tüm cihazlardan silecektir.`
+    - en-US singular says "This will remove the password saved to…" (one password); the Turkish singular variants say "tüm parolaları" (all passwords), matching the plural form instead.
+- `about-logins-confirm-remove-all-sync-dialog-title` — `browser/browser/aboutLogins.ftl` — The plural variant drops "all"/does not match the source wording distinction and reads awkwardly.
+    - Current: `[other] { $count } hesabın hepsi tüm cihazlardan silinsin mi?`
+    - Source: `{$count ->} [one] Remove { $count } login from all devices? [other] Remove all { $count } logins from all devices?`
+    - Suggest: `[other] { $count } hesabın tümü tüm cihazlardan silinsin mi?`
+    - en-US plural is "Remove all { $count } logins from all devices?"; the Turkish "hesabın hepsi tüm cihazlardan" is ungrammatical/redundant phrasing.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `about-logins-confirm-remove-all-sync-dialog-title` — `browser/browser/aboutLogins.ftl` — the singular variant reads "{ $count } hesap hepsi tüm cihazlardan kaldırılsın mı?"; "hepsi" is copied from the plural variant and is ungrammatical here.
+    - Source: `{$count ->} [one] Remove { $count } login from all devices? [other] Remove all { $count } logins from all devices?`
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -49,16 +70,13 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,007 |
-| Missing strings | 173 |
+| Strings | 18,064 |
+| Missing strings | 116 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
+| Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
-| Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
-| printf placeholder mismatches | 0 |
-| Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 1 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 5 |
@@ -69,20 +87,20 @@ _Nothing retired._
 
 ### Completeness
 
-**173 strings** are not translated yet, concentrated in:
+**116 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 52
-- `browser/browser/ipProtection.ftl` — 14
-- `toolkit/toolkit/neterror/netError.ftl` — 12
+- `browser/browser/newtab/newtab.ftl` — 39
+- `browser/browser/ipProtection.ftl` — 13
 - `toolkit/toolkit/about/url-classifier.ftl` — 10
 - `browser/browser/firefoxView.ftl` — 9
-- `browser/browser/preferences/preferences.ftl` — 9
-- `browser/browser/featureCallout.ftl` — 8
-- `browser/browser/preferences/containers.ftl` — 7
-- `browser/browser/appmenu.ftl` — 6
 - `browser/browser/newtab/onboarding.ftl` — 5
 - `toolkit/toolkit/about/aboutAddons.ftl` — 4
 - `toolkit/toolkit/global/theme-picker.ftl` — 4
+- `browser/browser/appmenu.ftl` — 4
+- `browser/browser/preferences/preferences.ftl` — 4
+- `browser/browser/aiFeatures.ftl` — 3
+- `browser/browser/appExtensionFields.ftl` — 3
+- `browser/browser/featureCallout.ftl` — 3
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -92,9 +110,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 670, `curly-single` 166, `straight-double` 29 | **curly-double** |
-| apostrophe | `typographic` 952, `straight` 50 | **typographic** |
-| ellipsis | `char` 459 | **char** |
+| quotes | `curly-double` 673, `curly-single` 166, `straight-double` 29 | **curly-double** |
+| apostrophe | `typographic` 956, `straight` 50 | **typographic** |
+| ellipsis | `char` 460 | **char** |
 | dash | `em` 72, `en` 2 | **em** |
 | nbsp | `total` 9, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 | register | `informal` 2, `formal` 58 | **formal** |
@@ -108,13 +126,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (200)
+## 3. Open findings (204)
+
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 4 |
-| 2 | Wrong content (says something other than the English) | 68 |
-| 3 | Degraded language (grammar, spelling, terminology) | 88 |
+| 2 | Wrong content (says something other than the English) | 69 |
+| 3 | Degraded language (grammar, spelling, terminology) | 91 |
 | 4 | Cosmetic (typography, spacing) | 40 |
 
 ### A. Functional, markup, variables & plurals
@@ -134,6 +153,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `about-logins-confirm-remove-all-sync-dialog-message3` — `browser/browser/aboutLogins.ftl` — The singular ([1]/[one]) variants say "all passwords" instead of "the password".
+    - Current: `[1] Bu işlem { -brand-short-name } tarayıcınıza kaydettiğiniz tüm parolaları eşitlenen tüm cihazlardan silecektir.`
+    - Source: `{$count ->} [1] This will remove the password saved to { -brand-short-name } on all your synced devices. This will also remove any breach alerts that appear here. You cannot undo this action. [other] This will remove al…`
+    - Suggest: `[1] Bu işlem { -brand-short-name } tarayıcınıza kaydettiğiniz parolayı eşitlenen tüm cihazlardan silecektir.`
+    - en-US singular says "This will remove the password saved to…" (one password); the Turkish singular variants say "tüm parolaları" (all passwords), matching the plural form instead.
+- `about-logins-confirm-remove-all-sync-dialog-title` — `browser/browser/aboutLogins.ftl` — The plural variant drops "all"/does not match the source wording distinction and reads awkwardly.
+    - Current: `[other] { $count } hesabın hepsi tüm cihazlardan silinsin mi?`
+    - Source: `{$count ->} [one] Remove { $count } login from all devices? [other] Remove all { $count } logins from all devices?`
+    - Suggest: `[other] { $count } hesabın tümü tüm cihazlardan silinsin mi?`
+    - en-US plural is "Remove all { $count } logins from all devices?"; the Turkish "hesabın hepsi tüm cihazlardan" is ungrammatical/redundant phrasing.
 - `extension-colorways-bold-name` — `browser/browser/appExtensionFields.ftl` — developer comment not followed. The comment states "Bold" is used in the sense of bravery. Current "Koyu" means dark and duplicates extension-firefox-compact-dark-name. → "Cesur".
     - Source: `{ $colorway-name } — Bold`
     - Suggest: `"Cesur".`
@@ -143,6 +172,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `{ $region }, { $city }`
     - Source: `<strong>{ $temperature }°{ $unit }</strong> in { $city }, { $region }`
     - Suggest: `{ $city }, { $region }`
+- `taskbar-tabs-email-callout-subtitle-v3` — `browser/browser/featureCallout.ftl` — "protected by { -brand-short-name }" is rendered as "{ -brand-short-name } güvencesiyle korunan" ("protected under the guarantee of"), adding a claim of assurance not in the source.
+    - Current: `{ -brand-short-name } güvencesiyle korunan yalın bir pencerede`
+    - Source: `Launch your email sites like an app in a streamlined window protected by { -brand-short-name }.`
+    - Suggest: `{ -brand-short-name } tarafından korunan yalın bir pencerede`
+    - The en-US only says the window is protected by the browser; "güvencesiyle" adds a guarantee/warranty claim the source never makes.
+- `taskbar-tabs-gaming-callout-subtitle-v3` — `browser/browser/featureCallout.ftl` — Adds a comparative "daha yalın" ("more streamlined") not present in the source, and renders "protected by" as "güvencesiyle".
+    - Current: `{ -brand-short-name } güvencesiyle korunan daha yalın bir pencerede`
+    - Source: `Launch your gaming sites like an app in a streamlined window protected by { -brand-short-name }.`
+    - Suggest: `{ -brand-short-name } tarafından korunan yalın bir pencerede`
+    - The en-US says "a streamlined window protected by { -brand-short-name }" with no comparison, and "güvencesiyle" adds a guarantee claim; it is also inconsistent with the parallel email/value-prop strings.
 - `ip-protection-vpn-upgrade-link` — `browser/browser/ipProtection.ftl` — "up to five devices" is rendered as "beş ayrı cihazda", dropping the "up to" limit.
     - Current: `beş ayrı cihazda`
     - Source: `description: Choose custom VPN locations and add protection to all your apps on up to five devices, whether you’re at home or on public Wi-Fi. label: Get even more protection outside { -brand-short-name } with { -mozill…`
@@ -264,22 +303,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `sec-error-unsupported-elliptic-curve` — `toolkit/toolkit/neterror/nsserrors.ftl` — sec-error-unsupported-elliptic-curve, sec-error-unsupported-ec-point-form — "oval eğri" → "eliptik eğri".
     - Source: `Unsupported elliptic curve.`
     - Suggest: `"eliptik eğri".`
-- `ssl-error-bad-client` — `toolkit/toolkit/neterror/nsserrors.ftl` — ssl-error-bad-client, ssl-error-bad-server — locative for en "from the client/server": "istemcide" → "istemciden gelen".
-    - Source: `The server has encountered bad data from the client.`
-    - Suggest: `"istemciden gelen".`
-- `ssl-error-bad-server` — `toolkit/toolkit/neterror/nsserrors.ftl` — ssl-error-bad-client, ssl-error-bad-server — locative for en "from the client/server": "istemcide" → "istemciden gelen".
-    - Source: `The client has encountered bad data from the server.`
-    - Suggest: `"istemciden gelen".`
-- `ssl-error-handshake-failure-alert` — `toolkit/toolkit/neterror/nsserrors.ftl` — "kabul edilebilir sayıda güvenlik değişkeniyle" ≠ en "an acceptable set of security parameters".
-    - Source: `SSL peer was unable to negotiate an acceptable set of security parameters.`
-- `ssl-error-md5-digest-failure` — `toolkit/toolkit/neterror/nsserrors.ftl` — ssl-error-md5-digest-failure, ssl-error-sha-digest-failure — "derleme" (compilation) → "özet" (en "digest"); sec-error-digest-not-found already uses "özet".
-    - Source: `MD5 digest function failed.`
-- _…and 3 more; see `state/` for the full list._
+- _…and 7 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
-- `about-logins-confirm-remove-all-sync-dialog-title` — `browser/browser/aboutLogins.ftl` — the singular variant reads "{ $count } hesap hepsi tüm cihazlardan kaldırılsın mı?"; "hepsi" is copied from the plural variant and is ungrammatical here.
-    - Source: `{$count ->} [one] Remove { $count } login from all devices? [other] Remove all { $count } logins from all devices?`
 - `backup-folder-name` — `browser/browser/backupSettings.ftl` — Geri Yukleme — Geri Yükleme
     - Source: `Restore { -brand-product-name }`
 - `callout-firefox-view-tab-pickup-title` — `browser/browser/featureCallout.ftl` — Sekma taşıma — Sekme taşıma
@@ -467,6 +494,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `{ $extension } has been updated. You must approve new permissions before the updated version will install. Choosing “Cancel” will maintain your current extension version.`
 - `wizard-macos-button-next` — `toolkit/toolkit/global/wizard.ftl` — "İleri" for the macOS "Continue" variant, while profile-creation-explanation-4 tells macOS users to press "Devam düğmesine".
     - Source: `accesskey: C label: Continue`
+- `neterror-search-cta-reload-button` — `toolkit/toolkit/neterror/netError.ftl` — "Reload" is rendered as "Tazele" instead of the established Firefox tr term "Yeniden yükle".
+    - Current: `label: Tazele`
+    - Source: `accesskey: R label: Reload`
+    - Suggest: `label: Yeniden yükle`
+    - In Firefox tr, "Reload" is consistently translated as "Yeniden yükle"; "Tazele" is not the product's terminology and is inconsistent with other reload controls.
 - `pdfjs-editor-alt-text-button-label` — `toolkit/toolkit/pdfviewer/viewer.ftl` — "Alternatif metin" in 4 strings vs "Alt metin" in ~20.
     - Source: `Alt text`
 - `pdfjs-editor-alt-text-settings-create-model-description` — `toolkit/toolkit/pdfviewer/viewer.ftl` — "Görme engelli kişilere" narrows en "people who can't see the image"; pdfjs-editor-alt-text-dialog-description renders the same source correctly.
@@ -587,8 +619,9 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (91)
+### Fixed to date (92)
 
+- `about-logins-confirm-remove-all-sync-dialog-title` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-24
 - `settings-update-other-instance-handling-updates` — `browser/browser/aboutDialog.ftl` — fixed 2026-07-30
 - `update-otherInstanceHandlingUpdates` — `browser/browser/aboutDialog.ftl` — fixed 2026-07-30
 - `ai-window-learn-from-browsing-activity` — `browser/browser/aiFeatures.ftl` — fixed 2026-07-30
@@ -628,4 +661,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `tab-context-send-to-device2` — `browser/browser/tabContextMenu.ftl` — fixed 2026-07-30
 - `about-debugging-runtime-profile-button2` — `devtools/client/aboutdebugging.ftl` — fixed 2026-07-30
 - `about-debugging-worker-fetch-listening` — `devtools/client/aboutdebugging.ftl` — fixed 2026-07-30
-- `perftools-request-to-stop-profiler` — `devtools/client/perftools.ftl` — fixed 2026-07-30

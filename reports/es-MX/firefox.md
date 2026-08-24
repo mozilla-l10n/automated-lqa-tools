@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
+| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 4 of 17,847 |
+| **Strings reviewed this run** | 0 of 17,847 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for es-MX: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `moz-box-link-opens-in-new-tab` — `toolkit/toolkit/global/mozBoxBase.ftl` — Descriptive text "Opens in a new tab" was rendered as an imperative/infinitive command "Abrir en una nueva pestaña".
-    - Current: `Abrir en una nueva pestaña`
-    - Source: `Opens in a new tab`
-    - Suggest: `Se abre en una nueva pestaña`
-    - The en-US string describes the link's behavior (third person, "Opens in a new tab"), typically used as an accessible label; the Spanish infinitive reads as an action command, changing the meaning.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -54,11 +50,8 @@ _Nothing retired._
 | Obsolete strings | 0 |
 | Files absent from the locale | 3 |
 | Fluent / properties syntax errors | 0 |
+| Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
-| Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
-| printf placeholder mismatches | 0 |
-| Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 4 |
@@ -78,8 +71,8 @@ _Nothing retired._
 - `toolkit/toolkit/about/aboutAddons.ftl` — 15
 - `browser/browser/sharePanel.ftl` — 14
 - `browser/browser/preferences/preferences.ftl` — 14
-- `browser/browser/newtab/onboarding.ftl` — 13
 - `toolkit/toolkit/neterror/netError.ftl` — 13
+- `browser/browser/newtab/onboarding.ftl` — 13
 - `browser/browser/sidebar.ftl` — 12
 - `browser/browser/newtab/asrouter.ftl` — 11
 - `devtools/client/toolbox-options.ftl` — 11
@@ -118,6 +111,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 ---
 
 ## 3. Open findings (133)
+
 
 | Impact | Meaning | Count |
 |---|---|---|

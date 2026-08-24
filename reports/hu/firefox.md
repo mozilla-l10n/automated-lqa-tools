@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
+| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 8 of 18,124 |
+| **Strings reviewed this run** | 0 of 18,124 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for hu: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `helpus-referrals2` — `browser/browser/aboutDialog.ftl` — Missing hyphen before the suffix attached to the brand term placeholder.
-    - Current: `Ossza meg a { -brand-product-name }ot`
-    - Source: `Want to help? <label data-l10n-name="helpus-donateLink">Make a donation</label>, <label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>, or <label data-l10n-name="helpus-getInvolvedLink">g…`
-    - Suggest: `Ossza meg a { -brand-product-name }-ot`
-    - In Hungarian, suffixes appended to a brand name rendered from a placeholder are joined with a hyphen (e.g. „a Firefox-ot” style used for term placeholders); „{ -brand-product-name }ot” concatenates the suffix directly, producing „Firefoxot” without the required separation and is inconsistent with the other referral strings that avoid suffixing the placeholder.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -54,11 +50,8 @@ _Nothing retired._
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
+| Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
-| Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
-| printf placeholder mismatches | 0 |
-| Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 3 |
@@ -72,17 +65,17 @@ _Nothing retired._
 **56 strings** are not translated yet, concentrated in:
 
 - `browser/browser/newtab/newtab.ftl` — 21
-- `browser/browser/preferences/containers.ftl` — 7
 - `toolkit/toolkit/neterror/netError.ftl` — 7
+- `browser/browser/preferences/containers.ftl` — 7
 - `browser/browser/preferences/preferences.ftl` — 4
 - `devtools/client/inspector.ftl` — 4
 - `browser/browser/aboutPrivateBrowsing.ftl` — 3
-- `browser/browser/sharePanel.ftl` — 2
 - `toolkit/toolkit/global/theme-picker.ftl` — 2
-- `browser/browser/firefoxView.ftl` — 1
-- `browser/browser/preferences/formAutofill.ftl` — 1
-- `dom/chrome/accessibility/AccessFu.properties` — 1
+- `browser/browser/sharePanel.ftl` — 2
 - `toolkit/toolkit/about/aboutNetworking.ftl` — 1
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 1
+- `toolkit/toolkit/global/processTypes.ftl` — 1
+- `dom/chrome/accessibility/AccessFu.properties` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -107,6 +100,7 @@ _Nothing reported._
 ---
 
 ## 3. Open findings (274)
+
 
 | Impact | Meaning | Count |
 |---|---|---|

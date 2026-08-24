@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
+| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 8 of 18,164 |
+| **Strings reviewed this run** | 16 of 18,180 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for nl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `newtab-recent-searches-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Recent searches options" is rendered as "Recente-zoekresultatenopties" (recent search results), inconsistent with "Recente zoekopdrachten" used elsewhere for the same widget.
+    - Current: `aria-label: Recente-zoekresultatenopties`
+    - Source: `aria-label: Recent searches options`
+    - Suggest: `aria-label: Opties voor recente zoekopdrachten`
+    - The en-US says "searches", not "search results"; all other strings for this widget use "Recente zoekopdrachten".
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,16 +49,13 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,164 |
-| Missing strings | 16 |
+| Strings | 18,180 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
+| Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
-| Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
-| printf placeholder mismatches | 0 |
-| Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 0 |
@@ -65,17 +66,7 @@ _Nothing retired._
 
 ### Completeness
 
-**16 strings** are not translated yet, concentrated in:
-
-- `browser/browser/newtab/newtab.ftl` — 8
-- `browser/browser/aboutPrivateBrowsing.ftl` — 2
-- `browser/browser/sharePanel.ftl` — 2
-- `browser/browser/preferences/formAutofill.ftl` — 1
-- `dom/chrome/accessibility/AccessFu.properties` — 1
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 1
-- `toolkit/toolkit/global/processTypes.ftl` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -88,7 +79,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | ellipsis | `char` 461 | **char** |
 | dash | `en` 135 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `formal` 3092 | **formal** |
+| register | `formal` 3099 | **formal** |
 
 ---
 
@@ -98,12 +89,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (377)
+## 3. Open findings (378)
+
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 23 |
-| 2 | Wrong content (says something other than the English) | 126 |
+| 2 | Wrong content (says something other than the English) | 127 |
 | 3 | Degraded language (grammar, spelling, terminology) | 198 |
 | 4 | Cosmetic (typography, spacing) | 30 |
 
@@ -210,6 +202,11 @@ _Nothing reported._
 - `home-prefs-highlights-option-most-recent-download-srd` — `browser/browser/newtab/newtab.ftl` — home-prefs-highlights-option-most-recent-download, home-prefs-highlights-option-most-recent-download-srd — preferences/preferences.ftl, newtab/newtab.ftl — noun phrase rendered as a participle. Current: "Meest recent gedownload" → Suggest: "Meest recente download"
     - Source: `label: Most recent download`
     - Suggest: `"Meest recente download"`
+- `newtab-recent-searches-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Recent searches options" is rendered as "Recente-zoekresultatenopties" (recent search results), inconsistent with "Recente zoekopdrachten" used elsewhere for the same widget.
+    - Current: `aria-label: Recente-zoekresultatenopties`
+    - Source: `aria-label: Recent searches options`
+    - Suggest: `aria-label: Opties voor recente zoekopdrachten`
+    - The en-US says "searches", not "search results"; all other strings for this widget use "Recente zoekopdrachten".
 - `newtab-section-following-button` — `browser/browser/newtab/newtab.ftl` — newtab-section-following-button, newtab-section-unfollow-button-label (.aria-label) — newtab/newtab.ftl — "Volgend" means next. Current: "Volgend" → Suggest: "Gevolgd" (matches newtab-section-mangage-topics-followed-topics)
     - Source: `Following`
 - `newtab-section-unfollow-button-label` — `browser/browser/newtab/newtab.ftl` — newtab-section-following-button, newtab-section-unfollow-button-label (.aria-label) — newtab/newtab.ftl — "Volgend" means next. Current: "Volgend" → Suggest: "Gevolgd" (matches newtab-section-mangage-topics-followed-topics)
@@ -320,10 +317,7 @@ _Nothing reported._
 - `options-enable-custom-formatters-label` — `devtools/client/toolbox-options.ftl` — options-enable-custom-formatters-label, options-enable-custom-formatters-tooltip — client/toolbox-options.ftl — formatters are functions, not elements. Current: "Aangepaste opmaakelementen" → Suggest: "Aangepaste formatters"
     - Source: `Enable custom formatters`
     - Suggest: `"Aangepaste formatters"`
-- `options-enable-custom-formatters-tooltip` — `devtools/client/toolbox-options.ftl` — options-enable-custom-formatters-label, options-enable-custom-formatters-tooltip — client/toolbox-options.ftl — formatters are functions, not elements. Current: "Aangepaste opmaakelementen" → Suggest: "Aangepaste formatters"
-    - Source: `title: Turning this option on will allow sites to define custom formatters for DOM objects`
-    - Suggest: `"Aangepaste formatters"`
-- _…and 65 more; see `state/` for the full list._
+- _…and 66 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

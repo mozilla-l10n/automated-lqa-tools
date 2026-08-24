@@ -14,8 +14,9 @@
    "confidence": "medium"
   },
   "rationale": "The source has lowercase \"share\" because the label appears mid-sentence between \"Make a donation,\" and \"or get involved!\"; capitalizing it breaks the sentence flow and is inconsistent with the surrounding lowercase \"get involved!\".",
-  "resolved_on": "",
-  "status": "open",
+  "reads_as_deliberate": false,
+  "resolved_on": "2026-08-24",
+  "status": "fixed",
   "string_hash": "bf646e9d",
   "string_id": "helpus-referrals2",
   "suggest": "<label data-l10n-name=\"helpus-shareFirefoxLink\">share { -brand-product-name }</label>",
@@ -37,6 +38,7 @@
    "confidence": "medium"
   },
   "rationale": "en-CA uses the noun/verb split: this tree has \"Mozilla Public Licence\" and \"licences\" (toolkit/toolkit/about/aboutRights.ftl), \"Licence information\" (toolkit/toolkit/about/aboutAddons.ftl, aboutPlugins.ftl) and \"Licence Agreement\" / \"licence agreement\" (browser/installer/override.properties). Here \"license\" is a noun (the picture's licence), so it should follow the same adaptation.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "ea410806",
@@ -60,6 +62,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US uses \"KB\" in both strings; en-CA changed only this one. Within pageInfo.ftl, properties-general-size still reads \"{ $kb } KB ({ $bytes } bytes)\", so the same dialog displays both \"KB\" and \"kB\". No en-CA convention requires \"kB\" (the tree is mixed: toolkit/toolkit/about/aboutPerformance.ftl and aboutProcesses.ftl use \"KB\"), so the file-internal inconsistency is the defect.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "2f66b1ab",
@@ -83,6 +86,7 @@
    "confidence": "medium"
   },
   "rationale": "This value is concatenated by NSIS into the byte-size readout (e.g. \"1.5 KB\"); the sibling values Byte/Mega/Giga were left as B/M/G. Canadian English has no convention that requires lowercasing this symbol, so the single-letter change is an unnecessary deviation from the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "cf90ecc1",
@@ -106,6 +110,7 @@
    "confidence": "medium"
   },
   "rationale": "The same PDF viewer document-properties string in toolkit/toolkit/pdfviewer/viewer.ftl:110 reads \"{ NUMBER($kb, …) } KB ({ $b } bytes)\", and the next entry here (document_properties_mb) uses the upper-case \"MB\". en-CA has no convention requiring lower-case \"k\"; browser/browser/pageInfo.ftl also uses \"KB\" for the same kind of file-size display. Using \"kB\" only in this one copy makes the same UI string differ between the two builds.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "faaf3712",
@@ -129,6 +134,7 @@
    "confidence": "high"
   },
   "rationale": "en-CA distinguishes the noun \"licence\" from the verb \"license\", and the tree does this consistently: \"Licence information\" (toolkit/toolkit/about/aboutPlugins.ftl, toolkit/toolkit/about/aboutAddons.ftl), \"Licence Agreement\"/\"licence agreement\" (browser/installer/override.properties), \"Mozilla Public Licence\" and \"open source licences\" (toolkit/toolkit/about/aboutRights.ftl). This label is the font's licence (a noun), so it should follow the same form.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "d5911caf",
@@ -152,6 +158,7 @@
    "confidence": "high"
   },
   "rationale": "Same rule as fontinspector.fontLicense: the locale uses the noun \"licence\" throughout (aboutPlugins.ftl, aboutAddons.ftl, aboutRights.ftl, browser/installer/override.properties), so this attributive noun should read \"Licence\".",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "cadc59f4",
@@ -175,6 +182,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US source names the literal attribute format \"left,top,right,bottom\"; the target lost the initial \"l\" and has stray/reversed quote marks, making the message wrong and unreadable.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "d149f704",
@@ -198,6 +206,7 @@
    "confidence": "high"
   },
   "rationale": "The source uses a matched pair of curly double quotes (“…”); the target uses a right double quote on both sides, breaking the locale's curly-double quoting convention.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "d7f1521e",
@@ -221,6 +230,7 @@
    "confidence": "high"
   },
   "rationale": "en-CA does not differ from en-US here; the substitution is an unnecessary divergence from the source wording.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "447d0549",
@@ -238,10 +248,11 @@
   "file": "toolkit/toolkit/about/aboutAddons.ftl",
   "first_seen": "2026-08-20",
   "impact": 3,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "en-CA",
   "origin": {},
   "rationale": "This locale writes “colour” for “color” in 69 other strings and keeps “color” in 4. This string is byte-identical to en-US, so the substitution looks simply to have been missed.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e742d6e8",
@@ -265,6 +276,7 @@
    "confidence": "high"
   },
   "rationale": "Reader Mode's colour-scheme labels are inconsistent if only this one is adapted; the en-US term is used for the same control elsewhere in the file.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "7dc17b2a",
@@ -286,6 +298,7 @@
   "locale": "en-CA",
   "origin": {},
   "rationale": "This locale writes “colour” for “color” in 68 other strings and keeps “color” in 5. This string is byte-identical to en-US, so the substitution looks simply to have been missed.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "bd71c78e",
@@ -309,6 +322,7 @@
    "confidence": "high"
   },
   "rationale": "\"Mozilla Public License\" is the official title of a specific legal document (as used in the MPL header of every file in this tree, including this one); the -ce/-se spelling rule for the common noun does not apply to a proper name. Both occurrences in the string are affected, including the linked <a data-l10n-name=\"mozilla-public-license-link\"> text.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "0e7e5ef0",
@@ -332,6 +346,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US has \"KB\" here, and en-CA keeps \"KB\" in toolkit/toolkit/pdfviewer/viewer.ftl (pdfjs-document-properties-size-kb), toolkit/toolkit/about/aboutProcesses.ftl (memory-unit-KB), aboutPerformance.ftl (size-KB) and aboutNetworking.ftl. en-CA has no distinct convention requiring the SI \"kB\" form, so the download panel showing \"1.1 of 11.1 kB\" is out of step with \"111 KB\" shown elsewhere in the same build.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-20",
   "status": "fixed",
   "string_hash": "29ec1243",

@@ -1,8 +1,8 @@
 # Firefox (desktop + shared toolkit/dom strings) — l10n QA
 
-- **Generated:** 2026-08-23
+- **Generated:** 2026-08-24
 - **Locales tracked:** 20 (20 with recorded state)
-- **Findings:** 5,801 raised, 1,411 fixed (24%), 4,342 open
+- **Findings:** 5,817 raised, 1,420 fixed (24%), 4,349 open
 - **Closed by a person:** 15 dismissed, 3 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
@@ -13,17 +13,17 @@ Counts come from `state/`, not from the rendered reports, so they always reflect
 
 _None. The reviewer sets this flag only on a finding where the localized text changes what the product says about itself, its users or its behaviour; it is left unset on the vast majority of mistranslations._
 
-### Broken output — impact 1 (424)
+### Broken output — impact 1 (425)
 
 The value does not render as intended: a blank string, broken markup, a variable the source never passes.
 
-`id` 84 · `es-AR` 70 · `cs` 54 · `ru` 50 · `hu` 34 · `fy-NL` 26 · `nl` 23 · `pt-BR` 15 · `pl` 13 · `ja` 12 · `de` 10 · `es-MX` 9 · `en-GB` 8 · `zh-CN` 6 · `fr` 4 · `tr` 4 · `es-ES` 2
+`id` 84 · `es-AR` 70 · `cs` 55 · `ru` 50 · `hu` 34 · `fy-NL` 26 · `nl` 23 · `pt-BR` 15 · `pl` 13 · `ja` 12 · `de` 10 · `es-MX` 9 · `en-GB` 8 · `zh-CN` 6 · `fr` 4 · `tr` 4 · `es-ES` 2
 
 - **`cs`** `appmenuitem-new-ai-window` — `browser/browser/aiWindow.ftl`
   - `appmenuitem-new-ai-window` (`.value`) calls `-smart-window-brand-name` with ['capitalization'], but that term selects on ['case', 'plural-form']
   - Current: `Nové { -smart-window-brand-name }`
-- **`cs`** `menu-file-new-ai-window` — `browser/browser/aiWindow.ftl`
-  - `menu-file-new-ai-window` (`.label`) calls `-smart-window-brand-name` with ['capitalization'], but that term selects on ['case', 'plural-form']
+- **`cs`** `appmenuitem-new-ai-window` — `browser/browser/aiWindow.ftl`
+  - `appmenuitem-new-ai-window` (`.label`) calls `-smart-window-brand-name` with ['capitalization'], but that term selects on ['case', 'plural-form']
   - Current: `Nové { -smart-window-brand-name }`
 - **`de`** `about-logins-import-dialog-items-no-change2` — `browser/browser/aboutLogins.ftl`
   - Malformed closing tag `</span >` in `about-logins-import-dialog-items-no-change2`
@@ -68,34 +68,34 @@ The value does not render as intended: a blank string, broken markup, a variable
   - inverted <strong> tags: FR: "</strong>{ $property }<strong> n'a aucun effet…" → <strong>{ $property }</strong> … (property isn't bolded; following text wrongly is).
 - **`fy-NL`** `error-try-again` — `browser/browser/aboutRobots.ftl`
   - .label2 left in English while the value is translated
-- _…and 409 more, in the per-locale reports linked below._
+- _…and 410 more, in the per-locale reports linked below._
 
-### Wrong content — impact 2 (1618)
+### Wrong content — impact 2 (1623)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/firefox.md`.
 
 | Locale | Last run | Mode | Commit | Strings | Missing | Open | Impact 1–2 | Fixed | Dismissed | Suppressed |
 |---|---|---|---|---|---|---|---|---|---|---|
-| [cs](cs/firefox.md) | 2026-08-22 | incremental | `9441127e` | 18,169 | 11 | **258** | 174 | 0 | 0 | 0 |
-| [de](de/firefox.md) | 2026-08-22 | incremental | `9441127e` | 18,169 | 11 | **50** | 23 | 35 | 0 | 0 |
-| [en-CA](en-CA/firefox.md) | 2026-08-22 | incremental | `9441127e` | 18,139 | 41 | **2** | 0 | 13 | 0 | 0 |
-| [en-GB](en-GB/firefox.md) | 2026-08-22 | incremental | `9441127e` | 18,180 | 0 | **34** | 20 | 6 | 0 | 0 |
-| [es-AR](es-AR/firefox.md) | 2026-08-22 | incremental | `9441127e` | 18,148 | 32 | **421** | 240 | 0 | 0 | 0 |
-| [es-ES](es-ES/firefox.md) | 2026-08-22 | incremental | `9441127e` | 17,185 | 995 | **101** | 43 | 39 | 0 | 0 |
-| [es-MX](es-MX/firefox.md) | 2026-08-22 | incremental | `9441127e` | 17,847 | 333 | **133** | 54 | 93 | 0 | 0 |
-| [fr](fr/firefox.md) | 2026-08-22 | incremental | `9441127e` | 18,367 | 0 | **40** | 10 | 31 | 0 | 0 |
-| [fy-NL](fy-NL/firefox.md) | 2026-08-22 | incremental | `9441127e` | 18,139 | 41 | **588** | 177 | 245 | 4 | 0 |
-| [hu](hu/firefox.md) | 2026-08-22 | incremental | `9441127e` | 18,124 | 56 | **274** | 153 | 0 | 0 | 0 |
-| [id](id/firefox.md) | 2026-08-22 | incremental | `9441127e` | 15,494 | 2,686 | **330** | 258 | 0 | 0 | 0 |
-| [it](it/firefox.md) | 2026-08-22 | incremental | `9441127e` | 18,367 | 0 | **0** | 0 | 56 | 6 | 2 |
-| [ja](ja/firefox.md) | 2026-08-22 | incremental | `9441127e` | 18,135 | 45 | **178** | 69 | 189 | 0 | 0 |
-| [nl](nl/firefox.md) | 2026-08-22 | incremental | `9441127e` | 18,164 | 16 | **377** | 149 | 115 | 0 | 0 |
-| [pl](pl/firefox.md) | 2026-08-22 | incremental | `9441127e` | 17,874 | 306 | **83** | 50 | 127 | 0 | 0 |
-| [pt-BR](pt-BR/firefox.md) | 2026-08-22 | incremental | `9441127e` | 18,135 | 45 | **568** | 208 | 131 | 5 | 0 |
-| [ru](ru/firefox.md) | 2026-08-22 | incremental | `9441127e` | 18,169 | 11 | **595** | 316 | 172 | 0 | 0 |
-| [sl](sl/firefox.md) | 2026-08-22 | incremental | `9441127e` | 17,541 | 639 | **35** | 5 | 42 | 0 | 1 |
-| [tr](tr/firefox.md) | 2026-08-22 | incremental | `9441127e` | 18,007 | 173 | **200** | 72 | 91 | 0 | 0 |
-| [zh-CN](zh-CN/firefox.md) | 2026-08-22 | incremental | `9441127e` | 17,981 | 199 | **75** | 21 | 26 | 0 | 0 |
+| [cs](cs/firefox.md) | 2026-08-24 | incremental | `39e5663f` | 18,180 | 0 | **259** | 175 | 0 | 0 | 0 |
+| [de](de/firefox.md) | 2026-08-24 | incremental | `39e5663f` | 18,180 | 0 | **52** | 25 | 35 | 0 | 0 |
+| [en-CA](en-CA/firefox.md) | 2026-08-24 | incremental | `39e5663f` | 18,139 | 41 | **1** | 0 | 14 | 0 | 0 |
+| [en-GB](en-GB/firefox.md) | 2026-08-24 | incremental | `39e5663f` | 18,180 | 0 | **33** | 20 | 7 | 0 | 0 |
+| [es-AR](es-AR/firefox.md) | 2026-08-24 | incremental | `39e5663f` | 18,150 | 30 | **421** | 240 | 0 | 0 | 0 |
+| [es-ES](es-ES/firefox.md) | 2026-08-24 | incremental | `39e5663f` | 17,185 | 995 | **101** | 43 | 39 | 0 | 0 |
+| [es-MX](es-MX/firefox.md) | 2026-08-24 | incremental | `39e5663f` | 17,847 | 333 | **133** | 54 | 93 | 0 | 0 |
+| [fr](fr/firefox.md) | 2026-08-24 | incremental | `39e5663f` | 18,367 | 0 | **38** | 9 | 33 | 0 | 0 |
+| [fy-NL](fy-NL/firefox.md) | 2026-08-24 | incremental | `39e5663f` | 18,180 | 0 | **592** | 178 | 245 | 4 | 0 |
+| [hu](hu/firefox.md) | 2026-08-24 | incremental | `39e5663f` | 18,124 | 56 | **274** | 153 | 0 | 0 | 0 |
+| [id](id/firefox.md) | 2026-08-24 | incremental | `39e5663f` | 15,494 | 2,686 | **330** | 258 | 0 | 0 | 0 |
+| [it](it/firefox.md) | 2026-08-24 | incremental | `39e5663f` | 18,397 | 6 | **0** | 0 | 56 | 6 | 2 |
+| [ja](ja/firefox.md) | 2026-08-24 | incremental | `39e5663f` | 18,135 | 45 | **178** | 69 | 189 | 0 | 0 |
+| [nl](nl/firefox.md) | 2026-08-24 | incremental | `39e5663f` | 18,180 | 0 | **378** | 150 | 115 | 0 | 0 |
+| [pl](pl/firefox.md) | 2026-08-24 | incremental | `39e5663f` | 17,885 | 295 | **79** | 49 | 131 | 0 | 0 |
+| [pt-BR](pt-BR/firefox.md) | 2026-08-24 | incremental | `39e5663f` | 18,180 | 0 | **571** | 210 | 131 | 5 | 0 |
+| [ru](ru/firefox.md) | 2026-08-24 | incremental | `39e5663f` | 18,169 | 11 | **595** | 316 | 172 | 0 | 0 |
+| [sl](sl/firefox.md) | 2026-08-24 | incremental | `39e5663f` | 17,550 | 630 | **35** | 5 | 42 | 0 | 1 |
+| [tr](tr/firefox.md) | 2026-08-24 | incremental | `39e5663f` | 18,064 | 116 | **204** | 73 | 92 | 0 | 0 |
+| [zh-CN](zh-CN/firefox.md) | 2026-08-24 | incremental | `39e5663f` | 17,981 | 199 | **75** | 21 | 26 | 0 | 0 |
 
 **Impact 1–2** is the queue that matters: broken output and wrong content. Impact 3–4 is language polish and typography.
 

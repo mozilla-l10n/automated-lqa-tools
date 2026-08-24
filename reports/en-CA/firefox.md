@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9441127ed8c4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `60f24d17564f` |
-| **Previous run** | 2026-08-21 @ `bd0ff4b2f741` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
+| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 8 of 18,139 |
+| **Strings reviewed this run** | 1 of 18,139 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,17 +18,17 @@ Also for en-CA: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
+
+_No new findings._
+
+### ✅ Fixed since the last run (1)
 
 - `helpus-referrals2` — `browser/browser/aboutDialog.ftl` — Mid-sentence link text is capitalized in en-CA where en-US uses lowercase "share".
     - Current: `<label data-l10n-name="helpus-shareFirefoxLink">Share { -brand-product-name }</label>`
     - Source: `Want to help? <label data-l10n-name="helpus-donateLink">Make a donation</label>, <label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>, or <label data-l10n-name="helpus-getInvolvedLink">g…`
     - Suggest: `<label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>`
     - The source has lowercase "share" because the label appears mid-sentence between "Make a donation," and "or get involved!"; capitalizing it breaks the sentence flow and is inconsistent with the surrounding lowercase "get involved!".
-
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -54,11 +54,8 @@ _Nothing retired._
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
+| Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
-| Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
-| printf placeholder mismatches | 0 |
-| Plural / select selector mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 0 |
@@ -78,10 +75,10 @@ _Nothing retired._
 - `browser/browser/sharePanel.ftl` — 2
 - `browser/browser/preferences/formAutofill.ftl` — 2
 - `devtools/client/debugger.properties` — 2
-- `browser/browser/profiles.ftl` — 1
-- `dom/chrome/accessibility/AccessFu.properties` — 1
 - `toolkit/toolkit/about/aboutProcesses.ftl` — 1
 - `toolkit/toolkit/global/processTypes.ftl` — 1
+- `dom/chrome/accessibility/AccessFu.properties` — 1
+- `browser/browser/profiles.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -105,14 +102,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (2)
+## 3. Open findings (1)
+
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 0 |
 | 3 | Degraded language (grammar, spelling, terminology) | 1 |
-| 4 | Cosmetic (typography, spacing) | 1 |
+| 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -135,11 +133,7 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
-- `helpus-referrals2` — `browser/browser/aboutDialog.ftl` — Mid-sentence link text is capitalized in en-CA where en-US uses lowercase "share".
-    - Current: `<label data-l10n-name="helpus-shareFirefoxLink">Share { -brand-product-name }</label>`
-    - Source: `Want to help? <label data-l10n-name="helpus-donateLink">Make a donation</label>, <label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>, or <label data-l10n-name="helpus-getInvolvedLink">g…`
-    - Suggest: `<label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>`
-    - The source has lowercase "share" because the label appears mid-sentence between "Make a donation," and "or get involved!"; capitalizing it breaks the sentence flow and is inconsistent with the surrounding lowercase "get involved!".
+_Nothing in this category._
 
 ---
 
@@ -161,8 +155,9 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (13)
+### Fixed to date (14)
 
+- `helpus-referrals2` — `browser/browser/aboutDialog.ftl` — fixed 2026-08-24
 - `Kilo` — `browser/installer/override.properties` — fixed 2026-08-21
 - `document_properties_kb` — `browser/pdfviewer/viewer.properties` — fixed 2026-08-21
 - `ImageMapRectBoundsError` — `dom/chrome/layout/layout_errors.properties` — fixed 2026-08-21
