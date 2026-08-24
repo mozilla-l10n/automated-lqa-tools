@@ -114,13 +114,25 @@ jobs:
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: work
-          key: repos-${{ matrix.locale }}-${{ github.run_id }}
+          # Keyed by project as well as locale: every workflow caches the
+          # same `work` path, and an unnamespaced key let one project's
+          # clone be restored into another's and fetched as if it were its.
+          key: repos-firefox-${{ matrix.locale }}-${{ github.run_id }}
           restore-keys: |
-            repos-${{ matrix.locale }}-
+            repos-firefox-${{ matrix.locale }}-
 
       - name: Check out the en-US source strings
         run: |
           set -euo pipefail
+          # Reuse the restored clone only if it is actually this repository.
+          # A cache holding some other tree must be discarded, not fetched
+          # into: the run would otherwise succeed against the wrong strings.
+          if [ -d work/source/.git ] && \
+             [ "$(git -C work/source remote get-url origin)" \
+               != "https://github.com/mozilla-l10n/firefox-l10n-source" ]; then
+            echo "cached work/source is not firefox-l10n-source; discarding it"
+            rm -rf work/source
+          fi
           if [ -d work/source/.git ]; then
             git -C work/source fetch --depth 1 origin main
             git -C work/source reset --hard origin/main
@@ -135,6 +147,12 @@ jobs:
         # because it compares hashes it stored itself.
         run: |
           set -euo pipefail
+          if [ -d work/l10n/.git ] && \
+             [ "$(git -C work/l10n remote get-url origin)" \
+               != "https://github.com/mozilla-l10n/firefox-l10n" ]; then
+            echo "cached work/l10n is not firefox-l10n; discarding it"
+            rm -rf work/l10n
+          fi
           if [ ! -d work/l10n/.git ]; then
             git clone --depth 1 --filter=blob:none --sparse \
               https://github.com/mozilla-l10n/firefox-l10n work/l10n
