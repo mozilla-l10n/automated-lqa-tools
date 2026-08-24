@@ -111,9 +111,12 @@ jobs:
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: work
-          key: repos-${{ matrix.locale }}-${{ github.run_id }}
+          # Keyed by project as well as locale: every workflow caches the
+          # same `work` path, and an unnamespaced key let one project's
+          # clone be restored into another's and fetched as if it were its.
+          key: repos-android-${{ matrix.locale }}-${{ github.run_id }}
           restore-keys: |
-            repos-${{ matrix.locale }}-
+            repos-android-${{ matrix.locale }}-
 
       - name: Check out android-l10n
         # One repository holds the source and every locale side by side, and
@@ -121,6 +124,15 @@ jobs:
         # sparse tricks the Firefox workflow uses.
         run: |
           set -euo pipefail
+          # Reuse the restored clone only if it is actually this repository.
+          # A cache holding some other tree must be discarded, not fetched
+          # into: the run would otherwise succeed against the wrong strings.
+          if [ -d work/l10n/.git ] && \
+             [ "$(git -C work/l10n remote get-url origin)" \
+               != "https://github.com/mozilla-l10n/android-l10n" ]; then
+            echo "cached work/l10n is not android-l10n; discarding it"
+            rm -rf work/l10n
+          fi
           if [ -d work/l10n/.git ]; then
             git -C work/l10n fetch --depth 1 origin main
             git -C work/l10n reset --hard origin/main
