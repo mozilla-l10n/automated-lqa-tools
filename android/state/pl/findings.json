@@ -14,6 +14,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the connection was reset, not interrupted; the same Polish text is already used for mozac_browser_errorpages_net_interrupt_title, making two distinct errors indistinguishable.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2a3d3aea",
@@ -37,6 +38,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states that incorrect firewall/proxy settings can interfere with web browsing; the translation instead tells the user to check whether the program is permitted to connect, which is different content.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "73da17c9",
@@ -60,6 +62,7 @@
    "confidence": "medium"
   },
   "rationale": "The emphasis in the source is on \"other\" purposes, i.e. the port serves a different function, not merely that it is unused for browsing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8b56cf70",
@@ -83,6 +86,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says the browser could not find the host server for the provided address; the Polish says it could not find the server's address for the provided address, which is redundant and inaccurate.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "192988a3",
@@ -106,6 +110,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment identifies it as a label for the add-ons manager, a noun label, not an action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "92f14c3d",
@@ -129,6 +134,7 @@
    "confidence": "medium"
   },
   "rationale": "The source term is \"enterprise policies\"; repeating \"organizacja\" twice is a terminology error in Polish Mozilla builds, where \"zasady firmowe\" is used.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "06b59865",
@@ -152,6 +158,7 @@
    "confidence": "high"
   },
   "rationale": "en-US: \"This extension could not be downloaded because of a connection failure.\" — \"downloaded\" (pobrane), not \"installed\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "04676563",
@@ -175,6 +182,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"additional settings\"; the parallel string uses \"dodatkowe\" for \"additional\", so \"nowe\" (new) changes the meaning and is inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5f3dea39",
@@ -198,6 +206,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states the extension wants to collect the listed data; \"prosi o zbieranie\" (asks for collection) alters the statement.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6042a840",
@@ -221,6 +230,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Access browsing history\"… actually the source says browsing history; mirrors source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d9113892",
@@ -244,6 +254,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Cancel private downloads?\"; the Polish omits \"private\", losing the distinction that only private-mode downloads are affected.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "486b89a0",
@@ -267,6 +278,7 @@
    "confidence": "high"
   },
   "rationale": "The source says refreshing could duplicate recent actions, such as sending a payment or posting a comment twice; the Polish mixes a noun phrase with bare infinitives, producing a broken sentence.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1793831a",
@@ -290,6 +302,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a label for a text input field (where the user types text), not a label about \"going to\"/navigating to it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d1d9b99d",
@@ -313,6 +326,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Use %1$s as a login provider\" (the provider itself, not an account); Polish \"jako\" here requires the nominative/genitive agreement \"jako dostawcy logowania\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "33a85184",
@@ -336,6 +350,7 @@
    "confidence": "medium"
   },
   "rationale": "The standard Polish short form for marzec is \"mar.\"; \"mar\" is not a recognized abbreviation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "55e3951d",
@@ -359,6 +374,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states the password will be saved into the account for future use; the Polish invents a claim about always having access.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d4756aee",
@@ -382,6 +398,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the masks are available on mobile (mobile devices generally, including tablets), not specifically \"on the phone\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2e2ff909",
@@ -405,6 +422,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"URL copied.\" ends with a period; the toast text drops it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b10b92a4",
@@ -428,6 +446,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says to remember the decision, not to stop asking; the parallel string ...site4 correctly uses \"Zapamiętaj dla tej witryny\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a588e3a8",
@@ -451,6 +470,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says pages and summaries stay private and are never stored; the Polish adds \"zawsze\" and \"nigdzie\", changing the strength of the privacy claim.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "736d7417",
@@ -474,6 +494,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Send crash report to %1$s\"; the genitive \"organizacji %1$s\" attaches to \"awarię\", losing the \"to Mozilla\" recipient meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "261f66eb",
@@ -497,6 +518,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Sending crash report to %1$s\"; the recipient (dative/do + genitive) is required, otherwise the genitive attaches to \"awarii\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cba1054d",
@@ -520,6 +542,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means to continue on to the website, not to go back to it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f89bde9d",
@@ -543,6 +566,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the user won't see pop-ups about the AI enhancements; the Polish says \"or even information about them\", changing the meaning and omitting \"pop-ups\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b2ae0648",
@@ -566,6 +590,7 @@
    "confidence": "medium"
   },
   "rationale": "ai_controls_ai_powered_features and ai_controls_block_dialog_body use \"sztuczna inteligencja\" while these toggles use the abbreviation \"SI\", creating inconsistent terminology on the same settings surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "747b4f01",
@@ -589,6 +614,7 @@
    "confidence": "medium"
   },
   "rationale": "Source refers to pop-ups about the AI enhancements, not to \"even information about them\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5543ddd8",
@@ -612,6 +638,7 @@
    "confidence": "high"
   },
   "rationale": "The source \"Minimal\" describes a simplified icon style; \"Minimalis\" is not a Polish word and does not convey the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "47e59f3e",
@@ -635,6 +662,7 @@
    "confidence": "high"
   },
   "rationale": "The source describes a pixel-art icon; \"Pikselis\" is not a Polish word.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5ef35c7f",
@@ -658,6 +686,7 @@
    "confidence": "high"
   },
   "rationale": "\"Retro\" is used in Polish as-is; \"Retrolis\" is not a Polish word and misrepresents the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "46ca2662",
@@ -681,6 +710,7 @@
    "confidence": "medium"
   },
   "rationale": "app_name_private_5 is a distinct variant without parentheses; rendering it identically to app_name_private_4 loses the intended distinction.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8ea334c1",
@@ -704,6 +734,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is an instruction to enter search terms, not the label \"Search\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a1e656a0",
@@ -727,6 +758,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to the overflow menu of a single bookmark or folder item (%s is one item's name), so the genitive singular \"elementu\" is required.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e5eb77fc",
@@ -750,6 +782,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says sorting is by user-defined sort order; \"inna kolejność\" means simply a different order, losing the meaning of a user-defined/custom order.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "38fc7385",
@@ -773,6 +806,7 @@
    "confidence": "medium"
   },
   "rationale": "The source indicates the custom tab is powered by the app; the Polish says it is a feature of the browser, a different statement.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "47137b84",
@@ -796,6 +830,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says removing data may log the user out of websites and clear shopping carts (plural, conjunction \"and\"); the Polish narrows it to one page/one cart and changes the conjunction to \"or\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d4643cc5",
@@ -819,6 +854,7 @@
    "confidence": "medium"
   },
   "rationale": "A privacy report is a summary of blocked trackers, not a privacy notice/information statement; \"Informacja o prywatności\" corresponds to a different feature.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7de84051",
@@ -842,6 +878,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means adding an address formatted for the selected locale, not adding an address into the locale settings; the preposition \"do\" reverses the relationship.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "276bc1e1",
@@ -865,6 +902,7 @@
    "confidence": "high"
   },
   "rationale": "The source refers to two region values (home region and current region); the translation says \"local and regional values\", which is a different meaning and inconsistent with the neighbouring strings that use \"region lokalny\" and \"obecny region\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0d0df37c",
@@ -888,6 +926,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"emails, and messages\" generically, not specifically SMS.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "96ac6470",
@@ -911,6 +950,7 @@
    "confidence": "medium"
   },
   "rationale": "Per the developer comment %1$s is the language name (e.g. \"Spanish\") and %2$s the file size; the translation says \"delete this language (Spanish – 5 MB)\", changing the sentence structure and implying the placeholders are of the same kind.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3fa8ff1c",
@@ -934,6 +974,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the download should always happen in data saving mode; \"także\" means \"also/too\", which is a different statement.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "27657fe6",
@@ -957,6 +998,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the user has used up all their free masks; the translation says they were created, which does not convey the exhausted quota.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e2b71a65",
@@ -980,6 +1022,7 @@
    "confidence": "high"
   },
   "rationale": "\"Uniemożliwia komuś coś\" requires the accusative/nominative verbal noun \"używanie\", not genitive \"używania\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "17eb7844",
@@ -1003,6 +1046,7 @@
    "confidence": "high"
   },
   "rationale": "Polish punctuation requires a comma before the subordinate clause introduced by \"co\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "76b42c8c",
@@ -1026,6 +1070,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says %1$s is the app name and the notification reports the number of closed tabs; \"karty przeglądarki Firefox\" implies the tabs belong to a specific browser rather than being an app-name prefix, but the meaning shift is minor.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "094d5ad6",
@@ -1049,6 +1094,7 @@
    "confidence": "medium"
   },
   "rationale": "The source distinguishes singular (%d page) from plural (%d pages); the Polish singular string uses the same plural wording as history_search_group_sites_1, losing the distinction.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "994c34fd",
@@ -1072,6 +1118,7 @@
    "confidence": "medium"
   },
   "rationale": "The button takes the user to get the standalone product; \"Wypróbuj\" means \"Try\", which is a different call to action and duplicates the wording used for \"Try it now\" elsewhere.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1b8b9a62",
@@ -1095,6 +1142,7 @@
    "confidence": "high"
   },
   "rationale": "Source is \"Open VPN settings\" and the developer comment says it is a content description for a chevron button that opens the settings screen; the Polish only says \"VPN settings\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6cf9fdee",
@@ -1118,6 +1166,7 @@
    "confidence": "medium"
   },
   "rationale": "Per the developer comment, the platform is the external app, website, store or campaign that directed the user to Firefox, not necessarily where it was downloaded from.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ee6e39c7",
@@ -1141,6 +1190,7 @@
    "confidence": "medium"
   },
   "rationale": "Per the developer comment, the platform is the source that directed the user to Firefox, not the download source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0cddb05f",
@@ -1164,6 +1214,7 @@
    "confidence": "medium"
   },
   "rationale": "Per the developer comment, the platform is the source that directed the user to Firefox, not the download source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "76a2b3fa",
@@ -1187,6 +1238,7 @@
    "confidence": "medium"
   },
   "rationale": "Per the developer comment, the platform is the source that directed the user to Firefox, not the download source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0455c494",
@@ -1210,6 +1262,7 @@
    "confidence": "high"
   },
   "rationale": "The Polish idiom for \"in a snap\" is \"w mgnieniu oka\"; \"okna\" (of the window) is a typo producing nonsense.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0bb09f8f",
@@ -1233,6 +1286,7 @@
    "confidence": "high"
   },
   "rationale": "The enumeration after the preposition \"o\" requires the locative case (urządzeniu, konfiguracji, sposobie), not the genitive \"sposobu\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "861d432a",
@@ -1256,6 +1310,7 @@
    "confidence": "high"
   },
   "rationale": "Source says \"bookmarks, tabs, and passwords\"; \"historii\" means history, which is a different item.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d6803a4b",
@@ -1279,6 +1334,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Enable Gecko logs\"; the verb \"Enable\" is missing in the Polish string, changing the meaning of the preference.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "56d45054",
@@ -1302,6 +1358,7 @@
    "confidence": "medium"
   },
   "rationale": "Source specifies Google must be enabled in the setting above and be the active search engine while browsing; the Polish omits both qualifiers.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e24a939e",
@@ -1325,6 +1382,7 @@
    "confidence": "high"
   },
   "rationale": "Polish punctuation requires the subordinate clause to be closed with a comma before \"są przenoszone\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "99bc7547",
@@ -1348,6 +1406,7 @@
    "confidence": "high"
   },
   "rationale": "In the source the sharing is done with Mozilla's marketing technology partners; the Polish word order makes it say the user uses Firefox together with those partners.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1b58a806",
@@ -1371,6 +1430,7 @@
    "confidence": "medium"
   },
   "rationale": "The source distinguishes the section title \"Campaign measurement\" from the switch label \"Campaign measurement data\"; the Polish collapses both into the same string.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fc3d005b",
@@ -1394,6 +1454,7 @@
    "confidence": "high"
   },
   "rationale": "The source is the category header \"Privacy report\"; the Polish says \"Other features\", a completely different meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9eacb313",
@@ -1417,6 +1478,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says this is the title of a preference to enable/disable the privacy report feature; the target neither mentions enabling nor the report.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cb149d03",
@@ -1440,6 +1502,7 @@
    "confidence": "medium"
   },
   "rationale": "The pronoun \"ją\" agrees with \"witryna\" (the site), suggesting the user turn off the site rather than the tracking protection toggle described in the developer comment.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4bd50f1e",
@@ -1463,6 +1526,7 @@
    "confidence": "medium"
   },
   "rationale": "In Polish, \"zezwolić\" requires \"na + accusative\" (na otwarcie), not a bare infinitive.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "777436e3",
@@ -1486,6 +1550,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment marks this as the one-tab case; the plural form is used for recently_closed_tabs.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cfb92ba2",
@@ -1509,6 +1574,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Dziękujemy za pokochanie\" is not grammatical/idiomatic Polish; the source is a friendly thank-you for liking the app, not a thank-you for an act of \"loving\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "83e73aef",
@@ -1532,6 +1598,7 @@
    "confidence": "medium"
   },
   "rationale": "The source example URL is https://www.google.com/search?q=%s; the example URL should not be localized to a different domain, especially as the parallel suggestion-string example keeps google.com.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "685b33b7",
@@ -1555,6 +1622,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Enable Google Lens search\" includes the action \"Enable\", omitted in Polish.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "217320cd",
@@ -1578,6 +1646,7 @@
    "confidence": "medium"
   },
   "rationale": "The comment says %1$s is either a shortened URL or the actual deleted search term, so calling it a website is wrong in half the cases.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "22b842ed",
@@ -1601,6 +1670,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment explicitly states \"Search\" is a verb here — the screen lets users search through settings, not configure search. The current text duplicates search_settings_menu_item (\"Ustawienia wyszukiwania\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e05273d8",
@@ -1624,6 +1694,7 @@
    "confidence": "medium"
   },
   "rationale": "The locale uses the informal register; capitalized honorific \"Cię\" belongs to the formal/polite style used elsewhere in Mozilla pl.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9e894984",
@@ -1647,6 +1718,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is the Round of 16 stage of the tournament; Polish uses \"1/8 finału\" for that knockout stage, not \"druga runda\", which names a generic second round.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a7a87a2a",
@@ -1670,6 +1742,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is the Round of 32 knockout stage; Polish names it \"1/16 finału\", not a generic \"pierwsza runda\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cf60d93e",
@@ -1693,6 +1766,7 @@
    "confidence": "medium"
   },
   "rationale": "The source describes a single team slot that has not yet been determined; the Polish plural changes the meaning to multiple teams.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "114e2223",
@@ -1716,6 +1790,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states the sync service is offline/unreachable; \"Rozłączono\" says the user was disconnected, which is a different state. Polish Mozilla products use \"Offline\"/\"Tryb offline\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "67faae0e",
@@ -1739,6 +1814,7 @@
    "confidence": "medium"
   },
   "rationale": "Polish \"purpurowy\" denotes a crimson/dark red hue; the standard equivalent of English \"purple\" is \"fioletowy\". Colour labels are used for accessibility, so naming the wrong colour is misleading.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f19d6752",
@@ -1762,6 +1838,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means to create bookmarks for the selected tabs; the Polish says to add bookmarks to the tabs, which is not the intended action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5cc74b01",
@@ -1785,6 +1862,7 @@
    "confidence": "medium"
   },
   "rationale": "The button dismisses the Close Tabs Banner; \"Zamknij\" is the translation used elsewhere in this batch for \"Close\" and is ambiguous with closing tabs, misrepresenting the negative action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "07f36f2d",
@@ -1808,6 +1886,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: \"We’ve introduced a %1$s %2$s\" — %1$s modifies the Terms of Use (Firefox Terms of Use); \"z przeglądarki\" (from the browser) changes the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b910833b",
@@ -1831,6 +1910,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US: \"The tabs will remain open on this device\" — an affirmative statement about tabs remaining open, not a negative statement about closing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8971f6ec",
@@ -1854,6 +1934,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US uses the past tense \"Websites didn’t work properly\"; the Polish uses present tense.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ea4cd850",
@@ -1877,6 +1958,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US uses the past tense \"Videos, downloads, or media didn’t work\"; the Polish uses present tense.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "afb6f66d",
@@ -1900,6 +1982,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US \"Never show again\" refers to not showing the dialog; \"Nie pytaj ponownie\" is the translation used for \"Don’t ask again\" elsewhere in the batch.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2cb76c87",
@@ -1923,6 +2006,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Wypróbuj\" takes the accusative: \"odrobinę koloru\". \"odrobiny\" is ungrammatical here.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "879e6e20",
@@ -1946,6 +2030,7 @@
    "confidence": "medium"
   },
   "rationale": "The source asks what the user expected; the Polish double past construction \"powinno się było stać\" is grammatically clumsy and shifts meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "87fa39d8",
@@ -1969,6 +2054,7 @@
    "confidence": "medium"
   },
   "rationale": "The source lists three distinct actions: pay, check out, shop. The Polish repeats \"pay\" twice and drops the checkout step.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fa52da70",
@@ -1992,6 +2078,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: \"tries to reject cookie requests to dismiss annoying cookie banners\" and \"Manage cookie banner preferences\"; the Polish omits the cookie banner concept entirely in both sentences.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "33b9af1b",
@@ -2015,6 +2102,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Send crash report to Mozilla\"; \"Zgłoś awarię Mozilli\" reads as \"Report Mozilla's crash\" (genitive attached to awaria) rather than sending the report to Mozilla, and it is a checkbox label, not an action command.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a3d2f0b9",
@@ -2036,8 +2124,9 @@
   "locale": "pl",
   "origin": {},
   "rationale": "The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.",
-  "resolved_on": "",
-  "status": "open",
+  "reads_as_deliberate": false,
+  "resolved_on": "2026-08-24",
+  "status": "withdrawn",
   "string_hash": "a66578b3",
   "string_id": "firstrun_shortcut_text",
   "suggest": "",
@@ -2059,6 +2148,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a branding note meaning the tab is powered by the app; \"Funkcja %1$s\" says the opposite relation (that this is a feature of the app).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d149162d",
@@ -2082,6 +2172,7 @@
    "confidence": "medium"
   },
   "rationale": "The source label names the count of blocked trackers; \"Blokowanie\" means merely \"Blocking\" and drops the tracker concept.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2a970afa",
@@ -2105,6 +2196,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"No distractions\"; the Polish states the browser is goal-focused, which is a different claim.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b1deec65",
@@ -2128,6 +2220,7 @@
    "confidence": "high"
   },
   "rationale": "\"zarządzenie\" is a different word (an ordinance/decree); the gerund of \"zarządzać\" is \"zarządzanie\". Also \"Dodawanie ... adresami\" is ungrammatical since \"dodawanie\" requires the genitive.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dcc46b9d",
@@ -2151,6 +2244,7 @@
    "confidence": "high"
   },
   "rationale": "The source \"Remove custom URLs\" is plural (screen for removing multiple URLs); the translation says \"remove one other address\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4ad04ae9",

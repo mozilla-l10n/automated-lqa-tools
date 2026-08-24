@@ -14,6 +14,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to the content process crashing, not to \"content data\"; the added データ changes the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8d1efffb",
@@ -37,6 +38,7 @@
    "confidence": "high"
   },
   "rationale": "The closing { </li> } tags appear before the trailing Japanese text, so the sentences render outside the list items, unlike the en-US source where each sentence is fully inside { <li> }.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "11adc564",
@@ -60,6 +62,7 @@
    "confidence": "high"
   },
   "rationale": "The source sentence \"Please try again.\" ends with a period; the ja text omits the fullwidth 。 used elsewhere in the same string set.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "64a71d27",
@@ -83,6 +86,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"Check the device’s network connection\"; other strings in this file translate device as 端末.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d28a8c2a",
@@ -106,6 +110,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says “Is the device connected to an active network?”; ja renders it as “computer”, which names the wrong thing on a mobile app.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "aefc10d7",
@@ -129,6 +134,7 @@
    "confidence": "medium"
   },
   "rationale": "The source uses “mozilla.org:80” as the example; substituting a different domain (mozilla.jp) changes the content and misrepresents the brand's domain.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d645d228",
@@ -152,6 +158,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says “a server configuration issue and not your device”; ja renders device as computer, inconsistent with 端末 used elsewhere in the same file.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9a52092d",
@@ -175,6 +182,7 @@
    "confidence": "medium"
   },
   "rationale": "Same source string “Advanced…” in mozac_browser_errorpages_security_bad_cert_advanced is translated 詳細設定…; the two buttons on equivalent error pages should match.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ea00a0ff",
@@ -198,6 +206,7 @@
    "confidence": "medium"
   },
   "rationale": "The source reads “Is the device connected to an active network?”; ja says “computer”, which is not what the source names (other strings in this batch use 端末 for device).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8b72f9ef",
@@ -221,6 +230,7 @@
    "confidence": "medium"
   },
   "rationale": "The source's \"only be installed by\" (排他) is dropped, changing the meaning of why installation failed.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b62906b1",
@@ -244,6 +254,7 @@
    "confidence": "medium"
   },
   "rationale": "%1$s is the app name (Firefox); the source says \"a previous version of %1$s\", requiring の between バージョン and the app name.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "97fbe7a4",
@@ -267,6 +278,7 @@
    "confidence": "high"
   },
   "rationale": "Ungrammatical Japanese; the object marker を appears twice in the same clause. Source: \"the extension wants to collect: ...\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "34743d1c",
@@ -290,6 +302,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says to run only scripts from extensions or sources you trust; the Japanese reads \"extensions, or trusted sources\", dropping the trust qualifier from extensions and weakening the security warning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c3c031d7",
@@ -313,6 +326,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"%1$s is not compatible with your version of %2$s (version %3$s).\" — the possessive \"your version\" indicates the user's installed version.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "81e46727",
@@ -336,6 +350,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Supported add-ons checker\"; the channel is specifically about newly supported add-ons.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "29ccceb6",
@@ -359,6 +374,7 @@
    "confidence": "medium"
   },
   "rationale": "Source label is \"Last attempt:\" for the last add-on update attempt.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f617db91",
@@ -382,6 +398,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"No update available\" is a status value for one add-on; the translation says \"There are no add-ons available for update\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "515ae062",
@@ -405,6 +422,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Successfully updated\", a status field value with no subject noun.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "38d60805",
@@ -428,6 +446,7 @@
    "confidence": "high"
   },
   "rationale": "Source \"One or more extensions stopped working, making your system unstable.\" — the instability is the result of the stoppage, not an attribute of the extensions.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1d27ab52",
@@ -451,6 +470,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says it is the label for the destination URL of the link in the details section; 送信先 means the recipient of something sent (e.g. mail), not a navigation target.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5ee8be55",
@@ -474,6 +494,7 @@
    "confidence": "medium"
   },
   "rationale": "The comment states the suggestion represents an already opened tab and distinguishes it from history suggestions; 表示 does not convey switching.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "52839f75",
@@ -497,6 +518,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"If you close all Private tabs now\"; on Android this refers to tabs, not windows.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "227ad5d2",
@@ -520,6 +542,7 @@
    "confidence": "medium"
   },
   "rationale": "This is the name of the notification channel for download notifications, not a list UI; the established term is ダウンロード.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1e79e2dc",
@@ -543,6 +566,7 @@
    "confidence": "medium"
   },
   "rationale": "The source offers the option of choosing which tabs to close (the companion button leads to the tabs tray to select sensitive tabs); the translation just orders closing tabs.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "41c7e7b4",
@@ -566,6 +590,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a title labeling the suggested password, matching the sibling title \"Use strong password?\"; \"〜してください\" turns it into a command to the user.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9113c172",
@@ -589,6 +614,7 @@
    "confidence": "high"
   },
   "rationale": "The source means opening a new tab, not opening something in an existing/new tab; the particle で changes the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "723cc85e",
@@ -612,6 +638,7 @@
    "confidence": "medium"
   },
   "rationale": "The source scopes the checkbox to the current site; the sibling string ...site4 correctly includes 「このサイトでは」. Dropping it changes the meaning to a global setting.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e96fd301",
@@ -635,6 +662,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the one-time download enables %s to create page summaries that remain under the user's control (i.e. processed on device); the Japanese instead states the user can manage the summaries created by %s.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ef819939",
@@ -658,6 +686,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is passive and does not attribute the action to the user; 送信した reads as \"reports that (I) submitted\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f0e7aa00",
@@ -681,6 +710,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the longest fox is N; the target says \"my score is at most/longest N fox\", changing the meaning by introducing 得点 (score) and misplacing 最長.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bebcd51b",
@@ -704,6 +734,7 @@
    "confidence": "medium"
   },
   "rationale": "Per the developer comment, Talkback appends this to \"Double tap to…\", so it must be an action phrase like the other labels (折りたたむ, 展開する), not an imperative sentence addressed to the user.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d478a982",
@@ -727,6 +758,7 @@
    "confidence": "high"
   },
   "rationale": "The source uses “https://” and “http://” with proper closing right double quotation marks; the target repeats the left quote as the closing mark.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "051a3efa",
@@ -750,6 +782,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment states this is a key administrative division in countries like Nicaragua and Colombia, not a corporate/organizational department; 部門 means a division of an organization.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4431919a",
@@ -773,6 +806,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment clarifies this is the Postal Index Number used in India, an address/postal field, but the bare \"PIN\" in Japanese UI conventionally means a personal identification number.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "15697624",
@@ -796,6 +830,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this label is used when \"province\" should be used (non-Japanese addresses); 都道府県 specifically denotes Japanese prefectures and duplicates addresses_prefecture/addresses_state.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4ce99f03",
@@ -819,6 +854,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the user always has a choice within the app; the translation reads as the app itself having options, losing the user-agency meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c30a36bc",
@@ -842,6 +878,7 @@
    "confidence": "medium"
   },
   "rationale": "ai_controls_block_ai_description and ai_controls_blocked_info_banner use 「AI 機能強化」 for the same source term on the same screen; the inconsistency is confusing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "650d1597",
@@ -865,6 +902,7 @@
    "confidence": "high"
   },
   "rationale": "The source states a capability (\"you can unblock\"), not a directive; the translation tells the user to unblock, changing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ff2e4880",
@@ -888,6 +926,7 @@
    "confidence": "medium"
   },
   "rationale": "Per the developer comment the icon shows the logo surrounded by flames; 「炎上」 conveys an internet flaming scandal and is misleading.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f2ed03a7",
@@ -911,6 +950,7 @@
    "confidence": "medium"
   },
   "rationale": "Golden hour and magic hour are distinct terms; the icon name should transliterate the source name, consistent with 「ブルーアワー」 for Blue Hour.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a83b163a",
@@ -934,6 +974,7 @@
    "confidence": "high"
   },
   "rationale": "The source means a dark shade of purple for the app icon color variant; 小紫 names a shrub and does not convey \"dark purple\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "178081ce",
@@ -957,6 +998,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US string instructs the user to pick a language in order to manage the \"always translate\"/\"never translate\" preferences; the target changes the meaning and inserts \"in settings\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5cbf65ce",
@@ -980,6 +1022,7 @@
    "confidence": "medium"
   },
   "rationale": "\"sites in this language\" means sites written in this language (source language), not translating into this language.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bf4b3414",
@@ -1003,6 +1046,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to sites written in this language being offered for translation, not translation into this language; the parallel string automatic_translation_option_always_translate_summary_preference correctly uses 「この言語のページ」.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6865e244",
@@ -1026,6 +1070,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is the content description for the bookmark navigation bar back button; it navigates back in the bookmark folder hierarchy/screen, not to a previous web page.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0d5fe7a3",
@@ -1049,6 +1094,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means to sign in again in order to sync; the Japanese says \"log in and go back to Sync\", which changes the meaning (the caption string confirms the context is re-authentication for syncing).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5c924452",
@@ -1072,6 +1118,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a statement that fewer than 7 days remain to update, not an instruction phrased as \"within the remaining 7 days\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0278b650",
@@ -1095,6 +1142,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says features stop working on March 14, not \"from March 14 onward\"; the added 以降 is not in the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d1178760",
@@ -1118,6 +1166,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states features stop working tomorrow; 以降 adds \"onward\", which the source does not say.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "86648392",
@@ -1141,6 +1190,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment states \"Update\" is a noun; the source is a recommendation notice, not a command.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "427b1a41",
@@ -1164,6 +1214,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says there is a simpler way to keep tabs organized; \"さらに\" implies an additional degree beyond an existing easy method.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "172461a0",
@@ -1187,6 +1238,7 @@
    "confidence": "medium"
   },
   "rationale": "Same source verb \"clear\" on the same dialog surface should use one term consistently.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "557dbafa",
@@ -1210,6 +1262,7 @@
    "confidence": "medium"
   },
   "rationale": "Product/brand names must stay untranslated; the source is \"Google Lens\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6b665033",
@@ -1233,6 +1286,7 @@
    "confidence": "medium"
   },
   "rationale": "Product/brand names must stay untranslated; the source is \"Google Lens\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "55317acf",
@@ -1256,6 +1310,7 @@
    "confidence": "medium"
   },
   "rationale": "Product/brand names must stay untranslated; the source is \"Google Lens\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6c96ad74",
@@ -1279,6 +1334,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a generic \"Navigate back\" content description for the credit card feature top bar back button; \"ページ\" (page) introduces content not in the source and misdescribes the control.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0d5fe7a3",
@@ -1302,6 +1358,7 @@
    "confidence": "high"
   },
   "rationale": "The Debug Drawer Addresses feature is about postal addresses; sibling strings debug_drawer_add_new_address, debug_drawer_addresses_management_header and debug_drawer_delete_all_addresses all translate address as \"住所\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "27fcd6e7",
@@ -1325,6 +1382,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this navigates back within the debug drawer, not to a previous web page; \"ページ\" introduces content not in the source \"Navigate back\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "452866a8",
@@ -1348,6 +1406,7 @@
    "confidence": "medium"
   },
   "rationale": "Per the developer comment this is a text field label, not a descriptive sentence; the parallel button string debug_drawer_override_region uses the noun form \"上書き\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1b7eb1d0",
@@ -1371,6 +1430,7 @@
    "confidence": "medium"
   },
   "rationale": "Per the developer comment this is a text field label; sibling strings use the noun form \"上書き\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c1137dbd",
@@ -1394,6 +1454,7 @@
    "confidence": "high"
   },
   "rationale": "Source is \"Override home region permanently\"; without 恒久的に the label is indistinguishable from the temporary override actions.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3906b7a2",
@@ -1417,6 +1478,7 @@
    "confidence": "medium"
   },
   "rationale": "Inconsistent terminology within the same Debug Drawer Region Tools surface, where debug_drawer_region_tools_title, debug_drawer_home_region_label and debug_drawer_current_region_label all use リージョン.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "48017901",
@@ -1440,6 +1502,7 @@
    "confidence": "high"
   },
   "rationale": "The source says the entered quantity exceeded the maximum; \"達しました\" means merely reached it, which is a different condition for this error message.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3a3d1f18",
@@ -1463,6 +1526,7 @@
    "confidence": "medium"
   },
   "rationale": "%s is the app name (e.g. Firefox) and is the subject performing the deletion, not the location the data is removed from.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "21f19bb0",
@@ -1486,6 +1550,7 @@
    "confidence": "medium"
   },
   "rationale": "Source order is \"Today and yesterday\"; the translation reverses the terms.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "78684566",
@@ -1509,6 +1574,7 @@
    "confidence": "high"
   },
   "rationale": "The noun 「プライバシー」 requires the object particle 「を」 before 「保つ」; as written the sentence is ungrammatical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "42bfd114",
@@ -1532,6 +1598,7 @@
    "confidence": "medium"
   },
   "rationale": "The source string is the generic \"In progress\"; the Japanese states \"deleting\", which is a different (more specific) message than the source text.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8be33809",
@@ -1549,10 +1616,11 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "ja",
   "origin": {},
   "rationale": "ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "27fbf41b",
@@ -1576,6 +1644,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to social media trackers; \"SNS メディア\" is a redundant/incorrect coinage and inconsistent with the description string which uses ソーシャルネットワーク.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "39c4c85f",
@@ -1599,6 +1668,7 @@
    "confidence": "medium"
   },
   "rationale": "This is a button label; the source is an action the button performs, not a polite request to the user.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e4f90cb2",
@@ -1622,6 +1692,7 @@
    "confidence": "high"
   },
   "rationale": "The source says no traces are left on the device; the translation says the device is prevented from tracking, which is a different meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6fdbe6cb",
@@ -1645,6 +1716,7 @@
    "confidence": "medium"
   },
   "rationale": "The source describes a barrier between websites protecting data across tabs; the translation omits \"between websites\" and replaces \"barrier\" with a generic \"additional feature\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "12b2bcc7",
@@ -1668,6 +1740,7 @@
    "confidence": "medium"
   },
   "rationale": "%1$s is the app name used as a notification title prefix; \"%1$s のタブ\" wrongly reads as \"tabs belonging to <app>\" being closed, whereas the source states the app closed N tabs.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0e174c99",
@@ -1691,6 +1764,7 @@
    "confidence": "medium"
   },
   "rationale": "Elsewhere in the product \"trackers\" (blocked trackers card) is translated as トラッカー; 追跡者 means a person following someone and is inconsistent terminology on the same surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6de4ca1f",
@@ -1714,6 +1788,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"Access resets next month.\" without specifying the beginning of the month; the parallel snackbar string correctly renders it as 来月リセットされます。",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a45fc7c4",
@@ -1737,6 +1812,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Resets to %1$.0f GB on the first of every month.\" — %1$.0f is the total monthly allowance, not a remaining amount.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "613d2f87",
@@ -1760,6 +1836,7 @@
    "confidence": "medium"
   },
   "rationale": "Other strings in the same feature (e.g. ip_protection_data_limit_reached_description) use a space after \"GB\" before Japanese text.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f8fee61c",
@@ -1783,6 +1860,7 @@
    "confidence": "medium"
   },
   "rationale": "Developer comment says it is the top bar back button of the browser VPN settings screen; \"ページ\" (page) introduces content not in the source and is misleading for a settings screen.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0d5fe7a3",
@@ -1806,6 +1884,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to the camera permission being denied; Firefox ja consistently uses 許可/権限 for permission, not アクセス.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7c05edf0",
@@ -1829,6 +1908,7 @@
    "confidence": "medium"
   },
   "rationale": "likert_scale_option_1 renders \"Very satisfied\" as とても満足; the symmetric scale endpoint should use the same intensifier for consistency on the same surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f2918dea",
@@ -1852,6 +1932,7 @@
    "confidence": "medium"
   },
   "rationale": "Per the developer comment this content description is for going back and exiting the login detail view; \"ページ\" (page) is not accurate here.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0d5fe7a3",
@@ -1875,6 +1956,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means to leave/exit the logins screen; 移動する means \"to move\" and does not convey leaving.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2943708f",
@@ -1898,6 +1980,7 @@
    "confidence": "high"
   },
   "rationale": "The source \"Firefox is fast and private\" refers to privacy, not suitability for personal use.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dac842f5",
@@ -1921,6 +2004,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"Please consider allowing to help Firefox win\" refers, per the developer comment, to allowing via the \"Allow and Continue\" button; the Japanese omits \"allowing\" entirely and turns it into a vague request for support.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dd9c3add",
@@ -1944,6 +2028,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"Share how you discovered Firefox... with Mozilla's marketing partners\" describes what the app does/what the user opts into on this onboarding page; the Japanese \"共有してください\" is a polite command telling the user to share, changing who performs the action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2805e3c6",
@@ -1967,6 +2052,7 @@
    "confidence": "medium"
   },
   "rationale": "This is an opt-out checkbox label stating what will be shared; \"共有してください\" instructs the user to share instead of describing the app's behavior.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2805e3c6",
@@ -1990,6 +2076,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"All protected with encryption\"; 暗号 means \"cipher/code\", the standard Japanese term for encryption is 暗号化.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ef9d8eb8",
@@ -2013,6 +2100,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says the button navigates the user to show all of their history, not searches; 検索 means \"searches\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1ed86bc6",
@@ -2036,6 +2124,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"private tabs\", consistent with the other pbm_authentication_* strings that use プライベートタブ; \"private mode\" is a different concept.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b4712f95",
@@ -2059,6 +2148,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this marks a story as sponsored by a 3rd party; \"広告\" means \"advertisement\", a different concept from \"Sponsored\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d2454f6b",
@@ -2082,6 +2172,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"it shouldn’t use secure DNS\", not \"secure DNS provider\"; other strings in the same group translate \"secure DNS\" as 安全な DNS.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8f57d0bc",
@@ -2105,6 +2196,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says sites will not load or will not function properly; the translation reads as a single flat assertion, which misstates the conditional/alternative nature of the outcome.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1f4a7d6b",
@@ -2128,6 +2220,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states the user will see a security risk warning before the browser falls back to the system DNS; the current wording is vague about who warns and who uses the DNS.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dc21af11",
@@ -2151,6 +2244,7 @@
    "confidence": "medium"
   },
   "rationale": "The source label is simply \"Custom\", and the same source term is rendered \"カスタム\" elsewhere (preference_enhanced_tracking_protection_custom); \"URL を指定\" introduces content not in the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "66d53c0c",
@@ -2174,6 +2268,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to the most common problems, not to a large number of problems.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bdbe09c5",
@@ -2197,6 +2292,7 @@
    "confidence": "high"
   },
   "rationale": "Source \"see open tabs\" means displaying the list of currently open tabs; the target says the gesture opens a tab, which is a different action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "76154162",
@@ -2220,6 +2316,7 @@
    "confidence": "medium"
   },
   "rationale": "The source specifies cellular (mobile) data only, as clarified by the paired string about Wi-Fi; \"データ通信\" alone does not convey the cellular restriction.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c225fe98",
@@ -2243,6 +2340,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is the preference/title for managing address settings; related strings use 住所/アドレス. 「所在地フォーム」 means \"location form\", which is not what the source says.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "98246bfc",
@@ -2266,6 +2364,7 @@
    "confidence": "medium"
   },
   "rationale": "Sibling strings (preferences_credit_cards_add_credit_card_2, _manage_saved_cards_2, _sync_cards_across_devices) all translate \"card\" as 「カード情報」; only this one adds 「クレジット」, an inconsistency on the same settings surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7e9327f3",
@@ -2289,6 +2388,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is the name of a telemetry ping (\"Daily usage ping\"), not \"usage frequency\", and it contains no \"send\" verb. The related string preferences_daily_usage_ping_learn_more already uses 「日ごとの使用状況データ」, so this title is also inconsistent with it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "737b6142",
@@ -2312,6 +2412,7 @@
    "confidence": "medium"
   },
   "rationale": "The source specifies that the user will be logged out of most sites; the Japanese omits the scope and the log-out action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f7c3c78e",
@@ -2335,6 +2436,7 @@
    "confidence": "medium"
   },
   "rationale": "This is a delete-browsing-data item for downloads; the source is simply \"Downloads\" and 「一覧」 (list) adds meaning not in the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1e79e2dc",
@@ -2358,6 +2460,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"when I delete files\", not \"before deleting\"; the setting asks at deletion time which method to use.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a379a9d1",
@@ -2381,6 +2484,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is the preference for enabling URL autocomplete; the Japanese reverses the head/modifier and reads as \"autocomplete URL(s)\" as an object type rather than the feature of completing URLs.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3f15f42f",
@@ -2404,6 +2508,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a description of what the setting does (\"Share ... with Mozilla's marketing technology partners.\"), not an instruction telling the user to do something; \"〜してください\" turns it into a command.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a6b9a66c",
@@ -2427,6 +2532,7 @@
    "confidence": "medium"
   },
   "rationale": "The same feature name must be consistent on the same surface; preferences_privacy_report_title uses プライバシーレポート.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8ca23bfe",
@@ -2450,6 +2556,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means showing suggestions based on clipboard content; the target's \"から\" construction (\"display search suggestions from the clipboard\") is a different, awkward claim and inconsistent with other suggestion labels.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "043a6290",
@@ -2473,6 +2580,7 @@
    "confidence": "medium"
   },
   "rationale": "Mozilla's ja localization consistently uses プライバシー通知書 for the legal document \"Privacy Notice\"; プライバシー通知 reads as a notification rather than the policy document.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b53a9b19",
@@ -2496,6 +2604,7 @@
    "confidence": "medium"
   },
   "rationale": "The established Mozilla ja term for Enhanced Tracking Protection is 強化型トラッキング保護; the panel also uses 追跡防止 elsewhere, so the same source term appears in three different forms on one surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f0b96e95",
@@ -2519,6 +2628,7 @@
    "confidence": "medium"
   },
   "rationale": "protection_panel_banner_protected_blocked_trackers_description and protection_panel_etp_disabled_no_trackers_blocked render \"trackers\" as トラッカー; 追跡 means \"tracking\" (the act), not the trackers themselves.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3bfb2636",
@@ -2542,6 +2652,7 @@
    "confidence": "high"
   },
   "rationale": "The source says improvements happen between updates (remotely, without an app update), not \"with each update\" (更新ごとに).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6d98be74",
@@ -2565,6 +2676,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment explicitly notes \"may\" is used instead of \"will\" because behavior depends on the Android version; the translation asserts it will close.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bedd4fa5",
@@ -2588,6 +2700,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment states \"may\" is deliberate because whether the app closes depends on the Android version.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ed068c37",
@@ -2611,6 +2724,7 @@
    "confidence": "medium"
   },
   "rationale": "The source names the control (a menu for sorting passwords); the translation says \"sorts passwords\" and omits that it is a menu, misdescribing the control to screen reader users.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0e190d39",
@@ -2634,6 +2748,7 @@
    "confidence": "medium"
   },
   "rationale": "The source instructs opening a new tab (the widget action), not opening something in a new tab; 「で開く」 changes the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "723cc85e",
@@ -2657,6 +2772,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment states \"Search\" is a verb here — this is the title of the Settings Search screen, not the search-engine settings page (search_settings_menu_item).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "daa27baf",
@@ -2680,6 +2796,7 @@
    "confidence": "high"
   },
   "rationale": "A space is inserted between 中 and the fullwidth comma, unlike the parallel strings (e.g. setup_checklist_subtitle_5_steps_second_step) which write \"5 ステップ中、2 ステップ\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e9e3ef63",
@@ -2703,6 +2820,7 @@
    "confidence": "high"
   },
   "rationale": "A space precedes the fullwidth comma, inconsistent with the sibling strings that use \"5 ステップ中、2 ステップ\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "044a5b89",
@@ -2726,6 +2844,7 @@
    "confidence": "high"
   },
   "rationale": "A space precedes the fullwidth comma, inconsistent with the sibling strings that use \"6 ステップ中、2 ステップ\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6306b16b",
@@ -2749,6 +2868,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means sharing content to the target app fails; と implies mutual sharing with the app rather than sending to it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e2840314",
@@ -2772,6 +2892,7 @@
    "confidence": "medium"
   },
   "rationale": "The widget celebrates the winning national team in a soccer tournament; 優勝者 denotes an individual person, which misnames the subject.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0bca4103",
@@ -2795,6 +2916,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment asks for a single-character equivalent where one exists; Japanese has 時 for hours, and 時間 risks truncation issues in the countdown pill.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "38c03eb0",
@@ -2818,6 +2940,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is \"Remaining time. Days: %1$d. Hours: %2$d. Minutes: %3$d.\" with no mention of a match start; adding 試合開始まで introduces content not in the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "15fe46e8",
@@ -2841,6 +2964,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is just \"%1$s %2$d, %3$s %4$d, %5$s, live\"; the added unit \"ポイント\" introduces content not present and mislabels soccer goals as points.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "90309c0c",
@@ -2864,6 +2988,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Elapsed time in minutes: %1$s\" where the unit qualifies the label, not the value; the clock value can be \"90+3\", so \"90+3 分\" reads incorrectly.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "81ea3653",
@@ -2887,6 +3012,7 @@
    "confidence": "medium"
   },
   "rationale": "Round of 16 is the last-16 stage; 「ラウンド 16」 reverses the meaning of the numeral (it reads as \"the 16th round\") and the standard term is ベスト16/決勝トーナメント1回戦.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4a2c6162",
@@ -2910,6 +3036,7 @@
    "confidence": "medium"
   },
   "rationale": "The source asks the user to check back; the translation drops the call to action and asserts that information will be updated.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c1b7fb63",
@@ -2933,6 +3060,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says this is a section header for upcoming soccer matches; 近日公開 means \"coming soon (release)\" and is wrong for scheduled matches.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a215b385",
@@ -2956,6 +3084,7 @@
    "confidence": "medium"
   },
   "rationale": "\"feature studies\" refers to studies/experiments testing features, not surveys of feature usage.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c31543af",
@@ -2979,6 +3108,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says only \"Scan the code\"; the translation introduces the specific term \"QR\" that the source does not contain.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "84ba4fac",
@@ -3002,6 +3132,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"View tab group\"; elsewhere in this batch \"tab group\" is consistently rendered as タブグループ.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "becb9690",
@@ -3025,6 +3156,7 @@
    "confidence": "medium"
   },
   "rationale": "The source instructs the user to create a new tab in order to start searching; the translation omits the tab-creation action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2a4ce0f5",
@@ -3048,6 +3180,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means fetching tabs belonging to any of the user's devices; the translation says \"take out tabs from any device (you use)\", changing the object of \"any device\" from the source device of the tabs to the device in hand.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cdd55cd9",
@@ -3071,6 +3204,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states the groups are saved here and ready whenever the user is; the translation omits that they are saved here.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2408013c",
@@ -3094,6 +3228,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says scrolling is reduced (\"less\"), not eliminated, and \"more doing\" refers to getting things done, not navigating.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "416096f2",
@@ -3117,6 +3252,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: tabs you haven’t viewed over the past month.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9f9d9f25",
@@ -3140,6 +3276,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says tabs not viewed for two weeks; \"以上\" introduces an \"or more\" qualifier absent from en-US.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2c995e53",
@@ -3163,6 +3300,7 @@
    "confidence": "medium"
   },
   "rationale": "The button enables the auto-close setting; the translation reads as an immediate close-tabs action instead of turning a feature on.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "101eca34",
@@ -3186,6 +3324,7 @@
    "confidence": "medium"
   },
   "rationale": "Parallel string tabs_header_private_tabs_counter_title uses \"開いているプライベートタブ\"; \"通常の開いているタブ\" misplaces the modifier.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fb69c64f",
@@ -3209,6 +3348,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Synced\" should modify \"tabs\", parallel to the private tabs string \"開いているプライベートタブ\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "47bb73aa",
@@ -3232,6 +3372,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment states this is the link text \"here\" inserted into \"You can learn more %1$s.\"; rendering it as \"利用規約\" changes the content and conflicts with terms_of_use_prompt_link_terms_of_use.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9b84c2b6",
@@ -3255,6 +3396,7 @@
    "confidence": "medium"
   },
   "rationale": "Source means downloading language files is permitted even while Android data saver is on; the current wording reads as if downloading should always happen in data-saving mode.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "182c2f8a",
@@ -3278,6 +3420,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is about offering/suggesting a translation, not sending a notification; other strings in this batch use 翻訳機能を提供する/翻訳を提案 for \"offer to translate\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5e406547",
@@ -3301,6 +3444,7 @@
    "confidence": "medium"
   },
   "rationale": "All sibling reason strings (サイトが読み込まれない, サイトの動作が遅い, etc.) use plain form; this one uses です polite form, breaking register consistency within the same dropdown.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6f7c6efb",
@@ -3324,6 +3468,7 @@
    "confidence": "high"
   },
   "rationale": "\"right in the app\" means \"directly within the app\", not \"appropriately\" (適切に).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "12d12306",
@@ -3347,6 +3492,7 @@
    "confidence": "medium"
   },
   "rationale": "The ja tree uses fullwidth punctuation (e.g. enable_search_suggestion_title2 uses ？).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7d1f2ed4",
@@ -3370,6 +3516,7 @@
    "confidence": "medium"
   },
   "rationale": "The ja tree uses fullwidth punctuation; sibling strings in this batch use ？.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b4a06f9c",
@@ -3393,6 +3540,7 @@
    "confidence": "medium"
   },
   "rationale": "In the source \"when possible\" qualifies the automatic rejection of cookie requests, not the extent of banner reduction.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e9599eac",
@@ -3416,6 +3564,7 @@
    "confidence": "high"
   },
   "rationale": "The source means a request for the site to be supported (by cookie banner reduction) was submitted, not a request sent to a support site.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d7e68e5d",
@@ -3439,6 +3588,7 @@
    "confidence": "high"
   },
   "rationale": "The source means a request to add support for this site was submitted; the Japanese says a request was sent to a support site.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d7e68e5d",
@@ -3462,6 +3612,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means adding the current site to the Shortcuts list (per developer comment), i.e. 「ショートカットに追加」; 「ショートカットを追加」 says a shortcut is being created rather than added to Shortcuts.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "85642802",
@@ -3485,6 +3636,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to trackers (tracking scripts/entities), which Mozilla ja consistently renders as トラッカー; 追跡 means the act of tracking, not the trackers themselves.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "392d18b5",
@@ -3508,6 +3660,7 @@
    "confidence": "medium"
   },
   "rationale": "The source only says \"the error may be temporary\"; the instruction to try again later is invented.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a9e89a79",
@@ -3531,6 +3684,7 @@
    "confidence": "medium"
   },
   "rationale": "The source names a data item (a daily usage ping), not a frequency of use; \"使用頻度\" (usage frequency) is wrong content and the added \"送信する\" is not in the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "737b6142",
@@ -3554,6 +3708,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"You have disabled content blocking for these websites.\" describes the current state of the exception list; the translation reads as \"will disable\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "83ef27cc",
@@ -3577,6 +3732,7 @@
    "confidence": "medium"
   },
   "rationale": "Per the developer comment the preference switches to the newly opened tab immediately; the translation says switching to a link located inside a new tab.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e5982480",
@@ -3600,6 +3756,7 @@
    "confidence": "high"
   },
   "rationale": "Source: \"Embedded on sites to track your visits and to display functionality like share buttons\" — the second purpose is providing/displaying features such as share buttons, not the tracker itself appearing like a share button.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bfcd6d61",
@@ -3623,6 +3780,7 @@
    "confidence": "medium"
   },
   "rationale": "The source lists two kinds of sites (dangerous and deceptive); the translation merges them into one, narrowing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8c881702",
@@ -3646,6 +3804,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is a header for the list of installed search engines; 選択可能 (selectable) states something different from the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "84a226c0",
@@ -3669,6 +3828,7 @@
    "confidence": "medium"
   },
   "rationale": "The paired string \"For sites you add\" is translated 追加したサイト; here 人気サイト mistranslates \"top sites\", which elsewhere in Focus (remove_top_site / rename_top_site context) refers to the Top Sites feature.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "911754b8",
@@ -3692,6 +3852,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: \"An installed search engine is already using that name.\" The error is about the name entered by the user being taken; the Japanese reads as if a same-named engine is installed, dropping the reference to the entered name.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c9dfcc11",

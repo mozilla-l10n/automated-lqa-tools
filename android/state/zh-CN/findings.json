@@ -14,6 +14,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment states %1$s is replaced with the URL of the current page, not the domain name.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "806ab73d",
@@ -37,6 +38,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"removed, moved, or file permissions may be preventing access\"; the translation reverses the order of removed/moved and renders \"file permissions may be preventing access\" as simply lacking permission.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b80a8ffd",
@@ -60,6 +62,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"Internet provider\" (ISP), which is not necessarily a telecom carrier.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1cc7e97c",
@@ -83,6 +86,7 @@
    "confidence": "high"
   },
   "rationale": "Grammatically incomplete: 您 requires 的 before 网络连接 (source: \"Check the device's network connection.\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1cc7e97c",
@@ -106,6 +110,7 @@
    "confidence": "high"
   },
   "rationale": "Source reads \"Is the device connected to an active network?\"; on Android the term is device (设备), not computer, and other strings in the same file use 设备.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fcd5db3a",
@@ -129,6 +134,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: \"normally used for purposes other than Web browsing\" — the port does have a normal use, just not browsing; the translation states it is normally not used for browsing, losing/altering the meaning conveyed by <em>other</em>.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "063b59d1",
@@ -152,6 +158,7 @@
    "confidence": "medium"
   },
   "rationale": "The same source sentence in mozac_browser_errorpages_unknown_proxy_host_message is rendered 互联网服务提供商; 电信运营商 names a different entity.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "62f47866",
@@ -175,6 +182,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"not your device\"; the target says computer, which is wrong on Android.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cde102c2",
@@ -198,6 +206,7 @@
    "confidence": "medium"
   },
   "rationale": "The source distinguishes \"attack site\" (malware string) from \"potentially harmful site\"; using 攻击行为 for both mistranslates and conflicts with the title 有恶意网站问题.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c09317f8",
@@ -221,6 +230,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"does not trust X because its certificate issuer is unknown, the certificate is self-signed, or...\"; without 因为 the Chinese asserts these as facts rather than possible reasons.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8c773ce6",
@@ -244,6 +254,7 @@
    "confidence": "high"
   },
   "rationale": "\"联系向\" is not valid Chinese; the source is \"Please contact the website owners to inform them of this problem.\"",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "de286b7f",
@@ -267,6 +278,7 @@
    "confidence": "high"
   },
   "rationale": "Source says \"the device\", not \"the computer\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "269aa158",
@@ -290,6 +302,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is the content description for the close button of a CFR popup; screen readers should announce \"Dismiss/Close\", not an acknowledgement label. Other strings in the batch translate Dismiss as 关闭.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "568f5194",
@@ -313,6 +326,7 @@
    "confidence": "medium"
   },
   "rationale": "The source only says support for an initial selection of Recommended Extensions is being built; there is no invitation to come back later.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "53f243e3",
@@ -336,6 +350,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to data for sites within the listed domains, not data the user uses for the domains.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4ab5fdab",
@@ -359,6 +374,7 @@
    "confidence": "medium"
   },
   "rationale": "mozac_feature_addons_permissions_history_description (\"Access browsing history\") is translated as 获取浏览历史 while its _for_update twin with identical source wording uses 访问浏览历史; the same term must be rendered consistently on the same surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3f5f07b8",
@@ -382,6 +398,7 @@
    "confidence": "high"
   },
   "rationale": "存取 is not standard zh-CN terminology here; the paired _for_update string uses 获取 for the same source wording.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8b9301f6",
@@ -405,6 +422,7 @@
    "confidence": "high"
   },
   "rationale": "The source distinguishes domains from sites; the parallel _for_update string correctly uses 域名, and this string is identical to the \"other sites\" string, erasing the distinction.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ff0d2294",
@@ -428,6 +446,7 @@
    "confidence": "high"
   },
   "rationale": "The source means data located on other sites, not data used for other sites; the parallel string mozac_feature_addons_permissions_extra_sites_description_2 correctly uses 访问您在其他网站的数据.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "52bf20d8",
@@ -451,6 +470,7 @@
    "confidence": "high"
   },
   "rationale": "Source is \"Provide cryptographic authentication services.\"; \"密码认证\" means password authentication, which is a different concept and inconsistent with mozac_feature_addons_permissions_pkcs11_description.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "620e56dc",
@@ -474,6 +494,7 @@
    "confidence": "medium"
   },
   "rationale": "The source reads \"Show fewer sites\" and the counterpart string is translated as \"显示所有网站\"; \"折叠\" omits the object and is inconsistent with the paired label.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6c327d81",
@@ -497,6 +518,7 @@
    "confidence": "medium"
   },
   "rationale": "The source names the channel \"Supported add-ons checker\"; \"新\" (new) is not present in the source string.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "31d4ac26",
@@ -520,6 +542,7 @@
    "confidence": "high"
   },
   "rationale": "Source distinguishes data collection from permissions; the sibling string mozac_feature_addons_updater_notification_heading_permissions already uses 新必要权限, so this rendering is both wrong and ambiguous.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "83df24fb",
@@ -543,6 +566,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"Open in another app\" requires \"在……中打开\" or at least \"用其他应用打开\"; the current text lacks any preposition and reads ungrammatically, inconsistent with the sibling string \"用其他应用打开链接？\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a701585c",
@@ -566,6 +590,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is simply \"Search %1$s\" where %1$s is the app name; the target adds \"saved logins in\" which is not in the source string.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7a60c089",
@@ -589,6 +614,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means the user picks which tabs to close; the Chinese reads as \"select a tab in order to close\", which is ambiguous/incorrect.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e4b3282d",
@@ -612,6 +638,7 @@
    "confidence": "high"
   },
   "rationale": "The comment says it is the title of a loading dialog showing progress; the parallel bookmarks string uses 正在导入书签.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3cc79f3f",
@@ -635,6 +662,7 @@
    "confidence": "medium"
   },
   "rationale": "The source deliberately says \"cards\", not \"credit cards\"; narrowing it to 信用卡 changes the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3de2fefa",
@@ -658,6 +686,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to an identity/login provider (a service), not a login method; the related string uses %1$s as the provider name.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c4a79a3e",
@@ -681,6 +710,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Use %1$s as a login provider\" states the provider role; the translation only says \"log in with %1$s\", losing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c8743dc2",
@@ -704,6 +734,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: \"%s encrypts your card number.\" — no mention of saving in that clause; the next sentence contrasts that the security code won't be saved.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8a8e6637",
@@ -727,6 +758,7 @@
    "confidence": "medium"
   },
   "rationale": "The source was deliberately shortened from \"Remember decision for this site\" (v2 string) to \"Remember for this site\"; the target duplicates the v2 translation verbatim.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cc093579",
@@ -750,6 +782,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: \"You'll need to allow notifications in %1$s\" — the Android app-level notification permission for the app (%1$s is the app name), not a per-site permission.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b9ca3192",
@@ -773,6 +806,7 @@
    "confidence": "medium"
   },
   "rationale": "In Chinese 摘要 as a verb after 由…is not idiomatic; the source is a noun phrase attributing the summary to the model.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e7b3a4ff",
@@ -796,6 +830,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a dismiss button; \"知道了\" means \"Got it/OK\", an acknowledgement rather than dismissal.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "568f5194",
@@ -819,6 +854,7 @@
    "confidence": "medium"
   },
   "rationale": "The source offers creating a new account as the alternative to using an existing one; without \"新\" the contrast between the two options is lost.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ff09a467",
@@ -842,6 +878,7 @@
    "confidence": "medium"
   },
   "rationale": "The source asks whether the user wants to summarize with a shake; the translation converts it into a feature-enablement prompt wording that differs from the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "aced3951",
@@ -865,6 +902,7 @@
    "confidence": "medium"
   },
   "rationale": "Per the developer comment the button sends the crash report to Mozilla; other strings in the same file use 崩溃报告 for \"crash report\", so 报告/发送报告 is the consistent term.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d2647cf4",
@@ -888,6 +926,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this button dismisses the dialog; 隐藏 means \"hide\", which is a different action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "64dfcf77",
@@ -911,6 +950,7 @@
    "confidence": "medium"
   },
   "rationale": "The established zh-CN term for the Duplicate tab menu option is 复制标签页; 克隆 is inconsistent terminology.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "162a26f5",
@@ -934,6 +974,7 @@
    "confidence": "medium"
   },
   "rationale": "zh-CN convention is fullwidth punctuation, as used in e.g. 询问是否翻译（默认）.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "68276599",
@@ -957,6 +998,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to loading the list of languages in translation settings, not downloadable language packs.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1e705ec1",
@@ -980,6 +1022,7 @@
    "confidence": "medium"
   },
   "rationale": "Source states the app will never offer (prompt) to translate, not that it will never translate; the parallel \"offer to translate\" string is rendered 询问是否翻译.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "08089bf6",
@@ -1003,6 +1046,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"Fill link from clipboard\"; filling the URL bar differs from opening the link.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d2a34a4c",
@@ -1026,6 +1070,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is the content description for the bookmark navigation bar back button, i.e. navigating back to the previous bookmarks screen, not browsing a previous web page.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a704474f",
@@ -1049,6 +1094,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says this is a bottom sheet handlebar; \"表单\" means \"form\", not a bottom sheet panel (面板/底部弹出面板).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c83d26d7",
@@ -1072,6 +1118,7 @@
    "confidence": "medium"
   },
   "rationale": "The same source term \"Reader View\" is translated inconsistently within the same browser menu surface (see \"定制阅读器视图\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9d5939ee",
@@ -1095,6 +1142,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means removing the current site from the shortcuts section on the home page; the current wording reads as deleting a shortcut object and loses the \"from shortcuts\" relation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "add3fdb7",
@@ -1118,6 +1166,7 @@
    "confidence": "high"
   },
   "rationale": "The zh-CN convention is fullwidth punctuation; other dialog titles in this batch use “？” (e.g. 关闭标签页并删除群组？).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "32f7950a",
@@ -1141,6 +1190,7 @@
    "confidence": "medium"
   },
   "rationale": "Source refers to a tab group; 群组 in Firefox zh-CN means a group of people/chat group, while tab groups are 分组.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "22463431",
@@ -1164,6 +1214,7 @@
    "confidence": "medium"
   },
   "rationale": "The dialog concerns a tab group; 群组 is the term for a group of people, not a tab group.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e9d9e830",
@@ -1187,6 +1238,7 @@
    "confidence": "medium"
   },
   "rationale": "The dialog concerns deleting a tab group; 群组 is the wrong term for tab groups in Firefox zh-CN.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "24ad748e",
@@ -1210,6 +1262,7 @@
    "confidence": "medium"
   },
   "rationale": "The source option label is \"Never\"; the separate summary string already conveys \"Close manually\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dc4ba513",
@@ -1233,6 +1286,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says the button navigates back to the Settings page from the Settings Search screen; \"浏览上一页\" describes browsing a previous web page, not returning to the previous screen.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a704474f",
@@ -1256,6 +1310,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Group %d\", a plain default name (compare create_collection_default_name \"收藏集 %d\"); the added curly quotes are spurious and inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7aeade47",
@@ -1279,6 +1334,7 @@
    "confidence": "medium"
   },
   "rationale": "The comment says this is the content description for the top bar back button in the credit card feature; it should say \"go back\", not \"browse the previous page\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a704474f",
@@ -1302,6 +1358,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to sponsored shortcuts on the home screen, not sponsor websites.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "86fa2c7b",
@@ -1325,6 +1382,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a section header listing debug locales; it contains no verb \"select\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f67d5fa4",
@@ -1348,6 +1406,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this content description is for navigating back within the debug drawer, not browsing a previous web page.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a704474f",
@@ -1371,6 +1430,7 @@
    "confidence": "high"
   },
   "rationale": "Source is simply \"Follow device language\"; the standards reference is invented content shown to users.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a7226f62",
@@ -1394,6 +1454,7 @@
    "confidence": "medium"
   },
   "rationale": "The menu item deletes a top site from history, not the history itself.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "213093d2",
@@ -1417,6 +1478,7 @@
    "confidence": "medium"
   },
   "rationale": "Tab group terminology should be consistent with 分组 used in delete_history_group_snackbar; 群组 denotes a social group.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "22463431",
@@ -1440,6 +1502,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says the error occurs when fetching the list of languages, not language packages.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1e705ec1",
@@ -1463,6 +1526,7 @@
    "confidence": "high"
   },
   "rationale": "The source is the content description of the toolbar back button, meaning navigate back in the app UI, not browsing to the previous web page.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a704474f",
@@ -1484,8 +1548,9 @@
   "locale": "zh-CN",
   "origin": {},
   "rationale": "The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.",
-  "resolved_on": "",
-  "status": "open",
+  "reads_as_deliberate": false,
+  "resolved_on": "2026-08-24",
+  "status": "withdrawn",
   "string_hash": "134b14ec",
   "string_id": "downloads_delete_dialog_title",
   "suggest": "",
@@ -1507,6 +1572,7 @@
    "confidence": "medium"
   },
   "rationale": "Same source string \"Navigate back\" in content descriptions should use one consistent rendering; the two current variants differ.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0ebf0b97",
@@ -1530,6 +1596,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"cookies that ad networks and analytics companies use\"; the Chinese mentions only 网络分析公司 (analytics companies), omitting ad networks.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ea34247c",
@@ -1553,6 +1620,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says Total Cookie Protection isolates cookies to the site you're on; the added \"完全\" (completely) is an unsupported intensifier.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e73440d1",
@@ -1576,6 +1644,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states it stops suspected fingerprinters; \"有助于\" (helps) is not in the source and \"可疑程序\" is a vaguer term than the established 存疑的数字指纹跟踪程序 used in the paired title string.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "92365b0e",
@@ -1599,6 +1668,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"%1$s tabs closed: %2$d\" is a notification title where %1$s is the app name; the Chinese reformulation \"已关闭 [app] 中的 N 个标签页\" changes the meaning to tabs located inside the app being closed, and the tabs were actually closed from another device.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0c24442e",
@@ -1622,6 +1692,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is a generic \"%1$d selected\" count for the multi-select app bar; the target invents a noun (\"history items\") not in the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fc85ae27",
@@ -1645,6 +1716,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a prompt asking the user why they are uninstalling, not an action that uninstalls the app.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8e3f565c",
@@ -1668,6 +1740,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a short button label; \"标签页功能\" is not in the source and makes the label drastically longer.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5a6fee3e",
@@ -1691,6 +1764,7 @@
    "confidence": "medium"
   },
   "rationale": "\"一个月内\" reads as \"within one month\"; the source means tabs not viewed during the past month (i.e. unused for over a month). Also \"自动\" is not in the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d0f6aa61",
@@ -1714,6 +1788,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a label-colon-value format; the translation restructures it, losing the label form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0092ea88",
@@ -1737,6 +1812,7 @@
    "confidence": "medium"
   },
   "rationale": "The source reads \"%1$d GB of VPN data used\"; the Chinese word order makes \"%1$d GB VPN 流量\" the subject of \"已用完\" awkwardly and reads as a fragment. Reordering keeps the meaning and grammar.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8d1268cc",
@@ -1760,6 +1836,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says this is the content description for the settings screen top bar back button; \"浏览上一页\" wrongly implies browsing to a previous web page.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a704474f",
@@ -1783,6 +1860,7 @@
    "confidence": "medium"
   },
   "rationale": "Other strings in the same feature use \"二维码\" for QR (e.g. lens_camera_qr_no_code_found); \"扫码器\" is inconsistent and vaguer than the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f3e3e908",
@@ -1806,6 +1884,7 @@
    "confidence": "medium"
   },
   "rationale": "The toast appears when the user denies the camera permission; \"拒绝访问\" loses the notion of a permission and reads as an imperative/ambiguous phrase.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5a002767",
@@ -1829,6 +1908,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"companies\", not \"big companies\"; also \"your clicks\" is generalized to \"浏览活动\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "32583225",
@@ -1852,6 +1932,7 @@
    "confidence": "medium"
   },
   "rationale": "Firefox zh-CN consistently uses 深色/浅色 for dark/light theme options; \"深邃\" (profound) is not the established term.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "97670826",
@@ -1875,6 +1956,7 @@
    "confidence": "medium"
   },
   "rationale": "Firefox zh-CN consistently uses 浅色 for the light theme; \"明亮\" is inconsistent with the paired dark option and product terminology.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1e41beb7",
@@ -1898,6 +1980,7 @@
    "confidence": "medium"
   },
   "rationale": "The source has no equivalent of \"纯粹\"; the sentence means browsing has just become better.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d078097d",
@@ -1921,6 +2004,7 @@
    "confidence": "high"
   },
   "rationale": "The source shares only the fact that the user uses Firefox, not how they use it; the translation states more data is shared than the source says.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4552cc6a",
@@ -1944,6 +2028,7 @@
    "confidence": "high"
   },
   "rationale": "The source shares only the fact that the user uses Firefox, not how they use it; the translation overstates the data shared.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4552cc6a",
@@ -1967,6 +2052,7 @@
    "confidence": "high"
   },
   "rationale": "Source lists bookmarks, tabs, and passwords; the target says bookmarks, history, and passwords.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f740152b",
@@ -1990,6 +2076,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says you can set Firefox to automatically open links in apps; the target says you can set Firefox as the way links are opened, which is a different statement.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8ff64518",
@@ -2013,6 +2100,7 @@
    "confidence": "medium"
   },
   "rationale": "The preference means the app opens on the last-open tab when relaunched; \"打开最近的标签页\" reads as an action to open a recent tab, not the startup behavior.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fcd7ccc4",
@@ -2036,6 +2124,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a simple \"<engine> search\" header; inserting \"·\" changes the typography without basis in the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f46fbc92",
@@ -2059,6 +2148,7 @@
    "confidence": "medium"
   },
   "rationale": "Source only says to scan the QR code shown at firefox.com/pair; the target instructs the user to open the site and then scan.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fd3440d8",
@@ -2082,6 +2172,7 @@
    "confidence": "medium"
   },
   "rationale": "\"显示所有过去探索\" lacks a proper noun phrase in Chinese; screen readers will read an incomplete phrase.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4511cc7c",
@@ -2105,6 +2196,7 @@
    "confidence": "medium"
   },
   "rationale": "The preference names the dark theme; \"深邃\" means \"profound/deep (abstract)\" and is not the established term for dark theme in zh-CN.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "97670826",
@@ -2128,6 +2220,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to the network, not to a network device.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a9ce75e4",
@@ -2151,6 +2244,7 @@
    "confidence": "medium"
   },
   "rationale": "Source states a simple negative future (\"won't use\"), not a change from previous behavior (\"no longer\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7b06ced5",
@@ -2174,6 +2268,7 @@
    "confidence": "medium"
   },
   "rationale": "Source emphasizes \"Always warn\"; the translation omits \"always\", which distinguishes Max Protection from other levels.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7ea9381d",
@@ -2197,6 +2292,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"%1$s will always use secure DNS\"; \"始终\" (always) not \"只会\" (only).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dc93f27c",
@@ -2220,6 +2316,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"cards\", and sibling strings (Add card → 添加卡片, Sync cards → 同步卡片信息) use 卡片; the feature is \"payment methods\", not specifically credit cards.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a989b640",
@@ -2243,6 +2340,7 @@
    "confidence": "medium"
   },
   "rationale": "Source uses the generic term \"cards\"; the related string preferences_credit_cards_sync_cards uses 卡片信息.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cfa206be",
@@ -2266,6 +2364,7 @@
    "confidence": "medium"
   },
   "rationale": "This is the summary showing the current state (\"On in private tabs\"), parallel to preferences_https_only_on_all which uses 开启; using 启用 duplicates the option label preferences_https_only_in_private_tabs and breaks consistency between state and option strings.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ac64c30e",
@@ -2289,6 +2388,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a noun preference label naming the feature; the Chinese renders it as an imperative verb phrase meaning \"share link\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a8131ff6",
@@ -2312,6 +2412,7 @@
    "confidence": "medium"
   },
   "rationale": "Chinese punctuation convention does not use 、 immediately before 或 in a coordinated list; the source has \"or\" without a preceding separator in this position for zh-CN style.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a281f096",
@@ -2335,6 +2436,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment states \"That you use it\" means sharing the fact that the user continues to use Firefox, not what they use it for; \"使用方式\" means \"the way you use it\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ef07f61c",
@@ -2358,6 +2460,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is an imperative preference action \"Take Survey\"; the target only names the object, not the action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "81cd0b71",
@@ -2381,6 +2484,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Search %s\" means search using/at the named engine; Chinese needs 在…上搜索 or 使用 %s 搜索; \"%s 上搜索\" lacks the required preposition.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3e3a5ccc",
@@ -2404,6 +2508,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to private sessions; on Android there are no windows, so \"隐私窗口\" names the wrong concept.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7006eabd",
@@ -2427,6 +2532,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"You’re halfway there! Three steps finished and 2 to go.\"; the parallel 6-step string keeps both clauses (已完成 3 个步骤，还有 3 步), so the omission of the completed-count is a content loss and inconsistency.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "da6feeaa",
@@ -2450,6 +2556,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states the limit has been reached, not exceeded.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "81b67830",
@@ -2473,6 +2580,7 @@
    "confidence": "medium"
   },
   "rationale": "Source instructs the user to open Firefox and navigate to the pairing URL; the target reads as if the URL should be opened using Firefox from the computer, losing the two-step instruction.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "43324abd",
@@ -2496,6 +2604,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a readiness status message, not a call to action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "911f35e0",
@@ -2519,6 +2628,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is an action menu item meaning to change the selected team; the target drops the action and is also inconsistent with 球队 used in neighboring sports widget strings.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f4fe5beb",
@@ -2542,6 +2652,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to a bottom sheet UI element, not a form; 表单 means form/questionnaire.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6cec9858",
@@ -2565,6 +2676,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment asks for a single character equivalent where one exists; Chinese has 时 as the standard single-character abbreviation for hour, and the string is truncated to 2 characters in a countdown pill.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e766a377",
@@ -2588,6 +2700,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment asks for a single-character equivalent if the language has one; 分 is the standard single-character abbreviation for minute.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1a36ee20",
@@ -2611,6 +2724,7 @@
    "confidence": "high"
   },
   "rationale": "The source is \"England\", the national football team/country entry distinct from Scotland; 英国 means the whole United Kingdom, which is a different entity and inconsistent with 苏格兰 in the sibling string.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f74322b5",
@@ -2634,6 +2748,7 @@
    "confidence": "medium"
   },
   "rationale": "zh-CN uses fullwidth punctuation without surrounding spaces; the spaced dash copies English spacing conventions.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "54735a06",
@@ -2657,6 +2772,7 @@
    "confidence": "medium"
   },
   "rationale": "The same source phrase \"World Cup final results\" is translated inconsistently on the same surface; sports_widget_final_results_content_description uses 决赛结果, matching sports_widget_final = 决赛.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "42f44397",
@@ -2680,6 +2796,7 @@
    "confidence": "medium"
   },
   "rationale": "A fullwidth colon already includes trailing space in zh-CN typography; the additional ASCII space is a spacing defect.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "eb68470e",
@@ -2703,6 +2820,7 @@
    "confidence": "medium"
   },
   "rationale": "The string is the content description for the back button on the top app bar of the Stories screen; it means going back, not browsing a previous page of content.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a704474f",
@@ -2726,6 +2844,7 @@
    "confidence": "high"
   },
   "rationale": "The zh-CN convention is fullwidth punctuation, and sibling strings (sync_failed_summary) use “：”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a8b9c604",
@@ -2749,6 +2868,7 @@
    "confidence": "high"
   },
   "rationale": "zh-CN uses fullwidth punctuation; sync_failed_never_synced_summary uses “：”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "54338cf9",
@@ -2772,6 +2892,7 @@
    "confidence": "medium"
   },
   "rationale": "Same source phrase is translated inconsistently on the same sync surface; 连接 is the established rendering.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5cd99a1f",
@@ -2795,6 +2916,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Connect another device.\" ends with a period; parallel strings (synced_tabs_enable_tab_syncing, synced_tabs_reauth) keep the fullwidth period.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5cd99a1f",
@@ -2818,6 +2940,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is the negative action button to dismiss the banner; \"知道了\" is an acknowledgement, not a dismissal.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "568f5194",
@@ -2841,6 +2964,7 @@
    "confidence": "medium"
   },
   "rationale": "The source targets tabs not viewed during the past month (i.e., unviewed for over a month); \"一个月内未查看\" states the opposite/ambiguous condition.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2ccc59db",
@@ -2864,6 +2988,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Tabs you haven’t viewed for two weeks\" means tabs unviewed for two weeks or longer; \"两周内未查看\" is ambiguous/incorrect and should express the elapsed duration.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b95c5e58",
@@ -2887,6 +3012,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is the menu acting on already-selected tabs; the translation duplicates tabs_tray_select_tabs \"选择标签页\" and changes meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8c749ed7",
@@ -2910,6 +3036,7 @@
    "confidence": "high"
   },
   "rationale": "The string counts tab groups, not tabs; the developer comment says %1$d is the number of opened tab groups.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "024d4ef5",
@@ -2933,6 +3060,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"We’ve introduced a ... Terms of Use\"; 制订 is a misuse here and the standard form is 制定/推出.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bf8d24b6",
@@ -2956,6 +3084,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says '&' is the ampersand symbol; the fullwidth ＆ is not standard zh-CN typography, and the conjunction is normally rendered as 与/和 in Chinese.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4b06011f",
@@ -2979,6 +3108,7 @@
    "confidence": "medium"
   },
   "rationale": "Per the developer comment, the failure is loading the list of languages, not downloadable language packs.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0dc08270",
@@ -3002,6 +3132,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"translations from %1$s\" where %1$s is the source language; the Chinese reads \"translate %1$s\" losing the from-direction distinction.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "43facc27",
@@ -3025,6 +3156,7 @@
    "confidence": "high"
   },
   "rationale": "\"Translations sheet\" refers to the bottom sheet UI panel, not a form; 表单 means \"form\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b122be92",
@@ -3048,6 +3180,7 @@
    "confidence": "high"
   },
   "rationale": "\"Sheet\" here is the bottom sheet dialog, not a form; 表单 means \"form\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bd05ae20",
@@ -3071,6 +3204,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"Try another source language\"; the translation says \"Select another source language\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "73e90cb0",
@@ -3094,6 +3228,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US \"Download language in data saving mode (%1$s)?\" specifies downloading a language (file); the target says merely \"download\", losing the object.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4e5f85a6",
@@ -3117,6 +3252,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means adding the current URL to the autocomplete list; the translation reads as \"add a link of autocomplete\", losing the target of the action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6b7c4c04",
@@ -3140,6 +3276,7 @@
    "confidence": "medium"
   },
   "rationale": "The source names the advertising tracker category; \"营销\" means marketing, a different category name than the en-US \"Advertising\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "59a77279",
@@ -3163,6 +3300,7 @@
    "confidence": "high"
   },
   "rationale": "zh-CN register convention for this tree is formal (您); neighboring strings such as cfr_cookie_banner and cfr_for_start_browsing use 您.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1855dca8",
@@ -3186,6 +3324,7 @@
    "confidence": "medium"
   },
   "rationale": "Source asks the team to review the site and add support in the future; 调查 (investigate) misstates the action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ed413569",
@@ -3209,6 +3348,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"Clearing all cookies may sign you out or empty shopping carts.\"; the qualifier \"all\" is dropped.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6e2b4901",
@@ -3232,6 +3372,7 @@
    "confidence": "medium"
   },
   "rationale": "The same term is rendered 增强型跟踪保护 in enhanced_tracking_protection; here \"Enhanced\" is dropped.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b5b14aeb",
@@ -3255,6 +3396,7 @@
    "confidence": "high"
   },
   "rationale": "The zh-CN tree is established as formal register (您); neighboring first-run strings such as firstrun_privacy_text and firstrun_shortcut_text use 您.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ed081d3d",
@@ -3278,6 +3420,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means adding the site to the Shortcuts section on the Home screen; the current text reads as generically creating a shortcut and is inconsistent with menu_add_to_home_screen (添加到主屏幕).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9570ebe1",
@@ -3301,6 +3444,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means removing the site from the Shortcuts collection; the translation reads as deleting a shortcut generically and drops the \"from Shortcuts\" target.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "add3fdb7",
@@ -3324,6 +3468,7 @@
    "confidence": "high"
   },
   "rationale": "The source's third attribute is the absence of distractions, not efficiency.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "327784b8",
@@ -3347,6 +3492,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"450 popular URLs\"; other strings in the same screen consistently translate URL as 网址.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ea83e4b8",
@@ -3370,6 +3516,7 @@
    "confidence": "medium"
   },
   "rationale": "The source and developer comment describe switching to a newly opened tab immediately; the target omits \"new tab\" and says only \"immediately show newly opened link\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "688712af",
@@ -3393,6 +3540,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"Ask to allow\"; the developer comment mentions the permission must be asked, but the standard Mozilla zh-CN rendering is \"请求允许\" rather than \"始终询问\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f9d196cf",
@@ -3416,6 +3564,7 @@
    "confidence": "medium"
   },
   "rationale": "preference_performance_block_javascript translates \"Block\" as \"阻止\"; the same term on the same surface should be consistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c0f16edf",
@@ -3439,6 +3588,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"data choices\" refers to user choices about data collection, not to sending feedback data.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8fa76633",
@@ -3462,6 +3612,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"pages\", not \"sites\"; Focus distinguishes site vs page elsewhere.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "02385c7e",
@@ -3485,6 +3636,7 @@
    "confidence": "medium"
   },
   "rationale": "On the same settings screen preference_privacy_should_block_cookies_cross_site_option uses 拦截跨站 Cookie, so the category title should use the same verb.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "08639b36",
@@ -3508,6 +3660,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"Unlock using fingerprint if…\" describes what the setting does; \"请\" makes it an instruction to the user, altering the meaning of the preference summary.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3ccbfbd5",
@@ -3531,6 +3684,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the private browser never saves this tab, not that it doesn't save browsing history; the added causal claim is not in the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f118a635",
@@ -3554,6 +3708,7 @@
    "confidence": "high"
   },
   "rationale": "Source is \"Sorry. We’re having a problem with this tab.\" — no crash statement; also the comma is followed by a spurious space.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5da83965",
@@ -3577,6 +3732,7 @@
    "confidence": "medium"
   },
   "rationale": "The source's three-step slogan (browse, erase, repeat) is not conveyed; \"不必劳心\" (no need to worry) is invented content.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f9a3df77",
@@ -3600,6 +3756,7 @@
    "confidence": "high"
   },
   "rationale": "\"地址栏的中任一链接\" is ungrammatical; should be \"地址栏中的\", and the source refers to URLs, not links.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "971b4d51",
@@ -3623,6 +3780,7 @@
    "confidence": "high"
   },
   "rationale": "The source has a single question mark; the translation repeats it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6a0dcb4d",
@@ -3646,6 +3804,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is the content description of the \"X\" button that closes the tooltip; screen readers should announce a dismiss/close action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "568f5194",
@@ -3669,6 +3828,7 @@
    "confidence": "high"
   },
   "rationale": "The source states the user is protected; the translation invents a first-person mission statement.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "df803268",

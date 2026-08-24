@@ -14,6 +14,7 @@
    "confidence": "medium"
   },
   "rationale": "Elsewhere in the same file the archive is rendered \"argyf\"/\"argyftsjinst\"; \"Argivearre\" is an inconsistent, non-standard derivation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "949ffe5f",
@@ -37,6 +38,7 @@
    "confidence": "medium"
   },
   "rationale": "In predicative position after \"is ... net beskikber of\" the adjective takes no -e ending.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5eff56ce",
@@ -60,6 +62,7 @@
    "confidence": "high"
   },
   "rationale": "The Frisian word is \"ûnjildich\" with a circumflex; the same prefix is written \"ûnjildige\" in mozac_browser_errorpages_invalid_content_encoding_message.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7dc9dbb7",
@@ -83,6 +86,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to a temporary service outage of the server, not an electrical power interruption.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c03ec44e",
@@ -106,6 +110,7 @@
    "confidence": "high"
   },
   "rationale": "Spelling error: the preposition is \"yn\", as correctly used in the parallel string mozac_browser_errorpages_unknown_proxy_host_message.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ce214023",
@@ -129,6 +134,7 @@
    "confidence": "high"
   },
   "rationale": "\"website\" takes the common-gender article \"de\" in Frisian, as used elsewhere in this same file (\"De website op %1$s …\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "22c32182",
@@ -152,6 +158,7 @@
    "confidence": "high"
   },
   "rationale": "The source says the site has been reported as a potentially harmful site; the target says \"suspicious site\", the same wording used for the malware/attack-site string, losing the source meaning. The corresponding title correctly uses \"skealike website\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "091f4056",
@@ -175,6 +182,7 @@
    "confidence": "medium"
   },
   "rationale": "The verb form for \"the browser does not recognize\" is \"werkent\"; \"werkend\" is a participle/adjective form and is ungrammatical here.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a34c0ba8",
@@ -198,6 +206,7 @@
    "confidence": "medium"
   },
   "rationale": "Frisian for 'close' is 'slúte' (with ú); the same string elsewhere in the tree uses 'Slúte'.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c91e7f78",
@@ -221,6 +230,7 @@
    "confidence": "high"
   },
   "rationale": "The corresponding strings use 'Ynskeakeljen fan %1$s mislearre', 'Fuortsmiten fan %1$s mislearre'; omitting 'fan' is ungrammatical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "17b44072",
@@ -244,6 +254,7 @@
    "confidence": "medium"
   },
   "rationale": "The same source sentence (\"Clear recent browsing history, cookies, and related data\") is translated with two different terms on the same surface; fy-NL uses \"sneup-\" for browsing (cf. sneupaktiviteit for \"browsing activity\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "64ef7b42",
@@ -267,6 +278,7 @@
    "confidence": "high"
   },
   "rationale": "All other data-collection long descriptions in the same file render \"extension developer\" as \"útwreidingsûntwikkeler\"; this one drops the linking s, which is a spelling/consistency error.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a8c10dee",
@@ -290,6 +302,7 @@
    "confidence": "high"
   },
   "rationale": "mozac_feature_addons_permissions_devtools_description translates the identical source as ‘Untwikkelersark útwreidzje om jo gegevens yn iepen ljepblêden te benaderjen’; the update string must match in style (infinitive) and term (ûntwikkelersark vs ûntwikkelark) since these appear on the same surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "632b537e",
@@ -313,6 +326,7 @@
    "confidence": "medium"
   },
   "rationale": "mozac_feature_addons_permissions_dialog_heading_optional_permissions translates ‘New permissions:’ as ‘Nije tastimmingen:’; both headings appear in the same add-on permissions dialog and must use one term.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3ce55256",
@@ -336,6 +350,7 @@
    "confidence": "medium"
   },
   "rationale": "The parallel string mozac_feature_addons_permissions_data_collection_websiteContent_long_description uses ‘útwreidingsûntwikkeler’ for the same source term ‘extension developer’.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1751919d",
@@ -359,6 +374,7 @@
    "confidence": "high"
   },
   "rationale": "‘Utwreidigsgebrûk’ drops the ‘n’ from ‘útwreiding’ (extension); the compound should be ‘útwreidingsgebrûk’.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "df5259ea",
@@ -382,6 +398,7 @@
    "confidence": "high"
   },
   "rationale": "‘Utwreidigs-’ drops the ‘n’ from ‘útwreiding’ (extension); the compound should be ‘útwreidingsgebrûk’.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "76980f70",
@@ -405,6 +422,7 @@
    "confidence": "medium"
   },
   "rationale": "mozac_feature_addons_permissions_privacy_description translates the same source sentence as \"Privacyynstellingen lêze en bewurkje\"; the paired update string must match.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "77991db4",
@@ -428,6 +446,7 @@
    "confidence": "high"
   },
   "rationale": "The relative pronoun should be \"dy’t\"; the extra straight apostrophe is a stray character and breaks the locale's typographic apostrophe convention.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b9977c57",
@@ -451,6 +470,7 @@
    "confidence": "high"
   },
   "rationale": "Sibling strings (mozac_feature_contextmenu_share_link, mozac_feature_contextmenu_snackbar_link_text_copied) use \"Keppeling\"; \"Koppeling\" is the Dutch spelling and is inconsistent on the same surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "63841678",
@@ -474,6 +494,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is past tense/perfect: the download failed. \"is net downloaden\" reads as an infinitive construction, not the completed-action past participle.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b29f851b",
@@ -497,6 +518,7 @@
    "confidence": "medium"
   },
   "rationale": "'bestân' is a neuter noun; in an indefinite neuter noun phrase the attributive adjective takes the uninflected form ('besteand bestân').",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9354fe43",
@@ -520,6 +542,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says no app was found to open the files; 'mei' adds an instrumental sense that is not in the source and is ungrammatical here.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fbfd0f66",
@@ -543,6 +566,7 @@
    "confidence": "high"
   },
   "rationale": "Frisian spelling is 'ôfspylje'; capitalised it is 'Ôfspylje', not 'Ofspylje'.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ee134332",
@@ -566,6 +590,7 @@
    "confidence": "high"
   },
   "rationale": "Source is \"Upload files?\" (plural); the Frisian says \"Upload file?\" (singular).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9cdf4eac",
@@ -589,6 +614,7 @@
    "confidence": "high"
   },
   "rationale": "The parallel strings (expand saved addresses, collapse saved passwords) use the bare infinitive \"Bewarre adressen útklappe\" / \"Bewarre wachtwurden ynklappe\"; the added \"te\" is ungrammatical here and inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a38ebc79",
@@ -612,6 +638,7 @@
    "confidence": "high"
   },
   "rationale": "Parallel string mozac_feature_prompts_collapse_logins_content_description_2 uses \"Bewarre wachtwurden ynklappe\" without \"te\"; the \"te\" is ungrammatical and inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "20012c6d",
@@ -635,6 +662,7 @@
    "confidence": "high"
   },
   "rationale": "Source is \"Font size increase\"; the parallel string mozac_feature_readerview_font_size_decrease_desc correctly uses \"Lettergrutte ferlytsje\". \"Lettertype\" means typeface, not font size.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7ed8d892",
@@ -658,6 +686,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is sentence case (\"Go to settings\"); Frisian does not capitalise common nouns.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ed833e4f",
@@ -681,6 +710,7 @@
    "confidence": "medium"
   },
   "rationale": "mozac_feature_sitepermissions_notification_permission_rationale_dialog_message translates \"notifications\" as \"notifikaasjes\"; the same term in the same notification-permission dialog flow should be consistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c54c2222",
@@ -704,6 +734,7 @@
    "confidence": "high"
   },
   "rationale": "Frisian spells the word with a circumflex: ûngelok. The initial capital must keep the diacritic (Û).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f0c86dd1",
@@ -727,6 +758,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this links to a list of past crashes (about:crashes). \"Ungelokken\" means \"accidents\"; also the initial U should be Û (\"Ûngelokken\") in Frisian.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "790b91f0",
@@ -750,6 +782,7 @@
    "confidence": "medium"
   },
   "rationale": "Elsewhere the same word is spelled \"útwreidingen\" with a diacritic; capitalised it must be \"Ú/Û\" rather than plain \"U\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b96d9e6f",
@@ -773,6 +806,7 @@
    "confidence": "high"
   },
   "rationale": "In Frisian the word is spelled \"ôfdieling\"; capitalised it keeps the circumflex: \"Ôfdieling\". The current form drops the required diacritic.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cb87ada7",
@@ -796,6 +830,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment states this is the Eircode field, a specific Irish postal code system name; it is a proper name and stays untranslated.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "db22ef42",
@@ -819,6 +854,7 @@
    "confidence": "medium"
   },
   "rationale": "The source specifically labels the street address line; rendering it as the generic \"Adres\" makes it indistinguishable from other address labels in the same form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c93b1067",
@@ -842,6 +878,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means extensions using AI that Firefox provides; the current word order reads as \"extensions that use AI by means of Firefox\", changing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "31958d5b",
@@ -865,6 +902,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"Unblock specific features below\" (plural); the Frisian noun is singular, a grammatical/number error.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ba41052b",
@@ -888,6 +926,7 @@
    "confidence": "high"
   },
   "rationale": "Source reads \"%1$s will never offer to translate sites in this language.\" The translation drops \"never\", reversing the meaning and making it identical to the offer-to-translate option.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "de0a5740",
@@ -911,6 +950,7 @@
    "confidence": "medium"
   },
   "rationale": "The Frisian preposition is \"út\"; capitalized it requires the accent \"Ú\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9c73ce0a",
@@ -934,6 +974,7 @@
    "confidence": "medium"
   },
   "rationale": "The Frisian preposition is \"út\"; capitalized it requires the accent \"Ú\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9c73ce0a",
@@ -957,6 +998,7 @@
    "confidence": "medium"
   },
   "rationale": "The Frisian word is \"ûnjildich\"; capitalized it is \"Ûnjildige\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bb646ac5",
@@ -980,6 +1022,7 @@
    "confidence": "high"
   },
   "rationale": "\"private tabs\" is rendered elsewhere as \"priveeljepblêd\"; \"proveeljepblêden\" is a typo.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "08e7b6ab",
@@ -1003,6 +1046,7 @@
    "confidence": "high"
   },
   "rationale": "The source refers to saving a bookmark in a folder; the related snackbar uses \"Bewarre yn\". \"Besparje\" means to economize, not to store.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "07f9d91a",
@@ -1026,6 +1070,7 @@
    "confidence": "medium"
   },
   "rationale": "The source describes closing the menu sheet of a custom tab; the translation reads as \"Customize tab menu sheet close\", changing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "59767936",
@@ -1049,6 +1094,7 @@
    "confidence": "medium"
   },
   "rationale": "The Frisian word for \"off\" is spelled \"út/Ût\" with a circumflex/accent; the toggle label drops the diacritic.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1c0d693a",
@@ -1072,6 +1118,7 @@
    "confidence": "high"
   },
   "rationale": "The source refers to closing one tab whose title is %s; the Frisian uses the plural form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "421922ce",
@@ -1095,6 +1142,7 @@
    "confidence": "high"
   },
   "rationale": "The source asks about clearing one specific permission for a site; the developer comment says it sets a default value for a single permission. The translation says all permissions.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "20c6f58b",
@@ -1118,6 +1166,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Verified by %s\" has no colon; the sibling string \"Issued to %s\" is translated without one.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e5f43a65",
@@ -1141,6 +1190,7 @@
    "confidence": "high"
   },
   "rationale": "Source \"Collection %d\" is the name of one new collection, not a plural.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "98e2f3ca",
@@ -1164,6 +1214,7 @@
    "confidence": "medium"
   },
   "rationale": "Source pair \"Select all\"/\"Deselect all\" should use the same pronoun form; \"Alles selektearje\" is used for the counterpart.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "459f5d1f",
@@ -1187,6 +1238,7 @@
    "confidence": "medium"
   },
   "rationale": "The Frisian verb is \"ûntskoattelje\"; capitalised it is \"Ûntskoattelje\", not \"Untskoattelje\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "45057f73",
@@ -1210,6 +1262,7 @@
    "confidence": "medium"
   },
   "rationale": "Frisian \"ûntskoattelje\" is written with û; the initial capital must be Û. The same error appears in the neighbouring credit_cards_biometric_prompt_* strings.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d90e4bfb",
@@ -1233,6 +1286,7 @@
    "confidence": "medium"
   },
   "rationale": "The Frisian verb is \"ûntskoattelje\"; capitalised it is \"Ûntskoattelje\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ffb40d21",
@@ -1256,6 +1310,7 @@
    "confidence": "medium"
   },
   "rationale": "Inconsistent terminology for the same source term on the same surface (see credit_cards_warning_dialog_message_3 and credit_cards_biometric_prompt_unlock_message_2).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bf858155",
@@ -1279,6 +1334,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is \"Collection owner\" (owner of the collection); \"Eigener kolleksje\" is two juxtaposed nouns without a valid Frisian compound or genitive, giving ungrammatical text.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "799077e1",
@@ -1302,6 +1358,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says the control navigates back within the debug drawer, not page browsing; \"blêdzje\" implies web page navigation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5ee3aee2",
@@ -1325,6 +1382,7 @@
    "confidence": "medium"
   },
   "rationale": "Terminology inconsistency for \"Tools\" on the same Debug Drawer surface, where \"ark\" is the established rendering.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c37a5f60",
@@ -1348,6 +1406,7 @@
    "confidence": "medium"
   },
   "rationale": "The Frisian word for \"Off\" is \"Út\" with an acute accent on the capital U; \"Ut\" is a spelling error.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1c0d693a",
@@ -1371,6 +1430,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"all languages\", not \"these languages\"; the demonstrative changes the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3567b502",
@@ -1394,6 +1454,7 @@
    "confidence": "medium"
   },
   "rationale": "Frisian spells the word with a circumflex: Ôfbylding(en). The initial capital should keep the diacritic.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1bb07b61",
@@ -1411,10 +1472,11 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "fy-NL",
   "origin": {},
   "rationale": "The tree uses ’ 101 times against 8 straight.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8ba27400",
@@ -1438,6 +1500,7 @@
    "confidence": "high"
   },
   "rationale": "The Frisian word for \"file\" is \"bestân\" (as used in the related strings); \"betân\" is a typo.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "29ec8caa",
@@ -1461,6 +1524,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says cookies are isolated to the site you are on; 'isolearret cookies yn op de website' contains a superfluous 'yn' that breaks the sentence.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "96a702be",
@@ -1478,10 +1542,11 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "fy-NL",
   "origin": {},
   "rationale": "The tree uses ’ 101 times against 8 straight.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0eb64fba",
@@ -1505,6 +1570,7 @@
    "confidence": "high"
   },
   "rationale": "Source says \"press back\" (hardware/software back button); the gesture wording belongs to exit_fullscreen_with_gesture_short. As translated both strings say essentially the same thing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ae4233b6",
@@ -1528,6 +1594,7 @@
    "confidence": "high"
   },
   "rationale": "\"starte wurden\" is not a valid passive construction and \"wylst jo aktuele sesje\" misuses \"wylst\" (a conjunction) as a preposition.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "78d704b0",
@@ -1551,6 +1618,7 @@
    "confidence": "high"
   },
   "rationale": "Source consistently says \"extension(s)\"; the surrounding sentences use útwreidingen, so add-on is an inconsistent term for the same source word.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "78d704b0",
@@ -1574,6 +1642,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"No experimental features to try right now\"; the sentence-initial \"No\" reads as the English word and does not convey \"right now\" idiomatically.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ee8846b9",
@@ -1597,6 +1666,7 @@
    "confidence": "high"
   },
   "rationale": "\"Firefox Suggest\" is a product/feature brand name and must remain unchanged; adding \"-jes\" turns it into a non-brand plural word.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4c677888",
@@ -1620,6 +1690,7 @@
    "confidence": "high"
   },
   "rationale": "The source refers to home screen shortcuts, translated elsewhere in this batch as \"Fluchkeppeling\"; \"fluchtoetsen\" means keyboard shortcut keys.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ee4ac32b",
@@ -1643,6 +1714,7 @@
    "confidence": "high"
   },
   "rationale": "Frisian \"ûntfange\" requires the circumflex; the string elsewhere (ip_protection_onboarding_body_promo) correctly uses \"ûntfang\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5b4a1619",
@@ -1666,6 +1738,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"more private\"; the parallel string ip_protection_onboarding_body_promo translates the same phrase as \"mear privee\", so \"persoanliker\" (more personal) is both a mistranslation and inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ec903ad4",
@@ -1689,6 +1762,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Neutral\" is the middle likert option; \"Gemiddeld\" means \"average\", a different concept.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4fd1d2b6",
@@ -1712,6 +1786,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"I plan to keep using Firefox\" requires a correct Frisian infinitive construction; \"om Firefox brûke te bliuwen\" is not grammatical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bba02ae6",
@@ -1735,6 +1810,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"How satisfied are you with your Firefox homepage?\" with no mention of experience; also \"Startside\" is capitalized mid-compound without reason.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f2a8c19d",
@@ -1758,6 +1834,7 @@
    "confidence": "high"
   },
   "rationale": "Source is \"Help make search in Firefox better\"; the sibling strings for printing and sync keep the feature name, but here it is omitted.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "90b5a6de",
@@ -1781,6 +1858,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"Mozilla’s marketing partners\"; \"technology\" is not present and the compound is also an untranslated English string.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "47960ce8",
@@ -1804,6 +1882,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"Mozilla’s marketing partners\"; \"technology\" is not in the source. The straight apostrophe also deviates from the typographic-apostrophe convention.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "25519783",
@@ -1821,10 +1900,11 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "fy-NL",
   "origin": {},
   "rationale": "The tree uses ’ 101 times against 8 straight.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "25519783",
@@ -1848,6 +1928,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment explains that \"allowing\" refers to granting permission via the \"Allow and Continue\" button; the current wording only says to think about permission and drops the act of allowing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bfbb08d4",
@@ -1871,6 +1952,7 @@
    "confidence": "high"
   },
   "rationale": "The Frisian imperative of \"ûntdekke\" is \"Ûntdek\"; the capital U must carry the circumflex.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c9dfbea3",
@@ -1894,6 +1976,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is \"automatically block companies from spying on your clicks\"; the relative clause presupposes the spying instead of preventing it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "01395599",
@@ -1917,6 +2000,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"Mozilla’s marketing partners\"; \"marketingtechnologypartners\" invents \"technology\" and is also an untranslated English compound element.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "25519783",
@@ -1934,10 +2018,11 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "fy-NL",
   "origin": {},
   "rationale": "The tree uses ’ 101 times against 8 straight.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "25519783",
@@ -1961,6 +2046,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"Mozilla’s marketing partners\"; \"marketingtechnologypartners\" invents \"technology\" and mixes untranslated English.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "25519783",
@@ -1978,10 +2064,11 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "fy-NL",
   "origin": {},
   "rationale": "The tree uses ’ 101 times against 8 straight.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "25519783",
@@ -2005,6 +2092,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is \"One tap helps stop companies spying on your clicks\"; the Frisian sentence lacks a subject and omits \"helps\", and \"clicks\" is rendered as \"tikken\" (taps), duplicating \"tik\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a35be465",
@@ -2028,6 +2116,7 @@
    "confidence": "high"
   },
   "rationale": "Frisian \"ûntfange\" requires the circumflex on the initial u; the capitalised form is \"Û\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b09ad64f",
@@ -2051,6 +2140,7 @@
    "confidence": "high"
   },
   "rationale": "Frisian \"ûntfange\" requires the circumflex on the initial u; the capitalised form is \"Û\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "54ad3157",
@@ -2074,6 +2164,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a heading introducing the steps to allow the permission (\"To allow it:\"), not a command \"Allow:\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5f2eba85",
@@ -2097,6 +2188,7 @@
    "confidence": "medium"
   },
   "rationale": "Frisian plural of \"machtiging\" is \"machtigings\"; \"machtigingen\" is the Dutch form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9b1fcd65",
@@ -2120,6 +2212,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"which website you're about to access\"; the Frisian clause is ungrammatical/garbled word order.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "22fd6508",
@@ -2143,6 +2236,7 @@
    "confidence": "high"
   },
   "rationale": "\"funskje\" is a typo; the correct Frisian word is \"funksje\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2f22ff3a",
@@ -2166,6 +2260,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"not to share & sell data\" (share first, then sell); the target swaps the verbs.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cab4b936",
@@ -2189,6 +2284,7 @@
    "confidence": "high"
   },
   "rationale": "The source and developer comment refer to the address bar, not the toolbar; the neighbouring string uses \"wurkbalke\" for toolbar, so this is also inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8516c740",
@@ -2212,6 +2308,7 @@
    "confidence": "high"
   },
   "rationale": "The source is \"Cross-site cookies\"; the target has the two words run together without a space or hyphen.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "25b54c77",
@@ -2235,6 +2332,7 @@
    "confidence": "high"
   },
   "rationale": "\"Firefox Suggest\" is a product feature brand name that must remain untranslated; the neighbouring string uses yet another form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0cdc7afc",
@@ -2258,6 +2356,7 @@
    "confidence": "high"
   },
   "rationale": "\"Firefox Suggest\" is a product/feature brand name and should not be translated; it is also rendered differently (\"Firefox Suggestjes\") in preference_search_address_bar_fx_suggest.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a0ec3ddd",
@@ -2281,6 +2380,7 @@
    "confidence": "high"
   },
   "rationale": "Frisian spelling requires \"Ôfslute\" with a circumflex on the initial vowel.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b44ff1e4",
@@ -2304,6 +2404,7 @@
    "confidence": "high"
   },
   "rationale": "The word for history is \"skiednis\"; other strings in the same group use \"downloadskiednis\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bce56ad1",
@@ -2321,10 +2422,11 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "fy-NL",
   "origin": {},
   "rationale": "The tree uses ’ 101 times against 8 straight.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f873de8a",
@@ -2348,6 +2450,7 @@
    "confidence": "high"
   },
   "rationale": "Frisian \"útsûnderingen\" begins with ú; capitalized it is Ú, as used in the same file's string preferences_passwords_exceptions_remove_all (\"Alle útsûnderingen fuortsmite\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "841cfa8e",
@@ -2371,6 +2474,7 @@
    "confidence": "medium"
   },
   "rationale": "In Frisian the polite pronoun \"jo\" takes the -e/-je form depending on verb class; \"typen\" is a weak verb class II, so the correct form is \"jo type\" — however the standard form after \"jo\" for this verb is \"typje\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c5263b5b",
@@ -2394,6 +2498,7 @@
    "confidence": "high"
   },
   "rationale": "Elsewhere the term is spelled \"suggestjes\" (e.g. \"Klamboerdsuggestjes toane\"); \"suggesjes\" drops the t.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "55847c5c",
@@ -2417,6 +2522,7 @@
    "confidence": "high"
   },
   "rationale": "The Frisian word for tabs is \"ljepblêden\" (used consistently elsewhere in this batch); \"ljeplêden\" is missing the b.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "40c0192e",
@@ -2440,6 +2546,7 @@
    "confidence": "high"
   },
   "rationale": "The infinitive marker \"te\" is duplicated, producing ungrammatical Frisian; source is \"to reflect the latest features in Firefox\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "58342144",
@@ -2463,6 +2570,7 @@
    "confidence": "high"
   },
   "rationale": "The Frisian plural present of \"wurde\" is \"wurde\"; \"wirde\" is a spelling error.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7856f33a",
@@ -2486,6 +2594,7 @@
    "confidence": "medium"
   },
   "rationale": "The standard Frisian verb for 'leave (behind)' is 'achterlitte'; 'efterlitte' is not the standard spelling.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e8f06056",
@@ -2509,6 +2618,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a noun phrase naming the menu used to sort passwords, not an instruction to sort a 'password menu'.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b4ccdd22",
@@ -2532,6 +2642,7 @@
    "confidence": "high"
   },
   "rationale": "Neighbouring strings (search_engine_edit_custom_search_engine_title, search_engine_icon_content_description_1, search_engine_use_default) all use \"sykmasine\"; this spelling is inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4489ca98",
@@ -2555,6 +2666,7 @@
    "confidence": "medium"
   },
   "rationale": "%s is the suggested search engine name; the source means to search with that engine, not to search inside it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f580ec2b",
@@ -2578,6 +2690,7 @@
    "confidence": "high"
   },
   "rationale": "Source \"Deleted %1$s from history\" is a snackbar confirming that the item has been deleted, not an action label.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c5c1d6e1",
@@ -2599,8 +2712,9 @@
   "locale": "fy-NL",
   "origin": {},
   "rationale": "The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.",
-  "resolved_on": "",
-  "status": "open",
+  "reads_as_deliberate": false,
+  "resolved_on": "2026-08-24",
+  "status": "withdrawn",
   "string_hash": "eabc96e4",
   "string_id": "search_suggestions_onboarding_text",
   "suggest": "",
@@ -2622,6 +2736,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"private sessions\", not private windows.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c2c38296",
@@ -2645,6 +2760,7 @@
    "confidence": "medium"
   },
   "rationale": "\"essentials\" is an ordinary English noun, not a brand name, and should be rendered in Frisian (e.g. \"basisynstellingen\" / \"essinsjes\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "18dc2611",
@@ -2668,6 +2784,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Helpful tools\" (plural, collective); the Frisian adjective before the collective noun \"ark\" requires the inflected form \"nuttige\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "855ddf29",
@@ -2691,6 +2808,7 @@
    "confidence": "high"
   },
   "rationale": "The source \"Great start!\" should read \"Goed begjin!\"; \"Goed j\" is not a Frisian word/phrase and appears to be a truncation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c22b22a0",
@@ -2714,6 +2832,7 @@
    "confidence": "medium"
   },
   "rationale": "The checklist concerns setting up the app (ynstelle), not installing it; other strings in the same feature use \"ynstelle\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "96aced89",
@@ -2737,6 +2856,7 @@
    "confidence": "high"
   },
   "rationale": "The source \"Great start!\" should read \"Goed begjin!\"; \"Goed j\" is not valid Frisian.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2ac20c0b",
@@ -2760,6 +2880,7 @@
    "confidence": "medium"
   },
   "rationale": "The checklist concerns setting up the app (ynstelle), not installing it; other strings in the same feature use \"ynstelle\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c62c8120",
@@ -2783,6 +2904,7 @@
    "confidence": "high"
   },
   "rationale": "The source \"Great start!\" should read \"Goed begjin!\"; \"Goed j\" is not valid Frisian.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d222aa69",
@@ -2806,6 +2928,7 @@
    "confidence": "high"
   },
   "rationale": "Frisian spelling requires the circumflex: \"Ûntfang\", not \"Untfang\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "54871821",
@@ -2829,6 +2952,7 @@
    "confidence": "high"
   },
   "rationale": "Frisian spelling requires the circumflex in \"ôftelle\"; capitalised it is \"Ôftelle\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "44b23835",
@@ -2852,6 +2976,7 @@
    "confidence": "high"
   },
   "rationale": "The rest of the batch consistently uses the formal \"jo\" (e.g. \"Kontrolearje jo ynternetferbining\", \"Meld jo oan mei jo kamera\"); \"dyn\" breaks the established register.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3f6581c7",
@@ -2875,6 +3000,7 @@
    "confidence": "medium"
   },
   "rationale": "The source uses an em dash; the locale convention table lists the en dash as the house dash, but here the punctuation mark differs from the source separator. Low-impact cosmetic mismatch.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "34901faa",
@@ -2898,6 +3024,7 @@
    "confidence": "medium"
   },
   "rationale": "In Frisian, removal from a location requires \"fan … ôf\"; without it the sentence is ambiguous/ungrammatical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cb40ada9",
@@ -2921,6 +3048,7 @@
    "confidence": "medium"
   },
   "rationale": "Source means the user is now following the given team; \"Folgjend\" is the adjective \"next\", not the state of following.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "768b6d26",
@@ -2944,6 +3072,7 @@
    "confidence": "high"
   },
   "rationale": "The subject is singular, so the verb must be third person singular.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "abaccc96",
@@ -2967,6 +3096,7 @@
    "confidence": "medium"
   },
   "rationale": "\"opnij opstarte wurde\" doubles the restart notion and mixes active/passive; the source simply says the app needs to restart.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "292b609d",
@@ -2990,6 +3120,7 @@
    "confidence": "high"
   },
   "rationale": "Frisian spelling requires the circumflex: \"ûngelok\", so the sentence-initial capital must be Û.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3b5342fa",
@@ -3013,6 +3144,7 @@
    "confidence": "high"
   },
   "rationale": "The Frisian term for tab is \"ljepblêd\"; the \"l\" is missing here, unlike all other strings in this batch.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "70c1e4ed",
@@ -3036,6 +3168,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"This will close all open tabs.\"; the translation omits \"open\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ec15663d",
@@ -3059,6 +3192,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is \"Dismiss\", meaning dismiss/hide the banner; \"Slute\" means \"Close\" and duplicates the translation of the separate \"Close\" strings.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c91e7f78",
@@ -3082,6 +3216,7 @@
    "confidence": "high"
   },
   "rationale": "Per the developer comment the button opens Settings for auto-close tabs; \"View\" is a verb here, not \"display\". \"Byldopsjes\" means \"image/display options\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0df0398d",
@@ -3099,10 +3234,11 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "fy-NL",
   "origin": {},
   "rationale": "The tree uses ’ 101 times against 8 straight.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2829d41a",
@@ -3126,6 +3262,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means open synced tabs; the sibling strings use \"Iepen normale ljepblêden\" and \"Iepen priveeljepblêden\", so this one is inconsistent and reads as \"synchronised open tabs\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0a11c8c9",
@@ -3149,6 +3286,7 @@
    "confidence": "medium"
   },
   "rationale": "The same source term on the same surface is rendered two different ways, creating terminology inconsistency.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4df8c1bf",
@@ -3172,6 +3310,7 @@
    "confidence": "high"
   },
   "rationale": "Frisian for \"off\" is \"Út\" with an acute accent; \"Ut\" is a spelling error.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1c0d693a",
@@ -3195,6 +3334,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"we don’t support translations from %1$s yet\"; the trailing \"út\" and article \"it\" before a language-name placeholder are wrong.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1806eba0",
@@ -3218,6 +3358,7 @@
    "confidence": "medium"
   },
   "rationale": "The snackbar reports a translation in progress, not a command/infinitive; the same word is also used for the Translate shortcut label, losing the progress meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9bea963f",
@@ -3241,6 +3382,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the setting overrides (takes precedence over) offers to translate; \"negearret\" means \"ignores\". The parallel string translation_option_bottom_sheet_switch_never_translate_site_description correctly uses \"Oerskriuwt\" for \"Overrides\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d1c4d30d",
@@ -3264,6 +3406,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment states this is the inactive button text indicating a translation is currently in progress; rendering it identically to translations_bottom_sheet_positive_button (\"Translate\" = \"Oersette\") removes the distinction between the two states.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "16c3a541",
@@ -3287,6 +3430,7 @@
    "confidence": "medium"
   },
   "rationale": "The same term \"Ungroup\" is rendered inconsistently within one dialog (ungroup_tab_group_confirmation_dialog_confirm uses \"Degroeperje\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7ea51dae",
@@ -3310,6 +3454,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means the prompt provided by the system to uninstall the app, not a prompt to uninstall the system.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "55473594",
@@ -3333,6 +3478,7 @@
    "confidence": "high"
   },
   "rationale": "Source is \"It’s slow or unreliable\" — an either/or option, not both.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ab1c9cd7",
@@ -3350,10 +3496,11 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "fy-NL",
   "origin": {},
   "rationale": "The tree uses ’ 101 times against 8 straight.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "70ee5c71",
@@ -3377,6 +3524,7 @@
    "confidence": "medium"
   },
   "rationale": "\"rapport\" is a neuter noun ('it rapport'), so the attributive adjective after 'in' takes the uninflected form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "014814e3",
@@ -3400,6 +3548,7 @@
    "confidence": "high"
   },
   "rationale": "Source says \"Closing this notification will ignore these reports\" (plural), matching the multiple-crash-reports context of this string.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "52ae1144",
@@ -3423,6 +3572,7 @@
    "confidence": "medium"
   },
   "rationale": "The identical source phrase is translated as “om ús te helpen it te ûndersykjen” in webcompat_reporter_label_optional_description; the mandatory variant changes the meaning and breaks consistency on the same screen.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "08e06192",
@@ -3446,6 +3596,7 @@
    "confidence": "high"
   },
   "rationale": "Frisian “ûntbrekkende” requires the circumflex, also when capitalized.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "364665d0",
@@ -3469,6 +3620,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is “Browser is blocked or unsupported”; the translation reverses the order and reads as “not supported or blocked”, where “net” no longer applies to “blokkearre”.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ba070fc6",
@@ -3492,6 +3644,7 @@
    "confidence": "high"
   },
   "rationale": "The Frisian possessive “ús” keeps its accent when capitalized.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "417523ee",
@@ -3515,6 +3668,7 @@
    "confidence": "medium"
   },
   "rationale": "Per the developer comment the action dismisses the overlay and returns to the browser; ‘Fuortsmite’ means to discard/delete, which suggests data removal.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "be4fa543",
@@ -3538,6 +3692,7 @@
    "confidence": "high"
   },
   "rationale": "The source is \"Request to support site submitted.\" The Frisian contains an orphan infinitive particle \"te\" before a noun, making the sentence ungrammatical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a2e567fc",
@@ -3561,6 +3716,7 @@
    "confidence": "high"
   },
   "rationale": "The source is \"Request to support site submitted.\" The infinitive particle \"te\" before the noun \"websitestipe\" is ungrammatical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a2e567fc",
@@ -3584,6 +3740,7 @@
    "confidence": "high"
   },
   "rationale": "The Frisian word is \"ûngelok\"; capitalized at sentence start it must be \"Û\", as elsewhere the locale uses proper diacritics (e.g. \"ÚT\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3b5342fa",
@@ -3607,6 +3764,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says the button dismisses a message; \"Fuortsmite\" means delete/remove, which conveys a destructive action not present in the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "be4fa543",
@@ -3630,6 +3788,7 @@
    "confidence": "high"
   },
   "rationale": "Source is \"press back to exit\" (hardware/back button), not a gesture; the gesture wording belongs to exit_fullscreen_with_gesture_short.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5da6e665",
@@ -3653,6 +3812,7 @@
    "confidence": "medium"
   },
   "rationale": "Source refers to a single tab's browsing history; the translation says the history of the tabs (plural) and adds \"Jo\" (your).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fd133aa6",
@@ -3676,6 +3836,7 @@
    "confidence": "high"
   },
   "rationale": "Source says \"Add shortcuts to your home screen\"; elsewhere (menu_add_to_shortcuts) \"Shortcuts\" is \"fluchkeppelingen\", while \"keppelingen\" means links.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c0f536ec",
@@ -3699,6 +3860,7 @@
    "confidence": "high"
   },
   "rationale": "In Frisian the preposition is \"by\"; \"bij\" is the Dutch form (Frisian \"bij\" means the insect).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0f50ae5f",
@@ -3722,6 +3884,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Machtigingen\" is Dutch; the Frisian term for Android permissions is \"Tastimmingen\" (or \"Machtigings\"), consistent with other permission strings.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9b1fcd65",
@@ -3745,6 +3908,7 @@
    "confidence": "medium"
   },
   "rationale": "Frisian \"ûntwikkelder/ûntwikkeler\" starts with û (circumflex); \"Untwikkelersark\" is a spelling error.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2f9db6da",
@@ -3768,6 +3932,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this links to Focus crash reports; \"ûngelokken\" means real-world accidents, not software crashes. Also the initial U should be Û.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "790b91f0",
@@ -3791,6 +3956,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Block 3rd-party cookies only\"; the parallel option string for tracker cookies correctly ends in \"blokkearje\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "20458ef5",
@@ -3814,6 +3980,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: hide webpages when switching apps AND block taking screenshots; current wording reads as \"switching apps and taking screenshots\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4e36a264",
@@ -3837,6 +4004,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment explains Shortcuts are pinned favourite websites, not keyboard shortcuts.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "193595a9",
@@ -3860,6 +4028,7 @@
    "confidence": "high"
   },
   "rationale": "Frisian spelling requires Û; the same verb is written \"ûntskoatteljen\" in preference_security_biometric.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "193595a9",
@@ -3883,6 +4052,7 @@
    "confidence": "medium"
   },
   "rationale": "The Frisian word for \"off\" is \"Út/Ût\" with a diacritic; plain \"Ut\" is a misspelling.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1c0d693a",
@@ -3906,6 +4076,7 @@
    "confidence": "high"
   },
   "rationale": "The Frisian word for \"off\" is \"Út\" with an acute accent; \"Ut\" is a spelling error.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1c0d693a",
@@ -3929,6 +4100,7 @@
    "confidence": "medium"
   },
   "rationale": "The same source term \"search string\" is translated inconsistently within the same settings surface (search_add_error_empty_search uses \"syksterm\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5d8e8bfc",
@@ -3952,6 +4124,7 @@
    "confidence": "high"
   },
   "rationale": "\"Bygelyls\" is a typo for the Frisian \"Bygelyks\" (Example/For example).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "23542204",
@@ -3975,6 +4148,7 @@
    "confidence": "high"
   },
   "rationale": "Frisian spells the prefix \"ûnt-\" with a circumflex; \"Untskoattelje\" is misspelled.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3a59d31b",
@@ -3998,6 +4172,7 @@
    "confidence": "high"
   },
   "rationale": "In Frisian, indefinite neuter nouns take the uninflected adjective form ('in nij ljepblêd'), as also used correctly in tip_open_in_new_tab ('in nij ljepblêd').",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2e90aebe",
@@ -4021,6 +4196,7 @@
    "confidence": "high"
   },
   "rationale": "The Frisian word is 'startskerm', as used in tip_add_to_homescreen; 'startscherm' is Dutch.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a8afa794",

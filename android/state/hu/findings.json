@@ -14,6 +14,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"your device’s data or Wi-Fi connection\"; the same sentence elsewhere in this file is translated \"az eszköz\", so \"mobileszköz\" adds content and is inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7737ec16",
@@ -37,6 +38,7 @@
    "confidence": "high"
   },
   "rationale": "Hungarian requires a comma before the subordinating \"hogy\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "24ef9139",
@@ -60,6 +62,7 @@
    "confidence": "high"
   },
   "rationale": "\"temporarily unavailable\" requires the adverb \"ideiglenesen\"; the adjective form is ungrammatical here.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3b51c4c5",
@@ -83,6 +86,7 @@
    "confidence": "high"
   },
   "rationale": "\"temporarily unavailable\" requires the adverb \"ideiglenesen\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "351045e7",
@@ -106,6 +110,7 @@
    "confidence": "high"
   },
   "rationale": "The source refers to the device, not a computer; this is a mobile browser error page.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a9b600d4",
@@ -129,6 +134,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"Is the device connected to an active network?\"; \"számítógép\" means computer, which is wrong on Android and diverges from the source term \"device\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "48f49536",
@@ -146,10 +152,11 @@
   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "hu",
   "origin": {},
   "rationale": "In the source this string quotes “Try Again”, which is exactly the value of `mozac_browser_errorpages_page_refresh` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "48f49536",
@@ -173,6 +180,7 @@
    "confidence": "medium"
   },
   "rationale": "Source states the browser has canceled the request (past, completed action), not that it disallows it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "80f3480f",
@@ -196,6 +204,7 @@
    "confidence": "high"
   },
   "rationale": "Source lists two actions (\"disabled or blocked\"); the translation conveys only one.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5a5ab215",
@@ -219,6 +228,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the page is doing the redirecting incorrectly; the Hungarian passive says the page is being redirected, which reverses the actor.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0edcf37c",
@@ -242,6 +252,7 @@
    "confidence": "high"
   },
   "rationale": "\"webhely probléma\" is ungrammatical juxtaposition in Hungarian; compare the correctly formed sibling string \"Nem kívánt webhely miatti probléma\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "316df119",
@@ -265,6 +276,7 @@
    "confidence": "high"
   },
   "rationale": "\"webhely probléma\" is an ungrammatical noun juxtaposition; the parallel string uses \"webhely miatti probléma\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "244f9772",
@@ -288,6 +300,7 @@
    "confidence": "high"
   },
   "rationale": "\"oldal probléma\" is an ungrammatical juxtaposition; the parallel string uses \"... miatti probléma\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f0a29965",
@@ -311,6 +324,7 @@
    "confidence": "medium"
   },
   "rationale": "The same source label \"Go Back\" is translated \"Visszalépés\" in mozac_browser_errorpages_security_bad_cert_back on the same error-page surface; the two buttons should match.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7aff1a7d",
@@ -334,6 +348,7 @@
    "confidence": "high"
   },
   "rationale": "Source: \"Is the device connected to an active network?\" — \"eszköz\" (device) is meant, not computer.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9dc90414",
@@ -357,6 +372,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is simply \"the browser cannot continue\"; the added object changes the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5ff43826",
@@ -380,6 +396,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Dropped %s percent\" expresses a decrease by a percentage; the Hungarian verb \"csökkent\" requires \"-kal/-kel\" (\"százalékkal\"), not the accusative.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f446bfbd",
@@ -403,6 +420,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Gained %s percent\" means the value rose by that percentage; Hungarian requires the instrumental-comitative case (\"százalékkal\") with \"nőtt\". The parallel string uses \"csökkent\", which likewise takes \"-kal/-kel\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "09d1bfb9",
@@ -426,6 +444,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"Share browsing activity\"; the corresponding short description uses \"böngészési tevékenység\", so the long form is inconsistent and imprecise.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e68d5e84",
@@ -449,6 +468,7 @@
    "confidence": "high"
   },
   "rationale": "Source is \"Share financial and payment information with extension developer\"; the short description correctly uses \"pénzügyi és fizetési információk\", so the long form is missing part of the meaning and inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9b8c76f6",
@@ -472,6 +492,7 @@
    "confidence": "high"
   },
   "rationale": "Source says \"Share personal communications\"; the matching short description correctly uses \"személyes kommunikáció\", so this states a different data category.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3454df0e",
@@ -495,6 +516,7 @@
    "confidence": "high"
   },
   "rationale": "Source is \"with extension developer\" (singular); every other data collection long description uses \"a kiegészítő fejlesztőjével\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "970dd0ae",
@@ -518,6 +540,7 @@
    "confidence": "high"
   },
   "rationale": "The source means extending (adding to) the developer tools, not opening them; \"kinyitása\" says the extension opens the devtools.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a7bb0af7",
@@ -541,6 +564,7 @@
    "confidence": "high"
   },
   "rationale": "The source means extending (adding to) the developer tools, not opening them.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "925695b8",
@@ -564,6 +588,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is singular \"extension developer\"; the sibling string mozac_feature_addons_permissions_data_collection_websiteContent_long_description uses \"a kiegészítő fejlesztőjével\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "970dd0ae",
@@ -587,6 +612,7 @@
    "confidence": "high"
   },
   "rationale": "mozac_feature_addons_permissions_management_description uses \"Kiegészítőhasználat\" for the identical source text; the two must be consistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b8d8fdfb",
@@ -610,6 +636,7 @@
    "confidence": "medium"
   },
   "rationale": "Hungarian orthography requires \"proxybeállítások\" as one word; the parallel string mozac_feature_addons_permissions_proxy_description_for_update already uses that form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d85af783",
@@ -633,6 +660,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to web sites in a domain; \"lap\" means browser tab in Firefox terminology, and other strings in this batch use \"oldal\"/\"weboldal\" for site.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "26c824dc",
@@ -656,6 +684,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to web sites in a domain; \"lap\" is the Firefox term for tab, inconsistent with the other site strings that use \"oldal\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e18e36a2",
@@ -679,6 +708,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is an imperative list item \"Search Firefox\"; the Hungarian noun phrase \"%1$s keresés\" reads as \"Firefox search\" and lacks any case marking, unlike the parallel strings which use \"… keresése\" or a prepositional construction.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6ac7936e",
@@ -702,6 +732,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is \"More options\" for the overflow menu button; \"beállítások\" means \"settings\", which names a different concept.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8fa5ae34",
@@ -725,6 +756,7 @@
    "confidence": "medium"
   },
   "rationale": "Source expresses expectation (\"should only take\"), the target states it as fact.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d6c37a92",
@@ -748,6 +780,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Upload files?\" (plural); the Hungarian says a single file.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dacdf9dc",
@@ -771,6 +804,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says to sign in *with* a provider account (the provider is the means of login), not to sign in *into* that account; the Hungarian also drops the required a(z) article handling for a placeholder.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7270ad5c",
@@ -794,6 +828,7 @@
    "confidence": "medium"
   },
   "rationale": "The sentence subject is \"az Adatvédelmi irányelvek és a Szolgáltatási feltételek ... vonatkoznak\"; the third-person possessive -i on \"feltételei\" does not agree with the coordinated non-possessive \"Adatvédelmi irányelvek\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d3c30d17",
@@ -817,6 +852,7 @@
    "confidence": "medium"
   },
   "rationale": "The dialog offers to use the generated strong password; the Hungarian word order states rather than asks the offer, and is inconsistent with the sibling string \"Erős jelszó használata\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a79b4183",
@@ -840,6 +876,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment states %s is the service name \"Firefox Relay\", so adding \"Relay\" after the placeholder yields \"Firefox Relay Relay\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "255c30ff",
@@ -863,6 +900,7 @@
    "confidence": "medium"
   },
   "rationale": "\"jelkód\" means passcode/PIN, not passkey; Mozilla Hungarian uses \"belépési kulcs\" for passkey.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d4c96fed",
@@ -886,6 +924,7 @@
    "confidence": "medium"
   },
   "rationale": "\"jelkód\" means passcode/PIN, not passkey; Mozilla Hungarian uses \"belépési kulcs\" for passkey.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "84078efa",
@@ -909,6 +948,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a plural noun phrase title \"Trackers blocked this week\"; the Hungarian reads like a fragment of a count sentence with the number missing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "953ff9de",
@@ -932,6 +972,7 @@
    "confidence": "medium"
   },
   "rationale": "In Hungarian, a case suffix appended to a placeholder holding a proper/brand name (Firefox, Focus) must be joined with a hyphen: \"a Firefox-ban\"/\"a %1$s-ban\". Written solid as \"%1$sban\" it renders as \"Firefoxban\" without the required separator used elsewhere for placeholder-based names.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "10856eae",
@@ -955,6 +996,7 @@
    "confidence": "high"
   },
   "rationale": "The antecedent \"oldalösszegzéseket\" is plural (source: \"page summaries that stay in your control\"), so the pronoun must be \"amelyeket\", not the singular \"amelyet\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "59e50c71",
@@ -978,6 +1020,7 @@
    "confidence": "medium"
   },
   "rationale": "In Hungarian a suffix appended to a placeholder standing for a proper name (Firefox) must be joined with a hyphen; other strings would render \"Firefoxtól\" incorrectly glued. Standard Mozilla hu practice is \"%1$s-tól\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "99fae5f6",
@@ -1001,6 +1044,7 @@
    "confidence": "high"
   },
   "rationale": "Source says the web address must contain “https://” or “http://”; the Hungarian drops the slashes from the first variant, giving incorrect guidance.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "477549d6",
@@ -1024,6 +1068,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is a plain title \"Add to\" with no ellipsis; the added ellipsis suggests a further dialog.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "05f888f5",
@@ -1047,6 +1092,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment states this is an address field for the administrative division \"departamento\"; \"Részleg\" means a section/unit of an organization, not a territorial division.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0dc689e1",
@@ -1070,6 +1116,7 @@
    "confidence": "medium"
   },
   "rationale": "In an address form the field designates a district/quarter (colonia, mahalle); \"Szomszédság\" does not name a place in Hungarian.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "160e9c11",
@@ -1093,6 +1140,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to the postal town component of an address (UK/Norway/Sweden), not a post office facility.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "260a59d1",
@@ -1116,6 +1164,7 @@
    "confidence": "high"
   },
   "rationale": "Source is \"you won’t see new or current AI enhancements in %s\"; the Hungarian omits \"AI\" and uses \"fejlesztéseit\" instead of the established \"MI funkcióbővítések\" used in the sibling strings.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c1eb9cba",
@@ -1139,6 +1188,7 @@
    "confidence": "medium"
   },
   "rationale": "The source sentence is an imperative \"Unblock specific features below.\"; the translation invents \"use the controls below\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "be342f94",
@@ -1162,6 +1212,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Egyszínű\" already means \"solid-colored\", so \"Egyszínű színek\" reads as \"solid-colored colors\"; a natural rendering is needed for this group title.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bf71c6a0",
@@ -1185,6 +1236,7 @@
    "confidence": "high"
   },
   "rationale": "The source is a label indicating which folder the bookmark will be saved in; \"Mentés máshová…\" means \"Save somewhere else…\" and adds an ellipsis not in the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "195828bf",
@@ -1208,6 +1260,7 @@
    "confidence": "medium"
   },
   "rationale": "Hungarian orthography attaches suffixes to letters with a hyphen, which is used here, but the range convention in the locale uses an en dash; the string as written mixes conventions.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6d8726b9",
@@ -1231,6 +1284,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to the currently visited page (\"page\"), which in Hungarian Firefox is \"oldal\"; \"lap\" is the term used for \"tab\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "86199678",
@@ -1254,6 +1308,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states the tab is powered by the app; \"A motorháztető alatt\" (\"under the hood\") says something different.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "466ab913",
@@ -1277,6 +1332,7 @@
    "confidence": "medium"
   },
   "rationale": "\"7 napja van\" reads as \"it has been 7 days\"/ambiguous; the source means there are fewer than 7 days remaining to update.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "16aa04c9",
@@ -1300,6 +1356,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says add-ons and some features will stop working, not that they will work improperly; \"egyéb\" (other) is also not in the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3adc1c34",
@@ -1323,6 +1380,7 @@
    "confidence": "medium"
   },
   "rationale": "The source title \"You’re on an older version of Firefox\" has no terminal punctuation; titles in this set (e.g. \"Frissítés javasolt\") are unpunctuated.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6efb38b6",
@@ -1346,6 +1404,7 @@
    "confidence": "high"
   },
   "rationale": "Source is \"Close tab and delete group?\" — singular tab (the last tab), but the target uses the plural \"lapokat\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b7753ff5",
@@ -1369,6 +1428,7 @@
    "confidence": "high"
   },
   "rationale": "The Hungarian inessive form of \"rendelet\" is \"rendeletben\"; \"rendeleteben\" is a spelling error.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5b4145c0",
@@ -1392,6 +1452,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"More options\" (the three-dot menu), not settings; \"beállítások\" means settings and is the established translation of \"Settings\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8fa5ae34",
@@ -1415,6 +1476,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says this is a snackbar action to view the collection just created; Hungarian \"Nézet\" means \"view\" as in a display mode, not the action of viewing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "aa77b963",
@@ -1438,6 +1500,7 @@
    "confidence": "high"
   },
   "rationale": "Hungarian requires the possessive form \"kártyák megtekintéséhez\" (viewing of the cards); the current form is ungrammatical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d5108007",
@@ -1461,6 +1524,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means protecting the data from being accessed by someone who has the device; the Hungarian reads as protecting the payment methods in case someone accesses the device, dropping what they are protected from.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "06dae676",
@@ -1484,6 +1548,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a compound noun \"Add-ons Tools\" (tools for add-ons); \"Kiegészítői\" is a possessive/adjectival form that is ungrammatical here. Compare the sibling strings \"Régióeszközök\" and \"Automatikus kitöltési eszközök\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8044be22",
@@ -1507,6 +1572,7 @@
    "confidence": "medium"
   },
   "rationale": "Other strings in the same feature avoid a translation of \"drawer\" entirely (e.g. \"Navigálás visszafelé\"); \"fiók\" is the term used for account/box and is misleading here.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4cb832bc",
@@ -1530,6 +1596,7 @@
    "confidence": "medium"
   },
   "rationale": "The sibling string download_item_paused_description translates the same source word \"paused\" as \"szüneteltetve\"; \"szünet\" (a break/pause noun) is inconsistent on the same downloads list surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0de85088",
@@ -1553,6 +1620,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"Navigate to Downloads Settings\" is a content description naming the button action; the parallel string download_navigate_back_description uses the noun form \"Navigálás visszafelé\", so the imperative here is inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "95885c9b",
@@ -1576,6 +1644,7 @@
    "confidence": "medium"
   },
   "rationale": "In the passwords/logins screen, \"Edit login\" refers to editing a saved login entry, not to the act of signing in; Hungarian Firefox uses \"bejelentkezési adatok\" for stored logins.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2e704556",
@@ -1599,6 +1668,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: \"to stop suspected fingerprinters.\" There is no \"also\" in the English text; the added \"is\" changes the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1ac55890",
@@ -1622,6 +1692,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says this is placeholder text in the search bar for searching history; the Hungarian genitive construction means \"history of searches\", the opposite content.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "941b7429",
@@ -1645,6 +1716,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is the label for the button that starts the VPN authentication flow; \"Kezdő lépések\" means \"getting-started steps\", not the call to action \"Get started\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c4d5a1d3",
@@ -1668,6 +1740,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"make your browsing more private\"; the parallel string ip_protection_settings_description correctly uses \"privátabb\". \"Biztonságosabb\" means \"safer/more secure\", a different claim.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e9806010",
@@ -1691,6 +1764,7 @@
    "confidence": "high"
   },
   "rationale": "The string uses the formal address (\"Kapcsolja be\", \"Próbálja ki\") but switches to the informal second-person \"kapj\", which is both a register violation and a grammatical mismatch.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e9806010",
@@ -1714,6 +1788,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to not using the search feature, not to a \"kereső\" (search engine).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d6f732c4",
@@ -1737,6 +1812,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a plain statement of intent to keep using Firefox; the Hungarian focus structure distorts it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "eb6e141e",
@@ -1760,6 +1836,7 @@
    "confidence": "high"
   },
   "rationale": "The noun phrase \"a mentett jelszavak megtekintése\" requires the possessive form; \"megtekintéshez\" is ungrammatical here.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8dcee743",
@@ -1783,6 +1860,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: protect saved passwords from being accessed if someone else has your device; the Hungarian omits what is being protected against.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5b90f589",
@@ -1806,6 +1884,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Thanks for your feedback!\" ends with an exclamation mark.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "36effff6",
@@ -1829,6 +1908,7 @@
    "confidence": "medium"
   },
   "rationale": "Hungarian orthography joins a proper-name attribute to the noun with a hyphen (cf. \"WhatsApp-megosztásokhoz\" used in this same batch).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "14a5fa0e",
@@ -1852,6 +1932,7 @@
    "confidence": "medium"
   },
   "rationale": "microsurvey_close_handle_content_description translates \"Close survey\" as \"Kérdőív bezárása\"; the same term on the same surface should be consistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "020335ec",
@@ -1875,6 +1956,7 @@
    "confidence": "medium"
   },
   "rationale": "The Android home-screen \"widget\" is rendered \"widget\" in Hungarian Firefox/Android UI; \"modul\" means module and is misleading.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2a4e2769",
@@ -1898,6 +1980,7 @@
    "confidence": "high"
   },
   "rationale": "The source says the shared data is the fact that the user uses Firefox, not how they use it; \"hogyan használja\" implies usage details are shared.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4a6dc1ad",
@@ -1921,6 +2004,7 @@
    "confidence": "high"
   },
   "rationale": "The source shares the fact of usage, not the manner of usage.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "05614afa",
@@ -1944,6 +2028,7 @@
    "confidence": "high"
   },
   "rationale": "The placeholder is replaced by \"Adatvédelmi nyilatkozat\", which starts with a consonant, so the article must be \"a\", not \"az\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b9029003",
@@ -1967,6 +2052,7 @@
    "confidence": "medium"
   },
   "rationale": "Hungarian punctuation does not place a comma after a sentence-initial adverbial phrase here; the comma is an anglicism.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "66fbda31",
@@ -1990,6 +2076,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means the browser will not betray/sell out the user; the Hungarian says only \"does not sell (it)\" with a missing object, which reads as incomplete and different in meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0ee11ebd",
@@ -2013,6 +2100,7 @@
    "confidence": "high"
   },
   "rationale": "The source shares the fact that the user uses Firefox, not how they use it; \"hogyan használja\" claims usage-behaviour data is shared.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "05614afa",
@@ -2036,6 +2124,7 @@
    "confidence": "high"
   },
   "rationale": "The source shares only the fact of usage, not how the user uses Firefox; the Hungarian misstates what data is shared.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "05614afa",
@@ -2059,6 +2148,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Hardware configuration\" refers to the device's hardware makeup, not user-adjustable hardware settings.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3cb05b90",
@@ -2082,6 +2172,7 @@
    "confidence": "high"
   },
   "rationale": "Hungarian punctuation does not place a comma after a fronted purpose adverbial like \"…érdekében\" before the main clause subject.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "66fbda31",
@@ -2105,6 +2196,7 @@
    "confidence": "medium"
   },
   "rationale": "Hungarian punctuation does not place a comma after a fronted adverbial phrase like this; the source has a comma only because of English usage after an introductory phrase.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "66fbda31",
@@ -2128,6 +2220,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says this is the dialog button for confirming opening all tabs, so it is a verb phrase; \"Nyitott lapok\" means \"tabs that are open\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0773f2b9",
@@ -2151,6 +2244,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to Android's Battery Saver mode, not general power management; the theme follows the Battery Saver setting.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5cf1fac0",
@@ -2174,6 +2268,7 @@
    "confidence": "medium"
   },
   "rationale": "The equivalent bullet lists use nominal constructions (\"Alapértelmezett DNS-feloldó használata, ha…\"); here the sentence reads as an instruction to the user, changing who performs the action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "359adde3",
@@ -2197,6 +2292,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"sites will not load or function properly\" negates both alternatives; the Hungarian also drops \"properly\" (megfelelően).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7d998167",
@@ -2220,6 +2316,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"making it harder for others to see which website you’re about to access\"; \"lássak\" (I see) is a misspelling of \"lássák\" (they see), and \"melyik weboldalakat\" mixes singular \"melyik\" with plural noun.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "33583b80",
@@ -2243,6 +2340,7 @@
    "confidence": "medium"
   },
   "rationale": "The source specifies \"this folder\" (the previously selected custom folder); the translation loses the demonstrative.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a8734e85",
@@ -2266,6 +2364,7 @@
    "confidence": "medium"
   },
   "rationale": "Source states unconditionally that websites will break; the added \"egyes\" (some) changes the meaning and duplicates the hedging used for the \"may cause\" option.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "42097077",
@@ -2289,6 +2388,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"faster performance\", not \"better performance\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "61227231",
@@ -2312,6 +2412,7 @@
    "confidence": "medium"
   },
   "rationale": "Hungarian orthography: the compound is \"mobiladat-kapcsolat\"; \"mobil-adatkapcsolaton\" is not a correct hyphenation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cae29d8f",
@@ -2335,6 +2436,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a descriptive summary stating that the feature covers phone numbers and email addresses; the Hungarian nominalized form reads as a command/action label, changing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "43eab880",
@@ -2358,6 +2460,7 @@
    "confidence": "medium"
   },
   "rationale": "An abbreviation modifying a noun forms a compound requiring a hyphen in Hungarian (cf. \"Mozilla-fiók\" in the same batch).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fb7bdbae",
@@ -2381,6 +2484,7 @@
    "confidence": "high"
   },
   "rationale": "Hungarian requires \"az\" before words beginning with a vowel (\"összeomlás\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "528a1210",
@@ -2404,6 +2508,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Site permissions\" is a compound; Hungarian orthography requires it written as one word (or hyphenated), not as two separate words.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "37ecb3bc",
@@ -2427,6 +2532,7 @@
    "confidence": "medium"
   },
   "rationale": "Hungarian orthography requires a hyphen when a proper name is combined with a common noun (Gecko-naplók).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "397afe55",
@@ -2450,6 +2556,7 @@
    "confidence": "high"
   },
   "rationale": "The source names the feature of sharing links; the translation says \"sharing link\", i.e. a link used for sharing, which is a different concept.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9978a54a",
@@ -2473,6 +2580,7 @@
    "confidence": "medium"
   },
   "rationale": "The compound \"kampánymérési\" should be written as one word (cf. \"Kampánymérés\" in preferences_marketing_data_title), and the source is a plain noun phrase, not a possessive.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "df70fd95",
@@ -2496,6 +2604,7 @@
    "confidence": "high"
   },
   "rationale": "The comment states “That you use it” means the user shares the fact that they continue to use Firefox, not usage details; \"hogyan használja\" says the opposite.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6fd8c1d4",
@@ -2519,6 +2628,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"View tabs with your fingerprint\"; \"íz\" is a misspelling of the definite article \"az\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2deee40f",
@@ -2542,6 +2652,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Show search suggestions\"; sibling strings (Show clipboard suggestions, Show recent searches, Show trending suggestions, Show voice search) all keep \"megjelenítése\". Here the action word is missing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c15e9d25",
@@ -2565,6 +2676,7 @@
    "confidence": "medium"
   },
   "rationale": "The source names the source of the suggestions (sponsors), parallel to \"Suggestions from %1$s\" which is correctly rendered as \"Javaslatok a következőtől: %1$s\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cb823e44",
@@ -2588,6 +2700,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Shortcut\" here is a toolbar action shortcut, not a launcher/home-screen icon; \"indítóikon\" denotes an app launcher icon.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "88864df2",
@@ -2611,6 +2724,7 @@
    "confidence": "medium"
   },
   "rationale": "The shortcut is a toolbar action, not a launcher icon; \"indítóikon\" means app launcher icon.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "227d9609",
@@ -2634,6 +2748,7 @@
    "confidence": "high"
   },
   "rationale": "The same source term \"trackers\" is translated \"nyomkövető\" in protection_panel_banner_protected_blocked_trackers_description and protection_panel_etp_disabled_no_trackers_blocked; \"követők\" (followers) is inconsistent and misleading on the same surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "afab97bf",
@@ -2657,6 +2772,7 @@
    "confidence": "high"
   },
   "rationale": "Misspelling of \"Összes\" with a doubled initial vowel.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1979a0be",
@@ -2680,6 +2796,7 @@
    "confidence": "medium"
   },
   "rationale": "\"improve features, performance, and stability\" is not \"install modifications affecting …\"; the meaning is altered.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "be189cae",
@@ -2703,6 +2820,7 @@
    "confidence": "high"
   },
   "rationale": "Source says \"%1$s may close\" (the app itself may be closed); the Hungarian transitive \"bezárhatja\" means \"it may close [something]\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "74f67ea5",
@@ -2726,6 +2844,7 @@
    "confidence": "medium"
   },
   "rationale": "The source instructs the user to replace the query with %s; the sibling string search_add_custom_engine_suggest_string_example_2 with identical source is translated as \"Cserélje a lekérdezést erre\", showing the inconsistency.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "97ea1d03",
@@ -2749,6 +2868,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means to search using the named engine; \"%s keresés\" reads as a noun phrase (\"%s search\") and is not a correct Hungarian rendering of the action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "15a85780",
@@ -2772,6 +2892,7 @@
    "confidence": "medium"
   },
   "rationale": "Placeholder finding",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cd4eee10",
@@ -2795,6 +2916,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"Almost there! You're just 1 step away\" addresses the user; mixing \"megvagyunk\" (we) with the formal \"van\" (you) is inconsistent within one string.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cd4eee10",
@@ -2818,6 +2940,7 @@
    "confidence": "medium"
   },
   "rationale": "The established Hungarian football term for \"Group Stage\" is \"csoportkör\"; \"Csoportkörök szakasza\" (\"the stage of the group rounds\") is redundant and overly long for a widget label.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "81366837",
@@ -2841,6 +2964,7 @@
    "confidence": "high"
   },
   "rationale": "The source is \"More options\" for an overflow menu button; \"beállítások\" means \"settings\", which is a different concept and inconsistent with the established Hungarian term for the overflow menu.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8fa5ae34",
@@ -2864,6 +2988,7 @@
    "confidence": "medium"
   },
   "rationale": "Source reads \"page %2$d of %3$d\"; the target mixes an ordinal and a slash so a screen reader announces something unintelligible rather than the current page out of the total.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8311ed34",
@@ -2887,6 +3012,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"the tournament\"; \"vébé\" is a colloquial abbreviation of \"világbajnokság\" that clashes with the neutral register of the UI and is not what the source says.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "96dc29a2",
@@ -2910,6 +3036,7 @@
    "confidence": "medium"
   },
   "rationale": "The source contrasts a failed sync with the last successful one; the target renders it identically to sync_last_synced_summary (\"Last synced\"), losing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "939c65eb",
@@ -2933,6 +3060,7 @@
    "confidence": "high"
   },
   "rationale": "The source is \"Send crash report to Mozilla\"; the Hungarian noun phrase should be \"Összeomlási jelentés elküldése\" — \"jelentése\" is an erroneous possessive form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e1f7edb2",
@@ -2956,6 +3084,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Options\" here refers to menu options, not settings (\"beállítások\"); the established rendering for the three-dot menu content description is \"További lehetőségek\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8fa5ae34",
@@ -2979,6 +3108,7 @@
    "confidence": "high"
   },
   "rationale": "The source refers to synced tabs, not private tabs; the target is identical to tabs_header_private_tabs_counter_title.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9eb67f77",
@@ -3002,6 +3132,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"here\" is lowercase and the placeholder is embedded in a sentence (\"You can learn more %1$s.\"), so a capital letter is wrong.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "af24fa7f",
@@ -3025,6 +3156,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means a note written by Firefox; \"innen\" (from here/from this place) misrepresents the sense.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "af519179",
@@ -3048,6 +3180,7 @@
    "confidence": "medium"
   },
   "rationale": "In Hungarian a numeral is followed by a singular noun phrase; \"webhelyek közötti\" after a numeral is grammatically inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cf5ae223",
@@ -3071,6 +3204,7 @@
    "confidence": "medium"
   },
   "rationale": "The source counts fingerprinter scripts, not fingerprints; Hungarian Firefox uses \"ujjlenyomat-készítő\" for fingerprinter.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0d9eda5c",
@@ -3094,6 +3228,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to the (singular) translation sheet/dialog; \"Fordítások lap\" reads as \"Translations tab\" and mismatches the singular source term used elsewhere.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fe424fc7",
@@ -3117,6 +3252,7 @@
    "confidence": "high"
   },
   "rationale": "With a definite object (\"a lépéseket\"), the verb must take the definite conjugation: \"Adja meg\", not the indefinite \"Adjon meg\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a60870a1",
@@ -3140,6 +3276,7 @@
    "confidence": "medium"
   },
   "rationale": "cfr_cookie_banner reads \"A sütibannerek beállításait a %2$s kezelheti\", so inserting \"beállításokban\" yields \"a beállításokban kezelheti\" duplicated with \"beállításait\", producing an ungrammatical sentence.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "94b30854",
@@ -3163,6 +3300,7 @@
    "confidence": "medium"
   },
   "rationale": "Per the developer comment the action dismisses the overlay and returns to the browser; \"Elutasítás\" means rejecting/declining, which is a different action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b3be4bf3",
@@ -3186,6 +3324,7 @@
    "confidence": "medium"
   },
   "rationale": "The three-dot menu content description says \"More options\", not settings; \"beállítások\" is the established term for \"settings\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8fa5ae34",
@@ -3209,6 +3348,7 @@
    "confidence": "high"
   },
   "rationale": "The source says the site is not supported by Cookie Banner Reduction; the Hungarian has \"Ez az oldalt\" (demonstrative not agreeing with the accusative noun) and makes the site the subject supporting the feature, reversing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8f563056",
@@ -3232,6 +3372,7 @@
    "confidence": "high"
   },
   "rationale": "The source means the user submitted a request for the site to be supported by the cookie banner reducer, not that a request was sent to a support website.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a9101a76",
@@ -3255,6 +3396,7 @@
    "confidence": "high"
   },
   "rationale": "The source means a request was submitted asking that this site be supported, not a request sent to a support site.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a9101a76",
@@ -3278,6 +3420,7 @@
    "confidence": "high"
   },
   "rationale": "\"jelentése elküldése\" is ungrammatical; the source is \"Send crash report to Mozilla\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e1f7edb2",
@@ -3301,6 +3444,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states the shortcut will open with Enhanced Tracking Protection disabled; the Hungarian adds \"the application\" as an object, changing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f0af2120",
@@ -3324,6 +3468,7 @@
    "confidence": "medium"
   },
   "rationale": "Compare external_app_prompt_no_app which uses \"Kiléphet a %1$sból\"; the current wording is inconsistent for the same source phrase \"You can leave %1$s\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a237fe2a",
@@ -3341,10 +3486,11 @@
   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "hu",
   "origin": {},
   "rationale": "In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a4bb4bd9",
@@ -3368,6 +3514,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Options\" here refers to the three-dot overflow menu, not to settings (\"Beállítások\" is used for Settings in menu_settings).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a80905c8",
@@ -3391,6 +3538,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is \"Add to Shortcuts\" (adding the site to the Shortcuts list); the separate string menu_add_to_home_screen is \"Add to Home screen\". Rendering both identically makes the menu ambiguous and mistranslates \"Shortcuts\", which is elsewhere rendered \"Parancsikonok\" (see firstrun_shortcut_title).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0aa6ace0",
@@ -3414,6 +3562,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a branding line meaning the tab is powered by the app; \"A motorháztető alatt\" means \"under the hood\", a different statement.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "466ab913",
@@ -3437,6 +3586,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment and source refer to the Shortcuts list, not the device home screen; \"Shortcuts\" is rendered \"Parancsikonok\" elsewhere.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e3f9c358",
@@ -3460,6 +3610,7 @@
    "confidence": "medium"
   },
   "rationale": "The source and developer comment say to report an issue on the current site, not to report the site itself as faulty.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ef0e0f71",
@@ -3483,6 +3634,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the user doesn't need to see what's running in their browser; the target's \"benne\" ambiguously refers back to the app.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1d87c6f6",
@@ -3506,6 +3658,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to Android's Battery Saver feature, whose Hungarian name is \"Akkumulátorkímélő\"; \"Energiagazdálkodás\" names a different concept.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5cf1fac0",
@@ -3529,6 +3682,7 @@
    "confidence": "high"
   },
   "rationale": "Hungarian uses \"a\" before consonant-initial words; \"az webcímet\" is ungrammatical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b33ec8ac",
@@ -3552,6 +3706,7 @@
    "confidence": "high"
   },
   "rationale": "The source is singular (label for a single URL input field); the Hungarian uses the plural.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8f1f5ed8",
@@ -3575,6 +3730,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to user-defined (custom) autocomplete URLs; the translation drops \"custom\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0fe9323c",
@@ -3598,6 +3754,7 @@
    "confidence": "medium"
   },
   "rationale": "The source names a list of autocomplete URLs; the translation omits \"list\" and reads incompletely.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ab692b14",
@@ -3621,6 +3778,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US string says Mozilla collects only what is needed to provide and improve the app for everyone; the translation omits \"for everyone\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "012ce065",
@@ -3644,6 +3802,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to switching to the link opened in a new tab; the Hungarian only says \"switch to the new tab\", losing the link reference.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bae22583",
@@ -3667,6 +3826,7 @@
    "confidence": "high"
   },
   "rationale": "The source is \"Block 3rd-party cookies only\"; the sibling options all use \"blokkolása\". \"Törlése\" means deleting, which is a different action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "07cdd949",
@@ -3690,6 +3850,7 @@
    "confidence": "high"
   },
   "rationale": "\"rendeleteben\" should be \"rendeletben\"; also the source states the certificate is \"Qualified as specified in…\", which the target omits.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5b4145c0",
@@ -3713,6 +3874,7 @@
    "confidence": "high"
   },
   "rationale": "Source \"New search engine added.\" is a past-tense confirmation; the Hungarian nominal form means \"Add new search engine\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c3705dbc",
@@ -3736,6 +3898,7 @@
    "confidence": "medium"
   },
   "rationale": "Other Focus strings use \"parancsikon\" for shortcuts; \"indítóikon\" is inconsistent terminology on the same surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ddcd0491",
@@ -3759,6 +3922,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"We’re having a problem with this tab\" uses first person plural; also \"probléma van ezzel a lapon\" should be \"ezzel a lappal\" (problem with the tab, not on the tab).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4e09d0f1",
@@ -3782,6 +3946,7 @@
    "confidence": "medium"
   },
   "rationale": "The adjacent string trackers_and_scripts translates \"Trackers\" as \"követők\"; using \"nyomkövetők\" on the same tracking-protection surface is inconsistent terminology.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0cf141a0",

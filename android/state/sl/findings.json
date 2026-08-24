@@ -14,6 +14,7 @@
    "confidence": "medium"
   },
   "rationale": "The sl convention is straight-double quotes; the string keeps the English curly quotes.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9a0defd0",
@@ -37,6 +38,7 @@
    "confidence": "medium"
   },
   "rationale": "Source asks about a typographical error in the address, not in the item's name.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2bb36db3",
@@ -60,6 +62,7 @@
    "confidence": "high"
   },
   "rationale": "The source says credit card numbers, not bank account information.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8d2a3269",
@@ -83,6 +86,7 @@
    "confidence": "medium"
   },
   "rationale": "Source states only that an HTTPS version of the site is not available; \"varna\" is added content.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6c75832a",
@@ -106,6 +110,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to the network link, and contains no \"unexpectedly\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cdfbc960",
@@ -129,6 +134,7 @@
    "confidence": "medium"
   },
   "rationale": "The source sentence's content (device/network protected by firewall or proxy; incorrect settings can interfere with Web browsing) is not conveyed.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4035b9c4",
@@ -152,6 +158,7 @@
    "confidence": "medium"
   },
   "rationale": "The sl convention is straight-double quotes; the source uses “Try Again” but the locale's house style is straight doubles.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dc4fa37f",
@@ -175,6 +182,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the port is restricted (blocked), not that it is \"unacceptable\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "11822b86",
@@ -198,6 +206,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US text refers to the host server for the provided address; the translation drops that content and says something different.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e44e601c",
@@ -221,6 +230,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states the extension *wants to* collect the listed data (a request for consent), not that it already collects it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "abc74eb3",
@@ -244,6 +254,7 @@
    "confidence": "high"
   },
   "rationale": "Every sibling *_long_description string uses the lowercase gerund form (\"deljenje ... z razvijalcem razširitve\"); this one uses a capitalized imperative verb, an inconsistency on the same surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "917b156a",
@@ -267,6 +278,7 @@
    "confidence": "medium"
   },
   "rationale": "The parallel string mozac_feature_addons_permissions_data_collection_websiteContent_long_description (\"Share website content with extension developer\") is rendered as \"deljenje vsebine spletnih strani z razvijalcem razširitve\"; the same source pattern in the same dialog should not switch to an imperative verb form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "917b156a",
@@ -290,6 +302,7 @@
    "confidence": "high"
   },
   "rationale": "All sibling permission descriptions (e.g. \"dostop do zavihkov brskalnika\", \"branje in spreminjanje nastavitev zasebnosti\") are lowercase nominal phrases describing what the add-on may do; here it is rendered as a command to the user, which also changes the meaning (the extension downloads the models, not the user). The _for_update variant already uses the correct nominal form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d65f08dd",
@@ -313,6 +326,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Access browser activity during navigation\"; the qualifier is omitted, and the paired _for_update string does include it, creating inconsistency.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a256e6de",
@@ -336,6 +350,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"Open in…\" has no space before the ellipsis; Slovenian localization convention here uses the ellipsis character attached directly to the preceding word.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bd7c47c0",
@@ -359,6 +374,7 @@
    "confidence": "medium"
   },
   "rationale": "Source lists Privacy Policy (%3$s) first and Terms of Service (%4$s) second; the translation reverses them, though placeholders still track their labels, the order change alters the string relative to source and risks confusion.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "54371095",
@@ -382,6 +398,7 @@
    "confidence": "medium"
   },
   "rationale": "The neighbouring string mozac_feature_prompts_popup_dialog_title translates \"site\" as \"spletno mesto\"; here \"site\" is rendered \"stran\" (page), an inconsistent term on the same surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "58dc91ce",
@@ -405,6 +422,7 @@
    "confidence": "high"
   },
   "rationale": "\"račun\" is masculine singular accusative, so the possessive pronoun must be \"svoj\", not the neuter/plural \"svoje\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6f9fff6b",
@@ -428,6 +446,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Update card expiration date?\" is a confirmation question; the sibling strings use \"Posodobim naslov?\" / \"Želite uporabiti močno geslo?\". \"Posodobi ...?\" is an imperative and reads as a command, not a question.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "27108c81",
@@ -451,6 +470,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"AI\" means artificial intelligence; the Slovenian abbreviation \"UI\" is ambiguous with \"uporabniški vmesnik\" and elsewhere Mozilla sl uses \"UI\"/\"umetna inteligenca\" spelled out; as written it can be read as \"user interface can make mistakes\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c1d201a3",
@@ -474,6 +494,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means the feature is being set up/prepared, not that summaries are being installed; \"namestitev\" means installation of software.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "03d3b2c6",
@@ -497,6 +518,7 @@
    "confidence": "medium"
   },
   "rationale": "In Slovenian no comma separates the verb from its purpose phrase; the comma breaks the sentence incorrectly.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7caad6ad",
@@ -520,6 +542,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"Summarize with a shake?\" is impersonal; the sibling string uses \"Povzemi to stran\" and the feature term elsewhere is \"stresanje\" (Občutljivost na stresanje), so \"tresenjem\" is also inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b32d4183",
@@ -543,6 +566,7 @@
    "confidence": "medium"
   },
   "rationale": "The button dismisses the dialog; \"Skrij\" means \"hide\", which is a different action than dismissing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f440d86d",
@@ -566,6 +590,7 @@
    "confidence": "high"
   },
   "rationale": "The source uses 🔇 (muted) for sound off and 🔈 for sound on; the translation uses 🔈 for both, losing the distinction.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "462f915c",
@@ -589,6 +614,7 @@
    "confidence": "medium"
   },
   "rationale": "Within the same AI controls screen, ai_controls_banner_supporting_text_2 and ai_controls_block_ai_description use \"umetna inteligenca\" while this and other strings use the abbreviation \"UI\"; the same source term should be rendered consistently.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e74456d0",
@@ -612,6 +638,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states the user can unblock anything they want to keep using; the translation changes it to enabling individual options, and elsewhere the same concept uses prepovedati/omogočiti inconsistently.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "628a415c",
@@ -635,6 +662,7 @@
    "confidence": "medium"
   },
   "rationale": "The translation uses closing curly quote before and opening-style low quote after, which is neither correct Slovenian quoting nor the established straight-double convention.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e5118ce9",
@@ -658,6 +686,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Close custom tab menu sheet\" — the menu of the custom tab (singular), and the word \"sheet\" (bottom sheet) is dropped; the Slovenian genitive plural \"zavihkov po meri\" says \"tabs made to order\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4fb0ff62",
@@ -681,6 +710,7 @@
    "confidence": "medium"
   },
   "rationale": "In Slovenian, with mixed-gender coordinated subjects the participle takes masculine plural form; \"nehale\" agrees only with the feminine noun.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b48b4bdc",
@@ -704,6 +734,7 @@
    "confidence": "high"
   },
   "rationale": "\"pošlji Google Lens\" lacks the preposition \"v\"; the parallel string content_description_gallery correctly uses \"za pošiljanje v Google Lens\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fa59a95a",
@@ -727,6 +758,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"use\" (uporabo), not \"view\" (ogled); the developer comment states it is shown before allowing users to use their stored payment method information.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "28ae006e",
@@ -750,6 +782,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to debug locales, not languages; elsewhere in the same feature (debug_drawer_add_new_address) \"locale\" is translated as \"območna nastavitev\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "902ab77d",
@@ -773,6 +806,7 @@
    "confidence": "medium"
   },
   "rationale": "Parallel strings debug_drawer_tab_tools_tab_count_inactive (\"Nedejavni\") and _private (\"Zasebni\") use the plural form for the same tab-count category list; \"Dejaven\" is inconsistent and grammatically mismatched.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8cbe2ecc",
@@ -796,6 +830,7 @@
    "confidence": "medium"
   },
   "rationale": "The source uses typographic quotes “%s”; the sl target uses straight ASCII quotes, deviating from Slovenian quoting conventions.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ec247628",
@@ -819,6 +854,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is \"Deleted “%1$s”\"; %1$s is the download item name, which has no fixed gender, so the feminine form \"izbrisana\" is unwarranted agreement.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "92443a02",
@@ -842,6 +878,7 @@
    "confidence": "medium"
   },
   "rationale": "The source specifies cookies that track across sites; \"Spletni\" only means \"web/online\" and loses the cross-site distinction, which the sibling string etp_cookies_title_2 renders as \"Medspletni\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cda5f7a2",
@@ -865,6 +902,7 @@
    "confidence": "high"
   },
   "rationale": "\"Known Fingerprinters\" is a category heading, so it should be nominative plural (\"Znani sledilci prstnih odtisov\"), not accusative \"Znane sledilce\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8dda1b14",
@@ -888,6 +926,7 @@
    "confidence": "medium"
   },
   "rationale": "The source names a category of trackers (trackers that use redirects), not redirects belonging to trackers; the head noun must be \"sledilci\", as in the sibling titles \"Sledilci družbenih omrežij\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "51a1c1cb",
@@ -911,6 +950,7 @@
    "confidence": "high"
   },
   "rationale": "The source \"Suspected Fingerprinters\" is a heading/preference label; other category titles in the same list use the nominative (e.g. \"Sledilci družbenih omrežij\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f7f27975",
@@ -934,6 +974,7 @@
    "confidence": "medium"
   },
   "rationale": "%1$s is the app name (Firefox). \"Zaprtih Firefox zavihkov: 3\" is ungrammatical in Slovenian (unmarked noun-noun modification) and misreads the placeholder role described in the developer comment.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9eb1757e",
@@ -957,6 +998,7 @@
    "confidence": "medium"
   },
   "rationale": "The source action label instructs the user to manage settings; the translation only says \"Settings\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6e5f433a",
@@ -980,6 +1022,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the link was shared, not sent; other strings in this feature use \"deliti/deljeno\" for share.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "20a0910a",
@@ -1003,6 +1046,7 @@
    "confidence": "medium"
   },
   "rationale": "The locale convention is the formal register; other user-directed strings in this batch use the formal form (e.g. \"Povabite prijatelje…\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2b275a17",
@@ -1026,6 +1070,7 @@
    "confidence": "medium"
   },
   "rationale": "The source asks about the search experience, not about a search option; the parallel string microsurvey_sync_title also drops \"experience\" but this one changes the meaning to a feature/option.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6671b161",
@@ -1049,6 +1094,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"the translation menu\"; \"prevajalnik\" names a translator tool rather than the translation menu.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "904a3e60",
@@ -1072,6 +1118,7 @@
    "confidence": "high"
   },
   "rationale": "The source refers to the phone's home screen; Slovenian uses \"domači zaslon\" for that (as correctly used in nova_onboarding_app_icon_prompt_body), while \"domača stran\" means a website homepage.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "56dac6ec",
@@ -1095,6 +1142,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says only \"Mozilla’s marketing partners\"; \"tehnološkim\" (technological) is invented content.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8a021d5f",
@@ -1118,6 +1166,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says only \"Mozilla’s marketing partners\"; \"tehnološkim\" (technological) is invented content.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "27e25d4b",
@@ -1141,6 +1190,7 @@
    "confidence": "high"
   },
   "rationale": "Source: \"allowing Mozilla to inform the channels ... that you’re a Firefox user\" — Mozilla informs, not \"we inform\"; parallel strings correctly use \"obvesti\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a30470db",
@@ -1164,6 +1214,7 @@
    "confidence": "high"
   },
   "rationale": "Formal register requires \"Prosimo\"; also \"pomagajte\" breaks the subordinate clause introduced by \"da\", which needs \"pomagate\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "162a0003",
@@ -1187,6 +1238,7 @@
    "confidence": "medium"
   },
   "rationale": "sl convention is formal address; the related title uses \"Pomagajte nam ...\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "39b6a8ff",
@@ -1210,6 +1262,7 @@
    "confidence": "high"
   },
   "rationale": "Source is \"Manage settings\"; the parallel string onboarding_redesign_tou_body_three_link_text correctly uses \"Upravljanje nastavitev\". \"Nastavitve\" means just \"Settings\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6e5f433a",
@@ -1233,6 +1286,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says only \"Mozilla’s marketing partners\"; \"tehnološkim\" (technology) is an addition not present in the English.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "27e25d4b",
@@ -1256,6 +1310,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says only \"Mozilla’s marketing partners\"; \"tehnološkim\" (technology) is an addition not present in the English.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "27e25d4b",
@@ -1279,6 +1334,7 @@
    "confidence": "medium"
   },
   "rationale": "The sl locale uses the formal register (e.g. \"Nastavite\", \"Preberite več\", \"Zaženite\") on this very onboarding screen; a second-person singular informal imperative is inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1018b662",
@@ -1302,6 +1358,7 @@
    "confidence": "medium"
   },
   "rationale": "The source asks whether to open the specific number of tabs; \"več\" (several/more) changes the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "51d91efc",
@@ -1325,6 +1382,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means the theme is determined by the Battery Saver setting; the Slovenian reads as a command to set/configure the battery saver, with the wrong subject-object relation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8be801a7",
@@ -1348,6 +1406,7 @@
    "confidence": "medium"
   },
   "rationale": "The same source term \"secure DNS\" is translated as \"zavarovanega DNS\" in preference_doh_default_protection_info_2/_5 and _summary on the same DNS over HTTPS surface; this one is inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2ed726df",
@@ -1371,6 +1430,7 @@
    "confidence": "high"
   },
   "rationale": "Source reads \"...if there is a problem with secure DNS\"; the Slovenian ends with the adjective \"zavarovanim\" with no noun, leaving the sentence incomplete.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4584e5c4",
@@ -1394,6 +1454,7 @@
    "confidence": "medium"
   },
   "rationale": "The locale convention is formal address; \"sporočaj\" is an informal singular imperative, inconsistent with strings like \"Izberite\" and \"Izolirajte\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2f1015ff",
@@ -1417,6 +1478,7 @@
    "confidence": "high"
   },
   "rationale": "Slovenian does not capitalize common nouns mid-sentence; the source is \"Audio and video\" and other strings use lowercase \"video\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0eb03768",
@@ -1440,6 +1502,7 @@
    "confidence": "high"
   },
   "rationale": "The source refers specifically to cross-site cookies; the translation says merely \"web cookies\", which is a different, broader concept.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9d99228d",
@@ -1463,6 +1526,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Nadzor UI\" is ambiguous/incorrect in Slovenian (UI also reads as user interface); the settings screen title for AI controls should spell out \"umetne inteligence\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1bd5a4ac",
@@ -1486,6 +1550,7 @@
    "confidence": "medium"
   },
   "rationale": "The other items in the same list (\"Zgodovino brskanja\", \"Piškotke in podatke strani\", \"Dovoljenja strani\") are in accusative agreeing with \"Izbriši ...\"; this one breaks that pattern.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d6357d49",
@@ -1509,6 +1574,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Enable Gecko logs\"; the translation invents the qualifier \"renderer\" not present in the English string.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8a2caa37",
@@ -1532,6 +1598,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: \"Automatically attempts to connect to sites using HTTPS encryption protocol\" — the connection target (sites) is omitted.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d6b1c3b4",
@@ -1555,6 +1622,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says tabs you haven't viewed for two weeks; opening and viewing are different actions.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6ef4e42a",
@@ -1578,6 +1646,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"Mozilla’s marketing technology partners\"; the Slovenian omits \"marketing\", changing who the data is shared with.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2985717d",
@@ -1601,6 +1670,7 @@
    "confidence": "high"
   },
   "rationale": "The source refers to browsing history (zgodovina brskanja), not search history; also inconsistent with the parallel items \"Iskanje po zaznamkih\"/\"Iskanje po sinhroniziranih zavihkih\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d5ae0ec5",
@@ -1624,6 +1694,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says %s is the app name (e.g. \"Firefox\"); \"izključena\" is feminine and wrongly agrees, as if referring to protection rather than the app.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "81dabe12",
@@ -1647,6 +1718,7 @@
    "confidence": "medium"
   },
   "rationale": "Other strings on the same panel translate \"blocked\" as \"blokiran\" (e.g. \"Sledilci niso blokirani\", \"je bil blokiran %1$d sledilec\"); \"zavrnjeni\" (rejected) is inconsistent terminology on the same surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "71b68a10",
@@ -1670,6 +1742,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Block audio only\" refers to blocking autoplay; \"zavrni\" means to deny/reject a request, not block content.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "16e4d639",
@@ -1693,6 +1766,7 @@
    "confidence": "medium"
   },
   "rationale": "Source uses \"Block\"; Slovenian \"zavrni\" means deny/reject, not block.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c4cbbb6d",
@@ -1716,6 +1790,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: \"The app may close. Just tap your shiny new icon to reopen %1$s.\" The brand name belongs to the second sentence; the first sentence should refer to the app generically.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ee34a357",
@@ -1739,6 +1814,7 @@
    "confidence": "medium"
   },
   "rationale": "The source asks the user to leave feedback in a forum, not to send it; also the imperative form differs from the formal register used elsewhere in this prompt group.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0b669242",
@@ -1762,6 +1838,7 @@
    "confidence": "medium"
   },
   "rationale": "The field is the hostname field; a domain is not the same as a hostname, and this content description misnames the control.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0b8ba364",
@@ -1785,6 +1862,7 @@
    "confidence": "medium"
   },
   "rationale": "The error refers to the hostname field, not a domain name.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "20b55f9a",
@@ -1808,6 +1886,7 @@
    "confidence": "medium"
   },
   "rationale": "The source instructs the user to check that the string matches the example format; \"Prepričajte se\" (make sure) plus wording shifts the meaning slightly, but more importantly the check-verb should be used.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c77183cc",
@@ -1831,6 +1910,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says sessions, not windows; Android has no windows.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fc830ce4",
@@ -1854,6 +1934,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment explicitly says \"Search\" is a verb here — this is the title of the Settings Search screen, not the search settings page (which is search_settings_menu_item).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fedd7345",
@@ -1877,6 +1958,7 @@
    "confidence": "medium"
   },
   "rationale": "The Slovenian sentence as written is ungrammatical/awkward; the source says \"You're just 1 step away from the finish line\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "eecc6405",
@@ -1900,6 +1982,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"halfway there\"; the parallel 6-step string correctly uses \"Ste na pol poti!\", making this both a mistranslation and an inconsistency.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7400e144",
@@ -1923,6 +2006,7 @@
    "confidence": "medium"
   },
   "rationale": "Sibling task titles use the formal address (\"Raziščite pripomoček za iskanje\", \"Izberite temo\", \"Prijavite se v račun\"); the sl convention is formal.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2cf164fb",
@@ -1946,6 +2030,7 @@
    "confidence": "medium"
   },
   "rationale": "The sl convention is straight double quotes; the target uses English curly quotes “ ” with the opening mark in the English position.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e232f11e",
@@ -1969,6 +2054,7 @@
    "confidence": "medium"
   },
   "rationale": "The sl convention for dashes is the en dash; the source em dash should be adapted.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2cd529a2",
@@ -1992,6 +2078,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"Try refreshing in a few minutes\"; the identical clause in sports_widget_error_load_failed is translated \"Poskusite osvežiti čez nekaj minut\", so this rendering is both inaccurate and inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f762974e",
@@ -2015,6 +2102,7 @@
    "confidence": "high"
   },
   "rationale": "The locale convention is formal address (e.g. \"Pridobite ozadje po meri\", \"Poskusite osvežiti\"); \"Spremljaj\" is the informal second-person singular imperative.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e2296561",
@@ -2038,6 +2126,7 @@
    "confidence": "high"
   },
   "rationale": "The locale convention is formal address; \"Obišči\" is the informal second-person singular imperative, inconsistent with other formal strings in this batch.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "776ce420",
@@ -2061,6 +2150,7 @@
    "confidence": "medium"
   },
   "rationale": "The round name label should be nominative; Slovenian standard term for the stage is \"Polfinale\" (cf. \"Osmina finala\", \"Tretje mesto\" which are nominative). \"Polfinala\" reads as genitive singular/dual.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9283b19a",
@@ -2084,6 +2174,7 @@
    "confidence": "medium"
   },
   "rationale": "The card asks whether the user wants to keep following the tournament after their team was eliminated; the translation only asks whether they are still interested.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4a76e58d",
@@ -2107,6 +2198,7 @@
    "confidence": "medium"
   },
   "rationale": "The source tells the user to return later to see match info, not to follow the provider.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f3e5e9b4",
@@ -2130,6 +2222,7 @@
    "confidence": "medium"
   },
   "rationale": "The source label states which team the user follows; first-person singular \"Sledim\" makes the app speak for itself and breaks the established formal address to the user.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "100dc9fb",
@@ -2153,6 +2246,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Features\" in Mozilla sl is rendered as \"funkcije\"; \"značilnosti\" is a different concept (characteristics).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "51a535c6",
@@ -2176,6 +2270,7 @@
    "confidence": "medium"
   },
   "rationale": "The source specifically says \"Last success\" (last successful sync), not simply \"last synced\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7ee04b8c",
@@ -2199,6 +2294,7 @@
    "confidence": "high"
   },
   "rationale": "Source says the user has no tabs open in Firefox on other devices; \"odprtih drugih zavihkov\" implies \"no other tabs open\", which is not the source meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "41550f73",
@@ -2222,6 +2318,7 @@
    "confidence": "medium"
   },
   "rationale": "The standard Slovenian term for the color purple is \"vijolična\"; \"lila\" denotes a different, lighter shade (lilac).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6c1ce205",
@@ -2245,6 +2342,7 @@
    "confidence": "medium"
   },
   "rationale": "The source describes the drag handle state (view tab group / collapse drag handle) for screen readers; the Slovenian imperative \"Prikaži ... strni ...\" reads as commands rather than a description.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d09e9509",
@@ -2268,6 +2366,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the groups are saved here (on this page), ready when you are; the translation says the tabs will be saved into the group and ready when you need them.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "966bc7a9",
@@ -2291,6 +2390,7 @@
    "confidence": "medium"
   },
   "rationale": "The button dismisses the Close Tabs Banner; \"Zapri\" is the same word used elsewhere for closing tabs (tab_tray_menu_item_close) and is ambiguous/wrong here.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f8fcf016",
@@ -2314,6 +2414,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says tabs not viewed for two weeks; opening and viewing are different actions, and the parallel string tab_tray_inactive_auto_close_body_2 uses \"si jih niste ogledali\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "89e35758",
@@ -2337,6 +2438,7 @@
    "confidence": "medium"
   },
   "rationale": "Source ends with '…' directly attached; other strings such as 'Prevajanje …' show the locale style, but a stray space before the ellipsis after a full clause deviates from the source typography.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "41860cd2",
@@ -2360,6 +2462,7 @@
    "confidence": "medium"
   },
   "rationale": "%1$s is the app name (e.g. Firefox); appending the locative ending directly to the placeholder yields incorrect and unnatural output.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "50e7a945",
@@ -2383,6 +2486,7 @@
    "confidence": "medium"
   },
   "rationale": "The source describes closing the translations bottom sheet; the target omits the \"sheet\" element and reads as closing the translations themselves.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dbf82d43",
@@ -2406,6 +2510,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"never leave your device\"; other strings in the same feature use \"naprava\" (translation_settings_control_description). \"Računalnik\" means computer and is wrong on Android.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1ebd0bb8",
@@ -2429,6 +2534,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means clearing the selection in the field; \"Prekliči\" means \"cancel\" (and is already used for the Cancel button), not \"clear\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "35b8c21c",
@@ -2452,6 +2558,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Request to support site submitted\" means a request was submitted (to the team) to support this site; the Slovenian dative \"Zahtevek spletnemu mestu\" says the request was sent to the website.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "05a207fa",
@@ -2475,6 +2582,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Request to support site submitted\" means a request was submitted to support this site; the dative construction implies the request was sent to the website.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "05a207fa",
@@ -2498,6 +2606,7 @@
    "confidence": "medium"
   },
   "rationale": "The source button dismisses the message; \"V redu\" means \"OK\", not \"dismiss\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "eab6c12f",
@@ -2521,6 +2630,7 @@
    "confidence": "medium"
   },
   "rationale": "The locale uses the formal register; \"Končam\" is a first-person informal-style rendering, inconsistent with the source's neutral \"Exit Private Browsing?\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "66cba3f3",
@@ -2544,6 +2654,7 @@
    "confidence": "medium"
   },
   "rationale": "The quoted menu item must match the actual menu string menu_add_to_home_screen; also, the adjective form should be consistent with that item's wording.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7d443e59",
@@ -2567,6 +2678,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"Share…\" has no space before the ellipsis; Slovenian typography also attaches the ellipsis directly to the word.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "76af4239",
@@ -2590,6 +2702,7 @@
    "confidence": "medium"
   },
   "rationale": "With an infinitive the correct impersonal construction is \"ni treba\"; \"ni potrebno\" is a well-known non-standard usage.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2ed6b1fb",
@@ -2611,8 +2724,9 @@
   "locale": "sl",
   "origin": {},
   "rationale": "The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.",
-  "resolved_on": "",
-  "status": "open",
+  "reads_as_deliberate": false,
+  "resolved_on": "2026-08-24",
+  "status": "withdrawn",
   "string_hash": "0f0067d4",
   "string_id": "onboarding_first_screen_title",
   "suggest": "Dobrodošli v %1$su",
@@ -2634,6 +2748,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means the theme is determined by the Battery Saver setting; the Slovenian reads as a command to set/configure the battery saver, i.e. the battery saver becomes the object rather than the agent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8be801a7",
@@ -2657,6 +2772,7 @@
    "confidence": "high"
   },
   "rationale": "Source is \"Remove custom URLs\" (plural, screen for removing multiple URLs); the target is singular.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "af2e6264",
@@ -2680,6 +2796,7 @@
    "confidence": "medium"
   },
   "rationale": "Focus uses \"blokiranje vsebine\" for content blocking; \"zavračanje vsebine\" is a different term used inconsistently.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d09e626c",
@@ -2703,6 +2820,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says it attempts to connect to sites using HTTPS; the target says it connects to the protocol itself, losing the object of the connection.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d6b1c3b4",
@@ -2726,6 +2844,7 @@
    "confidence": "medium"
   },
   "rationale": "The source title \"HTTPS-Only Mode\" contains no quotation marks; the added quotes are gratuitous.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b60e8bc8",
@@ -2749,6 +2868,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says this links to Focus licensing information; \"dovoljenja\" means permissions, while software licences are \"licence\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a487408b",
@@ -2772,6 +2892,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment describes Stealth mode as hiding app content; \"skrivni\" (secret) suggests private browsing, which is a different Focus concept.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e54b2d59",
@@ -2795,6 +2916,7 @@
    "confidence": "high"
   },
   "rationale": "The source restricts blocking to cross-site cookies; \"spletne piškotke\" means simply \"web cookies\", i.e. all cookies, which is a different (and misleading) setting.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5f04ddde",
@@ -2818,6 +2940,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a polite option label paired with \"No thanks\" (translated \"Ne, hvala\"); the Slovenian loses the politeness marker and changes the punctuation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "47e09edb",
@@ -2841,6 +2964,7 @@
    "confidence": "medium"
   },
   "rationale": "\"morebitne nevarne\" stacks two adjectives ungrammatically; the intended sense is \"potentially dangerous\" (\"morebiti/morebitno nevarne\"). Other Block* titles use the imperfective \"Zavračaj\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d328a4c4",
@@ -2864,6 +2988,7 @@
    "confidence": "medium"
   },
   "rationale": "Terminology for \"top sites\" should be consistent across the Top Sites section (remove_top_site/rename_top_site context).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4429dd49",
@@ -2887,6 +3012,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says some installed search engine already uses that name (indefinite); the Slovenian reads as \"The installed search engine already uses this name\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3f62f692",
@@ -2910,6 +3036,7 @@
    "confidence": "medium"
   },
   "rationale": "Slovene style guides prefer \"prek\"; \"Deli preko\" is a colloquialism.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "869b596f",
@@ -2933,6 +3060,7 @@
    "confidence": "medium"
   },
   "rationale": "This is a tracker category label; \"Družbeni\" alone is an incomplete adjective with no noun and does not name the category the way other categories do.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bc37e965",
@@ -2956,6 +3084,7 @@
    "confidence": "high"
   },
   "rationale": "Source refers to a single tab (\"this tab\"); the target introduces \"vaših zavihkov\" (your tabs, plural) leaving the following singular pronoun \"ga\" without a matching antecedent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ca948fc2",

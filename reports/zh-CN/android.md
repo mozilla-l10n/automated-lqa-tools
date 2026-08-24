@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `eda9938ab8c3` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `eda9938ab8c3` |
-| **Previous run** | 2026-08-21 @ `d368c9040c12` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
+| **Previous run** | 2026-08-22 @ `eda9938ab8c3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 2,873 |
+| **Strings reviewed this run** | 0 of 2,873 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -26,9 +26,12 @@ _No new findings._
 
 _Nothing was fixed._
 
-### ↩︎ Withdrawn — no longer considered a defect (0)
+### ↩︎ Withdrawn — no longer considered a defect (1)
 
-_Nothing withdrawn._
+- `downloads_delete_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — `downloads_delete_dialog_title` has placeholders %d where the source has none
+    - Current: `{$quantity ->} [other] 删除 %d 个文件？`
+    - Source: `{$quantity ->} [one] Delete file? [other] Delete %d files?`
+    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
 
 ### 🔁 String changed, defect not verifiable — needs a re-read (0)
 
@@ -50,16 +53,13 @@ _Nothing retired._
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
-| Variable & placeholder mismatches | 0 |
+| Reference files that did not parse | 0 |
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
-| printf placeholder mismatches | 1 |
+| printf placeholder mismatches | 0 |
 | Plural / select selector mismatches | 0 |
-| Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 0 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 0 |
 
@@ -92,21 +92,19 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (160)
+## 3. Open findings (159)
+
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 1 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 106 |
 | 3 | Degraded language (grammar, spelling, terminology) | 42 |
 | 4 | Cosmetic (typography, spacing) | 11 |
 
 ### A. Functional, markup, variables & plurals
 
-- `downloads_delete_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — `downloads_delete_dialog_title` has placeholders %d where the source has none
-    - Current: `{$quantity ->} [other] 删除 %d 个文件？`
-    - Source: `{$quantity ->} [one] Delete file? [other] Delete %d files?`
-    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+_Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -665,9 +663,9 @@ _One line each in `locales/zh-CN/dismissed.txt`. Delete the line and the finding
 
 _No suppression rules have matched._
 
-### Withdrawn to date (0)
+### Withdrawn to date (1)
 
-_Nothing withdrawn._
+- `downloads_delete_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — raised by `placeholders`, withdrawn 2026-08-24
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 

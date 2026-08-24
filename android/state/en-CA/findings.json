@@ -14,6 +14,7 @@
    "confidence": "medium"
   },
   "rationale": "Canadian English conventionally spells this verb \"analyse\"; the en-CA locale should adapt the US \"analyze\" form.",
+  "reads_as_deliberate": false,
   "resolved_on": "2026-08-21",
   "status": "fixed",
   "string_hash": "3cb14263",

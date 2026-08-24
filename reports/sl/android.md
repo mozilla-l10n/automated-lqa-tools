@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `eda9938ab8c3` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `eda9938ab8c3` |
-| **Previous run** | 2026-08-21 @ `d368c9040c12` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
+| **Previous run** | 2026-08-22 @ `eda9938ab8c3` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 2,908 |
 
@@ -26,9 +26,13 @@ _No new findings._
 
 _Nothing was fixed._
 
-### ↩︎ Withdrawn — no longer considered a defect (0)
+### ↩︎ Withdrawn — no longer considered a defect (1)
 
-_Nothing withdrawn._
+- `onboarding_first_screen_title` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — `onboarding_first_screen_title` has placeholders %s where the source has %1$s
+    - Current: `Dobrodošli v %su`
+    - Source: `Welcome to %1$s`
+    - Suggest: `Dobrodošli v %1$su`
+    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
 
 ### 🔁 String changed, defect not verifiable — needs a re-read (0)
 
@@ -50,16 +54,13 @@ _Nothing retired._
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
-| Variable & placeholder mismatches | 0 |
+| Reference files that did not parse | 0 |
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
-| printf placeholder mismatches | 1 |
+| printf placeholder mismatches | 0 |
 | Plural / select selector mismatches | 0 |
-| Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 0 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 0 |
 
@@ -90,22 +91,19 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (129)
+## 3. Open findings (128)
+
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 1 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 71 |
 | 3 | Degraded language (grammar, spelling, terminology) | 45 |
 | 4 | Cosmetic (typography, spacing) | 12 |
 
 ### A. Functional, markup, variables & plurals
 
-- `onboarding_first_screen_title` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — `onboarding_first_screen_title` has placeholders %s where the source has %1$s
-    - Current: `Dobrodošli v %su`
-    - Source: `Welcome to %1$s`
-    - Suggest: `Dobrodošli v %1$su`
-    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+_Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -714,9 +712,9 @@ _One line each in `locales/sl/dismissed.txt`. Delete the line and the finding re
 
 _No suppression rules have matched._
 
-### Withdrawn to date (0)
+### Withdrawn to date (1)
 
-_Nothing withdrawn._
+- `onboarding_first_screen_title` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — raised by `placeholders`, withdrawn 2026-08-24
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 

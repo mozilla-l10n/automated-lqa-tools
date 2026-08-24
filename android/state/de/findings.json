@@ -14,6 +14,7 @@
    "confidence": "high"
   },
   "rationale": "The source refers to \"your device\", not a computer.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "02f891d6",
@@ -37,6 +38,7 @@
    "confidence": "high"
   },
   "rationale": "Accusative object requires \"Ihren Router\"; the shared determiner \"Ihr\" does not work for the masculine noun.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c08a7798",
@@ -60,6 +62,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"Is the device connected to an active network?\"; \"Computer\" names the wrong thing on Android devices.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0bc85319",
@@ -83,6 +86,7 @@
    "confidence": "high"
   },
   "rationale": "The source refers to the user's device; \"Computer\" is wrong on a mobile browser.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dee22dc2",
@@ -106,6 +110,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"The page isn’t redirecting properly\"; the German adds a \"Fehler:\" prefix and duplicates the word \"Fehler\", conveying different content than the source heading.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "97dc38aa",
@@ -129,6 +134,7 @@
    "confidence": "medium"
   },
   "rationale": "The source has two parallel clauses (\"it could be someone trying to impersonate the server\"); the German coordination is ungrammatical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3060e2ea",
@@ -152,6 +158,7 @@
    "confidence": "medium"
   },
   "rationale": "The source condition is being unable to load any page at all, and it refers to the device's data or Wi-Fi connection; the German narrows it to \"any other website\" and drops \"your device’s\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "33538ece",
@@ -175,6 +182,7 @@
    "confidence": "high"
   },
   "rationale": "Source: \"Is the device connected to an active network?\" — \"Computer\" is the wrong term for a mobile device.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6061b845",
@@ -198,6 +206,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Unexpected response from server\"; the German inserts a prefix not in the source and omits the server reference.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4a435447",
@@ -221,6 +230,7 @@
    "confidence": "medium"
   },
   "rationale": "The same source term on the same surface (tracking protection toolbar icon content descriptions) is rendered two different ways; the adjacent strings use \"Tracking-Schutz\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4bd22160",
@@ -244,6 +254,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is the content description of the button that clears the typed URL text; German Firefox uses \"Löschen\" for clearing input text, whereas \"Leeren\" means emptying a container and is misleading when read aloud.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "abd77503",
@@ -267,6 +278,7 @@
    "confidence": "medium"
   },
   "rationale": "Per the developer comment this is an announcement that interactive links are present, not a label naming \"available links\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "328dee21",
@@ -290,6 +302,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Loading\" has no ellipsis; this is a screen-reader announcement.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "155fa1c2",
@@ -313,6 +326,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"%1$s requests additional settings\" is a dialog title without final punctuation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "de7b64d2",
@@ -336,6 +350,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"%1$s requests additional data collection\" is a dialog title without final punctuation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "04823689",
@@ -359,6 +374,7 @@
    "confidence": "medium"
   },
   "rationale": "The source limits the scope to \"recent browsing history\"; the German suggests the entire history can be cleared.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "22631b69",
@@ -382,6 +398,7 @@
    "confidence": "medium"
   },
   "rationale": "The same source term must use the same German term across the short/long description pair for the same permission (mozac_feature_addons_permissions_data_collection_browsingActivity_long_description uses \"Surf-Aktivität\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "eec2a0a4",
@@ -405,6 +422,7 @@
    "confidence": "high"
   },
   "rationale": "The source \"Read your browsing history\" is a permission description in a list; all sibling permission strings use the infinitive form (\"Datenschutzeinstellungen lesen und ändern\", \"Auf Browsertabs zugreifen\"). The current text reads as a command to the user (\"You read your browsing history\"), which reverses who performs the action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "752ec5fd",
@@ -428,6 +446,7 @@
    "confidence": "medium"
   },
   "rationale": "The source grants access to the user's data in open tabs, not to the tabs themselves; omitting \"Ihre Daten\" understates the permission.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f9a280cd",
@@ -451,6 +470,7 @@
    "confidence": "medium"
   },
   "rationale": "The source grants access to the user's data in open tabs, not to the tabs themselves; omitting \"Ihre Daten\" understates the permission.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a1418791",
@@ -474,6 +494,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"Read the text of all open tabs\"; \"zugreifen\" (access) is used elsewhere for \"access\" permissions and blurs the distinction.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5771b59a",
@@ -497,6 +518,7 @@
    "confidence": "medium"
   },
   "rationale": "mozac_feature_addons_permissions_history_description_for_update uses \"Auf die Surf-Chronik zugreifen\" for the identical source text; the bare \"Auf Chronik zugreifen\" also lacks the article.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dedb2073",
@@ -520,6 +542,7 @@
    "confidence": "high"
   },
   "rationale": "The source is a permission description listing what the extension may do (\"Download and run AI models on your device\"), and every other description in this file, including the _for_update variant of the same string, uses the infinitive form. Here it reads as an instruction to the user.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "883783b0",
@@ -543,6 +566,7 @@
    "confidence": "medium"
   },
   "rationale": "mozac_feature_addons_blocklisted_2 uses \"kann nicht in %2$s installiert werden\" for the same \"can't be installed on <app>\" construction; the app name requires \"in\", not \"auf\", in German.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "449de91f",
@@ -566,6 +590,7 @@
    "confidence": "high"
   },
   "rationale": "\"Erweiterung\" is feminine, so the singular article must be \"Eine\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b951f6de",
@@ -583,10 +608,11 @@
   "file": "mozilla-mobile/android-components/components/feature/findinpage/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "de",
   "origin": {},
   "rationale": "The locale's quote convention is `german-double` (25 occurrences).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7a7dd345",
@@ -610,6 +636,7 @@
    "confidence": "high"
   },
   "rationale": "The source has only one pair of curly quotes around %1$s; the German adds an extra stray straight quote character.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0646b900",
@@ -633,6 +660,7 @@
    "confidence": "medium"
   },
   "rationale": "The source has no space between the link text and the closing tag placeholder (\"Terms of Service{ </a> }\"); the added space breaks the link text/markup alignment.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "aa04b144",
@@ -656,6 +684,7 @@
    "confidence": "medium"
   },
   "rationale": "The source addresses the user (\"You'll see them here\"), i.e. the blocked trackers will appear here. The German is ambiguous/awkward; more importantly the future construction misreads. A clearer rendering is \"Sie sehen sie hier.\" or \"Hier werden sie angezeigt.\"",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "44a6f360",
@@ -677,8 +706,9 @@
   "locale": "de",
   "origin": {},
   "rationale": "The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.",
-  "resolved_on": "",
-  "status": "open",
+  "reads_as_deliberate": false,
+  "resolved_on": "2026-08-24",
+  "status": "withdrawn",
   "string_hash": "1f1a0612",
   "string_id": "mozac_feature_sitepermissions_storage_access_message",
   "suggest": "",
@@ -700,6 +730,7 @@
    "confidence": "medium"
   },
   "rationale": "\"The tab counter toolbar button\" = the toolbar button that counts tabs; the German says \"button of the tab-counter toolbar\", which names a nonexistent toolbar.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e54c09af",
@@ -723,6 +754,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Duplicate tab\"; German Firefox uses \"duplizieren\", not \"klonen\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b20831ae",
@@ -746,6 +778,7 @@
    "confidence": "medium"
   },
   "rationale": "The source title is simply \"Add to\" (followed by a group picker); the German invents a specific target that contradicts the list of choices.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e148a9ea",
@@ -769,6 +802,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is English \"Department\" (administrative division in Nicaragua/Colombia); the German label should be a German term such as \"Departement\"/\"Verwaltungsbezirk\", not the Spanish form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "78a45008",
@@ -792,6 +826,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Post town\" is a normal address-field label, not a brand or do-not-translate term; every other field label in this batch is localized (Präfektur, Postleitzahl, Land). The English wording is also re-capitalized in a way that is neither English nor German usage.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "31b2b7d6",
@@ -815,6 +850,7 @@
    "confidence": "high"
   },
   "rationale": "The source instructs the user to unblock specific features; the German says to block them, the opposite.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9bcf6303",
@@ -838,6 +874,7 @@
    "confidence": "high"
   },
   "rationale": "The source and developer comment give the handle as @heyheymomodraws; a social media handle is a name that must be reproduced exactly.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c92a3d9b",
@@ -861,6 +898,7 @@
    "confidence": "medium"
   },
   "rationale": "The source and all other items in the same sorting menu (\"Nach Neuesten sortieren\", \"Nach A bis Z sortieren\") express the sort action; this entry omits it and is inconsistent within the same menu.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bd06dd4c",
@@ -884,6 +922,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is the technical term \"URL\", which is used unchanged in German; the all-caps form also does not match the source casing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "83223c73",
@@ -907,6 +946,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the expiry will cause Firefox to stop working properly; the German coordinates two independent statements in present tense, losing the causal/future meaning that the parallel string hca1_message preserves with \"weshalb\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "43beef63",
@@ -930,6 +970,7 @@
    "confidence": "high"
   },
   "rationale": "The source states the version will stop working *properly*; omitting \"richtig\" overstates the consequence.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9ba26405",
@@ -953,6 +994,7 @@
    "confidence": "medium"
   },
   "rationale": "The English title \"You’re on an older version of Firefox\" has no terminal punctuation; other titles in this batch also omit it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "435dda9b",
@@ -976,6 +1018,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"This might open the file in a different app and be risky for your device\" — both clauses are under \"might\"; the German asserts the risk as a fact.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "da50aa82",
@@ -999,6 +1042,7 @@
    "confidence": "high"
   },
   "rationale": "EU legal terminology: \"Regulation\" = \"Verordnung\"; \"Richtlinie\" means \"Directive\", naming the wrong type of legal act.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "33ea6cec",
@@ -1022,6 +1066,7 @@
    "confidence": "medium"
   },
   "rationale": "The locale convention is the en dash for parenthetical/separating dashes; a hyphen with spaces is incorrect German typography.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e1f22e10",
@@ -1045,6 +1090,7 @@
    "confidence": "medium"
   },
   "rationale": "Per the developer comment this is a button label; German UI convention (and the sibling debug drawer buttons) use the infinitive form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8918ded1",
@@ -1068,6 +1114,7 @@
    "confidence": "medium"
   },
   "rationale": "The setting means the app follows the device's language; \"beachten\" means \"take note of\" and does not convey the setting's behavior.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "438de7cd",
@@ -1091,6 +1138,7 @@
    "confidence": "medium"
   },
   "rationale": "The string is the content description for the search bar clear-text button; German Firefox uses \"Löschen\" for clearing a search field, while \"Leeren\" (to empty) is not used for this control.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "abd77503",
@@ -1114,6 +1162,7 @@
    "confidence": "medium"
   },
   "rationale": "The same source term \"paused\" in the same downloads-list context must be rendered consistently; download_item_paused_description uses \"angehalten\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4604c5de",
@@ -1137,6 +1186,7 @@
    "confidence": "medium"
   },
   "rationale": "The source uses \"website\"/\"site\" consistently; earlier in the same string it is translated as \"Website\". \"Webseite\" means a single page and is inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "732d8ecd",
@@ -1160,6 +1210,7 @@
    "confidence": "medium"
   },
   "rationale": "The related description string uses \"Fingerprinter\" alone; the same term should be rendered consistently on the same screen.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "064c7aff",
@@ -1183,6 +1234,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is button text; the source \"Try restarting extensions\" is an imperative action label, and the parallel button uses infinitive style (\"Mit deaktivierten Erweiterungen fortfahren\"). The current wording is also far longer than the source for a button.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "51a67fa8",
@@ -1206,6 +1258,7 @@
    "confidence": "medium"
   },
   "rationale": "The link label and its own content description (firefox_labs_share_feedback_content_description, \"Geben Sie Feedback für %s.\") describe the same control but use different terminology for \"share feedback\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9d450938",
@@ -1229,6 +1282,7 @@
    "confidence": "medium"
   },
   "rationale": "The string is shown below the trackers-blocked card describing the app's protection, not a call for the user to catch trackers; \"fangen\" is also the wrong verb for blocking trackers.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0c006ec2",
@@ -1252,6 +1306,7 @@
    "confidence": "high"
   },
   "rationale": "The same feature is called \"Verknüpfungen\" in homepage_shortcuts_title, browser_menu_add_to_shortcuts etc.; \"Tastenkombinationen\" means keyboard shortcuts and is wrong for the shortcuts home screen section.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d4178cb3",
@@ -1275,6 +1330,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"Browse with extra protection\" is link text embedded in ip_protection_onboarding_body; the German formal-imperative \"Surfen Sie …\" reads as a standalone command and breaks the host sentence.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3d02013c",
@@ -1298,6 +1354,7 @@
    "confidence": "medium"
   },
   "rationale": "In the Google Lens context the user picks a photo/image from the device; \"Grafik\" means graphic/illustration and is the wrong term for \"image\" here.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a1527743",
@@ -1321,6 +1378,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: \"Include %1$s download link on WhatsApp shares\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ffe7de12",
@@ -1344,6 +1402,7 @@
    "confidence": "medium"
   },
   "rationale": "\"wischen auf\" is not correct German for swiping a notification away; the coordinated construction forces the wrong preposition for one of the verbs.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "087010dc",
@@ -1367,6 +1426,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Start customizing\" is a short button label; the German is a drastically longer sentence-style phrasing inconsistent with other button labels in this set (e.g. \"Benachrichtigungen aktivieren\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e0051e57",
@@ -1390,6 +1450,7 @@
    "confidence": "high"
   },
   "rationale": "\"mitteilen\" takes a dative object for the recipient; the accusative \"die Kanäle\" is ungrammatical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "002ba531",
@@ -1413,6 +1474,7 @@
    "confidence": "high"
   },
   "rationale": "Source: \"Please consider allowing to help Firefox win.\" The developer comment explains that \"allowing\" refers to the \"Allow and Continue\" button; the German says \"whether you are allowed to help to success\" and drops Firefox entirely.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "80be77cf",
@@ -1436,6 +1498,7 @@
    "confidence": "high"
   },
   "rationale": "The source \"Firefox is proudly independent and dedicated to defending the open web\" requires two parallel complements; the German mixes an adjective and a finite verb after \"stolz darauf,\" producing an incomplete clause.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9c9c07f9",
@@ -1459,6 +1522,7 @@
    "confidence": "high"
   },
   "rationale": "Source: \"Notifications help you stay safer with Firefox\" — the user stays safer using Firefox; the target claims the user makes Firefox safer.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ef858e7c",
@@ -1482,6 +1546,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says the control \"Opens the open tabs menu when pressed\"; the German renders only the menu name, dropping the action that the screen reader must convey.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f5837233",
@@ -1505,6 +1570,7 @@
    "confidence": "high"
   },
   "rationale": "Per the developer comment this is the secondary action to exit private browsing mode; \"belassen\" means \"to leave something unchanged\", reversing the intended action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "69e9adf8",
@@ -1528,6 +1594,7 @@
    "confidence": "high"
   },
   "rationale": "\"Kneifen\" means pinching a person and is not the German term for the pinch gesture; the source refers to the pinch-to-zoom gesture.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "31fb1423",
@@ -1551,6 +1618,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to a future action (\"about to access\"), while the German says the user is currently visiting the site, changing the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1f8de495",
@@ -1574,6 +1642,7 @@
    "confidence": "medium"
   },
   "rationale": "The source and the developer comment both write \"DNS over HTTPS\"; capitalizing \"Over\" misspells the established protocol name.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "71e57bbc",
@@ -1597,6 +1666,7 @@
    "confidence": "medium"
   },
   "rationale": "The source names a tracker category; the German fragment lacks the head noun and does not convey \"trackers\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0ec9727a",
@@ -1620,6 +1690,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is an action option (\"Isolate cross-site cookies\"); the German omits the key verb, changing the meaning to a mere category label.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "75bfa300",
@@ -1643,6 +1714,7 @@
    "confidence": "medium"
   },
   "rationale": "The source lists two blockable categories: trackers and scripts. The German renders it as \"scripts for activity tracking and other content\", which is different content and also grammatically inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "588cb853",
@@ -1666,6 +1738,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"trackers\"; \"Skripte\" names a different thing and is inconsistent with the \"Tracker\" terminology used in neighbouring strings.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "882da875",
@@ -1689,6 +1762,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Standard (default)\"; the translation drops the information that this is the default setting.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "43563939",
@@ -1712,6 +1786,7 @@
    "confidence": "high"
   },
   "rationale": "Source is \"Fill usernames and passwords in other apps on your device.\" The German inserts \"auf Webseite bei Nutzung von\", which changes the meaning to filling on websites and is also ungrammatical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d1c2ce36",
@@ -1735,6 +1810,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"cards\", and the sibling strings (preferences_credit_cards_sync_cards_across_devices, add card, manage cards) all use \"Karten\"; \"Kreditkarten\" is inconsistent and narrower than the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fcb149b0",
@@ -1758,6 +1834,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"File is deleted from your device and removed from download history\" describes the behaviour of the setting (present/future), not a completed action; \"wurde ... gelöscht\" states it already happened.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "605fd060",
@@ -1781,6 +1858,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"File is removed from your download history, but is still saved on your device\" describes what the setting does, not a completed past action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "84b98d61",
@@ -1804,6 +1882,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is the generic data category matching the section title \"Campaign measurement\" (translated \"Kampagnenmessung\"); \"für die Kampagne\" implies one specific campaign and breaks consistency with the section title.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "43b1e225",
@@ -1827,6 +1906,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"in websites\" (plural); the German singular without article is grammatically wrong.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a9014f3f",
@@ -1850,6 +1930,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the site may appear broken (not working correctly) and suggests trying to turn protection off; \"beschädigt aussieht\" means physically damaged and the German loses \"try\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "54ce5fde",
@@ -1873,6 +1954,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is \"Show all recent tabs button\", i.e. the button whose action is showing all recent tabs; the German quotes only part of the label and leaves \"anzeigen\" outside, changing the meaning to \"show the button\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b442db48",
@@ -1896,6 +1978,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this button clears the password field while editing a login, not deletes the stored password; German should use \"leeren\" to distinguish it from delete.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0e35b760",
@@ -1919,6 +2002,7 @@
    "confidence": "medium"
   },
   "rationale": "The sibling string uses \"Keine letzten Suchanfragen\" for \"No recent searches\"; \"recent\" should stay \"letzte\" for consistency on the same surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7a0b6f7e",
@@ -1942,6 +2026,7 @@
    "confidence": "medium"
   },
   "rationale": "All other share strings in this surface use \"teilen\" for Share; \"freigeben\" is a different term and the passive phrasing changes the meaning (sharing the link with an app, not releasing something for the app).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b84508bc",
@@ -1965,6 +2050,7 @@
    "confidence": "high"
   },
   "rationale": "The de convention is german-double quotes („…“), as used elsewhere (e.g. preference_summary_delete_browsing_data_on_quit_2).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a2dbe1f4",
@@ -1988,6 +2074,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Try refreshing in a few minutes.\" refers to refreshing the sports widget data, not a page; the German invents an object.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "39288a54",
@@ -2011,6 +2098,7 @@
    "confidence": "high"
   },
   "rationale": "The German term for a penalty shoot-out is \"Elfmeterschießen\"; \"Elfmeterschließen\" is not a word.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cdc38b6b",
@@ -2034,6 +2122,7 @@
    "confidence": "medium"
   },
   "rationale": "The source means going back to the previous screen; \"rückwärts\" means moving backwards in a directional sense and is not the term used for back navigation in German UI.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "264b97a4",
@@ -2057,6 +2146,7 @@
    "confidence": "high"
   },
   "rationale": "The source says devices signed in and syncing to this account; \"mit ihnen\" (plural pronoun, lowercase) refers to nothing and is grammatically wrong — it should refer back to the account (singular).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3916283b",
@@ -2080,6 +2170,7 @@
    "confidence": "medium"
   },
   "rationale": "German typography convention (Duden) requires a space before the ellipsis when it follows a complete word.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "21bde75f",
@@ -2103,6 +2194,7 @@
    "confidence": "medium"
   },
   "rationale": "The link is embedded in the sentence terms_of_use_prompt_body_line_two_alternative, so German requires lowercase \"hier\"; the source is lowercase too.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b9b905bc",
@@ -2126,6 +2218,7 @@
    "confidence": "medium"
   },
   "rationale": "German requires a reflexive/object construction; the standard Mozilla wording is \"Später erinnern lassen\" or \"Mich später erinnern\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "009aca5e",
@@ -2149,6 +2242,7 @@
    "confidence": "high"
   },
   "rationale": "In the [one] case the subject is a single tracker, so the verb must be \"wurde\", not \"wurden\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "67d1bacb",
@@ -2172,6 +2266,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this closes the translations bottom sheet; \"Seite\" means page, which conflicts with the page/site terminology used elsewhere in this feature.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3ba958b8",
@@ -2195,6 +2290,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: \"Always download languages in data saving mode\" — the toggle permits downloading while in data saver mode. \"Sprachen immer im Datensparmodus herunterladen\" reads as \"always download languages in (i.e. using) data saving mode\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ad1cb212",
@@ -2218,6 +2314,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this action opens the translations dialog (a bottom sheet), not a page called \"Übersetzungen\"; \"Seite\" also collides with \"page\" terminology used elsewhere in the translation UI.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "851917e6",
@@ -2241,6 +2338,7 @@
    "confidence": "high"
   },
   "rationale": "\"Sicherstellung\" is feminine dative, requiring \"zur\", not \"zu\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bfb0db45",
@@ -2264,6 +2362,7 @@
    "confidence": "high"
   },
   "rationale": "\"deinstallieren\" here is an infinitive verb parallel to \"übermitteln\", not a noun, so it must be lowercase.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e9100d52",
@@ -2287,6 +2386,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Websites didn’t work properly\" is past tense, describing the user's past experience; the German present tense changes the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "464d9d59",
@@ -2310,6 +2410,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Videos, downloads, or media didn’t work\" is past tense; the German present tense changes the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "533122cb",
@@ -2333,6 +2434,7 @@
    "confidence": "high"
   },
   "rationale": "The source \"Can’t pay, check out or shop\" refers to completing the checkout process, not emptying the cart.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bf81ce1c",
@@ -2356,6 +2458,7 @@
    "confidence": "high"
   },
   "rationale": "\"browse\" here means browsing the web; \"blättern\" is the wrong sense and \"right in the app\" (direkt) is dropped.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "005888db",
@@ -2379,6 +2482,7 @@
    "confidence": "medium"
   },
   "rationale": "The button closes the find-in-page UI; \"deaktivieren\" says the feature is switched off. Also straight quotes instead of German double quotes.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7a7dd345",
@@ -2396,10 +2500,11 @@
   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "de",
   "origin": {},
   "rationale": "The locale's quote convention is `german-double` (25 occurrences).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7a7dd345",
@@ -2423,6 +2528,7 @@
    "confidence": "medium"
   },
   "rationale": "%2$s is replaced by the link text \"Einstellungen\"; the sentence is fine only if the article agrees, but as written the source has no article and the link string itself is capitalized — the article \"den\" plus the linked word yields correct German only by coincidence; the risk is that the article is outside the link. Recommend restructuring so the article is part of the link phrase.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c21fee80",
@@ -2446,6 +2552,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says trackers and other bad stuff are blocked as you browse; the German implies blocking other bad stuff is a casual side effect (\"bei der Gelegenheit auch noch\"), which is not the source meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5f5e3a51",
@@ -2469,6 +2576,7 @@
    "confidence": "high"
   },
   "rationale": "The source means a request that this site be supported (by cookie banner reduction) was submitted, not a request sent to a help website.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ea33c31d",
@@ -2492,6 +2600,7 @@
    "confidence": "high"
   },
   "rationale": "The source means a request that this site be supported (by cookie banner reduction) was submitted, not a request sent to a help website.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ea33c31d",
@@ -2515,6 +2624,7 @@
    "confidence": "medium"
   },
   "rationale": "German typography (and the sibling string menu_share) places a space before the ellipsis character.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2b076431",
@@ -2538,6 +2648,7 @@
    "confidence": "medium"
   },
   "rationale": "The established German term in Mozilla products (and in about_content of this same file) is \"Tracker\"; \"Verfolger\" is inconsistent and misleading.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "19d378c5",
@@ -2561,6 +2672,7 @@
    "confidence": "high"
   },
   "rationale": "\"Austeller\" is a typo; the correct German spelling is \"Aussteller\", as used earlier in the same string (\"der Aussteller des Zertifikats\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a1303017",
@@ -2584,6 +2696,7 @@
    "confidence": "medium"
   },
   "rationale": "Per the developer comment the button switches to the newly opened tab; \"Umschalten\" means toggling, while the related preference string uses \"wechseln\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5de89d7a",
@@ -2607,6 +2720,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"Pages may load faster\"; the German asserts they do load faster.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a871835f",
@@ -2630,6 +2744,7 @@
    "confidence": "medium"
   },
   "rationale": "The source conditions the warning on enabling the option; the translation drops that.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6f991eb6",
@@ -2653,6 +2768,7 @@
    "confidence": "high"
   },
   "rationale": "EU legal terminology: \"Regulation\" = \"Verordnung\"; \"Richtlinie\" would be \"Directive\", naming the wrong legal instrument.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "33ea6cec",
@@ -2676,6 +2792,7 @@
    "confidence": "medium"
   },
   "rationale": "The source uses \"Menu > Add to Home screen\"; the German substitutes a different symbol not used elsewhere for menu paths.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9e78e443",

@@ -14,6 +14,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US source says \"website\"; en-GB uses \"website\" elsewhere (e.g. connection failure, HTTPS-only strings refer to websites). \"web site\" is not a British-English adaptation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6db57930",
@@ -37,6 +38,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US source says \"website\" and en-GB does not require splitting it into two words; this is an unnecessary and inconsistent alteration.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6db57930",
@@ -60,6 +62,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US source says \"website\"; en-GB consistently uses \"website\" elsewhere in this file, so this deviation is inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d0f6e9b6",
@@ -83,6 +86,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US source uses \"Websites\"; en-GB uses the same single-word modern form and other strings in this file keep \"website\" (e.g. unknown_host, safe browsing strings). The split form is an unnecessary and inconsistent alteration.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ac228e98",
@@ -106,6 +110,7 @@
    "confidence": "medium"
   },
   "rationale": "The source uses \"website\"; this is not a US/GB spelling difference, and other en-GB strings in this same file retain \"website\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bc72c1e1",
@@ -129,6 +134,7 @@
    "confidence": "medium"
   },
   "rationale": "The source reads \"website\"; splitting it is not an en-GB convention and conflicts with the \"website\" form used elsewhere in this locale's file.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2a2db83b",
@@ -152,6 +158,7 @@
    "confidence": "medium"
   },
   "rationale": "The source uses \"website\"; the split spelling is not a British variant requirement and is inconsistent with other strings in this file that keep \"website\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9b139fb6",
@@ -175,6 +182,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US source says \"website\"; en-GB also uses the single word \"website\" and elsewhere in the locale. \"web site\" is an unnecessary and inconsistent alteration.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "017e7208",
@@ -198,6 +206,7 @@
    "confidence": "high"
   },
   "rationale": "British English uses \"website\" as one word, just like en-US; there is no en-GB rule requiring \"web site\", and other en-GB strings keep \"website\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "97392127",
@@ -221,6 +230,7 @@
    "confidence": "high"
   },
   "rationale": "en-GB does not split \"website\" into two words; this is an unwarranted departure from the source and from the rest of the locale.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0a6d2cfb",
@@ -244,6 +254,7 @@
    "confidence": "high"
   },
   "rationale": "The permission name is websiteActivity; en-GB spells \"website\" as one word, matching the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "11b0c93a",
@@ -267,6 +278,7 @@
    "confidence": "high"
   },
   "rationale": "en-GB uses \"website\" as a single word; splitting it is an unjustified change from the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bb998ff1",
@@ -290,6 +302,7 @@
    "confidence": "medium"
   },
   "rationale": "en-GB uses \"website\" as one word, consistent with other strings in this locale (e.g. \"sites\"/\"website\" usages); \"web site\" is an unwarranted deviation from the source term.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1ddaeae5",
@@ -313,6 +326,7 @@
    "confidence": "medium"
   },
   "rationale": "The source term is \"website content\"; en-GB does not split \"website\" into two words, so this is an unnecessary and inconsistent deviation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dd43a611",
@@ -336,6 +350,7 @@
    "confidence": "medium"
   },
   "rationale": "In software UI, \"dialog\" (a dialog box) is the standard term in en-GB as well; \"dialogue\" means a conversation. Elsewhere in this locale the developer comments and related strings use \"dialog\" (e.g. month chooser dialog, time picker dialog).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "967da8aa",
@@ -359,6 +374,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US source reads \"Website\"; British English uses the same closed compound. Splitting it is an over-correction that changes the term for no locale reason.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5b74023f",
@@ -382,6 +398,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US source uses \"website\", the standard form in en-GB as well; the tree uses \"website\" elsewhere (e.g. developer comments and other site permission strings), so splitting it into \"web site\" is an unnecessary and inconsistent alteration.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0c264b24",
@@ -405,6 +422,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment states hiscore is an abbreviation for \"Highest Score\"; the sibling string `hiscore` keeps \"HISCORE\" unchanged, so hyphenating here is an inconsistent, unnecessary alteration with no en-GB rule requiring it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "61779669",
@@ -428,6 +446,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US source is \"Navigate back\", describing the back button. \"Navigate backwards\" is not a British variant form and changes the wording of a screen-reader description unnecessarily; elsewhere in the locale (e.g. action_bar_up_description) the source wording is kept.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bef74329",
@@ -451,6 +470,7 @@
    "confidence": "high"
   },
   "rationale": "British English uses \"website\" as one word, exactly as in the en-US source; \"web site\" is an unwarranted change.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "06534086",
@@ -474,6 +494,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US source reads \"website\"; British English also writes it as one word, so this alteration degrades the language and is inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fb841ad7",
@@ -497,6 +518,7 @@
    "confidence": "medium"
   },
   "rationale": "en-GB does not use \"web site\" as a variant spelling; the source's \"website\" is standard in British English and used elsewhere in the locale.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4f42e5f6",
@@ -520,6 +542,7 @@
    "confidence": "medium"
   },
   "rationale": "In en-GB the standard term is the single word \"Postcode\"; \"Post Code\" as two capitalised words is not the British form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dd1ed01d",
@@ -543,6 +566,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says this is the header for the subregion of an address when \"state\" should be used; there is already a distinct addresses_county string for county. \"State\" is understood in en-GB and must not be replaced with a different administrative division.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d10f520b",
@@ -566,6 +590,7 @@
    "confidence": "high"
   },
   "rationale": "The source refers to the Sync feature (sync authentication per the developer comment); \"sync\" is standard in en-GB Firefox UI and is not an Americanism requiring adaptation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4b85180d",
@@ -589,6 +614,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Navigate back\" is equally idiomatic in en-GB; the change departs from the source wording used elsewhere for back-button content descriptions with no British-English justification.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bef74329",
@@ -612,6 +638,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US source uses \"websites\"; en-GB uses the same single-word form throughout the tree, so \"web sites\" is an inconsistent, unwarranted change.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8019682c",
@@ -635,6 +662,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US source is \"Navigate back\"; \"back\" is equally standard in British English, so the change is an unnecessary and inconsistent deviation from the source wording used for back-navigation content descriptions.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bef74329",
@@ -658,6 +686,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US source uses \"websites\"; British English also writes \"websites\" as one word, and other en-GB strings use \"sites\"/\"websites\". The split form is an over-correction.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b4a21d84",
@@ -681,6 +710,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Synced\" is the product term tied to Firefox Sync and is used consistently in en-GB; \"synchronised\" is not a required British adaptation and introduces terminology inconsistency.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8838b830",
@@ -704,6 +734,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US source is \"Navigate back\"; British English requires no change here, and the sibling string etp_back_button_content_description keeps \"Navigate back\", so this is an inconsistent, unnecessary alteration.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bef74329",
@@ -727,6 +758,7 @@
    "confidence": "high"
   },
   "rationale": "\"Website\" is the standard single-word form in en-GB as well as en-US; splitting it introduces an inconsistent, dated spelling not used elsewhere in the locale.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "13b9b049",
@@ -750,6 +782,7 @@
    "confidence": "high"
   },
   "rationale": "en-GB uses \"website\" as one word, same as the en-US source; the split form is inconsistent even within this string, which later says \"the site\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e89fbc2c",
@@ -773,6 +806,7 @@
    "confidence": "high"
   },
   "rationale": "en-GB writes \"website\" as one word, matching the en-US source and the rest of the locale.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d118b096",
@@ -796,6 +830,7 @@
    "confidence": "high"
   },
   "rationale": "British English uses \"website\" as one word, exactly as en-US does; \"web sites\" is an unnecessary and inconsistent alteration of the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8cb49497",
@@ -819,6 +854,7 @@
    "confidence": "high"
   },
   "rationale": "\"Website\" is a single word in en-GB as in en-US; splitting it departs from the source without any locale justification.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7dca0312",
@@ -842,6 +878,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Website\" is one word in en-GB; also the serial comma before \"and how browsing history is saved\" present in the source was dropped, changing the list punctuation unnecessarily.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b6d23f39",
@@ -865,6 +902,7 @@
    "confidence": "high"
   },
   "rationale": "\"Website\" is a single word in British English too; the split form is a non-standard alteration of the feature name.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cbbf724f",
@@ -888,6 +926,7 @@
    "confidence": "high"
   },
   "rationale": "en-GB uses \"website\" as one word, the same as en-US; splitting it is an unwarranted over-correction and also drops the capitalisation pattern of the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8aad1180",
@@ -911,6 +950,7 @@
    "confidence": "high"
   },
   "rationale": "en-GB writes \"website\" as a single word, matching en-US; the split form is an over-correction inconsistent with the locale.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a1c1f2f8",
@@ -934,6 +974,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US source is \"Navigate back\"; en-GB uses the same wording for back-button content descriptions and no spelling or vocabulary rule requires \"backwards\" here.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bef74329",
@@ -957,6 +998,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US source is \"Navigate back\"; British English uses the same phrase for a back-button content description, so the alteration is an unnecessary and inconsistent divergence.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bef74329",
@@ -980,6 +1022,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US source is \"Navigate back\"; \"back\" is equally standard in British English, and the related string logins_navigate_back_button_content_description uses \"Back\". The alteration is an unwarranted change of wording.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bef74329",
@@ -1003,6 +1046,7 @@
    "confidence": "high"
   },
   "rationale": "\"Sync\"/\"syncing\" is the established Firefox feature term (Firefox Sync) and is identical in en-GB; there is no British spelling requirement to replace it with \"synchronising\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a76ec912",
@@ -1026,6 +1070,7 @@
    "confidence": "high"
   },
   "rationale": "en-GB keeps the product term \"Sync\" untranslated in neighbouring strings (\"Sync is on\", \"Sync everywhere you use Firefox\"); changing the verb to \"synchronising\" here is an over-correction and inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a76ec912",
@@ -1049,6 +1094,7 @@
    "confidence": "high"
   },
   "rationale": "en-GB uses \"websites\" as one word, as elsewhere in the locale (e.g. preference_doh strings use \"sites\"/\"website\"); splitting it is not a British convention and departs from the source without reason.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f4652888",
@@ -1072,6 +1118,7 @@
    "confidence": "high"
   },
   "rationale": "British English writes \"websites\" as a single word; the split form is an unwarranted departure from the en-US source and inconsistent with other strings.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8d6ea08b",
@@ -1095,6 +1142,7 @@
    "confidence": "high"
   },
   "rationale": "British English writes \"websites\" as one word; the split form is an unwarranted change from the source and inconsistent with the rest of the locale.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "55717b28",
@@ -1118,6 +1166,7 @@
    "confidence": "high"
   },
   "rationale": "en-US source uses \"website\"; en-GB uses the same single-word form throughout (e.g. \"Cookies from unvisited sites\", other website strings). \"web site\" is an unnecessary and inconsistent alteration.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4b544e06",
@@ -1141,6 +1190,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US source reads \"websites\"; British English uses the same one-word spelling, and the locale is otherwise consistent with \"website\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f7048aa1",
@@ -1164,6 +1214,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US source reads \"websites\"; British English uses the same one-word spelling, and the locale is otherwise consistent with \"website\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d80c1a92",
@@ -1187,6 +1238,7 @@
    "confidence": "high"
   },
   "rationale": "en-GB uses \"websites\" as a single word, as elsewhere in this file (e.g. preference_exceptions, preference_phone_feature_camera developer comments and other strings). Splitting it into \"web sites\" is an unnecessary and inconsistent alteration of the en-US source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "119bbf55",
@@ -1210,6 +1262,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US source uses \"websites\", and elsewhere in en-GB (e.g. sibling password strings) the single-word form is used; \"web sites\" is not a British-English adaptation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "52bb3304",
@@ -1233,6 +1286,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US source is \"Navigate back\"; no en-GB convention requires \"backwards\" here, and the change makes the screen-reader label inconsistent with the standard control name.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bef74329",
@@ -1256,6 +1310,7 @@
    "confidence": "high"
   },
   "rationale": "\"Synced tabs\" is the established Firefox feature name (see the sibling synced tabs strings, which keep \"synced\"); expanding it to \"synchronised\" is an unnecessary and inconsistent change, not a British-spelling requirement.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d60ee1b7",
@@ -1279,6 +1334,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Synced\" refers to the Firefox Sync feature and is the standard term in en-GB Firefox; expanding it to \"Synchronised\" is an over-correction that breaks consistency with other synced-tabs strings.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9ab2fcc8",
@@ -1302,6 +1358,7 @@
    "confidence": "high"
   },
   "rationale": "en-GB uses the closed compound \"websites\" exactly as en-US does; \"Web sites\" is an unnecessary and inconsistent alteration of the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f895ab10",
@@ -1325,6 +1382,7 @@
    "confidence": "medium"
   },
   "rationale": "en-GB writes \"website\" as one word, consistent with other strings in this locale (e.g. broken site/website usage); \"web site\" is an unnecessary and inconsistent alteration of the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3b8de13c",
@@ -1348,6 +1406,7 @@
    "confidence": "high"
   },
   "rationale": "en-GB uses \"website\" exactly as en-US does; there is no spelling difference. Other strings in this file (e.g. cfr_for_toolbar_shield_icon2 uses \"site\", content_description_lock) do not use the split form, so this is an inconsistent over-correction.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bd5e5ab8",
@@ -1371,6 +1430,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is \"Navigate back\" (the back button label). \"Back\" is equally standard in British English; the added \"-wards\" is an unnecessary deviation and is inconsistent with the paired forward string.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bef74329",
@@ -1394,6 +1454,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is \"Navigate forward\", describing the forward button. \"Forward\" is standard in British English too; the change is an unnecessary deviation from the source wording.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c92f9ff6",
@@ -1417,6 +1478,7 @@
    "confidence": "high"
   },
   "rationale": "British English spells \"website\" as one word, identical to en-US; splitting it is an over-correction and inconsistent with the rest of the locale.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7e0f439a",
@@ -1440,6 +1502,7 @@
    "confidence": "high"
   },
   "rationale": "British English spells \"website\" as one word, identical to en-US; splitting it is an over-correction and inconsistent with the rest of the locale.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0ec24188",
@@ -1463,6 +1526,7 @@
    "confidence": "medium"
   },
   "rationale": "The source term \"shopping cart\" is the standard term in Mozilla UI strings and is understood in en-GB; the substitution introduces an inconsistent vocabulary variant.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "aea27038",
@@ -1486,6 +1550,7 @@
    "confidence": "high"
   },
   "rationale": "The source \"Go back\" describes navigating back in history; \"Go backwards\" is a directional phrase and is not standard British usage for this control. No en-GB convention requires the change.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "06fff0ee",
@@ -1509,6 +1574,7 @@
    "confidence": "high"
   },
   "rationale": "en-GB uses \"websites\" as one word, same as the en-US source; splitting it is an unnecessary and inconsistent change.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e915df4f",
@@ -1532,6 +1598,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US source is \"Remove all websites\"; en-GB does not split \"websites\" into two words, and other strings in the locale use \"websites\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e8acd51f",
@@ -1555,6 +1622,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US source says \"website\"; British English also writes \"website\" as one word. \"web site\" is an over-correction and inconsistent with other en-GB strings that use \"sites\"/\"website\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ff3ebae0",

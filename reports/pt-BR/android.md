@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-22 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `eda9938ab8c3` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `eda9938ab8c3` |
-| **Previous run** | 2026-08-21 @ `d368c9040c12` |
+| **Generated** | 2026-08-24 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
+| **Previous run** | 2026-08-22 @ `eda9938ab8c3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,897 |
+| **Strings reviewed this run** | 14 of 2,911 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for pt-BR: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `custom_accessibility_action_reorder_tab_left` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Missing contraction of preposition + article: "para esquerda" should be "para a esquerda".
+    - Current: `Mover aba para esquerda`
+    - Source: `Move tab left`
+    - Suggest: `Mover aba para a esquerda`
+    - In pt-BR the directional phrase requires the article: "para a esquerda"; the parallel string uses "para a direita" as well.
+- `custom_accessibility_action_reorder_tab_right` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Missing article: "para direita" should be "para a direita".
+    - Current: `Mover aba para direita`
+    - Source: `Move tab right`
+    - Suggest: `Mover aba para a direita`
+    - In pt-BR the directional phrase requires the article: "para a direita".
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,31 +54,24 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,897 |
-| Missing strings | 14 |
+| Strings | 2,911 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
-| Variable & placeholder mismatches | 0 |
+| Reference files that did not parse | 0 |
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
-| Strings marked untranslatable in the source | 0 |
 | printf placeholder mismatches | 0 |
 | Plural / select selector mismatches | 0 |
-| Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 1 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 0 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 3 |
 
 ### Completeness
 
-**14 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — 14
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -90,13 +92,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (123)
+## 3. Open findings (125)
+
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 75 |
-| 3 | Degraded language (grammar, spelling, terminology) | 38 |
+| 3 | Degraded language (grammar, spelling, terminology) | 40 |
 | 4 | Cosmetic (typography, spacing) | 10 |
 
 ### A. Functional, markup, variables & plurals
@@ -464,6 +467,16 @@ _Nothing in this category._
     - Source: `Add-ons and some features will stop working on March 14.`
     - Suggest: `deixarão de funcionar a partir de 14 de março.`
     - "a partir" requires "de" before the date; grammatical error.
+- `custom_accessibility_action_reorder_tab_left` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Missing contraction of preposition + article: "para esquerda" should be "para a esquerda".
+    - Current: `Mover aba para esquerda`
+    - Source: `Move tab left`
+    - Suggest: `Mover aba para a esquerda`
+    - In pt-BR the directional phrase requires the article: "para a esquerda"; the parallel string uses "para a direita" as well.
+- `custom_accessibility_action_reorder_tab_right` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Missing article: "para direita" should be "para a direita".
+    - Current: `Mover aba para direita`
+    - Source: `Move tab right`
+    - Suggest: `Mover aba para a direita`
+    - In pt-BR the directional phrase requires the article: "para a direita".
 - `debug_drawer_tab_tools_tab_count_active` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Gender/number disagreement: "Ativo" instead of feminine plural matching the sibling tab-count categories.
     - Current: `Ativo`
     - Source: `Active`

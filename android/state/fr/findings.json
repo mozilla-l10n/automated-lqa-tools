@@ -14,6 +14,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"Press\"; on Android this is a tap, not a mouse click, and the added \"Cliquez\" changes the interaction described.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "11f94dc7",
@@ -37,6 +38,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states the browser stopped trying to retrieve the requested item, not that it stopped waiting for a response.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ea15656e",
@@ -60,6 +62,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Malware site issue\"; the other titles in the same family (\"Problème de site indésirable\", \"Problème de site dangereux\", \"Problème de site trompeur\") keep \"site\", so dropping it here is inconsistent and loses the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b2d03432",
@@ -83,6 +86,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: \"%2$s can only connect to it securely\"; the French wording is acceptable in meaning but the phrasing \"doit impérativement établir une connexion sécurisée\" is a rendering, not a reversal — however it drops the exclusivity nuance of \"only\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "99fe535c",
@@ -106,6 +110,7 @@
    "confidence": "medium"
   },
   "rationale": "The source sentence ends with a period, and the following list item in the same string ends with a period; the semicolon is inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0b6b525c",
@@ -129,6 +134,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says the string indicates that the overflow menu has a highlight; \"Sélectionné\" means \"selected\", a different UI state announced to screen reader users.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "49e6cdb9",
@@ -152,6 +158,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says the string indicates that the overflow menu has a highlight; \"Sélectionné\" means \"selected\", a different UI state.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "49e6cdb9",
@@ -175,6 +182,7 @@
    "confidence": "medium"
   },
   "rationale": "In French the verb form is \"a perdu\"; capitalised sentence-initial \"A\" without accent is correct here, but the string should read \"A perdu\" — see note.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a7d7c9fe",
@@ -198,6 +206,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Dismiss\" is rendered \"Ignorer\" in mozac_compose_base_link_text_dismiss in the same file; \"Masquer\" (hide) is inconsistent terminology for the same source term on the same surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3c9cd745",
@@ -221,6 +230,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the extension extends (adds to) the developer tools, not that it opens them.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e3c2542b",
@@ -244,6 +254,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the extension extends the developer tools, not that it opens them.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "04362365",
@@ -267,6 +278,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to the user's data on other domains; the target says \"the data of other domains\", inconsistent with the parallel sites string which correctly uses \"vos données\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6e1a0bcc",
@@ -290,6 +302,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to the user's data on other domains; the target says \"the data of other domains\", inconsistent with the parallel sites string which uses \"vos données\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "87be8c51",
@@ -313,6 +326,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Access your data on another domain\"; the possessive \"your\" is lost and the wording diverges from the parallel site/domain strings which use \"vos données\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f914f396",
@@ -336,6 +350,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Access your data on another domain.\"; the possessive \"your\" is lost and the wording diverges from the parallel domain string mozac_feature_addons_permissions_sites_in_domain_description which uses \"vos données\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3e0a5224",
@@ -359,6 +374,7 @@
    "confidence": "medium"
   },
   "rationale": "The source describes cryptographic authentication services (PKCS#11), not \"encrypted\" authentication.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "52bcf1d7",
@@ -382,6 +398,7 @@
    "confidence": "medium"
   },
   "rationale": "The source describes cryptographic authentication services (PKCS#11), not \"encrypted\" authentication.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "46d9b16b",
@@ -405,6 +422,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is the standard Android app-chooser title \"Complete action using\"; \"Continuer avec\" means \"Continue with\" and loses the meaning of completing the action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3c7cc219",
@@ -428,6 +446,7 @@
    "confidence": "medium"
   },
   "rationale": "The comment says the placeholder is the estimated time remaining shown in a progress notification; \"dans %1$s\" reads as a future point in time rather than remaining duration.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b237052a",
@@ -451,6 +470,7 @@
    "confidence": "medium"
   },
   "rationale": "\"may not be saved\" = « pourraient ne pas être enregistrées », not « peuvent être perdues ».",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c3bd6465",
@@ -474,6 +494,7 @@
    "confidence": "medium"
   },
   "rationale": "The same source string \"Not now\" on the same prompt surface is rendered « Plus tard » in mozac_feature_prompt_dont_save_2 and mozac_feature_prompt_dont_update_2.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "369eb2f9",
@@ -497,6 +518,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: \"such as sending a payment or posting a comment twice\"; the duplication qualifier is missing in French.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "342f64e3",
@@ -520,6 +542,7 @@
    "confidence": "medium"
   },
   "rationale": "The source and developer comment refer to the account picture in the Select Account FedCM prompt, not a profile picture.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3d1dcd15",
@@ -543,6 +566,7 @@
    "confidence": "medium"
   },
   "rationale": "The source labels the field where the user enters text; \"création\" says the label is for creating a field, which is a different meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "03b31ea1",
@@ -566,6 +590,7 @@
    "confidence": "high"
   },
   "rationale": "Inconsistent terminology for the same term on the same prompt (mozac_feature_prompts_suggest_strong_password_content_description uses \"fort\"); \"compliqué\" is not the established term.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "981fe8f7",
@@ -589,6 +614,7 @@
    "confidence": "high"
   },
   "rationale": "The source term \"strong password\" is translated as \"fort\" in mozac_feature_prompts_suggest_strong_password_message and \"robuste\" in the description; \"compliqué\" (complicated) is a different notion and inconsistent within the same dialog.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "05df65ed",
@@ -612,6 +638,7 @@
    "confidence": "medium"
   },
   "rationale": "The option names a font style; the companion string uses \"Police avec empattement\" and the opposite option is \"Sans empattement\". \"Empattement\" alone names the serif feature, not the font type.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "547b6721",
@@ -635,6 +662,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US string \"Web address must contain “https://” or “http://”\" has no terminal punctuation, and the sibling error string add_login_hostname_invalid_text_2 has none either.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1791991c",
@@ -658,6 +686,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"Add private tab\"; the sibling string add_tab is translated \"Ajouter un onglet\", so the verb and the added \"nouvel\" are inconsistent with the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0bb53af7",
@@ -681,6 +710,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment states this is an address field for countries like Nicaragua and Colombia where departments are a key administrative division; \"Service\" means an organizational unit, not a territorial division.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4a083105",
@@ -704,6 +734,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment states the Townland is a specific Irish rural land division; \"Commune\" is a French municipality-level unit and is also used for other address levels, making the field misleading.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f8651f61",
@@ -727,6 +758,7 @@
    "confidence": "high"
   },
   "rationale": "The French for \"Sunrise\" is \"lever de soleil\" (noun \"lever\"), not the past participle \"levé\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f6d5f2a0",
@@ -750,6 +782,7 @@
    "confidence": "high"
   },
   "rationale": "Source: \"%1$s will translate this language automatically when the page loads.\" — the language is the one being translated from, matching the sibling strings (\"ne proposera jamais de traduire les sites dans cette langue\"). The current text says the page will be translated into that language.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e7775135",
@@ -773,6 +806,7 @@
    "confidence": "high"
   },
   "rationale": "After \"Veuillez\" the following verb must be in the infinitive; \"réessayez\" is a conjugated form and is a grammatical error.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8e5dedff",
@@ -796,6 +830,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a menu label meaning to report that this site is broken; the French turns it into reporting multiple unspecified problems.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7e2ede7e",
@@ -819,6 +854,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: \"protect your saved payment methods from being accessed if someone else has your device\" — the object of protection is access prevention when another person has the device; the French says \"protect ... if someone accesses your device\", which loses the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5e8ed611",
@@ -842,6 +878,7 @@
    "confidence": "high"
   },
   "rationale": "\"Debug locales\" is a noun phrase (the list of debug locales that can be enabled), not a verb phrase; the header names a list, per the developer comment.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3312a691",
@@ -865,6 +902,7 @@
    "confidence": "high"
   },
   "rationale": "\"à fin de tests\" is not a correct French locution; the standard form is \"à des fins de test\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b2c886a9",
@@ -888,6 +926,7 @@
    "confidence": "medium"
   },
   "rationale": "The string labels a count category for tabs, like \"Inactifs\" and \"Privés\"; the singular \"Actif\" is inconsistent and incorrect.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fbcbce37",
@@ -911,6 +950,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: \"%1$s will download partial languages to your cache as you translate.\" — the object is \"partial languages\", not the deleted language; the parallel string delete_language_all_languages_file_dialog_message renders it correctly.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "55408ecc",
@@ -934,6 +974,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a generic header \"Older\" for downloads older than the other groups (today, yesterday, last 7 days, last 30 days); the French invents a specific timeframe.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "17921018",
@@ -957,6 +998,7 @@
    "confidence": "high"
   },
   "rationale": "The source \"If you continue to the website\" is a present-tense conditional clause; the imperfect \"poursuiviez\" is ungrammatical here and inconsistent with the following sentence \"Si vous continuez\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "715c7d68",
@@ -980,6 +1022,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is a description of fingerprinters blocked by the protection; the source \"Enables fingerprinting protection\" is descriptive, not an imperative, matching the other description strings in the same group (\"Efface…\", \"Limite…\", \"Empêche…\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2bdb3d07",
@@ -1003,6 +1046,7 @@
    "confidence": "high"
   },
   "rationale": "The locale convention is the typographic apostrophe ’ (U+2019); here a left single quote ‘ is used.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5338f5b9",
@@ -1026,6 +1070,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment identifies this as the Firefox Suggest feature name; brand/feature names stay untranslated, and \"Firefox suggère\" turns it into a sentence.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ea7063b0",
@@ -1049,6 +1094,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Help catch trackers\", with no first-person object; the translation invents an addressee.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0e45ab51",
@@ -1072,6 +1118,7 @@
    "confidence": "medium"
   },
   "rationale": "The header groups history older than the last month; the source is the generic \"Older\", and the French invents an explicit time frame.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "17921018",
@@ -1095,6 +1142,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Please consider allowing to help Firefox win\" is an appeal to the user to allow; the translation states that Mozilla is requesting authorization, changing the sentence's actor and losing the \"consider\" nuance.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e2438e60",
@@ -1118,6 +1166,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"Use your default DNS resolver\"; the related string preference_doh_increased_protection_info_2 correctly uses \"votre serveur DNS par défaut\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d5b6aabc",
@@ -1141,6 +1190,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Firefox Suggest\" is a product/feature brand name (see developer comment \"settings to Firefox Suggest\") and must not be translated into a verb phrase.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7f15bc0c",
@@ -1164,6 +1214,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Firefox Suggest\" is a brand feature name and must be kept untranslated; \"Firefox suggère\" reads as a sentence, not a feature name.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "95d0a9b0",
@@ -1187,6 +1238,7 @@
    "confidence": "medium"
   },
   "rationale": "The source specifies the active search engine while browsing, not the primary/default one.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dab0776e",
@@ -1210,6 +1262,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says old (unused) tabs get moved to the inactive state; the translation says \"move the inactive tabs\", which is a different statement.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "946c213e",
@@ -1233,6 +1286,7 @@
    "confidence": "high"
   },
   "rationale": "The source means sharing, with Mozilla's marketing technology partners, how the user discovered Firefox and that they use it. The French reads as \"Tell the story of your discovery... and explain that you use it with Mozilla's marketing partners\", which changes the meaning (suggesting the user uses Firefox together with the partners) and loses the sharing/opt-in sense described in the developer comment.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5f60e16b",
@@ -1256,6 +1310,7 @@
    "confidence": "medium"
   },
   "rationale": "The source describes a button whose function is to show all recent tabs; the French says to display the recent tabs button, reversing the roles of the verb and the noun \"button\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "641ea840",
@@ -1279,6 +1334,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a verb phrase inviting the user to search with the suggested engine; \"Recherche %s\" reads as a noun phrase (\"Search of %s\") and loses the imperative meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f5d1b1b2",
@@ -1302,6 +1358,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states four steps are completed; the French phrasing does not convey completion clearly.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "34b78c78",
@@ -1325,6 +1382,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to a single search widget task; the plural changes the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "99df39a4",
@@ -1348,6 +1406,7 @@
    "confidence": "high"
   },
   "rationale": "\"Cannot share to this app\" means the content cannot be shared to the target app; the translation reverses the object, saying the app itself cannot be shared.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "970f0d47",
@@ -1371,6 +1430,7 @@
    "confidence": "medium"
   },
   "rationale": "Round of 16 = huitièmes de finale (16 teams, 8 matches); the abbreviation \"8es\" is correct in substance, but should be consistent with the spelled-out forms used for \"Demi-finales\"; keep the same spelled-out register.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ea56f8ce",
@@ -1394,6 +1454,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is the title of the \"active\" section of the studies list (studies that are currently running), not a state \"enabled\"; \"Activées\" also mismatches the neighbouring on/off strings.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7d94f015",
@@ -1417,6 +1478,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"Last synced: never\", not \"Last success\"; the sibling string sync_failed_summary uses \"Last success\" and is already translated as \"Dernier succès\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4d8e5640",
@@ -1440,6 +1502,7 @@
    "confidence": "medium"
   },
   "rationale": "The English \"Any devices signed in and syncing to this account will appear here\" is a conditional/generic statement, shown precisely when there are no devices; \"Tous les appareils\" implies existing devices.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b1b0cc25",
@@ -1463,6 +1526,7 @@
    "confidence": "medium"
   },
   "rationale": "The source dismisses the tab group onboarding card; « accueil » means reception/home and does not convey onboarding/introduction.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3b2108db",
@@ -1486,6 +1550,7 @@
    "confidence": "high"
   },
   "rationale": "The source refers to a single choice of period (one day, one week, one month) for auto-closing, not several days/weeks/months.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "adb922b9",
@@ -1509,6 +1574,7 @@
    "confidence": "high"
   },
   "rationale": "The source refers to the translations bottom sheet, not a browser tab; elsewhere in the same batch \"translation sheet\" is correctly translated as \"panneau de traduction\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "67b121ea",
@@ -1532,6 +1598,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is button text; French UI buttons use the infinitive without \"Veuillez\", which reads as a message rather than an action label.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3324e35b",
@@ -1555,6 +1622,7 @@
    "confidence": "medium"
   },
   "rationale": "The comment states this button text indicates a translation is currently in progress; \"Traduction\" alone is ambiguous with the noun/label \"Translation\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ace3bc80",
@@ -1578,6 +1646,7 @@
    "confidence": "medium"
   },
   "rationale": "The source label is \"URL\" and webcompat_reporter_edit_url_dialog_title translates it as « Modifier l’URL du site web », so the field label is inconsistent on the same surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8c2d136e",
@@ -1601,6 +1670,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Can’t pay, check out or shop\"; the checkout step is omitted and the register differs from the parallel option webcompat_reporter_reason_account2 (\"Impossible de se connecter ou de s’inscrire\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4d6359f8",
@@ -1624,6 +1694,7 @@
    "confidence": "medium"
   },
   "rationale": "The source describes the video's behaviour, matching the other options such as \"Le site ne se charge pas\"; the translation shifts the subject to the user.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "878c5b54",
@@ -1647,6 +1718,7 @@
    "confidence": "medium"
   },
   "rationale": "The source names the action of reporting a broken site; the plural \"des problèmes\" and the longer wording change the meaning of the toolbar title.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7e2ede7e",
@@ -1670,6 +1742,7 @@
    "confidence": "medium"
   },
   "rationale": "Neighbouring strings (webcompat_reporter_description_3, preview_bottom_sheet_header, success_snackbar_text_2) all use \"signalement\" for \"report\"; this is an inconsistency on the same screen.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "26fcfca7",
@@ -1693,6 +1766,7 @@
    "confidence": "medium"
   },
   "rationale": "%2$s is replaced by the link text \"paramètres\"; the phrase reads correctly only if the article is not duplicated — as written the visible link excludes \"les\", but the sentence is intended as \"Manage ... in settings\". The article should be part of the same fragment or removed.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "65517643",
@@ -1716,6 +1790,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is an action content description read by screen readers; the sibling string content_description_forward is translated as \"Avancer dans l’historique\", so \"Précédent\" is both inconsistent and not describing the action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0acb46a5",
@@ -1739,6 +1814,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the user may leave the app; the sibling string external_app_prompt_no_app correctly uses « Vous pouvez quitter ». Here the future tense states it as a fact.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fa5b19e7",
@@ -1762,6 +1838,7 @@
    "confidence": "medium"
   },
   "rationale": "The source urges making privacy a habit, not regaining control of it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "30deb1ce",
@@ -1785,6 +1862,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is the singular permission name \"Notification\", matching the other site-permission entries; the French pluralises it.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d0da86d5",
@@ -1808,6 +1886,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Top sites\" in Mozilla French is consistently \"sites les plus visités\"; \"populaires\" changes the meaning (popularity vs. the user's own most-visited sites).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a1573859",
@@ -1831,6 +1910,7 @@
    "confidence": "medium"
   },
   "rationale": "In French typography the number abbreviation requires a space before the digits (and is properly \"no\" with superscript o); \"n°2024/1183\" is set without the required space.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e7b3163a",

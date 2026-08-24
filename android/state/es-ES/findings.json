@@ -14,6 +14,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to a crash of the content process, not to blocked content; \"bloqueado\" is the established translation of \"blocked\" and is used for blocking messages elsewhere in the same file (e.g. \"Sitio bloqueado por tu seguridad\"), so the meaning is wrong and inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "01b02201",
@@ -31,10 +32,11 @@
   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "es-ES",
   "origin": {},
   "rationale": "The locale's quote convention is `curly-double` (12 occurrences).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "260ba467",
@@ -58,6 +60,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to the user's device, not a computer; other strings in the same file use \"dispositivo\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bb1db65c",
@@ -81,6 +84,7 @@
    "confidence": "medium"
   },
   "rationale": "The source has no space before { </label> }; the extra space is a typography deviation introduced by the translation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c60980ec",
@@ -104,6 +108,7 @@
    "confidence": "medium"
   },
   "rationale": "The source addresses the user directly (\"you\"), and the locale convention is informal second person.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ab3acd71",
@@ -127,6 +132,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"your device’s data or Wi-Fi connection\" with no mention of a mobile device; this component is shared and must stay generic.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0431049c",
@@ -150,6 +156,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"device\"; \"equipo\" means computer and is inconsistent with \"dispositivo\" used elsewhere in the same file.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "db09375c",
@@ -173,6 +180,7 @@
    "confidence": "high"
   },
   "rationale": "es-ES uses the informal register, and the parallel string mozac_feature_addons_permissions_all_urls_description translates the same source as \"Acceder a tus datos de todos los sitios web\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cf2f1ae9",
@@ -196,6 +204,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"the extension\"; the target adds the demonstrative \"esta\", changing the reference.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cf7b24cf",
@@ -219,6 +228,7 @@
    "confidence": "medium"
   },
   "rationale": "es-ES convention is informal address (tú); \"identificarle\" is the formal/usted form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ebaedfe1",
@@ -242,6 +252,7 @@
    "confidence": "medium"
   },
   "rationale": "es-ES convention is informal address (tú); \"identificarle\" is the formal/usted form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7a4db8e9",
@@ -265,6 +276,7 @@
    "confidence": "high"
   },
   "rationale": "The source refers to the developer of this specific extension, and every other data-collection long description in this file uses \"el desarrollador de la extensión\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "07d3a62b",
@@ -288,6 +300,7 @@
    "confidence": "high"
   },
   "rationale": "Inconsistent terminology on the same dialog: mozac_feature_addons_permissions_dialog_heading_optional_data_collection uses \"Nueva recopilación de datos:\" and the none-required string uses \"recopilación de datos\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e1840f5b",
@@ -311,6 +324,7 @@
    "confidence": "high"
   },
   "rationale": "es-ES uses the informal register, and the non-update variant (mozac_feature_addons_permissions_geolocation_description) reads \"Acceder a tu ubicación\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e475fac7",
@@ -334,6 +348,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says this is a button to report an add-on, so it must be an action verb; \"Informe\" is the noun \"a report\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0d3345b1",
@@ -357,6 +372,7 @@
    "confidence": "high"
   },
   "rationale": "The source is \"could not be verified as secure\"; \"verificado para como seguro\" contains a stray \"para\" and is ungrammatical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e393a3c7",
@@ -380,6 +396,7 @@
    "confidence": "medium"
   },
   "rationale": "es-ES convention is informal (tú); the source \"your current version and settings\" should use \"tu\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cd99248c",
@@ -403,6 +420,7 @@
    "confidence": "medium"
   },
   "rationale": "In the add-ons context \"Reviews\" means user reviews/ratings; \"Revisiones\" means inspections/revisions and is the wrong term.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "83f16aa6",
@@ -426,6 +444,7 @@
    "confidence": "medium"
   },
   "rationale": "es-ES convention is the informal register (as in the neighbouring autofill string \"¿Quieres continuar...\"); \"Quiere\" is formal usted.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c2880e39",
@@ -449,6 +468,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says it is a button that pauses the download; sibling buttons use infinitives (Cancelar, Abrir, Continuar, Reintentar), so the noun is inconsistent.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c6700c43",
@@ -472,6 +492,7 @@
    "confidence": "high"
   },
   "rationale": "The locale's established register is informal (tú), and the second sentence already uses \"¿Estás seguro de que quieres...?\"; the first clause uses the formal third person.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4333f9ca",
@@ -495,6 +516,7 @@
    "confidence": "high"
   },
   "rationale": "es-ES convention is the informal register (as in \"¿Estás seguro?\", \"Introduce una contraseña\" in the same file); this string uses usted.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5ebcfaba",
@@ -518,6 +540,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment specifies the short description of April for a month chooser; other months in the same file use abbreviations (Dec → Dic).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cd091669",
@@ -541,6 +564,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment specifies the short description of August for a month chooser; other months in the same file use abbreviations (Dec → Dic).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c555b078",
@@ -564,6 +588,7 @@
    "confidence": "medium"
   },
   "rationale": "Elsewhere in the same file \"Enter a password\" is translated as \"Introduce una contraseña\"; \"ingresar\" is not the es-ES term.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0718307c",
@@ -587,6 +612,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment specifies a short description used in the month chooser dialog; the target uses the full month name instead of an abbreviation (other months in this batch, e.g. Sep → Sept, are abbreviated).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4be721ba",
@@ -610,6 +636,7 @@
    "confidence": "medium"
   },
   "rationale": "Sibling strings in the same dialog family use \"inicio de sesión\"/\"Iniciar sesión\" for login/sign in; \"Conéctate\" is inconsistent terminology on the same surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b4a93a6c",
@@ -633,6 +660,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment specifies a short description for the month chooser dialog; the target gives the full month name rather than an abbreviation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6d322627",
@@ -656,6 +684,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment specifies a short description for the month chooser dialog; the target gives the full month name rather than an abbreviation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "db7cbc06",
@@ -679,6 +708,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment specifies a short description for the month chooser dialog; the target gives the full month name rather than an abbreviation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9665129e",
@@ -702,6 +732,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US string \"Tap to copy the URL for this app\" has no final period; the translation adds one.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5b706662",
@@ -725,6 +756,7 @@
    "confidence": "high"
   },
   "rationale": "es-ES convention is informal address; sibling strings use \"tu ubicación\", \"tu micrófono\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "493666b4",
@@ -748,6 +780,7 @@
    "confidence": "high"
   },
   "rationale": "Source: \"%s can summarize pages when you shake your device\" — %s is the app name and is the subject of \"can summarize\", so Spanish requires \"puede\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "31865029",
@@ -771,6 +804,7 @@
    "confidence": "medium"
   },
   "rationale": "Developer comment says it is a notification action/button that sends the crash report, so the imperative verb is required, not the noun.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0d3345b1",
@@ -788,10 +822,11 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "es-ES",
   "origin": {},
   "rationale": "The locale's quote convention is `curly-double` (12 occurrences).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f04e1461",
@@ -815,6 +850,7 @@
    "confidence": "medium"
   },
   "rationale": "The add login screen uses \"contraseña\" for login (see add_login_2 \"Añadir contraseña\"); \"cuenta\" is inconsistent and means \"account\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f6a78524",
@@ -838,6 +874,7 @@
    "confidence": "medium"
   },
   "rationale": "Inconsistent terminology on the same surface: add_private_tab uses \"Añadir pestaña privada\"; es-ES convention favours \"Añadir\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bd263b49",
@@ -861,6 +898,7 @@
    "confidence": "medium"
   },
   "rationale": "Spanish does not use \"se convierte ... por\" (reflexive passive with an explicit agent); also the product name \"Google Speech Services\" should not be reordered into \"los servicios de Google Speech\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b8afea5d",
@@ -884,6 +922,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment describes a warm orange-to-yellow gradient with a sleek, modern twist, so \"Cool\" means stylish, not cold/fresh; \"Fresco\" also clashes with the warm-color description.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9d440053",
@@ -907,6 +946,7 @@
    "confidence": "medium"
   },
   "rationale": "es-ES convention is curly double quotes correctly paired; the target opens with ” and closes with “, inverting the marks.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2b5c65e2",
@@ -930,6 +970,7 @@
    "confidence": "medium"
   },
   "rationale": "Other strings on the same surface translate \"Add\" as \"Añadir\" (bookmark_add_new_folder_button_content_description, bookmark_error_add_folder); es-ES prefers \"Añadir\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e37e7a77",
@@ -953,6 +994,7 @@
    "confidence": "high"
   },
   "rationale": "The source \"items\" should be rendered as \"elementos\" in es-ES; \"items\" is an unadapted anglicism.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bd70669f",
@@ -976,6 +1018,7 @@
    "confidence": "medium"
   },
   "rationale": "The comment says it is the content description for the bookmark navigation bar back button; the source does not mention a page, and in the bookmarks screen there is no page to go back to.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "efe8c866",
@@ -999,6 +1042,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a title in the app bar showing how many bookmarks are currently selected; \"Se seleccionó %1$d\" reads as a completed action and puts the number after the verb, changing the meaning and breaking the count-label pattern.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "68197ae0",
@@ -1022,6 +1066,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to the bottom sheet of the menu of a single custom tab; the plural changes the meaning of which menu is being closed.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7d1cc134",
@@ -1045,6 +1090,7 @@
    "confidence": "medium"
   },
   "rationale": "browser_menu_add_app_to_homescreen on the same menu surface renders \"Add ... to Home screen\" as \"Añadir app a la pantalla de inicio\"; the two adjacent menu items should use the same verb and casing, and \"Añadir\" is the es-ES form.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2a6720eb",
@@ -1068,6 +1114,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is the content description for navigating forward in browsing history, the counterpart of \"Back\" = \"Atrás\"; the standard Spanish term is \"Adelante\", while \"Siguiente\" means \"Next\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ea1cad80",
@@ -1091,6 +1138,7 @@
    "confidence": "medium"
   },
   "rationale": "Source says \"might log you out of websites\"; the current wording reads as if the user closes the session rather than being logged out.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1bf22b7c",
@@ -1114,6 +1162,7 @@
    "confidence": "medium"
   },
   "rationale": "The source option label is \"Never\" (never auto-close tabs); \"Manualmente\" belongs to the summary string close_tabs_manually_summary, not this option label.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bfd173ce",
@@ -1137,6 +1186,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment specifies the top bar back button of the credit card feature; referring to a \"page\" misdescribes the control for screen reader users.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "efe8c866",
@@ -1160,6 +1210,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a section header on the customize home screen listing recent tabs; \"esta pestaña\" refers to a single, non-existent tab and changes the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "eb8c2bd8",
@@ -1183,6 +1234,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says these are debug locales that can be enabled/disabled; \"idiomas\" is the wrong term and \"debug\" is dropped.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8be919a9",
@@ -1206,6 +1258,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment states this navigates back within the debug drawer, not to a previous web page.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "efe8c866",
@@ -1229,6 +1282,7 @@
    "confidence": "high"
   },
   "rationale": "The source refers to a stored login credential; other strings in the same feature use \"inicio de sesión\"/\"Inicios de sesión\". \"Conexión\" means a network connection.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fc1055b5",
@@ -1252,6 +1306,7 @@
    "confidence": "medium"
   },
   "rationale": "Inconsistent with debug_drawer_home_region_label and debug_drawer_override_home_region_label, which translate \"home region\" as \"región de origen\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "39551771",
@@ -1275,6 +1330,7 @@
    "confidence": "medium"
   },
   "rationale": "Inconsistent terminology with debug_drawer_home_region_label (\"Región de origen\"); also \"for testing\" is generic, not \"para la prueba\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "03f31d1d",
@@ -1298,6 +1354,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says the app will download partial language packs into the cache; the target says it will download languages partially, shifting the adverb and altering the meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "83ece932",
@@ -1321,6 +1378,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says partial language packs will be downloaded to the cache; the target turns the adjective \"partial\" into an adverb modifying the download action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "31dd753f",
@@ -1344,6 +1402,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states the download has finished; \"completa\" means \"full/entire\" while \"completada\" is the correct past participle for a finished download.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7219cda3",
@@ -1367,6 +1426,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"Couldn’t download\"; the Spanish verb form is misspelled (\"pidodo\" is not a word), unlike the parallel string download_languages_delete_error_warning_text which correctly uses \"No se ha podido borrar\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b0fec110",
@@ -1390,6 +1450,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is a generic back-navigation content description for the downloads toolbar, not a web page navigation; \"página anterior\" states something the source does not.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "efe8c866",
@@ -1413,6 +1474,7 @@
    "confidence": "medium"
   },
   "rationale": "Source \"Navigate to Downloads Settings\" is a label for the control; \"Abre...\" reads as an imperative/third-person statement rather than the action label.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3b33bc72",
@@ -1436,6 +1498,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is a verb action label, and the sibling strings use verbs (\"Continuar\", \"Reintentar\"); \"Pausa\" is inconsistent as an action label.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c6700c43",
@@ -1459,6 +1522,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Login\" here refers to a saved credential entry, not a user account; \"cuenta\" is a different concept and conflicts with the password/credential terminology used elsewhere.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "aad2e2d6",
@@ -1482,6 +1546,7 @@
    "confidence": "medium"
   },
   "rationale": "The comment says the button exits the edit login view; there is no page involved, so \"página anterior\" is inaccurate.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "efe8c866",
@@ -1505,6 +1570,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"stop suspected fingerprinters\"; the sibling string etp_suspected_fingerprinters_title correctly uses \"Detectores de huellas digitales sospechosos\", so this is both a mistranslation and an inconsistency.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6749b747",
@@ -1528,6 +1594,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Try restarting extensions\" is a button action; Spanish UI buttons use the infinitive, and the surrounding buttons (\"Continuar con las extensiones desactivadas\") do so as well.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "708a8fa3",
@@ -1551,6 +1618,7 @@
    "confidence": "medium"
   },
   "rationale": "Per the comment, %1$s is the app name and %2$d the number of tabs closed; source is \"%1$s tabs closed: %2$d\". In Spanish \"%1$s pestañas cerradas\" reads as \"<app> tabs closed\" with the app name modifying the noun, losing the app-name-as-label sense.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dcff706d",
@@ -1574,6 +1642,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says it is the back button of the VPN settings screen top bar, not a web page back action.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "efe8c866",
@@ -1597,6 +1666,7 @@
    "confidence": "medium"
   },
   "rationale": "The source states that no QR code at all was found in the image; the Spanish implies a specific expected QR code was not found.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "de9b0686",
@@ -1620,6 +1690,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says the button goes back and exits the login detail view; \"página anterior\" wrongly implies web page navigation.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "efe8c866",
@@ -1643,6 +1714,7 @@
    "confidence": "medium"
   },
   "rationale": "The parallel string logins_biometric_prompt_message_2 uses the imperative \"Desbloquea…\"; \"Desbloquear tu dispositivo\" mixes infinitive with a possessive addressed to the user.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "32f85404",
@@ -1666,6 +1738,7 @@
    "confidence": "medium"
   },
   "rationale": "The label is shown when the site-exceptions list is empty; the source refers to site exceptions in general, not to a particular site.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4735fe60",
@@ -1689,6 +1762,7 @@
    "confidence": "high"
   },
   "rationale": "The source shares the fact that the user uses Firefox, not how they use it; this overstates the data shared.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9a14ce17",
@@ -1712,6 +1786,7 @@
    "confidence": "high"
   },
   "rationale": "The source shares the fact that the user uses Firefox, not how they use it; this overstates the data shared.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1d8eb5f2",
@@ -1735,6 +1810,7 @@
    "confidence": "high"
   },
   "rationale": "The source says the data shared is the fact that you use Firefox, not how you use it; \"cómo lo usas\" implies sharing usage details, a different and privacy-relevant meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1d8eb5f2",
@@ -1758,6 +1834,7 @@
    "confidence": "high"
   },
   "rationale": "The source shares the fact that you use Firefox, not how you use it; the translation changes the scope of data sharing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1d8eb5f2",
@@ -1781,6 +1858,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"grow\", not \"improve\"; it also collides with onboarding_preferences_dialog_title (\"Help us make Firefox better\"), which is legitimately \"mejorar\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "90328af8",
@@ -1804,6 +1882,7 @@
    "confidence": "high"
   },
   "rationale": "es-ES convention is informal (tú); the surrounding onboarding strings use \"descubriste\", \"aceptas\", \"quieres\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ba4dc055",
@@ -1827,6 +1906,7 @@
    "confidence": "high"
   },
   "rationale": "The informal imperative of \"escanear\" is \"escanea\"; \"Escaneae\" is not a valid word.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "72f0b7d8",
@@ -1850,6 +1930,7 @@
    "confidence": "high"
   },
   "rationale": "es-ES convention is informal (tú); the sibling dialog title uses \"¿Estás seguro...?\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "43d34c8a",
@@ -1873,6 +1954,7 @@
    "confidence": "medium"
   },
   "rationale": "The option targets cross-site trackers; \"de sitios\" loses that meaning, and cookies_5 correctly uses \"entre sitios\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "555b494a",
@@ -1896,6 +1978,7 @@
    "confidence": "medium"
   },
   "rationale": "Source states all websites will break, not just some; the parallel string cookies_3 uses \"puede causar errores en los sitios web\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "736375e1",
@@ -1919,6 +2002,7 @@
    "confidence": "medium"
   },
   "rationale": "Source is \"Tell websites not to share & sell data\" without a possessive.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "dd56f18c",
@@ -1942,6 +2026,7 @@
    "confidence": "high"
   },
   "rationale": "The source refers to custom protection, not standard; it also conflicts with the separate standard_info_button string.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "59585072",
@@ -1965,6 +2050,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Firefox Suggest\" is a product/feature brand kept untranslated, as done in preference_search_learn_about_fx_suggest in the same file.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bac41479",
@@ -1982,10 +2068,11 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "es-ES",
   "origin": {},
   "rationale": "The locale's quote convention is `curly-double` (12 occurrences).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1d907dfe",
@@ -2009,6 +2096,7 @@
    "confidence": "high"
   },
   "rationale": "The source \"Autofill in other apps\" is a preference title with no final period; the extra period is inconsistent with other preference titles.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "1ad5e6af",
@@ -2032,6 +2120,7 @@
    "confidence": "high"
   },
   "rationale": "The same source phrase on the same settings surface uses two different renderings; \"datos de navegación\" is the correct one for \"browsing data\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d3f7dcbe",
@@ -2055,6 +2144,7 @@
    "confidence": "high"
   },
   "rationale": "\"Browsing data\" is rendered \"datos de navegación\" in the related Delete browsing data strings; \"datos del navegador\" means browser data.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b5c15e8a",
@@ -2078,6 +2168,7 @@
    "confidence": "medium"
   },
   "rationale": "The source asks to be prompted when the user deletes files, not before deletion; \"antes de\" adds a meaning not in the source.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c0e5aaf9",
@@ -2101,6 +2192,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to the Google toggle located above this caption; \"en la parte superior\" misstates it as a location at the top.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "38e4a7ec",
@@ -2124,6 +2216,7 @@
    "confidence": "high"
   },
   "rationale": "The comment states \"That you use it\" means sharing that the user continues to use Firefox, not what they use it for; \"cómo lo utilizas\" reverses that meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f83b7ac0",
@@ -2147,6 +2240,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"Use screen lock to hide tabs in private browsing\" is a settings toggle title; es-ES convention renders such labels with the infinitive, as in the sibling strings (\"Guardar contraseñas\", \"Mostrar búsquedas recientes\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5c217edc",
@@ -2170,6 +2264,7 @@
    "confidence": "high"
   },
   "rationale": "Existential \"haber\" is impersonal and always singular: \"cuando haya varias aplicaciones abiertas\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "488ef6d0",
@@ -2193,6 +2288,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to trending searches, not to a superlative ranking of most popular suggestions.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "3ef01469",
@@ -2216,6 +2312,7 @@
    "confidence": "high"
   },
   "rationale": "es-ES uses the informal (tú) form throughout; other imperatives in this batch use \"Elige\", \"Obtén\", \"Inicia sesión\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2675826a",
@@ -2239,6 +2336,7 @@
    "confidence": "medium"
   },
   "rationale": "In the source \"nearby\" modifies the sharing action (share with people/devices nearby), not the link; the Spanish makes \"cercano\" an adjective of \"enlace\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e5037d2a",
@@ -2262,6 +2360,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Jump back in\" is a generic home-screen section header, not a reference to \"this tab\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "eb8c2bd8",
@@ -2285,6 +2384,7 @@
    "confidence": "high"
   },
   "rationale": "Source \"Show all recent tabs button\" names the control (a button that shows all recent tabs); the translation turns \"button\" into the object being shown.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2754545c",
@@ -2308,6 +2408,7 @@
    "confidence": "high"
   },
   "rationale": "The source \"Synced device\" is singular; the translation mixes a plural noun with a singular adjective.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "35ef538f",
@@ -2331,6 +2432,7 @@
    "confidence": "medium"
   },
   "rationale": "Other login strings in this batch translate \"login\" as \"inicio de sesión\" (see saved_login_duplicate); \"cuenta\" means account.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "896c5729",
@@ -2354,6 +2456,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment states \"Search\" is a verb here; the title is for searching within settings, not for settings about search.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "50b3b8b0",
@@ -2377,6 +2480,7 @@
    "confidence": "high"
   },
   "rationale": "Source is \"Try refreshing in a few minutes.\" with no mention of a page; the sibling string sports_widget_error_load_failed_description correctly renders it as \"Intenta actualizar en unos minutos.\"",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "8932213d",
@@ -2400,6 +2504,7 @@
    "confidence": "medium"
   },
   "rationale": "It is a menu item parallel to \"Cambiar equipo\" (sports_widget_change_team) and \"Seguir a otro equipo\"; menu labels use the infinitive in es-ES, not the imperative.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b0da7df7",
@@ -2423,6 +2528,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment explicitly states runners-up means second place; \"Finalistas\" designates all finalists, including the champion, so the meaning is wrong.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a2237a81",
@@ -2446,6 +2552,7 @@
    "confidence": "medium"
   },
   "rationale": "The source \"Check back for match info\" does not mention a page; the widget is on the homepage, not a page.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b32ebd24",
@@ -2469,6 +2576,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is the \"Navigate back\" button on the top app bar of the Stories screen, not a web page back action; the translation adds \"página\" which is not in the source and misdescribes the control for screen-reader users.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "efe8c866",
@@ -2492,6 +2600,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to dismissing the onboarding (introductory) card for tab groups; \"incorporación al grupo de pestañas\" reads as being added to a tab group, which is a different meaning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c6d2f72e",
@@ -2515,6 +2624,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"%1$d tab group open\" — it is the group that is open, so the adjective must agree with the masculine noun \"grupo\" (and \"grupos ... abiertos\" in the other variant).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "71fdd586",
@@ -2538,6 +2648,7 @@
    "confidence": "high"
   },
   "rationale": "es-ES convention is informal (tú); other strings in this batch use informal forms (e.g. \"utiliza\", \"Habla ahora\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "16c32f9a",
@@ -2561,6 +2672,7 @@
    "confidence": "high"
   },
   "rationale": "es-ES convention is informal (tú); the rest of the UI addresses the user informally.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "44138b8d",
@@ -2584,6 +2696,7 @@
    "confidence": "high"
   },
   "rationale": "The source \"Can’t sign in or register\" uses one consistent subject; the Spanish mixes an impersonal passive with a first-person reflexive pronoun, which is ungrammatical.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ce8b5655",
@@ -2607,6 +2720,7 @@
    "confidence": "medium"
   },
   "rationale": "Per the developer comment, the button adds the current URL to the custom autocomplete list; the Spanish reads as \"add the link in order to complete automatically\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "44555d29",
@@ -2630,6 +2744,7 @@
    "confidence": "medium"
   },
   "rationale": "%2$s is already the link text \"ajustes\"; the source is \"Manage cookie banner preferences in %2$s.\" so \"en los ajustes\" is an unwarranted duplication.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "2f36ff60",
@@ -2653,6 +2768,7 @@
    "confidence": "high"
   },
   "rationale": "\"sito\" is a typo for \"sitio\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "30c736a8",
@@ -2676,6 +2792,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says it clears text in the URL bar; \"registro\" means log/record, which is a different thing.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c5924619",
@@ -2699,6 +2816,7 @@
    "confidence": "medium"
   },
   "rationale": "The same feature name is translated as \"Reducción de avisos de cookies\" in cookie_banner_exception_item_title and other strings on the same surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f2816aed",
@@ -2722,6 +2840,7 @@
    "confidence": "medium"
   },
   "rationale": "The same feature name is translated as \"Reducción de avisos de cookies\" in the other cookie banner strings in this file.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f7e47bf8",
@@ -2745,6 +2864,7 @@
    "confidence": "high"
   },
   "rationale": "Source says the shortcut will open with Enhanced Tracking Protection *disabled*; the Spanish says it opens with the protection (implicitly enabled), reversing the warning.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ec4690a0",
@@ -2768,6 +2888,7 @@
    "confidence": "high"
   },
   "rationale": "Source is \"Yes\"; without the accent \"si\" means \"if\" in Spanish.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "915727a2",
@@ -2791,6 +2912,7 @@
    "confidence": "high"
   },
   "rationale": "The source says \"Your browsing history has been erased.\", not search history; other strings in the same file use \"historial de navegación\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "42b3769f",
@@ -2808,10 +2930,11 @@
   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "es-ES",
   "origin": {},
   "rationale": "In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b969905c",
@@ -2829,10 +2952,11 @@
   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-08-22",
+  "last_seen": "2026-08-24",
   "locale": "es-ES",
   "origin": {},
   "rationale": "The locale's quote convention is `curly-double` (12 occurrences).",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b969905c",
@@ -2856,6 +2980,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to custom autocomplete URLs (user-defined URL entries), not to a custom autocomplete feature.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c715a140",
@@ -2879,6 +3004,7 @@
    "confidence": "medium"
   },
   "rationale": "The developer comment says this is the label for the \"custom autocomplete URL\" input field; the source is the noun phrase \"URL to add\", not an imperative action. It also collides with preference_autocomplete_action_add2.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "669ee89a",
@@ -2902,6 +3028,7 @@
    "confidence": "high"
   },
   "rationale": "es-ES convention is the informal register; other strings in this batch use \"Elige\", \"tu navegador\".",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "cd05d115",
@@ -2925,6 +3052,7 @@
    "confidence": "high"
   },
   "rationale": "The source refers to usage/telemetry data; \"datos de consumo\" suggests data consumption, and other strings use \"uso\" (e.g. \"Ping de uso diario\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "f42344a1",
@@ -2948,6 +3076,7 @@
    "confidence": "medium"
   },
   "rationale": "preference_daily_usage_ping_learn_more renders the identical source \"Learn more\" as \"Saber más\" on the same settings surface.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c754fe09",
@@ -2971,6 +3100,7 @@
    "confidence": "high"
   },
   "rationale": "Source \"Switch to link in new tab immediately\" is a preference label describing behavior; \"Cambie\" is a formal imperative, breaking both meaning and the informal register convention.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4c5e743f",
@@ -2994,6 +3124,7 @@
    "confidence": "medium"
   },
   "rationale": "RAE no longer accents the adverb \"solo\", and the sibling string preference_privacy_should_block_cookies_third_party_tracker_cookies_option uses \"solo\" unaccented, creating an inconsistency.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6ffba974",
@@ -3017,6 +3148,7 @@
    "confidence": "medium"
   },
   "rationale": "\"Add another search engine\" is an action label; es-ES uses the infinitive for actions, as in preference_search_add2 (\"+ Añadir otro motor de búsqueda\").",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ed95a4ea",
@@ -3040,6 +3172,7 @@
    "confidence": "high"
   },
   "rationale": "The developer comment says this describes a picture of the search widget; the source is a noun phrase, not a command. Other strings in the same dialog use \"widget\" as a noun.",
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "30ce4e91",
