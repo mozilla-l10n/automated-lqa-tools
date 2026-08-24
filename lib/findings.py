@@ -174,15 +174,74 @@ def loose(text: str) -> str:
     return _WS.sub(" ", (text or "")).strip()
 
 
-def still_present(fragment: str, text: str) -> bool:
+# A quoted fragment is written the way the *file* reads; a message is stored
+# the way :func:`parse.flatten` leaves it. Three differences, each of which
+# made a real finding uncomparable:
+#
+#   `check = Check`              the reviewer echoed the whole source line
+#   `.label = Violeta`           ... or the attribute line
+#   `*[no-cases] Spusťte …`      ... or one variant of a select, with its
+#                                 default marker, which the parser drops
+_ATTR_PREFIX = re.compile(r"^\s*\.[A-Za-z][\w-]*\s*=[ \t]*")
+# Only an actual Fluent variant key, never arbitrary bracketed prose: the de
+# alt text `[Anlage: { $type }]` is the value, not a selector.
+_VARIANT_PREFIX = re.compile(r"^\s*\*?\[[A-Za-z0-9_-]{1,30}\][ \t]*")
+_PLACEABLE = re.compile(r"\{[^{}]*\}")
+_CALL = re.compile(r"^([A-Z][A-Z0-9_]*)\s*\((.*)\)$", re.S)
+_TERM_CALL = re.compile(r"^(-[\w-]+)\s*\(.*\)$", re.S)
+
+
+def _canon_placeable(match: re.Match) -> str:
+    """Reduce a placeable to what the parser keeps of it.
+
+    ``{ NUMBER($result, maximumSignificantDigits: 9) }`` is flattened to
+    ``{ $result }`` and ``{ -brand-name(case: "gen") }`` to
+    ``{ -brand-name }``, so a fragment quoting the file verbatim has to be put
+    through the same reduction before it can be looked for.
+    """
+    inner = match.group(0)[1:-1].strip()
+    call = _CALL.match(inner)
+    if call:
+        return "{ %s }" % call.group(2).split(",")[0].strip()
+    term = _TERM_CALL.match(inner)
+    if term:
+        return "{ %s }" % term.group(1)
+    return "{ %s }" % inner
+
+
+def as_parsed(text: str, string_id: str = "") -> str:
+    """A quoted fragment rewritten the way the parsed message holds it.
+
+    ``string_id`` is what makes stripping the leading ``id =`` safe: only that
+    exact identifier is removed, so a value that genuinely contains ``x = y``
+    is left alone. Idempotent on text that already came from the parser, so
+    both sides of a comparison can go through it.
+    """
+    out = loose(text)
+    head = re.compile(r"^\s*%s\s*=[ \t]*" % re.escape(string_id)) if string_id else None
+    while True:
+        stripped = out
+        if head:
+            stripped = head.sub("", stripped, count=1)
+        stripped = _VARIANT_PREFIX.sub("", _ATTR_PREFIX.sub("", stripped, count=1), count=1)
+        stripped = loose(stripped)
+        if stripped == out:
+            break
+        out = stripped
+    return loose(_PLACEABLE.sub(_canon_placeable, out))
+
+
+def still_present(fragment: str, text: str, string_id: str = "") -> bool:
     """Is the defective fragment still in the string?"""
-    frag = loose(fragment)
+    frag = as_parsed(fragment, string_id)
     if not frag or len(frag) < 3:
         return False
-    return frag in loose(text)
+    return frag in as_parsed(text, string_id)
 
 
-def verdict(fragment: str, text: str) -> str:
+def verdict(
+    fragment: str, text: str, moved: bool | None = None, string_id: str = ""
+) -> str:
     """What the current text says about a finding: gone, unchanged, or unclear.
 
     Three outcomes, because substring matching alone gives wrong answers in
@@ -195,13 +254,21 @@ def verdict(fragment: str, text: str) -> str:
                   stays a substring when the fix was to add words around it.
                   "Traduzione", flagged for losing the in-progress sense, is
                   still inside the corrected "Traduzione in corso".
+
+    ``moved`` is whether the string has changed since the finding was raised,
+    or ``None`` where nothing recorded it. A fragment that is absent from a
+    string that never moved was never *in* it -- the quote is unusable, not
+    the defect repaired -- so that reads ``unclear`` and goes back to a
+    person. Without this, 122 findings whose ``current`` echoes the whole
+    source line (``check = Check``, against a stored value of ``Check``) were
+    one unrelated edit away from closing themselves as fixed.
     """
     if not fragment:
         return "unclear"
-    if loose(text).strip() == loose(fragment).strip():
+    if as_parsed(text, string_id) == as_parsed(fragment, string_id):
         return "unchanged"
-    if not still_present(fragment, text):
-        return "gone"
+    if not still_present(fragment, text, string_id):
+        return "unclear" if moved is False else "gone"
     return "unclear"
 
 
@@ -450,11 +517,11 @@ def resolve(
         # and the snapshot advances when the reviewer reads a string --
         # which meant a finding raised before an edit could have its
         # evidence quietly absorbed and never be looked at again.
-        moved = bool(f.string_hash) and f.string_hash != msg.hash()
+        moved = (f.string_hash != msg.hash()) if f.string_hash else None
         if recheck:
             # Re-read every open finding against the tree as it stands,
             # whatever the delta says.
-            call = verdict(f.current, msg.text())
+            call = verdict(f.current, msg.text(), moved, f.string_id)
             if call == "gone":
                 f.status = "fixed"
                 f.resolved_on = today
@@ -465,13 +532,11 @@ def resolve(
                 # "unclear" is the common case and re-queueing all of them
                 # would have sent 534 of fy-NL's 593 back for a re-read on
                 # no evidence at all.
-                f.status = "needs-recheck"
-                f.string_hash = msg.hash()
-                buckets["recheck"].append(f)
+                _park(f, buckets)
             continue
         if not moved and f.key not in delta_keys:
             continue  # string untouched since the finding was raised
-        call = verdict(f.current, msg.text())
+        call = verdict(f.current, msg.text(), moved, f.string_id)
         if call == "gone":
             f.status = "fixed"
             f.resolved_on = today
@@ -479,10 +544,30 @@ def resolve(
             continue
         if call == "unchanged":
             continue  # the string is still exactly what was flagged
-        f.status = "needs-recheck"
-        f.string_hash = msg.hash()
-        buckets["recheck"].append(f)
+        _park(f, buckets)
     return buckets
+
+
+def _park(f: Finding, buckets: dict) -> None:
+    """Send a finding back to a person, without eating the evidence.
+
+    ``string_hash`` records the string as it was when the finding was raised,
+    and that is the only thing that can later answer "has this moved?".
+    Re-anchoring it here -- which this did -- made the answer permanently
+    "no": ``--recheck`` selects on exactly that comparison, and so does the
+    ``trusted`` set that lets reviewer silence close a finding. Every route
+    out of ``needs-recheck`` closed behind the finding, and 589 imported
+    Firefox findings sat in the bucket for a month, 583 of them on defects
+    the locale teams had already fixed.
+
+    Only report it the first time. The status is sticky by design, so a
+    finding parked three runs ago must not be re-announced as newly parked in
+    every report since.
+    """
+    first_time = f.status != "needs-recheck"
+    f.status = "needs-recheck"
+    if first_time:
+        buckets["recheck"].append(f)
 
 
 # --- escalation ----------------------------------------------------------

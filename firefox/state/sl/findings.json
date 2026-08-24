@@ -981,14 +981,15 @@
   "last_seen": "2026-07-29 (undated)",
   "locale": "sl",
   "origin": {
+   "closed_by": "hand re-verification against firefox-l10n 971f34bc9415 on 2026-08-24: the string changed after the finding was raised and the defect is gone. Raised from an import that quoted no checkable text, so no automatic route could close it.",
    "report": "legacy",
    "section": "B. Mistranslations & reversed meaning",
    "severity": "S2"
   },
   "rationale": "",
   "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "needs-recheck",
+  "resolved_on": "2026-08-24",
+  "status": "fixed",
   "string_hash": "1ff4d424",
   "string_id": "tab-group-editor-action-copy-links",
   "suggest": "",

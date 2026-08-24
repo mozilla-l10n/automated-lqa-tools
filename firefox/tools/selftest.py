@@ -264,12 +264,25 @@ def run(l10n_dir, source_dir, project) -> int:
     check(f_same.status == "open",
           "an unchanged string keeps its finding open, not re-queued")
 
+    # `string_hash="then"` against a mock hashing to "now": the string moved,
+    # the delta simply does not know it. That is what "whatever the delta
+    # says" means here. It used to read `string_hash="now"` -- a string that
+    # had *not* moved since the finding was raised -- which is a state where
+    # the quoted text cannot have been fixed, only mis-quoted.
     f_stale = Finding(locale="it", file="a.ftl", string_id="s", category="B",
-                      summary="x", current="vecchio", string_hash="now")
+                      summary="x", current="vecchio", string_hash="then")
     findings_mod.resolve([f_stale], {("a.ftl", "s"): _M("nuovo testo")},
                          set(), "2026-01-01", recheck=True)
     check(f_stale.status == "fixed",
           "--recheck closes a defect whose text has gone, whatever the delta says")
+
+    f_unmoved = Finding(locale="it", file="a.ftl", string_id="s", category="B",
+                        summary="x", current="vecchio", string_hash="now")
+    findings_mod.resolve([f_unmoved], {("a.ftl", "s"): _M("nuovo testo")},
+                         set(), "2026-01-01", recheck=True)
+    check(f_unmoved.status == "open",
+          "but a fragment absent from a string that never moved is an "
+          "unusable quote, not a fix, and closes nothing")
 
     f_quiet = Finding(locale="it", file="a.ftl", string_id="s", category="B",
                       summary="x", current="Trad", string_hash="now")

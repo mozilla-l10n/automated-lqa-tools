@@ -5,9 +5,9 @@
 | **Generated** | 2026-08-24 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 45 of 18,180 |
+| **Previous run** | 2026-08-24 @ `39e5663f3de7` |
+| **Mode** | recheck |
+| **Strings reviewed this run** | 0 of 18,180 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,27 +18,30 @@ Also for pt-BR: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `about-processes-utility-actor-hw-inference` — `toolkit/toolkit/about/aboutProcesses.ftl` — "Hardware Accelerated Inference" was rendered as "inference of hardware acceleration", inverting the modifier relationship.
-    - Current: `Inferência de aceleração de hardware`
-    - Source: `Hardware Accelerated Inference`
-    - Suggest: `Inferência acelerada por hardware`
-    - In en-US, "Hardware Accelerated" modifies "Inference": inference that is accelerated by hardware. The pt-BR reverses this to "inference of hardware acceleration".
-- `process-type-utility-actor-hw-inference` — `toolkit/toolkit/global/processTypes.ftl` — "Utility Hardware Accelerated Inference" rendered as "Utility of inference of hardware acceleration", inverting the modifier relationship.
-    - Current: `Utilitário de inferência de aceleração de hardware`
-    - Source: `Utility Hardware Accelerated Inference`
-    - Suggest: `Utilitário de inferência acelerada por hardware`
-    - "Hardware Accelerated" modifies "Inference"; the pt-BR turns it into "inference of hardware acceleration", which names a different thing.
-- `containers-sites-card-header` — `browser/browser/preferences/preferences.ftl` — Missing accent in "especificos".
-    - Current: `Contêineres de sites especificos`
-    - Source: `description: Choose a container for a site and { -brand-short-name } will use it every time the site opens. label: Site-specific containers`
-    - Suggest: `Contêineres de sites específicos`
-    - "específicos" requires the acute accent; "especificos" is a spelling error.
+_No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (7)
 
-_Nothing was fixed._
+- `firefox-relay-offer-legal-notice-1` — `browser/browser/browser.ftl` — broken closing tag. Current: …>Aviso de privacidade</label label>. → Suggest: …>Aviso de privacidade</label>.
+    - Source: `By signing up and creating an email mask, you agree to the <label data-l10n-name="tos-url">Terms of Service</label> and <label data-l10n-name="privacy-url">Privacy Notice</label>.`
+- `popup-warning-exceeded-with-redirect-message` — `browser/browser/browser.ftl` — the count is attached to the wrong noun; en-US counts pop-up windows. Suggest: …impediu que este site abrisse mais de { $popupCount } janelas, além de redirecionamentos.
+    - Source: `{$popupCount ->} [other] { -brand-short-name } prevented this site from opening more than { $popupCount } pop-up windows and redirecting.`
+- `firefox-relay-offer-legal-notice-control` — `browser/browser/firefoxRelay.ftl` — same broken tag: </label label> → </label>
+    - Source: `By signing up and creating an email mask, you agree to the <label data-l10n-name="tos-url">Terms of Service</label> and <label data-l10n-name="privacy-url">Privacy Notice</label>.`
+- `report-broken-site-panel-reason-choose` — `browser/browser/reportBrokenSite.ftl` — en-US "Choose reason". Current: Escolha → Suggest: Escolha um motivo
+    - Current: `Escolha`
+    - Source: `label: Choose reason`
+    - Suggest: `Escolha um motivo`
+- `split-view-menuitem-reverse-tabs` — `browser/browser/tabbrowser.ftl` — "Reverse Tabs": Inverter abas (tab-context-reverse-split-view) vs Reverter abas (split-view-menuitem-reverse-tabs) — see §C, Inverter is correct
+    - Current: `Inverter abas`
+    - Source: `label: Reverse Tabs`
+- `about-glean-about-data-list-item-dictionary` — `toolkit/toolkit/about/aboutGlean.ftl` — missing space renders as "GleanDicionário". Current: <a …>{ -glean-brand-name }Dicionário</a> → Suggest: <a …>Dicionário do { -glean-brand-name }</a>
+    - Source: `To browse the list of data collected by { -glean-brand-name } per application, please consult the <a data-l10n-name="glean-dictionary-link">{ -glean-brand-name } Dictionary</a>.`
+- `sec-error-cert-not-in-name-space` — `toolkit/toolkit/neterror/nsserrors.ftl` — sec-error-cert-not-in-name-space uses Autoridade de Certificação; the rest of the tree uses autoridade certificadora
+    - Source: `The Certifying Authority for this certificate is not permitted to issue a certificate with this name.`
+    - Suggest: `Autoridade de Certificação`
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -100,14 +103,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (571)
+## 3. Open findings (564)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 15 |
-| 2 | Wrong content (says something other than the English) | 195 |
-| 3 | Degraded language (grammar, spelling, terminology) | 290 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 12 |
+| 2 | Wrong content (says something other than the English) | 193 |
+| 3 | Degraded language (grammar, spelling, terminology) | 288 |
 | 4 | Cosmetic (typography, spacing) | 71 |
 
 ### A. Functional, markup, variables & plurals
@@ -119,10 +122,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - The label is “Avançar para a instalação”. An access key not in the label cannot be underlined and is unreachable by keyboard.
 - `firefox-relay-offer-legal-notice` — `browser/browser/browser.ftl` — stray space inside the link text: …Aviso de privacidade </label> → …Aviso de privacidade</label>
     - Source: `By clicking “Use email mask”, you agree to the <label data-l10n-name="tos-url">Terms of Service</label> and <label data-l10n-name="privacy-url">Privacy Notice</label>.`
-- `firefox-relay-offer-legal-notice-1` — `browser/browser/browser.ftl` — broken closing tag. Current: …>Aviso de privacidade</label label>. → Suggest: …>Aviso de privacidade</label>.
-    - Source: `By signing up and creating an email mask, you agree to the <label data-l10n-name="tos-url">Terms of Service</label> and <label data-l10n-name="privacy-url">Privacy Notice</label>.`
-- `firefox-relay-offer-legal-notice-control` — `browser/browser/firefoxRelay.ftl` — same broken tag: </label label> → </label>
-    - Source: `By signing up and creating an email mask, you agree to the <label data-l10n-name="tos-url">Terms of Service</label> and <label data-l10n-name="privacy-url">Privacy Notice</label>.`
 - `newtab-widget-lists-completed-list` — `browser/browser/newtab/newtab.ftl` — the parentheses of the en-US format are dropped, leaving a bare number. Current: Tarefas concluídas { $number } → Suggest: Concluídas ({ $number })
     - Current: `Tarefas concluídas { $number }`
     - Source: `Completed ({ $number })`
@@ -138,8 +137,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Try setting its <strong>display</strong> property to something else than <strong>none</strong>, <strong>contents</strong>, <strong>table</strong>, or <strong>inline-table</strong> and make sure it’s not within a table o…`
 - `inactive-css-no-size-containment-fix-1` — `devtools/client/tooltips.ftl` — inactive-css-no-size-containment-fix, inactive-css-no-size-containment-fix-1 — devtools/client/tooltips.ftl — stray space captured inside the CSS-keyword element: <strong>inline-table </strong> → <strong>inline-table</strong>
     - Source: `Try setting its <strong>display</strong> property to something else than <strong>none</strong>, <strong>contents</strong>, <strong>table</strong>, or <strong>inline-table</strong> and make sure it’s not within a table o…`
-- `about-glean-about-data-list-item-dictionary` — `toolkit/toolkit/about/aboutGlean.ftl` — missing space renders as "GleanDicionário". Current: <a …>{ -glean-brand-name }Dicionário</a> → Suggest: <a …>Dicionário do { -glean-brand-name }</a>
-    - Source: `To browse the list of data collected by { -glean-brand-name } per application, please consult the <a data-l10n-name="glean-dictionary-link">{ -glean-brand-name } Dictionary</a>.`
 - `about-glean-adhoc-explanation` — `toolkit/toolkit/about/aboutGlean.ftl` — about-glean-adhoc-explanation, about-glean-adhoc-explanation2 — toolkit/toolkit/about/aboutGlean.ftl — the <i>ad hoc</i> emphasis from en-US is dropped (translated as "mais específicos"). Low impact; restore the italics if the wording is revised.
     - Source: `For more <i>ad hoc</i> testing, you can also determine the current value of a particular piece of instrumentation by opening a devtools console here on <code>about:glean</code> and using the <code>testGetValue()</code>…`
 - `about-glean-adhoc-explanation2` — `toolkit/toolkit/about/aboutGlean.ftl` — about-glean-adhoc-explanation, about-glean-adhoc-explanation2 — toolkit/toolkit/about/aboutGlean.ftl — the <i>ad hoc</i> emphasis from en-US is dropped (translated as "mais específicos"). Low impact; restore the italics if the wording is revised.
@@ -191,8 +188,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `Você pode restaurar se houver um problema ou usar um novo dispositivo.`
     - Source: `{ -brand-short-name } will create a snapshot of your data every 24 hours. You can restore it if there’s a problem or you get a new device.`
     - Suggest: `Você pode restaurá-la se houver um problema ou se você tiver um novo dispositivo.`
-- `popup-warning-exceeded-with-redirect-message` — `browser/browser/browser.ftl` — the count is attached to the wrong noun; en-US counts pop-up windows. Suggest: …impediu que este site abrisse mais de { $popupCount } janelas, além de redirecionamentos.
-    - Source: `{$popupCount ->} [other] { -brand-short-name } prevented this site from opening more than { $popupCount } pop-up windows and redirecting.`
 - `crashed-subframe-title` — `browser/browser/contentCrash.ftl` — the comment requires this to match crashed-subframe-message minus markup; the wording and clause order differ.
     - Source: `title: Part of this page crashed. To let { -brand-product-name } know about this issue and get it fixed faster, please submit a report.`
     - Suggest: `.title`
@@ -352,10 +347,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `description: Invite someone to choose the browser that puts privacy first. label: Share { -brand-product-name }`
     - Suggest: `description: Convide alguém a escolher o navegador que põe a privacidade em primeiro lugar.`
     - en-US reads "Invite someone to choose the browser that puts privacy first"; the translation omits "someone" and replaces "choose" with "use", leaving an incomplete sentence without a direct object.
-- `report-broken-site-panel-reason-choose` — `browser/browser/reportBrokenSite.ftl` — en-US "Choose reason". Current: Escolha → Suggest: Escolha um motivo
-    - Current: `Escolha`
-    - Source: `label: Choose reason`
-    - Suggest: `Escolha um motivo`
 - `existing-user-tou-message` — `browser/browser/termsofuse.ftl` — en-US "take a moment". Current: Dê uma pausa para revisar e aceitar. → Suggest: Reserve um momento para revisar e aceitar.
     - Current: `Dê uma pausa para revisar e aceitar.`
     - Source: `<strong>Update</strong> We’ve introduced a { -brand-short-name } <a data-l10n-name="terms-of-use-link">Terms of Use</a> and updated our <a data-l10n-name="privacy-notice-link">Privacy Notice</a>. Please take a moment to…`
@@ -372,7 +363,15 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `Extrair dados da tela`
     - Source: `Extract canvas data`
     - Suggest: `Extrair dados do canvas`
-- _…and 132 more; see `state/` for the full list._
+- `permission.popup-only.label` — `browser/chrome/browser/sitePermissions.properties` — permission.popup-only.label, permission.popup.label, permission.popup-and-framebusting.label (sitePermissions.properties) — the pop-up qualifier is dropped, so the permission reads as any window/tab opening: Abrir janelas ou abas → Abrir janelas popup; Abertura de janelas e redirecionamento de terceiros → Janelas popup e redirecionamentos de terceiros
+    - Current: `Abrir janelas ou abas`
+    - Source: `Open pop-up windows`
+    - Suggest: `Abrir janelas popup`
+- `permission.popup.label` — `browser/chrome/browser/sitePermissions.properties` — permission.popup-only.label, permission.popup.label, permission.popup-and-framebusting.label (sitePermissions.properties) — the pop-up qualifier is dropped, so the permission reads as any window/tab opening: Abrir janelas ou abas → Abrir janelas popup; Abertura de janelas e redirecionamento de terceiros → Janelas popup e redirecionamentos de terceiros
+    - Current: `Abrir janelas ou abas`
+    - Source: `Open pop-up windows`
+    - Suggest: `Abrir janelas popup`
+- _…and 130 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -783,7 +782,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `tooltiptext: Apply picture avatar`
 - `sparkle-single-avatar` — `browser/browser/profiles.ftl` — profiles.ftl avatar labels — edit-profile-page-avatar-header-2 uses Símbolo where the file uses avatar; sparkle-single-avatar-tooltip says brilho while sparkle-single-avatar says Faísca; video-game-controller-avatar-tooltip says controle de videogame while video-game-controller-avatar says Controlador de videogame; picture-avatar-tooltip says de imagem while picture-avatar says Foto; folder-avata…
     - Source: `Sparkle`
-- _…and 67 more; see `state/` for the full list._
+- _…and 65 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -995,8 +994,15 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (131)
+### Fixed to date (138)
 
+- `firefox-relay-offer-legal-notice-1` — `browser/browser/browser.ftl` — fixed 2026-08-24
+- `popup-warning-exceeded-with-redirect-message` — `browser/browser/browser.ftl` — fixed 2026-08-24
+- `firefox-relay-offer-legal-notice-control` — `browser/browser/firefoxRelay.ftl` — fixed 2026-08-24
+- `report-broken-site-panel-reason-choose` — `browser/browser/reportBrokenSite.ftl` — fixed 2026-08-24
+- `split-view-menuitem-reverse-tabs` — `browser/browser/tabbrowser.ftl` — fixed 2026-08-24
+- `about-glean-about-data-list-item-dictionary` — `toolkit/toolkit/about/aboutGlean.ftl` — fixed 2026-08-24
+- `sec-error-cert-not-in-name-space` — `toolkit/toolkit/neterror/nsserrors.ftl` — fixed 2026-08-24
 - `about-logins-confirm-remove-all-sync-dialog-message` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-07
 - `login-intro-instructions-fxa` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-07
 - `addon-confirm-install-message` — `browser/browser/addonNotifications.ftl` — fixed 2026-08-07
@@ -1030,10 +1036,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `genai-menu-ask-provider-2` — `browser/browser/genai.ftl` — fixed 2026-08-07
 - `genai-onboarding-copilot-learn` — `browser/browser/genai.ftl` — fixed 2026-08-07
 - `link-preview-first-time-setup-message` — `browser/browser/genai.ftl` — fixed 2026-08-07
-- `identity-credential-policy-description` — `browser/browser/identityCredentialNotification.ftl` — fixed 2026-08-07
-- `ip-protection-bandwidth-warning-infobar-message-90` — `browser/browser/ipProtection.ftl` — fixed 2026-08-07
-- `ipprotection-location-selection-callout-description-1` — `browser/browser/ipProtection.ftl` — fixed 2026-08-07
-- `nova-early-access-infobar-primary-button` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-07
-- `windows-10-eos-challenger-callout-title` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-07
-- `windows-10-eos-global-infobar-primary-button` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-07
-- `home-prefs-firefox-home-disabled-notice` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-07

@@ -76,6 +76,19 @@ it was written after getting it wrong:
   never be re-examined. Never backfill the missing `current` with the whole
   value instead: any later edit would then read as a fix, which is the
   optimistic heuristic this system exists to avoid.
+
+  That applies to parking a finding too, and `_park` exists to enforce it.
+  Writing `string_hash = msg.hash()` on the way into the bucket erases the
+  very movement that put it there, and both routes back out — `--recheck`'s
+  re-queue and the `trusted` set behind `close_reviewed` — test exactly that
+  comparison. 589 imported Firefox findings sat parked for a month, 583 of
+  them already fixed, because of one such assignment.
+
+  Because the bucket means "matching cannot answer this; a reader must", an
+  incremental run re-queues every string carrying one. That is not the
+  scheduled hygiene `--recheck` is barred from being: it is bounded by the
+  backlog, it drains as the reviewer answers, and without it a finding that
+  quoted nothing checkable — 456 of those 589 — has no route out at all.
 - **dismissed / suppressed** — a person said it is fine. Kept with the
   reason, never deleted.
 - **reads_as_deliberate** — a reviewer-only flag, not a severity. It marks a
@@ -96,7 +109,17 @@ Two invariants that were violated once each and must not be again:
 
 - Comparison for fix detection is **literal**. It must not fold case or
   strip punctuation — `INDIRIZZO` → `Indirizzo` and `</a >` → `</a>` are
-  real fixes.
+  real fixes. It does have to compare like with like, though: a reviewer
+  quotes the file, `state/` holds `parse.flatten` output, and `as_parsed`
+  reconciles the three ways they differ — an echoed `id = value` or
+  `.attr = value` line, a `*[variant]` marker the parser drops, and
+  placeable arguments it strips (`{ NUMBER($n, …) }` → `{ $n }`). Stripping
+  is keyed to the message's own id so a value containing `=` survives.
+- **An absent fragment only means "fixed" if the string moved.** If the
+  string is byte-identical to when the finding was raised, a fragment that
+  is not in it was never in it — the quote is unusable and the honest answer
+  is `needs-recheck`. 122 findings whose `current` echoed the whole source
+  line were one unrelated edit from closing themselves as fixed.
 - **Rewording a check is not the check changing its mind.** `fid` folds in
   the summary, so renaming a message gives the same defect a new one. If
   `resolve` matched on `fid` alone, the stored finding would read as

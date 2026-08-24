@@ -5,9 +5,9 @@
 | **Generated** | 2026-08-24 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 18,367 |
+| **Previous run** | 2026-08-24 @ `39e5663f3de7` |
+| **Mode** | recheck |
+| **Strings reviewed this run** | 0 of 18,367 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,18 +22,60 @@ Also for fr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (21)
 
-- `newtab-stocks-watchlist-full` — `browser/browser/newtab/newtab.ftl` — The [other] variant renders "add up to" as "totaliser" instead of "ajouter", inconsistent with the [one] variant and the source.
-    - Current: `Vous pouvez totaliser jusqu’à { $limit } actions. Supprimez-en un pour en ajouter un autre.`
-    - Source: `{$limit ->} [one] You can add up to { $limit } stock. Remove one to add another. [other] You can add up to { $limit } stocks. Remove one to add another.`
-    - Suggest: `Vous pouvez ajouter jusqu’à { $limit } actions. Supprimez-en une pour en ajouter une autre.`
-    - en-US is "You can add up to { $limit } stocks."; also the pronouns should be feminine to agree with "actions".
-- `newtab-stocks-watchlist-full` — `browser/browser/newtab/newtab.ftl` — The [one] plural variant is ungrammatical and mistranslated ("jusqu’à 1 d’actions").
-    - Current: `Vous pouvez ajouter jusqu’à { $limit } d’actions. Supprimez-en un pour en ajouter un autre.`
-    - Source: `{$limit ->} [one] You can add up to { $limit } stock. Remove one to add another. [other] You can add up to { $limit } stocks. Remove one to add another.`
-    - Suggest: `Vous pouvez ajouter jusqu’à { $limit } action. Supprimez-en une pour en ajouter une autre.`
-    - en-US says "You can add up to { $limit } stock."; the French inserts a spurious "d’" and uses a plural noun with a singular count, and the pronoun should agree with the feminine "action".
+- `browser-main-window-window-titles` — `browser/browser/browser.ftl` — browser-main-window-window-titles (.data-content-title-private) — browser/browser/browser.ftl:20 — double regular space before "(navigation privée)".
+    - Source: `data-content-title-default: { $content-title } — { -brand-full-name } data-content-title-private: { $content-title } — { -brand-full-name } Private Browsing data-title-default: { -brand-full-name } data-title-private: {…`
+    - Suggest: `.data-content-title-private`
+- `contextual-manager-passwords-breached-origin-heading-and-message` — `browser/browser/contextual-manager.ftl` — contextual-manager-passwords-breached-origin-heading-and-message (.message) — browser/browser/contextual-manager.ftl:202 — FR: "…ou ayant fuités." → ayant fuité (participle with "ayant", no preceding object, invariable).
+    - Source: `heading: Password change recommended message: Passwords from this website were reported stolen or leaked. Change your password to protect your account.`
+    - Suggest: `ayant fuité`
+- `contextual-manager-passwords-remove-all-title` — `browser/browser/contextual-manager.ftl` — two consecutive spaces (U+00A0 + U+202F) between { $total } and "mots".
+    - Source: `{$total ->} [1] Remove password? [other] Remove all { $total } passwords?`
+- `customkeys-conflict-confirm` — `browser/browser/customkeys.ftl` — regular space before ? (siblings use NBSP).
+    - Source: `This key is already assigned to { $conflict }. Do you want to replace it?`
+- `sidebar-callout-survey-productive-question` — `browser/browser/featureCallout.ftl` — browser/browser/featureCallout.ftl:239,254 — FR: "êtes vous d'accord" → êtes-vous (inversion hyphen).
+    - Source: `To what extent do you agree or disagree with this statement:<br/> “The { -brand-short-name } sidebar helps me be more productive”?`
+    - Suggest: `êtes-vous`
+- `sidebar-genai-survey-productive-question` — `browser/browser/featureCallout.ftl` — browser/browser/featureCallout.ftl:239,254 — FR: "êtes vous d'accord" → êtes-vous (inversion hyphen).
+    - Source: `To what extent do you agree or disagree with this statement:<br/> “The AI chatbot in the sidebar helps me be more productive”?`
+    - Suggest: `êtes-vous`
+- `newtab-clock-widget-edit-item-with-nickname` — `browser/browser/newtab/newtab.ftl` — newtab-clock-widget-edit-item-with-nickname (.aria-label) — browser/browser/newtab/newtab.ftl:1608 — regular space before : (parallel string line 1629 uses NBSP).
+    - Source: `aria-label: { $city }, nickname: { $nickname }`
+    - Suggest: `.aria-label`
+- `multi-profile-spotlight-title` — `browser/browser/newtab/onboarding.ftl` — regular space before !.
+    - Source: `Say hello to { -brand-product-name } profiles`
+- `places-delete-bookmark` — `browser/browser/places.ftl` — FR: "Supprimer le marque page" / "les marques pages" → marque-page / marque-pages (hyphen; wrong plural).
+    - Source: `accesskey: D label: {$count ->} [1] Delete Bookmark [other] Delete Bookmarks`
+- `policy-GenerativeAI` — `browser/browser/policies/policies-descriptions.ftl` — browser/browser/policies/policies-descriptions.ftl:92,132 — missing trailing period (all sibling descriptions end with one).
+    - Source: `Configure generative AI features.`
+- `policy-PictureInPicture` — `browser/browser/policies/policies-descriptions.ftl` — browser/browser/policies/policies-descriptions.ftl:92,132 — missing trailing period (all sibling descriptions end with one).
+    - Source: `Enable or disable Picture-in-Picture.`
+- `app-manager-handle-file` — `browser/browser/preferences/applicationManager.ftl` — browser/browser/preferences/applicationManager.ftl:13,16 — FR: "…utilisées pour Liens { $type }." / "…pour Contenu { $type }." → …pour gérer les liens { $type }. / …pour gérer le contenu { $type }. (verb "handle/gérer" dropped, noun wrongly capitalized).
+    - Source: `The following applications can be used to handle { $type } content.`
+    - Suggest: `…pour gérer les liens { $type }.`
+- `app-manager-handle-protocol` — `browser/browser/preferences/applicationManager.ftl` — browser/browser/preferences/applicationManager.ftl:13,16 — FR: "…utilisées pour Liens { $type }." / "…pour Contenu { $type }." → …pour gérer les liens { $type }. / …pour gérer le contenu { $type }. (verb "handle/gérer" dropped, noun wrongly capitalized).
+    - Source: `The following applications can be used to handle { $type } links.`
+    - Suggest: `…pour gérer les liens { $type }.`
+- `content-blocking-rfp-incompatibility-warning` — `browser/browser/preferences/preferences.ftl` — browser/browser/preferences/preferences.ftl:1995,2702 — FR: "quelques uns" → quelques-uns (hyphen).
+    - Source: `You’re using Resist Fingerprinting (RFP), which replaces some of { -brand-short-name }’s fingerprinting protection settings. This might cause some sites to break.`
+- `preferences-etp-rfp-warning-message` — `browser/browser/preferences/preferences.ftl` — browser/browser/preferences/preferences.ftl:1995,2702 — FR: "quelques uns" → quelques-uns (hyphen).
+    - Source: `message: You’re using Resist Fingerprinting (RFP), which replaces some of { -brand-short-name }’s fingerprinting protection settings. This might cause some sites to break.`
+- `settings-redesign-promo` — `browser/browser/preferences/preferences.ftl` — settings-redesign-promo (.heading) — browser/browser/preferences/preferences.ftl:2251 — regular space before !.
+    - Source: `heading: Same settings, new look! message: We reorganized this page so it’s easier to scan and explore. Your personal settings haven’t changed, and everything’s still here. Tip: use search to jump straight to what you n…`
+    - Suggest: `.heading`
+- `urlbar-translations-button2` — `browser/browser/translations.ftl` — browser/browser/translations.ftl:12,16 — FR: "Bêta" → Beta (comment: must stay untranslated to match the un-localized BETA icon).
+    - Source: `tooltiptext: Translate this page - Beta`
+    - Suggest: `Beta`
+- `inactive-css-border-image` — `devtools/client/tooltips.ftl` — inverted <strong> tags: FR: "</strong>{ $property }<strong> n'a aucun effet…" → <strong>{ $property }</strong> … (property isn't bolded; following text wrongly is).
+    - Source: `<strong>{ $property }</strong> has no effect on this element since it cannot be applied to internal table elements where <strong>border-collapse</strong> is set to <strong>collapse</strong> on the parent table element.`
+- `learn-more` — `devtools/client/tooltips.ftl` — trailing space inside <span data-l10n-name="link">En savoir plus </span>.
+    - Source: `<span data-l10n-name="link">Learn more</span>`
+- `support-remote-experiments-see-about-studies` — `toolkit/toolkit/about/aboutSupport.ftl` — double space "ce type".
+    - Source: `See <a data-l10n-name="support-about-studies-link">about:studies</a> for more information, including how to disable individual experiments or to disable { -brand-short-name } from running this type of experiment in the…`
+- `third-party-detail-occurrences` — `toolkit/toolkit/about/aboutThirdParty.ftl` — third-party-detail-occurrences (.title) — toolkit/toolkit/about/aboutThirdParty.ftl:13 — FR: "Nombre de fois dont ce module a été chargé." → Nombre de fois que ce module a été chargé.
+    - Source: `(value): Occurrences title: How many times this module was loaded.`
+    - Suggest: `Nombre de fois que ce module a été chargé.`
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -94,15 +136,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (38)
+## 3. Open findings (17)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 4 |
-| 2 | Wrong content (says something other than the English) | 5 |
-| 3 | Degraded language (grammar, spelling, terminology) | 18 |
-| 4 | Cosmetic (typography, spacing) | 11 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 2 |
+| 2 | Wrong content (says something other than the English) | 3 |
+| 3 | Degraded language (grammar, spelling, terminology) | 8 |
+| 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -115,10 +157,6 @@ _Nothing reported._
     - Source: `To what extent do you agree or disagree with this statement:<br/> “The { -brand-short-name } sidebar helps me be more productive”?`
     - Suggest: `To what extent do you agree or disagree with this statement:<br/> “The { -brand-short-name } sidebar helps me be more productive”?`
     - Tags must open and close in the same order as en-US.
-- `inactive-css-border-image` — `devtools/client/tooltips.ftl` — inverted <strong> tags: FR: "</strong>{ $property }<strong> n'a aucun effet…" → <strong>{ $property }</strong> … (property isn't bolded; following text wrongly is).
-    - Source: `<strong>{ $property }</strong> has no effect on this element since it cannot be applied to internal table elements where <strong>border-collapse</strong> is set to <strong>collapse</strong> on the parent table element.`
-- `learn-more` — `devtools/client/tooltips.ftl` — trailing space inside <span data-l10n-name="link">En savoir plus </span>.
-    - Source: `<span data-l10n-name="link">Learn more</span>`
 - `about-networking-ssl-tokens-summary-compression` — `toolkit/toolkit/about/aboutNetworking.ftl` — `about-networking-ssl-tokens-summary-compression` references ['total'], which en-US does not pass
     - Current: `{$total ->} [one] { $decompressedLength } → { $compressedLength } o ({ $saved } % économisé) [other] { $decompressedLength } → { $compressedLength } o ({ $saved } % économisés)`
     - Source: `{ $decompressedLength } → { $compressedLength } B ({ $saved }% saved)`
@@ -129,36 +167,13 @@ _Nothing reported._
 
 - `aiwindow-firstrun-default-checkbox-label` — `browser/browser/aiWindow.ftl` — brand form lower-plural renders "dans une fenêtres intelligentes" → use lower-singular (EN is singular; matches line 164).
     - Source: `Always open { -brand-product-name } in { -smart-window-brand-name }`
-- `app-manager-handle-file` — `browser/browser/preferences/applicationManager.ftl` — browser/browser/preferences/applicationManager.ftl:13,16 — FR: "…utilisées pour Liens { $type }." / "…pour Contenu { $type }." → …pour gérer les liens { $type }. / …pour gérer le contenu { $type }. (verb "handle/gérer" dropped, noun wrongly capitalized).
-    - Source: `The following applications can be used to handle { $type } content.`
-    - Suggest: `…pour gérer les liens { $type }.`
-- `app-manager-handle-protocol` — `browser/browser/preferences/applicationManager.ftl` — browser/browser/preferences/applicationManager.ftl:13,16 — FR: "…utilisées pour Liens { $type }." / "…pour Contenu { $type }." → …pour gérer les liens { $type }. / …pour gérer le contenu { $type }. (verb "handle/gérer" dropped, noun wrongly capitalized).
-    - Source: `The following applications can be used to handle { $type } links.`
-    - Suggest: `…pour gérer les liens { $type }.`
 - `about-glean-metrics-table-settings-timelines-vertical-line-x-offset` — `toolkit/toolkit/about/aboutGlean.ftl` — toolkit/toolkit/about/aboutGlean.ftl:133,135 — both say "axe des abscisses" but EN references the Y-axis → axe des ordonnées; line 135 is also internally contradictory ("décalage vertical … abscisses").
     - Source: `Y-axis X offset`
     - Suggest: `axe des ordonnées`
 
 ### C. Grammar, agreement & spelling
 
-- `contextual-manager-passwords-breached-origin-heading-and-message` — `browser/browser/contextual-manager.ftl` — contextual-manager-passwords-breached-origin-heading-and-message (.message) — browser/browser/contextual-manager.ftl:202 — FR: "…ou ayant fuités." → ayant fuité (participle with "ayant", no preceding object, invariable).
-    - Source: `heading: Password change recommended message: Passwords from this website were reported stolen or leaked. Change your password to protect your account.`
-    - Suggest: `ayant fuité`
-- `sidebar-callout-survey-productive-question` — `browser/browser/featureCallout.ftl` — browser/browser/featureCallout.ftl:239,254 — FR: "êtes vous d'accord" → êtes-vous (inversion hyphen).
-    - Source: `To what extent do you agree or disagree with this statement:<br/> “The { -brand-short-name } sidebar helps me be more productive”?`
-    - Suggest: `êtes-vous`
-- `sidebar-genai-survey-productive-question` — `browser/browser/featureCallout.ftl` — browser/browser/featureCallout.ftl:239,254 — FR: "êtes vous d'accord" → êtes-vous (inversion hyphen).
-    - Source: `To what extent do you agree or disagree with this statement:<br/> “The AI chatbot in the sidebar helps me be more productive”?`
-    - Suggest: `êtes-vous`
-- `places-delete-bookmark` — `browser/browser/places.ftl` — FR: "Supprimer le marque page" / "les marques pages" → marque-page / marque-pages (hyphen; wrong plural).
-    - Source: `accesskey: D label: {$count ->} [1] Delete Bookmark [other] Delete Bookmarks`
-- `content-blocking-rfp-incompatibility-warning` — `browser/browser/preferences/preferences.ftl` — browser/browser/preferences/preferences.ftl:1995,2702 — FR: "quelques uns" → quelques-uns (hyphen).
-    - Source: `You’re using Resist Fingerprinting (RFP), which replaces some of { -brand-short-name }’s fingerprinting protection settings. This might cause some sites to break.`
-- `preferences-etp-rfp-warning-message` — `browser/browser/preferences/preferences.ftl` — browser/browser/preferences/preferences.ftl:1995,2702 — FR: "quelques uns" → quelques-uns (hyphen).
-    - Source: `message: You’re using Resist Fingerprinting (RFP), which replaces some of { -brand-short-name }’s fingerprinting protection settings. This might cause some sites to break.`
-- `third-party-detail-occurrences` — `toolkit/toolkit/about/aboutThirdParty.ftl` — third-party-detail-occurrences (.title) — toolkit/toolkit/about/aboutThirdParty.ftl:13 — FR: "Nombre de fois dont ce module a été chargé." → Nombre de fois que ce module a été chargé.
-    - Source: `(value): Occurrences title: How many times this module was loaded.`
-    - Suggest: `Nombre de fois que ce module a été chargé.`
+_Nothing in this category._
 
 ### D. Terminology, register & consistency
 
@@ -167,10 +182,6 @@ _Nothing reported._
     - Source: `Share { -brand-product-name }`
     - Suggest: `Recommander { -brand-product-name }`
     - The developer comment says this button links to the Referrals page, the same surface as appmenu-referrals2, menu-referrals2 and referrals-link2, which all translate "Share" as "Recommander"; the inconsistent term is wrong here.
-- `policy-GenerativeAI` — `browser/browser/policies/policies-descriptions.ftl` — browser/browser/policies/policies-descriptions.ftl:92,132 — missing trailing period (all sibling descriptions end with one).
-    - Source: `Configure generative AI features.`
-- `policy-PictureInPicture` — `browser/browser/policies/policies-descriptions.ftl` — browser/browser/policies/policies-descriptions.ftl:92,132 — missing trailing period (all sibling descriptions end with one).
-    - Source: `Enable or disable Picture-in-Picture.`
 - `fonts-default-serif` — `browser/browser/preferences/fonts.ftl` — browser/browser/preferences/fonts.ftl:79,81,84,86 — "Serif"/"Sans serif" vs "Sérif"/"Sans sérif" in one file; pick one.
     - Source: `label: Serif`
 - `fonts-sans-serif` — `browser/browser/preferences/fonts.ftl` — browser/browser/preferences/fonts.ftl:79,81,84,86 — "Serif"/"Sans serif" vs "Sérif"/"Sans sérif" in one file; pick one.
@@ -179,9 +190,6 @@ _Nothing reported._
     - Source: `(value): Serif accesskey: S`
 - `urlbar-translations-button-intro` — `browser/browser/translations.ftl` — browser/browser/translations.ftl:12,16 — FR: "Bêta" → Beta (comment: must stay untranslated to match the un-localized BETA icon).
     - Source: `tooltiptext: Try private translations in { -brand-shorter-name } - Beta`
-    - Suggest: `Beta`
-- `urlbar-translations-button2` — `browser/browser/translations.ftl` — browser/browser/translations.ftl:12,16 — FR: "Bêta" → Beta (comment: must stay untranslated to match the un-localized BETA icon).
-    - Source: `tooltiptext: Translate this page - Beta`
     - Suggest: `Beta`
 - `about-debugging-worker-status-running` — `devtools/client/aboutdebugging.ftl` — serviceworker-worker-status-running vs about-debugging-worker-status-running — devtools/client/application.ftl:43 vs devtools/client/aboutdebugging.ftl:312 — "En cours d'exécution" vs "Exécution" for the same "Running" status; align.
     - Source: `Running`
@@ -193,24 +201,9 @@ _Nothing reported._
 
 ### E. Typography, punctuation & spacing
 
-- `browser-main-window-window-titles` — `browser/browser/browser.ftl` — browser-main-window-window-titles (.data-content-title-private) — browser/browser/browser.ftl:20 — double regular space before "(navigation privée)".
-    - Source: `data-content-title-default: { $content-title } — { -brand-full-name } data-content-title-private: { $content-title } — { -brand-full-name } Private Browsing data-title-default: { -brand-full-name } data-title-private: {…`
-    - Suggest: `.data-content-title-private`
-- `contextual-manager-passwords-remove-all-title` — `browser/browser/contextual-manager.ftl` — two consecutive spaces (U+00A0 + U+202F) between { $total } and "mots".
-    - Source: `{$total ->} [1] Remove password? [other] Remove all { $total } passwords?`
-- `customkeys-conflict-confirm` — `browser/browser/customkeys.ftl` — regular space before ? (siblings use NBSP).
-    - Source: `This key is already assigned to { $conflict }. Do you want to replace it?`
 - `felt-error-warning-download-attempt-failed-contact-admin` — `browser/browser/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
     - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
     - The tree uses ’ 5638 times against 10 straight.
-- `newtab-clock-widget-edit-item-with-nickname` — `browser/browser/newtab/newtab.ftl` — newtab-clock-widget-edit-item-with-nickname (.aria-label) — browser/browser/newtab/newtab.ftl:1608 — regular space before : (parallel string line 1629 uses NBSP).
-    - Source: `aria-label: { $city }, nickname: { $nickname }`
-    - Suggest: `.aria-label`
-- `multi-profile-spotlight-title` — `browser/browser/newtab/onboarding.ftl` — regular space before !.
-    - Source: `Say hello to { -brand-product-name } profiles`
-- `settings-redesign-promo` — `browser/browser/preferences/preferences.ftl` — settings-redesign-promo (.heading) — browser/browser/preferences/preferences.ftl:2251 — regular space before !.
-    - Source: `heading: Same settings, new look! message: We reorganized this page so it’s easier to scan and explore. Your personal settings haven’t changed, and everything’s still here. Tip: use search to jump straight to what you n…`
-    - Suggest: `.heading`
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `L’évènement « key » n’est pas disponible dans GTK2 : key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
@@ -219,8 +212,6 @@ _Nothing reported._
     - Current: `L’évènement « key » n’est pas disponible pour certaines dispositions de clavier : key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on some keyboard layouts: key=“%S” modifiers=“%S” id=“%S”`
     - The locale's quote convention is `guillemet` (1132 occurrences).
-- `support-remote-experiments-see-about-studies` — `toolkit/toolkit/about/aboutSupport.ftl` — double space "ce type".
-    - Source: `See <a data-l10n-name="support-about-studies-link">about:studies</a> for more information, including how to disable individual experiments or to disable { -brand-short-name } from running this type of experiment in the…`
 - `felt-error-warning-download-attempt-failed-contact-admin` — `toolkit/toolkit/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
     - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
     - The tree uses ’ 5638 times against 10 straight.
@@ -245,10 +236,31 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (33)
+### Fixed to date (54)
 
+- `browser-main-window-window-titles` — `browser/browser/browser.ftl` — fixed 2026-08-24
+- `contextual-manager-passwords-breached-origin-heading-and-message` — `browser/browser/contextual-manager.ftl` — fixed 2026-08-24
+- `contextual-manager-passwords-remove-all-title` — `browser/browser/contextual-manager.ftl` — fixed 2026-08-24
+- `customkeys-conflict-confirm` — `browser/browser/customkeys.ftl` — fixed 2026-08-24
+- `sidebar-callout-survey-productive-question` — `browser/browser/featureCallout.ftl` — fixed 2026-08-24
+- `sidebar-genai-survey-productive-question` — `browser/browser/featureCallout.ftl` — fixed 2026-08-24
+- `newtab-clock-widget-edit-item-with-nickname` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-24
 - `newtab-stocks-watchlist-full` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-24
 - `newtab-stocks-watchlist-full` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-24
+- `multi-profile-spotlight-title` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-24
+- `places-delete-bookmark` — `browser/browser/places.ftl` — fixed 2026-08-24
+- `policy-GenerativeAI` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-08-24
+- `policy-PictureInPicture` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-08-24
+- `app-manager-handle-file` — `browser/browser/preferences/applicationManager.ftl` — fixed 2026-08-24
+- `app-manager-handle-protocol` — `browser/browser/preferences/applicationManager.ftl` — fixed 2026-08-24
+- `content-blocking-rfp-incompatibility-warning` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
+- `preferences-etp-rfp-warning-message` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
+- `settings-redesign-promo` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
+- `urlbar-translations-button2` — `browser/browser/translations.ftl` — fixed 2026-08-24
+- `inactive-css-border-image` — `devtools/client/tooltips.ftl` — fixed 2026-08-24
+- `learn-more` — `devtools/client/tooltips.ftl` — fixed 2026-08-24
+- `support-remote-experiments-see-about-studies` — `toolkit/toolkit/about/aboutSupport.ftl` — fixed 2026-08-24
+- `third-party-detail-occurrences` — `toolkit/toolkit/about/aboutThirdParty.ftl` — fixed 2026-08-24
 - `migration-wizard-progress-success-bookmarks` — `browser/browser/migrationWizard.ftl` — fixed 2026-07-26
 - `newtab-privacy-message-info-7` — `browser/browser/newtab/newtab.ftl` — fixed 2026-07-26
 - `onboarding-new-user-survey-subtitle` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-07-26
@@ -266,17 +278,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `about-glean-category-adhoc-testing` — `toolkit/toolkit/about/aboutGlean.ftl` — fixed 2026-07-26
 - `about-networking-dns-domain` — `toolkit/toolkit/about/aboutNetworking.ftl` — fixed 2026-07-26
 - `about-networking-ssl-tokens-summary-compression` — `toolkit/toolkit/about/aboutNetworking.ftl` — fixed 2026-07-26
-- `fission-status-enabled-by-rollout` — `toolkit/toolkit/about/aboutSupport.ftl` — fixed 2026-07-26
-- `media-hdcp-22-compatible` — `toolkit/toolkit/about/aboutSupport.ftl` — fixed 2026-07-26
-- `sandbox-sys-call-age` — `toolkit/toolkit/about/aboutSupport.ftl` — fixed 2026-07-26
-- `about-webauthn-auth-option-false` — `toolkit/toolkit/about/aboutWebauthn.ftl` — fixed 2026-07-26
-- `url-classifier-content-classifier-force-third-party` — `toolkit/toolkit/about/url-classifier.ftl` — fixed 2026-07-26
-- `url-classifier-content-classifier-probe-blocking-btn` — `toolkit/toolkit/about/url-classifier.ftl` — fixed 2026-07-26
-- `url-classifier-content-classifier-verdict-hit` — `toolkit/toolkit/about/url-classifier.ftl` — fixed 2026-07-26
-- `url-classifier-content-classifier-verdict-miss` — `toolkit/toolkit/about/url-classifier.ftl` — fixed 2026-07-26
-- `contentanalysis-operationtype-dropped-text` — `toolkit/toolkit/contentanalysis/contentanalysis.ftl` — fixed 2026-07-26
-- `autofill-category-organization` — `toolkit/toolkit/formautofill/formAutofill.ftl` — fixed 2026-07-26
-- `sec-error-bad-template` — `toolkit/toolkit/neterror/nsserrors.ftl` — fixed 2026-07-26
-- `sec-error-unsupported-ec-point-form` — `toolkit/toolkit/neterror/nsserrors.ftl` — fixed 2026-07-26
-- `ssl-error-decompression-failure-alert` — `toolkit/toolkit/neterror/nsserrors.ftl` — fixed 2026-07-26
-- `pdfjs-find-match-count-limit` — `toolkit/toolkit/pdfviewer/viewer.ftl` — fixed 2026-07-26

@@ -5,9 +5,9 @@
 | **Generated** | 2026-08-24 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 16 of 18,180 |
+| **Previous run** | 2026-08-24 @ `39e5663f3de7` |
+| **Mode** | recheck |
+| **Strings reviewed this run** | 0 of 18,180 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,17 +18,64 @@ Also for nl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `newtab-recent-searches-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Recent searches options" is rendered as "Recente-zoekresultatenopties" (recent search results), inconsistent with "Recente zoekopdrachten" used elsewhere for the same widget.
-    - Current: `aria-label: Recente-zoekresultatenopties`
-    - Source: `aria-label: Recent searches options`
-    - Suggest: `aria-label: Opties voor recente zoekopdrachten`
-    - The en-US says "searches", not "search results"; all other strings for this widget use "Recente zoekopdrachten".
+_No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (22)
 
-_Nothing was fixed._
+- `about-logins-import-dialog-items-no-change2` — `browser/browser/aboutLogins.ftl` — same defect in both plural variants: <span data-l10n-name="meta">(niet geïmporteerd)</span > → Suggest: </span>
+    - Source: `{$count ->} [other] <span>Duplicate entries found:</span> <span data-l10n-name="count">{ $count }</span> <span data-l10n-name="meta">(not imported)</span>`
+- `trustpanel-description-disabled` — `browser/browser/browser.ftl` — en-US "is off-duty", losing the contrast with trustpanel-header-enabled ("staat op wacht"). Current: "…heeft geen dienst." → Suggest: "…staat niet op wacht."
+    - Source: `{ -brand-product-name } is off-duty. We suggest turning protections back on.`
+    - Suggest: `"…staat niet op wacht."`
+- `urlbar-placeholder-search-mode-other-actions` — `browser/browser/browser.ftl` — urlbar-result-action-search-actions, urlbar-placeholder-search-mode-other-actions (.aria-label) — browser.ftl — "Search" is a verb here. Current: "Zoekacties" → Suggest: "Acties doorzoeken" / "Zoeken in acties"
+    - Source: `aria-label: Search actions placeholder: Enter search terms`
+- `urlbar-result-action-search-actions` — `browser/browser/browser.ftl` — urlbar-result-action-search-actions, urlbar-placeholder-search-mode-other-actions (.aria-label) — browser.ftl — "Search" is a verb here. Current: "Zoekacties" → Suggest: "Acties doorzoeken" / "Zoeken in acties"
+    - Source: `Search Actions`
+- `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — malformed closing tag </a > (space inside the tag), so the second link will not render. Current: …generatieve AI</a > en de… → Suggest: …generatieve AI</a> en de…
+    - Source: `By choosing Google Gemini, you agree to the <a data-l10n-name="link1">Google Terms of Service</a>, <a data-l10n-name="link2">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name="link3">Gemini Apps Privacy Not…`
+- `menu-help-share-ideas` — `browser/browser/menubar.ftl` — lost the trailing … that marks the item as opening a further page (en-US "Share Ideas and Feedback…").
+    - Source: `accesskey: S label: Share Ideas and Feedback…`
+- `cfr-doorhanger-milestone-heading2` — `browser/browser/newtab/asrouter.ftl` — cfr-doorhanger-milestone-heading2 ([one] variant) — browser/browser/newtab/asrouter.ftl — the opening <b> is corrupted to b>, and "over" is dropped. Current: … b>{ $blockedCount }</b> tracker geblokkeerd! → Suggest: … meer dan <b>{ $blockedCount }</b> tracker geblokkeerd!
+    - Source: `{$blockedCount ->} [other] { -brand-short-name } blocked over <b>{ $blockedCount }</b> trackers since { $date }!`
+- `settings-translations-subpage-never-translate-sites-description` — `browser/browser/preferences/preferences.ftl` — double space after <img data-l10n-name="translations-icon"/>.
+    - Source: `To add a site, open the <img data-l10n-name="translations-icon"/> translation panel, select <img data-l10n-name="settings-icon"/> translation settings, then choose “Never translate this site”`
+- `protections-vpn-header-content-subscribed` — `browser/browser/protections.ftl` — stray space inside the link text, producing a trailing underlined space. Current: <a data-l10n-name="appstore-link">Apple App Store </a> → Suggest: …Apple App Store</a>
+    - Source: `{$count ->} [other] Using the { -mozilla-vpn-brand-name } encrypts all your traffic and hides your location — on up to { $count } devices. Get the most from your subscription — add it from the <a data-l10n-name="playsto…`
+- `set-background-fill` — `browser/browser/setDesktopBackground.ftl` — uitvullen is the typographic term for justify. Current: "Uitvullen" → Suggest: "Vullen"
+    - Source: `label: Fill`
+    - Suggest: `"Vullen"`
+- `duplicate-tab2` — `browser/browser/tabContextMenu.ftl` — duplicate-tab2 (.label), duplicate-tabs2 (.label) — tabContextMenu.ftl — noun instead of the menu verb. Current: "Duplicaat" → Suggest: "Dupliceren"
+    - Source: `accesskey: D label: Duplicate`
+    - Suggest: `"Dupliceren"`
+- `duplicate-tabs2` — `browser/browser/tabContextMenu.ftl` — duplicate-tab2 (.label), duplicate-tabs2 (.label) — tabContextMenu.ftl — noun instead of the menu verb. Current: "Duplicaat" → Suggest: "Dupliceren"
+    - Source: `accesskey: D label: Duplicate`
+    - Suggest: `"Dupliceren"`
+- `inactive-css-not-grid-or-flex-container-or-multicol-container-fix` — `devtools/client/tooltips.ftl` — the CSS keyword inside <strong> is misspelled, so the suggested fix is wrong code. Current: <strong>colums:2</strong> → Suggest: <strong>columns:2</strong>
+    - Source: `Try adding either <strong>display:grid</strong>, <strong>display:flex</strong>, or <strong>columns:2</strong>. { learn-more }`
+- `inactive-css-not-grid-or-flex-container-or-multicol-container-fix` — `devtools/client/tooltips.ftl` — Also in this bucket: the CSS keyword items already listed in section A (inactive-css-not-grid-or-flex-container-or-multicol-container-fix, inactive-css-ruby-element-fix, webconsole-commands-usage-block).
+    - Source: `Try adding either <strong>display:grid</strong>, <strong>display:flex</strong>, or <strong>columns:2</strong>. { learn-more }`
+- `inactive-css-ruby-element-fix` — `devtools/client/tooltips.ftl` — inactive-css-ruby-element-fix, inactive-css-ruby-element-fix-1 — devtools/client/tooltips.ftl — the CSS property name inside <strong> was translated, against the section's developer comment. Current: <strong>lettergrootte</strong> → Suggest: <strong>font-size</strong>
+    - Source: `Try changing the <strong>font-size</strong> of the ruby text. { learn-more }`
+- `inactive-css-ruby-element-fix` — `devtools/client/tooltips.ftl` — Also in this bucket: the CSS keyword items already listed in section A (inactive-css-not-grid-or-flex-container-or-multicol-container-fix, inactive-css-ruby-element-fix, webconsole-commands-usage-block).
+    - Source: `Try changing the <strong>font-size</strong> of the ruby text. { learn-more }`
+- `inactive-css-ruby-element-fix-1` — `devtools/client/tooltips.ftl` — inactive-css-ruby-element-fix, inactive-css-ruby-element-fix-1 — devtools/client/tooltips.ftl — the CSS property name inside <strong> was translated, against the section's developer comment. Current: <strong>lettergrootte</strong> → Suggest: <strong>font-size</strong>
+    - Source: `Try changing the <strong>font-size</strong> of the ruby text.`
+- `webconsole-commands-usage-block` — `devtools/shared/webconsole-commands.ftl` — Also in this bucket: the CSS keyword items already listed in section A (inactive-css-not-grid-or-flex-container-or-multicol-container-fix, inactive-css-ruby-element-fix, webconsole-commands-usage-block).
+    - Source: `:block URL_STRING  Start blocking network requests    It accepts only one URL_STRING argument, an unquoted string which will be used to block all requests whose URL includes this string.   Use :unblock or the Network Mo…`
+- `devmgr-button-unload` — `security/manager/security/certificates/deviceManager.ftl` — ontladen = to discharge a battery. Suggest: "Uitladen" (paired with devmgr-button-load "Laden")
+    - Source: `accesskey: U label: Unload`
+    - Suggest: `.label`
+- `shortcuts-duplicate` — `toolkit/toolkit/about/aboutAddons.ftl` — shortcuts-remove-button (.aria-label), shortcuts-duplicate, shortcuts-duplicate-warning-message, -message2 — see S-4.
+    - Source: `Duplicate shortcut`
+    - Suggest: `.aria-label`
+- `shortcuts-duplicate-warning-message` — `toolkit/toolkit/about/aboutAddons.ftl` — shortcuts-remove-button (.aria-label), shortcuts-duplicate, shortcuts-duplicate-warning-message, -message2 — see S-4.
+    - Source: `{ $shortcut } is being used as a shortcut in more than one case. Duplicate shortcuts may cause unexpected behavior.`
+    - Suggest: `.aria-label`
+- `shortcuts-remove-button` — `toolkit/toolkit/about/aboutAddons.ftl` — shortcuts-remove-button (.aria-label), shortcuts-duplicate, shortcuts-duplicate-warning-message, -message2 — see S-4.
+    - Source: `aria-label: Remove shortcut`
+    - Suggest: `.aria-label`
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -89,15 +136,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (378)
+## 3. Open findings (356)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 23 |
-| 2 | Wrong content (says something other than the English) | 127 |
-| 3 | Degraded language (grammar, spelling, terminology) | 198 |
-| 4 | Cosmetic (typography, spacing) | 30 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 12 |
+| 2 | Wrong content (says something other than the English) | 120 |
+| 3 | Degraded language (grammar, spelling, terminology) | 195 |
+| 4 | Cosmetic (typography, spacing) | 29 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -107,8 +154,6 @@ _Nothing reported._
 - `about-logins-edit-login-os-auth-dialog-message-macosx` — `browser/browser/aboutLogins.ftl` — about-logins-edit-login-os-auth-dialog-message-macosx, about-logins-reveal-password-os-auth-dialog-message-macosx, about-logins-copy-password-os-auth-dialog-message-macosx — browser/browser/aboutLogins.ftl — the comment says to supply only the reason, which macOS prefixes with "Firefox is trying to …". These are imperatives, so the resulting sentence breaks. Current: "bewerk de opgeslagen aanmeld…
     - Source: `edit the saved login`
     - Suggest: `…message2-macosx`
-- `about-logins-import-dialog-items-no-change2` — `browser/browser/aboutLogins.ftl` — same defect in both plural variants: <span data-l10n-name="meta">(niet geïmporteerd)</span > → Suggest: </span>
-    - Source: `{$count ->} [other] <span>Duplicate entries found:</span> <span data-l10n-name="count">{ $count }</span> <span data-l10n-name="meta">(not imported)</span>`
 - `about-logins-intro-import3` — `browser/browser/aboutLogins.ftl` — double space before the second link (… of <a data-l10n-name="import-file-link">).
     - Source: `Select the plus sign button above to add a password now. You can also <a data-l10n-name="import-browser-link">import passwords from another browser</a> or <a data-l10n-name="import-file-link">from a file</a>.`
 - `about-logins-reveal-password-os-auth-dialog-message-macosx` — `browser/browser/aboutLogins.ftl` — about-logins-edit-login-os-auth-dialog-message-macosx, about-logins-reveal-password-os-auth-dialog-message-macosx, about-logins-copy-password-os-auth-dialog-message-macosx — browser/browser/aboutLogins.ftl — the comment says to supply only the reason, which macOS prefixes with "Firefox is trying to …". These are imperatives, so the resulting sentence breaks. Current: "bewerk de opgeslagen aanmeld…
@@ -124,28 +169,8 @@ _Nothing reported._
     - Source: `reveal the saved password`
 - `tab-groups-2026-onboarding-cta-button` — `browser/browser/featureCallout.ftl` — the comment asks for "under ~15 characters so it fits in the callout UI"; "Een groep starten" is 17. Soft limit, worth a shorter form (e.g. "Groep starten").
     - Source: `Start a group`
-- `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — malformed closing tag </a > (space inside the tag), so the second link will not render. Current: …generatieve AI</a > en de… → Suggest: …generatieve AI</a> en de…
-    - Source: `By choosing Google Gemini, you agree to the <a data-l10n-name="link1">Google Terms of Service</a>, <a data-l10n-name="link2">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name="link3">Gemini Apps Privacy Not…`
-- `cfr-doorhanger-milestone-heading2` — `browser/browser/newtab/asrouter.ftl` — cfr-doorhanger-milestone-heading2 ([one] variant) — browser/browser/newtab/asrouter.ftl — the opening <b> is corrupted to b>, and "over" is dropped. Current: … b>{ $blockedCount }</b> tracker geblokkeerd! → Suggest: … meer dan <b>{ $blockedCount }</b> tracker geblokkeerd!
-    - Source: `{$blockedCount ->} [other] { -brand-short-name } blocked over <b>{ $blockedCount }</b> trackers since { $date }!`
 - `return-to-amo-addon-title` — `browser/browser/newtab/onboarding.ftl` — double space around <img data-l10n-name="icon"/>.
     - Source: `Now let’s get you <img data-l10n-name="icon"/> <b>{ $addon-name }</b>.`
-- `settings-translations-subpage-never-translate-sites-description` — `browser/browser/preferences/preferences.ftl` — double space after <img data-l10n-name="translations-icon"/>.
-    - Source: `To add a site, open the <img data-l10n-name="translations-icon"/> translation panel, select <img data-l10n-name="settings-icon"/> translation settings, then choose “Never translate this site”`
-- `protections-vpn-header-content-subscribed` — `browser/browser/protections.ftl` — stray space inside the link text, producing a trailing underlined space. Current: <a data-l10n-name="appstore-link">Apple App Store </a> → Suggest: …Apple App Store</a>
-    - Source: `{$count ->} [other] Using the { -mozilla-vpn-brand-name } encrypts all your traffic and hides your location — on up to { $count } devices. Get the most from your subscription — add it from the <a data-l10n-name="playsto…`
-- `inactive-css-not-grid-or-flex-container-or-multicol-container-fix` — `devtools/client/tooltips.ftl` — the CSS keyword inside <strong> is misspelled, so the suggested fix is wrong code. Current: <strong>colums:2</strong> → Suggest: <strong>columns:2</strong>
-    - Source: `Try adding either <strong>display:grid</strong>, <strong>display:flex</strong>, or <strong>columns:2</strong>. { learn-more }`
-- `inactive-css-not-grid-or-flex-container-or-multicol-container-fix` — `devtools/client/tooltips.ftl` — Also in this bucket: the CSS keyword items already listed in section A (inactive-css-not-grid-or-flex-container-or-multicol-container-fix, inactive-css-ruby-element-fix, webconsole-commands-usage-block).
-    - Source: `Try adding either <strong>display:grid</strong>, <strong>display:flex</strong>, or <strong>columns:2</strong>. { learn-more }`
-- `inactive-css-ruby-element-fix` — `devtools/client/tooltips.ftl` — inactive-css-ruby-element-fix, inactive-css-ruby-element-fix-1 — devtools/client/tooltips.ftl — the CSS property name inside <strong> was translated, against the section's developer comment. Current: <strong>lettergrootte</strong> → Suggest: <strong>font-size</strong>
-    - Source: `Try changing the <strong>font-size</strong> of the ruby text. { learn-more }`
-- `inactive-css-ruby-element-fix` — `devtools/client/tooltips.ftl` — Also in this bucket: the CSS keyword items already listed in section A (inactive-css-not-grid-or-flex-container-or-multicol-container-fix, inactive-css-ruby-element-fix, webconsole-commands-usage-block).
-    - Source: `Try changing the <strong>font-size</strong> of the ruby text. { learn-more }`
-- `inactive-css-ruby-element-fix-1` — `devtools/client/tooltips.ftl` — inactive-css-ruby-element-fix, inactive-css-ruby-element-fix-1 — devtools/client/tooltips.ftl — the CSS property name inside <strong> was translated, against the section's developer comment. Current: <strong>lettergrootte</strong> → Suggest: <strong>font-size</strong>
-    - Source: `Try changing the <strong>font-size</strong> of the ruby text.`
-- `webconsole-commands-usage-block` — `devtools/shared/webconsole-commands.ftl` — Also in this bucket: the CSS keyword items already listed in section A (inactive-css-not-grid-or-flex-container-or-multicol-container-fix, inactive-css-ruby-element-fix, webconsole-commands-usage-block).
-    - Source: `:block URL_STRING  Start blocking network requests    It accepts only one URL_STRING argument, an unquoted string which will be used to block all requests whose URL includes this string.   Use :unblock or the Network Mo…`
 - `addon-badge-line3` — `toolkit/toolkit/about/aboutAddons.ftl` — addon-badge-line3 (.title), addon-badge-line4 (.title) — toolkit/toolkit/about/aboutAddons.ftl — the dev comment states that "Mozilla" is hard-coded on purpose "because … we don't want forks to display 'by Fork'". nl adds "Firefox". Current: "Officiële door Mozilla Firefox gebouwde extensie." → Suggest: "Officiële door Mozilla gebouwde extensie."
     - Source: `aria-label: { addon-badge-line3.title } title: Official extension built by Mozilla. Meets security and performance standards`
     - Suggest: `"Officiële door Mozilla gebouwde extensie."`
@@ -167,13 +192,6 @@ _Nothing reported._
     - Suggest: `<b>`
 - `enable-devtools-popup-description2` — `browser/browser/browser.ftl` — en-US "Browser Tools menu"; nl points at the "Extra" menu. Suggest: "…via het menu Browserhulpmiddelen…"
     - Source: `To use the F12 shortcut, first open DevTools via the Browser Tools menu.`
-- `trustpanel-description-disabled` — `browser/browser/browser.ftl` — en-US "is off-duty", losing the contrast with trustpanel-header-enabled ("staat op wacht"). Current: "…heeft geen dienst." → Suggest: "…staat niet op wacht."
-    - Source: `{ -brand-product-name } is off-duty. We suggest turning protections back on.`
-    - Suggest: `"…staat niet op wacht."`
-- `urlbar-placeholder-search-mode-other-actions` — `browser/browser/browser.ftl` — urlbar-result-action-search-actions, urlbar-placeholder-search-mode-other-actions (.aria-label) — browser.ftl — "Search" is a verb here. Current: "Zoekacties" → Suggest: "Acties doorzoeken" / "Zoeken in acties"
-    - Source: `aria-label: Search actions placeholder: Enter search terms`
-- `urlbar-result-action-search-actions` — `browser/browser/browser.ftl` — urlbar-result-action-search-actions, urlbar-placeholder-search-mode-other-actions (.aria-label) — browser.ftl — "Search" is a verb here. Current: "Zoekacties" → Suggest: "Acties doorzoeken" / "Zoeken in acties"
-    - Source: `Search Actions`
 - `customkeys-conflict-unusable-body` — `browser/browser/customkeys.ftl` — customkeys-conflict-unusable-title, customkeys-conflict-unusable-body — customkeys.ftl — "key" is a keyboard key, not a cryptographic key. Current: "Sleutel kan niet worden gebruikt" / "Deze sleutel wordt al gebruikt door…" → Suggest: "Toets kan niet worden gebruikt" / "Deze toets wordt al gebruikt door…" (cf. customkeys-conflict-confirm, which correctly uses "toets")
     - Source: `This key is already used by “{ $conflict }” and cannot be used.`
 - `customkeys-conflict-unusable-title` — `browser/browser/customkeys.ftl` — customkeys-conflict-unusable-title, customkeys-conflict-unusable-body — customkeys.ftl — "key" is a keyboard key, not a cryptographic key. Current: "Sleutel kan niet worden gebruikt" / "Deze sleutel wordt al gebruikt door…" → Suggest: "Toets kan niet worden gebruikt" / "Deze toets wordt al gebruikt door…" (cf. customkeys-conflict-confirm, which correctly uses "toets")
@@ -276,15 +294,6 @@ _Nothing reported._
 - `safeb-blocked-malware-page-short-desc` — `browser/browser/safebrowsing/blockedSite.ftl` — safeb-blocked-malware-page-short-desc, safeb-blocked-malware-page-error-desc-override-sumo, safeb-blocked-malware-page-error-desc-no-override-sumo — safebrowsing/blockedSite.ftl — kwaadwillend describes persons with ill intent, not software. Current: "kwaadwillende software" → Suggest: "kwaadaardige software"
     - Source: `{ -brand-short-name } blocked this page because it might attempt to install malicious software that may steal or delete personal information on your computer.`
     - Suggest: `"kwaadaardige software"`
-- `set-background-fill` — `browser/browser/setDesktopBackground.ftl` — uitvullen is the typographic term for justify. Current: "Uitvullen" → Suggest: "Vullen"
-    - Source: `label: Fill`
-    - Suggest: `"Vullen"`
-- `duplicate-tab2` — `browser/browser/tabContextMenu.ftl` — duplicate-tab2 (.label), duplicate-tabs2 (.label) — tabContextMenu.ftl — noun instead of the menu verb. Current: "Duplicaat" → Suggest: "Dupliceren"
-    - Source: `accesskey: D label: Duplicate`
-    - Suggest: `"Dupliceren"`
-- `duplicate-tabs2` — `browser/browser/tabContextMenu.ftl` — duplicate-tab2 (.label), duplicate-tabs2 (.label) — tabContextMenu.ftl — noun instead of the menu verb. Current: "Duplicaat" → Suggest: "Dupliceren"
-    - Source: `accesskey: D label: Duplicate`
-    - Suggest: `"Dupliceren"`
 - `webrtc-sharing-menu` — `browser/browser/webrtcIndicator.ftl` — subject and object swapped. en-US "Tabs sharing devices". Current: "Apparaten die tabbladen delen" → Suggest: "Tabbladen die apparaten delen"
     - Source: `accesskey: d label: Tabs sharing devices`
     - Suggest: `"Tabbladen die apparaten delen"`
@@ -317,7 +326,21 @@ _Nothing reported._
 - `options-enable-custom-formatters-label` — `devtools/client/toolbox-options.ftl` — options-enable-custom-formatters-label, options-enable-custom-formatters-tooltip — client/toolbox-options.ftl — formatters are functions, not elements. Current: "Aangepaste opmaakelementen" → Suggest: "Aangepaste formatters"
     - Source: `Enable custom formatters`
     - Suggest: `"Aangepaste formatters"`
-- _…and 66 more; see `state/` for the full list._
+- `options-enable-custom-formatters-tooltip` — `devtools/client/toolbox-options.ftl` — options-enable-custom-formatters-label, options-enable-custom-formatters-tooltip — client/toolbox-options.ftl — formatters are functions, not elements. Current: "Aangepaste opmaakelementen" → Suggest: "Aangepaste formatters"
+    - Source: `title: Turning this option on will allow sites to define custom formatters for DOM objects`
+    - Suggest: `"Aangepaste formatters"`
+- `options-netmonitor-body-limit-label` — `devtools/client/toolbox-options.ftl` — "body" dropped. Suggest: "Maximale grootte van verzoek- en antwoordtekst…"
+    - Source: `Maximum request and response body size (set to 0 for unlimited):`
+- `inactive-css-at-position-try-not-supported` — `devtools/client/tooltips.ftl` — missing preposition and wrong final punctuation. Suggest: "… wordt niet ondersteund in <strong>@position-try</strong>-regels."
+    - Source: `<strong>{ $property }</strong> is not supported in <strong>@position-try</strong> rules.`
+- `inactive-css-column-span-fix` — `devtools/client/tooltips.ftl` — inactive-css-column-span-fix, inactive-css-column-span-fix-1 — client/tooltips.ftl — "voorlopende" is not a Dutch word and "ancestor" ≠ "preceding". Suggest: "…aan een van de bovenliggende elementen…"
+    - Source: `Try adding <strong>column-count</strong> or <strong>column-width</strong> to one of its ancestor elements. { learn-more }`
+- `inactive-css-column-span-fix-1` — `devtools/client/tooltips.ftl` — inactive-css-column-span-fix, inactive-css-column-span-fix-1 — client/tooltips.ftl — "voorlopende" is not a Dutch word and "ancestor" ≠ "preceding". Suggest: "…aan een van de bovenliggende elementen…"
+    - Source: `Try adding <strong>column-count</strong> or <strong>column-width</strong> to one of its ancestor elements.`
+- `inactive-css-no-principal-box` — `devtools/client/tooltips.ftl` — inactive-css-no-principal-box, -fix, -fix-1 — client/tooltips.ftl — CSS "box" as veld (field). Suggest: "primair vak"
+    - Source: `<strong>{ $property }</strong> has no effect on this element since it does not create a principal box.`
+    - Suggest: `-fix`
+- _…and 59 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -611,7 +634,7 @@ _Nothing reported._
     - Suggest: `-single2`
 - `about-debugging-setup-usb-disabled` — `devtools/client/aboutdebugging.ftl` — about-debugging-setup-usb-disabled, about-debugging-setup-usb-step-enable-debug2, about-debugging-sidebar — "debugging" vs "foutopsporing" for the same concept in one file.
     - Source: `Enabling this will download and add the required Android USB debugging components to { -brand-shorter-name }.`
-- _…and 49 more; see `state/` for the full list._
+- _…and 46 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -628,8 +651,6 @@ _Nothing reported._
 - `ipprotection-message-bandwidth-warning` — `browser/browser/ipProtection.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
     - Source: `heading: Getting close to your VPN limit message: You have { $usageLeft } GB of { $maxUsage } GB left this month.`
     - Suggest: `.message`
-- `menu-help-share-ideas` — `browser/browser/menubar.ftl` — lost the trailing … that marks the item as opening a further page (en-US "Share Ideas and Feedback…").
-    - Source: `accesskey: S label: Share Ideas and Feedback…`
 - `july-jam-body` — `browser/browser/newtab/asrouter.ftl` — july-jam-body vs spotlight-peace-mind-body — newtab/asrouter.ftl — the same figure written "3.000" and "3000".
     - Source: `Every month, { -brand-short-name } blocks an average of 3,000+ trackers per user, giving you safe, speedy access to the good internet.`
 - `spotlight-peace-mind-body` — `browser/browser/newtab/asrouter.ftl` — july-jam-body vs spotlight-peace-mind-body — newtab/asrouter.ftl — the same figure written "3.000" and "3000".
@@ -729,8 +750,30 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (115)
+### Fixed to date (137)
 
+- `about-logins-import-dialog-items-no-change2` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-24
+- `trustpanel-description-disabled` — `browser/browser/browser.ftl` — fixed 2026-08-24
+- `urlbar-placeholder-search-mode-other-actions` — `browser/browser/browser.ftl` — fixed 2026-08-24
+- `urlbar-result-action-search-actions` — `browser/browser/browser.ftl` — fixed 2026-08-24
+- `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — fixed 2026-08-24
+- `menu-help-share-ideas` — `browser/browser/menubar.ftl` — fixed 2026-08-24
+- `cfr-doorhanger-milestone-heading2` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-24
+- `settings-translations-subpage-never-translate-sites-description` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
+- `protections-vpn-header-content-subscribed` — `browser/browser/protections.ftl` — fixed 2026-08-24
+- `set-background-fill` — `browser/browser/setDesktopBackground.ftl` — fixed 2026-08-24
+- `duplicate-tab2` — `browser/browser/tabContextMenu.ftl` — fixed 2026-08-24
+- `duplicate-tabs2` — `browser/browser/tabContextMenu.ftl` — fixed 2026-08-24
+- `inactive-css-not-grid-or-flex-container-or-multicol-container-fix` — `devtools/client/tooltips.ftl` — fixed 2026-08-24
+- `inactive-css-not-grid-or-flex-container-or-multicol-container-fix` — `devtools/client/tooltips.ftl` — fixed 2026-08-24
+- `inactive-css-ruby-element-fix` — `devtools/client/tooltips.ftl` — fixed 2026-08-24
+- `inactive-css-ruby-element-fix` — `devtools/client/tooltips.ftl` — fixed 2026-08-24
+- `inactive-css-ruby-element-fix-1` — `devtools/client/tooltips.ftl` — fixed 2026-08-24
+- `webconsole-commands-usage-block` — `devtools/shared/webconsole-commands.ftl` — fixed 2026-08-24
+- `devmgr-button-unload` — `security/manager/security/certificates/deviceManager.ftl` — fixed 2026-08-24
+- `shortcuts-duplicate` — `toolkit/toolkit/about/aboutAddons.ftl` — fixed 2026-08-24
+- `shortcuts-duplicate-warning-message` — `toolkit/toolkit/about/aboutAddons.ftl` — fixed 2026-08-24
+- `shortcuts-remove-button` — `toolkit/toolkit/about/aboutAddons.ftl` — fixed 2026-08-24
 - `about-logins-import-dialog-error-title` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-10
 - `about-logins-import-report-page-title` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-10
 - `breach-alert-text` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-10
@@ -749,25 +792,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `sidebar-callout-survey-neutral` — `browser/browser/featureCallout.ftl` — fixed 2026-08-10
 - `ipprotection-feature-introduction-description-private-browsing` — `browser/browser/ipProtection.ftl` — fixed 2026-08-10
 - `fxa-adoption-addresses-backup-subtitle` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-10
-- `relay-50-masks-announcement-subtitle` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-10
-- `windows-10-eos-challenger-callout-title` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-10
-- `windows-10-eos-feature-toast-subtitle` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-10
-- `newtab-custom-wallpaper-title` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-10
-- `newtab-privacy-message-info-2` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-10
-- `newtab-privacy-message-promo-monitor-1` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-10
-- `newtab-sports-widget-loading-more` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-10
-- `newtab-wallpaper-abstract-purple-green` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-10
-- `newtab-wallpaper-reset` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-10
-- `create-backup-screen-1-backup-body` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-10
-- `mr2022-onboarding-colorway-description-playmaker` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-10
-- `mr2022-onboarding-get-started-primary-button-label` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-10
-- `onboarding-live-language-installing` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-10
-- `onboarding-live-language-waiting-button` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-10
-- `onboarding-refresh-sync-subtitle` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-10
-- `smartwindow-sidebar-auto-open-callout-accepted-subtitle` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-10
-- `panic-button-thankyou-msg2` — `browser/browser/panelUI.ftl` — fixed 2026-08-10
-- `policy-DisableDefaultBrowserAgent` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-08-10
-- `policy-DisabledCiphers` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-08-10
-- `policy-Handlers` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-08-10
-- `policy-HttpAllowlist` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-08-10
-- `policy-HttpsOnlyMode` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-08-10

@@ -117,6 +117,58 @@ def run(suite) -> None:
     check(closed("llm", {"typography"}) == "fixed",
           "and a model finding the reviewer re-read in silence still closes")
 
+    suite.section("A quoted fragment is compared in the shape the parser keeps")
+    # The reviewer quotes the file; the snapshot holds `parse.flatten` output.
+    # Each of these was a real finding whose `current` could never match, so
+    # `verdict` called it "gone" and it was one unrelated edit from closing
+    # itself as fixed.
+    for label, quoted, stored_text, sid in (
+        ("the whole source line", "check = Check", "Check", "check"),
+        ("an attribute line", "user-context-color-purple =\n    .label = Violeta",
+         "label: Violeta", "user-context-color-purple"),
+        ("one variant of a select", "*[no-cases] Spusťte webmail",
+         "[with-cases] Spouštějte stránky [no-cases] Spusťte webmail", "s"),
+        ("a term with arguments", 'Skryjte s { -vpn-name(case: "ins") }.',
+         "Skryjte s { -vpn-name }.", "s"),
+        ("a NUMBER() call", "= { NUMBER($result, maximumSignificantDigits: 9) }",
+         "= { $result }", "s"),
+    ):
+        check(fm.still_present(quoted, stored_text, sid),
+              f"a fragment quoting {label} is found in the parsed message")
+
+    check(not fm.still_present("x = Wrong", "Right", "x"),
+          "while a fragment that really is gone still reads as gone")
+    check(fm.as_parsed("x = a = b", "x") == "a = b",
+          "only the message's own id is stripped, never an `=` inside the value")
+    check(fm.as_parsed("[Anlage: { $type }]", "s") == "[Anlage: { $type }]",
+          "and bracketed prose is not mistaken for a variant key")
+    check(fm.verdict("</a >", "</a>", True) == "gone"
+          and fm.verdict("INDIRIZZO", "Indirizzo", True) == "gone",
+          "comparison stays literal: punctuation and case are still real fixes")
+
+    suite.section("A string that never moved cannot have been fixed")
+    check(fm.verdict("uncomparable quote", "some other text", False) == "unclear",
+          "an absent fragment on an unmoved string means the quote is unusable")
+    check(fm.verdict("uncomparable quote", "some other text", True) == "gone",
+          "the same fragment on a string that did move is a fix")
+    check(fm.verdict("uncomparable quote", "some other text", None) == "gone",
+          "and with nothing recorded either way the old reading stands")
+
+    suite.section("Parking a finding does not eat the evidence that parked it")
+    # "unclear": the string moved, but the quoted text survives inside it, so
+    # matching cannot say whether the edit was the fix.
+    msg = Msg(file="a.ftl", id="s", props={"": "a quoted fragment, now in context"})
+    f = _f(check="llm", current="a quoted fragment", string_hash="raised@")
+    got = fm.resolve([f], {("a.ftl", "s"): msg}, {("a.ftl", "s")}, "D")
+    check(f.status == "needs-recheck" and len(got["recheck"]) == 1,
+          "an unresolvable finding on a changed string is parked")
+    check(f.string_hash == "raised@",
+          "and keeps the hash from when it was raised -- re-anchoring here is "
+          "what closed every route back out of the bucket")
+    got = fm.resolve([f], {("a.ftl", "s"): msg}, {("a.ftl", "s")}, "E")
+    check(f.status == "needs-recheck" and not got["recheck"],
+          "a second run leaves it parked without re-announcing it")
+
     # --- suppression ------------------------------------------------------
     suite.section("Suppression stays reversible")
     rule = suppress.Rule({"id": "r", "reason": "why", "match": {"check": "markup"}}, 0)

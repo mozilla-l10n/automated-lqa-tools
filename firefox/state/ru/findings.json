@@ -5199,14 +5199,15 @@
   "last_seen": "2026-08-07",
   "locale": "ru",
   "origin": {
+   "closed_by": "hand re-verification against firefox-l10n 971f34bc9415 on 2026-08-24: the string changed after the finding was raised and the defect is gone. Raised from an import that quoted no checkable text, so no automatic route could close it.",
    "report": "legacy",
    "section": "A. Functional / markup / wrong-script characters / access keys",
    "severity": "S1"
   },
   "rationale": "",
   "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "needs-recheck",
+  "resolved_on": "2026-08-24",
+  "status": "fixed",
   "string_hash": "a100e590",
   "string_id": "mr2-onboarding-thank-you-text",
   "suggest": "",

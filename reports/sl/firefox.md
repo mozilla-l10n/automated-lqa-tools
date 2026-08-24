@@ -5,9 +5,9 @@
 | **Generated** | 2026-08-24 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 9 of 17,550 |
+| **Previous run** | 2026-08-24 @ `39e5663f3de7` |
+| **Mode** | recheck |
+| **Strings reviewed this run** | 0 of 17,550 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,10 @@ Also for sl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `tab-group-editor-action-copy-links` — `browser/browser/tabbrowser.ftl` — Label is "Copy links in group" but every plural form uses "Zapri" (Close) instead of "Kopiraj" (Copy). The verb is reversed across all variants.
+    - Source: `label: {$linkCount ->} [1] Copy link in group [other] Copy { $linkCount } links in group`
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -101,13 +102,13 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (35)
+## 3. Open findings (34)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 5 |
+| 2 | Wrong content (says something other than the English) | 4 |
 | 3 | Degraded language (grammar, spelling, terminology) | 23 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
@@ -120,8 +121,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `tab-group-editor-action-copy-links` — `browser/browser/tabbrowser.ftl` — Label is "Copy links in group" but every plural form uses "Zapri" (Close) instead of "Kopiraj" (Copy). The verb is reversed across all variants.
-    - Source: `label: {$linkCount ->} [1] Copy link in group [other] Copy { $linkCount } links in group`
+_Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
@@ -256,8 +256,9 @@ _Suppressions live in `locales/sl/suppressions.yaml`. Removing a rule brings its
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (42)
+### Fixed to date (43)
 
+- `tab-group-editor-action-copy-links` — `browser/browser/tabbrowser.ftl` — fixed 2026-08-24
 - `about-logins-confirm-export-dialog-message2` — `browser/browser/aboutLogins.ftl` — fixed 2026-07-29 (undated)
 - `restore-page-problem-desc` — `browser/browser/aboutSessionRestore.ftl` — fixed 2026-07-29 (undated)
 - `addon-mlmodel-removal-body` — `browser/browser/addonNotifications.ftl` — fixed 2026-07-29 (undated)
@@ -297,4 +298,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `cert-error-symantec-distrust-description` — `toolkit/toolkit/neterror/certError.ftl` — fixed 2026-07-29 (undated)
 - `cert-error-trust-cert-invalid` — `toolkit/toolkit/neterror/certError.ftl` — fixed 2026-07-29 (undated)
 - `certerror-mitm-what-can-you-do-about-it-corporate` — `toolkit/toolkit/neterror/netError.ftl` — fixed 2026-07-29 (undated)
-- `pdfjs-document-properties-page-size-name-legal` — `toolkit/toolkit/pdfviewer/viewer.ftl` — fixed 2026-07-29 (undated)

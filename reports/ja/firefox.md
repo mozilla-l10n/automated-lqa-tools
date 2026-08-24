@@ -5,8 +5,8 @@
 | **Generated** | 2026-08-24 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
-| **Mode** | incremental |
+| **Previous run** | 2026-08-24 @ `39e5663f3de7` |
+| **Mode** | recheck |
 | **Strings reviewed this run** | 0 of 18,135 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
@@ -22,9 +22,161 @@ Also for ja: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (80)
 
-_Nothing was fixed._
+- `about-logins-import-dialog-error-unable-to-read-description` — `browser/browser/aboutLogins.ftl` — about-logins-import-dialog-error-unable-to-read-description (aboutLogins.ftl) — "Make sure you selected a CSV or TSV file" → "check the file contents". → 選択したファイルが CSV または TSV ファイルであることを確認してください。 Verified.
+    - Source: `Make sure you selected a CSV or TSV file.`
+    - Suggest: `選択したファイルが CSV または TSV ファイルであることを確認してください。`
+- `webext-imported-addons` — `browser/browser/addonNotifications.ftl` — webext-imported-addons (addonNotifications.ftl) — a call to action rendered as a progress message. → …インストールを完了してください
+    - Source: `Finalize installing extensions imported to { -brand-short-name }`
+    - Suggest: `…インストールを完了してください`
+- `aiwindow-firstrun-memories-subtitle` — `browser/browser/aiWindow.ftl` — aiwindow-firstrun-memories-subtitle (aiWindow.ftl) — "can learn from your chats, browsing, or both"; the browsing/both options are dropped. → チャット、ブラウジング、またはその両方から学習し
+    - Source: `{ -smart-window-brand-name } can learn from your chats, browsing, or both to create memories. They make answers more helpful over time.`
+    - Suggest: `チャット、ブラウジング、またはその両方から学習し`
+- `aiwindow-firstrun-memories-title` — `browser/browser/aiWindow.ftl` — aiwindow-firstrun-memories-title (aiWindow.ftl) — "More helpful answers, on your terms" (under your control) → あなたの言葉を学習して回答に役立てます ("learns your words").
+    - Source: `More helpful answers, on your terms`
+    - Suggest: `あなたの言葉を学習して回答に役立てます`
+- `smart-window-confirm-close-tabs` — `browser/browser/aiWindow.ftl` — ます form on a confirmation button, while the singular smart-window-confirm-close-tab is 閉じる.
+    - Source: `{$count ->} [one] Close { $count } tab [other] Close { $count } tabs`
+    - Suggest: `閉じる`
+- `aiwindow-memories-callout-description` — `browser/browser/aiWindowContent.ftl` — aiwindow-memories-callout-description (aiWindowContent.ftl) — en-US is past tense about this specific response. → …役立ちました。
+    - Source: `Memories helped personalize this response.`
+    - Suggest: `…役立ちました。`
+- `smartwindow-nl-retry-group-tabs-message` — `browser/browser/aiWindowContent.ftl` — smartwindow-nl-retry-group-tabs-message (aiWindowContent.ftl) — "select which ones in the card that opens"; the card became "open tabs". → 開いたカードで選択してください
+    - Source: `If you still want to group tabs, choose <strong>Retry</strong> and select which ones in the card that opens.`
+    - Suggest: `開いたカードで選択してください`
+- `sharing-warning-disable-for-session` — `browser/browser/browser.ftl` — browser/browser/browser.ftl
+    - Source: `label: Disable sharing protection for this session`
+- `contextual-manager-passwords-vulnerable-password-heading-and-message` — `browser/browser/contextual-manager.ftl` — browser/browser/contextual-manager.ftl
+    - Source: `heading: Password change recommended message: This password is easily guessable. Change your password to protect your account.`
+- `customkeys-conflict-confirm` — `browser/browser/customkeys.ftl` — customkeys-conflict-confirm (customkeys.ftl) — "Do you want to replace it?" (the existing assignment) → ja asks about replacing with another key. → このキーに割り当て直しますか？
+    - Source: `This key is already assigned to { $conflict }. Do you want to replace it?`
+    - Suggest: `このキーに割り当て直しますか？`
+- `default-browser-guidance-notification-v2-body` — `browser/browser/defaultBrowserNotification.ftl` — browser/browser/defaultBrowserNotification.ftl
+    - Source: `In Settings, select “Set default” for { -brand-short-name }.`
+- `perplexity-callout-theme-1-subtitle-2` — `browser/browser/featureCallout.ftl` — perplexity-callout-theme-1-subtitle-2, -theme-2-subtitle-2 (featureCallout.ftl) — "well-cited answers" (sources cited) → 引用数の多い ("highly cited"). → 出典が明示された
+    - Source: `Ask questions. Get complete, well-cited answers. To try Perplexity, choose it from the search button.`
+    - Suggest: `引用数の多い`
+- `windows-10-eos-sync-new-device-title-2` — `browser/browser/featureCallout.ftl` — windows-10-eos-sync-new-device-title-2 (featureCallout.ftl) — "Don't lose what matters." (call to action) turned into a guarantee. → 大切なものを失わないようにしましょう。
+    - Source: `Moving to a new device? Don’t lose what matters.`
+    - Suggest: `大切なものを失わないようにしましょう。`
+- `firefoxview-dont-remember-history-empty-header-2` — `browser/browser/firefoxView.ftl` — browser/browser/firefoxView.ftl
+    - Source: `You’re in control of what { -brand-short-name } remembers`
+- `firefoxview-recentlyclosed-empty-header` — `browser/browser/firefoxView.ftl` — firefoxview-recentlyclosed-empty-header (firefoxView.ftl) — "Closed a tab too soon?" → もうすぐタブを閉じますか？ ("about to close a tab?"). → うっかりタブを閉じてしまいましたか？ Verified.
+    - Source: `Closed a tab too soon?`
+    - Suggest: `もうすぐタブを閉じますか？`
+- `ip-protection-vpn-upgrade-link` — `browser/browser/ipProtection.ftl` — browser/browser/ipProtection.ftl
+    - Source: `description: Choose custom VPN locations and add protection to all your apps on up to five devices, whether you’re at home or on public Wi-Fi. label: Get even more protection outside { -brand-short-name } with { -mozill…`
+- `menu-history-clear-recent-history` — `browser/browser/menubar.ftl` — en-US "Clear Recent History…" opens a dialog; the ... was dropped although every other dialog-opening item in the file keeps it.
+    - Source: `label: Clear Recent History…`
+- `menu-history-synced-tabs` — `browser/browser/menubar.ftl` — "Synced Tabs" is 同期したタブ in three other places but 同期タブ here and in synced-tabs-sidebar-title.
+    - Current: `同期したタブ`
+    - Source: `label: Synced Tabs`
+    - Suggest: `同期タブ`
+- `spotlight-better-internet-body` — `browser/browser/newtab/asrouter.ftl` — I10 — Duplicated text. spotlight-better-internet-body (browser/browser/newtab/asrouter.ftl) — すべての人にとって appears twice in one sentence (cf. mr2022-onboarding-gratitude-subtitle, correct).
+    - Source: `When you use { -brand-short-name }, you’re voting for an open and accessible internet that’s better for everyone.`
+- `spotlight-peace-mind-body` — `browser/browser/newtab/asrouter.ftl` — july-jam-body vs spotlight-peace-mind-body — browser/browser/newtab/asrouter.ftl — same figure formatted 3000 件以上 and 3,000 以上 in one file.
+    - Source: `Every month, { -brand-short-name } blocks an average of over 3,000 trackers per user. Because nothing, especially privacy nuisances like trackers, should stand between you and the good internet.`
+- `mr2022-onboarding-get-started-primary-subtitle` — `browser/browser/newtab/onboarding.ftl` — stray space between two Japanese sentences.
+    - Source: `Our latest version is built around you, making it easier than ever to zip around the web. It’s packed with features we think you’ll adore.`
+- `onboarding-refresh-pin-set-default-title` — `browser/browser/newtab/onboarding.ftl` — hard-codes Firefox instead of { -brand-short-name }, so it will be wrong on Nightly/Beta/rebranded builds. → あなたは { -brand-short-name } に守られています
+    - Current: `{ -brand-short-name }`
+    - Source: `You’re in safe paws`
+    - Suggest: `あなたは { -brand-short-name } に守られています`
+- `policy-DisableAppUpdate` — `browser/browser/policies/policies-descriptions.ftl` — ブラウザ → ブラウザー; the only occurrence without the long vowel in the entire tree.
+    - Current: `ブラウザ`
+    - Source: `Prevent the browser from updating.`
+    - Suggest: `ブラウザー`
+- `fonts-langgroup-georgian` — `browser/browser/preferences/fonts.ftl` — Also: fonts-langgroup-georgian = グルジア語 (browser/browser/preferences/fonts.ftl) is the pre-2015 name. The ja tree already uses ジョージア語 in languageNames.ftl and ジョージア in regionNames.ftl, so this file is the sole outlier. → ジョージア語 Verified (found during Phase 1, not reported by a reviewer).
+    - Source: `label: Georgian`
+    - Suggest: `ジョージア語`
+- `fonts-langgroup-trad-chinese-hk` — `browser/browser/preferences/fonts.ftl` — see I.
+    - Source: `label: Traditional Chinese (Hong Kong)`
+- `appearance-window-density-touch` — `browser/browser/preferences/preferences.ftl` — the の makes the sentence ungrammatical; en-US: "Larger window elements and click targets, optimized for touch screens".
+    - Source: `description: Larger window elements and click targets, optimized for touch screens label: Touch`
+- `home-section` — `browser/browser/preferences/preferences.ftl` — same en-US "Home and startup" is ホームと起動 in pane-home-startup-title2. Current ホームページと起動.
+    - Current: `ホームと起動`
+    - Source: `heading: Home and startup`
+- `pane-experimental-description4` — `browser/browser/preferences/preferences.ftl` — en-US restricts the condition ("We only receive data … if you have X on"); ja restricts the data type.
+    - Source: `Give our experimental features a try! They’re in development and evolving, which could impact how { -brand-short-name } works. We only receive data about your use of these features if you have <a data-l10n-name="data-co…`
+- `preferences-ai-controls-block-ai-description` — `browser/browser/preferences/preferences.ftl` — en-US is "new or current AI enhancements"; ja says only 今後の (future), dropping that already-available features are blocked too.
+    - Source: `Blocking means you won’t see new or current AI enhancements in { -brand-short-name }, or pop-ups about them. <a data-l10n-name="link">Get more details</a> about what’s included and how to control traditional machine lea…`
+- `preferences-ai-controls-blocked-message` — `browser/browser/preferences/preferences.ftl` — en-US is "new or current AI enhancements"; ja says only 今後の (future), dropping that already-available features are blocked too.
+    - Source: `message: New and current AI enhancements are blocked by default. To unblock a specific feature, use the controls below.`
+- `preferences-web-appearance-footer` — `browser/browser/preferences/preferences.ftl` — .../preferences.ftl — the Extensions & Themes surface is 拡張機能とテーマ in addons-button-label, extension-controlled-enable-2, search-outlink-to-extensions-page. Current アドオンとテーマ.
+    - Source: `Manage { -brand-short-name } themes in <a data-l10n-name="themes-link">Extensions & Themes</a>`
+    - Suggest: `拡張機能とテーマ`
+- `preferences-web-appearance-link` — `browser/browser/preferences/preferences.ftl` — .../preferences.ftl — the Extensions & Themes surface is 拡張機能とテーマ in addons-button-label, extension-controlled-enable-2, search-outlink-to-extensions-page. Current アドオンとテーマ.
+    - Source: `label: Manage { -brand-short-name } themes in Extensions & Themes`
+    - Suggest: `拡張機能とテーマ`
+- `search-keyword-warning-engine` — `browser/browser/preferences/preferences.ftl` — browser/browser/preferences/preferences.ftl
+    - Source: `You have chosen a keyword that is currently in use by “{ $name }”. Please select another.`
+- `security-enable-safe-browsing` — `browser/browser/preferences/preferences.ftl` — "dangerous and deceptive content" is two categories; ja merges them into one modifier, unlike security-browsing-protection.
+    - Source: `accesskey: B label: Block dangerous and deceptive content`
+- `sync-currently-syncing-addresses` — `browser/browser/preferences/preferences.ftl` — .../preferences.ftl — "Addresses" (postal) → 所在地フォーム; the string's own tooltip says 住所, as do addresses-list-header and the autofill- strings. Verified.
+    - Source: `Addresses`
+    - Suggest: `所在地フォーム`
+- `sync-engine-addresses` — `browser/browser/preferences/preferences.ftl` — .../preferences.ftl — "Addresses" (postal) → 所在地フォーム; the string's own tooltip says 住所, as do addresses-list-header and the autofill- strings. Verified.
+    - Source: `accesskey: e label: Addresses tooltiptext: Postal addresses you’ve saved (desktop only)`
+    - Suggest: `所在地フォーム`
+- `translate-attribution` — `browser/browser/preferences/preferences.ftl` — translate-attribution, extension-controlled-enable, settings-translations-subpage-never-translate-sites-description, sync-mobile-promo — browser/browser/preferences/preferences.ftl. Verified (translate-attribution).
+    - Source: `Translations by <img data-l10n-name="logo"/>`
+- `restored-profile-page-header-description` — `browser/browser/profiles.ftl` — byte-identical en-US to new-profile-page-header-description but fully re-worded in ja.
+    - Source: `Each profile keeps its unique browsing history and settings separate from your other profiles. Plus, { -brand-short-name }’s strong privacy protections are on by default.`
+- `info-exposed-passwords-resolved` — `browser/browser/protections.ftl` — info-exposed-passwords-resolved (protections.ftl) — it is the breaches that are unresolved, not the passwords. → 未解決の漏洩データで露出したパスワード
+    - Source: `{$count ->} [one] Password exposed in unresolved breaches [other] Passwords exposed in unresolved breaches`
+    - Suggest: `未解決の漏洩データで露出したパスワード`
+- `monitor-partial-breaches-motivation-title-start` — `browser/browser/protections.ftl` — motivational messages became status/waiting messages: "Great start!" → 開始しました。; "Keep it up!" → しばらくお待ちください。; "Almost done! Keep it up." → ほぼ完了しました。もう少しお待ちください。 → 良いスタートです！ / その調子です！ / あと少しです！その調子で続けましょう。
+    - Source: `Great start!`
+    - Suggest: `開始しました。`
+- `report-broken-site-panel-missing-reason-label` — `browser/browser/reportBrokenSite.ftl` — report-broken-site-panel-missing-reason-label (reportBrokenSite.ftl) — 対象 ("target") is not in the source and contradicts report-broken-site-panel-reason-choose. → 不具合の状態を選んでください
+    - Source: `Please choose a reason`
+    - Suggest: `不具合の状態を選んでください`
+- `add-engine-no-name` — `browser/browser/search.ftl` — missing 。 while all adjacent error messages have it.
+    - Source: `Please add a name.`
+- `fxa-signout-dialog2-checkbox` — `browser/browser/sync.ftl` — 。 mid-label, before a parenthetical.
+    - Source: `Delete data from this device (passwords, history, bookmarks, etc.)`
+- `main-context-menu-translate-selection` — `browser/browser/translations.ftl` — main-context-menu-translate-selection (translations.ftl) — "Translate Selection…" → 翻訳先を選択... ("choose a translation target"), never saying what is translated. → 選択範囲を翻訳...
+    - Source: `accesskey: n label: Translate Selection…`
+    - Suggest: `翻訳先を選択...`
+- `webauthn-a-passkey-label` — `browser/browser/webauthnDialog.ftl` — browser/browser/webauthnDialog.ftl and toolkit/toolkit/webauthnDialog.ftl — "Passkey" left in Latin here but パスキー in webauthn-related-origin-create-header/-use-header in the same files.
+    - Source: `Use a passkey`
+- `webrtc-indicator-menuitem-control-sharing-on` — `browser/browser/webrtcIndicator.ftl` — browser/browser/webrtcIndicator.ftl
+    - Source: `label: Control Sharing on “{ $streamTitle }”`
+- `webrtc-indicator-menuitem-sharing-application-with` — `browser/browser/webrtcIndicator.ftl` — browser/browser/webrtcIndicator.ftl
+    - Source: `label: Sharing an Application with “{ $streamTitle }”`
+- `webrtc-indicator-menuitem-sharing-browser-with` — `browser/browser/webrtcIndicator.ftl` — browser/browser/webrtcIndicator.ftl
+    - Source: `label: Sharing a Tab with “{ $streamTitle }”`
+- `webrtc-indicator-menuitem-sharing-camera-with` — `browser/browser/webrtcIndicator.ftl` — browser/browser/webrtcIndicator.ftl
+    - Source: `label: Sharing Camera with “{ $streamTitle }”`
+- `webrtc-indicator-menuitem-sharing-microphone-with` — `browser/browser/webrtcIndicator.ftl` — browser/browser/webrtcIndicator.ftl
+    - Source: `label: Sharing Microphone with “{ $streamTitle }”`
+- `webrtc-indicator-menuitem-sharing-screen-with` — `browser/browser/webrtcIndicator.ftl` — browser/browser/webrtcIndicator.ftl
+    - Source: `label: Sharing Screen with “{ $streamTitle }”`
+- `webrtc-indicator-menuitem-sharing-window-with` — `browser/browser/webrtcIndicator.ftl` — browser/browser/webrtcIndicator.ftl
+    - Source: `label: Sharing a Window with “{ $streamTitle }”`
+- `webrtc-reason-for-no-permanent-allow-audio` — `browser/browser/webrtcIndicator.ftl` — webrtc-reason-for-no-permanent-allow-audio (webrtcIndicator.ftl) — en-US "…without asking which tab to share" replaced with unrelated content. → …どのタブを共有するか確認せずに、…
+    - Source: `{ -brand-short-name } can not allow permanent access to your tab’s audio without asking which tab to share.`
+    - Suggest: `…どのタブを共有するか確認せずに、…`
+- `about-debugging-worker-status-stopped` — `devtools/client/aboutdebugging.ftl` — "Stopped" is 停止 here but 停止中 in about-debugging-extension-backgroundscript-status-stopped and in application.ftl serviceworker-worker-status-stopped, whose comment requires the two files to stay synchronized. → 停止中
+    - Source: `Stopped`
+    - Suggest: `停止中`
+- `perftools-button-restart` — `devtools/client/perftools.ftl` — 再開 ("resume") for "Restart"; accompanies perftools-status-restart-required. → 再起動
+    - Source: `Restart`
+    - Suggest: `再起動`
+- `perftools-presets-graphics-description` — `devtools/client/perftools.ftl` — en-US says only "Preset for investigating…"; ja adds 推奨 ("recommended"), which only the web-developer/firefox/web-compat presets actually claim.
+    - Source: `Preset for investigating graphics bugs in { -brand-shorter-name }.`
+- `perftools-thread-timer` — `devtools/client/perftools.ftl` — subject/object swapped: en-US "The thread handling timers (…)"; ja reads "a thread-control timer". → タイマー (setTimeout, setInterval, nsITimer) を扱うスレッドです
+    - Source: `title: The thread handling timers (setTimeout, setInterval, nsITimer)`
+    - Suggest: `タイマー (setTimeout, setInterval, nsITimer) を扱うスレッドです`
+- `storage-context-menu-delete` — `devtools/client/storage.ftl` — devtools/client/storage.ftl
+    - Source: `label: Delete “{ $itemName }”`
+- `storage-context-menu-delete-all-from` — `devtools/client/storage.ftl` — devtools/client/storage.ftl
+    - Source: `label: Delete All From “{ $host }”`
+- `storage-cookie-create-error` — `devtools/client/storage.ftl` — devtools/client/storage.ftl — trailing ASCII . after the closing ”.
+    - Source: `Cookie could not be created: “{ $errorString }”.`
+    - Suggest: `.`
+- _…and 20 more._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -69,13 +221,13 @@ _Nothing retired._
 - `browser/browser/preferences/preferences.ftl` — 5
 - `browser/browser/aboutPrivateBrowsing.ftl` — 3
 - `browser/browser/sharePanel.ftl` — 2
-- `toolkit/toolkit/about/aboutPDF.ftl` — 1
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 1
-- `toolkit/toolkit/global/processTypes.ftl` — 1
-- `dom/chrome/accessibility/AccessFu.properties` — 1
 - `browser/browser/profiles.ftl` — 1
 - `browser/browser/sidebar.ftl` — 1
 - `browser/browser/preferences/formAutofill.ftl` — 1
+- `dom/chrome/accessibility/AccessFu.properties` — 1
+- `toolkit/toolkit/about/aboutPDF.ftl` — 1
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 1
+- `toolkit/toolkit/global/processTypes.ftl` — 1
 
 **Files present but identical to en-US:**
 
@@ -105,15 +257,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (178)
+## 3. Open findings (98)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 12 |
-| 2 | Wrong content (says something other than the English) | 57 |
-| 3 | Degraded language (grammar, spelling, terminology) | 44 |
-| 4 | Cosmetic (typography, spacing) | 65 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 8 |
+| 2 | Wrong content (says something other than the English) | 29 |
+| 3 | Degraded language (grammar, spelling, terminology) | 28 |
+| 4 | Cosmetic (typography, spacing) | 33 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -212,9 +364,6 @@ _Nothing reported._
     - Current: `{$tabCount ->} [one] タブのミュートを解除します ({ $shortcut }) [other] { $tabCount } 個のタブのミュートを解除します ({ $shortcut })`
     - Source: `label: {$tabCount ->} [one] Unmute tab ({ $shortcut }) [other] Unmute { $tabCount } tabs ({ $shortcut })`
     - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `about-debugging-worker-status-stopped` — `devtools/client/aboutdebugging.ftl` — "Stopped" is 停止 here but 停止中 in about-debugging-extension-backgroundscript-status-stopped and in application.ftl serviceworker-worker-status-stopped, whose comment requires the two files to stay synchronized. → 停止中
-    - Source: `Stopped`
-    - Suggest: `停止中`
 - `xpath-binary-expected` — `dom/dom/xslt.ftl` — A6 — Fluent value-concatenation format broken (dom/dom/xslt.ftl). These strings are concatenated at runtime with the offending URL / character / expression, so en-US ends each with :. ja replaced the colon with 。, orphaning the appended detail. Affects xslt-load-recursion, xpath-illegal-char, xpath-binary-expected. Sibling xpath- strings in the same file correctly keep the colon, confirming these…
     - Source: `XPath parse failure: binary operator expected:`
     - Suggest: `:`
@@ -232,119 +381,36 @@ _Nothing reported._
     - Current: `{$repeatCount ->} [one] あと { $repeatCount } 個のサンプルが必要です。 [other] あと { $repeatCount } 個のサンプルが必要です。`
     - Source: `{$repeatCount ->} [one] { $repeatCount } sample still needed. [other] { $repeatCount } samples still needed.`
     - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `experimental-features-web-gpu-description3` — `toolkit/toolkit/featuregates/features.ftl` — A5 — experimental-features-web-gpu-description3 (toolkit/toolkit/featuregates/features.ftl) — stale bug reference. ja links bug 1602129; en-US says bug 1616739. Users are sent to the wrong bug. Verified.
-    - Source: `The <a data-l10n-name="wikipedia-webgpu">WebGPU API</a> provides low-level support for performing computation and graphics rendering using the <a data-l10n-name="wikipedia-gpu">Graphics Processing Unit (GPU)</a> of the…`
-- `wizard-win-button-back` — `toolkit/toolkit/global/wizard.ftl` — A3 — wizard-win-button-back.label / wizard-win-button-next.label (toolkit/toolkit/global/wizard.ftl) — Windows chevrons dropped. en-US distinguishes the Windows variants as < Back / Next >; ja renders both as 戻る / 次へ, identical to the Linux variants. Suggest < 戻る / 次へ >. Verified.
-    - Source: `accesskey: B label: < Back`
-- `wizard-win-button-next` — `toolkit/toolkit/global/wizard.ftl` — A3 — wizard-win-button-back.label / wizard-win-button-next.label (toolkit/toolkit/global/wizard.ftl) — Windows chevrons dropped. en-US distinguishes the Windows variants as < Back / Next >; ja renders both as 戻る / 次へ, identical to the Linux variants. Suggest < 戻る / 次へ >. Verified.
-    - Source: `accesskey: N label: Next >`
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `about-logins-import-dialog-error-unable-to-read-description` — `browser/browser/aboutLogins.ftl` — about-logins-import-dialog-error-unable-to-read-description (aboutLogins.ftl) — "Make sure you selected a CSV or TSV file" → "check the file contents". → 選択したファイルが CSV または TSV ファイルであることを確認してください。 Verified.
-    - Source: `Make sure you selected a CSV or TSV file.`
-    - Suggest: `選択したファイルが CSV または TSV ファイルであることを確認してください。`
 - `about-private-browsing-felt-privacy-v1-info-header` — `browser/browser/aboutPrivateBrowsing.ftl` — about-private-browsing-felt-privacy-v1-info-header (aboutPrivateBrowsing.ftl) — "Leave no traces on this device" → この端末を追跡させません. → この端末に痕跡を残しません Verified.
     - Source: `Leave no traces on this device`
     - Suggest: `この端末を追跡させません`
-- `webext-imported-addons` — `browser/browser/addonNotifications.ftl` — webext-imported-addons (addonNotifications.ftl) — a call to action rendered as a progress message. → …インストールを完了してください
-    - Source: `Finalize installing extensions imported to { -brand-short-name }`
-    - Suggest: `…インストールを完了してください`
-- `aiwindow-firstrun-memories-subtitle` — `browser/browser/aiWindow.ftl` — aiwindow-firstrun-memories-subtitle (aiWindow.ftl) — "can learn from your chats, browsing, or both"; the browsing/both options are dropped. → チャット、ブラウジング、またはその両方から学習し
-    - Source: `{ -smart-window-brand-name } can learn from your chats, browsing, or both to create memories. They make answers more helpful over time.`
-    - Suggest: `チャット、ブラウジング、またはその両方から学習し`
-- `aiwindow-firstrun-memories-title` — `browser/browser/aiWindow.ftl` — aiwindow-firstrun-memories-title (aiWindow.ftl) — "More helpful answers, on your terms" (under your control) → あなたの言葉を学習して回答に役立てます ("learns your words").
-    - Source: `More helpful answers, on your terms`
-    - Suggest: `あなたの言葉を学習して回答に役立てます`
-- `aiwindow-memories-callout-description` — `browser/browser/aiWindowContent.ftl` — aiwindow-memories-callout-description (aiWindowContent.ftl) — en-US is past tense about this specific response. → …役立ちました。
-    - Source: `Memories helped personalize this response.`
-    - Suggest: `…役立ちました。`
-- `smartwindow-nl-retry-group-tabs-message` — `browser/browser/aiWindowContent.ftl` — smartwindow-nl-retry-group-tabs-message (aiWindowContent.ftl) — "select which ones in the card that opens"; the card became "open tabs". → 開いたカードで選択してください
-    - Source: `If you still want to group tabs, choose <strong>Retry</strong> and select which ones in the card that opens.`
-    - Suggest: `開いたカードで選択してください`
 - `trustpanel-blocker-description` — `browser/browser/browser.ftl` — trustpanel-blocker-description (browser.ftl) — text copied from trustpanel-etp-description-disabled, adding a condition absent from en-US. → …そのため、できるだけ多くのトラッカーをブロックします。
     - Source: `{ -brand-product-name } thinks companies should follow you less. So we block as many as we can.`
     - Suggest: `…そのため、できるだけ多くのトラッカーをブロックします。`
-- `customkeys-conflict-confirm` — `browser/browser/customkeys.ftl` — customkeys-conflict-confirm (customkeys.ftl) — "Do you want to replace it?" (the existing assignment) → ja asks about replacing with another key. → このキーに割り当て直しますか？
-    - Source: `This key is already assigned to { $conflict }. Do you want to replace it?`
-    - Suggest: `このキーに割り当て直しますか？`
-- `perplexity-callout-theme-1-subtitle-2` — `browser/browser/featureCallout.ftl` — perplexity-callout-theme-1-subtitle-2, -theme-2-subtitle-2 (featureCallout.ftl) — "well-cited answers" (sources cited) → 引用数の多い ("highly cited"). → 出典が明示された
-    - Source: `Ask questions. Get complete, well-cited answers. To try Perplexity, choose it from the search button.`
-    - Suggest: `引用数の多い`
-- `windows-10-eos-sync-new-device-title-2` — `browser/browser/featureCallout.ftl` — windows-10-eos-sync-new-device-title-2 (featureCallout.ftl) — "Don't lose what matters." (call to action) turned into a guarantee. → 大切なものを失わないようにしましょう。
-    - Source: `Moving to a new device? Don’t lose what matters.`
-    - Suggest: `大切なものを失わないようにしましょう。`
-- `firefoxview-recentlyclosed-empty-header` — `browser/browser/firefoxView.ftl` — firefoxview-recentlyclosed-empty-header (firefoxView.ftl) — "Closed a tab too soon?" → もうすぐタブを閉じますか？ ("about to close a tab?"). → うっかりタブを閉じてしまいましたか？ Verified.
-    - Source: `Closed a tab too soon?`
-    - Suggest: `もうすぐタブを閉じますか？`
 - `ipprotection-bandwidth-upgrade-title` — `browser/browser/ipProtection.ftl` — ipprotection-bandwidth-upgrade-title (ipProtection.ftl) — "Like built-in VPN?" is a question, read as "similar to". → 組み込み VPN が気に入りましたか？ …
     - Source: `Like built-in VPN? Get even more protection outside { -brand-product-name } with { -mozilla-vpn-brand-name }.`
     - Suggest: `組み込み VPN が気に入りましたか？ …`
-- `onboarding-refresh-pin-set-default-title` — `browser/browser/newtab/onboarding.ftl` — hard-codes Firefox instead of { -brand-short-name }, so it will be wrong on Nightly/Beta/rebranded builds. → あなたは { -brand-short-name } に守られています
-    - Current: `{ -brand-short-name }`
-    - Source: `You’re in safe paws`
-    - Suggest: `あなたは { -brand-short-name } に守られています`
-- `fonts-langgroup-georgian` — `browser/browser/preferences/fonts.ftl` — Also: fonts-langgroup-georgian = グルジア語 (browser/browser/preferences/fonts.ftl) is the pre-2015 name. The ja tree already uses ジョージア語 in languageNames.ftl and ジョージア in regionNames.ftl, so this file is the sole outlier. → ジョージア語 Verified (found during Phase 1, not reported by a reviewer).
-    - Source: `label: Georgian`
-    - Suggest: `ジョージア語`
-- `appearance-window-density-touch` — `browser/browser/preferences/preferences.ftl` — the の makes the sentence ungrammatical; en-US: "Larger window elements and click targets, optimized for touch screens".
-    - Source: `description: Larger window elements and click targets, optimized for touch screens label: Touch`
-- `pane-experimental-description4` — `browser/browser/preferences/preferences.ftl` — en-US restricts the condition ("We only receive data … if you have X on"); ja restricts the data type.
-    - Source: `Give our experimental features a try! They’re in development and evolving, which could impact how { -brand-short-name } works. We only receive data about your use of these features if you have <a data-l10n-name="data-co…`
-- `preferences-ai-controls-block-ai-description` — `browser/browser/preferences/preferences.ftl` — en-US is "new or current AI enhancements"; ja says only 今後の (future), dropping that already-available features are blocked too.
-    - Source: `Blocking means you won’t see new or current AI enhancements in { -brand-short-name }, or pop-ups about them. <a data-l10n-name="link">Get more details</a> about what’s included and how to control traditional machine lea…`
-- `preferences-ai-controls-blocked-message` — `browser/browser/preferences/preferences.ftl` — en-US is "new or current AI enhancements"; ja says only 今後の (future), dropping that already-available features are blocked too.
-    - Source: `message: New and current AI enhancements are blocked by default. To unblock a specific feature, use the controls below.`
-- `security-enable-safe-browsing` — `browser/browser/preferences/preferences.ftl` — "dangerous and deceptive content" is two categories; ja merges them into one modifier, unlike security-browsing-protection.
-    - Source: `accesskey: B label: Block dangerous and deceptive content`
 - `security-privacy-issue-warning-safe-browsing` — `browser/browser/preferences/preferences.ftl` — "dangerous and deceptive content" is two categories; ja merges them into one modifier, unlike security-browsing-protection.
     - Source: `description: Your exposure to scams and malware from websites is increased. label: Dangerous and deceptive content is not blocked`
 - `tabs-group-header2` — `browser/browser/preferences/preferences.ftl` — en-US is the section header "Tabs" ("group" in the ID refers to the preferences groupbox); タブグループ now also collides with the real Tab Groups feature. → タブ Verified.
     - Current: `タブグループ`
     - Source: `label: Tabs`
     - Suggest: `タブ`
-- `info-exposed-passwords-resolved` — `browser/browser/protections.ftl` — info-exposed-passwords-resolved (protections.ftl) — it is the breaches that are unresolved, not the passwords. → 未解決の漏洩データで露出したパスワード
-    - Source: `{$count ->} [one] Password exposed in unresolved breaches [other] Passwords exposed in unresolved breaches`
-    - Suggest: `未解決の漏洩データで露出したパスワード`
 - `monitor-breaches-unresolved-description` — `browser/browser/protections.ftl` — monitor-breaches-unresolved-description (protections.ftl) — "taking steps to protect your info" → 段階に進めます ("advance to a stage").
     - Source: `After reviewing breach details and taking steps to protect your info, you can mark breaches as resolved.`
     - Suggest: `段階に進めます`
-- `monitor-partial-breaches-motivation-title-start` — `browser/browser/protections.ftl` — motivational messages became status/waiting messages: "Great start!" → 開始しました。; "Keep it up!" → しばらくお待ちください。; "Almost done! Keep it up." → ほぼ完了しました。もう少しお待ちください。 → 良いスタートです！ / その調子です！ / あと少しです！その調子で続けましょう。
-    - Source: `Great start!`
-    - Suggest: `開始しました。`
 - `protection-report-page-summary` — `browser/browser/protections.ftl` — dev comment says this variant shows when all protections are off, "which is why we use the word 'can'". ja is byte-identical to protection-report-page-summary-default and asserts active protection. → …プライバシーを保護できます。 Verified.
     - Source: `{ -brand-short-name } can protect your privacy behind the scenes while you browse. This is a personalized summary of those protections, including tools to take control of your online security.`
     - Suggest: `…プライバシーを保護できます。`
-- `report-broken-site-panel-missing-reason-label` — `browser/browser/reportBrokenSite.ftl` — report-broken-site-panel-missing-reason-label (reportBrokenSite.ftl) — 対象 ("target") is not in the source and contradicts report-broken-site-panel-reason-choose. → 不具合の状態を選んでください
-    - Source: `Please choose a reason`
-    - Suggest: `不具合の状態を選んでください`
 - `safeb-blocked-malware-page-short-desc` — `browser/browser/safebrowsing/blockedSite.ftl` — see G and H.
     - Source: `{ -brand-short-name } blocked this page because it might attempt to install malicious software that may steal or delete personal information on your computer.`
-- `main-context-menu-translate-selection` — `browser/browser/translations.ftl` — main-context-menu-translate-selection (translations.ftl) — "Translate Selection…" → 翻訳先を選択... ("choose a translation target"), never saying what is translated. → 選択範囲を翻訳...
-    - Source: `accesskey: n label: Translate Selection…`
-    - Suggest: `翻訳先を選択...`
-- `webrtc-reason-for-no-permanent-allow-audio` — `browser/browser/webrtcIndicator.ftl` — webrtc-reason-for-no-permanent-allow-audio (webrtcIndicator.ftl) — en-US "…without asking which tab to share" replaced with unrelated content. → …どのタブを共有するか確認せずに、…
-    - Source: `{ -brand-short-name } can not allow permanent access to your tab’s audio without asking which tab to share.`
-    - Suggest: `…どのタブを共有するか確認せずに、…`
-- `perftools-button-restart` — `devtools/client/perftools.ftl` — 再開 ("resume") for "Restart"; accompanies perftools-status-restart-required. → 再起動
-    - Source: `Restart`
-    - Suggest: `再起動`
-- `perftools-presets-graphics-description` — `devtools/client/perftools.ftl` — en-US says only "Preset for investigating…"; ja adds 推奨 ("recommended"), which only the web-developer/firefox/web-compat presets actually claim.
-    - Source: `Preset for investigating graphics bugs in { -brand-shorter-name }.`
-- `perftools-thread-timer` — `devtools/client/perftools.ftl` — subject/object swapped: en-US "The thread handling timers (…)"; ja reads "a thread-control timer". → タイマー (setTimeout, setInterval, nsITimer) を扱うスレッドです
-    - Source: `title: The thread handling timers (setTimeout, setInterval, nsITimer)`
-    - Suggest: `タイマー (setTimeout, setInterval, nsITimer) を扱うスレッドです`
 - `inactive-css-no-principal-box` — `devtools/client/tooltips.ftl` — the topic { $property } is attached to the subordinate clause, so it says the property does not create a principal box rather than the element.
     - Source: `<strong>{ $property }</strong> has no effect on this element since it does not create a principal box.`
 - `inactive-css-no-size-containment` — `devtools/client/tooltips.ftl` — the topic { $property } is attached to the subordinate clause, so it says the property does not create a principal box rather than the element.
     - Source: `<strong>{ $property }</strong> has no effect on this element since it has no size containment.`
-- `add-exception-domain-mismatch-long` — `security/manager/security/certificates/certManager.ftl` — hedged possibility asserted as fact. en-US "which could mean that someone is trying to impersonate this site"; ja states it outright. Sibling add-exception-expired-long correctly hedges, so this is also internally inconsistent. → add 可能性があります. Verified.
-    - Source: `The certificate belongs to a different site, which could mean that someone is trying to impersonate this site.`
-    - Suggest: `可能性があります`
-- `load-device-modname-default` — `security/manager/security/certificates/deviceManager.ftl` — en-US default module name is New PKCS#11 Module (no space); ja adds one: New PKCS #11 Module. The same file is also internally inconsistent (load-device.title uses PKCS #11, load-pk11-module-file-picker-title uses PKCS#11). Verified.
-    - Current: `New PKCS#11 Module`
-    - Source: `value: New PKCS#11 Module`
-    - Suggest: `New PKCS #11 Module`
 - `about-logging-title` — `toolkit/toolkit/about/aboutLogging.ftl` — about-logging-title (aboutLogging.ftl) — "About Logging" → HTTP ログについて; the page now covers media, gfx, WebRTC and WebGPU presets. → ログについて Verified.
     - Source: `About Logging`
     - Suggest: `HTTP ログについて`
@@ -394,8 +460,6 @@ _Nothing reported._
     - Current: `インターリング`
     - Source: `Interlingue`
     - Suggest: `インターリングエ`
-- `csp-xfo-blocked-long-desc` — `toolkit/toolkit/neterror/certError.ftl` — embedding direction inverted. ja: "Firefox cannot allow displaying { $hostname }'s page in which other sites are embedded"; en-US: { $hostname } refuses to be displayed when another site has embedded it.
-    - Source: `To protect your security, { $hostname } will not allow { -brand-short-name } to display the page if another site has embedded it. To see this page, you need to open it in a new window.`
 - `pdfjs-editor-alt-text-add-description-description` — `toolkit/toolkit/pdfviewer/viewer.ftl` — "setting" (scene/surroundings) taken as "settings/configuration". → 被写体や場面、動作
     - Source: `Aim for 1-2 sentences that describe the subject, setting, or actions.`
     - Suggest: `被写体や場面、動作`
@@ -419,9 +483,6 @@ _Nothing reported._
     - Current: `必要なファイルが変更できなかった`
     - Source: `{ $addonName } could not be installed because { -brand-short-name } cannot modify the needed file.`
     - Suggest: `必要なファイルを変更できなかった`
-- `smart-window-confirm-close-tabs` — `browser/browser/aiWindow.ftl` — ます form on a confirmation button, while the singular smart-window-confirm-close-tab is 閉じる.
-    - Source: `{$count ->} [one] Close { $count } tab [other] Close { $count } tabs`
-    - Suggest: `閉じる`
 - `backup-service-error-recovery-failed` — `browser/browser/backupSettings.ftl` — { -brand-short-name } に復元できませんでした → は復元できませんでした.
     - Current: `{ -brand-short-name } に復元できませんでした`
     - Source: `heading: { -brand-short-name } couldn’t restore message: Restart { -brand-short-name } and try restoring your backup again.`
@@ -438,10 +499,6 @@ _Nothing reported._
     - Current: `お気に入りに記事`
     - Source: `Save the stories you love in { -pocket-brand-name }, and fuel your mind with fascinating reads.`
     - Suggest: `お気に入りの記事`
-- `policy-DisableAppUpdate` — `browser/browser/policies/policies-descriptions.ftl` — ブラウザ → ブラウザー; the only occurrence without the long vowel in the entire tree.
-    - Current: `ブラウザ`
-    - Source: `Prevent the browser from updating.`
-    - Suggest: `ブラウザー`
 - `protections-vpn-banner-content` — `browser/browser/protections.ftl` — two を: リスクフリーの環境を試してください → 環境で試してください.
     - Current: `リスクフリーの環境を試してください`
     - Source: `Try { -mozilla-vpn-brand-name } risk-free and see why TechRadar says, “its speed, simplicity and low monthly price make it worth a look.”`
@@ -461,12 +518,6 @@ _Nothing reported._
     - Current: `開きなおす`
     - Source: `accesskey: o label: {$tabCount ->} [1] Reopen Closed Tab [other] Reopen Closed Tabs`
     - Suggest: `開き直す`
-- `inactive-text-overflow-when-no-overflow` — `devtools/client/tooltips.ftl` — see S8.
-    - Source: `<strong>{ $property }</strong> has no effect on this element since <strong>overflow:hidden</strong> is not set.`
-- `neterror-clock-skew-error` — `toolkit/toolkit/neterror/netError.ftl` — コンピュータ → コンピューター; every other string in the file, including the preceding sentence of the same message, uses コンピューター.
-    - Current: `コンピュータ`
-    - Source: `Your computer thinks it is { $now }, which prevents { -brand-short-name } from connecting securely. To visit <b>{ $hostname }</b>, update your computer clock in your system settings to the current date, time, and time z…`
-    - Suggest: `コンピューター`
 
 ### D. Terminology, register & consistency
 
@@ -486,14 +537,8 @@ _Nothing reported._
     - Source: `Step 1: Go to Settings > Default apps Step 2: Scroll down to “Web browser” Step 3: Select and choose { -brand-short-name }`
     - Suggest: `ウェブブラウザー`
     - In the source this string quotes “Web browser”, which is exactly the value of `desktop-entry-generic-name` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `menu-history-synced-tabs` — `browser/browser/menubar.ftl` — "Synced Tabs" is 同期したタブ in three other places but 同期タブ here and in synced-tabs-sidebar-title.
-    - Current: `同期したタブ`
-    - Source: `label: Synced Tabs`
-    - Suggest: `同期タブ`
 - `july-jam-body` — `browser/browser/newtab/asrouter.ftl` — july-jam-body vs spotlight-peace-mind-body — browser/browser/newtab/asrouter.ftl — same figure formatted 3000 件以上 and 3,000 以上 in one file.
     - Source: `Every month, { -brand-short-name } blocks an average of 3,000+ trackers per user, giving you safe, speedy access to the good internet.`
-- `spotlight-peace-mind-body` — `browser/browser/newtab/asrouter.ftl` — july-jam-body vs spotlight-peace-mind-body — browser/browser/newtab/asrouter.ftl — same figure formatted 3000 件以上 and 3,000 以上 in one file.
-    - Source: `Every month, { -brand-short-name } blocks an average of over 3,000 trackers per user. Because nothing, especially privacy nuisances like trackers, should stand between you and the good internet.`
 - `newtab-picture-image-alt` — `browser/browser/newtab/newtab.ftl` — browser/browser/newtab/newtab.ftl — 今日の写真 vs 今日の一枚 in four other strings for the same object.
     - Source: `Wikimedia Commons picture of the day`
     - Suggest: `今日の写真`
@@ -503,25 +548,6 @@ _Nothing reported._
 - `newtab-weather-menu-change-temperature-units-fahrenheit` — `browser/browser/newtab/newtab.ftl` — browser/browser/newtab/newtab.ftl — ファーレンハイト度 / セルシウス度 vs 華氏 / 摂氏 in the option labels of the same menu.
     - Source: `Switch to Fahrenheit`
     - Suggest: `ファーレンハイト度`
-- `fonts-langgroup-trad-chinese-hk` — `browser/browser/preferences/fonts.ftl` — see I.
-    - Source: `label: Traditional Chinese (Hong Kong)`
-- `home-section` — `browser/browser/preferences/preferences.ftl` — same en-US "Home and startup" is ホームと起動 in pane-home-startup-title2. Current ホームページと起動.
-    - Current: `ホームと起動`
-    - Source: `heading: Home and startup`
-- `preferences-web-appearance-footer` — `browser/browser/preferences/preferences.ftl` — .../preferences.ftl — the Extensions & Themes surface is 拡張機能とテーマ in addons-button-label, extension-controlled-enable-2, search-outlink-to-extensions-page. Current アドオンとテーマ.
-    - Source: `Manage { -brand-short-name } themes in <a data-l10n-name="themes-link">Extensions & Themes</a>`
-    - Suggest: `拡張機能とテーマ`
-- `preferences-web-appearance-link` — `browser/browser/preferences/preferences.ftl` — .../preferences.ftl — the Extensions & Themes surface is 拡張機能とテーマ in addons-button-label, extension-controlled-enable-2, search-outlink-to-extensions-page. Current アドオンとテーマ.
-    - Source: `label: Manage { -brand-short-name } themes in Extensions & Themes`
-    - Suggest: `拡張機能とテーマ`
-- `sync-currently-syncing-addresses` — `browser/browser/preferences/preferences.ftl` — .../preferences.ftl — "Addresses" (postal) → 所在地フォーム; the string's own tooltip says 住所, as do addresses-list-header and the autofill- strings. Verified.
-    - Source: `Addresses`
-    - Suggest: `所在地フォーム`
-- `sync-engine-addresses` — `browser/browser/preferences/preferences.ftl` — .../preferences.ftl — "Addresses" (postal) → 所在地フォーム; the string's own tooltip says 住所, as do addresses-list-header and the autofill- strings. Verified.
-    - Source: `accesskey: e label: Addresses tooltiptext: Postal addresses you’ve saved (desktop only)`
-    - Suggest: `所在地フォーム`
-- `restored-profile-page-header-description` — `browser/browser/profiles.ftl` — byte-identical en-US to new-profile-page-header-description but fully re-worded in ja.
-    - Source: `Each profile keeps its unique browsing history and settings separate from your other profiles. Plus, { -brand-short-name }’s strong privacy protections are on by default.`
 - `safeb-blocked-malware-page-learn-more-sumo` — `browser/browser/safebrowsing/blockedSite.ftl` — "Phishing and Malware Protection" rendered 偽装サイトとマルウェアからの防護機能, differing from its three sibling strings (フィッシング詐欺とマルウェアからの保護機能).
     - Current: `偽装サイトとマルウェアからの防護機能`
     - Source: `Learn more about { -brand-short-name }’s Phishing and Malware Protection at <a data-l10n-name='firefox_support'>support.mozilla.org</a>.`
@@ -539,8 +565,6 @@ _Nothing reported._
 - `toolbar-context-menu-bookmark-selected-tab` — `browser/browser/toolbarContextMenu.ftl` — browser/browser/toolbarContextMenu.ftl — ブックマーク... as a verb vs ブックマークに追加... in tabContextMenu.ftl for the same action.
     - Source: `accesskey: T label: Bookmark Selected Tab…`
     - Suggest: `ブックマーク...`
-- `webauthn-a-passkey-label` — `browser/browser/webauthnDialog.ftl` — browser/browser/webauthnDialog.ftl and toolkit/toolkit/webauthnDialog.ftl — "Passkey" left in Latin here but パスキー in webauthn-related-origin-create-header/-use-header in the same files.
-    - Source: `Use a passkey`
 - `options-context-inspector` — `devtools/client/toolbox-options.ftl` — the Inspector panel name rendered with the verb for the Inspect action (調査); the same file's tooltips say インスペクター.
     - Current: `調査`
     - Source: `Inspector`
@@ -548,18 +572,12 @@ _Nothing reported._
 - `toolbox-meatball-menu-splitconsole-label` — `devtools/client/toolbox.ftl` — devtools/client/toolbox.ftl — "Split Console" is 分割コンソール in toolbox-options.ftl. Current コンソールペインを表示/隠す.
     - Source: `Show Split Console`
     - Suggest: `分割コンソール`
-- `certificate-viewer-qualifier` — `toolkit/toolkit/about/certviewer.ftl` — toolkit/toolkit/about/certviewer.ftl — singular and plural of the same term translated differently (運用規程 vs 修飾子).
-    - Source: `Qualifier`
-    - Suggest: `運用規程`
 - `webext-perms-header-optional-required-perms` — `toolkit/toolkit/global/extensions.ftl` — toolkit/toolkit/global/extensions.ftl — permissions are 権限 elsewhere in the file but 許可/許可設定 here.
     - Source: `New permissions:`
     - Suggest: `権限`
 - `webext-perms-optional-perms-header` — `toolkit/toolkit/global/extensions.ftl` — toolkit/toolkit/global/extensions.ftl — permissions are 権限 elsewhere in the file but 許可/許可設定 here.
     - Source: `{ $extension } requests additional permissions.`
     - Suggest: `権限`
-- `text-action-remove-highlight` — `toolkit/toolkit/global/textActions.ftl` — toolkit/toolkit/global/textActions.ftl — the feature is 強調表示 in text-action-highlight-selection but 選択部分 here, and "Remove Highlight" becomes "deselect".
-    - Source: `label: Remove Highlight`
-    - Suggest: `強調表示`
 
 ### E. Typography, punctuation & spacing
 
@@ -567,92 +585,26 @@ _Nothing reported._
     - Current: `{ -smart-window-brand-name }がサーバーに`
     - Source: `{ -smart-window-brand-name } couldn’t reach the server. Try a different network, or disable your VPN.`
     - Suggest: `} がサーバーに`
-- `sharing-warning-disable-for-session` — `browser/browser/browser.ftl` — browser/browser/browser.ftl
-    - Source: `label: Disable sharing protection for this session`
-- `contextual-manager-passwords-vulnerable-password-heading-and-message` — `browser/browser/contextual-manager.ftl` — browser/browser/contextual-manager.ftl
-    - Source: `heading: Password change recommended message: This password is easily guessable. Change your password to protect your account.`
-- `default-browser-guidance-notification-v2-body` — `browser/browser/defaultBrowserNotification.ftl` — browser/browser/defaultBrowserNotification.ftl
-    - Source: `In Settings, select “Set default” for { -brand-short-name }.`
-- `firefoxview-dont-remember-history-empty-header-2` — `browser/browser/firefoxView.ftl` — browser/browser/firefoxView.ftl
-    - Source: `You’re in control of what { -brand-short-name } remembers`
-- `ip-protection-vpn-upgrade-link` — `browser/browser/ipProtection.ftl` — browser/browser/ipProtection.ftl
-    - Source: `description: Choose custom VPN locations and add protection to all your apps on up to five devices, whether you’re at home or on public Wi-Fi. label: Get even more protection outside { -brand-short-name } with { -mozill…`
-- `menu-history-clear-recent-history` — `browser/browser/menubar.ftl` — en-US "Clear Recent History…" opens a dialog; the ... was dropped although every other dialog-opening item in the file keeps it.
-    - Source: `label: Clear Recent History…`
 - `migration-chrome-windows-password-import-step1` — `browser/browser/migrationWizard.ftl` — browser/browser/migrationWizard.ftl.
     - Source: `Open the main menu <img data-l10n-name="chrome-icon-3dots"/> and go to Passwords and Autofill > Google Password Manager.`
-- `spotlight-better-internet-body` — `browser/browser/newtab/asrouter.ftl` — I10 — Duplicated text. spotlight-better-internet-body (browser/browser/newtab/asrouter.ftl) — すべての人にとって appears twice in one sentence (cf. mr2022-onboarding-gratitude-subtitle, correct).
-    - Source: `When you use { -brand-short-name }, you’re voting for an open and accessible internet that’s better for everyone.`
-- `mr2022-onboarding-get-started-primary-subtitle` — `browser/browser/newtab/onboarding.ftl` — stray space between two Japanese sentences.
-    - Source: `Our latest version is built around you, making it easier than ever to zip around the web. It’s packed with features we think you’ll adore.`
 - `mr2022-onboarding-gratitude-subtitle` — `browser/browser/newtab/onboarding.ftl` — I10 — Duplicated text. spotlight-better-internet-body (browser/browser/newtab/asrouter.ftl) — すべての人にとって appears twice in one sentence (cf. mr2022-onboarding-gratitude-subtitle, correct).
     - Source: `Thank you for using { -brand-short-name }, backed by the Mozilla Foundation. With your support, we’re working to make the internet more open, accessible, and better for everyone.`
 - `autofill-card-search-term-credit-cards` — `browser/browser/preferences/formAutofill.ftl` — Not a defect: autofill-card-search-term-credit-cards (browser/browser/preferences/formAutofill.ftl) also uses ASCII commas, but its dev comment says it is a never-displayed comma-separated keyword list. Verified.
     - Source: `credit cards, credit, cards, debit cards, debit, wallet, checkout`
 - `extension-controlled-enable` — `browser/browser/preferences/preferences.ftl` — translate-attribution, extension-controlled-enable, settings-translations-subpage-never-translate-sites-description, sync-mobile-promo — browser/browser/preferences/preferences.ftl. Verified (translate-attribution).
     - Source: `To enable the extension go to <img data-l10n-name="addons-icon"/> Add-ons in the <img data-l10n-name="menu-icon"/> menu.`
-- `search-keyword-warning-engine` — `browser/browser/preferences/preferences.ftl` — browser/browser/preferences/preferences.ftl
-    - Source: `You have chosen a keyword that is currently in use by “{ $name }”. Please select another.`
 - `settings-translations-subpage-never-translate-sites-description` — `browser/browser/preferences/preferences.ftl` — translate-attribution, extension-controlled-enable, settings-translations-subpage-never-translate-sites-description, sync-mobile-promo — browser/browser/preferences/preferences.ftl. Verified (translate-attribution).
     - Source: `To add a site, open the <img data-l10n-name="translations-icon"/> translation panel, select <img data-l10n-name="settings-icon"/> translation settings, then choose “Never translate this site”`
 - `sync-mobile-promo` — `browser/browser/preferences/preferences.ftl` — translate-attribution, extension-controlled-enable, settings-translations-subpage-never-translate-sites-description, sync-mobile-promo — browser/browser/preferences/preferences.ftl. Verified (translate-attribution).
     - Source: `Download Firefox for <img data-l10n-name="android-icon"/> <a data-l10n-name="android-link">Android</a> or <img data-l10n-name="ios-icon"/> <a data-l10n-name="ios-link">iOS</a> to sync with your mobile device.`
-- `translate-attribution` — `browser/browser/preferences/preferences.ftl` — translate-attribution, extension-controlled-enable, settings-translations-subpage-never-translate-sites-description, sync-mobile-promo — browser/browser/preferences/preferences.ftl. Verified (translate-attribution).
-    - Source: `Translations by <img data-l10n-name="logo"/>`
-- `add-engine-no-name` — `browser/browser/search.ftl` — missing 。 while all adjacent error messages have it.
-    - Source: `Please add a name.`
-- `fxa-signout-dialog2-checkbox` — `browser/browser/sync.ftl` — 。 mid-label, before a parenthetical.
-    - Source: `Delete data from this device (passwords, history, bookmarks, etc.)`
-- `webrtc-indicator-menuitem-control-sharing-on` — `browser/browser/webrtcIndicator.ftl` — browser/browser/webrtcIndicator.ftl
-    - Source: `label: Control Sharing on “{ $streamTitle }”`
-- `webrtc-indicator-menuitem-sharing-application-with` — `browser/browser/webrtcIndicator.ftl` — browser/browser/webrtcIndicator.ftl
-    - Source: `label: Sharing an Application with “{ $streamTitle }”`
-- `webrtc-indicator-menuitem-sharing-browser-with` — `browser/browser/webrtcIndicator.ftl` — browser/browser/webrtcIndicator.ftl
-    - Source: `label: Sharing a Tab with “{ $streamTitle }”`
-- `webrtc-indicator-menuitem-sharing-camera-with` — `browser/browser/webrtcIndicator.ftl` — browser/browser/webrtcIndicator.ftl
-    - Source: `label: Sharing Camera with “{ $streamTitle }”`
-- `webrtc-indicator-menuitem-sharing-microphone-with` — `browser/browser/webrtcIndicator.ftl` — browser/browser/webrtcIndicator.ftl
-    - Source: `label: Sharing Microphone with “{ $streamTitle }”`
-- `webrtc-indicator-menuitem-sharing-screen-with` — `browser/browser/webrtcIndicator.ftl` — browser/browser/webrtcIndicator.ftl
-    - Source: `label: Sharing Screen with “{ $streamTitle }”`
-- `webrtc-indicator-menuitem-sharing-window-with` — `browser/browser/webrtcIndicator.ftl` — browser/browser/webrtcIndicator.ftl
-    - Source: `label: Sharing a Window with “{ $streamTitle }”`
-- `storage-context-menu-delete` — `devtools/client/storage.ftl` — devtools/client/storage.ftl
-    - Source: `label: Delete “{ $itemName }”`
-- `storage-context-menu-delete-all-from` — `devtools/client/storage.ftl` — devtools/client/storage.ftl
-    - Source: `label: Delete All From “{ $host }”`
-- `storage-cookie-create-error` — `devtools/client/storage.ftl` — devtools/client/storage.ftl — trailing ASCII . after the closing ”.
-    - Source: `Cookie could not be created: “{ $errorString }”.`
-    - Suggest: `.`
-- `storage-cookie-edit-error` — `devtools/client/storage.ftl` — devtools/client/storage.ftl — trailing ASCII . after the closing ”.
-    - Source: `Cookie could not be updated: “{ $errorString }”.`
-    - Suggest: `.`
-- `storage-idb-delete-blocked` — `devtools/client/storage.ftl` — devtools/client/storage.ftl
-    - Source: `Database “{ $dbName }” will be deleted after all connections are closed.`
-- `storage-idb-delete-error` — `devtools/client/storage.ftl` — devtools/client/storage.ftl
-    - Source: `Database “{ $dbName }” could not be deleted.`
-- `inactive-css-not-block-container-fix` — `devtools/client/tooltips.ftl` — inactive-css-not-block-container-fix, inactive-css-not-block-flex-grid-container-fix (and both -fix-1) — devtools/client/tooltips.ftl — ASCII , between <strong> items while all parallel strings use 、.
-    - Source: `Try adding <strong>display:block</strong>, <strong>display:inline-block</strong> or <strong>display:flow-root</strong>. { learn-more }`
-- `inactive-css-not-block-flex-grid-container-fix` — `devtools/client/tooltips.ftl` — inactive-css-not-block-container-fix, inactive-css-not-block-flex-grid-container-fix (and both -fix-1) — devtools/client/tooltips.ftl — ASCII , between <strong> items while all parallel strings use 、.
-    - Source: `Try adding <strong>display:block</strong>, <strong>display:inline-block</strong>, <strong>display:flex</strong>, <strong>display:inline-flex</strong>, <strong>display:grid</strong>, <strong>display:inline-grid</strong>…`
 - `xslt-aborted` — `dom/dom/xslt.ftl` — dom/dom/xslt.ftl.
     - Source: `XSLT transformation was terminated by <xsl:message>.`
 - `console-stacktrace` — `mobile/android/mobile/android/geckoViewConsole.ftl` — two ASCII commas between Japanese-labelled fields. Verified.
     - Source: `Stack trace from { $filename }, function { $functionName }, line { $lineNumber }.`
-- `rights-safebrowsing-term-3` — `toolkit/toolkit/about/aboutRights.ftl` — toolkit/toolkit/about/aboutRights.ftl
-    - Source: `Uncheck the option to “{ enableSafeBrowsing-label }”`
-- `profile-has-selectable-profiles-message` — `toolkit/toolkit/global/profileSelection.ftl` — I2 — Stray closing quote. profile-has-selectable-profiles-message (toolkit/toolkit/global/profileSelection.ftl) — [プロファイルを管理]” has an unmatched ”. Note: en-US itself is malformed here (”Manage profiles” uses a closing curly quote on both sides), so the ja translator inherited half of it. The unmatched ja quote is still a defect; the en-US typo is worth reporting upstream. Verified.
-    - Source: `To delete this profile, open it and select ”Manage profiles” from the profiles section of the { -brand-short-name } menu. After deleting any additional profiles you have created here, you can return to about:profiles an…`
-- `neterror-net-offline` — `toolkit/toolkit/neterror/netError.ftl` — mismatched pair "再試行” (opens straight, closes curly)
-    - Source: `Press “Try Again” to switch to online mode and reload the page.`
-- `neterror-not-cached-try-again` — `toolkit/toolkit/neterror/netError.ftl` — toolkit/toolkit/neterror/netError.ftl
-    - Source: `Click Try Again to re-request the document from the website.`
 - `set-password-reenter` — `toolkit/toolkit/preferences/preferences.ftl` — set-password-reenter.label, set-password-reenter-password — toolkit/toolkit/preferences/preferences.ftl — same.
     - Source: `label: Re-enter password:`
 - `set-password-reenter-password` — `toolkit/toolkit/preferences/preferences.ftl` — set-password-reenter.label, set-password-reenter-password — toolkit/toolkit/preferences/preferences.ftl — same.
     - Source: `Re-enter password:`
-- `settings-pp-not-wanted` — `toolkit/toolkit/preferences/preferences.ftl` — stray space after 。.
-    - Source: `Warning! You have decided not to use a Primary Password. Stored passwords and certificate private keys managed by { -brand-short-name } will not be protected.`
 - `printui-paper-letter` — `toolkit/toolkit/printing/printUI.ftl` — Not defects — leave as-is: printui-paper-letter / -legal / -tabloid (toolkit/toolkit/printing/printUI.ftl) use " as an inch mark (8.5"x11").
     - Source: `US Letter`
     - Suggest: `-legal`
@@ -677,45 +629,45 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (189)
+### Fixed to date (269)
 
-- `pocket-panel-saved-error-only-links` — `browser/browser/aboutPocket.ftl` — fixed 2026-07-27
-- `about-private-browsing-hide-activity` — `browser/browser/aboutPrivateBrowsing.ftl` — fixed 2026-07-27
-- `xpinstall-prompt-message` — `browser/browser/addonNotifications.ftl` — fixed 2026-07-27
-- `xpinstall-prompt-message-unknown` — `browser/browser/addonNotifications.ftl` — fixed 2026-07-27
-- `ai-window-features-group` — `browser/browser/aiFeatures.ftl` — fixed 2026-07-27
-- `smart-window-block-description-both` — `browser/browser/aiFeatures.ftl` — fixed 2026-07-27
-- `ai-window-toggleview-switch-ai-description` — `browser/browser/aiWindow.ftl` — fixed 2026-07-27
-- `smartwindow-assistant-error-max-length-header` — `browser/browser/aiWindowContent.ftl` — fixed 2026-07-27
-- `smartwindow-loading-assistant-response` — `browser/browser/aiWindowContent.ftl` — fixed 2026-07-27
-- `appmenu-remote-tabs-unverified` — `browser/browser/appmenu.ftl` — fixed 2026-07-27
-- `appmenu-remote-tabs-welcome` — `browser/browser/appmenu.ftl` — fixed 2026-07-27
-- `appmenuitem-vpn-description3` — `browser/browser/appmenu.ftl` — fixed 2026-07-27
-- `sharing-warning-screen` — `browser/browser/browser.ftl` — fixed 2026-07-27
-- `sharing-warning-window` — `browser/browser/browser.ftl` — fixed 2026-07-27
-- `urlbar-result-weather-title-with-country` — `browser/browser/browser.ftl` — fixed 2026-07-27
-- `contextual-manager-passwords-vulnerable-password-heading-and-message` — `browser/browser/contextual-manager.ftl` — fixed 2026-07-27
-- `customkeys-dev-profiler-capture` — `browser/browser/customkeys.ftl` — fixed 2026-07-27
-- `start-page-callout-primary-label` — `browser/browser/featureCallout.ftl` — fixed 2026-07-27
-- `start-page-callout-subtitle` — `browser/browser/featureCallout.ftl` — fixed 2026-07-27
-- `windows-10-eos-sync-general-subtitle-1` — `browser/browser/featureCallout.ftl` — fixed 2026-07-27
-- `genai-onboarding-gemini-analyze` — `browser/browser/genai.ftl` — fixed 2026-07-27
-- `ipprotection-feature-introduction-link-text-privacy-2` — `browser/browser/ipProtection.ftl` — fixed 2026-07-27
-- `vpn-error-alert-title` — `browser/browser/ipProtection.ftl` — fixed 2026-07-27
-- `import-safari-permissions-string` — `browser/browser/migration.ftl` — fixed 2026-07-27
-- `migration-logins-and-passwords-option-label` — `browser/browser/migrationWizard.ftl` — fixed 2026-07-27
-- `cfr-doorhanger-extension-sumo-link` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-07-27
-- `cookie-banner-blocker-onboarding-header` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-07-27
-- `spotlight-public-wifi-vpn-header` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-07-27
-- `welcome-back-spotlight-subtitle` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-07-27
-- `newtab-download-mobile-highlight-body-variant-c` — `browser/browser/newtab/newtab.ftl` — fixed 2026-07-27
-- `newtab-privacy-empty` — `browser/browser/newtab/newtab.ftl` — fixed 2026-07-27
-- `newtab-privacy-message-milestone-total` — `browser/browser/newtab/newtab.ftl` — fixed 2026-07-27
-- `newtab-privacy-modal-paragraph-2` — `browser/browser/newtab/newtab.ftl` — fixed 2026-07-27
-- `newtab-sports-widget-keep-tabs` — `browser/browser/newtab/newtab.ftl` — fixed 2026-07-27
-- `newtab-sports-widget-message-survey-widget-body` — `browser/browser/newtab/newtab.ftl` — fixed 2026-07-27
-- `newtab-sports-widget-team-name-label-civ` — `browser/browser/newtab/newtab.ftl` — fixed 2026-07-27
-- `newtab-sports-widget-upcoming` — `browser/browser/newtab/newtab.ftl` — fixed 2026-07-27
-- `newtab-sports-widget-view-matches` — `browser/browser/newtab/newtab.ftl` — fixed 2026-07-27
-- `newtab-topic-label-career` — `browser/browser/newtab/newtab.ftl` — fixed 2026-07-27
-- `newtab-widget-lists-celebration-subhead` — `browser/browser/newtab/newtab.ftl` — fixed 2026-07-27
+- `about-logins-import-dialog-error-unable-to-read-description` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-24
+- `webext-imported-addons` — `browser/browser/addonNotifications.ftl` — fixed 2026-08-24
+- `aiwindow-firstrun-memories-subtitle` — `browser/browser/aiWindow.ftl` — fixed 2026-08-24
+- `aiwindow-firstrun-memories-title` — `browser/browser/aiWindow.ftl` — fixed 2026-08-24
+- `smart-window-confirm-close-tabs` — `browser/browser/aiWindow.ftl` — fixed 2026-08-24
+- `aiwindow-memories-callout-description` — `browser/browser/aiWindowContent.ftl` — fixed 2026-08-24
+- `smartwindow-nl-retry-group-tabs-message` — `browser/browser/aiWindowContent.ftl` — fixed 2026-08-24
+- `sharing-warning-disable-for-session` — `browser/browser/browser.ftl` — fixed 2026-08-24
+- `contextual-manager-passwords-vulnerable-password-heading-and-message` — `browser/browser/contextual-manager.ftl` — fixed 2026-08-24
+- `customkeys-conflict-confirm` — `browser/browser/customkeys.ftl` — fixed 2026-08-24
+- `default-browser-guidance-notification-v2-body` — `browser/browser/defaultBrowserNotification.ftl` — fixed 2026-08-24
+- `perplexity-callout-theme-1-subtitle-2` — `browser/browser/featureCallout.ftl` — fixed 2026-08-24
+- `windows-10-eos-sync-new-device-title-2` — `browser/browser/featureCallout.ftl` — fixed 2026-08-24
+- `firefoxview-dont-remember-history-empty-header-2` — `browser/browser/firefoxView.ftl` — fixed 2026-08-24
+- `firefoxview-recentlyclosed-empty-header` — `browser/browser/firefoxView.ftl` — fixed 2026-08-24
+- `ip-protection-vpn-upgrade-link` — `browser/browser/ipProtection.ftl` — fixed 2026-08-24
+- `menu-history-clear-recent-history` — `browser/browser/menubar.ftl` — fixed 2026-08-24
+- `menu-history-synced-tabs` — `browser/browser/menubar.ftl` — fixed 2026-08-24
+- `spotlight-better-internet-body` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-24
+- `spotlight-peace-mind-body` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-24
+- `mr2022-onboarding-get-started-primary-subtitle` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-24
+- `onboarding-refresh-pin-set-default-title` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-24
+- `policy-DisableAppUpdate` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-08-24
+- `fonts-langgroup-georgian` — `browser/browser/preferences/fonts.ftl` — fixed 2026-08-24
+- `fonts-langgroup-trad-chinese-hk` — `browser/browser/preferences/fonts.ftl` — fixed 2026-08-24
+- `appearance-window-density-touch` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
+- `home-section` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
+- `pane-experimental-description4` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
+- `preferences-ai-controls-block-ai-description` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
+- `preferences-ai-controls-blocked-message` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
+- `preferences-web-appearance-footer` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
+- `preferences-web-appearance-link` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
+- `search-keyword-warning-engine` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
+- `security-enable-safe-browsing` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
+- `sync-currently-syncing-addresses` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
+- `sync-engine-addresses` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
+- `translate-attribution` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
+- `restored-profile-page-header-description` — `browser/browser/profiles.ftl` — fixed 2026-08-24
+- `info-exposed-passwords-resolved` — `browser/browser/protections.ftl` — fixed 2026-08-24
+- `monitor-partial-breaches-motivation-title-start` — `browser/browser/protections.ftl` — fixed 2026-08-24

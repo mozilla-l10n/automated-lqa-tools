@@ -5,8 +5,8 @@
 | **Generated** | 2026-08-24 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `39e5663f3de7` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-22 @ `9441127ed8c4` |
-| **Mode** | incremental |
+| **Previous run** | 2026-08-24 @ `39e5663f3de7` |
+| **Mode** | recheck |
 | **Strings reviewed this run** | 0 of 18,169 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
@@ -22,9 +22,10 @@ Also for ru: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `mr2-onboarding-thank-you-text` — `browser/browser/newtab/onboarding.ftl` — the dash is U+4E00, the CJK ideograph for "one", not an em dash
+    - Source: `{ -brand-short-name } is an independent browser backed by a non-profit. Together, we’re making the web safer, healthier, and more private.`
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -66,8 +67,8 @@ _Nothing retired._
 
 - `browser/browser/newtab/newtab.ftl` — 7
 - `browser/browser/sharePanel.ftl` — 2
-- `dom/chrome/accessibility/AccessFu.properties` — 1
 - `browser/browser/preferences/formAutofill.ftl` — 1
+- `dom/chrome/accessibility/AccessFu.properties` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -93,12 +94,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (595)
+## 3. Open findings (594)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 50 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 49 |
 | 2 | Wrong content (says something other than the English) | 266 |
 | 3 | Degraded language (grammar, spelling, terminology) | 214 |
 | 4 | Cosmetic (typography, spacing) | 65 |
@@ -141,8 +142,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Group A`
 - `newtab-widget-lists-completed-list` — `browser/browser/newtab/newtab.ftl` — the parentheses of the en-US format are dropped, leaving a bare number
     - Source: `Completed ({ $number })`
-- `mr2-onboarding-thank-you-text` — `browser/browser/newtab/onboarding.ftl` — the dash is U+4E00, the CJK ideograph for "one", not an em dash
-    - Source: `{ -brand-short-name } is an independent browser backed by a non-profit. Together, we’re making the web safer, healthier, and more private.`
 - `mr2022-onboarding-live-language-switch-to` — `browser/browser/newtab/onboarding.ftl` — onboarding-live-language-button-label-downloading, onboarding-live-language-installing, mr2022-onboarding-live-language-switch-to — onboarding.ftl — stray square brackets around { $negotiatedLanguage } that are not in en-US (mr2022-onboarding-live-language-continue-in has none)
     - Source: `Switch to { $negotiatedLanguage }`
 - `onboarding-live-language-button-label-downloading` — `browser/browser/newtab/onboarding.ftl` — onboarding-live-language-button-label-downloading, onboarding-live-language-installing, mr2022-onboarding-live-language-switch-to — onboarding.ftl — stray square brackets around { $negotiatedLanguage } that are not in en-US (mr2022-onboarding-live-language-continue-in has none)
@@ -1003,8 +1002,9 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (172)
+### Fixed to date (173)
 
+- `mr2-onboarding-thank-you-text` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-24
 - `about-unloads-intro` — `browser/browser/aboutUnloads.ftl` — fixed 2026-08-07
 - `ai-window-learn-from-browsing-activity` — `browser/browser/aiFeatures.ftl` — fixed 2026-08-07
 - `smart-window-block-description-chats` — `browser/browser/aiFeatures.ftl` — fixed 2026-08-07
@@ -1044,4 +1044,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `newtab-sports-widget-view-matches` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-07
 - `newtab-sports-widget-watch-stream-select-games-only` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-07
 - `newtab-stocks-menu-search` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-07
-- `newtab-wallpaper-feature-highlight-subtitle` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-07

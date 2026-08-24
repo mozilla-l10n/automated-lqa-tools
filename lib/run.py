@@ -233,17 +233,31 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
             )
     else:
         keys = delta.to_review
+        # `needs-recheck` is the pipeline saying, in its own words, that text
+        # matching cannot answer this one and a reader has to. So a normal run
+        # owes it a read: nothing else can ever close it, and 456 of the 589
+        # Firefox findings in the bucket quote nothing at all, so no amount of
+        # matching would have. The set drains as the reviewer answers, and it
+        # is bounded by the backlog rather than by the tree.
+        parked = [
+            f.key for f in stored
+            if f.status == "needs-recheck" and f.key in l10n
+        ]
+        pending = [k for k in dict.fromkeys(parked) if k not in set(keys)]
+        if pending:
+            log(f"  re-reading {len(pending)} string(s) parked as needs-recheck")
+        keys = list(keys) + pending
         if args.recheck:
             # Substring matching cannot close a finding whose quoted text
             # survives an edit that fixed it -- "Traduzione" is still inside
             # "Traduzione in corso". Those need reading, so re-queue every
             # string that still carries an open finding.
-            pending = [
+            moved = [
                 f.key for f in stored
                 if f.is_open and f.key in l10n
                 and f.string_hash and f.string_hash != l10n[f.key].hash()
             ]
-            extra = [k for k in dict.fromkeys(pending) if k not in set(keys)]
+            extra = [k for k in dict.fromkeys(moved) if k not in set(keys)]
             if extra:
                 log(f"  --recheck: re-queueing {len(extra)} string(s) with open findings")
             keys = list(keys) + extra
@@ -299,9 +313,16 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
     # Silence from the reviewer only means something for a string that has
     # actually moved. --recheck widens what gets *re-read*, never what a
     # quiet answer is allowed to conclude.
+    # A `needs-recheck` finding is only in that bucket because its string had
+    # already moved when it was parked, so reviewer silence about it means
+    # something -- the invariant is about strings that never moved, not about
+    # strings whose movement was established on an earlier run.
     trusted = set(delta.to_review) | {
         f.key for f in stored
-        if f.key in l10n and f.string_hash and f.string_hash != l10n[f.key].hash()
+        if f.key in l10n and (
+            f.status == "needs-recheck"
+            or (f.string_hash and f.string_hash != l10n[f.key].hash())
+        )
     }
     reclosed = findings_mod.close_reviewed(
         stored, trusted_keys, llm_fids, trusted, today(), rerunnable
