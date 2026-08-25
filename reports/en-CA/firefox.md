@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-25 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `33f01fa45f4e` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9497278a786f` |
-| **Previous run** | 2026-08-24 @ `e64b3ff936c9` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ad52f2a75880` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
+| **Previous run** | 2026-08-25 @ `33f01fa45f4e` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 77 of 18,216 |
+| **Strings reviewed this run** | 42 of 18,216 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -47,7 +47,7 @@ _Nothing retired._
 | Files | 362 |
 | Strings | 18,216 |
 | Missing strings | 0 |
-| Obsolete strings | 6 |
+| Obsolete strings | 8 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |

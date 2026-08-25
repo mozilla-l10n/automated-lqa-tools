@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `907043d6ea4b` |
+| **Generated** | 2026-08-25 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ad52f2a75880` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-24 @ `39e5663f3de7` |
+| **Previous run** | 2026-08-24 @ `907043d6ea4b` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 21 of 18,080 |
+| **Strings reviewed this run** | 34 of 18,114 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -20,39 +20,35 @@ Also for tr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ### 🆕 New findings (5)
 
-- `theme-picker-dusk` — `toolkit/toolkit/global/theme-picker.ftl` — "Dusk" (just after sunset) is translated as "Şafak" (dawn), the opposite time of day.
-    - Current: `Şafak`
-    - Source: `label: Dusk`
-    - Suggest: `Alacakaranlık`
-    - The developer comment says the name refers to the sky just after sunset; "Şafak" means dawn/daybreak.
-- `theme-picker-dusk-aria-label` — `toolkit/toolkit/global/theme-picker.ftl` — "Dusk" (just after sunset) is translated as "Şafak" (dawn), the opposite time of day.
-    - Current: `Şafak`
-    - Source: `aria-label: Dusk`
-    - Suggest: `Alacakaranlık`
-    - The developer comment says the name refers to the sky just after sunset; "Şafak" means dawn/daybreak.
-- `extension-nova-dusk-name` — `browser/browser/appExtensionFields.ftl` — "Dusk" (just after sunset) is translated as "Şafak" (dawn), the opposite time of day.
-    - Current: `Şafak`
-    - Source: `Dusk`
-    - Suggest: `Alacakaranlık`
-    - The developer comment says the name refers to the sky just after sunset; "Şafak" means dawn/daybreak.
-- `webrtc-sharing-menu` — `browser/browser/webrtcIndicator.ftl` — "Tabs sharing devices" is rendered as "Sekme paylaşan cihazlar" (devices that share tabs), reversing subject and object.
-    - Current: `Sekme paylaşan cihazlar`
-    - Source: `accesskey: d label: Tabs sharing devices`
-    - Suggest: `Cihaz paylaşan sekmeler`
-    - The en-US means tabs that are sharing devices (camera/microphone); the Turkish says devices sharing tabs.
-- `containers-sites-card-header` — `browser/browser/preferences/preferences.ftl` — The description drops the meaning "choose a container for a site" and instead presupposes the container is already chosen.
-    - Current: `Özel kapsayıcı seçtiğiniz siteleri her açtığınızda { -brand-short-name } bu kapsayıcıyı kullanır.`
-    - Source: `description: Choose a container for a site and { -brand-short-name } will use it every time the site opens. label: Site-specific containers`
-    - Suggest: `Bir site için kapsayıcı seçin; { -brand-short-name } site her açıldığında bu kapsayıcıyı kullansın.`
-    - The en-US instructs the user to choose a container for a site; the Turkish only describes what happens afterwards, losing the instruction.
+- `neterror-search-cta-learn-more` — `toolkit/toolkit/neterror/netError.ftl` — "Learn more" rendered in informal imperative ("al") instead of the formal "Daha fazla bilgi alın".
+    - Current: `Daha fazla bilgi al`
+    - Source: `Learn more`
+    - Suggest: `Daha fazla bilgi alın`
+    - The locale convention is formal siz; other UI strings in this batch use formal imperatives ("deneyin", "kabul edin").
+- `newtab-recent-searches-menu-learn-more` — `browser/browser/newtab/newtab.ftl` — "Learn more" rendered in informal imperative ("al") instead of the formal "Daha fazla bilgi alın".
+    - Current: `Daha fazla bilgi al`
+    - Source: `Learn more`
+    - Suggest: `Daha fazla bilgi alın`
+    - The locale convention is formal siz; informal singular imperative violates the established register.
+- `find-more-themes-promo` — `toolkit/toolkit/about/aboutAddons.ftl` — The message reverses the relation: source says pick a style that makes Firefox feel like yours, Turkish says pick the Firefox style that suits your taste.
+    - Current: `Tarzınıza uygun { -brand-product-name } stilini seçin.`
+    - Source: `heading: Find more fresh looks message: Choose a style that makes { -brand-product-name } feel like yours.`
+    - Suggest: `{ -brand-product-name } tarayıcısını size ait gibi gösteren bir stil seçin.`
+    - en-US: "Choose a style that makes { -brand-product-name } feel like yours." The Turkish loses the "feel like yours" idea and instead implies choosing among Firefox's own styles.
+- `about-networking-ssl-tokens-compression-details` — `toolkit/toolkit/about/aboutNetworking.ftl` — "Tokens" (TLS resumption tokens) translated as "Jetonlar", a wrong technical term.
+    - Current: `Jetonlar: { $tokenLength } B.`
+    - Source: `title: Tokens: { $tokenLength } B. Encoded: { $decompressedLength } → { $compressedLength } B.`
+    - Suggest: `Token’lar: { $tokenLength } B.`
+    - Per the developer comment these are raw TLS resumption tokens; "jeton" (coin/game token) is not the security term used for TLS tokens.
+- `newtab-clock-widget-custom-timezone-input` — `browser/browser/newtab/newtab.ftl` — "UTC offset" translated as "UTC farklılığına" instead of the standard "UTC farkı/kayması".
+    - Current: `Şehre, saat dilimine veya UTC farklılığına göre ara`
+    - Source: `aria-label: Time zone label: Time zone placeholder: Search by city, time zone, or UTC offset`
+    - Suggest: `Şehre, saat dilimine veya UTC farkına göre ara`
+    - "farklılık" means dissimilarity/diversity, not a numeric time offset; the standard Turkish term for UTC offset is "UTC farkı".
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (0)
 
-- `webrtc-sharing-menu` — `browser/browser/webrtcIndicator.ftl` — subject/object inverted. "Sekme paylaşan cihazlar" → "Cihaz paylaşan sekmeler" (en "Tabs sharing devices"; the menu lists tabs).
-    - Source: `accesskey: d label: Tabs sharing devices`
-    - Suggest: `"Cihaz paylaşan sekmeler"`
-- `about-telemetry-data-details-current` — `toolkit/toolkit/about/aboutTelemetry.ftl` — pin-tabs-callout-1-subtitle, pin-tabs-callout-2-subtitle (browser/featureCallout.ftl); import-safari-permissions-string (browser/migration.ftl); tab-groups-onboarding-create-group-title-3, tab-groups-onboarding-saved-groups-title-3, tab-groups-onboarding-session-restore-title-2 (browser/newtab/onboarding.ftl); about-logging-invalid-output, about-logging-unknown-logging-preset, about-logging-unkno…
-    - Source: `Each piece of information is sent bundled into “<a data-l10n-name="ping-link">pings</a>“. You are looking at the current data.`
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -73,8 +69,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,080 |
-| Missing strings | 100 |
+| Strings | 18,114 |
+| Missing strings | 66 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -90,20 +86,14 @@ _Nothing retired._
 
 ### Completeness
 
-**100 strings** are not translated yet, concentrated in:
+**66 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 39
-- `browser/browser/ipProtection.ftl` — 13
+- `browser/browser/newtab/newtab.ftl` — 35
 - `toolkit/toolkit/about/url-classifier.ftl` — 10
+- `browser/browser/ipProtection.ftl` — 9
 - `browser/browser/firefoxView.ftl` — 5
-- `browser/browser/newtab/onboarding.ftl` — 5
-- `toolkit/toolkit/about/aboutAddons.ftl` — 4
-- `browser/browser/appmenu.ftl` — 4
-- `browser/browser/aiFeatures.ftl` — 3
-- `browser/browser/featureCallout.ftl` — 3
+- `browser/browser/newtab/onboarding.ftl` — 4
 - `devtools/client/inspector.ftl` — 3
-- `toolkit/toolkit/about/aboutNetworking.ftl` — 2
-- `toolkit/toolkit/neterror/netError.ftl` — 2
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -113,8 +103,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 673, `curly-single` 166, `straight-double` 29 | **curly-double** |
-| apostrophe | `typographic` 956, `straight` 50 | **typographic** |
+| quotes | `curly-double` 675, `curly-single` 166, `straight-double` 29 | **curly-double** |
+| apostrophe | `typographic` 963, `straight` 50 | **typographic** |
 | ellipsis | `char` 460 | **char** |
 | dash | `em` 72, `en` 2 | **em** |
 | nbsp | `total` 9, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
@@ -129,14 +119,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (116)
+## 3. Open findings (121)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 4 |
-| 2 | Wrong content (says something other than the English) | 38 |
-| 3 | Degraded language (grammar, spelling, terminology) | 59 |
+| 2 | Wrong content (says something other than the English) | 40 |
+| 3 | Degraded language (grammar, spelling, terminology) | 62 |
 | 4 | Cosmetic (typography, spacing) | 15 |
 
 ### A. Functional, markup, variables & plurals
@@ -223,6 +213,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `devmgr-button-unload` — `security/manager/security/certificates/deviceManager.ftl` — "Boşalt" (empty/pour out) → "Kaldır" (en "Unload" a PKCS#11 module).
     - Source: `accesskey: U label: Unload`
     - Suggest: `"Kaldır"`
+- `find-more-themes-promo` — `toolkit/toolkit/about/aboutAddons.ftl` — The message reverses the relation: source says pick a style that makes Firefox feel like yours, Turkish says pick the Firefox style that suits your taste.
+    - Current: `Tarzınıza uygun { -brand-product-name } stilini seçin.`
+    - Source: `heading: Find more fresh looks message: Choose a style that makes { -brand-product-name } feel like yours.`
+    - Suggest: `{ -brand-product-name } tarayıcısını size ait gibi gösteren bir stil seçin.`
+    - en-US: "Choose a style that makes { -brand-product-name } feel like yours." The Turkish loses the "feel like yours" idea and instead implies choosing among Firefox's own styles.
+- `about-networking-ssl-tokens-compression-details` — `toolkit/toolkit/about/aboutNetworking.ftl` — "Tokens" (TLS resumption tokens) translated as "Jetonlar", a wrong technical term.
+    - Current: `Jetonlar: { $tokenLength } B.`
+    - Source: `title: Tokens: { $tokenLength } B. Encoded: { $decompressedLength } → { $compressedLength } B.`
+    - Suggest: `Token’lar: { $tokenLength } B.`
+    - Per the developer comment these are raw TLS resumption tokens; "jeton" (coin/game token) is not the security term used for TLS tokens.
 - `place-database-stats-count` — `toolkit/toolkit/about/aboutSupport.ftl` — "Sayaç" (counter/meter) → "Sayı" (en "Count" is a quantity column).
     - Source: `Count`
     - Suggest: `"Sayı"`
@@ -320,8 +320,18 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `To import Safari bookmarks and browsing history:`
 - `set-default-menu-message-split-layout-subtitle` — `browser/browser/newtab/asrouter.ftl` — "saptanmış tarayıcı"; every other string in the locale uses "varsayılan".
     - Source: `{$sel_1 ->} [macos] Make it your default and keep it in your Dock. [other] Get faster browsing and automatic privacy protection.`
+- `newtab-clock-widget-custom-timezone-input` — `browser/browser/newtab/newtab.ftl` — "UTC offset" translated as "UTC farklılığına" instead of the standard "UTC farkı/kayması".
+    - Current: `Şehre, saat dilimine veya UTC farklılığına göre ara`
+    - Source: `aria-label: Time zone label: Time zone placeholder: Search by city, time zone, or UTC offset`
+    - Suggest: `Şehre, saat dilimine veya UTC farkına göre ara`
+    - "farklılık" means dissimilarity/diversity, not a numeric time offset; the standard Turkish term for UTC offset is "UTC farkı".
 - `newtab-clock-widget-input-nickname` — `browser/browser/newtab/newtab.ftl` — ".label = Ad" for en "Nickname"; newtab-clock-widget-edit-item-with-nickname uses "takma adı", and plain "Ad" collides with a real name field (the dev comment warns about this).
     - Source: `aria-label: Nickname (optional) label: Nickname (optional) placeholder: Add a nickname`
+- `newtab-recent-searches-menu-learn-more` — `browser/browser/newtab/newtab.ftl` — "Learn more" rendered in informal imperative ("al") instead of the formal "Daha fazla bilgi alın".
+    - Current: `Daha fazla bilgi al`
+    - Source: `Learn more`
+    - Suggest: `Daha fazla bilgi alın`
+    - The locale convention is formal siz; informal singular imperative violates the established register.
 - `newtab-sports-widget-match-aria-label-upcoming-suspended` — `browser/browser/newtab/newtab.ftl` — "ara verildi" vs the status string newtab-sports-widget-suspended "Askıya alındı".
     - Source: `aria-label: { $homeTeam } vs. { $awayTeam }, suspended`
 - `desktop-to-mobile-subtitle` — `browser/browser/newtab/onboarding.ftl` — `desktop-to-mobile-subtitle` quotes “Mobil cihazla eşitle” but the string it names, `sync-to-mobile-button-label`, reads “Mobil cihazla eşitleyin”
@@ -399,6 +409,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Suggest: `"Ön adı".`
 - `wizard-macos-button-next` — `toolkit/toolkit/global/wizard.ftl` — "İleri" for the macOS "Continue" variant, while profile-creation-explanation-4 tells macOS users to press "Devam düğmesine".
     - Source: `accesskey: C label: Continue`
+- `neterror-search-cta-learn-more` — `toolkit/toolkit/neterror/netError.ftl` — "Learn more" rendered in informal imperative ("al") instead of the formal "Daha fazla bilgi alın".
+    - Current: `Daha fazla bilgi al`
+    - Source: `Learn more`
+    - Suggest: `Daha fazla bilgi alın`
+    - The locale convention is formal siz; other UI strings in this batch use formal imperatives ("deneyin", "kabul edin").
 - `neterror-search-cta-reload-button` — `toolkit/toolkit/neterror/netError.ftl` — "Reload" is rendered as "Tazele" instead of the established Firefox tr term "Yeniden yükle".
     - Current: `label: Tazele`
     - Source: `accesskey: R label: Reload`

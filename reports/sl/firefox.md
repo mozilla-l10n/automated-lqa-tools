@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `907043d6ea4b` |
+| **Generated** | 2026-08-25 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ad52f2a75880` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-24 @ `39e5663f3de7` |
+| **Previous run** | 2026-08-24 @ `907043d6ea4b` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 17,550 |
+| **Strings reviewed this run** | 0 of 17,550 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,10 +22,9 @@ Also for sl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `pkcs12-decode-err` — `security/manager/security/certificates/certManager.ftl` — security/manager/security/certificates/certManager.ftl — Nonstandard participle "Vnešeno/vnešeno" → "Vneseno/vneseno" (also inconsistent with pippki-incorrect-pw, which is correct).
-    - Source: `Failed to decode the file. Either it is not in PKCS #12 format, has been corrupted, or the password you entered was incorrect.`
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

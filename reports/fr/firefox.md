@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e59d51071942` |
+| **Generated** | 2026-08-25 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ad52f2a75880` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-24 @ `39e5663f3de7` |
+| **Previous run** | 2026-08-24 @ `e59d51071942` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 18,367 |
+| **Strings reviewed this run** | 0 of 18,367 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,13 +22,9 @@ Also for fr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `sidebar-callout-survey-productive-question` — `browser/browser/featureCallout.ftl` — Unbalanced markup in `sidebar-callout-survey-productive-question`
-    - Current: `Jusqu’à quel point êtes-vous d’accord ou non avec cette affirmation :</br> « Le panneau latéral de { -brand-short-name } m’aide à être plus productif·tive » ?`
-    - Source: `To what extent do you agree or disagree with this statement:<br/> “The { -brand-short-name } sidebar helps me be more productive”?`
-    - Suggest: `To what extent do you agree or disagree with this statement:<br/> “The { -brand-short-name } sidebar helps me be more productive”?`
-    - Tags must open and close in the same order as en-US.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

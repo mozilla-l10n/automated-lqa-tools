@@ -162,7 +162,7 @@
   "file": "browser/browser/aboutLogins.ftl",
   "first_seen": "2026-08-07",
   "impact": 1,
-  "last_seen": "2026-08-24",
+  "last_seen": "2026-08-25",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -214,7 +214,7 @@
   "file": "browser/browser/aboutPocket.ftl",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-08-24",
+  "last_seen": "2026-08-25",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -1148,7 +1148,7 @@
   "file": "browser/browser/backupSettings.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-24",
+  "last_seen": "2026-08-25",
   "locale": "ru",
   "origin": {},
   "rationale": "In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -1170,7 +1170,7 @@
   "file": "browser/browser/backupSettings.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-24",
+  "last_seen": "2026-08-25",
   "locale": "ru",
   "origin": {},
   "rationale": "In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -1322,7 +1322,7 @@
   "file": "browser/browser/backupSettings.ftl",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-08-24",
+  "last_seen": "2026-08-25",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -2960,7 +2960,7 @@
   "file": "browser/browser/genai.ftl",
   "first_seen": "2026-08-07",
   "impact": 1,
-  "last_seen": "2026-08-24",
+  "last_seen": "2026-08-25",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -4772,6 +4772,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "C",
+  "check": "llm",
+  "current": "Удалите одни, чтобы добавить другие.",
+  "dismissed_because": "",
+  "fid": "d528b23746cd",
+  "file": "browser/browser/newtab/newtab.ftl",
+  "first_seen": "2026-08-25",
+  "impact": 3,
+  "last_seen": "2026-08-25",
+  "locale": "ru",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The en-US says \"Remove one to add another\" — singular in every plural branch; \"одни\"/\"другие\" is not valid Russian here regardless of the $limit value.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "7778e043",
+  "string_id": "newtab-stocks-watchlist-full",
+  "suggest": "Удалите одну, чтобы добавить другую.",
+  "summary": "Plural forms use ungrammatical \"Удалите одни, чтобы добавить другие\" instead of the singular \"одну/другую\".",
+  "suppressed_by": ""
+ },
+ {
   "category": "B",
   "check": "legacy",
   "current": "",
@@ -5873,7 +5897,7 @@
   "file": "browser/browser/policies/policies-descriptions.ftl",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-08-24",
+  "last_seen": "2026-08-25",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -6252,6 +6276,30 @@
   "string_id": "fonts-langgroup-trad-chinese",
   "suggest": "(Тайвань)",
   "summary": "en-US \"Traditional Chinese (Taiwan)\"; without the qualifier it is indistinguishable from -trad-chinese-hk, which does keep \"(Гонконг)\" → Suggest: add (Тайвань)",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Никогда не сохранять адрес",
+  "dismissed_because": "",
+  "fid": "039f05f86566",
+  "file": "browser/browser/preferences/formAutofill.ftl",
+  "first_seen": "2026-08-25",
+  "impact": 2,
+  "last_seen": "2026-08-25",
+  "locale": "ru",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "en-US \"Never save addresses\" is plural; the option disables saving of all addresses, not one address.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "6564ff44",
+  "string_id": "address-capture-never-save-addresses-button",
+  "suggest": "Никогда не сохранять адреса",
+  "summary": "Plural \"addresses\" rendered as singular \"адрес\".",
   "suppressed_by": ""
  },
  {
@@ -6818,8 +6866,8 @@
   },
   "rationale": "",
   "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
+  "resolved_on": "2026-08-25",
+  "status": "fixed",
   "string_hash": "18944053",
   "string_id": "containers-card-header2",
   "suggest": "таким образом",
@@ -7849,7 +7897,7 @@
   "file": "browser/browser/preferences/preferences.ftl",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-08-24",
+  "last_seen": "2026-08-25",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -9383,7 +9431,7 @@
   "file": "browser/browser/termsofuse.ftl",
   "first_seen": "2026-08-07",
   "impact": 1,
-  "last_seen": "2026-08-24",
+  "last_seen": "2026-08-25",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -10917,7 +10965,7 @@
   "file": "devtools/client/debugger.properties",
   "first_seen": "2026-08-07",
   "impact": 3,
-  "last_seen": "2026-08-24",
+  "last_seen": "2026-08-25",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -14523,6 +14571,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "частично выбрано",
+  "dismissed_because": "",
+  "fid": "acdb6580e937",
+  "file": "dom/chrome/accessibility/AccessFu.properties",
+  "first_seen": "2026-08-25",
+  "impact": 2,
+  "last_seen": "2026-08-25",
+  "locale": "ru",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The accessibility state \"checked\" refers to a checkbox being ticked; \"выбрано\" corresponds to \"selected\", a distinct accessibility state.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "9cdfaf48",
+  "string_id": "statePartiallyChecked",
+  "suggest": "частично отмечено",
+  "summary": "\"partially checked\" (checkbox state) translated as \"частично выбрано\" (selected) instead of \"отмечено\".",
+  "suppressed_by": ""
+ },
+ {
   "category": "E",
   "check": "typography",
   "current": "Поддержка визуализации \"stretched\" операторов MathML с использованием шрифтов STIXGeneral устарела и может быть удалена в будущем. Для получения сведений о новых шрифтах, поддержка которых будет продолжена, обратитесь к %S",
@@ -14531,7 +14603,7 @@
   "file": "dom/chrome/dom/dom.properties",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-08-24",
+  "last_seen": "2026-08-25",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -19549,7 +19621,7 @@
   "file": "toolkit/toolkit/pdfviewer/viewer.ftl",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-08-24",
+  "last_seen": "2026-08-25",
   "locale": "ru",
   "origin": {
    "report": "legacy",

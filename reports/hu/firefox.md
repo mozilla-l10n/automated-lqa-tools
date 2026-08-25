@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e59d51071942` |
+| **Generated** | 2026-08-25 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ad52f2a75880` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-24 @ `39e5663f3de7` |
+| **Previous run** | 2026-08-24 @ `e59d51071942` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 41 of 18,165 |
+| **Strings reviewed this run** | 2 of 18,167 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,23 +18,9 @@ Also for hu: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `containers-site-container-label` — `browser/browser/preferences/containers.ftl` — Singular "Container" label rendered as plural "Konténerek".
-    - Current: `label: Konténerek`
-    - Source: `label: Container`
-    - Suggest: `label: Konténer`
-    - The en-US source is the singular field label "Container" for a single-select field; the Hungarian uses the plural form.
-- `newtab-recent-searches-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Recent searches options" mistranslated as "recent search options" (options of the widget, not options for searching).
-    - Current: `aria-label: Legutóbbi keresési lehetőségek`
-    - Source: `aria-label: Recent searches options`
-    - Suggest: `aria-label: Legutóbbi keresések beállításai`
-    - The source names the options/menu of the "Recent searches" widget; the Hungarian reads as "recent search possibilities", changing the meaning.
-- `containers-site-invalid-error` — `browser/browser/preferences/containers.ftl` — "website" rendered as "weboldalt" while the surrounding container strings consistently use "webhely".
-    - Current: `Adjon meg egy érvényes, biztonságos weboldalt`
-    - Source: `Enter a valid, secure website`
-    - Suggest: `Adjon meg egy érvényes, biztonságos webhelyet`
-    - The same en-US term "website" is translated "webhely" in containers-site-label, containers-site-window and containers-site-duplicate-error; this string breaks that consistency.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -59,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,165 |
-| Missing strings | 15 |
+| Strings | 18,167 |
+| Missing strings | 13 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -76,9 +62,9 @@ _Nothing retired._
 
 ### Completeness
 
-**15 strings** are not translated yet, concentrated in:
+**13 strings** are not translated yet, concentrated in:
 
-- `toolkit/toolkit/neterror/netError.ftl` — 6
+- `toolkit/toolkit/neterror/netError.ftl` — 4
 - `devtools/client/inspector.ftl` — 4
 - `toolkit/toolkit/global/theme-picker.ftl` — 2
 - `toolkit/toolkit/about/aboutNetworking.ftl` — 1
