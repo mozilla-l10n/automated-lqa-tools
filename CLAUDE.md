@@ -49,7 +49,18 @@ Concretely, when adding or changing a check:
    on one locale.
 3. **Never blame a locale for its source.** If en-US has the same straight
    quote, the same typo, the same odd wording, it is not the locale's
-   defect.
+   defect. And never review a string whose source you have not got. Telling
+   the reviewer "no source string" does not stop it: it reconstructs the
+   English from the id and reports the translation against its own guess.
+   Eleven German findings were raised that way in the ten `enterprise/`
+   files, which are synced from another repository and have no en-US side in
+   this one — including a demand that "Guten Morgen" be an update title. So
+   `snapshot.build` leaves a string with no counterpart out of the corpus
+   entirely, `llm_baseline.comparable_files` keeps its file out of every
+   partition, and `resolve` withdraws the model findings already raised on
+   one. The report names the files and says outright that nothing was looked
+   for in them — the deterministic checks that need no reference still run,
+   and their findings stand.
 4. **Add the case to `selftest.py`.** Each suite pins real defects that
    exist in the repositories today and real conventions that must stay
    silent. A defect fixed upstream moves to `FIXED_UPSTREAM` rather than

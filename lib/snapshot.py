@@ -20,11 +20,12 @@ On disk it is grouped by file, one string per line::
      }
     }
 
-The value is ``"<locale-hash> <source-hash> <source-comment-hash>"``. The
-source hash is omitted for strings with no en-US counterpart, and the third
-field only appears where the source carries a developer comment. Grouping by
-file keeps the payload around 1 MB per locale and makes git diffs read as
-"these strings moved".
+The value is ``"<locale-hash> <source-hash> <source-comment-hash>"``, where
+the third field only appears where the source carries a developer comment.
+Grouping by file keeps the payload around 1 MB per locale and makes git
+diffs read as "these strings moved". Older snapshots also hold entries with
+no source hash at all, from before :func:`build` stopped writing them, so
+:func:`_split` still reads that shape.
 
 The comment field is compared only when **both** snapshots have one, so
 adding it did not invalidate every stored snapshot and force a re-review of
@@ -69,16 +70,34 @@ class Delta:
 
 
 def build(l10n: dict, source: dict) -> dict[str, dict[str, str]]:
-    """Snapshot of the current trees, keyed file -> id -> hashes."""
+    """Snapshot of the reviewable corpus, keyed file -> id -> hashes.
+
+    A string with no en-US counterpart is left out entirely. The snapshot is
+    what the incremental delta is computed from, and every review is a
+    comparison against en-US -- so a string with no source is not a string
+    this pipeline can review. Recorded here it read as new on the run that
+    first saw it and went to the model with no reference, which does not stop
+    the model: it infers the English from the id and reports the translation
+    against its own guess. Eleven German findings were raised that way, all
+    of them in the ten ``enterprise/`` files that are synced from a separate
+    repository and have no en-US side in this one -- including one demanding
+    that "Guten Morgen" be an update title.
+
+    Leaving them out means they are never offered, and nothing about them is
+    hidden: `check_completeness` counts them as locale-only or obsolete and
+    the report lists the files. A string that later gains an en-US
+    counterpart reads as new then, which is exactly when it becomes
+    reviewable.
+    """
     snap: dict[str, dict[str, str]] = {}
     for (file, mid), msg in l10n.items():
         src = source.get((file, mid))
-        value = msg.hash()
-        if src is not None:
-            value = f"{value} {src.hash()}"
-            context = src.context_hash()
-            if context:
-                value = f"{value} {context}"
+        if src is None:
+            continue
+        value = f"{msg.hash()} {src.hash()}"
+        context = src.context_hash()
+        if context:
+            value = f"{value} {context}"
         snap.setdefault(file, {})[mid] = value
     return snap
 

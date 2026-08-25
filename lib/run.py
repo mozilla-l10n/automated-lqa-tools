@@ -298,6 +298,10 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
         stored, l10n, delta_keys, today(), rerunnable, still_raised,
         recheck=args.recheck,
         still_raised_loose={f.rekey for f in check_findings},
+        # Strings the reviewer is no longer shown, because there is no en-US
+        # to show beside them. Anything it raised about one was raised
+        # against an English nobody had read.
+        unreviewable={k for k in l10n if k not in source},
     )
     if args.recheck:
         log(f"  re-read {sum(1 for f in stored if f.is_open) + len(resolved['fixed'])} "

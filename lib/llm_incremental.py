@@ -58,6 +58,12 @@ def render_batch(keys, l10n, source, keep_identical: bool = False) -> str:
     the prompt: an identical value is a completeness gap, and having the
     model rediscover that on every run is pointless.
 
+    A string with **no** source is dropped too, and unconditionally. There is
+    nothing to review it against, and saying so in the block did not stop the
+    model reviewing it anyway -- it reconstructed the English from the string
+    id and criticised the translation against that. `review` filters these
+    out before batching; this is the guard for any other caller.
+
     For a variant of the source language that rule inverts. Most of en-GB is
     identical to en-US and correct, and the defect worth finding is a string
     that should have diverged and did not -- so ``keep_identical`` keeps
@@ -69,17 +75,16 @@ def render_batch(keys, l10n, source, keep_identical: bool = False) -> str:
         if msg is None:
             continue
         src = source.get(key)
-        identical = src is not None and msg.text().strip() == src.text().strip()
+        if src is None:
+            continue
+        identical = msg.text().strip() == src.text().strip()
         if identical and not keep_identical:
             continue
         block = [f"### {msg.id}", f"file: {msg.file}"]
         if msg.comment:
             comment = "\n".join(f"  {line}" for line in msg.comment.splitlines())
             block.append(f"developer comment:\n{comment}")
-        if src is not None:
-            block.append(f"source: {src.text()}")
-        else:
-            block.append("source: (no source string; locale-only)")
+        block.append(f"source: {src.text()}")
         block.append(f"target: {msg.text()}")
         if identical:
             block.append("note: identical to the source string")
@@ -170,6 +175,20 @@ def review(project, locale, keys, l10n, source, log=print) -> tuple[list[Finding
     progress = Progress()
     if not keys:
         return [], usage, progress
+
+    # Filtered here, not in `render_batch`: a batch that renders empty is
+    # counted as reviewed, and that shortcut means "every string in it is
+    # identical to its source", which is a reviewed answer. A string with no
+    # en-US counterpart has not been reviewed and never can be, so it must
+    # not be marked as read -- it is out of scope, not clean. The batched
+    # baseline reaches this with `sorted(l10n)`, so the whole locale-only
+    # part of a tree arrives here in one go.
+    unreviewable = [k for k in keys if k not in source]
+    if unreviewable:
+        log(f"    skipping {len(unreviewable)} string(s) with no en-US counterpart")
+        keys = [k for k in keys if k in source]
+        if not keys:
+            return [], usage, progress
 
     cfg = project.llm
     tool = _schema(project)

@@ -148,6 +148,7 @@ def _health_table(h) -> str:
         f"| Missing strings | {h.missing:,} |",
         f"| Obsolete strings | {h.obsolete:,} |",
         f"| Files absent from the locale | {len(h.missing_files)} |",
+        f"| Files with no en-US counterpart | {len(h.locale_only_files)} |",
         f"| Fluent / properties syntax errors | {len(h.syntax_errors)} |",
         f"| Reference files that did not parse | {len(h.source_errors)} |",
     ]
@@ -342,6 +343,24 @@ def render(locale, meta, health, findings, systemic, delta_report, counts_conv, 
             "### Syntax errors",
             "",
             "\n".join(f"- `{e}`" for e in health.syntax_errors[:20]),
+            "",
+        ]
+
+    if health.locale_only_files:
+        # Same shape as the unparseable-reference section below, and for the
+        # same reason: no comparison against en-US was possible, so silence
+        # about these files is absence of review, not absence of defects.
+        lines += [
+            "### Files with no en-US counterpart",
+            "",
+            "\n".join(f"- `{ctx.path(f)}`" for f in health.locale_only_files[:20]),
+            "",
+            f"_{health.locale_only:,} strings. These files exist in the locale "
+            "tree but not in the en-US reference — they are maintained "
+            "elsewhere. The model review is a comparison against en-US, so it "
+            "skips them entirely; only the checks that need no reference ran. "
+            "Nothing reported from these files means nothing was looked for, "
+            "not that they are clean._",
             "",
         ]
 

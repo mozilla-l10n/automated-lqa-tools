@@ -60,8 +60,9 @@ DEFAULT_PARTITIONS = [
 ]
 
 # Every file must land in exactly one partition. Anything the patterns above
-# do not claim -- browser/chrome/*.properties, browser/browser/enterprise/,
-# locale-only files -- goes here rather than being silently skipped.
+# do not claim -- browser/chrome/*.properties and the like -- goes here
+# rather than being silently skipped. Files with no en-US counterpart never
+# reach the partitioner at all; `review` drops them first.
 CATCHALL = "other"
 
 INSTRUCTIONS = """\
@@ -117,6 +118,30 @@ def _rules(project, locale: str) -> str:
         locale=locale,
         source_locale=project.variant_of(locale) or "en-US",
         conventions=conventions,
+    )
+
+
+def comparable_files(trees) -> tuple[list[str] | None, list[str]]:
+    """The localized files an agent can review, and the ones it cannot.
+
+    The instructions tell the agent to read each file "and the en-US file at
+    the same relative path". Where there is no file at that path -- Firefox's
+    ten ``enterprise/`` files are synced from a separate repository and have
+    no en-US side in this one -- the agent does not stop: it infers the
+    English from the string ids and reviews the translation against that.
+    Eleven German findings were raised that way through the incremental
+    reviewer, which had the same hole.
+
+    Returns ``(None, [])`` when there is nothing to narrow, so the caller
+    walks the tree as before. `check_completeness` reports what is dropped.
+    """
+    if not trees or not trees.l10n_files:
+        return None, []
+    if not trees.source_files:
+        return sorted(trees.l10n_files), []
+    return (
+        sorted(trees.l10n_files & trees.source_files),
+        sorted(trees.l10n_files - trees.source_files),
     )
 
 
@@ -339,9 +364,14 @@ def review(project, locale, l10n_root, source_root, l10n, trees=None, only=None,
 
     configured = project.data.get("partitions")
     locale_paths = dict(trees.locale_paths) if trees else {}
+    files, skipped = comparable_files(trees)
+    if skipped:
+        log(f"    skipping {len(skipped)} file(s) with no en-US counterpart: "
+            + ", ".join(skipped[:5])
+            + (f" …and {len(skipped) - 5} more" if len(skipped) > 5 else ""))
     buckets = partition_files(
         l10n_root, tuple(project.extensions),
-        files=sorted(trees.l10n_files) if trees and trees.l10n_files else None,
+        files=files,
         partitions=[(p["name"], p["paths"]) for p in configured] if configured else None,
     )
     if only:

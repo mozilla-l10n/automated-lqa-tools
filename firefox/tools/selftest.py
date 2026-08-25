@@ -43,7 +43,6 @@ MUST_FIND = [
     # real grammatical agreement rather than a one-versus-many choice.
     ("pl", "plurals", "pdfjs-editor-comments-sidebar-title"),
     ("sl", "term_params", "firefox-relay-must-login-to-fxa"),
-    ("de", "markup", "about-logins-import-dialog-items-no-change2"),
 ]
 
 FIXED_UPSTREAM = [
@@ -58,6 +57,9 @@ FIXED_UPSTREAM = [
     ("nl", "markup", "genai-settings-chat-gemini-links"),
     ("nl", "markup", "about-logins-import-dialog-items-no-change2"),
     ("nl", "markup", "cfr-doorhanger-milestone-heading2"),
+    # The German team closed the `</span >` in both plural variants; the run
+    # of 2026-08-25 reported it fixed.
+    ("de", "markup", "about-logins-import-dialog-items-no-change2"),
 ]
 
 # Correct localization that earlier versions of these checks misread. Each
@@ -466,11 +468,17 @@ def run(l10n_dir, source_dir, project) -> int:
     class _Msg:
         file, id, comment = "a.ftl", "s", ""
 
+        def __init__(self, text="vecchio"):
+            self._text = text
+
         def text(self):
-            return "vecchio"
+            return self._text
 
         def hash(self):
             return "h"
+
+        def context_hash(self):
+            return ""
 
     tree = {("a.ftl", "s"): _Msg()}
     got, bad, _ok = _llm.collect(
@@ -507,9 +515,10 @@ def run(l10n_dir, source_dir, project) -> int:
         keys = [("a.ftl", "s")] * 0 + [(f"f{i}.ftl", f"s{i}") for i in range(5)]
         fake_tree = {k: _Msg() for k in keys}
         fake_tree[("a.ftl", "s")] = _Msg()  # what the fake response reports
+        fake_src = {k: _Msg("old") for k in keys}
         project.data["llm"] = dict(project.data.get("llm", {}), batch_size=1)
         found, usage, prog = _llm.review(
-            project, "it", keys, fake_tree, {}, log=lambda *a: None)
+            project, "it", keys, fake_tree, fake_src, log=lambda *a: None)
     finally:
         _llm._call = saved_call
         project.data["llm"] = saved_llm
@@ -524,6 +533,78 @@ def run(l10n_dir, source_dir, project) -> int:
           "snapshot cannot mark the rest as seen")
     check("batch 3 of 5" in prog.stopped,
           "the run records where it stopped, not just that it did")
+
+    suite.section("A string with no en-US counterpart is not reviewable")
+
+    # Eleven German findings were raised against the ten `enterprise/` files,
+    # which are synced from a separate repository and have no en-US side in
+    # this one. The reviewer was handed the translation and the words "no
+    # source string", inferred the English from the string id, and reported
+    # the translation against its own guess -- including that "Guten Morgen"
+    # should be an update title.
+    lone = ("browser/browser/enterprise/felt.ftl", "felt-updates-title")
+    paired = ("browser/browser/appmenu.ftl", "appmenu-new-tab")
+    lone_tree = {lone: _Msg("Guten Morgen"), paired: _Msg("Neuer Tab")}
+    lone_src = {paired: _Msg("New tab")}
+    body = _llm.render_batch([lone, paired], lone_tree, lone_src)
+    check("Guten Morgen" not in body,
+          "a string with no source is not put in front of the model")
+    check("Neuer Tab" in body, "while its neighbour with a source still is")
+
+    import snapshot as _snap
+    snap = _snap.build(lone_tree, lone_src)
+    check(lone[0] not in snap,
+          "and it is not in the snapshot, so no delta ever offers it")
+    check(snap.get(paired[0], {}).get(paired[1]),
+          "a string with a source is snapshotted as before")
+
+    # Not counted as reviewed either: the empty-batch shortcut means "every
+    # string here is identical to its source", which is an answer. "There
+    # was nothing to compare against" is not.
+    saved_call, saved_key = _llm._call, os.environ.get("ANTHROPIC_API_KEY")
+    _llm._call = lambda *a, **kw: (_ for _ in ()).throw(
+        AssertionError("the model must not be called at all"))
+    os.environ["ANTHROPIC_API_KEY"] = "test"
+    try:
+        _found, _usage, prog = _llm.review(
+            project, "de", [lone], lone_tree, lone_src, log=lambda *a: None)
+    finally:
+        _llm._call = saved_call
+        if saved_key is None:
+            os.environ.pop("ANTHROPIC_API_KEY", None)
+        else:
+            os.environ["ANTHROPIC_API_KEY"] = saved_key
+    check(not prog.reviewed and not prog.trusted,
+          "an unreviewable string is not recorded as read, so reviewer "
+          "silence about it closes nothing")
+
+    suite.section("Locale-only files are reported, not reviewed")
+    de_health, de_found, de_trees = results["de"]
+    only = de_trees.l10n_files - de_trees.source_files
+    check(bool(only), f"de has files with no en-US counterpart ({len(only)})")
+    check(set(de_health.locale_only_files) == only,
+          "the health check names them rather than silently dropping them")
+    check(de_health.locale_only > 0,
+          f"and counts their strings ({de_health.locale_only})")
+    check("Files with no en-US counterpart" in report_mod._health_table(de_health),
+          "the report says how many there are")
+    # `obsolete` means en-US dropped a string the locale still has. A file
+    # en-US never had at all is a different thing and must not inflate it.
+    lone_strings = sum(1 for k in de_trees.l10n
+                       if k not in de_trees.source and k[0] in only)
+    check(de_health.obsolete + lone_strings
+          == sum(1 for k in de_trees.l10n if k not in de_trees.source)
+          and de_health.obsolete < lone_strings,
+          "they are counted apart from obsolete strings, not as them")
+
+    import llm_baseline as _bl
+    reviewable, dropped = _bl.comparable_files(de_trees)
+    check(set(dropped) == only and not (set(reviewable) & only),
+          "and the baseline hands the agent no file it cannot compare")
+    buckets = _bl.partition_files(de_trees.root, tuple(project.extensions),
+                                  files=reviewable)
+    check(not (set(sum(buckets.values(), [])) & only),
+          "so no partition claims one either")
 
     # Rewording a check's own message used to retire its real findings.
     # The fid folds in the summary, so the stored finding looked
@@ -565,6 +646,36 @@ def run(l10n_dir, source_dir, project) -> int:
     )
     check(gone.status == "withdrawn",
           "while a check that really did stop raising it still withdraws it")
+
+    suite.section("A finding raised against no source has a route out")
+
+    # The eleven German findings already in the backlog have to have a route
+    # out, and it is `withdrawn`: the reviewer will never be offered those
+    # strings again, so it can neither repeat nor retract itself, and the
+    # string never moved. Not `fixed` -- nobody fixed anything.
+    invented = Finding(locale="de", file=lone[0], string_id=lone[1],
+                       category="B", check="llm", summary="not an update title",
+                       current="Guten Morgen", string_hash="same")
+    inherited = Finding(locale="de", file=lone[0], string_id=lone[1],
+                        category="E", check="typography",
+                        summary="three dots", string_hash="same")
+    imported = Finding(locale="de", file=lone[0], string_id=lone[1],
+                       category="B", check="legacy", summary="from the review",
+                       string_hash="same")
+    buckets = findings_mod.resolve(
+        [invented, inherited, imported], {lone: _H()}, set(), "2026-08-25",
+        rerunnable={"typography"}, still_raised={inherited.fid},
+        still_raised_loose={inherited.rekey}, unreviewable={lone},
+    )
+    check(invented.status == "withdrawn" and buckets["withdrawn"] == [invented],
+          "a model finding on a string with no en-US counterpart is withdrawn")
+    check(invented.status != "fixed", "and never counted as fixed")
+    check(inherited.status == "open",
+          "a deterministic finding on the same string is left alone -- that "
+          "check ran and speaks for itself")
+    check(imported.status == "open",
+          "so is an imported one: a person may have read an English this "
+          "tree does not carry")
 
     selftest_lib.deliberate_flag_wiring(suite, project)
 

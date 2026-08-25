@@ -67,6 +67,14 @@ class Health:
     obsolete: int = 0
     missing_files: list[str] = field(default_factory=list)
     locale_only_files: list[str] = field(default_factory=list)
+    # Strings in those files. Counted apart from `obsolete` because they are
+    # a different situation: an obsolete string is one en-US dropped, a
+    # locale-only file was never in en-US at all -- Firefox's
+    # `browser/browser/enterprise/` is synced from a separate repository. No
+    # comparison against en-US is possible for either, so neither is offered
+    # to the model, and the report has to say so rather than let the silence
+    # read as "reviewed and clean".
+    locale_only: int = 0
     untranslated_files: list[str] = field(default_factory=list)
     syntax_errors: list[str] = field(default_factory=list)
     source_errors: list[str] = field(default_factory=list)
@@ -252,8 +260,13 @@ def check_completeness(project, locale, trees) -> Health:
     # broken reference, not 18,000 obsolete strings, so those files are left
     # out of the count and reported as what they are.
     unparsed = set(getattr(trees, "source_errors", {}))
+    only = set(h.locale_only_files)
     for key in l10n:
-        if key not in source and key[0] in s_files and key[0] not in unparsed:
+        if key in source:
+            continue
+        if key[0] in only:
+            h.locale_only += 1
+        elif key[0] in s_files and key[0] not in unparsed:
             h.obsolete += 1
 
     # A file that exists but whose every string is byte-identical to en-US

@@ -447,6 +447,7 @@ def resolve(
     still_raised: set[str] | None = None,
     recheck: bool = False,
     still_raised_loose: set[tuple] | None = None,
+    unreviewable: set[tuple] | None = None,
 ) -> dict[str, list[Finding]]:
     """Update the status of stored findings against the current tree.
 
@@ -465,6 +466,18 @@ def resolve(
     checkable is moved to ``needs-recheck`` rather than being silently
     closed -- the honest answer is "somebody has to look again", not
     "fixed".
+
+    ``unreviewable`` is the strings with no en-US counterpart. A model
+    finding on one of those was raised against a source nobody had read --
+    the reviewer was shown the translation alone and supplied the English
+    itself -- and it is no longer offered the string, so it can never
+    re-raise or retract it. That is withdrawn, in the exact sense the word
+    has here: the check changed its mind while the string never moved.
+    Calling it fixed would credit the team with work they did not do, and
+    leaving it open would keep eleven invented German defects in the backlog
+    with no route out. A **deterministic** finding on the same string is
+    untouched: those checks measure the locale against itself, they ran over
+    the whole tree, and they still speak for themselves.
     """
     rerunnable = rerunnable or set()
     still_raised = still_raised or set()
@@ -474,6 +487,7 @@ def resolve(
     # place, the defect would leave the backlog without anyone deciding it
     # had. Two Czech placeholder defects went this way in a dry run.
     still_raised_loose = still_raised_loose or set()
+    unreviewable = unreviewable or set()
     buckets: dict[str, list[Finding]] = {
         "fixed": [], "obsolete": [], "recheck": [], "withdrawn": [],
     }
@@ -486,6 +500,15 @@ def resolve(
             f.status = "obsolete"
             f.resolved_on = today
             buckets["obsolete"].append(f)
+            continue
+        # Only the model's own. An imported finding (`legacy`) was raised by
+        # a person who may well have read the English somewhere this tree
+        # does not carry, and a deterministic finding belongs to a check that
+        # just ran; neither is this pipeline's guess to retract.
+        if f.check == "llm" and f.key in unreviewable:
+            f.status = "withdrawn"
+            f.resolved_on = today
+            buckets["withdrawn"].append(f)
             continue
 
         if f.check in rerunnable:
