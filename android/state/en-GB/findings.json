@@ -592,12 +592,12 @@
   "rationale": "The source refers to the Sync feature (sync authentication per the developer comment); \"sync\" is standard in en-GB Firefox UI and is not an Americanism requiring adaptation.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "4b85180d",
   "string_id": "bookmark_empty_list_guest_cta",
   "suggest": "Sign in to sync",
   "summary": "\"sync\" is the Firefox Sync feature name and should not be expanded to \"synchronise\".",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-expanded-form-accepted"
  },
  {
   "category": "D",
@@ -712,12 +712,12 @@
   "rationale": "\"Synced\" is the product term tied to Firefox Sync and is used consistently in en-GB; \"synchronised\" is not a required British adaptation and introduces terminology inconsistency.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "8838b830",
   "string_id": "delete_history_prompt_body_2",
   "suggest": "synced",
   "summary": "\"synced\" was expanded to \"synchronised\", departing from the Sync feature terminology used elsewhere in the locale.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-expanded-form-accepted"
  },
  {
   "category": "B",
@@ -1048,12 +1048,12 @@
   "rationale": "\"Sync\"/\"syncing\" is the established Firefox feature term (Firefox Sync) and is identical in en-GB; there is no British spelling requirement to replace it with \"synchronising\".",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "a76ec912",
   "string_id": "nova_onboarding_sync_button",
   "suggest": "Start syncing",
   "summary": "\"Start syncing\" was expanded to \"Start synchronising\", which is not a British-English adaptation and diverges from the product term \"sync\" used elsewhere.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-expanded-form-accepted"
  },
  {
   "category": "D",
@@ -1072,12 +1072,12 @@
   "rationale": "en-GB keeps the product term \"Sync\" untranslated in neighbouring strings (\"Sync is on\", \"Sync everywhere you use Firefox\"); changing the verb to \"synchronising\" here is an over-correction and inconsistent.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "a76ec912",
   "string_id": "onboarding_redesign_sync_positive_button",
   "suggest": "Start syncing",
   "summary": "\"Start syncing\" was expanded to \"Start synchronising\", inconsistent with the locale's use of \"Sync\"/\"syncing\" elsewhere.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-expanded-form-accepted"
  },
  {
   "category": "D",
@@ -1312,12 +1312,12 @@
   "rationale": "\"Synced tabs\" is the established Firefox feature name (see the sibling synced tabs strings, which keep \"synced\"); expanding it to \"synchronised\" is an unnecessary and inconsistent change, not a British-spelling requirement.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "d60ee1b7",
   "string_id": "tab_manager_empty_synced_tabs_page_description",
   "suggest": "Sign in to manage synced tabs from all your devices.",
   "summary": "\"synced tabs\" is rendered as \"synchronised tabs\", departing from the product term used elsewhere in the locale.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-expanded-form-accepted"
  },
  {
   "category": "D",
@@ -1336,12 +1336,12 @@
   "rationale": "\"Synced\" refers to the Firefox Sync feature and is the standard term in en-GB Firefox; expanding it to \"Synchronised\" is an over-correction that breaks consistency with other synced-tabs strings.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "9ab2fcc8",
   "string_id": "tabs_header_synced_tabs_counter_title",
   "suggest": "Synced Tabs Open: %1$s. Tap to switch tabs.",
   "summary": "\"Synced\" was changed to \"Synchronised\", inconsistent with the Sync feature terminology used elsewhere in en-GB.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-expanded-form-accepted"
  },
  {
   "category": "D",

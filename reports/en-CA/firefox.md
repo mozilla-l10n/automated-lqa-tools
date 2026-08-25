@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e64b3ff936c9` |
+| **Generated** | 2026-08-25 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `33f01fa45f4e` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9497278a786f` |
 | **Previous run** | 2026-08-24 @ `e64b3ff936c9` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,139 |
+| **Strings reviewed this run** | 77 of 18,216 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -44,11 +44,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 360 |
-| Strings | 18,139 |
-| Missing strings | 77 |
+| Files | 362 |
+| Strings | 18,216 |
+| Missing strings | 0 |
 | Obsolete strings | 6 |
-| Files absent from the locale | 2 |
+| Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
@@ -62,27 +62,7 @@ _Nothing retired._
 
 ### Completeness
 
-**77 strings** are not translated yet, concentrated in:
-
-- `browser/browser/newtab/newtab.ftl` — 29
-- `toolkit/services/aboutSyncLog.ftl` — 26
-- `browser/browser/preferences/preferences.ftl` — 5
-- `browser/browser/appmenu.ftl` — 3
-- `browser/browser/ipProtection.ftl` — 2
-- `browser/browser/sharePanel.ftl` — 2
-- `browser/browser/preferences/formAutofill.ftl` — 2
-- `devtools/client/debugger.properties` — 2
-- `toolkit/toolkit/pdfviewer/embedFallback.ftl` — 2
-- `browser/browser/profiles.ftl` — 1
-- `dom/chrome/accessibility/AccessFu.properties` — 1
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 1
-
-**Files absent from the locale:**
-
-- `toolkit/services/aboutSyncLog.ftl`
-- `toolkit/toolkit/pdfviewer/embedFallback.ftl`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -90,9 +70,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 755, `curly-single` 68, `straight-double` 25 | **curly-double** |
-| apostrophe | `typographic` 1115, `straight` 4 | **typographic** |
-| ellipsis | `char` 460 | **char** |
+| quotes | `curly-double` 756, `curly-single` 68, `straight-double` 25 | **curly-double** |
+| apostrophe | `typographic` 1119, `straight` 4 | **typographic** |
+| ellipsis | `char` 461 | **char** |
 | dash | `em` 109, `en` 3 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 

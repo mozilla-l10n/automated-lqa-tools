@@ -26,3 +26,9 @@ written here is what the model is told to treat as correct._
   spellings coexisting in one file as an inconsistency.
 - "Post Code" is the deliberate rendering of the en-US "Postal Code". Do not
   flag the spacing or capitalisation, and do not suggest "Postcode".
+- Spelling out the en-US "sync" family is the house form: "synchronise",
+  "synchronised", "synchronising", "synchronisation" (and the -ize/-ized
+  spellings) are all acceptable renderings of "sync", "synced", "syncing",
+  "sync'd". Never flag the expansion as a mistranslation or as added words,
+  never suggest shortening it back to "sync", and do not report the short and
+  spelled-out forms coexisting in one file as an inconsistency.

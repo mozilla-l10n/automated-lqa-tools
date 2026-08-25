@@ -40,12 +40,12 @@
   "rationale": "\"Synced\" is the standard product term tied to Firefox Sync and is used elsewhere in en-GB; replacing it with \"synchronised\" is an over-correction of a technical term.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "ce060e09",
   "string_id": "CreditCard.SnackBar.RemoveCardSublabel.v112",
   "suggest": "This will remove the card from all of your synced devices.",
   "summary": "\"synced\" was expanded to \"synchronised\", departing from the Firefox Sync terminology used consistently in the locale.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-expanded-form-accepted"
  },
  {
   "category": "D",
@@ -64,12 +64,12 @@
   "rationale": "\"Synced\" is standard in British English for the Firefox Sync feature and is not an Americanism requiring adaptation; expanding it is an over-correction and inconsistent with the Sync product terminology.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "4c30677d",
   "string_id": "Bookmarks.EmptyState.Root.Body.v135",
   "suggest": "other synced devices",
   "summary": "\"synced\" was over-corrected to \"synchronised\"; en-GB uses \"synced devices\" as the standard term.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-expanded-form-accepted"
  },
  {
   "category": "D",
@@ -88,12 +88,12 @@
   "rationale": "\"Synced\" is standard in British English and refers to the Firefox Sync feature; expanding it is an over-correction and inconsistent with the product terminology.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "302e201b",
   "string_id": "Bookmarks.EmptyState.Root.BodySignedOut.v135",
   "suggest": "other synced devices",
   "summary": "\"synced\" was over-corrected to \"synchronised\"; en-GB uses \"synced devices\" as the standard term.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-expanded-form-accepted"
  },
  {
   "category": "B",
@@ -112,12 +112,12 @@
   "rationale": "The developer comment identifies \"Sync\" as the capitalised feature name (Mozilla Account sync); en-GB uses the same brand term \"Sync\", so replacing it with \"Synchronise\" damages the product name.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "79eda9c6",
   "string_id": "Bookmarks.EmptyState.Root.ButtonTitle.v136",
   "suggest": "Sign in to Sync",
   "summary": "\"Sync\" is a Mozilla feature/product name and must not be expanded to \"Synchronise\".",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-expanded-form-accepted"
  },
  {
   "category": "D",
@@ -136,12 +136,12 @@
   "rationale": "\"Sync\" is Firefox's product terminology (Firefox Sync) and is standard in British English too; expanding it to \"synchronise\" is an over-correction and is inconsistent with other sync strings in the locale.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "a46ee793",
   "string_id": "LoginsList.NoLoginsFound.Description.v122",
   "suggest": "save or sync to %@",
   "summary": "\"sync\" has been changed to \"synchronise\", altering the established product term used elsewhere in the locale.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-expanded-form-accepted"
  },
  {
   "category": "D",
@@ -160,12 +160,12 @@
   "rationale": "\"Synced devices\" is the Firefox Sync product term and is used unchanged in British English; expanding it is an unnecessary over-correction and inconsistent with the rest of the locale.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "9c1cdf35",
   "string_id": "Addresses.EditAddress.Alert.Message.v129",
   "suggest": "all of your synced devices",
   "summary": "\"synced devices\" has been over-corrected to \"synchronised devices\".",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-expanded-form-accepted"
  },
  {
   "category": "D",
@@ -280,12 +280,12 @@
   "rationale": "Firefox Sync terminology (\"Sync\", \"syncing\") is retained in en-GB, e.g. FirefoxSync.strings toggles and the \"Settings > Sync Data\" menu; replacing it with \"synchronising\" is an inconsistent over-correction.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "c29ae369",
   "string_id": "ContextualHints.FirefoxHomepage.JumpBackIn.SyncedTab.v106",
   "suggest": "Your tabs are syncing!",
   "summary": "\"syncing\" was expanded to \"synchronising\", which departs from the product term \"Sync\" used consistently elsewhere in the locale.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-expanded-form-accepted"
  },
  {
   "category": "E",
@@ -376,12 +376,12 @@
   "rationale": "\"Sync\"/\"syncing\" is the established Firefox feature term in en-GB (Firefox Sync) and is not a US-only spelling; changing it to \"Synchronising\" departs from the product terminology and makes a button label substantially longer on a phone.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "50501996",
   "string_id": "Onboarding.Modern.BrandRefresh.Sync.SignIn.Action.v148",
   "suggest": "Start Syncing",
   "summary": "\"Start Syncing\" was expanded to \"Start Synchronising\", an over-correction of a standard product term that also lengthens a button label.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-expanded-form-accepted"
  },
  {
   "category": "B",
@@ -400,12 +400,12 @@
   "rationale": "\"Sync\" here is the Firefox Sync feature name/verb used in the product UI; en-GB uses \"Sync\" too. Replacing it with \"synchronise\" breaks the feature branding and reads unidiomatically.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "ab158e1b",
   "string_id": "Onboarding.Modern.Sync.Description.v145",
   "suggest": "more sync on any device",
   "summary": "The Sync feature name has been wrongly expanded to \"synchronise\", damaging the product feature name.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-expanded-form-accepted"
  },
  {
   "category": "B",
@@ -424,12 +424,12 @@
   "rationale": "\"Sync\" is the product feature name (Firefox Sync), retained in en-GB; expanding it to \"Synchronising\" mangles the brand term and lengthens a button label.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "50501996",
   "string_id": "Onboarding.Modern.Sync.SignIn.Action.v140",
   "suggest": "Start Syncing",
   "summary": "Button label replaces the Firefox Sync feature name with \"Synchronising\".",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-expanded-form-accepted"
  },
  {
   "category": "B",
@@ -448,12 +448,12 @@
   "rationale": "\"Sync\" is the product feature name (Firefox Sync), retained in en-GB; expanding it to \"Synchronising\" mangles the brand term and lengthens a button label.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "50501996",
   "string_id": "Onboarding.Modern.Sync.SignIn.Action.v145",
   "suggest": "Start Syncing",
   "summary": "Button label replaces the Firefox Sync feature name with \"Synchronising\".",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-expanded-form-accepted"
  },
  {
   "category": "B",
@@ -472,12 +472,12 @@
   "rationale": "\"Sync\" refers to the Firefox Sync feature, which keeps its name in en-GB; substituting \"Synchronise\" damages the product term.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "7d6e6971",
   "string_id": "Onboarding.Modern.TermsOfService.Subtitle.v140",
   "suggest": "Sync on all your devices",
   "summary": "\"Sync on all your devices\" rendered as \"Synchronise\", replacing the feature name.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-expanded-form-accepted"
  },
  {
   "category": "D",
@@ -496,12 +496,12 @@
   "rationale": "\"Synced\" is the standard product term for the Sync feature and is equally correct in British English; changing it to \"synchronised\" is an over-correction that breaks terminology consistency with the Sync onboarding page title/buttons.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "b2586aff",
   "string_id": "Onboarding.Sync.Description.v123",
   "suggest": "when you’re synced",
   "summary": "\"synced\" was needlessly expanded to \"synchronised\", departing from the Sync feature terminology used elsewhere.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-expanded-form-accepted"
  },
  {
   "category": "D",
@@ -592,12 +592,12 @@
   "rationale": "\"Sync\"/\"syncing\" is standard in en-GB Firefox and matches the \"Sync\" label kept elsewhere in this file; \"synchronising\" is an over-correction of a product term.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "215bdaa1",
   "string_id": "TabsTray.Sync.SyncTabsDisabled.v116",
   "suggest": "tab syncing",
   "summary": "\"tab syncing\" was needlessly expanded to \"tab synchronising\", inconsistent with the untranslated \"Sync\" feature name used elsewhere in the file.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-expanded-form-accepted"
  },
  {
   "category": "D",
@@ -616,12 +616,12 @@
   "rationale": "\"Sync\" is the Firefox feature/product name (see TabTray.TabsSelectorSyncedTabsTitle.v140 kept as \"Sync\" in the same file); expanding it to \"Synchronise\" is an over-correction and inconsistent within the locale.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "0ad12b18",
   "string_id": "TabsTray.SyncTabs.SyncTabsButton.Title.v119",
   "suggest": "Sync Tabs",
   "summary": "\"Sync Tabs\" was changed to \"Synchronise Tabs\", altering a Firefox feature name that en-GB does not translate.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-expanded-form-accepted"
  },
  {
   "category": "D",
@@ -784,12 +784,12 @@
   "rationale": "\"Synced tab\" is Firefox product terminology tied to the Sync feature and is retained in en-GB; expanding it to \"synchronised\" is an over-correction and inconsistent with other sync-related strings.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "21d7c53b",
   "string_id": "FirefoxHomepage.JumpBackIn.TabPickup.OpenTab.A11y.v106",
   "suggest": "Open synced tab",
   "summary": "\"synced\" was expanded to \"synchronised\", damaging the established Firefox Sync terminology used elsewhere in the locale.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-expanded-form-accepted"
  },
  {
   "category": "B",
@@ -904,12 +904,12 @@
   "rationale": "\"Synced\" is the product term tied to the Firefox Sync feature and is used unchanged in en-GB; \"Synchronised\" is an unnecessary expansion that also lengthens a panel title on a phone screen.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "0ecc3497",
   "string_id": "LibraryPanel.History.SyncedHistory.v100",
   "suggest": "Synced History",
   "summary": "\"Synced\" was expanded to \"Synchronised\", changing the established Firefox Sync feature terminology.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-expanded-form-accepted"
  },
  {
   "category": "B",
@@ -928,12 +928,12 @@
   "rationale": "The developer comment states this is the Firefox Sync button; \"Sync\" is the product feature name and is used unchanged in British English. \"Synchronise\" also makes the menu label longer on a phone.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "11a922f1",
   "string_id": "Menu.SyncAndSaveData.v103",
   "suggest": "Sync and Save Data",
   "summary": "\"Sync\" (referring to the Firefox Sync feature) has been needlessly expanded to \"Synchronise\", damaging the feature name and lengthening a menu label.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-expanded-form-accepted"
  },
  {
   "category": "D",
@@ -1096,12 +1096,12 @@
   "rationale": "The developer comment refers to the \"Firefox for iOS sync service\"; Sync is a brand/feature name and is kept as \"Sync\" in en-GB (see Settings.TroubleShootSync.Title referring to Sync issues).",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "11a922f1",
   "string_id": "Settings.Sync.ButtonTitle.v103",
   "suggest": "Sync and Save Data",
   "summary": "\"Sync\" as the Firefox Sync feature name was expanded to \"Synchronise\", damaging the product/feature name.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-expanded-form-accepted"
  },
  {
   "category": "B",
@@ -1120,12 +1120,12 @@
   "rationale": "The comment identifies this as the Firefox Sync account page; \"Sync\" is the feature name and should not be expanded, and it is left as \"Sync\" elsewhere in the locale.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "11a922f1",
   "string_id": "Settings.Sync.SignInView.Title.v103",
   "suggest": "Sync and Save Data",
   "summary": "Feature name \"Sync\" expanded to \"Synchronise\" in the sign-in page title.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-expanded-form-accepted"
  },
  {
   "category": "D",
@@ -1216,12 +1216,12 @@
   "rationale": "British English uses \"Synced\" for the Firefox Sync feature (cf. Sync.SyncingEllipsis.Label \"Syncing…\" and SyncState.Offline.Title \"Sync is offline\" kept unchanged); the longer form is inconsistent and risks truncation in a segmented control.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "ae17d512",
   "string_id": "TabTray.SegmentedControlTitles.SyncedTabs",
   "suggest": "Synced",
   "summary": "\"Synced\" was expanded to \"Synchronised\", inconsistent with the Sync product terminology used elsewhere in the locale and much longer for a segmented control on a phone.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-expanded-form-accepted"
  },
  {
   "category": "D",

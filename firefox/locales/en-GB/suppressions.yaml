@@ -45,3 +45,51 @@ rules:
     match:
       text: 're:\bpost code\b'
       suggest: 're:\bpostcode\b'
+
+  # The three rules below back the sync/synchronise entry in conventions.md.
+  # Both directions have to be retired: the reviewer raises the expansion as
+  # damage to the "Firefox Sync" feature name, and it also raises the mirror
+  # image -- a lone "sync" in a file that spells it out everywhere else -- as
+  # an internal inconsistency. Under the convention neither is a defect.
+  #
+  # A literal UI path is the one exception, so both `suggest` patterns refuse
+  # to match one: "go to Settings > Synchronisation" when the pane is
+  # labelled "Sync" is a broken cross-reference to an on-screen label, not a
+  # spelling preference, and must stay open. The exclusion is keyed on the
+  # suggestion rather than the finding text because a rationale may merely
+  # cite a path ("e.g. the Settings > Sync Data menu") as evidence.
+  #
+  # These patterns are deliberately broad and are only safe because this file
+  # is read for en-GB alone; do not copy them into another locale.
+
+  - id: en-GB-sync-expanded-form-accepted
+    reason: >-
+      "synchronise" / "synchronised" / "synchronising" / "synchronisation"
+      are accepted en-GB renderings of the en-US "sync" family, so a
+      suggestion to shorten one back to "sync" must never be accepted --
+      including one arguing that "Sync" is a feature name. See conventions.md.
+    match:
+      text: 're:synchroni[sz]'
+      suggest: 're:^(?![\s\S]*(?:Settings|Preferences|Options)\s*>)[\s\S]*\bsync(s|ed|ing)?\b'
+
+  - id: en-GB-sync-short-form-accepted
+    reason: >-
+      The mirror image: the short "sync" is equally accepted, so the short and
+      spelled-out forms sitting side by side is not an inconsistency to
+      report. Scoped to category B so a genuine mistranslation of a string
+      that happens to mention sync still reports. See conventions.md.
+    match:
+      category: 'B'
+      text: 're:\bsync(s|ed|ing)?\b'
+      suggest: 're:^(?![\s\S]*(?:Settings|Preferences|Options)\s*>)[\s\S]*synchroni[sz]'
+
+  - id: en-GB-sync-variant-spelling
+    reason: >-
+      `variant_spelling` counts the tree and reports the minority form, so it
+      reads the strings that kept "syncing" as a missed substitution. Both
+      forms are accepted here, so the split is not a defect. See
+      conventions.md.
+    match:
+      check: 'variant_spelling'
+      text: 're:\bsync(s|ed|ing)?\b'
+      suggest: 're:synchroni[sz]'

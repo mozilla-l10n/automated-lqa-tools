@@ -1,9 +1,9 @@
 # Firefox for iOS — l10n QA
 
-- **Generated:** 2026-08-24
+- **Generated:** 2026-08-25
 - **Locales tracked:** 19 (19 with recorded state)
-- **Findings:** 1,239 raised, 17 fixed (1%), 1,177 open
-- **Closed by a person:** 14 dismissed, 31 suppressed by rule
+- **Findings:** 1,239 raised, 33 fixed (2%), 1,140 open
+- **Closed by a person:** 14 dismissed, 52 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
@@ -17,7 +17,7 @@ _None. The reviewer sets this flag only on a finding where the localized text ch
 
 _Nothing open at impact 1._
 
-### Wrong content — impact 2 (662)
+### Wrong content — impact 2 (643)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/firefox_ios.md`.
 
@@ -25,8 +25,8 @@ Too many to list here; the per-locale counts are in the table below and every on
 |---|---|---|---|---|---|---|---|---|---|---|
 | [cs](cs/firefox_ios.md) | 2026-08-24 | incremental | `a2ecb0a8` | 1,910 | 0 | **65** | 42 | 0 | 0 | 0 |
 | [de](de/firefox_ios.md) | 2026-08-24 | incremental | `a2ecb0a8` | 1,910 | 0 | **76** | 33 | 0 | 0 | 0 |
-| [en-CA](en-CA/firefox_ios.md) | 2026-08-24 | incremental | `21033d5f` | 1,847 | 63 | **16** | 9 | 0 | 0 | 0 |
-| [en-GB](en-GB/firefox_ios.md) | 2026-08-24 | incremental | `21033d5f` | 1,910 | 0 | **24** | 10 | 0 | 0 | 29 |
+| [en-CA](en-CA/firefox_ios.md) | 2026-08-25 | incremental | `4de01f1b` | 1,912 | 0 | **0** | 0 | 16 | 0 | 0 |
+| [en-GB](en-GB/firefox_ios.md) | 2026-08-25 | incremental | `edf99398` | 1,912 | 0 | **3** | 0 | 0 | 0 | 50 |
 | [es-AR](es-AR/firefox_ios.md) | 2026-08-24 | incremental | `a2ecb0a8` | 1,910 | 0 | **85** | 36 | 0 | 0 | 0 |
 | [es-ES](es-ES/firefox_ios.md) | 2026-08-24 | incremental | `a2ecb0a8` | 1,815 | 95 | **48** | 26 | 0 | 0 | 0 |
 | [es-MX](es-MX/firefox_ios.md) | 2026-08-24 | incremental | `a2ecb0a8` | 1,883 | 27 | **114** | 64 | 1 | 0 | 0 |

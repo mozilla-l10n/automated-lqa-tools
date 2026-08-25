@@ -2,8 +2,8 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e64b3ff936c9` |
+| **Generated** | 2026-08-25 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `33f01fa45f4e` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9497278a786f` |
 | **Previous run** | 2026-08-24 @ `e64b3ff936c9` |
 | **Mode** | incremental |
@@ -96,14 +96,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (27)
+## 3. Open findings (21)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 6 |
-| 2 | Wrong content (says something other than the English) | 9 |
-| 3 | Degraded language (grammar, spelling, terminology) | 10 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 5 |
+| 2 | Wrong content (says something other than the English) | 7 |
+| 3 | Degraded language (grammar, spelling, terminology) | 7 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
@@ -121,21 +121,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `about-logins-confirm-remove-all-sync-dialog-message3` — `browser/browser/aboutLogins.ftl` — The two plural variants of the same message render "Sync" differently: the [1] variant says "synchronised devices" while the [other] variant says "synced devices".
-    - Current: `on all your synced devices`
-    - Source: `{$count ->} [1] This will remove the password saved to { -brand-short-name } on all your synced devices. This will also remove any breach alerts that appear here. You cannot undo this action. [other] This will remove al…`
-    - Suggest: `on all your synchronised devices`
-    - Within a single message the same phrase must be rendered the same way; the [1] variant of this very message, and the parallel message contextual-manager-passwords-remove-all-message-sync in browser/browser/contextual-manager.ftl (both variants), use "synchronised devices".
-- `appmenu-remote-tabs-sign-into-sync` — `browser/browser/appmenu.ftl` — "Sign in to sync…" keeps the en-US short form while the identical phrase is expanded to "Sign in to synchronise" twice elsewhere in the same file.
-    - Current: `Sign in to sync…`
-    - Source: `label: Sign in to sync…`
-    - Suggest: `Sign in to synchronise…`
-    - fxa-menu-sync-off-signin-description and appmenu-fxa-sign-in-promo-heading in this same file both render the phrase as "Sign in to synchronise", as do syncedTabs.ftl, sync.ftl and aboutLogins.ftl.
-- `appmenu-remote-tabs-turn-on-sync` — `browser/browser/appmenu.ftl` — "Turn on sync…" keeps the en-US short form while the same phrase is expanded to "Turn on synchronisation" elsewhere in the same file.
-    - Current: `Turn on sync…`
-    - Source: `label: Turn on sync…`
-    - Suggest: `Turn on synchronisation…`
-    - appmenu-sync-promo-turnonsync-cta in this same file reads "Turn on synchronisation", matching syncedTabs.ftl, firefoxView.ftl and preferences.ftl, which all expand this phrase.
 - `backup-file-moz-browser-restore-step-1` — `browser/browser/backupSettings.ftl` — The instruction points the user to "Settings > Synchronisation", but the settings pane is labelled "Sync" in this locale, so the referenced item does not exist.
     - Current: `go to Settings > Synchronisation`
     - Source: `Open the application menu ☰ and go to Settings > Sync`
@@ -151,11 +136,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `tooltiptext: You have blocked pop-ups and third-party redirects for this website.`
     - Suggest: `for this web site.`
     - browser.ftl contains 22 visible-string occurrences of "web site"/"web sites" and this is the only visible-string occurrence of "website"; the adjacent urlbar-popup-blocked, which differs only by the redirect clause, reads "You have blocked pop-ups for this web site."
-- `fxa-menu-message-backup-sync-secondary-text` — `browser/browser/newtab/asrouter.ftl` — "Sync" left untranslated while every sibling string in the same block renders it "Synchronise".
-    - Current: `Sync backs up most of your data`
-    - Source: `Sync backs up most of your data so you can access it everywhere you use { -brand-short-name }.`
-    - Suggest: `Synchronise backs up most of your data`
-    - In this same FxA Menu Message block en-GB renders en-US "Sync"/"syncing" as "Synchronise"/"synchronising" in every other string (fxa-menu-message-sync-button, -sync-devices-primary-text, -sync-devices-collapsed-text, -backup-sync-primary-text "safe and synchronised", -backup-sync-collapsed-text "Synchronise and back up data", -mobile-secondary-text, -mobile-collapsed-text). Only this one keeps th…
 - `policy-AllowFileSelectionDialogs` — `browser/browser/policies/policies-descriptions.ftl` — UI term "dialog" spelled "dialogues" here, against the tree's dominant "dialog".
     - Current: `Allow file selection dialogues.`
     - Source: `Allow file selection dialogs.`
@@ -194,14 +174,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### C. Grammar, agreement & spelling
 
-- `prefs-syncing-off` — `browser/browser/preferences/preferences.ftl` — `prefs-syncing-off` still uses the en-US form “syncing”
-    - Current: `Syncing: OFF`
-    - Suggest: `synchronising`
-    - This locale writes “synchronising” for “syncing” in 22 other strings and keeps “syncing” in 2. This string is byte-identical to en-US, so the substitution looks simply to have been missed.
-- `prefs-syncing-on` — `browser/browser/preferences/preferences.ftl` — `prefs-syncing-on` still uses the en-US form “syncing”
-    - Current: `Syncing: ON`
-    - Suggest: `synchronising`
-    - This locale writes “synchronising” for “syncing” in 22 other strings and keeps “syncing” in 2. This string is byte-identical to en-US, so the substitution looks simply to have been missed.
 - `discopane-intro` — `toolkit/toolkit/about/aboutAddons.ftl` — "software programmes" uses the broadcast/schedule sense; British English spells computer programs "programs".
     - Current: `These small software programmes are`
     - Source: `Extensions and themes are like apps for your browser, and they let you protect passwords, download videos, find deals, block annoying ads, change how your browser looks, and much more. These small software programs are…`
@@ -263,12 +235,16 @@ _Nothing dismissed._
 
 _One line each in `locales/en-GB/dismissed.txt`. Delete the line and the finding returns._
 
-### Suppressed as false positives (6)
+### Suppressed as false positives (12)
 
 - **`en-GB-backwards-forwards`** (4) — "Backwards" and "Forwards" are the en-GB house forms for the en-US "Back" and "Forward", in navigation labels and accessibility descriptions alike. See conventions.md.
     - `customkeys-nav-forward`, `safeb-palm-accept-label`, `tabHistory.goBack`, `back`
 - **`en-GB-post-code`** (1) — "Post Code" is the deliberate en-GB rendering of the en-US "Postal Code"; "Postcode" must not be suggested in its place. See conventions.md.
     - `autofill-address-postal-code`
+- **`en-GB-sync-short-form-accepted`** (4) — The mirror image: the short "sync" is equally accepted, so the short and spelled-out forms sitting side by side is not an inconsistency to report. Scoped to category B so a genuine mistranslation of a string that happens to mention sync still reports. See conventions.md.
+    - `about-logins-confirm-remove-all-sync-dialog-message3`, `appmenu-remote-tabs-sign-into-sync`, `appmenu-remote-tabs-turn-on-sync`, `fxa-menu-message-backup-sync-secondary-text`
+- **`en-GB-sync-variant-spelling`** (2) — `variant_spelling` counts the tree and reports the minority form, so it reads the strings that kept "syncing" as a missed substitution. Both forms are accepted here, so the split is not a defect. See conventions.md.
+    - `prefs-syncing-off`, `prefs-syncing-on`
 - **`en-GB-web-site-two-words`** (1) — "web site" / "web sites" is the en-GB house form; a suggestion to close it up to the en-US "website" must never be accepted. See conventions.md.
     - `permissions-exceptions-https-only-desc`
 

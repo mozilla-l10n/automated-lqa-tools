@@ -40,12 +40,12 @@
   "rationale": "Within a single message the same phrase must be rendered the same way; the [1] variant of this very message, and the parallel message contextual-manager-passwords-remove-all-message-sync in browser/browser/contextual-manager.ftl (both variants), use \"synchronised devices\".",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "ebff28db",
   "string_id": "about-logins-confirm-remove-all-sync-dialog-message3",
   "suggest": "on all your synchronised devices",
   "summary": "The two plural variants of the same message render \"Sync\" differently: the [1] variant says \"synchronised devices\" while the [other] variant says \"synced devices\".",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-short-form-accepted"
  },
  {
   "category": "B",
@@ -64,12 +64,12 @@
   "rationale": "fxa-menu-sync-off-signin-description and appmenu-fxa-sign-in-promo-heading in this same file both render the phrase as \"Sign in to synchronise\", as do syncedTabs.ftl, sync.ftl and aboutLogins.ftl.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "fb20dd60",
   "string_id": "appmenu-remote-tabs-sign-into-sync",
   "suggest": "Sign in to synchronise…",
   "summary": "\"Sign in to sync…\" keeps the en-US short form while the identical phrase is expanded to \"Sign in to synchronise\" twice elsewhere in the same file.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-short-form-accepted"
  },
  {
   "category": "B",
@@ -88,12 +88,12 @@
   "rationale": "appmenu-sync-promo-turnonsync-cta in this same file reads \"Turn on synchronisation\", matching syncedTabs.ftl, firefoxView.ftl and preferences.ftl, which all expand this phrase.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "778219c5",
   "string_id": "appmenu-remote-tabs-turn-on-sync",
   "suggest": "Turn on synchronisation…",
   "summary": "\"Turn on sync…\" keeps the en-US short form while the same phrase is expanded to \"Turn on synchronisation\" elsewhere in the same file.",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-short-form-accepted"
  },
  {
   "category": "B",
@@ -200,7 +200,7 @@
   "file": "browser/browser/genai.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-24",
+  "last_seen": "2026-08-25",
   "locale": "en-GB",
   "origin": {},
   "rationale": "In the source this string quotes “Summarize Page”, which is exactly the value of `genai-chatbot-summarize-button` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -222,7 +222,7 @@
   "file": "browser/browser/genai.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-24",
+  "last_seen": "2026-08-25",
   "locale": "en-GB",
   "origin": {},
   "rationale": "In the source this string quotes “Summarize Page”, which is exactly the value of `genai-chatbot-summarize-button` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -276,12 +276,12 @@
   "rationale": "In this same FxA Menu Message block en-GB renders en-US \"Sync\"/\"syncing\" as \"Synchronise\"/\"synchronising\" in every other string (fxa-menu-message-sync-button, -sync-devices-primary-text, -sync-devices-collapsed-text, -backup-sync-primary-text \"safe and synchronised\", -backup-sync-collapsed-text \"Synchronise and back up data\", -mobile-secondary-text, -mobile-collapsed-text). Only this one keeps the en-US form, so the panel reads inconsistently.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "6023b262",
   "string_id": "fxa-menu-message-backup-sync-secondary-text",
   "suggest": "Synchronise backs up most of your data",
   "summary": "\"Sync\" left untranslated while every sibling string in the same block renders it \"Synchronise\".",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-short-form-accepted"
  },
  {
   "category": "A",
@@ -460,18 +460,18 @@
   "file": "browser/browser/preferences/preferences.ftl",
   "first_seen": "2026-08-20",
   "impact": 3,
-  "last_seen": "2026-08-24",
+  "last_seen": "2026-08-25",
   "locale": "en-GB",
   "origin": {},
   "rationale": "This locale writes “synchronising” for “syncing” in 22 other strings and keeps “syncing” in 2. This string is byte-identical to en-US, so the substitution looks simply to have been missed.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "518d2b3a",
   "string_id": "prefs-syncing-off",
   "suggest": "synchronising",
   "summary": "`prefs-syncing-off` still uses the en-US form “syncing”",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-variant-spelling"
  },
  {
   "category": "C",
@@ -482,18 +482,18 @@
   "file": "browser/browser/preferences/preferences.ftl",
   "first_seen": "2026-08-20",
   "impact": 3,
-  "last_seen": "2026-08-24",
+  "last_seen": "2026-08-25",
   "locale": "en-GB",
   "origin": {},
   "rationale": "This locale writes “synchronising” for “syncing” in 22 other strings and keeps “syncing” in 2. This string is byte-identical to en-US, so the substitution looks simply to have been missed.",
   "reads_as_deliberate": false,
   "resolved_on": "",
-  "status": "open",
+  "status": "suppressed",
   "string_hash": "b4d26a46",
   "string_id": "prefs-syncing-on",
   "suggest": "synchronising",
   "summary": "`prefs-syncing-on` still uses the en-US form “syncing”",
-  "suppressed_by": ""
+  "suppressed_by": "en-GB-sync-variant-spelling"
  },
  {
   "category": "B",

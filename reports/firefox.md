@@ -1,9 +1,9 @@
 # Firefox (desktop + shared toolkit/dom strings) — l10n QA
 
-- **Generated:** 2026-08-24
+- **Generated:** 2026-08-25
 - **Locales tracked:** 20 (20 with recorded state)
-- **Findings:** 5,832 raised, 2,012 fixed (34%), 3,765 open
-- **Closed by a person:** 16 dismissed, 9 suppressed by rule
+- **Findings:** 5,832 raised, 2,012 fixed (34%), 3,759 open
+- **Closed by a person:** 16 dismissed, 15 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
@@ -13,11 +13,11 @@ Counts come from `state/`, not from the rendered reports, so they always reflect
 
 _None. The reviewer sets this flag only on a finding where the localized text changes what the product says about itself, its users or its behaviour; it is left unset on the vast majority of mistranslations._
 
-### Broken output — impact 1 (363)
+### Broken output — impact 1 (362)
 
 The value does not render as intended: a blank string, broken markup, a variable the source never passes.
 
-`id` 84 · `es-AR` 70 · `cs` 55 · `ru` 49 · `hu` 34 · `fy-NL` 13 · `nl` 12 · `pt-BR` 12 · `pl` 11 · `ja` 8 · `en-GB` 6 · `tr` 4 · `zh-CN` 4 · `fr` 1
+`id` 84 · `es-AR` 70 · `cs` 55 · `ru` 49 · `hu` 34 · `fy-NL` 13 · `nl` 12 · `pt-BR` 12 · `pl` 11 · `ja` 8 · `en-GB` 5 · `tr` 4 · `zh-CN` 4 · `fr` 1
 
 - **`cs`** `appmenuitem-new-ai-window` — `browser/browser/aiWindow.ftl`
   - `appmenuitem-new-ai-window` (`.value`) calls `-smart-window-brand-name` with ['capitalization'], but that term selects on ['case', 'plural-form']
@@ -25,14 +25,14 @@ The value does not render as intended: a blank string, broken markup, a variable
 - **`cs`** `appmenuitem-new-ai-window` — `browser/browser/aiWindow.ftl`
   - `appmenuitem-new-ai-window` (`.label`) calls `-smart-window-brand-name` with ['capitalization'], but that term selects on ['case', 'plural-form']
   - Current: `Nové { -smart-window-brand-name }`
-- **`en-GB`** `fxa-menu-message-backup-sync-secondary-text` — `browser/browser/newtab/asrouter.ftl`
-  - "Sync" left untranslated while every sibling string in the same block renders it "Synchronise".
-  - Current: `Sync backs up most of your data`
-  - Suggest: `Synchronise backs up most of your data`
 - **`en-GB`** `policy-AllowFileSelectionDialogs` — `browser/browser/policies/policies-descriptions.ftl`
   - UI term "dialog" spelled "dialogues" here, against the tree's dominant "dialog".
   - Current: `Allow file selection dialogues.`
   - Suggest: `Allow file selection dialogs.`
+- **`en-GB`** `policy-UseSystemPrintDialog` — `browser/browser/policies/policies-descriptions.ftl`
+  - "print dialogue" conflicts with "print dialog" used in the locale's printing files.
+  - Current: `Print using the system print dialogue.`
+  - Suggest: `Print using the system print dialog.`
 - **`es-AR`** `tou-existing-user-spotlight-body` — `browser/browser/termsofuse.ftl`
   - Malformed closing tag `</a >` in `tou-existing-user-spotlight-body`
   - Current: `Introducimos <a data-l10n-name="terms-of-use">Términos de uso</a> y actualizamos nuestra <a data-l10n-name="privacy-notice">Nota de privacidad</a >.<br><br> Tómese un momento para revisar y aceptar.…`
@@ -72,9 +72,9 @@ The value does not render as intended: a blank string, broken markup, a variable
   - { $count } 件のパスワードが全漏洩データから見つかりました — 件のパスワードが全漏洩データから見つかりました
   - Current: `{ $count } 件のパスワードが全漏洩データから見つかりました`
   - Suggest: `件のパスワードが全漏洩データから見つかりました`
-- _…and 348 more, in the per-locale reports linked below._
+- _…and 347 more, in the per-locale reports linked below._
 
-### Wrong content — impact 2 (1440)
+### Wrong content — impact 2 (1438)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/firefox.md`.
 
@@ -82,8 +82,8 @@ Too many to list here; the per-locale counts are in the table below and every on
 |---|---|---|---|---|---|---|---|---|---|---|
 | [cs](cs/firefox.md) | 2026-08-24 | incremental | `e59d5107` | 18,180 | 0 | **259** | 175 | 0 | 0 | 0 |
 | [de](de/firefox.md) | 2026-08-24 | incremental | `e59d5107` | 18,180 | 0 | **16** | 11 | 71 | 0 | 0 |
-| [en-CA](en-CA/firefox.md) | 2026-08-24 | incremental | `e64b3ff9` | 18,139 | 77 | **0** | 0 | 14 | 1 | 0 |
-| [en-GB](en-GB/firefox.md) | 2026-08-24 | incremental | `e64b3ff9` | 18,180 | 36 | **27** | 15 | 7 | 0 | 6 |
+| [en-CA](en-CA/firefox.md) | 2026-08-25 | incremental | `33f01fa4` | 18,216 | 0 | **0** | 0 | 14 | 1 | 0 |
+| [en-GB](en-GB/firefox.md) | 2026-08-25 | incremental | `33f01fa4` | 18,180 | 36 | **21** | 12 | 7 | 0 | 12 |
 | [es-AR](es-AR/firefox.md) | 2026-08-24 | incremental | `e59d5107` | 18,150 | 30 | **421** | 240 | 0 | 0 | 0 |
 | [es-ES](es-ES/firefox.md) | 2026-08-24 | incremental | `e59d5107` | 17,185 | 995 | **30** | 18 | 111 | 0 | 0 |
 | [es-MX](es-MX/firefox.md) | 2026-08-24 | incremental | `e59d5107` | 17,847 | 333 | **21** | 6 | 205 | 0 | 0 |
