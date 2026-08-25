@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e59d51071942` |
+| **Generated** | 2026-08-25 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ad52f2a75880` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-24 @ `39e5663f3de7` |
+| **Previous run** | 2026-08-24 @ `e59d51071942` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 17,185 |
+| **Strings reviewed this run** | 0 of 17,185 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,19 +18,13 @@ Also for es-ES: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `manifest-loading` — `devtools/client/application.ftl` — "manifesto" is not the Spanish word for a web app manifest file; the correct term is "manifiesto".
-    - Current: `Cargando manifesto…`
-    - Source: `Loading manifest…`
-    - Suggest: `Cargando manifiesto…`
-    - en-US "Loading manifest…" refers to the manifest file; Spanish spells this "manifiesto". "Manifesto" is a misspelling/anglicism.
+_No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `manifest-loading` — `devtools/client/application.ftl` — manifest — "Manifesto" (manifest-view-header, manifest-loading, etc.) vs "Manifiesto" (manifest-empty-intro2) → Manifiesto.
-    - Source: `Loading manifest…`
-    - Suggest: `Manifiesto.`
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

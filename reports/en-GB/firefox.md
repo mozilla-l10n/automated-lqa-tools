@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-08-25 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `33f01fa45f4e` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9497278a786f` |
-| **Previous run** | 2026-08-24 @ `e64b3ff936c9` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ad52f2a75880` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
+| **Previous run** | 2026-08-25 @ `33f01fa45f4e` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,180 |
+| **Strings reviewed this run** | 7 of 18,180 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for en-GB: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `about-logins-confirm-remove-all-sync-dialog-message3` — `browser/browser/aboutLogins.ftl` — The [1] singular variant uses plural "passwords" instead of the singular "the password" of the source.
+    - Current: `[1] This will remove the passwords saved to`
+    - Source: `{$count ->} [1] This will remove the password saved to { -brand-short-name } on all your synced devices. This will also remove any breach alerts that appear here. You cannot undo this action. [other] This will remove al…`
+    - Suggest: `[1] This will remove the password saved to`
+    - The en-US [1] case reads "This will remove the password saved to…"; the singular plural form must stay singular in the count=1 variant.
 
 ### ✅ Fixed since the last run (0)
 
@@ -46,9 +50,9 @@ _Nothing retired._
 |---|---|
 | Files | 360 |
 | Strings | 18,180 |
-| Missing strings | 36 |
-| Obsolete strings | 6 |
-| Files absent from the locale | 2 |
+| Missing strings | 0 |
+| Obsolete strings | 0 |
+| Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
@@ -62,18 +66,7 @@ _Nothing retired._
 
 ### Completeness
 
-**36 strings** are not translated yet, concentrated in:
-
-- `toolkit/services/aboutSyncLog.ftl` — 26
-- `browser/browser/newtab/newtab.ftl` — 8
-- `toolkit/toolkit/pdfviewer/embedFallback.ftl` — 2
-
-**Files absent from the locale:**
-
-- `toolkit/services/aboutSyncLog.ftl`
-- `toolkit/toolkit/pdfviewer/embedFallback.ftl`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -96,18 +89,23 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (21)
+## 3. Open findings (22)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 5 |
-| 2 | Wrong content (says something other than the English) | 7 |
+| 2 | Wrong content (says something other than the English) | 8 |
 | 3 | Degraded language (grammar, spelling, terminology) | 7 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
 
+- `about-logins-confirm-remove-all-sync-dialog-message3` — `browser/browser/aboutLogins.ftl` — The [1] singular variant uses plural "passwords" instead of the singular "the password" of the source.
+    - Current: `[1] This will remove the passwords saved to`
+    - Source: `{$count ->} [1] This will remove the password saved to { -brand-short-name } on all your synced devices. This will also remove any breach alerts that appear here. You cannot undo this action. [other] This will remove al…`
+    - Suggest: `[1] This will remove the password saved to`
+    - The en-US [1] case reads "This will remove the password saved to…"; the singular plural form must stay singular in the count=1 variant.
 - `mr2022-onboarding-colorway-description-dreamer` — `browser/browser/newtab/onboarding.ftl` — American spelling "favors" left unadapted; en-GB requires "favours".
     - Current: `fortune favors the bold`
     - Source: `<b>You are a Dreamer.</b> You believe that fortune favors the bold and inspire others to be brave.`

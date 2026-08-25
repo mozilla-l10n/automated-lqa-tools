@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e59d51071942` |
+| **Generated** | 2026-08-25 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ad52f2a75880` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-24 @ `39e5663f3de7` |
+| **Previous run** | 2026-08-24 @ `e59d51071942` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,135 |
+| **Strings reviewed this run** | 52 of 18,180 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,30 @@ Also for ja: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `newtab-stocks-search-input` — `browser/browser/newtab/newtab.ftl` — The placeholder for the search input is rendered as a verb phrase "〜します" instead of a noun/placeholder form.
+    - Current: `placeholder: 企業名または銘柄コードで検索します`
+    - Source: `aria-label: Search by name or symbol placeholder: Search by name or symbol`
+    - Suggest: `placeholder: 企業名または銘柄コードで検索`
+    - The developer comment says this is a placeholder text in the input field; the locale convention reserves 〜します for .title tooltips, not placeholders, and the identical aria-label uses the noun form.
+- `containers-sites-card-header` — `browser/browser/preferences/preferences.ftl` — The description translates "a site"/"the site" as "このサイト" (this site), implying a specific site rather than any site in general.
+    - Current: `専用コンテナーを選ぶと、{ -brand-short-name } でこのサイトを開く時に毎回このコンテナーが使用されます。`
+    - Source: `description: Choose a container for a site and { -brand-short-name } will use it every time the site opens. label: Site-specific containers`
+    - Suggest: `サイトごとにコンテナーを選ぶと、{ -brand-short-name } はそのサイトを開くたびに毎回そのコンテナーを使用します。`
+    - en-US says "Choose a container for a site and { -brand-short-name } will use it every time the site opens" — generic; the Japanese uses deictic 「この」 referring to a particular site, changing the meaning of this settings card header description.
+- `treetable` — `dom/chrome/accessibility/AccessFu.properties` — "tree table" is rendered as 「折りたたみリスト」 (collapsible list), which names a different accessibility role.
+    - Current: `折りたたみリスト`
+    - Source: `tree table`
+    - Suggest: `ツリーテーブル`
+    - The source is the accessibility role name "tree table"; "折りたたみリスト" (collapsible list) does not denote a table role and mis-announces the element to screen reader users.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `abuse-report-policy-reason-v2` — `toolkit/toolkit/about/abuseReports.ftl` — abuse-report-policy-reason-v2 (abuseReports.ftl) — "hateful" downgraded to 不愉快 ("unpleasant"); it is a policy category. → 差別的
+    - Current: `不愉快`
+    - Source: `It contains hateful, violent, or illegal content`
+    - Suggest: `差別的`
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,8 +62,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,135 |
-| Missing strings | 45 |
+| Strings | 18,180 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -62,21 +79,6 @@ _Nothing retired._
 
 ### Completeness
 
-**45 strings** are not translated yet, concentrated in:
-
-- `browser/browser/newtab/newtab.ftl` — 21
-- `browser/browser/preferences/containers.ftl` — 7
-- `browser/browser/preferences/preferences.ftl` — 5
-- `browser/browser/aboutPrivateBrowsing.ftl` — 3
-- `browser/browser/sharePanel.ftl` — 2
-- `toolkit/toolkit/about/aboutPDF.ftl` — 1
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 1
-- `toolkit/toolkit/global/processTypes.ftl` — 1
-- `dom/chrome/accessibility/AccessFu.properties` — 1
-- `browser/browser/profiles.ftl` — 1
-- `browser/browser/sidebar.ftl` — 1
-- `browser/browser/preferences/formAutofill.ftl` — 1
-
 **Files present but identical to en-US:**
 
 - `security/manager/chrome/pipnss/nsserrors.properties`
@@ -90,12 +92,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 490, `curly-single` 193, `straight-double` 122, `corner` 7 | _mixed_ |
+| quotes | `curly-double` 491, `curly-single` 193, `straight-double` 122, `corner` 7 | _mixed_ |
 | apostrophe | `typographic` 270, `straight` 12 | **typographic** |
-| ellipsis | `ascii` 459 | **ascii** |
+| ellipsis | `ascii` 460 | **ascii** |
 | dash | `em` 81, `en` 1 | **em** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 11 | _mixed_ |
-| fullwidth | `punctuation` 5729 | **punctuation** |
+| fullwidth | `punctuation` 5736 | **punctuation** |
 
 ---
 
@@ -105,14 +107,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (98)
+## 3. Open findings (100)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 8 |
-| 2 | Wrong content (says something other than the English) | 29 |
-| 3 | Degraded language (grammar, spelling, terminology) | 28 |
+| 2 | Wrong content (says something other than the English) | 30 |
+| 3 | Degraded language (grammar, spelling, terminology) | 29 |
 | 4 | Cosmetic (typography, spacing) | 33 |
 
 ### A. Functional, markup, variables & plurals
@@ -241,6 +243,11 @@ _Nothing reported._
 - `ipprotection-bandwidth-upgrade-title` — `browser/browser/ipProtection.ftl` — ipprotection-bandwidth-upgrade-title (ipProtection.ftl) — "Like built-in VPN?" is a question, read as "similar to". → 組み込み VPN が気に入りましたか？ …
     - Source: `Like built-in VPN? Get even more protection outside { -brand-product-name } with { -mozilla-vpn-brand-name }.`
     - Suggest: `組み込み VPN が気に入りましたか？ …`
+- `containers-sites-card-header` — `browser/browser/preferences/preferences.ftl` — The description translates "a site"/"the site" as "このサイト" (this site), implying a specific site rather than any site in general.
+    - Current: `専用コンテナーを選ぶと、{ -brand-short-name } でこのサイトを開く時に毎回このコンテナーが使用されます。`
+    - Source: `description: Choose a container for a site and { -brand-short-name } will use it every time the site opens. label: Site-specific containers`
+    - Suggest: `サイトごとにコンテナーを選ぶと、{ -brand-short-name } はそのサイトを開くたびに毎回そのコンテナーを使用します。`
+    - en-US says "Choose a container for a site and { -brand-short-name } will use it every time the site opens" — generic; the Japanese uses deictic 「この」 referring to a particular site, changing the meaning of this settings card header description.
 - `security-privacy-issue-warning-safe-browsing` — `browser/browser/preferences/preferences.ftl` — "dangerous and deceptive content" is two categories; ja merges them into one modifier, unlike security-browsing-protection.
     - Source: `description: Your exposure to scams and malware from websites is increased. label: Dangerous and deceptive content is not blocked`
 - `tabs-group-header2` — `browser/browser/preferences/preferences.ftl` — en-US is the section header "Tabs" ("group" in the ID refers to the preferences groupbox); タブグループ now also collides with the real Tab Groups feature. → タブ Verified.
@@ -259,6 +266,11 @@ _Nothing reported._
     - Source: `<strong>{ $property }</strong> has no effect on this element since it does not create a principal box.`
 - `inactive-css-no-size-containment` — `devtools/client/tooltips.ftl` — the topic { $property } is attached to the subordinate clause, so it says the property does not create a principal box rather than the element.
     - Source: `<strong>{ $property }</strong> has no effect on this element since it has no size containment.`
+- `treetable` — `dom/chrome/accessibility/AccessFu.properties` — "tree table" is rendered as 「折りたたみリスト」 (collapsible list), which names a different accessibility role.
+    - Current: `折りたたみリスト`
+    - Source: `tree table`
+    - Suggest: `ツリーテーブル`
+    - The source is the accessibility role name "tree table"; "折りたたみリスト" (collapsible list) does not denote a table role and mis-announces the element to screen reader users.
 - `about-logging-title` — `toolkit/toolkit/about/aboutLogging.ftl` — about-logging-title (aboutLogging.ftl) — "About Logging" → HTTP ログについて; the page now covers media, gfx, WebRTC and WebGPU presets. → ログについて Verified.
     - Source: `About Logging`
     - Suggest: `HTTP ログについて`
@@ -292,10 +304,6 @@ _Nothing reported._
     - Current: `通信情報`
     - Source: `Local Candidate`
     - Suggest: `候補`
-- `abuse-report-policy-reason-v2` — `toolkit/toolkit/about/abuseReports.ftl` — abuse-report-policy-reason-v2 (abuseReports.ftl) — "hateful" downgraded to 不愉快 ("unpleasant"); it is a policy category. → 差別的
-    - Current: `不愉快`
-    - Source: `It contains hateful, violent, or illegal content`
-    - Suggest: `差別的`
 - `webext-perms-header-data-collection-is-none` — `toolkit/toolkit/global/extensions.ftl` — adds a qualifier not in the source and contradicts the neighbouring 必要なデータ収集. Current 任意のデータ収集: → データ収集:
     - Current: `任意のデータ収集:`
     - Source: `Data collection:`
@@ -393,6 +401,11 @@ _Nothing reported._
 - `newtab-picture-show-button` — `browser/browser/newtab/newtab.ftl` — browser/browser/newtab/newtab.ftl — 今日の写真 vs 今日の一枚 in four other strings for the same object.
     - Source: `aria-label: Show today’s picture title: Show today’s picture`
     - Suggest: `今日の写真`
+- `newtab-stocks-search-input` — `browser/browser/newtab/newtab.ftl` — The placeholder for the search input is rendered as a verb phrase "〜します" instead of a noun/placeholder form.
+    - Current: `placeholder: 企業名または銘柄コードで検索します`
+    - Source: `aria-label: Search by name or symbol placeholder: Search by name or symbol`
+    - Suggest: `placeholder: 企業名または銘柄コードで検索`
+    - The developer comment says this is a placeholder text in the input field; the locale convention reserves 〜します for .title tooltips, not placeholders, and the identical aria-label uses the noun form.
 - `newtab-weather-menu-change-temperature-units-fahrenheit` — `browser/browser/newtab/newtab.ftl` — browser/browser/newtab/newtab.ftl — ファーレンハイト度 / セルシウス度 vs 華氏 / 摂氏 in the option labels of the same menu.
     - Source: `Switch to Fahrenheit`
     - Suggest: `ファーレンハイト度`
@@ -477,8 +490,9 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (269)
+### Fixed to date (270)
 
+- `abuse-report-policy-reason-v2` — `toolkit/toolkit/about/abuseReports.ftl` — fixed 2026-08-25
 - `about-logins-import-dialog-error-unable-to-read-description` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-24
 - `webext-imported-addons` — `browser/browser/addonNotifications.ftl` — fixed 2026-08-24
 - `aiwindow-firstrun-memories-subtitle` — `browser/browser/aiWindow.ftl` — fixed 2026-08-24
@@ -518,4 +532,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `translate-attribution` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
 - `restored-profile-page-header-description` — `browser/browser/profiles.ftl` — fixed 2026-08-24
 - `info-exposed-passwords-resolved` — `browser/browser/protections.ftl` — fixed 2026-08-24
-- `monitor-partial-breaches-motivation-title-start` — `browser/browser/protections.ftl` — fixed 2026-08-24

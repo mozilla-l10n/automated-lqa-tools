@@ -24,6 +24,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "A",
+  "check": "llm",
+  "current": "[1] This will remove the passwords saved to",
+  "dismissed_because": "",
+  "fid": "1304bde25ce2",
+  "file": "browser/browser/aboutLogins.ftl",
+  "first_seen": "2026-08-25",
+  "impact": 2,
+  "last_seen": "2026-08-25",
+  "locale": "en-GB",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The en-US [1] case reads \"This will remove the password saved to…\"; the singular plural form must stay singular in the count=1 variant.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "9a6fd1b0",
+  "string_id": "about-logins-confirm-remove-all-sync-dialog-message3",
+  "suggest": "[1] This will remove the password saved to",
+  "summary": "The [1] singular variant uses plural \"passwords\" instead of the singular \"the password\" of the source.",
+  "suppressed_by": ""
+ },
+ {
   "category": "B",
   "check": "llm",
   "current": "on all your synced devices",

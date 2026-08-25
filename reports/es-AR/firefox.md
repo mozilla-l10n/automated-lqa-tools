@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e59d51071942` |
+| **Generated** | 2026-08-25 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ad52f2a75880` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-24 @ `39e5663f3de7` |
+| **Previous run** | 2026-08-24 @ `e59d51071942` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,150 |
+| **Strings reviewed this run** | 137 of 18,151 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,417 @@ Also for es-AR: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (21)
 
-_No new findings._
+- `smart-window-switched-tab-label` — `browser/browser/aiWindowContent.ftl` — "Switched tabs" (action result: switched to a tab) is rendered as "Pestañas cambiadas" ("tabs changed/replaced").
+    - Current: `Pestañas cambiadas`
+    - Source: `Switched tabs`
+    - Suggest: `Se cambió de pestaña`
+    - The developer comment says this is the result label for switching to a single already-open tab; the target reads as a plural noun phrase meaning tabs were modified, not that the browser switched tabs.
+- `about-networking-rcwn-net-won-count` — `toolkit/toolkit/about/aboutNetworking.ftl` — "Net won count" (number of times the network race was won) is mistranslated as "Cuenta de ganancias en la red" ("count of earnings on the network").
+    - Current: `Cuenta de ganancias en la red`
+    - Source: `Net won count`
+    - Suggest: `Cantidad de veces que ganó la red`
+    - In RCWN (race cache with network) stats this counts how often the network won the race against the cache; "ganancias" means monetary earnings/profit and misstates the metric.
+- `addon-detail-private-browsing-help` — `toolkit/toolkit/about/aboutAddons.ftl` — "the extension" is rendered as "el complemento" (add-on) instead of "la extensión".
+    - Current: `el complemento tendrá acceso`
+    - Source: `When allowed, the extension will have access to your online activities while private browsing. <a data-l10n-name="learn-more">Learn more</a>`
+    - Suggest: `la extensión tendrá acceso`
+    - The en-US says "extension"; es-AR consistently uses "extensión" for extension and reserves "complemento" for add-on.
+- `find-more-extensions-promo` — `toolkit/toolkit/about/aboutAddons.ftl` — Missing accent in the voseo imperative "Encontre".
+    - Current: `Encontre su próxima extensión favorita`
+    - Source: `heading: Find your next favorite extension message: Customize { -brand-product-name } with tools for focus, privacy, shopping, and more.`
+    - Suggest: `Encuentre su próxima extensión favorita`
+    - The rest of the string uses the usted form ("Personalice"); "Encontre" is both inconsistent and misspelled (voseo would be "Encontrá").
+- `report-crash-for-days` — `toolkit/toolkit/about/aboutSupport.ftl` — The [one] plural variant drops the { $days } variable present in the source.
+    - Current: `Informes de fallo del último día`
+    - Source: `{$days ->} [one] Crash Reports for the Last { $days } Day [other] Crash Reports for the Last { $days } Days`
+    - Suggest: `Informes de fallo del último { $days } día`
+    - en-US has "Crash Reports for the Last { $days } Day"; the variable is omitted in the singular variant.
+- `about-translations-language-load-error-message-2` — `toolkit/toolkit/about/aboutTranslations.ftl` — Past-tense failure message rendered in present tense ("No se pueden cargar" for "Couldn't load").
+    - Current: `No se pueden cargar los idiomas`
+    - Source: `heading: Couldn’t load languages message: Check your internet connection and try again.`
+    - Suggest: `No se pudieron cargar los idiomas`
+    - The en-US heading reports an event that already failed; the present tense changes the meaning to an ongoing inability.
+- `abuse-report-learnmore` — `toolkit/toolkit/about/abuseReports.ftl` — Stray spaces inside the link text after the opening tag and before the closing tag.
+    - Current: `<a data-l10n-name="learnmore-link"> Conozca más información acerca de los informes de extensiones y temas  </a>`
+    - Source: `Unsure what issue to select? <a data-l10n-name="learnmore-link">Learn more about reporting extensions and themes</a>`
+    - Suggest: `<a data-l10n-name="learnmore-link">Conozca más información acerca de los informes de extensiones y temas</a>`
+    - The en-US has no leading or trailing spaces inside the anchor; the extra spaces render as underlined whitespace.
+- `rights-safebrowsing` — `toolkit/toolkit/about/aboutRights.ftl` — Double space between sentences.
+    - Current: `sitios inseguros.  Si desea`
+    - Source: `<strong>SafeBrowsing: </strong>Disabling the Safe Browsing feature is not recommended as it may result in you going to unsafe sites. If you wish to disable the feature completely, follow these steps:`
+    - Suggest: `sitios inseguros. Si desea`
+    - Extra space not present in the en-US source.
+- `crashreporter-comment-prompt` — `toolkit/crashreporter/crashreporter.ftl` — The parenthetical remark is rewritten as a separate "Note:" sentence with a stray period and double space.
+    - Current: `Agregar un comentario.  Nota: Los comentarios son visibles públicamente`
+    - Source: `Add a comment (comments are publicly visible)`
+    - Suggest: `Agregar un comentario (los comentarios son visibles públicamente)`
+    - en-US is a single label "Add a comment (comments are publicly visible)"; the target splits it into two sentences with an extra period and double space, not matching the source.
+- `identity-description-insecure-login-forms` — `browser/browser/browser.ftl` — "you enter" (present/future) is rendered as past "que se usó", changing the meaning.
+    - Current: `La información de ingreso que se usó en esta página no es segura y puede estar comprometida.`
+    - Source: `The login information you enter on this page is not secure and could be compromised.`
+    - Suggest: `La información de ingreso que ingrese en esta página no es segura y podría verse comprometida.`
+    - en-US warns about information the user enters on the page, not information already used; the past tense misstates the warning.
+- `genai-prompts-quiz` — `browser/browser/genai.ftl` — Label "Quiz me" is translated as "Juguemos" ("Let's play"), and "multiple choice" is left in English.
+    - Current: `label: Juguemos`
+    - Source: `label: Quiz me value: Please quiz me on this selection. Ask me a variety of types of questions, for example multiple choice, true or false, and short answer. Wait for my response before moving on to the next question.`
+    - Suggest: `label: Evaluarme`
+    - en-US label asks the assistant to quiz the user; "Juguemos" says "let's play", a different action, and does not match the prompt value about questions.
+- `urlbar-tabtosearch-onboard` — `browser/browser/browser.ftl` — "shortcut" is rendered as "atajo de teclado" (keyboard shortcut) though the developer comment describes a urlbar result, not a key combination.
+    - Current: `Seleccione este atajo de teclado para encontrar más rápido lo que necesita.`
+    - Source: `Select this shortcut to find what you need faster.`
+    - Suggest: `Seleccione este atajo para encontrar más rápido lo que necesita.`
+    - The comment says users are typing a search engine domain in the urlbar and select the offered shortcut; adding "de teclado" invents a keyboard shortcut not in the source.
+- `appmenuitem-vpn-description3` — `browser/browser/appmenu.ftl` — Inconsistent verb form: infinitive imperative expected as in the sibling description, but conjugated "Hace" is used.
+    - Current: `Hace que la navegación sea más difícil de rastrear`
+    - Source: `Make your browsing harder to trace`
+    - Suggest: `Hacer que la navegación sea más difícil de rastrear`
+    - Parallel string appmenuitem-vpn-description5 uses the infinitive ("Obtener…"); en-US "Make your browsing harder to trace" is an imperative/infinitive, not third-person present.
+- `restore-page-show-tabs` — `browser/browser/aboutSessionRestore.ftl` — "View" translated as "Mostrar" (show) instead of "Ver".
+    - Current: `Mostrar pestañas anteriores`
+    - Source: `View Previous Tabs`
+    - Suggest: `Ver pestañas anteriores`
+    - en-US is "View Previous Tabs"; "Mostrar" corresponds to "Show", used elsewhere for a different action.
+- `ai-window-open-sidebar` — `browser/browser/aiFeatures.ftl` — "on each new tab" is rendered as "cuando se abra una nueva pestaña", altering the meaning slightly but acceptably? No — description drops "each".
+    - Current: `Mostrar la barra lateral del asistente cuando se abra una nueva pestaña.`
+    - Source: `description: Show the assistant sidebar on each new tab. Close it anytime. label: Open assistant automatically`
+    - Suggest: `Mostrar la barra lateral del asistente en cada nueva pestaña.`
+    - en-US says the sidebar shows on each new tab; the target paraphrases as "when a new tab is opened", losing the "each new tab" scope.
+- `mr2022-onboarding-gratitude-primary-button-label` — `browser/browser/newtab/onboarding.ftl` — Button label changed from an imperative addressed to the user to a first-person plural exhortation.
+    - Current: `Veamos qué hay de nuevo`
+    - Source: `See what’s new`
+    - Suggest: `Vea qué hay de nuevo`
+    - The en-US "See what’s new" is addressed to the user (usted form, consistent with other buttons like "Vea cómo funciona"); "Veamos" means "let's see".
+- `REG_APP_DESC` — `browser/installer/custom.properties` — Misspelled infinitive "obtenér" with a spurious accent.
+    - Current: `obtenér`
+    - Source: `$BrandShortName delivers safe, easy web browsing. A familiar user interface, enhanced security features including protection from online identity theft, and integrated search let you get the most out of the web.`
+    - Suggest: `obtener`
+    - Infinitives ending in -er carry no written accent; "obtenér" is a spelling error.
+- `onboarding-refresh-gratitude-subtitle` — `browser/browser/newtab/onboarding.ftl` — "non-profit" rendered as "asociación sin fines de lucro" instead of the term used elsewhere for the same phrase.
+    - Current: `una asociación sin fines de lucro`
+    - Source: `Thank you for using { -brand-short-name }, the only major browser backed by a non-profit. With your support, we’re working to make the internet safer and more accessible for everyone.`
+    - Suggest: `una organización sin fines de lucro`
+    - The identical en-US phrase "backed by a non-profit" is translated "respaldado por una organización sin fines de lucro" in welcome-back-spotlight-subtitle; inconsistent terminology on the same surface.
+- `preferences-connection-link-section` — `browser/browser/preferences/preferences.ftl` — Missing accent on "cómo" in the interrogative/relative clause.
+    - Current: `Vea como las conexiones`
+    - Source: `description: See how connections stay secure, harmful software is blocked, and websites are verified. label: Connection and software security`
+    - Suggest: `Vea cómo las conexiones`
+    - In "See how connections stay secure" the indirect interrogative requires the accented "cómo".
+- `link-preview-optin-message` — `browser/browser/genai.ftl` — Adds "solo" (only), asserting exclusivity the source does not state.
+    - Current: `esto solo ocurre en su dispositivo`
+    - Source: `{ -brand-short-name } uses AI to read the beginning of the page and generate a few key points. To prioritize your privacy, this happens on your device.`
+    - Suggest: `esto ocurre en su dispositivo`
+    - The en-US says "this happens on your device" without "only"; the addition makes a stronger privacy claim than the source.
+- `newtab-wallpaper-reset` — `browser/browser/newtab/newtab.ftl` — "Reset to default" translated as a plural "restore default values" instead of resetting to the default wallpaper.
+    - Current: `Restablecer los valores predeterminados`
+    - Source: `Reset to default`
+    - Suggest: `Restablecer al predeterminado`
+    - The source is a wallpaper reset button meaning "reset to default"; "los valores predeterminados" refers to settings values, not the default wallpaper.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (137)
 
-_Nothing was fixed._
+- `about-logins-breach-alert-date` — `browser/browser/aboutLogins.ftl` — «Está filtración» — verb form used instead of the demonstrative «Esta».
+    - Current: `Está filtración se produjo el`
+    - Source: `This breach occurred on { $date }`
+    - Suggest: `Esta filtración se produjo el`
+    - Demonstrative adjective «esta» carries no accent.
+- `about-logins-confirm-remove-all-dialog-message2` — `browser/browser/aboutLogins.ftl` — «No sé puede» — misplaced accent turns the verb into the first person of «saber».
+    - Current: `No sé puede deshacer esta acción.`
+    - Source: `{$count ->} [1] This will remove the password saved to { -brand-short-name } and any breach alerts. You cannot undo this action. [other] This will remove the passwords saved to { -brand-short-name } and any breach alert…`
+    - Suggest: `No se puede deshacer esta acción.`
+    - Reflexive «se» must be unaccented; the accented «sé» is the verb «saber». Occurs in all three plural variants of this message.
+- `pocket-panel-saved-error-only-links` — `browser/browser/aboutPocket.ftl` — Ungrammatical passive: «pueden guardarle enlaces».
+    - Current: `Solamente pueden guardarle enlaces`
+    - Source: `Only links can be saved`
+    - Suggest: `Solamente se pueden guardar enlaces`
+    - en-US: “Only links can be saved.” The current wording says something else and is not grammatical.
+- `pocket-panel-signup-signup-cta` — `browser/browser/aboutPocket.ftl` — «En grátis» — wrong verb and a spurious accent on «gratis».
+    - Current: `Registrarse en { -pocket-brand-name }. En grátis.`
+    - Source: `Sign up for { -pocket-brand-name }. It’s free.`
+    - Suggest: `Registrarse en { -pocket-brand-name }. Es gratis.`
+    - en-US: “It’s free.” «gratis» is a llana word ending in -s and carries no accent; «En» should be «Es».
+- `restore-page-show-tabs` — `browser/browser/aboutSessionRestore.ftl` — Number agreement: «pestaña anteriores».
+    - Current: `Mostrar pestaña anteriores`
+    - Source: `View Previous Tabs`
+    - Suggest: `Mostrar pestañas anteriores`
+    - Adjective is plural, noun is singular; the companion string uses «Ocultar pestañas anteriores».
+- `crashed-include-URL-2` — `browser/browser/aboutTabCrashed.ftl` — Number agreement: «la URLs».
+    - Current: `Incluir la URLs de los sitios`
+    - Source: `Include the URLs of the sites you were on when { -brand-short-name } crashed`
+    - Suggest: `Incluir las URLs de los sitios`
+    - Plural noun requires plural article.
+- `addon-install-error-corrupt-file` — `browser/browser/addonNotifications.ftl` — Typo «descargdo».
+    - Current: `El complemento descargdo de este sitio`
+    - Source: `The add-on downloaded from this site could not be installed because it appears to be corrupt.`
+    - Suggest: `El complemento descargado de este sitio`
+    - Missing letter in «descargado».
+- `ai-window-open-sidebar` — `browser/browser/aiFeatures.ftl` — Typo «Se pude cerrar».
+    - Current: `Se pude cerrar en cualquier momento.`
+    - Source: `description: Show the assistant sidebar on each new tab. Close it anytime. label: Open assistant automatically`
+    - Suggest: `Se puede cerrar en cualquier momento.`
+    - Letter transposition in «puede».
+- `appmenu-homepage-controlled-changes` — `browser/browser/appMenuNotifications.ftl` — Typo «incio» for «inicio».
+    - Current: `Administrar la página de incio`
+    - Source: `buttonaccesskey: K buttonlabel: Keep Changes label: Your homepage has changed. secondarybuttonaccesskey: M secondarybuttonlabel: Manage Homepage`
+    - Suggest: `Administrar la página de inicio`
+    - Missing letter.
+- `appmenu-remote-tabs-tabsnotsyncing` — `browser/browser/appmenu.ftl` — Misspelling «pestañás» with a spurious accent.
+    - Current: `una lista de pestañás de los otros dispositivos`
+    - Source: `Turn on tab syncing to view a list of tabs from your other devices.`
+    - Suggest: `una lista de pestañas de los otros dispositivos`
+    - «pestañas» carries no written accent.
+- `appmenuitem-vpn-description3` — `browser/browser/appmenu.ftl` — Two words run together: «quetla».
+    - Current: `Hace quetla navegación sea más difícil de rastrear`
+    - Source: `Make your browsing harder to trace`
+    - Suggest: `Hace que la navegación sea más difícil de rastrear`
+    - Missing space plus stray letter.
+- `appmenuitem-vpn-description5` — `browser/browser/appmenu.ftl` — Gender agreement: «todas los dispositivos».
+    - Current: `Obtener protección adicional en todas los dispositivos`
+    - Source: `Get extra protection across devices`
+    - Suggest: `Obtener protección adicional en todos los dispositivos`
+    - «dispositivos» is masculine.
+- `browser-tab-audio-blocked` — `browser/browser/browser.ftl` — Diaeresis characters used instead of accents.
+    - Current: `REPRODUCCIÖN AUTOMÄTICA BLOQUEADA`
+    - Source: `AUTOPLAY BLOCKED`
+    - Suggest: `REPRODUCCIÓN AUTOMÁTICA BLOQUEADA`
+    - «Ö» and «Ä» are not Spanish letters; the intended characters are Ó and Á.
+- `data-reporting-notification-button` — `browser/browser/browser.ftl` — Missing accent on interrogative/relative «qué».
+    - Current: `Seleccionar que compartir`
+    - Source: `accesskey: C label: Choose What I Share`
+    - Suggest: `Seleccionar qué compartir`
+    - en-US “Choose What I Share”; the indirect interrogative requires the accent.
+- `identity-description-insecure-login-forms` — `browser/browser/browser.ftl` — Missing conjunction leaves two clauses spliced together.
+    - Current: `no es segura puede estar comprometida`
+    - Source: `The login information you enter on this page is not secure and could be compromised.`
+    - Suggest: `no es segura y puede estar comprometida`
+    - en-US: “…is not secure and could be compromised.” The sentence is ungrammatical as written.
+- `restore-session-startup-suggestion-button` — `browser/browser/browser.ftl` — “Show me how” rendered with unaccented «como», changing the meaning.
+    - Current: `Mostrarme como`
+    - Source: `Show me how`
+    - Suggest: `Mostrarme cómo`
+    - Interrogative «cómo» requires the accent; without it the label reads “show me as/like”.
+- `toolbar-button-share-tab` — `browser/browser/browser.ftl` — «está página» — verb form instead of demonstrative «esta».
+    - Current: `Compartir está página`
+    - Source: `label: Share tooltiptext: Share this page`
+    - Suggest: `Compartir esta página`
+    - Demonstrative adjective carries no accent.
+- `trustpanel-clear-cookies-description` — `browser/browser/browser.ftl` — Stray «para» leaves the sentence ungrammatical.
+    - Current: `Eliminar cookies y datos del sitio para puede cerrar sesión`
+    - Source: `Removing cookies and site data might log you out of websites and clear shopping carts.`
+    - Suggest: `Eliminar cookies y datos del sitio puede cerrar sesión`
+    - en-US: “Removing cookies and site data might log you out of websites…”; the dangling preposition breaks the clause.
+- `urlbar-tabtosearch-onboard` — `browser/browser/browser.ftl` — Typo «tecaldo» for «teclado».
+    - Current: `atajo de tecaldo`
+    - Source: `Select this shortcut to find what you need faster.`
+    - Suggest: `atajo de teclado`
+    - Letter transposition.
+- `contextual-manager-passwords-remove-all-message` — `browser/browser/contextual-manager.ftl` — «No sé puede» — misplaced accent (same defect as in aboutLogins).
+    - Current: `No sé puede deshacer esta acción.`
+    - Source: `{$total ->} [1] This will remove your password saved to { -brand-short-name } and any breach alerts. You cannot undo this action. [other] This will remove the passwords saved to { -brand-short-name } and any breach aler…`
+    - Suggest: `No se puede deshacer esta acción.`
+    - Reflexive «se» must be unaccented. Present in all three variants of this message.
+- `contextual-manager-passwords-vulnerable-password-heading-and-message` — `browser/browser/contextual-manager.ftl` — «Está contraseña» — verb form instead of demonstrative «Esta».
+    - Current: `Está contraseña es fácil de adivinar.`
+    - Source: `heading: Password change recommended message: This password is easily guessable. Change your password to protect your account.`
+    - Suggest: `Esta contraseña es fácil de adivinar.`
+    - Demonstrative adjective carries no accent.
+- `customkeys-description` — `browser/browser/customkeys.ftl` — Duplicated word fragment at the start of the string.
+    - Current: `ControlaControlar cómo se mueve`
+    - Source: `Control how you move around and interact with { -brand-short-name }.`
+    - Suggest: `Controlar cómo se mueve`
+    - Editing artifact; «ControlaControlar» is not a word.
+- `bookmarks-toolbar-callout-2a-title` — `browser/browser/featureCallout.ftl` — Spurious accent on «Agregár».
+    - Current: `Agregár más marcadores fácilmente`
+    - Source: `Easily add more bookmarks`
+    - Suggest: `Agregar más marcadores fácilmente`
+    - The infinitive «agregar» takes no written accent.
+- `pin-tabs-callout-2-subtitle` — `browser/browser/featureCallout.ftl` — Missing accent on «arrástrela».
+    - Current: `arrastrela al comienzo de la barra de pestañas`
+    - Source: `To pin any tab, drag it to the start of the tab strip. Or right-click and choose Pin Tab.`
+    - Suggest: `arrástrela al comienzo de la barra de pestañas`
+    - Esdrújula formed by the enclitic pronoun requires a written accent.
+- `taskbar-tabs-value-prop-callout-subtitle-v3` — `browser/browser/featureCallout.ftl` — Number agreement: «cualquier sitios».
+    - Current: `Abra cualquier sitios como una aplicación`
+    - Source: `Launch any site like an app in a streamlined window protected by { -brand-short-name }.`
+    - Suggest: `Abra cualquier sitio como una aplicación`
+    - «cualquier» requires a singular noun; en-US is “Launch any site”.
+- `firefoxview-dont-remember-history-empty-header-2` — `browser/browser/firefoxView.ftl` — Missing accent on «qué» in an indirect question.
+    - Current: `Tiene el control sobre que recuerda { -brand-short-name }`
+    - Source: `You’re in control of what { -brand-short-name } remembers`
+    - Suggest: `Tiene el control sobre qué recuerda { -brand-short-name }`
+    - en-US “what { -brand-short-name } remembers”; indirect interrogative needs the accent.
+- `firefoxview-syncedtabs-adddevice-description-3` — `browser/browser/firefoxView.ftl` — Typo «ycempiece» (missing space, stray letter).
+    - Current: `para dispositivos móviles ycempiece a sincronizar`
+    - Source: `Scan the QR code to get { -brand-product-name } for mobile and start syncing your open tabs and more. Learn how to <a data-l10n-name="url">connect additional devices</a>.`
+    - Suggest: `para dispositivos móviles y empiece a sincronizar`
+    - Word run-on with an inserted character.
+- `genai-prompts-quiz` — `browser/browser/genai.ftl` — Wrong accent on «mí» and two words run together in «seguircon».
+    - Current: `Espera mí respuesta antes de seguircon la próxima pregunta.`
+    - Source: `label: Quiz me value: Please quiz me on this selection. Ask me a variety of types of questions, for example multiple choice, true or false, and short answer. Wait for my response before moving on to the next question.`
+    - Suggest: `Espera mi respuesta antes de seguir con la próxima pregunta.`
+    - Possessive «mi» is unaccented; «seguir con» needs a space.
+- `link-preview-optin-message` — `browser/browser/genai.ftl` — «comiendo» (eating) instead of «comienzo» (beginning).
+    - Current: `leer el comiendo de la página`
+    - Source: `{ -brand-short-name } uses AI to read the beginning of the page and generate a few key points. To prioritize your privacy, this happens on your device.`
+    - Suggest: `leer el comienzo de la página`
+    - en-US: “read the beginning of the page”; the typo yields a different word.
+- `ipprotection-come-back-title` — `browser/browser/ipProtection.ftl` — Typo «VPNinctegrada».
+    - Current: `Vuelva para probar la VPNinctegrada`
+    - Source: `Come back to try built-in VPN`
+    - Suggest: `Vuelva para probar la VPN integrada`
+    - Missing space and extra letters garble the product term.
+- `ipprotection-locations-unavailable-label-1` — `browser/browser/ipProtection.ftl` — «deshabitado» (uninhabited) instead of «deshabilitado» (disabled).
+    - Current: `No disponible, deshabitado`
+    - Source: `(value): Unavailable aria-label: Unavailable, disabled`
+    - Suggest: `No disponible, deshabilitado`
+    - en-US aria-label is “Unavailable, disabled”; the typo produces a different real word.
+- `unauthenticated-private-location-message` — `browser/browser/ipProtection.ftl` — Duplicated preposition «a a».
+    - Current: `Ayuda a <a data-l10n-name="learn-more-vpn">a mantener privada la ubicación</a>`
+    - Source: `Helps <a data-l10n-name="learn-more-vpn">keep your location private</a> in { -brand-product-name }.`
+    - Suggest: `Ayuda a <a data-l10n-name="learn-more-vpn">mantener privada la ubicación</a>`
+    - The preposition appears both before and inside the link.
+- `annotations-default-pdf-handler-body` — `browser/browser/newtab/asrouter.ftl` — Missing accent on the enclitic verb form “colóquela”.
+    - Current: `luego coloquela exactamente donde quiera`
+    - Source: `Draw, type, or upload your signature, then place it exactly where you want. Save your go-to signatures for next time.`
+    - Suggest: `luego colóquela exactamente donde quiera`
+    - Verb plus enclitic pronoun becomes esdrújula and must carry the accent.
+- `firefoxview-spotlight-promo-primarybutton` — `browser/browser/newtab/asrouter.ftl` — Interrogative “cómo” written without accent.
+    - Current: `Vea como funciona`
+    - Source: `See how it works`
+    - Suggest: `Vea cómo funciona`
+    - “See how it works” requires the accented interrogative “cómo”.
+- `mr2022-background-update-toast-title` — `browser/browser/newtab/asrouter.ftl` — Missing accent on “Más”.
+    - Current: `Mas privado.`
+    - Source: `New { -brand-short-name }. More private. Fewer trackers. No compromises.`
+    - Suggest: `Más privado.`
+    - “Mas” without accent is the archaic conjunction “but”; the comparative requires “Más”.
+- `welcome-back-spotlight-subtitle` — `browser/browser/newtab/asrouter.ftl` — Person shifts mid-sentence between “tú” and “usted”.
+    - Current: `proteger tus datos donde quiera que vaya`
+    - Source: `Welcome back to the only major browser backed by a non-profit. We take extra steps to protect your data wherever you roam.`
+    - Suggest: `proteger sus datos donde quiera que vaya`
+    - “tus” (tú) and “vaya” (usted) refer to the same addressee in one sentence; the surrounding strings in this file use usted.
+- `newtab-toast-thumbs-up-or-down2` — `browser/browser/newtab/newtab.ftl` — Missing period after “Gracias”, running two sentences together.
+    - Current: `Gracias Su opinión nos ayudará`
+    - Source: `message: Thanks. Your feedback will help us improve your feed.`
+    - Suggest: `Gracias. Su opinión nos ayudará`
+    - en-US “Thanks. Your feedback will help us improve your feed.” has two sentences.
+- `newtab-wallpaper-celestial-river` — `browser/browser/newtab/newtab.ftl` — Two missing accents: “satelite” and “rio”.
+    - Current: `Imagen de satelite de un rio`
+    - Source: `Satellite image of river`
+    - Suggest: `Imagen de satélite de un río`
+    - Both words require written accents (“satélite”, “río”).
+- `newtab-wallpaper-reset` — `browser/browser/newtab/newtab.ftl` — Spelling error: “Reniciar”.
+    - Current: `Reniciar como predeterminado`
+    - Source: `Reset to default`
+    - Suggest: `Restablecer los valores predeterminados`
+    - “Reniciar” is not a Spanish word (typo for “Reiniciar”); en-US is “Reset to default”.
+- `newtab-widget-section-feedback` — `browser/browser/newtab/newtab.ftl` — Interrogative “qué” written without accent.
+    - Current: `Díganos que piensa`
+    - Source: `Tell us what you think`
+    - Suggest: `Díganos qué piensa`
+    - “Tell us what you think” requires the accented interrogative “qué”.
+- `mr2022-onboarding-gratitude-primary-button-label` — `browser/browser/newtab/onboarding.ftl` — Interrogative “qué” written without accent.
+    - Current: `Veamos que hay de nuevo`
+    - Source: `See what’s new`
+    - Suggest: `Veamos qué hay de nuevo`
+    - “See what's new” requires the accented interrogative “qué”.
+- `onboarding-gratitude-security-and-privacy-subtitle` — `browser/browser/newtab/onboarding.ftl` — Duplicated word “más más”.
+    - Current: `que Internet sea más más segura`
+    - Source: `Thank you for using { -brand-short-name }, backed by the Mozilla Foundation. With your support, we’re working to make the internet safer and more accessible for everyone.`
+    - Suggest: `que Internet sea más segura`
+    - “más” is repeated; en-US reads “safer and more accessible”.
+- `onboarding-refresh-gratitude-subtitle` — `browser/browser/newtab/onboarding.ftl` — "non-profit" rendered as "asociación sin fines de lucro" instead of the term used elsewhere for the same phrase.
+    - Current: `una asociación sin fines de lucro`
+    - Source: `Thank you for using { -brand-short-name }, the only major browser backed by a non-profit. With your support, we’re working to make the internet safer and more accessible for everyone.`
+    - Suggest: `una organización sin fines de lucro`
+    - The identical en-US phrase "backed by a non-profit" is translated "respaldado por una organización sin fines de lucro" in welcome-back-spotlight-subtitle; inconsistent terminology on the same surface.
+- `onboarding-sign-up-description` — `browser/browser/newtab/onboarding.ftl` — Number agreement error: singular verb with plural adjective.
+    - Current: `se guardará de forma segura y estará disponibles`
+    - Source: `Sign up for an account and all of your important info — passwords, bookmarks, and more — will be securely stored and available when you sign in to any device.`
+    - Suggest: `se guardará de forma segura y estará disponible`
+    - The subject “toda la información importante” is singular, so “disponibles” must agree in the singular (or the whole clause be pluralized).
+- `appearance-browser-icon-requirement` — `browser/browser/preferences/browserIcon.ftl` — Garbled words: “ydesbloqueae” (missing space, misspelled verb).
+    - Current: `Complete ydesbloqueae íconos de zorros adicionales`
+    - Source: `message: Complete and unlock bonus fox icons to personalize { -brand-short-name }.`
+    - Suggest: `Complete y desbloquee íconos de zorros adicionales`
+    - “y” and “desbloquee” are run together and the verb is misspelled; en-US is “Complete and unlock bonus fox icons”.
+- `connection-proxy-autologin` — `browser/browser/preferences/connection.ftl` — Two misspellings in the tooltip: “cuand” and “gardado”.
+    - Current: `cuand se han gardado credenciales`
+    - Source: `accesskey: i label: Do not prompt for authentication if password is saved tooltip: This option silently authenticates you to proxies when you have saved credentials for them. You will be prompted if authentication fails.`
+    - Suggest: `cuando se han guardado credenciales`
+    - “cuand” and “gardado” are typos for “cuando” and “guardado”.
+- `connection-proxy-autologin-checkbox` — `browser/browser/preferences/connection.ftl` — Same misspellings “cuand” and “gardado” in the checkbox tooltip.
+    - Current: `cuand se han gardado credenciales`
+    - Source: `accesskey: i label: Do not prompt for authentication if password is saved tooltiptext: This option silently authenticates you to proxies when you have saved credentials for them. You will be prompted if authentication f…`
+    - Suggest: `cuando se han guardado credenciales`
+    - Duplicate of the connection-proxy-autologin tooltip; both need the same spelling fix.
+- `collection-health-report-disabled2` — `browser/browser/preferences/preferences.ftl` — Gender/number agreement error “La información … está deshabilitado”.
+    - Current: `La información de datos está deshabilitado`
+    - Source: `Data reporting is disabled for this build configuration.`
+    - Suggest: `El envío de informes de datos está desactivado`
+    - “información” is feminine, so the participle must agree; compare data-collection-health-report-disabled in the same file, “El envío de informes de datos está desactivado.”
+- `collection-studies` — `browser/browser/preferences/preferences.ftl` — Ungrammatical “Permitir X para instalar” construction.
+    - Current: `Permitir { -brand-short-name } para instalar y ejecutar estudios`
+    - Source: `label: Allow { -brand-short-name } to install and run studies`
+    - Suggest: `Permitir que { -brand-short-name } instale y ejecute estudios`
+    - en-US “Allow Firefox to install and run studies”; Spanish requires “permitir que + subjuntivo”, as used in collection-health-report (“Permitir que { -brand-short-name } envíe…”).
+- `containers-card-header2` — `browser/browser/preferences/preferences.ftl` — Duplicated word “para para”.
+    - Current: `Cookies separadas por contenedor para para poder usar`
+    - Source: `description: Separate cookies by container so you can use different accounts on the same site and limit cross-site tracking. label: Containers`
+    - Suggest: `Cookies separadas por contenedor para poder usar`
+    - Accidental repetition; en-US “Separate cookies by container so you can use…”.
+- `data-collection-run-studies` — `browser/browser/preferences/preferences.ftl` — Misspelling “paar” for “para”.
+    - Current: `ayuda a mejorar la calidad paar todos`
+    - Source: `description: { -brand-short-name } randomly selects users to test features, which helps improve quality for everyone. label: Allow { -brand-short-name } to run feature studies`
+    - Suggest: `ayuda a mejorar la calidad para todos`
+    - Typo; en-US “helps improve quality for everyone”.
+- `extension-controlling-password-saving` — `browser/browser/preferences/preferences.ftl` — Verb “está” used instead of the demonstrative “esta”.
+    - Current: `controla está configuración.`
+    - Source: `<img data-l10n-name="icon"/> <strong>{ $name }</strong> controls this setting.`
+    - Suggest: `controla esta configuración.`
+    - The parallel string extension-controlling-web-notifications correctly reads “controla esta configuración.”
+- `extension-controlling-proxy-config` — `browser/browser/preferences/preferences.ftl` — Verb agreement error “se conectan” with a singular subject (and unaccented “como”).
+    - Current: `controla como { -brand-short-name } se conectan a internet.`
+    - Source: `<img data-l10n-name ="icon"/> <strong>{ $name }</strong> controls how { -brand-short-name } connects to the internet.`
+    - Suggest: `controla cómo { -brand-short-name } se conecta a internet.`
+    - The subject is the singular brand name, so the verb must be “se conecta”; the interrogative “cómo” also needs its accent.
+- `extension-controlling-websites-content-blocking-all-trackers` — `browser/browser/preferences/preferences.ftl` — Verb “está” used instead of the demonstrative “esta”.
+    - Current: `controla está configuración.`
+    - Source: `<img data-l10n-name="icon"/> <strong>{ $name }</strong> controls this setting.`
+    - Suggest: `controla esta configuración.`
+    - Same accent error as extension-controlling-password-saving; the demonstrative adjective carries no accent.
+- `network-proxy-connection-settings2` — `browser/browser/preferences/preferences.ftl` — Verb “está” used instead of the demonstrative “esta”.
+    - Current: `Cambiar está configuración puede causar problemas de conexión`
+    - Source: `accesskey: p description: Changing these settings may cause connections issues label: Configure proxy`
+    - Suggest: `Cambiar esta configuración puede causar problemas de conexión`
+    - en-US: “Changing these settings may cause connections issues”; the demonstrative adjective must be “esta”.
+- `preferences-ai-controls-pdfjs-control` — `browser/browser/preferences/preferences.ftl` — Missing preposition: “agregará descripciones hacerlas más accesibles”.
+    - Current: `esto agregará descripciones hacerlas más accesibles`
+    - Source: `description: When you add images to PDFs, this adds descriptions to make them accessible. label: Image alt text in { -brand-short-name } PDF viewer`
+    - Suggest: `esto agregará descripciones para hacerlas más accesibles`
+    - en-US: “this adds descriptions to make them accessible”; the purpose clause needs “para”.
+- `preferences-connection-link-section` — `browser/browser/preferences/preferences.ftl` — Misspelling “verifificados”.
+    - Current: `los sitios web son verifificados`
+    - Source: `description: See how connections stay secure, harmful software is blocked, and websites are verified. label: Connection and software security`
+    - Suggest: `los sitios web son verificados`
+    - Syllable duplicated in “verificados”.
+- `preferences-doh-overview-custom` — `browser/browser/preferences/preferences.ftl` — Stray article in “sobre el del proveedor”.
+    - Current: `con control sobre el del proveedor y comportamiento de respaldo`
+    - Source: `description: Always use secure DNS with control over your provider and fallback behavior. label: Custom`
+    - Suggest: `con control sobre el proveedor y el comportamiento de respaldo`
+    - en-US: “with control over your provider and fallback behavior”; “el del” leaves the phrase without a referent. The same fragment appears in preferences-doh-radio-custom.
+- `preferences-doh-radio-off` — `browser/browser/preferences/preferences.ftl` — Description ends in the garbled token “0red”.
+    - Current: `Usar el resolvedor de DNS 0red`
+    - Source: `description: Use your default DNS resolver label: Off`
+    - Suggest: `Usar el resolvedor de DNS predeterminado`
+    - en-US: “Use your default DNS resolver”. Compare preferences-doh-overview-off in the same file, which reads “Usar el resolvedor de DNS predeterminado.”
+- `preferences-etp-level-warning-message` — `browser/browser/preferences/preferences.ftl` — Missing preposition in “dentro sus funcionalidades”.
+    - Current: `incluyen a los rastreadores dentro sus funcionalidades`
+    - Source: `heading: Heads up! Some sites may not work as expected. message: Some sites build trackers into their features or content. When { -brand-short-name } blocks them, the site looks broken. Try using “Fix site issue” or tur…`
+    - Suggest: `incluyen a los rastreadores dentro de sus funcionalidades`
+    - “dentro” requires “de” before a noun phrase.
+- _…and 77 more._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,8 +449,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,150 |
-| Missing strings | 30 |
+| Strings | 18,151 |
+| Missing strings | 29 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -54,7 +458,7 @@ _Nothing retired._
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
-| Text quoting a UI label that no longer matches | 3 |
+| Text quoting a UI label that no longer matches | 2 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 4 |
 | Markup & `data-l10n-name` defects | 3 |
@@ -62,7 +466,7 @@ _Nothing retired._
 
 ### Completeness
 
-**30 strings** are not translated yet, concentrated in:
+**29 strings** are not translated yet, concentrated in:
 
 - `browser/browser/newtab/newtab.ftl` — 10
 - `toolkit/toolkit/about/url-classifier.ftl` — 6
@@ -71,7 +475,6 @@ _Nothing retired._
 - `browser/browser/preferences/preferences.ftl` — 3
 - `toolkit/toolkit/about/aboutAddons.ftl` — 1
 - `toolkit/toolkit/global/processTypes.ftl` — 1
-- `browser/browser/aiWindowContent.ftl` — 1
 - `browser/browser/newtab/asrouter.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
@@ -97,15 +500,24 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (421)
+## 3. Open findings (305)
 
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+
+- `link-preview-optin-message` — `browser/browser/genai.ftl` — Adds "solo" (only), asserting exclusivity the source does not state.
+    - Current: `esto solo ocurre en su dispositivo`
+    - Source: `{ -brand-short-name } uses AI to read the beginning of the page and generate a few key points. To prioritize your privacy, this happens on your device.`
+    - Suggest: `esto ocurre en su dispositivo`
+    - The en-US says "this happens on your device" without "only"; the addition makes a stronger privacy claim than the source.
+
+_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 70 |
-| 2 | Wrong content (says something other than the English) | 170 |
-| 3 | Degraded language (grammar, spelling, terminology) | 135 |
-| 4 | Cosmetic (typography, spacing) | 40 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 53 |
+| 2 | Wrong content (says something other than the English) | 125 |
+| 3 | Degraded language (grammar, spelling, terminology) | 86 |
+| 4 | Cosmetic (typography, spacing) | 35 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -405,10 +817,55 @@ _Nothing reported._
     - Source: `Parent process Browser Console`
     - Suggest: `Consola del navegador del proceso principal`
     - en-US: “Parent process Browser Console”. The window is the Browser Console, not the Browser Toolbox; multiProcessBrowserConsole.title in the same file correctly uses “Consola”.
-- _…and 59 more; see `state/` for the full list._
+- _…and 60 more; see `state/` for the full list._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `restore-page-show-tabs` — `browser/browser/aboutSessionRestore.ftl` — "View" translated as "Mostrar" (show) instead of "Ver".
+    - Current: `Mostrar pestañas anteriores`
+    - Source: `View Previous Tabs`
+    - Suggest: `Ver pestañas anteriores`
+    - en-US is "View Previous Tabs"; "Mostrar" corresponds to "Show", used elsewhere for a different action.
+- `ai-window-open-sidebar` — `browser/browser/aiFeatures.ftl` — "on each new tab" is rendered as "cuando se abra una nueva pestaña", altering the meaning slightly but acceptably? No — description drops "each".
+    - Current: `Mostrar la barra lateral del asistente cuando se abra una nueva pestaña.`
+    - Source: `description: Show the assistant sidebar on each new tab. Close it anytime. label: Open assistant automatically`
+    - Suggest: `Mostrar la barra lateral del asistente en cada nueva pestaña.`
+    - en-US says the sidebar shows on each new tab; the target paraphrases as "when a new tab is opened", losing the "each new tab" scope.
+- `smart-window-switched-tab-label` — `browser/browser/aiWindowContent.ftl` — "Switched tabs" (action result: switched to a tab) is rendered as "Pestañas cambiadas" ("tabs changed/replaced").
+    - Current: `Pestañas cambiadas`
+    - Source: `Switched tabs`
+    - Suggest: `Se cambió de pestaña`
+    - The developer comment says this is the result label for switching to a single already-open tab; the target reads as a plural noun phrase meaning tabs were modified, not that the browser switched tabs.
+- `identity-description-insecure-login-forms` — `browser/browser/browser.ftl` — "you enter" (present/future) is rendered as past "que se usó", changing the meaning.
+    - Current: `La información de ingreso que se usó en esta página no es segura y puede estar comprometida.`
+    - Source: `The login information you enter on this page is not secure and could be compromised.`
+    - Suggest: `La información de ingreso que ingrese en esta página no es segura y podría verse comprometida.`
+    - en-US warns about information the user enters on the page, not information already used; the past tense misstates the warning.
+- `urlbar-tabtosearch-onboard` — `browser/browser/browser.ftl` — "shortcut" is rendered as "atajo de teclado" (keyboard shortcut) though the developer comment describes a urlbar result, not a key combination.
+    - Current: `Seleccione este atajo de teclado para encontrar más rápido lo que necesita.`
+    - Source: `Select this shortcut to find what you need faster.`
+    - Suggest: `Seleccione este atajo para encontrar más rápido lo que necesita.`
+    - The comment says users are typing a search engine domain in the urlbar and select the offered shortcut; adding "de teclado" invents a keyboard shortcut not in the source.
+- `genai-prompts-quiz` — `browser/browser/genai.ftl` — Label "Quiz me" is translated as "Juguemos" ("Let's play"), and "multiple choice" is left in English.
+    - Current: `label: Juguemos`
+    - Source: `label: Quiz me value: Please quiz me on this selection. Ask me a variety of types of questions, for example multiple choice, true or false, and short answer. Wait for my response before moving on to the next question.`
+    - Suggest: `label: Evaluarme`
+    - en-US label asks the assistant to quiz the user; "Juguemos" says "let's play", a different action, and does not match the prompt value about questions.
+- `link-preview-optin-message` — `browser/browser/genai.ftl` — Adds "solo" (only), asserting exclusivity the source does not state.
+    - Current: `esto solo ocurre en su dispositivo`
+    - Source: `{ -brand-short-name } uses AI to read the beginning of the page and generate a few key points. To prioritize your privacy, this happens on your device.`
+    - Suggest: `esto ocurre en su dispositivo`
+    - The en-US says "this happens on your device" without "only"; the addition makes a stronger privacy claim than the source.
+- `newtab-wallpaper-reset` — `browser/browser/newtab/newtab.ftl` — "Reset to default" translated as a plural "restore default values" instead of resetting to the default wallpaper.
+    - Current: `Restablecer los valores predeterminados`
+    - Source: `Reset to default`
+    - Suggest: `Restablecer al predeterminado`
+    - The source is a wallpaper reset button meaning "reset to default"; "los valores predeterminados" refers to settings values, not the default wallpaper.
+- `mr2022-onboarding-gratitude-primary-button-label` — `browser/browser/newtab/onboarding.ftl` — Button label changed from an imperative addressed to the user to a first-person plural exhortation.
+    - Current: `Veamos qué hay de nuevo`
+    - Source: `See what’s new`
+    - Suggest: `Vea qué hay de nuevo`
+    - The en-US "See what’s new" is addressed to the user (usted form, consistent with other buttons like "Vea cómo funciona"); "Veamos" means "let's see".
 - `autofill-address-oblast` — `browser/browser/preferences/formAutofill.ftl` — “Oblast” replaced by “Provincia autónoma”, which names a different kind of entity.
     - Current: `Provincia autónoma`
     - Source: `Oblast`
@@ -469,11 +926,26 @@ _Nothing reported._
     - Source: `Ignoring “%1$S” within %2$S: ‘strict-dynamic’ specified`
     - Suggest: `‘strict-dynamic’ especificado`
     - Developer comment: “'strict-dynamic' should not be localized”. The neighbouring string strictDynamicButNoHashOrNonce correctly keeps ‘strict-dynamic’.
+- `crashreporter-comment-prompt` — `toolkit/crashreporter/crashreporter.ftl` — The parenthetical remark is rewritten as a separate "Note:" sentence with a stray period and double space.
+    - Current: `Agregar un comentario.  Nota: Los comentarios son visibles públicamente`
+    - Source: `Add a comment (comments are publicly visible)`
+    - Suggest: `Agregar un comentario (los comentarios son visibles públicamente)`
+    - en-US is a single label "Add a comment (comments are publicly visible)"; the target splits it into two sentences with an extra period and double space, not matching the source.
+- `addon-detail-private-browsing-help` — `toolkit/toolkit/about/aboutAddons.ftl` — "the extension" is rendered as "el complemento" (add-on) instead of "la extensión".
+    - Current: `el complemento tendrá acceso`
+    - Source: `When allowed, the extension will have access to your online activities while private browsing. <a data-l10n-name="learn-more">Learn more</a>`
+    - Suggest: `la extensión tendrá acceso`
+    - The en-US says "extension"; es-AR consistently uses "extensión" for extension and reserves "complemento" for add-on.
 - `about-glean-about-data-list-item-about-telemetry` — `toolkit/toolkit/about/aboutGlean.ftl` — Spurious space inside the about: URL, which must not be altered.
     - Current: `<a data-l10n-name="about-telemetry-link">about: telemetry</a>`
     - Source: `To browse the data being collected by legacy telemetry, please consult <a data-l10n-name="about-telemetry-link">about:telemetry</a>.`
     - Suggest: `<a data-l10n-name="about-telemetry-link">about:telemetry</a>`
     - “about:telemetry” is a browser URL and a do-not-translate identifier; with the inserted space it no longer names a valid page.
+- `about-networking-rcwn-net-won-count` — `toolkit/toolkit/about/aboutNetworking.ftl` — "Net won count" (number of times the network race was won) is mistranslated as "Cuenta de ganancias en la red" ("count of earnings on the network").
+    - Current: `Cuenta de ganancias en la red`
+    - Source: `Net won count`
+    - Suggest: `Cantidad de veces que ganó la red`
+    - In RCWN (race cache with network) stats this counts how often the network won the race against the cache; "ganancias" means monetary earnings/profit and misstates the metric.
 - `language-name-af` — `toolkit/toolkit/intl/languageNames.ftl` — Afrikaans rendered as "Africano" (African)
     - Current: `language-name-af = Africano`
     - Source: `Afrikaans`
@@ -527,6 +999,11 @@ _Nothing reported._
 
 ### C. Grammar, agreement & spelling
 
+- `appmenuitem-vpn-description3` — `browser/browser/appmenu.ftl` — Inconsistent verb form: infinitive imperative expected as in the sibling description, but conjugated "Hace" is used.
+    - Current: `Hace que la navegación sea más difícil de rastrear`
+    - Source: `Make your browsing harder to trace`
+    - Suggest: `Hacer que la navegación sea más difícil de rastrear`
+    - Parallel string appmenuitem-vpn-description5 uses the infinitive ("Obtener…"); en-US "Make your browsing harder to trace" is an imperative/infinitive, not third-person present.
 - `migration-no-selected-data-label` — `browser/browser/migrationWizard.ftl` — Accented "sé" used instead of the reflexive pronoun "se".
     - Current: `No sé seleccionaron datos a importar`
     - Source: `No data selected for import`
@@ -557,6 +1034,11 @@ _Nothing reported._
     - Source: `accesskey: F label: Fingerprinters`
     - Suggest: `Detectores de huellas digitales`
     - The same en-US term is rendered “Detectores de huellas digitales” in content-blocking-fingerprinters and in the ETP custom labels in this file, so the English label is inconsistent in the same surface.
+- `preferences-connection-link-section` — `browser/browser/preferences/preferences.ftl` — Missing accent on "cómo" in the interrogative/relative clause.
+    - Current: `Vea como las conexiones`
+    - Source: `description: See how connections stay secure, harmful software is blocked, and websites are verified. label: Connection and software security`
+    - Suggest: `Vea cómo las conexiones`
+    - In "See how connections stay secure" the indirect interrogative requires the accented "cómo".
 - `preonboarding-manage-and-read-header-v2` — `browser/browser/preonboarding.ftl` — Garbled duplicated word at the start of the string.
     - Current: `LeeLea los términos de uso`
     - Source: `Read Terms of Use and Privacy Notice. Manage additional settings.`
@@ -752,6 +1234,11 @@ _Nothing reported._
     - Source: `Require Linux authentication to autofill, view, or edit stored credit cards.`
     - Suggest: `Requerir autenticación de Linux para autocompletar`
     - en-US "Require Linux authentication…"; the Mac and Windows variants of the same checkbox both use "Requerir", so this one reads as a statement of fact instead of a setting.
+- `REG_APP_DESC` — `browser/installer/custom.properties` — Misspelled infinitive "obtenér" with a spurious accent.
+    - Current: `obtenér`
+    - Source: `$BrandShortName delivers safe, easy web browsing. A familiar user interface, enhanced security features including protection from online identity theft, and integrated search let you get the most out of the web.`
+    - Suggest: `obtener`
+    - Infinitives ending in -er carry no written accent; "obtenér" is a spelling error.
 - `unsupported_feature_forms` — `browser/pdfviewer/chrome.properties` — Misspelling "cotiene"
     - Current: `cotiene`
     - Source: `This PDF document contains forms. The filling of form fields is not supported.`
@@ -812,326 +1299,60 @@ _Nothing reported._
     - Source: `Request for fullscreen was denied because at least one of the document’s containing elements is not an iframe or does not have an “allowfullscreen” attribute.`
     - Suggest: `no tiene un atributo “allowfullscreen”.`
     - Leftover from the English source; the noun is duplicated.
-- `ImportMapNotAllowedMultiple` — `dom/chrome/dom/dom.properties` — Wrong accent: “sé” instead of the pronoun “se”.
-    - Current: `No sé permite la importación múltiple de mapas.`
-    - Source: `Multiple import maps are not allowed.`
-    - Suggest: `No se permiten varios mapas de importación.`
-    - “sé” is the verb form; the impersonal pronoun “se” is required.
-- `JSONCharsetWarning` — `dom/chrome/dom/dom.properties` — Typo “recueprada”.
-    - Current: `para JSON recueprada usando XMLHttpRequest`
-    - Source: `An attempt was made to declare a non-UTF-8 encoding for JSON retrieved using XMLHttpRequest. Only UTF-8 is supported for decoding JSON.`
-    - Suggest: `para JSON recuperada usando XMLHttpRequest`
-    - Misspelling of “recuperada”.
-- `KillScriptWithDebugMessage` — `dom/chrome/dom/dom.properties` — Typo “el el debugger”.
-    - Current: `abrir el script el el debugger`
-    - Source: `A script on this page may be busy, or it may have stopped responding. You can stop the script now, open the script in the debugger, or let the script continue.`
-    - Suggest: `abrir el script en el depurador`
-    - Duplicated article instead of the preposition “en”; appears in a user-facing dialog.
-- _…and 28 more; see `state/` for the full list._
+- _…and 33 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
-- `about-logins-breach-alert-date` — `browser/browser/aboutLogins.ftl` — «Está filtración» — verb form used instead of the demonstrative «Esta».
-    - Current: `Está filtración se produjo el`
-    - Source: `This breach occurred on { $date }`
-    - Suggest: `Esta filtración se produjo el`
-    - Demonstrative adjective «esta» carries no accent.
-- `about-logins-confirm-remove-all-dialog-message2` — `browser/browser/aboutLogins.ftl` — «No sé puede» — misplaced accent turns the verb into the first person of «saber».
-    - Current: `No sé puede deshacer esta acción.`
-    - Source: `{$count ->} [1] This will remove the password saved to { -brand-short-name } and any breach alerts. You cannot undo this action. [other] This will remove the passwords saved to { -brand-short-name } and any breach alert…`
-    - Suggest: `No se puede deshacer esta acción.`
-    - Reflexive «se» must be unaccented; the accented «sé» is the verb «saber». Occurs in all three plural variants of this message.
-- `pocket-panel-saved-error-only-links` — `browser/browser/aboutPocket.ftl` — Ungrammatical passive: «pueden guardarle enlaces».
-    - Current: `Solamente pueden guardarle enlaces`
-    - Source: `Only links can be saved`
-    - Suggest: `Solamente se pueden guardar enlaces`
-    - en-US: “Only links can be saved.” The current wording says something else and is not grammatical.
-- `pocket-panel-signup-signup-cta` — `browser/browser/aboutPocket.ftl` — «En grátis» — wrong verb and a spurious accent on «gratis».
-    - Current: `Registrarse en { -pocket-brand-name }. En grátis.`
-    - Source: `Sign up for { -pocket-brand-name }. It’s free.`
-    - Suggest: `Registrarse en { -pocket-brand-name }. Es gratis.`
-    - en-US: “It’s free.” «gratis» is a llana word ending in -s and carries no accent; «En» should be «Es».
-- `restore-page-show-tabs` — `browser/browser/aboutSessionRestore.ftl` — Number agreement: «pestaña anteriores».
-    - Current: `Mostrar pestaña anteriores`
-    - Source: `View Previous Tabs`
-    - Suggest: `Mostrar pestañas anteriores`
-    - Adjective is plural, noun is singular; the companion string uses «Ocultar pestañas anteriores».
-- `crashed-include-URL-2` — `browser/browser/aboutTabCrashed.ftl` — Number agreement: «la URLs».
-    - Current: `Incluir la URLs de los sitios`
-    - Source: `Include the URLs of the sites you were on when { -brand-short-name } crashed`
-    - Suggest: `Incluir las URLs de los sitios`
-    - Plural noun requires plural article.
-- `addon-install-error-corrupt-file` — `browser/browser/addonNotifications.ftl` — Typo «descargdo».
-    - Current: `El complemento descargdo de este sitio`
-    - Source: `The add-on downloaded from this site could not be installed because it appears to be corrupt.`
-    - Suggest: `El complemento descargado de este sitio`
-    - Missing letter in «descargado».
-- `ai-window-open-sidebar` — `browser/browser/aiFeatures.ftl` — Typo «Se pude cerrar».
-    - Current: `Se pude cerrar en cualquier momento.`
-    - Source: `description: Show the assistant sidebar on each new tab. Close it anytime. label: Open assistant automatically`
-    - Suggest: `Se puede cerrar en cualquier momento.`
-    - Letter transposition in «puede».
-- `appmenu-homepage-controlled-changes` — `browser/browser/appMenuNotifications.ftl` — Typo «incio» for «inicio».
-    - Current: `Administrar la página de incio`
-    - Source: `buttonaccesskey: K buttonlabel: Keep Changes label: Your homepage has changed. secondarybuttonaccesskey: M secondarybuttonlabel: Manage Homepage`
-    - Suggest: `Administrar la página de inicio`
-    - Missing letter.
-- `appmenu-remote-tabs-tabsnotsyncing` — `browser/browser/appmenu.ftl` — Misspelling «pestañás» with a spurious accent.
-    - Current: `una lista de pestañás de los otros dispositivos`
-    - Source: `Turn on tab syncing to view a list of tabs from your other devices.`
-    - Suggest: `una lista de pestañas de los otros dispositivos`
-    - «pestañas» carries no written accent.
-- `appmenuitem-vpn-description3` — `browser/browser/appmenu.ftl` — Two words run together: «quetla».
-    - Current: `Hace quetla navegación sea más difícil de rastrear`
-    - Source: `Make your browsing harder to trace`
-    - Suggest: `Hace que la navegación sea más difícil de rastrear`
-    - Missing space plus stray letter.
-- `appmenuitem-vpn-description5` — `browser/browser/appmenu.ftl` — Gender agreement: «todas los dispositivos».
-    - Current: `Obtener protección adicional en todas los dispositivos`
-    - Source: `Get extra protection across devices`
-    - Suggest: `Obtener protección adicional en todos los dispositivos`
-    - «dispositivos» is masculine.
-- `browser-tab-audio-blocked` — `browser/browser/browser.ftl` — Diaeresis characters used instead of accents.
-    - Current: `REPRODUCCIÖN AUTOMÄTICA BLOQUEADA`
-    - Source: `AUTOPLAY BLOCKED`
-    - Suggest: `REPRODUCCIÓN AUTOMÁTICA BLOQUEADA`
-    - «Ö» and «Ä» are not Spanish letters; the intended characters are Ó and Á.
-- `data-reporting-notification-button` — `browser/browser/browser.ftl` — Missing accent on interrogative/relative «qué».
-    - Current: `Seleccionar que compartir`
-    - Source: `accesskey: C label: Choose What I Share`
-    - Suggest: `Seleccionar qué compartir`
-    - en-US “Choose What I Share”; the indirect interrogative requires the accent.
-- `identity-description-insecure-login-forms` — `browser/browser/browser.ftl` — Missing conjunction leaves two clauses spliced together.
-    - Current: `no es segura puede estar comprometida`
-    - Source: `The login information you enter on this page is not secure and could be compromised.`
-    - Suggest: `no es segura y puede estar comprometida`
-    - en-US: “…is not secure and could be compromised.” The sentence is ungrammatical as written.
-- `restore-session-startup-suggestion-button` — `browser/browser/browser.ftl` — “Show me how” rendered with unaccented «como», changing the meaning.
-    - Current: `Mostrarme como`
-    - Source: `Show me how`
-    - Suggest: `Mostrarme cómo`
-    - Interrogative «cómo» requires the accent; without it the label reads “show me as/like”.
-- `toolbar-button-share-tab` — `browser/browser/browser.ftl` — «está página» — verb form instead of demonstrative «esta».
-    - Current: `Compartir está página`
-    - Source: `label: Share tooltiptext: Share this page`
-    - Suggest: `Compartir esta página`
-    - Demonstrative adjective carries no accent.
-- `trustpanel-clear-cookies-description` — `browser/browser/browser.ftl` — Stray «para» leaves the sentence ungrammatical.
-    - Current: `Eliminar cookies y datos del sitio para puede cerrar sesión`
-    - Source: `Removing cookies and site data might log you out of websites and clear shopping carts.`
-    - Suggest: `Eliminar cookies y datos del sitio puede cerrar sesión`
-    - en-US: “Removing cookies and site data might log you out of websites…”; the dangling preposition breaks the clause.
-- `urlbar-tabtosearch-onboard` — `browser/browser/browser.ftl` — Typo «tecaldo» for «teclado».
-    - Current: `atajo de tecaldo`
-    - Source: `Select this shortcut to find what you need faster.`
-    - Suggest: `atajo de teclado`
-    - Letter transposition.
-- `contextual-manager-passwords-remove-all-message` — `browser/browser/contextual-manager.ftl` — «No sé puede» — misplaced accent (same defect as in aboutLogins).
-    - Current: `No sé puede deshacer esta acción.`
-    - Source: `{$total ->} [1] This will remove your password saved to { -brand-short-name } and any breach alerts. You cannot undo this action. [other] This will remove the passwords saved to { -brand-short-name } and any breach aler…`
-    - Suggest: `No se puede deshacer esta acción.`
-    - Reflexive «se» must be unaccented. Present in all three variants of this message.
-- `contextual-manager-passwords-vulnerable-password-heading-and-message` — `browser/browser/contextual-manager.ftl` — «Está contraseña» — verb form instead of demonstrative «Esta».
-    - Current: `Está contraseña es fácil de adivinar.`
-    - Source: `heading: Password change recommended message: This password is easily guessable. Change your password to protect your account.`
-    - Suggest: `Esta contraseña es fácil de adivinar.`
-    - Demonstrative adjective carries no accent.
-- `customkeys-description` — `browser/browser/customkeys.ftl` — Duplicated word fragment at the start of the string.
-    - Current: `ControlaControlar cómo se mueve`
-    - Source: `Control how you move around and interact with { -brand-short-name }.`
-    - Suggest: `Controlar cómo se mueve`
-    - Editing artifact; «ControlaControlar» is not a word.
-- `bookmarks-toolbar-callout-2a-title` — `browser/browser/featureCallout.ftl` — Spurious accent on «Agregár».
-    - Current: `Agregár más marcadores fácilmente`
-    - Source: `Easily add more bookmarks`
-    - Suggest: `Agregar más marcadores fácilmente`
-    - The infinitive «agregar» takes no written accent.
-- `pin-tabs-callout-2-subtitle` — `browser/browser/featureCallout.ftl` — Missing accent on «arrástrela».
-    - Current: `arrastrela al comienzo de la barra de pestañas`
-    - Source: `To pin any tab, drag it to the start of the tab strip. Or right-click and choose Pin Tab.`
-    - Suggest: `arrástrela al comienzo de la barra de pestañas`
-    - Esdrújula formed by the enclitic pronoun requires a written accent.
-- `taskbar-tabs-value-prop-callout-subtitle-v3` — `browser/browser/featureCallout.ftl` — Number agreement: «cualquier sitios».
-    - Current: `Abra cualquier sitios como una aplicación`
-    - Source: `Launch any site like an app in a streamlined window protected by { -brand-short-name }.`
-    - Suggest: `Abra cualquier sitio como una aplicación`
-    - «cualquier» requires a singular noun; en-US is “Launch any site”.
-- `firefoxview-dont-remember-history-empty-header-2` — `browser/browser/firefoxView.ftl` — Missing accent on «qué» in an indirect question.
-    - Current: `Tiene el control sobre que recuerda { -brand-short-name }`
-    - Source: `You’re in control of what { -brand-short-name } remembers`
-    - Suggest: `Tiene el control sobre qué recuerda { -brand-short-name }`
-    - en-US “what { -brand-short-name } remembers”; indirect interrogative needs the accent.
-- `firefoxview-syncedtabs-adddevice-description-3` — `browser/browser/firefoxView.ftl` — Typo «ycempiece» (missing space, stray letter).
-    - Current: `para dispositivos móviles ycempiece a sincronizar`
-    - Source: `Scan the QR code to get { -brand-product-name } for mobile and start syncing your open tabs and more. Learn how to <a data-l10n-name="url">connect additional devices</a>.`
-    - Suggest: `para dispositivos móviles y empiece a sincronizar`
-    - Word run-on with an inserted character.
-- `genai-prompts-quiz` — `browser/browser/genai.ftl` — Wrong accent on «mí» and two words run together in «seguircon».
-    - Current: `Espera mí respuesta antes de seguircon la próxima pregunta.`
-    - Source: `label: Quiz me value: Please quiz me on this selection. Ask me a variety of types of questions, for example multiple choice, true or false, and short answer. Wait for my response before moving on to the next question.`
-    - Suggest: `Espera mi respuesta antes de seguir con la próxima pregunta.`
-    - Possessive «mi» is unaccented; «seguir con» needs a space.
-- `link-preview-optin-message` — `browser/browser/genai.ftl` — «comiendo» (eating) instead of «comienzo» (beginning).
-    - Current: `leer el comiendo de la página`
-    - Source: `{ -brand-short-name } uses AI to read the beginning of the page and generate a few key points. To prioritize your privacy, this happens on your device.`
-    - Suggest: `leer el comienzo de la página`
-    - en-US: “read the beginning of the page”; the typo yields a different word.
-- `ipprotection-come-back-title` — `browser/browser/ipProtection.ftl` — Typo «VPNinctegrada».
-    - Current: `Vuelva para probar la VPNinctegrada`
-    - Source: `Come back to try built-in VPN`
-    - Suggest: `Vuelva para probar la VPN integrada`
-    - Missing space and extra letters garble the product term.
-- `ipprotection-locations-unavailable-label-1` — `browser/browser/ipProtection.ftl` — «deshabitado» (uninhabited) instead of «deshabilitado» (disabled).
-    - Current: `No disponible, deshabitado`
-    - Source: `(value): Unavailable aria-label: Unavailable, disabled`
-    - Suggest: `No disponible, deshabilitado`
-    - en-US aria-label is “Unavailable, disabled”; the typo produces a different real word.
-- `unauthenticated-private-location-message` — `browser/browser/ipProtection.ftl` — Duplicated preposition «a a».
-    - Current: `Ayuda a <a data-l10n-name="learn-more-vpn">a mantener privada la ubicación</a>`
-    - Source: `Helps <a data-l10n-name="learn-more-vpn">keep your location private</a> in { -brand-product-name }.`
-    - Suggest: `Ayuda a <a data-l10n-name="learn-more-vpn">mantener privada la ubicación</a>`
-    - The preposition appears both before and inside the link.
-- `annotations-default-pdf-handler-body` — `browser/browser/newtab/asrouter.ftl` — Missing accent on the enclitic verb form “colóquela”.
-    - Current: `luego coloquela exactamente donde quiera`
-    - Source: `Draw, type, or upload your signature, then place it exactly where you want. Save your go-to signatures for next time.`
-    - Suggest: `luego colóquela exactamente donde quiera`
-    - Verb plus enclitic pronoun becomes esdrújula and must carry the accent.
-- `firefoxview-spotlight-promo-primarybutton` — `browser/browser/newtab/asrouter.ftl` — Interrogative “cómo” written without accent.
-    - Current: `Vea como funciona`
-    - Source: `See how it works`
-    - Suggest: `Vea cómo funciona`
-    - “See how it works” requires the accented interrogative “cómo”.
-- `mr2022-background-update-toast-title` — `browser/browser/newtab/asrouter.ftl` — Missing accent on “Más”.
-    - Current: `Mas privado.`
-    - Source: `New { -brand-short-name }. More private. Fewer trackers. No compromises.`
-    - Suggest: `Más privado.`
-    - “Mas” without accent is the archaic conjunction “but”; the comparative requires “Más”.
-- `welcome-back-spotlight-subtitle` — `browser/browser/newtab/asrouter.ftl` — Person shifts mid-sentence between “tú” and “usted”.
-    - Current: `proteger tus datos donde quiera que vaya`
-    - Source: `Welcome back to the only major browser backed by a non-profit. We take extra steps to protect your data wherever you roam.`
-    - Suggest: `proteger sus datos donde quiera que vaya`
-    - “tus” (tú) and “vaya” (usted) refer to the same addressee in one sentence; the surrounding strings in this file use usted.
-- `newtab-toast-thumbs-up-or-down2` — `browser/browser/newtab/newtab.ftl` — Missing period after “Gracias”, running two sentences together.
-    - Current: `Gracias Su opinión nos ayudará`
-    - Source: `message: Thanks. Your feedback will help us improve your feed.`
-    - Suggest: `Gracias. Su opinión nos ayudará`
-    - en-US “Thanks. Your feedback will help us improve your feed.” has two sentences.
-- `newtab-wallpaper-celestial-river` — `browser/browser/newtab/newtab.ftl` — Two missing accents: “satelite” and “rio”.
-    - Current: `Imagen de satelite de un rio`
-    - Source: `Satellite image of river`
-    - Suggest: `Imagen de satélite de un río`
-    - Both words require written accents (“satélite”, “río”).
-- `newtab-wallpaper-reset` — `browser/browser/newtab/newtab.ftl` — Spelling error: “Reniciar”.
-    - Current: `Reniciar como predeterminado`
-    - Source: `Reset to default`
-    - Suggest: `Restablecer los valores predeterminados`
-    - “Reniciar” is not a Spanish word (typo for “Reiniciar”); en-US is “Reset to default”.
-- `newtab-widget-section-feedback` — `browser/browser/newtab/newtab.ftl` — Interrogative “qué” written without accent.
-    - Current: `Díganos que piensa`
-    - Source: `Tell us what you think`
-    - Suggest: `Díganos qué piensa`
-    - “Tell us what you think” requires the accented interrogative “qué”.
-- `mr2022-onboarding-gratitude-primary-button-label` — `browser/browser/newtab/onboarding.ftl` — Interrogative “qué” written without accent.
-    - Current: `Veamos que hay de nuevo`
-    - Source: `See what’s new`
-    - Suggest: `Veamos qué hay de nuevo`
-    - “See what's new” requires the accented interrogative “qué”.
-- `onboarding-gratitude-security-and-privacy-subtitle` — `browser/browser/newtab/onboarding.ftl` — Duplicated word “más más”.
-    - Current: `que Internet sea más más segura`
-    - Source: `Thank you for using { -brand-short-name }, backed by the Mozilla Foundation. With your support, we’re working to make the internet safer and more accessible for everyone.`
-    - Suggest: `que Internet sea más segura`
-    - “más” is repeated; en-US reads “safer and more accessible”.
-- `onboarding-refresh-gratitude-subtitle` — `browser/browser/newtab/onboarding.ftl` — Duplicated word “más más”.
-    - Current: `que Internet sea más más segura`
-    - Source: `Thank you for using { -brand-short-name }, the only major browser backed by a non-profit. With your support, we’re working to make the internet safer and more accessible for everyone.`
-    - Suggest: `que Internet sea más segura`
-    - Same duplication as in onboarding-gratitude-security-and-privacy-subtitle.
-- `onboarding-sign-up-description` — `browser/browser/newtab/onboarding.ftl` — Number agreement error: singular verb with plural adjective.
-    - Current: `se guardará de forma segura y estará disponibles`
-    - Source: `Sign up for an account and all of your important info — passwords, bookmarks, and more — will be securely stored and available when you sign in to any device.`
-    - Suggest: `se guardará de forma segura y estará disponible`
-    - The subject “toda la información importante” is singular, so “disponibles” must agree in the singular (or the whole clause be pluralized).
-- `appearance-browser-icon-requirement` — `browser/browser/preferences/browserIcon.ftl` — Garbled words: “ydesbloqueae” (missing space, misspelled verb).
-    - Current: `Complete ydesbloqueae íconos de zorros adicionales`
-    - Source: `message: Complete and unlock bonus fox icons to personalize { -brand-short-name }.`
-    - Suggest: `Complete y desbloquee íconos de zorros adicionales`
-    - “y” and “desbloquee” are run together and the verb is misspelled; en-US is “Complete and unlock bonus fox icons”.
 - `colors-page-override` — `browser/browser/preferences/colors.ftl` — Misspelling “Sobreescribir”.
     - Current: `Sobreescribir`
     - Source: `(value): Override the colors specified by the page with your selections above accesskey: O`
     - Suggest: `Sobrescribir`
     - The prefix sobre- plus escribir contracts to “sobrescribir”; “sobreescribir” is not a valid spelling.
-- `connection-proxy-autologin` — `browser/browser/preferences/connection.ftl` — Two misspellings in the tooltip: “cuand” and “gardado”.
-    - Current: `cuand se han gardado credenciales`
-    - Source: `accesskey: i label: Do not prompt for authentication if password is saved tooltip: This option silently authenticates you to proxies when you have saved credentials for them. You will be prompted if authentication fails.`
-    - Suggest: `cuando se han guardado credenciales`
-    - “cuand” and “gardado” are typos for “cuando” and “guardado”.
-- `connection-proxy-autologin-checkbox` — `browser/browser/preferences/connection.ftl` — Same misspellings “cuand” and “gardado” in the checkbox tooltip.
-    - Current: `cuand se han gardado credenciales`
-    - Source: `accesskey: i label: Do not prompt for authentication if password is saved tooltiptext: This option silently authenticates you to proxies when you have saved credentials for them. You will be prompted if authentication f…`
-    - Suggest: `cuando se han guardado credenciales`
-    - Duplicate of the connection-proxy-autologin tooltip; both need the same spelling fix.
-- `collection-health-report-disabled2` — `browser/browser/preferences/preferences.ftl` — Gender/number agreement error “La información … está deshabilitado”.
-    - Current: `La información de datos está deshabilitado`
-    - Source: `Data reporting is disabled for this build configuration.`
-    - Suggest: `El envío de informes de datos está desactivado`
-    - “información” is feminine, so the participle must agree; compare data-collection-health-report-disabled in the same file, “El envío de informes de datos está desactivado.”
-- `collection-studies` — `browser/browser/preferences/preferences.ftl` — Ungrammatical “Permitir X para instalar” construction.
-    - Current: `Permitir { -brand-short-name } para instalar y ejecutar estudios`
-    - Source: `label: Allow { -brand-short-name } to install and run studies`
-    - Suggest: `Permitir que { -brand-short-name } instale y ejecute estudios`
-    - en-US “Allow Firefox to install and run studies”; Spanish requires “permitir que + subjuntivo”, as used in collection-health-report (“Permitir que { -brand-short-name } envíe…”).
-- `containers-card-header2` — `browser/browser/preferences/preferences.ftl` — Duplicated word “para para”.
-    - Current: `Cookies separadas por contenedor para para poder usar`
-    - Source: `description: Separate cookies by container so you can use different accounts on the same site and limit cross-site tracking. label: Containers`
-    - Suggest: `Cookies separadas por contenedor para poder usar`
-    - Accidental repetition; en-US “Separate cookies by container so you can use…”.
-- `data-collection-run-studies` — `browser/browser/preferences/preferences.ftl` — Misspelling “paar” for “para”.
-    - Current: `ayuda a mejorar la calidad paar todos`
-    - Source: `description: { -brand-short-name } randomly selects users to test features, which helps improve quality for everyone. label: Allow { -brand-short-name } to run feature studies`
-    - Suggest: `ayuda a mejorar la calidad para todos`
-    - Typo; en-US “helps improve quality for everyone”.
-- `extension-controlling-password-saving` — `browser/browser/preferences/preferences.ftl` — Verb “está” used instead of the demonstrative “esta”.
-    - Current: `controla está configuración.`
-    - Source: `<img data-l10n-name="icon"/> <strong>{ $name }</strong> controls this setting.`
-    - Suggest: `controla esta configuración.`
-    - The parallel string extension-controlling-web-notifications correctly reads “controla esta configuración.”
-- `extension-controlling-proxy-config` — `browser/browser/preferences/preferences.ftl` — Verb agreement error “se conectan” with a singular subject (and unaccented “como”).
-    - Current: `controla como { -brand-short-name } se conectan a internet.`
-    - Source: `<img data-l10n-name ="icon"/> <strong>{ $name }</strong> controls how { -brand-short-name } connects to the internet.`
-    - Suggest: `controla cómo { -brand-short-name } se conecta a internet.`
-    - The subject is the singular brand name, so the verb must be “se conecta”; the interrogative “cómo” also needs its accent.
-- `extension-controlling-websites-content-blocking-all-trackers` — `browser/browser/preferences/preferences.ftl` — Verb “está” used instead of the demonstrative “esta”.
-    - Current: `controla está configuración.`
-    - Source: `<img data-l10n-name="icon"/> <strong>{ $name }</strong> controls this setting.`
-    - Suggest: `controla esta configuración.`
-    - Same accent error as extension-controlling-password-saving; the demonstrative adjective carries no accent.
-- `network-proxy-connection-settings2` — `browser/browser/preferences/preferences.ftl` — Verb “está” used instead of the demonstrative “esta”.
-    - Current: `Cambiar está configuración puede causar problemas de conexión`
-    - Source: `accesskey: p description: Changing these settings may cause connections issues label: Configure proxy`
-    - Suggest: `Cambiar esta configuración puede causar problemas de conexión`
-    - en-US: “Changing these settings may cause connections issues”; the demonstrative adjective must be “esta”.
-- `preferences-ai-controls-pdfjs-control` — `browser/browser/preferences/preferences.ftl` — Missing preposition: “agregará descripciones hacerlas más accesibles”.
-    - Current: `esto agregará descripciones hacerlas más accesibles`
-    - Source: `description: When you add images to PDFs, this adds descriptions to make them accessible. label: Image alt text in { -brand-short-name } PDF viewer`
-    - Suggest: `esto agregará descripciones para hacerlas más accesibles`
-    - en-US: “this adds descriptions to make them accessible”; the purpose clause needs “para”.
-- `preferences-connection-link-section` — `browser/browser/preferences/preferences.ftl` — Misspelling “verifificados”.
-    - Current: `los sitios web son verifificados`
-    - Source: `description: See how connections stay secure, harmful software is blocked, and websites are verified. label: Connection and software security`
-    - Suggest: `los sitios web son verificados`
-    - Syllable duplicated in “verificados”.
-- `preferences-doh-overview-custom` — `browser/browser/preferences/preferences.ftl` — Stray article in “sobre el del proveedor”.
-    - Current: `con control sobre el del proveedor y comportamiento de respaldo`
-    - Source: `description: Always use secure DNS with control over your provider and fallback behavior. label: Custom`
-    - Suggest: `con control sobre el proveedor y el comportamiento de respaldo`
-    - en-US: “with control over your provider and fallback behavior”; “el del” leaves the phrase without a referent. The same fragment appears in preferences-doh-radio-custom.
-- `preferences-doh-radio-off` — `browser/browser/preferences/preferences.ftl` — Description ends in the garbled token “0red”.
-    - Current: `Usar el resolvedor de DNS 0red`
-    - Source: `description: Use your default DNS resolver label: Off`
-    - Suggest: `Usar el resolvedor de DNS predeterminado`
-    - en-US: “Use your default DNS resolver”. Compare preferences-doh-overview-off in the same file, which reads “Usar el resolvedor de DNS predeterminado.”
-- _…and 86 more; see `state/` for the full list._
+- `update-application-check-choose` — `browser/browser/preferences/preferences.ftl` — Mismatched verb forms make the option ungrammatical.
+    - Current: `Busque actualizaciones pero dejarme elegir si las instalo`
+    - Source: `accesskey: C label: Check for updates but let you choose to install them`
+    - Suggest: `Buscar actualizaciones, pero permitirme elegir si se instalan`
+    - The imperative “Busque” is coordinated with the infinitive “dejarme”; en-US: “Check for updates but let you choose to install them”. Compare update-application-check-choose-2, “Buscar actualizaciones, pero elegir cuándo instalarlas”.
+- `default-bookmarks-firefox-community` — `browser/browser/profile/default-bookmarks.ftl` — Tuteo imperative in a file that otherwise uses voseo
+    - Current: `default-bookmarks-firefox-community = Participa`
+    - Source: `Get Involved`
+    - Suggest: `Participá`
+    - The neighbouring bookmark titles use the Argentine voseo imperative ("Obtené ayuda", "Personalizá Firefox"); "Participa" is the tuteo form and breaks that form of address within the same surface.
+- `noDomMutationBreakpoints` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints` quotes “Romper en...” but the string it names, `watchpoints.submenu`, reads “Interrumpir en…”
+    - Current: `Haga clic derecho en un elemento en el %S y seleccione “Romper en...” para agregar un punto de interrupción`
+    - Source: `Right click an element in the %S and select “Break on…” to add a breakpoint`
+    - Suggest: `Interrumpir en…`
+    - In the source this string quotes “Break on…”, which is exactly the value of `watchpoints.submenu` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `preventedConsoleClear` — `devtools/shared/webconsole.properties` — `preventedConsoleClear` quotes “Registros presistentes” but the string it names, `webconsole.console.settings.menu.item.enablePersistentLogs.label`, reads “Registros persistentes”
+    - Current: `console.clear() se evitó debido a “Registros presistentes”`
+    - Source: `console.clear() was prevented due to “Persist Logs”`
+    - Suggest: `Registros persistentes`
+    - In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `saveLogin` — `mobile/android/chrome/passwordmgr.properties` — Voseo (“Querés”) where the locale consistently uses the usted form.
+    - Current: `¿Querés que %S recuerde este ingreso?`
+    - Source: `Would you like %S to remember this login?`
+    - Suggest: `¿Desea que %S recuerde este ingreso?`
+    - The tree uses usted almost everywhere (140+ “Ingrese/Puede/Elija” vs. a handful of voseo forms); this string breaks the established form of address.
+- `config-new-pref-string` — `mobile/android/mobile/android/aboutConfig.ftl` — Voseo (“Ingresá”) where the locale uses the usted form.
+    - Current: `Ingresá una cadena`
+    - Source: `placeholder: Enter a string`
+    - Suggest: `Ingrese una cadena`
+    - Inconsistent with the locale’s dominant usted register (config-new-pref-number has the same issue).
+- `APIDeprecationWarning` — `netwerk/necko.properties` — Tú-form imperative “usa” instead of the locale’s usted form.
+    - Current: `por favor usa ´%2$S´`
+    - Source: `Warning: ‘%1$S’ deprecated, please use ‘%2$S’`
+    - Suggest: `use ‘%2$S’`
+    - The locale uses usted throughout (“Use … en su lugar” in dom.properties); this string switches address form.
+- `client-auth-send-no-certificate` — `security/manager/security/pippki/pippki.ftl` — Tú/vos imperative “No envíes” in an otherwise usted-form dialog.
+    - Current: `No envíes un certificado`
+    - Source: `label: Don’t send a certificate`
+    - Suggest: `No enviar certificado`
+    - The rest of this dialog uses usted (“Autentíquese”, “Seleccionar…”), and certManager.ftl renders the same en-US string as “No enviar certificado de cliente”.
+- `privacy-spoof-english` — `toolkit/toolkit/global/resistFingerPrinting.ftl` — Language name capitalized as in English
+    - Current: `Cambiar la configuración de idioma a Inglés`
+    - Source: `Changing your language setting to English will make you more difficult to identify and enhance your privacy. Do you want to request English language versions of web pages?`
+    - Suggest: `Cambiar la configuración de idioma a inglés`
+    - Spanish writes language names in lowercase; the string capitalizes "Inglés" twice, following English convention.
 
 ### E. Typography, punctuation & spacing
 
@@ -1308,11 +1529,21 @@ _Nothing reported._
     - Source: `An extension, %S, changed the page you see when you open a new tab.`
     - Suggest: `cambió la página que ve cuando se abre una nueva pestaña`
     - The next string in the same file (homepageControlled.message) uses "ve" and "su página de inicio".
+- `rights-safebrowsing` — `toolkit/toolkit/about/aboutRights.ftl` — Double space between sentences.
+    - Current: `sitios inseguros.  Si desea`
+    - Source: `<strong>SafeBrowsing: </strong>Disabling the Safe Browsing feature is not recommended as it may result in you going to unsafe sites. If you wish to disable the feature completely, follow these steps:`
+    - Suggest: `sitios inseguros. Si desea`
+    - Extra space not present in the en-US source.
 - `content-uses-tiling` — `toolkit/toolkit/about/aboutSupport.ftl` — “Tiling” rendered as “baldosas” (floor tiles) here but as “mosaicos” in the adjacent uses-tiling row.
     - Current: `content-uses-tiling = Utiliza baldosas (contenido)`
     - Source: `Uses Tiling (Content)`
     - Suggest: `Utiliza mosaicos (contenido)`
     - Two consecutive rows for the same graphics feature use different terms, and “baldosas” is not used for graphics tiling anywhere else in the tree.
+- `abuse-report-learnmore` — `toolkit/toolkit/about/abuseReports.ftl` — Stray spaces inside the link text after the opening tag and before the closing tag.
+    - Current: `<a data-l10n-name="learnmore-link"> Conozca más información acerca de los informes de extensiones y temas  </a>`
+    - Source: `Unsure what issue to select? <a data-l10n-name="learnmore-link">Learn more about reporting extensions and themes</a>`
+    - Suggest: `<a data-l10n-name="learnmore-link">Conozca más información acerca de los informes de extensiones y temas</a>`
+    - The en-US has no leading or trailing spaces inside the anchor; the extra spaces render as underlined whitespace.
 - `certificate-viewer-subject-name` — `toolkit/toolkit/about/certviewer.ftl` — “Subject” rendered as “asunto” (email subject) here, but as “sujeto” in certificate-viewer-subject-alt-names.
     - Current: `certificate-viewer-subject-name = Nombre del asunto`
     - Source: `Subject Name`
@@ -1379,6 +1610,45 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (136)
 
-_Nothing fixed yet._
+- `about-logins-breach-alert-date` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-25
+- `about-logins-confirm-remove-all-dialog-message2` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-25
+- `pocket-panel-saved-error-only-links` — `browser/browser/aboutPocket.ftl` — fixed 2026-08-25
+- `pocket-panel-signup-signup-cta` — `browser/browser/aboutPocket.ftl` — fixed 2026-08-25
+- `restore-page-show-tabs` — `browser/browser/aboutSessionRestore.ftl` — fixed 2026-08-25
+- `crashed-include-URL-2` — `browser/browser/aboutTabCrashed.ftl` — fixed 2026-08-25
+- `addon-install-error-corrupt-file` — `browser/browser/addonNotifications.ftl` — fixed 2026-08-25
+- `ai-window-open-sidebar` — `browser/browser/aiFeatures.ftl` — fixed 2026-08-25
+- `appmenu-homepage-controlled-changes` — `browser/browser/appMenuNotifications.ftl` — fixed 2026-08-25
+- `appmenu-remote-tabs-tabsnotsyncing` — `browser/browser/appmenu.ftl` — fixed 2026-08-25
+- `appmenuitem-vpn-description3` — `browser/browser/appmenu.ftl` — fixed 2026-08-25
+- `appmenuitem-vpn-description5` — `browser/browser/appmenu.ftl` — fixed 2026-08-25
+- `browser-tab-audio-blocked` — `browser/browser/browser.ftl` — fixed 2026-08-25
+- `data-reporting-notification-button` — `browser/browser/browser.ftl` — fixed 2026-08-25
+- `identity-description-insecure-login-forms` — `browser/browser/browser.ftl` — fixed 2026-08-25
+- `restore-session-startup-suggestion-button` — `browser/browser/browser.ftl` — fixed 2026-08-25
+- `toolbar-button-share-tab` — `browser/browser/browser.ftl` — fixed 2026-08-25
+- `trustpanel-clear-cookies-description` — `browser/browser/browser.ftl` — fixed 2026-08-25
+- `urlbar-tabtosearch-onboard` — `browser/browser/browser.ftl` — fixed 2026-08-25
+- `contextual-manager-passwords-remove-all-message` — `browser/browser/contextual-manager.ftl` — fixed 2026-08-25
+- `contextual-manager-passwords-vulnerable-password-heading-and-message` — `browser/browser/contextual-manager.ftl` — fixed 2026-08-25
+- `customkeys-description` — `browser/browser/customkeys.ftl` — fixed 2026-08-25
+- `bookmarks-toolbar-callout-2a-title` — `browser/browser/featureCallout.ftl` — fixed 2026-08-25
+- `pin-tabs-callout-2-subtitle` — `browser/browser/featureCallout.ftl` — fixed 2026-08-25
+- `taskbar-tabs-value-prop-callout-subtitle-v3` — `browser/browser/featureCallout.ftl` — fixed 2026-08-25
+- `firefoxview-dont-remember-history-empty-header-2` — `browser/browser/firefoxView.ftl` — fixed 2026-08-25
+- `firefoxview-syncedtabs-adddevice-description-3` — `browser/browser/firefoxView.ftl` — fixed 2026-08-25
+- `genai-prompts-quiz` — `browser/browser/genai.ftl` — fixed 2026-08-25
+- `link-preview-optin-message` — `browser/browser/genai.ftl` — fixed 2026-08-25
+- `ipprotection-come-back-title` — `browser/browser/ipProtection.ftl` — fixed 2026-08-25
+- `ipprotection-locations-unavailable-label-1` — `browser/browser/ipProtection.ftl` — fixed 2026-08-25
+- `unauthenticated-private-location-message` — `browser/browser/ipProtection.ftl` — fixed 2026-08-25
+- `annotations-default-pdf-handler-body` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-25
+- `firefoxview-spotlight-promo-primarybutton` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-25
+- `mr2022-background-update-toast-title` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-25
+- `welcome-back-spotlight-subtitle` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-25
+- `newtab-toast-thumbs-up-or-down2` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-25
+- `newtab-wallpaper-celestial-river` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-25
+- `newtab-wallpaper-reset` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-25
+- `newtab-widget-section-feedback` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-25

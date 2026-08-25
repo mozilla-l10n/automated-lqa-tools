@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e59d51071942` |
+| **Generated** | 2026-08-25 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ad52f2a75880` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-24 @ `39e5663f3de7` |
+| **Previous run** | 2026-08-24 @ `e59d51071942` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 18,180 |
+| **Strings reviewed this run** | 0 of 18,180 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,29 +18,13 @@ Also for fy-NL: [android](android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `places-locked-prompt` — `browser/browser/places.ftl` — "ien de bestannen fan" is ungrammatical; should be "ien fan de bestannen fan" (one of the files).
-    - Current: `omdat ien de bestannen fan { -brand-short-name } yn gebrûk is`
-    - Source: `The bookmarks and history system will not be functional because one of { -brand-short-name }’s files is in use by another application. Some security software can cause this problem.`
-    - Suggest: `omdat ien fan de bestannen fan { -brand-short-name } yn gebrûk is`
-    - en-US says "one of { -brand-short-name }’s files"; the partitive "fan" is missing, making the clause grammatically broken.
-- `ssl-error-us-only-server` — `toolkit/toolkit/neterror/nsserrors.ftl` — "wurd" should be the verb form "wurdt" in "hokker net stipe wurd".
-    - Current: `hokker net stipe wurd`
-    - Source: `Unable to communicate securely. Peer requires high-grade encryption which is not supported.`
-    - Suggest: `dat net stipe wurdt`
-    - Spelling/grammar error: the finite verb is "wurdt", not the noun "wurd"; also the relative pronoun should be "dat".
+_No new findings._
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (0)
 
-- `places-locked-prompt` — `browser/browser/places.ftl` — omdat ien de bestannen → omdat ien fan de bestannen
-    - Current: `omdat ien de bestannen`
-    - Source: `The bookmarks and history system will not be functional because one of { -brand-short-name }’s files is in use by another application. Some security software can cause this problem.`
-    - Suggest: `omdat ien fan de bestannen`
-- `ssl-error-us-only-server` — `toolkit/toolkit/neterror/nsserrors.ftl` — net stipe wurd → net stipe wurdt
-    - Current: `net stipe wurd`
-    - Source: `Unable to communicate securely. Peer requires high-grade encryption which is not supported.`
-    - Suggest: `net stipe wurdt`
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `907043d6ea4b` |
+| **Generated** | 2026-08-25 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ad52f2a75880` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-24 @ `39e5663f3de7` |
+| **Previous run** | 2026-08-24 @ `907043d6ea4b` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 17,981 |
+| **Strings reviewed this run** | 2 of 17,983 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 359 |
-| Strings | 17,981 |
-| Missing strings | 199 |
+| Strings | 17,983 |
+| Missing strings | 197 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Fluent / properties syntax errors | 0 |
@@ -62,7 +62,7 @@ _Nothing retired._
 
 ### Completeness
 
-**199 strings** are not translated yet, concentrated in:
+**197 strings** are not translated yet, concentrated in:
 
 - `browser/browser/newtab/newtab.ftl` — 41
 - `devtools/client/toolbox-options.ftl` — 18
@@ -72,10 +72,10 @@ _Nothing retired._
 - `toolkit/toolkit/neterror/netError.ftl` — 12
 - `dom/chrome/dom/dom.properties` — 9
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 7
-- `browser/browser/aiWindow.ftl` — 7
-- `browser/browser/ipProtection.ftl` — 7
 - `browser/browser/preferences/containers.ftl` — 7
+- `browser/browser/aiWindow.ftl` — 6
 - `browser/browser/firefoxView.ftl` — 6
+- `browser/browser/ipProtection.ftl` — 6
 
 **Files absent from the locale:**
 
@@ -93,8 +93,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | apostrophe | `typographic` 46, `straight` 20 | _mixed_ |
 | ellipsis | `char` 439, `ascii` 13 | **char** |
 | dash | `em` 78, `en` 2 | **em** |
-| fullwidth | `punctuation` 9524 | **punctuation** |
-| register | `informal` 15, `formal` 1746 | **formal** |
+| fullwidth | `punctuation` 9525 | **punctuation** |
+| register | `informal` 16, `formal` 1746 | **formal** |
 
 ---
 
