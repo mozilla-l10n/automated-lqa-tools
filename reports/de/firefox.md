@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-25 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ad52f2a75880` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-24 @ `e59d51071942` |
+| **Generated** | 2026-08-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b82b7a344c63` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
+| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 187 of 18,367 |
+| **Strings reviewed this run** | 36 of 18,397 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,36 +18,24 @@ Also for de: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (11)
+### 🆕 New findings (0)
 
-- `enterprise-close-prompt-message-with-tabcount` — `toolkit/toolkit/enterprise/enterprise.ftl` — String named "...-with-tabcount" lacks the plural selector and $tabCount variable present in its counterpart, so the tab count is never shown.
-    - Current: `Wenn Sie { -brand-short-name } schließen, werden Sie ebenfalls abgemeldet.`
-    - Suggest: `{$tabCount ->} [one] Wenn Sie { -brand-short-name } und { $tabCount } Tab schließen, werden Sie ebenfalls abgemeldet. [other] Wenn Sie { -brand-short-name } und { $tabCount } Tabs schließen, werden Sie ebenfalls abgemel…`
-    - All other "-with-tabcount" IDs in this file use the $tabCount plural selector; here the count is dropped entirely, so the message does not convey how many tabs are affected.
-- `blocked-by-policy-title-enterprise` — `toolkit/toolkit/enterprise/enterprise.ftl` — Wrong preposition: "Zugriff" governs "auf", not "zu".
-    - Current: `Der Zugriff zu dieser Website ist eingeschränkt`
-    - Suggest: `Der Zugriff auf diese Website ist eingeschränkt`
-    - German requires "Zugriff auf" + accusative; "Zugriff zu dieser Website" is grammatically incorrect.
-- `neterror-blocked-by-policy-page-title-enterprise` — `toolkit/toolkit/enterprise/enterprise.ftl` — Wrong preposition: "Zugriff" requires "auf", not "zu".
-    - Current: `Der Zugriff zu dieser Website ist eingeschränkt`
-    - Suggest: `Der Zugriff auf diese Website ist eingeschränkt`
-    - German "Zugriff" governs "auf" + accusative; "Zugriff zu dieser Website" is ungrammatical, and the same file uses "Zugriff auf diese Website" elsewhere.
-- `felt-sso-input-email` — `toolkit/toolkit/enterprise/felt.ftl` — Label "E-Mail-Adresse dienstlich" has reversed/ungrammatical word order for a form label.
-    - Current: `label: E-Mail-Adresse dienstlich`
-    - Suggest: `label: Dienstliche E-Mail-Adresse`
-    - An attributive adjective must precede the noun in German; the postposed "dienstlich" is not grammatical German for a field label ("work email").
-- `felt-updates-application` — `toolkit/toolkit/enterprise/felt.ftl` — "Updates anwenden…" states an action to perform rather than the ongoing progress "Applying updates…".
-    - Current: `Updates anwenden…`
-    - Suggest: `Updates werden angewendet…`
-    - The surrounding progress strings ("Nach Updates suchen…") describe an in-progress update flow; the infinitive form reads as a command/menu item instead of a status message.
-- `enterprise-close-prompt-message-reauth` — `browser/browser/enterprise/enterprise.ftl` — Acronym "SSO" is misspelled as "SSo".
-    - Current: `SSo-Anbieter`
-    - Suggest: `SSO-Anbieter`
-    - The same acronym is correctly written "SSO-Anbieter" in enterprise-quit-shortcut-prompt-message; "SSo" is a spelling error in a proper acronym.
+_No new findings._
+
+### ✅ Fixed since the last run (0)
+
+_Nothing was fixed._
+
+### ↩︎ Withdrawn — no longer considered a defect (11)
+
 - `blocked-by-policy-title-enterprise` — `browser/browser/enterprise/enterprise.ftl` — Wrong preposition: "Zugriff zu" instead of "Zugriff auf".
     - Current: `Der Zugriff zu dieser Website ist eingeschränkt`
     - Suggest: `Der Zugriff auf diese Website ist eingeschränkt`
     - German requires "Zugriff auf" (as used correctly in enterprise-access-connector-info-active and neterror-blocked-by-policy-contact-admin); "Zugriff zu" is ungrammatical.
+- `enterprise-close-prompt-message-reauth` — `browser/browser/enterprise/enterprise.ftl` — Acronym "SSO" is misspelled as "SSo".
+    - Current: `SSo-Anbieter`
+    - Suggest: `SSO-Anbieter`
+    - The same acronym is correctly written "SSO-Anbieter" in enterprise-quit-shortcut-prompt-message; "SSo" is a spelling error in a proper acronym.
 - `neterror-blocked-by-policy-page-title-enterprise` — `browser/browser/enterprise/enterprise.ftl` — Wrong preposition: "Zugriff zu" instead of "Zugriff auf".
     - Current: `Der Zugriff zu dieser Website ist eingeschränkt`
     - Suggest: `Der Zugriff auf diese Website ist eingeschränkt`
@@ -64,14 +52,26 @@ Also for de: [android](android.md) · [firefox_ios](firefox_ios.md)
     - Current: `Guten Morgen`
     - Suggest: `Updates`
     - String id felt-updates-title belongs to the update UI alongside felt-updates-checking/-application/-uptodate; a greeting "Guten Morgen" asserts something the update panel never said and is clearly not an update title.
-
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
-
-### ↩︎ Withdrawn — no longer considered a defect (0)
-
-_Nothing withdrawn._
+- `blocked-by-policy-title-enterprise` — `toolkit/toolkit/enterprise/enterprise.ftl` — Wrong preposition: "Zugriff" governs "auf", not "zu".
+    - Current: `Der Zugriff zu dieser Website ist eingeschränkt`
+    - Suggest: `Der Zugriff auf diese Website ist eingeschränkt`
+    - German requires "Zugriff auf" + accusative; "Zugriff zu dieser Website" is grammatically incorrect.
+- `enterprise-close-prompt-message-with-tabcount` — `toolkit/toolkit/enterprise/enterprise.ftl` — String named "...-with-tabcount" lacks the plural selector and $tabCount variable present in its counterpart, so the tab count is never shown.
+    - Current: `Wenn Sie { -brand-short-name } schließen, werden Sie ebenfalls abgemeldet.`
+    - Suggest: `{$tabCount ->} [one] Wenn Sie { -brand-short-name } und { $tabCount } Tab schließen, werden Sie ebenfalls abgemeldet. [other] Wenn Sie { -brand-short-name } und { $tabCount } Tabs schließen, werden Sie ebenfalls abgemel…`
+    - All other "-with-tabcount" IDs in this file use the $tabCount plural selector; here the count is dropped entirely, so the message does not convey how many tabs are affected.
+- `neterror-blocked-by-policy-page-title-enterprise` — `toolkit/toolkit/enterprise/enterprise.ftl` — Wrong preposition: "Zugriff" requires "auf", not "zu".
+    - Current: `Der Zugriff zu dieser Website ist eingeschränkt`
+    - Suggest: `Der Zugriff auf diese Website ist eingeschränkt`
+    - German "Zugriff" governs "auf" + accusative; "Zugriff zu dieser Website" is ungrammatical, and the same file uses "Zugriff auf diese Website" elsewhere.
+- `felt-sso-input-email` — `toolkit/toolkit/enterprise/felt.ftl` — Label "E-Mail-Adresse dienstlich" has reversed/ungrammatical word order for a form label.
+    - Current: `label: E-Mail-Adresse dienstlich`
+    - Suggest: `label: Dienstliche E-Mail-Adresse`
+    - An attributive adjective must precede the noun in German; the postposed "dienstlich" is not grammatical German for a field label ("work email").
+- `felt-updates-application` — `toolkit/toolkit/enterprise/felt.ftl` — "Updates anwenden…" states an action to perform rather than the ongoing progress "Applying updates…".
+    - Current: `Updates anwenden…`
+    - Suggest: `Updates werden angewendet…`
+    - The surrounding progress strings ("Nach Updates suchen…") describe an in-progress update flow; the infinitive form reads as a command/menu item instead of a status message.
 
 ### 🔁 String changed, defect not verifiable — needs a re-read (0)
 
@@ -87,11 +87,12 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 370 |
-| Strings | 18,367 |
+| Files | 372 |
+| Strings | 18,397 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
+| Files with no en-US counterpart | 10 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
@@ -110,6 +111,21 @@ _Nothing retired._
 - `toolkit/toolkit/about/aboutMozilla.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+
+### Files with no en-US counterpart
+
+- `browser/branding/enterprise/brand.ftl`
+- `browser/branding/enterprise/brand.properties`
+- `browser/browser/enterprise/enterprise-policies-descriptions.ftl`
+- `browser/browser/enterprise/enterprise.ftl`
+- `browser/browser/enterprise/felt.ftl`
+- `browser/chrome/overrides/enterprise.properties`
+- `dom/chrome/enterprise.properties`
+- `toolkit/crashreporter/crashreporter-enterprise.ftl`
+- `toolkit/toolkit/enterprise/enterprise.ftl`
+- `toolkit/toolkit/enterprise/felt.ftl`
+
+_187 strings. These files exist in the locale tree but not in the en-US reference — they are maintained elsewhere. The model review is a comparison against en-US, so it skips them entirely; only the checks that need no reference ran. Nothing reported from these files means nothing was looked for, not that they are clean._
 
 ### Conventions detected in this locale
 
@@ -132,22 +148,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (27)
+## 3. Open findings (16)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `felt-updates-title` — `browser/browser/enterprise/felt.ftl` — Title for the updates panel reads "Guten Morgen" ("Good morning"), which is unrelated to updates.
-    - Current: `Guten Morgen`
-    - Suggest: `Updates`
-    - String id felt-updates-title belongs to the update UI alongside felt-updates-checking/-application/-uptodate; a greeting "Guten Morgen" asserts something the update panel never said and is clearly not an update title.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 1 |
-| 2 | Wrong content (says something other than the English) | 13 |
-| 3 | Degraded language (grammar, spelling, terminology) | 12 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
+| 2 | Wrong content (says something other than the English) | 11 |
+| 3 | Degraded language (grammar, spelling, terminology) | 4 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
@@ -165,49 +173,17 @@ _Also listed under their own category below._
     - Source: `{$limit ->} [one] You can add up to { $limit } stock. Remove one to add another. [other] You can add up to { $limit } stocks. Remove one to add another.`
     - Suggest: `[one] Sie können bis zu { $limit } Aktie hinzufügen.`
     - en-US [one] uses the singular "stock"; the German singular variant must agree with $limit = 1.
-- `enterprise-close-prompt-message-with-tabcount` — `toolkit/toolkit/enterprise/enterprise.ftl` — String named "...-with-tabcount" lacks the plural selector and $tabCount variable present in its counterpart, so the tab count is never shown.
-    - Current: `Wenn Sie { -brand-short-name } schließen, werden Sie ebenfalls abgemeldet.`
-    - Suggest: `{$tabCount ->} [one] Wenn Sie { -brand-short-name } und { $tabCount } Tab schließen, werden Sie ebenfalls abgemeldet. [other] Wenn Sie { -brand-short-name } und { $tabCount } Tabs schließen, werden Sie ebenfalls abgemel…`
-    - All other "-with-tabcount" IDs in this file use the $tabCount plural selector; here the count is dropped entirely, so the message does not convey how many tabs are affected.
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `felt-updates-title` — `browser/browser/enterprise/felt.ftl` — Title for the updates panel reads "Guten Morgen" ("Good morning"), which is unrelated to updates.
-    - Current: `Guten Morgen`
-    - Suggest: `Updates`
-    - String id felt-updates-title belongs to the update UI alongside felt-updates-checking/-application/-uptodate; a greeting "Guten Morgen" asserts something the update panel never said and is clearly not an update title.
 - `statePartiallyChecked` — `dom/chrome/accessibility/AccessFu.properties` — "partially checked" is translated as "teilweise ausgewählt" (partially selected) instead of "teilweise aktiviert/angekreuzt".
     - Current: `teilweise ausgewählt`
     - Source: `partially checked`
     - Suggest: `teilweise aktiviert`
     - The accessibility state refers to a checkbox being checked, not selected; "ausgewählt" is the German term for "selected", a distinct accessibility state.
-- `felt-updates-application` — `toolkit/toolkit/enterprise/felt.ftl` — "Updates anwenden…" states an action to perform rather than the ongoing progress "Applying updates…".
-    - Current: `Updates anwenden…`
-    - Suggest: `Updates werden angewendet…`
-    - The surrounding progress strings ("Nach Updates suchen…") describe an in-progress update flow; the infinitive form reads as a command/menu item instead of a status message.
 
 ### C. Grammar, agreement & spelling
 
-- `blocked-by-policy-title-enterprise` — `browser/browser/enterprise/enterprise.ftl` — Wrong preposition: "Zugriff zu" instead of "Zugriff auf".
-    - Current: `Der Zugriff zu dieser Website ist eingeschränkt`
-    - Suggest: `Der Zugriff auf diese Website ist eingeschränkt`
-    - German requires "Zugriff auf" (as used correctly in enterprise-access-connector-info-active and neterror-blocked-by-policy-contact-admin); "Zugriff zu" is ungrammatical.
-- `enterprise-close-prompt-message-reauth` — `browser/browser/enterprise/enterprise.ftl` — Acronym "SSO" is misspelled as "SSo".
-    - Current: `SSo-Anbieter`
-    - Suggest: `SSO-Anbieter`
-    - The same acronym is correctly written "SSO-Anbieter" in enterprise-quit-shortcut-prompt-message; "SSo" is a spelling error in a proper acronym.
-- `neterror-blocked-by-policy-page-title-enterprise` — `browser/browser/enterprise/enterprise.ftl` — Wrong preposition: "Zugriff zu" instead of "Zugriff auf".
-    - Current: `Der Zugriff zu dieser Website ist eingeschränkt`
-    - Suggest: `Der Zugriff auf diese Website ist eingeschränkt`
-    - German requires "Zugriff auf"; "Zugriff zu" is ungrammatical and inconsistent with other strings in the same file.
-- `restart-forced-heading` — `browser/browser/enterprise/enterprise.ftl` — Sentence fragment with stray period; a heading like "Restart to keep using …" should be an infinitive clause without final period.
-    - Current: `Neustart, um { -brand-short-name } weiterhin zu verwenden.`
-    - Suggest: `Neu starten, um { -brand-short-name } weiterhin zu verwenden`
-    - The heading mixes a noun ("Neustart") with an infinitive purpose clause, which is ungrammatical, and headings do not take a final period.
-- `felt-sso-input-email` — `browser/browser/enterprise/felt.ftl` — Label "E-Mail-Adresse dienstlich" has inverted word order for a field label.
-    - Current: `label: E-Mail-Adresse dienstlich`
-    - Suggest: `label: Dienstliche E-Mail-Adresse`
-    - The adjective must precede the noun in German; "E-Mail-Adresse dienstlich" is ungrammatical as a form label for a work email address.
 - `ip-protection-description-1` — `browser/browser/ipProtection.ftl` — ip-protection-description-1 (.description) — browser/browser/ipProtection.ftl:236 — "ihren Standort" → "Ihren".
     - Source: `description: Get extra privacy by hiding your location while browsing. label: Built-in VPN`
     - Suggest: `"Ihren".`
@@ -216,18 +192,6 @@ _Also listed under their own category below._
     - Source: `description: Choose a container for a site and { -brand-short-name } will use it every time the site opens. label: Site-specific containers`
     - Suggest: `verwendet sie jedes Mal`
     - "Tab-Umgebung" is feminine, so the referring pronoun must be "sie", not "ihn".
-- `blocked-by-policy-title-enterprise` — `toolkit/toolkit/enterprise/enterprise.ftl` — Wrong preposition: "Zugriff" governs "auf", not "zu".
-    - Current: `Der Zugriff zu dieser Website ist eingeschränkt`
-    - Suggest: `Der Zugriff auf diese Website ist eingeschränkt`
-    - German requires "Zugriff auf" + accusative; "Zugriff zu dieser Website" is grammatically incorrect.
-- `neterror-blocked-by-policy-page-title-enterprise` — `toolkit/toolkit/enterprise/enterprise.ftl` — Wrong preposition: "Zugriff" requires "auf", not "zu".
-    - Current: `Der Zugriff zu dieser Website ist eingeschränkt`
-    - Suggest: `Der Zugriff auf diese Website ist eingeschränkt`
-    - German "Zugriff" governs "auf" + accusative; "Zugriff zu dieser Website" is ungrammatical, and the same file uses "Zugriff auf diese Website" elsewhere.
-- `felt-sso-input-email` — `toolkit/toolkit/enterprise/felt.ftl` — Label "E-Mail-Adresse dienstlich" has reversed/ungrammatical word order for a form label.
-    - Current: `label: E-Mail-Adresse dienstlich`
-    - Suggest: `label: Dienstliche E-Mail-Adresse`
-    - An attributive adjective must precede the noun in German; the postposed "dienstlich" is not grammatical German for a field label ("work email").
 
 ### D. Terminology, register & consistency
 
@@ -296,9 +260,19 @@ _One line each in `locales/de/dismissed.txt`. Delete the line and the finding re
 
 _No suppression rules have matched._
 
-### Withdrawn to date (0)
+### Withdrawn to date (11)
 
-_Nothing withdrawn._
+- `blocked-by-policy-title-enterprise` — `browser/browser/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-26
+- `enterprise-close-prompt-message-reauth` — `browser/browser/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-26
+- `neterror-blocked-by-policy-page-title-enterprise` — `browser/browser/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-26
+- `restart-forced-heading` — `browser/browser/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-26
+- `felt-sso-input-email` — `browser/browser/enterprise/felt.ftl` — raised by `llm`, withdrawn 2026-08-26
+- `felt-updates-title` — `browser/browser/enterprise/felt.ftl` — raised by `llm`, withdrawn 2026-08-26
+- `blocked-by-policy-title-enterprise` — `toolkit/toolkit/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-26
+- `enterprise-close-prompt-message-with-tabcount` — `toolkit/toolkit/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-26
+- `neterror-blocked-by-policy-page-title-enterprise` — `toolkit/toolkit/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-26
+- `felt-sso-input-email` — `toolkit/toolkit/enterprise/felt.ftl` — raised by `llm`, withdrawn 2026-08-26
+- `felt-updates-application` — `toolkit/toolkit/enterprise/felt.ftl` — raised by `llm`, withdrawn 2026-08-26
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 

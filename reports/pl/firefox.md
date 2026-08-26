@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-25 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ad52f2a75880` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-24 @ `907043d6ea4b` |
+| **Generated** | 2026-08-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b82b7a344c63` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
+| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 235 of 18,116 |
+| **Strings reviewed this run** | 2 of 18,112 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,91 +18,9 @@ Also for pl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (17)
+### 🆕 New findings (0)
 
-- `smart-window-closed-tabs-summary` — `browser/browser/aiWindowContent.ftl` — `smart-window-closed-tabs-summary` is missing the ['few', 'many'] plural forms
-    - Current: `{$count ->} [one] Gotowe! Zamknięto kartę. [other] Gotowe! Zamknięto karty.`
-    - Source: `{$count ->} [one] Done! Tab closed. [other] Done! Tabs closed.`
-    - This locale uses ['few', 'many', 'one'] in most of its plurals, and en-US pluralizes this string. The catch-all variant will be shown instead, giving the wrong grammatical form.
-- `smart-window-restore-success-summary` — `browser/browser/aiWindowContent.ftl` — `smart-window-restore-success-summary` is missing the ['few', 'many'] plural forms
-    - Current: `{$count ->} [one] Zamknięto kartę, a następnie ją przywrócono. [other] Zamknięto karty, a następnie je przywrócono.`
-    - Source: `{$count ->} [one] Tab closed, then restored. [other] Tabs closed, then restored.`
-    - This locale uses ['few', 'many', 'one'] in most of its plurals, and en-US pluralizes this string. The catch-all variant will be shown instead, giving the wrong grammatical form.
-- `ai-window-is-default-window` — `browser/browser/aiFeatures.ftl` — The "restarts" case is dropped from the description.
-    - Current: `Otwieraj { -smart-window-brand-name } po uruchomieniu { -brand-short-name } i po kliknięciu odnośników w innych aplikacjach.`
-    - Source: `description: Open { -smart-window-brand-name } when { -brand-short-name } starts, restarts, or opens links from other apps. label: Use { -smart-window-brand-name } by default`
-    - Suggest: `Otwieraj { -smart-window-brand-name } po uruchomieniu lub ponownym uruchomieniu { -brand-short-name } oraz po otwarciu odnośników z innych aplikacji.`
-    - The en-US lists three triggers: when Firefox starts, restarts, or opens links from other apps; the Polish omits "restarts".
-- `ai-window-learn-from-browsing-activity` — `browser/browser/aiFeatures.ftl` — "Learn from browsing in Classic and { -smart-window-brand-name }" is rendered with a dangling plural adjective "klasycznych" that has no noun.
-    - Current: `Ucz się z przeglądania w klasycznych i { -smart-window-brand-name }`
-    - Source: `label: Learn from browsing in Classic and { -smart-window-brand-name }`
-    - Suggest: `Ucz się z przeglądania w oknach klasycznych i { -smart-window-brand-name }`
-    - "Classic" here names the Classic window mode; the Polish leaves a plural adjective with no noun, which is ungrammatical and unintelligible.
-- `smartwindow-assistant-error-budget-header` — `browser/browser/aiWindowContent.ftl` — "Reached today's chat limit" translated as "exceeded today's limit of the conversation", changing meaning from a daily chat quota to a single conversation.
-    - Current: `Przekroczono dzisiejsze ograniczenie rozmowy.`
-    - Source: `You’ve reached today’s chat limit.`
-    - Suggest: `Osiągnięto dzisiejszy limit rozmów.`
-    - en-US says the user reached today's chat limit (a daily quota on chats); the Polish singular genitive "ograniczenie rozmowy" says the limit of the (one) conversation, and "przekroczono" says it was exceeded rather than reached.
-- `smartwindow-assistant-error-budget-body` — `browser/browser/aiWindowContent.ftl` — "once your daily limit resets" rendered as "po przywróceniu dziennego ograniczenia" (after the daily limit is restored/reinstated), reversing the meaning.
-    - Current: `po przywróceniu dziennego ograniczenia`
-    - Source: `You can still browse in this window. Chat will be available again once your daily limit resets.`
-    - Suggest: `po wyzerowaniu dziennego limitu`
-    - en-US means the limit counter resets (is cleared), making chat available again; "przywrócenie ograniczenia" says the restriction is reinstated, which contradicts the sentence.
-- `smartwindow-assistant-error-max-length-header` — `browser/browser/aiWindowContent.ftl` — "reached its length limit" translated as "przekroczyła" (exceeded) instead of reached.
-    - Current: `Ta przekroczyła ograniczenie długości.`
-    - Source: `It’s time to start a new chat. This one’s reached its length limit.`
-    - Suggest: `Ta osiągnęła limit długości.`
-    - en-US says the chat has reached its length limit, not that it exceeded it.
-- `smartwindow-assistant-error-capacity-header` — `browser/browser/aiWindowContent.ftl` — "is at capacity" rendered as "jest teraz zbyt zajęte" (is too busy), an inaccurate rendering of reaching capacity.
-    - Current: `jest teraz zbyt zajęte`
-    - Source: `{ -smart-window-brand-name } is at capacity right now. Please try again later.`
-    - Suggest: `jest w tej chwili przeciążone`
-    - en-US states the service has reached its capacity; "zbyt zajęte" (too busy) is not the same statement and reads oddly.
-- `smartwindow-messages-document-title` — `browser/browser/aiWindowContent.ftl` — "chat messages" reduced to just "Wiadomości", dropping "chat".
-    - Current: `Wiadomości { -smart-window-brand-name }`
-    - Source: `{ -smart-window-brand-name } chat messages`
-    - Suggest: `Wiadomości rozmowy { -smart-window-brand-name }`
-    - The en-US document title specifies chat messages; the Polish omits the "chat" qualifier present in the source.
-- `smartwindow-nl-retry-message` — `browser/browser/aiWindowContent.ftl` — "in the card that opens" refers to a UI card, but the Polish uses "karta" in the sense of a browser tab, and "choose" became "kliknij".
-    - Current: `kliknij <strong>Ponów</strong> i dokonaj wyboru na karcie, która się otworzy`
-    - Source: `If you still want to close tabs, choose <strong>Retry</strong> and make your selection in the card that opens.`
-    - Suggest: `wybierz <strong>Ponów</strong> i dokonaj wyboru w wyświetlonym oknie`
-    - The message is about closing tabs (karty); rendering "card" as "karta" makes the sentence ambiguous/wrong — the user is told to make a selection "on the tab that opens" rather than in the card UI that appears.
-- `smartwindow-nl-retry-group-tabs-message` — `browser/browser/aiWindowContent.ftl` — "in the card that opens" mistranslated as "na karcie" (browser tab) in a string that also talks about tabs.
-    - Current: `kliknij <strong>Ponów</strong> i dokonaj wyboru na karcie, która się otworzy`
-    - Source: `If you still want to group tabs, choose <strong>Retry</strong> and select which ones in the card that opens.`
-    - Suggest: `wybierz <strong>Ponów</strong> i dokonaj wyboru w wyświetlonym oknie`
-    - Same as the sibling string: "card" is a UI card, not a browser tab, so "na karcie" conflicts with "karty" used for tabs earlier in the sentence.
-- `smart-window-grouped-and-ungrouped-label` — `browser/browser/aiWindowContent.ftl` — "Tabs ungrouped" rendered as "Rozgrupowane karty" while the corresponding row label uses the verb form; label describes an action result.
-    - Current: `Rozgrupowane karty`
-    - Source: `Tabs ungrouped`
-    - Suggest: `Karty rozgrupowane`
-    - Per the developer comment this is an action result label ("Tabs ungrouped"), parallel to "Closed and restored tabs"; the adjective-first form loses the result sense.
-- `action-log-checking-memories` — `browser/browser/aiWindowContent.ftl` — "Checking memories" translated as "searching remembered content", changing the verb from check to search.
-    - Current: `Przeszukiwanie zapamiętanych treści`
-    - Source: `Checking memories`
-    - Suggest: `Sprawdzanie zapamiętanych treści`
-    - en-US uses "Checking" (sprawdzanie), not "Searching"; the pl string also blurs the distinction with the neighbouring "Searching…" strings.
-- `action-log-checked-memories` — `browser/browser/aiWindowContent.ftl` — "Checked memories" translated as "searched remembered content".
-    - Current: `Przeszukano zapamiętane treści`
-    - Source: `Checked memories`
-    - Suggest: `Sprawdzono zapamiętane treści`
-    - en-US says "Checked" (sprawdzono), not "Searched".
-- `action-log-checking-world-cup-live` — `browser/browser/aiWindowContent.ftl` — "Checking live World Cup matches" rendered with "Przeszukiwanie" (searching) instead of checking.
-    - Current: `Przeszukiwanie trwających meczów mistrzostw świata`
-    - Source: `Checking live World Cup matches`
-    - Suggest: `Sprawdzanie trwających meczów mistrzostw świata`
-    - en-US distinguishes "Checking" from "Searching"; the pl text uses the same verb for both.
-- `action-log-checked-world-cup-live` — `browser/browser/aiWindowContent.ftl` — "Checked live World Cup matches" rendered with "Przeszukano" (searched) instead of checked.
-    - Current: `Przeszukano trwające mecze mistrzostw świata`
-    - Source: `Checked live World Cup matches`
-    - Suggest: `Sprawdzono trwające mecze mistrzostw świata`
-    - en-US says "Checked", not "Searched".
-- `smartwindow-sidebar-auto-open-callout-title` — `browser/browser/newtab/onboarding.ftl` — "Want to keep the assistant closed?" loses "keep", becoming "Do you want the assistant to be closed?"
-    - Current: `Czy chcesz, aby asystent był zamknięty?`
-    - Source: `Want to keep the assistant closed?`
-    - Suggest: `Czy chcesz, aby asystent pozostał zamknięty?`
-    - en-US asks about keeping the assistant closed (continuing state); the pl drops that nuance.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -127,10 +45,11 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,116 |
-| Missing strings | 64 |
+| Strings | 18,112 |
+| Missing strings | 98 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 2 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 2 |
@@ -144,10 +63,18 @@ _Nothing retired._
 
 ### Completeness
 
-**64 strings** are not translated yet, concentrated in:
+**98 strings** are not translated yet, concentrated in:
 
 - `browser/browser/aiWindow.ftl` — 63
+- `toolkit/services/aboutSyncLog.ftl` — 26
+- `browser/browser/newtab/newtab.ftl` — 6
+- `toolkit/toolkit/pdfviewer/embedFallback.ftl` — 2
 - `browser/browser/newtab/onboarding.ftl` — 1
+
+**Files absent from the locale:**
+
+- `toolkit/services/aboutSyncLog.ftl`
+- `toolkit/toolkit/pdfviewer/embedFallback.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

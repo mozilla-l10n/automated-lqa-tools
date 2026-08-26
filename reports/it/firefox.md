@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-25 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ad52f2a75880` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-24 @ `e59d51071942` |
+| **Generated** | 2026-08-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b82b7a344c63` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
+| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,397 |
+| **Strings reviewed this run** | 36 of 18,403 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for it: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `about-sync-log-count` — `toolkit/services/aboutSyncLog.ftl` — "log/logs" rendered as "registrazione/registrazioni", inconsistent with "registro/registri" used for the same term everywhere else in this file.
+    - Current: `[one] { $count } registrazione [other] { $count } registrazioni`
+    - Source: `{$count ->} [one] { $count } log [other] { $count } logs`
+    - Suggest: `[one] { $count } registro [other] { $count } registri`
+    - The rest of the file translates "log(s)" as "registro/registri" (about-sync-log-title, -clear-button, -empty-filtered); "registrazione" means a recording/entry and is inconsistent on the same surface.
+- `about-sync-log-empty` — `toolkit/services/aboutSyncLog.ftl` — "No sync logs have been recorded" changed to state that no sync activity was recorded.
+    - Current: `Non è stata registrata alcuna attività di sincronizzazione.`
+    - Source: `No sync logs have been recorded.`
+    - Suggest: `Non è stato registrato alcun registro di sincronizzazione.`
+    - The source says no log files exist; the Italian asserts that no synchronization activity occurred, which is a different claim about the product's behaviour.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,10 +54,11 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 372 |
-| Strings | 18,397 |
-| Missing strings | 6 |
-| Obsolete strings | 8 |
+| Strings | 18,403 |
+| Missing strings | 0 |
+| Obsolete strings | 6 |
 | Files absent from the locale | 0 |
+| Files with no en-US counterpart | 10 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
@@ -62,11 +72,22 @@ _Nothing retired._
 
 ### Completeness
 
-**6 strings** are not translated yet, concentrated in:
+The locale is complete against the en-US source.
 
-- `browser/browser/browser.ftl` — 6
+### Files with no en-US counterpart
 
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+- `browser/branding/enterprise/brand.ftl`
+- `browser/branding/enterprise/brand.properties`
+- `browser/browser/enterprise/enterprise-policies-descriptions.ftl`
+- `browser/browser/enterprise/enterprise.ftl`
+- `browser/browser/enterprise/felt.ftl`
+- `browser/chrome/overrides/enterprise.properties`
+- `dom/chrome/enterprise.properties`
+- `toolkit/crashreporter/crashreporter-enterprise.ftl`
+- `toolkit/toolkit/enterprise/enterprise.ftl`
+- `toolkit/toolkit/enterprise/felt.ftl`
+
+_187 strings. These files exist in the locale tree but not in the en-US reference — they are maintained elsewhere. The model review is a comparison against en-US, so it skips them entirely; only the checks that need no reference ran. Nothing reported from these files means nothing was looked for, not that they are clean._
 
 ### Conventions detected in this locale
 
@@ -89,14 +110,23 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (0)
+## 3. Open findings (2)
 
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+
+- `about-sync-log-empty` — `toolkit/services/aboutSyncLog.ftl` — "No sync logs have been recorded" changed to state that no sync activity was recorded.
+    - Current: `Non è stata registrata alcuna attività di sincronizzazione.`
+    - Source: `No sync logs have been recorded.`
+    - Suggest: `Non è stato registrato alcun registro di sincronizzazione.`
+    - The source says no log files exist; the Italian asserts that no synchronization activity occurred, which is a different claim about the product's behaviour.
+
+_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 0 |
-| 3 | Degraded language (grammar, spelling, terminology) | 0 |
+| 2 | Wrong content (says something other than the English) | 1 |
+| 3 | Degraded language (grammar, spelling, terminology) | 1 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -105,7 +135,11 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-_Nothing in this category._
+- `about-sync-log-empty` — `toolkit/services/aboutSyncLog.ftl` — "No sync logs have been recorded" changed to state that no sync activity was recorded.
+    - Current: `Non è stata registrata alcuna attività di sincronizzazione.`
+    - Source: `No sync logs have been recorded.`
+    - Suggest: `Non è stato registrato alcun registro di sincronizzazione.`
+    - The source says no log files exist; the Italian asserts that no synchronization activity occurred, which is a different claim about the product's behaviour.
 
 ### C. Grammar, agreement & spelling
 
@@ -113,7 +147,11 @@ _Nothing in this category._
 
 ### D. Terminology, register & consistency
 
-_Nothing in this category._
+- `about-sync-log-count` — `toolkit/services/aboutSyncLog.ftl` — "log/logs" rendered as "registrazione/registrazioni", inconsistent with "registro/registri" used for the same term everywhere else in this file.
+    - Current: `[one] { $count } registrazione [other] { $count } registrazioni`
+    - Source: `{$count ->} [one] { $count } log [other] { $count } logs`
+    - Suggest: `[one] { $count } registro [other] { $count } registri`
+    - The rest of the file translates "log(s)" as "registro/registri" (about-sync-log-title, -clear-button, -empty-filtered); "registrazione" means a recording/entry and is inconsistent on the same surface.
 
 ### E. Typography, punctuation & spacing
 

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-25 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ad52f2a75880` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-24 @ `907043d6ea4b` |
+| **Generated** | 2026-08-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b82b7a344c63` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
+| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 17,983 |
+| **Strings reviewed this run** | 19 of 17,996 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,10 +45,11 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 359 |
-| Strings | 17,983 |
-| Missing strings | 197 |
+| Strings | 17,996 |
+| Missing strings | 214 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 3 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
@@ -62,9 +63,10 @@ _Nothing retired._
 
 ### Completeness
 
-**197 strings** are not translated yet, concentrated in:
+**214 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 41
+- `browser/browser/newtab/newtab.ftl` — 43
+- `toolkit/services/aboutSyncLog.ftl` — 26
 - `devtools/client/toolbox-options.ftl` — 18
 - `toolkit/toolkit/about/aboutNetworking.ftl` — 15
 - `browser/browser/sharePanel.ftl` — 14
@@ -73,13 +75,14 @@ _Nothing retired._
 - `dom/chrome/dom/dom.properties` — 9
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 7
 - `browser/browser/preferences/containers.ftl` — 7
-- `browser/browser/aiWindow.ftl` — 6
-- `browser/browser/firefoxView.ftl` — 6
 - `browser/browser/ipProtection.ftl` — 6
+- `browser/browser/sidebar.ftl` — 5
 
 **Files absent from the locale:**
 
 - `browser/browser/sharePanel.ftl`
+- `toolkit/services/aboutSyncLog.ftl`
+- `toolkit/toolkit/pdfviewer/embedFallback.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -89,12 +92,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 979, `straight-double` 46, `curly-single` 41 | **curly-double** |
+| quotes | `curly-double` 980, `straight-double` 46, `curly-single` 41 | **curly-double** |
 | apostrophe | `typographic` 46, `straight` 20 | _mixed_ |
-| ellipsis | `char` 439, `ascii` 13 | **char** |
-| dash | `em` 78, `en` 2 | **em** |
-| fullwidth | `punctuation` 9525 | **punctuation** |
-| register | `informal` 16, `formal` 1746 | **formal** |
+| ellipsis | `char` 441, `ascii` 13 | **char** |
+| dash | `em` 79, `en` 2 | **em** |
+| fullwidth | `punctuation` 9540 | **punctuation** |
+| register | `informal` 16, `formal` 1747 | **formal** |
 
 ---
 

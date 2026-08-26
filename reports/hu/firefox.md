@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-25 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ad52f2a75880` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-24 @ `e59d51071942` |
+| **Generated** | 2026-08-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b82b7a344c63` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
+| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 18,167 |
+| **Strings reviewed this run** | 2 of 18,163 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,10 +45,11 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,167 |
-| Missing strings | 13 |
+| Strings | 18,163 |
+| Missing strings | 47 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 2 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
@@ -62,14 +63,22 @@ _Nothing retired._
 
 ### Completeness
 
-**13 strings** are not translated yet, concentrated in:
+**47 strings** are not translated yet, concentrated in:
 
+- `toolkit/services/aboutSyncLog.ftl` — 26
+- `browser/browser/newtab/newtab.ftl` — 6
 - `toolkit/toolkit/neterror/netError.ftl` — 4
 - `devtools/client/inspector.ftl` — 4
+- `toolkit/toolkit/pdfviewer/embedFallback.ftl` — 2
 - `toolkit/toolkit/global/theme-picker.ftl` — 2
 - `toolkit/toolkit/about/aboutNetworking.ftl` — 1
 - `toolkit/toolkit/global/processTypes.ftl` — 1
 - `browser/browser/firefoxView.ftl` — 1
+
+**Files absent from the locale:**
+
+- `toolkit/services/aboutSyncLog.ftl`
+- `toolkit/toolkit/pdfviewer/embedFallback.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

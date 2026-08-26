@@ -190,7 +190,7 @@
   "file": "browser/browser/defaultBrowserNotification.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-25",
+  "last_seen": "2026-08-26",
   "locale": "it",
   "origin": {},
   "rationale": "In the source this string quotes “Web browser”, which is exactly the value of `desktop-entry-generic-name` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -965,6 +965,54 @@
   "string_id": "crashreporter-plea",
   "suggest": "",
   "summary": "✅ crashreporter-plea — toolkit/crashreporter/crashreporter.ftl:8 — now arresto anomalo.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
+  "current": "[one] { $count } registrazione [other] { $count } registrazioni",
+  "dismissed_because": "",
+  "fid": "116579ede0f2",
+  "file": "toolkit/services/aboutSyncLog.ftl",
+  "first_seen": "2026-08-26",
+  "impact": 3,
+  "last_seen": "2026-08-26",
+  "locale": "it",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The rest of the file translates \"log(s)\" as \"registro/registri\" (about-sync-log-title, -clear-button, -empty-filtered); \"registrazione\" means a recording/entry and is inconsistent on the same surface.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "ed5fdc36",
+  "string_id": "about-sync-log-count",
+  "suggest": "[one] { $count } registro [other] { $count } registri",
+  "summary": "\"log/logs\" rendered as \"registrazione/registrazioni\", inconsistent with \"registro/registri\" used for the same term everywhere else in this file.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Non è stata registrata alcuna attività di sincronizzazione.",
+  "dismissed_because": "",
+  "fid": "e274414e0085",
+  "file": "toolkit/services/aboutSyncLog.ftl",
+  "first_seen": "2026-08-26",
+  "impact": 2,
+  "last_seen": "2026-08-26",
+  "locale": "it",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source says no log files exist; the Italian asserts that no synchronization activity occurred, which is a different claim about the product's behaviour.",
+  "reads_as_deliberate": true,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "1674f6ea",
+  "string_id": "about-sync-log-empty",
+  "suggest": "Non è stato registrato alcun registro di sincronizzazione.",
+  "summary": "\"No sync logs have been recorded\" changed to state that no sync activity was recorded.",
   "suppressed_by": ""
  },
  {

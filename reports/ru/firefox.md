@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-25 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ad52f2a75880` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-24 @ `907043d6ea4b` |
+| **Generated** | 2026-08-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b82b7a344c63` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
+| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 15 of 18,180 |
+| **Strings reviewed this run** | 2 of 18,176 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,30 +18,13 @@ Also for ru: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `address-capture-never-save-addresses-button` — `browser/browser/preferences/formAutofill.ftl` — Plural "addresses" rendered as singular "адрес".
-    - Current: `Никогда не сохранять адрес`
-    - Source: `accessKey: v label: Never save addresses`
-    - Suggest: `Никогда не сохранять адреса`
-    - en-US "Never save addresses" is plural; the option disables saving of all addresses, not one address.
-- `statePartiallyChecked` — `dom/chrome/accessibility/AccessFu.properties` — "partially checked" (checkbox state) translated as "частично выбрано" (selected) instead of "отмечено".
-    - Current: `частично выбрано`
-    - Source: `partially checked`
-    - Suggest: `частично отмечено`
-    - The accessibility state "checked" refers to a checkbox being ticked; "выбрано" corresponds to "selected", a distinct accessibility state.
-- `newtab-stocks-watchlist-full` — `browser/browser/newtab/newtab.ftl` — Plural forms use ungrammatical "Удалите одни, чтобы добавить другие" instead of the singular "одну/другую".
-    - Current: `Удалите одни, чтобы добавить другие.`
-    - Source: `{$limit ->} [one] You can add up to { $limit } stock. Remove one to add another. [other] You can add up to { $limit } stocks. Remove one to add another.`
-    - Suggest: `Удалите одну, чтобы добавить другую.`
-    - The en-US says "Remove one to add another" — singular in every plural branch; "одни"/"другие" is not valid Russian here regardless of the $limit value.
+_No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `containers-card-header2` — `browser/browser/preferences/preferences.ftl` — таим образом → таким образом
-    - Current: `таим образом`
-    - Source: `description: Separate cookies by container so you can use different accounts on the same site and limit cross-site tracking. label: Containers`
-    - Suggest: `таким образом`
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -62,10 +45,11 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,180 |
-| Missing strings | 0 |
+| Strings | 18,176 |
+| Missing strings | 34 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 2 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
@@ -79,7 +63,18 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**34 strings** are not translated yet, concentrated in:
+
+- `toolkit/services/aboutSyncLog.ftl` — 26
+- `browser/browser/newtab/newtab.ftl` — 6
+- `toolkit/toolkit/pdfviewer/embedFallback.ftl` — 2
+
+**Files absent from the locale:**
+
+- `toolkit/services/aboutSyncLog.ftl`
+- `toolkit/toolkit/pdfviewer/embedFallback.ftl`
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 

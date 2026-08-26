@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-25 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ad52f2a75880` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-24 @ `e59d51071942` |
+| **Generated** | 2026-08-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b82b7a344c63` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
+| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 15,494 |
+| **Strings reviewed this run** | 15 of 15,504 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,10 +45,11 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 354 |
-| Strings | 15,494 |
-| Missing strings | 2,686 |
+| Strings | 15,504 |
+| Missing strings | 2,706 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 6 |
+| Files absent from the locale | 8 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
@@ -62,17 +63,17 @@ _Nothing retired._
 
 ### Completeness
 
-**2,686 strings** are not translated yet, concentrated in:
+**2,706 strings** are not translated yet, concentrated in:
 
 - `browser/browser/preferences/preferences.ftl` — 425
-- `browser/browser/newtab/newtab.ftl` — 415
+- `browser/browser/newtab/newtab.ftl` — 423
 - `browser/browser/aiWindow.ftl` — 159
 - `browser/browser/ipProtection.ftl` — 146
 - `browser/browser/newtab/onboarding.ftl` — 98
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 88
 - `browser/browser/aiWindowContent.ftl` — 80
 - `browser/browser/newtab/asrouter.ftl` — 79
-- `browser/browser/browser.ftl` — 67
+- `browser/browser/browser.ftl` — 66
 - `toolkit/toolkit/about/aboutAddons.ftl` — 61
 - `browser/browser/featureCallout.ftl` — 61
 - `browser/browser/profiles.ftl` — 56
@@ -83,8 +84,10 @@ _Nothing retired._
 - `browser/browser/aiWindowContent.ftl`
 - `browser/browser/ipProtection.ftl`
 - `browser/browser/sharePanel.ftl`
+- `toolkit/services/aboutSyncLog.ftl`
 - `toolkit/toolkit/global/mozPromo.ftl`
 - `toolkit/toolkit/global/theme-picker.ftl`
+- `toolkit/toolkit/pdfviewer/embedFallback.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

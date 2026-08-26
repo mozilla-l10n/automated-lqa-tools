@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-25 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ad52f2a75880` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-25 @ `33f01fa45f4e` |
+| **Generated** | 2026-08-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b82b7a344c63` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
+| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 7 of 18,180 |
+| **Strings reviewed this run** | 41 of 18,210 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,17 +18,46 @@ Also for en-GB: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (2)
 
-- `about-logins-confirm-remove-all-sync-dialog-message3` — `browser/browser/aboutLogins.ftl` — The [1] singular variant uses plural "passwords" instead of the singular "the password" of the source.
-    - Current: `[1] This will remove the passwords saved to`
-    - Source: `{$count ->} [1] This will remove the password saved to { -brand-short-name } on all your synced devices. This will also remove any breach alerts that appear here. You cannot undo this action. [other] This will remove al…`
-    - Suggest: `[1] This will remove the password saved to`
-    - The en-US [1] case reads "This will remove the password saved to…"; the singular plural form must stay singular in the count=1 variant.
+- `rights-intro-point-1` — `toolkit/toolkit/about/aboutRights.ftl` — The proper name "Mozilla Public License" has been altered to "Mozilla Public Licence".
+    - Current: `<a data-l10n-name="mozilla-public-license-link">Mozilla Public Licence</a>`
+    - Source: `{ -brand-short-name } is made available to you under the terms of the <a data-l10n-name="mozilla-public-license-link">Mozilla Public License</a>. This means you may use, copy and distribute { -brand-short-name } to othe…`
+    - Suggest: `<a data-l10n-name="mozilla-public-license-link">Mozilla Public License</a>`
+    - "Mozilla Public License" is the official name of a legal document and must not be respelled, even though "licence" is the British noun spelling.
+- `rights-intro-point-1` — `toolkit/toolkit/about/aboutRights.ftl` — Second occurrence of the proper name "Mozilla Public License" respelled as "Licence".
+    - Current: `The Mozilla Public Licence also gives you the right`
+    - Source: `{ -brand-short-name } is made available to you under the terms of the <a data-l10n-name="mozilla-public-license-link">Mozilla Public License</a>. This means you may use, copy and distribute { -brand-short-name } to othe…`
+    - Suggest: `The Mozilla Public License also gives you the right`
+    - The official licence name is a proper noun and should retain its US spelling as in the source.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (5)
 
-_Nothing was fixed._
+- `urlbar-popup-blocked2` — `browser/browser/browser.ftl` — "website" is used here although this file writes "web site" as two words everywhere else, including in the near-identical sibling string urlbar-popup-blocked.
+    - Current: `for this website.`
+    - Source: `tooltiptext: You have blocked pop-ups and third-party redirects for this website.`
+    - Suggest: `for this web site.`
+    - browser.ftl contains 22 visible-string occurrences of "web site"/"web sites" and this is the only visible-string occurrence of "website"; the adjacent urlbar-popup-blocked, which differs only by the redirect clause, reads "You have blocked pop-ups for this web site."
+- `mr2022-onboarding-colorway-description-dreamer` — `browser/browser/newtab/onboarding.ftl` — American spelling "favors" left unadapted; en-GB requires "favours".
+    - Current: `fortune favors the bold`
+    - Source: `<b>You are a Dreamer.</b> You believe that fortune favors the bold and inspire others to be brave.`
+    - Suggest: `fortune favours the bold`
+    - This is the only occurrence of American -or in "favour"/"favours" as an ordinary word anywhere in the en-GB tree; the locale otherwise uses "favourite", "favourites", "favour" consistently (e.g. newtab.ftl newtab-shortcuts-highlight-title "Your favourites at your fingertips", asrouter.ftl fox-doodle-pin-body "your favourite indie browser"). Remaining "favor" hits are en-US developer comments or t…
+- `SEC_ERROR_LIBPKIX_INTERNAL` — `security/manager/chrome/pipnss/nsserrors.properties` — "occured" is a misspelling of "occurred", which the locale uses everywhere else.
+    - Current: `Libpkix internal error occured during certificate validation.`
+    - Source: `Libpkix internal error occurred during cert validation.`
+    - Suggest: `Libpkix internal error occurred during certificate validation.`
+    - en-US reads "occurred"; en-GB also spells it "occurred" in every other string in this partition (e.g. SEC_ERROR_IO "An I/O error occurred during security authorisation.", SSLConnectionErrorPrefix2, PERR_FAILURE). "occured" is not a British variant, just a typo introduced in the localisation.
+- `fp-certerror-revoked-why-dangerous-body` — `toolkit/toolkit/neterror/certError.ftl` — "any more" here versus "anymore" in four sibling strings carrying the identical clause.
+    - Current: `isn’t trusted any more.`
+    - Source: `{ -brand-short-name } is warning you about this site because the certificate provided for { $hostname } has been revoked and isn’t trusted anymore.`
+    - Suggest: `isn’t trusted anymore.`
+    - certError.ftl uses "isn’t trusted anymore" at lines 94, 157, 167 and 171; only line 81 splits it. Both forms are current in British English, so this is reported purely as a departure from what the file and the wider tree (7 occurrences of "anymore") do consistently, not as a preference.
+- `rights-intro-point-1` — `toolkit/toolkit/about/aboutRights.ftl` — The proper name of the licence document, "Mozilla Public License", was respelled as "Mozilla Public Licence" (twice in the string).
+    - Current: `Mozilla Public Licence`
+    - Source: `{ -brand-short-name } is made available to you under the terms of the <a data-l10n-name="mozilla-public-license-link">Mozilla Public License</a>. This means you may use, copy and distribute { -brand-short-name } to othe…`
+    - Suggest: `Mozilla Public License`
+    - "Mozilla Public License" is the official title of a specific legal instrument (as reproduced verbatim in every file header of this same tree) and is not subject to the licence/license noun rule. Note the generic noun uses elsewhere in this partition ("Licence information") are correct and should stay.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -48,11 +77,12 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 360 |
-| Strings | 18,180 |
+| Files | 362 |
+| Strings | 18,210 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
@@ -75,7 +105,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 597, `curly-single` 101, `straight-double` 58 | **curly-double** |
-| apostrophe | `typographic` 1122, `straight` 56 | **typographic** |
+| apostrophe | `typographic` 1123, `straight` 56 | **typographic** |
 | ellipsis | `char` 461, `ascii` 1 | **char** |
 | dash | `em` 108, `en` 4 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
@@ -89,15 +119,15 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (22)
+## 3. Open findings (19)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 5 |
-| 2 | Wrong content (says something other than the English) | 8 |
-| 3 | Degraded language (grammar, spelling, terminology) | 7 |
-| 4 | Cosmetic (typography, spacing) | 2 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 4 |
+| 2 | Wrong content (says something other than the English) | 9 |
+| 3 | Degraded language (grammar, spelling, terminology) | 5 |
+| 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -106,16 +136,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `{$count ->} [1] This will remove the password saved to { -brand-short-name } on all your synced devices. This will also remove any breach alerts that appear here. You cannot undo this action. [other] This will remove al…`
     - Suggest: `[1] This will remove the password saved to`
     - The en-US [1] case reads "This will remove the password saved to…"; the singular plural form must stay singular in the count=1 variant.
-- `mr2022-onboarding-colorway-description-dreamer` — `browser/browser/newtab/onboarding.ftl` — American spelling "favors" left unadapted; en-GB requires "favours".
-    - Current: `fortune favors the bold`
-    - Source: `<b>You are a Dreamer.</b> You believe that fortune favors the bold and inspire others to be brave.`
-    - Suggest: `fortune favours the bold`
-    - This is the only occurrence of American -or in "favour"/"favours" as an ordinary word anywhere in the en-GB tree; the locale otherwise uses "favourite", "favourites", "favour" consistently (e.g. newtab.ftl newtab-shortcuts-highlight-title "Your favourites at your fingertips", asrouter.ftl fox-doodle-pin-body "your favourite indie browser"). Remaining "favor" hits are en-US developer comments or t…
-- `SEC_ERROR_LIBPKIX_INTERNAL` — `security/manager/chrome/pipnss/nsserrors.properties` — "occured" is a misspelling of "occurred", which the locale uses everywhere else.
-    - Current: `Libpkix internal error occured during certificate validation.`
-    - Source: `Libpkix internal error occurred during cert validation.`
-    - Suggest: `Libpkix internal error occurred during certificate validation.`
-    - en-US reads "occurred"; en-GB also spells it "occurred" in every other string in this partition (e.g. SEC_ERROR_IO "An I/O error occurred during security authorisation.", SSLConnectionErrorPrefix2, PERR_FAILURE). "occured" is not a British variant, just a typo introduced in the localisation.
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -129,11 +149,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Start { -brand-short-name }, open the application menu ☰ and go to Settings > Sync`
     - Suggest: `open the application menu ☰ and go to Settings > Sync`
     - pane-sync-title3 in browser/browser/preferences/preferences.ftl is localised as "Sync"; the quoted navigation path must reproduce the label the user will actually see.
-- `urlbar-popup-blocked2` — `browser/browser/browser.ftl` — "website" is used here although this file writes "web site" as two words everywhere else, including in the near-identical sibling string urlbar-popup-blocked.
-    - Current: `for this website.`
-    - Source: `tooltiptext: You have blocked pop-ups and third-party redirects for this website.`
-    - Suggest: `for this web site.`
-    - browser.ftl contains 22 visible-string occurrences of "web site"/"web sites" and this is the only visible-string occurrence of "website"; the adjacent urlbar-popup-blocked, which differs only by the redirect clause, reads "You have blocked pop-ups for this web site."
 - `policy-AllowFileSelectionDialogs` — `browser/browser/policies/policies-descriptions.ftl` — UI term "dialog" spelled "dialogues" here, against the tree's dominant "dialog".
     - Current: `Allow file selection dialogues.`
     - Source: `Allow file selection dialogs.`
@@ -164,11 +179,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Check`
     - Suggest: `check = Tick`
     - Same inconsistency as the unix file: mac/accessible.properties renders these very IDs as "Tick"/"Untick", and AccessFu.properties uses "tick button"/"tick menu item", so the win file diverges from the locale's own choice for the same action.
-- `fp-certerror-revoked-why-dangerous-body` — `toolkit/toolkit/neterror/certError.ftl` — "any more" here versus "anymore" in four sibling strings carrying the identical clause.
-    - Current: `isn’t trusted any more.`
-    - Source: `{ -brand-short-name } is warning you about this site because the certificate provided for { $hostname } has been revoked and isn’t trusted anymore.`
-    - Suggest: `isn’t trusted anymore.`
-    - certError.ftl uses "isn’t trusted anymore" at lines 94, 157, 167 and 171; only line 81 splits it. Both forms are current in British English, so this is reported purely as a departure from what the file and the wider tree (7 occurrences of "anymore") do consistently, not as a preference.
+- `rights-intro-point-1` — `toolkit/toolkit/about/aboutRights.ftl` — The proper name "Mozilla Public License" has been altered to "Mozilla Public Licence".
+    - Current: `<a data-l10n-name="mozilla-public-license-link">Mozilla Public Licence</a>`
+    - Source: `{ -brand-short-name } is made available to you under the terms of the <a data-l10n-name="mozilla-public-license-link">Mozilla Public License</a>. This means you may use, copy and distribute { -brand-short-name } to othe…`
+    - Suggest: `<a data-l10n-name="mozilla-public-license-link">Mozilla Public License</a>`
+    - "Mozilla Public License" is the official name of a legal document and must not be respelled, even though "licence" is the British noun spelling.
+- `rights-intro-point-1` — `toolkit/toolkit/about/aboutRights.ftl` — Second occurrence of the proper name "Mozilla Public License" respelled as "Licence".
+    - Current: `The Mozilla Public Licence also gives you the right`
+    - Source: `{ -brand-short-name } is made available to you under the terms of the <a data-l10n-name="mozilla-public-license-link">Mozilla Public License</a>. This means you may use, copy and distribute { -brand-short-name } to othe…`
+    - Suggest: `The Mozilla Public License also gives you the right`
+    - The official licence name is a proper noun and should retain its US spelling as in the source.
 
 ### C. Grammar, agreement & spelling
 
@@ -204,11 +224,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Feeling creative? <a data-l10n-name="link">Build your own theme with Firefox Color.</a>`
     - Suggest: `Build your own theme with Firefox Color.`
     - The developer comment above this string states the "Firefox Color" name itself should not be translated; it is the name of a Mozilla product.
-- `rights-intro-point-1` — `toolkit/toolkit/about/aboutRights.ftl` — The proper name of the licence document, "Mozilla Public License", was respelled as "Mozilla Public Licence" (twice in the string).
-    - Current: `Mozilla Public Licence`
-    - Source: `{ -brand-short-name } is made available to you under the terms of the <a data-l10n-name="mozilla-public-license-link">Mozilla Public License</a>. This means you may use, copy and distribute { -brand-short-name } to othe…`
-    - Suggest: `Mozilla Public License`
-    - "Mozilla Public License" is the official title of a specific legal instrument (as reproduced verbatim in every file header of this same tree) and is not subject to the licence/license noun rule. Note the generic noun uses elsewhere in this partition ("Licence information") are correct and should stay.
 
 ### E. Typography, punctuation & spacing
 
@@ -254,8 +269,13 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (7)
+### Fixed to date (12)
 
+- `urlbar-popup-blocked2` — `browser/browser/browser.ftl` — fixed 2026-08-26
+- `mr2022-onboarding-colorway-description-dreamer` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-26
+- `SEC_ERROR_LIBPKIX_INTERNAL` — `security/manager/chrome/pipnss/nsserrors.properties` — fixed 2026-08-26
+- `rights-intro-point-1` — `toolkit/toolkit/about/aboutRights.ftl` — fixed 2026-08-26
+- `fp-certerror-revoked-why-dangerous-body` — `toolkit/toolkit/neterror/certError.ftl` — fixed 2026-08-26
 - `helpus-referrals2` — `browser/browser/aboutDialog.ftl` — fixed 2026-08-24
 - `permissions-exceptions-https-only-desc` — `browser/browser/preferences/permissions.ftl` — fixed 2026-08-21
 - `preferences-data-migration-description` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-21

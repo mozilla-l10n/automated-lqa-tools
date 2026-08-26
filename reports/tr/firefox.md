@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-25 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ad52f2a75880` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-24 @ `907043d6ea4b` |
+| **Generated** | 2026-08-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b82b7a344c63` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
+| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 34 of 18,114 |
+| **Strings reviewed this run** | 2 of 18,110 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,33 +18,9 @@ Also for tr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (5)
+### 🆕 New findings (0)
 
-- `neterror-search-cta-learn-more` — `toolkit/toolkit/neterror/netError.ftl` — "Learn more" rendered in informal imperative ("al") instead of the formal "Daha fazla bilgi alın".
-    - Current: `Daha fazla bilgi al`
-    - Source: `Learn more`
-    - Suggest: `Daha fazla bilgi alın`
-    - The locale convention is formal siz; other UI strings in this batch use formal imperatives ("deneyin", "kabul edin").
-- `newtab-recent-searches-menu-learn-more` — `browser/browser/newtab/newtab.ftl` — "Learn more" rendered in informal imperative ("al") instead of the formal "Daha fazla bilgi alın".
-    - Current: `Daha fazla bilgi al`
-    - Source: `Learn more`
-    - Suggest: `Daha fazla bilgi alın`
-    - The locale convention is formal siz; informal singular imperative violates the established register.
-- `find-more-themes-promo` — `toolkit/toolkit/about/aboutAddons.ftl` — The message reverses the relation: source says pick a style that makes Firefox feel like yours, Turkish says pick the Firefox style that suits your taste.
-    - Current: `Tarzınıza uygun { -brand-product-name } stilini seçin.`
-    - Source: `heading: Find more fresh looks message: Choose a style that makes { -brand-product-name } feel like yours.`
-    - Suggest: `{ -brand-product-name } tarayıcısını size ait gibi gösteren bir stil seçin.`
-    - en-US: "Choose a style that makes { -brand-product-name } feel like yours." The Turkish loses the "feel like yours" idea and instead implies choosing among Firefox's own styles.
-- `about-networking-ssl-tokens-compression-details` — `toolkit/toolkit/about/aboutNetworking.ftl` — "Tokens" (TLS resumption tokens) translated as "Jetonlar", a wrong technical term.
-    - Current: `Jetonlar: { $tokenLength } B.`
-    - Source: `title: Tokens: { $tokenLength } B. Encoded: { $decompressedLength } → { $compressedLength } B.`
-    - Suggest: `Token’lar: { $tokenLength } B.`
-    - Per the developer comment these are raw TLS resumption tokens; "jeton" (coin/game token) is not the security term used for TLS tokens.
-- `newtab-clock-widget-custom-timezone-input` — `browser/browser/newtab/newtab.ftl` — "UTC offset" translated as "UTC farklılığına" instead of the standard "UTC farkı/kayması".
-    - Current: `Şehre, saat dilimine veya UTC farklılığına göre ara`
-    - Source: `aria-label: Time zone label: Time zone placeholder: Search by city, time zone, or UTC offset`
-    - Suggest: `Şehre, saat dilimine veya UTC farkına göre ara`
-    - "farklılık" means dissimilarity/diversity, not a numeric time offset; the standard Turkish term for UTC offset is "UTC farkı".
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -69,10 +45,11 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,114 |
-| Missing strings | 66 |
+| Strings | 18,110 |
+| Missing strings | 100 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 2 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
@@ -86,14 +63,21 @@ _Nothing retired._
 
 ### Completeness
 
-**66 strings** are not translated yet, concentrated in:
+**100 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 35
+- `browser/browser/newtab/newtab.ftl` — 41
+- `toolkit/services/aboutSyncLog.ftl` — 26
 - `toolkit/toolkit/about/url-classifier.ftl` — 10
 - `browser/browser/ipProtection.ftl` — 9
 - `browser/browser/firefoxView.ftl` — 5
 - `browser/browser/newtab/onboarding.ftl` — 4
 - `devtools/client/inspector.ftl` — 3
+- `toolkit/toolkit/pdfviewer/embedFallback.ftl` — 2
+
+**Files absent from the locale:**
+
+- `toolkit/services/aboutSyncLog.ftl`
+- `toolkit/toolkit/pdfviewer/embedFallback.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

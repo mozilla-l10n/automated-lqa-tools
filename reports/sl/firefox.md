@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-25 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ad52f2a75880` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-24 @ `907043d6ea4b` |
+| **Generated** | 2026-08-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b82b7a344c63` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
+| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 17,550 |
+| **Strings reviewed this run** | 5 of 17,549 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,10 +45,11 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 17,550 |
-| Missing strings | 630 |
+| Strings | 17,549 |
+| Missing strings | 661 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 2 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
@@ -62,20 +63,25 @@ _Nothing retired._
 
 ### Completeness
 
-**630 strings** are not translated yet, concentrated in:
+**661 strings** are not translated yet, concentrated in:
 
 - `browser/browser/aiWindow.ftl` — 136
 - `browser/browser/aiWindowContent.ftl` — 71
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 48
 - `dom/chrome/dom/dom.properties` — 45
 - `browser/browser/ipProtection.ftl` — 37
-- `browser/browser/newtab/newtab.ftl` — 28
+- `browser/browser/newtab/newtab.ftl` — 33
+- `toolkit/services/aboutSyncLog.ftl` — 26
 - `browser/browser/aiFeatures.ftl` — 26
 - `devtools/client/toolbox-options.ftl` — 24
 - `dom/chrome/security/security.properties` — 23
 - `toolkit/toolkit/about/aboutNetworking.ftl` — 20
 - `browser/browser/preferences/preferences.ftl` — 19
-- `devtools/client/debugger.properties` — 17
+
+**Files absent from the locale:**
+
+- `toolkit/services/aboutSyncLog.ftl`
+- `toolkit/toolkit/pdfviewer/embedFallback.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
