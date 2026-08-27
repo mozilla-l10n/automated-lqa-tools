@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-25 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ad52f2a75880` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-25 @ `33f01fa45f4e` |
+| **Generated** | 2026-08-27 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `caafd8e1597e` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
+| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 42 of 18,216 |
+| **Strings reviewed this run** | 0 of 18,174 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,10 +45,11 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 362 |
-| Strings | 18,216 |
-| Missing strings | 0 |
-| Obsolete strings | 8 |
+| Strings | 18,174 |
+| Missing strings | 36 |
+| Obsolete strings | 0 |
 | Files absent from the locale | 0 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
@@ -62,7 +63,13 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**36 strings** are not translated yet, concentrated in:
+
+- `toolkit/services/aboutSyncLog.ftl` — 26
+- `browser/browser/newtab/newtab.ftl` — 8
+- `toolkit/toolkit/pdfviewer/embedFallback.ftl` — 2
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -71,7 +78,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 756, `curly-single` 68, `straight-double` 25 | **curly-double** |
-| apostrophe | `typographic` 1119, `straight` 4 | **typographic** |
+| apostrophe | `typographic` 1118, `straight` 4 | **typographic** |
 | ellipsis | `char` 461 | **char** |
 | dash | `em` 109, `en` 3 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |

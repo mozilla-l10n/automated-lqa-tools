@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-25 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ad52f2a75880` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-24 @ `e59d51071942` |
+| **Generated** | 2026-08-27 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `caafd8e1597e` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
+| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 17,185 |
+| **Strings reviewed this run** | 2 of 17,181 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,10 +45,11 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 355 |
-| Strings | 17,185 |
-| Missing strings | 995 |
+| Strings | 17,181 |
+| Missing strings | 1,029 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 5 |
+| Files absent from the locale | 7 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
@@ -62,9 +63,9 @@ _Nothing retired._
 
 ### Completeness
 
-**995 strings** are not translated yet, concentrated in:
+**1,029 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 147
+- `browser/browser/newtab/newtab.ftl` — 153
 - `browser/browser/aiWindow.ftl` — 131
 - `browser/browser/appmenu.ftl` — 67
 - `browser/browser/aiWindowContent.ftl` — 51
@@ -73,17 +74,19 @@ _Nothing retired._
 - `toolkit/toolkit/global/theme-picker.ftl` — 28
 - `devtools/client/toolbox-options.ftl` — 28
 - `toolkit/toolkit/about/url-classifier.ftl` — 26
+- `toolkit/services/aboutSyncLog.ftl` — 26
 - `browser/browser/ipProtection.ftl` — 26
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 24
-- `browser/browser/firefoxView.ftl` — 23
 
 **Files absent from the locale:**
 
 - `browser/browser/preferences/browserIcon.ftl`
 - `browser/browser/sharePanel.ftl`
+- `toolkit/services/aboutSyncLog.ftl`
 - `toolkit/toolkit/global/mozPromo.ftl`
 - `toolkit/toolkit/global/rosettaNotification.ftl`
 - `toolkit/toolkit/global/theme-picker.ftl`
+- `toolkit/toolkit/pdfviewer/embedFallback.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

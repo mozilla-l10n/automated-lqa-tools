@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-25 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ad52f2a75880` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-24 @ `907043d6ea4b` |
+| **Generated** | 2026-08-27 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `caafd8e1597e` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
+| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 15 of 18,180 |
+| **Strings reviewed this run** | 36 of 18,210 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,30 +18,37 @@ Also for ru: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (5)
 
-- `address-capture-never-save-addresses-button` — `browser/browser/preferences/formAutofill.ftl` — Plural "addresses" rendered as singular "адрес".
-    - Current: `Никогда не сохранять адрес`
-    - Source: `accessKey: v label: Never save addresses`
-    - Suggest: `Никогда не сохранять адреса`
-    - en-US "Never save addresses" is plural; the option disables saving of all addresses, not one address.
-- `statePartiallyChecked` — `dom/chrome/accessibility/AccessFu.properties` — "partially checked" (checkbox state) translated as "частично выбрано" (selected) instead of "отмечено".
-    - Current: `частично выбрано`
-    - Source: `partially checked`
-    - Suggest: `частично отмечено`
-    - The accessibility state "checked" refers to a checkbox being ticked; "выбрано" corresponds to "selected", a distinct accessibility state.
-- `newtab-stocks-watchlist-full` — `browser/browser/newtab/newtab.ftl` — Plural forms use ungrammatical "Удалите одни, чтобы добавить другие" instead of the singular "одну/другую".
-    - Current: `Удалите одни, чтобы добавить другие.`
-    - Source: `{$limit ->} [one] You can add up to { $limit } stock. Remove one to add another. [other] You can add up to { $limit } stocks. Remove one to add another.`
-    - Suggest: `Удалите одну, чтобы добавить другую.`
-    - The en-US says "Remove one to add another" — singular in every plural branch; "одни"/"другие" is not valid Russian here regardless of the $limit value.
+- `about-sync-log-search-input` — `toolkit/services/aboutSyncLog.ftl` — "Search logs" (imperative: search the logs) was rendered as "Журналы поиска" ("search logs" as in logs of searches).
+    - Current: `aria-label: Журналы поиска placeholder: Журналы поиска`
+    - Source: `aria-label: Search logs placeholder: Search logs`
+    - Suggest: `aria-label: Поиск в журналах placeholder: Поиск в журналах`
+    - The en-US string is a search field label meaning "search the logs"; the Russian noun phrase means "logs of searches", naming the wrong thing.
+- `about-sync-log-empty-filtered` — `toolkit/services/aboutSyncLog.ftl` — Wrong case government: "подходящих текущим фильтрам" should be "подходящих под текущие фильтры".
+    - Current: `Нет журналов, подходящих текущим фильтрам.`
+    - Source: `No logs match the current filters.`
+    - Suggest: `Нет журналов, соответствующих текущим фильтрам.`
+    - The verb «подходить» does not take the dative in this sense; correct Russian is «соответствующих текущим фильтрам» or «подходящих под текущие фильтры».
+- `about-sync-log-clear-confirm-message` — `toolkit/services/aboutSyncLog.ftl` — Agreement error in the [few] plural form: "видимые файла" should be "видимых файла".
+    - Current: `Это навсегда удалит { $count } видимые файла логов.`
+    - Source: `{$count ->} [one] This will permanently delete { $count } visible log file. [other] This will permanently delete { $count } visible log files.`
+    - Suggest: `Это навсегда удалит { $count } видимых файла логов.`
+    - After numerals 2–4 in the accusative, the adjective takes the genitive plural: «два видимых файла», not «два видимые файла».
+- `about-sync-log-open-raw` — `toolkit/services/aboutSyncLog.ftl` — "Open raw" translated as a dangling adjective "Открыть необработанное" without the noun it refers to (the raw log file).
+    - Current: `label: Открыть необработанное`
+    - Source: `label: Open raw`
+    - Suggest: `label: Открыть исходный файл`
+    - Per the developer comment the button opens the raw log file; the neuter adjective «необработанное» agrees with nothing and reads as an incomplete phrase in Russian.
+- `about-sync-log-clear-button` — `toolkit/services/aboutSyncLog.ftl` — Inconsistent rendering of "logs" within the same surface: «логи» here vs «журналы» in neighbouring strings.
+    - Current: `label: Удалить логи`
+    - Source: `label: Clear logs`
+    - Suggest: `label: Удалить журналы`
+    - The same page uses «журналы» (about-sync-log-page-header description, about-sync-log-empty-filtered, about-sync-log-view-error, about-sync-log-count) and the colloquial «логи» elsewhere; one term should be used consistently.
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `containers-card-header2` — `browser/browser/preferences/preferences.ftl` — таим образом → таким образом
-    - Current: `таим образом`
-    - Source: `description: Separate cookies by container so you can use different accounts on the same site and limit cross-site tracking. label: Containers`
-    - Suggest: `таким образом`
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -61,11 +68,12 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 360 |
-| Strings | 18,180 |
+| Files | 362 |
+| Strings | 18,210 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
@@ -92,7 +100,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | ellipsis | `char` 463, `ascii` 6 | **char** |
 | dash | `em` 168, `en` 5 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 7 | _mixed_ |
-| register | `informal` 1051, `formal` 3596 | **formal** |
+| register | `informal` 1052, `formal` 3596 | **formal** |
 
 ---
 
@@ -103,14 +111,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (596)
+## 3. Open findings (601)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 49 |
-| 2 | Wrong content (says something other than the English) | 268 |
-| 3 | Degraded language (grammar, spelling, terminology) | 214 |
+| 2 | Wrong content (says something other than the English) | 269 |
+| 3 | Degraded language (grammar, spelling, terminology) | 218 |
 | 4 | Cosmetic (typography, spacing) | 65 |
 
 ### A. Functional, markup, variables & plurals
@@ -439,7 +447,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Closeup photography of blue-petaled flowers in bloom`
 - `newtab-wallpaper-celestial-eclipse-time-lapse` — `browser/browser/newtab/newtab.ftl` — Wallpaper descriptions — newtab.ftl — newtab-wallpaper-light-landscape renders "mist" as дым (smoke); newtab-wallpaper-blue-flowers says цветов с голубыми цветами (repeats the word, loses "petaled"); newtab-wallpaper-celestial-eclipse-time-lapse renders "time lapse" as Хронометраж; newtab-wallpaper-celestial-river renders "satellite" as Космический
     - Source: `Lunar eclipse time lapse`
-- _…and 206 more; see `state/` for the full list._
+- _…and 207 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -653,7 +661,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `с портфелей`
     - Source: `tooltiptext: Apply briefcase avatar`
     - Suggest: `с портфелем`
-- _…and 92 more; see `state/` for the full list._
+- _…and 94 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -821,7 +829,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Started tracing to the Profiler. The traces will be displayed in the profiler on stop.`
 - `devmgr-button-enable-fips` — `security/manager/security/certificates/deviceManager.ftl` — two metaphors in one dialog
     - Source: `accesskey: F label: Enable FIPS`
-- _…and 4 more; see `state/` for the full list._
+- _…and 6 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 

@@ -347,7 +347,7 @@
   "file": "browser/browser/addonNotifications.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-25",
+  "last_seen": "2026-08-27",
   "locale": "nl",
   "origin": {},
   "rationale": "The label is “Verdachte website rapporteren”. An access key not in the label cannot be underlined and is unreachable by keyboard.",

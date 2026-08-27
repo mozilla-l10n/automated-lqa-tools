@@ -190,7 +190,7 @@
   "file": "browser/browser/defaultBrowserNotification.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-25",
+  "last_seen": "2026-08-27",
   "locale": "it",
   "origin": {},
   "rationale": "In the source this string quotes “Web browser”, which is exactly the value of `desktop-entry-generic-name` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -965,6 +965,54 @@
   "string_id": "crashreporter-plea",
   "suggest": "",
   "summary": "✅ crashreporter-plea — toolkit/crashreporter/crashreporter.ftl:8 — now arresto anomalo.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
+  "current": "[one] { $count } registrazione [other] { $count } registrazioni",
+  "dismissed_because": "",
+  "fid": "0d599a725a16",
+  "file": "toolkit/services/aboutSyncLog.ftl",
+  "first_seen": "2026-08-27",
+  "impact": 3,
+  "last_seen": "2026-08-27",
+  "locale": "it",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "Every other string in this file renders \"log(s)\" as \"registro/registri\"; \"registrazione\" means a recording, an inconsistent term on the same surface.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "ed5fdc36",
+  "string_id": "about-sync-log-count",
+  "suggest": "[one] { $count } registro [other] { $count } registri",
+  "summary": "\"log/logs\" translated as \"registrazione/registrazioni\" instead of the \"registro/registri\" used consistently elsewhere in the same page.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Non è stato trovato alcun registro di sincronizzazione.",
+  "dismissed_because": "",
+  "fid": "6a0c184700d7",
+  "file": "toolkit/services/aboutSyncLog.ftl",
+  "first_seen": "2026-08-27",
+  "impact": 3,
+  "last_seen": "2026-08-27",
+  "locale": "it",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The en-US says logs have not been recorded, not that a search failed to find them.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "2bb731d4",
+  "string_id": "about-sync-log-empty",
+  "suggest": "Non è stato registrato alcun registro di sincronizzazione.",
+  "summary": "\"No sync logs have been recorded\" rendered as \"no log was found\", changing the meaning from recording to searching.",
   "suppressed_by": ""
  },
  {

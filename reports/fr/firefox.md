@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-25 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ad52f2a75880` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-24 @ `e59d51071942` |
+| **Generated** | 2026-08-27 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `caafd8e1597e` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
+| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,367 |
+| **Strings reviewed this run** | 36 of 18,397 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,23 @@ Also for fr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `pdfjs-embed-fallback-open-button` — `toolkit/toolkit/pdfviewer/embedFallback.ftl` — "Open PDF" translated as "Ouvrir un PDF" (open some/a PDF) instead of opening this specific PDF.
+    - Current: `Ouvrir un PDF`
+    - Source: `Open PDF`
+    - Suggest: `Ouvrir le PDF`
+    - The button opens the PDF that can’t be displayed in the embed; the indefinite article suggests a file picker for any PDF.
+- `about-sync-log-count` — `toolkit/services/aboutSyncLog.ftl` — Singular plural variant reads "{ $count } de journal" instead of "{ $count } journal".
+    - Current: `[one] { $count } de journal`
+    - Source: `{$count ->} [one] { $count } log [other] { $count } logs`
+    - Suggest: `[one] { $count } journal`
+    - en-US is "{ $count } log"; the inserted "de" is ungrammatical in French ("1 de journal").
+- `about-sync-log-filter-date-all` — `toolkit/services/aboutSyncLog.ftl` — "All time" rendered as "Toujours" (always) instead of a time-range label.
+    - Current: `label: Toujours`
+    - Source: `label: All time`
+    - Suggest: `label: Tout l’historique`
+    - This is a date-range filter option meaning the entire period; "Toujours" means "always" and does not convey the range.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +58,12 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 370 |
-| Strings | 18,367 |
+| Files | 372 |
+| Strings | 18,397 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
+| Files with no en-US counterpart | 10 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 1 |
@@ -64,6 +79,21 @@ _Nothing retired._
 
 The locale is complete against the en-US source.
 
+### Files with no en-US counterpart
+
+- `browser/branding/enterprise/brand.ftl`
+- `browser/branding/enterprise/brand.properties`
+- `browser/browser/enterprise/enterprise-policies-descriptions.ftl`
+- `browser/browser/enterprise/enterprise.ftl`
+- `browser/browser/enterprise/felt.ftl`
+- `browser/chrome/overrides/enterprise.properties`
+- `dom/chrome/enterprise.properties`
+- `toolkit/crashreporter/crashreporter-enterprise.ftl`
+- `toolkit/toolkit/enterprise/enterprise.ftl`
+- `toolkit/toolkit/enterprise/felt.ftl`
+
+_187 strings. These files exist in the locale tree but not in the en-US reference — they are maintained elsewhere. The model review is a comparison against en-US, so it skips them entirely; only the checks that need no reference ran. Nothing reported from these files means nothing was looked for, not that they are clean._
+
 ### Conventions detected in this locale
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
@@ -71,10 +101,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 1132, `straight-double` 31, `curly-double` 2, `curly-single` 1 | **guillemet** |
-| apostrophe | `typographic` 5638, `straight` 10 | **typographic** |
+| apostrophe | `typographic` 5640, `straight` 10 | **typographic** |
 | ellipsis | `char` 472 | **char** |
 | dash | `em` 68, `en` 8 | **em** |
-| nbsp | `total` 4449, `before-punctuation` 1999 | _mixed_ |
+| nbsp | `total` 4454, `before-punctuation` 2000 | _mixed_ |
 | register | `formal` 3193 | **formal** |
 
 ---
@@ -85,14 +115,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (16)
+## 3. Open findings (19)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 1 |
-| 2 | Wrong content (says something other than the English) | 3 |
-| 3 | Degraded language (grammar, spelling, terminology) | 8 |
+| 2 | Wrong content (says something other than the English) | 5 |
+| 3 | Degraded language (grammar, spelling, terminology) | 9 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
@@ -111,13 +141,27 @@ _Nothing reported._
 
 - `aiwindow-firstrun-default-checkbox-label` — `browser/browser/aiWindow.ftl` — brand form lower-plural renders "dans une fenêtres intelligentes" → use lower-singular (EN is singular; matches line 164).
     - Source: `Always open { -brand-product-name } in { -smart-window-brand-name }`
+- `about-sync-log-filter-date-all` — `toolkit/services/aboutSyncLog.ftl` — "All time" rendered as "Toujours" (always) instead of a time-range label.
+    - Current: `label: Toujours`
+    - Source: `label: All time`
+    - Suggest: `label: Tout l’historique`
+    - This is a date-range filter option meaning the entire period; "Toujours" means "always" and does not convey the range.
 - `about-glean-metrics-table-settings-timelines-vertical-line-x-offset` — `toolkit/toolkit/about/aboutGlean.ftl` — toolkit/toolkit/about/aboutGlean.ftl:133,135 — both say "axe des abscisses" but EN references the Y-axis → axe des ordonnées; line 135 is also internally contradictory ("décalage vertical … abscisses").
     - Source: `Y-axis X offset`
     - Suggest: `axe des ordonnées`
+- `pdfjs-embed-fallback-open-button` — `toolkit/toolkit/pdfviewer/embedFallback.ftl` — "Open PDF" translated as "Ouvrir un PDF" (open some/a PDF) instead of opening this specific PDF.
+    - Current: `Ouvrir un PDF`
+    - Source: `Open PDF`
+    - Suggest: `Ouvrir le PDF`
+    - The button opens the PDF that can’t be displayed in the embed; the indefinite article suggests a file picker for any PDF.
 
 ### C. Grammar, agreement & spelling
 
-_Nothing in this category._
+- `about-sync-log-count` — `toolkit/services/aboutSyncLog.ftl` — Singular plural variant reads "{ $count } de journal" instead of "{ $count } journal".
+    - Current: `[one] { $count } de journal`
+    - Source: `{$count ->} [one] { $count } log [other] { $count } logs`
+    - Suggest: `[one] { $count } journal`
+    - en-US is "{ $count } log"; the inserted "de" is ungrammatical in French ("1 de journal").
 
 ### D. Terminology, register & consistency
 
@@ -147,7 +191,7 @@ _Nothing in this category._
 
 - `felt-error-warning-download-attempt-failed-contact-admin` — `browser/browser/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
     - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
-    - The tree uses ’ 5638 times against 10 straight.
+    - The tree uses ’ 5640 times against 10 straight.
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `L’évènement « key » n’est pas disponible dans GTK2 : key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
@@ -158,7 +202,7 @@ _Nothing in this category._
     - The locale's quote convention is `guillemet` (1132 occurrences).
 - `felt-error-warning-download-attempt-failed-contact-admin` — `toolkit/toolkit/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
     - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
-    - The tree uses ’ 5638 times against 10 straight.
+    - The tree uses ’ 5640 times against 10 straight.
 
 ---
 

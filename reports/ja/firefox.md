@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-25 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ad52f2a75880` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-24 @ `e59d51071942` |
+| **Generated** | 2026-08-27 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `caafd8e1597e` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
+| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 52 of 18,180 |
+| **Strings reviewed this run** | 2 of 18,182 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,30 +18,13 @@ Also for ja: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `newtab-stocks-search-input` — `browser/browser/newtab/newtab.ftl` — The placeholder for the search input is rendered as a verb phrase "〜します" instead of a noun/placeholder form.
-    - Current: `placeholder: 企業名または銘柄コードで検索します`
-    - Source: `aria-label: Search by name or symbol placeholder: Search by name or symbol`
-    - Suggest: `placeholder: 企業名または銘柄コードで検索`
-    - The developer comment says this is a placeholder text in the input field; the locale convention reserves 〜します for .title tooltips, not placeholders, and the identical aria-label uses the noun form.
-- `containers-sites-card-header` — `browser/browser/preferences/preferences.ftl` — The description translates "a site"/"the site" as "このサイト" (this site), implying a specific site rather than any site in general.
-    - Current: `専用コンテナーを選ぶと、{ -brand-short-name } でこのサイトを開く時に毎回このコンテナーが使用されます。`
-    - Source: `description: Choose a container for a site and { -brand-short-name } will use it every time the site opens. label: Site-specific containers`
-    - Suggest: `サイトごとにコンテナーを選ぶと、{ -brand-short-name } はそのサイトを開くたびに毎回そのコンテナーを使用します。`
-    - en-US says "Choose a container for a site and { -brand-short-name } will use it every time the site opens" — generic; the Japanese uses deictic 「この」 referring to a particular site, changing the meaning of this settings card header description.
-- `treetable` — `dom/chrome/accessibility/AccessFu.properties` — "tree table" is rendered as 「折りたたみリスト」 (collapsible list), which names a different accessibility role.
-    - Current: `折りたたみリスト`
-    - Source: `tree table`
-    - Suggest: `ツリーテーブル`
-    - The source is the accessibility role name "tree table"; "折りたたみリスト" (collapsible list) does not denote a table role and mis-announces the element to screen reader users.
+_No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `abuse-report-policy-reason-v2` — `toolkit/toolkit/about/abuseReports.ftl` — abuse-report-policy-reason-v2 (abuseReports.ftl) — "hateful" downgraded to 不愉快 ("unpleasant"); it is a policy category. → 差別的
-    - Current: `不愉快`
-    - Source: `It contains hateful, violent, or illegal content`
-    - Suggest: `差別的`
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -62,10 +45,11 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,180 |
-| Missing strings | 0 |
-| Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Strings | 18,182 |
+| Missing strings | 34 |
+| Obsolete strings | 6 |
+| Files absent from the locale | 2 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
@@ -78,6 +62,17 @@ _Nothing retired._
 | Typography deviations from this locale's own norm | 0 |
 
 ### Completeness
+
+**34 strings** are not translated yet, concentrated in:
+
+- `toolkit/services/aboutSyncLog.ftl` — 26
+- `browser/browser/newtab/newtab.ftl` — 6
+- `toolkit/toolkit/pdfviewer/embedFallback.ftl` — 2
+
+**Files absent from the locale:**
+
+- `toolkit/services/aboutSyncLog.ftl`
+- `toolkit/toolkit/pdfviewer/embedFallback.ftl`
 
 **Files present but identical to en-US:**
 

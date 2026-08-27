@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-25 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ad52f2a75880` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `50d2f3b3f7c8` |
-| **Previous run** | 2026-08-24 @ `e59d51071942` |
+| **Generated** | 2026-08-27 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `caafd8e1597e` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
+| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,397 |
+| **Strings reviewed this run** | 36 of 18,398 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for it: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `about-sync-log-empty` — `toolkit/services/aboutSyncLog.ftl` — "No sync logs have been recorded" rendered as "no log was found", changing the meaning from recording to searching.
+    - Current: `Non è stato trovato alcun registro di sincronizzazione.`
+    - Source: `No sync logs have been recorded.`
+    - Suggest: `Non è stato registrato alcun registro di sincronizzazione.`
+    - The en-US says logs have not been recorded, not that a search failed to find them.
+- `about-sync-log-count` — `toolkit/services/aboutSyncLog.ftl` — "log/logs" translated as "registrazione/registrazioni" instead of the "registro/registri" used consistently elsewhere in the same page.
+    - Current: `[one] { $count } registrazione [other] { $count } registrazioni`
+    - Source: `{$count ->} [one] { $count } log [other] { $count } logs`
+    - Suggest: `[one] { $count } registro [other] { $count } registri`
+    - Every other string in this file renders "log(s)" as "registro/registri"; "registrazione" means a recording, an inconsistent term on the same surface.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,10 +54,11 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 372 |
-| Strings | 18,397 |
-| Missing strings | 6 |
-| Obsolete strings | 8 |
+| Strings | 18,398 |
+| Missing strings | 5 |
+| Obsolete strings | 6 |
 | Files absent from the locale | 0 |
+| Files with no en-US counterpart | 10 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
@@ -62,11 +72,28 @@ _Nothing retired._
 
 ### Completeness
 
-**6 strings** are not translated yet, concentrated in:
+**5 strings** are not translated yet, concentrated in:
 
-- `browser/browser/browser.ftl` — 6
+- `browser/browser/browser.ftl` — 3
+- `browser/browser/aboutPrivateBrowsing.ftl` — 1
+- `browser/browser/appmenu.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+
+### Files with no en-US counterpart
+
+- `browser/branding/enterprise/brand.ftl`
+- `browser/branding/enterprise/brand.properties`
+- `browser/browser/enterprise/enterprise-policies-descriptions.ftl`
+- `browser/browser/enterprise/enterprise.ftl`
+- `browser/browser/enterprise/felt.ftl`
+- `browser/chrome/overrides/enterprise.properties`
+- `dom/chrome/enterprise.properties`
+- `toolkit/crashreporter/crashreporter-enterprise.ftl`
+- `toolkit/toolkit/enterprise/enterprise.ftl`
+- `toolkit/toolkit/enterprise/felt.ftl`
+
+_187 strings. These files exist in the locale tree but not in the en-US reference — they are maintained elsewhere. The model review is a comparison against en-US, so it skips them entirely; only the checks that need no reference ran. Nothing reported from these files means nothing was looked for, not that they are clean._
 
 ### Conventions detected in this locale
 
@@ -79,7 +106,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | ellipsis | `char` 481 | **char** |
 | dash | `em` 75, `en` 18 | **em** |
 | nbsp | `total` 12, `before-punctuation` 4, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 761, `formal` 59 | **informal** |
+| register | `informal` 760, `formal` 59 | **informal** |
 
 ---
 
@@ -89,14 +116,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (0)
+## 3. Open findings (2)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 0 |
-| 3 | Degraded language (grammar, spelling, terminology) | 0 |
+| 3 | Degraded language (grammar, spelling, terminology) | 2 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -105,7 +132,11 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-_Nothing in this category._
+- `about-sync-log-empty` — `toolkit/services/aboutSyncLog.ftl` — "No sync logs have been recorded" rendered as "no log was found", changing the meaning from recording to searching.
+    - Current: `Non è stato trovato alcun registro di sincronizzazione.`
+    - Source: `No sync logs have been recorded.`
+    - Suggest: `Non è stato registrato alcun registro di sincronizzazione.`
+    - The en-US says logs have not been recorded, not that a search failed to find them.
 
 ### C. Grammar, agreement & spelling
 
@@ -113,7 +144,11 @@ _Nothing in this category._
 
 ### D. Terminology, register & consistency
 
-_Nothing in this category._
+- `about-sync-log-count` — `toolkit/services/aboutSyncLog.ftl` — "log/logs" translated as "registrazione/registrazioni" instead of the "registro/registri" used consistently elsewhere in the same page.
+    - Current: `[one] { $count } registrazione [other] { $count } registrazioni`
+    - Source: `{$count ->} [one] { $count } log [other] { $count } logs`
+    - Suggest: `[one] { $count } registro [other] { $count } registri`
+    - Every other string in this file renders "log(s)" as "registro/registri"; "registrazione" means a recording, an inconsistent term on the same surface.
 
 ### E. Typography, punctuation & spacing
 
