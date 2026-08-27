@@ -2,8 +2,8 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b82b7a344c63` |
+| **Generated** | 2026-08-27 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `caafd8e1597e` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
 | **Previous run** | 2026-08-25 @ `ad52f2a75880` |
 | **Mode** | incremental |
@@ -18,23 +18,9 @@ Also for pt-BR: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `about-sync-log-filter-type-all` — `toolkit/services/aboutSyncLog.ftl` — "All" in the type filter is rendered as "Tudo" instead of the correct gender/number agreement with "tipo"/logs.
-    - Current: `label: Tudo`
-    - Source: `label: All`
-    - Suggest: `label: Todos`
-    - This is a filter option for log types; pt-BR uses "Todos" for a filter meaning all items, matching the parallel date filter "Todo tempo". "Tudo" is the neuter pronoun and does not agree here.
-- `about-sync-log-empty-filtered` — `toolkit/services/aboutSyncLog.ftl` — Plural "filters" rendered as singular "filtro atual".
-    - Current: `Nenhum log corresponde ao filtro atual.`
-    - Source: `No logs match the current filters.`
-    - Suggest: `Nenhum log corresponde aos filtros atuais.`
-    - The en-US says "the current filters" (plural, there are two filter controls: type and date); the translation says a single filter.
-- `about-sync-log-filter-date-all` — `toolkit/services/aboutSyncLog.ftl` — "All time" translated as "Todo tempo", missing the required article.
-    - Current: `label: Todo tempo`
-    - Source: `label: All time`
-    - Suggest: `label: Todo o período`
-    - "Todo tempo" is ungrammatical in pt-BR; the standard rendering of the "All time" date filter is "Todo o período" (or "Todo o tempo").
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -101,14 +87,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (567)
+## 3. Open findings (564)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 12 |
 | 2 | Wrong content (says something other than the English) | 193 |
-| 3 | Degraded language (grammar, spelling, terminology) | 291 |
+| 3 | Degraded language (grammar, spelling, terminology) | 288 |
 | 4 | Cosmetic (typography, spacing) | 71 |
 
 ### A. Functional, markup, variables & plurals
@@ -369,7 +355,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `Abrir janelas ou abas`
     - Source: `Open pop-up windows`
     - Suggest: `Abrir janelas popup`
-- _…and 131 more; see `state/` for the full list._
+- _…and 130 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -597,7 +583,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `A extensão pode ler e alterar dados`
     - Source: `label: Extension Can Read and Change Data:`
     - Suggest: `…dados:`
-- _…and 107 more; see `state/` for the full list._
+- _…and 106 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -780,7 +766,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `tooltiptext: Apply picture avatar`
 - `sparkle-single-avatar` — `browser/browser/profiles.ftl` — profiles.ftl avatar labels — edit-profile-page-avatar-header-2 uses Símbolo where the file uses avatar; sparkle-single-avatar-tooltip says brilho while sparkle-single-avatar says Faísca; video-game-controller-avatar-tooltip says controle de videogame while video-game-controller-avatar says Controlador de videogame; picture-avatar-tooltip says de imagem while picture-avatar says Foto; folder-avata…
     - Source: `Sparkle`
-- _…and 66 more; see `state/` for the full list._
+- _…and 65 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 

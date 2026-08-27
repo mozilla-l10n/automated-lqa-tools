@@ -2,8 +2,8 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b82b7a344c63` |
+| **Generated** | 2026-08-27 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `caafd8e1597e` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
 | **Previous run** | 2026-08-25 @ `ad52f2a75880` |
 | **Mode** | incremental |
@@ -262,17 +262,17 @@ _No suppression rules have matched._
 
 ### Withdrawn to date (11)
 
-- `blocked-by-policy-title-enterprise` — `browser/browser/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-26
-- `enterprise-close-prompt-message-reauth` — `browser/browser/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-26
-- `neterror-blocked-by-policy-page-title-enterprise` — `browser/browser/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-26
-- `restart-forced-heading` — `browser/browser/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-26
-- `felt-sso-input-email` — `browser/browser/enterprise/felt.ftl` — raised by `llm`, withdrawn 2026-08-26
-- `felt-updates-title` — `browser/browser/enterprise/felt.ftl` — raised by `llm`, withdrawn 2026-08-26
-- `blocked-by-policy-title-enterprise` — `toolkit/toolkit/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-26
-- `enterprise-close-prompt-message-with-tabcount` — `toolkit/toolkit/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-26
-- `neterror-blocked-by-policy-page-title-enterprise` — `toolkit/toolkit/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-26
-- `felt-sso-input-email` — `toolkit/toolkit/enterprise/felt.ftl` — raised by `llm`, withdrawn 2026-08-26
-- `felt-updates-application` — `toolkit/toolkit/enterprise/felt.ftl` — raised by `llm`, withdrawn 2026-08-26
+- `blocked-by-policy-title-enterprise` — `browser/browser/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-27
+- `enterprise-close-prompt-message-reauth` — `browser/browser/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-27
+- `neterror-blocked-by-policy-page-title-enterprise` — `browser/browser/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-27
+- `restart-forced-heading` — `browser/browser/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-27
+- `felt-sso-input-email` — `browser/browser/enterprise/felt.ftl` — raised by `llm`, withdrawn 2026-08-27
+- `felt-updates-title` — `browser/browser/enterprise/felt.ftl` — raised by `llm`, withdrawn 2026-08-27
+- `blocked-by-policy-title-enterprise` — `toolkit/toolkit/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-27
+- `enterprise-close-prompt-message-with-tabcount` — `toolkit/toolkit/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-27
+- `neterror-blocked-by-policy-page-title-enterprise` — `toolkit/toolkit/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-27
+- `felt-sso-input-email` — `toolkit/toolkit/enterprise/felt.ftl` — raised by `llm`, withdrawn 2026-08-27
+- `felt-updates-application` — `toolkit/toolkit/enterprise/felt.ftl` — raised by `llm`, withdrawn 2026-08-27
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 

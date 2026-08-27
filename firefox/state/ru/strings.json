@@ -3713,7 +3713,10 @@
   "newtab-appearance-your-themes-header": "2724f89f 496f2134",
   "newtab-card-dismiss-button": "344d64d5 0605e822",
   "newtab-carousel-next": "afc1df75 d782053e 5efb9fc7",
+  "newtab-carousel-pause": "e90601e9 b4554208 8f09088d",
+  "newtab-carousel-play": "ac38f324 a26c8613 470cd7bc",
   "newtab-carousel-previous": "67a46040 60381ca8 6808f029",
+  "newtab-carousel-slide": "49bfb2df a38454b2 20687b44",
   "newtab-clock-city-ae-dubai": "2ce536ad 1b5afdb1",
   "newtab-clock-city-ar-buenos-aires": "e6fde237 033b27bb",
   "newtab-clock-city-at-vienna": "34729a8f 6a76e6a6",
@@ -4132,6 +4135,9 @@
   "newtab-shortcuts-highlight-subtitle": "a4bed0bc f05141fe",
   "newtab-shortcuts-highlight-title": "6006dd2d 986ebab0",
   "newtab-shortcuts-pinned-area": "8fac234c fdf91e8f",
+  "newtab-spaces-tab-activity": "0ba6fcb3 5a5df117",
+  "newtab-spaces-tab-stories": "a97f2a5d 20f1be6a",
+  "newtab-spaces-tab-widgets": "709d1c2d 9ec659fe",
   "newtab-sports-widget-back-button": "a4aae6de bc038594",
   "newtab-sports-widget-bronze-finals": "2f04d76f 3b631ebc",
   "newtab-sports-widget-cancel": "17485595 871d661d",
@@ -14462,6 +14468,34 @@
   "Strings.ViewReportTitle": "c97f5302 8471e7e8",
   "Strings.isRTL": "3f295464 3f295464"
  },
+ "toolkit/services/aboutSyncLog.ftl": {
+  "about-sync-log-badge-error": "cec1aeec 4deec2e9",
+  "about-sync-log-badge-success": "e829c97c 490ba141",
+  "about-sync-log-clear-button": "aa2ffa93 89de395c",
+  "about-sync-log-clear-confirm-accept": "cf2ccfa7 d438d1ec",
+  "about-sync-log-clear-confirm-message": "cadac838 d3cd0355 8056db17",
+  "about-sync-log-clear-confirm-title": "12302ab3 918031c8",
+  "about-sync-log-count": "eb2d9d1f 0ef81eb9 9050c271",
+  "about-sync-log-download-button": "edab4592 3f5cdd50",
+  "about-sync-log-empty": "907952ac fd1b5637",
+  "about-sync-log-empty-filtered": "db997c17 5874f14e",
+  "about-sync-log-filter-date": "2b965170 d4cf9f8a",
+  "about-sync-log-filter-date-30days": "fa5b7fcd be133b19",
+  "about-sync-log-filter-date-7days": "9fd527ea de4598d4",
+  "about-sync-log-filter-date-all": "a45f1fc4 bce0a29a",
+  "about-sync-log-filter-date-today": "68a93550 4a67dbce",
+  "about-sync-log-filter-type": "c1cacd3d 86187d83",
+  "about-sync-log-filter-type-all": "39d0211f 6933b849",
+  "about-sync-log-filter-type-error": "6b73c9dc 9f779576",
+  "about-sync-log-filter-type-success": "75fd5ea9 7e7d4ecd",
+  "about-sync-log-open-raw": "55acb222 fbb165cd da9205fd",
+  "about-sync-log-page-header": "0b44191a cd8ece9c",
+  "about-sync-log-refresh-button": "3ede3547 6ce3904c",
+  "about-sync-log-row-size": "73e309eb 73e309eb 6399a5b7",
+  "about-sync-log-search-input": "8f6f99d2 462b58b8",
+  "about-sync-log-title": "c7f415dd 96bf7110",
+  "about-sync-log-view-error": "0f8d6ea6 6da784cf"
+ },
  "toolkit/services/accounts.ftl": {
   "account-client-name": "59a5e0ae 2c7bd476"
  },
@@ -18238,6 +18272,10 @@
   "credit-card-label-number-expiration-2": "26b94688 26b94688",
   "credit-card-label-number-name-2": "8304edd7 8304edd7",
   "credit-card-label-number-name-expiration-2": "ed4fa4d0 ed4fa4d0"
+ },
+ "toolkit/toolkit/pdfviewer/embedFallback.ftl": {
+  "pdfjs-embed-fallback-message": "2910eeba 2e50e345",
+  "pdfjs-embed-fallback-open-button": "6e3d60d0 cc2bbb89"
  },
  "toolkit/toolkit/pdfviewer/viewer.ftl": {
   "pdfjs-additional-layers": "e8071044 54e4d53f",

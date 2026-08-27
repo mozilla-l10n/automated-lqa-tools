@@ -1,22 +1,26 @@
 # Firefox (desktop + shared toolkit/dom strings) — l10n QA
 
-- **Generated:** 2026-08-26
+- **Generated:** 2026-08-27
 - **Locales tracked:** 20 (20 with recorded state)
-- **Findings:** 5,907 raised, 2,157 fixed (36%), 3,678 open
+- **Findings:** 5,923 raised, 2,162 fixed (36%), 3,689 open
 - **Closed by a person:** 16 dismissed, 15 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
 ## Read these first
 
-### Reads as a deliberate edit (1)
+### Reads as a deliberate edit (2)
 
 The translation makes the product assert something the en-US never said. Nothing here says the change was intended — that cannot be read off the text, which is exactly the problem, because a user cannot read it off either.
 
-- **`it`** `about-sync-log-empty` — `toolkit/services/aboutSyncLog.ftl`
-  - "No sync logs have been recorded" changed to state that no sync activity was recorded.
-  - Current: `Non è stata registrata alcuna attività di sincronizzazione.`
-  - Suggest: `Non è stato registrato alcun registro di sincronizzazione.`
+- **`pl`** `aiwindow-feedback-disclaimer` — `browser/browser/aiWindow.ftl`
+  - "Submitting shares your feedback and this chat" is translated without stating that the data is shared, only that it "helps".
+  - Current: `Przesłanie opinii i treści tej rozmowy pomoże { -brand-shorter-name } ulepszyć { -smart-window-brand-name }.`
+  - Suggest: `Przesłanie spowoduje udostępnienie Twojej opinii i treści tej rozmowy, aby pomóc { -brand-shorter-name } ulepszyć { -smart-window-brand-name }.`
+- **`pl`** `aiwindow-firstrun-memories-privacy-title` — `browser/browser/aiWindow.ftl`
+  - "Private by design" translated as "Domyślnie prywatne" (private by default), which asserts a different privacy claim.
+  - Current: `Domyślnie prywatne`
+  - Suggest: `Prywatne z założenia`
 
 ### Broken output — impact 1 (344)
 
@@ -79,32 +83,32 @@ The value does not render as intended: a blank string, broken markup, a variable
   - Suggest: `件のパスワードが全漏洩データから見つかりました`
 - _…and 329 more, in the per-locale reports linked below._
 
-### Wrong content — impact 2 (1412)
+### Wrong content — impact 2 (1416)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/firefox.md`.
 
 | Locale | Last run | Mode | Commit | Strings | Missing | Open | Impact 1–2 | Fixed | Dismissed | Suppressed |
 |---|---|---|---|---|---|---|---|---|---|---|
-| [cs](cs/firefox.md) | 2026-08-26 | incremental | `b82b7a34` | 18,184 | 26 | **259** | 175 | 0 | 0 | 0 |
-| [de](de/firefox.md) | 2026-08-26 | incremental | `b82b7a34` | 18,397 | 0 | **16** | 11 | 71 | 0 | 0 |
-| [en-CA](en-CA/firefox.md) | 2026-08-26 | incremental | `b82b7a34` | 18,174 | 36 | **0** | 0 | 14 | 1 | 0 |
-| [en-GB](en-GB/firefox.md) | 2026-08-26 | incremental | `b82b7a34` | 18,210 | 0 | **19** | 13 | 12 | 0 | 12 |
-| [es-AR](es-AR/firefox.md) | 2026-08-26 | incremental | `b82b7a34` | 18,180 | 30 | **307** | 177 | 138 | 0 | 0 |
-| [es-ES](es-ES/firefox.md) | 2026-08-26 | incremental | `b82b7a34` | 17,181 | 1,029 | **30** | 18 | 111 | 0 | 0 |
-| [es-MX](es-MX/firefox.md) | 2026-08-26 | incremental | `b82b7a34` | 17,843 | 367 | **21** | 6 | 205 | 0 | 0 |
-| [fr](fr/firefox.md) | 2026-08-26 | incremental | `b82b7a34` | 18,397 | 0 | **20** | 6 | 55 | 0 | 0 |
-| [fy-NL](fy-NL/firefox.md) | 2026-08-26 | incremental | `b82b7a34` | 18,176 | 34 | **505** | 138 | 334 | 4 | 0 |
-| [hu](hu/firefox.md) | 2026-08-26 | incremental | `b82b7a34` | 18,163 | 47 | **277** | 154 | 0 | 0 | 0 |
-| [id](id/firefox.md) | 2026-08-26 | incremental | `b82b7a34` | 15,504 | 2,706 | **330** | 258 | 0 | 0 | 0 |
-| [it](it/firefox.md) | 2026-08-26 | incremental | `b82b7a34` | 18,403 | 0 | **2** | 1 | 56 | 6 | 2 |
-| [ja](ja/firefox.md) | 2026-08-26 | incremental | `b82b7a34` | 18,182 | 34 | **100** | 38 | 270 | 0 | 0 |
-| [nl](nl/firefox.md) | 2026-08-26 | incremental | `b82b7a34` | 18,176 | 34 | **356** | 132 | 137 | 0 | 0 |
-| [pl](pl/firefox.md) | 2026-08-26 | incremental | `b82b7a34` | 18,112 | 98 | **65** | 47 | 166 | 0 | 0 |
-| [pt-BR](pt-BR/firefox.md) | 2026-08-26 | incremental | `b82b7a34` | 18,210 | 0 | **567** | 205 | 138 | 5 | 0 |
-| [ru](ru/firefox.md) | 2026-08-26 | incremental | `b82b7a34` | 18,176 | 34 | **596** | 317 | 174 | 0 | 0 |
-| [sl](sl/firefox.md) | 2026-08-26 | incremental | `b82b7a34` | 17,549 | 661 | **33** | 4 | 44 | 0 | 1 |
-| [tr](tr/firefox.md) | 2026-08-26 | incremental | `b82b7a34` | 18,110 | 100 | **121** | 44 | 185 | 0 | 0 |
-| [zh-CN](zh-CN/firefox.md) | 2026-08-26 | incremental | `b82b7a34` | 17,996 | 214 | **54** | 12 | 47 | 0 | 0 |
+| [cs](cs/firefox.md) | 2026-08-27 | incremental | `caafd8e1` | 18,210 | 0 | **263** | 175 | 0 | 0 | 0 |
+| [de](de/firefox.md) | 2026-08-27 | incremental | `caafd8e1` | 18,397 | 0 | **16** | 11 | 71 | 0 | 0 |
+| [en-CA](en-CA/firefox.md) | 2026-08-27 | incremental | `caafd8e1` | 18,174 | 36 | **0** | 0 | 14 | 1 | 0 |
+| [en-GB](en-GB/firefox.md) | 2026-08-27 | incremental | `caafd8e1` | 18,210 | 0 | **17** | 11 | 12 | 0 | 12 |
+| [es-AR](es-AR/firefox.md) | 2026-08-27 | incremental | `caafd8e1` | 18,180 | 30 | **306** | 176 | 139 | 0 | 0 |
+| [es-ES](es-ES/firefox.md) | 2026-08-27 | incremental | `caafd8e1` | 17,181 | 1,029 | **30** | 18 | 111 | 0 | 0 |
+| [es-MX](es-MX/firefox.md) | 2026-08-27 | incremental | `caafd8e1` | 17,843 | 367 | **21** | 6 | 205 | 0 | 0 |
+| [fr](fr/firefox.md) | 2026-08-27 | incremental | `caafd8e1` | 18,397 | 0 | **19** | 6 | 55 | 0 | 0 |
+| [fy-NL](fy-NL/firefox.md) | 2026-08-27 | incremental | `caafd8e1` | 18,176 | 34 | **505** | 138 | 334 | 4 | 0 |
+| [hu](hu/firefox.md) | 2026-08-27 | incremental | `caafd8e1` | 18,163 | 47 | **277** | 154 | 0 | 0 | 0 |
+| [id](id/firefox.md) | 2026-08-27 | incremental | `caafd8e1` | 15,504 | 2,706 | **330** | 258 | 0 | 0 | 0 |
+| [it](it/firefox.md) | 2026-08-27 | incremental | `caafd8e1` | 18,398 | 5 | **2** | 0 | 56 | 6 | 2 |
+| [ja](ja/firefox.md) | 2026-08-27 | incremental | `caafd8e1` | 18,182 | 34 | **100** | 38 | 270 | 0 | 0 |
+| [nl](nl/firefox.md) | 2026-08-27 | incremental | `caafd8e1` | 18,176 | 34 | **356** | 132 | 137 | 0 | 0 |
+| [pl](pl/firefox.md) | 2026-08-27 | incremental | `caafd8e1` | 18,210 | 0 | **74** | 54 | 170 | 0 | 0 |
+| [pt-BR](pt-BR/firefox.md) | 2026-08-27 | incremental | `caafd8e1` | 18,210 | 0 | **564** | 205 | 138 | 5 | 0 |
+| [ru](ru/firefox.md) | 2026-08-27 | incremental | `caafd8e1` | 18,210 | 0 | **601** | 318 | 174 | 0 | 0 |
+| [sl](sl/firefox.md) | 2026-08-27 | incremental | `caafd8e1` | 17,549 | 661 | **33** | 4 | 44 | 0 | 1 |
+| [tr](tr/firefox.md) | 2026-08-27 | incremental | `caafd8e1` | 18,110 | 100 | **121** | 44 | 185 | 0 | 0 |
+| [zh-CN](zh-CN/firefox.md) | 2026-08-27 | incremental | `caafd8e1` | 17,996 | 214 | **54** | 12 | 47 | 0 | 0 |
 
 **Impact 1–2** is the queue that matters: broken output and wrong content. Impact 3–4 is language polish and typography.
 

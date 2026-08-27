@@ -2,8 +2,8 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b82b7a344c63` |
+| **Generated** | 2026-08-27 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `caafd8e1597e` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
 | **Previous run** | 2026-08-25 @ `ad52f2a75880` |
 | **Mode** | incremental |
@@ -18,28 +18,23 @@ Also for fr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (3)
 
-- `pdfjs-embed-fallback-open-button` — `toolkit/toolkit/pdfviewer/embedFallback.ftl` — "Open PDF" refers to this specific PDF, but the French uses the indefinite article "un PDF".
+- `pdfjs-embed-fallback-open-button` — `toolkit/toolkit/pdfviewer/embedFallback.ftl` — "Open PDF" translated as "Ouvrir un PDF" (open some/a PDF) instead of opening this specific PDF.
     - Current: `Ouvrir un PDF`
     - Source: `Open PDF`
     - Suggest: `Ouvrir le PDF`
-    - The button opens the PDF that can’t be displayed inline; "Ouvrir un PDF" suggests choosing/opening some PDF file instead.
-- `about-sync-log-count` — `toolkit/services/aboutSyncLog.ftl` — The singular plural form reads "{ $count } de journal", which is ungrammatical.
-    - Current: `{ $count } de journal`
+    - The button opens the PDF that can’t be displayed in the embed; the indefinite article suggests a file picker for any PDF.
+- `about-sync-log-count` — `toolkit/services/aboutSyncLog.ftl` — Singular plural variant reads "{ $count } de journal" instead of "{ $count } journal".
+    - Current: `[one] { $count } de journal`
     - Source: `{$count ->} [one] { $count } log [other] { $count } logs`
-    - Suggest: `{ $count } journal`
-    - en-US is "{ $count } log"; the French singular should be "1 journal", not "1 de journal".
-- `about-sync-log-filter-date-all` — `toolkit/services/aboutSyncLog.ftl` — "All time" (a date range filter) is rendered as "Toujours" (always) instead of a time-range label.
+    - Suggest: `[one] { $count } journal`
+    - en-US is "{ $count } log"; the inserted "de" is ungrammatical in French ("1 de journal").
+- `about-sync-log-filter-date-all` — `toolkit/services/aboutSyncLog.ftl` — "All time" rendered as "Toujours" (always) instead of a time-range label.
     - Current: `label: Toujours`
     - Source: `label: All time`
     - Suggest: `label: Tout l’historique`
-    - The option filters logs over the entire period; "Toujours" means "always" and does not express the date range.
-- `about-sync-log-title` — `toolkit/services/aboutSyncLog.ftl` — Title adds a definite article not present in the English label "Sync logs".
-    - Current: `Les journaux de synchronisation`
-    - Source: `Sync logs`
-    - Suggest: `Journaux de synchronisation`
-    - en-US "Sync logs" is an article-less page title; French titles/headings in this file (e.g. "Journaux de diagnostic") omit the article.
+    - This is a date-range filter option meaning the entire period; "Toujours" means "always" and does not convey the range.
 
 ### ✅ Fixed since the last run (0)
 
@@ -120,14 +115,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (20)
+## 3. Open findings (19)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 1 |
 | 2 | Wrong content (says something other than the English) | 5 |
-| 3 | Degraded language (grammar, spelling, terminology) | 10 |
+| 3 | Degraded language (grammar, spelling, terminology) | 9 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
@@ -146,27 +141,27 @@ _Nothing reported._
 
 - `aiwindow-firstrun-default-checkbox-label` — `browser/browser/aiWindow.ftl` — brand form lower-plural renders "dans une fenêtres intelligentes" → use lower-singular (EN is singular; matches line 164).
     - Source: `Always open { -brand-product-name } in { -smart-window-brand-name }`
-- `about-sync-log-filter-date-all` — `toolkit/services/aboutSyncLog.ftl` — "All time" (a date range filter) is rendered as "Toujours" (always) instead of a time-range label.
+- `about-sync-log-filter-date-all` — `toolkit/services/aboutSyncLog.ftl` — "All time" rendered as "Toujours" (always) instead of a time-range label.
     - Current: `label: Toujours`
     - Source: `label: All time`
     - Suggest: `label: Tout l’historique`
-    - The option filters logs over the entire period; "Toujours" means "always" and does not express the date range.
+    - This is a date-range filter option meaning the entire period; "Toujours" means "always" and does not convey the range.
 - `about-glean-metrics-table-settings-timelines-vertical-line-x-offset` — `toolkit/toolkit/about/aboutGlean.ftl` — toolkit/toolkit/about/aboutGlean.ftl:133,135 — both say "axe des abscisses" but EN references the Y-axis → axe des ordonnées; line 135 is also internally contradictory ("décalage vertical … abscisses").
     - Source: `Y-axis X offset`
     - Suggest: `axe des ordonnées`
-- `pdfjs-embed-fallback-open-button` — `toolkit/toolkit/pdfviewer/embedFallback.ftl` — "Open PDF" refers to this specific PDF, but the French uses the indefinite article "un PDF".
+- `pdfjs-embed-fallback-open-button` — `toolkit/toolkit/pdfviewer/embedFallback.ftl` — "Open PDF" translated as "Ouvrir un PDF" (open some/a PDF) instead of opening this specific PDF.
     - Current: `Ouvrir un PDF`
     - Source: `Open PDF`
     - Suggest: `Ouvrir le PDF`
-    - The button opens the PDF that can’t be displayed inline; "Ouvrir un PDF" suggests choosing/opening some PDF file instead.
+    - The button opens the PDF that can’t be displayed in the embed; the indefinite article suggests a file picker for any PDF.
 
 ### C. Grammar, agreement & spelling
 
-- `about-sync-log-count` — `toolkit/services/aboutSyncLog.ftl` — The singular plural form reads "{ $count } de journal", which is ungrammatical.
-    - Current: `{ $count } de journal`
+- `about-sync-log-count` — `toolkit/services/aboutSyncLog.ftl` — Singular plural variant reads "{ $count } de journal" instead of "{ $count } journal".
+    - Current: `[one] { $count } de journal`
     - Source: `{$count ->} [one] { $count } log [other] { $count } logs`
-    - Suggest: `{ $count } journal`
-    - en-US is "{ $count } log"; the French singular should be "1 journal", not "1 de journal".
+    - Suggest: `[one] { $count } journal`
+    - en-US is "{ $count } log"; the inserted "de" is ungrammatical in French ("1 de journal").
 
 ### D. Terminology, register & consistency
 
@@ -188,11 +183,6 @@ _Nothing reported._
     - Source: `Running`
 - `serviceworker-worker-status-running` — `devtools/client/application.ftl` — serviceworker-worker-status-running vs about-debugging-worker-status-running — devtools/client/application.ftl:43 vs devtools/client/aboutdebugging.ftl:312 — "En cours d'exécution" vs "Exécution" for the same "Running" status; align.
     - Source: `Running`
-- `about-sync-log-title` — `toolkit/services/aboutSyncLog.ftl` — Title adds a definite article not present in the English label "Sync logs".
-    - Current: `Les journaux de synchronisation`
-    - Source: `Sync logs`
-    - Suggest: `Journaux de synchronisation`
-    - en-US "Sync logs" is an article-less page title; French titles/headings in this file (e.g. "Journaux de diagnostic") omit the article.
 - `about-processes-cpu-almost-idle` — `toolkit/toolkit/about/aboutProcesses.ftl` — about-processes-cpu-almost-idle (.title) — toolkit/toolkit/about/aboutProcesses.ftl:167 — "Temps CPU total" vs "Temps total de CPU" (lines 161/170); align.
     - Source: `(value): < 0.1% title: Total CPU time: { $total }{ $unit }`
     - Suggest: `.title`

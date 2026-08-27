@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b82b7a344c63` |
+| **Generated** | 2026-08-27 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `caafd8e1597e` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
 | **Previous run** | 2026-08-25 @ `ad52f2a75880` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 40 of 18,180 |
+| **Strings reviewed this run** | 41 of 18,180 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,61 +18,56 @@ Also for es-AR: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (7)
+### 🆕 New findings (6)
 
 - `preventedConsoleClear` — `devtools/client/webconsole.properties` — `preventedConsoleClear` quotes “Registros presistentes” but the string it names, `webconsole.console.settings.menu.item.enablePersistentLogs.label`, reads “Registros persistentes”
     - Current: `console.clear() se evitó debido a “Registros presistentes”`
     - Source: `console.clear() was prevented due to “Persist Logs”`
     - Suggest: `Registros persistentes`
     - In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `webext-perms-header2` — `toolkit/toolkit/global/extensions.ftl` — "Agregár" is misspelled with an incorrect accent on the infinitive.
+- `webext-perms-header2` — `toolkit/toolkit/global/extensions.ftl` — "Agregár" is misspelled; the infinitive has no accent.
     - Current: `Agregár { $extension }`
     - Source: `Add { $extension }`
     - Suggest: `Agregar { $extension }`
-    - The infinitive "agregar" carries no written accent; "Agregár" is a spelling error.
-- `serviceworker-list-aboutdebugging` — `devtools/client/application.ftl` — "domínios" is misspelled; correct Spanish is "dominios".
-    - Current: `para Service Workers de otros domínios`
+    - en-US "Add { $extension }" — the Spanish infinitive is "agregar", without a written accent.
+- `serviceworker-list-aboutdebugging` — `devtools/client/application.ftl` — "domínios" is misspelled (Portuguese form); Spanish is "dominios".
+    - Current: `de otros domínios`
     - Source: `Open <a>about:debugging</a> for Service Workers from other domains`
-    - Suggest: `para Service Workers de otros dominios`
-    - "dominios" has no accent in Spanish; "domínios" is a Portuguese-style spelling error.
-- `preventedConsoleClear` — `devtools/client/webconsole.properties` — "presistentes" is a misspelling of "persistentes".
-    - Current: `“Registros presistentes”`
-    - Source: `console.clear() was prevented due to “Persist Logs”`
-    - Suggest: `“Registros persistentes”`
-    - The en-US "Persist Logs" is rendered with a typo; the correct word is "persistentes", and it must also match the settings menu label.
-- `about-sync-log-filter-date-all` — `toolkit/services/aboutSyncLog.ftl` — "All time" (date filter) is translated as "Completo", which does not express a time range.
+    - Suggest: `de otros dominios`
+    - en-US "from other domains"; the correct Spanish spelling has no accent: "dominios".
+- `genai-prompts-quiz` — `browser/browser/genai.ftl` — Label "Quiz me" rendered as "Juguemos" ("Let's play"), losing the quiz meaning.
+    - Current: `label: Juguemos`
+    - Source: `label: Quiz me value: Please quiz me on this selection. Ask me a variety of types of questions, for example multiple choice, true or false, and short answer. Wait for my response before moving on to the next question.`
+    - Suggest: `label: Tomame una prueba`
+    - The en-US label "Quiz me" asks the AI to quiz the user; "Juguemos" means "let's play" and does not convey testing understanding, mismatching the prompt value that follows.
+- `about-sync-log-filter-date-all` — `toolkit/services/aboutSyncLog.ftl` — "All time" (date filter) translated as "Completo" instead of a time-range label.
     - Current: `label: Completo`
     - Source: `label: All time`
     - Suggest: `label: Todo el tiempo`
-    - The en-US "All time" is a date-range filter option meaning all dates; "Completo" means "complete/full" and loses that meaning.
-- `genai-prompts-quiz` — `browser/browser/genai.ftl` — The label "Quiz me" is translated as "Juguemos" ("Let's play"), losing the quiz meaning.
-    - Current: `label: Juguemos`
-    - Source: `label: Quiz me value: Please quiz me on this selection. Ask me a variety of types of questions, for example multiple choice, true or false, and short answer. Wait for my response before moving on to the next question.`
-    - Suggest: `label: Evaluarme`
-    - Per the developer comment, the prompt tests understanding of the selection; "Juguemos" says "let's play", which is not what the source says.
-- `link-preview-optin-message` — `browser/browser/genai.ftl` — "To prioritize your privacy" is rendered as "Para proteger su privacidad" ("to protect your privacy"), a stronger claim than the source.
-    - Current: `Para proteger su privacidad`
-    - Source: `{ -brand-short-name } uses AI to read the beginning of the page and generate a few key points. To prioritize your privacy, this happens on your device.`
-    - Suggest: `Para priorizar su privacidad`
-    - The en-US says the feature prioritizes privacy, not that it protects it; the change makes the product assert a stronger privacy guarantee.
+    - en-US "All time" is a date-range option meaning no date restriction; "Completo" ("complete") does not express a time range.
+- `preventedConsoleClear` — `devtools/client/webconsole.properties` — Misspelling of "persistentes" as "presistentes".
+    - Current: `Registros presistentes`
+    - Source: `console.clear() was prevented due to “Persist Logs”`
+    - Suggest: `Registros persistentes`
+    - "presistentes" is not a Spanish word; the correct spelling is "persistentes", and it must match the Persist Logs menu item label.
 
 ### ✅ Fixed since the last run (4)
 
-- `link-preview-optin-message` — `browser/browser/genai.ftl` — "To prioritize your privacy" is rendered as "Para proteger su privacidad" ("to protect your privacy"), a stronger claim than the source.
-    - Current: `Para proteger su privacidad`
+- `appmenu-nova-switch-device-promo` — `browser/browser/appmenu.ftl` — Voseo «Llevate … con vos» in the app menu, which uses usted elsewhere.
+    - Current: `¡Llevate { -brand-short-name } con vos!`
+    - Source: `message: Getting a new device soon? Take { -brand-short-name } with you!`
+    - Suggest: `¡Lleve { -brand-short-name } con usted!`
+    - Surrounding app-menu strings use usted («Administre», «Proteja y acceda a sus marcadores»).
+- `link-preview-optin-message` — `browser/browser/genai.ftl` — Adds "solo" (only), asserting exclusivity the source does not state.
+    - Current: `esto solo ocurre en su dispositivo`
     - Source: `{ -brand-short-name } uses AI to read the beginning of the page and generate a few key points. To prioritize your privacy, this happens on your device.`
-    - Suggest: `Para priorizar su privacidad`
-    - The en-US says the feature prioritizes privacy, not that it protects it; the change makes the product assert a stronger privacy guarantee.
-- `genai-prompts-quiz` — `browser/browser/genai.ftl` — The label "Quiz me" is translated as "Juguemos" ("Let's play"), losing the quiz meaning.
+    - Suggest: `esto ocurre en su dispositivo`
+    - The en-US says "this happens on your device" without "only"; the addition makes a stronger privacy claim than the source.
+- `genai-prompts-quiz` — `browser/browser/genai.ftl` — Label "Quiz me" rendered as "Juguemos" ("Let's play"), losing the quiz meaning.
     - Current: `label: Juguemos`
     - Source: `label: Quiz me value: Please quiz me on this selection. Ask me a variety of types of questions, for example multiple choice, true or false, and short answer. Wait for my response before moving on to the next question.`
-    - Suggest: `label: Evaluarme`
-    - Per the developer comment, the prompt tests understanding of the selection; "Juguemos" says "let's play", which is not what the source says.
-- `link-preview-optin-message` — `browser/browser/genai.ftl` — "To prioritize your privacy" is rendered as "Para proteger su privacidad" ("to protect your privacy"), a stronger claim than the source.
-    - Current: `Para proteger su privacidad`
-    - Source: `{ -brand-short-name } uses AI to read the beginning of the page and generate a few key points. To prioritize your privacy, this happens on your device.`
-    - Suggest: `Para priorizar su privacidad`
-    - The en-US says the feature prioritizes privacy, not that it protects it; the change makes the product assert a stronger privacy guarantee.
+    - Suggest: `label: Tomame una prueba`
+    - The en-US label "Quiz me" asks the AI to quiz the user; "Juguemos" means "let's play" and does not convey testing understanding, mismatching the prompt value that follows.
 - `preventedConsoleClear` — `devtools/client/webconsole.properties` — `preventedConsoleClear` quotes “Registros presistentes” but the string it names, `webconsole.console.settings.menu.item.enablePersistentLogs.label`, reads “Registros persistentes”
     - Current: `console.clear() se evitó debido a “Registros presistentes”`
     - Source: `console.clear() was prevented due to “Persist Logs”`
@@ -151,13 +146,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (307)
+## 3. Open findings (306)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 53 |
-| 2 | Wrong content (says something other than the English) | 124 |
+| 2 | Wrong content (says something other than the English) | 123 |
 | 3 | Degraded language (grammar, spelling, terminology) | 89 |
 | 4 | Cosmetic (typography, spacing) | 35 |
 
@@ -563,11 +558,11 @@ _Nothing reported._
     - Source: `Add a comment (comments are publicly visible)`
     - Suggest: `Agregar un comentario (los comentarios son visibles públicamente)`
     - en-US is a single label "Add a comment (comments are publicly visible)"; the target splits it into two sentences with an extra period and double space, not matching the source.
-- `about-sync-log-filter-date-all` — `toolkit/services/aboutSyncLog.ftl` — "All time" (date filter) is translated as "Completo", which does not express a time range.
+- `about-sync-log-filter-date-all` — `toolkit/services/aboutSyncLog.ftl` — "All time" (date filter) translated as "Completo" instead of a time-range label.
     - Current: `label: Completo`
     - Source: `label: All time`
     - Suggest: `label: Todo el tiempo`
-    - The en-US "All time" is a date-range filter option meaning all dates; "Completo" means "complete/full" and loses that meaning.
+    - en-US "All time" is a date-range option meaning no date restriction; "Completo" ("complete") does not express a time range.
 - `addon-detail-private-browsing-help` — `toolkit/toolkit/about/aboutAddons.ftl` — "the extension" is rendered as "el complemento" (add-on) instead of "la extensión".
     - Current: `el complemento tendrá acceso`
     - Source: `When allowed, the extension will have access to your online activities while private browsing. <a data-l10n-name="learn-more">Learn more</a>`
@@ -896,11 +891,11 @@ _Nothing reported._
     - Source: `Invalid or corrupted PDF file.`
     - Suggest: `corrupto`
     - Typo for "corrupto".
-- `serviceworker-list-aboutdebugging` — `devtools/client/application.ftl` — "domínios" is misspelled; correct Spanish is "dominios".
-    - Current: `para Service Workers de otros domínios`
+- `serviceworker-list-aboutdebugging` — `devtools/client/application.ftl` — "domínios" is misspelled (Portuguese form); Spanish is "dominios".
+    - Current: `de otros domínios`
     - Source: `Open <a>about:debugging</a> for Service Workers from other domains`
-    - Suggest: `para Service Workers de otros dominios`
-    - "dominios" has no accent in Spanish; "domínios" is a Portuguese-style spelling error.
+    - Suggest: `de otros dominios`
+    - en-US "from other domains"; the correct Spanish spelling has no accent: "dominios".
 - `networkMenu.summary.tooltip.domContentLoaded` — `devtools/client/netmonitor.properties` — DOM event name corrupted to “DOMContentLoad”
     - Current: `Momento en el que ocurrió el evento “DOMContentLoad”`
     - Source: `Time when “DOMContentLoad” event occurred`
@@ -911,11 +906,11 @@ _Nothing reported._
     - Source: `Recordings launch profiler.firefox.com in a new tab. All data is stored locally, but you can choose to upload it for sharing.`
     - Suggest: `Las grabaciones inician profiler.firefox.com en una nueva pestaña.`
     - profiler.firefox.com is a domain name and must not be altered; the string points users to a non-existent host (perftools-description-intro in the same file has it right).
-- `preventedConsoleClear` — `devtools/client/webconsole.properties` — "presistentes" is a misspelling of "persistentes".
-    - Current: `“Registros presistentes”`
+- `preventedConsoleClear` — `devtools/client/webconsole.properties` — Misspelling of "persistentes" as "presistentes".
+    - Current: `Registros presistentes`
     - Source: `console.clear() was prevented due to “Persist Logs”`
-    - Suggest: `“Registros persistentes”`
-    - The en-US "Persist Logs" is rendered with a typo; the correct word is "persistentes", and it must also match the settings menu label.
+    - Suggest: `Registros persistentes`
+    - "presistentes" is not a Spanish word; the correct spelling is "persistentes", and it must match the Persist Logs menu item label.
 - `clientSocketMisconfiguration` — `dom/chrome/appstrings.properties` — Missing accent on the interrogative “cómo”.
     - Current: `no sabe como comunicarse con el servidor`
     - Source: `The client is misconfigured and doesn’t know how to communicate with the server.`
@@ -1018,11 +1013,6 @@ _Nothing reported._
     - Source: `{ -smart-window-brand-name } is at capacity right now. Please try again later.`
     - Suggest: `está en su máxima capacidad en este momento. Pruebe de nuevo más tarde.`
     - Adjacent error headers use «Intente de nuevo», «Espere un momento», «Pruebe una red diferente».
-- `appmenu-nova-switch-device-promo` — `browser/browser/appmenu.ftl` — Voseo «Llevate … con vos» in the app menu, which uses usted elsewhere.
-    - Current: `¡Llevate { -brand-short-name } con vos!`
-    - Source: `message: Getting a new device soon? Take { -brand-short-name } with you!`
-    - Suggest: `¡Lleve { -brand-short-name } con usted!`
-    - Surrounding app-menu strings use usted («Administre», «Proteja y acceda a sus marcadores»).
 - `appmenuitem-sign-in-account` — `browser/browser/appmenu.ftl` — Tuteo «tu cuenta» next to items that use «su».
     - Current: `Ingresar a tu cuenta`
     - Source: `Sign in to your account`
@@ -1247,11 +1237,12 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (138)
+### Fixed to date (139)
 
-- `genai-prompts-quiz` — `browser/browser/genai.ftl` — fixed 2026-08-26
-- `link-preview-optin-message` — `browser/browser/genai.ftl` — fixed 2026-08-26
-- `preventedConsoleClear` — `devtools/client/webconsole.properties` — fixed 2026-08-26
+- `appmenu-nova-switch-device-promo` — `browser/browser/appmenu.ftl` — fixed 2026-08-27
+- `genai-prompts-quiz` — `browser/browser/genai.ftl` — fixed 2026-08-27
+- `link-preview-optin-message` — `browser/browser/genai.ftl` — fixed 2026-08-27
+- `preventedConsoleClear` — `devtools/client/webconsole.properties` — fixed 2026-08-27
 - `about-logins-breach-alert-date` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-25
 - `about-logins-confirm-remove-all-dialog-message2` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-25
 - `pocket-panel-saved-error-only-links` — `browser/browser/aboutPocket.ftl` — fixed 2026-08-25
@@ -1288,4 +1279,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `firefoxview-spotlight-promo-primarybutton` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-25
 - `mr2022-background-update-toast-title` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-25
 - `welcome-back-spotlight-subtitle` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-25
-- `newtab-toast-thumbs-up-or-down2` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-25

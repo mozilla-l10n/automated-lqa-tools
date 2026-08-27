@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b82b7a344c63` |
+| **Generated** | 2026-08-27 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `caafd8e1597e` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
 | **Previous run** | 2026-08-25 @ `ad52f2a75880` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 10 of 18,184 |
+| **Strings reviewed this run** | 36 of 18,210 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,28 @@ Also for cs: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (4)
 
-_No new findings._
+- `about-sync-log-page-header` — `toolkit/services/aboutSyncLog.ftl` — Misspelled "zapisované" (should be "zapisované" → correct form "zapisované" is wrong; correct is "zapisované"?).
+    - Current: `Protokoly diagnostiky zapisované synchronizací.`
+    - Source: `description: Diagnostic logs written by sync. heading: Sync logs`
+    - Suggest: `Diagnostické protokoly zapisované synchronizací.`
+    - "Protokoly diagnostiky" is an awkward calque; en-US "Diagnostic logs" is an adjective + noun, rendered idiomatically as "Diagnostické protokoly".
+- `about-sync-log-empty` — `toolkit/services/aboutSyncLog.ftl` — "logs" rendered as "záznamy" here while every other string in the same surface uses "protokoly".
+    - Current: `Nebyly zaznamenány žádné záznamy synchronizace.`
+    - Source: `No sync logs have been recorded.`
+    - Suggest: `Nebyly zaznamenány žádné protokoly synchronizace.`
+    - Inconsistent terminology within the same page: "sync logs" is "protokoly synchronizace" elsewhere (title, clear button, confirm title); "žádné záznamy" also creates the tautology "nebyly zaznamenány žádné záznamy".
+- `about-sync-log-open-raw` — `toolkit/services/aboutSyncLog.ftl` — "Open raw" translated literally as "Otevřít surový soubor".
+    - Current: `label: Otevřít surový soubor`
+    - Source: `label: Open raw`
+    - Suggest: `label: Otevřít nezpracovaný soubor`
+    - "surový" means raw as in uncooked/crude; the developer comment says the button opens the raw log file, i.e. unprocessed content, normally "nezpracovaný" in Czech software terminology.
+- `about-sync-log-empty-filtered` — `toolkit/services/aboutSyncLog.ftl` — Plural "filters" rendered as singular "filtru".
+    - Current: `Žádný protokol neodpovídá aktuálnímu filtru.`
+    - Source: `No logs match the current filters.`
+    - Suggest: `Žádný protokol neodpovídá aktuálním filtrům.`
+    - en-US "the current filters" is plural (the page has type and date filters); the Czech says only one filter.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +63,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 361 |
-| Strings | 18,184 |
-| Missing strings | 26 |
+| Files | 362 |
+| Strings | 18,210 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,15 +82,7 @@ _Nothing retired._
 
 ### Completeness
 
-**26 strings** are not translated yet, concentrated in:
-
-- `toolkit/services/aboutSyncLog.ftl` — 26
-
-**Files absent from the locale:**
-
-- `toolkit/services/aboutSyncLog.ftl`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -94,14 +105,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (259)
+## 3. Open findings (263)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 55 |
 | 2 | Wrong content (says something other than the English) | 120 |
-| 3 | Degraded language (grammar, spelling, terminology) | 56 |
+| 3 | Degraded language (grammar, spelling, terminology) | 60 |
 | 4 | Cosmetic (typography, spacing) | 23 |
 
 ### A. Functional, markup, variables & plurals
@@ -408,6 +419,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `label: Pride`
     - Suggest: `Pride`
     - "Pride" here names the LGBTQ+ Pride icon variant, used untranslated in Czech; "Hrdost" reads as the abstract quality and loses the reference, unlike the neighbouring untranslated names Retro 2004, Kit, Momo.
+- `about-sync-log-empty-filtered` — `toolkit/services/aboutSyncLog.ftl` — Plural "filters" rendered as singular "filtru".
+    - Current: `Žádný protokol neodpovídá aktuálnímu filtru.`
+    - Source: `No logs match the current filters.`
+    - Suggest: `Žádný protokol neodpovídá aktuálním filtrům.`
+    - en-US "the current filters" is plural (the page has type and date filters); the Czech says only one filter.
 - `experimental-features-cookie-samesite-none-requires-secure2-description` — `toolkit/toolkit/featuregates/features.ftl` — Dependency names the wrong SameSite value: en-US says the feature requires "Cookies: SameSite=Lax by default", Czech says SameSite=None.
     - Current: `Tato funkce vyžaduje „Cookies: SameSite=None by default“.`
     - Source: `Cookies with “SameSite=None” attribute require the secure attribute. This feature requires “Cookies: SameSite=Lax by default”.`
@@ -576,6 +592,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `There was a problem submitting your report.`
     - Suggest: `Při odesílání hlášení o pádu nastala chyba.`
     - "Pří" is not a Czech word; the preposition is "při".
+- `about-sync-log-page-header` — `toolkit/services/aboutSyncLog.ftl` — Misspelled "zapisované" (should be "zapisované" → correct form "zapisované" is wrong; correct is "zapisované"?).
+    - Current: `Protokoly diagnostiky zapisované synchronizací.`
+    - Source: `description: Diagnostic logs written by sync. heading: Sync logs`
+    - Suggest: `Diagnostické protokoly zapisované synchronizací.`
+    - "Protokoly diagnostiky" is an awkward calque; en-US "Diagnostic logs" is an adjective + noun, rendered idiomatically as "Diagnostické protokoly".
 - `private-browsing-description2` — `toolkit/toolkit/about/aboutAddons.ftl` — Comma incorrectly separates the subject from its predicate
     - Current: `Žádné nově nainstalované rozšíření, nebude ve výchozím nastavení v anonymních oknech fungovat`
     - Source: `{ -brand-short-name } is changing how extensions work in private browsing. Any new extensions you add to { -brand-short-name } won’t run by default in Private Windows. Unless you allow it in settings, the extension won’…`
@@ -934,7 +955,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Form elements should have a visible text label.`
     - Suggest: `Prvky formuláře by měly mít viditelný textový popisek.`
     - "prvky" is masculine inanimate, so the conditional participle is "měly"; the parallel Fluent string accessibility-text-label-issue-form-visible uses "by měly mít".
-- _…and 11 more; see `state/` for the full list._
+- _…and 13 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 

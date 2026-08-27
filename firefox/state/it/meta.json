@@ -3,10 +3,10 @@
  "display_name": "Firefox l10n",
  "fixed_total": 56,
  "l10n_repo": "https://github.com/mozilla-l10n/firefox-l10n",
- "l10n_sha": "b82b7a344c63",
- "last_run": "2026-08-26",
+ "l10n_sha": "caafd8e1597e",
+ "last_run": "2026-08-27",
  "locale": "it",
- "missing": 0,
+ "missing": 5,
  "mode": "incremental",
  "open": 2,
  "previous_run": "2026-08-25",
@@ -15,7 +15,7 @@
  "reviewed": 36,
  "source_repo": "https://github.com/mozilla-l10n/firefox-l10n-source",
  "source_sha": "bcb4650bbefb",
- "strings": 18403,
+ "strings": 18398,
  "suppressed": 2,
  "withdrawn_total": 0
 }
