@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-27 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `caafd8e1597e` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
-| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
+| **Generated** | 2026-08-31 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
+| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 15 of 15,504 |
+| **Strings reviewed this run** | 29 of 15,531 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 354 |
-| Strings | 15,504 |
-| Missing strings | 2,706 |
+| Strings | 15,531 |
+| Missing strings | 2,688 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 8 |
 | Files with no en-US counterpart | 0 |
@@ -63,17 +63,17 @@ _Nothing retired._
 
 ### Completeness
 
-**2,706 strings** are not translated yet, concentrated in:
+**2,688 strings** are not translated yet, concentrated in:
 
-- `browser/browser/preferences/preferences.ftl` — 425
-- `browser/browser/newtab/newtab.ftl` — 423
+- `browser/browser/preferences/preferences.ftl` — 428
+- `browser/browser/newtab/newtab.ftl` — 425
 - `browser/browser/aiWindow.ftl` — 159
 - `browser/browser/ipProtection.ftl` — 146
 - `browser/browser/newtab/onboarding.ftl` — 98
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 88
 - `browser/browser/aiWindowContent.ftl` — 80
 - `browser/browser/newtab/asrouter.ftl` — 79
-- `browser/browser/browser.ftl` — 66
+- `browser/browser/browser.ftl` — 63
 - `toolkit/toolkit/about/aboutAddons.ftl` — 61
 - `browser/browser/featureCallout.ftl` — 61
 - `browser/browser/profiles.ftl` — 56
@@ -97,10 +97,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 451, `straight-double` 134, `curly-single` 85 | **curly-double** |
+| quotes | `curly-double` 453, `straight-double` 134, `curly-single` 85 | **curly-double** |
 | apostrophe | `typographic` 95, `straight` 42 | _mixed_ |
 | ellipsis | `char` 412, `ascii` 10 | **char** |
-| dash | `em` 76, `en` 1 | **em** |
+| dash | `em` 77, `en` 1 | **em** |
 | nbsp | `total` 8, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
 ---

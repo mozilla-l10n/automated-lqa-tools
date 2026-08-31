@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-27 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `caafd8e1597e` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
-| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
+| **Generated** | 2026-08-31 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
+| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,174 |
+| **Strings reviewed this run** | 9 of 18,172 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 362 |
-| Strings | 18,174 |
-| Missing strings | 36 |
+| Strings | 18,172 |
+| Missing strings | 47 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,11 +63,16 @@ _Nothing retired._
 
 ### Completeness
 
-**36 strings** are not translated yet, concentrated in:
+**47 strings** are not translated yet, concentrated in:
 
 - `toolkit/services/aboutSyncLog.ftl` — 26
-- `browser/browser/newtab/newtab.ftl` — 8
+- `browser/browser/newtab/newtab.ftl` — 10
+- `browser/browser/sharePanel.ftl` — 3
+- `browser/browser/preferences/preferences.ftl` — 3
 - `toolkit/toolkit/pdfviewer/embedFallback.ftl` — 2
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 1
+- `browser/browser/appmenu.ftl` — 1
+- `browser/browser/preferences/formAutofill.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -78,7 +83,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 756, `curly-single` 68, `straight-double` 25 | **curly-double** |
-| apostrophe | `typographic` 1118, `straight` 4 | **typographic** |
+| apostrophe | `typographic` 1116, `straight` 4 | **typographic** |
 | ellipsis | `char` 461 | **char** |
 | dash | `em` 109, `en` 3 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |

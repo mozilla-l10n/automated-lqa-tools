@@ -8964,7 +8964,7 @@
   "file": "browser/browser/protections.ftl",
   "first_seen": "2026-08-11",
   "impact": 4,
-  "last_seen": "2026-08-27",
+  "last_seen": "2026-08-31",
   "locale": "fy-NL",
   "origin": {
    "report": "legacy",
@@ -15484,7 +15484,7 @@
   "file": "toolkit/toolkit/about/aboutRights.ftl",
   "first_seen": "2026-08-11",
   "impact": 4,
-  "last_seen": "2026-08-27",
+  "last_seen": "2026-08-31",
   "locale": "fy-NL",
   "origin": {
    "report": "legacy",
@@ -21858,6 +21858,30 @@
   "string_id": "printui-headers-footers-checkbox",
   "suggest": "fuotteksten",
   "summary": "foetteksten → fuotteksten",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "Oriïntaasje",
+  "dismissed_because": "",
+  "fid": "f887b267e7c6",
+  "file": "toolkit/toolkit/printing/printUI.ftl",
+  "first_seen": "2026-08-31",
+  "impact": 3,
+  "last_seen": "2026-08-31",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The Frisian/Dutch-style spelling uses a diaeresis on the e (Oriëntaasje); \"Oriïntaasje\" is a spelling error.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "edc65f9f",
+  "string_id": "printui-orientation-control",
+  "suggest": "Oriëntaasje",
+  "summary": "Misspelling of the Frisian word for \"Orientation\".",
   "suppressed_by": ""
  },
  {

@@ -190,7 +190,7 @@
   "file": "browser/browser/defaultBrowserNotification.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-08-27",
+  "last_seen": "2026-08-31",
   "locale": "it",
   "origin": {},
   "rationale": "In the source this string quotes “Web browser”, which is exactly the value of `desktop-entry-generic-name` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -435,6 +435,30 @@
   "string_id": "onboarding-infrequent-import-primary-button",
   "suggest": "",
   "summary": "✅ onboarding-infrequent-import-primary-button — browser/browser/newtab/onboarding.ftl:322 — now Importa in { -brand-short-name }.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "label: Fornitore di chatbot IA nella barra laterale",
+  "dismissed_because": "",
+  "fid": "3fcb364449fc",
+  "file": "browser/browser/preferences/preferences.ftl",
+  "first_seen": "2026-08-31",
+  "impact": 3,
+  "last_seen": "2026-08-31",
+  "locale": "it",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "en-US \"AI chatbot providers in sidebar\" is plural, and the accompanying description mentions choosing among multiple providers (\"diversi fornitori\").",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "735b6bd4",
+  "string_id": "preferences-ai-controls-sidebar-chatbot-group-3",
+  "suggest": "label: Fornitori di chatbot IA nella barra laterale",
+  "summary": "Label uses singular \"Fornitore\" where the source is plural \"providers\".",
   "suppressed_by": ""
  },
  {

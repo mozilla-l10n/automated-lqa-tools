@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-27 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `caafd8e1597e` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
-| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
+| **Generated** | 2026-08-31 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
+| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 157 of 18,210 |
+| **Strings reviewed this run** | 9 of 18,208 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,89 +18,13 @@ Also for pl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (13)
+### 🆕 New findings (0)
 
-- `aiwindow-firstrun-memories-privacy-title` — `browser/browser/aiWindow.ftl` — "Private by design" translated as "Domyślnie prywatne" (private by default), which asserts a different privacy claim.
-    - Current: `Domyślnie prywatne`
-    - Source: `Private by design`
-    - Suggest: `Prywatne z założenia`
-    - The en-US says the feature is private by design (architecturally), not merely private by default (a changeable setting); the Polish makes a different product claim about privacy.
-- `aiwindow-feedback-choose-any` — `browser/browser/aiWindow.ftl` — "Choose any that apply" is rendered as "Wybierz rodzaj" ("Choose a type"), losing the multiple-selection meaning.
-    - Current: `Wybierz rodzaj`
-    - Source: `Choose any that apply`
-    - Suggest: `Wybierz wszystkie pasujące odpowiedzi`
-    - The en-US invites selecting any/all applicable options; the Polish tells the user to pick a single "type".
-- `aiwindow-firstrun-memories-no-create` — `browser/browser/aiWindow.ftl` — The opening acknowledgement "Got it." is dropped from the Polish.
-    - Current: `{ -smart-window-brand-name } nie będzie tworzyć zapamiętanych treści.`
-    - Source: `Got it. { -smart-window-brand-name } won’t create memories. Update in settings anytime.`
-    - Suggest: `Rozumiemy. { -smart-window-brand-name } nie będzie tworzyć zapamiętanych treści.`
-    - en-US begins with "Got it." acknowledging the user's choice; this sentence is missing in the target.
-- `aiwindow-firstrun-default-title` — `browser/browser/aiWindow.ftl` — "Make { -smart-window-brand-name } your go-to" (an invitation to set it as the default choice) is rendered as "Use it all the time".
-    - Current: `Korzystaj z { -smart-window-brand-name } przez cały czas`
-    - Source: `Make { -smart-window-brand-name } your go-to`
-    - Suggest: `Uczyń { -smart-window-brand-name } swoim domyślnym wyborem`
-    - The en-US asks the user to make Smart Window their default/go-to option, matching the checkbox below it; "przez cały czas" changes the meaning to continuous usage.
-- `aiwindow-feedback-disclaimer` — `browser/browser/aiWindow.ftl` — "Submitting shares your feedback and this chat" is translated without stating that the data is shared, only that it "helps".
-    - Current: `Przesłanie opinii i treści tej rozmowy pomoże { -brand-shorter-name } ulepszyć { -smart-window-brand-name }.`
-    - Source: `Submitting shares your feedback and this chat to help { -brand-shorter-name } improve { -smart-window-brand-name }. Your other chats stay private. <a data-l10n-name="learn-more">Learn more</a>`
-    - Suggest: `Przesłanie spowoduje udostępnienie Twojej opinii i treści tej rozmowy, aby pomóc { -brand-shorter-name } ulepszyć { -smart-window-brand-name }.`
-    - The en-US explicitly discloses that submitting shares the feedback and chat; the Polish omits the sharing disclosure, weakening a privacy statement.
-- `experimental-features-contextual-password-manager-description` — `toolkit/toolkit/firefoxlabs/features.ftl` — Typo: „prostu” instead of „prosto”.
-    - Current: `Umożliwia dostęp do haseł prostu z panelu bocznego.`
-    - Source: `Access your passwords right from the sidebar. No more searching around or resetting passwords when you’re trying to sign in. To use this feature, select passwords in the sidebar. Then go to your general settings and und…`
-    - Suggest: `Umożliwia dostęp do haseł prosto z panelu bocznego.`
-    - The en-US „right from the sidebar” should be „prosto z panelu bocznego”; „prostu” is a misspelling.
-- `elevation-more-elevated` — `toolkit/toolkit/updates/elevation.ftl` — The three options are mistranslated into a garbled instruction instead of offering restart now, continue working and restart later, or decline.
-    - Current: `Uruchom { -brand-short-name } ponownie teraz, kontynuuj pracę, uruchamiając ponownie później lub odrzuć tę aktualizację.`
-    - Source: `This update requires administrator privileges. The update will be installed the next time { -brand-short-name } starts. You can restart { -brand-short-name } now, continue working and restart later, or decline this upda…`
-    - Suggest: `Można uruchomić { -brand-short-name } ponownie teraz, kontynuować pracę i uruchomić ponownie później lub odrzucić tę aktualizację.`
-    - en-US says „You can restart … now, continue working and restart later, or decline this update” — a statement of three choices, not an imperative sequence; „kontynuuj pracę, uruchamiając ponownie później” changes the meaning.
-- `webext-perms-update-text` — `toolkit/toolkit/global/extensions.ftl` — „This extension will have permission to:” rendered as „wymaga następujących uprawnień” (requires), changing the statement of granted permissions.
-    - Current: `To rozszerzenie wymaga następujących uprawnień:`
-    - Source: `{ $extension } has been updated. You must approve new permissions before the updated version will install. Choosing “Cancel” will maintain your current extension version. This extension will have permission to:`
-    - Suggest: `To rozszerzenie będzie mieć następujące uprawnienia:`
-    - The source states the extension will have these permissions, not that it requires them.
-- `smartwindow-onboarding-title` — `browser/browser/newtab/onboarding.ftl` — Brand name used without required grammatical-case parameter, and meaning shifted.
-    - Current: `Korzystaj z { -smart-window-brand-name } przez cały czas`
-    - Source: `Make { -smart-window-brand-name } your go-to`
-    - Suggest: `Korzystaj z { -smart-window-brand-name(case: "gen") } przez cały czas`
-    - Polish „Korzystaj z…” requires the genitive form of the brand term; the locale convention is to pass grammatical-case parameters to brand terms.
-- `crashed-auto-submit-checkbox-2` — `browser/browser/aboutTabCrashed.ftl` — The Polish drops the "Update preferences" part and turns the checkbox label into a command rather than a statement about changing settings.
-    - Current: `Od teraz automatycznie wysyłaj zgłoszenia awarii { -brand-short-name }`
-    - Source: `Update preferences to automatically submit reports when { -brand-short-name } crashes`
-    - Suggest: `Zmień ustawienia, aby automatycznie wysyłać zgłoszenia awarii { -brand-short-name }`
-    - en-US says "Update preferences to automatically submit reports when { -brand-short-name } crashes"; the Polish omits that preferences will be changed.
-- `preferences-etp-level-warning-message` — `browser/browser/preferences/preferences.ftl` — "Fix site issue" is rendered as a settings name "Naprawianie problemów ze stronami" with the added word "ustawień", though the source refers to a per-site action button.
-    - Current: `Spróbuj użyć ustawień „Naprawianie problemów ze stronami”`
-    - Source: `heading: Heads up! Some sites may not work as expected. message: Some sites build trackers into their features or content. When { -brand-short-name } blocks them, the site looks broken. Try using “Fix site issue” or tur…`
-    - Suggest: `Spróbuj użyć opcji „Napraw problem z witryną”`
-    - The en-US refers to the "Fix site issue" action for the current site, not to a preferences pane; adding "ustawień" and pluralizing to "stronami" changes the referenced UI element.
-- `fxa-menu-sync-description` — `browser/browser/sync.ftl` — "Access your web anywhere" is mistranslated as "Use your network wherever you are".
-    - Current: `Korzystaj ze swojej sieci, gdziekolwiek jesteś`
-    - Source: `Access your web anywhere`
-    - Suggest: `Miej dostęp do swojego Internetu, gdziekolwiek jesteś`
-    - "your web" here means the user's browsing data/web experience, not a "sieć" (network); "sieć" suggests a local network.
-- `inactive-css-not-display-block-on-floated` — `devtools/client/tooltips.ftl` — "the element is floated" is rendered as "element is of type floated", implying a type rather than a state.
-    - Current: `ponieważ element jest typu <strong>floated</strong>`
-    - Source: `The <strong>display</strong> value has been changed by the engine to <strong>block</strong> because the element is <strong>floated</strong>.`
-    - Suggest: `ponieważ element jest <strong>opływany</strong> (floated)`
-    - en-US states the element is floated (a layout state), not that it has a type named "floated".
+_No new findings._
 
-### ✅ Fixed since the last run (4)
+### ✅ Fixed since the last run (0)
 
-- `media-count` — `browser/browser/pageInfo.ftl` — .label = "Ilość" for a count of discrete items; the locale uses "Liczba" elsewhere (processes-count, place-database-stats-count, "Liczba wizyt" in places.ftl). → "Liczba".
-    - Source: `label: Count`
-    - Suggest: `"Liczba".`
-- `inactive-css-not-display-block-on-floated` — `devtools/client/tooltips.ftl` — "element to floated" is a word-for-word calque and not grammatical Polish ("floated" is an English adjective here, not a CSS keyword). → "…ponieważ element jest przestawiony (float)."
-    - Current: `floated`
-    - Source: `The <strong>display</strong> value has been changed by the engine to <strong>block</strong> because the element is <strong>floated</strong>.`
-    - Suggest: `float`
-- `whypaused-assert` — `devtools/shared/debugger-paused-reasons.ftl` — "Wstrzymane na warunku" for "Paused on assertion"; warunek is a different debugger concept already used by whypaused-breakpoint-condition-thrown. → "Wstrzymane na asercji".
-    - Source: `Paused on assertion`
-    - Suggest: `"Wstrzymane na asercji".`
-- `network-connection-status-looked-up` — `netwerk/netwerk/necko.ftl` — breaks the Looking up / Looked up pair (rendered "Ustalanie adresu serwera" / "Odnaleziono"). → "Ustalono adres serwera { $host }…".
-    - Source: `Looked up { $host }…`
-    - Suggest: `"Ustalono adres serwera { $host }…".`
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -121,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 362 |
-| Strings | 18,210 |
-| Missing strings | 0 |
+| Strings | 18,208 |
+| Missing strings | 11 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -139,7 +63,16 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**11 strings** are not translated yet, concentrated in:
+
+- `browser/browser/sharePanel.ftl` — 3
+- `browser/browser/preferences/preferences.ftl` — 3
+- `browser/browser/newtab/newtab.ftl` — 2
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 1
+- `browser/browser/appmenu.ftl` — 1
+- `browser/browser/preferences/formAutofill.ftl` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -151,7 +84,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | apostrophe | `straight` 1 | **straight** |
 | ellipsis | `char` 468 | **char** |
 | dash | `em` 169, `en` 14 | **em** |
-| nbsp | `total` 5507, `narrow` 3, `before-punctuation` 49, `space-before-punctuation` 21 | **total** |
+| nbsp | `total` 5505, `narrow` 3, `before-punctuation` 49, `space-before-punctuation` 21 | **total** |
 | register | `informal` 80 | **informal** |
 
 ---

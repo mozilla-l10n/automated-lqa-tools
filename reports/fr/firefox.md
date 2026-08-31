@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-27 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `caafd8e1597e` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
-| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
+| **Generated** | 2026-08-31 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
+| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 36 of 18,397 |
+| **Strings reviewed this run** | 29 of 18,406 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -20,11 +20,24 @@ Also for fr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ### 🆕 New findings (3)
 
-- `pdfjs-embed-fallback-open-button` — `toolkit/toolkit/pdfviewer/embedFallback.ftl` — "Open PDF" translated as "Ouvrir un PDF" (open some/a PDF) instead of opening this specific PDF.
-    - Current: `Ouvrir un PDF`
-    - Source: `Open PDF`
-    - Suggest: `Ouvrir le PDF`
-    - The button opens the PDF that can’t be displayed in the embed; the indefinite article suggests a file picker for any PDF.
+- `about-sync-log-count` — `toolkit/services/aboutSyncLog.ftl` — "log"/"logs" translated as "entrée(s)" (entries) instead of "journal/journaux", inconsistent with the rest of the file.
+    - Current: `[one] { $count } entrée [other] { $count } entrées`
+    - Source: `{$count ->} [one] { $count } log [other] { $count } logs`
+    - Suggest: `[one] { $count } journal [other] { $count } journaux`
+    - The en-US counts logs (files), and the surrounding strings render "logs" as "journaux"; "entrées" means log entries, a different unit.
+- `preferences-ai-controls-sidebar-chatbot-group-3` — `browser/browser/preferences/preferences.ftl` — "Keep a chatbot in view" rendered as "Gardez un œil sur un chatbot" (keep an eye on a chatbot), reversing who watches whom.
+    - Current: `Gardez un œil sur un chatbot pendant votre navigation.`
+    - Source: `description: Keep a chatbot in view as you browse. Choose from multiple providers and switch anytime. label: AI chatbot providers in sidebar`
+    - Suggest: `Gardez un chatbot sous les yeux pendant votre navigation.`
+    - The en-US means the chatbot stays visible while browsing, not that the user should monitor the chatbot.
+- `tls-key-logging-notice-nav` — `browser/browser/preferences/preferences.ftl` — "may see your encrypted traffic" translated as "pourrait accéder à" (could access), altering the claim.
+    - Current: `pourrait accéder à votre trafic chiffré`
+    - Source: `label: An app or service may see your encrypted traffic.`
+    - Suggest: `pourrait voir votre trafic chiffré`
+    - en-US says an app or service may see the traffic; "accéder à" asserts access rather than visibility.
+
+### ✅ Fixed since the last run (3)
+
 - `about-sync-log-count` — `toolkit/services/aboutSyncLog.ftl` — Singular plural variant reads "{ $count } de journal" instead of "{ $count } journal".
     - Current: `[one] { $count } de journal`
     - Source: `{$count ->} [one] { $count } log [other] { $count } logs`
@@ -35,10 +48,11 @@ Also for fr: [android](android.md) · [firefox_ios](firefox_ios.md)
     - Source: `label: All time`
     - Suggest: `label: Tout l’historique`
     - This is a date-range filter option meaning the entire period; "Toujours" means "always" and does not convey the range.
-
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
+- `pdfjs-embed-fallback-open-button` — `toolkit/toolkit/pdfviewer/embedFallback.ftl` — "Open PDF" translated as "Ouvrir un PDF" (open some/a PDF) instead of opening this specific PDF.
+    - Current: `Ouvrir un PDF`
+    - Source: `Open PDF`
+    - Suggest: `Ouvrir le PDF`
+    - The button opens the PDF that can’t be displayed in the embed; the indefinite article suggests a file picker for any PDF.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -59,7 +73,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 372 |
-| Strings | 18,397 |
+| Strings | 18,406 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -101,11 +115,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 1132, `straight-double` 31, `curly-double` 2, `curly-single` 1 | **guillemet** |
-| apostrophe | `typographic` 5640, `straight` 10 | **typographic** |
-| ellipsis | `char` 472 | **char** |
+| apostrophe | `typographic` 5641, `straight` 10 | **typographic** |
+| ellipsis | `char` 475 | **char** |
 | dash | `em` 68, `en` 8 | **em** |
-| nbsp | `total` 4454, `before-punctuation` 2000 | _mixed_ |
-| register | `formal` 3193 | **formal** |
+| nbsp | `total` 4450, `before-punctuation` 2000 | _mixed_ |
+| register | `formal` 3194 | **formal** |
 
 ---
 
@@ -121,8 +135,8 @@ _Nothing reported._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 1 |
-| 2 | Wrong content (says something other than the English) | 5 |
-| 3 | Degraded language (grammar, spelling, terminology) | 9 |
+| 2 | Wrong content (says something other than the English) | 6 |
+| 3 | Degraded language (grammar, spelling, terminology) | 8 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
@@ -141,27 +155,28 @@ _Nothing reported._
 
 - `aiwindow-firstrun-default-checkbox-label` — `browser/browser/aiWindow.ftl` — brand form lower-plural renders "dans une fenêtres intelligentes" → use lower-singular (EN is singular; matches line 164).
     - Source: `Always open { -brand-product-name } in { -smart-window-brand-name }`
-- `about-sync-log-filter-date-all` — `toolkit/services/aboutSyncLog.ftl` — "All time" rendered as "Toujours" (always) instead of a time-range label.
-    - Current: `label: Toujours`
-    - Source: `label: All time`
-    - Suggest: `label: Tout l’historique`
-    - This is a date-range filter option meaning the entire period; "Toujours" means "always" and does not convey the range.
+- `preferences-ai-controls-sidebar-chatbot-group-3` — `browser/browser/preferences/preferences.ftl` — "Keep a chatbot in view" rendered as "Gardez un œil sur un chatbot" (keep an eye on a chatbot), reversing who watches whom.
+    - Current: `Gardez un œil sur un chatbot pendant votre navigation.`
+    - Source: `description: Keep a chatbot in view as you browse. Choose from multiple providers and switch anytime. label: AI chatbot providers in sidebar`
+    - Suggest: `Gardez un chatbot sous les yeux pendant votre navigation.`
+    - The en-US means the chatbot stays visible while browsing, not that the user should monitor the chatbot.
+- `tls-key-logging-notice-nav` — `browser/browser/preferences/preferences.ftl` — "may see your encrypted traffic" translated as "pourrait accéder à" (could access), altering the claim.
+    - Current: `pourrait accéder à votre trafic chiffré`
+    - Source: `label: An app or service may see your encrypted traffic.`
+    - Suggest: `pourrait voir votre trafic chiffré`
+    - en-US says an app or service may see the traffic; "accéder à" asserts access rather than visibility.
+- `about-sync-log-count` — `toolkit/services/aboutSyncLog.ftl` — "log"/"logs" translated as "entrée(s)" (entries) instead of "journal/journaux", inconsistent with the rest of the file.
+    - Current: `[one] { $count } entrée [other] { $count } entrées`
+    - Source: `{$count ->} [one] { $count } log [other] { $count } logs`
+    - Suggest: `[one] { $count } journal [other] { $count } journaux`
+    - The en-US counts logs (files), and the surrounding strings render "logs" as "journaux"; "entrées" means log entries, a different unit.
 - `about-glean-metrics-table-settings-timelines-vertical-line-x-offset` — `toolkit/toolkit/about/aboutGlean.ftl` — toolkit/toolkit/about/aboutGlean.ftl:133,135 — both say "axe des abscisses" but EN references the Y-axis → axe des ordonnées; line 135 is also internally contradictory ("décalage vertical … abscisses").
     - Source: `Y-axis X offset`
     - Suggest: `axe des ordonnées`
-- `pdfjs-embed-fallback-open-button` — `toolkit/toolkit/pdfviewer/embedFallback.ftl` — "Open PDF" translated as "Ouvrir un PDF" (open some/a PDF) instead of opening this specific PDF.
-    - Current: `Ouvrir un PDF`
-    - Source: `Open PDF`
-    - Suggest: `Ouvrir le PDF`
-    - The button opens the PDF that can’t be displayed in the embed; the indefinite article suggests a file picker for any PDF.
 
 ### C. Grammar, agreement & spelling
 
-- `about-sync-log-count` — `toolkit/services/aboutSyncLog.ftl` — Singular plural variant reads "{ $count } de journal" instead of "{ $count } journal".
-    - Current: `[one] { $count } de journal`
-    - Source: `{$count ->} [one] { $count } log [other] { $count } logs`
-    - Suggest: `[one] { $count } journal`
-    - en-US is "{ $count } log"; the inserted "de" is ungrammatical in French ("1 de journal").
+_Nothing in this category._
 
 ### D. Terminology, register & consistency
 
@@ -191,7 +206,7 @@ _Nothing reported._
 
 - `felt-error-warning-download-attempt-failed-contact-admin` — `browser/browser/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
     - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
-    - The tree uses ’ 5640 times against 10 straight.
+    - The tree uses ’ 5641 times against 10 straight.
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `L’évènement « key » n’est pas disponible dans GTK2 : key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
@@ -202,7 +217,7 @@ _Nothing reported._
     - The locale's quote convention is `guillemet` (1132 occurrences).
 - `felt-error-warning-download-attempt-failed-contact-admin` — `toolkit/toolkit/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
     - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
-    - The tree uses ’ 5640 times against 10 straight.
+    - The tree uses ’ 5641 times against 10 straight.
 
 ---
 
@@ -224,8 +239,11 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (55)
+### Fixed to date (58)
 
+- `about-sync-log-count` — `toolkit/services/aboutSyncLog.ftl` — fixed 2026-08-31
+- `about-sync-log-filter-date-all` — `toolkit/services/aboutSyncLog.ftl` — fixed 2026-08-31
+- `pdfjs-embed-fallback-open-button` — `toolkit/toolkit/pdfviewer/embedFallback.ftl` — fixed 2026-08-31
 - `browser-main-window-window-titles` — `browser/browser/browser.ftl` — fixed 2026-08-24
 - `contextual-manager-passwords-breached-origin-heading-and-message` — `browser/browser/contextual-manager.ftl` — fixed 2026-08-24
 - `contextual-manager-passwords-remove-all-title` — `browser/browser/contextual-manager.ftl` — fixed 2026-08-24
@@ -263,6 +281,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `inactive-css-not-block` — `devtools/client/tooltips.ftl` — fixed 2026-07-26
 - `xslt-transform-error` — `dom/dom/xslt.ftl` — fixed 2026-07-26
 - `pk11-bad-password` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-07-26
-- `change-password-token` — `security/manager/security/pippki/pippki.ftl` — fixed 2026-07-26
-- `about-glean-category-adhoc-testing` — `toolkit/toolkit/about/aboutGlean.ftl` — fixed 2026-07-26
-- `about-networking-dns-domain` — `toolkit/toolkit/about/aboutNetworking.ftl` — fixed 2026-07-26

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-27 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `caafd8e1597e` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
-| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
+| **Generated** | 2026-08-31 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
+| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 18,110 |
+| **Strings reviewed this run** | 53 of 18,151 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,23 @@ Also for tr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `newtab-spaces-tab-widgets` — `browser/browser/newtab/newtab.ftl` — "Widgets" rendered as "Araçlar" (tools) instead of the established Turkish term for widgets.
+    - Current: `Araçlar`
+    - Source: `Widgets`
+    - Suggest: `Widget’lar`
+    - en-US "Widgets" refers to UI widgets; "Araçlar" means "Tools" and is used elsewhere for Tools menus, causing terminology confusion.
+- `about-sync-log-view-error` — `toolkit/services/aboutSyncLog.ftl` — Past-tense failure statement rendered as present/ongoing tense.
+    - Current: `Bu günlük dosyası okunamıyor.`
+    - Source: `Could not read this log file.`
+    - Suggest: `Bu günlük dosyası okunamadı.`
+    - en-US "Could not read this log file." reports a completed failure; the Turkish says "cannot be read" (ongoing).
+- `inspector-emulation-panel-reduced-motion-no-preference` — `devtools/client/inspector.ftl` — The aria-label says "do not specify any preference" instead of "Enable no preference for reduced motion emulation", dropping the "enable" action.
+    - Current: `Daha az hareket öykünümü için herhangi bir tercih belirtme`
+    - Source: `(value): No preference aria-label: Enable no preference for reduced motion emulation`
+    - Suggest: `Azaltılmış hareket öykünümü için “tercih yok” seçeneğini etkinleştir`
+    - en-US is "Enable no preference for reduced motion emulation"; the Turkish renders it as a negative imperative ("do not specify a preference") and omits "Enable". It also uses "Daha az hareket" whereas the sibling strings consistently use "Azaltılmış hareket".
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +58,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 360 |
-| Strings | 18,110 |
-| Missing strings | 100 |
+| Files | 362 |
+| Strings | 18,151 |
+| Missing strings | 68 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 2 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,21 +77,15 @@ _Nothing retired._
 
 ### Completeness
 
-**100 strings** are not translated yet, concentrated in:
+**68 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 41
-- `toolkit/services/aboutSyncLog.ftl` — 26
+- `browser/browser/newtab/newtab.ftl` — 38
 - `toolkit/toolkit/about/url-classifier.ftl` — 10
 - `browser/browser/ipProtection.ftl` — 9
 - `browser/browser/firefoxView.ftl` — 5
-- `browser/browser/newtab/onboarding.ftl` — 4
-- `devtools/client/inspector.ftl` — 3
-- `toolkit/toolkit/pdfviewer/embedFallback.ftl` — 2
-
-**Files absent from the locale:**
-
-- `toolkit/services/aboutSyncLog.ftl`
-- `toolkit/toolkit/pdfviewer/embedFallback.ftl`
+- `browser/browser/sharePanel.ftl` — 3
+- `browser/browser/preferences/preferences.ftl` — 2
+- `browser/browser/preferences/formAutofill.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -87,8 +95,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 675, `curly-single` 166, `straight-double` 29 | **curly-double** |
-| apostrophe | `typographic` 963, `straight` 50 | **typographic** |
+| quotes | `curly-double` 676, `curly-single` 166, `straight-double` 29 | **curly-double** |
+| apostrophe | `typographic` 966, `straight` 50 | **typographic** |
 | ellipsis | `char` 460 | **char** |
 | dash | `em` 72, `en` 2 | **em** |
 | nbsp | `total` 9, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
@@ -103,14 +111,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (121)
+## 3. Open findings (124)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 4 |
-| 2 | Wrong content (says something other than the English) | 40 |
-| 3 | Degraded language (grammar, spelling, terminology) | 62 |
+| 2 | Wrong content (says something other than the English) | 41 |
+| 3 | Degraded language (grammar, spelling, terminology) | 64 |
 | 4 | Cosmetic (typography, spacing) | 15 |
 
 ### A. Functional, markup, variables & plurals
@@ -192,11 +200,21 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `accesskey: d label: Tabs sharing devices`
     - Suggest: `Cihaz paylaşan sekmeler`
     - The en-US means tabs that are sharing devices (camera/microphone); the Turkish says devices sharing tabs.
+- `inspector-emulation-panel-reduced-motion-no-preference` — `devtools/client/inspector.ftl` — The aria-label says "do not specify any preference" instead of "Enable no preference for reduced motion emulation", dropping the "enable" action.
+    - Current: `Daha az hareket öykünümü için herhangi bir tercih belirtme`
+    - Source: `(value): No preference aria-label: Enable no preference for reduced motion emulation`
+    - Suggest: `Azaltılmış hareket öykünümü için “tercih yok” seçeneğini etkinleştir`
+    - en-US is "Enable no preference for reduced motion emulation"; the Turkish renders it as a negative imperative ("do not specify a preference") and omits "Enable". It also uses "Daha az hareket" whereas the sibling strings consistently use "Azaltılmış hareket".
 - `exception-mgr-supplemental-warning` — `security/manager/security/certificates/certManager.ftl` — "Legitimate" dropped; the whole point of the warning is that legitimate sites never ask this.
     - Source: `Legitimate banks, stores, and other public sites will not ask you to do this.`
 - `devmgr-button-unload` — `security/manager/security/certificates/deviceManager.ftl` — "Boşalt" (empty/pour out) → "Kaldır" (en "Unload" a PKCS#11 module).
     - Source: `accesskey: U label: Unload`
     - Suggest: `"Kaldır"`
+- `about-sync-log-view-error` — `toolkit/services/aboutSyncLog.ftl` — Past-tense failure statement rendered as present/ongoing tense.
+    - Current: `Bu günlük dosyası okunamıyor.`
+    - Source: `Could not read this log file.`
+    - Suggest: `Bu günlük dosyası okunamadı.`
+    - en-US "Could not read this log file." reports a completed failure; the Turkish says "cannot be read" (ongoing).
 - `find-more-themes-promo` — `toolkit/toolkit/about/aboutAddons.ftl` — The message reverses the relation: source says pick a style that makes Firefox feel like yours, Turkish says pick the Firefox style that suits your taste.
     - Current: `Tarzınıza uygun { -brand-product-name } stilini seçin.`
     - Source: `heading: Find more fresh looks message: Choose a style that makes { -brand-product-name } feel like yours.`
@@ -316,6 +334,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Learn more`
     - Suggest: `Daha fazla bilgi alın`
     - The locale convention is formal siz; informal singular imperative violates the established register.
+- `newtab-spaces-tab-widgets` — `browser/browser/newtab/newtab.ftl` — "Widgets" rendered as "Araçlar" (tools) instead of the established Turkish term for widgets.
+    - Current: `Araçlar`
+    - Source: `Widgets`
+    - Suggest: `Widget’lar`
+    - en-US "Widgets" refers to UI widgets; "Araçlar" means "Tools" and is used elsewhere for Tools menus, causing terminology confusion.
 - `newtab-sports-widget-match-aria-label-upcoming-suspended` — `browser/browser/newtab/newtab.ftl` — "ara verildi" vs the status string newtab-sports-widget-suspended "Askıya alındı".
     - Source: `aria-label: { $homeTeam } vs. { $awayTeam }, suspended`
 - `desktop-to-mobile-subtitle` — `browser/browser/newtab/onboarding.ftl` — `desktop-to-mobile-subtitle` quotes “Mobil cihazla eşitle” but the string it names, `sync-to-mobile-button-label`, reads “Mobil cihazla eşitleyin”

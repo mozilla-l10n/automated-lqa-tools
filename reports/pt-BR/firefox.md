@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-27 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `caafd8e1597e` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
-| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
+| **Generated** | 2026-08-31 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
+| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 36 of 18,210 |
+| **Strings reviewed this run** | 14 of 18,213 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,10 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `about-private-browsing-nova-info-subheader` — `browser/browser/aboutPrivateBrowsing.ftl` — about-private-browsing-nova-info-subheader, -subheader2 — aboutPrivateBrowsing.ftl — mixed-gender subject "pesquisas e acessos" → masculine: serão excluídas → serão excluídos
+    - Suggest: `serão excluídas`
 
 ---
 
@@ -45,8 +46,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 362 |
-| Strings | 18,210 |
-| Missing strings | 0 |
+| Strings | 18,213 |
+| Missing strings | 6 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,7 +64,13 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**6 strings** are not translated yet, concentrated in:
+
+- `browser/browser/sharePanel.ftl` — 3
+- `browser/browser/preferences/preferences.ftl` — 2
+- `browser/browser/preferences/formAutofill.ftl` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -76,7 +83,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | ellipsis | `char` 455, `ascii` 3 | **char** |
 | dash | `em` 78, `en` 1 | **em** |
 | nbsp | `total` 13, `narrow` 11, `before-punctuation` 5, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 1735 | **informal** |
+| register | `informal` 1733 | **informal** |
 
 ---
 
@@ -87,14 +94,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (564)
+## 3. Open findings (563)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 12 |
 | 2 | Wrong content (says something other than the English) | 193 |
-| 3 | Degraded language (grammar, spelling, terminology) | 288 |
+| 3 | Degraded language (grammar, spelling, terminology) | 287 |
 | 4 | Cosmetic (typography, spacing) | 71 |
 
 ### A. Functional, markup, variables & plurals
@@ -375,9 +382,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `Ativa`
     - Source: `title: Active`
     - Suggest: `Ativas`
-- `about-private-browsing-nova-info-subheader` — `browser/browser/aboutPrivateBrowsing.ftl` — about-private-browsing-nova-info-subheader, -subheader2 — aboutPrivateBrowsing.ftl — mixed-gender subject "pesquisas e acessos" → masculine: serão excluídas → serão excluídos
-    - Source: `We’ll erase every search and sign-in when you close this window. { -brand-short-name }’s built-in protections are on here too, like blocking trackers.`
-    - Suggest: `serão excluídas`
 - `crashed-report-sent` — `browser/browser/aboutTabCrashed.ftl` — Relato do falha → Relato da falha
     - Current: `Relato do falha`
     - Source: `Crash report already submitted; thank you for helping make { -brand-short-name } better!`
@@ -583,7 +587,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `A extensão pode ler e alterar dados`
     - Source: `label: Extension Can Read and Change Data:`
     - Suggest: `…dados:`
-- _…and 106 more; see `state/` for the full list._
+- `policy-Bookmarks` — `browser/browser/policies/policies-descriptions.ftl` — ou uma pasta especificada dentro deles → ou em uma pasta especificada dentro deles
+    - Current: `ou uma pasta especificada dentro deles`
+    - Source: `Create bookmarks in the Bookmarks toolbar, Bookmarks menu, or a specified folder inside them.`
+    - Suggest: `ou em uma pasta especificada dentro deles`
+- _…and 105 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 

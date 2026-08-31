@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-27 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `caafd8e1597e` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
-| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
+| **Generated** | 2026-08-31 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
+| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 18,176 |
+| **Strings reviewed this run** | 9 of 18,174 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for fy-NL: [android](android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `printui-orientation-control` — `toolkit/toolkit/printing/printUI.ftl` — Misspelling of the Frisian word for "Orientation".
+    - Current: `Oriïntaasje`
+    - Source: `aria-label: Orientation`
+    - Suggest: `Oriëntaasje`
+    - The Frisian/Dutch-style spelling uses a diaeresis on the e (Oriëntaasje); "Oriïntaasje" is a spelling error.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,176 |
-| Missing strings | 34 |
+| Strings | 18,174 |
+| Missing strings | 45 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 2 |
 | Files with no en-US counterpart | 0 |
@@ -63,11 +67,16 @@ _Nothing retired._
 
 ### Completeness
 
-**34 strings** are not translated yet, concentrated in:
+**45 strings** are not translated yet, concentrated in:
 
 - `toolkit/services/aboutSyncLog.ftl` — 26
-- `browser/browser/newtab/newtab.ftl` — 6
+- `browser/browser/newtab/newtab.ftl` — 8
+- `browser/browser/sharePanel.ftl` — 3
+- `browser/browser/preferences/preferences.ftl` — 3
 - `toolkit/toolkit/pdfviewer/embedFallback.ftl` — 2
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 1
+- `browser/browser/appmenu.ftl` — 1
+- `browser/browser/preferences/formAutofill.ftl` — 1
 
 **Files absent from the locale:**
 
@@ -96,14 +105,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (505)
+## 3. Open findings (506)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 13 |
 | 2 | Wrong content (says something other than the English) | 125 |
-| 3 | Degraded language (grammar, spelling, terminology) | 256 |
+| 3 | Degraded language (grammar, spelling, terminology) | 257 |
 | 4 | Cosmetic (typography, spacing) | 111 |
 
 ### A. Functional, markup, variables & plurals
@@ -617,7 +626,7 @@ _Nothing reported._
     - Current: `sybalkeynstellingen`
     - Source: `Switch it up whenever you want in the sidebar settings.`
     - Suggest: `sidebalkeynstellingen`
-- _…and 179 more; see `state/` for the full list._
+- _…and 180 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 

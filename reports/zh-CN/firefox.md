@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-27 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `caafd8e1597e` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
-| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
+| **Generated** | 2026-08-31 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
+| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 19 of 17,996 |
+| **Strings reviewed this run** | 3 of 17,994 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 359 |
-| Strings | 17,996 |
-| Missing strings | 214 |
+| Strings | 17,994 |
+| Missing strings | 225 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 3 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +63,20 @@ _Nothing retired._
 
 ### Completeness
 
-**214 strings** are not translated yet, concentrated in:
+**225 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 43
+- `browser/browser/newtab/newtab.ftl` — 45
 - `toolkit/services/aboutSyncLog.ftl` — 26
 - `devtools/client/toolbox-options.ftl` — 18
+- `browser/browser/sharePanel.ftl` — 17
 - `toolkit/toolkit/about/aboutNetworking.ftl` — 15
-- `browser/browser/sharePanel.ftl` — 14
 - `toolkit/toolkit/about/url-classifier.ftl` — 12
 - `toolkit/toolkit/neterror/netError.ftl` — 12
 - `dom/chrome/dom/dom.properties` — 9
+- `browser/browser/preferences/preferences.ftl` — 8
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 7
 - `browser/browser/preferences/containers.ftl` — 7
 - `browser/browser/ipProtection.ftl` — 6
-- `browser/browser/sidebar.ftl` — 5
 
 **Files absent from the locale:**
 
@@ -96,8 +96,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | apostrophe | `typographic` 46, `straight` 20 | _mixed_ |
 | ellipsis | `char` 441, `ascii` 13 | **char** |
 | dash | `em` 79, `en` 2 | **em** |
-| fullwidth | `punctuation` 9540 | **punctuation** |
-| register | `informal` 16, `formal` 1747 | **formal** |
+| fullwidth | `punctuation` 9534 | **punctuation** |
+| register | `informal` 16, `formal` 1746 | **formal** |
 
 ---
 

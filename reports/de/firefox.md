@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-27 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `caafd8e1597e` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
-| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
+| **Generated** | 2026-08-31 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
+| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 36 of 18,397 |
+| **Strings reviewed this run** | 20 of 18,406 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -26,52 +26,9 @@ _No new findings._
 
 _Nothing was fixed._
 
-### ↩︎ Withdrawn — no longer considered a defect (11)
+### ↩︎ Withdrawn — no longer considered a defect (0)
 
-- `blocked-by-policy-title-enterprise` — `browser/browser/enterprise/enterprise.ftl` — Wrong preposition: "Zugriff zu" instead of "Zugriff auf".
-    - Current: `Der Zugriff zu dieser Website ist eingeschränkt`
-    - Suggest: `Der Zugriff auf diese Website ist eingeschränkt`
-    - German requires "Zugriff auf" (as used correctly in enterprise-access-connector-info-active and neterror-blocked-by-policy-contact-admin); "Zugriff zu" is ungrammatical.
-- `enterprise-close-prompt-message-reauth` — `browser/browser/enterprise/enterprise.ftl` — Acronym "SSO" is misspelled as "SSo".
-    - Current: `SSo-Anbieter`
-    - Suggest: `SSO-Anbieter`
-    - The same acronym is correctly written "SSO-Anbieter" in enterprise-quit-shortcut-prompt-message; "SSo" is a spelling error in a proper acronym.
-- `neterror-blocked-by-policy-page-title-enterprise` — `browser/browser/enterprise/enterprise.ftl` — Wrong preposition: "Zugriff zu" instead of "Zugriff auf".
-    - Current: `Der Zugriff zu dieser Website ist eingeschränkt`
-    - Suggest: `Der Zugriff auf diese Website ist eingeschränkt`
-    - German requires "Zugriff auf"; "Zugriff zu" is ungrammatical and inconsistent with other strings in the same file.
-- `restart-forced-heading` — `browser/browser/enterprise/enterprise.ftl` — Sentence fragment with stray period; a heading like "Restart to keep using …" should be an infinitive clause without final period.
-    - Current: `Neustart, um { -brand-short-name } weiterhin zu verwenden.`
-    - Suggest: `Neu starten, um { -brand-short-name } weiterhin zu verwenden`
-    - The heading mixes a noun ("Neustart") with an infinitive purpose clause, which is ungrammatical, and headings do not take a final period.
-- `felt-sso-input-email` — `browser/browser/enterprise/felt.ftl` — Label "E-Mail-Adresse dienstlich" has inverted word order for a field label.
-    - Current: `label: E-Mail-Adresse dienstlich`
-    - Suggest: `label: Dienstliche E-Mail-Adresse`
-    - The adjective must precede the noun in German; "E-Mail-Adresse dienstlich" is ungrammatical as a form label for a work email address.
-- `felt-updates-title` — `browser/browser/enterprise/felt.ftl` — Title for the updates panel reads "Guten Morgen" ("Good morning"), which is unrelated to updates.
-    - Current: `Guten Morgen`
-    - Suggest: `Updates`
-    - String id felt-updates-title belongs to the update UI alongside felt-updates-checking/-application/-uptodate; a greeting "Guten Morgen" asserts something the update panel never said and is clearly not an update title.
-- `blocked-by-policy-title-enterprise` — `toolkit/toolkit/enterprise/enterprise.ftl` — Wrong preposition: "Zugriff" governs "auf", not "zu".
-    - Current: `Der Zugriff zu dieser Website ist eingeschränkt`
-    - Suggest: `Der Zugriff auf diese Website ist eingeschränkt`
-    - German requires "Zugriff auf" + accusative; "Zugriff zu dieser Website" is grammatically incorrect.
-- `enterprise-close-prompt-message-with-tabcount` — `toolkit/toolkit/enterprise/enterprise.ftl` — String named "...-with-tabcount" lacks the plural selector and $tabCount variable present in its counterpart, so the tab count is never shown.
-    - Current: `Wenn Sie { -brand-short-name } schließen, werden Sie ebenfalls abgemeldet.`
-    - Suggest: `{$tabCount ->} [one] Wenn Sie { -brand-short-name } und { $tabCount } Tab schließen, werden Sie ebenfalls abgemeldet. [other] Wenn Sie { -brand-short-name } und { $tabCount } Tabs schließen, werden Sie ebenfalls abgemel…`
-    - All other "-with-tabcount" IDs in this file use the $tabCount plural selector; here the count is dropped entirely, so the message does not convey how many tabs are affected.
-- `neterror-blocked-by-policy-page-title-enterprise` — `toolkit/toolkit/enterprise/enterprise.ftl` — Wrong preposition: "Zugriff" requires "auf", not "zu".
-    - Current: `Der Zugriff zu dieser Website ist eingeschränkt`
-    - Suggest: `Der Zugriff auf diese Website ist eingeschränkt`
-    - German "Zugriff" governs "auf" + accusative; "Zugriff zu dieser Website" is ungrammatical, and the same file uses "Zugriff auf diese Website" elsewhere.
-- `felt-sso-input-email` — `toolkit/toolkit/enterprise/felt.ftl` — Label "E-Mail-Adresse dienstlich" has reversed/ungrammatical word order for a form label.
-    - Current: `label: E-Mail-Adresse dienstlich`
-    - Suggest: `label: Dienstliche E-Mail-Adresse`
-    - An attributive adjective must precede the noun in German; the postposed "dienstlich" is not grammatical German for a field label ("work email").
-- `felt-updates-application` — `toolkit/toolkit/enterprise/felt.ftl` — "Updates anwenden…" states an action to perform rather than the ongoing progress "Applying updates…".
-    - Current: `Updates anwenden…`
-    - Suggest: `Updates werden angewendet…`
-    - The surrounding progress strings ("Nach Updates suchen…") describe an in-progress update flow; the infinitive form reads as a command/menu item instead of a status message.
+_Nothing withdrawn._
 
 ### 🔁 String changed, defect not verifiable — needs a re-read (0)
 
@@ -88,7 +45,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 372 |
-| Strings | 18,397 |
+| Strings | 18,406 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -135,10 +92,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `straight-double` 811, `curly-double` 69, `german-double` 14, `curly-single` 2 | **straight-double** |
 | apostrophe | `typographic` 6, `straight` 120 | **straight** |
-| ellipsis | `char` 476 | **char** |
+| ellipsis | `char` 479 | **char** |
 | dash | `em` 16, `en` 95 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 12, `formal` 4380 | **formal** |
+| register | `informal` 12, `formal` 4383 | **formal** |
 
 ---
 

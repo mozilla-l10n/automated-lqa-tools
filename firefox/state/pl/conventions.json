@@ -2,7 +2,7 @@
  "_meta": {
   "locale": "pl",
   "prose_chunks": 18995,
-  "strings": 18210
+  "strings": 18208
  },
  "apostrophe": {
   "straight": 1,
@@ -27,7 +27,7 @@
   "before-punctuation": 49,
   "narrow": 3,
   "space-before-punctuation": 21,
-  "total": 5507
+  "total": 5505
  },
  "quotes": {
   "curly-double": 2,
