@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-27 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `caafd8e1597e` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
-| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
+| **Generated** | 2026-08-31 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
+| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 36 of 18,210 |
+| **Strings reviewed this run** | 20 of 18,219 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,28 +18,18 @@ Also for cs: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (2)
 
-- `about-sync-log-page-header` — `toolkit/services/aboutSyncLog.ftl` — Misspelled "zapisované" (should be "zapisované" → correct form "zapisované" is wrong; correct is "zapisované"?).
-    - Current: `Protokoly diagnostiky zapisované synchronizací.`
-    - Source: `description: Diagnostic logs written by sync. heading: Sync logs`
-    - Suggest: `Diagnostické protokoly zapisované synchronizací.`
-    - "Protokoly diagnostiky" is an awkward calque; en-US "Diagnostic logs" is an adjective + noun, rendered idiomatically as "Diagnostické protokoly".
-- `about-sync-log-empty` — `toolkit/services/aboutSyncLog.ftl` — "logs" rendered as "záznamy" here while every other string in the same surface uses "protokoly".
-    - Current: `Nebyly zaznamenány žádné záznamy synchronizace.`
-    - Source: `No sync logs have been recorded.`
-    - Suggest: `Nebyly zaznamenány žádné protokoly synchronizace.`
-    - Inconsistent terminology within the same page: "sync logs" is "protokoly synchronizace" elsewhere (title, clear button, confirm title); "žádné záznamy" also creates the tautology "nebyly zaznamenány žádné záznamy".
-- `about-sync-log-open-raw` — `toolkit/services/aboutSyncLog.ftl` — "Open raw" translated literally as "Otevřít surový soubor".
-    - Current: `label: Otevřít surový soubor`
-    - Source: `label: Open raw`
-    - Suggest: `label: Otevřít nezpracovaný soubor`
-    - "surový" means raw as in uncooked/crude; the developer comment says the button opens the raw log file, i.e. unprocessed content, normally "nezpracovaný" in Czech software terminology.
-- `about-sync-log-empty-filtered` — `toolkit/services/aboutSyncLog.ftl` — Plural "filters" rendered as singular "filtru".
-    - Current: `Žádný protokol neodpovídá aktuálnímu filtru.`
-    - Source: `No logs match the current filters.`
-    - Suggest: `Žádný protokol neodpovídá aktuálním filtrům.`
-    - en-US "the current filters" is plural (the page has type and date filters); the Czech says only one filter.
+- `preferences-etp-custom-cookie-behavior-block-cross-site-tracking-cookies` — `browser/browser/preferences/preferences.ftl` — "cross-site" is rendered as "třetích stran" (third-party), a different cookie category.
+    - Current: `Blokovat sledovací cookies třetích stran`
+    - Source: `label: Block cross-site tracking cookies`
+    - Suggest: `Blokovat sledovací cookies mezi weby`
+    - en-US says "cross-site tracking cookies"; "cookies třetích stran" means third-party cookies, which is a distinct ETP setting/term.
+- `share-panel-os-share-2` — `browser/browser/sharePanel.ftl` — Inconsistent and ungrammatical rendering of the macOS variant ("Sdílet s Mac" vs "Sdílet pomocí Windows").
+    - Current: `Sdílet s Mac…`
+    - Source: `label: {$sel_1 ->} [windows] Share with Windows… [macos] Share with Mac… [other] Share with…`
+    - Suggest: `Sdílet pomocí Macu…`
+    - The Windows and generic variants use "Sdílet pomocí…", while the macOS variant uses an undeclined "s Mac"; Czech requires declension and consistent phrasing for the same source pattern "Share with X…".
 
 ### ✅ Fixed since the last run (0)
 
@@ -64,7 +54,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 362 |
-| Strings | 18,210 |
+| Strings | 18,219 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -92,7 +82,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `german-double` 526, `curly-double` 231, `curly-single` 60, `straight-double` 46, `polish-double` 3 | _mixed_ |
 | apostrophe | `typographic` 74, `straight` 11 | **typographic** |
-| ellipsis | `char` 451, `ascii` 4 | **char** |
+| ellipsis | `char` 454, `ascii` 4 | **char** |
 | dash | `em` 101, `en` 30 | **em** |
 | nbsp | `total` 13, `before-punctuation` 3, `space-before-punctuation` 8 | _mixed_ |
 
@@ -105,14 +95,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (263)
+## 3. Open findings (265)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 55 |
-| 2 | Wrong content (says something other than the English) | 120 |
-| 3 | Degraded language (grammar, spelling, terminology) | 60 |
+| 2 | Wrong content (says something other than the English) | 121 |
+| 3 | Degraded language (grammar, spelling, terminology) | 61 |
 | 4 | Cosmetic (typography, spacing) | 23 |
 
 ### A. Functional, markup, variables & plurals
@@ -419,6 +409,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `label: Pride`
     - Suggest: `Pride`
     - "Pride" here names the LGBTQ+ Pride icon variant, used untranslated in Czech; "Hrdost" reads as the abstract quality and loses the reference, unlike the neighbouring untranslated names Retro 2004, Kit, Momo.
+- `preferences-etp-custom-cookie-behavior-block-cross-site-tracking-cookies` — `browser/browser/preferences/preferences.ftl` — "cross-site" is rendered as "třetích stran" (third-party), a different cookie category.
+    - Current: `Blokovat sledovací cookies třetích stran`
+    - Source: `label: Block cross-site tracking cookies`
+    - Suggest: `Blokovat sledovací cookies mezi weby`
+    - en-US says "cross-site tracking cookies"; "cookies třetích stran" means third-party cookies, which is a distinct ETP setting/term.
 - `about-sync-log-empty-filtered` — `toolkit/services/aboutSyncLog.ftl` — Plural "filters" rendered as singular "filtru".
     - Current: `Žádný protokol neodpovídá aktuálnímu filtru.`
     - Source: `No logs match the current filters.`
@@ -537,6 +532,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `tooltiptext: Apply paw print avatar`
     - Suggest: `Použít avatar otisku tlapky`
     - paw-print-avatar and paw-print-avatar-alt in the same file use "Otisk tlapky".
+- `share-panel-os-share-2` — `browser/browser/sharePanel.ftl` — Inconsistent and ungrammatical rendering of the macOS variant ("Sdílet s Mac" vs "Sdílet pomocí Windows").
+    - Current: `Sdílet s Mac…`
+    - Source: `label: {$sel_1 ->} [windows] Share with Windows… [macos] Share with Mac… [other] Share with…`
+    - Suggest: `Sdílet pomocí Macu…`
+    - The Windows and generic variants use "Sdílet pomocí…", while the macOS variant uses an undeclined "s Mac"; Czech requires declension and consistent phrasing for the same source pattern "Share with X…".
 - `sidebar-history-sort-option-date-and-site` — `browser/browser/sidebar.ftl` — "site" rendered as "název" (name) although the adjacent sort option renders the same term as "Server".
     - Current: `Datum a název`
     - Source: `label: Date and site`
@@ -1042,7 +1042,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `netmonitor.context.perfTools` — `devtools/client/netmonitor.properties` — `netmonitor.context.perfTools` uses three dots where this locale uses …
     - Current: `Zahájit analýzu výkonu...`
     - Source: `Start Performance Analysis…`
-    - The tree uses … 451 times against 4 ASCII runs.
+    - The tree uses … 454 times against 4 ASCII runs.
 - `styleeditor-stylesheet-rule-count` — `devtools/client/styleeditor.ftl` — Doubled period in the [few] plural variant
     - Current: `{ $ruleCount } pravidla..`
     - Source: `{$ruleCount ->} [one] { $ruleCount } rule. [other] { $ruleCount } rules.`
@@ -1056,7 +1056,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `crashreporter-submit-waiting-hardware-tests` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-submit-waiting-hardware-tests` uses three dots where this locale uses …
     - Current: `Probíhá kontrola problémů s hardwarem a konfigurací...`
     - Source: `Checking for hardware and configuration problems…`
-    - The tree uses … 451 times against 4 ASCII runs.
+    - The tree uses … 454 times against 4 ASCII runs.
 - `about-networking-dns-https-rr-lookup-table-column` — `toolkit/toolkit/about/aboutNetworking.ftl` — Adjacent RR column headers use opposite word order
     - Current: `RR HTTP`
     - Source: `HTTP RRs`
@@ -1105,11 +1105,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `pdfjs-editor-alt-text-settings-downloading-model-button` — `toolkit/toolkit/pdfviewer/viewer.ftl` — `pdfjs-editor-alt-text-settings-downloading-model-button` uses three dots where this locale uses …
     - Current: `Probíhá stahování...`
     - Source: `Downloading…`
-    - The tree uses … 451 times against 4 ASCII runs.
+    - The tree uses … 454 times against 4 ASCII runs.
 - `pdfjs-free-text2` — `toolkit/toolkit/pdfviewer/viewer.ftl` — `pdfjs-free-text2` uses three dots where this locale uses …
     - Current: `Začněte psát...`
     - Source: `aria-label: Text Editor default-content: Start typing…`
-    - The tree uses … 451 times against 4 ASCII runs.
+    - The tree uses … 454 times against 4 ASCII runs.
 
 ---
 

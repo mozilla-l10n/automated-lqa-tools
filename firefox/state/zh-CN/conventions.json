@@ -2,7 +2,7 @@
  "_meta": {
   "locale": "zh-CN",
   "prose_chunks": 18760,
-  "strings": 17996
+  "strings": 17994
  },
  "apostrophe": {
   "straight": 20,
@@ -17,7 +17,7 @@
   "char": 441
  },
  "fullwidth": {
-  "punctuation": 9540
+  "punctuation": 9534
  },
  "inverted_marks": {
   "open-exclamation": 0,
@@ -35,7 +35,7 @@
   "straight-double": 46
  },
  "register": {
-  "formal": 1747,
+  "formal": 1746,
   "informal": 16
  }
 }

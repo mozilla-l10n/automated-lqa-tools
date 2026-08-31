@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-27 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `caafd8e1597e` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
-| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
+| **Generated** | 2026-08-31 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
+| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 17,843 |
+| **Strings reviewed this run** | 3 of 17,841 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 357 |
-| Strings | 17,843 |
-| Missing strings | 367 |
+| Strings | 17,841 |
+| Missing strings | 378 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 5 |
 | Files with no en-US counterpart | 0 |
@@ -63,16 +63,16 @@ _Nothing retired._
 
 ### Completeness
 
-**367 strings** are not translated yet, concentrated in:
+**378 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 79
+- `browser/browser/newtab/newtab.ftl` — 81
 - `toolkit/toolkit/about/url-classifier.ftl` — 26
 - `toolkit/services/aboutSyncLog.ftl` — 26
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 23
 - `toolkit/toolkit/about/aboutNetworking.ftl` — 20
+- `browser/browser/sharePanel.ftl` — 17
+- `browser/browser/preferences/preferences.ftl` — 17
 - `toolkit/toolkit/about/aboutAddons.ftl` — 15
-- `browser/browser/sharePanel.ftl` — 14
-- `browser/browser/preferences/preferences.ftl` — 14
 - `toolkit/toolkit/neterror/netError.ftl` — 13
 - `browser/browser/newtab/onboarding.ftl` — 13
 - `browser/browser/sidebar.ftl` — 12
@@ -100,7 +100,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | dash | `em` 75, `en` 1 | **em** |
 | nbsp | `total` 14, `narrow` 10, `before-punctuation` 10, `space-before-punctuation` 8 | _mixed_ |
 | inverted marks | `open-question` 368, `open-exclamation` 85 | **open-question** |
-| register | `informal` 1359, `formal` 237 | **informal** |
+| register | `informal` 1357, `formal` 237 | **informal** |
 
 ---
 

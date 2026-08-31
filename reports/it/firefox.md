@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-27 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `caafd8e1597e` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
-| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
+| **Generated** | 2026-08-31 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
+| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 36 of 18,398 |
+| **Strings reviewed this run** | 22 of 18,406 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,13 @@ Also for it: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (1)
 
-- `about-sync-log-empty` — `toolkit/services/aboutSyncLog.ftl` — "No sync logs have been recorded" rendered as "no log was found", changing the meaning from recording to searching.
-    - Current: `Non è stato trovato alcun registro di sincronizzazione.`
-    - Source: `No sync logs have been recorded.`
-    - Suggest: `Non è stato registrato alcun registro di sincronizzazione.`
-    - The en-US says logs have not been recorded, not that a search failed to find them.
-- `about-sync-log-count` — `toolkit/services/aboutSyncLog.ftl` — "log/logs" translated as "registrazione/registrazioni" instead of the "registro/registri" used consistently elsewhere in the same page.
-    - Current: `[one] { $count } registrazione [other] { $count } registrazioni`
-    - Source: `{$count ->} [one] { $count } log [other] { $count } logs`
-    - Suggest: `[one] { $count } registro [other] { $count } registri`
-    - Every other string in this file renders "log(s)" as "registro/registri"; "registrazione" means a recording, an inconsistent term on the same surface.
+- `preferences-ai-controls-sidebar-chatbot-group-3` — `browser/browser/preferences/preferences.ftl` — Label uses singular "Fornitore" where the source is plural "providers".
+    - Current: `label: Fornitore di chatbot IA nella barra laterale`
+    - Source: `description: Keep a chatbot in view as you browse. Choose from multiple providers and switch anytime. label: AI chatbot providers in sidebar`
+    - Suggest: `label: Fornitori di chatbot IA nella barra laterale`
+    - en-US "AI chatbot providers in sidebar" is plural, and the accompanying description mentions choosing among multiple providers ("diversi fornitori").
 
 ### ✅ Fixed since the last run (0)
 
@@ -54,9 +49,9 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 372 |
-| Strings | 18,398 |
-| Missing strings | 5 |
-| Obsolete strings | 6 |
+| Strings | 18,406 |
+| Missing strings | 0 |
+| Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 10 |
 | Fluent / properties syntax errors | 0 |
@@ -72,13 +67,7 @@ _Nothing retired._
 
 ### Completeness
 
-**5 strings** are not translated yet, concentrated in:
-
-- `browser/browser/browser.ftl` — 3
-- `browser/browser/aboutPrivateBrowsing.ftl` — 1
-- `browser/browser/appmenu.ftl` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Files with no en-US counterpart
 
@@ -102,11 +91,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 1046, `straight-double` 25 | **curly-double** |
-| apostrophe | `typographic` 1925, `straight` 6 | **typographic** |
-| ellipsis | `char` 481 | **char** |
+| apostrophe | `typographic` 1926, `straight` 6 | **typographic** |
+| ellipsis | `char` 484 | **char** |
 | dash | `em` 75, `en` 18 | **em** |
 | nbsp | `total` 12, `before-punctuation` 4, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 760, `formal` 59 | **informal** |
+| register | `informal` 761, `formal` 59 | **informal** |
 
 ---
 
@@ -116,14 +105,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (2)
+## 3. Open findings (3)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 0 |
-| 3 | Degraded language (grammar, spelling, terminology) | 2 |
+| 3 | Degraded language (grammar, spelling, terminology) | 3 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -140,7 +129,11 @@ _Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
-_Nothing in this category._
+- `preferences-ai-controls-sidebar-chatbot-group-3` — `browser/browser/preferences/preferences.ftl` — Label uses singular "Fornitore" where the source is plural "providers".
+    - Current: `label: Fornitore di chatbot IA nella barra laterale`
+    - Source: `description: Keep a chatbot in view as you browse. Choose from multiple providers and switch anytime. label: AI chatbot providers in sidebar`
+    - Suggest: `label: Fornitori di chatbot IA nella barra laterale`
+    - en-US "AI chatbot providers in sidebar" is plural, and the accompanying description mentions choosing among multiple providers ("diversi fornitori").
 
 ### D. Terminology, register & consistency
 

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-27 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `caafd8e1597e` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
-| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
+| **Generated** | 2026-08-31 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
+| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 41 of 18,210 |
+| **Strings reviewed this run** | 14 of 18,213 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,33 +22,9 @@ Also for en-GB: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (5)
+### ✅ Fixed since the last run (0)
 
-- `urlbar-popup-blocked2` — `browser/browser/browser.ftl` — "website" is used here although this file writes "web site" as two words everywhere else, including in the near-identical sibling string urlbar-popup-blocked.
-    - Current: `for this website.`
-    - Source: `tooltiptext: You have blocked pop-ups and third-party redirects for this website.`
-    - Suggest: `for this web site.`
-    - browser.ftl contains 22 visible-string occurrences of "web site"/"web sites" and this is the only visible-string occurrence of "website"; the adjacent urlbar-popup-blocked, which differs only by the redirect clause, reads "You have blocked pop-ups for this web site."
-- `mr2022-onboarding-colorway-description-dreamer` — `browser/browser/newtab/onboarding.ftl` — American spelling "favors" left unadapted; en-GB requires "favours".
-    - Current: `fortune favors the bold`
-    - Source: `<b>You are a Dreamer.</b> You believe that fortune favors the bold and inspire others to be brave.`
-    - Suggest: `fortune favours the bold`
-    - This is the only occurrence of American -or in "favour"/"favours" as an ordinary word anywhere in the en-GB tree; the locale otherwise uses "favourite", "favourites", "favour" consistently (e.g. newtab.ftl newtab-shortcuts-highlight-title "Your favourites at your fingertips", asrouter.ftl fox-doodle-pin-body "your favourite indie browser"). Remaining "favor" hits are en-US developer comments or t…
-- `SEC_ERROR_LIBPKIX_INTERNAL` — `security/manager/chrome/pipnss/nsserrors.properties` — "occured" is a misspelling of "occurred", which the locale uses everywhere else.
-    - Current: `Libpkix internal error occured during certificate validation.`
-    - Source: `Libpkix internal error occurred during cert validation.`
-    - Suggest: `Libpkix internal error occurred during certificate validation.`
-    - en-US reads "occurred"; en-GB also spells it "occurred" in every other string in this partition (e.g. SEC_ERROR_IO "An I/O error occurred during security authorisation.", SSLConnectionErrorPrefix2, PERR_FAILURE). "occured" is not a British variant, just a typo introduced in the localisation.
-- `rights-intro-point-1` — `toolkit/toolkit/about/aboutRights.ftl` — The proper name of the licence document, "Mozilla Public License", was respelled as "Mozilla Public Licence" (twice in the string).
-    - Current: `Mozilla Public Licence`
-    - Source: `{ -brand-short-name } is made available to you under the terms of the <a data-l10n-name="mozilla-public-license-link">Mozilla Public License</a>. This means you may use, copy and distribute { -brand-short-name } to othe…`
-    - Suggest: `Mozilla Public License`
-    - "Mozilla Public License" is the official title of a specific legal instrument (as reproduced verbatim in every file header of this same tree) and is not subject to the licence/license noun rule. Note the generic noun uses elsewhere in this partition ("Licence information") are correct and should stay.
-- `fp-certerror-revoked-why-dangerous-body` — `toolkit/toolkit/neterror/certError.ftl` — "any more" here versus "anymore" in four sibling strings carrying the identical clause.
-    - Current: `isn’t trusted any more.`
-    - Source: `{ -brand-short-name } is warning you about this site because the certificate provided for { $hostname } has been revoked and isn’t trusted anymore.`
-    - Suggest: `isn’t trusted anymore.`
-    - certError.ftl uses "isn’t trusted anymore" at lines 94, 157, 167 and 171; only line 81 splits it. Both forms are current in British English, so this is reported purely as a departure from what the file and the wider tree (7 occurrences of "anymore") do consistently, not as a preference.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -69,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 362 |
-| Strings | 18,210 |
-| Missing strings | 0 |
+| Strings | 18,213 |
+| Missing strings | 6 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -87,7 +63,13 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**6 strings** are not translated yet, concentrated in:
+
+- `browser/browser/sharePanel.ftl` — 3
+- `browser/browser/preferences/preferences.ftl` — 2
+- `browser/browser/preferences/formAutofill.ftl` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -96,7 +78,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 597, `curly-single` 101, `straight-double` 58 | **curly-double** |
-| apostrophe | `typographic` 1123, `straight` 56 | **typographic** |
+| apostrophe | `typographic` 1121, `straight` 56 | **typographic** |
 | ellipsis | `char` 461, `ascii` 1 | **char** |
 | dash | `em` 108, `en` 4 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |

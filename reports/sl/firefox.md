@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-27 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `caafd8e1597e` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
-| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
+| **Generated** | 2026-08-31 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
+| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 5 of 17,549 |
+| **Strings reviewed this run** | 108 of 17,645 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,28 @@ Also for sl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (4)
 
-_No new findings._
+- `toolbox-local-mode-notice` — `devtools/client/toolbox.ftl` — `toolbox-local-mode-notice` quotes “z uporabo” but the string it names, `options-local-mode-label`, reads “Lokalni način”
+    - Current: `Ta dokument bi bilo mogoče naložiti tudi z naslova "{ $url }" z uporabo "lokalnega načina" razvojnih orodij, ki ga lahko omogočite na plošči z nastavitvami.`
+    - Source: `This document could also be loaded from “{ $url }” using DevTools “Local Mode”, which can be enabled in the settings panel.`
+    - Suggest: `Lokalni način`
+    - In the source this string quotes “Local Mode”, which is exactly the value of `options-local-mode-label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `about-networking-ssl-tokens-new` — `toolkit/toolkit/about/aboutNetworking.ftl` — "New this session" translated with wrong case, producing ungrammatical "Nov to sejo".
+    - Current: `Nov to sejo`
+    - Source: `alt: New this session title: New this session`
+    - Suggest: `Nov v tej seji`
+    - en-US "New this session" means the token is new in the current session; "Nov to sejo" is not grammatical Slovenian for that meaning.
+- `options-experimental-label` — `devtools/client/toolbox-options.ftl` — "Experimental Features" rendered as "Poskusne zmogljivosti" instead of the established "Poskusne funkcije/možnosti".
+    - Current: `Poskusne zmogljivosti`
+    - Source: `Experimental Features`
+    - Suggest: `Poskusne funkcije`
+    - en-US "Features" here means functionality; "zmogljivosti" means capacities/performance, which is not the standard sl rendering of "features" in DevTools settings.
+- `options-stylesheets-in-the-debugger-tooltip` — `devtools/client/toolbox-options.ftl` — Tooltip drops "and view" from "List and view stylesheets in the debugger".
+    - Current: `Prikaži seznam slogovnih predlog v razhroščevalniku`
+    - Source: `title: List and view stylesheets in the debugger`
+    - Suggest: `Prikaži seznam slogovnih predlog in si jih oglej v razhroščevalniku`
+    - The en-US says "List and view stylesheets"; the Slovenian only mentions listing them.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,18 +63,18 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 360 |
-| Strings | 17,549 |
-| Missing strings | 661 |
+| Files | 362 |
+| Strings | 17,645 |
+| Missing strings | 574 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 2 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 1 |
 | Plural variants (dead or missing forms) | 0 |
-| Text quoting a UI label that no longer matches | 3 |
+| Text quoting a UI label that no longer matches | 4 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 1 |
 | Markup & `data-l10n-name` defects | 0 |
@@ -63,25 +82,20 @@ _Nothing retired._
 
 ### Completeness
 
-**661 strings** are not translated yet, concentrated in:
+**574 strings** are not translated yet, concentrated in:
 
 - `browser/browser/aiWindow.ftl` — 136
 - `browser/browser/aiWindowContent.ftl` — 71
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 48
 - `dom/chrome/dom/dom.properties` — 45
 - `browser/browser/ipProtection.ftl` — 37
-- `browser/browser/newtab/newtab.ftl` — 33
-- `toolkit/services/aboutSyncLog.ftl` — 26
 - `browser/browser/aiFeatures.ftl` — 26
-- `devtools/client/toolbox-options.ftl` — 24
 - `dom/chrome/security/security.properties` — 23
-- `toolkit/toolkit/about/aboutNetworking.ftl` — 20
-- `browser/browser/preferences/preferences.ftl` — 19
-
-**Files absent from the locale:**
-
-- `toolkit/services/aboutSyncLog.ftl`
-- `toolkit/toolkit/pdfviewer/embedFallback.ftl`
+- `browser/browser/preferences/preferences.ftl` — 18
+- `devtools/client/debugger.properties` — 17
+- `toolkit/toolkit/about/aboutGlean.ftl` — 15
+- `toolkit/toolkit/about/aboutWebrtc.ftl` — 14
+- `dom/chrome/security/csp.properties` — 13
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -91,7 +105,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 303, `straight-double` 285, `curly-single` 54, `guillemet` 7 | _mixed_ |
+| quotes | `curly-double` 303, `straight-double` 288, `curly-single` 54, `guillemet` 7 | _mixed_ |
 | apostrophe | `typographic` 54, `straight` 52 | _mixed_ |
 | ellipsis | `char` 421, `ascii` 40 | **char** |
 | dash | `em` 13, `en` 150 | **en** |
@@ -107,14 +121,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (33)
+## 3. Open findings (37)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 4 |
-| 3 | Degraded language (grammar, spelling, terminology) | 22 |
+| 2 | Wrong content (says something other than the English) | 5 |
+| 3 | Degraded language (grammar, spelling, terminology) | 25 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
 ### A. Functional, markup, variables & plurals
@@ -126,7 +140,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-_Nothing in this category._
+- `options-stylesheets-in-the-debugger-tooltip` — `devtools/client/toolbox-options.ftl` — Tooltip drops "and view" from "List and view stylesheets in the debugger".
+    - Current: `Prikaži seznam slogovnih predlog v razhroščevalniku`
+    - Source: `title: List and view stylesheets in the debugger`
+    - Suggest: `Prikaži seznam slogovnih predlog in si jih oglej v razhroščevalniku`
+    - The en-US says "List and view stylesheets"; the Slovenian only mentions listing them.
 
 ### C. Grammar, agreement & spelling
 
@@ -150,6 +168,11 @@ _Nothing in this category._
 - `colorway-removal-notice-message` — `toolkit/toolkit/about/aboutAddons.ftl` — Wrong case. "…zbirko barvnih kombinacije." → "…kombinacij." (genitive plural).
     - Source: `heading: Your colorway theme(s) were removed. message: { -brand-product-name } updated its colorways collection. We removed the old version(s) from your “Saved Themes” list. Get new versions on the add-ons site.`
     - Suggest: `"…kombinacij."`
+- `about-networking-ssl-tokens-new` — `toolkit/toolkit/about/aboutNetworking.ftl` — "New this session" translated with wrong case, producing ungrammatical "Nov to sejo".
+    - Current: `Nov to sejo`
+    - Source: `alt: New this session title: New this session`
+    - Suggest: `Nov v tej seji`
+    - en-US "New this session" means the token is new in the current session; "Nov to sejo" is not grammatical Slovenian for that meaning.
 - `touch-warning` — `toolkit/toolkit/about/aboutSupport.ftl` — toolkit/toolkit/about/aboutSupport.ftl — "…zaradi nedpodprte nastavitve…" → "…nepodprte…" (both strings).
     - Source: `async touch input disabled due to unsupported pref: { $preferenceKey }`
     - Suggest: `"…nepodprte…"`
@@ -204,6 +227,16 @@ _Nothing in this category._
     - Source: `Right click an element in the %S and select “Break on…” to add a breakpoint`
     - Suggest: `Zaustavi na …`
     - In the source this string quotes “Break on…”, which is exactly the value of `watchpoints.submenu` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `options-experimental-label` — `devtools/client/toolbox-options.ftl` — "Experimental Features" rendered as "Poskusne zmogljivosti" instead of the established "Poskusne funkcije/možnosti".
+    - Current: `Poskusne zmogljivosti`
+    - Source: `Experimental Features`
+    - Suggest: `Poskusne funkcije`
+    - en-US "Features" here means functionality; "zmogljivosti" means capacities/performance, which is not the standard sl rendering of "features" in DevTools settings.
+- `toolbox-local-mode-notice` — `devtools/client/toolbox.ftl` — `toolbox-local-mode-notice` quotes “z uporabo” but the string it names, `options-local-mode-label`, reads “Lokalni način”
+    - Current: `Ta dokument bi bilo mogoče naložiti tudi z naslova "{ $url }" z uporabo "lokalnega načina" razvojnih orodij, ki ga lahko omogočite na plošči z nastavitvami.`
+    - Source: `This document could also be loaded from “{ $url }” using DevTools “Local Mode”, which can be enabled in the settings panel.`
+    - Suggest: `Lokalni način`
+    - In the source this string quotes “Local Mode”, which is exactly the value of `options-local-mode-label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `certificate-viewer-certificate-authority` — `toolkit/toolkit/about/certviewer.ftl` — certificate-viewer-certificate-authority (and authority-key-id, authority-info-aia) — toolkit/toolkit/about/certviewer.ftl — "Certificate Authority" rendered "uradna oseba za digitalna potrdila", but the CA tab (certificate-viewer-tab-ca) uses the standard "Overitelji". → align on "overitelj (digitalnih potrdil)".
     - Source: `Certificate Authority`
     - Suggest: `align on "overitelj`

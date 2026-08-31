@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-27 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `caafd8e1597e` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
-| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
+| **Generated** | 2026-08-31 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
+| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 18,163 |
+| **Strings reviewed this run** | 61 of 18,213 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,23 @@ Also for hu: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `about-sync-log-title` — `toolkit/services/aboutSyncLog.ftl` — "Sync logs" (noun phrase) rendered as "Naplók szinkronizálása" ("Synchronizing logs"), an action rather than the logs of Sync.
+    - Current: `Naplók szinkronizálása`
+    - Source: `Sync logs`
+    - Suggest: `Szinkronizálási naplók`
+    - The en-US is a noun phrase naming the logs written by Sync (see about-sync-log-page-header description); the Hungarian turns it into a verbal phrase meaning "syncing the logs".
+- `about-sync-log-page-header` — `toolkit/services/aboutSyncLog.ftl` — Heading "Sync logs" rendered as "Naplók szinkronizálása" ("Synchronizing logs").
+    - Current: `heading: Naplók szinkronizálása`
+    - Source: `description: Diagnostic logs written by sync. heading: Sync logs`
+    - Suggest: `heading: Szinkronizálási naplók`
+    - "Sync logs" names logs written by Sync (per the same string's description), not the act of synchronizing logs; also inconsistent with "szinkronizálási naplók" used in about-sync-log-empty.
+- `inspector-emulation-panel-reduced-motion-no-preference` — `devtools/client/inspector.ftl` — The aria-label reverses the meaning: "Enable no preference for reduced motion emulation" is rendered as "turn off" the setting.
+    - Current: `aria-label: A mozgáscsökkentés-emuláció beállításának kikapcsolása`
+    - Source: `(value): No preference aria-label: Enable no preference for reduced motion emulation`
+    - Suggest: `aria-label: A „nincs beállítva” mozgáscsökkentés-emuláció engedélyezése`
+    - The en-US enables the "no preference" option of the reduced-motion emulation; the Hungarian says the setting is being disabled (kikapcsolása), which is the opposite action.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +58,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 360 |
-| Strings | 18,163 |
-| Missing strings | 47 |
+| Files | 362 |
+| Strings | 18,213 |
+| Missing strings | 6 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 2 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,22 +77,11 @@ _Nothing retired._
 
 ### Completeness
 
-**47 strings** are not translated yet, concentrated in:
+**6 strings** are not translated yet, concentrated in:
 
-- `toolkit/services/aboutSyncLog.ftl` — 26
-- `browser/browser/newtab/newtab.ftl` — 6
-- `toolkit/toolkit/neterror/netError.ftl` — 4
-- `devtools/client/inspector.ftl` — 4
-- `toolkit/toolkit/pdfviewer/embedFallback.ftl` — 2
-- `toolkit/toolkit/global/theme-picker.ftl` — 2
-- `toolkit/toolkit/about/aboutNetworking.ftl` — 1
-- `toolkit/toolkit/global/processTypes.ftl` — 1
-- `browser/browser/firefoxView.ftl` — 1
-
-**Files absent from the locale:**
-
-- `toolkit/services/aboutSyncLog.ftl`
-- `toolkit/toolkit/pdfviewer/embedFallback.ftl`
+- `browser/browser/sharePanel.ftl` — 3
+- `browser/browser/preferences/preferences.ftl` — 2
+- `browser/browser/preferences/formAutofill.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -88,7 +91,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `polish-double` 875, `straight-double` 33, `german-double` 2, `curly-single` 1 | **polish-double** |
+| quotes | `polish-double` 876, `straight-double` 33, `german-double` 2, `curly-single` 1 | **polish-double** |
 | apostrophe | `typographic` 1, `straight` 1 | _mixed_ |
 | ellipsis | `char` 460, `ascii` 7 | **char** |
 | dash | `em` 2, `en` 164 | **en** |
@@ -102,13 +105,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (277)
+## 3. Open findings (280)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 34 |
-| 2 | Wrong content (says something other than the English) | 120 |
+| 2 | Wrong content (says something other than the English) | 123 |
 | 3 | Degraded language (grammar, spelling, terminology) | 89 |
 | 4 | Cosmetic (typography, spacing) | 29 |
 
@@ -462,11 +465,26 @@ _Nothing reported._
     - Source: `If the current page should have a service worker, you could look for errors in the <a>Console</a> or step through your service worker registration in the <span>Debugger</span>.`
     - Suggest: `service workernek`
     - The technology name is "service worker" and is spelled correctly everywhere else in this file (serviceworker-empty-intro2, serviceworker-worker-debug).
+- `inspector-emulation-panel-reduced-motion-no-preference` — `devtools/client/inspector.ftl` — The aria-label reverses the meaning: "Enable no preference for reduced motion emulation" is rendered as "turn off" the setting.
+    - Current: `aria-label: A mozgáscsökkentés-emuláció beállításának kikapcsolása`
+    - Source: `(value): No preference aria-label: Enable no preference for reduced motion emulation`
+    - Suggest: `aria-label: A „nincs beállítva” mozgáscsökkentés-emuláció engedélyezése`
+    - The en-US enables the "no preference" option of the reduced-motion emulation; the Hungarian says the setting is being disabled (kikapcsolása), which is the opposite action.
 - `inactive-css-not-display-block-on-floated` — `devtools/client/tooltips.ftl` — The CSS keyword value <strong>block</strong> was translated as "blokkolásra" ("to blocking").
     - Current: `A <strong>display</strong> értéket <strong>blokkolásra</strong> változtatta a motor`
     - Source: `The <strong>display</strong> value has been changed by the engine to <strong>block</strong> because the element is <strong>floated</strong>.`
     - Suggest: `A <strong>display</strong> értéket <strong>block</strong> értékre változtatta a motor`
     - The section comment says CSS properties and values in <strong> tags should not be translated; "blokkolásra" also means "blocking", not the display value.
+- `about-sync-log-page-header` — `toolkit/services/aboutSyncLog.ftl` — Heading "Sync logs" rendered as "Naplók szinkronizálása" ("Synchronizing logs").
+    - Current: `heading: Naplók szinkronizálása`
+    - Source: `description: Diagnostic logs written by sync. heading: Sync logs`
+    - Suggest: `heading: Szinkronizálási naplók`
+    - "Sync logs" names logs written by Sync (per the same string's description), not the act of synchronizing logs; also inconsistent with "szinkronizálási naplók" used in about-sync-log-empty.
+- `about-sync-log-title` — `toolkit/services/aboutSyncLog.ftl` — "Sync logs" (noun phrase) rendered as "Naplók szinkronizálása" ("Synchronizing logs"), an action rather than the logs of Sync.
+    - Current: `Naplók szinkronizálása`
+    - Source: `Sync logs`
+    - Suggest: `Szinkronizálási naplók`
+    - The en-US is a noun phrase naming the logs written by Sync (see about-sync-log-page-header description); the Hungarian turns it into a verbal phrase meaning "syncing the logs".
 - `btp-warning-tracker-classified` — `toolkit/toolkit/global/antiTracking.ftl` — "bounce tracker" was translated although the developer comment forbids it.
     - Current: `visszapattanás-követőnek lett besorolva`
     - Source: `{$gracePeriodSeconds ->} [other] “{ $siteHost }” has been classified as a bounce tracker. If it does not receive user activation within the next { $gracePeriodSeconds } seconds it will have its state purged.`
@@ -1034,19 +1052,19 @@ _Nothing reported._
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `A billentyűesemény nem érhető el GTK2 alatt: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (875 occurrences).
+    - The locale's quote convention is `polish-double` (876 occurrences).
 - `WinConflict2` — `dom/chrome/dom/dom.properties` — `WinConflict2` uses straight double quotes
     - Current: `A billentyűesemény nem érhető el egyes billentyűzetkiosztások esetén: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on some keyboard layouts: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (875 occurrences).
+    - The locale's quote convention is `polish-double` (876 occurrences).
 - `TooLargeDashedRadius` — `dom/chrome/layout/css.properties` — `TooLargeDashedRadius` uses straight double quotes
     - Current: `A szegélysugár túl nagy a "dashed" stílushoz (a korlát 100000px). Megjelenítés tömörként.`
     - Source: `Border radius is too large for ‘dashed’ style (the limit is 100000px). Rendering as solid.`
-    - The locale's quote convention is `polish-double` (875 occurrences).
+    - The locale's quote convention is `polish-double` (876 occurrences).
 - `TooLargeDottedRadius` — `dom/chrome/layout/css.properties` — `TooLargeDottedRadius` uses straight double quotes
     - Current: `A szegélysugár túl nagy a "dotted" stílushoz (a korlát 100000px). Megjelenítés tömörként.`
     - Source: `Border radius is too large for ‘dotted’ style (the limit is 100000px). Rendering as solid.`
-    - The locale's quote convention is `polish-double` (875 occurrences).
+    - The locale's quote convention is `polish-double` (876 occurrences).
 - `crashreporter-button-details` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-button-details` uses three dots where this locale uses …
     - Current: `Részletek...`
     - Source: `Details…`

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-27 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `caafd8e1597e` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcb4650bbefb` |
-| **Previous run** | 2026-08-25 @ `ad52f2a75880` |
+| **Generated** | 2026-08-31 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
+| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 41 of 18,180 |
+| **Strings reviewed this run** | 15 of 18,182 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,61 +18,36 @@ Also for es-AR: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (6)
+### 🆕 New findings (4)
 
 - `preventedConsoleClear` — `devtools/client/webconsole.properties` — `preventedConsoleClear` quotes “Registros presistentes” but the string it names, `webconsole.console.settings.menu.item.enablePersistentLogs.label`, reads “Registros persistentes”
     - Current: `console.clear() se evitó debido a “Registros presistentes”`
     - Source: `console.clear() was prevented due to “Persist Logs”`
     - Suggest: `Registros persistentes`
     - In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `webext-perms-header2` — `toolkit/toolkit/global/extensions.ftl` — "Agregár" is misspelled; the infinitive has no accent.
-    - Current: `Agregár { $extension }`
-    - Source: `Add { $extension }`
-    - Suggest: `Agregar { $extension }`
-    - en-US "Add { $extension }" — the Spanish infinitive is "agregar", without a written accent.
-- `serviceworker-list-aboutdebugging` — `devtools/client/application.ftl` — "domínios" is misspelled (Portuguese form); Spanish is "dominios".
-    - Current: `de otros domínios`
-    - Source: `Open <a>about:debugging</a> for Service Workers from other domains`
-    - Suggest: `de otros dominios`
-    - en-US "from other domains"; the correct Spanish spelling has no accent: "dominios".
-- `genai-prompts-quiz` — `browser/browser/genai.ftl` — Label "Quiz me" rendered as "Juguemos" ("Let's play"), losing the quiz meaning.
-    - Current: `label: Juguemos`
-    - Source: `label: Quiz me value: Please quiz me on this selection. Ask me a variety of types of questions, for example multiple choice, true or false, and short answer. Wait for my response before moving on to the next question.`
-    - Suggest: `label: Tomame una prueba`
-    - The en-US label "Quiz me" asks the AI to quiz the user; "Juguemos" means "let's play" and does not convey testing understanding, mismatching the prompt value that follows.
-- `about-sync-log-filter-date-all` — `toolkit/services/aboutSyncLog.ftl` — "All time" (date filter) translated as "Completo" instead of a time-range label.
-    - Current: `label: Completo`
-    - Source: `label: All time`
-    - Suggest: `label: Todo el tiempo`
-    - en-US "All time" is a date-range option meaning no date restriction; "Completo" ("complete") does not express a time range.
-- `preventedConsoleClear` — `devtools/client/webconsole.properties` — Misspelling of "persistentes" as "presistentes".
-    - Current: `Registros presistentes`
-    - Source: `console.clear() was prevented due to “Persist Logs”`
-    - Suggest: `Registros persistentes`
-    - "presistentes" is not a Spanish word; the correct spelling is "persistentes", and it must match the Persist Logs menu item label.
+- `printui-portrait-2` — `toolkit/toolkit/printing/printUI.ftl` — "Portrait" page orientation rendered as "Normal" instead of "Vertical".
+    - Current: `label: Normal`
+    - Source: `label: Portrait title: Portrait`
+    - Suggest: `label: Vertical`
+    - The en-US "Portrait" is the page orientation paired with "Landscape" ("Apaisada"); "Normal" does not name the orientation and is inconsistent with the standard es-AR term "Vertical".
+- `trademarkInfo` — `browser/branding/official/brand.ftl` — Brand name "Mozilla Foundation" translated as "Fundación Mozilla".
+    - Current: `Fundación Mozilla`
+    - Source: `Firefox and the Firefox logos are trademarks of the Mozilla Foundation.`
+    - Suggest: `Mozilla Foundation`
+    - "Mozilla Foundation" is the legal entity name in a trademark notice and must not be translated.
+- `share-panel-missing-device` — `browser/browser/sharePanel.ftl` — "Don’t See Your Device?" translated impersonally as "¿No se puede ver el dispositivo?" (can't the device be seen?).
+    - Current: `¿No se puede ver el dispositivo?`
+    - Source: `label: Don’t See Your Device?`
+    - Suggest: `¿No ve su dispositivo?`
+    - The en-US addresses the user about their own device not appearing in the list; the target states that the device cannot be seen, changing the meaning and losing the possessive reference.
 
-### ✅ Fixed since the last run (4)
+### ✅ Fixed since the last run (1)
 
-- `appmenu-nova-switch-device-promo` — `browser/browser/appmenu.ftl` — Voseo «Llevate … con vos» in the app menu, which uses usted elsewhere.
-    - Current: `¡Llevate { -brand-short-name } con vos!`
-    - Source: `message: Getting a new device soon? Take { -brand-short-name } with you!`
-    - Suggest: `¡Lleve { -brand-short-name } con usted!`
-    - Surrounding app-menu strings use usted («Administre», «Proteja y acceda a sus marcadores»).
-- `link-preview-optin-message` — `browser/browser/genai.ftl` — Adds "solo" (only), asserting exclusivity the source does not state.
-    - Current: `esto solo ocurre en su dispositivo`
-    - Source: `{ -brand-short-name } uses AI to read the beginning of the page and generate a few key points. To prioritize your privacy, this happens on your device.`
-    - Suggest: `esto ocurre en su dispositivo`
-    - The en-US says "this happens on your device" without "only"; the addition makes a stronger privacy claim than the source.
-- `genai-prompts-quiz` — `browser/browser/genai.ftl` — Label "Quiz me" rendered as "Juguemos" ("Let's play"), losing the quiz meaning.
-    - Current: `label: Juguemos`
-    - Source: `label: Quiz me value: Please quiz me on this selection. Ask me a variety of types of questions, for example multiple choice, true or false, and short answer. Wait for my response before moving on to the next question.`
-    - Suggest: `label: Tomame una prueba`
-    - The en-US label "Quiz me" asks the AI to quiz the user; "Juguemos" means "let's play" and does not convey testing understanding, mismatching the prompt value that follows.
-- `preventedConsoleClear` — `devtools/client/webconsole.properties` — `preventedConsoleClear` quotes “Registros presistentes” but the string it names, `webconsole.console.settings.menu.item.enablePersistentLogs.label`, reads “Registros persistentes”
-    - Current: `console.clear() se evitó debido a “Registros presistentes”`
-    - Source: `console.clear() was prevented due to “Persist Logs”`
-    - Suggest: `Registros persistentes`
-    - In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `share-panel-missing-device` — `browser/browser/sharePanel.ftl` — "Don’t See Your Device?" translated impersonally as "¿No se puede ver el dispositivo?" (can't the device be seen?).
+    - Current: `¿No se puede ver el dispositivo?`
+    - Source: `label: Don’t See Your Device?`
+    - Suggest: `¿No ve su dispositivo?`
+    - The en-US addresses the user about their own device not appearing in the list; the target states that the device cannot be seen, changing the meaning and losing the possessive reference.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -82,9 +57,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `appmenuitem-vpn-description3` — `browser/browser/appmenu.ftl` — Inconsistent verb form: infinitive imperative expected as in the sibling description, but conjugated "Hace" is used.
+    - Current: `Hace que la navegación sea más difícil de rastrear`
+    - Suggest: `Hacer que la navegación sea más difícil de rastrear`
+    - Parallel string appmenuitem-vpn-description5 uses the infinitive ("Obtener…"); en-US "Make your browsing harder to trace" is an imperative/infinitive, not third-person present.
 
 ---
 
@@ -93,8 +71,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 362 |
-| Strings | 18,180 |
-| Missing strings | 30 |
+| Strings | 18,182 |
+| Missing strings | 37 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -111,17 +89,20 @@ _Nothing retired._
 
 ### Completeness
 
-**30 strings** are not translated yet, concentrated in:
+**37 strings** are not translated yet, concentrated in:
 
 - `browser/browser/newtab/newtab.ftl` — 10
 - `toolkit/toolkit/about/url-classifier.ftl` — 6
+- `browser/browser/preferences/preferences.ftl` — 5
 - `browser/browser/featureCallout.ftl` — 4
 - `browser/browser/appmenu.ftl` — 3
-- `browser/browser/preferences/preferences.ftl` — 3
+- `browser/browser/sharePanel.ftl` — 3
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 1
 - `toolkit/toolkit/about/aboutAddons.ftl` — 1
 - `toolkit/toolkit/global/processTypes.ftl` — 1
 - `toolkit/services/aboutSyncLog.ftl` — 1
 - `browser/browser/newtab/asrouter.ftl` — 1
+- `browser/browser/preferences/formAutofill.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -146,14 +127,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (306)
+## 3. Open findings (307)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 53 |
-| 2 | Wrong content (says something other than the English) | 123 |
-| 3 | Degraded language (grammar, spelling, terminology) | 89 |
+| 2 | Wrong content (says something other than the English) | 125 |
+| 3 | Degraded language (grammar, spelling, terminology) | 88 |
 | 4 | Cosmetic (typography, spacing) | 35 |
 
 ### A. Functional, markup, variables & plurals
@@ -458,6 +439,11 @@ _Nothing reported._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `trademarkInfo` — `browser/branding/official/brand.ftl` — Brand name "Mozilla Foundation" translated as "Fundación Mozilla".
+    - Current: `Fundación Mozilla`
+    - Source: `Firefox and the Firefox logos are trademarks of the Mozilla Foundation.`
+    - Suggest: `Mozilla Foundation`
+    - "Mozilla Foundation" is the legal entity name in a trademark notice and must not be translated.
 - `restore-page-show-tabs` — `browser/browser/aboutSessionRestore.ftl` — "View" translated as "Mostrar" (show) instead of "Ver".
     - Current: `Mostrar pestañas anteriores`
     - Source: `View Previous Tabs`
@@ -498,11 +484,6 @@ _Nothing reported._
     - Source: `Oblast`
     - Suggest: `Óblast`
     - The developer comment identifies this as the primary administrative division used in Russia and Ukraine; an óblast is not an autonomous province, and neighbouring entries (Do/Si, Eircode, Townland) keep the local term.
-- `share-panel-missing-device` — `browser/browser/sharePanel.ftl` — "Don’t see your device?" is rendered as an impersonal "Can't the device be seen?" instead of addressing the user.
-    - Current: `¿No se puede ver el dispositivo?`
-    - Source: `label: Don’t see your device?`
-    - Suggest: `¿No ve su dispositivo?`
-    - The en-US asks the user directly whether they see their device; the translation turns it into an impersonal passive construction and loses the possessive reference to the user's device.
 - `DrawWindowCanvasRenderingContext2DWarning` — `dom/chrome/dom/dom.properties` — The API name tabs.captureTab was translated to “pestañas.captureTab”.
     - Current: `Usar las pestañas.captureTab extensions API en lugar de`
     - Source: `Use of drawWindow method from CanvasRenderingContext2D is deprecated. Use tabs.captureTab extensions API instead https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/tabs/captureTab`
@@ -628,14 +609,14 @@ _Nothing reported._
     - Source: `Eswatini`
     - Suggest: `region-name-sz-2019 = Esuatini`
     - en-US is "Eswatini"; the -2019 key suffix exists precisely because the country was renamed, so the old name is now the wrong name.
+- `printui-portrait-2` — `toolkit/toolkit/printing/printUI.ftl` — "Portrait" page orientation rendered as "Normal" instead of "Vertical".
+    - Current: `label: Normal`
+    - Source: `label: Portrait title: Portrait`
+    - Suggest: `label: Vertical`
+    - The en-US "Portrait" is the page orientation paired with "Landscape" ("Apaisada"); "Normal" does not name the orientation and is inconsistent with the standard es-AR term "Vertical".
 
 ### C. Grammar, agreement & spelling
 
-- `appmenuitem-vpn-description3` — `browser/browser/appmenu.ftl` — Inconsistent verb form: infinitive imperative expected as in the sibling description, but conjugated "Hace" is used.
-    - Current: `Hace que la navegación sea más difícil de rastrear`
-    - Source: `Make your browsing harder to trace`
-    - Suggest: `Hacer que la navegación sea más difícil de rastrear`
-    - Parallel string appmenuitem-vpn-description5 uses the infinitive ("Obtener…"); en-US "Make your browsing harder to trace" is an imperative/infinitive, not third-person present.
 - `migration-no-selected-data-label` — `browser/browser/migrationWizard.ftl` — Accented "sé" used instead of the reflexive pronoun "se".
     - Current: `No sé seleccionaron datos a importar`
     - Source: `No data selected for import`
@@ -931,7 +912,12 @@ _Nothing reported._
     - Source: `A call to document.write() from an asynchronously-loaded external script was ignored.`
     - Suggest: `fue ignorada`
     - Misspelling of “ignorada”. The same typo appears in IgnoringWillChangeOverBudgetWarning (“ingoradas”).
-- _…and 36 more; see `state/` for the full list._
+- `FormValidationDateTimeRangeUnderflow` — `dom/chrome/dom/dom.properties` — Typo “Seleccone”.
+    - Current: `Seleccone un valor que no sea anterior a %S.`
+    - Source: `Please select a value that is no earlier than %S.`
+    - Suggest: `Seleccione un valor que no sea anterior a %S.`
+    - Misspelling of “Seleccione” in a form-validation bubble shown to end users.
+- _…and 35 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -955,6 +941,11 @@ _Nothing reported._
     - Source: `Right click an element in the %S and select “Break on…” to add a breakpoint`
     - Suggest: `Interrumpir en…`
     - In the source this string quotes “Break on…”, which is exactly the value of `watchpoints.submenu` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `preventedConsoleClear` — `devtools/client/webconsole.properties` — `preventedConsoleClear` quotes “Registros presistentes” but the string it names, `webconsole.console.settings.menu.item.enablePersistentLogs.label`, reads “Registros persistentes”
+    - Current: `console.clear() se evitó debido a “Registros presistentes”`
+    - Source: `console.clear() was prevented due to “Persist Logs”`
+    - Suggest: `Registros persistentes`
+    - In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `preventedConsoleClear` — `devtools/shared/webconsole.properties` — `preventedConsoleClear` quotes “Registros presistentes” but the string it names, `webconsole.console.settings.menu.item.enablePersistentLogs.label`, reads “Registros persistentes”
     - Current: `console.clear() se evitó debido a “Registros presistentes”`
     - Source: `console.clear() was prevented due to “Persist Logs”`
@@ -1239,10 +1230,10 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 
 ### Fixed to date (139)
 
+- `share-panel-missing-device` — `browser/browser/sharePanel.ftl` — fixed 2026-08-31
 - `appmenu-nova-switch-device-promo` — `browser/browser/appmenu.ftl` — fixed 2026-08-27
 - `genai-prompts-quiz` — `browser/browser/genai.ftl` — fixed 2026-08-27
 - `link-preview-optin-message` — `browser/browser/genai.ftl` — fixed 2026-08-27
-- `preventedConsoleClear` — `devtools/client/webconsole.properties` — fixed 2026-08-27
 - `about-logins-breach-alert-date` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-25
 - `about-logins-confirm-remove-all-dialog-message2` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-25
 - `pocket-panel-saved-error-only-links` — `browser/browser/aboutPocket.ftl` — fixed 2026-08-25
