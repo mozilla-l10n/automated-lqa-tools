@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `a2ecb0a822be` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `a2ecb0a822be` |
-| **Previous run** | 2026-08-22 @ `112744e9d020` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `117165baae4c` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `117165baae4c` |
+| **Previous run** | 2026-08-24 @ `a2ecb0a822be` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 1,883 |
+| **Strings reviewed this run** | 1 of 1,884 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,13 +22,9 @@ Also for es-MX: [android](android.md) · [firefox](firefox.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `Settings.Notifications.SystemNotificationsDisabledMessage.v112` — `es-MX/firefox-ios.xliff` — A stray "$" character was appended after the final placeholder, which corrupts the placeholder/output.
-    - Current: `> %2$@$`
-    - Source: `You turned off all %1$@ notifications. Turn them on by going to device Settings > Notifications > %2$@`
-    - Suggest: `> %2$@`
-    - The en-US string ends with "%2$@"; the extra trailing "$" is not in the source and will render as a stray character or break placeholder parsing.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -49,10 +45,11 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 95 |
-| Strings | 1,883 |
-| Missing strings | 27 |
+| Strings | 1,884 |
+| Missing strings | 34 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | printf placeholder mismatches | 0 |
@@ -62,11 +59,17 @@ _Nothing retired._
 
 ### Completeness
 
-**27 strings** are not translated yet, concentrated in:
+**34 strings** are not translated yet, concentrated in:
 
-- `es-MX/firefox-ios.xliff` — 15
+- `es-MX/firefox-ios.xliff` — 18
 - `es-MX/firefox-ios.xliff` — 6
 - `es-MX/firefox-ios.xliff` — 6
+- `Shared/Supporting Files/en.lproj/GoogleLens.strings` — 2
+- `es-MX/firefox-ios.xliff` — 2
+
+**Files absent from the locale:**
+
+- `Shared/Supporting Files/en.lproj/GoogleLens.strings`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

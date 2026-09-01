@@ -365,6 +365,10 @@
   "CloseTab.ArrivingNotification.title.v133": "d5ede7f9 5c5f7c74",
   "CloseTab.ViewAction.title.v133": "5d1ea2dc 51b02228"
  },
+ "Shared/Supporting Files/en.lproj/GoogleLens.strings": {
+  "GoogleLens.Interstitial.CancelButtonTitle.v156": "f5780ff6 871d661d f5bd6a91",
+  "GoogleLens.Interstitial.LoadingLabel.v156": "faa2849e e1cb271c 3e2797c0"
+ },
  "Shared/Supporting Files/en.lproj/JumpBackIn.strings": {
   "ContextualHints.FirefoxHomepage.JumpBackIn.PersonalizedHome": "d993d2fd 7bf57d6a",
   "ContextualHints.FirefoxHomepage.JumpBackIn.SyncedTab.v106": "ce16dcd3 798a6f52"
@@ -593,6 +597,7 @@
   "NativeErrorPage.Wayback.Error.NotFound.v155": "55d0a8c0 b050f278",
   "NativeErrorPage.Wayback.Error.Retry.v154": "2c90d8b1 67f53444",
   "NativeErrorPage.Wayback.Error.Search.v155": "66bc04f1 50fdc79d",
+  "NativeErrorPage.Wayback.Error.SearchWayback.v155": "1463910f 55e56d2c 4d9c8e7f",
   "NativeErrorPage.Wayback.Error.Title.v154": "bb748190 09fe4418",
   "NativeErrorPage.Wayback.Error.WaybackButtonA11yHint.v154": "10f2f9cd 5c853c83"
  },
@@ -904,6 +909,7 @@
   "Settings.Browsing.AdBlocker.Description.v155": "04e04124 7262855c",
   "Settings.Browsing.AdBlocker.LearnMore.v155": "3be01098 d9b20450",
   "Settings.Browsing.AdBlocker.Title.v155": "9e36847d ef07e8df",
+  "Settings.Browsing.BackgroundAudio.Title.v156": "86edf533 6278d19e af8f6ede",
   "Settings.Browsing.BlockAds.Title.v153": "9148a0d5 2aa7bbf1",
   "Settings.Browsing.Content.v153": "60642e7a 6fcb7eb2",
   "Settings.Browsing.Links.v137": "e2872800 a0ba743c",
@@ -917,6 +923,7 @@
   "Settings.DailyUsagePing.Message.v135": "28a8da7c b9566ed2",
   "Settings.DailyUsagePing.Title.v135": "737b6142 6f077d8c",
   "Settings.FxA.Title.v119": "0539b2c0 f38ba9ee",
+  "Settings.Home.Option.Wallpaper.WrexhamBrandTitle.v155": "67eef2a3 67eef2a3 ef2597bc",
   "Settings.Notifications.SyncNotificationsStatus.v112": "c1c21e50 16de91cb",
   "Settings.Notifications.SyncNotificationsTitle.v112": "8eb077a3 3b108303",
   "Settings.Notifications.SystemNotificationsDisabledMessage.v112": "cb9f9573 cc10fefb",
@@ -1167,6 +1174,7 @@
   "WebCompatReporter.Category.VideoOrAudio.v154": "67bbd067 6d872e60",
   "WebCompatReporter.Fields.DetailsAccessibilityLabel.v154": "e2944160 8ca4df18",
   "WebCompatReporter.Fields.DetailsPlaceholder.v154": "23179ba4 34d53241",
+  "WebCompatReporter.Fields.URLError.v155": "1a069961 093d858c d6c318ef",
   "WebCompatReporter.Fields.URLLabel.v154": "c73efe84 c73efe84",
   "WebCompatReporter.Fields.URLPlaceholder.v154": "c73efe84 c73efe84",
   "WebCompatReporter.IssueSection.CategoryPlaceholder.v154": "09dbb4b3 56a75088",

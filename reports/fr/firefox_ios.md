@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `a2ecb0a822be` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `a2ecb0a822be` |
-| **Previous run** | 2026-08-22 @ `112744e9d020` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `117165baae4c` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `117165baae4c` |
+| **Previous run** | 2026-08-24 @ `a2ecb0a822be` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 1,910 |
+| **Strings reviewed this run** | 8 of 1,918 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for fr: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `WebCompatReporter.Fields.ChooseIssueTypeAccessibilityHint.v156` — `fr/firefox-ios.xliff` — "issue type" rendered as "type de ticket", inconsistent with "type de problème" used for the same term in the sibling string.
+    - Current: `Choisir d’abord un type de ticket`
+    - Source: `Choose an issue type first`
+    - Suggest: `Choisir d’abord un type de problème`
+    - The en-US "issue type" is translated "type de problème" in WebCompatReporter.Fields.ChooseSubOptionAccessibilityHint.v156 on the same form; "ticket" introduces a support-ticket concept absent from the source.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +48,12 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 95 |
-| Strings | 1,910 |
+| Files | 96 |
+| Strings | 1,918 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | printf placeholder mismatches | 0 |
@@ -67,11 +72,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 18 | **guillemet** |
-| apostrophe | `typographic` 356 | **typographic** |
-| ellipsis | `char` 20 | **char** |
+| apostrophe | `typographic` 358 | **typographic** |
+| ellipsis | `char` 21 | **char** |
 | dash | `em` 3, `en` 1 | **em** |
 | nbsp | `total` 152, `before-punctuation` 94 | _mixed_ |
-| register | `formal` 284 | **formal** |
+| register | `formal` 285 | **formal** |
 
 ---
 
@@ -81,14 +86,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (44)
+## 3. Open findings (45)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 29 |
-| 3 | Degraded language (grammar, spelling, terminology) | 13 |
+| 3 | Degraded language (grammar, spelling, terminology) | 14 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
@@ -308,6 +313,11 @@ _Nothing in this category._
     - Source: `Error summarizing page. Try again later.`
     - Suggest: `Erreur lors du résumé de la page.`
     - Terminology inconsistency within the same screen: the feature is consistently called « résumé »/« résumer » in the other Summarizer strings.
+- `WebCompatReporter.Fields.ChooseIssueTypeAccessibilityHint.v156` — `fr/firefox-ios.xliff` — "issue type" rendered as "type de ticket", inconsistent with "type de problème" used for the same term in the sibling string.
+    - Current: `Choisir d’abord un type de ticket`
+    - Source: `Choose an issue type first`
+    - Suggest: `Choisir d’abord un type de problème`
+    - The en-US "issue type" is translated "type de problème" in WebCompatReporter.Fields.ChooseSubOptionAccessibilityHint.v156 on the same form; "ticket" introduces a support-ticket concept absent from the source.
 - `Search.ThirdPartyEngines.FormErrorTitle` — `fr/firefox-ios.xliff` — "Failed" translated as "Erreur" here while the identical source string is "Échec" in the sibling strings on the same screen.
     - Current: `Erreur`
     - Source: `Failed`

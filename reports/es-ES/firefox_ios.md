@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `a2ecb0a822be` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `a2ecb0a822be` |
-| **Previous run** | 2026-08-22 @ `112744e9d020` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `117165baae4c` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `117165baae4c` |
+| **Previous run** | 2026-08-24 @ `a2ecb0a822be` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,815 |
+| **Strings reviewed this run** | 103 of 1,916 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,23 @@ Also for es-ES: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `Settings.Search.GoogleLens.Footnote.v153` — `es-ES/firefox-ios.xliff` — "enabled above" mistranslated as "activado en la parte superior" (activated at the top).
+    - Current: `cuando Google está activado en la parte superior`
+    - Source: `Available only when Google is enabled above and is your active search engine while browsing.`
+    - Suggest: `cuando Google está activado más arriba`
+    - The source means Google is enabled in the setting above this one, not that it is 'activated at the top' of something.
+- `WebCompatReporter.Preview.Data.TrackingProtectionSetting.v155` — `es-ES/firefox-ios.xliff` — Agreement error: "mejorada" modifies "protección" instead of forming the product term "Protección contra el rastreo mejorada" — as written it reads as 'enhanced setting'... actually the adjective is misplaced relative to "Configuración".
+    - Current: `Configuración de protección contra el rastreo mejorada para este sitio`
+    - Source: `Enhanced Tracking Protection setting for this site`
+    - Suggest: `Configuración de la protección antirrastreo mejorada para este sitio`
+    - "mejorada" can be read as agreeing with "Configuración", making it "enhanced setting" rather than "Enhanced Tracking Protection"; the established Firefox term is "Protección antirrastreo mejorada".
+- `WebCompatReporter.SubOption.NoVideo.v154` — `es-ES/firefox-ios.xliff` — "video" is missing the accent used in es-ES and in the sibling string.
+    - Current: `No hay video`
+    - Source: `There is no video`
+    - Suggest: `No hay vídeo`
+    - es-ES uses "vídeo"; the related string WebCompatReporter.SubOption.PlaybackFails uses "El vídeo", so this is inconsistent and incorrect for Spain.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +58,12 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 91 |
-| Strings | 1,815 |
-| Missing strings | 95 |
+| Files | 96 |
+| Strings | 1,916 |
+| Missing strings | 2 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 4 |
+| Files absent from the locale | 0 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | printf placeholder mismatches | 0 |
@@ -58,27 +73,9 @@ _Nothing retired._
 
 ### Completeness
 
-**95 strings** are not translated yet, concentrated in:
+**2 strings** are not translated yet, concentrated in:
 
-- `Shared/Supporting Files/en.lproj/WebCompatReporter.strings` — 49
-- `es-ES/firefox-ios.xliff` — 11
-- `es-ES/firefox-ios.xliff` — 9
-- `Shared/Supporting Files/en.lproj/PrivacyDashboard.strings` — 7
-- `es-ES/firefox-ios.xliff` — 5
-- `es-ES/firefox-ios.xliff` — 3
-- `es-ES/firefox-ios.xliff` — 3
 - `es-ES/firefox-ios.xliff` — 2
-- `es-ES/firefox-ios.xliff` — 2
-- `es-ES/firefox-ios.xliff` — 1
-- `es-ES/firefox-ios.xliff` — 1
-- `Shared/Supporting Files/en.lproj/Camera.strings` — 1
-
-**Files absent from the locale:**
-
-- `Shared/Supporting Files/en.lproj/Camera.strings`
-- `Shared/Supporting Files/en.lproj/PrivacyDashboard.strings`
-- `Shared/Supporting Files/en.lproj/WebCompatReporter.strings`
-- `Shared/Supporting Files/en.lproj/WebContextMenu.strings`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -90,10 +87,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `straight-double` 6, `curly-double` 4, `curly-single` 2 | _mixed_ |
 | apostrophe | `typographic` 2 | **typographic** |
-| ellipsis | `char` 17 | **char** |
+| ellipsis | `char` 22 | **char** |
 | dash | `em` 1 | **em** |
 | inverted marks | `open-question` 41, `open-exclamation` 8 | **open-question** |
-| register | `informal` 139, `formal` 4 | **informal** |
+| register | `informal` 153, `formal` 4 | **informal** |
 
 ---
 
@@ -103,14 +100,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (48)
+## 3. Open findings (51)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 26 |
-| 3 | Degraded language (grammar, spelling, terminology) | 19 |
+| 2 | Wrong content (says something other than the English) | 27 |
+| 3 | Degraded language (grammar, spelling, terminology) | 21 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
@@ -148,6 +145,11 @@ _Nothing reported._
     - Source: `Data about your device, hardware configuration, and how you use %1$@ helps improve features, performance, and stability for everyone. %2$@`
     - Suggest: `para todo el mundo`
     - The en-US text says the data helps improve features, performance and stability "for everyone"; the Spanish adds a geographic claim ("users all over the world") that the source does not make.
+- `Settings.Search.GoogleLens.Footnote.v153` — `es-ES/firefox-ios.xliff` — "enabled above" mistranslated as "activado en la parte superior" (activated at the top).
+    - Current: `cuando Google está activado en la parte superior`
+    - Source: `Available only when Google is enabled above and is your active search engine while browsing.`
+    - Suggest: `cuando Google está activado más arriba`
+    - The source means Google is enabled in the setting above this one, not that it is 'activated at the top' of something.
 - `Summarizer.Error.MissingPageContent.Message.v142` — `es-ES/firefox-ios.xliff` — "hit summarize" is rendered as "haz clic en Resumir" (click), which is wrong on a touch-only iOS device.
     - Current: `haz clic en Resumir`
     - Source: `Page is still loading. Wait for it to finish, then hit summarize.`
@@ -261,6 +263,16 @@ _Nothing reported._
     - Source: `You turned off all %1$@ notifications. Turn them on by going to device Settings > Notifications > %2$@`
     - Suggest: `Actívalas en Ajustes del dispositivo`
     - The source says "Turn them on by going to device Settings"; "en a" is not valid Spanish.
+- `WebCompatReporter.Preview.Data.TrackingProtectionSetting.v155` — `es-ES/firefox-ios.xliff` — Agreement error: "mejorada" modifies "protección" instead of forming the product term "Protección contra el rastreo mejorada" — as written it reads as 'enhanced setting'... actually the adjective is misplaced relative to "Configuración".
+    - Current: `Configuración de protección contra el rastreo mejorada para este sitio`
+    - Source: `Enhanced Tracking Protection setting for this site`
+    - Suggest: `Configuración de la protección antirrastreo mejorada para este sitio`
+    - "mejorada" can be read as agreeing with "Configuración", making it "enhanced setting" rather than "Enhanced Tracking Protection"; the established Firefox term is "Protección antirrastreo mejorada".
+- `WebCompatReporter.SubOption.NoVideo.v154` — `es-ES/firefox-ios.xliff` — "video" is missing the accent used in es-ES and in the sibling string.
+    - Current: `No hay video`
+    - Source: `There is no video`
+    - Suggest: `No hay vídeo`
+    - es-ES uses "vídeo"; the related string WebCompatReporter.SubOption.PlaybackFails uses "El vídeo", so this is inconsistent and incorrect for Spain.
 - `DefaultBrowserOnboarding.Screenshot` — `es-ES/firefox-ios.xliff` — Gender agreement error: "predeterminado" should agree with "aplicación".
     - Current: `Aplicación de navegador predeterminado`
     - Source: `Default Browser App`
