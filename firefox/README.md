@@ -36,9 +36,13 @@ and wrong content — is the queue worth working through first.
 
 ## Running it
 
-Manual dispatch: **Actions → Firefox l10n QA → Run workflow**. Pick locales
-(or `all`), and use `dry_run` the first time to see what it would do. The
-daily schedule is present in the workflow but commented out.
+It runs itself every Monday morning, 07:05 UTC — 09:05 in Rome in summer,
+08:05 in winter, because GitHub cron has no timezone. A scheduled run passes
+no inputs, so it is `all` locales in `auto` mode.
+
+To run it out of turn: **Actions → Firefox l10n QA → Run workflow**. Pick
+locales (or `all`), and use `dry_run` to see what it would do without
+writing.
 
 Results arrive as a pull request on the branch `l10n-qa/firefox`. The branch
 is reused, so successive runs add commits to the same open PR rather than

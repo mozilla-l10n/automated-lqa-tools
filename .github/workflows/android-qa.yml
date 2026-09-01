@@ -1,16 +1,20 @@
 name: Android l10n QA
 
-# Manual dispatch only for now. Uncomment the schedule below once a few runs
-# have been watched; the pipeline is already safe to run unattended.
+# Weekly, Monday morning, and on demand.
 #
 # Separate from the Firefox workflow on purpose: different reviewers, a
 # different repository, and its own pull request on l10n-qa/android, so
 # neither team has to read the other's findings.
 #
-# Monthly rather than daily: findings are a backlog a locale team works
-# through over weeks, not a build to babysit. A month of Pontoon syncs is
+# Weekly rather than daily: findings are a backlog a locale team works
+# through over weeks, not a build to babysit. A week of Pontoon syncs is
 # still a small delta next to the 18,000 strings in a locale, and the pull
 # request is cumulative anyway, so nothing is lost by looking less often.
+# Monday morning so the queue is there when the week starts.
+#
+# The three projects are twenty minutes apart rather than fired together:
+# each one fans out over its own locales, and they share one API key and
+# one pool of runners.
 on:
   workflow_dispatch:
     inputs:
@@ -34,8 +38,10 @@ on:
         required: false
         default: false
         type: boolean
-  # schedule:
-  #   - cron: '43 5 1 * *'   # 1st of the month, 05:43 UTC
+  schedule:
+    - cron: '45 7 * * 1'   # Monday, 07:45 UTC
+      # UTC: GitHub cron has no timezone, so this is an hour later
+      # in Rome over the summer than it is in the winter.
 
 concurrency:
   # Runs push to a shared branch, so never let two overlap.
@@ -81,7 +87,7 @@ jobs:
           print("locales=" + json.dumps(picked))
           PY
         env:
-          REQUESTED: ${{ inputs.locales }}
+          REQUESTED: ${{ inputs.locales || 'all' }}
 
   review:
     needs: plan
@@ -148,7 +154,7 @@ jobs:
         run: |
           python lib/run.py --project android \
             --locale '${{ matrix.locale }}' \
-            --mode '${{ inputs.mode }}' \
+            --mode '${{ inputs.mode || 'auto' }}' \
             --l10n-dir work/l10n \
             --source-dir work/l10n \
             ${{ inputs.dry_run && '--dry-run' || '' }} \
@@ -253,13 +259,13 @@ jobs:
           git push --force-with-lease origin "$BRANCH"
           echo 'changed=true' >> "$GITHUB_OUTPUT"
         env:
-          INPUTS_LOCALES: ${{ inputs.locales }}
+          INPUTS_LOCALES: ${{ inputs.locales || 'all' }}
 
       - name: Open or update the pull request
         if: steps.commit.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
-          INPUTS_LOCALES: ${{ inputs.locales }}
+          INPUTS_LOCALES: ${{ inputs.locales || 'all' }}
         run: |
           set -euo pipefail
           # The body leads with the two things that cannot wait for the

@@ -242,6 +242,20 @@ def run(suite) -> None:
           "but a snapshot written before comments were tracked re-reviews nothing")
 
     # --- what the site publishes -----------------------------------------
+    suite.section("A finding's details nest under it on the published page")
+    # Python-Markdown flattens a two-space nested list, so the quoted string
+    # and the suggestion came out as siblings of the finding rather than
+    # under it. Pinned for both renderers: the per-locale report was fixed
+    # for this first and the cross-locale summary kept its own indent.
+    import summary as summary_mod
+    f = Finding(locale="it", file="a.ftl", string_id="s", category="B",
+                summary="wrong word", current="valore", suggest="corretto")
+    for label, text in (("locale report", report._item(f, report.Ctx())),
+                        ("summary and PR body", summary_mod._one(f, "it"))):
+        rendered = _render(text)
+        check(rendered.count("<ul>") == 2,
+              f"the details are one list inside the finding's own ({label})")
+
     suite.section("A translation cannot inject active content")
     payload = 'x` [click](javascript:alert(1)) ![p](https://evil.example/t.png)'
     for value in ("a`b", "``x``", "`lead", "trail`"):

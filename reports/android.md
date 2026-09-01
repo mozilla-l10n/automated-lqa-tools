@@ -14,9 +14,9 @@ Counts come from `state/`, not from the rendered reports, so they always reflect
 The translation makes the product assert something the en-US never said. Nothing here says the change was intended — that cannot be read off the text, which is exactly the problem, because a user cannot read it off either.
 
 - **`ru`** `mozac_summarize_paywalled_content_error_title` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values/strings.xml`
-  - The error title no longer says summarization is impossible; it instead asserts that the full content is paid-only.
-  - Current: `Полное содержимое доступно только платно`
-  - Suggest: `Не удалось создать резюме содержимого за платной подпиской`
+    - The error title no longer says summarization is impossible; it instead asserts that the full content is paid-only.
+    - Current: `Полное содержимое доступно только платно`
+    - Suggest: `Не удалось создать резюме содержимого за платной подпиской`
 
 ### Broken output — impact 1 (2)
 
@@ -25,11 +25,11 @@ The value does not render as intended: a blank string, broken markup, a variable
 `cs` 2
 
 - **`cs`** `create_collection_save_to_collection_tab_selected` — `mozilla-mobile/fenix/app/src/main/res/values/strings.xml`
-  - `create_collection_save_to_collection_tab_selected` has placeholders none where the source has %1$d
-  - Current: `Vybrán jeden panel`
+    - `create_collection_save_to_collection_tab_selected` has placeholders none where the source has %1$d
+    - Current: `Vybrán jeden panel`
 - **`cs`** `recently_closed_tab` — `mozilla-mobile/fenix/app/src/main/res/values/strings.xml`
-  - `recently_closed_tab` has placeholders none where the source has %1$d
-  - Current: `Jeden panel`
+    - `recently_closed_tab` has placeholders none where the source has %1$d
+    - Current: `Jeden panel`
 
 ### Wrong content — impact 2 (1213)
 

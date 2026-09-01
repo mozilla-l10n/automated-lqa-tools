@@ -65,12 +65,24 @@ def _code(text: str, limit: int = 200) -> str:
 
 
 def _one(f, locale: str) -> str:
-    """One finding, self-contained: the PR body has no report around it."""
-    bits = [f"- **`{locale}`** `{f.string_id}` — `{f.file}`\n  - {f.summary}"]
+    """One finding, self-contained: the PR body has no report around it.
+
+    Detail lines are indented with :data:`report.SUB`, not two spaces, for
+    the reason given where it is defined: Python-Markdown flattens a
+    two-space nested list, so on the published page the finding, its quoted
+    string and its suggestion all came out as siblings. The per-locale
+    reports were fixed for this; these two pages -- the cross-locale summary
+    and the pull request body -- share the renderer and must share the
+    indent with it.
+    """
+    bits = [
+        f"- **`{locale}`** `{f.string_id}` — `{f.file}`"
+        f"\n{report.SUB}{f.summary}"
+    ]
     if f.current:
-        bits.append(f"  - Current: {_code(f.current)}")
+        bits.append(f"{report.SUB}Current: {_code(f.current)}")
     if f.suggest and f.suggest != f.current:
-        bits.append(f"  - Suggest: {_code(f.suggest)}")
+        bits.append(f"{report.SUB}Suggest: {_code(f.suggest)}")
     return "\n".join(bits)
 
 
