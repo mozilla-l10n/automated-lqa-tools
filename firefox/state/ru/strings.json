@@ -130,7 +130,7 @@
   "about-logins-import-dialog-items-modified": "983722c9 58fd4519",
   "about-logins-import-dialog-items-modified2": "ca66313e 2d5561f3",
   "about-logins-import-dialog-items-no-change": "da583ce9 83e5692b",
-  "about-logins-import-dialog-items-no-change2": "41b8398d 4fb2bb78",
+  "about-logins-import-dialog-items-no-change2": "383b38b3 4fb2bb78",
   "about-logins-import-dialog-title": "623cf96f 25fb4563",
   "about-logins-import-file-picker-csv-filter-title": "5201cf98 8b35c295",
   "about-logins-import-file-picker-import-button": "9694e91b 18e6fc9b",
@@ -2918,7 +2918,7 @@
   "genai-settings-chat-chatgpt-links": "fafe0efe 3fb8b314",
   "genai-settings-chat-claude-links": "9167890e 37c27e62",
   "genai-settings-chat-copilot-links": "4ac2a4dd c663f6cb",
-  "genai-settings-chat-gemini-links": "f91b7536 896208d8",
+  "genai-settings-chat-gemini-links": "34c1e41d 896208d8",
   "genai-settings-chat-huggingchat-links": "01ca7a9c 7e05e85f",
   "genai-settings-chat-lechat-links": "a07350b5 b2515065",
   "genai-settings-chat-lechat-links-2": "93d36339 aa05367e",
@@ -8027,7 +8027,7 @@
   "existing-user-tou-accept": "c1f7a9a8 9da87112",
   "existing-user-tou-learn-more": "f48f6286 d9b20450",
   "existing-user-tou-message": "4f2d1e03 885dc0c3",
-  "tou-existing-user-spotlight-body": "3680d0af f1500a0c",
+  "tou-existing-user-spotlight-body": "9bcd03c0 f1500a0c 060d5a8e",
   "tou-existing-user-spotlight-remind-me-later": "b60a0805 01405ce5"
  },
  "browser/browser/textRecognition.ftl": {

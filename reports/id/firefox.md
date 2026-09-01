@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-31 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bcd40327226f` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
+| **Previous run** | 2026-08-31 @ `67b14d26eb36` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 29 of 15,531 |
+| **Strings reviewed this run** | 1 of 15,531 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,13 @@ Also for id: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — Malformed closing tag `</a >` in `genai-settings-chat-gemini-links`
+    - Current: `Dengan memilih Google Gemini, Anda menyetujui <a data-l10n-name="link1">Persyaratan Layanan Google</a>, <a data-l10n-name="link2">Kebijakan Penggunaan Terlarang untuk AI Generatif</a >, dan <a data-l10n-name="link3">Pem…`
+    - Source: `By choosing Google Gemini, you agree to the <a data-l10n-name="link1">Google Terms of Service</a>, <a data-l10n-name="link2">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name="link3">Gemini Apps Privacy Not…`
+    - Suggest: `By choosing Google Gemini, you agree to the <a data-l10n-name="link1">Google Terms of Service</a>, <a data-l10n-name="link2">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name="link3">Gemini Apps Privacy Not…`
+    - Whitespace inside a closing tag makes it render as literal text.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -58,7 +62,7 @@ _Nothing retired._
 | Text quoting a UI label that no longer matches | 7 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 16 |
-| Markup & `data-l10n-name` defects | 1 |
+| Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 98 |
 
 ### Completeness
@@ -112,12 +116,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (330)
+## 3. Open findings (329)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 84 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 83 |
 | 2 | Wrong content (says something other than the English) | 174 |
 | 3 | Degraded language (grammar, spelling, terminology) | 54 |
 | 4 | Cosmetic (typography, spacing) | 17 |
@@ -223,11 +227,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `m`
     - Source: `(value): Unmute Tab accesskey: m`
     - The label is “Bunyikan Tab”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — Malformed closing tag `</a >` in `genai-settings-chat-gemini-links`
-    - Current: `Dengan memilih Google Gemini, Anda menyetujui <a data-l10n-name="link1">Persyaratan Layanan Google</a>, <a data-l10n-name="link2">Kebijakan Penggunaan Terlarang untuk AI Generatif</a >, dan <a data-l10n-name="link3">Pem…`
-    - Source: `By choosing Google Gemini, you agree to the <a data-l10n-name="link1">Google Terms of Service</a>, <a data-l10n-name="link2">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name="link3">Gemini Apps Privacy Not…`
-    - Suggest: `By choosing Google Gemini, you agree to the <a data-l10n-name="link1">Google Terms of Service</a>, <a data-l10n-name="link2">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name="link3">Gemini Apps Privacy Not…`
-    - Whitespace inside a closing tag makes it render as literal text.
 - `menu-help-not-deceptive` — `browser/browser/menubar.ftl` — Access key `d` of `menu-help-not-deceptive` is not present in its label
     - Current: `d`
     - Source: `accesskey: D label: This Isn’t a Deceptive Site…`
@@ -404,7 +403,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `D`
     - Source: `accesskey: D label: Manage Devices…`
     - The label is “Kelola Perangkat…”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- _…and 95 more; see `state/` for the full list._
+- `tab-context-send-tabs-to-device` — `browser/browser/tabContextMenu.ftl` — The tab count is attached to the device: the label reads "Send tab to {$tabCount} devices".
+    - Current: `Kirim Tab ke { $tabCount } Peranti`
+    - Source: `accesskey: n label: {$tabCount ->} [1] Send Tab to Device [other] Send { $tabCount } Tabs to Device`
+    - Suggest: `Kirim { $tabCount } Tab ke Perangkat`
+    - $tabCount counts tabs affected by the action, not devices; with 3 tabs selected the menu claims 3 devices.
+- _…and 94 more; see `state/` for the full list._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -1189,6 +1193,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (1)
 
-_Nothing fixed yet._
+- `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — fixed 2026-09-01

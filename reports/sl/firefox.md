@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-31 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bcd40327226f` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
+| **Previous run** | 2026-08-31 @ `67b14d26eb36` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 108 of 17,645 |
+| **Strings reviewed this run** | 0 of 17,645 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,28 +18,9 @@ Also for sl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (0)
 
-- `toolbox-local-mode-notice` — `devtools/client/toolbox.ftl` — `toolbox-local-mode-notice` quotes “z uporabo” but the string it names, `options-local-mode-label`, reads “Lokalni način”
-    - Current: `Ta dokument bi bilo mogoče naložiti tudi z naslova "{ $url }" z uporabo "lokalnega načina" razvojnih orodij, ki ga lahko omogočite na plošči z nastavitvami.`
-    - Source: `This document could also be loaded from “{ $url }” using DevTools “Local Mode”, which can be enabled in the settings panel.`
-    - Suggest: `Lokalni način`
-    - In the source this string quotes “Local Mode”, which is exactly the value of `options-local-mode-label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `about-networking-ssl-tokens-new` — `toolkit/toolkit/about/aboutNetworking.ftl` — "New this session" translated with wrong case, producing ungrammatical "Nov to sejo".
-    - Current: `Nov to sejo`
-    - Source: `alt: New this session title: New this session`
-    - Suggest: `Nov v tej seji`
-    - en-US "New this session" means the token is new in the current session; "Nov to sejo" is not grammatical Slovenian for that meaning.
-- `options-experimental-label` — `devtools/client/toolbox-options.ftl` — "Experimental Features" rendered as "Poskusne zmogljivosti" instead of the established "Poskusne funkcije/možnosti".
-    - Current: `Poskusne zmogljivosti`
-    - Source: `Experimental Features`
-    - Suggest: `Poskusne funkcije`
-    - en-US "Features" here means functionality; "zmogljivosti" means capacities/performance, which is not the standard sl rendering of "features" in DevTools settings.
-- `options-stylesheets-in-the-debugger-tooltip` — `devtools/client/toolbox-options.ftl` — Tooltip drops "and view" from "List and view stylesheets in the debugger".
-    - Current: `Prikaži seznam slogovnih predlog v razhroščevalniku`
-    - Source: `title: List and view stylesheets in the debugger`
-    - Suggest: `Prikaži seznam slogovnih predlog in si jih oglej v razhroščevalniku`
-    - The en-US says "List and view stylesheets"; the Slovenian only mentions listing them.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
