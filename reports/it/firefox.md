@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-31 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bcd40327226f` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
+| **Previous run** | 2026-08-31 @ `67b14d26eb36` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 22 of 18,406 |
+| **Strings reviewed this run** | 0 of 18,416 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for it: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `preferences-ai-controls-sidebar-chatbot-group-3` — `browser/browser/preferences/preferences.ftl` — Label uses singular "Fornitore" where the source is plural "providers".
-    - Current: `label: Fornitore di chatbot IA nella barra laterale`
-    - Source: `description: Keep a chatbot in view as you browse. Choose from multiple providers and switch anytime. label: AI chatbot providers in sidebar`
-    - Suggest: `label: Fornitori di chatbot IA nella barra laterale`
-    - en-US "AI chatbot providers in sidebar" is plural, and the accompanying description mentions choosing among multiple providers ("diversi fornitori").
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,9 +45,9 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 372 |
-| Strings | 18,406 |
+| Strings | 18,416 |
 | Missing strings | 0 |
-| Obsolete strings | 0 |
+| Obsolete strings | 7 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 10 |
 | Fluent / properties syntax errors | 0 |
@@ -82,7 +78,7 @@ The locale is complete against the en-US source.
 - `toolkit/toolkit/enterprise/enterprise.ftl`
 - `toolkit/toolkit/enterprise/felt.ftl`
 
-_187 strings. These files exist in the locale tree but not in the en-US reference — they are maintained elsewhere. The model review is a comparison against en-US, so it skips them entirely; only the checks that need no reference ran. Nothing reported from these files means nothing was looked for, not that they are clean._
+_190 strings. These files exist in the locale tree but not in the en-US reference — they are maintained elsewhere. The model review is a comparison against en-US, so it skips them entirely; only the checks that need no reference ran. Nothing reported from these files means nothing was looked for, not that they are clean._
 
 ### Conventions detected in this locale
 
@@ -91,7 +87,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 1046, `straight-double` 25 | **curly-double** |
-| apostrophe | `typographic` 1926, `straight` 6 | **typographic** |
+| apostrophe | `typographic` 1928, `straight` 6 | **typographic** |
 | ellipsis | `char` 484 | **char** |
 | dash | `em` 75, `en` 18 | **em** |
 | nbsp | `total` 12, `before-punctuation` 4, `space-before-punctuation` 6 | _mixed_ |

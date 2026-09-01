@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-31 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bcd40327226f` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
+| **Previous run** | 2026-08-31 @ `67b14d26eb36` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 9 of 18,208 |
+| **Strings reviewed this run** | 0 of 18,208 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -95,27 +95,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (74)
+## 3. Open findings (72)
 
-> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `aiwindow-feedback-disclaimer` — `browser/browser/aiWindow.ftl` — "Submitting shares your feedback and this chat" is translated without stating that the data is shared, only that it "helps".
-    - Current: `Przesłanie opinii i treści tej rozmowy pomoże { -brand-shorter-name } ulepszyć { -smart-window-brand-name }.`
-    - Source: `Submitting shares your feedback and this chat to help { -brand-shorter-name } improve { -smart-window-brand-name }. Your other chats stay private. <a data-l10n-name="learn-more">Learn more</a>`
-    - Suggest: `Przesłanie spowoduje udostępnienie Twojej opinii i treści tej rozmowy, aby pomóc { -brand-shorter-name } ulepszyć { -smart-window-brand-name }.`
-    - The en-US explicitly discloses that submitting shares the feedback and chat; the Polish omits the sharing disclosure, weakening a privacy statement.
-- `aiwindow-firstrun-memories-privacy-title` — `browser/browser/aiWindow.ftl` — "Private by design" translated as "Domyślnie prywatne" (private by default), which asserts a different privacy claim.
-    - Current: `Domyślnie prywatne`
-    - Source: `Private by design`
-    - Suggest: `Prywatne z założenia`
-    - The en-US says the feature is private by design (architecturally), not merely private by default (a changeable setting); the Polish makes a different product claim about privacy.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 11 |
-| 2 | Wrong content (says something other than the English) | 43 |
+| 2 | Wrong content (says something other than the English) | 41 |
 | 3 | Degraded language (grammar, spelling, terminology) | 18 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
@@ -199,11 +185,6 @@ _Also listed under their own category below._
     - Source: `Choose any that apply`
     - Suggest: `Wybierz wszystkie pasujące odpowiedzi`
     - The en-US invites selecting any/all applicable options; the Polish tells the user to pick a single "type".
-- `aiwindow-feedback-disclaimer` — `browser/browser/aiWindow.ftl` — "Submitting shares your feedback and this chat" is translated without stating that the data is shared, only that it "helps".
-    - Current: `Przesłanie opinii i treści tej rozmowy pomoże { -brand-shorter-name } ulepszyć { -smart-window-brand-name }.`
-    - Source: `Submitting shares your feedback and this chat to help { -brand-shorter-name } improve { -smart-window-brand-name }. Your other chats stay private. <a data-l10n-name="learn-more">Learn more</a>`
-    - Suggest: `Przesłanie spowoduje udostępnienie Twojej opinii i treści tej rozmowy, aby pomóc { -brand-shorter-name } ulepszyć { -smart-window-brand-name }.`
-    - The en-US explicitly discloses that submitting shares the feedback and chat; the Polish omits the sharing disclosure, weakening a privacy statement.
 - `aiwindow-firstrun-default-title` — `browser/browser/aiWindow.ftl` — "Make { -smart-window-brand-name } your go-to" (an invitation to set it as the default choice) is rendered as "Use it all the time".
     - Current: `Korzystaj z { -smart-window-brand-name } przez cały czas`
     - Source: `Make { -smart-window-brand-name } your go-to`
@@ -214,11 +195,6 @@ _Also listed under their own category below._
     - Source: `Got it. { -smart-window-brand-name } won’t create memories. Update in settings anytime.`
     - Suggest: `Rozumiemy. { -smart-window-brand-name } nie będzie tworzyć zapamiętanych treści.`
     - en-US begins with "Got it." acknowledging the user's choice; this sentence is missing in the target.
-- `aiwindow-firstrun-memories-privacy-title` — `browser/browser/aiWindow.ftl` — "Private by design" translated as "Domyślnie prywatne" (private by default), which asserts a different privacy claim.
-    - Current: `Domyślnie prywatne`
-    - Source: `Private by design`
-    - Suggest: `Prywatne z założenia`
-    - The en-US says the feature is private by design (architecturally), not merely private by default (a changeable setting); the Polish makes a different product claim about privacy.
 - `action-log-checked-memories` — `browser/browser/aiWindowContent.ftl` — "Checked memories" translated as "searched remembered content".
     - Current: `Przeszukano zapamiętane treści`
     - Source: `Checked memories`
@@ -433,9 +409,10 @@ _Also listed under their own category below._
 
 ## 4. Appendix
 
-### Dismissed by hand (0)
+### Dismissed by hand (2)
 
-_Nothing dismissed._
+- `aiwindow-feedback-disclaimer` — `browser/browser/aiWindow.ftl` — acceptable: "pomoże ulepszyć" carries the submission and its purpose well enough in Polish
+- `aiwindow-firstrun-memories-privacy-title` — `browser/browser/aiWindow.ftl` — acceptable: "Domyślnie prywatne" is the agreed Polish rendering of "Private by design"
 
 _One line each in `locales/pl/dismissed.txt`. Delete the line and the finding returns._
 

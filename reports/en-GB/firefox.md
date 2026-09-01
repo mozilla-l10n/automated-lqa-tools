@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-31 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bcd40327226f` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
+| **Previous run** | 2026-08-31 @ `67b14d26eb36` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 14 of 18,213 |
+| **Strings reviewed this run** | 6 of 18,219 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 362 |
-| Strings | 18,213 |
-| Missing strings | 6 |
+| Strings | 18,219 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,13 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**6 strings** are not translated yet, concentrated in:
-
-- `browser/browser/sharePanel.ftl` — 3
-- `browser/browser/preferences/preferences.ftl` — 2
-- `browser/browser/preferences/formAutofill.ftl` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -79,7 +73,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 597, `curly-single` 101, `straight-double` 58 | **curly-double** |
 | apostrophe | `typographic` 1121, `straight` 56 | **typographic** |
-| ellipsis | `char` 461, `ascii` 1 | **char** |
+| ellipsis | `char` 464, `ascii` 1 | **char** |
 | dash | `em` 108, `en` 4 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 

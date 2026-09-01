@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-31 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bcd40327226f` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
+| **Previous run** | 2026-08-31 @ `67b14d26eb36` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 25 of 18,213 |
+| **Strings reviewed this run** | 3 of 18,213 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,23 @@ Also for ru: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (3)
 
-_Nothing was fixed._
+- `about-logins-import-dialog-items-no-change2` — `browser/browser/aboutLogins.ftl` — Malformed closing tag `</span >` in `about-logins-import-dialog-items-no-change2`
+    - Current: `{$count ->} [one] <span>Обнаружена повторяющаяся запись:</span> <span data-l10n-name="count">{ $count }</span> <span data-l10n-name="meta">(не импортирована)</span > [few] <span>Обнаружены повторяющиеся записи:</span> <…`
+    - Source: `{$count ->} [other] <span>Duplicate entries found:</span> <span data-l10n-name="count">{ $count }</span> <span data-l10n-name="meta">(not imported)</span>`
+    - Suggest: `{$count ->} [other] <span>Duplicate entries found:</span> <span data-l10n-name="count">{ $count }</span> <span data-l10n-name="meta">(not imported)</span>`
+    - Whitespace inside a closing tag makes it render as literal text.
+- `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — Malformed closing tag `</a >` in `genai-settings-chat-gemini-links`
+    - Current: `Выбирая Google Gemini, вы соглашаетесь с <a data-l10n-name="link1">Условиями использования Google</a>, <a data-l10n-name="link2">Политикой запрещённого использования генеративного ИИ</a > и <a data-l10n-name="link3">Уве…`
+    - Source: `By choosing Google Gemini, you agree to the <a data-l10n-name="link1">Google Terms of Service</a>, <a data-l10n-name="link2">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name="link3">Gemini Apps Privacy Not…`
+    - Suggest: `By choosing Google Gemini, you agree to the <a data-l10n-name="link1">Google Terms of Service</a>, <a data-l10n-name="link2">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name="link3">Gemini Apps Privacy Not…`
+    - Whitespace inside a closing tag makes it render as literal text.
+- `tou-existing-user-spotlight-body` — `browser/browser/termsofuse.ftl` — Malformed closing tag `</a >` in `tou-existing-user-spotlight-body`
+    - Current: `Мы ввели <a data-l10n-name="terms-of-use">Условия использования</a> и обновили наше <a data-l10n-name="privacy-notice">Уведомление о конфиденциальности</a >.<br><br> Пожалуйста, потратьте немного времени, чтобы ознакоми…`
+    - Source: `We’ve introduced a <a data-l10n-name="terms-of-use">Terms of Use</a> and updated our <a data-l10n-name="privacy-notice">Privacy Notice</a>.<br><br> Please take a moment to review and accept. <a data-l10n-name="learn-mor…`
+    - Suggest: `We’ve introduced a <a data-l10n-name="terms-of-use">Terms of Use</a> and updated our <a data-l10n-name="privacy-notice">Privacy Notice</a>.<br><br> Please take a moment to review and accept. <a data-l10n-name="learn-mor…`
+    - Whitespace inside a closing tag makes it render as literal text.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -34,11 +48,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `urlbar-result-explanation-last-visited-weeks-2` — `browser/browser/browser.ftl` — urlbar-result-explanation-last-visited-weeks-2 ([one]) — { $weeksAgo } неделя назад → неделю назад (the v1 string is correct)
-    - Current: `{ $weeksAgo } неделя назад`
-    - Suggest: `неделю назад`
+_Nothing retired._
 
 ---
 
@@ -60,7 +72,7 @@ _Nothing to re-read._
 | Text quoting a UI label that no longer matches | 3 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 144 |
-| Markup & `data-l10n-name` defects | 3 |
+| Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 6 |
 
 ### Completeness
@@ -95,23 +107,18 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (600)
+## 3. Open findings (597)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 49 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 46 |
 | 2 | Wrong content (says something other than the English) | 269 |
 | 3 | Degraded language (grammar, spelling, terminology) | 217 |
 | 4 | Cosmetic (typography, spacing) | 65 |
 
 ### A. Functional, markup, variables & plurals
 
-- `about-logins-import-dialog-items-no-change2` — `browser/browser/aboutLogins.ftl` — Malformed closing tag `</span >` in `about-logins-import-dialog-items-no-change2`
-    - Current: `{$count ->} [one] <span>Обнаружена повторяющаяся запись:</span> <span data-l10n-name="count">{ $count }</span> <span data-l10n-name="meta">(не импортирована)</span > [few] <span>Обнаружены повторяющиеся записи:</span> <…`
-    - Source: `{$count ->} [other] <span>Duplicate entries found:</span> <span data-l10n-name="count">{ $count }</span> <span data-l10n-name="meta">(not imported)</span>`
-    - Suggest: `{$count ->} [other] <span>Duplicate entries found:</span> <span data-l10n-name="count">{ $count }</span> <span data-l10n-name="meta">(not imported)</span>`
-    - Whitespace inside a closing tag makes it render as literal text.
 - `urlbar-input-dismiss-autofill` — `browser/browser/browser.ftl` — Access keys. The locale remaps access keys to Cyrillic thoroughly — 998 of 1052 are Cyrillic, and 88% of those appear in their own label. The actionable subset is the 34 access keys still carrying the en-US Latin letter, which a user typing in a Cyrillic layout cannot reach: tab-context-unpin-tab2, tab-context-open-in-new-container-tab2, tab-context-close-duplicate-tabs2, tab-context-move-tabs2,…
     - Source: `accesskey: i label: Dismiss this suggestion`
 - `urlbar-input-remove-from-history` — `browser/browser/browser.ftl` — Access keys. The locale remaps access keys to Cyrillic thoroughly — 998 of 1052 are Cyrillic, and 88% of those appear in their own label. The actionable subset is the 34 access keys still carrying the en-US Latin letter, which a user typing in a Cyrillic layout cannot reach: tab-context-unpin-tab2, tab-context-open-in-new-container-tab2, tab-context-close-duplicate-tabs2, tab-context-move-tabs2,…
@@ -134,11 +141,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `accesskey: z label: Ask…`
 - `genai-menu-no-provider-2` — `browser/browser/genai.ftl` — Access keys. The locale remaps access keys to Cyrillic thoroughly — 998 of 1052 are Cyrillic, and 88% of those appear in their own label. The actionable subset is the 34 access keys still carrying the en-US Latin letter, which a user typing in a Cyrillic layout cannot reach: tab-context-unpin-tab2, tab-context-open-in-new-container-tab2, tab-context-close-duplicate-tabs2, tab-context-move-tabs2,…
     - Source: `accesskey: z label: Ask an AI Chatbot`
-- `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — Malformed closing tag `</a >` in `genai-settings-chat-gemini-links`
-    - Current: `Выбирая Google Gemini, вы соглашаетесь с <a data-l10n-name="link1">Условиями использования Google</a>, <a data-l10n-name="link2">Политикой запрещённого использования генеративного ИИ</a > и <a data-l10n-name="link3">Уве…`
-    - Source: `By choosing Google Gemini, you agree to the <a data-l10n-name="link1">Google Terms of Service</a>, <a data-l10n-name="link2">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name="link3">Gemini Apps Privacy Not…`
-    - Suggest: `By choosing Google Gemini, you agree to the <a data-l10n-name="link1">Google Terms of Service</a>, <a data-l10n-name="link2">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name="link3">Gemini Apps Privacy Not…`
-    - Whitespace inside a closing tag makes it render as literal text.
 - `newtab-sports-widget-group-a` — `browser/browser/newtab/newtab.ftl` — Cyrillic А while groups B–L all use Latin letters
     - Source: `Group A`
 - `newtab-widget-lists-completed-list` — `browser/browser/newtab/newtab.ftl` — the parentheses of the en-US format are dropped, leaving a bare number
@@ -191,11 +193,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `accesskey: r label: Reverse Tabs`
 - `tabbrowser-context-unmute-tab2` — `browser/browser/tabbrowser.ftl` — Access keys. The locale remaps access keys to Cyrillic thoroughly — 998 of 1052 are Cyrillic, and 88% of those appear in their own label. The actionable subset is the 34 access keys still carrying the en-US Latin letter, which a user typing in a Cyrillic layout cannot reach: tab-context-unpin-tab2, tab-context-open-in-new-container-tab2, tab-context-close-duplicate-tabs2, tab-context-move-tabs2,…
     - Source: `accesskey: m label: Unmute`
-- `tou-existing-user-spotlight-body` — `browser/browser/termsofuse.ftl` — Malformed closing tag `</a >` in `tou-existing-user-spotlight-body`
-    - Current: `Мы ввели <a data-l10n-name="terms-of-use">Условия использования</a> и обновили наше <a data-l10n-name="privacy-notice">Уведомление о конфиденциальности</a >.<br><br> Пожалуйста, потратьте немного времени, чтобы ознакоми…`
-    - Source: `We’ve introduced a <a data-l10n-name="terms-of-use">Terms of Use</a> and updated our <a data-l10n-name="privacy-notice">Privacy Notice</a>.<br><br> Please take a moment to review and accept. <a data-l10n-name="learn-mor…`
-    - Suggest: `We’ve introduced a <a data-l10n-name="terms-of-use">Terms of Use</a> and updated our <a data-l10n-name="privacy-notice">Privacy Notice</a>.<br><br> Please take a moment to review and accept. <a data-l10n-name="learn-mor…`
-    - Whitespace inside a closing tag makes it render as literal text.
 - `unified-extensions-mb-blocklist-warning-multiple` — `browser/browser/unifiedExtensions.ftl` — the entire first sentence is missing ("Some of your extensions have been disabled for violating Mozilla's policies")
     - Source: `heading: {$extensionsCount ->} [other] { $extensionsCount } extensions disabled message: Some of your extensions have been disabled for violating Mozilla’s policies. You can enable them in settings, but this may be risk…`
     - Suggest: `.message`
@@ -1003,8 +1000,11 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (174)
+### Fixed to date (177)
 
+- `about-logins-import-dialog-items-no-change2` — `browser/browser/aboutLogins.ftl` — fixed 2026-09-01
+- `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — fixed 2026-09-01
+- `tou-existing-user-spotlight-body` — `browser/browser/termsofuse.ftl` — fixed 2026-09-01
 - `containers-card-header2` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-25
 - `mr2-onboarding-thank-you-text` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-24
 - `about-unloads-intro` — `browser/browser/aboutUnloads.ftl` — fixed 2026-08-07
@@ -1042,6 +1042,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `newtab-privacy-message-info-4` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-07
 - `newtab-settings-button` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-07
 - `newtab-shortcuts-pinned-area` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-07
-- `newtab-sports-widget-loading-more` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-07
-- `newtab-sports-widget-view-matches` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-07
-- `newtab-sports-widget-watch-stream-select-games-only` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-07

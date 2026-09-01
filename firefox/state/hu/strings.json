@@ -2918,7 +2918,7 @@
   "genai-settings-chat-chatgpt-links": "95602504 3fb8b314",
   "genai-settings-chat-claude-links": "e07277e8 37c27e62",
   "genai-settings-chat-copilot-links": "dbfbbb7b c663f6cb",
-  "genai-settings-chat-gemini-links": "53d914c9 896208d8",
+  "genai-settings-chat-gemini-links": "73ee7fa6 896208d8",
   "genai-settings-chat-huggingchat-links": "74443de0 7e05e85f",
   "genai-settings-chat-lechat-links": "4522f7bc b2515065",
   "genai-settings-chat-lechat-links-2": "2fadef76 aa05367e",
@@ -4736,7 +4736,7 @@
   "onboarding-new-user-survey-familiarity-based-option-2": "a0373a2c 7a136649",
   "onboarding-new-user-survey-familiarity-based-option-3": "cb685589 f6fa01d5",
   "onboarding-new-user-survey-familiarity-based-option-4": "077f0ab4 c6a43a96",
-  "onboarding-new-user-survey-legal-link-label": "d3c926e7 79131097",
+  "onboarding-new-user-survey-legal-link-label": "34d8e54f 79131097",
   "onboarding-new-user-survey-next-button-label": "58cd22e4 1badbe57",
   "onboarding-new-user-survey-subtitle": "bd64ce73 b2a480d1",
   "onboarding-new-user-survey-time-based-option-1": "759ebb57 438c723b",
@@ -8027,7 +8027,7 @@
   "existing-user-tou-accept": "3689e386 9da87112",
   "existing-user-tou-learn-more": "1e407acd d9b20450",
   "existing-user-tou-message": "7ed1f7f8 885dc0c3",
-  "tou-existing-user-spotlight-body": "c78ce48f f1500a0c",
+  "tou-existing-user-spotlight-body": "cd121407 f1500a0c 060d5a8e",
   "tou-existing-user-spotlight-remind-me-later": "513e8682 01405ce5"
  },
  "browser/browser/textRecognition.ftl": {

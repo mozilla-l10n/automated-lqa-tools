@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-31 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bcd40327226f` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
+| **Previous run** | 2026-08-31 @ `67b14d26eb36` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 20 of 18,219 |
+| **Strings reviewed this run** | 1 of 18,219 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,22 +18,17 @@ Also for cs: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `preferences-etp-custom-cookie-behavior-block-cross-site-tracking-cookies` — `browser/browser/preferences/preferences.ftl` — "cross-site" is rendered as "třetích stran" (third-party), a different cookie category.
-    - Current: `Blokovat sledovací cookies třetích stran`
-    - Source: `label: Block cross-site tracking cookies`
-    - Suggest: `Blokovat sledovací cookies mezi weby`
-    - en-US says "cross-site tracking cookies"; "cookies třetích stran" means third-party cookies, which is a distinct ETP setting/term.
-- `share-panel-os-share-2` — `browser/browser/sharePanel.ftl` — Inconsistent and ungrammatical rendering of the macOS variant ("Sdílet s Mac" vs "Sdílet pomocí Windows").
-    - Current: `Sdílet s Mac…`
-    - Source: `label: {$sel_1 ->} [windows] Share with Windows… [macos] Share with Mac… [other] Share with…`
-    - Suggest: `Sdílet pomocí Macu…`
-    - The Windows and generic variants use "Sdílet pomocí…", while the macOS variant uses an undeclined "s Mac"; Czech requires declension and consistent phrasing for the same source pattern "Share with X…".
+_No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `protections-panel-cookie-banner-blocker-view-turn-on-for-site` — `browser/browser/protectionsPanel.ftl` — `protections-panel-cookie-banner-blocker-view-turn-on-for-site` references ['host'], which en-US does not pass
+    - Current: `Zapnout blokování lišť cookie pro { $host }?`
+    - Source: `Turn on Cookie Banner Blocker for this site?`
+    - Suggest: `Turn on Cookie Banner Blocker for this site?`
+    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -61,7 +56,7 @@ _Nothing retired._
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
-| Variable & placeholder mismatches | 7 |
+| Variable & placeholder mismatches | 6 |
 | Term parameter mismatches | 3 |
 | Plural variants (dead or missing forms) | 77 |
 | Text quoting a UI label that no longer matches | 6 |
@@ -95,12 +90,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (265)
+## 3. Open findings (264)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 55 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 54 |
 | 2 | Wrong content (says something other than the English) | 121 |
 | 3 | Degraded language (grammar, spelling, terminology) | 61 |
 | 4 | Cosmetic (typography, spacing) | 23 |
@@ -276,11 +271,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `tooltiptext: Apply present avatar`
     - Suggest: `Použít avatar dárku`
     - The comment says "Present refers to a gift box, not the current time period"; the alt text for the same icon is correctly "Dárek".
-- `protections-panel-cookie-banner-blocker-view-turn-on-for-site` — `browser/browser/protectionsPanel.ftl` — `protections-panel-cookie-banner-blocker-view-turn-on-for-site` references ['host'], which en-US does not pass
-    - Current: `Zapnout blokování lišť cookie pro { $host }?`
-    - Source: `Turn on Cookie Banner Blocker for this site?`
-    - Suggest: `Turn on Cookie Banner Blocker for this site?`
-    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
 - `safeb-palm-notdeceptive` — `browser/browser/safebrowsing/blockedSite.ftl` — Access key `l` of `safeb-palm-notdeceptive` is not present in its label
     - Current: `l`
     - Source: `accesskey: d label: This isn’t a deceptive site…`
@@ -400,7 +390,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Change device pixel ratio of the viewport`
     - Suggest: `Změní poměr pixelů zařízení pro výřez`
     - en-US is "Change device pixel ratio of the viewport"; the Czech claims the control also changes the viewport itself, which it does not.
-- _…and 52 more; see `state/` for the full list._
+- `storage-table-type-cache-hint` — `devtools/client/storage.ftl` — "delete the cache storage entries" translated as "edit"
+    - Current: `Pro zobrazení a úpravu položek úložiště mezipaměti vyberte úložiště.`
+    - Source: `View and delete the cache storage entries by selecting a storage. <a data-l10n-name="learn-more-link">Learn more</a>`
+    - Suggest: `Pro zobrazení a smazání položek úložiště mezipaměti vyberte úložiště.`
+    - en-US is "View and delete the cache storage entries…"; cache entries can only be deleted, not edited.
+- _…and 51 more; see `state/` for the full list._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -1131,6 +1126,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (1)
 
-_Nothing fixed yet._
+- `protections-panel-cookie-banner-blocker-view-turn-on-for-site` — `browser/browser/protectionsPanel.ftl` — fixed 2026-09-01
