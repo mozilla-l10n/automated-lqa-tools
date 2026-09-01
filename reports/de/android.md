@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
-| **Previous run** | 2026-08-22 @ `eda9938ab8c3` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
+| **Previous run** | 2026-08-24 @ `e8622a909368` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,911 |
+| **Strings reviewed this run** | 19 of 2,735 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -26,20 +26,55 @@ _No new findings._
 
 _Nothing was fixed._
 
-### ↩︎ Withdrawn — no longer considered a defect (1)
+### ↩︎ Withdrawn — no longer considered a defect (0)
 
-- `mozac_feature_sitepermissions_storage_access_message` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-de/strings.xml` — `mozac_feature_sitepermissions_storage_access_message` has placeholders %1$s where the source has %s
-    - Current: `Möglicherweise möchten Sie den Zugriff blockieren, wenn nicht klar ist, warum %1$s diese Daten benötigt.`
-    - Source: `You may want to block access if it’s not clear why %s needs this data.`
-    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+_Nothing withdrawn._
 
 ### 🔁 String changed, defect not verifiable — needs a re-read (0)
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (10)
 
-_Nothing retired._
+- `sports_widget_error_load_failed_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Translation adds "die Seite" (the page), which is not in the source and misdescribes refreshing the widget's match data.
+    - Current: `Aktualisieren Sie die Seite in ein paar Minuten.`
+    - Suggest: `Versuchen Sie es in ein paar Minuten erneut zu aktualisieren.`
+    - Source "Try refreshing in a few minutes." refers to refreshing the sports widget data, not a page; the German invents an object.
+- `sports_widget_penalties` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Elfmeterschließen" is a misspelling of "Elfmeterschießen".
+    - Current: `Elfmeterschließen`
+    - Suggest: `Elfmeterschießen`
+    - The German term for a penalty shoot-out is "Elfmeterschießen"; "Elfmeterschließen" is not a word.
+- `accessibility_dismiss_find_in_page` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — "Dismiss" (close the find bar) is rendered as "deaktivieren" (disable).
+    - Current: `"Seite durchsuchen" deaktivieren`
+    - Suggest: `„Seite durchsuchen“ schließen`
+    - The button closes the find-in-page UI; "deaktivieren" says the feature is switched off. Also straight quotes instead of German double quotes.
+- `accessibility_dismiss_find_in_page` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — `accessibility_dismiss_find_in_page` uses straight double quotes
+    - Current: `"Seite durchsuchen" deaktivieren`
+    - The locale's quote convention is `german-double` (25 occurrences).
+- `cfr_cookie_banner` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — Superfluous article "den" before the link placeholder produces "in den Einstellungen" grammar mismatch with the link text.
+    - Current: `Verwalten Sie die Cookie-Banner-Einstellungen in den %2$s.`
+    - Suggest: `Verwalten Sie die Cookie-Banner-Einstellungen in den Einstellungen.`
+    - %2$s is replaced by the link text "Einstellungen"; the sentence is fine only if the article agrees, but as written the source has no article and the link string itself is capitalized — the article "den" plus the linked word yields correct German only by coincidence; the risk is that the article is outside the link. Recommend restructuring so the article is part of the link phrase.
+- `cookie_banner_report_a_site_snackbar_label` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — "Request to support site submitted" is mistranslated as a request sent to a "help website".
+    - Current: `Anfrage an Hilfe-Website übermittelt.`
+    - Suggest: `Anfrage zur Unterstützung der Website übermittelt.`
+    - The source means a request that this site be supported (by cookie banner reduction) was submitted, not a request sent to a help website.
+- `cookie_banner_the_site_was_reported` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — "Request to support site submitted" is mistranslated as a request sent to a "help website".
+    - Current: `Anfrage an Hilfe-Website übermittelt.`
+    - Suggest: `Anfrage zur Unterstützung der Website übermittelt.`
+    - The source means a request that this site be supported (by cookie banner reduction) was submitted, not a request sent to a help website.
+- `menu_trackers_blocked_title` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — "Trackers" is rendered as "Verfolger" here but as "Tracker" elsewhere in the same app (about_content).
+    - Current: `Verfolger blockiert`
+    - Suggest: `Tracker blockiert`
+    - The established German term in Mozilla products (and in about_content of this same file) is "Tracker"; "Verfolger" is inconsistent and misleading.
+- `open_new_tab_snackbar` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — "Switch" (switch to the newly opened tab) is rendered as "Umschalten" instead of "Wechseln".
+    - Current: `Umschalten`
+    - Suggest: `Wechseln`
+    - Per the developer comment the button switches to the newly opened tab; "Umschalten" means toggling, while the related preference string uses "wechseln".
+- `tip_add_to_homescreen` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — Menu path separator ">" was replaced with an arrow "→", deviating from the source's menu-path notation.
+    - Current: `Menü → Zum Startbildschirm hinzufügen`
+    - Suggest: `Menü > Zum Startbildschirm hinzufügen`
+    - The source uses "Menu > Add to Home screen"; the German substitutes a different symbol not used elsewhere for menu paths.
 
 ---
 
@@ -48,10 +83,11 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,911 |
+| Strings | 2,735 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
@@ -61,7 +97,7 @@ _Nothing retired._
 | Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 2 |
+| Typography deviations from this locale's own norm | 1 |
 
 ### Completeness
 
@@ -73,10 +109,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `german-double` 25, `straight-double` 2, `curly-double` 1 | **german-double** |
-| ellipsis | `char` 23 | **char** |
-| dash | `en` 8 | **en** |
-| register | `formal` 685 | **formal** |
+| quotes | `german-double` 24, `curly-double` 1, `straight-double` 1 | **german-double** |
+| ellipsis | `char` 22 | **char** |
+| dash | `en` 6 | **en** |
+| register | `formal` 644 | **formal** |
 
 ---
 
@@ -86,15 +122,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (116)
+## 3. Open findings (106)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 66 |
-| 3 | Degraded language (grammar, spelling, terminology) | 37 |
-| 4 | Cosmetic (typography, spacing) | 13 |
+| 2 | Wrong content (says something other than the English) | 61 |
+| 3 | Degraded language (grammar, spelling, terminology) | 34 |
+| 4 | Cosmetic (typography, spacing) | 11 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -357,11 +393,6 @@ _Nothing in this category._
     - Source: `Cannot share to this app`
     - Suggest: `Teilen mit dieser App nicht möglich`
     - All other share strings in this surface use "teilen" for Share; "freigeben" is a different term and the passive phrasing changes the meaning (sharing the link with an app, not releasing something for the app).
-- `sports_widget_error_load_failed_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Translation adds "die Seite" (the page), which is not in the source and misdescribes refreshing the widget's match data.
-    - Current: `Aktualisieren Sie die Seite in ein paar Minuten.`
-    - Source: `Try refreshing in a few minutes.`
-    - Suggest: `Versuchen Sie es in ein paar Minuten erneut zu aktualisieren.`
-    - Source "Try refreshing in a few minutes." refers to refreshing the sports widget data, not a page; the German invents an object.
 - `stories_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Navigate back" rendered as "Rückwärts navigieren" instead of the established "Zurück" navigation wording.
     - Current: `Rückwärts navigieren`
     - Source: `Navigate back`
@@ -402,7 +433,12 @@ _Nothing in this category._
     - Source: `{ <p> }%1$s puts you in control.{ </p> } { <p> }Use it as a private browser: { <ul> } { <li> }Search and browse right in the app{ </li> } { <li> }Block trackers (or update settings to allow trackers){ </li> } { <li> }Er…`
     - Suggest: `Suchen und surfen Sie direkt in der App`
     - "browse" here means browsing the web; "blättern" is the wrong sense and "right in the app" (direkt) is dropped.
-- _…and 8 more; see `state/` for the full list._
+- `cfr_for_start_browsing` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — "as you go" is mistranslated as "bei der Gelegenheit auch noch", which changes the meaning.
+    - Current: `und wir blockieren Tracker und bei der Gelegenheit auch noch andere schädliche Elemente`
+    - Source: `Start your private browsing session, and we’ll block trackers and other bad stuff as you go.`
+    - Suggest: `und wir blockieren dabei Tracker und andere schädliche Elemente`
+    - The source says trackers and other bad stuff are blocked as you browse; the German implies blocking other bad stuff is a casual side effect ("bei der Gelegenheit auch noch"), which is not the source meaning.
+- _…and 3 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -446,11 +482,6 @@ _Nothing in this category._
     - Source: `Fill and save usernames and passwords in websites while using %1$s.`
     - Suggest: `auf Websites bei Nutzung von %1$s`
     - Source says "in websites" (plural); the German singular without article is grammatically wrong.
-- `sports_widget_penalties` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Elfmeterschließen" is a misspelling of "Elfmeterschießen".
-    - Current: `Elfmeterschließen`
-    - Source: `Penalties`
-    - Suggest: `Elfmeterschießen`
-    - The German term for a penalty shoot-out is "Elfmeterschießen"; "Elfmeterschließen" is not a word.
 - `sync_no_devices_available_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "mit ihnen synchronisieren" uses lowercase "ihnen" and mistranslates "syncing to this account".
     - Current: `Alle Geräte, die mit diesem Konto angemeldet sind und mit ihnen synchronisieren, werden hier angezeigt.`
     - Source: `Any devices signed in and syncing to this account will appear here.`
@@ -481,11 +512,6 @@ _Nothing in this category._
     - Source: `Submit feedback and uninstall`
     - Suggest: `Feedback übermitteln und deinstallieren`
     - "deinstallieren" here is an infinitive verb parallel to "übermitteln", not a noun, so it must be lowercase.
-- `cfr_cookie_banner` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — Superfluous article "den" before the link placeholder produces "in den Einstellungen" grammar mismatch with the link text.
-    - Current: `Verwalten Sie die Cookie-Banner-Einstellungen in den %2$s.`
-    - Source: `%1$s tries to reject cookie requests to dismiss annoying cookie banners.  Manage cookie banner preferences in %2$s.`
-    - Suggest: `Verwalten Sie die Cookie-Banner-Einstellungen in den Einstellungen.`
-    - %2$s is replaced by the link text "Einstellungen"; the sentence is fine only if the article agrees, but as written the source has no article and the link string itself is capitalized — the article "den" plus the linked word yields correct German only by coincidence; the risk is that the article is outside the link. Recommend restructuring so the article is part of the link phrase.
 - `mozac_browser_errorpages_security_bad_cert_techInfo` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — Misspelling of "Aussteller" as "Austeller".
     - Current: `das Zertifikat vom Austeller selbst signiert wurde`
     - Source: `{ <label> }Someone could be trying to impersonate the site and continuing could be risky.{ </label> } { <br> }{ <br> } { <label> }%1$s does not trust { <b> }%2$s{ </b> } because its certificate issuer is unknown, the ce…`
@@ -579,11 +605,6 @@ _Nothing in this category._
     - Source: `Sync cards`
     - Suggest: `Karten synchronisieren`
     - Source says "cards", and the sibling strings (preferences_credit_cards_sync_cards_across_devices, add card, manage cards) all use "Karten"; "Kreditkarten" is inconsistent and narrower than the source.
-- `menu_trackers_blocked_title` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — "Trackers" is rendered as "Verfolger" here but as "Tracker" elsewhere in the same app (about_content).
-    - Current: `Verfolger blockiert`
-    - Source: `Trackers blocked`
-    - Suggest: `Tracker blockiert`
-    - The established German term in Mozilla products (and in about_content of this same file) is "Tracker"; "Verfolger" is inconsistent and misleading.
 
 ### E. Typography, punctuation & spacing
 
@@ -606,7 +627,7 @@ _Nothing in this category._
     - Current: `"Seite durchsuchen" deaktivieren`
     - Source: `Dismiss find in page`
     - Suggest: `„Seite durchsuchen“ schließen`
-    - The locale's quote convention is `german-double` (25 occurrences).
+    - The locale's quote convention is `german-double` (24 occurrences).
 - `mozac_feature_prompt_folder_upload_confirm_message` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-de/strings.xml` — Stray straight double quote before the German opening quotation mark.
     - Current: `von "„%1$s“ hochladen`
     - Source: `Make sure you trust this site before you upload from “%1$s”.`
@@ -637,20 +658,11 @@ _Nothing in this category._
     - Source: `Syncing…`
     - Suggest: `Synchronisation läuft …`
     - German typography convention (Duden) requires a space before the ellipsis when it follows a complete word.
-- `accessibility_dismiss_find_in_page` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — `accessibility_dismiss_find_in_page` uses straight double quotes
-    - Current: `"Seite durchsuchen" deaktivieren`
-    - Source: `Dismiss find in page`
-    - The locale's quote convention is `german-double` (25 occurrences).
 - `menu_open_with_a_browser2` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — Missing space before the ellipsis, inconsistent with the German convention used in menu_share ("Teilen …").
     - Current: `Öffnen in…`
     - Source: `Open in…`
     - Suggest: `Öffnen in …`
     - German typography (and the sibling string menu_share) places a space before the ellipsis character.
-- `tip_add_to_homescreen` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — Menu path separator ">" was replaced with an arrow "→", deviating from the source's menu-path notation.
-    - Current: `Menü → Zum Startbildschirm hinzufügen`
-    - Source: `Get one-tap access to sites you use most%1$s Menu > Add to Home screen`
-    - Suggest: `Menü > Zum Startbildschirm hinzufügen`
-    - The source uses "Menu > Add to Home screen"; the German substitutes a different symbol not used elsewhere for menu paths.
 
 ---
 

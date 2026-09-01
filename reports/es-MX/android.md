@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
-| **Previous run** | 2026-08-22 @ `eda9938ab8c3` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
+| **Previous run** | 2026-08-24 @ `e8622a909368` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,886 |
+| **Strings reviewed this run** | 0 of 2,691 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,96 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (22)
 
-_Nothing retired._
+- `share_tab_group_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — The singular variant reads "Compartir al grupo pestañas", which is ungrammatical and inconsistent with the plural variant.
+    - Current: `Compartir al grupo pestañas %1$s con %2$d pestaña.`
+    - Suggest: `Compartir grupo de pestañas %1$s con %2$d pestaña.`
+    - Source is "Share %1$s tab group with %2$d tab."; the stray "al" and missing "de" make it ungrammatical, while the other variant correctly uses "Compartir grupo de pestañas".
+- `sports_widget_error_connection_interrupted` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — The em dash of the source was replaced with a colon, deviating from the em-dash convention.
+    - Current: `Conexión interrumpida: actualizaciones en vivo pausadas.`
+    - Suggest: `Conexión interrumpida — actualizaciones en vivo pausadas.`
+    - Source uses an em dash and the locale convention is em dash; the punctuation should be preserved.
+- `sports_widget_final_results_page_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "World Cup" is rendered as "Copa del Mundo" here while all other sports widget strings use "Mundial".
+    - Current: `Resultados finales de la Copa del Mundo, página %1$d de %2$d`
+    - Suggest: `Resultados finales del Mundial, página %1$d de %2$d`
+    - Inconsistent with sports_widget_final_results_content_description ("Resultados finales del Mundial") and other strings on the same surface.
+- `sports_widget_follow_another_team` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — Button label uses an imperative verb form instead of the infinitive used for action labels.
+    - Current: `Sigue a otro equipo`
+    - Suggest: `Seguir a otro equipo`
+    - Source is a button label "Follow another team"; Spanish button/action labels use the infinitive, as in sports_widget_error_refresh ("Actualizar").
+- `sports_widget_get_custom_wallpaper` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — Menu item uses an imperative verb form instead of the infinitive used for menu actions.
+    - Current: `Obtén un fondo de pantalla personalizado`
+    - Suggest: `Obtener fondo de pantalla personalizado`
+    - The developer comment states this is a menu item; Spanish menu items use the infinitive form.
+- `sports_widget_go_to_world_cup_site_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — Content description uses an imperative verb instead of describing the action.
+    - Current: `Visita el sitio web del Mundial`
+    - Suggest: `Ir al sitio del Mundial`
+    - Content descriptions describe the control; the source "Go to World Cup site" is a label for an action, not a command to the user.
+- `sports_widget_remove_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "from home" (the homepage) is mistranslated as "de casa" (from the house).
+    - Current: `Retira la Copa del Mundo de casa`
+    - Suggest: `Eliminar la Copa del Mundo del inicio`
+    - The comment says the button removes the sports widget from the homepage; "de casa" means from one's house, and other remove strings use "Eliminar".
+- `sports_widget_runner_up_title` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "Runners-up" (second place) is translated as "Finalistas", which includes both finalists.
+    - Current: `Finalistas`
+    - Suggest: `Subcampeones`
+    - The developer comment explicitly states runners-up means second place; "Finalistas" refers to both teams that reach the final.
+- `sports_widget_still_want_to_follow` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — The question refers to following the tournament, not "el partido" (the match).
+    - Current: `¿Todavía quieres seguir el partido?`
+    - Suggest: `¿Todavía quieres seguir el torneo?`
+    - Developer comment: shown after a team is eliminated, asking if the user still wants to continue following the soccer tournament.
+- `sports_widget_team_followed_description` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "Check back" is rendered as "Consulta esta página", introducing a nonexistent "page" in a widget context.
+    - Current: `Consulta esta página para obtener información sobre los partidos`
+    - Suggest: `Vuelve para consultar la información de los partidos`
+    - The source does not mention a page; the string is shown on a home-screen widget, not a page.
+- `sports_widget_team_followed_title` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "Following:" (the team the user follows) is rendered as "A continuación:" which means "Next/Coming up".
+    - Current: `A continuación:`
+    - Suggest: `Siguiendo:`
+    - The developer comment says the title is shown after the user has followed a team and %s is the selected team; "A continuación" means "next up", not "following (a team)".
+- `sports_widget_upcoming_match_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "at %4$s" (kickoff time) is translated as "en %4$s", which reads as a place rather than a time.
+    - Current: `%3$s en %4$s`
+    - Suggest: `%3$s a las %4$s`
+    - %4$s is the kickoff time; Spanish uses "a las" for times, "en" suggests a location.
+- `sports_widget_view_schedule` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "View schedule" (match calendar) is translated as "Ver horario", suggesting a time schedule rather than the fixture list.
+    - Current: `Ver horario`
+    - Suggest: `Ver calendario`
+    - The comment says the button navigates to the full tournament match schedule, i.e., the fixture calendar.
+- `cfr_cookie_banner` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rMX/strings.xml` — Missing accent on the future-tense verb "intentará".
+    - Current: `%1$s intentara rechazar las solicitudes de cookies`
+    - Suggest: `%1$s intentará rechazar las solicitudes de cookies`
+    - The source "tries to reject" requires an accented verb form; "intentara" without accent is the subjunctive past, an orthographic error.
+- `content_description_clear_input` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rMX/strings.xml` — "Clear input" (clear the text typed in the URL bar) is rendered as "Limpiar registro" (clear the log/record).
+    - Current: `Limpiar registro`
+    - Suggest: `Borrar texto`
+    - The developer comment says this clears the text in the URL bar, not any record or log; "registro" says something different from the source.
+- `feedback_erase` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rMX/strings.xml` — "browsing history" is rendered as "historial de búsqueda" (search history) instead of "historial de navegación".
+    - Current: `Se ha eliminado tu historial de búsqueda.`
+    - Suggest: `Se ha eliminado tu historial de navegación.`
+    - The source says "browsing history"; sibling strings (feedback_erase2, feedback_erase_custom_tab) correctly use "historial de navegación".
+- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rMX/strings.xml` — `firstrun_shortcut_text` quotes “agregar a la página de inicio” but the string it names, `menu_add_to_home_screen`, reads “Agregar a la pantalla de inicio”
+    - Current: `Regresa rápidamente a tus sitios favoritos en %1$s. Selecciona "agregar a la página de inicio" desde el menú %1$s.`
+    - Suggest: `Agregar a la pantalla de inicio`
+    - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rMX/strings.xml` — `firstrun_shortcut_text` uses straight double quotes
+    - Current: `Regresa rápidamente a tus sitios favoritos en %1$s. Selecciona "agregar a la página de inicio" desde el menú %1$s.`
+    - Suggest: `“Agregar a la pantalla de inicio”`
+    - The locale's quote convention is `curly-double` (12 occurrences).
+- `preference_autocomplete_custom_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rMX/strings.xml` — Translation shifts the meaning: the source is about managing custom autocomplete URLs, not about "autocompletado de URL personalizadas".
+    - Current: `Agregar y gestionar el autocompletado de URL personalizadas.`
+    - Suggest: `Agregar y administrar URL de autocompletado personalizadas.`
+    - en-US "Add and manage custom autocomplete URLs" means the URLs themselves are added and managed; the target says the autocomplete feature is managed.
+- `preference_open_new_tab` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rMX/strings.xml` — Translation says "switch to a link in a new tab" losing the meaning of switching immediately to the newly opened tab.
+    - Current: `Cambiar a un enlace en una nueva pestaña inmediatamente`
+    - Suggest: `Cambiar de inmediato a la nueva pestaña al abrir un enlace`
+    - Per the developer comment the preference is about switching to the new tab immediately after opening a link; the target reads as switching to a link.
+- `preferences_cookie_banner_summary_off` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rMX/strings.xml` — Preference summary state "Off" rendered as the imperative "Desactivar" instead of "Desactivado".
+    - Current: `Desactivar`
+    - Suggest: `Desactivado`
+    - The comment states this is the summary shown when the cookie banner option is disabled — a status, not an action.
+- `preferences_cookie_banner_summary_on` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rMX/strings.xml` — Preference summary state "On" rendered as the imperative "Activar" instead of "Activado".
+    - Current: `Activar`
+    - Suggest: `Activado`
+    - The comment states this is the summary shown when the cookie banner option is enabled — a status, not an action.
 
 ---
 
@@ -45,26 +132,28 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,886 |
-| Missing strings | 25 |
+| Strings | 2,691 |
+| Missing strings | 44 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
 | printf placeholder mismatches | 0 |
 | Plural / select selector mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
-| Text quoting a UI label that no longer matches | 3 |
+| Text quoting a UI label that no longer matches | 2 |
 | Source-language spellings left unchanged | 0 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 4 |
+| Typography deviations from this locale's own norm | 3 |
 
 ### Completeness
 
-**25 strings** are not translated yet, concentrated in:
+**44 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — 25
+- `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — 38
+- `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-es-rMX/strings.xml` — 6
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -74,11 +163,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 12, `straight-double` 4 | **curly-double** |
+| quotes | `curly-double` 12, `straight-double` 3 | **curly-double** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 2 | **em** |
-| inverted marks | `open-question` 113, `open-exclamation` 30 | **open-question** |
-| register | `informal` 199, `formal` 12 | **informal** |
+| inverted marks | `open-question` 105, `open-exclamation` 29 | **open-question** |
+| register | `informal` 190, `formal` 12 | **informal** |
 
 ---
 
@@ -88,15 +177,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (177)
+## 3. Open findings (155)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 95 |
-| 3 | Degraded language (grammar, spelling, terminology) | 71 |
-| 4 | Cosmetic (typography, spacing) | 11 |
+| 2 | Wrong content (says something other than the English) | 83 |
+| 3 | Degraded language (grammar, spelling, terminology) | 63 |
+| 4 | Cosmetic (typography, spacing) | 9 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -404,7 +493,7 @@ _Nothing in this category._
     - Source: `Normal browsing default search engine`
     - Suggest: `Buscador predeterminado para la navegación estándar`
     - The source says "default search engine"; "principal" means primary/main, not default, and the rest of the tree uses "predeterminado" for "default".
-- _…and 38 more; see `state/` for the full list._
+- _…and 26 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -548,26 +637,6 @@ _Nothing in this category._
     - Source: `Almost there! You’re just 1 step away from the finish line.`
     - Suggest: `Estás a solo 1 paso de la meta.`
     - "1 solo un paso" is ungrammatical; the parallel string setup_checklist_subtitle_6_steps_fifth_step correctly reads "Estás a solo 1 paso de la meta".
-- `share_tab_group_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — The singular variant reads "Compartir al grupo pestañas", which is ungrammatical and inconsistent with the plural variant.
-    - Current: `Compartir al grupo pestañas %1$s con %2$d pestaña.`
-    - Source: `{$quantity ->} [one] Share %1$s tab group with %2$d tab. [other] Share %1$s tab group with %2$d tabs.`
-    - Suggest: `Compartir grupo de pestañas %1$s con %2$d pestaña.`
-    - Source is "Share %1$s tab group with %2$d tab."; the stray "al" and missing "de" make it ungrammatical, while the other variant correctly uses "Compartir grupo de pestañas".
-- `sports_widget_follow_another_team` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — Button label uses an imperative verb form instead of the infinitive used for action labels.
-    - Current: `Sigue a otro equipo`
-    - Source: `Follow another team`
-    - Suggest: `Seguir a otro equipo`
-    - Source is a button label "Follow another team"; Spanish button/action labels use the infinitive, as in sports_widget_error_refresh ("Actualizar").
-- `sports_widget_get_custom_wallpaper` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — Menu item uses an imperative verb form instead of the infinitive used for menu actions.
-    - Current: `Obtén un fondo de pantalla personalizado`
-    - Source: `Get custom wallpaper`
-    - Suggest: `Obtener fondo de pantalla personalizado`
-    - The developer comment states this is a menu item; Spanish menu items use the infinitive form.
-- `sports_widget_go_to_world_cup_site_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — Content description uses an imperative verb instead of describing the action.
-    - Current: `Visita el sitio web del Mundial`
-    - Source: `Go to World Cup site`
-    - Suggest: `Ir al sitio del Mundial`
-    - Content descriptions describe the control; the source "Go to World Cup site" is a label for an action, not a command to the user.
 - `translation_settings_always_download` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — Toggle label reads as an imperative "Descarga siempre" instead of the infinitive used for settings labels.
     - Current: `Descarga siempre idiomas en modo de ahorro de datos`
     - Source: `Always download languages in data saving mode`
@@ -588,11 +657,6 @@ _Nothing in this category._
     - Source: `Videos, downloads, or media didn’t work`
     - Suggest: `No funcionaban los videos, descargas o archivos multimedia`
     - Source "Videos, downloads, or media didn’t work" is past tense; translation uses present tense.
-- `cfr_cookie_banner` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rMX/strings.xml` — Missing accent on the future-tense verb "intentará".
-    - Current: `%1$s intentara rechazar las solicitudes de cookies`
-    - Source: `%1$s tries to reject cookie requests to dismiss annoying cookie banners.  Manage cookie banner preferences in %2$s.`
-    - Suggest: `%1$s intentará rechazar las solicitudes de cookies`
-    - The source "tries to reject" requires an accented verb form; "intentara" without accent is the subjunctive past, an orthographic error.
 - `download_firefox` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rMX/strings.xml` — "Download Firefox" is a list item label and should be an infinitive, not the imperative/indicative "Descarga".
     - Current: `Descarga Firefox`
     - Source: `Download Firefox`
@@ -711,16 +775,6 @@ _Nothing in this category._
     - Source: `Shortcut URL`
     - Suggest: `URL del atajo`
     - shortcut_name_hint, shortcut_max_limit_title/content all translate "shortcut" as "atajo"; using a different term on the same surface is inconsistent.
-- `sports_widget_final_results_page_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "World Cup" is rendered as "Copa del Mundo" here while all other sports widget strings use "Mundial".
-    - Current: `Resultados finales de la Copa del Mundo, página %1$d de %2$d`
-    - Source: `World Cup final results, page %1$d of %2$d`
-    - Suggest: `Resultados finales del Mundial, página %1$d de %2$d`
-    - Inconsistent with sports_widget_final_results_content_description ("Resultados finales del Mundial") and other strings on the same surface.
-- `sports_widget_view_schedule` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "View schedule" (match calendar) is translated as "Ver horario", suggesting a time schedule rather than the fixture list.
-    - Current: `Ver horario`
-    - Source: `View schedule`
-    - Suggest: `Ver calendario`
-    - The comment says the button navigates to the full tournament match schedule, i.e., the fixture calendar.
 - `trackers_blocked_panel_num_social_media_trackers` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "social media" left in English instead of the Spanish term.
     - Current: `rastreador de social media`
     - Source: `{$quantity ->} [one] %1$d social media tracker [other] %1$d social media trackers`
@@ -746,11 +800,6 @@ _Nothing in this category._
     - Source: `%1$s tries to use an HTTPS connection whenever possible for more security. <a href="%2$s">Learn more{ </a> } { <br/> }{ <br/> } Change this setting in Settings > Privacy &amp; Security > Security.`
     - Suggest: `Privacidad y seguridad`
     - Spanish does not use "&" as a conjunction in menu paths; the en-US "Privacy & Security" should be rendered with "y".
-- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rMX/strings.xml` — `firstrun_shortcut_text` quotes “agregar a la página de inicio” but the string it names, `menu_add_to_home_screen`, reads “Agregar a la pantalla de inicio”
-    - Current: `Regresa rápidamente a tus sitios favoritos en %1$s. Selecciona "agregar a la página de inicio" desde el menú %1$s.`
-    - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
-    - Suggest: `Agregar a la pantalla de inicio`
-    - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 
 ### E. Typography, punctuation & spacing
 
@@ -798,16 +847,6 @@ _Nothing in this category._
     - Current: `Eliminar automáticamente los datos de navegación cuando selecciones "Salir" en el menú principal`
     - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
     - Suggest: `“Salir”`
-    - The locale's quote convention is `curly-double` (12 occurrences).
-- `sports_widget_error_connection_interrupted` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — The em dash of the source was replaced with a colon, deviating from the em-dash convention.
-    - Current: `Conexión interrumpida: actualizaciones en vivo pausadas.`
-    - Source: `Connection interrupted — live updates paused.`
-    - Suggest: `Conexión interrumpida — actualizaciones en vivo pausadas.`
-    - Source uses an em dash and the locale convention is em dash; the punctuation should be preserved.
-- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rMX/strings.xml` — `firstrun_shortcut_text` uses straight double quotes
-    - Current: `Regresa rápidamente a tus sitios favoritos en %1$s. Selecciona "agregar a la página de inicio" desde el menú %1$s.`
-    - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
-    - Suggest: `“Agregar a la pantalla de inicio”`
     - The locale's quote convention is `curly-double` (12 occurrences).
 
 ---

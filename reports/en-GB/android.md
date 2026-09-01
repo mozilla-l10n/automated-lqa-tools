@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-25 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `0b207bb6d3c1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `0b207bb6d3c1` |
-| **Previous run** | 2026-08-24 @ `85004d56fca7` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
+| **Previous run** | 2026-08-25 @ `0b207bb6d3c1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 2,912 |
+| **Strings reviewed this run** | 18 of 2,735 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,10 +45,11 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,912 |
+| Strings | 2,735 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
@@ -70,10 +71,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 15, `curly-single` 1 | **curly-double** |
-| apostrophe | `typographic` 169 | **typographic** |
+| quotes | `curly-double` 14, `curly-single` 1 | **curly-double** |
+| apostrophe | `typographic` 167 | **typographic** |
 | ellipsis | `char` 21 | **char** |
-| dash | `em` 4 | **em** |
+| dash | `em` 3 | **em** |
 
 ---
 

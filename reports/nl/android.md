@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
-| **Previous run** | 2026-08-22 @ `eda9938ab8c3` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
+| **Previous run** | 2026-08-24 @ `e8622a909368` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 3 of 2,911 |
+| **Strings reviewed this run** | 1 of 2,717 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,28 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (5)
 
-_Nothing retired._
+- `sports_widget_round_of_16` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Round of 16" is rendered literally as "Ronde van 16" instead of the Dutch football term "Achtste finales".
+    - Current: `Ronde van 16`
+    - Suggest: `Achtste finales`
+    - In Dutch soccer terminology the Round of 16 is called 'achtste finales'; 'Ronde van 16' is a literal, incorrect rendering (and inconsistent with 'Halve finales' used elsewhere).
+- `sports_widget_round_of_32` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Round of 32" is rendered literally as "Ronde van 32" instead of the Dutch term "Zestiende finales".
+    - Current: `Ronde van 32`
+    - Suggest: `Zestiende finales`
+    - Dutch soccer terminology for the Round of 32 is 'zestiende finales'; the literal 'Ronde van 32' is not the established term and is inconsistent with 'Halve finales'.
+- `sports_widget_team_followed_title` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Following:" is translated as the present participle "Volgend:" which means "next" rather than "you are following".
+    - Current: `Volgend:`
+    - Suggest: `Volgt:`
+    - The source labels the team the user follows; Dutch 'volgend' means 'next/following (in sequence)' and is misleading here.
+- `sports_widget_view_schedule` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "View schedule" (tournament match schedule) is translated as "Tijdschema bekijken" instead of "Speelschema bekijken".
+    - Current: `Tijdschema bekijken`
+    - Suggest: `Speelschema bekijken`
+    - The developer comment specifies the full soccer tournament match schedule, which in Dutch is 'speelschema'; 'tijdschema' means timetable in a generic sense.
+- `add_custom_autocomplete_label` — `mozilla-mobile/focus-android/app/src/main/res/values-nl/strings.xml` — "Add link to autocomplete" is rendered as if adding a link pointing to autocomplete.
+    - Current: `Koppeling naar automatisch aanvullen toevoegen`
+    - Suggest: `Koppeling aan automatisch aanvullen toevoegen`
+    - The button adds the current URL to the custom autocomplete list; "naar" reads as direction (a link to autocomplete) rather than adding it to the list.
 
 ---
 
@@ -45,10 +64,11 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,911 |
-| Missing strings | 0 |
+| Strings | 2,717 |
+| Missing strings | 18 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
@@ -62,7 +82,12 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**18 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — 13
+- `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-nl/strings.xml` — 5
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -70,11 +95,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-single` 16 | **curly-single** |
-| apostrophe | `typographic` 51 | **typographic** |
+| quotes | `curly-single` 15 | **curly-single** |
+| apostrophe | `typographic` 46 | **typographic** |
 | ellipsis | `char` 21 | **char** |
-| dash | `en` 7 | **en** |
-| register | `formal` 445 | **formal** |
+| dash | `en` 6 | **en** |
+| register | `formal` 420 | **formal** |
 
 ---
 
@@ -84,14 +109,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (68)
+## 3. Open findings (63)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 36 |
-| 3 | Degraded language (grammar, spelling, terminology) | 32 |
+| 2 | Wrong content (says something other than the English) | 35 |
+| 3 | Degraded language (grammar, spelling, terminology) | 28 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -309,11 +334,6 @@ _Nothing reported._
     - Source: `Browser is blocked or unsupported`
     - Suggest: `Browser is geblokkeerd of wordt niet ondersteund`
     - Source is "Browser is blocked or unsupported"; the Dutch reverses the order of the two conditions.
-- `add_custom_autocomplete_label` — `mozilla-mobile/focus-android/app/src/main/res/values-nl/strings.xml` — "Add link to autocomplete" is rendered as if adding a link pointing to autocomplete.
-    - Current: `Koppeling naar automatisch aanvullen toevoegen`
-    - Source: `Add link to autocomplete`
-    - Suggest: `Koppeling aan automatisch aanvullen toevoegen`
-    - The button adds the current URL to the custom autocomplete list; "naar" reads as direction (a link to autocomplete) rather than adding it to the list.
 - `content_description_dismiss_input` — `mozilla-mobile/focus-android/app/src/main/res/values-nl/strings.xml` — "Dismiss" (close/return to browser) is translated as "Verwijderen" (delete).
     - Current: `Verwijderen`
     - Source: `Dismiss`
@@ -367,11 +387,6 @@ _Nothing reported._
     - Source: `One tap helps stop companies spying on your clicks.`
     - Suggest: `Met één tik voorkomt u dat bedrijven uw klikken bespioneren.`
     - The Dutch clause has no subject; "Met één tik voorkomen dat…" is not a well-formed sentence, unlike the source "One tap helps stop companies spying on your clicks."
-- `sports_widget_team_followed_title` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Following:" is translated as the present participle "Volgend:" which means "next" rather than "you are following".
-    - Current: `Volgend:`
-    - Source: `Following:  %s`
-    - Suggest: `Volgt:`
-    - The source labels the team the user follows; Dutch 'volgend' means 'next/following (in sequence)' and is misleading here.
 - `sync_no_devices_available_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — Wrong article gender with ‘account’ (het account) and ‘Alle’ instead of ‘Alle apparaten die … ’ mismatch.
     - Current: `met deze account`
     - Source: `Any devices signed in and syncing to this account will appear here.`
@@ -430,21 +445,6 @@ _Nothing reported._
     - Source: `Turn VPN on to make your browsing more private and harder to trace.`
     - Suggest: `uw navigatie meer privé en moeilijker te volgen te maken`
     - "persoonlijker" means "more personal", the opposite emphasis of "more private"; the parallel string ip_protection_onboarding_body_promo correctly uses "meer privé".
-- `sports_widget_round_of_16` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Round of 16" is rendered literally as "Ronde van 16" instead of the Dutch football term "Achtste finales".
-    - Current: `Ronde van 16`
-    - Source: `Round of 16`
-    - Suggest: `Achtste finales`
-    - In Dutch soccer terminology the Round of 16 is called 'achtste finales'; 'Ronde van 16' is a literal, incorrect rendering (and inconsistent with 'Halve finales' used elsewhere).
-- `sports_widget_round_of_32` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Round of 32" is rendered literally as "Ronde van 32" instead of the Dutch term "Zestiende finales".
-    - Current: `Ronde van 32`
-    - Source: `Round of 32`
-    - Suggest: `Zestiende finales`
-    - Dutch soccer terminology for the Round of 32 is 'zestiende finales'; the literal 'Ronde van 32' is not the established term and is inconsistent with 'Halve finales'.
-- `sports_widget_view_schedule` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "View schedule" (tournament match schedule) is translated as "Tijdschema bekijken" instead of "Speelschema bekijken".
-    - Current: `Tijdschema bekijken`
-    - Source: `View schedule`
-    - Suggest: `Speelschema bekijken`
-    - The developer comment specifies the full soccer tournament match schedule, which in Dutch is 'speelschema'; 'tijdschema' means timetable in a generic sense.
 
 ### E. Typography, punctuation & spacing
 

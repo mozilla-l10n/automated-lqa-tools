@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
-| **Previous run** | 2026-08-22 @ `eda9938ab8c3` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
+| **Previous run** | 2026-08-24 @ `e8622a909368` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 3 of 2,911 |
+| **Strings reviewed this run** | 1 of 2,717 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -26,20 +26,56 @@ _No new findings._
 
 _Nothing was fixed._
 
-### ↩︎ Withdrawn — no longer considered a defect (1)
+### ↩︎ Withdrawn — no longer considered a defect (0)
 
-- `search_suggestions_onboarding_text` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `search_suggestions_onboarding_text` has placeholders %1$s where the source has %s
-    - Current: `%1$s sil alles wat jo yn de adresbalke yntype mei jo standert sykmasine diele.`
-    - Source: `%s will share everything you type in the address bar with your default search engine.`
-    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+_Nothing withdrawn._
 
 ### 🔁 String changed, defect not verifiable — needs a re-read (0)
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (10)
 
-_Nothing retired._
+- `sports_widget_card_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Missing diacritic on "Ûntfang".
+    - Current: `Untfang live wedstriidupdates en mear.`
+    - Suggest: `Ûntfang live wedstriidupdates en mear.`
+    - Frisian spelling requires the circumflex: "Ûntfang", not "Untfang".
+- `sports_widget_countdown_to_world_cup` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Missing diacritic on "Ôftelle".
+    - Current: `Oftelle nei it WK`
+    - Suggest: `Ôftelle nei it WK`
+    - Frisian spelling requires the circumflex in "ôftelle"; capitalised it is "Ôftelle".
+- `sports_widget_country_selector_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Informal address "dyn" used instead of the polite "jo" form used throughout the locale.
+    - Current: `Folgje dyn team`
+    - Suggest: `Folgje jo team`
+    - The rest of the batch consistently uses the formal "jo" (e.g. "Kontrolearje jo ynternetferbining", "Meld jo oan mei jo kamera"); "dyn" breaks the established register.
+- `sports_widget_error_connection_interrupted` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Em dash in source rendered as an en dash without matching house convention spacing/character check.
+    - Current: `Ferbining ûnderbrutsen – live updates pauzearre.`
+    - Suggest: `Ferbining ûnderbrutsen — live updates pauzearre.`
+    - The source uses an em dash; the locale convention table lists the en dash as the house dash, but here the punctuation mark differs from the source separator. Low-impact cosmetic mismatch.
+- `sports_widget_remove_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Missing preposition: "fan jo startside" should be "fan jo startside ôf" / the phrase reads as removing the widget belonging to the home page.
+    - Current: `Wrâldkampioenskip-widget fan jo startside fuortsmite`
+    - Suggest: `Wrâldkampioenskip-widget fan jo startside ôf fuortsmite`
+    - In Frisian, removal from a location requires "fan … ôf"; without it the sentence is ambiguous/ungrammatical.
+- `sports_widget_team_followed_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Following:" (the user follows the team) is rendered as "Folgjend:" which means "next/following" in the ordinal sense.
+    - Current: `Folgjend:`
+    - Suggest: `Folget:`
+    - Source means the user is now following the given team; "Folgjend" is the adjective "next", not the state of following.
+- `cookie_banner_report_a_site_snackbar_label` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Ungrammatical phrase "Fersyk om te websitestipe" with a stray infinitive marker and wrong word order.
+    - Current: `Fersyk om te websitestipe yntsjinne.`
+    - Suggest: `Fersyk om websitestipe yntsjinne.`
+    - The source is "Request to support site submitted." The Frisian contains an orphan infinitive particle "te" before a noun, making the sentence ungrammatical.
+- `cookie_banner_the_site_was_reported` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Ungrammatical phrase "Fersyk om te websitestipe" with a stray infinitive marker.
+    - Current: `Fersyk om te websitestipe yntsjinne.`
+    - Suggest: `Fersyk om websitestipe yntsjinne.`
+    - The source is "Request to support site submitted." The infinitive particle "te" before the noun "websitestipe" is ungrammatical.
+- `preferences_cookie_banner_summary_off` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Missing diacritic on "Út" (Frisian for "Off").
+    - Current: `Ut`
+    - Suggest: `Út`
+    - The Frisian word for "off" is "Út" with an acute accent; "Ut" is a spelling error.
+- `tip_disable_tips2` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Dutch spelling 'startscherm' used instead of Frisian 'startskerm'.
+    - Current: `Tips op startscherm útskeakelje`
+    - Suggest: `Tips op startskerm útskeakelje`
+    - The Frisian word is 'startskerm', as used in tip_add_to_homescreen; 'startscherm' is Dutch.
 
 ---
 
@@ -48,10 +84,11 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,911 |
-| Missing strings | 0 |
+| Strings | 2,717 |
+| Missing strings | 18 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
@@ -65,7 +102,12 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**18 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — 13
+- `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-fy-rNL/strings.xml` — 5
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -73,10 +115,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-single` 17 | **curly-single** |
-| apostrophe | `typographic` 101, `straight` 8 | **typographic** |
+| quotes | `curly-single` 16 | **curly-single** |
+| apostrophe | `typographic` 95, `straight` 8 | **typographic** |
 | ellipsis | `char` 21 | **char** |
-| dash | `en` 7 | **en** |
+| dash | `en` 6 | **en** |
 
 ---
 
@@ -86,15 +128,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (175)
+## 3. Open findings (165)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 60 |
-| 3 | Degraded language (grammar, spelling, terminology) | 103 |
-| 4 | Cosmetic (typography, spacing) | 12 |
+| 2 | Wrong content (says something other than the English) | 59 |
+| 3 | Degraded language (grammar, spelling, terminology) | 95 |
+| 4 | Cosmetic (typography, spacing) | 11 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -292,11 +334,6 @@ _Nothing in this category._
     - Source: `%1$s essentials`
     - Suggest: `%1$s-essinsjes`
     - "essentials" is an ordinary English noun, not a brand name, and should be rendered in Frisian (e.g. "basisynstellingen" / "essinsjes").
-- `sports_widget_team_followed_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Following:" (the user follows the team) is rendered as "Folgjend:" which means "next/following" in the ordinal sense.
-    - Current: `Folgjend:`
-    - Source: `Following:  %s`
-    - Suggest: `Folget:`
-    - Source means the user is now following the given team; "Folgjend" is the adjective "next", not the state of following.
 - `tab_manager_close_all_tabs_dialog_body` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Dropped "open" from "all open tabs".
     - Current: `Dit slút alle ljepblêden.`
     - Source: `This will close all open tabs.`
@@ -402,7 +439,11 @@ _Nothing in this category._
     - Source: `Hide webpages when switching apps and block taking screenshots.`
     - Suggest: `Websiden ferstopje by it wikseljen fan apps en it meitsjen fan skermôfdrukken blokkearje.`
     - Source: hide webpages when switching apps AND block taking screenshots; current wording reads as "switching apps and taking screenshots".
-- _…and 1 more; see `state/` for the full list._
+- `preference_security_biometric_summary2` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — "Shortcuts" (pinned website shortcuts) is rendered as "fluchtoetsen" (keyboard shortcuts).
+    - Current: `fluchtoetsen`
+    - Source: `Unlock using fingerprint if you’ve added Shortcuts or when a website is already open in %s.`
+    - Suggest: `fluchkeppelingen`
+    - The developer comment explains Shortcuts are pinned favourite websites, not keyboard shortcuts.
 
 ### C. Grammar, agreement & spelling
 
@@ -706,7 +747,7 @@ _Nothing in this category._
     - Source: `Great start! You’ve completed 1 out of 3 steps.`
     - Suggest: `Goed begjin!`
     - The source "Great start!" should read "Goed begjin!"; "Goed j" is not a Frisian word/phrase and appears to be a truncation.
-- _…and 27 more; see `state/` for the full list._
+- _…and 20 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -775,11 +816,6 @@ _Nothing in this category._
     - Source: `You’ve completed all 6 setup steps. Enjoy the speed, privacy, and security of %1$s.`
     - Suggest: `ynstelstappen`
     - The checklist concerns setting up the app (ynstelle), not installing it; other strings in the same feature use "ynstelle".
-- `sports_widget_country_selector_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Informal address "dyn" used instead of the polite "jo" form used throughout the locale.
-    - Current: `Folgje dyn team`
-    - Source: `Follow your team`
-    - Suggest: `Folgje jo team`
-    - The rest of the batch consistently uses the formal "jo" (e.g. "Kontrolearje jo ynternetferbining", "Meld jo oan mei jo kamera"); "dyn" breaks the established register.
 - `terms_of_use_prompt_title_option_a` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Terms of Use" is translated as "Gebrûksbetingsten" here but "Brûkersbetingsten" in terms_of_use_prompt_link_terms_of_use on the same prompt.
     - Current: `Gebrûksbetingsten`
     - Source: `Terms of Use`
@@ -806,43 +842,38 @@ _Nothing in this category._
 - `download_content_type_filter_video` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `download_content_type_filter_video` uses a straight apostrophe
     - Current: `Fideo's`
     - Source: `Videos`
-    - The tree uses ’ 101 times against 8 straight.
+    - The tree uses ’ 95 times against 8 straight.
 - `etp_known_fingerprinters_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `etp_known_fingerprinters_description` uses a straight apostrophe
     - Current: `Foarkomt dat unyk identifisearbere gegevens oer jo apparaat sammele wurde dy't brûkt wurde kinne foar folchdoeleinen.`
     - Source: `Stops uniquely identifiable data from being collected about your device that can be used for tracking purposes.`
     - Suggest: `dy’t brûkt wurde kinne`
-    - The tree uses ’ 101 times against 8 straight.
+    - The tree uses ’ 95 times against 8 straight.
 - `nova_onboarding_marketing_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `nova_onboarding_marketing_body_2` uses a straight apostrophe
     - Current: `Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht.`
     - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
-    - The tree uses ’ 101 times against 8 straight.
+    - The tree uses ’ 95 times against 8 straight.
 - `onboarding_marketing_body_1` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `onboarding_marketing_body_1` uses a straight apostrophe
     - Current: `Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht.`
     - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
     - Suggest: `Mozilla’s`
-    - The tree uses ’ 101 times against 8 straight.
+    - The tree uses ’ 95 times against 8 straight.
 - `onboarding_marketing_redesign_opt_out_checkbox` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `onboarding_marketing_redesign_opt_out_checkbox` uses a straight apostrophe
     - Current: `Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht.`
     - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
     - Suggest: `Mozilla’s`
-    - The tree uses ’ 101 times against 8 straight.
+    - The tree uses ’ 95 times against 8 straight.
 - `preferences_marketing_data_description_4` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `preferences_marketing_data_description_4` uses a straight apostrophe
     - Current: `Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke.`
     - Source: `Share how you discovered Firefox and that you use it with Mozilla’s marketing technology partners.`
-    - The tree uses ’ 101 times against 8 straight.
-- `sports_widget_error_connection_interrupted` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Em dash in source rendered as an en dash without matching house convention spacing/character check.
-    - Current: `Ferbining ûnderbrutsen – live updates pauzearre.`
-    - Source: `Connection interrupted — live updates paused.`
-    - Suggest: `Ferbining ûnderbrutsen — live updates pauzearre.`
-    - The source uses an em dash; the locale convention table lists the en dash as the house dash, but here the punctuation mark differs from the source separator. Low-impact cosmetic mismatch.
+    - The tree uses ’ 95 times against 8 straight.
 - `tab_tray_inactive_auto_close_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `tab_tray_inactive_auto_close_body_2` uses a straight apostrophe
     - Current: `%1$s kin ljepblêden dy't jo de ôfrûne moanne net besjoen hawwe slute.`
     - Source: `%1$s can close tabs you haven’t viewed over the past month.`
-    - The tree uses ’ 101 times against 8 straight.
+    - The tree uses ’ 95 times against 8 straight.
 - `uninstall_survey_option_4_v2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `uninstall_survey_option_4_v2` uses a straight apostrophe
     - Current: `Fideo's, downloads of media wurken net`
     - Source: `Videos, downloads, or media didn’t work`
-    - The tree uses ’ 101 times against 8 straight.
+    - The tree uses ’ 95 times against 8 straight.
 
 ---
 

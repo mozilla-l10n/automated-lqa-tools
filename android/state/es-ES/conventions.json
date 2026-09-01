@@ -1,15 +1,15 @@
 {
  "_meta": {
   "locale": "es-ES",
-  "prose_chunks": 2834,
-  "strings": 2834
+  "prose_chunks": 2735,
+  "strings": 2735
  },
  "apostrophe": {
   "straight": 0,
   "typographic": 0
  },
  "dash": {
-  "em": 3,
+  "em": 2,
   "en": 0
  },
  "ellipsis": {
@@ -21,7 +21,7 @@
  },
  "inverted_marks": {
   "open-exclamation": 26,
-  "open-question": 111
+  "open-question": 105
  },
  "nbsp": {
   "before-punctuation": 0,
@@ -31,10 +31,10 @@
  },
  "quotes": {
   "curly-double": 12,
-  "straight-double": 4
+  "straight-double": 3
  },
  "register": {
   "formal": 11,
-  "informal": 179
+  "informal": 177
  }
 }

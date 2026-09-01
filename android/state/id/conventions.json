@@ -1,8 +1,8 @@
 {
  "_meta": {
   "locale": "id",
-  "prose_chunks": 2592,
-  "strings": 2592
+  "prose_chunks": 2586,
+  "strings": 2586
  },
  "apostrophe": {
   "straight": 0,
@@ -14,7 +14,7 @@
  },
  "ellipsis": {
   "ascii": 0,
-  "char": 19
+  "char": 20
  },
  "fullwidth": {
   "punctuation": 0
@@ -31,6 +31,6 @@
  },
  "quotes": {
   "curly-double": 11,
-  "straight-double": 6
+  "straight-double": 5
  }
 }
