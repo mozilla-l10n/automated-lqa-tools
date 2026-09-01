@@ -1,16 +1,16 @@
 {
  "_meta": {
   "locale": "nl",
-  "prose_chunks": 2911,
-  "strings": 2911
+  "prose_chunks": 2717,
+  "strings": 2717
  },
  "apostrophe": {
   "straight": 0,
-  "typographic": 51
+  "typographic": 46
  },
  "dash": {
   "em": 0,
-  "en": 7
+  "en": 6
  },
  "ellipsis": {
   "ascii": 0,
@@ -30,10 +30,10 @@
   "total": 0
  },
  "quotes": {
-  "curly-single": 16
+  "curly-single": 15
  },
  "register": {
-  "formal": 445,
+  "formal": 420,
   "informal": 0
  }
 }

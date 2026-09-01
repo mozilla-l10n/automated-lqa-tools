@@ -1,8 +1,8 @@
 {
  "_meta": {
   "locale": "hu",
-  "prose_chunks": 2897,
-  "strings": 2897
+  "prose_chunks": 2724,
+  "strings": 2724
  },
  "apostrophe": {
   "straight": 0,
@@ -10,7 +10,7 @@
  },
  "dash": {
   "em": 0,
-  "en": 6
+  "en": 4
  },
  "ellipsis": {
   "ascii": 0,
@@ -30,6 +30,6 @@
   "total": 0
  },
  "quotes": {
-  "polish-double": 17
+  "polish-double": 16
  }
 }

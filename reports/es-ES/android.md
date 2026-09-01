@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
-| **Previous run** | 2026-08-22 @ `eda9938ab8c3` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
+| **Previous run** | 2026-08-24 @ `e8622a909368` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,834 |
+| **Strings reviewed this run** | 97 of 2,735 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,41 @@ Also for es-ES: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (5)
 
-_No new findings._
+- `mozac_feature_summarize_feedback_bad_click_label` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-es-rES/strings.xml` — The accessibility click label uses an imperative form instead of the infinitive used in the parallel "good" string and recommended by the developer comment.
+    - Current: `califica el resumen como malo`
+    - Source: `rate summary as bad`
+    - Suggest: `calificar el resumen como malo`
+    - The developer comment recommends an infinitive/dictionary form, and the matching string mozac_feature_summarize_feedback_good_click_label uses "calificar el resumen como bueno"; the imperative here is inconsistent and breaks the "Toca dos veces para [...]" interpolation.
+- `ip_protection_locations_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — "Navigate back" is rendered as "go to the previous page", which describes browser navigation instead of the screen's back button.
+    - Current: `Ir a la página anterior`
+    - Source: `Navigate back`
+    - Suggest: `Volver atrás`
+    - The source is a content description for the VPN location screen's top bar back button; "Ir a la página anterior" wrongly implies navigating to a previous web page.
+- `firefox_labs_website_isolation_description` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — "website compatibility" is rendered as "la compatibilidad con otros sitios web", adding "otros" which is not in the source.
+    - Current: `la compatibilidad con otros sitios web`
+    - Source: `An extra barrier between websites that helps protect your data across tabs. May affect performance, stability, website compatibility, and how browsing history is saved.`
+    - Suggest: `la compatibilidad de los sitios web`
+    - The source says "website compatibility", not compatibility with "other" websites; the added "otros" changes the meaning.
+- `pdf_tools_signature_placeholder` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — "Type signature" translated as "Escribe tu firma" adds a possessive not in the source.
+    - Current: `Escribe tu firma`
+    - Source: `Type signature`
+    - Suggest: `Escribir firma`
+    - Source is a neutral placeholder "Type signature"; the Spanish adds "tu" (your), which the source does not state.
+- `pdf_tools_signature_clear_button` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — "Clear" for erasing entered text should be "Borrar", not "Limpiar".
+    - Current: `Limpiar`
+    - Source: `Clear`
+    - Suggest: `Borrar`
+    - The developer comment says the button erases the text the user entered; es-ES convention for "Clear" in this sense is "Borrar".
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `mozac_feature_prompts_content_description_input_label` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-es-rES/strings.xml` — "ingresar" is Latin American usage; es-ES uses "introducir".
+    - Current: `Etiqueta para ingresar un campo de entrada de texto`
+    - Source: `Label for entering a text input field`
+    - Suggest: `Etiqueta para introducir un campo de entrada de texto`
+    - Elsewhere in the same file "Enter a password" is translated as "Introduce una contraseña"; "ingresar" is not the es-ES term.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -34,9 +62,64 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (14)
 
-_Nothing retired._
+- `sports_widget_error_load_failed` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — Translation adds "la página" (the page), which is not in the source and refers to refreshing the widget data, not a page.
+    - Current: `Intenta actualizar la página en unos minutos.`
+    - Suggest: `Intenta actualizar en unos minutos.`
+    - Source is "Try refreshing in a few minutes." with no mention of a page; the sibling string sports_widget_error_load_failed_description correctly renders it as "Intenta actualizar en unos minutos."
+- `sports_widget_get_custom_wallpaper` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — Menu item label rendered as an imperative sentence instead of a noun/infinitive label like the other menu items.
+    - Current: `Obtén un fondo de pantalla personalizado`
+    - Suggest: `Obtener un fondo de pantalla personalizado`
+    - It is a menu item parallel to "Cambiar equipo" (sports_widget_change_team) and "Seguir a otro equipo"; menu labels use the infinitive in es-ES, not the imperative.
+- `sports_widget_runner_up_title` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — "Runners-up" (second place) is rendered as "Finalistas", which in Spanish covers both teams reaching the final, not the second-place team.
+    - Current: `Finalistas`
+    - Suggest: `Subcampeones`
+    - The developer comment explicitly states runners-up means second place; "Finalistas" designates all finalists, including the champion, so the meaning is wrong.
+- `sports_widget_team_followed_description` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — Translation adds "esta página", which is not in the source and is inaccurate for a home-screen widget.
+    - Current: `Consulta de nuevo esta página para obtener información`
+    - Suggest: `Vuelve a consultarlo para obtener información`
+    - The source "Check back for match info" does not mention a page; the widget is on the homepage, not a page.
+- `add_custom_autocomplete_label` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — "Add link to autocomplete" (add the link to the autocomplete list) is mistranslated as adding the link in order to autocomplete.
+    - Current: `Añadir el enlace para completar automáticamente`
+    - Suggest: `Añadir el enlace a autocompletado`
+    - Per the developer comment, the button adds the current URL to the custom autocomplete list; the Spanish reads as "add the link in order to complete automatically".
+- `cfr_cookie_banner` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — Redundant added wording: "en los ajustes en %2$s" duplicates the linked word "ajustes".
+    - Current: `Administra las preferencias de avisos de cookies en los ajustes en %2$s.`
+    - Suggest: `Administra las preferencias de avisos de cookies en %2$s.`
+    - %2$s is already the link text "ajustes"; the source is "Manage cookie banner preferences in %2$s." so "en los ajustes" is an unwarranted duplication.
+- `content_description_clear_input` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — "Clear input" (clear the text in the URL bar) is rendered as "Limpiar registro" (clear log/record).
+    - Current: `Limpiar registro`
+    - Suggest: `Borrar el texto introducido`
+    - The developer comment says it clears text in the URL bar; "registro" means log/record, which is a different thing.
+- `cookie_banner_exception_panel_title_state_off_for_site` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — "Cookie Banner Reduction" rendered as "reducción de aviso de cookies" in singular, inconsistent with "reducción de avisos de cookies" used elsewhere.
+    - Current: `reducción de aviso de cookies`
+    - Suggest: `reducción de avisos de cookies`
+    - The same feature name is translated as "Reducción de avisos de cookies" in cookie_banner_exception_item_title and other strings on the same surface.
+- `cookie_banner_exception_panel_title_state_on_for_site` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — "Cookie Banner Reduction" rendered as "reducción de aviso de cookies" in singular, inconsistent with "reducción de avisos de cookies" used elsewhere.
+    - Current: `reducción de aviso de cookies`
+    - Suggest: `reducción de avisos de cookies`
+    - The same feature name is translated as "Reducción de avisos de cookies" in the other cookie banner strings in this file.
+- `feedback_erase` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — "browsing history" was translated as "historial de búsqueda" (search history).
+    - Current: `Se ha eliminado tu historial de búsqueda.`
+    - Suggest: `Se ha eliminado tu historial de navegación.`
+    - The source says "Your browsing history has been erased.", not search history; other strings in the same file use "historial de navegación".
+- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — `firstrun_shortcut_text` quotes “Agregar a la pantalla de inicio” but the string it names, `menu_add_to_home_screen`, reads “Añadir a pantalla de inicio”
+    - Current: `Vuelve a visitar tus sitios favoritos en %1$s de forma instantánea. En el menú %1$s, selecciona "Agregar a la pantalla de inicio".`
+    - Suggest: `Añadir a pantalla de inicio`
+    - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — `firstrun_shortcut_text` uses straight double quotes
+    - Current: `Vuelve a visitar tus sitios favoritos en %1$s de forma instantánea. En el menú %1$s, selecciona "Agregar a la pantalla de inicio".`
+    - Suggest: `selecciona “Añadir a pantalla de inicio”`
+    - The locale's quote convention is `curly-double` (12 occurrences).
+- `preference_autocomplete_custom_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — "custom autocomplete URLs" is mistranslated as "autocompletado personalizado de URLs" (custom autocompletion of URLs).
+    - Current: `Agregar y gestionar autocompletado personalizado de URLs.`
+    - Suggest: `Agregar y gestionar URLs de autocompletado personalizadas.`
+    - The source refers to custom autocomplete URLs (user-defined URL entries), not to a custom autocomplete feature.
+- `preference_open_new_tab` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — A setting label is rendered as an imperative addressed to the user and in formal register, instead of describing the behavior.
+    - Current: `Cambie a un enlace en una nueva pestaña inmediatamente`
+    - Suggest: `Cambiar al enlace en una nueva pestaña inmediatamente`
+    - Source "Switch to link in new tab immediately" is a preference label describing behavior; "Cambie" is a formal imperative, breaking both meaning and the informal register convention.
 
 ---
 
@@ -45,31 +128,25 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,834 |
-| Missing strings | 77 |
+| Strings | 2,735 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
 | printf placeholder mismatches | 0 |
 | Plural / select selector mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
-| Text quoting a UI label that no longer matches | 1 |
+| Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 4 |
+| Typography deviations from this locale's own norm | 3 |
 
 ### Completeness
 
-**77 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — 67
-- `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-es-rES/strings.xml` — 6
-- `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-es-rES/strings.xml` — 3
-- `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-es-rES/strings.xml` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -77,11 +154,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 12, `straight-double` 4 | **curly-double** |
+| quotes | `curly-double` 12, `straight-double` 3 | **curly-double** |
 | ellipsis | `char` 21 | **char** |
-| dash | `em` 3 | **em** |
-| inverted marks | `open-question` 111, `open-exclamation` 26 | **open-question** |
-| register | `informal` 179, `formal` 11 | **informal** |
+| dash | `em` 2 | **em** |
+| inverted marks | `open-question` 105, `open-exclamation` 26 | **open-question** |
+| register | `informal` 177, `formal` 11 | **informal** |
 
 ---
 
@@ -91,15 +168,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (133)
+## 3. Open findings (123)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 62 |
-| 3 | Degraded language (grammar, spelling, terminology) | 63 |
-| 4 | Cosmetic (typography, spacing) | 8 |
+| 2 | Wrong content (says something other than the English) | 55 |
+| 3 | Degraded language (grammar, spelling, terminology) | 61 |
+| 4 | Cosmetic (typography, spacing) | 7 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -237,11 +314,21 @@ _Nothing in this category._
     - Source: `Enables fingerprinting protection to stop suspected fingerprinters.`
     - Suggest: `para detener los detectores de huellas digitales sospechosos`
     - The source says "stop suspected fingerprinters"; the sibling string etp_suspected_fingerprinters_title correctly uses "Detectores de huellas digitales sospechosos", so this is both a mistranslation and an inconsistency.
+- `firefox_labs_website_isolation_description` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — "website compatibility" is rendered as "la compatibilidad con otros sitios web", adding "otros" which is not in the source.
+    - Current: `la compatibilidad con otros sitios web`
+    - Source: `An extra barrier between websites that helps protect your data across tabs. May affect performance, stability, website compatibility, and how browsing history is saved.`
+    - Suggest: `la compatibilidad de los sitios web`
+    - The source says "website compatibility", not compatibility with "other" websites; the added "otros" changes the meaning.
 - `fxa_tabs_closed_notification_title` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — The app-name placeholder is read as a modifier of "pestañas", changing the meaning of the notification title.
     - Current: `%1$s pestañas cerradas: %2$d`
     - Source: `%1$s tabs closed: %2$d`
     - Suggest: `%1$s: pestañas cerradas: %2$d`
     - Per the comment, %1$s is the app name and %2$d the number of tabs closed; source is "%1$s tabs closed: %2$d". In Spanish "%1$s pestañas cerradas" reads as "<app> tabs closed" with the app name modifying the noun, losing the app-name-as-label sense.
+- `ip_protection_locations_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — "Navigate back" is rendered as "go to the previous page", which describes browser navigation instead of the screen's back button.
+    - Current: `Ir a la página anterior`
+    - Source: `Navigate back`
+    - Suggest: `Volver atrás`
+    - The source is a content description for the VPN location screen's top bar back button; "Ir a la página anterior" wrongly implies navigating to a previous web page.
 - `ip_protection_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — "Navigate back" for a top-bar back button is rendered as "Ir a la página anterior" (go to the previous page), which describes page navigation rather than returning to the previous screen.
     - Current: `Ir a la página anterior`
     - Source: `Navigate back`
@@ -352,21 +439,6 @@ _Nothing in this category._
     - Source: `Search settings`
     - Suggest: `Buscar en los ajustes`
     - The developer comment states "Search" is a verb here; the title is for searching within settings, not for settings about search.
-- `sports_widget_error_load_failed` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — Translation adds "la página" (the page), which is not in the source and refers to refreshing the widget data, not a page.
-    - Current: `Intenta actualizar la página en unos minutos.`
-    - Source: `Match info is not available right now. Try refreshing in a few minutes.`
-    - Suggest: `Intenta actualizar en unos minutos.`
-    - Source is "Try refreshing in a few minutes." with no mention of a page; the sibling string sports_widget_error_load_failed_description correctly renders it as "Intenta actualizar en unos minutos."
-- `sports_widget_runner_up_title` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — "Runners-up" (second place) is rendered as "Finalistas", which in Spanish covers both teams reaching the final, not the second-place team.
-    - Current: `Finalistas`
-    - Source: `Runners-up`
-    - Suggest: `Subcampeones`
-    - The developer comment explicitly states runners-up means second place; "Finalistas" designates all finalists, including the champion, so the meaning is wrong.
-- `sports_widget_team_followed_description` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — Translation adds "esta página", which is not in the source and is inaccurate for a home-screen widget.
-    - Current: `Consulta de nuevo esta página para obtener información`
-    - Source: `Check back for match info as the tournament approaches.`
-    - Suggest: `Vuelve a consultarlo para obtener información`
-    - The source "Check back for match info" does not mention a page; the widget is on the homepage, not a page.
 - `stories_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — "Navigate back" is rendered as "Ir a la página anterior", which refers to a previous web page rather than navigating back from the Stories screen.
     - Current: `Ir a la página anterior`
     - Source: `Navigate back`
@@ -377,37 +449,26 @@ _Nothing in this category._
     - Source: `Dismiss tab group onboarding`
     - Suggest: `Descartar la introducción a los grupos de pestañas`
     - The source refers to dismissing the onboarding (introductory) card for tab groups; "incorporación al grupo de pestañas" reads as being added to a tab group, which is a different meaning.
-- `add_custom_autocomplete_label` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — "Add link to autocomplete" (add the link to the autocomplete list) is mistranslated as adding the link in order to autocomplete.
-    - Current: `Añadir el enlace para completar automáticamente`
-    - Source: `Add link to autocomplete`
-    - Suggest: `Añadir el enlace a autocompletado`
-    - Per the developer comment, the button adds the current URL to the custom autocomplete list; the Spanish reads as "add the link in order to complete automatically".
-- `cfr_cookie_banner` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — Redundant added wording: "en los ajustes en %2$s" duplicates the linked word "ajustes".
-    - Current: `Administra las preferencias de avisos de cookies en los ajustes en %2$s.`
-    - Source: `%1$s tries to reject cookie requests to dismiss annoying cookie banners.  Manage cookie banner preferences in %2$s.`
-    - Suggest: `Administra las preferencias de avisos de cookies en %2$s.`
-    - %2$s is already the link text "ajustes"; the source is "Manage cookie banner preferences in %2$s." so "en los ajustes" is an unwarranted duplication.
-- `content_description_clear_input` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — "Clear input" (clear the text in the URL bar) is rendered as "Limpiar registro" (clear log/record).
-    - Current: `Limpiar registro`
-    - Source: `Clear input`
-    - Suggest: `Borrar el texto introducido`
-    - The developer comment says it clears text in the URL bar; "registro" means log/record, which is a different thing.
 - `dialog_addtohomescreen_tracking_protection2` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — The translation drops the word "disabled", reversing the meaning of the warning.
     - Current: `El acceso directo se abrirá con la protección mejorada contra el rastreo`
     - Source: `Shortcut will open with Enhanced Tracking Protection disabled`
     - Suggest: `El acceso directo se abrirá con la protección mejorada contra el rastreo desactivada`
     - Source says the shortcut will open with Enhanced Tracking Protection *disabled*; the Spanish says it opens with the protection (implicitly enabled), reversing the warning.
-- `feedback_erase` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — "browsing history" was translated as "historial de búsqueda" (search history).
-    - Current: `Se ha eliminado tu historial de búsqueda.`
-    - Source: `Your browsing history has been erased.`
-    - Suggest: `Se ha eliminado tu historial de navegación.`
-    - The source says "Your browsing history has been erased.", not search history; other strings in the same file use "historial de navegación".
-- `preference_autocomplete_custom_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — "custom autocomplete URLs" is mistranslated as "autocompletado personalizado de URLs" (custom autocompletion of URLs).
-    - Current: `Agregar y gestionar autocompletado personalizado de URLs.`
-    - Source: `Add and manage custom autocomplete URLs.`
-    - Suggest: `Agregar y gestionar URLs de autocompletado personalizadas.`
-    - The source refers to custom autocomplete URLs (user-defined URL entries), not to a custom autocomplete feature.
-- _…and 4 more; see `state/` for the full list._
+- `preference_autocomplete_title_add` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — "URL to add" (label for the input field) is rendered as "Agregar URL" ("Add URL"), which is the action, not the field label.
+    - Current: `Agregar URL`
+    - Source: `Add custom URL`
+    - Suggest: `URL a añadir`
+    - The developer comment says this is the label for the "custom autocomplete URL" input field; the source is the noun phrase "URL to add", not an imperative action. It also collides with preference_autocomplete_action_add2.
+- `preference_mozilla_telemetry2` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — "usage data" mistranslated as "datos de consumo" (consumption data).
+    - Current: `Enviar datos de consumo`
+    - Source: `Send usage data`
+    - Suggest: `Enviar datos de uso`
+    - The source refers to usage/telemetry data; "datos de consumo" suggests data consumption, and other strings use "uso" (e.g. "Ping de uso diario").
+- `promote_search_widget_dialog_picture_content_description` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — "Search widget" (a noun phrase naming the widget) is translated as the imperative "Buscar widget" ("Search for widget").
+    - Current: `Buscar widget`
+    - Source: `Search widget`
+    - Suggest: `Widget de búsqueda`
+    - The developer comment says this describes a picture of the search widget; the source is a noun phrase, not a command. Other strings in the same dialog use "widget" as a noun.
 
 ### C. Grammar, agreement & spelling
 
@@ -569,11 +630,6 @@ _Nothing in this category._
     - Source: `Aug`
     - Suggest: `Ago`
     - The developer comment specifies the short description of August for a month chooser; other months in the same file use abbreviations (Dec → Dic).
-- `mozac_feature_prompts_content_description_input_label` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-es-rES/strings.xml` — "ingresar" is Latin American usage; es-ES uses "introducir".
-    - Current: `Etiqueta para ingresar un campo de entrada de texto`
-    - Source: `Label for entering a text input field`
-    - Suggest: `Etiqueta para introducir un campo de entrada de texto`
-    - Elsewhere in the same file "Enter a password" is translated as "Introduce una contraseña"; "ingresar" is not the es-ES term.
 - `mozac_feature_prompts_feb` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-es-rES/strings.xml` — Short month abbreviation "Feb" is rendered as the full month name.
     - Current: `Febrero`
     - Source: `Feb`
@@ -604,6 +660,11 @@ _Nothing in this category._
     - Source: `Allow %1$s to access apps and services on devices connected to your local network?`
     - Suggest: `conectados a tu red local?`
     - es-ES convention is informal address; sibling strings use "tu ubicación", "tu micrófono".
+- `mozac_feature_summarize_feedback_bad_click_label` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-es-rES/strings.xml` — The accessibility click label uses an imperative form instead of the infinitive used in the parallel "good" string and recommended by the developer comment.
+    - Current: `califica el resumen como malo`
+    - Source: `rate summary as bad`
+    - Suggest: `calificar el resumen como malo`
+    - The developer comment recommends an infinitive/dictionary form, and the matching string mozac_feature_summarize_feedback_good_click_label uses "calificar el resumen como bueno"; the imperative here is inconsistent and breaks the "Toca dos veces para [...]" interpolation.
 - `add_login_save_new_login_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — "login" rendered as "cuenta" instead of the password terminology used elsewhere in this screen.
     - Current: `Guardar nueva cuenta`
     - Source: `Save new login`
@@ -649,6 +710,16 @@ _Nothing in this category._
     - Source: `Data about your device, hardware configuration, and how you use Firefox helps improve features, performance, and stability for everyone.`
     - Suggest: `cómo usas Firefox`
     - es-ES convention is informal (tú); the surrounding onboarding strings use "descubriste", "aceptas", "quieres".
+- `pdf_tools_signature_clear_button` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — "Clear" for erasing entered text should be "Borrar", not "Limpiar".
+    - Current: `Limpiar`
+    - Source: `Clear`
+    - Suggest: `Borrar`
+    - The developer comment says the button erases the text the user entered; es-ES convention for "Clear" in this sense is "Borrar".
+- `pdf_tools_signature_placeholder` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — "Type signature" translated as "Escribe tu firma" adds a possessive not in the source.
+    - Current: `Escribe tu firma`
+    - Source: `Type signature`
+    - Suggest: `Escribir firma`
+    - Source is a neutral placeholder "Type signature"; the Spanish adds "tu" (your), which the source does not state.
 - `preference_enhanced_tracking_protection_allow_list_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — Formal address ("desactiva" with usted) breaks the informal register used elsewhere in the batch.
     - Current: `Si la desactiva, es posible que algunos sitios no funcionen`
     - Source: `This setting helps fix the most common site problems. If you turn it off, some sites may not work, and %1$s won’t be able to help troubleshoot those issues.`
@@ -679,11 +750,6 @@ _Nothing in this category._
     - Source: `Add new login`
     - Suggest: `Añadir nuevo inicio de sesión`
     - Other login strings in this batch translate "login" as "inicio de sesión" (see saved_login_duplicate); "cuenta" means account.
-- `sports_widget_get_custom_wallpaper` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — Menu item label rendered as an imperative sentence instead of a noun/infinitive label like the other menu items.
-    - Current: `Obtén un fondo de pantalla personalizado`
-    - Source: `Get custom wallpaper`
-    - Suggest: `Obtener un fondo de pantalla personalizado`
-    - It is a menu item parallel to "Cambiar equipo" (sports_widget_change_team) and "Seguir a otro equipo"; menu labels use the infinitive in es-ES, not the imperative.
 - `unsubmitted_crash_requested_by_devs_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — Uses the formal "Tiene" instead of the locale's established informal address.
     - Current: `Tiene un informe de fallos sin enviar`
     - Source: `You have an unsent crash report related to crashes being investigated. Sending it will help us improve %1$s. Closing this notification will ignore this report.`
@@ -694,21 +760,6 @@ _Nothing in this category._
     - Source: `You have unsent crash reports (%1$d) related to crashes being investigated. Sending them will help us improve %2$s. Closing this notification will ignore these reports.`
     - Suggest: `Tienes informes de fallos sin enviar`
     - es-ES convention is informal (tú); the rest of the UI addresses the user informally.
-- `cookie_banner_exception_panel_title_state_off_for_site` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — "Cookie Banner Reduction" rendered as "reducción de aviso de cookies" in singular, inconsistent with "reducción de avisos de cookies" used elsewhere.
-    - Current: `reducción de aviso de cookies`
-    - Source: `Turn off Cookie Banner Reduction for %1$s?`
-    - Suggest: `reducción de avisos de cookies`
-    - The same feature name is translated as "Reducción de avisos de cookies" in cookie_banner_exception_item_title and other strings on the same surface.
-- `cookie_banner_exception_panel_title_state_on_for_site` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — "Cookie Banner Reduction" rendered as "reducción de aviso de cookies" in singular, inconsistent with "reducción de avisos de cookies" used elsewhere.
-    - Current: `reducción de aviso de cookies`
-    - Source: `Turn on Cookie Banner Reduction for %1$s?`
-    - Suggest: `reducción de avisos de cookies`
-    - The same feature name is translated as "Reducción de avisos de cookies" in the other cookie banner strings in this file.
-- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — `firstrun_shortcut_text` quotes “Agregar a la pantalla de inicio” but the string it names, `menu_add_to_home_screen`, reads “Añadir a pantalla de inicio”
-    - Current: `Vuelve a visitar tus sitios favoritos en %1$s de forma instantánea. En el menú %1$s, selecciona "Agregar a la pantalla de inicio".`
-    - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
-    - Suggest: `Añadir a pantalla de inicio`
-    - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `preference_exceptions_description` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — Formal address used where the locale convention is informal (tú).
     - Current: `Ha desactivado el bloqueo de contenido para estos sitios.`
     - Source: `You have disabled content blocking for these websites.`
@@ -757,11 +808,6 @@ _Nothing in this category._
     - Source: `Autofill in other apps`
     - Suggest: `Autocompletar en otras aplicaciones`
     - The source "Autofill in other apps" is a preference title with no final period; the extra period is inconsistent with other preference titles.
-- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — `firstrun_shortcut_text` uses straight double quotes
-    - Current: `Vuelve a visitar tus sitios favoritos en %1$s de forma instantánea. En el menú %1$s, selecciona "Agregar a la pantalla de inicio".`
-    - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
-    - Suggest: `selecciona “Añadir a pantalla de inicio”`
-    - The locale's quote convention is `curly-double` (12 occurrences).
 
 ---
 
@@ -783,6 +829,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (1)
 
-_Nothing fixed yet._
+- `mozac_feature_prompts_content_description_input_label` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-es-rES/strings.xml` — fixed 2026-09-01

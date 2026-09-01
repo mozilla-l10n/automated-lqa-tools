@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
-| **Previous run** | 2026-08-22 @ `eda9938ab8c3` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
+| **Previous run** | 2026-08-24 @ `e8622a909368` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 3 of 2,911 |
+| **Strings reviewed this run** | 1 of 2,717 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -26,20 +26,44 @@ _No new findings._
 
 _Nothing was fixed._
 
-### ↩︎ Withdrawn — no longer considered a defect (1)
+### ↩︎ Withdrawn — no longer considered a defect (0)
 
-- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-pl/strings.xml` — `firstrun_shortcut_text` has placeholders %1$s where the source has %1$s, %1$s
-    - Current: `Szybko wracaj do ulubionych stron w %1$s. Po prostu wybierz „Dodaj do ekranu głównego” z menu.`
-    - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
-    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+_Nothing withdrawn._
 
 ### 🔁 String changed, defect not verifiable — needs a re-read (0)
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (7)
 
-_Nothing retired._
+- `add_to_homescreen_continue` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Continue to website" is translated as "Wróć do strony" (Go back to the website).
+    - Current: `Wróć do strony`
+    - Suggest: `Przejdź do strony`
+    - The source means to continue on to the website, not to go back to it.
+- `sports_widget_round_of_16` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Round of 16" is rendered as "Druga runda" (second round) instead of the knockout stage name.
+    - Current: `Druga runda`
+    - Suggest: `1/8 finału`
+    - The developer comment says this is the Round of 16 stage of the tournament; Polish uses "1/8 finału" for that knockout stage, not "druga runda", which names a generic second round.
+- `sports_widget_round_of_32` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Round of 32" is rendered as "Pierwsza runda" (first round) instead of the knockout stage name.
+    - Current: `Pierwsza runda`
+    - Suggest: `1/16 finału`
+    - The developer comment says this is the Round of 32 knockout stage; Polish names it "1/16 finału", not a generic "pierwsza runda".
+- `sports_widget_team_to_be_determined` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — Singular "Team to be determined" is translated with a plural subject.
+    - Current: `Drużyny nie są jeszcze znane`
+    - Suggest: `Drużyna nie jest jeszcze znana`
+    - The source describes a single team slot that has not yet been determined; the Polish plural changes the meaning to multiple teams.
+- `cfr_cookie_banner` — `mozilla-mobile/focus-android/app/src/main/res/values-pl/strings.xml` — The translation drops "cookie banners" and mistranslates the sentence, saying Firefox rejects "annoying cookie requests" instead of rejecting cookie requests in order to dismiss annoying cookie banners.
+    - Current: `%1$s próbuje odrzucać irytujące prośby o akceptację ciasteczek.  Zarządzaj preferencjami odrzucania w %2$s.`
+    - Suggest: `%1$s próbuje odrzucać prośby o zgodę na ciasteczka, aby zamykać irytujące banery o ciasteczkach.  Zarządzaj preferencjami dotyczącymi banerów o ciasteczkach w %2$s.`
+    - Source: "tries to reject cookie requests to dismiss annoying cookie banners" and "Manage cookie banner preferences"; the Polish omits the cookie banner concept entirely in both sentences.
+- `menu_trackers_blocked_title` — `mozilla-mobile/focus-android/app/src/main/res/values-pl/strings.xml` — "Trackers blocked" is rendered as the generic "Blokowanie" (Blocking), losing the meaning.
+    - Current: `Blokowanie`
+    - Suggest: `Zablokowane elementy śledzące`
+    - The source label names the count of blocked trackers; "Blokowanie" means merely "Blocking" and drops the tracker concept.
+- `preference_autocomplete_custom_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-pl/strings.xml` — Misspelled/incorrectly formed verbal noun "zarządzenie" instead of "zarządzanie", and wrong case government.
+    - Current: `Dodawanie i zarządzenie innymi adresami automatycznego uzupełniania.`
+    - Suggest: `Dodawanie innych adresów automatycznego uzupełniania i zarządzanie nimi.`
+    - "zarządzenie" is a different word (an ordinance/decree); the gerund of "zarządzać" is "zarządzanie". Also "Dodawanie ... adresami" is ungrammatical since "dodawanie" requires the genitive.
 
 ---
 
@@ -48,10 +72,11 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,911 |
-| Missing strings | 0 |
+| Strings | 2,717 |
+| Missing strings | 18 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
@@ -65,7 +90,12 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**18 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — 13
+- `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-pl/strings.xml` — 5
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -73,10 +103,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `polish-double` 90 | **polish-double** |
+| quotes | `polish-double` 84 | **polish-double** |
 | ellipsis | `char` 21 | **char** |
-| dash | `em` 4, `en` 3 | _mixed_ |
-| nbsp | `total` 716, `before-punctuation` 23 | **total** |
+| dash | `em` 2, `en` 3 | _mixed_ |
+| nbsp | `total` 655, `before-punctuation` 14 | **total** |
 | register | `informal` 9 | **informal** |
 
 ---
@@ -87,14 +117,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (93)
+## 3. Open findings (86)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 67 |
-| 3 | Degraded language (grammar, spelling, terminology) | 25 |
+| 2 | Wrong content (says something other than the English) | 62 |
+| 3 | Degraded language (grammar, spelling, terminology) | 23 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
@@ -183,11 +213,6 @@ _Nothing in this category._
     - Source: `Create page summaries with AI. Pages and summaries stay private and are never stored.`
     - Suggest: `Strony i ich streszczenia pozostają prywatne i nigdy nie są przechowywane.`
     - The source says pages and summaries stay private and are never stored; the Polish adds "zawsze" and "nigdzie", changing the strength of the privacy claim.
-- `add_to_homescreen_continue` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Continue to website" is translated as "Wróć do strony" (Go back to the website).
-    - Current: `Wróć do strony`
-    - Source: `Continue to website`
-    - Suggest: `Przejdź do strony`
-    - The source means to continue on to the website, not to go back to it.
 - `ai_controls_block_ai_description` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "or pop-ups about them" is rendered as "czy nawet informacji o nich", adding "nawet" and dropping the pop-up notion.
     - Current: `czy nawet informacji o nich`
     - Source: `Blocking means you won’t see new or current AI enhancements in %s, or pop-ups about them.`
@@ -378,16 +403,6 @@ _Nothing in this category._
     - Source: `Search settings`
     - Suggest: `Przeszukaj ustawienia`
     - The developer comment explicitly states "Search" is a verb here — the screen lets users search through settings, not configure search. The current text duplicates search_settings_menu_item ("Ustawienia wyszukiwania").
-- `sports_widget_round_of_16` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Round of 16" is rendered as "Druga runda" (second round) instead of the knockout stage name.
-    - Current: `Druga runda`
-    - Source: `Round of 16`
-    - Suggest: `1/8 finału`
-    - The developer comment says this is the Round of 16 stage of the tournament; Polish uses "1/8 finału" for that knockout stage, not "druga runda", which names a generic second round.
-- `sports_widget_round_of_32` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Round of 32" is rendered as "Pierwsza runda" (first round) instead of the knockout stage name.
-    - Current: `Pierwsza runda`
-    - Source: `Round of 32`
-    - Suggest: `1/16 finału`
-    - The developer comment says this is the Round of 32 knockout stage; Polish names it "1/16 finału", not a generic "pierwsza runda".
 - `sync_offline` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Offline" is rendered as "Rozłączono" ("Disconnected"), a status of a different meaning.
     - Current: `Rozłączono`
     - Source: `Offline`
@@ -403,7 +418,22 @@ _Nothing in this category._
     - Source: `Bookmark selected tabs`
     - Suggest: `Dodaj zaznaczone karty do zakładek`
     - The source means to create bookmarks for the selected tabs; the Polish says to add bookmarks to the tabs, which is not the intended action.
-- _…and 11 more; see `state/` for the full list._
+- `tab_tray_close_tabs_banner_negative_button_text` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Dismiss" (dismiss the banner) is translated as "Zamknij", which in the tab-tray context reads as "Close (tabs)" and collides with the close-tabs terminology.
+    - Current: `Zamknij`
+    - Source: `Dismiss`
+    - Suggest: `Odrzuć`
+    - The button dismisses the Close Tabs Banner; "Zamknij" is the translation used elsewhere in this batch for "Close" and is ambiguous with closing tabs, misrepresenting the negative action.
+- `terms_of_use_prompt_message_1` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — The translation says the Terms of Use come "from the Firefox browser" instead of "a Firefox Terms of Use" being newly introduced.
+    - Current: `Wprowadziliśmy %2$s z przeglądarki %1$s`
+    - Source: `We’ve introduced a %1$s %2$s and updated our %3$s.`
+    - Suggest: `Wprowadziliśmy %2$s przeglądarki %1$s`
+    - Source: "We’ve introduced a %1$s %2$s" — %1$s modifies the Terms of Use (Firefox Terms of Use); "z przeglądarki" (from the browser) changes the meaning.
+- `ungroup_tab_group_confirmation_dialog_body` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — The source says the tabs will remain open; the Polish rephrases it as a negation of closing, changing the statement.
+    - Current: `Karty na tym urządzeniu nie zostaną zamknięte, ale grupa zostanie usunięta.`
+    - Source: `The tabs will remain open on this device, but the group will be deleted.`
+    - Suggest: `Karty pozostaną otwarte na tym urządzeniu, ale grupa zostanie usunięta.`
+    - en-US: "The tabs will remain open on this device" — an affirmative statement about tabs remaining open, not a negative statement about closing.
+- _…and 6 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -467,11 +497,6 @@ _Nothing in this category._
     - Source: `Allow %1$s to open %2$s`
     - Suggest: `Zezwól aplikacji %1$s na otwarcie %2$s`
     - In Polish, "zezwolić" requires "na + accusative" (na otwarcie), not a bare infinitive.
-- `sports_widget_team_to_be_determined` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — Singular "Team to be determined" is translated with a plural subject.
-    - Current: `Drużyny nie są jeszcze znane`
-    - Source: `Team to be determined`
-    - Suggest: `Drużyna nie jest jeszcze znana`
-    - The source describes a single team slot that has not yet been determined; the Polish plural changes the meaning to multiple teams.
 - `uninstall_survey_option_2_v2` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — Past tense "didn’t work" rendered as present tense.
     - Current: `Strony nie działają poprawnie`
     - Source: `Websites didn’t work properly`
@@ -492,11 +517,6 @@ _Nothing in this category._
     - Source: `What happened? What did you expect to happen? Please provide steps to reproduce the issue.`
     - Suggest: `Czego oczekiwano? / Co powinno się stać?`
     - The source asks what the user expected; the Polish double past construction "powinno się było stać" is grammatically clumsy and shifts meaning.
-- `preference_autocomplete_custom_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-pl/strings.xml` — Misspelled/incorrectly formed verbal noun "zarządzenie" instead of "zarządzanie", and wrong case government.
-    - Current: `Dodawanie i zarządzenie innymi adresami automatycznego uzupełniania.`
-    - Source: `Add and manage custom autocomplete URLs.`
-    - Suggest: `Dodawanie innych adresów automatycznego uzupełniania i zarządzanie nimi.`
-    - "zarządzenie" is a different word (an ordinance/decree); the gerund of "zarządzać" is "zarządzanie". Also "Dodawanie ... adresami" is ungrammatical since "dodawanie" requires the genitive.
 
 ### D. Terminology, register & consistency
 

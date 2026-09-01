@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
-| **Previous run** | 2026-08-22 @ `eda9938ab8c3` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
+| **Previous run** | 2026-08-24 @ `e8622a909368` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 3 of 2,911 |
+| **Strings reviewed this run** | 2 of 2,717 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,13 @@ Also for ja: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `mozac_browser_errorpages_malformed_uri_message_alternative` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ja/strings.xml` — Markup tags are misplaced: text falls outside the { <li> } elements and the second bullet drops the "forward slashes" instruction.
+    - Current: `{ <li> }ウェブのアドレスは通常 { <strong> }http://www.example.com/{ </strong> }{ </li> } のようなものになります。 { <li> }スラッシュ ({ <strong> }/{ </strong> }) { </li> }が使われているか確認してください。`
+    - Source: `{ <ul> } { <li> }Web addresses are usually written like { <strong> }http://www.example.com/{ </strong> }{ </li> } { <li> }Make sure that you’re using forward slashes (i.e. { <strong> }/{ </strong> }).{ </li> } { </ul> }`
+    - Suggest: `{ <li> }ウェブのアドレスは通常 { <strong> }http://www.example.com/{ </strong> } のようなものになります。{ </li> } { <li> }スラッシュ ({ <strong> }/{ </strong> }) が使われているか確認してください。{ </li> }`
+    - The closing { </li> } tags appear before the trailing Japanese text, so the sentences render outside the list items, unlike the en-US source where each sentence is fully inside { <li> }.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -34,9 +38,72 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (16)
 
-_Nothing retired._
+- `sports_widget_champions_title` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "Champions" of the World Cup is rendered as 優勝者 (individual winner) rather than the winning team/champions.
+    - Current: `2026 ワールドカップ優勝者`
+    - Suggest: `2026 ワールドカップ優勝チーム`
+    - The widget celebrates the winning national team in a soccer tournament; 優勝者 denotes an individual person, which misnames the subject.
+- `sports_widget_countdown_hours` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — Countdown hour abbreviation exceeds the 1–2 character limit hinted, but 時間 is 2 chars — actually fine.
+    - Current: `時間`
+    - Suggest: `時`
+    - The developer comment asks for a single-character equivalent where one exists; Japanese has 時 for hours, and 時間 risks truncation issues in the countdown pill.
+- `sports_widget_countdown_remaining_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — Translation says "until the match starts" although the source only announces the generic remaining time.
+    - Current: `試合開始まであと %1$d 日 %2$d 時間 %3$d 分。`
+    - Suggest: `残り時間。%1$d 日 %2$d 時間 %3$d 分。`
+    - The source is "Remaining time. Days: %1$d. Hours: %2$d. Minutes: %3$d." with no mention of a match start; adding 試合開始まで introduces content not in the source.
+- `sports_widget_live_score_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — Soccer scores are rendered as "ポイント" (points), which is not in the source and is wrong for soccer goals.
+    - Current: `%1$s %2$d ポイント、%3$s %4$d ポイント、%5$s、ライブ`
+    - Suggest: `%1$s %2$d、%3$s %4$d、%5$s、ライブ`
+    - The source is just "%1$s %2$d, %3$s %4$d, %5$s, live"; the added unit "ポイント" introduces content not present and mislabels soccer goals as points.
+- `sports_widget_match_elapsed_minutes` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — Placeholder may contain "90+3", so appending 分 after it is fine, but the label drops "in minutes" wording; more importantly the value can be non-numeric.
+    - Current: `経過時間: %1$s 分`
+    - Suggest: `経過時間 (分): %1$s`
+    - Source is "Elapsed time in minutes: %1$s" where the unit qualifies the label, not the value; the clock value can be "90+3", so "90+3 分" reads incorrectly.
+- `sports_widget_round_of_16` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "Round of 16" is rendered as 「ラウンド 16」 instead of the standard Japanese soccer term.
+    - Current: `ラウンド 16`
+    - Suggest: `ラウンド 16 (ベスト 16)`
+    - Round of 16 is the last-16 stage; 「ラウンド 16」 reverses the meaning of the numeral (it reads as "the 16th round") and the standard term is ベスト16/決勝トーナメント1回戦.
+- `sports_widget_team_followed_description` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "Check back for match info" (an instruction to the user to return later) is translated as a statement that info will be updated.
+    - Current: `大会が近づくにつれて、試合情報が更新されます。`
+    - Suggest: `大会が近づいたら、また試合情報を確認してください。`
+    - The source asks the user to check back; the translation drops the call to action and asserts that information will be updated.
+- `sports_widget_upcoming` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "Upcoming" as a section header for matches that have not started yet is rendered as 「近日公開」 (coming soon, for media releases).
+    - Current: `近日公開`
+    - Suggest: `今後の試合`
+    - The developer comment says this is a section header for upcoming soccer matches; 近日公開 means "coming soon (release)" and is wrong for scheduled matches.
+- `cookie_banner_exception_panel_title_state_off_for_site` — `mozilla-mobile/focus-android/app/src/main/res/values-ja/strings.xml` — Half-width question mark used where the locale convention is fullwidth punctuation.
+    - Current: `無効にしますか?`
+    - Suggest: `無効にしますか？`
+    - The ja tree uses fullwidth punctuation (e.g. enable_search_suggestion_title2 uses ？).
+- `cookie_banner_exception_panel_title_state_on_for_site` — `mozilla-mobile/focus-android/app/src/main/res/values-ja/strings.xml` — Half-width question mark used where the locale convention is fullwidth punctuation.
+    - Current: `有効にしますか?`
+    - Suggest: `有効にしますか？`
+    - The ja tree uses fullwidth punctuation; sibling strings in this batch use ？.
+- `cookie_banner_reject_all_option_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-ja/strings.xml` — "when possible" is rendered as "可能な限り減らします", attaching the qualifier to the wrong clause.
+    - Current: `Cookie 同意確認を自動的に拒否することで、表示されるバナーを可能な限り減らします。`
+    - Suggest: `可能な場合は Cookie 要求を自動的に拒否することで、表示されるバナーを減らします。`
+    - In the source "when possible" qualifies the automatic rejection of cookie requests, not the extent of banner reduction.
+- `cookie_banner_report_a_site_snackbar_label` — `mozilla-mobile/focus-android/app/src/main/res/values-ja/strings.xml` — "Request to support site submitted" is mistranslated as a request sent to a "support site".
+    - Current: `サポートサイトへのリクエストが送信されました。`
+    - Suggest: `このサイトのサポートをリクエストしました。`
+    - The source means a request for the site to be supported (by cookie banner reduction) was submitted, not a request sent to a support site.
+- `cookie_banner_the_site_was_reported` — `mozilla-mobile/focus-android/app/src/main/res/values-ja/strings.xml` — "Request to support site submitted" is mistranslated as a request sent to a "support site".
+    - Current: `サポートサイトへのリクエストが送信されました。`
+    - Suggest: `このサイトのサポートをリクエストしました。`
+    - The source means a request to add support for this site was submitted; the Japanese says a request was sent to a support site.
+- `menu_trackers_blocked_title` — `mozilla-mobile/focus-android/app/src/main/res/values-ja/strings.xml` — "Trackers blocked" is rendered as 「ブロックされた追跡」 instead of the established term for trackers (トラッカー).
+    - Current: `ブロックされた追跡`
+    - Suggest: `ブロックしたトラッカー`
+    - The source refers to trackers (tracking scripts/entities), which Mozilla ja consistently renders as トラッカー; 追跡 means the act of tracking, not the trackers themselves.
+- `preference_open_new_tab` — `mozilla-mobile/focus-android/app/src/main/res/values-ja/strings.xml` — "Switch to link in new tab" mistranslated as "switch to the link inside the new tab".
+    - Current: `新しいタブ内のリンクへすぐに切り替えます`
+    - Suggest: `リンクを新しいタブで開いたらすぐに切り替えます`
+    - Per the developer comment the preference switches to the newly opened tab immediately; the translation says switching to a link located inside a new tab.
+- `preference_search_installed_search_engines` — `mozilla-mobile/focus-android/app/src/main/res/values-ja/strings.xml` — "Installed search engines" is translated as "selectable search engines".
+    - Current: `選択可能な検索エンジン`
+    - Suggest: `インストール済みの検索エンジン`
+    - The developer comment says this is a header for the list of installed search engines; 選択可能 (selectable) states something different from the source.
 
 ---
 
@@ -45,10 +112,11 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,911 |
-| Missing strings | 0 |
+| Strings | 2,717 |
+| Missing strings | 18 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
@@ -62,7 +130,12 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**18 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — 13
+- `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ja/strings.xml` — 5
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -70,9 +143,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 10, `corner` 3 | **curly-double** |
+| quotes | `curly-double` 10, `corner` 2 | **curly-double** |
 | ellipsis | `char` 11, `ascii` 10 | _mixed_ |
-| fullwidth | `punctuation` 759 | **punctuation** |
+| fullwidth | `punctuation` 711 | **punctuation** |
 
 ---
 
@@ -82,23 +155,18 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (161)
+## 3. Open findings (144)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 1 |
-| 2 | Wrong content (says something other than the English) | 123 |
-| 3 | Degraded language (grammar, spelling, terminology) | 27 |
-| 4 | Cosmetic (typography, spacing) | 10 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
+| 2 | Wrong content (says something other than the English) | 112 |
+| 3 | Degraded language (grammar, spelling, terminology) | 25 |
+| 4 | Cosmetic (typography, spacing) | 7 |
 
 ### A. Functional, markup, variables & plurals
 
-- `mozac_browser_errorpages_malformed_uri_message_alternative` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ja/strings.xml` — Markup tags are misplaced: text falls outside the { <li> } elements and the second bullet drops the "forward slashes" instruction.
-    - Current: `{ <li> }ウェブのアドレスは通常 { <strong> }http://www.example.com/{ </strong> }{ </li> } のようなものになります。 { <li> }スラッシュ ({ <strong> }/{ </strong> }) { </li> }が使われているか確認してください。`
-    - Source: `{ <ul> } { <li> }Web addresses are usually written like { <strong> }http://www.example.com/{ </strong> }{ </li> } { <li> }Make sure that you’re using forward slashes (i.e. { <strong> }/{ </strong> }).{ </li> } { </ul> }`
-    - Suggest: `{ <li> }ウェブのアドレスは通常 { <strong> }http://www.example.com/{ </strong> } のようなものになります。{ </li> } { <li> }スラッシュ ({ <strong> }/{ </strong> }) が使われているか確認してください。{ </li> }`
-    - The closing { </li> } tags appear before the trailing Japanese text, so the sentences render outside the list items, unlike the en-US source where each sentence is fully inside { <li> }.
 - `downloads_delete_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — `downloads_delete_dialog_title` has plural variant ['one'], which ja does not have
     - Current: `{$quantity ->} [one] ファイルを削除しますか？ [other] %d 個のファイルを削除しますか？`
     - Source: `{$quantity ->} [one] Delete file? [other] Delete %d files?`
@@ -406,7 +474,7 @@ _Nothing reported._
     - Source: `Resets to %1$.0f GB on the first of every month.`
     - Suggest: `毎月初めに %1$.0f GB にリセットされます。`
     - Source is "Resets to %1$.0f GB on the first of every month." — %1$.0f is the total monthly allowance, not a remaining amount.
-- _…and 66 more; see `state/` for the full list._
+- _…and 55 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -518,21 +586,11 @@ _Nothing reported._
     - Source: `Trackers blocked: %d`
     - Suggest: `ブロックしたトラッカー: %d`
     - protection_panel_banner_protected_blocked_trackers_description and protection_panel_etp_disabled_no_trackers_blocked render "trackers" as トラッカー; 追跡 means "tracking" (the act), not the trackers themselves.
-- `sports_widget_round_of_16` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "Round of 16" is rendered as 「ラウンド 16」 instead of the standard Japanese soccer term.
-    - Current: `ラウンド 16`
-    - Source: `Round of 16`
-    - Suggest: `ラウンド 16 (ベスト 16)`
-    - Round of 16 is the last-16 stage; 「ラウンド 16」 reverses the meaning of the numeral (it reads as "the 16th round") and the standard term is ベスト16/決勝トーナメント1回戦.
 - `webcompat_reporter_reason_site_is_deceptive` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — Dropdown option is rendered as a full sentence with polite copula, inconsistent with the other reason options which are all plain-form noun/verb phrases.
     - Current: `これは詐欺サイトです`
     - Source: `This site is deceptive`
     - Suggest: `サイトが詐欺的である`
     - All sibling reason strings (サイトが読み込まれない, サイトの動作が遅い, etc.) use plain form; this one uses です polite form, breaking register consistency within the same dropdown.
-- `menu_trackers_blocked_title` — `mozilla-mobile/focus-android/app/src/main/res/values-ja/strings.xml` — "Trackers blocked" is rendered as 「ブロックされた追跡」 instead of the established term for trackers (トラッカー).
-    - Current: `ブロックされた追跡`
-    - Source: `Trackers blocked`
-    - Suggest: `ブロックしたトラッカー`
-    - The source refers to trackers (tracking scripts/entities), which Mozilla ja consistently renders as トラッカー; 追跡 means the act of tracking, not the trackers themselves.
 
 ### E. Typography, punctuation & spacing
 
@@ -566,21 +624,6 @@ _Nothing reported._
     - Source: `Great start! You’ve completed 1 out of 6 steps.`
     - Suggest: `6 ステップ中、1 ステップを完了しました。`
     - A space precedes the fullwidth comma, inconsistent with the sibling strings that use "6 ステップ中、2 ステップ".
-- `sports_widget_countdown_hours` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — Countdown hour abbreviation exceeds the 1–2 character limit hinted, but 時間 is 2 chars — actually fine.
-    - Current: `時間`
-    - Source: `H`
-    - Suggest: `時`
-    - The developer comment asks for a single-character equivalent where one exists; Japanese has 時 for hours, and 時間 risks truncation issues in the countdown pill.
-- `cookie_banner_exception_panel_title_state_off_for_site` — `mozilla-mobile/focus-android/app/src/main/res/values-ja/strings.xml` — Half-width question mark used where the locale convention is fullwidth punctuation.
-    - Current: `無効にしますか?`
-    - Source: `Turn off Cookie Banner Reduction for %1$s?`
-    - Suggest: `無効にしますか？`
-    - The ja tree uses fullwidth punctuation (e.g. enable_search_suggestion_title2 uses ？).
-- `cookie_banner_exception_panel_title_state_on_for_site` — `mozilla-mobile/focus-android/app/src/main/res/values-ja/strings.xml` — Half-width question mark used where the locale convention is fullwidth punctuation.
-    - Current: `有効にしますか?`
-    - Source: `Turn on Cookie Banner Reduction for %1$s?`
-    - Suggest: `有効にしますか？`
-    - The ja tree uses fullwidth punctuation; sibling strings in this batch use ？.
 
 ---
 
@@ -602,6 +645,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (1)
 
-_Nothing fixed yet._
+- `mozac_browser_errorpages_malformed_uri_message_alternative` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ja/strings.xml` — fixed 2026-09-01

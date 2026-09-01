@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
-| **Previous run** | 2026-08-22 @ `eda9938ab8c3` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
+| **Previous run** | 2026-08-24 @ `e8622a909368` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 14 of 2,911 |
+| **Strings reviewed this run** | 19 of 2,735 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,13 @@ Also for pt-BR: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (1)
 
-- `custom_accessibility_action_reorder_tab_left` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Missing contraction of preposition + article: "para esquerda" should be "para a esquerda".
-    - Current: `Mover aba para esquerda`
-    - Source: `Move tab left`
-    - Suggest: `Mover aba para a esquerda`
-    - In pt-BR the directional phrase requires the article: "para a esquerda"; the parallel string uses "para a direita" as well.
-- `custom_accessibility_action_reorder_tab_right` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Missing article: "para direita" should be "para a direita".
-    - Current: `Mover aba para direita`
-    - Source: `Move tab right`
-    - Suggest: `Mover aba para a direita`
-    - In pt-BR the directional phrase requires the article: "para a direita".
+- `notification_privacy_report_body_has_trackers` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Translation adds "rastreadores", a word not present in the source's short parallel phrasing.
+    - Current: `Continue navegando. O %1$s continua bloqueando rastreadores.`
+    - Source: `Keep browsing. %1$s will keep blocking.`
+    - Suggest: `Continue navegando. O %1$s continua bloqueando.`
+    - Source is "Keep browsing. %1$s will keep blocking." with no object; the added "rastreadores" introduces content not in the source.
 
 ### ✅ Fixed since the last run (0)
 
@@ -43,9 +38,44 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (9)
 
-_Nothing retired._
+- `ip_protection_location_recommended_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Infinitive "Selecionar" used where source is a third-person descriptive sentence "Selects".
+    - Current: `Selecionar o local de VPN mais rápido para você.`
+    - Suggest: `Seleciona o local de VPN mais rápido para você.`
+    - The source "Selects the fastest VPN location for you." is a description of what the option does, so pt-BR should use the third-person present "Seleciona".
+- `sports_widget_get_custom_wallpaper` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — The action verb "Get" is dropped, turning a menu action into a noun phrase.
+    - Current: `Fundo de tela personalizado`
+    - Suggest: `Obter fundo de tela personalizado`
+    - Source is a menu item action "Get custom wallpaper"; the translation omits the verb and no longer states the action.
+- `sports_widget_round_of_16` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "Round of 16" is rendered literally as "Rodada de 16" instead of the standard Brazilian football term "Oitavas de final".
+    - Current: `Rodada de 16`
+    - Suggest: `Oitavas de final`
+    - In pt-BR soccer terminology the knockout stage of 16 teams is "oitavas de final"; "Rodada de 16" is a literal calque that does not name the stage, and it is inconsistent with the sibling strings translated as "Quartas de final" and "Semifinais".
+- `sports_widget_round_of_32` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "Round of 32" is rendered literally as "Rodada de 32" instead of the standard Brazilian football term "Décimas sextas de final"/"Fase de 32".
+    - Current: `Rodada de 32`
+    - Suggest: `Décima sexta de final`
+    - Literal calque; pt-BR soccer terminology names knockout stages (oitavas, quartas, semifinais), and the sibling strings use those terms, so "Rodada de 32" is inconsistent and non-idiomatic.
+- `sports_widget_runner_up_title` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "Runners-up" (second place) is translated as "Finalistas", which means finalists (both teams in the final), not the runner-up.
+    - Current: `Finalistas`
+    - Suggest: `Vice-campeão`
+    - The developer comment states Runners-up means second place; "Finalistas" includes the champion and so says something different from the source.
+- `sports_widget_upcoming` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "Upcoming" (section header for matches not yet started) is rendered as "Seguintes" ("following/next ones") instead of a term meaning upcoming.
+    - Current: `Seguintes`
+    - Suggest: `Próximos`
+    - The source means matches that have not yet started; "Seguintes" means "the following", not "upcoming". The related string sports_widget_upcoming_match_content_description uses "Em breve".
+- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-pt-rBR/strings.xml` — `firstrun_shortcut_text` quotes “Adicionar à tela inicial” but the string it names, `menu_add_to_home_screen`, reads “Adicionar à tela do dispositivo”
+    - Current: `Volte rapidamente a seus sites preferidos no %1$s. Basta usar "Adicionar à tela inicial" no menu do %1$s.`
+    - Suggest: `Adicionar à tela do dispositivo`
+    - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-pt-rBR/strings.xml` — `firstrun_shortcut_text` uses straight double quotes
+    - Current: `Volte rapidamente a seus sites preferidos no %1$s. Basta usar "Adicionar à tela inicial" no menu do %1$s.`
+    - Suggest: `“Adicionar à tela inicial”`
+    - The locale's quote convention is `curly-double` (13 occurrences).
+- `security_popup_security_verified` — `mozilla-mobile/focus-android/app/src/main/res/values-pt-rBR/strings.xml` — "Verified by" is translated as "Homologado por" (approved/certified by) rather than "Verificado por".
+    - Current: `Homologado por: %1$s`
+    - Suggest: `Verificado por: %1$s`
+    - The source states who verified the certificate; "homologado" means approved/homologated, a different concept.
 
 ---
 
@@ -54,20 +84,21 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,911 |
+| Strings | 2,735 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
 | printf placeholder mismatches | 0 |
 | Plural / select selector mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
-| Text quoting a UI label that no longer matches | 1 |
+| Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 3 |
+| Typography deviations from this locale's own norm | 2 |
 
 ### Completeness
 
@@ -79,10 +110,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 13, `straight-double` 3 | **curly-double** |
+| quotes | `curly-double` 13, `straight-double` 2 | **curly-double** |
 | ellipsis | `char` 21 | **char** |
-| dash | `em` 1 | **em** |
-| register | `informal` 239 | **informal** |
+| register | `informal` 225 | **informal** |
 
 ---
 
@@ -92,15 +122,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (125)
+## 3. Open findings (117)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 75 |
-| 3 | Degraded language (grammar, spelling, terminology) | 40 |
-| 4 | Cosmetic (typography, spacing) | 10 |
+| 2 | Wrong content (says something other than the English) | 70 |
+| 3 | Degraded language (grammar, spelling, terminology) | 38 |
+| 4 | Cosmetic (typography, spacing) | 9 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -318,6 +348,11 @@ _Nothing in this category._
     - Source: `To add a new site: Visit it and select “Never translate this site” from the translation menu.`
     - Suggest: `Para adicionar um site: Acesse o site e selecione`
     - The source instructs the user to visit the site; the translation invents an instruction about opening it in a tab.
+- `notification_privacy_report_body_has_trackers` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Translation adds "rastreadores", a word not present in the source's short parallel phrasing.
+    - Current: `Continue navegando. O %1$s continua bloqueando rastreadores.`
+    - Source: `Keep browsing. %1$s will keep blocking.`
+    - Suggest: `Continue navegando. O %1$s continua bloqueando.`
+    - Source is "Keep browsing. %1$s will keep blocking." with no object; the added "rastreadores" introduces content not in the source.
 - `opening_screen_after_four_hours_of_inactivity` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Translation adds "Aba mais recente, ou" which is not in the source and duplicates the "Last tab" option label.
     - Current: `Aba mais recente, ou tela inicial após quatro horas sem atividade`
     - Source: `Homepage after four hours of inactivity`
@@ -393,22 +428,17 @@ _Nothing in this category._
     - Source: `You’ve completed all 6 setup steps. Enjoy the speed, privacy, and security of %1$s.`
     - Suggest: `Você completou todas as 6 etapas de configuração.`
     - The source specifies "setup steps"; the translation omits that the steps are configuration steps.
-- `sports_widget_get_custom_wallpaper` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — The action verb "Get" is dropped, turning a menu action into a noun phrase.
-    - Current: `Fundo de tela personalizado`
-    - Source: `Get custom wallpaper`
-    - Suggest: `Obter fundo de tela personalizado`
-    - Source is a menu item action "Get custom wallpaper"; the translation omits the verb and no longer states the action.
-- `sports_widget_runner_up_title` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "Runners-up" (second place) is translated as "Finalistas", which means finalists (both teams in the final), not the runner-up.
-    - Current: `Finalistas`
-    - Source: `Runners-up`
-    - Suggest: `Vice-campeão`
-    - The developer comment states Runners-up means second place; "Finalistas" includes the champion and so says something different from the source.
-- `sports_widget_upcoming` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "Upcoming" (section header for matches not yet started) is rendered as "Seguintes" ("following/next ones") instead of a term meaning upcoming.
-    - Current: `Seguintes`
-    - Source: `Upcoming`
-    - Suggest: `Próximos`
-    - The source means matches that have not yet started; "Seguintes" means "the following", not "upcoming". The related string sports_widget_upcoming_match_content_description uses "Em breve".
-- _…and 15 more; see `state/` for the full list._
+- `stories_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "Navigate back" is translated as "Voltar à página anterior" (go back to the previous page), adding a page reference not in the source.
+    - Current: `Voltar à página anterior`
+    - Source: `Navigate back`
+    - Suggest: `Voltar`
+    - This is the back button on the Stories screen top app bar, not a web page navigation; the source is simply "Navigate back".
+- `studies_active` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Section title "Active" (list of active studies) translated as "Ativado" (enabled), the same wording used for the on/off state string.
+    - Current: `Ativado`
+    - Source: `Active`
+    - Suggest: `Ativos`
+    - Per the developer comment this is the title of the section listing active studies, not an on/off state; "Ativado" duplicates studies_on and misrepresents the plural section heading.
+- _…and 12 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -482,11 +512,6 @@ _Nothing in this category._
     - Source: `Active`
     - Suggest: `Ativas`
     - This is the active tab count category; sibling strings use "Inativas" and "Privativas" (feminine plural, agreeing with "abas"), so "Ativo" is inconsistent and mismatched.
-- `ip_protection_location_recommended_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Infinitive "Selecionar" used where source is a third-person descriptive sentence "Selects".
-    - Current: `Selecionar o local de VPN mais rápido para você.`
-    - Source: `Selects the fastest VPN location for you.`
-    - Suggest: `Seleciona o local de VPN mais rápido para você.`
-    - The source "Selects the fastest VPN location for you." is a description of what the option does, so pt-BR should use the third-person present "Seleciona".
 - `ip_protection_locations_unavailable_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "Switched to the recommended location." rendered with an active verb implying the user switched.
     - Current: `Mudou para o local recomendado.`
     - Source: `Switched to the recommended location.`
@@ -590,21 +615,6 @@ _Nothing in this category._
     - Source: `QR Code`
     - Suggest: `QR Code`
     - pt-BR Mozilla products use "QR code"/"QR Code"; "Código QR" is the pt-PT/es form and is inconsistent with the locale's terminology.
-- `sports_widget_round_of_16` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "Round of 16" is rendered literally as "Rodada de 16" instead of the standard Brazilian football term "Oitavas de final".
-    - Current: `Rodada de 16`
-    - Source: `Round of 16`
-    - Suggest: `Oitavas de final`
-    - In pt-BR soccer terminology the knockout stage of 16 teams is "oitavas de final"; "Rodada de 16" is a literal calque that does not name the stage, and it is inconsistent with the sibling strings translated as "Quartas de final" and "Semifinais".
-- `sports_widget_round_of_32` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "Round of 32" is rendered literally as "Rodada de 32" instead of the standard Brazilian football term "Décimas sextas de final"/"Fase de 32".
-    - Current: `Rodada de 32`
-    - Source: `Round of 32`
-    - Suggest: `Décima sexta de final`
-    - Literal calque; pt-BR soccer terminology names knockout stages (oitavas, quartas, semifinais), and the sibling strings use those terms, so "Rodada de 32" is inconsistent and non-idiomatic.
-- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-pt-rBR/strings.xml` — `firstrun_shortcut_text` quotes “Adicionar à tela inicial” but the string it names, `menu_add_to_home_screen`, reads “Adicionar à tela do dispositivo”
-    - Current: `Volte rapidamente a seus sites preferidos no %1$s. Basta usar "Adicionar à tela inicial" no menu do %1$s.`
-    - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
-    - Suggest: `Adicionar à tela do dispositivo`
-    - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `search_add_error_format` — `mozilla-mobile/focus-android/app/src/main/res/values-pt-rBR/strings.xml` — "search string" translated as "código de pesquisa", inconsistent with "termo de pesquisa" used elsewhere.
     - Current: `código de pesquisa`
     - Source: `Check that search string matches Example format`
@@ -657,11 +667,6 @@ _Nothing in this category._
     - Source: `Video isn’t playing or loading`
     - Suggest: `O vídeo não está sendo carregado ou reproduzido`
     - There is an extra space before “reproduzido”; the source has no such spacing.
-- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-pt-rBR/strings.xml` — `firstrun_shortcut_text` uses straight double quotes
-    - Current: `Volte rapidamente a seus sites preferidos no %1$s. Basta usar "Adicionar à tela inicial" no menu do %1$s.`
-    - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
-    - Suggest: `“Adicionar à tela inicial”`
-    - The locale's quote convention is `curly-double` (13 occurrences).
 - `search_add_manually_example` — `mozilla-mobile/focus-android/app/src/main/res/values-pt-rBR/strings.xml` — A spurious space was inserted between "q=" and the %s placeholder, breaking the example URL format.
     - Current: `example.com/search/?q= %s`
     - Source: `Example: example.com/search/?q=%s`

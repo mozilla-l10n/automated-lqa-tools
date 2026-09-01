@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
-| **Previous run** | 2026-08-22 @ `eda9938ab8c3` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
+| **Previous run** | 2026-08-24 @ `e8622a909368` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,908 |
+| **Strings reviewed this run** | 6 of 2,719 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -26,21 +26,64 @@ _No new findings._
 
 _Nothing was fixed._
 
-### ↩︎ Withdrawn — no longer considered a defect (1)
+### ↩︎ Withdrawn — no longer considered a defect (0)
 
-- `onboarding_first_screen_title` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — `onboarding_first_screen_title` has placeholders %s where the source has %1$s
-    - Current: `Dobrodošli v %su`
-    - Source: `Welcome to %1$s`
-    - Suggest: `Dobrodošli v %1$su`
-    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+_Nothing withdrawn._
 
 ### 🔁 String changed, defect not verifiable — needs a re-read (0)
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (12)
 
-_Nothing retired._
+- `sports_widget_error_connection_interrupted` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Em dash used where the locale's house dash is the en dash.
+    - Current: `Povezava prekinjena — posodobitve`
+    - Suggest: `Povezava prekinjena – posodobitve`
+    - The sl convention for dashes is the en dash; the source em dash should be adapted.
+- `sports_widget_error_load_failed_description` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Try refreshing" is rendered as "Poskusite znova" (try again), dropping the refresh action present in the sibling strings.
+    - Current: `Poskusite znova čez nekaj minut.`
+    - Suggest: `Poskusite osvežiti čez nekaj minut.`
+    - The source says "Try refreshing in a few minutes"; the identical clause in sports_widget_error_load_failed is translated "Poskusite osvežiti čez nekaj minut", so this rendering is both inaccurate and inconsistent.
+- `sports_widget_follow_another_team` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Button label uses the informal imperative singular instead of the established formal address.
+    - Current: `Spremljaj drugo ekipo`
+    - Suggest: `Spremljajte drugo ekipo`
+    - The locale convention is formal address (e.g. "Pridobite ozadje po meri", "Poskusite osvežiti"); "Spremljaj" is the informal second-person singular imperative.
+- `sports_widget_go_to_world_cup_site_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Content description uses the informal imperative singular instead of the established formal address.
+    - Current: `Obišči spletno stran svetovnega prvenstva`
+    - Suggest: `Obiščite spletno stran svetovnega prvenstva`
+    - The locale convention is formal address; "Obišči" is the informal second-person singular imperative, inconsistent with other formal strings in this batch.
+- `sports_widget_semi_final` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Semi-finals" is rendered as "Polfinala", the genitive/dual form rather than the plural nominative.
+    - Current: `Polfinala`
+    - Suggest: `Polfinale`
+    - The round name label should be nominative; Slovenian standard term for the stage is "Polfinale" (cf. "Osmina finala", "Tretje mesto" which are nominative). "Polfinala" reads as genitive singular/dual.
+- `sports_widget_still_want_to_follow` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Still want to follow along?" is reduced to "Vas še zanima?", losing the meaning of continuing to follow the tournament.
+    - Current: `Vas še zanima?`
+    - Suggest: `Želite še naprej spremljati dogajanje?`
+    - The card asks whether the user wants to keep following the tournament after their team was eliminated; the translation only asks whether they are still interested.
+- `sports_widget_team_followed_description` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Check back" is mistranslated as "Spremljajte nas" (follow us).
+    - Current: `Spremljajte nas za informacije o tekmah, ko se bo turnir približal.`
+    - Suggest: `Znova preverite informacije o tekmah, ko se bo turnir približal.`
+    - The source tells the user to return later to see match info, not to follow the provider.
+- `sports_widget_team_followed_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Following: %s" is translated as "Sledim" (I am following) instead of a neutral/user-oriented form.
+    - Current: `Sledim: %s`
+    - Suggest: `Sledite: %s`
+    - The source label states which team the user follows; first-person singular "Sledim" makes the app speak for itself and breaks the established formal address to the user.
+- `cookie_banner_report_a_site_snackbar_label` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — The translation reverses the meaning: the request is to add support for the site, not a request sent to the site.
+    - Current: `Zahtevek spletnemu mestu za podporo poslan.`
+    - Suggest: `Zahtevek za podporo spletnemu mestu poslan.`
+    - Source "Request to support site submitted" means a request was submitted (to the team) to support this site; the Slovenian dative "Zahtevek spletnemu mestu" says the request was sent to the website.
+- `cookie_banner_the_site_was_reported` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — The translation reverses the meaning: the request is to add support for the site, not a request sent to the site.
+    - Current: `Zahtevek spletnemu mestu za podporo poslan.`
+    - Suggest: `Zahtevek za podporo spletnemu mestu poslan.`
+    - Source "Request to support site submitted" means a request was submitted to support this site; the dative construction implies the request was sent to the website.
+- `external_multiple_apps_matched_exit` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — First-person verb form used instead of the neutral/impersonal question typical for dialog prompts in the formal register.
+    - Current: `Končam zasebno brskanje?`
+    - Suggest: `Želite končati zasebno brskanje?`
+    - The locale uses the formal register; "Končam" is a first-person informal-style rendering, inconsistent with the source's neutral "Exit Private Browsing?".
+- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — Curly quotes in the source are rendered as straight double quotes but the app name placeholder is also declined with an appended suffix; the quoting style should match the house straight-double convention consistently.
+    - Current: `"Dodaj na domač zaslon"`
+    - Suggest: `"Dodaj na domači zaslon"`
+    - The quoted menu item must match the actual menu string menu_add_to_home_screen; also, the adjective form should be consistent with that item's wording.
 
 ---
 
@@ -49,10 +92,11 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,908 |
-| Missing strings | 3 |
+| Strings | 2,719 |
+| Missing strings | 16 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
@@ -66,9 +110,10 @@ _Nothing retired._
 
 ### Completeness
 
-**3 strings** are not translated yet, concentrated in:
+**16 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — 3
+- `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — 11
+- `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-sl/strings.xml` — 5
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -78,10 +123,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `straight-double` 15, `curly-double` 4 | **straight-double** |
+| quotes | `straight-double` 14, `curly-double` 4 | **straight-double** |
 | ellipsis | `char` 21 | **char** |
-| dash | `em` 1, `en` 5 | **en** |
-| register | `informal` 4, `formal` 97 | **formal** |
+| dash | `en` 5 | **en** |
+| register | `informal` 4, `formal` 93 | **formal** |
 
 ---
 
@@ -91,15 +136,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (128)
+## 3. Open findings (116)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 71 |
-| 3 | Degraded language (grammar, spelling, terminology) | 45 |
-| 4 | Cosmetic (typography, spacing) | 12 |
+| 2 | Wrong content (says something other than the English) | 65 |
+| 3 | Degraded language (grammar, spelling, terminology) | 41 |
+| 4 | Cosmetic (typography, spacing) | 10 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -342,26 +387,6 @@ _Nothing in this category._
     - Source: `You’re halfway there! Three steps finished and 2 to go.`
     - Suggest: `Ste na pol poti!`
     - Source says "halfway there"; the parallel 6-step string correctly uses "Ste na pol poti!", making this both a mistranslation and an inconsistency.
-- `sports_widget_error_load_failed_description` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Try refreshing" is rendered as "Poskusite znova" (try again), dropping the refresh action present in the sibling strings.
-    - Current: `Poskusite znova čez nekaj minut.`
-    - Source: `Try refreshing in a few minutes.`
-    - Suggest: `Poskusite osvežiti čez nekaj minut.`
-    - The source says "Try refreshing in a few minutes"; the identical clause in sports_widget_error_load_failed is translated "Poskusite osvežiti čez nekaj minut", so this rendering is both inaccurate and inconsistent.
-- `sports_widget_still_want_to_follow` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Still want to follow along?" is reduced to "Vas še zanima?", losing the meaning of continuing to follow the tournament.
-    - Current: `Vas še zanima?`
-    - Source: `Still want to follow along?`
-    - Suggest: `Želite še naprej spremljati dogajanje?`
-    - The card asks whether the user wants to keep following the tournament after their team was eliminated; the translation only asks whether they are still interested.
-- `sports_widget_team_followed_description` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Check back" is mistranslated as "Spremljajte nas" (follow us).
-    - Current: `Spremljajte nas za informacije o tekmah, ko se bo turnir približal.`
-    - Source: `Check back for match info as the tournament approaches.`
-    - Suggest: `Znova preverite informacije o tekmah, ko se bo turnir približal.`
-    - The source tells the user to return later to see match info, not to follow the provider.
-- `sports_widget_team_followed_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Following: %s" is translated as "Sledim" (I am following) instead of a neutral/user-oriented form.
-    - Current: `Sledim: %s`
-    - Source: `Following:  %s`
-    - Suggest: `Sledite: %s`
-    - The source label states which team the user follows; first-person singular "Sledim" makes the app speak for itself and breaks the established formal address to the user.
 - `sync_failed_summary` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Last success" is rendered as "Nazadnje sinhronizirano", losing the distinction from the never-synced/last-synced strings.
     - Current: `Sinhronizacija ni uspela. Nazadnje sinhronizirano: %s`
     - Source: `Sync failed. Last success: %s`
@@ -407,7 +432,27 @@ _Nothing in this category._
     - Source: `For your privacy, translations never leave your device. New languages and improvements coming soon! %1$s`
     - Suggest: `nikoli ne zapustijo vaše naprave`
     - The source says "never leave your device"; other strings in the same feature use "naprava" (translation_settings_control_description). "Računalnik" means computer and is wrong on Android.
-- _…and 12 more; see `state/` for the full list._
+- `webcompat_reporter_clear_reason_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Clear selected reason" is rendered as "Cancel the selected reason" instead of clearing/removing it.
+    - Current: `Prekliči izbrani razlog`
+    - Source: `Clear selected reason`
+    - Suggest: `Počisti izbrani razlog`
+    - The source means clearing the selection in the field; "Prekliči" means "cancel" (and is already used for the Cancel button), not "clear".
+- `dismiss_no_suggestions_prompt_button` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — "Dismiss" is translated as "V redu" (OK), which is a different action label.
+    - Current: `V redu`
+    - Source: `Dismiss`
+    - Suggest: `Opusti`
+    - The source button dismisses the message; "V redu" means "OK", not "dismiss".
+- `preference_auto_battery_theme` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — "Set by Battery Saver" is rendered as an imperative "Set the battery saver", reversing the meaning.
+    - Current: `Nastavi ohranjevalnik baterije`
+    - Source: `Set by Battery Saver`
+    - Suggest: `Nastavi ohranjevalnik baterije → "Nastavi ohranjevalnik baterije" naj bo "Nastavi varčevanje z baterijo" (tj. "Določi ohranjevalnik baterije")`
+    - The source means the theme is determined by the Battery Saver setting; the Slovenian reads as a command to set/configure the battery saver, i.e. the battery saver becomes the object rather than the agent.
+- `preference_exceptions_description` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — "disabled content blocking" is translated as "onemogočili zavračanje vsebine" but with a term inconsistent with the rest; more importantly the sense of blocking is rendered oddly.
+    - Current: `Za ta spletna mesta ste onemogočili zavračanje vsebine.`
+    - Source: `You have disabled content blocking for these websites.`
+    - Suggest: `Za ta spletna mesta ste onemogočili blokiranje vsebine.`
+    - Focus uses "blokiranje vsebine" for content blocking; "zavračanje vsebine" is a different term used inconsistently.
+- _…and 6 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -471,11 +516,6 @@ _Nothing in this category._
     - Source: `Almost there! You’re just 1 step away from the finish line.`
     - Suggest: `Ste le še 1 korak od ciljne črte.`
     - The Slovenian sentence as written is ungrammatical/awkward; the source says "You're just 1 step away from the finish line".
-- `sports_widget_semi_final` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Semi-finals" is rendered as "Polfinala", the genitive/dual form rather than the plural nominative.
-    - Current: `Polfinala`
-    - Source: `Semi-finals`
-    - Suggest: `Polfinale`
-    - The round name label should be nominative; Slovenian standard term for the stage is "Polfinale" (cf. "Osmina finala", "Tretje mesto" which are nominative). "Polfinala" reads as genitive singular/dual.
 - `translation_option_bottom_sheet_about_translations` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — The placeholder holding the app name is given an inflectional suffix '-u' that produces wrong forms for many app names.
     - Current: `O prevodih v %1$su`
     - Source: `About translations in %1$s`
@@ -599,26 +639,11 @@ _Nothing in this category._
     - Source: `Explore extensions`
     - Suggest: `Raziščite razširitve`
     - Sibling task titles use the formal address ("Raziščite pripomoček za iskanje", "Izberite temo", "Prijavite se v račun"); the sl convention is formal.
-- `sports_widget_follow_another_team` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Button label uses the informal imperative singular instead of the established formal address.
-    - Current: `Spremljaj drugo ekipo`
-    - Source: `Follow another team`
-    - Suggest: `Spremljajte drugo ekipo`
-    - The locale convention is formal address (e.g. "Pridobite ozadje po meri", "Poskusite osvežiti"); "Spremljaj" is the informal second-person singular imperative.
-- `sports_widget_go_to_world_cup_site_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Content description uses the informal imperative singular instead of the established formal address.
-    - Current: `Obišči spletno stran svetovnega prvenstva`
-    - Source: `Go to World Cup site`
-    - Suggest: `Obiščite spletno stran svetovnega prvenstva`
-    - The locale convention is formal address; "Obišči" is the informal second-person singular imperative, inconsistent with other formal strings in this batch.
 - `studies_title_2` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "feature studies" is translated as "raziskave značilnosti" instead of the established term for features (funkcije).
     - Current: `Dovoli raziskave značilnosti`
     - Source: `Allow feature studies`
     - Suggest: `Dovoli raziskave funkcij`
     - "Features" in Mozilla sl is rendered as "funkcije"; "značilnosti" is a different concept (characteristics).
-- `external_multiple_apps_matched_exit` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — First-person verb form used instead of the neutral/impersonal question typical for dialog prompts in the formal register.
-    - Current: `Končam zasebno brskanje?`
-    - Source: `Exit Private Browsing?`
-    - Suggest: `Želite končati zasebno brskanje?`
-    - The locale uses the formal register; "Končam" is a first-person informal-style rendering, inconsistent with the source's neutral "Exit Private Browsing?".
 - `preference_privacy_secure_mode` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — "Stealth" is translated as "Skrivni način" (secret mode) rather than a stealth/hidden-mode term matching the feature name.
     - Current: `Skrivni način`
     - Source: `Stealth`
@@ -672,21 +697,11 @@ _Nothing in this category._
     - Source: `Bookmarks saved in “%s”`
     - Suggest: `Zaznamki shranjeni v "%s"`
     - The sl convention is straight double quotes; the target uses English curly quotes “ ” with the opening mark in the English position.
-- `sports_widget_error_connection_interrupted` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Em dash used where the locale's house dash is the en dash.
-    - Current: `Povezava prekinjena — posodobitve`
-    - Source: `Connection interrupted — live updates paused.`
-    - Suggest: `Povezava prekinjena – posodobitve`
-    - The sl convention for dashes is the en dash; the source em dash should be adapted.
 - `toast_customize_extension_collection_done` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Space before ellipsis is inconsistent with the other translated strings in this batch that use a normal space-free ellipsis placement.
     - Current: `Zapiranje aplikacije za uveljavitev sprememb …`
     - Source: `Extension collection modified. Quitting the application to apply changes…`
     - Suggest: `Zapiranje aplikacije za uveljavitev sprememb…`
     - Source ends with '…' directly attached; other strings such as 'Prevajanje …' show the locale style, but a stray space before the ellipsis after a full clause deviates from the source typography.
-- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — Curly quotes in the source are rendered as straight double quotes but the app name placeholder is also declined with an appended suffix; the quoting style should match the house straight-double convention consistently.
-    - Current: `"Dodaj na domač zaslon"`
-    - Source: `Return to your favorite sites in %1$s quickly. Just select “Add to Home screen” from the %1$s menu.`
-    - Suggest: `"Dodaj na domači zaslon"`
-    - The quoted menu item must match the actual menu string menu_add_to_home_screen; also, the adjective form should be consistent with that item's wording.
 - `menu_share` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — Space inserted before the ellipsis character.
     - Current: `Deli …`
     - Source: `Share…`

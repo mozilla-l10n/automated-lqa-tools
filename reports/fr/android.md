@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8622a909368` |
-| **Previous run** | 2026-08-22 @ `eda9938ab8c3` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
+| **Previous run** | 2026-08-24 @ `e8622a909368` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,911 |
+| **Strings reviewed this run** | 19 of 2,735 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for fr: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `ip_protection_location_selection_reset_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Switched to the recommended location" is rendered as "Connexion à l’emplacement recommandé" (connecting to), losing the completed switch.
+    - Current: `Connexion à l’emplacement recommandé.`
+    - Source: `Selected VPN location unavailable. Switched to the recommended location.`
+    - Suggest: `Basculement vers l’emplacement recommandé.`
+    - The source states the location has already been switched; the French states a connection is being made, changing the meaning and tense.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,9 +38,20 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (3)
 
-_Nothing retired._
+- `sports_widget_round_of_16` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Round of 16" is rendered as "8es de finale" while "Round of 32" is rendered as "16es de finale", but the French labels are shifted one round off in a way that mismatches the tournament stage naming used together.
+    - Current: `8es de finale`
+    - Suggest: `Huitièmes de finale`
+    - Round of 16 = huitièmes de finale (16 teams, 8 matches); the abbreviation "8es" is correct in substance, but should be consistent with the spelled-out forms used for "Demi-finales"; keep the same spelled-out register.
+- `cfr_cookie_banner` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — Superfluous article "les" before the link placeholder produces "dans les paramètres" where %2$s already reads "paramètres".
+    - Current: `dans les %2$s`
+    - Suggest: `dans les paramètres`
+    - %2$s is replaced by the link text "paramètres"; the phrase reads correctly only if the article is not duplicated — as written the visible link excludes "les", but the sentence is intended as "Manage ... in settings". The article should be part of the same fragment or removed.
+- `external_app_prompt` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — "You can leave" (optional/permission) is rendered as "Vous allez quitter" (you are going to leave), changing the meaning.
+    - Current: `Vous allez quitter %1$s pour ouvrir ce lien dans %2$s.`
+    - Suggest: `Vous pouvez quitter %1$s pour ouvrir ce lien dans %2$s.`
+    - The source says the user may leave the app; the sibling string external_app_prompt_no_app correctly uses « Vous pouvez quitter ». Here the future tense states it as a fact.
 
 ---
 
@@ -45,10 +60,11 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,911 |
+| Strings | 2,735 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
@@ -70,12 +86,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `guillemet` 24 | **guillemet** |
-| apostrophe | `typographic` 718 | **typographic** |
-| ellipsis | `char` 22 | **char** |
-| dash | `em` 3 | **em** |
-| nbsp | `total` 211, `before-punctuation` 145, `space-before-punctuation` 73 | _mixed_ |
-| register | `formal` 453 | **formal** |
+| quotes | `guillemet` 23 | **guillemet** |
+| apostrophe | `typographic` 684 | **typographic** |
+| ellipsis | `char` 21 | **char** |
+| dash | `em` 2 | **em** |
+| nbsp | `total` 199, `before-punctuation` 137, `space-before-punctuation` 64 | _mixed_ |
+| register | `formal` 431 | **formal** |
 
 ---
 
@@ -85,14 +101,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (80)
+## 3. Open findings (78)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 57 |
-| 3 | Degraded language (grammar, spelling, terminology) | 19 |
+| 2 | Wrong content (says something other than the English) | 56 |
+| 3 | Degraded language (grammar, spelling, terminology) | 18 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
@@ -266,6 +282,11 @@ _Nothing in this category._
     - Source: `Older`
     - Suggest: `Plus ancien`
     - The header groups history older than the last month; the source is the generic "Older", and the French invents an explicit time frame.
+- `ip_protection_location_selection_reset_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Switched to the recommended location" is rendered as "Connexion à l’emplacement recommandé" (connecting to), losing the completed switch.
+    - Current: `Connexion à l’emplacement recommandé.`
+    - Source: `Selected VPN location unavailable. Switched to the recommended location.`
+    - Suggest: `Basculement vers l’emplacement recommandé.`
+    - The source states the location has already been switched; the French states a connection is being made, changing the meaning and tense.
 - `nova_onboarding_marketing_body_line_three` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — The French reverses the speaker: the source asks the user to consider allowing, while the translation says "we ask for your authorization".
     - Current: `Nous vous demandons votre autorisation pour contribuer à la victoire de Firefox.`
     - Source: `Please consider allowing to help Firefox win.`
@@ -326,11 +347,6 @@ _Nothing in this category._
     - Source: `Cannot share to this app`
     - Suggest: `Impossible de partager avec cette application`
     - "Cannot share to this app" means the content cannot be shared to the target app; the translation reverses the object, saying the app itself cannot be shared.
-- `sports_widget_round_of_16` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Round of 16" is rendered as "8es de finale" while "Round of 32" is rendered as "16es de finale", but the French labels are shifted one round off in a way that mismatches the tournament stage naming used together.
-    - Current: `8es de finale`
-    - Source: `Round of 16`
-    - Suggest: `Huitièmes de finale`
-    - Round of 16 = huitièmes de finale (16 teams, 8 matches); the abbreviation "8es" is correct in substance, but should be consistent with the spelled-out forms used for "Demi-finales"; keep the same spelled-out register.
 - `studies_active` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Section title "Active" is translated as a plural adjective "Activées" rather than the section heading "Actives".
     - Current: `Activées`
     - Source: `Active`
@@ -386,11 +402,6 @@ _Nothing in this category._
     - Source: `Navigate back`
     - Suggest: `Reculer dans l’historique`
     - The source is an action content description read by screen readers; the sibling string content_description_forward is translated as "Avancer dans l’historique", so "Précédent" is both inconsistent and not describing the action.
-- `external_app_prompt` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — "You can leave" (optional/permission) is rendered as "Vous allez quitter" (you are going to leave), changing the meaning.
-    - Current: `Vous allez quitter %1$s pour ouvrir ce lien dans %2$s.`
-    - Source: `You can leave %1$s to open this link in %2$s.`
-    - Suggest: `Vous pouvez quitter %1$s pour ouvrir ce lien dans %2$s.`
-    - The source says the user may leave the app; the sibling string external_app_prompt_no_app correctly uses « Vous pouvez quitter ». Here the future tense states it as a fact.
 - `firstrun_privacy_title` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — "Make privacy a habit" is translated as "Reprenez votre vie privée en main" (take back control of your privacy), a different meaning.
     - Current: `Reprenez votre vie privée en main`
     - Source: `Make privacy a habit`
@@ -439,11 +450,6 @@ _Nothing in this category._
     - Source: `Enables fingerprinting protection to stop suspected fingerprinters.`
     - Suggest: `Active la protection`
     - The developer comment says this is a description of fingerprinters blocked by the protection; the source "Enables fingerprinting protection" is descriptive, not an imperative, matching the other description strings in the same group ("Efface…", "Limite…", "Empêche…").
-- `cfr_cookie_banner` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — Superfluous article "les" before the link placeholder produces "dans les paramètres" where %2$s already reads "paramètres".
-    - Current: `dans les %2$s`
-    - Source: `%1$s tries to reject cookie requests to dismiss annoying cookie banners.  Manage cookie banner preferences in %2$s.`
-    - Suggest: `dans les paramètres`
-    - %2$s is replaced by the link text "paramètres"; the phrase reads correctly only if the article is not duplicated — as written the visible link excludes "les", but the sentence is intended as "Manage ... in settings". The article should be part of the same fragment or removed.
 
 ### D. Terminology, register & consistency
 

@@ -1,15 +1,15 @@
 {
  "_meta": {
   "locale": "cs",
-  "prose_chunks": 2911,
-  "strings": 2911
+  "prose_chunks": 2735,
+  "strings": 2735
  },
  "apostrophe": {
   "straight": 0,
   "typographic": 0
  },
  "dash": {
-  "em": 2,
+  "em": 1,
   "en": 4
  },
  "ellipsis": {
@@ -31,6 +31,6 @@
  },
  "quotes": {
   "curly-double": 5,
-  "german-double": 15
+  "german-double": 14
  }
 }
