@@ -24,13 +24,26 @@ import checks  # noqa: E402
 import config  # noqa: E402
 import selftest_lib  # noqa: E402
 
-# Real defects in the repository today.
-MUST_FIND = [
-    # `%%3$@$s` -- the doubled percent escapes to a literal, so the third
-    # link never renders.
+# Real defects in the repository today -- none. Every defect this suite used
+# to pin was fixed upstream in one commit, and a sweep of all four checks
+# over all nineteen locales reports nothing at all. So there is no live
+# defect to pin here, and an empty MUST_FIND cannot say whether the checks
+# still work: "A wrong placeholder is still caught" below crosses two real
+# strings so that a clean tree and a broken check stay distinguishable.
+MUST_FIND = []
+
+# Defects the locale teams have since fixed. Listed rather than deleted, so
+# "the check broke" and "the defect is gone" cannot be mistaken for each
+# other. All three went in firefoxios-l10n a2ecb0a82 (2026-08-24), one
+# Pontoon update covering scn, co, dsb and oc.
+FIXED_UPSTREAM = [
+    # `%%3$@$s` -- the doubled percent escaped to a literal, so the third
+    # link never rendered. Introduced 2025-12-16, fixed as `%3$@`.
     ("dsb", "placeholders", "FirefoxHome.PrivacyNotice.Body.v148"),
-    # `%S` where the source passes an integer with `%d`.
+    # `%S` where the source passes an integer with `%d`; now `%d`.
     ("oc", "placeholders", "FirefoxHome.Pocket.Minutes.v99"),
+    # `%1$s` against the source's `%d` -- a retyped argument, which is a
+    # crash rather than a rendering bug; now `%d`.
     ("scn", "placeholders", "CloseTabsToast.Title.v113"),
 ]
 
@@ -62,7 +75,8 @@ def run(l10n_dir, project) -> int:
     check = suite.check
     results = selftest_lib.load_results(
         project, checks, l10n_dir, l10n_dir,
-        [loc for loc, *_ in MUST_FIND + MUST_BE_SILENT + COMPLETENESS],
+        [loc for loc, *_ in MUST_FIND + FIXED_UPSTREAM + MUST_BE_SILENT
+         + COMPLETENESS],
     )
 
     print("XLIFF layout")
@@ -108,7 +122,41 @@ def run(l10n_dir, project) -> int:
                   "empty target counts as untranslated, not as an empty string")
 
     selftest_lib.must_find(suite, results, MUST_FIND)
+    selftest_lib.fixed_upstream(suite, results, FIXED_UPSTREAM)
     selftest_lib.must_be_silent(suite, results, MUST_BE_SILENT)
+
+    suite.section("A wrong placeholder is still caught")
+    # With nothing broken in the tree, `must_be_silent` passing and
+    # `must_find` having nothing to ask are the same observation, and a
+    # check that had stopped firing altogether would read as nineteen clean
+    # locales. So run the check over a deliberate mismatch: a target that
+    # passes no argument against a source that passes one. Both sides are
+    # messages this clone really parsed -- the mismatch is in the pairing,
+    # not in a hand-built message -- so it exercises the path a real defect
+    # takes rather than a fabrication of one.
+    src_one_arg = next(k for k, m in trees.source.items()
+                       if cc._specs(m.raw.get("")) == [[("", "d")]])
+    # `_specs` reports one list per variant, so a plain string with no
+    # placeholders comes back as `[[]]` -- present but empty, not absent.
+    loc_no_args = next(k for k, m in trees.l10n.items()
+                       if all(not s for s in cc._specs(m.raw.get(""))))
+    crossed = cc.check_placeholders(
+        "it",
+        {src_one_arg: trees.l10n[loc_no_args]},
+        {src_one_arg: trees.source[src_one_arg]},
+    )
+    check(len(crossed) == 1 and crossed[0].check == "placeholders",
+          f"a missing argument is reported ({len(crossed)} finding(s))")
+    check(crossed and "where the source has %1$d" in crossed[0].summary,
+          "and the summary names the argument the source passes")
+    check(crossed and crossed[0].impact == 1,
+          "at impact 1: the value does not render as intended")
+    unchanged = cc.check_placeholders(
+        "it",
+        {src_one_arg: trees.source[src_one_arg]},
+        {src_one_arg: trees.source[src_one_arg]},
+    )
+    check(not unchanged, "while a string against itself reports nothing")
 
     suite.section("Project wiring")
     for absent in ("plurals", "selectors", "markup", "escaping", "variables"):
