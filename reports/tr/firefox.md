@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-31 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `38d706ee4004` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
+| **Previous run** | 2026-08-31 @ `67b14d26eb36` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 53 of 18,151 |
+| **Strings reviewed this run** | 0 of 18,151 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,23 +18,9 @@ Also for tr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `newtab-spaces-tab-widgets` — `browser/browser/newtab/newtab.ftl` — "Widgets" rendered as "Araçlar" (tools) instead of the established Turkish term for widgets.
-    - Current: `Araçlar`
-    - Source: `Widgets`
-    - Suggest: `Widget’lar`
-    - en-US "Widgets" refers to UI widgets; "Araçlar" means "Tools" and is used elsewhere for Tools menus, causing terminology confusion.
-- `about-sync-log-view-error` — `toolkit/services/aboutSyncLog.ftl` — Past-tense failure statement rendered as present/ongoing tense.
-    - Current: `Bu günlük dosyası okunamıyor.`
-    - Source: `Could not read this log file.`
-    - Suggest: `Bu günlük dosyası okunamadı.`
-    - en-US "Could not read this log file." reports a completed failure; the Turkish says "cannot be read" (ongoing).
-- `inspector-emulation-panel-reduced-motion-no-preference` — `devtools/client/inspector.ftl` — The aria-label says "do not specify any preference" instead of "Enable no preference for reduced motion emulation", dropping the "enable" action.
-    - Current: `Daha az hareket öykünümü için herhangi bir tercih belirtme`
-    - Source: `(value): No preference aria-label: Enable no preference for reduced motion emulation`
-    - Suggest: `Azaltılmış hareket öykünümü için “tercih yok” seçeneğini etkinleştir`
-    - en-US is "Enable no preference for reduced motion emulation"; the Turkish renders it as a negative imperative ("do not specify a preference") and omits "Enable". It also uses "Daha az hareket" whereas the sibling strings consistently use "Azaltılmış hareket".
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

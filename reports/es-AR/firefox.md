@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-31 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `38d706ee4004` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
+| **Previous run** | 2026-08-31 @ `67b14d26eb36` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 15 of 18,182 |
+| **Strings reviewed this run** | 9 of 18,188 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,36 +18,27 @@ Also for es-AR: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (0)
 
-- `preventedConsoleClear` — `devtools/client/webconsole.properties` — `preventedConsoleClear` quotes “Registros presistentes” but the string it names, `webconsole.console.settings.menu.item.enablePersistentLogs.label`, reads “Registros persistentes”
-    - Current: `console.clear() se evitó debido a “Registros presistentes”`
-    - Source: `console.clear() was prevented due to “Persist Logs”`
-    - Suggest: `Registros persistentes`
-    - In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `printui-portrait-2` — `toolkit/toolkit/printing/printUI.ftl` — "Portrait" page orientation rendered as "Normal" instead of "Vertical".
-    - Current: `label: Normal`
-    - Source: `label: Portrait title: Portrait`
-    - Suggest: `label: Vertical`
-    - The en-US "Portrait" is the page orientation paired with "Landscape" ("Apaisada"); "Normal" does not name the orientation and is inconsistent with the standard es-AR term "Vertical".
-- `trademarkInfo` — `browser/branding/official/brand.ftl` — Brand name "Mozilla Foundation" translated as "Fundación Mozilla".
-    - Current: `Fundación Mozilla`
-    - Source: `Firefox and the Firefox logos are trademarks of the Mozilla Foundation.`
-    - Suggest: `Mozilla Foundation`
-    - "Mozilla Foundation" is the legal entity name in a trademark notice and must not be translated.
-- `share-panel-missing-device` — `browser/browser/sharePanel.ftl` — "Don’t See Your Device?" translated impersonally as "¿No se puede ver el dispositivo?" (can't the device be seen?).
-    - Current: `¿No se puede ver el dispositivo?`
-    - Source: `label: Don’t See Your Device?`
-    - Suggest: `¿No ve su dispositivo?`
-    - The en-US addresses the user about their own device not appearing in the list; the target states that the device cannot be seen, changing the meaning and losing the possessive reference.
+_No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (3)
 
-- `share-panel-missing-device` — `browser/browser/sharePanel.ftl` — "Don’t See Your Device?" translated impersonally as "¿No se puede ver el dispositivo?" (can't the device be seen?).
-    - Current: `¿No se puede ver el dispositivo?`
-    - Source: `label: Don’t See Your Device?`
-    - Suggest: `¿No ve su dispositivo?`
-    - The en-US addresses the user about their own device not appearing in the list; the target states that the device cannot be seen, changing the meaning and losing the possessive reference.
+- `tou-existing-user-spotlight-body` — `browser/browser/termsofuse.ftl` — Malformed closing tag `</a >` in `tou-existing-user-spotlight-body`
+    - Current: `Introducimos <a data-l10n-name="terms-of-use">Términos de uso</a> y actualizamos nuestra <a data-l10n-name="privacy-notice">Nota de privacidad</a >.<br><br> Tómese un momento para revisar y aceptar. <a data-l10n-name="l…`
+    - Source: `We’ve introduced a <a data-l10n-name="terms-of-use">Terms of Use</a> and updated our <a data-l10n-name="privacy-notice">Privacy Notice</a>.<br><br> Please take a moment to review and accept. <a data-l10n-name="learn-mor…`
+    - Suggest: `We’ve introduced a <a data-l10n-name="terms-of-use">Terms of Use</a> and updated our <a data-l10n-name="privacy-notice">Privacy Notice</a>.<br><br> Please take a moment to review and accept. <a data-l10n-name="learn-mor…`
+    - Whitespace inside a closing tag makes it render as literal text.
+- `inactive-css-not-grid-or-flex-or-absolutely-positioned-item-fix` — `devtools/client/tooltips.ftl` — Malformed closing tag `</strong >` in `inactive-css-not-grid-or-flex-or-absolutely-positioned-item-fix`
+    - Current: `Intente agregar <strong>position:absolute</strong> al elemento, o <strong>display:grid</strong>, <strong>display:flex</strong>, <strong>display:inline-grid</strong > o <strong>display:inline-flex</strong> al padre del e…`
+    - Source: `Try adding <strong>position:absolute</strong> to the element, or <strong>display:grid</strong>, <strong>display:flex</strong>, <strong>display:inline-grid</strong>, or <strong>display:inline-flex</strong> to the element…`
+    - Suggest: `Try adding <strong>position:absolute</strong> to the element, or <strong>display:grid</strong>, <strong>display:flex</strong>, <strong>display:inline-grid</strong>, or <strong>display:inline-flex</strong> to the element…`
+    - Whitespace inside a closing tag makes it render as literal text.
+- `inactive-css-not-grid-or-flex-or-absolutely-positioned-item-fix-1` — `devtools/client/tooltips.ftl` — Malformed closing tag `</strong >` in `inactive-css-not-grid-or-flex-or-absolutely-positioned-item-fix-1`
+    - Current: `Intente agregar <strong>position:absolute</strong> al elemento, o <strong>display:grid</strong>, <strong>display:flex</strong>, <strong>display:inline-grid</strong > o <strong>display:inline-flex</strong> al padre del e…`
+    - Source: `Try adding <strong>position:absolute</strong> to the element, or <strong>display:grid</strong>, <strong>display:flex</strong>, <strong>display:inline-grid</strong>, or <strong>display:inline-flex</strong> to the element…`
+    - Suggest: `Try adding <strong>position:absolute</strong> to the element, or <strong>display:grid</strong>, <strong>display:flex</strong>, <strong>display:inline-grid</strong>, or <strong>display:inline-flex</strong> to the element…`
+    - Whitespace inside a closing tag makes it render as literal text.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -57,12 +48,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `appmenuitem-vpn-description3` — `browser/browser/appmenu.ftl` — Inconsistent verb form: infinitive imperative expected as in the sibling description, but conjugated "Hace" is used.
-    - Current: `Hace que la navegación sea más difícil de rastrear`
-    - Suggest: `Hacer que la navegación sea más difícil de rastrear`
-    - Parallel string appmenuitem-vpn-description5 uses the infinitive ("Obtener…"); en-US "Make your browsing harder to trace" is an imperative/infinitive, not third-person present.
+_Nothing retired._
 
 ---
 
@@ -71,8 +59,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 362 |
-| Strings | 18,182 |
-| Missing strings | 37 |
+| Strings | 18,188 |
+| Missing strings | 31 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -84,25 +72,22 @@ _Nothing to re-read._
 | Text quoting a UI label that no longer matches | 3 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 4 |
-| Markup & `data-l10n-name` defects | 3 |
+| Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 2 |
 
 ### Completeness
 
-**37 strings** are not translated yet, concentrated in:
+**31 strings** are not translated yet, concentrated in:
 
 - `browser/browser/newtab/newtab.ftl` — 10
 - `toolkit/toolkit/about/url-classifier.ftl` — 6
-- `browser/browser/preferences/preferences.ftl` — 5
 - `browser/browser/featureCallout.ftl` — 4
+- `browser/browser/preferences/preferences.ftl` — 4
 - `browser/browser/appmenu.ftl` — 3
-- `browser/browser/sharePanel.ftl` — 3
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 1
 - `toolkit/toolkit/about/aboutAddons.ftl` — 1
 - `toolkit/toolkit/global/processTypes.ftl` — 1
 - `toolkit/services/aboutSyncLog.ftl` — 1
 - `browser/browser/newtab/asrouter.ftl` — 1
-- `browser/browser/preferences/formAutofill.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -114,7 +99,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 497, `straight-double` 174, `curly-single` 98 | _mixed_ |
 | apostrophe | `typographic` 110, `straight` 70 | _mixed_ |
-| ellipsis | `char` 459, `ascii` 2 | **char** |
+| ellipsis | `char` 462, `ascii` 2 | **char** |
 | dash | `em` 86, `en` 1 | **em** |
 | nbsp | `total` 5, `before-punctuation` 3, `space-before-punctuation` 9 | _mixed_ |
 | inverted marks | `open-question` 371, `open-exclamation` 82 | **open-question** |
@@ -127,12 +112,12 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (307)
+## 3. Open findings (304)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 53 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 50 |
 | 2 | Wrong content (says something other than the English) | 125 |
 | 3 | Degraded language (grammar, spelling, terminology) | 88 |
 | 4 | Cosmetic (typography, spacing) | 35 |
@@ -301,11 +286,6 @@ _Nothing reported._
     - Source: `{$trackerCount ->} [one] { -brand-short-name } blocked { $trackerCount } tracker since { $date } [other] { -brand-short-name } blocked over { $trackerCount } trackers since { $date }`
     - Suggest: `{ -brand-short-name } bloqueó más de { $trackerCount } rastreadores desde`
     - en-US is "blocked over { $trackerCount } trackers since"; the localized text runs the brand into "más de" and shows a literal "# 2" instead of the number.
-- `tou-existing-user-spotlight-body` — `browser/browser/termsofuse.ftl` — Malformed closing tag `</a >` in `tou-existing-user-spotlight-body`
-    - Current: `Introducimos <a data-l10n-name="terms-of-use">Términos de uso</a> y actualizamos nuestra <a data-l10n-name="privacy-notice">Nota de privacidad</a >.<br><br> Tómese un momento para revisar y aceptar. <a data-l10n-name="l…`
-    - Source: `We’ve introduced a <a data-l10n-name="terms-of-use">Terms of Use</a> and updated our <a data-l10n-name="privacy-notice">Privacy Notice</a>.<br><br> Please take a moment to review and accept. <a data-l10n-name="learn-mor…`
-    - Suggest: `We’ve introduced a <a data-l10n-name="terms-of-use">Terms of Use</a> and updated our <a data-l10n-name="privacy-notice">Privacy Notice</a>.<br><br> Please take a moment to review and accept. <a data-l10n-name="learn-mor…`
-    - Whitespace inside a closing tag makes it render as literal text.
 - `permission.open-protocol-handler.label` — `browser/chrome/browser/sitePermissions.properties` — "Open applications" rendered as an adjective phrase, contrary to the developer comment
     - Current: `Aplicaciones abiertas`
     - Source: `Open applications`
@@ -420,22 +400,27 @@ _Nothing reported._
     - Current: `G`
     - Source: `accesskey: S tooltiptext: Toggle style sheet visibility`
     - The label is “Alternar visibilidad de la hoja de estilo”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `inactive-css-not-grid-or-flex-or-absolutely-positioned-item-fix` — `devtools/client/tooltips.ftl` — Malformed closing tag `</strong >` in `inactive-css-not-grid-or-flex-or-absolutely-positioned-item-fix`
-    - Current: `Intente agregar <strong>position:absolute</strong> al elemento, o <strong>display:grid</strong>, <strong>display:flex</strong>, <strong>display:inline-grid</strong > o <strong>display:inline-flex</strong> al padre del e…`
-    - Source: `Try adding <strong>position:absolute</strong> to the element, or <strong>display:grid</strong>, <strong>display:flex</strong>, <strong>display:inline-grid</strong>, or <strong>display:inline-flex</strong> to the element…`
-    - Suggest: `Try adding <strong>position:absolute</strong> to the element, or <strong>display:grid</strong>, <strong>display:flex</strong>, <strong>display:inline-grid</strong>, or <strong>display:inline-flex</strong> to the element…`
-    - Whitespace inside a closing tag makes it render as literal text.
-- `inactive-css-not-grid-or-flex-or-absolutely-positioned-item-fix-1` — `devtools/client/tooltips.ftl` — Malformed closing tag `</strong >` in `inactive-css-not-grid-or-flex-or-absolutely-positioned-item-fix-1`
-    - Current: `Intente agregar <strong>position:absolute</strong> al elemento, o <strong>display:grid</strong>, <strong>display:flex</strong>, <strong>display:inline-grid</strong > o <strong>display:inline-flex</strong> al padre del e…`
-    - Source: `Try adding <strong>position:absolute</strong> to the element, or <strong>display:grid</strong>, <strong>display:flex</strong>, <strong>display:inline-grid</strong>, or <strong>display:inline-flex</strong> to the element…`
-    - Suggest: `Try adding <strong>position:absolute</strong> to the element, or <strong>display:grid</strong>, <strong>display:flex</strong>, <strong>display:inline-grid</strong>, or <strong>display:inline-flex</strong> to the element…`
-    - Whitespace inside a closing tag makes it render as literal text.
 - `parentProcessBrowserConsole.title` — `devtools/client/webconsole.properties` — Browser Console window title says “Caja de herramientas” (Toolbox)
     - Current: `Caja de herramientas del navegador del proceso principal`
     - Source: `Parent process Browser Console`
     - Suggest: `Consola del navegador del proceso principal`
     - en-US: “Parent process Browser Console”. The window is the Browser Console, not the Browser Toolbox; multiProcessBrowserConsole.title in the same file correctly uses “Consola”.
-- _…and 60 more; see `state/` for the full list._
+- `whypaused-exception` — `devtools/shared/debugger-paused-reasons.ftl` — Pause reason uses the infinitive “Pausar” instead of the state “Pausado”
+    - Current: `Pausar en excepción`
+    - Source: `Paused on exception`
+    - Suggest: `Pausado en excepción`
+    - en-US “Paused on exception” describes the current state, like every other whypaused-* string in the file (“Pausado en…”); the infinitive reads as a command/setting.
+- `webconsole.input.selector.top` — `devtools/shared/webconsole.properties` — Thread selector “Top” translated as a spatial position
+    - Current: `Parte superior`
+    - Source: `Top`
+    - Suggest: `Top`
+    - The developer comment states this is “the term used to describe the primary thread of execution in the page”; “Parte superior” renders it as “upper part”, losing the meaning in the evaluation-context selector.
+- `gridcell` — `dom/chrome/accessibility/AccessFu.properties` — ARIA role “gridcell” announced as “cuadrícula” (grid).
+    - Current: `gridcell = cuadrícula`
+    - Source: `gridcell`
+    - Suggest: `gridcell = celda de cuadrícula`
+    - The role is the cell of a grid, not the grid itself; screen-reader users would hear the container role instead of the cell role.
+- _…and 57 more; see `state/` for the full list._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -1137,11 +1122,11 @@ _Nothing reported._
 - `noDomMutationBreakpoints` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints` uses three dots where this locale uses …
     - Current: `Haga clic derecho en un elemento en el %S y seleccione “Romper en...” para agregar un punto de interrupción`
     - Source: `Right click an element in the %S and select “Break on…” to add a breakpoint`
-    - The tree uses … 459 times against 2 ASCII runs.
+    - The tree uses … 462 times against 2 ASCII runs.
 - `ImageMapPolyWrongNumberOfCoords` — `dom/chrome/layout/layout_errors.properties` — `ImageMapPolyWrongNumberOfCoords` uses three dots where this locale uses …
     - Current: `El atributo "coords" del tag <area shape="poly"> no tiene el formato "x1,y1,x2,y2 ...".`
     - Source: `The “coords” attribute of the <area shape="poly"> tag is not in the “x1,y1,x2,y2 …” format.`
-    - The tree uses … 459 times against 2 ASCII runs.
+    - The tree uses … 462 times against 2 ASCII runs.
 - `newTabControlled.message2` — `toolkit/chrome/global/extensions.properties` — Tuteo "ves" among usted forms
     - Current: `cambió la página que ves cuando se abre una nueva pestaña`
     - Source: `An extension, %S, changed the page you see when you open a new tab.`
@@ -1228,8 +1213,11 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (139)
+### Fixed to date (142)
 
+- `tou-existing-user-spotlight-body` — `browser/browser/termsofuse.ftl` — fixed 2026-09-01
+- `inactive-css-not-grid-or-flex-or-absolutely-positioned-item-fix` — `devtools/client/tooltips.ftl` — fixed 2026-09-01
+- `inactive-css-not-grid-or-flex-or-absolutely-positioned-item-fix-1` — `devtools/client/tooltips.ftl` — fixed 2026-09-01
 - `share-panel-missing-device` — `browser/browser/sharePanel.ftl` — fixed 2026-08-31
 - `appmenu-nova-switch-device-promo` — `browser/browser/appmenu.ftl` — fixed 2026-08-27
 - `genai-prompts-quiz` — `browser/browser/genai.ftl` — fixed 2026-08-27
@@ -1267,6 +1255,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `ipprotection-locations-unavailable-label-1` — `browser/browser/ipProtection.ftl` — fixed 2026-08-25
 - `unauthenticated-private-location-message` — `browser/browser/ipProtection.ftl` — fixed 2026-08-25
 - `annotations-default-pdf-handler-body` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-25
-- `firefoxview-spotlight-promo-primarybutton` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-25
-- `mr2022-background-update-toast-title` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-25
-- `welcome-back-spotlight-subtitle` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-25

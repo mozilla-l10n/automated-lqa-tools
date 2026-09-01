@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-31 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `38d706ee4004` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
+| **Previous run** | 2026-08-31 @ `67b14d26eb36` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 9 of 18,174 |
+| **Strings reviewed this run** | 0 of 18,174 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for fy-NL: [android](android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `printui-orientation-control` — `toolkit/toolkit/printing/printUI.ftl` — Misspelling of the Frisian word for "Orientation".
-    - Current: `Oriïntaasje`
-    - Source: `aria-label: Orientation`
-    - Suggest: `Oriëntaasje`
-    - The Frisian/Dutch-style spelling uses a diaeresis on the e (Oriëntaasje); "Oriïntaasje" is a spelling error.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

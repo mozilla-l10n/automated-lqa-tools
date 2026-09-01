@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-31 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `38d706ee4004` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
+| **Previous run** | 2026-08-31 @ `67b14d26eb36` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 61 of 18,213 |
+| **Strings reviewed this run** | 3 of 18,213 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,27 +18,32 @@ Also for hu: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `about-sync-log-title` — `toolkit/services/aboutSyncLog.ftl` — "Sync logs" (noun phrase) rendered as "Naplók szinkronizálása" ("Synchronizing logs"), an action rather than the logs of Sync.
-    - Current: `Naplók szinkronizálása`
-    - Source: `Sync logs`
-    - Suggest: `Szinkronizálási naplók`
-    - The en-US is a noun phrase naming the logs written by Sync (see about-sync-log-page-header description); the Hungarian turns it into a verbal phrase meaning "syncing the logs".
-- `about-sync-log-page-header` — `toolkit/services/aboutSyncLog.ftl` — Heading "Sync logs" rendered as "Naplók szinkronizálása" ("Synchronizing logs").
-    - Current: `heading: Naplók szinkronizálása`
-    - Source: `description: Diagnostic logs written by sync. heading: Sync logs`
-    - Suggest: `heading: Szinkronizálási naplók`
-    - "Sync logs" names logs written by Sync (per the same string's description), not the act of synchronizing logs; also inconsistent with "szinkronizálási naplók" used in about-sync-log-empty.
-- `inspector-emulation-panel-reduced-motion-no-preference` — `devtools/client/inspector.ftl` — The aria-label reverses the meaning: "Enable no preference for reduced motion emulation" is rendered as "turn off" the setting.
-    - Current: `aria-label: A mozgáscsökkentés-emuláció beállításának kikapcsolása`
-    - Source: `(value): No preference aria-label: Enable no preference for reduced motion emulation`
-    - Suggest: `aria-label: A „nincs beállítva” mozgáscsökkentés-emuláció engedélyezése`
-    - The en-US enables the "no preference" option of the reduced-motion emulation; the Hungarian says the setting is being disabled (kikapcsolása), which is the opposite action.
+_No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (4)
 
-_Nothing was fixed._
+- `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — Malformed closing tag `</a >` in `genai-settings-chat-gemini-links`
+    - Current: `A Google Gemini választásával elfogadja a <a data-l10n-name="link1">Google szolgáltatási feltételeit</a>, a <a data-l10n-name="link2">Generatív MI tiltott használatára vonatkozó irányelveket</a > és a <a data-l10n-name=…`
+    - Source: `By choosing Google Gemini, you agree to the <a data-l10n-name="link1">Google Terms of Service</a>, <a data-l10n-name="link2">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name="link3">Gemini Apps Privacy Not…`
+    - Suggest: `By choosing Google Gemini, you agree to the <a data-l10n-name="link1">Google Terms of Service</a>, <a data-l10n-name="link2">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name="link3">Gemini Apps Privacy Not…`
+    - Whitespace inside a closing tag makes it render as literal text.
+- `onboarding-new-user-survey-legal-link-label` — `browser/browser/newtab/onboarding.ftl` — Malformed closing tag `</a >` in `onboarding-new-user-survey-legal-link-label`
+    - Current: `A „{ onboarding-new-user-survey-next-button-label }” kiválasztásával elfogadja a { -brand-product-name } <a data-l10n-name="privacy_notice">Adatvédelmi nyilatkozatát</a >`
+    - Source: `By selecting “{ onboarding-new-user-survey-next-button-label },” you agree to { -brand-product-name }’s <a data-l10n-name="privacy_notice">Privacy Notice</a>`
+    - Suggest: `By selecting “{ onboarding-new-user-survey-next-button-label },” you agree to { -brand-product-name }’s <a data-l10n-name="privacy_notice">Privacy Notice</a>`
+    - Whitespace inside a closing tag makes it render as literal text.
+- `tou-existing-user-spotlight-body` — `browser/browser/termsofuse.ftl` — Malformed closing tag `</a >` in `tou-existing-user-spotlight-body`
+    - Current: `Bevezettük a <a data-l10n-name="terms-of-use">Használati feltételeket</a> és frissítettük az <a data-l10n-name="privacy-notice">Adatvédelmi nyilatkozatunkat</a >.<br><br> Szánjon egy percet az ellenőrzésére és elfogadás…`
+    - Source: `We’ve introduced a <a data-l10n-name="terms-of-use">Terms of Use</a> and updated our <a data-l10n-name="privacy-notice">Privacy Notice</a>.<br><br> Please take a moment to review and accept. <a data-l10n-name="learn-mor…`
+    - Suggest: `We’ve introduced a <a data-l10n-name="terms-of-use">Terms of Use</a> and updated our <a data-l10n-name="privacy-notice">Privacy Notice</a>.<br><br> Please take a moment to review and accept. <a data-l10n-name="learn-mor…`
+    - Whitespace inside a closing tag makes it render as literal text.
+- `tou-existing-user-spotlight-body` — `browser/browser/termsofuse.ftl` — “Terms of Use” rendered “Használati feltételek” here but “Felhasználási feltételek” in the sibling strings of the same feature.
+    - Current: `Használati feltételeket`
+    - Source: `We’ve introduced a <a data-l10n-name="terms-of-use">Terms of Use</a> and updated our <a data-l10n-name="privacy-notice">Privacy Notice</a>.<br><br> Please take a moment to review and accept. <a data-l10n-name="learn-mor…`
+    - Suggest: `Felhasználási feltételeket`
+    - existing-user-tou-message and preonboarding.ftl consistently use “Felhasználási feltételek” for the same legal document, so the differing term in this Spotlight body is an inconsistency.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -72,7 +77,7 @@ _Nothing retired._
 | Text quoting a UI label that no longer matches | 3 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 1 |
-| Markup & `data-l10n-name` defects | 3 |
+| Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 11 |
 
 ### Completeness
@@ -105,13 +110,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (280)
+## 3. Open findings (276)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 34 |
-| 2 | Wrong content (says something other than the English) | 123 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 31 |
+| 2 | Wrong content (says something other than the English) | 122 |
 | 3 | Degraded language (grammar, spelling, terminology) | 89 |
 | 4 | Cosmetic (typography, spacing) | 29 |
 
@@ -186,11 +191,6 @@ _Nothing reported._
     - Source: `placeholder: Search history`
     - Suggest: `Előzmények keresése`
     - The developer comment marks “search” as a verb, and all sibling placeholders in the same file use the “X keresése” pattern.
-- `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — Malformed closing tag `</a >` in `genai-settings-chat-gemini-links`
-    - Current: `A Google Gemini választásával elfogadja a <a data-l10n-name="link1">Google szolgáltatási feltételeit</a>, a <a data-l10n-name="link2">Generatív MI tiltott használatára vonatkozó irányelveket</a > és a <a data-l10n-name=…`
-    - Source: `By choosing Google Gemini, you agree to the <a data-l10n-name="link1">Google Terms of Service</a>, <a data-l10n-name="link2">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name="link3">Gemini Apps Privacy Not…`
-    - Suggest: `By choosing Google Gemini, you agree to the <a data-l10n-name="link1">Google Terms of Service</a>, <a data-l10n-name="link2">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name="link3">Gemini Apps Privacy Not…`
-    - Whitespace inside a closing tag makes it render as literal text.
 - `menu-help-exit-troubleshoot-mode` — `browser/browser/menubar.ftl` — Reversed meaning: the item that turns Troubleshoot Mode off is labelled as turning it on.
     - Current: `Hibakeresési mód bekapcsolása`
     - Source: `accesskey: M label: Turn Troubleshoot Mode Off`
@@ -251,11 +251,6 @@ _Nothing reported._
     - Source: `title: Innovator (orange)`
     - Suggest: `Újító (narancs)`
     - mr2022-onboarding-colorway-label-innovator and -description-innovator both use "újító", so the tooltip names a different colorway than the swatch it describes.
-- `onboarding-new-user-survey-legal-link-label` — `browser/browser/newtab/onboarding.ftl` — Malformed closing tag `</a >` in `onboarding-new-user-survey-legal-link-label`
-    - Current: `A „{ onboarding-new-user-survey-next-button-label }” kiválasztásával elfogadja a { -brand-product-name } <a data-l10n-name="privacy_notice">Adatvédelmi nyilatkozatát</a >`
-    - Source: `By selecting “{ onboarding-new-user-survey-next-button-label },” you agree to { -brand-product-name }’s <a data-l10n-name="privacy_notice">Privacy Notice</a>`
-    - Suggest: `By selecting “{ onboarding-new-user-survey-next-button-label },” you agree to { -brand-product-name }’s <a data-l10n-name="privacy_notice">Privacy Notice</a>`
-    - Whitespace inside a closing tag makes it render as literal text.
 - `blocklist-treehead-list` — `browser/browser/preferences/blocklists.ftl` — Column header "List" rendered as the action noun "Listing".
     - Current: `Listázás`
     - Source: `label: List`
@@ -296,11 +291,6 @@ _Nothing reported._
     - Source: `Confirm before quitting with { $quitKey }`
     - Suggest: `Megerősítés a { $quitKey } billentyűvel történő kilépés előtt`
     - en-US “Confirm before quitting with { $quitKey }”. The -ból ablative reads as quitting out of the key; the parallel string tabbrowser-ask-close-tabs-with-key-checkbox uses the correct “billentyűvel”.
-- `tou-existing-user-spotlight-body` — `browser/browser/termsofuse.ftl` — Malformed closing tag `</a >` in `tou-existing-user-spotlight-body`
-    - Current: `Bevezettük a <a data-l10n-name="terms-of-use">Használati feltételeket</a> és frissítettük az <a data-l10n-name="privacy-notice">Adatvédelmi nyilatkozatunkat</a >.<br><br> Szánjon egy percet az ellenőrzésére és elfogadás…`
-    - Source: `We’ve introduced a <a data-l10n-name="terms-of-use">Terms of Use</a> and updated our <a data-l10n-name="privacy-notice">Privacy Notice</a>.<br><br> Please take a moment to review and accept. <a data-l10n-name="learn-mor…`
-    - Suggest: `We’ve introduced a <a data-l10n-name="terms-of-use">Terms of Use</a> and updated our <a data-l10n-name="privacy-notice">Privacy Notice</a>.<br><br> Please take a moment to review and accept. <a data-l10n-name="learn-mor…`
-    - Whitespace inside a closing tag makes it render as literal text.
 - `text-recognition-modal-searching-title` — `browser/browser/textRecognition.ftl` — Subject and object are swapped: says “searching for an image by text” instead of “searching the image for text”.
     - Current: `Kép keresése szöveg alapján…`
     - Source: `Searching image for text…`
@@ -416,7 +406,22 @@ _Nothing reported._
     - Source: `Show %S frames`
     - Suggest: `callStack.group.expandTooltip = %S keretek megjelenítése`
     - These are stack frames in the Call Stack pane; the neighbouring string callStack.group.collapseTooltipWithSelectedFrame correctly uses "keret".
-- _…and 56 more; see `state/` for the full list._
+- `outline.placeholder.functions` — `devtools/client/debugger.properties` — "Filter functions" (verb + object) read as a compound noun "filter functions".
+    - Current: `outline.placeholder.functions = Szűrőfüggvények`
+    - Source: `Filter functions`
+    - Suggest: `outline.placeholder.functions = Függvények szűrése`
+    - This is the placeholder of a filter input; "Szűrőfüggvények" names functions that do filtering. The sibling key outline.placeholder.atRules correctly uses "@-szabályok szűrése". The same wrong value is also in outline.placeholder.
+- `inspector.eyedropper.label` — `devtools/client/inspector.properties` — "Grab a color from the page" rendered as "Save a color from the page".
+    - Current: `inspector.eyedropper.label = Szín mentése az oldalról`
+    - Source: `Grab a color from the page`
+    - Suggest: `inspector.eyedropper.label = Szín kiválasztása az oldalról`
+    - The eyedropper picks a color, it does not save one; the variant inspector.eyedropper.label2 of the same English string uses "Szín kiválasztása az oldalról".
+- `layout.displayLineNumbers` — `devtools/client/layout.properties` — Grid "line numbers" rendered as "number of lines".
+    - Current: `layout.displayLineNumbers = Sorok számának megjelenítése`
+    - Source: `Display line numbers`
+    - Suggest: `layout.displayLineNumbers = Vonalszámok megjelenítése`
+    - The option displays the numbers of the CSS grid lines in the overlay, not a count of rows; "Sorok száma" means how many rows there are.
+- _…and 53 more; see `state/` for the full list._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -563,11 +568,6 @@ _Nothing reported._
     - Source: `value: Address:`
     - Suggest: `Webcím:`
     - general-title (“Title:”) is also “Cím:”. Elsewhere in the tree “URL/Address” is consistently “Webcím” (e.g. placesPrompts.ftl, reportBrokenSite.ftl), so the address row should use “Webcím:”.
-- `tou-existing-user-spotlight-body` — `browser/browser/termsofuse.ftl` — “Terms of Use” rendered “Használati feltételek” here but “Felhasználási feltételek” in the sibling strings of the same feature.
-    - Current: `Használati feltételeket`
-    - Source: `We’ve introduced a <a data-l10n-name="terms-of-use">Terms of Use</a> and updated our <a data-l10n-name="privacy-notice">Privacy Notice</a>.<br><br> Please take a moment to review and accept. <a data-l10n-name="learn-mor…`
-    - Suggest: `Felhasználási feltételeket`
-    - existing-user-tou-message and preonboarding.ftl consistently use “Felhasználási feltételek” for the same legal document, so the differing term in this Spotlight body is an inconsistency.
 - `maxTimersExceeded` — `devtools/client/webconsole.properties` — console.time() timers called "óra" (clock) while every neighbouring string uses "időzítő".
     - Current: `maxTimersExceeded = Ezen az oldalon nem indítható el több óra.`
     - Source: `The maximum allowed number of timers in this page was exceeded.`
@@ -1130,6 +1130,9 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (4)
 
-_Nothing fixed yet._
+- `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — fixed 2026-09-01
+- `onboarding-new-user-survey-legal-link-label` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-09-01
+- `tou-existing-user-spotlight-body` — `browser/browser/termsofuse.ftl` — fixed 2026-09-01
+- `tou-existing-user-spotlight-body` — `browser/browser/termsofuse.ftl` — fixed 2026-09-01

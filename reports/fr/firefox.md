@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-31 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `67b14d26eb36` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `38d706ee4004` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-08-27 @ `caafd8e1597e` |
+| **Previous run** | 2026-08-31 @ `67b14d26eb36` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 29 of 18,406 |
+| **Strings reviewed this run** | 1 of 18,406 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,41 +18,21 @@ Also for fr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (1)
 
-- `about-sync-log-count` — `toolkit/services/aboutSyncLog.ftl` — "log"/"logs" translated as "entrée(s)" (entries) instead of "journal/journaux", inconsistent with the rest of the file.
-    - Current: `[one] { $count } entrée [other] { $count } entrées`
-    - Source: `{$count ->} [one] { $count } log [other] { $count } logs`
-    - Suggest: `[one] { $count } journal [other] { $count } journaux`
-    - The en-US counts logs (files), and the surrounding strings render "logs" as "journaux"; "entrées" means log entries, a different unit.
-- `preferences-ai-controls-sidebar-chatbot-group-3` — `browser/browser/preferences/preferences.ftl` — "Keep a chatbot in view" rendered as "Gardez un œil sur un chatbot" (keep an eye on a chatbot), reversing who watches whom.
-    - Current: `Gardez un œil sur un chatbot pendant votre navigation.`
-    - Source: `description: Keep a chatbot in view as you browse. Choose from multiple providers and switch anytime. label: AI chatbot providers in sidebar`
-    - Suggest: `Gardez un chatbot sous les yeux pendant votre navigation.`
-    - The en-US means the chatbot stays visible while browsing, not that the user should monitor the chatbot.
-- `tls-key-logging-notice-nav` — `browser/browser/preferences/preferences.ftl` — "may see your encrypted traffic" translated as "pourrait accéder à" (could access), altering the claim.
-    - Current: `pourrait accéder à votre trafic chiffré`
-    - Source: `label: An app or service may see your encrypted traffic.`
-    - Suggest: `pourrait voir votre trafic chiffré`
-    - en-US says an app or service may see the traffic; "accéder à" asserts access rather than visibility.
+- `about-networking-ssl-tokens-summary-compression` — `toolkit/toolkit/about/aboutNetworking.ftl` — The plural selector syntax is malformed: the selector expression is closed immediately with `->}`, so the variants are rendered as literal text instead of a select expression.
+    - Current: `{$saved ->} [one] { $decompressedLength } → { $compressedLength } o ({ $saved } % économisé) [other] { $decompressedLength } → { $compressedLength } o ({ $saved } % économisés)`
+    - Source: `{ $decompressedLength } → { $compressedLength } B ({ $saved }% saved)`
+    - Suggest: `{ $saved ->     [one] { $decompressedLength } → { $compressedLength } o ({ $saved } % économisé)    *[other] { $decompressedLength } → { $compressedLength } o ({ $saved } % économisés)  }`
+    - A Fluent select expression must contain its variants inside the braces and have a default variant marked with `*`; as written the string outputs the raw variant markers, breaking the displayed value.
 
-### ✅ Fixed since the last run (3)
+### ✅ Fixed since the last run (1)
 
-- `about-sync-log-count` — `toolkit/services/aboutSyncLog.ftl` — Singular plural variant reads "{ $count } de journal" instead of "{ $count } journal".
-    - Current: `[one] { $count } de journal`
-    - Source: `{$count ->} [one] { $count } log [other] { $count } logs`
-    - Suggest: `[one] { $count } journal`
-    - en-US is "{ $count } log"; the inserted "de" is ungrammatical in French ("1 de journal").
-- `about-sync-log-filter-date-all` — `toolkit/services/aboutSyncLog.ftl` — "All time" rendered as "Toujours" (always) instead of a time-range label.
-    - Current: `label: Toujours`
-    - Source: `label: All time`
-    - Suggest: `label: Tout l’historique`
-    - This is a date-range filter option meaning the entire period; "Toujours" means "always" and does not convey the range.
-- `pdfjs-embed-fallback-open-button` — `toolkit/toolkit/pdfviewer/embedFallback.ftl` — "Open PDF" translated as "Ouvrir un PDF" (open some/a PDF) instead of opening this specific PDF.
-    - Current: `Ouvrir un PDF`
-    - Source: `Open PDF`
-    - Suggest: `Ouvrir le PDF`
-    - The button opens the PDF that can’t be displayed in the embed; the indefinite article suggests a file picker for any PDF.
+- `about-networking-ssl-tokens-summary-compression` — `toolkit/toolkit/about/aboutNetworking.ftl` — `about-networking-ssl-tokens-summary-compression` references ['total'], which en-US does not pass
+    - Current: `{$total ->} [one] { $decompressedLength } → { $compressedLength } o ({ $saved } % économisé) [other] { $decompressedLength } → { $compressedLength } o ({ $saved } % économisés)`
+    - Source: `{ $decompressedLength } → { $compressedLength } B ({ $saved }% saved)`
+    - Suggest: `{ $decompressedLength } → { $compressedLength } B ({ $saved }% saved)`
+    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -80,7 +60,7 @@ _Nothing retired._
 | Files with no en-US counterpart | 10 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
-| Variable & placeholder mismatches | 1 |
+| Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 0 |
@@ -145,11 +125,11 @@ _Nothing reported._
     - Current: `B`
     - Source: `accesskey: B aria-label: Bookmarks toolbarname: Bookmarks Toolbar`
     - The label is “Marque-pages”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `about-networking-ssl-tokens-summary-compression` — `toolkit/toolkit/about/aboutNetworking.ftl` — `about-networking-ssl-tokens-summary-compression` references ['total'], which en-US does not pass
-    - Current: `{$total ->} [one] { $decompressedLength } → { $compressedLength } o ({ $saved } % économisé) [other] { $decompressedLength } → { $compressedLength } o ({ $saved } % économisés)`
+- `about-networking-ssl-tokens-summary-compression` — `toolkit/toolkit/about/aboutNetworking.ftl` — The plural selector syntax is malformed: the selector expression is closed immediately with `->}`, so the variants are rendered as literal text instead of a select expression.
+    - Current: `{$saved ->} [one] { $decompressedLength } → { $compressedLength } o ({ $saved } % économisé) [other] { $decompressedLength } → { $compressedLength } o ({ $saved } % économisés)`
     - Source: `{ $decompressedLength } → { $compressedLength } B ({ $saved }% saved)`
-    - Suggest: `{ $decompressedLength } → { $compressedLength } B ({ $saved }% saved)`
-    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
+    - Suggest: `{ $saved ->     [one] { $decompressedLength } → { $compressedLength } o ({ $saved } % économisé)    *[other] { $decompressedLength } → { $compressedLength } o ({ $saved } % économisés)  }`
+    - A Fluent select expression must contain its variants inside the braces and have a default variant marked with `*`; as written the string outputs the raw variant markers, breaking the displayed value.
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -239,8 +219,9 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (58)
+### Fixed to date (59)
 
+- `about-networking-ssl-tokens-summary-compression` — `toolkit/toolkit/about/aboutNetworking.ftl` — fixed 2026-09-01
 - `about-sync-log-count` — `toolkit/services/aboutSyncLog.ftl` — fixed 2026-08-31
 - `about-sync-log-filter-date-all` — `toolkit/services/aboutSyncLog.ftl` — fixed 2026-08-31
 - `pdfjs-embed-fallback-open-button` — `toolkit/toolkit/pdfviewer/embedFallback.ftl` — fixed 2026-08-31
@@ -280,4 +261,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `network-menu-summary-tooltip-domcontentloaded` — `devtools/client/netmonitor.ftl` — fixed 2026-07-26
 - `inactive-css-not-block` — `devtools/client/tooltips.ftl` — fixed 2026-07-26
 - `xslt-transform-error` — `dom/dom/xslt.ftl` — fixed 2026-07-26
-- `pk11-bad-password` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-07-26
