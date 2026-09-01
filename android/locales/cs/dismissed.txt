@@ -15,3 +15,6 @@
 # recurring across strings -- a house convention, a term that is correct
 # everywhere -- write a rule in suppressions.yaml instead, or better, a
 # sentence in conventions.md so the reviewer never raises it.
+
+recently_closed_tab — the en-US `%d tab` is hardcoded singular; Czech "Jeden panel" spells the one out instead of passing it, which reads better here
+create_collection_save_to_collection_tab_selected — same: the source's `%d tab selected` is the singular of a pair, and "Vybrán jeden panel" says one without the placeholder

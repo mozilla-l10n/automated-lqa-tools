@@ -15,3 +15,6 @@
 # recurring across strings -- a house convention, a term that is correct
 # everywhere -- write a rule in suppressions.yaml instead, or better, a
 # sentence in conventions.md so the reviewer never raises it.
+
+aiwindow-feedback-disclaimer — acceptable: "pomoże ulepszyć" carries the submission and its purpose well enough in Polish
+aiwindow-firstrun-memories-privacy-title — acceptable: "Domyślnie prywatne" is the agreed Polish rendering of "Private by design"
