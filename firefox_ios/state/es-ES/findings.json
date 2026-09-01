@@ -314,6 +314,30 @@
  {
   "category": "B",
   "check": "llm",
+  "current": "cuando Google está activado en la parte superior",
+  "dismissed_because": "",
+  "fid": "5abb8f14f78f",
+  "file": "Shared/Supporting Files/en.lproj/Settings.strings",
+  "first_seen": "2026-09-01",
+  "impact": 2,
+  "last_seen": "2026-09-01",
+  "locale": "es-ES",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source means Google is enabled in the setting above this one, not that it is 'activated at the top' of something.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "38e4a7ec",
+  "string_id": "Settings.Search.GoogleLens.Footnote.v153",
+  "suggest": "cuando Google está activado más arriba",
+  "summary": "\"enabled above\" mistranslated as \"activado en la parte superior\" (activated at the top).",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
   "current": "haz clic en Resumir",
   "dismissed_because": "",
   "fid": "d5a128a096b4",
@@ -333,6 +357,54 @@
   "string_id": "Summarizer.Error.MissingPageContent.Message.v142",
   "suggest": "toca Resumir",
   "summary": "\"hit summarize\" is rendered as \"haz clic en Resumir\" (click), which is wrong on a touch-only iOS device.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "Configuración de protección contra el rastreo mejorada para este sitio",
+  "dismissed_because": "",
+  "fid": "6c77936bb756",
+  "file": "Shared/Supporting Files/en.lproj/WebCompatReporter.strings",
+  "first_seen": "2026-09-01",
+  "impact": 3,
+  "last_seen": "2026-09-01",
+  "locale": "es-ES",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "\"mejorada\" can be read as agreeing with \"Configuración\", making it \"enhanced setting\" rather than \"Enhanced Tracking Protection\"; the established Firefox term is \"Protección antirrastreo mejorada\".",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "23642b9d",
+  "string_id": "WebCompatReporter.Preview.Data.TrackingProtectionSetting.v155",
+  "suggest": "Configuración de la protección antirrastreo mejorada para este sitio",
+  "summary": "Agreement error: \"mejorada\" modifies \"protección\" instead of forming the product term \"Protección contra el rastreo mejorada\" — as written it reads as 'enhanced setting'... actually the adjective is misplaced relative to \"Configuración\".",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "No hay video",
+  "dismissed_because": "",
+  "fid": "67ad0b495e62",
+  "file": "Shared/Supporting Files/en.lproj/WebCompatReporter.strings",
+  "first_seen": "2026-09-01",
+  "impact": 3,
+  "last_seen": "2026-09-01",
+  "locale": "es-ES",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "es-ES uses \"vídeo\"; the related string WebCompatReporter.SubOption.PlaybackFails uses \"El vídeo\", so this is inconsistent and incorrect for Spain.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "d1d8844d",
+  "string_id": "WebCompatReporter.SubOption.NoVideo.v154",
+  "suggest": "No hay vídeo",
+  "summary": "\"video\" is missing the accent used in es-ES and in the sibling string.",
   "suppressed_by": ""
  },
  {

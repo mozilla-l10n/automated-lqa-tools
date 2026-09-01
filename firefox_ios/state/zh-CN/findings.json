@@ -482,6 +482,30 @@
  {
   "category": "B",
   "check": "llm",
+  "current": "背景音乐",
+  "dismissed_because": "",
+  "fid": "a74a60b9c8e4",
+  "file": "Shared/Supporting Files/en.lproj/Settings.strings",
+  "first_seen": "2026-09-01",
+  "impact": 2,
+  "last_seen": "2026-09-01",
+  "locale": "zh-CN",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The setting keeps web page audio playing when the app is backgrounded; \"背景音乐\" means background music, not audio playback in the background.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "49675a88",
+  "string_id": "Settings.Browsing.BackgroundAudio.Title.v156",
+  "suggest": "后台音频",
+  "summary": "\"Background Audio\" is rendered as \"背景音乐\" (background music), which names the wrong feature.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
   "current": "使用技巧",
   "dismissed_because": "",
   "fid": "f90010144f7d",

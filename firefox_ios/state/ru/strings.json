@@ -365,6 +365,10 @@
   "CloseTab.ArrivingNotification.title.v133": "ba3680aa 5c5f7c74",
   "CloseTab.ViewAction.title.v133": "023a0bf9 51b02228"
  },
+ "Shared/Supporting Files/en.lproj/GoogleLens.strings": {
+  "GoogleLens.Interstitial.CancelButtonTitle.v156": "17485595 871d661d f5bd6a91",
+  "GoogleLens.Interstitial.LoadingLabel.v156": "61796a75 e1cb271c 3e2797c0"
+ },
  "Shared/Supporting Files/en.lproj/JumpBackIn.strings": {
   "ContextualHints.FirefoxHomepage.JumpBackIn.PersonalizedHome": "0d373a54 7bf57d6a",
   "ContextualHints.FirefoxHomepage.JumpBackIn.SyncedTab.v106": "8d4adee6 798a6f52"
@@ -579,16 +583,21 @@
   "NativeErrorPage.BadCertDomain.TitleLabel.v149": "418b04f5 a92ffa2e",
   "NativeErrorPage.BadCertDomain.ViewCertificateLink.v149": "e02e1c85 9ec6d727",
   "NativeErrorPage.ButtonLabel.v131": "4ed89584 5211deb2",
+  "NativeErrorPage.ButtonLabel.v155": "bcfbafda 58226c77 afc0702c",
   "NativeErrorPage.GenericError.Description.v134": "f015c765 fc3c9fa8",
   "NativeErrorPage.GenericError.TitleLabel.v131": "418b04f5 a92ffa2e",
   "NativeErrorPage.GoBackButton.v149": "6de107b7 18c0c0cf",
   "NativeErrorPage.NoInternetConnection.Description.v131": "757ed682 dd983918",
   "NativeErrorPage.NoInternetConnection.TitleLabel.v131": "e9430eba 8ec5a5c2",
+  "NativeErrorPage.Wayback.Error.Checking.v155": "d3a96385 0ba5e19d cf618b22",
+  "NativeErrorPage.Wayback.Error.CouldNotReach.v155": "fa83f051 eb361e1c 031d013d",
   "NativeErrorPage.Wayback.Error.Description.v154": "fdd67bf8 49bc7212",
   "NativeErrorPage.Wayback.Error.FooterDescription.v155": "981b0b97 e2556bb7",
   "NativeErrorPage.Wayback.Error.LinkText.v155": "e7d7e95a e7d7e95a",
+  "NativeErrorPage.Wayback.Error.NotFound.v155": "17ef1950 b050f278 40974124",
   "NativeErrorPage.Wayback.Error.Retry.v154": "a8d826f4 67f53444",
   "NativeErrorPage.Wayback.Error.Search.v155": "0e1d3b1f 50fdc79d",
+  "NativeErrorPage.Wayback.Error.SearchWayback.v155": "083b05bf 55e56d2c 4d9c8e7f",
   "NativeErrorPage.Wayback.Error.Title.v154": "254bef4c 09fe4418",
   "NativeErrorPage.Wayback.Error.WaybackButtonA11yHint.v154": "bbc7ce29 5c853c83"
  },
@@ -900,6 +909,7 @@
   "Settings.Browsing.AdBlocker.Description.v155": "f4f28e8d 7262855c",
   "Settings.Browsing.AdBlocker.LearnMore.v155": "f48f6286 d9b20450",
   "Settings.Browsing.AdBlocker.Title.v155": "f8df31f7 ef07e8df",
+  "Settings.Browsing.BackgroundAudio.Title.v156": "d97d5a5f 6278d19e af8f6ede",
   "Settings.Browsing.BlockAds.Title.v153": "5feff7e1 2aa7bbf1",
   "Settings.Browsing.Content.v153": "d812f8ad 6fcb7eb2",
   "Settings.Browsing.Links.v137": "01db4591 a0ba743c",
@@ -913,6 +923,7 @@
   "Settings.DailyUsagePing.Message.v135": "1deb9667 b9566ed2",
   "Settings.DailyUsagePing.Title.v135": "a158cb47 6f077d8c",
   "Settings.FxA.Title.v119": "bd6944b9 f38ba9ee",
+  "Settings.Home.Option.Wallpaper.WrexhamBrandTitle.v155": "67eef2a3 67eef2a3 ef2597bc",
   "Settings.Notifications.SyncNotificationsStatus.v112": "fd1bb56f 16de91cb",
   "Settings.Notifications.SyncNotificationsTitle.v112": "48accf08 3b108303",
   "Settings.Notifications.SystemNotificationsDisabledMessage.v112": "a8ae95f1 cc10fefb",
@@ -1163,6 +1174,7 @@
   "WebCompatReporter.Category.VideoOrAudio.v154": "50167562 6d872e60",
   "WebCompatReporter.Fields.DetailsAccessibilityLabel.v154": "bbd66aba 8ca4df18",
   "WebCompatReporter.Fields.DetailsPlaceholder.v154": "0ccc574a 34d53241",
+  "WebCompatReporter.Fields.URLError.v155": "f887186f 093d858c d6c318ef",
   "WebCompatReporter.Fields.URLLabel.v154": "c73efe84 c73efe84",
   "WebCompatReporter.Fields.URLPlaceholder.v154": "c73efe84 c73efe84",
   "WebCompatReporter.IssueSection.CategoryPlaceholder.v154": "38ab2997 56a75088",

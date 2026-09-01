@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-24 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `a2ecb0a822be` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `a2ecb0a822be` |
-| **Previous run** | 2026-08-22 @ `112744e9d020` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `117165baae4c` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `117165baae4c` |
+| **Previous run** | 2026-08-24 @ `a2ecb0a822be` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,835 |
+| **Strings reviewed this run** | 3 of 1,838 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for zh-CN: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `Settings.Browsing.BackgroundAudio.Title.v156` — `zh-CN/firefox-ios.xliff` — "Background Audio" is rendered as "背景音乐" (background music), which names the wrong feature.
+    - Current: `背景音乐`
+    - Source: `Background Audio`
+    - Suggest: `后台音频`
+    - The setting keeps web page audio playing when the app is backgrounded; "背景音乐" means background music, not audio playback in the background.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +48,12 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 93 |
-| Strings | 1,835 |
-| Missing strings | 75 |
+| Files | 94 |
+| Strings | 1,838 |
+| Missing strings | 80 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 2 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | printf placeholder mismatches | 0 |
@@ -58,14 +63,16 @@ _Nothing retired._
 
 ### Completeness
 
-**75 strings** are not translated yet, concentrated in:
+**80 strings** are not translated yet, concentrated in:
 
-- `Shared/Supporting Files/en.lproj/WebCompatReporter.strings` — 49
+- `Shared/Supporting Files/en.lproj/WebCompatReporter.strings` — 52
 - `zh-CN/firefox-ios.xliff` — 11
 - `Shared/Supporting Files/en.lproj/PrivacyDashboard.strings` — 7
 - `zh-CN/firefox-ios.xliff` — 3
 - `zh-CN/firefox-ios.xliff` — 2
 - `zh-CN/firefox-ios.xliff` — 2
+- `zh-CN/firefox-ios.xliff` — 1
+- `zh-CN/firefox-ios.xliff` — 1
 - `zh-CN/firefox-ios.xliff` — 1
 
 **Files absent from the locale:**
@@ -94,13 +101,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (57)
+## 3. Open findings (58)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 36 |
+| 2 | Wrong content (says something other than the English) | 37 |
 | 3 | Degraded language (grammar, spelling, terminology) | 12 |
 | 4 | Cosmetic (typography, spacing) | 9 |
 
@@ -175,6 +182,11 @@ _Nothing in this category._
     - Source: `Take Survey`
     - Suggest: `参与调查`
     - The source is a button that takes the user to a survey; the translation is just the noun "survey/questionnaire", losing the imperative action meaning.
+- `Settings.Browsing.BackgroundAudio.Title.v156` — `zh-CN/firefox-ios.xliff` — "Background Audio" is rendered as "背景音乐" (background music), which names the wrong feature.
+    - Current: `背景音乐`
+    - Source: `Background Audio`
+    - Suggest: `后台音频`
+    - The setting keeps web page audio playing when the app is backgrounded; "背景音乐" means background music, not audio playback in the background.
 - `Settings.Notifications.TipsAndFeaturesNotificationsTitle.v112` — `zh-CN/firefox-ios.xliff` — "Tips and Features" is translated as only "使用技巧", dropping "Features".
     - Current: `使用技巧`
     - Source: `Tips and Features`

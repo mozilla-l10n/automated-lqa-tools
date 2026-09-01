@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-08-25 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `4de01f1b366e` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `4de01f1b366e` |
-| **Previous run** | 2026-08-25 @ `edf993984c10` |
+| **Generated** | 2026-09-01 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `117165baae4c` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `117165baae4c` |
+| **Previous run** | 2026-08-25 @ `4de01f1b366e` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 8 of 1,912 |
+| **Strings reviewed this run** | 0 of 1,912 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,48 +22,9 @@ Also for en-CA: [android](android.md) · [firefox](firefox.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (8)
+### ✅ Fixed since the last run (0)
 
-- `MainMenu.SettingsSection.AccessibilityLabels.GetHelp.v132` — `en-CA/firefox-ios.xliff` — Accessibility label capitalization diverges from source and from the parallel labels in the same section.
-    - Current: `Get help`
-    - Source: `Get Help`
-    - Suggest: `Get Help`
-    - Source is "Get Help"; sibling accessibility labels (Customize Homepage, Settings, Bookmark Page) retain title case, so this lowercase form is an inconsistent, unmotivated change.
-- `MainMenu.SettingsSection.GetHelp.Title.v131` — `en-CA/firefox-ios.xliff` — Title case of the source menu item was changed to sentence case without any en-CA rule requiring it.
-    - Current: `Get help`
-    - Source: `Get Help`
-    - Suggest: `Get Help`
-    - en-US source is "Get Help" and other menu titles in this file (Customize Homepage, Bookmark Page, Sign In) keep title case; en-CA has no convention that lowercases menu item titles.
-- `Settings.CrashReports.Link.v136` — `en-CA/firefox-ios.xliff` — Link label changed from title case "Learn More" to "Learn more", departing from the source capitalization without any en-CA rule requiring it.
-    - Current: `Learn more`
-    - Source: `Learn More`
-    - Suggest: `Learn More`
-    - The en-US source is "Learn More"; en-CA has no capitalization convention that differs from en-US here, so the change is an unnecessary inconsistency.
-- `Settings.DailyUsagePing.Link.v136` — `en-CA/firefox-ios.xliff` — Link label changed from title case "Learn More" to "Learn more", departing from the source capitalization without any en-CA rule requiring it.
-    - Current: `Learn more`
-    - Source: `Learn More`
-    - Suggest: `Learn More`
-    - The en-US source is "Learn More"; en-CA capitalization matches en-US, so lowercasing is an unwarranted deviation.
-- `CreditCard.SnackBar.RemovedCardLabel.v112` — `en-CA/firefox-ios.xliff` — Capitalization changed from the source's title case, inconsistent with the sibling snackbar string that keeps title case.
-    - Current: `Card removed`
-    - Source: `Card Removed`
-    - Suggest: `Card Removed`
-    - en-CA differs from en-US only in spelling/vocabulary conventions, not capitalization; the parallel string CreditCard.SnackBar.UpdatedCardLabel.v122 retains 'Card Information Updated' in title case, so this is an inconsistent deviation.
-- `CreditCard.SnackBar.SavedCardLabel.v112` — `en-CA/firefox-ios.xliff` — Capitalization changed from the source's title case, inconsistent with the sibling snackbar string that keeps title case.
-    - Current: `New card saved`
-    - Source: `New Card Saved`
-    - Suggest: `New Card Saved`
-    - en-CA has no capitalization rule differing from en-US; the parallel string 'Card Information Updated' keeps title case, making this deviation inconsistent within the same file.
-- `HistoryPanel.RecentlyClosedTabsButton.Title` — `en-CA/firefox-ios.xliff` — Title case of the source button label was changed to sentence case with no en-CA rule requiring it, breaking consistency with other title-cased labels in the same panel.
-    - Current: `Recently closed`
-    - Source: `Recently Closed`
-    - Suggest: `Recently Closed`
-    - en-CA does not differ from en-US in capitalization conventions; surrounding History Panel and menu titles (e.g. "Delete from History", "Remove Bookmark", "Close All Inactive Tabs") retain the source title case.
-- `Log in` — `en-CA/firefox-ios.xliff` — "Log in" was changed to "Sign in" without any en-CA requirement, diverging from the source and from related login terminology in this file.
-    - Current: `Sign in`
-    - Source: `Log in`
-    - Suggest: `Log in`
-    - en-CA uses the same terminology as en-US here; the surrounding strings all use "Login"/"logins" (LoginsHelper.SaveLogin.Button, Logins), so changing the authentication prompt button to "Sign in" is an unnecessary and inconsistent vocabulary change.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -85,9 +46,10 @@ _Nothing retired._
 |---|---|
 | Files | 95 |
 | Strings | 1,912 |
-| Missing strings | 0 |
+| Missing strings | 6 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
+| Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | printf placeholder mismatches | 0 |
@@ -97,7 +59,18 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**6 strings** are not translated yet, concentrated in:
+
+- `Shared/Supporting Files/en.lproj/GoogleLens.strings` — 2
+- `en-CA/firefox-ios.xliff` — 2
+- `en-CA/firefox-ios.xliff` — 1
+- `en-CA/firefox-ios.xliff` — 1
+
+**Files absent from the locale:**
+
+- `Shared/Supporting Files/en.lproj/GoogleLens.strings`
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 

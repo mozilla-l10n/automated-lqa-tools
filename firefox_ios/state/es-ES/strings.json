@@ -1,6 +1,7 @@
 {
  "Client/en.lproj/InfoPlist.strings": {
   "App Icon": "17329032 fd81919f",
+  "NSCameraUsageDescription": "f6283be0 6b7e7596 1a9424cf",
   "NSFaceIDUsageDescription": "5cebcf8e 3e2459c7",
   "NSLocationWhenInUseUsageDescription": "f3134bec 5c84661f",
   "NSMicrophoneUsageDescription": "5efb951f 04e2df30",
@@ -19,6 +20,9 @@
  },
  "Shared/Supporting Files/en.lproj/AddressToolbar.strings": {
   "AddressToolbar.CancelEdit.Label.v138": "b2eb5e2b 871d661d",
+  "AddressToolbar.GoogleLens.A11yLabel.v153.v2": "e8c78dc2 3b79a4bf 4ccc2136",
+  "AddressToolbar.GoogleLens.ContextMenu.PhotoLibraryActionTitle.v153": "3368ce10 9ea3cb91 3d6e244f",
+  "AddressToolbar.GoogleLens.ContextMenu.TakePhotoActionTitle.v153": "3caae98b 8912d792 d981a332",
   "AddressToolbar.Location.A11y.Label.v128": "2f2e6d8e 4c86fc1f",
   "AddressToolbar.Location.Placeholder.v128": "2f2e6d8e 4c86fc1f",
   "AddressToolbar.PrivacyAndSecuriySettings.A11y.Label.v128": "c653f220 b44051ff",
@@ -116,7 +120,16 @@
   "Bookmarks.Menu.DeleteFolder.v131": "599b89f3 1d338959",
   "Bookmarks.Menu.DeletedBookmark.v131": "deb01d3e 2ab2a439",
   "Bookmarks.Menu.EditBookmark.v131": "2a5fa3ea f2c491c0",
+  "Bookmarks.Menu.EditBookmarkAllFoldersLabel.v154": "acb6b8b1 eebb691c ed2a0b53",
+  "Bookmarks.Menu.EditBookmarkChangeLocationLabel.v154": "c6fb48f4 2bdcded8 c1106ce7",
   "Bookmarks.Menu.EditBookmarkDesktopBookmarksLabel.v136": "d970a682 e205dc81",
+  "Bookmarks.Menu.EditBookmarkDesktopGroupLabel.v154": "d1ee0183 26e9ea7f 6ccb29c8",
+  "Bookmarks.Menu.EditBookmarkGroupCollapsedValue.v154": "8fb9ece2 0eabf24c 43490dce",
+  "Bookmarks.Menu.EditBookmarkGroupExpandedValue.v154": "69c6eee5 fcd3e1ef fd1c7f2e",
+  "Bookmarks.Menu.EditBookmarkLocationLabel.v154": "eabf9237 3d0aa4e0 464ae8c0",
+  "Bookmarks.Menu.EditBookmarkMobileBookmarksLabel.v154": "eb20b9e1 fd952fa2 77ce58a3",
+  "Bookmarks.Menu.EditBookmarkMobileGroupLabel.v154": "cde8f64d 16d6e3e5 2042cb60",
+  "Bookmarks.Menu.EditBookmarkParentFolderBreadcrumbFormat.v154": "2e79107a 2e79107a 388c0c04",
   "Bookmarks.Menu.EditBookmarkSave.v135": "da8dd9d2 effd3b79",
   "Bookmarks.Menu.EditBookmarkSaveIn.v131": "e04859c3 1048c912",
   "Bookmarks.Menu.EditBookmarkTitle.v131": "2a5fa3ea f2c491c0",
@@ -131,8 +144,13 @@
  "Shared/Supporting Files/en.lproj/BottomSheet.strings": {
   "Addresses.BottomSheet.UseSavedAddressBottomSheet.v124": "70bf934a a78ab860"
  },
+ "Shared/Supporting Files/en.lproj/Camera.strings": {
+  "CameraAccess.DisabledAlertMessage.v153": "41b1bb78 a6d5aa3e 22850307"
+ },
  "Shared/Supporting Files/en.lproj/ContextualHints.strings": {
   "ContextualHints.FeltDeletion.Body.v122": "004e4b08 bc9b006c",
+  "ContextualHints.Toolbar.GoogleLens.Description.v154": "7bb4e6b5 b34060de 9b20dd7d",
+  "ContextualHints.Toolbar.GoogleLens.Title.v154": "d84d57ad 8f769d06 de7355f5",
   "ContextualHints.Translations.Body.v145": "5388d5cb 98f2d06f",
   "ContextualHints.Translations.Title.v145": "7a25018d 7e00315a"
  },
@@ -322,7 +340,9 @@
   "FirefoxHomepage.Shortcuts.SectionTitle.v142": "4a605fe9 7bacfe4a",
   "FirefoxHomepage.Stories.AllStoryCategories.v151": "6bf9f168 fd088f04",
   "FirefoxHomepage.Stories.PositionAccessibilityHint.v143": "8bba481a 1fe9192d",
-  "FirefoxHomepage.TrackerBlocker.NoTrackersBlocked.v153": "8753c12d f18d7997"
+  "FirefoxHomepage.TrackerBlocker.NoTrackersBlocked.v153": "8753c12d f18d7997",
+  "FirefoxHomepage.TrackerBlocker.TrackersBlocked.v153b": "ee6a717b a69dac69 418fe1cd",
+  "FirefoxHomepage.TrackerBlocker.TrackersBlocked.v155": "ee6a717b a69dac69 418fe1cd"
  },
  "Shared/Supporting Files/en.lproj/FirefoxLogins.strings": {
   "LoginsHelper.PromptSaveLogin.Title.v122": "25a66cf3 3fa43852",
@@ -344,6 +364,10 @@
  "Shared/Supporting Files/en.lproj/FxANotification.strings": {
   "CloseTab.ArrivingNotification.title.v133": "8a334673 5c5f7c74",
   "CloseTab.ViewAction.title.v133": "099f0379 51b02228"
+ },
+ "Shared/Supporting Files/en.lproj/GoogleLens.strings": {
+  "GoogleLens.Interstitial.CancelButtonTitle.v156": "b2eb5e2b 871d661d f5bd6a91",
+  "GoogleLens.Interstitial.LoadingLabel.v156": "b1fe9e5e e1cb271c 3e2797c0"
  },
  "Shared/Supporting Files/en.lproj/JumpBackIn.strings": {
   "ContextualHints.FirefoxHomepage.JumpBackIn.PersonalizedHome": "bcf10d01 7bf57d6a",
@@ -387,6 +411,7 @@
   "MainMenu.Account.SignedOut.Description.v131": "16ac77ae c23621ae",
   "MainMenu.Account.SignedOut.Description.v141": "818618eb a457a43a",
   "MainMenu.Account.SignedOut.Title.v131": "6695d355 76e11355",
+  "MainMenu.Account.SigningOut.Title.v154": "b71e29e1 caa6192c 27c303de",
   "MainMenu.Account.SyncError.Description.v131": "b9a01b41 569343d7",
   "MainMenu.Account.SyncError.Title.v131": "b7adebea 6cffeaf4",
   "MainMenu.BookmarkPage.Title.v141": "6c1fa2ca 06171684",
@@ -489,6 +514,7 @@
   "MainMenu.ToolsSection.AccessibilityLabels.MoreOptions.v141": "31e89a30 8384698b",
   "MainMenu.ToolsSection.AccessibilityLabels.PageZoom.Title.v142": "12a2378f 0503dd8b",
   "MainMenu.ToolsSection.AccessibilityLabels.ReaderView.v150": "d9f33c7a 9dea0549",
+  "MainMenu.ToolsSection.AccessibilityLabels.ReportBrokenSite.v154": "63a56c76 5685dfba 7f42f79b",
   "MainMenu.ToolsSection.AccessibilityLabels.Save.v132": "da8dd9d2 effd3b79",
   "MainMenu.ToolsSection.AccessibilityLabels.Save.v133": "3770c4c0 cc33d589",
   "MainMenu.ToolsSection.AccessibilityLabels.SummarizePage.v142": "75905309 83de9990",
@@ -505,6 +531,7 @@
   "MainMenu.ToolsSection.ReaderView.Title.v149": "d9f33c7a 9dea0549",
   "MainMenu.ToolsSection.ReaderViewOff.Title.v150": "ec40191c 4c5ca662",
   "MainMenu.ToolsSection.ReaderViewOn.Title.v150": "44287496 201cd7a0",
+  "MainMenu.ToolsSection.ReportBrokenSite.Title.v154": "63a56c76 5685dfba 6d93f34e",
   "MainMenu.ToolsSection.SaveSubmenu.Title.v131": "da8dd9d2 effd3b79",
   "MainMenu.ToolsSection.SummarizePage.Title.v142": "75905309 83de9990",
   "MainMenu.ToolsSection.SwitchToDesktopSite.Title.v131": "ee06b71b d4571d06",
@@ -556,11 +583,23 @@
   "NativeErrorPage.BadCertDomain.TitleLabel.v149": "a334f911 a92ffa2e",
   "NativeErrorPage.BadCertDomain.ViewCertificateLink.v149": "9fc7cfb5 9ec6d727",
   "NativeErrorPage.ButtonLabel.v131": "a76c072d 5211deb2",
+  "NativeErrorPage.ButtonLabel.v155": "74f1c6f2 58226c77 afc0702c",
   "NativeErrorPage.GenericError.Description.v134": "f75487f4 fc3c9fa8",
   "NativeErrorPage.GenericError.TitleLabel.v131": "a334f911 a92ffa2e",
   "NativeErrorPage.GoBackButton.v149": "d8a6d568 18c0c0cf",
   "NativeErrorPage.NoInternetConnection.Description.v131": "112e4f72 dd983918",
-  "NativeErrorPage.NoInternetConnection.TitleLabel.v131": "eafa725f 8ec5a5c2"
+  "NativeErrorPage.NoInternetConnection.TitleLabel.v131": "eafa725f 8ec5a5c2",
+  "NativeErrorPage.Wayback.Error.Checking.v155": "2800ac8e 0ba5e19d cf618b22",
+  "NativeErrorPage.Wayback.Error.CouldNotReach.v155": "9e01bd0e eb361e1c 031d013d",
+  "NativeErrorPage.Wayback.Error.Description.v154": "db96d82f 49bc7212 d628fc04",
+  "NativeErrorPage.Wayback.Error.FooterDescription.v155": "d827428a e2556bb7 d2c43c96",
+  "NativeErrorPage.Wayback.Error.LinkText.v155": "e7d7e95a e7d7e95a 0272972b",
+  "NativeErrorPage.Wayback.Error.NotFound.v155": "facfa99f b050f278 40974124",
+  "NativeErrorPage.Wayback.Error.Retry.v154": "74f1c6f2 67f53444 77533a4c",
+  "NativeErrorPage.Wayback.Error.Search.v155": "1fbb3f2b 50fdc79d f60b10a8",
+  "NativeErrorPage.Wayback.Error.SearchWayback.v155": "156cbd25 55e56d2c 4d9c8e7f",
+  "NativeErrorPage.Wayback.Error.Title.v154": "50558962 09fe4418 225e49a3",
+  "NativeErrorPage.Wayback.Error.WaybackButtonA11yHint.v154": "72209710 5c853c83 41cb4c56"
  },
  "Shared/Supporting Files/en.lproj/Notification.strings": {
   "Notification.Fallback.Title.v113": "05d608b6 e38877e5"
@@ -743,6 +782,15 @@
   "PasswordGenerator.Title.v132": "27a5ce9f 31a1ea29",
   "PasswordGenerator.UsePasswordButtonLabel.v132": "1baee4d1 df85ca5c"
  },
+ "Shared/Supporting Files/en.lproj/PrivacyDashboard.strings": {
+  "PrivacyDashboard.CrossSiteTrackers.v155": "a56a06a4 32248996 bba76d7b",
+  "PrivacyDashboard.Fingerprinters.v155": "1933f53f 8283347a d2060217",
+  "PrivacyDashboard.HeaderLabel.v155": "1b8d7983 d5cc9c98 d1dfadf9",
+  "PrivacyDashboard.HeaderLabelForNoTrackersBlocked.v155": "c25e82f3 09d0f71b df677cf2",
+  "PrivacyDashboard.SocialTrackers.v155": "4a8647aa 877f5062 0beca71c",
+  "PrivacyDashboard.TotalTrackersBlockedSince.v155": "fcbdb49a 89a8fb98 2a4d8438",
+  "PrivacyDashboard.TrackingContent.v155": "0630dee4 c3b6b0aa 1fc241e4"
+ },
  "Shared/Supporting Files/en.lproj/QRCode.strings": {
   "QRCode.Toolbar.Button.A11y.Title.v128": "f51acabd c3680ac9"
  },
@@ -828,6 +876,8 @@
   "Settings.AIControls.AIPoweredFeaturesSection.BlockedStatusDescriptionV2.v151": "dda68e24 1fbd0ec6",
   "Settings.AIControls.AIPoweredFeaturesSection.PageSummariesSection.Message.v151": "6b11de76 5fa1f8ff",
   "Settings.AIControls.AIPoweredFeaturesSection.PageSummariesSection.Title.v151": "523f70dd fe1b3b61",
+  "Settings.AIControls.AIPoweredFeaturesSection.QuickAnswersSection.Message.v154": "0f97ac75 432bf3fc fe00fd1b",
+  "Settings.AIControls.AIPoweredFeaturesSection.QuickAnswersSection.Title.v154": "ec12f9c7 bdbb9902 6a706905",
   "Settings.AIControls.AIPoweredFeaturesSection.Title.v151": "d15f4b6e c54581ed",
   "Settings.AIControls.AIPoweredFeaturesSection.TranslationSection.Message.v151": "4be76211 5b8a6157",
   "Settings.AIControls.AIPoweredFeaturesSection.TranslationSection.Title.v151": "0ae39468 9afb9485",
@@ -859,6 +909,7 @@
   "Settings.Browsing.AdBlocker.Description.v155": "9fb1a01c 7262855c",
   "Settings.Browsing.AdBlocker.LearnMore.v155": "d3ef2296 d9b20450",
   "Settings.Browsing.AdBlocker.Title.v155": "bcd86698 ef07e8df",
+  "Settings.Browsing.BackgroundAudio.Title.v156": "c4508d1f 6278d19e af8f6ede",
   "Settings.Browsing.BlockAds.Title.v153": "2a01427a 2aa7bbf1",
   "Settings.Browsing.Content.v153": "1211c511 6fcb7eb2",
   "Settings.Browsing.Links.v137": "954ac56c a0ba743c",
@@ -872,6 +923,7 @@
   "Settings.DailyUsagePing.Message.v135": "78ee471a b9566ed2",
   "Settings.DailyUsagePing.Title.v135": "c6219e32 6f077d8c",
   "Settings.FxA.Title.v119": "97d99bbc f38ba9ee",
+  "Settings.Home.Option.Wallpaper.WrexhamBrandTitle.v155": "67eef2a3 67eef2a3 ef2597bc",
   "Settings.Notifications.SyncNotificationsStatus.v112": "4c8a00ee 16de91cb",
   "Settings.Notifications.SyncNotificationsTitle.v112": "3b108303 3b108303",
   "Settings.Notifications.SystemNotificationsDisabledMessage.v112": "3c5f6900 cc10fefb",
@@ -890,6 +942,9 @@
   "Settings.Search.AlternateSearchEngines.Title.v124.v2": "e127e932 b8cb64ce",
   "Settings.Search.DefaultSearchEngine.Title.v121": "b52164a3 8ec38c08",
   "Settings.Search.EnginesSuggestions.Title.v124": "f9f19f1c 8bcee2af",
+  "Settings.Search.GoogleLens.Description.v153": "174a750a b8ed666a 8209ad93",
+  "Settings.Search.GoogleLens.Footnote.v153": "38e4a7ec af4d9ce4 402c74fd",
+  "Settings.Search.GoogleLens.Title.v153": "51bb4da0 51bb4da0 c7338fb2",
   "Settings.Search.PageTitle.v121": "cf8b8e7a 4dbcba2a",
   "Settings.Search.PrivateSession.Description.v125": "9838ee30 86ca536d",
   "Settings.Search.PrivateSession.Setting.v124": "fb1c4cbe b30cd77c",
@@ -1107,6 +1162,61 @@
   "Upgrade.Welcome.Description.v114": "f8df5422 5adaa1ee",
   "Upgrade.Welcome.Title.v114": "e43aed77 df7f4dbc"
  },
+ "Shared/Supporting Files/en.lproj/WebCompatReporter.strings": {
+  "WebCompatReporter.AdditionalInfo.FooterText.v154": "e0868100 3076b2c4 d1b45d55",
+  "WebCompatReporter.AdditionalInfo.IncludeBlockedList.v154": "51612b4c 5b689baa 2b8ce4c8",
+  "WebCompatReporter.AdditionalInfo.IncludeScreenshot.v154": "bf648b3a ab76eb6a 8fd4ff70",
+  "WebCompatReporter.AdditionalInfo.LearnMore.v154": "d3ef2296 d9b20450 3011c884",
+  "WebCompatReporter.AdditionalInfo.Title.v154": "e4e8119d f0db7c3f fdfd9cc6",
+  "WebCompatReporter.Category.DesignBroken.v154": "f267efcb 47ffd63f 57fe6485",
+  "WebCompatReporter.Category.Other.v154": "d8347333 a22b26b3 99e246b0",
+  "WebCompatReporter.Category.SiteNotUsable.v154": "184e58b3 e4a617a5 9819493c",
+  "WebCompatReporter.Category.VideoOrAudio.v154": "29ae70a3 6d872e60 f5634cc3",
+  "WebCompatReporter.Fields.DetailsAccessibilityLabel.v154": "e58bc9ea 8ca4df18 1a96f349",
+  "WebCompatReporter.Fields.DetailsPlaceholder.v154": "a9f0a448 34d53241 c8f1bfb5",
+  "WebCompatReporter.Fields.URLError.v155": "940ed641 093d858c d6c318ef",
+  "WebCompatReporter.Fields.URLLabel.v154": "c73efe84 c73efe84 8b45567b",
+  "WebCompatReporter.Fields.URLPlaceholder.v154": "c73efe84 c73efe84 759d1ff9",
+  "WebCompatReporter.IssueSection.CategoryPlaceholder.v154": "07037156 56a75088 6efcf8d1",
+  "WebCompatReporter.IssueSection.Title.v154": "393e7371 79a458bc 22e81da1",
+  "WebCompatReporter.Preview.Data.AvailableMemory.v155": "0aeab17a 7da17114 8fcc4ca5",
+  "WebCompatReporter.Preview.Data.BlockedTrackers.v155": "d0760693 1ab3d07e a5d56ed0",
+  "WebCompatReporter.Preview.Data.DeviceLocale.v155": "dcc9c48f 2e004a5b 8889ad9e",
+  "WebCompatReporter.Preview.Data.HasTouchscreen.v155": "726f721d 92d1e599 be90c25a",
+  "WebCompatReporter.Preview.Data.IsTablet.v155": "42f5d503 0f08f49a aeb8f750",
+  "WebCompatReporter.Preview.Data.IssueAndDescription.v155": "c2511bf5 2ed7639d 7dc09cd7",
+  "WebCompatReporter.Preview.Data.PageElements.v155": "b9e70d82 f0cda26d 877a873a",
+  "WebCompatReporter.Preview.Data.PageLanguages.v155": "a78f8dae 4183bb2b 3bec1dbd",
+  "WebCompatReporter.Preview.Data.PageURL.v155": "e1cbe7d6 6bb53abe ace2496c",
+  "WebCompatReporter.Preview.Data.PixelDensity.v155": "26958778 a5b52177 0f62c9e0",
+  "WebCompatReporter.Preview.Data.PrivateBrowsingStatus.v155": "67005070 7f125042 57e45318",
+  "WebCompatReporter.Preview.Data.TrackingProtectionSetting.v155": "23642b9d 7f33f8b0 dbe8ee20",
+  "WebCompatReporter.Preview.Data.UserAgent.v155": "632445a9 4aa05456 b44a587d",
+  "WebCompatReporter.Preview.ScreenshotAccessibilityLabel.v154": "d1d33b14 41bd8a44 d2cd81dc",
+  "WebCompatReporter.Preview.ScreenshotCloseAccessibilityLabel.v154": "6de89233 0e7c6115 71724174",
+  "WebCompatReporter.Preview.TechnicalData.v155": "141631de 64bfb138 fad53a2b",
+  "WebCompatReporter.Preview.Title.v154": "eed28a38 7469e246 e59d4835",
+  "WebCompatReporter.SendButton.Title.v154": "6b16982b fb67cfd7 d673b571",
+  "WebCompatReporter.Sheet.CloseButtonAccessibilityLabel.v154": "6de89233 0e7c6115 a5c5ceef",
+  "WebCompatReporter.Sheet.PreviewButton.v154": "9c225835 06deca68 283d1a04",
+  "WebCompatReporter.SubOption.BrowserBlocked.v154": "80ab54b9 bd41c532 d3351b00",
+  "WebCompatReporter.SubOption.ButtonsNotWorking.v154": "8758e15d d17e86e8 d3351b00",
+  "WebCompatReporter.SubOption.CaptionsMissing.v154": "0f54aaf2 caf0fbea b20ed1d8",
+  "WebCompatReporter.SubOption.ImagesNotLoaded.v154": "f6ac3cd0 05b5af82 b3e391d0",
+  "WebCompatReporter.SubOption.ItemsMisaligned.v154": "1f83d005 175b8207 b3e391d0",
+  "WebCompatReporter.SubOption.ItemsNotVisible.v154": "0a4aeb30 65c3758d b3e391d0",
+  "WebCompatReporter.SubOption.ItemsOverlapped.v154": "f5570c39 5061d8b6 b3e391d0",
+  "WebCompatReporter.SubOption.MediaControlsBroken.v154": "a3831c93 53ed0677 b20ed1d8",
+  "WebCompatReporter.SubOption.MissingItems.v154": "bf0d2c37 df36b806 d3351b00",
+  "WebCompatReporter.SubOption.NoAudio.v154": "f680faed 376bf0a1 b20ed1d8",
+  "WebCompatReporter.SubOption.NoVideo.v154": "d1d8844d 796b4abc b20ed1d8",
+  "WebCompatReporter.SubOption.PageNotLoading.v154": "aafd61e1 1efa0421 d3351b00",
+  "WebCompatReporter.SubOption.PlaybackFails.v154": "29ae70a3 2e6e99f5 b20ed1d8",
+  "WebCompatReporter.Toast.ReportSent.v155": "f4a9e5fb b1241ac9 8e791776"
+ },
+ "Shared/Supporting Files/en.lproj/WebContextMenu.strings": {
+  "ContextMenu.GoogleLensButtonTitle.v153": "e8c78dc2 2a2ad0cf 42cd2c97"
+ },
  "Shared/Supporting Files/en.lproj/WebView.strings": {
   "WebView.DocumentLoadingAccessibilityLabel.v137": "24692d2b 924ffa9e",
   "WebView.DocumentLoadingLabel.v137": "aec3cc88 bf5a0c33"
@@ -1321,10 +1431,10 @@
   "Close": "6de89233 0e7c6115",
   "Closing tab": "9ddbe445 eaecf205",
   "ContextMenu.BookmarkLinkButtonTitle": "59a9fea4 54948be1",
-  "ContextMenu.ButtonToast.NewPrivateTabOpened.LabelText": "a168d93e ee8031f3",
+  "ContextMenu.ButtonToast.NewPrivateTabOpened.LabelText": "7f3c4353 ee8031f3 a21e11e5",
   "ContextMenu.ButtonToast.NewPrivateTabOpened.LabelText.v113": "a168d93e efa433a0",
   "ContextMenu.ButtonToast.NewTabOpened.ButtonText": "1712a47a 74961116",
-  "ContextMenu.ButtonToast.NewTabOpened.LabelText": "e5d1dd75 cb27bb7b",
+  "ContextMenu.ButtonToast.NewTabOpened.LabelText": "18d49ca6 cb27bb7b 4939622e",
   "ContextMenu.ButtonToast.NewTabOpened.LabelText.v114": "011d2450 8897f180",
   "ContextMenu.CopyImageButtonTitle": "bee26b56 83b5d1e8",
   "ContextMenu.CopyImageLinkButtonTitle": "2b451484 970bab5f",
@@ -1760,6 +1870,7 @@
   "Settings.Sync.ButtonDescription.v103": "04fbacc8 b1a51fc6",
   "Settings.Sync.ButtonTitle.v103": "3788371c 5a688d64",
   "Settings.Sync.SignInView.Title.v103": "3788371c 5a688d64",
+  "Settings.Sync.SigningOut.Title.v154": "b71e29e1 caa6192c f3181995",
   "Settings.Tabs.CustomizeTabsSection.InactiveTabs": "e697603a 15033d8f",
   "Settings.Tabs.CustomizeTabsSection.InactiveTabsDescription.v101": "be2be5da d4ef4b97",
   "Settings.Tabs.CustomizeTabsSection.TabGroups": "b2d1a388 4b3d8d24",

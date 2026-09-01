@@ -361,6 +361,9 @@
   "CloseTab.ArrivingNotification.title.v133": "82039da1 5c5f7c74",
   "CloseTab.ViewAction.title.v133": "c53a7129 51b02228"
  },
+ "Shared/Supporting Files/en.lproj/GoogleLens.strings": {
+  "GoogleLens.Interstitial.CancelButtonTitle.v156": "cf189968 871d661d f5bd6a91"
+ },
  "Shared/Supporting Files/en.lproj/JumpBackIn.strings": {
   "ContextualHints.FirefoxHomepage.JumpBackIn.PersonalizedHome": "c0dfa322 7bf57d6a",
   "ContextualHints.FirefoxHomepage.JumpBackIn.SyncedTab.v106": "408315de 798a6f52"
@@ -576,7 +579,8 @@
   "NativeErrorPage.GenericError.TitleLabel.v131": "7c2b2c7f a92ffa2e",
   "NativeErrorPage.GoBackButton.v149": "3c165053 18c0c0cf",
   "NativeErrorPage.NoInternetConnection.Description.v131": "588d2d3f dd983918",
-  "NativeErrorPage.NoInternetConnection.TitleLabel.v131": "5c875bd4 8ec5a5c2"
+  "NativeErrorPage.NoInternetConnection.TitleLabel.v131": "5c875bd4 8ec5a5c2",
+  "NativeErrorPage.Wayback.Error.SearchWayback.v155": "3ceed21d 55e56d2c 4d9c8e7f"
  },
  "Shared/Supporting Files/en.lproj/Notification.strings": {
   "Notification.Fallback.Title.v113": "5978b346 e38877e5"
@@ -877,6 +881,7 @@
   "Settings.Browsing.AdBlocker.Description.v155": "8ceda2f0 7262855c",
   "Settings.Browsing.AdBlocker.LearnMore.v155": "49264e7b d9b20450",
   "Settings.Browsing.AdBlocker.Title.v155": "8e3840f6 ef07e8df",
+  "Settings.Browsing.BackgroundAudio.Title.v156": "49675a88 6278d19e af8f6ede",
   "Settings.Browsing.BlockAds.Title.v153": "6178f5ca 2aa7bbf1",
   "Settings.Browsing.Content.v153": "8a00685c 6fcb7eb2",
   "Settings.Browsing.Links.v137": "c8926c41 a0ba743c",
