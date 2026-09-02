@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bcd40327226f` |
+| **Generated** | 2026-09-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a905fc074817` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-08-31 @ `67b14d26eb36` |
+| **Previous run** | 2026-09-01 @ `bcd40327226f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 9 of 18,188 |
+| **Strings reviewed this run** | 0 of 18,188 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,23 +22,9 @@ Also for es-AR: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (3)
+### ✅ Fixed since the last run (0)
 
-- `tou-existing-user-spotlight-body` — `browser/browser/termsofuse.ftl` — Malformed closing tag `</a >` in `tou-existing-user-spotlight-body`
-    - Current: `Introducimos <a data-l10n-name="terms-of-use">Términos de uso</a> y actualizamos nuestra <a data-l10n-name="privacy-notice">Nota de privacidad</a >.<br><br> Tómese un momento para revisar y aceptar. <a data-l10n-name="l…`
-    - Source: `We’ve introduced a <a data-l10n-name="terms-of-use">Terms of Use</a> and updated our <a data-l10n-name="privacy-notice">Privacy Notice</a>.<br><br> Please take a moment to review and accept. <a data-l10n-name="learn-mor…`
-    - Suggest: `We’ve introduced a <a data-l10n-name="terms-of-use">Terms of Use</a> and updated our <a data-l10n-name="privacy-notice">Privacy Notice</a>.<br><br> Please take a moment to review and accept. <a data-l10n-name="learn-mor…`
-    - Whitespace inside a closing tag makes it render as literal text.
-- `inactive-css-not-grid-or-flex-or-absolutely-positioned-item-fix` — `devtools/client/tooltips.ftl` — Malformed closing tag `</strong >` in `inactive-css-not-grid-or-flex-or-absolutely-positioned-item-fix`
-    - Current: `Intente agregar <strong>position:absolute</strong> al elemento, o <strong>display:grid</strong>, <strong>display:flex</strong>, <strong>display:inline-grid</strong > o <strong>display:inline-flex</strong> al padre del e…`
-    - Source: `Try adding <strong>position:absolute</strong> to the element, or <strong>display:grid</strong>, <strong>display:flex</strong>, <strong>display:inline-grid</strong>, or <strong>display:inline-flex</strong> to the element…`
-    - Suggest: `Try adding <strong>position:absolute</strong> to the element, or <strong>display:grid</strong>, <strong>display:flex</strong>, <strong>display:inline-grid</strong>, or <strong>display:inline-flex</strong> to the element…`
-    - Whitespace inside a closing tag makes it render as literal text.
-- `inactive-css-not-grid-or-flex-or-absolutely-positioned-item-fix-1` — `devtools/client/tooltips.ftl` — Malformed closing tag `</strong >` in `inactive-css-not-grid-or-flex-or-absolutely-positioned-item-fix-1`
-    - Current: `Intente agregar <strong>position:absolute</strong> al elemento, o <strong>display:grid</strong>, <strong>display:flex</strong>, <strong>display:inline-grid</strong > o <strong>display:inline-flex</strong> al padre del e…`
-    - Source: `Try adding <strong>position:absolute</strong> to the element, or <strong>display:grid</strong>, <strong>display:flex</strong>, <strong>display:inline-grid</strong>, or <strong>display:inline-flex</strong> to the element…`
-    - Suggest: `Try adding <strong>position:absolute</strong> to the element, or <strong>display:grid</strong>, <strong>display:flex</strong>, <strong>display:inline-grid</strong>, or <strong>display:inline-flex</strong> to the element…`
-    - Whitespace inside a closing tag makes it render as literal text.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

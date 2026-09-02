@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bcd40327226f` |
+| **Generated** | 2026-09-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a905fc074817` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-08-31 @ `67b14d26eb36` |
+| **Previous run** | 2026-09-01 @ `bcd40327226f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 3 of 18,213 |
+| **Strings reviewed this run** | 9 of 18,219 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,27 +18,22 @@ Also for ru: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `share-panel-connect-device-2` — `browser/browser/sharePanel.ftl` — Menu item rendered as a noun phrase instead of an action verb.
+    - Current: `label: Добавление устройства`
+    - Source: `label: Add a Device`
+    - Suggest: `label: Добавить устройство`
+    - The en-US "Add a Device" is a clickable action that opens the device-connection flow; Russian UI convention for such commands is the imperative/infinitive "Добавить устройство", consistent with the sibling label "Поделиться…"/"Сгенерировать QR-код".
+- `nova-early-access-infobar-title` — `browser/browser/newtab/asrouter.ftl` — "is getting a new look" (future/ongoing) translated as a completed change "Обновлён внешний вид".
+    - Current: `<strong>Обновлён внешний вид { -brand-product-name }.</strong>`
+    - Source: `<strong>{ -brand-product-name } is getting a new look.</strong> You’re previewing an early, unpolished version before the launch later this year.`
+    - Suggest: `<strong>У { -brand-product-name } скоро появится новый облик.</strong>`
+    - The en-US says the redesign is upcoming and the user is previewing it before the launch later this year; the Russian asserts the look has already been updated, contradicting the second sentence.
 
-### ✅ Fixed since the last run (3)
+### ✅ Fixed since the last run (0)
 
-- `about-logins-import-dialog-items-no-change2` — `browser/browser/aboutLogins.ftl` — Malformed closing tag `</span >` in `about-logins-import-dialog-items-no-change2`
-    - Current: `{$count ->} [one] <span>Обнаружена повторяющаяся запись:</span> <span data-l10n-name="count">{ $count }</span> <span data-l10n-name="meta">(не импортирована)</span > [few] <span>Обнаружены повторяющиеся записи:</span> <…`
-    - Source: `{$count ->} [other] <span>Duplicate entries found:</span> <span data-l10n-name="count">{ $count }</span> <span data-l10n-name="meta">(not imported)</span>`
-    - Suggest: `{$count ->} [other] <span>Duplicate entries found:</span> <span data-l10n-name="count">{ $count }</span> <span data-l10n-name="meta">(not imported)</span>`
-    - Whitespace inside a closing tag makes it render as literal text.
-- `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — Malformed closing tag `</a >` in `genai-settings-chat-gemini-links`
-    - Current: `Выбирая Google Gemini, вы соглашаетесь с <a data-l10n-name="link1">Условиями использования Google</a>, <a data-l10n-name="link2">Политикой запрещённого использования генеративного ИИ</a > и <a data-l10n-name="link3">Уве…`
-    - Source: `By choosing Google Gemini, you agree to the <a data-l10n-name="link1">Google Terms of Service</a>, <a data-l10n-name="link2">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name="link3">Gemini Apps Privacy Not…`
-    - Suggest: `By choosing Google Gemini, you agree to the <a data-l10n-name="link1">Google Terms of Service</a>, <a data-l10n-name="link2">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name="link3">Gemini Apps Privacy Not…`
-    - Whitespace inside a closing tag makes it render as literal text.
-- `tou-existing-user-spotlight-body` — `browser/browser/termsofuse.ftl` — Malformed closing tag `</a >` in `tou-existing-user-spotlight-body`
-    - Current: `Мы ввели <a data-l10n-name="terms-of-use">Условия использования</a> и обновили наше <a data-l10n-name="privacy-notice">Уведомление о конфиденциальности</a >.<br><br> Пожалуйста, потратьте немного времени, чтобы ознакоми…`
-    - Source: `We’ve introduced a <a data-l10n-name="terms-of-use">Terms of Use</a> and updated our <a data-l10n-name="privacy-notice">Privacy Notice</a>.<br><br> Please take a moment to review and accept. <a data-l10n-name="learn-mor…`
-    - Suggest: `We’ve introduced a <a data-l10n-name="terms-of-use">Terms of Use</a> and updated our <a data-l10n-name="privacy-notice">Privacy Notice</a>.<br><br> Please take a moment to review and accept. <a data-l10n-name="learn-mor…`
-    - Whitespace inside a closing tag makes it render as literal text.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -59,8 +54,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 362 |
-| Strings | 18,213 |
-| Missing strings | 6 |
+| Strings | 18,219 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -77,13 +72,7 @@ _Nothing retired._
 
 ### Completeness
 
-**6 strings** are not translated yet, concentrated in:
-
-- `browser/browser/sharePanel.ftl` — 3
-- `browser/browser/preferences/preferences.ftl` — 2
-- `browser/browser/preferences/formAutofill.ftl` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -93,10 +82,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `guillemet` 1174, `straight-double` 28, `curly-double` 8, `curly-single` 7 | **guillemet** |
 | apostrophe | `typographic` 11, `straight` 16 | _mixed_ |
-| ellipsis | `char` 463, `ascii` 6 | **char** |
+| ellipsis | `char` 466, `ascii` 6 | **char** |
 | dash | `em` 168, `en` 5 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 7 | _mixed_ |
-| register | `informal` 1052, `formal` 3594 | **formal** |
+| register | `informal` 1052, `formal` 3596 | **formal** |
 
 ---
 
@@ -107,14 +96,23 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (597)
+## 3. Open findings (599)
 
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+
+- `nova-early-access-infobar-title` — `browser/browser/newtab/asrouter.ftl` — "is getting a new look" (future/ongoing) translated as a completed change "Обновлён внешний вид".
+    - Current: `<strong>Обновлён внешний вид { -brand-product-name }.</strong>`
+    - Source: `<strong>{ -brand-product-name } is getting a new look.</strong> You’re previewing an early, unpolished version before the launch later this year.`
+    - Suggest: `<strong>У { -brand-product-name } скоро появится новый облик.</strong>`
+    - The en-US says the redesign is upcoming and the user is previewing it before the launch later this year; the Russian asserts the look has already been updated, contradicting the second sentence.
+
+_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 46 |
-| 2 | Wrong content (says something other than the English) | 269 |
-| 3 | Degraded language (grammar, spelling, terminology) | 217 |
+| 2 | Wrong content (says something other than the English) | 270 |
+| 3 | Degraded language (grammar, spelling, terminology) | 218 |
 | 4 | Cosmetic (typography, spacing) | 65 |
 
 ### A. Functional, markup, variables & plurals
@@ -397,6 +395,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `большинства наиболее известных трекеров`
     - Source: `Keep your data to yourself. { -brand-short-name } protects you from many of the most common trackers that follow what you do online.`
     - Suggest: `многих наиболее распространённых трекеров`
+- `nova-early-access-infobar-title` — `browser/browser/newtab/asrouter.ftl` — "is getting a new look" (future/ongoing) translated as a completed change "Обновлён внешний вид".
+    - Current: `<strong>Обновлён внешний вид { -brand-product-name }.</strong>`
+    - Source: `<strong>{ -brand-product-name } is getting a new look.</strong> You’re previewing an early, unpolished version before the launch later this year.`
+    - Suggest: `<strong>У { -brand-product-name } скоро появится новый облик.</strong>`
+    - The en-US says the redesign is upcoming and the user is previewing it before the launch later this year; the Russian asserts the look has already been updated, contradicting the second sentence.
 - `relay-50-masks-announcement-title` — `browser/browser/newtab/asrouter.ftl` — dev comment: "'on us' … means 'for free'". Current: 50 псевдонимов электронной почты на нас is a literal calque with no such meaning → Suggest: …— бесплатно
     - Current: `50 псевдонимов электронной почты на нас`
     - Source: `50 email masks, on us`
@@ -426,9 +429,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Suggest: `.label`
 - `newtab-wallpaper-blue-flowers` — `browser/browser/newtab/newtab.ftl` — Wallpaper descriptions — newtab.ftl — newtab-wallpaper-light-landscape renders "mist" as дым (smoke); newtab-wallpaper-blue-flowers says цветов с голубыми цветами (repeats the word, loses "petaled"); newtab-wallpaper-celestial-eclipse-time-lapse renders "time lapse" as Хронометраж; newtab-wallpaper-celestial-river renders "satellite" as Космический
     - Source: `Closeup photography of blue-petaled flowers in bloom`
-- `newtab-wallpaper-celestial-eclipse-time-lapse` — `browser/browser/newtab/newtab.ftl` — Wallpaper descriptions — newtab.ftl — newtab-wallpaper-light-landscape renders "mist" as дым (smoke); newtab-wallpaper-blue-flowers says цветов с голубыми цветами (repeats the word, loses "petaled"); newtab-wallpaper-celestial-eclipse-time-lapse renders "time lapse" as Хронометраж; newtab-wallpaper-celestial-river renders "satellite" as Космический
-    - Source: `Lunar eclipse time lapse`
-- _…and 207 more; see `state/` for the full list._
+- _…and 208 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -721,6 +722,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `скриншот`
     - Source: `label: Screenshot tooltiptext: Take a screenshot ({ $shortcut })`
     - Suggest: `снимок экрана`
+- `share-panel-connect-device-2` — `browser/browser/sharePanel.ftl` — Menu item rendered as a noun phrase instead of an action verb.
+    - Current: `label: Добавление устройства`
+    - Source: `label: Add a Device`
+    - Suggest: `label: Добавить устройство`
+    - The en-US "Add a Device" is a clickable action that opens the device-connection flow; Russian UI convention for such commands is the imperative/infinitive "Добавить устройство", consistent with the sibling label "Поделиться…"/"Сгенерировать QR-код".
 - `fxa-menu-sign-in-promo-heading` — `browser/browser/sync.ftl` — "Sync": Синхронизацию capitalized vs lowercase, inside syncSetup.properties (2 strings) and between fxa-menu-sign-in-promo-heading and sync-setup-verify-heading
     - Current: `Синхронизацию`
     - Source: `Sign in to sync`
@@ -807,9 +813,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Suggest: `Лог`
 - `webconsole.message.commands.startTracingToProfiler` — `devtools/shared/webconsole.properties` — webconsole.message.commands.startTracingToProfiler names the same panel twice, once English and once transliterated
     - Source: `Started tracing to the Profiler. The traces will be displayed in the profiler on stop.`
-- `devmgr-button-enable-fips` — `security/manager/security/certificates/deviceManager.ftl` — two metaphors in one dialog
-    - Source: `accesskey: F label: Enable FIPS`
-- _…and 6 more; see `state/` for the full list._
+- _…and 7 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -824,7 +828,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `Загрузка недавних сохранений...`
     - Source: `Recent saves loading…`
     - Suggest: `…`
-    - The tree uses … 463 times against 6 ASCII runs.
+    - The tree uses … 466 times against 6 ASCII runs.
 - `default-browser-agent-task-description` — `browser/browser/backgroundtasks/defaultagent.ftl` — “default-browser-agent.enabled” and “DisableDefaultBrowserAgent” → « »
     - Current: `“DisableDefaultBrowserAgent”`
     - Source: `The Default Browser Agent task checks when the default changes from { -brand-short-name } to another browser. If the change happens under suspicious circumstances, it will prompt users to change back to { -brand-short-n…`
@@ -833,7 +837,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `Выполняется резервное копирование...`
     - Source: `Backup in progress…`
     - Suggest: `…`
-    - The tree uses … 463 times against 6 ASCII runs.
+    - The tree uses … 466 times against 6 ASCII runs.
 - `contextual-manager-password-login-line-with-alert` — `browser/browser/contextual-manager.ftl` — (предупреждение) lowercase while the origin/username variants capitalize it
     - Source: `aria-label: Copy password (Warning) title: Copy password (Warning)`
 - `sidebar-callout-survey-features-question` — `browser/browser/featureCallout.ftl` — same
@@ -869,7 +873,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `Отключает команды отправки отзывов в меню Справка («Отправить отзыв...» и «Сообщить о поддельном сайте...»).`
     - Source: `Disable commands to send feedback from the Help menu (Submit Feedback and Report Deceptive Site).`
     - Suggest: `…`
-    - The tree uses … 463 times against 6 ASCII runs.
+    - The tree uses … 466 times against 6 ASCII runs.
 - `policy-GenerativeAI` — `browser/browser/policies/policies-descriptions.ftl` — Trailing period added or dropped vs en-US: dropped in policy-GenerativeAI, policy-LegacyProfiles, multi-profile-spotlight-body, set-default-menu-message-split-layout-subtitle ([macos]), security-privacy-issue-warning-ech2, blocked-mismatched-version, menu-help-share-ideas (.label, missing the source's ellipsis), permission-dialog-set-change-app-link; added in browsing-use-full-keyboard-navigation…
     - Source: `Configure generative AI features.`
 - `policy-LegacyProfiles` — `browser/browser/policies/policies-descriptions.ftl` — Trailing period added or dropped vs en-US: dropped in policy-GenerativeAI, policy-LegacyProfiles, multi-profile-spotlight-body, set-default-menu-message-split-layout-subtitle ([macos]), security-privacy-issue-warning-ech2, blocked-mismatched-version, menu-help-share-ideas (.label, missing the source's ellipsis), permission-dialog-set-change-app-link; added in browsing-use-full-keyboard-navigation…
@@ -897,7 +901,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `Вы ничего не синхронизируете... пока. Запустите синхронизацию, чтобы получить все ваши данные на всех ваших устройствах.`
     - Source: `description: You aren’t syncing anything… yet. Start syncing to get all of your data on all your devices. label: Manage synced data`
     - Suggest: `…`
-    - The tree uses … 463 times against 6 ASCII runs.
+    - The tree uses … 466 times against 6 ASCII runs.
 - `protections-vpn-header-content-subscribed` — `browser/browser/protections.ftl` — Stray space before punctuation: protections-vpn-header-content-subscribed (Apple App Store .), extension-controlled-enable and settings-translations-subpage-never-translate-sites-description (preferences.ftl), fp-certerror-not-yet-valid-why-dangerous-body (certError.ftl), PEAttSelNoBar and PEAttSelUnexpected (css.properties), networkMenu.ws.summary.framesCount2 and charts.totalSecondsNonBlocking…
     - Source: `{$count ->} [other] Using the { -mozilla-vpn-brand-name } encrypts all your traffic and hides your location — on up to { $count } devices. Get the most from your subscription — add it from the <a data-l10n-name="playsto…`
     - Suggest: `Apple App Store .`

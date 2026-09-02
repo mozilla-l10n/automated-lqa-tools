@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bcd40327226f` |
+| **Generated** | 2026-09-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a905fc074817` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-08-31 @ `67b14d26eb36` |
+| **Previous run** | 2026-09-01 @ `bcd40327226f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,174 |
+| **Strings reviewed this run** | 45 of 18,219 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -44,11 +44,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 360 |
-| Strings | 18,174 |
-| Missing strings | 45 |
+| Files | 362 |
+| Strings | 18,219 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 2 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,23 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**45 strings** are not translated yet, concentrated in:
-
-- `toolkit/services/aboutSyncLog.ftl` — 26
-- `browser/browser/newtab/newtab.ftl` — 8
-- `browser/browser/sharePanel.ftl` — 3
-- `browser/browser/preferences/preferences.ftl` — 3
-- `toolkit/toolkit/pdfviewer/embedFallback.ftl` — 2
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 1
-- `browser/browser/appmenu.ftl` — 1
-- `browser/browser/preferences/formAutofill.ftl` — 1
-
-**Files absent from the locale:**
-
-- `toolkit/services/aboutSyncLog.ftl`
-- `toolkit/toolkit/pdfviewer/embedFallback.ftl`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -89,10 +73,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-single` 891, `straight-double` 25, `curly-double` 9 | **curly-single** |
 | apostrophe | `typographic` 1137 | **typographic** |
-| ellipsis | `char` 461 | **char** |
+| ellipsis | `char` 464 | **char** |
 | dash | `en` 135 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `formal` 3097 | **formal** |
+| register | `formal` 3100 | **formal** |
 
 ---
 

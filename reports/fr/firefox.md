@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bcd40327226f` |
+| **Generated** | 2026-09-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a905fc074817` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-08-31 @ `67b14d26eb36` |
+| **Previous run** | 2026-09-01 @ `bcd40327226f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 18,406 |
+| **Strings reviewed this run** | 0 of 18,406 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,21 +18,13 @@ Also for fr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `about-networking-ssl-tokens-summary-compression` — `toolkit/toolkit/about/aboutNetworking.ftl` — The plural selector expression is malformed: the selector line ends with a stray `}` and the variants are not properly formed, which breaks the Fluent message.
-    - Current: `{$saved ->}`
-    - Source: `{ $decompressedLength } → { $compressedLength } B ({ $saved }% saved)`
-    - Suggest: `{ $saved ->`
-    - In Fluent, a select expression is written `{ $saved -> [one] ... [other] ... }`; closing the brace immediately after the arrow produces a syntax error and the string will fail to render, unlike the plain en-US source.
+_No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `about-networking-ssl-tokens-summary-compression` — `toolkit/toolkit/about/aboutNetworking.ftl` — `about-networking-ssl-tokens-summary-compression` references ['total'], which en-US does not pass
-    - Current: `{$total ->} [one] { $decompressedLength } → { $compressedLength } o ({ $saved } % économisé) [other] { $decompressedLength } → { $compressedLength } o ({ $saved } % économisés)`
-    - Source: `{ $decompressedLength } → { $compressedLength } B ({ $saved }% saved)`
-    - Suggest: `{ $decompressedLength } → { $compressedLength } B ({ $saved }% saved)`
-    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

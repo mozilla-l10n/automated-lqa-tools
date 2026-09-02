@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bcd40327226f` |
+| **Generated** | 2026-09-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a905fc074817` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-08-31 @ `67b14d26eb36` |
+| **Previous run** | 2026-09-01 @ `bcd40327226f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,208 |
+| **Strings reviewed this run** | 14 of 18,219 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,13 @@ Also for pl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `protections-panel-cookie-banner-blocker-view-turn-on-for-site` — `browser/browser/protectionsPanel.ftl` — `protections-panel-cookie-banner-blocker-view-turn-on-for-site` references ['host'], which en-US does not pass
+    - Current: `Włączyć blokowanie informacji o ciasteczkach na witrynie { $host }?`
+    - Source: `Turn on Cookie Banner Blocker for this site?`
+    - Suggest: `Turn on Cookie Banner Blocker for this site?`
+    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,14 +49,14 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 362 |
-| Strings | 18,208 |
-| Missing strings | 11 |
+| Strings | 18,219 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
-| Variable & placeholder mismatches | 2 |
+| Variable & placeholder mismatches | 1 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 3 |
 | Text quoting a UI label that no longer matches | 3 |
@@ -63,16 +67,7 @@ _Nothing retired._
 
 ### Completeness
 
-**11 strings** are not translated yet, concentrated in:
-
-- `browser/browser/sharePanel.ftl` — 3
-- `browser/browser/preferences/preferences.ftl` — 3
-- `browser/browser/newtab/newtab.ftl` — 2
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 1
-- `browser/browser/appmenu.ftl` — 1
-- `browser/browser/preferences/formAutofill.ftl` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -82,9 +77,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `polish-double` 1571, `straight-double` 36, `german-double` 7, `curly-double` 2 | **polish-double** |
 | apostrophe | `straight` 1 | **straight** |
-| ellipsis | `char` 468 | **char** |
+| ellipsis | `char` 471 | **char** |
 | dash | `em` 169, `en` 14 | **em** |
-| nbsp | `total` 5505, `narrow` 3, `before-punctuation` 49, `space-before-punctuation` 21 | **total** |
+| nbsp | `total` 5510, `narrow` 3, `before-punctuation` 49, `space-before-punctuation` 21 | **total** |
 | register | `informal` 80 | **informal** |
 
 ---
@@ -95,12 +90,12 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (72)
+## 3. Open findings (71)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 11 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 10 |
 | 2 | Wrong content (says something other than the English) | 41 |
 | 3 | Degraded language (grammar, spelling, terminology) | 18 |
 | 4 | Cosmetic (typography, spacing) | 2 |
@@ -132,11 +127,6 @@ _Nothing reported._
     - Current: `[one]`
     - Source: `{$numBreaches ->} [other] { $numBreachesResolved } out of { $numBreaches } breaches marked as resolved`
     - Suggest: `"{ $numBreachesResolved } z { $numBreaches } wycieków jest oznaczony jako rozwiązany".`
-- `protections-panel-cookie-banner-blocker-view-turn-on-for-site` — `browser/browser/protectionsPanel.ftl` — `protections-panel-cookie-banner-blocker-view-turn-on-for-site` references ['host'], which en-US does not pass
-    - Current: `Włączyć blokowanie informacji o ciasteczkach na witrynie { $host }?`
-    - Source: `Turn on Cookie Banner Blocker for this site?`
-    - Suggest: `Turn on Cookie Banner Blocker for this site?`
-    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
 - `download-ui-cancel-downloads-ok` — `toolkit/toolkit/downloads/downloadUI.ftl` — A6, plural. All five use only [1] + [other] with "{ $downloadsCount } plików", so 2/3/4 render as "2 plików" instead of "2 pliki". Add a [few] variant to each.
     - Current: `[1]`
     - Source: `{$downloadsCount ->} [1] Cancel 1 Download [other] Cancel { $downloadsCount } Downloads`
@@ -426,8 +416,9 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (170)
+### Fixed to date (171)
 
+- `protections-panel-cookie-banner-blocker-view-turn-on-for-site` — `browser/browser/protectionsPanel.ftl` — fixed 2026-09-02
 - `media-count` — `browser/browser/pageInfo.ftl` — fixed 2026-08-27
 - `inactive-css-not-display-block-on-floated` — `devtools/client/tooltips.ftl` — fixed 2026-08-27
 - `whypaused-assert` — `devtools/shared/debugger-paused-reasons.ftl` — fixed 2026-08-27
@@ -467,4 +458,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `experimental-features-cookie-samesite-none-requires-secure2` — `toolkit/toolkit/featuregates/features.ftl` — fixed 2026-08-24
 - `autofill-insecure-field-warning-description` — `toolkit/toolkit/formautofill/formAutofill.ftl` — fixed 2026-08-24
 - `csp-error-illegal-host-wildcard` — `toolkit/toolkit/global/cspErrors.ftl` — fixed 2026-08-24
-- `webext-perms-header-unsigned` — `toolkit/toolkit/global/extensions.ftl` — fixed 2026-08-24

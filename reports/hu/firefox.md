@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bcd40327226f` |
+| **Generated** | 2026-09-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a905fc074817` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-08-31 @ `67b14d26eb36` |
+| **Previous run** | 2026-09-01 @ `bcd40327226f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 3 of 18,213 |
+| **Strings reviewed this run** | 0 of 18,213 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,28 +22,9 @@ Also for hu: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (4)
+### ✅ Fixed since the last run (0)
 
-- `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — Malformed closing tag `</a >` in `genai-settings-chat-gemini-links`
-    - Current: `A Google Gemini választásával elfogadja a <a data-l10n-name="link1">Google szolgáltatási feltételeit</a>, a <a data-l10n-name="link2">Generatív MI tiltott használatára vonatkozó irányelveket</a > és a <a data-l10n-name=…`
-    - Source: `By choosing Google Gemini, you agree to the <a data-l10n-name="link1">Google Terms of Service</a>, <a data-l10n-name="link2">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name="link3">Gemini Apps Privacy Not…`
-    - Suggest: `By choosing Google Gemini, you agree to the <a data-l10n-name="link1">Google Terms of Service</a>, <a data-l10n-name="link2">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name="link3">Gemini Apps Privacy Not…`
-    - Whitespace inside a closing tag makes it render as literal text.
-- `onboarding-new-user-survey-legal-link-label` — `browser/browser/newtab/onboarding.ftl` — Malformed closing tag `</a >` in `onboarding-new-user-survey-legal-link-label`
-    - Current: `A „{ onboarding-new-user-survey-next-button-label }” kiválasztásával elfogadja a { -brand-product-name } <a data-l10n-name="privacy_notice">Adatvédelmi nyilatkozatát</a >`
-    - Source: `By selecting “{ onboarding-new-user-survey-next-button-label },” you agree to { -brand-product-name }’s <a data-l10n-name="privacy_notice">Privacy Notice</a>`
-    - Suggest: `By selecting “{ onboarding-new-user-survey-next-button-label },” you agree to { -brand-product-name }’s <a data-l10n-name="privacy_notice">Privacy Notice</a>`
-    - Whitespace inside a closing tag makes it render as literal text.
-- `tou-existing-user-spotlight-body` — `browser/browser/termsofuse.ftl` — Malformed closing tag `</a >` in `tou-existing-user-spotlight-body`
-    - Current: `Bevezettük a <a data-l10n-name="terms-of-use">Használati feltételeket</a> és frissítettük az <a data-l10n-name="privacy-notice">Adatvédelmi nyilatkozatunkat</a >.<br><br> Szánjon egy percet az ellenőrzésére és elfogadás…`
-    - Source: `We’ve introduced a <a data-l10n-name="terms-of-use">Terms of Use</a> and updated our <a data-l10n-name="privacy-notice">Privacy Notice</a>.<br><br> Please take a moment to review and accept. <a data-l10n-name="learn-mor…`
-    - Suggest: `We’ve introduced a <a data-l10n-name="terms-of-use">Terms of Use</a> and updated our <a data-l10n-name="privacy-notice">Privacy Notice</a>.<br><br> Please take a moment to review and accept. <a data-l10n-name="learn-mor…`
-    - Whitespace inside a closing tag makes it render as literal text.
-- `tou-existing-user-spotlight-body` — `browser/browser/termsofuse.ftl` — “Terms of Use” rendered “Használati feltételek” here but “Felhasználási feltételek” in the sibling strings of the same feature.
-    - Current: `Használati feltételeket`
-    - Source: `We’ve introduced a <a data-l10n-name="terms-of-use">Terms of Use</a> and updated our <a data-l10n-name="privacy-notice">Privacy Notice</a>.<br><br> Please take a moment to review and accept. <a data-l10n-name="learn-mor…`
-    - Suggest: `Felhasználási feltételeket`
-    - existing-user-tou-message and preonboarding.ftl consistently use “Felhasználási feltételek” for the same legal document, so the differing term in this Spotlight body is an inconsistency.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
