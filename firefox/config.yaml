@@ -37,7 +37,7 @@ llm:
 # translations of it. Most of their strings are identical to en-US and
 # correct, so the usual "identical means untranslated" rule is inverted:
 # identical strings are reviewed rather than skipped, and the interesting
-# defect is a string that failed to diverge. See tools/variants.py.
+# defect is a string that failed to diverge. See lib/variants.py.
 variants:
   en-GB: en-US
   en-CA: en-US

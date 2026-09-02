@@ -35,8 +35,9 @@ Two details that matter and are easy to get wrong:
   source moved under a translation nobody updated.
 - An untranslated unit is **present but empty** — `<target>` absent, so
   moz.l10n returns an empty pattern rather than no entry. The loader drops
-  those so completeness counts them. `bo` is 47 translated of 1,894, and the
-  self-test pins that number.
+  those so completeness counts them. `bo` has only 47 translated units, and
+  the self-test verifies that it remains barely started without pinning the
+  changing source total.
 
 **Strings are keyed by their originating `.strings` file.** A trans-unit id
 is only unique within its `<file original="...">` group, so the group is part
@@ -44,7 +45,7 @@ of the key — and it is the most useful thing to show a reviewer, since a
 group is roughly one screen.
 
 **A from-scratch review batches through the API.** A locale is a single
-684 KB file holding all 1,894 units; source and target together are more
+large file holding roughly 1,900 units; source and target together are more
 than one agent can read, and no partition helps because every group is in
 that same file. `--baseline-strategy agent` is refused for this project
 rather than silently handing an agent something it cannot read.
@@ -55,8 +56,8 @@ Each decision was taken against the repository, not assumed:
 
 | Not run | Why |
 |---|---|
-| `plurals`, `selectors`, `variables` | there is no plural mechanism at all — no `.stringsdict`, no plural trans-units, not one `SelectMessage` in 1,894 units |
-| `markup` | zero HTML-ish tags in those same 1,894 strings |
+| `plurals`, `selectors`, `variables` | there is no plural mechanism at all — no `.stringsdict`, no plural trans-units, and no parsed `SelectMessage` |
+| `markup` | no HTML-ish tags occur in the localization corpus |
 | `escaping`, `term_params`, `accesskey` | Android and Fluent concepts; XLIFF escaping is XML escaping and the parser owns it |
 
 A check that cannot fire reads as coverage and is only noise waiting to

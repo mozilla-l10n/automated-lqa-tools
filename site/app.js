@@ -89,10 +89,15 @@ async function show(locale, project) {
   }
 }
 
-/** #/<locale>/<project> -- so a report can be linked to and the back button works. */
+/** Parse the stable #/<locale>/<project> route used by links and browser history. */
 function readHash() {
   const m = location.hash.match(/^#\/([^/]+)\/([^/]+)$/);
-  return m ? { locale: decodeURIComponent(m[1]), project: decodeURIComponent(m[2]) } : null;
+  if (!m) return null;
+  try {
+    return { locale: decodeURIComponent(m[1]), project: decodeURIComponent(m[2]) };
+  } catch {
+    return null;
+  }
 }
 
 function apply(route, { push = true } = {}) {
@@ -122,7 +127,12 @@ function onSelect() {
 
 async function start() {
   try {
-    manifest = await (await fetch("index.json")).json();
+    const response = await fetch("index.json");
+    if (!response.ok) throw new Error(`${response.status}`);
+    manifest = await response.json();
+    if (!manifest || !manifest.projects || !manifest.locales || !manifest.summaries) {
+      throw new Error("invalid manifest");
+    }
   } catch (err) {
     els.report.innerHTML =
       '<p class="placeholder">Could not load <code>index.json</code>. ' +

@@ -49,8 +49,8 @@ node site/selftest.mjs      # exercises the dropdown logic
 
 ## The shape of a run
 
-The Firefox pipeline is the only one so far, but the approach is meant to
-carry over.
+Every project follows the same pipeline, with its layout and checks selected
+from its configuration.
 
 1. **Refresh** the localized tree and the en-US reference. Clones are
    blobless, depth 1, and sparse to what is being checked.

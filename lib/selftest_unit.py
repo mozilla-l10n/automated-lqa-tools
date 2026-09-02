@@ -20,10 +20,12 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+import config  # noqa: E402
 import findings as fm  # noqa: E402
 import llm_baseline  # noqa: E402
 import llm_incremental as llm  # noqa: E402
 import report  # noqa: E402
+import run as runner  # noqa: E402
 import selftest_lib  # noqa: E402
 import snapshot  # noqa: E402
 import suppress  # noqa: E402
@@ -214,6 +216,47 @@ def run(suite) -> None:
     bad = llm_baseline.Outcome("p", False, reason="timed out")
     check(ok.ok and not bad.ok, "clean and failed are distinguishable outcomes")
     check(bad.reason, "and a failure carries why, for the report to repeat")
+    for payload in ([], {}, {"findings": "clean"}):
+        items, _ = llm_baseline._finding_items(payload)
+        check(items is None, f"malformed baseline findings are rejected ({payload!r})")
+    items, error = llm_baseline._finding_items({"findings": []})
+    check(items == [] and error is None, "an explicit empty findings list is clean")
+    tree = {("a.ftl", "s"): Msg(file="a.ftl", id="s", props={"": "v"})}
+
+    class _UnexpectedFailure(dict):
+        def get(self, *_args, **_kwargs):
+            raise RuntimeError("unexpected conversion failure")
+
+    converted, malformed = llm_baseline._convert_findings(
+        [good, "bad", dict(good, summary=3), _UnexpectedFailure()], "it", tree
+    )
+    check(len(converted) == 1 and malformed == 3,
+          "malformed baseline items do not discard valid siblings")
+
+    suite.section("Checks-only state preserves completed review history")
+    check(runner.pick_mode("auto", False) == "baseline",
+          "a new checks-only locale still needs its baseline")
+    check(runner.pick_mode("auto", True) == "incremental",
+          "an established locale resumes incrementally after a checks-only run")
+    check(runner.pick_mode("auto", False) == "baseline",
+          "a missing review snapshot always requires a baseline")
+
+    suite.section("Each project loads its own check registry")
+    firefox_checks = runner.load_checks(config.load("firefox")).CHECKS
+    android_checks = runner.load_checks(config.load("android")).CHECKS
+    check("term_params" in firefox_checks and "term_params" not in android_checks,
+          "Firefox-only checks do not leak into Android")
+    check("escaping" in android_checks and "escaping" not in firefox_checks,
+          "Android-only checks do not leak into Firefox")
+    missing = type("Project", (), {
+        "tools_dir": "/definitely-not-a-project/tools", "name": "missing"
+    })()
+    try:
+        runner.load_checks(missing)
+    except RuntimeError as exc:
+        check("does not exist" in str(exc), "a missing checks module fails clearly")
+    else:
+        check(False, "a missing checks module fails clearly")
 
     suite.section("The health table never prints a check that did not run")
     import common_checks as cc
@@ -279,6 +322,11 @@ def run(suite) -> None:
     check(not _safe("javascript:alert(1)") and not _safe("data:text/html,x")
           and not _safe("&#106;avascript:x"),
           "and obfuscated script URLs are refused")
+    check(
+        all(not _site()._safe_url(url, "src")
+            for url in ("//evil.example/pixel.png", "\\\\evil.example/pixel.png")),
+        "protocol-relative remote images are refused too",
+    )
 
 
 def _site():

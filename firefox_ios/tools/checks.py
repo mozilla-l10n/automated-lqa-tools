@@ -6,13 +6,13 @@ deliberately *not* run -- each decision taken against the repository rather
 than assumed:
 
 **No plural checks.** There is no plural mechanism in this project at all:
-no `.stringsdict`, no plural trans-units, and moz.l10n parses not one
-`SelectMessage` out of the 1,894 Italian units. `variables` and `selectors`
+no `.stringsdict`, no plural trans-units, and moz.l10n parses no
+`SelectMessage` from the localization corpus. `variables` and `selectors`
 go with them, since both exist to compare plural selectors and interpolated
 arguments that `placeholders` already covers here in the syntax the file
 actually uses.
 
-**No markup check.** Zero HTML-ish tags across those same 1,894 strings.
+**No markup check.** There are no HTML-ish tags in the localization corpus.
 
 **No escaping, term or access-key checks.** Those are Android and Fluent
 concepts; XLIFF escaping is XML escaping and the parser owns it.

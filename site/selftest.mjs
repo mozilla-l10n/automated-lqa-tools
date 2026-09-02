@@ -107,5 +107,7 @@ check(els.report.innerHTML.includes('<h1>'), 'and the report is rendered');
 console.log('\nBad input');
 location.hash=`#/nope/${PROJECTS[0]}`; await listeners.hashchange(); await new Promise(r=>setTimeout(r,300));
 check(els.locale.value==='all', 'an unknown locale falls back to All rather than erroring');
+location.hash='#/%E0%A4%A/firefox'; await listeners.hashchange(); await new Promise(r=>setTimeout(r,300));
+check(els.locale.value==='all', 'a malformed encoded hash falls back rather than breaking navigation');
 console.log(`\n${fail} failed`);
 process.exit(fail?1:0);

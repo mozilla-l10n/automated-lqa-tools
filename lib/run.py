@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import argparse
 import datetime
+import importlib.util
 import json
 import os
 import sys
@@ -38,6 +39,9 @@ import summary  # noqa: E402
 import suppress  # noqa: E402
 
 
+_CHECK_MODULES = {}
+
+
 def load_checks(project):
     """Import the project's own checks module.
 
@@ -45,11 +49,20 @@ def load_checks(project):
     whatever its file format needs, so the module lives next to the project
     rather than here.
     """
-    if project.tools_dir not in sys.path:
-        sys.path.insert(0, project.tools_dir)
-    import importlib
-
-    return importlib.import_module("checks")
+    path = os.path.join(project.tools_dir, "checks.py")
+    cached = _CHECK_MODULES.get(path)
+    if cached is not None:
+        return cached
+    if not os.path.isfile(path):
+        raise RuntimeError(f"checks module does not exist: {path}")
+    name = f"_l10n_checks_{project.name.replace('-', '_')}"
+    spec = importlib.util.spec_from_file_location(name, path)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"cannot load checks module: {path}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    _CHECK_MODULES[path] = module
+    return module
 
 
 def today() -> str:
@@ -130,26 +143,24 @@ def build_systemic(project, fresh):
 CHECKS_ONLY = config.CHECKS_ONLY
 
 
-def pick_mode(requested: str, meta: dict) -> str:
+def pick_mode(requested: str, has_snapshot: bool = False) -> str:
     """The path this run takes, resolving `auto` against what came before.
 
-    A locale whose only run skipped the model has not been reviewed, whatever
-    it has in `state/`: its snapshot is empty and its findings are the check
-    layer's alone. So `auto` still owes it a baseline -- which for an agent
-    project is a different path entirely from replaying the whole tree
-    through the incremental reviewer.
+    The snapshot is the review history. Without one, a locale is owed a
+    baseline even if stale metadata says otherwise. With one, a checks-only
+    run does not erase the earlier review, so the next run stays incremental.
     """
     if requested != "auto":
         return requested
-    if not meta or meta.get("mode") == CHECKS_ONLY:
-        return "baseline"
-    return "incremental"
+    return "incremental" if has_snapshot else "baseline"
 
 
 def process(project, locale, l10n_root, source_root, args, log) -> dict:
     log(f"\n=== {locale}")
     meta = load_meta(project, locale)
-    mode = pick_mode(args.mode, meta)
+    snapshot_path = os.path.join(project.state_dir(locale), "strings.json")
+    previous = snapshot.load(snapshot_path)
+    mode = pick_mode(args.mode, bool(previous))
 
     trees = layout.load(project, locale, l10n_root, source_root)
     l10n, source = trees.l10n, trees.source
@@ -170,7 +181,6 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
 
     counts_conv = conventions.detect(locale, l10n)
     current = snapshot.build(l10n, source)
-    previous = snapshot.load(os.path.join(project.state_dir(locale), "strings.json"))
     delta = snapshot.diff(previous, current)
     log(f"  delta: {delta.summary()}")
 
@@ -221,7 +231,7 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
         # partition failed, and reading that as "all of it was reviewed" is
         # how a locale used to be marked complete without a string being read.
         reviewed_keys = {k for k in l10n if k[0] in pass_.covered}
-        trusted_keys = reviewed_keys
+        trusted_keys = {k for k in l10n if k[0] in pass_.trusted}
         reviewed = len(reviewed_keys)
         if pass_.clean:
             log(f"  partitions returning nothing: {', '.join(sorted(pass_.clean))}")
@@ -419,7 +429,7 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
         log(f"  report {'updated' if changed else 'unchanged'}")
         findings_mod.save(project, locale, stored)
         snapshot.save(
-            os.path.join(project.state_dir(locale), "strings.json"),
+            snapshot_path,
             snapshot.merge(previous, current, reviewed_keys),
         )
         conventions.save(project, locale, counts_conv)
@@ -456,7 +466,7 @@ def _ensure_locale_files(project, locale, counts_conv, log) -> None:
 
 def resolve_trees(project, args, log):
     """Point at local clones, or make shallow ones."""
-    work = os.path.join(config.REPO_ROOT, "work")
+    work = os.path.join(config.REPO_ROOT, "work", project.name)
     if args.source_dir:
         source_root = repos.ensure_local(args.source_dir)
     else:
@@ -506,6 +516,9 @@ def main(argv=None) -> int:
     ap.add_argument("--source-dir", help="use an existing en-US source clone")
     ap.add_argument("--quiet", action="store_true")
     args = ap.parse_args(argv)
+
+    if args.limit < 0:
+        ap.error("--limit must be zero or greater")
 
     log = Log(args.quiet)
     project = config.load(args.project)

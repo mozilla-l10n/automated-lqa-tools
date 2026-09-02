@@ -43,7 +43,7 @@ llm:
 # Not run, and why -- each verified against the tree rather than assumed:
 #   variables, selectors, plurals  this project has no plurals at all; there
 #                                  is no .stringsdict and no plural trans-unit
-#   markup                         zero HTML tags in 1,894 Italian strings
+#   markup                         no HTML tags in the localization corpus
 #   escaping, term_params,         Android and Fluent concepts with no
 #   accesskey                      counterpart in XLIFF
 checks:
@@ -57,14 +57,14 @@ check_overrides: {}
 systemic_threshold: 25
 
 # A from-scratch review batches strings through the API. A locale is a
-# single 684 KB file holding all 1,894 units, so source and target together
+# single large file holding roughly 1,900 units, so source and target together
 # are more than one agent can read -- the same reason fenix batches.
 baseline: batched
 
 # The agent strategy does not apply here, and saying so is better than
 # leaving a partition list that looks usable. Partitions exist to give an
-# agent a readable slice of the tree, but a locale is a single 684 KB file:
-# every one of the 95 groups resolves to the same path, so any split hands
+# agent a readable slice of the tree, but a locale is a single large file:
+# every group resolves to the same path, so any split hands
 # the agent the whole thing. --baseline-strategy agent is refused for this
 # project rather than silently doing that.
 supports_agent_baseline: false
