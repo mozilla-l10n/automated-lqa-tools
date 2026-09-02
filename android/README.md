@@ -73,8 +73,8 @@ export ANTHROPIC_API_KEY=...
 reference. Both are used exactly as they are on disk, so pull first.
 
 A from-scratch review **batches strings through the API** rather than handing
-whole files to an agent, because fenix keeps all 1,918 of its strings in one
-375 KB `strings.xml` — source and target together are more than one agent can
+whole files to an agent, because Fenix keeps thousands of strings in one
+large `strings.xml` — source and target together are more than one agent can
 read. Unlike Fluent, an Android string carries its context in its own
 developer comment rather than in neighbouring entries, so little is lost.
 

@@ -52,8 +52,8 @@ class Trees:
     source_errors: dict = field(default_factory=dict)
     # Reference path -> the parser's complaint, for files that did not parse.
     # Collected while loading, because parsing the tree a second time just to
-    # ask this doubled every run -- and for the XLIFF layout, where 95 keys
-    # resolve to one 684 KB file, it re-read that file 95 times.
+    # ask this doubled every run -- and for the XLIFF layout, where many keys
+    # resolve to one large file, it re-read that file once per key.
     syntax_errors: dict = field(default_factory=dict)
 
 

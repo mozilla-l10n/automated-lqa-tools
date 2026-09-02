@@ -228,6 +228,16 @@ def _parse_result(text: str):
     return None, "no JSON object in the reply"
 
 
+def _finding_items(data) -> tuple[list | None, str | None]:
+    """Validate the reply envelope; individual findings are handled separately."""
+    if not isinstance(data, dict):
+        return None, "the top-level JSON value is not an object"
+    items = data.get("findings")
+    if not isinstance(items, list):
+        return None, "`findings` is not a list"
+    return items, None
+
+
 @dataclass
 class Baseline:
     """The result of a whole baseline pass.
@@ -235,6 +245,10 @@ class Baseline:
     ``clean`` and ``failed`` are kept apart because they mean opposite
     things: a clean partition is evidence, a failed one is the absence of it.
     They used to share one list called ``empty``.
+
+    ``trusted`` contains files whose reply had no malformed finding. A reply
+    with one bad item still advances coverage and keeps its valid siblings,
+    but its silence cannot close an existing finding.
     """
 
     findings: list = field(default_factory=list)
@@ -242,6 +256,7 @@ class Baseline:
     covered: set = field(default_factory=set)
     failed: list = field(default_factory=list)
     attempted: int = 0
+    trusted: set = field(default_factory=set)
 
 
 @dataclass
@@ -335,7 +350,12 @@ def _run_partition(project, locale, l10n_root, source_root, name, files, log,
         log(f"    partition {name}: reply was not JSON ({error}); "
             f"re-run it with --partitions {name}")
         return Outcome(name, False, reason=f"reply was not JSON ({error})")
-    return Outcome(name, True, findings=data.get("findings", []))
+    items, error = _finding_items(data)
+    if items is None:
+        log(f"    partition {name}: malformed reply ({error}); "
+            f"re-run it with --partitions {name}")
+        return Outcome(name, False, reason=f"malformed reply ({error})")
+    return Outcome(name, True, findings=items)
 
 
 def _claude_bin() -> str:
@@ -345,6 +365,26 @@ def _claude_bin() -> str:
             "the `claude` CLI is required for baseline reviews but is not on PATH"
         )
     return found
+
+
+def _convert_findings(items, locale, l10n) -> tuple[list[Finding], int]:
+    """Convert valid findings and count malformed siblings."""
+    from llm_incremental import _to_finding
+
+    converted = []
+    malformed = 0
+    for raw in items:
+        if not isinstance(raw, dict):
+            malformed += 1
+            continue
+        try:
+            finding = _to_finding(locale, raw, l10n)
+        except Exception:  # noqa: BLE001 - one malformed item, not the partition
+            malformed += 1
+            continue
+        if finding is not None:
+            converted.append(finding)
+    return converted, malformed
 
 
 def review(project, locale, l10n_root, source_root, l10n, trees=None, only=None, log=print):
@@ -360,8 +400,6 @@ def review(project, locale, l10n_root, source_root, l10n, trees=None, only=None,
     file falls into ``other``, and the split silently stops existing. It did:
     45,440 files from 230 locales in one bucket.
     """
-    from llm_incremental import _to_finding
-
     configured = project.data.get("partitions")
     locale_paths = dict(trees.locale_paths) if trees else {}
     files, skipped = comparable_files(trees)
@@ -387,6 +425,7 @@ def review(project, locale, l10n_root, source_root, l10n, trees=None, only=None,
     clean: list[str] = []
     failed: list[tuple[str, str]] = []
     covered: set[str] = set()
+    trusted: set[str] = set()
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         futures = {
@@ -407,20 +446,28 @@ def review(project, locale, l10n_root, source_root, l10n, trees=None, only=None,
             if not outcome.ok:
                 failed.append((name, outcome.reason))
                 continue
-            # Only now are these files reviewed. A partition that failed
-            # leaves its files out of `covered`, so their snapshot hashes do
-            # not advance and the next run offers them again.
+            converted, malformed = _convert_findings(
+                outcome.findings, locale, l10n
+            )
             covered.update(files)
+            results.extend(converted)
+            if malformed:
+                log(f"    partition {name}: discarded {malformed} malformed finding(s)")
+            else:
+                trusted.update(files)
             if not outcome.findings:
                 clean.append(name)
-            for raw in outcome.findings:
-                finding = _to_finding(locale, raw, l10n)
-                if finding is not None:
-                    results.append(finding)
 
     log(f"    baseline: {len(results)} findings from "
         f"{len(partitions) - len(failed)} of {len(partitions)} partitions")
     if failed:
         log("    did NOT review: "
             + "; ".join(f"{n} ({why})" for n, why in sorted(failed)))
-    return Baseline(results, clean, covered, failed, len(partitions))
+    return Baseline(
+        findings=results,
+        clean=clean,
+        covered=covered,
+        failed=failed,
+        attempted=len(partitions),
+        trusted=trusted,
+    )

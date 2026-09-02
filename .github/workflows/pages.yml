@@ -13,12 +13,11 @@ on:
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
-# Nothing here writes to the repository. The Pages permissions belong to
-# `deploy` alone -- `build` only reads the tree and uploads an artifact.
+# The Pages permissions belong to `deploy` alone -- `build` only reads the
+# tree and uploads an artifact.
 permissions:
   contents: read
 
-# Never let two deployments race; let a newer one win.
 concurrency:
   group: pages
   cancel-in-progress: true
@@ -28,8 +27,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      # configure-pages only reads the site's settings here;
-      # it is not being asked to enable Pages.
       pages: read
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1

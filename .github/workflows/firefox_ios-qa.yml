@@ -1,20 +1,12 @@
 name: Firefox iOS l10n QA
 
-# Weekly, Monday morning, and on demand.
-#
 # Separate from the other workflows on purpose: different reviewers, a
 # different repository, and its own pull request on l10n-qa/firefox_ios, so
 # no team has to read another's findings.
 #
 # Weekly rather than daily: findings are a backlog a locale team works
-# through over weeks, not a build to babysit. A week of Pontoon syncs is
-# still a small delta next to the 18,000 strings in a locale, and the pull
-# request is cumulative anyway, so nothing is lost by looking less often.
-# Monday morning so the queue is there when the week starts.
-#
-# The three projects are twenty minutes apart rather than fired together:
-# each one fans out over its own locales, and they share one API key and
-# one pool of runners.
+# through over weeks, and the pull request is cumulative anyway. The three
+# projects are staggered because they share one API key and one runner pool.
 on:
   workflow_dispatch:
     inputs:
@@ -40,17 +32,14 @@ on:
         type: boolean
   schedule:
     - cron: '25 7 * * 1'   # Monday, 07:25 UTC
-      # UTC: GitHub cron has no timezone, so this is an hour later
-      # in Rome over the summer than it is in the winter.
 
 concurrency:
   # Runs push to a shared branch, so never let two overlap.
   group: firefox-ios-l10n-qa
   cancel-in-progress: false
 
-# Read-only by default. Only `propose` writes, and it says so itself:
-# a job-level block replaces this one rather than adding to it, so
-# nothing here can widen a job that does not ask.
+# Read-only by default. A job-level block replaces this one rather than
+# adding to it, so nothing here can widen a job that does not ask.
 permissions:
   contents: read
 
@@ -92,7 +81,6 @@ jobs:
   review:
     needs: plan
     runs-on: ubuntu-latest
-    # Reads the tree and hands its findings back as an artifact.
     permissions:
       contents: read
     timeout-minutes: 180
@@ -179,18 +167,39 @@ jobs:
     # Propose whatever succeeded, even if some locales failed.
     if: ${{ always() && !inputs.dry_run }}
     runs-on: ubuntu-latest
-    # The one job that writes: it pushes the branch and opens the
-    # pull request.
     permissions:
       contents: write
       pull-requests: write
     env:
       BRANCH: l10n-qa/firefox_ios
       BASE: ${{ github.ref_name }}
+      # A push or pull request made with GITHUB_TOKEN cannot start a workflow
+      # run, so `Checks` on the QA pull request sits at "action_required"
+      # until somebody approves it by hand. No setting lifts that; the actor
+      # has to be something other than github-actions[bot]. QA_PR_TOKEN is a
+      # fine-grained PAT with contents:write and pull-requests:write on this
+      # repository alone. It falls back to github.token so a run still
+      # proposes its findings when the secret is missing or expired.
+      GH_TOKEN: ${{ secrets.QA_PR_TOKEN || github.token }}
     steps:
+      - name: Say which identity is proposing
+        # Tested through the environment, not interpolated into the script:
+        # a secret pasted into a shell line is one quote away from being a
+        # syntax error.
+        env:
+          HAVE_PAT: ${{ secrets.QA_PR_TOKEN != '' }}
+        run: |
+          if [ "$HAVE_PAT" = 'true' ]; then
+            echo "proposing as the QA_PR_TOKEN owner; the PR's checks will run"
+          else
+            echo "::warning::QA_PR_TOKEN is not set; falling back to GITHUB_TOKEN. The pull request is still opened, but its checks will need approving by hand."
+          fi
+
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
+          # Kept for the `git push` below, which reuses this credential.
+          token: ${{ secrets.QA_PR_TOKEN || github.token }}
 
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
@@ -265,15 +274,11 @@ jobs:
       - name: Open or update the pull request
         if: steps.commit.outputs.changed == 'true'
         env:
-          GH_TOKEN: ${{ github.token }}
           INPUTS_LOCALES: ${{ inputs.locales || 'all' }}
         run: |
           set -euo pipefail
-          # The body leads with the two things that cannot wait for the
-          # queue: strings that do not render, and strings where the
-          # translation makes the product say something the en-US never
-          # said. Generated, not sliced out of the rendered page, so an
-          # edit to that page cannot quietly change what a reviewer sees.
+          # Generated, not sliced out of the rendered page, so an edit to
+          # that page cannot quietly change what a reviewer sees.
           python lib/summary.py --project firefox_ios --pr-body > /tmp/pr-body.md
 
           if gh pr view "$BRANCH" --json state --jq .state 2>/dev/null | grep -qx OPEN; then

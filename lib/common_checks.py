@@ -289,8 +289,8 @@ def check_completeness(project, locale, trees) -> Health:
 
     # Recorded while the tree was loaded, verbatim. Re-parsing every file
     # here to ask the same question doubled the work of a run, and where many
-    # keys resolve to one file -- 95 XLIFF groups in a single 684 KB file --
-    # it re-read that file once per key.
+    # XLIFF groups resolve to one large file it re-read that file once per
+    # group.
     h.syntax_errors = [
         f"{rel}: {message}"
         for rel, message in sorted(getattr(trees, "syntax_errors", {}).items())

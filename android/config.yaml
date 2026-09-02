@@ -56,8 +56,8 @@ check_overrides: {}
 systemic_threshold: 25
 
 # A from-scratch review batches strings through the API rather than handing
-# whole files to an agent. Fenix keeps all 1,918 of its strings in one
-# 375 KB strings.xml, so source and target together are more than one agent
+# whole files to an agent. Fenix keeps thousands of strings in one large
+# strings.xml, so source and target together are more than one agent
 # can read; and unlike Fluent, an Android string carries its context in its
 # own developer comment rather than in neighbouring entries, so little is
 # lost by reviewing them in batches.

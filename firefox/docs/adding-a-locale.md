@@ -34,7 +34,7 @@ A partition that fails or times out does not lose the others. Re-run just
 that one:
 
 ```bash
-python firefox/tools/run.py --locale cs --mode baseline --partitions devtools
+python lib/run.py --project firefox --locale cs --mode baseline --partitions devtools
 ```
 
 ## Scale, and how to bound it
@@ -48,7 +48,7 @@ To spread it over several runs, take a few partitions at a time with
 all:
 
 ```bash
-python firefox/tools/run.py --locale cs --no-llm --dry-run
+python lib/run.py --project firefox --locale cs --no-llm --dry-run
 ```
 
 That runs the deterministic checks over the whole tree, prints the health

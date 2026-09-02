@@ -87,6 +87,8 @@ def _safe_url(value: str, attr: str = "href") -> bool:
     raw = "".join(c for c in raw if c.isprintable()).strip()
     if not raw:
         return False
+    if raw.replace("\\", "/").startswith("//"):
+        return attr != "src"
     if raw.startswith(("#", "/", "./", "../")):
         return True
     if ":" not in raw.split("/")[0]:

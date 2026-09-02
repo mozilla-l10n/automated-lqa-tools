@@ -7,7 +7,7 @@ Localization quality review for **Firefox desktop**, plus the shared
 |---|---|
 | Localized strings | [`mozilla-l10n/firefox-l10n`](https://github.com/mozilla-l10n/firefox-l10n) — one directory per locale |
 | en-US reference | [`mozilla-l10n/firefox-l10n-source`](https://github.com/mozilla-l10n/firefox-l10n-source) — same relative paths |
-| Locales checked | 14, listed in [`config.yaml`](config.yaml) |
+| Locales checked | 20, listed in [`config.yaml`](config.yaml) |
 | Formats | `.ftl`, `.properties`, `.ini` (no `.dtd` — that migration is done) |
 | Workflow | **Actions → Firefox l10n QA** |
 
@@ -16,7 +16,7 @@ config.yaml          which repositories, which locales, which model
 RUNBOOK.md           the manual review method this automates
 docs/                how to add a locale, how to flag a false positive
 prompts/             the review prompts and the finding schema
-tools/               the pipeline
+tools/               Firefox-specific checks and their self-test
 locales/<code>/      conventions.md + suppressions.yaml  (you edit these)
 state/<code>/        snapshot, findings, metadata          (the pipeline owns these)
 (reports live at ../reports/<locale>/firefox.md)
@@ -55,11 +55,13 @@ Locally, from the repository root:
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 
 # deterministic checks only, writes nothing
-.venv/bin/python firefox/tools/run.py --locale it --no-llm --dry-run
+.venv/bin/python lib/run.py --project firefox --locale it --no-llm --dry-run \
+    --l10n-dir ~/mozilla/git/firefox-l10n \
+    --source-dir ~/mozilla/git/firefox-quarantine
 
 # the real thing, against clones you already have
 export ANTHROPIC_API_KEY=...
-.venv/bin/python firefox/tools/run.py --locale it \
+.venv/bin/python lib/run.py --project firefox --locale it \
     --l10n-dir ~/mozilla/git/firefox-l10n \
     --source-dir ~/mozilla/git/firefox-quarantine
 ```

@@ -37,7 +37,6 @@ import suppress  # noqa: E402
 # instead of being quietly deleted -- the difference between "the check
 # broke" and "the defect is gone" is the whole point of the system.
 MUST_FIND = [
-    ("tr", "term_params", "fxa-signout-dialog-body-aiwindow"),
     # Polish needs one/few/many; with only one/other, five comments render
     # the `few` form. en-US selects on the `one` *category* here, so this is
     # real grammatical agreement rather than a one-versus-many choice.
@@ -46,6 +45,8 @@ MUST_FIND = [
 ]
 
 FIXED_UPSTREAM = [
+    # The Turkish call now passes the parameter its term selects on.
+    ("tr", "term_params", "fxa-signout-dialog-body-aiwindow"),
     # Repaired by the Italian team in a Pontoon sync on 2026-08-20, between
     # two runs of this suite -- which is the tracking working, not a
     # regression in the check.
@@ -437,14 +438,14 @@ def run(l10n_dir, source_dir, project) -> int:
     # every report called the result a completed baseline. The deterministic
     # checks had run; nothing had read a string.
     import run as run_mod
-    check(run_mod.pick_mode("auto", {}) == "baseline",
+    check(run_mod.pick_mode("auto", False) == "baseline",
           "a locale with no state gets a baseline")
-    check(run_mod.pick_mode("auto", {"mode": "incremental"}) == "incremental",
+    check(run_mod.pick_mode("auto", True) == "incremental",
           "a reviewed locale gets an incremental run")
-    check(run_mod.pick_mode("auto", {"mode": "checks-only"}) == "baseline",
+    check(run_mod.pick_mode("auto", False) == "baseline",
           "a locale whose only run skipped the model is still owed its "
-          "baseline, state or no state")
-    check(run_mod.pick_mode("incremental", {}) == "incremental",
+          "baseline")
+    check(run_mod.pick_mode("incremental", False) == "incremental",
           "an explicit --mode is never second-guessed")
     check(report_mod._reviewer_warning({"mode": "checks-only"}).startswith(">"),
           "and its report says outright that the reviewer did not run")

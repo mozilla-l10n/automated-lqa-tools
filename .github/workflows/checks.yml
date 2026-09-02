@@ -1,21 +1,13 @@
 name: Checks
 
-# Runs on every pull request and every push to main. Deliberately cheap and
-# hermetic: no API key, no upstream clone, nothing written anywhere.
+# Deliberately cheap and hermetic: no API key, no upstream clone, nothing
+# written anywhere.
 #
-# The three project self-tests are not here, and cannot be. They pin real
-# defects against real strings -- that is what makes them worth having -- so
-# they need firefox-l10n, android-l10n and firefoxios-l10n on disk, and
-# firefox-l10n alone is 1.6 GB. What runs here is `lib/selftest_unit.py`,
-# which is the part of the same body of tests that needs no clone: finding
-# identity, the lifecycle, suppression, the model-response parser, the
-# snapshot delta, and the markdown the published site is built from.
-#
-# Run the project suites locally before changing anything in lib/:
-#
-#   .venv/bin/python firefox/tools/selftest.py
-#   .venv/bin/python android/tools/selftest.py
-#   .venv/bin/python firefox_ios/tools/selftest.py
+# The three project self-tests cannot run here: they pin real defects
+# against real strings, so they need firefox-l10n, android-l10n and
+# firefoxios-l10n on disk, and firefox-l10n alone is 1.6 GB. Run them
+# locally before changing anything in lib/. What runs here is the part of
+# the same body of tests that needs no clone.
 on:
   pull_request:
   push:
