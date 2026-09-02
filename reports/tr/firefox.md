@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bcd40327226f` |
+| **Generated** | 2026-09-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a905fc074817` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-08-31 @ `67b14d26eb36` |
+| **Previous run** | 2026-09-01 @ `bcd40327226f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,151 |
+| **Strings reviewed this run** | 55 of 18,206 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,17 +18,65 @@ Also for tr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (9)
 
-_No new findings._
+- `newtab-privacy-etp-off-faster-browsing` — `browser/browser/newtab/newtab.ftl` — "Fewer trackers" translated as "Be tracked less" instead of referring to trackers.
+    - Current: `Daha az takip edilin.`
+    - Source: `Faster browsing. Fewer trackers.`
+    - Suggest: `Daha az takip kodu.`
+    - en-US "Fewer trackers" is a noun phrase about trackers; the Turkish turns it into an imperative claim about the user being tracked less. Elsewhere in this batch "trackers" is rendered "takip kodları".
+- `newtab-privacy-message-info-4` — `browser/browser/newtab/newtab.ftl` — "protection by default" rendered as "protection anytime, anywhere", dropping the default-setting meaning.
+    - Current: `{ -brand-short-name } demek her an, her yerde korunma demektir.`
+    - Source: `Choosing { -brand-short-name } means choosing protection by default.`
+    - Suggest: `{ -brand-short-name } demek varsayılan olarak korunma demektir.`
+    - The source says choosing the browser means protection is on by default; "her an, her yerde" (anytime, anywhere) is a different claim not present in the en-US.
+- `newtab-privacy-message-info-10` — `browser/browser/newtab/newtab.ftl` — "strong, unique logins" translated as "strong and unique accounts".
+    - Current: `güçlü ve benzersiz hesaplar kullanmak`
+    - Source: `Save passwords in { -brand-short-name } to use strong, unique logins everywhere.`
+    - Suggest: `güçlü ve benzersiz giriş bilgileri kullanmak`
+    - "logins" refers to login credentials, not accounts ("hesaplar"); the Turkish changes the meaning of what the user is advised to use.
+- `newtab-privacy-message-promo-signin-1` — `browser/browser/newtab/newtab.ftl` — "encrypted" dropped and replaced by vague "güvenle saklayın".
+    - Current: `tüm cihazlarınızda güvenle saklayın`
+    - Source: `Keep bookmarks, passwords, and tabs encrypted across devices with your { -vendor-short-name } account.`
+    - Suggest: `tüm cihazlarınızda şifreli olarak saklayın`
+    - The en-US specifically states data is kept encrypted across devices; the Turkish only says "store securely", losing the encryption claim.
+- `ipprotection-summer-promo-offramp-subscriber-description` — `browser/browser/ipProtection.ftl` — Statement of fact "You now get" turned into a possibility "you can have".
+    - Current: `artık sınırsız bant genişliğine ve daha fazla konuma sahip olabilirsiniz`
+    - Source: `You now get unlimited bandwidth and more locations as a { -mozilla-vpn-brand-name } subscriber.`
+    - Suggest: `artık sınırsız bant genişliğine ve daha fazla konuma sahipsiniz`
+    - The source tells subscribers they now have these benefits; "sahip olabilirsiniz" makes it a conditional possibility.
+- `ipprotection-connection-status-blocked-error-description-1` — `browser/browser/ipProtection.ftl` — Definite statement "limit where you can use VPN" weakened to "may limit".
+    - Current: `VPN’i kullanabileceğiniz yerleri sınırlayabilir`
+    - Source: `Local laws and restrictions limit where you can use VPN. <a data-l10n-name="learn-more-link">Learn more</a>`
+    - Suggest: `VPN’i kullanabileceğiniz yerleri sınırlıyor`
+    - en-US "limit" is a factual statement explaining why the connection is blocked; the Turkish "sınırlayabilir" (may limit) weakens it into speculation.
+- `ipprotection-feature-introduction-text-summer-promo-1` — `browser/browser/ipProtection.ftl` — Straight apostrophe used instead of the typographic apostrophe.
+    - Current: `31 Ağustos'a`
+    - Source: `Turn it on to keep your browsing more private. <a data-l10n-name="summer-promo-link">Get unlimited bandwidth</a> and more locations to browse from. Now until August 31.`
+    - Suggest: `31 Ağustos’a`
+    - The locale convention is the typographic apostrophe ’ (U+2019); other strings in the same file use "31 Ağustos’tan".
+- `url-classifier-content-classifier-force-third-party` — `toolkit/toolkit/about/url-classifier.ftl` — "Force" is dropped, weakening the checkbox label to "treat as third-party".
+    - Current: `Üst çerçeveye göre üçüncü taraf olarak değerlendir`
+    - Source: `Force third-party to top frame`
+    - Suggest: `Üst çerçeveye göre üçüncü taraf olmaya zorla`
+    - The developer comment states this forces third-party treatment regardless of the URLs entered; "değerlendir" loses the forcing semantics.
+- `newtab-stocks-in-watchlist` — `browser/browser/newtab/newtab.ftl` — Sentence is incomplete/ungrammatical and adds "zaten" (already), which the source does not say.
+    - Current: `{ $name } zaten takip listenize`
+    - Source: `{ $name } is in your watchlist`
+    - Suggest: `{ $name } takip listenizde`
+    - en-US "{ $name } is in your watchlist" states the stock is in the watchlist; the Turkish uses the dative "listenize" with no verb, leaving a broken fragment, and inserts "zaten".
 
 ### ✅ Fixed since the last run (0)
 
 _Nothing was fixed._
 
-### ↩︎ Withdrawn — no longer considered a defect (0)
+### ↩︎ Withdrawn — no longer considered a defect (1)
 
-_Nothing withdrawn._
+- `fxa-signout-dialog-body-aiwindow` — `browser/browser/aiWindow.ftl` — `fxa-signout-dialog-body-aiwindow` calls `-smart-window-brand-name` with ['plural-form'], but that term selects on ['form']
+    - Current: `Eşitlenen veriler hesabınızda kalmaya devam edecek. Açık olan { -smart-window-brand-name } klasik pencerelere dönüşecek.`
+    - Source: `Synced data will remain in your account. Open { -smart-window-brand-name } will switch to Classic Windows.`
+    - Suggest: `{ -smart-window-brand-name(form: "lowercase-plural") }`
+    - The term falls back to its catch-all variant, so the intended form is never selected.
 
 ### 🔁 String changed, defect not verifiable — needs a re-read (0)
 
@@ -45,33 +93,27 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 362 |
-| Strings | 18,151 |
-| Missing strings | 68 |
+| Strings | 18,206 |
+| Missing strings | 13 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
-| Term parameter mismatches | 1 |
+| Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 5 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 0 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 27 |
+| Typography deviations from this locale's own norm | 28 |
 
 ### Completeness
 
-**68 strings** are not translated yet, concentrated in:
+**13 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 38
-- `toolkit/toolkit/about/url-classifier.ftl` — 10
-- `browser/browser/ipProtection.ftl` — 9
-- `browser/browser/firefoxView.ftl` — 5
-- `browser/browser/sharePanel.ftl` — 3
-- `browser/browser/preferences/preferences.ftl` — 2
-- `browser/browser/preferences/formAutofill.ftl` — 1
+- `browser/browser/newtab/newtab.ftl` — 13
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -82,38 +124,42 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 676, `curly-single` 166, `straight-double` 29 | **curly-double** |
-| apostrophe | `typographic` 966, `straight` 50 | **typographic** |
-| ellipsis | `char` 460 | **char** |
+| apostrophe | `typographic` 981, `straight` 51 | **typographic** |
+| ellipsis | `char` 463 | **char** |
 | dash | `em` 72, `en` 2 | **em** |
 | nbsp | `total` 9, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 2, `formal` 58 | **formal** |
+| register | `informal` 2, `formal` 59 | **formal** |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **typography — 27 strings** — 27 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
-    - Affected: `BadOpaqueRedirectInterceptionWithURL`, `BlockAutoplayWebAudioStartError`, `InterceptedErrorResponseWithURL`, `InterceptedUsedResponseWithURL`, `LenientThisWarning`, `ManifestIdIsInvalid`, `MediaEMENoCodecsDeprecatedWarning`, `NavigatorGetUserMediaWarning`, `PEDisallowedImportRule`, `PushMessageBadCryptoError`, `PushMessageBadSalt`, `RewriteYouTubeEmbedPathParams` …and 15 more
+- **typography — 28 strings** — 28 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
+    - Affected: `BadOpaqueRedirectInterceptionWithURL`, `BlockAutoplayWebAudioStartError`, `InterceptedErrorResponseWithURL`, `InterceptedUsedResponseWithURL`, `LenientThisWarning`, `ManifestIdIsInvalid`, `MediaEMENoCodecsDeprecatedWarning`, `NavigatorGetUserMediaWarning`, `PEDisallowedImportRule`, `PushMessageBadCryptoError`, `PushMessageBadSalt`, `RewriteYouTubeEmbedPathParams` …and 16 more
 
 ---
 
-## 3. Open findings (124)
+## 3. Open findings (132)
 
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+
+- `newtab-privacy-message-info-4` — `browser/browser/newtab/newtab.ftl` — "protection by default" rendered as "protection anytime, anywhere", dropping the default-setting meaning.
+    - Current: `{ -brand-short-name } demek her an, her yerde korunma demektir.`
+    - Source: `Choosing { -brand-short-name } means choosing protection by default.`
+    - Suggest: `{ -brand-short-name } demek varsayılan olarak korunma demektir.`
+    - The source says choosing the browser means protection is on by default; "her an, her yerde" (anytime, anywhere) is a different claim not present in the en-US.
+
+_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 4 |
-| 2 | Wrong content (says something other than the English) | 41 |
-| 3 | Degraded language (grammar, spelling, terminology) | 64 |
-| 4 | Cosmetic (typography, spacing) | 15 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 3 |
+| 2 | Wrong content (says something other than the English) | 45 |
+| 3 | Degraded language (grammar, spelling, terminology) | 68 |
+| 4 | Cosmetic (typography, spacing) | 16 |
 
 ### A. Functional, markup, variables & plurals
 
-- `fxa-signout-dialog-body-aiwindow` — `browser/browser/aiWindow.ftl` — `fxa-signout-dialog-body-aiwindow` calls `-smart-window-brand-name` with ['plural-form'], but that term selects on ['form']
-    - Current: `Eşitlenen veriler hesabınızda kalmaya devam edecek. Açık olan { -smart-window-brand-name } klasik pencerelere dönüşecek.`
-    - Source: `Synced data will remain in your account. Open { -smart-window-brand-name } will switch to Classic Windows.`
-    - Suggest: `{ -smart-window-brand-name(form: "lowercase-plural") }`
-    - The term falls back to its catch-all variant, so the intended form is never selected.
 - `autofill-address-country` — `browser/browser/preferences/formAutofill.ftl` — "Ülke" for en "Country or Region"; "or Region" dropped, and it now collides with autofill-address-country-only = "Ülke".
     - Source: `Country or Region`
 - `autofill-address-county` — `browser/browser/preferences/formAutofill.ftl` — "İlçe", already used by autofill-address-district (District). County is a first-level division listed next to Province/State.
@@ -161,10 +207,40 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `description: Choose custom VPN locations and add protection to all your apps on up to five devices, whether you’re at home or on public Wi-Fi. label: Get even more protection outside { -brand-short-name } with { -mozill…`
     - Suggest: `en fazla beş cihazda`
     - The en-US says "on up to five devices"; the Turkish states flatly "on five separate devices", losing the maximum-limit meaning.
+- `ipprotection-connection-status-blocked-error-description-1` — `browser/browser/ipProtection.ftl` — Definite statement "limit where you can use VPN" weakened to "may limit".
+    - Current: `VPN’i kullanabileceğiniz yerleri sınırlayabilir`
+    - Source: `Local laws and restrictions limit where you can use VPN. <a data-l10n-name="learn-more-link">Learn more</a>`
+    - Suggest: `VPN’i kullanabileceğiniz yerleri sınırlıyor`
+    - en-US "limit" is a factual statement explaining why the connection is blocked; the Turkish "sınırlayabilir" (may limit) weakens it into speculation.
+- `ipprotection-summer-promo-offramp-subscriber-description` — `browser/browser/ipProtection.ftl` — Statement of fact "You now get" turned into a possibility "you can have".
+    - Current: `artık sınırsız bant genişliğine ve daha fazla konuma sahip olabilirsiniz`
+    - Source: `You now get unlimited bandwidth and more locations as a { -mozilla-vpn-brand-name } subscriber.`
+    - Suggest: `artık sınırsız bant genişliğine ve daha fazla konuma sahipsiniz`
+    - The source tells subscribers they now have these benefits; "sahip olabilirsiniz" makes it a conditional possibility.
 - `mr2022-background-update-toast-title` — `browser/browser/newtab/asrouter.ftl` — the fourth sentence "No compromises." is dropped entirely.
     - Source: `New { -brand-short-name }. More private. Fewer trackers. No compromises.`
 - `windows-10-eos-challenger-callout-title` — `browser/browser/newtab/asrouter.ftl` — "gereksiz özelliklerle dolu halde gelmez" ≠ en "isn't preloaded like other Big Tech browsers" (= not pre-installed on the device). The second sentence "That's the point." is also dropped.
     - Source: `{ -brand-product-name } isn’t preloaded like other Big Tech browsers. That’s the point.`
+- `newtab-privacy-etp-off-faster-browsing` — `browser/browser/newtab/newtab.ftl` — "Fewer trackers" translated as "Be tracked less" instead of referring to trackers.
+    - Current: `Daha az takip edilin.`
+    - Source: `Faster browsing. Fewer trackers.`
+    - Suggest: `Daha az takip kodu.`
+    - en-US "Fewer trackers" is a noun phrase about trackers; the Turkish turns it into an imperative claim about the user being tracked less. Elsewhere in this batch "trackers" is rendered "takip kodları".
+- `newtab-privacy-message-info-10` — `browser/browser/newtab/newtab.ftl` — "strong, unique logins" translated as "strong and unique accounts".
+    - Current: `güçlü ve benzersiz hesaplar kullanmak`
+    - Source: `Save passwords in { -brand-short-name } to use strong, unique logins everywhere.`
+    - Suggest: `güçlü ve benzersiz giriş bilgileri kullanmak`
+    - "logins" refers to login credentials, not accounts ("hesaplar"); the Turkish changes the meaning of what the user is advised to use.
+- `newtab-privacy-message-info-4` — `browser/browser/newtab/newtab.ftl` — "protection by default" rendered as "protection anytime, anywhere", dropping the default-setting meaning.
+    - Current: `{ -brand-short-name } demek her an, her yerde korunma demektir.`
+    - Source: `Choosing { -brand-short-name } means choosing protection by default.`
+    - Suggest: `{ -brand-short-name } demek varsayılan olarak korunma demektir.`
+    - The source says choosing the browser means protection is on by default; "her an, her yerde" (anytime, anywhere) is a different claim not present in the en-US.
+- `newtab-privacy-message-promo-signin-1` — `browser/browser/newtab/newtab.ftl` — "encrypted" dropped and replaced by vague "güvenle saklayın".
+    - Current: `tüm cihazlarınızda güvenle saklayın`
+    - Source: `Keep bookmarks, passwords, and tabs encrypted across devices with your { -vendor-short-name } account.`
+    - Suggest: `tüm cihazlarınızda şifreli olarak saklayın`
+    - The en-US specifically states data is kept encrypted across devices; the Turkish only says "store securely", losing the encryption claim.
 - `media-count` — `browser/browser/pageInfo.ftl` — "Sayaç" (counter/meter) → "Sayı" (en "Count" is a quantity column).
     - Source: `label: Count`
     - Suggest: `"Sayı"`
@@ -221,6 +297,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Max relying party IDs for set minimum PIN length`
 - `about-webauthn-auth-info-preferred-platform-uv-attempts` — `toolkit/toolkit/about/aboutWebauthn.ftl` — parses as "platform user's verification" instead of "platform user verification".
     - Source: `Preferred platform user verification attempts`
+- `url-classifier-content-classifier-force-third-party` — `toolkit/toolkit/about/url-classifier.ftl` — "Force" is dropped, weakening the checkbox label to "treat as third-party".
+    - Current: `Üst çerçeveye göre üçüncü taraf olarak değerlendir`
+    - Source: `Force third-party to top frame`
+    - Suggest: `Üst çerçeveye göre üçüncü taraf olmaya zorla`
+    - The developer comment states this forces third-party treatment regardless of the URLs entered; "değerlendir" loses the forcing semantics.
 - `csp-error-illegal-protocol` — `toolkit/toolkit/global/cspErrors.ftl` — the colon belongs to { $scheme }: "yasaklı bir { $scheme } içeriyor: protokol kaynağı" → "yasaklı bir { $scheme }: protokol kaynağı içeriyor".
     - Current: `{ $scheme }`
     - Source: `‘{ $directive }’ directive contains a forbidden { $scheme }: protocol source`
@@ -266,6 +347,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 - `backup-folder-name` — `browser/browser/backupSettings.ftl` — Geri Yukleme — Geri Yükleme
     - Source: `Restore { -brand-product-name }`
+- `newtab-stocks-in-watchlist` — `browser/browser/newtab/newtab.ftl` — Sentence is incomplete/ungrammatical and adds "zaten" (already), which the source does not say.
+    - Current: `{ $name } zaten takip listenize`
+    - Source: `{ $name } is in your watchlist`
+    - Suggest: `{ $name } takip listenizde`
+    - en-US "{ $name } is in your watchlist" states the stock is in the watchlist; the Turkish uses the dative "listenize" with no verb, leaving a broken fragment, and inserts "zaten".
 - `restored-profile-page-learn-more` — `browser/browser/profiles.ftl` — "Learn more" rendered as the informal singular "Daha fazla bilgi al" where the locale otherwise uses "Daha fazla bilgi alın": protections-panel-description-shim-allowed-learn-more (browser/protectionsPanel.ftl), restored-profile-page-learn-more (browser/profiles.ftl), translations-panel-learn-more-link (browser/translations.ftl), existing-user-tou-learn-more (browser/termsofuse.ftl). (The locale…
     - Source: `Learn more`
 - `protections-panel-description-shim-allowed-learn-more` — `browser/browser/protectionsPanel.ftl` — "Learn more" rendered as the informal singular "Daha fazla bilgi al" where the locale otherwise uses "Daha fazla bilgi alın": protections-panel-description-shim-allowed-learn-more (browser/protectionsPanel.ftl), restored-profile-page-learn-more (browser/profiles.ftl), translations-panel-learn-more-link (browser/translations.ftl), existing-user-tou-learn-more (browser/termsofuse.ftl). (The locale…
@@ -433,6 +519,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 - `reader-view-enter-button` — `browser/browser/browser.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
     - Source: `aria-label: Enter Reader View`
+- `ipprotection-feature-introduction-text-summer-promo-1` — `browser/browser/ipProtection.ftl` — Straight apostrophe used instead of the typographic apostrophe.
+    - Current: `31 Ağustos'a`
+    - Source: `Turn it on to keep your browsing more private. <a data-l10n-name="summer-promo-link">Get unlimited bandwidth</a> and more locations to browse from. Now until August 31.`
+    - Suggest: `31 Ağustos’a`
+    - The locale convention is the typographic apostrophe ’ (U+2019); other strings in the same file use "31 Ağustos’tan".
 - `menu-view-enter-readerview` — `browser/browser/menubar.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
     - Source: `accesskey: R label: Enter Reader View`
 - `mr2022-onboarding-pin-primary-button-label` — `browser/browser/newtab/onboarding.ftl` — set-password-reminder (security/…/pippki.ftl), protections-vpn-header-content-subscribed (browser/protections.ftl), permissions-block-popups-exceptions-button4.description (browser/preferences/preferences.ftl), mr2022-onboarding-pin-primary-button-label [macos variant] (browser/newtab/onboarding.ftl), profiles-delete-profile-confirm (toolkit/about/aboutProfiles.ftl), rights-webservices-term-3, ri…
@@ -476,9 +567,9 @@ _One line each in `locales/tr/dismissed.txt`. Delete the line and the finding re
 
 _No suppression rules have matched._
 
-### Withdrawn to date (0)
+### Withdrawn to date (1)
 
-_Nothing withdrawn._
+- `fxa-signout-dialog-body-aiwindow` — `browser/browser/aiWindow.ftl` — raised by `term_params`, withdrawn 2026-09-02
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 

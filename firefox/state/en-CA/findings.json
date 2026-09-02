@@ -248,7 +248,7 @@
   "file": "toolkit/toolkit/about/aboutAddons.ftl",
   "first_seen": "2026-08-20",
   "impact": 3,
-  "last_seen": "2026-09-01",
+  "last_seen": "2026-09-02",
   "locale": "en-CA",
   "origin": {},
   "rationale": "This locale writes “colour” for “color” in 69 other strings and keeps “color” in 4. This string is byte-identical to en-US, so the substitution looks simply to have been missed.",

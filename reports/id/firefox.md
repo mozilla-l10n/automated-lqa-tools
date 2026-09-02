@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bcd40327226f` |
+| **Generated** | 2026-09-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a905fc074817` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-08-31 @ `67b14d26eb36` |
+| **Previous run** | 2026-09-01 @ `bcd40327226f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 15,531 |
+| **Strings reviewed this run** | 0 of 15,531 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,13 +22,9 @@ Also for id: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — Malformed closing tag `</a >` in `genai-settings-chat-gemini-links`
-    - Current: `Dengan memilih Google Gemini, Anda menyetujui <a data-l10n-name="link1">Persyaratan Layanan Google</a>, <a data-l10n-name="link2">Kebijakan Penggunaan Terlarang untuk AI Generatif</a >, dan <a data-l10n-name="link3">Pem…`
-    - Source: `By choosing Google Gemini, you agree to the <a data-l10n-name="link1">Google Terms of Service</a>, <a data-l10n-name="link2">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name="link3">Gemini Apps Privacy Not…`
-    - Suggest: `By choosing Google Gemini, you agree to the <a data-l10n-name="link1">Google Terms of Service</a>, <a data-l10n-name="link2">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name="link3">Gemini Apps Privacy Not…`
-    - Whitespace inside a closing tag makes it render as literal text.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

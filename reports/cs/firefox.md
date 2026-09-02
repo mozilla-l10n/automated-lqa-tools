@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `bcd40327226f` |
+| **Generated** | 2026-09-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a905fc074817` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-08-31 @ `67b14d26eb36` |
+| **Previous run** | 2026-09-01 @ `bcd40327226f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 18,219 |
+| **Strings reviewed this run** | 2 of 18,219 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -24,11 +24,11 @@ _No new findings._
 
 ### ✅ Fixed since the last run (1)
 
-- `protections-panel-cookie-banner-blocker-view-turn-on-for-site` — `browser/browser/protectionsPanel.ftl` — `protections-panel-cookie-banner-blocker-view-turn-on-for-site` references ['host'], which en-US does not pass
-    - Current: `Zapnout blokování lišť cookie pro { $host }?`
-    - Source: `Turn on Cookie Banner Blocker for this site?`
-    - Suggest: `Turn on Cookie Banner Blocker for this site?`
-    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
+- `webext-perms-update-list-intro-with-data-collection` — `toolkit/toolkit/global/extensions.ftl` — Broken parallel structure: an infinitive is coordinated with a bare accusative noun.
+    - Current: `Zrušit pro zachování aktuální verze a nastavení, nebo aktualizaci pro získání nové verze a schválení změn.`
+    - Source: `Cancel to keep your current version and settings, or update to get the new version and approve the changes.`
+    - Suggest: `Zrušte pro zachování aktuální verze a nastavení, nebo aktualizujte pro získání nové verze a schválení změn.`
+    - en-US uses two parallel imperatives ("Cancel to keep…, or update to get…"); "nebo aktualizaci" leaves the second clause without a verb.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -90,12 +90,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (264)
+## 3. Open findings (263)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 54 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 53 |
 | 2 | Wrong content (says something other than the English) | 121 |
 | 3 | Degraded language (grammar, spelling, terminology) | 61 |
 | 4 | Cosmetic (typography, spacing) | 23 |
@@ -612,11 +612,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Enables experimental support for Service Workers in the Debugger panel. This feature may slow the Developer Tools down and increase memory consumption.`
     - Suggest: `v panelu ladění`
     - Missing length mark; "laděni" is not the correct form here.
-- `webext-perms-update-list-intro-with-data-collection` — `toolkit/toolkit/global/extensions.ftl` — Broken parallel structure: an infinitive is coordinated with a bare accusative noun.
-    - Current: `Zrušit pro zachování aktuální verze a nastavení, nebo aktualizaci pro získání nové verze a schválení změn.`
-    - Source: `Cancel to keep your current version and settings, or update to get the new version and approve the changes.`
-    - Suggest: `Zrušte pro zachování aktuální verze a nastavení, nebo aktualizujte pro získání nové verze a schválení změn.`
-    - en-US uses two parallel imperatives ("Cancel to keep…, or update to get…"); "nebo aktualizaci" leaves the second clause without a verb.
 - `moz-box-item-reorder-handle` — `toolkit/toolkit/global/mozBoxBase.ftl` — Spelling: "Šipka dolu" instead of "Šipka dolů".
     - Current: `Ctrl+Shift+Šipka dolu`
     - Source: `aria-label: Reorder item using Ctrl+Shift+ArrowUp or Ctrl+Shift+ArrowDown`
@@ -1126,6 +1121,7 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (1)
+### Fixed to date (2)
 
+- `webext-perms-update-list-intro-with-data-collection` — `toolkit/toolkit/global/extensions.ftl` — fixed 2026-09-02
 - `protections-panel-cookie-banner-blocker-view-turn-on-for-site` — `browser/browser/protectionsPanel.ftl` — fixed 2026-09-01

@@ -1,23 +1,32 @@
 # Firefox (desktop + shared toolkit/dom strings) — l10n QA
 
-- **Generated:** 2026-09-01
+- **Generated:** 2026-09-02
 - **Locales tracked:** 20 (20 with recorded state)
-- **Findings:** 5,943 raised, 2,178 fixed (36%), 3,688 open
+- **Findings:** 5,954 raised, 2,180 fixed (36%), 3,696 open
 - **Closed by a person:** 18 dismissed, 15 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
 ## Read these first
 
-### Reads as a deliberate edit (0)
+### Reads as a deliberate edit (2)
 
-_None. The reviewer sets this flag only on a finding where the localized text changes what the product says about itself, its users or its behaviour; it is left unset on the vast majority of mistranslations._
+The translation makes the product assert something the en-US never said. Nothing here says the change was intended — that cannot be read off the text, which is exactly the problem, because a user cannot read it off either.
 
-### Broken output — impact 1 (333)
+- **`ru`** `nova-early-access-infobar-title` — `browser/browser/newtab/asrouter.ftl`
+    - "is getting a new look" (future/ongoing) translated as a completed change "Обновлён внешний вид".
+    - Current: `<strong>Обновлён внешний вид { -brand-product-name }.</strong>`
+    - Suggest: `<strong>У { -brand-product-name } скоро появится новый облик.</strong>`
+- **`tr`** `newtab-privacy-message-info-4` — `browser/browser/newtab/newtab.ftl`
+    - "protection by default" rendered as "protection anytime, anywhere", dropping the default-setting meaning.
+    - Current: `{ -brand-short-name } demek her an, her yerde korunma demektir.`
+    - Suggest: `{ -brand-short-name } demek varsayılan olarak korunma demektir.`
+
+### Broken output — impact 1 (330)
 
 The value does not render as intended: a blank string, broken markup, a variable the source never passes.
 
-`id` 83 · `cs` 54 · `es-AR` 50 · `ru` 46 · `hu` 31 · `fy-NL` 13 · `nl` 12 · `pt-BR` 12 · `pl` 11 · `ja` 8 · `en-GB` 4 · `tr` 4 · `zh-CN` 4 · `fr` 1
+`id` 83 · `cs` 53 · `es-AR` 50 · `ru` 46 · `hu` 31 · `fy-NL` 13 · `nl` 12 · `pt-BR` 12 · `pl` 10 · `ja` 8 · `en-GB` 4 · `zh-CN` 4 · `tr` 3 · `fr` 1
 
 - **`cs`** `appmenuitem-new-ai-window` — `browser/browser/aiWindow.ftl`
     - `appmenuitem-new-ai-window` (`.value`) calls `-smart-window-brand-name` with ['capitalization'], but that term selects on ['case', 'plural-form']
@@ -72,34 +81,34 @@ The value does not render as intended: a blank string, broken markup, a variable
     - { $count } 件のパスワードが全漏洩データから見つかりました — 件のパスワードが全漏洩データから見つかりました
     - Current: `{ $count } 件のパスワードが全漏洩データから見つかりました`
     - Suggest: `件のパスワードが全漏洩データから見つかりました`
-- _…and 318 more, in the per-locale reports linked below._
+- _…and 315 more, in the per-locale reports linked below._
 
-### Wrong content — impact 2 (1422)
+### Wrong content — impact 2 (1427)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/firefox.md`.
 
 | Locale | Last run | Mode | Commit | Strings | Missing | Open | Impact 1–2 | Fixed | Dismissed | Suppressed |
 |---|---|---|---|---|---|---|---|---|---|---|
-| [cs](cs/firefox.md) | 2026-09-01 | incremental | `bcd40327` | 18,219 | 0 | **264** | 175 | 1 | 0 | 0 |
-| [de](de/firefox.md) | 2026-09-01 | incremental | `bcd40327` | 18,406 | 0 | **16** | 11 | 71 | 0 | 0 |
-| [en-CA](en-CA/firefox.md) | 2026-09-01 | incremental | `bcd40327` | 18,172 | 47 | **0** | 0 | 14 | 1 | 0 |
-| [en-GB](en-GB/firefox.md) | 2026-09-01 | incremental | `bcd40327` | 18,219 | 0 | **17** | 11 | 12 | 0 | 12 |
-| [es-AR](es-AR/firefox.md) | 2026-09-01 | incremental | `bcd40327` | 18,188 | 31 | **304** | 175 | 142 | 0 | 0 |
-| [es-ES](es-ES/firefox.md) | 2026-09-01 | incremental | `bcd40327` | 17,183 | 1,036 | **30** | 18 | 111 | 0 | 0 |
-| [es-MX](es-MX/firefox.md) | 2026-09-01 | incremental | `bcd40327` | 17,841 | 378 | **21** | 6 | 205 | 0 | 0 |
-| [fr](fr/firefox.md) | 2026-09-01 | incremental | `bcd40327` | 18,406 | 0 | **19** | 7 | 59 | 0 | 0 |
-| [fy-NL](fy-NL/firefox.md) | 2026-09-01 | incremental | `bcd40327` | 18,174 | 45 | **506** | 138 | 334 | 4 | 0 |
-| [hu](hu/firefox.md) | 2026-09-01 | incremental | `bcd40327` | 18,213 | 6 | **276** | 153 | 4 | 0 | 0 |
-| [id](id/firefox.md) | 2026-09-01 | incremental | `bcd40327` | 15,531 | 2,688 | **329** | 257 | 1 | 0 | 0 |
-| [it](it/firefox.md) | 2026-09-01 | incremental | `bcd40327` | 18,416 | 0 | **3** | 0 | 56 | 6 | 2 |
-| [ja](ja/firefox.md) | 2026-09-01 | incremental | `bcd40327` | 18,185 | 45 | **100** | 38 | 270 | 0 | 0 |
-| [nl](nl/firefox.md) | 2026-09-01 | incremental | `bcd40327` | 18,174 | 45 | **356** | 132 | 137 | 0 | 0 |
-| [pl](pl/firefox.md) | 2026-09-01 | incremental | `bcd40327` | 18,208 | 11 | **72** | 52 | 170 | 2 | 0 |
-| [pt-BR](pt-BR/firefox.md) | 2026-09-01 | incremental | `bcd40327` | 18,213 | 6 | **563** | 205 | 138 | 5 | 0 |
-| [ru](ru/firefox.md) | 2026-09-01 | incremental | `bcd40327` | 18,213 | 6 | **597** | 315 | 177 | 0 | 0 |
-| [sl](sl/firefox.md) | 2026-09-01 | incremental | `bcd40327` | 17,645 | 574 | **37** | 5 | 44 | 0 | 1 |
-| [tr](tr/firefox.md) | 2026-09-01 | incremental | `bcd40327` | 18,151 | 68 | **124** | 45 | 185 | 0 | 0 |
-| [zh-CN](zh-CN/firefox.md) | 2026-09-01 | incremental | `bcd40327` | 17,994 | 225 | **54** | 12 | 47 | 0 | 0 |
+| [cs](cs/firefox.md) | 2026-09-02 | incremental | `a905fc07` | 18,219 | 0 | **263** | 174 | 2 | 0 | 0 |
+| [de](de/firefox.md) | 2026-09-02 | incremental | `a905fc07` | 18,412 | 0 | **16** | 11 | 71 | 0 | 0 |
+| [en-CA](en-CA/firefox.md) | 2026-09-02 | incremental | `a905fc07` | 18,172 | 47 | **0** | 0 | 14 | 1 | 0 |
+| [en-GB](en-GB/firefox.md) | 2026-09-02 | incremental | `a905fc07` | 18,219 | 0 | **17** | 11 | 12 | 0 | 12 |
+| [es-AR](es-AR/firefox.md) | 2026-09-02 | incremental | `a905fc07` | 18,188 | 31 | **304** | 175 | 142 | 0 | 0 |
+| [es-ES](es-ES/firefox.md) | 2026-09-02 | incremental | `a905fc07` | 17,183 | 1,036 | **30** | 18 | 111 | 0 | 0 |
+| [es-MX](es-MX/firefox.md) | 2026-09-02 | incremental | `a905fc07` | 17,841 | 378 | **21** | 6 | 205 | 0 | 0 |
+| [fr](fr/firefox.md) | 2026-09-02 | incremental | `a905fc07` | 18,406 | 0 | **19** | 7 | 59 | 0 | 0 |
+| [fy-NL](fy-NL/firefox.md) | 2026-09-02 | incremental | `a905fc07` | 18,174 | 45 | **506** | 138 | 334 | 4 | 0 |
+| [hu](hu/firefox.md) | 2026-09-02 | incremental | `a905fc07` | 18,213 | 6 | **276** | 153 | 4 | 0 | 0 |
+| [id](id/firefox.md) | 2026-09-02 | incremental | `a905fc07` | 15,531 | 2,688 | **329** | 257 | 1 | 0 | 0 |
+| [it](it/firefox.md) | 2026-09-02 | incremental | `a905fc07` | 18,432 | 0 | **3** | 0 | 56 | 6 | 2 |
+| [ja](ja/firefox.md) | 2026-09-02 | incremental | `a905fc07` | 18,185 | 45 | **100** | 38 | 270 | 0 | 0 |
+| [nl](nl/firefox.md) | 2026-09-02 | incremental | `a905fc07` | 18,219 | 0 | **356** | 132 | 137 | 0 | 0 |
+| [pl](pl/firefox.md) | 2026-09-02 | incremental | `a905fc07` | 18,219 | 0 | **71** | 51 | 171 | 2 | 0 |
+| [pt-BR](pt-BR/firefox.md) | 2026-09-02 | incremental | `a905fc07` | 18,213 | 6 | **563** | 205 | 138 | 5 | 0 |
+| [ru](ru/firefox.md) | 2026-09-02 | incremental | `a905fc07` | 18,219 | 0 | **599** | 316 | 177 | 0 | 0 |
+| [sl](sl/firefox.md) | 2026-09-02 | incremental | `a905fc07` | 17,645 | 574 | **37** | 5 | 44 | 0 | 1 |
+| [tr](tr/firefox.md) | 2026-09-02 | incremental | `a905fc07` | 18,206 | 13 | **132** | 48 | 185 | 0 | 0 |
+| [zh-CN](zh-CN/firefox.md) | 2026-09-02 | incremental | `a905fc07` | 17,994 | 225 | **54** | 12 | 47 | 0 | 0 |
 
 **Impact 1–2** is the queue that matters: broken output and wrong content. Impact 3–4 is language polish and typography.
 
