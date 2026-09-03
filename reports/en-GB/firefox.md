@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a905fc074817` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-09-01 @ `bcd40327226f` |
+| **Generated** | 2026-09-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
+| **Previous run** | 2026-09-03 @ `023f527865cb` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,219 |
+| **Strings reviewed this run** | 21 of 18,239 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 362 |
-| Strings | 18,219 |
-| Missing strings | 0 |
+| Strings | 18,239 |
+| Missing strings | 15 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,7 +63,15 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**15 strings** are not translated yet, concentrated in:
+
+- `browser/browser/permissions.ftl` — 10
+- `browser/browser/preferences/preferences.ftl` — 2
+- `devtools/client/netmonitor.properties` — 1
+- `dom/chrome/dom/dom.properties` — 1
+- `toolkit/toolkit/about/aboutAddons.ftl` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 

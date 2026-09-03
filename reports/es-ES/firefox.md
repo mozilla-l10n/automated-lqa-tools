@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a905fc074817` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-09-01 @ `bcd40327226f` |
+| **Generated** | 2026-09-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
+| **Previous run** | 2026-09-03 @ `023f527865cb` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 17,183 |
+| **Strings reviewed this run** | 7 of 17,189 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,13 @@ Also for es-ES: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `manifest-loading` — `devtools/client/application.ftl` — "manifesto" is not the Spanish word for a web app manifest file; the correct term is "manifiesto".
+    - Current: `Cargando manifesto…`
+    - Source: `Loading manifest…`
+    - Suggest: `Cargando manifiesto…`
+    - en-US "Loading manifest…" refers to the manifest file; Spanish spells this "manifiesto". "Manifesto" is a misspelling/anglicism.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 355 |
-| Strings | 17,183 |
-| Missing strings | 1,036 |
+| Strings | 17,189 |
+| Missing strings | 1,065 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 7 |
 | Files with no en-US counterpart | 0 |
@@ -57,25 +61,25 @@ _Nothing retired._
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 3 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 15 |
+| Access keys not in their label | 13 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 106 |
 
 ### Completeness
 
-**1,036 strings** are not translated yet, concentrated in:
+**1,065 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 155
-- `browser/browser/aiWindow.ftl` — 131
+- `browser/browser/newtab/newtab.ftl` — 157
+- `browser/browser/aiWindow.ftl` — 133
 - `browser/browser/appmenu.ftl` — 67
 - `browser/browser/aiWindowContent.ftl` — 51
-- `browser/browser/preferences/preferences.ftl` — 44
+- `browser/browser/preferences/preferences.ftl` — 46
 - `browser/browser/browser.ftl` — 30
-- `toolkit/toolkit/global/theme-picker.ftl` — 28
 - `devtools/client/toolbox-options.ftl` — 28
+- `toolkit/toolkit/global/theme-picker.ftl` — 28
+- `browser/browser/ipProtection.ftl` — 26
 - `toolkit/toolkit/about/url-classifier.ftl` — 26
 - `toolkit/services/aboutSyncLog.ftl` — 26
-- `browser/browser/ipProtection.ftl` — 26
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 24
 
 **Files absent from the locale:**
@@ -113,14 +117,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (30)
+## 3. Open findings (27)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 18 |
-| 3 | Degraded language (grammar, spelling, terminology) | 12 |
+| 2 | Wrong content (says something other than the English) | 16 |
+| 3 | Degraded language (grammar, spelling, terminology) | 11 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -137,10 +141,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `T`
     - Source: `accesskey: t label: More troubleshooting information`
     - The label is “Más información para solucionar problemas”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `bookmarks-toolbar` — `browser/browser/browser.ftl` — Access key `B` of `bookmarks-toolbar` is not present in its label
-    - Current: `B`
-    - Source: `accesskey: B aria-label: Bookmarks toolbarname: Bookmarks Toolbar`
-    - The label is “Marcadores”. An access key not in the label cannot be underlined and is unreachable by keyboard.
 - `picture-in-picture-hide-toggle` — `browser/browser/browser.ftl` — Access key `H` of `picture-in-picture-hide-toggle` is not present in its label
     - Current: `H`
     - Source: `accesskey: H label: Hide Picture-in-Picture Toggle`
@@ -181,10 +181,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `b`
     - Source: `accesskey: p label: Unpin Tabs`
     - The label is “Soltar pestañas”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `styleeditor-visibility-toggle` — `devtools/client/styleeditor.ftl` — Access key `G` of `styleeditor-visibility-toggle` is not present in its label
-    - Current: `G`
-    - Source: `accesskey: S tooltiptext: Toggle style sheet visibility`
-    - The label is “Cambiar la visibilidad de la hoja de estilos”. An access key not in the label cannot be underlined and is unreachable by keyboard.
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -192,11 +188,7 @@ _Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
-- `manifest-loading` — `devtools/client/application.ftl` — "manifesto" is not the Spanish word for a web app manifest file; the correct term is "manifiesto".
-    - Current: `Cargando manifesto…`
-    - Source: `Loading manifest…`
-    - Suggest: `Cargando manifiesto…`
-    - en-US "Loading manifest…" refers to the manifest file; Spanish spells this "manifiesto". "Manifesto" is a misspelling/anglicism.
+_Nothing in this category._
 
 ### D. Terminology, register & consistency
 
@@ -264,14 +256,16 @@ _One line each in `locales/es-ES/dismissed.txt`. Delete the line and the finding
 
 _No suppression rules have matched._
 
-### Withdrawn to date (0)
+### Withdrawn to date (2)
 
-_Nothing withdrawn._
+- `bookmarks-toolbar` — `browser/browser/browser.ftl` — raised by `accesskey`, withdrawn 2026-09-03
+- `styleeditor-visibility-toggle` — `devtools/client/styleeditor.ftl` — raised by `accesskey`, withdrawn 2026-09-03
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (111)
+### Fixed to date (112)
 
+- `manifest-loading` — `devtools/client/application.ftl` — fixed 2026-09-03
 - `about-logins-error-message-duplicate-login-with-link` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-24
 - `about-logins-export-password-os-auth-dialog-message-macosx` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-24
 - `restore-page-error-title` — `browser/browser/aboutSessionRestore.ftl` — fixed 2026-08-24
@@ -311,4 +305,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `cert-format-pkcs7-chain` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-08-24
 - `pippki-incorrect-pw` — `security/manager/security/pippki/pippki.ftl` — fixed 2026-08-24
 - `protected-auth-alert` — `security/manager/security/pippki/pippki.ftl` — fixed 2026-08-24
-- `details-notification-soft-blocked-other-disabled` — `toolkit/toolkit/about/aboutAddons.ftl` — fixed 2026-08-24

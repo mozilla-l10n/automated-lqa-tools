@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a905fc074817` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-09-01 @ `bcd40327226f` |
+| **Generated** | 2026-09-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
+| **Previous run** | 2026-09-03 @ `023f527865cb` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,188 |
+| **Strings reviewed this run** | 20 of 18,207 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for es-AR: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `preferences-ai-controls-sidebar-chatbot-group-3` — `browser/browser/preferences/preferences.ftl` — Uses the peninsular "usted" imperative "Mantenga" instead of the es-AR voseo/impersonal register used elsewhere in the string.
+    - Current: `Mantenga un chatbot a la vista mientras se navega.`
+    - Source: `description: Keep a chatbot in view as you browse. Choose from multiple providers and switch anytime. label: AI chatbot providers in sidebar`
+    - Suggest: `Mantené un chatbot a la vista mientras navegás.`
+    - es-AR addresses the user with voseo ("Mantené"), not the "usted" form "Mantenga"; the rest of the string already switches to an impersonal construction, so the register is inconsistent.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 362 |
-| Strings | 18,188 |
-| Missing strings | 31 |
+| Strings | 18,207 |
+| Missing strings | 47 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -57,23 +61,26 @@ _Nothing retired._
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 3 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 4 |
+| Access keys not in their label | 2 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 2 |
 
 ### Completeness
 
-**31 strings** are not translated yet, concentrated in:
+**47 strings** are not translated yet, concentrated in:
 
+- `browser/browser/permissions.ftl` — 10
 - `browser/browser/newtab/newtab.ftl` — 10
 - `toolkit/toolkit/about/url-classifier.ftl` — 6
+- `browser/browser/preferences/preferences.ftl` — 5
 - `browser/browser/featureCallout.ftl` — 4
-- `browser/browser/preferences/preferences.ftl` — 4
 - `browser/browser/appmenu.ftl` — 3
-- `toolkit/toolkit/about/aboutAddons.ftl` — 1
-- `toolkit/toolkit/global/processTypes.ftl` — 1
-- `toolkit/services/aboutSyncLog.ftl` — 1
+- `browser/browser/aiWindow.ftl` — 2
+- `toolkit/toolkit/about/aboutAddons.ftl` — 2
 - `browser/browser/newtab/asrouter.ftl` — 1
+- `devtools/client/netmonitor.properties` — 1
+- `dom/chrome/dom/dom.properties` — 1
+- `toolkit/toolkit/global/processTypes.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -98,14 +105,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (304)
+## 3. Open findings (303)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 50 |
-| 2 | Wrong content (says something other than the English) | 125 |
-| 3 | Degraded language (grammar, spelling, terminology) | 88 |
+| 2 | Wrong content (says something other than the English) | 123 |
+| 3 | Degraded language (grammar, spelling, terminology) | 89 |
 | 4 | Cosmetic (typography, spacing) | 35 |
 
 ### A. Functional, markup, variables & plurals
@@ -128,10 +135,6 @@ _Nothing reported._
     - Current: `K`
     - Source: `buttonaccesskey: K buttonlabel: Keep Changes label: Your new tab has changed. secondarybuttonaccesskey: M secondarybuttonlabel: Manage New Tabs`
     - The label is “Mantener los cambios”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `bookmarks-toolbar` — `browser/browser/browser.ftl` — Access key `B` of `bookmarks-toolbar` is not present in its label
-    - Current: `B`
-    - Source: `accesskey: B aria-label: Bookmarks toolbarname: Bookmarks Toolbar`
-    - The label is “Marcadores”. An access key not in the label cannot be underlined and is unreachable by keyboard.
 - `picture-in-picture-enable-toggle` — `browser/browser/browser.ftl` — “Enable anyway” translated as «Habilitar lo mismo», which does not mean “anyway”.
     - Current: `Habilitar lo mismo`
     - Source: `label: Enable anyway`
@@ -382,10 +385,6 @@ _Nothing reported._
     - Source: `View and edit the session storage by selecting a host. <a data-l10n-name="learn-more-link">Learn more</a>`
     - Suggest: `Ver y editar el almacenamiento de sesión seleccionando un host.`
     - en-US: “View and edit the session storage by selecting a host.” Copied from the cookies hint; the Session Storage panel names the wrong storage type.
-- `styleeditor-visibility-toggle` — `devtools/client/styleeditor.ftl` — Access key `G` of `styleeditor-visibility-toggle` is not present in its label
-    - Current: `G`
-    - Source: `accesskey: S tooltiptext: Toggle style sheet visibility`
-    - The label is “Alternar visibilidad de la hoja de estilo”. An access key not in the label cannot be underlined and is unreachable by keyboard.
 - `parentProcessBrowserConsole.title` — `devtools/client/webconsole.properties` — Browser Console window title says “Caja de herramientas” (Toolbox)
     - Current: `Caja de herramientas del navegador del proceso principal`
     - Source: `Parent process Browser Console`
@@ -406,7 +405,17 @@ _Nothing reported._
     - Source: `gridcell`
     - Suggest: `gridcell = celda de cuadrícula`
     - The role is the cell of a grid, not the grid itself; screen-reader users would hear the container role instead of the cell role.
-- _…and 57 more; see `state/` for the full list._
+- `mathmltable` — `dom/chrome/accessibility/AccessFu.properties` — “math table” rendered as the truncated non-word “tabla mat”.
+    - Current: `mathmltable = tabla mat`
+    - Source: `math table`
+    - Suggest: `mathmltable = tabla matemática`
+    - “mat” is not a Spanish word; this role name is spoken aloud by screen readers.
+- `DeprecatedTestingAttributeWarning` — `dom/chrome/dom/dom.properties` — Names deprecatedMethod where en-US names deprecatedAttribute.
+    - Current: `TestingDeprecatedInterface.deprecatedMethod es un atributo de prueba`
+    - Source: `TestingDeprecatedInterface.deprecatedAttribute is a testing-only attribute and this is its testing deprecation message.`
+    - Suggest: `TestingDeprecatedInterface.deprecatedAttribute es un atributo de prueba`
+    - en-US: “TestingDeprecatedInterface.deprecatedAttribute is a testing-only attribute…”. The identifier was altered.
+- _…and 55 more; see `state/` for the full list._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -897,6 +906,11 @@ _Nothing reported._
     - Source: `(value): Override the colors specified by the page with your selections above accesskey: O`
     - Suggest: `Sobrescribir`
     - The prefix sobre- plus escribir contracts to “sobrescribir”; “sobreescribir” is not a valid spelling.
+- `preferences-ai-controls-sidebar-chatbot-group-3` — `browser/browser/preferences/preferences.ftl` — Uses the peninsular "usted" imperative "Mantenga" instead of the es-AR voseo/impersonal register used elsewhere in the string.
+    - Current: `Mantenga un chatbot a la vista mientras se navega.`
+    - Source: `description: Keep a chatbot in view as you browse. Choose from multiple providers and switch anytime. label: AI chatbot providers in sidebar`
+    - Suggest: `Mantené un chatbot a la vista mientras navegás.`
+    - es-AR addresses the user with voseo ("Mantené"), not the "usted" form "Mantenga"; the rest of the string already switches to an impersonal construction, so the register is inconsistent.
 - `update-application-check-choose` — `browser/browser/preferences/preferences.ftl` — Mismatched verb forms make the option ungrammatical.
     - Current: `Busque actualizaciones pero dejarme elegir si las instalo`
     - Source: `accesskey: C label: Check for updates but let you choose to install them`
@@ -1193,9 +1207,10 @@ _One line each in `locales/es-AR/dismissed.txt`. Delete the line and the finding
 
 _No suppression rules have matched._
 
-### Withdrawn to date (0)
+### Withdrawn to date (2)
 
-_Nothing withdrawn._
+- `bookmarks-toolbar` — `browser/browser/browser.ftl` — raised by `accesskey`, withdrawn 2026-09-03
+- `styleeditor-visibility-toggle` — `devtools/client/styleeditor.ftl` — raised by `accesskey`, withdrawn 2026-09-03
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 

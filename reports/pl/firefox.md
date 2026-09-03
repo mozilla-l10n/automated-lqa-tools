@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a905fc074817` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-09-01 @ `bcd40327226f` |
+| **Generated** | 2026-09-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
+| **Previous run** | 2026-09-03 @ `023f527865cb` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 14 of 18,219 |
+| **Strings reviewed this run** | 8 of 18,225 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,17 +18,20 @@ Also for pl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `preferences-doh-radio-group` — `browser/browser/preferences/preferences.ftl` — "Enable DNS over HTTPS using:" is rendered as "Włącz serwer DNS poprzez HTTPS:", dropping "using" and adding "serwer" (server).
+    - Current: `Włącz serwer DNS poprzez HTTPS:`
+    - Source: `aria-label: Enable DNS over HTTPS using:`
+    - Suggest: `Włącz DNS poprzez HTTPS, używając:`
+    - The en-US label introduces a choice of provider ("using:"); the Polish drops that and speaks of enabling a DNS server instead of the DNS-over-HTTPS feature.
 
 ### ✅ Fixed since the last run (1)
 
-- `protections-panel-cookie-banner-blocker-view-turn-on-for-site` — `browser/browser/protectionsPanel.ftl` — `protections-panel-cookie-banner-blocker-view-turn-on-for-site` references ['host'], which en-US does not pass
-    - Current: `Włączyć blokowanie informacji o ciasteczkach na witrynie { $host }?`
-    - Source: `Turn on Cookie Banner Blocker for this site?`
-    - Suggest: `Turn on Cookie Banner Blocker for this site?`
-    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
+- `tab-group-editor-action-copy-links` — `browser/browser/tabbrowser.ftl` — A3, functional. The plural select keys on $tabCount, but the source (and the calling code) passes $linkCount. $tabCount is never supplied, so the selector cannot match and the message always falls through to [many] (and Fluent logs a resolver error). Current: { $tabCount -> [one] … [few] … [many] … } → Suggest: { $linkCount -> … }.
+    - Current: `[many]`
+    - Source: `label: {$linkCount ->} [1] Copy link in group [other] Copy { $linkCount } links in group`
+    - Suggest: `→ Suggest:`
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -49,8 +52,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 362 |
-| Strings | 18,219 |
-| Missing strings | 0 |
+| Strings | 18,225 |
+| Missing strings | 29 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -67,7 +70,19 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**29 strings** are not translated yet, concentrated in:
+
+- `browser/browser/permissions.ftl` — 10
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 8
+- `browser/browser/aiWindow.ftl` — 2
+- `browser/browser/sidebar.ftl` — 2
+- `browser/browser/preferences/preferences.ftl` — 2
+- `browser/browser/newtab/newtab.ftl` — 2
+- `devtools/client/netmonitor.properties` — 1
+- `dom/chrome/dom/dom.properties` — 1
+- `toolkit/toolkit/about/aboutAddons.ftl` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -90,13 +105,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (71)
+## 3. Open findings (72)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 10 |
-| 2 | Wrong content (says something other than the English) | 41 |
+| 2 | Wrong content (says something other than the English) | 42 |
 | 3 | Degraded language (grammar, spelling, terminology) | 18 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
@@ -266,6 +281,11 @@ _Nothing reported._
     - Suggest: `"…na urządzeniu mobilnym."`
 - `more-from-moz-solo-title` — `browser/browser/preferences/moreFromMozilla.ftl` — drops the "AI" qualifier present in en-US ("{ -solo-ai-brand-name } AI") and in the sibling more-from-moz-solo-title-2 ("Kreator SI stron internetowych…").
     - Source: `{ -solo-ai-brand-name } AI`
+- `preferences-doh-radio-group` — `browser/browser/preferences/preferences.ftl` — "Enable DNS over HTTPS using:" is rendered as "Włącz serwer DNS poprzez HTTPS:", dropping "using" and adding "serwer" (server).
+    - Current: `Włącz serwer DNS poprzez HTTPS:`
+    - Source: `aria-label: Enable DNS over HTTPS using:`
+    - Suggest: `Włącz DNS poprzez HTTPS, używając:`
+    - The en-US label introduces a choice of provider ("using:"); the Polish drops that and speaks of enabling a DNS server instead of the DNS-over-HTTPS feature.
 - `preferences-etp-level-warning-message` — `browser/browser/preferences/preferences.ftl` — "Fix site issue" is rendered as a settings name "Naprawianie problemów ze stronami" with the added word "ustawień", though the source refers to a per-site action button.
     - Current: `Spróbuj użyć ustawień „Naprawianie problemów ze stronami”`
     - Source: `heading: Heads up! Some sites may not work as expected. message: Some sites build trackers into their features or content. When { -brand-short-name } blocks them, the site looks broken. Try using “Fix site issue” or tur…`
@@ -410,14 +430,18 @@ _One line each in `locales/pl/dismissed.txt`. Delete the line and the finding re
 
 _No suppression rules have matched._
 
-### Withdrawn to date (1)
+### Withdrawn to date (4)
 
+- `safeb-blocked-unwanted-page-short-desc` — `browser/browser/safebrowsing/blockedSite.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `plugins-openh264-description` — `toolkit/toolkit/about/aboutAddons.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `state-dd-enabled` — `toolkit/toolkit/about/aboutPlugins.ftl` — raised by `legacy`, withdrawn 2026-09-03
 - `cfr-doorhanger-extension-total-users` — `browser/browser/newtab/asrouter.ftl` — raised by `legacy`, withdrawn 2026-08-20
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (171)
+### Fixed to date (168)
 
+- `tab-group-editor-action-copy-links` — `browser/browser/tabbrowser.ftl` — fixed 2026-09-03
 - `protections-panel-cookie-banner-blocker-view-turn-on-for-site` — `browser/browser/protectionsPanel.ftl` — fixed 2026-09-02
 - `media-count` — `browser/browser/pageInfo.ftl` — fixed 2026-08-27
 - `inactive-css-not-display-block-on-floated` — `devtools/client/tooltips.ftl` — fixed 2026-08-27
@@ -428,8 +452,6 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `create-backup-screen-1-title` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-24
 - `policy-ShowHomeButton` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-08-24
 - `collection-usage-ping` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
-- `safeb-blocked-unwanted-page-short-desc` — `browser/browser/safebrowsing/blockedSite.ftl` — fixed 2026-08-24
-- `tab-group-editor-action-copy-links` — `browser/browser/tabbrowser.ftl` — fixed 2026-08-24
 - `tab-group-label-tooltip-collapsed` — `browser/browser/tabbrowser.ftl` — fixed 2026-08-24
 - `tab-group-label-tooltip-expanded` — `browser/browser/tabbrowser.ftl` — fixed 2026-08-24
 - `tab-group-menu-closed-tab-group` — `browser/browser/tabbrowser.ftl` — fixed 2026-08-24
@@ -447,9 +469,7 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `set-password-repeat-backup-pw` — `security/manager/security/pippki/pippki.ftl` — fixed 2026-08-24
 - `set-password-window` — `security/manager/security/pippki/pippki.ftl` — fixed 2026-08-24
 - `no-config-label` — `toolkit/crashreporter/aboutcrashes.ftl` — fixed 2026-08-24
-- `plugins-openh264-description` — `toolkit/toolkit/about/aboutAddons.ftl` — fixed 2026-08-24
 - `about-networking-networkid-status-known` — `toolkit/toolkit/about/aboutNetworking.ftl` — fixed 2026-08-24
-- `state-dd-enabled` — `toolkit/toolkit/about/aboutPlugins.ftl` — fixed 2026-08-24
 - `media-audio-robustness` — `toolkit/toolkit/about/aboutSupport.ftl` — fixed 2026-08-24
 - `media-video-robustness` — `toolkit/toolkit/about/aboutSupport.ftl` — fixed 2026-08-24
 - `about-telemetry-keyed-scalar-section` — `toolkit/toolkit/about/aboutTelemetry.ftl` — fixed 2026-08-24
@@ -458,3 +478,6 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `experimental-features-cookie-samesite-none-requires-secure2` — `toolkit/toolkit/featuregates/features.ftl` — fixed 2026-08-24
 - `autofill-insecure-field-warning-description` — `toolkit/toolkit/formautofill/formAutofill.ftl` — fixed 2026-08-24
 - `csp-error-illegal-host-wildcard` — `toolkit/toolkit/global/cspErrors.ftl` — fixed 2026-08-24
+- `webext-perms-header-unsigned` — `toolkit/toolkit/global/extensions.ftl` — fixed 2026-08-24
+- `language-name-ii` — `toolkit/toolkit/intl/languageNames.ftl` — fixed 2026-08-24
+- `netReset-title` — `toolkit/toolkit/neterror/certError.ftl` — fixed 2026-08-24

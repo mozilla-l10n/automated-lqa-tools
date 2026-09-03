@@ -47,12 +47,35 @@ mistranslation. A missing negation that makes an instruction wrong is a
 plain impact-2 defect. Reserve `true` for text that changes what the
 product says about itself, its users, or its behaviour.
 
+## How `source:` and `target:` are rendered
+
+Both lines are a **flattened rendering** of the message, not the file. A
+message that selects on a variable is printed on one line as
+
+    {{$count ->}} [one] one thing [other] some things
+
+That is this tool's own notation. The closing brace after `->` is part of
+the rendering, the variants are not indented, and a message with several
+attributes is printed as `attr: value` lines. None of that is what the file
+contains, and parameters inside a placeable are dropped: the file may read
+`{{ -brand-name(form: "lower-singular") }}` where you are shown
+`{{ -brand-name }}`.
+
+So you cannot see the file's syntax, spacing or indentation, and must never
+report on them. Anything you are shown has already been parsed
+successfully -- a message that did not parse would not have reached you --
+so a conclusion that the Fluent is malformed, unbalanced or has a stray
+brace is always wrong.
+
 ## What NOT to report
 
 - **Missing or untranslated strings.** A string still in English is a
   completeness gap, tracked separately. Skip it silently.
 - **Syntax, variables, placeholders, plural selectors, access keys, and
   markup.** Deterministic checks already own these and have already run.
+  This includes the *spacing and indentation of the file itself*, which
+  belongs to the parser. Report spacing only where it is part of the text a
+  user reads, such as a missing space between two words.
 - **Typos or problems in the en-US source or in developer comments.** If
   the en-US itself is wrong and the locale faithfully mirrors it, that is
   not the locale's defect — say so with category `B` and make the rationale

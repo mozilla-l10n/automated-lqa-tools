@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a905fc074817` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-09-01 @ `bcd40327226f` |
+| **Generated** | 2026-09-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
+| **Previous run** | 2026-09-03 @ `023f527865cb` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,432 |
+| **Strings reviewed this run** | 36 of 18,447 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for it: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `jsonlScopeName` — `devtools/client/netmonitor.properties` — "JSON Lines" is a format name (JSONL/NDJSON) and should not be translated as "Righe JSON".
+    - Current: `Righe JSON`
+    - Source: `JSON Lines`
+    - Suggest: `JSON Lines`
+    - The developer comment identifies it as the JSON Lines (JSONL/NDJSON) payload format name; format names are kept in English in DevTools panel labels (e.g. JSON, XML).
+- `neterror-search-cta-search-button` — `toolkit/toolkit/neterror/netError.ftl` — Tooltip translated as an imperative command instead of a description of what the button does.
+    - Current: `tooltiptext: Apri i risultati di ricerca in una nuova scheda`
+    - Source: `accesskey: c label: Search tooltiptext: Opens search results in a new tab`
+    - Suggest: `tooltiptext: Apre i risultati di ricerca in una nuova scheda`
+    - The en-US "Opens search results in a new tab" is descriptive (it doubles as the accessible description, per the developer comment), not an instruction to the user.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,9 +54,9 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 372 |
-| Strings | 18,432 |
+| Strings | 18,447 |
 | Missing strings | 0 |
-| Obsolete strings | 20 |
+| Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 10 |
 | Fluent / properties syntax errors | 0 |
@@ -57,7 +66,7 @@ _Nothing retired._
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 1 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 0 |
+| Access keys not in their label | 1 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 0 |
 
@@ -87,7 +96,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 1046, `straight-double` 25 | **curly-double** |
-| apostrophe | `typographic` 1930, `straight` 6 | **typographic** |
+| apostrophe | `typographic` 1932, `straight` 6 | **typographic** |
 | ellipsis | `char` 484 | **char** |
 | dash | `em` 75, `en` 18 | **em** |
 | nbsp | `total` 12, `before-punctuation` 4, `space-before-punctuation` 6 | _mixed_ |
@@ -101,27 +110,40 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (3)
+## 3. Open findings (6)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 0 |
-| 3 | Degraded language (grammar, spelling, terminology) | 3 |
+| 2 | Wrong content (says something other than the English) | 2 |
+| 3 | Degraded language (grammar, spelling, terminology) | 4 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
 
-_Nothing in this category._
+- `detail-contributions-button` — `toolkit/toolkit/about/aboutAddons.ftl` — Access key `C` of `detail-contributions-button` is not present in its label
+    - Current: `C`
+    - Source: `(value): Contribute accesskey: C title: Contribute to the development of this add-on`
+    - The label is “Fai una donazione”. An access key not in the label cannot be underlined and is unreachable by keyboard.
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `jsonlScopeName` — `devtools/client/netmonitor.properties` — "JSON Lines" is a format name (JSONL/NDJSON) and should not be translated as "Righe JSON".
+    - Current: `Righe JSON`
+    - Source: `JSON Lines`
+    - Suggest: `JSON Lines`
+    - The developer comment identifies it as the JSON Lines (JSONL/NDJSON) payload format name; format names are kept in English in DevTools panel labels (e.g. JSON, XML).
 - `about-sync-log-empty` — `toolkit/services/aboutSyncLog.ftl` — "No sync logs have been recorded" rendered as "no log was found", changing the meaning from recording to searching.
     - Current: `Non è stato trovato alcun registro di sincronizzazione.`
     - Source: `No sync logs have been recorded.`
     - Suggest: `Non è stato registrato alcun registro di sincronizzazione.`
     - The en-US says logs have not been recorded, not that a search failed to find them.
+- `neterror-search-cta-search-button` — `toolkit/toolkit/neterror/netError.ftl` — Tooltip translated as an imperative command instead of a description of what the button does.
+    - Current: `tooltiptext: Apri i risultati di ricerca in una nuova scheda`
+    - Source: `accesskey: c label: Search tooltiptext: Opens search results in a new tab`
+    - Suggest: `tooltiptext: Apre i risultati di ricerca in una nuova scheda`
+    - The en-US "Opens search results in a new tab" is descriptive (it doubles as the accessible description, per the developer comment), not an instruction to the user.
 
 ### C. Grammar, agreement & spelling
 

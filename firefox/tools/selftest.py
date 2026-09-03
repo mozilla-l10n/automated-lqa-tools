@@ -82,6 +82,27 @@ NOT_A_DEFECT = [
     ("sl", "plurals", "places-delete-page"),
     ("ru", "plurals", "places-delete-page"),
     ("es-MX", "plurals", "download-ui-cancel-downloads-ok"),
+    # `.aria-label` is a screen-reader name, not a label an access key can
+    # be underlined in. The partner list consulted it before `.toolbarname`,
+    # so `bookmarks-toolbar` was measured against "Marque-pages" instead of
+    # "Barre personnelle", which does contain the B.
+    ("fr", "accesskey", "bookmarks-toolbar"),
+    ("es-AR", "accesskey", "bookmarks-toolbar"),
+    ("es-ES", "accesskey", "bookmarks-toolbar"),
+    ("id", "accesskey", "bookmarks-toolbar"),
+    # Icon-only context menu items: `.tooltiptext` and `.aria-label` and
+    # nothing else. There is no visible label, so there is nothing an access
+    # key could be underlined in and the check must not apply at all.
+    ("es-MX", "accesskey", "main-context-menu-back-2"),
+    ("es-MX", "accesskey", "main-context-menu-stop"),
+]
+
+# Real defects that the over-wide access key partner list was hiding: the
+# key is absent from the visible label but present in a `.tooltiptext` or
+# `.title`, which the check preferred over the message's own value.
+MUST_FIND_UNMASKED = [
+    ("fy-NL", "accesskey", "styleeditor-save-button"),
+    ("it", "accesskey", "detail-contributions-button"),
 ]
 
 # Conventions the reviews established as correct. These checks must be
@@ -93,7 +114,10 @@ MUST_BE_SILENT = [
     ("nl", "typography", "the en dash is the Dutch house dash"),
     ("pl", "accesskey", "Polish access keys are correctly remapped"),
     ("tr", "accesskey", "Turkish access keys are correctly remapped"),
-    ("it", "accesskey", "Italian access keys are correctly remapped"),
+    # "Italian access keys are correctly remapped" was pinned here and was
+    # only true because the check preferred `.title` over the message's own
+    # value. Italian has exactly one that is not remapped, and it is now
+    # pinned as a defect in MUST_FIND_UNMASKED instead of as silence here.
     ("it", "variables", "Italian has no variable mismatches"),
     ("it", "selectors", "Italian has no selector mismatches"),
     ("sl", "variables", "Slovenian sklon case params are not mismatches"),
@@ -122,7 +146,8 @@ def run(l10n_dir, source_dir, project) -> int:
 
 
     needed = sorted(
-        {loc for loc, *_ in MUST_FIND + MUST_BE_SILENT + FIXED_UPSTREAM + NOT_A_DEFECT}
+        {loc for loc, *_ in MUST_FIND + MUST_FIND_UNMASKED + MUST_BE_SILENT
+     + FIXED_UPSTREAM + NOT_A_DEFECT}
         | {loc for loc, *_ in HEALTH_BOUNDS}
         | {loc for loc in ("en-GB", "en-CA") if loc in project.locales}
     )
@@ -136,6 +161,7 @@ def run(l10n_dir, source_dir, project) -> int:
 
     selftest_lib.must_find(suite, results, MUST_FIND)
     selftest_lib.fixed_upstream(suite, results, FIXED_UPSTREAM)
+    selftest_lib.must_find(suite, results, MUST_FIND_UNMASKED)
     selftest_lib.not_a_defect(suite, results, NOT_A_DEFECT)
     selftest_lib.must_be_silent(suite, results, MUST_BE_SILENT)
 

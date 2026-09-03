@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a905fc074817` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-09-01 @ `bcd40327226f` |
+| **Generated** | 2026-09-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
+| **Previous run** | 2026-09-03 @ `023f527865cb` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,406 |
+| **Strings reviewed this run** | 22 of 18,426 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,10 @@ Also for fr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `aiwindow-firstrun-default-checkbox-label` — `browser/browser/aiWindow.ftl` — brand form lower-plural renders "dans une fenêtres intelligentes" → use lower-singular (EN is singular; matches line 164).
+    - Source: `Always open { -brand-product-name } in { -smart-window-brand-name }`
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,8 +46,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 372 |
-| Strings | 18,406 |
-| Missing strings | 0 |
+| Strings | 18,426 |
+| Missing strings | 15 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 10 |
@@ -57,13 +58,21 @@ _Nothing retired._
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 1 |
+| Access keys not in their label | 0 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 4 |
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**15 strings** are not translated yet, concentrated in:
+
+- `browser/browser/permissions.ftl` — 10
+- `browser/browser/preferences/preferences.ftl` — 2
+- `devtools/client/netmonitor.properties` — 1
+- `dom/chrome/dom/dom.properties` — 1
+- `toolkit/toolkit/about/aboutAddons.ftl` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Files with no en-US counterpart
 
@@ -87,10 +96,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 1132, `straight-double` 31, `curly-double` 2, `curly-single` 1 | **guillemet** |
-| apostrophe | `typographic` 5641, `straight` 10 | **typographic** |
+| apostrophe | `typographic` 5647, `straight` 10 | **typographic** |
 | ellipsis | `char` 475 | **char** |
 | dash | `em` 68, `en` 8 | **em** |
-| nbsp | `total` 4450, `before-punctuation` 2000 | _mixed_ |
+| nbsp | `total` 4451, `before-punctuation` 2001 | _mixed_ |
 | register | `formal` 3194 | **formal** |
 
 ---
@@ -101,32 +110,22 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (19)
+## 3. Open findings (16)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 1 |
-| 2 | Wrong content (says something other than the English) | 6 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
+| 2 | Wrong content (says something other than the English) | 4 |
 | 3 | Degraded language (grammar, spelling, terminology) | 8 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
 
-- `bookmarks-toolbar` — `browser/browser/browser.ftl` — Access key `B` of `bookmarks-toolbar` is not present in its label
-    - Current: `B`
-    - Source: `accesskey: B aria-label: Bookmarks toolbarname: Bookmarks Toolbar`
-    - The label is “Marque-pages”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `about-networking-ssl-tokens-summary-compression` — `toolkit/toolkit/about/aboutNetworking.ftl` — The plural selector expression is malformed: the selector line ends with a stray `}` and the variants are not properly formed, which breaks the Fluent message.
-    - Current: `{$saved ->}`
-    - Source: `{ $decompressedLength } → { $compressedLength } B ({ $saved }% saved)`
-    - Suggest: `{ $saved ->`
-    - In Fluent, a select expression is written `{ $saved -> [one] ... [other] ... }`; closing the brace immediately after the arrow produces a syntax error and the string will fail to render, unlike the plain en-US source.
+_Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `aiwindow-firstrun-default-checkbox-label` — `browser/browser/aiWindow.ftl` — brand form lower-plural renders "dans une fenêtres intelligentes" → use lower-singular (EN is singular; matches line 164).
-    - Source: `Always open { -brand-product-name } in { -smart-window-brand-name }`
 - `preferences-ai-controls-sidebar-chatbot-group-3` — `browser/browser/preferences/preferences.ftl` — "Keep a chatbot in view" rendered as "Gardez un œil sur un chatbot" (keep an eye on a chatbot), reversing who watches whom.
     - Current: `Gardez un œil sur un chatbot pendant votre navigation.`
     - Source: `description: Keep a chatbot in view as you browse. Choose from multiple providers and switch anytime. label: AI chatbot providers in sidebar`
@@ -178,7 +177,7 @@ _Nothing in this category._
 
 - `felt-error-warning-download-attempt-failed-contact-admin` — `browser/browser/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
     - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
-    - The tree uses ’ 5641 times against 10 straight.
+    - The tree uses ’ 5647 times against 10 straight.
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `L’évènement « key » n’est pas disponible dans GTK2 : key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
@@ -189,15 +188,15 @@ _Nothing in this category._
     - The locale's quote convention is `guillemet` (1132 occurrences).
 - `felt-error-warning-download-attempt-failed-contact-admin` — `toolkit/toolkit/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
     - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
-    - The tree uses ’ 5641 times against 10 straight.
+    - The tree uses ’ 5647 times against 10 straight.
 
 ---
 
 ## 4. Appendix
 
-### Dismissed by hand (0)
+### Dismissed by hand (1)
 
-_Nothing dismissed._
+- `about-networking-ssl-tokens-summary-compression` — `toolkit/toolkit/about/aboutNetworking.ftl` — the message is valid Fluent; the reviewer read the flattened rendering `{$saved ->} [one] …` as if it were the file and reported a stray brace that is not there
 
 _One line each in `locales/fr/dismissed.txt`. Delete the line and the finding returns._
 
@@ -205,14 +204,15 @@ _One line each in `locales/fr/dismissed.txt`. Delete the line and the finding re
 
 _No suppression rules have matched._
 
-### Withdrawn to date (0)
+### Withdrawn to date (1)
 
-_Nothing withdrawn._
+- `bookmarks-toolbar` — `browser/browser/browser.ftl` — raised by `accesskey`, withdrawn 2026-09-03
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (59)
+### Fixed to date (60)
 
+- `aiwindow-firstrun-default-checkbox-label` — `browser/browser/aiWindow.ftl` — fixed 2026-09-03
 - `about-networking-ssl-tokens-summary-compression` — `toolkit/toolkit/about/aboutNetworking.ftl` — fixed 2026-09-01
 - `about-sync-log-count` — `toolkit/services/aboutSyncLog.ftl` — fixed 2026-08-31
 - `about-sync-log-filter-date-all` — `toolkit/services/aboutSyncLog.ftl` — fixed 2026-08-31
@@ -252,4 +252,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `accessibility-text-label-issue-area` — `devtools/client/accessibility.ftl` — fixed 2026-07-26
 - `network-menu-summary-tooltip-domcontentloaded` — `devtools/client/netmonitor.ftl` — fixed 2026-07-26
 - `inactive-css-not-block` — `devtools/client/tooltips.ftl` — fixed 2026-07-26
-- `xslt-transform-error` — `dom/dom/xslt.ftl` — fixed 2026-07-26

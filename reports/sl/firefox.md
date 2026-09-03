@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a905fc074817` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-09-01 @ `bcd40327226f` |
+| **Generated** | 2026-09-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
+| **Previous run** | 2026-09-03 @ `023f527865cb` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 17,645 |
+| **Strings reviewed this run** | 6 of 17,650 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 362 |
-| Strings | 17,645 |
-| Missing strings | 574 |
+| Strings | 17,650 |
+| Missing strings | 604 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +63,20 @@ _Nothing retired._
 
 ### Completeness
 
-**574 strings** are not translated yet, concentrated in:
+**604 strings** are not translated yet, concentrated in:
 
-- `browser/browser/aiWindow.ftl` — 136
+- `browser/browser/aiWindow.ftl` — 138
 - `browser/browser/aiWindowContent.ftl` — 71
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 48
-- `dom/chrome/dom/dom.properties` — 45
+- `dom/chrome/dom/dom.properties` — 46
 - `browser/browser/ipProtection.ftl` — 37
-- `browser/browser/aiFeatures.ftl` — 26
+- `browser/browser/aiFeatures.ftl` — 27
 - `dom/chrome/security/security.properties` — 23
-- `browser/browser/preferences/preferences.ftl` — 18
+- `browser/browser/preferences/preferences.ftl` — 20
 - `devtools/client/debugger.properties` — 17
+- `browser/browser/newtab/newtab.ftl` — 15
 - `toolkit/toolkit/about/aboutGlean.ftl` — 15
 - `toolkit/toolkit/about/aboutWebrtc.ftl` — 14
-- `dom/chrome/security/csp.properties` — 13
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -267,15 +267,15 @@ _One line each in `locales/sl/dismissed.txt`. Delete the line and the finding re
 
 _Suppressions live in `locales/sl/suppressions.yaml`. Removing a rule brings its findings back._
 
-### Withdrawn to date (1)
+### Withdrawn to date (2)
 
+- `tab-group-editor-action-copy-links` — `browser/browser/tabbrowser.ftl` — raised by `legacy`, withdrawn 2026-09-03
 - `accessibility-text-label-issue-document-title` — `devtools/client/accessibility.ftl` — raised by `legacy`, withdrawn 2026-08-20
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (44)
+### Fixed to date (43)
 
-- `tab-group-editor-action-copy-links` — `browser/browser/tabbrowser.ftl` — fixed 2026-08-24
 - `pkcs12-decode-err` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-08-24
 - `about-logins-confirm-export-dialog-message2` — `browser/browser/aboutLogins.ftl` — fixed 2026-07-29 (undated)
 - `restore-page-problem-desc` — `browser/browser/aboutSessionRestore.ftl` — fixed 2026-07-29 (undated)
@@ -315,3 +315,4 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `region-name-tr` — `toolkit/toolkit/intl/regionNames.ftl` — fixed 2026-07-29 (undated)
 - `cert-error-symantec-distrust-description` — `toolkit/toolkit/neterror/certError.ftl` — fixed 2026-07-29 (undated)
 - `cert-error-trust-cert-invalid` — `toolkit/toolkit/neterror/certError.ftl` — fixed 2026-07-29 (undated)
+- `certerror-mitm-what-can-you-do-about-it-corporate` — `toolkit/toolkit/neterror/netError.ftl` — fixed 2026-07-29 (undated)

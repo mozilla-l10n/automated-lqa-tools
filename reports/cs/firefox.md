@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a905fc074817` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-09-01 @ `bcd40327226f` |
+| **Generated** | 2026-09-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
+| **Previous run** | 2026-09-03 @ `023f527865cb` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 18,219 |
+| **Strings reviewed this run** | 21 of 18,239 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,17 +18,22 @@ Also for cs: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `menu-view-resource-monitor` — `browser/browser/sidebar.ftl` — "Resource Monitor" is rendered as "Správce procesů" (Process Manager), naming a different feature.
+    - Current: `Správce procesů`
+    - Source: `label: Resource Monitor`
+    - Suggest: `Monitor prostředků`
+    - en-US says "Resource Monitor"; "Správce procesů" is the established Czech name for the Task/Process Manager (about:processes), a different tool.
+- `sidebar-menu-resource-monitor-label` — `browser/browser/sidebar.ftl` — "Resource monitor" is rendered as "Správce procesů" (Process Manager), naming a different feature.
+    - Current: `Správce procesů`
+    - Source: `label: Resource monitor`
+    - Suggest: `Monitor prostředků`
+    - en-US says "Resource monitor"; "Správce procesů" corresponds to Process Manager, not resource monitoring.
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `webext-perms-update-list-intro-with-data-collection` — `toolkit/toolkit/global/extensions.ftl` — Broken parallel structure: an infinitive is coordinated with a bare accusative noun.
-    - Current: `Zrušit pro zachování aktuální verze a nastavení, nebo aktualizaci pro získání nové verze a schválení změn.`
-    - Source: `Cancel to keep your current version and settings, or update to get the new version and approve the changes.`
-    - Suggest: `Zrušte pro zachování aktuální verze a nastavení, nebo aktualizujte pro získání nové verze a schválení změn.`
-    - en-US uses two parallel imperatives ("Cancel to keep…, or update to get…"); "nebo aktualizaci" leaves the second clause without a verb.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -49,8 +54,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 362 |
-| Strings | 18,219 |
-| Missing strings | 0 |
+| Strings | 18,239 |
+| Missing strings | 15 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -67,7 +72,15 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**15 strings** are not translated yet, concentrated in:
+
+- `browser/browser/permissions.ftl` — 10
+- `browser/browser/preferences/preferences.ftl` — 2
+- `devtools/client/netmonitor.properties` — 1
+- `dom/chrome/dom/dom.properties` — 1
+- `toolkit/toolkit/about/aboutAddons.ftl` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -90,13 +103,13 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (263)
+## 3. Open findings (265)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 53 |
-| 2 | Wrong content (says something other than the English) | 121 |
+| 2 | Wrong content (says something other than the English) | 123 |
 | 3 | Degraded language (grammar, spelling, terminology) | 61 |
 | 4 | Cosmetic (typography, spacing) | 23 |
 
@@ -409,6 +422,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `label: Block cross-site tracking cookies`
     - Suggest: `Blokovat sledovací cookies mezi weby`
     - en-US says "cross-site tracking cookies"; "cookies třetích stran" means third-party cookies, which is a distinct ETP setting/term.
+- `menu-view-resource-monitor` — `browser/browser/sidebar.ftl` — "Resource Monitor" is rendered as "Správce procesů" (Process Manager), naming a different feature.
+    - Current: `Správce procesů`
+    - Source: `label: Resource Monitor`
+    - Suggest: `Monitor prostředků`
+    - en-US says "Resource Monitor"; "Správce procesů" is the established Czech name for the Task/Process Manager (about:processes), a different tool.
+- `sidebar-menu-resource-monitor-label` — `browser/browser/sidebar.ftl` — "Resource monitor" is rendered as "Správce procesů" (Process Manager), naming a different feature.
+    - Current: `Správce procesů`
+    - Source: `label: Resource monitor`
+    - Suggest: `Monitor prostředků`
+    - en-US says "Resource monitor"; "Správce procesů" corresponds to Process Manager, not resource monitoring.
 - `about-sync-log-empty-filtered` — `toolkit/services/aboutSyncLog.ftl` — Plural "filters" rendered as singular "filtru".
     - Current: `Žádný protokol neodpovídá aktuálnímu filtru.`
     - Source: `No logs match the current filters.`

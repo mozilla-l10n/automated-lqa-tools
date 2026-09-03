@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a905fc074817` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-09-01 @ `bcd40327226f` |
+| **Generated** | 2026-09-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
+| **Previous run** | 2026-09-03 @ `023f527865cb` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 17,994 |
+| **Strings reviewed this run** | 6 of 18,000 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 359 |
-| Strings | 17,994 |
-| Missing strings | 225 |
+| Strings | 18,000 |
+| Missing strings | 254 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 3 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +63,20 @@ _Nothing retired._
 
 ### Completeness
 
-**225 strings** are not translated yet, concentrated in:
+**254 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 45
+- `browser/browser/newtab/newtab.ftl` — 47
 - `toolkit/services/aboutSyncLog.ftl` — 26
 - `devtools/client/toolbox-options.ftl` — 18
 - `browser/browser/sharePanel.ftl` — 17
 - `toolkit/toolkit/about/aboutNetworking.ftl` — 15
 - `toolkit/toolkit/about/url-classifier.ftl` — 12
 - `toolkit/toolkit/neterror/netError.ftl` — 12
-- `dom/chrome/dom/dom.properties` — 9
-- `browser/browser/preferences/preferences.ftl` — 8
-- `toolkit/toolkit/pdfviewer/viewer.ftl` — 7
-- `browser/browser/preferences/containers.ftl` — 7
-- `browser/browser/ipProtection.ftl` — 6
+- `browser/browser/permissions.ftl` — 10
+- `browser/browser/preferences/preferences.ftl` — 10
+- `dom/chrome/dom/dom.properties` — 10
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 8
+- `browser/browser/sidebar.ftl` — 7
 
 **Files absent from the locale:**
 
@@ -92,11 +92,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 980, `straight-double` 46, `curly-single` 41 | **curly-double** |
+| quotes | `curly-double` 981, `straight-double` 46, `curly-single` 41 | **curly-double** |
 | apostrophe | `typographic` 46, `straight` 20 | _mixed_ |
 | ellipsis | `char` 441, `ascii` 13 | **char** |
 | dash | `em` 79, `en` 2 | **em** |
-| fullwidth | `punctuation` 9534 | **punctuation** |
+| fullwidth | `punctuation` 9535 | **punctuation** |
 | register | `informal` 16, `formal` 1746 | **formal** |
 
 ---

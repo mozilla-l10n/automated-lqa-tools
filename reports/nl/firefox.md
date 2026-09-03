@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a905fc074817` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-09-01 @ `bcd40327226f` |
+| **Generated** | 2026-09-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
+| **Previous run** | 2026-09-03 @ `023f527865cb` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 45 of 18,219 |
+| **Strings reviewed this run** | 7 of 18,225 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 362 |
-| Strings | 18,219 |
-| Missing strings | 0 |
+| Strings | 18,225 |
+| Missing strings | 29 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,7 +63,19 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**29 strings** are not translated yet, concentrated in:
+
+- `browser/browser/permissions.ftl` — 10
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 8
+- `browser/browser/aiWindow.ftl` — 2
+- `browser/browser/sidebar.ftl` — 2
+- `browser/browser/preferences/preferences.ftl` — 2
+- `browser/browser/newtab/newtab.ftl` — 2
+- `devtools/client/netmonitor.properties` — 1
+- `dom/chrome/dom/dom.properties` — 1
+- `toolkit/toolkit/about/aboutAddons.ftl` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -675,8 +687,18 @@ _One line each in `locales/nl/dismissed.txt`. Delete the line and the finding re
 
 _No suppression rules have matched._
 
-### Withdrawn to date (23)
+### Withdrawn to date (33)
 
+- `about-logins-import-dialog-items-no-change2` — `browser/browser/aboutLogins.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `menu-help-share-ideas` — `browser/browser/menubar.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `cfr-doorhanger-milestone-heading2` — `browser/browser/newtab/asrouter.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `inactive-css-not-grid-or-flex-container-or-multicol-container-fix` — `devtools/client/tooltips.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `inactive-css-not-grid-or-flex-container-or-multicol-container-fix` — `devtools/client/tooltips.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `inactive-css-ruby-element-fix` — `devtools/client/tooltips.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `inactive-css-ruby-element-fix` — `devtools/client/tooltips.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `inactive-css-ruby-element-fix-1` — `devtools/client/tooltips.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `webconsole-commands-usage-block` — `devtools/shared/webconsole-commands.ftl` — raised by `legacy`, withdrawn 2026-09-03
 - `addon-install-error-incorrect-hash` — `browser/browser/addonNotifications.ftl` — raised by `legacy`, withdrawn 2026-08-20
 - `addon-local-install-error-incorrect-hash` — `browser/browser/addonNotifications.ftl` — raised by `legacy`, withdrawn 2026-08-20
 - `smart-window-opened-tabs-summary-group` — `browser/browser/aiWindowContent.ftl` — raised by `legacy`, withdrawn 2026-08-20
@@ -687,39 +709,19 @@ _No suppression rules have matched._
 - `newtab-search-box-handoff-input` — `browser/browser/newtab/newtab.ftl` — raised by `legacy`, withdrawn 2026-08-20
 - `newtab-search-box-handoff-text` — `browser/browser/newtab/newtab.ftl` — raised by `legacy`, withdrawn 2026-08-20
 - `newtab-section-unblock-topic` — `browser/browser/newtab/newtab.ftl` — raised by `legacy`, withdrawn 2026-08-20
-- `newtab-weather-see-forecast` — `browser/browser/newtab/newtab.ftl` — raised by `legacy`, withdrawn 2026-08-20
-- `newtab-weather-see-forecast-description` — `browser/browser/newtab/newtab.ftl` — raised by `legacy`, withdrawn 2026-08-20
-- `mr2022-onboarding-welcome-pin-subtitle` — `browser/browser/newtab/onboarding.ftl` — raised by `legacy`, withdrawn 2026-08-20
-- `address-capture-save-doorhanger-description` — `browser/browser/preferences/formAutofill.ftl` — raised by `legacy`, withdrawn 2026-08-20
-- `passport-capture-save-doorhanger-description` — `browser/browser/preferences/formAutofill.ftl` — raised by `legacy`, withdrawn 2026-08-20
-- `tabbrowser-unmute-tab-audio-background-tooltip` — `browser/browser/tabbrowser.ftl` — raised by `legacy`, withdrawn 2026-08-20
-- `tabbrowser-unmute-tab-audio-tooltip` — `browser/browser/tabbrowser.ftl` — raised by `legacy`, withdrawn 2026-08-20
-- `existing-user-privacy-notice-update-message` — `browser/browser/termsofuse.ftl` — raised by `legacy`, withdrawn 2026-08-20
-- `accessibility-progress-progressbar` — `devtools/client/accessibility.ftl` — raised by `legacy`, withdrawn 2026-08-20
-- `about-pdf-title` — `toolkit/toolkit/about/aboutPDF.ftl` — raised by `legacy`, withdrawn 2026-08-20
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (137)
+### Fixed to date (127)
 
-- `about-logins-import-dialog-items-no-change2` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-24
 - `trustpanel-description-disabled` — `browser/browser/browser.ftl` — fixed 2026-08-24
 - `urlbar-placeholder-search-mode-other-actions` — `browser/browser/browser.ftl` — fixed 2026-08-24
 - `urlbar-result-action-search-actions` — `browser/browser/browser.ftl` — fixed 2026-08-24
-- `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — fixed 2026-08-24
-- `menu-help-share-ideas` — `browser/browser/menubar.ftl` — fixed 2026-08-24
-- `cfr-doorhanger-milestone-heading2` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-24
 - `settings-translations-subpage-never-translate-sites-description` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
 - `protections-vpn-header-content-subscribed` — `browser/browser/protections.ftl` — fixed 2026-08-24
 - `set-background-fill` — `browser/browser/setDesktopBackground.ftl` — fixed 2026-08-24
 - `duplicate-tab2` — `browser/browser/tabContextMenu.ftl` — fixed 2026-08-24
 - `duplicate-tabs2` — `browser/browser/tabContextMenu.ftl` — fixed 2026-08-24
-- `inactive-css-not-grid-or-flex-container-or-multicol-container-fix` — `devtools/client/tooltips.ftl` — fixed 2026-08-24
-- `inactive-css-not-grid-or-flex-container-or-multicol-container-fix` — `devtools/client/tooltips.ftl` — fixed 2026-08-24
-- `inactive-css-ruby-element-fix` — `devtools/client/tooltips.ftl` — fixed 2026-08-24
-- `inactive-css-ruby-element-fix` — `devtools/client/tooltips.ftl` — fixed 2026-08-24
-- `inactive-css-ruby-element-fix-1` — `devtools/client/tooltips.ftl` — fixed 2026-08-24
-- `webconsole-commands-usage-block` — `devtools/shared/webconsole-commands.ftl` — fixed 2026-08-24
 - `devmgr-button-unload` — `security/manager/security/certificates/deviceManager.ftl` — fixed 2026-08-24
 - `shortcuts-duplicate` — `toolkit/toolkit/about/aboutAddons.ftl` — fixed 2026-08-24
 - `shortcuts-duplicate-warning-message` — `toolkit/toolkit/about/aboutAddons.ftl` — fixed 2026-08-24
@@ -742,3 +744,13 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `sidebar-callout-survey-neutral` — `browser/browser/featureCallout.ftl` — fixed 2026-08-10
 - `ipprotection-feature-introduction-description-private-browsing` — `browser/browser/ipProtection.ftl` — fixed 2026-08-10
 - `fxa-adoption-addresses-backup-subtitle` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-10
+- `relay-50-masks-announcement-subtitle` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-10
+- `windows-10-eos-challenger-callout-title` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-10
+- `windows-10-eos-feature-toast-subtitle` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-10
+- `newtab-custom-wallpaper-title` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-10
+- `newtab-privacy-message-info-2` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-10
+- `newtab-privacy-message-promo-monitor-1` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-10
+- `newtab-sports-widget-loading-more` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-10
+- `newtab-wallpaper-abstract-purple-green` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-10
+- `newtab-wallpaper-reset` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-10
+- `create-backup-screen-1-backup-body` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-10

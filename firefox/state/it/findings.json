@@ -190,7 +190,7 @@
   "file": "browser/browser/defaultBrowserNotification.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-09-02",
+  "last_seen": "2026-09-03",
   "locale": "it",
   "origin": {},
   "rationale": "In the source this string quotes “Web browser”, which is exactly the value of `desktop-entry-generic-name` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -866,6 +866,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "Righe JSON",
+  "dismissed_because": "",
+  "fid": "92e18d793129",
+  "file": "devtools/client/netmonitor.properties",
+  "first_seen": "2026-09-03",
+  "impact": 2,
+  "last_seen": "2026-09-03",
+  "locale": "it",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The developer comment identifies it as the JSON Lines (JSONL/NDJSON) payload format name; format names are kept in English in DevTools panel labels (e.g. JSON, XML).",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "2694a248",
+  "string_id": "jsonlScopeName",
+  "suggest": "JSON Lines",
+  "summary": "\"JSON Lines\" is a format name (JSONL/NDJSON) and should not be translated as \"Righe JSON\".",
+  "suppressed_by": ""
+ },
+ {
   "category": "D",
   "check": "ui_references",
   "current": "È possibile caricare questo documento anche da “{ $url }” utilizzando la funzione “Local Mode” di DevTools, attivabile dal pannello delle impostazioni.",
@@ -1037,6 +1061,28 @@
   "string_id": "about-sync-log-empty",
   "suggest": "Non è stato registrato alcun registro di sincronizzazione.",
   "summary": "\"No sync logs have been recorded\" rendered as \"no log was found\", changing the meaning from recording to searching.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "A",
+  "check": "accesskey",
+  "current": "C",
+  "dismissed_because": "",
+  "fid": "209c396d17e3",
+  "file": "toolkit/toolkit/about/aboutAddons.ftl",
+  "first_seen": "2026-09-03",
+  "impact": 2,
+  "last_seen": "2026-09-03",
+  "locale": "it",
+  "origin": {},
+  "rationale": "The label is “Fai una donazione”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "b590717b",
+  "string_id": "detail-contributions-button",
+  "suggest": "",
+  "summary": "Access key `C` of `detail-contributions-button` is not present in its label",
   "suppressed_by": ""
  },
  {
@@ -1479,6 +1525,30 @@
   "string_id": "fp-certerror-untrusted-issuer-what-can-you-do-body",
   "suggest": "stia",
   "summary": "se stanno già cercando → stia — ✅",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "tooltiptext: Apri i risultati di ricerca in una nuova scheda",
+  "dismissed_because": "",
+  "fid": "a88339a7c7ea",
+  "file": "toolkit/toolkit/neterror/netError.ftl",
+  "first_seen": "2026-09-03",
+  "impact": 3,
+  "last_seen": "2026-09-03",
+  "locale": "it",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The en-US \"Opens search results in a new tab\" is descriptive (it doubles as the accessible description, per the developer comment), not an instruction to the user.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "a814287b",
+  "string_id": "neterror-search-cta-search-button",
+  "suggest": "tooltiptext: Apre i risultati di ricerca in una nuova scheda",
+  "summary": "Tooltip translated as an imperative command instead of a description of what the button does.",
   "suppressed_by": ""
  },
  {

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a905fc074817` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-09-01 @ `bcd40327226f` |
+| **Generated** | 2026-09-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
+| **Previous run** | 2026-09-03 @ `023f527865cb` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,174 |
+| **Strings reviewed this run** | 10 of 18,180 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,19 @@ Also for fy-NL: [android](android.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (3)
 
-_Nothing was fixed._
+- `cfr-doorhanger-milestone-heading2` — `browser/browser/newtab/asrouter.ftl` — [one] variant has b>{ $blockedCount }</b> — the opening < is missing, so the raw text b> shows. The [other] variant is correct.
+    - Current: `[one]`
+    - Source: `{$blockedCount ->} [other] { -brand-short-name } blocked over <b>{ $blockedCount }</b> trackers since { $date }!`
+- `language-name-br` — `toolkit/toolkit/intl/languageNames.ftl` — Bretons → Bretonsk — Dutch -s ending
+    - Current: `Bretons`
+    - Source: `Breton`
+    - Suggest: `Bretonsk`
+- `language-name-uz` — `toolkit/toolkit/intl/languageNames.ftl` — Oezbeeks → Oezbeeksk — Dutch -s; the file's pattern is -sk
+    - Current: `Oezbeeks`
+    - Source: `Uzbek`
+    - Suggest: `Oezbeeksk`
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,8 +55,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,174 |
-| Missing strings | 45 |
+| Strings | 18,180 |
+| Missing strings | 74 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 2 |
 | Files with no en-US counterpart | 0 |
@@ -57,22 +67,26 @@ _Nothing retired._
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 0 |
+| Access keys not in their label | 1 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 2 |
 
 ### Completeness
 
-**45 strings** are not translated yet, concentrated in:
+**74 strings** are not translated yet, concentrated in:
 
 - `toolkit/services/aboutSyncLog.ftl` — 26
-- `browser/browser/newtab/newtab.ftl` — 8
+- `browser/browser/permissions.ftl` — 10
+- `browser/browser/newtab/newtab.ftl` — 10
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 8
+- `browser/browser/preferences/preferences.ftl` — 5
 - `browser/browser/sharePanel.ftl` — 3
-- `browser/browser/preferences/preferences.ftl` — 3
+- `browser/browser/aiWindow.ftl` — 2
+- `browser/browser/sidebar.ftl` — 2
 - `toolkit/toolkit/pdfviewer/embedFallback.ftl` — 2
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 1
 - `browser/browser/appmenu.ftl` — 1
 - `browser/browser/preferences/formAutofill.ftl` — 1
+- `devtools/client/netmonitor.properties` — 1
 
 **Files absent from the locale:**
 
@@ -101,13 +115,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (506)
+## 3. Open findings (507)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 13 |
-| 2 | Wrong content (says something other than the English) | 125 |
+| 2 | Wrong content (says something other than the English) | 126 |
 | 3 | Degraded language (grammar, spelling, terminology) | 257 |
 | 4 | Cosmetic (typography, spacing) | 111 |
 
@@ -119,6 +133,10 @@ _Nothing reported._
     - Source: `Last updated: { $date }`
 - `styleeditor-pretty-print-button` — `devtools/client/styleeditor.ftl` — Left in English ("Stylesheet Pretty Print") while both siblings are translated
     - Source: `title: Pretty print style sheet`
+- `styleeditor-save-button` — `devtools/client/styleeditor.ftl` — Access key `s` of `styleeditor-save-button` is not present in its label
+    - Current: `s`
+    - Source: `(value): Save accesskey: S tooltiptext: Save this style sheet to a file`
+    - The label is “Bewarje”. An access key not in the label cannot be underlined and is unreachable by keyboard.
 - `inactive-css-not-grid-or-flex-container-or-multicol-container-fix` — `devtools/client/tooltips.ftl` — CSS keyword garbled: colums:2 → columns:2
     - Current: `colums:2`
     - Source: `Try adding either <strong>display:grid</strong>, <strong>display:flex</strong>, or <strong>columns:2</strong>. { learn-more }`
@@ -843,51 +861,70 @@ _One line each in `locales/fy-NL/dismissed.txt`. Delete the line and the finding
 
 _No suppression rules have matched._
 
-### Withdrawn to date (1)
+### Withdrawn to date (61)
 
-- `webconsole-commands-usage-block` — `devtools/shared/webconsole-commands.ftl` — raised by `legacy`, withdrawn 2026-08-20
+- `addon-confirm-install-some-unsigned-message` — `browser/browser/addonNotifications.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `downloads-files-not-downloaded` — `browser/browser/downloads.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `genai-shortcuts-selected-warning` — `browser/browser/genai.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `genai-shortcuts-selected-warning-generic` — `browser/browser/genai.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `firefoxview-spotlight-promo-primarybutton` — `browser/browser/newtab/asrouter.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `fxa-menu-message-sync-devices-secondary-text2` — `browser/browser/newtab/asrouter.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `mr2022-onboarding-pin-image-alt` — `browser/browser/newtab/onboarding.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `return-to-amo-addon-title` — `browser/browser/newtab/onboarding.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `places-locked-prompt` — `browser/browser/places.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `security-browsing-protection` — `browser/browser/preferences/preferences.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `protections-panel-cross-site-tracking-cookies` — `browser/browser/protectionsPanel.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `safeb-blocked-addon-page-short-desc` — `browser/browser/safebrowsing/blockedSite.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `safeb-blocked-unwanted-page-title` — `browser/browser/safebrowsing/blockedSite.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `screenshots-generic-error-title` — `browser/browser/screenshots.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `tabbrowser-confirm-caretbrowsing-message` — `browser/browser/tabbrowser.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `tabbrowser-empty-private-tab-title` — `browser/browser/tabbrowser.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `about-debugging-setup-intro` — `devtools/client/aboutdebugging.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `css-compatibility-default-message` — `devtools/client/tooltips.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `inactive-css-not-grid-or-flex-container-or-multicol-container` — `devtools/client/tooltips.ftl` — raised by `legacy`, withdrawn 2026-09-03
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (334)
+### Fixed to date (274)
 
-- `addon-confirm-install-some-unsigned-message` — `browser/browser/addonNotifications.ftl` — fixed 2026-08-24
+- `cfr-doorhanger-milestone-heading2` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-09-03
+- `language-name-br` — `toolkit/toolkit/intl/languageNames.ftl` — fixed 2026-09-03
+- `language-name-uz` — `toolkit/toolkit/intl/languageNames.ftl` — fixed 2026-09-03
 - `eme-notifications-drm-content-playing` — `browser/browser/browser.ftl` — fixed 2026-08-24
-- `downloads-files-not-downloaded` — `browser/browser/downloads.ftl` — fixed 2026-08-24
 - `split-dismiss-button-show-fewer-option` — `browser/browser/featureCallout.ftl` — fixed 2026-08-24
-- `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — fixed 2026-08-24
-- `genai-shortcuts-selected-warning` — `browser/browser/genai.ftl` — fixed 2026-08-24
-- `genai-shortcuts-selected-warning-generic` — `browser/browser/genai.ftl` — fixed 2026-08-24
-- `cfr-doorhanger-milestone-heading2` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-24
-- `firefoxview-spotlight-promo-primarybutton` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-24
 - `fxa-adoption-addresses-backup-subtitle` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-24
-- `fxa-menu-message-sync-devices-secondary-text2` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-24
 - `newtab-topsites-edit-topsites-header` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-24
-- `mr2022-onboarding-pin-image-alt` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-24
-- `return-to-amo-addon-title` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-24
-- `places-locked-prompt` — `browser/browser/places.ftl` — fixed 2026-08-24
 - `places-locked-prompt` — `browser/browser/places.ftl` — fixed 2026-08-24
 - `permissions-site-microphone-desc` — `browser/browser/preferences/permissions.ftl` — fixed 2026-08-24
 - `performance-allow-hw-accel` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
-- `security-browsing-protection` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
-- `protections-panel-cross-site-tracking-cookies` — `browser/browser/protectionsPanel.ftl` — fixed 2026-08-24
-- `safeb-blocked-addon-page-short-desc` — `browser/browser/safebrowsing/blockedSite.ftl` — fixed 2026-08-24
-- `safeb-blocked-unwanted-page-title` — `browser/browser/safebrowsing/blockedSite.ftl` — fixed 2026-08-24
-- `screenshots-generic-error-title` — `browser/browser/screenshots.ftl` — fixed 2026-08-24
-- `tabbrowser-confirm-caretbrowsing-message` — `browser/browser/tabbrowser.ftl` — fixed 2026-08-24
-- `tabbrowser-empty-private-tab-title` — `browser/browser/tabbrowser.ftl` — fixed 2026-08-24
 - `webrtc-sharing-menu` — `browser/browser/webrtcIndicator.ftl` — fixed 2026-08-24
-- `about-debugging-setup-intro` — `devtools/client/aboutdebugging.ftl` — fixed 2026-08-24
-- `css-compatibility-default-message` — `devtools/client/tooltips.ftl` — fixed 2026-08-24
 - `inactive-css-cue-pseudo-element-not-supported` — `devtools/client/tooltips.ftl` — fixed 2026-08-24
-- `inactive-css-not-grid-or-flex-container-or-multicol-container` — `devtools/client/tooltips.ftl` — fixed 2026-08-24
 - `inactive-css-not-table-fix` — `devtools/client/tooltips.ftl` — fixed 2026-08-24
 - `inactive-css-placeholder-pseudo-element-not-supported` — `devtools/client/tooltips.ftl` — fixed 2026-08-24
 - `delete-ca-cert-impact` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-08-24
-- `load-module-help-root-certs-module-name` — `security/manager/security/certificates/deviceManager.ftl` — fixed 2026-08-24
-- `account-client-name` — `toolkit/services/accounts.ftl` — fixed 2026-08-24
-- `discopane-intro` — `toolkit/toolkit/about/aboutAddons.ftl` — fixed 2026-08-24
 - `extensions-warning-update-security` — `toolkit/toolkit/about/aboutAddons.ftl` — fixed 2026-08-24
 - `extensions-warning-update-security2` — `toolkit/toolkit/about/aboutAddons.ftl` — fixed 2026-08-24
-- `recommended-theme-1` — `toolkit/toolkit/about/aboutAddons.ftl` — fixed 2026-08-24
-- `recommended-theme-1` — `toolkit/toolkit/about/aboutAddons.ftl` — fixed 2026-08-24
+- `about-httpsonly-explanation-iframe` — `toolkit/toolkit/about/aboutHttpsOnlyError.ftl` — fixed 2026-08-24
+- `rights-webservices-term-5` — `toolkit/toolkit/about/aboutRights.ftl` — fixed 2026-08-24
+- `rights-webservices-term-5` — `toolkit/toolkit/about/aboutRights.ftl` — fixed 2026-08-24
+- `third-party-button-to-unblock-module` — `toolkit/toolkit/about/aboutThirdParty.ftl` — fixed 2026-08-24
+- `abuse-report-broken-suggestions-sitepermission` — `toolkit/toolkit/about/abuseReports.ftl` — fixed 2026-08-24
+- `download-ui-dont-go-offline-button` — `toolkit/toolkit/downloads/downloadUI.ftl` — fixed 2026-08-24
+- `autofill-insecure-field-warning-description` — `toolkit/toolkit/formautofill/formAutofill.ftl` — fixed 2026-08-24
+- `cert-error-mitm-connection` — `toolkit/toolkit/neterror/certError.ftl` — fixed 2026-08-24
+- `ssl-error-us-only-server` — `toolkit/toolkit/neterror/nsserrors.ftl` — fixed 2026-08-24
+- `xp-sec-fortezza-bad-card` — `toolkit/toolkit/neterror/nsserrors.ftl` — fixed 2026-08-24
+- `pdfjs-printing-not-ready` — `toolkit/toolkit/pdfviewer/viewer.ftl` — fixed 2026-08-24
+- `pdfjs-printing-not-supported` — `toolkit/toolkit/pdfviewer/viewer.ftl` — fixed 2026-08-24
+- `shortcuts-remove-button` — `toolkit/toolkit/about/aboutAddons.ftl` — fixed 2026-08-21
+- `aboutdialog-update-downloading` — `browser/browser/aboutDialog.ftl` — fixed 2026-08-11
+- `helpus-referrals` — `browser/browser/aboutDialog.ftl` — fixed 2026-08-11
+- `about-logins-export-password-os-auth-dialog-message-macosx` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-11
+- `about-logins-import-dialog-items-modified2` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-11
+- `about-logins-import-report-row-description-modified2` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-11
+- `about-logins-intro-import2` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-11
+- `restore-page-restore-header` — `browser/browser/aboutSessionRestore.ftl` — fixed 2026-08-11
+- `restore-page-tab-title` — `browser/browser/aboutSessionRestore.ftl` — fixed 2026-08-11
+- `restore-page-try-again-button` — `browser/browser/aboutSessionRestore.ftl` — fixed 2026-08-11
+- `crashed-comment` — `browser/browser/aboutTabCrashed.ftl` — fixed 2026-08-11

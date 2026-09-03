@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a905fc074817` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-09-01 @ `bcd40327226f` |
+| **Generated** | 2026-09-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
+| **Previous run** | 2026-09-03 @ `023f527865cb` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 55 of 18,206 |
+| **Strings reviewed this run** | 7 of 18,212 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,65 +18,17 @@ Also for tr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (9)
+### 🆕 New findings (0)
 
-- `newtab-privacy-etp-off-faster-browsing` — `browser/browser/newtab/newtab.ftl` — "Fewer trackers" translated as "Be tracked less" instead of referring to trackers.
-    - Current: `Daha az takip edilin.`
-    - Source: `Faster browsing. Fewer trackers.`
-    - Suggest: `Daha az takip kodu.`
-    - en-US "Fewer trackers" is a noun phrase about trackers; the Turkish turns it into an imperative claim about the user being tracked less. Elsewhere in this batch "trackers" is rendered "takip kodları".
-- `newtab-privacy-message-info-4` — `browser/browser/newtab/newtab.ftl` — "protection by default" rendered as "protection anytime, anywhere", dropping the default-setting meaning.
-    - Current: `{ -brand-short-name } demek her an, her yerde korunma demektir.`
-    - Source: `Choosing { -brand-short-name } means choosing protection by default.`
-    - Suggest: `{ -brand-short-name } demek varsayılan olarak korunma demektir.`
-    - The source says choosing the browser means protection is on by default; "her an, her yerde" (anytime, anywhere) is a different claim not present in the en-US.
-- `newtab-privacy-message-info-10` — `browser/browser/newtab/newtab.ftl` — "strong, unique logins" translated as "strong and unique accounts".
-    - Current: `güçlü ve benzersiz hesaplar kullanmak`
-    - Source: `Save passwords in { -brand-short-name } to use strong, unique logins everywhere.`
-    - Suggest: `güçlü ve benzersiz giriş bilgileri kullanmak`
-    - "logins" refers to login credentials, not accounts ("hesaplar"); the Turkish changes the meaning of what the user is advised to use.
-- `newtab-privacy-message-promo-signin-1` — `browser/browser/newtab/newtab.ftl` — "encrypted" dropped and replaced by vague "güvenle saklayın".
-    - Current: `tüm cihazlarınızda güvenle saklayın`
-    - Source: `Keep bookmarks, passwords, and tabs encrypted across devices with your { -vendor-short-name } account.`
-    - Suggest: `tüm cihazlarınızda şifreli olarak saklayın`
-    - The en-US specifically states data is kept encrypted across devices; the Turkish only says "store securely", losing the encryption claim.
-- `ipprotection-summer-promo-offramp-subscriber-description` — `browser/browser/ipProtection.ftl` — Statement of fact "You now get" turned into a possibility "you can have".
-    - Current: `artık sınırsız bant genişliğine ve daha fazla konuma sahip olabilirsiniz`
-    - Source: `You now get unlimited bandwidth and more locations as a { -mozilla-vpn-brand-name } subscriber.`
-    - Suggest: `artık sınırsız bant genişliğine ve daha fazla konuma sahipsiniz`
-    - The source tells subscribers they now have these benefits; "sahip olabilirsiniz" makes it a conditional possibility.
-- `ipprotection-connection-status-blocked-error-description-1` — `browser/browser/ipProtection.ftl` — Definite statement "limit where you can use VPN" weakened to "may limit".
-    - Current: `VPN’i kullanabileceğiniz yerleri sınırlayabilir`
-    - Source: `Local laws and restrictions limit where you can use VPN. <a data-l10n-name="learn-more-link">Learn more</a>`
-    - Suggest: `VPN’i kullanabileceğiniz yerleri sınırlıyor`
-    - en-US "limit" is a factual statement explaining why the connection is blocked; the Turkish "sınırlayabilir" (may limit) weakens it into speculation.
-- `ipprotection-feature-introduction-text-summer-promo-1` — `browser/browser/ipProtection.ftl` — Straight apostrophe used instead of the typographic apostrophe.
-    - Current: `31 Ağustos'a`
-    - Source: `Turn it on to keep your browsing more private. <a data-l10n-name="summer-promo-link">Get unlimited bandwidth</a> and more locations to browse from. Now until August 31.`
-    - Suggest: `31 Ağustos’a`
-    - The locale convention is the typographic apostrophe ’ (U+2019); other strings in the same file use "31 Ağustos’tan".
-- `url-classifier-content-classifier-force-third-party` — `toolkit/toolkit/about/url-classifier.ftl` — "Force" is dropped, weakening the checkbox label to "treat as third-party".
-    - Current: `Üst çerçeveye göre üçüncü taraf olarak değerlendir`
-    - Source: `Force third-party to top frame`
-    - Suggest: `Üst çerçeveye göre üçüncü taraf olmaya zorla`
-    - The developer comment states this forces third-party treatment regardless of the URLs entered; "değerlendir" loses the forcing semantics.
-- `newtab-stocks-in-watchlist` — `browser/browser/newtab/newtab.ftl` — Sentence is incomplete/ungrammatical and adds "zaten" (already), which the source does not say.
-    - Current: `{ $name } zaten takip listenize`
-    - Source: `{ $name } is in your watchlist`
-    - Suggest: `{ $name } takip listenizde`
-    - en-US "{ $name } is in your watchlist" states the stock is in the watchlist; the Turkish uses the dative "listenize" with no verb, leaving a broken fragment, and inserts "zaten".
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
 _Nothing was fixed._
 
-### ↩︎ Withdrawn — no longer considered a defect (1)
+### ↩︎ Withdrawn — no longer considered a defect (0)
 
-- `fxa-signout-dialog-body-aiwindow` — `browser/browser/aiWindow.ftl` — `fxa-signout-dialog-body-aiwindow` calls `-smart-window-brand-name` with ['plural-form'], but that term selects on ['form']
-    - Current: `Eşitlenen veriler hesabınızda kalmaya devam edecek. Açık olan { -smart-window-brand-name } klasik pencerelere dönüşecek.`
-    - Source: `Synced data will remain in your account. Open { -smart-window-brand-name } will switch to Classic Windows.`
-    - Suggest: `{ -smart-window-brand-name(form: "lowercase-plural") }`
-    - The term falls back to its catch-all variant, so the intended form is never selected.
+_Nothing withdrawn._
 
 ### 🔁 String changed, defect not verifiable — needs a re-read (0)
 
@@ -93,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 362 |
-| Strings | 18,206 |
-| Missing strings | 13 |
+| Strings | 18,212 |
+| Missing strings | 42 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -111,9 +63,17 @@ _Nothing retired._
 
 ### Completeness
 
-**13 strings** are not translated yet, concentrated in:
+**42 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 13
+- `browser/browser/newtab/newtab.ftl` — 15
+- `browser/browser/permissions.ftl` — 10
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 8
+- `browser/browser/aiWindow.ftl` — 2
+- `browser/browser/sidebar.ftl` — 2
+- `browser/browser/preferences/preferences.ftl` — 2
+- `devtools/client/netmonitor.properties` — 1
+- `dom/chrome/dom/dom.properties` — 1
+- `toolkit/toolkit/about/aboutAddons.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -124,7 +84,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 676, `curly-single` 166, `straight-double` 29 | **curly-double** |
-| apostrophe | `typographic` 981, `straight` 51 | **typographic** |
+| apostrophe | `typographic` 982, `straight` 51 | **typographic** |
 | ellipsis | `char` 463 | **char** |
 | dash | `em` 72, `en` 2 | **em** |
 | nbsp | `total` 9, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |

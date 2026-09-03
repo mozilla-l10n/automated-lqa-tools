@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a905fc074817` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-09-01 @ `bcd40327226f` |
+| **Generated** | 2026-09-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
+| **Previous run** | 2026-09-03 @ `023f527865cb` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,185 |
+| **Strings reviewed this run** | 7 of 18,191 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 360 |
-| Strings | 18,185 |
-| Missing strings | 45 |
+| Strings | 18,191 |
+| Missing strings | 74 |
 | Obsolete strings | 11 |
 | Files absent from the locale | 2 |
 | Files with no en-US counterpart | 0 |
@@ -63,16 +63,20 @@ _Nothing retired._
 
 ### Completeness
 
-**45 strings** are not translated yet, concentrated in:
+**74 strings** are not translated yet, concentrated in:
 
 - `toolkit/services/aboutSyncLog.ftl` — 26
-- `browser/browser/newtab/newtab.ftl` — 8
+- `browser/browser/permissions.ftl` — 10
+- `browser/browser/newtab/newtab.ftl` — 10
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 8
+- `browser/browser/preferences/preferences.ftl` — 5
 - `browser/browser/sharePanel.ftl` — 3
-- `browser/browser/preferences/preferences.ftl` — 3
+- `browser/browser/aiWindow.ftl` — 2
+- `browser/browser/sidebar.ftl` — 2
 - `toolkit/toolkit/pdfviewer/embedFallback.ftl` — 2
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 1
 - `browser/browser/appmenu.ftl` — 1
 - `browser/browser/preferences/formAutofill.ftl` — 1
+- `devtools/client/netmonitor.properties` — 1
 
 **Files absent from the locale:**
 

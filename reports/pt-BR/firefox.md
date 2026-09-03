@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a905fc074817` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-09-01 @ `bcd40327226f` |
+| **Generated** | 2026-09-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
+| **Previous run** | 2026-09-03 @ `023f527865cb` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,213 |
+| **Strings reviewed this run** | 7 of 18,219 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 362 |
-| Strings | 18,213 |
-| Missing strings | 6 |
+| Strings | 18,219 |
+| Missing strings | 35 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,11 +63,19 @@ _Nothing retired._
 
 ### Completeness
 
-**6 strings** are not translated yet, concentrated in:
+**35 strings** are not translated yet, concentrated in:
 
+- `browser/browser/permissions.ftl` — 10
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 8
+- `browser/browser/preferences/preferences.ftl` — 4
 - `browser/browser/sharePanel.ftl` — 3
-- `browser/browser/preferences/preferences.ftl` — 2
+- `browser/browser/aiWindow.ftl` — 2
+- `browser/browser/sidebar.ftl` — 2
+- `browser/browser/newtab/newtab.ftl` — 2
 - `browser/browser/preferences/formAutofill.ftl` — 1
+- `devtools/client/netmonitor.properties` — 1
+- `dom/chrome/dom/dom.properties` — 1
+- `toolkit/toolkit/about/aboutAddons.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -977,15 +985,16 @@ _One line each in `locales/pt-BR/dismissed.txt`. Delete the line and the finding
 
 _No suppression rules have matched._
 
-### Withdrawn to date (3)
+### Withdrawn to date (4)
 
+- `sec-error-cert-not-in-name-space` — `toolkit/toolkit/neterror/nsserrors.ftl` — raised by `legacy`, withdrawn 2026-09-03
 - `firefoxview-history-context-forget-site` — `browser/browser/firefoxView.ftl` — raised by `accesskey`, withdrawn 2026-08-20
 - `webconsole-commands-usage-block` — `devtools/shared/webconsole-commands.ftl` — raised by `legacy`, withdrawn 2026-08-20
 - `neterror-proxy-connect-failure-contact-admin` — `toolkit/toolkit/neterror/netError.ftl` — raised by `legacy`, withdrawn 2026-08-20
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (138)
+### Fixed to date (137)
 
 - `firefox-relay-offer-legal-notice-1` — `browser/browser/browser.ftl` — fixed 2026-08-24
 - `popup-warning-exceeded-with-redirect-message` — `browser/browser/browser.ftl` — fixed 2026-08-24
@@ -993,7 +1002,6 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `report-broken-site-panel-reason-choose` — `browser/browser/reportBrokenSite.ftl` — fixed 2026-08-24
 - `split-view-menuitem-reverse-tabs` — `browser/browser/tabbrowser.ftl` — fixed 2026-08-24
 - `about-glean-about-data-list-item-dictionary` — `toolkit/toolkit/about/aboutGlean.ftl` — fixed 2026-08-24
-- `sec-error-cert-not-in-name-space` — `toolkit/toolkit/neterror/nsserrors.ftl` — fixed 2026-08-24
 - `about-logins-confirm-remove-all-sync-dialog-message` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-07
 - `login-intro-instructions-fxa` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-07
 - `addon-confirm-install-message` — `browser/browser/addonNotifications.ftl` — fixed 2026-08-07
@@ -1027,3 +1035,4 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `genai-menu-ask-provider-2` — `browser/browser/genai.ftl` — fixed 2026-08-07
 - `genai-onboarding-copilot-learn` — `browser/browser/genai.ftl` — fixed 2026-08-07
 - `link-preview-first-time-setup-message` — `browser/browser/genai.ftl` — fixed 2026-08-07
+- `identity-credential-policy-description` — `browser/browser/identityCredentialNotification.ftl` — fixed 2026-08-07

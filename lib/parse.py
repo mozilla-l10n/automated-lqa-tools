@@ -67,6 +67,20 @@ class Msg:
         Deliberately not the comment. This is what a finding records as the
         string it was raised against, so a comment edit must not make an
         untouched translation read as fixed.
+
+        Placeable *options* are folded in on top of the flattened text,
+        because `_flatten` throws them away and they carry meaning it does
+        not. `{ -smart-window-brand-name(form: "lower-plural") }` and
+        `(form: "lower-singular")` render as different words but flatten to
+        the same `{ -smart-window-brand-name }`, so they hashed alike --
+        and fr's `aiwindow-firstrun-default-checkbox-label`, fixed from one
+        to the other, read as a string that had never moved. The finding
+        could not close, and `snapshot.build` uses this hash too, so the
+        edit never entered a delta and the string was never re-read either.
+
+        Only mixed in when there are options at all, so the hash of the 99%
+        of messages that have none is unchanged and correcting this does not
+        invalidate every stored anchor.
         """
         h = hashlib.sha1()
         for k in sorted(self.props):
@@ -74,7 +88,26 @@ class Msg:
             h.update(b"\x00")
             h.update(self.props[k].encode())
             h.update(b"\x01")
+        options = self._option_signature()
+        if options:
+            h.update(b"\x02")
+            h.update(options.encode())
         return h.hexdigest()[:8]
+
+    def _option_signature(self) -> str:
+        """Every placeable option in the message, in order, as `name=value`.
+
+        Empty for a message with no parameterized placeable, which is what
+        keeps this out of the hash of everything else.
+        """
+        parts = []
+        for prop in sorted(self.raw):
+            for part in _pattern_parts(self.raw[prop]):
+                if isinstance(part, Expression) and part.options:
+                    parts.append(",".join(
+                        f"{k}={v}" for k, v in sorted(part.options.items())
+                    ))
+        return "|".join(parts)
 
     def context_hash(self) -> str:
         """Hash of the developer comment.
@@ -118,6 +151,20 @@ def _flatten(pattern) -> str:
                 )
                 out.append(f"<{name}{attrs}{'/' if part.kind == 'standalone' else ''}>")
     return "".join(out)
+
+
+def _pattern_parts(msg):
+    """Every pattern part of a message, variants included.
+
+    Shared by the option signature in `Msg.hash`, which has to see into a
+    SelectMessage's variants: a term parameter can differ in one variant
+    only.
+    """
+    if isinstance(msg, PatternMessage):
+        yield from msg.pattern
+    elif isinstance(msg, SelectMessage):
+        for variant in msg.variants.values():
+            yield from variant
 
 
 def _variant_key(key) -> str:

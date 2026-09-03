@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a905fc074817` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-09-01 @ `bcd40327226f` |
+| **Generated** | 2026-09-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
+| **Previous run** | 2026-09-03 @ `023f527865cb` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 17,841 |
+| **Strings reviewed this run** | 6 of 17,847 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 357 |
-| Strings | 17,841 |
-| Missing strings | 378 |
+| Strings | 17,847 |
+| Missing strings | 407 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 5 |
 | Files with no en-US counterpart | 0 |
@@ -57,25 +57,25 @@ _Nothing retired._
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 4 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 142 |
+| Access keys not in their label | 138 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 131 |
 
 ### Completeness
 
-**378 strings** are not translated yet, concentrated in:
+**407 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 81
+- `browser/browser/newtab/newtab.ftl` — 83
 - `toolkit/toolkit/about/url-classifier.ftl` — 26
 - `toolkit/services/aboutSyncLog.ftl` — 26
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 23
 - `toolkit/toolkit/about/aboutNetworking.ftl` — 20
+- `browser/browser/preferences/preferences.ftl` — 19
 - `browser/browser/sharePanel.ftl` — 17
-- `browser/browser/preferences/preferences.ftl` — 17
-- `toolkit/toolkit/about/aboutAddons.ftl` — 15
-- `toolkit/toolkit/neterror/netError.ftl` — 13
+- `toolkit/toolkit/about/aboutAddons.ftl` — 16
+- `browser/browser/sidebar.ftl` — 14
 - `browser/browser/newtab/onboarding.ftl` — 13
-- `browser/browser/sidebar.ftl` — 12
+- `toolkit/toolkit/neterror/netError.ftl` — 13
 - `browser/browser/newtab/asrouter.ftl` — 11
 
 **Files absent from the locale:**
@@ -106,8 +106,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ## 2. Systemic items (decisions, not line items)
 
-- **accesskey — 142 strings** — 142 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
-    - Affected: `addressbar-locbar-clipboard-option`, `addressbar-locbar-openpage-option`, `addressbar-locbar-quickactions-option`, `appmenu-addon-post-install-pin-toolbarbutton-checkbox`, `appmenu-help-more-troubleshooting-info`, `appmenu-help-not-deceptive`, `appmenu-homepage-controlled-changes`, `appmenu-new-tab-controlled-changes`, `appmenu-tab-hide-controlled`, `appmenu-theme-installed`, `appmenu-update-available2`, `appmenu-update-manual2` …and 129 more
+- **accesskey — 138 strings** — 138 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
+    - Affected: `addressbar-locbar-clipboard-option`, `addressbar-locbar-openpage-option`, `addressbar-locbar-quickactions-option`, `appmenu-addon-post-install-pin-toolbarbutton-checkbox`, `appmenu-help-more-troubleshooting-info`, `appmenu-help-not-deceptive`, `appmenu-homepage-controlled-changes`, `appmenu-new-tab-controlled-changes`, `appmenu-tab-hide-controlled`, `appmenu-theme-installed`, `appmenu-update-available2`, `appmenu-update-manual2` …and 125 more
 - **typography — 131 strings** — 131 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
     - Affected: `AutomaticAuth`, `BlockMixedActiveContent`, `BlockMixedDisplayContent`, `CORSPreflightDidNotSucceed3`, `CSPROViolation`, `CSPROViolationWithURI`, `CSPViolationWithURI`, `CompositorAnimationWarningTransformWithSyncGeometricAnimations`, `CookieRejectedByPermissionManager`, `CookieRejectedInvalidCharName`, `CookieSameSiteValueInvalid2`, `FullscreenDeniedContainerNotAllowed` …and 117 more
 

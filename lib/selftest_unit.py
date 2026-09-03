@@ -47,8 +47,40 @@ class _Block:
         self.input = payload
 
 
+def _pattern_with_option(form):
+    """A one-placeable Fluent pattern, optionally parameterized."""
+    from moz.l10n.model import Expression, PatternMessage
+
+    options = {"form": form} if form is not None else {}
+    return PatternMessage(
+        ["dans une ", Expression("-brand", function="message", options=options)]
+    )
+
+
 def run(suite) -> None:
     check = suite.check
+
+    # --- the content hash sees placeable options --------------------------
+    suite.section("A term parameter is part of the string, so it is part of the hash")
+    # `_flatten` renders a term reference as its name and drops the
+    # arguments, so these two flatten identically. They are different words
+    # on screen, and fr changed one to the other as a fix: hashing them
+    # alike made the fix invisible, the finding uncloseable, and kept the
+    # string out of every subsequent delta.
+    plural = Msg(file="a.ftl", id="s", props={"": "dans une { -brand }"},
+                 raw={"": _pattern_with_option("lower-plural")})
+    singular = Msg(file="a.ftl", id="s", props={"": "dans une { -brand }"},
+                   raw={"": _pattern_with_option("lower-singular")})
+    check(plural.text() == singular.text(),
+          "the flattened text is deliberately identical -- reports stay readable")
+    check(plural.hash() != singular.hash(),
+          "but the hash separates them, so changing the form reads as movement")
+    bare = Msg(file="a.ftl", id="s", props={"": "dans une { -brand }"},
+               raw={"": _pattern_with_option(None)})
+    check(bare.hash() == Msg(file="a.ftl", id="s",
+                             props={"": "dans une { -brand }"}).hash(),
+          "a message with no options hashes exactly as before, so correcting "
+          "this does not invalidate every stored anchor")
 
     # --- finding identity -------------------------------------------------
     suite.section("Two complaints about one string are two findings")

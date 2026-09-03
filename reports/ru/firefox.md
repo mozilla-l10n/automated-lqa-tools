@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a905fc074817` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-09-01 @ `bcd40327226f` |
+| **Generated** | 2026-09-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
+| **Previous run** | 2026-09-03 @ `023f527865cb` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 9 of 18,219 |
+| **Strings reviewed this run** | 21 of 18,239 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,13 @@ Also for ru: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (1)
 
-- `share-panel-connect-device-2` — `browser/browser/sharePanel.ftl` — Menu item rendered as a noun phrase instead of an action verb.
-    - Current: `label: Добавление устройства`
-    - Source: `label: Add a Device`
-    - Suggest: `label: Добавить устройство`
-    - The en-US "Add a Device" is a clickable action that opens the device-connection flow; Russian UI convention for such commands is the imperative/infinitive "Добавить устройство", consistent with the sibling label "Поделиться…"/"Сгенерировать QR-код".
-- `nova-early-access-infobar-title` — `browser/browser/newtab/asrouter.ftl` — "is getting a new look" (future/ongoing) translated as a completed change "Обновлён внешний вид".
-    - Current: `<strong>Обновлён внешний вид { -brand-product-name }.</strong>`
-    - Source: `<strong>{ -brand-product-name } is getting a new look.</strong> You’re previewing an early, unpolished version before the launch later this year.`
-    - Suggest: `<strong>У { -brand-product-name } скоро появится новый облик.</strong>`
-    - The en-US says the redesign is upcoming and the user is previewing it before the launch later this year; the Russian asserts the look has already been updated, contradicting the second sentence.
+- `smart-window-model-radio-group` — `browser/browser/aiFeatures.ftl` — "Assistant model" rendered as "Модель-помощник", which reverses the modifier relationship.
+    - Current: `Модель-помощник`
+    - Source: `aria-label: Assistant model`
+    - Suggest: `Модель помощника`
+    - en-US "Assistant model" means the model used by the assistant (a radio group selecting the assistant's model), not a model that is an assistant.
 
 ### ✅ Fixed since the last run (0)
 
@@ -54,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 362 |
-| Strings | 18,219 |
-| Missing strings | 0 |
+| Strings | 18,239 |
+| Missing strings | 15 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -66,13 +61,21 @@ _Nothing retired._
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 3 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 144 |
+| Access keys not in their label | 141 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 6 |
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**15 strings** are not translated yet, concentrated in:
+
+- `browser/browser/permissions.ftl` — 10
+- `browser/browser/preferences/preferences.ftl` — 2
+- `devtools/client/netmonitor.properties` — 1
+- `dom/chrome/dom/dom.properties` — 1
+- `toolkit/toolkit/about/aboutAddons.ftl` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -85,18 +88,18 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | ellipsis | `char` 466, `ascii` 6 | **char** |
 | dash | `em` 168, `en` 5 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 7 | _mixed_ |
-| register | `informal` 1052, `formal` 3596 | **formal** |
+| register | `informal` 1055, `formal` 3596 | **formal** |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **accesskey — 144 strings** — 144 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
-    - Affected: `addon-install-or-update-from-file`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-showrecentsearches-option-2`, `appmenu-theme-installed`, `appmenu-update-available2`, `appmenu-update-manual2`, `autofill-addresses-checkbox`, `autofill-addresses-checkbox-message`, `autofill-addresses-manage-addresses-button`, `autofill-payment-methods-checkbox-submessage`, `autofill-payment-methods-manage-payments-button`, `autofill-reauth-payment-methods-checkbox` …and 132 more
+- **accesskey — 141 strings** — 141 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
+    - Affected: `addon-install-or-update-from-file`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-showrecentsearches-option-2`, `appmenu-theme-installed`, `appmenu-update-available2`, `appmenu-update-manual2`, `autofill-addresses-checkbox`, `autofill-addresses-checkbox-message`, `autofill-addresses-manage-addresses-button`, `autofill-payment-methods-checkbox-submessage`, `autofill-payment-methods-manage-payments-button`, `autofill-reauth-payment-methods-checkbox` …and 129 more
 
 ---
 
-## 3. Open findings (599)
+## 3. Open findings (600)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -111,7 +114,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 46 |
-| 2 | Wrong content (says something other than the English) | 270 |
+| 2 | Wrong content (says something other than the English) | 271 |
 | 3 | Degraded language (grammar, spelling, terminology) | 218 |
 | 4 | Cosmetic (typography, spacing) | 65 |
 
@@ -239,6 +242,11 @@ _Also listed under their own category below._
     - Current: `{ -brand-short-name } может учиться на своей работе`
     - Source: `description: { -brand-short-name } can learn from your activity to create memories. They’re used to help personalize responses and are stored locally on this device. label: Memories`
     - Suggest: `…может учиться на основе вашей активности`
+- `smart-window-model-radio-group` — `browser/browser/aiFeatures.ftl` — "Assistant model" rendered as "Модель-помощник", which reverses the modifier relationship.
+    - Current: `Модель-помощник`
+    - Source: `aria-label: Assistant model`
+    - Suggest: `Модель помощника`
+    - en-US "Assistant model" means the model used by the assistant (a radio group selecting the assistant's model), not a model that is an assistant.
 - `aiwindow-starter-writing-improve` — `browser/browser/aiWindow.ftl` — Current: Улучши правописание (spelling) → Suggest: Улучши текст
     - Current: `Улучши правописание`
     - Source: `Improve writing`
@@ -427,9 +435,7 @@ _Also listed under their own category below._
 - `newtab-sports-widget-team-name-label-civ` — `browser/browser/newtab/newtab.ftl` — ASCII apostrophe in Кот-д'Ивуар
     - Source: `label: Ivory Coast`
     - Suggest: `.label`
-- `newtab-wallpaper-blue-flowers` — `browser/browser/newtab/newtab.ftl` — Wallpaper descriptions — newtab.ftl — newtab-wallpaper-light-landscape renders "mist" as дым (smoke); newtab-wallpaper-blue-flowers says цветов с голубыми цветами (repeats the word, loses "petaled"); newtab-wallpaper-celestial-eclipse-time-lapse renders "time lapse" as Хронометраж; newtab-wallpaper-celestial-river renders "satellite" as Космический
-    - Source: `Closeup photography of blue-petaled flowers in bloom`
-- _…and 208 more; see `state/` for the full list._
+- _…and 209 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

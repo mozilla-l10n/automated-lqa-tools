@@ -92,9 +92,26 @@ def check_term_params(locale, l10n, source) -> list[Finding]:
     return out
 
 
-_ACCESSKEY_PARTNERS = (
-    "label", "value", "title", "aria-label", "placeholder", "tooltiptext", "toolbarname",
-)
+# Only attributes that carry a *visible* label, because an access key is
+# underlined in one and is meaningless without one.
+#
+# `aria-label`, `tooltiptext`, `title` and `placeholder` were all in this
+# list and all produced false positives, because the first present partner
+# wins: fr's `bookmarks-toolbar` was checked against its `.aria-label`
+# ("Marque-pages") instead of its `.toolbarname` ("Barre personnelle"),
+# which does contain the B, and the same happened in es-AR, es-ES and id.
+# The context-menu icon buttons (`main-context-menu-back-2`,
+# `main-context-menu-stop`, ...) carry only `.tooltiptext` and
+# `.aria-label`, so there is no visible label at all and the check cannot
+# apply -- with the list trimmed they resolve to no partner and are skipped
+# rather than measured against a screen-reader name.
+#
+# Trimming also unmasked two real defects the tooltip had been covering for:
+# fy-NL `styleeditor-save-button` (value "Bewarje", key `s`) and it
+# `detail-contributions-button` (value "Fai una donazione", key `C`), both
+# of which were passing on a `.tooltiptext`/`.title` that happened to
+# contain the letter.
+_ACCESSKEY_PARTNERS = ("label", "value", "toolbarname")
 
 
 def check_accesskeys(locale, l10n, source) -> list[Finding]:
@@ -125,7 +142,9 @@ def check_accesskeys(locale, l10n, source) -> list[Finding]:
                 if candidate in msg.props and candidate != prop:
                     label = msg.props[candidate]
                     break
-            if label is None:
+            # An empty label is no label: nothing to underline, so there is
+            # nothing to check rather than a key that is trivially absent.
+            if not label:
                 continue
             if akey.lower() in expand(label).lower():
                 continue

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a905fc074817` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-09-01 @ `bcd40327226f` |
+| **Generated** | 2026-09-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
+| **Previous run** | 2026-09-03 @ `023f527865cb` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 15,531 |
+| **Strings reviewed this run** | 3 of 15,534 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 354 |
-| Strings | 15,531 |
-| Missing strings | 2,688 |
+| Strings | 15,534 |
+| Missing strings | 2,720 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 8 |
 | Files with no en-US counterpart | 0 |
@@ -57,24 +57,24 @@ _Nothing retired._
 | Plural variants (dead or missing forms) | 7 |
 | Text quoting a UI label that no longer matches | 7 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 16 |
+| Access keys not in their label | 14 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 98 |
 
 ### Completeness
 
-**2,688 strings** are not translated yet, concentrated in:
+**2,720 strings** are not translated yet, concentrated in:
 
-- `browser/browser/preferences/preferences.ftl` — 428
-- `browser/browser/newtab/newtab.ftl` — 425
-- `browser/browser/aiWindow.ftl` — 159
+- `browser/browser/preferences/preferences.ftl` — 432
+- `browser/browser/newtab/newtab.ftl` — 427
+- `browser/browser/aiWindow.ftl` — 161
 - `browser/browser/ipProtection.ftl` — 146
 - `browser/browser/newtab/onboarding.ftl` — 98
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 88
 - `browser/browser/aiWindowContent.ftl` — 80
 - `browser/browser/newtab/asrouter.ftl` — 79
 - `browser/browser/browser.ftl` — 63
-- `toolkit/toolkit/about/aboutAddons.ftl` — 61
+- `toolkit/toolkit/about/aboutAddons.ftl` — 62
 - `browser/browser/featureCallout.ftl` — 61
 - `browser/browser/profiles.ftl` — 56
 
@@ -112,13 +112,13 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (329)
+## 3. Open findings (327)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 83 |
-| 2 | Wrong content (says something other than the English) | 174 |
+| 2 | Wrong content (says something other than the English) | 172 |
 | 3 | Degraded language (grammar, spelling, terminology) | 54 |
 | 4 | Cosmetic (typography, spacing) | 17 |
 
@@ -147,10 +147,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `The Default Browser Agent task checks when the default changes from { -brand-short-name } to another browser. If the change happens under suspicious circumstances, it will prompt users to change back to { -brand-short-n…`
     - Suggest: `Tugas Agen Peramban Baku bertugas memeriksa`
     - The task name is "Default Browser Agent"; the same string uses "peramban baku" correctly a few words later, so "Baru" names the wrong thing.
-- `bookmarks-toolbar` — `browser/browser/browser.ftl` — Access key `B` of `bookmarks-toolbar` is not present in its label
-    - Current: `B`
-    - Source: `accesskey: B aria-label: Bookmarks toolbarname: Bookmarks Toolbar`
-    - The label is “Markah”. An access key not in the label cannot be underlined and is unreachable by keyboard.
 - `browser-tab-mute` — `browser/browser/browser.ftl` — Plural variant truncated to a single letter
     - Current: `*[other] S`
     - Source: `{$count ->} [1] MUTE TAB [other] MUTE { $count } TABS`
@@ -404,7 +400,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `accesskey: n label: {$tabCount ->} [1] Send Tab to Device [other] Send { $tabCount } Tabs to Device`
     - Suggest: `Kirim { $tabCount } Tab ke Perangkat`
     - $tabCount counts tabs affected by the action, not devices; with 3 tabs selected the menu claims 3 devices.
-- _…and 94 more; see `state/` for the full list._
+- `tabbrowser-context-unmute-selected-tabs` — `browser/browser/tabbrowser.ftl` — Access key `S` of `tabbrowser-context-unmute-selected-tabs` is not present in its label
+    - Current: `S`
+    - Source: `accesskey: m label: Unmute Tabs`
+    - The label is “Bunyikan Tab”. An access key not in the label cannot be underlined and is unreachable by keyboard.
+- _…and 92 more; see `state/` for the full list._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -1183,9 +1183,10 @@ _One line each in `locales/id/dismissed.txt`. Delete the line and the finding re
 
 _No suppression rules have matched._
 
-### Withdrawn to date (0)
+### Withdrawn to date (2)
 
-_Nothing withdrawn._
+- `bookmarks-toolbar` — `browser/browser/browser.ftl` — raised by `accesskey`, withdrawn 2026-09-03
+- `styleeditor-visibility-toggle` — `devtools/client/styleeditor.ftl` — raised by `accesskey`, withdrawn 2026-09-03
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 

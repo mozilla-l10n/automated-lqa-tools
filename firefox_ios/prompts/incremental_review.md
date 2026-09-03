@@ -43,6 +43,21 @@ mistranslation. A missing negation that makes an instruction wrong is a
 plain impact-2 defect. Reserve `true` for text that changes what the
 product says about itself, its users, or its behaviour.
 
+## How `source:` and `target:` are rendered
+
+Both lines are a **flattened rendering** of the message, not the file. A
+message with plural or other variants is printed on one line as
+
+    {{$count ->}} [one] one thing [other] some things
+
+That notation is this tool's own: the closing brace after `->` and the
+inline variants are not what the file contains. You therefore cannot see
+the file's syntax, spacing or indentation and must never report on them --
+and anything you are shown has already been parsed successfully, so a
+conclusion that the file is malformed is always wrong. Report spacing only
+where it is part of the text a user reads, such as a missing space between
+two words.
+
 ## What NOT to report
 
 - **Missing or untranslated strings.** A unit with no translation yet is a

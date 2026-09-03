@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `a905fc074817` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `4aab78fe6cf4` |
-| **Previous run** | 2026-09-01 @ `bcd40327226f` |
+| **Generated** | 2026-09-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
+| **Previous run** | 2026-09-03 @ `023f527865cb` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 18,412 |
+| **Strings reviewed this run** | 23 of 18,433 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,17 @@ Also for de: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (2)
 
-_Nothing was fixed._
+- `newtab-stocks-watchlist-full` — `browser/browser/newtab/newtab.ftl` — The [one] plural variant uses the plural form "Aktien" instead of the singular "Aktie".
+    - Current: `[one] Sie können bis zu { $limit } Aktien hinzufügen.`
+    - Source: `{$limit ->} [one] You can add up to { $limit } stock. Remove one to add another. [other] You can add up to { $limit } stocks. Remove one to add another.`
+    - Suggest: `[one] Sie können bis zu { $limit } Aktie hinzufügen.`
+    - en-US [one] uses the singular "stock"; the German singular variant must agree with $limit = 1.
+- `webauthn-uv-invalid-long-prompt` — `browser/browser/webauthnDialog.ftl` — the [one]/[other] plural variants are swapped ([one] shows "Versuche" plural, [other] shows "Versuch" singular). Swap them (cf. correct webauthn-pin-invalid-long-prompt).
+    - Current: `[one]`
+    - Source: `{$retriesLeft ->} [one] User verification failed. You have { $retriesLeft } attempt left. Try again. [other] User verification failed. You have { $retriesLeft } attempts left. Try again.`
+    - Suggest: `[other]`
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,8 +53,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 372 |
-| Strings | 18,412 |
-| Missing strings | 0 |
+| Strings | 18,433 |
+| Missing strings | 15 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 10 |
@@ -62,6 +70,14 @@ _Nothing retired._
 | Typography deviations from this locale's own norm | 0 |
 
 ### Completeness
+
+**15 strings** are not translated yet, concentrated in:
+
+- `browser/browser/permissions.ftl` — 10
+- `browser/browser/preferences/preferences.ftl` — 2
+- `devtools/client/netmonitor.properties` — 1
+- `dom/chrome/dom/dom.properties` — 1
+- `toolkit/toolkit/about/aboutAddons.ftl` — 1
 
 **Files present but identical to en-US:**
 
@@ -82,7 +98,7 @@ _Completeness is reported, never raised as a finding: a missing string needs tra
 - `toolkit/toolkit/enterprise/enterprise.ftl`
 - `toolkit/toolkit/enterprise/felt.ftl`
 
-_193 strings. These files exist in the locale tree but not in the en-US reference — they are maintained elsewhere. The model review is a comparison against en-US, so it skips them entirely; only the checks that need no reference ran. Nothing reported from these files means nothing was looked for, not that they are clean._
+_194 strings. These files exist in the locale tree but not in the en-US reference — they are maintained elsewhere. The model review is a comparison against en-US, so it skips them entirely; only the checks that need no reference ran. Nothing reported from these files means nothing was looked for, not that they are clean._
 
 ### Conventions detected in this locale
 
@@ -105,13 +121,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (16)
+## 3. Open findings (15)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 11 |
+| 2 | Wrong content (says something other than the English) | 10 |
 | 3 | Degraded language (grammar, spelling, terminology) | 4 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
@@ -125,11 +141,6 @@ _Nothing reported._
     - Current: `X`
     - Source: `accesskey: n label: Send Page to Device`
     - The label is “Seite an Gerät senden”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `newtab-stocks-watchlist-full` — `browser/browser/newtab/newtab.ftl` — The [one] plural variant uses the plural form "Aktien" instead of the singular "Aktie".
-    - Current: `[one] Sie können bis zu { $limit } Aktien hinzufügen.`
-    - Source: `{$limit ->} [one] You can add up to { $limit } stock. Remove one to add another. [other] You can add up to { $limit } stocks. Remove one to add another.`
-    - Suggest: `[one] Sie können bis zu { $limit } Aktie hinzufügen.`
-    - en-US [one] uses the singular "stock"; the German singular variant must agree with $limit = 1.
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -217,61 +228,70 @@ _One line each in `locales/de/dismissed.txt`. Delete the line and the finding re
 
 _No suppression rules have matched._
 
-### Withdrawn to date (11)
+### Withdrawn to date (43)
 
-- `blocked-by-policy-title-enterprise` — `browser/browser/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-27
-- `enterprise-close-prompt-message-reauth` — `browser/browser/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-27
-- `neterror-blocked-by-policy-page-title-enterprise` — `browser/browser/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-27
-- `restart-forced-heading` — `browser/browser/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-27
-- `felt-sso-input-email` — `browser/browser/enterprise/felt.ftl` — raised by `llm`, withdrawn 2026-08-27
-- `felt-updates-title` — `browser/browser/enterprise/felt.ftl` — raised by `llm`, withdrawn 2026-08-27
-- `blocked-by-policy-title-enterprise` — `toolkit/toolkit/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-27
-- `enterprise-close-prompt-message-with-tabcount` — `toolkit/toolkit/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-27
-- `neterror-blocked-by-policy-page-title-enterprise` — `toolkit/toolkit/enterprise/enterprise.ftl` — raised by `llm`, withdrawn 2026-08-27
-- `felt-sso-input-email` — `toolkit/toolkit/enterprise/felt.ftl` — raised by `llm`, withdrawn 2026-08-27
-- `felt-updates-application` — `toolkit/toolkit/enterprise/felt.ftl` — raised by `llm`, withdrawn 2026-08-27
+- `appmenuitem-new-window` — `browser/browser/appmenu.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `toolbar-button-email-link` — `browser/browser/browser.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `toolbar-button-open-file` — `browser/browser/browser.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `toolbar-button-save-page` — `browser/browser/browser.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `urlbar-result-market-opt-in-description` — `browser/browser/browser.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `urlbar-web-notifications-blocked` — `browser/browser/browser.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `genai-settings-chat-chatgpt-links` — `browser/browser/genai.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `genai-shortcuts-selected-warning` — `browser/browser/genai.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `ipprotection-message-bandwidth-warning-mb` — `browser/browser/ipProtection.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `menu-file-new-window` — `browser/browser/menubar.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `newtab-privacy-trackers-blocked-today` — `browser/browser/newtab/newtab.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `newtab-sports-widget-cancelled` — `browser/browser/newtab/newtab.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `newtab-sports-widget-suspended` — `browser/browser/newtab/newtab.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `containers-card-header2` — `browser/browser/preferences/preferences.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `containers-disable-alert-title` — `browser/browser/preferences/preferences.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `containers-remove-alert-msg` — `browser/browser/preferences/preferences.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `content-blocking-rfp-incompatibility-warning` — `browser/browser/preferences/preferences.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `preferences-etp-custom-cookie-behavior-block-all-cross-site-cookies` — `browser/browser/preferences/preferences.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `preferences-etp-level-standard` — `browser/browser/preferences/preferences.ftl` — raised by `legacy`, withdrawn 2026-09-03
+- `preferences-etp-rfp-warning-message` — `browser/browser/preferences/preferences.ftl` — raised by `legacy`, withdrawn 2026-09-03
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (71)
+### Fixed to date (40)
 
+- `newtab-stocks-watchlist-full` — `browser/browser/newtab/newtab.ftl` — fixed 2026-09-03
+- `webauthn-uv-invalid-long-prompt` — `browser/browser/webauthnDialog.ftl` — fixed 2026-09-03
 - `about-logins-import-dialog-items-no-change2` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-24
-- `appmenuitem-new-window` — `browser/browser/appmenu.ftl` — fixed 2026-08-24
-- `toolbar-button-email-link` — `browser/browser/browser.ftl` — fixed 2026-08-24
-- `toolbar-button-open-file` — `browser/browser/browser.ftl` — fixed 2026-08-24
-- `toolbar-button-save-page` — `browser/browser/browser.ftl` — fixed 2026-08-24
-- `urlbar-result-market-opt-in-description` — `browser/browser/browser.ftl` — fixed 2026-08-24
-- `urlbar-web-notifications-blocked` — `browser/browser/browser.ftl` — fixed 2026-08-24
-- `genai-settings-chat-chatgpt-links` — `browser/browser/genai.ftl` — fixed 2026-08-24
-- `genai-shortcuts-selected-warning` — `browser/browser/genai.ftl` — fixed 2026-08-24
-- `ipprotection-message-bandwidth-warning-mb` — `browser/browser/ipProtection.ftl` — fixed 2026-08-24
-- `menu-file-new-window` — `browser/browser/menubar.ftl` — fixed 2026-08-24
-- `newtab-privacy-trackers-blocked-today` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-24
-- `newtab-sports-widget-cancelled` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-24
-- `newtab-sports-widget-suspended` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-24
-- `containers-card-header2` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
-- `containers-disable-alert-title` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
-- `containers-remove-alert-msg` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
-- `content-blocking-rfp-incompatibility-warning` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
 - `network-proxy-connection-description` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
-- `preferences-etp-custom-cookie-behavior-block-all-cross-site-cookies` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
-- `preferences-etp-level-standard` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
-- `preferences-etp-rfp-warning-message` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
-- `info-known-breaches-resolved` — `browser/browser/protections.ftl` — fixed 2026-08-24
-- `duplicate-tabs2` — `browser/browser/tabContextMenu.ftl` — fixed 2026-08-24
-- `tab-group-editor-color-selector` — `browser/browser/tabbrowser.ftl` — fixed 2026-08-24
-- `tabbrowser-mute-tab-audio-background-tooltip` — `browser/browser/tabbrowser.ftl` — fixed 2026-08-24
-- `tabbrowser-unmute-tab-audio-tooltip` — `browser/browser/tabbrowser.ftl` — fixed 2026-08-24
-- `webauthn-uv-invalid-long-prompt` — `browser/browser/webauthnDialog.ftl` — fixed 2026-08-24
 - `manifest-icon-img-title-no-sizes` — `devtools/client/application.ftl` — fixed 2026-08-24
-- `sidebar-item-session-history` — `devtools/client/application.ftl` — fixed 2026-08-24
-- `third-party-detail-duration` — `toolkit/toolkit/about/aboutThirdParty.ftl` — fixed 2026-08-24
-- `about-webrtc-fold-default-show-msg` — `toolkit/toolkit/about/aboutWebrtc.ftl` — fixed 2026-08-24
-- `about-webrtc-log-section-show-msg` — `toolkit/toolkit/about/aboutWebrtc.ftl` — fixed 2026-08-24
-- `about-webrtc-raw-local-candidate` — `toolkit/toolkit/about/aboutWebrtc.ftl` — fixed 2026-08-24
-- `pdfjs-text-annotation-type` — `toolkit/toolkit/pdfviewer/viewer.ftl` — fixed 2026-08-24
-- `pdfjs-text-annotation-type` — `toolkit/toolkit/pdfviewer/viewer.ftl` — fixed 2026-08-24
 - `pocket-panel-saved-error-tag-length` — `browser/browser/aboutPocket.ftl` — fixed 2026-07-27
 - `site-permission-install-first-prompt-midi-message` — `browser/browser/addonNotifications.ftl` — fixed 2026-07-27
 - `popup-warning-exceeded-message` — `browser/browser/browser.ftl` — fixed 2026-07-27
 - `content-sharing-modal-sign-in-2` — `browser/browser/contentSharing.ftl` — fixed 2026-07-27
+- `customkeys-conflict-confirm-body` — `browser/browser/customkeys.ftl` — fixed 2026-07-27
+- `default-browser-guidance-notification-title` — `browser/browser/defaultBrowserNotification.ftl` — fixed 2026-07-27
+- `migration-no-permissions-instructions` — `browser/browser/migrationWizard.ftl` — fixed 2026-07-27
+- `fxa-menu-message-backup-sync-secondary-text` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-07-27
+- `windows-10-eos-challenger-pin-callout-subtitle` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-07-27
+- `windows-10-eos-challenger-sync-callout-subtitle` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-07-27
+- `windows-10-eos-sync-callout-privacy-screen-1-title` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-07-27
+- `windows-10-eos-sync-toast-subtitle` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-07-27
+- `newtab-sports-widget-match-penalties` — `browser/browser/newtab/newtab.ftl` — fixed 2026-07-27
+- `onboarding-focused-tabs-subtitle` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-07-27
+- `fxa-qrcode-error-title` — `browser/browser/preferences/fxaPairDevice.ftl` — fixed 2026-07-27
+- `extension-controlling-privacy-containers` — `browser/browser/preferences/preferences.ftl` — fixed 2026-07-27
+- `search-keyword-warning-title` — `browser/browser/preferences/preferences.ftl` — fixed 2026-07-27
+- `report-broken-site-panel-reason-deceptive-moz-box-button` — `browser/browser/reportBrokenSite.ftl` — fixed 2026-07-27
+- `sync-setup-verify-title` — `browser/browser/sync.ftl` — fixed 2026-07-27
+- `existing-user-privacy-notice-update-message` — `browser/browser/termsofuse.ftl` — fixed 2026-07-27
+- `manifest-icon-img-title-no-sizes` — `devtools/client/application.ftl` — fixed 2026-07-27
+- `webconsole-commands-usage-block` — `devtools/shared/webconsole-commands.ftl` — fixed 2026-07-27
+- `unable-to-toggle-fips` — `security/manager/security/certificates/deviceManager.ftl` — fixed 2026-07-27
+- `about-networking-ssl-tokens-built-in-root` — `toolkit/toolkit/about/aboutNetworking.ftl` — fixed 2026-07-27
+- `content-uses-tiling` — `toolkit/toolkit/about/aboutSupport.ftl` — fixed 2026-07-27
+- `certificate-viewer-extended-key-usages` — `toolkit/toolkit/about/certviewer.ftl` — fixed 2026-07-27
+- `url-classifier-content-classifier-verdict-miss` — `toolkit/toolkit/about/url-classifier.ftl` — fixed 2026-07-27
+- `contentanalysis-slow-agent-dialog-body-dropped-text` — `toolkit/toolkit/contentanalysis/contentanalysis.ftl` — fixed 2026-07-27
+- `csp-error-missing-directive` — `toolkit/toolkit/global/cspErrors.ftl` — fixed 2026-07-27
+- `privacy-spoof-english` — `toolkit/toolkit/global/resistFingerPrinting.ftl` — fixed 2026-07-27
+- `sec-error-cert-no-response` — `toolkit/toolkit/neterror/nsserrors.ftl` — fixed 2026-07-27
+- `sec-error-ocsp-unknown-response-type` — `toolkit/toolkit/neterror/nsserrors.ftl` — fixed 2026-07-27
+- `sec-error-token-not-logged-in` — `toolkit/toolkit/neterror/nsserrors.ftl` — fixed 2026-07-27
+- `ssl-error-handshake-not-completed` — `toolkit/toolkit/neterror/nsserrors.ftl` — fixed 2026-07-27
+- `remove-info` — `toolkit/toolkit/preferences/preferences.ftl` — fixed 2026-07-27
