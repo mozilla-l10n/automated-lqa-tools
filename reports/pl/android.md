@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **Previous run** | 2026-08-24 @ `e8622a909368` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **Previous run** | 2026-09-01 @ `f39118d70d88` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 2,717 |
+| **Strings reviewed this run** | 34 of 2,746 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for pl: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `notification_privacy_report_channel_name` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Privacy report" translated as "Informacja o prywatności" (privacy notice/information) instead of a report about privacy.
+    - Current: `Informacja o prywatności`
+    - Source: `Privacy report`
+    - Suggest: `Raport prywatności`
+    - The source names the weekly privacy report notification channel; "Informacja o prywatności" means a privacy notice, not a report of blocked trackers.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,36 +38,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (7)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `add_to_homescreen_continue` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Continue to website" is translated as "Wróć do strony" (Go back to the website).
-    - Current: `Wróć do strony`
-    - Suggest: `Przejdź do strony`
-    - The source means to continue on to the website, not to go back to it.
-- `sports_widget_round_of_16` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Round of 16" is rendered as "Druga runda" (second round) instead of the knockout stage name.
-    - Current: `Druga runda`
-    - Suggest: `1/8 finału`
-    - The developer comment says this is the Round of 16 stage of the tournament; Polish uses "1/8 finału" for that knockout stage, not "druga runda", which names a generic second round.
-- `sports_widget_round_of_32` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Round of 32" is rendered as "Pierwsza runda" (first round) instead of the knockout stage name.
-    - Current: `Pierwsza runda`
-    - Suggest: `1/16 finału`
-    - The developer comment says this is the Round of 32 knockout stage; Polish names it "1/16 finału", not a generic "pierwsza runda".
-- `sports_widget_team_to_be_determined` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — Singular "Team to be determined" is translated with a plural subject.
-    - Current: `Drużyny nie są jeszcze znane`
-    - Suggest: `Drużyna nie jest jeszcze znana`
-    - The source describes a single team slot that has not yet been determined; the Polish plural changes the meaning to multiple teams.
-- `cfr_cookie_banner` — `mozilla-mobile/focus-android/app/src/main/res/values-pl/strings.xml` — The translation drops "cookie banners" and mistranslates the sentence, saying Firefox rejects "annoying cookie requests" instead of rejecting cookie requests in order to dismiss annoying cookie banners.
-    - Current: `%1$s próbuje odrzucać irytujące prośby o akceptację ciasteczek.  Zarządzaj preferencjami odrzucania w %2$s.`
-    - Suggest: `%1$s próbuje odrzucać prośby o zgodę na ciasteczka, aby zamykać irytujące banery o ciasteczkach.  Zarządzaj preferencjami dotyczącymi banerów o ciasteczkach w %2$s.`
-    - Source: "tries to reject cookie requests to dismiss annoying cookie banners" and "Manage cookie banner preferences"; the Polish omits the cookie banner concept entirely in both sentences.
-- `menu_trackers_blocked_title` — `mozilla-mobile/focus-android/app/src/main/res/values-pl/strings.xml` — "Trackers blocked" is rendered as the generic "Blokowanie" (Blocking), losing the meaning.
-    - Current: `Blokowanie`
-    - Suggest: `Zablokowane elementy śledzące`
-    - The source label names the count of blocked trackers; "Blokowanie" means merely "Blocking" and drops the tracker concept.
-- `preference_autocomplete_custom_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-pl/strings.xml` — Misspelled/incorrectly formed verbal noun "zarządzenie" instead of "zarządzanie", and wrong case government.
-    - Current: `Dodawanie i zarządzenie innymi adresami automatycznego uzupełniania.`
-    - Suggest: `Dodawanie innych adresów automatycznego uzupełniania i zarządzanie nimi.`
-    - "zarządzenie" is a different word (an ordinance/decree); the gerund of "zarządzać" is "zarządzanie". Also "Dodawanie ... adresami" is ungrammatical since "dodawanie" requires the genitive.
+_Nothing retired._
 
 ---
 
@@ -72,8 +49,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,717 |
-| Missing strings | 18 |
+| Strings | 2,746 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -90,12 +67,7 @@ _Nothing to re-read._
 
 ### Completeness
 
-**18 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — 13
-- `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-pl/strings.xml` — 5
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -106,7 +78,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | quotes | `polish-double` 84 | **polish-double** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 2, `en` 3 | _mixed_ |
-| nbsp | `total` 655, `before-punctuation` 14 | **total** |
+| nbsp | `total` 654, `before-punctuation` 14 | **total** |
 | register | `informal` 9 | **informal** |
 
 ---
@@ -117,13 +89,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (86)
+## 3. Open findings (87)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 62 |
+| 2 | Wrong content (says something other than the English) | 63 |
 | 3 | Degraded language (grammar, spelling, terminology) | 23 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
@@ -318,6 +290,11 @@ _Nothing in this category._
     - Source: `Open VPN settings`
     - Suggest: `Otwórz ustawienia VPN`
     - Source is "Open VPN settings" and the developer comment says it is a content description for a chevron button that opens the settings screen; the Polish only says "VPN settings".
+- `notification_privacy_report_channel_name` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Privacy report" translated as "Informacja o prywatności" (privacy notice/information) instead of a report about privacy.
+    - Current: `Informacja o prywatności`
+    - Source: `Privacy report`
+    - Suggest: `Raport prywatności`
+    - The source names the weekly privacy report notification channel; "Informacja o prywatności" means a privacy notice, not a report of blocked trackers.
 - `nova_onboarding_marketing_body_4` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "the platform you came from" mistranslated as "the platform Firefox was downloaded from".
     - Current: `platformę, z której pobrano Firefoksa`
     - Source: `You can help us reach more people by allowing Mozilla to inform the platform you came from that you use Firefox.`
@@ -428,12 +405,7 @@ _Nothing in this category._
     - Source: `We’ve introduced a %1$s %2$s and updated our %3$s.`
     - Suggest: `Wprowadziliśmy %2$s przeglądarki %1$s`
     - Source: "We’ve introduced a %1$s %2$s" — %1$s modifies the Terms of Use (Firefox Terms of Use); "z przeglądarki" (from the browser) changes the meaning.
-- `ungroup_tab_group_confirmation_dialog_body` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — The source says the tabs will remain open; the Polish rephrases it as a negation of closing, changing the statement.
-    - Current: `Karty na tym urządzeniu nie zostaną zamknięte, ale grupa zostanie usunięta.`
-    - Source: `The tabs will remain open on this device, but the group will be deleted.`
-    - Suggest: `Karty pozostaną otwarte na tym urządzeniu, ale grupa zostanie usunięta.`
-    - en-US: "The tabs will remain open on this device" — an affirmative statement about tabs remaining open, not a negative statement about closing.
-- _…and 6 more; see `state/` for the full list._
+- _…and 7 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

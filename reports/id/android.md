@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **Previous run** | 2026-08-24 @ `e8622a909368` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **Previous run** | 2026-09-01 @ `f39118d70d88` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 103 of 2,586 |
+| **Strings reviewed this run** | 155 of 2,738 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -20,35 +20,44 @@ Also for id: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ### 🆕 New findings (5)
 
-- `mozac_feature_summarize_feedback_state_submitted` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-in/strings.xml` — "Rating submitted" is translated as "Peringkat dikirim", which means "ranking sent" rather than the user's rating/feedback being submitted.
-    - Current: `Peringkat dikirim`
-    - Source: `Rating submitted`
-    - Suggest: `Penilaian terkirim`
-    - In this context "rating" is the user's thumbs up/down feedback ("penilaian"), not a rank/position ("peringkat"). Related strings use "menilai ringkasan", so "penilaian" is the consistent term.
-- `preferences_show_search_optimization_cards` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Retrieve suggestions from Mozilla as you type" is rendered with "Dapatkan" (get/obtain) instead of the retrieval action; acceptable meaning shift is minor but the imperative changes who acts.
-    - Current: `Dapatkan saran dari Mozilla saat Anda mengetik`
-    - Source: `Retrieve suggestions from Mozilla as you type`
-    - Suggest: `Ambil saran dari Mozilla saat Anda mengetik`
-    - Source describes the app retrieving suggestions from Mozilla; "Dapatkan" reads as the user obtaining them.
-- `ip_protection_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Navigate back" rendered as "Navigasi balik", which is not the standard Indonesian wording for a back navigation control.
+- `ip_protection_mozilla_vpn_upsell_button` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — Product name "Mozilla VPN" was reordered/translated as "VPN Mozilla", inconsistent with the headline string which keeps "Mozilla VPN".
+    - Current: `Dapatkan VPN Mozilla`
+    - Source: `Get Mozilla VPN`
+    - Suggest: `Dapatkan Mozilla VPN`
+    - "Mozilla VPN" is a product/brand name and must stay as-is; the adjacent headline string correctly uses "Mozilla VPN".
+- `ip_protection_promo_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "by hiding your location" rendered as a relative clause modifying "protection", changing the sentence structure/meaning.
+    - Current: `perlindungan tambahan yang menyembunyikan lokasi Anda`
+    - Source: `Browse with extra protection by hiding your location, even on public Wi-Fi. %s`
+    - Suggest: `perlindungan tambahan dengan menyembunyikan lokasi Anda`
+    - The source says browsing gains extra protection by hiding your location; the target says the protection itself hides your location.
+- `sync_send_tab_empty_state_description` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "device" translated as "peranti" here while all neighbouring strings use "perangkat".
+    - Current: `minimal pada satu peranti lain`
+    - Source: `To send a tab, sign in to Firefox on at least one other device.`
+    - Suggest: `minimal pada satu perangkat lain`
+    - Terminology inconsistency on the same surface: sync_send_tab_empty_state_title and sync_no_devices_available_description use "perangkat".
+- `ip_protection_locations_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Navigate back" rendered as the noun phrase "Navigasi balik" instead of the standard imperative "Navigasi kembali".
     - Current: `Navigasi balik`
     - Source: `Navigate back`
     - Suggest: `Navigasi kembali`
-    - "balik" means flip/turn over in this register; the established term for going back is "kembali". Screen readers will announce an odd phrase.
-- `ip_protection_toolbar_pill_label` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "VPN on" rendered with "hidup" while the parallel badge strings use "Nyala"/"Mati", creating inconsistent terminology on the same surface.
-    - Current: `VPN hidup`
-    - Source: `VPN on`
-    - Suggest: `VPN nyala`
-    - preferences_ip_protection_on translates "On" as "Nyala" and the paired label ip_protection_toolbar_pill_label_off uses "mati"; "hidup" is inconsistent for the same on/off state term.
-- `ip_protection_get_started` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — Button label "Get started" translated as the gerund/progressive "Memulai" instead of an imperative button label.
-    - Current: `Memulai`
-    - Source: `Get started`
-    - Suggest: `Mulai`
-    - The developer comment says this is a button label that starts a flow; Indonesian button labels use the imperative "Mulai", as with other imperative labels in this batch (Buka, Unduh, Cetak).
+    - The source is an action content description for a back button; "balik" is colloquial/means "flip" and Mozilla id uses "kembali" for "back" throughout.
+- `microsurvey_uninstall_survey_title` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Why are you uninstalling?" translated as "Mengapa Anda mencopot pemasangan?" which is fine, but "Umpan balik" vs "masukan" is inconsistent with the button string.
+    - Current: `Umpan balik Anda penting.`
+    - Source: `Your feedback matters. Why are you uninstalling?`
+    - Suggest: `Masukan Anda penting.`
+    - The same term "feedback" is rendered "masukan" in uninstall_survey_button_label and "umpan balik" here, on the same survey surface.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (2)
 
-_Nothing was fixed._
+- `create_tab_group_name_label` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — Label "Name" is expanded to "Nama grup tab" instead of simply "Nama".
+    - Current: `Nama grup tab`
+    - Source: `Name`
+    - Suggest: `Nama`
+    - The source label is just "Name" for the tab group name field; the translation adds words not present in the source.
+- `tab_tray_close_tabs_banner_positive_button_text` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "View options" is translated as "Lihat pengaturan" (View settings).
+    - Current: `Lihat pengaturan`
+    - Source: `View options`
+    - Suggest: `Lihat opsi`
+    - The source says "View options", not "View settings"; the Indonesian uses a different word than the source.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -58,48 +67,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (10)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `add_custom_autocomplete_label` — `mozilla-mobile/focus-android/app/src/main/res/values-in/strings.xml` — "Add link to autocomplete" (add the link to the autocomplete list) is rendered as "add link to be autocompleted".
-    - Current: `Tambahkan tautan untuk dilengkapi secara otomatis`
-    - Suggest: `Tambahkan tautan ke pelengkapan otomatis`
-    - The developer comment says the button quick-adds the current URL to the custom autocomplete list; the target instead says the link will be autocompleted.
-- `cookie_banner_report_a_site_snackbar_label` — `mozilla-mobile/focus-android/app/src/main/res/values-in/strings.xml` — "Request to support site" is rendered as "Permintaan bantuan situs" (request for site help), reversing the meaning of the user requesting that the site be supported.
-    - Current: `Permintaan bantuan situs telah diajukan.`
-    - Suggest: `Permintaan dukungan untuk situs ini telah diajukan.`
-    - The source means a request was submitted asking the team to add support for the site, not a request for help from the site.
-- `cookie_banner_the_site_was_reported` — `mozilla-mobile/focus-android/app/src/main/res/values-in/strings.xml` — "Request to support site" is rendered as "Permintaan bantuan situs" (request for site help), reversing the meaning of the user requesting that the site be supported.
-    - Current: `Permintaan bantuan situs telah diajukan.`
-    - Suggest: `Permintaan dukungan untuk situs ini telah diajukan.`
-    - The source means a request was submitted asking the team to add support for the site, not a request for help from the site.
-- `firstrun_privacy_text` — `mozilla-mobile/focus-android/app/src/main/res/values-in/strings.xml` — "default browser" is rendered as "peramban utama" while "default" is rendered "baku" elsewhere in the same onboarding flow.
-    - Current: `sebagai peramban utama Anda`
-    - Suggest: `sebagai peramban baku Anda`
-    - The neighbouring string firstrun_search_text translates "default search engine" as "mesin pencari baku"; "default" should be consistently "baku".
-- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-in/strings.xml` — `firstrun_shortcut_text` quotes “Tambahkan ke layar Beranda” but the string it names, `menu_add_to_home_screen`, reads “Tambahkan ke Beranda”
-    - Current: `Kembali ke situs favorit Anda di %1$s dengan cepat. Cukup pilih "Tambahkan ke layar Beranda" dari menu %1$s.`
-    - Suggest: `Tambahkan ke Beranda`
-    - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `preference_autocomplete_custom_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-in/strings.xml` — Word order makes the phrase mean "custom autocomplete URLs" incorrectly; the modifier attaches to the wrong noun.
-    - Current: `Tambahkan dan kelola lengkapi-otomatis URL ubahsuai.`
-    - Suggest: `Tambahkan dan kelola URL lengkapi-otomatis ubahsuai.`
-    - Source is "Add and manage custom autocomplete URLs"; the Indonesian head noun should be URL, not "lengkapi-otomatis".
-- `preference_open_new_tab` — `mozilla-mobile/focus-android/app/src/main/res/values-in/strings.xml` — Meaning reversed: the source says switch to the link's new tab immediately, target says move the link to a new tab.
-    - Current: `Alihkan tautan langsung ke tab baru`
-    - Suggest: `Langsung beralih ke tautan di tab baru`
-    - Per the developer comment the preference is about switching to a new tab immediately after opening; the target instead reads as moving/redirecting the link to a new tab.
-- `tab_crash_report_title` — `mozilla-mobile/focus-android/app/src/main/res/values-in/strings.xml` — "Tab Crashed" translated as "Tab Mogok", an unusual term for a software crash.
-    - Current: `Tab Mogok`
-    - Suggest: `Tab Mengalami Kegagalan`
-    - "Mogok" means to break down/strike and is not the established Indonesian term for an application crash; Mozilla id normally uses "macet"/"gagal".
-- `tip_disable_tips2` — `mozilla-mobile/focus-android/app/src/main/res/values-in/strings.xml` — Adds "ini" (this/these) not present in the source.
-    - Current: `Nonaktifkan tips ini pada layar mulai`
-    - Suggest: `Nonaktifkan tips pada layar mulai`
-    - Source is "Turn off tips on the start screen" — no demonstrative; the translation says "these tips".
-- `tip_disable_tracking_protection` — `mozilla-mobile/focus-android/app/src/main/res/values-in/strings.xml` — "Try turning off" is rendered as an imperative "Matikan", dropping the tentative "Try".
-    - Current: `Matikan Perlindungan Pelacakan`
-    - Suggest: `Coba matikan Perlindungan Pelacakan`
-    - The source suggests trying to turn off Tracking Protection; the translation is a plain command, losing "Try".
+_Nothing retired._
 
 ---
 
@@ -108,8 +78,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,586 |
-| Missing strings | 149 |
+| Strings | 2,738 |
+| Missing strings | 8 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -126,9 +96,8 @@ _Nothing to re-read._
 
 ### Completeness
 
-**149 strings** are not translated yet, concentrated in:
+**8 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — 141
 - `mozilla-mobile/focus-android/app/src/main/res/values-in/strings.xml` — 8
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
@@ -140,7 +109,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 11, `straight-double` 5 | _mixed_ |
-| ellipsis | `char` 20 | **char** |
+| ellipsis | `char` 21 | **char** |
 | dash | `em` 3 | **em** |
 
 ---
@@ -151,14 +120,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (160)
+## 3. Open findings (163)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 91 |
-| 3 | Degraded language (grammar, spelling, terminology) | 65 |
+| 3 | Degraded language (grammar, spelling, terminology) | 68 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
@@ -322,11 +291,6 @@ _Nothing in this category._
     - Source: `Never`
     - Suggest: `Tidak pernah`
     - The source option label is "Never" (never auto-close tabs); the target says "Manually", which is the wording of the separate summary string close_tabs_manually_summary.
-- `create_tab_group_name_label` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — Label "Name" is expanded to "Nama grup tab" instead of simply "Nama".
-    - Current: `Nama grup tab`
-    - Source: `Name`
-    - Suggest: `Nama`
-    - The source label is just "Name" for the tab group name field; the translation adds words not present in the source.
 - `credit_cards_expiration_date_year` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Expiration Date Year" is rendered as "Tanggal Tahun Kedaluwarsa", swapping the word order so it reads "Expiration Year Date".
     - Current: `Tanggal Tahun Kedaluwarsa`
     - Source: `Expiration Date Year`
@@ -397,6 +361,16 @@ _Nothing in this category._
     - Source: `Close all inactive tabs`
     - Suggest: `Tutup semua tab nonaktif`
     - Source says "Close", and elsewhere in the batch "close" is translated as "tutup" (e.g. inactive_tabs_auto_close_message_action).
+- `ip_protection_mozilla_vpn_upsell_button` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — Product name "Mozilla VPN" was reordered/translated as "VPN Mozilla", inconsistent with the headline string which keeps "Mozilla VPN".
+    - Current: `Dapatkan VPN Mozilla`
+    - Source: `Get Mozilla VPN`
+    - Suggest: `Dapatkan Mozilla VPN`
+    - "Mozilla VPN" is a product/brand name and must stay as-is; the adjacent headline string correctly uses "Mozilla VPN".
+- `ip_protection_promo_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "by hiding your location" rendered as a relative clause modifying "protection", changing the sentence structure/meaning.
+    - Current: `perlindungan tambahan yang menyembunyikan lokasi Anda`
+    - Source: `Browse with extra protection by hiding your location, even on public Wi-Fi. %s`
+    - Suggest: `perlindungan tambahan dengan menyembunyikan lokasi Anda`
+    - The source says browsing gains extra protection by hiding your location; the target says the protection itself hides your location.
 - `locale_search_hint` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Search language" (verb + object, a search field hint) rendered as the noun phrase "search language".
     - Current: `Bahasa pencarian`
     - Source: `Search language`
@@ -422,6 +396,11 @@ _Nothing in this category._
     - Source: `Help make sync in Firefox better. It only takes a minute`
     - Suggest: `Hanya butuh satu menit`
     - The source says it only takes a minute, not several minutes.
+- `microsurvey_uninstall_survey_title` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Why are you uninstalling?" translated as "Mengapa Anda mencopot pemasangan?" which is fine, but "Umpan balik" vs "masukan" is inconsistent with the button string.
+    - Current: `Umpan balik Anda penting.`
+    - Source: `Your feedback matters. Why are you uninstalling?`
+    - Suggest: `Masukan Anda penting.`
+    - The same term "feedback" is rendered "masukan" in uninstall_survey_button_label and "umpan balik" here, on the same survey surface.
 - `never_translate_site_toolbar_title_preference` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — Plural "these sites" rendered as singular "situs ini" without plural marker.
     - Current: `Jangan pernah terjemahkan situs ini`
     - Source: `Never translate these sites`
@@ -457,17 +436,7 @@ _Nothing in this category._
     - Source: `Speedy, safe, and won’t sell you out. Browsing just got better.`
     - Suggest: `tidak akan mengkhianati Anda`
     - "Sell you out" means betray/give away your data, not literally selling the user; the literal rendering conveys a different meaning.
-- `open_all_warning_confirm` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — Confirm button label translated as a noun phrase "open tabs" instead of the imperative action "Open tabs".
-    - Current: `Tab terbuka`
-    - Source: `Open tabs`
-    - Suggest: `Buka tab`
-    - The developer comment says this is the dialog button for confirming opening all tabs; "Tab terbuka" means "opened tabs" (a state), not the action command.
-- `open_tabs_menu` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Open tabs menu" (the menu of open tabs) rendered as the imperative "Buka menu tab".
-    - Current: `Buka menu tab`
-    - Source: `Open tabs menu`
-    - Suggest: `Menu tab terbuka`
-    - Per the developer comment this content description names the open-tabs menu; the Indonesian reads as a command to open a "tab menu".
-- _…and 35 more; see `state/` for the full list._
+- _…and 36 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -659,6 +628,11 @@ _Nothing in this category._
     - Source: `Get started`
     - Suggest: `Mulai`
     - The developer comment says this is a button label that starts a flow; Indonesian button labels use the imperative "Mulai", as with other imperative labels in this batch (Buka, Unduh, Cetak).
+- `ip_protection_locations_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Navigate back" rendered as the noun phrase "Navigasi balik" instead of the standard imperative "Navigasi kembali".
+    - Current: `Navigasi balik`
+    - Source: `Navigate back`
+    - Suggest: `Navigasi kembali`
+    - The source is an action content description for a back button; "balik" is colloquial/means "flip" and Mozilla id uses "kembali" for "back" throughout.
 - `ip_protection_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Navigate back" rendered as "Navigasi balik", which is not the standard Indonesian wording for a back navigation control.
     - Current: `Navigasi balik`
     - Source: `Navigate back`
@@ -749,6 +723,11 @@ _Nothing in this category._
     - Source: `No Devices Connected`
     - Suggest: `Tidak Ada Peranti Terhubung`
     - Neighbouring strings (sync_add_new_device_title, sync_connect_device, sync_send_to_all) all render "device" as "peranti"; this one is inconsistent on the same surface.
+- `sync_send_tab_empty_state_description` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "device" translated as "peranti" here while all neighbouring strings use "perangkat".
+    - Current: `minimal pada satu peranti lain`
+    - Source: `To send a tab, sign in to Firefox on at least one other device.`
+    - Suggest: `minimal pada satu perangkat lain`
+    - Terminology inconsistency on the same surface: sync_send_tab_empty_state_title and sync_no_devices_available_description use "perangkat".
 - `terms_of_use_prompt_title_option_a` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Terms of Use" is rendered as "Syarat Penggunaan" here but as "Ketentuan Penggunaan" in the related link string on the same prompt.
     - Current: `Syarat Penggunaan`
     - Source: `Terms of Use`
@@ -823,6 +802,8 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (1)
+### Fixed to date (3)
 
+- `create_tab_group_name_label` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — fixed 2026-09-07
+- `tab_tray_close_tabs_banner_positive_button_text` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — fixed 2026-09-07
 - `preferences_delete_browsing_data_cookies_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — fixed 2026-08-24

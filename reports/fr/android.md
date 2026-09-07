@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **Previous run** | 2026-08-24 @ `e8622a909368` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **Previous run** | 2026-09-01 @ `f39118d70d88` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 19 of 2,735 |
+| **Strings reviewed this run** | 11 of 2,746 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for fr: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `ip_protection_location_selection_reset_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Switched to the recommended location" is rendered as "Connexion à l’emplacement recommandé" (connecting to), losing the completed switch.
-    - Current: `Connexion à l’emplacement recommandé.`
-    - Source: `Selected VPN location unavailable. Switched to the recommended location.`
-    - Suggest: `Basculement vers l’emplacement recommandé.`
-    - The source states the location has already been switched; the French states a connection is being made, changing the meaning and tense.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -38,20 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (3)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `sports_widget_round_of_16` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Round of 16" is rendered as "8es de finale" while "Round of 32" is rendered as "16es de finale", but the French labels are shifted one round off in a way that mismatches the tournament stage naming used together.
-    - Current: `8es de finale`
-    - Suggest: `Huitièmes de finale`
-    - Round of 16 = huitièmes de finale (16 teams, 8 matches); the abbreviation "8es" is correct in substance, but should be consistent with the spelled-out forms used for "Demi-finales"; keep the same spelled-out register.
-- `cfr_cookie_banner` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — Superfluous article "les" before the link placeholder produces "dans les paramètres" where %2$s already reads "paramètres".
-    - Current: `dans les %2$s`
-    - Suggest: `dans les paramètres`
-    - %2$s is replaced by the link text "paramètres"; the phrase reads correctly only if the article is not duplicated — as written the visible link excludes "les", but the sentence is intended as "Manage ... in settings". The article should be part of the same fragment or removed.
-- `external_app_prompt` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — "You can leave" (optional/permission) is rendered as "Vous allez quitter" (you are going to leave), changing the meaning.
-    - Current: `Vous allez quitter %1$s pour ouvrir ce lien dans %2$s.`
-    - Suggest: `Vous pouvez quitter %1$s pour ouvrir ce lien dans %2$s.`
-    - The source says the user may leave the app; the sibling string external_app_prompt_no_app correctly uses « Vous pouvez quitter ». Here the future tense states it as a fact.
+_Nothing retired._
 
 ---
 
@@ -60,7 +45,7 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,735 |
+| Strings | 2,746 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -87,11 +72,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 23 | **guillemet** |
-| apostrophe | `typographic` 684 | **typographic** |
+| apostrophe | `typographic` 685 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 2 | **em** |
 | nbsp | `total` 199, `before-punctuation` 137, `space-before-punctuation` 64 | _mixed_ |
-| register | `formal` 431 | **formal** |
+| register | `formal` 438 | **formal** |
 
 ---
 

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **Previous run** | 2026-08-24 @ `e8622a909368` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **Previous run** | 2026-09-01 @ `f39118d70d88` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 19 of 2,735 |
+| **Strings reviewed this run** | 12 of 2,746 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,23 +18,18 @@ Also for tr: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (2)
 
-- `recent_tabs_header_2` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Continue" (continue browsing where you left off) rendered as "İleri" (Forward/Next).
-    - Current: `İleri`
-    - Source: `Continue`
-    - Suggest: `Devam edin`
-    - The header invites the user to continue browsing the most recent tab; "İleri" means "forward/next" and is the standard label for the forward navigation button, not "continue".
-- `customize_toggle_continue` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — Homescreen section title "Continue" translated as "İleri" (Forward/Next).
-    - Current: `İleri`
-    - Source: `Continue`
-    - Suggest: `Devam edin`
-    - Per the developer comment this names the section that lets users continue where they left off; "İleri" means "forward/next" and does not convey "continue".
-- `pdf_tools_signature_placeholder` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — Informal imperative "yaz" breaks the locale's formal register.
-    - Current: `İmzanızı yaz`
-    - Source: `Type signature`
-    - Suggest: `İmzanızı yazın`
-    - The tr locale convention is formal address; other imperatives in this batch use the formal form. "yaz" is the informal singular imperative.
+- `ip_protection_promo_headline` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — The possessive "%s’s built-in VPN" is rendered as an ablative "from %s" instead of a possessive construction.
+    - Current: `%s’tan yerleşik VPN`
+    - Source: `%s’s built-in VPN`
+    - Suggest: `%s’un yerleşik VPN’i`
+    - en-US means "the built-in VPN of %s"; "%s’tan" is the ablative case ("from %s"), which changes the meaning and is ungrammatical as a possessive headline.
+- `sync_send_tab_empty_state_description` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "sign in to Firefox on at least one other device" is mistranslated as "from one more other device" using ablative case.
+    - Current: `başka bir cihazdan daha Firefox’a giriş yapmalısınız`
+    - Source: `To send a tab, sign in to Firefox on at least one other device.`
+    - Suggest: `en az bir başka cihazda Firefox’a giriş yapmalısınız`
+    - The source says to sign in on at least one other device; the Turkish uses the ablative "cihazdan" (from a device) and drops "at least", changing the meaning.
 
 ### ✅ Fixed since the last run (0)
 
@@ -48,80 +43,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (18)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `sports_widget_confederation_concacaf` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — The abbreviation CONCACAF is misspelled as "CONCCAF".
-    - Current: `CONCCAF`
-    - Suggest: `CONCACAF`
-    - The developer comment states CONCACAF is the abbreviation for "Confederation of North, Central America and Caribbean Association Football"; the target drops a letter.
-- `sports_widget_countdown_minutes` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — The minutes abbreviation is rendered "D", which in Turkish reads as "dakika" but collides with the days label "G"… actually it conflicts with no other, yet "D" is not the standard Turkish abbreviation for minute.
-    - Current: `D`
-    - Suggest: `dk`
-    - Turkish abbreviates minute as "dk"; a bare "D" is ambiguous (commonly read as "dakika" only in this context) and the 2-character limit allows "dk".
-- `sports_widget_get_custom_wallpaper` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Get custom wallpaper" is translated as "download" rather than "get", and "custom" is rendered as "kişisel" (personal).
-    - Current: `Kişisel duvar kâğıdını indir`
-    - Suggest: `Özel duvar kâğıdını al`
-    - The source says "Get custom wallpaper"; the target says "Download the personal wallpaper", changing the action and definiteness.
-- `sports_widget_halftime` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Halftime" (the break between halves) is translated as "İlk yarı" (first half).
-    - Current: `İlk yarı`
-    - Suggest: `Devre arası`
-    - The developer comment says the status is shown during halftime; "İlk yarı" means "first half", a different match phase, and conflicts with sports_widget_second_half ("İkinci yarı").
-- `sports_widget_match_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "versus" is replaced by a dash, which a screen reader will not announce meaningfully.
-    - Current: `%1$s - %2$s, %3$s`
-    - Suggest: `%1$s - %2$s karşılaşması, %3$s`
-    - This is a content description read aloud; the source word "versus" conveys the matchup and is lost as a silent hyphen.
-- `sports_widget_page_position_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — The "of" relation in "page %2$d of %3$d" is dropped, producing "sayfa 2 5".
-    - Current: `%1$s, sayfa %2$d %3$d`
-    - Suggest: `%1$s, sayfa %2$d / %3$d`
-    - Source states page X of Y; the target juxtaposes two numbers with no connecting word, which is unintelligible when read aloud.
-- `accessibility_dismiss_find_in_page` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — "Dismiss find in page" is translated as "Sayfa bulmayı kapat" (close finding the page) instead of referring to the "find in page" feature.
-    - Current: `Sayfa bulmayı kapat`
-    - Suggest: `Sayfada bul özelliğini kapat`
-    - The source refers to dismissing the "find in page" UI; "Sayfa bulmayı" means "finding a page", which names the wrong feature.
-- `accessibility_find_in_page_result` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — The result counter reads awkwardly and repeats "sonuç"; Turkish convention is "%1$d / %2$d" or "%2$d sonuçtan %1$d.".
-    - Current: `%2$d sonuçtan %1$d sonuç`
-    - Suggest: `%2$d sonuçtan %1$d. sonuç`
-    - "%1$d out of %2$d" indicates the current position, not a count; "%2$d sonuçtan %1$d sonuç" states a quantity of results rather than the position the user is at.
-- `cookie_banner_report_a_site_snackbar_label` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — "Request to support site submitted" is mistranslated as sending a request to a "support site".
-    - Current: `Destek sitesine istek gönderildi.`
-    - Suggest: `Bu siteyi destekleme isteği gönderildi.`
-    - The source means a request was submitted asking that the site be supported by the cookie banner reducer; the Turkish says the request was sent to a support site.
-- `cookie_banner_the_site_was_reported` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — "Request to support site submitted" is mistranslated as sending a request to a "support site".
-    - Current: `Destek sitesine istek gönderildi.`
-    - Suggest: `Bu siteyi destekleme isteği gönderildi.`
-    - Per the developer comment this appears after the user reports a site where the cookie banner reducer failed; it means a request for the site to be supported was submitted, not that a request was sent to a support site.
-- `external_app_prompt` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — `external_app_prompt` uses a straight apostrophe
-    - Current: `Bu bağlantıyı %2$s ile açmak için %1$s'tan çıkabilirsiniz.`
-    - Suggest: `%1$s’tan çıkabilirsiniz.`
-    - The tree uses ’ 160 times against 4 straight.
-- `external_app_prompt_no_app` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — `external_app_prompt_no_app` uses a straight apostrophe
-    - Current: `Cihazınızdaki uygulamalar bu bağlantıyı açamıyor. %2$s mağazasında uygun bir uygulama aramak için %1$s'tan çıkabilirsiniz.`
-    - Suggest: `%1$s’tan çıkabilirsiniz.`
-    - The tree uses ’ 160 times against 4 straight.
-- `external_multiple_apps_matched_exit` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — `external_multiple_apps_matched_exit` uses a straight apostrophe
-    - Current: `Gizli Gezinti'den çıkılsın mı?`
-    - Suggest: `Gizli Gezinti’den çıkılsın mı?`
-    - The tree uses ’ 160 times against 4 straight.
-- `firstrun_defaultbrowser_text2` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — "Take private browsing to the next level" (user action/benefit) rendered as "We improved private browsing even further".
-    - Current: `Gizli gezintiyi daha da geliştirdik.`
-    - Suggest: `Gizli gezintiyi bir üst seviyeye taşıyın.`
-    - The source addresses the user; the Turkish turns it into a first-person statement about the developers, changing the meaning.
-- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — `firstrun_shortcut_text` uses straight double quotes
-    - Current: `%1$s’ta sevdiğiniz sitelere çabucak ulaşabilirsiniz. %1$s menüsünden "Ana ekrana ekle"yi seçmeniz yeterli.`
-    - Suggest: `“Ana ekrana ekle”`
-    - The locale's quote convention is `curly-double` (14 occurrences).
-- `menu_trackers_blocked_title` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — Label "Trackers blocked" rendered as the imperative "Block trackers".
-    - Current: `Takip kodlarını engelle`
-    - Suggest: `Engellenen takip kodları`
-    - Per the developer comment this is a label above a count of blocked trackers, not a command; the Turkish imperative changes the meaning.
-- `preference_open_new_tab` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — Mistranslation: source means switching to the new tab immediately when a link opens in it, not "go to the link in the new tab".
-    - Current: `Hemen yeni sekmedeki bağlantıya geç`
-    - Suggest: `Bağlantı yeni sekmede açıldığında hemen o sekmeye geç`
-    - "Switch to link in new tab immediately" describes automatically switching to the newly opened tab; the Turkish reads as "immediately go to the link in the new tab", altering the meaning of the preference.
-- `tip_disable_tips2` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — Stray zero-width/invisible character between "Başlangıç" and "ekranında".
-    - Current: `Başlangıç ​​ekranında`
-    - Suggest: `Başlangıç ekranında`
-    - The string contains invisible zero-width space characters that do not belong in the text.
+_Nothing retired._
 
 ---
 
@@ -130,7 +54,7 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,735 |
+| Strings | 2,746 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -157,7 +81,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 14, `straight-double` 2 | **curly-double** |
-| apostrophe | `typographic` 151, `straight` 1 | **typographic** |
+| apostrophe | `typographic` 153, `straight` 1 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | register | `informal` 2, `formal` 18 | **formal** |
 
@@ -169,13 +93,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (140)
+## 3. Open findings (142)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 77 |
+| 2 | Wrong content (says something other than the English) | 79 |
 | 3 | Degraded language (grammar, spelling, terminology) | 57 |
 | 4 | Cosmetic (typography, spacing) | 6 |
 
@@ -410,6 +334,11 @@ _Nothing in this category._
     - Source: `%1$s by hiding your location, even on public Wi-Fi. Get %2$d GB free every month.`
     - Suggest: `Her ay %2$d GB ücretsiz.`
     - Source says "Get %2$d GB free every month"; the Turkish omits "GB", leaving a bare number with no unit.
+- `ip_protection_promo_headline` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — The possessive "%s’s built-in VPN" is rendered as an ablative "from %s" instead of a possessive construction.
+    - Current: `%s’tan yerleşik VPN`
+    - Source: `%s’s built-in VPN`
+    - Suggest: `%s’un yerleşik VPN’i`
+    - en-US means "the built-in VPN of %s"; "%s’tan" is the ablative case ("from %s"), which changes the meaning and is ungrammatical as a possessive headline.
 - `micro_survey_prompt_title` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "It only takes a minute" mistranslated as "takes only a few minutes".
     - Current: `Yalnızca birkaç dakika sürer.`
     - Source: `Help us make Firefox better. It only takes a minute.`
@@ -480,12 +409,7 @@ _Nothing in this category._
     - Source: `%s is on guard`
     - Suggest: `%s nöbette`
     - Source states the app is on guard (actively protecting); "çalışıyor" only means it is running.
-- `qr_code_display_share_nearby` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — Heading changes the perspective from "nearby" to "with people near me".
-    - Current: `Bağlantıyı yakınımdakilerle paylaş`
-    - Source: `Share link nearby`
-    - Suggest: `Bağlantıyı yakındakilerle paylaş`
-    - The source "Share link nearby" is neutral; the first-person "yakınımdakilerle" (with those near me) is inconsistent with the body text which uses "yakınınızdaki kişilerle" (formal second person).
-- _…and 26 more; see `state/` for the full list._
+- _…and 28 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -744,7 +668,7 @@ _Nothing in this category._
     - Current: `Çökme raporu %1$s'ya gönderiliyor`
     - Source: `Sending crash report to %1$s`
     - Suggest: `%1$s’ya`
-    - The tree uses ’ 151 times against 1 straight.
+    - The tree uses ’ 153 times against 1 straight.
 - `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
     - Current: `Web adresi "https://" veya "http://" içermelidir`
     - Source: `Web address must contain “https://” or “http://”`

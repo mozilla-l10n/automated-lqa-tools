@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **Previous run** | 2026-08-24 @ `e8622a909368` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **Previous run** | 2026-09-01 @ `f39118d70d88` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 11 of 2,724 |
+| **Strings reviewed this run** | 23 of 2,746 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,27 +18,17 @@ Also for ru: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
+
+_No new findings._
+
+### ✅ Fixed since the last run (1)
 
 - `mozac_summarize_paywalled_content_error_title` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ru/strings.xml` — The error title no longer says summarization is impossible; it instead asserts that the full content is paid-only.
     - Current: `Полное содержимое доступно только платно`
     - Source: `Can’t summarize paywalled content`
     - Suggest: `Не удалось создать резюме содержимого за платной подпиской`
     - Source "Can’t summarize paywalled content" states the summarizer cannot process paywalled content; the Russian instead makes a claim about the page's content being available only for payment, dropping the summarization failure entirely.
-- `mozac_feature_summarize_feedback_bad_content_description` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ru/strings.xml` — "Bad summary" rendered as "Некорректное резюме" (incorrect summary), inconsistent with the paired click label "плохое".
-    - Current: `Некорректное резюме`
-    - Source: `Bad summary`
-    - Suggest: `Плохое резюме`
-    - Source is "Bad summary", the counterpart of "Good summary" ("Хорошее резюме"); "некорректное" means factually incorrect and conflicts with the related click-label translation "оценить резюме как плохое".
-- `ip_protection_menu_try_vpn_cta` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — Badge label is expanded into a full imperative sentence with a redundant pronoun, far longer than the source badge.
-    - Current: `Попробуйте его бесплатно`
-    - Source: `Try it free`
-    - Suggest: `Попробовать бесплатно`
-    - Developer comment says this is a badge label; "его" has no antecedent in a badge and the phrase is much longer than "Try it free".
-
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -48,68 +38,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (15)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `add_to_homescreen_continue` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "Continue to website" is translated as "Return to the site".
-    - Current: `Вернуться к сайту`
-    - Suggest: `Перейти на сайт`
-    - The source means continuing on to the website, not returning to it.
-- `sports_widget_close_team_selection_sheet_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "sheet" (bottom sheet panel) translated as "таблица" (table).
-    - Current: `Закрыть таблицу выбора команды`
-    - Suggest: `Закрыть панель выбора команды`
-    - In the source "sheet" refers to the bottom sheet UI panel of the team selector, not a table/spreadsheet.
-- `sports_widget_error_load_failed` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — Adds "страницу" (page), but the source refers to refreshing the widget's match data, not a page.
-    - Current: `Попробуйте обновить страницу через несколько минут.`
-    - Suggest: `Попробуйте обновить через несколько минут.`
-    - Source is "Try refreshing in a few minutes" — a widget refresh action, no page is involved.
-- `sports_widget_error_load_failed_description` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — Adds "страницу" (page), but the source refers to refreshing the widget data, not a page.
-    - Current: `Попробуйте обновить страницу через несколько минут.`
-    - Suggest: `Попробуйте обновить через несколько минут.`
-    - Source is "Try refreshing in a few minutes"; the widget has a Refresh action, no page reload.
-- `sports_widget_final_results_page_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — Plural "финалов" contradicts the singular "final" used in the matching string sports_widget_final_results_content_description.
-    - Current: `Результаты финалов ЧМ`
-    - Suggest: `Результаты финала ЧМ`
-    - Source: "World Cup final results" — a single final; the sibling string is translated as "Результаты финала ЧМ".
-- `sports_widget_get_custom_wallpaper` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "Get custom wallpaper" translated as "Загрузить собственные обои" (upload your own wallpaper).
-    - Current: `Загрузить собственные обои`
-    - Suggest: `Получить особые обои`
-    - The menu item offers a themed wallpaper to the user, not uploading the user's own image.
-- `sports_widget_group_a` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — Group A uses the Cyrillic letter А while all other groups keep Latin letters, breaking consistency.
-    - Current: `Группа А`
-    - Suggest: `Группа A`
-    - Groups B–L are rendered with Latin letters; the mixed Cyrillic "А" is inconsistent and may sort/match incorrectly.
-- `sports_widget_match_elapsed_minutes` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — Translation reformulates as an ordinal minute, which breaks when the clock value includes extra time (e.g. "90+3").
-    - Current: `Идёт %1$s-я минута матча`
-    - Suggest: `Прошло минут: %1$s`
-    - The comment states %1$s may be "90+3"; "90+3-я минута" is ungrammatical, and the source simply announces elapsed time in minutes.
-- `sports_widget_more_options_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "More options" rendered as "Другие настройки" (other settings), which names the wrong control.
-    - Current: `Другие настройки`
-    - Suggest: `Дополнительные параметры`
-    - The overflow menu button is not a settings control; the source says "More options".
-- `sports_widget_team_followed_description` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "Check back" is rendered as "Зайдите на сайт" (visit the website), which is not in the source.
-    - Current: `Зайдите на сайт, чтобы получить информацию о турнире по мере приближения события.`
-    - Suggest: `Заглядывайте сюда за информацией о матчах по мере приближения турнира.`
-    - The source tells the user to check back (in the widget) for match info as the tournament approaches; it does not mention a website, and "match info" was changed to "tournament info".
-- `sports_widget_team_followed_title` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "Following:" (the team the user follows) is mistranslated as "Далее:" ("Next:").
-    - Current: `Далее:`
-    - Suggest: `Вы отслеживаете:`
-    - The source announces the team the user has just followed; "Далее" means "next", which is a different meaning.
-- `sports_widget_upcoming_match_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "Upcoming:" announcing a single match is translated in the plural form "Предстоящие:".
-    - Current: `Предстоящие: %1$s против %2$s`
-    - Suggest: `Предстоящий матч: %1$s против %2$s`
-    - This content description announces one upcoming match, so the plural/section-header form used for sports_widget_upcoming is grammatically wrong here.
-- `content_description_customtab_exit` — `mozilla-mobile/focus-android/app/src/main/res/values-ru/strings.xml` — "previous app" translated as "последнему приложению" (last/latest app) instead of "предыдущему".
-    - Current: `Вернуться к последнему приложению`
-    - Suggest: `Вернуться к предыдущему приложению`
-    - The source says return to the previous app; "последнему" conveys "the last one", a different meaning.
-- `indicator_content_description_menu` — `mozilla-mobile/focus-android/app/src/main/res/values-ru/strings.xml` — "More options button" is translated as "Кнопка дополнительных настроек" (button of additional settings).
-    - Current: `Кнопка дополнительных настроек`
-    - Suggest: `Кнопка дополнительных параметров`
-    - The source refers to "options" of the three-dot menu, not to settings; the content description should describe more options, not settings.
-- `tabs_tray_action_erase` — `mozilla-mobile/focus-android/app/src/main/res/values-ru/strings.xml` — "Erase browsing history" is rendered as "Удалить историю просмотра сети", adding a nonsensical "сети" (of the network).
-    - Current: `Удалить историю просмотра сети`
-    - Suggest: `Удалить историю просмотров`
-    - The source refers to browsing history; "историю просмотра сети" mistranslates "browsing" as viewing the network and is not the established Firefox term (история просмотров).
+_Nothing retired._
 
 ---
 
@@ -118,8 +49,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,724 |
-| Missing strings | 11 |
+| Strings | 2,746 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -136,11 +67,7 @@ _Nothing to re-read._
 
 ### Completeness
 
-**11 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — 11
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -151,7 +78,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | quotes | `guillemet` 43, `straight-double` 2 | **guillemet** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 6 | **em** |
-| register | `informal` 144, `formal` 467 | **formal** |
+| register | `informal` 145, `formal` 469 | **formal** |
 
 ---
 
@@ -161,22 +88,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (157)
+## 3. Open findings (156)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `mozac_summarize_paywalled_content_error_title` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ru/strings.xml` — The error title no longer says summarization is impossible; it instead asserts that the full content is paid-only.
-    - Current: `Полное содержимое доступно только платно`
-    - Source: `Can’t summarize paywalled content`
-    - Suggest: `Не удалось создать резюме содержимого за платной подпиской`
-    - Source "Can’t summarize paywalled content" states the summarizer cannot process paywalled content; the Russian instead makes a claim about the page's content being available only for payment, dropping the summarization failure entirely.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 89 |
+| 2 | Wrong content (says something other than the English) | 88 |
 | 3 | Degraded language (grammar, spelling, terminology) | 63 |
 | 4 | Cosmetic (typography, spacing) | 5 |
 
@@ -261,11 +179,6 @@ _Nothing in this category._
     - Source: `Allow %1$s to play DRM-controlled content?`
     - Suggest: `Разрешить %1$s воспроизводить содержимое, защищённое DRM?`
     - The source specifies content controlled by DRM, not merely copyrighted content; DRM is a technical term that should be kept.
-- `mozac_summarize_paywalled_content_error_title` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ru/strings.xml` — The error title no longer says summarization is impossible; it instead asserts that the full content is paid-only.
-    - Current: `Полное содержимое доступно только платно`
-    - Source: `Can’t summarize paywalled content`
-    - Suggest: `Не удалось создать резюме содержимого за платной подпиской`
-    - Source "Can’t summarize paywalled content" states the summarizer cannot process paywalled content; the Russian instead makes a claim about the page's content being available only for payment, dropping the summarization failure entirely.
 - `mozac_summarize_settings_shake_to_summarize` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ru/strings.xml` — Toggle label translated as an imperative command instead of a feature name.
     - Current: `Встряхните, чтобы резюмировать`
     - Source: `Shake to summarize`
@@ -486,7 +399,12 @@ _Nothing in this category._
     - Source: `Remote improvements`
     - Suggest: `Дистанционные улучшения`
     - "Удалённые" is ambiguous and most naturally reads as "deleted/removed" here (unlike "Удалённая отладка" where the context disambiguates), so it conveys the wrong meaning of "remote".
-- _…and 33 more; see `state/` for the full list._
+- `preferences_show_search_suggestions_in_private` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "private sessions" translated as "приватных окнах" (private windows).
+    - Current: `Показывать в приватных окнах`
+    - Source: `Show in private sessions`
+    - Suggest: `Показывать в приватных сессиях`
+    - The source says "sessions", not "windows"; Android Firefox has no windows.
+- _…and 32 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -836,6 +754,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (1)
 
-_Nothing fixed yet._
+- `mozac_summarize_paywalled_content_error_title` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ru/strings.xml` — fixed 2026-09-07

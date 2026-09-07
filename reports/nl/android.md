@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **Previous run** | 2026-08-24 @ `e8622a909368` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **Previous run** | 2026-09-01 @ `f39118d70d88` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 2,717 |
+| **Strings reviewed this run** | 19 of 2,735 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,28 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (5)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `sports_widget_round_of_16` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Round of 16" is rendered literally as "Ronde van 16" instead of the Dutch football term "Achtste finales".
-    - Current: `Ronde van 16`
-    - Suggest: `Achtste finales`
-    - In Dutch soccer terminology the Round of 16 is called 'achtste finales'; 'Ronde van 16' is a literal, incorrect rendering (and inconsistent with 'Halve finales' used elsewhere).
-- `sports_widget_round_of_32` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Round of 32" is rendered literally as "Ronde van 32" instead of the Dutch term "Zestiende finales".
-    - Current: `Ronde van 32`
-    - Suggest: `Zestiende finales`
-    - Dutch soccer terminology for the Round of 32 is 'zestiende finales'; the literal 'Ronde van 32' is not the established term and is inconsistent with 'Halve finales'.
-- `sports_widget_team_followed_title` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Following:" is translated as the present participle "Volgend:" which means "next" rather than "you are following".
-    - Current: `Volgend:`
-    - Suggest: `Volgt:`
-    - The source labels the team the user follows; Dutch 'volgend' means 'next/following (in sequence)' and is misleading here.
-- `sports_widget_view_schedule` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "View schedule" (tournament match schedule) is translated as "Tijdschema bekijken" instead of "Speelschema bekijken".
-    - Current: `Tijdschema bekijken`
-    - Suggest: `Speelschema bekijken`
-    - The developer comment specifies the full soccer tournament match schedule, which in Dutch is 'speelschema'; 'tijdschema' means timetable in a generic sense.
-- `add_custom_autocomplete_label` — `mozilla-mobile/focus-android/app/src/main/res/values-nl/strings.xml` — "Add link to autocomplete" is rendered as if adding a link pointing to autocomplete.
-    - Current: `Koppeling naar automatisch aanvullen toevoegen`
-    - Suggest: `Koppeling aan automatisch aanvullen toevoegen`
-    - The button adds the current URL to the custom autocomplete list; "naar" reads as direction (a link to autocomplete) rather than adding it to the list.
+_Nothing retired._
 
 ---
 
@@ -64,8 +45,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,717 |
-| Missing strings | 18 |
+| Strings | 2,735 |
+| Missing strings | 11 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -82,10 +63,10 @@ _Nothing to re-read._
 
 ### Completeness
 
-**18 strings** are not translated yet, concentrated in:
+**11 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — 13
-- `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-nl/strings.xml` — 5
+- `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — 7
+- `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-nl/strings.xml` — 4
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -99,7 +80,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | apostrophe | `typographic` 46 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `en` 6 | **en** |
-| register | `formal` 420 | **formal** |
+| register | `formal` 423 | **formal** |
 
 ---
 

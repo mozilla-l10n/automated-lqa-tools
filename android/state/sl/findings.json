@@ -1106,6 +1106,30 @@
  {
   "category": "B",
   "check": "llm",
+  "current": "Brskajte dalje, %1$s pa bo še naprej blokiral sledilce.",
+  "dismissed_because": "",
+  "fid": "8559d0451d10",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-09-07",
+  "impact": 3,
+  "last_seen": "2026-09-07",
+  "locale": "sl",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "Source is \"Keep browsing. %1$s will keep blocking.\" with no explicit object; the sentence structure and content were changed.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "375428c4",
+  "string_id": "notification_privacy_report_body_has_trackers",
+  "suggest": "Brskajte dalje, %1$s pa bo še naprej blokiral.",
+  "summary": "Translation adds \"sledilce\" (trackers), a specific object the source does not state.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
   "current": "Začnite vsako iskanje z domače strani svojega telefona",
   "dismissed_because": "",
   "fid": "a2da046ab003",
@@ -2277,6 +2301,30 @@
   "string_id": "sync_failed_summary",
   "suggest": "Sinhronizacija ni uspela. Zadnja uspešna: %s",
   "summary": "\"Last success\" is rendered as \"Nazadnje sinhronizirano\", losing the distinction from the never-synced/last-synced strings.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Izbriši račun",
+  "dismissed_because": "",
+  "fid": "fba995077d02",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-09-07",
+  "impact": 2,
+  "last_seen": "2026-09-07",
+  "locale": "sl",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The developer comment says the button removes the currently connected account (disconnects it), not deletes it. \"Izbriši\" means delete.",
+  "reads_as_deliberate": true,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "aa2e1c5d",
+  "string_id": "sync_send_tab_error_auth_remove_account",
+  "suggest": "Odstrani račun",
+  "summary": "\"Remove account\" is rendered as \"Delete account\", which implies destroying the Firefox account rather than disconnecting it from the device.",
   "suppressed_by": ""
  },
  {

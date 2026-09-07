@@ -608,7 +608,7 @@
   "file": "mozilla-mobile/android-components/components/feature/findinpage/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-09-01",
+  "last_seen": "2026-09-07",
   "locale": "de",
   "origin": {},
   "rationale": "The locale's quote convention is `german-double` (24 occurrences).",
@@ -2153,6 +2153,30 @@
   "string_id": "sync_no_devices_available_description",
   "suggest": "Alle Geräte, die bei diesem Konto angemeldet sind und damit synchronisieren, werden hier angezeigt.",
   "summary": "\"mit ihnen synchronisieren\" uses lowercase \"ihnen\" and mistranslates \"syncing to this account\".",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Konto löschen",
+  "dismissed_because": "",
+  "fid": "a8277240852b",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-09-07",
+  "impact": 2,
+  "last_seen": "2026-09-07",
+  "locale": "de",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The developer comment says the button removes the currently connected account from the device; \"löschen\" means deleting the account itself, a different and more destructive action.",
+  "reads_as_deliberate": true,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "244df856",
+  "string_id": "sync_send_tab_error_auth_remove_account",
+  "suggest": "Konto entfernen",
+  "summary": "\"Remove account\" is rendered as \"Konto löschen\" (delete account), which suggests deleting the account rather than disconnecting it.",
   "suppressed_by": ""
  },
  {

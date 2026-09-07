@@ -107,8 +107,12 @@
   "mozac_clear_button_description": "bbae2194 730cab26"
  },
  "mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values/strings.xml": {
+  "mozac_browser_awesomebar_copy_website_details": "1f165bda ce9a36d0 98ffb95d",
   "mozac_browser_awesomebar_edit_suggestion": "07048823 40d32071",
+  "mozac_browser_awesomebar_edit_website_details": "1a5778c0 cf0df5fb 6ad948e7",
+  "mozac_browser_awesomebar_reload_website": "290988c8 9ade1619 d458a728",
   "mozac_browser_awesomebar_remove_suggestion": "19ee6a66 e53f08f2",
+  "mozac_browser_awesomebar_share_website_details": "7f6ecbfc 2306250a 8d1d166e",
   "mozac_browser_awesomebar_stock_suggestion_decrease": "a7d7c9fe 1bffd34c",
   "mozac_browser_awesomebar_stock_suggestion_increase": "80bf4ee7 7c7dc2b2",
   "mozac_browser_awesomebar_stock_suggestion_no_change": "9d6d269b 76d4567b"
@@ -2303,6 +2307,13 @@
   "sync_offline": "7efa5a1b 8005bd63",
   "sync_reconnect": "40b8b1b0 f73a2a3e",
   "sync_scan_code": "f44b96c3 93deb189",
+  "sync_send_tab_empty_state_description": "61daec37 6e2aa2a3 fbd5be4e",
+  "sync_send_tab_empty_state_title": "01e49c60 26d3b973 a67d09dc",
+  "sync_send_tab_error_auth_button": "24bf5999 e485cb58 ef393b17",
+  "sync_send_tab_error_auth_remove_account": "1154f3cf 69b399e5 89d363e5",
+  "sync_send_tab_error_auth_title": "f49368ec f2d129c1 c3549ab7",
+  "sync_send_tab_error_connection_text": "eb0bd629 487315a9 d39a4c96",
+  "sync_send_tab_error_connection_title": "8a624616 5f5d0782 dccf081d",
   "sync_send_to_all": "05bc72aa 883c49e3",
   "sync_sent_tab_error_snackbar": "898ad760 e375b7fc",
   "sync_sent_tab_error_snackbar_action": "31bee28c b49d89ce",

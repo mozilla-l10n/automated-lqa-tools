@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **Previous run** | 2026-08-24 @ `e8622a909368` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **Previous run** | 2026-09-01 @ `f39118d70d88` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 2,717 |
+| **Strings reviewed this run** | 0 of 2,717 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,48 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (10)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `sports_widget_card_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Missing diacritic on "Ûntfang".
-    - Current: `Untfang live wedstriidupdates en mear.`
-    - Suggest: `Ûntfang live wedstriidupdates en mear.`
-    - Frisian spelling requires the circumflex: "Ûntfang", not "Untfang".
-- `sports_widget_countdown_to_world_cup` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Missing diacritic on "Ôftelle".
-    - Current: `Oftelle nei it WK`
-    - Suggest: `Ôftelle nei it WK`
-    - Frisian spelling requires the circumflex in "ôftelle"; capitalised it is "Ôftelle".
-- `sports_widget_country_selector_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Informal address "dyn" used instead of the polite "jo" form used throughout the locale.
-    - Current: `Folgje dyn team`
-    - Suggest: `Folgje jo team`
-    - The rest of the batch consistently uses the formal "jo" (e.g. "Kontrolearje jo ynternetferbining", "Meld jo oan mei jo kamera"); "dyn" breaks the established register.
-- `sports_widget_error_connection_interrupted` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Em dash in source rendered as an en dash without matching house convention spacing/character check.
-    - Current: `Ferbining ûnderbrutsen – live updates pauzearre.`
-    - Suggest: `Ferbining ûnderbrutsen — live updates pauzearre.`
-    - The source uses an em dash; the locale convention table lists the en dash as the house dash, but here the punctuation mark differs from the source separator. Low-impact cosmetic mismatch.
-- `sports_widget_remove_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Missing preposition: "fan jo startside" should be "fan jo startside ôf" / the phrase reads as removing the widget belonging to the home page.
-    - Current: `Wrâldkampioenskip-widget fan jo startside fuortsmite`
-    - Suggest: `Wrâldkampioenskip-widget fan jo startside ôf fuortsmite`
-    - In Frisian, removal from a location requires "fan … ôf"; without it the sentence is ambiguous/ungrammatical.
-- `sports_widget_team_followed_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Following:" (the user follows the team) is rendered as "Folgjend:" which means "next/following" in the ordinal sense.
-    - Current: `Folgjend:`
-    - Suggest: `Folget:`
-    - Source means the user is now following the given team; "Folgjend" is the adjective "next", not the state of following.
-- `cookie_banner_report_a_site_snackbar_label` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Ungrammatical phrase "Fersyk om te websitestipe" with a stray infinitive marker and wrong word order.
-    - Current: `Fersyk om te websitestipe yntsjinne.`
-    - Suggest: `Fersyk om websitestipe yntsjinne.`
-    - The source is "Request to support site submitted." The Frisian contains an orphan infinitive particle "te" before a noun, making the sentence ungrammatical.
-- `cookie_banner_the_site_was_reported` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Ungrammatical phrase "Fersyk om te websitestipe" with a stray infinitive marker.
-    - Current: `Fersyk om te websitestipe yntsjinne.`
-    - Suggest: `Fersyk om websitestipe yntsjinne.`
-    - The source is "Request to support site submitted." The infinitive particle "te" before the noun "websitestipe" is ungrammatical.
-- `preferences_cookie_banner_summary_off` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Missing diacritic on "Út" (Frisian for "Off").
-    - Current: `Ut`
-    - Suggest: `Út`
-    - The Frisian word for "off" is "Út" with an acute accent; "Ut" is a spelling error.
-- `tip_disable_tips2` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Dutch spelling 'startscherm' used instead of Frisian 'startskerm'.
-    - Current: `Tips op startscherm útskeakelje`
-    - Suggest: `Tips op startskerm útskeakelje`
-    - The Frisian word is 'startskerm', as used in tip_add_to_homescreen; 'startscherm' is Dutch.
+_Nothing retired._
 
 ---
 
@@ -85,7 +46,7 @@ _Nothing to re-read._
 |---|---|
 | Files | 43 |
 | Strings | 2,717 |
-| Missing strings | 18 |
+| Missing strings | 29 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -102,10 +63,11 @@ _Nothing to re-read._
 
 ### Completeness
 
-**18 strings** are not translated yet, concentrated in:
+**29 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — 13
+- `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — 20
 - `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-fy-rNL/strings.xml` — 5
+- `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-fy-rNL/strings.xml` — 4
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
