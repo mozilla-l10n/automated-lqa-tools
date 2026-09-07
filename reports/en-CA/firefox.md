@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
-| **Previous run** | 2026-09-03 @ `023f527865cb` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
+| **Previous run** | 2026-09-03 @ `075eb543fd91` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 7 of 18,178 |
+| **Strings reviewed this run** | 1 of 18,178 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for en-CA: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `urlbar-searchmode-dropmarker2` — `browser/browser/browser.ftl` — Tooltip text was changed to title case, departing from the sentence case used in en-US.
+    - Current: `Pick a Search Engine`
+    - Source: `title: Pick a search engine`
+    - Suggest: `Pick a search engine`
+    - The en-US source uses sentence case ("Pick a search engine"); en-CA has no convention requiring title case here, so the capitalization change is an unjustified departure.
 
 ### ✅ Fixed since the last run (0)
 
@@ -46,7 +50,7 @@ _Nothing retired._
 |---|---|
 | Files | 362 |
 | Strings | 18,178 |
-| Missing strings | 76 |
+| Missing strings | 94 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +67,20 @@ _Nothing retired._
 
 ### Completeness
 
-**76 strings** are not translated yet, concentrated in:
+**94 strings** are not translated yet, concentrated in:
 
+- `browser/browser/newtab/newtab.ftl` — 27
 - `toolkit/services/aboutSyncLog.ftl` — 26
-- `browser/browser/newtab/newtab.ftl` — 12
 - `browser/browser/permissions.ftl` — 10
 - `toolkit/toolkit/main-window/autocomplete.ftl` — 8
 - `browser/browser/preferences/preferences.ftl` — 5
+- `browser/browser/aiWindow.ftl` — 3
 - `browser/browser/sharePanel.ftl` — 3
-- `browser/browser/aiWindow.ftl` — 2
 - `browser/browser/sidebar.ftl` — 2
 - `toolkit/toolkit/pdfviewer/embedFallback.ftl` — 2
-- `browser/browser/appmenu.ftl` — 1
-- `browser/browser/preferences/formAutofill.ftl` — 1
 - `devtools/client/netmonitor.properties` — 1
+- `dom/chrome/accessibility/AccessFu.properties` — 1
+- `dom/chrome/dom/dom.properties` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -100,7 +104,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (0)
+## 3. Open findings (1)
 
 
 | Impact | Meaning | Count |
@@ -108,7 +112,7 @@ _Nothing reported._
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 0 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
-| 4 | Cosmetic (typography, spacing) | 0 |
+| 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -128,7 +132,11 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
-_Nothing in this category._
+- `urlbar-searchmode-dropmarker2` — `browser/browser/browser.ftl` — Tooltip text was changed to title case, departing from the sentence case used in en-US.
+    - Current: `Pick a Search Engine`
+    - Source: `title: Pick a search engine`
+    - Suggest: `Pick a search engine`
+    - The en-US source uses sentence case ("Pick a search engine"); en-CA has no convention requiring title case here, so the capitalization change is an unjustified departure.
 
 ---
 

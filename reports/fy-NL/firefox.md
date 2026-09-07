@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
-| **Previous run** | 2026-09-03 @ `023f527865cb` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
+| **Previous run** | 2026-09-03 @ `075eb543fd91` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 10 of 18,180 |
+| **Strings reviewed this run** | 1 of 18,180 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,19 +22,9 @@ Also for fy-NL: [android](android.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (3)
+### ✅ Fixed since the last run (0)
 
-- `cfr-doorhanger-milestone-heading2` — `browser/browser/newtab/asrouter.ftl` — [one] variant has b>{ $blockedCount }</b> — the opening < is missing, so the raw text b> shows. The [other] variant is correct.
-    - Current: `[one]`
-    - Source: `{$blockedCount ->} [other] { -brand-short-name } blocked over <b>{ $blockedCount }</b> trackers since { $date }!`
-- `language-name-br` — `toolkit/toolkit/intl/languageNames.ftl` — Bretons → Bretonsk — Dutch -s ending
-    - Current: `Bretons`
-    - Source: `Breton`
-    - Suggest: `Bretonsk`
-- `language-name-uz` — `toolkit/toolkit/intl/languageNames.ftl` — Oezbeeks → Oezbeeksk — Dutch -s; the file's pattern is -sk
-    - Current: `Oezbeeks`
-    - Source: `Uzbek`
-    - Suggest: `Oezbeeksk`
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -56,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 360 |
 | Strings | 18,180 |
-| Missing strings | 74 |
+| Missing strings | 92 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 2 |
 | Files with no en-US counterpart | 0 |
@@ -73,20 +63,20 @@ _Nothing retired._
 
 ### Completeness
 
-**74 strings** are not translated yet, concentrated in:
+**92 strings** are not translated yet, concentrated in:
 
 - `toolkit/services/aboutSyncLog.ftl` — 26
+- `browser/browser/newtab/newtab.ftl` — 25
 - `browser/browser/permissions.ftl` — 10
-- `browser/browser/newtab/newtab.ftl` — 10
 - `toolkit/toolkit/main-window/autocomplete.ftl` — 8
 - `browser/browser/preferences/preferences.ftl` — 5
+- `browser/browser/aiWindow.ftl` — 3
 - `browser/browser/sharePanel.ftl` — 3
-- `browser/browser/aiWindow.ftl` — 2
 - `browser/browser/sidebar.ftl` — 2
 - `toolkit/toolkit/pdfviewer/embedFallback.ftl` — 2
-- `browser/browser/appmenu.ftl` — 1
-- `browser/browser/preferences/formAutofill.ftl` — 1
 - `devtools/client/netmonitor.properties` — 1
+- `dom/chrome/accessibility/AccessFu.properties` — 1
+- `dom/chrome/dom/dom.properties` — 1
 
 **Files absent from the locale:**
 

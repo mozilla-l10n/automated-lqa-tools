@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
-| **Previous run** | 2026-09-03 @ `023f527865cb` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
+| **Previous run** | 2026-09-03 @ `075eb543fd91` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 6 of 17,847 |
+| **Strings reviewed this run** | 1 of 17,847 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for es-MX: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `urlbar-searchmode-dropmarker2` — `browser/browser/browser.ftl` — Unnecessary title-case capitalization of "Motor de Búsqueda"; Spanish uses sentence case.
+    - Current: `Elige un Motor de Búsqueda`
+    - Source: `title: Pick a search engine`
+    - Suggest: `Elige un motor de búsqueda`
+    - en-US uses English title-style capitalization, but Spanish convention (and the rest of the tree) uses sentence case for common nouns like "motor de búsqueda".
 
 ### ✅ Fixed since the last run (0)
 
@@ -46,7 +50,7 @@ _Nothing retired._
 |---|---|
 | Files | 357 |
 | Strings | 17,847 |
-| Missing strings | 407 |
+| Missing strings | 425 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 5 |
 | Files with no en-US counterpart | 0 |
@@ -63,11 +67,11 @@ _Nothing retired._
 
 ### Completeness
 
-**407 strings** are not translated yet, concentrated in:
+**425 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 83
-- `toolkit/toolkit/about/url-classifier.ftl` — 26
+- `browser/browser/newtab/newtab.ftl` — 98
 - `toolkit/services/aboutSyncLog.ftl` — 26
+- `toolkit/toolkit/about/url-classifier.ftl` — 26
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 23
 - `toolkit/toolkit/about/aboutNetworking.ftl` — 20
 - `browser/browser/preferences/preferences.ftl` — 19
@@ -76,7 +80,7 @@ _Nothing retired._
 - `browser/browser/sidebar.ftl` — 14
 - `browser/browser/newtab/onboarding.ftl` — 13
 - `toolkit/toolkit/neterror/netError.ftl` — 13
-- `browser/browser/newtab/asrouter.ftl` — 11
+- `devtools/client/toolbox-options.ftl` — 11
 
 **Files absent from the locale:**
 
@@ -113,7 +117,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (21)
+## 3. Open findings (22)
 
 
 | Impact | Meaning | Count |
@@ -121,7 +125,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 6 |
 | 3 | Degraded language (grammar, spelling, terminology) | 13 |
-| 4 | Cosmetic (typography, spacing) | 2 |
+| 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -191,6 +195,11 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
+- `urlbar-searchmode-dropmarker2` — `browser/browser/browser.ftl` — Unnecessary title-case capitalization of "Motor de Búsqueda"; Spanish uses sentence case.
+    - Current: `Elige un Motor de Búsqueda`
+    - Source: `title: Pick a search engine`
+    - Suggest: `Elige un motor de búsqueda`
+    - en-US uses English title-style capitalization, but Spanish convention (and the rest of the tree) uses sentence case for common nouns like "motor de búsqueda".
 - `about-glean-profiler-explanation` — `toolkit/toolkit/about/aboutGlean.ftl` — Missing/incorrect terminal punctuation: about-httpsonly-suggestion-box-www-text (missing "."), about-webauthn-text-not-available (comma instead of "."), about-webauthn-ctap2-enroll-feedback-too-right (missing "."), about-glean-profiler-explanation (missing "."), remote-debugging-title (space before ")").
     - Source: `To see a full view of all recorded metrics, you can use the { -profiler-brand-name }. First you must <a data-l10n-name="firefox-profiler-link">capture a performance profile</a>. Once you capture the profile, select <q>M…`
 - `remote-debugging-title` — `toolkit/toolkit/about/aboutSupport.ftl` — Missing/incorrect terminal punctuation: about-httpsonly-suggestion-box-www-text (missing "."), about-webauthn-text-not-available (comma instead of "."), about-webauthn-ctap2-enroll-feedback-too-right (missing "."), about-glean-profiler-explanation (missing "."), remote-debugging-title (space before ")").

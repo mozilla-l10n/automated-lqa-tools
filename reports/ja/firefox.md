@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
-| **Previous run** | 2026-09-03 @ `023f527865cb` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
+| **Previous run** | 2026-09-03 @ `075eb543fd91` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 7 of 18,191 |
+| **Strings reviewed this run** | 96 of 18,272 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,53 @@ Also for ja: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (9)
 
-_No new findings._
+- `speech-recognition-model-download-message` — `browser/browser/permissions.ftl` — "the audio never leaves your device" is rendered as "the audio only remains on this device", and "~{ $sizeMB } MB" (approximately) is rendered as "{ $sizeMB } MB or less".
+    - Current: `音声はこの端末にしか残りません。セットアップを続けると、音声認識モデル ({ $sizeMB } MB 以下) のデータがダウンロードされます。`
+    - Source: `{ -brand-short-name } runs speech recognition locally, so the audio never leaves your device. To set this up, a ~{ $sizeMB } MB download will start when you continue.`
+    - Suggest: `音声が端末外に送信されることはありません。セットアップを続けると、音声認識モデル (約 { $sizeMB } MB) のデータがダウンロードされます。`
+    - en-US says the audio never leaves the device (not that it is retained on it), and "~" means approximately, not "or less".
+- `policy-not-fully-applied` — `browser/browser/aboutPolicies.ftl` — "Not fully applied" is a status label for the single policy it appears under, but the Japanese says "there are policies that were not applied".
+    - Current: `適用されていないポリシーがあります`
+    - Source: `Not fully applied`
+    - Suggest: `完全には適用されていません`
+    - Per the developer comment this text is shown under the name of one policy when some of its operations failed; it describes that policy's partial application, not a set of unapplied policies.
+- `tls-key-logging-notice-nav` — `browser/browser/preferences/preferences.ftl` — The source's hedged "may see" is rendered as a definite "can see", asserting that traffic is being read.
+    - Current: `使用中のアプリまたはサービスは暗号化された通信を見ることができます。`
+    - Source: `label: An app or service may see your encrypted traffic.`
+    - Suggest: `アプリまたはサービスが暗号化された通信を閲覧できる状態になっている可能性があります。`
+    - en-US "may see" expresses possibility; the Japanese states it as a fact about the user's apps/services.
+- `newtab-wallpaper-your-images-folder` — `browser/browser/newtab/newtab.ftl` — The aria-label renders "Your images, wallpapers that you have saved" as "saved images and wallpapers", losing the appositive explanation.
+    - Current: `aria-label: 保存された画像と壁紙`
+    - Source: `aria-label: Your images, wallpapers that you have saved`
+    - Suggest: `aria-label: 保存された画像、あなたが保存した壁紙`
+    - The en-US label names the tile ("Your images") and then explains it ("wallpapers that you have saved"); the Japanese instead lists two separate things (images and wallpapers), which misinforms screen reader users about what the tile contains.
+- `about-sync-log-page-header` — `toolkit/services/aboutSyncLog.ftl` — "Diagnostic logs written by sync." is translated as "diagnoses the logs written by sync", turning a noun phrase into an action.
+    - Current: `description: 同期機能により書き込まれたログを診断します。`
+    - Source: `description: Diagnostic logs written by sync. heading: Sync logs`
+    - Suggest: `description: 同期機能により書き込まれた診断ログです。`
+    - The source describes what the logs are (diagnostic logs written by sync), not an action the page performs on them.
+- `about-sync-log-search-input` — `toolkit/services/aboutSyncLog.ftl` — The placeholder uses the verb form 「ログを検索します」 instead of the noun/imperative placeholder form.
+    - Current: `placeholder: ログを検索します`
+    - Source: `aria-label: Search logs placeholder: Search logs`
+    - Suggest: `placeholder: ログを検索`
+    - The 〜します form is the locale's convention for .title tooltips; a placeholder should use the short noun form as the matching .aria-label does.
+- `about-sync-log-empty-filtered` — `toolkit/services/aboutSyncLog.ftl` — "the current filters" is translated as "the current search".
+    - Current: `現在の検索と一致するログはありません。`
+    - Source: `No logs match the current filters.`
+    - Suggest: `現在の絞り込み条件と一致するログはありません。`
+    - The source refers to the filter controls (type/date filters), not to a search; the page has both, so naming the wrong one misleads the user.
+- `mlmodel-formfill-engine` — `toolkit/toolkit/about/aboutAddons.ftl` — "address forms" mistranslated as "アドレスフォーム" (email/URL address), losing the meaning of postal address forms.
+    - Current: `アドレスフォームの入力の補助`
+    - Source: `{ -brand-short-name } uses this to help fill in address forms`
+    - Suggest: `住所フォームの入力の補助`
+    - en-US "address forms" refers to postal address entry forms in form autofill; アドレス in Japanese Firefox usually means URL/email address, so the meaning is wrong.
+- `preferences-doh-radio-group` — `browser/browser/preferences/preferences.ftl` — aria-label adds "次のレベルで" (at the following level), which the en-US "using:" does not say.
+    - Current: `DNS over HTTPS を次のレベルで有効にします`
+    - Source: `aria-label: Enable DNS over HTTPS using:`
+    - Suggest: `DNS over HTTPS を次を使用して有効にします`
+    - en-US is "Enable DNS over HTTPS using:" — it refers to the provider/method used, not a protection level.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +88,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 360 |
-| Strings | 18,191 |
-| Missing strings | 74 |
-| Obsolete strings | 11 |
-| Files absent from the locale | 2 |
+| Files | 362 |
+| Strings | 18,272 |
+| Missing strings | 0 |
+| Obsolete strings | 0 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -62,26 +106,6 @@ _Nothing retired._
 | Typography deviations from this locale's own norm | 0 |
 
 ### Completeness
-
-**74 strings** are not translated yet, concentrated in:
-
-- `toolkit/services/aboutSyncLog.ftl` — 26
-- `browser/browser/permissions.ftl` — 10
-- `browser/browser/newtab/newtab.ftl` — 10
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 8
-- `browser/browser/preferences/preferences.ftl` — 5
-- `browser/browser/sharePanel.ftl` — 3
-- `browser/browser/aiWindow.ftl` — 2
-- `browser/browser/sidebar.ftl` — 2
-- `toolkit/toolkit/pdfviewer/embedFallback.ftl` — 2
-- `browser/browser/appmenu.ftl` — 1
-- `browser/browser/preferences/formAutofill.ftl` — 1
-- `devtools/client/netmonitor.properties` — 1
-
-**Files absent from the locale:**
-
-- `toolkit/services/aboutSyncLog.ftl`
-- `toolkit/toolkit/pdfviewer/embedFallback.ftl`
 
 **Files present but identical to en-US:**
 
@@ -98,10 +122,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 491, `curly-single` 193, `straight-double` 122, `corner` 7 | _mixed_ |
 | apostrophe | `typographic` 270, `straight` 12 | **typographic** |
-| ellipsis | `ascii` 460 | **ascii** |
+| ellipsis | `ascii` 463 | **ascii** |
 | dash | `em` 81, `en` 1 | **em** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 11 | _mixed_ |
-| fullwidth | `punctuation` 5736 | **punctuation** |
+| fullwidth | `punctuation` 5756 | **punctuation** |
 
 ---
 
@@ -111,14 +135,33 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (100)
+## 3. Open findings (109)
 
+> **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+
+- `speech-recognition-model-download-message` — `browser/browser/permissions.ftl` — "the audio never leaves your device" is rendered as "the audio only remains on this device", and "~{ $sizeMB } MB" (approximately) is rendered as "{ $sizeMB } MB or less".
+    - Current: `音声はこの端末にしか残りません。セットアップを続けると、音声認識モデル ({ $sizeMB } MB 以下) のデータがダウンロードされます。`
+    - Source: `{ -brand-short-name } runs speech recognition locally, so the audio never leaves your device. To set this up, a ~{ $sizeMB } MB download will start when you continue.`
+    - Suggest: `音声が端末外に送信されることはありません。セットアップを続けると、音声認識モデル (約 { $sizeMB } MB) のデータがダウンロードされます。`
+    - en-US says the audio never leaves the device (not that it is retained on it), and "~" means approximately, not "or less".
+- `tls-key-logging-notice-nav` — `browser/browser/preferences/preferences.ftl` — The source's hedged "may see" is rendered as a definite "can see", asserting that traffic is being read.
+    - Current: `使用中のアプリまたはサービスは暗号化された通信を見ることができます。`
+    - Source: `label: An app or service may see your encrypted traffic.`
+    - Suggest: `アプリまたはサービスが暗号化された通信を閲覧できる状態になっている可能性があります。`
+    - en-US "may see" expresses possibility; the Japanese states it as a fact about the user's apps/services.
+- `about-sync-log-page-header` — `toolkit/services/aboutSyncLog.ftl` — "Diagnostic logs written by sync." is translated as "diagnoses the logs written by sync", turning a noun phrase into an action.
+    - Current: `description: 同期機能により書き込まれたログを診断します。`
+    - Source: `description: Diagnostic logs written by sync. heading: Sync logs`
+    - Suggest: `description: 同期機能により書き込まれた診断ログです。`
+    - The source describes what the logs are (diagnostic logs written by sync), not an action the page performs on them.
+
+_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 8 |
-| 2 | Wrong content (says something other than the English) | 30 |
-| 3 | Degraded language (grammar, spelling, terminology) | 29 |
+| 2 | Wrong content (says something other than the English) | 38 |
+| 3 | Degraded language (grammar, spelling, terminology) | 30 |
 | 4 | Cosmetic (typography, spacing) | 33 |
 
 ### A. Functional, markup, variables & plurals
@@ -238,6 +281,11 @@ _Nothing reported._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `policy-not-fully-applied` — `browser/browser/aboutPolicies.ftl` — "Not fully applied" is a status label for the single policy it appears under, but the Japanese says "there are policies that were not applied".
+    - Current: `適用されていないポリシーがあります`
+    - Source: `Not fully applied`
+    - Suggest: `完全には適用されていません`
+    - Per the developer comment this text is shown under the name of one policy when some of its operations failed; it describes that policy's partial application, not a set of unapplied policies.
 - `about-private-browsing-felt-privacy-v1-info-header` — `browser/browser/aboutPrivateBrowsing.ftl` — about-private-browsing-felt-privacy-v1-info-header (aboutPrivateBrowsing.ftl) — "Leave no traces on this device" → この端末を追跡させません. → この端末に痕跡を残しません Verified.
     - Source: `Leave no traces on this device`
     - Suggest: `この端末を追跡させません`
@@ -247,17 +295,37 @@ _Nothing reported._
 - `ipprotection-bandwidth-upgrade-title` — `browser/browser/ipProtection.ftl` — ipprotection-bandwidth-upgrade-title (ipProtection.ftl) — "Like built-in VPN?" is a question, read as "similar to". → 組み込み VPN が気に入りましたか？ …
     - Source: `Like built-in VPN? Get even more protection outside { -brand-product-name } with { -mozilla-vpn-brand-name }.`
     - Suggest: `組み込み VPN が気に入りましたか？ …`
+- `newtab-wallpaper-your-images-folder` — `browser/browser/newtab/newtab.ftl` — The aria-label renders "Your images, wallpapers that you have saved" as "saved images and wallpapers", losing the appositive explanation.
+    - Current: `aria-label: 保存された画像と壁紙`
+    - Source: `aria-label: Your images, wallpapers that you have saved`
+    - Suggest: `aria-label: 保存された画像、あなたが保存した壁紙`
+    - The en-US label names the tile ("Your images") and then explains it ("wallpapers that you have saved"); the Japanese instead lists two separate things (images and wallpapers), which misinforms screen reader users about what the tile contains.
+- `speech-recognition-model-download-message` — `browser/browser/permissions.ftl` — "the audio never leaves your device" is rendered as "the audio only remains on this device", and "~{ $sizeMB } MB" (approximately) is rendered as "{ $sizeMB } MB or less".
+    - Current: `音声はこの端末にしか残りません。セットアップを続けると、音声認識モデル ({ $sizeMB } MB 以下) のデータがダウンロードされます。`
+    - Source: `{ -brand-short-name } runs speech recognition locally, so the audio never leaves your device. To set this up, a ~{ $sizeMB } MB download will start when you continue.`
+    - Suggest: `音声が端末外に送信されることはありません。セットアップを続けると、音声認識モデル (約 { $sizeMB } MB) のデータがダウンロードされます。`
+    - en-US says the audio never leaves the device (not that it is retained on it), and "~" means approximately, not "or less".
 - `containers-sites-card-header` — `browser/browser/preferences/preferences.ftl` — The description translates "a site"/"the site" as "このサイト" (this site), implying a specific site rather than any site in general.
     - Current: `専用コンテナーを選ぶと、{ -brand-short-name } でこのサイトを開く時に毎回このコンテナーが使用されます。`
     - Source: `description: Choose a container for a site and { -brand-short-name } will use it every time the site opens. label: Site-specific containers`
     - Suggest: `サイトごとにコンテナーを選ぶと、{ -brand-short-name } はそのサイトを開くたびに毎回そのコンテナーを使用します。`
     - en-US says "Choose a container for a site and { -brand-short-name } will use it every time the site opens" — generic; the Japanese uses deictic 「この」 referring to a particular site, changing the meaning of this settings card header description.
+- `preferences-doh-radio-group` — `browser/browser/preferences/preferences.ftl` — aria-label adds "次のレベルで" (at the following level), which the en-US "using:" does not say.
+    - Current: `DNS over HTTPS を次のレベルで有効にします`
+    - Source: `aria-label: Enable DNS over HTTPS using:`
+    - Suggest: `DNS over HTTPS を次を使用して有効にします`
+    - en-US is "Enable DNS over HTTPS using:" — it refers to the provider/method used, not a protection level.
 - `security-privacy-issue-warning-safe-browsing` — `browser/browser/preferences/preferences.ftl` — "dangerous and deceptive content" is two categories; ja merges them into one modifier, unlike security-browsing-protection.
     - Source: `description: Your exposure to scams and malware from websites is increased. label: Dangerous and deceptive content is not blocked`
 - `tabs-group-header2` — `browser/browser/preferences/preferences.ftl` — en-US is the section header "Tabs" ("group" in the ID refers to the preferences groupbox); タブグループ now also collides with the real Tab Groups feature. → タブ Verified.
     - Current: `タブグループ`
     - Source: `label: Tabs`
     - Suggest: `タブ`
+- `tls-key-logging-notice-nav` — `browser/browser/preferences/preferences.ftl` — The source's hedged "may see" is rendered as a definite "can see", asserting that traffic is being read.
+    - Current: `使用中のアプリまたはサービスは暗号化された通信を見ることができます。`
+    - Source: `label: An app or service may see your encrypted traffic.`
+    - Suggest: `アプリまたはサービスが暗号化された通信を閲覧できる状態になっている可能性があります。`
+    - en-US "may see" expresses possibility; the Japanese states it as a fact about the user's apps/services.
 - `monitor-breaches-unresolved-description` — `browser/browser/protections.ftl` — monitor-breaches-unresolved-description (protections.ftl) — "taking steps to protect your info" → 段階に進めます ("advance to a stage").
     - Source: `After reviewing breach details and taking steps to protect your info, you can mark breaches as resolved.`
     - Suggest: `段階に進めます`
@@ -275,6 +343,21 @@ _Nothing reported._
     - Source: `tree table`
     - Suggest: `ツリーテーブル`
     - The source is the accessibility role name "tree table"; "折りたたみリスト" (collapsible list) does not denote a table role and mis-announces the element to screen reader users.
+- `about-sync-log-empty-filtered` — `toolkit/services/aboutSyncLog.ftl` — "the current filters" is translated as "the current search".
+    - Current: `現在の検索と一致するログはありません。`
+    - Source: `No logs match the current filters.`
+    - Suggest: `現在の絞り込み条件と一致するログはありません。`
+    - The source refers to the filter controls (type/date filters), not to a search; the page has both, so naming the wrong one misleads the user.
+- `about-sync-log-page-header` — `toolkit/services/aboutSyncLog.ftl` — "Diagnostic logs written by sync." is translated as "diagnoses the logs written by sync", turning a noun phrase into an action.
+    - Current: `description: 同期機能により書き込まれたログを診断します。`
+    - Source: `description: Diagnostic logs written by sync. heading: Sync logs`
+    - Suggest: `description: 同期機能により書き込まれた診断ログです。`
+    - The source describes what the logs are (diagnostic logs written by sync), not an action the page performs on them.
+- `mlmodel-formfill-engine` — `toolkit/toolkit/about/aboutAddons.ftl` — "address forms" mistranslated as "アドレスフォーム" (email/URL address), losing the meaning of postal address forms.
+    - Current: `アドレスフォームの入力の補助`
+    - Source: `{ -brand-short-name } uses this to help fill in address forms`
+    - Suggest: `住所フォームの入力の補助`
+    - en-US "address forms" refers to postal address entry forms in form autofill; アドレス in Japanese Firefox usually means URL/email address, so the meaning is wrong.
 - `about-logging-title` — `toolkit/toolkit/about/aboutLogging.ftl` — about-logging-title (aboutLogging.ftl) — "About Logging" → HTTP ログについて; the page now covers media, gfx, WebRTC and WebGPU presets. → ログについて Verified.
     - Source: `About Logging`
     - Suggest: `HTTP ログについて`
@@ -437,6 +520,11 @@ _Nothing reported._
 - `toolbox-meatball-menu-splitconsole-label` — `devtools/client/toolbox.ftl` — devtools/client/toolbox.ftl — "Split Console" is 分割コンソール in toolbox-options.ftl. Current コンソールペインを表示/隠す.
     - Source: `Show Split Console`
     - Suggest: `分割コンソール`
+- `about-sync-log-search-input` — `toolkit/services/aboutSyncLog.ftl` — The placeholder uses the verb form 「ログを検索します」 instead of the noun/imperative placeholder form.
+    - Current: `placeholder: ログを検索します`
+    - Source: `aria-label: Search logs placeholder: Search logs`
+    - Suggest: `placeholder: ログを検索`
+    - The 〜します form is the locale's convention for .title tooltips; a placeholder should use the short noun form as the matching .aria-label does.
 - `webext-perms-header-optional-required-perms` — `toolkit/toolkit/global/extensions.ftl` — toolkit/toolkit/global/extensions.ftl — permissions are 権限 elsewhere in the file but 許可/許可設定 here.
     - Source: `New permissions:`
     - Suggest: `権限`

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
-| **Previous run** | 2026-09-03 @ `023f527865cb` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
+| **Previous run** | 2026-09-03 @ `075eb543fd91` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 6 of 17,650 |
+| **Strings reviewed this run** | 1 of 17,650 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -46,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 362 |
 | Strings | 17,650 |
-| Missing strings | 604 |
+| Missing strings | 622 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,18 +63,18 @@ _Nothing retired._
 
 ### Completeness
 
-**604 strings** are not translated yet, concentrated in:
+**622 strings** are not translated yet, concentrated in:
 
-- `browser/browser/aiWindow.ftl` — 138
+- `browser/browser/aiWindow.ftl` — 139
 - `browser/browser/aiWindowContent.ftl` — 71
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 48
 - `dom/chrome/dom/dom.properties` — 46
 - `browser/browser/ipProtection.ftl` — 37
+- `browser/browser/newtab/newtab.ftl` — 30
 - `browser/browser/aiFeatures.ftl` — 27
 - `dom/chrome/security/security.properties` — 23
 - `browser/browser/preferences/preferences.ftl` — 20
 - `devtools/client/debugger.properties` — 17
-- `browser/browser/newtab/newtab.ftl` — 15
 - `toolkit/toolkit/about/aboutGlean.ftl` — 15
 - `toolkit/toolkit/about/aboutWebrtc.ftl` — 14
 

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
-| **Previous run** | 2026-09-03 @ `023f527865cb` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
+| **Previous run** | 2026-09-03 @ `075eb543fd91` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 20 of 18,207 |
+| **Strings reviewed this run** | 34 of 18,240 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,23 @@ Also for es-AR: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (3)
 
-- `preferences-ai-controls-sidebar-chatbot-group-3` — `browser/browser/preferences/preferences.ftl` — Uses the peninsular "usted" imperative "Mantenga" instead of the es-AR voseo/impersonal register used elsewhere in the string.
-    - Current: `Mantenga un chatbot a la vista mientras se navega.`
-    - Source: `description: Keep a chatbot in view as you browse. Choose from multiple providers and switch anytime. label: AI chatbot providers in sidebar`
-    - Suggest: `Mantené un chatbot a la vista mientras navegás.`
-    - es-AR addresses the user with voseo ("Mantené"), not the "usted" form "Mantenga"; the rest of the string already switches to an impersonal construction, so the register is inconsistent.
+- `newtab-wallpaper-your-images` — `browser/browser/newtab/newtab.ftl` — "Your images" rendered as "Mis imágenes" (My images), changing the possessive person.
+    - Current: `Mis imágenes`
+    - Source: `Your images`
+    - Suggest: `Tus imágenes`
+    - en-US uses second person "Your images"; the target switches to first person "Mis", inconsistent with the source's form of address.
+- `newtab-wallpaper-your-images-folder` — `browser/browser/newtab/newtab.ftl` — "Your images, wallpapers that you have saved" rendered in first person and drops the "you have saved" relative clause wording.
+    - Current: `Mis imágenes, fondos de pantalla guardados`
+    - Source: `aria-label: Your images, wallpapers that you have saved`
+    - Suggest: `Tus imágenes, fondos de pantalla que guardaste`
+    - en-US addresses the user in second person; the target uses "Mis" (my), inconsistent with the source and with the rest of the picker.
+- `newtab-privacy-empty-state-tally` — `browser/browser/newtab/newtab.ftl` — "See a running tally here." translated as a statement about future updating and the final period is dropped.
+    - Current: `Acá se actualizará el total`
+    - Source: `See a running tally here.`
+    - Suggest: `Acá vas a ver el total actualizado.`
+    - The source invites the user to see a running tally; the target asserts that the total will be updated here, and omits the sentence-final period present in en-US.
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,8 +59,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 362 |
-| Strings | 18,207 |
-| Missing strings | 47 |
+| Strings | 18,240 |
+| Missing strings | 32 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -67,19 +77,16 @@ _Nothing retired._
 
 ### Completeness
 
-**47 strings** are not translated yet, concentrated in:
+**32 strings** are not translated yet, concentrated in:
 
-- `browser/browser/permissions.ftl` — 10
-- `browser/browser/newtab/newtab.ftl` — 10
+- `browser/browser/newtab/newtab.ftl` — 11
 - `toolkit/toolkit/about/url-classifier.ftl` — 6
-- `browser/browser/preferences/preferences.ftl` — 5
 - `browser/browser/featureCallout.ftl` — 4
 - `browser/browser/appmenu.ftl` — 3
+- `browser/browser/preferences/preferences.ftl` — 3
 - `browser/browser/aiWindow.ftl` — 2
-- `toolkit/toolkit/about/aboutAddons.ftl` — 2
 - `browser/browser/newtab/asrouter.ftl` — 1
-- `devtools/client/netmonitor.properties` — 1
-- `dom/chrome/dom/dom.properties` — 1
+- `toolkit/toolkit/about/aboutAddons.ftl` — 1
 - `toolkit/toolkit/global/processTypes.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
@@ -95,7 +102,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | ellipsis | `char` 462, `ascii` 2 | **char** |
 | dash | `em` 86, `en` 1 | **em** |
 | nbsp | `total` 5, `before-punctuation` 3, `space-before-punctuation` 9 | _mixed_ |
-| inverted marks | `open-question` 371, `open-exclamation` 82 | **open-question** |
+| inverted marks | `open-question` 373, `open-exclamation` 82 | **open-question** |
 
 ---
 
@@ -105,14 +112,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (303)
+## 3. Open findings (306)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 50 |
 | 2 | Wrong content (says something other than the English) | 123 |
-| 3 | Degraded language (grammar, spelling, terminology) | 89 |
+| 3 | Degraded language (grammar, spelling, terminology) | 92 |
 | 4 | Cosmetic (typography, spacing) | 35 |
 
 ### A. Functional, markup, variables & plurals
@@ -449,11 +456,26 @@ _Nothing reported._
     - Source: `Select this shortcut to find what you need faster.`
     - Suggest: `Seleccione este atajo para encontrar más rápido lo que necesita.`
     - The comment says users are typing a search engine domain in the urlbar and select the offered shortcut; adding "de teclado" invents a keyboard shortcut not in the source.
+- `newtab-privacy-empty-state-tally` — `browser/browser/newtab/newtab.ftl` — "See a running tally here." translated as a statement about future updating and the final period is dropped.
+    - Current: `Acá se actualizará el total`
+    - Source: `See a running tally here.`
+    - Suggest: `Acá vas a ver el total actualizado.`
+    - The source invites the user to see a running tally; the target asserts that the total will be updated here, and omits the sentence-final period present in en-US.
 - `newtab-wallpaper-reset` — `browser/browser/newtab/newtab.ftl` — "Reset to default" translated as a plural "restore default values" instead of resetting to the default wallpaper.
     - Current: `Restablecer los valores predeterminados`
     - Source: `Reset to default`
     - Suggest: `Restablecer al predeterminado`
     - The source is a wallpaper reset button meaning "reset to default"; "los valores predeterminados" refers to settings values, not the default wallpaper.
+- `newtab-wallpaper-your-images` — `browser/browser/newtab/newtab.ftl` — "Your images" rendered as "Mis imágenes" (My images), changing the possessive person.
+    - Current: `Mis imágenes`
+    - Source: `Your images`
+    - Suggest: `Tus imágenes`
+    - en-US uses second person "Your images"; the target switches to first person "Mis", inconsistent with the source's form of address.
+- `newtab-wallpaper-your-images-folder` — `browser/browser/newtab/newtab.ftl` — "Your images, wallpapers that you have saved" rendered in first person and drops the "you have saved" relative clause wording.
+    - Current: `Mis imágenes, fondos de pantalla guardados`
+    - Source: `aria-label: Your images, wallpapers that you have saved`
+    - Suggest: `Tus imágenes, fondos de pantalla que guardaste`
+    - en-US addresses the user in second person; the target uses "Mis" (my), inconsistent with the source and with the rest of the picker.
 - `mr2022-onboarding-gratitude-primary-button-label` — `browser/browser/newtab/onboarding.ftl` — Button label changed from an imperative addressed to the user to a first-person plural exhortation.
     - Current: `Veamos qué hay de nuevo`
     - Source: `See what’s new`

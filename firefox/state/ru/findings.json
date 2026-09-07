@@ -214,7 +214,7 @@
   "file": "browser/browser/aboutPocket.ftl",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-09-03",
+  "last_seen": "2026-09-07",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -1172,7 +1172,7 @@
   "file": "browser/browser/backupSettings.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-09-03",
+  "last_seen": "2026-09-07",
   "locale": "ru",
   "origin": {},
   "rationale": "In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -1194,7 +1194,7 @@
   "file": "browser/browser/backupSettings.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-09-03",
+  "last_seen": "2026-09-07",
   "locale": "ru",
   "origin": {},
   "rationale": "In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -1346,7 +1346,7 @@
   "file": "browser/browser/backupSettings.ftl",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-09-03",
+  "last_seen": "2026-09-07",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -5000,6 +5000,54 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "Ваши изображения и обои, которые вы сохранили",
+  "dismissed_because": "",
+  "fid": "30b47a679310",
+  "file": "browser/browser/newtab/newtab.ftl",
+  "first_seen": "2026-09-07",
+  "impact": 2,
+  "last_seen": "2026-09-07",
+  "locale": "ru",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The en-US label names one tile (\"Your images\") and then explains it (\"wallpapers that you have saved\"); the Russian «и» makes it two separate categories.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "f1703a20",
+  "string_id": "newtab-wallpaper-your-images-folder",
+  "suggest": "Ваши изображения — обои, которые вы сохранили",
+  "summary": "Appositive \"Your images, wallpapers that you have saved\" turned into a list of two things (\"Your images and wallpapers\").",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Изменить список",
+  "dismissed_because": "",
+  "fid": "f9328a7fb986",
+  "file": "browser/browser/newtab/newtab.ftl",
+  "first_seen": "2026-09-07",
+  "impact": 2,
+  "last_seen": "2026-09-07",
+  "locale": "ru",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The developer comment states \"Change\" is a verb meaning the button switches which list is shown; «Изменить список» means to modify the list's contents.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "378c6cf8",
+  "string_id": "newtab-widget-lists-change-list",
+  "suggest": "Сменить список",
+  "summary": "\"Change list\" (switch which list is shown) rendered as \"Изменить список\" (edit the list).",
+  "suppressed_by": ""
+ },
+ {
   "category": "A",
   "check": "legacy",
   "current": "",
@@ -5945,7 +5993,7 @@
   "file": "browser/browser/policies/policies-descriptions.ftl",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-09-03",
+  "last_seen": "2026-09-07",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -7945,7 +7993,7 @@
   "file": "browser/browser/preferences/preferences.ftl",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-09-03",
+  "last_seen": "2026-09-07",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -11037,7 +11085,7 @@
   "file": "devtools/client/debugger.properties",
   "first_seen": "2026-08-07",
   "impact": 3,
-  "last_seen": "2026-09-03",
+  "last_seen": "2026-09-07",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -14675,14 +14723,14 @@
   "file": "dom/chrome/dom/dom.properties",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-09-03",
+  "last_seen": "2026-09-07",
   "locale": "ru",
   "origin": {
    "report": "legacy",
    "section": "I. Typography",
    "severity": "S5"
   },
-  "rationale": "The locale's quote convention is `guillemet` (1174 occurrences).",
+  "rationale": "The locale's quote convention is `guillemet` (1175 occurrences).",
   "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
@@ -19813,7 +19861,7 @@
   "file": "toolkit/toolkit/pdfviewer/viewer.ftl",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-09-03",
+  "last_seen": "2026-09-07",
   "locale": "ru",
   "origin": {
    "report": "legacy",

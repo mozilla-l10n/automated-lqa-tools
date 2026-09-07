@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
-| **Previous run** | 2026-09-03 @ `023f527865cb` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
+| **Previous run** | 2026-09-03 @ `075eb543fd91` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 21 of 18,239 |
+| **Strings reviewed this run** | 34 of 18,272 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for en-GB: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `urlbar-searchmode-dropmarker2` — `browser/browser/browser.ftl` — Sentence case of the source has been changed to title case without cause.
+    - Current: `Pick a Search Engine`
+    - Source: `title: Pick a search engine`
+    - Suggest: `Pick a search engine`
+    - en-US reads "Pick a search engine" in sentence case; en-GB does not require title case here and the capitalisation change is an unwarranted departure from the source.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 362 |
-| Strings | 18,239 |
-| Missing strings | 15 |
+| Strings | 18,272 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,15 +67,7 @@ _Nothing retired._
 
 ### Completeness
 
-**15 strings** are not translated yet, concentrated in:
-
-- `browser/browser/permissions.ftl` — 10
-- `browser/browser/preferences/preferences.ftl` — 2
-- `devtools/client/netmonitor.properties` — 1
-- `dom/chrome/dom/dom.properties` — 1
-- `toolkit/toolkit/about/aboutAddons.ftl` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -80,7 +76,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 597, `curly-single` 101, `straight-double` 58 | **curly-double** |
-| apostrophe | `typographic` 1121, `straight` 56 | **typographic** |
+| apostrophe | `typographic` 1122, `straight` 56 | **typographic** |
 | ellipsis | `char` 464, `ascii` 1 | **char** |
 | dash | `em` 108, `en` 4 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
@@ -94,7 +90,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (17)
+## 3. Open findings (18)
 
 
 | Impact | Meaning | Count |
@@ -102,7 +98,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | 1 | Broken output (blank value, broken markup, wrong variable) | 4 |
 | 2 | Wrong content (says something other than the English) | 7 |
 | 3 | Degraded language (grammar, spelling, terminology) | 5 |
-| 4 | Cosmetic (typography, spacing) | 1 |
+| 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -192,6 +188,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### E. Typography, punctuation & spacing
 
+- `urlbar-searchmode-dropmarker2` — `browser/browser/browser.ftl` — Sentence case of the source has been changed to title case without cause.
+    - Current: `Pick a Search Engine`
+    - Source: `title: Pick a search engine`
+    - Suggest: `Pick a search engine`
+    - en-US reads "Pick a search engine" in sentence case; en-GB does not require title case here and the capitalisation change is an unwarranted departure from the source.
 - `migration-wizard-import-browser-no-browsers` — `browser/browser/migrationWizard.ftl` — "programs" over-corrected to "programmes", which in British English means broadcasts/schedules, not software.
     - Current: `couldn’t find any programmes that contain bookmark, history or password data`
     - Source: `{ -brand-short-name } couldn’t find any programs that contain bookmark, history or password data.`

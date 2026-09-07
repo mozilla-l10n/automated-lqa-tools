@@ -1,8 +1,8 @@
 {
  "_meta": {
   "locale": "ja",
-  "prose_chunks": 18979,
-  "strings": 18191
+  "prose_chunks": 19072,
+  "strings": 18272
  },
  "apostrophe": {
   "straight": 12,
@@ -13,11 +13,11 @@
   "en": 1
  },
  "ellipsis": {
-  "ascii": 460,
+  "ascii": 463,
   "char": 0
  },
  "fullwidth": {
-  "punctuation": 5736
+  "punctuation": 5756
  },
  "inverted_marks": {
   "open-exclamation": 0,

@@ -8976,7 +8976,7 @@
   "file": "browser/browser/protections.ftl",
   "first_seen": "2026-08-11",
   "impact": 4,
-  "last_seen": "2026-09-03",
+  "last_seen": "2026-09-07",
   "locale": "fy-NL",
   "origin": {
    "report": "legacy",
@@ -11071,7 +11071,7 @@
   "file": "devtools/client/styleeditor.ftl",
   "first_seen": "2026-09-03",
   "impact": 2,
-  "last_seen": "2026-09-03",
+  "last_seen": "2026-09-07",
   "locale": "fy-NL",
   "origin": {},
   "rationale": "The label is “Bewarje”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
@@ -15532,7 +15532,7 @@
   "file": "toolkit/toolkit/about/aboutRights.ftl",
   "first_seen": "2026-08-11",
   "impact": 4,
-  "last_seen": "2026-09-03",
+  "last_seen": "2026-09-07",
   "locale": "fy-NL",
   "origin": {
    "report": "legacy",
