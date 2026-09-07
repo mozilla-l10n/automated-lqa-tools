@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
-| **Previous run** | 2026-09-03 @ `023f527865cb` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
+| **Previous run** | 2026-09-03 @ `075eb543fd91` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 21 of 18,239 |
+| **Strings reviewed this run** | 34 of 18,272 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -20,16 +20,16 @@ Also for cs: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ### 🆕 New findings (2)
 
-- `menu-view-resource-monitor` — `browser/browser/sidebar.ftl` — "Resource Monitor" is rendered as "Správce procesů" (Process Manager), naming a different feature.
-    - Current: `Správce procesů`
-    - Source: `label: Resource Monitor`
-    - Suggest: `Monitor prostředků`
-    - en-US says "Resource Monitor"; "Správce procesů" is the established Czech name for the Task/Process Manager (about:processes), a different tool.
-- `sidebar-menu-resource-monitor-label` — `browser/browser/sidebar.ftl` — "Resource monitor" is rendered as "Správce procesů" (Process Manager), naming a different feature.
-    - Current: `Správce procesů`
-    - Source: `label: Resource monitor`
-    - Suggest: `Monitor prostředků`
-    - en-US says "Resource monitor"; "Správce procesů" corresponds to Process Manager, not resource monitoring.
+- `newtab-wallpaper-your-images-folder` — `browser/browser/newtab/newtab.ftl` — The appositive "Your images, wallpapers that you have saved" is turned into a coordinated list "Your images and wallpapers…", changing the meaning.
+    - Current: `Vaše obrázky a tapety, které jste uložili`
+    - Source: `aria-label: Your images, wallpapers that you have saved`
+    - Suggest: `Vaše obrázky, tapety, které jste uložili`
+    - In en-US "wallpapers that you have saved" explains what "Your images" is; the Czech "a" makes it two separate things.
+- `aiwindow-starter-dismiss` — `browser/browser/aiWindow.ftl` — "Dismiss" (hide the suggestion) is rendered as "Zrušit" (cancel).
+    - Current: `Zrušit { $text }`
+    - Source: `aria-label: Dismiss { $text } title: Dismiss { $text }`
+    - Suggest: `Skrýt { $text }`
+    - Per the developer comment the control dismisses a suggestion pill; "Zrušit" means cancelling an action, not dismissing a suggestion.
 
 ### ✅ Fixed since the last run (0)
 
@@ -54,8 +54,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 362 |
-| Strings | 18,239 |
-| Missing strings | 15 |
+| Strings | 18,272 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -72,15 +72,7 @@ _Nothing retired._
 
 ### Completeness
 
-**15 strings** are not translated yet, concentrated in:
-
-- `browser/browser/permissions.ftl` — 10
-- `browser/browser/preferences/preferences.ftl` — 2
-- `devtools/client/netmonitor.properties` — 1
-- `dom/chrome/dom/dom.properties` — 1
-- `toolkit/toolkit/about/aboutAddons.ftl` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -103,14 +95,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (265)
+## 3. Open findings (267)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 53 |
-| 2 | Wrong content (says something other than the English) | 123 |
-| 3 | Degraded language (grammar, spelling, terminology) | 61 |
+| 2 | Wrong content (says something other than the English) | 124 |
+| 3 | Degraded language (grammar, spelling, terminology) | 62 |
 | 4 | Cosmetic (typography, spacing) | 23 |
 
 ### A. Functional, markup, variables & plurals
@@ -412,6 +404,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `aiwindow-starter-dismiss` — `browser/browser/aiWindow.ftl` — "Dismiss" (hide the suggestion) is rendered as "Zrušit" (cancel).
+    - Current: `Zrušit { $text }`
+    - Source: `aria-label: Dismiss { $text } title: Dismiss { $text }`
+    - Suggest: `Skrýt { $text }`
+    - Per the developer comment the control dismisses a suggestion pill; "Zrušit" means cancelling an action, not dismissing a suggestion.
+- `newtab-wallpaper-your-images-folder` — `browser/browser/newtab/newtab.ftl` — The appositive "Your images, wallpapers that you have saved" is turned into a coordinated list "Your images and wallpapers…", changing the meaning.
+    - Current: `Vaše obrázky a tapety, které jste uložili`
+    - Source: `aria-label: Your images, wallpapers that you have saved`
+    - Suggest: `Vaše obrázky, tapety, které jste uložili`
+    - In en-US "wallpapers that you have saved" explains what "Your images" is; the Czech "a" makes it two separate things.
 - `appearance-browser-icon-pride` — `browser/browser/preferences/browserIcon.ftl` — The Pride icon name is translated as the common noun "Hrdost".
     - Current: `Hrdost`
     - Source: `label: Pride`

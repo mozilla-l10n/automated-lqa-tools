@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
-| **Previous run** | 2026-09-03 @ `023f527865cb` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
+| **Previous run** | 2026-09-03 @ `075eb543fd91` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 22 of 18,426 |
+| **Strings reviewed this run** | 34 of 18,459 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,14 +18,22 @@ Also for fr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `SpeechRecognitionBlockedByAIControlsWarning` — `dom/chrome/dom/dom.properties` — "AI Controls" settings section name mangled into "d’IA Controls".
+    - Current: `les paramètres d’IA Controls de l’utilisateur`
+    - Source: `On-device speech recognition is turned off in the user’s AI Controls settings, so SpeechRecognition reports itself as unavailable and refuses to start.`
+    - Suggest: `les paramètres AI Controls de l’utilisateur`
+    - The developer comment says "AI Controls" is the name of a Firefox settings section; half-translating it to "IA Controls" produces a name that does not exist and is grammatically broken.
+- `newtab-privacy-empty-state-tally` — `browser/browser/newtab/newtab.ftl` — "running tally" rendered as "pointage", a scoring term that does not convey a running total of blocked trackers.
+    - Current: `Consultez le pointage en cours ici.`
+    - Source: `See a running tally here.`
+    - Suggest: `Consultez le total en cours ici.`
+    - The comment explains "a running tally" is a total that keeps updating (alternative: "See a running total here"); "pointage" means a score/tally-mark in a game context and is misleading here.
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `aiwindow-firstrun-default-checkbox-label` — `browser/browser/aiWindow.ftl` — brand form lower-plural renders "dans une fenêtres intelligentes" → use lower-singular (EN is singular; matches line 164).
-    - Source: `Always open { -brand-product-name } in { -smart-window-brand-name }`
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -46,8 +54,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 372 |
-| Strings | 18,426 |
-| Missing strings | 15 |
+| Strings | 18,459 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 10 |
@@ -64,15 +72,7 @@ _Nothing retired._
 
 ### Completeness
 
-**15 strings** are not translated yet, concentrated in:
-
-- `browser/browser/permissions.ftl` — 10
-- `browser/browser/preferences/preferences.ftl` — 2
-- `devtools/client/netmonitor.properties` — 1
-- `dom/chrome/dom/dom.properties` — 1
-- `toolkit/toolkit/about/aboutAddons.ftl` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Files with no en-US counterpart
 
@@ -96,11 +96,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 1132, `straight-double` 31, `curly-double` 2, `curly-single` 1 | **guillemet** |
-| apostrophe | `typographic` 5647, `straight` 10 | **typographic** |
+| apostrophe | `typographic` 5659, `straight` 10 | **typographic** |
 | ellipsis | `char` 475 | **char** |
 | dash | `em` 68, `en` 8 | **em** |
-| nbsp | `total` 4451, `before-punctuation` 2001 | _mixed_ |
-| register | `formal` 3194 | **formal** |
+| nbsp | `total` 4454, `before-punctuation` 2003 | _mixed_ |
+| register | `formal` 3200 | **formal** |
 
 ---
 
@@ -110,14 +110,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (16)
+## 3. Open findings (18)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 4 |
-| 3 | Degraded language (grammar, spelling, terminology) | 8 |
+| 3 | Degraded language (grammar, spelling, terminology) | 10 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
@@ -136,6 +136,11 @@ _Nothing in this category._
     - Source: `label: An app or service may see your encrypted traffic.`
     - Suggest: `pourrait voir votre trafic chiffré`
     - en-US says an app or service may see the traffic; "accéder à" asserts access rather than visibility.
+- `SpeechRecognitionBlockedByAIControlsWarning` — `dom/chrome/dom/dom.properties` — "AI Controls" settings section name mangled into "d’IA Controls".
+    - Current: `les paramètres d’IA Controls de l’utilisateur`
+    - Source: `On-device speech recognition is turned off in the user’s AI Controls settings, so SpeechRecognition reports itself as unavailable and refuses to start.`
+    - Suggest: `les paramètres AI Controls de l’utilisateur`
+    - The developer comment says "AI Controls" is the name of a Firefox settings section; half-translating it to "IA Controls" produces a name that does not exist and is grammatically broken.
 - `about-sync-log-count` — `toolkit/services/aboutSyncLog.ftl` — "log"/"logs" translated as "entrée(s)" (entries) instead of "journal/journaux", inconsistent with the rest of the file.
     - Current: `[one] { $count } entrée [other] { $count } entrées`
     - Source: `{$count ->} [one] { $count } log [other] { $count } logs`
@@ -156,6 +161,11 @@ _Nothing in this category._
     - Source: `Share { -brand-product-name }`
     - Suggest: `Recommander { -brand-product-name }`
     - The developer comment says this button links to the Referrals page, the same surface as appmenu-referrals2, menu-referrals2 and referrals-link2, which all translate "Share" as "Recommander"; the inconsistent term is wrong here.
+- `newtab-privacy-empty-state-tally` — `browser/browser/newtab/newtab.ftl` — "running tally" rendered as "pointage", a scoring term that does not convey a running total of blocked trackers.
+    - Current: `Consultez le pointage en cours ici.`
+    - Source: `See a running tally here.`
+    - Suggest: `Consultez le total en cours ici.`
+    - The comment explains "a running tally" is a total that keeps updating (alternative: "See a running total here"); "pointage" means a score/tally-mark in a game context and is misleading here.
 - `fonts-default-serif` — `browser/browser/preferences/fonts.ftl` — browser/browser/preferences/fonts.ftl:79,81,84,86 — "Serif"/"Sans serif" vs "Sérif"/"Sans sérif" in one file; pick one.
     - Source: `label: Serif`
 - `fonts-sans-serif` — `browser/browser/preferences/fonts.ftl` — browser/browser/preferences/fonts.ftl:79,81,84,86 — "Serif"/"Sans serif" vs "Sérif"/"Sans sérif" in one file; pick one.
@@ -177,7 +187,7 @@ _Nothing in this category._
 
 - `felt-error-warning-download-attempt-failed-contact-admin` — `browser/browser/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
     - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
-    - The tree uses ’ 5647 times against 10 straight.
+    - The tree uses ’ 5659 times against 10 straight.
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `L’évènement « key » n’est pas disponible dans GTK2 : key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
@@ -188,7 +198,7 @@ _Nothing in this category._
     - The locale's quote convention is `guillemet` (1132 occurrences).
 - `felt-error-warning-download-attempt-failed-contact-admin` — `toolkit/toolkit/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
     - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
-    - The tree uses ’ 5647 times against 10 straight.
+    - The tree uses ’ 5659 times against 10 straight.
 
 ---
 

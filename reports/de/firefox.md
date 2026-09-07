@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
-| **Previous run** | 2026-09-03 @ `023f527865cb` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
+| **Previous run** | 2026-09-03 @ `075eb543fd91` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 23 of 18,433 |
+| **Strings reviewed this run** | 36 of 18,466 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,21 +18,34 @@ Also for de: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `speech-recognition-model-download-progress-message` — `browser/browser/permissions.ftl` — Progress message rendered as an imperative/infinitive instead of a status statement.
+    - Current: `Spracherkennungsmodell herunterladen`
+    - Source: `Downloading speech recognition model`
+    - Suggest: `Spracherkennungsmodell wird heruntergeladen`
+    - The en-US "Downloading speech recognition model" describes an ongoing action; the German reads as a command/label "Download speech recognition model".
+- `ip-protection-description-1` — `browser/browser/ipProtection.ftl` — Clause structure makes the user the subject of hiding, breaking agreement with the impersonal main clause.
+    - Current: `Sorgt für mehr Privatsphäre, indem Sie Ihren Standort beim Surfen verbergen.`
+    - Source: `description: Get extra privacy by hiding your location while browsing. label: Built-in VPN`
+    - Suggest: `Sorgt für mehr Privatsphäre, indem Ihr Standort beim Surfen verborgen wird.`
+    - In en-US the VPN hides the user's location; the German makes the user do the hiding, contradicting the impersonal subject of the main clause.
+- `SpeechRecognitionBlockedByAIControlsWarning` — `dom/chrome/dom/dom.properties` — "SpeechRecognition" was translated although the developer comment forbids it.
+    - Current: `daher meldet die Spracherkennung sich selbst als nicht verfügbar`
+    - Source: `On-device speech recognition is turned off in the user’s AI Controls settings, so SpeechRecognition reports itself as unavailable and refuses to start.`
+    - Suggest: `daher meldet SpeechRecognition sich selbst als nicht verfügbar`
+    - The developer comment states: Do not translate "SpeechRecognition" — it is the Web API interface name, but it was localized as "die Spracherkennung".
 
 ### ✅ Fixed since the last run (2)
 
-- `newtab-stocks-watchlist-full` — `browser/browser/newtab/newtab.ftl` — The [one] plural variant uses the plural form "Aktien" instead of the singular "Aktie".
-    - Current: `[one] Sie können bis zu { $limit } Aktien hinzufügen.`
-    - Source: `{$limit ->} [one] You can add up to { $limit } stock. Remove one to add another. [other] You can add up to { $limit } stocks. Remove one to add another.`
-    - Suggest: `[one] Sie können bis zu { $limit } Aktie hinzufügen.`
-    - en-US [one] uses the singular "stock"; the German singular variant must agree with $limit = 1.
-- `webauthn-uv-invalid-long-prompt` — `browser/browser/webauthnDialog.ftl` — the [one]/[other] plural variants are swapped ([one] shows "Versuche" plural, [other] shows "Versuch" singular). Swap them (cf. correct webauthn-pin-invalid-long-prompt).
-    - Current: `[one]`
-    - Source: `{$retriesLeft ->} [one] User verification failed. You have { $retriesLeft } attempt left. Try again. [other] User verification failed. You have { $retriesLeft } attempts left. Try again.`
-    - Suggest: `[other]`
+- `containers-sites-card-header` — `browser/browser/preferences/preferences.ftl` — Pronoun does not agree with the feminine noun "Tab-Umgebung".
+    - Current: `verwendet ihn jedes Mal`
+    - Source: `description: Choose a container for a site and { -brand-short-name } will use it every time the site opens. label: Site-specific containers`
+    - Suggest: `verwendet sie jedes Mal`
+    - "Tab-Umgebung" is feminine, so the referring pronoun must be "sie", not "ihn".
+- `ip-protection-description-1` — `browser/browser/ipProtection.ftl` — ip-protection-description-1 (.description) — browser/browser/ipProtection.ftl:236 — "ihren Standort" → "Ihren".
+    - Source: `description: Get extra privacy by hiding your location while browsing. label: Built-in VPN`
+    - Suggest: `"Ihren".`
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -53,8 +66,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 372 |
-| Strings | 18,433 |
-| Missing strings | 15 |
+| Strings | 18,466 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 10 |
@@ -70,14 +83,6 @@ _Nothing retired._
 | Typography deviations from this locale's own norm | 0 |
 
 ### Completeness
-
-**15 strings** are not translated yet, concentrated in:
-
-- `browser/browser/permissions.ftl` — 10
-- `browser/browser/preferences/preferences.ftl` — 2
-- `devtools/client/netmonitor.properties` — 1
-- `dom/chrome/dom/dom.properties` — 1
-- `toolkit/toolkit/about/aboutAddons.ftl` — 1
 
 **Files present but identical to en-US:**
 
@@ -106,12 +111,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `straight-double` 811, `curly-double` 69, `german-double` 14, `curly-single` 2 | **straight-double** |
+| quotes | `straight-double` 812, `curly-double` 69, `german-double` 14, `curly-single` 2 | **straight-double** |
 | apostrophe | `typographic` 6, `straight` 120 | **straight** |
 | ellipsis | `char` 479 | **char** |
 | dash | `em` 16, `en` 95 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 12, `formal` 4388 | **formal** |
+| register | `informal` 12, `formal` 4393 | **formal** |
 
 ---
 
@@ -121,14 +126,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (15)
+## 3. Open findings (16)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 10 |
-| 3 | Degraded language (grammar, spelling, terminology) | 4 |
+| 3 | Degraded language (grammar, spelling, terminology) | 5 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
@@ -149,17 +154,24 @@ _Nothing reported._
     - Source: `partially checked`
     - Suggest: `teilweise aktiviert`
     - The accessibility state refers to a checkbox being checked, not selected; "ausgewählt" is the German term for "selected", a distinct accessibility state.
+- `SpeechRecognitionBlockedByAIControlsWarning` — `dom/chrome/dom/dom.properties` — "SpeechRecognition" was translated although the developer comment forbids it.
+    - Current: `daher meldet die Spracherkennung sich selbst als nicht verfügbar`
+    - Source: `On-device speech recognition is turned off in the user’s AI Controls settings, so SpeechRecognition reports itself as unavailable and refuses to start.`
+    - Suggest: `daher meldet SpeechRecognition sich selbst als nicht verfügbar`
+    - The developer comment states: Do not translate "SpeechRecognition" — it is the Web API interface name, but it was localized as "die Spracherkennung".
 
 ### C. Grammar, agreement & spelling
 
-- `ip-protection-description-1` — `browser/browser/ipProtection.ftl` — ip-protection-description-1 (.description) — browser/browser/ipProtection.ftl:236 — "ihren Standort" → "Ihren".
+- `ip-protection-description-1` — `browser/browser/ipProtection.ftl` — Clause structure makes the user the subject of hiding, breaking agreement with the impersonal main clause.
+    - Current: `Sorgt für mehr Privatsphäre, indem Sie Ihren Standort beim Surfen verbergen.`
     - Source: `description: Get extra privacy by hiding your location while browsing. label: Built-in VPN`
-    - Suggest: `"Ihren".`
-- `containers-sites-card-header` — `browser/browser/preferences/preferences.ftl` — Pronoun does not agree with the feminine noun "Tab-Umgebung".
-    - Current: `verwendet ihn jedes Mal`
-    - Source: `description: Choose a container for a site and { -brand-short-name } will use it every time the site opens. label: Site-specific containers`
-    - Suggest: `verwendet sie jedes Mal`
-    - "Tab-Umgebung" is feminine, so the referring pronoun must be "sie", not "ihn".
+    - Suggest: `Sorgt für mehr Privatsphäre, indem Ihr Standort beim Surfen verborgen wird.`
+    - In en-US the VPN hides the user's location; the German makes the user do the hiding, contradicting the impersonal subject of the main clause.
+- `speech-recognition-model-download-progress-message` — `browser/browser/permissions.ftl` — Progress message rendered as an imperative/infinitive instead of a status statement.
+    - Current: `Spracherkennungsmodell herunterladen`
+    - Source: `Downloading speech recognition model`
+    - Suggest: `Spracherkennungsmodell wird heruntergeladen`
+    - The en-US "Downloading speech recognition model" describes an ongoing action; the German reads as a command/label "Download speech recognition model".
 
 ### D. Terminology, register & consistency
 
@@ -253,8 +265,10 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (40)
+### Fixed to date (42)
 
+- `ip-protection-description-1` — `browser/browser/ipProtection.ftl` — fixed 2026-09-07
+- `containers-sites-card-header` — `browser/browser/preferences/preferences.ftl` — fixed 2026-09-07
 - `newtab-stocks-watchlist-full` — `browser/browser/newtab/newtab.ftl` — fixed 2026-09-03
 - `webauthn-uv-invalid-long-prompt` — `browser/browser/webauthnDialog.ftl` — fixed 2026-09-03
 - `about-logins-import-dialog-items-no-change2` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-24
@@ -293,5 +307,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `sec-error-cert-no-response` — `toolkit/toolkit/neterror/nsserrors.ftl` — fixed 2026-07-27
 - `sec-error-ocsp-unknown-response-type` — `toolkit/toolkit/neterror/nsserrors.ftl` — fixed 2026-07-27
 - `sec-error-token-not-logged-in` — `toolkit/toolkit/neterror/nsserrors.ftl` — fixed 2026-07-27
-- `ssl-error-handshake-not-completed` — `toolkit/toolkit/neterror/nsserrors.ftl` — fixed 2026-07-27
-- `remove-info` — `toolkit/toolkit/preferences/preferences.ftl` — fixed 2026-07-27

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
-| **Previous run** | 2026-09-03 @ `023f527865cb` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
+| **Previous run** | 2026-09-03 @ `075eb543fd91` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 7 of 17,189 |
+| **Strings reviewed this run** | 80 of 17,268 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,17 +18,32 @@ Also for es-ES: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (4)
 
-_No new findings._
+- `ipprotection-feature-introduction-link-text-privacy-2` — `browser/browser/ipProtection.ftl` — The link text scope was changed: the source links the whole phrase "{ -brand-product-name }'s built-in VPN" while the target links only the brand name.
+    - Current: `La VPN integrada de <a data-l10n-name="learn-more-vpn">{ -brand-product-name }</a>`
+    - Source: `<a data-l10n-name="learn-more-vpn">{ -brand-product-name }’s built-in VPN</a> helps protect your browsing. Choose from multiple locations to keep where you browse more private.`
+    - Suggest: `<a data-l10n-name="learn-more-vpn">La VPN integrada de { -brand-product-name }</a>`
+    - In en-US the anchor wraps "{ -brand-product-name }’s built-in VPN"; moving the tag so it wraps only the brand name changes the clickable text.
+- `permissions-exceptions-shutdown-clearing-window` — `browser/browser/preferences/permissions.ftl` — "on Shutdown" refers to closing Firefox, not shutting down the system.
+    - Current: `Excepciones: Borrar el historial al apagar el sistema`
+    - Source: `style: { permissions-window2.style } title: Exceptions - Clear History on Shutdown`
+    - Suggest: `Excepciones: Borrar el historial al cerrar`
+    - The related description string clarifies it is "when { -brand-short-name } clears history on close"; "apagar el sistema" wrongly says the operating system shuts down.
+- `passports-no-passports-stored-message` — `browser/browser/preferences/preferences.ftl` — State description rendered as a past-tense event instead of a status.
+    - Current: `No se añadieron pasaportes`
+    - Source: `label: No passports added`
+    - Suggest: `No hay pasaportes añadidos`
+    - en-US "No passports added" is an empty-state status message; the preterite "No se añadieron" reports a past action rather than the current absence of stored passports.
+- `forms-primary-pw-on-2` — `browser/browser/preferences/preferences.ftl` — "Primary password" translated as "contraseña maestra" instead of the current term "contraseña principal".
+    - Current: `La contraseña maestra está <strong>ACTIVADA</strong>`
+    - Source: `Primary password is <strong>ON</strong>`
+    - Suggest: `La contraseña principal está <strong>ACTIVADA</strong>`
+    - Mozilla renamed "master password" to "primary password"; es-ES uses "contraseña principal" for "primary password", so this reintroduces the deprecated term.
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `manifest-loading` — `devtools/client/application.ftl` — "manifesto" is not the Spanish word for a web app manifest file; the correct term is "manifiesto".
-    - Current: `Cargando manifesto…`
-    - Source: `Loading manifest…`
-    - Suggest: `Cargando manifiesto…`
-    - en-US "Loading manifest…" refers to the manifest file; Spanish spells this "manifiesto". "Manifesto" is a misspelling/anglicism.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -49,8 +64,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 355 |
-| Strings | 17,189 |
-| Missing strings | 1,065 |
+| Strings | 17,268 |
+| Missing strings | 1,004 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 7 |
 | Files with no en-US counterpart | 0 |
@@ -67,20 +82,20 @@ _Nothing retired._
 
 ### Completeness
 
-**1,065 strings** are not translated yet, concentrated in:
+**1,004 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 157
-- `browser/browser/aiWindow.ftl` — 133
+- `browser/browser/newtab/newtab.ftl` — 172
+- `browser/browser/aiWindow.ftl` — 134
 - `browser/browser/appmenu.ftl` — 67
 - `browser/browser/aiWindowContent.ftl` — 51
-- `browser/browser/preferences/preferences.ftl` — 46
 - `browser/browser/browser.ftl` — 30
 - `devtools/client/toolbox-options.ftl` — 28
 - `toolkit/toolkit/global/theme-picker.ftl` — 28
-- `browser/browser/ipProtection.ftl` — 26
-- `toolkit/toolkit/about/url-classifier.ftl` — 26
 - `toolkit/services/aboutSyncLog.ftl` — 26
+- `toolkit/toolkit/about/url-classifier.ftl` — 26
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 24
+- `browser/browser/firefoxView.ftl` — 23
+- `browser/browser/newtab/onboarding.ftl` — 23
 
 **Files absent from the locale:**
 
@@ -100,13 +115,13 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 497, `straight-double` 150, `curly-single` 44, `guillemet` 1 | **curly-double** |
+| quotes | `curly-double` 498, `straight-double` 150, `curly-single` 44, `guillemet` 1 | **curly-double** |
 | apostrophe | `typographic` 59, `straight` 76 | _mixed_ |
-| ellipsis | `char` 440 | **char** |
-| dash | `em` 76, `en` 1 | **em** |
+| ellipsis | `char` 442 | **char** |
+| dash | `em` 80, `en` 1 | **em** |
 | nbsp | `total` 9, `before-punctuation` 3, `space-before-punctuation` 6 | _mixed_ |
-| inverted marks | `open-question` 348, `open-exclamation` 79 | **open-question** |
-| register | `informal` 3, `formal` 1367 | **formal** |
+| inverted marks | `open-question` 351, `open-exclamation` 79 | **open-question** |
+| register | `informal` 4, `formal` 1378 | **formal** |
 
 ---
 
@@ -117,14 +132,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (27)
+## 3. Open findings (31)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 16 |
-| 3 | Degraded language (grammar, spelling, terminology) | 11 |
+| 2 | Wrong content (says something other than the English) | 18 |
+| 3 | Degraded language (grammar, spelling, terminology) | 13 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -149,6 +164,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `w`
     - Source: `accesskey: w label: Always Open In System Viewer`
     - The label is “Abrir siempre en el visor del sistema”. An access key not in the label cannot be underlined and is unreachable by keyboard.
+- `ipprotection-feature-introduction-link-text-privacy-2` — `browser/browser/ipProtection.ftl` — The link text scope was changed: the source links the whole phrase "{ -brand-product-name }'s built-in VPN" while the target links only the brand name.
+    - Current: `La VPN integrada de <a data-l10n-name="learn-more-vpn">{ -brand-product-name }</a>`
+    - Source: `<a data-l10n-name="learn-more-vpn">{ -brand-product-name }’s built-in VPN</a> helps protect your browsing. Choose from multiple locations to keep where you browse more private.`
+    - Suggest: `<a data-l10n-name="learn-more-vpn">La VPN integrada de { -brand-product-name }</a>`
+    - In en-US the anchor wraps "{ -brand-product-name }’s built-in VPN"; moving the tag so it wraps only the brand name changes the clickable text.
 - `menu-edit-find-in-page` — `browser/browser/menubar.ftl` — Access key `F` of `menu-edit-find-in-page` is not present in its label
     - Current: `F`
     - Source: `accesskey: F label: Find in Page…`
@@ -184,11 +204,19 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-_Nothing in this category._
+- `permissions-exceptions-shutdown-clearing-window` — `browser/browser/preferences/permissions.ftl` — "on Shutdown" refers to closing Firefox, not shutting down the system.
+    - Current: `Excepciones: Borrar el historial al apagar el sistema`
+    - Source: `style: { permissions-window2.style } title: Exceptions - Clear History on Shutdown`
+    - Suggest: `Excepciones: Borrar el historial al cerrar`
+    - The related description string clarifies it is "when { -brand-short-name } clears history on close"; "apagar el sistema" wrongly says the operating system shuts down.
 
 ### C. Grammar, agreement & spelling
 
-_Nothing in this category._
+- `passports-no-passports-stored-message` — `browser/browser/preferences/preferences.ftl` — State description rendered as a past-tense event instead of a status.
+    - Current: `No se añadieron pasaportes`
+    - Source: `label: No passports added`
+    - Suggest: `No hay pasaportes añadidos`
+    - en-US "No passports added" is an empty-state status message; the preterite "No se añadieron" reports a past action rather than the current absence of stored passports.
 
 ### D. Terminology, register & consistency
 
@@ -207,6 +235,11 @@ _Nothing in this category._
     - Source: `message: To make sure this change is included in your backups, open each profile and choose “Backup now” in Settings.`
     - Suggest: `Hacer ahora copia de seguridad`
     - In the source this string quotes “Backup now”, which is exactly the value of `settings-data-backup-trigger-button` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `forms-primary-pw-on-2` — `browser/browser/preferences/preferences.ftl` — "Primary password" translated as "contraseña maestra" instead of the current term "contraseña principal".
+    - Current: `La contraseña maestra está <strong>ACTIVADA</strong>`
+    - Source: `Primary password is <strong>ON</strong>`
+    - Suggest: `La contraseña principal está <strong>ACTIVADA</strong>`
+    - Mozilla renamed "master password" to "primary password"; es-ES uses "contraseña principal" for "primary password", so this reintroduces the deprecated term.
 - `protections-panel-content-blocking-breakage-report-view-send-report` — `browser/browser/protectionsPanel.ftl` — protections-panel-content-blocking-breakage-report-view-send-report "Enviar reporte" vs the file's "informe" → informe.
     - Source: `label: Send Report`
     - Suggest: `informe.`

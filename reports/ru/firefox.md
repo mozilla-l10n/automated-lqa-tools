@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
-| **Previous run** | 2026-09-03 @ `023f527865cb` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
+| **Previous run** | 2026-09-03 @ `075eb543fd91` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 21 of 18,239 |
+| **Strings reviewed this run** | 34 of 18,272 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,18 @@ Also for ru: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (2)
 
-- `smart-window-model-radio-group` — `browser/browser/aiFeatures.ftl` — "Assistant model" rendered as "Модель-помощник", which reverses the modifier relationship.
-    - Current: `Модель-помощник`
-    - Source: `aria-label: Assistant model`
-    - Suggest: `Модель помощника`
-    - en-US "Assistant model" means the model used by the assistant (a radio group selecting the assistant's model), not a model that is an assistant.
+- `newtab-wallpaper-your-images-folder` — `browser/browser/newtab/newtab.ftl` — Appositive "Your images, wallpapers that you have saved" turned into a list of two things ("Your images and wallpapers").
+    - Current: `Ваши изображения и обои, которые вы сохранили`
+    - Source: `aria-label: Your images, wallpapers that you have saved`
+    - Suggest: `Ваши изображения — обои, которые вы сохранили`
+    - The en-US label names one tile ("Your images") and then explains it ("wallpapers that you have saved"); the Russian «и» makes it two separate categories.
+- `newtab-widget-lists-change-list` — `browser/browser/newtab/newtab.ftl` — "Change list" (switch which list is shown) rendered as "Изменить список" (edit the list).
+    - Current: `Изменить список`
+    - Source: `aria-label: Change list title: Change list`
+    - Suggest: `Сменить список`
+    - The developer comment states "Change" is a verb meaning the button switches which list is shown; «Изменить список» means to modify the list's contents.
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,8 +54,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 362 |
-| Strings | 18,239 |
-| Missing strings | 15 |
+| Strings | 18,272 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -61,21 +66,13 @@ _Nothing retired._
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 3 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 141 |
+| Access keys not in their label | 142 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 6 |
 
 ### Completeness
 
-**15 strings** are not translated yet, concentrated in:
-
-- `browser/browser/permissions.ftl` — 10
-- `browser/browser/preferences/preferences.ftl` — 2
-- `devtools/client/netmonitor.properties` — 1
-- `dom/chrome/dom/dom.properties` — 1
-- `toolkit/toolkit/about/aboutAddons.ftl` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -83,23 +80,23 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `guillemet` 1174, `straight-double` 28, `curly-double` 8, `curly-single` 7 | **guillemet** |
+| quotes | `guillemet` 1175, `straight-double` 28, `curly-double` 8, `curly-single` 7 | **guillemet** |
 | apostrophe | `typographic` 11, `straight` 16 | _mixed_ |
 | ellipsis | `char` 466, `ascii` 6 | **char** |
 | dash | `em` 168, `en` 5 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 7 | _mixed_ |
-| register | `informal` 1055, `formal` 3596 | **formal** |
+| register | `informal` 1055, `formal` 3602 | **formal** |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **accesskey — 141 strings** — 141 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
-    - Affected: `addon-install-or-update-from-file`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-showrecentsearches-option-2`, `appmenu-theme-installed`, `appmenu-update-available2`, `appmenu-update-manual2`, `autofill-addresses-checkbox`, `autofill-addresses-checkbox-message`, `autofill-addresses-manage-addresses-button`, `autofill-payment-methods-checkbox-submessage`, `autofill-payment-methods-manage-payments-button`, `autofill-reauth-payment-methods-checkbox` …and 129 more
+- **accesskey — 142 strings** — 142 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
+    - Affected: `addon-install-or-update-from-file`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-showrecentsearches-option-2`, `appmenu-theme-installed`, `appmenu-update-available2`, `appmenu-update-manual2`, `autofill-addresses-checkbox`, `autofill-addresses-checkbox-message`, `autofill-addresses-manage-addresses-button`, `autofill-payment-methods-checkbox-submessage`, `autofill-payment-methods-manage-payments-button`, `autofill-reauth-payment-methods-checkbox` …and 130 more
 
 ---
 
-## 3. Open findings (600)
+## 3. Open findings (602)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -114,7 +111,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 46 |
-| 2 | Wrong content (says something other than the English) | 271 |
+| 2 | Wrong content (says something other than the English) | 273 |
 | 3 | Degraded language (grammar, spelling, terminology) | 218 |
 | 4 | Cosmetic (typography, spacing) | 65 |
 
@@ -435,7 +432,7 @@ _Also listed under their own category below._
 - `newtab-sports-widget-team-name-label-civ` — `browser/browser/newtab/newtab.ftl` — ASCII apostrophe in Кот-д'Ивуар
     - Source: `label: Ivory Coast`
     - Suggest: `.label`
-- _…and 209 more; see `state/` for the full list._
+- _…and 211 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -964,7 +961,7 @@ _Also listed under their own category below._
     - Current: `Поддержка визуализации "stretched" операторов MathML с использованием шрифтов STIXGeneral устарела и может быть удалена в будущем. Для получения сведений о новых шрифтах, поддержка которых будет продолжена, обратитесь к…`
     - Source: `Support for rendering stretched MathML operators with STIXGeneral fonts is deprecated and may be removed at a future date. For details about newer fonts that will continue to be supported, see %S`
     - Suggest: `«stretched»`
-    - The locale's quote convention is `guillemet` (1174 occurrences).
+    - The locale's quote convention is `guillemet` (1175 occurrences).
 - `timer.end` — `mobile/android/chrome/browser.properties` — Missing space between number and unit: timer.end (mobile/android/chrome/browser.properties), console-timer-end (geckoViewConsole.ftl), throttling.profile.label (network-throttling.properties — spaced in …description, unspaced here), newtab-wallpaper-error-max-file-size ({ $filesize }МБ), printprogresspercent (browser/pdfviewer/viewer.properties — space added before %), pdfjs-print-progress-percen…
     - Source: `%1$S: %2$Sms`
 - `console-timer-end` — `mobile/android/mobile/android/geckoViewConsole.ftl` — Missing space between number and unit: timer.end (mobile/android/chrome/browser.properties), console-timer-end (geckoViewConsole.ftl), throttling.profile.label (network-throttling.properties — spaced in …description, unspaced here), newtab-wallpaper-error-max-file-size ({ $filesize }МБ), printprogresspercent (browser/pdfviewer/viewer.properties — space added before %), pdfjs-print-progress-percen…

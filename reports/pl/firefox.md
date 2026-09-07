@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
-| **Previous run** | 2026-09-03 @ `023f527865cb` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
+| **Previous run** | 2026-09-03 @ `075eb543fd91` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 8 of 18,225 |
+| **Strings reviewed this run** | 64 of 18,272 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,20 +18,42 @@ Also for pl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (6)
 
-- `preferences-doh-radio-group` — `browser/browser/preferences/preferences.ftl` — "Enable DNS over HTTPS using:" is rendered as "Włącz serwer DNS poprzez HTTPS:", dropping "using" and adding "serwer" (server).
-    - Current: `Włącz serwer DNS poprzez HTTPS:`
-    - Source: `aria-label: Enable DNS over HTTPS using:`
-    - Suggest: `Włącz DNS poprzez HTTPS, używając:`
-    - The en-US label introduces a choice of provider ("using:"); the Polish drops that and speaks of enabling a DNS server instead of the DNS-over-HTTPS feature.
+- `SpeechRecognitionBlockedByAIControlsWarning` — `dom/chrome/dom/dom.properties` — "AI Controls" settings section name rendered as „Sterowanie SI”, dropping the user's ownership and using a non-standard rendering of the section name.
+    - Current: `w panelu „Sterowanie SI” w ustawieniach`
+    - Source: `On-device speech recognition is turned off in the user’s AI Controls settings, so SpeechRecognition reports itself as unavailable and refuses to start.`
+    - Suggest: `w ustawieniach „Sterowanie sztuczną inteligencją” użytkownika`
+    - The source says "in the user’s AI Controls settings"; the Polish drops "user’s" and abbreviates the section name as „SI”, which is not the name used elsewhere in Firefox pl for the AI Controls section.
+- `policy-not-fully-applied` — `browser/browser/aboutPolicies.ftl` — "Not fully applied" translated as "Stosowana częściowo" (partially applied), losing the negative framing that some operations failed.
+    - Current: `Stosowana częściowo`
+    - Source: `Not fully applied`
+    - Suggest: `Nie w pełni zastosowana`
+    - The comment states this is shown when at least one operation of the policy failed to apply; "Stosowana częściowo" reads as a neutral status rather than the source's "Not fully applied".
+- `newtab-wallpaper-category-back` — `browser/browser/newtab/newtab.ftl` — Screen-reader label "Back to Customize" shortened to just "Wstecz", dropping the destination.
+    - Current: `aria-label: Wstecz`
+    - Source: `aria-label: Back to Customize`
+    - Suggest: `aria-label: Wróć do dostosowywania`
+    - The comment says the arrow has no text and this label is all a screen reader gets; the source names the Customize panel, which the Polish omits.
+- `newtab-privacy-empty-state-tally` — `browser/browser/newtab/newtab.ftl` — "See a running tally here" translated without the running/updating total sense.
+    - Current: `Tutaj zobaczysz liczbę zablokowanych elementów.`
+    - Source: `See a running tally here.`
+    - Suggest: `Tutaj zobaczysz rosnącą liczbę zablokowanych elementów.`
+    - The developer comment explicitly explains "a running tally" is a total that keeps updating as the user browses; the Polish renders it as a static count.
+- `newtab-widget-lists-change-list` — `browser/browser/newtab/newtab.ftl` — "Change list" rendered as "Przełącz listę" (toggle/switch the list) rather than changing which list is shown.
+    - Current: `aria-label: Przełącz listę`
+    - Source: `aria-label: Change list title: Change list`
+    - Suggest: `aria-label: Zmień listę`
+    - The comment says the button switches which list is shown; „Przełącz listę” suggests toggling a list on/off rather than selecting a different one.
+- `preferences-ai-controls-speech-recognition-control` — `browser/browser/preferences/preferences.ftl` — "Transcribe speech locally" translated as "Zamienia głos na tekst na urządzeniu", replacing "speech" with "głos" and "locally" with "na urządzeniu".
+    - Current: `description: Zamienia głos na tekst na urządzeniu.`
+    - Source: `description: Transcribe speech locally. label: Speech recognition`
+    - Suggest: `description: Zamienia mowę na tekst lokalnie.`
+    - The surface consistently uses „mowa” for speech (label: „Rozpoznawanie mowy”) and „lokalnie” for locally; the description introduces different terms than the source.
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `tab-group-editor-action-copy-links` — `browser/browser/tabbrowser.ftl` — A3, functional. The plural select keys on $tabCount, but the source (and the calling code) passes $linkCount. $tabCount is never supplied, so the selector cannot match and the message always falls through to [many] (and Fluent logs a resolver error). Current: { $tabCount -> [one] … [few] … [many] … } → Suggest: { $linkCount -> … }.
-    - Current: `[many]`
-    - Source: `label: {$linkCount ->} [1] Copy link in group [other] Copy { $linkCount } links in group`
-    - Suggest: `→ Suggest:`
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -52,8 +74,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 362 |
-| Strings | 18,225 |
-| Missing strings | 29 |
+| Strings | 18,272 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -70,19 +92,7 @@ _Nothing retired._
 
 ### Completeness
 
-**29 strings** are not translated yet, concentrated in:
-
-- `browser/browser/permissions.ftl` — 10
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 8
-- `browser/browser/aiWindow.ftl` — 2
-- `browser/browser/sidebar.ftl` — 2
-- `browser/browser/preferences/preferences.ftl` — 2
-- `browser/browser/newtab/newtab.ftl` — 2
-- `devtools/client/netmonitor.properties` — 1
-- `dom/chrome/dom/dom.properties` — 1
-- `toolkit/toolkit/about/aboutAddons.ftl` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -90,12 +100,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `polish-double` 1571, `straight-double` 36, `german-double` 7, `curly-double` 2 | **polish-double** |
+| quotes | `polish-double` 1575, `straight-double` 36, `german-double` 7, `curly-double` 2 | **polish-double** |
 | apostrophe | `straight` 1 | **straight** |
 | ellipsis | `char` 471 | **char** |
 | dash | `em` 169, `en` 14 | **em** |
-| nbsp | `total` 5510, `narrow` 3, `before-punctuation` 49, `space-before-punctuation` 21 | **total** |
-| register | `informal` 80 | **informal** |
+| nbsp | `total` 5516, `narrow` 3, `before-punctuation` 49, `space-before-punctuation` 21 | **total** |
+| register | `informal` 82 | **informal** |
 
 ---
 
@@ -105,14 +115,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (72)
+## 3. Open findings (78)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 10 |
-| 2 | Wrong content (says something other than the English) | 42 |
-| 3 | Degraded language (grammar, spelling, terminology) | 18 |
+| 2 | Wrong content (says something other than the English) | 47 |
+| 3 | Degraded language (grammar, spelling, terminology) | 19 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
@@ -170,6 +180,11 @@ _Nothing reported._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `policy-not-fully-applied` — `browser/browser/aboutPolicies.ftl` — "Not fully applied" translated as "Stosowana częściowo" (partially applied), losing the negative framing that some operations failed.
+    - Current: `Stosowana częściowo`
+    - Source: `Not fully applied`
+    - Suggest: `Nie w pełni zastosowana`
+    - The comment states this is shown when at least one operation of the policy failed to apply; "Stosowana częściowo" reads as a neutral status rather than the source's "Not fully applied".
 - `about-private-browsing-relay-promo-title` — `browser/browser/aboutPrivateBrowsing.ftl` — "when you sign up" mistranslated as "gdy się logujesz" (when you log in).
     - Current: `gdy się logujesz`
     - Source: `Hide your real address with an email mask when you sign up, shop, or share it online.`
@@ -266,6 +281,16 @@ _Nothing reported._
     - Source: `accesskey: n label: Send Page to Device`
 - `genai-settings-chat-lechat-links` — `browser/browser/genai.ftl` — "Mistral AI" is a company name and should not be translated. Current: "…zasady ochrony prywatności</a> sztucznej inteligencji Mistral." → Suggest: "…zasady ochrony prywatności</a> Mistral AI." (the sibling strings correctly keep OpenAI, Microsoft, Anthropic).
     - Source: `By choosing Le Chat Mistral, you agree to the Mistral AI <a data-l10n-name="link1">Terms of Service</a> and <a data-l10n-name="link2">Privacy Policy</a>.`
+- `newtab-privacy-empty-state-tally` — `browser/browser/newtab/newtab.ftl` — "See a running tally here" translated without the running/updating total sense.
+    - Current: `Tutaj zobaczysz liczbę zablokowanych elementów.`
+    - Source: `See a running tally here.`
+    - Suggest: `Tutaj zobaczysz rosnącą liczbę zablokowanych elementów.`
+    - The developer comment explicitly explains "a running tally" is a total that keeps updating as the user browses; the Polish renders it as a static count.
+- `newtab-wallpaper-category-back` — `browser/browser/newtab/newtab.ftl` — Screen-reader label "Back to Customize" shortened to just "Wstecz", dropping the destination.
+    - Current: `aria-label: Wstecz`
+    - Source: `aria-label: Back to Customize`
+    - Suggest: `aria-label: Wróć do dostosowywania`
+    - The comment says the arrow has no text and this label is all a screen reader gets; the source names the Customize panel, which the Polish omits.
 - `smartwindow-onboarding-title` — `browser/browser/newtab/onboarding.ftl` — Brand name used without required grammatical-case parameter, and meaning shifted.
     - Current: `Korzystaj z { -smart-window-brand-name } przez cały czas`
     - Source: `Make { -smart-window-brand-name } your go-to`
@@ -281,6 +306,11 @@ _Nothing reported._
     - Suggest: `"…na urządzeniu mobilnym."`
 - `more-from-moz-solo-title` — `browser/browser/preferences/moreFromMozilla.ftl` — drops the "AI" qualifier present in en-US ("{ -solo-ai-brand-name } AI") and in the sibling more-from-moz-solo-title-2 ("Kreator SI stron internetowych…").
     - Source: `{ -solo-ai-brand-name } AI`
+- `preferences-ai-controls-speech-recognition-control` — `browser/browser/preferences/preferences.ftl` — "Transcribe speech locally" translated as "Zamienia głos na tekst na urządzeniu", replacing "speech" with "głos" and "locally" with "na urządzeniu".
+    - Current: `description: Zamienia głos na tekst na urządzeniu.`
+    - Source: `description: Transcribe speech locally. label: Speech recognition`
+    - Suggest: `description: Zamienia mowę na tekst lokalnie.`
+    - The surface consistently uses „mowa” for speech (label: „Rozpoznawanie mowy”) and „lokalnie” for locally; the description introduces different terms than the source.
 - `preferences-doh-radio-group` — `browser/browser/preferences/preferences.ftl` — "Enable DNS over HTTPS using:" is rendered as "Włącz serwer DNS poprzez HTTPS:", dropping "using" and adding "serwer" (server).
     - Current: `Włącz serwer DNS poprzez HTTPS:`
     - Source: `aria-label: Enable DNS over HTTPS using:`
@@ -301,6 +331,11 @@ _Nothing reported._
     - Source: `The <strong>display</strong> value has been changed by the engine to <strong>block</strong> because the element is <strong>floated</strong>.`
     - Suggest: `ponieważ element jest <strong>opływany</strong> (floated)`
     - en-US states the element is floated (a layout state), not that it has a type named "floated".
+- `SpeechRecognitionBlockedByAIControlsWarning` — `dom/chrome/dom/dom.properties` — "AI Controls" settings section name rendered as „Sterowanie SI”, dropping the user's ownership and using a non-standard rendering of the section name.
+    - Current: `w panelu „Sterowanie SI” w ustawieniach`
+    - Source: `On-device speech recognition is turned off in the user’s AI Controls settings, so SpeechRecognition reports itself as unavailable and refuses to start.`
+    - Suggest: `w ustawieniach „Sterowanie sztuczną inteligencją” użytkownika`
+    - The source says "in the user’s AI Controls settings"; the Polish drops "user’s" and abbreviates the section name as „SI”, which is not the name used elsewhere in Firefox pl for the AI Controls section.
 - `config-new-pref-value-integer` — `mobile/android/mobile/android/aboutConfig.ftl` — "Liczba" for the specific Integer pref type; also collides with config-new-pref-number ("Wprowadź liczbę"). → "Liczba całkowita".
     - Source: `Integer`
     - Suggest: `"Liczba całkowita".`
@@ -386,6 +421,11 @@ _Nothing reported._
     - Source: `Round of 16`
 - `newtab-sports-widget-round-32` — `browser/browser/newtab/newtab.ftl` — "Pierwsza runda" / "Druga runda" for "Round of 32" / "Round of 16"; Polish football usage names these by fraction, and the current wording is ambiguous against the preceding group stage. → "1/16 finału" / "1/8 finału".
     - Source: `Round of 32`
+- `newtab-widget-lists-change-list` — `browser/browser/newtab/newtab.ftl` — "Change list" rendered as "Przełącz listę" (toggle/switch the list) rather than changing which list is shown.
+    - Current: `aria-label: Przełącz listę`
+    - Source: `aria-label: Change list title: Change list`
+    - Suggest: `aria-label: Zmień listę`
+    - The comment says the button switches which list is shown; „Przełącz listę” suggests toggling a list on/off rather than selecting a different one.
 - `toolbox-local-mode-notice` — `devtools/client/toolbox.ftl` — `toolbox-local-mode-notice` quotes “trybu lokalnego” but the string it names, `options-local-mode-label`, reads “Tryb lokalny”
     - Current: `Ten dokument można także wczytać z „{ $url }” za pomocą „trybu lokalnego” narzędzi dla programistów, który można włączyć w panelu ustawień.`
     - Source: `This document could also be loaded from “{ $url }” using DevTools “Local Mode”, which can be enabled in the settings panel.`
@@ -409,11 +449,11 @@ _Nothing reported._
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `Zdarzenie klawisza jest niedostępne dla GTK2: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (1571 occurrences).
+    - The locale's quote convention is `polish-double` (1575 occurrences).
 - `WinConflict2` — `dom/chrome/dom/dom.properties` — `WinConflict2` uses straight double quotes
     - Current: `Zdarzenie klawisza jest niedostępne przy niektórych układach klawiatury: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on some keyboard layouts: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (1571 occurrences).
+    - The locale's quote convention is `polish-double` (1575 occurrences).
 
 ---
 
