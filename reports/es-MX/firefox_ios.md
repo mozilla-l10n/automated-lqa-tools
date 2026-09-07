@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `117165baae4c` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `117165baae4c` |
-| **Previous run** | 2026-08-24 @ `a2ecb0a822be` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `386c3ca4eca7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `386c3ca4eca7` |
+| **Previous run** | 2026-09-01 @ `117165baae4c` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 1,884 |
+| **Strings reviewed this run** | 0 of 1,884 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -46,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 95 |
 | Strings | 1,884 |
-| Missing strings | 34 |
+| Missing strings | 38 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
@@ -59,11 +59,11 @@ _Nothing retired._
 
 ### Completeness
 
-**34 strings** are not translated yet, concentrated in:
+**38 strings** are not translated yet, concentrated in:
 
 - `es-MX/firefox-ios.xliff` — 18
-- `es-MX/firefox-ios.xliff` — 6
-- `es-MX/firefox-ios.xliff` — 6
+- `es-MX/firefox-ios.xliff` — 8
+- `es-MX/firefox-ios.xliff` — 8
 - `Shared/Supporting Files/en.lproj/GoogleLens.strings` — 2
 - `es-MX/firefox-ios.xliff` — 2
 

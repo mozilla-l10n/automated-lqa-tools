@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `117165baae4c` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `117165baae4c` |
-| **Previous run** | 2026-08-24 @ `a2ecb0a822be` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `386c3ca4eca7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `386c3ca4eca7` |
+| **Previous run** | 2026-09-01 @ `117165baae4c` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 7 of 1,916 |
+| **Strings reviewed this run** | 6 of 1,922 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for tr: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `NativeErrorPage.CellularDataRestricted.Description.v156` — `tr/firefox-ios.xliff` — "Wi-Fi’a" uses the wrong vowel-harmony suffix; Turkish convention is "Wi-Fi’ye".
+    - Current: `Wi-Fi’a bağlanın`
+    - Source: `Connect to Wi-Fi or go to iOS Settings and turn on cellular data for %@.`
+    - Suggest: `Wi-Fi’ye bağlanın`
+    - "Wi-Fi" ends in a front vowel (i), so the dative suffix must be -ye, not -a.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 96 |
-| Strings | 1,916 |
-| Missing strings | 2 |
+| Strings | 1,922 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -59,11 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**2 strings** are not translated yet, concentrated in:
-
-- `tr/firefox-ios.xliff` — 2
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -72,7 +72,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-single` 10, `curly-double` 6 | _mixed_ |
-| apostrophe | `typographic` 103 | **typographic** |
+| apostrophe | `typographic` 104 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | register | `formal` 7 | **formal** |
 
@@ -84,14 +84,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (77)
+## 3. Open findings (78)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 45 |
-| 3 | Degraded language (grammar, spelling, terminology) | 29 |
+| 3 | Degraded language (grammar, spelling, terminology) | 30 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
@@ -338,6 +338,11 @@ _Nothing in this category._
     - Source: `New in %@`
     - Suggest: `%@’teki yenilikler`
     - The app name is Firefox, whose last vowel "o" requires the front/back harmony form used with a hard consonant "x" — Turkish convention renders Firefox'taki. However for the generic placeholder the standard Mozilla tr rendering is "%@ sürümündeki yenilikler"; at minimum the current locked "’taki" is a hard-coded suffix that does not agree with all app names (Focus, Klar → Focus'taki/Klar'daki).
+- `NativeErrorPage.CellularDataRestricted.Description.v156` — `tr/firefox-ios.xliff` — "Wi-Fi’a" uses the wrong vowel-harmony suffix; Turkish convention is "Wi-Fi’ye".
+    - Current: `Wi-Fi’a bağlanın`
+    - Source: `Connect to Wi-Fi or go to iOS Settings and turn on cellular data for %@.`
+    - Suggest: `Wi-Fi’ye bağlanın`
+    - "Wi-Fi" ends in a front vowel (i), so the dative suffix must be -ye, not -a.
 - `Addresses.Settings.SecureSaveInfo.Description.v130` — `tr/firefox-ios.xliff` — Case mismatch: "Bilgilerinizi ... hızlıca erişmek" requires the dative "bilgilerinize" for the verb "erişmek".
     - Current: `Bilgilerinizi daha sonra hızlıca erişmek için güvenli bir şekilde kaydedin.`
     - Source: `Securely save your information to get quick access to it later.`

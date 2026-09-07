@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `117165baae4c` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `117165baae4c` |
-| **Previous run** | 2026-08-24 @ `a2ecb0a822be` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `386c3ca4eca7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `386c3ca4eca7` |
+| **Previous run** | 2026-09-01 @ `117165baae4c` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 8 of 1,918 |
+| **Strings reviewed this run** | 4 of 1,920 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -20,11 +20,11 @@ Also for fr: [android](android.md) · [firefox](firefox.md)
 
 ### 🆕 New findings (1)
 
-- `WebCompatReporter.Fields.ChooseIssueTypeAccessibilityHint.v156` — `fr/firefox-ios.xliff` — "issue type" rendered as "type de ticket", inconsistent with "type de problème" used for the same term in the sibling string.
-    - Current: `Choisir d’abord un type de ticket`
-    - Source: `Choose an issue type first`
-    - Suggest: `Choisir d’abord un type de problème`
-    - The en-US "issue type" is translated "type de problème" in WebCompatReporter.Fields.ChooseSubOptionAccessibilityHint.v156 on the same form; "ticket" introduces a support-ticket concept absent from the source.
+- `NativeErrorPage.CellularDataRestricted.TitleLabel.v156` — `fr/firefox-ios.xliff` — "turned off for %@" mistranslated as "désactivées pendant %@" (during), changing meaning.
+    - Current: `Les données mobiles sont désactivées pendant %@.`
+    - Source: `Cellular data is turned off for %@.`
+    - Suggest: `Les données mobiles sont désactivées pour %@.`
+    - The placeholder is the app name; the source says cellular data is off *for* the app, not "during" it. The companion description string correctly uses « pour %@ ».
 
 ### ✅ Fixed since the last run (0)
 
@@ -38,9 +38,13 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `WebCompatReporter.Fields.ChooseIssueTypeAccessibilityHint.v156` — `fr/firefox-ios.xliff` — "issue type" rendered as "type de ticket", inconsistent with "type de problème" used for the same term in the sibling string.
+    - Current: `Choisir d’abord un type de ticket`
+    - Source: `Choose an issue type first`
+    - Suggest: `Choisir d’abord un type de problème`
+    - The en-US "issue type" is translated "type de problème" in WebCompatReporter.Fields.ChooseSubOptionAccessibilityHint.v156 on the same form; "ticket" introduces a support-ticket concept absent from the source.
 
 ---
 
@@ -49,8 +53,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 96 |
-| Strings | 1,918 |
-| Missing strings | 0 |
+| Strings | 1,920 |
+| Missing strings | 2 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,7 +67,11 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**2 strings** are not translated yet, concentrated in:
+
+- `fr/firefox-ios.xliff` — 2
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -72,10 +80,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 18 | **guillemet** |
-| apostrophe | `typographic` 358 | **typographic** |
+| apostrophe | `typographic` 357 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 3, `en` 1 | **em** |
-| nbsp | `total` 152, `before-punctuation` 94 | _mixed_ |
+| nbsp | `total` 154, `before-punctuation` 96 | _mixed_ |
 | register | `formal` 285 | **formal** |
 
 ---
@@ -92,8 +100,8 @@ _Nothing reported._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 29 |
-| 3 | Degraded language (grammar, spelling, terminology) | 14 |
+| 2 | Wrong content (says something other than the English) | 30 |
+| 3 | Degraded language (grammar, spelling, terminology) | 13 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
@@ -137,6 +145,11 @@ _Nothing in this category._
     - Source: `Translated…`
     - Suggest: `Traduit…`
     - The source is just "Translated…"; the parallel string MainMenu.ToolsSection.Translation.Translated.Title.v145 is translated as "Traduit".
+- `NativeErrorPage.CellularDataRestricted.TitleLabel.v156` — `fr/firefox-ios.xliff` — "turned off for %@" mistranslated as "désactivées pendant %@" (during), changing meaning.
+    - Current: `Les données mobiles sont désactivées pendant %@.`
+    - Source: `Cellular data is turned off for %@.`
+    - Suggest: `Les données mobiles sont désactivées pour %@.`
+    - The placeholder is the app name; the source says cellular data is off *for* the app, not "during" it. The companion description string correctly uses « pour %@ ».
 - `NativeErrorPage.GenericError.Description.v134` — `fr/firefox-ios.xliff` — Present tense "can't be created" rendered as past tense "n'a pas pu être établie".
     - Current: `une connexion sécurisée n’a pas pu être établie`
     - Source: `The owner of %@ hasn’t set it up properly and a secure connection can’t be created.`
@@ -313,11 +326,6 @@ _Nothing in this category._
     - Source: `Error summarizing page. Try again later.`
     - Suggest: `Erreur lors du résumé de la page.`
     - Terminology inconsistency within the same screen: the feature is consistently called « résumé »/« résumer » in the other Summarizer strings.
-- `WebCompatReporter.Fields.ChooseIssueTypeAccessibilityHint.v156` — `fr/firefox-ios.xliff` — "issue type" rendered as "type de ticket", inconsistent with "type de problème" used for the same term in the sibling string.
-    - Current: `Choisir d’abord un type de ticket`
-    - Source: `Choose an issue type first`
-    - Suggest: `Choisir d’abord un type de problème`
-    - The en-US "issue type" is translated "type de problème" in WebCompatReporter.Fields.ChooseSubOptionAccessibilityHint.v156 on the same form; "ticket" introduces a support-ticket concept absent from the source.
 - `Search.ThirdPartyEngines.FormErrorTitle` — `fr/firefox-ios.xliff` — "Failed" translated as "Erreur" here while the identical source string is "Échec" in the sibling strings on the same screen.
     - Current: `Erreur`
     - Source: `Failed`
