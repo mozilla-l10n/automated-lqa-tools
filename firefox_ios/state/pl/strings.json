@@ -365,6 +365,10 @@
   "CloseTab.ArrivingNotification.title.v133": "83ead515 5c5f7c74",
   "CloseTab.ViewAction.title.v133": "791c0008 51b02228"
  },
+ "Shared/Supporting Files/en.lproj/GoogleLens.strings": {
+  "GoogleLens.Interstitial.CancelButtonTitle.v156": "141a1db7 871d661d f5bd6a91",
+  "GoogleLens.Interstitial.LoadingLabel.v156": "f3b5dd09 e1cb271c 3e2797c0"
+ },
  "Shared/Supporting Files/en.lproj/JumpBackIn.strings": {
   "ContextualHints.FirefoxHomepage.JumpBackIn.PersonalizedHome": "f2161d11 7bf57d6a",
   "ContextualHints.FirefoxHomepage.JumpBackIn.SyncedTab.v106": "de042361 798a6f52"
@@ -580,6 +584,8 @@
   "NativeErrorPage.BadCertDomain.ViewCertificateLink.v149": "81f0f13c 9ec6d727",
   "NativeErrorPage.ButtonLabel.v131": "098c7094 5211deb2",
   "NativeErrorPage.ButtonLabel.v155": "79999b59 58226c77",
+  "NativeErrorPage.CellularDataRestricted.Description.v156": "64c4383c 28b1d130 7e00438c",
+  "NativeErrorPage.CellularDataRestricted.TitleLabel.v156": "88d596a0 c3c05d56 26118672",
   "NativeErrorPage.GenericError.Description.v134": "adeec91f fc3c9fa8",
   "NativeErrorPage.GenericError.TitleLabel.v131": "2b29c6a9 a92ffa2e",
   "NativeErrorPage.GoBackButton.v149": "d5ea334b 18c0c0cf",
@@ -593,6 +599,7 @@
   "NativeErrorPage.Wayback.Error.NotFound.v155": "01147ffa b050f278",
   "NativeErrorPage.Wayback.Error.Retry.v154": "79999b59 67f53444",
   "NativeErrorPage.Wayback.Error.Search.v155": "99c5de6d 50fdc79d",
+  "NativeErrorPage.Wayback.Error.SearchWayback.v155": "af74ca1f 55e56d2c 4d9c8e7f",
   "NativeErrorPage.Wayback.Error.Title.v154": "14a29170 09fe4418",
   "NativeErrorPage.Wayback.Error.WaybackButtonA11yHint.v154": "b0717d70 5c853c83"
  },
@@ -651,7 +658,7 @@
   "Onboarding.Modern.BrandRefresh.TermsOfUse.AgreementButtonTitle.v148": "35b2bf55 61694274",
   "Onboarding.Modern.BrandRefresh.TermsOfUse.AgreementButtonTitle.v148.v2": "d91b932e 5009bc49",
   "Onboarding.Modern.BrandRefresh.TermsOfUse.Description.v148": "e35cc99c 2dbae63f",
-  "Onboarding.Modern.BrandRefresh.TermsOfUse.ManageLink.v148": "9ca0fa14 dcc3dcd6",
+  "Onboarding.Modern.BrandRefresh.TermsOfUse.ManageLink.v148": "6ee4664d dcc3dcd6 9858b803",
   "Onboarding.Modern.BrandRefresh.TermsOfUse.ManagePreferenceAgreement.v148": "84e85688 63c19922",
   "Onboarding.Modern.BrandRefresh.TermsOfUse.PrivacyNoticeAgreement.v148": "14786123 59db13c8",
   "Onboarding.Modern.BrandRefresh.TermsOfUse.PrivacyNoticeLink.v148": "66d726ef f90e5f8c",
@@ -691,7 +698,7 @@
   "Onboarding.Modern.TermsOfService.AgreementButtonTitle.v145": "d91b932e 5009bc49",
   "Onboarding.Modern.TermsOfService.Description.v145": "d9eeb3cc 379cc78b",
   "Onboarding.Modern.TermsOfService.ManageLink.v140": "78e52fb9 d7c35f4b",
-  "Onboarding.Modern.TermsOfService.ManageLink.v145": "9ca0fa14 dcc3dcd6",
+  "Onboarding.Modern.TermsOfService.ManageLink.v145": "6ee4664d dcc3dcd6 f53afc42",
   "Onboarding.Modern.TermsOfService.ManagePreferenceAgreement.v140": "84e85688 63c19922",
   "Onboarding.Modern.TermsOfService.ManagePreferenceAgreement.v145": "84e85688 63c19922",
   "Onboarding.Modern.TermsOfService.PrivacyNoticeAgreement.v140": "14786123 59db13c8",
@@ -778,9 +785,11 @@
   "PasswordGenerator.UsePasswordButtonLabel.v132": "e125ee89 df85ca5c"
  },
  "Shared/Supporting Files/en.lproj/PrivacyDashboard.strings": {
+  "PrivacyDashboard.CategoryAccessibilityLabel.v156": "4b864ad3 4b301e0b 836cb7f6",
   "PrivacyDashboard.CrossSiteTrackers.v155": "137f56c1 32248996",
   "PrivacyDashboard.Fingerprinters.v155": "d3deb0bb 8283347a",
   "PrivacyDashboard.HeaderLabel.v155": "83e4c60e d5cc9c98",
+  "PrivacyDashboard.HeaderLabelAccessibilityLabel.v156": "6885b26f b13e4f60 30891c92",
   "PrivacyDashboard.HeaderLabelForNoTrackersBlocked.v155": "2ee8fbf1 09d0f71b",
   "PrivacyDashboard.SocialTrackers.v155": "9a22e31b 877f5062",
   "PrivacyDashboard.TotalTrackersBlockedSince.v155": "2ab033b6 89a8fb98",
@@ -904,6 +913,7 @@
   "Settings.Browsing.AdBlocker.Description.v155": "31dd1dd5 7262855c",
   "Settings.Browsing.AdBlocker.LearnMore.v155": "7dcd885e d9b20450",
   "Settings.Browsing.AdBlocker.Title.v155": "5079be9c ef07e8df",
+  "Settings.Browsing.BackgroundAudio.Title.v156": "c824e9af 6278d19e af8f6ede",
   "Settings.Browsing.BlockAds.Title.v153": "5079be9c 2aa7bbf1",
   "Settings.Browsing.Content.v153": "a248a6f7 6fcb7eb2",
   "Settings.Browsing.Links.v137": "913cf6cc a0ba743c",
@@ -1166,6 +1176,8 @@
   "WebCompatReporter.Category.Other.v154": "648ee4b3 a22b26b3",
   "WebCompatReporter.Category.SiteNotUsable.v154": "2837e829 e4a617a5",
   "WebCompatReporter.Category.VideoOrAudio.v154": "7c5ea6ff 6d872e60",
+  "WebCompatReporter.Fields.ChooseIssueTypeAccessibilityHint.v156": "87144c44 49b21065 b7b7ff38",
+  "WebCompatReporter.Fields.ChooseSubOptionAccessibilityHint.v156": "b2369a9e 73ba17c4 4b7bca50",
   "WebCompatReporter.Fields.DetailsAccessibilityLabel.v154": "026b6010 8ca4df18",
   "WebCompatReporter.Fields.DetailsPlaceholder.v154": "298d5d21 34d53241",
   "WebCompatReporter.Fields.URLError.v155": "90a881ef 093d858c d6c318ef",

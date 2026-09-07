@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `117165baae4c` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `117165baae4c` |
-| **Previous run** | 2026-08-25 @ `edf993984c10` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `386c3ca4eca7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `386c3ca4eca7` |
+| **Previous run** | 2026-09-01 @ `117165baae4c` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 9 of 1,918 |
+| **Strings reviewed this run** | 4 of 1,922 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,23 +22,9 @@ Also for en-GB: [android](android.md) · [firefox](firefox.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (3)
+### ✅ Fixed since the last run (0)
 
-- `MainMenu.Account.AccessibilityLabels.MainButton.v132` — `en-GB/firefox-ios.xliff` — Serial (Oxford) comma retained here while it is removed in the parallel sync strings in the same file.
-    - Current: `Sign in to synchronise passwords, tabs, and more`
-    - Source: `Sign in to sync passwords, tabs, and more`
-    - Suggest: `Sign in to synchronise passwords, tabs and more`
-    - MainMenu.Account.SignedOut.Description.v131/v141 and ContextualHints.MainMenu.MenuRedesign.Body.v142 all drop the serial comma in this locale; this identical phrase keeps it, which is inconsistent within the same file.
-- `TabLocation.Share.A11y.Label.v119` — `en-GB/firefox-ios.xliff` — Capitalisation changed from sentence case to title case without any en-GB reason.
-    - Current: `Share This Page`
-    - Source: `Share this page`
-    - Suggest: `Share this page`
-    - The source uses sentence case for this accessibility label; en-GB has no convention requiring title case, so this is an unwarranted deviation.
-- `HistoryPanel.RecentlyClosedTabsButton.Title` — `en-GB/firefox-ios.xliff` — Title case of the button label was changed to sentence case, inconsistent with neighbouring History Panel titles.
-    - Current: `Recently closed`
-    - Source: `Recently Closed`
-    - Suggest: `Recently Closed`
-    - Sibling strings in the same panel ("Clear Recent History…", "Today and Yesterday", "The Last Hour") retain the source title case; en-GB has no capitalisation rule requiring the change here.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -59,7 +45,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 96 |
-| Strings | 1,918 |
+| Strings | 1,922 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
