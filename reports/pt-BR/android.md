@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **Previous run** | 2026-08-24 @ `e8622a909368` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **Previous run** | 2026-09-01 @ `f39118d70d88` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 19 of 2,735 |
+| **Strings reviewed this run** | 0 of 2,735 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for pt-BR: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `notification_privacy_report_body_has_trackers` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Translation adds "rastreadores", a word not present in the source's short parallel phrasing.
-    - Current: `Continue navegando. O %1$s continua bloqueando rastreadores.`
-    - Source: `Keep browsing. %1$s will keep blocking.`
-    - Suggest: `Continue navegando. O %1$s continua bloqueando.`
-    - Source is "Keep browsing. %1$s will keep blocking." with no object; the added "rastreadores" introduces content not in the source.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -38,44 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (9)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `ip_protection_location_recommended_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Infinitive "Selecionar" used where source is a third-person descriptive sentence "Selects".
-    - Current: `Selecionar o local de VPN mais rápido para você.`
-    - Suggest: `Seleciona o local de VPN mais rápido para você.`
-    - The source "Selects the fastest VPN location for you." is a description of what the option does, so pt-BR should use the third-person present "Seleciona".
-- `sports_widget_get_custom_wallpaper` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — The action verb "Get" is dropped, turning a menu action into a noun phrase.
-    - Current: `Fundo de tela personalizado`
-    - Suggest: `Obter fundo de tela personalizado`
-    - Source is a menu item action "Get custom wallpaper"; the translation omits the verb and no longer states the action.
-- `sports_widget_round_of_16` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "Round of 16" is rendered literally as "Rodada de 16" instead of the standard Brazilian football term "Oitavas de final".
-    - Current: `Rodada de 16`
-    - Suggest: `Oitavas de final`
-    - In pt-BR soccer terminology the knockout stage of 16 teams is "oitavas de final"; "Rodada de 16" is a literal calque that does not name the stage, and it is inconsistent with the sibling strings translated as "Quartas de final" and "Semifinais".
-- `sports_widget_round_of_32` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "Round of 32" is rendered literally as "Rodada de 32" instead of the standard Brazilian football term "Décimas sextas de final"/"Fase de 32".
-    - Current: `Rodada de 32`
-    - Suggest: `Décima sexta de final`
-    - Literal calque; pt-BR soccer terminology names knockout stages (oitavas, quartas, semifinais), and the sibling strings use those terms, so "Rodada de 32" is inconsistent and non-idiomatic.
-- `sports_widget_runner_up_title` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "Runners-up" (second place) is translated as "Finalistas", which means finalists (both teams in the final), not the runner-up.
-    - Current: `Finalistas`
-    - Suggest: `Vice-campeão`
-    - The developer comment states Runners-up means second place; "Finalistas" includes the champion and so says something different from the source.
-- `sports_widget_upcoming` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "Upcoming" (section header for matches not yet started) is rendered as "Seguintes" ("following/next ones") instead of a term meaning upcoming.
-    - Current: `Seguintes`
-    - Suggest: `Próximos`
-    - The source means matches that have not yet started; "Seguintes" means "the following", not "upcoming". The related string sports_widget_upcoming_match_content_description uses "Em breve".
-- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-pt-rBR/strings.xml` — `firstrun_shortcut_text` quotes “Adicionar à tela inicial” but the string it names, `menu_add_to_home_screen`, reads “Adicionar à tela do dispositivo”
-    - Current: `Volte rapidamente a seus sites preferidos no %1$s. Basta usar "Adicionar à tela inicial" no menu do %1$s.`
-    - Suggest: `Adicionar à tela do dispositivo`
-    - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-pt-rBR/strings.xml` — `firstrun_shortcut_text` uses straight double quotes
-    - Current: `Volte rapidamente a seus sites preferidos no %1$s. Basta usar "Adicionar à tela inicial" no menu do %1$s.`
-    - Suggest: `“Adicionar à tela inicial”`
-    - The locale's quote convention is `curly-double` (13 occurrences).
-- `security_popup_security_verified` — `mozilla-mobile/focus-android/app/src/main/res/values-pt-rBR/strings.xml` — "Verified by" is translated as "Homologado por" (approved/certified by) rather than "Verificado por".
-    - Current: `Homologado por: %1$s`
-    - Suggest: `Verificado por: %1$s`
-    - The source states who verified the certificate; "homologado" means approved/homologated, a different concept.
+_Nothing retired._
 
 ---
 
@@ -85,7 +46,7 @@ _Nothing to re-read._
 |---|---|
 | Files | 43 |
 | Strings | 2,735 |
-| Missing strings | 0 |
+| Missing strings | 11 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -102,7 +63,12 @@ _Nothing to re-read._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**11 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — 7
+- `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-pt-rBR/strings.xml` — 4
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 

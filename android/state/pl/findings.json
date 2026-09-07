@@ -1154,6 +1154,30 @@
  {
   "category": "B",
   "check": "llm",
+  "current": "Informacja o prywatności",
+  "dismissed_because": "",
+  "fid": "4f7c34df5253",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-09-07",
+  "impact": 2,
+  "last_seen": "2026-09-07",
+  "locale": "pl",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source names the weekly privacy report notification channel; \"Informacja o prywatności\" means a privacy notice, not a report of blocked trackers.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "cb149d03",
+  "string_id": "notification_privacy_report_channel_name",
+  "suggest": "Raport prywatności",
+  "summary": "\"Privacy report\" translated as \"Informacja o prywatności\" (privacy notice/information) instead of a report about privacy.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
   "current": "platformę, z której pobrano Firefoksa",
   "dismissed_because": "",
   "fid": "66853397efb0",

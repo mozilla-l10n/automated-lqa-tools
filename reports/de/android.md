@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **Previous run** | 2026-08-24 @ `e8622a909368` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **Previous run** | 2026-09-01 @ `f39118d70d88` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 19 of 2,735 |
+| **Strings reviewed this run** | 11 of 2,746 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for de: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `sync_send_tab_error_auth_remove_account` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Remove account" is rendered as "Konto löschen" (delete account), which suggests deleting the account rather than disconnecting it.
+    - Current: `Konto löschen`
+    - Source: `Remove account`
+    - Suggest: `Konto entfernen`
+    - The developer comment says the button removes the currently connected account from the device; "löschen" means deleting the account itself, a different and more destructive action.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,47 +38,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (10)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `sports_widget_error_load_failed_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Translation adds "die Seite" (the page), which is not in the source and misdescribes refreshing the widget's match data.
-    - Current: `Aktualisieren Sie die Seite in ein paar Minuten.`
-    - Suggest: `Versuchen Sie es in ein paar Minuten erneut zu aktualisieren.`
-    - Source "Try refreshing in a few minutes." refers to refreshing the sports widget data, not a page; the German invents an object.
-- `sports_widget_penalties` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Elfmeterschließen" is a misspelling of "Elfmeterschießen".
-    - Current: `Elfmeterschließen`
-    - Suggest: `Elfmeterschießen`
-    - The German term for a penalty shoot-out is "Elfmeterschießen"; "Elfmeterschließen" is not a word.
-- `accessibility_dismiss_find_in_page` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — "Dismiss" (close the find bar) is rendered as "deaktivieren" (disable).
-    - Current: `"Seite durchsuchen" deaktivieren`
-    - Suggest: `„Seite durchsuchen“ schließen`
-    - The button closes the find-in-page UI; "deaktivieren" says the feature is switched off. Also straight quotes instead of German double quotes.
-- `accessibility_dismiss_find_in_page` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — `accessibility_dismiss_find_in_page` uses straight double quotes
-    - Current: `"Seite durchsuchen" deaktivieren`
-    - The locale's quote convention is `german-double` (25 occurrences).
-- `cfr_cookie_banner` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — Superfluous article "den" before the link placeholder produces "in den Einstellungen" grammar mismatch with the link text.
-    - Current: `Verwalten Sie die Cookie-Banner-Einstellungen in den %2$s.`
-    - Suggest: `Verwalten Sie die Cookie-Banner-Einstellungen in den Einstellungen.`
-    - %2$s is replaced by the link text "Einstellungen"; the sentence is fine only if the article agrees, but as written the source has no article and the link string itself is capitalized — the article "den" plus the linked word yields correct German only by coincidence; the risk is that the article is outside the link. Recommend restructuring so the article is part of the link phrase.
-- `cookie_banner_report_a_site_snackbar_label` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — "Request to support site submitted" is mistranslated as a request sent to a "help website".
-    - Current: `Anfrage an Hilfe-Website übermittelt.`
-    - Suggest: `Anfrage zur Unterstützung der Website übermittelt.`
-    - The source means a request that this site be supported (by cookie banner reduction) was submitted, not a request sent to a help website.
-- `cookie_banner_the_site_was_reported` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — "Request to support site submitted" is mistranslated as a request sent to a "help website".
-    - Current: `Anfrage an Hilfe-Website übermittelt.`
-    - Suggest: `Anfrage zur Unterstützung der Website übermittelt.`
-    - The source means a request that this site be supported (by cookie banner reduction) was submitted, not a request sent to a help website.
-- `menu_trackers_blocked_title` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — "Trackers" is rendered as "Verfolger" here but as "Tracker" elsewhere in the same app (about_content).
-    - Current: `Verfolger blockiert`
-    - Suggest: `Tracker blockiert`
-    - The established German term in Mozilla products (and in about_content of this same file) is "Tracker"; "Verfolger" is inconsistent and misleading.
-- `open_new_tab_snackbar` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — "Switch" (switch to the newly opened tab) is rendered as "Umschalten" instead of "Wechseln".
-    - Current: `Umschalten`
-    - Suggest: `Wechseln`
-    - Per the developer comment the button switches to the newly opened tab; "Umschalten" means toggling, while the related preference string uses "wechseln".
-- `tip_add_to_homescreen` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — Menu path separator ">" was replaced with an arrow "→", deviating from the source's menu-path notation.
-    - Current: `Menü → Zum Startbildschirm hinzufügen`
-    - Suggest: `Menü > Zum Startbildschirm hinzufügen`
-    - The source uses "Menu > Add to Home screen"; the German substitutes a different symbol not used elsewhere for menu paths.
+_Nothing retired._
 
 ---
 
@@ -83,7 +49,7 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,735 |
+| Strings | 2,746 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -112,7 +78,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | quotes | `german-double` 24, `curly-double` 1, `straight-double` 1 | **german-double** |
 | ellipsis | `char` 22 | **char** |
 | dash | `en` 6 | **en** |
-| register | `formal` 644 | **formal** |
+| register | `formal` 649 | **formal** |
 
 ---
 
@@ -122,13 +88,22 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (106)
+## 3. Open findings (107)
 
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+
+- `sync_send_tab_error_auth_remove_account` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Remove account" is rendered as "Konto löschen" (delete account), which suggests deleting the account rather than disconnecting it.
+    - Current: `Konto löschen`
+    - Source: `Remove account`
+    - Suggest: `Konto entfernen`
+    - The developer comment says the button removes the currently connected account from the device; "löschen" means deleting the account itself, a different and more destructive action.
+
+_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 61 |
+| 2 | Wrong content (says something other than the English) | 62 |
 | 3 | Degraded language (grammar, spelling, terminology) | 34 |
 | 4 | Cosmetic (typography, spacing) | 11 |
 
@@ -398,6 +373,11 @@ _Nothing in this category._
     - Source: `Navigate back`
     - Suggest: `Zurück navigieren`
     - The source means going back to the previous screen; "rückwärts" means moving backwards in a directional sense and is not the term used for back navigation in German UI.
+- `sync_send_tab_error_auth_remove_account` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Remove account" is rendered as "Konto löschen" (delete account), which suggests deleting the account rather than disconnecting it.
+    - Current: `Konto löschen`
+    - Source: `Remove account`
+    - Suggest: `Konto entfernen`
+    - The developer comment says the button removes the currently connected account from the device; "löschen" means deleting the account itself, a different and more destructive action.
 - `translation_option_bottom_sheet_close_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Seite" wrongly renders "sheet" (bottom sheet dialog) as "page".
     - Current: `Seite „Übersetzungen“ schließen`
     - Source: `Close Translations sheet`
@@ -433,12 +413,7 @@ _Nothing in this category._
     - Source: `{ <p> }%1$s puts you in control.{ </p> } { <p> }Use it as a private browser: { <ul> } { <li> }Search and browse right in the app{ </li> } { <li> }Block trackers (or update settings to allow trackers){ </li> } { <li> }Er…`
     - Suggest: `Suchen und surfen Sie direkt in der App`
     - "browse" here means browsing the web; "blättern" is the wrong sense and "right in the app" (direkt) is dropped.
-- `cfr_for_start_browsing` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — "as you go" is mistranslated as "bei der Gelegenheit auch noch", which changes the meaning.
-    - Current: `und wir blockieren Tracker und bei der Gelegenheit auch noch andere schädliche Elemente`
-    - Source: `Start your private browsing session, and we’ll block trackers and other bad stuff as you go.`
-    - Suggest: `und wir blockieren dabei Tracker und andere schädliche Elemente`
-    - The source says trackers and other bad stuff are blocked as you browse; the German implies blocking other bad stuff is a casual side effect ("bei der Gelegenheit auch noch"), which is not the source meaning.
-- _…and 3 more; see `state/` for the full list._
+- _…and 4 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

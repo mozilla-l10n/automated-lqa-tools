@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **Previous run** | 2026-08-24 @ `e8622a909368` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **Previous run** | 2026-09-01 @ `f39118d70d88` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 22 of 2,724 |
+| **Strings reviewed this run** | 0 of 2,724 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,72 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (16)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `sports_widget_group_stage` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — "Group Stage" is rendered as the redundant "Csoportkörök szakasza".
-    - Current: `Csoportkörök szakasza`
-    - Suggest: `Csoportkör`
-    - The established Hungarian football term for "Group Stage" is "csoportkör"; "Csoportkörök szakasza" ("the stage of the group rounds") is redundant and overly long for a widget label.
-- `sports_widget_more_options_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — "More options" is rendered as "További beállítások" (more settings) instead of the standard "További lehetőségek".
-    - Current: `További beállítások`
-    - Suggest: `További lehetőségek`
-    - The source is "More options" for an overflow menu button; "beállítások" means "settings", which is a different concept and inconsistent with the established Hungarian term for the overflow menu.
-- `sports_widget_page_position_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — The page-position phrasing "%2$d. / %3$d oldal" is garbled Hungarian for "page %2$d of %3$d".
-    - Current: `%1$s, %2$d. / %3$d oldal`
-    - Suggest: `%1$s, %2$d. oldal, összesen %3$d`
-    - Source reads "page %2$d of %3$d"; the target mixes an ordinal and a slash so a screen reader announces something unintelligible rather than the current page out of the total.
-- `sports_widget_team_followed_description` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — "tournament" is translated with the colloquial slang "vébé".
-    - Current: `a vébé közeledtével`
-    - Suggest: `a torna közeledtével`
-    - The source says "the tournament"; "vébé" is a colloquial abbreviation of "világbajnokság" that clashes with the neutral register of the UI and is not what the source says.
-- `cfr_cookie_banner_link` — `mozilla-mobile/focus-android/app/src/main/res/values-hu/strings.xml` — The linked word "settings" is translated in an inessive case form that duplicates the case already provided in the host string.
-    - Current: `beállításokban`
-    - Suggest: `beállítások`
-    - cfr_cookie_banner reads "A sütibannerek beállításait a %2$s kezelheti", so inserting "beállításokban" yields "a beállításokban kezelheti" duplicated with "beállításait", producing an ungrammatical sentence.
-- `content_description_menu` — `mozilla-mobile/focus-android/app/src/main/res/values-hu/strings.xml` — "More options" translated as "További beállítások" (More settings).
-    - Current: `További beállítások`
-    - Suggest: `További lehetőségek`
-    - The three-dot menu content description says "More options", not settings; "beállítások" is the established term for "settings".
-- `cookie_banner_exception_panel_description_site_is_not_supported` — `mozilla-mobile/focus-android/app/src/main/res/values-hu/strings.xml` — Grammatically broken sentence: reversed subject/object and wrong article agreement.
-    - Current: `Ez az oldalt jelenleg nem támogatja a Sütibannerek számának csökkentését.`
-    - Suggest: `Ezt az oldalt jelenleg nem támogatja a Sütibannerek számának csökkentése.`
-    - The source says the site is not supported by Cookie Banner Reduction; the Hungarian has "Ez az oldalt" (demonstrative not agreeing with the accusative noun) and makes the site the subject supporting the feature, reversing the meaning.
-- `cookie_banner_report_a_site_snackbar_label` — `mozilla-mobile/focus-android/app/src/main/res/values-hu/strings.xml` — "Request to support site submitted" is mistranslated as sending a request to a "support website".
-    - Current: `A kérelem elküldve a támogatási webhelynek.`
-    - Suggest: `Kérelem elküldve a webhely támogatására.`
-    - The source means the user submitted a request for the site to be supported by the cookie banner reducer, not that a request was sent to a support website.
-- `cookie_banner_the_site_was_reported` — `mozilla-mobile/focus-android/app/src/main/res/values-hu/strings.xml` — "Request to support site submitted" is mistranslated as sending a request to a "support website".
-    - Current: `A kérelem elküldve a támogatási webhelynek.`
-    - Suggest: `Kérelem elküldve a webhely támogatására.`
-    - The source means a request was submitted asking that this site be supported, not a request sent to a support site.
-- `external_app_prompt` — `mozilla-mobile/focus-android/app/src/main/res/values-hu/strings.xml` — "to open this link in %2$s" is rendered with a vague "itt" while %2$s is placed at the end, and "leave" is translated inconsistently.
-    - Current: `Elhagyhatja a %1$st, hogy itt nyissa meg ezt a hivatkozást: %2$s.`
-    - Suggest: `Kiléphet a %1$sból, hogy ebben nyissa meg a hivatkozást: %2$s.`
-    - Compare external_app_prompt_no_app which uses "Kiléphet a %1$sból"; the current wording is inconsistent for the same source phrase "You can leave %1$s".
-- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-hu/strings.xml` — `firstrun_shortcut_text` quotes “Hozzáadás a kezdőképernyőre” but the string it names, `menu_add_to_home_screen`, reads “Kezdőképernyőhöz adás”
-    - Current: `Térjen vissza gyorsan a kedvenc oldalaihoz a %1$sban. Csak válassza a „Hozzáadás a kezdőképernyőre” lehetőséget a %1$s menüből.`
-    - Suggest: `Kezdőképernyőhöz adás`
-    - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `indicator_content_description_menu` — `mozilla-mobile/focus-android/app/src/main/res/values-hu/strings.xml` — "More options button" is translated as "További beállítások gomb" ("More settings button").
-    - Current: `További beállítások gomb`
-    - Suggest: `További lehetőségek gomb`
-    - "Options" here refers to the three-dot overflow menu, not to settings ("Beállítások" is used for Settings in menu_settings).
-- `menu_report_site_issue` — `mozilla-mobile/focus-android/app/src/main/res/values-hu/strings.xml` — "Report Site Issue" is translated as "Report broken website", changing the meaning of the object being reported.
-    - Current: `Hibás webhely bejelentése`
-    - Suggest: `Webhelyhiba bejelentése`
-    - The source and developer comment say to report an issue on the current site, not to report the site itself as faulty.
-- `preference_autocomplete_custom_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-hu/strings.xml` — "custom autocomplete URLs" translated as "automatically completed URLs", losing "custom".
-    - Current: `Automatikusan kiegészített webcímek hozzáadása és kezelése.`
-    - Suggest: `Egyéni automatikus kiegészítési webcímek hozzáadása és kezelése.`
-    - The source refers to user-defined (custom) autocomplete URLs; the translation drops "custom".
-- `preference_autocomplete_explanation_text` — `mozilla-mobile/focus-android/app/src/main/res/values-hu/strings.xml` — "Your autocomplete list" translated without "list".
-    - Current: `Az automatikus kiegészítései:`
-    - Suggest: `Az automatikus kiegészítési listája:`
-    - The source names a list of autocomplete URLs; the translation omits "list" and reads incompletely.
-- `preference_open_new_tab` — `mozilla-mobile/focus-android/app/src/main/res/values-hu/strings.xml` — Translation drops "link" from "Switch to link in new tab immediately".
-    - Current: `Azonnali átváltás az új fülre`
-    - Suggest: `Azonnali átváltás az új fülön megnyitott hivatkozásra`
-    - The source refers to switching to the link opened in a new tab; the Hungarian only says "switch to the new tab", losing the link reference.
+_Nothing retired._
 
 ---
 
@@ -109,7 +46,7 @@ _Nothing to re-read._
 |---|---|
 | Files | 43 |
 | Strings | 2,724 |
-| Missing strings | 11 |
+| Missing strings | 22 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -126,9 +63,10 @@ _Nothing to re-read._
 
 ### Completeness
 
-**11 strings** are not translated yet, concentrated in:
+**22 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — 11
+- `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — 18
+- `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-hu/strings.xml` — 4
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

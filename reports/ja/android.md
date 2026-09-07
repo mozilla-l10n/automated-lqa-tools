@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **Previous run** | 2026-08-24 @ `e8622a909368` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **Previous run** | 2026-09-01 @ `f39118d70d88` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 2,717 |
+| **Strings reviewed this run** | 29 of 2,746 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,17 +18,27 @@ Also for ja: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `notification_privacy_report_headline_no_trackers` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — Headline for the "no trackers blocked" case is translated as if trackers were already blocked and are shown here.
+    - Current: `閲覧中に %1$s がブロックしたトラッカーがここに表示されます。`
+    - Source: `%1$s blocks trackers as you browse. You’ll see them here.`
+    - Suggest: `閲覧中に %1$s がトラッカーをブロックします。ブロックしたトラッカーはここに表示されます。`
+    - The source is two sentences in the future/general tense ("%1$s blocks trackers as you browse. You'll see them here.") shown when nothing has been blocked yet; the Japanese asserts that trackers already blocked are displayed here, changing the meaning of the empty-state message.
+- `mozac_feature_summarize_feedback_good_content_description` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ja/strings.xml` — Thumbs-up button content description renders "Good summary" as a noun phrase meaning "highly rated summary" instead of describing the rating action/label.
+    - Current: `高評価の要約`
+    - Source: `Good summary`
+    - Suggest: `良い要約`
+    - The developer comment says this is the content description for the thumbs up button used to rate a summary as helpful; 「高評価の要約」 describes a summary that has received a high rating, not the rating "Good summary" the user gives.
+- `mozac_feature_summarize_feedback_bad_content_description` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ja/strings.xml` — Thumbs-down button content description renders "Bad summary" as "low-rated summary" instead of the rating label.
+    - Current: `低評価の要約`
+    - Source: `Bad summary`
+    - Suggest: `悪い要約`
+    - Per the developer comment this labels the thumbs down button for rating a summary as unhelpful; 「低評価の要約」 means a summary that has a low rating, not the "Bad summary" rating itself.
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `mozac_browser_errorpages_malformed_uri_message_alternative` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ja/strings.xml` — Markup tags are misplaced: text falls outside the { <li> } elements and the second bullet drops the "forward slashes" instruction.
-    - Current: `{ <li> }ウェブのアドレスは通常 { <strong> }http://www.example.com/{ </strong> }{ </li> } のようなものになります。 { <li> }スラッシュ ({ <strong> }/{ </strong> }) { </li> }が使われているか確認してください。`
-    - Source: `{ <ul> } { <li> }Web addresses are usually written like { <strong> }http://www.example.com/{ </strong> }{ </li> } { <li> }Make sure that you’re using forward slashes (i.e. { <strong> }/{ </strong> }).{ </li> } { </ul> }`
-    - Suggest: `{ <li> }ウェブのアドレスは通常 { <strong> }http://www.example.com/{ </strong> } のようなものになります。{ </li> } { <li> }スラッシュ ({ <strong> }/{ </strong> }) が使われているか確認してください。{ </li> }`
-    - The closing { </li> } tags appear before the trailing Japanese text, so the sentences render outside the list items, unlike the en-US source where each sentence is fully inside { <li> }.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -38,72 +48,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (16)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `sports_widget_champions_title` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "Champions" of the World Cup is rendered as 優勝者 (individual winner) rather than the winning team/champions.
-    - Current: `2026 ワールドカップ優勝者`
-    - Suggest: `2026 ワールドカップ優勝チーム`
-    - The widget celebrates the winning national team in a soccer tournament; 優勝者 denotes an individual person, which misnames the subject.
-- `sports_widget_countdown_hours` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — Countdown hour abbreviation exceeds the 1–2 character limit hinted, but 時間 is 2 chars — actually fine.
-    - Current: `時間`
-    - Suggest: `時`
-    - The developer comment asks for a single-character equivalent where one exists; Japanese has 時 for hours, and 時間 risks truncation issues in the countdown pill.
-- `sports_widget_countdown_remaining_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — Translation says "until the match starts" although the source only announces the generic remaining time.
-    - Current: `試合開始まであと %1$d 日 %2$d 時間 %3$d 分。`
-    - Suggest: `残り時間。%1$d 日 %2$d 時間 %3$d 分。`
-    - The source is "Remaining time. Days: %1$d. Hours: %2$d. Minutes: %3$d." with no mention of a match start; adding 試合開始まで introduces content not in the source.
-- `sports_widget_live_score_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — Soccer scores are rendered as "ポイント" (points), which is not in the source and is wrong for soccer goals.
-    - Current: `%1$s %2$d ポイント、%3$s %4$d ポイント、%5$s、ライブ`
-    - Suggest: `%1$s %2$d、%3$s %4$d、%5$s、ライブ`
-    - The source is just "%1$s %2$d, %3$s %4$d, %5$s, live"; the added unit "ポイント" introduces content not present and mislabels soccer goals as points.
-- `sports_widget_match_elapsed_minutes` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — Placeholder may contain "90+3", so appending 分 after it is fine, but the label drops "in minutes" wording; more importantly the value can be non-numeric.
-    - Current: `経過時間: %1$s 分`
-    - Suggest: `経過時間 (分): %1$s`
-    - Source is "Elapsed time in minutes: %1$s" where the unit qualifies the label, not the value; the clock value can be "90+3", so "90+3 分" reads incorrectly.
-- `sports_widget_round_of_16` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "Round of 16" is rendered as 「ラウンド 16」 instead of the standard Japanese soccer term.
-    - Current: `ラウンド 16`
-    - Suggest: `ラウンド 16 (ベスト 16)`
-    - Round of 16 is the last-16 stage; 「ラウンド 16」 reverses the meaning of the numeral (it reads as "the 16th round") and the standard term is ベスト16/決勝トーナメント1回戦.
-- `sports_widget_team_followed_description` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "Check back for match info" (an instruction to the user to return later) is translated as a statement that info will be updated.
-    - Current: `大会が近づくにつれて、試合情報が更新されます。`
-    - Suggest: `大会が近づいたら、また試合情報を確認してください。`
-    - The source asks the user to check back; the translation drops the call to action and asserts that information will be updated.
-- `sports_widget_upcoming` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "Upcoming" as a section header for matches that have not started yet is rendered as 「近日公開」 (coming soon, for media releases).
-    - Current: `近日公開`
-    - Suggest: `今後の試合`
-    - The developer comment says this is a section header for upcoming soccer matches; 近日公開 means "coming soon (release)" and is wrong for scheduled matches.
-- `cookie_banner_exception_panel_title_state_off_for_site` — `mozilla-mobile/focus-android/app/src/main/res/values-ja/strings.xml` — Half-width question mark used where the locale convention is fullwidth punctuation.
-    - Current: `無効にしますか?`
-    - Suggest: `無効にしますか？`
-    - The ja tree uses fullwidth punctuation (e.g. enable_search_suggestion_title2 uses ？).
-- `cookie_banner_exception_panel_title_state_on_for_site` — `mozilla-mobile/focus-android/app/src/main/res/values-ja/strings.xml` — Half-width question mark used where the locale convention is fullwidth punctuation.
-    - Current: `有効にしますか?`
-    - Suggest: `有効にしますか？`
-    - The ja tree uses fullwidth punctuation; sibling strings in this batch use ？.
-- `cookie_banner_reject_all_option_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-ja/strings.xml` — "when possible" is rendered as "可能な限り減らします", attaching the qualifier to the wrong clause.
-    - Current: `Cookie 同意確認を自動的に拒否することで、表示されるバナーを可能な限り減らします。`
-    - Suggest: `可能な場合は Cookie 要求を自動的に拒否することで、表示されるバナーを減らします。`
-    - In the source "when possible" qualifies the automatic rejection of cookie requests, not the extent of banner reduction.
-- `cookie_banner_report_a_site_snackbar_label` — `mozilla-mobile/focus-android/app/src/main/res/values-ja/strings.xml` — "Request to support site submitted" is mistranslated as a request sent to a "support site".
-    - Current: `サポートサイトへのリクエストが送信されました。`
-    - Suggest: `このサイトのサポートをリクエストしました。`
-    - The source means a request for the site to be supported (by cookie banner reduction) was submitted, not a request sent to a support site.
-- `cookie_banner_the_site_was_reported` — `mozilla-mobile/focus-android/app/src/main/res/values-ja/strings.xml` — "Request to support site submitted" is mistranslated as a request sent to a "support site".
-    - Current: `サポートサイトへのリクエストが送信されました。`
-    - Suggest: `このサイトのサポートをリクエストしました。`
-    - The source means a request to add support for this site was submitted; the Japanese says a request was sent to a support site.
-- `menu_trackers_blocked_title` — `mozilla-mobile/focus-android/app/src/main/res/values-ja/strings.xml` — "Trackers blocked" is rendered as 「ブロックされた追跡」 instead of the established term for trackers (トラッカー).
-    - Current: `ブロックされた追跡`
-    - Suggest: `ブロックしたトラッカー`
-    - The source refers to trackers (tracking scripts/entities), which Mozilla ja consistently renders as トラッカー; 追跡 means the act of tracking, not the trackers themselves.
-- `preference_open_new_tab` — `mozilla-mobile/focus-android/app/src/main/res/values-ja/strings.xml` — "Switch to link in new tab" mistranslated as "switch to the link inside the new tab".
-    - Current: `新しいタブ内のリンクへすぐに切り替えます`
-    - Suggest: `リンクを新しいタブで開いたらすぐに切り替えます`
-    - Per the developer comment the preference switches to the newly opened tab immediately; the translation says switching to a link located inside a new tab.
-- `preference_search_installed_search_engines` — `mozilla-mobile/focus-android/app/src/main/res/values-ja/strings.xml` — "Installed search engines" is translated as "selectable search engines".
-    - Current: `選択可能な検索エンジン`
-    - Suggest: `インストール済みの検索エンジン`
-    - The developer comment says this is a header for the list of installed search engines; 選択可能 (selectable) states something different from the source.
+_Nothing retired._
 
 ---
 
@@ -112,8 +59,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,717 |
-| Missing strings | 18 |
+| Strings | 2,746 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -130,12 +77,7 @@ _Nothing to re-read._
 
 ### Completeness
 
-**18 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — 13
-- `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ja/strings.xml` — 5
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -145,7 +87,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 10, `corner` 2 | **curly-double** |
 | ellipsis | `char` 11, `ascii` 10 | _mixed_ |
-| fullwidth | `punctuation` 711 | **punctuation** |
+| fullwidth | `punctuation` 719 | **punctuation** |
 
 ---
 
@@ -155,13 +97,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (144)
+## 3. Open findings (147)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 112 |
+| 2 | Wrong content (says something other than the English) | 115 |
 | 3 | Degraded language (grammar, spelling, terminology) | 25 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
@@ -279,6 +221,16 @@ _Nothing reported._
     - Source: `Remember decision for this site`
     - Suggest: `このサイトでの決定を記憶する`
     - The source scopes the checkbox to the current site; the sibling string ...site4 correctly includes 「このサイトでは」. Dropping it changes the meaning to a global setting.
+- `mozac_feature_summarize_feedback_bad_content_description` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ja/strings.xml` — Thumbs-down button content description renders "Bad summary" as "low-rated summary" instead of the rating label.
+    - Current: `低評価の要約`
+    - Source: `Bad summary`
+    - Suggest: `悪い要約`
+    - Per the developer comment this labels the thumbs down button for rating a summary as unhelpful; 「低評価の要約」 means a summary that has a low rating, not the "Bad summary" rating itself.
+- `mozac_feature_summarize_feedback_good_content_description` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ja/strings.xml` — Thumbs-up button content description renders "Good summary" as a noun phrase meaning "highly rated summary" instead of describing the rating action/label.
+    - Current: `高評価の要約`
+    - Source: `Good summary`
+    - Suggest: `良い要約`
+    - The developer comment says this is the content description for the thumbs up button used to rate a summary as helpful; 「高評価の要約」 describes a summary that has received a high rating, not the rating "Good summary" the user gives.
 - `mozac_summarize_download_nano_consent_message` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ja/strings.xml` — The translation misrenders "summaries that stay in your control" as the user managing the summaries app creates.
     - Current: `一度ダウンロードしておけば、%s が作成するページの要約をユーザーが管理できます。`
     - Source: `A one-time download lets %s create page summaries that stay in your control.`
@@ -464,17 +416,7 @@ _Nothing reported._
     - Source: `%1$s tabs closed: %2$d`
     - Suggest: `%1$s: %2$d 個のタブを閉じました`
     - %1$s is the app name used as a notification title prefix; "%1$s のタブ" wrongly reads as "tabs belonging to <app>" being closed, whereas the source states the app closed N tabs.
-- `ip_protection_data_limit_reached_description` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — Adds "初め" (first of the month) which is not in the source.
-    - Current: `アクセスは来月初めにリセットされます。`
-    - Source: `You’ve used all %1$d GB of your VPN data. Access resets next month.`
-    - Suggest: `アクセスは来月リセットされます。`
-    - Source says "Access resets next month." without specifying the beginning of the month; the parallel snackbar string correctly renders it as 来月リセットされます。
-- `ip_protection_data_reset_info` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "残り" (remaining) is inserted, changing the meaning of the reset value.
-    - Current: `毎月初めに残り %1$.0f GB にリセットされます。`
-    - Source: `Resets to %1$.0f GB on the first of every month.`
-    - Suggest: `毎月初めに %1$.0f GB にリセットされます。`
-    - Source is "Resets to %1$.0f GB on the first of every month." — %1$.0f is the total monthly allowance, not a remaining amount.
-- _…and 55 more; see `state/` for the full list._
+- _…and 58 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

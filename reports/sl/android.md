@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **Previous run** | 2026-08-24 @ `e8622a909368` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **Previous run** | 2026-09-01 @ `f39118d70d88` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 6 of 2,719 |
+| **Strings reviewed this run** | 19 of 2,738 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for sl: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `sync_send_tab_error_auth_remove_account` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Remove account" is rendered as "Delete account", which implies destroying the Firefox account rather than disconnecting it from the device.
+    - Current: `Izbriši račun`
+    - Source: `Remove account`
+    - Suggest: `Odstrani račun`
+    - The developer comment says the button removes the currently connected account (disconnects it), not deletes it. "Izbriši" means delete.
+- `notification_privacy_report_body_has_trackers` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Translation adds "sledilce" (trackers), a specific object the source does not state.
+    - Current: `Brskajte dalje, %1$s pa bo še naprej blokiral sledilce.`
+    - Source: `Keep browsing. %1$s will keep blocking.`
+    - Suggest: `Brskajte dalje, %1$s pa bo še naprej blokiral.`
+    - Source is "Keep browsing. %1$s will keep blocking." with no explicit object; the sentence structure and content were changed.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,56 +43,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (12)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `sports_widget_error_connection_interrupted` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Em dash used where the locale's house dash is the en dash.
-    - Current: `Povezava prekinjena — posodobitve`
-    - Suggest: `Povezava prekinjena – posodobitve`
-    - The sl convention for dashes is the en dash; the source em dash should be adapted.
-- `sports_widget_error_load_failed_description` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Try refreshing" is rendered as "Poskusite znova" (try again), dropping the refresh action present in the sibling strings.
-    - Current: `Poskusite znova čez nekaj minut.`
-    - Suggest: `Poskusite osvežiti čez nekaj minut.`
-    - The source says "Try refreshing in a few minutes"; the identical clause in sports_widget_error_load_failed is translated "Poskusite osvežiti čez nekaj minut", so this rendering is both inaccurate and inconsistent.
-- `sports_widget_follow_another_team` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Button label uses the informal imperative singular instead of the established formal address.
-    - Current: `Spremljaj drugo ekipo`
-    - Suggest: `Spremljajte drugo ekipo`
-    - The locale convention is formal address (e.g. "Pridobite ozadje po meri", "Poskusite osvežiti"); "Spremljaj" is the informal second-person singular imperative.
-- `sports_widget_go_to_world_cup_site_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Content description uses the informal imperative singular instead of the established formal address.
-    - Current: `Obišči spletno stran svetovnega prvenstva`
-    - Suggest: `Obiščite spletno stran svetovnega prvenstva`
-    - The locale convention is formal address; "Obišči" is the informal second-person singular imperative, inconsistent with other formal strings in this batch.
-- `sports_widget_semi_final` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Semi-finals" is rendered as "Polfinala", the genitive/dual form rather than the plural nominative.
-    - Current: `Polfinala`
-    - Suggest: `Polfinale`
-    - The round name label should be nominative; Slovenian standard term for the stage is "Polfinale" (cf. "Osmina finala", "Tretje mesto" which are nominative). "Polfinala" reads as genitive singular/dual.
-- `sports_widget_still_want_to_follow` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Still want to follow along?" is reduced to "Vas še zanima?", losing the meaning of continuing to follow the tournament.
-    - Current: `Vas še zanima?`
-    - Suggest: `Želite še naprej spremljati dogajanje?`
-    - The card asks whether the user wants to keep following the tournament after their team was eliminated; the translation only asks whether they are still interested.
-- `sports_widget_team_followed_description` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Check back" is mistranslated as "Spremljajte nas" (follow us).
-    - Current: `Spremljajte nas za informacije o tekmah, ko se bo turnir približal.`
-    - Suggest: `Znova preverite informacije o tekmah, ko se bo turnir približal.`
-    - The source tells the user to return later to see match info, not to follow the provider.
-- `sports_widget_team_followed_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Following: %s" is translated as "Sledim" (I am following) instead of a neutral/user-oriented form.
-    - Current: `Sledim: %s`
-    - Suggest: `Sledite: %s`
-    - The source label states which team the user follows; first-person singular "Sledim" makes the app speak for itself and breaks the established formal address to the user.
-- `cookie_banner_report_a_site_snackbar_label` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — The translation reverses the meaning: the request is to add support for the site, not a request sent to the site.
-    - Current: `Zahtevek spletnemu mestu za podporo poslan.`
-    - Suggest: `Zahtevek za podporo spletnemu mestu poslan.`
-    - Source "Request to support site submitted" means a request was submitted (to the team) to support this site; the Slovenian dative "Zahtevek spletnemu mestu" says the request was sent to the website.
-- `cookie_banner_the_site_was_reported` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — The translation reverses the meaning: the request is to add support for the site, not a request sent to the site.
-    - Current: `Zahtevek spletnemu mestu za podporo poslan.`
-    - Suggest: `Zahtevek za podporo spletnemu mestu poslan.`
-    - Source "Request to support site submitted" means a request was submitted to support this site; the dative construction implies the request was sent to the website.
-- `external_multiple_apps_matched_exit` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — First-person verb form used instead of the neutral/impersonal question typical for dialog prompts in the formal register.
-    - Current: `Končam zasebno brskanje?`
-    - Suggest: `Želite končati zasebno brskanje?`
-    - The locale uses the formal register; "Končam" is a first-person informal-style rendering, inconsistent with the source's neutral "Exit Private Browsing?".
-- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — Curly quotes in the source are rendered as straight double quotes but the app name placeholder is also declined with an appended suffix; the quoting style should match the house straight-double convention consistently.
-    - Current: `"Dodaj na domač zaslon"`
-    - Suggest: `"Dodaj na domači zaslon"`
-    - The quoted menu item must match the actual menu string menu_add_to_home_screen; also, the adjective form should be consistent with that item's wording.
+_Nothing retired._
 
 ---
 
@@ -92,8 +54,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,719 |
-| Missing strings | 16 |
+| Strings | 2,738 |
+| Missing strings | 8 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -110,10 +72,11 @@ _Nothing to re-read._
 
 ### Completeness
 
-**16 strings** are not translated yet, concentrated in:
+**8 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — 11
 - `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-sl/strings.xml` — 5
+- `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — 2
+- `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-sl/strings.xml` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -136,14 +99,23 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (116)
+## 3. Open findings (118)
 
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+
+- `sync_send_tab_error_auth_remove_account` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Remove account" is rendered as "Delete account", which implies destroying the Firefox account rather than disconnecting it from the device.
+    - Current: `Izbriši račun`
+    - Source: `Remove account`
+    - Suggest: `Odstrani račun`
+    - The developer comment says the button removes the currently connected account (disconnects it), not deletes it. "Izbriši" means delete.
+
+_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 65 |
-| 3 | Degraded language (grammar, spelling, terminology) | 41 |
+| 2 | Wrong content (says something other than the English) | 66 |
+| 3 | Degraded language (grammar, spelling, terminology) | 42 |
 | 4 | Cosmetic (typography, spacing) | 10 |
 
 ### A. Functional, markup, variables & plurals
@@ -272,6 +244,11 @@ _Nothing in this category._
     - Source: `To add a new site: Visit it and select “Never translate this site” from the translation menu.`
     - Suggest: `v meniju za prevajanje`
     - The source says "the translation menu"; "prevajalnik" names a translator tool rather than the translation menu.
+- `notification_privacy_report_body_has_trackers` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Translation adds "sledilce" (trackers), a specific object the source does not state.
+    - Current: `Brskajte dalje, %1$s pa bo še naprej blokiral sledilce.`
+    - Source: `Keep browsing. %1$s will keep blocking.`
+    - Suggest: `Brskajte dalje, %1$s pa bo še naprej blokiral.`
+    - Source is "Keep browsing. %1$s will keep blocking." with no explicit object; the sentence structure and content were changed.
 - `nova_onboarding_add_search_widget_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "home screen" of the phone is translated as "domača stran" (web homepage) instead of "domači zaslon".
     - Current: `Začnite vsako iskanje z domače strani svojega telefona`
     - Source: `Start every search from your phone’s home screen and know Firefox’s automatic protections have your back.`
@@ -392,6 +369,11 @@ _Nothing in this category._
     - Source: `Sync failed. Last success: %s`
     - Suggest: `Sinhronizacija ni uspela. Zadnja uspešna: %s`
     - The source specifically says "Last success" (last successful sync), not simply "last synced".
+- `sync_send_tab_error_auth_remove_account` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Remove account" is rendered as "Delete account", which implies destroying the Firefox account rather than disconnecting it from the device.
+    - Current: `Izbriši račun`
+    - Source: `Remove account`
+    - Suggest: `Odstrani račun`
+    - The developer comment says the button removes the currently connected account (disconnects it), not deletes it. "Izbriši" means delete.
 - `synced_tabs_no_tabs` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Translation adds "drugih" ("other tabs"), changing the meaning of the source.
     - Current: `V Firefoxu na drugih napravah nimate odprtih drugih zavihkov.`
     - Source: `You don’t have any tabs open in Firefox on your other devices.`
@@ -442,17 +424,7 @@ _Nothing in this category._
     - Source: `Dismiss`
     - Suggest: `Opusti`
     - The source button dismisses the message; "V redu" means "OK", not "dismiss".
-- `preference_auto_battery_theme` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — "Set by Battery Saver" is rendered as an imperative "Set the battery saver", reversing the meaning.
-    - Current: `Nastavi ohranjevalnik baterije`
-    - Source: `Set by Battery Saver`
-    - Suggest: `Nastavi ohranjevalnik baterije → "Nastavi ohranjevalnik baterije" naj bo "Nastavi varčevanje z baterijo" (tj. "Določi ohranjevalnik baterije")`
-    - The source means the theme is determined by the Battery Saver setting; the Slovenian reads as a command to set/configure the battery saver, i.e. the battery saver becomes the object rather than the agent.
-- `preference_exceptions_description` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — "disabled content blocking" is translated as "onemogočili zavračanje vsebine" but with a term inconsistent with the rest; more importantly the sense of blocking is rendered oddly.
-    - Current: `Za ta spletna mesta ste onemogočili zavračanje vsebine.`
-    - Source: `You have disabled content blocking for these websites.`
-    - Suggest: `Za ta spletna mesta ste onemogočili blokiranje vsebine.`
-    - Focus uses "blokiranje vsebine" for content blocking; "zavračanje vsebine" is a different term used inconsistently.
-- _…and 6 more; see `state/` for the full list._
+- _…and 8 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **Previous run** | 2026-08-24 @ `e8622a909368` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **Previous run** | 2026-09-01 @ `f39118d70d88` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 19 of 2,735 |
+| **Strings reviewed this run** | 11 of 2,746 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for cs: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `mozac_feature_summarize_feedback_bad_content_description` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-cs/strings.xml` — "summary" is rendered as "shrnutí" here but as "souhrn" in every other string on the same surface.
-    - Current: `Špatné shrnutí`
-    - Source: `Bad summary`
-    - Suggest: `Špatný souhrn`
-    - The parallel strings (mozac_feature_summarize_feedback_good_content_description, the click labels, the paywall error) all use "souhrn" for "summary"; mixing in "shrnutí" is an inconsistency on the same feature surface.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -38,72 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (16)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `customize_toggle_world_cup` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — "World Cup" is rendered as the generic "Světový šampionát" instead of the established Czech name.
-    - Current: `Světový šampionát`
-    - Suggest: `Mistrovství světa`
-    - The source names the World Cup event; the standard Czech equivalent is "Mistrovství světa".
-- `sports_widget_champions_title` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — "Champions" is dropped, turning the winner title into just the tournament name.
-    - Current: `Mistrovství světa ve fotbale 2026`
-    - Suggest: `Mistři světa ve fotbale 2026`
-    - Source "2026 World Cup Champions" names the tournament winner on a champion scoreboard row; the target only says "2026 World Cup".
-- `sports_widget_error_connection_interrupted` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — "live updates" rendered as just "aktualizace", losing "live".
-    - Current: `Spojení přerušeno — aktualizace pozastavena.`
-    - Suggest: `Spojení přerušeno — živé aktualizace pozastaveny.`
-    - The source specifies that live updates are paused; the qualifier is dropped in the target.
-- `sports_widget_error_load_failed` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — "Try refreshing" mistranslated as reloading the page.
-    - Current: `Zkuste stránku za chvíli znovu načíst.`
-    - Suggest: `Zkuste to za pár minut znovu.`
-    - The source refers to refreshing the widget's match data, not reloading a web page; the parallel string sports_widget_error_load_failed_description renders the same sentence as "Zkuste to za pár minut znovu."
-- `sports_widget_get_custom_wallpaper` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — Menu item translated as an imperative sentence instead of an infinitive action label.
-    - Current: `Získejte vlastní tapetu`
-    - Suggest: `Získat vlastní tapetu`
-    - Menu items in the Czech Firefox UI use the infinitive (cf. "Odebrat", "Přeskočit", "Zobrazit výsledky" in this same widget); "Získejte" is an imperative addressing the user, inconsistent with the surrounding menu labels.
-- `sports_widget_match_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — The word "versus" in a screen-reader content description was replaced by a hyphen, which does not read aloud.
-    - Current: `%1$s - %2$s, %3$s`
-    - Suggest: `%1$s versus %2$s, %3$s`
-    - The source deliberately spells out "versus" because this string is read aloud by screen readers; a hyphen is silent or misread, losing the meaning.
-- `sports_widget_penalties` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — "Penalties" (the shoot-out phase) rendered with the singular/ambiguous "Penalty".
-    - Current: `Penalty`
-    - Suggest: `Penaltový rozstřel`
-    - The source is a match status label for the penalty shoot-out; Czech "Penalty" reads as a single penalty kick (and looks like the untranslated English word), whereas the established term is "penaltový rozstřel".
-- `sports_widget_round_of_16` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — "Round of 16" is rendered as "Nejlepších 16" instead of the standard Czech football term "Osmifinále".
-    - Current: `Nejlepších 16`
-    - Suggest: `Osmifinále`
-    - In Czech football terminology the round of 16 is "osmifinále"; "Nejlepších 16" is a literal, non-standard rendering, inconsistent with the neighbouring "Čtvrtfinále"/"Semifinále".
-- `sports_widget_round_of_32` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — "Round of 32" is rendered as "Nejlepších 32" instead of the standard Czech term "Šestnáctifinále".
-    - Current: `Nejlepších 32`
-    - Suggest: `Šestnáctifinále`
-    - Czech football terminology uses "šestnáctifinále" for the round of 32, consistent with "osmifinále", "čtvrtfinále", "semifinále" used elsewhere in the widget.
-- `sports_widget_upcoming_match_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — The English word "versus" is left untranslated in a Czech accessibility string.
-    - Current: `%1$s versus %2$s`
-    - Suggest: `%1$s proti %2$s`
-    - This content description is read aloud; "versus" should be rendered in Czech (e.g. "proti") as the rest of the string is translated.
-- `add_custom_autocomplete_label` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — Wrong preposition/case: "Přidat odkaz na našeptávání" means "add a link to (pointing at) autocomplete".
-    - Current: `Přidat odkaz na našeptávání`
-    - Suggest: `Přidat odkaz do našeptávání`
-    - The source means adding the URL into the custom autocomplete list; Czech requires "do" (into) rather than "na".
-- `cfr_cookie_banner` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — Repetition of "odmítnout/odmítl" mistranslates "to dismiss" and duplicates the verb.
-    - Current: `se pokouší odmítnout požadavky na soubory cookie, aby odmítl otravné bannery cookie`
-    - Suggest: `se pokouší odmítat požadavky na soubory cookie, aby odstranil otravné cookie lišty`
-    - Source "to dismiss annoying cookie banners" means to get rid of the banners; using "odmítl" twice is wrong and inconsistent with "cookie lišty" used elsewhere.
-- `content_description_trackers_blocked` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — Adds "Celkový" (total), which is not in the source.
-    - Current: `Celkový počet zablokovaných sledovacích prvků`
-    - Suggest: `Počet zablokovaných sledovacích prvků`
-    - Source is "Number of trackers blocked"; there is no "total" in the source.
-- `cookie_banner_exception_panel_description_site_is_not_supported` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — Stray conjunction "a" makes the sentence ungrammatical.
-    - Current: `Chcete náš tým požádat o kontrolu této stránky a za účelem budoucího přidání podpory?`
-    - Suggest: `Chcete náš tým požádat o kontrolu této stránky za účelem budoucího přidání podpory?`
-    - The extra "a" before "za účelem" is a leftover that breaks the sentence structure; the source reads "review this website and add support in the future".
-- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — `firstrun_shortcut_text` quotes “Přidat na plochu” but the string it names, `menu_add_to_home_screen`, reads “Přidat na domovskou obrazovku”
-    - Current: `S aplikací %1$s se můžete rychle vrátit ke svým oblíbeným stránkám. Použijte „Přidat na plochu“ z nabídky aplikace %1$s.`
-    - Suggest: `Přidat na domovskou obrazovku`
-    - In the source this string quotes “Add to Home screen”, which is exactly the value of `menu_add_to_home_screen` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `tip_autocomplete_url` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — The tip's first line is rendered as a negated question instead of the source's statement about autocompleting URLs.
-    - Current: `Nechcete si doplňovat nejpoužívanější adresy`
-    - Suggest: `Nechte si doplňovat nejpoužívanější adresy`
-    - Source "Autocomplete URLs for sites you use most" is an affirmative instruction; "Nechcete" ("You don't want") reverses/negates the meaning.
+_Nothing retired._
 
 ---
 
@@ -112,7 +45,7 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,735 |
+| Strings | 2,746 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -150,26 +83,19 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (132)
+## 3. Open findings (130)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 2 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 76 |
 | 3 | Degraded language (grammar, spelling, terminology) | 43 |
 | 4 | Cosmetic (typography, spacing) | 11 |
 
 ### A. Functional, markup, variables & plurals
 
-- `create_collection_save_to_collection_tab_selected` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — `create_collection_save_to_collection_tab_selected` has placeholders none where the source has %1$d
-    - Current: `Vybrán jeden panel`
-    - Source: `%d tab selected`
-    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
-- `recently_closed_tab` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — `recently_closed_tab` has placeholders none where the source has %1$d
-    - Current: `Jeden panel`
-    - Source: `%d tab`
-    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+_Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -733,9 +659,10 @@ _Nothing reported._
 
 ## 4. Appendix
 
-### Dismissed by hand (0)
+### Dismissed by hand (2)
 
-_Nothing dismissed._
+- `create_collection_save_to_collection_tab_selected` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — same: the source's `%d tab selected` is the singular of a pair, and "Vybrán jeden panel" says one without the placeholder
+- `recently_closed_tab` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — the en-US `%d tab` is hardcoded singular; Czech "Jeden panel" spells the one out instead of passing it, which reads better here
 
 _One line each in `locales/cs/dismissed.txt`. Delete the line and the finding returns._
 

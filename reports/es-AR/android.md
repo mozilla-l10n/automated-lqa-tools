@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **Previous run** | 2026-08-24 @ `e8622a909368` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **Previous run** | 2026-09-01 @ `f39118d70d88` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 19 of 2,735 |
+| **Strings reviewed this run** | 11 of 2,746 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for es-AR: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `ip_protection_location_selection_reset_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-es-rAR/strings.xml` — "Switched to the recommended location" is rendered as "Cambió a...", which reads as the location itself changed rather than the app switching to the recommended one.
-    - Current: `Cambió a la ubicación recomendada.`
-    - Source: `Selected VPN location unavailable. Switched to the recommended location.`
-    - Suggest: `Se cambió a la ubicación recomendada.`
-    - The source states the app has switched to the recommended location (passive/impersonal); "Cambió a" without the reflexive reads as a third person subject changing, altering the meaning.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -38,80 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (18)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `sports_widget_go_to_world_cup_site_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-es-rAR/strings.xml` — Incorrect capitalization of the article in "Copa Del Mundo".
-    - Current: `Copa Del Mundo`
-    - Suggest: `Copa del Mundo`
-    - In Spanish the article in "Copa del Mundo" is lowercase, as correctly written in the other sports_widget strings (e.g. sports_widget_final_results_content_description).
-- `add_custom_autocomplete_label` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — "Add link to autocomplete" (add the link to the autocomplete list) is rendered as "Agregar el enlace para autocompletar" (add the link in order to autocomplete).
-    - Current: `Agregar el enlace para autocompletar`
-    - Suggest: `Agregar el enlace a autocompletado`
-    - The developer comment says the button quick-adds the current URL to the custom autocomplete list; "para autocompletar" states a purpose rather than the destination list.
-- `biometric_auth_moved_too_quickly` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — Uses the "usted" form "Pruebe" instead of the voseo register used elsewhere in es-AR (e.g. "Podés", "Tocá", "Presioná").
-    - Current: `El dedo se movió muy rápido. Pruebe de nuevo.`
-    - Suggest: `El dedo se movió muy rápido. Probá de nuevo.`
-    - The es-AR locale consistently addresses the user with voseo ("Podés usar tu huella digital", "Iniciá tu sesión"); "Pruebe" is the usted imperative and breaks the established form of address.
-- `biometric_auth_not_recognized_error` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — Uses the "usted" form "Pruebe" instead of the voseo register used elsewhere in es-AR.
-    - Current: `Huella digital no reconocida. Pruebe de nuevo.`
-    - Suggest: `Huella digital no reconocida. Probá de nuevo.`
-    - Surrounding biometric strings use voseo ("Podés usar tu huella digital…"); "Pruebe" is the usted imperative and is inconsistent with the locale's form of address.
-- `cookie_banner_exception_panel_description_site_is_not_supported` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — Reverses the subject: the source says the feature does not support the site, the translation says the site does not support the feature.
-    - Current: `Este sitio actualmente no soporta la reducción de mensajes de cookies.`
-    - Suggest: `Este sitio actualmente no es compatible con la reducción de mensajes de cookies.`
-    - en-US: "This site is currently not supported by Cookie Banner Reduction" — the site is unsupported by the feature, not the other way around.
-- `cookie_banner_reject_all_option_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — Uses the "usted" imperative "Vea" instead of the es-AR voseo form used throughout the file, and renders "banners" as "anuncios".
-    - Current: `Vea menos anuncios rechazando automáticamente`
-    - Suggest: `Vé menos mensajes de cookies rechazando automáticamente`
-    - Other strings in the same file use voseo ("¿Querés pedirle…", "lo que escribás"); "Vea" is the usted form. Also "banners" here refers to cookie banners, translated elsewhere as "mensajes de cookies", not "anuncios" (ads).
-- `external_app_prompt` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — Uses the formal "Puede" whereas the parallel string external_app_prompt_no_app uses the informal voseo "Podés".
-    - Current: `Puede dejar que %1$s abra este enlace en %2$s.`
-    - Suggest: `Podés dejar que %1$s abra este enlace en %2$s.`
-    - es-AR uses the informal voseo register; the sibling string external_app_prompt_no_app renders the same "You can leave %1$s…" as "Podés dejar que %1$s…".
-- `firstrun_defaultbrowser_text2` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — "Bloquéa" is misspelled (accent on wrong syllable) and the imperative form is inconsistent with the voseo used elsewhere.
-    - Current: `Bloquéa publicidades`
-    - Suggest: `Bloqueá publicidades`
-    - The es-AR voseo imperative of "bloquear" is "bloqueá"; "Bloquéa" is not a valid Spanish form.
-- `firstrun_defaultbrowser_text2` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — "Lleva" uses tuteo imperative while the surrounding first-run strings use voseo ("Potenciá", "Establecé", "Elegí").
-    - Current: `Lleva la navegación privada`
-    - Suggest: `Llevá la navegación privada`
-    - es-AR convention is voseo imperatives, as used in the neighboring first-run strings.
-- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — `firstrun_shortcut_text` uses straight double quotes
-    - Current: `Volvé a tus sitios favoritos en %1$s rápidamente. Seleccioná "Agregar a pantalla de inicio" en el menú de %1$s.`
-    - Suggest: `“Agregar a pantalla de inicio”`
-    - The locale's quote convention is `curly-double` (12 occurrences).
-- `preference_open_new_tab` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — "Switch to link in new tab" is mistranslated as "Cambiar a enlazar" (switch to linking), turning the noun "link" into a verb.
-    - Current: `Cambiar a enlazar en nueva pestaña inmediatamente`
-    - Suggest: `Cambiar al enlace en nueva pestaña inmediatamente`
-    - The source refers to switching to the opened link's new tab; "enlazar" is the verb "to link" and changes the meaning.
-- `preference_search_add2` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — Missing space after the "+" sign present in the source.
-    - Current: `+Agregar otro buscador`
-    - Suggest: `+ Agregar otro buscador`
-    - The source is "+ Add another search engine" with a space after the plus, which the developer comment highlights as emphasizing the add action.
-- `shortcut_erase_and_open_long_label` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — "Erase" is translated as "Eliminar" here while the parallel erase shortcut strings use "Borrar".
-    - Current: `Eliminar y abrir %1$s`
-    - Suggest: `Borrar y abrir %1$s`
-    - shortcut_erase_short_label and shortcut_erase_long_label render "Erase" as "Borrar"; using "Eliminar" for the same source term on the same surface is inconsistent.
-- `tip_add_to_homescreen` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — Stray preposition "a" before the line-break placeholder makes the sentence ungrammatical.
-    - Current: `con un toque a %1$s Menú`
-    - Suggest: `con un toque%1$s Menú`
-    - The source ends the first clause at "you use most" and %1$s is a line break, so the trailing "a" is a leftover that breaks the sentence.
-- `tip_autocomplete_url` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — "Autocomplete URLs" (a noun-phrase feature description) is rendered as the imperative "Autocomplete las URLs", and the string uses formal usted instead of the locale's voseo.
-    - Current: `Autocomplete las URLs para los sitios que más usa Mantenga presionada cualquier URL en la barra de direcciones`
-    - Suggest: `Autocompletá las URL de los sitios que más usás Mantené presionada cualquier URL en la barra de direcciones`
-    - The source tip tells the user how to autocomplete URLs; the target's formal imperatives ("Autocomplete", "usa", "Mantenga") clash with the voseo register used in the other tips ("Conseguí acceso… que más usás").
-- `tip_disable_tracking_protection` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — Formal usted imperative "Pruebe" instead of the locale's voseo form.
-    - Current: `Pruebe desactivar la Protección de rastreo`
-    - Suggest: `Probá desactivar la Protección de rastreo`
-    - Register inconsistency with the voseo address used in other Focus es-AR strings ("Conseguí acceso…", "¡Estás protegido!").
-- `tip_open_in_new_tab` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — Formal usted imperatives ("Abra", "Mantenga") instead of the locale's voseo forms.
-    - Current: `Abra un enlace en una nueva pestaña Mantenga presionado cualquier enlace en una página`
-    - Suggest: `Abrí un enlace en una nueva pestaña Mantené presionado cualquier enlace en una página`
-    - Register inconsistency with the voseo address used elsewhere in the es-AR Focus tips.
-- `tip_set_default_browser` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — Formal usted imperative and possessive ("Configure … su navegador") instead of the locale's voseo forms.
-    - Current: `Configure %1$s como su navegador predeterminado`
-    - Suggest: `Configurá %1$s como tu navegador predeterminado`
-    - Register inconsistency with the voseo address used in other es-AR Focus strings ("Conseguí acceso…", "tus necesidades").
+_Nothing retired._
 
 ---
 
@@ -120,7 +45,7 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,735 |
+| Strings | 2,746 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f39118d70d88` |
-| **Previous run** | 2026-08-24 @ `e8622a909368` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
+| **Previous run** | 2026-09-01 @ `f39118d70d88` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 39 of 2,713 |
+| **Strings reviewed this run** | 5 of 2,718 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for zh-CN: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `sync_no_devices_available_description` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "Any devices ... will appear here" is rendered as "所有…设备都将显示在这里", asserting all such devices are shown rather than stating that devices which sign in and sync will appear.
-    - Current: `所有已登录并与此账户同步的设备都将显示在这里。`
-    - Source: `Any devices signed in and syncing to this account will appear here.`
-    - Suggest: `任何登录此账户并同步的设备都会显示在这里。`
-    - The source is a conditional statement about future devices; "所有…都将显示" changes it into a blanket claim.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -38,68 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (15)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `sports_widget_change_team` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — Menu item "Change team" translated as a noun phrase "other teams".
-    - Current: `其他队伍`
-    - Suggest: `更改球队`
-    - The source is an action menu item meaning to change the selected team; the target drops the action and is also inconsistent with 球队 used in neighboring sports widget strings.
-- `sports_widget_close_team_selection_sheet_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "sheet" (bottom sheet UI) mistranslated as 表单 (form).
-    - Current: `关闭球队选择表单`
-    - Suggest: `关闭球队选择面板`
-    - The source refers to a bottom sheet UI element, not a form; 表单 means form/questionnaire.
-- `sports_widget_countdown_hours` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — Abbreviated hour label uses two characters 小时 instead of a single-character abbreviation.
-    - Current: `小时`
-    - Suggest: `时`
-    - The developer comment asks for a single character equivalent where one exists; Chinese has 时 as the standard single-character abbreviation for hour, and the string is truncated to 2 characters in a countdown pill.
-- `sports_widget_countdown_minutes` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — Abbreviated minute label uses two characters 分钟 instead of the single-character 分.
-    - Current: `分钟`
-    - Suggest: `分`
-    - The developer comment asks for a single-character equivalent if the language has one; 分 is the standard single-character abbreviation for minute.
-- `sports_widget_country_england` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — England is translated as 英国 (the United Kingdom) instead of 英格兰.
-    - Current: `英国`
-    - Suggest: `英格兰`
-    - The source is "England", the national football team/country entry distinct from Scotland; 英国 means the whole United Kingdom, which is a different entity and inconsistent with 苏格兰 in the sibling string.
-- `sports_widget_error_connection_interrupted` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — Halfwidth em dash surrounded by spaces instead of the fullwidth punctuation convention.
-    - Current: `连接中断 — 实时更新已暂停。`
-    - Suggest: `连接中断——实时更新已暂停。`
-    - zh-CN uses fullwidth punctuation without surrounding spaces; the spaced dash copies English spacing conventions.
-- `sports_widget_final_results_page_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "World Cup final results" is rendered 世界杯最终结果 here but 世界杯决赛结果 in the sibling string.
-    - Current: `世界杯最终结果`
-    - Suggest: `世界杯决赛结果`
-    - The same source phrase "World Cup final results" is translated inconsistently on the same surface; sports_widget_final_results_content_description uses 决赛结果, matching sports_widget_final = 决赛.
-- `sports_widget_upcoming_match_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — Extra space after the fullwidth colon in the content description.
-    - Current: `即将进行： %1$s`
-    - Suggest: `即将进行：%1$s`
-    - A fullwidth colon already includes trailing space in zh-CN typography; the additional ASCII space is a spacing defect.
-- `add_custom_autocomplete_label` — `mozilla-mobile/focus-android/app/src/main/res/values-zh-rCN/strings.xml` — "Add link to autocomplete" is translated as "添加自动补全的链接", which reverses the relationship.
-    - Current: `添加自动补全的链接`
-    - Suggest: `将链接添加到自动补全`
-    - The source means adding the current URL to the autocomplete list; the translation reads as "add a link of autocomplete", losing the target of the action.
-- `cookie_banner_exception_panel_description_site_is_not_supported` — `mozilla-mobile/focus-android/app/src/main/res/values-zh-rCN/strings.xml` — "review this website and add support" is rendered as "调查此网站以在将来完成支持", changing "review" to "investigate".
-    - Current: `调查此网站以在将来完成支持`
-    - Suggest: `审核此网站并在将来添加支持`
-    - Source asks the team to review the site and add support in the future; 调查 (investigate) misstates the action.
-- `cookie_banner_exception_panel_description_state_on_for_site` — `mozilla-mobile/focus-android/app/src/main/res/values-zh-rCN/strings.xml` — "Clearing all cookies" is rendered without "all", weakening the warning.
-    - Current: `清除 Cookie 可能会导致您退出登录，或清空购物车。`
-    - Suggest: `清除所有 Cookie 可能会导致您退出登录，或清空购物车。`
-    - Source says "Clearing all cookies may sign you out or empty shopping carts."; the qualifier "all" is dropped.
-- `preference_open_new_tab` — `mozilla-mobile/focus-android/app/src/main/res/values-zh-rCN/strings.xml` — The translation drops the "in new tab" concept of "Switch to link in new tab immediately".
-    - Current: `立即显示新建打开的链接`
-    - Suggest: `立即切换到在新标签页中打开的链接`
-    - The source and developer comment describe switching to a newly opened tab immediately; the target omits "new tab" and says only "immediately show newly opened link".
-- `teaser` — `mozilla-mobile/focus-android/app/src/main/res/values-zh-rCN/strings.xml` — Second line "Browse. Erase. Repeat." is replaced with unrelated wording that drops "Erase" and "Repeat".
-    - Current: `无痕浏览，不必劳心。`
-    - Suggest: `浏览。清除。周而复始。`
-    - The source's three-step slogan (browse, erase, repeat) is not conveyed; "不必劳心" (no need to worry) is invented content.
-- `tip_autocomplete_url` — `mozilla-mobile/focus-android/app/src/main/res/values-zh-rCN/strings.xml` — Misplaced particle "的" makes the phrase ungrammatical.
-    - Current: `长按地址栏的中任一链接`
-    - Suggest: `长按地址栏中的任一网址`
-    - "地址栏的中任一链接" is ungrammatical; should be "地址栏中的", and the source refers to URLs, not links.
-- `tip_disable_tracking_protection` — `mozilla-mobile/focus-android/app/src/main/res/values-zh-rCN/strings.xml` — Duplicated question mark.
-    - Current: `网站表现异常？？`
-    - Suggest: `网站表现异常？`
-    - The source has a single question mark; the translation repeats it.
+_Nothing retired._
 
 ---
 
@@ -108,8 +45,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,713 |
-| Missing strings | 22 |
+| Strings | 2,718 |
+| Missing strings | 28 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -126,11 +63,11 @@ _Nothing to re-read._
 
 ### Completeness
 
-**22 strings** are not translated yet, concentrated in:
+**28 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — 13
-- `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-zh-rCN/strings.xml` — 5
+- `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — 20
 - `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-zh-rCN/strings.xml` — 4
+- `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-zh-rCN/strings.xml` — 4
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
