@@ -76,7 +76,8 @@ variants:
   en-CA: en-US
 
 # Starting with Italian, as Android did. Nineteen of the twenty locales the
-# other projects track exist here; fy-NL has no iOS localization.
+# other projects track exist here; fy-NL has no iOS localization. hi-IN is
+# tracked on mobile only, and exists here as well as on Android.
 locales:
   - cs
   - de
@@ -86,6 +87,7 @@ locales:
   - es-ES
   - es-MX
   - fr
+  - hi-IN
   - hu
   - id
   - it

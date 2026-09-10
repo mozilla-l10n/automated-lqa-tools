@@ -1,23 +1,32 @@
 # Firefox for iOS — l10n QA
 
-- **Generated:** 2026-09-07
-- **Locales tracked:** 19 (19 with recorded state)
-- **Findings:** 1,246 raised, 38 fixed (3%), 1,141 open
+- **Generated:** 2026-09-10
+- **Locales tracked:** 20 (20 with recorded state)
+- **Findings:** 1,325 raised, 38 fixed (2%), 1,220 open
 - **Closed by a person:** 14 dismissed, 52 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
 ## Read these first
 
-### Reads as a deliberate edit (0)
+### Reads as a deliberate edit (2)
 
-_None. The reviewer sets this flag only on a finding where the localized text changes what the product says about itself, its users or its behaviour; it is left unset on the vast majority of mistranslations._
+The translation makes the product assert something the en-US never said. Nothing here says the change was intended — that cannot be read off the text, which is exactly the problem, because a user cannot read it off either.
+
+- **`hi-IN`** `NSMicrophoneUsageDescription` — `Client/en-US.lproj/InfoPlist.strings`
+    - Microphone permission description translated as taking and uploading videos, omitting Firefox and the microphone/audio recording purpose.
+    - Current: `यह आपको वीडियो लेने और अपलोड करने देता है।`
+    - Suggest: `Firefox ऑडियो रिकॉर्ड करने और अपलोड करने के लिए आपके माइक्रोफ़ोन का उपयोग करता है।`
+- **`hi-IN`** `Oops! Firefox crashed` — `Shared/en-US.lproj/Localizable.strings`
+    - "crashed" is rendered as "नष्ट हो गया" (was destroyed), which is not the software sense of crashing.
+    - Current: `उफ़! Firefox नष्ट हो गया`
+    - Suggest: `उफ़! Firefox क्रैश हो गया`
 
 ### Broken output — impact 1 (0)
 
 _Nothing open at impact 1._
 
-### Wrong content — impact 2 (644)
+### Wrong content — impact 2 (677)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/firefox_ios.md`.
 
@@ -31,6 +40,7 @@ Too many to list here; the per-locale counts are in the table below and every on
 | [es-ES](es-ES/firefox_ios.md) | 2026-09-07 | incremental | `386c3ca4` | 1,922 | 0 | **51** | 27 | 0 | 0 | 0 |
 | [es-MX](es-MX/firefox_ios.md) | 2026-09-07 | incremental | `386c3ca4` | 1,884 | 38 | **114** | 64 | 1 | 0 | 0 |
 | [fr](fr/firefox_ios.md) | 2026-09-07 | incremental | `386c3ca4` | 1,920 | 2 | **45** | 30 | 0 | 0 | 0 |
+| [hi-IN](hi-IN/firefox_ios.md) | 2026-09-10 | baseline | `4e8024d2` | 602 | 1,320 | **79** | 33 | 0 | 0 | 0 |
 | [hu](hu/firefox_ios.md) | 2026-09-07 | incremental | `386c3ca4` | 1,916 | 6 | **80** | 40 | 0 | 0 | 0 |
 | [id](id/firefox_ios.md) | 2026-09-07 | incremental | `386c3ca4` | 1,922 | 0 | **91** | 40 | 0 | 0 | 0 |
 | [it](it/firefox_ios.md) | 2026-09-07 | incremental | `386c3ca4` | 1,922 | 0 | **0** | 0 | 16 | 14 | 2 |
