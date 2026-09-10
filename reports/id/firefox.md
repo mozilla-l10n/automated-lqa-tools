@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
-| **Previous run** | 2026-09-03 @ `023f527865cb` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
+| **Previous run** | 2026-09-03 @ `075eb543fd91` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 3 of 15,534 |
+| **Strings reviewed this run** | 155 of 15,688 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,28 @@ Also for id: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (4)
 
-_No new findings._
+- `action-log-checked-world-cup-live` — `browser/browser/aiWindowContent.ftl` — "Checked" is rendered as "telah dicari" (searched) instead of "telah diperiksa".
+    - Current: `Pertandingan Piala Dunia yang sedang berlangsung telah dicari`
+    - Source: `Checked live World Cup matches`
+    - Suggest: `Pertandingan Piala Dunia yang sedang berlangsung telah diperiksa`
+    - The source says "Checked live World Cup matches"; the parallel string action-log-checked-memories correctly uses "diperiksa". "dicari" means searched, matching a different action log entry.
+- `action-log-read-page` — `browser/browser/aiWindowContent.ftl` — Past-tense "Read page content" is translated as an imperative/present "Baca isi laman".
+    - Current: `Baca isi laman`
+    - Source: `Read page content`
+    - Suggest: `Isi laman telah dibaca`
+    - The developer comment states "Read is past tense, to indicate that the action has been completed"; "Baca isi laman" reads as a command to read the page, unlike the other completed-action labels which use "telah …".
+- `urlbar-result-explanation-last-visited-absolute` — `browser/browser/browser.ftl` — Passive/active mismatch: "Terakhir Anda kunjungi" is ungrammatical mixing of active and passive forms.
+    - Current: `Terakhir Anda kunjungi pada { $date }`
+    - Source: `You last visited on { $date }`
+    - Suggest: `Terakhir dikunjungi pada { $date }`
+    - en-US "You last visited on { $date }"; the other variants of the same message use "Terakhir dikunjungi" or "Anda terakhir mengunjungi". "Terakhir Anda kunjungi" is grammatically incorrect Indonesian and inconsistent with the sibling strings.
+- `taskbar-tabs-email-callout-title` — `browser/browser/featureCallout.ftl` — "Keep" rendered as "Simpan" (save/store) instead of keeping the email accessible in the taskbar.
+    - Current: `Simpan surel Anda di bilah tugas`
+    - Source: `Keep your email in your taskbar`
+    - Suggest: `Tetap buka surel Anda di bilah tugas`
+    - The source "Keep your email in your taskbar" means keeping the email app pinned/available in the taskbar, not saving/storing email there; "Simpan" suggests storing data in the taskbar.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +63,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 354 |
-| Strings | 15,534 |
-| Missing strings | 2,720 |
+| Files | 356 |
+| Strings | 15,688 |
+| Missing strings | 2,584 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 8 |
+| Files absent from the locale | 6 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,30 +82,28 @@ _Nothing retired._
 
 ### Completeness
 
-**2,720 strings** are not translated yet, concentrated in:
+**2,584 strings** are not translated yet, concentrated in:
 
+- `browser/browser/newtab/newtab.ftl` — 442
 - `browser/browser/preferences/preferences.ftl` — 432
-- `browser/browser/newtab/newtab.ftl` — 427
-- `browser/browser/aiWindow.ftl` — 161
+- `browser/browser/aiWindow.ftl` — 162
 - `browser/browser/ipProtection.ftl` — 146
 - `browser/browser/newtab/onboarding.ftl` — 98
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 88
-- `browser/browser/aiWindowContent.ftl` — 80
 - `browser/browser/newtab/asrouter.ftl` — 79
-- `browser/browser/browser.ftl` — 63
-- `toolkit/toolkit/about/aboutAddons.ftl` — 62
-- `browser/browser/featureCallout.ftl` — 61
+- `toolkit/toolkit/about/aboutAddons.ftl` — 61
+- `browser/browser/featureCallout.ftl` — 57
 - `browser/browser/profiles.ftl` — 56
+- `browser/browser/tabbrowser.ftl` — 41
+- `browser/browser/customkeys.ftl` — 40
 
 **Files absent from the locale:**
 
 - `browser/browser/aiWindow.ftl`
-- `browser/browser/aiWindowContent.ftl`
 - `browser/browser/ipProtection.ftl`
 - `browser/browser/sharePanel.ftl`
 - `toolkit/services/aboutSyncLog.ftl`
 - `toolkit/toolkit/global/mozPromo.ftl`
-- `toolkit/toolkit/global/theme-picker.ftl`
 - `toolkit/toolkit/pdfviewer/embedFallback.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
@@ -97,9 +114,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 453, `straight-double` 134, `curly-single` 85 | **curly-double** |
+| quotes | `curly-double` 455, `straight-double` 134, `curly-single` 85 | **curly-double** |
 | apostrophe | `typographic` 95, `straight` 42 | _mixed_ |
-| ellipsis | `char` 412, `ascii` 10 | **char** |
+| ellipsis | `char` 415, `ascii` 10 | **char** |
 | dash | `em` 77, `en` 1 | **em** |
 | nbsp | `total` 8, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
@@ -112,14 +129,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (327)
+## 3. Open findings (331)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 83 |
-| 2 | Wrong content (says something other than the English) | 172 |
-| 3 | Degraded language (grammar, spelling, terminology) | 54 |
+| 2 | Wrong content (says something other than the English) | 175 |
+| 3 | Degraded language (grammar, spelling, terminology) | 55 |
 | 4 | Cosmetic (typography, spacing) | 17 |
 
 ### A. Functional, markup, variables & plurals
@@ -408,6 +425,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `action-log-checked-world-cup-live` — `browser/browser/aiWindowContent.ftl` — "Checked" is rendered as "telah dicari" (searched) instead of "telah diperiksa".
+    - Current: `Pertandingan Piala Dunia yang sedang berlangsung telah dicari`
+    - Source: `Checked live World Cup matches`
+    - Suggest: `Pertandingan Piala Dunia yang sedang berlangsung telah diperiksa`
+    - The source says "Checked live World Cup matches"; the parallel string action-log-checked-memories correctly uses "diperiksa". "dicari" means searched, matching a different action log entry.
+- `action-log-read-page` — `browser/browser/aiWindowContent.ftl` — Past-tense "Read page content" is translated as an imperative/present "Baca isi laman".
+    - Current: `Baca isi laman`
+    - Source: `Read page content`
+    - Suggest: `Isi laman telah dibaca`
+    - The developer comment states "Read is past tense, to indicate that the action has been completed"; "Baca isi laman" reads as a command to read the page, unlike the other completed-action labels which use "telah …".
 - `appmenu-referrals2` — `browser/browser/appmenu.ftl` — "Share" is translated as "Sembunyikan" (Hide), which is a completely different action.
     - Current: `Sembunyikan { -brand-product-name }`
     - Source: `accesskey: r label: Share { -brand-product-name }`
@@ -423,6 +450,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `{ -brand-full-name }`
     - Suggest: `{ -brand-full-name }`
     - en-US contains a single { -brand-full-name }; the duplication makes the OS authentication dialog caption read "Mozilla FirefoxMozilla Firefox".
+- `taskbar-tabs-email-callout-title` — `browser/browser/featureCallout.ftl` — "Keep" rendered as "Simpan" (save/store) instead of keeping the email accessible in the taskbar.
+    - Current: `Simpan surel Anda di bilah tugas`
+    - Source: `Keep your email in your taskbar`
+    - Suggest: `Tetap buka surel Anda di bilah tugas`
+    - The source "Keep your email in your taskbar" means keeping the email app pinned/available in the taskbar, not saving/storing email there; "Simpan" suggests storing data in the taskbar.
 - `appearance-browser-icon-pride` — `browser/browser/preferences/browserIcon.ftl` — "Pride" translated as the emotion rather than kept as the name
     - Current: `Kebanggaan`
     - Source: `label: Pride`
@@ -541,6 +573,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Remove All Logins…`
     - Suggest: `Hapus Semua Info Masuk…`
     - The adjacent menu items use "Info Masuk" (Export Logins → "Ekspor Info Masuk…"); "Log Masuk" is an inconsistent rendering of the same term in the same menu (also in about-logins-confirm-remove-all-dialog-checkbox-label).
+- `urlbar-result-explanation-last-visited-absolute` — `browser/browser/browser.ftl` — Passive/active mismatch: "Terakhir Anda kunjungi" is ungrammatical mixing of active and passive forms.
+    - Current: `Terakhir Anda kunjungi pada { $date }`
+    - Source: `You last visited on { $date }`
+    - Suggest: `Terakhir dikunjungi pada { $date }`
+    - en-US "You last visited on { $date }"; the other variants of the same message use "Terakhir dikunjungi" or "Anda terakhir mengunjungi". "Terakhir Anda kunjungi" is grammatically incorrect Indonesian and inconsistent with the sibling strings.
 - `pending-crash-reports-message` — `browser/browser/contentCrash.ftl` — "crash report" translated as "laporan kemacetan" instead of "laporan kerusakan"
     - Current: `laporan kemacetan yang belum terkirim`
     - Source: `{$reportCount ->} [one] You have an unsent crash report [other] You have { $reportCount } unsent crash reports`

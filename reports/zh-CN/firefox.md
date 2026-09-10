@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
-| **Previous run** | 2026-09-03 @ `023f527865cb` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
+| **Previous run** | 2026-09-03 @ `075eb543fd91` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 6 of 18,000 |
+| **Strings reviewed this run** | 157 of 18,131 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,53 @@ Also for zh-CN: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (9)
 
-_No new findings._
+- `share-panel-os-share-2` — `browser/browser/sharePanel.ftl` — The [other] variant drops the ellipsis and renders "Share with…" as "共享方式" ("sharing method"), inconsistent with the other variants.
+    - Current: `[other] 共享方式`
+    - Source: `label: {$sel_1 ->} [windows] Share with Windows… [macos] Share with Mac… [other] Share with…`
+    - Suggest: `[other] 共享至…`
+    - en-US "Share with…" is an action label with a trailing ellipsis; "共享方式" is a noun phrase meaning "sharing method" and omits the ellipsis present in the other two variants.
+- `share-panel-os-share` — `browser/browser/sharePanel.ftl` — "Share with…" is rendered as the noun phrase "共享方式" and the ellipsis is dropped.
+    - Current: `label: 共享方式`
+    - Source: `label: Share with…`
+    - Suggest: `label: 共享至…`
+    - en-US is an action menu item "Share with…"; "共享方式" means "sharing method", and the trailing ellipsis indicating a follow-up dialog is missing.
+- `ipprotection-connection-status-blocked-error-description-1` — `browser/browser/ipProtection.ftl` — Adds hedging "可能" (may) not present in the source statement.
+    - Current: `VPN 可能并非在所有位置都可用`
+    - Source: `Local laws and restrictions limit where you can use VPN. <a data-l10n-name="learn-more-link">Learn more</a>`
+    - Suggest: `VPN 并非在所有位置都可用`
+    - en-US states plainly that local laws and restrictions limit where VPN can be used; the Chinese adds "可能" (possibly), weakening the assertion.
+- `autofill-country-warning-message-2` — `browser/browser/preferences/formAutofill.ftl` — Translation adds a full stop that the en-US source does not have.
+    - Current: `表单自动填写目前仅部分国家/地区可用。`
+    - Source: `Form autofill is currently only available for certain countries`
+    - Suggest: `表单自动填写目前仅部分国家/地区可用`
+    - The en-US string "Form autofill is currently only available for certain countries" has no terminating period; the added 。 deviates from the source punctuation.
+- `containers-external-links-check` — `browser/browser/preferences/preferences.ftl` — Meaning reversed/garbled: source says links from external apps should not use containers, target reads as "do not use container tabs to open links from external apps" losing the intended structure.
+    - Current: `不使用身份标签页打开来自外部应用的链接`
+    - Source: `accesskey: D label: Don’t use containers for links opened from external apps`
+    - Suggest: `从外部应用打开的链接不使用身份标签页`
+    - The en-US label means: for links opened from external apps, don’t use containers. The current wording reads as an instruction about how to open links rather than about which container is used, and the developer comment states such links always open outside of any container.
+- `newtab-privacy-message-info-1-cta` — `browser/browser/newtab/newtab.ftl` — Same en-US string "View protections" translated inconsistently with the sibling CTA strings.
+    - Current: `查看保护情况`
+    - Source: `View protections`
+    - Suggest: `查看保护信息`
+    - All other newtab-privacy-message-info-*-cta strings with identical en-US source "View protections" use 查看保护信息; this one differs on the same surface.
+- `newtab-wallpaper-your-images-folder` — `browser/browser/newtab/newtab.ftl` — The accessible name drops "Your images" as the tile name and mistranslates the description as "your saved pictures, wallpapers".
+    - Current: `aria-label: 您保存的图片、壁纸`
+    - Source: `aria-label: Your images, wallpapers that you have saved`
+    - Suggest: `aria-label: 您的图片，您保存的壁纸`
+    - en-US is "Your images, wallpapers that you have saved" — the folder name "Your images" followed by a description; the Chinese merges them into a list of two nouns and loses the folder name.
+- `newtab-carousel-next` — `browser/browser/newtab/newtab.ftl` — "Next" is translated as "上一篇" (previous), duplicating the previous-button label.
+    - Current: `上一篇`
+    - Source: `aria-label: Next`
+    - Suggest: `下一篇`
+    - en-US source is "Next" for the button that goes to the next carousel slide; the target says "previous".
+- `aiwindow-starter-writing-proofread` — `browser/browser/aiWindow.ftl` — "message" rendered as "邮件" (email), narrowing the meaning.
+    - Current: `校对邮件`
+    - Source: `Proofread a message`
+    - Suggest: `校对消息`
+    - en-US "Proofread a message" refers to a message generally, not specifically an email.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +88,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 359 |
-| Strings | 18,000 |
-| Missing strings | 254 |
+| Files | 360 |
+| Strings | 18,131 |
+| Missing strings | 141 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 3 |
+| Files absent from the locale | 2 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,24 +107,23 @@ _Nothing retired._
 
 ### Completeness
 
-**254 strings** are not translated yet, concentrated in:
+**141 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 47
 - `toolkit/services/aboutSyncLog.ftl` — 26
 - `devtools/client/toolbox-options.ftl` — 18
-- `browser/browser/sharePanel.ftl` — 17
 - `toolkit/toolkit/about/aboutNetworking.ftl` — 15
 - `toolkit/toolkit/about/url-classifier.ftl` — 12
 - `toolkit/toolkit/neterror/netError.ftl` — 12
-- `browser/browser/permissions.ftl` — 10
-- `browser/browser/preferences/preferences.ftl` — 10
 - `dom/chrome/dom/dom.properties` — 10
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 8
-- `browser/browser/sidebar.ftl` — 7
+- `toolkit/toolkit/pdfviewer/viewer.ftl` — 7
+- `browser/browser/newtab/newtab.ftl` — 6
+- `browser/browser/ipProtection.ftl` — 4
+- `toolkit/chrome/mozapps/profile/profileSelection.properties` — 4
+- `devtools/client/inspector.ftl` — 3
+- `toolkit/toolkit/about/aboutAddons.ftl` — 3
 
 **Files absent from the locale:**
 
-- `browser/browser/sharePanel.ftl`
 - `toolkit/services/aboutSyncLog.ftl`
 - `toolkit/toolkit/pdfviewer/embedFallback.ftl`
 
@@ -92,12 +135,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 981, `straight-double` 46, `curly-single` 41 | **curly-double** |
+| quotes | `curly-double` 991, `straight-double` 46, `curly-single` 41 | **curly-double** |
 | apostrophe | `typographic` 46, `straight` 20 | _mixed_ |
-| ellipsis | `char` 441, `ascii` 13 | **char** |
+| ellipsis | `char` 443, `ascii` 13 | **char** |
 | dash | `em` 79, `en` 2 | **em** |
-| fullwidth | `punctuation` 9535 | **punctuation** |
-| register | `informal` 16, `formal` 1746 | **formal** |
+| fullwidth | `punctuation` 9582 | **punctuation** |
+| register | `informal` 16, `formal` 1756 | **formal** |
 
 ---
 
@@ -108,15 +151,15 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (54)
+## 3. Open findings (63)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 4 |
-| 2 | Wrong content (says something other than the English) | 8 |
-| 3 | Degraded language (grammar, spelling, terminology) | 7 |
-| 4 | Cosmetic (typography, spacing) | 35 |
+| 2 | Wrong content (says something other than the English) | 15 |
+| 3 | Degraded language (grammar, spelling, terminology) | 8 |
+| 4 | Cosmetic (typography, spacing) | 36 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -179,9 +222,44 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `aiwindow-starter-writing-proofread` — `browser/browser/aiWindow.ftl` — "message" rendered as "邮件" (email), narrowing the meaning.
+    - Current: `校对邮件`
+    - Source: `Proofread a message`
+    - Suggest: `校对消息`
+    - en-US "Proofread a message" refers to a message generally, not specifically an email.
+- `ipprotection-connection-status-blocked-error-description-1` — `browser/browser/ipProtection.ftl` — Adds hedging "可能" (may) not present in the source statement.
+    - Current: `VPN 可能并非在所有位置都可用`
+    - Source: `Local laws and restrictions limit where you can use VPN. <a data-l10n-name="learn-more-link">Learn more</a>`
+    - Suggest: `VPN 并非在所有位置都可用`
+    - en-US states plainly that local laws and restrictions limit where VPN can be used; the Chinese adds "可能" (possibly), weakening the assertion.
+- `newtab-carousel-next` — `browser/browser/newtab/newtab.ftl` — "Next" is translated as "上一篇" (previous), duplicating the previous-button label.
+    - Current: `上一篇`
+    - Source: `aria-label: Next`
+    - Suggest: `下一篇`
+    - en-US source is "Next" for the button that goes to the next carousel slide; the target says "previous".
 - `newtab-privacy-across-sites` — `browser/browser/newtab/newtab.ftl` — newtab-privacy-across-sites (newtab.ftl) — "Across { $count } sites" → "包含 { $count } 个网站" (includes) → SUGGEST: "涉及 { $count } 个网站" (blocked across).
     - Source: `{$count ->} [one] Across { $count } site [other] Across { $count } sites`
     - Suggest: `"包含 { $count } 个网站"`
+- `newtab-wallpaper-your-images-folder` — `browser/browser/newtab/newtab.ftl` — The accessible name drops "Your images" as the tile name and mistranslates the description as "your saved pictures, wallpapers".
+    - Current: `aria-label: 您保存的图片、壁纸`
+    - Source: `aria-label: Your images, wallpapers that you have saved`
+    - Suggest: `aria-label: 您的图片，您保存的壁纸`
+    - en-US is "Your images, wallpapers that you have saved" — the folder name "Your images" followed by a description; the Chinese merges them into a list of two nouns and loses the folder name.
+- `containers-external-links-check` — `browser/browser/preferences/preferences.ftl` — Meaning reversed/garbled: source says links from external apps should not use containers, target reads as "do not use container tabs to open links from external apps" losing the intended structure.
+    - Current: `不使用身份标签页打开来自外部应用的链接`
+    - Source: `accesskey: D label: Don’t use containers for links opened from external apps`
+    - Suggest: `从外部应用打开的链接不使用身份标签页`
+    - The en-US label means: for links opened from external apps, don’t use containers. The current wording reads as an instruction about how to open links rather than about which container is used, and the developer comment states such links always open outside of any container.
+- `share-panel-os-share` — `browser/browser/sharePanel.ftl` — "Share with…" is rendered as the noun phrase "共享方式" and the ellipsis is dropped.
+    - Current: `label: 共享方式`
+    - Source: `label: Share with…`
+    - Suggest: `label: 共享至…`
+    - en-US is an action menu item "Share with…"; "共享方式" means "sharing method", and the trailing ellipsis indicating a follow-up dialog is missing.
+- `share-panel-os-share-2` — `browser/browser/sharePanel.ftl` — The [other] variant drops the ellipsis and renders "Share with…" as "共享方式" ("sharing method"), inconsistent with the other variants.
+    - Current: `[other] 共享方式`
+    - Source: `label: {$sel_1 ->} [windows] Share with Windows… [macos] Share with Mac… [other] Share with…`
+    - Suggest: `[other] 共享至…`
+    - en-US "Share with…" is an action label with a trailing ellipsis; "共享方式" is a noun phrase meaning "sharing method" and omits the ellipsis present in the other two variants.
 - `synced-tabs-context-open-all-in-tabs` — `browser/browser/syncedTabs.ftl` — synced-tabs-context-open-all-in-tabs (syncedTabs.ftl) — "Open All in Tabs" → "打开标签页组" (open tab group) → SUGGEST: "全部打开" (dev-comment says match places.ftl).
     - Source: `accesskey: O label: Open All in Tabs`
     - Suggest: `"打开标签页组"`
@@ -215,6 +293,11 @@ _Nothing in this category._
 
 ### D. Terminology, register & consistency
 
+- `newtab-privacy-message-info-1-cta` — `browser/browser/newtab/newtab.ftl` — Same en-US string "View protections" translated inconsistently with the sibling CTA strings.
+    - Current: `查看保护情况`
+    - Source: `View protections`
+    - Suggest: `查看保护信息`
+    - All other newtab-privacy-message-info-*-cta strings with identical en-US source "View protections" use 查看保护信息; this one differs on the same surface.
 - `onboarding-many-tabs-title` — `browser/browser/newtab/onboarding.ftl` — onboarding-many-tabs-title (onboarding.ftl) — "你的标签，由你而定" → 您.
     - Source: `Your tabs, your way`
     - Suggest: `您.`
@@ -259,6 +342,11 @@ _Nothing in this category._
 - `amo-picker-subtitle` — `browser/browser/newtab/onboarding.ftl` — Reversed / mismatched curly quotes (opening/closing swapped or mixed): load-module-help-root-certs-module-name (deviceManager.ftl, ”Root Certs“), amo-picker-subtitle (onboarding.ftl, ”小程序“), unified-extensions-item-open-menu (unifiedExtensions.ftl, ”{ $extensionName }”), profiles-delete-profile-confirm (aboutProfiles.ftl, curly “ opened, straight " closed) → use “…”.
     - Source: `Extensions are like apps for your browser, and they let you protect passwords, download videos, find deals, block annoying ads, change how your browser looks, and much more.`
     - Suggest: `use “…”.`
+- `autofill-country-warning-message-2` — `browser/browser/preferences/formAutofill.ftl` — Translation adds a full stop that the en-US source does not have.
+    - Current: `表单自动填写目前仅部分国家/地区可用。`
+    - Source: `Form autofill is currently only available for certain countries`
+    - Suggest: `表单自动填写目前仅部分国家/地区可用`
+    - The en-US string "Form autofill is currently only available for certain countries" has no terminating period; the added 。 deviates from the source punctuation.
 - `performance-default-content-process-count` — `browser/browser/preferences/preferences.ftl` — Half-width parentheses / comma. performance-default-content-process-count "(默认)" → （默认）; about-mozilla-title-6-27/-from-6-27 "书, 6:27" → 书，.
     - Source: `label: { $num } (default)`
 - `speech-dispatcher-lib-too-old` — `browser/browser/speechDispatcher.ftl` — Wrong terminal punctuation. speech-dispatcher-lib-too-old (speechDispatcher.ftl) ends with 「，」→ 。.

@@ -1172,6 +1172,7 @@
   "WebCompatReporter.Category.Other.v154": "e5f077a7 a22b26b3",
   "WebCompatReporter.Category.SiteNotUsable.v154": "9f8df3c8 e4a617a5",
   "WebCompatReporter.Category.VideoOrAudio.v154": "fcf5aed8 6d872e60",
+  "WebCompatReporter.Fields.ChooseIssueTypeAccessibilityHint.v156": "d75e1894 49b21065 b7b7ff38",
   "WebCompatReporter.Fields.DetailsAccessibilityLabel.v154": "75328c7d 8ca4df18",
   "WebCompatReporter.Fields.DetailsPlaceholder.v154": "d890bf25 34d53241",
   "WebCompatReporter.Fields.URLError.v155": "5c447700 093d858c d6c318ef",

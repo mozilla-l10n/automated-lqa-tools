@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `075eb543fd91` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `c5cf34a26890` |
-| **Previous run** | 2026-09-03 @ `023f527865cb` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
+| **Previous run** | 2026-09-03 @ `075eb543fd91` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 7 of 18,212 |
+| **Strings reviewed this run** | 45 of 18,253 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,31 @@ Also for tr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `newtab-privacy-message-promo-relay-3` — `browser/browser/newtab/newtab.ftl` — "email masks" translated as "e-posta maskesi" but the sentence drops the "keep private" agent structure and, more importantly, omits that the masks are the thing being obtained free — meaning shifted from "Get 50 free email masks" to a fragment.
+    - Current: `Gerçek e-posta adresinizi gizli tutmanızı sağlayacak 50 e-posta maskesi ücretsiz.`
+    - Source: `Get 50 free email masks to help keep your real email private.`
+    - Suggest: `Gerçek e-posta adresinizi gizli tutmanıza yardımcı olacak 50 ücretsiz e-posta maskesi edinin.`
+    - The en-US is an imperative call to action ("Get 50 free email masks…"); the Turkish is a verbless noun phrase and loses the "Get" action.
+- `newtab-widget-section-show-widgets` — `browser/browser/newtab/newtab.ftl` — "widgets" rendered as "Araçlar" (tools) rather than the established Turkish term for widgets.
+    - Current: `aria-label: Araçlar bölümünü göster`
+    - Source: `aria-label: Show the widgets section title: Show widgets`
+    - Suggest: `aria-label: Widget’lar bölümünü göster`
+    - en-US "widgets" is a specific UI term; "araç" is the standard translation for "tool", which is a different concept used elsewhere in the UI.
+- `newtab-privacy-across-sites` — `browser/browser/newtab/newtab.ftl` — Turkish adds a claim that Firefox protected the user, which the source does not say.
+    - Current: `{ $count } sitede sizi koruduk`
+    - Source: `{$count ->} [one] Across { $count } site [other] Across { $count } sites`
+    - Suggest: `{ $count } sitede engellendi`
+    - en-US is just "Across { $count } sites" (developer comment: "Blocked across { $count } sites"); the target asserts "we protected you on { $count } sites", a claim about the product's behaviour that the source never makes.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `ipprotection-feature-introduction-text-summer-promo-1` — `browser/browser/ipProtection.ftl` — Straight apostrophe used instead of the typographic apostrophe.
+    - Current: `31 Ağustos'a`
+    - Source: `Turn it on to keep your browsing more private. <a data-l10n-name="summer-promo-link">Get unlimited bandwidth</a> and more locations to browse from. Now until August 31.`
+    - Suggest: `31 Ağustos’a`
+    - The locale convention is the typographic apostrophe ’ (U+2019); other strings in the same file use "31 Ağustos’tan".
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,8 +63,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 362 |
-| Strings | 18,212 |
-| Missing strings | 42 |
+| Strings | 18,253 |
+| Missing strings | 19 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -59,20 +77,17 @@ _Nothing retired._
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 0 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 28 |
+| Typography deviations from this locale's own norm | 27 |
 
 ### Completeness
 
-**42 strings** are not translated yet, concentrated in:
+**19 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 15
-- `browser/browser/permissions.ftl` — 10
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 8
-- `browser/browser/aiWindow.ftl` — 2
-- `browser/browser/sidebar.ftl` — 2
-- `browser/browser/preferences/preferences.ftl` — 2
-- `devtools/client/netmonitor.properties` — 1
+- `browser/browser/newtab/newtab.ftl` — 14
 - `dom/chrome/dom/dom.properties` — 1
+- `browser/browser/aboutPolicies.ftl` — 1
+- `browser/browser/aiWindow.ftl` — 1
+- `browser/browser/permissions.ftl` — 1
 - `toolkit/toolkit/about/aboutAddons.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
@@ -84,7 +99,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 676, `curly-single` 166, `straight-double` 29 | **curly-double** |
-| apostrophe | `typographic` 982, `straight` 51 | **typographic** |
+| apostrophe | `typographic` 985, `straight` 50 | **typographic** |
 | ellipsis | `char` 463 | **char** |
 | dash | `em` 72, `en` 2 | **em** |
 | nbsp | `total` 9, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
@@ -94,15 +109,20 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ## 2. Systemic items (decisions, not line items)
 
-- **typography — 28 strings** — 28 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
-    - Affected: `BadOpaqueRedirectInterceptionWithURL`, `BlockAutoplayWebAudioStartError`, `InterceptedErrorResponseWithURL`, `InterceptedUsedResponseWithURL`, `LenientThisWarning`, `ManifestIdIsInvalid`, `MediaEMENoCodecsDeprecatedWarning`, `NavigatorGetUserMediaWarning`, `PEDisallowedImportRule`, `PushMessageBadCryptoError`, `PushMessageBadSalt`, `RewriteYouTubeEmbedPathParams` …and 16 more
+- **typography — 27 strings** — 27 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
+    - Affected: `BadOpaqueRedirectInterceptionWithURL`, `BlockAutoplayWebAudioStartError`, `InterceptedErrorResponseWithURL`, `InterceptedUsedResponseWithURL`, `LenientThisWarning`, `ManifestIdIsInvalid`, `MediaEMENoCodecsDeprecatedWarning`, `NavigatorGetUserMediaWarning`, `PEDisallowedImportRule`, `PushMessageBadCryptoError`, `PushMessageBadSalt`, `RewriteYouTubeEmbedPathParams` …and 15 more
 
 ---
 
-## 3. Open findings (132)
+## 3. Open findings (134)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
+- `newtab-privacy-across-sites` — `browser/browser/newtab/newtab.ftl` — Turkish adds a claim that Firefox protected the user, which the source does not say.
+    - Current: `{ $count } sitede sizi koruduk`
+    - Source: `{$count ->} [one] Across { $count } site [other] Across { $count } sites`
+    - Suggest: `{ $count } sitede engellendi`
+    - en-US is just "Across { $count } sites" (developer comment: "Blocked across { $count } sites"); the target asserts "we protected you on { $count } sites", a claim about the product's behaviour that the source never makes.
 - `newtab-privacy-message-info-4` — `browser/browser/newtab/newtab.ftl` — "protection by default" rendered as "protection anytime, anywhere", dropping the default-setting meaning.
     - Current: `{ -brand-short-name } demek her an, her yerde korunma demektir.`
     - Source: `Choosing { -brand-short-name } means choosing protection by default.`
@@ -114,9 +134,9 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 3 |
-| 2 | Wrong content (says something other than the English) | 45 |
-| 3 | Degraded language (grammar, spelling, terminology) | 68 |
-| 4 | Cosmetic (typography, spacing) | 16 |
+| 2 | Wrong content (says something other than the English) | 47 |
+| 3 | Degraded language (grammar, spelling, terminology) | 69 |
+| 4 | Cosmetic (typography, spacing) | 15 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -181,6 +201,11 @@ _Also listed under their own category below._
     - Source: `New { -brand-short-name }. More private. Fewer trackers. No compromises.`
 - `windows-10-eos-challenger-callout-title` — `browser/browser/newtab/asrouter.ftl` — "gereksiz özelliklerle dolu halde gelmez" ≠ en "isn't preloaded like other Big Tech browsers" (= not pre-installed on the device). The second sentence "That's the point." is also dropped.
     - Source: `{ -brand-product-name } isn’t preloaded like other Big Tech browsers. That’s the point.`
+- `newtab-privacy-across-sites` — `browser/browser/newtab/newtab.ftl` — Turkish adds a claim that Firefox protected the user, which the source does not say.
+    - Current: `{ $count } sitede sizi koruduk`
+    - Source: `{$count ->} [one] Across { $count } site [other] Across { $count } sites`
+    - Suggest: `{ $count } sitede engellendi`
+    - en-US is just "Across { $count } sites" (developer comment: "Blocked across { $count } sites"); the target asserts "we protected you on { $count } sites", a claim about the product's behaviour that the source never makes.
 - `newtab-privacy-etp-off-faster-browsing` — `browser/browser/newtab/newtab.ftl` — "Fewer trackers" translated as "Be tracked less" instead of referring to trackers.
     - Current: `Daha az takip edilin.`
     - Source: `Faster browsing. Fewer trackers.`
@@ -196,6 +221,11 @@ _Also listed under their own category below._
     - Source: `Choosing { -brand-short-name } means choosing protection by default.`
     - Suggest: `{ -brand-short-name } demek varsayılan olarak korunma demektir.`
     - The source says choosing the browser means protection is on by default; "her an, her yerde" (anytime, anywhere) is a different claim not present in the en-US.
+- `newtab-privacy-message-promo-relay-3` — `browser/browser/newtab/newtab.ftl` — "email masks" translated as "e-posta maskesi" but the sentence drops the "keep private" agent structure and, more importantly, omits that the masks are the thing being obtained free — meaning shifted from "Get 50 free email masks" to a fragment.
+    - Current: `Gerçek e-posta adresinizi gizli tutmanızı sağlayacak 50 e-posta maskesi ücretsiz.`
+    - Source: `Get 50 free email masks to help keep your real email private.`
+    - Suggest: `Gerçek e-posta adresinizi gizli tutmanıza yardımcı olacak 50 ücretsiz e-posta maskesi edinin.`
+    - The en-US is an imperative call to action ("Get 50 free email masks…"); the Turkish is a verbless noun phrase and loses the "Get" action.
 - `newtab-privacy-message-promo-signin-1` — `browser/browser/newtab/newtab.ftl` — "encrypted" dropped and replaced by vague "güvenle saklayın".
     - Current: `tüm cihazlarınızda güvenle saklayın`
     - Source: `Keep bookmarks, passwords, and tabs encrypted across devices with your { -vendor-short-name } account.`
@@ -373,6 +403,11 @@ _Also listed under their own category below._
     - en-US "Widgets" refers to UI widgets; "Araçlar" means "Tools" and is used elsewhere for Tools menus, causing terminology confusion.
 - `newtab-sports-widget-match-aria-label-upcoming-suspended` — `browser/browser/newtab/newtab.ftl` — "ara verildi" vs the status string newtab-sports-widget-suspended "Askıya alındı".
     - Source: `aria-label: { $homeTeam } vs. { $awayTeam }, suspended`
+- `newtab-widget-section-show-widgets` — `browser/browser/newtab/newtab.ftl` — "widgets" rendered as "Araçlar" (tools) rather than the established Turkish term for widgets.
+    - Current: `aria-label: Araçlar bölümünü göster`
+    - Source: `aria-label: Show the widgets section title: Show widgets`
+    - Suggest: `aria-label: Widget’lar bölümünü göster`
+    - en-US "widgets" is a specific UI term; "araç" is the standard translation for "tool", which is a different concept used elsewhere in the UI.
 - `desktop-to-mobile-subtitle` — `browser/browser/newtab/onboarding.ftl` — `desktop-to-mobile-subtitle` quotes “Mobil cihazla eşitle” but the string it names, `sync-to-mobile-button-label`, reads “Mobil cihazla eşitleyin”
     - Current: `{ -brand-product-name } uygulamasını mobil cihazınıza indirmek için QR kodunu okutun. İndirdikten sonra parolalarınıza, yer imlerinize ve diğer bilgilerinize erişmek için “Mobil cihazla eşitle” seçeneğini seçin.`
     - Source: `Scan the QR code to download { -brand-product-name } for mobile. Once installed, select “Sync to mobile” to access your passwords, bookmarks, and more on the go.`
@@ -479,11 +514,6 @@ _Also listed under their own category below._
 
 - `reader-view-enter-button` — `browser/browser/browser.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
     - Source: `aria-label: Enter Reader View`
-- `ipprotection-feature-introduction-text-summer-promo-1` — `browser/browser/ipProtection.ftl` — Straight apostrophe used instead of the typographic apostrophe.
-    - Current: `31 Ağustos'a`
-    - Source: `Turn it on to keep your browsing more private. <a data-l10n-name="summer-promo-link">Get unlimited bandwidth</a> and more locations to browse from. Now until August 31.`
-    - Suggest: `31 Ağustos’a`
-    - The locale convention is the typographic apostrophe ’ (U+2019); other strings in the same file use "31 Ağustos’tan".
 - `menu-view-enter-readerview` — `browser/browser/menubar.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
     - Source: `accesskey: R label: Enter Reader View`
 - `mr2022-onboarding-pin-primary-button-label` — `browser/browser/newtab/onboarding.ftl` — set-password-reminder (security/…/pippki.ftl), protections-vpn-header-content-subscribed (browser/protections.ftl), permissions-block-popups-exceptions-button4.description (browser/preferences/preferences.ftl), mr2022-onboarding-pin-primary-button-label [macos variant] (browser/newtab/onboarding.ftl), profiles-delete-profile-confirm (toolkit/about/aboutProfiles.ftl), rights-webservices-term-3, ri…
@@ -533,8 +563,9 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (185)
+### Fixed to date (186)
 
+- `ipprotection-feature-introduction-text-summer-promo-1` — `browser/browser/ipProtection.ftl` — fixed 2026-09-07
 - `about-logins-confirm-remove-all-sync-dialog-title` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-24
 - `popup-warning-exceeded-message` — `browser/browser/browser.ftl` — fixed 2026-08-24
 - `reset-pbm-panel-description` — `browser/browser/browser.ftl` — fixed 2026-08-24
@@ -574,4 +605,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `webrtc-sharing-menu` — `browser/browser/webrtcIndicator.ftl` — fixed 2026-08-24
 - `accessibility-text-label-issue-document-title` — `devtools/client/accessibility.ftl` — fixed 2026-08-24
 - `storage-table-type-cache-hint` — `devtools/client/storage.ftl` — fixed 2026-08-24
-- `styleeditor-filter-input` — `devtools/client/styleeditor.ftl` — fixed 2026-08-24

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `117165baae4c` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `117165baae4c` |
-| **Previous run** | 2026-08-24 @ `a2ecb0a822be` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `386c3ca4eca7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `386c3ca4eca7` |
+| **Previous run** | 2026-09-01 @ `117165baae4c` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 3 of 1,838 |
+| **Strings reviewed this run** | 1 of 1,839 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for zh-CN: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `Settings.Browsing.BackgroundAudio.Title.v156` — `zh-CN/firefox-ios.xliff` — "Background Audio" is rendered as "背景音乐" (background music), which names the wrong feature.
-    - Current: `背景音乐`
-    - Source: `Background Audio`
-    - Suggest: `后台音频`
-    - The setting keeps web page audio playing when the app is backgrounded; "背景音乐" means background music, not audio playback in the background.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 94 |
-| Strings | 1,838 |
-| Missing strings | 80 |
+| Strings | 1,839 |
+| Missing strings | 83 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 2 |
 | Files with no en-US counterpart | 0 |
@@ -63,14 +59,14 @@ _Nothing retired._
 
 ### Completeness
 
-**80 strings** are not translated yet, concentrated in:
+**83 strings** are not translated yet, concentrated in:
 
 - `Shared/Supporting Files/en.lproj/WebCompatReporter.strings` — 52
-- `zh-CN/firefox-ios.xliff` — 11
-- `Shared/Supporting Files/en.lproj/PrivacyDashboard.strings` — 7
+- `zh-CN/firefox-ios.xliff` — 13
+- `Shared/Supporting Files/en.lproj/PrivacyDashboard.strings` — 9
 - `zh-CN/firefox-ios.xliff` — 3
 - `zh-CN/firefox-ios.xliff` — 2
-- `zh-CN/firefox-ios.xliff` — 2
+- `zh-CN/firefox-ios.xliff` — 1
 - `zh-CN/firefox-ios.xliff` — 1
 - `zh-CN/firefox-ios.xliff` — 1
 - `zh-CN/firefox-ios.xliff` — 1
@@ -90,7 +86,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 40 | **curly-double** |
 | ellipsis | `char` 15 | **char** |
-| fullwidth | `punctuation` 545 | **punctuation** |
+| fullwidth | `punctuation` 546 | **punctuation** |
 | register | `informal` 1, `formal` 133 | **formal** |
 
 ---

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `117165baae4c` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `117165baae4c` |
-| **Previous run** | 2026-08-24 @ `a2ecb0a822be` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `386c3ca4eca7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `386c3ca4eca7` |
+| **Previous run** | 2026-09-01 @ `117165baae4c` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 103 of 1,916 |
+| **Strings reviewed this run** | 6 of 1,922 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,23 +18,9 @@ Also for es-ES: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `Settings.Search.GoogleLens.Footnote.v153` — `es-ES/firefox-ios.xliff` — "enabled above" mistranslated as "activado en la parte superior" (activated at the top).
-    - Current: `cuando Google está activado en la parte superior`
-    - Source: `Available only when Google is enabled above and is your active search engine while browsing.`
-    - Suggest: `cuando Google está activado más arriba`
-    - The source means Google is enabled in the setting above this one, not that it is 'activated at the top' of something.
-- `WebCompatReporter.Preview.Data.TrackingProtectionSetting.v155` — `es-ES/firefox-ios.xliff` — Agreement error: "mejorada" modifies "protección" instead of forming the product term "Protección contra el rastreo mejorada" — as written it reads as 'enhanced setting'... actually the adjective is misplaced relative to "Configuración".
-    - Current: `Configuración de protección contra el rastreo mejorada para este sitio`
-    - Source: `Enhanced Tracking Protection setting for this site`
-    - Suggest: `Configuración de la protección antirrastreo mejorada para este sitio`
-    - "mejorada" can be read as agreeing with "Configuración", making it "enhanced setting" rather than "Enhanced Tracking Protection"; the established Firefox term is "Protección antirrastreo mejorada".
-- `WebCompatReporter.SubOption.NoVideo.v154` — `es-ES/firefox-ios.xliff` — "video" is missing the accent used in es-ES and in the sibling string.
-    - Current: `No hay video`
-    - Source: `There is no video`
-    - Suggest: `No hay vídeo`
-    - es-ES uses "vídeo"; the related string WebCompatReporter.SubOption.PlaybackFails uses "El vídeo", so this is inconsistent and incorrect for Spain.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -59,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 96 |
-| Strings | 1,916 |
-| Missing strings | 2 |
+| Strings | 1,922 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -73,11 +59,7 @@ _Nothing retired._
 
 ### Completeness
 
-**2 strings** are not translated yet, concentrated in:
-
-- `es-ES/firefox-ios.xliff` — 2
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 

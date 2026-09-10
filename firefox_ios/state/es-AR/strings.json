@@ -584,6 +584,8 @@
   "NativeErrorPage.BadCertDomain.ViewCertificateLink.v149": "9fc7cfb5 9ec6d727",
   "NativeErrorPage.ButtonLabel.v131": "a76c072d 5211deb2",
   "NativeErrorPage.ButtonLabel.v155": "c5dc16c6 58226c77",
+  "NativeErrorPage.CellularDataRestricted.Description.v156": "5de58e8d 28b1d130 7e00438c",
+  "NativeErrorPage.CellularDataRestricted.TitleLabel.v156": "6d9464a0 c3c05d56 26118672",
   "NativeErrorPage.GenericError.Description.v134": "945e6070 fc3c9fa8",
   "NativeErrorPage.GenericError.TitleLabel.v131": "dd37b8aa a92ffa2e",
   "NativeErrorPage.GoBackButton.v149": "d8a6d568 18c0c0cf",
@@ -783,9 +785,11 @@
   "PasswordGenerator.UsePasswordButtonLabel.v132": "1baee4d1 df85ca5c"
  },
  "Shared/Supporting Files/en.lproj/PrivacyDashboard.strings": {
+  "PrivacyDashboard.CategoryAccessibilityLabel.v156": "084d9919 4b301e0b 836cb7f6",
   "PrivacyDashboard.CrossSiteTrackers.v155": "2e107fcc 32248996",
   "PrivacyDashboard.Fingerprinters.v155": "1933f53f 8283347a",
   "PrivacyDashboard.HeaderLabel.v155": "1b8d7983 d5cc9c98",
+  "PrivacyDashboard.HeaderLabelAccessibilityLabel.v156": "09e4936b b13e4f60 30891c92",
   "PrivacyDashboard.HeaderLabelForNoTrackersBlocked.v155": "b976e2aa 09d0f71b",
   "PrivacyDashboard.SocialTrackers.v155": "4a8647aa 877f5062",
   "PrivacyDashboard.TotalTrackersBlockedSince.v155": "fcbdb49a 89a8fb98",

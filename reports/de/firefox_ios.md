@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-01 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `117165baae4c` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `117165baae4c` |
-| **Previous run** | 2026-08-24 @ `a2ecb0a822be` |
+| **Generated** | 2026-09-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `386c3ca4eca7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `386c3ca4eca7` |
+| **Previous run** | 2026-09-01 @ `117165baae4c` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 8 of 1,918 |
+| **Strings reviewed this run** | 6 of 1,922 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,18 @@ Also for de: [android](android.md) · [firefox](firefox.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (2)
 
-_Nothing was fixed._
+- `Settings.AppIconSelection.AppIconNames.Sunrise.Title.v137` — `de/firefox-ios.xliff` — "Sunrise" is translated as "Sonnenuntergang" (sunset).
+    - Current: `Sonnenuntergang`
+    - Source: `Sunrise`
+    - Suggest: `Sonnenaufgang`
+    - en-US "Sunrise" means Sonnenaufgang; the target says the opposite (sunset), and it is swapped with the Sunset entry.
+- `Settings.AppIconSelection.AppIconNames.Sunset.Title.v137` — `de/firefox-ios.xliff` — "Sunset" is translated as "Sonnenaufgang" (sunrise).
+    - Current: `Sonnenaufgang`
+    - Source: `Sunset`
+    - Suggest: `Sonnenuntergang`
+    - en-US "Sunset" means Sonnenuntergang; the target says the opposite (sunrise), swapped with the Sunrise entry.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,7 +54,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 96 |
-| Strings | 1,918 |
+| Strings | 1,922 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -70,7 +79,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | quotes | `german-double` 16 | **german-double** |
 | ellipsis | `char` 21 | **char** |
 | dash | `en` 8 | **en** |
-| register | `informal` 1, `formal` 418 | **formal** |
+| register | `informal` 1, `formal` 420 | **formal** |
 
 ---
 
@@ -80,13 +89,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (76)
+## 3. Open findings (74)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 33 |
+| 2 | Wrong content (says something other than the English) | 31 |
 | 3 | Degraded language (grammar, spelling, terminology) | 34 |
 | 4 | Cosmetic (typography, spacing) | 9 |
 
@@ -106,16 +115,6 @@ _Nothing in this category._
     - Source: `Flaming`
     - Suggest: `Flammend`
     - The source is an adjectival form describing the icon; "Flamme" names an object instead, unlike the sibling entry "Cuddling" which was kept as an activity.
-- `Settings.AppIconSelection.AppIconNames.Sunrise.Title.v137` — `de/firefox-ios.xliff` — "Sunrise" is translated as "Sonnenuntergang" (sunset).
-    - Current: `Sonnenuntergang`
-    - Source: `Sunrise`
-    - Suggest: `Sonnenaufgang`
-    - en-US "Sunrise" means Sonnenaufgang; the target says the opposite (sunset), and it is swapped with the Sunset entry.
-- `Settings.AppIconSelection.AppIconNames.Sunset.Title.v137` — `de/firefox-ios.xliff` — "Sunset" is translated as "Sonnenaufgang" (sunrise).
-    - Current: `Sonnenaufgang`
-    - Source: `Sunset`
-    - Suggest: `Sonnenuntergang`
-    - en-US "Sunset" means Sonnenuntergang; the target says the opposite (sunrise), swapped with the Sunrise entry.
 - `Addresses.EditAddress.AutofillAddressState.v129` — `de/firefox-ios.xliff` — "State" as an address-form administrative division is rendered as "Staat" (sovereign country) instead of "Bundesstaat".
     - Current: `Staat`
     - Source: `State`
@@ -506,6 +505,7 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (2)
 
-_Nothing fixed yet._
+- `Settings.AppIconSelection.AppIconNames.Sunrise.Title.v137` — `de/firefox-ios.xliff` — fixed 2026-09-07
+- `Settings.AppIconSelection.AppIconNames.Sunset.Title.v137` — `de/firefox-ios.xliff` — fixed 2026-09-07
