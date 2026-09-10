@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-07 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
-| **Previous run** | 2026-09-01 @ `f39118d70d88` |
+| **Generated** | 2026-09-10 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6ea6134d9865` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6ea6134d9865` |
+| **Previous run** | 2026-09-07 @ `b172b90d4eeb` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 23 of 2,746 |
+| **Strings reviewed this run** | 0 of 2,746 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,13 +22,9 @@ Also for ru: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `mozac_summarize_paywalled_content_error_title` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ru/strings.xml` — The error title no longer says summarization is impossible; it instead asserts that the full content is paid-only.
-    - Current: `Полное содержимое доступно только платно`
-    - Source: `Can’t summarize paywalled content`
-    - Suggest: `Не удалось создать резюме содержимого за платной подпиской`
-    - Source "Can’t summarize paywalled content" states the summarizer cannot process paywalled content; the Russian instead makes a claim about the page's content being available only for payment, dropping the summarization failure entirely.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -50,9 +46,9 @@ _Nothing retired._
 |---|---|
 | Files | 43 |
 | Strings | 2,746 |
-| Missing strings | 0 |
+| Missing strings | 3 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -67,7 +63,16 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**3 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — 2
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 1
+
+**Files absent from the locale:**
+
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml`
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 

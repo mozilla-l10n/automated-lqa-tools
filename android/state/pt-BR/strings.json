@@ -107,8 +107,12 @@
   "mozac_clear_button_description": "df2126ed 730cab26"
  },
  "mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values/strings.xml": {
+  "mozac_browser_awesomebar_copy_website_details": "980f5379 ce9a36d0 98ffb95d",
   "mozac_browser_awesomebar_edit_suggestion": "a99cc978 40d32071",
+  "mozac_browser_awesomebar_edit_website_details": "d8c63899 cf0df5fb 6ad948e7",
+  "mozac_browser_awesomebar_reload_website": "2f42028e 9ade1619 d458a728",
   "mozac_browser_awesomebar_remove_suggestion": "06ab52d4 e53f08f2",
+  "mozac_browser_awesomebar_share_website_details": "87a034f0 2306250a 8d1d166e",
   "mozac_browser_awesomebar_stock_suggestion_decrease": "80d8e7f6 1bffd34c",
   "mozac_browser_awesomebar_stock_suggestion_increase": "2ff184b9 7c7dc2b2",
   "mozac_browser_awesomebar_stock_suggestion_no_change": "7b09348f 76d4567b"
@@ -137,6 +141,9 @@
  },
  "mozilla-mobile/android-components/components/compose/cfr/src/main/res/values/strings.xml": {
   "mozac_cfr_dismiss_button_content_description": "e538dd59 b21634a9"
+ },
+ "mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml": {
+  "mozac_menu_item_new_indicator_label": "e83e0a86 2270dfc6 12033a76"
  },
  "mozilla-mobile/android-components/components/compose/tabstray/src/main/res/values/strings.xml": {
   "mozac_tab_counter_open_tab_tray_plural": "027b07b4 40912d29",
@@ -1497,6 +1504,7 @@
   "ip_protection_onboarding_body_promo": "f8d9355e 64472127",
   "ip_protection_onboarding_card_headline": "8402dd92 716b0ab3",
   "ip_protection_onboarding_not_now_button": "b66d5fab 73101efc",
+  "ip_protection_open_settings_snackbar_action": "9d240ac0 58def853 dcb0978a",
   "ip_protection_promo_body_2": "e1b03756 59833467",
   "ip_protection_promo_headline": "73859834 7dfaeea0",
   "ip_protection_recommended_location": "bccc4d3c 40b5cb8f",
@@ -1941,6 +1949,7 @@
   "preferences_downloads_default_location_title": "e9e3866d fdb596ac",
   "preferences_downloads_delete_from_device": "1d7f6de5 8e27d4b3",
   "preferences_downloads_delete_from_device_description": "57595508 c382c1ec",
+  "preferences_downloads_no_folder_picker_available": "1763260b 0962da1d 01e3ca9e",
   "preferences_downloads_remove_from_download_history": "acd728f9 43af46fa",
   "preferences_downloads_remove_from_download_history_description": "bc2848ec f184b0a4",
   "preferences_email_masks": "17bd4a5d f2046817",
@@ -2303,6 +2312,13 @@
   "sync_offline": "8005bd63 8005bd63",
   "sync_reconnect": "0e982ffb f73a2a3e",
   "sync_scan_code": "ede079a7 93deb189",
+  "sync_send_tab_empty_state_description": "95a9fcbb 6e2aa2a3 fbd5be4e",
+  "sync_send_tab_empty_state_title": "10e297fb 26d3b973 a67d09dc",
+  "sync_send_tab_error_auth_button": "54152a3f e485cb58 ef393b17",
+  "sync_send_tab_error_auth_remove_account": "663f135f 69b399e5 89d363e5",
+  "sync_send_tab_error_auth_title": "7df6e051 f2d129c1 c3549ab7",
+  "sync_send_tab_error_connection_text": "70bd7bd3 487315a9 d39a4c96",
+  "sync_send_tab_error_connection_title": "efe32707 5f5d0782 dccf081d",
   "sync_send_to_all": "918a0d94 883c49e3",
   "sync_sent_tab_error_snackbar": "63078de2 e375b7fc",
   "sync_sent_tab_error_snackbar_action": "ce93609c b49d89ce",

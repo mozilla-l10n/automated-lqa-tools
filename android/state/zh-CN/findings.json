@@ -1894,6 +1894,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "E",
+  "check": "llm",
+  "current": "放心浏览，%1$s 会持续拦截跟踪器。",
+  "dismissed_because": "",
+  "fid": "39f873edf4e4",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-09-10",
+  "impact": 4,
+  "last_seen": "2026-09-10",
+  "locale": "zh-CN",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source is two sentences (\"Keep browsing. %1$s will keep blocking.\") and the target also adds \"跟踪器\" (trackers), which the source does not state in this string.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "3a90307a",
+  "string_id": "notification_privacy_report_body_has_trackers",
+  "suggest": "放心浏览。%1$s 会持续拦截。",
+  "summary": "Two sentences in the source are merged with a comma instead of a full stop.",
+  "suppressed_by": ""
+ },
+ {
   "category": "B",
   "check": "llm",
   "current": "自动阻止大公司窥探您的浏览活动",
@@ -2899,6 +2923,30 @@
   "string_id": "sync_no_devices_available_description",
   "suggest": "任何登录此账户并同步的设备都会显示在这里。",
   "summary": "\"Any devices ... will appear here\" is rendered as \"所有…设备都将显示在这里\", asserting all such devices are shown rather than stating that devices which sign in and sync will appear.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "若要发送标签页，请登录至少一台其他设备上的 Firefox。",
+  "dismissed_because": "",
+  "fid": "4922a3ee6558",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-09-10",
+  "impact": 2,
+  "last_seen": "2026-09-10",
+  "locale": "zh-CN",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source says to sign in to Firefox on at least one other device; the current wording reads as \"sign in to the Firefox of at least one other device\", which is awkward and shifts the object of the sign-in action.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "26622044",
+  "string_id": "sync_send_tab_empty_state_description",
+  "suggest": "若要发送标签页，请在至少一台其他设备上登录 Firefox。",
+  "summary": "The translation drops \"at least one other device\" meaning by rendering it as logging in on one other device's Firefox rather than signing in to Firefox on at least one other device — actually it reverses nothing but misplaces \"at least\".",
   "suppressed_by": ""
  },
  {

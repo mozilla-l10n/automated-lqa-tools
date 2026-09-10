@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-07 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
-| **Previous run** | 2026-09-01 @ `f39118d70d88` |
+| **Generated** | 2026-09-10 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6ea6134d9865` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6ea6134d9865` |
+| **Previous run** | 2026-09-07 @ `b172b90d4eeb` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 2,691 |
 
@@ -46,9 +46,9 @@ _Nothing retired._
 |---|---|
 | Files | 43 |
 | Strings | 2,691 |
-| Missing strings | 55 |
+| Missing strings | 58 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,11 +63,16 @@ _Nothing retired._
 
 ### Completeness
 
-**55 strings** are not translated yet, concentrated in:
+**58 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — 45
+- `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — 47
 - `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-es-rMX/strings.xml` — 6
 - `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-es-rMX/strings.xml` — 4
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 1
+
+**Files absent from the locale:**
+
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

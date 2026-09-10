@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-07 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
-| **Previous run** | 2026-09-01 @ `f39118d70d88` |
+| **Generated** | 2026-09-10 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6ea6134d9865` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6ea6134d9865` |
+| **Previous run** | 2026-09-07 @ `b172b90d4eeb` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 34 of 2,746 |
+| **Strings reviewed this run** | 0 of 2,746 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for pl: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `notification_privacy_report_channel_name` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Privacy report" translated as "Informacja o prywatności" (privacy notice/information) instead of a report about privacy.
-    - Current: `Informacja o prywatności`
-    - Source: `Privacy report`
-    - Suggest: `Raport prywatności`
-    - The source names the weekly privacy report notification channel; "Informacja o prywatności" means a privacy notice, not a report of blocked trackers.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -50,9 +46,9 @@ _Nothing retired._
 |---|---|
 | Files | 43 |
 | Strings | 2,746 |
-| Missing strings | 0 |
+| Missing strings | 3 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -67,7 +63,16 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**3 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — 2
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 1
+
+**Files absent from the locale:**
+
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml`
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 

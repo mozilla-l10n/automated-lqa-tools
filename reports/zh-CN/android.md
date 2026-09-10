@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-07 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
-| **Previous run** | 2026-09-01 @ `f39118d70d88` |
+| **Generated** | 2026-09-10 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6ea6134d9865` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6ea6134d9865` |
+| **Previous run** | 2026-09-07 @ `b172b90d4eeb` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 5 of 2,718 |
+| **Strings reviewed this run** | 31 of 2,746 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for zh-CN: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `sync_send_tab_empty_state_description` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — The translation drops "at least one other device" meaning by rendering it as logging in on one other device's Firefox rather than signing in to Firefox on at least one other device — actually it reverses nothing but misplaces "at least".
+    - Current: `若要发送标签页，请登录至少一台其他设备上的 Firefox。`
+    - Source: `To send a tab, sign in to Firefox on at least one other device.`
+    - Suggest: `若要发送标签页，请在至少一台其他设备上登录 Firefox。`
+    - The source says to sign in to Firefox on at least one other device; the current wording reads as "sign in to the Firefox of at least one other device", which is awkward and shifts the object of the sign-in action.
+- `notification_privacy_report_body_has_trackers` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — Two sentences in the source are merged with a comma instead of a full stop.
+    - Current: `放心浏览，%1$s 会持续拦截跟踪器。`
+    - Source: `Keep browsing. %1$s will keep blocking.`
+    - Suggest: `放心浏览。%1$s 会持续拦截。`
+    - The source is two sentences ("Keep browsing. %1$s will keep blocking.") and the target also adds "跟踪器" (trackers), which the source does not state in this string.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,10 +54,10 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,718 |
-| Missing strings | 28 |
+| Strings | 2,746 |
+| Missing strings | 3 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,11 +72,14 @@ _Nothing retired._
 
 ### Completeness
 
-**28 strings** are not translated yet, concentrated in:
+**3 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — 20
-- `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-zh-rCN/strings.xml` — 4
-- `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-zh-rCN/strings.xml` — 4
+- `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — 2
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 1
+
+**Files absent from the locale:**
+
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -79,8 +91,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 74 | **curly-double** |
 | ellipsis | `char` 21 | **char** |
-| fullwidth | `punctuation` 1006 | **punctuation** |
-| register | `informal` 3, `formal` 259 | **formal** |
+| fullwidth | `punctuation` 1018 | **punctuation** |
+| register | `informal` 3, `formal` 261 | **formal** |
 
 ---
 
@@ -90,15 +102,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (145)
+## 3. Open findings (147)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 100 |
+| 2 | Wrong content (says something other than the English) | 101 |
 | 3 | Degraded language (grammar, spelling, terminology) | 37 |
-| 4 | Cosmetic (typography, spacing) | 8 |
+| 4 | Cosmetic (typography, spacing) | 9 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -406,7 +418,7 @@ _Nothing in this category._
     - Source: `Permission denied`
     - Suggest: `权限被拒绝`
     - The toast appears when the user denies the camera permission; "拒绝访问" loses the notion of a permission and reads as an imperative/ambiguous phrase.
-- _…and 47 more; see `state/` for the full list._
+- _…and 48 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -576,6 +588,11 @@ _Nothing in this category._
     - Source: `Group %d`
     - Suggest: `群组 %d`
     - Source is "Group %d", a plain default name (compare create_collection_default_name "收藏集 %d"); the added curly quotes are spurious and inconsistent.
+- `notification_privacy_report_body_has_trackers` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — Two sentences in the source are merged with a comma instead of a full stop.
+    - Current: `放心浏览，%1$s 会持续拦截跟踪器。`
+    - Source: `Keep browsing. %1$s will keep blocking.`
+    - Suggest: `放心浏览。%1$s 会持续拦截。`
+    - The source is two sentences ("Keep browsing. %1$s will keep blocking.") and the target also adds "跟踪器" (trackers), which the source does not state in this string.
 - `other_default_search_engine_suggestion_header` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — An interpunct separator was added that does not exist in the source "%s search".
     - Current: `%s · 搜索`
     - Source: `%s search`

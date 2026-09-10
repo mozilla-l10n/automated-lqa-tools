@@ -142,6 +142,9 @@
  "mozilla-mobile/android-components/components/compose/cfr/src/main/res/values/strings.xml": {
   "mozac_cfr_dismiss_button_content_description": "24c52be0 b21634a9"
  },
+ "mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml": {
+  "mozac_menu_item_new_indicator_label": "a7e3e782 2270dfc6 12033a76"
+ },
  "mozilla-mobile/android-components/components/compose/tabstray/src/main/res/values/strings.xml": {
   "mozac_tab_counter_open_tab_tray_plural": "ac1944ed 40912d29",
   "mozac_tab_counter_open_tab_tray_single": "91bb712a b0f55722"
@@ -1501,6 +1504,7 @@
   "ip_protection_onboarding_body_promo": "53d6ca3f 64472127 3474d275",
   "ip_protection_onboarding_card_headline": "174dc756 716b0ab3 58f1e4bf",
   "ip_protection_onboarding_not_now_button": "e9a0d4db 73101efc 7f718982",
+  "ip_protection_open_settings_snackbar_action": "a813a0c4 58def853 dcb0978a",
   "ip_protection_promo_body_2": "47d14649 59833467 b436fd49",
   "ip_protection_promo_headline": "2a6ebae4 7dfaeea0 98a142c3",
   "ip_protection_recommended_location": "4f4fa49a 40b5cb8f 3465528d",
@@ -1945,6 +1949,7 @@
   "preferences_downloads_default_location_title": "12507341 fdb596ac",
   "preferences_downloads_delete_from_device": "4f2f7648 8e27d4b3",
   "preferences_downloads_delete_from_device_description": "95885c8d c382c1ec",
+  "preferences_downloads_no_folder_picker_available": "e66805db 0962da1d 01e3ca9e",
   "preferences_downloads_remove_from_download_history": "7b7f4c13 43af46fa",
   "preferences_downloads_remove_from_download_history_description": "7bc6ef40 f184b0a4",
   "preferences_email_masks": "763a6431 f2046817",

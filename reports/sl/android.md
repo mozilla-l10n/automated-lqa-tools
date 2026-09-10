@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-07 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
-| **Previous run** | 2026-09-01 @ `f39118d70d88` |
+| **Generated** | 2026-09-10 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6ea6134d9865` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6ea6134d9865` |
+| **Previous run** | 2026-09-07 @ `b172b90d4eeb` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 19 of 2,738 |
+| **Strings reviewed this run** | 1 of 2,738 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,22 +18,17 @@ Also for sl: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
+
+_No new findings._
+
+### ✅ Fixed since the last run (1)
 
 - `sync_send_tab_error_auth_remove_account` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Remove account" is rendered as "Delete account", which implies destroying the Firefox account rather than disconnecting it from the device.
     - Current: `Izbriši račun`
     - Source: `Remove account`
     - Suggest: `Odstrani račun`
     - The developer comment says the button removes the currently connected account (disconnects it), not deletes it. "Izbriši" means delete.
-- `notification_privacy_report_body_has_trackers` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Translation adds "sledilce" (trackers), a specific object the source does not state.
-    - Current: `Brskajte dalje, %1$s pa bo še naprej blokiral sledilce.`
-    - Source: `Keep browsing. %1$s will keep blocking.`
-    - Suggest: `Brskajte dalje, %1$s pa bo še naprej blokiral.`
-    - Source is "Keep browsing. %1$s will keep blocking." with no explicit object; the sentence structure and content were changed.
-
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -55,9 +50,9 @@ _Nothing retired._
 |---|---|
 | Files | 43 |
 | Strings | 2,738 |
-| Missing strings | 8 |
+| Missing strings | 11 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -72,11 +67,16 @@ _Nothing retired._
 
 ### Completeness
 
-**8 strings** are not translated yet, concentrated in:
+**11 strings** are not translated yet, concentrated in:
 
 - `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-sl/strings.xml` — 5
-- `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — 2
+- `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — 4
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 1
 - `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-sl/strings.xml` — 1
+
+**Files absent from the locale:**
+
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -99,22 +99,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (118)
+## 3. Open findings (117)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `sync_send_tab_error_auth_remove_account` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Remove account" is rendered as "Delete account", which implies destroying the Firefox account rather than disconnecting it from the device.
-    - Current: `Izbriši račun`
-    - Source: `Remove account`
-    - Suggest: `Odstrani račun`
-    - The developer comment says the button removes the currently connected account (disconnects it), not deletes it. "Izbriši" means delete.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 66 |
+| 2 | Wrong content (says something other than the English) | 65 |
 | 3 | Degraded language (grammar, spelling, terminology) | 42 |
 | 4 | Cosmetic (typography, spacing) | 10 |
 
@@ -369,11 +360,6 @@ _Nothing in this category._
     - Source: `Sync failed. Last success: %s`
     - Suggest: `Sinhronizacija ni uspela. Zadnja uspešna: %s`
     - The source specifically says "Last success" (last successful sync), not simply "last synced".
-- `sync_send_tab_error_auth_remove_account` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Remove account" is rendered as "Delete account", which implies destroying the Firefox account rather than disconnecting it from the device.
-    - Current: `Izbriši račun`
-    - Source: `Remove account`
-    - Suggest: `Odstrani račun`
-    - The developer comment says the button removes the currently connected account (disconnects it), not deletes it. "Izbriši" means delete.
 - `synced_tabs_no_tabs` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Translation adds "drugih" ("other tabs"), changing the meaning of the source.
     - Current: `V Firefoxu na drugih napravah nimate odprtih drugih zavihkov.`
     - Source: `You don’t have any tabs open in Firefox on your other devices.`
@@ -424,7 +410,12 @@ _Nothing in this category._
     - Source: `Dismiss`
     - Suggest: `Opusti`
     - The source button dismisses the message; "V redu" means "OK", not "dismiss".
-- _…and 8 more; see `state/` for the full list._
+- `preference_auto_battery_theme` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — "Set by Battery Saver" is rendered as an imperative "Set the battery saver", reversing the meaning.
+    - Current: `Nastavi ohranjevalnik baterije`
+    - Source: `Set by Battery Saver`
+    - Suggest: `Nastavi ohranjevalnik baterije → "Nastavi ohranjevalnik baterije" naj bo "Nastavi varčevanje z baterijo" (tj. "Določi ohranjevalnik baterije")`
+    - The source means the theme is determined by the Battery Saver setting; the Slovenian reads as a command to set/configure the battery saver, i.e. the battery saver becomes the object rather than the agent.
+- _…and 7 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -705,6 +696,6 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (1)
 
-_Nothing fixed yet._
+- `sync_send_tab_error_auth_remove_account` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — fixed 2026-09-10

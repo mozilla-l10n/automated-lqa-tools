@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-07 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
-| **Previous run** | 2026-09-01 @ `f39118d70d88` |
+| **Generated** | 2026-09-10 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6ea6134d9865` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6ea6134d9865` |
+| **Previous run** | 2026-09-07 @ `b172b90d4eeb` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,735 |
+| **Strings reviewed this run** | 14 of 2,749 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -44,9 +44,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 43 |
-| Strings | 2,735 |
-| Missing strings | 11 |
+| Files | 44 |
+| Strings | 2,749 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,12 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**11 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — 7
-- `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-pt-rBR/strings.xml` — 4
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -78,7 +73,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 13, `straight-double` 2 | **curly-double** |
 | ellipsis | `char` 21 | **char** |
-| register | `informal` 225 | **informal** |
+| register | `informal` 227 | **informal** |
 
 ---
 

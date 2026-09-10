@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-07 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
-| **Previous run** | 2026-09-01 @ `f39118d70d88` |
+| **Generated** | 2026-09-10 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6ea6134d9865` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6ea6134d9865` |
+| **Previous run** | 2026-09-07 @ `b172b90d4eeb` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 29 of 2,746 |
+| **Strings reviewed this run** | 0 of 2,746 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,23 +18,9 @@ Also for ja: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `notification_privacy_report_headline_no_trackers` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — Headline for the "no trackers blocked" case is translated as if trackers were already blocked and are shown here.
-    - Current: `閲覧中に %1$s がブロックしたトラッカーがここに表示されます。`
-    - Source: `%1$s blocks trackers as you browse. You’ll see them here.`
-    - Suggest: `閲覧中に %1$s がトラッカーをブロックします。ブロックしたトラッカーはここに表示されます。`
-    - The source is two sentences in the future/general tense ("%1$s blocks trackers as you browse. You'll see them here.") shown when nothing has been blocked yet; the Japanese asserts that trackers already blocked are displayed here, changing the meaning of the empty-state message.
-- `mozac_feature_summarize_feedback_good_content_description` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ja/strings.xml` — Thumbs-up button content description renders "Good summary" as a noun phrase meaning "highly rated summary" instead of describing the rating action/label.
-    - Current: `高評価の要約`
-    - Source: `Good summary`
-    - Suggest: `良い要約`
-    - The developer comment says this is the content description for the thumbs up button used to rate a summary as helpful; 「高評価の要約」 describes a summary that has received a high rating, not the rating "Good summary" the user gives.
-- `mozac_feature_summarize_feedback_bad_content_description` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ja/strings.xml` — Thumbs-down button content description renders "Bad summary" as "low-rated summary" instead of the rating label.
-    - Current: `低評価の要約`
-    - Source: `Bad summary`
-    - Suggest: `悪い要約`
-    - Per the developer comment this labels the thumbs down button for rating a summary as unhelpful; 「低評価の要約」 means a summary that has a low rating, not the "Bad summary" rating itself.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -60,9 +46,9 @@ _Nothing retired._
 |---|---|
 | Files | 43 |
 | Strings | 2,746 |
-| Missing strings | 0 |
+| Missing strings | 3 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -77,7 +63,16 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**3 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — 2
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 1
+
+**Files absent from the locale:**
+
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml`
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 

@@ -142,6 +142,9 @@
  "mozilla-mobile/android-components/components/compose/cfr/src/main/res/values/strings.xml": {
   "mozac_cfr_dismiss_button_content_description": "8c99bae2 b21634a9"
  },
+ "mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml": {
+  "mozac_menu_item_new_indicator_label": "3a547e56 2270dfc6 12033a76"
+ },
  "mozilla-mobile/android-components/components/compose/tabstray/src/main/res/values/strings.xml": {
   "mozac_tab_counter_open_tab_tray_plural": "0d032fae 40912d29",
   "mozac_tab_counter_open_tab_tray_single": "9d4f513b b0f55722"
@@ -1501,6 +1504,7 @@
   "ip_protection_onboarding_body_promo": "5e691c2b 64472127",
   "ip_protection_onboarding_card_headline": "5d3b5aa0 716b0ab3",
   "ip_protection_onboarding_not_now_button": "efc28b7b 73101efc",
+  "ip_protection_open_settings_snackbar_action": "6938ba74 58def853 dcb0978a",
   "ip_protection_promo_body_2": "b58333de 59833467",
   "ip_protection_promo_headline": "b5fa7ca7 7dfaeea0",
   "ip_protection_recommended_location": "13949933 40b5cb8f",
@@ -1945,6 +1949,7 @@
   "preferences_downloads_default_location_title": "51214649 fdb596ac",
   "preferences_downloads_delete_from_device": "f240a761 8e27d4b3",
   "preferences_downloads_delete_from_device_description": "605fd060 c382c1ec",
+  "preferences_downloads_no_folder_picker_available": "fedd7f06 0962da1d 01e3ca9e",
   "preferences_downloads_remove_from_download_history": "c699ab26 43af46fa",
   "preferences_downloads_remove_from_download_history_description": "84b98d61 f184b0a4",
   "preferences_email_masks": "10e6ccd9 f2046817",
@@ -2310,7 +2315,7 @@
   "sync_send_tab_empty_state_description": "ebd24ccf 6e2aa2a3 fbd5be4e",
   "sync_send_tab_empty_state_title": "bb102cd8 26d3b973 a67d09dc",
   "sync_send_tab_error_auth_button": "a385812b e485cb58 ef393b17",
-  "sync_send_tab_error_auth_remove_account": "244df856 69b399e5 89d363e5",
+  "sync_send_tab_error_auth_remove_account": "445dc5ec 69b399e5 89d363e5",
   "sync_send_tab_error_auth_title": "afa94a15 f2d129c1 c3549ab7",
   "sync_send_tab_error_connection_text": "1d7d93f4 487315a9 d39a4c96",
   "sync_send_tab_error_connection_title": "a5434113 5f5d0782 dccf081d",
