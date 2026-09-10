@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-07 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
-| **Previous run** | 2026-09-01 @ `f39118d70d88` |
+| **Generated** | 2026-09-10 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6bf5ed95c626` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6bf5ed95c626` |
+| **Previous run** | 2026-09-07 @ `b172b90d4eeb` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 11 of 2,746 |
+| **Strings reviewed this run** | 4 of 2,749 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,17 +18,17 @@ Also for de: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
+
+_No new findings._
+
+### ✅ Fixed since the last run (1)
 
 - `sync_send_tab_error_auth_remove_account` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Remove account" is rendered as "Konto löschen" (delete account), which suggests deleting the account rather than disconnecting it.
     - Current: `Konto löschen`
     - Source: `Remove account`
     - Suggest: `Konto entfernen`
     - The developer comment says the button removes the currently connected account from the device; "löschen" means deleting the account itself, a different and more destructive action.
-
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -48,8 +48,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 43 |
-| Strings | 2,746 |
+| Files | 44 |
+| Strings | 2,749 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -88,22 +88,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (107)
+## 3. Open findings (106)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `sync_send_tab_error_auth_remove_account` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Remove account" is rendered as "Konto löschen" (delete account), which suggests deleting the account rather than disconnecting it.
-    - Current: `Konto löschen`
-    - Source: `Remove account`
-    - Suggest: `Konto entfernen`
-    - The developer comment says the button removes the currently connected account from the device; "löschen" means deleting the account itself, a different and more destructive action.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 62 |
+| 2 | Wrong content (says something other than the English) | 61 |
 | 3 | Degraded language (grammar, spelling, terminology) | 34 |
 | 4 | Cosmetic (typography, spacing) | 11 |
 
@@ -373,11 +364,6 @@ _Nothing in this category._
     - Source: `Navigate back`
     - Suggest: `Zurück navigieren`
     - The source means going back to the previous screen; "rückwärts" means moving backwards in a directional sense and is not the term used for back navigation in German UI.
-- `sync_send_tab_error_auth_remove_account` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Remove account" is rendered as "Konto löschen" (delete account), which suggests deleting the account rather than disconnecting it.
-    - Current: `Konto löschen`
-    - Source: `Remove account`
-    - Suggest: `Konto entfernen`
-    - The developer comment says the button removes the currently connected account from the device; "löschen" means deleting the account itself, a different and more destructive action.
 - `translation_option_bottom_sheet_close_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Seite" wrongly renders "sheet" (bottom sheet dialog) as "page".
     - Current: `Seite „Übersetzungen“ schließen`
     - Source: `Close Translations sheet`
@@ -413,7 +399,12 @@ _Nothing in this category._
     - Source: `{ <p> }%1$s puts you in control.{ </p> } { <p> }Use it as a private browser: { <ul> } { <li> }Search and browse right in the app{ </li> } { <li> }Block trackers (or update settings to allow trackers){ </li> } { <li> }Er…`
     - Suggest: `Suchen und surfen Sie direkt in der App`
     - "browse" here means browsing the web; "blättern" is the wrong sense and "right in the app" (direkt) is dropped.
-- _…and 4 more; see `state/` for the full list._
+- `cfr_for_start_browsing` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — "as you go" is mistranslated as "bei der Gelegenheit auch noch", which changes the meaning.
+    - Current: `und wir blockieren Tracker und bei der Gelegenheit auch noch andere schädliche Elemente`
+    - Source: `Start your private browsing session, and we’ll block trackers and other bad stuff as you go.`
+    - Suggest: `und wir blockieren dabei Tracker und andere schädliche Elemente`
+    - The source says trackers and other bad stuff are blocked as you browse; the German implies blocking other bad stuff is a casual side effect ("bei der Gelegenheit auch noch"), which is not the source meaning.
+- _…and 3 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -659,6 +650,6 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (1)
 
-_Nothing fixed yet._
+- `sync_send_tab_error_auth_remove_account` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — fixed 2026-09-10

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-07 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b172b90d4eeb` |
-| **Previous run** | 2026-09-01 @ `f39118d70d88` |
+| **Generated** | 2026-09-10 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6bf5ed95c626` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6bf5ed95c626` |
+| **Previous run** | 2026-09-07 @ `b172b90d4eeb` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 155 of 2,738 |
+| **Strings reviewed this run** | 3 of 2,741 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,46 +18,13 @@ Also for id: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (5)
+### 🆕 New findings (0)
 
-- `ip_protection_mozilla_vpn_upsell_button` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — Product name "Mozilla VPN" was reordered/translated as "VPN Mozilla", inconsistent with the headline string which keeps "Mozilla VPN".
-    - Current: `Dapatkan VPN Mozilla`
-    - Source: `Get Mozilla VPN`
-    - Suggest: `Dapatkan Mozilla VPN`
-    - "Mozilla VPN" is a product/brand name and must stay as-is; the adjacent headline string correctly uses "Mozilla VPN".
-- `ip_protection_promo_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "by hiding your location" rendered as a relative clause modifying "protection", changing the sentence structure/meaning.
-    - Current: `perlindungan tambahan yang menyembunyikan lokasi Anda`
-    - Source: `Browse with extra protection by hiding your location, even on public Wi-Fi. %s`
-    - Suggest: `perlindungan tambahan dengan menyembunyikan lokasi Anda`
-    - The source says browsing gains extra protection by hiding your location; the target says the protection itself hides your location.
-- `sync_send_tab_empty_state_description` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "device" translated as "peranti" here while all neighbouring strings use "perangkat".
-    - Current: `minimal pada satu peranti lain`
-    - Source: `To send a tab, sign in to Firefox on at least one other device.`
-    - Suggest: `minimal pada satu perangkat lain`
-    - Terminology inconsistency on the same surface: sync_send_tab_empty_state_title and sync_no_devices_available_description use "perangkat".
-- `ip_protection_locations_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Navigate back" rendered as the noun phrase "Navigasi balik" instead of the standard imperative "Navigasi kembali".
-    - Current: `Navigasi balik`
-    - Source: `Navigate back`
-    - Suggest: `Navigasi kembali`
-    - The source is an action content description for a back button; "balik" is colloquial/means "flip" and Mozilla id uses "kembali" for "back" throughout.
-- `microsurvey_uninstall_survey_title` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Why are you uninstalling?" translated as "Mengapa Anda mencopot pemasangan?" which is fine, but "Umpan balik" vs "masukan" is inconsistent with the button string.
-    - Current: `Umpan balik Anda penting.`
-    - Source: `Your feedback matters. Why are you uninstalling?`
-    - Suggest: `Masukan Anda penting.`
-    - The same term "feedback" is rendered "masukan" in uninstall_survey_button_label and "umpan balik" here, on the same survey surface.
+_No new findings._
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (0)
 
-- `create_tab_group_name_label` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — Label "Name" is expanded to "Nama grup tab" instead of simply "Nama".
-    - Current: `Nama grup tab`
-    - Source: `Name`
-    - Suggest: `Nama`
-    - The source label is just "Name" for the tab group name field; the translation adds words not present in the source.
-- `tab_tray_close_tabs_banner_positive_button_text` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "View options" is translated as "Lihat pengaturan" (View settings).
-    - Current: `Lihat pengaturan`
-    - Source: `View options`
-    - Suggest: `Lihat opsi`
-    - The source says "View options", not "View settings"; the Indonesian uses a different word than the source.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -77,8 +44,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 43 |
-| Strings | 2,738 |
+| Files | 44 |
+| Strings | 2,741 |
 | Missing strings | 8 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
