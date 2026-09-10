@@ -1,23 +1,36 @@
 # Firefox for Android, Focus, and the shared Android Components — l10n QA
 
 - **Generated:** 2026-09-10
-- **Locales tracked:** 20 (20 with recorded state)
-- **Findings:** 2,529 raised, 55 fixed (2%), 2,167 open
-- **Closed by a person:** 16 dismissed, 68 suppressed by rule
+- **Locales tracked:** 21 (21 with recorded state)
+- **Findings:** 2,760 raised, 107 fixed (3%), 2,345 open
+- **Closed by a person:** 17 dismissed, 68 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
 ## Read these first
 
-### Reads as a deliberate edit (0)
+### Reads as a deliberate edit (3)
 
-_None. The reviewer sets this flag only on a finding where the localized text changes what the product says about itself, its users or its behaviour; it is left unset on the vast majority of mistranslations._
+The translation makes the product assert something the en-US never said. Nothing here says the change was intended — that cannot be read off the text, which is exactly the problem, because a user cannot read it off either.
+
+- **`hi-IN`** `mozac_feature_addons_optional_permissions_with_data_collection_only_dialog_title` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml`
+    - "additional data collection" is rendered as "collect even more data", changing the meaning.
+    - Current: `%1$s और भी डेटा को इकट्ठा करने का अनुरोध करता है`
+    - Suggest: `%1$s अतिरिक्त डेटा संग्रह का अनुरोध करता है`
+- **`hi-IN`** `likert_scale_option_slow_or_buggy` — `mozilla-mobile/fenix/app/src/main/res/values/strings.xml`
+    - "It’s slow or buggy" translated as "It is very slow and has some bugs", changing "or" to "and" and adding intensifiers.
+    - Current: `बहुत धीमा है और इसमें कुछ बग हैं`
+    - Suggest: `यह धीमा है या इसमें बग हैं`
+- **`hi-IN`** `preferences_marketing_data_description_4` — `mozilla-mobile/fenix/app/src/main/res/values/strings.xml`
+    - Translation adds a claim that the data is never sold, which the source does not contain, and mistranslates "that you use it" as "how you use it".
+    - Current: `आपने Firefox के बारे में कैसे जाना और आप इसका इस्तेमाल कैसे करते हैं, यह जानकारी Mozilla के मार्केटिंग टेक्नोलॉजी पार्टनर्स के साथ शेयर करें। इस डेटा को कभी बेचा नहीं जाता है।`
+    - Suggest: `आपने Firefox के बारे में कैसे जाना और आप इसका इस्तेमाल करते हैं, यह जानकारी Mozilla के मार्केटिंग टेक्नोलॉजी पार्टनर्स के साथ शेयर करें।`
 
 ### Broken output — impact 1 (0)
 
 _Nothing open at impact 1._
 
-### Wrong content — impact 2 (1219)
+### Wrong content — impact 2 (1292)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/android.md`.
 
@@ -32,6 +45,7 @@ Too many to list here; the per-locale counts are in the table below and every on
 | [es-MX](es-MX/android.md) | 2026-09-10 | incremental | `6ea6134d` | 2,691 | 58 | **155** | 83 | 0 | 0 | 0 |
 | [fr](fr/android.md) | 2026-09-10 | incremental | `6ea6134d` | 2,749 | 0 | **78** | 56 | 0 | 0 | 0 |
 | [fy-NL](fy-NL/android.md) | 2026-09-10 | incremental | `6ea6134d` | 2,717 | 32 | **165** | 59 | 0 | 0 | 0 |
+| [hi-IN](hi-IN/android.md) | 2026-09-10 | incremental | `6bf5ed95` | 2,668 | 81 | **178** | 73 | 52 | 1 | 0 |
 | [hu](hu/android.md) | 2026-09-10 | incremental | `6ea6134d` | 2,746 | 3 | **149** | 77 | 0 | 0 | 0 |
 | [id](id/android.md) | 2026-09-10 | incremental | `6ea6134d` | 2,741 | 8 | **163** | 91 | 3 | 0 | 0 |
 | [it](it/android.md) | 2026-09-10 | incremental | `6ea6134d` | 2,749 | 0 | **0** | 0 | 43 | 11 | 4 |
