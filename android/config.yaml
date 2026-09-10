@@ -83,7 +83,7 @@ variants:
   en-CA: en-US
 
 # Matches the Firefox locale list, so the two projects report on the same
-# set of teams.
+# set of teams, plus hi-IN which is localized on mobile only.
 locales:
   - cs
   - de
@@ -94,6 +94,7 @@ locales:
   - es-MX
   - fr
   - fy-NL
+  - hi-IN
   - hu
   - id
   - it
