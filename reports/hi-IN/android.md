@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-10 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6bf5ed95c626` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6bf5ed95c626` |
-| **Previous run** | 2026-09-10 @ `72345b324a06` |
+| **Generated** | 2026-09-11 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d7cb36367f74` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d7cb36367f74` |
+| **Previous run** | 2026-09-10 @ `6bf5ed95c626` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 303 of 2,668 |
+| **Strings reviewed this run** | 1 of 2,669 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,411 +18,13 @@ Also for hi-IN: [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (22)
+### 🆕 New findings (0)
 
-- `mozac_feature_prompts_identity_credentials_choose_provider` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-hi-rIN/strings.xml` — Misspelling of "प्रोवाइडर" as "प्रोवाइर".
-    - Current: `लॉगिन प्रोवाइर चुनें`
-    - Source: `Choose a login provider`
-    - Suggest: `लॉगिन प्रोवाइडर चुनें`
-    - "provider" is transliterated as प्रोवाइडर elsewhere (see mozac_feature_prompts_identity_credentials_privacy_policy_title); here the 'ड' is missing.
-- `tab_tray_add_new_collection` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Imperative verb form is wrong: "जोड़े" should be "जोड़ें".
-    - Current: `नया कलेक्शन जोड़े`
-    - Source: `Add new collection`
-    - Suggest: `नया कलेक्शन जोड़ें`
-    - The polite imperative of जोड़ना is जोड़ें; जोड़े is an incorrect form here, inconsistent with चुनें in the neighbouring string.
-- `customize_toggle_jump_back_in` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "Jump back in" (resume recent tab) rendered as "वापस जाएं" meaning "go back".
-    - Current: `वापस जाएं`
-    - Source: `Jump back in`
-    - Suggest: `वहीं से शुरू करें`
-    - The source is a home-screen section header for resuming a recent tab, not a back-navigation action; "वापस जाएं" reads as the Back command.
-- `collection_open_tabs` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "Open tabs" here is a verb phrase (button that opens the collection's tabs) but is translated as the noun phrase "open tabs".
-    - Current: `खुले हुए टैब`
-    - Source: `Open tabs`
-    - Suggest: `टैब खोलें`
-    - Developer comment: "Text for the button to open tabs of the selected collection" — it is an action label, not a description of already-open tabs.
-- `create_collection_name_collection` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "Name collection" (imperative: give the collection a name) is rendered as "collection of names".
-    - Current: `नाम का कलेक्शन`
-    - Source: `Name collection`
-    - Suggest: `कलेक्शन को नाम दें`
-    - The source is a step title instructing the user to name the collection, matching the sibling strings "Select tabs"/"Select collection" which are imperatives. "नाम का कलेक्शन" means "the collection named/of name", not an instruction to name it.
-- `create_collection_default_name` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "Collection %d" is rendered with reversed word order so it reads as "%d collections" instead of the collection's name/number.
-    - Current: `%d कलेक्शन`
-    - Source: `Collection %d`
-    - Suggest: `कलेक्शन %d`
-    - The source is a default collection name where %d is an ordinal-like number appended after the word (e.g. "Collection 3"). Putting the number first makes it read as a count of collections.
-- `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Straight double quotes used instead of the locale's curly double quotes as in the source.
-    - Current: `"बाहर निकलें"`
-    - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
-    - Suggest: `“बाहर निकलें”`
-    - Source uses curly quotes “Quit”; hi-IN convention is curly-double quotes.
-- `sync_connect_device_dialog` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Double space between words in the translation.
-    - Current: `एक और  डिवाइस`
-    - Source: `To send a tab, sign in to Firefox on at least one other device.`
-    - Suggest: `एक और डिवाइस`
-    - There is an extra space in the user-visible text that is not in the source.
-- `preference_enhanced_tracking_protection_custom_cookies_4` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "will cause websites to break" is rendered as the tentative "may cause", identical to the cookies_3 string.
-    - Current: `सभी कुकीज़ (इससे शायद वेबसाइटें काम न करें)`
-    - Source: `All cookies (will cause websites to break)`
-    - Suggest: `सभी कुकीज़ (इससे वेबसाइटें काम नहीं करेंगी)`
-    - The source distinguishes "may cause websites to break" (cookies_3) from the certain "will cause websites to break" (cookies_4); the translation uses "शायद" (may) in both, weakening the warning.
-- `etp_cryptominers_description` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "mine digital currency" is mistranslated as "detect/find digital currency".
-    - Current: `डिजिटल करेंसी का पता लगाने वाली`
-    - Source: `Prevents malicious scripts gaining access to your device to mine digital currency.`
-    - Suggest: `डिजिटल करेंसी माइन करने वाली`
-    - The source says the scripts mine (generate) digital currency using your device; "का पता लगाने" means "to detect/locate", which is a different action.
-- `preference_enhanced_tracking_protection_custom_cookies_2` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "Cookies from unvisited sites" is rendered as "cookies belonging to unvisited sites" with an incorrect relational form.
-    - Current: `विज़िट न की गई साइटों वाली कुकीज़`
-    - Source: `Cookies from unvisited sites`
-    - Suggest: `विज़िट न की गई साइटों की कुकीज़`
-    - The source means cookies originating from sites you have not visited; "साइटों वाली कुकीज़" is ungrammatical/ambiguous for the source relation.
-- `deleting_browsing_data_in_progress` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Wrong verb agreement: plural "हैं" used with singular subject.
-    - Current: `ब्राउज़िंग डेटा डिलीट किया जा रहा हैं…`
-    - Source: `Deleting browsing data…`
-    - Suggest: `ब्राउज़िंग डेटा डिलीट किया जा रहा है…`
-    - "किया जा रहा" is singular and requires "है", not the plural "हैं".
-- `etp_cookies_description` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Wrong verb agreement: "करता हैं" mixes singular and plural forms.
-    - Current: `ब्लॉक करता हैं`
-    - Source: `Blocks cookies that ad networks and analytics companies use to compile your browsing data across many sites.`
-    - Suggest: `ब्लॉक करता है`
-    - "करता" is singular masculine and requires "है".
-- `etp_social_media_trackers_description` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Missing sentence-final danda; the source sentence ends with a period.
-    - Current: `लगाम लगाता है`
-    - Source: `Limits the ability of social networks to track your browsing activity around the web.`
-    - Suggest: `लगाम लगाता है।`
-    - The en-US string is a full sentence ending in a period; other ETP descriptions in this batch end with "।".
-- `about_debug_menu_toast_progress` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Stray space before the colon.
-    - Current: `डीबग मेन्यू : चालू`
-    - Source: `Debug menu: %1$d click(s) left to enable`
-    - Suggest: `डीबग मेन्यू: चालू`
-    - The source has no space before the colon; a space before punctuation is not a hi-IN convention.
-- `search_engine_edit` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Spelling error: stray nukta on "ए" in "ए़डिट करें".
-    - Current: `ए़डिट करें`
-    - Source: `Edit`
-    - Suggest: `एडिट करें`
-    - The word should be "एडिट करें" as used consistently in other strings (e.g. search_engine_edit_custom_search_engine_title, credit_cards_edit_card); the nukta diacritic on ए is a typo.
-- `browser_toolbar_url_copied_to_clipboard_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Passive construction is incomplete: missing "गया".
-    - Current: `URL क्लिपबोर्ड पर कॉपी किया`
-    - Source: `URL copied to clipboard`
-    - Suggest: `URL क्लिपबोर्ड पर कॉपी किया गया`
-    - Source "URL copied to clipboard" is a passive statement; Hindi requires "कॉपी किया गया" — "कॉपी किया" alone is ungrammatical/incomplete.
-- `logins_username_copied` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Passive construction is incomplete: missing "गया".
-    - Current: `यूज़रनेम क्लिपबोर्ड पर कॉपी किया`
-    - Source: `Username copied to clipboard`
-    - Suggest: `यूज़रनेम क्लिपबोर्ड पर कॉपी किया गया`
-    - Source "Username copied to clipboard" is passive; Hindi needs "कॉपी किया गया".
-- `preferences_passwords_save_logins_ask_to_save` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "Ask to save" mistranslated as "ask in order to save".
-    - Current: `सेव करने के लिए पूछें`
-    - Source: `Ask to save`
-    - Suggest: `सेव करने से पहले पूछें`
-    - The source means the browser should ask the user whether to save the password; "सेव करने के लिए पूछें" reads as "ask in order to save", reversing who asks and why.
-- `no_site_exceptions` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "No site exceptions" mistranslated as "no exceptions with sites".
-    - Current: `साइट वाले कोई अपवाद नहीं हैं`
-    - Source: `No site exceptions`
-    - Suggest: `कोई साइट अपवाद नहीं`
-    - The source is a label for the absence of site-specific exceptions; "साइट वाले" ("with sites") misrenders the noun phrase "site exceptions".
-- `inactive_tabs_auto_close_message_header` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Question "Auto-close after one month?" rendered as an imperative command rather than a question about the setting.
-    - Current: `एक महीने बाद अपने आप बंद करें?`
-    - Source: `Auto-close after one month?`
-    - Suggest: `एक महीने बाद अपने आप बंद हो जाएं?`
-    - The source asks whether tabs should auto-close after a month; the Hindi uses the imperative "बंद करें" (you close them), changing the actor and meaning.
-- `download_language_file_dialog_message_all_languages` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "partial languages" translated as "आधी-अधूरी भाषाओं" (half-baked/incomplete languages), a pejorative claim about the download.
-    - Current: `कुछ आधी-अधूरी भाषाओं को`
-    - Source: `We download partial languages to your cache to keep translations private.`
-    - Suggest: `भाषाओं के कुछ हिस्सों को`
-    - The source means parts of language files are downloaded; "आधी-अधूरी" connotes shoddy/incomplete quality, making the product describe its own language data as half-baked.
+_No new findings._
 
-### ✅ Fixed since the last run (58)
+### ✅ Fixed since the last run (0)
 
-- `mozac_browser_errorpages_httpsonly_button` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hi-rIN/strings.xml` — "Continue to HTTP Site" mistranslated as "Keep the HTTP site running/continue it".
-    - Current: `HTTP साइट को जारी रखें`
-    - Source: `Continue to HTTP Site`
-    - Suggest: `HTTP साइट पर जाएं`
-    - The button loads the site over HTTP; the Hindi "HTTP साइट को जारी रखें" means "continue the HTTP site" rather than "proceed to the HTTP site".
-- `mozac_browser_menu2_button` — `mozilla-mobile/android-components/components/browser/menu2/src/main/res/values-hi-rIN/strings.xml` — "Menu" is rendered as "मेन्यू बटन" (Menu button), adding a word not in the source and diverging from the identical strings elsewhere.
-    - Current: `मेन्यू बटन`
-    - Source: `Menu`
-    - Suggest: `मेन्यू`
-    - Source is just "Menu"; the parallel strings mozac_browser_menu_button and mozac_browser_toolbar_menu_button are correctly translated as "मेन्यू".
-- `mozac_feature_addons_permissions_required_data_collection_description_2` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hi-rIN/strings.xml` — Wrong case marker: "इन चीज़ों का इकट्ठा करता है" should be "इन चीज़ों को इकट्ठा करता है".
-    - Current: `इन चीज़ों का इकट्ठा करता है`
-    - Source: `The developer says this extension collects: %1$s`
-    - Suggest: `इन चीज़ों को इकट्ठा करता है`
-    - The postposition का does not agree with the transitive verb इकट्ठा करता है; the object requires को (or no marker).
-- `mozac_feature_contextmenu_share_image` — `mozilla-mobile/android-components/components/feature/contextmenu/src/main/res/values-hi-rIN/strings.xml` — "Share image" uses "चित्र साझा करें" while sibling context-menu strings use "इमेज" and "शेयर करें".
-    - Current: `चित्र साझा करें`
-    - Source: `Share image`
-    - Suggest: `इमेज शेयर करें`
-    - The same surface (context menu) renders "image" as "इमेज" (open/save image) and "share" as "शेयर करें" (share link, share email address); this string alone switches to चित्र/साझा, breaking terminology consistency.
-- `mozac_feature_downloads_could_not_open_file` — `mozilla-mobile/android-components/components/feature/downloads/src/main/res/values-hi-rIN/strings.xml` — Gender agreement error: "फ़ाइल" is feminine but the verb is masculine.
-    - Current: `फ़ाइल खोला नहीं जा सका`
-    - Source: `Could not open file`
-    - Suggest: `फ़ाइल खोली नहीं जा सकी`
-    - "फ़ाइल" is a feminine noun in Hindi, so the passive verb must be "खोली नहीं जा सकी".
-- `mozac_feature_downloads_dialog_cancel` — `mozilla-mobile/android-components/components/feature/downloads/src/main/res/values-hi-rIN/strings.xml` — "Cancel" rendered as "रद्द करें" while the other Cancel buttons in the same file use "कैंसिल करें".
-    - Current: `रद्द करें`
-    - Source: `Cancel`
-    - Suggest: `कैंसिल करें`
-    - mozac_feature_downloads_button_cancel and the cancel-downloads strings in the same downloads surface use "कैंसिल"; this string is inconsistent with them.
-- `mozac_feature_media_sharing_camera_and_microphone_text` — `mozilla-mobile/android-components/components/feature/media/src/main/res/values-hi-rIN/strings.xml` — Sentence ends with a Latin full stop instead of the Devanagari danda used in the sibling strings in the same file.
-    - Current: `टैप करें.`
-    - Source: `Tap to open the tab that’s using your microphone and camera.`
-    - Suggest: `टैप करें।`
-    - The adjacent media-sharing notification strings all end with '।'; this one uses '.', an inconsistent terminator on the same surface.
-- `mozac_feature_prompt_before_unload_dialog_body` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-hi-rIN/strings.xml` — "may not be saved" is rendered as "cannot be saved" (सहेजा नहीं जा सकता है), changing possibility to impossibility.
-    - Current: `आपके द्वारा दर्ज किया गया डेटा सहेजा नहीं जा सकता है`
-    - Source: `Do you want to leave this site? Data you have entered may not be saved`
-    - Suggest: `हो सकता है कि आपके द्वारा दर्ज किया गया डेटा सेव न हो`
-    - Source says data may not be saved (possibility); the Hindi asserts the data cannot be saved.
-- `mozac_feature_prompts_expand_logins_content_description_2` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-hi-rIN/strings.xml` — Typo: "सेवा किए गए" instead of "सेव किए गए" (saved).
-    - Current: `'सेवा किए गए पासवर्ड' को फैलाएं`
-    - Source: `Expand saved passwords`
-    - Suggest: `'सेव किए गए पासवर्ड' को फैलाएं`
-    - Source is "Expand saved passwords"; "सेवा" means "service", not "saved". The parallel collapse string correctly uses "सेव किए गए पासवर्ड".
-- `mozac_feature_prompts_identity_credentials_choose_provider` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-hi-rIN/strings.xml` — Misspelling of "प्रोवाइडर" as "प्रोवाइर".
-    - Current: `लॉगिन प्रोवाइर चुनें`
-    - Source: `Choose a login provider`
-    - Suggest: `लॉगिन प्रोवाइडर चुनें`
-    - "provider" is transliterated as प्रोवाइडर elsewhere (see mozac_feature_prompts_identity_credentials_privacy_policy_title); here the 'ड' is missing.
-- `mozac_summarize_info_error_code` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-hi-rIN/strings.xml` — "Error" is transliterated as "ऐरर" here while the same term is translated as "गड़बड़ी" in the neighbouring error strings.
-    - Current: `ऐरर कोड: %1$d`
-    - Source: `Error code: %1$d`
-    - Suggest: `गड़बड़ी कोड: %1$d`
-    - mozac_summarize_download_error_title and _fallback_message render "Error" as गड़बड़ी; the transliteration ऐरर is inconsistent on the same surface.
-- `about_debug_menu_toast_progress` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — The translation loses the meaning "%1$d click(s) left", saying instead "press %1$d to enable".
-    - Current: `डिबग मेन्यू : %1$d सक्षम करने के लिए दबायें`
-    - Source: `Debug menu: %1$d click(s) left to enable`
-    - Suggest: `डिबग मेन्यू: सक्षम करने के लिए %1$d बार और दबाएँ`
-    - Source says the number of remaining clicks needed to enable the debug menu; the target reads as an instruction to press the number, dropping "left".
-- `about_debug_menu_toast_progress` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Stray space before the colon.
-    - Current: `डीबग मेन्यू : चालू`
-    - Source: `Debug menu: %1$d click(s) left to enable`
-    - Suggest: `डीबग मेन्यू: चालू`
-    - The source has no space before the colon; a space before punctuation is not a hi-IN convention.
-- `collection_open_tabs` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "Open tabs" here is a verb phrase (button that opens the collection's tabs) but is translated as the noun phrase "open tabs".
-    - Current: `खुले हुए टैब`
-    - Source: `Open tabs`
-    - Suggest: `टैब खोलें`
-    - Developer comment: "Text for the button to open tabs of the selected collection" — it is an action label, not a description of already-open tabs.
-- `create_collection_save_to_collection_tabs_selected` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Plural form for multiple tabs is identical to the singular string, using singular agreement.
-    - Current: `%d टैब चुना गया`
-    - Source: `%d tabs selected`
-    - Suggest: `%d टैब चुने गए`
-    - Source is "%d tabs selected" (plural), but the target uses the singular verb form identical to create_collection_save_to_collection_tab_selected ("%d tab selected").
-- `create_collection_select_collection` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Imperative verb form misspelled: "चुने" should be "चुनें".
-    - Current: `संग्रह चुने`
-    - Source: `Select collection`
-    - Suggest: `संग्रह चुनें`
-    - "Select collection" is an imperative; Hindi requires "चुनें" (as used correctly in other strings like "सभी चुनें").
-- `credit_cards_biometric_prompt_message_pin` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "Unlock your device" rendered as "अपना उपकरण खोलें" (open your device) instead of unlock, and uses inconsistent term for device.
-    - Current: `अपना उपकरण खोलें`
-    - Source: `Unlock your device`
-    - Suggest: `अपना डिवाइस अनलॉक करें`
-    - The source says "Unlock your device"; "खोलें" means open, and neighbouring strings use "डिवाइस"/"अनलॉक" consistently.
-- `delete_browsing_data_quit_off` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Status summary "Off" translated as an imperative command "Turn off".
-    - Current: `बंद करें`
-    - Source: `Off`
-    - Suggest: `बंद`
-    - The source is a summary showing the preference's current state (Off), not an action button; "बंद करें" means "turn off".
-- `delete_browsing_data_quit_on` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Status summary "On" translated as an imperative command "Turn on".
-    - Current: `चालू करें`
-    - Source: `On`
-    - Suggest: `चालू`
-    - The source is a summary showing the preference's current state (On), not an action; "चालू करें" means "turn on".
-- `enhanced_tracking_protection_exceptions` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Plural "these websites" rendered as singular "this site".
-    - Current: `इस साइट के लिए उन्नत ट्रैकिंग सुरक्षा बंद है`
-    - Source: `Enhanced Tracking Protection is off for these websites`
-    - Suggest: `इन वेबसाइटों के लिए उन्नत ट्रैकिंग सुरक्षा बंद है`
-    - Source says "for these websites" (plural, header for an exceptions list); the translation says "for this site" (singular).
-- `etp_cookies_description` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Wrong verb agreement: "करता हैं" mixes singular and plural forms.
-    - Current: `ब्लॉक करता हैं`
-    - Source: `Blocks cookies that ad networks and analytics companies use to compile your browsing data across many sites.`
-    - Suggest: `ब्लॉक करता है`
-    - "करता" is singular masculine and requires "है".
-- `etp_cryptominers_description` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "mine digital currency" is mistranslated as "detect/find digital currency".
-    - Current: `डिजिटल करेंसी का पता लगाने वाली`
-    - Source: `Prevents malicious scripts gaining access to your device to mine digital currency.`
-    - Suggest: `डिजिटल करेंसी माइन करने वाली`
-    - The source says the scripts mine (generate) digital currency using your device; "का पता लगाने" means "to detect/locate", which is a different action.
-- `etp_social_media_trackers_description` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "your browsing activity" rendered as reflexive "अपनी", making the social networks the possessor.
-    - Current: `वेब के आसपास अपनी ब्राउज़िंग गतिविधि को ट्रैक करने के लिए सामाजिक नेटवर्क की क्षमता को सीमित करता है।`
-    - Source: `Limits the ability of social networks to track your browsing activity around the web.`
-    - Suggest: `वेब पर आपकी ब्राउज़िंग गतिविधि को ट्रैक करने की सामाजिक नेटवर्क की क्षमता को सीमित करता है।`
-    - In Hindi "अपनी" refers back to the subject (the social networks), so the sentence says networks track their own browsing activity instead of yours.
-- `etp_tracking_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Garbled clause order and wrong agreement make the sentence say the tracking code blocks external content from loading.
-    - Current: `जिसमें ट्रैकिंग कोड होता है उसे बाहरी विज्ञापन, वीडियो, और अन्य सामग्री लोड करने से रोकती है। कुछ वेबसाइट की कार्यक्षमता को प्रभावित करती हैं।`
-    - Source: `Stops outside ads, videos, and other content from loading that contains tracking code. May affect some website functionality.`
-    - Suggest: `ट्रैकिंग कोड वाले बाहरी विज्ञापन, वीडियो और अन्य सामग्री को लोड होने से रोकता है। इससे कुछ वेबसाइटों की कार्यक्षमता प्रभावित हो सकती है।`
-    - Source: "Stops outside ads, videos, and other content from loading that contains tracking code. May affect some website functionality." The relative clause is misplaced and the second sentence drops the modal "May", asserting it does affect functionality.
-- `exceptions_empty_message_description` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Translation states exceptions disable tracking protection, dropping "let you" (allow/enable to).
-    - Current: `अपवाद आपको चयनित साइटों के लिए ट्रैकिंग सुरक्षा अक्षम करते हैं।`
-    - Source: `Exceptions let you disable tracking protection for selected sites.`
-    - Suggest: `अपवाद आपको चयनित साइटों के लिए ट्रैकिंग सुरक्षा अक्षम करने देते हैं।`
-    - Source: "Exceptions let you disable tracking protection for selected sites." The Hindi says exceptions disable protection for you, losing the permissive meaning.
-- `inactive_tabs_auto_close_message_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Number agreement error: singular subject with plural verb.
-    - Current: `स्वत: बंद सक्षम हैं`
-    - Source: `Auto-close enabled`
-    - Suggest: `स्वत: बंद सक्षम है`
-    - "Auto-close enabled" is singular; "हैं" is the plural form and disagrees with the subject.
-- `logins_username_copied` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Passive construction is incomplete: missing "गया".
-    - Current: `यूज़रनेम क्लिपबोर्ड पर कॉपी किया`
-    - Source: `Username copied to clipboard`
-    - Suggest: `यूज़रनेम क्लिपबोर्ड पर कॉपी किया गया`
-    - Source "Username copied to clipboard" is passive; Hindi needs "कॉपी किया गया".
-- `notification_pbm_delete_text_2` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "private tabs" rendered as "निजी टैब" here but "प्राइवेट टैब" in the parallel Android 14 string.
-    - Current: `निजी टैब बंद करें`
-    - Source: `Close private tabs`
-    - Suggest: `प्राइवेट टैब बंद करें`
-    - notification_erase_title_android_14 translates the same "private tabs" as "प्राइवेट टैब"; the same notification surface should use one term.
-- `phone_feature_blocked_step_feature` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Instruction reworded so the ON target is lost: reads "toggle %1$s in order to turn on".
-    - Current: `3. चालू करने के लिए { <b> }%1$s{ </b> } टॉगल करें`
-    - Source: `3. Toggle { <b> }%1$s{ </b> } to ON`
-    - Suggest: `3. { <b> }%1$s{ </b> } को चालू (ON) पर टॉगल करें`
-    - Source is "Toggle %1$s to ON", i.e. set the named permission toggle to ON; the Hindi inverts it into "in order to turn on, toggle %1$s".
-- `preference_accessibility_auto_size_summary` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Second sentence mistranslated: "Disable to manage font size here" became "unable to manage font size here".
-    - Current: `यहां फ़ॉन्ट आकार प्रबंधित करने में अक्षम।`
-    - Source: `Font size will match your Android settings. Disable to manage font size here.`
-    - Suggest: `यहां फ़ॉन्ट आकार प्रबंधित करने के लिए इसे बंद करें।`
-    - The source instructs the user to disable the setting in order to manage font size here; the Hindi states the app is unable to manage font size here, reversing the instruction.
-- `preference_accessibility_auto_size_summary` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Gender/case agreement error: "आपका Android सेटिंग्स" should be "आपकी Android सेटिंग्स".
-    - Current: `फ़ॉन्ट आकार आपका Android सेटिंग्स से मेल खाएगा`
-    - Source: `Font size will match your Android settings. Disable to manage font size here.`
-    - Suggest: `फ़ॉन्ट आकार आपकी Android सेटिंग्स से मेल खाएगा`
-    - "सेटिंग्स" is feminine and requires "आपकी"; also the postposition requires the oblique form.
-- `preference_enhanced_tracking_protection_custom_cookies_2` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Ungrammatical rendering of "Cookies from unvisited sites".
-    - Current: `नहीं देखे साइट से कुकीज़`
-    - Source: `Cookies from unvisited sites`
-    - Suggest: `बिना देखी गई साइटों की कुकीज़`
-    - "नहीं देखे साइट से" lacks agreement and a proper participle construction in Hindi.
-- `preference_enhanced_tracking_protection_custom_cookies_4` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Ungrammatical parenthetical: "(वेबसाइटों को तोड़ने के कारण होंगे)".
-    - Current: `सभी कुकीज़ (वेबसाइटों को तोड़ने के कारण होंगे)`
-    - Source: `All cookies (will cause websites to break)`
-    - Suggest: `सभी कुकीज़ (इससे वेबसाइटें काम करना बंद कर देंगी)`
-    - The phrase is not grammatical Hindi and garbles "will cause websites to break".
-- `preference_enhanced_tracking_protection_custom_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Imperative misspelled ("चुने" instead of "चुनें") and wrong agreement in "करना हैं".
-    - Current: `चुने, कौन से ट्रैकर्स और स्क्रिप्ट को ब्लॉक करना हैं।`
-    - Source: `Choose which trackers and scripts to block.`
-    - Suggest: `चुनें कि कौन से ट्रैकर और स्क्रिप्ट ब्लॉक करने हैं।`
-    - "चुने" is the wrong form for the polite imperative and "करना हैं" mixes singular verb with plural auxiliary.
-- `preference_experiments_summary_2` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Translation says "allows installing Mozilla and running studies" instead of allowing Mozilla to install and run studies.
-    - Current: `Mozilla को संस्थापित करने और अध्ययन चलाने की अनुमति देता है`
-    - Source: `Allows Mozilla to install and run studies`
-    - Suggest: `Mozilla को अध्ययन संस्थापित करने और चलाने की अनुमति देता है`
-    - In the source, Mozilla is the agent that installs and runs studies; the Hindi reads as though Mozilla itself is being installed.
-- `preferences_delete_browsing_data_browsing_data_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Plural "%d addresses" rendered in singular form.
-    - Current: `%d पता`
-    - Source: `%d addresses`
-    - Suggest: `%d पते`
-    - The source is plural; Hindi should use the plural noun form 'पते'.
-- `preferences_delete_browsing_data_cached_files` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Translation of "Cached images and files" is ungrammatical and misordered with wrong agreement.
-    - Current: `चित्र और फाइलें सहेजा गया`
-    - Source: `Cached images and files`
-    - Suggest: `कैश किए गए चित्र और फ़ाइलें`
-    - The source is a noun phrase 'cached images and files'; the target reads 'images and files was saved' with wrong gender/number agreement.
-- `preferences_delete_browsing_data_cached_files_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Descriptive statement "Frees up storage space" rendered as an imperative.
-    - Current: `संग्रहण जगह को खाली करें`
-    - Source: `Frees up storage space`
-    - Suggest: `संग्रहण जगह खाली करता है`
-    - Source describes what deleting does, not a command to the user.
-- `preferences_delete_browsing_data_on_quit` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "on quit" mistranslated as "निकासी पर" (on withdrawal/exit of money).
-    - Current: `निकासी पर ब्राउज़िंग डेटा हटाएँ`
-    - Source: `Delete browsing data on quit`
-    - Suggest: `बाहर निकलने पर ब्राउज़िंग डेटा हटाएँ`
-    - 'निकासी' means withdrawal/drainage, not quitting the app; it does not convey 'on quit'.
-- `preferences_opening_screen` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "Opening screen" (the screen shown when the app opens) is rendered as "when the screen opens".
-    - Current: `स्क्रीन खुलने पर`
-    - Source: `Opening screen`
-    - Suggest: `शुरुआती स्क्रीन`
-    - The developer comment says this is the title of a preference for choosing what screen to show after opening the app; "स्क्रीन खुलने पर" means "upon the screen opening", which reverses the noun phrase.
-- `preferences_sync_remove_account` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Misspelled verb form "मिटायें" and wrong verb for "remove account".
-    - Current: `खाता मिटायें`
-    - Source: `Remove account`
-    - Suggest: `खाता हटाएं`
-    - "Remove account" should be हटाएं (remove), and the standard spelling is हटाएं/मिटाएं, not मिटायें; also inconsistent with the -एं endings used elsewhere in this batch.
-- `qr_scanner_dialog_invalid` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Latin full stop used instead of the Devanagari danda used elsewhere in the file.
-    - Current: `वेब पता वैध नहीं है.`
-    - Source: `Web address not valid.`
-    - Suggest: `वेब पता वैध नहीं है।`
-    - Surrounding Hindi strings consistently end sentences with "।"; this one uses ".".
-- `saved_login_copy_username` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Verb form is wrong: "कॉपी करे" instead of the imperative "कॉपी करें".
-    - Current: `उपयोगकर्ता नाम कॉपी करे`
-    - Source: `Copy username`
-    - Suggest: `उपयोगकर्ता नाम कॉपी करें`
-    - Source "Copy username" is an imperative label; Hindi requires "करें", and "करे" is an ungrammatical subjunctive form inconsistent with the other button descriptions in this batch.
-- `saved_login_duplicate` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — The translation drops "already" and reads "A login with this username exists", losing the duplicate-error meaning.
-    - Current: `एक लॉगिन इस उपयोगकर्ता नाम के साथ मौजूद है`
-    - Source: `A login with that username already exists`
-    - Suggest: `इस उपयोगकर्ता नाम वाला लॉगिन पहले से मौजूद है`
-    - Source is "A login with that username already exists"; "पहले से" (already) is missing.
-- `search_add_custom_engine_search_string_example` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "Replace query with “%s”" is translated using "प्रश्न" (question) and with a grammatically wrong verb form.
-    - Current: `“%s” से प्रश्न बदले।`
-    - Source: `Replace query with “%s”. Example: https://www.google.com/search?q=%s`
-    - Suggest: `क्वेरी को “%s” से बदलें।`
-    - "query" here is the search query parameter, not a "question"; also "बदले" should be the imperative "बदलें".
-- `share_device_subheader` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Wrong case marker: "उपकरण को भेजें" means "send the device" rather than "send to device".
-    - Current: `उपकरण को भेजें`
-    - Source: `Send to device`
-    - Suggest: `उपकरण पर भेजें`
-    - Source "Send to device" means sending a link to a device; "उपकरण को भेजें" reads as sending the device itself.
-- `tab_crash_title_2` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Number agreement error: singular verb form with plural auxiliary "हैं".
-    - Current: `उस पृष्ठ को लोड नहीं कर सकता हैं।`
-    - Source: `Sorry. %1$s can’t load that page.`
-    - Suggest: `उस पृष्ठ को लोड नहीं कर सकता है।`
-    - The subject is a single app name (%1$s), so the auxiliary must be singular "है", not plural "हैं".
-- `tabs_menu_save_to_collection1` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "collection" rendered as "संग्रहण" (storage) instead of "संग्रह" used elsewhere for collection.
-    - Current: `संग्रहण में टैब सहेजें`
-    - Source: `Save tabs to collection`
-    - Suggest: `टैब संग्रह में सहेजें`
-    - The sibling string tab_tray_select_collection uses "संग्रह" for "collection"; "संग्रहण" means storage/collecting, an inconsistent and incorrect term on the same surface.
-- `mozac_feature_prompts_identity_credentials_choose_provider` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-hi-rIN/strings.xml` — Misspelling of "प्रोवाइडर" as "प्रोवाइर".
-    - Current: `लॉगिन प्रोवाइर चुनें`
-    - Source: `Choose a login provider`
-    - Suggest: `लॉगिन प्रोवाइडर चुनें`
-    - "provider" is transliterated as प्रोवाइडर elsewhere (see mozac_feature_prompts_identity_credentials_privacy_policy_title); here the 'ड' is missing.
-- `about_debug_menu_toast_progress` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Stray space before the colon.
-    - Current: `डीबग मेन्यू : चालू`
-    - Source: `Debug menu: %1$d click(s) left to enable`
-    - Suggest: `डीबग मेन्यू: चालू`
-    - The source has no space before the colon; a space before punctuation is not a hi-IN convention.
-- `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Curly typographic quotes in the source were replaced with straight ASCII quotes.
-    - Current: `"https://" या "http://"`
-    - Source: `Web address must contain “https://” or “http://”`
-    - Suggest: `“https://” या “http://”`
-    - The en-US string uses “ ” curly quotes around the URL schemes; the localization uses straight double quotes.
-- `collection_open_tabs` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "Open tabs" here is a verb phrase (button that opens the collection's tabs) but is translated as the noun phrase "open tabs".
-    - Current: `खुले हुए टैब`
-    - Source: `Open tabs`
-    - Suggest: `टैब खोलें`
-    - Developer comment: "Text for the button to open tabs of the selected collection" — it is an action label, not a description of already-open tabs.
-- `create_collection_select_tabs` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Imperative verb form misspelled: "चुने" should be "चुनें".
-    - Current: `टैब चुने`
-    - Source: `Select Tabs`
-    - Suggest: `टैब चुनें`
-    - "Select Tabs" is an imperative; Hindi requires "चुनें", consistent with "सहेजने के लिए टैब चुनें".
-- `download_language_file_dialog_message_all_languages` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "partial languages" translated as "आधी-अधूरी भाषाओं" (half-baked/incomplete languages), a pejorative claim about the download.
-    - Current: `कुछ आधी-अधूरी भाषाओं को`
-    - Source: `We download partial languages to your cache to keep translations private.`
-    - Suggest: `भाषाओं के कुछ हिस्सों को`
-    - The source means parts of language files are downloaded; "आधी-अधूरी" connotes shoddy/incomplete quality, making the product describe its own language data as half-baked.
-- `etp_cookies_description` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Wrong verb agreement: "करता हैं" mixes singular and plural forms.
-    - Current: `ब्लॉक करता हैं`
-    - Source: `Blocks cookies that ad networks and analytics companies use to compile your browsing data across many sites.`
-    - Suggest: `ब्लॉक करता है`
-    - "करता" is singular masculine and requires "है".
-- `etp_cryptominers_description` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "mine digital currency" is mistranslated as "detect/find digital currency".
-    - Current: `डिजिटल करेंसी का पता लगाने वाली`
-    - Source: `Prevents malicious scripts gaining access to your device to mine digital currency.`
-    - Suggest: `डिजिटल करेंसी माइन करने वाली`
-    - The source says the scripts mine (generate) digital currency using your device; "का पता लगाने" means "to detect/locate", which is a different action.
-- `logins_username_copied` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Passive construction is incomplete: missing "गया".
-    - Current: `यूज़रनेम क्लिपबोर्ड पर कॉपी किया`
-    - Source: `Username copied to clipboard`
-    - Suggest: `यूज़रनेम क्लिपबोर्ड पर कॉपी किया गया`
-    - Source "Username copied to clipboard" is passive; Hindi needs "कॉपी किया गया".
-- `tab_tray_close_tabs_banner_negative_button_text` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Button label "Dismiss" translated as a bare adjective/stem instead of a verb phrase.
-    - Current: `खारिज`
-    - Source: `Dismiss`
-    - Suggest: `खारिज करें`
-    - "खारिज" alone is not a grammatical action label in Hindi; other buttons in this batch use the verb form (e.g. "बंद करें", "विकल्प देखें").
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -443,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,668 |
-| Missing strings | 81 |
+| Strings | 2,669 |
+| Missing strings | 80 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -461,11 +63,10 @@ _Nothing retired._
 
 ### Completeness
 
-**81 strings** are not translated yet, concentrated in:
+**80 strings** are not translated yet, concentrated in:
 
 - `mozilla-mobile/focus-android/app/src/main/res/values-hi-rIN/strings.xml` — 79
 - `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-hi-rIN/strings.xml` — 1
-- `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -475,7 +76,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 10, `straight-double` 2 | **curly-double** |
+| quotes | `curly-double` 11, `straight-double` 2 | **curly-double** |
 | apostrophe | `typographic` 1, `straight` 4 | **straight** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 1 | **em** |
@@ -1212,7 +813,7 @@ _Nothing in this category._
 - `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
     - Current: `वेब एड्रेस में "https://" या "http://" ज़रूर होना चाहिए`
     - Source: `Web address must contain “https://” or “http://”`
-    - The locale's quote convention is `curly-double` (10 occurrences).
+    - The locale's quote convention is `curly-double` (11 occurrences).
 - `addon_failure_retry_action` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Stray zero-width non-joiner character inside "कोशिश‌ करें".
     - Current: `फिर कोशिश‌ करें`
     - Source: `Retry`
@@ -1236,7 +837,7 @@ _Nothing in this category._
 - `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — `preference_summary_delete_browsing_data_on_quit_2` uses straight double quotes
     - Current: `जब आप मेन मेन्यू से "बाहर निकलें" चुनते हैं, तो ब्राउज़िंग डेटा को अपने आप डिलीट कर देता है`
     - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
-    - The locale's quote convention is `curly-double` (10 occurrences).
+    - The locale's quote convention is `curly-double` (11 occurrences).
 - `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Straight double quotes used instead of the locale's curly double quotes as in the source.
     - Current: `"बाहर निकलें"`
     - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
