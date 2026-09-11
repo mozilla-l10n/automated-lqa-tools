@@ -1,6 +1,6 @@
 # Firefox for Android, Focus, and the shared Android Components — l10n QA
 
-- **Generated:** 2026-09-10
+- **Generated:** 2026-09-11
 - **Locales tracked:** 21 (21 with recorded state)
 - **Findings:** 2,759 raised, 107 fixed (3%), 2,344 open
 - **Closed by a person:** 17 dismissed, 68 suppressed by rule
@@ -45,7 +45,7 @@ Too many to list here; the per-locale counts are in the table below and every on
 | [es-MX](es-MX/android.md) | 2026-09-10 | incremental | `6bf5ed95` | 2,691 | 58 | **155** | 83 | 0 | 0 | 0 |
 | [fr](fr/android.md) | 2026-09-10 | incremental | `6bf5ed95` | 2,749 | 0 | **78** | 56 | 0 | 0 | 0 |
 | [fy-NL](fy-NL/android.md) | 2026-09-10 | incremental | `6bf5ed95` | 2,717 | 32 | **165** | 59 | 0 | 0 | 0 |
-| [hi-IN](hi-IN/android.md) | 2026-09-10 | incremental | `6bf5ed95` | 2,668 | 81 | **179** | 74 | 52 | 1 | 0 |
+| [hi-IN](hi-IN/android.md) | 2026-09-11 | incremental | `d7cb3636` | 2,669 | 80 | **179** | 74 | 52 | 1 | 0 |
 | [hu](hu/android.md) | 2026-09-10 | incremental | `6bf5ed95` | 2,746 | 3 | **149** | 77 | 0 | 0 | 0 |
 | [id](id/android.md) | 2026-09-10 | incremental | `6bf5ed95` | 2,741 | 8 | **163** | 91 | 3 | 0 | 0 |
 | [it](it/android.md) | 2026-09-10 | incremental | `6bf5ed95` | 2,749 | 0 | **0** | 0 | 43 | 11 | 4 |
