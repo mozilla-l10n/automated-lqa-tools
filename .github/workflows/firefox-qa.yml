@@ -230,13 +230,37 @@ jobs:
         # One long-lived branch, so runs accumulate into a single open pull
         # request instead of opening one per run. Done before the artifacts
         # are applied so there is nothing in the tree to stash.
+        #
+        # Accumulating is only honest while that pull request is still open.
+        # These are squash-merged, so no commit on this branch ever becomes
+        # an ancestor of the base: once one is merged -- or closed unmerged
+        # -- the branch still carries the runs it already proposed, and the
+        # next run proposes them again. A one-locale run then arrives as a
+        # pull request touching every locale the last full run did, dates
+        # and all, for work that has already landed or been turned down.
+        # The review jobs read the base's state, too, so the locale that ran
+        # would be sitting on state from the base while every other locale
+        # kept the branch's. So unless there is an open pull request to add
+        # to, the branch is rebuilt from the base.
         run: |
           set -euo pipefail
           git config user.name  'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
 
+          open_pr=false
           if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null 2>&1; then
+            # Fetched either way: the `git push --force-with-lease` below
+            # needs an up-to-date remote-tracking ref, and refuses with
+            # "stale info" when it has none.
             git fetch origin "$BRANCH"
+            if gh pr view "$BRANCH" --json state --jq .state 2>/dev/null \
+                 | grep -qx OPEN; then
+              open_pr=true
+            fi
+          fi
+
+          if [ "$open_pr" = true ]; then
+            echo "adding to the open pull request on $BRANCH"
             git checkout -B "$BRANCH" "origin/$BRANCH"
             if ! git merge --no-edit "origin/$BASE"; then
               # Only generated files can conflict. Locale instructions are
@@ -248,7 +272,8 @@ jobs:
               git commit --no-edit
             fi
           else
-            git checkout -B "$BRANCH"
+            echo "nothing open on $BRANCH: rebuilding it from $BASE"
+            git checkout -B "$BRANCH" "origin/$BASE"
           fi
 
       - name: Collect the per-locale results
