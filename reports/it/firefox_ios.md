@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-07 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `386c3ca4eca7` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `386c3ca4eca7` |
-| **Previous run** | 2026-09-01 @ `117165baae4c` |
+| **Generated** | 2026-09-14 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `e8592a898dc1` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `e8592a898dc1` |
+| **Previous run** | 2026-09-07 @ `386c3ca4eca7` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 4 of 1,922 |
+| **Strings reviewed this run** | 1,906 of 1,922 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,48 @@ Also for it: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (8)
 
-_No new findings._
+- `ActivityStream.Library.Title` — `it/firefox-ios.xliff` — "Recently Saved" translated as "Aggiunti di recente" (recently added) rather than "Salvati di recente".
+    - Current: `Aggiunti di recente`
+    - Source: `Recently Saved`
+    - Suggest: `Salvati di recente`
+    - The section lists recently saved items (bookmarks/reading list); the Italian says "added" instead of "saved", diverging from the source term.
+- `BreachAlerts.Description` — `it/firefox-ios.xliff` — "leaked or stolen" is rendered as "rubate o diffuse pubblicamente" ("publicly disclosed"), and the source's "Passwords were leaked" is turned into a claim about this specific website's passwords.
+    - Current: `le password di questo sito web sono state rubate o diffuse pubblicamente`
+    - Source: `Passwords were leaked or stolen since you last changed your password. To protect this account, log in to the site and change your password.`
+    - Suggest: `alcune password sono state diffuse o rubate`
+    - The en-US says generically "Passwords were leaked or stolen since you last changed your password"; the Italian asserts that the passwords of this website were stolen or publicly disclosed, adding "pubblicamente" and scoping to "questo sito web", which the source never states.
+- `HistoryPanel.ClearHistoryMenuOptionTodayAndYesterday` — `it/firefox-ios.xliff` — Order of days reversed relative to source "Today and Yesterday".
+    - Current: `Ieri e oggi`
+    - Source: `Today and Yesterday`
+    - Suggest: `Oggi e ieri`
+    - The source lists "Today and Yesterday"; the Italian inverts the order.
+- `Menu.TrackingProtectionCrossSiteTrackers.Title` — `it/firefox-ios.xliff` — "Cross-Site Trackers" translated as "Contenuti traccianti intersito", duplicating the wording used for "Tracking content" and adding "Contenuti".
+    - Current: `Contenuti traccianti intersito`
+    - Source: `Cross-Site Trackers`
+    - Suggest: `Traccianti intersito`
+    - The source says "Cross-Site Trackers" (trackers), not "tracking content"; the current wording collides with Menu.TrackingProtectionBlockedContent.Title ("Contenuti traccianti") on the same screen.
+- `Menu.TrackingProtectionDescription.Fingerprinters` — `it/firefox-ios.xliff` — "collect" rendered as "memorizzano" (store) instead of "raccolgono" (collect).
+    - Current: `I fingerprinter memorizzano vari tipi di impostazioni distintive`
+    - Source: `The settings on your browser and computer are unique. Fingerprinters collect a variety of these unique settings to create a profile of you, which can be used to track you as you browse.`
+    - Suggest: `I fingerprinter raccolgono vari tipi di impostazioni distintive`
+    - The source says fingerprinters collect these settings, not that they store them.
+- `PhotoLibrary.FirefoxWouldLikeAccessMessage` — `it/firefox-ios.xliff` — Singular "the image" rendered as plural "le immagini".
+    - Current: `Permette di salvare le immagini nel Rullino.`
+    - Source: `This allows you to save the image to your Camera Roll.`
+    - Suggest: `Permette di salvare l’immagine nel Rullino.`
+    - The en-US source refers to a single image ("save the image to your Camera Roll").
+- `Settings.Siri.SectionDescription` — `it/firefox-ios.xliff` — The translation drops "Siri shortcuts", turning "Use Siri shortcuts to quickly open Firefox via Siri" into "Use Siri to quickly open Firefox".
+    - Current: `Utilizza Siri per aprire velocemente Firefox`
+    - Source: `Use Siri shortcuts to quickly open Firefox via Siri`
+    - Suggest: `Utilizza i comandi di Siri per aprire velocemente Firefox con Siri`
+    - The source describes using Siri shortcuts; the Italian omits the shortcut concept, which is the subject of this settings section (see Settings.Siri.SectionName “Comandi di Siri”).
+- `Settings.Studies.Message.v148` — `it/firefox-ios.xliff` — Translation adds "del browser" (of the browser), which the source does not say.
+    - Current: `contribuendo così a migliorare la qualità del browser per tutti`
+    - Source: `%@ randomly selects users to test features, which improves quality for everyone.`
+    - Suggest: `contribuendo così a migliorare la qualità per tutti`
+    - The en-US says "which improves quality for everyone" without specifying the browser; the Italian adds an unsourced object.
 
 ### ✅ Fixed since the last run (0)
 
@@ -81,14 +120,23 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (0)
+## 3. Open findings (8)
 
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+
+- `BreachAlerts.Description` — `it/firefox-ios.xliff` — "leaked or stolen" is rendered as "rubate o diffuse pubblicamente" ("publicly disclosed"), and the source's "Passwords were leaked" is turned into a claim about this specific website's passwords.
+    - Current: `le password di questo sito web sono state rubate o diffuse pubblicamente`
+    - Source: `Passwords were leaked or stolen since you last changed your password. To protect this account, log in to the site and change your password.`
+    - Suggest: `alcune password sono state diffuse o rubate`
+    - The en-US says generically "Passwords were leaked or stolen since you last changed your password"; the Italian asserts that the passwords of this website were stolen or publicly disclosed, adding "pubblicamente" and scoping to "questo sito web", which the source never states.
+
+_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 0 |
-| 3 | Degraded language (grammar, spelling, terminology) | 0 |
+| 2 | Wrong content (says something other than the English) | 6 |
+| 3 | Degraded language (grammar, spelling, terminology) | 2 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -97,11 +145,49 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-_Nothing in this category._
+- `Settings.Studies.Message.v148` — `it/firefox-ios.xliff` — Translation adds "del browser" (of the browser), which the source does not say.
+    - Current: `contribuendo così a migliorare la qualità del browser per tutti`
+    - Source: `%@ randomly selects users to test features, which improves quality for everyone.`
+    - Suggest: `contribuendo così a migliorare la qualità per tutti`
+    - The en-US says "which improves quality for everyone" without specifying the browser; the Italian adds an unsourced object.
+- `ActivityStream.Library.Title` — `it/firefox-ios.xliff` — "Recently Saved" translated as "Aggiunti di recente" (recently added) rather than "Salvati di recente".
+    - Current: `Aggiunti di recente`
+    - Source: `Recently Saved`
+    - Suggest: `Salvati di recente`
+    - The section lists recently saved items (bookmarks/reading list); the Italian says "added" instead of "saved", diverging from the source term.
+- `BreachAlerts.Description` — `it/firefox-ios.xliff` — "leaked or stolen" is rendered as "rubate o diffuse pubblicamente" ("publicly disclosed"), and the source's "Passwords were leaked" is turned into a claim about this specific website's passwords.
+    - Current: `le password di questo sito web sono state rubate o diffuse pubblicamente`
+    - Source: `Passwords were leaked or stolen since you last changed your password. To protect this account, log in to the site and change your password.`
+    - Suggest: `alcune password sono state diffuse o rubate`
+    - The en-US says generically "Passwords were leaked or stolen since you last changed your password"; the Italian asserts that the passwords of this website were stolen or publicly disclosed, adding "pubblicamente" and scoping to "questo sito web", which the source never states.
+- `HistoryPanel.ClearHistoryMenuOptionTodayAndYesterday` — `it/firefox-ios.xliff` — Order of days reversed relative to source "Today and Yesterday".
+    - Current: `Ieri e oggi`
+    - Source: `Today and Yesterday`
+    - Suggest: `Oggi e ieri`
+    - The source lists "Today and Yesterday"; the Italian inverts the order.
+- `Menu.TrackingProtectionCrossSiteTrackers.Title` — `it/firefox-ios.xliff` — "Cross-Site Trackers" translated as "Contenuti traccianti intersito", duplicating the wording used for "Tracking content" and adding "Contenuti".
+    - Current: `Contenuti traccianti intersito`
+    - Source: `Cross-Site Trackers`
+    - Suggest: `Traccianti intersito`
+    - The source says "Cross-Site Trackers" (trackers), not "tracking content"; the current wording collides with Menu.TrackingProtectionBlockedContent.Title ("Contenuti traccianti") on the same screen.
+- `Menu.TrackingProtectionDescription.Fingerprinters` — `it/firefox-ios.xliff` — "collect" rendered as "memorizzano" (store) instead of "raccolgono" (collect).
+    - Current: `I fingerprinter memorizzano vari tipi di impostazioni distintive`
+    - Source: `The settings on your browser and computer are unique. Fingerprinters collect a variety of these unique settings to create a profile of you, which can be used to track you as you browse.`
+    - Suggest: `I fingerprinter raccolgono vari tipi di impostazioni distintive`
+    - The source says fingerprinters collect these settings, not that they store them.
+- `Settings.Siri.SectionDescription` — `it/firefox-ios.xliff` — The translation drops "Siri shortcuts", turning "Use Siri shortcuts to quickly open Firefox via Siri" into "Use Siri to quickly open Firefox".
+    - Current: `Utilizza Siri per aprire velocemente Firefox`
+    - Source: `Use Siri shortcuts to quickly open Firefox via Siri`
+    - Suggest: `Utilizza i comandi di Siri per aprire velocemente Firefox con Siri`
+    - The source describes using Siri shortcuts; the Italian omits the shortcut concept, which is the subject of this settings section (see Settings.Siri.SectionName “Comandi di Siri”).
 
 ### C. Grammar, agreement & spelling
 
-_Nothing in this category._
+- `PhotoLibrary.FirefoxWouldLikeAccessMessage` — `it/firefox-ios.xliff` — Singular "the image" rendered as plural "le immagini".
+    - Current: `Permette di salvare le immagini nel Rullino.`
+    - Source: `This allows you to save the image to your Camera Roll.`
+    - Suggest: `Permette di salvare l’immagine nel Rullino.`
+    - The en-US source refers to a single image ("save the image to your Camera Roll").
 
 ### D. Terminology, register & consistency
 
@@ -115,22 +201,29 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (14)
+### Dismissed by hand (21)
 
+- `ActivityStream.ContextMenu.UnpinTopsite` — `Shared/en.lproj/Localizable.strings` — “Rilascia” is the established opposite of “Appunta” in this menu
 - `ActivityStream.ContextMenu.UnpinTopsite` — `it/firefox-ios.xliff` — “Rilascia” is the established opposite of “Appunta” in this menu
+- `ContextualHints.Toolbar.GoogleLens.Description.v154` — `Shared/Supporting Files/en.lproj/ContextualHints.strings` — Better sounding variation, same meaning.
 - `ContextualHints.Toolbar.GoogleLens.Description.v154` — `it/firefox-ios.xliff` — Better sounding variation, same meaning.
+- `DefaultBrowserOnboarding.Description2` — `Shared/en.lproj/Default Browser.strings` — “di default” mirrors the wording iOS itself shows in Settings
 - `DefaultBrowserOnboarding.Description2` — `it/firefox-ios.xliff` — “di default” mirrors the wording iOS itself shows in Settings
+- `DefaultBrowserOnboarding.Screenshot` — `Shared/en.lproj/Default Browser.strings` — “di default” mirrors the wording iOS itself shows in Settings
 - `DefaultBrowserOnboarding.Screenshot` — `it/firefox-ios.xliff` — “di default” mirrors the wording iOS itself shows in Settings
-- `DefaultBrowserPopup.SecondLabel.v114` — `it/firefox-ios.xliff` — “di default” mirrors the wording iOS itself shows in Settings
+- `DefaultBrowserPopup.SecondLabel.v114` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — “di default” mirrors the wording iOS itself shows in Settings
+- `Firefox won’t remember any of your history or cookies, but new bookmarks will be saved.` — `Shared/en.lproj/PrivateBrowsing.strings` — “invadenti” might be more accurate, but it results in a weird phrase (need to be placed at the end)
 - `Firefox won’t remember any of your history or cookies, but new bookmarks will be saved.` — `it/firefox-ios.xliff` — “invadenti” might be more accurate, but it results in a weird phrase (need to be placed at the end)
+- `Onboarding.Modern.Welcome.Title.v145` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — DRAFT: the Italian wording is the agreed rendering for this screen
 - `Onboarding.Modern.Welcome.Title.v145` — `it/firefox-ios.xliff` — DRAFT: the Italian wording is the agreed rendering for this screen
-- `Onboarding.Welcome.Description.TreatementA.v120` — `it/firefox-ios.xliff` — “invadenti” might be more accurate, but it results in a weird phrase (need to be placed at the end)
-- `Onboarding.Welcome.Title.v114` — `it/firefox-ios.xliff` — “Benvenuti” is inclusive and shorter than “Ti diamo il benvenuto”
+- `Onboarding.Welcome.Description.TreatementA.v120` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — “invadenti” might be more accurate, but it results in a weird phrase (need to be placed at the end)
+- `Onboarding.Welcome.Title.v114` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — “Benvenuti” is inclusive and shorter than “Ti diamo il benvenuto”
+- `Open articles in Reader View by tapping the book icon when it appears in the title bar.` — `Shared/en.lproj/Localizable.strings` — False positive (“book” is there)
 - `Open articles in Reader View by tapping the book icon when it appears in the title bar.` — `it/firefox-ios.xliff` — False positive (“book” is there)
-- `Settings.AppIconSelection.AppIconNames.Retro2004.Title.v139` — `it/firefox-ios.xliff` — “Rétro” is correct https://www.treccani.it/vocabolario/retro_res-0f8f0e80-002f-11de-9d89-0016357eee51/
-- `Settings.AppIconSelection.AppIconNames.Retro2017.Title.v139` — `it/firefox-ios.xliff` — “Rétro” is correct https://www.treccani.it/vocabolario/retro_res-0f8f0e80-002f-11de-9d89-0016357eee51/
-- `Settings.AppIconSelection.AppIconNames.Yellow.Title.v137` — `it/firefox-ios.xliff` — Agrees with “icona”, which is feminine
-- `Settings.Homepage.Shortcuts.ToggleOff.v100` — `it/firefox-ios.xliff` — Refers to the section.
+- `Settings.AppIconSelection.AppIconNames.Retro2004.Title.v139` — `Shared/Supporting Files/en.lproj/AppIconSelection.strings` — “Rétro” is correct https://www.treccani.it/vocabolario/retro_res-0f8f0e80-002f-11de-9d89-0016357eee51/
+- `Settings.AppIconSelection.AppIconNames.Retro2017.Title.v139` — `Shared/Supporting Files/en.lproj/AppIconSelection.strings` — “Rétro” is correct https://www.treccani.it/vocabolario/retro_res-0f8f0e80-002f-11de-9d89-0016357eee51/
+- `Settings.AppIconSelection.AppIconNames.Yellow.Title.v137` — `Shared/Supporting Files/en.lproj/AppIconSelection.strings` — Agrees with “icona”, which is feminine
+- `Settings.Homepage.Shortcuts.ToggleOff.v100` — `Shared/en.lproj/Localizable.strings` — Refers to the section.
 
 _One line each in `locales/it/dismissed.txt`. Delete the line and the finding returns._
 
@@ -151,19 +244,19 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 
 ### Fixed to date (16)
 
-- `Biometry.Screen.UniversalAuthenticationReason.v115` — `it/firefox-ios.xliff` — fixed 2026-08-21
-- `Menu.EnhancedTrackingProtection.ClearData.AlertText.v128` — `it/firefox-ios.xliff` — fixed 2026-08-21
-- `Onboarding.Welcome.Description.v120` — `it/firefox-ios.xliff` — fixed 2026-08-21
-- `ScanQRCode.ConfirmOpenURL.Message.v129` — `it/firefox-ios.xliff` — fixed 2026-08-21
-- `Settings.AIControls.BlockedInformation.v151` — `it/firefox-ios.xliff` — fixed 2026-08-21
-- `Settings.Translation.AutoTranslate.Footer.v151` — `it/firefox-ios.xliff` — fixed 2026-08-21
-- `Settings.Translation.ToggleFooter.v151` — `it/firefox-ios.xliff` — fixed 2026-08-21
-- `Hotkeys.ShowPreviousTab.DiscoveryTitle` — `it/firefox-ios.xliff` — fixed 2026-08-21
-- `SendTo.NotSignedIn.Message` — `it/firefox-ios.xliff` — fixed 2026-08-21
-- `SentTab_TabArrivingNotification_NoDevice_title` — `it/firefox-ios.xliff` — fixed 2026-08-21
-- `SentTab_TabArrivingNotification_WithDevice_title` — `it/firefox-ios.xliff` — fixed 2026-08-21
-- `Settings.Home.Option.Wallpaper.CollectionTitle` — `it/firefox-ios.xliff` — fixed 2026-08-21
-- `Settings.Tabs.CustomizeTabsSection.Title` — `it/firefox-ios.xliff` — fixed 2026-08-21
-- `Tabs Tray` — `it/firefox-ios.xliff` — fixed 2026-08-21
-- `No logins found` — `it/firefox-ios.xliff` — fixed 2026-08-21
-- `TodayWidget.TopSitesGalleryDescription` — `it/firefox-ios.xliff` — fixed 2026-08-21
+- `Biometry.Screen.UniversalAuthenticationReason.v115` — `Shared/Supporting Files/en.lproj/BiometricAuthentication.strings` — fixed 2026-08-21
+- `Menu.EnhancedTrackingProtection.ClearData.AlertText.v128` — `Shared/Supporting Files/en.lproj/EnhancedTrackingProtection.strings` — fixed 2026-08-21
+- `Onboarding.Welcome.Description.v120` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — fixed 2026-08-21
+- `ScanQRCode.ConfirmOpenURL.Message.v129` — `Shared/Supporting Files/en.lproj/ScanQRCode.strings` — fixed 2026-08-21
+- `Settings.AIControls.BlockedInformation.v151` — `Shared/Supporting Files/en.lproj/Settings.strings` — fixed 2026-08-21
+- `Settings.Translation.AutoTranslate.Footer.v151` — `Shared/Supporting Files/en.lproj/Settings.strings` — fixed 2026-08-21
+- `Settings.Translation.ToggleFooter.v151` — `Shared/Supporting Files/en.lproj/Settings.strings` — fixed 2026-08-21
+- `Hotkeys.ShowPreviousTab.DiscoveryTitle` — `Shared/en.lproj/Localizable.strings` — fixed 2026-08-21
+- `SendTo.NotSignedIn.Message` — `Shared/en.lproj/Localizable.strings` — fixed 2026-08-21
+- `SentTab_TabArrivingNotification_NoDevice_title` — `Shared/en.lproj/Localizable.strings` — fixed 2026-08-21
+- `SentTab_TabArrivingNotification_WithDevice_title` — `Shared/en.lproj/Localizable.strings` — fixed 2026-08-21
+- `Settings.Home.Option.Wallpaper.CollectionTitle` — `Shared/en.lproj/Localizable.strings` — fixed 2026-08-21
+- `Settings.Tabs.CustomizeTabsSection.Title` — `Shared/en.lproj/Localizable.strings` — fixed 2026-08-21
+- `Tabs Tray` — `Shared/en.lproj/Localizable.strings` — fixed 2026-08-21
+- `No logins found` — `Shared/en.lproj/LoginManager.strings` — fixed 2026-08-21
+- `TodayWidget.TopSitesGalleryDescription` — `Shared/en.lproj/Today.strings` — fixed 2026-08-21

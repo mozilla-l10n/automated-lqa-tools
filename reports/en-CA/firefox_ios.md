@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-07 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `386c3ca4eca7` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `386c3ca4eca7` |
-| **Previous run** | 2026-09-01 @ `117165baae4c` |
+| **Generated** | 2026-09-14 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `e8592a898dc1` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `e8592a898dc1` |
+| **Previous run** | 2026-09-07 @ `386c3ca4eca7` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,912 |
+| **Strings reviewed this run** | 1,895 of 1,911 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for en-CA: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `MainMenu.TabsSection.AccessibilityLabels.NewPrivateTab.v132` — `en-CA/firefox-ios.xliff` — Capitalization changed from source sentence case to title case in an accessibility label.
+    - Current: `New Private Tab`
+    - Source: `New private tab`
+    - Suggest: `New private tab`
+    - The en-US accessibility label is "New private tab" (sentence case); en-CA has no capitalization rule requiring title case, and sibling accessibility labels in this file (e.g. "Find in page", "Switch to desktop site") keep sentence case.
+- `MainMenu.TabsSection.AccessibilityLabels.NewTab.v132` — `en-CA/firefox-ios.xliff` — Capitalization changed from source sentence case to title case in an accessibility label.
+    - Current: `New Tab`
+    - Source: `New tab`
+    - Suggest: `New tab`
+    - The en-US accessibility label is "New tab" (sentence case); other accessibility labels in this file retain sentence case, so this is an inconsistent, unneeded change.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +54,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 95 |
-| Strings | 1,912 |
-| Missing strings | 10 |
+| Strings | 1,911 |
+| Missing strings | 11 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
@@ -59,17 +68,18 @@ _Nothing retired._
 
 ### Completeness
 
-**10 strings** are not translated yet, concentrated in:
+**11 strings** are not translated yet, concentrated in:
 
 - `en-CA/firefox-ios.xliff` — 3
-- `Shared/Supporting Files/en.lproj/GoogleLens.strings` — 2
+- `Shared/Supporting Files/en-US.lproj/GoogleLens.strings` — 2
 - `en-CA/firefox-ios.xliff` — 2
 - `en-CA/firefox-ios.xliff` — 2
+- `en-CA/firefox-ios.xliff` — 1
 - `en-CA/firefox-ios.xliff` — 1
 
 **Files absent from the locale:**
 
-- `Shared/Supporting Files/en.lproj/GoogleLens.strings`
+- `Shared/Supporting Files/en-US.lproj/GoogleLens.strings`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -92,7 +102,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (0)
+## 3. Open findings (2)
 
 
 | Impact | Meaning | Count |
@@ -100,7 +110,7 @@ _Nothing reported._
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 0 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
-| 4 | Cosmetic (typography, spacing) | 0 |
+| 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -120,7 +130,16 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
-_Nothing in this category._
+- `MainMenu.TabsSection.AccessibilityLabels.NewPrivateTab.v132` — `en-CA/firefox-ios.xliff` — Capitalization changed from source sentence case to title case in an accessibility label.
+    - Current: `New Private Tab`
+    - Source: `New private tab`
+    - Suggest: `New private tab`
+    - The en-US accessibility label is "New private tab" (sentence case); en-CA has no capitalization rule requiring title case, and sibling accessibility labels in this file (e.g. "Find in page", "Switch to desktop site") keep sentence case.
+- `MainMenu.TabsSection.AccessibilityLabels.NewTab.v132` — `en-CA/firefox-ios.xliff` — Capitalization changed from source sentence case to title case in an accessibility label.
+    - Current: `New Tab`
+    - Source: `New tab`
+    - Suggest: `New tab`
+    - The en-US accessibility label is "New tab" (sentence case); other accessibility labels in this file retain sentence case, so this is an inconsistent, unneeded change.
 
 ---
 
@@ -144,19 +163,19 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 
 ### Fixed to date (16)
 
-- `Biometry.Screen.UniversalAuthenticationReason.v115` — `en-CA/firefox-ios.xliff` — fixed 2026-08-25
-- `Addresses.EditAddress.AutofillAddressZip.v129` — `en-CA/firefox-ios.xliff` — fixed 2026-08-25
-- `MainMenu.SettingsSection.AccessibilityLabels.GetHelp.v132` — `en-CA/firefox-ios.xliff` — fixed 2026-08-25
-- `MainMenu.SettingsSection.GetHelp.Title.v131` — `en-CA/firefox-ios.xliff` — fixed 2026-08-25
-- `Settings.AIControls.BlockAIEnhancementsDescription.v151` — `en-CA/firefox-ios.xliff` — fixed 2026-08-25
-- `Settings.AIControls.BlockAIEnhancementsTitle.v151` — `en-CA/firefox-ios.xliff` — fixed 2026-08-25
-- `Settings.AIControls.BlockedInformation.v151` — `en-CA/firefox-ios.xliff` — fixed 2026-08-25
-- `Settings.AIControls.HeaderCard.Message.v151` — `en-CA/firefox-ios.xliff` — fixed 2026-08-25
-- `Settings.CrashReports.Link.v136` — `en-CA/firefox-ios.xliff` — fixed 2026-08-25
-- `Settings.DailyUsagePing.Link.v136` — `en-CA/firefox-ios.xliff` — fixed 2026-08-25
-- `CreditCard.SnackBar.RemovedCardLabel.v112` — `en-CA/firefox-ios.xliff` — fixed 2026-08-25
-- `CreditCard.SnackBar.SavedCardLabel.v112` — `en-CA/firefox-ios.xliff` — fixed 2026-08-25
-- `Forward` — `en-CA/firefox-ios.xliff` — fixed 2026-08-25
-- `HistoryPanel.RecentlyClosedTabsButton.Title` — `en-CA/firefox-ios.xliff` — fixed 2026-08-25
-- `Hotkeys.Forward.DiscoveryTitle` — `en-CA/firefox-ios.xliff` — fixed 2026-08-25
-- `Log in` — `en-CA/firefox-ios.xliff` — fixed 2026-08-25
+- `Biometry.Screen.UniversalAuthenticationReason.v115` — `Shared/Supporting Files/en.lproj/BiometricAuthentication.strings` — fixed 2026-08-25
+- `Addresses.EditAddress.AutofillAddressZip.v129` — `Shared/Supporting Files/en.lproj/EditAddress.strings` — fixed 2026-08-25
+- `MainMenu.SettingsSection.AccessibilityLabels.GetHelp.v132` — `Shared/Supporting Files/en.lproj/MainMenu.strings` — fixed 2026-08-25
+- `MainMenu.SettingsSection.GetHelp.Title.v131` — `Shared/Supporting Files/en.lproj/MainMenu.strings` — fixed 2026-08-25
+- `Settings.AIControls.BlockAIEnhancementsDescription.v151` — `Shared/Supporting Files/en.lproj/Settings.strings` — fixed 2026-08-25
+- `Settings.AIControls.BlockAIEnhancementsTitle.v151` — `Shared/Supporting Files/en.lproj/Settings.strings` — fixed 2026-08-25
+- `Settings.AIControls.BlockedInformation.v151` — `Shared/Supporting Files/en.lproj/Settings.strings` — fixed 2026-08-25
+- `Settings.AIControls.HeaderCard.Message.v151` — `Shared/Supporting Files/en.lproj/Settings.strings` — fixed 2026-08-25
+- `Settings.CrashReports.Link.v136` — `Shared/Supporting Files/en.lproj/Settings.strings` — fixed 2026-08-25
+- `Settings.DailyUsagePing.Link.v136` — `Shared/Supporting Files/en.lproj/Settings.strings` — fixed 2026-08-25
+- `CreditCard.SnackBar.RemovedCardLabel.v112` — `Shared/Supporting Files/en.lproj/SnackBar.strings` — fixed 2026-08-25
+- `CreditCard.SnackBar.SavedCardLabel.v112` — `Shared/Supporting Files/en.lproj/SnackBar.strings` — fixed 2026-08-25
+- `Forward` — `Shared/en.lproj/Localizable.strings` — fixed 2026-08-25
+- `HistoryPanel.RecentlyClosedTabsButton.Title` — `Shared/en.lproj/Localizable.strings` — fixed 2026-08-25
+- `Hotkeys.Forward.DiscoveryTitle` — `Shared/en.lproj/Localizable.strings` — fixed 2026-08-25
+- `Log in` — `Shared/en.lproj/Localizable.strings` — fixed 2026-08-25
