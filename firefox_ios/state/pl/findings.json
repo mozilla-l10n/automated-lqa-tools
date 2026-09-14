@@ -722,30 +722,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "Wykryto nieodpowiednią treść.",
-  "dismissed_because": "",
-  "fid": "963b16f562f9",
-  "file": "Shared/Supporting Files/en-US.lproj/Summarizer.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "pl",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The source says limited (little) content was detected, not that the content is inappropriate/objectionable; the Polish accuses the page of unsuitable content.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "18d3c856",
-  "string_id": "Summarizer.Error.UnsafeWebsite.Message.v142",
-  "suggest": "Wykryto ograniczoną treść.",
-  "summary": "\"Limited content detected\" is mistranslated as \"Inappropriate content detected\".",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "Uwaga: streszczenie może zawierać błędy.",
   "dismissed_because": "",
   "fid": "84588b4b0ffd",

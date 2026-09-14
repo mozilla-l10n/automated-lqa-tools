@@ -51,7 +51,7 @@
             },
             "reads_as_deliberate": {
               "type": "boolean",
-              "description": "True only when the localized text makes the product assert something the source never said about itself, its users or its behaviour, so a reader could take it for an intentional edit rather than a translation slip. False for almost every finding, including almost every mistranslation."
+              "description": "True only when the localized text makes the product assert something the source never said about itself, its users or its behaviour, so a reader could take it for an intentional edit rather than a translation slip. Judge the fact asserted, not the wording: a re-worded rendering that lands on the same fact -- an added pronoun or possessive, a hedge or quantifier that does not move the claim, an idiom, a passive turned active -- is false, and usually not a finding at all. False for almost every finding, including almost every mistranslation."
             }
           },
           "required": ["string_id", "file", "category", "impact", "summary", "current", "suggest", "rationale", "confidence", "reads_as_deliberate"]

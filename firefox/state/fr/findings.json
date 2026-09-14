@@ -972,30 +972,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "Déconnexion réussie",
-  "dismissed_because": "",
-  "fid": "82a6a86ad9f5",
-  "file": "browser/browser/sync.ftl",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "fr",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The en-US states a status (the user is signed out); the French claims the sign-out operation succeeded, which is a different assertion and misleading in the app menu row where it stands in for the email.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "199b8140",
-  "string_id": "fxa-menu-signed-out-description",
-  "suggest": "Vous êtes déconnecté·e",
-  "summary": "\"You’re signed out\" is rendered as \"Déconnexion réussie\" (\"Sign-out successful\"), asserting a successful action rather than stating the current state.",
-  "suppressed_by": ""
- },
- {
   "category": "E",
   "check": "legacy",
   "current": "FR: \"{ $title } - { $containerName }\"",

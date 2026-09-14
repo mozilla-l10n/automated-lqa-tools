@@ -438,7 +438,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US only says \"clean it up for a fresh, like-new experience\"; the Slovenian asserts the browser is full of junk. The parallel string uses the neutral \"počistimo\".",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ca644fff",

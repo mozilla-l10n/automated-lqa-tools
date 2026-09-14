@@ -350,7 +350,7 @@
    "confidence": "high"
   },
   "rationale": "The source says only \"%2$@’s marketing partners\"; the Dutch claims data is shared with marketing technology partners, which the source never states.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "40e1dca8",

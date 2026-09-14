@@ -166,6 +166,7 @@ def run(l10n_dir, project) -> int:
           "from-scratch reviews are batched, not agent-driven")
 
     selftest_lib.deliberate_flag_wiring(suite, project)
+    selftest_lib.comment_is_evidence(suite, project)
     return suite.report()
 
 

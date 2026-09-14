@@ -590,7 +590,7 @@
    "confidence": "medium"
   },
   "rationale": "The English idiom \"sell you out\" means to betray; the Indonesian literally says the browser will not sell you (as a person), which is not what the source says.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e4c3ecca",

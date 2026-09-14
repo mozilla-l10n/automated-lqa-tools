@@ -578,30 +578,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "Přináší nezisková organizace %@, které důvěřujete již více než 20 let",
-  "dismissed_because": "",
-  "fid": "6e1a953e3799",
-  "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "cs",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The source states the non-profit is trusted (generally, by people) for over 20 years; the Czech asserts that the reader personally has trusted it for over 20 years.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "69b20169",
-  "string_id": "Onboarding.Modern.TermsOfService.Description.v145",
-  "suggest": "Přináší nezisková organizace %@, které se důvěřuje již více než 20 let",
-  "summary": "\"trusted for over 20 years\" is rendered as \"which you have trusted for over 20 years\", asserting the user's trust rather than general trust.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "Nastavení",
   "dismissed_because": "",
   "fid": "02548c986578",

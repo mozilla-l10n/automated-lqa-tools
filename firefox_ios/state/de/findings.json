@@ -672,30 +672,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "Von der gemeinnützigen Organisation %@, der wir seit über 20 Jahren vertrauen",
-  "dismissed_because": "",
-  "fid": "39aa7cac9c66",
-  "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "de",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The source says Mozilla is trusted (by users) for over 20 years; the German makes Mozilla/Firefox itself the truster, i.e. the product claims it trusts the organization.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "825c8d39",
-  "string_id": "Onboarding.Modern.TermsOfService.Description.v145",
-  "suggest": "Von der gemeinnützigen Organisation %@, der seit über 20 Jahren vertraut wird",
-  "summary": "\"trusted for over 20 years\" is rendered as \"der wir seit über 20 Jahren vertrauen\" (\"whom we have trusted for over 20 years\"), reversing who trusts whom.",
-  "suppressed_by": ""
- },
- {
   "category": "D",
   "check": "llm",
   "current": "Synchronisiere auf allen deinen Geräten",
@@ -3309,30 +3285,6 @@
   "string_id": "Settings.Studies.Toggle.Link",
   "suggest": "Weitere Informationen.",
   "summary": "Trailing period from the source \"Learn More.\" is missing.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "Firefox darf von Zeit zu Zeit Studien installieren und laufen lassen.",
-  "dismissed_because": "",
-  "fid": "1e8aa0f86b95",
-  "file": "Shared/en-US.lproj/Localizable.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "de",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The source states a possibility (\"may\" = might occasionally), while \"darf\" asserts permission granted to Firefox, altering what the product says about its own behaviour.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "38dc1e07",
-  "string_id": "Settings.Studies.Toggle.Message",
-  "suggest": "Firefox kann von Zeit zu Zeit Studien installieren und ausführen.",
-  "summary": "\"may install and run studies\" (possibility) is rendered as \"darf … installieren\" (is permitted to), changing the meaning.",
   "suppressed_by": ""
  },
  {

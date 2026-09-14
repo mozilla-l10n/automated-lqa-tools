@@ -3,14 +3,15 @@
 | | |
 |---|---|
 | **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `e8592a898dc1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `e8592a898dc1` |
-| **Previous run** | 2026-09-10 @ `4e8024d287e9` |
-| **Mode** | incremental |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `8f5aca68ae4b` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `8f5aca68ae4b` |
+| **Previous run** | 2026-09-14 @ `e8592a898dc1` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 602 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for hi-IN: [android](android.md)
 
@@ -118,18 +119,13 @@ _Nothing reported._
 
 ## 3. Open findings (79)
 
-> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `NSMicrophoneUsageDescription` — `hi-IN/firefox-ios.xliff` — Microphone permission description translated as taking and uploading videos, omitting Firefox and the microphone/audio recording purpose.
     - Current: `यह आपको वीडियो लेने और अपलोड करने देता है।`
     - Source: `Firefox uses your microphone to record and upload audio.`
     - Suggest: `Firefox ऑडियो रिकॉर्ड करने और अपलोड करने के लिए आपके माइक्रोफ़ोन का उपयोग करता है।`
     - en-US says "Firefox uses your microphone to record and upload audio." The target states it lets you take and upload video, which is a different permission purpose and drops the brand name.
-- `Oops! Firefox crashed` — `hi-IN/firefox-ios.xliff` — "crashed" is rendered as "नष्ट हो गया" (was destroyed), which is not the software sense of crashing.
-    - Current: `उफ़! Firefox नष्ट हो गया`
-    - Source: `Oops! Firefox crashed`
-    - Suggest: `उफ़! Firefox क्रैश हो गया`
-    - The source says the app crashed; "नष्ट हो गया" means it was destroyed/annihilated, telling the user the product destroyed itself rather than that it stopped unexpectedly.
 
 _Also listed under their own category below._
 

@@ -386,30 +386,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "Yalnızca birkaç dakika sürer.",
-  "dismissed_because": "",
-  "fid": "4de02f5342d3",
-  "file": "Shared/Supporting Files/en-US.lproj/Microsurvey.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "tr",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The source says it takes only a minute; the Turkish says several minutes, overstating the time required.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "31d2c83a",
-  "string_id": "Microsurvey.Prompt.TitleLabel.v127",
-  "suggest": "Yalnızca bir dakikanızı alır.",
-  "summary": "\"It only takes a minute\" is rendered as \"takes only a few minutes\".",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "destek ekibiniz size bilgi verebilir",
   "dismissed_because": "",
   "fid": "1b9fafe40db0",
@@ -2541,30 +2517,6 @@
   "string_id": "Spotlight Index",
   "suggest": "Spotlight indeksi",
   "summary": "Apple's \"Spotlight\" brand name dropped from the translation.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "ortalama 3.000 takip kodunu engelliyor",
-  "dismissed_because": "",
-  "fid": "858743be92bc",
-  "file": "Shared/en-US.lproj/Default Browser.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "tr",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The source claims over 3,000 trackers; the translation states a flat 3,000, changing the product's own statistic claim.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "887ee0db",
-  "string_id": "DefaultBrowserCard.PeaceOfMind.Description.v108",
-  "suggest": "ortalama 3.000’den fazla takip kodunu engelliyor",
-  "summary": "The \"3,000+\" (more than 3,000) figure is rendered as an exact 3.000, dropping the \"+\".",
   "suppressed_by": ""
  },
  {

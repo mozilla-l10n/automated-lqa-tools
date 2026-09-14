@@ -674,30 +674,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "请注意：摘要内容可能存在错误。",
-  "dismissed_because": "",
-  "fid": "224bede94349",
-  "file": "Shared/Supporting Files/en-US.lproj/Summarizer.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "zh-CN",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The source disclaims that the summarization process can make mistakes; the translation asserts the produced content contains errors.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "ff4f97b4",
-  "string_id": "Summarizer.Footnote.Label.v144",
-  "suggest": "请注意：摘要功能可能出错。",
-  "summary": "\"Summarization can make errors\" is rendered as \"摘要内容可能存在错误\", changing the claim from the process making errors to the content containing errors — acceptable in meaning but the label is a disclaimer about the summarizer.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "显示的标签页：%@",
   "dismissed_because": "",
   "fid": "74c352fd40f8",

@@ -3,14 +3,15 @@
 | | |
 |---|---|
 | **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e44f1369fb6d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8ffd279d75ec` |
-| **Previous run** | 2026-09-07 @ `3c0c507b8d42` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 115 of 16,368 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `fc8fd09d4a18` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `d0b2e9748b3b` |
+| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 16,368 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for fr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
@@ -18,51 +19,13 @@ Also for fr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (7)
+### 🆕 New findings (0)
 
-- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Nouveautés” but the string it names, `releaseNotes-link`, reads “Notes de version”
-    - Current: `Contrôler la page « Nouveautés » après une mise à jour. Laissez cette règle vide pour désactiver la page après une mise à jour.`
-    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
-    - Suggest: `Notes de version`
-    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `fxa-menu-signed-out-description` — `browser/browser/sync.ftl` — "You’re signed out" is rendered as "Déconnexion réussie" ("Sign-out successful"), asserting a successful action rather than stating the current state.
-    - Current: `Déconnexion réussie`
-    - Source: `You’re signed out`
-    - Suggest: `Vous êtes déconnecté·e`
-    - The en-US states a status (the user is signed out); the French claims the sign-out operation succeeded, which is a different assertion and misleading in the app menu row where it stands in for the email.
-- `site-rules-status-heading` — `browser/browser/ipProtection.ftl` — "Your rule" translated as "Règle personnalisée" ("Custom rule") instead of a possessive referring to the user's rule.
-    - Current: `Règle personnalisée`
-    - Source: `Your rule`
-    - Suggest: `Votre règle`
-    - The source heading is "Your rule"; "Règle personnalisée" drops the possessive and introduces the notion of customization not present in the source.
-- `refresh-unused-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — "for a fresh, like-new experience" rendered as "pour profiter d’une meilleure navigation" ("for better browsing"), a different claim.
-    - Current: `pour profiter d’une meilleure navigation ?`
-    - Source: `It looks like you haven’t started { -brand-short-name } in a while. Do you want to clean it up for a fresh, like-new experience? And by the way, welcome back!`
-    - Suggest: `pour retrouver une expérience comme neuve ?`
-    - The en-US promises a fresh, like-new state after cleanup, not improved browsing performance; the French makes a claim the source does not.
-- `about-sync-log-row-success` — `toolkit/services/aboutSyncLog.ftl` — Em dash replaced by a colon, inconsistent with the sibling error string.
-    - Current: `Succès : { $date }`
-    - Source: `heading: Success — { $date }`
-    - Suggest: `Succès — { $date }`
-    - en-US uses "Success — { $date }" and the parallel string about-sync-log-row-error keeps the em dash in French; the locale convention is the em dash.
-- `pdf-features-notification` — `toolkit/toolkit/about/pdfFeaturesNotification.ftl` — aria-label pluralized and heading adds "à télécharger" (to download), which the source never says.
-    - Current: `Les fichiers PDF sont encore plus faciles à télécharger en { -brand-short-name }.`
-    - Source: `aria-label: Notification heading: PDFs just got easier in { -brand-short-name }.`
-    - Suggest: `Les fichiers PDF sont encore plus faciles à utiliser dans { -brand-short-name }.`
-    - Source is "PDFs just got easier in { -brand-short-name }." — nothing about downloading; also "en" should be "dans" before the brand name, and aria-label "Notification" was rendered as plural "Notifications".
-- `pdfjs-open-attachments-inline` — `toolkit/toolkit/about/aboutSupport.ftl` — "Inline" mistranslated as "dans les messages", adding a message context absent from the source.
-    - Current: `Ouvrir les PDF joints dans les messages`
-    - Source: `Open PDF Attachments Inline`
-    - Suggest: `Ouvrir les pièces jointes PDF de façon intégrée`
-    - The source "Open PDF Attachments Inline" refers to opening attachments inline in the viewer, not within messages.
+_No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `newtab-privacy-empty-state-tally` — `browser/browser/newtab/newtab.ftl` — "running tally" rendered as "pointage", a scoring term that does not convey a running total of blocked trackers.
-    - Current: `Consultez le pointage en cours ici.`
-    - Source: `See a running tally here.`
-    - Suggest: `Consultez le total en cours ici.`
-    - The comment explains "a running tally" is a total that keeps updating (alternative: "See a running total here"); "pointage" means a score/tally-mark in a game context and is misleading here.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -84,7 +47,7 @@ _Nothing retired._
 |---|---|
 | Files | 336 |
 | Strings | 16,368 |
-| Missing strings | 0 |
+| Missing strings | 8 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 10 |
@@ -101,7 +64,15 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**8 strings** are not translated yet, concentrated in:
+
+- `browser/browser/newtab/newtab.ftl` — 3
+- `devtools/client/debugger.properties` — 2
+- `browser/browser/translations.ftl` — 1
+- `devtools/client/sourceeditor.properties` — 1
+- `toolkit/toolkit/about/aboutNetworking.ftl` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Files with no en-US counterpart
 
@@ -139,15 +110,10 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (24)
+## 3. Open findings (23)
 
-> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
-- `fxa-menu-signed-out-description` — `browser/browser/sync.ftl` — "You’re signed out" is rendered as "Déconnexion réussie" ("Sign-out successful"), asserting a successful action rather than stating the current state.
-    - Current: `Déconnexion réussie`
-    - Source: `You’re signed out`
-    - Suggest: `Vous êtes déconnecté·e`
-    - The en-US states a status (the user is signed out); the French claims the sign-out operation succeeded, which is a different assertion and misleading in the app menu row where it stands in for the email.
 - `pdf-features-notification` — `toolkit/toolkit/about/pdfFeaturesNotification.ftl` — aria-label pluralized and heading adds "à télécharger" (to download), which the source never says.
     - Current: `Les fichiers PDF sont encore plus faciles à télécharger en { -brand-short-name }.`
     - Source: `aria-label: Notification heading: PDFs just got easier in { -brand-short-name }.`
@@ -159,7 +125,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 8 |
+| 2 | Wrong content (says something other than the English) | 7 |
 | 3 | Degraded language (grammar, spelling, terminology) | 11 |
 | 4 | Cosmetic (typography, spacing) | 5 |
 
@@ -189,11 +155,6 @@ _Nothing in this category._
     - Source: `label: An app or service may see your encrypted traffic.`
     - Suggest: `pourrait voir votre trafic chiffré`
     - en-US says an app or service may see the traffic; "accéder à" asserts access rather than visibility.
-- `fxa-menu-signed-out-description` — `browser/browser/sync.ftl` — "You’re signed out" is rendered as "Déconnexion réussie" ("Sign-out successful"), asserting a successful action rather than stating the current state.
-    - Current: `Déconnexion réussie`
-    - Source: `You’re signed out`
-    - Suggest: `Vous êtes déconnecté·e`
-    - The en-US states a status (the user is signed out); the French claims the sign-out operation succeeded, which is a different assertion and misleading in the app menu row where it stands in for the email.
 - `SpeechRecognitionBlockedByAIControlsWarning` — `dom/chrome/dom/dom.properties` — "AI Controls" settings section name mangled into "d’IA Controls".
     - Current: `les paramètres d’IA Controls de l’utilisateur`
     - Source: `On-device speech recognition is turned off in the user’s AI Controls settings, so SpeechRecognition reports itself as unavailable and refuses to start.`

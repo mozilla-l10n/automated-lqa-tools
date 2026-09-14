@@ -204,6 +204,7 @@ def run(l10n_dir, project) -> int:
               f"{loc}: the variant reviewer has a prompt to run with")
 
     selftest_lib.deliberate_flag_wiring(suite, project)
+    selftest_lib.comment_is_evidence(suite, project)
     return suite.report()
 
 

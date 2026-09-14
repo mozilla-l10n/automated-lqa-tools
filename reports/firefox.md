@@ -2,14 +2,14 @@
 
 - **Generated:** 2026-09-14
 - **Locales tracked:** 20 (20 with recorded state)
-- **Findings:** 6,186 raised, 2,096 fixed (33%), 3,463 open
+- **Findings:** 6,184 raised, 2,096 fixed (33%), 3,461 open
 - **Closed by a person:** 19 dismissed, 15 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
 ## Read these first
 
-### Reads as a deliberate edit (16)
+### Reads as a deliberate edit (12)
 
 The translation makes the product assert something the en-US never said. Nothing here says the change was intended — that cannot be read off the text, which is exactly the problem, because a user cannot read it off either.
 
@@ -17,10 +17,6 @@ The translation makes the product assert something the en-US never said. Nothing
     - "Split" (PDFs aufteilen/teilen in Einzeldokumente) is rendered as "PDFs teilen", which in German primarily means "share".
     - Current: `PDFs teilen, zusammenführen und mehr.`
     - Suggest: `PDFs aufteilen, zusammenführen und mehr.`
-- **`fr`** `fxa-menu-signed-out-description` — `browser/browser/sync.ftl`
-    - "You’re signed out" is rendered as "Déconnexion réussie" ("Sign-out successful"), asserting a successful action rather than stating the current state.
-    - Current: `Déconnexion réussie`
-    - Suggest: `Vous êtes déconnecté·e`
 - **`fr`** `pdf-features-notification` — `toolkit/toolkit/about/pdfFeaturesNotification.ftl`
     - aria-label pluralized and heading adds "à télécharger" (to download), which the source never says.
     - Current: `Les fichiers PDF sont encore plus faciles à télécharger en { -brand-short-name }.`
@@ -57,26 +53,14 @@ The translation makes the product assert something the en-US never said. Nothing
     - "is getting a new look" (future/ongoing) translated as a completed change "Обновлён внешний вид".
     - Current: `<strong>Обновлён внешний вид { -brand-product-name }.</strong>`
     - Suggest: `<strong>У { -brand-product-name } скоро появится новый облик.</strong>`
-- **`sl`** `refresh-unused-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl`
-    - "clean it up" rendered as "očistiti navlake" (clean it of junk/clutter), adding a claim the source does not make.
-    - Current: `Ga želite očistiti navlake, da bo deloval kot nov?`
-    - Suggest: `Ga želite počistiti, da bo deloval kot nov?`
 - **`sl`** `onboarding-refresh-terms-of-use-with-links` — `browser/browser/newtab/onboarding.ftl`
     - The purpose clause is mistranslated so that the sentence reads "To improve the { -brand-product-name } browser" and merges the subject, changing which product is being improved and who sends the data.
     - Current: `Za izboljšanje brskalnika { -brand-product-name } { -vendor-short-name } pošilja diagnostične podatke in podatke o uporabi.`
     - Suggest: `Za izboljšanje brskalnika { -brand-product-name } pošilja { -vendor-short-name } diagnostične podatke in podatke o uporabi.`
-- **`tr`** `newtab-privacy-across-sites` — `browser/browser/newtab/newtab.ftl`
-    - Turkish adds a claim that Firefox protected the user, which the source does not say.
-    - Current: `{ $count } sitede sizi koruduk`
-    - Suggest: `{ $count } sitede engellendi`
 - **`tr`** `newtab-privacy-message-info-4` — `browser/browser/newtab/newtab.ftl`
     - "protection by default" rendered as "protection anytime, anywhere", dropping the default-setting meaning.
     - Current: `{ -brand-short-name } demek her an, her yerde korunma demektir.`
     - Suggest: `{ -brand-short-name } demek varsayılan olarak korunma demektir.`
-- **`tr`** `autocomplete-remove-password-os-auth-dialog-message-win` — `toolkit/toolkit/main-window/autocomplete.ftl`
-    - Turkish says "we can better protect your accounts", whereas the source says this helps protect the security of your accounts (the action helps, not the vendor).
-    - Current: `Bu sayede hesaplarınızı daha güvenli bir şekilde koruyabiliriz.`
-    - Suggest: `Bu, hesaplarınızın güvenliğini korumaya yardımcı olur.`
 
 ### Broken output — impact 1 (286)
 
@@ -138,7 +122,7 @@ The value does not render as intended: a blank string, broken markup, a variable
     - Suggest: `…message2-macosx`
 - _…and 271 more, in the per-locale reports linked below._
 
-### Wrong content — impact 2 (1365)
+### Wrong content — impact 2 (1363)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/firefox.md`.
 
@@ -151,7 +135,7 @@ Too many to list here; the per-locale counts are in the table below and every on
 | [es-AR](es-AR/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 16,139 | 29 | **269** | 153 | 142 | 0 | 0 |
 | [es-ES](es-ES/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 15,156 | 1,012 | **36** | 20 | 113 | 0 | 0 |
 | [es-MX](es-MX/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 15,800 | 368 | **41** | 14 | 205 | 0 | 0 |
-| [fr](fr/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 16,368 | 0 | **24** | 8 | 61 | 1 | 0 |
+| [fr](fr/firefox.md) | 2026-09-14 | checks-only | `fc8fd09d` | 16,368 | 8 | **23** | 7 | 61 | 1 | 0 |
 | [fy-NL](fy-NL/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 15,991 | 177 | **446** | 124 | 274 | 4 | 0 |
 | [hu](hu/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 16,159 | 9 | **243** | 139 | 5 | 0 | 0 |
 | [id](id/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 13,705 | 2,463 | **278** | 216 | 1 | 0 | 0 |
@@ -161,11 +145,13 @@ Too many to list here; the per-locale counts are in the table below and every on
 | [pl](pl/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 16,092 | 76 | **68** | 50 | 168 | 2 | 0 |
 | [pt-BR](pt-BR/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 16,152 | 16 | **523** | 191 | 138 | 5 | 0 |
 | [ru](ru/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 16,168 | 0 | **553** | 292 | 177 | 0 | 0 |
-| [sl](sl/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 15,539 | 629 | **41** | 11 | 43 | 0 | 1 |
-| [tr](tr/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 16,144 | 24 | **147** | 54 | 193 | 0 | 0 |
+| [sl](sl/firefox.md) | 2026-09-14 | checks-only | `fc8fd09d` | 15,539 | 637 | **41** | 11 | 43 | 0 | 1 |
+| [tr](tr/firefox.md) | 2026-09-14 | checks-only | `fc8fd09d` | 16,144 | 32 | **146** | 53 | 193 | 0 | 0 |
 | [zh-CN](zh-CN/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 15,968 | 200 | **66** | 19 | 49 | 0 | 0 |
 
 **Impact 1–2** is the queue that matters: broken output and wrong content. Impact 3–4 is language polish and typography.
+
+**Not reviewed yet:** `fr`, `sl`, `tr`. They have only been through the deterministic checks; the reviewer has not read them. The next run does the baseline.
 
 ## Adding a locale
 

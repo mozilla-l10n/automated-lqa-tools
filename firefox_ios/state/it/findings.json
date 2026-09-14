@@ -578,30 +578,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "le password di questo sito web sono state rubate o diffuse pubblicamente",
-  "dismissed_because": "",
-  "fid": "80f2309859ff",
-  "file": "Shared/en-US.lproj/Localizable.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "it",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The en-US says generically \"Passwords were leaked or stolen since you last changed your password\"; the Italian asserts that the passwords of this website were stolen or publicly disclosed, adding \"pubblicamente\" and scoping to \"questo sito web\", which the source never states.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "96e57596",
-  "string_id": "BreachAlerts.Description",
-  "suggest": "alcune password sono state diffuse o rubate",
-  "summary": "\"leaked or stolen\" is rendered as \"rubate o diffuse pubblicamente\" (\"publicly disclosed\"), and the source's \"Passwords were leaked\" is turned into a claim about this specific website's passwords.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "Ieri e oggi",
   "dismissed_because": "",
   "fid": "92041ed8698c",

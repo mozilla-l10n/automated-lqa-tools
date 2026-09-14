@@ -122,30 +122,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "Code postal (États-Unis)",
-  "dismissed_because": "",
-  "fid": "9b075e4c0d14",
-  "file": "Shared/Supporting Files/en-US.lproj/EditAddress.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "fr",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The en-US label is simply \"ZIP Code\"; adding \"(États-Unis)\" asserts a country restriction on the field that the source never states.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "95bfd215",
-  "string_id": "Addresses.EditAddress.AutofillAddressZip.v129",
-  "suggest": "Code postal",
-  "summary": "\"ZIP Code\" is translated with an added parenthetical \"(États-Unis)\" that the source does not contain.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "Onglets %1$@ fermés : %2$@",
   "dismissed_because": "",
   "fid": "215c56f5e557",

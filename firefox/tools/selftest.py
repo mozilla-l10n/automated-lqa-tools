@@ -705,6 +705,7 @@ def run(l10n_dir, source_dir, project) -> int:
           "tree does not carry")
 
     selftest_lib.deliberate_flag_wiring(suite, project)
+    selftest_lib.comment_is_evidence(suite, project)
 
     # The reviewer's flag is the only way a finding reaches the top of the
     # pull request body, so it has to survive the parser and it has to be

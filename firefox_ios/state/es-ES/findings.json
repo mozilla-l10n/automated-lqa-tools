@@ -360,30 +360,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "para los usuarios en todo el mundo",
-  "dismissed_because": "",
-  "fid": "e549bf9d2430",
-  "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "es-ES",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The en-US says features, performance and stability improve \"for everyone\"; the Spanish adds a geographic scope (\"users all over the world\") that the source never states.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "8eb989a2",
-  "string_id": "Onboarding.TermsOfService.PrivacyPreferences.SendTechnicalDataDescription.v135",
-  "suggest": "para todos",
-  "summary": "\"for everyone\" is rendered as \"para los usuarios en todo el mundo\" (for users all over the world), adding a claim not in the source.",
-  "suppressed_by": ""
- },
- {
   "category": "D",
   "check": "llm",
   "current": "Escanea el código QR",

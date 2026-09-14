@@ -290,30 +290,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "%@ vas ne varuje.",
-  "dismissed_because": "",
-  "fid": "a440a1fddad9",
-  "file": "Shared/Supporting Files/en-US.lproj/EnhancedTrackingProtection.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "sl",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The en-US says the app is temporarily off-duty because the user disabled protections; the Slovenian states flatly that Firefox does not protect the user.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "83b2a8c1",
-  "string_id": "Menu.EnhancedTrackingProtection.Off.Header.v128",
-  "suggest": "%@ trenutno počiva.",
-  "summary": "\"%@ is off-duty\" is rendered as \"%@ vas ne varuje\" (\"%@ does not protect you\"), an absolute claim the source does not make.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "Vnesite veljavno leto poteka",
   "dismissed_because": "",
   "fid": "f55642d956bf",
@@ -542,7 +518,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US says only \"%2$@’s marketing partners\"; the word \"tehnološkim\" (technology) is not in the source and changes who the data is shared with.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "03f9f574",
@@ -597,30 +573,6 @@
   "string_id": "Onboarding.Modern.Sync.Description.v145",
   "suggest": "se sinhronizirajo na vseh vaših napravah",
   "summary": "\"sync on any device\" mistranslated as syncing \"with any other device\".",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "Delo neprofitne organizacije %@, ki ji zaupate že več kot 20 let",
-  "dismissed_because": "",
-  "fid": "aad9e61e5eca",
-  "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "sl",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The source says the non-profit is trusted (generally); the Slovenian claims the individual user has personally trusted it for over 20 years.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "a7a5cb1e",
-  "string_id": "Onboarding.Modern.TermsOfService.Description.v145",
-  "suggest": "Delo neprofitne organizacije %@, ki ji zaupajo že več kot 20 let",
-  "summary": "\"trusted for over 20 years\" is rendered as \"ki ji zaupate že več kot 20 let\" (\"which you have trusted for over 20 years\"), asserting something about the user.",
   "suppressed_by": ""
  },
  {

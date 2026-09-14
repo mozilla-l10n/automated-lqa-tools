@@ -1250,30 +1250,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "%@ には常に選択肢があります",
-  "dismissed_because": "",
-  "fid": "3fb15eb39fe5",
-  "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "ja",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The en-US asserts the user always has a choice when using the app; the Japanese says the app itself has options, dropping the user as the subject.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "66695a11",
-  "string_id": "Settings.AIControls.HeaderCard.Title.v151",
-  "suggest": "%@ では、常にあなたが選択できます",
-  "summary": "\"You always have a choice in %@\" is translated as \"%@ には常に選択肢があります\", making the app the one that has the choice rather than the user.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "音声ありをブロック",
   "dismissed_because": "",
   "fid": "c72af595a8c6",
@@ -1334,7 +1310,7 @@
    "confidence": "medium"
   },
   "rationale": "The source is the noun label \"Daily Usage Ping\" (a daily ping indicating the app was used), not \"usage frequency\". \"使用頻度\" asserts that frequency-of-use data is sent, which the source does not say.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "737b6142",
@@ -1550,7 +1526,7 @@
    "confidence": "high"
   },
   "rationale": "The source explains the page may be access-restricted or mostly visual content; the ja claims parts of the page are not being displayed, which is a different statement about the product's behaviour.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "847c1f49",
@@ -1773,30 +1749,6 @@
   "string_id": "WorldCup.HomepageWidget.CountDown.HourLabel.v151",
   "suggest": "時",
   "summary": "Two-character translation 「時間」 will be truncated to a misleading label; a single character is required.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "ページを更新してください。",
-  "dismissed_because": "",
-  "fid": "c129c7686d8c",
-  "file": "Shared/Supporting Files/en-US.lproj/WorldCup.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "ja",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The en-US instructs the user to refresh the match data in the widget; adding 「ページを」 tells the user to reload a page, which is not what the source says and is not what the widget does.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "4713100b",
-  "string_id": "WorldCup.HomepageWidget.ErrorLabel.v151",
-  "suggest": "更新してください。",
-  "summary": "\"Please refresh.\" is rendered as \"refresh the page\", which the source does not say (the widget data is refreshed, not a page).",
   "suppressed_by": ""
  },
  {
@@ -4056,30 +4008,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "Firefox が写真データにアクセスしようとしています",
-  "dismissed_because": "",
-  "fid": "a5876ff6eae7",
-  "file": "Shared/en-US.lproj/Localizable.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "ja",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The en-US is a polite request for permission (\"would like to access your Photos\"); the Japanese asserts that Firefox is currently attempting to access the user's photo data, which reads as the app describing its own behaviour differently from the source.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "16867baa",
-  "string_id": "PhotoLibrary.FirefoxWouldLikeAccessTitle",
-  "suggest": "Firefox が写真へのアクセスを求めています",
-  "summary": "Permission request title rendered as a statement that Firefox \"is trying to access\" photos instead of \"would like to access\".",
-  "suppressed_by": ""
- },
- {
   "category": "C",
   "check": "llm",
   "current": "ご協力いただだける方は",
@@ -4502,7 +4430,7 @@
    "confidence": "medium"
   },
   "rationale": "The source label marks a suggestion as sponsored; \"広告\" asserts it is an advertisement, which is a different claim than the en-US \"Sponsored\".",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "d2454f6b",

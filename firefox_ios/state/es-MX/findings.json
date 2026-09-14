@@ -408,30 +408,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "Protección de navegación activada",
-  "dismissed_because": "",
-  "fid": "8daaa8517de5",
-  "file": "Shared/Supporting Files/en-US.lproj/FirefoxHomepage.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "es-MX",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The en-US tells the user they are protected; the Spanish asserts that a browsing-protection feature has been turned on, which is a different claim about the product's state.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "2a8e6f54",
-  "string_id": "FirefoxHomepage.TrackerBlocker.NoTrackersBlocked.v153",
-  "suggest": "Estás protegido",
-  "summary": "\"You’re Protected\" is translated as \"Protección de navegación activada\" (Browsing protection enabled), which states something different from the source.",
-  "suppressed_by": ""
- },
- {
   "category": "C",
   "check": "llm",
   "current": "Continua donde te quedaste",
@@ -549,30 +525,6 @@
   "string_id": "MainMenu.DesktopSiteOn.Title.v142",
   "suggest": "Activado",
   "summary": "State label \"On\" translated as the action \"Activar\" (activate) instead of the state \"Activado\".",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "Toma solo un segundo y puedes cambiar tus preferencias cuando quieras.",
-  "dismissed_because": "",
-  "fid": "c89eb548627b",
-  "file": "Shared/Supporting Files/en-US.lproj/MainMenu.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "es-MX",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "en-US is \"Takes seconds. Change anytime.\" — the Spanish claims it takes only one second and refers to changing \"tus preferencias\", asserting something the source never said; it is also much longer for a banner subtitle.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "ff07f89e",
-  "string_id": "MainMenu.HeaderBanner.Subtitle.v142",
-  "suggest": "Toma solo unos segundos. Cámbialo cuando quieras.",
-  "summary": "Subtitle adds content not in the source and changes \"Takes seconds\" to \"takes only a second\" plus invented \"change your preferences\".",
   "suppressed_by": ""
  },
  {
@@ -1070,7 +1022,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US says the app blocks companies from spying on your clicks; the Spanish says it blocks the companies that spy on your clicks, altering the claim about the product's behaviour.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6be540d3",
@@ -1557,30 +1509,6 @@
   "string_id": "CloseTabsToast.SingleTabTitle.v113",
   "suggest": "Pestaña cerrada",
   "summary": "Incorrect capitalization of \"Cerrada\" mid-sentence in Spanish.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "Hemos actualizado los Términos de uso de %@ y nuestro Aviso de privacidad.",
-  "dismissed_because": "",
-  "fid": "d171f747297d",
-  "file": "Shared/Supporting Files/en-US.lproj/TermsOfUse.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "es-MX",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The source says the Terms of Use are newly introduced, while only the Privacy Notice was updated; the translation says both were updated.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "3457a3f8",
-  "string_id": "TermsOfUse.Description.v142",
-  "suggest": "Presentamos los Términos de uso de %@ y actualizamos nuestro Aviso de privacidad.",
-  "summary": "\"We've introduced a %@ Terms of Use\" is rendered as \"we have updated\" the Terms of Use, changing new terms into updated terms.",
   "suppressed_by": ""
  },
  {
@@ -4581,30 +4509,6 @@
   "string_id": "Search Input Field",
   "suggest": "Campo de búsqueda",
   "summary": "\"Search Input Field\" (a noun phrase naming the field) is rendered as an imperative \"Buscar campo de entrada\" (\"Search the input field\").",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "Firefox no recordará el historial ni las cookies de esta sesión, pero guardará marcadores que agregues.",
-  "dismissed_because": "",
-  "fid": "3cb4d6c51315",
-  "file": "Shared/en-US.lproj/PrivateBrowsing.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "es-MX",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The en-US says Firefox won’t remember any of your history or cookies and that new bookmarks will be saved; the Spanish limits it to \"de esta sesión\", a claim the source never makes.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "010f73e6",
-  "string_id": "Firefox won’t remember any of your history or cookies, but new bookmarks will be saved.",
-  "suggest": "Firefox no recordará nada de tu historial ni tus cookies, pero se guardarán los marcadores nuevos.",
-  "summary": "The translation adds \"de esta sesión\" and drops \"any of your\", altering the scope of what Firefox will not remember.",
   "suppressed_by": ""
  },
  {

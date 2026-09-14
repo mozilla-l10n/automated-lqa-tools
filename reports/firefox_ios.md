@@ -2,21 +2,17 @@
 
 - **Generated:** 2026-09-14
 - **Locales tracked:** 20 (20 with recorded state)
-- **Findings:** 2,655 raised, 38 fixed (1%), 1,433 open
+- **Findings:** 2,636 raised, 38 fixed (1%), 1,414 open
 - **Closed by a person:** 21 dismissed, 52 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
 ## Read these first
 
-### Reads as a deliberate edit (60)
+### Reads as a deliberate edit (33)
 
 The translation makes the product assert something the en-US never said. Nothing here says the change was intended — that cannot be read off the text, which is exactly the problem, because a user cannot read it off either.
 
-- **`cs`** `Onboarding.Modern.TermsOfService.Description.v145` — `Shared/Supporting Files/en-US.lproj/Onboarding.strings`
-    - "trusted for over 20 years" is rendered as "which you have trusted for over 20 years", asserting the user's trust rather than general trust.
-    - Current: `Přináší nezisková organizace %@, které důvěřujete již více než 20 let`
-    - Suggest: `Přináší nezisková organizace %@, které se důvěřuje již více než 20 let`
 - **`cs`** `This action will clear all of your private data, including history from your synced devices.` — `Shared/en-US.lproj/ClearHistoryConfirm.strings`
     - "all of your private data" is rendered as "všechna vaše data", dropping "private"/soukromá.
     - Current: `Tato akce smaže všechna vaše data, včetně historie prohlížení ze všech synchronizovaných zařízení.`
@@ -29,26 +25,14 @@ The translation makes the product assert something the en-US never said. Nothing
     - "helps stop advertisers from tracking" rendered as the absolute "zabrání inzerentům sledovat" (will prevent advertisers from tracking).
     - Current: `zabrání inzerentům sledovat vás na internetu`
     - Suggest: `pomáhá zabránit inzerentům ve sledování vašeho prohlížení`
-- **`de`** `Onboarding.Modern.TermsOfService.Description.v145` — `Shared/Supporting Files/en-US.lproj/Onboarding.strings`
-    - "trusted for over 20 years" is rendered as "der wir seit über 20 Jahren vertrauen" ("whom we have trusted for over 20 years"), reversing who trusts whom.
-    - Current: `Von der gemeinnützigen Organisation %@, der wir seit über 20 Jahren vertrauen`
-    - Suggest: `Von der gemeinnützigen Organisation %@, der seit über 20 Jahren vertraut wird`
 - **`de`** `TabToolbar.Accessibility.DataClearance.v122` — `Shared/Supporting Files/en-US.lproj/TabToolbar.strings`
     - "Data Clearance" (deleting private session data) is translated as "Datenfreigabe", which means data sharing/release.
     - Current: `Datenfreigabe`
     - Suggest: `Datenlöschung`
-- **`de`** `Settings.Studies.Toggle.Message` — `Shared/en-US.lproj/Localizable.strings`
-    - "may install and run studies" (possibility) is rendered as "darf … installieren" (is permitted to), changing the meaning.
-    - Current: `Firefox darf von Zeit zu Zeit Studien installieren und laufen lassen.`
-    - Suggest: `Firefox kann von Zeit zu Zeit Studien installieren und ausführen.`
 - **`es-AR`** `Settings.Rollouts.Message.v148` — `Shared/Supporting Files/en-US.lproj/Settings.strings`
     - Present/future "Changes applied remotely" rendered in past tense, asserting changes were already applied.
     - Current: `Los cambios se aplicaron remotamente.`
     - Suggest: `Los cambios se aplican remotamente.`
-- **`es-ES`** `Onboarding.TermsOfService.PrivacyPreferences.SendTechnicalDataDescription.v135` — `Shared/Supporting Files/en-US.lproj/Onboarding.strings`
-    - "for everyone" is rendered as "para los usuarios en todo el mundo" (for users all over the world), adding a claim not in the source.
-    - Current: `para los usuarios en todo el mundo`
-    - Suggest: `para todos`
 - **`es-ES`** `Menu.TrackingProtectionDescription.ContentTrackers` — `Shared/en-US.lproj/Localizable.strings`
     - "can make websites load faster" rendered as a certainty ("hará que").
     - Current: `Bloquearlos hará que los sitios web carguen más rápido`
@@ -57,38 +41,10 @@ The translation makes the product assert something the en-US never said. Nothing
     - The Spanish reverses the relationship (social networks place trackers ON other websites) and overstates the effect of blocking.
     - Current: `Las redes sociales colocan rastreadores para que otros sitios web construyan un perfil más completo dirigido a ti. Si bloqueas estos rastreadores, muchas empresas de medios sociales dejarán de tener…`
     - Suggest: `Las redes sociales colocan rastreadores en otros sitios web para crear un perfil tuyo más completo y segmentado. Bloquear estos rastreadores reduce lo que las empresas de redes sociales pueden ver de…`
-- **`es-MX`** `FirefoxHomepage.TrackerBlocker.NoTrackersBlocked.v153` — `Shared/Supporting Files/en-US.lproj/FirefoxHomepage.strings`
-    - "You’re Protected" is translated as "Protección de navegación activada" (Browsing protection enabled), which states something different from the source.
-    - Current: `Protección de navegación activada`
-    - Suggest: `Estás protegido`
-- **`es-MX`** `MainMenu.HeaderBanner.Subtitle.v142` — `Shared/Supporting Files/en-US.lproj/MainMenu.strings`
-    - Subtitle adds content not in the source and changes "Takes seconds" to "takes only a second" plus invented "change your preferences".
-    - Current: `Toma solo un segundo y puedes cambiar tus preferencias cuando quieras.`
-    - Suggest: `Toma solo unos segundos. Cámbialo cuando quieras.`
-- **`es-MX`** `Onboarding.Modern.BrandRefresh.Welcome.Description.v148` — `Shared/Supporting Files/en-US.lproj/Onboarding.strings`
-    - Relative clause with subjunctive changes the meaning from blocking all companies from spying to only blocking those that do spy.
-    - Current: `bloqueamos automáticamente a las empresas que espíen tus clics`
-    - Suggest: `bloqueamos automáticamente que las empresas espíen tus clics`
-- **`es-MX`** `TermsOfUse.Description.v142` — `Shared/Supporting Files/en-US.lproj/TermsOfUse.strings`
-    - "We've introduced a %@ Terms of Use" is rendered as "we have updated" the Terms of Use, changing new terms into updated terms.
-    - Current: `Hemos actualizado los Términos de uso de %@ y nuestro Aviso de privacidad.`
-    - Suggest: `Presentamos los Términos de uso de %@ y actualizamos nuestro Aviso de privacidad.`
-- **`es-MX`** `Firefox won’t remember any of your history or cookies, but new bookmarks will be saved.` — `Shared/en-US.lproj/PrivateBrowsing.strings`
-    - The translation adds "de esta sesión" and drops "any of your", altering the scope of what Firefox will not remember.
-    - Current: `Firefox no recordará el historial ni las cookies de esta sesión, pero guardará marcadores que agregues.`
-    - Suggest: `Firefox no recordará nada de tu historial ni tus cookies, pero se guardarán los marcadores nuevos.`
-- **`fr`** `Addresses.EditAddress.AutofillAddressZip.v129` — `Shared/Supporting Files/en-US.lproj/EditAddress.strings`
-    - "ZIP Code" is translated with an added parenthetical "(États-Unis)" that the source does not contain.
-    - Current: `Code postal (États-Unis)`
-    - Suggest: `Code postal`
 - **`hi-IN`** `NSMicrophoneUsageDescription` — `Client/en-US.lproj/InfoPlist.strings`
     - Microphone permission description translated as taking and uploading videos, omitting Firefox and the microphone/audio recording purpose.
     - Current: `यह आपको वीडियो लेने और अपलोड करने देता है।`
     - Suggest: `Firefox ऑडियो रिकॉर्ड करने और अपलोड करने के लिए आपके माइक्रोफ़ोन का उपयोग करता है।`
-- **`hi-IN`** `Oops! Firefox crashed` — `Shared/en-US.lproj/Localizable.strings`
-    - "crashed" is rendered as "नष्ट हो गया" (was destroyed), which is not the software sense of crashing.
-    - Current: `उफ़! Firefox नष्ट हो गया`
-    - Suggest: `उफ़! Firefox क्रैश हो गया`
 - **`hu`** `Onboarding.Modern.BrandRefresh.Marketing.Description.v148` — `Shared/Supporting Files/en-US.lproj/Onboarding.strings`
     - "that you use it" was rendered as "how you use it", making the product claim it shares usage details with marketing partners.
     - Current: `hogy miként fedezte fel, és hogyan használja a %1$@ot`
@@ -97,10 +53,6 @@ The translation makes the product assert something the en-US never said. Nothing
     - "can be used to track you" rendered as a definite statement "használnak" (they use it), dropping the modality.
     - Current: `amelyet aztán a böngészése követésére használnak`
     - Suggest: `amely aztán a böngészése követésére használható`
-- **`id`** `Onboarding.Modern.BrandRefresh.TermsOfUse.Description.v148` — `Shared/Supporting Files/en-US.lproj/Onboarding.strings`
-    - "won't sell you out" (won't betray you) is rendered literally as "tidak akan menjual Anda" (won't sell you), changing the meaning.
-    - Current: `tidak akan menjual Anda`
-    - Suggest: `tidak akan mengkhianati Anda`
 - **`id`** `Search.ThirdPartyEngines.DuplicateErrorMessage` — `Shared/en-US.lproj/Localizable.strings`
     - Error message translated as a success ("has been successfully added") instead of stating the engine was already added.
     - Current: `Mesin pencari dengan judul ini atau URL telah berhasil ditambahkan.`
@@ -109,10 +61,6 @@ The translation makes the product assert something the en-US never said. Nothing
     - "won’t remember any of your history" is rendered as "tidak akan mengingat semua riwayat", which reads as "will not remember all history" (i.e. may remember some).
     - Current: `tidak akan mengingat semua riwayat atau kuki`
     - Suggest: `tidak akan mengingat riwayat atau kuki apa pun`
-- **`it`** `BreachAlerts.Description` — `Shared/en-US.lproj/Localizable.strings`
-    - "leaked or stolen" is rendered as "rubate o diffuse pubblicamente" ("publicly disclosed"), and the source's "Passwords were leaked" is turned into a claim about this specific website's passwords.
-    - Current: `le password di questo sito web sono state rubate o diffuse pubblicamente`
-    - Suggest: `alcune password sono state diffuse o rubate`
 - **`ja`** `NSFaceIDUsageDescription` — `Client/en-US.lproj/InfoPlist.strings`
     - "payment methods" is rendered as 「暗号化されたカード情報」 (encrypted card information), adding a claim not in the source.
     - Current: `保存されたログイン情報と暗号化されたカード情報にアクセスするには Face ID が必要です。`
@@ -133,7 +81,59 @@ The translation makes the product assert something the en-US never said. Nothing
     - "interaction data" rendered as 「対話データ」 (dialogue/conversation data) instead of 利用状況データ/インタラクションデータ.
     - Current: `診断情報と対話データ`
     - Suggest: `診断データとインタラクションデータ`
-- _…and 30 more, in the per-locale reports linked below._
+- **`ja`** `WebCompatReporter.Preview.Data.PageLanguages.v155` — `Shared/Supporting Files/en-US.lproj/WebCompatReporter.strings`
+    - A bullet-point noun phrase is rendered as a past-tense sentence, changing the meaning.
+    - Current: `言語設定がこのページに送信されました`
+    - Suggest: `このページに送信された言語設定`
+- **`ja`** `Settings.TrackingProtection.ProtectionCellFooter` — `Shared/en-US.lproj/Localizable.strings`
+    - "helps stop advertisers from tracking your browsing" is rendered as an absolute claim of blocking tracking ads.
+    - Current: `ユーザーの行動を追跡する広告を阻止します`
+    - Suggest: `広告会社によるユーザーの閲覧の追跡を防ぐのに役立ちます`
+- **`pl`** `Settings.Studies.Title.v148` — `Shared/Supporting Files/en-US.lproj/Settings.strings`
+    - "Allow Feature Studies" is rendered as "Zezwól na badanie korzystania z funkcji", which says the app studies how the user uses features rather than allowing feature studies (experiments).
+    - Current: `Zezwól na badanie korzystania z funkcji`
+    - Suggest: `Zezwól na badania funkcji`
+- **`pl`** `Search.ThirdPartyEngines.AddMessage` — `Shared/en-US.lproj/Localizable.strings`
+    - Translation adds a claim about managing the engine in settings that the source does not contain.
+    - Current: `Nowa wyszukiwarka pojawi się na pasku szybkiego wyszukiwania i będzie można nią zarządzać poprzez ustawienia.`
+    - Suggest: `Nowa wyszukiwarka pojawi się na pasku szybkiego wyszukiwania.`
+- **`pt-BR`** `Settings.Rollouts.Message.v148` — `Shared/Supporting Files/en-US.lproj/Settings.strings`
+    - "between updates" was rendered as "a cada atualização" (with each update), reversing the meaning.
+    - Current: `melhora funcionalidades, desempenho e estabilidade a cada atualização`
+    - Suggest: `melhora funcionalidades, desempenho e estabilidade entre atualizações`
+- **`pt-BR`** `Block Pop-up Windows` — `Shared/en-US.lproj/Localizable.strings`
+    - Translation adds "ou abas" (or tabs), which the source does not say.
+    - Current: `Bloquear abertura de janelas ou abas`
+    - Suggest: `Bloquear janelas pop-up`
+- **`ru`** `NSFaceIDUsageDescription` — `Client/en-US.lproj/InfoPlist.strings`
+    - "saved passwords and payment methods" translated as "сохранённым логинам и зашифрованным картам" (saved logins and encrypted cards).
+    - Current: `Firefox требует Face ID для доступа к вашим сохранённым логинам и зашифрованным картам.`
+    - Suggest: `Firefox требует Face ID для доступа к вашим сохранённым паролям и способам оплаты.`
+- **`sl`** `Settings.AIControls.AIPoweredFeaturesSection.BlockedStatusDescriptionV2.v151` — `Shared/Supporting Files/en-US.lproj/Settings.strings`
+    - The qualifier "For on-device AI" is dropped, so the Slovenian states unconditionally that downloaded AI models will be removed.
+    - Current: `Morebitni modeli UI, ki so se že prenesli na napravo, bodo odstranjeni.`
+    - Suggest: `Pri UI, ki se izvaja na napravi, bodo odstranjeni vsi preneseni modeli.`
+- **`tr`** `Settings.AIControls.AIPoweredFeaturesSection.BlockedStatusDescriptionV2.v151` — `Shared/Supporting Files/en-US.lproj/Settings.strings`
+    - "For on-device AI" qualifier dropped, so the Turkish asserts all downloaded AI models are removed.
+    - Current: `Cihaza indirilmiş yapay zekâ modelleri kaldırılacaktır.`
+    - Suggest: `Cihaz üzerinde çalışan yapay zekâ için indirilmiş modeller kaldırılır.`
+- **`tr`** `Settings.Rollouts.Message.v148` — `Shared/Supporting Files/en-US.lproj/Settings.strings`
+    - "between updates" is translated as "in every update", reversing the point that improvements happen without an update.
+    - Current: `%@ her güncellemede özellikleri`
+    - Suggest: `%@, güncellemeler arasında özellikleri`
+- **`tr`** `Settings.SendUsage.Message` — `Shared/en-US.lproj/Localizable.strings`
+    - Turkish drops "to provide" and "for everyone", and uses "daha da geliştirmek" (improve further) only.
+    - Current: `Mozilla, yalnızca Firefox’u daha da geliştirmek için ihtiyaç duyduğumuz verileri toplar.`
+    - Suggest: `Mozilla, Firefox’u herkese sunmak ve geliştirmek için yalnızca ihtiyaç duyduğumuz verileri toplamaya çalışır.`
+- **`zh-CN`** `ContextualHints.FeltDeletion.Body.v122` — `Shared/Supporting Files/en-US.lproj/ContextualHints.strings`
+    - The translation reverses the sequence/meaning: the source says tapping starts a fresh private session by deleting history and cookies, while the Chinese says to delete data after browsing.
+    - Current: `点按此处新建隐私浏览，浏览完毕后轻松删除历史记录和 Cookie 等数据。`
+    - Suggest: `点按此处开始全新的隐私浏览会话。删除您的历史记录、Cookie 等一切数据。`
+- **`zh-CN`** `Onboarding.Customization.Toolbar.Description.v123` — `Shared/Supporting Files/en-US.lproj/Onboarding.strings`
+    - "Keep searches within reach" is rendered as "holding the phone lightly can invoke search", which is not what the source says.
+    - Current: `轻松握持就可唤起搜索。`
+    - Suggest: `让搜索始终触手可及。`
+- _…and 3 more, in the per-locale reports linked below._
 
 ### Broken output — impact 1 (1)
 
@@ -146,34 +146,36 @@ The value does not render as intended: a blank string, broken markup, a variable
     - Current: `Mit %3$@ auf %2$@ übersetzen?`
     - Suggest: `Mit %3$@ in %2$@ übersetzen?`
 
-### Wrong content — impact 2 (710)
+### Wrong content — impact 2 (691)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/firefox_ios.md`.
 
 | Locale | Last run | Mode | Commit | Strings | Missing | Open | Impact 1–2 | Fixed | Dismissed | Suppressed |
 |---|---|---|---|---|---|---|---|---|---|---|
-| [cs](cs/firefox_ios.md) | 2026-09-14 | incremental | `e8592a89` | 1,922 | 0 | **94** | 54 | 0 | 0 | 0 |
-| [de](de/firefox_ios.md) | 2026-09-14 | incremental | `e8592a89` | 1,922 | 0 | **90** | 28 | 2 | 0 | 0 |
+| [cs](cs/firefox_ios.md) | 2026-09-14 | checks-only | `8f5aca68` | 1,922 | 0 | **93** | 53 | 0 | 0 | 0 |
+| [de](de/firefox_ios.md) | 2026-09-14 | checks-only | `8f5aca68` | 1,922 | 0 | **88** | 26 | 2 | 0 | 0 |
 | [en-CA](en-CA/firefox_ios.md) | 2026-09-14 | incremental | `e8592a89` | 1,911 | 11 | **2** | 0 | 16 | 0 | 0 |
 | [en-GB](en-GB/firefox_ios.md) | 2026-09-14 | incremental | `e8592a89` | 1,922 | 0 | **8** | 4 | 3 | 0 | 50 |
 | [es-AR](es-AR/firefox_ios.md) | 2026-09-14 | incremental | `e8592a89` | 1,922 | 0 | **100** | 44 | 0 | 0 | 0 |
-| [es-ES](es-ES/firefox_ios.md) | 2026-09-14 | incremental | `e8592a89` | 1,922 | 0 | **64** | 34 | 0 | 0 | 0 |
-| [es-MX](es-MX/firefox_ios.md) | 2026-09-14 | incremental | `e8592a89` | 1,883 | 39 | **126** | 68 | 1 | 0 | 0 |
-| [fr](fr/firefox_ios.md) | 2026-09-14 | incremental | `e8592a89` | 1,922 | 0 | **45** | 30 | 0 | 0 | 0 |
-| [hi-IN](hi-IN/firefox_ios.md) | 2026-09-14 | incremental | `e8592a89` | 602 | 1,320 | **79** | 33 | 0 | 0 | 0 |
+| [es-ES](es-ES/firefox_ios.md) | 2026-09-14 | checks-only | `8f5aca68` | 1,922 | 0 | **63** | 33 | 0 | 0 | 0 |
+| [es-MX](es-MX/firefox_ios.md) | 2026-09-14 | checks-only | `8f5aca68` | 1,883 | 39 | **122** | 64 | 1 | 0 | 0 |
+| [fr](fr/firefox_ios.md) | 2026-09-14 | checks-only | `8f5aca68` | 1,922 | 0 | **44** | 29 | 0 | 0 | 0 |
+| [hi-IN](hi-IN/firefox_ios.md) | 2026-09-14 | checks-only | `8f5aca68` | 602 | 1,320 | **79** | 33 | 0 | 0 | 0 |
 | [hu](hu/firefox_ios.md) | 2026-09-14 | incremental | `e8592a89` | 1,922 | 0 | **94** | 40 | 0 | 0 | 0 |
-| [id](id/firefox_ios.md) | 2026-09-14 | incremental | `e8592a89` | 1,922 | 0 | **97** | 37 | 0 | 0 | 0 |
-| [it](it/firefox_ios.md) | 2026-09-14 | incremental | `e8592a89` | 1,922 | 0 | **8** | 6 | 16 | 21 | 2 |
-| [ja](ja/firefox_ios.md) | 2026-09-14 | incremental | `e8592a89` | 1,922 | 0 | **113** | 63 | 0 | 0 | 0 |
-| [nl](nl/firefox_ios.md) | 2026-09-14 | incremental | `e8592a89` | 1,918 | 4 | **49** | 22 | 0 | 0 | 0 |
-| [pl](pl/firefox_ios.md) | 2026-09-14 | incremental | `e8592a89` | 1,922 | 0 | **72** | 40 | 0 | 0 | 0 |
+| [id](id/firefox_ios.md) | 2026-09-14 | checks-only | `8f5aca68` | 1,922 | 0 | **97** | 37 | 0 | 0 | 0 |
+| [it](it/firefox_ios.md) | 2026-09-14 | checks-only | `8f5aca68` | 1,922 | 0 | **7** | 5 | 16 | 21 | 2 |
+| [ja](ja/firefox_ios.md) | 2026-09-14 | checks-only | `8f5aca68` | 1,922 | 0 | **110** | 60 | 0 | 0 | 0 |
+| [nl](nl/firefox_ios.md) | 2026-09-14 | checks-only | `8f5aca68` | 1,918 | 4 | **49** | 22 | 0 | 0 | 0 |
+| [pl](pl/firefox_ios.md) | 2026-09-14 | checks-only | `8f5aca68` | 1,922 | 0 | **71** | 39 | 0 | 0 | 0 |
 | [pt-BR](pt-BR/firefox_ios.md) | 2026-09-14 | incremental | `e8592a89` | 1,922 | 0 | **57** | 35 | 0 | 0 | 0 |
 | [ru](ru/firefox_ios.md) | 2026-09-14 | incremental | `e8592a89` | 1,922 | 0 | **89** | 42 | 0 | 0 | 0 |
-| [sl](sl/firefox_ios.md) | 2026-09-14 | incremental | `e8592a89` | 1,919 | 3 | **91** | 42 | 0 | 0 | 0 |
-| [tr](tr/firefox_ios.md) | 2026-09-14 | incremental | `e8592a89` | 1,922 | 0 | **85** | 47 | 0 | 0 | 0 |
-| [zh-CN](zh-CN/firefox_ios.md) | 2026-09-14 | incremental | `e8592a89` | 1,922 | 0 | **70** | 42 | 0 | 0 | 0 |
+| [sl](sl/firefox_ios.md) | 2026-09-14 | checks-only | `8f5aca68` | 1,919 | 3 | **89** | 40 | 0 | 0 | 0 |
+| [tr](tr/firefox_ios.md) | 2026-09-14 | checks-only | `8f5aca68` | 1,922 | 0 | **83** | 45 | 0 | 0 | 0 |
+| [zh-CN](zh-CN/firefox_ios.md) | 2026-09-14 | checks-only | `8f5aca68` | 1,922 | 0 | **69** | 41 | 0 | 0 | 0 |
 
 **Impact 1–2** is the queue that matters: broken output and wrong content. Impact 3–4 is language polish and typography.
+
+**Not reviewed yet:** `cs`, `de`, `es-ES`, `es-MX`, `fr`, `hi-IN`, `id`, `it`, `ja`, `nl`, `pl`, `sl`, `tr`, `zh-CN`. They have only been through the deterministic checks; the reviewer has not read them. The next run does the baseline.
 
 ## Adding a locale
 

@@ -854,7 +854,7 @@
    "confidence": "high"
   },
   "rationale": "The source says the app crashed; \"नष्ट हो गया\" means it was destroyed/annihilated, telling the user the product destroyed itself rather than that it stopped unexpectedly.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "639098ac",

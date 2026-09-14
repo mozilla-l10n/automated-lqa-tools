@@ -106,6 +106,31 @@ def must_be_silent(suite, results, table) -> None:
         suite.check(silent, f"{locale}: {kind} = {state} ({why})")
 
 
+def comment_is_evidence(suite, project) -> None:
+    """The comment must be able to answer a finding, not just annotate it.
+
+    Comments carry more than placeholder glosses: one tells translators the
+    English was shortened and to expand it, another describes a footnote as
+    a disclaimer that the report can contain errors, a third says the ZIP
+    field is US-only. Each of those licenses a rendering the en-US alone
+    reads as invented, and four findings were raised against comments that
+    had already granted permission. A reviewer that treats the comment as
+    decoration will raise them again.
+    """
+    suite.section("The developer comment can answer a finding")
+    names = ["incremental_review.md"]
+    if project.data.get("variants"):
+        names.append("variant_review.md")
+    for name in names:
+        text = project.prompt(name)
+        suite.check("evidence, not decoration" in text,
+                    f"{name} tells the reviewer the comment is evidence")
+        suite.check("licenses a re-wording" in text,
+                    f"{name} says a comment may license a re-wording")
+        suite.check("Never report a translation for matching its comment" in text,
+                    f"{name} forbids reporting a translation that matches it")
+
+
 def deliberate_flag_wiring(suite, project) -> None:
     """The reviewer must be asked, and told what the answer means.
 
@@ -122,9 +147,23 @@ def deliberate_flag_wiring(suite, project) -> None:
     suite.check("reads_as_deliberate" in props["required"],
                 "the reviewer is asked, on every finding, whether it reads as "
                 "a deliberate edit")
+    suite.check("lands on the same fact" in props["properties"]["reads_as_deliberate"]["description"],
+                "and told to judge the fact asserted, not the wording")
     names = ["incremental_review.md"]
     if project.data.get("variants"):
         names.append("variant_review.md")
     for name in names:
-        suite.check("reads_as_deliberate" in project.prompt(name),
+        text = project.prompt(name)
+        suite.check("reads_as_deliberate" in text,
                     f"{name} tells it what that means")
+        # The first pass of this section had no floor under it, so a
+        # rendering that landed on the same fact in different words --
+        # "the non-profit you have trusted" for "the non-profit, trusted",
+        # "for over 20 years" for "for 20 years" -- led the pull request
+        # as an assertion the en-US never made. The latitude paragraph is
+        # what keeps re-wording out; without it the flag reads as a
+        # severity again.
+        suite.check("material" in text and "not a gloss" in text,
+                    f"{name} sets a material bar and allows re-wording")
+        suite.check("for over 20 years" in text,
+                    f"{name} keeps the quantifier case as an example")

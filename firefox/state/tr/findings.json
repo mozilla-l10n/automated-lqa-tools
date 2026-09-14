@@ -1305,7 +1305,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US is just \"Across { $count } sites\" (developer comment: \"Blocked across { $count } sites\"); the target asserts \"we protected you on { $count } sites\", a claim about the product's behaviour that the source never makes.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bafd429e",
@@ -7876,30 +7876,6 @@
   "string_id": "region-name-xu",
   "suggest": "",
   "summary": "Johnston Atoll — Johnston Atoll — Johnston Atolü — untranslated; the parallel region-name-xl is \"Palmyra Atolü\".",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "Bu sayede hesaplarınızı daha güvenli bir şekilde koruyabiliriz.",
-  "dismissed_because": "",
-  "fid": "f8185f2158fe",
-  "file": "toolkit/toolkit/main-window/autocomplete.ftl",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "tr",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "en-US: \"This helps protect the security of your accounts.\" The Turkish introduces a first-person claim (\"we can protect\") that the source never makes.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "25978ae7",
-  "string_id": "autocomplete-remove-password-os-auth-dialog-message-win",
-  "suggest": "Bu, hesaplarınızın güvenliğini korumaya yardımcı olur.",
-  "summary": "Turkish says \"we can better protect your accounts\", whereas the source says this helps protect the security of your accounts (the action helps, not the vendor).",
   "suppressed_by": ""
  },
  {
