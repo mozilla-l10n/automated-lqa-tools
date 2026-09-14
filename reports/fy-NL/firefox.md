@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-07 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
-| **Previous run** | 2026-09-03 @ `075eb543fd91` |
+| **Generated** | 2026-09-14 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e44f1369fb6d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8ffd279d75ec` |
+| **Previous run** | 2026-09-07 @ `3c0c507b8d42` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 18,180 |
+| **Strings reviewed this run** | 15 of 15,991 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,154 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (61)
 
-_Nothing retired._
+- `settings-update-downloading` — `browser/browser/aboutDialog.ftl` — page-info-page, page-info-frame, tabbrowser-container-tab-title use - where the locale's house dash is – · tab-group-menu-closed-tab-group uses — while sibling tab-group strings use – · aboutdialog-update-downloading uses – while settings-update-downloading uses —.
+- `create-new-login-button` — `browser/browser/aboutLogins.ftl` — Nij oanmelding → Nije oanmelding
+    - Current: `Nij oanmelding`
+    - Suggest: `Nije oanmelding`
+- `login-item-new-login-title` — `browser/browser/aboutLogins.ftl` — Nij oanmelding → Nije oanmelding
+    - Current: `Nij oanmelding`
+    - Suggest: `Nije oanmelding`
+- `pocket-panel-header-my-saves` — `browser/browser/aboutPocket.ftl` — Myn Opgeslagen items besjen → Myn bewarre items besjen
+    - Current: `Myn Opgeslagen items besjen`
+    - Suggest: `Myn bewarre items besjen`
+- `pocket-panel-saved-error-no-internet` — `browser/browser/aboutPocket.ftl` — 2nd sentence: Kontrolearje jo ferbining → Meitsje ferbining mei it ynternet
+    - Current: `Kontrolearje jo ferbining`
+    - Suggest: `Meitsje ferbining mei it ynternet`
+- `pocket-panel-saved-error-tag-length` — `browser/browser/aboutPocket.ftl` — beheint → beheind
+    - Current: `beheint`
+    - Suggest: `beheind`
+- `pocket-panel-saved-removed-updated` — `browser/browser/aboutPocket.ftl` — Opgeslagen items → Bewarre items
+    - Current: `Opgeslagen items`
+    - Suggest: `Bewarre items`
+- `enable-devtools-popup-description2` — `browser/browser/browser.ftl` — it menu Ekstra → it menu Browserhelpmidelen
+    - Current: `it menu Ekstra`
+    - Suggest: `it menu Browserhelpmidelen`
+- `identity-https-only-info-turn-off2` — `browser/browser/browser.ftl` — te wurkje → te wurkjen
+    - Current: `te wurkje`
+    - Suggest: `te wurkjen`
+- `quickactions-plugins` — `browser/browser/browser.ftl` — Added where en-US has none: add-engine-button (both search.ftl and preferences/addEngine.ftl) · quickactions-plugins · main-context-menu-bookmark-page.tooltiptext · main-context-menu-edit-bookmark.tooltiptext.
+- `activist-colorway-description` — `browser/browser/colorways.ftl` — en lit oaren leauwe → en litte oaren leauwe
+    - Current: `en lit oaren leauwe`
+    - Suggest: `en litte oaren leauwe`
+- `dreamer-colorway-description` — `browser/browser/colorways.ftl` — Idiom garbled + wrong subject agreement
+- `callout-firefox-view-colorways-subtitle` — `browser/browser/featureCallout.ftl` — it kleur dy’t → it kleur dat (neuter)
+    - Current: `it kleur dy’t`
+    - Suggest: `it kleur dat`
+- `firefoxview-tabpickup-description` — `browser/browser/firefoxView.ftl` — pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…
+- `import-source-page-title` — `browser/browser/migration.ftl` — Added: import-source-page-title · findbar-fast-find-links.placeholder · app-basics-disk-available · detail-rating.value · default-browser-guidance-notification-info-page · inactive-css-at-position-try-not-supported.
+- `newtab-empty-section-topstories` — `browser/browser/newtab/newtab.ftl` — Kin jo net wachtsje? → Kinne jo net wachtsje?
+    - Current: `Kin jo net wachtsje?`
+    - Suggest: `Kinne jo net wachtsje?`
+- `mr2022-onboarding-colorway-description-activist` — `browser/browser/newtab/onboarding.ftl` — en lit oaren leauwe → en litte oaren leauwe
+    - Current: `en lit oaren leauwe`
+    - Suggest: `en litte oaren leauwe`
+- `mr2022-onboarding-colorway-description-dreamer` — `browser/browser/newtab/onboarding.ftl` — Verb agrees with gelok instead of Jo
+    - Current: `gelok`
+    - Suggest: `Jo`
+- `places-forget-about-this-site-confirmation-msg` — `browser/browser/places.ftl` — troch gean → trochgean
+    - Current: `troch gean`
+    - Suggest: `trochgean`
+- `connection-proxy-autologin` — `browser/browser/preferences/connection.ftl` — automatisysk → automatysk; derfaor → derfoar
+    - Current: `automatisysk`
+    - Suggest: `automatysk`
+- `containers-icon-briefcase` — `browser/browser/preferences/containers.ftl` — Sammeling → Aktetaske
+    - Current: `Sammeling`
+    - Suggest: `Aktetaske`
+- `fxa-qrcode-pair-step2-signin` — `browser/browser/preferences/fxaPairDevice.ftl` — about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…
+- `addon-recommendations` — `browser/browser/preferences/preferences.ftl` — útrweidingsrekommandaasjes → útwreidingsoanrekommandaasjes
+    - Current: `útrweidingsrekommandaasjes`
+    - Suggest: `útwreidingsoanrekommandaasjes`
+- `collection-usage-ping` — `browser/browser/preferences/preferences.ftl` — ferstjoerd → ferstjoere
+    - Current: `ferstjoerd`
+    - Suggest: `ferstjoere`
+- `confirm-on-close-multiple-tabs` — `browser/browser/preferences/preferences.ftl` — Warskôgje by → Befêstigje foar
+    - Current: `Warskôgje by`
+    - Suggest: `Befêstigje foar`
+- `cookie-banner-handling-description` — `browser/browser/preferences/preferences.ftl` — Doubled op + misplaced modifier
+- `do-not-track-description` — `browser/browser/preferences/preferences.ftl` — om litte te witten → om witte te litten
+    - Current: `om litte te witten`
+    - Suggest: `om witte te litten`
+- `network-proxy-connection-description` — `browser/browser/preferences/preferences.ftl` — hoe → hoe’t
+    - Current: `hoe`
+    - Suggest: `hoe’t`
+- `pane-experimental-description3` — `browser/browser/preferences/preferences.ftl` — de manier werop → de manier wêrop
+    - Current: `de manier werop`
+    - Suggest: `de manier wêrop`
+- `preferences-manage-profiles-description` — `browser/browser/preferences/preferences.ftl` — navigaasjejegegevens → navigaasjegegevens
+    - Current: `navigaasjejegegevens`
+    - Suggest: `navigaasjegegevens`
+- `preferences-text-zoom-override-warning` — `browser/browser/preferences/preferences.ftl` — der foar soargje → derfoar soargje
+    - Current: `der foar soargje`
+    - Suggest: `derfoar soargje`
+- `search-suggestions-cant-show` — `browser/browser/preferences/preferences.ftl` — lokaasjebalkresultaten → lokaasjebalkeresultaten
+    - Current: `lokaasjebalkresultaten`
+    - Suggest: `lokaasjebalkeresultaten`
+- `search-suggestions-option` — `browser/browser/preferences/preferences.ftl` — Search suggestions — sykfoarstellen vs syksuggestjes: search-show-suggestions-option, search-suggestions-option, search-show-suggestions-url-bar-option, addressbar-locbar-showtrendingsuggestions-option.
+    - Current: `sykfoarstellen`
+    - Suggest: `syksuggestjes`
+- `screenshots-connection-error-title` — `browser/browser/screenshots.ftl` — ferbine nei → ferbine mei
+    - Current: `ferbine nei`
+    - Suggest: `ferbine mei`
+- `tabbrowser-container-tab-title` — `browser/browser/tabbrowser.ftl` — page-info-page, page-info-frame, tabbrowser-container-tab-title use - where the locale's house dash is – · tab-group-menu-closed-tab-group uses — while sibling tab-group strings use – · aboutdialog-update-downloading uses – while settings-update-downloading uses —.
+- `unified-extensions-mb-blocklist-warning-single` — `browser/browser/unifiedExtensions.ftl` — utskeakele → útskeakele (the only lowercase missing-diacritic case in the tree)
+    - Current: `utskeakele`
+    - Suggest: `útskeakele`
+- `addon-badge-line3` — `toolkit/toolkit/about/aboutAddons.ftl` — Comment hard-codes Mozilla so forks don't show "by Fork"; the locale added "Firefox": troch Mozilla Firefox boude útwreiding
+- `addon-badge-line3` — `toolkit/toolkit/about/aboutAddons.ftl` — appmenuitem-monitor-description2 · bookmark-overlay-tags-empty-description.placeholder · choose-language-description · confirm-browser-language-change-description · download-always-ask-where2.label · home-prefs-weather-description · forms-master-pw-fips-desc · preferences-doh-status-item-not-active.message · preferences-doh-status-item-not-active-local.message · onboarding-refresh-import-title ·…
+- `addon-badge-recommended2` — `toolkit/toolkit/about/aboutAddons.ftl` — noarms → noarmen
+    - Current: `noarms`
+    - Suggest: `noarmen`
+- `addon-badge-recommended2` — `toolkit/toolkit/about/aboutAddons.ftl` — appmenuitem-monitor-description2 · bookmark-overlay-tags-empty-description.placeholder · choose-language-description · confirm-browser-language-change-description · download-always-ask-where2.label · home-prefs-weather-description · forms-master-pw-fips-desc · preferences-doh-status-item-not-active.message · preferences-doh-status-item-not-active-local.message · onboarding-refresh-import-title ·…
+- `details-notification-blocked` — `toolkit/toolkit/about/aboutAddons.ftl` — om reden fan feilichheid of stabiliteit → fanwegen feilichheids- of stabiliteitsproblemen ("issues" dropped)
+    - Current: `om reden fan feilichheid of stabiliteit`
+    - Suggest: `fanwegen feilichheids- of stabiliteitsproblemen`
+- `details-notification-soft-blocked-extension-disabled` — `toolkit/toolkit/about/aboutAddons.ftl` — skeinen (infinitive) → skeining (noun)
+    - Current: `skeinen`
+    - Suggest: `skeining`
+- `extensions-warning-check-compatibility` — `toolkit/toolkit/about/aboutAddons.ftl` — kompatibileit → kompatibiliteit; kontrole → kontrôle
+    - Current: `kompatibileit`
+    - Suggest: `kompatibiliteit`
+- `shortcuts-duplicate-warning-message` — `toolkit/toolkit/about/aboutAddons.ftl` — fluckkeppelingen → fluchkeppelingen; unferwacht → ûnferwacht
+    - Current: `fluckkeppelingen`
+    - Suggest: `fluchkeppelingen`
+- `about-glean-about-data-explanation` — `toolkit/toolkit/about/aboutGlean.ftl` — { -glean-brand-name }-biblioteek → { -glean-brand-name } Dictionary
+    - Current: `{ -glean-brand-name }-biblioteek`
+    - Suggest: `{ -glean-brand-name } Dictionary`
+- `suffixes-label` — `toolkit/toolkit/about/aboutPlugins.ftl` — Bylagen (attachments) → Efterheaksels
+    - Current: `Bylagen`
+    - Suggest: `Efterheaksels`
+- `rights-intro-point-1` — `toolkit/toolkit/about/aboutRights.ftl` — de boarnekoade te bewurkjen of { -brand-short-name } → … fan { -brand-short-name }
+    - Current: `de boarnekoade te bewurkjen of { -brand-short-name }`
+    - Suggest: `… fan { -brand-short-name }`
+- `rights-intro-point-1` — `toolkit/toolkit/about/aboutRights.ftl` — about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…
+- `rights-intro-point-4` — `toolkit/toolkit/about/aboutRights.ftl` — beskrean → beskreaun
+    - Current: `beskrean`
+    - Suggest: `beskreaun`
+- `rights-intro-point-5-unbranded` — `toolkit/toolkit/about/aboutRights.ftl` — Number mismatch, missing wurde, wrong preposition
+- `rights-locationawarebrowsing` — `toolkit/toolkit/about/aboutRights.ftl` — about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…
+- `rights-safebrowsing` — `toolkit/toolkit/about/aboutRights.ftl` — about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…
+- `rights-webservices-term-1` — `toolkit/toolkit/about/aboutRights.ftl` — grut genôch → folslein (comprehensive)
+    - Current: `grut genôch`
+    - Suggest: `folslein`
+- `rights-webservices-term-3` — `toolkit/toolkit/about/aboutRights.ftl` — about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…
+- `rights-webservices-term-4` — `toolkit/toolkit/about/aboutRights.ftl` — ekspres of mei opsetsin → útdruklik of ymplisyt
+    - Current: `ekspres of mei opsetsin`
+    - Suggest: `útdruklik of ymplisyt`
+- `rights-webservices-term-4` — `toolkit/toolkit/about/aboutRights.ftl` — List mis-parsed: stean útsluting, beheining of ymplisite garânsjes net ta
+- `rights-webservices-term-4` — `toolkit/toolkit/about/aboutRights.ftl` — Tjinsten → Tsjinsten
+    - Current: `Tjinsten`
+    - Suggest: `Tsjinsten`
+- `rights-webservices-term-4` — `toolkit/toolkit/about/aboutRights.ftl` — `rights-webservices-term-4` uses straight double quotes
+    - Current: `<strong>De Tjinsten wurde "as-is" oanbean.  { -vendor-short-name }, syn meiwurkers, lisinsje-útjouwers, en distributeurs, ûntkenne alle garânsjes, ekspres of mei opsetsin, ynklusyf sûnder beheining, garânsjes dat de Tsj…`
+    - Suggest: `"as-is"`
+    - The locale's quote convention is `curly-single` (876 occurrences).
+- `rights-webservices-term-4` — `toolkit/toolkit/about/aboutRights.ftl` — about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…
+- `abuse-report-messagebar-action-keep-extension` — `toolkit/toolkit/about/abuseReports.ftl` — Nee, bewarje (= save to disk) → Nee, hâlde (en-US: "No, I'll Keep It")
+    - Current: `Nee, bewarje`
+    - Suggest: `Nee, hâlde`
+- _…and 1 more._
 
 ---
 
@@ -44,11 +189,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 360 |
-| Strings | 18,180 |
-| Missing strings | 92 |
+| Files | 323 |
+| Strings | 15,991 |
+| Missing strings | 177 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 2 |
+| Files absent from the locale | 3 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,28 +204,29 @@ _Nothing retired._
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 1 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 2 |
+| Typography deviations from this locale's own norm | 1 |
 
 ### Completeness
 
-**92 strings** are not translated yet, concentrated in:
+**177 strings** are not translated yet, concentrated in:
 
-- `toolkit/services/aboutSyncLog.ftl` — 26
-- `browser/browser/newtab/newtab.ftl` — 25
+- `browser/browser/newtab/newtab.ftl` — 48
+- `toolkit/services/aboutSyncLog.ftl` — 28
+- `browser/browser/newtab/onboarding.ftl` — 19
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 16
 - `browser/browser/permissions.ftl` — 10
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 8
+- `browser/browser/ipProtection.ftl` — 7
+- `toolkit/toolkit/about/aboutSupport.ftl` — 6
 - `browser/browser/preferences/preferences.ftl` — 5
-- `browser/browser/aiWindow.ftl` — 3
-- `browser/browser/sharePanel.ftl` — 3
-- `browser/browser/sidebar.ftl` — 2
-- `toolkit/toolkit/pdfviewer/embedFallback.ftl` — 2
-- `devtools/client/netmonitor.properties` — 1
-- `dom/chrome/accessibility/AccessFu.properties` — 1
-- `dom/chrome/dom/dom.properties` — 1
+- `devtools/client/inspector.ftl` — 4
+- `browser/browser/newtab/asrouter.ftl` — 4
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 4
+- `dom/chrome/dom/dom.properties` — 3
 
 **Files absent from the locale:**
 
 - `toolkit/services/aboutSyncLog.ftl`
+- `toolkit/toolkit/about/pdfFeaturesNotification.ftl`
 - `toolkit/toolkit/pdfviewer/embedFallback.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
@@ -91,10 +237,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-single` 876, `straight-double` 27, `curly-double` 18 | **curly-single** |
-| apostrophe | `typographic` 1647 | **typographic** |
-| ellipsis | `char` 462 | **char** |
-| dash | `em` 26, `en` 95 | **en** |
+| quotes | `curly-single` 793, `straight-double` 26, `curly-double` 16 | **curly-single** |
+| apostrophe | `typographic` 1454 | **typographic** |
+| ellipsis | `char` 385 | **char** |
+| dash | `em` 10, `en` 81 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 7 | _mixed_ |
 
 ---
@@ -105,15 +251,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (507)
+## 3. Open findings (446)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 13 |
-| 2 | Wrong content (says something other than the English) | 126 |
-| 3 | Degraded language (grammar, spelling, terminology) | 257 |
-| 4 | Cosmetic (typography, spacing) | 111 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 12 |
+| 2 | Wrong content (says something other than the English) | 112 |
+| 3 | Degraded language (grammar, spelling, terminology) | 225 |
+| 4 | Cosmetic (typography, spacing) | 97 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -134,8 +280,6 @@ _Nothing reported._
 - `inactive-css-ruby-element-fix` — `devtools/client/tooltips.ftl` — CSS property translated inside <strong>: lettertypegrutte → font-size
     - Current: `lettertypegrutte`
     - Source: `Try changing the <strong>font-size</strong> of the ruby text. { learn-more }`
-- `addon-badge-line3` — `toolkit/toolkit/about/aboutAddons.ftl` — Comment hard-codes Mozilla so forks don't show "by Fork"; the locale added "Firefox": troch Mozilla Firefox boude útwreiding
-    - Source: `aria-label: { addon-badge-line3.title } title: Official extension built by Mozilla. Meets security and performance standards`
 - `addon-badge-line4` — `toolkit/toolkit/about/aboutAddons.ftl` — Comment hard-codes Mozilla so forks don't show "by Fork"; the locale added "Firefox": troch Mozilla Firefox boude útwreiding
     - Source: `title: Official extension built by Mozilla. Meets security and performance standards`
 - `about-glean-button-dictionary-link` — `toolkit/toolkit/about/aboutGlean.ftl` — Comment: "Docs" = documentation. Dokuminten → Dokumintaasje
@@ -170,18 +314,6 @@ _Nothing reported._
     - Current: `Dizze wizigingen ferwerpe?`
     - Source: `Discard unsaved changes?`
     - Suggest: `Net-bewarre wizigingen ferwerpe?`
-- `pocket-panel-header-my-saves` — `browser/browser/aboutPocket.ftl` — Myn Opgeslagen items besjen → Myn bewarre items besjen
-    - Current: `Myn Opgeslagen items besjen`
-    - Source: `View My Saves`
-    - Suggest: `Myn bewarre items besjen`
-- `pocket-panel-saved-error-no-internet` — `browser/browser/aboutPocket.ftl` — 2nd sentence: Kontrolearje jo ferbining → Meitsje ferbining mei it ynternet
-    - Current: `Kontrolearje jo ferbining`
-    - Source: `You must be connected to the Internet in order to save to { -pocket-brand-name }. Please connect to the Internet and try again.`
-    - Suggest: `Meitsje ferbining mei it ynternet`
-- `pocket-panel-saved-removed-updated` — `browser/browser/aboutPocket.ftl` — Opgeslagen items → Bewarre items
-    - Current: `Opgeslagen items`
-    - Source: `Page Removed from Saves`
-    - Suggest: `Bewarre items`
 - `restore-page-list-header` — `browser/browser/aboutSessionRestore.ftl` — Skermen en ljepblêden → Finsters en ljepblêden
     - Current: `Skermen en ljepblêden`
     - Source: `label: Windows and Tabs`
@@ -225,10 +357,6 @@ _Nothing reported._
     - Current: `Omleech opnij ynstelle`
     - Source: `tooltiptext: Restore Down`
     - Suggest: `Ferlytsje`
-- `enable-devtools-popup-description2` — `browser/browser/browser.ftl` — it menu Ekstra → it menu Browserhelpmidelen
-    - Current: `it menu Ekstra`
-    - Source: `To use the F12 shortcut, first open DevTools via the Browser Tools menu.`
-    - Suggest: `it menu Browserhelpmidelen`
 - `identity-https-only-info-no-upgrade` — `browser/browser/browser.ftl` — HTTP-ferbining net fernije → ferbining net opwurdearje fan HTTP
     - Current: `HTTP-ferbining net fernije`
     - Source: `Unable to upgrade connection from HTTP.`
@@ -330,18 +458,10 @@ _Nothing reported._
 - `policy-OfferToSaveLoginsDefault` — `browser/browser/policies/policies-descriptions.ftl` — Spurious ôftwingje carried over from policy-OfferToSaveLogins
     - Current: `ôftwingje`
     - Source: `Set the default value for allowing { -brand-short-name } to offer to remember saved logins and passwords. Both true and false values are accepted.`
-- `containers-icon-briefcase` — `browser/browser/preferences/containers.ftl` — Sammeling → Aktetaske
-    - Current: `Sammeling`
-    - Source: `label: Briefcase`
-    - Suggest: `Aktetaske`
 - `appearance-window-density-touch` — `browser/browser/preferences/preferences.ftl` — lykas klikdoelen → en klikdoelen
     - Current: `lykas klikdoelen`
     - Source: `description: Larger window elements and click targets, optimized for touch screens label: Touch`
     - Suggest: `en klikdoelen`
-- `confirm-on-close-multiple-tabs` — `browser/browser/preferences/preferences.ftl` — Warskôgje by → Befêstigje foar
-    - Current: `Warskôgje by`
-    - Source: `accesskey: m label: Confirm before closing multiple tabs`
-    - Suggest: `Befêstigje foar`
 - `data-collection-run-studies` — `browser/browser/preferences/preferences.ftl` — in keur oan brûkers → willekeurich brûkers ("randomly" lost)
     - Current: `in keur oan brûkers`
     - Source: `description: { -brand-short-name } randomly selects users to test features, which helps improve quality for everyone. label: Allow { -brand-short-name } to run feature studies`
@@ -376,10 +496,6 @@ _Nothing reported._
 - `sanitize-button-clearing` — `browser/browser/sanitize.ftl` — Wiskje (identical to sanitize-button-ok2) → Dwaande mei wiskjen…
     - Source: `label: Clearing`
     - Suggest: `Dwaande mei wiskjen…`
-- `screenshots-connection-error-title` — `browser/browser/screenshots.ftl` — ferbine nei → ferbine mei
-    - Current: `ferbine nei`
-    - Source: `We can’t connect to your screenshots.`
-    - Suggest: `ferbine mei`
 - `opensearch-error-duplicate-desc` — `browser/browser/search.ftl` — in masine → in sykmasine
     - Current: `in masine`
     - Source: `{ -brand-short-name } could not install the search plugin from “{ $location-url }” because an engine with the same name already exists.`
@@ -396,7 +512,27 @@ _Nothing reported._
     - Current: `Foltôgje:`
     - Source: `Finish: { $formattedTime }`
     - Suggest: `Klear:`
-- _…and 65 more; see `state/` for the full list._
+- `perftools-heading-features-default` — `devtools/client/perftools.ftl` — (standert oan oanrekommandearre) — two words collide; → (oanrekommandearre, standert oan)
+    - Current: `(standert oan oanrekommandearre)`
+    - Source: `Features (Recommended on by default)`
+    - Suggest: `(oanrekommandearre, standert oan)`
+- `perftools-presets-ml-description2` — `devtools/client/perftools.ftl` — Same ML/MT confusion
+    - Source: `Preset for investigating machine learning bugs in { -brand-shorter-name }.`
+- `styleeditor-import-button` — `devtools/client/styleeditor.ftl` — Says "apply to an existing style sheet"; en-US: "Import and append an existing style sheet to the document"
+    - Source: `accesskey: I tooltiptext: Import and append an existing style sheet to the document`
+- `options-netmonitor-body-limit-tooltip` — `devtools/client/toolbox-options.ftl` — oerskriuwe (overwrite) → oerskriede (exceed)
+    - Current: `oerskriuwe`
+    - Source: `title: Request or response bodies which exceed the specified size will be truncated when displayed or downloaded in the Network Monitor. Set to 0 to have no limitation.`
+    - Suggest: `oerskriede`
+- `inactive-css-at-position-try-not-supported` — `devtools/client/tooltips.ftl` — Text from the browser-compat message spliced in: "…net stipe yn de folgjende browsers @position-try-regels:"
+    - Source: `<strong>{ $property }</strong> is not supported in <strong>@position-try</strong> rules.`
+- `inactive-css-not-block-container` — `devtools/client/tooltips.ftl` — Duplicated fragment: "op eleminten op blokcontainer-eleminten"
+    - Source: `<strong>{ $property }</strong> has no effect on this element because it only applies to block container elements.`
+- `whypaused-promise-rejection` — `devtools/shared/debugger-paused-reasons.ftl` — Pauzearre by taseine ôfwizing → … by ôfwizing fan in tasizzing
+    - Current: `Pauzearre by taseine ôfwizing`
+    - Source: `Paused on promise rejection`
+    - Suggest: `… by ôfwizing fan in tasizzing`
+- _…and 51 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -408,22 +544,10 @@ _Nothing reported._
     - Current: `fernijngen`
     - Source: `You can not perform further updates on this system. <label data-l10n-name="unsupported-link">Learn more</label>`
     - Suggest: `fernijingen`
-- `create-new-login-button` — `browser/browser/aboutLogins.ftl` — Nij oanmelding → Nije oanmelding
-    - Current: `Nij oanmelding`
-    - Source: `title: Create new login`
-    - Suggest: `Nije oanmelding`
-- `login-item-new-login-title` — `browser/browser/aboutLogins.ftl` — Nij oanmelding → Nije oanmelding
-    - Current: `Nij oanmelding`
-    - Source: `Create New Login`
-    - Suggest: `Nije oanmelding`
 - `login-list-intro-description` — `browser/browser/aboutLogins.ftl` — Wannear jo → Wannear’t jo
     - Current: `Wannear jo`
     - Source: `When you save a password in { -brand-product-name }, it will show up here.`
     - Suggest: `Wannear’t jo`
-- `pocket-panel-saved-error-tag-length` — `browser/browser/aboutPocket.ftl` — beheint → beheind
-    - Current: `beheint`
-    - Source: `Tags are limited to 25 characters`
-    - Suggest: `beheind`
 - `about-private-browsing-nova-info-subheader2` — `browser/browser/aboutPrivateBrowsing.ftl` — al jo priveefinster → al jo priveefinsters
     - Current: `al jo priveefinster`
     - Source: `We’ll erase every search and sign-in when you close all your Private Windows. { -brand-short-name }’s built-in protections are on here too, like blocking trackers.`
@@ -468,20 +592,10 @@ _Nothing reported._
     - Current: `ferstjoerd`
     - Source: `{ -brand-short-name } automatically sends some data to { -vendor-short-name } so that we can improve your experience.`
     - Suggest: `ferstjoert`
-- `identity-https-only-info-turn-off2` — `browser/browser/browser.ftl` — te wurkje → te wurkjen
-    - Current: `te wurkje`
-    - Source: `If the page seems broken, you may want to turn off HTTPS-Only Mode for this site to reload using insecure HTTP.`
-    - Suggest: `te wurkjen`
 - `onboarding-aw-finish-setup-button` — `browser/browser/browser.ftl` — Ynstellen { -brand-short-name } → Ynstellen fan { -brand-short-name }
     - Current: `Ynstellen { -brand-short-name }`
     - Source: `label: Finish setup tooltiptext: Finish setting up { -brand-short-name }`
     - Suggest: `Ynstellen fan { -brand-short-name }`
-- `activist-colorway-description` — `browser/browser/colorways.ftl` — en lit oaren leauwe → en litte oaren leauwe
-    - Current: `en lit oaren leauwe`
-    - Source: `You leave the world a better place than you found it and lead others to believe.`
-    - Suggest: `en litte oaren leauwe`
-- `dreamer-colorway-description` — `browser/browser/colorways.ftl` — Idiom garbled + wrong subject agreement
-    - Source: `You believe that fortune favors the bold and inspire others to be brave.`
 - `contextual-manager-passwords-remove-all-message` — `browser/browser/contextual-manager.ftl` — wachtwurd dy’t → wachtwurd dat (neuter) in the [one] variants
     - Current: `wachtwurd dy’t`
     - Source: `{$total ->} [1] This will remove your password saved to { -brand-short-name } and any breach alerts. You cannot undo this action. [other] This will remove the passwords saved to { -brand-short-name } and any breach aler…`
@@ -498,10 +612,6 @@ _Nothing reported._
     - Current: `blêdwizerakbalke`
     - Source: `Keep your bookmarks toolbar open?`
     - Suggest: `blêdwizerarkbalke`
-- `callout-firefox-view-colorways-subtitle` — `browser/browser/featureCallout.ftl` — it kleur dy’t → it kleur dat (neuter)
-    - Current: `it kleur dy’t`
-    - Source: `Choose the shade that speaks to you with colorways. Only in { -brand-product-name }.`
-    - Suggest: `it kleur dat`
 - `sidebar-callout-survey-features-question` — `browser/browser/featureCallout.ftl` — in { -brand-short-name } → yn { -brand-short-name }
     - Current: `in { -brand-short-name }`
     - Source: `The following are potential sidebar features. Which would improve your productivity in { -brand-short-name } the most?`
@@ -574,10 +684,6 @@ _Nothing reported._
     - Current: `jo it nedich binne`
     - Source: `Pin { -brand-shorter-name } to your taskbar so the browser you chose is always there when you need it.`
     - Suggest: `jo it nedich hawwe`
-- `newtab-empty-section-topstories` — `browser/browser/newtab/newtab.ftl` — Kin jo net wachtsje? → Kinne jo net wachtsje?
-    - Current: `Kin jo net wachtsje?`
-    - Source: `You’ve caught up. Check back later for more top stories from { $provider }. Can’t wait? Select a popular topic to find more great stories from around the web.`
-    - Suggest: `Kinne jo net wachtsje?`
 - `newtab-empty-section-topstories-generic` — `browser/browser/newtab/newtab.ftl` — Kin jo net wachtsje? → Kinne jo net wachtsje?
     - Current: `Kin jo net wachtsje?`
     - Source: `You’ve caught up. Check back later for more stories. Can’t wait? Select a popular topic to find more great stories from around the web.`
@@ -614,14 +720,6 @@ _Nothing reported._
     - Current: `meitjse`
     - Source: `Upgrading to Windows 11? Let’s back up your { -brand-product-name } data.`
     - Suggest: `meitsje`
-- `mr2022-onboarding-colorway-description-activist` — `browser/browser/newtab/onboarding.ftl` — en lit oaren leauwe → en litte oaren leauwe
-    - Current: `en lit oaren leauwe`
-    - Source: `<b>You are an Activist.</b> You leave the world a better place than you found it and lead others to believe.`
-    - Suggest: `en litte oaren leauwe`
-- `mr2022-onboarding-colorway-description-dreamer` — `browser/browser/newtab/onboarding.ftl` — Verb agrees with gelok instead of Jo
-    - Current: `gelok`
-    - Source: `<b>You are a Dreamer.</b> You believe that fortune favors the bold and inspire others to be brave.`
-    - Suggest: `Jo`
 - `mr2022-upgrade-onboarding-pin-private-window-primary-button-label` — `browser/browser/newtab/onboarding.ftl` — fêst meitsje → fêstmeitsje
     - Current: `fêst meitsje`
     - Source: `{$sel_1 ->} [macos] Keep { -brand-short-name } private browsing in Dock [other] Pin { -brand-short-name } private browsing to taskbar`
@@ -630,7 +728,48 @@ _Nothing reported._
     - Current: `sybalkeynstellingen`
     - Source: `Switch it up whenever you want in the sidebar settings.`
     - Suggest: `sidebalkeynstellingen`
-- _…and 180 more; see `state/` for the full list._
+- `smartwindow-sidebar-auto-open-callout-body` — `browser/browser/newtab/onboarding.ftl` — jo it nedich binne → jo it nedich hawwe
+    - Current: `jo it nedich binne`
+    - Source: `You can still open it whenever you need it.`
+    - Suggest: `jo it nedich hawwe`
+- `panic-button-thankyou-msg1` — `browser/browser/panelUI.ftl` — is wiskje → is wiske
+    - Current: `is wiskje`
+    - Source: `Your recent history is cleared.`
+    - Suggest: `is wiske`
+- `places-locked-prompt` — `browser/browser/places.ftl` — "ien de bestannen fan" is ungrammatical; should be "ien fan de bestannen fan" (one of the files).
+    - Current: `omdat ien de bestannen fan { -brand-short-name } yn gebrûk is`
+    - Source: `The bookmarks and history system will not be functional because one of { -brand-short-name }’s files is in use by another application. Some security software can cause this problem.`
+    - Suggest: `omdat ien fan de bestannen fan { -brand-short-name } yn gebrûk is`
+    - en-US says "one of { -brand-short-name }’s files"; the partitive "fan" is missing, making the clause grammatically broken.
+- `places-bookmarks-backup-title` — `browser/browser/placesPrompts.ftl` — Betânsnamme → Bestânsnamme
+    - Current: `Betânsnamme`
+    - Source: `Bookmarks backup filename`
+    - Suggest: `Bestânsnamme`
+- `policy-AutofillCreditCardEnabled` — `browser/browser/policies/policies-descriptions.ftl` — beteelingsmetoaden → betelmetoaden
+    - Current: `beteelingsmetoaden`
+    - Source: `Enable autofill for payment methods.`
+    - Suggest: `betelmetoaden`
+- `policy-Bookmarks` — `browser/browser/policies/policies-descriptions.ftl` — Blêdwizerakbalke → Blêdwizerarkbalke
+    - Current: `Blêdwizerakbalke`
+    - Source: `Create bookmarks in the Bookmarks toolbar, Bookmarks menu, or a specified folder inside them.`
+    - Suggest: `Blêdwizerarkbalke`
+- `policy-HttpsOnlyMode` — `browser/browser/policies/policies-descriptions.ftl` — tasean → tastean
+    - Current: `tasean`
+    - Source: `Allow HTTPS-Only Mode to be enabled.`
+    - Suggest: `tastean`
+- `policy-ManagedBookmarks` — `browser/browser/policies/policies-descriptions.ftl` — wizige wurde kin → wizige wurde kinne
+    - Current: `wizige wurde kin`
+    - Source: `Configures a list of bookmarks managed by an administrator that cannot be changed by the user.`
+    - Suggest: `wizige wurde kinne`
+- `policy-UseSystemPrintDialog` — `browser/browser/policies/policies-descriptions.ftl` — systeemdialoochfienster fan it systeem → printdialoochfinster fan it systeem
+    - Current: `systeemdialoochfienster fan it systeem`
+    - Source: `Print using the system print dialog.`
+    - Suggest: `printdialoochfinster fan it systeem`
+- `appearance-browser-icon-unlocked` — `browser/browser/preferences/browserIcon.ftl` — bonupsiktogrammen → bonuspiktogrammen
+    - Current: `bonupsiktogrammen`
+    - Source: `message: You unlocked all of the bonus icons!`
+    - Suggest: `bonuspiktogrammen`
+- _…and 149 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -683,10 +822,6 @@ _Nothing reported._
     - Current: `sykfoarstellen`
     - Source: `accesskey: l label: Show search suggestions in address bar results`
     - Suggest: `syksuggestjes`
-- `search-suggestions-option` — `browser/browser/preferences/preferences.ftl` — Search suggestions — sykfoarstellen vs syksuggestjes: search-show-suggestions-option, search-suggestions-option, search-show-suggestions-url-bar-option, addressbar-locbar-showtrendingsuggestions-option.
-    - Current: `sykfoarstellen`
-    - Source: `accesskey: s label: Provide search suggestions`
-    - Suggest: `syksuggestjes`
 - `security-privacy-issue-warning-doh` — `browser/browser/preferences/preferences.ftl` — Network provider — netwurkbehearder (administrator) vs ynternetoanbieder: security-privacy-issue-warning-doh, security-privacy-issue-warning-ech (vs their -doh2/-ech2 variants).
     - Current: `netwurkbehearder`
     - Source: `description: DNS over HTTPS hides what sites you visit from your network provider. label: DNS over HTTPS is disabled`
@@ -704,8 +839,6 @@ _Nothing reported._
 
 - `aboutdialog-update-downloading` — `browser/browser/aboutDialog.ftl` — page-info-page, page-info-frame, tabbrowser-container-tab-title use - where the locale's house dash is – · tab-group-menu-closed-tab-group uses — while sibling tab-group strings use – · aboutdialog-update-downloading uses – while settings-update-downloading uses —.
     - Source: `Downloading update — <label data-l10n-name="download-status">{ $transfer }</label>`
-- `settings-update-downloading` — `browser/browser/aboutDialog.ftl` — page-info-page, page-info-frame, tabbrowser-container-tab-title use - where the locale's house dash is – · tab-group-menu-closed-tab-group uses — while sibling tab-group strings use – · aboutdialog-update-downloading uses – while settings-update-downloading uses —.
-    - Source: `<img data-l10n-name="icon"/>Downloading update — <label data-l10n-name="download-status">{ $transfer }</label>`
 - `about-logins-import-report-description2` — `browser/browser/aboutLogins.ftl` — pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…
     - Source: `Passwords imported to { -brand-short-name }.`
 - `about-logins-import-report-error` — `browser/browser/aboutLogins.ftl` — appmenuitem-monitor-description2 · bookmark-overlay-tags-empty-description.placeholder · choose-language-description · confirm-browser-language-change-description · download-always-ask-where2.label · home-prefs-weather-description · forms-master-pw-fips-desc · preferences-doh-status-item-not-active.message · preferences-doh-status-item-not-active-local.message · onboarding-refresh-import-title ·…
@@ -728,8 +861,6 @@ _Nothing reported._
 - `popup-trigger-redirect-menuitem` — `browser/browser/browser.ftl` — rights-webservices-term-4 ("as-is") · protections-vpn-banner-content (TechRadar quote in "…") · popup-show-popup-menuitem.label (uses “…” where the adjacent popup-trigger-redirect-menuitem uses ‘…’).
     - Source: `label: Show “{ $redirectURI }”`
     - Suggest: `"as-is"`
-- `quickactions-plugins` — `browser/browser/browser.ftl` — Added where en-US has none: add-engine-button (both search.ftl and preferences/addEngine.ftl) · quickactions-plugins · main-context-menu-bookmark-page.tooltiptext · main-context-menu-edit-bookmark.tooltiptext.
-    - Source: `Manage plugins`
 - `redirect-warning-with-popup-message` — `browser/browser/browser.ftl` — pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…
     - Source: `{$popupCount ->} [0] { -brand-short-name } prevented this site from redirecting. [1] { -brand-short-name } prevented this site from opening a pop-up window and redirecting. [other] { -brand-short-name } prevented this s…`
 - `main-context-menu-bookmark-page` — `browser/browser/browserContext.ftl` — Added where en-US has none: add-engine-button (both search.ftl and preferences/addEngine.ftl) · quickactions-plugins · main-context-menu-bookmark-page.tooltiptext · main-context-menu-edit-bookmark.tooltiptext.
@@ -746,8 +877,6 @@ _Nothing reported._
     - Source: `No extra windows. No tab flipping. Right-click this tab and choose “Add Split View.”`
 - `firefox-relay-and-fxa-popup-notification-second-sentence-with-domain-and-value-prop` — `browser/browser/firefoxRelay.ftl` — pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…
     - Source: `First, sign up or sign in to your account to use an email mask.`
-- `firefoxview-tabpickup-description` — `browser/browser/firefoxView.ftl` — pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…
-    - Source: `Open pages from other devices.`
 - `genai-chatbot-summarize-footer-generic-subtitle` — `browser/browser/genai.ftl` — about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…
     - Source: `Add an AI chatbot to the { -brand-short-name } sidebar to quickly summarize pages.`
 - `ip-protection-description-1` — `browser/browser/ipProtection.ftl` — pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…
@@ -763,8 +892,6 @@ _Nothing reported._
     - Source: `Turn VPN off for a specific site and we’ll remember it next time you visit.`
 - `menu-help-share-ideas` — `browser/browser/menubar.ftl` — Dropped where en-US has one: menu-help-share-ideas.label · home-mode-choice-custom.label · home-mode-choice-custom-srd.label · forms-master-pw-change.label.
     - Source: `accesskey: S label: Share Ideas and Feedback…`
-- `import-source-page-title` — `browser/browser/migration.ftl` — Added: import-source-page-title · findbar-fast-find-links.placeholder · app-basics-disk-available · detail-rating.value · default-browser-guidance-notification-info-page · inactive-css-at-position-try-not-supported.
-    - Source: `Import Settings and Data`
 - `migration-chrome-windows-password-import-step1` — `browser/browser/migrationWizard.ftl` — about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…
     - Source: `Open the main menu <img data-l10n-name="chrome-icon-3dots"/> and go to Passwords and Autofill > Google Password Manager.`
 - `migration-safari-password-import-step2` — `browser/browser/migrationWizard.ftl` — about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…
@@ -810,8 +937,6 @@ _Nothing reported._
     - Source: `Configure default application handlers.`
 - `policy-LegacyProfiles` — `browser/browser/policies/policies-descriptions.ftl` — pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…
     - Source: `Disable the feature enforcing a separate profile for each installation.`
-- `fxa-qrcode-pair-step2-signin` — `browser/browser/preferences/fxaPairDevice.ftl` — about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…
-    - Source: `2. Go to the menu (<img data-l10n-name="ios-menu-icon"/> on iOS or <img data-l10n-name="android-menu-icon"/> on Android) and tap <strong>Sync and save data</strong>`
 - `languages-code-format` — `browser/browser/preferences/languages.ftl` — about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…
     - Source: `label: { $locale } [{ $code }]`
 - `choose-language-description` — `browser/browser/preferences/preferences.ftl` — appmenuitem-monitor-description2 · bookmark-overlay-tags-empty-description.placeholder · choose-language-description · confirm-browser-language-change-description · download-always-ask-where2.label · home-prefs-weather-description · forms-master-pw-fips-desc · preferences-doh-status-item-not-active.message · preferences-doh-status-item-not-active-local.message · onboarding-refresh-import-title ·…
@@ -832,7 +957,18 @@ _Nothing reported._
     - Source: `Today’s forecast at a glance`
 - `preferences-doh-status-item-not-active` — `browser/browser/preferences/preferences.ftl` — appmenuitem-monitor-description2 · bookmark-overlay-tags-empty-description.placeholder · choose-language-description · confirm-browser-language-change-description · download-always-ask-where2.label · home-prefs-weather-description · forms-master-pw-fips-desc · preferences-doh-status-item-not-active.message · preferences-doh-status-item-not-active-local.message · onboarding-refresh-import-title ·…
     - Source: `message: DNS over HTTPS is not working because we encountered an error ({ $reason }) while trying to use the provider { $name }`
-- _…and 51 more; see `state/` for the full list._
+- `preferences-doh-status-item-not-active-local` — `browser/browser/preferences/preferences.ftl` — appmenuitem-monitor-description2 · bookmark-overlay-tags-empty-description.placeholder · choose-language-description · confirm-browser-language-change-description · download-always-ask-where2.label · home-prefs-weather-description · forms-master-pw-fips-desc · preferences-doh-status-item-not-active.message · preferences-doh-status-item-not-active-local.message · onboarding-refresh-import-title ·…
+    - Source: `message: DNS over HTTPS is not working because we encountered an error ({ $reason }) while trying to use the local provider { $name }`
+- `settings-translations-subpage-never-translate-sites-description` — `browser/browser/preferences/preferences.ftl` — about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…
+    - Source: `To add a site, open the <img data-l10n-name="translations-icon"/> translation panel, select <img data-l10n-name="settings-icon"/> translation settings, then choose “Never translate this site”`
+- `sync-mobile-promo` — `browser/browser/preferences/preferences.ftl` — about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…
+    - Source: `Download Firefox for <img data-l10n-name="android-icon"/> <a data-l10n-name="android-link">Android</a> or <img data-l10n-name="ios-icon"/> <a data-l10n-name="ios-link">iOS</a> to sync with your mobile device.`
+- `website-remove-language-button` — `browser/browser/preferences/preferences.ftl` — website-remove-language-button.aria-label and .title (en-US: "Remove { $locale }") · newtab-widget-lists-menu-delete (en-US: "Delete this list") · delete-ca-cert-confirm (en-US is declarative).
+    - Source: `aria-label: Remove { $locale } title: Remove { $locale }`
+    - Suggest: `.title`
+- `monitor-header-content-signed-in` — `browser/browser/protections.ftl` — pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…
+    - Source: `{ -monitor-brand-name } warns you if your info has appeared in a known data breach.`
+- _…and 37 more; see `state/` for the full list._
 
 ---
 

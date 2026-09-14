@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-07 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
-| **Previous run** | 2026-09-03 @ `075eb543fd91` |
+| **Generated** | 2026-09-14 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e44f1369fb6d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8ffd279d75ec` |
+| **Previous run** | 2026-09-07 @ `3c0c507b8d42` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 18,178 |
+| **Strings reviewed this run** | 195 of 16,176 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,17 +18,17 @@ Also for en-CA: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
+
+_No new findings._
+
+### ✅ Fixed since the last run (1)
 
 - `urlbar-searchmode-dropmarker2` — `browser/browser/browser.ftl` — Tooltip text was changed to title case, departing from the sentence case used in en-US.
     - Current: `Pick a Search Engine`
     - Source: `title: Pick a search engine`
     - Suggest: `Pick a search engine`
     - The en-US source uses sentence case ("Pick a search engine"); en-CA has no convention requiring title case here, so the capitalization change is an unjustified departure.
-
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -48,10 +48,10 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 362 |
-| Strings | 18,178 |
-| Missing strings | 94 |
-| Obsolete strings | 0 |
+| Files | 326 |
+| Strings | 16,176 |
+| Missing strings | 0 |
+| Obsolete strings | 8 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -67,22 +67,7 @@ _Nothing retired._
 
 ### Completeness
 
-**94 strings** are not translated yet, concentrated in:
-
-- `browser/browser/newtab/newtab.ftl` — 27
-- `toolkit/services/aboutSyncLog.ftl` — 26
-- `browser/browser/permissions.ftl` — 10
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 8
-- `browser/browser/preferences/preferences.ftl` — 5
-- `browser/browser/aiWindow.ftl` — 3
-- `browser/browser/sharePanel.ftl` — 3
-- `browser/browser/sidebar.ftl` — 2
-- `toolkit/toolkit/pdfviewer/embedFallback.ftl` — 2
-- `devtools/client/netmonitor.properties` — 1
-- `dom/chrome/accessibility/AccessFu.properties` — 1
-- `dom/chrome/dom/dom.properties` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -90,10 +75,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 756, `curly-single` 68, `straight-double` 25 | **curly-double** |
-| apostrophe | `typographic` 1116, `straight` 4 | **typographic** |
-| ellipsis | `char` 461 | **char** |
-| dash | `em` 109, `en` 3 | **em** |
+| quotes | `curly-double` 682, `curly-single` 64, `straight-double` 25 | **curly-double** |
+| apostrophe | `typographic` 975, `straight` 4 | **typographic** |
+| ellipsis | `char` 389 | **char** |
+| dash | `em` 82, `en` 3 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
 ---
@@ -104,7 +89,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (1)
+## 3. Open findings (0)
 
 
 | Impact | Meaning | Count |
@@ -112,7 +97,7 @@ _Nothing reported._
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 0 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
-| 4 | Cosmetic (typography, spacing) | 1 |
+| 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -132,11 +117,7 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
-- `urlbar-searchmode-dropmarker2` — `browser/browser/browser.ftl` — Tooltip text was changed to title case, departing from the sentence case used in en-US.
-    - Current: `Pick a Search Engine`
-    - Source: `title: Pick a search engine`
-    - Suggest: `Pick a search engine`
-    - The en-US source uses sentence case ("Pick a search engine"); en-CA has no convention requiring title case here, so the capitalization change is an unjustified departure.
+_Nothing in this category._
 
 ---
 
@@ -158,8 +139,9 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (14)
+### Fixed to date (15)
 
+- `urlbar-searchmode-dropmarker2` — `browser/browser/browser.ftl` — fixed 2026-09-14
 - `helpus-referrals2` — `browser/browser/aboutDialog.ftl` — fixed 2026-08-24
 - `Kilo` — `browser/installer/override.properties` — fixed 2026-08-21
 - `document_properties_kb` — `browser/pdfviewer/viewer.properties` — fixed 2026-08-21

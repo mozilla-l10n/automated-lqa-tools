@@ -1,20 +1,20 @@
 {
  "_meta": {
   "locale": "fy-NL",
-  "prose_chunks": 18967,
-  "strings": 18180
+  "prose_chunks": 16702,
+  "strings": 15991
  },
  "apostrophe": {
   "straight": 0,
-  "typographic": 1647
+  "typographic": 1454
  },
  "dash": {
-  "em": 26,
-  "en": 95
+  "em": 10,
+  "en": 81
  },
  "ellipsis": {
   "ascii": 0,
-  "char": 462
+  "char": 385
  },
  "fullwidth": {
   "punctuation": 0
@@ -30,8 +30,8 @@
   "total": 4
  },
  "quotes": {
-  "curly-double": 18,
-  "curly-single": 876,
-  "straight-double": 27
+  "curly-double": 16,
+  "curly-single": 793,
+  "straight-double": 26
  }
 }

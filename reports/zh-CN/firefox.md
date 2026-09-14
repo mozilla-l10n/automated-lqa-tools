@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-07 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
-| **Previous run** | 2026-09-03 @ `075eb543fd91` |
+| **Generated** | 2026-09-14 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e44f1369fb6d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8ffd279d75ec` |
+| **Previous run** | 2026-09-07 @ `3c0c507b8d42` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 157 of 18,131 |
+| **Strings reviewed this run** | 59 of 15,968 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,57 +18,49 @@ Also for zh-CN: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (9)
+### 🆕 New findings (6)
 
-- `share-panel-os-share-2` — `browser/browser/sharePanel.ftl` — The [other] variant drops the ellipsis and renders "Share with…" as "共享方式" ("sharing method"), inconsistent with the other variants.
-    - Current: `[other] 共享方式`
-    - Source: `label: {$sel_1 ->} [windows] Share with Windows… [macos] Share with Mac… [other] Share with…`
-    - Suggest: `[other] 共享至…`
-    - en-US "Share with…" is an action label with a trailing ellipsis; "共享方式" is a noun phrase meaning "sharing method" and omits the ellipsis present in the other two variants.
-- `share-panel-os-share` — `browser/browser/sharePanel.ftl` — "Share with…" is rendered as the noun phrase "共享方式" and the ellipsis is dropped.
-    - Current: `label: 共享方式`
-    - Source: `label: Share with…`
-    - Suggest: `label: 共享至…`
-    - en-US is an action menu item "Share with…"; "共享方式" means "sharing method", and the trailing ellipsis indicating a follow-up dialog is missing.
-- `ipprotection-connection-status-blocked-error-description-1` — `browser/browser/ipProtection.ftl` — Adds hedging "可能" (may) not present in the source statement.
-    - Current: `VPN 可能并非在所有位置都可用`
-    - Source: `Local laws and restrictions limit where you can use VPN. <a data-l10n-name="learn-more-link">Learn more</a>`
-    - Suggest: `VPN 并非在所有位置都可用`
-    - en-US states plainly that local laws and restrictions limit where VPN can be used; the Chinese adds "可能" (possibly), weakening the assertion.
-- `autofill-country-warning-message-2` — `browser/browser/preferences/formAutofill.ftl` — Translation adds a full stop that the en-US source does not have.
-    - Current: `表单自动填写目前仅部分国家/地区可用。`
-    - Source: `Form autofill is currently only available for certain countries`
-    - Suggest: `表单自动填写目前仅部分国家/地区可用`
-    - The en-US string "Form autofill is currently only available for certain countries" has no terminating period; the added 。 deviates from the source punctuation.
-- `containers-external-links-check` — `browser/browser/preferences/preferences.ftl` — Meaning reversed/garbled: source says links from external apps should not use containers, target reads as "do not use container tabs to open links from external apps" losing the intended structure.
-    - Current: `不使用身份标签页打开来自外部应用的链接`
-    - Source: `accesskey: D label: Don’t use containers for links opened from external apps`
-    - Suggest: `从外部应用打开的链接不使用身份标签页`
-    - The en-US label means: for links opened from external apps, don’t use containers. The current wording reads as an instruction about how to open links rather than about which container is used, and the developer comment states such links always open outside of any container.
+- `refresh-unused-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — Uses informal 你 instead of the locale's formal 您, inconsistent with the parallel string refresh-reinstalled-profile-infobar-message.
+    - Current: `看起来你有一段时间没有打开`
+    - Source: `It looks like you haven’t started { -brand-short-name } in a while. Do you want to clean it up for a fresh, like-new experience? And by the way, welcome back!`
+    - Suggest: `看起来您有一段时间没有打开`
+    - The zh-CN convention is the formal 您; the adjacent string refresh-reinstalled-profile-infobar-message uses 您, so this mixes registers.
+- `identity-description-tls-key-logging-message` — `browser/browser/browser.ftl` — Adds "其他" (other), which the English "An app or service" does not say.
+    - Current: `其他应用或服务可能可以看到您来自此网站的加密流量。`
+    - Source: `An app or service may see your encrypted traffic from this site.`
+    - Suggest: `某个应用或服务可能可以看到您来自此网站的加密流量。`
+    - en-US says "An app or service may see"; "其他" implies other apps besides Firefox, a claim the source does not make.
+- `tls-key-logging-notice-nav` — `browser/browser/preferences/preferences.ftl` — Adds "其他" (other), not present in the English "An app or service".
+    - Current: `其他应用或服务可能可以看到您的加密流量。`
+    - Source: `label: An app or service may see your encrypted traffic.`
+    - Suggest: `某个应用或服务可能可以看到您的加密流量。`
+    - The source is an indefinite "An app or service", not "other apps or services".
+- `user-context-add-container-panel-item` — `toolkit/toolkit/global/contextual-identity.ftl` — "container" rendered as "身份" instead of the established zh-CN term "身份标签"/"容器".
+    - Current: `添加新身份`
+    - Source: `(value): Add new container accesskey: A`
+    - Suggest: `添加新身份标签`
+    - en-US "Add new container" refers to the Container feature; "身份" alone means "identity" and loses the container concept, and is inconsistent with the feature's established zh-CN name.
+- `user-context-manage-containers-panel-item` — `toolkit/toolkit/global/contextual-identity.ftl` — "Manage containers" rendered as "管理身份", dropping the container terminology.
+    - Current: `管理身份`
+    - Source: `(value): Manage containers accesskey: o`
+    - Suggest: `管理身份标签`
+    - en-US "containers" is the Container feature name; "身份" alone means "identity" and is inconsistent with the feature's established zh-CN rendering.
+- `newtab-widget-lists-change-list` — `browser/browser/newtab/newtab.ftl` — "Change list" (switch which list is shown) translated as "更换清单" which reads as replacing the list.
+    - Current: `更换清单`
+    - Source: `aria-label: Change list title: Change list`
+    - Suggest: `切换清单`
+    - The developer comment states "Change" is a verb meaning the button switches which list is displayed; "更换" implies replacing/substituting the list itself.
+
+### ✅ Fixed since the last run (2)
+
 - `newtab-privacy-message-info-1-cta` — `browser/browser/newtab/newtab.ftl` — Same en-US string "View protections" translated inconsistently with the sibling CTA strings.
     - Current: `查看保护情况`
     - Source: `View protections`
     - Suggest: `查看保护信息`
     - All other newtab-privacy-message-info-*-cta strings with identical en-US source "View protections" use 查看保护信息; this one differs on the same surface.
-- `newtab-wallpaper-your-images-folder` — `browser/browser/newtab/newtab.ftl` — The accessible name drops "Your images" as the tile name and mistranslates the description as "your saved pictures, wallpapers".
-    - Current: `aria-label: 您保存的图片、壁纸`
-    - Source: `aria-label: Your images, wallpapers that you have saved`
-    - Suggest: `aria-label: 您的图片，您保存的壁纸`
-    - en-US is "Your images, wallpapers that you have saved" — the folder name "Your images" followed by a description; the Chinese merges them into a list of two nouns and loses the folder name.
-- `newtab-carousel-next` — `browser/browser/newtab/newtab.ftl` — "Next" is translated as "上一篇" (previous), duplicating the previous-button label.
-    - Current: `上一篇`
-    - Source: `aria-label: Next`
-    - Suggest: `下一篇`
-    - en-US source is "Next" for the button that goes to the next carousel slide; the target says "previous".
-- `aiwindow-starter-writing-proofread` — `browser/browser/aiWindow.ftl` — "message" rendered as "邮件" (email), narrowing the meaning.
-    - Current: `校对邮件`
-    - Source: `Proofread a message`
-    - Suggest: `校对消息`
-    - en-US "Proofread a message" refers to a message generally, not specifically an email.
-
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
+- `newtab-privacy-across-sites` — `browser/browser/newtab/newtab.ftl` — newtab-privacy-across-sites (newtab.ftl) — "Across { $count } sites" → "包含 { $count } 个网站" (includes) → SUGGEST: "涉及 { $count } 个网站" (blocked across).
+    - Source: `{$count ->} [one] Across { $count } site [other] Across { $count } sites`
+    - Suggest: `"包含 { $count } 个网站"`
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -78,9 +70,11 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `about-logins-confirm-remove-all-dialog-title` — `browser/browser/aboutLogins.ftl` — `about-logins-confirm-remove-all-dialog-title` has plural variant ['one'], which zh-CN does not have
+    - Current: `{$count ->} [one] 确定要移除 { $count } 条登录信息吗？ [other] 确定要移除全部共 { $count } 条登录信息吗？`
+    - zh-CN has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
 
 ---
 
@@ -88,44 +82,43 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 360 |
-| Strings | 18,131 |
-| Missing strings | 141 |
+| Files | 325 |
+| Strings | 15,968 |
+| Missing strings | 200 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 2 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 0 |
-| Plural variants (dead or missing forms) | 11 |
+| Plural variants (dead or missing forms) | 10 |
 | Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | _skipped for this locale_ |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 27 |
+| Typography deviations from this locale's own norm | 25 |
 
 ### Completeness
 
-**141 strings** are not translated yet, concentrated in:
+**200 strings** are not translated yet, concentrated in:
 
-- `toolkit/services/aboutSyncLog.ftl` — 26
+- `browser/browser/newtab/newtab.ftl` — 27
+- `toolkit/services/aboutSyncLog.ftl` — 20
+- `browser/browser/newtab/onboarding.ftl` — 19
 - `devtools/client/toolbox-options.ftl` — 18
 - `toolkit/toolkit/about/aboutNetworking.ftl` — 15
+- `dom/chrome/dom/dom.properties` — 12
 - `toolkit/toolkit/about/url-classifier.ftl` — 12
 - `toolkit/toolkit/neterror/netError.ftl` — 12
-- `dom/chrome/dom/dom.properties` — 10
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 10
+- `browser/browser/ipProtection.ftl` — 9
+- `devtools/client/inspector.ftl` — 7
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 7
-- `browser/browser/newtab/newtab.ftl` — 6
-- `browser/browser/ipProtection.ftl` — 4
-- `toolkit/chrome/mozapps/profile/profileSelection.properties` — 4
-- `devtools/client/inspector.ftl` — 3
-- `toolkit/toolkit/about/aboutAddons.ftl` — 3
 
 **Files absent from the locale:**
 
-- `toolkit/services/aboutSyncLog.ftl`
-- `toolkit/toolkit/pdfviewer/embedFallback.ftl`
+- `toolkit/toolkit/about/pdfFeaturesNotification.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -135,38 +128,34 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 991, `straight-double` 46, `curly-single` 41 | **curly-double** |
-| apostrophe | `typographic` 46, `straight` 20 | _mixed_ |
-| ellipsis | `char` 443, `ascii` 13 | **char** |
-| dash | `em` 79, `en` 2 | **em** |
-| fullwidth | `punctuation` 9582 | **punctuation** |
-| register | `informal` 16, `formal` 1756 | **formal** |
+| quotes | `curly-double` 874, `straight-double` 45, `curly-single` 37 | **curly-double** |
+| apostrophe | `typographic` 42, `straight` 20 | _mixed_ |
+| ellipsis | `char` 369, `ascii` 12 | **char** |
+| dash | `em` 49, `en` 2 | **em** |
+| fullwidth | `punctuation` 8286 | **punctuation** |
+| register | `informal` 14, `formal` 1484 | **formal** |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **typography — 27 strings** — 27 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
-    - Affected: `CSPViolationWithURI`, `CookieSameSiteValueInvalid2`, `FullscreenDeniedContainerNotAllowed`, `ImageMapCircleNegativeRadius`, `ImageMapCircleWrongNumberOfCoords`, `ImageMapPolyOddNumberOfCoords`, `ImageMapPolyWrongNumberOfCoords`, `ImageMapRectBoundsError`, `MediaLoadSourceMissingSrc`, `MediaLoadUnsupportedMimeType`, `MimeNotCss`, `MimeNotCssWarn` …and 15 more
+- **typography — 25 strings** — 25 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
+    - Affected: `CookieSameSiteValueInvalid2`, `FullscreenDeniedContainerNotAllowed`, `ImageMapCircleNegativeRadius`, `ImageMapCircleWrongNumberOfCoords`, `ImageMapPolyOddNumberOfCoords`, `ImageMapPolyWrongNumberOfCoords`, `ImageMapRectBoundsError`, `MediaLoadSourceMissingSrc`, `MediaLoadUnsupportedMimeType`, `MimeNotCss`, `MimeNotCssWarn`, `about-debugging-setup-usb-status-updating` …and 13 more
 
 ---
 
-## 3. Open findings (63)
+## 3. Open findings (66)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 4 |
 | 2 | Wrong content (says something other than the English) | 15 |
-| 3 | Degraded language (grammar, spelling, terminology) | 8 |
-| 4 | Cosmetic (typography, spacing) | 36 |
+| 3 | Degraded language (grammar, spelling, terminology) | 12 |
+| 4 | Cosmetic (typography, spacing) | 35 |
 
 ### A. Functional, markup, variables & plurals
 
-- `about-logins-confirm-remove-all-dialog-title` — `browser/browser/aboutLogins.ftl` — `about-logins-confirm-remove-all-dialog-title` has plural variant ['one'], which zh-CN does not have
-    - Current: `{$count ->} [one] 确定要移除 { $count } 条登录信息吗？ [other] 确定要移除全部共 { $count } 条登录信息吗？`
-    - Source: `{$count ->} [one] Remove { $count } login? [other] Remove all { $count } logins?`
-    - zh-CN has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
 - `pending-crash-reports-message-new` — `browser/browser/contentCrash.ftl` — `pending-crash-reports-message-new` has plural variant ['one'], which zh-CN does not have
     - Current: `{$reportCount ->} [one] 您最近有一份未发送的崩溃报告 [other] 您最近有 { $reportCount } 份未发送的崩溃报告`
     - Source: `{$reportCount ->} [one] You have a recent unsent crash report [other] You have { $reportCount } recent unsent crash reports`
@@ -227,6 +216,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Proofread a message`
     - Suggest: `校对消息`
     - en-US "Proofread a message" refers to a message generally, not specifically an email.
+- `identity-description-tls-key-logging-message` — `browser/browser/browser.ftl` — Adds "其他" (other), which the English "An app or service" does not say.
+    - Current: `其他应用或服务可能可以看到您来自此网站的加密流量。`
+    - Source: `An app or service may see your encrypted traffic from this site.`
+    - Suggest: `某个应用或服务可能可以看到您来自此网站的加密流量。`
+    - en-US says "An app or service may see"; "其他" implies other apps besides Firefox, a claim the source does not make.
 - `ipprotection-connection-status-blocked-error-description-1` — `browser/browser/ipProtection.ftl` — Adds hedging "可能" (may) not present in the source statement.
     - Current: `VPN 可能并非在所有位置都可用`
     - Source: `Local laws and restrictions limit where you can use VPN. <a data-l10n-name="learn-more-link">Learn more</a>`
@@ -237,19 +231,26 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `aria-label: Next`
     - Suggest: `下一篇`
     - en-US source is "Next" for the button that goes to the next carousel slide; the target says "previous".
-- `newtab-privacy-across-sites` — `browser/browser/newtab/newtab.ftl` — newtab-privacy-across-sites (newtab.ftl) — "Across { $count } sites" → "包含 { $count } 个网站" (includes) → SUGGEST: "涉及 { $count } 个网站" (blocked across).
-    - Source: `{$count ->} [one] Across { $count } site [other] Across { $count } sites`
-    - Suggest: `"包含 { $count } 个网站"`
 - `newtab-wallpaper-your-images-folder` — `browser/browser/newtab/newtab.ftl` — The accessible name drops "Your images" as the tile name and mistranslates the description as "your saved pictures, wallpapers".
     - Current: `aria-label: 您保存的图片、壁纸`
     - Source: `aria-label: Your images, wallpapers that you have saved`
     - Suggest: `aria-label: 您的图片，您保存的壁纸`
     - en-US is "Your images, wallpapers that you have saved" — the folder name "Your images" followed by a description; the Chinese merges them into a list of two nouns and loses the folder name.
+- `newtab-widget-lists-change-list` — `browser/browser/newtab/newtab.ftl` — "Change list" (switch which list is shown) translated as "更换清单" which reads as replacing the list.
+    - Current: `更换清单`
+    - Source: `aria-label: Change list title: Change list`
+    - Suggest: `切换清单`
+    - The developer comment states "Change" is a verb meaning the button switches which list is displayed; "更换" implies replacing/substituting the list itself.
 - `containers-external-links-check` — `browser/browser/preferences/preferences.ftl` — Meaning reversed/garbled: source says links from external apps should not use containers, target reads as "do not use container tabs to open links from external apps" losing the intended structure.
     - Current: `不使用身份标签页打开来自外部应用的链接`
     - Source: `accesskey: D label: Don’t use containers for links opened from external apps`
     - Suggest: `从外部应用打开的链接不使用身份标签页`
     - The en-US label means: for links opened from external apps, don’t use containers. The current wording reads as an instruction about how to open links rather than about which container is used, and the developer comment states such links always open outside of any container.
+- `tls-key-logging-notice-nav` — `browser/browser/preferences/preferences.ftl` — Adds "其他" (other), not present in the English "An app or service".
+    - Current: `其他应用或服务可能可以看到您的加密流量。`
+    - Source: `label: An app or service may see your encrypted traffic.`
+    - Suggest: `某个应用或服务可能可以看到您的加密流量。`
+    - The source is an indefinite "An app or service", not "other apps or services".
 - `share-panel-os-share` — `browser/browser/sharePanel.ftl` — "Share with…" is rendered as the noun phrase "共享方式" and the ellipsis is dropped.
     - Current: `label: 共享方式`
     - Source: `label: Share with…`
@@ -293,11 +294,11 @@ _Nothing in this category._
 
 ### D. Terminology, register & consistency
 
-- `newtab-privacy-message-info-1-cta` — `browser/browser/newtab/newtab.ftl` — Same en-US string "View protections" translated inconsistently with the sibling CTA strings.
-    - Current: `查看保护情况`
-    - Source: `View protections`
-    - Suggest: `查看保护信息`
-    - All other newtab-privacy-message-info-*-cta strings with identical en-US source "View protections" use 查看保护信息; this one differs on the same surface.
+- `refresh-unused-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — Uses informal 你 instead of the locale's formal 您, inconsistent with the parallel string refresh-reinstalled-profile-infobar-message.
+    - Current: `看起来你有一段时间没有打开`
+    - Source: `It looks like you haven’t started { -brand-short-name } in a while. Do you want to clean it up for a fresh, like-new experience? And by the way, welcome back!`
+    - Suggest: `看起来您有一段时间没有打开`
+    - The zh-CN convention is the formal 您; the adjacent string refresh-reinstalled-profile-infobar-message uses 您, so this mixes registers.
 - `onboarding-many-tabs-title` — `browser/browser/newtab/onboarding.ftl` — onboarding-many-tabs-title (onboarding.ftl) — "你的标签，由你而定" → 您.
     - Source: `Your tabs, your way`
     - Suggest: `您.`
@@ -317,6 +318,16 @@ _Nothing in this category._
 - `download-cert-message-desc` — `security/manager/security/pippki/pippki.ftl` — Certificate Authority: download-cert-message 认证机构 vs download-cert-message-desc/edit-trust-ca 颁发机构 → 颁发机构.
     - Source: `Before trusting this CA for any purpose, you should examine its certificate and its policy and procedures (if available).`
     - Suggest: `颁发机构.`
+- `user-context-add-container-panel-item` — `toolkit/toolkit/global/contextual-identity.ftl` — "container" rendered as "身份" instead of the established zh-CN term "身份标签"/"容器".
+    - Current: `添加新身份`
+    - Source: `(value): Add new container accesskey: A`
+    - Suggest: `添加新身份标签`
+    - en-US "Add new container" refers to the Container feature; "身份" alone means "identity" and loses the container concept, and is inconsistent with the feature's established zh-CN name.
+- `user-context-manage-containers-panel-item` — `toolkit/toolkit/global/contextual-identity.ftl` — "Manage containers" rendered as "管理身份", dropping the container terminology.
+    - Current: `管理身份`
+    - Source: `(value): Manage containers accesskey: o`
+    - Suggest: `管理身份标签`
+    - en-US "containers" is the Container feature name; "身份" alone means "identity" and is inconsistent with the feature's established zh-CN rendering.
 
 ### E. Typography, punctuation & spacing
 
@@ -415,8 +426,10 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (47)
+### Fixed to date (49)
 
+- `newtab-privacy-across-sites` — `browser/browser/newtab/newtab.ftl` — fixed 2026-09-14
+- `newtab-privacy-message-info-1-cta` — `browser/browser/newtab/newtab.ftl` — fixed 2026-09-14
 - `link-preview-onboarding-callout-title` — `browser/browser/featureCallout.ftl` — fixed 2026-08-24
 - `newtab-sports-widget-loading-more` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-24
 - `fxa-qrcode-pair-step2-signin` — `browser/browser/preferences/fxaPairDevice.ftl` — fixed 2026-08-24
@@ -455,5 +468,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `about-logging-invalid-output` — `toolkit/toolkit/about/aboutLogging.ftl` — fixed 2026-07-28
 - `touch-warning` — `toolkit/toolkit/about/aboutSupport.ftl` — fixed 2026-07-28
 - `wheel-warning` — `toolkit/toolkit/about/aboutSupport.ftl` — fixed 2026-07-28
-- `about-telemetry-stack-title` — `toolkit/toolkit/about/aboutTelemetry.ftl` — fixed 2026-07-28
-- `abuse-report-policy-suggestions` — `toolkit/toolkit/about/abuseReports.ftl` — fixed 2026-07-28

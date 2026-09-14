@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-07 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
-| **Previous run** | 2026-09-03 @ `075eb543fd91` |
+| **Generated** | 2026-09-14 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e44f1369fb6d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8ffd279d75ec` |
+| **Previous run** | 2026-09-07 @ `3c0c507b8d42` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 45 of 18,253 |
+| **Strings reviewed this run** | 116 of 16,144 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,31 +18,156 @@ Also for tr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (31)
 
-- `newtab-privacy-message-promo-relay-3` — `browser/browser/newtab/newtab.ftl` — "email masks" translated as "e-posta maskesi" but the sentence drops the "keep private" agent structure and, more importantly, omits that the masks are the thing being obtained free — meaning shifted from "Get 50 free email masks" to a fragment.
-    - Current: `Gerçek e-posta adresinizi gizli tutmanızı sağlayacak 50 e-posta maskesi ücretsiz.`
-    - Source: `Get 50 free email masks to help keep your real email private.`
-    - Suggest: `Gerçek e-posta adresinizi gizli tutmanıza yardımcı olacak 50 ücretsiz e-posta maskesi edinin.`
-    - The en-US is an imperative call to action ("Get 50 free email masks…"); the Turkish is a verbless noun phrase and loses the "Get" action.
-- `newtab-widget-section-show-widgets` — `browser/browser/newtab/newtab.ftl` — "widgets" rendered as "Araçlar" (tools) rather than the established Turkish term for widgets.
-    - Current: `aria-label: Araçlar bölümünü göster`
-    - Source: `aria-label: Show the widgets section title: Show widgets`
-    - Suggest: `aria-label: Widget’lar bölümünü göster`
-    - en-US "widgets" is a specific UI term; "araç" is the standard translation for "tool", which is a different concept used elsewhere in the UI.
-- `newtab-privacy-across-sites` — `browser/browser/newtab/newtab.ftl` — Turkish adds a claim that Firefox protected the user, which the source does not say.
-    - Current: `{ $count } sitede sizi koruduk`
-    - Source: `{$count ->} [one] Across { $count } site [other] Across { $count } sites`
-    - Suggest: `{ $count } sitede engellendi`
-    - en-US is just "Across { $count } sites" (developer comment: "Blocked across { $count } sites"); the target asserts "we protected you on { $count } sites", a claim about the product's behaviour that the source never makes.
+- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Yenilikler” but the string it names, `releaseNotes-link`, reads “Yeni neler var?”
+    - Current: `Güncelleme sonrası “Yenilikler” sayfasını değiştir. Güncelleme sonrası sayfasını devre dışı bırakmak istiyorsanız bu ilkeyi boş olarak ayarlayabilirsiniz.`
+    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
+    - Suggest: `Yeni neler var?`
+    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `MediaEMENoCodecsDeprecatedWarning` — `dom/chrome/dom/dom.properties` — `MediaEMENoCodecsDeprecatedWarning` uses straight double quotes
+    - Current: `contentType olmadan "codecs" ifadesine sahip audioCapabilities ve videoCapabilities içeren MediaKeySystemConfiguration adayını aktarmadan navigator.requestMediaKeySystemAccess() çağrısı gerçekleştirmek (%S adresinde) ar…`
+    - Source: `Calling navigator.requestMediaKeySystemAccess() (at %S) passing a candidate MediaKeySystemConfiguration containing audioCapabilities or videoCapabilities without a contentType with a “codecs” string is deprecated and wi…`
+    - The locale's quote convention is `curly-double` (603 occurrences).
+- `BlockAutoplayWebAudioStartError` — `dom/chrome/dom/dom.properties` — `BlockAutoplayWebAudioStartError` uses a straight apostrophe
+    - Current: `Bir AudioContext'in otomatik başlaması engellendi. AudioContext, sayfadaki bir kullanıcı hareketinden sonra oluşturulmalı veya devam ettirilmelidir.`
+    - Source: `An AudioContext was prevented from starting automatically. It must be created or resumed after a user gesture on the page.`
+    - The tree uses ’ 861 times against 46 straight.
+- `LenientThisWarning` — `dom/chrome/dom/dom.properties` — `LenientThisWarning` uses a straight apostrophe
+    - Current: `“this” nesnesi yanlış olduğundan [LenientThis] içeren özelliğin get veya set'i yok sayılıyor.`
+    - Source: `Ignoring get or set of property that has [LenientThis] because the “this” object is incorrect.`
+    - The tree uses ’ 861 times against 46 straight.
+- `NavigatorGetUserMediaWarning` — `dom/chrome/dom/dom.properties` — `NavigatorGetUserMediaWarning` uses a straight apostrophe
+    - Current: `navigator.mozGetUserMedia'nın yerini navigator.mediaDevices.getUserMedia almıştır`
+    - Source: `navigator.mozGetUserMedia has been replaced by navigator.mediaDevices.getUserMedia`
+    - The tree uses ’ 861 times against 46 straight.
+- `InterceptedErrorResponseWithURL` — `dom/chrome/dom/dom.properties` — `InterceptedErrorResponseWithURL` uses a straight apostrophe
+    - Current: `'%S' yüklenemedi. Bir ServiceWorker, FetchEvent.respondWith()'e bir Error Response aktardı. Bu genellikle ServiceWorker'ın geçersiz bir fetch() çağrısı yaptığını gösterir.`
+    - Source: `Failed to load ‘%S’. A ServiceWorker passed an Error Response to FetchEvent.respondWith(). This typically means the ServiceWorker performed an invalid fetch() call.`
+    - The tree uses ’ 861 times against 46 straight.
+- `InterceptedUsedResponseWithURL` — `dom/chrome/dom/dom.properties` — `InterceptedUsedResponseWithURL` uses a straight apostrophe
+    - Current: `'%S' yüklenemedi. Bir ServiceWorker, FetchEvent.respondWith()'e kullanılmış bir Response aktardı. Bir Response'un gövdesi yalnızca bir kez okunabilir. Gövdeye birden fazla kez ulaşmak için Response.clone() kullanın.`
+    - Source: `Failed to load ‘%S’. A ServiceWorker passed a used Response to FetchEvent.respondWith(). The body of a Response may only be read once. Use Response.clone() to access the body multiple times.`
+    - The tree uses ’ 861 times against 46 straight.
+- `BadOpaqueRedirectInterceptionWithURL` — `dom/chrome/dom/dom.properties` — `BadOpaqueRedirectInterceptionWithURL` uses a straight apostrophe
+    - Current: `'%S' yüklenemedi. Bir ServiceWorker, navigasyon dışı bir FetchEvent'i işlerken FetchEvent.respondWith()'e bir opaqueredirect Response aktardı.`
+    - Source: `Failed to load ‘%S’. A ServiceWorker passed an opaqueredirect Response to FetchEvent.respondWith() while handling a non-navigation FetchEvent.`
+    - The tree uses ’ 861 times against 46 straight.
+- `ManifestIdIsInvalid` — `dom/chrome/dom/dom.properties` — `ManifestIdIsInvalid` uses a straight apostrophe
+    - Current: `id elemanı geçerli bir URL'ye işaret etmiyor.`
+    - Source: `The id member did not resolve to a valid URL.`
+    - The tree uses ’ 861 times against 46 straight.
+- `TargetPrincipalDoesNotMatch` — `dom/chrome/dom/dom.properties` — `TargetPrincipalDoesNotMatch` uses a straight apostrophe
+    - Current: `'DOMWindow'da 'postMessage' çalıştırılamadı. Sağlanan hedef köken ('%S') alıcının pencere kökeniyle ('%S') eşleşmiyor.`
+    - Source: `Failed to execute ‘postMessage’ on ‘DOMWindow’: The target origin provided (‘%S’) does not match the recipient window’s origin (‘%S’).`
+    - The tree uses ’ 861 times against 46 straight.
+- `RewriteYouTubeEmbedPathParams` — `dom/chrome/dom/dom.properties` — `RewriteYouTubeEmbedPathParams` uses a straight apostrophe
+    - Current: `Eski tarz YouTube Flash embed (%S) yerine iframe embed (%S) yazılıyor. iframe embed'lerindeki parametreler desteklenmediği için dönüştürüldüler. Mümkünse lütfen sayfayı güncelleyerek embed/object yerine iframe kullanın.`
+    - Source: `Rewriting old-style YouTube Flash embed (%S) to iframe embed (%S). Params were unsupported by iframe embeds and converted. Please update page to use iframe instead of embed/object, if possible.`
+    - The tree uses ’ 861 times against 46 straight.
+- `PushMessageBadSalt` — `dom/chrome/dom/dom.properties` — `PushMessageBadSalt` uses straight double quotes
+    - Current: `‘%1$S’ kapsamı için ServiceWorker bir push iletisini çözmeyi başaramadı. ‘Encryption‘ üst bilgisinde yer alan ‘salt‘ değişkeni base64url olarak kodlanmış (https://tools.ietf.org/html/rfc7515#appendix-C) ve kodlamadan ön…`
+    - Source: `The ServiceWorker for scope ‘%1$S’ failed to decrypt a push message. The ‘salt‘ parameter in the ‘Encryption‘ header must be base64url-encoded (https://tools.ietf.org/html/rfc7515#appendix-C), and be at least 16 bytes b…`
+    - The locale's quote convention is `curly-double` (603 occurrences).
+- `PushMessageBadCryptoError` — `dom/chrome/dom/dom.properties` — `PushMessageBadCryptoError` uses a straight apostrophe
+    - Current: `'%1$S' kapsamının ServiceWorker'ı bir anında ilet mesajını çözemedi. Şifreleme ile ilgili yardım için lütfen https://developer.mozilla.org/docs/Web/API/Push_API/Using_the_Push_API#Encryption adresine bakın.`
+    - Source: `The ServiceWorker for scope ‘%1$S’ failed to decrypt a push message. For help with encryption, please see https://developer.mozilla.org/docs/Web/API/Push_API/Using_the_Push_API#Encryption`
+    - The tree uses ’ 861 times against 46 straight.
+- `SVGRefLoopWarning` — `dom/chrome/dom/dom.properties` — `SVGRefLoopWarning` uses a straight apostrophe
+    - Current: `%S SVG'si (“%S” kimliğine sahip) bir başvuru döngüsüne sahip.`
+    - Source: `The SVG <%S> with ID “%S” has a reference loop.`
+    - The tree uses ’ 861 times against 46 straight.
+- `SVGDeselectAllWarning` — `dom/chrome/dom/dom.properties` — `SVGDeselectAllWarning` uses a straight apostrophe
+    - Current: `SVGSVGElement.deselectAll, Selection API'sindeki işlevle benzer olduğu için kullanımdan kaldırılmıştır.`
+    - Source: `SVGSVGElement.deselectAll is deprecated as it duplicates functionality from the Selection API.`
+    - The tree uses ’ 861 times against 46 straight.
+- `ScriptSourceMalformed` — `dom/chrome/dom/dom.properties` — `ScriptSourceMalformed` uses a straight apostrophe
+    - Current: `<script> kaynak URI'sı kusurlu: “%S”.`
+    - Source: `<script> source URI is malformed: “%S”.`
+    - The tree uses ’ 861 times against 46 straight.
+- `PEDisallowedImportRule` — `dom/chrome/layout/css.properties` — `PEDisallowedImportRule` uses straight double quotes
+    - Current: `@import kuralları, "constructed" stil sayfalarında henüz geçerli değildir.`
+    - Source: `@import rules are not yet valid in constructed stylesheets.`
+    - The locale's quote convention is `curly-double` (603 occurrences).
+- `errProcessingInstruction` — `dom/chrome/layout/htmlparser.properties` — `errProcessingInstruction` uses a straight apostrophe
+    - Current: `“<?” görüldü. Olası sebep: HTML içinde XML işleme talimatı girişimi. (XML işleme talimatları HTML'de desteklenmez.)`
+    - Source: `Saw “<?”. Probable cause: Attempt to use an XML processing instruction in HTML. (XML processing instructions are not supported in HTML.)`
+    - The tree uses ’ 861 times against 46 straight.
+- `reader-view-enter-button` — `browser/browser/browser.ftl` — `reader-view-enter-button` uses a straight apostrophe
+    - Current: `Okuyucu Görünümü'ne geç`
+    - Source: `aria-label: Enter Reader View`
+    - The tree uses ’ 861 times against 46 straight.
+- `menu-view-enter-readerview` — `browser/browser/menubar.ftl` — `menu-view-enter-readerview` uses a straight apostrophe
+    - Current: `Okuyucu Görünümü'ne geç`
+    - Source: `accesskey: R label: Enter Reader View`
+    - The tree uses ’ 861 times against 46 straight.
+- `connection-dns-over-https-url-item-default` — `browser/browser/preferences/connection.ftl` — `connection-dns-over-https-url-item-default` uses a straight apostrophe
+    - Current: `DNS'i HTTPS üzerinden çözümlemek için varsayılan URL'yi kullan`
+    - Source: `label: { $name } (Default) tooltiptext: Use the default URL for resolving DNS over HTTPS`
+    - The tree uses ’ 861 times against 46 straight.
+- `policy-DisableSafeMode` — `browser/browser/policies/policies-descriptions.ftl` — `policy-DisableSafeMode` uses a straight apostrophe
+    - Current: `Güvenli kipte yeniden başlatma özelliğini devre dışı bırak. Not: Güvenli kipe girmek için kullanılan Shift tuşu, Windows'ta ancak Grup İlkesi ile devre dışı bırakılabilir.`
+    - Source: `Disable the feature to restart in Safe Mode. Note: the Shift key to enter Safe Mode can only be disabled on Windows using Group Policy.`
+    - The tree uses ’ 861 times against 46 straight.
+- `about-glean-label-for-tag-pings-with-requirements` — `toolkit/toolkit/about/aboutGlean.ftl` — `about-glean-label-for-tag-pings-with-requirements` uses a straight apostrophe
+    - Current: `Ping'lerinizi daha sonra tanıyabilmeniz için akılda kalıcı bir hata ayıklama etiketi <span>(en fazla 20 karakter; yalnızca harf, rakam ve “-”)</span> belirleyin.`
+    - Source: `Set a memorable debug tag <span>(20 characters or fewer, alphanumerics and - only)</span> so you can recognize your pings later.`
+    - The tree uses ’ 861 times against 46 straight.
+- `profiles-opendir` — `toolkit/toolkit/about/aboutProfiles.ftl` — `profiles-opendir` uses a straight apostrophe
+    - Current: `{$sel_1 ->} [macos] Finder'da göster [windows] Klasörü aç [other] Dizini aç`
+    - Source: `{$sel_1 ->} [macos] Show in Finder [windows] Open Folder [other] Open Directory`
+    - The tree uses ’ 861 times against 46 straight.
+- `show-dir-label` — `toolkit/toolkit/about/aboutSupport.ftl` — `show-dir-label` uses a straight apostrophe
+    - Current: `{$sel_1 ->} [macos] Finder'da göster [windows] Klasörü aç [other] Dizini aç`
+    - Source: `{$sel_1 ->} [macos] Show in Finder [windows] Open Folder [other] Open Directory`
+    - The tree uses ’ 861 times against 46 straight.
+- `SpeechRecognitionBlockedByAIControlsWarning` — `dom/chrome/dom/dom.properties` — The Turkish drops the subject "SpeechRecognition" reporting itself as unavailable and turns "refuses to start" into a passive "could not be started".
+    - Current: `SpeechRecognition kullanılamadığını bildirdi ve başlatılamadı`
+    - Source: `On-device speech recognition is turned off in the user’s AI Controls settings, so SpeechRecognition reports itself as unavailable and refuses to start.`
+    - Suggest: `SpeechRecognition kendisini kullanılamaz olarak bildiriyor ve başlatılmayı reddediyor`
+    - en-US: “SpeechRecognition reports itself as unavailable and refuses to start.” The Turkish says the API reported that something (unspecified) is unavailable and that it could not be started, changing both the reflexive meaning and the deliberate refusal into a failure.
+- `speech-recognition-model-download-message` — `browser/browser/permissions.ftl` — The approximate size marker "~" is dropped, and "when you continue" is rendered as "when you continue with the installation".
+    - Current: `Kuruluma devam ettiğinizde { $sizeMB } MB boyutunda bir indirme başlatılacaktır.`
+    - Source: `{ -brand-short-name } runs speech recognition locally, so the audio never leaves your device. To set this up, a ~{ $sizeMB } MB download will start when you continue.`
+    - Suggest: `Devam ettiğinizde ~{ $sizeMB } MB boyutunda bir indirme başlatılacaktır.`
+    - en-US says “a ~{ $sizeMB } MB download will start when you continue”; the tilde indicating an approximate size is missing, so the size is presented as exact.
+- `newtab-privacy-empty-state-tally` — `browser/browser/newtab/newtab.ftl` — "See a running tally here." is reduced to "Rakamlara bakın." losing the running/continuously updating total meaning.
+    - Current: `Rakamlara bakın.`
+    - Source: `See a running tally here.`
+    - Suggest: `Güncel toplamı buradan görebilirsiniz.`
+    - The developer comment explains the string refers to a continuously updating total shown here; the Turkish only says “Look at the numbers.”, dropping both “running tally” and “here”.
+- `autocomplete-remove-password-os-auth-dialog-message-win` — `toolkit/toolkit/main-window/autocomplete.ftl` — Turkish says "we can better protect your accounts", whereas the source says this helps protect the security of your accounts (the action helps, not the vendor).
+    - Current: `Bu sayede hesaplarınızı daha güvenli bir şekilde koruyabiliriz.`
+    - Source: `To delete your password, enter your Windows login credentials. This helps protect the security of your accounts.`
+    - Suggest: `Bu, hesaplarınızın güvenliğini korumaya yardımcı olur.`
+    - en-US: "This helps protect the security of your accounts." The Turkish introduces a first-person claim ("we can protect") that the source never makes.
+- `appmenuitem-relay-description2` — `browser/browser/appmenu.ftl` — Descriptive statement turned into an imperative and the "helps prevent" nuance lost.
+    - Current: `Gelen kutunuzu spam’den koruyun`
+    - Source: `Helps prevent spam in your inbox`
+    - Suggest: `Gelen kutunuzdaki spam’i önlemeye yardımcı olur`
+    - en-US "Helps prevent spam in your inbox" is a description of the feature, not an instruction to the user.
+- `add-exception-valid-long` — `security/manager/security/certificates/certManager.ftl` — "identification" translated as "tanımlama bilgisi", which is the established Turkish term for "cookie".
+    - Current: `geçerli ve doğrulanmış tanımlama bilgisi sunuyor`
+    - Source: `This site provides valid, verified identification.  There is no need to add an exception.`
+    - Suggest: `geçerli ve doğrulanmış kimlik bilgileri sunuyor`
+    - "tanımlama bilgisi" means cookie in Mozilla Turkish terminology; the source refers to site identification/identity information.
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (7)
 
-- `ipprotection-feature-introduction-text-summer-promo-1` — `browser/browser/ipProtection.ftl` — Straight apostrophe used instead of the typographic apostrophe.
-    - Current: `31 Ağustos'a`
-    - Source: `Turn it on to keep your browsing more private. <a data-l10n-name="summer-promo-link">Get unlimited bandwidth</a> and more locations to browse from. Now until August 31.`
-    - Suggest: `31 Ağustos’a`
-    - The locale convention is the typographic apostrophe ’ (U+2019); other strings in the same file use "31 Ağustos’tan".
+- `add-exception-valid-long` — `security/manager/security/certificates/certManager.ftl` — "ayrıcalık" (privilege) for en "exception", while certmgr-add-exception and certmgr-server use "istisna".
+    - Source: `This site provides valid, verified identification.  There is no need to add an exception.`
+- `delete-ssl-override-confirm` — `security/manager/security/certificates/certManager.ftl` — "ayrıcalık" (privilege) for en "exception", while certmgr-add-exception and certmgr-server use "istisna".
+    - Source: `Are you sure you want to delete this server exception?`
+- `delete-ssl-override-impact` — `security/manager/security/certificates/certManager.ftl` — "ayrıcalık" (privilege) for en "exception", while certmgr-add-exception and certmgr-server use "istisna".
+    - Source: `If you delete a server exception, you restore the usual security checks for that server and require it uses a valid certificate.`
+- `delete-ssl-override-title` — `security/manager/security/certificates/certManager.ftl` — "ayrıcalık" (privilege) for en "exception", while certmgr-add-exception and certmgr-server use "istisna".
+    - Source: `title: Delete Server Certificate Exception`
+- `exception-mgr` — `security/manager/security/certificates/certManager.ftl` — "ayrıcalık" (privilege) for en "exception", while certmgr-add-exception and certmgr-server use "istisna".
+    - Source: `title: Add Security Exception`
+- `exception-mgr-extra-button` — `security/manager/security/certificates/certManager.ftl` — "ayrıcalık" (privilege) for en "exception", while certmgr-add-exception and certmgr-server use "istisna".
+    - Source: `accesskey: C label: Confirm Security Exception`
+- `exception-mgr-permanent` — `security/manager/security/certificates/certManager.ftl` — "ayrıcalık" (privilege) for en "exception", while certmgr-add-exception and certmgr-server use "istisna".
+    - Source: `accesskey: P label: Permanently store this exception`
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -52,9 +177,23 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (11)
 
-_Nothing retired._
+- `about-logins-confirm-remove-all-sync-dialog-title` — `browser/browser/aboutLogins.ftl` — The plural variant drops "all"/does not match the source wording distinction and reads awkwardly.
+    - Current: `[other] { $count } hesabın hepsi tüm cihazlardan silinsin mi?`
+    - Suggest: `[other] { $count } hesabın tümü tüm cihazlardan silinsin mi?`
+    - en-US plural is "Remove all { $count } logins from all devices?"; the Turkish "hesabın hepsi tüm cihazlardan" is ungrammatical/redundant phrasing.
+- `extension-colorways-bold-name` — `browser/browser/appExtensionFields.ftl` — developer comment not followed. The comment states "Bold" is used in the sense of bravery. Current "Koyu" means dark and duplicates extension-firefox-compact-dark-name. → "Cesur".
+    - Suggest: `"Cesur".`
+- `add-engine-dialog` — `browser/browser/preferences/addEngine.ftl` — see also S4.
+- `autofill-add-new-address-title` — `browser/browser/preferences/formAutofill.ftl` — see also S4.
+- `more-from-moz-mozilla-monitor-us-description` — `browser/browser/preferences/moreFromMozilla.ftl` — "Automatically" dropped.
+- `about-glean-label-for-tag-pings` — `toolkit/toolkit/about/aboutGlean.ftl` — "pinglerinizi"; every other occurrence in the file uses "ping'ler" with an apostrophe.
+- `rights-intro-point-3` — `toolkit/toolkit/about/aboutRights.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
+- `rights-intro-point-4` — `toolkit/toolkit/about/aboutRights.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
+- `rights-webservices-term-1` — `toolkit/toolkit/about/aboutRights.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
+- `rights-webservices-term-6` — `toolkit/toolkit/about/aboutRights.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
+- `neterror-unknown-socket-type-psm-installed` — `toolkit/toolkit/neterror/netError.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
 
 ---
 
@@ -62,9 +201,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 362 |
-| Strings | 18,253 |
-| Missing strings | 19 |
+| Files | 326 |
+| Strings | 16,144 |
+| Missing strings | 24 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -73,22 +212,23 @@ _Nothing retired._
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
-| Text quoting a UI label that no longer matches | 5 |
+| Text quoting a UI label that no longer matches | 6 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 0 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 27 |
+| Typography deviations from this locale's own norm | 24 |
 
 ### Completeness
 
-**19 strings** are not translated yet, concentrated in:
+**24 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 14
-- `dom/chrome/dom/dom.properties` — 1
-- `browser/browser/aboutPolicies.ftl` — 1
-- `browser/browser/aiWindow.ftl` — 1
-- `browser/browser/permissions.ftl` — 1
-- `toolkit/toolkit/about/aboutAddons.ftl` — 1
+- `browser/browser/newtab/onboarding.ftl` — 9
+- `browser/browser/newtab/newtab.ftl` — 6
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 3
+- `dom/chrome/dom/dom.properties` — 2
+- `toolkit/services/aboutSyncLog.ftl` — 2
+- `browser/browser/ipProtection.ftl` — 1
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -98,25 +238,24 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 676, `curly-single` 166, `straight-double` 29 | **curly-double** |
-| apostrophe | `typographic` 985, `straight` 50 | **typographic** |
-| ellipsis | `char` 463 | **char** |
-| dash | `em` 72, `en` 2 | **em** |
-| nbsp | `total` 9, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 2, `formal` 59 | **formal** |
+| quotes | `curly-double` 603, `curly-single` 156, `straight-double` 29 | **curly-double** |
+| apostrophe | `typographic` 861, `straight` 46 | **typographic** |
+| ellipsis | `char` 388 | **char** |
+| dash | `em` 44, `en` 2 | **em** |
+| nbsp | `total` 6, `before-punctuation` 2, `space-before-punctuation` 5 | _mixed_ |
+| register | `informal` 2, `formal` 46 | **formal** |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **typography — 27 strings** — 27 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
-    - Affected: `BadOpaqueRedirectInterceptionWithURL`, `BlockAutoplayWebAudioStartError`, `InterceptedErrorResponseWithURL`, `InterceptedUsedResponseWithURL`, `LenientThisWarning`, `ManifestIdIsInvalid`, `MediaEMENoCodecsDeprecatedWarning`, `NavigatorGetUserMediaWarning`, `PEDisallowedImportRule`, `PushMessageBadCryptoError`, `PushMessageBadSalt`, `RewriteYouTubeEmbedPathParams` …and 15 more
+_Nothing reported._
 
 ---
 
-## 3. Open findings (134)
+## 3. Open findings (147)
 
-> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `newtab-privacy-across-sites` — `browser/browser/newtab/newtab.ftl` — Turkish adds a claim that Firefox protected the user, which the source does not say.
     - Current: `{ $count } sitede sizi koruduk`
@@ -128,15 +267,20 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Choosing { -brand-short-name } means choosing protection by default.`
     - Suggest: `{ -brand-short-name } demek varsayılan olarak korunma demektir.`
     - The source says choosing the browser means protection is on by default; "her an, her yerde" (anytime, anywhere) is a different claim not present in the en-US.
+- `autocomplete-remove-password-os-auth-dialog-message-win` — `toolkit/toolkit/main-window/autocomplete.ftl` — Turkish says "we can better protect your accounts", whereas the source says this helps protect the security of your accounts (the action helps, not the vendor).
+    - Current: `Bu sayede hesaplarınızı daha güvenli bir şekilde koruyabiliriz.`
+    - Source: `To delete your password, enter your Windows login credentials. This helps protect the security of your accounts.`
+    - Suggest: `Bu, hesaplarınızın güvenliğini korumaya yardımcı olur.`
+    - en-US: "This helps protect the security of your accounts." The Turkish introduces a first-person claim ("we can protect") that the source never makes.
 
 _Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 3 |
-| 2 | Wrong content (says something other than the English) | 47 |
-| 3 | Degraded language (grammar, spelling, terminology) | 69 |
-| 4 | Cosmetic (typography, spacing) | 15 |
+| 2 | Wrong content (says something other than the English) | 51 |
+| 3 | Degraded language (grammar, spelling, terminology) | 59 |
+| 4 | Cosmetic (typography, spacing) | 34 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -155,19 +299,16 @@ _Also listed under their own category below._
     - Source: `{$count ->} [1] This will remove the password saved to { -brand-short-name } on all your synced devices. This will also remove any breach alerts that appear here. You cannot undo this action. [other] This will remove al…`
     - Suggest: `[1] Bu işlem { -brand-short-name } tarayıcınıza kaydettiğiniz parolayı eşitlenen tüm cihazlardan silecektir.`
     - en-US singular says "This will remove the password saved to…" (one password); the Turkish singular variants say "tüm parolaları" (all passwords), matching the plural form instead.
-- `about-logins-confirm-remove-all-sync-dialog-title` — `browser/browser/aboutLogins.ftl` — The plural variant drops "all"/does not match the source wording distinction and reads awkwardly.
-    - Current: `[other] { $count } hesabın hepsi tüm cihazlardan silinsin mi?`
-    - Source: `{$count ->} [one] Remove { $count } login from all devices? [other] Remove all { $count } logins from all devices?`
-    - Suggest: `[other] { $count } hesabın tümü tüm cihazlardan silinsin mi?`
-    - en-US plural is "Remove all { $count } logins from all devices?"; the Turkish "hesabın hepsi tüm cihazlardan" is ungrammatical/redundant phrasing.
-- `extension-colorways-bold-name` — `browser/browser/appExtensionFields.ftl` — developer comment not followed. The comment states "Bold" is used in the sense of bravery. Current "Koyu" means dark and duplicates extension-firefox-compact-dark-name. → "Cesur".
-    - Source: `{ $colorway-name } — Bold`
-    - Suggest: `"Cesur".`
 - `extension-nova-dusk-name` — `browser/browser/appExtensionFields.ftl` — "Dusk" (just after sunset) is translated as "Şafak" (dawn), the opposite time of day.
     - Current: `Şafak`
     - Source: `Dusk`
     - Suggest: `Alacakaranlık`
     - The developer comment says the name refers to the sky just after sunset; "Şafak" means dawn/daybreak.
+- `appmenuitem-relay-description2` — `browser/browser/appmenu.ftl` — Descriptive statement turned into an imperative and the "helps prevent" nuance lost.
+    - Current: `Gelen kutunuzu spam’den koruyun`
+    - Source: `Helps prevent spam in your inbox`
+    - Suggest: `Gelen kutunuzdaki spam’i önlemeye yardımcı olur`
+    - en-US "Helps prevent spam in your inbox" is a description of the feature, not an instruction to the user.
 - `urlbar-result-weather-title` — `browser/browser/browser.ftl` — city and region swapped: { $region }, { $city } → { $city }, { $region } (cf. urlbar-result-weather-title-with-country).
     - Current: `{ $region }, { $city }`
     - Source: `<strong>{ $temperature }°{ $unit }</strong> in { $city }, { $region }`
@@ -206,6 +347,11 @@ _Also listed under their own category below._
     - Source: `{$count ->} [one] Across { $count } site [other] Across { $count } sites`
     - Suggest: `{ $count } sitede engellendi`
     - en-US is just "Across { $count } sites" (developer comment: "Blocked across { $count } sites"); the target asserts "we protected you on { $count } sites", a claim about the product's behaviour that the source never makes.
+- `newtab-privacy-empty-state-tally` — `browser/browser/newtab/newtab.ftl` — "See a running tally here." is reduced to "Rakamlara bakın." losing the running/continuously updating total meaning.
+    - Current: `Rakamlara bakın.`
+    - Source: `See a running tally here.`
+    - Suggest: `Güncel toplamı buradan görebilirsiniz.`
+    - The developer comment explains the string refers to a continuously updating total shown here; the Turkish only says “Look at the numbers.”, dropping both “running tally” and “here”.
 - `newtab-privacy-etp-off-faster-browsing` — `browser/browser/newtab/newtab.ftl` — "Fewer trackers" translated as "Be tracked less" instead of referring to trackers.
     - Current: `Daha az takip edilin.`
     - Source: `Faster browsing. Fewer trackers.`
@@ -234,10 +380,13 @@ _Also listed under their own category below._
 - `media-count` — `browser/browser/pageInfo.ftl` — "Sayaç" (counter/meter) → "Sayı" (en "Count" is a quantity column).
     - Source: `label: Count`
     - Suggest: `"Sayı"`
+- `speech-recognition-model-download-message` — `browser/browser/permissions.ftl` — The approximate size marker "~" is dropped, and "when you continue" is rendered as "when you continue with the installation".
+    - Current: `Kuruluma devam ettiğinizde { $sizeMB } MB boyutunda bir indirme başlatılacaktır.`
+    - Source: `{ -brand-short-name } runs speech recognition locally, so the audio never leaves your device. To set this up, a ~{ $sizeMB } MB download will start when you continue.`
+    - Suggest: `Devam ettiğinizde ~{ $sizeMB } MB boyutunda bir indirme başlatılacaktır.`
+    - en-US says “a ~{ $sizeMB } MB download will start when you continue”; the tilde indicating an approximate size is missing, so the size is presented as exact.
 - `fonts-langgroup-header` — `browser/browser/preferences/fonts.ftl` — "Karakter kümesi" (character set) ≠ en "Fonts for" (a language-group selector).
     - Source: `(value): Fonts for accesskey: F`
-- `more-from-moz-mozilla-monitor-us-description` — `browser/browser/preferences/moreFromMozilla.ftl` — "Automatically" dropped.
-    - Source: `Automatically take back your exposed personal info.`
 - `containers-sites-card-header` — `browser/browser/preferences/preferences.ftl` — The description drops the meaning "choose a container for a site" and instead presupposes the container is already chosen.
     - Current: `Özel kapsayıcı seçtiğiniz siteleri her açtığınızda { -brand-short-name } bu kapsayıcıyı kullanır.`
     - Source: `description: Choose a container for a site and { -brand-short-name } will use it every time the site opens. label: Site-specific containers`
@@ -257,6 +406,11 @@ _Also listed under their own category below._
     - Source: `(value): No preference aria-label: Enable no preference for reduced motion emulation`
     - Suggest: `Azaltılmış hareket öykünümü için “tercih yok” seçeneğini etkinleştir`
     - en-US is "Enable no preference for reduced motion emulation"; the Turkish renders it as a negative imperative ("do not specify a preference") and omits "Enable". It also uses "Daha az hareket" whereas the sibling strings consistently use "Azaltılmış hareket".
+- `SpeechRecognitionBlockedByAIControlsWarning` — `dom/chrome/dom/dom.properties` — The Turkish drops the subject "SpeechRecognition" reporting itself as unavailable and turns "refuses to start" into a passive "could not be started".
+    - Current: `SpeechRecognition kullanılamadığını bildirdi ve başlatılamadı`
+    - Source: `On-device speech recognition is turned off in the user’s AI Controls settings, so SpeechRecognition reports itself as unavailable and refuses to start.`
+    - Suggest: `SpeechRecognition kendisini kullanılamaz olarak bildiriyor ve başlatılmayı reddediyor`
+    - en-US: “SpeechRecognition reports itself as unavailable and refuses to start.” The Turkish says the API reported that something (unspecified) is unavailable and that it could not be started, changing both the reflexive meaning and the deliberate refusal into a failure.
 - `exception-mgr-supplemental-warning` — `security/manager/security/certificates/certManager.ftl` — "Legitimate" dropped; the whole point of the warning is that legitimate sites never ask this.
     - Source: `Legitimate banks, stores, and other public sites will not ask you to do this.`
 - `devmgr-button-unload` — `security/manager/security/certificates/deviceManager.ftl` — "Boşalt" (empty/pour out) → "Kaldır" (en "Unload" a PKCS#11 module).
@@ -308,6 +462,11 @@ _Also listed under their own category below._
     - The developer comment says the name refers to the sky just after sunset; "Şafak" means dawn/daybreak.
 - `language-name-si` — `toolkit/toolkit/intl/languageNames.ftl` — Sinhala — Seylanca — Sinhalaca — outdated exonym from "Ceylon".
     - Source: `Sinhala`
+- `autocomplete-remove-password-os-auth-dialog-message-win` — `toolkit/toolkit/main-window/autocomplete.ftl` — Turkish says "we can better protect your accounts", whereas the source says this helps protect the security of your accounts (the action helps, not the vendor).
+    - Current: `Bu sayede hesaplarınızı daha güvenli bir şekilde koruyabiliriz.`
+    - Source: `To delete your password, enter your Windows login credentials. This helps protect the security of your accounts.`
+    - Suggest: `Bu, hesaplarınızın güvenliğini korumaya yardımcı olur.`
+    - en-US: "This helps protect the security of your accounts." The Turkish introduces a first-person claim ("we can protect") that the source never makes.
 - `sec-error-ocsp-bad-http-response` — `toolkit/toolkit/neterror/nsserrors.ftl` — sec-error-ocsp-bad-http-response, sec-error-ocsp-unknown-response-status — "aldı"/"karşılaştı" → "döndürdü" (en "returned").
     - Source: `The OCSP server returned unexpected/invalid HTTP data.`
     - Suggest: `"döndürdü"`
@@ -413,10 +572,11 @@ _Also listed under their own category below._
     - Source: `Scan the QR code to download { -brand-product-name } for mobile. Once installed, select “Sync to mobile” to access your passwords, bookmarks, and more on the go.`
     - Suggest: `Mobil cihazla eşitleyin`
     - In the source this string quotes “Sync to mobile”, which is exactly the value of `sync-to-mobile-button-label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `add-engine-dialog` — `browser/browser/preferences/addEngine.ftl` — see also S4.
-    - Source: `buttonaccesskeyaccept: A buttonlabelaccept: Add Engine`
-- `autofill-add-new-address-title` — `browser/browser/preferences/formAutofill.ftl` — see also S4.
-    - Source: `Add New Address`
+- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Yenilikler” but the string it names, `releaseNotes-link`, reads “Yeni neler var?”
+    - Current: `Güncelleme sonrası “Yenilikler” sayfasını değiştir. Güncelleme sonrası sayfasını devre dışı bırakmak istiyorsanız bu ilkeyi boş olarak ayarlayabilirsiniz.`
+    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
+    - Suggest: `Yeni neler var?`
+    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `autofill-addresses-add-button` — `browser/browser/preferences/preferences.ftl` — see also S4.
     - Source: `Add new address`
 - `preferences-ai-controls-translations-control` — `browser/browser/preferences/preferences.ftl` — "Çeviri" vs "Çeviriler" everywhere else.
@@ -448,28 +608,17 @@ _Also listed under their own category below._
     - Source: `This document could also be loaded from “{ $url }” using DevTools “Local Mode”, which can be enabled in the settings panel.`
     - Suggest: `Yerel mod`
     - In the source this string quotes “Local Mode”, which is exactly the value of `options-local-mode-label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `add-exception-valid-long` — `security/manager/security/certificates/certManager.ftl` — "ayrıcalık" (privilege) for en "exception", while certmgr-add-exception and certmgr-server use "istisna".
+- `add-exception-valid-long` — `security/manager/security/certificates/certManager.ftl` — "identification" translated as "tanımlama bilgisi", which is the established Turkish term for "cookie".
+    - Current: `geçerli ve doğrulanmış tanımlama bilgisi sunuyor`
     - Source: `This site provides valid, verified identification.  There is no need to add an exception.`
-- `delete-ssl-override-confirm` — `security/manager/security/certificates/certManager.ftl` — "ayrıcalık" (privilege) for en "exception", while certmgr-add-exception and certmgr-server use "istisna".
-    - Source: `Are you sure you want to delete this server exception?`
-- `delete-ssl-override-impact` — `security/manager/security/certificates/certManager.ftl` — "ayrıcalık" (privilege) for en "exception", while certmgr-add-exception and certmgr-server use "istisna".
-    - Source: `If you delete a server exception, you restore the usual security checks for that server and require it uses a valid certificate.`
-- `delete-ssl-override-title` — `security/manager/security/certificates/certManager.ftl` — "ayrıcalık" (privilege) for en "exception", while certmgr-add-exception and certmgr-server use "istisna".
-    - Source: `title: Delete Server Certificate Exception`
-- `exception-mgr` — `security/manager/security/certificates/certManager.ftl` — "ayrıcalık" (privilege) for en "exception", while certmgr-add-exception and certmgr-server use "istisna".
-    - Source: `title: Add Security Exception`
-- `exception-mgr-extra-button` — `security/manager/security/certificates/certManager.ftl` — "ayrıcalık" (privilege) for en "exception", while certmgr-add-exception and certmgr-server use "istisna".
-    - Source: `accesskey: C label: Confirm Security Exception`
-- `exception-mgr-permanent` — `security/manager/security/certificates/certManager.ftl` — "ayrıcalık" (privilege) for en "exception", while certmgr-add-exception and certmgr-server use "istisna".
-    - Source: `accesskey: P label: Permanently store this exception`
+    - Suggest: `geçerli ve doğrulanmış kimlik bilgileri sunuyor`
+    - "tanımlama bilgisi" means cookie in Mozilla Turkish terminology; the source refers to site identification/identity information.
 - `protected-auth-prompt` — `security/manager/security/pippki/pippki.ftl` — "güvenlik cihazı" vs "güvenlik aygıtı" used in devmgr-window, unable-to-toggle-fips, pkcs12-dup-data, certmgr-token-name, change-password-token.
     - Source: `Please authenticate to the security device ({ $tokenName }). How to do so depends on the device (for example, using a fingerprint reader or entering a code with a keypad).`
 - `about-glean-about-data-header` — `toolkit/toolkit/about/aboutGlean.ftl` — see also S4.
     - Source: `About Data`
 - `about-glean-category-about-data` — `toolkit/toolkit/about/aboutGlean.ftl` — see also S4.
     - Source: `About Data`
-- `about-glean-label-for-tag-pings` — `toolkit/toolkit/about/aboutGlean.ftl` — "pinglerinizi"; every other occurrence in the file uses "ping'ler" with an apostrophe.
-    - Source: `In the preceding field ensure there is a memorable debug tag so you can recognize your pings later.`
 - `main-thread-no-omtc` — `toolkit/toolkit/about/aboutSupport.ftl` — "(işlem) parçacığı" for thread; bare "parçacık" means particle. The locale's term elsewhere (aboutProcesses.ftl) is "iş parçacığı".
     - Source: `main thread, no OMTC`
 - `about-telemetry-slow-sql-main` — `toolkit/toolkit/about/aboutTelemetry.ftl` — "(işlem) parçacığı" for thread; bare "parçacık" means particle. The locale's term elsewhere (aboutProcesses.ftl) is "iş parçacığı".
@@ -514,34 +663,120 @@ _Also listed under their own category below._
 
 - `reader-view-enter-button` — `browser/browser/browser.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
     - Source: `aria-label: Enter Reader View`
+- `reader-view-enter-button` — `browser/browser/browser.ftl` — `reader-view-enter-button` uses a straight apostrophe
+    - Current: `Okuyucu Görünümü'ne geç`
+    - Source: `aria-label: Enter Reader View`
+    - The tree uses ’ 861 times against 46 straight.
 - `menu-view-enter-readerview` — `browser/browser/menubar.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
     - Source: `accesskey: R label: Enter Reader View`
+- `menu-view-enter-readerview` — `browser/browser/menubar.ftl` — `menu-view-enter-readerview` uses a straight apostrophe
+    - Current: `Okuyucu Görünümü'ne geç`
+    - Source: `accesskey: R label: Enter Reader View`
+    - The tree uses ’ 861 times against 46 straight.
 - `mr2022-onboarding-pin-primary-button-label` — `browser/browser/newtab/onboarding.ftl` — set-password-reminder (security/…/pippki.ftl), protections-vpn-header-content-subscribed (browser/protections.ftl), permissions-block-popups-exceptions-button4.description (browser/preferences/preferences.ftl), mr2022-onboarding-pin-primary-button-label [macos variant] (browser/newtab/onboarding.ftl), profiles-delete-profile-confirm (toolkit/about/aboutProfiles.ftl), rights-webservices-term-3, ri…
     - Source: `{$sel_1 ->} [macos] Keep { -brand-short-name } in Dock [other] Pin { -brand-short-name } to taskbar`
 - `policy-DisableSafeMode` — `browser/browser/policies/policies-descriptions.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
     - Source: `Disable the feature to restart in Safe Mode. Note: the Shift key to enter Safe Mode can only be disabled on Windows using Group Policy.`
+- `policy-DisableSafeMode` — `browser/browser/policies/policies-descriptions.ftl` — `policy-DisableSafeMode` uses a straight apostrophe
+    - Current: `Güvenli kipte yeniden başlatma özelliğini devre dışı bırak. Not: Güvenli kipe girmek için kullanılan Shift tuşu, Windows'ta ancak Grup İlkesi ile devre dışı bırakılabilir.`
+    - Source: `Disable the feature to restart in Safe Mode. Note: the Shift key to enter Safe Mode can only be disabled on Windows using Group Policy.`
+    - The tree uses ’ 861 times against 46 straight.
 - `connection-dns-over-https-url-item-default` — `browser/browser/preferences/connection.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
     - Source: `label: { $name } (Default) tooltiptext: Use the default URL for resolving DNS over HTTPS`
+- `connection-dns-over-https-url-item-default` — `browser/browser/preferences/connection.ftl` — `connection-dns-over-https-url-item-default` uses a straight apostrophe
+    - Current: `DNS'i HTTPS üzerinden çözümlemek için varsayılan URL'yi kullan`
+    - Source: `label: { $name } (Default) tooltiptext: Use the default URL for resolving DNS over HTTPS`
+    - The tree uses ’ 861 times against 46 straight.
 - `permissions-block-popups-exceptions-button4` — `browser/browser/preferences/preferences.ftl` — set-password-reminder (security/…/pippki.ftl), protections-vpn-header-content-subscribed (browser/protections.ftl), permissions-block-popups-exceptions-button4.description (browser/preferences/preferences.ftl), mr2022-onboarding-pin-primary-button-label [macos variant] (browser/newtab/onboarding.ftl), profiles-delete-profile-confirm (toolkit/about/aboutProfiles.ftl), rights-webservices-term-3, ri…
     - Source: `accesskey: E description: Add websites that can open pop-ups and use third-party redirects. label: Manage exceptions searchkeywords: popups`
+- `BadOpaqueRedirectInterceptionWithURL` — `dom/chrome/dom/dom.properties` — `BadOpaqueRedirectInterceptionWithURL` uses a straight apostrophe
+    - Current: `'%S' yüklenemedi. Bir ServiceWorker, navigasyon dışı bir FetchEvent'i işlerken FetchEvent.respondWith()'e bir opaqueredirect Response aktardı.`
+    - Source: `Failed to load ‘%S’. A ServiceWorker passed an opaqueredirect Response to FetchEvent.respondWith() while handling a non-navigation FetchEvent.`
+    - The tree uses ’ 861 times against 46 straight.
+- `BlockAutoplayWebAudioStartError` — `dom/chrome/dom/dom.properties` — `BlockAutoplayWebAudioStartError` uses a straight apostrophe
+    - Current: `Bir AudioContext'in otomatik başlaması engellendi. AudioContext, sayfadaki bir kullanıcı hareketinden sonra oluşturulmalı veya devam ettirilmelidir.`
+    - Source: `An AudioContext was prevented from starting automatically. It must be created or resumed after a user gesture on the page.`
+    - The tree uses ’ 861 times against 46 straight.
+- `InterceptedErrorResponseWithURL` — `dom/chrome/dom/dom.properties` — `InterceptedErrorResponseWithURL` uses a straight apostrophe
+    - Current: `'%S' yüklenemedi. Bir ServiceWorker, FetchEvent.respondWith()'e bir Error Response aktardı. Bu genellikle ServiceWorker'ın geçersiz bir fetch() çağrısı yaptığını gösterir.`
+    - Source: `Failed to load ‘%S’. A ServiceWorker passed an Error Response to FetchEvent.respondWith(). This typically means the ServiceWorker performed an invalid fetch() call.`
+    - The tree uses ’ 861 times against 46 straight.
+- `InterceptedUsedResponseWithURL` — `dom/chrome/dom/dom.properties` — `InterceptedUsedResponseWithURL` uses a straight apostrophe
+    - Current: `'%S' yüklenemedi. Bir ServiceWorker, FetchEvent.respondWith()'e kullanılmış bir Response aktardı. Bir Response'un gövdesi yalnızca bir kez okunabilir. Gövdeye birden fazla kez ulaşmak için Response.clone() kullanın.`
+    - Source: `Failed to load ‘%S’. A ServiceWorker passed a used Response to FetchEvent.respondWith(). The body of a Response may only be read once. Use Response.clone() to access the body multiple times.`
+    - The tree uses ’ 861 times against 46 straight.
+- `LenientThisWarning` — `dom/chrome/dom/dom.properties` — `LenientThisWarning` uses a straight apostrophe
+    - Current: `“this” nesnesi yanlış olduğundan [LenientThis] içeren özelliğin get veya set'i yok sayılıyor.`
+    - Source: `Ignoring get or set of property that has [LenientThis] because the “this” object is incorrect.`
+    - The tree uses ’ 861 times against 46 straight.
+- `ManifestIdIsInvalid` — `dom/chrome/dom/dom.properties` — `ManifestIdIsInvalid` uses a straight apostrophe
+    - Current: `id elemanı geçerli bir URL'ye işaret etmiyor.`
+    - Source: `The id member did not resolve to a valid URL.`
+    - The tree uses ’ 861 times against 46 straight.
+- `MediaEMENoCodecsDeprecatedWarning` — `dom/chrome/dom/dom.properties` — `MediaEMENoCodecsDeprecatedWarning` uses straight double quotes
+    - Current: `contentType olmadan "codecs" ifadesine sahip audioCapabilities ve videoCapabilities içeren MediaKeySystemConfiguration adayını aktarmadan navigator.requestMediaKeySystemAccess() çağrısı gerçekleştirmek (%S adresinde) ar…`
+    - Source: `Calling navigator.requestMediaKeySystemAccess() (at %S) passing a candidate MediaKeySystemConfiguration containing audioCapabilities or videoCapabilities without a contentType with a “codecs” string is deprecated and wi…`
+    - The locale's quote convention is `curly-double` (603 occurrences).
+- `NavigatorGetUserMediaWarning` — `dom/chrome/dom/dom.properties` — `NavigatorGetUserMediaWarning` uses a straight apostrophe
+    - Current: `navigator.mozGetUserMedia'nın yerini navigator.mediaDevices.getUserMedia almıştır`
+    - Source: `navigator.mozGetUserMedia has been replaced by navigator.mediaDevices.getUserMedia`
+    - The tree uses ’ 861 times against 46 straight.
+- `PushMessageBadCryptoError` — `dom/chrome/dom/dom.properties` — `PushMessageBadCryptoError` uses a straight apostrophe
+    - Current: `'%1$S' kapsamının ServiceWorker'ı bir anında ilet mesajını çözemedi. Şifreleme ile ilgili yardım için lütfen https://developer.mozilla.org/docs/Web/API/Push_API/Using_the_Push_API#Encryption adresine bakın.`
+    - Source: `The ServiceWorker for scope ‘%1$S’ failed to decrypt a push message. For help with encryption, please see https://developer.mozilla.org/docs/Web/API/Push_API/Using_the_Push_API#Encryption`
+    - The tree uses ’ 861 times against 46 straight.
+- `PushMessageBadSalt` — `dom/chrome/dom/dom.properties` — `PushMessageBadSalt` uses straight double quotes
+    - Current: `‘%1$S’ kapsamı için ServiceWorker bir push iletisini çözmeyi başaramadı. ‘Encryption‘ üst bilgisinde yer alan ‘salt‘ değişkeni base64url olarak kodlanmış (https://tools.ietf.org/html/rfc7515#appendix-C) ve kodlamadan ön…`
+    - Source: `The ServiceWorker for scope ‘%1$S’ failed to decrypt a push message. The ‘salt‘ parameter in the ‘Encryption‘ header must be base64url-encoded (https://tools.ietf.org/html/rfc7515#appendix-C), and be at least 16 bytes b…`
+    - The locale's quote convention is `curly-double` (603 occurrences).
+- `RewriteYouTubeEmbedPathParams` — `dom/chrome/dom/dom.properties` — `RewriteYouTubeEmbedPathParams` uses a straight apostrophe
+    - Current: `Eski tarz YouTube Flash embed (%S) yerine iframe embed (%S) yazılıyor. iframe embed'lerindeki parametreler desteklenmediği için dönüştürüldüler. Mümkünse lütfen sayfayı güncelleyerek embed/object yerine iframe kullanın.`
+    - Source: `Rewriting old-style YouTube Flash embed (%S) to iframe embed (%S). Params were unsupported by iframe embeds and converted. Please update page to use iframe instead of embed/object, if possible.`
+    - The tree uses ’ 861 times against 46 straight.
+- `SVGDeselectAllWarning` — `dom/chrome/dom/dom.properties` — `SVGDeselectAllWarning` uses a straight apostrophe
+    - Current: `SVGSVGElement.deselectAll, Selection API'sindeki işlevle benzer olduğu için kullanımdan kaldırılmıştır.`
+    - Source: `SVGSVGElement.deselectAll is deprecated as it duplicates functionality from the Selection API.`
+    - The tree uses ’ 861 times against 46 straight.
+- `SVGRefLoopWarning` — `dom/chrome/dom/dom.properties` — `SVGRefLoopWarning` uses a straight apostrophe
+    - Current: `%S SVG'si (“%S” kimliğine sahip) bir başvuru döngüsüne sahip.`
+    - Source: `The SVG <%S> with ID “%S” has a reference loop.`
+    - The tree uses ’ 861 times against 46 straight.
+- `ScriptSourceMalformed` — `dom/chrome/dom/dom.properties` — `ScriptSourceMalformed` uses a straight apostrophe
+    - Current: `<script> kaynak URI'sı kusurlu: “%S”.`
+    - Source: `<script> source URI is malformed: “%S”.`
+    - The tree uses ’ 861 times against 46 straight.
+- `TargetPrincipalDoesNotMatch` — `dom/chrome/dom/dom.properties` — `TargetPrincipalDoesNotMatch` uses a straight apostrophe
+    - Current: `'DOMWindow'da 'postMessage' çalıştırılamadı. Sağlanan hedef köken ('%S') alıcının pencere kökeniyle ('%S') eşleşmiyor.`
+    - Source: `Failed to execute ‘postMessage’ on ‘DOMWindow’: The target origin provided (‘%S’) does not match the recipient window’s origin (‘%S’).`
+    - The tree uses ’ 861 times against 46 straight.
+- `PEDisallowedImportRule` — `dom/chrome/layout/css.properties` — `PEDisallowedImportRule` uses straight double quotes
+    - Current: `@import kuralları, "constructed" stil sayfalarında henüz geçerli değildir.`
+    - Source: `@import rules are not yet valid in constructed stylesheets.`
+    - The locale's quote convention is `curly-double` (603 occurrences).
+- `errProcessingInstruction` — `dom/chrome/layout/htmlparser.properties` — `errProcessingInstruction` uses a straight apostrophe
+    - Current: `“<?” görüldü. Olası sebep: HTML içinde XML işleme talimatı girişimi. (XML işleme talimatları HTML'de desteklenmez.)`
+    - Source: `Saw “<?”. Probable cause: Attempt to use an XML processing instruction in HTML. (XML processing instructions are not supported in HTML.)`
+    - The tree uses ’ 861 times against 46 straight.
+- `about-glean-label-for-tag-pings-with-requirements` — `toolkit/toolkit/about/aboutGlean.ftl` — `about-glean-label-for-tag-pings-with-requirements` uses a straight apostrophe
+    - Current: `Ping'lerinizi daha sonra tanıyabilmeniz için akılda kalıcı bir hata ayıklama etiketi <span>(en fazla 20 karakter; yalnızca harf, rakam ve “-”)</span> belirleyin.`
+    - Source: `Set a memorable debug tag <span>(20 characters or fewer, alphanumerics and - only)</span> so you can recognize your pings later.`
+    - The tree uses ’ 861 times against 46 straight.
 - `profiles-opendir` — `toolkit/toolkit/about/aboutProfiles.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
     - Source: `{$sel_1 ->} [macos] Show in Finder [windows] Open Folder [other] Open Directory`
-- `rights-intro-point-3` — `toolkit/toolkit/about/aboutRights.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
-    - Source: `Some features in { -brand-short-name }, such as the Crash Reporter, give you the option to provide feedback to { -vendor-short-name }. By choosing to submit feedback, you give { -vendor-short-name } permission to use th…`
-- `rights-intro-point-4` — `toolkit/toolkit/about/aboutRights.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
-    - Source: `How we use your personal information and feedback submitted to { -vendor-short-name } through { -brand-short-name } is described in the <a data-l10n-name="mozilla-privacy-policy-link">{ -brand-short-name } Privacy Polic…`
-- `rights-webservices-term-1` — `toolkit/toolkit/about/aboutRights.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
-    - Source: `{ -vendor-short-name } and its contributors, licensors and partners work to provide the most accurate and up-to-date Services. However, we cannot guarantee that this information is comprehensive and error-free. For exam…`
-- `rights-webservices-term-6` — `toolkit/toolkit/about/aboutRights.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
-    - Source: `{ -vendor-short-name } may update these terms as necessary from time to time. These terms may not be modified or canceled without { -vendor-short-name }’s written agreement.`
+- `profiles-opendir` — `toolkit/toolkit/about/aboutProfiles.ftl` — `profiles-opendir` uses a straight apostrophe
+    - Current: `{$sel_1 ->} [macos] Finder'da göster [windows] Klasörü aç [other] Dizini aç`
+    - Source: `{$sel_1 ->} [macos] Show in Finder [windows] Open Folder [other] Open Directory`
+    - The tree uses ’ 861 times against 46 straight.
 - `show-dir-label` — `toolkit/toolkit/about/aboutSupport.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
     - Source: `{$sel_1 ->} [macos] Show in Finder [windows] Open Folder [other] Open Directory`
+- `show-dir-label` — `toolkit/toolkit/about/aboutSupport.ftl` — `show-dir-label` uses a straight apostrophe
+    - Current: `{$sel_1 ->} [macos] Finder'da göster [windows] Klasörü aç [other] Dizini aç`
+    - Source: `{$sel_1 ->} [macos] Show in Finder [windows] Open Folder [other] Open Directory`
+    - The tree uses ’ 861 times against 46 straight.
 - `about-webrtc-save-page-dialog-title` — `toolkit/toolkit/about/aboutWebrtc.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
     - Source: `save about:webrtc as`
 - `experimental-features-media-jxl-description` — `toolkit/toolkit/firefoxlabs/features.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
     - Source: `With this feature enabled, { -brand-short-name } supports the JPEG XL (JXL) format. This is an enhanced image file format that supports lossless transition from traditional JPEG files. See <a data-l10n-name="bugzilla">b…`
-- `neterror-unknown-socket-type-psm-installed` — `toolkit/toolkit/neterror/netError.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
-    - Source: `Check to make sure your system has the Personal Security Manager installed.`
 
 ---
 
@@ -563,8 +798,15 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (186)
+### Fixed to date (193)
 
+- `add-exception-valid-long` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-09-14
+- `delete-ssl-override-confirm` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-09-14
+- `delete-ssl-override-impact` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-09-14
+- `delete-ssl-override-title` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-09-14
+- `exception-mgr` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-09-14
+- `exception-mgr-extra-button` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-09-14
+- `exception-mgr-permanent` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-09-14
 - `ipprotection-feature-introduction-text-summer-promo-1` — `browser/browser/ipProtection.ftl` — fixed 2026-09-07
 - `about-logins-confirm-remove-all-sync-dialog-title` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-24
 - `popup-warning-exceeded-message` — `browser/browser/browser.ftl` — fixed 2026-08-24
@@ -598,10 +840,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `profiles-cyan-theme-title` — `browser/browser/profiles.ftl` — fixed 2026-08-24
 - `monitor-partial-breaches-motivation-description` — `browser/browser/protections.ftl` — fixed 2026-08-24
 - `protections-vpn-header-content-subscribed` — `browser/browser/protections.ftl` — fixed 2026-08-24
-- `report-broken-site-panel-intro-text` — `browser/browser/reportBrokenSite.ftl` — fixed 2026-08-24
-- `set-background-stretch` — `browser/browser/setDesktopBackground.ftl` — fixed 2026-08-24
-- `tou-existing-user-spotlight-body` — `browser/browser/termsofuse.ftl` — fixed 2026-08-24
-- `webrtc-reason-for-no-permanent-allow-audio` — `browser/browser/webrtcIndicator.ftl` — fixed 2026-08-24
-- `webrtc-sharing-menu` — `browser/browser/webrtcIndicator.ftl` — fixed 2026-08-24
-- `accessibility-text-label-issue-document-title` — `devtools/client/accessibility.ftl` — fixed 2026-08-24
-- `storage-table-type-cache-hint` — `devtools/client/storage.ftl` — fixed 2026-08-24

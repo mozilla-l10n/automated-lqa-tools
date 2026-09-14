@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-07 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
-| **Previous run** | 2026-09-03 @ `075eb543fd91` |
+| **Generated** | 2026-09-14 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e44f1369fb6d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8ffd279d75ec` |
+| **Previous run** | 2026-09-07 @ `3c0c507b8d42` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 34 of 18,272 |
+| **Strings reviewed this run** | 55 of 16,119 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,22 +18,20 @@ Also for cs: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (1)
 
-- `newtab-wallpaper-your-images-folder` — `browser/browser/newtab/newtab.ftl` — The appositive "Your images, wallpapers that you have saved" is turned into a coordinated list "Your images and wallpapers…", changing the meaning.
-    - Current: `Vaše obrázky a tapety, které jste uložili`
-    - Source: `aria-label: Your images, wallpapers that you have saved`
-    - Suggest: `Vaše obrázky, tapety, které jste uložili`
-    - In en-US "wallpapers that you have saved" explains what "Your images" is; the Czech "a" makes it two separate things.
-- `aiwindow-starter-dismiss` — `browser/browser/aiWindow.ftl` — "Dismiss" (hide the suggestion) is rendered as "Zrušit" (cancel).
-    - Current: `Zrušit { $text }`
-    - Source: `aria-label: Dismiss { $text } title: Dismiss { $text }`
-    - Suggest: `Skrýt { $text }`
-    - Per the developer comment the control dismisses a suggestion pill; "Zrušit" means cancelling an action, not dismissing a suggestion.
+- `fxa-menu-signed-out-description` — `browser/browser/sync.ftl` — Trailing period added that is not present in the en-US source.
+    - Current: `Jste odhlášený/á.`
+    - Source: `You’re signed out`
+    - Suggest: `Jste odhlášený/á`
+    - The source "You’re signed out" has no final punctuation; the Czech adds a period.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `main-context-menu-reveal-password` — `browser/browser/browserContext.ftl` — Access key `v` of `main-context-menu-reveal-password` is not present in its label
+    - Current: `v`
+    - Source: `accesskey: v label: Reveal Password`
+    - The label is “Zobrazit heslo”. An access key not in the label cannot be underlined and is unreachable by keyboard.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -43,9 +41,146 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (35)
 
-_Nothing retired._
+- `urlbar-result-action-calculator-result-decimal` — `browser/browser/browser.ftl` — The calculator result is printed twice, producing output like “0.3330.333”.
+    - Current: `= { NUMBER($result, maximumSignificantDigits: 9) }{ NUMBER($result, maximumSignificantDigits: 9) }`
+    - Suggest: `= { NUMBER($result, maximumSignificantDigits: 9) }`
+    - en-US has a single NUMBER() call; the duplicated call concatenates the number with itself in the address bar result.
+- `browser-data-cookies-checkbox` — `browser/browser/migration.ftl` — `browser-data-cookies-checkbox` (`.label`) references ['browser'], which en-US does not pass
+    - Current: `{$browser ->} [firefox] Cookies [chrome] Soubory cookie [edge] Soubory cookie [safari] Cookies [other] Cookies`
+    - Suggest: `Cookies`
+    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
+- `browser-data-cookies-label` — `browser/browser/migration.ftl` — `browser-data-cookies-label` (`.value`) references ['browser'], which en-US does not pass
+    - Current: `{$browser ->} [firefox] Cookies [chrome] Soubory cookie [edge] Soubory cookie [safari] Cookies [other] Cookies`
+    - Suggest: `Cookies`
+    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
+- `browser-data-formdata-checkbox` — `browser/browser/migration.ftl` — `browser-data-formdata-checkbox` (`.label`) references ['browser'], which en-US does not pass
+    - Current: `{$browser ->} [firefox] Uložená historie formulářů [chrome] Uložená historie formulářů [edge] Vyplňování formulářů [safari] Vyplňování formulářů [other] Uložená historie formulářů`
+    - Suggest: `Saved Form History`
+    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
+- `browser-data-formdata-label` — `browser/browser/migration.ftl` — `browser-data-formdata-label` (`.value`) references ['browser'], which en-US does not pass
+    - Current: `{$browser ->} [firefox] Uložená historie formulářů [chrome] Uložená historie formulářů [edge] Vyplňování formulářů [safari] Vyplňování formulářů [other] Uložená historie formulářů`
+    - Suggest: `Saved Form History`
+    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
+- `browser-data-passwords-checkbox` — `browser/browser/migration.ftl` — `browser-data-passwords-checkbox` (`.label`) references ['browser'], which en-US does not pass
+    - Current: `{$browser ->} [firefox] Uložená uživatelská jména a hesla [chrome] Uložená hesla [edge] Uložená hesla [safari] Hesla [other] Uložená uživatelská jména a hesla`
+    - Suggest: `Saved Logins and Passwords`
+    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
+- `browser-data-passwords-label` — `browser/browser/migration.ftl` — `browser-data-passwords-label` (`.value`) references ['browser'], which en-US does not pass
+    - Current: `{$browser ->} [firefox] Uložená uživatelská jména a hesla [chrome] Uložená hesla [edge] Uložená hesla [safari] Hesla [other] Uložená uživatelská jména a hesla`
+    - Suggest: `Saved Logins and Passwords`
+    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
+- `colorways-cfr-primarybutton` — `browser/browser/newtab/asrouter.ftl` — "baletu" (ballet) instead of "paletu" (palette).
+    - Current: `Zvolit baletu barev`
+    - Suggest: `Zvolit paletu barev`
+    - Typo; the neighbouring colorways-cfr-header-* strings all use "Paleta barev".
+- `newtab-pocket-new-topics-title` — `browser/browser/newtab/newtab.ftl` — Adjective does not agree with the neuter plural noun "témata".
+    - Current: `Podívejte se na oblíbené témata`
+    - Suggest: `Podívejte se na oblíbená témata`
+    - "téma" is neuter; the accusative plural requires "oblíbená témata".
+- `mr2022-onboarding-import-header` — `browser/browser/newtab/onboarding.ftl` — "nastaveni" is missing its accent.
+    - Current: `Bleskové nastaveni`
+    - Suggest: `Bleskové nastavení`
+    - Czech spelling requires "nastavení".
+- `website-advertising-private-attribution` — `browser/browser/preferences/preferences.ftl` — "privacy-preserving ad measurement" is rendered as allowing "tracking advertising".
+    - Current: `Umožnit webům použití sledující reklamy, která je šetrná k soukromí`
+    - Suggest: `Umožnit webům měření výkonu reklamy šetrné k soukromí`
+    - The checkbox permits measurement of ad performance, not the use of tracking ads; the description below correctly speaks about measuring how ads perform, so the label misstates what the user is enabling.
+- `protections-panel-site-not-working-view-issue-list-fonts` — `browser/browser/protectionsPanel.ftl` — List item not in the instrumental case required by the introducing header, unlike all other items.
+    - Current: `Písma`
+    - Suggest: `písmy`
+    - The header reads "…pokud pozorujete problémy s:" and the other items are "přihlášením", "platbami", "psaním komentářů"; "Písma" does not agree.
+- `safeb-palm-notdeceptive` — `browser/browser/safebrowsing/blockedSite.ftl` — Access key `l` of `safeb-palm-notdeceptive` is not present in its label
+    - Current: `l`
+    - The label is “Tato stránka není podvodná…”. An access key not in the label cannot be underlined and is unreachable by keyboard.
+- `screenshots-request-error-details` — `browser/browser/screenshots.ftl` — "vás snímek" should be the possessive "váš snímek".
+    - Current: `nemohli jsme vás snímek uložit`
+    - Suggest: `nemohli jsme váš snímek uložit`
+    - en-US: "We couldn’t save your shot."; "vás" is the pronoun accusative, not the possessive.
+- `webauthn-pin-required-prompt` — `browser/browser/webauthnDialog.ftl` — "Zajdete" is a typo for "Zadejte", producing nonsense ("you will drop by the PIN").
+    - Current: `Zajdete prosím PIN pro vaše zařízení.`
+    - Suggest: `Zadejte prosím PIN pro vaše zařízení.`
+    - en-US is "Please enter the PIN for your device."
+- `droponhomemsg` — `browser/chrome/browser/browser.properties` — Misspelling "stánku" instead of "stránku".
+    - Current: `jako novou domovskou stánku?`
+    - Suggest: `jako novou domovskou stránku?`
+    - "stánku" (a stall/booth) instead of "stránku" (page); droponhomemsgMultiple on the next line spells "stránky" correctly.
+- `protections.blocking.cryptominers.title` — `browser/chrome/browser/browser.properties` — Misspelling "kryproměn" instead of "kryptoměn".
+    - Current: `Blokována těžba kryproměn`
+    - Suggest: `Blokována těžba kryptoměn`
+    - "kryptoměna" (cryptocurrency) is misspelled; protections.notBlocking.cryptominers.title in the same file spells it correctly as "Těžba kryptoměn neblokována".
+- `protections.notBlocking.cookies.3rdParty.title` — `browser/chrome/browser/browser.properties` — Misspelling "stan" instead of "stran".
+    - Current: `Cookies třetích stan neblokovány`
+    - Suggest: `Cookies třetích stran neblokovány`
+    - "třetích stran" (third parties) is misspelled as "třetích stan" (of third tents); the same phrase is spelled correctly elsewhere in the file (e.g. contentBlocking.cookies.blocking3rdParty2.label).
+- `autofillReauthCheckboxMac` — `browser/extensions/formautofill/formautofill.properties` — Apple OS brand name miscapitalized as "MacOS".
+    - Current: `ověření od systému MacOS`
+    - Suggest: `ověření od systému macOS`
+    - The en-US source and Apple’s branding use "macOS"; "MacOS" is not a correct form of the product name.
+- `document_properties_page_size_name_legal` — `browser/pdfviewer/viewer.properties` — Paper-format name "Legal" translated as "legal document".
+    - Current: `Právní dokument`
+    - Suggest: `Legal`
+    - "Legal" here is the paper size (8.5×14 in) in the page-size list alongside A3/A4/Letter, not a description of the document’s content; "Právní dokument" names the wrong thing and would render as e.g. "216 × 356 mm (Právní dokument, na výšku)".
+- `document_properties_page_size_name_letter` — `browser/pdfviewer/viewer.properties` — Paper-format name "Letter" translated as the word for a mail letter.
+    - Current: `Dopis`
+    - Suggest: `Letter`
+    - This is the name of the North American paper size (Letter, 8.5×11 in) shown as a page-size name, not the word "letter" in the correspondence sense; "Dopis" names the wrong thing. Neighbouring size names A3/A4 are left as-is.
+- `document_properties_title` — `browser/pdfviewer/viewer.properties` — PDF document "Title" metadata field labelled as page title.
+    - Current: `Název stránky:`
+    - Suggest: `Název:`
+    - In the Document Properties dialog this field is the PDF’s document Title metadata, not a page title; the dialog also has a separate "Velikost stránky" (Page Size) entry, so "Název stránky" misidentifies the field.
+- `editor_ink_opacity` — `browser/pdfviewer/viewer.properties` — "Opacity" rendered as "transparency", the inverse property.
+    - Current: `Průhlednost`
+    - Suggest: `Neprůhlednost`
+    - The control sets opacity (higher value = more opaque); "Průhlednost" means transparency, the inverse scale, so the slider label describes the opposite of what the value does.
+- `ruleCount.label` — `devtools/client/styleeditor.properties` — Doubled period in the second plural form
+    - Current: `#1 pravidla..`
+    - Suggest: `#1 pravidla.`
+    - Same typo as in styleeditor.ftl; the other two plural forms end with one period.
+- `reportURInotInReportOnlyHeader` — `dom/chrome/security/csp.properties` — The acronym CSP is misspelled as “SCP”.
+    - Current: `SCP nebude blokovat její porušení a ani ji nebude reportovat.`
+    - Suggest: `CSP nebude blokovat její porušení a ani ji nebude reportovat.`
+    - en-US says “CSP will not block…”; the sibling string reportURINorReportToNotInReportOnlyHeader correctly uses “CSP”.
+- `16` — `dom/chrome/xslt/xslt.properties` — XPath “axis” translated as “context”.
+    - Current: `16 = Chyba při parsování XPath: neplatný kontext:`
+    - Suggest: `16 = Chyba při parsování XPath: neplatná osa:`
+    - Same defect as xpath-invalid-axis in xslt.ftl; en-US says “invalid axis”.
+- `about-networking-dns-https-rr-lookup-table-column` — `toolkit/toolkit/about/aboutNetworking.ftl` — Adjacent RR column headers use opposite word order
+    - Current: `RR HTTP`
+    - Suggest: `HTTP RR`
+    - The neighbouring column about-networking-dns-https-rrs-lookup-table-column is "HTTPS RR"; reversing the order to "RR HTTP" for the paired column makes the two headers read inconsistently in the same table.
+- `item` — `toolkit/toolkit/about/aboutPerformance.ftl` — "in the last seconds" (2 s window) rendered as "in the last second"
+    - Current: `Počet spuštění za poslední vteřinu`
+    - Suggest: `Počet spuštění za poslední sekundy`
+    - The developer comment says $dispatchesSincePrevious counts dispatches in the last 2 seconds; the Czech singular states a one-second window, misstating the measurement.
+- `about-reader-estimated-read-time` — `toolkit/toolkit/about/aboutReader.ftl` — Singular plural variant uses the genitive-plural form "minut"
+    - Current: `[one] { $range } minut`
+    - Suggest: `[one] { $range } minuta`
+    - The [one] category is selected for ranges like "~1", where Czech requires the nominative singular "1 minuta"; "1 minut" is ungrammatical. The [few] and [other] variants are correct.
+- `rights-locationawarebrowsing-term-2` — `toolkit/toolkit/about/aboutRights.ftl` — Ungrammatical instruction "Zadejte hledat"
+    - Current: `a potvrďte varování. Zadejte hledat „geo.enabled“`
+    - Suggest: `a potvrďte varování. Vyhledejte „geo.enabled“`
+    - "Zadejte hledat" chains two verbs with no valid construction in Czech; the step is meant to say "search for geo.enabled".
+- `rights-safebrowsing-term-3` — `toolkit/toolkit/about/aboutRights.ftl` — Straight ASCII quotes instead of the Czech quotation marks used throughout the tree
+    - Current: `Zrušte výběr možnosti "{ enableSafeBrowsing-label }"`
+    - Suggest: `Zrušte výběr možnosti „{ enableSafeBrowsing-label }“`
+    - Every other quoted string in this partition (about:config, about:logging, aboutProfiles, aboutTelemetry, aboutHttpsOnlyError) uses „…“; this string is the only one with straight double quotes.
+- `experimental-features-cookie-samesite-none-requires-secure2-description` — `toolkit/toolkit/featuregates/features.ftl` — Dependency names the wrong SameSite value: en-US says the feature requires "Cookies: SameSite=Lax by default", Czech says SameSite=None.
+    - Current: `Tato funkce vyžaduje „Cookies: SameSite=None by default“.`
+    - Suggest: `Tato funkce vyžaduje „Cookies: SameSite=Lax by default“.`
+    - The developer comment says do not translate 'SameSite', 'Lax' and 'None'; the keyword was also swapped, so the string describes a non-existent dependency. (The missing space after 'secure.' in the same string should be fixed too.)
+- `experimental-features-devtools-serviceworker-debugger-support-description` — `toolkit/toolkit/featuregates/features.ftl` — Spelling: "laděni" instead of "ladění".
+    - Current: `v panelu laděni`
+    - Suggest: `v panelu ladění`
+    - Missing length mark; "laděni" is not the correct form here.
+- `pdfjs-editor-alt-text-settings-downloading-model-button` — `toolkit/toolkit/pdfviewer/viewer.ftl` — `pdfjs-editor-alt-text-settings-downloading-model-button` uses three dots where this locale uses …
+    - Current: `Probíhá stahování...`
+    - The tree uses … 454 times against 4 ASCII runs.
+- `primary-password-admin` — `toolkit/toolkit/preferences/preferences.ftl` — Ungrammatical case after the preposition "před": "před ukládání hesel".
+    - Current: `před ukládání hesel`
+    - Suggest: `před ukládáním přihlašovacích údajů a hesel`
+    - "před" requires the instrumental ("ukládáním"); the accusative form is incorrect.
 
 ---
 
@@ -53,26 +188,43 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 362 |
-| Strings | 18,272 |
-| Missing strings | 0 |
+| Files | 325 |
+| Strings | 16,119 |
+| Missing strings | 49 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
-| Variable & placeholder mismatches | 6 |
+| Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 3 |
-| Plural variants (dead or missing forms) | 77 |
+| Plural variants (dead or missing forms) | 67 |
 | Text quoting a UI label that no longer matches | 6 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 4 |
+| Access keys not in their label | 2 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 4 |
+| Typography deviations from this locale's own norm | 3 |
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**49 strings** are not translated yet, concentrated in:
+
+- `browser/browser/newtab/newtab.ftl` — 18
+- `browser/browser/newtab/onboarding.ftl` — 12
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 5
+- `devtools/client/inspector.ftl` — 3
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 3
+- `dom/chrome/dom/dom.properties` — 2
+- `toolkit/services/aboutSyncLog.ftl` — 2
+- `toolkit/toolkit/about/pdfFeaturesNotification.ftl` — 2
+- `toolkit/toolkit/about/aboutAddons.ftl` — 1
+- `toolkit/toolkit/global/theme-picker.ftl` — 1
+
+**Files absent from the locale:**
+
+- `toolkit/toolkit/about/pdfFeaturesNotification.ftl`
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -80,30 +232,30 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `german-double` 526, `curly-double` 231, `curly-single` 60, `straight-double` 46, `polish-double` 3 | _mixed_ |
-| apostrophe | `typographic` 74, `straight` 11 | **typographic** |
-| ellipsis | `char` 454, `ascii` 4 | **char** |
-| dash | `em` 101, `en` 30 | **em** |
-| nbsp | `total` 13, `before-punctuation` 3, `space-before-punctuation` 8 | _mixed_ |
+| quotes | `german-double` 459, `curly-double` 215, `curly-single` 56, `straight-double` 43, `polish-double` 2 | _mixed_ |
+| apostrophe | `typographic` 70, `straight` 9 | **typographic** |
+| ellipsis | `char` 382, `ascii` 3 | **char** |
+| dash | `em` 63, `en` 30 | _mixed_ |
+| nbsp | `total` 13, `before-punctuation` 3, `space-before-punctuation` 7 | _mixed_ |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **plurals — 77 strings** — 77 strings. The locale's plural variants differ from what the rest of its tree does. At this scale it is a convention to settle once, not a defect per string.
-    - Affected: `about-logins-confirm-remove-all-dialog-title`, `about-logins-confirm-remove-all-sync-dialog-title`, `about-processes-active-threads`, `about-processes-inactive-threads`, `about-processes-profile-process`, `about-reader-estimated-read-time`, `about-telemetry-histogram-stats`, `about-webrtc-channels`, `about-webrtc-frames`, `about-webrtc-lost-label`, `about-webrtc-received-label`, `about-webrtc-sent-label` …and 65 more
+- **plurals — 67 strings** — 67 strings. The locale's plural variants differ from what the rest of its tree does. At this scale it is a convention to settle once, not a defect per string.
+    - Affected: `about-processes-active-threads`, `about-processes-inactive-threads`, `about-processes-profile-process`, `about-telemetry-histogram-stats`, `about-webrtc-channels`, `about-webrtc-frames`, `about-webrtc-lost-label`, `about-webrtc-received-label`, `about-webrtc-sent-label`, `accessibility-progress-progressbar`, `account-multiple-tabs-arriving-from-multiple-devices`, `account-multiple-tabs-arriving-from-single-device` …and 55 more
 
 ---
 
-## 3. Open findings (267)
+## 3. Open findings (232)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 53 |
-| 2 | Wrong content (says something other than the English) | 124 |
-| 3 | Degraded language (grammar, spelling, terminology) | 62 |
-| 4 | Cosmetic (typography, spacing) | 23 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 41 |
+| 2 | Wrong content (says something other than the English) | 116 |
+| 3 | Degraded language (grammar, spelling, terminology) | 52 |
+| 4 | Cosmetic (typography, spacing) | 18 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -143,15 +295,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `l`
     - Source: `accesskey: d label: This isn’t a deceptive site…`
     - The label is “Tato stránka není podvodná…”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `urlbar-result-action-calculator-result-decimal` — `browser/browser/browser.ftl` — The calculator result is printed twice, producing output like “0.3330.333”.
-    - Current: `= { NUMBER($result, maximumSignificantDigits: 9) }{ NUMBER($result, maximumSignificantDigits: 9) }`
-    - Source: `= { $result }`
-    - Suggest: `= { NUMBER($result, maximumSignificantDigits: 9) }`
-    - en-US has a single NUMBER() call; the duplicated call concatenates the number with itself in the address bar result.
-- `main-context-menu-reveal-password` — `browser/browser/browserContext.ftl` — Access key `v` of `main-context-menu-reveal-password` is not present in its label
-    - Current: `v`
-    - Source: `accesskey: v label: Reveal Password`
-    - The label is “Zobrazit heslo”. An access key not in the label cannot be underlined and is unreachable by keyboard.
 - `login-status-advisory-title` — `browser/browser/featureCallout.ftl` — Negation added: en-US says the user IS signed out, Czech says they are NOT signed out.
     - Current: `Nejste odhlášeni. Pro přihlášení klepněte na ikonu účtu.`
     - Source: `You’re signed out. Click the account icon to sign in.`
@@ -166,36 +309,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `l`
     - Source: `accesskey: D label: This Isn’t a Deceptive Site…`
     - The label is “Tato stránka není podvodná…”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `browser-data-cookies-checkbox` — `browser/browser/migration.ftl` — `browser-data-cookies-checkbox` (`.label`) references ['browser'], which en-US does not pass
-    - Current: `{$browser ->} [firefox] Cookies [chrome] Soubory cookie [edge] Soubory cookie [safari] Cookies [other] Cookies`
-    - Source: `label: Cookies`
-    - Suggest: `Cookies`
-    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
-- `browser-data-cookies-label` — `browser/browser/migration.ftl` — `browser-data-cookies-label` (`.value`) references ['browser'], which en-US does not pass
-    - Current: `{$browser ->} [firefox] Cookies [chrome] Soubory cookie [edge] Soubory cookie [safari] Cookies [other] Cookies`
-    - Source: `value: Cookies`
-    - Suggest: `Cookies`
-    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
-- `browser-data-formdata-checkbox` — `browser/browser/migration.ftl` — `browser-data-formdata-checkbox` (`.label`) references ['browser'], which en-US does not pass
-    - Current: `{$browser ->} [firefox] Uložená historie formulářů [chrome] Uložená historie formulářů [edge] Vyplňování formulářů [safari] Vyplňování formulářů [other] Uložená historie formulářů`
-    - Source: `label: Saved Form History`
-    - Suggest: `Saved Form History`
-    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
-- `browser-data-formdata-label` — `browser/browser/migration.ftl` — `browser-data-formdata-label` (`.value`) references ['browser'], which en-US does not pass
-    - Current: `{$browser ->} [firefox] Uložená historie formulářů [chrome] Uložená historie formulářů [edge] Vyplňování formulářů [safari] Vyplňování formulářů [other] Uložená historie formulářů`
-    - Source: `value: Saved Form History`
-    - Suggest: `Saved Form History`
-    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
-- `browser-data-passwords-checkbox` — `browser/browser/migration.ftl` — `browser-data-passwords-checkbox` (`.label`) references ['browser'], which en-US does not pass
-    - Current: `{$browser ->} [firefox] Uložená uživatelská jména a hesla [chrome] Uložená hesla [edge] Uložená hesla [safari] Hesla [other] Uložená uživatelská jména a hesla`
-    - Source: `label: Saved Logins and Passwords`
-    - Suggest: `Saved Logins and Passwords`
-    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
-- `browser-data-passwords-label` — `browser/browser/migration.ftl` — `browser-data-passwords-label` (`.value`) references ['browser'], which en-US does not pass
-    - Current: `{$browser ->} [firefox] Uložená uživatelská jména a hesla [chrome] Uložená hesla [edge] Uložená hesla [safari] Hesla [other] Uložená uživatelská jména a hesla`
-    - Source: `value: Saved Logins and Passwords`
-    - Suggest: `Saved Logins and Passwords`
-    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
 - `migration-wizard-progress-extensions-addons-link` — `browser/browser/migrationWizard.ftl` — "Browse extensions" rendered as "Prohledávat" (search through) instead of "Procházet" (browse).
     - Current: `Prohledávat rozšíření pro`
     - Source: `Browse extensions for { -brand-short-name }`
@@ -261,11 +374,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `description: Stronger protections that block more trackers, but may cause some sites to break. label: Strict`
     - Suggest: `mohou omezit fungování některých webových stránek`
     - "Poškození webových stránek" says the browser damages the sites themselves; elsewhere in the file the same source idea is correctly rendered as "může omezit fungování některých stránek".
-- `website-advertising-private-attribution` — `browser/browser/preferences/preferences.ftl` — "privacy-preserving ad measurement" is rendered as allowing "tracking advertising".
-    - Current: `Umožnit webům použití sledující reklamy, která je šetrná k soukromí`
-    - Source: `accesskey: a label: Allow websites to perform privacy-preserving ad measurement`
-    - Suggest: `Umožnit webům měření výkonu reklamy šetrné k soukromí`
-    - The checkbox permits measurement of ad performance, not the use of tracking ads; the description below correctly speaks about measuring how ads perform, so the label misstates what the user is enabling.
 - `preonboarding-checklist-interaction-data-description` — `browser/browser/preonboarding.ftl` — "for users everywhere" translated as "pro běžné uživatele" (for ordinary users).
     - Current: `pro běžné uživatele`
     - Source: `Data about your device, hardware configuration, and how you use { -brand-product-name } helps improve features, performance, and stability for users everywhere.`
@@ -276,10 +384,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `tooltiptext: Apply present avatar`
     - Suggest: `Použít avatar dárku`
     - The comment says "Present refers to a gift box, not the current time period"; the alt text for the same icon is correctly "Dárek".
-- `safeb-palm-notdeceptive` — `browser/browser/safebrowsing/blockedSite.ftl` — Access key `l` of `safeb-palm-notdeceptive` is not present in its label
-    - Current: `l`
-    - Source: `accesskey: d label: This isn’t a deceptive site…`
-    - The label is “Tato stránka není podvodná…”. An access key not in the label cannot be underlined and is unreachable by keyboard.
 - `fxa-avatar-sign-up` — `browser/browser/sync.ftl` — "Sign up" (create an account) rendered as "Přihlásit se" (sign in), identical to fxa-avatar-sign-in.
     - Current: `Přihlásit se`
     - Source: `Sign up`
@@ -315,26 +419,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Error opening file for writing:   $0  Click Abort to stop the installation, Retry to try again, or Ignore to skip this file.`
     - Suggest: `nebo na Ignorovat pro přeskočení tohoto souboru.`
     - en-US: "Click Abort to stop the installation, Retry to try again, or Ignore to skip this file." The Czech repeats the abort meaning and never explains the Ignore button; it also duplicates the FileError_NoIgnore wording.
-- `document_properties_page_size_name_legal` — `browser/pdfviewer/viewer.properties` — Paper-format name "Legal" translated as "legal document".
-    - Current: `Právní dokument`
-    - Source: `Legal`
-    - Suggest: `Legal`
-    - "Legal" here is the paper size (8.5×14 in) in the page-size list alongside A3/A4/Letter, not a description of the document’s content; "Právní dokument" names the wrong thing and would render as e.g. "216 × 356 mm (Právní dokument, na výšku)".
-- `document_properties_page_size_name_letter` — `browser/pdfviewer/viewer.properties` — Paper-format name "Letter" translated as the word for a mail letter.
-    - Current: `Dopis`
-    - Source: `Letter`
-    - Suggest: `Letter`
-    - This is the name of the North American paper size (Letter, 8.5×11 in) shown as a page-size name, not the word "letter" in the correspondence sense; "Dopis" names the wrong thing. Neighbouring size names A3/A4 are left as-is.
-- `document_properties_title` — `browser/pdfviewer/viewer.properties` — PDF document "Title" metadata field labelled as page title.
-    - Current: `Název stránky:`
-    - Source: `Title:`
-    - Suggest: `Název:`
-    - In the Document Properties dialog this field is the PDF’s document Title metadata, not a page title; the dialog also has a separate "Velikost stránky" (Page Size) entry, so "Název stránky" misidentifies the field.
-- `editor_ink_opacity` — `browser/pdfviewer/viewer.properties` — "Opacity" rendered as "transparency", the inverse property.
-    - Current: `Průhlednost`
-    - Source: `Opacity`
-    - Suggest: `Neprůhlednost`
-    - The control sets opacity (higher value = more opaque); "Průhlednost" means transparency, the inverse scale, so the slider label describes the opposite of what the value does.
 - `player.runningOnCompositorTooltip` — `devtools/client/animationinspector.properties` — "compositor thread" translated as "composer's (musical) thread"
     - Current: `Tato animace běží na skladatelském vlákně`
     - Source: `This animation is running on compositor thread`
@@ -400,7 +484,77 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `View and delete the cache storage entries by selecting a storage. <a data-l10n-name="learn-more-link">Learn more</a>`
     - Suggest: `Pro zobrazení a smazání položek úložiště mezipaměti vyberte úložiště.`
     - en-US is "View and delete the cache storage entries…"; cache entries can only be deleted, not edited.
-- _…and 51 more; see `state/` for the full list._
+- `storage-table-type-indexeddb-hint` — `devtools/client/storage.ftl` — "delete IndexedDB entries" translated as "edit"
+    - Current: `Pro zobrazení a úpravu položek v IndexedDB vyberte databázi.`
+    - Source: `View and delete IndexedDB entries by selecting a database. <a data-l10n-name="learn-more-link">Learn more</a>`
+    - Suggest: `Pro zobrazení a smazání položek v IndexedDB vyberte databázi.`
+    - en-US is "View and delete IndexedDB entries…"; IndexedDB entries cannot be edited in the Storage Inspector, only deleted, so the hint misdescribes the available action.
+- `options-show-user-agent-shadow-dom-label` — `devtools/client/toolbox-options.ftl` — "Browser Shadow DOM" mis-parsed as "shadow browser DOM"
+    - Current: `Zobrazit stínový prohlížeč DOM`
+    - Source: `Show Browser Shadow DOM`
+    - Suggest: `Zobrazit stínový DOM prohlížeče`
+    - The modifier "shadow" belongs to DOM, not to the browser; as written the label says "show the shadow browser DOM", and the matching tooltip correctly speaks of "prvky stínového DOM zpracovávané prohlížečem".
+- `accessibility.text.label.issue.interactive` — `devtools/shared/accessibility.properties` — Reversed meaning: "Interactive elements" rendered as "Non-interactive elements"
+    - Current: `Neaktivní prvky musí být označeny.`
+    - Source: `Interactive elements must be labeled.`
+    - Suggest: `Interaktivní prvky musí být označeny.`
+    - en-US is "Interactive elements must be labeled."; "Neaktivní" means inactive/non-interactive, the opposite of the audit rule it describes (cf. accessibility-text-label-issue-interactive in accessibility.ftl, which correctly uses "Interaktivní prvky").
+- `whypaused-debugger-statement` — `devtools/shared/debugger-paused-reasons.ftl` — "Paused on debugger statement" rendered as "paused during debugging"
+    - Current: `Pozastaveno při odlaďování`
+    - Source: `Paused on debugger statement`
+    - Suggest: `Pozastaveno na příkazu debugger`
+    - The comment states the pause is caused by a `debugger` statement in the code; the Czech loses that and states only that execution paused "while debugging", which is uninformative next to the other whypaused-* reasons.
+- `flatequation` — `dom/chrome/accessibility/AccessFu.properties` — “flat equation” rendered as “equation of a surface”.
+    - Current: `rovnice plochy`
+    - Source: `flat equation`
+    - Suggest: `plochá rovnice`
+    - The role name describes an equation rendered in flat (linear) form, not the equation of a plane/surface; screen-reader users hear a wrong role.
+- `banner` — `dom/chrome/accessibility/win/accessible.properties` — ARIA landmark “banner” translated as “plakát” (poster).
+    - Current: `plakát`
+    - Source: `banner`
+    - Suggest: `banner`
+    - The comment says these are ARIA landmark names; mac/accessible.properties in the same tree keeps “banner”. “Plakát” names a printed poster and is announced as the landmark role.
+- `FullscreenDeniedMovedDocument` — `dom/chrome/dom/dom.properties` — “element has moved document” rendered as “the element moved the document”.
+    - Current: `protože vyžadující prvek pohnul dokumentem`
+    - Source: `Request for fullscreen was denied because requesting element has moved document.`
+    - Suggest: `protože vyžadující prvek byl přesunut do jiného dokumentu`
+    - en-US means the element changed which document it belongs to; the Czech states the element moved the document. Same defect in PointerLockDeniedMovedDocument.
+- `ManifestImageUnsupportedPurposes` — `dom/chrome/dom/dom.properties` — “unsupported purpose(s)” rendered as “unused purposes”.
+    - Current: `má nastavené nepoužívané účely`
+    - Source: `%1$S item at index %2$S includes unsupported purpose(s): %3$S.`
+    - Suggest: `obsahuje nepodporované účely`
+    - en-US: “includes unsupported purpose(s)”. “Nepoužívané” (unused) states something different from unsupported.
+- `MediaLoadExhaustedCandidates` — `dom/chrome/dom/dom.properties` — “Media load paused” rendered as “media loading ended with an error”.
+    - Current: `Žádného z kandidátů zdroje se nepodařilo nahrát. Nahrávání média skončilo chybou.`
+    - Source: `All candidate resources failed to load. Media load paused.`
+    - Suggest: `Žádného z kandidátů zdroje se nepodařilo nahrát. Nahrávání média bylo pozastaveno.`
+    - en-US says the media load was paused, not that it failed; the two states differ in the HTML media spec.
+- `PESelectorGroupExtraCombinator` — `dom/chrome/layout/css.properties` — CSS “combinator” translated as “spojovník” (hyphen).
+    - Current: `Špatně umístěný spojovník.`
+    - Source: `Dangling combinator.`
+    - Suggest: `Osamocený kombinátor.`
+    - en-US “Dangling combinator” refers to a CSS selector combinator; “spojovník” means hyphen in Czech typography and misidentifies the error.
+- `errLtGt` — `dom/chrome/layout/htmlparser.properties` — “mistyped start tag” translated as end tag.
+    - Current: `Nalezeno „<>“. Jedná se pravděpodobně o neescapovaný „<“ (správně escapováno jako „&lt;“) nebo chybně zapsanou koncovou značku.`
+    - Source: `Saw “<>”. Probable causes: Unescaped “<” (escape as “&lt;”) or mistyped start tag.`
+    - Suggest: `Nalezeno „<>“. Jedná se pravděpodobně o neescapovaný „<“ (správně escapováno jako „&lt;“) nebo chybně zapsanou počáteční značku.`
+    - en-US errLtGt says “mistyped start tag”; “koncovou značku” duplicates the neighbouring errLtSlashGt string and points the developer at the wrong construct.
+- `CSPROEvalScriptViolation` — `dom/chrome/security/csp.properties` — “JavaScript eval (%2$S)” rendered as “execution of element %2$S in JavaScript”.
+    - Current: `zablokuje spuštění prvku „%2$S“ v JavaScriptu`
+    - Source: `(Report-Only policy) The page’s settings would block a JavaScript eval (%2$S) from being executed because it violates the following directive: “%1$S” (Missing 'unsafe-eval')`
+    - Suggest: `by zablokovalo provedení eval JavaScriptu (%2$S)`
+    - %2$S is the directive type (e.g. script-src), not an element; the non-RO sibling CSPEvalScriptViolation renders it correctly.
+- `CSPROScriptViolation` — `dom/chrome/security/csp.properties` — Report-only message states the script will be blocked instead of would be blocked.
+    - Current: `(Politika Report-Only) Tato nastavení zablokuje provedení skriptu (%3$S) na %2$S`
+    - Source: `(Report-Only policy) The page’s settings would block a script (%3$S) at %2$S from being executed because it violates the following directive: “%1$S”`
+    - Suggest: `(Politika Report-Only) Nastavení stránky by zablokovalo provedení skriptu (%3$S) na %2$S`
+    - A report-only policy never blocks; en-US uses “would block”. The same indicative-vs-conditional shift occurs in CSPROStyleViolation, CSPROWorkerViolation, CSPROGenericViolation and CSPROEvalScriptViolation, while other RO strings in the file correctly use “by zablokovalo”.
+- `IgnoringSrcBecauseOfDirective` — `dom/chrome/security/csp.properties` — The ignored source is called a directive.
+    - Current: `Direktiva „%1$S“ byla ignorována, protože je definována direktiva „%2$S“.`
+    - Source: `Ignoring ‘%1$S’ because of ‘%2$S’ directive.`
+    - Suggest: `Zdroj „%1$S“ byl ignorován kvůli direktivě „%2$S“.`
+    - The developer comment states %1$S is the name of the src that is ignored, not a directive.
+- _…and 35 more; see `state/` for the full list._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -439,11 +593,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `No logs match the current filters.`
     - Suggest: `Žádný protokol neodpovídá aktuálním filtrům.`
     - en-US "the current filters" is plural (the page has type and date filters); the Czech says only one filter.
-- `experimental-features-cookie-samesite-none-requires-secure2-description` — `toolkit/toolkit/featuregates/features.ftl` — Dependency names the wrong SameSite value: en-US says the feature requires "Cookies: SameSite=Lax by default", Czech says SameSite=None.
-    - Current: `Tato funkce vyžaduje „Cookies: SameSite=None by default“.`
-    - Source: `Cookies with “SameSite=None” attribute require the secure attribute. This feature requires “Cookies: SameSite=Lax by default”.`
-    - Suggest: `Tato funkce vyžaduje „Cookies: SameSite=Lax by default“.`
-    - The developer comment says do not translate 'SameSite', 'Lax' and 'None'; the keyword was also swapped, so the string describes a non-existent dependency. (The missing space after 'secure.' in the same string should be fixed too.)
 - `btp-warning-tracker-purged` — `toolkit/toolkit/global/antiTracking.ftl` — "bounce tracker" translated as "sledovač" despite the do-not-translate note.
     - Current: `protože byl rozpoznán jako sledovač`
     - Source: `The state of “{ $siteHost }” was recently purged because it was detected as a bounce tracker.`
@@ -472,11 +621,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Set as primary browser`
     - Suggest: `Nastavit jako hlavní prohlížeč`
     - en-US “Set as primary browser”; the prompt title and default-browser-prompt-button-primary-pin use “hlavní prohlížeč”, while default-browser-prompt-button-primary-alt (“Set as default browser”) already uses “výchozí prohlížeč”, so the two distinct actions become identical.
-- `colorways-cfr-primarybutton` — `browser/browser/newtab/asrouter.ftl` — "baletu" (ballet) instead of "paletu" (palette).
-    - Current: `Zvolit baletu barev`
-    - Source: `(value): Choose colorway accesskey: C`
-    - Suggest: `Zvolit paletu barev`
-    - Typo; the neighbouring colorways-cfr-header-* strings all use "Paleta barev".
 - `home-custom-homepage-replace-with-prompt` — `browser/browser/newtab/newtab.ftl` — "Nahradit s" is a calque of "Replace with"; Czech "nahradit" takes the instrumental without "s".
     - Current: `Nahradit s`
     - Source: `label: Replace with`
@@ -492,11 +636,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `{ $sponsorOrSource } · Sponsored`
     - Suggest: `{ $sponsorOrSource } · Sponzorováno`
     - Missing "o"; the parallel labels newtab-topsite-sponsored and newtab-label-sponsored-fixed use "Sponzorováno".
-- `newtab-pocket-new-topics-title` — `browser/browser/newtab/newtab.ftl` — Adjective does not agree with the neuter plural noun "témata".
-    - Current: `Podívejte se na oblíbené témata`
-    - Source: `Want even more stories? See these popular topics from { -pocket-brand-name }`
-    - Suggest: `Podívejte se na oblíbená témata`
-    - "téma" is neuter; the accusative plural requires "oblíbená témata".
 - `newtab-sports-widget-message-wallpapers-semifinals-title` — `browser/browser/newtab/newtab.ftl` — "semi-finále" is written with a hyphen.
     - Current: `Získejte novou tapetu pro semi-finále`
     - Source: `Get a new wallpaper for the semi-finals`
@@ -512,11 +651,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `aria-label: Collapse all widgets to compact size title: Minimize widgets`
     - Suggest: `Minimalizovat widgety`
     - Every other widget string in the file spells it "widgety".
-- `mr2022-onboarding-import-header` — `browser/browser/newtab/onboarding.ftl` — "nastaveni" is missing its accent.
-    - Current: `Bleskové nastaveni`
-    - Source: `Lightning-fast setup`
-    - Suggest: `Bleskové nastavení`
-    - Czech spelling requires "nastavení".
 - `onboarding-infrequent-import-title` — `browser/browser/newtab/onboarding.ftl` — "Buďte se" is ungrammatical — a stray reflexive pronoun.
     - Current: `Buďte se jako doma`
     - Source: `Make yourself at home`
@@ -562,11 +696,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `label: Date and site`
     - Suggest: `Datum a server`
     - sidebar-history-sort-option-site = "Server" for en-US "Site" in the same dropdown; "název" refers to something else.
-- `autofillReauthCheckboxMac` — `browser/extensions/formautofill/formautofill.properties` — Apple OS brand name miscapitalized as "MacOS".
-    - Current: `ověření od systému MacOS`
-    - Source: `Require macOS authentication to autofill, view, or edit stored credit cards.`
-    - Suggest: `ověření od systému macOS`
-    - The en-US source and Apple’s branding use "macOS"; "MacOS" is not a correct form of the product name.
 - `WARN_DISK_SPACE_QUIT2` — `browser/installer/nsisstrings.properties` — Wrong case after "na": "na instalace" should be "na instalaci".
     - Current: `dostatek úložného prostoru na instalace aplikace $BrandShortName`
     - Source: `It looks like you don’t have enough storage on your device to install $BrandShortName.`
@@ -622,21 +751,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `{ -brand-short-name } is changing how extensions work in private browsing. Any new extensions you add to { -brand-short-name } won’t run by default in Private Windows. Unless you allow it in settings, the extension won’…`
     - Suggest: `Žádné nově nainstalované rozšíření nebude ve výchozím nastavení v anonymních oknech fungovat`
     - Czech punctuation does not allow a comma between the subject phrase and the verb here; it is a plain typo.
-- `about-reader-estimated-read-time` — `toolkit/toolkit/about/aboutReader.ftl` — Singular plural variant uses the genitive-plural form "minut"
-    - Current: `[one] { $range } minut`
-    - Source: `{$rangePlural ->} [one] { $range } minute [other] { $range } minutes`
-    - Suggest: `[one] { $range } minuta`
-    - The [one] category is selected for ranges like "~1", where Czech requires the nominative singular "1 minuta"; "1 minut" is ungrammatical. The [few] and [other] variants are correct.
-- `rights-locationawarebrowsing-term-2` — `toolkit/toolkit/about/aboutRights.ftl` — Ungrammatical instruction "Zadejte hledat"
-    - Current: `a potvrďte varování. Zadejte hledat „geo.enabled“`
-    - Source: `Type geo.enabled`
-    - Suggest: `a potvrďte varování. Vyhledejte „geo.enabled“`
-    - "Zadejte hledat" chains two verbs with no valid construction in Czech; the step is meant to say "search for geo.enabled".
-- `experimental-features-devtools-serviceworker-debugger-support-description` — `toolkit/toolkit/featuregates/features.ftl` — Spelling: "laděni" instead of "ladění".
-    - Current: `v panelu laděni`
-    - Source: `Enables experimental support for Service Workers in the Debugger panel. This feature may slow the Developer Tools down and increase memory consumption.`
-    - Suggest: `v panelu ladění`
-    - Missing length mark; "laděni" is not the correct form here.
 - `moz-box-item-reorder-handle` — `toolkit/toolkit/global/mozBoxBase.ftl` — Spelling: "Šipka dolu" instead of "Šipka dolů".
     - Current: `Ctrl+Shift+Šipka dolu`
     - Source: `aria-label: Reorder item using Ctrl+Shift+ArrowUp or Ctrl+Shift+ArrowDown`
@@ -657,11 +771,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Unsupported hash algorithm used by TLS peer.`
     - Suggest: `Partner TLS použil nepodporovaný hashovací algoritmus.`
     - en-US: "Unsupported hash algorithm used by TLS peer." "algoritmus" is masculine, so "neplatná" is ungrammatical, and unsupported ≠ invalid.
-- `primary-password-admin` — `toolkit/toolkit/preferences/preferences.ftl` — Ungrammatical case after the preposition "před": "před ukládání hesel".
-    - Current: `před ukládání hesel`
-    - Source: `Your administrator requires that you have a Primary Password set in order to save logins and passwords.`
-    - Suggest: `před ukládáním přihlašovacích údajů a hesel`
-    - "před" requires the instrumental ("ukládáním"); the accusative form is incorrect.
 - `webauthn-pin-required-prompt` — `toolkit/toolkit/webauthnDialog.ftl` — Typo: "Zajdete" instead of "Zadejte" in the PIN prompt.
     - Current: `Zajdete prosím PIN pro vaše zařízení.`
     - Source: `Please enter the PIN for your device.`
@@ -845,11 +954,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Turn off Cookie Banner Blocker for { $host }?`
     - Suggest: `Vypnout blokování lišt cookie`
     - protections-panel-cookie-banner-blocker-header uses the correct "Blokování lišt cookie"; the same error is in the turn-on-for-site string.
-- `protections-panel-site-not-working-view-issue-list-fonts` — `browser/browser/protectionsPanel.ftl` — List item not in the instrumental case required by the introducing header, unlike all other items.
-    - Current: `Písma`
-    - Source: `Fonts`
-    - Suggest: `písmy`
-    - The header reads "…pokud pozorujete problémy s:" and the other items are "přihlášením", "platbami", "psaním komentářů"; "Písma" does not agree.
 - `safeb-blocked-phishing-page-learn-more` — `browser/browser/safebrowsing/blockedSite.ftl` — Missing preposition "o" before "ochraně".
     - Current: `Zjistěte více ochraně proti phishingu a malwaru`
     - Source: `Learn more about deceptive sites and phishing at <a data-l10n-name='learn_more_link'>www.antiphishing.org</a>. Learn more about { -brand-short-name }’s Phishing and Malware Protection at <a data-l10n-name='firefox_suppo…`
@@ -860,11 +964,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Learn more about harmful and unwanted software at <a data-l10n-name='learn_more_link'>Unwanted Software Policy</a>. Learn more about { -brand-short-name }’s Phishing and Malware Protection at <a data-l10n-name='firefox_…`
     - Suggest: `Zjistěte více o ochraně proti phishingu a malwaru`
     - Same omission as in safeb-blocked-phishing-page-learn-more; "Zjistěte více" needs "o" + locative. Both the with-cases and no-cases variants are affected.
-- `screenshots-request-error-details` — `browser/browser/screenshots.ftl` — "vás snímek" should be the possessive "váš snímek".
-    - Current: `nemohli jsme vás snímek uložit`
-    - Source: `Sorry! We couldn’t save your shot. Please try again later.`
-    - Suggest: `nemohli jsme váš snímek uložit`
-    - en-US: "We couldn’t save your shot."; "vás" is the pronoun accusative, not the possessive.
 - `add-engine-no-url` — `browser/browser/search.ftl` — Slovak verb form "Zadajte" instead of Czech "Zadejte".
     - Current: `Zadajte adresu URL.`
     - Source: `Please enter a URL.`
@@ -895,31 +994,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Do you want this document to be your new home page?`
     - Suggest: `novou domovskou stránku`
     - The plural variant in the same file correctly uses "domovské stránky".
-- `webauthn-pin-required-prompt` — `browser/browser/webauthnDialog.ftl` — "Zajdete" is a typo for "Zadejte", producing nonsense ("you will drop by the PIN").
-    - Current: `Zajdete prosím PIN pro vaše zařízení.`
-    - Source: `Please enter the PIN for your device.`
-    - Suggest: `Zadejte prosím PIN pro vaše zařízení.`
-    - en-US is "Please enter the PIN for your device."
 - `webrtc-allow-share-camera-and-microphone` — `browser/browser/webrtcIndicator.ftl` — "vaší webkameru" uses the genitive/dative pronoun where the accusative "vaši" is required.
     - Current: `používat vaší webkameru a mikrofon`
     - Source: `Allow { $origin } to use your camera and microphone?`
     - Suggest: `používat vaši webkameru a mikrofon`
     - Neighbouring strings correctly write "používat vaši kameru"; the same error recurs in the -audio-capture and -unsafe-delegation variants.
-- `droponhomemsg` — `browser/chrome/browser/browser.properties` — Misspelling "stánku" instead of "stránku".
-    - Current: `jako novou domovskou stánku?`
-    - Source: `Do you want this document to be your new home page?`
-    - Suggest: `jako novou domovskou stránku?`
-    - "stánku" (a stall/booth) instead of "stránku" (page); droponhomemsgMultiple on the next line spells "stránky" correctly.
-- `protections.blocking.cryptominers.title` — `browser/chrome/browser/browser.properties` — Misspelling "kryproměn" instead of "kryptoměn".
-    - Current: `Blokována těžba kryproměn`
-    - Source: `Cryptominers Blocked`
-    - Suggest: `Blokována těžba kryptoměn`
-    - "kryptoměna" (cryptocurrency) is misspelled; protections.notBlocking.cryptominers.title in the same file spells it correctly as "Těžba kryptoměn neblokována".
-- `protections.notBlocking.cookies.3rdParty.title` — `browser/chrome/browser/browser.properties` — Misspelling "stan" instead of "stran".
-    - Current: `Cookies třetích stan neblokovány`
-    - Source: `Not Blocking Third-Party Cookies`
-    - Suggest: `Cookies třetích stran neblokovány`
-    - "třetích stran" (third parties) is misspelled as "třetích stan" (of third tents); the same phrase is spelled correctly elsewhere in the file (e.g. contentBlocking.cookies.blocking3rdParty2.label).
 - `dom.filterDOMPanel` — `devtools/client/dom.properties` — Untinflected noun stack "Filtr DOM Panel"
     - Current: `Filtr DOM Panel`
     - Source: `Filter DOM Panel`
@@ -970,7 +1049,37 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Form elements should have a visible text label.`
     - Suggest: `Prvky formuláře by měly mít viditelný textový popisek.`
     - "prvky" is masculine inanimate, so the conditional participle is "měly"; the parallel Fluent string accessibility-text-label-issue-form-visible uses "by měly mít".
-- _…and 13 more; see `state/` for the full list._
+- `preventedConsoleClear` — `devtools/shared/webconsole.properties` — `preventedConsoleClear` quotes “Protokol natvralo” but the string it names, `webconsole.console.settings.menu.item.enablePersistentLogs.label`, reads “Protokol natrvalo”
+    - Current: `Volání console.clear() bylo znemožněno kvůli zapnuté funkci “Protokol natvralo”`
+    - Source: `console.clear() was prevented due to “Persist Logs”`
+    - Suggest: `Protokol natrvalo`
+    - In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `InvalidFormControlUnfocusable` — `dom/chrome/dom/dom.properties` — Case mismatch: nominative subject with a verb requiring the genitive.
+    - Current: `Neplatný ovládací prvek formuláře není možné dosáhnout klávesnicí.`
+    - Source: `An invalid form control is not focusable.`
+    - Suggest: `Na neplatný ovládací prvek formuláře se nelze přepnout klávesnicí.`
+    - “není možné dosáhnout” requires a genitive object; the sentence as written is ungrammatical. The sibling InvalidNamedFormControlUnfocusable is phrased correctly.
+- `PushMessageBadRecordSize` — `dom/chrome/dom/dom.properties` — Misspelling “Paramter” for “Parametr”.
+    - Current: `Paramter ‘rs‘`
+    - Source: `The ServiceWorker for scope ‘%1$S’ failed to decrypt a push message. The ‘rs‘ parameter of the ‘Encryption‘ header must be between %2$S and 2^36-31, or omitted entirely. See https://tools.ietf.org/html/draft-ietf-httpbi…`
+    - Suggest: `Parametr ‘rs‘`
+    - Plain spelling error; sibling strings use “Parametr”.
+- `ServiceWorkerRegisterStorageError` — `dom/chrome/dom/dom.properties` — Case error: coordinated noun after “nebo” left in nominative.
+    - Current: `omezený uživatelským nastavením nebo režim anonymního prohlížení`
+    - Source: `Failed to register/update a ServiceWorker for scope ‘%S’: Storage access is restricted in this context due to user settings or private browsing mode.`
+    - Suggest: `omezený uživatelským nastavením nebo režimem anonymního prohlížení`
+    - “omezený” governs the instrumental; the second conjunct must be “režimem”. The same error repeats in ServiceWorkerGetRegistrationStorageError, ServiceWorkerGetClientStorageError and ServiceWorkerPostMessageStorageError.
+- `ReportingHeaderDuplicateGroup` — `dom/chrome/security/security.properties` — Accusative object with a reflexive passive verb.
+    - Current: `ignoruje se duplicitní skupinu s názvem “%S”`
+    - Source: `Reporting Header: ignoring duplicated group named “%S”.`
+    - Suggest: `ignoruje se duplicitní skupina s názvem “%S”`
+    - With “ignoruje se” the noun must be nominative; the adjacent ReportingHeaderInvalidItem is formed correctly.
+- `xslt-bad-recursion` — `dom/dom/xslt.ftl` — Wrong case: the subject “XSLT styl” appears as genitive “XSLT stylu”.
+    - Current: `XSLT stylu obsahuje (pravděpodobně) rekurzi.`
+    - Source: `XSLT Stylesheet (possibly) contains a recursion.`
+    - Suggest: `XSLT styl obsahuje (pravděpodobně) rekurzi.`
+    - The subject of “obsahuje” must be nominative; the same error exists in xslt.properties id 6.
+- _…and 6 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -1044,6 +1153,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `You’re using Resist Fingerprinting (RFP), which replaces some of { -brand-short-name }’s fingerprinting protection settings. This might cause some sites to break.`
     - Suggest: `otisku prohlížeče. To může`
     - A space separates the last word from the period. The identical defect appears in preferences-etp-rfp-warning-message.
+- `fxa-menu-signed-out-description` — `browser/browser/sync.ftl` — Trailing period added that is not present in the en-US source.
+    - Current: `Jste odhlášený/á.`
+    - Source: `You’re signed out`
+    - Suggest: `Jste odhlášený/á`
+    - The source "You’re signed out" has no final punctuation; the Czech adds a period.
 - `sync-button-switch-profile` — `browser/browser/sync.ftl` — Mismatched quotation marks: the closing mark is a left double quote.
     - Current: `Přepnout na profil “{ $profileName }“`
     - Source: `Switch to “{ $profileName }”`
@@ -1057,31 +1171,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `netmonitor.context.perfTools` — `devtools/client/netmonitor.properties` — `netmonitor.context.perfTools` uses three dots where this locale uses …
     - Current: `Zahájit analýzu výkonu...`
     - Source: `Start Performance Analysis…`
-    - The tree uses … 454 times against 4 ASCII runs.
+    - The tree uses … 382 times against 3 ASCII runs.
 - `styleeditor-stylesheet-rule-count` — `devtools/client/styleeditor.ftl` — Doubled period in the [few] plural variant
     - Current: `{ $ruleCount } pravidla..`
     - Source: `{$ruleCount ->} [one] { $ruleCount } rule. [other] { $ruleCount } rules.`
     - Suggest: `{ $ruleCount } pravidla.`
     - The other variants end with a single period; the extra dot is a typo.
-- `ruleCount.label` — `devtools/client/styleeditor.properties` — Doubled period in the second plural form
-    - Current: `#1 pravidla..`
-    - Source: `#1 rule.;#1 rules.`
-    - Suggest: `#1 pravidla.`
-    - Same typo as in styleeditor.ftl; the other two plural forms end with one period.
 - `crashreporter-submit-waiting-hardware-tests` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-submit-waiting-hardware-tests` uses three dots where this locale uses …
     - Current: `Probíhá kontrola problémů s hardwarem a konfigurací...`
     - Source: `Checking for hardware and configuration problems…`
-    - The tree uses … 454 times against 4 ASCII runs.
-- `about-networking-dns-https-rr-lookup-table-column` — `toolkit/toolkit/about/aboutNetworking.ftl` — Adjacent RR column headers use opposite word order
-    - Current: `RR HTTP`
-    - Source: `HTTP RRs`
-    - Suggest: `HTTP RR`
-    - The neighbouring column about-networking-dns-https-rrs-lookup-table-column is "HTTPS RR"; reversing the order to "RR HTTP" for the paired column makes the two headers read inconsistently in the same table.
-- `rights-safebrowsing-term-3` — `toolkit/toolkit/about/aboutRights.ftl` — Straight ASCII quotes instead of the Czech quotation marks used throughout the tree
-    - Current: `Zrušte výběr možnosti "{ enableSafeBrowsing-label }"`
-    - Source: `Uncheck the option to “{ enableSafeBrowsing-label }”`
-    - Suggest: `Zrušte výběr možnosti „{ enableSafeBrowsing-label }“`
-    - Every other quoted string in this partition (about:config, about:logging, aboutProfiles, aboutTelemetry, aboutHttpsOnlyError) uses „…“; this string is the only one with straight double quotes.
+    - The tree uses … 382 times against 3 ASCII runs.
 - `gpu-vendor-id` — `toolkit/toolkit/about/aboutSupport.ftl` — "Vendor" rendered as "prodejce" (seller), inconsistent with the rest of the page
     - Current: `ID prodejce`
     - Source: `Vendor ID`
@@ -1117,14 +1216,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Search the web for <strong>“{ $query }”</strong>`
     - Suggest: `„{ $query }“`
     - The tree consistently uses the paired „…“ quotes; here the closing mark is a straight ASCII ".
-- `pdfjs-editor-alt-text-settings-downloading-model-button` — `toolkit/toolkit/pdfviewer/viewer.ftl` — `pdfjs-editor-alt-text-settings-downloading-model-button` uses three dots where this locale uses …
-    - Current: `Probíhá stahování...`
-    - Source: `Downloading…`
-    - The tree uses … 454 times against 4 ASCII runs.
 - `pdfjs-free-text2` — `toolkit/toolkit/pdfviewer/viewer.ftl` — `pdfjs-free-text2` uses three dots where this locale uses …
     - Current: `Začněte psát...`
     - Source: `aria-label: Text Editor default-content: Start typing…`
-    - The tree uses … 454 times against 4 ASCII runs.
+    - The tree uses … 382 times against 3 ASCII runs.
 
 ---
 
@@ -1146,7 +1241,8 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (2)
+### Fixed to date (3)
 
+- `main-context-menu-reveal-password` — `browser/browser/browserContext.ftl` — fixed 2026-09-14
 - `webext-perms-update-list-intro-with-data-collection` — `toolkit/toolkit/global/extensions.ftl` — fixed 2026-09-02
 - `protections-panel-cookie-banner-blocker-view-turn-on-for-site` — `browser/browser/protectionsPanel.ftl` — fixed 2026-09-01

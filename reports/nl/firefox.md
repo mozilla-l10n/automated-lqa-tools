@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-07 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
-| **Previous run** | 2026-09-03 @ `075eb543fd91` |
+| **Generated** | 2026-09-14 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e44f1369fb6d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8ffd279d75ec` |
+| **Previous run** | 2026-09-07 @ `3c0c507b8d42` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 4 of 18,225 |
+| **Strings reviewed this run** | 32 of 16,053 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,50 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (27)
 
-_Nothing retired._
+- `about-logins-edit-login-os-auth-dialog-message-macosx` — `browser/browser/aboutLogins.ftl` — about-logins-edit-login-os-auth-dialog-message-macosx, about-logins-reveal-password-os-auth-dialog-message-macosx, about-logins-copy-password-os-auth-dialog-message-macosx — browser/browser/aboutLogins.ftl — the comment says to supply only the reason, which macOS prefixes with "Firefox is trying to …". These are imperatives, so the resulting sentence breaks. Current: "bewerk de opgeslagen aanmeld…
+    - Suggest: `…message2-macosx`
+- `enable-devtools-popup-description2` — `browser/browser/browser.ftl` — en-US "Browser Tools menu"; nl points at the "Extra" menu. Suggest: "…via het menu Browserhulpmiddelen…"
+- `cfr-doorhanger-bookmark-fxa-body` — `browser/browser/newtab/asrouter.ftl` — "this bookmark" generalised. Suggest: "…dat u niet zonder deze bladwijzer zit…" (cf. -body-2)
+- `firefoxview-cfr-body-v2` — `browser/browser/newtab/asrouter.ftl` — firefoxview-cfr-body-v2, set-default-menu-message-row-layout-subtitle, set-default-menu-message-split-layout-subtitle ([other]), fxa-menu-message-sync-devices-secondary-text, fxa-menu-message-sync-devices-secondary-text2 — newtab/asrouter.ftl — "Get" rendered as "Ontvang" (= receive), not idiomatic for these objects. Suggest: "Haal … terug", "Geniet van …", "Surf sneller met …", "Beschik direct o…
+- `newtab-custom-pocket-subtitle` — `browser/browser/newtab/newtab.ftl` — "samengesteld" vs "verzameld" in home-prefs-stories-header2.description, newtab-custom-stories-toggle.description.
+- `mr2022-onboarding-import-header` — `browser/browser/newtab/onboarding.ftl` — create-backup-screen-2-easy-label, mr2022-onboarding-import-header — newtab/onboarding.ftl — "setup" is configuration, not software installation. Current: "Eenvoudige instellingen" / "Razendsnelle installatie" → Suggest: "Eenvoudig instellen" / "Razendsnel instellen"
+- `containers-icon-briefcase` — `browser/browser/preferences/containers.ftl` — "Briefcase" is the depicted object. Current: "Werkmap" → Suggest: "Aktetas" (and align briefcase-avatar/briefcase-avatar-alt in profiles.ftl, which also say "Werkmap" while briefcase-avatar-tooltip says "Aktetas")
+- `permissions-exceptions-popup-window2` — `browser/browser/preferences/permissions.ftl` — permissions-exceptions-popup-window3 (.title) vs permissions-exceptions-popup-window2 — preferences/permissions.ftl — "Allowed Websites" as "Toegestane websites" vs "Websites met toestemming"; and -window3 uses "doorleidingen" where the whole tree otherwise uses "omleidingen" for third-party redirects (site-permissions-unblock-redirect, browser.ftl pop-up strings).
+    - Suggest: `.title`
+- `content-blocking-cross-site-tracking-cookies-plus-isolate` — `browser/browser/preferences/preferences.ftl` — sitedata-option-block-cross-site-cookies (.label), content-blocking-cross-site-tracking-cookies-plus-isolate — preferences/preferences.ftl — same stray comma before "en".
+    - Suggest: `.label`
+- `pane-experimental-search-results-header` — `browser/browser/preferences/preferences.ftl` — "Proceed with Caution" rendered differently from pane-experimental-subtitle ("Ga voorzichtig verder").
+- `preferences-default-zoom` — `browser/browser/preferences/preferences.ftl` — preferences-default-zoom-label, preferences-default-zoom, preferences-default-zoom-select (.aria-label) — preferences/preferences.ftl — Current: "Standaard zoom" → Suggest: "Standaardzoom" (the warning strings already write it closed)
+    - Suggest: `"Standaardzoom"`
+- `preferences-text-zoom-override-warning` — `browser/browser/preferences/preferences.ftl` — preferences-text-zoom-override-warning, -warning2 (.message) — preferences/preferences.ftl — quote the option as "‘Alleen tekst zoomen’" but the actual checkbox preferences-zoom-text-only is "Alleen tekst inzoomen".
+    - Suggest: `-warning2`
+- `preferences-web-appearance-header` — `browser/browser/preferences/preferences.ftl` — appearance-group2 (.label), preferences-web-appearance-header, web-appearance-group (.aria-label) — preferences/preferences.ftl — definite singular implies one specific site. Current: "Uiterlijk van de website" → Suggest: "Uiterlijk van websites"
+    - Suggest: `"Uiterlijk van websites"`
+- `sitedata-option-block-cross-site-cookies` — `browser/browser/preferences/preferences.ftl` — sitedata-option-block-cross-site-cookies (.label), content-blocking-cross-site-tracking-cookies-plus-isolate — preferences/preferences.ftl — same stray comma before "en".
+    - Suggest: `.label`
+- `report-broken-site-panel-reason-adblocker2` — `browser/browser/reportBrokenSite.ftl` — report-broken-site-panel-reason-adblocker2 (.label), report-broken-site-panel-reason-adblocker-moz-box-button (.label) — reportBrokenSite.ftl — missing determiner. Current: "Website vroeg om adblocker uit te schakelen" → Suggest: "…om de adblocker uit te schakelen"
+    - Suggest: `"…om de adblocker uit te schakelen"`
+- `select-translations-panel-unsupported-language-message-known` — `browser/browser/translations.ftl` — select-translations-panel-unsupported-language-message-known vs translations-panel-error-unsupported-hint-known — translations.ftl — the same en-US sentence is rendered "Sorry, we ondersteunen nog geen { $language }." and "Sorry, we ondersteunen het { $language } nog niet." Pick one (the article form is the more standard Dutch construction with language names).
+- `translations-panel-error-unsupported-hint-known` — `browser/browser/translations.ftl` — select-translations-panel-unsupported-language-message-known vs translations-panel-error-unsupported-hint-known — translations.ftl — the same en-US sentence is rendered "Sorry, we ondersteunen nog geen { $language }." and "Sorry, we ondersteunen het { $language } nog niet." Pick one (the article form is the more standard Dutch construction with language names).
+- `unified-extensions-mb-blocklist-warning-single` — `browser/browser/unifiedExtensions.ftl` — unified-extensions-mb-blocklist-warning-single (.message), -single2 (.message) — browser/browser/unifiedExtensions.ftl — masculine pronoun for "extensie". Current: "U kunt hem inschakelen…" → Suggest: "U kunt deze inschakelen…" (the plural variants correctly use "ze")
+    - Suggest: `"U kunt deze inschakelen…"`
+- `unified-extensions-mb-blocklist-warning-single` — `browser/browser/unifiedExtensions.ftl` — unifiedExtensions.ftl — "risicovol" vs "riskant" in -single2 / -multiple2 and unified-extensions-item-messagebar-softblocked.
+    - Suggest: `-single2`
+- `addon-badge-line3` — `toolkit/toolkit/about/aboutAddons.ftl` — addon-badge-line3 (.title), addon-badge-line4 (.title) — toolkit/toolkit/about/aboutAddons.ftl — the dev comment states that "Mozilla" is hard-coded on purpose "because … we don't want forks to display 'by Fork'". nl adds "Firefox". Current: "Officiële door Mozilla Firefox gebouwde extensie." → Suggest: "Officiële door Mozilla gebouwde extensie."
+    - Suggest: `"Officiële door Mozilla gebouwde extensie."`
+- `details-notification-soft-blocked-extension-disabled` — `toolkit/toolkit/about/aboutAddons.ftl` — missing auxiliary. Suggest: "Deze extensie is beperkt wegens schending van het beleid…"
+    - Suggest: `.message`
+- `about-glean-about-data-explanation` — `toolkit/toolkit/about/aboutGlean.ftl` — about-glean-about-data-list-item-dictionary, about-glean-about-data-explanation — about/aboutGlean.ftl — the Glean Dictionary is a catalogue, not a library. Suggest: "{ -glean-brand-name } Dictionary"
+- `about-reader-color-scheme-light` — `toolkit/toolkit/about/aboutReader.ftl` — about/aboutReader.ftl — "Kleurenschema Licht" → "Kleurenschema licht"
+    - Suggest: `"Kleurenschema licht"`
+- `rights-intro-point-6` — `toolkit/toolkit/about/aboutRights.ftl` — missing linking -s-; aboutSupport.ftl correctly uses "inhoudsontsleutelingsmodules". Current: "inhouddecoderingsmodules" → Suggest: "inhoudsdecoderingsmodules"
+    - Suggest: `"inhoudsdecoderingsmodules"`
+- `experimental-features-abouthome-startup-cache-description` — `toolkit/toolkit/featuregates/features.ftl` — relative clause collapsed, so the cache rather than the document is said to be loaded. Suggest: "Een opstartbuffer voor het initiële about:home-document dat bij opstarten standaard wordt geladen."
+- `experimental-features-devtools-compatibility-panel-description` — `toolkit/toolkit/featuregates/features.ftl` — possessor swapped. en-US "your app's cross-browser compatibility status". Suggest: "…over de cross-browsercompatibiliteitsstatus van uw app"
+- `experimental-features-auto-pip` — `toolkit/toolkit/firefoxlabs/features.ftl` — Current: "…bij tabblad wisselen" → Suggest: "…bij wisselen van tabblad"
+    - Suggest: `"…bij wisselen van tabblad"`
 
 ---
 
@@ -44,9 +85,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 362 |
-| Strings | 18,225 |
-| Missing strings | 47 |
+| Files | 326 |
+| Strings | 16,053 |
+| Missing strings | 115 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,19 +104,20 @@ _Nothing retired._
 
 ### Completeness
 
-**47 strings** are not translated yet, concentrated in:
+**115 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 17
+- `browser/browser/newtab/newtab.ftl` — 31
+- `browser/browser/newtab/onboarding.ftl` — 19
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 16
 - `browser/browser/permissions.ftl` — 10
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 8
+- `browser/browser/ipProtection.ftl` — 7
+- `toolkit/toolkit/about/aboutSupport.ftl` — 5
+- `devtools/client/inspector.ftl` — 4
+- `browser/browser/newtab/asrouter.ftl` — 4
+- `dom/chrome/dom/dom.properties` — 3
 - `browser/browser/aiWindow.ftl` — 3
-- `browser/browser/sidebar.ftl` — 2
-- `browser/browser/preferences/preferences.ftl` — 2
-- `devtools/client/netmonitor.properties` — 1
-- `dom/chrome/accessibility/AccessFu.properties` — 1
-- `dom/chrome/dom/dom.properties` — 1
-- `browser/browser/aboutPolicies.ftl` — 1
-- `toolkit/toolkit/about/aboutAddons.ftl` — 1
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 3
+- `browser/browser/sync.ftl` — 2
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -85,12 +127,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-single` 891, `straight-double` 25, `curly-double` 9 | **curly-single** |
-| apostrophe | `typographic` 1137 | **typographic** |
-| ellipsis | `char` 464 | **char** |
-| dash | `en` 135 | **en** |
+| quotes | `curly-single` 807, `straight-double` 25, `curly-double` 9 | **curly-single** |
+| apostrophe | `typographic` 1013 | **typographic** |
+| ellipsis | `char` 389 | **char** |
+| dash | `en` 108 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `formal` 3100 | **formal** |
+| register | `formal` 2639 | **formal** |
 
 ---
 
@@ -100,23 +142,20 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (356)
+## 3. Open findings (329)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 12 |
-| 2 | Wrong content (says something other than the English) | 120 |
-| 3 | Degraded language (grammar, spelling, terminology) | 195 |
-| 4 | Cosmetic (typography, spacing) | 29 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 10 |
+| 2 | Wrong content (says something other than the English) | 111 |
+| 3 | Degraded language (grammar, spelling, terminology) | 181 |
+| 4 | Cosmetic (typography, spacing) | 27 |
 
 ### A. Functional, markup, variables & plurals
 
 - `about-logins-copy-password-os-auth-dialog-message-macosx` — `browser/browser/aboutLogins.ftl` — about-logins-edit-login-os-auth-dialog-message-macosx, about-logins-reveal-password-os-auth-dialog-message-macosx, about-logins-copy-password-os-auth-dialog-message-macosx — browser/browser/aboutLogins.ftl — the comment says to supply only the reason, which macOS prefixes with "Firefox is trying to …". These are imperatives, so the resulting sentence breaks. Current: "bewerk de opgeslagen aanmeld…
     - Source: `copy the saved password`
-    - Suggest: `…message2-macosx`
-- `about-logins-edit-login-os-auth-dialog-message-macosx` — `browser/browser/aboutLogins.ftl` — about-logins-edit-login-os-auth-dialog-message-macosx, about-logins-reveal-password-os-auth-dialog-message-macosx, about-logins-copy-password-os-auth-dialog-message-macosx — browser/browser/aboutLogins.ftl — the comment says to supply only the reason, which macOS prefixes with "Firefox is trying to …". These are imperatives, so the resulting sentence breaks. Current: "bewerk de opgeslagen aanmeld…
-    - Source: `edit the saved login`
     - Suggest: `…message2-macosx`
 - `about-logins-intro-import3` — `browser/browser/aboutLogins.ftl` — double space before the second link (… of <a data-l10n-name="import-file-link">).
     - Source: `Select the plus sign button above to add a password now. You can also <a data-l10n-name="import-browser-link">import passwords from another browser</a> or <a data-l10n-name="import-file-link">from a file</a>.`
@@ -135,9 +174,6 @@ _Nothing reported._
     - Source: `Start a group`
 - `return-to-amo-addon-title` — `browser/browser/newtab/onboarding.ftl` — double space around <img data-l10n-name="icon"/>.
     - Source: `Now let’s get you <img data-l10n-name="icon"/> <b>{ $addon-name }</b>.`
-- `addon-badge-line3` — `toolkit/toolkit/about/aboutAddons.ftl` — addon-badge-line3 (.title), addon-badge-line4 (.title) — toolkit/toolkit/about/aboutAddons.ftl — the dev comment states that "Mozilla" is hard-coded on purpose "because … we don't want forks to display 'by Fork'". nl adds "Firefox". Current: "Officiële door Mozilla Firefox gebouwde extensie." → Suggest: "Officiële door Mozilla gebouwde extensie."
-    - Source: `aria-label: { addon-badge-line3.title } title: Official extension built by Mozilla. Meets security and performance standards`
-    - Suggest: `"Officiële door Mozilla gebouwde extensie."`
 - `addon-badge-line4` — `toolkit/toolkit/about/aboutAddons.ftl` — addon-badge-line3 (.title), addon-badge-line4 (.title) — toolkit/toolkit/about/aboutAddons.ftl — the dev comment states that "Mozilla" is hard-coded on purpose "because … we don't want forks to display 'by Fork'". nl adds "Firefox". Current: "Officiële door Mozilla Firefox gebouwde extensie." → Suggest: "Officiële door Mozilla gebouwde extensie."
     - Source: `title: Official extension built by Mozilla. Meets security and performance standards`
     - Suggest: `"Officiële door Mozilla gebouwde extensie."`
@@ -154,8 +190,6 @@ _Nothing reported._
 - `other-backup-files-founds` — `browser/browser/backupSettings.ftl` — en-US "Note:". Current: "<b>Noot:</b>" → Suggest: "<b>Opmerking:</b>"
     - Source: `{$numberOfOtherBackupsFound ->} [one] <b>Note:</b> { $numberOfOtherBackupsFound } other backup file found [other] <b>Note:</b> { $numberOfOtherBackupsFound } other backup files found`
     - Suggest: `<b>`
-- `enable-devtools-popup-description2` — `browser/browser/browser.ftl` — en-US "Browser Tools menu"; nl points at the "Extra" menu. Suggest: "…via het menu Browserhulpmiddelen…"
-    - Source: `To use the F12 shortcut, first open DevTools via the Browser Tools menu.`
 - `customkeys-conflict-unusable-body` — `browser/browser/customkeys.ftl` — customkeys-conflict-unusable-title, customkeys-conflict-unusable-body — customkeys.ftl — "key" is a keyboard key, not a cryptographic key. Current: "Sleutel kan niet worden gebruikt" / "Deze sleutel wordt al gebruikt door…" → Suggest: "Toets kan niet worden gebruikt" / "Deze toets wordt al gebruikt door…" (cf. customkeys-conflict-confirm, which correctly uses "toets")
     - Source: `This key is already used by “{ $conflict }” and cannot be used.`
 - `customkeys-conflict-unusable-title` — `browser/browser/customkeys.ftl` — customkeys-conflict-unusable-title, customkeys-conflict-unusable-body — customkeys.ftl — "key" is a keyboard key, not a cryptographic key. Current: "Sleutel kan niet worden gebruikt" / "Deze sleutel wordt al gebruikt door…" → Suggest: "Toets kan niet worden gebruikt" / "Deze toets wordt al gebruikt door…" (cf. customkeys-conflict-confirm, which correctly uses "toets")
@@ -167,10 +201,6 @@ _Nothing reported._
 - `genai-prompts-summarize` — `browser/browser/genai.ftl` — "concise" became "descriptive", nearly reversing the instruction. Current: "…in exacte en beschrijvende woorden." → Suggest: "…in precieze en beknopte woorden."
     - Source: `label: Summarize value: Please summarize the selection using precise and concise language. Use headers and bulleted lists in the summary, to make it scannable. Maintain the meaning and factual accuracy.`
     - Suggest: `"…in precieze en beknopte woorden."`
-- `cfr-doorhanger-bookmark-fxa-body` — `browser/browser/newtab/asrouter.ftl` — "this bookmark" generalised. Suggest: "…dat u niet zonder deze bladwijzer zit…" (cf. -body-2)
-    - Source: `Great find! Now don’t be left without this bookmark on your mobile devices. Get Started with a { -fxaccount-brand-name }.`
-- `firefoxview-cfr-body-v2` — `browser/browser/newtab/asrouter.ftl` — firefoxview-cfr-body-v2, set-default-menu-message-row-layout-subtitle, set-default-menu-message-split-layout-subtitle ([other]), fxa-menu-message-sync-devices-secondary-text, fxa-menu-message-sync-devices-secondary-text2 — newtab/asrouter.ftl — "Get" rendered as "Ontvang" (= receive), not idiomatic for these objects. Suggest: "Haal … terug", "Geniet van …", "Surf sneller met …", "Beschik direct o…
-    - Source: `Get recently closed tabs back, plus seamlessly hop between devices with { -firefoxview-brand-name }.`
 - `fxa-menu-message-sync-devices-secondary-text` — `browser/browser/newtab/asrouter.ftl` — firefoxview-cfr-body-v2, set-default-menu-message-row-layout-subtitle, set-default-menu-message-split-layout-subtitle ([other]), fxa-menu-message-sync-devices-secondary-text, fxa-menu-message-sync-devices-secondary-text2 — newtab/asrouter.ftl — "Get" rendered as "Ontvang" (= receive), not idiomatic for these objects. Suggest: "Haal … terug", "Geniet van …", "Surf sneller met …", "Beschik direct o…
     - Source: `Instantly get your info — like bookmarks and passwords — everywhere you use { -brand-short-name }.`
 - `fxa-menu-message-sync-devices-secondary-text2` — `browser/browser/newtab/asrouter.ftl` — firefoxview-cfr-body-v2, set-default-menu-message-row-layout-subtitle, set-default-menu-message-split-layout-subtitle ([other]), fxa-menu-message-sync-devices-secondary-text, fxa-menu-message-sync-devices-secondary-text2 — newtab/asrouter.ftl — "Get" rendered as "Ontvang" (= receive), not idiomatic for these objects. Suggest: "Haal … terug", "Geniet van …", "Surf sneller met …", "Beschik direct o…
@@ -200,8 +230,6 @@ _Nothing reported._
     - Suggest: `"Starten"`
 - `create-backup-screen-2-easy-label` — `browser/browser/newtab/onboarding.ftl` — create-backup-screen-2-easy-label, mr2022-onboarding-import-header — newtab/onboarding.ftl — "setup" is configuration, not software installation. Current: "Eenvoudige instellingen" / "Razendsnelle installatie" → Suggest: "Eenvoudig instellen" / "Razendsnel instellen"
     - Source: `Easy setup`
-- `mr2022-onboarding-import-header` — `browser/browser/newtab/onboarding.ftl` — create-backup-screen-2-easy-label, mr2022-onboarding-import-header — newtab/onboarding.ftl — "setup" is configuration, not software installation. Current: "Eenvoudige instellingen" / "Razendsnelle installatie" → Suggest: "Eenvoudig instellen" / "Razendsnel instellen"
-    - Source: `Lightning-fast setup`
 - `onboarding-sign-up-description` — `browser/browser/newtab/onboarding.ftl` — "any device" weakened to "a device". Suggest: "…op een willekeurig apparaat…"
     - Source: `Sign up for an account and all of your important info — passwords, bookmarks, and more — will be securely stored and available when you sign in to any device.`
 - `restored-from-backup-success-title` — `browser/browser/newtab/onboarding.ftl` — possessive dropped. Suggest: "We zijn terug! Uw { -brand-short-name }-gegevens zijn hersteld."
@@ -212,8 +240,6 @@ _Nothing reported._
     - Source: `Prevent the user from bypassing certain security warnings.`
 - `policy-GoToIntranetSiteForSingleWordEntryInAddressBar` — `browser/browser/policies/policies-descriptions.ftl` — "single word entries" read as "a few words". Suggest: "…bij invoer van één woord in de adresbalk."
     - Source: `Force direct intranet site navigation instead of searching when typing single word entries in the address bar.`
-- `containers-icon-briefcase` — `browser/browser/preferences/containers.ftl` — "Briefcase" is the depicted object. Current: "Werkmap" → Suggest: "Aktetas" (and align briefcase-avatar/briefcase-avatar-alt in profiles.ftl, which also say "Werkmap" while briefcase-avatar-tooltip says "Aktetas")
-    - Source: `label: Briefcase`
 - `permissions-searchbox` — `browser/browser/preferences/permissions.ftl` — the box filters the website list. Current: "Website doorzoeken" → Suggest: "Websites zoeken"
     - Source: `placeholder: Search Website`
     - Suggest: `"Websites zoeken"`
@@ -237,16 +263,10 @@ _Nothing reported._
 - `preferences-etp-level-standard` — `browser/browser/preferences/preferences.ftl` — the word is repeated, so the parenthesis conveys nothing. Current: "Standaard (standaard)" → Suggest: "Standaard (standaardinstelling)"
     - Source: `description: Strong, reliable protections that work smoothly with most websites. label: Standard (default)`
     - Suggest: `"Standaard`
-- `preferences-web-appearance-header` — `browser/browser/preferences/preferences.ftl` — appearance-group2 (.label), preferences-web-appearance-header, web-appearance-group (.aria-label) — preferences/preferences.ftl — definite singular implies one specific site. Current: "Uiterlijk van de website" → Suggest: "Uiterlijk van websites"
-    - Source: `Website appearance`
-    - Suggest: `"Uiterlijk van websites"`
 - `web-appearance-group` — `browser/browser/preferences/preferences.ftl` — appearance-group2 (.label), preferences-web-appearance-header, web-appearance-group (.aria-label) — preferences/preferences.ftl — definite singular implies one specific site. Current: "Uiterlijk van de website" → Suggest: "Uiterlijk van websites"
     - Source: `aria-label: Website appearance`
     - Suggest: `"Uiterlijk van websites"`
 - `report-broken-site-panel-reason-adblocker-moz-box-button` — `browser/browser/reportBrokenSite.ftl` — report-broken-site-panel-reason-adblocker2 (.label), report-broken-site-panel-reason-adblocker-moz-box-button (.label) — reportBrokenSite.ftl — missing determiner. Current: "Website vroeg om adblocker uit te schakelen" → Suggest: "…om de adblocker uit te schakelen"
-    - Source: `label: Site asked to turn off ad blocker`
-    - Suggest: `"…om de adblocker uit te schakelen"`
-- `report-broken-site-panel-reason-adblocker2` — `browser/browser/reportBrokenSite.ftl` — report-broken-site-panel-reason-adblocker2 (.label), report-broken-site-panel-reason-adblocker-moz-box-button (.label) — reportBrokenSite.ftl — missing determiner. Current: "Website vroeg om adblocker uit te schakelen" → Suggest: "…om de adblocker uit te schakelen"
     - Source: `label: Site asked to turn off ad blocker`
     - Suggest: `"…om de adblocker uit te schakelen"`
 - `safeb-blocked-malware-page-error-desc-no-override-sumo` — `browser/browser/safebrowsing/blockedSite.ftl` — safeb-blocked-malware-page-short-desc, safeb-blocked-malware-page-error-desc-override-sumo, safeb-blocked-malware-page-error-desc-no-override-sumo — safebrowsing/blockedSite.ftl — kwaadwillend describes persons with ill intent, not software. Current: "kwaadwillende software" → Suggest: "kwaadaardige software"
@@ -304,7 +324,23 @@ _Nothing reported._
 - `inactive-css-no-principal-box` — `devtools/client/tooltips.ftl` — inactive-css-no-principal-box, -fix, -fix-1 — client/tooltips.ftl — CSS "box" as veld (field). Suggest: "primair vak"
     - Source: `<strong>{ $property }</strong> has no effect on this element since it does not create a principal box.`
     - Suggest: `-fix`
-- _…and 59 more; see `state/` for the full list._
+- `config-new-pref-number` — `mobile/android/mobile/android/aboutConfig.ftl` — a numeric value is getal. Current: "Voer een nummer in" → Suggest: "Voer een getal in"
+    - Source: `placeholder: Enter a number`
+    - Suggest: `"Voer een getal in"`
+- `certmgr-tab-ca` — `security/manager/security/certificates/certManager.ftl` — the tab lists certificate authorities. Current: "Organisaties" → Suggest: "Autoriteiten"
+    - Source: `label: Authorities`
+    - Suggest: `"Autoriteiten"`
+- `pkcs12-decode-err` — `security/manager/security/certificates/certManager.ftl` — "format" turned into "encrypted in the format". Suggest: "Het heeft niet de PKCS #12-indeling, is beschadigd, …"
+    - Source: `Failed to decode the file. Either it is not in PKCS #12 format, has been corrupted, or the password you entered was incorrect.`
+- `pippki-failed-pw-change` — `security/manager/security/pippki/pippki.ftl` — pippki-failed-pw-change, pippki-incorrect-pw, pippki-pw-erased-ok, pippki-pw-not-wanted, pippki-pw-change2empty-in-fips-mode — security/.../pippki.ftl — these belong to the device password dialog (change-device-password-window); en-US says plain "password", but nl says "hoofdwachtwoord" (Primary Password). Suggest: use "wachtwoord" in these five; keep "hoofdwachtwoord" only in the reset-primary-p…
+    - Source: `Unable to change password.`
+- `pippki-incorrect-pw` — `security/manager/security/pippki/pippki.ftl` — pippki-failed-pw-change, pippki-incorrect-pw, pippki-pw-erased-ok, pippki-pw-not-wanted, pippki-pw-change2empty-in-fips-mode — security/.../pippki.ftl — these belong to the device password dialog (change-device-password-window); en-US says plain "password", but nl says "hoofdwachtwoord" (Primary Password). Suggest: use "wachtwoord" in these five; keep "hoofdwachtwoord" only in the reset-primary-p…
+    - Source: `You did not enter the correct current password. Please try again.`
+- `pippki-pw-change2empty-in-fips-mode` — `security/manager/security/pippki/pippki.ftl` — pippki-failed-pw-change, pippki-incorrect-pw, pippki-pw-erased-ok, pippki-pw-not-wanted, pippki-pw-change2empty-in-fips-mode — security/.../pippki.ftl — these belong to the device password dialog (change-device-password-window); en-US says plain "password", but nl says "hoofdwachtwoord" (Primary Password). Suggest: use "wachtwoord" in these five; keep "hoofdwachtwoord" only in the reset-primary-p…
+    - Source: `You are currently in FIPS mode. FIPS requires a non-empty password.`
+- `pippki-pw-erased-ok` — `security/manager/security/pippki/pippki.ftl` — pippki-failed-pw-change, pippki-incorrect-pw, pippki-pw-erased-ok, pippki-pw-not-wanted, pippki-pw-change2empty-in-fips-mode — security/.../pippki.ftl — these belong to the device password dialog (change-device-password-window); en-US says plain "password", but nl says "hoofdwachtwoord" (Primary Password). Suggest: use "wachtwoord" in these five; keep "hoofdwachtwoord" only in the reset-primary-p…
+    - Source: `You have deleted your password. { pippki-pw-empty-warning }`
+- _…and 50 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -401,9 +437,6 @@ _Nothing reported._
     - Source: `Cross-site cookies in all windows`
 - `content-blocking-isolate-cross-site-cookies` — `browser/browser/preferences/preferences.ftl` — sitedata-option-block-cross-site-trackers, sitedata-option-block-cross-site-tracking-cookies, content-blocking-cross-site-cookies-in-all-windows2 vs sitedata-option-block-cross-site-cookies2, content-blocking-isolate-cross-site-cookies, content-blocking-all-cross-site-cookies — preferences/preferences.ftl — the same compound is hyphenated three different ways ("Cross-site-cookies", "Cross-site-tr…
     - Source: `Isolate cross-site cookies`
-- `preferences-default-zoom` — `browser/browser/preferences/preferences.ftl` — preferences-default-zoom-label, preferences-default-zoom, preferences-default-zoom-select (.aria-label) — preferences/preferences.ftl — Current: "Standaard zoom" → Suggest: "Standaardzoom" (the warning strings already write it closed)
-    - Source: `(value): Default zoom accesskey: z`
-    - Suggest: `"Standaardzoom"`
 - `preferences-default-zoom-label` — `browser/browser/preferences/preferences.ftl` — preferences-default-zoom-label, preferences-default-zoom, preferences-default-zoom-select (.aria-label) — preferences/preferences.ftl — Current: "Standaard zoom" → Suggest: "Standaardzoom" (the warning strings already write it closed)
     - Source: `accesskey: z label: Default zoom`
     - Suggest: `"Standaardzoom"`
@@ -444,9 +477,6 @@ _Nothing reported._
     - Source: `accesskey: t label: Separate Split View`
 - `select-translations-panel-from-label` — `browser/browser/translations.ftl` — its pair select-translations-panel-to-label is "Naar het", which carries the article the following language name needs. Current: "Van" → Suggest: "Van het" (cf. translations-panel-from-label / -to-label)
     - Source: `From`
-- `unified-extensions-mb-blocklist-warning-single` — `browser/browser/unifiedExtensions.ftl` — unified-extensions-mb-blocklist-warning-single (.message), -single2 (.message) — browser/browser/unifiedExtensions.ftl — masculine pronoun for "extensie". Current: "U kunt hem inschakelen…" → Suggest: "U kunt deze inschakelen…" (the plural variants correctly use "ze")
-    - Source: `heading: { $extensionName } disabled message: This extension violates Mozilla’s policies and has been disabled. You can enable it in settings, but this may be risky.`
-    - Suggest: `"U kunt deze inschakelen…"`
 - `about-debugging-setup-usb-step-enable-file-transfer` — `devtools/client/aboutdebugging.ftl` — about-debugging-setup-usb-step-enable-file-transfer, about-debugging-setup-usb-step-plug-device — devtools/client/aboutdebugging.ftl — two of five step instructions switch to the imperative. Suggest: align with -enable-dev-menu2, -enable-debug2, -enable-debug-firefox2 (infinitive).
     - Source: `Enable file transfer and ensure that your device is not in charging-only mode.`
 - `about-debugging-setup-usb-step-plug-device` — `devtools/client/aboutdebugging.ftl` — about-debugging-setup-usb-step-enable-file-transfer, about-debugging-setup-usb-step-plug-device — devtools/client/aboutdebugging.ftl — two of five step instructions switch to the imperative. Suggest: align with -enable-dev-menu2, -enable-debug2, -enable-debug-firefox2 (infinitive).
@@ -458,7 +488,12 @@ _Nothing reported._
     - Source: `Paused on property get`
 - `whypaused-set-watchpoint` — `devtools/shared/debugger-paused-reasons.ftl` — devtools/shared/debugger-paused-reasons.ftl — the get/set pair is broken: one translated, one keeps the English keyword. Suggest: "Gepauzeerd bij property get" / "Gepauzeerd bij property set"
     - Source: `Paused on property set`
-- _…and 29 more; see `state/` for the full list._
+- `xslt-var-already-set` — `dom/dom/xslt.ftl` — compound split, and "verbergt" for "shadows". Suggest: "Variabelebinding overschaduwt een variabelebinding binnen dezelfde sjabloon."
+    - Source: `Variable binding shadows variable binding within the same template.`
+- `certmgr-backup-all` — `security/manager/security/certificates/certManager.ftl` — dangling "alle". Current: "Reservekopie van alle maken…" → Suggest: "Reservekopie van alles maken…"
+    - Source: `accesskey: k label: Backup All…`
+    - Suggest: `"Reservekopie van alles maken…"`
+- _…and 22 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -485,8 +520,6 @@ _Nothing reported._
     - Suggest: `.label`
 - `menu-view-enter-full-screen` — `browser/browser/menubar.ftl` — "Schermvullende weergave" while its siblings menu-view-exit-full-screen / menu-view-full-screen use "Volledig scherm".
     - Source: `accesskey: F label: Enter Full Screen`
-- `newtab-custom-pocket-subtitle` — `browser/browser/newtab/newtab.ftl` — "samengesteld" vs "verzameld" in home-prefs-stories-header2.description, newtab-custom-stories-toggle.description.
-    - Source: `Exceptional content curated by { -pocket-brand-name }, part of the { -brand-product-name } family`
 - `newtab-custom-web-notifications-toggle` — `browser/browser/newtab/newtab.ftl` — newtab-custom-web-notifications-toggle (.description), newtab-topsites-hover-card-header — newtab/newtab.ftl — "Meldingen" vs "notificaties" in the same feature's own label.
     - Source: `description: Show notifications from your sites on their shortcuts label: Web notifications`
     - Suggest: `.description`
@@ -540,17 +573,12 @@ _Nothing reported._
     - Source: `Disable PDF.js, the built-in PDF viewer in { -brand-short-name }.`
 - `policy-PDFjs` — `browser/browser/policies/policies-descriptions.ftl` — policy-DisableBuiltinPDFViewer vs policy-PDFjs — "PDF-viewer" vs "PDF-lezer" in adjacent policies.
     - Source: `Disable or configure PDF.js, the built-in PDF viewer in { -brand-short-name }.`
-- `permissions-exceptions-popup-window2` — `browser/browser/preferences/permissions.ftl` — permissions-exceptions-popup-window3 (.title) vs permissions-exceptions-popup-window2 — preferences/permissions.ftl — "Allowed Websites" as "Toegestane websites" vs "Websites met toestemming"; and -window3 uses "doorleidingen" where the whole tree otherwise uses "omleidingen" for third-party redirects (site-permissions-unblock-redirect, browser.ftl pop-up strings).
-    - Source: `style: { permissions-window2.style } title: Allowed Websites - Pop-ups`
-    - Suggest: `.title`
 - `permissions-exceptions-popup-window3` — `browser/browser/preferences/permissions.ftl` — permissions-exceptions-popup-window3 (.title) vs permissions-exceptions-popup-window2 — preferences/permissions.ftl — "Allowed Websites" as "Toegestane websites" vs "Websites met toestemming"; and -window3 uses "doorleidingen" where the whole tree otherwise uses "omleidingen" for third-party redirects (site-permissions-unblock-redirect, browser.ftl pop-up strings).
     - Source: `style: { permissions-window2.style } title: Allowed Websites - Pop-ups and Third-Party Redirects`
     - Suggest: `.title`
 - `content-blocking-and-isolating-etp-warning-description-4` — `browser/browser/preferences/preferences.ftl` — preferences-etp-level-warning-message (.message), content-blocking-and-isolating-etp-warning-description-4 — preferences/preferences.ftl — the quoted "Fix site issues" reference appears in three forms and matches neither real label (content-blocking-baseline-exceptions-3 "Grote problemen met de website verhelpen", content-blocking-convenience-exceptions-3 "Kleine problemen met de website oplossen…
     - Source: `{ -brand-short-name } recommends using the “Fix site issues” settings to reduce broken site features and content. If a site seems broken, try turning off tracking protection for that site to load all content.`
     - Suggest: `.message`
-- `pane-experimental-search-results-header` — `browser/browser/preferences/preferences.ftl` — "Proceed with Caution" rendered differently from pane-experimental-subtitle ("Ga voorzichtig verder").
-    - Source: `{ -brand-short-name } Experiments: Proceed with Caution`
 - `preferences-doh-enabled-detailed-desc-1` — `browser/browser/preferences/preferences.ftl` — "aanbieder" where all sibling DoH strings use "provider".
     - Source: `Use the provider you select`
 - `preferences-doh-overview-custom` — `browser/browser/preferences/preferences.ftl` — preferences-doh-overview-default, preferences-doh-overview-custom, preferences-doh-radio-default (.description), preferences-doh-radio-custom — preferences/preferences.ftl — "secure DNS" as "Veilige DNS" while preferences-doh-default-desc, -strict-desc, permissions-exceptions-manage-doh-desc, preferences-doh-fallback-label and preferences-doh-default-detailed-desc-1 use "Beveiligde DNS".
@@ -570,9 +598,6 @@ _Nothing reported._
 - `preferences-etp-level-warning-message` — `browser/browser/preferences/preferences.ftl` — preferences-etp-level-warning-message (.message), content-blocking-and-isolating-etp-warning-description-4 — preferences/preferences.ftl — the quoted "Fix site issues" reference appears in three forms and matches neither real label (content-blocking-baseline-exceptions-3 "Grote problemen met de website verhelpen", content-blocking-convenience-exceptions-3 "Kleine problemen met de website oplossen…
     - Source: `heading: Heads up! Some sites may not work as expected. message: Some sites build trackers into their features or content. When { -brand-short-name } blocks them, the site looks broken. Try using “Fix site issue” or tur…`
     - Suggest: `.message`
-- `preferences-text-zoom-override-warning` — `browser/browser/preferences/preferences.ftl` — preferences-text-zoom-override-warning, -warning2 (.message) — preferences/preferences.ftl — quote the option as "‘Alleen tekst zoomen’" but the actual checkbox preferences-zoom-text-only is "Alleen tekst inzoomen".
-    - Source: `message: Warning: If you select “Zoom text only” and your default zoom is not set to 100%, it may cause some sites or content to break.`
-    - Suggest: `-warning2`
 - `related-settings-tabs-browsing-link` — `browser/browser/preferences/preferences.ftl` — points at a setting named "Browserindeling" (browser-layout-header2) but says "Browseropmaak aanpassen".
     - Source: `label: Customize browser layout`
     - Suggest: `.label`
@@ -589,16 +614,26 @@ _Nothing reported._
     - Source: `tooltiptext: Apply video game controller avatar`
 - `protections-panel-cross-site-tracking-cookies` — `browser/browser/protectionsPanel.ftl` — "advertentiebureaus" (ad agencies) where the identical paragraph cookie-tab-content in protections.ftl says "adverteerders".
     - Source: `These cookies follow you from site to site to gather data about what you do online. They are set by third parties such as advertisers and analytics companies.`
-- `select-translations-panel-unsupported-language-message-known` — `browser/browser/translations.ftl` — select-translations-panel-unsupported-language-message-known vs translations-panel-error-unsupported-hint-known — translations.ftl — the same en-US sentence is rendered "Sorry, we ondersteunen nog geen { $language }." and "Sorry, we ondersteunen het { $language } nog niet." Pick one (the article form is the more standard Dutch construction with language names).
-    - Source: `message: Sorry, we don’t support { $language } yet.`
-- `translations-panel-error-unsupported-hint-known` — `browser/browser/translations.ftl` — select-translations-panel-unsupported-language-message-known vs translations-panel-error-unsupported-hint-known — translations.ftl — the same en-US sentence is rendered "Sorry, we ondersteunen nog geen { $language }." and "Sorry, we ondersteunen het { $language } nog niet." Pick one (the article form is the more standard Dutch construction with language names).
-    - Source: `Sorry, we don’t support { $language } yet.`
-- `unified-extensions-mb-blocklist-warning-single` — `browser/browser/unifiedExtensions.ftl` — unifiedExtensions.ftl — "risicovol" vs "riskant" in -single2 / -multiple2 and unified-extensions-item-messagebar-softblocked.
-    - Source: `heading: { $extensionName } disabled message: This extension violates Mozilla’s policies and has been disabled. You can enable it in settings, but this may be risky.`
-    - Suggest: `-single2`
 - `about-debugging-setup-usb-disabled` — `devtools/client/aboutdebugging.ftl` — about-debugging-setup-usb-disabled, about-debugging-setup-usb-step-enable-debug2, about-debugging-sidebar — "debugging" vs "foutopsporing" for the same concept in one file.
     - Source: `Enabling this will download and add the required Android USB debugging components to { -brand-shorter-name }.`
-- _…and 46 more; see `state/` for the full list._
+- `about-debugging-setup-usb-step-enable-debug2` — `devtools/client/aboutdebugging.ftl` — about-debugging-setup-usb-disabled, about-debugging-setup-usb-step-enable-debug2, about-debugging-sidebar — "debugging" vs "foutopsporing" for the same concept in one file.
+    - Source: `Enable USB Debugging in the Android Developer Menu.`
+- `about-debugging-sidebar` — `devtools/client/aboutdebugging.ftl` — about-debugging-setup-usb-disabled, about-debugging-setup-usb-step-enable-debug2, about-debugging-sidebar — "debugging" vs "foutopsporing" for the same concept in one file.
+    - Source: `heading: Debugging`
+- `inspector-emulation-panel-reduced-motion-no-preference` — `devtools/client/inspector.ftl` — inspector-emulation-panel-reduced-motion-no-preference (.aria-label) — "verminderde bewegingsemulatie" vs "Beperkte-bewegingsemulatie" in -reduced-motion-reduce / -reduced-motion-none.
+    - Source: `(value): No preference aria-label: Enable no preference for reduced motion emulation`
+    - Suggest: `.aria-label`
+- `network-menu-summary-tooltip-transferred` — `devtools/client/netmonitor.ftl` — network-menu-summary-transferred vs network-menu-summary-tooltip-transferred — "overgebracht" vs "overgedragen".
+    - Source: `title: Size/transferred size of all requests`
+- `network-menu-summary-transferred` — `devtools/client/netmonitor.ftl` — network-menu-summary-transferred vs network-menu-summary-tooltip-transferred — "overgebracht" vs "overgedragen".
+    - Source: `{ $formattedContentSize } / { $formattedTransferredSize } transferred`
+- `styleeditor-visibility-toggle-system` — `devtools/client/styleeditor.ftl` — styleeditor-visibility-toggle-system (.tooltiptext) — "Systeemstylesheets" while the file uses "stijlblad(en)".
+    - Source: `tooltiptext: System style sheets can’t be disabled`
+    - Suggest: `.tooltiptext`
+- `options-show-user-agent-shadow-dom-tooltip` — `devtools/client/toolbox-options.ftl` — options-show-user-agent-shadow-dom-tooltip (.title) — "schaduw-DOM-elementen" while its own label keeps "Shadow DOM".
+    - Source: `title: Turning this on will show Shadow DOM elements handled by the browser.`
+    - Suggest: `.title`
+- _…and 39 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -640,18 +675,12 @@ _Nothing reported._
 - `policy-LegacyProfiles` — `browser/browser/policies/policies-descriptions.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
     - Source: `Disable the feature enforcing a separate profile for each installation.`
     - Suggest: `.message`
-- `content-blocking-cross-site-tracking-cookies-plus-isolate` — `browser/browser/preferences/preferences.ftl` — sitedata-option-block-cross-site-cookies (.label), content-blocking-cross-site-tracking-cookies-plus-isolate — preferences/preferences.ftl — same stray comma before "en".
-    - Source: `Cross-site tracking cookies, and isolate remaining cookies`
-    - Suggest: `.label`
 - `home-prefs-weather-description` — `browser/browser/preferences/preferences.ftl` — Superfluous sentence-final period (absent in en-US and in the sibling strings): home-prefs-weather-description (preferences/preferences.ftl; newtab-custom-weather-toggle.description has none), preferences-doh-radio-default (.description), preferences-doh-radio-off (.description), ip-protection-vpn-upgrade-link-1 (.description) vs ipprotection-locations-subview-promo.
     - Source: `Today’s forecast at a glance`
 - `preferences-doh-radio-default` — `browser/browser/preferences/preferences.ftl` — Superfluous sentence-final period (absent in en-US and in the sibling strings): home-prefs-weather-description (preferences/preferences.ftl; newtab-custom-weather-toggle.description has none), preferences-doh-radio-default (.description), preferences-doh-radio-off (.description), ip-protection-vpn-upgrade-link-1 (.description) vs ipprotection-locations-subview-promo.
     - Source: `description: Use secure DNS in regions where it’s available label: Default`
 - `preferences-doh-radio-off` — `browser/browser/preferences/preferences.ftl` — Superfluous sentence-final period (absent in en-US and in the sibling strings): home-prefs-weather-description (preferences/preferences.ftl; newtab-custom-weather-toggle.description has none), preferences-doh-radio-default (.description), preferences-doh-radio-off (.description), ip-protection-vpn-upgrade-link-1 (.description) vs ipprotection-locations-subview-promo.
     - Source: `description: Use your default DNS resolver label: Off`
-- `sitedata-option-block-cross-site-cookies` — `browser/browser/preferences/preferences.ftl` — sitedata-option-block-cross-site-cookies (.label), content-blocking-cross-site-tracking-cookies-plus-isolate — preferences/preferences.ftl — same stray comma before "en".
-    - Source: `label: Cross-site tracking cookies, and isolate other cross-site cookies`
-    - Suggest: `.label`
 - `inactive-css-first-letter-pseudo-element-not-supported` — `devtools/client/tooltips.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
     - Source: `<strong>{ $property }</strong> is not supported on ::first-letter pseudo-elements.`
     - Suggest: `.message`

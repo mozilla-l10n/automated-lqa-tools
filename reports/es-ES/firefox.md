@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-07 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
-| **Previous run** | 2026-09-03 @ `075eb543fd91` |
+| **Generated** | 2026-09-14 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e44f1369fb6d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8ffd279d75ec` |
+| **Previous run** | 2026-09-07 @ `3c0c507b8d42` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 80 of 17,268 |
+| **Strings reviewed this run** | 83 of 15,156 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,32 +18,56 @@ Also for es-ES: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (8)
 
-- `ipprotection-feature-introduction-link-text-privacy-2` — `browser/browser/ipProtection.ftl` — The link text scope was changed: the source links the whole phrase "{ -brand-product-name }'s built-in VPN" while the target links only the brand name.
-    - Current: `La VPN integrada de <a data-l10n-name="learn-more-vpn">{ -brand-product-name }</a>`
-    - Source: `<a data-l10n-name="learn-more-vpn">{ -brand-product-name }’s built-in VPN</a> helps protect your browsing. Choose from multiple locations to keep where you browse more private.`
-    - Suggest: `<a data-l10n-name="learn-more-vpn">La VPN integrada de { -brand-product-name }</a>`
-    - In en-US the anchor wraps "{ -brand-product-name }’s built-in VPN"; moving the tag so it wraps only the brand name changes the clickable text.
-- `permissions-exceptions-shutdown-clearing-window` — `browser/browser/preferences/permissions.ftl` — "on Shutdown" refers to closing Firefox, not shutting down the system.
-    - Current: `Excepciones: Borrar el historial al apagar el sistema`
-    - Source: `style: { permissions-window2.style } title: Exceptions - Clear History on Shutdown`
-    - Suggest: `Excepciones: Borrar el historial al cerrar`
-    - The related description string clarifies it is "when { -brand-short-name } clears history on close"; "apagar el sistema" wrongly says the operating system shuts down.
-- `passports-no-passports-stored-message` — `browser/browser/preferences/preferences.ftl` — State description rendered as a past-tense event instead of a status.
-    - Current: `No se añadieron pasaportes`
-    - Source: `label: No passports added`
-    - Suggest: `No hay pasaportes añadidos`
-    - en-US "No passports added" is an empty-state status message; the preterite "No se añadieron" reports a past action rather than the current absence of stored passports.
-- `forms-primary-pw-on-2` — `browser/browser/preferences/preferences.ftl` — "Primary password" translated as "contraseña maestra" instead of the current term "contraseña principal".
-    - Current: `La contraseña maestra está <strong>ACTIVADA</strong>`
-    - Source: `Primary password is <strong>ON</strong>`
-    - Suggest: `La contraseña principal está <strong>ACTIVADA</strong>`
-    - Mozilla renamed "master password" to "primary password"; es-ES uses "contraseña principal" for "primary password", so this reintroduces the deprecated term.
+- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Qué hay de nuevo” but the string it names, `releaseNotes-link`, reads “Novedades”
+    - Current: `Anular la página "Qué hay de nuevo" posterior a la actualización. Deje esta política en blanco si quiere desactivar la página posterior a la actualización.`
+    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
+    - Suggest: `Novedades`
+    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `containers-sites-card-header` — `browser/browser/preferences/preferences.ftl` — Typo: "Elia" instead of "Elija".
+    - Current: `Elia un contenedor para un sitio`
+    - Source: `description: Choose a container for a site and { -brand-short-name } will use it every time the site opens. label: Site-specific containers`
+    - Suggest: `Elija un contenedor para un sitio`
+    - "Choose a container" should be "Elija un contenedor"; "Elia" is not a Spanish word.
+- `taskbar-tabs-media-callout-title-v3` — `browser/browser/featureCallout.ftl` — "Keep your streaming" rendered as "sus vídeos", narrowing/changing the meaning.
+    - Current: `Mantenga sus vídeos en la barra de tareas`
+    - Source: `Keep your streaming in your taskbar`
+    - Suggest: `Mantenga sus sitios de streaming en la barra de tareas`
+    - The en-US refers to streaming (media) sites, not to the user's videos; the subtitle also refers to "sitios de medios".
+- `site-rules-status-heading` — `browser/browser/ipProtection.ftl` — "Your rule" translated as "Regla personalizada" (custom rule).
+    - Current: `Regla personalizada`
+    - Source: `Your rule`
+    - Suggest: `Su regla`
+    - The source heading is "Your rule", referring to the user's rule for this site, not "custom rule".
+- `containers-new-tab-check2` — `browser/browser/preferences/preferences.ftl` — Label uses informal "Selecciona" while the description in the same string uses formal address.
+    - Current: `Selecciona un contenedor para cada pestaña nueva`
+    - Source: `accesskey: S description: This will open the containers menu every time you press the open new tab button. label: Select a container for each new tab`
+    - Suggest: `Seleccione un contenedor para cada pestaña nueva`
+    - The locale convention is formal (usted); the accompanying description uses "presione", so the informal imperative is inconsistent within the same string.
+- `refresh-profile-infobar-button` — `browser/browser/newtab/asrouter.ftl` — "Refresh { -brand-short-name }" is rendered as "Reiniciar" (restart) instead of the established "Restaurar" for profile refresh.
+    - Current: `Reiniciar { -brand-short-name }…`
+    - Source: `(value): Refresh { -brand-short-name }… accesskey: e`
+    - Suggest: `Restaurar { -brand-short-name }…`
+    - The button triggers the profile refresh (reset) feature, not a restart; "Reiniciar" tells the user the browser will simply be restarted, which is a different action. Firefox es-ES uses "Restaurar { -brand-short-name }" for Refresh.
+- `launch-on-login-autostart-infobar-message` — `browser/browser/newtab/asrouter.ftl` — Incorrect verb mood/agreement: "se inicia cuando usted inicie sesión" mixes indicative and subjunctive.
+    - Current: `Ahora { -brand-short-name } se inicia cuando usted inicie sesión en Windows.`
+    - Source: `{ -brand-short-name } now starts up when you sign in to Windows. You can always change this later in settings.`
+    - Suggest: `Ahora { -brand-short-name } se inicia cuando inicia sesión en Windows.`
+    - The en-US states a present habitual fact ("starts up when you sign in"); the Spanish subjunctive "inicie" after the indicative main clause is ungrammatical in this context.
+- `pdfjs-digital-signature-properties-timestamp` — `toolkit/toolkit/pdfviewer/viewer.ftl` — "Timestamp" translated as "Fecha" (date), losing the time component.
+    - Current: `Fecha: { $dateObj }`
+    - Source: `Timestamp: { $dateObj }`
+    - Suggest: `Marca de tiempo: { $dateObj }`
+    - The source label is "Timestamp", which includes the signing time, not just the date.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `neterror-net-offline` — `toolkit/toolkit/neterror/netError.ftl` — `neterror-net-offline` quotes “Probar de nuevo” but the string it names, `neterror-try-again-button`, reads “Reintentar”
+    - Current: `Presione “Probar de nuevo” para cambiar al modo con conexión y recargar la página.`
+    - Source: `Press “Try Again” to switch to online mode and reload the page.`
+    - Suggest: `Reintentar`
+    - In the source this string quotes “Try Again”, which is exactly the value of `neterror-try-again-button` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -53,9 +77,13 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (2)
 
-_Nothing retired._
+- `confirm-on-quit-with-key` — `browser/browser/preferences/preferences.ftl` — Access key `b` of `confirm-on-quit-with-key` is not present in its label
+    - Current: `b`
+    - The label is “Confirmar antes de salir con { $quitKey }”. An access key not in the label cannot be underlined and is unreachable by keyboard.
+- `protections-panel-content-blocking-breakage-report-view-send-report` — `browser/browser/protectionsPanel.ftl` — protections-panel-content-blocking-breakage-report-view-send-report "Enviar reporte" vs the file's "informe" → informe.
+    - Suggest: `informe.`
 
 ---
 
@@ -63,11 +91,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 355 |
-| Strings | 17,268 |
-| Missing strings | 1,004 |
+| Files | 318 |
+| Strings | 15,156 |
+| Missing strings | 1,012 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 7 |
+| Files absent from the locale | 8 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -76,32 +104,33 @@ _Nothing retired._
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 3 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 13 |
+| Access keys not in their label | 12 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 106 |
+| Typography deviations from this locale's own norm | 93 |
 
 ### Completeness
 
-**1,004 strings** are not translated yet, concentrated in:
+**1,012 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 172
+- `browser/browser/newtab/newtab.ftl` — 194
 - `browser/browser/aiWindow.ftl` — 134
-- `browser/browser/appmenu.ftl` — 67
+- `browser/browser/appmenu.ftl` — 65
 - `browser/browser/aiWindowContent.ftl` — 51
+- `browser/browser/newtab/onboarding.ftl` — 42
 - `browser/browser/browser.ftl` — 30
+- `toolkit/toolkit/global/theme-picker.ftl` — 29
 - `devtools/client/toolbox-options.ftl` — 28
-- `toolkit/toolkit/global/theme-picker.ftl` — 28
-- `toolkit/services/aboutSyncLog.ftl` — 26
+- `toolkit/services/aboutSyncLog.ftl` — 28
 - `toolkit/toolkit/about/url-classifier.ftl` — 26
-- `toolkit/toolkit/pdfviewer/viewer.ftl` — 24
 - `browser/browser/firefoxView.ftl` — 23
-- `browser/browser/newtab/onboarding.ftl` — 23
+- `browser/browser/customkeys.ftl` — 21
 
 **Files absent from the locale:**
 
 - `browser/browser/preferences/browserIcon.ftl`
 - `browser/browser/sharePanel.ftl`
 - `toolkit/services/aboutSyncLog.ftl`
+- `toolkit/toolkit/about/pdfFeaturesNotification.ftl`
 - `toolkit/toolkit/global/mozPromo.ftl`
 - `toolkit/toolkit/global/rosettaNotification.ftl`
 - `toolkit/toolkit/global/theme-picker.ftl`
@@ -115,31 +144,31 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 498, `straight-double` 150, `curly-single` 44, `guillemet` 1 | **curly-double** |
-| apostrophe | `typographic` 59, `straight` 76 | _mixed_ |
-| ellipsis | `char` 442 | **char** |
-| dash | `em` 80, `en` 1 | **em** |
-| nbsp | `total` 9, `before-punctuation` 3, `space-before-punctuation` 6 | _mixed_ |
-| inverted marks | `open-question` 351, `open-exclamation` 79 | **open-question** |
-| register | `informal` 4, `formal` 1378 | **formal** |
+| quotes | `curly-double` 444, `straight-double` 136, `curly-single` 42, `guillemet` 1 | **curly-double** |
+| apostrophe | `typographic` 57, `straight` 70 | _mixed_ |
+| ellipsis | `char` 370 | **char** |
+| dash | `em` 55, `en` 1 | **em** |
+| nbsp | `total` 8, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
+| inverted marks | `open-question` 296, `open-exclamation` 66 | **open-question** |
+| register | `informal` 4, `formal` 1169 | **formal** |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **typography — 106 strings** — 106 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
-    - Affected: `BlockMixedActiveContent`, `BlockMixedDisplayContent`, `BlockTopLevelDataURINavigation`, `CORSPreflightDidNotSucceed3`, `CSPROViolation`, `CSPROViolationWithURI`, `CookieLaxForced2`, `CookieOversize`, `CookieRejectedByPermissionManager`, `CookieRejectedInvalidCharName`, `FullscreenDeniedContainerNotAllowed`, `ImageMapCircleNegativeRadius` …and 92 more
+- **typography — 93 strings** — 93 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
+    - Affected: `BlockMixedActiveContent`, `BlockMixedDisplayContent`, `BlockTopLevelDataURINavigation`, `CORSPreflightDidNotSucceed3`, `CookieLaxForced2`, `CookieOversize`, `CookieRejectedByPermissionManager`, `CookieRejectedInvalidCharName`, `FullscreenDeniedContainerNotAllowed`, `ImageMapCircleNegativeRadius`, `ImageMapCircleWrongNumberOfCoords`, `ImageMapPolyOddNumberOfCoords` …and 81 more
 
 ---
 
-## 3. Open findings (31)
+## 3. Open findings (36)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 18 |
-| 3 | Degraded language (grammar, spelling, terminology) | 13 |
+| 2 | Wrong content (says something other than the English) | 20 |
+| 3 | Degraded language (grammar, spelling, terminology) | 16 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -177,10 +206,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `T`
     - Source: `accesskey: T label: More Troubleshooting Information`
     - The label is “Más información para solucionar problemas”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `confirm-on-quit-with-key` — `browser/browser/preferences/preferences.ftl` — Access key `b` of `confirm-on-quit-with-key` is not present in its label
-    - Current: `b`
-    - Source: `accesskey: b label: Confirm before quitting with { $quitKey }`
-    - The label is “Confirmar antes de salir con { $quitKey }”. An access key not in the label cannot be underlined and is unreachable by keyboard.
 - `forms-primary-pw-change` — `browser/browser/preferences/preferences.ftl` — Access key `P` of `forms-primary-pw-change` is not present in its label
     - Current: `P`
     - Source: `accesskey: P label: Change Primary Password…`
@@ -204,14 +229,44 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `taskbar-tabs-media-callout-title-v3` — `browser/browser/featureCallout.ftl` — "Keep your streaming" rendered as "sus vídeos", narrowing/changing the meaning.
+    - Current: `Mantenga sus vídeos en la barra de tareas`
+    - Source: `Keep your streaming in your taskbar`
+    - Suggest: `Mantenga sus sitios de streaming en la barra de tareas`
+    - The en-US refers to streaming (media) sites, not to the user's videos; the subtitle also refers to "sitios de medios".
+- `site-rules-status-heading` — `browser/browser/ipProtection.ftl` — "Your rule" translated as "Regla personalizada" (custom rule).
+    - Current: `Regla personalizada`
+    - Source: `Your rule`
+    - Suggest: `Su regla`
+    - The source heading is "Your rule", referring to the user's rule for this site, not "custom rule".
+- `refresh-profile-infobar-button` — `browser/browser/newtab/asrouter.ftl` — "Refresh { -brand-short-name }" is rendered as "Reiniciar" (restart) instead of the established "Restaurar" for profile refresh.
+    - Current: `Reiniciar { -brand-short-name }…`
+    - Source: `(value): Refresh { -brand-short-name }… accesskey: e`
+    - Suggest: `Restaurar { -brand-short-name }…`
+    - The button triggers the profile refresh (reset) feature, not a restart; "Reiniciar" tells the user the browser will simply be restarted, which is a different action. Firefox es-ES uses "Restaurar { -brand-short-name }" for Refresh.
 - `permissions-exceptions-shutdown-clearing-window` — `browser/browser/preferences/permissions.ftl` — "on Shutdown" refers to closing Firefox, not shutting down the system.
     - Current: `Excepciones: Borrar el historial al apagar el sistema`
     - Source: `style: { permissions-window2.style } title: Exceptions - Clear History on Shutdown`
     - Suggest: `Excepciones: Borrar el historial al cerrar`
     - The related description string clarifies it is "when { -brand-short-name } clears history on close"; "apagar el sistema" wrongly says the operating system shuts down.
+- `pdfjs-digital-signature-properties-timestamp` — `toolkit/toolkit/pdfviewer/viewer.ftl` — "Timestamp" translated as "Fecha" (date), losing the time component.
+    - Current: `Fecha: { $dateObj }`
+    - Source: `Timestamp: { $dateObj }`
+    - Suggest: `Marca de tiempo: { $dateObj }`
+    - The source label is "Timestamp", which includes the signing time, not just the date.
 
 ### C. Grammar, agreement & spelling
 
+- `launch-on-login-autostart-infobar-message` — `browser/browser/newtab/asrouter.ftl` — Incorrect verb mood/agreement: "se inicia cuando usted inicie sesión" mixes indicative and subjunctive.
+    - Current: `Ahora { -brand-short-name } se inicia cuando usted inicie sesión en Windows.`
+    - Source: `{ -brand-short-name } now starts up when you sign in to Windows. You can always change this later in settings.`
+    - Suggest: `Ahora { -brand-short-name } se inicia cuando inicia sesión en Windows.`
+    - The en-US states a present habitual fact ("starts up when you sign in"); the Spanish subjunctive "inicie" after the indicative main clause is ungrammatical in this context.
+- `containers-sites-card-header` — `browser/browser/preferences/preferences.ftl` — Typo: "Elia" instead of "Elija".
+    - Current: `Elia un contenedor para un sitio`
+    - Source: `description: Choose a container for a site and { -brand-short-name } will use it every time the site opens. label: Site-specific containers`
+    - Suggest: `Elija un contenedor para un sitio`
+    - "Choose a container" should be "Elija un contenedor"; "Elia" is not a Spanish word.
 - `passports-no-passports-stored-message` — `browser/browser/preferences/preferences.ftl` — State description rendered as a past-tense event instead of a status.
     - Current: `No se añadieron pasaportes`
     - Source: `label: No passports added`
@@ -227,6 +282,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Scan the QR code to download { -brand-product-name } for mobile. Once installed, select “Sync to mobile” to access your passwords, bookmarks, and more on the go.`
     - Suggest: `Sincronización con el móvil`
     - In the source this string quotes “Sync to mobile”, which is exactly the value of `sync-to-mobile-button-label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Qué hay de nuevo” but the string it names, `releaseNotes-link`, reads “Novedades”
+    - Current: `Anular la página "Qué hay de nuevo" posterior a la actualización. Deje esta política en blanco si quiere desactivar la página posterior a la actualización.`
+    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
+    - Suggest: `Novedades`
+    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `connection-proxy-socks-remote-dns` — `browser/browser/preferences/connection.ftl` — SOCKS DNS — connection-proxy-socks-remote-dns "Proxy DNS al usar SOCKS v4" vs -socks4-remote-dns "DNS proxy usando SOCKS v5".
     - Source: `accesskey: D label: Proxy DNS when using SOCKS v5`
     - Suggest: `-socks4-remote-dns`
@@ -235,14 +295,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `message: To make sure this change is included in your backups, open each profile and choose “Backup now” in Settings.`
     - Suggest: `Hacer ahora copia de seguridad`
     - In the source this string quotes “Backup now”, which is exactly the value of `settings-data-backup-trigger-button` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `containers-new-tab-check2` — `browser/browser/preferences/preferences.ftl` — Label uses informal "Selecciona" while the description in the same string uses formal address.
+    - Current: `Selecciona un contenedor para cada pestaña nueva`
+    - Source: `accesskey: S description: This will open the containers menu every time you press the open new tab button. label: Select a container for each new tab`
+    - Suggest: `Seleccione un contenedor para cada pestaña nueva`
+    - The locale convention is formal (usted); the accompanying description uses "presione", so the informal imperative is inconsistent within the same string.
 - `forms-primary-pw-on-2` — `browser/browser/preferences/preferences.ftl` — "Primary password" translated as "contraseña maestra" instead of the current term "contraseña principal".
     - Current: `La contraseña maestra está <strong>ACTIVADA</strong>`
     - Source: `Primary password is <strong>ON</strong>`
     - Suggest: `La contraseña principal está <strong>ACTIVADA</strong>`
     - Mozilla renamed "master password" to "primary password"; es-ES uses "contraseña principal" for "primary password", so this reintroduces the deprecated term.
-- `protections-panel-content-blocking-breakage-report-view-send-report` — `browser/browser/protectionsPanel.ftl` — protections-panel-content-blocking-breakage-report-view-send-report "Enviar reporte" vs the file's "informe" → informe.
-    - Source: `label: Send Report`
-    - Suggest: `informe.`
 - `tracking-protection-icon-active` — `browser/browser/siteProtections.ftl` — "entre sitios" vs "sitios cruzados" (tracking-protection-icon-active and prefs). Unify to entre sitios.
     - Source: `Blocking social media trackers, cross-site tracking cookies, and fingerprinters.`
 - `manifest-empty-intro2` — `devtools/client/application.ftl` — manifest — "Manifesto" (manifest-view-header, manifest-loading, etc.) vs "Manifiesto" (manifest-empty-intro2) → Manifiesto.
@@ -256,11 +318,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `certificate-viewer-subject-name` — `toolkit/toolkit/about/certviewer.ftl` — Subject (cert) — "asunto" (certificate-viewer-subject-name/-key-id) vs "sujeto" (-subject-alt-names).
     - Source: `Subject Name`
     - Suggest: `-key-id`
-- `neterror-net-offline` — `toolkit/toolkit/neterror/netError.ftl` — `neterror-net-offline` quotes “Probar de nuevo” but the string it names, `neterror-try-again-button`, reads “Reintentar”
-    - Current: `Presione “Probar de nuevo” para cambiar al modo con conexión y recargar la página.`
-    - Source: `Press “Try Again” to switch to online mode and reload the page.`
-    - Suggest: `Reintentar`
-    - In the source this string quotes “Try Again”, which is exactly the value of `neterror-try-again-button` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `primary-password-prompt-message` — `toolkit/toolkit/passwordmgr/passwordmgr.ftl` — Primary Password — contraseña maestra (in failed-pp-change, incorrect-pp, primary-password-, remove-primary-password, primary-password-prompt-message) vs contraseña principal (settings-pp-erased-ok, settings-pp-not-wanted). Unify to contraseña principal.
     - Current: `contraseña maestra`
     - Source: `Please enter your Primary Password.`
@@ -296,8 +353,9 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (112)
+### Fixed to date (113)
 
+- `neterror-net-offline` — `toolkit/toolkit/neterror/netError.ftl` — fixed 2026-09-14
 - `manifest-loading` — `devtools/client/application.ftl` — fixed 2026-09-03
 - `about-logins-error-message-duplicate-login-with-link` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-24
 - `about-logins-export-password-os-auth-dialog-message-macosx` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-24
@@ -337,4 +395,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `inactive-css-not-grid-or-flex-item` — `devtools/client/tooltips.ftl` — fixed 2026-08-24
 - `cert-format-pkcs7-chain` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-08-24
 - `pippki-incorrect-pw` — `security/manager/security/pippki/pippki.ftl` — fixed 2026-08-24
-- `protected-auth-alert` — `security/manager/security/pippki/pippki.ftl` — fixed 2026-08-24

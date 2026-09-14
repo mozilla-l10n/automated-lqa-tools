@@ -1,18 +1,46 @@
 # Firefox (desktop + shared toolkit/dom strings) — l10n QA
 
-- **Generated:** 2026-09-07
+- **Generated:** 2026-09-14
 - **Locales tracked:** 20 (20 with recorded state)
-- **Findings:** 6,013 raised, 2,079 fixed (34%), 3,741 open
+- **Findings:** 6,186 raised, 2,096 fixed (33%), 3,463 open
 - **Closed by a person:** 19 dismissed, 15 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
 ## Read these first
 
-### Reads as a deliberate edit (6)
+### Reads as a deliberate edit (16)
 
 The translation makes the product assert something the en-US never said. Nothing here says the change was intended — that cannot be read off the text, which is exactly the problem, because a user cannot read it off either.
 
+- **`de`** `pdf-features-notification-message` — `toolkit/toolkit/about/pdfFeaturesNotification.ftl`
+    - "Split" (PDFs aufteilen/teilen in Einzeldokumente) is rendered as "PDFs teilen", which in German primarily means "share".
+    - Current: `PDFs teilen, zusammenführen und mehr.`
+    - Suggest: `PDFs aufteilen, zusammenführen und mehr.`
+- **`fr`** `fxa-menu-signed-out-description` — `browser/browser/sync.ftl`
+    - "You’re signed out" is rendered as "Déconnexion réussie" ("Sign-out successful"), asserting a successful action rather than stating the current state.
+    - Current: `Déconnexion réussie`
+    - Suggest: `Vous êtes déconnecté·e`
+- **`fr`** `pdf-features-notification` — `toolkit/toolkit/about/pdfFeaturesNotification.ftl`
+    - aria-label pluralized and heading adds "à télécharger" (to download), which the source never says.
+    - Current: `Les fichiers PDF sont encore plus faciles à télécharger en { -brand-short-name }.`
+    - Suggest: `Les fichiers PDF sont encore plus faciles à utiliser dans { -brand-short-name }.`
+- **`hu`** `ip-protection-site-rules-button` — `browser/browser/ipProtection.ftl`
+    - The description reverses who needs the extra privacy, asserting that the sites must provide privacy rather than that the user wants extra privacy on them.
+    - Current: `Állítson be szabályokat azokhoz a webhelyekhez, amelyeknek fokozott adatvédelmet kell biztosítaniuk, vagy ki kell kapcsolni a VPN-t.`
+    - Suggest: `Állítson be szabályokat azokhoz a webhelyekhez, amelyeknél fokozott adatvédelemre van szükség, vagy amelyeknél ki kell kapcsolni a VPN-t.`
+- **`hu`** `autofill-delete-payment-method-os-prompt-windows` — `toolkit/toolkit/formautofill/formAutofill.ftl`
+    - "delete stored payment method information" was rendered as "akar használni" (wants to use) instead of "törölni akarja" (wants to delete).
+    - Current: `A { -brand-short-name } tárolt fizetésimód-információkat akar használni.`
+    - Suggest: `A { -brand-short-name } törölni akarja a tárolt fizetésimód-információkat.`
+- **`ja`** `refresh-reinstalled-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl`
+    - Adds a claim about a leftover previous profile that the en-US does not make.
+    - Current: `{ -brand-short-name } が再インストールされ前回のプロファイルが残っています。新品の状態にリフレッシュしますか？`
+    - Suggest: `{ -brand-short-name } を再インストールされたようです。新品のような状態にクリーンアップしましょうか？`
+- **`ja`** `onboarding-refresh-fro-import-header` — `browser/browser/newtab/onboarding.ftl`
+    - "Bring in your data" (import data) is rendered as "We protect your personal data".
+    - Current: `個人データを守ります`
+    - Suggest: `データを引き継ぎましょう`
 - **`ja`** `speech-recognition-model-download-message` — `browser/browser/permissions.ftl`
     - "the audio never leaves your device" is rendered as "the audio only remains on this device", and "~{ $sizeMB } MB" (approximately) is rendered as "{ $sizeMB } MB or less".
     - Current: `音声はこの端末にしか残りません。セットアップを続けると、音声認識モデル ({ $sizeMB } MB 以下) のデータがダウンロードされます。`
@@ -29,6 +57,14 @@ The translation makes the product assert something the en-US never said. Nothing
     - "is getting a new look" (future/ongoing) translated as a completed change "Обновлён внешний вид".
     - Current: `<strong>Обновлён внешний вид { -brand-product-name }.</strong>`
     - Suggest: `<strong>У { -brand-product-name } скоро появится новый облик.</strong>`
+- **`sl`** `refresh-unused-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl`
+    - "clean it up" rendered as "očistiti navlake" (clean it of junk/clutter), adding a claim the source does not make.
+    - Current: `Ga želite očistiti navlake, da bo deloval kot nov?`
+    - Suggest: `Ga želite počistiti, da bo deloval kot nov?`
+- **`sl`** `onboarding-refresh-terms-of-use-with-links` — `browser/browser/newtab/onboarding.ftl`
+    - The purpose clause is mistranslated so that the sentence reads "To improve the { -brand-product-name } browser" and merges the subject, changing which product is being improved and who sends the data.
+    - Current: `Za izboljšanje brskalnika { -brand-product-name } { -vendor-short-name } pošilja diagnostične podatke in podatke o uporabi.`
+    - Suggest: `Za izboljšanje brskalnika { -brand-product-name } pošilja { -vendor-short-name } diagnostične podatke in podatke o uporabi.`
 - **`tr`** `newtab-privacy-across-sites` — `browser/browser/newtab/newtab.ftl`
     - Turkish adds a claim that Firefox protected the user, which the source does not say.
     - Current: `{ $count } sitede sizi koruduk`
@@ -37,12 +73,16 @@ The translation makes the product assert something the en-US never said. Nothing
     - "protection by default" rendered as "protection anytime, anywhere", dropping the default-setting meaning.
     - Current: `{ -brand-short-name } demek her an, her yerde korunma demektir.`
     - Suggest: `{ -brand-short-name } demek varsayılan olarak korunma demektir.`
+- **`tr`** `autocomplete-remove-password-os-auth-dialog-message-win` — `toolkit/toolkit/main-window/autocomplete.ftl`
+    - Turkish says "we can better protect your accounts", whereas the source says this helps protect the security of your accounts (the action helps, not the vendor).
+    - Current: `Bu sayede hesaplarınızı daha güvenli bir şekilde koruyabiliriz.`
+    - Suggest: `Bu, hesaplarınızın güvenliğini korumaya yardımcı olur.`
 
-### Broken output — impact 1 (329)
+### Broken output — impact 1 (286)
 
 The value does not render as intended: a blank string, broken markup, a variable the source never passes.
 
-`id` 83 · `cs` 53 · `es-AR` 50 · `ru` 46 · `hu` 31 · `fy-NL` 13 · `nl` 12 · `pt-BR` 12 · `pl` 10 · `ja` 8 · `en-GB` 4 · `zh-CN` 4 · `tr` 3
+`id` 66 · `es-AR` 48 · `ru` 43 · `cs` 41 · `hu` 26 · `fy-NL` 12 · `pt-BR` 11 · `nl` 10 · `pl` 10 · `ja` 8 · `en-GB` 4 · `zh-CN` 4 · `tr` 3
 
 - **`cs`** `appmenuitem-new-ai-window` — `browser/browser/aiWindow.ftl`
     - `appmenuitem-new-ai-window` (`.value`) calls `-smart-window-brand-name` with ['capitalization'], but that term selects on ['case', 'plural-form']
@@ -96,34 +136,34 @@ The value does not render as intended: a blank string, broken markup, a variable
 - **`nl`** `about-logins-copy-password-os-auth-dialog-message-macosx` — `browser/browser/aboutLogins.ftl`
     - about-logins-edit-login-os-auth-dialog-message-macosx, about-logins-reveal-password-os-auth-dialog-message-macosx, about-logins-copy-password-os-auth-dialog-message-macosx — browser/browser/aboutLogins.ftl — the comment says to supply only the reason, which macOS prefixes with "Firefox is trying to …". These are imperatives, so the resulting sentence breaks. Current: "bewerk de opgeslagen aanmeld…
     - Suggest: `…message2-macosx`
-- _…and 314 more, in the per-locale reports linked below._
+- _…and 271 more, in the per-locale reports linked below._
 
-### Wrong content — impact 2 (1455)
+### Wrong content — impact 2 (1365)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/firefox.md`.
 
 | Locale | Last run | Mode | Commit | Strings | Missing | Open | Impact 1–2 | Fixed | Dismissed | Suppressed |
 |---|---|---|---|---|---|---|---|---|---|---|
-| [cs](cs/firefox.md) | 2026-09-07 | incremental | `3c0c507b` | 18,272 | 0 | **267** | 177 | 2 | 0 | 0 |
-| [de](de/firefox.md) | 2026-09-07 | incremental | `3c0c507b` | 18,466 | 0 | **16** | 10 | 42 | 0 | 0 |
-| [en-CA](en-CA/firefox.md) | 2026-09-07 | incremental | `3c0c507b` | 18,178 | 94 | **1** | 0 | 14 | 1 | 0 |
-| [en-GB](en-GB/firefox.md) | 2026-09-07 | incremental | `3c0c507b` | 18,272 | 0 | **18** | 11 | 12 | 0 | 12 |
-| [es-AR](es-AR/firefox.md) | 2026-09-07 | incremental | `3c0c507b` | 18,240 | 32 | **306** | 173 | 142 | 0 | 0 |
-| [es-ES](es-ES/firefox.md) | 2026-09-07 | incremental | `3c0c507b` | 17,268 | 1,004 | **31** | 18 | 112 | 0 | 0 |
-| [es-MX](es-MX/firefox.md) | 2026-09-07 | incremental | `3c0c507b` | 17,847 | 425 | **22** | 6 | 205 | 0 | 0 |
-| [fr](fr/firefox.md) | 2026-09-07 | incremental | `3c0c507b` | 18,459 | 0 | **18** | 4 | 60 | 1 | 0 |
-| [fy-NL](fy-NL/firefox.md) | 2026-09-07 | incremental | `3c0c507b` | 18,180 | 92 | **507** | 139 | 274 | 4 | 0 |
-| [hu](hu/firefox.md) | 2026-09-07 | incremental | `3c0c507b` | 18,219 | 53 | **276** | 153 | 4 | 0 | 0 |
-| [id](id/firefox.md) | 2026-09-07 | incremental | `3c0c507b` | 15,688 | 2,584 | **331** | 258 | 1 | 0 | 0 |
-| [it](it/firefox.md) | 2026-09-07 | incremental | `3c0c507b` | 18,476 | 0 | **6** | 2 | 56 | 6 | 2 |
-| [ja](ja/firefox.md) | 2026-09-07 | incremental | `3c0c507b` | 18,272 | 0 | **109** | 46 | 270 | 0 | 0 |
-| [nl](nl/firefox.md) | 2026-09-07 | incremental | `3c0c507b` | 18,225 | 47 | **356** | 132 | 127 | 0 | 0 |
-| [pl](pl/firefox.md) | 2026-09-07 | incremental | `3c0c507b` | 18,272 | 0 | **78** | 57 | 168 | 2 | 0 |
-| [pt-BR](pt-BR/firefox.md) | 2026-09-07 | incremental | `3c0c507b` | 18,219 | 53 | **563** | 205 | 137 | 5 | 0 |
-| [ru](ru/firefox.md) | 2026-09-07 | incremental | `3c0c507b` | 18,272 | 0 | **602** | 319 | 177 | 0 | 0 |
-| [sl](sl/firefox.md) | 2026-09-07 | incremental | `3c0c507b` | 17,650 | 622 | **37** | 5 | 43 | 0 | 1 |
-| [tr](tr/firefox.md) | 2026-09-07 | incremental | `3c0c507b` | 18,253 | 19 | **134** | 50 | 186 | 0 | 0 |
-| [zh-CN](zh-CN/firefox.md) | 2026-09-07 | incremental | `3c0c507b` | 18,131 | 141 | **63** | 19 | 47 | 0 | 0 |
+| [cs](cs/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 16,119 | 49 | **232** | 157 | 3 | 0 | 0 |
+| [de](de/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 16,369 | 0 | **19** | 12 | 42 | 0 | 0 |
+| [en-CA](en-CA/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 16,176 | 0 | **0** | 0 | 15 | 1 | 0 |
+| [en-GB](en-GB/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 16,168 | 0 | **16** | 11 | 13 | 0 | 12 |
+| [es-AR](es-AR/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 16,139 | 29 | **269** | 153 | 142 | 0 | 0 |
+| [es-ES](es-ES/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 15,156 | 1,012 | **36** | 20 | 113 | 0 | 0 |
+| [es-MX](es-MX/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 15,800 | 368 | **41** | 14 | 205 | 0 | 0 |
+| [fr](fr/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 16,368 | 0 | **24** | 8 | 61 | 1 | 0 |
+| [fy-NL](fy-NL/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 15,991 | 177 | **446** | 124 | 274 | 4 | 0 |
+| [hu](hu/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 16,159 | 9 | **243** | 139 | 5 | 0 | 0 |
+| [id](id/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 13,705 | 2,463 | **278** | 216 | 1 | 0 | 0 |
+| [it](it/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 16,377 | 0 | **9** | 2 | 56 | 6 | 2 |
+| [ja](ja/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 16,168 | 0 | **123** | 57 | 271 | 0 | 0 |
+| [nl](nl/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 16,053 | 115 | **329** | 121 | 127 | 0 | 0 |
+| [pl](pl/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 16,092 | 76 | **68** | 50 | 168 | 2 | 0 |
+| [pt-BR](pt-BR/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 16,152 | 16 | **523** | 191 | 138 | 5 | 0 |
+| [ru](ru/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 16,168 | 0 | **553** | 292 | 177 | 0 | 0 |
+| [sl](sl/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 15,539 | 629 | **41** | 11 | 43 | 0 | 1 |
+| [tr](tr/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 16,144 | 24 | **147** | 54 | 193 | 0 | 0 |
+| [zh-CN](zh-CN/firefox.md) | 2026-09-14 | incremental | `e44f1369` | 15,968 | 200 | **66** | 19 | 49 | 0 | 0 |
 
 **Impact 1–2** is the queue that matters: broken output and wrong content. Impact 3–4 is language polish and typography.
 

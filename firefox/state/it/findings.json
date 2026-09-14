@@ -190,7 +190,7 @@
   "file": "browser/browser/defaultBrowserNotification.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-09-07",
+  "last_seen": "2026-09-14",
   "locale": "it",
   "origin": {},
   "rationale": "In the source this string quotes “Web browser”, which is exactly the value of `desktop-entry-generic-name` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -227,6 +227,30 @@
   "string_id": "perplexity-callout-theme-1-subtitle-2",
   "suggest": "risposte",
   "summary": "risposte risposte → risposte — ✅",
+  "suppressed_by": ""
+ },
+ {
+  "category": "E",
+  "check": "llm",
+  "current": "Gestisci  regole per i siti web",
+  "dismissed_because": "",
+  "fid": "2ccdb38ca89b",
+  "file": "browser/browser/ipProtection.ftl",
+  "first_seen": "2026-09-14",
+  "impact": 4,
+  "last_seen": "2026-09-14",
+  "locale": "it",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The label contains a doubled space between \"Gestisci\" and \"regole\" and drops the article used in the identical string ip-protection-site-rules-header (\"Gestisci le regole per i siti web\").",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "8076b71c",
+  "string_id": "ip-protection-site-rules-button",
+  "suggest": "Gestisci le regole per i siti web",
+  "summary": "Double space and missing article in the button label.",
   "suppressed_by": ""
  },
  {
@@ -305,6 +329,54 @@
   "string_id": "launch-on-login-autostart-infobar-message",
   "suggest": "",
   "summary": "✅ launch-on-login-autostart-infobar-message — browser/browser/newtab/asrouter.ftl:303 — double space removed.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
+  "current": "Una volpe corre su colline chiare",
+  "dismissed_because": "",
+  "fid": "1862a312edac",
+  "file": "browser/browser/newtab/newtab.ftl",
+  "first_seen": "2026-09-14",
+  "impact": 4,
+  "last_seen": "2026-09-14",
+  "locale": "it",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The same en-US term \"light hills\" is translated inconsistently across newtab-wallpaper-firefox-sitting-hill-light and newtab-wallpaper-firefox-sky-light (\"colline luminose\") within the same surface.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "d6890733",
+  "string_id": "newtab-wallpaper-firefox-hills-light",
+  "suggest": "Una volpe corre su colline luminose",
+  "summary": "\"light hills\" rendered as \"colline chiare\" here but \"colline luminose\" in the other light-hills strings.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Una volpe accovacciata su colline viola scuro",
+  "dismissed_because": "",
+  "fid": "cc0e5077e33b",
+  "file": "browser/browser/newtab/newtab.ftl",
+  "first_seen": "2026-09-14",
+  "impact": 3,
+  "last_seen": "2026-09-14",
+  "locale": "it",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "en-US says \"A fox sitting on dark purple hills\"; the companion string newtab-wallpaper-firefox-sitting-hill-light translates the same \"sitting\" as \"seduta\". \"Accovacciata\" means crouching.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "1d43d77a",
+  "string_id": "newtab-wallpaper-firefox-sitting-hill-dark",
+  "suggest": "Una volpe seduta su colline viola scuro",
+  "summary": "\"sitting\" rendered as \"accovacciata\" (crouching), inconsistent with the parallel string which uses \"seduta\".",
   "suppressed_by": ""
  },
  {
@@ -1072,7 +1144,7 @@
   "file": "toolkit/toolkit/about/aboutAddons.ftl",
   "first_seen": "2026-09-03",
   "impact": 2,
-  "last_seen": "2026-09-07",
+  "last_seen": "2026-09-14",
   "locale": "it",
   "origin": {},
   "rationale": "The label is “Fai una donazione”. An access key not in the label cannot be underlined and is unreachable by keyboard.",

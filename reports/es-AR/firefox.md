@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-07 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
-| **Previous run** | 2026-09-03 @ `075eb543fd91` |
+| **Generated** | 2026-09-14 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e44f1369fb6d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8ffd279d75ec` |
+| **Previous run** | 2026-09-07 @ `3c0c507b8d42` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 34 of 18,240 |
+| **Strings reviewed this run** | 106 of 16,139 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,23 +18,48 @@ Also for es-AR: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (8)
 
-- `newtab-wallpaper-your-images` — `browser/browser/newtab/newtab.ftl` — "Your images" rendered as "Mis imágenes" (My images), changing the possessive person.
-    - Current: `Mis imágenes`
-    - Source: `Your images`
-    - Suggest: `Tus imágenes`
-    - en-US uses second person "Your images"; the target switches to first person "Mis", inconsistent with the source's form of address.
-- `newtab-wallpaper-your-images-folder` — `browser/browser/newtab/newtab.ftl` — "Your images, wallpapers that you have saved" rendered in first person and drops the "you have saved" relative clause wording.
-    - Current: `Mis imágenes, fondos de pantalla guardados`
-    - Source: `aria-label: Your images, wallpapers that you have saved`
-    - Suggest: `Tus imágenes, fondos de pantalla que guardaste`
-    - en-US addresses the user in second person; the target uses "Mis" (my), inconsistent with the source and with the rest of the picker.
-- `newtab-privacy-empty-state-tally` — `browser/browser/newtab/newtab.ftl` — "See a running tally here." translated as a statement about future updating and the final period is dropped.
-    - Current: `Acá se actualizará el total`
-    - Source: `See a running tally here.`
-    - Suggest: `Acá vas a ver el total actualizado.`
-    - The source invites the user to see a running tally; the target asserts that the total will be updated here, and omits the sentence-final period present in en-US.
+- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Novedades” but the string it names, `releaseNotes-link`, reads “Qué hay de nuevo”
+    - Current: `Anular la página "Novedades" posterior a la actualización. Establecer esta política en blanco si quiere deshabilitar la página posterior a la actualización.`
+    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
+    - Suggest: `Qué hay de nuevo`
+    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `SpeechRecognitionLangDefaultedToUserLanguageWarning` — `dom/chrome/dom/dom.properties` — Uses peninsular "usted" imperative form "Establezca" instead of the es-AR voseo/infinitive style used elsewhere.
+    - Current: `Establezca SpeechRecognition.lang o un atributo lang en el elemento raíz del documento.`
+    - Source: `SpeechRecognition.lang is unset and this document declares no language, so speech will be recognized in the user’s preferred language. Set SpeechRecognition.lang, or a lang attribute on the document’s root element.`
+    - Suggest: `Establecé SpeechRecognition.lang o un atributo lang en el elemento raíz del documento.`
+    - es-AR uses voseo imperatives ("Establecé") rather than "Establezca"; the rest of the locale addresses the user in Argentine form.
+- `site-rules-status-heading` — `browser/browser/ipProtection.ftl` — "Your rule" translated as "Regla personalizada" (custom rule), changing the meaning.
+    - Current: `Regla personalizada`
+    - Source: `Your rule`
+    - Suggest: `Tu regla`
+    - The en-US heading is "Your rule", referring to the user's own rule, not to a "custom rule".
+- `refresh-unused-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — "no ha iniciado … hace un tiempo" is ungrammatical; should be "desde hace un tiempo".
+    - Current: `Parece que no ha iniciado { -brand-short-name } hace un tiempo.`
+    - Source: `It looks like you haven’t started { -brand-short-name } in a while. Do you want to clean it up for a fresh, like-new experience? And by the way, welcome back!`
+    - Suggest: `Parece que no iniciaste { -brand-short-name } desde hace un tiempo.`
+    - The negative perfect requires "desde hace"; also the surrounding es-AR copy uses voseo rather than "ha iniciado".
+- `appmenu-sync-promo-connectdevice` — `browser/browser/appmenu.ftl` — Heading begins with a stray infinitive marker "A traer", which is not idiomatic Spanish for the imperative heading.
+    - Current: `A traer las pestañas del dispositivo móvil`
+    - Source: `heading: Grab your mobile tabs`
+    - Suggest: `Traé las pestañas del dispositivo móvil`
+    - The en-US "Grab your mobile tabs" is an imperative; "A traer…" is ungrammatical/odd as a heading.
+- `onboarding-refresh-fro-import-body` — `browser/browser/newtab/onboarding.ftl` — Pronoun disagreement: "los datos" (plural) referenced by singular "lo".
+    - Current: `{ -brand-product-name } nunca lo venderá.`
+    - Source: `Your personal data stays personal. { -brand-product-name } will never sell it.`
+    - Suggest: `{ -brand-product-name } nunca los venderá.`
+    - The referent is "Los datos personales" (plural), so the clitic must be "los", matching the en-US "will never sell it" referring to your personal data.
+- `pdfjs-open-attachments-inline` — `toolkit/toolkit/about/aboutSupport.ftl` — "Open PDF Attachments Inline" is rendered as if "integrados" modifies the attachments rather than the manner of opening.
+    - Current: `Abrir adjuntos PDF integrados`
+    - Source: `Open PDF Attachments Inline`
+    - Suggest: `Abrir adjuntos PDF en línea`
+    - The en-US means opening PDF attachments inline (within the page); the target says "open embedded PDF attachments", changing the meaning.
+- `autofill-delete-payment-method-os-prompt-windows` — `toolkit/toolkit/formautofill/formAutofill.ftl` — "Confirm access to this Windows account below" is mistranslated as confirming access to the Windows account that is below.
+    - Current: `Confirme el acceso a la cuenta de Windows que está abajo.`
+    - Source: `{ -brand-short-name } is trying to delete stored payment method information. Confirm access to this Windows account below.`
+    - Suggest: `Confirme abajo el acceso a esta cuenta de Windows.`
+    - In en-US "below" modifies where the user confirms, not which account; the target asserts there is an account shown below.
 
 ### ✅ Fixed since the last run (0)
 
@@ -48,9 +73,187 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (45)
 
-_Nothing retired._
+- `identity-description-insecure-login-forms` — `browser/browser/browser.ftl` — "you enter" (present/future) is rendered as past "que se usó", changing the meaning.
+    - Current: `La información de ingreso que se usó en esta página no es segura y puede estar comprometida.`
+    - Suggest: `La información de ingreso que ingrese en esta página no es segura y podría verse comprometida.`
+    - en-US warns about information the user enters on the page, not information already used; the past tense misstates the warning.
+- `newtab-privacy-modal-paragraph-2` — `browser/browser/newtab/newtab.ftl` — “Rest assured, your browsing data never leaves…” became “data security never leave…”, with a subject/verb disagreement.
+    - Current: `la seguridad de los datos de su navegación      nunca dejan su copia personal`
+    - Suggest: `los datos de su navegación nunca dejan su copia personal`
+    - en-US states the browsing data never leaves the user's copy of Firefox; “la seguridad de” is spurious and also breaks agreement with the plural verb “dejan”.
+- `mr2022-onboarding-existing-colorway-checkbox-label` — `browser/browser/newtab/onboarding.ftl` — “homepage” rendered as “entrada” (entrance).
+    - Current: `una entrada colorida`
+    - Suggest: `su página de inicio colorida`
+    - en-US “Make { -firefox-home-brand-name } your colorful homepage”; the tree elsewhere translates homepage as “página de inicio” (see home-homepage-title in newtab.ftl).
+- `colors-background` — `browser/browser/preferences/colors.ftl` — “Background” rendered as “Fondo de pantalla” (wallpaper).
+    - Current: `Fondo de pantalla`
+    - Suggest: `Fondo`
+    - Same defect as colors-text-background: this label is the website background colour, not the desktop wallpaper.
+- `colors-page-override` — `browser/browser/preferences/colors.ftl` — “debajo” reverses the en-US reference to the selections above.
+    - Current: `con las opciones que están debajo`
+    - Suggest: `con las opciones seleccionadas más arriba`
+    - en-US: “with your selections above”. The controls referenced are above this checkbox, so “debajo” points the user to the wrong place.
+- `colors-page-override` — `browser/browser/preferences/colors.ftl` — Misspelling “Sobreescribir”.
+    - Current: `Sobreescribir`
+    - Suggest: `Sobrescribir`
+    - The prefix sobre- plus escribir contracts to “sobrescribir”; “sobreescribir” is not a valid spelling.
+- `containers-icon-fence` — `browser/browser/preferences/containers.ftl` — Icon name “Fence” translated as the verb “Cercar”.
+    - Current: `Cercar`
+    - Suggest: `Cerca`
+    - All the other icon names in this list are nouns (Maletín, Regalo, Árbol); “Fence” here is the object, not the action.
+- `fxa-qrcode-pair-step2-signin` — `browser/browser/preferences/fxaPairDevice.ftl` — Usted form in a file whose other steps address the user informally.
+    - Current: `Abra el menú`
+    - Suggest: `Abrí el menú`
+    - The rest of the dialog uses the informal address (“tu dispositivo móvil”, “sostené el teléfono”), so this step is inconsistent within the same screen.
+- `content-blocking-fingerprinters-label` — `browser/browser/preferences/preferences.ftl` — English term “Fingerprinters” left untranslated although the locale translates it everywhere else.
+    - Current: `Fingerprinters`
+    - Suggest: `Detectores de huellas digitales`
+    - The same en-US term is rendered “Detectores de huellas digitales” in content-blocking-fingerprinters and in the ETP custom labels in this file, so the English label is inconsistent in the same surface.
+- `update-application-check-choose` — `browser/browser/preferences/preferences.ftl` — Mismatched verb forms make the option ungrammatical.
+    - Current: `Busque actualizaciones pero dejarme elegir si las instalo`
+    - Suggest: `Buscar actualizaciones, pero permitirme elegir si se instalan`
+    - The imperative “Busque” is coordinated with the infinitive “dejarme”; en-US: “Check for updates but let you choose to install them”. Compare update-application-check-choose-2, “Buscar actualizaciones, pero elegir cuándo instalarlas”.
+- `screenshots-generic-error-details` — `browser/browser/screenshots.ftl` — Misspelling "intenar".
+    - Current: `¿Quiere intenar de nuevo`
+    - Suggest: `¿Quiere intentar de nuevo`
+    - The verb is "intentar".
+- `unified-extensions-mb-blocklist-warning-single` — `browser/browser/unifiedExtensions.ftl` — Verb form "Está" used instead of the demonstrative "Esta".
+    - Current: `Está extensión viola las políticas de Mozilla`
+    - Suggest: `Esta extensión viola las políticas de Mozilla`
+    - The demonstrative adjective is unaccented "Esta"; the -single2 variant correctly reads "Esta extensión".
+- `contentBlocking.cookies.blockingUnvisited2.label` — `browser/chrome/browser/browser.properties` — Number disagreement between "sitio" and "no visitados"
+    - Current: `Cookies de sitio no visitados`
+    - Suggest: `Cookies de sitios no visitados`
+    - The adjective is plural while the noun it modifies is singular; en-US is "Unvisited Site Cookies".
+- `privacy.spoof_english` — `browser/chrome/browser/browser.properties` — Language name capitalized as in English
+    - Current: `Cambiar la configuración de idioma a Inglés`
+    - Suggest: `Cambiar la configuración de idioma a inglés`
+    - Spanish writes language names in lowercase; "Inglés" is capitalized twice in this string.
+- `webauthn.anonymize` — `browser/chrome/browser/browser.properties` — Incorrect accent in "Anónimizar"
+    - Current: `Anónimizar de todas formas`
+    - Suggest: `Anonimizar de todas formas`
+    - The verb is "anonimizar"; only the adjective "anónimo" carries the accent.
+- `webauthn.selectSignResultPrompt` — `browser/chrome/browser/browser.properties` — Interrogative "cuál" written without accent
+    - Current: `Seleccione cual usar o cancelar.`
+    - Suggest: `Seleccione cuál usar o cancelar.`
+    - Indirect interrogative pronoun requires an accent ("Select which to use").
+- `autofillReauthCheckboxLin` — `browser/extensions/formautofill/formautofill.properties` — Indicative "Requiere" instead of the infinitive used by the parallel checkboxes
+    - Current: `Requiere autenticación de Linux para autocompletar`
+    - Suggest: `Requerir autenticación de Linux para autocompletar`
+    - en-US "Require Linux authentication…"; the Mac and Windows variants of the same checkbox both use "Requerir", so this one reads as a statement of fact instead of a setting.
+- `useCreditCardPasswordPrompt.linux` — `browser/extensions/formautofill/formautofill.properties` — "use stored credit card information" rendered as "show"
+    - Current: `está intentando mostrar la información de la tarjeta de crédito.`
+    - Suggest: `está intentando usar la información almacenada de la tarjeta de crédito.`
+    - en-US is "is trying to use stored credit card information"; the Windows variant in the same file correctly says "usar la información almacenada".
+- `unsupported_feature_forms` — `browser/pdfviewer/chrome.properties` — Misspelling "cotiene"
+    - Current: `cotiene`
+    - Suggest: `contiene`
+    - Missing letter; "cotiene" is not a Spanish word.
+- `document_properties_file_size` — `browser/pdfviewer/viewer.properties` — Misspelling "archovo"
+    - Current: `Tamaño de archovo:`
+    - Suggest: `Tamaño de archivo:`
+    - Typo for "archivo"; the line above correctly uses "Nombre de archivo:".
+- `document_properties_page_size_orientation_portrait` — `browser/pdfviewer/viewer.properties` — "portrait" translated as "normal"
+    - Current: `document_properties_page_size_orientation_portrait = normal`
+    - Suggest: `vertical`
+    - "normal" does not name a page orientation; paired with "apaisado" for landscape, the expected term is "vertical".
+- `document_properties_page_size_unit_inches` — `browser/pdfviewer/viewer.properties` — Inches unit translated as the preposition "en"
+    - Current: `document_properties_page_size_unit_inches = en`
+    - Suggest: `pulg.`
+    - en-US "in" is the abbreviation for inches; "en" is the Spanish preposition and displays as e.g. "8,5 × 11 en (apaisado)", which is not a unit of measure.
+- `document_properties_producer` — `browser/pdfviewer/viewer.properties` — English word order kept in "PDF Productor:"
+    - Current: `document_properties_producer = PDF Productor:`
+    - Suggest: `Productor del PDF:`
+    - en-US "PDF Producer:"; Spanish places the modifier after the noun, as the next line already does ("Versión de PDF:").
+- `find_match_count[one]` — `browser/pdfviewer/viewer.properties` — Singular plural form uses the plural noun
+    - Current: `find_match_count[one] = {{current}} de {{total}} coincidencias`
+    - Suggest: `{{current}} de {{total}} coincidencia`
+    - en-US [one] is "match" (singular); the singular category displays "1 de 1 coincidencias". find_match_count_limit[one] has the mirror-image defect ("Más de {{limit}} coinciden", a verb instead of a noun).
+- `find_reached_bottom` — `browser/pdfviewer/viewer.properties` — "alcanzando" should be "alcanzado"
+    - Current: `Fin de documento alcanzando, continuando desde arriba`
+    - Suggest: `Fin de documento alcanzado, continuando desde arriba`
+    - Gerund used where the past participle is required; find_reached_top correctly uses "alcanzado".
+- `invalid_file_error` — `browser/pdfviewer/viewer.properties` — Misspelling "cocrrupto"
+    - Current: `cocrrupto`
+    - Suggest: `corrupto`
+    - Typo for "corrupto".
+- `scroll_horizontal.title` — `browser/pdfviewer/viewer.properties` — Horizontal scrolling tooltip says "vertical"
+    - Current: `scroll_horizontal.title = Usar desplazamiento vertical`
+    - Suggest: `Usar desplazamiento horizontal`
+    - en-US is "Use Horizontal Scrolling"; the label right below correctly says "Desplazamiento horizontal", so the tooltip duplicates the vertical-scrolling tooltip and names the wrong option.
+- `noDomMutationBreakpoints` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints` quotes “Romper en...” but the string it names, `watchpoints.submenu`, reads “Interrumpir en…”
+    - Current: `Haga clic derecho en un elemento en el %S y seleccione “Romper en...” para agregar un punto de interrupción`
+    - Suggest: `Interrumpir en…`
+    - In the source this string quotes “Break on…”, which is exactly the value of `watchpoints.submenu` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `noDomMutationBreakpoints` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints` uses three dots where this locale uses …
+    - Current: `Haga clic derecho en un elemento en el %S y seleccione “Romper en...” para agregar un punto de interrupción`
+    - The tree uses … 462 times against 2 ASCII runs.
+- `networkMenu.summary.tooltip.domContentLoaded` — `devtools/client/netmonitor.properties` — DOM event name corrupted to “DOMContentLoad”
+    - Current: `Momento en el que ocurrió el evento “DOMContentLoad”`
+    - Suggest: `Momento en el que ocurrió el evento “DOMContentLoaded”`
+    - DOMContentLoaded is a Web platform event name and must not be altered; netmonitor.ftl keeps it correct.
+- `parentProcessBrowserConsole.title` — `devtools/client/webconsole.properties` — Browser Console window title says “Caja de herramientas” (Toolbox)
+    - Current: `Caja de herramientas del navegador del proceso principal`
+    - Suggest: `Consola del navegador del proceso principal`
+    - en-US: “Parent process Browser Console”. The window is the Browser Console, not the Browser Toolbox; multiProcessBrowserConsole.title in the same file correctly uses “Consola”.
+- `preventedConsoleClear` — `devtools/client/webconsole.properties` — Misspelling of "persistentes" as "presistentes".
+    - Current: `Registros presistentes`
+    - Suggest: `Registros persistentes`
+    - "presistentes" is not a Spanish word; the correct spelling is "persistentes", and it must match the Persist Logs menu item label.
+- `preventedConsoleClear` — `devtools/client/webconsole.properties` — `preventedConsoleClear` quotes “Registros presistentes” but the string it names, `webconsole.console.settings.menu.item.enablePersistentLogs.label`, reads “Registros persistentes”
+    - Current: `console.clear() se evitó debido a “Registros presistentes”`
+    - Suggest: `Registros persistentes`
+    - In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `MathML_DeprecatedMathSizeValueWarning` — `dom/chrome/dom/dom.properties` — The mathsize keyword values small/normal/big were translated despite the do-not-translate note.
+    - Current: `“Pequeño”, “normal” y “grande” son valores obsoletos`
+    - Suggest: `“small”, “normal” y “big” son valores obsoletos`
+    - Developer comment: “Do not translate small, normal, big and mathsize.” The translated words do not match any real attribute value.
+- `MathML_DeprecatedStyleAttributeWarning` — `dom/chrome/dom/dom.properties` — MathML attribute names were translated despite the do-not-translate note.
+    - Current: `Los atributos MathML "fondo", "color", "familia de fuentes", "tamaño de fuente", "estilo de fuente" y "fontweight"`
+    - Suggest: `Los atributos MathML “background”, “color”, “fontfamily”, “fontsize”, “fontstyle” y “fontweight”`
+    - Developer comment: “Do not translate MathML, background, color, fontfamily, fontsize, fontstyle and fontweight.” Only fontweight was left intact.
+- `4` — `dom/chrome/xslt/xslt.properties` — Typo “transormación”.
+    - Current: `Falló la transormación de XSLT.`
+    - Suggest: `Falló la transformación de XSLT.`
+    - Misspelling of “transformación”. The same typo appears in xslt-execution-failure in dom/dom/xslt.ftl.
+- `saveLogin` — `mobile/android/chrome/passwordmgr.properties` — Voseo (“Querés”) where the locale consistently uses the usted form.
+    - Current: `¿Querés que %S recuerde este ingreso?`
+    - Suggest: `¿Desea que %S recuerde este ingreso?`
+    - The tree uses usted almost everywhere (140+ “Ingrese/Puede/Elija” vs. a handful of voseo forms); this string breaks the established form of address.
+- `username` — `mobile/android/chrome/passwordmgr.properties` — Typo “Ususario”.
+    - Current: `Ususario`
+    - Suggest: `Usuario`
+    - Misspelling in a prompt field label.
+- `about-networking-rcwn-net-won-count` — `toolkit/toolkit/about/aboutNetworking.ftl` — "Net won count" (number of times the network race was won) is mistranslated as "Cuenta de ganancias en la red" ("count of earnings on the network").
+    - Current: `Cuenta de ganancias en la red`
+    - Suggest: `Cantidad de veces que ganó la red`
+    - In RCWN (race cache with network) stats this counts how often the network won the race against the cache; "ganancias" means monetary earnings/profit and misstates the metric.
+- `rights-safebrowsing` — `toolkit/toolkit/about/aboutRights.ftl` — Double space between sentences.
+    - Current: `sitios inseguros.  Si desea`
+    - Suggest: `sitios inseguros. Si desea`
+    - Extra space not present in the en-US source.
+- `abuse-report-learnmore` — `toolkit/toolkit/about/abuseReports.ftl` — Stray spaces inside the link text after the opening tag and before the closing tag.
+    - Current: `<a data-l10n-name="learnmore-link"> Conozca más información acerca de los informes de extensiones y temas  </a>`
+    - Suggest: `<a data-l10n-name="learnmore-link">Conozca más información acerca de los informes de extensiones y temas</a>`
+    - The en-US has no leading or trailing spaces inside the anchor; the extra spaces render as underlined whitespace.
+- `abuse-report-messagebar-removed-sitepermission` — `toolkit/toolkit/about/abuseReports.ftl` — Uses tuteo (“Eliminaste”) where the file and the parallel strings use the usted form (“Eliminó”).
+    - Current: `Eliminaste el complemento Permisos del sitio`
+    - Suggest: `Eliminó el complemento Permisos del sitio`
+    - abuse-report-messagebar-removed-extension and -removed-theme both use “Eliminó”; the whole tree addresses the user with usted.
+- `abuse-report-settings-suggestions-search` — `toolkit/toolkit/about/abuseReports.ftl` — Tuteo imperative “Cambia” instead of the usted form used throughout the file.
+    - Current: `abuse-report-settings-suggestions-search = Cambia la configuración de buscador predeterminado`
+    - Suggest: `Cambie la configuración de buscador predeterminado`
+    - The preceding string (abuse-report-settings-suggestions) and the rest of the dialog use usted; abuse-report-settings-suggestions-homepage (“Cambia la página de inicio…”) has the same defect.
+- `experimental-features-css-masonry2` — `toolkit/toolkit/featuregates/features.ftl` — Experiment title translated despite do-not-translate comment
+    - Current: `CSS: diseño de mampostería`
+    - Suggest: `CSS: Masonry Layout`
+    - The developer comment states "The title of the experiment should be kept in English as it may be referenced by various online articles"; the neighbouring JPEG XL title was correctly left in English.
+- `experimental-features-web-gpu-description3` — `toolkit/toolkit/featuregates/features.ftl` — Voseo imperative "Consultá" among usted forms
+    - Current: `Consultá el <a data-l10n-name="bugzilla">bug 1616739</a> para más detalles.`
+    - Suggest: `Consulte el <a data-l10n-name="bugzilla">bug 1616739</a> para más detalles.`
+    - Every other description in the same file uses the usted imperative "Consulte".
 
 ---
 
@@ -58,9 +261,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 362 |
-| Strings | 18,240 |
-| Missing strings | 32 |
+| Files | 326 |
+| Strings | 16,139 |
+| Missing strings | 29 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -69,22 +272,21 @@ _Nothing retired._
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
-| Text quoting a UI label that no longer matches | 3 |
+| Text quoting a UI label that no longer matches | 2 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 2 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 2 |
+| Typography deviations from this locale's own norm | 81 |
 
 ### Completeness
 
-**32 strings** are not translated yet, concentrated in:
+**29 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 11
+- `browser/browser/newtab/newtab.ftl` — 10
 - `toolkit/toolkit/about/url-classifier.ftl` — 6
 - `browser/browser/featureCallout.ftl` — 4
-- `browser/browser/appmenu.ftl` — 3
-- `browser/browser/preferences/preferences.ftl` — 3
-- `browser/browser/aiWindow.ftl` — 2
+- `browser/browser/newtab/onboarding.ftl` — 4
+- `browser/browser/preferences/preferences.ftl` — 2
 - `browser/browser/newtab/asrouter.ftl` — 1
 - `toolkit/toolkit/about/aboutAddons.ftl` — 1
 - `toolkit/toolkit/global/processTypes.ftl` — 1
@@ -97,30 +299,31 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 497, `straight-double` 174, `curly-single` 98 | _mixed_ |
-| apostrophe | `typographic` 110, `straight` 70 | _mixed_ |
-| ellipsis | `char` 462, `ascii` 2 | **char** |
-| dash | `em` 86, `en` 1 | **em** |
-| nbsp | `total` 5, `before-punctuation` 3, `space-before-punctuation` 9 | _mixed_ |
-| inverted marks | `open-question` 373, `open-exclamation` 82 | **open-question** |
+| quotes | `curly-double` 464, `straight-double` 137, `curly-single` 93 | **curly-double** |
+| apostrophe | `typographic` 105, `straight` 67 | _mixed_ |
+| ellipsis | `char` 388, `ascii` 1 | **char** |
+| dash | `em` 61, `en` 1 | **em** |
+| nbsp | `total` 5, `before-punctuation` 3, `space-before-punctuation` 7 | _mixed_ |
+| inverted marks | `open-question` 319, `open-exclamation` 68 | **open-question** |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-_Nothing reported._
+- **typography — 81 strings** — 81 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
+    - Affected: `BlockExtensionScriptWithWrongExt`, `CORPBlocked`, `CompositorAnimationWarningHasCurrentColor`, `CookieAllowedForOriginByHeuristic`, `CookieAllowedForOriginByStorageAccessAPI`, `CookieLaxForcedForBeta2`, `CookieOversize`, `CookiePartitionedForeign2`, `CookieRejectedByPermissionManager`, `CookieRejectedForNonSameSiteness`, `CookieRejectedInvalidCharName`, `CookieRejectedInvalidDomain` …and 68 more
 
 ---
 
-## 3. Open findings (306)
+## 3. Open findings (269)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 50 |
-| 2 | Wrong content (says something other than the English) | 123 |
-| 3 | Degraded language (grammar, spelling, terminology) | 92 |
-| 4 | Cosmetic (typography, spacing) | 35 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 48 |
+| 2 | Wrong content (says something other than the English) | 105 |
+| 3 | Degraded language (grammar, spelling, terminology) | 83 |
+| 4 | Cosmetic (typography, spacing) | 28 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -177,11 +380,6 @@ _Nothing reported._
     - Source: `aria-label: Picture of the day options title: Picture of the day options`
     - Suggest: `.title = Opciones de foto del día`
     - Both attributes render “Picture of the day options” in en-US; the tooltip says “Opción” (one option) while the aria-label says “Opciones de fotos del día”.
-- `newtab-privacy-modal-paragraph-2` — `browser/browser/newtab/newtab.ftl` — “Rest assured, your browsing data never leaves…” became “data security never leave…”, with a subject/verb disagreement.
-    - Current: `la seguridad de los datos de su navegación      nunca dejan su copia personal`
-    - Source: `In addition to dishing up captivating stories, we also show you relevant, highly-vetted content from select sponsors. Rest assured, <strong>your browsing data never leaves your personal copy of { -brand-product-name }</…`
-    - Suggest: `los datos de su navegación nunca dejan su copia personal`
-    - en-US states the browsing data never leaves the user's copy of Firefox; “la seguridad de” is spurious and also breaks agreement with the plural verb “dejan”.
 - `newtab-sports-widget-loading-more` — `browser/browser/newtab/newtab.ftl` — “matches” (football games) translated as search “coincidencias”.
     - Current: `Cargando más coincidencias…`
     - Source: `Loading more matches…`
@@ -192,11 +390,6 @@ _Nothing reported._
     - Source: `label: Play`
     - Suggest: `Iniciar`
     - This is the play/pause control of the Pomodoro-style timer (paired with newtab-widget-timer-label-pause = Pausa), not a game.
-- `mr2022-onboarding-existing-colorway-checkbox-label` — `browser/browser/newtab/onboarding.ftl` — “homepage” rendered as “entrada” (entrance).
-    - Current: `una entrada colorida`
-    - Source: `Make { -firefox-home-brand-name } your colorful homepage`
-    - Suggest: `su página de inicio colorida`
-    - en-US “Make { -firefox-home-brand-name } your colorful homepage”; the tree elsewhere translates homepage as “página de inicio” (see home-homepage-title in newtab.ftl).
 - `origin-controls-state-temporary-access` — `browser/browser/originControls.ftl` — Temporary, single-visit access described as permanent and recurring.
     - Current: `Siempre podrá leer y cambiar los datos para cada visita`
     - Source: `Can read and change data for this visit`
@@ -217,26 +410,11 @@ _Nothing reported._
     - Source: `Will require websites to reload images and data`
     - Suggest: `Los sitios web tendrán que volver a cargar imágenes y datos`
     - en-US: “Will require websites to reload images and data”. The subject/object are swapped, producing a nonsensical sentence.
-- `colors-background` — `browser/browser/preferences/colors.ftl` — “Background” rendered as “Fondo de pantalla” (wallpaper).
-    - Current: `Fondo de pantalla`
-    - Source: `(value): Background accesskey: B`
-    - Suggest: `Fondo`
-    - Same defect as colors-text-background: this label is the website background colour, not the desktop wallpaper.
-- `colors-page-override` — `browser/browser/preferences/colors.ftl` — “debajo” reverses the en-US reference to the selections above.
-    - Current: `con las opciones que están debajo`
-    - Source: `(value): Override the colors specified by the page with your selections above accesskey: O`
-    - Suggest: `con las opciones seleccionadas más arriba`
-    - en-US: “with your selections above”. The controls referenced are above this checkbox, so “debajo” points the user to the wrong place.
 - `colors-text-background` — `browser/browser/preferences/colors.ftl` — “Background” (page background colour) rendered as “Fondo de pantalla” (wallpaper).
     - Current: `Fondo de pantalla`
     - Source: `accesskey: B label: Background`
     - Suggest: `Fondo`
     - In the Colors dialog “Background” is the page background colour paired with “Texto”; “fondo de pantalla” means wallpaper (see home-prefs-choose-wallpaper-link, “Elegir un fondo de pantalla”).
-- `containers-icon-fence` — `browser/browser/preferences/containers.ftl` — Icon name “Fence” translated as the verb “Cercar”.
-    - Current: `Cercar`
-    - Source: `label: Fence`
-    - Suggest: `Cerca`
-    - All the other icon names in this list are nouns (Maletín, Regalo, Árbol); “Fence” here is the object, not the action.
 - `autofill-country-warning-message` — `browser/browser/preferences/formAutofill.ftl` — “Form autofill” rendered as “the autofill form”.
     - Current: `El formulario de autocompletado`
     - Source: `Form autofill is currently available only for certain countries.`
@@ -287,11 +465,6 @@ _Nothing reported._
     - Source: `Open applications`
     - Suggest: `Abrir aplicaciones`
     - The developer comment explicitly says "Open as a verb. 'This site may open applications'." "Aplicaciones abiertas" means "opened applications", so the permission label reads as a state instead of an action.
-- `useCreditCardPasswordPrompt.linux` — `browser/extensions/formautofill/formautofill.properties` — "use stored credit card information" rendered as "show"
-    - Current: `está intentando mostrar la información de la tarjeta de crédito.`
-    - Source: `%S is trying to use stored credit card information.`
-    - Suggest: `está intentando usar la información almacenada de la tarjeta de crédito.`
-    - en-US is "is trying to use stored credit card information"; the Windows variant in the same file correctly says "usar la información almacenada".
 - `WARN_WRITE_ACCESS` — `browser/installer/custom.properties` — Untranslated English fragment left appended to the translated sentence.
     - Current: `Haga clic en Aceptar para seleccionar un directorio diferente OK to select a different directory.`
     - Source: `You don’t have access to write to the installation directory.  Click OK to select a different directory.`
@@ -302,31 +475,6 @@ _Nothing reported._
     - Source: `Error opening file for writing:   $0  Click Abort to stop the installation, Retry to try again, or Ignore to skip this file.`
     - Suggest: `en Reintentar para tratar nuevamente o en`
     - Source “Retry to try again, or Ignore…”; “or” should be Spanish “o”. The parallel string FileError_NoIgnore correctly uses “o”.
-- `document_properties_page_size_orientation_portrait` — `browser/pdfviewer/viewer.properties` — "portrait" translated as "normal"
-    - Current: `document_properties_page_size_orientation_portrait = normal`
-    - Source: `portrait`
-    - Suggest: `vertical`
-    - "normal" does not name a page orientation; paired with "apaisado" for landscape, the expected term is "vertical".
-- `document_properties_page_size_unit_inches` — `browser/pdfviewer/viewer.properties` — Inches unit translated as the preposition "en"
-    - Current: `document_properties_page_size_unit_inches = en`
-    - Source: `in`
-    - Suggest: `pulg.`
-    - en-US "in" is the abbreviation for inches; "en" is the Spanish preposition and displays as e.g. "8,5 × 11 en (apaisado)", which is not a unit of measure.
-- `document_properties_producer` — `browser/pdfviewer/viewer.properties` — English word order kept in "PDF Productor:"
-    - Current: `document_properties_producer = PDF Productor:`
-    - Source: `PDF Producer:`
-    - Suggest: `Productor del PDF:`
-    - en-US "PDF Producer:"; Spanish places the modifier after the noun, as the next line already does ("Versión de PDF:").
-- `find_match_count[one]` — `browser/pdfviewer/viewer.properties` — Singular plural form uses the plural noun
-    - Current: `find_match_count[one] = {{current}} de {{total}} coincidencias`
-    - Source: `{{current}} of {{total}} match`
-    - Suggest: `{{current}} de {{total}} coincidencia`
-    - en-US [one] is "match" (singular); the singular category displays "1 de 1 coincidencias". find_match_count_limit[one] has the mirror-image defect ("Más de {{limit}} coinciden", a verb instead of a noun).
-- `scroll_horizontal.title` — `browser/pdfviewer/viewer.properties` — Horizontal scrolling tooltip says "vertical"
-    - Current: `scroll_horizontal.title = Usar desplazamiento vertical`
-    - Source: `Use Horizontal Scrolling`
-    - Suggest: `Usar desplazamiento horizontal`
-    - en-US is "Use Horizontal Scrolling"; the label right below correctly says "Desplazamiento horizontal", so the tooltip duplicates the vertical-scrolling tooltip and names the wrong option.
 - `about-debugging-runtime-profile-button2` — `devtools/client/aboutdebugging.ftl` — “Profile performance” rendered as “Rendimiento del perfil”
     - Current: `Rendimiento del perfil`
     - Source: `Profile performance`
@@ -392,11 +540,6 @@ _Nothing reported._
     - Source: `View and edit the session storage by selecting a host. <a data-l10n-name="learn-more-link">Learn more</a>`
     - Suggest: `Ver y editar el almacenamiento de sesión seleccionando un host.`
     - en-US: “View and edit the session storage by selecting a host.” Copied from the cookies hint; the Session Storage panel names the wrong storage type.
-- `parentProcessBrowserConsole.title` — `devtools/client/webconsole.properties` — Browser Console window title says “Caja de herramientas” (Toolbox)
-    - Current: `Caja de herramientas del navegador del proceso principal`
-    - Source: `Parent process Browser Console`
-    - Suggest: `Consola del navegador del proceso principal`
-    - en-US: “Parent process Browser Console”. The window is the Browser Console, not the Browser Toolbox; multiProcessBrowserConsole.title in the same file correctly uses “Consola”.
 - `whypaused-exception` — `devtools/shared/debugger-paused-reasons.ftl` — Pause reason uses the infinitive “Pausar” instead of the state “Pausado”
     - Current: `Pausar en excepción`
     - Source: `Paused on exception`
@@ -422,7 +565,67 @@ _Nothing reported._
     - Source: `TestingDeprecatedInterface.deprecatedAttribute is a testing-only attribute and this is its testing deprecation message.`
     - Suggest: `TestingDeprecatedInterface.deprecatedAttribute es un atributo de prueba`
     - en-US: “TestingDeprecatedInterface.deprecatedAttribute is a testing-only attribute…”. The identifier was altered.
-- _…and 55 more; see `state/` for the full list._
+- `IndexedDBTransactionAbortNavigation` — `dom/chrome/dom/dom.properties` — Dropped negation: says the transaction was already complete.
+    - Current: `Una transacción IndexedDB que fue aún completada fue abortada`
+    - Source: `An IndexedDB transaction that was not yet complete has been aborted due to page navigation.`
+    - Suggest: `Una transacción IndexedDB que aún no se había completado fue abortada`
+    - en-US: “An IndexedDB transaction that was not yet complete has been aborted due to page navigation.”
+- `ManifestImageRepeatedPurposes` — `dom/chrome/dom/dom.properties` — “Repeated purpose(s)” rendered as “unsupported purpose(s)”, duplicating the previous string.
+    - Current: `incluye propósito/s no admitidos: %3$S.`
+    - Source: `%1$S item at index %2$S includes repeated purpose(s): %3$S.`
+    - Suggest: `incluye propósito/s repetidos: %3$S.`
+    - en-US: “…includes repeated purpose(s): %3$S.” The translation copies ManifestImageUnsupportedPurposes, so both diagnostics read the same.
+- `ManifestStartURLOutsideScope` — `dom/chrome/dom/dom.properties` — “Start URL” translated as “URL de alcance” (scope URL).
+    - Current: `URL de alcance está fuera de alcance, así que es inválido.`
+    - Source: `The start URL is outside the scope, so the scope is invalid.`
+    - Suggest: `La URL de inicio está fuera del alcance, por lo que el alcance no es válido.`
+    - en-US: “The start URL is outside the scope, so the scope is invalid.” The subject is wrong and conflicts with ManifestScopeURLInvalid, which also uses “URL de alcance”.
+- `MediaStreamAudioSourceNodeCrossOrigin` — `dom/chrome/dom/dom.properties` — Copy of the MediaElement string: names the wrong API objects.
+    - Current: `HTMLMediaElement pasado a createMediaElementSource tiene un recurso cross-origin, el nodo emitirá silencio.`
+    - Source: `The MediaStream passed to createMediaStreamSource has a cross-origin resource, the node will output silence.`
+    - Suggest: `El MediaStream pasado a createMediaStreamSource tiene un recurso cross-origin, el nodo emitirá silencio.`
+    - en-US: “The MediaStream passed to createMediaStreamSource has a cross-origin resource…”. The developer comment names MediaStream and createMediaStreamSource; the translation duplicates MediaElementAudioSourceNodeCrossOrigin instead.
+- `MozfullscreenerrorDeprecatedPrefixWarning` — `dom/chrome/dom/dom.properties` — Deprecates the wrong API name (onmozfullscreenchange instead of onmozfullscreenerror).
+    - Current: `onmozfullscreenchange está en desuso.`
+    - Source: `onmozfullscreenerror is deprecated.`
+    - Suggest: `onmozfullscreenerror está en desuso.`
+    - en-US: “onmozfullscreenerror is deprecated.” The developer comment says not to translate onmozfullscreenerror; here it was replaced by a different identifier, duplicating MozfullscreenchangeDeprecatedPrefixWarning.
+- `PEPRSyntaxFieldUnclosedDataTypeName` — `dom/chrome/layout/css.properties` — “Unclosed data type name” rendered as “unknown data type name”.
+    - Current: `contiene un nombre de tipo de datos desconocido`
+    - Source: `@property syntax descriptor ‘%S’ contains an unclosed data type name.`
+    - Suggest: `contiene un nombre de tipo de datos sin cerrar`
+    - en-US: “…contains an unclosed data type name.” As translated it duplicates PEPRSyntaxFieldUnknownDataTypeName.
+- `errNotSemicolonTerminated` — `dom/chrome/layout/htmlparser.properties` — Dropped negation: says the character reference WAS terminated by a semicolon.
+    - Current: `Una referencia de caracter nombrada se terminó con un punto y coma.`
+    - Source: `Named character reference was not terminated by a semicolon. (Or “&” should have been escaped as “&amp;”.)`
+    - Suggest: `Una referencia de caracter nombrada no se terminó con un punto y coma.`
+    - en-US: “Named character reference was not terminated by a semicolon.” Without the negation the error message states the opposite of the actual problem.
+- `errUnclosedElements` — `dom/chrome/layout/htmlparser.properties` — Negation added: says there were no open elements, en-US says there were open elements.
+    - Current: `pero no había elementos abiertos`
+    - Source: `End tag “%1$S” seen, but there were open elements.`
+    - Suggest: `pero había elementos abiertos`
+    - en-US: “End tag “%1$S” seen, but there were open elements.” The sibling string errUnclosedElementsImplied correctly uses “pero había elementos abiertos”.
+- `29` — `dom/chrome/layout/xmlparser.properties` — Expat error 29 shows a reserved-prefix message instead of “incomplete markup in parameter entity”.
+    - Current: `29 = prefijo reservado (xml) must not be undeclared or bound to another namespace URI`
+    - Source: `incomplete markup in parameter entity`
+    - Suggest: `29 = marcado incompleto en la entidad de parámetro`
+    - en-US: “29 = incomplete markup in parameter entity”. The code-to-message mapping is shifted, so the wrong error text is displayed.
+- `30` — `dom/chrome/layout/xmlparser.properties` — Expat error 30 shows a reserved-prefix message instead of “XML declaration not well-formed”.
+    - Current: `30 = prefijo reservado (xmlns) must not be declared or undeclared`
+    - Source: `XML declaration not well-formed`
+    - Suggest: `30 = declaración XML mal formada`
+    - en-US: “30 = XML declaration not well-formed”. Wrong message mapped to this code.
+- `6` — `dom/chrome/layout/xmlparser.properties` — Expat error 6 (“partial character”) rendered as “unclosed token”.
+    - Current: `6 = token sin cerrar`
+    - Source: `partial character`
+    - Suggest: `6 = carácter parcial`
+    - en-US: “6 = partial character”. As translated it duplicates error 5 (“unclosed token”), so two different parser errors are indistinguishable.
+- `BlockMixedActiveContent` — `dom/chrome/security/security.properties` — Mixed active content rendered as mixed display content, duplicating the previous string.
+    - Current: `Bloqueado al cargar contenido de visualización mixto “%1$S”`
+    - Source: `Blocked loading mixed active content “%1$S”`
+    - Suggest: `Bloqueado al cargar contenido activo mixto “%1$S”`
+    - en-US: “Blocked loading mixed active content”. As translated it is identical to BlockMixedDisplayContent, so the two distinct security conditions are indistinguishable.
+- _…and 43 more; see `state/` for the full list._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -446,16 +649,16 @@ _Nothing reported._
     - Source: `Switched tabs`
     - Suggest: `Se cambió de pestaña`
     - The developer comment says this is the result label for switching to a single already-open tab; the target reads as a plural noun phrase meaning tabs were modified, not that the browser switched tabs.
-- `identity-description-insecure-login-forms` — `browser/browser/browser.ftl` — "you enter" (present/future) is rendered as past "que se usó", changing the meaning.
-    - Current: `La información de ingreso que se usó en esta página no es segura y puede estar comprometida.`
-    - Source: `The login information you enter on this page is not secure and could be compromised.`
-    - Suggest: `La información de ingreso que ingrese en esta página no es segura y podría verse comprometida.`
-    - en-US warns about information the user enters on the page, not information already used; the past tense misstates the warning.
 - `urlbar-tabtosearch-onboard` — `browser/browser/browser.ftl` — "shortcut" is rendered as "atajo de teclado" (keyboard shortcut) though the developer comment describes a urlbar result, not a key combination.
     - Current: `Seleccione este atajo de teclado para encontrar más rápido lo que necesita.`
     - Source: `Select this shortcut to find what you need faster.`
     - Suggest: `Seleccione este atajo para encontrar más rápido lo que necesita.`
     - The comment says users are typing a search engine domain in the urlbar and select the offered shortcut; adding "de teclado" invents a keyboard shortcut not in the source.
+- `site-rules-status-heading` — `browser/browser/ipProtection.ftl` — "Your rule" translated as "Regla personalizada" (custom rule), changing the meaning.
+    - Current: `Regla personalizada`
+    - Source: `Your rule`
+    - Suggest: `Tu regla`
+    - The en-US heading is "Your rule", referring to the user's own rule, not to a "custom rule".
 - `newtab-privacy-empty-state-tally` — `browser/browser/newtab/newtab.ftl` — "See a running tally here." translated as a statement about future updating and the final period is dropped.
     - Current: `Acá se actualizará el total`
     - Source: `See a running tally here.`
@@ -496,16 +699,6 @@ _Nothing reported._
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
     - Suggest: `key=“%S” modifiers=“%S” id=“%S”`
     - Developer comment: “do not localize key=“%S” modifiers=“%S” id=“%S””. WinConflict2 has the same problem.
-- `MathML_DeprecatedMathSizeValueWarning` — `dom/chrome/dom/dom.properties` — The mathsize keyword values small/normal/big were translated despite the do-not-translate note.
-    - Current: `“Pequeño”, “normal” y “grande” son valores obsoletos`
-    - Source: `“small”, “normal” and “big” are deprecated values for the mathsize attribute and will be removed at a future date.`
-    - Suggest: `“small”, “normal” y “big” son valores obsoletos`
-    - Developer comment: “Do not translate small, normal, big and mathsize.” The translated words do not match any real attribute value.
-- `MathML_DeprecatedStyleAttributeWarning` — `dom/chrome/dom/dom.properties` — MathML attribute names were translated despite the do-not-translate note.
-    - Current: `Los atributos MathML "fondo", "color", "familia de fuentes", "tamaño de fuente", "estilo de fuente" y "fontweight"`
-    - Source: `MathML attributes “background”, “color”, “fontfamily”, “fontsize”, “fontstyle” and “fontweight” are deprecated and will be removed at a future date.`
-    - Suggest: `Los atributos MathML “background”, “color”, “fontfamily”, “fontsize”, “fontstyle” y “fontweight”`
-    - Developer comment: “Do not translate MathML, background, color, fontfamily, fontsize, fontstyle and fontweight.” Only fontweight was left intact.
 - `PreloadIgnoredInvalidAttr` — `dom/chrome/dom/dom.properties` — HTML attribute names “as”, “type” and “media” translated as words.
     - Current: `valores desconocidos de "como" o "tipo", o al atributo "media" que no coincide`
     - Source: `Preload of %S was ignored due to unknown “as” or “type” values, or non-matching “media” attribute.`
@@ -556,11 +749,16 @@ _Nothing reported._
     - Source: `To browse the data being collected by legacy telemetry, please consult <a data-l10n-name="about-telemetry-link">about:telemetry</a>.`
     - Suggest: `<a data-l10n-name="about-telemetry-link">about:telemetry</a>`
     - “about:telemetry” is a browser URL and a do-not-translate identifier; with the inserted space it no longer names a valid page.
-- `about-networking-rcwn-net-won-count` — `toolkit/toolkit/about/aboutNetworking.ftl` — "Net won count" (number of times the network race was won) is mistranslated as "Cuenta de ganancias en la red" ("count of earnings on the network").
-    - Current: `Cuenta de ganancias en la red`
-    - Source: `Net won count`
-    - Suggest: `Cantidad de veces que ganó la red`
-    - In RCWN (race cache with network) stats this counts how often the network won the race against the cache; "ganancias" means monetary earnings/profit and misstates the metric.
+- `pdfjs-open-attachments-inline` — `toolkit/toolkit/about/aboutSupport.ftl` — "Open PDF Attachments Inline" is rendered as if "integrados" modifies the attachments rather than the manner of opening.
+    - Current: `Abrir adjuntos PDF integrados`
+    - Source: `Open PDF Attachments Inline`
+    - Suggest: `Abrir adjuntos PDF en línea`
+    - The en-US means opening PDF attachments inline (within the page); the target says "open embedded PDF attachments", changing the meaning.
+- `autofill-delete-payment-method-os-prompt-windows` — `toolkit/toolkit/formautofill/formAutofill.ftl` — "Confirm access to this Windows account below" is mistranslated as confirming access to the Windows account that is below.
+    - Current: `Confirme el acceso a la cuenta de Windows que está abajo.`
+    - Source: `{ -brand-short-name } is trying to delete stored payment method information. Confirm access to this Windows account below.`
+    - Suggest: `Confirme abajo el acceso a esta cuenta de Windows.`
+    - In en-US "below" modifies where the user confirms, not which account; the target asserts there is an account shown below.
 - `language-name-af` — `toolkit/toolkit/intl/languageNames.ftl` — Afrikaans rendered as "Africano" (African)
     - Current: `language-name-af = Africano`
     - Source: `Afrikaans`
@@ -619,6 +817,11 @@ _Nothing reported._
 
 ### C. Grammar, agreement & spelling
 
+- `appmenu-sync-promo-connectdevice` — `browser/browser/appmenu.ftl` — Heading begins with a stray infinitive marker "A traer", which is not idiomatic Spanish for the imperative heading.
+    - Current: `A traer las pestañas del dispositivo móvil`
+    - Source: `heading: Grab your mobile tabs`
+    - Suggest: `Traé las pestañas del dispositivo móvil`
+    - The en-US "Grab your mobile tabs" is an imperative; "A traer…" is ungrammatical/odd as a heading.
 - `migration-no-selected-data-label` — `browser/browser/migrationWizard.ftl` — Accented "sé" used instead of the reflexive pronoun "se".
     - Current: `No sé seleccionaron datos a importar`
     - Source: `No data selected for import`
@@ -629,6 +832,16 @@ _Nothing reported._
     - Source: `Learn how { -brand-product-name } matches extensions`
     - Suggest: `Conocer cómo { -brand-product-name } hace coincidir`
     - Indirect interrogative "cómo" is written with an accent.
+- `refresh-unused-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — "no ha iniciado … hace un tiempo" is ungrammatical; should be "desde hace un tiempo".
+    - Current: `Parece que no ha iniciado { -brand-short-name } hace un tiempo.`
+    - Source: `It looks like you haven’t started { -brand-short-name } in a while. Do you want to clean it up for a fresh, like-new experience? And by the way, welcome back!`
+    - Suggest: `Parece que no iniciaste { -brand-short-name } desde hace un tiempo.`
+    - The negative perfect requires "desde hace"; also the surrounding es-AR copy uses voseo rather than "ha iniciado".
+- `onboarding-refresh-fro-import-body` — `browser/browser/newtab/onboarding.ftl` — Pronoun disagreement: "los datos" (plural) referenced by singular "lo".
+    - Current: `{ -brand-product-name } nunca lo venderá.`
+    - Source: `Your personal data stays personal. { -brand-product-name } will never sell it.`
+    - Suggest: `{ -brand-product-name } nunca los venderá.`
+    - The referent is "Los datos personales" (plural), so the clitic must be "los", matching the en-US "will never sell it" referring to your personal data.
 - `saved-passwords-yes` — `browser/browser/pageInfo.ftl` — "Si" missing its accent.
     - Current: `Si`
     - Source: `Yes`
@@ -644,11 +857,6 @@ _Nothing reported._
     - Source: `Connections to localhost, 127.0.0.1/8, and ::1 are never proxied.`
     - Suggest: `Las conexiones a localhost, 127.0.0.1/8 y ::1 nunca pasan por proxy.`
     - The developer comment says: Do not translate "localhost", "127.0.0.1/8" and "::1". The CIDR suffix /8 was dropped, changing the technical statement.
-- `content-blocking-fingerprinters-label` — `browser/browser/preferences/preferences.ftl` — English term “Fingerprinters” left untranslated although the locale translates it everywhere else.
-    - Current: `Fingerprinters`
-    - Source: `accesskey: F label: Fingerprinters`
-    - Suggest: `Detectores de huellas digitales`
-    - The same en-US term is rendered “Detectores de huellas digitales” in content-blocking-fingerprinters and in the ETP custom labels in this file, so the English label is inconsistent in the same surface.
 - `preferences-connection-link-section` — `browser/browser/preferences/preferences.ftl` — Missing accent on "cómo" in the interrogative/relative clause.
     - Current: `Vea como las conexiones`
     - Source: `description: See how connections stay secure, harmful software is blocked, and websites are verified. label: Connection and software security`
@@ -709,11 +917,6 @@ _Nothing reported._
     - Source: `{ -brand-short-name } blocked this page because it might try to trick you into installing programs that harm your browsing experience (for example, by changing your homepage or showing extra ads on sites you visit).`
     - Suggest: `bloqueó esta página porque puede intentar`
     - "está" is the verb "estar"; the demonstrative adjective is unaccented "esta". Same error in safeb-blocked-addon-page-short-desc.
-- `screenshots-generic-error-details` — `browser/browser/screenshots.ftl` — Misspelling "intenar".
-    - Current: `¿Quiere intenar de nuevo`
-    - Source: `We’re not sure what just happened. Care to try again or take a shot of a different page?`
-    - Suggest: `¿Quiere intentar de nuevo`
-    - The verb is "intentar".
 - `protections-milestone` — `browser/browser/siteProtections.ftl` — Singular variant uses the participle instead of the verb.
     - Current: `{ -brand-short-name } bloqueado { $trackerCount } rastreador desde`
     - Source: `{$trackerCount ->} [one] { -brand-short-name } blocked { $trackerCount } tracker since { $date } [other] { -brand-short-name } blocked over { $trackerCount } trackers since { $date }`
@@ -749,11 +952,6 @@ _Nothing reported._
     - Source: `heading: { $extensionName } disabled message: This extension violates Mozilla’s policies and has been disabled.`
     - Suggest: `Esta extensión viola las políticas de Mozilla y ha sido deshabilitada.`
     - The demonstrative adjective is unaccented "Esta".
-- `unified-extensions-mb-blocklist-warning-single` — `browser/browser/unifiedExtensions.ftl` — Verb form "Está" used instead of the demonstrative "Esta".
-    - Current: `Está extensión viola las políticas de Mozilla`
-    - Source: `heading: { $extensionName } disabled message: This extension violates Mozilla’s policies and has been disabled. You can enable it in settings, but this may be risky.`
-    - Suggest: `Esta extensión viola las políticas de Mozilla`
-    - The demonstrative adjective is unaccented "Esta"; the -single2 variant correctly reads "Esta extensión".
 - `webrtc-allow-share-camera-and-microphone-with-file` — `browser/browser/webrtcIndicator.ftl` — Verb form "esté" used instead of the demonstrative "este" (also in the other -with-file prompts).
     - Current: `¿Permitir que esté archivo local use la cámara y el micrófono?`
     - Source: `Allow this local file to use your camera and microphone?`
@@ -774,11 +972,6 @@ _Nothing reported._
     - Source: `You are sharing your entire screen.`
     - Suggest: `Está compartiendo toda su pantalla.`
     - "Estás" (vos/tú) clashes with "su"; the adjacent webrtc-sharing-window and webrtc-sharing-browser-window use "Está".
-- `contentBlocking.cookies.blockingUnvisited2.label` — `browser/chrome/browser/browser.properties` — Number disagreement between "sitio" and "no visitados"
-    - Current: `Cookies de sitio no visitados`
-    - Source: `Unvisited Site Cookies`
-    - Suggest: `Cookies de sitios no visitados`
-    - The adjective is plural while the noun it modifies is singular; en-US is "Unvisited Site Cookies".
 - `decoder.noCodecs.button` — `browser/chrome/browser/browser.properties` — Interrogative "cómo" written without accent
     - Current: `Aprender como`
     - Source: `Learn how`
@@ -789,26 +982,11 @@ _Nothing reported._
     - Source: `Yes, take me to %S`
     - Suggest: `Sí, ir a %S`
     - en-US is "Yes, take me to %S"; unaccented "si" is the conditional conjunction "if".
-- `privacy.spoof_english` — `browser/chrome/browser/browser.properties` — Language name capitalized as in English
-    - Current: `Cambiar la configuración de idioma a Inglés`
-    - Source: `Changing your language setting to English will make you more difficult to identify and enhance your privacy. Do you want to request English language versions of web pages?`
-    - Suggest: `Cambiar la configuración de idioma a inglés`
-    - Spanish writes language names in lowercase; "Inglés" is capitalized twice in this string.
 - `processHang.nonspecific_tab.label` — `browser/chrome/browser/browser.properties` — Spurious reflexive "se" reverses who is slowing down whom
     - Current: `Una página web se está ralentizando %1$S.`
     - Source: `A web page is slowing down %1$S. To speed up your browser, stop that page.`
     - Suggest: `Una página web está ralentizando %1$S.`
     - en-US: "A web page is slowing down %1$S". With "se", the sentence reads as the page slowing itself; the parallel strings processHang.selected_tab.label and processHang.specific_tab.label correctly omit it.
-- `webauthn.anonymize` — `browser/chrome/browser/browser.properties` — Incorrect accent in "Anónimizar"
-    - Current: `Anónimizar de todas formas`
-    - Source: `Anonymize anyway`
-    - Suggest: `Anonimizar de todas formas`
-    - The verb is "anonimizar"; only the adjective "anónimo" carries the accent.
-- `webauthn.selectSignResultPrompt` — `browser/chrome/browser/browser.properties` — Interrogative "cuál" written without accent
-    - Current: `Seleccione cual usar o cancelar.`
-    - Source: `Multiple accounts found for %S. Select which to use or cancel.`
-    - Suggest: `Seleccione cuál usar o cancelar.`
-    - Indirect interrogative pronoun requires an accent ("Select which to use").
 - `unblockTypeUncommon2` — `browser/chrome/browser/downloads/downloads.properties` — Missing accent in "comunmente"
     - Current: `Este archivo no es comunmente descargado`
     - Source: `This file is not commonly downloaded and may not be safe to open. It may contain a virus or make unexpected changes to your programs and settings.`
@@ -844,56 +1022,21 @@ _Nothing reported._
     - Source: `Firefox doesn’t know how to open this address, because one of the following protocols (%S) isn’t associated with any program or is not allowed in this context.`
     - Suggest: `Firefox no sabe cómo abrir esta dirección`
     - Indirect interrogative "cómo" is always accented. Same error in clientSocketMisconfiguration and unknownSocketType ("no sabe como comunicarse").
-- `autofillReauthCheckboxLin` — `browser/extensions/formautofill/formautofill.properties` — Indicative "Requiere" instead of the infinitive used by the parallel checkboxes
-    - Current: `Requiere autenticación de Linux para autocompletar`
-    - Source: `Require Linux authentication to autofill, view, or edit stored credit cards.`
-    - Suggest: `Requerir autenticación de Linux para autocompletar`
-    - en-US "Require Linux authentication…"; the Mac and Windows variants of the same checkbox both use "Requerir", so this one reads as a statement of fact instead of a setting.
 - `REG_APP_DESC` — `browser/installer/custom.properties` — Misspelled infinitive "obtenér" with a spurious accent.
     - Current: `obtenér`
     - Source: `$BrandShortName delivers safe, easy web browsing. A familiar user interface, enhanced security features including protection from online identity theft, and integrated search let you get the most out of the web.`
     - Suggest: `obtener`
     - Infinitives ending in -er carry no written accent; "obtenér" is a spelling error.
-- `unsupported_feature_forms` — `browser/pdfviewer/chrome.properties` — Misspelling "cotiene"
-    - Current: `cotiene`
-    - Source: `This PDF document contains forms. The filling of form fields is not supported.`
-    - Suggest: `contiene`
-    - Missing letter; "cotiene" is not a Spanish word.
-- `document_properties_file_size` — `browser/pdfviewer/viewer.properties` — Misspelling "archovo"
-    - Current: `Tamaño de archovo:`
-    - Source: `File size:`
-    - Suggest: `Tamaño de archivo:`
-    - Typo for "archivo"; the line above correctly uses "Nombre de archivo:".
-- `find_reached_bottom` — `browser/pdfviewer/viewer.properties` — "alcanzando" should be "alcanzado"
-    - Current: `Fin de documento alcanzando, continuando desde arriba`
-    - Source: `Reached end of document, continued from top`
-    - Suggest: `Fin de documento alcanzado, continuando desde arriba`
-    - Gerund used where the past participle is required; find_reached_top correctly uses "alcanzado".
-- `invalid_file_error` — `browser/pdfviewer/viewer.properties` — Misspelling "cocrrupto"
-    - Current: `cocrrupto`
-    - Source: `Invalid or corrupted PDF file.`
-    - Suggest: `corrupto`
-    - Typo for "corrupto".
 - `serviceworker-list-aboutdebugging` — `devtools/client/application.ftl` — "domínios" is misspelled (Portuguese form); Spanish is "dominios".
     - Current: `de otros domínios`
     - Source: `Open <a>about:debugging</a> for Service Workers from other domains`
     - Suggest: `de otros dominios`
     - en-US "from other domains"; the correct Spanish spelling has no accent: "dominios".
-- `networkMenu.summary.tooltip.domContentLoaded` — `devtools/client/netmonitor.properties` — DOM event name corrupted to “DOMContentLoad”
-    - Current: `Momento en el que ocurrió el evento “DOMContentLoad”`
-    - Source: `Time when “DOMContentLoad” event occurred`
-    - Suggest: `Momento en el que ocurrió el evento “DOMContentLoaded”`
-    - DOMContentLoaded is a Web platform event name and must not be altered; netmonitor.ftl keeps it correct.
 - `perftools-intro-description` — `devtools/client/perftools.ftl` — Profiler URL misspelled as perfiler.firefox.com
     - Current: `Las grabaciones inician el perfiler.firefox.com en una nueva pestaña.`
     - Source: `Recordings launch profiler.firefox.com in a new tab. All data is stored locally, but you can choose to upload it for sharing.`
     - Suggest: `Las grabaciones inician profiler.firefox.com en una nueva pestaña.`
     - profiler.firefox.com is a domain name and must not be altered; the string points users to a non-existent host (perftools-description-intro in the same file has it right).
-- `preventedConsoleClear` — `devtools/client/webconsole.properties` — Misspelling of "persistentes" as "presistentes".
-    - Current: `Registros presistentes`
-    - Source: `console.clear() was prevented due to “Persist Logs”`
-    - Suggest: `Registros persistentes`
-    - "presistentes" is not a Spanish word; the correct spelling is "persistentes", and it must match the Persist Logs menu item label.
 - `clientSocketMisconfiguration` — `dom/chrome/appstrings.properties` — Missing accent on the interrogative “cómo”.
     - Current: `no sabe como comunicarse con el servidor`
     - Source: `The client is misconfigured and doesn’t know how to communicate with the server.`
@@ -919,50 +1062,90 @@ _Nothing reported._
     - Source: `Please select a value that is no earlier than %S.`
     - Suggest: `Seleccione un valor que no sea anterior a %S.`
     - Misspelling of “Seleccione” in a form-validation bubble shown to end users.
-- _…and 35 more; see `state/` for the full list._
+- `FullscreenDeniedContainerNotAllowed` — `dom/chrome/dom/dom.properties` — Untranslated English word “attribute” left at the end.
+    - Current: `no tiene un atributo "allowfullscreen" attribute.`
+    - Source: `Request for fullscreen was denied because at least one of the document’s containing elements is not an iframe or does not have an “allowfullscreen” attribute.`
+    - Suggest: `no tiene un atributo “allowfullscreen”.`
+    - Leftover from the English source; the noun is duplicated.
+- `ImportMapNotAllowedMultiple` — `dom/chrome/dom/dom.properties` — Wrong accent: “sé” instead of the pronoun “se”.
+    - Current: `No sé permite la importación múltiple de mapas.`
+    - Source: `Multiple import maps are not allowed.`
+    - Suggest: `No se permiten varios mapas de importación.`
+    - “sé” is the verb form; the impersonal pronoun “se” is required.
+- `JSONCharsetWarning` — `dom/chrome/dom/dom.properties` — Typo “recueprada”.
+    - Current: `para JSON recueprada usando XMLHttpRequest`
+    - Source: `An attempt was made to declare a non-UTF-8 encoding for JSON retrieved using XMLHttpRequest. Only UTF-8 is supported for decoding JSON.`
+    - Suggest: `para JSON recuperada usando XMLHttpRequest`
+    - Misspelling of “recuperada”.
+- `KillScriptWithDebugMessage` — `dom/chrome/dom/dom.properties` — Typo “el el debugger”.
+    - Current: `abrir el script el el debugger`
+    - Source: `A script on this page may be busy, or it may have stopped responding. You can stop the script now, open the script in the debugger, or let the script continue.`
+    - Suggest: `abrir el script en el depurador`
+    - Duplicated article instead of the preposition “en”; appears in a user-facing dialog.
+- `MediaEMEInsecureContextDeprecatedWarning` — `dom/chrome/dom/dom.properties` — Typo “cirada” for “cifrada”.
+    - Current: `Usar extensiones de medios cirada en %S`
+    - Source: `Using Encrypted Media Extensions at %S on an insecure (i.e. non-HTTPS) context is deprecated and will soon be removed. You should consider switching to a secure origin such as HTTPS.`
+    - Suggest: `Usar extensiones de medios cifrados (EME) en %S`
+    - Misspelling; “Encrypted Media Extensions” becomes unreadable.
+- `PEBadSelectorKeyframeRuleIgnored` — `dom/chrome/layout/css.properties` — Typo “devido”.
+    - Current: `Regla keyframe ignorada devido a un mal selector.`
+    - Source: `Keyframe rule ignored due to bad selector.`
+    - Suggest: `Regla keyframe ignorada debido a un mal selector.`
+    - Misspelling of “debido”.
+- `EncNoDeclarationFrame` — `dom/chrome/layout/htmlparser.properties` — Typo “decarada”.
+    - Current: `no fue decarada`
+    - Source: `The character encoding of a framed document was not declared. The document may appear different if viewed without the document framing it.`
+    - Suggest: `no fue declarada`
+    - Misspelling of “declarada”.
+- `EncXmlDecl` — `dom/chrome/layout/htmlparser.properties` — Stray “!” replaces the article: “!a sintaxis”.
+    - Current: `declarada usando !a sintaxis de XML`
+    - Source: `The character encoding of an HTML document was declared using the XML declaration syntax. This is non-conforming, and declaring the encoding using a meta tag at the start of the head part is more efficient.`
+    - Suggest: `declarada usando la sintaxis de XML`
+    - Typo producing a nonsense token.
+- `errNoSpaceBetweenPublicAndSystemIds` — `dom/chrome/layout/htmlparser.properties` — Typo “identficadores”.
+    - Current: `entre los identficadores públicos y de sistema`
+    - Source: `No space between the doctype public and system identifiers.`
+    - Suggest: `entre los identificadores públicos y de sistema`
+    - Misspelling of “identificadores”.
+- `PERR_NOT_IMPLEMENTED` — `dom/chrome/layout/printing.properties` — Missing accent on “está”.
+    - Current: `todavía no esta implementada`
+    - Source: `Some printing functionality is not implemented yet.`
+    - Suggest: `todavía no está implementada`
+    - Verb form requires the accent.
+- `ignoringStrictDynamic` — `dom/chrome/security/csp.properties` — Typo “Ingorando”.
+    - Current: `Ingorando fuente “%1$S”`
+    - Source: `Ignoring source “%1$S” (Only supported within script-src).`
+    - Suggest: `Ignorando fuente “%1$S”`
+    - Misspelling of “Ignorando”.
+- _…and 19 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
-- `colors-page-override` — `browser/browser/preferences/colors.ftl` — Misspelling “Sobreescribir”.
-    - Current: `Sobreescribir`
-    - Source: `(value): Override the colors specified by the page with your selections above accesskey: O`
-    - Suggest: `Sobrescribir`
-    - The prefix sobre- plus escribir contracts to “sobrescribir”; “sobreescribir” is not a valid spelling.
+- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Novedades” but the string it names, `releaseNotes-link`, reads “Qué hay de nuevo”
+    - Current: `Anular la página "Novedades" posterior a la actualización. Establecer esta política en blanco si quiere deshabilitar la página posterior a la actualización.`
+    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
+    - Suggest: `Qué hay de nuevo`
+    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `preferences-ai-controls-sidebar-chatbot-group-3` — `browser/browser/preferences/preferences.ftl` — Uses the peninsular "usted" imperative "Mantenga" instead of the es-AR voseo/impersonal register used elsewhere in the string.
     - Current: `Mantenga un chatbot a la vista mientras se navega.`
     - Source: `description: Keep a chatbot in view as you browse. Choose from multiple providers and switch anytime. label: AI chatbot providers in sidebar`
     - Suggest: `Mantené un chatbot a la vista mientras navegás.`
     - es-AR addresses the user with voseo ("Mantené"), not the "usted" form "Mantenga"; the rest of the string already switches to an impersonal construction, so the register is inconsistent.
-- `update-application-check-choose` — `browser/browser/preferences/preferences.ftl` — Mismatched verb forms make the option ungrammatical.
-    - Current: `Busque actualizaciones pero dejarme elegir si las instalo`
-    - Source: `accesskey: C label: Check for updates but let you choose to install them`
-    - Suggest: `Buscar actualizaciones, pero permitirme elegir si se instalan`
-    - The imperative “Busque” is coordinated with the infinitive “dejarme”; en-US: “Check for updates but let you choose to install them”. Compare update-application-check-choose-2, “Buscar actualizaciones, pero elegir cuándo instalarlas”.
 - `default-bookmarks-firefox-community` — `browser/browser/profile/default-bookmarks.ftl` — Tuteo imperative in a file that otherwise uses voseo
     - Current: `default-bookmarks-firefox-community = Participa`
     - Source: `Get Involved`
     - Suggest: `Participá`
     - The neighbouring bookmark titles use the Argentine voseo imperative ("Obtené ayuda", "Personalizá Firefox"); "Participa" is the tuteo form and breaks that form of address within the same surface.
-- `noDomMutationBreakpoints` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints` quotes “Romper en...” but the string it names, `watchpoints.submenu`, reads “Interrumpir en…”
-    - Current: `Haga clic derecho en un elemento en el %S y seleccione “Romper en...” para agregar un punto de interrupción`
-    - Source: `Right click an element in the %S and select “Break on…” to add a breakpoint`
-    - Suggest: `Interrumpir en…`
-    - In the source this string quotes “Break on…”, which is exactly the value of `watchpoints.submenu` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `preventedConsoleClear` — `devtools/client/webconsole.properties` — `preventedConsoleClear` quotes “Registros presistentes” but the string it names, `webconsole.console.settings.menu.item.enablePersistentLogs.label`, reads “Registros persistentes”
-    - Current: `console.clear() se evitó debido a “Registros presistentes”`
-    - Source: `console.clear() was prevented due to “Persist Logs”`
-    - Suggest: `Registros persistentes`
-    - In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `preventedConsoleClear` — `devtools/shared/webconsole.properties` — `preventedConsoleClear` quotes “Registros presistentes” but the string it names, `webconsole.console.settings.menu.item.enablePersistentLogs.label`, reads “Registros persistentes”
     - Current: `console.clear() se evitó debido a “Registros presistentes”`
     - Source: `console.clear() was prevented due to “Persist Logs”`
     - Suggest: `Registros persistentes`
     - In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `saveLogin` — `mobile/android/chrome/passwordmgr.properties` — Voseo (“Querés”) where the locale consistently uses the usted form.
-    - Current: `¿Querés que %S recuerde este ingreso?`
-    - Source: `Would you like %S to remember this login?`
-    - Suggest: `¿Desea que %S recuerde este ingreso?`
-    - The tree uses usted almost everywhere (140+ “Ingrese/Puede/Elija” vs. a handful of voseo forms); this string breaks the established form of address.
+- `SpeechRecognitionLangDefaultedToUserLanguageWarning` — `dom/chrome/dom/dom.properties` — Uses peninsular "usted" imperative form "Establezca" instead of the es-AR voseo/infinitive style used elsewhere.
+    - Current: `Establezca SpeechRecognition.lang o un atributo lang en el elemento raíz del documento.`
+    - Source: `SpeechRecognition.lang is unset and this document declares no language, so speech will be recognized in the user’s preferred language. Set SpeechRecognition.lang, or a lang attribute on the document’s root element.`
+    - Suggest: `Establecé SpeechRecognition.lang o un atributo lang en el elemento raíz del documento.`
+    - es-AR uses voseo imperatives ("Establecé") rather than "Establezca"; the rest of the locale addresses the user in Argentine form.
 - `config-new-pref-string` — `mobile/android/mobile/android/aboutConfig.ftl` — Voseo (“Ingresá”) where the locale uses the usted form.
     - Current: `Ingresá una cadena`
     - Source: `placeholder: Enter a string`
@@ -1106,11 +1289,6 @@ _Nothing reported._
     - Source: `Allow Windows single sign-on for Microsoft, work, and school accounts.`
     - Suggest: `Permitir el inicio de sesión único de Windows`
     - policy-MicrosoftEntraSSO in the same file uses the correct term “inicio de sesión único”; “un solo inicio de sesión” reads as a numeric limit rather than the SSO feature.
-- `fxa-qrcode-pair-step2-signin` — `browser/browser/preferences/fxaPairDevice.ftl` — Usted form in a file whose other steps address the user informally.
-    - Current: `Abra el menú`
-    - Source: `2. Go to the menu (<img data-l10n-name="ios-menu-icon"/> on iOS or <img data-l10n-name="android-menu-icon"/> on Android) and tap <strong>Sync and save data</strong>`
-    - Suggest: `Abrí el menú`
-    - The rest of the dialog uses the informal address (“tu dispositivo móvil”, “sostené el teléfono”), so this step is inconsistent within the same screen.
 - `permissions-exceptions-manage-etp-desc` — `browser/browser/preferences/permissions.ftl` — “Enhanced Tracking Protection” rendered two different ways in the same dialog.
     - Current: `protección de rastreo avanzada`
     - Source: `You can specify which websites have Enhanced Tracking Protection turned off. Type the exact address of the site you want to manage and then click Add Exception.`
@@ -1141,10 +1319,6 @@ _Nothing reported._
     - Source: `You can also skip troubleshooting and refresh { -brand-short-name }, instead.`
     - Suggest: `También puede omitir`
     - The rest of the file uses usted ("Sus complementos", "Puede intentar"), and usted is overwhelmingly dominant across the locale.
-- `noDomMutationBreakpoints` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints` uses three dots where this locale uses …
-    - Current: `Haga clic derecho en un elemento en el %S y seleccione “Romper en...” para agregar un punto de interrupción`
-    - Source: `Right click an element in the %S and select “Break on…” to add a breakpoint`
-    - The tree uses … 462 times against 2 ASCII runs.
 - `ImageMapPolyWrongNumberOfCoords` — `dom/chrome/layout/layout_errors.properties` — `ImageMapPolyWrongNumberOfCoords` uses three dots where this locale uses …
     - Current: `El atributo "coords" del tag <area shape="poly"> no tiene el formato "x1,y1,x2,y2 ...".`
     - Source: `The “coords” attribute of the <area shape="poly"> tag is not in the “x1,y1,x2,y2 …” format.`
@@ -1154,31 +1328,16 @@ _Nothing reported._
     - Source: `An extension, %S, changed the page you see when you open a new tab.`
     - Suggest: `cambió la página que ve cuando se abre una nueva pestaña`
     - The next string in the same file (homepageControlled.message) uses "ve" and "su página de inicio".
-- `rights-safebrowsing` — `toolkit/toolkit/about/aboutRights.ftl` — Double space between sentences.
-    - Current: `sitios inseguros.  Si desea`
-    - Source: `<strong>SafeBrowsing: </strong>Disabling the Safe Browsing feature is not recommended as it may result in you going to unsafe sites. If you wish to disable the feature completely, follow these steps:`
-    - Suggest: `sitios inseguros. Si desea`
-    - Extra space not present in the en-US source.
 - `content-uses-tiling` — `toolkit/toolkit/about/aboutSupport.ftl` — “Tiling” rendered as “baldosas” (floor tiles) here but as “mosaicos” in the adjacent uses-tiling row.
     - Current: `content-uses-tiling = Utiliza baldosas (contenido)`
     - Source: `Uses Tiling (Content)`
     - Suggest: `Utiliza mosaicos (contenido)`
     - Two consecutive rows for the same graphics feature use different terms, and “baldosas” is not used for graphics tiling anywhere else in the tree.
-- `abuse-report-learnmore` — `toolkit/toolkit/about/abuseReports.ftl` — Stray spaces inside the link text after the opening tag and before the closing tag.
-    - Current: `<a data-l10n-name="learnmore-link"> Conozca más información acerca de los informes de extensiones y temas  </a>`
-    - Source: `Unsure what issue to select? <a data-l10n-name="learnmore-link">Learn more about reporting extensions and themes</a>`
-    - Suggest: `<a data-l10n-name="learnmore-link">Conozca más información acerca de los informes de extensiones y temas</a>`
-    - The en-US has no leading or trailing spaces inside the anchor; the extra spaces render as underlined whitespace.
 - `certificate-viewer-subject-name` — `toolkit/toolkit/about/certviewer.ftl` — “Subject” rendered as “asunto” (email subject) here, but as “sujeto” in certificate-viewer-subject-alt-names.
     - Current: `certificate-viewer-subject-name = Nombre del asunto`
     - Source: `Subject Name`
     - Suggest: `Nombre del sujeto`
     - Within the same certificate viewer the X.509 subject is called “sujeto” in one label and “asunto” in two others (also certificate-viewer-subject-key-id); “asunto” names an email header, not the certificate subject.
-- `experimental-features-web-gpu-description3` — `toolkit/toolkit/featuregates/features.ftl` — Voseo imperative "Consultá" among usted forms
-    - Current: `Consultá el <a data-l10n-name="bugzilla">bug 1616739</a> para más detalles.`
-    - Source: `The <a data-l10n-name="wikipedia-webgpu">WebGPU API</a> provides low-level support for performing computation and graphics rendering using the <a data-l10n-name="wikipedia-gpu">Graphics Processing Unit (GPU)</a> of the…`
-    - Suggest: `Consulte el <a data-l10n-name="bugzilla">bug 1616739</a> para más detalles.`
-    - Every other description in the same file uses the usted imperative "Consulte".
 - `user-context-color-purple` — `toolkit/toolkit/global/contextual-identity.ftl` — "Purple" and "Violet" both rendered "Violeta"
     - Current: `user-context-color-purple =     .label = Violeta`
     - Source: `label: Purple`
