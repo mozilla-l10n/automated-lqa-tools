@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-07 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `386c3ca4eca7` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `386c3ca4eca7` |
-| **Previous run** | 2026-09-01 @ `117165baae4c` |
+| **Generated** | 2026-09-14 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `e8592a898dc1` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `e8592a898dc1` |
+| **Previous run** | 2026-09-07 @ `386c3ca4eca7` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,916 |
+| **Strings reviewed this run** | 1,906 of 1,922 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,309 @@ Also for hu: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (91)
 
-_No new findings._
+- `DefaultBrowserCard.Button.v2` — `hu/firefox-ios.xliff` — Missing comma before the subordinate clause in "Tudja meg hogyan".
+    - Current: `Tudja meg hogyan`
+    - Source: `Learn How`
+    - Suggest: `Tudja meg, hogyan`
+    - Hungarian orthography requires a comma before the clause-introducing "hogyan".
+- `ActivityStream.ContextMenu.AddToShortcuts` — `hu/firefox-ios.xliff` — "Shortcuts" (the homepage Shortcuts section) is rendered as "indítóikonok" (launcher icons) instead of the established "Gyorslinkek/Parancsikonok" term.
+    - Current: `Hozzáadás az indítóikonokhoz`
+    - Source: `Add to Shortcuts`
+    - Suggest: `Hozzáadás a parancsikonokhoz`
+    - The source refers to the Firefox home screen "Shortcuts" section; "indítóikonok" names a different concept (home screen launcher icons).
+- `BreachAlerts.Description` — `hu/firefox-ios.xliff` — Duplicated article "a a" and dropped reference to "your password" in the first sentence.
+    - Current: `ellopták őket a a legutóbbi megváltoztatása óta`
+    - Source: `Passwords were leaked or stolen since you last changed your password. To protect this account, log in to the site and change your password.`
+    - Suggest: `ellopták őket a jelszava legutóbbi megváltoztatása óta`
+    - The source says "since you last changed your password"; the Hungarian has a stray repeated article and no noun for what was changed.
+- `Always Send` — `hu/firefox-ios.xliff` — Button label rendered as an imperative/subjunctive verb form instead of the action label "Always Send".
+    - Current: `Mindig küldjön`
+    - Source: `Always Send`
+    - Suggest: `Mindig elküldi`
+    - The source is a button label meaning the user chooses to always send crash reports; "Mindig küldjön" reads as telling the user to send, not as the action taken by the app.
+- `ErrorPages.CertWarning.Description` — `hu/firefox-ios.xliff` — Subject of "protect your information" is wrong: Hungarian says the site owner protects the user's data, while the source means Firefox protects it.
+    - Current: `Hogy megvédje az információit az ellopásuktól, a Firefox nem kapcsolódott ehhez a webhelyhez.`
+    - Source: `The owner of %@ has configured their website improperly. To protect your information from being stolen, Firefox has not connected to this website.`
+    - Suggest: `Hogy megvédje az információit az ellopástól, a Firefox nem kapcsolódott ehhez a webhelyhez.`
+    - The en-US states Firefox has not connected in order to protect the user's information; the Hungarian plural possessive "ellopásuktól" misattributes the theft and reads awkwardly.
+- `FirefoxHome.Stories.Minutes.v140` — `hu/firefox-ios.xliff` — The developer comment requires an abbreviated form of "minutes" due to space constraints, but the translation spells out "perc".
+    - Current: `%d perc`
+    - Source: `min: %d`
+    - Suggest: `%d p`
+    - Comment: "Minutes should be abbreviated due to space constraints."
+- `Menu.TrackingProtectionDescription.CrossSiteNew` — `hu/firefox-ios.xliff` — Wrong case: "követik Ön oldalról oldalra" should use the accusative "Önt".
+    - Current: `Ezek a sütik követik Ön oldalról oldalra`
+    - Source: `These cookies follow you from site to site to gather data about what you do online. They are set by third parties such as advertisers and analytics companies.`
+    - Suggest: `Ezek a sütik oldalról oldalra követik Önt`
+    - "Follow you" requires the accusative object "Önt" in Hungarian; "követik Ön" is ungrammatical.
+- `Menu.TrackingProtectionDescription.Fingerprinters` — `hu/firefox-ios.xliff` — Missing possessive suffix: "a böngészője és számítógép beállításai".
+    - Current: `A böngészője és számítógép beállításai egyediek.`
+    - Source: `The settings on your browser and computer are unique. Fingerprinters collect a variety of these unique settings to create a profile of you, which can be used to track you as you browse.`
+    - Suggest: `A böngészője és számítógépe beállításai egyediek.`
+    - The source is "your browser and computer"; the second noun lacks the possessive suffix, making the phrase ungrammatical.
+- `Menu.TrackingProtectionDescription.Fingerprinters` — `hu/firefox-ios.xliff` — "can be used to track you" rendered as a definite statement "használnak" (they use it), dropping the modality.
+    - Current: `amelyet aztán a böngészése követésére használnak`
+    - Source: `The settings on your browser and computer are unique. Fingerprinters collect a variety of these unique settings to create a profile of you, which can be used to track you as you browse.`
+    - Suggest: `amely aztán a böngészése követésére használható`
+    - The en-US says the profile "can be used" to track; the Hungarian asserts that it is used, changing what the product states about tracking behaviour.
+- `Open articles in Reader View by tapping the book icon when it appears in the title bar.` — `hu/firefox-ios.xliff` — "tapping" translated as "kattintva" (clicking) on a touch device.
+    - Current: `a könyv ikonra kattintva`
+    - Source: `Open articles in Reader View by tapping the book icon when it appears in the title bar.`
+    - Suggest: `a könyv ikonra koppintva`
+    - On iOS "tap" is "koppintás" in Hungarian; "kattintás" means mouse click.
+- `Search.ThirdPartyEngines.AddSuccess` — `hu/firefox-ios.xliff` — Typo: "zolgáltatás" is missing its initial letter.
+    - Current: `Keresési zolgáltatás hozzáadva!`
+    - Source: `Added Search engine!`
+    - Suggest: `Keresési szolgáltatás hozzáadva!`
+    - "szolgáltatás" is misspelled as "zolgáltatás".
+- `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.` — `hu/firefox-ios.xliff` — "tapping" rendered as "kattintva" (clicking) instead of the touch term, and a spurious comma splits the sentence.
+    - Current: `Mentse az oldalakat az olvasási listájára, a könyv plusz ikonra kattintva az olvasó nézet vezérlőelemei közt.`
+    - Source: `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.`
+    - Suggest: `Mentse az oldalakat az olvasási listájára a könyv plusz ikonra koppintva az olvasó nézet vezérlőelemei közt.`
+    - On iOS "tap" is "koppintás", not "kattintás"; the inserted comma is also incorrect.
+- `SentTab.ViewAction.title` — `hu/firefox-ios.xliff` — "View" as an action label is translated as the noun "Nézet" (a view) instead of the verb "Megtekintés".
+    - Current: `Nézet`
+    - Source: `View`
+    - Suggest: `Megtekintés`
+    - The developer comment says it is a label for an action used to view tabs, so a verbal noun is required; "Nézet" means a display/view mode.
+- `Search.ThirdPartyEngines.FailedMessage` — `hu/firefox-ios.xliff` — Past-tense failure statement rendered as a general present-tense possibility statement.
+    - Current: `A keresési szolgáltató nem adható hozzá.`
+    - Source: `The search provider could not be added.`
+    - Suggest: `A keresési szolgáltatót nem sikerült hozzáadni.`
+    - The source reports that adding the search provider failed ("could not be added"); the Hungarian states it cannot be added as a general rule.
+- `Settings.DisplayTheme.SwitchSubtitle` — `hu/firefox-ios.xliff` — Misspelling of "fényességének".
+    - Current: `a képernyő fényessének függvényében`
+    - Source: `Switch automatically based on screen brightness`
+    - Suggest: `a képernyő fényességének függvényében`
+    - "fényessének" is a typo; the correct genitive form is "fényességének".
+- `Settings.DisplayTheme.SystemTheme.SectionHeader` — `hu/firefox-ios.xliff` — "System Theme" translated as just "Rendszer" (System), dropping "Theme".
+    - Current: `Rendszer`
+    - Source: `System Theme`
+    - Suggest: `Rendszertéma`
+    - The source section title is "System Theme"; the translation omits "Theme", inconsistent with "Browser Theme" → "Böngészőtéma" in the same feature.
+- `Settings.Home.Option.Wallpaper.Accessibility.TwilightHillsWallpaper.v100` — `hu/firefox-ios.xliff` — "twilight hills" translated as "napnyugtai dombok" (sunset hills) — but a separate sunrise wallpaper exists; twilight is "alkonyati".
+    - Current: `napnyugtai dombok`
+    - Source: `Firefox wallpaper, twilight hills pattern.`
+    - Suggest: `alkonyati dombok`
+    - en-US "twilight hills" means dusk/twilight, not sunset (napnyugta); the pattern name should render twilight.
+- `Settings.Home.Option.Wallpaper.UpdatedToastButton` — `hu/firefox-ios.xliff` — "View" translated as the noun "Nézet" although the comment states it is a verb (the action of viewing the wallpaper).
+    - Current: `Nézet`
+    - Source: `View`
+    - Suggest: `Megtekintés`
+    - The developer comment explicitly says to consider View as a verb; "Nézet" is the noun "view/layout".
+- `Settings.OpenWith.PageTitle` — `hu/firefox-ios.xliff` — "Open mail links with" is rendered as "E-mail-hivatkozások társítása" ("associating email links"), losing the "open with" meaning.
+    - Current: `E-mail-hivatkozások társítása`
+    - Source: `Open mail links with`
+    - Suggest: `E-mail-hivatkozások megnyitása ezzel:`
+    - The source is a settings page title asking which app to open mail links with; "társítása" means file/link association, not opening with a chosen app.
+- `Settings.SendUsage.Message` — `hu/firefox-ios.xliff` — The Hungarian drops "for everyone" and reverses/alters "provide and improve" into "fejlesztéséhez és támogatásához" (development and support).
+    - Current: `csak azt gyűjtse, ami a Firefox fejlesztéséhez és támogatásához szükséges`
+    - Source: `Mozilla strives to only collect what we need to provide and improve Firefox for everyone.`
+    - Suggest: `csak azt gyűjtse, ami a Firefox mindenki számára való biztosításához és továbbfejlesztéséhez szükséges`
+    - en-US says "to provide and improve Firefox for everyone"; the target says "development and support" and omits "for everyone".
+- `Settings.SendUsage.Link` — `hu/firefox-ios.xliff` — Final period of "Learn More." is missing, inconsistent with Settings.Studies.Toggle.Link which keeps it.
+    - Current: `További tudnivalók`
+    - Source: `Learn More.`
+    - Suggest: `További tudnivalók.`
+    - Source is "Learn More." with a period; the parallel string Settings.Studies.Toggle.Link translates it as "További tudnivalók."
+- `Settings.TrackingProtectionOption.BasicBlockList.Status` — `hu/firefox-ios.xliff` — "Standard" is rendered as "Szokásos" here but as "Normál" in the sibling option string on the same screen.
+    - Current: `Szokásos`
+    - Source: `Standard`
+    - Suggest: `Normál`
+    - Settings.TrackingProtectionOption.BasicBlockList translates "Standard (default)" as "Normál (alapértelmezett)"; the status label for the same option must use the same term.
+- `Swipe right or left with three fingers to close the tab.` — `hu/firefox-ios.xliff` — Direction order reversed: "right or left" rendered as "balra vagy jobbra" (left or right).
+    - Current: `legyintsen balra vagy jobbra három ujjal`
+    - Source: `Swipe right or left with three fingers to close the tab.`
+    - Suggest: `legyintsen jobbra vagy balra három ujjal`
+    - The en-US says "Swipe right or left"; the Hungarian reverses the order of the directions.
+- `There was a problem accessing tabs from your other devices. Try again in a few moments.` — `hu/firefox-ios.xliff` — "your other devices" (plural) rendered as singular "más eszközről".
+    - Current: `más eszközről történő elérésekor`
+    - Source: `There was a problem accessing tabs from your other devices. Try again in a few moments.`
+    - Suggest: `a többi eszközéről történő elérésekor`
+    - The source refers to the user's other devices (plural, possessive); the Hungarian says "from another device", losing the plural and possessive.
+- `Tabs Tray` — `hu/firefox-ios.xliff` — "Lapok tálca" is an ungrammatical compound; should be "Lapok tálcája" or "Laptálca".
+    - Current: `Lapok tálca`
+    - Source: `Tabs Tray`
+    - Suggest: `Lapok tálcája`
+    - Hungarian noun-noun possessive construction requires the possessive suffix: "Lapok tálcája".
+- `TranslationToastHandler.PromptTranslate.Title` — `hu/firefox-ios.xliff` — Missing hyphen before the case suffix attached to the placeholder: "%2$@ra".
+    - Current: `Lefordítja %2$@ra a következővel: %3$@?`
+    - Source: `This page appears to be in %1$@. Translate to %2$@ with %3$@?`
+    - Suggest: `Lefordítja a következő nyelvre: %2$@, ezzel: %3$@?`
+    - A suffix glued directly to a placeholder is ungrammatical; Hungarian requires a hyphen (%2$@-ra) or a restructured sentence, as the vowel harmony and assimilation cannot be predicted.
+- `Wallpaper.Download.Error.Body.v106` — `hu/firefox-ios.xliff` — "your download" rendered as "a letöltésével" ("its download"), losing the second-person possessive and introducing a wrong referent.
+    - Current: `Valami hiba történt a letöltésével.`
+    - Source: `Something went wrong with your download.`
+    - Suggest: `Valami hiba történt a letöltéssel.`
+    - The en-US says "Something went wrong with your download." The Hungarian suffix -ével makes it "with its download", referring to some unnamed third thing rather than the user's download.
+- `Open & Fill` — `hu/firefox-ios.xliff` — Inconsistent possessive/infinitive agreement: "Megnyitás és kitöltése" mixes a nominal and a possessive form.
+    - Current: `Megnyitás és kitöltése`
+    - Source: `Open & Fill`
+    - Suggest: `Megnyitás és kitöltés`
+    - The source is "Open & Fill", two parallel actions; the Hungarian second element carries a possessive suffix (-e) that has no antecedent, breaking agreement with the first noun.
+- `No logins found` — `hu/firefox-ios.xliff` — Translation drops "found": "Nincsenek bejelentkezések" means "There are no logins" rather than "No logins found".
+    - Current: `Nincsenek bejelentkezések`
+    - Source: `No logins found`
+    - Suggest: `Nem találhatók bejelentkezések`
+    - The label is shown after searching; the source says no logins were found, which the sibling string NoLoginsFound.Title.v122 renders as "Nem találhatók jelszavak".
+- `Turns private mode on or off` — `hu/firefox-ios.xliff` — Missing accusative case ending on "privát mód".
+    - Current: `Ki- vagy bekapcsolja a privát mód`
+    - Source: `Turns private mode on or off`
+    - Suggest: `Ki- vagy bekapcsolja a privát módot`
+    - The object of "bekapcsolja" must be in the accusative: "privát módot". As written the sentence is ungrammatical.
+- `TodayWidget.QuickViewGalleryDescriptionV2` — `hu/firefox-ios.xliff` — "Add shortcuts to your open tabs" translated as adding shortcuts onto the open tabs rather than shortcuts leading to them.
+    - Current: `Indítóikonok hozzáadása a nyitott lapokhoz.`
+    - Source: `Add shortcuts to your open tabs.`
+    - Suggest: `Parancsikonok hozzáadása a nyitott lapjaihoz.`
+    - Meaning is shortcuts pointing to open tabs; the Hungarian dative reads as adding icons to the tabs. Also inconsistent with the surrounding widget strings.
+- `Bookmarks.Menu.EditBookmarkSaveIn.v131` — `hu/firefox-ios.xliff` — "Save in" section label is translated as "Save elsewhere…" with an ellipsis, changing the meaning.
+    - Current: `Mentés máshová…`
+    - Source: `Save in`
+    - Suggest: `Mentés ide`
+    - The source is the label of the folder-selection section ("Save in"), not an action to save somewhere else; the added ellipsis also implies a further dialog.
+- `Bookmarks.Menu.MoreOptionsA11yLabel.v136` — `hu/firefox-ios.xliff` — "More options" rendered as "További beállítások" (more settings) instead of more actions/options.
+    - Current: `További beállítások`
+    - Source: `More options`
+    - Suggest: `További lehetőségek`
+    - The button opens a modal with more actions, not settings; "beállítások" means settings.
+- `ContextualHints.Toolbar.GoogleLens.Description.v154` — `hu/firefox-ios.xliff` — "search what you see" mistranslated as "search in what you see".
+    - Current: `keressen abban, amit lát`
+    - Source: `Use your camera or choose a photo to search what you see.`
+    - Suggest: `keressen rá arra, amit lát`
+    - The source means searching for the thing you see, not searching within it.
+- `ContextualHints.Translations.Body.v145` — `hu/firefox-ios.xliff` — "when you are" is dropped from the translation.
+    - Current: `Gyors, privát fordítások készen állnak.`
+    - Source: `Fast, private translations are ready when you are.`
+    - Suggest: `A gyors, privát fordítások készen állnak, amint Ön is.`
+    - The en-US "ready when you are" phrase is omitted, losing part of the message.
+- `Addresses.EditAddress.AutofillAddressPin.v129` — `hu/firefox-ios.xliff` — "Pin" (PIN = Postal Index Number, India) is translated as "Rögzítés" (pinning/fixing).
+    - Current: `Rögzítés`
+    - Source: `Pin`
+    - Suggest: `PIN-kód`
+    - The developer comment states Pin is the Postal Index Number used in India, a postal code; "Rögzítés" means "pinning/attaching", which is a different concept entirely.
+- `Addresses.EditAddress.AutofillAddressNeighborhood.v129` — `hu/firefox-ios.xliff` — "Neighborhood" as an address field is rendered "Szomszédság" (the abstract state of being neighbours) instead of the district/quarter name.
+    - Current: `Szomszédság`
+    - Source: `Neighborhood`
+    - Suggest: `Környék`
+    - The comment says users input the name of their neighborhood as part of an address; Hungarian "Szomszédság" denotes neighbourliness/adjacency, not a named locality.
+- `Addresses.EditAddress.AutofillAddressPostTown.v129` — `hu/firefox-ios.xliff` — "Post town" translated as "Postaállomás" (post station/office) instead of the town used for mail sorting.
+    - Current: `Postaállomás`
+    - Source: `Post town`
+    - Suggest: `Postázási település`
+    - The comment explains this is the post town used for mail sorting (a locality name), not a postal station/office facility.
+- `Addresses.EditAddress.AutofillAddressState.v129` — `hu/firefox-ios.xliff` — "State" as an administrative division is translated as "Állapot" (condition/status) instead of "Állam".
+    - Current: `Állapot`
+    - Source: `State`
+    - Suggest: `Állam`
+    - The developer comment says this is the state field of an address (e.g. US states); Hungarian "Állapot" means status/condition, not a territorial state.
+- `Addresses.EditAddress.AutofillAddressZip.v129` — `hu/firefox-ios.xliff` — The translation adds "(Amerikai Egyesült Államok)", content not present in the source "ZIP Code".
+    - Current: `Irányítószám (Amerikai Egyesült Államok)`
+    - Source: `ZIP Code`
+    - Suggest: `Irányítószám`
+    - The source label is simply "ZIP Code"; the added country qualifier is invented text that appears in the UI field label.
+- `Menu.EnhancedTrackingProtection.On.Header.v128` — `hu/firefox-ios.xliff` — "If we spot something" is rendered as "Ha látunk valamit", losing the meaning of detecting a problem/tracker.
+    - Current: `Ha látunk valamit, értesíteni fogjuk.`
+    - Source: `You’re protected. If we spot something, we’ll let you know.`
+    - Suggest: `Ha észlelünk valamit, értesíteni fogjuk.`
+    - "spot" means detect/notice something suspicious; "látunk valamit" (we see something) is a weaker, odd rendering that in Hungarian suggests the browser is watching.
+- `FirefoxHomepage.TrackerBlocker.TrackersBlocked.v153b` — `hu/firefox-ios.xliff` — Singular "Nyomkövető" used for a count label that shows a number of blocked trackers.
+    - Current: `Nyomkövető blokkolva: %@`
+    - Source: `Trackers Blocked: %@`
+    - Suggest: `Blokkolt nyomkövetők: %@`
+    - The source "Trackers Blocked: %@" is a plural count label; the Hungarian reads as a singular subject with no plural/possessive form, producing awkward output.
+- `FirefoxHomepage.Pocket.Footer.Title.v116` — `hu/firefox-ios.xliff` — "Powered by %1$@" is rendered as an idiom about looking under the car hood, which does not convey the source meaning.
+    - Current: `A motorháztető alatt: %1$@.`
+    - Source: `Powered by %1$@. Part of the %2$@ family.`
+    - Suggest: `Működteti: %1$@.`
+    - The en-US says the feature is powered by Pocket; "A motorháztető alatt" ("under the hood") is a literal car metaphor that misstates the credit line.
+- `ContextualHints.MainMenu.NewMenu.Body.v132` — `hu/firefox-ios.xliff` — Missing comma before the subordinate clause "amire szüksége van".
+    - Current: `Találja meg gyorsabban amire szüksége van`
+    - Source: `Find what you need faster, from private browsing to save actions.`
+    - Suggest: `Találja meg gyorsabban, amire szüksége van`
+    - Hungarian requires a comma before a subordinate clause introduced by "amire".
+- `NativeErrorPage.CellularDataRestricted.Description.v156` — `hu/firefox-ios.xliff` — Missing hyphen before the suffix attached to the app-name placeholder.
+    - Current: `a %@hoz`
+    - Source: `Connect to Wi-Fi or go to iOS Settings and turn on cellular data for %@.`
+    - Suggest: `a %@-hoz`
+    - In Hungarian, a suffix appended to a proper name/placeholder such as "Firefox" must be joined with a hyphen when written after a variable (%@-hoz); "%@hoz" is ungrammatical.
+- `Onboarding.Modern.BrandRefresh.Marketing.Description.v148` — `hu/firefox-ios.xliff` — "that you use it" was rendered as "how you use it", making the product claim it shares usage details with marketing partners.
+    - Current: `hogy miként fedezte fel, és hogyan használja a %1$@ot`
+    - Source: `Share how you discovered %1$@, and that you use it, with %2$@’s marketing partners. This data is never sold.`
+    - Suggest: `hogy miként fedezte fel a %1$@ot, és hogy használja azt`
+    - The en-US says only the fact that the user uses the app is shared ("and that you use it"), not how they use it; the Hungarian asserts that usage behaviour is shared with marketing partners.
+- `Onboarding.Modern.BrandRefresh.Customization.Toolbar.Description.v148` — `hu/firefox-ios.xliff` — "your top sites" is translated as "kedvenc webhelyeit" (favorite sites) instead of the established term for Top Sites.
+    - Current: `megtalálja a kedvenc webhelyeit`
+    - Source: `Start typing to get search suggestions, your top sites, bookmarks, history and search engines – all in one place.`
+    - Suggest: `megtalálja a népszerű webhelyeit`
+    - "Top sites" is a Firefox feature name rendered elsewhere in hu as "Népszerű webhelyek"; "kedvenc webhelyek" names a different concept.
+- `Onboarding.Modern.BrandRefresh.TermsOfUse.Description.v148` — `hu/firefox-ios.xliff` — "won't sell you out" is rendered as "nem adja el" ("doesn't sell it/you"), losing the sense of betrayal and reading as an incomplete clause.
+    - Current: `Gyors, biztonságos, és nem adja el.`
+    - Source: `Speedy, safe, and won’t sell you out. Browsing just got better.`
+    - Suggest: `Gyors, biztonságos, és nem árulja el Önt.`
+    - The en-US says the browser won't betray/sell out the user; "nem adja el" has a dangling object and means "doesn't sell (it)".
+- `Onboarding.Modern.Customization.Toolbar.Description.v145` — `hu/firefox-ios.xliff` — "your top sites" is translated as "kedvenc webhelyeit" (favorite sites) instead of the established "top sites" term.
+    - Current: `megtalálja a kedvenc webhelyeit`
+    - Source: `Start typing to get search suggestions, your top sites, bookmarks, history and search engines – all in one place.`
+    - Suggest: `megtalálja a népszerű webhelyeit`
+    - "Top sites" is a distinct Firefox feature name; "kedvenc" suggests favorites/bookmarks, a different feature also named in the same sentence.
+- `Onboarding.Modern.Sync.Description.v140` — `hu/firefox-ios.xliff` — "on any device" translated as "az összes eszközén" (on all your devices).
+    - Current: `az összes eszközén`
+    - Source: `Get your bookmarks, history, and passwords on any device.`
+    - Suggest: `bármely eszközén`
+    - The source says "any device", not "all devices"; the parallel string v145 correctly uses "bármely eszközén".
+- `Onboarding.Modern.Sync.Title.v145` — `hu/firefox-ios.xliff` — Missing hyphen before the suffix attached to the app-name placeholder.
+    - Current: `Vigye el a %@ot`
+    - Source: `Take %@ on all your browsing adventures`
+    - Suggest: `Vigye el a %@-ot`
+    - In Hungarian, case suffixes appended to a proper/brand name placeholder must be joined with a hyphen (e.g. „Firefox-ot”); „%@ot” yields „Firefoxot” without the required hyphen and is inconsistent with the locale's placeholder-suffix handling.
+- `Onboarding.Modern.TermsOfService.Description.v145` — `hu/firefox-ios.xliff` — "trusted for over 20 years" rendered as an impersonal "people have trusted it for over 20 years" clause attached ambiguously.
+    - Current: `A nonprofit %@ hozza el Önnek, amelyben több mint 20 éve megbíznak`
+    - Source: `Automatic protection of your personal info Load sites fast and search smarter Brought to you by the non-profit %@, trusted for over 20 years`
+    - Suggest: `A nonprofit %@ hozza el Önnek, amelyben több mint 20 éve megbíznak az emberek`
+    - Minor, but the relative clause lacks a subject; the en-US states the organization is trusted. Low-risk rewording.
+- `Onboarding.Notification.Description.v120` — `hu/firefox-ios.xliff` — Missing hyphen before the case suffix appended to the app-name placeholder.
+    - Current: `adatvédelmi funkciókat a %@ban`
+    - Source: `Securely send tabs between your devices and discover other privacy features in %@.`
+    - Suggest: `adatvédelmi funkciókat a %@-ban`
+    - Hungarian requires a hyphen when a suffix is attached to a brand name placeholder whose ending is unknown; „%@ban” renders as „Firefoxban” without the hyphen used elsewhere in the locale.
+- `Onboarding.Notification.Title.v120` — `hu/firefox-ios.xliff` — Missing hyphen before the case suffix appended to the app-name placeholder.
+    - Current: `nagyobb biztonságban lehet %@szal`
+    - Source: `Notifications help you stay safer with %@`
+    - Suggest: `nagyobb biztonságban lehet a %@-szal`
+    - The suffix „-szal” must be joined to the placeholder with a hyphen; „%@szal” produces „Firefoxszal” glued to the placeholder without the hyphen convention.
+- `Onboarding.Welcome.Action.v114` — `hu/firefox-ios.xliff` — "Get Started" rendered as a noun phrase "Kezdő lépések" ("First steps") instead of an action button label.
+    - Current: `Kezdő lépések`
+    - Source: `Get Started`
+    - Suggest: `Kezdés`
+    - The comment says this is on a button so the user can continue onboarding; "Kezdő lépések" means "first steps/getting-started guide", not the call to action "Get Started".
+- `Onboarding.Wallpaper.SelectorTitle.v114` — `hu/firefox-ios.xliff` — "Try a splash of color" translated as "Próbáljon ki egy kis színt", which is an awkward literal rendering.
+    - Current: `Próbáljon ki egy kis színt`
+    - Source: `Try a splash of color`
+    - Suggest: `Vigyen bele egy kis színt`
+    - The source invites the user to add a splash of colour to the homepage; the Hungarian literally says "try out a bit of colour", which does not convey the meaning naturally.
+- `PasswordGenerator.Title.v132` — `hu/firefox-ios.xliff` — The question "Use a strong password?" is rendered as a statement-like question asking whether the user uses a strong password, not offering to use one.
+    - Current: `Erős jelszót használ?`
+    - Source: `Use a strong password?`
+    - Suggest: `Erős jelszót használ inkább? / Használ erős jelszót?`
+    - The source is a prompt offering the generated password. "Erős jelszót használ?" reads as asking about the user's habit; a suggestion like "Erős jelszó használata?" matches the offer.
+- `PrivacyDashboard.SocialTrackers.v155` — `hu/firefox-ios.xliff` — "Social Media Trackers" is translated as "Közösségimédia-követők" while the rest of the screen uses "nyomkövető" for tracker.
+    - Current: `Közösségimédia-követők`
+    - Source: `Social Media Trackers`
+    - Suggest: `Közösségimédia-nyomkövetők`
+    - Other rows on the same Privacy Dashboard use "nyomkövető" (Nyomkövető tartalom, nyomkövető sütik, Nyomkövető blokkolva); "követők" is inconsistent terminology on the same screen.
+- `QRCode.Toolbar.Button.A11y.Title.v128` — `hu/firefox-ios.xliff` — Accessibility label for a toolbar button is rendered as an imperative sentence instead of a noun phrase label.
+    - Current: `Olvassa le a QR-kódot`
+    - Source: `Scan QR code`
+    - Suggest: `QR-kód beolvasása`
+    - The comment says this is the accessibility label of a button; Hungarian UI convention (and the sibling label "Oldal összegzése") uses a nominal form, not an imperative instruction to the user.
+- `Addresses.Settings.ListItemA11y.v130` — `hu/firefox-ios.xliff` — Singular "Address for %@" rendered as plural "Címek" (addresses).
+    - Current: `Címek a következőhöz: %@`
+    - Source: `Address for %@`
+    - Suggest: `Cím a következőhöz: %@`
+    - The source is singular (one address list item); the Hungarian plural says "addresses".
+- _…and 31 more._
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,9 +334,249 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (77)
 
-_Nothing retired._
+- `Settings.AppIconSelection.AppIconNames.SystemAuto.Title.v139` — `Shared/Supporting Files/en.lproj/AppIconSelection.strings` — "System Theme" is rendered only as "Rendszer", dropping "Theme".
+    - Current: `Rendszer`
+    - Suggest: `Rendszertéma`
+    - The source names the icon "System Theme"; the Hungarian omits the "Theme" part.
+- `Settings.AppIconSelection.SectionNames.More.Title.v139` — `Shared/Supporting Files/en.lproj/AppIconSelection.strings` — Section heading "More" translated as "Több" (quantitative more) instead of "Egyéb"/"További".
+    - Current: `Több`
+    - Suggest: `Egyéb`
+    - The comment says this heading covers all other miscellaneous icon variants; Hungarian "Több" means "more (in quantity)" and is not used as a section heading for additional/other items.
+- `Bookmarks.Menu.EditBookmarkSaveIn.v131` — `Shared/Supporting Files/en.lproj/Bookmarks.strings` — "Save in" section label is translated as "Save elsewhere…" with an ellipsis, changing the meaning.
+    - Current: `Mentés máshová…`
+    - Suggest: `Mentés ide:`
+    - The source is a section label "Save in" indicating the destination folder, not an action to save somewhere else; the trailing ellipsis also implies a further dialog.
+- `Bookmarks.Menu.MoreOptionsA11yLabel.v136` — `Shared/Supporting Files/en.lproj/Bookmarks.strings` — "More options" is rendered as "További beállítások" (more settings) instead of more actions/options.
+    - Current: `További beállítások`
+    - Suggest: `További lehetőségek`
+    - The developer comment says the button opens a modal with more actions; "beállítások" means settings, which is a different concept.
+- `ContextualHints.Toolbar.GoogleLens.Description.v154` — `Shared/Supporting Files/en.lproj/ContextualHints.strings` — "search what you see" is mistranslated as "search in what you see".
+    - Current: `és keressen abban, amit lát`
+    - Suggest: `és keressen rá arra, amit lát`
+    - The source means searching for the thing you see (visual search), not searching within it.
+- `Addresses.EditAddress.AutofillAddressDepartment.v129` — `Shared/Supporting Files/en.lproj/EditAddress.strings` — "Department" as an administrative division is translated as "Részleg" (organizational unit/department of a company).
+    - Current: `Részleg`
+    - Suggest: `Megye (département)`
+    - The developer comment specifies an administrative division like in France or Colombia; "Részleg" means a section/unit of an organization, not a territorial division.
+- `Addresses.EditAddress.AutofillAddressNeighborhood.v129` — `Shared/Supporting Files/en.lproj/EditAddress.strings` — "Neighborhood" as an address field is translated as "Szomszédság" (the abstract notion of being neighbors).
+    - Current: `Szomszédság`
+    - Suggest: `Városrész`
+    - The comment describes a named district/quarter within a city; Hungarian "szomszédság" means proximity/neighborly relation, not a named urban district.
+- `Addresses.EditAddress.AutofillAddressPin.v129` — `Shared/Supporting Files/en.lproj/EditAddress.strings` — "Pin" (Postal Index Number used in India) is translated as "Rögzítés" (pinning/fastening).
+    - Current: `Rögzítés`
+    - Suggest: `PIN-kód (irányítószám)`
+    - The developer comment states this is the PIN (Postal Index Number) field used in India, a postal code, not the act of pinning.
+- `Addresses.EditAddress.AutofillAddressState.v129` — `Shared/Supporting Files/en.lproj/EditAddress.strings` — "State" (administrative division) is translated as "Állapot" (condition/status).
+    - Current: `Állapot`
+    - Suggest: `Állam`
+    - The developer comment says this is the state field of an address, especially in the USA. "Állapot" means status/condition, not a federal state.
+- `Menu.EnhancedTrackingProtection.Details.Trackers.Analytics.v132` — `Shared/Supporting Files/en.lproj/EnhancedTrackingProtection.strings` — The analytics tracker count label was translated as "Tracking content" instead of a wording matching the source's meaning.
+    - Current: `Nyomkövető tartalom: %@`
+    - Suggest: `Analitikai követők: %@`
+    - The developer comment says this shows how many analytics trackers were blocked; the Hungarian says "tracking content" which is a different tracker category shown separately in ETP.
+- `LoginsHelper.PromptSavePassword.Title.v122` — `Shared/Supporting Files/en.lproj/FirefoxLogins.strings` — Inconsistent phrasing with the parallel username prompt on the same screen.
+    - Current: `Menti a jelszót?`
+    - Suggest: `Jelszó mentése?`
+    - The sibling string LoginsHelper.PromptSaveLogin.Title.v122 ("Save username?") uses the nominal form "Felhasználónév mentése?"; the same construction should be used for "Save password?", as is also done in the update prompts ("Jelszó frissítése?").
+- `FirefoxHomepage.Pocket.Footer.Title.v116` — `Shared/Supporting Files/en.lproj/Footer.strings` — "Powered by %1$@" is rendered as a literal "under the hood" phrase that does not convey the source meaning.
+    - Current: `A motorháztető alatt: %1$@.`
+    - Suggest: `Működteti: %1$@.`
+    - The en-US "Powered by Pocket" means the content is provided/powered by Pocket; "A motorháztető alatt" ("under the bonnet") is a literal, misleading rendering.
+- `ContextualHints.MainMenu.NewMenu.Body.v132` — `Shared/Supporting Files/en.lproj/MainMenu.strings` — Missing comma before the subordinate clause "amire szüksége van".
+    - Current: `Találja meg gyorsabban amire szüksége van`
+    - Suggest: `Találja meg gyorsabban, amire szüksége van`
+    - Hungarian orthography requires a comma before a subordinate clause introduced by "amire".
+- `MainMenu.Account.SyncError.Title.v131` — `Shared/Supporting Files/en.lproj/MainMenu.strings` — The source says sign back in to sync, not to sign in to a product called "Sync".
+    - Current: `Jelentkezzen be újra a Syncbe`
+    - Suggest: `Jelentkezzen be újra a szinkronizáláshoz`
+    - en-US "Sign back in to sync" means signing in again so syncing resumes; the Hungarian turns "sync" into a destination product name, and elsewhere in this file "sync" is rendered "szinkronizálás".
+- `Onboarding.Modern.BrandRefresh.Customization.Toolbar.Description.v148` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — "your top sites" is translated as "kedvenc webhelyeit" (favorite sites) instead of "top sites" (leggyakoribb/leglátogatottabb webhelyeit).
+    - Current: `megtalálja a kedvenc webhelyeit`
+    - Suggest: `megtalálja a leggyakrabban látogatott webhelyeit`
+    - "Top sites" is an established Firefox feature term (Kiemelt/leggyakrabban látogatott oldalak), not "favorites"; "kedvenc" suggests bookmarks/favorites, which are listed separately in the same sentence.
+- `Onboarding.Modern.BrandRefresh.Marketing.Description.v148` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — "and that you use it" is rendered as "hogyan használja" (how you use it), changing the meaning.
+    - Current: `hogy miként fedezte fel, és hogyan használja a %1$@ot`
+    - Suggest: `hogy miként fedezte fel a %1$@ot, és hogy használja azt`
+    - The source only shares the fact that the user uses the app, not how they use it; the translation overstates the data shared.
+- `Onboarding.Modern.BrandRefresh.Marketing.Description.v148` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — Suffix attached to a placeholder without a hyphen: "%1$@ot" should be "%1$@-ot".
+    - Current: `a %1$@ot`
+    - Suggest: `a %1$@-ot`
+    - Hungarian orthography requires a hyphen when adding a case suffix to a proper name/placeholder whose form is unknown.
+- `Onboarding.Modern.BrandRefresh.Notification.Title.v148` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — Suffix appended directly to the app-name placeholder without a hyphen, producing e.g. "Firefoxszal" instead of the required "Firefoxszal"/"Firefox-szal" form and dropping the space.
+    - Current: `%@szal`
+    - Suggest: `%@-szal`
+    - In Hungarian, case suffixes attached to foreign/proper brand names in UI placeholders must be joined with a hyphen; "%@szal" also fails for any app name not ending in a consonant sound matching -szal (e.g. "Focus"). The en-US is "stay safer with %@".
+- `Onboarding.Modern.BrandRefresh.Sync.Description.v148` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — "on any device" mistranslated as "bármely eszközről" (from any device) instead of "bármely eszközön".
+    - Current: `bármely eszközről`
+    - Suggest: `bármely eszközön`
+    - The source says bookmarks and passwords are available on any device, not retrieved from another device.
+- `Onboarding.Modern.BrandRefresh.TermsOfUse.Description.v148` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — "won’t sell you out" rendered as "nem adja el" (won't sell it), losing the object/meaning of not betraying the user.
+    - Current: `és nem adja el`
+    - Suggest: `és nem árulja el Önt`
+    - The en-US means the browser will not betray/sell out the user; "nem adja el" without an object reads as "doesn't sell it" and loses the meaning.
+- `Onboarding.Modern.BrandRefresh.TermsOfUse.ManagePreferenceAgreement.v148` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — Superfluous comma between the adverbial phrase and the subject.
+    - Current: `A böngésző fejlesztése érdekében, a %1$@`
+    - Suggest: `A böngésző fejlesztése érdekében a %1$@`
+    - Hungarian punctuation does not place a comma after an introductory adverbial phrase like this; the comma is an anglicism.
+- `Onboarding.Modern.Customization.Toolbar.Description.v145` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — "your top sites" translated as "kedvenc webhelyeit" (favorite sites) instead of the established "leggyakoribb oldalak"/"top webhelyek" term.
+    - Current: `megtalálja a kedvenc webhelyeit`
+    - Suggest: `megtalálja a leggyakoribb webhelyeit`
+    - "Top sites" is a specific Firefox feature (most visited sites), not "favorites"; the translation also adds "megtalálja" which is not in the source.
+- `Onboarding.Modern.Sync.Title.v145` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — Missing hyphen before the case suffix attached to the app-name placeholder.
+    - Current: `Vigye el a %@ot`
+    - Suggest: `Vigye el a %@-ot`
+    - In Hungarian, a suffix appended to a proper name/placeholder ending in a non-Hungarian form requires a hyphen (e.g. „Firefoxot” is written „%@-ot” when the name comes from a placeholder). Other strings in the same file avoid direct suffixing; here „%@ot” produces incorrect output such as „Firefoxot” only by accident and is orthographically wrong with a placeholder.
+- `Onboarding.Notification.Description.v120` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — Case suffix attached to the app-name placeholder without a hyphen.
+    - Current: `a %@ban`
+    - Suggest: `a %@-ban`
+    - A suffix added to a placeholder holding a brand name must be separated with a hyphen in Hungarian orthography.
+- `Onboarding.Notification.Title.v120` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — Missing hyphen before the instrumental suffix attached to the app-name placeholder.
+    - Current: `%@szal`
+    - Suggest: `%@-szal`
+    - In Hungarian, a suffix appended to a proper/brand name placeholder must be joined with a hyphen (e.g. „Firefox-szal”); „%@szal” produces „Firefoxszal” which is incorrect for a brand name and the pattern is inconsistent with other strings.
+- `Onboarding.Welcome.Action.v114` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — "Get Started" rendered as a noun phrase "Kezdő lépések" (First steps) rather than a call to action.
+    - Current: `Kezdő lépések`
+    - Suggest: `Kezdés`
+    - The developer comment says this is a button to continue onboarding; "Kezdő lépések" means "first steps/getting started guide", not the action "Get started".
+- `PasswordGenerator.Title.v132` — `Shared/Supporting Files/en.lproj/PasswordGenerator.strings` — "Use a strong password?" is translated as a statement-like question meaning "Are you using a strong password?" rather than offering to use one.
+    - Current: `Erős jelszót használ?`
+    - Suggest: `Erős jelszót használ ehhez?`
+    - The source offers the user the generated password; "Erős jelszót használ?" reads as asking whether the user currently uses a strong password, not as a proposal.
+- `PrivacyDashboard.HeaderLabel.v155` — `Shared/Supporting Files/en.lproj/PrivacyDashboard.strings` — Plural header "Trackers blocked this week" is translated in singular form without agreement.
+    - Current: `Nyomkövető blokkolva a héten`
+    - Suggest: `nyomkövető blokkolva a héten`
+    - The label follows a bold number above it, so it should read as a continuation (lowercase, e.g. "12 / nyomkövető blokkolva a héten"); capitalized standalone "Nyomkövető" reads as an isolated singular noun.
+- `PrivacyDashboard.SocialTrackers.v155` — `Shared/Supporting Files/en.lproj/PrivacyDashboard.strings` — "Social Media Trackers" is rendered with "követők" while the other tracker labels on the same screen use "nyomkövető".
+    - Current: `Közösségimédia-követők`
+    - Suggest: `Közösségimédia-nyomkövetők`
+    - On the same Privacy Dashboard screen, "trackers" is translated as "nyomkövető" (Webhelyek közötti nyomkövető sütik, Nyomkövető tartalom, Nyomkövető blokkolva a héten); "követők" is inconsistent and can read as "followers".
+- `PrivacyDashboard.TotalTrackersBlockedSince.v155` — `Shared/Supporting Files/en.lproj/PrivacyDashboard.strings` — The footer translation replaces the meaning with "%1$@ pieces since %2$@", dropping the sense conveyed by the source's "since" footer wording.
+    - Current: `%1$@ darab %2$@ óta 🎉`
+    - Suggest: `%1$@ %2$@ óta 🎉`
+    - The source is "%1$@ since %2$@"; adding "darab" injects a word not in the source and reads oddly with a date-based footer.
+- `Addresses.Settings.ListItemA11y.v130` — `Shared/Supporting Files/en.lproj/Settings.strings` — Singular "Address for %@" is rendered as plural "Címek" (addresses).
+    - Current: `Címek a következőhöz: %@`
+    - Suggest: `Cím a következőhöz: %@`
+    - The source is singular "Address for %@" — the accessibility label for one address list item; the Hungarian uses the plural "Címek".
+- `Addresses.Settings.Switch.Description.v124` — `Shared/Supporting Files/en.lproj/Settings.strings` — "Includes phone numbers and email addresses" is translated as a nominal "inclusion of..." phrase rather than a statement that it includes them.
+    - Current: `Telefonszámok és e-mail-címek belevétele`
+    - Suggest: `Tartalmazza a telefonszámokat és e-mail-címeket`
+    - The source is a descriptive statement telling the user that the feature includes phone numbers and email addresses; the Hungarian reads like a toggle title "Including phone numbers and email addresses".
+- `Settings.AIControls.BlockAIEnhancementsDescription.v151` — `Shared/Supporting Files/en.lproj/Settings.strings` — The translation drops "AI" from "AI enhancements", saying only "new or current improvements".
+    - Current: `nem fogja látni a %@ új vagy jelenlegi fejlesztéseit`
+    - Suggest: `nem fogja látni a %@ új vagy jelenlegi MI funkcióbővítéseit`
+    - Source says "new or current AI enhancements in %@"; the Hungarian omits the AI qualifier, and other strings in this section render it as "MI funkcióbővítések".
+- `Settings.AIControls.BlockedInformation.v151` — `Shared/Supporting Files/en.lproj/Settings.strings` — "Unblock specific features below" is expanded into an inaccurate instruction about "controls below".
+    - Current: `Egy adott funkció blokkolásának feloldásához használja az alábbi vezérlőket.`
+    - Suggest: `Az egyes funkciók blokkolását alább oldhatja fel.`
+    - The source is a short imperative "Unblock specific features below"; the translation adds "use the controls below", which is not in the source.
+- `Settings.Rollouts.Message.v148` — `Shared/Supporting Files/en.lproj/Settings.strings` — Awkward/incorrect passive construction "távolról vannak alkalmazva" for "Changes applied remotely".
+    - Current: `A módosítások távolról vannak alkalmazva.`
+    - Suggest: `A módosítások távolról kerülnek alkalmazásra.`
+    - The "van + -va/-ve" passive with a transitive verb is a grammatical error in Hungarian; the state-passive is not licensed here.
+- `Settings.ScrollToHideTabAndAddressBar.Title.v138` — `Shared/Supporting Files/en.lproj/Settings.strings` — A toggle label describing a feature is rendered as an imperative instruction to the user.
+    - Current: `Görgessen a lap és címsáv elrejtéséhez`
+    - Suggest: `Görgetés a lap és a címsáv elrejtéséhez`
+    - The source "Scroll to Hide Tab and Address Bar" is the title of a settings option (a feature name), not a command telling the user to scroll; Hungarian settings titles use the nominal form.
+- `Settings.Summarize.GesturesSection.FooterTitle.v142` — `Shared/Supporting Files/en.lproj/Settings.strings` — Singular "a page" rendered as plural "lapokat" (pages).
+    - Current: `hogy összegezze a lapokat`
+    - Suggest: `hogy összegezzen egy oldalt`
+    - Source says "to summarize a page" (singular); the Hungarian says "summarize the pages". Also the feature elsewhere in this file uses "oldal" (Oldalak összegzése), not "lap".
+- `Settings.Translation.AutoTranslate.Footer.v151` — `Shared/Supporting Files/en.lproj/Settings.strings` — "top preferred language" mistranslated as "legtöbbször előnyben részesített" (most often preferred).
+    - Current: `a legtöbbször előnyben részesített nyelvére`
+    - Suggest: `az első helyen előnyben részesített nyelvére`
+    - "Top" here refers to the highest-ranked entry in the preferred languages list, not frequency of preference.
+- `Settings.Translation.PreferredLanguages.Footer.v151` — `Shared/Supporting Files/en.lproj/Settings.strings` — "when translating" rendered as "fordítás közben" (during translation) instead of "fordításkor".
+    - Current: `Válasszon a következő nyelvek közül fordítás közben.`
+    - Suggest: `Fordításkor ezek közül a nyelvek közül választhat.`
+    - The source means the listed languages are the choices offered when a translation is performed; "fordítás közben" (while translating) shifts the meaning slightly and reads awkwardly.
+- `SentFromFirefox.SocialShare.ShareMessageA.Title.v134` — `Shared/Supporting Files/en.lproj/SocialShare.strings` — Missing hyphen before the case suffix attached to the placeholder.
+    - Current: `%1$@ %2$@ból 🦊 küldve.`
+    - Suggest: `%1$@ A(z) %2$@-ból 🦊 küldve.`
+    - In Hungarian a case ending appended to a variable/proper name placeholder must be joined with a hyphen (e.g. %2$@-ból); writing "%2$@ból" is ungrammatical, and the vowel harmony is unpredictable for an unknown app name.
+- `SentFromFirefox.SocialShare.ShareMessageA.Title.v137` — `Shared/Supporting Files/en.lproj/SocialShare.strings` — Missing hyphen before the case suffix attached to the placeholder.
+    - Current: `A %2$@ból 🦊 küldve.`
+    - Suggest: `A(z) %2$@-ból 🦊 küldve.`
+    - A case ending appended to a placeholder must be joined with a hyphen in Hungarian; "%2$@ból" is ungrammatical.
+- `SentFromFirefox.SocialShare.ShareMessageB.Title.v134` — `Shared/Supporting Files/en.lproj/SocialShare.strings` — Missing hyphen before the case suffix attached to the placeholder.
+    - Current: `%1$@ %2$@ból 🦊 küldve.`
+    - Suggest: `%1$@ A(z) %2$@-ból 🦊 küldve.`
+    - A case ending appended to a placeholder must be separated with a hyphen in Hungarian; "%2$@ból" is ungrammatical.
+- `SentFromFirefox.SocialShare.ShareMessageB.Title.v137` — `Shared/Supporting Files/en.lproj/SocialShare.strings` — Missing hyphen before the case suffix attached to the placeholder.
+    - Current: `A %2$@ból 🦊 küldve.`
+    - Suggest: `A(z) %2$@-ból 🦊 küldve.`
+    - A case ending appended to a placeholder must be joined with a hyphen in Hungarian; "%2$@ból" is ungrammatical.
+- `Summarizer.RetryButton.Accessibility.Label.v145` — `Shared/Supporting Files/en.lproj/Summarizer.strings` — Uses "összefoglalás" while the rest of the screen consistently uses "összegzés" for summary/summarize.
+    - Current: `Weboldal összefoglalásának újrapróbálása`
+    - Suggest: `Weboldal összegzésének újrapróbálása`
+    - All other Summarizer strings translate summary/summarize as "összegzés"; this inconsistent term appears on the same screen.
+- `Summarizer.TabSnapshot.Accessibility.Label.v145` — `Shared/Supporting Files/en.lproj/Summarizer.strings` — Uses "összefoglaló" while the rest of the screen consistently uses "összegzés" for summary.
+    - Current: `az összefoglaló bezárásához`
+    - Suggest: `az összegzés bezárásához`
+    - The same screen (e.g. Summarizer.CloseButton.Accessibility.Label) renders "summary" as "összegzés"; this term is inconsistent.
+- `TabTray.TabsSelectorSyncedTabsTitle.v140` — `Shared/Supporting Files/en.lproj/TabsTray.strings` — The tab-tray selector title "Sync" (synced tabs section) is rendered as the action "Szinkronizálás".
+    - Current: `Szinkronizálás`
+    - Suggest: `Szinkronizált`
+    - The developer comment says it is the title of the button to look at synced tabs, a section label, not an action to perform syncing.
+- `TermsOfUse.LearnMoreHere.v147` — `Shared/Supporting Files/en.lproj/TermsOfUse.strings` — The sentence built with the 'here' link renders as "Itt többet megtudhat." with a mid-sentence capitalized link and awkward word order.
+    - Current: `%@ többet megtudhat.`
+    - Suggest: `További tudnivalókat %@ talál.`
+    - Source is "You can learn more %@." where %@ is the lowercase link word 'here'. The Hungarian places the link at sentence start, forcing the link text to be capitalized ("Itt"), which conflicts with the lowercase source link and produces an unnatural sentence.
+- `TermsOfUse.Link.HereText.v147` — `Shared/Supporting Files/en.lproj/TermsOfUse.strings` — The inline link word 'here' is capitalized as "Itt" although it is inserted inside a sentence.
+    - Current: `Itt`
+    - Suggest: `itt`
+    - The developer comment states this is the link text for 'here' within the sentence 'You can learn more here.', so it should not be capitalized mid-sentence.
+- `TermsOfUse.RemindMeLaterButton.v142` — `Shared/Supporting Files/en.lproj/TermsOfUse.strings` — "Remind Me Later" is translated as "Figyelmeztetés később" (Warning later) instead of a reminder.
+    - Current: `Figyelmeztetés később`
+    - Suggest: `Emlékeztessen később`
+    - 'Remind' is 'emlékeztet' in Hungarian; 'figyelmeztetés' means warning/alert, changing the meaning of the postpone button.
+- `TermsOfUse.Title.v142` — `Shared/Supporting Files/en.lproj/TermsOfUse.strings` — "We've got an update" is rendered as "Van egy hírünk" (We have news), losing the meaning of an update.
+    - Current: `Van egy hírünk`
+    - Suggest: `Van egy frissítésünk`
+    - The developer comment says the title indicates that there is an update to the terms of use; the Hungarian says only that there is 'news'.
+- `TermsOfUse.TitleValue2.v147` — `Shared/Supporting Files/en.lproj/TermsOfUse.strings` — "A note from %@" is translated as "Jegyzet innen: %@", using 'note' in the sense of a written memo/source location rather than a message from the app.
+    - Current: `Jegyzet innen: %@`
+    - Suggest: `Üzenet a %@ csapatától`
+    - The source means a short message from the product (e.g., Firefox); "Jegyzet innen:" reads as a note originating from a location and is misleading.
+- `Translations.LanguagePicker.PageTranslatedTitle.v151` — `Shared/Supporting Files/en.lproj/Translations.strings` — "Page Translated to %@" is translated without the subject "page".
+    - Current: `Lefordítva erre: %@`
+    - Suggest: `Az oldal lefordítva erre: %@`
+    - The source title states that the page has been translated to a language; the Hungarian omits "Page", leaving an ambiguous fragment as an action sheet title.
+- `Translations.LanguagePicker.Title.v151` — `Shared/Supporting Files/en.lproj/Translations.strings` — The language picker title "Translate Page to…" is rendered identically to the "Translating page" loading labels, losing the "to…" target-language sense.
+    - Current: `Oldal fordítása…`
+    - Suggest: `Oldal fordítása erre:…`
+    - The source is "Translate Page to…", an action sheet title introducing a list of target languages; the Hungarian drops "to" and collides with Translations.Sheet.LoadingButton / Toolbar.Translation.LoadingButton which use the same wording for "Translating page".
+- `WorldCup.GroupPhase.GroupStageLabel.v151` — `Shared/Supporting Files/en.lproj/WorldCup.strings` — "Group Stage" is rendered with a plural noun, producing "Stage of the group rounds" instead of the singular phase name.
+    - Current: `Csoportkörök szakasza`
+    - Suggest: `Csoportkör`
+    - The source is a single phase label ("Group Stage"); the Hungarian plural genitive construction says "phase of the group rounds", which is not the same designation.
+- `WorldCup.HomepageWidget.EliminatedTeamSection.Title.v151` — `Shared/Supporting Files/en.lproj/WorldCup.strings` — The question loses the "still want to" sense, asking "Are you still following?" instead of "Do you still want to follow along?".
+    - Current: `Még mindig követi?`
+    - Suggest: `Továbbra is követné?`
+    - en-US asks whether the user still wants to follow along after their team was eliminated; the Hungarian states an ongoing action rather than the desire/intent.
+- `WorldCup.HomepageWidget.ErrorLabel.v151` — `Shared/Supporting Files/en.lproj/WorldCup.strings` — Missing comma after the interjection "Kérjük" in the Hungarian sentence.
+    - Current: `Kérjük frissítse.`
+    - Suggest: `Kérjük, frissítse.`
+    - Hungarian punctuation requires a comma after "Kérjük" when it introduces a request clause.
+- `WorldCup.HomepageWidget.SettingsButtonAccessibilityLabel.v151` — `Shared/Supporting Files/en.lproj/WorldCup.strings` — "More options" is translated as "További beállítások" (More settings) instead of options.
+    - Current: `További beállítások`
+    - Suggest: `További lehetőségek`
+    - The source says "More options", not "More settings"; the panel is a more-options panel per the developer comment.
+- `DefaultBrowserCard.Button.v2` — `Shared/en.lproj/Default Browser.strings` — Missing comma before the subordinate clause in "Tudja meg hogyan".
+    - Current: `Tudja meg hogyan`
+    - Suggest: `Tudja meg, hogyan`
+    - Hungarian orthography requires a comma before the conjunction "hogyan" introducing the clause.
+- `BreachAlerts.Description` — `Shared/en.lproj/Localizable.strings` — Duplicated article "a a" in the Hungarian text.
+    - Current: `ellopták őket a a legutóbbi megváltoztatása óta`
+    - Suggest: `ellopták őket a legutóbbi megváltoztatása óta`
+    - Typo: the definite article "a" is repeated.
+- `ExternalLink.AppStore.GenericConfirmationTitle` — `Shared/en.lproj/Localizable.strings` — The confirmation question is rendered as a statement-like phrasing that reverses the subject/word order used for questions, unlike the parallel App Store string.
+    - Current: `Egy külső alkalmazásban nyitja meg ezt a hivatkozást?`
+    - Suggest: `Megnyitja ezt a hivatkozást egy külső alkalmazásban?`
+    - The source asks "Open this link in external app?"; the parallel string ExternalLink.AppStore.ConfirmationTitle uses "Megnyitja ezt a hivatkozást az App Store appban?". The current word order shifts the focus to "in an external app" rather than asking whether to open the link, and is inconsistent with the sibling string.
+- _…and 17 more._
 
 ---
 
@@ -45,8 +585,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 96 |
-| Strings | 1,916 |
-| Missing strings | 6 |
+| Strings | 1,922 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -59,13 +599,7 @@ _Nothing retired._
 
 ### Completeness
 
-**6 strings** are not translated yet, concentrated in:
-
-- `hu/firefox-ios.xliff` — 2
-- `hu/firefox-ios.xliff` — 2
-- `hu/firefox-ios.xliff` — 2
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -85,14 +619,28 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (80)
+## 3. Open findings (94)
 
+> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+
+- `Onboarding.Modern.BrandRefresh.Marketing.Description.v148` — `hu/firefox-ios.xliff` — "that you use it" was rendered as "how you use it", making the product claim it shares usage details with marketing partners.
+    - Current: `hogy miként fedezte fel, és hogyan használja a %1$@ot`
+    - Source: `Share how you discovered %1$@, and that you use it, with %2$@’s marketing partners. This data is never sold.`
+    - Suggest: `hogy miként fedezte fel a %1$@ot, és hogy használja azt`
+    - The en-US says only the fact that the user uses the app is shared ("and that you use it"), not how they use it; the Hungarian asserts that usage behaviour is shared with marketing partners.
+- `Menu.TrackingProtectionDescription.Fingerprinters` — `hu/firefox-ios.xliff` — "can be used to track you" rendered as a definite statement "használnak" (they use it), dropping the modality.
+    - Current: `amelyet aztán a böngészése követésére használnak`
+    - Source: `The settings on your browser and computer are unique. Fingerprinters collect a variety of these unique settings to create a profile of you, which can be used to track you as you browse.`
+    - Suggest: `amely aztán a böngészése követésére használható`
+    - The en-US says the profile "can be used" to track; the Hungarian asserts that it is used, changing what the product states about tracking behaviour.
+
+_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 40 |
-| 3 | Degraded language (grammar, spelling, terminology) | 36 |
+| 3 | Degraded language (grammar, spelling, terminology) | 50 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
@@ -101,329 +649,369 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `Settings.AppIconSelection.AppIconNames.SystemAuto.Title.v139` — `hu/firefox-ios.xliff` — "System Theme" is rendered only as "Rendszer", dropping "Theme".
-    - Current: `Rendszer`
-    - Source: `System Theme`
-    - Suggest: `Rendszertéma`
-    - The source names the icon "System Theme"; the Hungarian omits the "Theme" part.
 - `Bookmarks.Menu.EditBookmarkSaveIn.v131` — `hu/firefox-ios.xliff` — "Save in" section label is translated as "Save elsewhere…" with an ellipsis, changing the meaning.
     - Current: `Mentés máshová…`
     - Source: `Save in`
-    - Suggest: `Mentés ide:`
-    - The source is a section label "Save in" indicating the destination folder, not an action to save somewhere else; the trailing ellipsis also implies a further dialog.
-- `Bookmarks.Menu.MoreOptionsA11yLabel.v136` — `hu/firefox-ios.xliff` — "More options" is rendered as "További beállítások" (more settings) instead of more actions/options.
+    - Suggest: `Mentés ide`
+    - The source is the label of the folder-selection section ("Save in"), not an action to save somewhere else; the added ellipsis also implies a further dialog.
+- `Bookmarks.Menu.MoreOptionsA11yLabel.v136` — `hu/firefox-ios.xliff` — "More options" rendered as "További beállítások" (more settings) instead of more actions/options.
     - Current: `További beállítások`
     - Source: `More options`
     - Suggest: `További lehetőségek`
-    - The developer comment says the button opens a modal with more actions; "beállítások" means settings, which is a different concept.
-- `ContextualHints.Toolbar.GoogleLens.Description.v154` — `hu/firefox-ios.xliff` — "search what you see" is mistranslated as "search in what you see".
-    - Current: `és keressen abban, amit lát`
+    - The button opens a modal with more actions, not settings; "beállítások" means settings.
+- `ContextualHints.Toolbar.GoogleLens.Description.v154` — `hu/firefox-ios.xliff` — "search what you see" mistranslated as "search in what you see".
+    - Current: `keressen abban, amit lát`
     - Source: `Use your camera or choose a photo to search what you see.`
-    - Suggest: `és keressen rá arra, amit lát`
-    - The source means searching for the thing you see (visual search), not searching within it.
-- `Addresses.EditAddress.AutofillAddressDepartment.v129` — `hu/firefox-ios.xliff` — "Department" as an administrative division is translated as "Részleg" (organizational unit/department of a company).
-    - Current: `Részleg`
-    - Source: `Department`
-    - Suggest: `Megye (département)`
-    - The developer comment specifies an administrative division like in France or Colombia; "Részleg" means a section/unit of an organization, not a territorial division.
-- `Addresses.EditAddress.AutofillAddressNeighborhood.v129` — `hu/firefox-ios.xliff` — "Neighborhood" as an address field is translated as "Szomszédság" (the abstract notion of being neighbors).
+    - Suggest: `keressen rá arra, amit lát`
+    - The source means searching for the thing you see, not searching within it.
+- `ContextualHints.Translations.Body.v145` — `hu/firefox-ios.xliff` — "when you are" is dropped from the translation.
+    - Current: `Gyors, privát fordítások készen állnak.`
+    - Source: `Fast, private translations are ready when you are.`
+    - Suggest: `A gyors, privát fordítások készen állnak, amint Ön is.`
+    - The en-US "ready when you are" phrase is omitted, losing part of the message.
+- `Addresses.EditAddress.AutofillAddressNeighborhood.v129` — `hu/firefox-ios.xliff` — "Neighborhood" as an address field is rendered "Szomszédság" (the abstract state of being neighbours) instead of the district/quarter name.
     - Current: `Szomszédság`
     - Source: `Neighborhood`
-    - Suggest: `Városrész`
-    - The comment describes a named district/quarter within a city; Hungarian "szomszédság" means proximity/neighborly relation, not a named urban district.
-- `Addresses.EditAddress.AutofillAddressPin.v129` — `hu/firefox-ios.xliff` — "Pin" (Postal Index Number used in India) is translated as "Rögzítés" (pinning/fastening).
+    - Suggest: `Környék`
+    - The comment says users input the name of their neighborhood as part of an address; Hungarian "Szomszédság" denotes neighbourliness/adjacency, not a named locality.
+- `Addresses.EditAddress.AutofillAddressPin.v129` — `hu/firefox-ios.xliff` — "Pin" (PIN = Postal Index Number, India) is translated as "Rögzítés" (pinning/fixing).
     - Current: `Rögzítés`
     - Source: `Pin`
-    - Suggest: `PIN-kód (irányítószám)`
-    - The developer comment states this is the PIN (Postal Index Number) field used in India, a postal code, not the act of pinning.
-- `Addresses.EditAddress.AutofillAddressState.v129` — `hu/firefox-ios.xliff` — "State" (administrative division) is translated as "Állapot" (condition/status).
+    - Suggest: `PIN-kód`
+    - The developer comment states Pin is the Postal Index Number used in India, a postal code; "Rögzítés" means "pinning/attaching", which is a different concept entirely.
+- `Addresses.EditAddress.AutofillAddressPostTown.v129` — `hu/firefox-ios.xliff` — "Post town" translated as "Postaállomás" (post station/office) instead of the town used for mail sorting.
+    - Current: `Postaállomás`
+    - Source: `Post town`
+    - Suggest: `Postázási település`
+    - The comment explains this is the post town used for mail sorting (a locality name), not a postal station/office facility.
+- `Addresses.EditAddress.AutofillAddressState.v129` — `hu/firefox-ios.xliff` — "State" as an administrative division is translated as "Állapot" (condition/status) instead of "Állam".
     - Current: `Állapot`
     - Source: `State`
     - Suggest: `Állam`
-    - The developer comment says this is the state field of an address, especially in the USA. "Állapot" means status/condition, not a federal state.
-- `Menu.EnhancedTrackingProtection.Details.Trackers.Analytics.v132` — `hu/firefox-ios.xliff` — The analytics tracker count label was translated as "Tracking content" instead of a wording matching the source's meaning.
-    - Current: `Nyomkövető tartalom: %@`
-    - Source: `Tracking content: %@`
-    - Suggest: `Analitikai követők: %@`
-    - The developer comment says this shows how many analytics trackers were blocked; the Hungarian says "tracking content" which is a different tracker category shown separately in ETP.
-- `FirefoxHomepage.Pocket.Footer.Title.v116` — `hu/firefox-ios.xliff` — "Powered by %1$@" is rendered as a literal "under the hood" phrase that does not convey the source meaning.
+    - The developer comment says this is the state field of an address (e.g. US states); Hungarian "Állapot" means status/condition, not a territorial state.
+- `Addresses.EditAddress.AutofillAddressZip.v129` — `hu/firefox-ios.xliff` — The translation adds "(Amerikai Egyesült Államok)", content not present in the source "ZIP Code".
+    - Current: `Irányítószám (Amerikai Egyesült Államok)`
+    - Source: `ZIP Code`
+    - Suggest: `Irányítószám`
+    - The source label is simply "ZIP Code"; the added country qualifier is invented text that appears in the UI field label.
+- `Menu.EnhancedTrackingProtection.On.Header.v128` — `hu/firefox-ios.xliff` — "If we spot something" is rendered as "Ha látunk valamit", losing the meaning of detecting a problem/tracker.
+    - Current: `Ha látunk valamit, értesíteni fogjuk.`
+    - Source: `You’re protected. If we spot something, we’ll let you know.`
+    - Suggest: `Ha észlelünk valamit, értesíteni fogjuk.`
+    - "spot" means detect/notice something suspicious; "látunk valamit" (we see something) is a weaker, odd rendering that in Hungarian suggests the browser is watching.
+- `FirefoxHomepage.Pocket.Footer.Title.v116` — `hu/firefox-ios.xliff` — "Powered by %1$@" is rendered as an idiom about looking under the car hood, which does not convey the source meaning.
     - Current: `A motorháztető alatt: %1$@.`
     - Source: `Powered by %1$@. Part of the %2$@ family.`
     - Suggest: `Működteti: %1$@.`
-    - The en-US "Powered by Pocket" means the content is provided/powered by Pocket; "A motorháztető alatt" ("under the bonnet") is a literal, misleading rendering.
-- `MainMenu.Account.SyncError.Title.v131` — `hu/firefox-ios.xliff` — The source says sign back in to sync, not to sign in to a product called "Sync".
-    - Current: `Jelentkezzen be újra a Syncbe`
-    - Source: `Sign back in to sync`
-    - Suggest: `Jelentkezzen be újra a szinkronizáláshoz`
-    - en-US "Sign back in to sync" means signing in again so syncing resumes; the Hungarian turns "sync" into a destination product name, and elsewhere in this file "sync" is rendered "szinkronizálás".
-- `Onboarding.Modern.BrandRefresh.Customization.Toolbar.Description.v148` — `hu/firefox-ios.xliff` — "your top sites" is translated as "kedvenc webhelyeit" (favorite sites) instead of "top sites" (leggyakoribb/leglátogatottabb webhelyeit).
+    - The en-US says the feature is powered by Pocket; "A motorháztető alatt" ("under the hood") is a literal car metaphor that misstates the credit line.
+- `Onboarding.Modern.BrandRefresh.Customization.Toolbar.Description.v148` — `hu/firefox-ios.xliff` — "your top sites" is translated as "kedvenc webhelyeit" (favorite sites) instead of the established term for Top Sites.
     - Current: `megtalálja a kedvenc webhelyeit`
     - Source: `Start typing to get search suggestions, your top sites, bookmarks, history and search engines – all in one place.`
-    - Suggest: `megtalálja a leggyakrabban látogatott webhelyeit`
-    - "Top sites" is an established Firefox feature term (Kiemelt/leggyakrabban látogatott oldalak), not "favorites"; "kedvenc" suggests bookmarks/favorites, which are listed separately in the same sentence.
-- `Onboarding.Modern.BrandRefresh.Marketing.Description.v148` — `hu/firefox-ios.xliff` — "and that you use it" is rendered as "hogyan használja" (how you use it), changing the meaning.
+    - Suggest: `megtalálja a népszerű webhelyeit`
+    - "Top sites" is a Firefox feature name rendered elsewhere in hu as "Népszerű webhelyek"; "kedvenc webhelyek" names a different concept.
+- `Onboarding.Modern.BrandRefresh.Marketing.Description.v148` — `hu/firefox-ios.xliff` — "that you use it" was rendered as "how you use it", making the product claim it shares usage details with marketing partners.
     - Current: `hogy miként fedezte fel, és hogyan használja a %1$@ot`
     - Source: `Share how you discovered %1$@, and that you use it, with %2$@’s marketing partners. This data is never sold.`
     - Suggest: `hogy miként fedezte fel a %1$@ot, és hogy használja azt`
-    - The source only shares the fact that the user uses the app, not how they use it; the translation overstates the data shared.
-- `Onboarding.Modern.BrandRefresh.Sync.Description.v148` — `hu/firefox-ios.xliff` — "on any device" mistranslated as "bármely eszközről" (from any device) instead of "bármely eszközön".
-    - Current: `bármely eszközről`
-    - Source: `Grab bookmarks, passwords, and more on any device in a snap. Your personal data stays safe and secure with encryption.`
-    - Suggest: `bármely eszközön`
-    - The source says bookmarks and passwords are available on any device, not retrieved from another device.
-- `Onboarding.Modern.BrandRefresh.TermsOfUse.Description.v148` — `hu/firefox-ios.xliff` — "won’t sell you out" rendered as "nem adja el" (won't sell it), losing the object/meaning of not betraying the user.
-    - Current: `és nem adja el`
+    - The en-US says only the fact that the user uses the app is shared ("and that you use it"), not how they use it; the Hungarian asserts that usage behaviour is shared with marketing partners.
+- `Onboarding.Modern.BrandRefresh.TermsOfUse.Description.v148` — `hu/firefox-ios.xliff` — "won't sell you out" is rendered as "nem adja el" ("doesn't sell it/you"), losing the sense of betrayal and reading as an incomplete clause.
+    - Current: `Gyors, biztonságos, és nem adja el.`
     - Source: `Speedy, safe, and won’t sell you out. Browsing just got better.`
-    - Suggest: `és nem árulja el Önt`
-    - The en-US means the browser will not betray/sell out the user; "nem adja el" without an object reads as "doesn't sell it" and loses the meaning.
-- `Onboarding.Modern.Customization.Toolbar.Description.v145` — `hu/firefox-ios.xliff` — "your top sites" translated as "kedvenc webhelyeit" (favorite sites) instead of the established "leggyakoribb oldalak"/"top webhelyek" term.
+    - Suggest: `Gyors, biztonságos, és nem árulja el Önt.`
+    - The en-US says the browser won't betray/sell out the user; "nem adja el" has a dangling object and means "doesn't sell (it)".
+- `Onboarding.Modern.Customization.Toolbar.Description.v145` — `hu/firefox-ios.xliff` — "your top sites" is translated as "kedvenc webhelyeit" (favorite sites) instead of the established "top sites" term.
     - Current: `megtalálja a kedvenc webhelyeit`
     - Source: `Start typing to get search suggestions, your top sites, bookmarks, history and search engines – all in one place.`
-    - Suggest: `megtalálja a leggyakoribb webhelyeit`
-    - "Top sites" is a specific Firefox feature (most visited sites), not "favorites"; the translation also adds "megtalálja" which is not in the source.
-- `Onboarding.Welcome.Action.v114` — `hu/firefox-ios.xliff` — "Get Started" rendered as a noun phrase "Kezdő lépések" (First steps) rather than a call to action.
+    - Suggest: `megtalálja a népszerű webhelyeit`
+    - "Top sites" is a distinct Firefox feature name; "kedvenc" suggests favorites/bookmarks, a different feature also named in the same sentence.
+- `Onboarding.Modern.Sync.Description.v140` — `hu/firefox-ios.xliff` — "on any device" translated as "az összes eszközén" (on all your devices).
+    - Current: `az összes eszközén`
+    - Source: `Get your bookmarks, history, and passwords on any device.`
+    - Suggest: `bármely eszközén`
+    - The source says "any device", not "all devices"; the parallel string v145 correctly uses "bármely eszközén".
+- `Onboarding.Modern.TermsOfService.Description.v145` — `hu/firefox-ios.xliff` — "trusted for over 20 years" rendered as an impersonal "people have trusted it for over 20 years" clause attached ambiguously.
+    - Current: `A nonprofit %@ hozza el Önnek, amelyben több mint 20 éve megbíznak`
+    - Source: `Automatic protection of your personal info Load sites fast and search smarter Brought to you by the non-profit %@, trusted for over 20 years`
+    - Suggest: `A nonprofit %@ hozza el Önnek, amelyben több mint 20 éve megbíznak az emberek`
+    - Minor, but the relative clause lacks a subject; the en-US states the organization is trusted. Low-risk rewording.
+- `Onboarding.Wallpaper.SelectorTitle.v114` — `hu/firefox-ios.xliff` — "Try a splash of color" translated as "Próbáljon ki egy kis színt", which is an awkward literal rendering.
+    - Current: `Próbáljon ki egy kis színt`
+    - Source: `Try a splash of color`
+    - Suggest: `Vigyen bele egy kis színt`
+    - The source invites the user to add a splash of colour to the homepage; the Hungarian literally says "try out a bit of colour", which does not convey the meaning naturally.
+- `Onboarding.Welcome.Action.v114` — `hu/firefox-ios.xliff` — "Get Started" rendered as a noun phrase "Kezdő lépések" ("First steps") instead of an action button label.
     - Current: `Kezdő lépések`
     - Source: `Get Started`
     - Suggest: `Kezdés`
-    - The developer comment says this is a button to continue onboarding; "Kezdő lépések" means "first steps/getting started guide", not the action "Get started".
-- `PasswordGenerator.Title.v132` — `hu/firefox-ios.xliff` — "Use a strong password?" is translated as a statement-like question meaning "Are you using a strong password?" rather than offering to use one.
+    - The comment says this is on a button so the user can continue onboarding; "Kezdő lépések" means "first steps/getting-started guide", not the call to action "Get Started".
+- `PasswordGenerator.Title.v132` — `hu/firefox-ios.xliff` — The question "Use a strong password?" is rendered as a statement-like question asking whether the user uses a strong password, not offering to use one.
     - Current: `Erős jelszót használ?`
     - Source: `Use a strong password?`
-    - Suggest: `Erős jelszót használ ehhez?`
-    - The source offers the user the generated password; "Erős jelszót használ?" reads as asking whether the user currently uses a strong password, not as a proposal.
-- `PrivacyDashboard.TotalTrackersBlockedSince.v155` — `hu/firefox-ios.xliff` — The footer translation replaces the meaning with "%1$@ pieces since %2$@", dropping the sense conveyed by the source's "since" footer wording.
-    - Current: `%1$@ darab %2$@ óta 🎉`
-    - Source: `%1$@ since %2$@ 🎉`
-    - Suggest: `%1$@ %2$@ óta 🎉`
-    - The source is "%1$@ since %2$@"; adding "darab" injects a word not in the source and reads oddly with a date-based footer.
-- `Addresses.Settings.ListItemA11y.v130` — `hu/firefox-ios.xliff` — Singular "Address for %@" is rendered as plural "Címek" (addresses).
+    - Suggest: `Erős jelszót használ inkább? / Használ erős jelszót?`
+    - The source is a prompt offering the generated password. "Erős jelszót használ?" reads as asking about the user's habit; a suggestion like "Erős jelszó használata?" matches the offer.
+- `Addresses.Settings.ListItemA11y.v130` — `hu/firefox-ios.xliff` — Singular "Address for %@" rendered as plural "Címek" (addresses).
     - Current: `Címek a következőhöz: %@`
     - Source: `Address for %@`
     - Suggest: `Cím a következőhöz: %@`
-    - The source is singular "Address for %@" — the accessibility label for one address list item; the Hungarian uses the plural "Címek".
-- `Addresses.Settings.Switch.Description.v124` — `hu/firefox-ios.xliff` — "Includes phone numbers and email addresses" is translated as a nominal "inclusion of..." phrase rather than a statement that it includes them.
-    - Current: `Telefonszámok és e-mail-címek belevétele`
-    - Source: `Includes phone numbers and email addresses`
-    - Suggest: `Tartalmazza a telefonszámokat és e-mail-címeket`
-    - The source is a descriptive statement telling the user that the feature includes phone numbers and email addresses; the Hungarian reads like a toggle title "Including phone numbers and email addresses".
-- `Settings.AIControls.BlockAIEnhancementsDescription.v151` — `hu/firefox-ios.xliff` — The translation drops "AI" from "AI enhancements", saying only "new or current improvements".
+    - The source is singular (one address list item); the Hungarian plural says "addresses".
+- `Settings.AIControls.BlockAIEnhancementsDescription.v151` — `hu/firefox-ios.xliff` — "AI enhancements" was rendered as just "fejlesztéseit" (its improvements), dropping the AI qualifier.
     - Current: `nem fogja látni a %@ új vagy jelenlegi fejlesztéseit`
     - Source: `Blocking means you won’t see new or current AI enhancements in %@, or pop-ups about them.`
     - Suggest: `nem fogja látni a %@ új vagy jelenlegi MI funkcióbővítéseit`
-    - Source says "new or current AI enhancements in %@"; the Hungarian omits the AI qualifier, and other strings in this section render it as "MI funkcióbővítések".
-- `Settings.AIControls.BlockedInformation.v151` — `hu/firefox-ios.xliff` — "Unblock specific features below" is expanded into an inaccurate instruction about "controls below".
+    - The source says "new or current AI enhancements in %@"; the Hungarian omits "AI", and the same term is translated as "MI funkcióbővítések" in the adjacent title and BlockedInformation strings.
+- `Settings.AIControls.BlockedInformation.v151` — `hu/firefox-ios.xliff` — The second sentence adds "using the controls below" wording and changes "Unblock specific features below" into an instruction about controls not present in the source.
     - Current: `Egy adott funkció blokkolásának feloldásához használja az alábbi vezérlőket.`
     - Source: `New and current AI enhancements are blocked by default. Unblock specific features below.`
-    - Suggest: `Az egyes funkciók blokkolását alább oldhatja fel.`
-    - The source is a short imperative "Unblock specific features below"; the translation adds "use the controls below", which is not in the source.
-- `Settings.ScrollToHideTabAndAddressBar.Title.v138` — `hu/firefox-ios.xliff` — A toggle label describing a feature is rendered as an imperative instruction to the user.
+    - Suggest: `Az alábbiakban feloldhatja egyes funkciók blokkolását.`
+    - en-US says "Unblock specific features below." — an imperative about unblocking features, not an instruction to use controls below.
+- `Settings.Rollouts.Message.v148` — `hu/firefox-ios.xliff` — "Changes applied remotely" rendered with an unnatural/incorrect passive that also shifts the meaning.
+    - Current: `A módosítások távolról vannak alkalmazva.`
+    - Source: `%@ will improve features, performance, and stability between updates. Changes applied remotely.`
+    - Suggest: `A módosítások távolról kerülnek alkalmazásra.`
+    - Hungarian "vannak alkalmazva" is an incorrect passive construction (állapotú passzív), degrading the sentence; the source states changes are applied remotely.
+- `Settings.ScrollToHideTabAndAddressBar.Title.v138` — `hu/firefox-ios.xliff` — Setting title translated as an imperative instruction instead of a feature name.
     - Current: `Görgessen a lap és címsáv elrejtéséhez`
     - Source: `Scroll to Hide Tab and Address Bar`
     - Suggest: `Görgetés a lap és a címsáv elrejtéséhez`
-    - The source "Scroll to Hide Tab and Address Bar" is the title of a settings option (a feature name), not a command telling the user to scroll; Hungarian settings titles use the nominal form.
-- `Settings.Summarize.GesturesSection.FooterTitle.v142` — `hu/firefox-ios.xliff` — Singular "a page" rendered as plural "lapokat" (pages).
+    - The source is the title of a toggle option naming the feature ("Scroll to Hide Tab and Address Bar"), not a command to the user; Hungarian settings titles use nominal forms.
+- `Settings.Summarize.GesturesSection.FooterTitle.v142` — `hu/firefox-ios.xliff` — Singular "a page" is translated as plural "a lapokat" (the pages).
     - Current: `hogy összegezze a lapokat`
     - Source: `Shake your device from side to side to summarize a page.`
-    - Suggest: `hogy összegezzen egy oldalt`
-    - Source says "to summarize a page" (singular); the Hungarian says "summarize the pages". Also the feature elsewhere in this file uses "oldal" (Oldalak összegzése), not "lap".
-- `Settings.Translation.AutoTranslate.Footer.v151` — `hu/firefox-ios.xliff` — "top preferred language" mistranslated as "legtöbbször előnyben részesített" (most often preferred).
+    - Suggest: `hogy összegezze az oldalt`
+    - The source says "to summarize a page" (one page); the Hungarian says summarize the pages, and also uses "lap" (tab) while the rest of the Summarize section uses "oldal" for page.
+- `Settings.Translation.AutoTranslate.Footer.v151` — `hu/firefox-ios.xliff` — "your top preferred language" mistranslated as "the most often preferred language".
     - Current: `a legtöbbször előnyben részesített nyelvére`
     - Source: `Translates pages to your top preferred language automatically.`
-    - Suggest: `az első helyen előnyben részesített nyelvére`
-    - "Top" here refers to the highest-ranked entry in the preferred languages list, not frequency of preference.
-- `TabTray.TabsSelectorSyncedTabsTitle.v140` — `hu/firefox-ios.xliff` — The tab-tray selector title "Sync" (synced tabs section) is rendered as the action "Szinkronizálás".
+    - Suggest: `a listán első helyen álló előnyben részesített nyelvére`
+    - "top preferred language" means the first/highest-ranked language in the preferred languages list, not the one preferred most often.
+- `Summarizer.Error.UnsafeWebsite.Message.v142` — `hu/firefox-ios.xliff` — "Limited content detected" mistranslated as "Korlátozott tartalom észlelve" is acceptable, but the second sentence loses "may be restricted" nuance by repeating the same word ambiguously.
+    - Current: `Korlátozott tartalom észlelve. Az oldal korlátozott vagy többnyire vizuális lehet.`
+    - Source: `Limited content detected. This page may be restricted or mostly visual.`
+    - Suggest: `Korlátozott tartalom észlelve. Lehet, hogy az oldal hozzáférése korlátozott, vagy többnyire vizuális tartalmat jelenít meg.`
+    - The source distinguishes "limited content" from "restricted" page access; the Hungarian uses "korlátozott" for both, making the message circular.
+- `TabTray.TabsSelectorSyncedTabsTitle.v140` — `hu/firefox-ios.xliff` — Source "Sync" is the title of the synced-tabs selector button; "Szinkronizálás" reads as the action of syncing rather than the synced-tabs section.
     - Current: `Szinkronizálás`
     - Source: `Sync`
     - Suggest: `Szinkronizált`
-    - The developer comment says it is the title of the button to look at synced tabs, a section label, not an action to perform syncing.
-- `TermsOfUse.RemindMeLaterButton.v142` — `hu/firefox-ios.xliff` — "Remind Me Later" is translated as "Figyelmeztetés később" (Warning later) instead of a reminder.
+    - The developer comment says it is the title of the button to look at synced tabs, a tab-tray section label alongside "Lapok" (Tabs); the imperative/gerund noun "Szinkronizálás" labels an action instead.
+- `TermsOfUse.RemindMeLaterButton.v142` — `hu/firefox-ios.xliff` — "Remind Me Later" translated as "Figyelmeztetés később" (warning later) instead of a reminder.
     - Current: `Figyelmeztetés később`
     - Source: `Remind Me Later`
     - Suggest: `Emlékeztessen később`
-    - 'Remind' is 'emlékeztet' in Hungarian; 'figyelmeztetés' means warning/alert, changing the meaning of the postpone button.
-- `TermsOfUse.Title.v142` — `hu/firefox-ios.xliff` — "We've got an update" is rendered as "Van egy hírünk" (We have news), losing the meaning of an update.
+    - 'Remind' is 'emlékeztet' in Hungarian; 'figyelmeztetés' means warning, which is a different action.
+- `TermsOfUse.Title.v142` — `hu/firefox-ios.xliff` — "We’ve got an update" translated as "Van egy hírünk" (We have some news), losing the reference to an update.
     - Current: `Van egy hírünk`
     - Source: `We’ve got an update`
-    - Suggest: `Van egy frissítésünk`
-    - The developer comment says the title indicates that there is an update to the terms of use; the Hungarian says only that there is 'news'.
-- `TermsOfUse.TitleValue2.v147` — `hu/firefox-ios.xliff` — "A note from %@" is translated as "Jegyzet innen: %@", using 'note' in the sense of a written memo/source location rather than a message from the app.
+    - Suggest: `Frissítettük a feltételeinket`
+    - The comment states the title indicates there is an update to the terms of use; "hírünk" (news) does not convey 'update'.
+- `TermsOfUse.TitleValue2.v147` — `hu/firefox-ios.xliff` — "A note from %@" rendered as "Jegyzet innen: %@", using 'note' in the sense of a written memo/location rather than a message from the app.
     - Current: `Jegyzet innen: %@`
     - Source: `A note from %@`
     - Suggest: `Üzenet a %@ csapatától`
-    - The source means a short message from the product (e.g., Firefox); "Jegyzet innen:" reads as a note originating from a location and is misleading.
-- `Translations.LanguagePicker.PageTranslatedTitle.v151` — `hu/firefox-ios.xliff` — "Page Translated to %@" is translated without the subject "page".
+    - %@ is the app name (e.g. Firefox); "Jegyzet innen:" reads as a note originating from a place, not a note from Firefox.
+- `Translations.LanguagePicker.PageTranslatedTitle.v151` — `hu/firefox-ios.xliff` — "Page Translated to %@" drops the subject "page".
     - Current: `Lefordítva erre: %@`
     - Source: `Page Translated to %@`
     - Suggest: `Az oldal lefordítva erre: %@`
-    - The source title states that the page has been translated to a language; the Hungarian omits "Page", leaving an ambiguous fragment as an action sheet title.
-- `WorldCup.GroupPhase.GroupStageLabel.v151` — `hu/firefox-ios.xliff` — "Group Stage" is rendered with a plural noun, producing "Stage of the group rounds" instead of the singular phase name.
-    - Current: `Csoportkörök szakasza`
-    - Source: `Group Stage`
-    - Suggest: `Csoportkör`
-    - The source is a single phase label ("Group Stage"); the Hungarian plural genitive construction says "phase of the group rounds", which is not the same designation.
-- `WorldCup.HomepageWidget.EliminatedTeamSection.Title.v151` — `hu/firefox-ios.xliff` — The question loses the "still want to" sense, asking "Are you still following?" instead of "Do you still want to follow along?".
+    - The source explicitly states that the page was translated to the given language; the Hungarian omits "oldal", leaving the subject unstated.
+- `Translations.LanguagePicker.Title.v151` — `hu/firefox-ios.xliff` — "Translate Page to…" is rendered as "Oldal fordítása…", dropping the "to" and making it identical to the plain "Translate Page" title.
+    - Current: `Oldal fordítása…`
+    - Source: `Translate Page to…`
+    - Suggest: `Oldal fordítása erre:…`
+    - The source is the title of a language picker listing target languages; the "to" is essential and its omission makes the string collide with Translations.Sheet.TitleLabel ("Oldal fordítása") and with the loading label.
+- `WorldCup.HomepageWidget.EliminatedTeamSection.Title.v151` — `hu/firefox-ios.xliff` — "Still want to Follow Along?" translated as "Még mindig követi?", changing the meaning from a future intention to a present-state question.
     - Current: `Még mindig követi?`
     - Source: `Still want to Follow Along?`
-    - Suggest: `Továbbra is követné?`
-    - en-US asks whether the user still wants to follow along after their team was eliminated; the Hungarian states an ongoing action rather than the desire/intent.
-- `WorldCup.HomepageWidget.SettingsButtonAccessibilityLabel.v151` — `hu/firefox-ios.xliff` — "More options" is translated as "További beállítások" (More settings) instead of options.
+    - Suggest: `Továbbra is követni szeretné?`
+    - The source asks whether the user still wants to follow along (after their team was eliminated); the Hungarian asks whether the user is still following, losing the volitional "want to".
+- `WorldCup.HomepageWidget.RoundPhase.WinWorldCupLabel.v151` — `hu/firefox-ios.xliff` — "2026 WORLD CUP CHAMPIONS" drops "World Cup", rendering only "2026-OS VILÁGBAJNOKOK".
+    - Current: `2026-OS VILÁGBAJNOKOK`
+    - Source: `2026 WORLD CUP CHAMPIONS`
+    - Suggest: `2026-OS VILÁGBAJNOKSÁG GYŐZTESEI`
+    - The source names the World Cup explicitly; the translation omits the competition name.
+- `WorldCup.HomepageWidget.SettingsButtonAccessibilityLabel.v151` — `hu/firefox-ios.xliff` — "More options" is translated as "További beállítások" (More settings).
     - Current: `További beállítások`
     - Source: `More options`
     - Suggest: `További lehetőségek`
-    - The source says "More options", not "More settings"; the panel is a more-options panel per the developer comment.
-- `ExternalLink.AppStore.GenericConfirmationTitle` — `hu/firefox-ios.xliff` — The confirmation question is rendered as a statement-like phrasing that reverses the subject/word order used for questions, unlike the parallel App Store string.
-    - Current: `Egy külső alkalmazásban nyitja meg ezt a hivatkozást?`
-    - Source: `Open this link in external app?`
-    - Suggest: `Megnyitja ezt a hivatkozást egy külső alkalmazásban?`
-    - The source asks "Open this link in external app?"; the parallel string ExternalLink.AppStore.ConfirmationTitle uses "Megnyitja ezt a hivatkozást az App Store appban?". The current word order shifts the focus to "in an external app" rather than asking whether to open the link, and is inconsistent with the sibling string.
-- `SentTab.ViewAction.title` — `hu/firefox-ios.xliff` — "View" as an action label is translated as the noun "Nézet" instead of the verb "Megtekintés".
+    - The source says "More options", not "More settings"; the comment says the button shows more options related to the widget.
+- `ErrorPages.CertWarning.Description` — `hu/firefox-ios.xliff` — Subject of "protect your information" is wrong: Hungarian says the site owner protects the user's data, while the source means Firefox protects it.
+    - Current: `Hogy megvédje az információit az ellopásuktól, a Firefox nem kapcsolódott ehhez a webhelyhez.`
+    - Source: `The owner of %@ has configured their website improperly. To protect your information from being stolen, Firefox has not connected to this website.`
+    - Suggest: `Hogy megvédje az információit az ellopástól, a Firefox nem kapcsolódott ehhez a webhelyhez.`
+    - The en-US states Firefox has not connected in order to protect the user's information; the Hungarian plural possessive "ellopásuktól" misattributes the theft and reads awkwardly.
+- `Menu.TrackingProtectionDescription.Fingerprinters` — `hu/firefox-ios.xliff` — "can be used to track you" rendered as a definite statement "használnak" (they use it), dropping the modality.
+    - Current: `amelyet aztán a böngészése követésére használnak`
+    - Source: `The settings on your browser and computer are unique. Fingerprinters collect a variety of these unique settings to create a profile of you, which can be used to track you as you browse.`
+    - Suggest: `amely aztán a böngészése követésére használható`
+    - The en-US says the profile "can be used" to track; the Hungarian asserts that it is used, changing what the product states about tracking behaviour.
+- `Search.ThirdPartyEngines.FailedMessage` — `hu/firefox-ios.xliff` — Past-tense failure statement rendered as a general present-tense possibility statement.
+    - Current: `A keresési szolgáltató nem adható hozzá.`
+    - Source: `The search provider could not be added.`
+    - Suggest: `A keresési szolgáltatót nem sikerült hozzáadni.`
+    - The source reports that adding the search provider failed ("could not be added"); the Hungarian states it cannot be added as a general rule.
+- `SentTab.ViewAction.title` — `hu/firefox-ios.xliff` — "View" as an action label is translated as the noun "Nézet" (a view) instead of the verb "Megtekintés".
     - Current: `Nézet`
     - Source: `View`
     - Suggest: `Megtekintés`
-    - The developer comment states this is a label for an action used to view tabs, so a verbal noun is required, not "Nézet" (a view/layout).
-- `Settings.Home.Option.Wallpaper.Accessibility.TwilightHillsWallpaper.v100` — `hu/firefox-ios.xliff` — "twilight hills" is rendered as "napnyugtai dombok" (sunset hills) instead of twilight/dusk.
-    - Current: `napnyugtai dombok minta`
+    - The developer comment says it is a label for an action used to view tabs, so a verbal noun is required; "Nézet" means a display/view mode.
+- `Settings.DisplayTheme.SystemTheme.SectionHeader` — `hu/firefox-ios.xliff` — "System Theme" translated as just "Rendszer" (System), dropping "Theme".
+    - Current: `Rendszer`
+    - Source: `System Theme`
+    - Suggest: `Rendszertéma`
+    - The source section title is "System Theme"; the translation omits "Theme", inconsistent with "Browser Theme" → "Böngészőtéma" in the same feature.
+- `Settings.Home.Option.Wallpaper.Accessibility.TwilightHillsWallpaper.v100` — `hu/firefox-ios.xliff` — "twilight hills" translated as "napnyugtai dombok" (sunset hills) — but a separate sunrise wallpaper exists; twilight is "alkonyati".
+    - Current: `napnyugtai dombok`
     - Source: `Firefox wallpaper, twilight hills pattern.`
-    - Suggest: `alkonyati dombok minta`
-    - The en-US says "twilight hills"; "napnyugta" means sunset, and the parallel wallpaper string already uses "napkelte" for sunrise, so twilight should be "alkonyat".
-- `Settings.Home.Option.Wallpaper.UpdatedToastButton` — `hu/firefox-ios.xliff` — "View" translated as the noun "Nézet" although the comment states it is a verb (the action of seeing the wallpaper).
+    - Suggest: `alkonyati dombok`
+    - en-US "twilight hills" means dusk/twilight, not sunset (napnyugta); the pattern name should render twilight.
+- `Settings.Home.Option.Wallpaper.UpdatedToastButton` — `hu/firefox-ios.xliff` — "View" translated as the noun "Nézet" although the comment states it is a verb (the action of viewing the wallpaper).
     - Current: `Nézet`
     - Source: `View`
     - Suggest: `Megtekintés`
-    - The developer comment explicitly says to consider View as a verb — dismissing settings and seeing the wallpaper; "Nézet" is the noun "view/layout".
-- `Settings.OpenWith.PageTitle` — `hu/firefox-ios.xliff` — "Open mail links with" is rendered as "E-mail-hivatkozások társítása" (associating mail links), losing the "open with" meaning.
+    - The developer comment explicitly says to consider View as a verb; "Nézet" is the noun "view/layout".
+- `Settings.OpenWith.PageTitle` — `hu/firefox-ios.xliff` — "Open mail links with" is rendered as "E-mail-hivatkozások társítása" ("associating email links"), losing the "open with" meaning.
     - Current: `E-mail-hivatkozások társítása`
     - Source: `Open mail links with`
-    - Suggest: `E-mail-hivatkozások megnyitása ezzel`
-    - The source is a title preceding the chosen mail app: "Open mail links with". "Társítása" means "associating", which is a different action.
-- `Wallpaper.Download.Error.Body.v106` — `hu/firefox-ios.xliff` — "your download" was translated as "a letöltésével" (its download), losing the possessive reference to the user.
+    - Suggest: `E-mail-hivatkozások megnyitása ezzel:`
+    - The source is a settings page title asking which app to open mail links with; "társítása" means file/link association, not opening with a chosen app.
+- `Settings.SendUsage.Message` — `hu/firefox-ios.xliff` — The Hungarian drops "for everyone" and reverses/alters "provide and improve" into "fejlesztéséhez és támogatásához" (development and support).
+    - Current: `csak azt gyűjtse, ami a Firefox fejlesztéséhez és támogatásához szükséges`
+    - Source: `Mozilla strives to only collect what we need to provide and improve Firefox for everyone.`
+    - Suggest: `csak azt gyűjtse, ami a Firefox mindenki számára való biztosításához és továbbfejlesztéséhez szükséges`
+    - en-US says "to provide and improve Firefox for everyone"; the target says "development and support" and omits "for everyone".
+- `Swipe right or left with three fingers to close the tab.` — `hu/firefox-ios.xliff` — Direction order reversed: "right or left" rendered as "balra vagy jobbra" (left or right).
+    - Current: `legyintsen balra vagy jobbra három ujjal`
+    - Source: `Swipe right or left with three fingers to close the tab.`
+    - Suggest: `legyintsen jobbra vagy balra három ujjal`
+    - The en-US says "Swipe right or left"; the Hungarian reverses the order of the directions.
+- `Wallpaper.Download.Error.Body.v106` — `hu/firefox-ios.xliff` — "your download" rendered as "a letöltésével" ("its download"), losing the second-person possessive and introducing a wrong referent.
     - Current: `Valami hiba történt a letöltésével.`
     - Source: `Something went wrong with your download.`
     - Suggest: `Valami hiba történt a letöltéssel.`
-    - The source says "Something went wrong with your download." The Hungarian third-person possessive suffix -ével makes it "with its download", which refers to nothing.
-- `No logins found` — `hu/firefox-ios.xliff` — "No logins found" translated as "Nincsenek bejelentkezések", dropping the "found" (search result) meaning.
+    - The en-US says "Something went wrong with your download." The Hungarian suffix -ével makes it "with its download", referring to some unnamed third thing rather than the user's download.
+- `No logins found` — `hu/firefox-ios.xliff` — Translation drops "found": "Nincsenek bejelentkezések" means "There are no logins" rather than "No logins found".
     - Current: `Nincsenek bejelentkezések`
     - Source: `No logins found`
     - Suggest: `Nem találhatók bejelentkezések`
-    - The comment says the label is displayed when no logins are found after searching; the parallel string NoLoginsFound.Title.v122 correctly uses "Nem találhatók jelszavak".
+    - The label is shown after searching; the source says no logins were found, which the sibling string NoLoginsFound.Title.v122 renders as "Nem találhatók jelszavak".
+- `TodayWidget.QuickViewGalleryDescriptionV2` — `hu/firefox-ios.xliff` — "Add shortcuts to your open tabs" translated as adding shortcuts onto the open tabs rather than shortcuts leading to them.
+    - Current: `Indítóikonok hozzáadása a nyitott lapokhoz.`
+    - Source: `Add shortcuts to your open tabs.`
+    - Suggest: `Parancsikonok hozzáadása a nyitott lapjaihoz.`
+    - Meaning is shortcuts pointing to open tabs; the Hungarian dative reads as adding icons to the tabs. Also inconsistent with the surrounding widget strings.
 
 ### C. Grammar, agreement & spelling
 
+- `FirefoxHomepage.TrackerBlocker.TrackersBlocked.v153b` — `hu/firefox-ios.xliff` — Singular "Nyomkövető" used for a count label that shows a number of blocked trackers.
+    - Current: `Nyomkövető blokkolva: %@`
+    - Source: `Trackers Blocked: %@`
+    - Suggest: `Blokkolt nyomkövetők: %@`
+    - The source "Trackers Blocked: %@" is a plural count label; the Hungarian reads as a singular subject with no plural/possessive form, producing awkward output.
 - `ContextualHints.MainMenu.NewMenu.Body.v132` — `hu/firefox-ios.xliff` — Missing comma before the subordinate clause "amire szüksége van".
     - Current: `Találja meg gyorsabban amire szüksége van`
     - Source: `Find what you need faster, from private browsing to save actions.`
     - Suggest: `Találja meg gyorsabban, amire szüksége van`
-    - Hungarian orthography requires a comma before a subordinate clause introduced by "amire".
-- `Onboarding.Modern.BrandRefresh.Marketing.Description.v148` — `hu/firefox-ios.xliff` — Suffix attached to a placeholder without a hyphen: "%1$@ot" should be "%1$@-ot".
-    - Current: `a %1$@ot`
-    - Source: `Share how you discovered %1$@, and that you use it, with %2$@’s marketing partners. This data is never sold.`
-    - Suggest: `a %1$@-ot`
-    - Hungarian orthography requires a hyphen when adding a case suffix to a proper name/placeholder whose form is unknown.
-- `Onboarding.Modern.BrandRefresh.Notification.Title.v148` — `hu/firefox-ios.xliff` — Suffix appended directly to the app-name placeholder without a hyphen, producing e.g. "Firefoxszal" instead of the required "Firefoxszal"/"Firefox-szal" form and dropping the space.
-    - Current: `%@szal`
-    - Source: `Notifications help you stay safer with %@`
-    - Suggest: `%@-szal`
-    - In Hungarian, case suffixes attached to foreign/proper brand names in UI placeholders must be joined with a hyphen; "%@szal" also fails for any app name not ending in a consonant sound matching -szal (e.g. "Focus"). The en-US is "stay safer with %@".
-- `Onboarding.Modern.Sync.Title.v145` — `hu/firefox-ios.xliff` — Missing hyphen before the case suffix attached to the app-name placeholder.
+    - Hungarian requires a comma before a subordinate clause introduced by "amire".
+- `NativeErrorPage.CellularDataRestricted.Description.v156` — `hu/firefox-ios.xliff` — Missing hyphen before the suffix attached to the app-name placeholder.
+    - Current: `a %@hoz`
+    - Source: `Connect to Wi-Fi or go to iOS Settings and turn on cellular data for %@.`
+    - Suggest: `a %@-hoz`
+    - In Hungarian, a suffix appended to a proper name/placeholder such as "Firefox" must be joined with a hyphen when written after a variable (%@-hoz); "%@hoz" is ungrammatical.
+- `Onboarding.Modern.Sync.Title.v145` — `hu/firefox-ios.xliff` — Missing hyphen before the suffix attached to the app-name placeholder.
     - Current: `Vigye el a %@ot`
     - Source: `Take %@ on all your browsing adventures`
     - Suggest: `Vigye el a %@-ot`
-    - In Hungarian, a suffix appended to a proper name/placeholder ending in a non-Hungarian form requires a hyphen (e.g. „Firefoxot” is written „%@-ot” when the name comes from a placeholder). Other strings in the same file avoid direct suffixing; here „%@ot” produces incorrect output such as „Firefoxot” only by accident and is orthographically wrong with a placeholder.
-- `Onboarding.Notification.Description.v120` — `hu/firefox-ios.xliff` — Case suffix attached to the app-name placeholder without a hyphen.
-    - Current: `a %@ban`
+    - In Hungarian, case suffixes appended to a proper/brand name placeholder must be joined with a hyphen (e.g. „Firefox-ot”); „%@ot” yields „Firefoxot” without the required hyphen and is inconsistent with the locale's placeholder-suffix handling.
+- `Onboarding.Notification.Description.v120` — `hu/firefox-ios.xliff` — Missing hyphen before the case suffix appended to the app-name placeholder.
+    - Current: `adatvédelmi funkciókat a %@ban`
     - Source: `Securely send tabs between your devices and discover other privacy features in %@.`
-    - Suggest: `a %@-ban`
-    - A suffix added to a placeholder holding a brand name must be separated with a hyphen in Hungarian orthography.
-- `Onboarding.Notification.Title.v120` — `hu/firefox-ios.xliff` — Missing hyphen before the instrumental suffix attached to the app-name placeholder.
-    - Current: `%@szal`
+    - Suggest: `adatvédelmi funkciókat a %@-ban`
+    - Hungarian requires a hyphen when a suffix is attached to a brand name placeholder whose ending is unknown; „%@ban” renders as „Firefoxban” without the hyphen used elsewhere in the locale.
+- `Onboarding.Notification.Title.v120` — `hu/firefox-ios.xliff` — Missing hyphen before the case suffix appended to the app-name placeholder.
+    - Current: `nagyobb biztonságban lehet %@szal`
     - Source: `Notifications help you stay safer with %@`
-    - Suggest: `%@-szal`
-    - In Hungarian, a suffix appended to a proper/brand name placeholder must be joined with a hyphen (e.g. „Firefox-szal”); „%@szal” produces „Firefoxszal” which is incorrect for a brand name and the pattern is inconsistent with other strings.
-- `PrivacyDashboard.HeaderLabel.v155` — `hu/firefox-ios.xliff` — Plural header "Trackers blocked this week" is translated in singular form without agreement.
-    - Current: `Nyomkövető blokkolva a héten`
-    - Source: `Trackers blocked this week`
-    - Suggest: `nyomkövető blokkolva a héten`
-    - The label follows a bold number above it, so it should read as a continuation (lowercase, e.g. "12 / nyomkövető blokkolva a héten"); capitalized standalone "Nyomkövető" reads as an isolated singular noun.
-- `Settings.Rollouts.Message.v148` — `hu/firefox-ios.xliff` — Awkward/incorrect passive construction "távolról vannak alkalmazva" for "Changes applied remotely".
-    - Current: `A módosítások távolról vannak alkalmazva.`
-    - Source: `%@ will improve features, performance, and stability between updates. Changes applied remotely.`
-    - Suggest: `A módosítások távolról kerülnek alkalmazásra.`
-    - The "van + -va/-ve" passive with a transitive verb is a grammatical error in Hungarian; the state-passive is not licensed here.
-- `Settings.Translation.PreferredLanguages.Footer.v151` — `hu/firefox-ios.xliff` — "when translating" rendered as "fordítás közben" (during translation) instead of "fordításkor".
-    - Current: `Válasszon a következő nyelvek közül fordítás közben.`
-    - Source: `Choose from these languages when translating.`
-    - Suggest: `Fordításkor ezek közül a nyelvek közül választhat.`
-    - The source means the listed languages are the choices offered when a translation is performed; "fordítás közben" (while translating) shifts the meaning slightly and reads awkwardly.
-- `SentFromFirefox.SocialShare.ShareMessageA.Title.v134` — `hu/firefox-ios.xliff` — Missing hyphen before the case suffix attached to the placeholder.
-    - Current: `%1$@ %2$@ból 🦊 küldve.`
+    - Suggest: `nagyobb biztonságban lehet a %@-szal`
+    - The suffix „-szal” must be joined to the placeholder with a hyphen; „%@szal” produces „Firefoxszal” glued to the placeholder without the hyphen convention.
+- `Addresses.Settings.Switch.Description.v124` — `hu/firefox-ios.xliff` — "Includes phone numbers and email addresses" translated as a noun phrase "belevétele" instead of a statement.
+    - Current: `Telefonszámok és e-mail-címek belevétele`
+    - Source: `Includes phone numbers and email addresses`
+    - Suggest: `Tartalmazza a telefonszámokat és az e-mail-címeket`
+    - The source is a descriptive statement under the toggle title saying the feature includes phone numbers and email addresses; the Hungarian nominal form reads as an action/option label, changing the meaning.
+- `SentFromFirefox.SocialShare.ShareMessageA.Title.v134` — `hu/firefox-ios.xliff` — Placeholder suffix attached without hyphen; Hungarian requires "-ból/-ből" with a hyphen after a placeholder/proper name ending in a non-Hungarian form.
+    - Current: `%2$@ból 🦊 küldve`
     - Source: `%1$@ Sent from %2$@ 🦊 Try the mobile browser: %3$@`
-    - Suggest: `%1$@ A(z) %2$@-ból 🦊 küldve.`
-    - In Hungarian a case ending appended to a variable/proper name placeholder must be joined with a hyphen (e.g. %2$@-ból); writing "%2$@ból" is ungrammatical, and the vowel harmony is unpredictable for an unknown app name.
-- `SentFromFirefox.SocialShare.ShareMessageA.Title.v137` — `hu/firefox-ios.xliff` — Missing hyphen before the case suffix attached to the placeholder.
-    - Current: `A %2$@ból 🦊 küldve.`
+    - Suggest: `%2$@-ból 🦊 küldve`
+    - The app name is substituted at runtime (e.g. Firefox); Hungarian orthography requires a hyphen before the suffix after a foreign proper name ending in a silent/unusual letter, and the same pattern is used elsewhere with "a(z) %@".
+- `SentFromFirefox.SocialShare.ShareMessageA.Title.v137` — `hu/firefox-ios.xliff` — Placeholder suffix attached without hyphen.
+    - Current: `A %2$@ból 🦊 küldve`
     - Source: `%1$@  Sent from %2$@ 🦊 Try the mobile browser: %3$@`
-    - Suggest: `A(z) %2$@-ból 🦊 küldve.`
-    - A case ending appended to a placeholder must be joined with a hyphen in Hungarian; "%2$@ból" is ungrammatical.
-- `SentFromFirefox.SocialShare.ShareMessageB.Title.v134` — `hu/firefox-ios.xliff` — Missing hyphen before the case suffix attached to the placeholder.
-    - Current: `%1$@ %2$@ból 🦊 küldve.`
+    - Suggest: `A %2$@-ból 🦊 küldve`
+    - The app name is substituted at runtime (e.g. Firefox); Hungarian requires a hyphen when attaching a case suffix to such a foreign proper name.
+- `SentFromFirefox.SocialShare.ShareMessageB.Title.v134` — `hu/firefox-ios.xliff` — Placeholder suffix attached without hyphen.
+    - Current: `%2$@ból 🦊 küldve`
     - Source: `%1$@ Sent from %2$@ 🦊 %3$@`
-    - Suggest: `%1$@ A(z) %2$@-ból 🦊 küldve.`
-    - A case ending appended to a placeholder must be separated with a hyphen in Hungarian; "%2$@ból" is ungrammatical.
-- `SentFromFirefox.SocialShare.ShareMessageB.Title.v137` — `hu/firefox-ios.xliff` — Missing hyphen before the case suffix attached to the placeholder.
-    - Current: `A %2$@ból 🦊 küldve.`
+    - Suggest: `%2$@-ból 🦊 küldve`
+    - The app name is substituted at runtime (e.g. Firefox); Hungarian requires a hyphen when attaching a case suffix to such a foreign proper name.
+- `SentFromFirefox.SocialShare.ShareMessageB.Title.v137` — `hu/firefox-ios.xliff` — Placeholder suffix attached without hyphen.
+    - Current: `A %2$@ból 🦊 küldve`
     - Source: `%1$@  Sent from %2$@ 🦊 %3$@`
-    - Suggest: `A(z) %2$@-ból 🦊 küldve.`
-    - A case ending appended to a placeholder must be joined with a hyphen in Hungarian; "%2$@ból" is ungrammatical.
-- `TermsOfUse.LearnMoreHere.v147` — `hu/firefox-ios.xliff` — The sentence built with the 'here' link renders as "Itt többet megtudhat." with a mid-sentence capitalized link and awkward word order.
+    - Suggest: `A %2$@-ból 🦊 küldve`
+    - The app name is substituted at runtime (e.g. Firefox); Hungarian requires a hyphen when attaching a case suffix to such a foreign proper name.
+- `TermsOfUse.LearnMoreHere.v147` — `hu/firefox-ios.xliff` — Sentence built around the 'here' link is ungrammatical/incomplete in Hungarian and starts with the placeholder link mid-sentence.
     - Current: `%@ többet megtudhat.`
     - Source: `You can learn more %@.`
     - Suggest: `További tudnivalókat %@ talál.`
-    - Source is "You can learn more %@." where %@ is the lowercase link word 'here'. The Hungarian places the link at sentence start, forcing the link text to be capitalized ("Itt"), which conflicts with the lowercase source link and produces an unnatural sentence.
-- `BreachAlerts.Description` — `hu/firefox-ios.xliff` — Duplicated article "a a" in the Hungarian text.
+    - en-US "You can learn more %@." places the link ('here') inside a well-formed sentence; the Hungarian "%@ többet megtudhat." lacks an object/adverbial and does not form a correct sentence with the link text "Itt".
+- `BreachAlerts.Description` — `hu/firefox-ios.xliff` — Duplicated article "a a" and dropped reference to "your password" in the first sentence.
     - Current: `ellopták őket a a legutóbbi megváltoztatása óta`
     - Source: `Passwords were leaked or stolen since you last changed your password. To protect this account, log in to the site and change your password.`
-    - Suggest: `ellopták őket a legutóbbi megváltoztatása óta`
-    - Typo: the definite article "a" is repeated.
-- `Menu.TrackingProtectionDescription.CrossSiteNew` — `hu/firefox-ios.xliff` — Wrong case of the pronoun: "követik Ön" should be "követik Önt" (accusative).
+    - Suggest: `ellopták őket a jelszava legutóbbi megváltoztatása óta`
+    - The source says "since you last changed your password"; the Hungarian has a stray repeated article and no noun for what was changed.
+- `Menu.TrackingProtectionDescription.CrossSiteNew` — `hu/firefox-ios.xliff` — Wrong case: "követik Ön oldalról oldalra" should use the accusative "Önt".
     - Current: `Ezek a sütik követik Ön oldalról oldalra`
     - Source: `These cookies follow you from site to site to gather data about what you do online. They are set by third parties such as advertisers and analytics companies.`
     - Suggest: `Ezek a sütik oldalról oldalra követik Önt`
-    - The object of "követik" must be in the accusative case (Önt); "követik Ön" is ungrammatical.
-- `Menu.TrackingProtectionDescription.Fingerprinters` — `hu/firefox-ios.xliff` — Missing possessive suffix: "a böngészője és számítógép beállításai" lacks agreement.
+    - "Follow you" requires the accusative object "Önt" in Hungarian; "követik Ön" is ungrammatical.
+- `Menu.TrackingProtectionDescription.Fingerprinters` — `hu/firefox-ios.xliff` — Missing possessive suffix: "a böngészője és számítógép beállításai".
     - Current: `A böngészője és számítógép beállításai egyediek.`
     - Source: `The settings on your browser and computer are unique. Fingerprinters collect a variety of these unique settings to create a profile of you, which can be used to track you as you browse.`
     - Suggest: `A böngészője és számítógépe beállításai egyediek.`
-    - The source says "your browser and computer"; the possessive must apply to both nouns (számítógépe).
-- `Search.ThirdPartyEngines.AddSuccess` — `hu/firefox-ios.xliff` — Missing initial letter in "szolgáltatás" (typo).
+    - The source is "your browser and computer"; the second noun lacks the possessive suffix, making the phrase ungrammatical.
+- `Search.ThirdPartyEngines.AddSuccess` — `hu/firefox-ios.xliff` — Typo: "zolgáltatás" is missing its initial letter.
     - Current: `Keresési zolgáltatás hozzáadva!`
     - Source: `Added Search engine!`
     - Suggest: `Keresési szolgáltatás hozzáadva!`
-    - "zolgáltatás" is a misspelling of "szolgáltatás".
-- `Settings.DisplayTheme.SwitchSubtitle` — `hu/firefox-ios.xliff` — Misspelled word "fényessének" instead of "fényességének".
-    - Current: `fényessének`
+    - "szolgáltatás" is misspelled as "zolgáltatás".
+- `Settings.DisplayTheme.SwitchSubtitle` — `hu/firefox-ios.xliff` — Misspelling of "fényességének".
+    - Current: `a képernyő fényessének függvényében`
     - Source: `Switch automatically based on screen brightness`
-    - Suggest: `fényességének`
-    - "fényesség" + possessive suffix is "fényességének"; the current form is a typo.
-- `Settings.ShowLinkPreviews.Title` — `hu/firefox-ios.xliff` — Missing compound-word hyphenation/joining in "Hivatkozás előnézetek".
-    - Current: `Hivatkozás előnézetek megjelenítése`
-    - Source: `Show Link Previews`
-    - Suggest: `Hivatkozás-előnézetek megjelenítése`
-    - In Hungarian a compound noun of two nouns must be written as one word or hyphenated, not as two separate words.
-- `TranslationToastHandler.PromptTranslate.Title` — `hu/firefox-ios.xliff` — Missing hyphen before the suffix appended to the placeholder for the language name.
-    - Current: `Lefordítja %2$@ra`
+    - Suggest: `a képernyő fényességének függvényében`
+    - "fényessének" is a typo; the correct genitive form is "fényességének".
+- `Tabs Tray` — `hu/firefox-ios.xliff` — "Lapok tálca" is an ungrammatical compound; should be "Lapok tálcája" or "Laptálca".
+    - Current: `Lapok tálca`
+    - Source: `Tabs Tray`
+    - Suggest: `Lapok tálcája`
+    - Hungarian noun-noun possessive construction requires the possessive suffix: "Lapok tálcája".
+- `There was a problem accessing tabs from your other devices. Try again in a few moments.` — `hu/firefox-ios.xliff` — "your other devices" (plural) rendered as singular "más eszközről".
+    - Current: `más eszközről történő elérésekor`
+    - Source: `There was a problem accessing tabs from your other devices. Try again in a few moments.`
+    - Suggest: `a többi eszközéről történő elérésekor`
+    - The source refers to the user's other devices (plural, possessive); the Hungarian says "from another device", losing the plural and possessive.
+- `TranslationToastHandler.PromptTranslate.Title` — `hu/firefox-ios.xliff` — Missing hyphen before the case suffix attached to the placeholder: "%2$@ra".
+    - Current: `Lefordítja %2$@ra a következővel: %3$@?`
     - Source: `This page appears to be in %1$@. Translate to %2$@ with %3$@?`
-    - Suggest: `Lefordítja %2$@-ra`
-    - In Hungarian, a suffix attached directly to a variable/placeholder must be joined with a hyphen; "%2$@ra" renders as e.g. "magyarra" only by luck and is ungrammatical/unreadable for other values.
-- `Open & Fill` — `hu/firefox-ios.xliff` — Inconsistent grammatical form: "Megnyitás és kitöltése" mixes a nominal form with a possessive-suffixed one.
+    - Suggest: `Lefordítja a következő nyelvre: %2$@, ezzel: %3$@?`
+    - A suffix glued directly to a placeholder is ungrammatical; Hungarian requires a hyphen (%2$@-ra) or a restructured sentence, as the vowel harmony and assimilation cannot be predicted.
+- `Open & Fill` — `hu/firefox-ios.xliff` — Inconsistent possessive/infinitive agreement: "Megnyitás és kitöltése" mixes a nominal and a possessive form.
     - Current: `Megnyitás és kitöltése`
     - Source: `Open & Fill`
     - Suggest: `Megnyitás és kitöltés`
-    - The source is "Open & Fill", two parallel actions; the Hungarian second verb carries a 3rd-person possessive suffix (-e) with no antecedent, so the phrase is ungrammatical.
-- `Turns private mode on or off` — `hu/firefox-ios.xliff` — Missing accusative case ending on the object "privát mód".
+    - The source is "Open & Fill", two parallel actions; the Hungarian second element carries a possessive suffix (-e) that has no antecedent, breaking agreement with the first noun.
+- `Turns private mode on or off` — `hu/firefox-ios.xliff` — Missing accusative case ending on "privát mód".
     - Current: `Ki- vagy bekapcsolja a privát mód`
     - Source: `Turns private mode on or off`
     - Suggest: `Ki- vagy bekapcsolja a privát módot`
-    - The Hungarian direct object of "kapcsolja" requires the accusative suffix -ot; "a privát mód" is ungrammatical here.
+    - The object of "bekapcsolja" must be in the accusative: "privát módot". As written the sentence is ungrammatical.
 - `fi3W24-2GqvPe` — `hu/firefox-ios.xliff` — Wrong definite article before a vowel-initial quoted phrase ("a Ugrás" instead of "az Ugrás").
     - Current: `a „Ugrás a másolt hivatkozáshoz”`
     - Source: `There are ${count} options matching ‘Go to Copied Link’.`
@@ -442,74 +1030,104 @@ _Nothing in this category._
 
 ### D. Terminology, register & consistency
 
-- `Settings.AppIconSelection.SectionNames.More.Title.v139` — `hu/firefox-ios.xliff` — Section heading "More" translated as "Több" (quantitative more) instead of "Egyéb"/"További".
-    - Current: `Több`
-    - Source: `More`
-    - Suggest: `Egyéb`
-    - The comment says this heading covers all other miscellaneous icon variants; Hungarian "Több" means "more (in quantity)" and is not used as a section heading for additional/other items.
-- `LoginsHelper.PromptSavePassword.Title.v122` — `hu/firefox-ios.xliff` — Inconsistent phrasing with the parallel username prompt on the same screen.
-    - Current: `Menti a jelszót?`
-    - Source: `Save password?`
-    - Suggest: `Jelszó mentése?`
-    - The sibling string LoginsHelper.PromptSaveLogin.Title.v122 ("Save username?") uses the nominal form "Felhasználónév mentése?"; the same construction should be used for "Save password?", as is also done in the update prompts ("Jelszó frissítése?").
-- `PrivacyDashboard.SocialTrackers.v155` — `hu/firefox-ios.xliff` — "Social Media Trackers" is rendered with "követők" while the other tracker labels on the same screen use "nyomkövető".
+- `PrivacyDashboard.SocialTrackers.v155` — `hu/firefox-ios.xliff` — "Social Media Trackers" is translated as "Közösségimédia-követők" while the rest of the screen uses "nyomkövető" for tracker.
     - Current: `Közösségimédia-követők`
     - Source: `Social Media Trackers`
     - Suggest: `Közösségimédia-nyomkövetők`
-    - On the same Privacy Dashboard screen, "trackers" is translated as "nyomkövető" (Webhelyek közötti nyomkövető sütik, Nyomkövető tartalom, Nyomkövető blokkolva a héten); "követők" is inconsistent and can read as "followers".
-- `Summarizer.RetryButton.Accessibility.Label.v145` — `hu/firefox-ios.xliff` — Uses "összefoglalás" while the rest of the screen consistently uses "összegzés" for summary/summarize.
+    - Other rows on the same Privacy Dashboard use "nyomkövető" (Nyomkövető tartalom, nyomkövető sütik, Nyomkövető blokkolva); "követők" is inconsistent terminology on the same screen.
+- `QRCode.Toolbar.Button.A11y.Title.v128` — `hu/firefox-ios.xliff` — Accessibility label for a toolbar button is rendered as an imperative sentence instead of a noun phrase label.
+    - Current: `Olvassa le a QR-kódot`
+    - Source: `Scan QR code`
+    - Suggest: `QR-kód beolvasása`
+    - The comment says this is the accessibility label of a button; Hungarian UI convention (and the sibling label "Oldal összegzése") uses a nominal form, not an imperative instruction to the user.
+- `Settings.Studies.Title.v136` — `hu/firefox-ios.xliff` — "Studies" is rendered as "Tanulmányok" (written papers) instead of the Mozilla term for experiments.
+    - Current: `Tanulmányok telepítése és futtatása`
+    - Source: `Install and Run Studies`
+    - Suggest: `Kísérletek telepítése és futtatása`
+    - In Mozilla terminology "Studies" are experiments/trials installed in the browser, not documents; "Tanulmányok telepítése" is nonsensical and inconsistent with the description about trying out features.
+- `Summarizer.RetryButton.Accessibility.Label.v145` — `hu/firefox-ios.xliff` — "summarize/summary" rendered as "összefoglalás" here while the rest of the file consistently uses "összegzés".
     - Current: `Weboldal összefoglalásának újrapróbálása`
     - Source: `Retry to summarize web page`
     - Suggest: `Weboldal összegzésének újrapróbálása`
-    - All other Summarizer strings translate summary/summarize as "összegzés"; this inconsistent term appears on the same screen.
-- `Summarizer.TabSnapshot.Accessibility.Label.v145` — `hu/firefox-ios.xliff` — Uses "összefoglaló" while the rest of the screen consistently uses "összegzés" for summary.
+    - Terminology inconsistency within the same screen/file, where "Summarize/Summary" is translated as "összegzés" everywhere else.
+- `Summarizer.TabSnapshot.Accessibility.Label.v145` — `hu/firefox-ios.xliff` — "summary" rendered as "összefoglaló" while the rest of the file uses "összegzés".
     - Current: `az összefoglaló bezárásához`
     - Source: `Drag or tap the web page to close the summary`
     - Suggest: `az összegzés bezárásához`
-    - The same screen (e.g. Summarizer.CloseButton.Accessibility.Label) renders "summary" as "összegzés"; this term is inconsistent.
-- `Translations.LanguagePicker.Title.v151` — `hu/firefox-ios.xliff` — The language picker title "Translate Page to…" is rendered identically to the "Translating page" loading labels, losing the "to…" target-language sense.
-    - Current: `Oldal fordítása…`
-    - Source: `Translate Page to…`
-    - Suggest: `Oldal fordítása erre:…`
-    - The source is "Translate Page to…", an action sheet title introducing a list of target languages; the Hungarian drops "to" and collides with Translations.Sheet.LoadingButton / Toolbar.Translation.LoadingButton which use the same wording for "Translating page".
+    - Terminology inconsistency within the same feature; Summarizer.CloseButton.Accessibility.Label uses "Összegzés bezárása".
+- `TermsOfUse.TermsOfUseHasOpened.v142` — `hu/firefox-ios.xliff` — The UI 'sheet' is translated as "lap", which is the term used for browser tabs elsewhere in this build.
+    - Current: `A felhasználási feltételeket tartalmazó lap megnyitva`
+    - Source: `Terms of Use sheet opened`
+    - Suggest: `A felhasználási feltételek lapja megnyílt`
+    - "lap" is consistently used for browser tabs (Lapok, Új lap); using it for the bottom sheet is confusing in an accessibility announcement.
+- `Translations.Sheet.ToLabel.v145` — `hu/firefox-ios.xliff` — "To" is translated as "Cél:" while the paired "From" is "Forrásnyelv:", an inconsistent pair on the same sheet.
+    - Current: `Cél:`
+    - Source: `To`
+    - Suggest: `Célnyelv:`
+    - The From/To pair on the same bottom sheet should be parallel; "Forrásnyelv:" vs. "Cél:" is inconsistent terminology within one screen.
+- `ActivityStream.ContextMenu.AddToShortcuts` — `hu/firefox-ios.xliff` — "Shortcuts" (the homepage Shortcuts section) is rendered as "indítóikonok" (launcher icons) instead of the established "Gyorslinkek/Parancsikonok" term.
+    - Current: `Hozzáadás az indítóikonokhoz`
+    - Source: `Add to Shortcuts`
+    - Suggest: `Hozzáadás a parancsikonokhoz`
+    - The source refers to the Firefox home screen "Shortcuts" section; "indítóikonok" names a different concept (home screen launcher icons).
+- `Always Send` — `hu/firefox-ios.xliff` — Button label rendered as an imperative/subjunctive verb form instead of the action label "Always Send".
+    - Current: `Mindig küldjön`
+    - Source: `Always Send`
+    - Suggest: `Mindig elküldi`
+    - The source is a button label meaning the user chooses to always send crash reports; "Mindig küldjön" reads as telling the user to send, not as the action taken by the app.
+- `FirefoxHome.Stories.Minutes.v140` — `hu/firefox-ios.xliff` — The developer comment requires an abbreviated form of "minutes" due to space constraints, but the translation spells out "perc".
+    - Current: `%d perc`
+    - Source: `min: %d`
+    - Suggest: `%d p`
+    - Comment: "Minutes should be abbreviated due to space constraints."
+- `Open articles in Reader View by tapping the book icon when it appears in the title bar.` — `hu/firefox-ios.xliff` — "tapping" translated as "kattintva" (clicking) on a touch device.
+    - Current: `a könyv ikonra kattintva`
+    - Source: `Open articles in Reader View by tapping the book icon when it appears in the title bar.`
+    - Suggest: `a könyv ikonra koppintva`
+    - On iOS "tap" is "koppintás" in Hungarian; "kattintás" means mouse click.
+- `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.` — `hu/firefox-ios.xliff` — "tapping" rendered as "kattintva" (clicking) instead of the touch term, and a spurious comma splits the sentence.
+    - Current: `Mentse az oldalakat az olvasási listájára, a könyv plusz ikonra kattintva az olvasó nézet vezérlőelemei közt.`
+    - Source: `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.`
+    - Suggest: `Mentse az oldalakat az olvasási listájára a könyv plusz ikonra koppintva az olvasó nézet vezérlőelemei közt.`
+    - On iOS "tap" is "koppintás", not "kattintás"; the inserted comma is also incorrect.
 - `Settings.TrackingProtectionOption.BasicBlockList.Status` — `hu/firefox-ios.xliff` — "Standard" is rendered as "Szokásos" here but as "Normál" in the sibling option string on the same screen.
     - Current: `Szokásos`
     - Source: `Standard`
     - Suggest: `Normál`
     - Settings.TrackingProtectionOption.BasicBlockList translates "Standard (default)" as "Normál (alapértelmezett)"; the status label for the same option must use the same term.
-- `TodayWidget.QuickActionsGalleryTitleV2` — `hu/firefox-ios.xliff` — "Shortcuts" rendered as "indítóikonok" (launcher icons) instead of the standard "parancsikonok".
-    - Current: `Firefox indítóikonok`
-    - Source: `Firefox Shortcuts`
-    - Suggest: `Firefox parancsikonok`
-    - en-US "Firefox Shortcuts" refers to shortcuts, normally "parancsikonok" in Hungarian; "indítóikon" is a nonstandard term and is inconsistent with "Webhelyindítók" used for the same source word elsewhere in the same file.
-- `TodayWidget.TopSitesGalleryTitleV2` — `hu/firefox-ios.xliff` — "Website Shortcuts" translated as "Webhelyindítók", inconsistent with the "indítóikonok"/"parancsikonok" term used for Shortcuts elsewhere in the file.
-    - Current: `Webhelyindítók`
-    - Source: `Website Shortcuts`
-    - Suggest: `Webhely-parancsikonok`
-    - The same source term "Shortcuts" is rendered three different ways in this file; "Webhelyindítók" (website launchers) does not convey "shortcuts".
 
 ### E. Typography, punctuation & spacing
 
-- `Onboarding.Modern.BrandRefresh.TermsOfUse.ManagePreferenceAgreement.v148` — `hu/firefox-ios.xliff` — Superfluous comma between the adverbial phrase and the subject.
-    - Current: `A böngésző fejlesztése érdekében, a %1$@`
-    - Source: `To help improve the browser, %1$@ sends diagnostic and interaction data to %2$@. %3$@`
-    - Suggest: `A böngésző fejlesztése érdekében a %1$@`
-    - Hungarian punctuation does not place a comma after an introductory adverbial phrase like this; the comma is an anglicism.
-- `TermsOfUse.Link.HereText.v147` — `hu/firefox-ios.xliff` — The inline link word 'here' is capitalized as "Itt" although it is inserted inside a sentence.
+- `Settings.Notifications.TipsAndFeaturesNotificationsStatus.v112` — `hu/firefox-ios.xliff` — Suffix attached to the app-name placeholder without a hyphen.
+    - Current: `a legtöbbet a %@ból`
+    - Source: `Learn about useful features and how to get the most out of %@.`
+    - Suggest: `a legtöbbet a %@-ból`
+    - In Hungarian, case suffixes appended to a proper/brand name placeholder require a hyphen (e.g. Firefoxból is written Firefox-ból when attached to a placeholder token); without it the word is misspelled.
+- `Settings.Search.Suggest.ShowNonSponsoredSuggestions.Description.v124.v2` — `hu/firefox-ios.xliff` — Suffix attached to the app-name placeholder without a hyphen.
+    - Current: `javaslatokat a %@tól`
+    - Source: `Get suggestions from %@ related to your search`
+    - Suggest: `javaslatokat a %@-tól`
+    - A case suffix appended directly to a placeholder holding a brand name needs a hyphen in Hungarian orthography.
+- `TermsOfUse.Link.HereText.v147` — `hu/firefox-ios.xliff` — Link text "here" is capitalized mid-sentence.
     - Current: `Itt`
     - Source: `here`
     - Suggest: `itt`
-    - The developer comment states this is the link text for 'here' within the sentence 'You can learn more here.', so it should not be capitalized mid-sentence.
-- `WorldCup.HomepageWidget.ErrorLabel.v151` — `hu/firefox-ios.xliff` — Missing comma after the interjection "Kérjük" in the Hungarian sentence.
+    - The link is inserted inside the sentence 'You can learn more here.', so Hungarian sentence-case rules require lowercase.
+- `WorldCup.HomepageWidget.ErrorLabel.v151` — `hu/firefox-ios.xliff` — Missing comma after "Kérjük" in the Hungarian sentence.
     - Current: `Kérjük frissítse.`
     - Source: `We couldn’t load match data. Please refresh.`
     - Suggest: `Kérjük, frissítse.`
-    - Hungarian punctuation requires a comma after "Kérjük" when it introduces a request clause.
+    - Hungarian orthography requires a comma after the introductory "Kérjük" before the imperative clause.
 - `DefaultBrowserCard.Button.v2` — `hu/firefox-ios.xliff` — Missing comma before the subordinate clause in "Tudja meg hogyan".
     - Current: `Tudja meg hogyan`
     - Source: `Learn How`
     - Suggest: `Tudja meg, hogyan`
-    - Hungarian orthography requires a comma before the conjunction "hogyan" introducing the clause.
+    - Hungarian orthography requires a comma before the clause-introducing "hogyan".
+- `Settings.SendUsage.Link` — `hu/firefox-ios.xliff` — Final period of "Learn More." is missing, inconsistent with Settings.Studies.Toggle.Link which keeps it.
+    - Current: `További tudnivalók`
+    - Source: `Learn More.`
+    - Suggest: `További tudnivalók.`
+    - Source is "Learn More." with a period; the parallel string Settings.Studies.Toggle.Link translates it as "További tudnivalók."
 
 ---
 

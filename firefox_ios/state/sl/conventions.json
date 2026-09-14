@@ -1,8 +1,8 @@
 {
  "_meta": {
   "locale": "sl",
-  "prose_chunks": 1917,
-  "strings": 1917
+  "prose_chunks": 1919,
+  "strings": 1919
  },
  "apostrophe": {
   "straight": 0,
@@ -34,7 +34,7 @@
   "straight-double": 13
  },
  "register": {
-  "formal": 65,
+  "formal": 64,
   "informal": 2
  }
 }

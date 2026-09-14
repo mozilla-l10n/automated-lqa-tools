@@ -1,5 +1,53 @@
 [
  {
+  "category": "E",
+  "check": "llm",
+  "current": "New Private Tab",
+  "dismissed_because": "",
+  "fid": "59b10ed00f76",
+  "file": "Shared/Supporting Files/en-US.lproj/MainMenu.strings",
+  "first_seen": "2026-09-14",
+  "impact": 4,
+  "last_seen": "2026-09-14",
+  "locale": "en-CA",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The en-US accessibility label is \"New private tab\" (sentence case); en-CA has no capitalization rule requiring title case, and sibling accessibility labels in this file (e.g. \"Find in page\", \"Switch to desktop site\") keep sentence case.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "110ec2fd",
+  "string_id": "MainMenu.TabsSection.AccessibilityLabels.NewPrivateTab.v132",
+  "suggest": "New private tab",
+  "summary": "Capitalization changed from source sentence case to title case in an accessibility label.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "E",
+  "check": "llm",
+  "current": "New Tab",
+  "dismissed_because": "",
+  "fid": "a6fbf1a14dd8",
+  "file": "Shared/Supporting Files/en-US.lproj/MainMenu.strings",
+  "first_seen": "2026-09-14",
+  "impact": 4,
+  "last_seen": "2026-09-14",
+  "locale": "en-CA",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The en-US accessibility label is \"New tab\" (sentence case); other accessibility labels in this file retain sentence case, so this is an inconsistent, unneeded change.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "8de96fe3",
+  "string_id": "MainMenu.TabsSection.AccessibilityLabels.NewTab.v132",
+  "suggest": "New tab",
+  "summary": "Capitalization changed from source sentence case to title case in an accessibility label.",
+  "suppressed_by": ""
+ },
+ {
   "category": "B",
   "check": "llm",
   "current": "Authenticate using your device passcode to access passwords.",
