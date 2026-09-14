@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-10 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6bf5ed95c626` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6bf5ed95c626` |
-| **Previous run** | 2026-09-07 @ `b172b90d4eeb` |
+| **Generated** | 2026-09-14 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
+| **Previous run** | 2026-09-10 @ `6bf5ed95c626` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 22 of 2,746 |
+| **Strings reviewed this run** | 4 of 2,746 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `recent_tabs_show_all_content_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — Typo: "Öösszes" instead of "Összes".
+    - Current: `Öösszes legutóbbi lap megjelenítése gomb`
+    - Suggest: `Összes legutóbbi lap megjelenítése gomb`
+    - Misspelling of "Összes" with a doubled initial vowel.
 
 ---
 
@@ -44,11 +47,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 43 |
+| Files | 44 |
 | Strings | 2,746 |
-| Missing strings | 3 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,16 +66,7 @@ _Nothing retired._
 
 ### Completeness
 
-**3 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — 2
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 1
-
-**Files absent from the locale:**
-
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -92,14 +86,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (149)
+## 3. Open findings (148)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 77 |
-| 3 | Degraded language (grammar, spelling, terminology) | 65 |
+| 3 | Degraded language (grammar, spelling, terminology) | 64 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
 ### A. Functional, markup, variables & plurals
@@ -587,11 +581,6 @@ _Nothing in this category._
     - Source: `View tabs with your fingerprint, PIN, or face unlock. Turning this on also prevents screen capture and sharing.`
     - Suggest: `Lapok megtekintése az ujjlenyomatával`
     - The source says "View tabs with your fingerprint"; "íz" is a misspelling of the definite article "az".
-- `recent_tabs_show_all_content_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — Typo: "Öösszes" instead of "Összes".
-    - Current: `Öösszes legutóbbi lap megjelenítése gomb`
-    - Source: `Show all recent tabs button`
-    - Suggest: `Összes legutóbbi lap megjelenítése gomb`
-    - Misspelling of "Összes" with a doubled initial vowel.
 - `search_engine_suggestions_title` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — "%s keresés" is ungrammatical for "Search %s" where %s is the engine name.
     - Current: `%s keresés`
     - Source: `Search %s`

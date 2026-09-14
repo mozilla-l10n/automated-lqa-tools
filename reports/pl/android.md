@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-10 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6bf5ed95c626` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6bf5ed95c626` |
-| **Previous run** | 2026-09-07 @ `b172b90d4eeb` |
+| **Generated** | 2026-09-14 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
+| **Previous run** | 2026-09-10 @ `6bf5ed95c626` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,746 |
+| **Strings reviewed this run** | 0 of 2,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,746 |
-| Missing strings | 3 |
+| Strings | 2,742 |
+| Missing strings | 4 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
@@ -63,9 +63,9 @@ _Nothing retired._
 
 ### Completeness
 
-**3 strings** are not translated yet, concentrated in:
+**4 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — 2
+- `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — 3
 - `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 1
 
 **Files absent from the locale:**
@@ -83,7 +83,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | quotes | `polish-double` 84 | **polish-double** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 2, `en` 3 | _mixed_ |
-| nbsp | `total` 654, `before-punctuation` 14 | **total** |
+| nbsp | `total` 652, `before-punctuation` 14 | **total** |
 | register | `informal` 9 | **informal** |
 
 ---

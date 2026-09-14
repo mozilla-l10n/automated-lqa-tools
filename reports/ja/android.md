@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-10 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6bf5ed95c626` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6bf5ed95c626` |
-| **Previous run** | 2026-09-07 @ `b172b90d4eeb` |
+| **Generated** | 2026-09-14 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
+| **Previous run** | 2026-09-10 @ `6bf5ed95c626` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,746 |
+| **Strings reviewed this run** | 4 of 2,746 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for ja: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `preferences_downloads_no_folder_picker_available` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — The message says the folder cannot be opened/selected instead of stating that the folder picker cannot be opened on this device.
+    - Current: `この端末ではフォルダーを開いて選択できません。`
+    - Source: `Unable to open the folder picker on this device.`
+    - Suggest: `この端末ではフォルダー選択画面を開けません。`
+    - Source: "Unable to open the folder picker on this device." — the developer comment says no app is available to show a folder picker; the translation instead asserts the user cannot open and select a folder.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +48,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 43 |
+| Files | 44 |
 | Strings | 2,746 |
-| Missing strings | 3 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,16 +67,7 @@ _Nothing retired._
 
 ### Completeness
 
-**3 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — 2
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 1
-
-**Files absent from the locale:**
-
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -82,7 +77,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 10, `corner` 2 | **curly-double** |
 | ellipsis | `char` 11, `ascii` 10 | _mixed_ |
-| fullwidth | `punctuation` 719 | **punctuation** |
+| fullwidth | `punctuation` 720 | **punctuation** |
 
 ---
 
@@ -92,13 +87,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (147)
+## 3. Open findings (148)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 115 |
+| 2 | Wrong content (says something other than the English) | 116 |
 | 3 | Degraded language (grammar, spelling, terminology) | 25 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
@@ -411,7 +406,7 @@ _Nothing reported._
     - Source: `%1$s tabs closed: %2$d`
     - Suggest: `%1$s: %2$d 個のタブを閉じました`
     - %1$s is the app name used as a notification title prefix; "%1$s のタブ" wrongly reads as "tabs belonging to <app>" being closed, whereas the source states the app closed N tabs.
-- _…and 58 more; see `state/` for the full list._
+- _…and 59 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

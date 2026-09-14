@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-10 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6bf5ed95c626` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6bf5ed95c626` |
-| **Previous run** | 2026-09-07 @ `b172b90d4eeb` |
+| **Generated** | 2026-09-14 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
+| **Previous run** | 2026-09-10 @ `6bf5ed95c626` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,746 |
+| **Strings reviewed this run** | 4 of 2,746 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,20 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (3)
 
-_Nothing retired._
+- `customize_toggle_jump_back_in` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — "Jump back in" is rendered as "Volver a esta pestaña" ("Return to this tab"), which names a specific tab rather than the home-screen section title.
+    - Current: `Volver a esta pestaña`
+    - Suggest: `Retomar donde lo dejaste`
+    - The source is a section header on the customize home screen listing recent tabs; "esta pestaña" refers to a single, non-existent tab and changes the meaning.
+- `recent_tabs_header` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — Header text mistranslated as referring to a specific tab.
+    - Current: `Volver a esta pestaña`
+    - Suggest: `Retomar donde lo dejaste`
+    - "Jump back in" is a generic home-screen section header, not a reference to "this tab".
+- `recent_tabs_show_all_content_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — Content description misparses the source: it says "show the button of all recent tabs" instead of naming the button.
+    - Current: `Mostrar el botón de todas las pestañas recientes`
+    - Suggest: `Botón de mostrar todas las pestañas recientes`
+    - Source "Show all recent tabs button" names the control (a button that shows all recent tabs); the translation turns "button" into the object being shown.
 
 ---
 
@@ -44,11 +55,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 43 |
+| Files | 44 |
 | Strings | 2,746 |
-| Missing strings | 3 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,16 +74,7 @@ _Nothing retired._
 
 ### Completeness
 
-**3 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — 2
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 1
-
-**Files absent from the locale:**
-
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -94,13 +96,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (123)
+## 3. Open findings (120)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 55 |
+| 2 | Wrong content (says something other than the English) | 52 |
 | 3 | Degraded language (grammar, spelling, terminology) | 61 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
@@ -190,11 +192,6 @@ _Nothing in this category._
     - Source: `Navigate back`
     - Suggest: `Volver atrás`
     - The developer comment specifies the top bar back button of the credit card feature; referring to a "page" misdescribes the control for screen reader users.
-- `customize_toggle_jump_back_in` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — "Jump back in" is rendered as "Volver a esta pestaña" ("Return to this tab"), which names a specific tab rather than the home-screen section title.
-    - Current: `Volver a esta pestaña`
-    - Source: `Jump back in`
-    - Suggest: `Retomar donde lo dejaste`
-    - The source is a section header on the customize home screen listing recent tabs; "esta pestaña" refers to a single, non-existent tab and changes the meaning.
 - `debug_drawer_addresses_debug_locales_header` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — "Debug locales to enable" is translated as "Lista de idiomas para activar", losing "debug" and rendering "locales" as "idiomas" (languages).
     - Current: `Lista de idiomas para activar`
     - Source: `Debug locales to enable`
@@ -350,16 +347,6 @@ _Nothing in this category._
     - Source: `Share link nearby`
     - Suggest: `Compartir enlace con dispositivos cercanos`
     - In the source "nearby" modifies the sharing action (share with people/devices nearby), not the link; the Spanish makes "cercano" an adjective of "enlace".
-- `recent_tabs_header` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — Header text mistranslated as referring to a specific tab.
-    - Current: `Volver a esta pestaña`
-    - Source: `Jump back in`
-    - Suggest: `Retomar donde lo dejaste`
-    - "Jump back in" is a generic home-screen section header, not a reference to "this tab".
-- `recent_tabs_show_all_content_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — Content description misparses the source: it says "show the button of all recent tabs" instead of naming the button.
-    - Current: `Mostrar el botón de todas las pestañas recientes`
-    - Source: `Show all recent tabs button`
-    - Suggest: `Botón de mostrar todas las pestañas recientes`
-    - Source "Show all recent tabs button" names the control (a button that shows all recent tabs); the translation turns "button" into the object being shown.
 - `settings_search_title` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — "Search settings" (verb + object) is translated as "Ajustes de búsqueda" (search settings as a noun phrase), reversing the meaning.
     - Current: `Ajustes de búsqueda`
     - Source: `Search settings`

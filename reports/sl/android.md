@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-10 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6bf5ed95c626` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6bf5ed95c626` |
-| **Previous run** | 2026-09-07 @ `b172b90d4eeb` |
+| **Generated** | 2026-09-14 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
+| **Previous run** | 2026-09-10 @ `6bf5ed95c626` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 2,738 |
+| **Strings reviewed this run** | 3 of 2,737 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,13 +22,9 @@ Also for sl: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `sync_send_tab_error_auth_remove_account` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Remove account" is rendered as "Delete account", which implies destroying the Firefox account rather than disconnecting it from the device.
-    - Current: `Izbriši račun`
-    - Source: `Remove account`
-    - Suggest: `Odstrani račun`
-    - The developer comment says the button removes the currently connected account (disconnects it), not deletes it. "Izbriši" means delete.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -48,11 +44,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 43 |
-| Strings | 2,738 |
-| Missing strings | 11 |
+| Files | 44 |
+| Strings | 2,737 |
+| Missing strings | 9 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -67,16 +63,11 @@ _Nothing retired._
 
 ### Completeness
 
-**11 strings** are not translated yet, concentrated in:
+**9 strings** are not translated yet, concentrated in:
 
 - `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-sl/strings.xml` — 5
-- `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — 4
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 1
+- `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — 3
 - `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-sl/strings.xml` — 1
-
-**Files absent from the locale:**
-
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

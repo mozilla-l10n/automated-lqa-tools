@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-10 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6bf5ed95c626` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6bf5ed95c626` |
-| **Previous run** | 2026-09-07 @ `b172b90d4eeb` |
+| **Generated** | 2026-09-14 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
+| **Previous run** | 2026-09-10 @ `6bf5ed95c626` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 3 of 2,741 |
+| **Strings reviewed this run** | 2 of 2,738 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,13 @@ Also for id: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `ip_protection_promo_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "by hiding your location" rendered as a relative clause modifying "protection", changing the sentence structure/meaning.
+    - Current: `perlindungan tambahan yang menyembunyikan lokasi Anda`
+    - Source: `Browse with extra protection by hiding your location, even on public Wi-Fi. %s`
+    - Suggest: `perlindungan tambahan dengan menyembunyikan lokasi Anda`
+    - The source says browsing gains extra protection by hiding your location; the target says the protection itself hides your location.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -34,9 +38,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `recent_tabs_show_all_content_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — The content description misplaces the noun, saying "Show the button of all recent tabs" instead of "Show all recent tabs button".
+    - Current: `Tampilkan tombol semua tab terbaru`
+    - Suggest: `Tombol tampilkan semua tab terbaru`
+    - Source is a label for a button that shows all recent tabs; the Indonesian parses as 'show the all-recent-tabs button', changing which element is the button and what action it does.
 
 ---
 
@@ -45,7 +52,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,741 |
+| Strings | 2,738 |
 | Missing strings | 8 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -87,14 +94,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (163)
+## 3. Open findings (161)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 91 |
-| 3 | Degraded language (grammar, spelling, terminology) | 68 |
+| 2 | Wrong content (says something other than the English) | 90 |
+| 3 | Degraded language (grammar, spelling, terminology) | 67 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
@@ -333,11 +340,6 @@ _Nothing in this category._
     - Source: `Get Mozilla VPN`
     - Suggest: `Dapatkan Mozilla VPN`
     - "Mozilla VPN" is a product/brand name and must stay as-is; the adjacent headline string correctly uses "Mozilla VPN".
-- `ip_protection_promo_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "by hiding your location" rendered as a relative clause modifying "protection", changing the sentence structure/meaning.
-    - Current: `perlindungan tambahan yang menyembunyikan lokasi Anda`
-    - Source: `Browse with extra protection by hiding your location, even on public Wi-Fi. %s`
-    - Suggest: `perlindungan tambahan dengan menyembunyikan lokasi Anda`
-    - The source says browsing gains extra protection by hiding your location; the target says the protection itself hides your location.
 - `locale_search_hint` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Search language" (verb + object, a search field hint) rendered as the noun phrase "search language".
     - Current: `Bahasa pencarian`
     - Source: `Search language`
@@ -403,7 +405,12 @@ _Nothing in this category._
     - Source: `Speedy, safe, and won’t sell you out. Browsing just got better.`
     - Suggest: `tidak akan mengkhianati Anda`
     - "Sell you out" means betray/give away your data, not literally selling the user; the literal rendering conveys a different meaning.
-- _…and 36 more; see `state/` for the full list._
+- `open_all_warning_confirm` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — Confirm button label translated as a noun phrase "open tabs" instead of the imperative action "Open tabs".
+    - Current: `Tab terbuka`
+    - Source: `Open tabs`
+    - Suggest: `Buka tab`
+    - The developer comment says this is the dialog button for confirming opening all tabs; "Tab terbuka" means "opened tabs" (a state), not the action command.
+- _…and 34 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -769,8 +776,9 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (3)
+### Fixed to date (4)
 
+- `ip_protection_promo_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — fixed 2026-09-14
 - `create_tab_group_name_label` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — fixed 2026-09-07
 - `tab_tray_close_tabs_banner_positive_button_text` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — fixed 2026-09-07
 - `preferences_delete_browsing_data_cookies_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — fixed 2026-08-24
