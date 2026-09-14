@@ -1,11 +1,11 @@
 {
  "_meta": {
   "locale": "hi-IN",
-  "prose_chunks": 2669,
-  "strings": 2669
+  "prose_chunks": 2665,
+  "strings": 2665
  },
  "apostrophe": {
-  "straight": 4,
+  "straight": 6,
   "typographic": 1
  },
  "dash": {
@@ -30,7 +30,7 @@
   "total": 0
  },
  "quotes": {
-  "curly-double": 11,
-  "straight-double": 2
+  "curly-double": 12,
+  "straight-double": 1
  }
 }

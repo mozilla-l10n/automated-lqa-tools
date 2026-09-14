@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-10 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6bf5ed95c626` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6bf5ed95c626` |
-| **Previous run** | 2026-09-07 @ `b172b90d4eeb` |
+| **Generated** | 2026-09-14 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
+| **Previous run** | 2026-09-10 @ `6bf5ed95c626` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 3 of 2,749 |
+| **Strings reviewed this run** | 6 of 2,746 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `recent_tabs_show_all_content_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Content description mistranslated: "Show all recent tabs button" became "Display the recent tabs button".
+    - Current: `Afficher le bouton des onglets récents`
+    - Suggest: `Bouton « Afficher tous les onglets récents »`
+    - The source describes a button whose function is to show all recent tabs; the French says to display the recent tabs button, reversing the roles of the verb and the noun "button".
 
 ---
 
@@ -45,7 +48,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,749 |
+| Strings | 2,746 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -72,11 +75,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 23 | **guillemet** |
-| apostrophe | `typographic` 687 | **typographic** |
+| apostrophe | `typographic` 688 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 2 | **em** |
 | nbsp | `total` 199, `before-punctuation` 137, `space-before-punctuation` 64 | _mixed_ |
-| register | `formal` 438 | **formal** |
+| register | `formal` 436 | **formal** |
 
 ---
 
@@ -86,13 +89,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (78)
+## 3. Open findings (77)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 56 |
+| 2 | Wrong content (says something other than the English) | 55 |
 | 3 | Degraded language (grammar, spelling, terminology) | 18 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
@@ -307,11 +310,6 @@ _Nothing in this category._
     - Source: `Share how you discovered Firefox and that you use it with Mozilla’s marketing technology partners.`
     - Suggest: `Partagez avec les partenaires en technologies marketing de Mozilla la façon dont vous avez découvert Firefox et le fait que vous l’utilisez.`
     - The source means sharing, with Mozilla's marketing technology partners, how the user discovered Firefox and that they use it. The French reads as "Tell the story of your discovery... and explain that you use it with Mozilla's marketing partners", which changes the meaning (suggesting the user uses Firefox together with the partners) and loses the sharing/opt-in sense described in the developer co…
-- `recent_tabs_show_all_content_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Content description mistranslated: "Show all recent tabs button" became "Display the recent tabs button".
-    - Current: `Afficher le bouton des onglets récents`
-    - Source: `Show all recent tabs button`
-    - Suggest: `Bouton « Afficher tous les onglets récents »`
-    - The source describes a button whose function is to show all recent tabs; the French says to display the recent tabs button, reversing the roles of the verb and the noun "button".
 - `search_engine_suggestions_title` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Search %s" is an action (search using engine %s) but was rendered as the noun "Recherche".
     - Current: `Recherche %s`
     - Source: `Search %s`

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-10 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6bf5ed95c626` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6bf5ed95c626` |
-| **Previous run** | 2026-09-07 @ `b172b90d4eeb` |
+| **Generated** | 2026-09-14 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
+| **Previous run** | 2026-09-10 @ `6bf5ed95c626` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,691 |
+| **Strings reviewed this run** | 0 of 2,687 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,20 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (3)
 
-_Nothing retired._
+- `customize_toggle_jump_back_in` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "hacía" is misspelled; should be the preposition "hacia" (and the phrase is redundant).
+    - Current: `Regresar hacía atrás`
+    - Suggest: `Retomar donde te quedaste`
+    - "hacía" (verb hacer, imperfect) is a spelling error for the preposition "hacia"; the source "Jump back in" means resuming a recent tab, not moving backwards.
+- `recent_tabs_header` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "hacía" is misspelled; it should be the preposition "hacia" (and the phrase is redundant).
+    - Current: `Regresar hacía atrás`
+    - Suggest: `Volver atrás`
+    - "hacía" is the verb form of "hacer"; the intended word is the preposition "hacia" (no accent). "Jump back in" means returning to a recent tab.
+- `recent_tabs_show_all_content_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — Content description mistranslated: "Show all recent tabs button" rendered as "Show the button of all recent tabs".
+    - Current: `Mostrar el botón de todas las pestañas recientes`
+    - Suggest: `Botón Mostrar todas las pestañas recientes`
+    - The source names a button whose action is "show all recent tabs"; the Spanish makes "mostrar" the action applied to the button, reversing the structure and meaning.
 
 ---
 
@@ -45,8 +56,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,691 |
-| Missing strings | 58 |
+| Strings | 2,687 |
+| Missing strings | 59 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
@@ -63,9 +74,9 @@ _Nothing retired._
 
 ### Completeness
 
-**58 strings** are not translated yet, concentrated in:
+**59 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — 47
+- `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — 48
 - `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-es-rMX/strings.xml` — 6
 - `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-es-rMX/strings.xml` — 4
 - `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 1
@@ -96,14 +107,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (155)
+## 3. Open findings (152)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 83 |
-| 3 | Degraded language (grammar, spelling, terminology) | 63 |
+| 2 | Wrong content (says something other than the English) | 82 |
+| 3 | Degraded language (grammar, spelling, terminology) | 61 |
 | 4 | Cosmetic (typography, spacing) | 9 |
 
 ### A. Functional, markup, variables & plurals
@@ -412,7 +423,7 @@ _Nothing in this category._
     - Source: `Normal browsing default search engine`
     - Suggest: `Buscador predeterminado para la navegación estándar`
     - The source says "default search engine"; "principal" means primary/main, not default, and the rest of the tree uses "predeterminado" for "default".
-- _…and 26 more; see `state/` for the full list._
+- _…and 25 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -476,11 +487,6 @@ _Nothing in this category._
     - Source: `OK`
     - Suggest: `Aceptar`
     - The source is the standard "OK" button; Spanish convention uses "Aceptar" or at minimum "OK" fully capitalized, not "Ok".
-- `customize_toggle_jump_back_in` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "hacía" is misspelled; should be the preposition "hacia" (and the phrase is redundant).
-    - Current: `Regresar hacía atrás`
-    - Source: `Jump back in`
-    - Suggest: `Retomar donde te quedaste`
-    - "hacía" (verb hacer, imperfect) is a spelling error for the preposition "hacia"; the source "Jump back in" means resuming a recent tab, not moving backwards.
 - `download_content_type_filter_video` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "Vídeos" uses the peninsular spelling; es-MX uses "Videos".
     - Current: `Vídeos`
     - Source: `Videos`
@@ -546,11 +552,6 @@ _Nothing in this category._
     - Source: `We’ve updated our %1$s to reflect the latest features in Firefox. %2$s`
     - Suggest: `Hemos actualizado nuestra %1$s`
     - %1$s is replaced by the link text "Política de privacidad" (feminine singular), so "nuestros" produces an ungrammatical phrase.
-- `recent_tabs_header` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "hacía" is misspelled; it should be the preposition "hacia" (and the phrase is redundant).
-    - Current: `Regresar hacía atrás`
-    - Source: `Jump back in`
-    - Suggest: `Volver atrás`
-    - "hacía" is the verb form of "hacer"; the intended word is the preposition "hacia" (no accent). "Jump back in" means returning to a recent tab.
 - `setup_checklist_subtitle_5_steps_fourth_step` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — Word-order error: "Estás a 1 solo un paso de la meta" contains a duplicated/misplaced quantifier.
     - Current: `Estás a 1 solo un paso de la meta.`
     - Source: `Almost there! You’re just 1 step away from the finish line.`

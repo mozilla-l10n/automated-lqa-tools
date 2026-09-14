@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-10 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6bf5ed95c626` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6bf5ed95c626` |
-| **Previous run** | 2026-09-07 @ `b172b90d4eeb` |
+| **Generated** | 2026-09-14 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
+| **Previous run** | 2026-09-10 @ `6bf5ed95c626` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 4 of 2,749 |
+| **Strings reviewed this run** | 2 of 2,746 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,13 +22,9 @@ Also for de: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `sync_send_tab_error_auth_remove_account` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Remove account" is rendered as "Konto löschen" (delete account), which suggests deleting the account rather than disconnecting it.
-    - Current: `Konto löschen`
-    - Source: `Remove account`
-    - Suggest: `Konto entfernen`
-    - The developer comment says the button removes the currently connected account from the device; "löschen" means deleting the account itself, a different and more destructive action.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -38,9 +34,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `recent_tabs_show_all_content_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Content description misplaces the quotation so it names a button labelled "Alle zuletzt geöffneten Tabs" instead of describing the "Show all recent tabs" button.
+    - Current: `Schaltfläche „Alle zuletzt geöffneten Tabs“ anzeigen`
+    - Suggest: `Schaltfläche „Alle zuletzt geöffneten Tabs anzeigen“`
+    - The source is "Show all recent tabs button", i.e. the button whose action is showing all recent tabs; the German quotes only part of the label and leaves "anzeigen" outside, changing the meaning to "show the button".
 
 ---
 
@@ -49,7 +48,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,749 |
+| Strings | 2,746 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -75,7 +74,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `german-double` 24, `curly-double` 1, `straight-double` 1 | **german-double** |
+| quotes | `german-double` 23, `curly-double` 1, `straight-double` 1 | **german-double** |
 | ellipsis | `char` 22 | **char** |
 | dash | `en` 6 | **en** |
 | register | `formal` 649 | **formal** |
@@ -88,13 +87,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (106)
+## 3. Open findings (105)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 61 |
+| 2 | Wrong content (says something other than the English) | 60 |
 | 3 | Degraded language (grammar, spelling, terminology) | 34 |
 | 4 | Cosmetic (typography, spacing) | 11 |
 
@@ -339,11 +338,6 @@ _Nothing in this category._
     - Source: `If something looks broken on this site, try turning it off.`
     - Suggest: `Wenn etwas auf dieser Website nicht richtig funktioniert, versuchen Sie, ihn zu deaktivieren.`
     - The source says the site may appear broken (not working correctly) and suggests trying to turn protection off; "beschädigt aussieht" means physically damaged and the German loses "try".
-- `recent_tabs_show_all_content_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Content description misplaces the quotation so it names a button labelled "Alle zuletzt geöffneten Tabs" instead of describing the "Show all recent tabs" button.
-    - Current: `Schaltfläche „Alle zuletzt geöffneten Tabs“ anzeigen`
-    - Source: `Show all recent tabs button`
-    - Suggest: `Schaltfläche „Alle zuletzt geöffneten Tabs anzeigen“`
-    - The source is "Show all recent tabs button", i.e. the button whose action is showing all recent tabs; the German quotes only part of the label and leaves "anzeigen" outside, changing the meaning to "show the button".
 - `saved_logins_clear_password` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Clear password" (clear the input field) is translated as "Passwort löschen", which is identical to deleting the password.
     - Current: `Passwort löschen`
     - Source: `Clear password`
@@ -404,7 +398,12 @@ _Nothing in this category._
     - Source: `Start your private browsing session, and we’ll block trackers and other bad stuff as you go.`
     - Suggest: `und wir blockieren dabei Tracker und andere schädliche Elemente`
     - The source says trackers and other bad stuff are blocked as you browse; the German implies blocking other bad stuff is a casual side effect ("bei der Gelegenheit auch noch"), which is not the source meaning.
-- _…and 3 more; see `state/` for the full list._
+- `preference_performance_block_javascript_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — The modal "may" of "Pages may load faster" is dropped, turning a possibility into a statement of fact.
+    - Current: `Seiten laden schneller, verhalten sich aber möglicherweise unerwartet`
+    - Source: `Pages may load faster, but may also behave unexpectedly`
+    - Suggest: `Seiten laden möglicherweise schneller, verhalten sich aber eventuell unerwartet`
+    - Source says "Pages may load faster"; the German asserts they do load faster.
+- _…and 2 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -593,7 +592,7 @@ _Nothing in this category._
     - Current: `"Seite durchsuchen" deaktivieren`
     - Source: `Dismiss find in page`
     - Suggest: `„Seite durchsuchen“ schließen`
-    - The locale's quote convention is `german-double` (24 occurrences).
+    - The locale's quote convention is `german-double` (23 occurrences).
 - `mozac_feature_prompt_folder_upload_confirm_message` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-de/strings.xml` — Stray straight double quote before the German opening quotation mark.
     - Current: `von "„%1$s“ hochladen`
     - Source: `Make sure you trust this site before you upload from “%1$s”.`

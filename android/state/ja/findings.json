@@ -1664,7 +1664,7 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-09-10",
+  "last_seen": "2026-09-14",
   "locale": "ja",
   "origin": {},
   "rationale": "ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
@@ -2539,6 +2539,30 @@
   "string_id": "preferences_downloads_ask_when_to_delete_files",
   "suggest": "ファイルを削除するときに確認する",
   "summary": "\"Ask when I delete files\" is translated as \"confirm before deleting files\", adding \"before\" not in the source.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "この端末ではフォルダーを開いて選択できません。",
+  "dismissed_because": "",
+  "fid": "10b7fcb33592",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-09-14",
+  "impact": 2,
+  "last_seen": "2026-09-14",
+  "locale": "ja",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "Source: \"Unable to open the folder picker on this device.\" — the developer comment says no app is available to show a folder picker; the translation instead asserts the user cannot open and select a folder.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "c9c686ca",
+  "string_id": "preferences_downloads_no_folder_picker_available",
+  "suggest": "この端末ではフォルダー選択画面を開けません。",
+  "summary": "The message says the folder cannot be opened/selected instead of stating that the folder picker cannot be opened on this device.",
   "suppressed_by": ""
  },
  {

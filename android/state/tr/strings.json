@@ -142,6 +142,9 @@
  "mozilla-mobile/android-components/components/compose/cfr/src/main/res/values/strings.xml": {
   "mozac_cfr_dismiss_button_content_description": "cc1a4a29 b21634a9"
  },
+ "mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml": {
+  "mozac_menu_item_new_indicator_label": "b9fab7b4 2270dfc6 12033a76"
+ },
  "mozilla-mobile/android-components/components/compose/tabstray/src/main/res/values/strings.xml": {
   "mozac_tab_counter_open_tab_tray_plural": "91d912ea 40912d29",
   "mozac_tab_counter_open_tab_tray_single": "f929d194 b0f55722"
@@ -1175,7 +1178,6 @@
   "customize_toggle_bookmarks": "3027c647 11ce5543",
   "customize_toggle_contile": "3d776918 be9bdf0a",
   "customize_toggle_continue": "9204ef52 5009bc49 4e5e9fa8",
-  "customize_toggle_jump_back_in": "b1b4d165 45aa4657",
   "customize_toggle_pocket_3": "2e695f0d 20f1be6a",
   "customize_toggle_pocket_sponsored": "70a52f9a a60acc41",
   "customize_toggle_privacy_report": "93e1a053 ba02fc9d",
@@ -1484,7 +1486,6 @@
   "ip_protection_locations_title": "28884579 9731c59c",
   "ip_protection_locations_unavailable_description": "b0194ecd d1b2952f",
   "ip_protection_locations_unavailable_title": "465aec95 5cbf7302",
-  "ip_protection_menu_auth_required": "c9c5733c 6f9719f4",
   "ip_protection_menu_connecting": "77759335 49447206",
   "ip_protection_menu_error": "568b9b10 4deec2e9",
   "ip_protection_menu_limit_reached": "3492a9b9 1283d870",
@@ -1501,10 +1502,12 @@
   "ip_protection_onboarding_body_promo": "e548dad8 64472127",
   "ip_protection_onboarding_card_headline": "009e1c6a 716b0ab3",
   "ip_protection_onboarding_not_now_button": "8e4cc518 73101efc",
+  "ip_protection_open_settings_snackbar_action": "6cd9cff3 58def853 dcb0978a",
   "ip_protection_promo_body_2": "0ad096dd 59833467",
   "ip_protection_promo_headline": "46b3fa66 7dfaeea0 98a142c3",
   "ip_protection_recommended_location": "dcd07f30 40b5cb8f",
   "ip_protection_settings_description": "a7505f3c bb525d02",
+  "ip_protection_settings_title": "282eb30b 3e13eb6d 163a9287",
   "ip_protection_title": "ba165965 ba165965",
   "ip_protection_toggle_label": "ba165965 ba165965",
   "ip_protection_toolbar_pill_description": "ba43b6ef f820ac63",
@@ -1945,6 +1948,7 @@
   "preferences_downloads_default_location_title": "9e857342 fdb596ac",
   "preferences_downloads_delete_from_device": "8aec1e9b 8e27d4b3",
   "preferences_downloads_delete_from_device_description": "c3dfc5e0 c382c1ec",
+  "preferences_downloads_no_folder_picker_available": "7670c15c 0962da1d 01e3ca9e",
   "preferences_downloads_remove_from_download_history": "c31d91bc 43af46fa",
   "preferences_downloads_remove_from_download_history_description": "fae9a37d f184b0a4",
   "preferences_email_masks": "76715c5a f2046817",
@@ -2118,11 +2122,9 @@
   "recent_searches_header": "b846fb1c 5665291f",
   "recent_synced_tab_menu_item_remove": "02dd89c5 31282eee",
   "recent_tab_menu_item_remove": "02dd89c5 31282eee",
-  "recent_tabs_header": "b1b4d165 45aa4657",
   "recent_tabs_header_2": "9204ef52 5009bc49 cca6616f",
   "recent_tabs_see_all_synced_tabs_button_text": "064fa5cf 30320cf9",
   "recent_tabs_show_all": "046395ad 3bdb38ed",
-  "recent_tabs_show_all_content_description_2": "87650cca 20c60ea2",
   "recent_tabs_synced_device_icon_content_description": "4f8079c5 f6310d18",
   "recently_closed_empty_message": "1c2f9e85 58125621",
   "recently_closed_show_full_history": "50cdeb85 aad256f3",

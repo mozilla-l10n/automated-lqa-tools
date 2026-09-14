@@ -141,6 +141,9 @@
  "mozilla-mobile/android-components/components/compose/cfr/src/main/res/values/strings.xml": {
   "mozac_cfr_dismiss_button_content_description": "f8fcf016 b21634a9"
  },
+ "mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml": {
+  "mozac_menu_item_new_indicator_label": "11354600 2270dfc6 12033a76"
+ },
  "mozilla-mobile/android-components/components/compose/tabstray/src/main/res/values/strings.xml": {
   "mozac_tab_counter_open_tab_tray_plural": "fabc0681 40912d29",
   "mozac_tab_counter_open_tab_tray_single": "d650a710 b0f55722"
@@ -1169,7 +1172,6 @@
   "customize_toggle_bookmarks": "0bde1a0f 11ce5543",
   "customize_toggle_contile": "e16a8c4e be9bdf0a",
   "customize_toggle_continue": "bc30780e 5009bc49 4e5e9fa8",
-  "customize_toggle_jump_back_in": "e4f69b80 45aa4657",
   "customize_toggle_pocket_3": "c4d52280 20f1be6a",
   "customize_toggle_pocket_sponsored": "f2b5d854 a60acc41",
   "customize_toggle_privacy_report": "4676563d ba02fc9d",
@@ -1478,7 +1480,6 @@
   "ip_protection_locations_title": "b761ee02 9731c59c",
   "ip_protection_locations_unavailable_description": "74900253 d1b2952f",
   "ip_protection_locations_unavailable_title": "2aecd964 5cbf7302",
-  "ip_protection_menu_auth_required": "bf45e247 6f9719f4",
   "ip_protection_menu_connecting": "c62b3378 49447206",
   "ip_protection_menu_error": "467d7a0f 4deec2e9",
   "ip_protection_menu_limit_reached": "bfe7d2a4 1283d870",
@@ -1599,6 +1600,7 @@
   "notification_marketing_channel_name": "11cfd70f 05124482",
   "notification_pbm_delete_text_2": "d4b8bccf b2258c82",
   "notification_privacy_report_body_has_trackers": "375428c4 95163e86 98c6a4b5",
+  "notification_privacy_report_channel_description": "0dd04a0f 4936a0eb 3d371a4e",
   "notification_privacy_report_channel_name": "4676563d ba02fc9d ba4a1d0a",
   "notification_privacy_report_headline_no_trackers": "9cdfa6b9 ae879076 dbd9929e",
   "notifications_allowed_summary": "fdbfe952 6649b8bb",
@@ -2111,11 +2113,9 @@
   "recent_searches_header": "31d1a5be 5665291f",
   "recent_synced_tab_menu_item_remove": "a1fc3b34 31282eee",
   "recent_tab_menu_item_remove": "a1fc3b34 31282eee",
-  "recent_tabs_header": "e4f69b80 45aa4657",
   "recent_tabs_header_2": "bc30780e 5009bc49 cca6616f",
   "recent_tabs_see_all_synced_tabs_button_text": "b1dd5f40 30320cf9",
   "recent_tabs_show_all": "e9ad9455 3bdb38ed",
-  "recent_tabs_show_all_content_description_2": "cff7ee46 20c60ea2",
   "recent_tabs_synced_device_icon_content_description": "0ce5e07d f6310d18",
   "recently_closed_empty_message": "94e38043 58125621",
   "recently_closed_show_full_history": "95832455 aad256f3",
@@ -2304,6 +2304,7 @@
   "sync_send_tab_empty_state_title": "e3628bc4 26d3b973 a67d09dc",
   "sync_send_tab_error_auth_button": "a1f59582 e485cb58 ef393b17",
   "sync_send_tab_error_auth_remove_account": "36b0d65f 69b399e5 89d363e5",
+  "sync_send_tab_error_auth_title": "62aa5000 f2d129c1 c3549ab7",
   "sync_send_tab_error_connection_text": "f7d4874b 487315a9 d39a4c96",
   "sync_send_tab_error_connection_title": "3b66c68b 5f5d0782 dccf081d",
   "sync_send_to_all": "f18631c3 883c49e3",

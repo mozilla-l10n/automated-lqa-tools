@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-10 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6bf5ed95c626` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6bf5ed95c626` |
-| **Previous run** | 2026-09-07 @ `b172b90d4eeb` |
+| **Generated** | 2026-09-14 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
+| **Previous run** | 2026-09-10 @ `6bf5ed95c626` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,746 |
+| **Strings reviewed this run** | 4 of 2,746 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,16 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (2)
 
-_Nothing retired._
+- `customize_toggle_jump_back_in` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Jump back in" is rendered as "Açık sekmeler" (Open tabs), which names a different homepage section.
+    - Current: `Açık sekmeler`
+    - Suggest: `Kaldığınız yerden devam edin`
+    - The source refers to the "Jump back in" section (recent tab), not "Open tabs"; the Turkish says something else.
+- `recent_tabs_header` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Jump back in" is rendered as "Açık sekmeler" (Open tabs), which says something different from the source.
+    - Current: `Açık sekmeler`
+    - Suggest: `Kaldığınız yerden devam edin`
+    - The source header invites the user to resume a recent tab; the target states "Open tabs", a different meaning.
 
 ---
 
@@ -44,11 +51,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 43 |
+| Files | 44 |
 | Strings | 2,746 |
-| Missing strings | 3 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,16 +70,7 @@ _Nothing retired._
 
 ### Completeness
 
-**3 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — 2
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 1
-
-**Files absent from the locale:**
-
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -93,13 +91,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (142)
+## 3. Open findings (140)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 79 |
+| 2 | Wrong content (says something other than the English) | 77 |
 | 3 | Degraded language (grammar, spelling, terminology) | 57 |
 | 4 | Cosmetic (typography, spacing) | 6 |
 
@@ -279,11 +277,6 @@ _Nothing in this category._
     - Source: `Continue`
     - Suggest: `Devam edin`
     - Per the developer comment this names the section that lets users continue where they left off; "İleri" means "forward/next" and does not convey "continue".
-- `customize_toggle_jump_back_in` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Jump back in" is rendered as "Açık sekmeler" (Open tabs), which names a different homepage section.
-    - Current: `Açık sekmeler`
-    - Source: `Jump back in`
-    - Suggest: `Kaldığınız yerden devam edin`
-    - The source refers to the "Jump back in" section (recent tab), not "Open tabs"; the Turkish says something else.
 - `customize_toggle_pocket_3` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Stories" translated as "Haberler" (News) instead of "Hikâyeler"/"Öyküler".
     - Current: `Haberler`
     - Source: `Stories`
@@ -409,7 +402,12 @@ _Nothing in this category._
     - Source: `%s is on guard`
     - Suggest: `%s nöbette`
     - Source states the app is on guard (actively protecting); "çalışıyor" only means it is running.
-- _…and 28 more; see `state/` for the full list._
+- `qr_code_display_share_nearby` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — Heading changes the perspective from "nearby" to "with people near me".
+    - Current: `Bağlantıyı yakınımdakilerle paylaş`
+    - Source: `Share link nearby`
+    - Suggest: `Bağlantıyı yakındakilerle paylaş`
+    - The source "Share link nearby" is neutral; the first-person "yakınımdakilerle" (with those near me) is inconsistent with the body text which uses "yakınınızdaki kişilerle" (formal second person).
+- _…and 26 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
