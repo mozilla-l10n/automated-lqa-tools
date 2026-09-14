@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-07 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
-| **Previous run** | 2026-09-03 @ `075eb543fd91` |
+| **Generated** | 2026-09-14 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e44f1369fb6d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8ffd279d75ec` |
+| **Previous run** | 2026-09-07 @ `3c0c507b8d42` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 155 of 15,688 |
+| **Strings reviewed this run** | 207 of 13,705 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,28 +18,58 @@ Also for id: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (10)
 
-- `action-log-checked-world-cup-live` — `browser/browser/aiWindowContent.ftl` — "Checked" is rendered as "telah dicari" (searched) instead of "telah diperiksa".
-    - Current: `Pertandingan Piala Dunia yang sedang berlangsung telah dicari`
-    - Source: `Checked live World Cup matches`
-    - Suggest: `Pertandingan Piala Dunia yang sedang berlangsung telah diperiksa`
-    - The source says "Checked live World Cup matches"; the parallel string action-log-checked-memories correctly uses "diperiksa". "dicari" means searched, matching a different action log entry.
-- `action-log-read-page` — `browser/browser/aiWindowContent.ftl` — Past-tense "Read page content" is translated as an imperative/present "Baca isi laman".
-    - Current: `Baca isi laman`
-    - Source: `Read page content`
-    - Suggest: `Isi laman telah dibaca`
-    - The developer comment states "Read is past tense, to indicate that the action has been completed"; "Baca isi laman" reads as a command to read the page, unlike the other completed-action labels which use "telah …".
-- `urlbar-result-explanation-last-visited-absolute` — `browser/browser/browser.ftl` — Passive/active mismatch: "Terakhir Anda kunjungi" is ungrammatical mixing of active and passive forms.
-    - Current: `Terakhir Anda kunjungi pada { $date }`
-    - Source: `You last visited on { $date }`
-    - Suggest: `Terakhir dikunjungi pada { $date }`
-    - en-US "You last visited on { $date }"; the other variants of the same message use "Terakhir dikunjungi" or "Anda terakhir mengunjungi". "Terakhir Anda kunjungi" is grammatically incorrect Indonesian and inconsistent with the sibling strings.
-- `taskbar-tabs-email-callout-title` — `browser/browser/featureCallout.ftl` — "Keep" rendered as "Simpan" (save/store) instead of keeping the email accessible in the taskbar.
-    - Current: `Simpan surel Anda di bilah tugas`
-    - Source: `Keep your email in your taskbar`
-    - Suggest: `Tetap buka surel Anda di bilah tugas`
-    - The source "Keep your email in your taskbar" means keeping the email app pinned/available in the taskbar, not saving/storing email there; "Simpan" suggests storing data in the taskbar.
+- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Yang Baru” but the string it names, `releaseNotes-link`, reads “Yang baru”
+    - Current: `Ganti laman "Yang Baru" yang tampil setelah pembaruan. Setel kebijakan ini menjadi kosong jika ingin menonaktifkan laman setelah pembaruan.`
+    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
+    - Suggest: `Yang baru`
+    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `smartbar-placeholder-hint-1` — `browser/browser/aiWindow.ftl` — "mention" is rendered as "menyinggung" (to allude to/offend), not the @-mention sense.
+    - Current: `Gunakan @ untuk menyinggung tab terbaru…`
+    - Source: `Use @ to mention recent tabs…`
+    - Suggest: `Gunakan @ untuk menyebut tab terbaru…`
+    - In en-US "mention recent tabs" refers to @-mentioning a tab; "menyinggung" means to allude to or to offend, which is the wrong sense.
+- `main-context-menu-open-link-new-smart-window` — `browser/browser/aiWindow.ftl` — Untranslated-brand phrase loses the word "Window"; "Open Link in New Smart Window" becomes "Open Link in New <brand>".
+    - Current: `Buka Tautan di { -smart-window-brand-name } Baru`
+    - Source: `accesskey: S label: Open Link in New { -smart-window-brand-name }`
+    - Suggest: `Buka Tautan di Jendela { -smart-window-brand-name } Baru`
+    - en-US reads "Open Link in New { -smart-window-brand-name }"; if the brand term alone is used, the word order places "Baru" after the brand token which is acceptable, but the sibling strings translate "Window" as "Jendela" — inconsistent handling.
+- `aiwindow-input-model-select-button-label-allpurpose` — `browser/browser/aiWindow.ftl` — "Flexible" is rendered "Luwes" here but "Fleksibel" in the first-run strings for the same model category.
+    - Current: `Luwes`
+    - Source: `Flexible`
+    - Suggest: `Fleksibel`
+    - aiwindow-firstrun-model-allpurpose-label and aiwindow-firstrun-model-flexible-label translate the same en-US term "Flexible" as "Fleksibel"; using "Luwes" in the model selector breaks consistency for the same model label in the same surface.
+- `fxa-signout-dialog-body-aiwindow` — `browser/browser/aiWindow.ftl` — "Classic Windows" (browser windows) rendered as "Windows Klasik" with capitalized "Windows", reading as the Microsoft Windows brand.
+    - Current: `akan beralih ke Windows Klasik`
+    - Source: `Synced data will remain in your account. Open { -smart-window-brand-name } will switch to Classic Windows.`
+    - Suggest: `akan beralih ke Jendela Klasik`
+    - en-US "Classic Windows" refers to classic browser windows; elsewhere in this file the same concept is translated "Jendela ... Klasik" (see aiwindow-firstrun-default-subtitle). Leaving "Windows" evokes the Microsoft OS brand.
+- `smartwindow-disclaimer` — `browser/browser/aiWindow.ftl` — Final period from the source sentence is missing.
+    - Current: `AI bisa membuat kesalahan`
+    - Source: `AI can make mistakes.`
+    - Suggest: `AI bisa membuat kesalahan.`
+    - en-US "AI can make mistakes." ends with a period; the translation drops the sentence-final punctuation.
+- `aiwindow-firstrun-memories-checkbox-chats` — `browser/browser/aiWindow.ftl` — Noun "Chats" translated as the verb "Mengobrol" in a checkbox label listing memory sources.
+    - Current: `Mengobrol di { -smart-window-brand-name }`
+    - Source: `Chats in { -smart-window-brand-name }`
+    - Suggest: `Obrolan di { -smart-window-brand-name }`
+    - en-US "Chats in { -smart-window-brand-name }" is a noun phrase naming a data source; elsewhere in this file "Chats" is consistently "Obrolan".
+- `aiwindow-memories-on` — `browser/browser/aiWindow.ftl` — "when helpful" mistranslated as "saat membantu" (when it is helping) instead of "bila bermanfaat".
+    - Current: `Gunakan memori dalam tanggapan saat membantu`
+    - Source: `aria-label: Memories on tooltiptext: Use memories in responses when helpful`
+    - Suggest: `Gunakan memori dalam tanggapan bila bermanfaat`
+    - en-US "when helpful" means when doing so is useful; "saat membantu" reads as "while helping", changing the meaning.
+- `aiwindow-feedback-disclaimer` — `browser/browser/aiWindow.ftl` — Double space between "Anda" and "tetap pribadi".
+    - Current: `Obrolan lain Anda  tetap pribadi.`
+    - Source: `Submitting shares your feedback and this chat to help { -brand-shorter-name } improve { -smart-window-brand-name }. Your other chats stay private. <a data-l10n-name="learn-more">Learn more</a>`
+    - Suggest: `Obrolan lain Anda tetap pribadi.`
+    - Extra space inside the user-visible sentence; en-US has single spacing.
+- `aiwindow-ai-chat-grid-grid-view` — `browser/browser/aiWindow.ftl` — "Switch mode" rendered as "Beralih mode" here but "Ganti mode" in the sibling list-view string.
+    - Current: `aria-label: Beralih mode: Tampilan Kisi`
+    - Source: `aria-label: Switch mode: Grid View tooltiptext: Grid View`
+    - Suggest: `aria-label: Ganti mode: Tampilan Kisi`
+    - Same en-US term "Switch mode:" in the paired strings aiwindow-ai-chat-grid-list-view and -grid-view is translated inconsistently on the same surface.
 
 ### ✅ Fixed since the last run (0)
 
@@ -53,9 +83,248 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (63)
 
-_Nothing retired._
+- `about-logins-login-intro-heading-logged-out2` — `browser/browser/aboutLogins.ftl` — Missing passive prefix: "yang simpan" instead of "yang tersimpan"
+    - Current: `Mencari info masuk Anda yang simpan?`
+    - Suggest: `Mencari info masuk Anda yang tersimpan?`
+    - en-US "Looking for your saved logins?" — the Indonesian is ungrammatical; the passive form "tersimpan" is required (as used in login-list-intro-title2 and elsewhere).
+- `about-logins-menu-menuitem-remove-all-logins` — `browser/browser/aboutLogins.ftl` — "Logins" rendered as "Log Masuk" while the rest of the surface uses "Info Masuk"
+    - Current: `Hapus Semua Log Masuk…`
+    - Suggest: `Hapus Semua Info Masuk…`
+    - The adjacent menu items use "Info Masuk" (Export Logins → "Ekspor Info Masuk…"); "Log Masuk" is an inconsistent rendering of the same term in the same menu (also in about-logins-confirm-remove-all-dialog-checkbox-label).
+- `action-log-checked-world-cup-live` — `browser/browser/aiWindowContent.ftl` — "Checked" is rendered as "telah dicari" (searched) instead of "telah diperiksa".
+    - Current: `Pertandingan Piala Dunia yang sedang berlangsung telah dicari`
+    - Suggest: `Pertandingan Piala Dunia yang sedang berlangsung telah diperiksa`
+    - The source says "Checked live World Cup matches"; the parallel string action-log-checked-memories correctly uses "diperiksa". "dicari" means searched, matching a different action log entry.
+- `appmenu-referrals` — `browser/browser/appmenu.ftl` — "Share Firefox" rendered as "Hide Firefox"
+    - Current: `Sembunyikan { -brand-shorter-name }`
+    - Suggest: `Bagikan { -brand-shorter-name }`
+    - en-US is "Share { -brand-shorter-name }" (dev comment: opens the referral page, "Share" means recommending the browser). "Sembunyikan" means "Hide", a completely different action; the sibling string appmenuitem-referrals correctly uses "Bagikan".
+- `browser-tab-mute` — `browser/browser/browser.ftl` — Plural variant truncated to a single letter
+    - Current: `*[other] S`
+    - Suggest: `*[other] SENYAPKAN { $count } TAB`
+    - en-US is "MUTE { $count } TABS"; the localized default variant is just "S", so the tab tooltip shows a meaningless single character for any count other than 1.
+- `browser-tab-unblock` — `browser/browser/browser.ftl` — Plural variant truncated to a single letter
+    - Current: `*[other] P`
+    - Suggest: `*[other] PUTAR { $count } TAB`
+    - en-US is "PLAY { $count } TABS"; the localized default variant is just "P".
+- `browser-tab-unmute` — `browser/browser/browser.ftl` — Plural variant truncated to a single letter
+    - Current: `*[other] U`
+    - Suggest: `*[other] SUARAKAN { $count } TAB`
+    - en-US is "UNMUTE { $count } TABS"; the localized default variant is just "U".
+- `pending-crash-reports-message` — `browser/browser/contentCrash.ftl` — "crash report" translated as "laporan kemacetan" instead of "laporan kerusakan"
+    - Current: `laporan kemacetan yang belum terkirim`
+    - Suggest: `laporan kerusakan yang belum terkirim`
+    - Every other crash-report string in the same file uses "laporan kerusakan"; "kemacetan" means congestion/jam and is wrong in this context.
+- `browser-data-passwords-checkbox` — `browser/browser/migration.ftl` — "Saved Logins and Passwords" is translated as "Login and Password History".
+    - Current: `Riwayat Info Masuk dan Sandi`
+    - Suggest: `Info Masuk dan Sandi Tersimpan`
+    - "Riwayat" means history, not saved; migrationWizard.ftl renders the same concept as "Info masuk dan sandi tersimpan".
+- `browser-data-passwords-label` — `browser/browser/migration.ftl` — "Saved Logins and Passwords" is translated as "Login and Password History".
+    - Current: `Riwayat Info Masuk dan Sandi`
+    - Suggest: `Info Masuk dan Sandi Tersimpan`
+    - Same defect as the checkbox variant; "Riwayat" (history) is not "Saved".
+- `import-safari-permissions-string` — `browser/browser/migration.ftl` — The user is told to pick the Safari "file" instead of the Safari folder.
+    - Current: `pilih berkas “Safari“ dalam dialog Finder`
+    - Suggest: `pilih folder “Safari” dalam dialog Finder`
+    - en-US says "select the “Safari“ folder"; migrationWizard.ftl correctly uses "folder Safari". Instructing users to select a file makes the step unfollowable.
+- `colorways-cfr-body` — `browser/browser/newtab/asrouter.ftl` — “shades” (colour shades) is translated as “bayangan” (shadows).
+    - Current: `bayangan eksklusif { -brand-short-name }`
+    - Suggest: `corak warna eksklusif { -brand-short-name }`
+    - The developer comment states that “shades” refers to the different colour options available in colorways, not to shadows.
+- `colorways-cfr-header-14days` — `browser/browser/newtab/asrouter.ftl` — “kedaluarsa” is misspelled; the standard form is “kedaluwarsa”.
+    - Current: `kedaluarsa dalam dua minggu`
+    - Suggest: `kedaluwarsa dalam dua minggu`
+    - KBBI spelling is “kedaluwarsa”, used correctly elsewhere in the tree.
+- `colorways-cfr-header-28days` — `browser/browser/newtab/asrouter.ftl` — “kedaluarsa” is misspelled; the standard form is “kedaluwarsa”.
+    - Current: `kedaluarsa pada 16 Januari`
+    - Suggest: `kedaluwarsa pada 16 Januari`
+    - KBBI spelling is “kedaluwarsa”, which the tree uses correctly elsewhere (newtab-report-content-outdated = “Kedaluwarsa”).
+- `colorways-cfr-header-7days` — `browser/browser/newtab/asrouter.ftl` — “kedaluarsa” is misspelled; the standard form is “kedaluwarsa”.
+    - Current: `kedaluarsa minggu ini`
+    - Suggest: `kedaluwarsa minggu ini`
+    - KBBI spelling is “kedaluwarsa”, used correctly elsewhere in the tree.
+- `colorways-cfr-header-today` — `browser/browser/newtab/asrouter.ftl` — “kedaluarsa” is misspelled; the standard form is “kedaluwarsa”.
+    - Current: `kedaluarsa hari ini`
+    - Suggest: `kedaluwarsa hari ini`
+    - KBBI spelling is “kedaluwarsa”, used correctly elsewhere in the tree.
+- `newtab-empty-section-topstories` — `browser/browser/newtab/newtab.ftl` — “You’ve caught up.” is rendered as “Maaf Anda tercegat.” (“Sorry, you were intercepted.”).
+    - Current: `Maaf Anda tercegat.`
+    - Suggest: `Anda sudah membaca semuanya.`
+    - en-US “You’ve caught up.” means there is no more new content; “tercegat” (intercepted/blocked) conveys an unrelated and confusing meaning, and the added “Maaf” has no source.
+- `newtab-pocket-cta-text` — `browser/browser/newtab/newtab.ftl` — The polite pronoun “Anda” is written in lowercase.
+    - Current: `cerita yang anda sukai`
+    - Suggest: `cerita yang Anda sukai`
+    - Indonesian orthography (and the rest of this file, including the second half of this same string) capitalises “Anda”.
+- `policy-PopupBlocking` — `browser/browser/policies/policies-descriptions.ftl` — “by default” is translated as “secara otomatis” (automatically).
+    - Current: `Izinkan situs tertentu untuk menampilkan pop-up secara otomatis.`
+    - Suggest: `Izinkan situs tertentu untuk menampilkan pop-up secara baku.`
+    - en-US: “Allow certain websites to display popups by default.” The policy sets a default permission, it does not make popups appear automatically.
+- `connection-dns-over-https-custom-label` — `browser/browser/preferences/connection.ftl` — "Custom" rendered two different ways in the same dialog
+    - Current: `Ubahsuai`
+    - Suggest: `Khusus`
+    - In the same Connection Settings dialog, connection-dns-over-https-url-custom translates "Custom" as "Khusus" (as does addEngine's "Tambahkan Mesin Khusus"); this label uses "Ubahsuai" for the very same control.
+- `containers-name-text` — `browser/browser/preferences/containers.ftl` — "Masukan" (noun: input) used where the imperative verb "Masukkan" is required
+    - Current: `Masukan nama kontainer`
+    - Suggest: `Masukkan nama kontainer`
+    - The imperative of "memasukkan" is "masukkan" with double k; "masukan" is the noun "input/feedback". Other files in this partition use the correct form (e.g. permissions-doh-entry-field "Masukkan nama domain situs web").
+- `autofill-edit-card-password-prompt` — `browser/browser/preferences/formAutofill.ftl` — macOS variant adds a period the OS also appends
+    - Current: `[macos] menampilkan informasi kartu kredit.`
+    - Suggest: `[macos] menampilkan informasi kartu kredit`
+    - The developer comment states macOS prepends "Firefox is trying to " and adds a period at the end; en-US therefore has no final period. The localized variant ends with one, producing a double period in the OS dialog.
+- `more-from-moz-mozilla-monitor-us-description` — `browser/browser/preferences/moreFromMozilla.ftl` — Description says "find out" instead of "automatically take back"
+    - Current: `Ketahui info pribadi Anda yang telah dibobol`
+    - Suggest: `Ambil kembali info pribadi Anda yang terekspos secara otomatis`
+    - en-US is "Automatically take back your exposed personal info." The Indonesian promises only discovery of breached info, dropping the removal action that is the product's selling point.
+- `permissions-autoplay-settings` — `browser/browser/preferences/preferences.ftl` — Three periods used instead of the ellipsis character
+    - Current: `Pengaturan...`
+    - Suggest: `Pengaturan…`
+    - Every other "Settings…"-type label in this file (permissions-xr-settings, permissions-speaker-settings, history-clear-on-close-settings, …) uses the ellipsis character …, matching en-US.
+- `windows-launch-on-login-profile-disabled` — `browser/browser/preferences/preferences.ftl` — Closing curly quotes typed as opening quotes
+    - Current: `“{ profile-manager-use-selected.label }“ di jendela “Pilih Profil Pengguna“`
+    - Suggest: `“{ profile-manager-use-selected.label }” di jendela “Pilih Profil Pengguna”`
+    - Same mismatched quotation marks as in startup-windows-launch-on-login-profile-disabled; the closing mark must be ”.
+- `safeb-palm-notdeceptive` — `browser/browser/safebrowsing/blockedSite.ftl` — Access key `d` of `safeb-palm-notdeceptive` is not present in its label
+    - Current: `d`
+    - The label is “Ini bukan situs tipuan…”. An access key not in the label cannot be underlined and is unreachable by keyboard.
+- `fxa-menu-send-tab-to-device` — `browser/browser/sync.ftl` — The tab count is attached to the device: the label reads "Send tab to {$tabCount} devices" instead of "Send {$tabCount} tabs to device".
+    - Current: `Kirim Tab ke { $tabCount } Peranti`
+    - Suggest: `Kirim { $tabCount } Tab ke Perangkat`
+    - $tabCount is documented as the number of tabs, so the placement makes the label state a wrong number of devices.
+- `tab-context-send-tabs-to-device` — `browser/browser/tabContextMenu.ftl` — The tab count is attached to the device: the label reads "Send tab to {$tabCount} devices".
+    - Current: `Kirim Tab ke { $tabCount } Peranti`
+    - Suggest: `Kirim { $tabCount } Tab ke Perangkat`
+    - $tabCount counts tabs affected by the action, not devices; with 3 tabs selected the menu claims 3 devices.
+- `tabbrowser-confirm-close-tabs-with-key-checkbox` — `browser/browser/tabbrowser.ftl` — Wrong preposition makes the checkbox read "Confirm before quitting from Ctrl+Q".
+    - Current: `Konfirmasi sebelum keluar dari { $quitKey }`
+    - Suggest: `Konfirmasi sebelum keluar dengan { $quitKey }`
+    - en-US is "quitting with {$quitKey}"; the parallel string tabbrowser-ask-close-tabs-with-key-checkbox correctly uses "dengan".
+- `privacy.spoof_english` — `browser/chrome/browser/browser.properties` — Voice reversed: says it will make it harder for you to identify, rather than harder to identify you.
+    - Current: `akan membuat Anda lebih sulit untuk mengidentifikasi`
+    - Suggest: `akan membuat Anda lebih sulit diidentifikasi`
+    - en-US: "will make you more difficult to identify" — the user is the object, not the agent, of identification.
+- `protections.blocking.cookies.trackers.title` — `browser/chrome/browser/browser.properties` — "Cross-Site Tracking Cookies" shortened to "Kuki Pelacakan Lintas", dropping "Situs".
+    - Current: `Kuki Pelacakan Lintas Diblokir`
+    - Suggest: `Kuki Pelacakan Lintas Situs Diblokir`
+    - Inconsistent with contentBlocking.cookiesView.trackers2.label in the same panel, and "Lintas" without a noun is incomplete.
+- `protections.notBlocking.crossSiteTrackingCookies.title` — `browser/chrome/browser/browser.properties` — "Cross-Site Tracking Cookies" shortened to "Kuki Pelacakan Lintas", dropping "Situs".
+    - Current: `Tidak Memblokir Kuki Pelacakan Lintas`
+    - Suggest: `Tidak Memblokir Kuki Pelacakan Lintas Situs`
+    - Same panel uses "Kuki Pelacakan Lintas Situs"; the shortened form is incomplete.
+- `sendTabsToDevice.label` — `browser/chrome/browser/browser.properties` — The tab count placeholder is attached to "device" instead of "tab", inverting the meaning.
+    - Current: `Kirim Tab ke #1 Peranti`
+    - Suggest: `Kirim #1 Tab ke Peranti`
+    - The developer comment states #1 is the number of tabs sent to the device; en-US is "Send #1 tabs to device". As translated it reads "Send tab to #1 devices".
+- `trackingProtection.icon.activeTooltip2` — `browser/chrome/browser/browser.properties` — "Cross-site tracking cookies" shortened to "kuki pelacakan lintas", dropping "situs".
+    - Current: `kuki pelacakan lintas`
+    - Suggest: `kuki pelacakan lintas situs`
+    - Elsewhere in the same panel the term is "Kuki Pelacakan Lintas Situs" (contentBlocking.cookies.blockingTrackers3.label); "lintas" alone is a preposition-like modifier with no noun and is not a valid rendering.
+- `find_entire_word_label` — `browser/pdfviewer/viewer.properties` — "Whole Words" rendered as "whole text".
+    - Current: `Seluruh teks`
+    - Suggest: `Seluruh kata`
+    - The option restricts matching to entire words, not the entire text; "teks" names the wrong unit.
+- `find_next.title` — `browser/pdfviewer/viewer.properties` — "Find the next occurrence of the phrase" rendered as "Find further/more".
+    - Current: `Temukan lebih lanjut`
+    - Suggest: `Temukan kata selanjutnya`
+    - The tooltip must mirror find_previous.title ("Temukan kata sebelumnya"); "Temukan lebih lanjut" reads as "learn more" and loses the next-occurrence meaning.
+- `spread_odd.title` — `browser/pdfviewer/viewer.properties` — Misspelling of "halaman".
+    - Current: `Gabungkan lembar lamanan mulai dengan halaman ganjil`
+    - Suggest: `Gabungkan lembar halaman mulai dengan halaman ganjil`
+    - "lamanan" is not a word; the parallel string spread_even.title correctly reads "Gabungkan lembar halaman".
+- `expressions.placeholder` — `devtools/client/debugger.properties` — Two misspellings in the watch-expression placeholder.
+    - Current: `Tambahkan Expresi Pantuan`
+    - Suggest: `Tambahkan ekspresi pemantau`
+    - "Expresi" should be "ekspresi" and "Pantuan" is a typo for "pemantau/pantauan"; the same file spells it correctly in expressions.label and watchExpressions.header.
+- `sourceFooter.prettyPrint.isPrettyPrintedMessage` — `devtools/client/debugger.properties` — "Pretty print" mistranslated as "print enough".
+    - Current: `Tidak dapat mencetak cukup, berkas sudah cukup dicetak`
+    - Suggest: `Tidak dapat mencetak cantik, berkas sudah dicetak cantik`
+    - "cukup" means "enough", not "pretty"; the same file renders pretty printing correctly as "cetak cantik" in settings.autoPrettyPrint.label.
+- `networkMenu.summary.tooltip.load` — `devtools/client/netmonitor.properties` — The DOM event name "load" was translated as "beban".
+    - Current: `peristiwa “beban”`
+    - Suggest: `peristiwa “load”`
+    - Same defect as the Fluent counterpart: "load" is an event identifier and must not be translated.
+- `networkMenu.summary.tooltip.transferred` — `devtools/client/netmonitor.properties` — Half-translated, mis-spaced tooltip.
+    - Current: `Ukuran /transferred ukuran semua permintaan`
+    - Suggest: `Ukuran/ukuran yang ditransfer dari semua permintaan`
+    - en-US is "Size/transferred size of all requests"; the English word "transferred" is left in the middle and the slash is detached, producing an unreadable string.
+- `preventedConsoleClear` — `devtools/client/webconsole.properties` — `preventedConsoleClear` quotes “Persist Logs” but the string it names, `webconsole.console.settings.menu.item.enablePersistentLogs.label`, reads “Simpan Log”
+    - Current: `console.clear() tidak dijalankan karena “Persist Logs” aktif`
+    - Suggest: `Simpan Log`
+    - In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `table.iterationIndex` — `devtools/client/webconsole.properties` — Misspelling of "iterasi".
+    - Current: `(indeks iterarsi)`
+    - Suggest: `(indeks iterasi)`
+    - Typo in the console table column header (also present in devtools/shared/webconsole.properties).
+- `webconsole.cssFilterButton.inactive.tooltip` — `devtools/client/webconsole.properties` — Garbled clause: "Refresh the page" became "Refresh safe".
+    - Current: `Segarkan aman untuk juga melihat kesalahan`
+    - Suggest: `Segarkan laman untuk juga melihat kesalahan`
+    - en-US is "Refresh the page to also see errors…"; "aman" means "safe" and leaves the sentence without an object (same defect in devtools/shared/webconsole.properties).
+- `DOMNodeInsertedIntoDocumentWarning` — `dom/chrome/dom/dom.properties` — Message for DOMNodeInsertedIntoDocument names the wrong event identifier.
+    - Current: `Penambahan listener untuk DOMCharacterDataModified sudah usang dan akan segera dihapus. Alih-alih MutationEvent, gunakan MutationObserver. https://developer.mozilla.org/docs/Web/API/MutationObserver`
+    - Suggest: `Penambahan listener untuk DOMNodeInsertedIntoDocument sudah usang dan akan segera dihapus. Alih-alih MutationEvent, gunakan MutationObserver. https://developer.mozilla.org/docs/Web/API/MutationObserver`
+    - Comment says do not translate "DOMNodeInsertedIntoDocument"; the localization substitutes a different event name.
+- `DOMNodeInsertedWarning` — `dom/chrome/dom/dom.properties` — Message for DOMNodeInserted names the wrong event identifier.
+    - Current: `Penambahan listener untuk DOMCharacterDataModified sudah usang`
+    - Suggest: `Penambahan listener untuk DOMNodeInserted sudah usang`
+    - The developer comment says do not translate "DOMNodeInserted"; the string instead repeats DOMCharacterDataModified, so the console warning points developers at the wrong API.
+- `reportURInotInReportOnlyHeader` — `dom/chrome/security/csp.properties` — Typo "oatas".
+    - Current: `melaporkan pelanggaran oatas kebijakan ini`
+    - Suggest: `melaporkan pelanggaran atas kebijakan ini`
+    - Misspelling of "atas".
+- `timer.start` — `mobile/android/chrome/browser.properties` — console.time() timer rendered as "weker" (alarm clock).
+    - Current: `%S: weker dimulai`
+    - Suggest: `%S: timer dimulai`
+    - Same defect as console-timer-start in geckoViewConsole.ftl; en-US is "timer started".
+- `username` — `mobile/android/chrome/passwordmgr.properties` — Typo "Name Pengguna".
+    - Current: `username = Name Pengguna`
+    - Suggest: `username = Nama Pengguna`
+    - English "Name" left in place of "Nama" in a login prompt label.
+- `suffixes-label` — `toolkit/toolkit/about/aboutPlugins.ftl` — "Suffixes" translated as "Awalan" (prefixes) — opposite meaning.
+    - Current: `suffixes-label = Awalan`
+    - Suggest: `suffixes-label = Akhiran`
+    - "Awalan" means prefix. The locale itself uses "Akhiran" for suffix (about-networking-dns-suffix = Akhiran DNS).
+- `about-processes-remote-sandbox-broker-process` — `toolkit/toolkit/about/aboutProcesses.ftl` — "Remote" translated as "Daring" (online).
+    - Current: `about-processes-remote-sandbox-broker-process = Broker Kotak Pasir Daring ({ $pid })`
+    - Suggest: `about-processes-remote-sandbox-broker-process = Broker Kotak Pasir Jarak Jauh ({ $pid })`
+    - "Remote" in this process list means out-of-process/remote, not internet-connected; the same file and aboutSupport render "Remote" as "Jarak Jauh" (processes-title = Proses Jarak Jauh).
+- `about-reader-toolbar-lineheightminus` — `toolkit/toolkit/about/aboutReader.ftl` — "Line Height" rendered with "Garis" (a drawn line) instead of "Baris" (line of text).
+    - Current: `.title = Kurangi Tinggi Garis`
+    - Suggest: `.title = Kurangi Tinggi Baris`
+    - In typography controls a "line" is a text line; the same file uses "Spasi baris" for line spacing, so "Tinggi Garis" is both wrong and inconsistent. Same issue in about-reader-toolbar-lineheightplus.
+- `app-basics-enabled-plugins` — `toolkit/toolkit/about/aboutSupport.ftl` — "Enabled Plugins" translated as "Plugin Terpasang" (installed plugins).
+    - Current: `app-basics-enabled-plugins = Plugin Terpasang`
+    - Suggest: `app-basics-enabled-plugins = Plugin Aktif`
+    - Installed and enabled are distinct states in this diagnostic row; the locale uses "Diaktifkan/Aktif" for enabled elsewhere in the same file (support-addons-enabled = Diaktifkan).
+- `abuse-report-deceptive-reason-v2` — `toolkit/toolkit/about/abuseReports.ftl` — Dropped the negation in "It claims to be something it’s not".
+    - Current: `abuse-report-deceptive-reason-v2 = Berpura-pura menjadi sesuatu`
+    - Suggest: `abuse-report-deceptive-reason-v2 = Ini mengaku sebagai sesuatu yang bukan dirinya`
+    - The report reason is about an add-on misrepresenting itself; "Berpura-pura menjadi sesuatu" (pretends to be something) loses the "it's not" clause, leaving the choice meaningless.
+- `abuse-report-policy-suggestions` — `toolkit/toolkit/about/abuseReports.ftl` — Spelling error: "dalama".
+    - Current: `wajib dilaporkan dalama proses terpisah`
+    - Suggest: `wajib dilaporkan dalam proses terpisah`
+    - "dalama" is not a word; the intended preposition is "dalam".
+- `abuse-report-settings-reason-v2` — `toolkit/toolkit/about/abuseReports.ftl` — "search engine" rendered as "setelan pencarian" (search settings).
+    - Current: `Ini mengubah setelan pencarian, beranda, atau tab baru tanpa memberitahu atau bertanya pada saya`
+    - Suggest: `Ini mengubah mesin pencari, beranda, atau tab baru tanpa memberitahu atau bertanya pada saya`
+    - The reported behaviour is changing the search engine; "setelan pencarian" is the locale's rendering of "search settings", used two lines below in abuse-report-settings-suggestions-search.
+- `experimental-features-devtools-compatibility-panel` — `toolkit/toolkit/featuregates/features.ftl` — "Kompabilitas" is a misspelling of "Kompatibilitas".
+    - Current: `Alat Pengembang: Panel Kompabilitas`
+    - Suggest: `Alat Pengembang: Panel Kompatibilitas`
+    - The description string immediately below spells it "kompatibilitas".
+- `experimental-features-devtools-compatibility-panel-description` — `toolkit/toolkit/featuregates/features.ftl` — The Bugzilla bug number is wrong (a digit is missing).
+    - Current: `bug 158464`
+    - Suggest: `bug 1584464`
+    - en-US points to "bug 1584464"; the localized number resolves to a different (unrelated) bug for anyone following the reference.
+- `experimental-features-webrtc-global-mute-toggles-description` — `toolkit/toolkit/featuregates/features.ftl` — "menonaktfikan" has transposed letters.
+    - Current: `menonaktfikan suara mikrofon`
+    - Suggest: `menonaktifkan suara mikrofon`
+    - The correct form "menonaktifkan" is used elsewhere in the same file.
+- `webext-perms-update-text` — `toolkit/toolkit/global/extensions.ftl` — "Ektstensi" is a misspelling of "Ekstensi".
+    - Current: `Ektstensi ini akan memiliki izin untuk:`
+    - Suggest: `Ekstensi ini akan memiliki izin untuk:`
+    - Every other occurrence in the file spells it "Ekstensi".
+- _…and 3 more._
 
 ---
 
@@ -63,11 +332,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 356 |
-| Strings | 15,688 |
-| Missing strings | 2,584 |
+| Files | 321 |
+| Strings | 13,705 |
+| Missing strings | 2,463 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 6 |
+| Files absent from the locale | 5 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -76,33 +345,32 @@ _Nothing retired._
 | Plural variants (dead or missing forms) | 7 |
 | Text quoting a UI label that no longer matches | 7 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 14 |
+| Access keys not in their label | 13 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 98 |
+| Typography deviations from this locale's own norm | 77 |
 
 ### Completeness
 
-**2,584 strings** are not translated yet, concentrated in:
+**2,463 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 442
-- `browser/browser/preferences/preferences.ftl` — 432
-- `browser/browser/aiWindow.ftl` — 162
-- `browser/browser/ipProtection.ftl` — 146
-- `browser/browser/newtab/onboarding.ftl` — 98
+- `browser/browser/newtab/newtab.ftl` — 464
+- `browser/browser/preferences/preferences.ftl` — 430
+- `browser/browser/ipProtection.ftl` — 125
+- `browser/browser/newtab/onboarding.ftl` — 117
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 88
-- `browser/browser/newtab/asrouter.ftl` — 79
-- `toolkit/toolkit/about/aboutAddons.ftl` — 61
+- `browser/browser/newtab/asrouter.ftl` — 80
+- `toolkit/toolkit/about/aboutAddons.ftl` — 60
 - `browser/browser/featureCallout.ftl` — 57
 - `browser/browser/profiles.ftl` — 56
 - `browser/browser/tabbrowser.ftl` — 41
+- `toolkit/toolkit/neterror/netError.ftl` — 41
 - `browser/browser/customkeys.ftl` — 40
 
 **Files absent from the locale:**
 
-- `browser/browser/aiWindow.ftl`
-- `browser/browser/ipProtection.ftl`
 - `browser/browser/sharePanel.ftl`
 - `toolkit/services/aboutSyncLog.ftl`
+- `toolkit/toolkit/about/pdfFeaturesNotification.ftl`
 - `toolkit/toolkit/global/mozPromo.ftl`
 - `toolkit/toolkit/pdfviewer/embedFallback.ftl`
 
@@ -114,30 +382,30 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 455, `straight-double` 134, `curly-single` 85 | **curly-double** |
-| apostrophe | `typographic` 95, `straight` 42 | _mixed_ |
-| ellipsis | `char` 415, `ascii` 10 | **char** |
-| dash | `em` 77, `en` 1 | **em** |
+| quotes | `curly-double` 410, `straight-double` 111, `curly-single` 78 | **curly-double** |
+| apostrophe | `typographic` 88, `straight` 41 | _mixed_ |
+| ellipsis | `char` 348, `ascii` 9 | **char** |
+| dash | `em` 50, `en` 1 | **em** |
 | nbsp | `total` 8, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **typography — 98 strings** — 98 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
-    - Affected: `AutomaticAuth`, `BlockMixedActiveContent`, `CSPROViolation`, `CSPROViolationWithURI`, `CSPViolationWithURI`, `CookieBlockedAll`, `CookieBlockedByPermission`, `CookieBlockedForeign`, `CookieBlockedTracker`, `CookieInvalidMaxAgeAttribute`, `CookiePartitionedForeign2`, `FeaturePolicyInvalidEmptyAllowValue` …and 82 more
+- **typography — 77 strings** — 77 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
+    - Affected: `BlockMixedActiveContent`, `CookieBlockedAll`, `CookieBlockedByPermission`, `CookieInvalidMaxAgeAttribute`, `CookiePartitionedForeign2`, `FeaturePolicyInvalidEmptyAllowValue`, `FullscreenDeniedContainerNotAllowed`, `HTTPSOnlyFailedDowngradeAgain`, `HTTPSOnlyNoUpgradeException`, `IframeSandboxBlockedDownload`, `ImageMapCircleNegativeRadius`, `ImageMapCircleWrongNumberOfCoords` …and 62 more
 
 ---
 
-## 3. Open findings (331)
+## 3. Open findings (278)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 83 |
-| 2 | Wrong content (says something other than the English) | 175 |
-| 3 | Degraded language (grammar, spelling, terminology) | 55 |
-| 4 | Cosmetic (typography, spacing) | 17 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 66 |
+| 2 | Wrong content (says something other than the English) | 150 |
+| 3 | Degraded language (grammar, spelling, terminology) | 46 |
+| 4 | Cosmetic (typography, spacing) | 15 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -149,11 +417,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `d`
     - Source: `accesskey: d label: This isn’t a deceptive site…`
     - The label is “Ini bukan situs tipuan…”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `appmenu-referrals` — `browser/browser/appmenu.ftl` — "Share Firefox" rendered as "Hide Firefox"
-    - Current: `Sembunyikan { -brand-shorter-name }`
-    - Source: `accesskey: r label: Share { -brand-shorter-name }`
-    - Suggest: `Bagikan { -brand-shorter-name }`
-    - en-US is "Share { -brand-shorter-name }" (dev comment: opens the referral page, "Share" means recommending the browser). "Sembunyikan" means "Hide", a completely different action; the sibling string appmenuitem-referrals correctly uses "Bagikan".
 - `appmenu-search-history` — `browser/browser/appmenu.ftl` — "Search history" (verb) rendered as the noun "search history"
     - Current: `Riwayat pencarian`
     - Source: `label: Search history`
@@ -164,21 +427,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `The Default Browser Agent task checks when the default changes from { -brand-short-name } to another browser. If the change happens under suspicious circumstances, it will prompt users to change back to { -brand-short-n…`
     - Suggest: `Tugas Agen Peramban Baku bertugas memeriksa`
     - The task name is "Default Browser Agent"; the same string uses "peramban baku" correctly a few words later, so "Baru" names the wrong thing.
-- `browser-tab-mute` — `browser/browser/browser.ftl` — Plural variant truncated to a single letter
-    - Current: `*[other] S`
-    - Source: `{$count ->} [1] MUTE TAB [other] MUTE { $count } TABS`
-    - Suggest: `*[other] SENYAPKAN { $count } TAB`
-    - en-US is "MUTE { $count } TABS"; the localized default variant is just "S", so the tab tooltip shows a meaningless single character for any count other than 1.
-- `browser-tab-unblock` — `browser/browser/browser.ftl` — Plural variant truncated to a single letter
-    - Current: `*[other] P`
-    - Source: `{$count ->} [1] PLAY TAB [other] PLAY { $count } TABS`
-    - Suggest: `*[other] PUTAR { $count } TAB`
-    - en-US is "PLAY { $count } TABS"; the localized default variant is just "P".
-- `browser-tab-unmute` — `browser/browser/browser.ftl` — Plural variant truncated to a single letter
-    - Current: `*[other] U`
-    - Source: `{$count ->} [1] UNMUTE TAB [other] UNMUTE { $count } TABS`
-    - Suggest: `*[other] SUARAKAN { $count } TAB`
-    - en-US is "UNMUTE { $count } TABS"; the localized default variant is just "U".
 - `trustpanel-list-label-tracking-content` — `browser/browser/browser.ftl` — Category label "Tracking content" turned into the verb phrase "tracking content"
     - Current: `Melacak konten`
     - Source: `Tracking content`
@@ -245,21 +493,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `label: Search History`
     - Suggest: `Cari Riwayat`
     - The developer comment states "Search" is a verb, as in "Search in History"; the parallel item menu-bookmarks-search is correctly "Cari Markah".
-- `browser-data-passwords-checkbox` — `browser/browser/migration.ftl` — "Saved Logins and Passwords" is translated as "Login and Password History".
-    - Current: `Riwayat Info Masuk dan Sandi`
-    - Source: `label: Saved Logins and Passwords`
-    - Suggest: `Info Masuk dan Sandi Tersimpan`
-    - "Riwayat" means history, not saved; migrationWizard.ftl renders the same concept as "Info masuk dan sandi tersimpan".
-- `browser-data-passwords-label` — `browser/browser/migration.ftl` — "Saved Logins and Passwords" is translated as "Login and Password History".
-    - Current: `Riwayat Info Masuk dan Sandi`
-    - Source: `value: Saved Logins and Passwords`
-    - Suggest: `Info Masuk dan Sandi Tersimpan`
-    - Same defect as the checkbox variant; "Riwayat" (history) is not "Saved".
-- `import-safari-permissions-string` — `browser/browser/migration.ftl` — The user is told to pick the Safari "file" instead of the Safari folder.
-    - Current: `pilih berkas “Safari“ dalam dialog Finder`
-    - Source: `macOS requires you to explicitly allow { -brand-short-name } to access Safari’s data. Click “Continue”, select the “Safari“ folder in the Finder dialog that appears and then click “Open”.`
-    - Suggest: `pilih folder “Safari” dalam dialog Finder`
-    - en-US says "select the “Safari“ folder"; migrationWizard.ftl correctly uses "folder Safari". Instructing users to select a file makes the step unfollowable.
 - `migration-wizard-progress-success-bookmarks` — `browser/browser/migrationWizard.ftl` — `migration-wizard-progress-success-bookmarks` has plural variant ['one'], which id does not have
     - Current: `{$quantity ->} [one] { $quantity } markah [other] { $quantity } markah`
     - Source: `{$quantity ->} [one] { $quantity } bookmark [other] { $quantity } bookmarks`
@@ -285,11 +518,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `D`
     - Source: `(value): Disable accesskey: D`
     - The label is “Nonaktifkan”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `colorways-cfr-body` — `browser/browser/newtab/asrouter.ftl` — “shades” (colour shades) is translated as “bayangan” (shadows).
-    - Current: `bayangan eksklusif { -brand-short-name }`
-    - Source: `Color your browser with { -brand-short-name } exclusive shades inspired by voices that changed culture.`
-    - Suggest: `corak warna eksklusif { -brand-short-name }`
-    - The developer comment states that “shades” refers to the different colour options available in colorways, not to shadows.
 - `fxa-sync-cfr-secondary` — `browser/browser/newtab/asrouter.ftl` — Access key `R` of `fxa-sync-cfr-secondary` is not present in its label
     - Current: `R`
     - Source: `(value): Remind me later accesskey: R`
@@ -299,11 +527,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Oops! We almost loaded this section, but not quite.`
     - Suggest: `Ups! Kami hampir selesai memuat bagian ini, tetapi belum berhasil.`
     - en-US says loading almost succeeded; the id text says “we have not finished loading this section, but apparently not yet”, which repeats the negation and reads as nonsense.
-- `newtab-empty-section-topstories` — `browser/browser/newtab/newtab.ftl` — “You’ve caught up.” is rendered as “Maaf Anda tercegat.” (“Sorry, you were intercepted.”).
-    - Current: `Maaf Anda tercegat.`
-    - Source: `You’ve caught up. Check back later for more top stories from { $provider }. Can’t wait? Select a popular topic to find more great stories from around the web.`
-    - Suggest: `Anda sudah membaca semuanya.`
-    - en-US “You’ve caught up.” means there is no more new content; “tercegat” (intercepted/blocked) conveys an unrelated and confusing meaning, and the added “Maaf” has no source.
 - `newtab-wallpaper-category-title-colors` — `browser/browser/newtab/newtab.ftl` — “Solid colors” is rendered as “Warna-warni rata” (assorted/multicoloured flat colours).
     - Current: `Warna-warni rata`
     - Source: `Solid colors`
@@ -334,11 +557,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Display the Menu Bar by default.`
     - Suggest: `Tampilkan Bilah Menu secara baku.`
     - en-US: “Display the Menu Bar by default.” The immediately preceding policy-DisplayBookmarksToolbar correctly renders the same “by default” as “secara baku”.
-- `policy-PopupBlocking` — `browser/browser/policies/policies-descriptions.ftl` — “by default” is translated as “secara otomatis” (automatically).
-    - Current: `Izinkan situs tertentu untuk menampilkan pop-up secara otomatis.`
-    - Source: `Allow certain websites to display popups by default.`
-    - Suggest: `Izinkan situs tertentu untuk menampilkan pop-up secara baku.`
-    - en-US: “Allow certain websites to display popups by default.” The policy sets a default permission, it does not make popups appear automatically.
 - `connection-dns-over-https-url-item-default` — `browser/browser/preferences/connection.ftl` — "resolving DNS" mistranslated as "troubleshooting DNS problems"
     - Current: `Gunakan URL baku untuk memecahkan masalah DNS atas HTTPS`
     - Source: `label: { $name } (Default) tooltiptext: Use the default URL for resolving DNS over HTTPS`
@@ -349,11 +567,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Post town`
     - Suggest: `Kota pos`
     - "Post town" (GB/NO/SE) is the town name used in a postal address, not a numeric code; "Kode kota" means "city code" and collides conceptually with autofill-address-postal-code ("Kode Pos").
-- `more-from-moz-mozilla-monitor-us-description` — `browser/browser/preferences/moreFromMozilla.ftl` — Description says "find out" instead of "automatically take back"
-    - Current: `Ketahui info pribadi Anda yang telah dibobol`
-    - Source: `Automatically take back your exposed personal info.`
-    - Suggest: `Ambil kembali info pribadi Anda yang terekspos secara otomatis`
-    - en-US is "Automatically take back your exposed personal info." The Indonesian promises only discovery of breached info, dropping the removal action that is the product's selling point.
 - `content-blocking-all-windows-tracking-content` — `browser/browser/preferences/preferences.ftl` — "Tracking content" (noun phrase) rendered as the verb "to track content"
     - Current: `Melacak konten di seluruh jendela`
     - Source: `Tracking content in all windows`
@@ -389,10 +602,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Some trackers marked below have been partially unblocked on this page because you interacted with them.`
     - Suggest: `sebagian tidak diblokir pada laman ini karena Anda berinteraksi dengan mereka`
     - "partially unblocked" ≠ "diblokir sebagian"; the companion tooltip protections-panel-shim-allowed-indicator correctly says "sebagian tidak diblokir".
-- `safeb-palm-notdeceptive` — `browser/browser/safebrowsing/blockedSite.ftl` — Access key `d` of `safeb-palm-notdeceptive` is not present in its label
-    - Current: `d`
-    - Source: `accesskey: d label: This isn’t a deceptive site…`
-    - The label is “Ini bukan situs tipuan…”. An access key not in the label cannot be underlined and is unreachable by keyboard.
 - `protections-blocking-cookies-trackers` — `browser/browser/siteProtections.ftl` — "Cross-Site Tracking Cookies Blocked" drops "Situs", leaving the dangling "Lintas".
     - Current: `Kuki Pelacakan Lintas Diblokir`
     - Source: `title: Cross-Site Tracking Cookies Blocked`
@@ -403,33 +612,113 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Blocking social media trackers, cross-site tracking cookies, and fingerprinters.`
     - Suggest: `kuki pelacakan lintas situs`
     - "lintas" (across) needs its object; content-blocking-cookies-blocking-trackers-label in the same file correctly says "Kuki Pelacakan Lintas Situs".
-- `fxa-menu-send-tab-to-device` — `browser/browser/sync.ftl` — The tab count is attached to the device: the label reads "Send tab to {$tabCount} devices" instead of "Send {$tabCount} tabs to device".
-    - Current: `Kirim Tab ke { $tabCount } Peranti`
-    - Source: `label: {$tabCount ->} [1] Send tab to device [other] Send { $tabCount } tabs to device`
-    - Suggest: `Kirim { $tabCount } Tab ke Perangkat`
-    - $tabCount is documented as the number of tabs, so the placement makes the label state a wrong number of devices.
 - `synced-tabs-context-manage-devices` — `browser/browser/syncedTabs.ftl` — Access key `D` of `synced-tabs-context-manage-devices` is not present in its label
     - Current: `D`
     - Source: `accesskey: D label: Manage Devices…`
     - The label is “Kelola Perangkat…”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `tab-context-send-tabs-to-device` — `browser/browser/tabContextMenu.ftl` — The tab count is attached to the device: the label reads "Send tab to {$tabCount} devices".
-    - Current: `Kirim Tab ke { $tabCount } Peranti`
-    - Source: `accesskey: n label: {$tabCount ->} [1] Send Tab to Device [other] Send { $tabCount } Tabs to Device`
-    - Suggest: `Kirim { $tabCount } Tab ke Perangkat`
-    - $tabCount counts tabs affected by the action, not devices; with 3 tabs selected the menu claims 3 devices.
 - `tabbrowser-context-unmute-selected-tabs` — `browser/browser/tabbrowser.ftl` — Access key `S` of `tabbrowser-context-unmute-selected-tabs` is not present in its label
     - Current: `S`
     - Source: `accesskey: m label: Unmute Tabs`
     - The label is “Bunyikan Tab”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- _…and 92 more; see `state/` for the full list._
+- `webrtc-sharing-menu` — `browser/browser/webrtcIndicator.ftl` — "Tabs sharing devices" (tabs that are sharing devices) becomes "Sharing tabs & devices".
+    - Current: `Berbagi tab & perangkat`
+    - Source: `accesskey: d label: Tabs sharing devices`
+    - Suggest: `Tab yang berbagi perangkat`
+    - The menu lists tabs currently sharing a device; the translation turns it into an action of sharing both tabs and devices.
+- `safebrowsing.reportedHarmfulSite` — `browser/chrome/browser/browser.properties` — "Reported Harmful Site!" turned into an imperative "Report Harmful Site!".
+    - Current: `Laporkan Situs Berbahaya!`
+    - Source: `Reported Harmful Site!`
+    - Suggest: `Telah Dilaporkan Sebagai Situs Berbahaya!`
+    - This is a notification-bar label stating the site has been reported, matching safebrowsing.reportedAttackSite ("Telah Dilaporkan Sebagai Situs Penyerang!"); "Laporkan" is a command to the user.
+- `dialogTitleAddMulti` — `browser/chrome/browser/places/bookmarkProperties.properties` — Dialog title says "Bookmark All Tabs" instead of "New Bookmarks".
+    - Current: `Buat Markah Semua Tab`
+    - Source: `New Bookmarks`
+    - Suggest: `Markah Baru`
+    - en-US is "New Bookmarks", a title parallel to dialogTitleAddBookmark/dialogTitleAddFolder; the translation retains the older action-phrase wording.
+- `state.current.allowedForSession` — `browser/chrome/browser/sitePermissions.properties` — "Allowed for Session" reversed into "Session allowed".
+    - Current: `Sesi Diizinkan`
+    - Source: `Allowed for Session`
+    - Suggest: `Diizinkan untuk Sesi Ini`
+    - The head noun in Indonesian comes first, so "Sesi Diizinkan" states that the session is allowed rather than that the permission is granted for the session; compare state.current.allowedTemporarily ("Diizinkan sementara").
+- `externalProtocolChkMsg` — `browser/chrome/overrides/appstrings.properties` — "Remember my choice" rendered as "Remind" ("Ingatkan") instead of "Remember" ("Ingat").
+    - Current: `Ingatkan memakai pilihan ini untuk semua tautan yang jenisnya sama.`
+    - Source: `Remember my choice for all links of this type.`
+    - Suggest: `Ingat pilihan ini untuk semua tautan yang jenisnya sama.`
+    - "Ingatkan" means "remind (someone)"; the checkbox stores the choice. Comparable strings elsewhere use "Ingat pilihan ini".
+- `CONTEXT_OPTIONS` — `browser/installer/custom.properties` — The “$BrandShortName Options” context-menu entry is rendered as “component options”.
+    - Current: `&Pilihan komponen $BrandShortName`
+    - Source: `$BrandShortName &Options`
+    - Suggest: `&Pilihan $BrandShortName`
+    - en-US is “$BrandShortName &Options”, i.e. the browser's Options/preferences; “komponen” adds a meaning that is not in the source and misdescribes the command.
+- `OPTIONS_SUMMARY` — `browser/installer/custom.properties` — The setup-type prompt is translated as a component-selection prompt.
+    - Current: `Pilih komponen tambahan yang ingin Anda pasang, kemudian tekan Lanjut.`
+    - Source: `Choose the type of setup you prefer, then click Next.`
+    - Suggest: `Pilih jenis pemasangan yang Anda inginkan, lalu klik Lanjut.`
+    - en-US: “Choose the type of setup you prefer, then click Next.” The page offers Standard/Custom setup types, not a list of extra components.
+- `OPTION_CUSTOM_RADIO` — `browser/installer/custom.properties` — “Custom” setup type is translated as “Kesukaan” (favourite/liking).
+    - Current: `&Kesukaan`
+    - Source: `&Custom`
+    - Suggest: `&Ubahsuai`
+    - en-US “&Custom” pairs with “&Standard”; “Kesukaan” means “favourite/preference” and does not convey a custom installation. The tree uses “Ubahsuai”/“Khusus” for “custom” elsewhere (e.g. newtab-topsites-image-url-label “URL Gambar Khusus”).
+- `MUI_TEXT_FINISH_SUBTITLE` — `browser/installer/mui.properties` — “Setup was completed successfully.” is rendered as “Setup was successfully installed.”
+    - Current: `Setup telah berhasil dipasang.`
+    - Source: `Setup was completed successfully.`
+    - Suggest: `Penyiapan berhasil diselesaikan.`
+    - en-US says the setup process finished; the id text says the setup program itself was installed, which is not what happened.
+- `about-debugging-runtime-profile-button2` — `devtools/client/aboutdebugging.ftl` — "Profile performance" rendered as the noun phrase "performance profile".
+    - Current: `Kinerja profil`
+    - Source: `Profile performance`
+    - Suggest: `Profilkan kinerja`
+    - en-US is a verb phrase labelling a button that starts profiling; "Kinerja profil" reads as "the profile's performance" and also has the head noun in the wrong position.
+- `player.animationEndDelayLabel` — `devtools/client/animationinspector.properties` — "End delay" (a value label) translated as the imperative "Stop delay".
+    - Current: `Hentikan jeda:`
+    - Source: `End delay:`
+    - Suggest: `Jeda akhir:`
+    - The comment says this labels the animation endDelay value; "Hentikan" is the verb "stop", turning a value label into a command.
+- `compatibility-close-settings-button` — `devtools/client/compatibility.ftl` — The "Close settings" button tooltip states "Settings closed" instead of the action.
+    - Current: `Pengaturan tertutup`
+    - Source: `title: Close settings`
+    - Suggest: `Tutup pengaturan`
+    - en-US "Close settings" is an imperative describing what the button does; the translation is a passive statement of state.
+- `copyFunction.label` — `devtools/client/debugger.properties` — "Copy function" rendered with reversed word order as "Function Copy".
+    - Current: `Fungsi Salin`
+    - Source: `Copy function`
+    - Suggest: `Salin fungsi`
+    - All neighbouring copy commands use "Salin <object>" (Salin teks sumber, Salin URI sumber); "Fungsi Salin" is ungrammatical for the intended action.
+- `scopes.block` — `devtools/client/debugger.properties` — The noun "Block" (a code block) translated as the verb "to block".
+    - Current: `Blokir`
+    - Source: `Block`
+    - Suggest: `Blok`
+    - The comment says it refers to a block of code in the scopes pane; "Blokir" means "block/ban (something)".
+- _…and 65 more; see `state/` for the full list._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `action-log-checked-world-cup-live` — `browser/browser/aiWindowContent.ftl` — "Checked" is rendered as "telah dicari" (searched) instead of "telah diperiksa".
-    - Current: `Pertandingan Piala Dunia yang sedang berlangsung telah dicari`
-    - Source: `Checked live World Cup matches`
-    - Suggest: `Pertandingan Piala Dunia yang sedang berlangsung telah diperiksa`
-    - The source says "Checked live World Cup matches"; the parallel string action-log-checked-memories correctly uses "diperiksa". "dicari" means searched, matching a different action log entry.
+- `aiwindow-firstrun-memories-checkbox-chats` — `browser/browser/aiWindow.ftl` — Noun "Chats" translated as the verb "Mengobrol" in a checkbox label listing memory sources.
+    - Current: `Mengobrol di { -smart-window-brand-name }`
+    - Source: `Chats in { -smart-window-brand-name }`
+    - Suggest: `Obrolan di { -smart-window-brand-name }`
+    - en-US "Chats in { -smart-window-brand-name }" is a noun phrase naming a data source; elsewhere in this file "Chats" is consistently "Obrolan".
+- `aiwindow-memories-on` — `browser/browser/aiWindow.ftl` — "when helpful" mistranslated as "saat membantu" (when it is helping) instead of "bila bermanfaat".
+    - Current: `Gunakan memori dalam tanggapan saat membantu`
+    - Source: `aria-label: Memories on tooltiptext: Use memories in responses when helpful`
+    - Suggest: `Gunakan memori dalam tanggapan bila bermanfaat`
+    - en-US "when helpful" means when doing so is useful; "saat membantu" reads as "while helping", changing the meaning.
+- `fxa-signout-dialog-body-aiwindow` — `browser/browser/aiWindow.ftl` — "Classic Windows" (browser windows) rendered as "Windows Klasik" with capitalized "Windows", reading as the Microsoft Windows brand.
+    - Current: `akan beralih ke Windows Klasik`
+    - Source: `Synced data will remain in your account. Open { -smart-window-brand-name } will switch to Classic Windows.`
+    - Suggest: `akan beralih ke Jendela Klasik`
+    - en-US "Classic Windows" refers to classic browser windows; elsewhere in this file the same concept is translated "Jendela ... Klasik" (see aiwindow-firstrun-default-subtitle). Leaving "Windows" evokes the Microsoft OS brand.
+- `main-context-menu-open-link-new-smart-window` — `browser/browser/aiWindow.ftl` — Untranslated-brand phrase loses the word "Window"; "Open Link in New Smart Window" becomes "Open Link in New <brand>".
+    - Current: `Buka Tautan di { -smart-window-brand-name } Baru`
+    - Source: `accesskey: S label: Open Link in New { -smart-window-brand-name }`
+    - Suggest: `Buka Tautan di Jendela { -smart-window-brand-name } Baru`
+    - en-US reads "Open Link in New { -smart-window-brand-name }"; if the brand term alone is used, the word order places "Baru" after the brand token which is acceptable, but the sibling strings translate "Window" as "Jendela" — inconsistent handling.
+- `smartbar-placeholder-hint-1` — `browser/browser/aiWindow.ftl` — "mention" is rendered as "menyinggung" (to allude to/offend), not the @-mention sense.
+    - Current: `Gunakan @ untuk menyinggung tab terbaru…`
+    - Source: `Use @ to mention recent tabs…`
+    - Suggest: `Gunakan @ untuk menyebut tab terbaru…`
+    - In en-US "mention recent tabs" refers to @-mentioning a tab; "menyinggung" means to allude to or to offend, which is the wrong sense.
 - `action-log-read-page` — `browser/browser/aiWindowContent.ftl` — Past-tense "Read page content" is translated as an imperative/present "Baca isi laman".
     - Current: `Baca isi laman`
     - Source: `Read page content`
@@ -500,11 +789,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `title: Time when “load” event occurred`
     - Suggest: `peristiwa “load”`
     - en-US is "Time when “load” event occurred"; "load" is the literal event name, kept untranslated in the sibling string for “DOMContentLoaded”.
-- `networkMenu.summary.tooltip.load` — `devtools/client/netmonitor.properties` — The DOM event name "load" was translated as "beban".
-    - Current: `peristiwa “beban”`
-    - Source: `Time when “load” event occurred`
-    - Suggest: `peristiwa “load”`
-    - Same defect as the Fluent counterpart: "load" is an event identifier and must not be translated.
 - `options-default-color-unit-rgb` — `devtools/client/toolbox-options.ftl` — The CSS color-function name RGB(A) was translated to MHB(A).
     - Current: `MHB(A)`
     - Source: `RGB(A)`
@@ -568,21 +852,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `{$sel_1 ->} [macos] TSV Document [other] TSV File`
     - Suggest: `[macos] Dokumen TSV`
     - en-US distinguishes "TSV Document" (macOS) from "TSV File"; the CSV filter right above correctly uses "Dokumen CSV" vs "Berkas CSV", so the TSV macOS variant is wrong.
-- `about-logins-menu-menuitem-remove-all-logins` — `browser/browser/aboutLogins.ftl` — "Logins" rendered as "Log Masuk" while the rest of the surface uses "Info Masuk"
-    - Current: `Hapus Semua Log Masuk…`
-    - Source: `Remove All Logins…`
-    - Suggest: `Hapus Semua Info Masuk…`
-    - The adjacent menu items use "Info Masuk" (Export Logins → "Ekspor Info Masuk…"); "Log Masuk" is an inconsistent rendering of the same term in the same menu (also in about-logins-confirm-remove-all-dialog-checkbox-label).
 - `urlbar-result-explanation-last-visited-absolute` — `browser/browser/browser.ftl` — Passive/active mismatch: "Terakhir Anda kunjungi" is ungrammatical mixing of active and passive forms.
     - Current: `Terakhir Anda kunjungi pada { $date }`
     - Source: `You last visited on { $date }`
     - Suggest: `Terakhir dikunjungi pada { $date }`
     - en-US "You last visited on { $date }"; the other variants of the same message use "Terakhir dikunjungi" or "Anda terakhir mengunjungi". "Terakhir Anda kunjungi" is grammatically incorrect Indonesian and inconsistent with the sibling strings.
-- `pending-crash-reports-message` — `browser/browser/contentCrash.ftl` — "crash report" translated as "laporan kemacetan" instead of "laporan kerusakan"
-    - Current: `laporan kemacetan yang belum terkirim`
-    - Source: `{$reportCount ->} [one] You have an unsent crash report [other] You have { $reportCount } unsent crash reports`
-    - Suggest: `laporan kerusakan yang belum terkirim`
-    - Every other crash-report string in the same file uses "laporan kerusakan"; "kemacetan" means congestion/jam and is wrong in this context.
 - `contextual-manager-passwords-import-file-picker-tsv-filter-title` — `browser/browser/contextual-manager.ftl` — macOS "TSV Document" rendered as "Berkas TSV" (File)
     - Current: `[macos] Berkas TSV`
     - Source: `{$sel_1 ->} [macos] TSV Document [other] TSV File`
@@ -628,11 +902,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `This file may harm your computer.`
     - Suggest: `Berkas ini mungkin dapat merusak komputer Anda.`
     - "meungkin" is not a word; the correct form "mungkin" is used throughout the rest of the file.
-- `spread_odd.title` — `browser/pdfviewer/viewer.properties` — Misspelling of "halaman".
-    - Current: `Gabungkan lembar lamanan mulai dengan halaman ganjil`
-    - Source: `Join page spreads starting with odd-numbered pages`
-    - Suggest: `Gabungkan lembar halaman mulai dengan halaman ganjil`
-    - "lamanan" is not a word; the parallel string spread_even.title correctly reads "Gabungkan lembar halaman".
 - `accessibility-keyboard-issue-action` — `devtools/client/accessibility.ftl` — Misspelling of "papan ketik".
     - Current: `menggunakan papam ketik`
     - Source: `Interactive elements must be able to be activated using a keyboard. <a>Learn more</a>`
@@ -653,11 +922,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `No service workers found`
     - Suggest: `Tidak ada service worker ditemukan`
     - Typo in a top-level empty-state message.
-- `expressions.placeholder` — `devtools/client/debugger.properties` — Two misspellings in the watch-expression placeholder.
-    - Current: `Tambahkan Expresi Pantuan`
-    - Source: `Add watch expression`
-    - Suggest: `Tambahkan ekspresi pemantau`
-    - "Expresi" should be "ekspresi" and "Pantuan" is a typo for "pemantau/pantauan"; the same file spells it correctly in expressions.label and watchExpressions.header.
 - `pauseOnAnyXHR` — `devtools/client/debugger.properties` — Duplicated word makes the checkbox label ungrammatical.
     - Current: `Jeda di URL semua URL`
     - Source: `Pause on any URL`
@@ -673,11 +937,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Delete all snapshots`
     - Suggest: `Hapus semua snapshot`
     - "Hapuse" is not a word; the correct form "Hapus" is used in snapshot.io.delete.
-- `networkMenu.summary.tooltip.transferred` — `devtools/client/netmonitor.properties` — Half-translated, mis-spaced tooltip.
-    - Current: `Ukuran /transferred ukuran semua permintaan`
-    - Source: `Size/transferred size of all requests`
-    - Suggest: `Ukuran/ukuran yang ditransfer dari semua permintaan`
-    - en-US is "Size/transferred size of all requests"; the English word "transferred" is left in the middle and the slash is detached, producing an unreadable string.
 - `options-stylesheet-autocompletion-label` — `devtools/client/toolbox-options.ftl` — Misspelling of "Otomatis".
     - Current: `CSS Lengkapi-Otomasis`
     - Source: `Autocomplete CSS`
@@ -698,31 +957,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `<strong>{ $property }</strong> has no effect on this element since it doesn’t scroll.`
     - Suggest: `tidak berpengaruh pada elemen ini karena tidak menggulir`
     - en-US is "…has no effect on this element since it doesn’t scroll"; the causal "karena" present in every sibling string is missing here.
-- `table.iterationIndex` — `devtools/client/webconsole.properties` — Misspelling of "iterasi".
-    - Current: `(indeks iterarsi)`
-    - Source: `(iteration index)`
-    - Suggest: `(indeks iterasi)`
-    - Typo in the console table column header (also present in devtools/shared/webconsole.properties).
-- `webconsole.cssFilterButton.inactive.tooltip` — `devtools/client/webconsole.properties` — Garbled clause: "Refresh the page" became "Refresh safe".
-    - Current: `Segarkan aman untuk juga melihat kesalahan`
-    - Source: `Stylesheets will be reparsed to check for errors. Refresh the page to also see errors from stylesheets modified from Javascript.`
-    - Suggest: `Segarkan laman untuk juga melihat kesalahan`
-    - en-US is "Refresh the page to also see errors…"; "aman" means "safe" and leaves the sentence without an object (same defect in devtools/shared/webconsole.properties).
 - `BadRedirectModeInterceptionWithURL` — `dom/chrome/dom/dom.properties` — "Response" and the RedirectMode value "follow" were translated despite the do-not-translate note.
     - Current: `mengirimkan Balasan pengalihan ke FetchEvent.respondWith() sementara RedirectMode tidak ‘mengikuti’`
     - Source: `Failed to load ‘%S’. A ServiceWorker passed a redirected Response to FetchEvent.respondWith() while RedirectMode is not ‘follow’.`
     - Suggest: `mengirimkan Response yang dialihkan ke FetchEvent.respondWith() sementara RedirectMode bukan ‘follow’`
     - The comment says do not translate "Response" ... or "follow"; both were localized, and ‘follow’ is a literal API value.
-- `DOMNodeInsertedIntoDocumentWarning` — `dom/chrome/dom/dom.properties` — Message for DOMNodeInsertedIntoDocument names the wrong event identifier.
-    - Current: `Penambahan listener untuk DOMCharacterDataModified sudah usang dan akan segera dihapus. Alih-alih MutationEvent, gunakan MutationObserver. https://developer.mozilla.org/docs/Web/API/MutationObserver`
-    - Source: `Adding a listener for DOMNodeInsertedIntoDocument is deprecated and will be removed soon. Instead of a MutationEvent, use MutationObserver. https://developer.mozilla.org/docs/Web/API/MutationObserver`
-    - Suggest: `Penambahan listener untuk DOMNodeInsertedIntoDocument sudah usang dan akan segera dihapus. Alih-alih MutationEvent, gunakan MutationObserver. https://developer.mozilla.org/docs/Web/API/MutationObserver`
-    - Comment says do not translate "DOMNodeInsertedIntoDocument"; the localization substitutes a different event name.
-- `DOMNodeInsertedWarning` — `dom/chrome/dom/dom.properties` — Message for DOMNodeInserted names the wrong event identifier.
-    - Current: `Penambahan listener untuk DOMCharacterDataModified sudah usang`
-    - Source: `Adding a listener for DOMNodeInserted is deprecated and will be removed soon. Instead of a MutationEvent, use MutationObserver. https://developer.mozilla.org/docs/Web/API/MutationObserver`
-    - Suggest: `Penambahan listener untuk DOMNodeInserted sudah usang`
-    - The developer comment says do not translate "DOMNodeInserted"; the string instead repeats DOMCharacterDataModified, so the console warning points developers at the wrong API.
 - `DrawWindowCanvasRenderingContext2DWarning` — `dom/chrome/dom/dom.properties` — Do-not-translate API name written as tab.captureTab.
     - Current: `API ekstensi tab.captureTab`
     - Source: `Use of drawWindow method from CanvasRenderingContext2D is deprecated. Use tabs.captureTab extensions API instead https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/tabs/captureTab`
@@ -808,11 +1047,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `{$gracePeriodSeconds ->} [other] “{ $siteHost }” has been classified as a bounce tracker. If it does not receive user activation within the next { $gracePeriodSeconds } seconds it will have its state purged.`
     - Suggest: `bounce tracker`
     - The comment above the string says 'Do not translate "bounce tracker"'. The sibling string btp-warning-tracker-purged correctly keeps "bounce tracker" in English, so the two console messages are also inconsistent.
-- `neterror-dns-not-found-native-fallback-heuristic` — `toolkit/toolkit/neterror/netError.ftl` — The protocol name is given as HTTP instead of HTTPS.
-    - Current: `DNS lewat HTTP telah dinonaktifkan pada jaringan Anda.`
-    - Source: `DNS over HTTPS has been disabled on your network.`
-    - Suggest: `DNS lewat HTTPS telah dinonaktifkan pada jaringan Anda.`
-    - en-US: "DNS over HTTPS has been disabled on your network." DoH is a protocol name; naming plain HTTP misidentifies the feature.
 
 ### D. Terminology, register & consistency
 
@@ -821,11 +1055,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Updates disabled by your organization`
     - Suggest: `Pembaruan dinonaktifkan oleh organisasi Anda`
     - Indonesian orthography requires the polite pronoun "Anda" to be capitalized; every other string in the file uses "Anda". (Same issue in settings-update-policy-disabled.)
-- `about-logins-login-intro-heading-logged-out2` — `browser/browser/aboutLogins.ftl` — Missing passive prefix: "yang simpan" instead of "yang tersimpan"
-    - Current: `Mencari info masuk Anda yang simpan?`
-    - Source: `Looking for your saved logins? Turn on sync or import them.`
-    - Suggest: `Mencari info masuk Anda yang tersimpan?`
-    - en-US "Looking for your saved logins?" — the Indonesian is ungrammatical; the passive form "tersimpan" is required (as used in login-list-intro-title2 and elsewhere).
 - `about-private-browsing-focus-promo-text` — `browser/browser/aboutPrivateBrowsing.ftl` — Typo "Aplkasi" for "Aplikasi"
     - Current: `Aplkasi seluler penjelajahan pribadi`
     - Source: `Our dedicated private browsing mobile app clears your history and cookies every time.`
@@ -836,6 +1065,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `{ -brand-short-name } has a feature that automatically unloads tabs to prevent the application from crashing due to insufficient memory when the system’s available memory is low. The next tab to be unloaded is chosen ba…`
     - Suggest: `Anda dapat memicu tab dibongkar secara manual`
     - Misspelling of "dibongkar" (unloaded), the term used throughout the rest of the same paragraph.
+- `aiwindow-ai-chat-grid-grid-view` — `browser/browser/aiWindow.ftl` — "Switch mode" rendered as "Beralih mode" here but "Ganti mode" in the sibling list-view string.
+    - Current: `aria-label: Beralih mode: Tampilan Kisi`
+    - Source: `aria-label: Switch mode: Grid View tooltiptext: Grid View`
+    - Suggest: `aria-label: Ganti mode: Tampilan Kisi`
+    - Same en-US term "Switch mode:" in the paired strings aiwindow-ai-chat-grid-list-view and -grid-view is translated inconsistently on the same surface.
+- `aiwindow-input-model-select-button-label-allpurpose` — `browser/browser/aiWindow.ftl` — "Flexible" is rendered "Luwes" here but "Fleksibel" in the first-run strings for the same model category.
+    - Current: `Luwes`
+    - Source: `Flexible`
+    - Suggest: `Fleksibel`
+    - aiwindow-firstrun-model-allpurpose-label and aiwindow-firstrun-model-flexible-label translate the same en-US term "Flexible" as "Fleksibel"; using "Luwes" in the model selector breaks consistency for the same model label in the same surface.
 - `appmenu-edit-pdf` — `browser/browser/appmenu.ftl` — Typo "Suntiing" for "Sunting"
     - Current: `Suntiing PDF …`
     - Source: `label: Edit PDF…`
@@ -896,31 +1135,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Import from file`
     - Suggest: `Impor dari Berkas`
     - All neighbouring buttons use the imperative ("Impor", "Pilih Berkas"); "Diimpor" states a completed state rather than the action the button performs.
-- `colorways-cfr-header-14days` — `browser/browser/newtab/asrouter.ftl` — “kedaluarsa” is misspelled; the standard form is “kedaluwarsa”.
-    - Current: `kedaluarsa dalam dua minggu`
-    - Source: `Independent Voices colorways expire in two weeks`
-    - Suggest: `kedaluwarsa dalam dua minggu`
-    - KBBI spelling is “kedaluwarsa”, used correctly elsewhere in the tree.
-- `colorways-cfr-header-28days` — `browser/browser/newtab/asrouter.ftl` — “kedaluarsa” is misspelled; the standard form is “kedaluwarsa”.
-    - Current: `kedaluarsa pada 16 Januari`
-    - Source: `Independent Voices colorways expire January 16`
-    - Suggest: `kedaluwarsa pada 16 Januari`
-    - KBBI spelling is “kedaluwarsa”, which the tree uses correctly elsewhere (newtab-report-content-outdated = “Kedaluwarsa”).
-- `colorways-cfr-header-7days` — `browser/browser/newtab/asrouter.ftl` — “kedaluarsa” is misspelled; the standard form is “kedaluwarsa”.
-    - Current: `kedaluarsa minggu ini`
-    - Source: `Independent Voices colorways expire this week`
-    - Suggest: `kedaluwarsa minggu ini`
-    - KBBI spelling is “kedaluwarsa”, used correctly elsewhere in the tree.
-- `colorways-cfr-header-today` — `browser/browser/newtab/asrouter.ftl` — “kedaluarsa” is misspelled; the standard form is “kedaluwarsa”.
-    - Current: `kedaluarsa hari ini`
-    - Source: `Independent Voices colorways expire today`
-    - Suggest: `kedaluwarsa hari ini`
-    - KBBI spelling is “kedaluwarsa”, used correctly elsewhere in the tree.
-- `newtab-pocket-cta-text` — `browser/browser/newtab/newtab.ftl` — The polite pronoun “Anda” is written in lowercase.
-    - Current: `cerita yang anda sukai`
-    - Source: `Save the stories you love in { -pocket-brand-name }, and fuel your mind with fascinating reads.`
-    - Suggest: `cerita yang Anda sukai`
-    - Indonesian orthography (and the rest of this file, including the second half of this same string) capitalises “Anda”.
 - `newtab-weather-menu-change-temperature-units-celsius` — `browser/browser/newtab/newtab.ftl` — The temperature unit is misspelled “Celcius”.
     - Current: `Beralih ke Celcius`
     - Source: `Switch to Celsius`
@@ -956,21 +1170,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Enable or disable Encrypted Media Extensions and optionally lock it.`
     - Suggest: `kuncilah secara opsional`
     - “dia” refers to persons and cannot be used as an object pronoun for an inanimate setting; the enclitic “-nya” is required.
-- `containers-name-text` — `browser/browser/preferences/containers.ftl` — "Masukan" (noun: input) used where the imperative verb "Masukkan" is required
-    - Current: `Masukan nama kontainer`
-    - Source: `placeholder: Enter a container name`
-    - Suggest: `Masukkan nama kontainer`
-    - The imperative of "memasukkan" is "masukkan" with double k; "masukan" is the noun "input/feedback". Other files in this partition use the correct form (e.g. permissions-doh-entry-field "Masukkan nama domain situs web").
+- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Yang Baru” but the string it names, `releaseNotes-link`, reads “Yang baru”
+    - Current: `Ganti laman "Yang Baru" yang tampil setelah pembaruan. Setel kebijakan ini menjadi kosong jika ingin menonaktifkan laman setelah pembaruan.`
+    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
+    - Suggest: `Yang baru`
+    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `fonts-allow-own` — `browser/browser/preferences/fonts.ftl` — "daripada" written as two words
     - Current: `dari pada menggunakan pilihan Anda di atas`
     - Source: `accesskey: A label: Allow pages to choose their own fonts, instead of your selections above`
     - Suggest: `daripada menggunakan pilihan Anda di atas`
     - In standard Indonesian orthography the comparative conjunction is written as one word, "daripada".
-- `autofill-edit-card-password-prompt` — `browser/browser/preferences/formAutofill.ftl` — macOS variant adds a period the OS also appends
-    - Current: `[macos] menampilkan informasi kartu kredit.`
-    - Source: `{$sel_1 ->} [macos] show credit card information [windows] { -brand-short-name } is trying to show credit card information. Confirm access to this Windows account below. [other] { -brand-short-name } is trying to show c…`
-    - Suggest: `[macos] menampilkan informasi kartu kredit`
-    - The developer comment states macOS prepends "Firefox is trying to " and adds a period at the end; en-US therefore has no final period. The localized variant ends with one, producing a double period in the OS dialog.
 - `autofill-creditcard-os-dialog-message` — `browser/browser/preferences/preferences.ftl` — macOS variant adds a period the OS also appends
     - Current: `[macos] mengubah setelan metode pembayaran.`
     - Source: `{$sel_1 ->} [macos] change the settings for payment methods [other] { -brand-short-name } is trying to change the settings for payment methods. Use your device sign in to allow this.`
@@ -981,21 +1190,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `placeholder: Paste a URL…`
     - Suggest: `Tempel URL…`
     - en-US is "Paste a URL…" with an ellipsis character, and the rest of the localized file uses … consistently.
-- `permissions-autoplay-settings` — `browser/browser/preferences/preferences.ftl` — Three periods used instead of the ellipsis character
-    - Current: `Pengaturan...`
-    - Source: `accesskey: t label: Settings…`
-    - Suggest: `Pengaturan…`
-    - Every other "Settings…"-type label in this file (permissions-xr-settings, permissions-speaker-settings, history-clear-on-close-settings, …) uses the ellipsis character …, matching en-US.
 - `startup-windows-launch-on-login-profile-disabled` — `browser/browser/preferences/preferences.ftl` — Closing curly quotes typed as opening quotes
     - Current: `“{ profile-manager-use-selected.label }“ di jendela “Pilih Profil Pengguna“`
     - Source: `message: Enable this preference by checking “{ profile-manager-use-selected.label }” in the “Choose User Profile” window.`
     - Suggest: `“{ profile-manager-use-selected.label }” di jendela “Pilih Profil Pengguna”`
     - Both quoted phrases close with the left double quotation mark “ instead of the right one ”; en-US and the rest of the file use properly paired “…”.
-- `windows-launch-on-login-profile-disabled` — `browser/browser/preferences/preferences.ftl` — Closing curly quotes typed as opening quotes
-    - Current: `“{ profile-manager-use-selected.label }“ di jendela “Pilih Profil Pengguna“`
-    - Source: `Enable this preference by checking “{ profile-manager-use-selected.label }” in the “Choose User Profile” window.`
-    - Suggest: `“{ profile-manager-use-selected.label }” di jendela “Pilih Profil Pengguna”`
-    - Same mismatched quotation marks as in startup-windows-launch-on-login-profile-disabled; the closing mark must be ”.
 - `bar-tooltip-cryptominer` — `browser/browser/protections.ftl` — Missing spaces around the label in the screen-reader string.
     - Current: `{ $count }Penambang Kripto({ $percentage }%)`
     - Source: `aria-label: {$count ->} [one] { $count } cryptominer ({ $percentage }%) [other] { $count } cryptominers ({ $percentage }%) title: Cryptominers`
@@ -1011,31 +1210,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `label: Bookmark Page…`
     - Suggest: `Markahi Laman…`
     - "Markahl" is a typo of "Markahi", the form used everywhere else (places.ftl, tabContextMenu.ftl).
-- `tabbrowser-confirm-close-tabs-with-key-checkbox` — `browser/browser/tabbrowser.ftl` — Wrong preposition makes the checkbox read "Confirm before quitting from Ctrl+Q".
-    - Current: `Konfirmasi sebelum keluar dari { $quitKey }`
-    - Source: `Confirm before quitting with { $quitKey }`
-    - Suggest: `Konfirmasi sebelum keluar dengan { $quitKey }`
-    - en-US is "quitting with {$quitKey}"; the parallel string tabbrowser-ask-close-tabs-with-key-checkbox correctly uses "dengan".
 - `webrtc-item-microphone` — `browser/browser/webrtcIndicator.ftl` — Spelling error: "mikrofone" instead of "mikrofon".
     - Current: `mikrofone`
     - Source: `microphone`
     - Suggest: `mikrofon`
     - Every other string in the same file spells it "mikrofon".
-- `protections.blocking.cookies.trackers.title` — `browser/chrome/browser/browser.properties` — "Cross-Site Tracking Cookies" shortened to "Kuki Pelacakan Lintas", dropping "Situs".
-    - Current: `Kuki Pelacakan Lintas Diblokir`
-    - Source: `Cross-Site Tracking Cookies Blocked`
-    - Suggest: `Kuki Pelacakan Lintas Situs Diblokir`
-    - Inconsistent with contentBlocking.cookiesView.trackers2.label in the same panel, and "Lintas" without a noun is incomplete.
-- `protections.notBlocking.crossSiteTrackingCookies.title` — `browser/chrome/browser/browser.properties` — "Cross-Site Tracking Cookies" shortened to "Kuki Pelacakan Lintas", dropping "Situs".
-    - Current: `Tidak Memblokir Kuki Pelacakan Lintas`
-    - Source: `Not Blocking Cross-Site Tracking Cookies`
-    - Suggest: `Tidak Memblokir Kuki Pelacakan Lintas Situs`
-    - Same panel uses "Kuki Pelacakan Lintas Situs"; the shortened form is incomplete.
-- `trackingProtection.icon.activeTooltip2` — `browser/chrome/browser/browser.properties` — "Cross-site tracking cookies" shortened to "kuki pelacakan lintas", dropping "situs".
-    - Current: `kuki pelacakan lintas`
-    - Source: `Blocking social media trackers, cross-site tracking cookies, and fingerprinters.`
-    - Suggest: `kuki pelacakan lintas situs`
-    - Elsewhere in the same panel the term is "Kuki Pelacakan Lintas Situs" (contentBlocking.cookies.blockingTrackers3.label); "lintas" alone is a preposition-like modifier with no noun and is not a valid rendering.
 - `permission.midi-sysex.label` — `browser/chrome/browser/sitePermissions.properties` — "MIDI devices" rendered "Peranti MIDI" here but "Perangkat MIDI" in the adjacent permission.midi.label.
     - Current: `Mengakses Peranti MIDI dengan Dukungan SysEx`
     - Source: `Access MIDI devices with SysEx support`
@@ -1066,11 +1245,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `title: Turning this option on will disable the HTTP cache for all tabs that have the toolbox open. Service Workers are not affected by this option.`
     - Suggest: `Service Worker tidak terpengaruh oleh opsi ini.`
     - options-enable-service-workers-http-label in the same file keeps "Service Worker"; "Layanan Pekerja" ("worker service") is not recognisable as the API name.
-- `preventedConsoleClear` — `devtools/client/webconsole.properties` — `preventedConsoleClear` quotes “Persist Logs” but the string it names, `webconsole.console.settings.menu.item.enablePersistentLogs.label`, reads “Simpan Log”
-    - Current: `console.clear() tidak dijalankan karena “Persist Logs” aktif`
-    - Source: `console.clear() was prevented due to “Persist Logs”`
-    - Suggest: `Simpan Log`
-    - In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `preventedConsoleClear` — `devtools/shared/webconsole.properties` — `preventedConsoleClear` quotes “Persist Logs” but the string it names, `webconsole.console.settings.menu.item.enablePersistentLogs.label`, reads “Simpan Log”
     - Current: `console.clear() tidak dijalankan karena “Persist Logs” aktif`
     - Source: `console.clear() was prevented due to “Persist Logs”`
@@ -1116,20 +1290,85 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Animation cannot be run on the compositor because the frame was not marked active for ‘opacity’ animation`
     - Suggest: `tidak ditandai aktif pada bagian animasi ‘opacity’`
     - Misspelling of "bagian"; the parallel string CompositorAnimationWarningTransformFrameInactive spells it correctly.
-- _…and 25 more; see `state/` for the full list._
+- `writeError` — `dom/chrome/nsWebBrowserPersist.properties` — Typo "lokasi lainn".
+    - Current: `Coba menyimpan di lokasi lainn.`
+    - Source: `%S could not be saved, because an unknown error occurred.  Try saving to a different location.`
+    - Suggest: `Coba menyimpan di lokasi lain.`
+    - Trailing extra "n" in a user-facing save error.
+- `FeaturePolicyUnsupportedFeatureName` — `dom/chrome/security/security.properties` — Capitalization typo "FItur".
+    - Current: `Kebijakan FItur:`
+    - Source: `Feature Policy: Skipping unsupported feature name “%S”.`
+    - Suggest: `Kebijakan Fitur:`
+    - Stray capital I; the two adjacent FeaturePolicy strings spell it "Kebijakan Fitur".
+- `SSL_ERROR_INAPPROPRIATE_FALLBACK_ALERT` — `security/manager/chrome/pipnss/nsserrors.properties` — Typo "menilah" for "menolak".
+    - Current: `Server menilah handshake`
+    - Source: `The server rejected the handshake because the client downgraded to a lower TLS version than the server supports.`
+    - Suggest: `Server menolak handshake`
+    - "menilah" is not a word; en-US is "The server rejected the handshake".
+- `pageInfo_WeakCipher` — `security/manager/chrome/pippki/pippki.properties` — Typo "leman".
+    - Current: `menggunakan enkripsi leman`
+    - Source: `Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.`
+    - Suggest: `menggunakan enkripsi lemah`
+    - Misspelling of "lemah" in a user-facing security warning.
+- `pippki-pw-empty-warning` — `security/manager/security/pippki/pippki.ftl` — Duplicated auxiliary: "akan tidak akan dilindungi".
+    - Current: `Sandi dan kunci pribadi yang Anda simpan akan tidak akan dilindungi.`
+    - Source: `Your stored passwords and private keys will not be protected.`
+    - Suggest: `Sandi dan kunci pribadi yang Anda simpan tidak akan dilindungi.`
+    - Ungrammatical duplication of "akan".
+- `profileMissing` — `toolkit/chrome/mozapps/profile/profileSelection.properties` — The English word "Profile" is left in an otherwise Indonesian sentence.
+    - Current: `Profile %S Anda tidak dapat dimuat.`
+    - Source: `Your %S profile cannot be loaded. It may be missing or inaccessible.`
+    - Suggest: `Profil %S Anda tidak dapat dimuat.`
+    - Every other string in the file uses "Profil" (e.g. profileMissingTitle = Profil Hilang).
+- `about-glean-about-data-list-item-dictionary` — `toolkit/toolkit/about/aboutGlean.ftl` — Link text renders as "DictionaryGlean" — no space and reversed order.
+    - Current: `<a data-l10n-name="glean-dictionary-link">Dictionary{ -glean-brand-name }</a>`
+    - Source: `To browse the list of data collected by { -glean-brand-name } per application, please consult the <a data-l10n-name="glean-dictionary-link">{ -glean-brand-name } Dictionary</a>.`
+    - Suggest: `<a data-l10n-name="glean-dictionary-link">Kamus { -glean-brand-name }</a>`
+    - The term reference expands immediately after "Dictionary" with no separator, producing the run-together string "DictionaryGlean"; the parallel string about-glean-about-data-explanation renders it as "{ -glean-brand-name } Kamus".
+- `about-reader-custom-colors-background2` — `toolkit/toolkit/about/aboutReader.ftl` — Stray colon added to a color-picker label.
+    - Current: `.label = Latar Belakang:`
+    - Source: `label: Background title: Edit color`
+    - Suggest: `.label = Latar Belakang`
+    - None of the sibling labels in this group (Teks, Tautan yang dikunjungi, …) carry a colon, and the en-US source has none.
+- `intl-title` — `toolkit/toolkit/about/aboutSupport.ftl` — "Internationalization" rendered with the adjective "Internasional".
+    - Current: `intl-title = Pelokalan dan Internasional`
+    - Source: `Internationalization & Localization`
+    - Suggest: `intl-title = Internasionalisasi dan Pelokalan`
+    - The heading pairs two process nouns; "Internasional" is an adjective and does not name the counterpart of "Pelokalan".
+- `contentanalysis-slow-agent-dialog-body-file-and-more` — `toolkit/toolkit/contentanalysis/contentanalysis.ftl` — "meemrlukan" has transposed letters.
+    - Current: `Proses ini mungkin meemrlukan waktu.`
+    - Source: `{$count ->} [one] { $agent } is reviewing “{ $filename }” and { $count } additional item against your organization’s data policies. This may take a moment. [other] { $agent } is reviewing “{ $filename }” and { $count }…`
+    - Suggest: `Proses ini mungkin memerlukan waktu.`
+    - All the sibling contentanalysis-slow-agent-dialog-body-* strings spell it "memerlukan".
+- `autofill-use-payment-method-os-prompt-macos` — `toolkit/toolkit/formautofill/formAutofill.ftl` — "mengunakan" is missing a g.
+    - Current: `mengunakan informasi metode pembayaran yang tersimpan`
+    - Source: `use stored payment method information`
+    - Suggest: `menggunakan informasi metode pembayaran yang tersimpan`
+    - The parallel strings autofill-use-payment-method-os-prompt-windows/-other in the same file correctly spell "menggunakan".
+- `videocontrols-error-src-not-supported` — `toolkit/toolkit/global/videocontrols.ftl` — "dudukung" is a misspelling of "didukung".
+    - Current: `Format atau jenis MIME video tidak dudukung.`
+    - Source: `Video format or MIME type is not supported.`
+    - Suggest: `Format atau jenis MIME video tidak didukung.`
+    - The next string in the same file correctly uses "didukung".
+- _…and 6 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
+- `aiwindow-feedback-disclaimer` — `browser/browser/aiWindow.ftl` — Double space between "Anda" and "tetap pribadi".
+    - Current: `Obrolan lain Anda  tetap pribadi.`
+    - Source: `Submitting shares your feedback and this chat to help { -brand-shorter-name } improve { -smart-window-brand-name }. Your other chats stay private. <a data-l10n-name="learn-more">Learn more</a>`
+    - Suggest: `Obrolan lain Anda tetap pribadi.`
+    - Extra space inside the user-visible sentence; en-US has single spacing.
+- `smartwindow-disclaimer` — `browser/browser/aiWindow.ftl` — Final period from the source sentence is missing.
+    - Current: `AI bisa membuat kesalahan`
+    - Source: `AI can make mistakes.`
+    - Suggest: `AI bisa membuat kesalahan.`
+    - en-US "AI can make mistakes." ends with a period; the translation drops the sentence-final punctuation.
 - `desktop-to-mobile-subtitle` — `browser/browser/newtab/onboarding.ftl` — The quoted button name does not match the actual translated button label.
     - Current: `pilih “Sinkronkan ke seluler”`
     - Source: `Scan the QR code to download { -brand-product-name } for mobile. Once installed, select “Sync to mobile” to access your passwords, bookmarks, and more on the go.`
     - Suggest: `pilih “Sinkronkan ke ponsel”`
     - The quoted string refers to sync-to-mobile-button-label, which is translated as “Sinkronkan ke ponsel”; users are told to look for a control that does not exist under that name.
-- `connection-dns-over-https-custom-label` — `browser/browser/preferences/connection.ftl` — "Custom" rendered two different ways in the same dialog
-    - Current: `Ubahsuai`
-    - Source: `Custom`
-    - Suggest: `Khusus`
-    - In the same Connection Settings dialog, connection-dns-over-https-url-custom translates "Custom" as "Khusus" (as does addEngine's "Tambahkan Mesin Khusus"); this label uses "Ubahsuai" for the very same control.
 - `permissions-exceptions-https-only-window2` — `browser/browser/preferences/permissions.ftl` — "HTTPS-Only Mode" left in English in the title while the dialog body translates it
     - Current: `Pengecualian - Mode HTTPS-Only`
     - Source: `style: { permissions-window2.style } title: Exceptions - HTTPS-Only Mode`
@@ -1200,11 +1439,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `accesskey: W label: Whole Words tooltiptext: Search whole words only`
     - Suggest: `Seluruh Kata`
     - findbar-entire-word-status in the same file reads "(Hanya seluruh kata)"; the label and the status text of the same toggle contradict each other, and the label version is the wrong one.
-- `cert-error-symantec-distrust-description` — `toolkit/toolkit/neterror/certError.ftl` — "pewenang otoritas" is a garbled rendering of "certificate authorities".
-    - Current: `pewenang otoritas`
-    - Source: `Websites prove their identity via certificates, which are issued by certificate authorities. Most browsers no longer trust certificates issued by GeoTrust, RapidSSL, Symantec, Thawte, and VeriSign. { $hostname } uses a…`
-    - Suggest: `otoritas sertifikat`
-    - en-US: "certificates, which are issued by certificate authorities". The rest of the file uses "otoritas sertifikat"; "pewenang otoritas" says "authority authority" and drops "certificate".
 
 ---
 

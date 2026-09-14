@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-07 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
-| **Previous run** | 2026-09-03 @ `075eb543fd91` |
+| **Generated** | 2026-09-14 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e44f1369fb6d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8ffd279d75ec` |
+| **Previous run** | 2026-09-07 @ `3c0c507b8d42` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 34 of 18,272 |
+| **Strings reviewed this run** | 104 of 16,168 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -20,15 +20,19 @@ Also for en-GB: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ### 🆕 New findings (1)
 
+- `newtab-customize-panel-back-button` — `browser/browser/newtab/newtab.ftl` — "Customize" in the panel name is a UI reference that should not have been changed by the -ise adaptation if the panel label is Customize; but the localized form is inconsistent with the rest of the locale's handling of this label.
+    - Current: `Back to Customise`
+    - Source: `aria-label: Back to Customize title: Back to Customize`
+    - Suggest: `Back to Customize`
+    - The string refers to the Customize panel by name; the panel's own label in en-GB newtab.ftl is "Customize", so renaming it here breaks the reference.
+
+### ✅ Fixed since the last run (1)
+
 - `urlbar-searchmode-dropmarker2` — `browser/browser/browser.ftl` — Sentence case of the source has been changed to title case without cause.
     - Current: `Pick a Search Engine`
     - Source: `title: Pick a search engine`
     - Suggest: `Pick a search engine`
     - en-US reads "Pick a search engine" in sentence case; en-GB does not require title case here and the capitalisation change is an unwarranted departure from the source.
-
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -38,9 +42,16 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (2)
 
-_Nothing retired._
+- `PINotInProlog` — `dom/chrome/layout/xul.properties` — "prolog" (the XML technical term) was over-corrected to "prologue", and the sibling string keeps "prolog".
+    - Current: `does not have any effect outside the prologue any longer`
+    - Suggest: `does not have any effect outside the prolog any longer`
+    - "prolog" here is the XML specification term (the XML prolog), not the ordinary word; the immediately following string PINotInProlog2 in the same file correctly keeps "outside the prolog", so the file contradicts itself.
+- `discopane-intro` — `toolkit/toolkit/about/aboutAddons.ftl` — "software programmes" uses the broadcast/schedule sense; British English spells computer programs "programs".
+    - Current: `These small software programmes are`
+    - Suggest: `These small software programs are`
+    - In en-GB, "programme" means a broadcast or plan; a computer program is spelled "program". The rest of this locale follows that rule (toolkit/toolkit/global/extensions.ftl "Another program on your computer…", toolkit/toolkit/neterror/certError.ftl "if an antivirus program…", toolkit/toolkit/neterror/nsserrors.ftl "enabled in this program").
 
 ---
 
@@ -48,8 +59,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 362 |
-| Strings | 18,272 |
+| Files | 326 |
+| Strings | 16,168 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -63,7 +74,7 @@ _Nothing retired._
 | Source-language spellings left unchanged | 2 |
 | Access keys not in their label | 0 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 41 |
+| Typography deviations from this locale's own norm | 34 |
 
 ### Completeness
 
@@ -75,30 +86,30 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 597, `curly-single` 101, `straight-double` 58 | **curly-double** |
-| apostrophe | `typographic` 1122, `straight` 56 | **typographic** |
-| ellipsis | `char` 464, `ascii` 1 | **char** |
-| dash | `em` 108, `en` 4 | **em** |
+| quotes | `curly-double` 533, `curly-single` 93, `straight-double` 55 | **curly-double** |
+| apostrophe | `typographic` 988, `straight` 43 | **typographic** |
+| ellipsis | `char` 389, `ascii` 1 | **char** |
+| dash | `em` 81, `en` 4 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **typography — 41 strings** — 41 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
-    - Affected: `BlockMixedActiveContent`, `BlockMixedDisplayContent`, `CSPROViolation`, `CSPROViolationWithURI`, `CSPViolation`, `CSPViolationWithURI`, `DontAskAgain`, `FullscreenDeniedContainerNotAllowed`, `ImageMapCircleNegativeRadius`, `ImageMapCircleWrongNumberOfCoords`, `ImageMapPolyOddNumberOfCoords`, `ImageMapPolyWrongNumberOfCoords` …and 25 more
+- **typography — 34 strings** — 34 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
+    - Affected: `BlockMixedActiveContent`, `BlockMixedDisplayContent`, `DontAskAgain`, `FullscreenDeniedContainerNotAllowed`, `ImageMapCircleNegativeRadius`, `ImageMapCircleWrongNumberOfCoords`, `ImageMapPolyOddNumberOfCoords`, `ImageMapPolyWrongNumberOfCoords`, `ImageMapRectBoundsError`, `IneligibleResource`, `LenientThisWarning`, `LoadingMixedActiveContent2` …and 20 more
 
 ---
 
-## 3. Open findings (18)
+## 3. Open findings (16)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 4 |
 | 2 | Wrong content (says something other than the English) | 7 |
-| 3 | Degraded language (grammar, spelling, terminology) | 5 |
-| 4 | Cosmetic (typography, spacing) | 2 |
+| 3 | Degraded language (grammar, spelling, terminology) | 4 |
+| 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -120,6 +131,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Start { -brand-short-name }, open the application menu ☰ and go to Settings > Sync`
     - Suggest: `open the application menu ☰ and go to Settings > Sync`
     - pane-sync-title3 in browser/browser/preferences/preferences.ftl is localised as "Sync"; the quoted navigation path must reproduce the label the user will actually see.
+- `newtab-customize-panel-back-button` — `browser/browser/newtab/newtab.ftl` — "Customize" in the panel name is a UI reference that should not have been changed by the -ise adaptation if the panel label is Customize; but the localized form is inconsistent with the rest of the locale's handling of this label.
+    - Current: `Back to Customise`
+    - Source: `aria-label: Back to Customize title: Back to Customize`
+    - Suggest: `Back to Customize`
+    - The string refers to the Customize panel by name; the panel's own label in en-GB newtab.ftl is "Customize", so renaming it here breaks the reference.
 - `policy-AllowFileSelectionDialogs` — `browser/browser/policies/policies-descriptions.ftl` — UI term "dialog" spelled "dialogues" here, against the tree's dominant "dialog".
     - Current: `Allow file selection dialogues.`
     - Source: `Allow file selection dialogs.`
@@ -153,11 +169,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### C. Grammar, agreement & spelling
 
-- `discopane-intro` — `toolkit/toolkit/about/aboutAddons.ftl` — "software programmes" uses the broadcast/schedule sense; British English spells computer programs "programs".
-    - Current: `These small software programmes are`
-    - Source: `Extensions and themes are like apps for your browser, and they let you protect passwords, download videos, find deals, block annoying ads, change how your browser looks, and much more. These small software programs are…`
-    - Suggest: `These small software programs are`
-    - In en-GB, "programme" means a broadcast or plan; a computer program is spelled "program". The rest of this locale follows that rule (toolkit/toolkit/global/extensions.ftl "Another program on your computer…", toolkit/toolkit/neterror/certError.ftl "if an antivirus program…", toolkit/toolkit/neterror/nsserrors.ftl "enabled in this program").
 - `discopane-intro3` — `toolkit/toolkit/about/aboutAddons.ftl` — "software programmes" uses the broadcast/schedule sense; British English spells computer programs "programs".
     - Current: `so much more. These small software programmes are often developed by a third party.`
     - Source: `Extensions and themes let you customize { -brand-product-name }. They can boost privacy, enhance productivity, improve media, change the way { -brand-product-name } looks, and so much more. These small software programs…`
@@ -188,21 +199,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### E. Typography, punctuation & spacing
 
-- `urlbar-searchmode-dropmarker2` — `browser/browser/browser.ftl` — Sentence case of the source has been changed to title case without cause.
-    - Current: `Pick a Search Engine`
-    - Source: `title: Pick a search engine`
-    - Suggest: `Pick a search engine`
-    - en-US reads "Pick a search engine" in sentence case; en-GB does not require title case here and the capitalisation change is an unwarranted departure from the source.
 - `migration-wizard-import-browser-no-browsers` — `browser/browser/migrationWizard.ftl` — "programs" over-corrected to "programmes", which in British English means broadcasts/schedules, not software.
     - Current: `couldn’t find any programmes that contain bookmark, history or password data`
     - Source: `{ -brand-short-name } couldn’t find any programs that contain bookmark, history or password data.`
     - Suggest: `couldn’t find any programs that contain bookmark, history or password data`
     - British English retains the spelling "program" for computer software and reserves "programme" for broadcasts, events and plans. The locale itself follows this everywhere else, including the equivalent legacy string no-migration-sources in browser/browser/migration.ftl ("No programs that contain bookmarks, history or password data could be found.") and toolkit/toolkit/global/extensionPermissions.f…
-- `PINotInProlog` — `dom/chrome/layout/xul.properties` — "prolog" (the XML technical term) was over-corrected to "prologue", and the sibling string keeps "prolog".
-    - Current: `does not have any effect outside the prologue any longer`
-    - Source: `<?%1$S?> processing instruction does not have any effect outside the prolog anymore (see bug 360119).`
-    - Suggest: `does not have any effect outside the prolog any longer`
-    - "prolog" here is the XML specification term (the XML prolog), not the ordinary word; the immediately following string PINotInProlog2 in the same file correctly keeps "outside the prolog", so the file contradicts itself.
 
 ---
 
@@ -235,8 +236,9 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (12)
+### Fixed to date (13)
 
+- `urlbar-searchmode-dropmarker2` — `browser/browser/browser.ftl` — fixed 2026-09-14
 - `urlbar-popup-blocked2` — `browser/browser/browser.ftl` — fixed 2026-08-27
 - `mr2022-onboarding-colorway-description-dreamer` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-27
 - `SEC_ERROR_LIBPKIX_INTERNAL` — `security/manager/chrome/pipnss/nsserrors.properties` — fixed 2026-08-27

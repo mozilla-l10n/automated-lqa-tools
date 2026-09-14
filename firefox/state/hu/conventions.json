@@ -1,8 +1,8 @@
 {
  "_meta": {
   "locale": "hu",
-  "prose_chunks": 19008,
-  "strings": 18219
+  "prose_chunks": 16884,
+  "strings": 16159
  },
  "apostrophe": {
   "straight": 1,
@@ -10,11 +10,11 @@
  },
  "dash": {
   "em": 2,
-  "en": 164
+  "en": 130
  },
  "ellipsis": {
-  "ascii": 7,
-  "char": 460
+  "ascii": 4,
+  "char": 389
  },
  "fullwidth": {
   "punctuation": 0
@@ -32,7 +32,7 @@
  "quotes": {
   "curly-single": 1,
   "german-double": 2,
-  "polish-double": 876,
+  "polish-double": 792,
   "straight-double": 33
  }
 }

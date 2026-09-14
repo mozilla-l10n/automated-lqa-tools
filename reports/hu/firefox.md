@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-07 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
-| **Previous run** | 2026-09-03 @ `075eb543fd91` |
+| **Generated** | 2026-09-14 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e44f1369fb6d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8ffd279d75ec` |
+| **Previous run** | 2026-09-07 @ `3c0c507b8d42` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 18,219 |
+| **Strings reviewed this run** | 146 of 16,159 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,66 @@ Also for hu: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (10)
 
-_No new findings._
+- `ip-protection-site-rules-button` — `browser/browser/ipProtection.ftl` — The description reverses who needs the extra privacy, asserting that the sites must provide privacy rather than that the user wants extra privacy on them.
+    - Current: `Állítson be szabályokat azokhoz a webhelyekhez, amelyeknek fokozott adatvédelmet kell biztosítaniuk, vagy ki kell kapcsolni a VPN-t.`
+    - Source: `description: Set rules for sites that need extra privacy or VPN turned off. label: Manage website rules`
+    - Suggest: `Állítson be szabályokat azokhoz a webhelyekhez, amelyeknél fokozott adatvédelemre van szükség, vagy amelyeknél ki kell kapcsolni a VPN-t.`
+    - en-US "sites that need extra privacy or VPN turned off" means sites for which the user needs extra privacy; the Hungarian says the sites are obliged to provide extra privacy.
+- `NavigationChangeFloodingPrevented` — `dom/chrome/dom/dom.properties` — Case agreement error: "navigálására" should be "navigálásra" in this construction.
+    - Current: `túl sok kísérlet történt az előzményekben való navigálására vagy azok módosítására`
+    - Source: `Too many attempts to navigate or modify history within a short timeframe.`
+    - Suggest: `túl sok kísérlet történt az előzményekben való navigálásra vagy azok módosítására`
+    - "kísérlet történt" requires the sublative -ra/-re without possessive suffix; "navigálására" has a stray possessive ending that does not agree with anything.
+- `fxa-menu-signed-out-title` — `browser/browser/sync.ftl` — "Sign in to sync" is rendered as "Sign in to Sync" treating sync as the product name, and the brand is inflected oddly.
+    - Current: `Jelentkezzen be a Syncbe`
+    - Source: `Sign in to sync`
+    - Suggest: `Jelentkezzen be a szinkronizáláshoz`
+    - The en-US uses the verb "sync" (to synchronize), not the capitalized Sync feature brand; the Hungarian asserts signing in *into* Sync.
+- `fxa-menu-signed-out-description` — `browser/browser/sync.ftl` — A sentence-final period was added where the en-US short status line has none.
+    - Current: `Ön kijelentkezett.`
+    - Source: `You’re signed out`
+    - Suggest: `Ön kijelentkezett`
+    - The source "You’re signed out" has no terminal punctuation; this is a short card/menu status label.
+- `newtab-wallpaper-remove-image-numbered` — `browser/browser/newtab/newtab.ftl` — Missing ordinal period after the number, inconsistent with the numbered-image string which uses "{ $number }. kép".
+    - Current: `aria-label: { $number } kép eltávolítása`
+    - Source: `aria-label: Remove image { $number } title: Remove image { $number }`
+    - Suggest: `aria-label: { $number }. kép eltávolítása`
+    - Hungarian ordinal numbering requires a period (as used in newtab-wallpaper-your-images-item-numbered: "{ $number }. kép"); without it the text reads as a count ("remove N images").
+- `newtab-wallpaper-remove-image-numbered` — `browser/browser/newtab/newtab.ftl` — Missing ordinal period after the number in the tooltip.
+    - Current: `title: { $number } kép eltávolítása`
+    - Source: `aria-label: Remove image { $number } title: Remove image { $number }`
+    - Suggest: `title: { $number }. kép eltávolítása`
+    - Same as the aria-label: Hungarian needs "{ $number }. kép" to mean "image N" rather than "N images".
+- `onboarding-refresh-terms-of-use-with-links` — `browser/browser/newtab/onboarding.ftl` — Stray space before the closing anchor tag creates a space before the period in the rendered sentence.
+    - Current: `Adatvédelmi nyilatkozatunkat </a>.`
+    - Source: `By continuing, you agree to the <a data-l10n-name="terms_of_use">{ -brand-product-name } Terms of Use</a> and our <a data-l10n-name="privacy_notice">Privacy Notice</a>. To help improve the browser, { -brand-product-name…`
+    - Suggest: `Adatvédelmi nyilatkozatunkat</a>.`
+    - The en-US has no space before </a>; the extra space produces "nyilatkozatunkat ." visually in the link text/punctuation boundary.
+- `onboarding-refresh-terms-of-use-with-links` — `browser/browser/newtab/onboarding.ftl` — "interaction data" is rendered as "használati adatok" (usage data) instead of interaction data.
+    - Current: `diagnosztikai és használati adatokat`
+    - Source: `By continuing, you agree to the <a data-l10n-name="terms_of_use">{ -brand-product-name } Terms of Use</a> and our <a data-l10n-name="privacy_notice">Privacy Notice</a>. To help improve the browser, { -brand-product-name…`
+    - Suggest: `diagnosztikai és interakciós adatokat`
+    - en-US says "diagnostic and interaction data"; "használati" means usage, a different data category in Mozilla's privacy terminology.
+- `onboarding-refresh-data-collection-link` — `browser/browser/newtab/onboarding.ftl` — "Manage" translated as "módosítása" (change) instead of "kezelése" (manage).
+    - Current: `Adatgyűjtési beállítások módosítása`
+    - Source: `Manage data collection settings`
+    - Suggest: `Adatgyűjtési beállítások kezelése`
+    - en-US "Manage data collection settings"; the established Hungarian term for Manage is "kezelése".
+- `autofill-delete-payment-method-os-prompt-windows` — `toolkit/toolkit/formautofill/formAutofill.ftl` — "delete stored payment method information" was rendered as "akar használni" (wants to use) instead of "törölni akarja" (wants to delete).
+    - Current: `A { -brand-short-name } tárolt fizetésimód-információkat akar használni.`
+    - Source: `{ -brand-short-name } is trying to delete stored payment method information. Confirm access to this Windows account below.`
+    - Suggest: `A { -brand-short-name } törölni akarja a tárolt fizetésimód-információkat.`
+    - The en-US says the browser is trying to delete the stored payment method information; the Hungarian says it wants to use it, which misstates the action being authorized (and is inconsistent with the sibling -other/-macos strings).
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `pdfjs-editor-undo-bar-message-multiple` — `toolkit/toolkit/pdfviewer/viewer.ftl` — "annotation" rendered as "kommentár", unlike everywhere else in the file.
+    - Current: `{ $count } kommentár eltávolítva`
+    - Source: `{$count ->} [one] { $count } annotation removed [other] { $count } annotations removed`
+    - Suggest: `{ $count } megjegyzés eltávolítva`
+    - pdfjs-text-annotation-type translates "Annotation" as "megjegyzés", and the surrounding undo-bar strings use "Megjegyzés eltávolítva"; "kommentár" appears nowhere else.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -34,9 +87,173 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (42)
 
-_Nothing retired._
+- `about-logins-intro-import2` — `browser/browser/aboutLogins.ftl` — A stray message identifier is concatenated to the end of the translated string and will be displayed to users.
+    - Current: `egy fájlból</a>create-new-login-button =`
+    - Suggest: `egy fájlból</a>`
+    - The text `create-new-login-button =` is leftover editing debris pasted into the value; the en-US string ends after the link.
+- `pocket-panel-signup-signup-firefox` — `browser/browser/aboutPocket.ftl` — “Sign up with Firefox” is rendered as “Firefox login”, reversing sign-up into sign-in.
+    - Current: `{ -brand-product-name } bejelentkezés`
+    - Suggest: `Regisztráció a { -brand-product-name }kal`
+    - en-US is “Sign up with { -brand-product-name }”; the sibling string pocket-panel-signup-signup-email correctly uses “Regisztráció”, while “bejelentkezés” means log in.
+- `genai-onboarding-copilot-learn` — `browser/browser/genai.ftl` — The product name Copilot is misspelled as “Coplit”.
+    - Current: `Tudjon meg többet a Coplitról`
+    - Suggest: `Tudjon meg többet a Copilotról`
+    - Copilot is a brand name and must be spelled correctly; the same file spells it correctly elsewhere.
+- `newtab-stocks-menu-search` — `browser/browser/newtab/newtab.ftl` — Wrong case ending makes the menu item ungrammatical.
+    - Current: `Részvénykódok keresésére`
+    - Suggest: `Részvénykódok keresése`
+    - The sublative -re turns the label into a dangling "for the searching of…"; other menu items in the widget use the plain nominal form.
+- `mr2022-onboarding-colorway-tooltip-innovator2` — `browser/browser/newtab/onboarding.ftl` — Colorway name rendered differently in the tooltip than in its own label and description.
+    - Current: `Innovátor (narancs)`
+    - Suggest: `Újító (narancs)`
+    - mr2022-onboarding-colorway-label-innovator and -description-innovator both use "újító", so the tooltip names a different colorway than the swatch it describes.
+- `blocklist-treehead-list` — `browser/browser/preferences/blocklists.ftl` — Column header "List" rendered as the action noun "Listing".
+    - Current: `Listázás`
+    - Suggest: `Lista`
+    - This is a tree column header naming the block list, a noun; "Listázás" means the act of listing.
+- `fxa-qrcode-pair-step2-signin` — `browser/browser/preferences/fxaPairDevice.ftl` — Wrong definite article before a vowel-initial word.
+    - Current: `koppintson a <strong>Adatok szinkronizálása és mentése</strong> elemre`
+    - Suggest: `koppintson az <strong>Adatok szinkronizálása és mentése</strong> elemre`
+    - "Adatok" begins with a vowel, so the article must be "az".
+- `forms-generate-passwords` — `browser/browser/preferences/preferences.ftl` — Garbled coordination: "javaslata az előállítása".
+    - Current: `Erős jelszavak javaslata az előállítása`
+    - Suggest: `Erős jelszavak javaslata és előállítása`
+    - en-US: "Suggest and generate strong passwords". The conjunction "és" was replaced by the article "az", leaving an ungrammatical string.
+- `preferences-doh-description` — `browser/browser/preferences/preferences.ftl` — "lássak" (1sg) should be "lássák" (3pl).
+    - Current: `hogy lássak, hogy melyik weboldalakat éri el`
+    - Suggest: `hogy lássák, hogy mely weboldalakat éri el`
+    - Same conjugation error as in preferences-doh-description2: the subject "mások" requires "lássák".
+- `sitedata-option-block-cross-site-cookies` — `browser/browser/preferences/preferences.ftl` — Blocking of tracking cookies turned into isolation.
+    - Current: `Webhelyek közötti követő és egyéb webhelyek közötti sütik elkülönítése`
+    - Suggest: `Webhelyek közötti nyomkövető sütik, és a többi webhelyek közötti süti elkülönítése`
+    - en-US: "Cross-site tracking cookies, and isolate other cross-site cookies" — the first item is blocked (this is the "Type blocked" dropdown), only the rest are isolated. The Hungarian applies isolation to both.
+- `screenshots-private-window-error-title` — `browser/browser/screenshots.ftl` — Plural verb with a singular brand-name subject.
+    - Current: `A { -screenshots-brand-name } le vannak tiltva Privát böngészésben`
+    - Suggest: `A { -screenshots-brand-name } le van tiltva a privát böngészésben`
+    - en-US “{ -screenshots-brand-name } is disabled…”; the brand term is singular, so “vannak” does not agree.
+- `tabbrowser-confirm-close-tabs-with-key-checkbox` — `browser/browser/tabbrowser.ftl` — Case suffix turns “quitting with <key>” into “quitting from <key>”.
+    - Current: `Megerősítés a { $quitKey }ból történő kilépés előtt`
+    - Suggest: `Megerősítés a { $quitKey } billentyűvel történő kilépés előtt`
+    - en-US “Confirm before quitting with { $quitKey }”. The -ból ablative reads as quitting out of the key; the parallel string tabbrowser-ask-close-tabs-with-key-checkbox uses the correct “billentyűvel”.
+- `protections.notBlocking.fingerprinters.title` — `browser/chrome/browser/browser.properties` — Misspelled compound: “ujjlenyomatok-készítőket” instead of “ujjlenyomat-készítőket”.
+    - Current: `Nem blokkolja az ujjlenyomatok-készítőket`
+    - Suggest: `Nem blokkolja az ujjlenyomat-készítőket`
+    - The term is consistently “ujjlenyomat-készítők” elsewhere in the same file (protections.blocking.fingerprinters.title, trackingProtection.icon.activeTooltip2); the plural first member is not valid in this compound.
+- `webauthn.selectSignResultPrompt` — `browser/chrome/browser/browser.properties` — “or cancel” rendered as “or delete”.
+    - Current: `Válassza ki, hogy melyiket szeretné használni vagy törölni.`
+    - Suggest: `Válassza ki, melyiket szeretné használni, vagy szakítsa meg a műveletet.`
+    - en-US “Select which to use or cancel” offers cancelling the operation; “törölni” tells the user they can delete an account, an action the dialog does not offer.
+- `unknownSocketType` — `browser/chrome/overrides/appstrings.properties` — “doesn’t know how to communicate” rendered as “doesn’t know whether to communicate”.
+    - Current: `A Firefox nem tudja, hogy kommunikáljon a kiszolgálóval.`
+    - Suggest: `A Firefox nem tudja, hogyan kommunikáljon a kiszolgálóval.`
+    - Same as clientSocketMisconfiguration: the missing “hogyan” changes the meaning of the error message.
+- `autofillReauthCheckboxLin` — `browser/extensions/formautofill/formautofill.properties` — “stored credit cards” translated as “stored authentication data”.
+    - Current: `Linux-hitelesítés megkövetelése a tárolt hitelesítési adatok automatikus kitöltéséhez, megtekintéséhez vagy szerkesztéséhez.`
+    - Suggest: `Linux-hitelesítés megkövetelése a tárolt bankkártyaadatok automatikus kitöltéséhez, megtekintéséhez vagy szerkesztéséhez.`
+    - en-US: “Require Linux authentication to autofill, view, or edit stored credit cards.” The Hungarian names authentication data instead of credit cards.
+- `autofillReauthCheckboxMac` — `browser/extensions/formautofill/formautofill.properties` — “stored credit cards” translated as “stored authentication data”.
+    - Current: `MacOS-hitelesítés megkövetelése a tárolt hitelesítési adatok automatikus kitöltéséhez, megtekintéséhez vagy szerkesztéséhez.`
+    - Suggest: `macOS-hitelesítés megkövetelése a tárolt bankkártyaadatok automatikus kitöltéséhez, megtekintéséhez vagy szerkesztéséhez.`
+    - en-US says “autofill, view, or edit stored credit cards”; the Hungarian says the setting protects stored authentication data, describing a different feature. Also “MacOS” should be “macOS” as elsewhere in the file (useCreditCardPasswordPrompt notes, en-US spelling).
+- `autofillReauthCheckboxWin` — `browser/extensions/formautofill/formautofill.properties` — “stored credit cards” translated as “stored authentication data”.
+    - Current: `Windows-hitelesítés megkövetelése a tárolt hitelesítési adatok automatikus kitöltéséhez, megtekintéséhez vagy szerkesztéséhez.`
+    - Suggest: `Windows-hitelesítés megkövetelése a tárolt bankkártyaadatok automatikus kitöltéséhez, megtekintéséhez vagy szerkesztéséhez.`
+    - en-US: “Require Windows authentication to autofill, view, or edit stored credit cards.” The Hungarian names authentication data instead of credit cards, describing the wrong protected object.
+- `STUB_BLURB_SECOND1` — `browser/installer/nsisstrings.properties` — "Faster page loading and tab switching" became "faster page loading, without tab switching".
+    - Current: `Gyorsabb oldalbetöltés, lapváltás nélkül`
+    - Suggest: `Gyorsabb oldalbetöltés és lapváltás`
+    - The English lists two things that are faster; the Hungarian negates the second one ("nélkül" = without), stating the opposite of the source.
+- `attachments_label` — `browser/pdfviewer/viewer.properties` — Sidebar button label “Attachments” rendered as the sentence “There is an attachment”.
+    - Current: `Van melléklet`
+    - Suggest: `Mellékletek`
+    - This is the alt text/label of the attachments panel button, a noun; all neighbouring labels (Rétegek, Bélyegképek) are plain nouns. “Van melléklet” asserts that an attachment exists.
+- `document_outline.title` — `browser/pdfviewer/viewer.properties` — “Show Document Outline” rendered as “show document online”.
+    - Current: `Dokumentum megjelenítése online (dupla kattintás minden elem kinyitásához/összecsukásához)`
+    - Suggest: `Dokumentumvázlat megjelenítése (dupla kattintás minden elem kinyitásához/összecsukásához)`
+    - “outline” was read as “online”. The sibling label document_outline_label correctly uses “Dokumentumvázlat”, so the tooltip contradicts the button it describes.
+- `document_properties_page_size_name_legal` — `browser/pdfviewer/viewer.properties` — The paper size name “Legal” is translated as “Legal information”.
+    - Current: `Jogi információk`
+    - Suggest: `Legal`
+    - This string is a paper format name in the list with A3, A4 and Letter (all left untranslated). “Jogi információk” means “legal information” and names the wrong thing entirely.
+- `noDomMutationBreakpoints` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints` quotes “Töréspont…” but the string it names, `watchpoints.submenu`, reads “Szüneteltetés…”
+    - Current: `Kattintson a jobb gombbal egy elemre itt: %S, és válassza a „Töréspont…” lehetőséget`
+    - Suggest: `Szüneteltetés…`
+    - In the source this string quotes “Break on…”, which is exactly the value of `watchpoints.submenu` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `inspector.eyedropper.label` — `devtools/client/inspector.properties` — "Grab a color from the page" rendered as "Save a color from the page".
+    - Current: `inspector.eyedropper.label = Szín mentése az oldalról`
+    - Suggest: `inspector.eyedropper.label = Szín kiválasztása az oldalról`
+    - The eyedropper picks a color, it does not save one; the variant inspector.eyedropper.label2 of the same English string uses "Szín kiválasztása az oldalról".
+- `inactive-css-not-display-block-on-floated` — `devtools/client/tooltips.ftl` — The CSS keyword value <strong>block</strong> was translated as "blokkolásra" ("to blocking").
+    - Current: `A <strong>display</strong> értéket <strong>blokkolásra</strong> változtatta a motor`
+    - Suggest: `A <strong>display</strong> értéket <strong>block</strong> értékre változtatta a motor`
+    - The section comment says CSS properties and values in <strong> tags should not be translated; "blokkolásra" also means "blocking", not the display value.
+- `maxTimersExceeded` — `devtools/client/webconsole.properties` — console.time() timers called "óra" (clock) while every neighbouring string uses "időzítő".
+    - Current: `maxTimersExceeded = Ezen az oldalon nem indítható el több óra.`
+    - Suggest: `maxTimersExceeded = Ezen az oldalon nem indítható el több időzítő.`
+    - timerAlreadyExists/timerDoesntExist/timerJSError all render "timer" as "időzítő"; "óra" (clock/hour) is wrong in this surface.
+- `webconsole.input.selector.top` — `devtools/client/webconsole.properties` — "Top" (the top-level execution context) rendered as the direction "Up".
+    - Current: `webconsole.input.selector.top = Fel`
+    - Suggest: `webconsole.input.selector.top = Legfelső`
+    - The developer comment states this is the term for the primary thread of execution in the page, not a direction; "Fel" means "up".
+- `webconsole.reverseSearch.input.placeHolder` — `devtools/client/webconsole.properties` — "Search history" (search the history) rendered as the noun phrase "history of the search".
+    - Current: `webconsole.reverseSearch.input.placeHolder = Keresés előzményei`
+    - Suggest: `webconsole.reverseSearch.input.placeHolder = Előzmények keresése`
+    - The input searches the command history; the button tooltips in the same file correctly say "Fordított előzménykereső". The same wrong value is in devtools/shared/webconsole.properties.
+- `DocumentSetDomainNotAllowedWarning` — `dom/chrome/dom/dom.properties` — “cross-origin isolated environment” rendered as “eredettől független környezet” (origin-independent environment).
+    - Current: `eredettől független környezetben nem engedélyezett`
+    - Suggest: `eredet szerint izolált környezetben nem engedélyezett`
+    - Cross-origin isolation is a specific opt-in state; “origin-independent” describes the opposite property and misleads the developer.
+- `MathML_DeprecatedStyleAttributeWarning` — `dom/chrome/dom/dom.properties` — The MathML attribute name fontstyle is misspelled as “fonststlye”.
+    - Current: `„fonststlye”`
+    - Suggest: `„fontstyle”`
+    - en-US lists “fontstyle” and the note says do not translate it; the garbled token names a nonexistent attribute.
+- `LoadingMixedDisplayObjectSubrequestDeprecation` — `dom/chrome/security/security.properties` — “within a plugin” is rendered as “egy modulban” (in a module).
+    - Current: `egy modulban nem javasolt`
+    - Suggest: `egy bővítményben nem javasolt`
+    - en-US says “within a plugin”; the locale renders plugin as “bővítmény” elsewhere (e.g. PluginHangUIStopButton), and “modul” is used for “module” in this very file.
+- `Strings.Details` — `toolkit/crashreporter/crashreporter.ini` — `Strings.Details` uses three dots where this locale uses …
+    - Current: `Részletek...`
+    - The tree uses … 460 times against 7 ASCII runs.
+- `Strings.ReportDuringSubmit2` — `toolkit/crashreporter/crashreporter.ini` — `Strings.ReportDuringSubmit2` uses three dots where this locale uses …
+    - Current: `Bejelentés elküldése...`
+    - The tree uses … 460 times against 7 ASCII runs.
+- `Strings.ReportResubmit` — `toolkit/crashreporter/crashreporter.ini` — `Strings.ReportResubmit` uses three dots where this locale uses …
+    - Current: `A korábban sikertelenül elküldött bejelentések újraküldése...`
+    - The tree uses … 460 times against 7 ASCII runs.
+- `discopane-intro` — `toolkit/toolkit/about/aboutAddons.ftl` — Two grammatical errors: wrong case agreement and "vagy" written for "van".
+    - Current: `Ezek a kis programokat általában     harmadik felek készítik. Itt vagy egy válogatás`
+    - Suggest: `Ezeket a kis programokat általában harmadik felek készítik. Itt van egy válogatás`
+    - "Ezek a kis programokat" mixes nominative demonstrative with an accusative noun (should be "Ezeket a kis programokat"), and "Itt vagy egy válogatás" means "here you are a selection" — "van" is required.
+- `deprecation-description` — `toolkit/toolkit/about/aboutPlugins.ftl` — Accusative "bővítményt" used with a predicate adjective; sentence is ungrammatical.
+    - Current: `Néhány bővítményt már nem támogatott.`
+    - Suggest: `Néhány bővítmény már nem támogatott.`
+    - "támogatott" here is a predicative adjective, so the subject must be nominative ("bővítmény"), not accusative ("bővítményt").
+- `plugins-widevine-description` — `toolkit/toolkit/about/aboutPlugins.ftl` — Definite article "az" before the consonant-initial URL "https://…".
+    - Current: `keresse fel az https://www.w3.org/TR/encrypted-media/ oldalt`
+    - Suggest: `keresse fel a https://www.w3.org/TR/encrypted-media/ oldalt`
+    - "https" is pronounced with an initial consonant, so the article must be "a". The parallel string plugins-openh264-description correctly uses "a https://www.openh264.org/".
+- `rights-webservices-term-5` — `toolkit/toolkit/about/aboutRights.ftl` — Liability disclaimer reverses "indirect" to "direct" (közvetlen), inverting the legal meaning.
+    - Current: `nem felelnek semmilyen közvetlen, különleges, következményes, büntetőjogi vagy példamutató kárért`
+    - Suggest: `nem felelnek semmilyen közvetett, különleges, véletlenszerű, következményes, büntető vagy példaértékű kárért`
+    - en-US: "will not be liable for any indirect, special, incidental, consequential, punitive, or exemplary damages". "közvetlen" means direct, the opposite of "indirect" (közvetett); "incidental" is also dropped. In a liability disclaimer this reverses which damages are excluded.
+- `abuse-report-learnmore` — `toolkit/toolkit/about/abuseReports.ftl` — "extensions" rendered as "bővítmények" (the locale's word for plugins) instead of "kiegészítők".
+    - Current: `További információk a bővítmények és témák jelentéséről`
+    - Suggest: `További információk a kiegészítők és témák jelentéséről`
+    - Throughout this file and the surrounding about:addons surface "extension" is "kiegészítő" (abuse-report-title-extension, abuse-report-messagebar-removed-extension), while "bővítmény" is reserved for plugins (aboutPlugins.ftl, addon-category-plugin). Using it here points the user at the wrong add-on type.
+- `profiledowngrade-sync` — `toolkit/toolkit/global/profileDowngrade.ftl` — Missing accusative ending on the object of "hozzon létre".
+    - Current: `hozzon létre egy új profil a { -brand-short-name } ezen telepítéséhez`
+    - Suggest: `hozzon létre egy új profilt a { -brand-short-name } ezen telepítéséhez`
+    - "létrehoz" takes a direct object; "profil" must be "profilt".
+- `pdfjs-attachments-button-label` — `toolkit/toolkit/pdfviewer/viewer.ftl` — The sidebar tab label "Attachments" became the sentence "There is an attachment".
+    - Current: `Van melléklet`
+    - Suggest: `Mellékletek`
+    - en-US: "Attachments"; this is a panel label, and the parallel view-manager string pdfjs-views-manager-attachments-title in the same file correctly uses "Mellékletek".
+- `pdfjs-document-outline-button` — `toolkit/toolkit/pdfviewer/viewer.ftl` — "Show Document Outline" rendered as "show the document online" — the word "outline" was mistaken for "online".
+    - Current: `Dokumentum megjelenítése online (dupla kattintás minden elem kinyitásához/összecsukásához)`
+    - Suggest: `Dokumentumvázlat megjelenítése (dupla kattintás minden elem kinyitásához/összecsukásához)`
+    - en-US: "Show Document Outline (double-click to expand/collapse all items)". The button's own label in the same file is correctly "Dokumentumvázlat", so the tooltip contradicts it and describes a non-existent action.
 
 ---
 
@@ -44,39 +261,35 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 362 |
-| Strings | 18,219 |
-| Missing strings | 53 |
+| Files | 325 |
+| Strings | 16,159 |
+| Missing strings | 9 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
-| Text quoting a UI label that no longer matches | 3 |
+| Text quoting a UI label that no longer matches | 2 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 1 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 11 |
+| Typography deviations from this locale's own norm | 8 |
 
 ### Completeness
 
-**53 strings** are not translated yet, concentrated in:
+**9 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 17
-- `browser/browser/permissions.ftl` — 10
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 8
-- `browser/browser/preferences/preferences.ftl` — 4
-- `browser/browser/aiWindow.ftl` — 3
-- `browser/browser/sharePanel.ftl` — 3
-- `browser/browser/sidebar.ftl` — 2
-- `devtools/client/netmonitor.properties` — 1
-- `dom/chrome/accessibility/AccessFu.properties` — 1
-- `dom/chrome/dom/dom.properties` — 1
-- `browser/browser/aboutPolicies.ftl` — 1
-- `browser/browser/preferences/formAutofill.ftl` — 1
+- `browser/browser/newtab/newtab.ftl` — 5
+- `toolkit/toolkit/about/pdfFeaturesNotification.ftl` — 2
+- `toolkit/toolkit/about/aboutAddons.ftl` — 1
+- `toolkit/toolkit/global/theme-picker.ftl` — 1
+
+**Files absent from the locale:**
+
+- `toolkit/toolkit/about/pdfFeaturesNotification.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -86,10 +299,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `polish-double` 876, `straight-double` 33, `german-double` 2, `curly-single` 1 | **polish-double** |
+| quotes | `polish-double` 792, `straight-double` 33, `german-double` 2, `curly-single` 1 | **polish-double** |
 | apostrophe | `typographic` 1, `straight` 1 | _mixed_ |
-| ellipsis | `char` 460, `ascii` 7 | **char** |
-| dash | `em` 2, `en` 164 | **en** |
+| ellipsis | `char` 389, `ascii` 4 | **char** |
+| dash | `em` 2, `en` 130 | **en** |
 | nbsp | `total` 6, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
 ---
@@ -100,15 +313,29 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (276)
+## 3. Open findings (243)
 
+> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+
+- `ip-protection-site-rules-button` — `browser/browser/ipProtection.ftl` — The description reverses who needs the extra privacy, asserting that the sites must provide privacy rather than that the user wants extra privacy on them.
+    - Current: `Állítson be szabályokat azokhoz a webhelyekhez, amelyeknek fokozott adatvédelmet kell biztosítaniuk, vagy ki kell kapcsolni a VPN-t.`
+    - Source: `description: Set rules for sites that need extra privacy or VPN turned off. label: Manage website rules`
+    - Suggest: `Állítson be szabályokat azokhoz a webhelyekhez, amelyeknél fokozott adatvédelemre van szükség, vagy amelyeknél ki kell kapcsolni a VPN-t.`
+    - en-US "sites that need extra privacy or VPN turned off" means sites for which the user needs extra privacy; the Hungarian says the sites are obliged to provide extra privacy.
+- `autofill-delete-payment-method-os-prompt-windows` — `toolkit/toolkit/formautofill/formAutofill.ftl` — "delete stored payment method information" was rendered as "akar használni" (wants to use) instead of "törölni akarja" (wants to delete).
+    - Current: `A { -brand-short-name } tárolt fizetésimód-információkat akar használni.`
+    - Source: `{ -brand-short-name } is trying to delete stored payment method information. Confirm access to this Windows account below.`
+    - Suggest: `A { -brand-short-name } törölni akarja a tárolt fizetésimód-információkat.`
+    - The en-US says the browser is trying to delete the stored payment method information; the Hungarian says it wants to use it, which misstates the action being authorized (and is inconsistent with the sibling -other/-macos strings).
+
+_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 31 |
-| 2 | Wrong content (says something other than the English) | 122 |
-| 3 | Degraded language (grammar, spelling, terminology) | 89 |
-| 4 | Cosmetic (typography, spacing) | 29 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 26 |
+| 2 | Wrong content (says something other than the English) | 113 |
+| 3 | Degraded language (grammar, spelling, terminology) | 75 |
+| 4 | Cosmetic (typography, spacing) | 25 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -117,11 +344,6 @@ _Nothing reported._
     - Source: `{$count ->} [1] This will remove the password saved to { -brand-short-name } on all your synced devices. This will also remove any breach alerts that appear here. You cannot undo this action. [other] This will remove al…`
     - Suggest: `[1] Ez eltávolítja a { -brand-short-name }ba mentett jelszót az összes szinkronizált eszközéről.`
     - en-US [1] reads “This will remove the password saved to …”; the plural noun makes the one-item case wrong and indistinguishable from the *[other] branch.
-- `pocket-panel-signup-signup-firefox` — `browser/browser/aboutPocket.ftl` — “Sign up with Firefox” is rendered as “Firefox login”, reversing sign-up into sign-in.
-    - Current: `{ -brand-product-name } bejelentkezés`
-    - Source: `Sign up with { -brand-product-name }`
-    - Suggest: `Regisztráció a { -brand-product-name }kal`
-    - en-US is “Sign up with { -brand-product-name }”; the sibling string pocket-panel-signup-signup-email correctly uses “Regisztráció”, while “bejelentkezés” means log in.
 - `smartbar-mentions-list-recent-tabs-label` — `browser/browser/aiWindow.ftl` — “Recent tabs” is translated as “Recent tags”.
     - Current: `Legújabb címkék`
     - Source: `Recent tabs`
@@ -236,16 +458,6 @@ _Nothing reported._
     - Source: `Celestial`
     - Suggest: `Égi`
     - The comment says the word means astronomical/sky-related and is "Not to be confused with religious definition of the word." Hungarian "mennyei" means heavenly/divine (and colloquially 'delicious'); the astronomy sense is "égi".
-- `mr2022-onboarding-colorway-tooltip-innovator2` — `browser/browser/newtab/onboarding.ftl` — Colorway name rendered differently in the tooltip than in its own label and description.
-    - Current: `Innovátor (narancs)`
-    - Source: `title: Innovator (orange)`
-    - Suggest: `Újító (narancs)`
-    - mr2022-onboarding-colorway-label-innovator and -description-innovator both use "újító", so the tooltip names a different colorway than the swatch it describes.
-- `blocklist-treehead-list` — `browser/browser/preferences/blocklists.ftl` — Column header "List" rendered as the action noun "Listing".
-    - Current: `Listázás`
-    - Source: `label: List`
-    - Suggest: `Lista`
-    - This is a tree column header naming the block list, a noun; "Listázás" means the act of listing.
 - `appearance-browser-icon-requirement` — `browser/browser/preferences/browserIcon.ftl` — "Complete" rendered as "fill out (a form)".
     - Current: `Töltse ki, és oldjon fel további rókás ikonokat`
     - Source: `message: Complete and unlock bonus fox icons to personalize { -brand-short-name }.`
@@ -261,11 +473,6 @@ _Nothing reported._
     - Source: `label: Open links from apps next to your active tab`
     - Suggest: `Alkalmazásokból származó hivatkozások megnyitása az aktív lap mellett`
     - en-US: "Open links from apps next to your active tab" — the links open next to the active tab. The Hungarian reads "open links from the apps that are next to the active tab", which is not what the preference does.
-- `sitedata-option-block-cross-site-cookies` — `browser/browser/preferences/preferences.ftl` — Blocking of tracking cookies turned into isolation.
-    - Current: `Webhelyek közötti követő és egyéb webhelyek közötti sütik elkülönítése`
-    - Source: `label: Cross-site tracking cookies, and isolate other cross-site cookies`
-    - Suggest: `Webhelyek közötti nyomkövető sütik, és a többi webhelyek közötti süti elkülönítése`
-    - en-US: "Cross-site tracking cookies, and isolate other cross-site cookies" — the first item is blocked (this is the "Type blocked" dropdown), only the rest are isolated. The Hungarian applies isolation to both.
 - `sidebar-history-sort-option-date-and-site` — `browser/browser/sidebar.ftl` — Sort option says “Date and time” instead of “Date and site”.
     - Current: `Dátum és idő`
     - Source: `label: Date and site`
@@ -276,11 +483,6 @@ _Nothing reported._
     - Source: `accesskey: t label: Separate Split View`
     - Suggest: `Osztott nézet szétválasztása`
     - The developer comment says “Separate” is a verb; split-view-menuitem-separate-tabs correctly uses “Lapok szétválasztása”.
-- `tabbrowser-confirm-close-tabs-with-key-checkbox` — `browser/browser/tabbrowser.ftl` — Case suffix turns “quitting with <key>” into “quitting from <key>”.
-    - Current: `Megerősítés a { $quitKey }ból történő kilépés előtt`
-    - Source: `Confirm before quitting with { $quitKey }`
-    - Suggest: `Megerősítés a { $quitKey } billentyűvel történő kilépés előtt`
-    - en-US “Confirm before quitting with { $quitKey }”. The -ból ablative reads as quitting out of the key; the parallel string tabbrowser-ask-close-tabs-with-key-checkbox uses the correct “billentyűvel”.
 - `text-recognition-modal-searching-title` — `browser/browser/textRecognition.ftl` — Subject and object are swapped: says “searching for an image by text” instead of “searching the image for text”.
     - Current: `Kép keresése szöveg alapján…`
     - Source: `Searching image for text…`
@@ -291,11 +493,6 @@ _Nothing reported._
     - Source: `Allow { $origin } to give { $thirdParty } access to your microphone and see your screen?`
     - Suggest: `hozzáférjen a mikrofonjához, és lássa a képernyőjét?`
     - en-US: “give { $thirdParty } access to your microphone and see your screen?”. The prompt grants microphone + screen access, so naming the camera misinforms the user about what is being granted.
-- `webauthn.selectSignResultPrompt` — `browser/chrome/browser/browser.properties` — “or cancel” rendered as “or delete”.
-    - Current: `Válassza ki, hogy melyiket szeretné használni vagy törölni.`
-    - Source: `Multiple accounts found for %S. Select which to use or cancel.`
-    - Suggest: `Válassza ki, melyiket szeretné használni, vagy szakítsa meg a műveletet.`
-    - en-US “Select which to use or cancel” offers cancelling the operation; “törölni” tells the user they can delete an account, an action the dialog does not offer.
 - `edit-controls.tooltiptext2` — `browser/chrome/browser/customizableui/customizableWidgets.properties` — The noun phrase “Edit controls” is rendered as the command “Edit the controls”.
     - Current: `Vezérlőelemek szerkesztése`
     - Source: `Edit controls`
@@ -311,51 +508,11 @@ _Nothing reported._
     - Source: `Firefox doesn’t know how to communicate with the server.`
     - Suggest: `A Firefox nem tudja, hogyan kommunikáljon a kiszolgálóval.`
     - Without “hogyan”, the clause reads as uncertainty about whether to communicate, not about the manner; the manner is what en-US states.
-- `unknownSocketType` — `browser/chrome/overrides/appstrings.properties` — “doesn’t know how to communicate” rendered as “doesn’t know whether to communicate”.
-    - Current: `A Firefox nem tudja, hogy kommunikáljon a kiszolgálóval.`
-    - Source: `Firefox doesn’t know how to communicate with the server.`
-    - Suggest: `A Firefox nem tudja, hogyan kommunikáljon a kiszolgálóval.`
-    - Same as clientSocketMisconfiguration: the missing “hogyan” changes the meaning of the error message.
-- `autofillReauthCheckboxLin` — `browser/extensions/formautofill/formautofill.properties` — “stored credit cards” translated as “stored authentication data”.
-    - Current: `Linux-hitelesítés megkövetelése a tárolt hitelesítési adatok automatikus kitöltéséhez, megtekintéséhez vagy szerkesztéséhez.`
-    - Source: `Require Linux authentication to autofill, view, or edit stored credit cards.`
-    - Suggest: `Linux-hitelesítés megkövetelése a tárolt bankkártyaadatok automatikus kitöltéséhez, megtekintéséhez vagy szerkesztéséhez.`
-    - en-US: “Require Linux authentication to autofill, view, or edit stored credit cards.” The Hungarian names authentication data instead of credit cards.
-- `autofillReauthCheckboxMac` — `browser/extensions/formautofill/formautofill.properties` — “stored credit cards” translated as “stored authentication data”.
-    - Current: `MacOS-hitelesítés megkövetelése a tárolt hitelesítési adatok automatikus kitöltéséhez, megtekintéséhez vagy szerkesztéséhez.`
-    - Source: `Require macOS authentication to autofill, view, or edit stored credit cards.`
-    - Suggest: `macOS-hitelesítés megkövetelése a tárolt bankkártyaadatok automatikus kitöltéséhez, megtekintéséhez vagy szerkesztéséhez.`
-    - en-US says “autofill, view, or edit stored credit cards”; the Hungarian says the setting protects stored authentication data, describing a different feature. Also “MacOS” should be “macOS” as elsewhere in the file (useCreditCardPasswordPrompt notes, en-US spelling).
-- `autofillReauthCheckboxWin` — `browser/extensions/formautofill/formautofill.properties` — “stored credit cards” translated as “stored authentication data”.
-    - Current: `Windows-hitelesítés megkövetelése a tárolt hitelesítési adatok automatikus kitöltéséhez, megtekintéséhez vagy szerkesztéséhez.`
-    - Source: `Require Windows authentication to autofill, view, or edit stored credit cards.`
-    - Suggest: `Windows-hitelesítés megkövetelése a tárolt bankkártyaadatok automatikus kitöltéséhez, megtekintéséhez vagy szerkesztéséhez.`
-    - en-US: “Require Windows authentication to autofill, view, or edit stored credit cards.” The Hungarian names authentication data instead of credit cards, describing the wrong protected object.
-- `STUB_BLURB_SECOND1` — `browser/installer/nsisstrings.properties` — "Faster page loading and tab switching" became "faster page loading, without tab switching".
-    - Current: `Gyorsabb oldalbetöltés, lapváltás nélkül`
-    - Source: `Faster page loading and tab switching`
-    - Suggest: `Gyorsabb oldalbetöltés és lapváltás`
-    - The English lists two things that are faster; the Hungarian negates the second one ("nélkül" = without), stating the opposite of the source.
 - `LicenseTextRB` — `browser/installer/override.properties` — "select the first option below" became "choose from the options below".
     - Current: `válasszon az alábbi lehetőségek közül`
     - Source: `Please review the license agreement before installing $BrandFullNameDA. If you accept all terms of the agreement, select the first option below. $_CLICK`
     - Suggest: `válassza az alábbi első lehetőséget`
     - The English tells the user which specific radio button to pick; the Hungarian drops "first", so the instruction no longer identifies the accept option.
-- `attachments_label` — `browser/pdfviewer/viewer.properties` — Sidebar button label “Attachments” rendered as the sentence “There is an attachment”.
-    - Current: `Van melléklet`
-    - Source: `Attachments`
-    - Suggest: `Mellékletek`
-    - This is the alt text/label of the attachments panel button, a noun; all neighbouring labels (Rétegek, Bélyegképek) are plain nouns. “Van melléklet” asserts that an attachment exists.
-- `document_outline.title` — `browser/pdfviewer/viewer.properties` — “Show Document Outline” rendered as “show document online”.
-    - Current: `Dokumentum megjelenítése online (dupla kattintás minden elem kinyitásához/összecsukásához)`
-    - Source: `Show Document Outline (double-click to expand/collapse all items)`
-    - Suggest: `Dokumentumvázlat megjelenítése (dupla kattintás minden elem kinyitásához/összecsukásához)`
-    - “outline” was read as “online”. The sibling label document_outline_label correctly uses “Dokumentumvázlat”, so the tooltip contradicts the button it describes.
-- `document_properties_page_size_name_legal` — `browser/pdfviewer/viewer.properties` — The paper size name “Legal” is translated as “Legal information”.
-    - Current: `Jogi információk`
-    - Source: `Legal`
-    - Suggest: `Legal`
-    - This string is a paper format name in the list with A3, A4 and Letter (all left untranslated). “Jogi információk” means “legal information” and names the wrong thing entirely.
 - `about-debugging-browser-version-too-recent` — `devtools/client/aboutdebugging.ftl` — An extra sentence was added: the message tells the user twice to update, once about the wrong browser.
     - Current: `Frissítse a csatlakoztatott böngészőt. Frissítse a Firefoxot.`
     - Source: `The connected browser is more recent ({ $runtimeVersion }, buildID { $runtimeID }) than your { -brand-shorter-name } ({ $localVersion }, buildID { $localID }). This is an unsupported setup and may cause DevTools to fail…`
@@ -401,30 +558,110 @@ _Nothing reported._
     - Source: `Filter functions`
     - Suggest: `outline.placeholder.functions = Függvények szűrése`
     - This is the placeholder of a filter input; "Szűrőfüggvények" names functions that do filtering. The sibling key outline.placeholder.atRules correctly uses "@-szabályok szűrése". The same wrong value is also in outline.placeholder.
-- `inspector.eyedropper.label` — `devtools/client/inspector.properties` — "Grab a color from the page" rendered as "Save a color from the page".
-    - Current: `inspector.eyedropper.label = Szín mentése az oldalról`
-    - Source: `Grab a color from the page`
-    - Suggest: `inspector.eyedropper.label = Szín kiválasztása az oldalról`
-    - The eyedropper picks a color, it does not save one; the variant inspector.eyedropper.label2 of the same English string uses "Szín kiválasztása az oldalról".
 - `layout.displayLineNumbers` — `devtools/client/layout.properties` — Grid "line numbers" rendered as "number of lines".
     - Current: `layout.displayLineNumbers = Sorok számának megjelenítése`
     - Source: `Display line numbers`
     - Suggest: `layout.displayLineNumbers = Vonalszámok megjelenítése`
     - The option displays the numbers of the CSS grid lines in the overlay, not a count of rows; "Sorok száma" means how many rows there are.
-- _…and 53 more; see `state/` for the full list._
+- `toolbar.view.census` — `devtools/client/memory.properties` — "Aggregate" view rendered as "Összetett" (composite/complex).
+    - Current: `toolbar.view.census = Összetett`
+    - Source: `Aggregate`
+    - Suggest: `toolbar.view.census = Összesített`
+    - The view aggregates objects into groups; toolbar.pop-view.label already translates "aggregates" as "összesítés", so "Összetett" is both wrong and inconsistent (also used in snapshot.state.saving-census.full).
+- `charts.cacheDisabled` — `devtools/client/netmonitor.properties` — The chart label "Empty cache" rendered as the action "Emptying the cache".
+    - Current: `charts.cacheDisabled = Gyorsítótár ürítése`
+    - Source: `Empty cache`
+    - Suggest: `charts.cacheDisabled = Üres gyorsítótár`
+    - This labels a chart series describing the empty-cache case, parallel to charts.cacheEnabled = "Feltöltött gyorsítótár"; a verbal noun reads as a command to clear the cache.
+- `netmonitor.custom.postBody.placeholder` — `devtools/client/netmonitor.properties` — Request body "payload" translated as "hasznos forgalom" (useful traffic).
+    - Current: `netmonitor.custom.postBody.placeholder = hasznos forgalom`
+    - Source: `payload`
+    - Suggest: `netmonitor.custom.postBody.placeholder = tartalom`
+    - The placeholder sits in the request body textarea; "forgalom" means network traffic, which is not what a request body is.
+- `netmonitor.headers.requestPriority` — `devtools/client/netmonitor.properties` — "Request Priority" rendered as "Requesting priority".
+    - Current: `netmonitor.headers.requestPriority = Prioritás kérése`
+    - Source: `Request Priority`
+    - Suggest: `netmonitor.headers.requestPriority = Kérés prioritása`
+    - The label identifies the priority of the request (comment: "identifying the request priority"); "Prioritás kérése" means asking for priority.
+- `requestHeadersFromUpload` — `devtools/client/netmonitor.properties` — "Request headers from upload stream" turned into the action "Requesting headers from the upload stream".
+    - Current: `requestHeadersFromUpload = Fejlécek kérése a feltöltési adatfolyamból`
+    - Source: `Request headers from upload stream`
+    - Suggest: `requestHeadersFromUpload = Kérésfejlécek a feltöltési adatfolyamból`
+    - This is a section label identifying request headers taken from the POST body upload stream, not an action; compare requestHeaders = "Kérés fejlécei".
+- `traceFunctionReturn` — `devtools/client/startup.properties` — "Trace function returns" (a menu action) rendered as the statement "The tracing function returns".
+    - Current: `traceFunctionReturn = A nyomkövetési függvény visszatér`
+    - Source: `Trace function returns`
+    - Suggest: `traceFunctionReturn = Függvény-visszatérések nyomkövetése`
+    - The comment says this menu item enables logging when a function call returns; the Hungarian parses "trace" as an adjective and "returns" as a verb, making it a sentence instead of a command.
+- `toolbox.parentProcessBrowserToolboxTitle` — `devtools/client/toolbox.properties` — Reversed head noun: "the parent process of the Browser Toolbox" instead of "Parent process Browser Toolbox".
+    - Current: `toolbox.parentProcessBrowserToolboxTitle = A böngésző eszköztár szülőfolyamata`
+    - Source: `Parent process Browser Toolbox`
+    - Suggest: `toolbox.parentProcessBrowserToolboxTitle = Szülőfolyamati böngésző eszköztár`
+    - The comment says this is the title of the Browser Toolbox scoped to the parent process, not a name for a process; compare toolbox.multiProcessBrowserToolboxTitle, which keeps the correct head noun.
+- `inactive-css-resize` — `devtools/client/tooltips.ftl` — "elements with an overflow value other than visible" reduced to "elements with an overflowing value".
+    - Current: `csak a túlcsorduló értékkel rendelkező elemekre`
+    - Source: `<strong>{ $property }</strong> has no effect on this element since it can only be applied to elements with an overflow value other than visible, and to certain replaced elements, such as textareas.`
+    - Suggest: `csak a <strong>visible</strong> értéktől eltérő overflow értékkel rendelkező elemekre`
+    - en-US restricts the rule to elements whose overflow is not visible; the Hungarian drops the property name and the exclusion, changing the stated condition.
+- `whypaused-assert` — `devtools/shared/debugger-paused-reasons.ftl` — "Paused on assertion" translated as "Paused on evaluation".
+    - Current: `whypaused-assert = Várakoztatás kiértékeléskor`
+    - Source: `Paused on assertion`
+    - Suggest: `whypaused-assert = Várakoztatás állításkor`
+    - "kiértékelés" means evaluation; the pause reason is an assertion failure, and evaluation is a distinct concept used elsewhere in DevTools ("Kiértékelés eredménye").
+- `webconsole.input.selector.top` — `devtools/shared/webconsole.properties` — "Top" (the top-level execution context) rendered as the direction "Up".
+    - Current: `webconsole.input.selector.top = Fel`
+    - Source: `Top`
+    - Suggest: `webconsole.input.selector.top = Legfelső`
+    - Same defect as in devtools/client/webconsole.properties: the comment says this names the primary thread of execution, not a direction.
+- `ManifestImageRepeatedPurposes` — `dom/chrome/dom/dom.properties` — “repeated purpose(s)” became “contains several purposes”, which is not an error condition.
+    - Current: `elem több célt is tartalmaz: %3$S.`
+    - Source: `%1$S item at index %2$S includes repeated purpose(s): %3$S.`
+    - Suggest: `elem ismétlődő célo(ka)t tartalmaz: %3$S.`
+    - en-US: “%1$S item at index %2$S includes repeated purpose(s): %3$S.” Multiple distinct purposes are legal; only repetition is warned about.
+- `PointerLockDeniedSandboxed` — `dom/chrome/dom/dom.properties` — Adds “by user preference”, which the source does not say; the restriction comes from the sandbox.
+    - Current: `mert a felhasználói beállításokban a mutatózárolási API-t homokozó korlátozza`
+    - Source: `Request for pointer lock was denied because Pointer Lock API is restricted via sandbox.`
+    - Suggest: `mert a mutatózárolási API-t homokozó korlátozza`
+    - en-US: “…because Pointer Lock API is restricted via sandbox.” The added clause was copied from PointerLockDeniedDisabled and names the wrong cause.
+- `RewriteYouTubeEmbedPathParams` — `dom/chrome/dom/dom.properties` — The middle sentence says the query was invalid and stripped from the URL, not that params were unsupported and converted.
+    - Current: `A lekérdezés érvénytelen volt, és el lett távolítva a webcímből.`
+    - Source: `Rewriting old-style YouTube Flash embed (%S) to iframe embed (%S). Params were unsupported by iframe embeds and converted. Please update page to use iframe instead of embed/object, if possible.`
+    - Suggest: `A paramétereket az iframe-beágyazás nem támogatta, ezért át lettek alakítva.`
+    - en-US: “Params were unsupported by iframe embeds and converted.” The translation states a different action (removal) on a different object.
+- `PEPRSyntaxFieldExpectedPipe` — `dom/chrome/layout/css.properties` — The “pipe” character is translated as “csővezeték” (pipeline/plumbing).
+    - Current: `melyek nincsenek csővezetékkel elválasztva`
+    - Source: `@property syntax descriptor ‘%S’ contains components without a pipe between them.`
+    - Suggest: `melyeket nem választ el függőleges vonal (\|)`
+    - en-US “contains components without a pipe between them” refers to the “\|” character; “csővezeték” means a physical pipe and gives no clue about the syntax error.
+- `CookieRejectedInvalidPath` — `netwerk/necko.properties` — The path-rejection message says “invalid prefix” instead of “invalid path”, duplicating the neighbouring prefix string.
+    - Current: `A(z) „%1$S” süti elutasítva az érvénytelen előtag miatt.`
+    - Source: `Cookie “%1$S” has been rejected for invalid path.`
+    - Suggest: `A(z) „%1$S” süti elutasítva az érvénytelen útvonal miatt.`
+    - en-US: “Cookie “%1$S” has been rejected for invalid path.” As translated it is identical to CookieRejectedInvalidPrefix, so developers get the wrong diagnosis.
+- _…and 31 more; see `state/` for the full list._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `genai-onboarding-copilot-learn` — `browser/browser/genai.ftl` — The product name Copilot is misspelled as “Coplit”.
-    - Current: `Tudjon meg többet a Coplitról`
-    - Source: `Learn more about Copilot`
-    - Suggest: `Tudjon meg többet a Copilotról`
-    - Copilot is a brand name and must be spelled correctly; the same file spells it correctly elsewhere.
+- `ip-protection-site-rules-button` — `browser/browser/ipProtection.ftl` — The description reverses who needs the extra privacy, asserting that the sites must provide privacy rather than that the user wants extra privacy on them.
+    - Current: `Állítson be szabályokat azokhoz a webhelyekhez, amelyeknek fokozott adatvédelmet kell biztosítaniuk, vagy ki kell kapcsolni a VPN-t.`
+    - Source: `description: Set rules for sites that need extra privacy or VPN turned off. label: Manage website rules`
+    - Suggest: `Állítson be szabályokat azokhoz a webhelyekhez, amelyeknél fokozott adatvédelemre van szükség, vagy amelyeknél ki kell kapcsolni a VPN-t.`
+    - en-US "sites that need extra privacy or VPN turned off" means sites for which the user needs extra privacy; the Hungarian says the sites are obliged to provide extra privacy.
 - `newtab-recent-searches-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Recent searches options" mistranslated as "recent search options" (options of the widget, not options for searching).
     - Current: `aria-label: Legutóbbi keresési lehetőségek`
     - Source: `aria-label: Recent searches options`
     - Suggest: `aria-label: Legutóbbi keresések beállításai`
     - The source names the options/menu of the "Recent searches" widget; the Hungarian reads as "recent search possibilities", changing the meaning.
+- `onboarding-refresh-data-collection-link` — `browser/browser/newtab/onboarding.ftl` — "Manage" translated as "módosítása" (change) instead of "kezelése" (manage).
+    - Current: `Adatgyűjtési beállítások módosítása`
+    - Source: `Manage data collection settings`
+    - Suggest: `Adatgyűjtési beállítások kezelése`
+    - en-US "Manage data collection settings"; the established Hungarian term for Manage is "kezelése".
+- `onboarding-refresh-terms-of-use-with-links` — `browser/browser/newtab/onboarding.ftl` — "interaction data" is rendered as "használati adatok" (usage data) instead of interaction data.
+    - Current: `diagnosztikai és használati adatokat`
+    - Source: `By continuing, you agree to the <a data-l10n-name="terms_of_use">{ -brand-product-name } Terms of Use</a> and our <a data-l10n-name="privacy_notice">Privacy Notice</a>. To help improve the browser, { -brand-product-name…`
+    - Suggest: `diagnosztikai és interakciós adatokat`
+    - en-US says "diagnostic and interaction data"; "használati" means usage, a different data category in Mozilla's privacy terminology.
 - `containers-site-container-label` — `browser/browser/preferences/containers.ftl` — Singular "Container" label rendered as plural "Konténerek".
     - Current: `label: Konténerek`
     - Source: `label: Container`
@@ -445,6 +682,11 @@ _Nothing reported._
     - Source: `Post town`
     - Suggest: `Postaváros`
     - The comment marks this as secondary address information for GB/NO/SE — the town used for postal routing, not a postal facility ("postaállomás").
+- `fxa-menu-signed-out-title` — `browser/browser/sync.ftl` — "Sign in to sync" is rendered as "Sign in to Sync" treating sync as the product name, and the brand is inflected oddly.
+    - Current: `Jelentkezzen be a Syncbe`
+    - Source: `Sign in to sync`
+    - Suggest: `Jelentkezzen be a szinkronizáláshoz`
+    - The en-US uses the verb "sync" (to synchronize), not the capitalized Sync feature brand; the Hungarian asserts signing in *into* Sync.
 - `urlbar-translations-button-intro` — `browser/browser/translations.ftl` — “Beta” translated as “Béta” although the developer comment forbids translating it.
     - Current: `Próbálja ki a privát fordításokat a { -brand-shorter-name }ban – Béta`
     - Source: `tooltiptext: Try private translations in { -brand-shorter-name } - Beta`
@@ -465,11 +707,6 @@ _Nothing reported._
     - Source: `(value): No preference aria-label: Enable no preference for reduced motion emulation`
     - Suggest: `aria-label: A „nincs beállítva” mozgáscsökkentés-emuláció engedélyezése`
     - The en-US enables the "no preference" option of the reduced-motion emulation; the Hungarian says the setting is being disabled (kikapcsolása), which is the opposite action.
-- `inactive-css-not-display-block-on-floated` — `devtools/client/tooltips.ftl` — The CSS keyword value <strong>block</strong> was translated as "blokkolásra" ("to blocking").
-    - Current: `A <strong>display</strong> értéket <strong>blokkolásra</strong> változtatta a motor`
-    - Source: `The <strong>display</strong> value has been changed by the engine to <strong>block</strong> because the element is <strong>floated</strong>.`
-    - Suggest: `A <strong>display</strong> értéket <strong>block</strong> értékre változtatta a motor`
-    - The section comment says CSS properties and values in <strong> tags should not be translated; "blokkolásra" also means "blocking", not the display value.
 - `about-sync-log-page-header` — `toolkit/services/aboutSyncLog.ftl` — Heading "Sync logs" rendered as "Naplók szinkronizálása" ("Synchronizing logs").
     - Current: `heading: Naplók szinkronizálása`
     - Source: `description: Diagnostic logs written by sync. heading: Sync logs`
@@ -480,6 +717,11 @@ _Nothing reported._
     - Source: `Sync logs`
     - Suggest: `Szinkronizálási naplók`
     - The en-US is a noun phrase naming the logs written by Sync (see about-sync-log-page-header description); the Hungarian turns it into a verbal phrase meaning "syncing the logs".
+- `autofill-delete-payment-method-os-prompt-windows` — `toolkit/toolkit/formautofill/formAutofill.ftl` — "delete stored payment method information" was rendered as "akar használni" (wants to use) instead of "törölni akarja" (wants to delete).
+    - Current: `A { -brand-short-name } tárolt fizetésimód-információkat akar használni.`
+    - Source: `{ -brand-short-name } is trying to delete stored payment method information. Confirm access to this Windows account below.`
+    - Suggest: `A { -brand-short-name } törölni akarja a tárolt fizetésimód-információkat.`
+    - The en-US says the browser is trying to delete the stored payment method information; the Hungarian says it wants to use it, which misstates the action being authorized (and is inconsistent with the sibling -other/-macos strings).
 - `btp-warning-tracker-classified` — `toolkit/toolkit/global/antiTracking.ftl` — "bounce tracker" was translated although the developer comment forbids it.
     - Current: `visszapattanás-követőnek lett besorolva`
     - Source: `{$gracePeriodSeconds ->} [other] “{ $siteHost }” has been classified as a bounce tracker. If it does not receive user activation within the next { $gracePeriodSeconds } seconds it will have its state purged.`
@@ -548,6 +790,16 @@ _Nothing reported._
     - Source: `<a data-l10n-name="learn-more-vpn">{ -brand-product-name }’s built-in VPN</a> helps protect your browsing. Choose from several locations to keep where you browse more private.`
     - Suggest: `<a data-l10n-name="learn-more-vpn">A { -brand-product-name } beépített VPN-je</a>`
     - The article appears both outside and inside the link, producing “A A Firefox beépített VPN-je”; the -2 variant of the same string has it only once.
+- `newtab-wallpaper-remove-image-numbered` — `browser/browser/newtab/newtab.ftl` — Missing ordinal period after the number, inconsistent with the numbered-image string which uses "{ $number }. kép".
+    - Current: `aria-label: { $number } kép eltávolítása`
+    - Source: `aria-label: Remove image { $number } title: Remove image { $number }`
+    - Suggest: `aria-label: { $number }. kép eltávolítása`
+    - Hungarian ordinal numbering requires a period (as used in newtab-wallpaper-your-images-item-numbered: "{ $number }. kép"); without it the text reads as a count ("remove N images").
+- `newtab-wallpaper-remove-image-numbered` — `browser/browser/newtab/newtab.ftl` — Missing ordinal period after the number in the tooltip.
+    - Current: `title: { $number } kép eltávolítása`
+    - Source: `aria-label: Remove image { $number } title: Remove image { $number }`
+    - Suggest: `title: { $number }. kép eltávolítása`
+    - Same as the aria-label: Hungarian needs "{ $number }. kép" to mean "image N" rather than "N images".
 - `mr1-onboarding-theme-label-alpenglow` — `browser/browser/newtab/onboarding.ftl` — Theme name "Alpenglow" was translated although the developer comment forbids it.
     - Current: `Alpesi fény`
     - Source: `Alpenglow`
@@ -558,11 +810,6 @@ _Nothing reported._
     - Source: `value: Address:`
     - Suggest: `Webcím:`
     - general-title (“Title:”) is also “Cím:”. Elsewhere in the tree “URL/Address” is consistently “Webcím” (e.g. placesPrompts.ftl, reportBrokenSite.ftl), so the address row should use “Webcím:”.
-- `maxTimersExceeded` — `devtools/client/webconsole.properties` — console.time() timers called "óra" (clock) while every neighbouring string uses "időzítő".
-    - Current: `maxTimersExceeded = Ezen az oldalon nem indítható el több óra.`
-    - Source: `The maximum allowed number of timers in this page was exceeded.`
-    - Suggest: `maxTimersExceeded = Ezen az oldalon nem indítható el több időzítő.`
-    - timerAlreadyExists/timerDoesntExist/timerJSError all render "timer" as "időzítő"; "óra" (clock/hour) is wrong in this surface.
 - `maxTimersExceeded` — `devtools/shared/webconsole.properties` — console.time() timers called "óra" (clock) while every neighbouring string uses "időzítő".
     - Current: `maxTimersExceeded = Ezen az oldalon nem indítható el több óra.`
     - Source: `The maximum allowed number of timers in this page was exceeded.`
@@ -573,16 +820,16 @@ _Nothing reported._
     - Source: `CSSContainerRule.containerName and CSSContainerRule.containerQuery don’t support multiple conditions. Use CSSContainerRule.conditions instead.`
     - Suggest: `A CSSContainerRule.containerName és a CSSContainerRule.containerQuery nem támogat több feltételt. Használja helyette a CSSContainerRule.conditions mezőt.`
     - The comment says do not translate CSSContainerRule.containerName / .containerQuery / .conditions; a triple S makes the suggested API name non-existent for developers copying it.
-- `MathML_DeprecatedStyleAttributeWarning` — `dom/chrome/dom/dom.properties` — The MathML attribute name fontstyle is misspelled as “fonststlye”.
-    - Current: `„fonststlye”`
-    - Source: `MathML attributes “background”, “color”, “fontfamily”, “fontsize”, “fontstyle” and “fontweight” are deprecated and will be removed at a future date.`
-    - Suggest: `„fontstyle”`
-    - en-US lists “fontstyle” and the note says do not translate it; the garbled token names a nonexistent attribute.
 - `MediaStreamTrackAudioSourceNodeCrossOrigin` — `dom/chrome/dom/dom.properties` — The API name MediaStreamTrack was replaced by MediaStream, although the developer comment says not to translate it.
     - Current: `A createMediaStreamTrackSource-nak átadott MediaStream egy cross-origin erőforrás`
     - Source: `The MediaStreamTrack passed to createMediaStreamTrackSource is a cross-origin resource, the node will output silence.`
     - Suggest: `A createMediaStreamTrackSource-nak átadott MediaStreamTrack egy cross-origin erőforrás`
     - en-US: “The MediaStreamTrack passed to createMediaStreamTrackSource is a cross-origin resource”. The note says “Do not translate MediaStreamTrack and createMediaStreamTrackSource”; the message now names a different interface than the one the error is about.
+- `NavigationChangeFloodingPrevented` — `dom/chrome/dom/dom.properties` — Case agreement error: "navigálására" should be "navigálásra" in this construction.
+    - Current: `túl sok kísérlet történt az előzményekben való navigálására vagy azok módosítására`
+    - Source: `Too many attempts to navigate or modify history within a short timeframe.`
+    - Suggest: `túl sok kísérlet történt az előzményekben való navigálásra vagy azok módosítására`
+    - "kísérlet történt" requires the sublative -ra/-re without possessive suffix; "navigálására" has a stray possessive ending that does not agree with anything.
 - `UseSendBeaconDuringUnloadAndPagehideWarning` — `dom/chrome/dom/dom.properties` — The do-not-translate event name “unload” is written as “unlode”, with a wrong article.
     - Current: `a unlode és pagehide folyamatokban`
     - Source: `Use of navigator.sendBeacon instead of synchronous XMLHttpRequest during unload and pagehide improves user experience.`
@@ -629,11 +876,6 @@ _Nothing reported._
     - Suggest: `Engedélyezi az oldal számára, hogy megnyissa a digitális tárcáját?`
     - en-US: "Allow this site to open your digital wallet?" All sibling permission-dialog strings in this file use the "…számára, hogy megnyissa…" pattern; here the verb is missing and the sentence is ungrammatical.
 - `profiledowngrade-nosync` — `toolkit/toolkit/global/profileDowngrade.ftl` — Missing accusative ending on the object of "hozzon létre".
-    - Current: `hozzon létre egy új profil a { -brand-short-name } ezen telepítéséhez`
-    - Source: `Using an older version of { -brand-product-name } can corrupt bookmarks and browsing history already saved to an existing { -brand-product-name } profile. To protect your information, create a new profile for this insta…`
-    - Suggest: `hozzon létre egy új profilt a { -brand-short-name } ezen telepítéséhez`
-    - "létrehoz" takes a direct object; "profil" must be "profilt".
-- `profiledowngrade-sync` — `toolkit/toolkit/global/profileDowngrade.ftl` — Missing accusative ending on the object of "hozzon létre".
     - Current: `hozzon létre egy új profil a { -brand-short-name } ezen telepítéséhez`
     - Source: `Using an older version of { -brand-product-name } can corrupt bookmarks and browsing history already saved to an existing { -brand-product-name } profile. To protect your information, create a new profile for this insta…`
     - Suggest: `hozzon létre egy új profilt a { -brand-short-name } ezen telepítéséhez`
@@ -741,11 +983,6 @@ _Nothing reported._
     - Source: `Find out how`
     - Suggest: `Tudja meg, hogyan`
     - Hungarian requires a comma before a subordinating conjunction; the same file writes "Tudja meg, hogyan működik…" (newtab-privacy-modal-link).
-- `newtab-stocks-menu-search` — `browser/browser/newtab/newtab.ftl` — Wrong case ending makes the menu item ungrammatical.
-    - Current: `Részvénykódok keresésére`
-    - Source: `Search ticker symbols`
-    - Suggest: `Részvénykódok keresése`
-    - The sublative -re turns the label into a dangling "for the searching of…"; other menu items in the widget use the plain nominal form.
 - `newtab-widget-section-feedback` — `browser/browser/newtab/newtab.ftl` — Missing comma before the subordinate clause.
     - Current: `Mondja el nekünk mit gondol`
     - Source: `Tell us what you think`
@@ -801,31 +1038,16 @@ _Nothing reported._
     - Source: `Enter a valid, secure website`
     - Suggest: `Adjon meg egy érvényes, biztonságos webhelyet`
     - The same en-US term "website" is translated "webhely" in containers-site-label, containers-site-window and containers-site-duplicate-error; this string breaks that consistency.
-- `fxa-qrcode-pair-step2-signin` — `browser/browser/preferences/fxaPairDevice.ftl` — Wrong definite article before a vowel-initial word.
-    - Current: `koppintson a <strong>Adatok szinkronizálása és mentése</strong> elemre`
-    - Source: `2. Go to the menu (<img data-l10n-name="ios-menu-icon"/> on iOS or <img data-l10n-name="android-menu-icon"/> on Android) and tap <strong>Sync and save data</strong>`
-    - Suggest: `koppintson az <strong>Adatok szinkronizálása és mentése</strong> elemre`
-    - "Adatok" begins with a vowel, so the article must be "az".
 - `browser-language-heading` — `browser/browser/preferences/preferences.ftl` — Misspelling "menüijeinek".
     - Current: `menüijeinek`
     - Source: `description: Choose the language used to display menus, messages, and notifications from { -brand-short-name }. label: Browser language`
     - Suggest: `menüinek`
     - The possessive plural of "menü" is "menüinek"; "menüijeinek" is not a word.
-- `forms-generate-passwords` — `browser/browser/preferences/preferences.ftl` — Garbled coordination: "javaslata az előállítása".
-    - Current: `Erős jelszavak javaslata az előállítása`
-    - Source: `accesskey: u label: Suggest and generate strong passwords`
-    - Suggest: `Erős jelszavak javaslata és előállítása`
-    - en-US: "Suggest and generate strong passwords". The conjunction "és" was replaced by the article "az", leaving an ungrammatical string.
 - `preferences-data-migration-group` — `browser/browser/preferences/preferences.ftl` — Verb misspelled: "Hozzá át" instead of "Hozza át".
     - Current: `Hozzá át a könyvjelzőit`
     - Source: `description: Bring your bookmarks, passwords, history, extensions, and autofill data from another browser. label: Import browser data`
     - Suggest: `Hozza át a könyvjelzőit`
     - "Hozzá" is not an imperative form; the imperative of "hoz" is "hozza". Visible in the Import browser data group description.
-- `preferences-doh-description` — `browser/browser/preferences/preferences.ftl` — "lássak" (1sg) should be "lássák" (3pl).
-    - Current: `hogy lássak, hogy melyik weboldalakat éri el`
-    - Source: `Domain Name System (DNS) over HTTPS sends your request for a domain name through an encrypted connection, creating a secure DNS and making it harder for others to see which website you’re about to access.`
-    - Suggest: `hogy lássák, hogy mely weboldalakat éri el`
-    - Same conjugation error as in preferences-doh-description2: the subject "mások" requires "lássák".
 - `preferences-doh-description2` — `browser/browser/preferences/preferences.ftl` — "lássak" (1sg) should be "lássák" (3pl).
     - Current: `hogy lássak, hogy melyik weboldalakat éri el`
     - Source: `Domain Name System (DNS) over HTTPS sends your request for a domain name through an encrypted connection, providing a secure DNS and making it harder for others to see which website you’re about to access.`
@@ -916,11 +1138,6 @@ _Nothing reported._
     - Source: `<span data-l10n-name='sitename'>{ $sitename }</span> has been <a data-l10n-name='error_desc_link'>reported as containing a potentially harmful application</a>. You can <a data-l10n-name='ignore_warning_link'>ignore the…`
     - Suggest: `oldalt <a data-l10n-name='error_desc_link'>ártalmas szoftvert tartalmazóként jelentették</a>`
     - “jelentették” takes an accusative object, so it must be “oldalt”, as in the parallel phishing strings (“A(z) … oldalt … megtévesztő oldalként jelentették”). The word also runs into the link with no space.
-- `screenshots-private-window-error-title` — `browser/browser/screenshots.ftl` — Plural verb with a singular brand-name subject.
-    - Current: `A { -screenshots-brand-name } le vannak tiltva Privát böngészésben`
-    - Source: `{ -screenshots-brand-name } is disabled in Private Browsing Mode`
-    - Suggest: `A { -screenshots-brand-name } le van tiltva a privát böngészésben`
-    - en-US “{ -screenshots-brand-name } is disabled…”; the brand term is singular, so “vannak” does not agree.
 - `protections-not-blocking-fingerprinters` — `browser/browser/siteProtections.ftl` — Compound misspelled with a plural first member: “ujjlenyomatok-készítőket”.
     - Current: `Nem blokkolja az ujjlenyomatok-készítőket`
     - Source: `title: Not Blocking Fingerprinters`
@@ -936,11 +1153,6 @@ _Nothing reported._
     - Source: `<strong>Update</strong> We’ve introduced a { -brand-short-name } <a data-l10n-name="terms-of-use-link">Terms of Use</a> and updated our <a data-l10n-name="privacy-notice-link">Privacy Notice</a>. Please take a moment to…`
     - Suggest: `frissítettük az <a data-l10n-name="privacy-notice-link">Adatvédelmi nyilatkozatot</a>`
     - The sibling string existing-user-privacy-notice-update-message correctly uses the accusative “Adatvédelmi nyilatkozatot”.
-- `protections.notBlocking.fingerprinters.title` — `browser/chrome/browser/browser.properties` — Misspelled compound: “ujjlenyomatok-készítőket” instead of “ujjlenyomat-készítőket”.
-    - Current: `Nem blokkolja az ujjlenyomatok-készítőket`
-    - Source: `Not Blocking Fingerprinters`
-    - Suggest: `Nem blokkolja az ujjlenyomat-készítőket`
-    - The term is consistently “ujjlenyomat-készítők” elsewhere in the same file (protections.blocking.fingerprinters.title, trackingProtection.icon.activeTooltip2); the plural first member is not valid in this compound.
 - `unblockInsecure2` — `browser/chrome/browser/downloads/downloads.properties` — Case-agreement error: accusative subject with a passive predicate.
     - Current: `annak ellenére, hogy az aktuális dokumentumot biztonságos HTTPS-kapcsolaton keresztül lett kézbesítve`
     - Source: `The download is offered over HTTP even though the current document was delivered over a secure HTTPS connection. If you proceed, the download may be corrupted or tampered with during the download process.`
@@ -966,11 +1178,6 @@ _Nothing reported._
     - Source: `Resume the animations`
     - Suggest: `timeline.pausedButtonTooltip = Animációk folytatása`
     - Two words are run together; the parallel strings (timeline.resumedButtonTooltip, timeline.rewindButtonTooltip) are correctly spaced.
-- `noDomMutationBreakpoints` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints` quotes “Töréspont…” but the string it names, `watchpoints.submenu`, reads “Szüneteltetés…”
-    - Current: `Kattintson a jobb gombbal egy elemre itt: %S, és válassza a „Töréspont…” lehetőséget`
-    - Source: `Right click an element in the %S and select “Break on…” to add a breakpoint`
-    - Suggest: `Szüneteltetés…`
-    - In the source this string quotes “Break on…”, which is exactly the value of `watchpoints.submenu` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `noDomMutationBreakpoints.notice` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints.notice` quotes “Töréspont…” but the string it names, `watchpoints.submenu`, reads “Szüneteltetés…”
     - Current: `Kattintson a jobb gombbal egy elemre a Vizsgálóban, és válassza a „Töréspont…” lehetőséget`
     - Source: `Right click an element in the Inspector and select “Break on…” to add a breakpoint`
@@ -996,20 +1203,55 @@ _Nothing reported._
     - Source: `<strong>{ $property }</strong> has no effect on this element since it cannot be applied to internal table elements where <strong>border-collapse</strong> is set to <strong>collapse</strong> on the parent table element.`
     - Suggest: `<strong>collapse</strong> értékre van állítva a szülő táblázatelemen.`
     - en-US: "…where border-collapse is set to collapse on the parent table element"; the Hungarian leaves the noun phrase unattached and unmarked.
-- _…and 24 more; see `state/` for the full list._
+- `inactive-text-overflow-when-no-overflow` — `devtools/client/tooltips.ftl` — Ungrammatical clause: "mivel nem megadva az overflow:hidden".
+    - Current: `mivel nem megadva az <strong>overflow:hidden</strong>`
+    - Source: `<strong>{ $property }</strong> has no effect on this element since <strong>overflow:hidden</strong> is not set.`
+    - Suggest: `mivel nincs megadva az <strong>overflow:hidden</strong>`
+    - "nem megadva" is not a valid predicate here; the negated existential form is "nincs megadva".
+- `screenshotFileManual` — `devtools/shared/screenshot.properties` — Broken clause: the subject "a képernyőkép" is paired with "mentse a fájlt".
+    - Current: `Igaz, ha a képernyőkép akkor is mentse a fájlt, ha más beállítások is be vannak kapcsolva`
+    - Source: `True if the screenshot should save the file even when other options are enabled (eg. clipboard).`
+    - Suggest: `Igaz, ha a képernyőképet fájlba is menteni kell, akkor is, ha más beállítások be vannak kapcsolva`
+    - The nominative subject cannot govern the subjunctive "mentse" with the accusative object "a fájlt"; the sentence is ungrammatical as written.
+- `errNonSpaceAfterBody` — `dom/chrome/layout/htmlparser.properties` — Spelling error: “tözs” instead of “törzs”.
+    - Current: `Nem szóköz karakter a tözs után.`
+    - Source: `Non-space character after body.`
+    - Suggest: `Nem szóköz karakter a törzs után.`
+    - “tözs” is not a Hungarian word; the intended word for “body” is “törzs”.
+- `CORSDisabled` — `dom/chrome/security/security.properties` — The reason marker “Ok:” is truncated to “O:”.
+    - Current: `(O: a CORS kikapcsolva)`
+    - Source: `Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at %1$S. (Reason: CORS disabled).`
+    - Suggest: `(Ok: a CORS kikapcsolva)`
+    - All the other CORS* strings in this file use “(Ok: …)” for en-US “(Reason: …)”; this one lost the “k”.
+- `CookieRejectedAttributeExpiryOversize` — `netwerk/necko.properties` — Wrong definite article “az” before the consonant-initial word “lejáratidátum-attribútuma”.
+    - Current: `mert az lejáratidátum-attribútuma túl nagy`
+    - Source: `Cookie “%1$S” has been rejected because its expiration date is over the limit.`
+    - Suggest: `mert a lejáratidátum-attribútuma túl nagy`
+    - Hungarian uses “a” before a consonant; “az lejárat…” is ungrammatical.
+- `SEC_ERROR_BAD_NICKNAME` — `security/manager/chrome/pipnss/nsserrors.properties` — The sentence starts with the conjunction “Ha” (if) instead of the article “A”.
+    - Current: `Ha tanúsítvány neve már használatban van.`
+    - Source: `Certificate nickname already in use.`
+    - Suggest: `A tanúsítvány neve már használatban van.`
+    - en-US: “Certificate nickname already in use.” As written the string is a dangling conditional clause, not a statement.
+- `SEC_ERROR_OLD_KRL` — `security/manager/chrome/pipnss/nsserrors.properties` — Wrong article “Az” before “KRL”, and the “new” KRL is not identified.
+    - Current: `Az KRL régebbi mint a jelenlegi.`
+    - Source: `New KRL is not later than the current one.`
+    - Suggest: `Az új KRL nem újabb, mint a jelenlegi.`
+    - en-US: “New KRL is not later than the current one.” Hungarian uses “a” before the consonant-initial “KRL”, and the sentence needs a comma before “mint”.
+- _…and 13 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
-- `about-logins-intro-import2` — `browser/browser/aboutLogins.ftl` — A stray message identifier is concatenated to the end of the translated string and will be displayed to users.
-    - Current: `egy fájlból</a>create-new-login-button =`
-    - Source: `If your logins are saved outside of { -brand-product-name }, you can <a data-l10n-name="import-browser-link">import them from another browser</a> or <a data-l10n-name="import-file-link">from a file</a>`
-    - Suggest: `egy fájlból</a>`
-    - The text `create-new-login-button =` is leftover editing debris pasted into the value; the en-US string ends after the link.
 - `newtab-sports-widget-message-wallpapers-semifinals-body` — `browser/browser/newtab/newtab.ftl` — Informal second-person imperative in a file that consistently uses the formal address.
     - Current: `Készítsd elő a színteret a világbajnokság legnagyobb mérkőzéseire!`
     - Source: `Set the stage for the World Cup’s biggest matches.`
     - Suggest: `Készítse elő a színteret a világbajnokság legnagyobb mérkőzéseire.`
     - Every other imperative in this file uses the formal Ön form (e.g. "Válassza", "Kövesse", "Vigyen"); "Készítsd" is the informal te form.
+- `onboarding-refresh-terms-of-use-with-links` — `browser/browser/newtab/onboarding.ftl` — Stray space before the closing anchor tag creates a space before the period in the rendered sentence.
+    - Current: `Adatvédelmi nyilatkozatunkat </a>.`
+    - Source: `By continuing, you agree to the <a data-l10n-name="terms_of_use">{ -brand-product-name } Terms of Use</a> and our <a data-l10n-name="privacy_notice">Privacy Notice</a>. To help improve the browser, { -brand-product-name…`
+    - Suggest: `Adatvédelmi nyilatkozatunkat</a>.`
+    - The en-US has no space before </a>; the extra space produces "nyilatkozatunkat ." visually in the link text/punctuation boundary.
 - `fonts-langgroup-latin` — `browser/browser/preferences/fonts.ftl` — Script name lowercased while every other entry in the list is capitalized.
     - Current: `latin`
     - Source: `label: Latin`
@@ -1025,6 +1267,11 @@ _Nothing reported._
     - Source: `label: Use { -brand-product-name } recommendations`
     - Suggest: `A { -brand-product-name } javaslatainak használata`
     - Renders as "AFirefox javaslatainak használata"; every other string in the file separates the article from the term with a space.
+- `fxa-menu-signed-out-description` — `browser/browser/sync.ftl` — A sentence-final period was added where the en-US short status line has none.
+    - Current: `Ön kijelentkezett.`
+    - Source: `You’re signed out`
+    - Suggest: `Ön kijelentkezett`
+    - The source "You’re signed out" has no terminal punctuation; this is a short card/menu status label.
 - `keywordURIFixup.goTo` — `browser/chrome/browser/browser.properties` — Informal second-person address in a UI button, breaking the locale's formal register.
     - Current: `Igen, vigyél ide: %S`
     - Source: `Yes, take me to %S`
@@ -1033,7 +1280,7 @@ _Nothing reported._
 - `Strings.InfoText` — `browser/updater/updater.ini` — `Strings.InfoText` uses three dots where this locale uses …
     - Current: `A %MOZ_APP_DISPLAYNAME% telepíti a frissítéseket, és pár pillanat múlva elindul...`
     - Source: `%MOZ_APP_DISPLAYNAME% is installing your updates and will start in a few moments…`
-    - The tree uses … 460 times against 7 ASCII runs.
+    - The tree uses … 389 times against 4 ASCII runs.
 - `heading` — `dom/chrome/accessibility/AccessFu.properties` — “heading” is translated as “fejléc”, the same word used for “header”, collapsing two distinct roles.
     - Current: `heading = fejléc`
     - Source: `heading`
@@ -1042,53 +1289,36 @@ _Nothing reported._
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `A billentyűesemény nem érhető el GTK2 alatt: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (876 occurrences).
+    - The locale's quote convention is `polish-double` (792 occurrences).
 - `WinConflict2` — `dom/chrome/dom/dom.properties` — `WinConflict2` uses straight double quotes
     - Current: `A billentyűesemény nem érhető el egyes billentyűzetkiosztások esetén: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on some keyboard layouts: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (876 occurrences).
+    - The locale's quote convention is `polish-double` (792 occurrences).
 - `TooLargeDashedRadius` — `dom/chrome/layout/css.properties` — `TooLargeDashedRadius` uses straight double quotes
     - Current: `A szegélysugár túl nagy a "dashed" stílushoz (a korlát 100000px). Megjelenítés tömörként.`
     - Source: `Border radius is too large for ‘dashed’ style (the limit is 100000px). Rendering as solid.`
-    - The locale's quote convention is `polish-double` (876 occurrences).
+    - The locale's quote convention is `polish-double` (792 occurrences).
 - `TooLargeDottedRadius` — `dom/chrome/layout/css.properties` — `TooLargeDottedRadius` uses straight double quotes
     - Current: `A szegélysugár túl nagy a "dotted" stílushoz (a korlát 100000px). Megjelenítés tömörként.`
     - Source: `Border radius is too large for ‘dotted’ style (the limit is 100000px). Rendering as solid.`
-    - The locale's quote convention is `polish-double` (876 occurrences).
+    - The locale's quote convention is `polish-double` (792 occurrences).
 - `crashreporter-button-details` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-button-details` uses three dots where this locale uses …
     - Current: `Részletek...`
     - Source: `Details…`
-    - The tree uses … 460 times against 7 ASCII runs.
+    - The tree uses … 389 times against 4 ASCII runs.
 - `crashreporter-resubmit-status` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-resubmit-status` uses three dots where this locale uses …
     - Current: `A korábban sikertelenül elküldött bejelentések újraküldése...`
     - Source: `Resending reports that previously failed to send…`
-    - The tree uses … 460 times against 7 ASCII runs.
+    - The tree uses … 389 times against 4 ASCII runs.
 - `crashreporter-submit-in-progress` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-submit-in-progress` uses three dots where this locale uses …
     - Current: `Bejelentés elküldése...`
     - Source: `Submitting your report…`
-    - The tree uses … 460 times against 7 ASCII runs.
-- `Strings.Details` — `toolkit/crashreporter/crashreporter.ini` — `Strings.Details` uses three dots where this locale uses …
-    - Current: `Részletek...`
-    - Source: `Details…`
-    - The tree uses … 460 times against 7 ASCII runs.
-- `Strings.ReportDuringSubmit2` — `toolkit/crashreporter/crashreporter.ini` — `Strings.ReportDuringSubmit2` uses three dots where this locale uses …
-    - Current: `Bejelentés elküldése...`
-    - Source: `Submitting your report…`
-    - The tree uses … 460 times against 7 ASCII runs.
-- `Strings.ReportResubmit` — `toolkit/crashreporter/crashreporter.ini` — `Strings.ReportResubmit` uses three dots where this locale uses …
-    - Current: `A korábban sikertelenül elküldött bejelentések újraküldése...`
-    - Source: `Resending reports that previously failed to send…`
-    - The tree uses … 460 times against 7 ASCII runs.
+    - The tree uses … 389 times against 4 ASCII runs.
 - `about-webrtc-consecutive-frames` — `toolkit/toolkit/about/aboutWebrtc.ftl` — Video "frames" rendered as "keretek" (borders) instead of "képkockák" used elsewhere in the file.
     - Current: `Egymást követő keretek`
     - Source: `Consecutive Frames`
     - Suggest: `Egymást követő képkockák`
     - This is in the video frame statistics block, where the same file consistently uses "képkocka" (about-webrtc-dropped-frames-label, about-webrtc-frames, about-webrtc-first-frame-timestamp). "keret" means a frame/border, not a video frame.
-- `abuse-report-learnmore` — `toolkit/toolkit/about/abuseReports.ftl` — "extensions" rendered as "bővítmények" (the locale's word for plugins) instead of "kiegészítők".
-    - Current: `További információk a bővítmények és témák jelentéséről`
-    - Source: `Unsure what issue to select? <a data-l10n-name="learnmore-link">Learn more about reporting extensions and themes</a>`
-    - Suggest: `További információk a kiegészítők és témák jelentéséről`
-    - Throughout this file and the surrounding about:addons surface "extension" is "kiegészítő" (abuse-report-title-extension, abuse-report-messagebar-removed-extension), while "bővítmény" is reserved for plugins (aboutPlugins.ftl, addon-category-plugin). Using it here points the user at the wrong add-on type.
 - `neterror-dns-not-found-offline-hint-reconnect` — `toolkit/toolkit/neterror/netError.ftl` — "Wi-Fi" written with an en dash instead of a hyphen.
     - Current: `kapcsolódjon újra a Wi–Fi-hez`
     - Source: `Disconnect and reconnect to Wi-Fi.`
@@ -1120,8 +1350,9 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (4)
+### Fixed to date (5)
 
+- `pdfjs-editor-undo-bar-message-multiple` — `toolkit/toolkit/pdfviewer/viewer.ftl` — fixed 2026-09-14
 - `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — fixed 2026-09-01
 - `onboarding-new-user-survey-legal-link-label` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-09-01
 - `tou-existing-user-spotlight-body` — `browser/browser/termsofuse.ftl` — fixed 2026-09-01

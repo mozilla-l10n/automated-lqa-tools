@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-07 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3c0c507b8d42` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `25d218fd91b6` |
-| **Previous run** | 2026-09-03 @ `075eb543fd91` |
+| **Generated** | 2026-09-14 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e44f1369fb6d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8ffd279d75ec` |
+| **Previous run** | 2026-09-07 @ `3c0c507b8d42` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 17,650 |
+| **Strings reviewed this run** | 72 of 15,539 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,43 @@ Also for sl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (7)
 
-_No new findings._
+- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Kaj je novega” but the string it names, `releaseNotes-link`, reads “Novosti”
+    - Current: `Preglasi stran "Kaj je novega", ki se odpre po posodobitvi. Če želite onemogočiti prikaz strani po posodobitvi, nastavite pravilnik na prazno vrednost.`
+    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
+    - Suggest: `Novosti`
+    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `outline.placeholder.functions` — `devtools/client/debugger.properties` — "Filter functions" (verb + object) translated as a noun phrase "Filter funkcij" (filter of functions).
+    - Current: `Filter funkcij`
+    - Source: `Filter functions`
+    - Suggest: `Filtriraj funkcije`
+    - The en-US placeholder is an imperative instructing the user to filter functions; "Filter funkcij" reads as "a filter of functions", changing the meaning. Compare the parallel at-rules string.
+- `newtab-wallpaper-your-images-folder` — `browser/browser/newtab/newtab.ftl` — Accessible name changed from "Your images, wallpapers that you have saved" to "Your images and wallpapers that you have saved".
+    - Current: `Vaše slike in ozadja, ki ste jih shranili`
+    - Source: `aria-label: Your images, wallpapers that you have saved`
+    - Suggest: `Vaše slike, ozadja, ki ste jih shranili`
+    - The en-US is the tile label "Your images" followed by an appositive description; the Slovenian turns it into a coordinated list, implying two separate categories.
+- `refresh-unused-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — "clean it up" rendered as "očistiti navlake" (clean it of junk/clutter), adding a claim the source does not make.
+    - Current: `Ga želite očistiti navlake, da bo deloval kot nov?`
+    - Source: `It looks like you haven’t started { -brand-short-name } in a while. Do you want to clean it up for a fresh, like-new experience? And by the way, welcome back!`
+    - Suggest: `Ga želite počistiti, da bo deloval kot nov?`
+    - The en-US only says "clean it up for a fresh, like-new experience"; the Slovenian asserts the browser is full of junk. The parallel string uses the neutral "počistimo".
+- `refresh-reinstalled-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — "you’ve reinstalled" rendered impersonally as "je nameščen na novo" (it has been newly installed), dropping the user as agent.
+    - Current: `Kaže, da je { -brand-short-name } nameščen na novo.`
+    - Source: `Looks like you’ve reinstalled { -brand-short-name }. Want us to clean it up for a fresh, like-new experience?`
+    - Suggest: `Kaže, da ste { -brand-short-name } namestili znova.`
+    - The en-US addresses the user directly about their reinstallation; the Slovenian states a passive fact and loses the meaning of "re-".
+- `onboarding-refresh-terms-of-use-with-links` — `browser/browser/newtab/onboarding.ftl` — The purpose clause is mistranslated so that the sentence reads "To improve the { -brand-product-name } browser" and merges the subject, changing which product is being improved and who sends the data.
+    - Current: `Za izboljšanje brskalnika { -brand-product-name } { -vendor-short-name } pošilja diagnostične podatke in podatke o uporabi.`
+    - Source: `By continuing, you agree to the <a data-l10n-name="terms_of_use">{ -brand-product-name } Terms of Use</a> and our <a data-l10n-name="privacy_notice">Privacy Notice</a>. To help improve the browser, { -brand-product-name…`
+    - Suggest: `Za izboljšanje brskalnika { -brand-product-name } pošilja { -vendor-short-name } diagnostične podatke in podatke o uporabi.`
+    - In en-US the subject is { -brand-product-name } which sends data to { -vendor-short-name }; the Slovenian makes { -vendor-short-name } the sender and attaches the brand name to "brskalnika", reversing the roles and dropping the recipient.
+- `support-remote-experiments-title` — `toolkit/toolkit/about/aboutSupport.ftl` — "Remote Experiments" (experiments delivered remotely) is rendered as "Poskusi na daljavo", which means experiments performed at a distance.
+    - Current: `Poskusi na daljavo`
+    - Source: `Remote Experiments`
+    - Suggest: `Oddaljeni poskusi`
+    - In about:support this lists remotely-configured experiments (Nimbus), not experiments conducted remotely; "na daljavo" is the adverbial used for remote debugging and misdescribes the item.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,9 +68,15 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (3)
 
-_Nothing retired._
+- `firefox-relay-and-fxa-popup-notification-first-sentence-basic-info` — `browser/browser/firefoxRelay.ftl` — Missing space/preposition before the link → renders "Sporočilatega spletnega mesta". → "Sporočila s <label…>tega spletnega mesta</label>".
+- `sync-engine-creditcards` — `browser/browser/preferences/preferences.ftl` — browser/browser/preferences/preferences.ftl — Lowercase + accusative ("naslove", "kreditne kartice") break the "Choose what to sync" sibling pattern (Zaznamki, Zgodovina, Gesla…). → "Naslovi", "Kreditne kartice".
+    - Suggest: `"Naslovi", "Kreditne kartice".`
+- `noDomMutationBreakpoints` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints` quotes “Zaustavi na ...” but the string it names, `watchpoints.submenu`, reads “Zaustavi na …”
+    - Current: `Z desno miškino tipko kliknite element v %Su in izberite "Zaustavi na ...", da dodate prekinitveno točko`
+    - Suggest: `Zaustavi na …`
+    - In the source this string quotes “Break on…”, which is exactly the value of `watchpoints.submenu` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 
 ---
 
@@ -44,39 +84,43 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 362 |
-| Strings | 17,650 |
-| Missing strings | 622 |
+| Files | 325 |
+| Strings | 15,539 |
+| Missing strings | 629 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
-| Term parameter mismatches | 1 |
+| Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 4 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 1 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 34 |
+| Typography deviations from this locale's own norm | 28 |
 
 ### Completeness
 
-**622 strings** are not translated yet, concentrated in:
+**629 strings** are not translated yet, concentrated in:
 
 - `browser/browser/aiWindow.ftl` — 139
-- `browser/browser/aiWindowContent.ftl` — 71
+- `browser/browser/aiWindowContent.ftl` — 67
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 48
 - `dom/chrome/dom/dom.properties` — 46
-- `browser/browser/ipProtection.ftl` — 37
-- `browser/browser/newtab/newtab.ftl` — 30
+- `browser/browser/ipProtection.ftl` — 44
+- `browser/browser/newtab/newtab.ftl` — 29
 - `browser/browser/aiFeatures.ftl` — 27
-- `dom/chrome/security/security.properties` — 23
-- `browser/browser/preferences/preferences.ftl` — 20
-- `devtools/client/debugger.properties` — 17
-- `toolkit/toolkit/about/aboutGlean.ftl` — 15
-- `toolkit/toolkit/about/aboutWebrtc.ftl` — 14
+- `dom/chrome/security/security.properties` — 22
+- `browser/browser/preferences/preferences.ftl` — 19
+- `browser/browser/newtab/onboarding.ftl` — 16
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 16
+- `toolkit/toolkit/about/aboutGlean.ftl` — 14
+
+**Files absent from the locale:**
+
+- `toolkit/toolkit/about/pdfFeaturesNotification.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -86,31 +130,45 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 303, `straight-double` 288, `curly-single` 54, `guillemet` 7 | _mixed_ |
-| apostrophe | `typographic` 54, `straight` 52 | _mixed_ |
-| ellipsis | `char` 421, `ascii` 40 | **char** |
-| dash | `em` 13, `en` 150 | **en** |
-| nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 9 | _mixed_ |
-| register | `informal` 11, `formal` 605 | **formal** |
+| quotes | `curly-double` 267, `straight-double` 257, `curly-single` 50, `guillemet` 5 | _mixed_ |
+| apostrophe | `typographic` 50, `straight` 51 | _mixed_ |
+| ellipsis | `char` 356, `ascii` 33 | **char** |
+| dash | `em` 13, `en` 115 | **en** |
+| nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 8 | _mixed_ |
+| register | `informal` 8, `formal` 514 | **formal** |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **typography — 34 strings** — 34 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
-    - Affected: `Strings.Details`, `Strings.ReportResubmit`, `about-debugging-sidebar-runtime-item-waiting-for-browser`, `about-logins-menu-menuitem-export-logins2`, `browser-languages-downloading`, `browser-languages-search`, `browser-languages-searching`, `choose-other-app-window-title`, `crashreporter-button-details`, `crashreporter-resubmit-status`, `diffing.state.taking-diff`, `diffing.state.taking-diff.full` …and 22 more
+- **typography — 28 strings** — 28 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
+    - Affected: `about-debugging-sidebar-runtime-item-waiting-for-browser`, `about-logins-menu-menuitem-export-logins2`, `browser-languages-downloading`, `browser-languages-search`, `browser-languages-searching`, `choose-other-app-window-title`, `crashreporter-button-details`, `crashreporter-resubmit-status`, `diffing.state.taking-diff`, `diffing.state.taking-diff.full`, `fxa-menu-send-tab-to-device-syncnotready`, `home-homepage-custom-url` …and 16 more
 
 ---
 
-## 3. Open findings (37)
+## 3. Open findings (41)
 
+> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+
+- `refresh-unused-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — "clean it up" rendered as "očistiti navlake" (clean it of junk/clutter), adding a claim the source does not make.
+    - Current: `Ga želite očistiti navlake, da bo deloval kot nov?`
+    - Source: `It looks like you haven’t started { -brand-short-name } in a while. Do you want to clean it up for a fresh, like-new experience? And by the way, welcome back!`
+    - Suggest: `Ga želite počistiti, da bo deloval kot nov?`
+    - The en-US only says "clean it up for a fresh, like-new experience"; the Slovenian asserts the browser is full of junk. The parallel string uses the neutral "počistimo".
+- `onboarding-refresh-terms-of-use-with-links` — `browser/browser/newtab/onboarding.ftl` — The purpose clause is mistranslated so that the sentence reads "To improve the { -brand-product-name } browser" and merges the subject, changing which product is being improved and who sends the data.
+    - Current: `Za izboljšanje brskalnika { -brand-product-name } { -vendor-short-name } pošilja diagnostične podatke in podatke o uporabi.`
+    - Source: `By continuing, you agree to the <a data-l10n-name="terms_of_use">{ -brand-product-name } Terms of Use</a> and our <a data-l10n-name="privacy_notice">Privacy Notice</a>. To help improve the browser, { -brand-product-name…`
+    - Suggest: `Za izboljšanje brskalnika { -brand-product-name } pošilja { -vendor-short-name } diagnostične podatke in podatke o uporabi.`
+    - In en-US the subject is { -brand-product-name } which sends data to { -vendor-short-name }; the Slovenian makes { -vendor-short-name } the sender and attaches the brand name to "brskalnika", reversing the roles and dropping the recipient.
+
+_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 5 |
-| 3 | Degraded language (grammar, spelling, terminology) | 25 |
-| 4 | Cosmetic (typography, spacing) | 7 |
+| 2 | Wrong content (says something other than the English) | 11 |
+| 3 | Degraded language (grammar, spelling, terminology) | 24 |
+| 4 | Cosmetic (typography, spacing) | 6 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -121,11 +179,41 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `refresh-reinstalled-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — "you’ve reinstalled" rendered impersonally as "je nameščen na novo" (it has been newly installed), dropping the user as agent.
+    - Current: `Kaže, da je { -brand-short-name } nameščen na novo.`
+    - Source: `Looks like you’ve reinstalled { -brand-short-name }. Want us to clean it up for a fresh, like-new experience?`
+    - Suggest: `Kaže, da ste { -brand-short-name } namestili znova.`
+    - The en-US addresses the user directly about their reinstallation; the Slovenian states a passive fact and loses the meaning of "re-".
+- `refresh-unused-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — "clean it up" rendered as "očistiti navlake" (clean it of junk/clutter), adding a claim the source does not make.
+    - Current: `Ga želite očistiti navlake, da bo deloval kot nov?`
+    - Source: `It looks like you haven’t started { -brand-short-name } in a while. Do you want to clean it up for a fresh, like-new experience? And by the way, welcome back!`
+    - Suggest: `Ga želite počistiti, da bo deloval kot nov?`
+    - The en-US only says "clean it up for a fresh, like-new experience"; the Slovenian asserts the browser is full of junk. The parallel string uses the neutral "počistimo".
+- `newtab-wallpaper-your-images-folder` — `browser/browser/newtab/newtab.ftl` — Accessible name changed from "Your images, wallpapers that you have saved" to "Your images and wallpapers that you have saved".
+    - Current: `Vaše slike in ozadja, ki ste jih shranili`
+    - Source: `aria-label: Your images, wallpapers that you have saved`
+    - Suggest: `Vaše slike, ozadja, ki ste jih shranili`
+    - The en-US is the tile label "Your images" followed by an appositive description; the Slovenian turns it into a coordinated list, implying two separate categories.
+- `onboarding-refresh-terms-of-use-with-links` — `browser/browser/newtab/onboarding.ftl` — The purpose clause is mistranslated so that the sentence reads "To improve the { -brand-product-name } browser" and merges the subject, changing which product is being improved and who sends the data.
+    - Current: `Za izboljšanje brskalnika { -brand-product-name } { -vendor-short-name } pošilja diagnostične podatke in podatke o uporabi.`
+    - Source: `By continuing, you agree to the <a data-l10n-name="terms_of_use">{ -brand-product-name } Terms of Use</a> and our <a data-l10n-name="privacy_notice">Privacy Notice</a>. To help improve the browser, { -brand-product-name…`
+    - Suggest: `Za izboljšanje brskalnika { -brand-product-name } pošilja { -vendor-short-name } diagnostične podatke in podatke o uporabi.`
+    - In en-US the subject is { -brand-product-name } which sends data to { -vendor-short-name }; the Slovenian makes { -vendor-short-name } the sender and attaches the brand name to "brskalnika", reversing the roles and dropping the recipient.
+- `outline.placeholder.functions` — `devtools/client/debugger.properties` — "Filter functions" (verb + object) translated as a noun phrase "Filter funkcij" (filter of functions).
+    - Current: `Filter funkcij`
+    - Source: `Filter functions`
+    - Suggest: `Filtriraj funkcije`
+    - The en-US placeholder is an imperative instructing the user to filter functions; "Filter funkcij" reads as "a filter of functions", changing the meaning. Compare the parallel at-rules string.
 - `options-stylesheets-in-the-debugger-tooltip` — `devtools/client/toolbox-options.ftl` — Tooltip drops "and view" from "List and view stylesheets in the debugger".
     - Current: `Prikaži seznam slogovnih predlog v razhroščevalniku`
     - Source: `title: List and view stylesheets in the debugger`
     - Suggest: `Prikaži seznam slogovnih predlog in si jih oglej v razhroščevalniku`
     - The en-US says "List and view stylesheets"; the Slovenian only mentions listing them.
+- `support-remote-experiments-title` — `toolkit/toolkit/about/aboutSupport.ftl` — "Remote Experiments" (experiments delivered remotely) is rendered as "Poskusi na daljavo", which means experiments performed at a distance.
+    - Current: `Poskusi na daljavo`
+    - Source: `Remote Experiments`
+    - Suggest: `Oddaljeni poskusi`
+    - In about:support this lists remotely-configured experiments (Nimbus), not experiments conducted remotely; "na daljavo" is the adverbial used for remote debugging and misdescribes the item.
 
 ### C. Grammar, agreement & spelling
 
@@ -194,20 +282,17 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `onboarding-genai-sidebar-title` — `browser/browser/newtab/onboarding.ftl` — onboarding "preizkusiti" vs "preskusiti" — browser/browser/newtab/onboarding.ftl — onboarding-focused-tabs-subtitle / onboarding-genai-sidebar-title use "preskusi(te)"; most siblings use the more common "Preizkusite". → align. (both forms valid; low priority.)
     - Source: `Try an AI chatbot in the sidebar`
     - Suggest: `align.`
+- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Kaj je novega” but the string it names, `releaseNotes-link`, reads “Novosti”
+    - Current: `Preglasi stran "Kaj je novega", ki se odpre po posodobitvi. Če želite onemogočiti prikaz strani po posodobitvi, nastavite pravilnik na prazno vrednost.`
+    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
+    - Suggest: `Novosti`
+    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `fonts-langgroup-kannada` — `browser/browser/preferences/fonts.ftl` — "Kannada" (Indic script) rendered "kanadsko" (reads as Canadian, colliding with fonts-langgroup-canadian). → "kannada".
     - Source: `label: Kannada`
     - Suggest: `"kannada".`
 - `sync-engine-addresses` — `browser/browser/preferences/preferences.ftl` — browser/browser/preferences/preferences.ftl — Lowercase + accusative ("naslove", "kreditne kartice") break the "Choose what to sync" sibling pattern (Zaznamki, Zgodovina, Gesla…). → "Naslovi", "Kreditne kartice".
     - Source: `accesskey: e label: Addresses tooltiptext: Postal addresses you’ve saved (desktop only)`
     - Suggest: `"Naslovi", "Kreditne kartice".`
-- `sync-engine-creditcards` — `browser/browser/preferences/preferences.ftl` — browser/browser/preferences/preferences.ftl — Lowercase + accusative ("naslove", "kreditne kartice") break the "Choose what to sync" sibling pattern (Zaznamki, Zgodovina, Gesla…). → "Naslovi", "Kreditne kartice".
-    - Source: `accesskey: C label: Credit cards tooltiptext: Names, numbers and expiry dates (desktop only)`
-    - Suggest: `"Naslovi", "Kreditne kartice".`
-- `noDomMutationBreakpoints` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints` quotes “Zaustavi na ...” but the string it names, `watchpoints.submenu`, reads “Zaustavi na …”
-    - Current: `Z desno miškino tipko kliknite element v %Su in izberite "Zaustavi na ...", da dodate prekinitveno točko`
-    - Source: `Right click an element in the %S and select “Break on…” to add a breakpoint`
-    - Suggest: `Zaustavi na …`
-    - In the source this string quotes “Break on…”, which is exactly the value of `watchpoints.submenu` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `options-experimental-label` — `devtools/client/toolbox-options.ftl` — "Experimental Features" rendered as "Poskusne zmogljivosti" instead of the established "Poskusne funkcije/možnosti".
     - Current: `Poskusne zmogljivosti`
     - Source: `Experimental Features`
@@ -233,8 +318,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 - `restore-from-backup-profiles-disabled-message` — `browser/browser/backupSettings.ftl` — Double space before "zamenjali".
     - Source: `This will replace all your current { -brand-short-name } data with your backup.`
-- `firefox-relay-and-fxa-popup-notification-first-sentence-basic-info` — `browser/browser/firefoxRelay.ftl` — Missing space/preposition before the link → renders "Sporočilatega spletnega mesta". → "Sporočila s <label…>tega spletnega mesta</label>".
-    - Source: `Prevent spam by hiding your real email address with a free <label data-l10n-name="firefox-relay-learn-more-url">email mask</label>. Emails from <label data-l10n-name="firefox-fxa-and-relay-offer-domain">this site</label…`
 - `newtab-stocks-search-loading` — `browser/browser/newtab/newtab.ftl` — Space inserted before the ellipsis character.
     - Current: `Nalaganje …`
     - Source: `Loading…`
