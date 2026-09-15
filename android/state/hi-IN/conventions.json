@@ -6,7 +6,7 @@
  },
  "apostrophe": {
   "straight": 6,
-  "typographic": 1
+  "typographic": 0
  },
  "dash": {
   "em": 1,
@@ -30,7 +30,7 @@
   "total": 0
  },
  "quotes": {
-  "curly-double": 12,
+  "curly-double": 13,
   "straight-double": 1
  }
 }
