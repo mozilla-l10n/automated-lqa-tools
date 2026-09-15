@@ -32,7 +32,7 @@ Too many to list here; the per-locale counts are in the table below and every on
 | [es-MX](es-MX/android.md) | 2026-09-14 | incremental | `6e23dc94` | 2,687 | 59 | **152** | 82 | 0 | 0 | 0 |
 | [fr](fr/android.md) | 2026-09-14 | incremental | `6e23dc94` | 2,746 | 0 | **77** | 55 | 0 | 0 | 0 |
 | [fy-NL](fy-NL/android.md) | 2026-09-14 | incremental | `6e23dc94` | 2,713 | 33 | **165** | 59 | 0 | 0 | 0 |
-| [hi-IN](hi-IN/android.md) | 2026-09-15 | incremental | `96fcd031` | 2,665 | 82 | **65** | 35 | 179 | 1 | 0 |
+| [hi-IN](hi-IN/android.md) | 2026-09-15 | incremental | `655dd75b` | 2,665 | 82 | **65** | 35 | 179 | 1 | 0 |
 | [hu](hu/android.md) | 2026-09-14 | incremental | `6e23dc94` | 2,746 | 0 | **148** | 77 | 0 | 0 | 0 |
 | [id](id/android.md) | 2026-09-14 | incremental | `6e23dc94` | 2,738 | 8 | **161** | 90 | 4 | 0 | 0 |
 | [it](it/android.md) | 2026-09-14 | incremental | `6e23dc94` | 2,746 | 0 | **0** | 0 | 43 | 11 | 4 |
