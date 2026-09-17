@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `58f3e9bacff9` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `58f3e9bacff9` |
-| **Previous run** | 2026-09-15 @ `655dd75b20ba` |
+| **Generated** | 2026-09-17 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `9a01dc9bd934` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `9a01dc9bd934` |
+| **Previous run** | 2026-09-16 @ `58f3e9bacff9` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 2,667 |
+| **Strings reviewed this run** | 37 of 2,668 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,93 +18,36 @@ Also for hi-IN: [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (4)
 
-_No new findings._
+- `search_settings_menu_item` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "Search settings" (the search settings screen) is rendered as an imperative "search the settings".
+    - Current: `सेटिंग सर्च करें`
+    - Source: `Search settings`
+    - Suggest: `सर्च सेटिंग`
+    - The developer comment says this menu option opens the search settings; the Hindi says "search the settings", reversing the noun phrase into a command.
+- `browser_menu_webcompat_reporter_2` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "broken site" rendered as "खराब साइट" (bad/spoiled site) rather than a site that is not working properly.
+    - Current: `खराब साइट की रिपोर्ट करें`
+    - Source: `Report broken site`
+    - Suggest: `काम न करने वाली साइट की रिपोर्ट करें`
+    - Per the comment, the feature reports sites that are broken (not functioning); "खराब" reads as a poor-quality/bad site, changing the meaning.
+- `preference_option_phone_feature_ask_to_allow` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "Ask to allow" translated as "अनुमति मांगें" (request permission) instead of the setting meaning "always ask before allowing".
+    - Current: `अनुमति मांगें`
+    - Source: `Ask to allow`
+    - Suggest: `अनुमति देने से पहले पूछें`
+    - The comment states the label indicates a permission must always be asked; the Hindi instructs the user to request permission, not the app to ask each time. Compare preferences_passwords_save_logins_ask_to_save, rendered as "सेव करने से पहले पूछें".
+- `translation_settings_always_download` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Added "भी" ("even in data saving mode") is not in the source.
+    - Current: `डेटा सेविंग मोड में भी भाषाएं हमेशा डाउनलोड करें`
+    - Source: `Always download languages in data saving mode`
+    - Suggest: `डेटा सेविंग मोड में भाषाएं हमेशा डाउनलोड करें`
+    - The source is "Always download languages in data saving mode"; the extra emphatic particle adds a nuance the source does not have.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (30)
 
-_Nothing was fixed._
-
-### ↩︎ Withdrawn — no longer considered a defect (0)
-
-_Nothing withdrawn._
-
-### 🔁 String changed, defect not verifiable — needs a re-read (0)
-
-_Nothing to re-read._
-
-### 🗑 Retired — the string no longer exists upstream (0)
-
-_Nothing retired._
-
----
-
-## 1. Health check
-
-| Check | Result |
-|---|---|
-| Files | 44 |
-| Strings | 2,667 |
-| Missing strings | 80 |
-| Obsolete strings | 0 |
-| Files absent from the locale | 0 |
-| Files with no en-US counterpart | 0 |
-| Fluent / properties syntax errors | 0 |
-| Reference files that did not parse | 0 |
-| Android escaping (apostrophes, quotes, ampersands) | 0 |
-| printf placeholder mismatches | 0 |
-| Plural / select selector mismatches | 0 |
-| Plural variants (dead or missing forms) | 0 |
-| Text quoting a UI label that no longer matches | 1 |
-| Source-language spellings left unchanged | 0 |
-| Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 1 |
-
-### Completeness
-
-**80 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/focus-android/app/src/main/res/values-hi-rIN/strings.xml` — 79
-- `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-hi-rIN/strings.xml` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
-
-### Conventions detected in this locale
-
-Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
-
-| Convention | Counts | Inferred |
-|---|---|---|
-| quotes | `curly-double` 13, `straight-double` 1 | **curly-double** |
-| apostrophe | `straight` 6 | **straight** |
-| ellipsis | `char` 21 | **char** |
-| dash | `em` 1 | **em** |
-
----
-
-## 2. Systemic items (decisions, not line items)
-
-_Nothing reported._
-
----
-
-## 3. Open findings (65)
-
-
-| Impact | Meaning | Count |
-|---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 35 |
-| 3 | Degraded language (grammar, spelling, terminology) | 29 |
-| 4 | Cosmetic (typography, spacing) | 1 |
-
-### A. Functional, markup, variables & plurals
-
-_Nothing in this category._
-
-### B. Mistranslation, reversed meaning, wrong names & brand
-
+- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hi-rIN/strings.xml` — `mozac_browser_errorpages_offline_message` quotes “फिर से कोशिश करें” but the string it names, `mozac_browser_errorpages_page_refresh`, reads “फिर कोशिश करें”
+    - Current: `{ <p> }ब्राउज़र ऑफ़लाइन मोड में चल रहा है और अनुरोध किए गए आइटम से कनेक्ट नहीं हो सकता है।{ </p> } { <ul> } { <li> }क्या डिवाइस किसी एक्टिव नेटवर्क से जुड़ा हुआ है?{ </li> } { <li> }ऑनलाइन मोड में जाने और पेज को फिर से लो…`
+    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
+    - Suggest: `फिर कोशिश करें`
+    - In the source this string quotes “Try Again”, which is exactly the value of `mozac_browser_errorpages_page_refresh` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `mozac_browser_awesomebar_stock_suggestion_increase` — `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-hi-rIN/strings.xml` — Translation adds "साइज़" (size), which is not in the source about a stock price gain.
     - Current: `साइज़ %s प्रतिशत बढ़ा`
     - Source: `Gained %s percent`
@@ -115,31 +58,15 @@ _Nothing in this category._
     - Source: `Access your data for %1$s.`
     - Suggest: `%1$s के लिए आपका डेटा एक्सेस करना।`
     - This is a permission description listing what the add-on will do; the imperative "एक्सेस करें" tells the user to access their own data, changing who performs the action.
-- `mozac_feature_applinks_link_from` — `mozilla-mobile/android-components/components/feature/app-links/src/main/res/values-hi-rIN/strings.xml` — "Link from %s" (origin domain) translated as "link that has %s".
-    - Current: `%s वाला लिंक`
-    - Source: `Link from %s`
-    - Suggest: `%s से आया लिंक`
-    - Per the developer comment %s is the domain the link was navigated from; 'वाला लिंक' conveys possession/containment, not origin.
-- `mozac_feature_prompts_save_credit_card_prompt_title` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-hi-rIN/strings.xml` — Demonstrative "this" dropped from "Securely save this card?".
-    - Current: `कार्ड को सुरक्षित ढंग से सेव करना है?`
-    - Source: `Securely save this card?`
-    - Suggest: `इस कार्ड को सुरक्षित ढंग से सेव करना है?`
-    - Source says "this card"; the target omits "इस", making it generic.
-- `search_widget_content_description` — `mozilla-mobile/android-components/components/feature/search/src/main/res/values-hi-rIN/strings.xml` — Translation says "Open a new tab in %1$s" instead of "Open a new %1$s tab"; minor but the postposition changes meaning slightly.
-    - Current: `%1$s में एक नया टैब खोलें`
-    - Source: `Open a new %1$s tab`
-    - Suggest: `%1$s का एक नया टैब खोलें`
-    - Source describes opening a new app-branded tab; the target's locative reading is different, though intelligible.
 - `my_longest_fox_is` — `mozilla-mobile/fenix/app/longfox/src/main/res/values-hi-rIN/strings.xml` — "My longest fox is %1$d" is rendered as "My high score is %1$d", losing the game-specific "longest fox" wording.
     - Current: `मेरा हाई-स्कोर %1$d है!`
     - Source: `My longest fox is %1$d! #longfox %2$s`
     - Suggest: `मेरी सबसे लंबी फ़ॉक्स %1$d है!`
     - The developer comment explains the shared text refers to the longest fox achievement (example: "My longest fox is 6! #longfox"); the target substitutes a generic "high score" phrase.
-- `addons_permissions_heading_required_data_collection` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Section heading turned into a sentence claim instead of the label "Required data collection:".
-    - Current: `यह डेटा इकट्ठा करना ज़रूरी है:`
-    - Source: `Required data collection:`
-    - Suggest: `ज़रूरी डेटा संग्रह:`
-    - The source is a noun-phrase heading introducing a list; the Hindi reads "This data collection is required:", inconsistent with the parallel "ज़रूरी अनुमतियां:" heading.
+- `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
+    - Current: `वेब एड्रेस में "https://" या "http://" ज़रूर होना चाहिए`
+    - Source: `Web address must contain “https://” or “http://”`
+    - The locale's quote convention is `curly-double` (13 occurrences).
 - `addresses_post_town` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "Post town" rendered as "पोस्ट सिटी" (post city), an invented term.
     - Current: `पोस्ट सिटी`
     - Source: `Post town`
@@ -160,21 +87,11 @@ _Nothing in this category._
     - Source: `I don’t use it`
     - Suggest: `मैं इसका इस्तेमाल नहीं करता/करती`
     - Source is present habitual ("I don’t use it"), not past perfect ("I haven't used it").
-- `nova_onboarding_tou_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "won't sell you out" is rendered as "is trustworthy", dropping the claim about not selling out users.
-    - Current: `तेज़, सुरक्षित और भरोसेमंद है।`
-    - Source: `Speedy, safe, and won’t sell you out. Browsing just got better.`
-    - Suggest: `तेज़, सुरक्षित और आपको धोखा नहीं देगा।`
-    - The source promises the browser will not sell the user out (i.e., not betray/sell their data); the Hindi merely says it is "trustworthy", which is a different, vaguer claim.
-- `preference_doh_exceptions_add_error` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "Must be a valid domain" is rendered as "The domain must be correct", losing the requirement that the entry be a domain.
-    - Current: `डोमेन सही होना चाहिए`
-    - Source: `Must be a valid domain`
-    - Suggest: `यह एक मान्य डोमेन होना चाहिए`
-    - The source states the input must be a valid domain; the target asserts a domain must be correct, which shifts the meaning of the validation error.
-- `preference_option_phone_feature_ask_to_allow` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "Ask to allow" rendered as "ask in order to allow" reversing who asks.
-    - Current: `अनुमति देने के लिए पूछें`
+- `preference_option_phone_feature_ask_to_allow` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "Ask to allow" translated as "अनुमति मांगें" (request permission) instead of the setting meaning "always ask before allowing".
+    - Current: `अनुमति मांगें`
     - Source: `Ask to allow`
-    - Suggest: `अनुमति माँगें`
-    - The source means the site must ask the user for permission; the Hindi instructs the user to ask in order to grant permission.
+    - Suggest: `अनुमति देने से पहले पूछें`
+    - The comment states the label indicates a permission must always be asked; the Hindi instructs the user to request permission, not the app to ask each time. Compare preferences_passwords_save_logins_ask_to_save, rendered as "सेव करने से पहले पूछें".
 - `preferences_category_about` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "About" rendered as "About us", which is not what the category means.
     - Current: `हमारे बारे में`
     - Source: `About`
@@ -230,11 +147,6 @@ _Nothing in this category._
     - Source: `%1$s  Sent from %2$s 🦊 %3$s`
     - Suggest: `%1$s  %2$s से भेजा गया 🦊 %3$s`
     - Source is "%1$s\n\nSent from %2$s 🦊 %3$s". In the target the emoji is inserted inside the phrase "%2$s ने भेजा है", splitting the app name from its verb, and the download link %3$s follows without separation, so the footer no longer reads as "Sent from <app>".
-- `settings_search_title` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "Search settings" (verb) rendered as the noun phrase "सर्च सेटिंग" (search-related settings).
-    - Current: `सर्च सेटिंग`
-    - Source: `Search settings`
-    - Suggest: `सेटिंग सर्च करें`
-    - The developer comment states "Search" is a verb here — the title means to search through the settings. "सर्च सेटिंग" reads as "search settings" i.e. settings for search, the opposite parse.
 - `sync_connect_device` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "Connect" rendered as "जोड़ें" (add), inconsistent with sync_add_new_device_connect_button which uses "कनेक्ट करें" for the same source phrase.
     - Current: `अन्य डिवाइस जोड़ें`
     - Source: `Connect another device`
@@ -255,26 +167,160 @@ _Nothing in this category._
     - Source: `Off`
     - Suggest: `बंद`
     - Per the developer comment this is the summary of the tracking protection preference showing its current state (Off), parallel to "Standard"/"Strict"/"Custom", not an action button; "बंद करें" means "turn off".
-- `translation_settings_always_download` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Word order makes it read as "always download languages in data saving mode" as a restriction to that mode rather than "even when in data saving mode".
-    - Current: `भाषाओं को हमेशा डेटा सेविंग मोड में डाउनलोड करें`
+- `translation_settings_always_download` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Added "भी" ("even in data saving mode") is not in the source.
+    - Current: `डेटा सेविंग मोड में भी भाषाएं हमेशा डाउनलोड करें`
     - Source: `Always download languages in data saving mode`
-    - Suggest: `डेटा सेविंग मोड में भी भाषाएं हमेशा डाउनलोड करें`
-    - The source means downloads are permitted even while data saver is on; the Hindi placement of हमेशा before "in data saving mode" implies downloading always happens in data saving mode.
+    - Suggest: `डेटा सेविंग मोड में भाषाएं हमेशा डाउनलोड करें`
+    - The source is "Always download languages in data saving mode"; the extra emphatic particle adds a nuance the source does not have.
 - `uninstall_survey_option_1_v2` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "or" rendered as "and", changing the survey option's meaning.
     - Current: `यह धीमा है और भरोसेमंद नहीं है`
     - Source: `It’s slow or unreliable`
     - Suggest: `यह धीमा है या भरोसेमंद नहीं है`
     - Source is "It’s slow or unreliable" (either/or), but the Hindi asserts both conditions together with "और" (and).
-- `webcompat_reporter_problem_description_placeholder_text_2` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — The last sentence invents "so it can be understood where the problem occurred" instead of "steps to reproduce the issue".
-    - Current: `कृपया सिलसिलेवार ढंग से एक-एक चरण की जानकारी दें, ताकि समझा जा सके कि समस्या कहां पर आई।`
-    - Source: `What happened? What did you expect to happen? Please provide steps to reproduce the issue.`
-    - Suggest: `कृपया समस्या को दोहराने के चरण बताएँ।`
-    - Source asks for steps to reproduce the issue; the target adds an unsourced purpose clause and drops the notion of reproducing the problem.
 - `webcompat_reporter_reason_checkout` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Negation dropped: the reason reads "payment, checkout or shopping is working" instead of "Can't pay, check out or shop".
     - Current: `पेमेंट, चेकआउट या खरीदारी हो पा रही है`
     - Source: `Can’t pay, check out or shop`
     - Suggest: `पेमेंट, चेकआउट या खरीदारी नहीं हो पा रही है`
     - Source is "Can’t pay, check out or shop"; the Hindi omits "नहीं", reversing the meaning of this broken-site reason option.
+- `preference_option_phone_feature_ask_to_allow` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "Ask to allow" translated as "अनुमति मांगें" (request permission) instead of the setting meaning "always ask before allowing".
+    - Current: `अनुमति मांगें`
+    - Source: `Ask to allow`
+    - Suggest: `अनुमति देने से पहले पूछें`
+    - The comment states the label indicates a permission must always be asked; the Hindi instructs the user to request permission, not the app to ask each time. Compare preferences_passwords_save_logins_ask_to_save, rendered as "सेव करने से पहले पूछें".
+- `translation_settings_always_download` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Added "भी" ("even in data saving mode") is not in the source.
+    - Current: `डेटा सेविंग मोड में भी भाषाएं हमेशा डाउनलोड करें`
+    - Source: `Always download languages in data saving mode`
+    - Suggest: `डेटा सेविंग मोड में भाषाएं हमेशा डाउनलोड करें`
+    - The source is "Always download languages in data saving mode"; the extra emphatic particle adds a nuance the source does not have.
+
+### ↩︎ Withdrawn — no longer considered a defect (0)
+
+_Nothing withdrawn._
+
+### 🔁 String changed, defect not verifiable — needs a re-read (0)
+
+_Nothing to re-read._
+
+### 🗑 Retired — the string no longer exists upstream (0)
+
+_Nothing retired._
+
+---
+
+## 1. Health check
+
+| Check | Result |
+|---|---|
+| Files | 44 |
+| Strings | 2,668 |
+| Missing strings | 79 |
+| Obsolete strings | 0 |
+| Files absent from the locale | 0 |
+| Files with no en-US counterpart | 0 |
+| Fluent / properties syntax errors | 0 |
+| Reference files that did not parse | 0 |
+| Android escaping (apostrophes, quotes, ampersands) | 0 |
+| printf placeholder mismatches | 0 |
+| Plural / select selector mismatches | 0 |
+| Plural variants (dead or missing forms) | 0 |
+| Text quoting a UI label that no longer matches | 0 |
+| Source-language spellings left unchanged | 0 |
+| Markup & `data-l10n-name` defects | 0 |
+| Typography deviations from this locale's own norm | 0 |
+
+### Completeness
+
+**79 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/focus-android/app/src/main/res/values-hi-rIN/strings.xml` — 79
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+
+### Conventions detected in this locale
+
+Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
+
+| Convention | Counts | Inferred |
+|---|---|---|
+| quotes | `curly-double` 13 | **curly-double** |
+| apostrophe | `straight` 6 | **straight** |
+| ellipsis | `char` 21 | **char** |
+| dash | `em` 1 | **em** |
+
+---
+
+## 2. Systemic items (decisions, not line items)
+
+_Nothing reported._
+
+---
+
+## 3. Open findings (39)
+
+
+| Impact | Meaning | Count |
+|---|---|---|
+| 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
+| 2 | Wrong content (says something other than the English) | 14 |
+| 3 | Degraded language (grammar, spelling, terminology) | 25 |
+| 4 | Cosmetic (typography, spacing) | 0 |
+
+### A. Functional, markup, variables & plurals
+
+_Nothing in this category._
+
+### B. Mistranslation, reversed meaning, wrong names & brand
+
+- `mozac_feature_applinks_link_from` — `mozilla-mobile/android-components/components/feature/app-links/src/main/res/values-hi-rIN/strings.xml` — "Link from %s" (origin domain) translated as "link that has %s".
+    - Current: `%s वाला लिंक`
+    - Source: `Link from %s`
+    - Suggest: `%s से आया लिंक`
+    - Per the developer comment %s is the domain the link was navigated from; 'वाला लिंक' conveys possession/containment, not origin.
+- `mozac_feature_prompts_save_credit_card_prompt_title` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-hi-rIN/strings.xml` — Demonstrative "this" dropped from "Securely save this card?".
+    - Current: `कार्ड को सुरक्षित ढंग से सेव करना है?`
+    - Source: `Securely save this card?`
+    - Suggest: `इस कार्ड को सुरक्षित ढंग से सेव करना है?`
+    - Source says "this card"; the target omits "इस", making it generic.
+- `search_widget_content_description` — `mozilla-mobile/android-components/components/feature/search/src/main/res/values-hi-rIN/strings.xml` — Translation says "Open a new tab in %1$s" instead of "Open a new %1$s tab"; minor but the postposition changes meaning slightly.
+    - Current: `%1$s में एक नया टैब खोलें`
+    - Source: `Open a new %1$s tab`
+    - Suggest: `%1$s का एक नया टैब खोलें`
+    - Source describes opening a new app-branded tab; the target's locative reading is different, though intelligible.
+- `addons_permissions_heading_required_data_collection` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — Section heading turned into a sentence claim instead of the label "Required data collection:".
+    - Current: `यह डेटा इकट्ठा करना ज़रूरी है:`
+    - Source: `Required data collection:`
+    - Suggest: `ज़रूरी डेटा संग्रह:`
+    - The source is a noun-phrase heading introducing a list; the Hindi reads "This data collection is required:", inconsistent with the parallel "ज़रूरी अनुमतियां:" heading.
+- `browser_menu_webcompat_reporter_2` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "broken site" rendered as "खराब साइट" (bad/spoiled site) rather than a site that is not working properly.
+    - Current: `खराब साइट की रिपोर्ट करें`
+    - Source: `Report broken site`
+    - Suggest: `काम न करने वाली साइट की रिपोर्ट करें`
+    - Per the comment, the feature reports sites that are broken (not functioning); "खराब" reads as a poor-quality/bad site, changing the meaning.
+- `nova_onboarding_tou_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "won't sell you out" is rendered as "is trustworthy", dropping the claim about not selling out users.
+    - Current: `तेज़, सुरक्षित और भरोसेमंद है।`
+    - Source: `Speedy, safe, and won’t sell you out. Browsing just got better.`
+    - Suggest: `तेज़, सुरक्षित और आपको धोखा नहीं देगा।`
+    - The source promises the browser will not sell the user out (i.e., not betray/sell their data); the Hindi merely says it is "trustworthy", which is a different, vaguer claim.
+- `preference_doh_exceptions_add_error` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "Must be a valid domain" is rendered as "The domain must be correct", losing the requirement that the entry be a domain.
+    - Current: `डोमेन सही होना चाहिए`
+    - Source: `Must be a valid domain`
+    - Suggest: `यह एक मान्य डोमेन होना चाहिए`
+    - The source states the input must be a valid domain; the target asserts a domain must be correct, which shifts the meaning of the validation error.
+- `search_settings_menu_item` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "Search settings" (the search settings screen) is rendered as an imperative "search the settings".
+    - Current: `सेटिंग सर्च करें`
+    - Source: `Search settings`
+    - Suggest: `सर्च सेटिंग`
+    - The developer comment says this menu option opens the search settings; the Hindi says "search the settings", reversing the noun phrase into a command.
+- `settings_search_title` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "Search settings" (verb) rendered as the noun phrase "सर्च सेटिंग" (search-related settings).
+    - Current: `सर्च सेटिंग`
+    - Source: `Search settings`
+    - Suggest: `सेटिंग सर्च करें`
+    - The developer comment states "Search" is a verb here — the title means to search through the settings. "सर्च सेटिंग" reads as "search settings" i.e. settings for search, the opposite parse.
+- `webcompat_reporter_problem_description_placeholder_text_2` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — The last sentence invents "so it can be understood where the problem occurred" instead of "steps to reproduce the issue".
+    - Current: `कृपया सिलसिलेवार ढंग से एक-एक चरण की जानकारी दें, ताकि समझा जा सके कि समस्या कहां पर आई।`
+    - Source: `What happened? What did you expect to happen? Please provide steps to reproduce the issue.`
+    - Suggest: `कृपया समस्या को दोहराने के चरण बताएँ।`
+    - Source asks for steps to reproduce the issue; the target adds an unsourced purpose clause and drops the notion of reproducing the problem.
 - `webcompat_reporter_screen_title` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "Report broken site" rendered as "report the site being broken/damaged" rather than reporting a site that does not work properly.
     - Current: `साइट खराब होने की रिपोर्ट करें`
     - Source: `Report broken site`
@@ -411,11 +457,6 @@ _Nothing in this category._
 
 ### D. Terminology, register & consistency
 
-- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hi-rIN/strings.xml` — `mozac_browser_errorpages_offline_message` quotes “फिर से कोशिश करें” but the string it names, `mozac_browser_errorpages_page_refresh`, reads “फिर कोशिश करें”
-    - Current: `{ <p> }ब्राउज़र ऑफ़लाइन मोड में चल रहा है और अनुरोध किए गए आइटम से कनेक्ट नहीं हो सकता है।{ </p> } { <ul> } { <li> }क्या डिवाइस किसी एक्टिव नेटवर्क से जुड़ा हुआ है?{ </li> } { <li> }ऑनलाइन मोड में जाने और पेज को फिर से लो…`
-    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
-    - Suggest: `फिर कोशिश करें`
-    - In the source this string quotes “Try Again”, which is exactly the value of `mozac_browser_errorpages_page_refresh` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `insecure_connection` — `mozilla-mobile/focus-android/app/src/main/res/values-hi-rIN/strings.xml` — "Connection" rendered as "संपर्क" (contact) instead of the standard "कनेक्शन"/"संबंध".
     - Current: `संपर्क सुरक्षित नहीं है`
     - Source: `Connection is not secure`
@@ -434,10 +475,7 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
-- `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
-    - Current: `वेब एड्रेस में "https://" या "http://" ज़रूर होना चाहिए`
-    - Source: `Web address must contain “https://” or “http://”`
-    - The locale's quote convention is `curly-double` (13 occurrences).
+_Nothing in this category._
 
 ---
 
@@ -459,8 +497,36 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (179)
+### Fixed to date (207)
 
+- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
+- `mozac_browser_awesomebar_stock_suggestion_increase` — `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
+- `mozac_feature_addons_permissions_one_site_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
+- `my_longest_fox_is` — `mozilla-mobile/fenix/app/longfox/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
+- `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
+- `addresses_post_town` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
+- `addresses_village_township` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
+- `connection_security_panel_qualified_certificate` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
+- `likert_scale_option_6` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
+- `preference_option_phone_feature_ask_to_allow` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
+- `preferences_category_about` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
+- `preferences_delete_browsing_data_tabs_title_2` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
+- `preferences_passwords_save_logins_ask_to_save` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
+- `preferences_pbm_lock_screen_summary_3` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
+- `preferences_sync_tabs_2` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
+- `private_tab_cfr_title` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
+- `review_prompt_rate_header` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
+- `saved_logins_menu_dropdown_chevron_icon_content_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
+- `search_settings_google_lens_description` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
+- `sent_from_firefox_template` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
+- `sent_from_firefox_template_short` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
+- `sync_connect_device` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
+- `sync_send_tab_error_auth_title` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
+- `sync_sign_in` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
+- `tracking_protection_off` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
+- `translation_settings_always_download` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
+- `uninstall_survey_option_1_v2` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
+- `webcompat_reporter_reason_checkout` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-17
 - `mozac_browser_errorpages_archive_retry` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
 - `mozac_browser_errorpages_archive_unreachable` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
 - `mozac_browser_errorpages_file_not_found_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
@@ -473,31 +539,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `mozac_feature_addons_permissions_dialog_heading_optional_permissions` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
 - `mozac_feature_addons_permissions_extra_domains_description_plural_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
 - `mozac_feature_addons_permissions_extra_sites_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `mozac_feature_addons_permissions_one_extra_domain_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `mozac_feature_addons_permissions_one_extra_site_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `mozac_feature_addons_permissions_one_site_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `mozac_feature_extensions_manager_notification_title_text` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `mozac_feature_autofill_confirmation_no` — `mozilla-mobile/android-components/components/feature/autofill/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `mozac_feature_contextmenu_snackbar_link_text_copied` — `mozilla-mobile/android-components/components/feature/contextmenu/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `mozac_feature_downloads_dialog_download_again` — `mozilla-mobile/android-components/components/feature/downloads/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `mozac_feature_findindpage_input` — `mozilla-mobile/android-components/components/feature/findinpage/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `mozac_feature_ipprotection_unavaliable_dialog_body` — `mozilla-mobile/android-components/components/feature/ipprotection/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `mozac_feature_readerview_font_size_decrease_desc` — `mozilla-mobile/android-components/components/feature/readerview/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `mozac_feature_readerview_font_size_increase_desc` — `mozilla-mobile/android-components/components/feature/readerview/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `mozac_feature_sitepermissions_notification_permission_rationale_dialog_message` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `mozac_feature_sitepermissions_option_microphone_one` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `mozac_feature_summarize_feedback_state_submitted` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `mozac_lib_gathering_crash_data_in_progress` — `mozilla-mobile/android-components/components/lib/crash/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `mozac_open_tab_counter_tab_tray` — `mozilla-mobile/android-components/components/ui/tabcounter/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `addon_failure_retry_action` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `addons_does_not_require_permissions` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `addons_permissions_required_data_collection_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `applinks_prompt_negative_button` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `automatic_translation_option_never_translate_summary_preference` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `browser_menu_library` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `browser_toolbar_url_copied_to_clipboard_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `certificate_warning_homepage_card_hcw3_message` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `connection_security_panel_issued_to` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `crash_reporting_snack_bar_message` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `debug_drawer_tab_tools_tab_quantity_non_digits_error` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15
-- `deleting_browsing_data_in_progress` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — fixed 2026-09-15

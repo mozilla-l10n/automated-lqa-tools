@@ -1,8 +1,8 @@
 {
  "_meta": {
   "locale": "hi-IN",
-  "prose_chunks": 2667,
-  "strings": 2667
+  "prose_chunks": 2668,
+  "strings": 2668
  },
  "apostrophe": {
   "straight": 6,
@@ -30,7 +30,6 @@
   "total": 0
  },
  "quotes": {
-  "curly-double": 13,
-  "straight-double": 1
+  "curly-double": 13
  }
 }
