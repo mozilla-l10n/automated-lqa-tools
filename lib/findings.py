@@ -40,6 +40,7 @@ import hashlib
 import json
 import os
 import re
+import unicodedata
 from dataclasses import asdict, dataclass, field
 
 # Report categories, shared with the legacy reports so imported findings
@@ -162,7 +163,7 @@ def normalize(text: str) -> str:
 
 
 def loose(text: str) -> str:
-    """Collapse whitespace, and nothing else.
+    """Collapse whitespace and compose to NFC, and nothing else.
 
     Fix detection must **not** use :func:`normalize`: that strips
     punctuation, so a repaired ``</a >`` compares equal to ``</a>``. It must
@@ -170,8 +171,19 @@ def loose(text: str) -> str:
     fix, and casefolding makes it invisible. Identity hashing keeps the
     aggressive form, where that noise is unwanted; comparison here has to be
     literal.
+
+    NFC is the one exception, and it is not a fold: canonically equivalent
+    sequences are the *same characters*, written two ways. The reviewer
+    quotes what it was shown and the file holds what the translator typed,
+    and for Devanagari those differ routinely -- the quote spells ``\u095c``
+    as ``\u0921`` plus the nukta ``\u093c``. Ten Hindi findings across
+    Android and iOS quoted text that was verbatim in the string and still
+    read as absent, which leaves them uncloseable now and, worse, one
+    unrelated edit from closing themselves as fixed with the defect intact.
+    Comparing like with like is exactly what :func:`as_parsed` already does
+    for the parser's own rewrites.
     """
-    return _WS.sub(" ", (text or "")).strip()
+    return _WS.sub(" ", unicodedata.normalize("NFC", text or "")).strip()
 
 
 # A quoted fragment is written the way the *file* reads; a message is stored

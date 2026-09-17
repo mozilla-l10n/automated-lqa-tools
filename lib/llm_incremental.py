@@ -18,7 +18,7 @@ from dataclasses import dataclass, field
 
 import anthropic
 
-from findings import CATEGORIES, IMPACT, Finding
+from findings import CATEGORIES, IMPACT, Finding, as_parsed, still_present
 
 LANGUAGE_NAMES = {
     "de": "German", "es-ES": "Spanish (Spain)", "es-MX": "Spanish (Mexico)",
@@ -331,16 +331,58 @@ def _impact(raw: dict) -> int:
     return got if got in IMPACT else 0
 
 
+def _anchor(key, msg, current, l10n):
+    """Check the finding is filed against the string it quotes.
+
+    The model names a string id and quotes the text it objects to, and those
+    two can disagree: a batch is dozens of strings and the id of a
+    neighbouring one is an easy thing to carry over. The id exists, so
+    nothing above rejects it, and ``string_hash`` is then taken from the
+    wrong message -- which makes the finding permanently unresolvable.
+    `resolve` asks whether *that* string moved, it never does, and no route
+    out is left, not even ``--recheck``. A hi-IN typo raised on 2026-09-14
+    was filed on the addons permission dialog while quoting the address
+    prompt; the typo was fixed the same day and the finding is still open.
+
+    So: if the quote is not in the message, look for the one message that
+    does contain it and file it there. If no single message does, the anchor
+    cannot be trusted and neither can the quote, and the finding is dropped
+    -- the next run re-raises it if the string changes again. That is a
+    miss, and a miss is the cheaper error: an item nobody can ever close
+    stays in the backlog for ever.
+
+    Silent where the quote cannot answer either way -- absent, or too short
+    for :func:`still_present` to weigh, which is the common CJK case where
+    two characters are the whole value.
+    """
+    if not current or len(as_parsed(current, key[1])) < 3:
+        return key, msg
+    if _quotes(current, key[1], msg):
+        return key, msg
+    elsewhere = [k for k, m in l10n.items() if _quotes(current, k[1], m)]
+    if len(elsewhere) != 1:
+        return None, None
+    return elsewhere[0], l10n[elsewhere[0]]
+
+
+def _quotes(current: str, string_id: str, msg) -> bool:
+    """Is `current` this message -- the whole of it, or a fragment of it?"""
+    text = msg.text()
+    return as_parsed(current, string_id) == as_parsed(text, string_id) or \
+        still_present(current, text, string_id)
+
+
 def _to_finding(locale, raw: dict, l10n) -> Finding | None:
     """Convert one model finding, dropping anything that is not one.
 
-    Two things get discarded here. A hallucinated string id, because the
-    backlog must only contain strings that exist. And a finding whose
-    suggested text is identical to the current text, because a reviewer who
-    proposes no change has concluded there is no defect -- their own
-    rationale usually says so outright ("no defect", "this is acceptable")
-    while the tool call still reports it. About one model finding in twenty
-    was of that kind.
+    Three things get discarded here. A hallucinated string id, because the
+    backlog must only contain strings that exist. A finding whose suggested
+    text is identical to the current text, because a reviewer who proposes
+    no change has concluded there is no defect -- their own rationale
+    usually says so outright ("no defect", "this is acceptable") while the
+    tool call still reports it. About one model finding in twenty was of
+    that kind. And one whose quoted text is in no single string at all; see
+    :func:`_anchor`.
     """
     string_id = (raw.get("string_id") or "").strip().strip("`")
     file = (raw.get("file") or "").strip().strip("`")
@@ -361,6 +403,9 @@ def _to_finding(locale, raw: dict, l10n) -> Finding | None:
         else:
             key = (file, base)
     current = (raw.get("current") or "").strip()
+    key, msg = _anchor(key, msg, current, l10n)
+    if msg is None:
+        return None
     suggest = (raw.get("suggest") or "").strip()
     if suggest and current and suggest == current:
         return None

@@ -180,6 +180,18 @@ def run(suite) -> None:
           and fm.verdict("INDIRIZZO", "Indirizzo", True) == "gone",
           "comparison stays literal: punctuation and case are still real fixes")
 
+    # Canonical equivalence is not a fold: these are the same characters,
+    # written two ways. The reviewer quotes \u0921 + nukta where the file
+    # holds \u095c, and ten Hindi findings across Android and iOS read as
+    # absent from strings they are verbatim in.
+    decomposed = "\u0906\u092a\u0915\u0947 \u0926\u094d\u0935\u093e\u0930\u093e \u091c\u094b\u0921\u093c\u0947"
+    composed = "\u0906\u092a\u0915\u0947 \u0926\u094d\u0935\u093e\u0930\u093e \u091c\u094b\u095c\u0947 \u0938\u093e\u0907\u091f\u094b\u0902"
+    check(decomposed not in composed, "the two spellings are not the same bytes")
+    check(fm.still_present(decomposed, composed, "s"),
+          "but a quote differing only in Unicode composition is found")
+    check(fm.verdict(decomposed, composed, True) == "unclear",
+          "so it is not read as a fix the moment the string is edited")
+
     suite.section("A string that never moved cannot have been fixed")
     check(fm.verdict("uncomparable quote", "some other text", False) == "unclear",
           "an absent fragment on an unmoved string means the quote is unusable")
@@ -241,6 +253,38 @@ def run(suite) -> None:
           "a finding with nothing to say is dropped")
     check(llm.collect([], "it", tree)[2] is False,
           "a reply with no tool call at all is not evidence of a clean review")
+
+    suite.section("A finding is filed against the string it quotes")
+    # The model carried a neighbour's id across a batch: a hi-IN typo was
+    # filed on the addons permission dialog while quoting the address
+    # prompt. The id existed, so nothing rejected it, the hash came from the
+    # wrong message, and `resolve` -- which asks whether *that* string moved
+    # -- could never close it. The typo was fixed the same day.
+    two = {("a.ftl", "s"): Msg(file="a.ftl", id="s", props={"": "the addons dialog"}),
+           ("a.ftl", "t"): Msg(file="a.ftl", id="t", props={"": "update the address?"})}
+    misfiled = dict(string_id="s", file="a.ftl", category="B", impact=2,
+                    summary="typo", current="update the address?")
+    found, _, _ = llm.collect([_Block({"findings": [misfiled]})], "it", two)
+    check(found and found[0].string_id == "t",
+          "the quote decides: the finding is re-filed on the string it is about")
+    check(found and found[0].string_hash == two[("a.ftl", "t")].hash(),
+          "and anchored to that string, so a later fix to it can be seen")
+
+    nowhere = dict(misfiled, current="text that is in no string at all")
+    check(not llm.collect([_Block({"findings": [nowhere]})], "it", two)[0],
+          "a quote in no single string leaves an anchor nobody can trust: dropped")
+
+    ambiguous = dict(two)
+    ambiguous[("a.ftl", "u")] = Msg(file="a.ftl", id="u",
+                                    props={"": "update the address?"})
+    check(not llm.collect([_Block({"findings": [misfiled]})], "it", ambiguous)[0],
+          "and two strings carrying the quote are no better than none: the "
+          "same value is duplicated across apps all the time")
+
+    short = {("a.ftl", "s"): Msg(file="a.ftl", id="s", props={"": "\u5c0f\u7d2b"})}
+    kept = dict(misfiled, current="\u5c0f\u7d2b")
+    check(llm.collect([_Block({"findings": [kept]})], "it", short)[0],
+          "a quote too short to weigh is left alone, not thrown away")
 
     # --- baseline coverage ------------------------------------------------
     suite.section("A partition that failed was not reviewed")
