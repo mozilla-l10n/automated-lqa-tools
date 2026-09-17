@@ -1,15 +1,15 @@
 # Firefox for iOS — l10n QA
 
-- **Generated:** 2026-09-14
-- **Locales tracked:** 20 (20 with recorded state)
-- **Findings:** 2,636 raised, 38 fixed (1%), 1,414 open
+- **Generated:** 2026-09-17
+- **Locales tracked:** 21 (21 with recorded state)
+- **Findings:** 2,724 raised, 38 fixed (1%), 1,502 open
 - **Closed by a person:** 21 dismissed, 52 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
 ## Read these first
 
-### Reads as a deliberate edit (33)
+### Reads as a deliberate edit (40)
 
 The translation makes the product assert something the en-US never said. Nothing here says the change was intended — that cannot be read off the text, which is exactly the problem, because a user cannot read it off either.
 
@@ -41,6 +41,34 @@ The translation makes the product assert something the en-US never said. Nothing
     - The Spanish reverses the relationship (social networks place trackers ON other websites) and overstates the effect of blocking.
     - Current: `Las redes sociales colocan rastreadores para que otros sitios web construyan un perfil más completo dirigido a ti. Si bloqueas estos rastreadores, muchas empresas de medios sociales dejarán de tener…`
     - Suggest: `Las redes sociales colocan rastreadores en otros sitios web para crear un perfil tuyo más completo y segmentado. Bloquear estos rastreadores reduce lo que las empresas de redes sociales pueden ver de…`
+- **`fa`** `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.` — `Shared/en-US.lproj/Localizable.strings`
+    - "tapping" rendered as "tapping and holding", and "book plus icon" loses the plus.
+    - Current: `با تپ کردن و نگه داشتن آیکون کتاب`
+    - Suggest: `با تپ کردن آیکون کتاب به‌همراه علامت مثبت`
+- **`fa`** `Settings.Disconnect.Body` — `Shared/en-US.lproj/Localizable.strings`
+    - The qualifier "browsing data" is rendered as just "any data", widening the claim about what is not deleted.
+    - Current: `هیچ گونه اطلاعاتی از روی دستگاه شما پاک نخواهد کرد`
+    - Suggest: `هیچ‌گونه اطلاعات مرور شما را از روی این دستگاه پاک نخواهد کرد`
+- **`fa`** `Settings.SendUsage.Message` — `Shared/en-US.lproj/Localizable.strings`
+    - The translation drops "strives to" and "provide", asserting Mozilla only collects data that helps improve Firefox.
+    - Current: `موزیلا تنها اطلاعاتی که به بهینه‌سازی فایرفاکس برای همه کمک می‌کند را جمع‌آوری می‌کند.`
+    - Suggest: `موزیلا تلاش می‌کند تنها اطلاعاتی را جمع‌آوری کند که برای ارائه و بهبود فایرفاکس برای همه لازم است.`
+- **`fa`** `Settings.WebsiteData.ConfirmPrompt` — `Shared/en-US.lproj/Localizable.strings`
+    - "will clear" weakened to "can clear" (می‌تواند حذف کند).
+    - Current: `این اقدام می تواند تمام اطلاعات پایگاه اینترنتی را حذف کند`
+    - Suggest: `این اقدام تمام اطلاعات پایگاه اینترنتی را حذف می‌کند`
+- **`fa`** `Well, this is embarrassing.` — `Shared/en-US.lproj/Localizable.strings`
+    - "this is embarrassing" is rendered as "we are very sorry", an apology the source does not make.
+    - Current: `راستش، بسیار متاسفیم.`
+    - Suggest: `خب، این شرم‌آور است.`
+- **`fa`** `Logins will be permanently removed.` — `Shared/en-US.lproj/LoginManager.strings`
+    - Future-tense warning rendered as past tense, telling the user the deletion already happened.
+    - Current: `ورود‌ها برای همیشه حذف شد.`
+    - Suggest: `ورودها برای همیشه حذف خواهند شد.`
+- **`fa`** `Logins will be removed from all connected devices.` — `Shared/en-US.lproj/LoginManager.strings`
+    - Future tense rendered as past tense and "connected devices" reduced to "all devices".
+    - Current: `ورود‌ها بر روی تمامی دستگاه‌ها حذف شد.`
+    - Suggest: `ورودها از همه دستگاه‌های متصل حذف خواهند شد.`
 - **`hi-IN`** `NSMicrophoneUsageDescription` — `Client/en-US.lproj/InfoPlist.strings`
     - Microphone permission description translated as taking and uploading videos, omitting Firefox and the microphone/audio recording purpose.
     - Current: `यह आपको वीडियो लेने और अपलोड करने देता है।`
@@ -105,35 +133,7 @@ The translation makes the product assert something the en-US never said. Nothing
     - Translation adds "ou abas" (or tabs), which the source does not say.
     - Current: `Bloquear abertura de janelas ou abas`
     - Suggest: `Bloquear janelas pop-up`
-- **`ru`** `NSFaceIDUsageDescription` — `Client/en-US.lproj/InfoPlist.strings`
-    - "saved passwords and payment methods" translated as "сохранённым логинам и зашифрованным картам" (saved logins and encrypted cards).
-    - Current: `Firefox требует Face ID для доступа к вашим сохранённым логинам и зашифрованным картам.`
-    - Suggest: `Firefox требует Face ID для доступа к вашим сохранённым паролям и способам оплаты.`
-- **`sl`** `Settings.AIControls.AIPoweredFeaturesSection.BlockedStatusDescriptionV2.v151` — `Shared/Supporting Files/en-US.lproj/Settings.strings`
-    - The qualifier "For on-device AI" is dropped, so the Slovenian states unconditionally that downloaded AI models will be removed.
-    - Current: `Morebitni modeli UI, ki so se že prenesli na napravo, bodo odstranjeni.`
-    - Suggest: `Pri UI, ki se izvaja na napravi, bodo odstranjeni vsi preneseni modeli.`
-- **`tr`** `Settings.AIControls.AIPoweredFeaturesSection.BlockedStatusDescriptionV2.v151` — `Shared/Supporting Files/en-US.lproj/Settings.strings`
-    - "For on-device AI" qualifier dropped, so the Turkish asserts all downloaded AI models are removed.
-    - Current: `Cihaza indirilmiş yapay zekâ modelleri kaldırılacaktır.`
-    - Suggest: `Cihaz üzerinde çalışan yapay zekâ için indirilmiş modeller kaldırılır.`
-- **`tr`** `Settings.Rollouts.Message.v148` — `Shared/Supporting Files/en-US.lproj/Settings.strings`
-    - "between updates" is translated as "in every update", reversing the point that improvements happen without an update.
-    - Current: `%@ her güncellemede özellikleri`
-    - Suggest: `%@, güncellemeler arasında özellikleri`
-- **`tr`** `Settings.SendUsage.Message` — `Shared/en-US.lproj/Localizable.strings`
-    - Turkish drops "to provide" and "for everyone", and uses "daha da geliştirmek" (improve further) only.
-    - Current: `Mozilla, yalnızca Firefox’u daha da geliştirmek için ihtiyaç duyduğumuz verileri toplar.`
-    - Suggest: `Mozilla, Firefox’u herkese sunmak ve geliştirmek için yalnızca ihtiyaç duyduğumuz verileri toplamaya çalışır.`
-- **`zh-CN`** `ContextualHints.FeltDeletion.Body.v122` — `Shared/Supporting Files/en-US.lproj/ContextualHints.strings`
-    - The translation reverses the sequence/meaning: the source says tapping starts a fresh private session by deleting history and cookies, while the Chinese says to delete data after browsing.
-    - Current: `点按此处新建隐私浏览，浏览完毕后轻松删除历史记录和 Cookie 等数据。`
-    - Suggest: `点按此处开始全新的隐私浏览会话。删除您的历史记录、Cookie 等一切数据。`
-- **`zh-CN`** `Onboarding.Customization.Toolbar.Description.v123` — `Shared/Supporting Files/en-US.lproj/Onboarding.strings`
-    - "Keep searches within reach" is rendered as "holding the phone lightly can invoke search", which is not what the source says.
-    - Current: `轻松握持就可唤起搜索。`
-    - Suggest: `让搜索始终触手可及。`
-- _…and 3 more, in the per-locale reports linked below._
+- _…and 10 more, in the per-locale reports linked below._
 
 ### Broken output — impact 1 (1)
 
@@ -146,7 +146,7 @@ The value does not render as intended: a blank string, broken markup, a variable
     - Current: `Mit %3$@ auf %2$@ übersetzen?`
     - Suggest: `Mit %3$@ in %2$@ übersetzen?`
 
-### Wrong content — impact 2 (691)
+### Wrong content — impact 2 (732)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/firefox_ios.md`.
 
@@ -159,6 +159,7 @@ Too many to list here; the per-locale counts are in the table below and every on
 | [es-AR](es-AR/firefox_ios.md) | 2026-09-14 | incremental | `e8592a89` | 1,922 | 0 | **100** | 44 | 0 | 0 | 0 |
 | [es-ES](es-ES/firefox_ios.md) | 2026-09-14 | checks-only | `8f5aca68` | 1,922 | 0 | **63** | 33 | 0 | 0 | 0 |
 | [es-MX](es-MX/firefox_ios.md) | 2026-09-14 | checks-only | `8f5aca68` | 1,883 | 39 | **122** | 64 | 1 | 0 | 0 |
+| [fa](fa/firefox_ios.md) | 2026-09-17 | baseline | `8f5aca68` | 546 | 1,376 | **88** | 41 | 0 | 0 | 0 |
 | [fr](fr/firefox_ios.md) | 2026-09-14 | checks-only | `8f5aca68` | 1,922 | 0 | **44** | 29 | 0 | 0 | 0 |
 | [hi-IN](hi-IN/firefox_ios.md) | 2026-09-14 | checks-only | `8f5aca68` | 602 | 1,320 | **79** | 33 | 0 | 0 | 0 |
 | [hu](hu/firefox_ios.md) | 2026-09-14 | incremental | `e8592a89` | 1,922 | 0 | **94** | 40 | 0 | 0 | 0 |
