@@ -16,4 +16,13 @@
 # everywhere -- write a rule in suppressions.yaml instead, or better, a
 # sentence in conventions.md so the reviewer never raises it.
 
-help_catch_trackers — Text is to incite user to help
+help_catch_trackers — Text is to incite user to help.
+translation_settings_always_download — MT linguist review.
+mozac_feature_applinks_link_from — MT linguist review.
+mozac_feature_prompts_save_credit_card_prompt_title — MT linguist review.
+search_widget_content_description — MT linguist review.
+connection_security_panel_qualified_certificate — MT linguist review.
+nova_onboarding_tou_subtitle — MT linguist review.
+preference_doh_exceptions_add_error — MT linguist review.
+webcompat_reporter_problem_description_placeholder_text_2 — MT linguist review.
+browser_menu_webcompat_reporter_2 - MT linguist review.
