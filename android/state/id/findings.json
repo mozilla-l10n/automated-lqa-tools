@@ -2144,7 +2144,7 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-09-14",
+  "last_seen": "2026-09-21",
   "locale": "id",
   "origin": {},
   "rationale": "In the source this string quotes “Never translate this site”, which is exactly the value of `translation_option_bottom_sheet_never_translate_site` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -2520,6 +2520,30 @@
  {
   "category": "D",
   "check": "llm",
+  "current": "Dasar",
+  "dismissed_because": "",
+  "fid": "d16cb625af57",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-09-21",
+  "impact": 3,
+  "last_seen": "2026-09-21",
+  "locale": "id",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The preference sets the tab bar to the bottom of the screen; Indonesian uses \"Bawah\" for screen position, while \"Dasar\" means base/foundation or \"basic\".",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "2497fbee",
+  "string_id": "preference_bottom_tab_strip",
+  "suggest": "Bawah",
+  "summary": "\"Bottom\" as a position option is rendered \"Dasar\" (base/basic) instead of \"Bawah\".",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
   "current": "Gunakan resolver DNS bawaan Anda jika ada masalah dengan penyedia DNS aman",
   "dismissed_because": "",
   "fid": "2ebbd5ef4acf",
@@ -2755,6 +2779,30 @@
   "string_id": "preference_summary_delete_browsing_data_on_quit_2",
   "suggest": "“Keluar”",
   "summary": "Straight quotes used where the source has curly quotes and the locale convention is curly double quotes.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
+  "current": "Puncak",
+  "dismissed_because": "",
+  "fid": "0bda0d60133d",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-09-21",
+  "impact": 3,
+  "last_seen": "2026-09-21",
+  "locale": "id",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The preference sets the tab bar to the top of the screen; Indonesian uses \"Atas\" for screen position, while \"Puncak\" means summit/peak.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "eaa70f43",
+  "string_id": "preference_top_tab_strip",
+  "suggest": "Atas",
+  "summary": "\"Top\" as a position option is rendered \"Puncak\" (summit/peak) instead of \"Atas\".",
   "suppressed_by": ""
  },
  {

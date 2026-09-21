@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
-| **Previous run** | 2026-09-10 @ `6bf5ed95c626` |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
+| **Previous run** | 2026-09-14 @ `6e23dc94dd8f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,713 |
+| **Strings reviewed this run** | 39 of 2,752 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for fy-NL: [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `tab_indicator_media_playing` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Playing media" is rendered as an infinitive phrase ("to play media") instead of a descriptive state.
+    - Current: `Media ôfspylje`
+    - Source: `Playing media`
+    - Suggest: `Media wurdt ôfspile`
+    - The source is a content description for an indicator showing that media is currently playing; "Media ôfspylje" reads as the command/infinitive "play media", not the state.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +48,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 43 |
-| Strings | 2,713 |
-| Missing strings | 33 |
+| Files | 44 |
+| Strings | 2,752 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,18 +67,7 @@ _Nothing retired._
 
 ### Completeness
 
-**33 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — 23
-- `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-fy-rNL/strings.xml` — 5
-- `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-fy-rNL/strings.xml` — 4
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 1
-
-**Files absent from the locale:**
-
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -95,14 +88,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (165)
+## 3. Open findings (166)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 59 |
-| 3 | Degraded language (grammar, spelling, terminology) | 95 |
+| 3 | Degraded language (grammar, spelling, terminology) | 96 |
 | 4 | Cosmetic (typography, spacing) | 11 |
 
 ### A. Functional, markup, variables & plurals
@@ -714,7 +707,7 @@ _Nothing in this category._
     - Source: `Great start! You’ve completed 1 out of 3 steps.`
     - Suggest: `Goed begjin!`
     - The source "Great start!" should read "Goed begjin!"; "Goed j" is not a Frisian word/phrase and appears to be a truncation.
-- _…and 20 more; see `state/` for the full list._
+- _…and 21 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 

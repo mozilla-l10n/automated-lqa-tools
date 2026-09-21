@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
-| **Previous run** | 2026-09-10 @ `6bf5ed95c626` |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
+| **Previous run** | 2026-09-14 @ `6e23dc94dd8f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 6 of 2,746 |
+| **Strings reviewed this run** | 6 of 2,752 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,12 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `recent_tabs_show_all_content_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Content description mistranslated: "Show all recent tabs button" became "Display the recent tabs button".
-    - Current: `Afficher le bouton des onglets récents`
-    - Suggest: `Bouton « Afficher tous les onglets récents »`
-    - The source describes a button whose function is to show all recent tabs; the French says to display the recent tabs button, reversing the roles of the verb and the noun "button".
+_Nothing retired._
 
 ---
 
@@ -48,7 +45,7 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,746 |
+| Strings | 2,752 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -75,7 +72,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 23 | **guillemet** |
-| apostrophe | `typographic` 688 | **typographic** |
+| apostrophe | `typographic` 689 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 2 | **em** |
 | nbsp | `total` 199, `before-punctuation` 137, `space-before-punctuation` 64 | _mixed_ |

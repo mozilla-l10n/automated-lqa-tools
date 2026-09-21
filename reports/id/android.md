@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
-| **Previous run** | 2026-09-10 @ `6bf5ed95c626` |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
+| **Previous run** | 2026-09-14 @ `6e23dc94dd8f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 2,738 |
+| **Strings reviewed this run** | 6 of 2,744 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,17 +18,22 @@ Also for id: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `preference_top_tab_strip` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Top" as a position option is rendered "Puncak" (summit/peak) instead of "Atas".
+    - Current: `Puncak`
+    - Source: `Top`
+    - Suggest: `Atas`
+    - The preference sets the tab bar to the top of the screen; Indonesian uses "Atas" for screen position, while "Puncak" means summit/peak.
+- `preference_bottom_tab_strip` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Bottom" as a position option is rendered "Dasar" (base/basic) instead of "Bawah".
+    - Current: `Dasar`
+    - Source: `Bottom`
+    - Suggest: `Bawah`
+    - The preference sets the tab bar to the bottom of the screen; Indonesian uses "Bawah" for screen position, while "Dasar" means base/foundation or "basic".
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `ip_protection_promo_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "by hiding your location" rendered as a relative clause modifying "protection", changing the sentence structure/meaning.
-    - Current: `perlindungan tambahan yang menyembunyikan lokasi Anda`
-    - Source: `Browse with extra protection by hiding your location, even on public Wi-Fi. %s`
-    - Suggest: `perlindungan tambahan dengan menyembunyikan lokasi Anda`
-    - The source says browsing gains extra protection by hiding your location; the target says the protection itself hides your location.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -38,12 +43,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `recent_tabs_show_all_content_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — The content description misplaces the noun, saying "Show the button of all recent tabs" instead of "Show all recent tabs button".
-    - Current: `Tampilkan tombol semua tab terbaru`
-    - Suggest: `Tombol tampilkan semua tab terbaru`
-    - Source is a label for a button that shows all recent tabs; the Indonesian parses as 'show the all-recent-tabs button', changing which element is the button and what action it does.
+_Nothing retired._
 
 ---
 
@@ -52,7 +54,7 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,738 |
+| Strings | 2,744 |
 | Missing strings | 8 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -94,14 +96,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (161)
+## 3. Open findings (163)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 90 |
-| 3 | Degraded language (grammar, spelling, terminology) | 67 |
+| 3 | Degraded language (grammar, spelling, terminology) | 69 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
@@ -647,6 +649,11 @@ _Nothing in this category._
     - Source: `Font size will match your Android settings. Disable to manage font size here.`
     - Suggest: `Ukuran fon akan sesuai dengan pengaturan Android Anda. Nonaktifkan untuk mengelola ukuran fon di sini.`
     - preference_accessibility_auto_size_2 and preference_accessibility_font_size_title use "fon"; the summary directly beneath uses "font".
+- `preference_bottom_tab_strip` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Bottom" as a position option is rendered "Dasar" (base/basic) instead of "Bawah".
+    - Current: `Dasar`
+    - Source: `Bottom`
+    - Suggest: `Bawah`
+    - The preference sets the tab bar to the bottom of the screen; Indonesian uses "Bawah" for screen position, while "Dasar" means base/foundation or "basic".
 - `preference_doh_default_protection_info_2` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "default" is rendered "bawaan" here while the parallel string preference_doh_off_summary uses "baku" for the same phrase.
     - Current: `Gunakan resolver DNS bawaan Anda jika ada masalah dengan penyedia DNS aman`
     - Source: `Use your default DNS resolver if there is a problem with the secure DNS provider`
@@ -662,6 +669,11 @@ _Nothing in this category._
     - Source: `Custom`
     - Suggest: `Ubahan`
     - The same source term "Custom" is inconsistently translated across adjacent settings strings.
+- `preference_top_tab_strip` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Top" as a position option is rendered "Puncak" (summit/peak) instead of "Atas".
+    - Current: `Puncak`
+    - Source: `Top`
+    - Suggest: `Atas`
+    - The preference sets the tab bar to the top of the screen; Indonesian uses "Atas" for screen position, while "Puncak" means summit/peak.
 - `preferences_category_engines_in_search_menu` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Engines" (search engines) is rendered as "Mesin peramban" (browser engines) instead of "Mesin pencari".
     - Current: `Mesin peramban terlihat di menu pencarian`
     - Source: `Engines visible on the search menu`

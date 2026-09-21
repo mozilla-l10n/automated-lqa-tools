@@ -146,6 +146,30 @@
  {
   "category": "B",
   "check": "llm",
+  "current": "Autorzy",
+  "dismissed_because": "",
+  "fid": "399d172ce259",
+  "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+  "first_seen": "2026-09-21",
+  "impact": 3,
+  "last_seen": "2026-09-21",
+  "locale": "pl",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The developer comment says \"The author of an add-on\" — a single author label, not a list heading.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "62abbab3",
+  "string_id": "mozac_feature_addons_author",
+  "suggest": "Autor",
+  "summary": "Singular \"Author\" rendered as plural \"Autorzy\".",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
   "current": "Nie udało się zainstalować tego rozszerzenia z powodu błędu połączenia.",
   "dismissed_because": "",
   "fid": "bef0607dbfc2",

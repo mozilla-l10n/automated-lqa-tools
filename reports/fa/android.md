@@ -2,325 +2,25 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-17 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `51a5854c742d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `51a5854c742d` |
-| **Previous run** | _none — this is the baseline_ @ `—` |
-| **Mode** | baseline |
-| **Strings reviewed this run** | 2,594 of 2,594 |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
+| **Previous run** | 2026-09-17 @ `51a5854c742d` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 0 of 2,594 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-
+Also for fa: [firefox_ios](firefox_ios.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (139)
+### 🆕 New findings (0)
 
-- `mozac_browser_errorpages_net_reset_title` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — "The connection was reset" is rendered as "the connection was re-established", reversing the meaning of the error.
-    - Current: `اتصال از نو برقرار شد`
-    - Source: `The connection was reset`
-    - Suggest: `اتصال بازنشانی شد`
-    - The source reports a connection reset error (failure); the target says the connection was successfully re-established, the opposite of an error condition.
-- `mozac_browser_errorpages_net_reset_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — First paragraph translates the net-interrupt message instead of "The network link was interrupted while negotiating a connection."
-    - Current: `مرورگر با موفقیت متصل شد ، اما هنگام انتقال اطلاعات ، اتصال قطع شد. لطفا دوباره امتحان کنید.`
-    - Source: `{ <p> }The network link was interrupted while negotiating a connection. Please try again.{ </p> } { <ul> } { <li> }The site could be temporarily unavailable or too busy. Try again in a few moments.{ </li> } { <li> }If y…`
-    - Suggest: `پیوند شبکه در هنگام برقراری اتّصال قطع شد. لطفاً دوباره تلاش کنید.`
-    - The source says the network link was interrupted while negotiating a connection; the target claims the browser connected successfully and the connection dropped while transferring information (text copied from the net_interrupt string).
-- `mozac_browser_errorpages_file_access_denied_title` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — Past-tense "was denied" rendered as present/habitual "is denied".
-    - Current: `دسترسی به این پرونده رد می‌شود`
-    - Source: `Access to the file was denied`
-    - Suggest: `دسترسی به این پرونده رد شد`
-    - The source states a completed event ("Access to the file was denied"); the Persian present tense describes an ongoing/general behaviour.
-- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — "device" translated as "رایانه" (computer) in a mobile component string.
-    - Current: `آیا رایانه به یک شبکهٔ فعال متصل است؟`
-    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
-    - Suggest: `آیا افزاره به یک شبکهٔ فعال متصل است؟`
-    - The source asks about the device; "رایانه" names a computer, which is wrong on an Android device and inconsistent with other strings that use دستگاه/افزاره.
-- `mozac_browser_errorpages_invalid_content_encoding_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — "invalid" form of compression rendered as "ناشناخته" (unknown).
-    - Current: `از گونه‌ای ناشناخته یا پشتیبانی نشده از فشرده‌سازی استفاده می‌کند`
-    - Source: `{ <p> }The page you are trying to view cannot be shown because it uses an invalid or unsupported form of compression.{ </p> } { <ul> } { <li> }Please contact the website owners to inform them of this problem.{ </li> } {…`
-    - Suggest: `از گونه‌ای نامعتبر یا پشتیبانی‌نشده از فشرده‌سازی استفاده می‌کند`
-    - The source says the compression form is invalid or unsupported, not unknown.
-- `mozac_browser_errorpages_file_not_found_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — Third bullet asks about access permissions to the "address" instead of to the requested item.
-    - Current: `آیا مجوزهای دسترسی کافی برای دست‌یابی به این نشانی را دارید؟`
-    - Source: `{ <ul> } { <li> }Could the item have been renamed, removed, or relocated?{ </li> } { <li> }Is there a spelling, capitalization, or other typographical error in the address?{ </li> } { <li> }Do you have sufficient access…`
-    - Suggest: `آیا مجوزهای دسترسی کافی برای دست‌یابی به مورد درخواستی را دارید؟`
-    - The source asks about sufficient access permissions to the requested item, not to the address.
-- `mozac_browser_errorpages_net_timeout_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — "Incorrect settings can interfere with Web browsing" rendered as a certainty ("prevents Web browsing").
-    - Current: `تنظیمات نادرست آن مانع از مرور وب می‌شود.`
-    - Source: `{ <p> }The requested site did not respond to a connection request and the browser has stopped waiting for a reply.{ </p> } { <ul> } { <li> }Could the server be experiencing high demand or a temporary outage? Try again l…`
-    - Suggest: `تنظیمات نادرست می‌تواند در مرور وب اختلال ایجاد کند.`
-    - The source hedges with "can interfere"; the target asserts that incorrect settings do prevent Web browsing.
-- `mozac_browser_errorpages_port_blocked_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — Missing spaces around inline markup and after punctuation, plus broken spacing in several words.
-    - Current: `نشانی درخواست مشخصا(به عنوان مثال{ <q> }mozilla.org:80{ </q> }برای درگاه ۸۰ بر روی mozilla.org) ازدرگاهی استفاده می کندکه`
-    - Source: `{ <p> }The requested address specified a port (e.g., { <q> }mozilla.org:80{ </q> } for port 80 on mozilla.org) normally used for purposes { <em> }other{ </em> } than Web browsing. The browser has canceled the request fo…`
-    - Suggest: `نشانی درخواست‌شده درگاهی را مشخص کرده است (به عنوان مثال { <q> }mozilla.org:80{ </q> } برای درگاه ۸۰ بر روی mozilla.org) که در حالت عادی`
-    - Words are run together ("ازدرگاهی", "می کندکه", "لغوکرد") and spaces are missing before/after the inline <q> markup and after the sentence-ending period, which the user reads as broken text.
-- `mozac_browser_errorpages_file_access_denied_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — Comma misplaced/attached and mood mismatch in the second clause ("may be preventing" rendered as a plain assertion).
-    - Current: `ممکن است حذف،‌منتقل شده باشد یا مجوز‌های آن از دسترسی جلوگیری‌ می‌کند.`
-    - Source: `{ <ul> } { <li> }It may have been removed, moved, or file permissions may be preventing access.{ </li> } { </ul> }`
-    - Suggest: `ممکن است حذف یا منتقل شده باشد، یا مجوزهای آن مانع دسترسی شوند.`
-    - The source says permissions "may be preventing" access; the target states it as fact, and the punctuation/spacing ("حذف،‌منتقل", "جلوگیری‌ می‌کند") is broken.
-- `mozac_browser_errorpages_safe_harmful_uri_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — "potentially harmful site" is rendered as "attack site" (تهاجمی), duplicating the malware string instead of translating this one.
-    - Current: `پایگاه%1$s به عنوان یک وب‌گاه تهاجمی گزارش شده و بر اساس ترجیحات امنیتی شما مسدود شده است.`
-    - Source: `{ <p> }The site at %1$s has been reported as a potentially harmful site and has been blocked based on your security preferences.{ </p> }`
-    - Suggest: `پایگاه %1$s به عنوان یک وب‌گاه بالقوه زیان‌آور گزارش شده و بر اساس ترجیحات امنیتی شما مسدود شده است.`
-    - The source says "reported as a potentially harmful site", not "attack site"; the title of this same error page correctly uses زیان‌آور.
-- `mozac_browser_errorpages_unknown_protocol_title` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — "Unknown Protocol" is translated as "the address was not understandable" instead of referring to the protocol.
-    - Current: `نشانی قابل فهم نبود`
-    - Source: `Unknown Protocol`
-    - Suggest: `قرارداد ناشناخته`
-    - The source names an unknown protocol; the translation says the address was unintelligible, and the body text of the same page uses قرارداد for protocol.
-- `mozac_browser_errorpages_safe_browsing_malware_uri_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — Missing space between پایگاه and the %1$s placeholder, so the URL runs into the preceding word.
-    - Current: `پایگاه%1$s`
-    - Source: `{ <p> }The site at %1$s has been reported as an attack site and has been blocked based on your security preferences.{ </p> }`
-    - Suggest: `پایگاه %1$s`
-    - The rendered sentence needs a space between the word and the inserted URL.
-- `mozac_browser_errorpages_safe_browsing_unwanted_uri_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — Misspelled relative construction "وبگاه‌ی" instead of "وبگاهی".
-    - Current: `وبگاه‌ی که`
-    - Source: `{ <p> }The site at %1$s has been reported as serving unwanted software and has been blocked based on your security preferences.{ </p> }`
-    - Suggest: `وبگاهی که`
-    - The indefinite/relative ی attaches directly to the noun; a ZWNJ before ی here is a spelling error.
-- `mozac_browser_errorpages_security_bad_hsts_cert_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — Missing ZWNJ in "نمیتواند" and incorrect space in "نمی توانید".
-    - Current: `نمیتواند نمایش داده شود`
-    - Source: `{ <ul> } { <li> }The page you are trying to view cannot be shown because this website requires a secure connection.{ </li> } { <li> }The issue is most likely with the website, and there is nothing you can do to resolve…`
-    - Suggest: `نمی‌تواند نمایش داده شود`
-    - Persian negation prefix نمی requires a ZWNJ, not zero or a full space.
-- `mozac_browser_errorpages_unknown_protocol_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — The untranslated English abbreviation "e.g." is left inside the parentheses in addition to the Persian "مثلا", duplicating it.
-    - Current: `قراردادی مثلا (e.g. { <q> }wxyz://{ </q> })`
-    - Source: `{ <p> }The address specifies a protocol (e.g., { <q> }wxyz://{ </q> }) the browser does not recognize, so the browser cannot properly connect to the site.{ </p> } { <ul> } { <li> }Are you trying to access multimedia or…`
-    - Suggest: `قراردادی (مثلاً { <q> }wxyz://{ </q> })`
-    - The source has "(e.g., wxyz://)"; the translation both translates it as مثلا and keeps the English "e.g.", and misplaces the parenthesis.
-- `mozac_browser_errorpages_redirect_loop_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — "cookies required by this site" is rendered as "possible cookies" (کلوچک‌های احتمالی), and "not your device" as "not your computer".
-    - Current: `آیا کلوچک‌های احتمالی مورد نیاز این وبگاه را غیرفعال ساخته‌اید؟`
-    - Source: `{ <p> }The browser has stopped trying to retrieve the requested item. The site is redirecting the request in a way that will never complete.{ </p> } { <ul> } { <li> }Have you disabled or blocked cookies required by this…`
-    - Suggest: `آیا کلوچک‌های مورد نیاز این وبگاه را غیرفعال ساخته‌اید؟`
-    - The source says "cookies required by this site"; the added احتمالی ("possible") is not in the source.
-- `mozac_compose_base_close_button_content_description` — `mozilla-mobile/android-components/components/compose/base/src/main/res/values-fa/strings.xml` — Trailing zero-width non-joiner after "بستن".
-    - Current: `بستن‌`
-    - Source: `Close`
-    - Suggest: `بستن`
-    - The Persian text ends with a stray ZWNJ character that has no function at the end of a word.
-- `mozac_tab_counter_open_tab_tray_single` — `mozilla-mobile/android-components/components/compose/tabstray/src/main/res/values-fa/strings.xml` — Missing ZWNJ in "زبانه ها" (should be "زبانه‌ها"), inconsistent with the plural string.
-    - Current: `زبانه ها`
-    - Source: `1 open tab. Tap to switch tabs.`
-    - Suggest: `زبانه‌ها`
-    - Persian plural suffix -ها attaches with a zero-width non-joiner; the parallel string mozac_tab_counter_open_tab_tray_plural correctly uses "زبانه‌ها".
-- `mozac_feature_addons_failed_to_disable` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — "Failed to disable" is translated as "failed to enable", identical to the enable string.
-    - Current: `شکست در فعالسازی %1$s`
-    - Source: `Failed to disable %1$s`
-    - Suggest: `شکست در غیرفعال‌سازی %1$s`
-    - Source says "Failed to disable %1$s" but the target says failed to enable, reversing the action.
-- `mozac_feature_addons_failed_to_remove` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — Missing space between the word and the placeholder.
-    - Current: `شکست در حذف%1$s`
-    - Source: `Failed to remove %1$s`
-    - Suggest: `شکست در حذف %1$s`
-    - The add-on name would be glued to the preceding word in the rendered text.
-- `mozac_feature_addons_failed_to_enable` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — "فعالسازی" is missing the required ZWNJ (should be فعال‌سازی).
-    - Current: `شکست در فعالسازی %1$s`
-    - Source: `Failed to enable %1$s`
-    - Suggest: `شکست در فعال‌سازی %1$s`
-    - Persian orthography requires a zero-width non-joiner in the compound فعال‌سازی.
-- `mozac_feature_addons_failed_to_translate` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — Spelling error: "همچینین" should be "همچنین".
-    - Current: `همچینین`
-    - Source: `Translation not found, for locale %1$s neither default language %2$s`
-    - Suggest: `همچنین`
-    - Misspelling of the Persian word همچنین.
-- `mozac_feature_addons_permissions_all_urls_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — Adds "all" to the data being accessed, which the source does not say.
-    - Current: `دسترسی به تمامی اطلاعات شما برای تمامی پایگاه های اینترنتی`
-    - Source: `Access your data for all websites`
-    - Suggest: `دسترسی به داده‌های شما برای همهٔ وب‌گاه‌ها`
-    - Source is "Access your data for all websites"; "all" modifies websites, not the user's data, so the translation claims a broader permission scope.
-- `mozac_feature_addons_enabled` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — State label "Enabled" rendered as a past-tense event "was enabled".
-    - Current: `فعال شد`
-    - Source: `Enabled`
-    - Suggest: `فعال`
-    - Developer comment says this indicates the add-on is enabled (a state), not that an action just occurred.
-- `mozac_feature_addons_installed_section` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — Section heading "Installed" rendered as the past-tense event "was installed".
-    - Current: `نصب شد`
-    - Source: `Installed`
-    - Suggest: `نصب‌شده`
-    - Per the developer comment this is a section label listing installed add-ons, not a completion message.
-- `mozac_feature_addons_permissions_data_collection_searchTerms_short_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — "search terms" is rendered as "شرایط جستجو" (search conditions/circumstances) instead of search keywords.
-    - Current: `شرایط جستجو`
-    - Source: `search terms`
-    - Suggest: `عبارت‌های جست‌وجو`
-    - In this context "terms" means the words/phrases the user searches for (عبارت‌ها/واژه‌های جست‌وجو), not "conditions" (شرایط).
-- `mozac_feature_addons_permissions_data_collection_searchTerms_long_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — "search terms" mistranslated as "شرایط جستجو" (search conditions).
-    - Current: `هم‌رسانی شرایط جستجو با توسعه‌دهنده افزونه`
-    - Source: `Share search terms with extension developer`
-    - Suggest: `هم‌رسانی عبارت‌های جست‌وجو با توسعه‌دهنده افزونه`
-    - "Search terms" refers to the queries the user types, not conditions/criteria; شرایط means conditions.
-- `mozac_feature_addons_permissions_downloads_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — Translation garbles the source: "Download files and read and modify the browser's download history" becomes "downloading the files of download history and setting and reading them".
-    - Current: `دریافت پرونده‌های تاریخچه دریافت ها و تنظیم و خواندن آن ها`
-    - Source: `Download files and read and modify the browser’s download history`
-    - Suggest: `پرونده‌ها را دریافت کنید و تاریخچه دریافت مرورگر را بخوانید و تغییر دهید`
-    - The source describes two separate capabilities (downloading files; reading and modifying the browser's download history); the target merges them into a different meaning and omits "browser's".
-- `mozac_feature_addons_permissions_downloads_open_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — "your device" is translated as "کامپیوتر شما" (your computer) and the phrase is ungrammatical.
-    - Current: `بازکردن پرونده‌های دریافت ها بر روی کامپیوتر شما`
-    - Source: `Open files downloaded to your device`
-    - Suggest: `باز کردن پرونده‌های دریافت‌شده در دستگاه شما`
-    - Source says "device" (دستگاه), not computer; this is an Android string. Also "پرونده‌های دریافت ها" is malformed compared with the parallel string which uses "پرونده‌های دریافت‌شده".
-- `mozac_feature_addons_permissions_devtools_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — Missing space in "ابزارتوسعه‌دهندگان".
-    - Current: `گسترش ابزارتوسعه‌دهندگان`
-    - Source: `Extend developer tools to access your data in open tabs`
-    - Suggest: `گسترش ابزارهای توسعه‌دهندگان`
-    - "ابزار" and "توسعه‌دهندگان" are run together without a space, producing a malformed word.
-- `mozac_feature_addons_permissions_declarative_net_request_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — Permission description rendered as an imperative command to the browser instead of a noun/gerund phrase like the parallel strings.
-    - Current: `محتوا را در هر صفحه‌ای مسدود کن`
-    - Source: `Block content on any page`
-    - Suggest: `مسدود کردن محتوا در هر صفحه`
-    - Other permission descriptions in the same dialog use the gerund form (e.g. "مسدود کردن محتوا در هر صفحه."); the informal imperative "مسدود کن" also breaks the locale's register.
-- `mozac_feature_addons_rating_content_description_2` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — Leftover English word "of" in the translation produces "از of 5".
-    - Current: `رتبه‌بندی: %1$.02f از of 5`
-    - Source: `Rating: %1$.02f out of 5`
-    - Suggest: `رتبه‌بندی: %1$.02f از ۵`
-    - Source is "Rating: %1$.02f out of 5"; the target duplicates the preposition, leaving an untranslated "of" that a screen reader will read aloud.
-- `mozac_feature_addons_permissions_sites_in_domain_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — The possessive "your data" is lost: translation says "data of the sites" instead of "your data for sites in the %1$s domain".
-    - Current: `دسترسی به داده‌های پایگاه‌ها در دامنهٔ %1$s`
-    - Source: `Access your data for sites in the %1$s domain`
-    - Suggest: `دسترسی به داده‌های شما در پایگاه‌های دامنهٔ %1$s`
-    - Source grants access to the user's own data on sites in that domain; the target describes access to the sites' data, a different object.
-- `mozac_feature_addons_permissions_web_navigation_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — "browser activity" is rendered as just "activity", dropping "browser"; also missing ZWNJ in "فعالیت ها".
-    - Current: `دسترسی به فعالیت ها در طی گشتن`
-    - Source: `Access browser activity during navigation`
-    - Suggest: `دسترسی به فعالیت مرورگر هنگام پیمایش`
-    - Source says "Access browser activity during navigation"; the parallel _for_update string correctly uses "فعالیت مرورگر هنگام پیمایش".
-- `mozac_feature_addons_permissions_sessions_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — Ungrammatical relative clause and missing ezafe: "زبانه‌های که اخیرا بسته‌شده".
-    - Current: `دسترسی به زبانه‌های که اخیرا بسته‌شده.`
-    - Source: `Access recently closed tabs.`
-    - Suggest: `دسترسی به زبانه‌هایی که اخیراً بسته شده‌اند.`
-    - Persian requires the indefinite -yi marker (زبانه‌هایی) before the relative clause, and plural agreement; "اخیرا" also lacks the tanvin.
-- `mozac_feature_addons_permissions_management_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — "themes" translated as "پوسته‌ها" here but as "زمینه‌ها" in the parallel non-update string.
-    - Current: `پایش بر استفاده از افزونه و مدیریت پوسته‌ها.`
-    - Source: `Monitor extension usage and manage themes.`
-    - Suggest: `پایش استفادهٔ افزونه‌ها و مدیریت زمینه‌ها.`
-    - mozac_feature_addons_permissions_management_description renders the same source "manage themes" as "مدیریت زمینه‌ها"; the two variants of the same permission text should be consistent.
-- `mozac_feature_addons_status_incompatible` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — The translation drops the add-on name meaning and turns %1$s into a version, saying "%1$s is not compatible with your version %2$s" instead of "%1$s is not compatible with your version of %2$s".
-    - Current: `%1$s با نگارش %2$s شما (نگارش %3$s) سازگار نیست.`
-    - Source: `%1$s is not compatible with your version of %2$s (version %3$s).`
-    - Suggest: `%1$s با نگارش شما از %2$s (نگارش %3$s) سازگار نیست.`
-    - Per the comment, %2$s is the app name, not a version; the current word order reads "your version %2$s" and mislabels the app name as a version.
-- `mozac_feature_addons_updater_dialog_title` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — "Updater Information" is rendered as "Updating information", reversing the head noun.
-    - Current: `به‌روزرسانی اطلاعات`
-    - Source: `Updater Information`
-    - Suggest: `اطلاعات به‌روزرسان`
-    - The source is a dialog title meaning information about the updater; the target reads as the action of updating the information.
-- `mozac_feature_addons_updater_dialog_last_attempt` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — Missing colon after the label, which is followed by the date per the developer comment.
-    - Current: `آخرین تلاش`
-    - Source: `Last attempt:`
-    - Suggest: `آخرین تلاش:`
-    - Source is "Last attempt:" and the comment states it is followed by the date; the colon was dropped, unlike the parallel "وضعیت:" string.
-- `mozac_feature_addons_user_rating_count_2` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — Missing space after the colon before the placeholder.
-    - Current: `بررسی‌های:%1$s`
-    - Source: `Reviews: %1$s`
-    - Suggest: `بررسی‌ها: %1$s`
-    - Source "Reviews: %1$s" has a space after the colon; the target also uses an incorrect ezafe form "بررسی‌های".
-- `mozac_feature_addons_successfully_installed` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — Missing space between the placeholder and the following word.
-    - Current: `%1$sبا موفقیت نصب شد`
-    - Source: `Successfully installed %1$s`
-    - Suggest: `%1$s با موفقیت نصب شد`
-    - The add-on name will run into the next word with no separating space.
-- `mozac_feature_addons_successfully_removed` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — Missing space between the placeholder and the following word.
-    - Current: `%1$sبا موفقیت حذف شد`
-    - Source: `Successfully removed %1$s`
-    - Suggest: `%1$s با موفقیت حذف شد`
-    - The add-on name will run into the next word with no separating space.
-- `mozac_feature_addons_status_unsigned` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — Present tense "cannot be verified" used where the source states it could not be verified (past).
-    - Current: `%1$s نمی‌تواند به عنوان امن تأیید شود و غیرفعال شده است.`
-    - Source: `%1$s could not be verified as secure and has been disabled.`
-    - Suggest: `امنیت %1$s قابل تأیید نبود و غیرفعال شده است.`
-    - Source is "could not be verified as secure and has been disabled"; the Persian present tense mismatches the completed action.
-- `mozac_feature_autofill_search_hint` — `mozilla-mobile/android-components/components/feature/autofill/src/main/res/values-fa/strings.xml` — "Search logins" is rendered with a nonsensical term and a spacing error instead of the established Persian term for logins (ورودها/اطلاعات ورود).
-    - Current: `جست‌وجو در واردشده ها`
-    - Source: `Search logins`
-    - Suggest: `جست‌وجوی ورودها`
-    - "واردشده ها" ("imported/entered ones") is not the term for saved logins, and the detached "ها" should be joined (واردشده‌ها); the source means searching saved logins.
-- `mozac_feature_contextmenu_open_link_in_external_app` — `mozilla-mobile/android-components/components/feature/contextmenu/src/main/res/values-fa/strings.xml` — "external app" rendered as "کاره‌ای دیگر", inconsistent with "برنامه" used for app elsewhere in the same surface.
-    - Current: `گشودن پیوند در کاره‌ای دیگر`
-    - Source: `Open link in external app`
-    - Suggest: `گشودن پیوند در برنامهٔ بیرونی`
-    - The same term "app" is translated "برنامه" in neighbouring strings (e.g. mozac_feature_applinks_normal_confirm_dialog_title, mozac_feature_customtabs_exit_button); "کاره" is an obscure coinage and inconsistent.
-- `mozac_selection_context_menu_search_privately_2` — `mozilla-mobile/android-components/components/feature/contextmenu/src/main/res/values-fa/strings.xml` — "Private Search" rendered as "جست‌وجوی ناشناس" (anonymous search) instead of the established term for private (خصوصی).
-    - Current: `جست‌وجوی ناشناس`
-    - Source: `Private Search`
-    - Suggest: `جست‌وجوی خصوصی`
-    - Elsewhere in the same file "private tab" is translated "زبانهٔ خصوصی"; using "ناشناس" here is inconsistent terminology for the Private browsing feature.
-- `mozac_feature_downloads_again_dialog_title_with_unknown_size` — `mozilla-mobile/android-components/components/feature/downloads/src/main/res/values-fa/strings.xml` — The confirmation title is rendered in first person ("Shall I download the file again?") instead of the neutral "Download file again?" used in the sibling string.
-    - Current: `دوباره پرونده را بارگیری کنم؟`
-    - Source: `Download file again?`
-    - Suggest: `دریافت دوبارهٔ پرونده؟`
-    - The source is an impersonal dialog title; the parallel string mozac_feature_downloads_again_dialog_title uses "دریافت دوبارهٔ پرونده؟". The first-person verb also breaks consistency with the other download dialog titles.
-- `mozac_feature_downloads_write_external_storage_permissions_needed_message` — `mozilla-mobile/android-components/components/feature/downloads/src/main/res/values-fa/strings.xml` — Spelling error: "تنطیمات" should be "تنظیمات".
-    - Current: `تنطیمات اندروید`
-    - Source: `Files and media permission access needed to download files. Go to Android settings, tap permissions, and tap allow.`
-    - Suggest: `تنظیمات اندروید`
-    - "تنظیمات" (settings) is misspelled with ط instead of ظ.
-- `mozac_feature_downloads_unable_to_open_third_party_app` — `mozilla-mobile/android-components/components/feature/downloads/src/main/res/values-fa/strings.xml` — "نتوانست %1$s را باز کند" adds a third-person past subject not present in the impersonal source "Unable to open %1$s".
-    - Current: `نتوانست %1$s را باز کند`
-    - Source: `Unable to open %1$s`
-    - Suggest: `امکان باز کردن %1$s نبود`
-    - The source is impersonal; the Persian implies an unnamed third party failed to open it, which is ungrammatical without a subject.
-- `mozac_feature_media_sharing_camera_and_microphone` — `mozilla-mobile/android-components/components/feature/media/src/main/res/values-fa/strings.xml` — "Camera and microphone are on" is rendered with "وصل هستند" (are connected) and "صدابَر" instead of the consistent "میکروفون"/"روشن است" used elsewhere.
-    - Current: `دوربین و صدابَر وصل هستند`
-    - Source: `Camera and microphone are on`
-    - Suggest: `دوربین و میکروفون روشن هستند`
-    - The source says "are on", and the sibling string mozac_feature_media_sharing_camera correctly uses "روشن است"; also all other media-sharing strings use "میکروفون" for microphone, making "صدابَر" inconsistent on the same surface.
-- `mozac_feature_media_sharing_microphone` — `mozilla-mobile/android-components/components/feature/media/src/main/res/values-fa/strings.xml` — "Microphone is on" rendered as "صدابَر وصل است" (the sound device is connected), inconsistent with "میکروفون" and "روشن است" used in the neighbouring strings.
-    - Current: `صدابَر وصل است`
-    - Source: `Microphone is on`
-    - Suggest: `میکروفون روشن است`
-    - The related notification texts all use "میکروفون", and the parallel camera title uses "روشن است" for "is on"; "وصل است" means "is connected", not "is on".
-- `mozac_feature_prompt_before_unload_dialog_body` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fa/strings.xml` — "می خواهید" is missing the required zero-width non-joiner (should be "می‌خواهید").
-    - Current: `می خواهید این پایگاه را ترک کنید؟`
-    - Source: `Do you want to leave this site? Data you have entered may not be saved`
-    - Suggest: `می‌خواهید این پایگاه را ترک کنید؟`
-    - Persian orthography requires the prefix "می" to be joined with ZWNJ, as done consistently elsewhere in this file (e.g. "استفاده می‌کند").
-- `mozac_feature_prompt_repost_message` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fa/strings.xml` — The source's "twice" / duplication of recent actions such as "sending a payment or posting a comment" is rendered so that the payment/comment itself is repeated, and "دوباره تکرار کند" is redundant.
-    - Current: `می‌تواند کنش‌های اخیر مانند پرداخت یا ارسال نظر را دوباره تکرار کند`
-    - Source: `Refreshing this page could duplicate recent actions, such as sending a payment or posting a comment twice.`
-    - Suggest: `می‌تواند کنش‌های اخیر، مانند فرستادن یک پرداخت یا ارسال یک نظر، را دو بار تکرار کند`
-    - The English warns the action could be duplicated (done twice); the translation's "دوباره تکرار کند" is a pleonasm and loses "twice".
-- `mozac_feature_prompt_update_confirmation` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fa/strings.xml` — Trailing stray zero-width non-joiner after "به‌روزرسانی".
-    - Current: `به‌روزرسانی‌`
-    - Source: `Update`
-    - Suggest: `به‌روزرسانی`
-    - The button label ends with an extraneous ZWNJ character not present in the equivalent strings (e.g. mozac_feature_prompt_login_update_headline_2).
-- `mozac_feature_prompts_no_more_dialogs` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fa/strings.xml` — "additional dialogs" is rendered as "new windows" (پنجره‌های جدید) instead of dialogs.
-    - Current: `از ایجاد پنجره‌های جدید توسط این صفحه جلوگیری شود.`
-    - Source: `Prevent this page from creating additional dialogs`
-    - Suggest: `از ایجاد محاوره‌های بیشتر توسط این صفحه جلوگیری شود`
-    - The source refers to additional dialogs, not new windows; the neighbouring strings use separate wording for windows. Also a trailing period was added that the source lacks.
-- `mozac_feature_prompts_identity_credentials_privacy_policy_title` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fa/strings.xml` — "login provider" is rendered as just "provider", dropping "login".
-    - Current: `استفاده از %1$s به عنوان یک فراهم‌کننده`
-    - Source: `Use %1$s as a login provider`
-    - Suggest: `استفاده از %1$s به عنوان یک فراهم‌کنندهٔ ورود`
-    - The source says "as a login provider"; the qualifier "login" is dropped, unlike the sibling string mozac_feature_prompts_identity_credentials_choose_provider which keeps فراهم‌کنندهٔ ورود.
-- `mozac_feature_prompts_sep` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fa/strings.xml` — The abbreviated month name "Sep" is rendered with the full month name, contrary to the comment requesting a short description.
-    - Current: `سپتامبر`
-    - Source: `Sep`
-    - Suggest: `سپتا`
-    - Developer comment specifies "September month of the year (short description)" used in a compact month chooser; the target uses the full form.
-- `mozac_feature_readerview_sephia` — `mozilla-mobile/android-components/components/feature/readerview/src/main/res/values-fa/strings.xml` — "Sepia" is misspelled in Persian as سوبیایی instead of سپیا/سپیایی.
-    - Current: `سوبیایی`
-    - Source: `Sepia`
-    - Suggest: `سپیا`
-    - The color Sepia is rendered سپیا in Persian; سوبیایی is not a word and appears to be a transliteration error.
-- `mozac_feature_readerview_sepia_color_scheme_desc` — `mozilla-mobile/android-components/components/feature/readerview/src/main/res/values-fa/strings.xml` — "Sepia" is misspelled in Persian as سوبیایی instead of سپیا.
-    - Current: `طرح رنگی سوبیایی`
-    - Source: `Sepia color scheme`
-    - Suggest: `طرح رنگی سپیا`
-    - Same misspelling of the color name Sepia as in mozac_feature_readerview_sephia.
-- `mozac_feature_sitepermissions_notification_title` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-fa/strings.xml` — Typo: «اجاره» (rent) instead of «اجازه» (permission).
-    - Current: `اجاره می‌دهید`
-    - Source: `Allow %1$s to send notifications?`
-    - Suggest: `اجازه می‌دهید`
-    - The source says "Allow %1$s to send notifications?"; «اجاره دادن» means "to rent", a spelling error for «اجازه».
-- _…and 79 more._
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -346,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 39 |
 | Strings | 2,594 |
-| Missing strings | 152 |
+| Missing strings | 158 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 5 |
 | Files with no en-US counterpart | 0 |
@@ -363,19 +63,19 @@ _Nothing retired._
 
 ### Completeness
 
-**152 strings** are not translated yet, concentrated in:
+**158 strings** are not translated yet, concentrated in:
 
 - `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — 61
 - `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — 31
 - `mozilla-mobile/android-components/components/feature/app-links/src/main/res/values-fa/strings.xml` — 11
 - `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fa/strings.xml` — 7
-- `mozilla-mobile/android-components/components/compose/base/src/main/res/values-fa/strings.xml` — 6
+- `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — 7
 - `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — 6
+- `mozilla-mobile/android-components/components/compose/base/src/main/res/values-fa/strings.xml` — 6
 - `mozilla-mobile/fenix/app/longfox/src/main/res/values-fa/strings.xml` — 6
-- `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-fa/strings.xml` — 4
-- `mozilla-mobile/android-components/components/feature/ipprotection/src/main/res/values/strings.xml` — 4
 - `mozilla-mobile/android-components/components/feature/protection-dashboard/src/main/res/values/strings.xml` — 4
-- `mozilla-mobile/android-components/components/feature/importer/src/main/res/values/strings.xml` — 3
+- `mozilla-mobile/android-components/components/feature/ipprotection/src/main/res/values/strings.xml` — 4
+- `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-fa/strings.xml` — 4
 - `mozilla-mobile/android-components/components/feature/password-importer/src/main/res/values/strings.xml` — 3
 
 **Files absent from the locale:**

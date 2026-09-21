@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
-| **Previous run** | 2026-09-10 @ `6bf5ed95c626` |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
+| **Previous run** | 2026-09-14 @ `6e23dc94dd8f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 4 of 2,746 |
+| **Strings reviewed this run** | 0 of 2,746 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,20 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (3)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `customize_toggle_jump_back_in` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — "Jump back in" is rendered as "Volver a esta pestaña" ("Return to this tab"), which names a specific tab rather than the home-screen section title.
-    - Current: `Volver a esta pestaña`
-    - Suggest: `Retomar donde lo dejaste`
-    - The source is a section header on the customize home screen listing recent tabs; "esta pestaña" refers to a single, non-existent tab and changes the meaning.
-- `recent_tabs_header` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — Header text mistranslated as referring to a specific tab.
-    - Current: `Volver a esta pestaña`
-    - Suggest: `Retomar donde lo dejaste`
-    - "Jump back in" is a generic home-screen section header, not a reference to "this tab".
-- `recent_tabs_show_all_content_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — Content description misparses the source: it says "show the button of all recent tabs" instead of naming the button.
-    - Current: `Mostrar el botón de todas las pestañas recientes`
-    - Suggest: `Botón de mostrar todas las pestañas recientes`
-    - Source "Show all recent tabs button" names the control (a button that shows all recent tabs); the translation turns "button" into the object being shown.
+_Nothing retired._
 
 ---
 
@@ -57,7 +46,7 @@ _Nothing to re-read._
 |---|---|
 | Files | 44 |
 | Strings | 2,746 |
-| Missing strings | 0 |
+| Missing strings | 6 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -74,7 +63,11 @@ _Nothing to re-read._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**6 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — 6
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 

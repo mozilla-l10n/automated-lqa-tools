@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
-| **Previous run** | 2026-09-10 @ `6bf5ed95c626` |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
+| **Previous run** | 2026-09-14 @ `6e23dc94dd8f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,742 |
+| **Strings reviewed this run** | 13 of 2,752 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for pl: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `mozac_feature_addons_author` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-pl/strings.xml` — Singular "Author" rendered as plural "Autorzy".
+    - Current: `Autorzy`
+    - Source: `Author`
+    - Suggest: `Autor`
+    - The developer comment says "The author of an add-on" — a single author label, not a list heading.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +48,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 43 |
-| Strings | 2,742 |
-| Missing strings | 4 |
+| Files | 44 |
+| Strings | 2,752 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,16 +67,7 @@ _Nothing retired._
 
 ### Completeness
 
-**4 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — 3
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 1
-
-**Files absent from the locale:**
-
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -94,14 +89,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (87)
+## 3. Open findings (88)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 63 |
-| 3 | Degraded language (grammar, spelling, terminology) | 23 |
+| 3 | Degraded language (grammar, spelling, terminology) | 24 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
@@ -140,6 +135,11 @@ _Nothing in this category._
     - Source: `%1$s could not be installed because it can only be installed by an organization using enterprise policies, which isn‘t supported on this platform.`
     - Suggest: `wyłącznie organizacja korzystająca z zasad firmowych, które nie są obsługiwane na tej platformie`
     - The source term is "enterprise policies"; repeating "organizacja" twice is a terminology error in Polish Mozilla builds, where "zasady firmowe" is used.
+- `mozac_feature_addons_author` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-pl/strings.xml` — Singular "Author" rendered as plural "Autorzy".
+    - Current: `Autorzy`
+    - Source: `Author`
+    - Suggest: `Autor`
+    - The developer comment says "The author of an add-on" — a single author label, not a list heading.
 - `mozac_feature_addons_extension_failed_to_install_network_error` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-pl/strings.xml` — Source says the extension could not be downloaded, but the translation says it could not be installed.
     - Current: `Nie udało się zainstalować tego rozszerzenia z powodu błędu połączenia.`
     - Source: `This extension could not be downloaded because of a connection failure.`
@@ -405,12 +405,7 @@ _Nothing in this category._
     - Source: `Dismiss`
     - Suggest: `Odrzuć`
     - The button dismisses the Close Tabs Banner; "Zamknij" is the translation used elsewhere in this batch for "Close" and is ambiguous with closing tabs, misrepresenting the negative action.
-- `terms_of_use_prompt_message_1` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — The translation says the Terms of Use come "from the Firefox browser" instead of "a Firefox Terms of Use" being newly introduced.
-    - Current: `Wprowadziliśmy %2$s z przeglądarki %1$s`
-    - Source: `We’ve introduced a %1$s %2$s and updated our %3$s.`
-    - Suggest: `Wprowadziliśmy %2$s przeglądarki %1$s`
-    - Source: "We’ve introduced a %1$s %2$s" — %1$s modifies the Terms of Use (Firefox Terms of Use); "z przeglądarki" (from the browser) changes the meaning.
-- _…and 7 more; see `state/` for the full list._
+- _…and 8 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

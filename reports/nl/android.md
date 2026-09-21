@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
-| **Previous run** | 2026-09-10 @ `6bf5ed95c626` |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
+| **Previous run** | 2026-09-14 @ `6e23dc94dd8f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 2,732 |
+| **Strings reviewed this run** | 20 of 2,752 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -44,11 +44,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 43 |
-| Strings | 2,732 |
-| Missing strings | 14 |
+| Files | 44 |
+| Strings | 2,752 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,17 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**14 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — 9
-- `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-nl/strings.xml` — 4
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 1
-
-**Files absent from the locale:**
-
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -85,7 +75,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | apostrophe | `typographic` 46 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `en` 6 | **en** |
-| register | `formal` 423 | **formal** |
+| register | `formal` 427 | **formal** |
 
 ---
 

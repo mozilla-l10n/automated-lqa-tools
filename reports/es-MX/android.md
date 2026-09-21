@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
-| **Previous run** | 2026-09-10 @ `6bf5ed95c626` |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
+| **Previous run** | 2026-09-14 @ `6e23dc94dd8f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,687 |
+| **Strings reviewed this run** | 66 of 2,752 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,36 @@ Also for es-MX: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (4)
 
-_No new findings._
+- `mozac_feature_summarize_feedback_state_submitted` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-es-rMX/strings.xml` — "Rating submitted" mistranslated as "Fecha enviada" (date sent).
+    - Current: `Fecha enviada`
+    - Source: `Rating submitted`
+    - Suggest: `Calificación enviada`
+    - The source announces that the user's rating (thumbs up/down) was submitted; "Fecha" means date, likely a confusion with "Rated"/"Date". Screen reader users would hear the wrong information.
+- `custom_accessibility_action_reorder_tab_right` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "Move tab right" drops the object "tab", unlike the parallel up/down/left actions.
+    - Current: `Mover a la derecha`
+    - Source: `Move tab right`
+    - Suggest: `Mover pestaña a la derecha`
+    - The source says "Move tab right" and the sibling strings translate "tab"; omitting it makes the accessibility action inconsistent and less informative.
+- `sync_send_tab_error_connection_text` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "Then" is dropped, losing the sequence after reconnecting.
+    - Current: `Intenta reenviar tu pestaña.`
+    - Source: `Then try resending your tab.`
+    - Suggest: `Luego, intenta reenviar tu pestaña.`
+    - The source "Then try resending your tab." follows on from "Check your internet connection"; the Spanish omits the sequencing word.
+- `mozac_summarize_paywalled_content_error_title` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-es-rMX/strings.xml` — Trailing period added to a title that has none in the source.
+    - Current: `No se puede resumir el contenido de pago.`
+    - Source: `Can’t summarize paywalled content`
+    - Suggest: `No se puede resumir el contenido de pago`
+    - The source is an error screen title without final punctuation; the added period deviates from the source's title styling.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `ip_protection_location_recommended_label` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "Recommended" is a label for a single location option and should be singular, not plural.
+    - Current: `Recomendados`
+    - Source: `Recommended`
+    - Suggest: `Recomendada`
+    - The label refers to the recommended automatic location option (singular, feminine "ubicación"); the plural masculine "Recomendados" does not agree.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -34,20 +57,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (3)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `customize_toggle_jump_back_in` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "hacía" is misspelled; should be the preposition "hacia" (and the phrase is redundant).
-    - Current: `Regresar hacía atrás`
-    - Suggest: `Retomar donde te quedaste`
-    - "hacía" (verb hacer, imperfect) is a spelling error for the preposition "hacia"; the source "Jump back in" means resuming a recent tab, not moving backwards.
-- `recent_tabs_header` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "hacía" is misspelled; it should be the preposition "hacia" (and the phrase is redundant).
-    - Current: `Regresar hacía atrás`
-    - Suggest: `Volver atrás`
-    - "hacía" is the verb form of "hacer"; the intended word is the preposition "hacia" (no accent). "Jump back in" means returning to a recent tab.
-- `recent_tabs_show_all_content_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — Content description mistranslated: "Show all recent tabs button" rendered as "Show the button of all recent tabs".
-    - Current: `Mostrar el botón de todas las pestañas recientes`
-    - Suggest: `Botón Mostrar todas las pestañas recientes`
-    - The source names a button whose action is "show all recent tabs"; the Spanish makes "mostrar" the action applied to the button, reversing the structure and meaning.
+_Nothing retired._
 
 ---
 
@@ -55,11 +67,11 @@ _Nothing to re-read._
 
 | Check | Result |
 |---|---|
-| Files | 43 |
-| Strings | 2,687 |
-| Missing strings | 59 |
+| Files | 44 |
+| Strings | 2,752 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -74,18 +86,7 @@ _Nothing to re-read._
 
 ### Completeness
 
-**59 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — 48
-- `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-es-rMX/strings.xml` — 6
-- `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-es-rMX/strings.xml` — 4
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 1
-
-**Files absent from the locale:**
-
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -97,7 +98,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 2 | **em** |
 | inverted marks | `open-question` 105, `open-exclamation` 29 | **open-question** |
-| register | `informal` 190, `formal` 12 | **informal** |
+| register | `informal` 195, `formal` 12 | **informal** |
 
 ---
 
@@ -107,15 +108,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (152)
+## 3. Open findings (155)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 82 |
-| 3 | Degraded language (grammar, spelling, terminology) | 61 |
-| 4 | Cosmetic (typography, spacing) | 9 |
+| 2 | Wrong content (says something other than the English) | 83 |
+| 3 | Degraded language (grammar, spelling, terminology) | 62 |
+| 4 | Cosmetic (typography, spacing) | 10 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -188,6 +189,11 @@ _Nothing in this category._
     - Source: `Use strong password: %1$s`
     - Suggest: `Usar contraseña segura: %1$s`
     - The related strings use the infinitive ("¿Usar contraseña segura?", "Usar contraseña"); this label is the same action and should match, not be an informal imperative command.
+- `mozac_feature_summarize_feedback_state_submitted` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-es-rMX/strings.xml` — "Rating submitted" mistranslated as "Fecha enviada" (date sent).
+    - Current: `Fecha enviada`
+    - Source: `Rating submitted`
+    - Suggest: `Calificación enviada`
+    - The source announces that the user's rating (thumbs up/down) was submitted; "Fecha" means date, likely a confusion with "Rated"/"Date". Screen reader users would hear the wrong information.
 - `mozac_summarize_download_consent_button_positive` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-es-rMX/strings.xml` — "Download to summarize" is rendered as the noun "Descarga para resumir" instead of the imperative verb.
     - Current: `Descarga para resumir`
     - Source: `Download to summarize`
@@ -288,6 +294,11 @@ _Nothing in this category._
     - Source: `Navigate back`
     - Suggest: `Navegar hacia atrás`
     - The source describes a back button action: navigate back. The translation says "return to the navigation", which is a different meaning.
+- `custom_accessibility_action_reorder_tab_right` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "Move tab right" drops the object "tab", unlike the parallel up/down/left actions.
+    - Current: `Mover a la derecha`
+    - Source: `Move tab right`
+    - Suggest: `Mover pestaña a la derecha`
+    - The source says "Move tab right" and the sibling strings translate "tab"; omitting it makes the accessibility action inconsistent and less informative.
 - `debug_drawer_addresses_debug_locales_header` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "Debug locales" is translated as "Idiomas de depuración" (languages) instead of locales/regional settings.
     - Current: `Idiomas de depuración para habilitar`
     - Source: `Debug locales to enable`
@@ -413,17 +424,7 @@ _Nothing in this category._
     - Source: `Stronger tracking protection and faster performance, but some sites may not work properly.`
     - Suggest: `Protección contra rastreo más fuerte y mayor rendimiento`
     - "Stronger" is a comparative describing the strict level; "mejorada" is the established rendering of "Enhanced" in preference_enhanced_tracking_protection, creating a confusing collision.
-- `preference_search_address_bar_fx_suggest` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — The product name "Firefox Suggest" is translated here but left untranslated in the related string.
-    - Current: `Sugerencias de Firefox`
-    - Source: `Address bar - Firefox Suggest`
-    - Suggest: `Firefox Suggest`
-    - "Firefox Suggest" is a Mozilla product name that must stay untranslated; the sibling string preference_search_learn_about_fx_suggest keeps it in English, creating inconsistency on the same settings screen.
-- `preferences_category_select_default_search_engine_2` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "Default search engine" is rendered as "Buscador principal" instead of "predeterminado".
-    - Current: `Buscador principal para la navegación estándar`
-    - Source: `Normal browsing default search engine`
-    - Suggest: `Buscador predeterminado para la navegación estándar`
-    - The source says "default search engine"; "principal" means primary/main, not default, and the rest of the tree uses "predeterminado" for "default".
-- _…and 25 more; see `state/` for the full list._
+- _…and 28 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -507,11 +508,6 @@ _Nothing in this category._
     - Source: `Enable telemetry to send data.`
     - Suggest: `Habilita la telemetría para enviar datos.`
     - The source "Enable telemetry to send data." is an instruction to the user shown in a snackbar; es-MX uses the informal imperative for user instructions.
-- `ip_protection_location_recommended_label` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "Recommended" is a label for a single location option and should be singular, not plural.
-    - Current: `Recomendados`
-    - Source: `Recommended`
-    - Suggest: `Recomendada`
-    - The label refers to the recommended automatic location option (singular, feminine "ubicación"); the plural masculine "Recomendados" does not agree.
 - `nova_onboarding_customize_prompt_body` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "navegadas" is a misspelling of the verb form "navegabas".
     - Current: `mientras navegadas por la web`
     - Source: `{$quantity ->} [one] %1$s blocked %2$,d tracker while you roamed the web. [other] %1$s blocked %2$,d trackers while you roamed the web.`
@@ -738,6 +734,11 @@ _Nothing in this category._
     - Source: `Tap to copy the URL for this app`
     - Suggest: `Toca para copiar la URL de esta aplicación`
     - The source "Tap to copy the URL for this app" has no final punctuation.
+- `mozac_summarize_paywalled_content_error_title` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-es-rMX/strings.xml` — Trailing period added to a title that has none in the source.
+    - Current: `No se puede resumir el contenido de pago.`
+    - Source: `Can’t summarize paywalled content`
+    - Suggest: `No se puede resumir el contenido de pago`
+    - The source is an error screen title without final punctuation; the added period deviates from the source's title styling.
 - `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
     - Current: `La dirección web debe contener "https://" o "http://"`
     - Source: `Web address must contain “https://” or “http://”`
@@ -789,6 +790,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (1)
 
-_Nothing fixed yet._
+- `ip_protection_location_recommended_label` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — fixed 2026-09-21
