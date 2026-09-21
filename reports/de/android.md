@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
-| **Previous run** | 2026-09-10 @ `6bf5ed95c626` |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
+| **Previous run** | 2026-09-14 @ `6e23dc94dd8f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 2,746 |
+| **Strings reviewed this run** | 6 of 2,752 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,12 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `recent_tabs_show_all_content_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Content description misplaces the quotation so it names a button labelled "Alle zuletzt geöffneten Tabs" instead of describing the "Show all recent tabs" button.
-    - Current: `Schaltfläche „Alle zuletzt geöffneten Tabs“ anzeigen`
-    - Suggest: `Schaltfläche „Alle zuletzt geöffneten Tabs anzeigen“`
-    - The source is "Show all recent tabs button", i.e. the button whose action is showing all recent tabs; the German quotes only part of the label and leaves "anzeigen" outside, changing the meaning to "show the button".
+_Nothing retired._
 
 ---
 
@@ -48,7 +45,7 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,746 |
+| Strings | 2,752 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |

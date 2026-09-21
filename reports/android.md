@@ -1,8 +1,8 @@
 # Firefox for Android, Focus, and the shared Android Components — l10n QA
 
-- **Generated:** 2026-09-17
+- **Generated:** 2026-09-21
 - **Locales tracked:** 22 (22 with recorded state)
-- **Findings:** 2,915 raised, 269 fixed (9%), 2,318 open
+- **Findings:** 2,923 raised, 271 fixed (9%), 2,324 open
 - **Closed by a person:** 24 dismissed, 68 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
@@ -56,28 +56,28 @@ Too many to list here; the per-locale counts are in the table below and every on
 
 | Locale | Last run | Mode | Commit | Strings | Missing | Open | Impact 1–2 | Fixed | Dismissed | Suppressed |
 |---|---|---|---|---|---|---|---|---|---|---|
-| [cs](cs/android.md) | 2026-09-14 | incremental | `6e23dc94` | 2,746 | 0 | **130** | 76 | 0 | 2 | 0 |
-| [de](de/android.md) | 2026-09-14 | incremental | `6e23dc94` | 2,746 | 0 | **105** | 60 | 1 | 0 | 0 |
-| [en-CA](en-CA/android.md) | 2026-09-14 | incremental | `6e23dc94` | 2,746 | 0 | **0** | 0 | 1 | 0 | 0 |
-| [en-GB](en-GB/android.md) | 2026-09-14 | incremental | `6e23dc94` | 2,746 | 0 | **1** | 1 | 0 | 3 | 64 |
-| [es-AR](es-AR/android.md) | 2026-09-14 | incremental | `6e23dc94` | 2,746 | 0 | **121** | 44 | 0 | 0 | 0 |
-| [es-ES](es-ES/android.md) | 2026-09-14 | incremental | `6e23dc94` | 2,746 | 0 | **120** | 52 | 1 | 0 | 0 |
-| [es-MX](es-MX/android.md) | 2026-09-14 | incremental | `6e23dc94` | 2,687 | 59 | **152** | 82 | 0 | 0 | 0 |
-| [fa](fa/android.md) | 2026-09-17 | baseline | `51a5854c` | 2,594 | 152 | **139** | 62 | 0 | 0 | 0 |
-| [fr](fr/android.md) | 2026-09-14 | incremental | `6e23dc94` | 2,746 | 0 | **77** | 55 | 0 | 0 | 0 |
-| [fy-NL](fy-NL/android.md) | 2026-09-14 | incremental | `6e23dc94` | 2,713 | 33 | **165** | 59 | 0 | 0 | 0 |
-| [hi-IN](hi-IN/android.md) | 2026-09-17 | incremental | `ffd66476` | 2,668 | 79 | **26** | 6 | 213 | 8 | 0 |
-| [hu](hu/android.md) | 2026-09-14 | incremental | `6e23dc94` | 2,746 | 0 | **148** | 77 | 0 | 0 | 0 |
-| [id](id/android.md) | 2026-09-14 | incremental | `6e23dc94` | 2,738 | 8 | **161** | 90 | 4 | 0 | 0 |
-| [it](it/android.md) | 2026-09-14 | incremental | `6e23dc94` | 2,746 | 0 | **0** | 0 | 43 | 11 | 4 |
-| [ja](ja/android.md) | 2026-09-14 | incremental | `6e23dc94` | 2,746 | 0 | **148** | 116 | 1 | 0 | 0 |
-| [nl](nl/android.md) | 2026-09-14 | incremental | `6e23dc94` | 2,732 | 14 | **63** | 35 | 0 | 0 | 0 |
-| [pl](pl/android.md) | 2026-09-14 | incremental | `6e23dc94` | 2,742 | 4 | **87** | 63 | 0 | 0 | 0 |
-| [pt-BR](pt-BR/android.md) | 2026-09-14 | incremental | `6e23dc94` | 2,746 | 0 | **117** | 70 | 0 | 0 | 0 |
-| [ru](ru/android.md) | 2026-09-14 | incremental | `6e23dc94` | 2,746 | 0 | **156** | 88 | 1 | 0 | 0 |
-| [sl](sl/android.md) | 2026-09-14 | incremental | `6e23dc94` | 2,737 | 9 | **117** | 65 | 1 | 0 | 0 |
-| [tr](tr/android.md) | 2026-09-14 | incremental | `6e23dc94` | 2,746 | 0 | **140** | 77 | 3 | 0 | 0 |
-| [zh-CN](zh-CN/android.md) | 2026-09-14 | incremental | `6e23dc94` | 2,742 | 4 | **145** | 100 | 0 | 0 | 0 |
+| [cs](cs/android.md) | 2026-09-21 | incremental | `e8bad320` | 2,752 | 0 | **130** | 76 | 0 | 2 | 0 |
+| [de](de/android.md) | 2026-09-21 | incremental | `e8bad320` | 2,752 | 0 | **105** | 60 | 1 | 0 | 0 |
+| [en-CA](en-CA/android.md) | 2026-09-21 | incremental | `e8bad320` | 2,746 | 6 | **0** | 0 | 1 | 0 | 0 |
+| [en-GB](en-GB/android.md) | 2026-09-21 | incremental | `e8bad320` | 2,752 | 0 | **1** | 1 | 0 | 3 | 64 |
+| [es-AR](es-AR/android.md) | 2026-09-21 | incremental | `e8bad320` | 2,752 | 0 | **121** | 44 | 0 | 0 | 0 |
+| [es-ES](es-ES/android.md) | 2026-09-21 | incremental | `e8bad320` | 2,746 | 6 | **120** | 52 | 1 | 0 | 0 |
+| [es-MX](es-MX/android.md) | 2026-09-21 | incremental | `e8bad320` | 2,752 | 0 | **155** | 83 | 1 | 0 | 0 |
+| [fa](fa/android.md) | 2026-09-21 | incremental | `e8bad320` | 2,594 | 158 | **139** | 62 | 0 | 0 | 0 |
+| [fr](fr/android.md) | 2026-09-21 | incremental | `e8bad320` | 2,752 | 0 | **77** | 55 | 0 | 0 | 0 |
+| [fy-NL](fy-NL/android.md) | 2026-09-21 | incremental | `e8bad320` | 2,752 | 0 | **166** | 59 | 0 | 0 | 0 |
+| [hi-IN](hi-IN/android.md) | 2026-09-21 | incremental | `e8bad320` | 2,668 | 84 | **26** | 6 | 213 | 8 | 0 |
+| [hu](hu/android.md) | 2026-09-21 | incremental | `e8bad320` | 2,746 | 6 | **148** | 77 | 0 | 0 | 0 |
+| [id](id/android.md) | 2026-09-21 | incremental | `e8bad320` | 2,744 | 8 | **163** | 90 | 4 | 0 | 0 |
+| [it](it/android.md) | 2026-09-21 | incremental | `e8bad320` | 2,752 | 0 | **0** | 0 | 43 | 11 | 4 |
+| [ja](ja/android.md) | 2026-09-21 | incremental | `e8bad320` | 2,752 | 0 | **148** | 116 | 1 | 0 | 0 |
+| [nl](nl/android.md) | 2026-09-21 | incremental | `e8bad320` | 2,752 | 0 | **63** | 35 | 0 | 0 | 0 |
+| [pl](pl/android.md) | 2026-09-21 | incremental | `e8bad320` | 2,752 | 0 | **88** | 63 | 0 | 0 | 0 |
+| [pt-BR](pt-BR/android.md) | 2026-09-21 | incremental | `e8bad320` | 2,752 | 0 | **117** | 70 | 0 | 0 | 0 |
+| [ru](ru/android.md) | 2026-09-21 | incremental | `e8bad320` | 2,752 | 0 | **156** | 88 | 1 | 0 | 0 |
+| [sl](sl/android.md) | 2026-09-21 | incremental | `e8bad320` | 2,745 | 7 | **117** | 65 | 1 | 0 | 0 |
+| [tr](tr/android.md) | 2026-09-21 | incremental | `e8bad320` | 2,747 | 5 | **139** | 76 | 4 | 0 | 0 |
+| [zh-CN](zh-CN/android.md) | 2026-09-21 | incremental | `e8bad320` | 2,742 | 10 | **145** | 100 | 0 | 0 | 0 |
 
 **Impact 1–2** is the queue that matters: broken output and wrong content. Impact 3–4 is language polish and typography.
 

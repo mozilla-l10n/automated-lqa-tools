@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
-| **Previous run** | 2026-09-10 @ `6bf5ed95c626` |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
+| **Previous run** | 2026-09-14 @ `6e23dc94dd8f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 4 of 2,746 |
+| **Strings reviewed this run** | 6 of 2,752 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for ja: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `preferences_downloads_no_folder_picker_available` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — The message says the folder cannot be opened/selected instead of stating that the folder picker cannot be opened on this device.
-    - Current: `この端末ではフォルダーを開いて選択できません。`
-    - Source: `Unable to open the folder picker on this device.`
-    - Suggest: `この端末ではフォルダー選択画面を開けません。`
-    - Source: "Unable to open the folder picker on this device." — the developer comment says no app is available to show a folder picker; the translation instead asserts the user cannot open and select a folder.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,7 +45,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,746 |
+| Strings | 2,752 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |

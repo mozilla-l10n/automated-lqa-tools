@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-17 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ffd664766fe8` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ffd664766fe8` |
-| **Previous run** | 2026-09-17 @ `04999294f7f0` |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
+| **Previous run** | 2026-09-17 @ `ffd664766fe8` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 2,668 |
+| **Strings reviewed this run** | 0 of 2,668 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,18 +22,9 @@ Also for hi-IN: [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (0)
 
-- `mozac_summarize_info_error_title` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-hi-rIN/strings.xml` — Spelling error: "नहींं" has a doubled anusvara/chandrabindu.
-    - Current: `अभी सारांश नहींं बनाया जा सकता`
-    - Source: `Can’t summarize right now`
-    - Suggest: `अभी सारांश नहीं बनाया जा सकता`
-    - The word for "not" is spelled नहीं; the target has an extra nasal mark producing "नहींं".
-- `search_settings_menu_item` — `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — "Search settings" (the search settings screen) is rendered as an imperative "search the settings".
-    - Current: `सेटिंग सर्च करें`
-    - Source: `Search settings`
-    - Suggest: `सर्च सेटिंग`
-    - The developer comment says this menu option opens the search settings; the Hindi says "search the settings", reversing the noun phrase into a command.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -55,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 44 |
 | Strings | 2,668 |
-| Missing strings | 79 |
+| Missing strings | 84 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -72,9 +63,10 @@ _Nothing retired._
 
 ### Completeness
 
-**79 strings** are not translated yet, concentrated in:
+**84 strings** are not translated yet, concentrated in:
 
 - `mozilla-mobile/focus-android/app/src/main/res/values-hi-rIN/strings.xml` — 79
+- `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — 5
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

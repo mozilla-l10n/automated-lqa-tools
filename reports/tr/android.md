@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
-| **Previous run** | 2026-09-10 @ `6bf5ed95c626` |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
+| **Previous run** | 2026-09-14 @ `6e23dc94dd8f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 4 of 2,746 |
+| **Strings reviewed this run** | 4 of 2,747 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,13 @@ Also for tr: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `customize_toggle_continue` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — Homescreen section title "Continue" translated as "İleri" (Forward/Next).
+    - Current: `İleri`
+    - Source: `Continue`
+    - Suggest: `Devam edin`
+    - Per the developer comment this names the section that lets users continue where they left off; "İleri" means "forward/next" and does not convey "continue".
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -34,16 +38,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (2)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `customize_toggle_jump_back_in` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Jump back in" is rendered as "Açık sekmeler" (Open tabs), which names a different homepage section.
-    - Current: `Açık sekmeler`
-    - Suggest: `Kaldığınız yerden devam edin`
-    - The source refers to the "Jump back in" section (recent tab), not "Open tabs"; the Turkish says something else.
-- `recent_tabs_header` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Jump back in" is rendered as "Açık sekmeler" (Open tabs), which says something different from the source.
-    - Current: `Açık sekmeler`
-    - Suggest: `Kaldığınız yerden devam edin`
-    - The source header invites the user to resume a recent tab; the target states "Open tabs", a different meaning.
+_Nothing retired._
 
 ---
 
@@ -52,8 +49,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,746 |
-| Missing strings | 0 |
+| Strings | 2,747 |
+| Missing strings | 5 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -70,7 +67,11 @@ _Nothing to re-read._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**5 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — 5
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -91,13 +92,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (140)
+## 3. Open findings (139)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 77 |
+| 2 | Wrong content (says something other than the English) | 76 |
 | 3 | Degraded language (grammar, spelling, terminology) | 57 |
 | 4 | Cosmetic (typography, spacing) | 6 |
 
@@ -272,11 +273,6 @@ _Nothing in this category._
     - Source: `Update recommended`
     - Suggest: `Güncelleme öneriliyor`
     - Source states that an update is recommended; the Turkish reads "the recommended update", changing the meaning.
-- `customize_toggle_continue` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — Homescreen section title "Continue" translated as "İleri" (Forward/Next).
-    - Current: `İleri`
-    - Source: `Continue`
-    - Suggest: `Devam edin`
-    - Per the developer comment this names the section that lets users continue where they left off; "İleri" means "forward/next" and does not convey "continue".
 - `customize_toggle_pocket_3` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Stories" translated as "Haberler" (News) instead of "Hikâyeler"/"Öyküler".
     - Current: `Haberler`
     - Source: `Stories`
@@ -407,7 +403,12 @@ _Nothing in this category._
     - Source: `Share link nearby`
     - Suggest: `Bağlantıyı yakındakilerle paylaş`
     - The source "Share link nearby" is neutral; the first-person "yakınımdakilerle" (with those near me) is inconsistent with the body text which uses "yakınınızdaki kişilerle" (formal second person).
-- _…and 26 more; see `state/` for the full list._
+- `recent_tabs_header_2` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Continue" (continue browsing where you left off) rendered as "İleri" (Forward/Next).
+    - Current: `İleri`
+    - Source: `Continue`
+    - Suggest: `Devam edin`
+    - The header invites the user to continue browsing the most recent tab; "İleri" means "forward/next" and is the standard label for the forward navigation button, not "continue".
+- _…and 25 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -708,8 +709,9 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (3)
+### Fixed to date (4)
 
+- `customize_toggle_continue` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — fixed 2026-09-21
 - `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-tr/strings.xml` — fixed 2026-08-22
 - `bookmark_url_label` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — fixed 2026-08-22
 - `ip_protection_onboarding_body_promo` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — fixed 2026-08-21

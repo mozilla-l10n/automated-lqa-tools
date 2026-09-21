@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `6e23dc94dd8f` |
-| **Previous run** | 2026-09-10 @ `6bf5ed95c626` |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
+| **Previous run** | 2026-09-14 @ `6e23dc94dd8f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 4 of 2,746 |
+| **Strings reviewed this run** | 0 of 2,746 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,12 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `recent_tabs_show_all_content_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — Typo: "Öösszes" instead of "Összes".
-    - Current: `Öösszes legutóbbi lap megjelenítése gomb`
-    - Suggest: `Összes legutóbbi lap megjelenítése gomb`
-    - Misspelling of "Összes" with a doubled initial vowel.
+_Nothing retired._
 
 ---
 
@@ -49,7 +46,7 @@ _Nothing to re-read._
 |---|---|
 | Files | 44 |
 | Strings | 2,746 |
-| Missing strings | 0 |
+| Missing strings | 6 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -66,7 +63,11 @@ _Nothing to re-read._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**6 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — 6
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
