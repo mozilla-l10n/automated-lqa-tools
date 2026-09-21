@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e44f1369fb6d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8ffd279d75ec` |
-| **Previous run** | 2026-09-07 @ `3c0c507b8d42` |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
+| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 136 of 16,168 |
+| **Strings reviewed this run** | 11 of 16,183 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,124 +18,13 @@ Also for ja: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (22)
+### 🆕 New findings (0)
 
-- `site-rules-description-exclusion` — `browser/browser/ipProtection.ftl` — Status description rendered as an action/instruction instead of a state statement.
-    - Current: `このサイトでは VPN をオフにします`
-    - Source: `VPN is off for this site`
-    - Suggest: `このサイトでは VPN はオフです`
-    - The en-US "VPN is off for this site" describes the current state shown in the panel; the Japanese reads as "will turn the VPN off", an action.
-- `site-rules-description-inclusion` — `browser/browser/ipProtection.ftl` — Status description rendered as an action/instruction instead of a state statement.
-    - Current: `このサイトでは VPN をオンにします`
-    - Source: `VPN is on for this site`
-    - Suggest: `このサイトでは VPN はオンです`
-    - The en-US "VPN is on for this site" describes the current state shown in the panel; the Japanese reads as "will turn the VPN on", an action.
-- `ip-protection-site-rules-button` — `browser/browser/ipProtection.ftl` — "sites that need extra privacy" mistranslated as "this site" and the meaning of the two options merged.
-    - Current: `このサイトで追加のプライバシー強化を使用するか VPN をオフにするルールを設定します。`
-    - Source: `description: Set rules for sites that need extra privacy or VPN turned off. label: Manage website rules`
-    - Suggest: `追加のプライバシー保護が必要なサイトや VPN をオフにするサイトのルールを設定します。`
-    - en-US refers to plural "sites" generally, not "this site"; the description is about setting rules for sites needing extra privacy or with VPN turned off.
-- `refresh-unused-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — The "welcome back" greeting is moved to the front and the original sentence order/content is altered.
-    - Current: `お久しぶりです！ { -brand-short-name } はしばらく使われていないようです。プロファイルを掃除して新品のようにきれいにしますか？`
-    - Source: `It looks like you haven’t started { -brand-short-name } in a while. Do you want to clean it up for a fresh, like-new experience? And by the way, welcome back!`
-    - Suggest: `{ -brand-short-name } はしばらく使われていないようです。新品のような状態にするためにクリーンアップしますか？ ところで、お帰りなさい！`
-    - en-US ends with "And by the way, welcome back!"; the Japanese relocates it and drops the "by the way" framing.
-- `refresh-reinstalled-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — Adds a claim about a leftover previous profile that the en-US does not make.
-    - Current: `{ -brand-short-name } が再インストールされ前回のプロファイルが残っています。新品の状態にリフレッシュしますか？`
-    - Source: `Looks like you’ve reinstalled { -brand-short-name }. Want us to clean it up for a fresh, like-new experience?`
-    - Suggest: `{ -brand-short-name } を再インストールされたようです。新品のような状態にクリーンアップしましょうか？`
-    - en-US only says "Looks like you've reinstalled"; the Japanese asserts as fact that a previous profile remains, which the source never states.
-- `newtab-recent-searches-just-now` — `browser/browser/newtab/newtab.ftl` — "Just now" (relative time, less than a minute ago) translated as 直前, which means "immediately before" rather than "just now".
-    - Current: `直前`
-    - Source: `Just now`
-    - Suggest: `たった今`
-    - The developer comment says this is a relative time for a search made less than a minute ago; the idiomatic Japanese is たった今 / ついさっき.
-- `newtab-recent-searches-empty-recent` — `browser/browser/newtab/newtab.ftl` — Empty-state message turned into a statement that searches are shown, contradicting the empty state.
-    - Current: `ここに表示される最近の検索から選んでいつでも再検索できます。`
-    - Source: `Recent searches will show here so you can pick them up again anytime.`
-    - Suggest: `最近の検索がここに表示され、いつでも再開できます。`
-    - The string is shown when there are no recent searches; en-US uses the future "will show here". The Japanese asserts they are displayed here.
-- `newtab-wallpaper-firefox-orange` — `browser/browser/newtab/newtab.ftl` — Adds "gazing at you" which is not in the source.
-    - Current: `オレンジ色の背景の右端からこちらを見つめるキツネ`
-    - Source: `A fox at the right edge on an orange background`
-    - Suggest: `オレンジ色の背景の右端にいるキツネ`
-    - en-US is "A fox at the right edge on an orange background"; there is no mention of the fox looking at the viewer.
-- `newtab-wallpaper-firefox-colorful-sky` — `browser/browser/newtab/newtab.ftl` — "Waves of orange" mistranslated as "orange waving tail".
-    - Current: `紫色の夜空を横切るオレンジ色の波打つしっぽ`
-    - Source: `Waves of orange across a purple night sky`
-    - Suggest: `紫色の夜空を横切るオレンジ色の波`
-    - en-US says "Waves of orange across a purple night sky"; しっぽ (tail) is not in the source.
-- `newtab-wallpaper-firefox-desert-dark` — `browser/browser/newtab/newtab.ftl` — Adds "looking up at the night sky" which is not in the source.
-    - Current: `暗い紫色の砂漠に座って夜空を見上げるキツネ`
-    - Source: `A fox sitting in a dark purple desert`
-    - Suggest: `暗い紫色の砂漠に座るキツネ`
-    - en-US is "A fox sitting in a dark purple desert" with no mention of looking at the sky.
-- `newtab-wallpaper-firefox-hills-dark` — `browser/browser/newtab/newtab.ftl` — "running over dark hills" rendered as "running beyond/behind the hills".
-    - Current: `暗い丘の向こうを走るキツネ`
-    - Source: `A fox running over dark hills`
-    - Suggest: `暗い丘の上を走るキツネ`
-    - en-US "over dark hills" means across/on top of the hills, not on the far side of them.
-- `onboarding-refresh-fro-import-header` — `browser/browser/newtab/onboarding.ftl` — "Bring in your data" (import data) is rendered as "We protect your personal data".
-    - Current: `個人データを守ります`
-    - Source: `Bring in your data`
-    - Suggest: `データを引き継ぎましょう`
-    - The en-US header invites the user to import their data from another browser; the Japanese instead asserts that the product protects the user's personal data, which the source never says here.
-- `onboarding-refresh-fro-theme-header` — `browser/browser/newtab/onboarding.ftl` — "Play with your look" (appearance/theme) translated as "layout".
-    - Current: `お好みのレイアウトで楽しもう`
-    - Source: `Play with your look`
-    - Suggest: `お好みの見た目で楽しもう`
-    - The string is about the theme/appearance, not the layout; レイアウト is used for the separate tab-layout strings and confuses the two.
-- `onboarding-minimal-tabs-tooltip` — `browser/browser/newtab/onboarding.ftl` — Image description translated as an action the browser performs rather than a description of a browser window.
-    - Current: `ブラウザーウィンドウの側面に沿って、タブを最小化されたサイドバー内に小さなアイコンのように表示します。`
-    - Source: `title: A browser window displaying tabs as small icons along the side of the screen, in a minimized sidebar.`
-    - Suggest: `画面の側面に沿って最小化されたサイドバー内に、タブが小さなアイコンとして表示されたブラウザーウィンドウ`
-    - en-US describes an image ("A browser window displaying tabs as small icons along the side of the screen"); the Japanese turns the subject into the browser window itself and describes it as an action performed on the window's side.
-- `onboarding-minimal-tabs-description` — `browser/browser/newtab/onboarding.ftl` — aria-description translated as an action rather than a description of the depicted browser window.
-    - Current: `ブラウザーウィンドウの側面に沿って、タブを最小化されたサイドバー内に小さなアイコンのように表示します。`
-    - Source: `aria-description: A browser window displaying tabs as small icons along the side of the screen, in a minimized sidebar.`
-    - Suggest: `画面の側面に沿って最小化されたサイドバー内に、タブが小さなアイコンとして表示されたブラウザーウィンドウ`
-    - en-US describes an image of a browser window; the Japanese rephrases it as "displays tabs along the side of the browser window", changing the subject and meaning.
-- `newtab-wallpaper-firefox-hills-light` — `browser/browser/newtab/newtab.ftl` — "running over light hills" rendered as "running beyond/past the hills".
-    - Current: `明るい丘の向こうを走るキツネ`
-    - Source: `A fox running over light hills`
-    - Suggest: `明るい丘の上を走るキツネ`
-    - en-US says the fox runs over (on top of) the light hills; 向こう means "on the far side of", changing the described image.
-- `autofill-delete-payment-method-os-prompt-macos` — `toolkit/toolkit/formautofill/formAutofill.ftl` — Typo "支払い時方法" instead of "支払い方法", and the macOS fragment is phrased as a full sentence unlike the source fragment.
-    - Current: `保存した支払い時方法情報を削除しようとしています`
-    - Source: `delete stored payment method information`
-    - Suggest: `保存した支払い方法情報を削除`
-    - en-US is the fragment "delete stored payment method information"; the Japanese contains the misspelling 支払い時方法 (extra 時) and adds "しようとしています" which the OS-supplied prefix already provides.
-- `colorPickerTooltip.contrastAgainstBgTitle` — `devtools/client/inspector.properties` — "Calculated against background" is rendered as "背景に対応する色" (color corresponding to the background), losing the meaning of the contrast ratio being calculated against that background.
-    - Current: `背景に対応する色: %S`
-    - Source: `Calculated against background: %S`
-    - Suggest: `次の背景に対して計算: %S`
-    - The developer comment says this labels the background the contrast ratio is calculated against; the Japanese instead says "the color corresponding to the background".
-- `about-logins-reveal-password-os-auth-dialog-message-win` — `browser/browser/aboutLogins.ftl` — "To view your password" is translated as "ログイン情報を表示する" (view your login info) instead of password.
-    - Current: `ログイン情報を表示するには`
-    - Source: `To view your password, enter your Windows login credentials. This helps protect the security of your accounts.`
-    - Suggest: `パスワードを表示するには`
-    - en-US says "To view your password"; the parallel contextual-manager string correctly uses パスワードを表示.
-- `about-logins-copy-password-os-auth-dialog-message-win` — `browser/browser/aboutLogins.ftl` — "To copy your password" is translated as "ログイン情報をコピーする" (copy your login info) instead of password.
-    - Current: `ログイン情報をコピーするには`
-    - Source: `To copy your password, enter your Windows login credentials. This helps protect the security of your accounts.`
-    - Suggest: `パスワードをコピーするには`
-    - en-US says "To copy your password"; the parallel contextual-manager string correctly uses パスワードをコピー.
-- `pane-experimental-description4` — `browser/browser/preferences/preferences.ftl` — "could impact how { -brand-short-name } works" is rendered as an assertion that the features will affect Firefox's behavior, dropping the conditional and the "in development and evolving" nuance.
-    - Current: `現在開発中ですが、{ -brand-short-name } の動作にインパクトを与えることでしょう。`
-    - Source: `Give our experimental features a try! They’re in development and evolving, which could impact how { -brand-short-name } works. We only receive data about your use of these features if you have <a data-l10n-name="data-co…`
-    - Suggest: `現在開発中で変化し続けており、{ -brand-short-name } の動作に影響する可能性があります。`
-    - en-US states a possibility ("could impact"); the Japanese states it as an expected outcome and omits "evolving".
-- `decoder.noCodecs.button` — `browser/chrome/browser/browser.properties` — "Learn how" button label translated as "利用方法" (usage/how to use) rather than a learn-more style label.
-    - Current: `利用方法`
-    - Source: `Learn how`
-    - Suggest: `詳細情報`
-    - en-US "Learn how" links to help content; "利用方法" states the page is about how to use something, which is not what the source says.
+_No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `tab-group-editor-action-ungroup` — `browser/browser/tabbrowser.ftl` — グループを解放 ("liberate/free"); 解放 is already used for tab unloading in tab-context-unload-n-tabs. → グループを解除 Verified.
-    - Source: `label: Ungroup tabs`
-    - Suggest: `グループを解除`
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -145,26 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (7)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `about-logins-confirm-remove-all-dialog-message` — `browser/browser/aboutLogins.ftl` — about-logins-confirm-remove-all-dialog-message, -all-sync-dialog-message, -all-dialog-message2, -all-sync-dialog-message3 — browser/browser/aboutLogins.ftl — ここ表示される → ここに表示される (all four). Verified.
-    - Current: `ここ表示される`
-    - Suggest: `ここに表示される`
-- `about-logins-confirm-remove-all-dialog-title` — `browser/browser/aboutLogins.ftl` — `about-logins-confirm-remove-all-dialog-title` has plural variant ['one'], which ja does not have
-    - Current: `{$count ->} [one] { $count } 件のログイン情報を消去しますか？ [other] { $count } 件のすべてのログイン情報を消去しますか？`
-    - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `about-logins-confirm-remove-all-sync-dialog-title` — `browser/browser/aboutLogins.ftl` — `about-logins-confirm-remove-all-sync-dialog-title` has plural variant ['one'], which ja does not have
-    - Current: `{$count ->} [one] すべての端末から { $count } 件のログイン情報を消去しますか？ [other] すべての端末から { $count } 件のすべてのログイン情報を消去しますか？`
-    - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `newtab-pocket-cta-text` — `browser/browser/newtab/newtab.ftl` — お気に入りに記事 → お気に入りの記事.
-    - Current: `お気に入りに記事`
-    - Suggest: `お気に入りの記事`
-- `tabbrowser-close-tabs-tooltip` — `browser/browser/tabbrowser.ftl` — `tabbrowser-close-tabs-tooltip` (`.label`) has plural variant ['one'], which ja does not have
-    - Current: `{$tabCount ->} [one] タブを閉じます [other] { $tabCount } 個のタブを閉じます`
-    - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `webext-perms-optional-perms-header` — `toolkit/toolkit/global/extensions.ftl` — toolkit/toolkit/global/extensions.ftl — permissions are 権限 elsewhere in the file but 許可/許可設定 here.
-    - Suggest: `権限`
-- `set-password-reenter-password` — `toolkit/toolkit/preferences/preferences.ftl` — set-password-reenter.label, set-password-reenter-password — toolkit/toolkit/preferences/preferences.ftl — same.
+_Nothing retired._
 
 ---
 
@@ -173,9 +45,9 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 326 |
-| Strings | 16,168 |
-| Missing strings | 0 |
-| Obsolete strings | 0 |
+| Strings | 16,183 |
+| Missing strings | 54 |
+| Obsolete strings | 4 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -190,6 +62,21 @@ _Nothing to re-read._
 | Typography deviations from this locale's own norm | 0 |
 
 ### Completeness
+
+**54 strings** are not translated yet, concentrated in:
+
+- `toolkit/toolkit/about/aboutPDF.ftl` — 20
+- `browser/browser/newtab/newtab.ftl` — 8
+- `toolkit/toolkit/contentanalysis/contentanalysis.ftl` — 6
+- `devtools/client/debugger.properties` — 4
+- `dom/chrome/security/security.properties` — 3
+- `browser/browser/genai.ftl` — 3
+- `dom/chrome/dom/dom.properties` — 2
+- `devtools/client/components.properties` — 1
+- `devtools/client/perftools.ftl` — 1
+- `devtools/client/sourceeditor.properties` — 1
+- `browser/browser/migrationWizard.ftl` — 1
+- `browser/browser/translations.ftl` — 1
 
 **Files present but identical to en-US:**
 

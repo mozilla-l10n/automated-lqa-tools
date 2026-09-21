@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e44f1369fb6d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8ffd279d75ec` |
-| **Previous run** | 2026-09-07 @ `3c0c507b8d42` |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
+| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 156 of 15,800 |
+| **Strings reviewed this run** | 10 of 15,810 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,113 +18,18 @@ Also for es-MX: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (21)
+### 🆕 New findings (2)
 
-- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Novedades” but the string it names, `releaseNotes-link`, reads “Qué hay de nuevo”
-    - Current: `Anular la página "Novedades" posterior a la actualización. Establecer esta política en blanco si deseas deshabilitar la página posterior a la actualización.`
-    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
-    - Suggest: `Qué hay de nuevo`
-    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `perftools-presets-networking-with-logs-description` — `devtools/client/perftools.ftl` — "networking logs" rendered as "registros de tráfico" and "the URLs you visit" changed to past tense.
-    - Current: `incluyendo registros de tráfico`
-    - Source: `Preset for investigating networking bugs in { -brand-shorter-name }, including networking logs. These logs may contain sensitive information such as the URLs you visit.`
-    - Suggest: `incluyendo registros de red`
-    - The source says "including networking logs"; "registros de tráfico" (traffic logs) is a different term, inconsistent with "errores de red" used in the same string for "networking".
-- `options-reopen-toolbox-message` — `devtools/client/toolbox-options.ftl` — "reopening the toolbox" translated as "reiniciar la caja de herramientas" (restarting).
-    - Current: `(Requiere reiniciar la caja de herramientas)`
-    - Source: `(requires reopening the toolbox)`
-    - Suggest: `(requiere volver a abrir la caja de herramientas)`
-    - The source says the toolbox must be reopened, not restarted; also the source is lowercase inside parentheses.
-- `options-netmonitor-body-limit-tooltip` — `devtools/client/toolbox-options.ftl` — Formal "Establezca" used where the locale convention is informal address.
-    - Current: `Establezca el valor en 0 para no aplicar ninguna limitación.`
-    - Source: `title: Request or response bodies which exceed the specified size will be truncated when displayed or downloaded in the Network Monitor. Set to 0 to have no limitation.`
-    - Suggest: `Establece el valor en 0 para no aplicar ninguna limitación.`
-    - es-MX convention is informal (tú) address; other strings in this batch use "utiliza", "Abre", "selecciona".
-- `migration-safari-password-import-post-sequoia-step2` — `browser/browser/migrationWizard.ftl` — The menu path "Export All Passwords to File…" lost the "to File" part.
-    - Current: `Exportar todas las contraseñas…`
-    - Source: `From the menu bar at the top of the screen, choose File > Export All Passwords to File…`
-    - Suggest: `Exportar todas las contraseñas a un archivo…`
-    - The source names the actual macOS menu item "Export All Passwords to File…"; omitting "to File" makes the instruction not match the UI the user must find.
-- `delete-profile-header-2` — `browser/browser/profiles.ftl` — Closing curly quote is an opening quote instead of a closing one.
-    - Current: `¿Eliminar el perfil “{ $profilename }“?`
-    - Source: `Delete “{ $profilename }” profile?`
-    - Suggest: `¿Eliminar el perfil “{ $profilename }”?`
-    - The source uses “…”; the localized string closes with a left double quotation mark, breaking the curly-double convention.
-- `preferences-ai-controls-sidebar-chatbot-group-2` — `browser/browser/preferences/preferences.ftl` — "Keep a chatbot in view" rendered as "Mantén tu chatbot" (your chatbot).
-    - Current: `Mantén tu chatbot a la vista mientras navegas.`
-    - Source: `description: Keep a chatbot in view as you browse. Choose from Anthropic Claude, ChatGPT, Copilot, Google Gemini, and Mistral Vibe. label: AI chatbot providers in sidebar`
-    - Suggest: `Mantén un chatbot a la vista mientras navegas.`
-    - The source uses the indefinite "a chatbot"; "tu chatbot" asserts the user already has one.
-- `passports-no-passports-stored-message` — `browser/browser/preferences/preferences.ftl` — "No passports added" translated as "No hay pasaportes guardados" (stored/saved).
-    - Current: `No hay pasaportes guardados`
-    - Source: `label: No passports added`
-    - Suggest: `No se han agregado pasaportes`
-    - The source label says "added", not "stored"; the developer comment distinguishes stored vs. the label wording.
-- `launch-on-login-autostart-infobar-message` — `browser/browser/newtab/asrouter.ftl` — "mas" is missing its accent; should be "más adelante".
-    - Current: `Puedes cambiar esta preferencia mas adelante en los ajustes.`
-    - Source: `{ -brand-short-name } now starts up when you sign in to Windows. You can always change this later in settings.`
-    - Suggest: `Puedes cambiar esta preferencia más adelante en los ajustes.`
-    - "más" (adverb of quantity/time) requires the accent; "mas" means "but".
-- `newtab-privacy-message-info-8` — `browser/browser/newtab/newtab.ftl` — Double space before the brand placeable.
-    - Current: `Cuando navegas con  { -brand-short-name } apoyas`
-    - Source: `Browsing with { -brand-short-name } supports { -vendor-short-name }’s mission to build a better web.`
-    - Suggest: `Cuando navegas con { -brand-short-name } apoyas`
-    - There is an extra space between "con" and the brand name in the user-visible text.
-- `newtab-privacy-message-info-9` — `browser/browser/newtab/newtab.ftl` — "go-to browser for built-in privacy" rendered as making Firefox the default browser, changing the meaning.
-    - Current: `Utiliza { -brand-short-name } como navegador predeterminado para una protección de privacidad integrada.`
-    - Source: `Make { -brand-short-name } your go-to browser for built-in privacy.`
-    - Suggest: `Haz de { -brand-short-name } tu navegador de referencia por su privacidad integrada.`
-    - The en-US says to make Firefox your go-to browser thanks to its built-in privacy, not to set it as the system default browser (though the CTA is "Make default", the message itself does not say "predeterminado"); the Spanish also reverses the causal relation, stating the purpose is to get privacy protection.
-- `security-privacy-issue-warning-doh2` — `browser/browser/preferences/preferences.ftl` — "sites you’re about to visit" translated as "sitios que visitas", losing the future sense.
-    - Current: `conozca los sitios que visitas`
-    - Source: `description: DNS over HTTPS helps hide what sites you’re about to visit from your network provider. label: DNS over HTTPS is disabled`
-    - Suggest: `conozca los sitios que estás por visitar`
-    - The en-US refers to sites the user is about to visit; the Spanish states sites the user visits generally.
-- `security-privacy-issue-warning-ech2` — `browser/browser/preferences/preferences.ftl` — "sites you’re about to visit" translated as "sitios que visitas", losing the future sense.
-    - Current: `conozca los sitios que visitas`
-    - Source: `description: Encrypted Client Hello helps hide what sites you’re about to visit from your network provider. label: Encrypted Client Hello is disabled`
-    - Suggest: `conozca los sitios que estás por visitar`
-    - The en-US refers to sites the user is about to visit; the Spanish states sites the user visits generally.
-- `refresh-reinstalled-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — "you’ve reinstalled" turned into an impersonal passive, dropping the second person.
-    - Current: `Parece que se ha reinstalado { -brand-short-name }.`
-    - Source: `Looks like you’ve reinstalled { -brand-short-name }. Want us to clean it up for a fresh, like-new experience?`
-    - Suggest: `Parece que has reinstalado { -brand-short-name }.`
-    - The en-US addresses the user directly ("you've reinstalled"); the Spanish removes the agent.
-- `smartwindow-sidebar-auto-open-callout-accepted-subtitle` — `browser/browser/newtab/onboarding.ftl` — Closing quotation mark is a left curly quote instead of a right curly quote.
-    - Current: `“Preguntar“`
-    - Source: `Use Ask to open it on any page. Change this anytime in <a data-l10n-name="settings">Settings</a>.`
-    - Suggest: `“Preguntar”`
-    - The locale convention is curly double quotes; the closing mark here is the opening character “ instead of ”.
-- `smartwindow-onboarding-title` — `browser/browser/newtab/onboarding.ftl` — "Make it your go-to" mistranslated as "use it as a starting point".
-    - Current: `Utiliza { -smart-window-brand-name } como punto de partida`
-    - Source: `Make { -smart-window-brand-name } your go-to`
-    - Suggest: `Haz de { -smart-window-brand-name } tu opción preferida`
-    - en-US "your go-to" means the preferred/default choice, not a "punto de partida" (starting point).
-- `smartwindow-sidebar-auto-open-callout-body` — `browser/browser/newtab/onboarding.ftl` — Present-tense "You can still open it" rendered as future, dropping "still".
-    - Current: `Podrás abrirlo cuando lo necesites.`
-    - Source: `You can still open it whenever you need it.`
-    - Suggest: `Aún puedes abrirlo cuando lo necesites.`
-    - en-US says "You can still open it whenever you need it" — present ability with "still"; the Spanish states a future capability and omits "still".
-- `newtab-sports-widget-message-survey-widget-body` — `browser/browser/newtab/newtab.ftl` — "try the new one in your lineup" rendered as "prueba el nuevo widget destacado" (the new featured widget).
-    - Current: `prueba el nuevo widget destacado`
-    - Source: `Share your feedback to help us improve future widgets. Then, try the new one in your lineup.`
-    - Suggest: `prueba el nuevo widget de tu selección`
-    - en-US refers to the new widget in the user's lineup; "destacado" (featured) invents a qualifier not in the source.
-- `url-classifier-content-classifier-force-third-party` — `toolkit/toolkit/about/url-classifier.ftl` — The reference to the top frame is dropped from the checkbox label.
-    - Current: `Forzar como solicitud de terceros`
-    - Source: `Force third-party to top frame`
-    - Suggest: `Forzar como de terceros respecto al marco superior`
-    - en-US is "Force third-party to top frame"; the developer comment says the request is forced to be third-party relative to the top-level page. The Spanish omits "to top frame".
-- `url-classifier-content-classifier-col-exception` — `toolkit/toolkit/about/url-classifier.ftl` — Column header rendered in plural although the source is singular, unlike the matching verdict string.
-    - Current: `Excepciones`
-    - Source: `Exception`
-    - Suggest: `Excepción`
-    - en-US "Exception" is singular and denotes a true/false per-row value; the sibling string url-classifier-content-classifier-verdict-exception uses "Excepción".
-- `url-classifier-content-classifier-probe-blocking-btn` — `toolkit/toolkit/about/url-classifier.ftl` — Plural used where the source is singular and the button runs one probe.
-    - Current: `Sondar bloqueos`
-    - Source: `Probe blocking`
-    - Suggest: `Sondar bloqueo`
-    - en-US "Probe blocking" refers to a single probe reporting whether the request would be blocked; the plural "bloqueos" does not match, while the sibling "Sondar funcionalidad" is singular.
+- `genai-shortcut-button-2` — `browser/browser/genai.ftl` — "Preguntar { $provider }" lacks the preposition "a" required before the provider name in Spanish.
+    - Current: `Preguntar { $provider }`
+    - Source: `aria-label: Ask { $provider } tooltiptext: Ask { $provider }`
+    - Suggest: `Preguntar a { $provider }`
+    - In Spanish the person/entity asked takes the preposition "a"; "Preguntar Claude" is ungrammatical for en-US "Ask { $provider }".
+- `user-context-shopping2` — `toolkit/toolkit/global/contextual-identity.ftl` — "Shopping" as a container label is rendered with the verb "Comprar" instead of a noun like "Compras".
+    - Current: `Comprar`
+    - Source: `label: Shopping`
+    - Suggest: `Compras`
+    - The sibling labels (Trabajo, Banca) are nouns naming a context; en-US "Shopping" is a noun here, not an action.
 
 ### ✅ Fixed since the last run (0)
 
@@ -138,13 +43,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (2)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `content-blocking-fingerprinters-label` — `browser/browser/preferences/preferences.ftl` — Fingerprinters: "Huellas dactilares" (content-blocking-fingerprinters, content-blocking-fingerprinters-label) vs "Detectores de huellas digitales" (content-blocking-known-and-suspected-fingerprinters, content-blocking-known-fingerprinters-label).
-- `noDomMutationBreakpoints` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints` quotes “Interrumpir en...” but the string it names, `watchpoints.submenu`, reads “Interrumpir en…”
-    - Current: `Haz clic con el botón derecho sobre un elemento en el %S y selecciona “Interrumpir en...” para agregar un punto de ruptura`
-    - Suggest: `Interrumpir en…`
-    - In the source this string quotes “Break on…”, which is exactly the value of `watchpoints.submenu` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+_Nothing retired._
 
 ---
 
@@ -153,8 +54,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 320 |
-| Strings | 15,800 |
-| Missing strings | 368 |
+| Strings | 15,810 |
+| Missing strings | 423 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 6 |
 | Files with no en-US counterpart | 0 |
@@ -171,11 +72,12 @@ _Nothing to re-read._
 
 ### Completeness
 
-**368 strings** are not translated yet, concentrated in:
+**423 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 91
+- `browser/browser/newtab/newtab.ftl` — 99
 - `toolkit/services/aboutSyncLog.ftl` — 28
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 23
+- `toolkit/toolkit/about/aboutPDF.ftl` — 21
 - `browser/browser/newtab/onboarding.ftl` — 19
 - `browser/browser/sharePanel.ftl` — 17
 - `toolkit/toolkit/about/aboutAddons.ftl` — 17
@@ -184,7 +86,6 @@ _Nothing to re-read._
 - `browser/browser/preferences/preferences.ftl` — 12
 - `browser/browser/ipProtection.ftl` — 11
 - `browser/browser/featureCallout.ftl` — 10
-- `browser/browser/permissions.ftl` — 10
 
 **Files absent from the locale:**
 
@@ -222,14 +123,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (41)
+## 3. Open findings (43)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 14 |
-| 3 | Degraded language (grammar, spelling, terminology) | 21 |
+| 3 | Degraded language (grammar, spelling, terminology) | 23 |
 | 4 | Cosmetic (typography, spacing) | 6 |
 
 ### A. Functional, markup, variables & plurals
@@ -313,6 +214,11 @@ _Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
+- `genai-shortcut-button-2` — `browser/browser/genai.ftl` — "Preguntar { $provider }" lacks the preposition "a" required before the provider name in Spanish.
+    - Current: `Preguntar { $provider }`
+    - Source: `aria-label: Ask { $provider } tooltiptext: Ask { $provider }`
+    - Suggest: `Preguntar a { $provider }`
+    - In Spanish the person/entity asked takes the preposition "a"; "Preguntar Claude" is ungrammatical for en-US "Ask { $provider }".
 - `launch-on-login-autostart-infobar-message` — `browser/browser/newtab/asrouter.ftl` — "mas" is missing its accent; should be "más adelante".
     - Current: `Puedes cambiar esta preferencia mas adelante en los ajustes.`
     - Source: `{ -brand-short-name } now starts up when you sign in to Windows. You can always change this later in settings.`
@@ -378,6 +284,11 @@ _Nothing in this category._
     - Source: `Subject Key ID`
 - `certificate-viewer-subject-name` — `toolkit/toolkit/about/certviewer.ftl` — click: "haz clic" vs "da clic" (permissions.ftl); Subject (cert) certificate-viewer-subject-name "interesado" / certificate-viewer-subject-alt-names "sujeto" / certificate-viewer-subject-key-id "asunto"; Rating detail-rating "Clasificación" vs addon-detail-rating-label "Calificación"; Icon "Icono" vs "Ícono" (sidebar-item-session-history and siblings).
     - Source: `Subject Name`
+- `user-context-shopping2` — `toolkit/toolkit/global/contextual-identity.ftl` — "Shopping" as a container label is rendered with the verb "Comprar" instead of a noun like "Compras".
+    - Current: `Comprar`
+    - Source: `label: Shopping`
+    - Suggest: `Compras`
+    - The sibling labels (Trabajo, Banca) are nouns naming a context; en-US "Shopping" is a noun here, not an action.
 - `settings-pp-erased-ok` — `toolkit/toolkit/preferences/preferences.ftl` — Primary Password: "contraseña primaria" vs "principal" vs "maestra" (pippki.ftl, fips-nonempty-primary-password-required, settings-pp-erased-ok, primary-password-required-by-policy).
     - Source: `You have deleted your Primary Password. Stored passwords and certificate private keys managed by { -brand-short-name } will not be protected.`
 

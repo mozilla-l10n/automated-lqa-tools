@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e44f1369fb6d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8ffd279d75ec` |
-| **Previous run** | 2026-09-07 @ `3c0c507b8d42` |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
+| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 83 of 15,156 |
+| **Strings reviewed this run** | 11 of 15,167 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,56 +18,13 @@ Also for es-ES: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (8)
+### 🆕 New findings (0)
 
-- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Qué hay de nuevo” but the string it names, `releaseNotes-link`, reads “Novedades”
-    - Current: `Anular la página "Qué hay de nuevo" posterior a la actualización. Deje esta política en blanco si quiere desactivar la página posterior a la actualización.`
-    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
-    - Suggest: `Novedades`
-    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `containers-sites-card-header` — `browser/browser/preferences/preferences.ftl` — Typo: "Elia" instead of "Elija".
-    - Current: `Elia un contenedor para un sitio`
-    - Source: `description: Choose a container for a site and { -brand-short-name } will use it every time the site opens. label: Site-specific containers`
-    - Suggest: `Elija un contenedor para un sitio`
-    - "Choose a container" should be "Elija un contenedor"; "Elia" is not a Spanish word.
-- `taskbar-tabs-media-callout-title-v3` — `browser/browser/featureCallout.ftl` — "Keep your streaming" rendered as "sus vídeos", narrowing/changing the meaning.
-    - Current: `Mantenga sus vídeos en la barra de tareas`
-    - Source: `Keep your streaming in your taskbar`
-    - Suggest: `Mantenga sus sitios de streaming en la barra de tareas`
-    - The en-US refers to streaming (media) sites, not to the user's videos; the subtitle also refers to "sitios de medios".
-- `site-rules-status-heading` — `browser/browser/ipProtection.ftl` — "Your rule" translated as "Regla personalizada" (custom rule).
-    - Current: `Regla personalizada`
-    - Source: `Your rule`
-    - Suggest: `Su regla`
-    - The source heading is "Your rule", referring to the user's rule for this site, not "custom rule".
-- `containers-new-tab-check2` — `browser/browser/preferences/preferences.ftl` — Label uses informal "Selecciona" while the description in the same string uses formal address.
-    - Current: `Selecciona un contenedor para cada pestaña nueva`
-    - Source: `accesskey: S description: This will open the containers menu every time you press the open new tab button. label: Select a container for each new tab`
-    - Suggest: `Seleccione un contenedor para cada pestaña nueva`
-    - The locale convention is formal (usted); the accompanying description uses "presione", so the informal imperative is inconsistent within the same string.
-- `refresh-profile-infobar-button` — `browser/browser/newtab/asrouter.ftl` — "Refresh { -brand-short-name }" is rendered as "Reiniciar" (restart) instead of the established "Restaurar" for profile refresh.
-    - Current: `Reiniciar { -brand-short-name }…`
-    - Source: `(value): Refresh { -brand-short-name }… accesskey: e`
-    - Suggest: `Restaurar { -brand-short-name }…`
-    - The button triggers the profile refresh (reset) feature, not a restart; "Reiniciar" tells the user the browser will simply be restarted, which is a different action. Firefox es-ES uses "Restaurar { -brand-short-name }" for Refresh.
-- `launch-on-login-autostart-infobar-message` — `browser/browser/newtab/asrouter.ftl` — Incorrect verb mood/agreement: "se inicia cuando usted inicie sesión" mixes indicative and subjunctive.
-    - Current: `Ahora { -brand-short-name } se inicia cuando usted inicie sesión en Windows.`
-    - Source: `{ -brand-short-name } now starts up when you sign in to Windows. You can always change this later in settings.`
-    - Suggest: `Ahora { -brand-short-name } se inicia cuando inicia sesión en Windows.`
-    - The en-US states a present habitual fact ("starts up when you sign in"); the Spanish subjunctive "inicie" after the indicative main clause is ungrammatical in this context.
-- `pdfjs-digital-signature-properties-timestamp` — `toolkit/toolkit/pdfviewer/viewer.ftl` — "Timestamp" translated as "Fecha" (date), losing the time component.
-    - Current: `Fecha: { $dateObj }`
-    - Source: `Timestamp: { $dateObj }`
-    - Suggest: `Marca de tiempo: { $dateObj }`
-    - The source label is "Timestamp", which includes the signing time, not just the date.
+_No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `neterror-net-offline` — `toolkit/toolkit/neterror/netError.ftl` — `neterror-net-offline` quotes “Probar de nuevo” but the string it names, `neterror-try-again-button`, reads “Reintentar”
-    - Current: `Presione “Probar de nuevo” para cambiar al modo con conexión y recargar la página.`
-    - Source: `Press “Try Again” to switch to online mode and reload the page.`
-    - Suggest: `Reintentar`
-    - In the source this string quotes “Try Again”, which is exactly the value of `neterror-try-again-button` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -77,13 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (2)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `confirm-on-quit-with-key` — `browser/browser/preferences/preferences.ftl` — Access key `b` of `confirm-on-quit-with-key` is not present in its label
-    - Current: `b`
-    - The label is “Confirmar antes de salir con { $quitKey }”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `protections-panel-content-blocking-breakage-report-view-send-report` — `browser/browser/protectionsPanel.ftl` — protections-panel-content-blocking-breakage-report-view-send-report "Enviar reporte" vs the file's "informe" → informe.
-    - Suggest: `informe.`
+_Nothing retired._
 
 ---
 
@@ -92,8 +45,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 318 |
-| Strings | 15,156 |
-| Missing strings | 1,012 |
+| Strings | 15,167 |
+| Missing strings | 1,066 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 8 |
 | Files with no en-US counterpart | 0 |
@@ -110,9 +63,9 @@ _Nothing to re-read._
 
 ### Completeness
 
-**1,012 strings** are not translated yet, concentrated in:
+**1,066 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 194
+- `browser/browser/newtab/newtab.ftl` — 202
 - `browser/browser/aiWindow.ftl` — 134
 - `browser/browser/appmenu.ftl` — 65
 - `browser/browser/aiWindowContent.ftl` — 51
@@ -123,7 +76,7 @@ _Nothing to re-read._
 - `toolkit/services/aboutSyncLog.ftl` — 28
 - `toolkit/toolkit/about/url-classifier.ftl` — 26
 - `browser/browser/firefoxView.ftl` — 23
-- `browser/browser/customkeys.ftl` — 21
+- `toolkit/toolkit/about/aboutPDF.ftl` — 22
 
 **Files absent from the locale:**
 

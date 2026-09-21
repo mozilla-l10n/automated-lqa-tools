@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e44f1369fb6d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8ffd279d75ec` |
-| **Previous run** | 2026-09-07 @ `3c0c507b8d42` |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
+| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 103 of 16,369 |
+| **Strings reviewed this run** | 65 of 16,447 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,33 +18,28 @@ Also for de: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (5)
+### 🆕 New findings (4)
 
-- `newtab-wallpaper-firefox-sky-light` — `browser/browser/newtab/newtab.ftl` — "Light hills" (helle Hügel) mistranslated as "Leichte Hügel" (lightweight hills).
-    - Current: `Leichte Hügel unter einem sanften Himmel`
-    - Source: `Light hills under a soft sky`
-    - Suggest: `Helle Hügel unter einem sanften Himmel`
-    - In this wallpaper set "light" means bright/hell (contrast with "dark purple hills"), not "leicht" (not heavy). Other strings in the same set correctly use "helle Hügel".
-- `onboarding-refresh-fro-import-header` — `browser/browser/newtab/onboarding.ftl` — "Bring in your data" (import data) rendered as "Geben Sie Ihre Daten ein" (enter your data).
-    - Current: `Geben Sie Ihre Daten ein`
-    - Source: `Bring in your data`
-    - Suggest: `Importieren Sie Ihre Daten`
-    - The string heads the import step of onboarding; en-US means importing existing data, not typing data in.
-- `onboarding-refresh-terms-of-use-with-links` — `browser/browser/newtab/onboarding.ftl` — Stray space and misplaced verb inside the link text: "Datenschutzhinweis zu </a>" puts "zu" inside the anchor with a trailing space.
-    - Current: `<a data-l10n-name="privacy_notice">Datenschutzhinweis zu </a>`
-    - Source: `By continuing, you agree to the <a data-l10n-name="terms_of_use">{ -brand-product-name } Terms of Use</a> and our <a data-l10n-name="privacy_notice">Privacy Notice</a>. To help improve the browser, { -brand-product-name…`
-    - Suggest: `<a data-l10n-name="privacy_notice">Datenschutzhinweis</a> zu`
-    - The en-US link text is only "Privacy Notice"; including "zu " plus a trailing space in the linked text makes the hyperlink text wrong and leaves a space before the period.
-- `pdf-features-notification` — `toolkit/toolkit/about/pdfFeaturesNotification.ftl` — "just got easier" translated as "sind noch einfacher", losing the meaning of a new improvement.
-    - Current: `PDFs sind in { -brand-short-name } noch einfacher.`
-    - Source: `aria-label: Notification heading: PDFs just got easier in { -brand-short-name }.`
-    - Suggest: `PDFs sind in { -brand-short-name } jetzt noch einfacher.`
-    - en-US states the experience has just improved; the German drops the temporal "just/now", changing the statement.
-- `pdf-features-notification-message` — `toolkit/toolkit/about/pdfFeaturesNotification.ftl` — "Split" (PDFs aufteilen/teilen in Einzeldokumente) is rendered as "PDFs teilen", which in German primarily means "share".
-    - Current: `PDFs teilen, zusammenführen und mehr.`
-    - Source: `Split, merge, and more. <a data-l10n-name="features-link">See PDF features</a>`
-    - Suggest: `PDFs aufteilen, zusammenführen und mehr.`
-    - en-US "Split, merge, and more" refers to splitting a PDF into parts; "teilen" reads as sharing, giving users a different feature claim.
+- `splitter.label` — `devtools/client/components.properties` — Plural "panels" rendered as singular "des Bereichs".
+    - Current: `Größe des Bereichs ändern`
+    - Source: `Resize panels`
+    - Suggest: `Größe der Bereiche ändern`
+    - The source says "Resize panels" (both panels of a split view, per the comment); the German refers to only one panel.
+- `translations-panel-revisit-to-label` — `browser/browser/translations.ftl` — Wrong preposition for "Translate to".
+    - Current: `Übersetzen auf`
+    - Source: `Translate to`
+    - Suggest: `Übersetzen in`
+    - German uses "übersetzen in" (eine Sprache), not "übersetzen auf".
+- `about-pdf-feature-organize-description` — `toolkit/toolkit/about/aboutPDF.ftl` — "Reorder" is translated as "sortieren" (sort) instead of "neu anordnen" (reorder).
+    - Current: `Seiten sortieren, löschen, zusammenführen und exportieren.`
+    - Source: `Reorder, remove, merge, and export pages.`
+    - Suggest: `Seiten neu anordnen, löschen, zusammenführen und exportieren.`
+    - The en-US "Reorder" means rearranging pages manually, not sorting them; "sortieren" names a different function.
+- `user-context-personal2` — `toolkit/toolkit/global/contextual-identity.ftl` — "Personal" is rendered as "Freizeit" (leisure), which names a different category.
+    - Current: `Freizeit`
+    - Source: `label: Personal`
+    - Suggest: `Persönlich`
+    - The en-US container label "Personal" contrasts with "Work"; "Freizeit" means leisure/free time, not personal.
 
 ### ✅ Fixed since the last run (0)
 
@@ -58,15 +53,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (2)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `main-context-menu-send-to-device` — `browser/browser/browserContext.ftl` — Access key `X` of `main-context-menu-send-to-device` is not present in its label
-    - Current: `X`
-    - The label is “Seite an Gerät senden”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `preventedConsoleClear` — `devtools/client/webconsole.properties` — `preventedConsoleClear` quotes “Logs nicht leeren” but the string it names, `webconsole.console.settings.menu.item.enablePersistentLogs.label`, reads “Log nicht leeren”
-    - Current: `console.clear() wurde aufgrund von "Logs nicht leeren" verhindert`
-    - Suggest: `Log nicht leeren`
-    - In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+_Nothing retired._
 
 ---
 
@@ -75,7 +64,7 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 336 |
-| Strings | 16,369 |
+| Strings | 16,447 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -112,7 +101,7 @@ _Completeness is reported, never raised as a finding: a missing string needs tra
 - `toolkit/toolkit/enterprise/enterprise.ftl`
 - `toolkit/toolkit/enterprise/felt.ftl`
 
-_201 strings. These files exist in the locale tree but not in the en-US reference — they are maintained elsewhere. The model review is a comparison against en-US, so it skips them entirely; only the checks that need no reference ran. Nothing reported from these files means nothing was looked for, not that they are clean._
+_214 strings. These files exist in the locale tree but not in the en-US reference — they are maintained elsewhere. The model review is a comparison against en-US, so it skips them entirely; only the checks that need no reference ran. Nothing reported from these files means nothing was looked for, not that they are clean._
 
 ### Conventions detected in this locale
 
@@ -120,12 +109,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `straight-double` 723, `curly-double` 69, `german-double` 14, `curly-single` 2 | **straight-double** |
+| quotes | `straight-double` 729, `curly-double` 69, `german-double` 14, `curly-single` 2 | **straight-double** |
 | apostrophe | `typographic` 6, `straight` 114 | **straight** |
 | ellipsis | `char` 405 | **char** |
 | dash | `em` 17, `en` 69 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 12, `formal` 3840 | **formal** |
+| register | `informal` 12, `formal` 3868 | **formal** |
 
 ---
 
@@ -135,7 +124,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (19)
+## 3. Open findings (23)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -150,8 +139,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 12 |
-| 3 | Degraded language (grammar, spelling, terminology) | 5 |
+| 2 | Wrong content (says something other than the English) | 14 |
+| 3 | Degraded language (grammar, spelling, terminology) | 7 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
@@ -173,6 +162,11 @@ _Also listed under their own category below._
     - Source: `Bring in your data`
     - Suggest: `Importieren Sie Ihre Daten`
     - The string heads the import step of onboarding; en-US means importing existing data, not typing data in.
+- `splitter.label` — `devtools/client/components.properties` — Plural "panels" rendered as singular "des Bereichs".
+    - Current: `Größe des Bereichs ändern`
+    - Source: `Resize panels`
+    - Suggest: `Größe der Bereiche ändern`
+    - The source says "Resize panels" (both panels of a split view, per the comment); the German refers to only one panel.
 - `statePartiallyChecked` — `dom/chrome/accessibility/AccessFu.properties` — "partially checked" is translated as "teilweise ausgewählt" (partially selected) instead of "teilweise aktiviert/angekreuzt".
     - Current: `teilweise ausgewählt`
     - Source: `partially checked`
@@ -183,6 +177,11 @@ _Also listed under their own category below._
     - Source: `On-device speech recognition is turned off in the user’s AI Controls settings, so SpeechRecognition reports itself as unavailable and refuses to start.`
     - Suggest: `daher meldet SpeechRecognition sich selbst als nicht verfügbar`
     - The developer comment states: Do not translate "SpeechRecognition" — it is the Web API interface name, but it was localized as "die Spracherkennung".
+- `about-pdf-feature-organize-description` — `toolkit/toolkit/about/aboutPDF.ftl` — "Reorder" is translated as "sortieren" (sort) instead of "neu anordnen" (reorder).
+    - Current: `Seiten sortieren, löschen, zusammenführen und exportieren.`
+    - Source: `Reorder, remove, merge, and export pages.`
+    - Suggest: `Seiten neu anordnen, löschen, zusammenführen und exportieren.`
+    - The en-US "Reorder" means rearranging pages manually, not sorting them; "sortieren" names a different function.
 - `pdf-features-notification` — `toolkit/toolkit/about/pdfFeaturesNotification.ftl` — "just got easier" translated as "sind noch einfacher", losing the meaning of a new improvement.
     - Current: `PDFs sind in { -brand-short-name } noch einfacher.`
     - Source: `aria-label: Notification heading: PDFs just got easier in { -brand-short-name }.`
@@ -193,6 +192,11 @@ _Also listed under their own category below._
     - Source: `Split, merge, and more. <a data-l10n-name="features-link">See PDF features</a>`
     - Suggest: `PDFs aufteilen, zusammenführen und mehr.`
     - en-US "Split, merge, and more" refers to splitting a PDF into parts; "teilen" reads as sharing, giving users a different feature claim.
+- `user-context-personal2` — `toolkit/toolkit/global/contextual-identity.ftl` — "Personal" is rendered as "Freizeit" (leisure), which names a different category.
+    - Current: `Freizeit`
+    - Source: `label: Personal`
+    - Suggest: `Persönlich`
+    - The en-US container label "Personal" contrasts with "Work"; "Freizeit" means leisure/free time, not personal.
 
 ### C. Grammar, agreement & spelling
 
@@ -206,6 +210,11 @@ _Also listed under their own category below._
     - Source: `Downloading speech recognition model`
     - Suggest: `Spracherkennungsmodell wird heruntergeladen`
     - The en-US "Downloading speech recognition model" describes an ongoing action; the German reads as a command/label "Download speech recognition model".
+- `translations-panel-revisit-to-label` — `browser/browser/translations.ftl` — Wrong preposition for "Translate to".
+    - Current: `Übersetzen auf`
+    - Source: `Translate to`
+    - Suggest: `Übersetzen in`
+    - German uses "übersetzen in" (eine Sprache), not "übersetzen auf".
 
 ### D. Terminology, register & consistency
 

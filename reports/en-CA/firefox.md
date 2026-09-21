@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e44f1369fb6d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8ffd279d75ec` |
-| **Previous run** | 2026-09-07 @ `3c0c507b8d42` |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
+| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 195 of 16,176 |
+| **Strings reviewed this run** | 65 of 16,246 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,13 +22,9 @@ Also for en-CA: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `urlbar-searchmode-dropmarker2` — `browser/browser/browser.ftl` — Tooltip text was changed to title case, departing from the sentence case used in en-US.
-    - Current: `Pick a Search Engine`
-    - Source: `title: Pick a search engine`
-    - Suggest: `Pick a search engine`
-    - The en-US source uses sentence case ("Pick a search engine"); en-CA has no convention requiring title case here, so the capitalization change is an unjustified departure.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -49,9 +45,9 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 326 |
-| Strings | 16,176 |
+| Strings | 16,246 |
 | Missing strings | 0 |
-| Obsolete strings | 8 |
+| Obsolete strings | 13 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -75,8 +71,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 682, `curly-single` 64, `straight-double` 25 | **curly-double** |
-| apostrophe | `typographic` 975, `straight` 4 | **typographic** |
+| quotes | `curly-double` 687, `curly-single` 64, `straight-double` 25 | **curly-double** |
+| apostrophe | `typographic` 982, `straight` 4 | **typographic** |
 | ellipsis | `char` 389 | **char** |
 | dash | `em` 82, `en` 3 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |

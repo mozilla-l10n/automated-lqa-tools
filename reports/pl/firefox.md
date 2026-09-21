@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e44f1369fb6d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8ffd279d75ec` |
-| **Previous run** | 2026-09-07 @ `3c0c507b8d42` |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
+| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 29 of 16,092 |
+| **Strings reviewed this run** | 169 of 16,233 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,43 @@ Also for pl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (7)
 
-- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Co nowego” but the string it names, `releaseNotes-link`, reads “Informacje o wydaniu”
-    - Current: `Zastąpienie strony „Co nowego” wyświetlanej po aktualizacji. Ustawienie tej zasady na pustą wyłączy stronę wyświetlaną po aktualizacji.`
-    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
-    - Suggest: `Informacje o wydaniu`
-    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `pdfjs-enabled-annotation-editor` — `toolkit/toolkit/about/aboutSupport.ftl` — "Annotation Editor" translated as "Edytor przypisów" (footnote/annotation-note editor) instead of "Edytor adnotacji".
-    - Current: `Edytor przypisów jest włączony`
-    - Source: `Annotation Editor Enabled`
-    - Suggest: `Edytor adnotacji jest włączony`
-    - The developer comment explains the annotation editor is the set of PDF editing tools (draw, add image, add text, signature); the established Polish term for PDF annotations is "adnotacje", not "przypisy" (footnotes).
+- `columnBreakpoint.label` — `devtools/client/debugger.properties` — The word "Column" from "Column breakpoint" is dropped, so the accessible name no longer identifies the marker as a column breakpoint.
+    - Current: `Punkt wstrzymania w wierszu %1$S, w kolumnie %2$S`
+    - Source: `Column breakpoint at line %1$S, column %2$S`
+    - Suggest: `Kolumnowy punkt wstrzymania w wierszu %1$S, w kolumnie %2$S`
+    - en-US is "Column breakpoint at line %1$S, column %2$S"; the type qualifier "Column" is missing in the Polish.
+- `site-rules-status-heading` — `browser/browser/ipProtection.ftl` — "Your rule" is rendered as "Reguła użytkownika" (the user's rule, third-person), losing the second-person address used elsewhere in the locale.
+    - Current: `Reguła użytkownika`
+    - Source: `Your rule`
+    - Suggest: `Twoja reguła`
+    - en-US "Your rule" addresses the user directly; the informal register is the locale convention.
+- `onboarding-refresh-tou-pin` — `browser/browser/newtab/onboarding.ftl` — "Keep { -brand-short-name } in Dock" rendered as "Zatrzymaj" (stop/halt), not "keep/leave in place".
+    - Current: `Zatrzymaj { -brand-short-name } w Docku`
+    - Source: `{$sel_1 ->} [macos] Keep { -brand-short-name } in Dock [other] Add { -brand-short-name } to your taskbar`
+    - Suggest: `Pozostaw { -brand-short-name } w Docku`
+    - In this checkbox "Keep … in Dock" means to leave the app pinned in the Dock; Polish "Zatrzymaj" primarily means "stop/halt", which changes the action described.
+- `about-pdf-feature-annotate-description` — `toolkit/toolkit/about/aboutPDF.ftl` — "Add text" rendered as "Dodawaj napisy" (add captions) instead of adding text.
+    - Current: `Dodawaj napisy, wyróżniaj tekst i rysuj po plikach PDF.`
+    - Source: `Add text, highlights, and drawings.`
+    - Suggest: `Dodawaj tekst, wyróżnienia i rysunki.`
+    - The en-US "Add text, highlights, and drawings" refers to adding text to the PDF; "napisy" means captions/subtitles, and "rysuj po plikach PDF" adds content not in the source.
+- `newtab-error-fallback-refresh-link` — `browser/browser/newtab/newtab.ftl` — Missing sentence-final period present in the source.
+    - Current: `Odśwież stronę, aby spróbować ponownie`
+    - Source: `Refresh page to try again.`
+    - Suggest: `Odśwież stronę, aby spróbować ponownie.`
+    - The en-US string ends with a full stop ("Refresh page to try again."); the Polish drops it.
+- `experimental-features-media-jxl` — `toolkit/toolkit/firefoxlabs/features.ftl` — Title translated despite developer comment requiring it be kept in English.
+    - Current: `Multimedia: JPEG XL`
+    - Source: `label: Media: JPEG XL`
+    - Suggest: `Media: JPEG XL`
+    - The developer comment says the experiment title should be kept in English; "Media" was changed to "Multimedia".
+- `pdfjs-editor-add-signature-save-warning-message` — `toolkit/toolkit/pdfviewer/viewer.ftl` — "You've reached the limit" rendered as "limit exceeded".
+    - Current: `Przekroczono ograniczenie wynoszące pięć`
+    - Source: `You’ve reached the limit of 5 saved signatures. Remove one to save more.`
+    - Suggest: `Osiągnięto ograniczenie wynoszące pięć`
+    - The en-US says the limit of 5 has been reached, not exceeded.
 
 ### ✅ Fixed since the last run (0)
 
@@ -43,40 +68,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (12)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `action-log-checked-world-cup-live` — `browser/browser/aiWindowContent.ftl` — "Checked live World Cup matches" rendered with "Przeszukano" (searched) instead of checked.
-    - Current: `Przeszukano trwające mecze mistrzostw świata`
-    - Suggest: `Sprawdzono trwające mecze mistrzostw świata`
-    - en-US says "Checked", not "Searched".
-- `action-log-checking-world-cup-live` — `browser/browser/aiWindowContent.ftl` — "Checking live World Cup matches" rendered with "Przeszukiwanie" (searching) instead of checking.
-    - Current: `Przeszukiwanie trwających meczów mistrzostw świata`
-    - Suggest: `Sprawdzanie trwających meczów mistrzostw świata`
-    - en-US distinguishes "Checking" from "Searching"; the pl text uses the same verb for both.
-- `main-context-menu-send-to-device` — `browser/browser/browserContext.ftl` — dangling preposition: "Wyślij stronę do" / "Wyślij odnośnik do". → "Wyślij stronę na urządzenie" / "Wyślij odnośnik na urządzenie" (cf. main-context-menu-send-to-device-2).
-- `newtab-wallpaper-category-back` — `browser/browser/newtab/newtab.ftl` — Screen-reader label "Back to Customize" shortened to just "Wstecz", dropping the destination.
-    - Current: `aria-label: Wstecz`
-    - Suggest: `aria-label: Wróć do dostosowywania`
-    - The comment says the arrow has no text and this label is all a screen reader gets; the source names the Customize panel, which the Polish omits.
-- `more-from-moz-solo-title` — `browser/browser/preferences/moreFromMozilla.ftl` — drops the "AI" qualifier present in en-US ("{ -solo-ai-brand-name } AI") and in the sibling more-from-moz-solo-title-2 ("Kreator SI stron internetowych…").
-- `inactive-css-not-display-block-on-floated` — `devtools/client/tooltips.ftl` — "the element is floated" is rendered as "element is of type floated", implying a type rather than a state.
-    - Current: `ponieważ element jest typu <strong>floated</strong>`
-    - Suggest: `ponieważ element jest <strong>opływany</strong> (floated)`
-    - en-US states the element is floated (a layout state), not that it has a type named "floated".
-- `enableSafeBrowsing-label` — `toolkit/toolkit/about/aboutRights.ftl` — quotes a preferences label verbatim, but with different wording: "Blokowanie niebezpiecznych i podejrzanych treści." vs the actual security-enable-safe-browsing = "Blokuj niebezpieczne i podejrzane treści."
-- `rights-webservices-term-5` — `toolkit/toolkit/about/aboutRights.ftl` — the damages enumeration lists "wyjątkowe" twice and includes the unfinished-looking "będące skutkiem czegoś" for "indirect, special, incidental, consequential, punitive, or exemplary". Needs a rewrite of the list.
-- `abuse-report-unwanted-reason-v2` — `toolkit/toolkit/about/abuseReports.ftl` — "Samo się zainstalowało i nie wiem, jak je usunąć" for "I never wanted it and don't know how to get rid of it"; the self-installation claim duplicates abuse-report-unwanted-example. → "Nigdy tego nie chciałem(-am) i nie wiem, jak to usunąć".
-    - Suggest: `"Nigdy tego nie chciałem`
-- `experimental-features-contextual-password-manager-description` — `toolkit/toolkit/firefoxlabs/features.ftl` — Typo: „prostu” instead of „prosto”.
-    - Current: `Umożliwia dostęp do haseł prostu z panelu bocznego.`
-    - Suggest: `Umożliwia dostęp do haseł prosto z panelu bocznego.`
-    - The en-US „right from the sidebar” should be „prosto z panelu bocznego”; „prostu” is a misspelling.
-- `webext-perms-update-text` — `toolkit/toolkit/global/extensions.ftl` — „This extension will have permission to:” rendered as „wymaga następujących uprawnień” (requires), changing the statement of granted permissions.
-    - Current: `To rozszerzenie wymaga następujących uprawnień:`
-    - Suggest: `To rozszerzenie będzie mieć następujące uprawnienia:`
-    - The source states the extension will have these permissions, not that it requires them.
-- `tabmodalprompt-username` — `toolkit/toolkit/global/tabprompts.ftl` — .value = "Użytkownik:"; the identical field in common-dialog-username is "Nazwa użytkownika". → "Nazwa użytkownika:".
-    - Suggest: `"Nazwa użytkownika:".`
+_Nothing retired._
 
 ---
 
@@ -84,11 +78,11 @@ _Nothing to re-read._
 
 | Check | Result |
 |---|---|
-| Files | 325 |
-| Strings | 16,092 |
-| Missing strings | 76 |
+| Files | 326 |
+| Strings | 16,233 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -103,26 +97,7 @@ _Nothing to re-read._
 
 ### Completeness
 
-**76 strings** are not translated yet, concentrated in:
-
-- `browser/browser/newtab/newtab.ftl` — 23
-- `browser/browser/newtab/onboarding.ftl` — 19
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 10
-- `browser/browser/ipProtection.ftl` — 7
-- `devtools/client/inspector.ftl` — 4
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 3
-- `dom/chrome/dom/dom.properties` — 2
-- `browser/browser/sync.ftl` — 2
-- `toolkit/services/aboutSyncLog.ftl` — 2
-- `toolkit/toolkit/about/pdfFeaturesNotification.ftl` — 2
-- `toolkit/toolkit/about/aboutAddons.ftl` — 1
-- `toolkit/toolkit/global/theme-picker.ftl` — 1
-
-**Files absent from the locale:**
-
-- `toolkit/toolkit/about/pdfFeaturesNotification.ftl`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -130,12 +105,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `polish-double` 1407, `straight-double` 36, `german-double` 7, `curly-double` 2 | **polish-double** |
+| quotes | `polish-double` 1418, `straight-double` 36, `german-double` 7, `curly-double` 2 | **polish-double** |
 | apostrophe | `straight` 1 | **straight** |
 | ellipsis | `char` 396 | **char** |
-| dash | `em` 119, `en` 14 | **em** |
-| nbsp | `total` 4716, `narrow` 3, `before-punctuation` 39, `space-before-punctuation` 14 | **total** |
-| register | `informal` 75 | **informal** |
+| dash | `em` 121, `en` 14 | **em** |
+| nbsp | `total` 4784, `narrow` 3, `before-punctuation` 39, `space-before-punctuation` 14 | **total** |
+| register | `informal` 76 | **informal** |
 
 ---
 
@@ -145,15 +120,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (68)
+## 3. Open findings (75)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 10 |
-| 2 | Wrong content (says something other than the English) | 40 |
-| 3 | Degraded language (grammar, spelling, terminology) | 16 |
-| 4 | Cosmetic (typography, spacing) | 2 |
+| 2 | Wrong content (says something other than the English) | 43 |
+| 3 | Degraded language (grammar, spelling, terminology) | 19 |
+| 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -299,11 +274,21 @@ _Nothing reported._
     - Source: `accesskey: n label: Send Link to Device`
 - `genai-settings-chat-lechat-links` — `browser/browser/genai.ftl` — "Mistral AI" is a company name and should not be translated. Current: "…zasady ochrony prywatności</a> sztucznej inteligencji Mistral." → Suggest: "…zasady ochrony prywatności</a> Mistral AI." (the sibling strings correctly keep OpenAI, Microsoft, Anthropic).
     - Source: `By choosing Le Chat Mistral, you agree to the Mistral AI <a data-l10n-name="link1">Terms of Service</a> and <a data-l10n-name="link2">Privacy Policy</a>.`
+- `site-rules-status-heading` — `browser/browser/ipProtection.ftl` — "Your rule" is rendered as "Reguła użytkownika" (the user's rule, third-person), losing the second-person address used elsewhere in the locale.
+    - Current: `Reguła użytkownika`
+    - Source: `Your rule`
+    - Suggest: `Twoja reguła`
+    - en-US "Your rule" addresses the user directly; the informal register is the locale convention.
 - `newtab-privacy-empty-state-tally` — `browser/browser/newtab/newtab.ftl` — "See a running tally here" translated without the running/updating total sense.
     - Current: `Tutaj zobaczysz liczbę zablokowanych elementów.`
     - Source: `See a running tally here.`
     - Suggest: `Tutaj zobaczysz rosnącą liczbę zablokowanych elementów.`
     - The developer comment explicitly explains "a running tally" is a total that keeps updating as the user browses; the Polish renders it as a static count.
+- `onboarding-refresh-tou-pin` — `browser/browser/newtab/onboarding.ftl` — "Keep { -brand-short-name } in Dock" rendered as "Zatrzymaj" (stop/halt), not "keep/leave in place".
+    - Current: `Zatrzymaj { -brand-short-name } w Docku`
+    - Source: `{$sel_1 ->} [macos] Keep { -brand-short-name } in Dock [other] Add { -brand-short-name } to your taskbar`
+    - Suggest: `Pozostaw { -brand-short-name } w Docku`
+    - In this checkbox "Keep … in Dock" means to leave the app pinned in the Dock; Polish "Zatrzymaj" primarily means "stop/halt", which changes the action described.
 - `smartwindow-onboarding-title` — `browser/browser/newtab/onboarding.ftl` — Brand name used without required grammatical-case parameter, and meaning shifted.
     - Current: `Korzystaj z { -smart-window-brand-name } przez cały czas`
     - Source: `Make { -smart-window-brand-name } your go-to`
@@ -337,6 +322,11 @@ _Nothing reported._
     - Source: `Access your web anywhere`
     - Suggest: `Miej dostęp do swojego Internetu, gdziekolwiek jesteś`
     - "your web" here means the user's browsing data/web experience, not a "sieć" (network); "sieć" suggests a local network.
+- `columnBreakpoint.label` — `devtools/client/debugger.properties` — The word "Column" from "Column breakpoint" is dropped, so the accessible name no longer identifies the marker as a column breakpoint.
+    - Current: `Punkt wstrzymania w wierszu %1$S, w kolumnie %2$S`
+    - Source: `Column breakpoint at line %1$S, column %2$S`
+    - Suggest: `Kolumnowy punkt wstrzymania w wierszu %1$S, w kolumnie %2$S`
+    - en-US is "Column breakpoint at line %1$S, column %2$S"; the type qualifier "Column" is missing in the Polish.
 - `SpeechRecognitionBlockedByAIControlsWarning` — `dom/chrome/dom/dom.properties` — "AI Controls" settings section name rendered as „Sterowanie SI”, dropping the user's ownership and using a non-standard rendering of the section name.
     - Current: `w panelu „Sterowanie SI” w ustawieniach`
     - Source: `On-device speech recognition is turned off in the user’s AI Controls settings, so SpeechRecognition reports itself as unavailable and refuses to start.`
@@ -350,6 +340,11 @@ _Nothing reported._
     - Source: `The server presented a certificate that contains an invalid encoding of an integer. Common causes include negative serial numbers, negative RSA moduli, and encodings that are longer than necessary.`
     - Suggest: `i kodowania dłuższe niż to konieczne`
     - The source describes encodings longer than necessary, not obsolete encodings.
+- `about-pdf-feature-annotate-description` — `toolkit/toolkit/about/aboutPDF.ftl` — "Add text" rendered as "Dodawaj napisy" (add captions) instead of adding text.
+    - Current: `Dodawaj napisy, wyróżniaj tekst i rysuj po plikach PDF.`
+    - Source: `Add text, highlights, and drawings.`
+    - Suggest: `Dodawaj tekst, wyróżnienia i rysunki.`
+    - The en-US "Add text, highlights, and drawings" refers to adding text to the PDF; "napisy" means captions/subtitles, and "rysuj po plikach PDF" adds content not in the source.
 - `pdfjs-enabled-annotation-editor` — `toolkit/toolkit/about/aboutSupport.ftl` — "Annotation Editor" translated as "Edytor przypisów" (footnote/annotation-note editor) instead of "Edytor adnotacji".
     - Current: `Edytor przypisów jest włączony`
     - Source: `Annotation Editor Enabled`
@@ -359,6 +354,11 @@ _Nothing reported._
     - Source: `Inc. Locality`
 - `certificate-viewer-locality` — `toolkit/toolkit/about/certviewer.ftl` — "Region" / "Region założenia" for X.509 L= (city/town), which also blurs the line with certificate-viewer-state-province = "Województwo". → "Miejscowość" / "Miejscowość założenia".
     - Source: `Locality`
+- `experimental-features-media-jxl` — `toolkit/toolkit/firefoxlabs/features.ftl` — Title translated despite developer comment requiring it be kept in English.
+    - Current: `Multimedia: JPEG XL`
+    - Source: `label: Media: JPEG XL`
+    - Suggest: `Media: JPEG XL`
+    - The developer comment says the experiment title should be kept in English; "Media" was changed to "Multimedia".
 - `user-context-color-purple` — `toolkit/toolkit/global/contextual-identity.ftl` — "Fioletowy", identical to user-context-color-violet; two container swatches become indistinguishable, notably for screen-reader users. → purple = "Purpurowy", keep violet = "Fioletowy".
     - Source: `label: Purple`
     - Suggest: `purple`
@@ -382,6 +382,11 @@ _Nothing reported._
     - Source: `The server presented a certificate that contains an invalid encoding of an integer. Common causes include negative serial numbers, negative RSA moduli, and encodings that are longer than necessary.`
     - Suggest: `i kodowania dłuższe niż to konieczne`
     - The source describes encodings longer than necessary, not obsolete encodings.
+- `pdfjs-editor-add-signature-save-warning-message` — `toolkit/toolkit/pdfviewer/viewer.ftl` — "You've reached the limit" rendered as "limit exceeded".
+    - Current: `Przekroczono ograniczenie wynoszące pięć`
+    - Source: `You’ve reached the limit of 5 saved signatures. Remove one to save more.`
+    - Suggest: `Osiągnięto ograniczenie wynoszące pięć`
+    - The en-US says the limit of 5 has been reached, not exceeded.
 - `pictureinpicture-unpip-btn` — `toolkit/toolkit/pictureinpicture/pictureinpicture.ftl` — "Wyłącz „Obraz w obrazie”" for Send back to tab / Back to tab; the button returns the video to its tab, it does not turn the feature off. The two distinct source values are also collapsed. → .aria-label = Odeślij z powrotem do karty, .tooltip = Z powrotem do karty.
     - Source: `aria-label: Send back to tab tooltip: Back to tab`
     - Suggest: `.aria-label = Odeślij z powrotem do karty`
@@ -442,14 +447,19 @@ _Nothing reported._
 
 ### E. Typography, punctuation & spacing
 
+- `newtab-error-fallback-refresh-link` — `browser/browser/newtab/newtab.ftl` — Missing sentence-final period present in the source.
+    - Current: `Odśwież stronę, aby spróbować ponownie`
+    - Source: `Refresh page to try again.`
+    - Suggest: `Odśwież stronę, aby spróbować ponownie.`
+    - The en-US string ends with a full stop ("Refresh page to try again."); the Polish drops it.
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `Zdarzenie klawisza jest niedostępne dla GTK2: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (1407 occurrences).
+    - The locale's quote convention is `polish-double` (1418 occurrences).
 - `WinConflict2` — `dom/chrome/dom/dom.properties` — `WinConflict2` uses straight double quotes
     - Current: `Zdarzenie klawisza jest niedostępne przy niektórych układach klawiatury: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on some keyboard layouts: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (1407 occurrences).
+    - The locale's quote convention is `polish-double` (1418 occurrences).
 
 ---
 

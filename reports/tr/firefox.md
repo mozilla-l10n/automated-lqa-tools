@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `fc8fd09d4a18` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `d0b2e9748b3b` |
-| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 16,144 |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
+| **Previous run** | 2026-09-14 @ `fc8fd09d4a18` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 31 of 16,175 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for tr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
@@ -19,9 +18,23 @@ Also for tr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `contentanalysis-slow-agent-dialog-body-clipboard-copy` — `toolkit/toolkit/contentanalysis/contentanalysis.ftl` — Ungrammatical phrase “kopyalarınız içeriği” instead of “kopyaladığınız içeriği”.
+    - Current: `kopyalarınız içeriği`
+    - Source: `{ $agent } is reviewing what you copied against your organization’s data policies. This may take a moment.`
+    - Suggest: `kopyaladığınız içeriği`
+    - The source says “what you copied”; the Turkish relative clause is malformed and does not parse as “the content you copied”.
+- `contentanalysis-operationtype-clipboard-copy` — `toolkit/toolkit/contentanalysis/contentanalysis.ftl` — “copied content” (a noun phrase naming the operation) is rendered as the sentence “content was copied”.
+    - Current: `içerik kopyalandı`
+    - Source: `copied content`
+    - Suggest: `kopyalanan içerik`
+    - The en-US is a noun phrase describing the operation type, not a statement that copying happened.
+- `genai-shortcut-button-2` — `browser/browser/genai.ftl` — Adds “sohbet botuna” (chat bot), which the source does not say.
+    - Current: `{ $provider } sohbet botuna sor`
+    - Source: `aria-label: Ask { $provider } tooltiptext: Ask { $provider }`
+    - Suggest: `{ $provider } botuna sor`
+    - Source is simply “Ask { $provider }”, where $provider is the AI chat provider name; “sohbet botuna” inserts a characterization not present in the source.
 
 ### ✅ Fixed since the last run (0)
 
@@ -46,8 +59,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 326 |
-| Strings | 16,144 |
-| Missing strings | 32 |
+| Strings | 16,175 |
+| Missing strings | 58 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -64,19 +77,20 @@ _Nothing retired._
 
 ### Completeness
 
-**32 strings** are not translated yet, concentrated in:
+**58 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 9
-- `browser/browser/newtab/onboarding.ftl` — 9
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 3
-- `devtools/client/debugger.properties` — 2
-- `dom/chrome/dom/dom.properties` — 2
-- `toolkit/services/aboutSyncLog.ftl` — 2
-- `browser/browser/ipProtection.ftl` — 1
+- `toolkit/toolkit/about/aboutPDF.ftl` — 19
+- `browser/browser/newtab/newtab.ftl` — 14
+- `browser/browser/newtab/onboarding.ftl` — 6
+- `dom/chrome/dom/dom.properties` — 4
+- `dom/chrome/security/security.properties` — 3
+- `browser/browser/genai.ftl` — 3
+- `devtools/client/components.properties` — 1
+- `devtools/client/debugger.properties` — 1
+- `devtools/client/perftools.ftl` — 1
 - `browser/browser/translations.ftl` — 1
-- `devtools/client/sourceeditor.properties` — 1
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 1
-- `toolkit/toolkit/about/aboutNetworking.ftl` — 1
+- `browser/browser/preferences/languages.ftl` — 1
+- `browser/browser/policies/policies-descriptions.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -101,7 +115,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (146)
+## 3. Open findings (149)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -116,8 +130,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 3 |
-| 2 | Wrong content (says something other than the English) | 50 |
-| 3 | Degraded language (grammar, spelling, terminology) | 59 |
+| 2 | Wrong content (says something other than the English) | 51 |
+| 3 | Degraded language (grammar, spelling, terminology) | 61 |
 | 4 | Cosmetic (typography, spacing) | 34 |
 
 ### A. Functional, markup, variables & plurals
@@ -161,6 +175,11 @@ _Also listed under their own category below._
     - Source: `Launch your gaming sites like an app in a streamlined window protected by { -brand-short-name }.`
     - Suggest: `{ -brand-short-name } tarafından korunan yalın bir pencerede`
     - The en-US says "a streamlined window protected by { -brand-short-name }" with no comparison, and "güvencesiyle" adds a guarantee claim; it is also inconsistent with the parallel email/value-prop strings.
+- `genai-shortcut-button-2` — `browser/browser/genai.ftl` — Adds “sohbet botuna” (chat bot), which the source does not say.
+    - Current: `{ $provider } sohbet botuna sor`
+    - Source: `aria-label: Ask { $provider } tooltiptext: Ask { $provider }`
+    - Suggest: `{ $provider } botuna sor`
+    - Source is simply “Ask { $provider }”, where $provider is the AI chat provider name; “sohbet botuna” inserts a characterization not present in the source.
 - `ip-protection-vpn-upgrade-link` — `browser/browser/ipProtection.ftl` — "up to five devices" is rendered as "beş ayrı cihazda", dropping the "up to" limit.
     - Current: `beş ayrı cihazda`
     - Source: `description: Choose custom VPN locations and add protection to all your apps on up to five devices, whether you’re at home or on public Wi-Fi. label: Get even more protection outside { -brand-short-name } with { -mozill…`
@@ -284,6 +303,11 @@ _Also listed under their own category below._
     - Source: `Force third-party to top frame`
     - Suggest: `Üst çerçeveye göre üçüncü taraf olmaya zorla`
     - The developer comment states this forces third-party treatment regardless of the URLs entered; "değerlendir" loses the forcing semantics.
+- `contentanalysis-operationtype-clipboard-copy` — `toolkit/toolkit/contentanalysis/contentanalysis.ftl` — “copied content” (a noun phrase naming the operation) is rendered as the sentence “content was copied”.
+    - Current: `içerik kopyalandı`
+    - Source: `copied content`
+    - Suggest: `kopyalanan içerik`
+    - The en-US is a noun phrase describing the operation type, not a statement that copying happened.
 - `csp-error-illegal-protocol` — `toolkit/toolkit/global/cspErrors.ftl` — the colon belongs to { $scheme }: "yasaklı bir { $scheme } içeriyor: protokol kaynağı" → "yasaklı bir { $scheme }: protokol kaynağı içeriyor".
     - Current: `{ $scheme }`
     - Source: `‘{ $directive }’ directive contains a forbidden { $scheme }: protocol source`
@@ -348,6 +372,11 @@ _Also listed under their own category below._
     - Source: `Paused on event breakpoint`
 - `whypaused-promise-rejection` — `devtools/shared/debugger-paused-reasons.ftl` — the identical en pattern "Paused on X" takes three different verb forms in one file.
     - Source: `Paused on promise rejection`
+- `contentanalysis-slow-agent-dialog-body-clipboard-copy` — `toolkit/toolkit/contentanalysis/contentanalysis.ftl` — Ungrammatical phrase “kopyalarınız içeriği” instead of “kopyaladığınız içeriği”.
+    - Current: `kopyalarınız içeriği`
+    - Source: `{ $agent } is reviewing what you copied against your organization’s data policies. This may take a moment.`
+    - Suggest: `kopyaladığınız içeriği`
+    - The source says “what you copied”; the Turkish relative clause is malformed and does not parse as “the content you copied”.
 - `ssl-error-cert-kea-mismatch` — `toolkit/toolkit/neterror/nsserrors.ftl` — anahtar değiş algoritması — anahtar değişim algoritması
     - Source: `The certificate provided cannot be used with the selected key exchange algorithm.`
 

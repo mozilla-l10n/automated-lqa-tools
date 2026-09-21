@@ -2563,6 +2563,7 @@
   "genai-settings-chat-lechat-links-2": "49fdf200 aa05367e",
   "genai-settings-chat-localhost-links": "8d0bceb1 e4904358",
   "genai-shortcut-button": "59740ae5 12e89a46",
+  "genai-shortcut-button-2": "ca120328 6cd72e29 76fe5c82",
   "genai-shortcuts-hide": "bf1ee1e4 091ac8c1",
   "genai-shortcuts-selected-warning": "3f7c30b1 0b21d379",
   "genai-shortcuts-selected-warning-generic": "bf434823 15672be5",
@@ -14228,8 +14229,10 @@
  },
  "toolkit/toolkit/global/contextual-identity.ftl": {
   "user-context-add-container": "c845fd3b d219ebce",
+  "user-context-add-container2": "f324267f 2523dc86",
   "user-context-banking": "6f219223 971fcdd2",
   "user-context-banking-panel-item": "02f0a4a0 a30f554d",
+  "user-context-banking2": "bf62ca6f e3207453",
   "user-context-color-blue": "55086c65 6d398253",
   "user-context-color-cyan": "1c99e7ba 1e6f57bf",
   "user-context-color-gray": "1d90e4c1 a606b716",
@@ -14255,14 +14258,21 @@
   "user-context-icon-vacation": "905a384a 5aa81965",
   "user-context-manage-containers": "5d26a6f4 443208c1",
   "user-context-manage-containers-panel-item": "aacc65aa 65288fea",
+  "user-context-manage-containers2": "429cec5a a2251bfa",
+  "user-context-manage-containers2-panel-item": "045c46f0 0e3f2835",
   "user-context-new-tab": "d859d84e 9a55d246",
   "user-context-new-tab-panel-item": "8522c5fe 42c57d42",
+  "user-context-new-tab2": "7a766665 827fa8a9",
+  "user-context-new-tab2-panel-item": "29a59364 8de96fe3",
   "user-context-personal": "9ade609a 9ade609a",
   "user-context-personal-panel-item": "7e4a9868 7e4a9868",
+  "user-context-personal2": "f2b92037 f2b92037",
   "user-context-shopping": "c51d59d9 f1429f17",
   "user-context-shopping-panel-item": "9afd48ab f8c485e2",
+  "user-context-shopping2": "4069d074 19271e25",
   "user-context-work": "843f6778 634c1f5c",
-  "user-context-work-panel-item": "aaf3575e 5f06539a"
+  "user-context-work-panel-item": "aaf3575e 5f06539a",
+  "user-context-work2": "6aad2b08 3323dfe7"
  },
  "toolkit/toolkit/global/cookieBannerHandling.ftl": {
   "cookie-banner-handled-webconsole": "c0e901ad cc651162"
