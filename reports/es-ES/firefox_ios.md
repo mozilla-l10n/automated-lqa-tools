@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `8f5aca68ae4b` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `8f5aca68ae4b` |
-| **Previous run** | 2026-09-14 @ `e8592a898dc1` |
-| **Mode** | checks-only |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
+| **Previous run** | 2026-09-14 @ `8f5aca68ae4b` |
+| **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 1,922 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for es-ES: [android](android.md) · [firefox](firefox.md)
 
@@ -47,9 +46,9 @@ _Nothing retired._
 |---|---|
 | Files | 96 |
 | Strings | 1,922 |
-| Missing strings | 0 |
+| Missing strings | 28 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -60,7 +59,16 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**28 strings** are not translated yet, concentrated in:
+
+- `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings` — 22
+- `es-ES/firefox-ios.xliff` — 6
+
+**Files absent from the locale:**
+
+- `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings`
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 

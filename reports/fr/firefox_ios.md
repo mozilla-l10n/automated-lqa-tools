@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `8f5aca68ae4b` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `8f5aca68ae4b` |
-| **Previous run** | 2026-09-14 @ `e8592a898dc1` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 1,922 |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
+| **Previous run** | 2026-09-14 @ `8f5aca68ae4b` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 28 of 1,950 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for fr: [android](android.md) · [firefox](firefox.md)
 
@@ -19,9 +18,18 @@ Also for fr: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `QuickAnswers.ContentView.Footer.v158` — `fr/firefox-ios.xliff` — "Powered by %@" is mistranslated as "Mis en avant par %@" (promoted/highlighted by).
+    - Current: `Mis en avant par %@`
+    - Source: `Powered by %@ · Answers can contain mistakes.`
+    - Suggest: `Propulsé par %@`
+    - "Powered by" indicates the AI model providing the answer; "mis en avant par" means "featured/promoted by", a different claim about the relationship with the provider.
+- `QuickAnswers.ContentView.Answering.v158` — `fr/firefox-ios.xliff` — The loading label "Answering…" (an ongoing action) is rendered as the noun "Réponse…".
+    - Current: `Réponse…`
+    - Source: `Answering…`
+    - Suggest: `Réponse en cours…`
+    - The source is a progress indicator shown while the answer is being fetched; the bare noun "Réponse…" reads as a label for the answer itself rather than an in-progress state.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +53,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 96 |
-| Strings | 1,922 |
+| Files | 97 |
+| Strings | 1,950 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -69,11 +77,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 18 | **guillemet** |
-| apostrophe | `typographic` 359 | **typographic** |
-| ellipsis | `char` 21 | **char** |
+| apostrophe | `typographic` 361 | **typographic** |
+| ellipsis | `char` 23 | **char** |
 | dash | `em` 3, `en` 1 | **em** |
 | nbsp | `total` 154, `before-punctuation` 96 | _mixed_ |
-| register | `formal` 285 | **formal** |
+| register | `formal` 292 | **formal** |
 
 ---
 
@@ -83,14 +91,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (44)
+## 3. Open findings (46)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 29 |
-| 3 | Degraded language (grammar, spelling, terminology) | 14 |
+| 2 | Wrong content (says something other than the English) | 30 |
+| 3 | Degraded language (grammar, spelling, terminology) | 15 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
@@ -169,6 +177,16 @@ _Nothing in this category._
     - Source: `Automatic protection of your personal info Load sites fast and search smarter Brought to you by the non-profit %@, trusted for over 20 years`
     - Suggest: `Proposé par l’organisation à but non lucratif %@`
     - The en-US says the product is "brought to you by" the non-profit, not designed/engineered by it.
+- `QuickAnswers.ContentView.Answering.v158` — `fr/firefox-ios.xliff` — The loading label "Answering…" (an ongoing action) is rendered as the noun "Réponse…".
+    - Current: `Réponse…`
+    - Source: `Answering…`
+    - Suggest: `Réponse en cours…`
+    - The source is a progress indicator shown while the answer is being fetched; the bare noun "Réponse…" reads as a label for the answer itself rather than an in-progress state.
+- `QuickAnswers.ContentView.Footer.v158` — `fr/firefox-ios.xliff` — "Powered by %@" is mistranslated as "Mis en avant par %@" (promoted/highlighted by).
+    - Current: `Mis en avant par %@`
+    - Source: `Powered by %@ · Answers can contain mistakes.`
+    - Suggest: `Propulsé par %@`
+    - "Powered by" indicates the AI model providing the answer; "mis en avant par" means "featured/promoted by", a different claim about the relationship with the provider.
 - `ScanQRCode.ConfirmOpenURL.Message.v129` — `fr/firefox-ios.xliff` — The French reverses the roles: it says "allow opening Firefox" instead of "allow Firefox to open" (the scanned URL).
     - Current: `Autoriser l’ouverture de %@ ?`
     - Source: `Allow %@ to open?`

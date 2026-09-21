@@ -798,6 +798,13 @@
  "Shared/Supporting Files/en-US.lproj/QRCode.strings": {
   "QRCode.Toolbar.Button.A11y.Title.v128": "e0ec516d c3680ac9 4dc88b30"
  },
+ "Shared/Supporting Files/en-US.lproj/QuickAnswers.strings": {
+  "QuickAnswers.AccessibilityLabels.Close.v158": "e8673d58 0e7c6115 41e2a5cf",
+  "QuickAnswers.AccessibilityLabels.OpenQuickAnswers.v158": "6767443c 551ce079 e2f82871",
+  "QuickAnswers.ContentView.Answering.v158": "653edc23 9d1c4fa0 e4cbba5b",
+  "QuickAnswers.ContentView.Sources.v158": "b4392671 5eb95cd9 2d3bdb88",
+  "QuickAnswers.Errors.Cancel.v158": "f5780ff6 871d661d 584c7ac2"
+ },
  "Shared/Supporting Files/en-US.lproj/ReaderModeBar.strings": {
   "ReaderModeBar.SummarizeButtonAccessibilityLabel.v150": "f1a645fe 83de9990 45fa80a3"
  },

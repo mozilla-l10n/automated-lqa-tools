@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `8f5aca68ae4b` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `8f5aca68ae4b` |
-| **Previous run** | 2026-09-14 @ `e8592a898dc1` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 1,922 |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
+| **Previous run** | 2026-09-14 @ `8f5aca68ae4b` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 28 of 1,950 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for cs: [android](android.md) · [firefox](firefox.md)
 
@@ -19,9 +18,13 @@ Also for cs: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `QuickAnswers.Errors.OK.v158` — `cs/firefox-ios.xliff` — "OK" is rendered as "Ok" instead of the standard uppercase form used in Czech UI.
+    - Current: `Ok`
+    - Source: `OK`
+    - Suggest: `OK`
+    - The source is the standard button label "OK"; Czech Firefox consistently uses "OK" in uppercase.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +48,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 96 |
-| Strings | 1,922 |
+| Files | 97 |
+| Strings | 1,950 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -69,7 +72,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `german-double` 13, `curly-double` 2 | **german-double** |
-| ellipsis | `char` 21 | **char** |
+| ellipsis | `char` 23 | **char** |
 | dash | `em` 1, `en` 2 | _mixed_ |
 
 ---
@@ -80,7 +83,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (93)
+## 3. Open findings (94)
 
 > **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -107,7 +110,7 @@ _Also listed under their own category below._
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 53 |
 | 3 | Degraded language (grammar, spelling, terminology) | 35 |
-| 4 | Cosmetic (typography, spacing) | 5 |
+| 4 | Cosmetic (typography, spacing) | 6 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -429,6 +432,11 @@ _Nothing in this category._
     - Source: `Agree and continue`
     - Suggest: `Souhlasit a pokračovat`
     - "Souhlasím" (1st person) and "pokračovat" (infinitive) cannot be coordinated; the button label should use consistent forms for "Agree and continue".
+- `QuickAnswers.Errors.OK.v158` — `cs/firefox-ios.xliff` — "OK" is rendered as "Ok" instead of the standard uppercase form used in Czech UI.
+    - Current: `Ok`
+    - Source: `OK`
+    - Suggest: `OK`
+    - The source is the standard button label "OK"; Czech Firefox consistently uses "OK" in uppercase.
 - `CreditCard.SnackBar.UpdatedCardLabel.v122` — `cs/firefox-ios.xliff` — Agreement error: "Informace" (plural) with singular verb form "byla aktualizována".
     - Current: `Informace o kartě byla aktualizována`
     - Source: `Card Information Updated`

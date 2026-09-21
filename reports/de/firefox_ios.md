@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `8f5aca68ae4b` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `8f5aca68ae4b` |
-| **Previous run** | 2026-09-14 @ `e8592a898dc1` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 1,922 |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
+| **Previous run** | 2026-09-14 @ `8f5aca68ae4b` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 28 of 1,950 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for de: [android](android.md) · [firefox](firefox.md)
 
@@ -19,9 +18,18 @@ Also for de: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `QuickAnswers.ContentView.Answering.v158` — `de/firefox-ios.xliff` — "Answering…" (progress while an answer is fetched) is rendered as the noun/verb "Antworten…", which reads as "Answers" or an imperative, not as a loading state.
+    - Current: `Antworten…`
+    - Source: `Answering…`
+    - Suggest: `Antwort wird erstellt…`
+    - The source is a loading label indicating the system is in the process of answering; German "Antworten…" is ambiguous and does not convey an ongoing action.
+- `QuickAnswers.Settings.Footer.v158` — `de/firefox-ios.xliff` — Plural "get short answers" is rendered as singular "erhalten Sie eine kurze Antwort".
+    - Current: `Stellen Sie Ihre Frage einfach laut und erhalten Sie eine kurze Antwort.`
+    - Source: `Ask out loud and get short answers. We don’t store your voice, questions, or answers.`
+    - Suggest: `Stellen Sie Ihre Fragen einfach laut und erhalten Sie kurze Antworten.`
+    - The en-US settings footer says "Ask out loud and get short answers" (plural, describing repeated use), while the German limits it to one question and one answer.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +53,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 96 |
-| Strings | 1,922 |
+| Files | 97 |
+| Strings | 1,950 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -69,9 +77,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `german-double` 16 | **german-double** |
-| ellipsis | `char` 21 | **char** |
+| ellipsis | `char` 23 | **char** |
 | dash | `en` 8 | **en** |
-| register | `informal` 1, `formal` 420 | **formal** |
+| register | `informal` 1, `formal` 433 | **formal** |
 
 ---
 
@@ -81,7 +89,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (88)
+## 3. Open findings (90)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -96,7 +104,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 1 |
-| 2 | Wrong content (says something other than the English) | 25 |
+| 2 | Wrong content (says something other than the English) | 27 |
 | 3 | Degraded language (grammar, spelling, terminology) | 52 |
 | 4 | Cosmetic (typography, spacing) | 10 |
 
@@ -220,6 +228,16 @@ _Also listed under their own category below._
     - Source: `%1$@ since %2$@ 🎉`
     - Suggest: `%1$@ seit %2$@ 🎉`
     - The en-US footer text ends with the 🎉 emoji, which is part of the user-visible string and is missing in German.
+- `QuickAnswers.ContentView.Answering.v158` — `de/firefox-ios.xliff` — "Answering…" (progress while an answer is fetched) is rendered as the noun/verb "Antworten…", which reads as "Answers" or an imperative, not as a loading state.
+    - Current: `Antworten…`
+    - Source: `Answering…`
+    - Suggest: `Antwort wird erstellt…`
+    - The source is a loading label indicating the system is in the process of answering; German "Antworten…" is ambiguous and does not convey an ongoing action.
+- `QuickAnswers.Settings.Footer.v158` — `de/firefox-ios.xliff` — Plural "get short answers" is rendered as singular "erhalten Sie eine kurze Antwort".
+    - Current: `Stellen Sie Ihre Frage einfach laut und erhalten Sie eine kurze Antwort.`
+    - Source: `Ask out loud and get short answers. We don’t store your voice, questions, or answers.`
+    - Suggest: `Stellen Sie Ihre Fragen einfach laut und erhalten Sie kurze Antworten.`
+    - The en-US settings footer says "Ask out loud and get short answers" (plural, describing repeated use), while the German limits it to one question and one answer.
 - `Settings.AIControls.BlockedInformation.v151` — `de/firefox-ios.xliff` — "Unblock specific features below" is translated as "Block specific features below", reversing the meaning.
     - Current: `Blockieren Sie im Folgenden bestimmte Funktionen.`
     - Source: `New and current AI enhancements are blocked by default. Unblock specific features below.`

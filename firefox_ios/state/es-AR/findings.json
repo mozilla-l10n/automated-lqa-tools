@@ -207,8 +207,8 @@
   },
   "rationale": "The source says the action may log the user out; the Spanish as written lacks the possessive/object and reads as the act itself closing a session, not the user's.",
   "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
+  "resolved_on": "2026-09-21",
+  "status": "fixed",
   "string_hash": "96141a33",
   "string_id": "Menu.EnhancedTrackingProtection.ClearData.AlertText.v128",
   "suggest": "puede cerrar tu sesión en los sitios web",
@@ -746,6 +746,30 @@
  {
   "category": "D",
   "check": "llm",
+  "current": "Respuestas Rápidas",
+  "dismissed_because": "",
+  "fid": "2dd83ac2e1f5",
+  "file": "Shared/Supporting Files/en-US.lproj/QuickAnswers.strings",
+  "first_seen": "2026-09-21",
+  "impact": 3,
+  "last_seen": "2026-09-21",
+  "locale": "es-AR",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "Other strings in the same feature (QuickAnswers.Settings.Title, AccessibilityLabels.OpenQuickAnswers) use \"Respuestas rápidas\"; Spanish does not use title case.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "f1aef380",
+  "string_id": "QuickAnswers.Errors.DailyLimitMessage.v158",
+  "suggest": "Respuestas rápidas",
+  "summary": "Feature name capitalized inconsistently as \"Respuestas Rápidas\" versus \"Respuestas rápidas\" elsewhere.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
   "current": "Mostrar búsquedas más populares",
   "dismissed_because": "",
   "fid": "357da4ffb8ee",
@@ -765,6 +789,30 @@
   "string_id": "Settings.SearchZero.TrendingSearches.Toggle.v146",
   "suggest": "Mostrar búsquedas en tendencia",
   "summary": "\"Trending Searches\" is rendered inconsistently with the section title on the same feature (\"Tendencia\" vs \"más populares\").",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "recibí una respuesta corta",
+  "dismissed_because": "",
+  "fid": "64171542c65e",
+  "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+  "first_seen": "2026-09-21",
+  "impact": 3,
+  "last_seen": "2026-09-21",
+  "locale": "es-AR",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The en-US says \"get short answers\" (plural); the target says the user gets a single short answer.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "cc43e438",
+  "string_id": "QuickAnswers.Settings.Footer.v158",
+  "suggest": "recibí respuestas cortas",
+  "summary": "Plural \"short answers\" rendered as singular \"una respuesta corta\".",
   "suppressed_by": ""
  },
  {

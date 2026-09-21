@@ -364,6 +364,10 @@
   "CloseTab.ArrivingNotification.title.v133": "8a334673 5c5f7c74 c7c5daa5",
   "CloseTab.ViewAction.title.v133": "099f0379 51b02228 556df1e4"
  },
+ "Shared/Supporting Files/en-US.lproj/GoogleLens.strings": {
+  "GoogleLens.Interstitial.CancelButtonTitle.v156": "b2eb5e2b 871d661d f5bd6a91",
+  "GoogleLens.Interstitial.LoadingLabel.v156": "4fe6fbe8 e1cb271c 3e2797c0"
+ },
  "Shared/Supporting Files/en-US.lproj/JumpBackIn.strings": {
   "ContextualHints.FirefoxHomepage.JumpBackIn.PersonalizedHome": "bcf10d01 7bf57d6a 70c9fa57",
   "ContextualHints.FirefoxHomepage.JumpBackIn.SyncedTab.v106": "17ccfff2 798a6f52 3882af56"
@@ -578,11 +582,15 @@
   "NativeErrorPage.BadCertDomain.TitleLabel.v149": "09339efd a92ffa2e 231bf1b4",
   "NativeErrorPage.BadCertDomain.ViewCertificateLink.v149": "9fc7cfb5 9ec6d727 312ee52f",
   "NativeErrorPage.ButtonLabel.v131": "a76c072d 5211deb2 afc0702c",
+  "NativeErrorPage.ButtonLabel.v155": "74f1c6f2 58226c77 afc0702c",
+  "NativeErrorPage.CellularDataRestricted.Description.v156": "5bac55e2 28b1d130 7e00438c",
+  "NativeErrorPage.CellularDataRestricted.TitleLabel.v156": "6d9464a0 c3c05d56 26118672",
   "NativeErrorPage.GenericError.Description.v134": "fc3b73f8 fc3c9fa8 58381223",
   "NativeErrorPage.GenericError.TitleLabel.v131": "09339efd a92ffa2e c932681b",
   "NativeErrorPage.GoBackButton.v149": "45e28372 18c0c0cf 98bc9ca8",
   "NativeErrorPage.NoInternetConnection.Description.v131": "112e4f72 dd983918 6d600eb2",
   "NativeErrorPage.NoInternetConnection.TitleLabel.v131": "c246f77b 8ec5a5c2 b2ef942a",
+  "NativeErrorPage.Wayback.Error.Checking.v155": "41c351da 0ba5e19d cf618b22",
   "NativeErrorPage.Wayback.Error.Description.v154": "408a8878 49bc7212 d628fc04",
   "NativeErrorPage.Wayback.Error.NotFound.v155": "2b16f8d8 b050f278 40974124",
   "NativeErrorPage.Wayback.Error.Retry.v154": "74f1c6f2 67f53444 77533a4c",
@@ -772,7 +780,13 @@
   "PasswordGenerator.UsePasswordButtonLabel.v132": "1baee4d1 df85ca5c e08b38c3"
  },
  "Shared/Supporting Files/en-US.lproj/PrivacyDashboard.strings": {
-  "PrivacyDashboard.Fingerprinters.v155": "231b9697 8283347a d2060217"
+  "PrivacyDashboard.CrossSiteTrackers.v155": "a56a06a4 32248996 bba76d7b",
+  "PrivacyDashboard.Fingerprinters.v155": "231b9697 8283347a d2060217",
+  "PrivacyDashboard.HeaderLabel.v155": "1b8d7983 d5cc9c98 d1dfadf9",
+  "PrivacyDashboard.HeaderLabelForNoTrackersBlocked.v155": "c25e82f3 09d0f71b df677cf2",
+  "PrivacyDashboard.SocialTrackers.v155": "4a8647aa 877f5062 0beca71c",
+  "PrivacyDashboard.TotalTrackersBlockedSince.v155": "7a6d6d70 89a8fb98 2a4d8438",
+  "PrivacyDashboard.TrackingContent.v155": "0630dee4 c3b6b0aa 1fc241e4"
  },
  "Shared/Supporting Files/en-US.lproj/QRCode.strings": {
   "QRCode.Toolbar.Button.A11y.Title.v128": "7a752ce6 c3680ac9 4dc88b30"
@@ -889,6 +903,7 @@
   "Settings.Autoplay.BlockAudioAndVideo.v137": "e76dcc9a a9a59753 17483845",
   "Settings.Autoplay.Footer.v137": "8c906bcd ddb053ea 17483845",
   "Settings.Autoplay.SettingsTitle.v137": "d1b2c09a 3d0b2720 f9033318",
+  "Settings.BoolSetting.LearnMoreAction.v157": "d3ef2296 8ed49578 b08cfb8c",
   "Settings.Browsing.AdBlocker.Description.v155": "b6face65 7262855c 9bb6c254",
   "Settings.Browsing.AdBlocker.LearnMore.v155": "d3ef2296 d9b20450 96eba1fe",
   "Settings.Browsing.AdBlocker.Title.v155": "e5e4e9ee ef07e8df 9f9096d1",
@@ -1177,7 +1192,8 @@
   "WebCompatReporter.SubOption.NoAudio.v154": "f680faed 376bf0a1 b20ed1d8",
   "WebCompatReporter.SubOption.NoVideo.v154": "d1d8844d 796b4abc b20ed1d8",
   "WebCompatReporter.SubOption.PageNotLoading.v154": "c57dd023 1efa0421 d3351b00",
-  "WebCompatReporter.SubOption.PlaybackFails.v154": "6514f823 2e6e99f5 b20ed1d8"
+  "WebCompatReporter.SubOption.PlaybackFails.v154": "6514f823 2e6e99f5 b20ed1d8",
+  "WebCompatReporter.Toast.ReportSent.v155": "3633dd1b b1241ac9 8e791776"
  },
  "Shared/Supporting Files/en-US.lproj/WebContextMenu.strings": {
   "ContextMenu.GoogleLensButtonTitle.v153": "e8c78dc2 2a2ad0cf 42cd2c97"
