@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `8f5aca68ae4b` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `8f5aca68ae4b` |
-| **Previous run** | 2026-09-14 @ `e8592a898dc1` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 1,922 |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
+| **Previous run** | 2026-09-14 @ `8f5aca68ae4b` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 5 of 1,927 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for ja: [android](android.md) · [firefox](firefox.md)
 
@@ -45,9 +44,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 96 |
-| Strings | 1,922 |
-| Missing strings | 0 |
+| Files | 97 |
+| Strings | 1,927 |
+| Missing strings | 23 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -60,7 +59,12 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**23 strings** are not translated yet, concentrated in:
+
+- `ja/firefox-ios.xliff` — 17
+- `ja/firefox-ios.xliff` — 6
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -69,7 +73,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `corner` 11, `curly-double` 3 | **corner** |
-| ellipsis | `char` 11, `ascii` 10 | _mixed_ |
+| ellipsis | `char` 11, `ascii` 11 | _mixed_ |
 | fullwidth | `punctuation` 396 | **punctuation** |
 
 ---

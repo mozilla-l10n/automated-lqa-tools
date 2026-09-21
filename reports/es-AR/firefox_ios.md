@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `e8592a898dc1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `e8592a898dc1` |
-| **Previous run** | 2026-09-07 @ `386c3ca4eca7` |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
+| **Previous run** | 2026-09-14 @ `e8592a898dc1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1,906 of 1,922 |
+| **Strings reviewed this run** | 29 of 1,950 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,313 +18,26 @@ Also for es-AR: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (98)
+### 🆕 New findings (2)
 
-- `NSLocationWhenInUseUsageDescription` — `es-AR/firefox-ios.xliff` — Wrong verb form: "visités" is subjunctive/voseo imperative instead of the indicative "visitás".
-    - Current: `Los sitios web que visités pueden solicitar tu ubicación.`
-    - Source: `Websites you visit may request your location.`
-    - Suggest: `Los sitios web que visitás pueden solicitar tu ubicación.`
-    - The source is a plain statement about websites the user visits; the relative clause needs the present indicative voseo form "visitás", not "visités".
-- `Saved Logins` — `es-AR/firefox-ios.xliff` — "Saved Logins" rendered as "Ingresos guardados" instead of the established term "Inicios de sesión guardados".
-    - Current: `Ingresos guardados`
-    - Source: `Saved Logins`
-    - Suggest: `Inicios de sesión guardados`
-    - The same source term "Logins" is translated as "inicios de sesión" elsewhere in this batch (AuthenticationManager); "Ingresos" means income/entries and is wrong terminology for logins.
-- `ActivityStream.ContextMenu.PinTopsite2` — `es-AR/firefox-ios.xliff` — "Pin" (fijar un sitio destacado) se tradujo como "Pegar", que significa paste/glue.
-    - Current: `Pegar`
-    - Source: `Pin`
-    - Suggest: `Fijar`
-    - The source "Pin" refers to pinning a top site; "Pegar" means to paste/stick and conflicts with the standard Firefox term "Fijar".
-- `ActivityStream.ContextMenu.UnpinTopsite` — `es-AR/firefox-ios.xliff` — "Unpin" se tradujo como "Despegar" en vez de "Dejar de fijar".
-    - Current: `Despegar`
-    - Source: `Unpin`
-    - Suggest: `Dejar de fijar`
-    - "Unpin" removes the pinned state of a top site; "Despegar" means unstick/take off and is inconsistent with the standard term "fijar".
-- `DefaultBrowserOnboarding.Description2` — `es-AR/firefox-ios.xliff` — "Tap Default Browser App" se tradujo como si se tocara la aplicación del navegador, no la opción de ajustes llamada "Aplicación de navegador predeterminada".
-    - Current: `2. Tocá la aplicación del navegador predeterminado`
-    - Source: `2. Tap Default Browser App`
-    - Suggest: `2. Tocá Aplicación de navegador predeterminada`
-    - The step refers to tapping the iOS Settings row named "Default Browser App" (see DefaultBrowserOnboarding.Screenshot), not tapping the default browser application itself.
-- `Closing tab` — `es-AR/firefox-ios.xliff` — "Closing tab" (progressive status announcement) is rendered as the imperative/infinitive "Cerrar pestaña" (Close tab).
-    - Current: `Cerrar pestaña`
-    - Source: `Closing tab`
-    - Suggest: `Cerrando pestaña`
-    - The developer comment says it notifies the user that the tab is being closed; the translation reads as a command label instead of an in-progress status.
-- `Changes color theme.` — `es-AR/firefox-ios.xliff` — "Changes color theme." mistranslated as "Cambia el color del tema" (changes the theme's color).
-    - Current: `Cambia el color del tema.`
-    - Source: `Changes color theme.`
-    - Suggest: `Cambia el tema de color.`
-    - The source refers to changing the color theme, not changing the color of the theme.
-- `BreachAlerts.Description` — `es-AR/firefox-ios.xliff` — Uses "usted" forms (cambió su contraseña, inicie sesión, cambie) instead of the voseo/tuteo register used elsewhere in this locale.
-    - Current: `Las contraseñas se filtraron o se robaron desde la última vez que cambió su contraseña. Para proteger esta cuenta, inicie sesión en el sitio y cambie su contraseña.`
-    - Source: `Passwords were leaked or stolen since you last changed your password. To protect this account, log in to the site and change your password.`
-    - Suggest: `Las contraseñas se filtraron o se robaron desde la última vez que cambiaste tu contraseña. Para proteger esta cuenta, iniciá sesión en el sitio y cambiá tu contraseña.`
-    - es-AR strings in this batch address the user informally (e.g. "Por favor intentá de nuevo más tarde"); this string switches to formal address.
-- `CoverSheet.v24.ETP.Description` — `es-AR/firefox-ios.xliff` — Register inconsistency: uses "lo sigan" / "Active" (usted) while es-AR convention elsewhere uses voseo/neutral forms, but more importantly "lo sigan" refers to the user in third person inconsistently with the rest of the batch.
-    - Current: `ayuda a evitar que los anuncios lo sigan. Active Estricta`
-    - Source: `Built-in Enhanced Tracking Protection helps stop ads from following you around. Turn on Strict to block even more trackers, ads, and popups.`
-    - Suggest: `ayuda a evitar que los anuncios te sigan. Activá Estricta`
-    - The rest of the es-AR strings address the user with the Argentine voseo/neutral register; this string switches to peninsular/usted imperative "Active".
-- `Downloads.CancelDialog.Resume` — `es-AR/firefox-ios.xliff` — "Resume" (reanudar la descarga) is rendered as "Continuar", which in this Yes/No dialog is ambiguous, but the source term is "Resume".
-    - Current: `Continuar`
-    - Source: `Resume`
-    - Suggest: `Reanudar`
-    - The en-US button is "Resume", meaning resume the download; "Continuar" can be read as continuing with the cancellation.
-- `ErrorPages.CertWarning.Description` — `es-AR/firefox-ios.xliff` — "EL" is capitalized incorrectly at the start of the sentence.
-    - Current: `EL dueño de %@`
-    - Source: `The owner of %@ has configured their website improperly. To protect your information from being stolen, Firefox has not connected to this website.`
-    - Suggest: `El dueño de %@`
-    - The article "El" is written with an uppercase L, a spelling/capitalization error.
-- `Enter your password to connect` — `es-AR/firefox-ios.xliff` — Uses formal "usted" address instead of the voseo/tuteo form used elsewhere in this file.
-    - Current: `Ingrese su contraseña para conectar`
-    - Source: `Enter your password to connect`
-    - Suggest: `Ingresá tu contraseña para conectar`
-    - Other strings in the same file address the user informally ("Seguí adelante si aceptás", "tu privacidad", "tu información"), so the formal imperative is a register inconsistency for es-AR.
-- `HistoryPanel.EmptyState.Title` — `es-AR/firefox-ios.xliff` — "mas" is missing its accent and the adverb placement changes the meaning of the sentence.
-    - Current: `Los sitios web visitados mas recientemente aparecerán acá.`
-    - Source: `Websites you’ve visited recently will show up here.`
-    - Suggest: `Los sitios web que visitaste recientemente aparecerán acá.`
-    - "más" requires an accent; also the source says "websites you've visited recently", not "the most recently visited websites".
-- `Menu.AddToShortcuts.v99` — `es-AR/firefox-ios.xliff` — Menu action label "Add to Shortcuts" translated as a past-tense confirmation "Agregado a atajos" instead of an action.
-    - Current: `Agregado a atajos`
-    - Source: `Add to Shortcuts`
-    - Suggest: `Agregar a atajos`
-    - The source is an imperative menu button label ("Add to Shortcuts"), not the confirmation toast (Menu.AddPin.Confirm2 = "Added to Shortcuts"). The translation duplicates the toast wording.
-- `Menu.TrackingProtectionDescription.SocialNetworksNew` — `es-AR/firefox-ios.xliff` — The translation says blocking trackers reduces the number of social media companies, instead of reducing how much they can see of what you do online.
-    - Current: `reduce la cantidad de empresas de redes sociales que pueden ver lo que hace en línea`
-    - Source: `Social networks place trackers on other websites to build a more complete and targeted profile of you. Blocking these trackers reduces how much social media companies can see what do you online.`
-    - Suggest: `reduce lo que las empresas de redes sociales pueden ver de lo que hace en línea`
-    - en-US: "reduces how much social media companies can see what do you online" — it is about how much they can see, not how many companies there are.
-- `Menu.TrackingProtectionDescription.CryptominersNew` — `es-AR/firefox-ios.xliff` — "secretly" is dropped and "Cryptomining scripts" is mistranslated as "secuencias de comandos de cifrado" (encryption scripts).
-    - Current: `Los criptomineros utilizan la potencia informática de su sistema para extraer dinero digital. Las secuencias de comandos de cifrado de los mismos agotan su batería`
-    - Source: `Cryptominers secretly use your system’s computing power to mine digital money. Cryptomining scripts drain your battery, slow down your computer, and can increase your energy bill.`
-    - Suggest: `Los criptomineros usan en secreto la potencia informática de su sistema para extraer dinero digital. Las secuencias de comandos de criptominería agotan su batería`
-    - en-US says "secretly use" and "Cryptomining scripts"; the target omits "secretly" and renders cryptomining as "cifrado" (encryption).
-- `Menu.TrackingProtectionDescription.ContentTrackers` — `es-AR/firefox-ios.xliff` — "hidden trackers" is rendered as just "rastreadores", dropping "hidden".
-    - Current: `otro contenido que contenga rastreadores`
-    - Source: `Websites may load outside ads, videos, and other content that contains hidden trackers. Blocking this can make websites load faster, but some buttons, forms, and login fields, might not work.`
-    - Suggest: `otro contenido que contenga rastreadores ocultos`
-    - en-US: "other content that contains hidden trackers"; the adjective "hidden" is missing.
-- `Open Tabs` — `es-AR/firefox-ios.xliff` — "Open Tabs" (a noun phrase naming a sync data type) is translated as the imperative "Abrir pestañas".
-    - Current: `Abrir pestañas`
-    - Source: `Open Tabs`
-    - Suggest: `Pestañas abiertas`
-    - Developer comment says it is a toggle for the tabs syncing setting, so "Open Tabs" is a noun phrase, not a command.
-- `Search.SuggestSectionTitle.v102` — `es-AR/firefox-ios.xliff` — "Firefox Suggest" (a feature/brand name) is rendered as "Sugerencia de Firefox" ("Firefox suggestion").
-    - Current: `Sugerencia de Firefox`
-    - Source: `Firefox Suggest`
-    - Suggest: `Firefox Suggest`
-    - The source is the feature name "Firefox Suggest", used as a section header for Firefox suggestions; it should not be translated as a singular common noun.
-- `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.` — `es-AR/firefox-ios.xliff` — "Reader View" is translated as "Modo lectura" here while other strings in the same file use "Vista de lectura".
-    - Current: `Modo lectura`
-    - Source: `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.`
-    - Suggest: `Vista de lectura`
-    - The en-US term is "Reader View", translated as "Vista de lectura" in Reader View and ReaderMode.Available.VoiceOverAnnouncement; using "Modo lectura" here is inconsistent.
-- `SendTo.NoDevicesFound.Message` — `es-AR/firefox-ios.xliff` — Uses the formal "usted" form where the locale's established address form is voseo/tuteo ("No tenés..."), inconsistent with neighbouring strings.
-    - Current: `No tiene otros dispositivos conectados a esta cuenta de Firefox disponible para sincronizar.`
-    - Source: `You don’t have any other devices connected to this Firefox Account available to sync.`
-    - Suggest: `No tenés otros dispositivos conectados a esta cuenta de Firefox disponibles para sincronizar.`
-    - Other strings in the same file use voseo ("Llená todos los campos", "Tocá para comenzar", "estás tratando de compartir"); this one switches to formal usted. Also "disponible" should agree with "dispositivos" (disponibles).
-- `SendTo.NotSignedIn.Message` — `es-AR/firefox-ios.xliff` — Formal "usted" imperatives instead of the locale's voseo forms used elsewhere in the same file.
-    - Current: `Por favor abra Firefox, vaya a Configuración e inicie la sesión para continuar.`
-    - Source: `Please open Firefox, go to Settings and sign in to continue.`
-    - Suggest: `Abrí Firefox, andá a Configuración e iniciá sesión para continuar.`
-    - Register inconsistency: nearby strings use voseo ("Llená", "Tocá", "Reemplazá", "estás").
-- `SendTo.NotSignedIn.Title` — `es-AR/firefox-ios.xliff` — Formal "usted" form ("No inició la sesión en su cuenta") instead of the voseo register used elsewhere in the file.
-    - Current: `No inició la sesión en su cuenta de Firefox.`
-    - Source: `You are not signed in to your Firefox Account.`
-    - Suggest: `No iniciaste sesión en tu cuenta de Firefox.`
-    - Register inconsistency with neighbouring strings that use voseo/tuteo.
-- `Settings.AddCustomEngine.URLPlaceholder` — `es-AR/firefox-ios.xliff` — "Replace Query with %s" is rendered as "Reemplazá tu búsqueda con %s", adding a possessive and changing the instruction's sense.
-    - Current: `URL (Reemplazá tu búsqueda con %s)`
-    - Source: `URL (Replace Query with %s)`
-    - Suggest: `URL (Reemplazá la consulta con %s)`
-    - The source instructs replacing the query term in the URL with the %s token; "tu búsqueda" is not in the source and the term "query" should be "consulta".
-- `SentTab_TabArrivingNotification_WithDevice_body` — `es-AR/firefox-ios.xliff` — "Nueva pestaña llegada en %@" is ungrammatical/unnatural Spanish for "New tab arrived in %@".
-    - Current: `Nueva pestaña llegada en %@`
-    - Source: `New tab arrived in %@`
-    - Suggest: `Llegó una nueva pestaña a %@`
-    - The participle construction "pestaña llegada" is not valid Spanish; the parallel string SentTab_TabArrivingNotification_NoDevice_body uses "Llegó una nueva pestaña".
-- `Settings.Disconnect.Body` — `es-AR/firefox-ios.xliff` — "stop syncing with your account" is rendered as "stop syncing your account", changing the meaning.
-    - Current: `Firefox dejará de sincronizar su cuenta pero no eliminará ningún dato de navegación en este dispositivo.`
-    - Source: `Firefox will stop syncing with your account, but won’t delete any of your browsing data on this device.`
-    - Suggest: `Firefox dejará de sincronizar con su cuenta, pero no eliminará ningún dato de navegación en este dispositivo.`
-    - The source says Firefox will stop syncing with your account; the translation says it will stop syncing your account, which is a different statement.
-- `Settings.DataManagement.SectionName` — `es-AR/firefox-ios.xliff` — "Data Management" translated as "Administrador de datos" (Data Manager) instead of "Administración de datos".
-    - Current: `Administrador de datos`
-    - Source: `Data Management`
-    - Suggest: `Administración de datos`
-    - The source names the activity/section "Data Management", not a "manager" entity.
-- `Settings.DataManagement.Title` — `es-AR/firefox-ios.xliff` — "Data Management" translated as "Administrador de datos" (Data Manager) instead of "Administración de datos".
-    - Current: `Administrador de datos`
-    - Source: `Data Management`
-    - Suggest: `Administración de datos`
-    - The source names the section "Data Management", not a "manager".
-- `Settings.ClearAllWebsiteData.Clear.Button` — `es-AR/firefox-ios.xliff` — "Website Data" rendered as "datos del sitio", dropping the plural/website reference.
-    - Current: `Eliminar todos los datos del sitio`
-    - Source: `Clear All Website Data`
-    - Suggest: `Eliminar todos los datos de los sitios web`
-    - The source clears data of all websites; the singular "del sitio" suggests a single site.
-- `Settings.DisplayTheme.SectionFooter` — `es-AR/firefox-ios.xliff` — "The theme" rendered as "Este tema" (This theme).
-    - Current: `Este tema cambiará automáticamente`
-    - Source: `The theme will automatically change based on your display brightness. You can set the threshold where the theme changes. The circle indicates your display’s current brightness.`
-    - Suggest: `El tema cambiará automáticamente`
-    - The source refers to the theme generally, not to a specific "this" theme.
-- `Settings.Home.Option.JumpBackIn` — `es-AR/firefox-ios.xliff` — "Jump Back In" is rendered as "Volver a ver" ("watch again") instead of the established "Retomar"/"Volver a la carga" meaning of resuming browsing.
-    - Current: `Volver a ver`
-    - Source: `Jump Back In`
-    - Suggest: `Retomar`
-    - The Jump Back In section lets users resume recent tabs, not "view again"; the es-AR text names a different action.
-- `Settings.Home.Option.Shortcuts` — `es-AR/firefox-ios.xliff` — "Shortcuts" is translated as "Accesos directos" here but as "Atajos" in the other homepage shortcuts settings strings.
-    - Current: `Accesos directos`
-    - Source: `Shortcuts`
-    - Suggest: `Atajos`
-    - Settings.Homepage.Shortcuts.ShortcutsPageTitle.v100, ShortcutsToggle.v100 and SponsoredShortcutsToggle.v100 all use "Atajos" for the same section on the same settings screen.
-- `Settings.NewTab.Option.Custom` — `es-AR/firefox-ios.xliff` — "Custom" (an option label) is translated as the verb "Personalizar" (customize).
-    - Current: `Personalizar`
-    - Source: `Custom`
-    - Suggest: `Personalizada`
-    - The source is an adjective naming a new-tab option (a custom URL/homepage), not an action; the sibling string Settings.NewTab.CustomURL uses "personalizada".
-- `Settings.OfferClipboardBar.Title` — `es-AR/firefox-ios.xliff` — "Offer to Open Copied Links" rendered with the noun "Oferta" instead of the verbal construction.
-    - Current: `Oferta para abrir enlaces copiados`
-    - Source: `Offer to Open Copied Links`
-    - Suggest: `Ofrecer abrir enlaces copiados`
-    - The source means the app offers to open copied links; "Oferta" is a noun (a commercial offer) and misrepresents the setting.
-- `Settings.Siri.SectionName` — `es-AR/firefox-ios.xliff` — "Siri Shortcuts" translated as "Atajos de teclado de Siri" (Siri keyboard shortcuts).
-    - Current: `Atajos de teclado de Siri`
-    - Source: `Siri Shortcuts`
-    - Suggest: `Atajos de Siri`
-    - Siri Shortcuts are voice shortcuts, not keyboard shortcuts; "de teclado" adds meaning not in the source.
-- `Settings.Siri.SectionDescription` — `es-AR/firefox-ios.xliff` — "Siri shortcuts" translated as "atajos de teclado de Siri" (keyboard shortcuts).
-    - Current: `Utilizar los atajos de teclado de Siri para abrir Firefox rápidamente vía Siri`
-    - Source: `Use Siri shortcuts to quickly open Firefox via Siri`
-    - Suggest: `Utilizar los atajos de Siri para abrir Firefox rápidamente vía Siri`
-    - The source refers to Siri shortcuts, not keyboard shortcuts; "de teclado" is not in the source.
-- `Settings.NewTab.TopSectionNameFooter` — `es-AR/firefox-ios.xliff` — Missing accent on interrogative/relative "qué" in "Elegir que se verá".
-    - Current: `Elegir que se verá al abrir una nueva pestaña`
-    - Source: `Choose what to load when opening a new tab`
-    - Suggest: `Elegir qué se verá al abrir una nueva pestaña`
-    - "Choose what to load" requires the accented interrogative "qué".
-- `Settings.TrackingProtection.ProtectionCellFooter` — `es-AR/firefox-ios.xliff` — Uses the peninsular/formal "su" instead of the es-AR voseo/second-person form used consistently elsewhere in this batch.
-    - Current: `ayuda a evitar que los anunciantes sigan su navegación`
-    - Source: `Reduces targeted ads and helps stop advertisers from tracking your browsing.`
-    - Suggest: `ayuda a evitar que los anunciantes sigan tu navegación`
-    - Sibling strings in the same screen use voseo address forms ("tocá", "desactivá", "no viste"); "su navegación" is the formal/European register and is inconsistent.
-- `Settings.WebsiteData.ConfirmPrompt` — `es-AR/firefox-ios.xliff` — Formal "sus" instead of the es-AR informal address used elsewhere, and "sitios" drops "website data" wording.
-    - Current: `eliminará los datos de todos sus sitios`
-    - Source: `This action will clear all of your website data. It cannot be undone.`
-    - Suggest: `eliminará los datos de todos tus sitios web`
-    - The locale addresses the user informally (voseo/tuteo) elsewhere in the same file; "sus" is the formal register.
-- `Settings.TrackingProtection.ProtectionLevelStrict.Description` — `es-AR/firefox-ios.xliff` — "some functionality may not work" is rendered as "puede perder cierta funcionalidad" (you may lose functionality), changing the meaning.
-    - Current: `pero puede perder cierta funcionalidad`
-    - Source: `Blocks more trackers, ads, and popups. Pages load faster, but some functionality may not work.`
-    - Suggest: `pero puede que alguna funcionalidad no funcione`
-    - The source says some functionality may not work, not that the user will lose functionality; it also uses the formal register inconsistent with the rest of the screen.
-- `TopSites.RemovePage.Button` — `es-AR/firefox-ios.xliff` — Em dash from the source replaced with a hyphen.
-    - Current: `Eliminar página - %@`
-    - Source: `Remove page — %@`
-    - Suggest: `Eliminar página — %@`
-    - The en-US uses an em dash separator ("Remove page — %@"); the translation uses a plain hyphen.
-- `DeleteLoginAlert.Message.Local.v122` — `es-AR/firefox-ios.xliff` — Incorrect accent: "No sé puede" should be "No se puede".
-    - Current: `No sé puede deshacer esta acción.`
-    - Source: `You cannot undo this action.`
-    - Suggest: `No se puede deshacer esta acción.`
-    - "sé" is the verb "saber"; the impersonal pronoun here must be the unaccented "se".
-- `Welcome to your Reading List` — `es-AR/firefox-ios.xliff` — Missing possessive/article: "Bienvenido a lista de lectura" is ungrammatical and drops "your".
-    - Current: `Bienvenido a lista de lectura`
-    - Source: `Welcome to your Reading List`
-    - Suggest: `Bienvenido a tu lista de lectura`
-    - The source is "Welcome to your Reading List"; the Spanish lacks the possessive "tu" (or at least an article), making it ungrammatical.
-- `Logins will be permanently removed.` — `es-AR/firefox-ios.xliff` — "Logins" mistranslated as "ingresos" (income/entries) instead of "inicios de sesión".
-    - Current: `Los ingresos se eliminarán permanentemente.`
-    - Source: `Logins will be permanently removed.`
-    - Suggest: `Los inicios de sesión se eliminarán permanentemente.`
-    - "Logins" refers to saved credentials; "ingresos" means income/entries in Spanish and is wrong. Other strings in the same file use "inicios de sesión".
-- `Logins will be removed from all connected devices.` — `es-AR/firefox-ios.xliff` — "Logins" mistranslated as "ingresos" instead of "inicios de sesión".
-    - Current: `Los ingresos se eliminarán de todos los dispositivos conectados.`
-    - Source: `Logins will be removed from all connected devices.`
-    - Suggest: `Los inicios de sesión se eliminarán de todos los dispositivos conectados.`
-    - "Logins" means saved credentials; "ingresos" means income/entries. Inconsistent with "inicios de sesión" used elsewhere in the same file.
-- `DeleteLoginAlert.Message.Synced.v122` — `es-AR/firefox-ios.xliff` — Informal second person "tus" instead of the formal/neutral address used elsewhere.
-    - Current: `de todos tus dispositivos sincronizados`
-    - Source: `This will remove the password from all of your synced devices.`
-    - Suggest: `de todos sus dispositivos sincronizados`
-    - Firefox es-AR uses the formal/neutral address; other strings in the file avoid informal "tu/tus".
-- `TodayWidget.TopSitesGalleryDescription` — `es-AR/firefox-ios.xliff` — Typo: "atajps" should be "atajos".
-    - Current: `Agregar atajps a sitios visitados`
-    - Source: `Add shortcuts to frequently and recently visited sites.`
-    - Suggest: `Agregar atajos a sitios visitados`
-    - Misspelling of "atajos" (shortcuts) in the widget description.
-- `TodayWidget.FirefoxShortcutGalleryDescription` — `es-AR/firefox-ios.xliff` — The brand name "Firefox" is dropped from the translation.
-    - Current: `Agregá accesos directos a la pantalla principal.`
-    - Source: `Add Firefox shortcuts to your Home screen.`
-    - Suggest: `Agregá accesos directos de Firefox a la pantalla principal.`
-    - Source says "Add Firefox shortcuts to your Home screen."; the reference to Firefox is missing.
-- `TodayWidget.QuickActionGalleryDescription` — `es-AR/firefox-ios.xliff` — The brand name "Firefox" is dropped from the translation.
-    - Current: `Agregar un atajo a la pantalla de inicio.`
-    - Source: `Add a Firefox shortcut to your Home screen. After adding the widget, touch and hold to edit it and select a different shortcut.`
-    - Suggest: `Agregar un atajo de Firefox a la pantalla de inicio.`
-    - Source reads "Add a Firefox shortcut to your Home screen."; the Firefox reference is missing.
-- `CreditCard.SnackBar.RemoveCardSublabel.v112` — `es-AR/firefox-ios.xliff` — "Ésto" is misspelled; the demonstrative pronoun "esto" never takes an accent.
-    - Current: `Ésto eliminará la tarjeta`
-    - Source: `This will remove the card from all of your synced devices.`
-    - Suggest: `Esto eliminará la tarjeta`
-    - RAE orthography: neuter demonstrative "esto" is never accented.
-- `Settings.AppIconSelection.AppIconNames.Midday.Title.v137` — `es-AR/firefox-ios.xliff` — Missing accent in "Mediodía".
-    - Current: `Mediodia`
-    - Source: `Midday`
-    - Suggest: `Mediodía`
-    - Spanish spelling of "midday" requires the accent: mediodía.
-- `Bookmarks.EmptyState.Root.BodySignedOut.v135` — `es-AR/firefox-ios.xliff` — Imperative form inconsistent with voseo used in the rest of the string and the locale.
-    - Current: `Guarda sitios mientras navegás.`
-    - Source: `Save sites as you browse. Sign in to grab bookmarks from other synced devices.`
-    - Suggest: `Guardá sitios mientras navegás.`
-    - es-AR uses voseo imperatives ("Guardá", as in the parallel string Bookmarks.EmptyState.Root.Body.v135); "Guarda" is the tuteo form and clashes with "navegás" in the same sentence.
-- `Bookmarks.Menu.EditBookmarkMobileGroupLabel.v154` — `es-AR/firefox-ios.xliff` — "Mobile" (the mobile bookmarks folder group header) is rendered as "Teléfono celular", which names a phone rather than the Mobile group.
-    - Current: `Teléfono celular`
-    - Source: `Mobile`
-    - Suggest: `Móvil`
-    - The source is the collapsible header for the group of mobile bookmark folders, paired with 'Desktop' → 'Escritorio'; the related string uses 'MARCADORES PARA MÓVILES', so this should be 'Móvil', not 'Teléfono celular'.
-- `ContextualHints.Toolbar.GoogleLens.Description.v154` — `es-AR/firefox-ios.xliff` — Voseo register broken: "lo que ves" uses tuteo while the rest of the sentence uses voseo.
-    - Current: `buscar lo que ves`
-    - Source: `Use your camera or choose a photo to search what you see.`
-    - Suggest: `buscar lo que ves (→ "lo que ves" should be "lo que ves" in voseo: "lo que ves" → "lo que ves")`
-    - es-AR uses voseo ('Usá', 'elegí' in the same string); the second person present of 'ver' in voseo is 'vos ves', so this is consistent — see rationale note.
-- `Addresses.EditAddress.AutofillAddressSuburb.v129` — `es-AR/firefox-ios.xliff` — "Suburb" is rendered as "Suburbio", a false friend that means a poor outlying slum area in Spanish, not an address-level administrative district.
-    - Current: `Suburbio`
-    - Source: `Suburb`
-    - Suggest: `Barrio`
-    - The comment describes an address field for suburb details; "suburbio" in Spanish carries the connotation of slums/outskirts and is not used as an address field label.
+- `QuickAnswers.Settings.Footer.v158` — `es-AR/firefox-ios.xliff` — Plural "short answers" rendered as singular "una respuesta corta".
+    - Current: `recibí una respuesta corta`
+    - Source: `Ask out loud and get short answers. We don’t store your voice, questions, or answers.`
+    - Suggest: `recibí respuestas cortas`
+    - The en-US says "get short answers" (plural); the target says the user gets a single short answer.
+- `QuickAnswers.Errors.DailyLimitMessage.v158` — `es-AR/firefox-ios.xliff` — Feature name capitalized inconsistently as "Respuestas Rápidas" versus "Respuestas rápidas" elsewhere.
+    - Current: `Respuestas Rápidas`
+    - Source: `Try Quick Answers again tomorrow.`
+    - Suggest: `Respuestas rápidas`
+    - Other strings in the same feature (QuickAnswers.Settings.Title, AccessibilityLabels.OpenQuickAnswers) use "Respuestas rápidas"; Spanish does not use title case.
+
+### ✅ Fixed since the last run (1)
+
 - `Menu.EnhancedTrackingProtection.ClearData.AlertText.v128` — `es-AR/firefox-ios.xliff` — "might log you out of websites" is rendered as an impersonal "puede cerrar sesión en los sitios web", losing the sense that it may sign the user out.
     - Current: `puede cerrar sesión en los sitios web`
     - Source: `Removing cookies and site data for %@ might log you out of websites and clear shopping carts.`
     - Suggest: `puede cerrar tu sesión en los sitios web`
     - The source says the action may log the user out; the Spanish as written lacks the possessive/object and reads as the act itself closing a session, not the user's.
-- `Menu.EnhancedTrackingProtection.Certificates.SubjectName.v131` — `es-AR/firefox-ios.xliff` — "Subject Name" in a certificate context is translated as "Nombre del asunto" (email subject) instead of "Nombre del sujeto", inconsistent with "Nombres alternativos del sujeto" on the same screen.
-    - Current: `Nombre del asunto`
-    - Source: `Subject Name`
-    - Suggest: `Nombre del sujeto`
-    - The developer comment says this is the certificate subject name; the same screen already uses "sujeto" for Subject Alt Names, so "asunto" is wrong and inconsistent.
-- `Menu.EnhancedTrackingProtection.Switch.Title.v128` — `es-AR/firefox-ios.xliff` — "Enhanced Tracking Protection" is rendered with a non-standard term instead of the established "Protección contra el rastreo mejorada".
-    - Current: `Protección de rastreo aumentada`
-    - Source: `Enhanced Tracking Protection`
-    - Suggest: `Protección contra el rastreo mejorada`
-    - "de rastreo" reads as protection made of tracking rather than against tracking, and "aumentada" is not the established rendering of "Enhanced" for this Firefox feature name.
-- `FirefoxHomepage.Shortcuts.Pinned.AccessibilityLabel.v139` — `es-AR/firefox-ios.xliff` — "Pinned" is translated as "Pegado" (glued) instead of the standard "Fijado".
-    - Current: `Pegado: %@`
-    - Source: `Pinned: %@`
-    - Suggest: `Fijado: %@`
-    - In Firefox UI "pinned" tiles/tabs are "fijados"; "Pegado" means glued/pasted and is the term used for "paste".
-- `FirefoxHome.PrivacyNotice.PrivacyNoticeLink.v148` — `es-AR/firefox-ios.xliff` — "Privacy Notice" is rendered as "Nota de privacidad" instead of the established "Aviso de privacidad".
-    - Current: `Nota de privacidad`
-    - Source: `Privacy Notice`
-    - Suggest: `Aviso de privacidad`
-    - Mozilla's legal document is the "Aviso de privacidad" in Spanish; "Nota" is not the official name of the document being linked.
-- _…and 38 more._
-
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -334,249 +47,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (83)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `CreditCard.SnackBar.RemoveCardSublabel.v112` — `Shared/Supporting Files/en.lproj/Alert.strings` — "Ésto" is misspelled; the demonstrative pronoun "esto" never takes an accent.
-    - Current: `Ésto eliminará la tarjeta`
-    - Suggest: `Esto eliminará la tarjeta`
-    - Per RAE orthography, the neuter demonstrative "esto" is never accented.
-- `Settings.AppIconSelection.AppIconNames.Midday.Title.v137` — `Shared/Supporting Files/en.lproj/AppIconSelection.strings` — Missing accent in "Mediodía".
-    - Current: `Mediodia`
-    - Suggest: `Mediodía`
-    - The Spanish word for midday is "mediodía", with an accent on the í.
-- `Settings.AppIconSelection.ScreenTitle.v136` — `Shared/Supporting Files/en.lproj/AppIconSelection.strings` — "Icono" lacks the accent used elsewhere in the same screen ("ícono").
-    - Current: `Icono de la aplicación`
-    - Suggest: `Ícono de la aplicación`
-    - Other strings in the same file use "ícono" (e.g. "Seleccionar el ícono de la aplicación %@", "el ícono de tu aplicación"); es-AR prefers the accented form, so this is inconsistent within the screen.
-- `Bookmarks.EmptyState.Root.BodySignedOut.v135` — `Shared/Supporting Files/en.lproj/Bookmarks.strings` — Inconsistent verb form: "Guarda" is tuteo imperative while the rest of the string (and the parallel string) uses voseo "Guardá".
-    - Current: `Guarda sitios mientras navegás.`
-    - Suggest: `Guardá sitios mientras navegás.`
-    - es-AR uses voseo imperatives; the parallel string Bookmarks.EmptyState.Root.Body.v135 uses "Guardá", and this string mixes "Guarda" with "navegás"/"Iniciá".
-- `Bookmarks.Menu.EditBookmarkMobileGroupLabel.v154` — `Shared/Supporting Files/en.lproj/Bookmarks.strings` — "Mobile" (bookmark folder group name, paired with "Desktop") is rendered as "Teléfono celular".
-    - Current: `Teléfono celular`
-    - Suggest: `Móvil`
-    - The source "Mobile" is the counterpart of "Desktop"/"Escritorio" and refers to the mobile bookmarks folder group, not to a cell phone device; the related header string uses "MARCADORES PARA MÓVILES".
-- `Menu.EnhancedTrackingProtection.Certificates.SubjectName.v131` — `Shared/Supporting Files/en.lproj/EnhancedTrackingProtection.strings` — "Subject Name" in a certificate context is mistranslated as "Nombre del asunto" (email subject) instead of "Nombre del sujeto".
-    - Current: `Nombre del asunto`
-    - Suggest: `Nombre del sujeto`
-    - In X.509 certificates, "Subject" is the certificate holder entity, rendered "sujeto" in Spanish; the sibling string SubjectAltNames already uses "sujeto", so "asunto" is both wrong and inconsistent within the same screen.
-- `Menu.EnhancedTrackingProtection.ClearData.AlertText.v128` — `Shared/Supporting Files/en.lproj/EnhancedTrackingProtection.strings` — "might log you out of websites" is rendered as an impersonal "puede cerrar sesión en los sitios web", losing the meaning that the user will be logged out.
-    - Current: `puede cerrar sesión en los sitios web`
-    - Suggest: `puede cerrar tu sesión en los sitios web`
-    - The source says the removal may log the user out; the translation omits the possessive/object making it ambiguous about whose session is closed.
-- `Menu.EnhancedTrackingProtection.Details.Trackers.Analytics.v132` — `Shared/Supporting Files/en.lproj/EnhancedTrackingProtection.strings` — "Tracking content" is translated as "Contenido de rastreo" but the developer comment says this line reports analytics trackers; more importantly the term should read as content that tracks.
-    - Current: `Contenido de rastreo: %@`
-    - Suggest: `Contenido que rastrea: %@`
-    - In Firefox the ETP category "Tracking content" is rendered as "Contenido que rastrea" in Spanish; "Contenido de rastreo" is inconsistent with the established product terminology.
-- `Menu.EnhancedTrackingProtection.Switch.Title.v128` — `Shared/Supporting Files/en.lproj/EnhancedTrackingProtection.strings` — "Enhanced Tracking Protection" is rendered as "Protección de rastreo aumentada" instead of the established Firefox term.
-    - Current: `Protección de rastreo aumentada`
-    - Suggest: `Protección contra el rastreo mejorada`
-    - "Protección de rastreo" reverses the sense (protection of tracking rather than against tracking), and the established Firefox term is "Protección contra el rastreo mejorada".
-- `Menu.EnhancedTrackingProtection.SwitchOn.Text.v128` — `Shared/Supporting Files/en.lproj/EnhancedTrackingProtection.strings` — Pronoun gender mismatch: "desactivarla" refers to the protection switch but the antecedent in the string is unclear/feminine while the surrounding UI uses masculine "Estándar/Estricto"; the source refers to the protection feature.
-    - Current: `probá desactivarla`
-    - Suggest: `probá desactivarlo`
-    - The "it" in the source refers to Enhanced Tracking Protection toggle; as written the feminine pronoun disagrees with the referent used on the same screen.
-- `FirefoxHomepage.Shortcuts.Pinned.AccessibilityLabel.v139` — `Shared/Supporting Files/en.lproj/FirefoxHomepage.strings` — "Pinned" is rendered as "Pegado" (glued) instead of the standard "Anclado".
-    - Current: `Pegado: %@`
-    - Suggest: `Anclado: %@`
-    - Firefox uses "anclado/fijado" for pinned items; "Pegado" means glued/pasted and misstates the state of the tile.
-- `LibraryPanel.Sections.LastHour.v134` — `Shared/Supporting Files/en.lproj/LibraryPanel.strings` — Section title is lowercase and includes an article, unlike the other section titles.
-    - Current: `la última hora`
-    - Suggest: `Última hora`
-    - "Last Hour" is a section title; sibling sections use capitalized noun phrases ("Últimas 24 horas", "Últimos 7 días"). The lowercase article-led "la última hora" is inconsistent and grammatically odd as a title.
-- `LiveActivity.Downloads.FileNameText.v138` — `Shared/Supporting Files/en.lproj/LiveActivity.strings` — Straight quotes used instead of the typographic quotes of the source.
-    - Current: `Descargando "%@"`
-    - Suggest: `Descargando “%@”`
-    - The en-US source uses curly quotes (“%@”); the translation replaces them with straight ASCII quotes.
-- `MainMenu.Submenus.Save.AccessibilityLabels.AddToShortcuts.Subtitle.v132` — `Shared/Supporting Files/en.lproj/MainMenu.strings` — "Shortcut" is translated as "Acceso directo" here but as "Atajo" in the equivalent v131 strings on the same menu.
-    - Current: `Acceso directo`
-    - Suggest: `Atajo`
-    - The Save submenu uses "atajos" for Shortcuts (AddToShortcuts.Subtitle.v131, RemoveFromShortcuts.Title.v131); the accessibility labels use "accesos directos", an inconsistent term for the same UI item.
-- `MainMenu.Submenus.Save.AccessibilityLabels.RemoveFromShortcuts.Title.v132` — `Shared/Supporting Files/en.lproj/MainMenu.strings` — "Remove from Shortcuts" is translated as "Eliminar acceso directo" (delete the shortcut), losing the "from Shortcuts" sense.
-    - Current: `Eliminar acceso directo`
-    - Suggest: `Eliminar de accesos directos`
-    - The source means removing the site from the Shortcuts list; the target says "delete shortcut". The v131 counterpart correctly says "Eliminar de atajos".
-- `MainMenu.Submenus.Save.AddToShortcuts.Title.v131` — `Shared/Supporting Files/en.lproj/MainMenu.strings` — "Add to Shortcuts" is rendered as a past participle "Agregado a atajos" (added), not as the action.
-    - Current: `Agregado a atajos`
-    - Suggest: `Agregar a atajos`
-    - The source is an imperative menu action "Add to Shortcuts"; the target states "Added to shortcuts", changing the meaning. The parallel accessibility label uses "Agregar a accesos directos".
-- `MainMenu.Submenus.Tools.ReportBrokenSite.Title.v133` — `Shared/Supporting Files/en.lproj/MainMenu.strings` — "a cerca de" is a misspelling of "acerca de".
-    - Current: `Informar a cerca de sitio roto…`
-    - Suggest: `Informar sitio roto…`
-    - "a cerca de" is not valid Spanish; the correct form is "acerca de" (and the parallel accessibility label uses "Informar sitio roto", so consistency favors that wording).
-- `NativeErrorPage.GenericError.Description.v134` — `Shared/Supporting Files/en.lproj/NativeErrorPage.strings` — Present-tense "can’t be created" translated as past tense "no se pudo crear".
-    - Current: `no se pudo crear una conexión segura`
-    - Suggest: `no se puede crear una conexión segura`
-    - The source states a present inability ("a secure connection can’t be created"), not a past event.
-- `NativeErrorPage.NoInternetConnection.Description.v131` — `Shared/Supporting Files/en.lproj/NativeErrorPage.strings` — "Try connecting on a different device" was rendered as "conectarte a un dispositivo diferente" (connect to a different device).
-    - Current: `Probá conectarte a un dispositivo diferente.`
-    - Suggest: `Probá conectarte desde otro dispositivo.`
-    - The source tells the user to try connecting from another device; "conectarte a un dispositivo" means connecting to a device, which is a different instruction.
-- `Onboarding.IntroDescriptionPart1.v114` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — "For good" (for the common good) is mistranslated as "Para siempre" (forever).
-    - Current: `Para siempre.`
-    - Suggest: `Para el bien común.`
-    - In the source, "Indie. Non-profit. For good." describes Firefox as being for the public good, not something permanent.
-- `Onboarding.Modern.BrandRefresh.Marketing.LearnMoreLink.v148` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — Missing accent on the interrogative-relative adverb "Cómo" in "Como usamos los datos".
-    - Current: `Como usamos los datos`
-    - Suggest: `Cómo usamos los datos`
-    - "How we use the data" is an indirect interrogative; Spanish requires the accented "cómo".
-- `Onboarding.Modern.BrandRefresh.Welcome.Description.v148` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — The relative clause changes the meaning: the source says Firefox blocks companies from spying, not that it blocks companies that spy.
-    - Current: `bloqueamos automáticamente a las empresas que espían tus clics`
-    - Suggest: `bloqueamos automáticamente que las empresas espíen tus clics`
-    - en-US: "automatically block companies from spying on your clicks" — the blocking is of the spying action, not a filter of companies that already spy.
-- `Onboarding.Modern.TermsOfService.ManageLink.v145` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — "Manage settings" is rendered as "Administrar preferencias" (preferences) instead of "configuración"/"ajustes".
-    - Current: `Administrar preferencias`
-    - Suggest: `Administrar configuración`
-    - The source says "settings", not "preferences"; Firefox iOS uses "Configuración" for Settings in es-AR.
-- `Onboarding.Modern.Welcome.Title.v140` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — "creepy ads" translated as "publicidades molestas" (annoying ads), losing the intrusive/creepy meaning.
-    - Current: `las publicidades molestas`
-    - Suggest: `las publicidades invasivas`
-    - "Creepy" refers to invasive/tracking ads, not merely annoying ones.
-- `Onboarding.Modern.Welcome.Title.v145` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — "Decile" is the wrong voseo imperative for "decir adiós"; it should be "Decí".
-    - Current: `Decile adiós a los rastreadores siniestros`
-    - Suggest: `Decí adiós a los rastreadores siniestros`
-    - "Decile" means "say to him/her" (with indirect object clitic), which adds an unintended recipient; the source is simply "Say goodbye to creepy trackers".
-- `Onboarding.Sync.Title.v120` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — "cambiés" uses a non-standard accented voseo subjunctive; correct form is "cambies".
-    - Current: `cuando cambiés entre dispositivos`
-    - Suggest: `cuando cambies entre dispositivos`
-    - The standard subjunctive form after "cuando" is "cambies"; "cambiés" is a nonstandard voseo spelling not used in written Argentine Spanish.
-- `Onboarding.Welcome.Description.TreatementA.v120` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — Word order makes "respaldado sin fines de lucro" nonsensical; the source says the browser is backed by a non-profit.
-    - Current: `Nuestro navegador respaldado sin fines de lucro`
-    - Suggest: `Nuestro navegador respaldado por una organización sin fines de lucro`
-    - "non-profit backed browser" means backed by a non-profit organization; the current wording attaches "sin fines de lucro" to "respaldado", which is ungrammatical/meaningless.
-- `Onboarding.Welcome.Description.v120` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — Word order makes "respaldado sin fines de lucro" nonsensical; the source says the browser is backed by a non-profit.
-    - Current: `Nuestro navegador respaldado sin fines de lucro`
-    - Suggest: `Nuestro navegador respaldado por una organización sin fines de lucro`
-    - "non-profit backed browser" means backed by a non-profit organization; the current wording attaches "sin fines de lucro" to "respaldado", which is ungrammatical/meaningless.
-- `Settings.SearchZero.TrendingSearches.Toggle.v146` — `Shared/Supporting Files/en.lproj/SearchZero.strings` — "Trending Searches" is rendered inconsistently with the related section title, which uses "Tendencia".
-    - Current: `Mostrar búsquedas más populares`
-    - Suggest: `Mostrar búsquedas en tendencia`
-    - The same feature is called "Tendencia en %@" in SearchZero.TrendingSearches.SectionTitle.v146; "búsquedas más populares" (most popular searches) uses different terminology for the same source term on a related settings screen.
-- `Settings.AIControls.AIPoweredFeaturesSection.BlockedStatusDescriptionV2.v151` — `Shared/Supporting Files/en.lproj/Settings.strings` — Gender of the status label is inconsistent with the sibling string "Bloqueada" for the same status.
-    - Current: `**Bloqueado**`
-    - Suggest: `**Bloqueada**`
-    - Settings.AIControls.AIPoweredFeaturesSection.BlockedStatus.v151 translates the same status "Blocked" as "Bloqueada" (referring to la función); the description uses the masculine form for the same label on the same screen.
-- `Settings.Appearance.Zoom.SpecificSiteZoom.Footer.v140` — `Shared/Supporting Files/en.lproj/Settings.strings` — Uses "usted" forms (visite, ajuste) while the rest of the batch consistently uses the voseo/tuteo register (probá, verás, agregá).
-    - Current: `Para agregar a esta lista, visite un sitio y ajuste el zoom de la página desde el menú`
-    - Suggest: `Para agregar a esta lista, visitá un sitio y ajustá el zoom de la página desde el menú`
-    - es-AR strings in this same file address the user informally ("Mirá", "probá", "Desbloqueá", "Verás"); this string switches to the formal usted register.
-- `Settings.Notifications.SyncNotificationsStatus.v112` — `Shared/Supporting Files/en.lproj/Settings.strings` — "Ésto" is misspelled; the neuter demonstrative pronoun never takes an accent.
-    - Current: `Ésto debe habilitarse`
-    - Suggest: `Esto debe habilitarse`
-    - RAE: "esto" is never written with an accent.
-- `Settings.Notifications.SystemNotificationsDisabledMessage.v112` — `Shared/Supporting Files/en.lproj/Settings.strings` — Pronoun gender/number disagreement: "Activalos" refers to "las notificaciones".
-    - Current: `Activalos yendo a`
-    - Suggest: `Activalas yendo a`
-    - The antecedent is "las notificaciones" (feminine), so the clitic must be "las".
-- `Settings.Notifications.TipsAndFeaturesNotificationsStatus.v112` — `Shared/Supporting Files/en.lproj/Settings.strings` — Missing accent on interrogative-like "cómo" in "y como conseguir".
-    - Current: `y como conseguir el máximo`
-    - Suggest: `y cómo sacarle el máximo provecho`
-    - "how to get the most out of" requires the accented "cómo" as an indirect interrogative.
-- `Settings.Rollouts.Message.v148` — `Shared/Supporting Files/en.lproj/Settings.strings` — Present/future "Changes applied remotely" rendered in past tense.
-    - Current: `Los cambios se aplicaron remotamente.`
-    - Suggest: `Los cambios se aplican remotamente.`
-    - The source states that changes are applied remotely (general statement), not that they were already applied.
-- `Settings.Summarize.FooterTitle.v142` — `Shared/Supporting Files/en.lproj/Settings.strings` — "summarize pages" (verb + object) was rendered as "páginas de resumen" (summary pages), changing the meaning.
-    - Current: `Proporciona acceso a las páginas de resumen.`
-    - Suggest: `Proporciona acceso a la función de resumir páginas.`
-    - The source says the setting provides access to summarizing pages, not to "summary pages"; the related toggle title is translated as "Resumir páginas".
-- `SendTo.NotSignedIn.Title.v119` — `Shared/Supporting Files/en.lproj/Share.strings` — Uses peninsular "has iniciado" instead of the voseo form used throughout the es-AR locale.
-    - Current: `No has iniciado sesión en tu cuenta.`
-    - Suggest: `No iniciaste sesión en tu cuenta.`
-    - es-AR uses voseo (e.g. "No tenés ningún otro dispositivo…" in the same file); "has iniciado" is inconsistent with the locale's established form of address.
-- `TabsTray.Sync.SyncTabsDisabled.v116` — `Shared/Supporting Files/en.lproj/TabsTray.strings` — Misspelling: "pestañás" has an incorrect accent.
-    - Current: `pestañás`
-    - Suggest: `pestañas`
-    - "pestañas" carries no written accent; the acute accent on the final 'a' is a typo.
-- `ContextualHints.Toolbar.Top.Description.v107` — `Shared/Supporting Files/en.lproj/ToolbarLocation.strings` — Stray words "en la" left in the sentence make it ungrammatical.
-    - Current: `Mové la barra de herramientas hacia abajo en la si ese es más tu estilo.`
-    - Suggest: `Mové la barra de herramientas hacia abajo si ese es más tu estilo.`
-    - The source is "Move the toolbar to the bottom if that’s more your style."; the extra "en la" is a leftover fragment that breaks the sentence.
-- `Translations.Sheet.Error.TitleLabel.v145` — `Shared/Supporting Files/en.lproj/Translations.strings` — Past-tense failure rendered as present tense inconsistently with the other error strings.
-    - Current: `No se pueden cargar los idiomas`
-    - Suggest: `No se pudieron cargar los idiomas`
-    - Source "Couldn’t Load Languages" is a past failure, like the sibling "Couldn’t Translate Page" translated as "No se pudo traducir la página".
-- `WebCompatReporter.Preview.Data.TrackingProtectionSetting.v155` — `Shared/Supporting Files/en.lproj/WebCompatReporter.strings` — "Enhanced Tracking Protection" is a Firefox feature name rendered incorrectly as "protección de rastreo aumentada".
-    - Current: `Configuración de protección de rastreo aumentada para este sitio`
-    - Suggest: `Configuración de la protección antirrastreo mejorada para este sitio`
-    - The established Spanish term for the Firefox feature "Enhanced Tracking Protection" is "Protección antirrastreo mejorada"; "aumentada" is not the product terminology.
-- `WebCompatReporter.Preview.Data.UserAgent.v155` — `Shared/Supporting Files/en.lproj/WebCompatReporter.strings` — "your iOS version" is rendered as "su versión de iOS", switching from second person to third person and losing the possessive reference to the user.
-    - Current: `que incluye su versión de iOS`
-    - Suggest: `que incluye tu versión de iOS`
-    - The source says "your iOS version"; the rest of the string uses the informal second person ("tu navegador"), so "su" is both inconsistent and ambiguous.
-- `WebCompatReporter.SubOption.ItemsOverlapped.v154` — `Shared/Supporting Files/en.lproj/WebCompatReporter.strings` — "Items" is translated as "ítems" here while the sibling sub-options on the same screen use "elementos".
-    - Current: `Los ítems están superpuestos`
-    - Suggest: `Los elementos están superpuestos`
-    - Inconsistent terminology within the same 'Design is broken' group, where ItemsMisaligned, ItemsNotVisible and MissingItems all use "elementos".
-- `WorldCup.HomepageWidget.ErrorLabel.v151` — `Shared/Supporting Files/en.lproj/WorldCup.strings` — "Please refresh." is rendered as the infinitive "Actualizar." instead of an imperative request to the user.
-    - Current: `No pudimos cargar los datos de partidos. Actualizar.`
-    - Suggest: `No pudimos cargar los datos de partidos. Actualizá la página.`
-    - The source is an instruction addressed to the user; the rest of the file uses the voseo imperative (Elegí, Conseguí, Mantenete). "Actualizar." reads as a button label, not a request.
-- `Saved Logins` — `Shared/en.lproj/ClearPrivateData.strings` — "Saved Logins" is rendered as "Ingresos guardados", which means "saved entries/income" rather than saved login credentials.
-    - Current: `Ingresos guardados`
-    - Suggest: `Inicios de sesión guardados`
-    - The developer comment says this clears passwords and login data; "Ingresos" is not the Firefox term for logins in Spanish (standard is "Inicios de sesión"), and elsewhere in the batch "Sign In" is translated "Iniciar sesión".
-- `DefaultBrowserOnboarding.Description2` — `Shared/en.lproj/Default Browser.strings` — "Tap Default Browser App" refers to tapping the iOS setting named "Default Browser App", but the translation reads as "tap the default browser's application".
-    - Current: `2. Tocá la aplicación del navegador predeterminado`
-    - Suggest: `2. Tocá «Aplicación de navegador predeterminada»`
-    - The string names the iOS Settings row (see DefaultBrowserOnboarding.Screenshot); the current wording changes the meaning to the app of the default browser.
-- `ActivityStream.ContextMenu.PinTopsite2` — `Shared/en.lproj/Localizable.strings` — "Pin" (fijar un sitio destacado) se tradujo como "Pegar", que significa "paste/glue".
-    - Current: `Pegar`
-    - Suggest: `Fijar`
-    - El comentario indica que es la acción de fijar (pin) un sitio destacado; "Pegar" se entiende como pegar/paste y no transmite la acción.
-- `ActivityStream.ContextMenu.UnpinTopsite` — `Shared/en.lproj/Localizable.strings` — "Unpin" se tradujo como "Despegar" en vez de "Dejar de fijar".
-    - Current: `Despegar`
-    - Suggest: `Dejar de fijar`
-    - Es la acción inversa de fijar un sitio destacado; "Despegar" corresponde a unstick/take off, no a unpin.
-- `BreachAlerts.Description` — `Shared/en.lproj/Localizable.strings` — Uses the "usted" form of address, inconsistent with the voseo/tuteo register used in es-AR Firefox.
-    - Current: `desde la última vez que cambió su contraseña. Para proteger esta cuenta, inicie sesión en el sitio y cambie su contraseña.`
-    - Suggest: `desde la última vez que cambiaste tu contraseña. Para proteger esta cuenta, iniciá sesión en el sitio y cambiá tu contraseña.`
-    - es-AR Firefox addresses the user informally (voseo); the formal imperatives "inicie"/"cambie" and "su" break the locale's register.
-- `Closing tab` — `Shared/en.lproj/Localizable.strings` — Progressive "Closing tab" rendered as the imperative/infinitive "Cerrar pestaña" (Close tab).
-    - Current: `Cerrar pestaña`
-    - Suggest: `Cerrando pestaña`
-    - The developer comment says this notifies the user that the tab is being closed; the translation reads as a command "Close tab" instead.
-- `CoverSheet.v24.ETP.Description` — `Shared/en.lproj/Localizable.strings` — Formal "usted" register ("lo sigan", "Active") instead of the es-AR informal voseo form.
-    - Current: `ayuda a evitar que los anuncios lo sigan. Active Estricta`
-    - Suggest: `ayuda a evitar que los anuncios te sigan. Activá Estricta`
-    - es-AR localization addresses users informally; the formal imperative and object pronoun break the locale register.
-- `ErrorPages.CertWarning.Description` — `Shared/en.lproj/Localizable.strings` — "EL" is misspelled with a capital L at the start of the sentence.
-    - Current: `EL dueño de %@`
-    - Suggest: `El dueño de %@`
-    - Spelling/capitalization error: the Spanish article should be "El", not "EL".
-- `HistoryPanel.EmptyState.Title` — `Shared/en.lproj/Localizable.strings` — "mas" is missing its accent (should be "más") and the phrase misrenders "visited recently".
-    - Current: `Los sitios web visitados mas recientemente aparecerán acá.`
-    - Suggest: `Los sitios web que visitaste recientemente aparecerán acá.`
-    - The comparative/adverb "más" requires an accent; also the source says "websites you've visited recently", not "most recently visited".
-- `Menu.AddToShortcuts.v99` — `Shared/en.lproj/Localizable.strings` — Menu action "Add to Shortcuts" is translated as a past-tense confirmation "Agregado a atajos" instead of an action label.
-    - Current: `Agregado a atajos`
-    - Suggest: `Agregar a atajos`
-    - The developer comment says this is a button label to pin the current site; en-US is the imperative "Add to Shortcuts", not the confirmation toast "Added to Shortcuts" (Menu.AddPin.Confirm2).
-- `Menu.TrackingProtectionDescription.ContentTrackers` — `Shared/en.lproj/Localizable.strings` — "hidden trackers" is translated as just "rastreadores", dropping "hidden".
-    - Current: `otro contenido que contenga rastreadores`
-    - Suggest: `otro contenido que contenga rastreadores ocultos`
-    - en-US: "other content that contains hidden trackers"; the qualifier "hidden" is missing.
-- `Menu.TrackingProtectionDescription.CryptominersNew` — `Shared/en.lproj/Localizable.strings` — "secretly" is dropped and "Cryptomining scripts" is mistranslated as "secuencias de comandos de cifrado" (encryption scripts).
-    - Current: `Los criptomineros utilizan la potencia informática de su sistema para extraer dinero digital. Las secuencias de comandos de cifrado de los mismos agotan`
-    - Suggest: `Los criptomineros utilizan en secreto la potencia informática de su sistema para extraer dinero digital. Los scripts de criptominería agotan`
-    - en-US says "secretly use" and "Cryptomining scripts"; the translation omits "secretly" and renders cryptomining as "cifrado" (encryption).
-- `Menu.TrackingProtectionDescription.SocialNetworksNew` — `Shared/en.lproj/Localizable.strings` — The translation says blocking trackers reduces the number of social media companies, instead of reducing how much they can see of what you do online.
-    - Current: `reduce la cantidad de empresas de redes sociales que pueden ver lo que hace en línea`
-    - Suggest: `reduce cuánto pueden ver las empresas de redes sociales lo que hace en línea`
-    - en-US: "reduces how much social media companies can see what do you online" — the quantity refers to what they can see, not to the number of companies.
-- `Open Tabs` — `Shared/en.lproj/Localizable.strings` — "Open Tabs" is a sync setting label (noun phrase), but was translated as the imperative verb "Abrir pestañas".
-    - Current: `Abrir pestañas`
-    - Suggest: `Pestañas abiertas`
-    - The developer comment says "Toggle tabs syncing setting", so "Open Tabs" is the category of synced data (open tabs), not an action to open tabs.
-- `PhotoLibrary.FirefoxWouldLikeAccessMessage` — `Shared/en.lproj/Localizable.strings` — Uses "le permite" (usted) whereas es-AR uses the voseo/tú-based informal address used elsewhere in the file.
-    - Current: `Esto le permite guardar la imagen en la galería.`
-    - Suggest: `Esto te permite guardar la imagen en tu Carrete.`
-    - es-AR Firefox uses informal address; other strings in the batch ("Abre artículos…") avoid the formal "usted" form, so registers are inconsistent.
-- `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.` — `Shared/en.lproj/Localizable.strings` — "Reader View" is rendered as "Modo lectura" here while other strings in the same file use "Vista de lectura".
-    - Current: `Modo lectura`
-    - Suggest: `Vista de lectura`
-    - Inconsistent terminology within the same file: "Reader View" is translated "Vista de lectura" in the other strings.
-- _…and 23 more._
+_Nothing retired._
 
 ---
 
@@ -584,8 +57,8 @@ _Nothing to re-read._
 
 | Check | Result |
 |---|---|
-| Files | 96 |
-| Strings | 1,922 |
+| Files | 97 |
+| Strings | 1,950 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -609,7 +82,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `straight-double` 7, `curly-double` 3, `curly-single` 2 | _mixed_ |
 | apostrophe | `typographic` 2 | **typographic** |
-| ellipsis | `char` 21 | **char** |
+| ellipsis | `char` 23 | **char** |
 | dash | `em` 2, `en` 2 | _mixed_ |
 | inverted marks | `open-question` 42, `open-exclamation` 9 | **open-question** |
 
@@ -621,7 +94,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (100)
+## 3. Open findings (101)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -636,8 +109,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 44 |
-| 3 | Degraded language (grammar, spelling, terminology) | 53 |
+| 2 | Wrong content (says something other than the English) | 43 |
+| 3 | Degraded language (grammar, spelling, terminology) | 55 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
@@ -656,11 +129,6 @@ _Nothing in this category._
     - Source: `Suburb`
     - Suggest: `Barrio`
     - The comment describes an address field for suburb details; "suburbio" in Spanish carries the connotation of slums/outskirts and is not used as an address field label.
-- `Menu.EnhancedTrackingProtection.ClearData.AlertText.v128` — `es-AR/firefox-ios.xliff` — "might log you out of websites" is rendered as an impersonal "puede cerrar sesión en los sitios web", losing the sense that it may sign the user out.
-    - Current: `puede cerrar sesión en los sitios web`
-    - Source: `Removing cookies and site data for %@ might log you out of websites and clear shopping carts.`
-    - Suggest: `puede cerrar tu sesión en los sitios web`
-    - The source says the action may log the user out; the Spanish as written lacks the possessive/object and reads as the act itself closing a session, not the user's.
 - `MainMenu.Submenus.Save.AccessibilityLabels.RemoveFromShortcuts.Title.v132` — `es-AR/firefox-ios.xliff` — "Remove from Shortcuts" is translated as "Eliminar acceso directo" (delete the shortcut) instead of removing from the Shortcuts list, and is inconsistent with the v131 equivalent.
     - Current: `Eliminar acceso directo`
     - Source: `Remove from Shortcuts`
@@ -716,6 +184,11 @@ _Nothing in this category._
     - Source: `Cross-Site Tracking Cookies`
     - Suggest: `Cookies de rastreo entre sitios`
     - "Cross-site" means "between/across sites" (entre sitios), not "crossed sites"; "sitios cruzados" does not convey the source meaning and departs from the Firefox term "rastreo entre sitios".
+- `QuickAnswers.Settings.Footer.v158` — `es-AR/firefox-ios.xliff` — Plural "short answers" rendered as singular "una respuesta corta".
+    - Current: `recibí una respuesta corta`
+    - Source: `Ask out loud and get short answers. We don’t store your voice, questions, or answers.`
+    - Suggest: `recibí respuestas cortas`
+    - The en-US says "get short answers" (plural); the target says the user gets a single short answer.
 - `Settings.Rollouts.Message.v148` — `es-AR/firefox-ios.xliff` — Present/future "Changes applied remotely" rendered in past tense, asserting changes were already applied.
     - Current: `Los cambios se aplicaron remotamente.`
     - Source: `%@ will improve features, performance, and stability between updates. Changes applied remotely.`
@@ -1047,6 +520,11 @@ _Nothing in this category._
     - Source: `Fingerprinters`
     - Suggest: `Detectores de huellas digitales (fingerprinters)`
     - The category name refers to scripts that create a device fingerprint; the standard Firefox es term is "Huellas digitales"/"Detectores de huellas digitales" — flagged only for consistency.
+- `QuickAnswers.Errors.DailyLimitMessage.v158` — `es-AR/firefox-ios.xliff` — Feature name capitalized inconsistently as "Respuestas Rápidas" versus "Respuestas rápidas" elsewhere.
+    - Current: `Respuestas Rápidas`
+    - Source: `Try Quick Answers again tomorrow.`
+    - Suggest: `Respuestas rápidas`
+    - Other strings in the same feature (QuickAnswers.Settings.Title, AccessibilityLabels.OpenQuickAnswers) use "Respuestas rápidas"; Spanish does not use title case.
 - `Settings.SearchZero.TrendingSearches.Toggle.v146` — `es-AR/firefox-ios.xliff` — "Trending Searches" is rendered inconsistently with the section title on the same feature ("Tendencia" vs "más populares").
     - Current: `Mostrar búsquedas más populares`
     - Source: `Show Trending Searches`
@@ -1176,6 +654,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (1)
 
-_Nothing fixed yet._
+- `Menu.EnhancedTrackingProtection.ClearData.AlertText.v128` — `es-AR/firefox-ios.xliff` — fixed 2026-09-21

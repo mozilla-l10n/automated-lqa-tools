@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `8f5aca68ae4b` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `8f5aca68ae4b` |
-| **Previous run** | 2026-09-14 @ `e8592a898dc1` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 1,918 |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
+| **Previous run** | 2026-09-14 @ `8f5aca68ae4b` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 32 of 1,950 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for nl: [android](android.md) · [firefox](firefox.md)
 
@@ -19,9 +18,13 @@ Also for nl: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `QuickAnswers.Settings.Title.v158` — `nl/firefox-ios.xliff` — Feature name capitalized inconsistently: "Snelle Antwoorden" here vs. "Snelle antwoorden" elsewhere in the same feature.
+    - Current: `Snelle Antwoorden`
+    - Source: `Quick Answers`
+    - Suggest: `Snelle antwoorden`
+    - Other strings in this batch (QuickAnswers.Errors.DailyLimitMessage, PermissionAlertTitle, AccessibilityLabels.OpenQuickAnswers) render the feature name as "Snelle antwoorden"; Dutch does not use title case.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,9 +48,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 96 |
-| Strings | 1,918 |
-| Missing strings | 4 |
+| Files | 97 |
+| Strings | 1,950 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -60,12 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**4 strings** are not translated yet, concentrated in:
-
-- `nl/firefox-ios.xliff` — 2
-- `nl/firefox-ios.xliff` — 2
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -75,9 +73,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-single` 14 | **curly-single** |
 | apostrophe | `typographic` 31 | **typographic** |
-| ellipsis | `char` 21 | **char** |
+| ellipsis | `char` 23 | **char** |
 | dash | `en` 4 | **en** |
-| register | `formal` 280 | **formal** |
+| register | `formal` 287 | **formal** |
 
 ---
 
@@ -87,14 +85,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (49)
+## 3. Open findings (50)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 22 |
-| 3 | Degraded language (grammar, spelling, terminology) | 26 |
+| 3 | Degraded language (grammar, spelling, terminology) | 27 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
@@ -329,6 +327,11 @@ _Nothing in this category._
     - Source: `Turn On Notifications`
     - Suggest: `Meldingen inschakelen`
     - Onboarding.Notification.Title.v120 on the same screen uses "Meldingen" for Notifications; the two renderings are inconsistent within one screen.
+- `QuickAnswers.Settings.Title.v158` — `nl/firefox-ios.xliff` — Feature name capitalized inconsistently: "Snelle Antwoorden" here vs. "Snelle antwoorden" elsewhere in the same feature.
+    - Current: `Snelle Antwoorden`
+    - Source: `Quick Answers`
+    - Suggest: `Snelle antwoorden`
+    - Other strings in this batch (QuickAnswers.Errors.DailyLimitMessage, PermissionAlertTitle, AccessibilityLabels.OpenQuickAnswers) render the feature name as "Snelle antwoorden"; Dutch does not use title case.
 - `Summarizer.Error.MissingPageContent.Message.v142` — `nl/firefox-ios.xliff` — "hit summarize" is rendered as "klik op samenvatten" (click) on a touch-only iOS device.
     - Current: `klik daarna op samenvatten`
     - Source: `Page is still loading. Wait for it to finish, then hit summarize.`

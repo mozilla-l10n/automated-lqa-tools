@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `8f5aca68ae4b` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `8f5aca68ae4b` |
-| **Previous run** | 2026-09-14 @ `e8592a898dc1` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 1,922 |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
+| **Previous run** | 2026-09-14 @ `8f5aca68ae4b` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 28 of 1,950 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for it: [android](android.md) · [firefox](firefox.md)
 
@@ -45,8 +44,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 96 |
-| Strings | 1,922 |
+| Files | 97 |
+| Strings | 1,950 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -70,9 +69,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 15 | **curly-double** |
 | apostrophe | `typographic` 72 | **typographic** |
-| ellipsis | `char` 22 | **char** |
+| ellipsis | `char` 24 | **char** |
 | dash | `em` 1 | **em** |
-| register | `informal` 71, `formal` 4 | **informal** |
+| register | `informal` 74, `formal` 4 | **informal** |
 
 ---
 

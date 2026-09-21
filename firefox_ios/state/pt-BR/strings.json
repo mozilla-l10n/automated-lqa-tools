@@ -798,6 +798,30 @@
  "Shared/Supporting Files/en-US.lproj/QRCode.strings": {
   "QRCode.Toolbar.Button.A11y.Title.v128": "c63b5892 c3680ac9 4dc88b30"
  },
+ "Shared/Supporting Files/en-US.lproj/QuickAnswers.strings": {
+  "QuickAnswers.AccessibilityLabels.Close.v158": "a800f036 0e7c6115 41e2a5cf",
+  "QuickAnswers.AccessibilityLabels.OpenQuickAnswers.v158": "43e11afd 551ce079 e2f82871",
+  "QuickAnswers.ContentView.Answering.v158": "34d1a760 9d1c4fa0 e4cbba5b",
+  "QuickAnswers.ContentView.Footer.v158": "be5bea4e 2f8ace80 51573155",
+  "QuickAnswers.ContentView.Placeholder.v158": "a4dbc606 07b487b5 d5c1aeb3",
+  "QuickAnswers.ContentView.Sources.v158": "66c757de 5eb95cd9 2d3bdb88",
+  "QuickAnswers.Errors.Cancel.v158": "b2eb5e2b 871d661d 584c7ac2",
+  "QuickAnswers.Errors.DailyLimitMessage.v158": "8bf9911f a2b7f49c 76670870",
+  "QuickAnswers.Errors.DailyLimitTitle.v158": "8f0494e8 47c8a164 a3140623",
+  "QuickAnswers.Errors.GenericErrorMessage.v158": "a4958502 f18ad955 84d0b054",
+  "QuickAnswers.Errors.GenericErrorTitle.v158": "5d8e1974 57f4185b 767e6b2f",
+  "QuickAnswers.Errors.MicrophonePermissionMessage.v158": "d2c271cc 45719521 d674a340",
+  "QuickAnswers.Errors.OK.v158": "a471a79f 322b41af 2a812743",
+  "QuickAnswers.Errors.OpenSettings.v158": "d122b43c bec9f5cb 96ff3dfe",
+  "QuickAnswers.Errors.PermissionAlertTitle.v158": "93e73f80 a4e3f6ae cae265a2",
+  "QuickAnswers.Errors.SpeechRecognitionPermissionMessage.v158": "f310d054 b8fb9ce1 79a872f7",
+  "QuickAnswers.OptIn.ContinueButton.v158": "64f0db30 5009bc49 c062b032",
+  "QuickAnswers.OptIn.Description.v158": "fd982821 47a4d8d1 1ca6c332",
+  "QuickAnswers.OptIn.LearnMore.v158": "9dd26a83 d9b20450 736ecf7e",
+  "QuickAnswers.OptIn.Title.v158": "2680d65d 3c025f61 ae92ee8d",
+  "QuickAnswers.Tip.Message.v158": "1ddb5734 c7203227 a0ce0025",
+  "QuickAnswers.Tip.Title.v158": "908394cb aa05e574 0e1face7"
+ },
  "Shared/Supporting Files/en-US.lproj/ReaderModeBar.strings": {
   "ReaderModeBar.SummarizeButtonAccessibilityLabel.v150": "75905309 83de9990 45fa80a3"
  },
@@ -874,6 +898,11 @@
   "CreditCards.Settings.UseASavedCard.v122": "c8f721bd caa702a9 1584677c",
   "CreditCards.Settings.UseSavedCardFromKeyboard.v112": "c8f721bd caa702a9 2fc26843",
   "FxA.FirefoxAccount.v119": "5d764513 f38ba9ee a402065d",
+  "QuickAnswers.Settings.Footer.v158": "1d7683ed 5085bc97 827ff5f7",
+  "QuickAnswers.Settings.LearnMore.v158": "9dd26a83 d9b20450 9378d0d2",
+  "QuickAnswers.Settings.StatusOff.v158": "de8f274a 4c5ca662 838cce79",
+  "QuickAnswers.Settings.StatusOn.v158": "aada823b 201cd7a0 88bef294",
+  "QuickAnswers.Settings.Title.v158": "da0331a3 bdbb9902 98dc9d4c",
   "Settings.AIControls.AIPoweredFeaturesSection.AvailableStatus.v151": "3333ee2b 98d71668 82a6d9e6",
   "Settings.AIControls.AIPoweredFeaturesSection.AvailableStatusDescription.v151": "0f76c8f1 0b042611 a72f03b3",
   "Settings.AIControls.AIPoweredFeaturesSection.BlockedStatus.v151": "9771851b 039bd67d edd81423",

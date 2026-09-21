@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `8f5aca68ae4b` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `8f5aca68ae4b` |
-| **Previous run** | 2026-09-14 @ `e8592a898dc1` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 1,883 |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
+| **Previous run** | 2026-09-14 @ `8f5aca68ae4b` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 14 of 1,897 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for es-MX: [android](android.md) · [firefox](firefox.md)
 
@@ -45,9 +44,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 95 |
-| Strings | 1,883 |
-| Missing strings | 39 |
+| Files | 96 |
+| Strings | 1,897 |
+| Missing strings | 53 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
@@ -60,18 +59,18 @@ _Nothing retired._
 
 ### Completeness
 
-**39 strings** are not translated yet, concentrated in:
+**53 strings** are not translated yet, concentrated in:
 
-- `es-MX/firefox-ios.xliff` — 18
-- `es-MX/firefox-ios.xliff` — 8
-- `es-MX/firefox-ios.xliff` — 8
-- `Shared/Supporting Files/en-US.lproj/GoogleLens.strings` — 2
+- `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings` — 22
+- `es-MX/firefox-ios.xliff` — 17
+- `es-MX/firefox-ios.xliff` — 7
+- `es-MX/firefox-ios.xliff` — 4
 - `es-MX/firefox-ios.xliff` — 2
 - `es-MX/firefox-ios.xliff` — 1
 
 **Files absent from the locale:**
 
-- `Shared/Supporting Files/en-US.lproj/GoogleLens.strings`
+- `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -83,7 +82,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-single` 8, `curly-double` 4, `straight-double` 3 | _mixed_ |
 | apostrophe | `typographic` 8 | **typographic** |
-| ellipsis | `char` 19 | **char** |
+| ellipsis | `char` 21 | **char** |
 | dash | `em` 2 | **em** |
 | inverted marks | `open-question` 42, `open-exclamation` 8 | **open-question** |
 | register | `informal` 150, `formal` 5 | **informal** |

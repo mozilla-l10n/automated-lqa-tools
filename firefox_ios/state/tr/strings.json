@@ -798,6 +798,11 @@
  "Shared/Supporting Files/en-US.lproj/QRCode.strings": {
   "QRCode.Toolbar.Button.A11y.Title.v128": "030741e8 c3680ac9 4dc88b30"
  },
+ "Shared/Supporting Files/en-US.lproj/QuickAnswers.strings": {
+  "QuickAnswers.AccessibilityLabels.Close.v158": "cc1a4a29 0e7c6115 41e2a5cf",
+  "QuickAnswers.ContentView.Sources.v158": "abf3a430 5eb95cd9 2d3bdb88",
+  "QuickAnswers.Errors.OK.v158": "5db9a5e6 322b41af 2a812743"
+ },
  "Shared/Supporting Files/en-US.lproj/ReaderModeBar.strings": {
   "ReaderModeBar.SummarizeButtonAccessibilityLabel.v150": "b0fd068c 83de9990 45fa80a3"
  },
@@ -874,6 +879,8 @@
   "CreditCards.Settings.UseASavedCard.v122": "a34b49a4 caa702a9 1584677c",
   "CreditCards.Settings.UseSavedCardFromKeyboard.v112": "a34b49a4 caa702a9 2fc26843",
   "FxA.FirefoxAccount.v119": "04eb27dd f38ba9ee a402065d",
+  "QuickAnswers.Settings.StatusOff.v158": "cd8796af 4c5ca662 838cce79",
+  "QuickAnswers.Settings.StatusOn.v158": "b0be65be 201cd7a0 88bef294",
   "Settings.AIControls.AIPoweredFeaturesSection.AvailableStatus.v151": "2b7cac31 98d71668 82a6d9e6",
   "Settings.AIControls.AIPoweredFeaturesSection.AvailableStatusDescription.v151": "f5647ffe 0b042611 a72f03b3",
   "Settings.AIControls.AIPoweredFeaturesSection.BlockedStatus.v151": "48bdf285 039bd67d edd81423",

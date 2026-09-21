@@ -584,6 +584,8 @@
   "NativeErrorPage.BadCertDomain.ViewCertificateLink.v149": "83b6f075 9ec6d727 312ee52f",
   "NativeErrorPage.ButtonLabel.v131": "0b5e2ce2 5211deb2 afc0702c",
   "NativeErrorPage.ButtonLabel.v155": "6b9cdc54 58226c77 afc0702c",
+  "NativeErrorPage.CellularDataRestricted.Description.v156": "f9ecbd2c 28b1d130 7e00438c",
+  "NativeErrorPage.CellularDataRestricted.TitleLabel.v156": "27db72c3 c3c05d56 26118672",
   "NativeErrorPage.GenericError.Description.v134": "7307e4a7 fc3c9fa8 58381223",
   "NativeErrorPage.GenericError.TitleLabel.v131": "b4d2456f a92ffa2e c932681b",
   "NativeErrorPage.GoBackButton.v149": "09d66880 18c0c0cf 98bc9ca8",
@@ -796,6 +798,14 @@
  "Shared/Supporting Files/en-US.lproj/QRCode.strings": {
   "QRCode.Toolbar.Button.A11y.Title.v128": "9a449b55 c3680ac9 4dc88b30"
  },
+ "Shared/Supporting Files/en-US.lproj/QuickAnswers.strings": {
+  "QuickAnswers.AccessibilityLabels.Close.v158": "f8fcf016 0e7c6115 41e2a5cf",
+  "QuickAnswers.Errors.Cancel.v158": "a0d733a1 871d661d 584c7ac2",
+  "QuickAnswers.Errors.OK.v158": "eab6c12f 322b41af 2a812743",
+  "QuickAnswers.Errors.OpenSettings.v158": "b3739639 bec9f5cb 96ff3dfe",
+  "QuickAnswers.OptIn.ContinueButton.v158": "bc30780e 5009bc49 c062b032",
+  "QuickAnswers.OptIn.LearnMore.v158": "8609a802 d9b20450 736ecf7e"
+ },
  "Shared/Supporting Files/en-US.lproj/ReaderModeBar.strings": {
   "ReaderModeBar.SummarizeButtonAccessibilityLabel.v150": "a1ad56bd 83de9990 45fa80a3"
  },
@@ -872,6 +882,7 @@
   "CreditCards.Settings.UseASavedCard.v122": "c89c6f59 caa702a9 1584677c",
   "CreditCards.Settings.UseSavedCardFromKeyboard.v112": "c89c6f59 caa702a9 2fc26843",
   "FxA.FirefoxAccount.v119": "ff8f9f4c f38ba9ee a402065d",
+  "QuickAnswers.Settings.LearnMore.v158": "8609a802 d9b20450 9378d0d2",
   "Settings.AIControls.AIPoweredFeaturesSection.AvailableStatus.v151": "2fe31190 98d71668 82a6d9e6",
   "Settings.AIControls.AIPoweredFeaturesSection.AvailableStatusDescription.v151": "cf2f6eda 0b042611 a72f03b3",
   "Settings.AIControls.AIPoweredFeaturesSection.BlockedStatus.v151": "7fa8e14d 039bd67d edd81423",
@@ -1175,6 +1186,7 @@
   "WebCompatReporter.Category.SiteNotUsable.v154": "9f8df3c8 e4a617a5 9819493c",
   "WebCompatReporter.Category.VideoOrAudio.v154": "fcf5aed8 6d872e60 f5634cc3",
   "WebCompatReporter.Fields.ChooseIssueTypeAccessibilityHint.v156": "d75e1894 49b21065 b7b7ff38",
+  "WebCompatReporter.Fields.ChooseSubOptionAccessibilityHint.v156": "c652b647 73ba17c4 4b7bca50",
   "WebCompatReporter.Fields.DetailsAccessibilityLabel.v154": "75328c7d 8ca4df18 1a96f349",
   "WebCompatReporter.Fields.DetailsPlaceholder.v154": "d890bf25 34d53241 c8f1bfb5",
   "WebCompatReporter.Fields.URLError.v155": "5c447700 093d858c d6c318ef",

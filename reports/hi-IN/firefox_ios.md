@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `8f5aca68ae4b` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `8f5aca68ae4b` |
-| **Previous run** | 2026-09-14 @ `e8592a898dc1` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 602 |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
+| **Previous run** | 2026-09-14 @ `8f5aca68ae4b` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 1 of 603 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for hi-IN: [android](android.md)
 
@@ -46,10 +45,10 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 23 |
-| Strings | 602 |
-| Missing strings | 1,320 |
+| Strings | 603 |
+| Missing strings | 1,347 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 73 |
+| Files absent from the locale | 74 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -60,11 +59,11 @@ _Nothing retired._
 
 ### Completeness
 
-**1,320 strings** are not translated yet, concentrated in:
+**1,347 strings** are not translated yet, concentrated in:
 
 - `Shared/Supporting Files/en-US.lproj/Onboarding.strings` — 158
 - `Shared/Supporting Files/en-US.lproj/MainMenu.strings` — 151
-- `Shared/Supporting Files/en-US.lproj/Settings.strings` — 145
+- `Shared/Supporting Files/en-US.lproj/Settings.strings` — 151
 - `hi-IN/firefox-ios.xliff` — 135
 - `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — 73
 - `Shared/Supporting Files/en-US.lproj/WebCompatReporter.strings` — 52

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `e8592a898dc1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `e8592a898dc1` |
-| **Previous run** | 2026-09-07 @ `386c3ca4eca7` |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
+| **Previous run** | 2026-09-14 @ `e8592a898dc1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1,895 of 1,911 |
+| **Strings reviewed this run** | 0 of 1,911 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for en-CA: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `MainMenu.TabsSection.AccessibilityLabels.NewPrivateTab.v132` — `en-CA/firefox-ios.xliff` — Capitalization changed from source sentence case to title case in an accessibility label.
-    - Current: `New Private Tab`
-    - Source: `New private tab`
-    - Suggest: `New private tab`
-    - The en-US accessibility label is "New private tab" (sentence case); en-CA has no capitalization rule requiring title case, and sibling accessibility labels in this file (e.g. "Find in page", "Switch to desktop site") keep sentence case.
-- `MainMenu.TabsSection.AccessibilityLabels.NewTab.v132` — `en-CA/firefox-ios.xliff` — Capitalization changed from source sentence case to title case in an accessibility label.
-    - Current: `New Tab`
-    - Source: `New tab`
-    - Suggest: `New tab`
-    - The en-US accessibility label is "New tab" (sentence case); other accessibility labels in this file retain sentence case, so this is an inconsistent, unneeded change.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -55,9 +46,9 @@ _Nothing retired._
 |---|---|
 | Files | 95 |
 | Strings | 1,911 |
-| Missing strings | 11 |
+| Missing strings | 39 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 2 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -68,18 +59,20 @@ _Nothing retired._
 
 ### Completeness
 
-**11 strings** are not translated yet, concentrated in:
+**39 strings** are not translated yet, concentrated in:
 
+- `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings` — 22
+- `en-CA/firefox-ios.xliff` — 7
 - `en-CA/firefox-ios.xliff` — 3
 - `Shared/Supporting Files/en-US.lproj/GoogleLens.strings` — 2
 - `en-CA/firefox-ios.xliff` — 2
 - `en-CA/firefox-ios.xliff` — 2
 - `en-CA/firefox-ios.xliff` — 1
-- `en-CA/firefox-ios.xliff` — 1
 
 **Files absent from the locale:**
 
 - `Shared/Supporting Files/en-US.lproj/GoogleLens.strings`
+- `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
