@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e44f1369fb6d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8ffd279d75ec` |
-| **Previous run** | 2026-09-07 @ `3c0c507b8d42` |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
+| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 104 of 16,377 |
+| **Strings reviewed this run** | 73 of 16,460 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,23 +18,13 @@ Also for it: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (1)
 
-- `ip-protection-site-rules-button` — `browser/browser/ipProtection.ftl` — Double space and missing article in the button label.
-    - Current: `Gestisci  regole per i siti web`
-    - Source: `description: Set rules for sites that need extra privacy or VPN turned off. label: Manage website rules`
-    - Suggest: `Gestisci le regole per i siti web`
-    - The label contains a doubled space between "Gestisci" and "regole" and drops the article used in the identical string ip-protection-site-rules-header ("Gestisci le regole per i siti web").
-- `newtab-wallpaper-firefox-sitting-hill-dark` — `browser/browser/newtab/newtab.ftl` — "sitting" rendered as "accovacciata" (crouching), inconsistent with the parallel string which uses "seduta".
-    - Current: `Una volpe accovacciata su colline viola scuro`
-    - Source: `A fox sitting on dark purple hills`
-    - Suggest: `Una volpe seduta su colline viola scuro`
-    - en-US says "A fox sitting on dark purple hills"; the companion string newtab-wallpaper-firefox-sitting-hill-light translates the same "sitting" as "seduta". "Accovacciata" means crouching.
-- `newtab-wallpaper-firefox-hills-light` — `browser/browser/newtab/newtab.ftl` — "light hills" rendered as "colline chiare" here but "colline luminose" in the other light-hills strings.
-    - Current: `Una volpe corre su colline chiare`
-    - Source: `A fox running over light hills`
-    - Suggest: `Una volpe corre su colline luminose`
-    - The same en-US term "light hills" is translated inconsistently across newtab-wallpaper-firefox-sitting-hill-light and newtab-wallpaper-firefox-sky-light ("colline luminose") within the same surface.
+- `newtab-search-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Search options" translated as "Impostazioni di ricerca" (search settings) instead of "Opzioni di ricerca".
+    - Current: `Impostazioni di ricerca`
+    - Source: `aria-label: Search options`
+    - Suggest: `Opzioni di ricerca`
+    - The source says "Search options"; "Impostazioni" means settings, and the sibling string "More options" is correctly rendered "Altre opzioni", making the terminology inconsistent.
 
 ### ✅ Fixed since the last run (0)
 
@@ -59,9 +49,9 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 336 |
-| Strings | 16,377 |
+| Strings | 16,460 |
 | Missing strings | 0 |
-| Obsolete strings | 8 |
+| Obsolete strings | 13 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 10 |
 | Fluent / properties syntax errors | 0 |
@@ -92,7 +82,7 @@ The locale is complete against the en-US source.
 - `toolkit/toolkit/enterprise/enterprise.ftl`
 - `toolkit/toolkit/enterprise/felt.ftl`
 
-_201 strings. These files exist in the locale tree but not in the en-US reference — they are maintained elsewhere. The model review is a comparison against en-US, so it skips them entirely; only the checks that need no reference ran. Nothing reported from these files means nothing was looked for, not that they are clean._
+_214 strings. These files exist in the locale tree but not in the en-US reference — they are maintained elsewhere. The model review is a comparison against en-US, so it skips them entirely; only the checks that need no reference ran. Nothing reported from these files means nothing was looked for, not that they are clean._
 
 ### Conventions detected in this locale
 
@@ -100,12 +90,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 945, `straight-double` 25 | **curly-double** |
-| apostrophe | `typographic` 1749, `straight` 6 | **typographic** |
+| quotes | `curly-double` 951, `straight-double` 25 | **curly-double** |
+| apostrophe | `typographic` 1748, `straight` 6 | **typographic** |
 | ellipsis | `char` 408 | **char** |
 | dash | `em` 51, `en` 16 | **em** |
 | nbsp | `total` 12, `before-punctuation` 4, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 701, `formal` 47 | **informal** |
+| register | `informal` 713, `formal` 47 | **informal** |
 
 ---
 
@@ -115,14 +105,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (9)
+## 3. Open findings (10)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 2 |
-| 3 | Degraded language (grammar, spelling, terminology) | 5 |
+| 3 | Degraded language (grammar, spelling, terminology) | 6 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
@@ -134,6 +124,11 @@ _Nothing reported._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `newtab-search-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Search options" translated as "Impostazioni di ricerca" (search settings) instead of "Opzioni di ricerca".
+    - Current: `Impostazioni di ricerca`
+    - Source: `aria-label: Search options`
+    - Suggest: `Opzioni di ricerca`
+    - The source says "Search options"; "Impostazioni" means settings, and the sibling string "More options" is correctly rendered "Altre opzioni", making the terminology inconsistent.
 - `newtab-wallpaper-firefox-sitting-hill-dark` — `browser/browser/newtab/newtab.ftl` — "sitting" rendered as "accovacciata" (crouching), inconsistent with the parallel string which uses "seduta".
     - Current: `Una volpe accovacciata su colline viola scuro`
     - Source: `A fox sitting on dark purple hills`

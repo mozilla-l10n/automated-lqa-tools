@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `fc8fd09d4a18` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `d0b2e9748b3b` |
-| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 15,539 |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
+| **Previous run** | 2026-09-14 @ `fc8fd09d4a18` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 44 of 15,583 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for sl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
@@ -19,9 +18,18 @@ Also for sl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `newtab-wallpaper-firefox-desert-light` — `browser/browser/newtab/newtab.ftl` — "A fox running" translated as "a fox sitting".
+    - Current: `Lisica, ki sedi v svetli puščavi`
+    - Source: `A fox running across a light desert`
+    - Suggest: `Lisica, ki teče po svetli puščavi`
+    - The en-US says the fox is running across a light desert, not sitting; the dark variant is the sitting one.
+- `newtab-recent-searches-row-remove` — `browser/browser/newtab/newtab.ftl` — Straight ASCII double quotes used instead of the curly quotes in the source.
+    - Current: `Odstrani "{ $search }" iz nedavnih iskanj`
+    - Source: `aria-label: Remove “{ $search }” from recent searches`
+    - Suggest: `Odstrani „{ $search }“ iz nedavnih iskanj`
+    - The en-US uses typographic quotes “ ”; Slovenian convention here uses curly quotes.
 
 ### ✅ Fixed since the last run (0)
 
@@ -46,8 +54,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 325 |
-| Strings | 15,539 |
-| Missing strings | 637 |
+| Strings | 15,583 |
+| Missing strings | 650 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
@@ -64,20 +72,20 @@ _Nothing retired._
 
 ### Completeness
 
-**637 strings** are not translated yet, concentrated in:
+**650 strings** are not translated yet, concentrated in:
 
 - `browser/browser/aiWindow.ftl` — 139
 - `browser/browser/aiWindowContent.ftl` — 67
+- `dom/chrome/dom/dom.properties` — 48
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 48
-- `dom/chrome/dom/dom.properties` — 46
 - `browser/browser/ipProtection.ftl` — 44
-- `browser/browser/newtab/newtab.ftl` — 32
 - `browser/browser/aiFeatures.ftl` — 27
-- `dom/chrome/security/security.properties` — 22
+- `dom/chrome/security/security.properties` — 25
+- `browser/browser/newtab/newtab.ftl` — 23
 - `browser/browser/preferences/preferences.ftl` — 19
-- `browser/browser/newtab/onboarding.ftl` — 16
+- `toolkit/toolkit/about/aboutPDF.ftl` — 19
+- `devtools/client/debugger.properties` — 16
 - `toolkit/toolkit/main-window/autocomplete.ftl` — 16
-- `devtools/client/debugger.properties` — 14
 
 **Files absent from the locale:**
 
@@ -91,10 +99,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 267, `straight-double` 257, `curly-single` 50, `guillemet` 5 | _mixed_ |
+| quotes | `curly-double` 267, `straight-double` 258, `curly-single` 50, `guillemet` 5 | _mixed_ |
 | apostrophe | `typographic` 50, `straight` 51 | _mixed_ |
 | ellipsis | `char` 356, `ascii` 33 | **char** |
-| dash | `em` 13, `en` 115 | **en** |
+| dash | `em` 13, `en` 116 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 8 | _mixed_ |
 | register | `informal` 8, `formal` 514 | **formal** |
 
@@ -107,7 +115,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (41)
+## 3. Open findings (43)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -122,9 +130,9 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 11 |
+| 2 | Wrong content (says something other than the English) | 12 |
 | 3 | Degraded language (grammar, spelling, terminology) | 24 |
-| 4 | Cosmetic (typography, spacing) | 6 |
+| 4 | Cosmetic (typography, spacing) | 7 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -145,6 +153,11 @@ _Also listed under their own category below._
     - Source: `It looks like you haven’t started { -brand-short-name } in a while. Do you want to clean it up for a fresh, like-new experience? And by the way, welcome back!`
     - Suggest: `Ga želite počistiti, da bo deloval kot nov?`
     - The en-US only says "clean it up for a fresh, like-new experience"; the Slovenian asserts the browser is full of junk. The parallel string uses the neutral "počistimo".
+- `newtab-wallpaper-firefox-desert-light` — `browser/browser/newtab/newtab.ftl` — "A fox running" translated as "a fox sitting".
+    - Current: `Lisica, ki sedi v svetli puščavi`
+    - Source: `A fox running across a light desert`
+    - Suggest: `Lisica, ki teče po svetli puščavi`
+    - The en-US says the fox is running across a light desert, not sitting; the dark variant is the sitting one.
 - `newtab-wallpaper-your-images-folder` — `browser/browser/newtab/newtab.ftl` — Accessible name changed from "Your images, wallpapers that you have saved" to "Your images and wallpapers that you have saved".
     - Current: `Vaše slike in ozadja, ki ste jih shranili`
     - Source: `aria-label: Your images, wallpapers that you have saved`
@@ -274,6 +287,11 @@ _Also listed under their own category below._
 
 - `restore-from-backup-profiles-disabled-message` — `browser/browser/backupSettings.ftl` — Double space before "zamenjali".
     - Source: `This will replace all your current { -brand-short-name } data with your backup.`
+- `newtab-recent-searches-row-remove` — `browser/browser/newtab/newtab.ftl` — Straight ASCII double quotes used instead of the curly quotes in the source.
+    - Current: `Odstrani "{ $search }" iz nedavnih iskanj`
+    - Source: `aria-label: Remove “{ $search }” from recent searches`
+    - Suggest: `Odstrani „{ $search }“ iz nedavnih iskanj`
+    - The en-US uses typographic quotes “ ”; Slovenian convention here uses curly quotes.
 - `newtab-stocks-search-loading` — `browser/browser/newtab/newtab.ftl` — Space inserted before the ellipsis character.
     - Current: `Nalaganje …`
     - Source: `Loading…`

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e44f1369fb6d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8ffd279d75ec` |
-| **Previous run** | 2026-09-07 @ `3c0c507b8d42` |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
+| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 59 of 15,968 |
+| **Strings reviewed this run** | 38 of 16,005 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -20,47 +20,40 @@ Also for zh-CN: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ### 🆕 New findings (6)
 
-- `refresh-unused-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — Uses informal 你 instead of the locale's formal 您, inconsistent with the parallel string refresh-reinstalled-profile-infobar-message.
-    - Current: `看起来你有一段时间没有打开`
-    - Source: `It looks like you haven’t started { -brand-short-name } in a while. Do you want to clean it up for a fresh, like-new experience? And by the way, welcome back!`
-    - Suggest: `看起来您有一段时间没有打开`
-    - The zh-CN convention is the formal 您; the adjacent string refresh-reinstalled-profile-infobar-message uses 您, so this mixes registers.
-- `identity-description-tls-key-logging-message` — `browser/browser/browser.ftl` — Adds "其他" (other), which the English "An app or service" does not say.
-    - Current: `其他应用或服务可能可以看到您来自此网站的加密流量。`
-    - Source: `An app or service may see your encrypted traffic from this site.`
-    - Suggest: `某个应用或服务可能可以看到您来自此网站的加密流量。`
-    - en-US says "An app or service may see"; "其他" implies other apps besides Firefox, a claim the source does not make.
-- `tls-key-logging-notice-nav` — `browser/browser/preferences/preferences.ftl` — Adds "其他" (other), not present in the English "An app or service".
-    - Current: `其他应用或服务可能可以看到您的加密流量。`
-    - Source: `label: An app or service may see your encrypted traffic.`
-    - Suggest: `某个应用或服务可能可以看到您的加密流量。`
-    - The source is an indefinite "An app or service", not "other apps or services".
-- `user-context-add-container-panel-item` — `toolkit/toolkit/global/contextual-identity.ftl` — "container" rendered as "身份" instead of the established zh-CN term "身份标签"/"容器".
+- `user-context-add-container2` — `toolkit/toolkit/global/contextual-identity.ftl` — "container" is rendered as 「身份」 instead of the established zh-CN term 「容器」.
     - Current: `添加新身份`
-    - Source: `(value): Add new container accesskey: A`
-    - Suggest: `添加新身份标签`
-    - en-US "Add new container" refers to the Container feature; "身份" alone means "identity" and loses the container concept, and is inconsistent with the feature's established zh-CN name.
-- `user-context-manage-containers-panel-item` — `toolkit/toolkit/global/contextual-identity.ftl` — "Manage containers" rendered as "管理身份", dropping the container terminology.
+    - Source: `label: Add new container`
+    - Suggest: `添加新容器`
+    - Firefox Container Tabs are consistently translated as 容器标签页/容器 in zh-CN; 身份 names a different concept and is inconsistent with the rest of the container UI.
+- `user-context-manage-containers2` — `toolkit/toolkit/global/contextual-identity.ftl` — "containers" is rendered as 「身份」 instead of the established zh-CN term 「容器」.
     - Current: `管理身份`
-    - Source: `(value): Manage containers accesskey: o`
-    - Suggest: `管理身份标签`
-    - en-US "containers" is the Container feature name; "身份" alone means "identity" and is inconsistent with the feature's established zh-CN rendering.
-- `newtab-widget-lists-change-list` — `browser/browser/newtab/newtab.ftl` — "Change list" (switch which list is shown) translated as "更换清单" which reads as replacing the list.
-    - Current: `更换清单`
-    - Source: `aria-label: Change list title: Change list`
-    - Suggest: `切换清单`
-    - The developer comment states "Change" is a verb meaning the button switches which list is displayed; "更换" implies replacing/substituting the list itself.
+    - Source: `label: Manage containers`
+    - Suggest: `管理容器`
+    - Firefox Container Tabs are consistently translated as 容器 in zh-CN; 身份 names a different concept.
+- `user-context-add-container2-panel-item` — `toolkit/toolkit/global/contextual-identity.ftl` — "container" is rendered as 「身份」 instead of the established zh-CN term 「容器」.
+    - Current: `添加新身份`
+    - Source: `Add new container`
+    - Suggest: `添加新容器`
+    - Inconsistent with the zh-CN term 容器 used for Firefox container tabs.
+- `user-context-manage-containers2-panel-item` — `toolkit/toolkit/global/contextual-identity.ftl` — "containers" is rendered as 「身份」 instead of the established zh-CN term 「容器」.
+    - Current: `管理身份`
+    - Source: `Manage containers`
+    - Suggest: `管理容器`
+    - Inconsistent with the zh-CN term 容器 used for Firefox container tabs.
+- `smartwindow-footer-history` — `browser/browser/aiWindow.ftl` — The same source word "History" is rendered inconsistently as 历史记录 (aria-label/tooltip) and 历史 (label).
+    - Current: `label: 历史`
+    - Source: `aria-label: History label: History tooltiptext: History`
+    - Suggest: `label: 历史记录`
+    - en-US uses the identical string for all three attributes; zh-CN uses 历史记录 elsewhere for History, so the visible label should match.
+- `user-context-banking2` — `toolkit/toolkit/global/contextual-identity.ftl` — "Banking" is rendered as 金融 (finance) rather than 银行/网银.
+    - Current: `金融`
+    - Source: `label: Banking`
+    - Suggest: `银行`
+    - The en-US container name is specifically Banking; 金融 broadens it to finance in general.
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (0)
 
-- `newtab-privacy-message-info-1-cta` — `browser/browser/newtab/newtab.ftl` — Same en-US string "View protections" translated inconsistently with the sibling CTA strings.
-    - Current: `查看保护情况`
-    - Source: `View protections`
-    - Suggest: `查看保护信息`
-    - All other newtab-privacy-message-info-*-cta strings with identical en-US source "View protections" use 查看保护信息; this one differs on the same surface.
-- `newtab-privacy-across-sites` — `browser/browser/newtab/newtab.ftl` — newtab-privacy-across-sites (newtab.ftl) — "Across { $count } sites" → "包含 { $count } 个网站" (includes) → SUGGEST: "涉及 { $count } 个网站" (blocked across).
-    - Source: `{$count ->} [one] Across { $count } site [other] Across { $count } sites`
-    - Suggest: `"包含 { $count } 个网站"`
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -70,11 +63,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `about-logins-confirm-remove-all-dialog-title` — `browser/browser/aboutLogins.ftl` — `about-logins-confirm-remove-all-dialog-title` has plural variant ['one'], which zh-CN does not have
-    - Current: `{$count ->} [one] 确定要移除 { $count } 条登录信息吗？ [other] 确定要移除全部共 { $count } 条登录信息吗？`
-    - zh-CN has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+_Nothing retired._
 
 ---
 
@@ -83,8 +74,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 325 |
-| Strings | 15,968 |
-| Missing strings | 200 |
+| Strings | 16,005 |
+| Missing strings | 228 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
@@ -101,20 +92,20 @@ _Nothing to re-read._
 
 ### Completeness
 
-**200 strings** are not translated yet, concentrated in:
+**228 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 27
+- `toolkit/toolkit/about/aboutPDF.ftl` — 21
 - `toolkit/services/aboutSyncLog.ftl` — 20
 - `browser/browser/newtab/onboarding.ftl` — 19
 - `devtools/client/toolbox-options.ftl` — 18
-- `toolkit/toolkit/about/aboutNetworking.ftl` — 15
-- `dom/chrome/dom/dom.properties` — 12
+- `toolkit/toolkit/about/aboutNetworking.ftl` — 16
+- `dom/chrome/dom/dom.properties` — 14
+- `browser/browser/newtab/newtab.ftl` — 12
 - `toolkit/toolkit/about/url-classifier.ftl` — 12
 - `toolkit/toolkit/neterror/netError.ftl` — 12
 - `toolkit/toolkit/main-window/autocomplete.ftl` — 10
 - `browser/browser/ipProtection.ftl` — 9
 - `devtools/client/inspector.ftl` — 7
-- `toolkit/toolkit/pdfviewer/viewer.ftl` — 7
 
 **Files absent from the locale:**
 
@@ -128,11 +119,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 874, `straight-double` 45, `curly-single` 37 | **curly-double** |
+| quotes | `curly-double` 877, `straight-double` 45, `curly-single` 37 | **curly-double** |
 | apostrophe | `typographic` 42, `straight` 20 | _mixed_ |
 | ellipsis | `char` 369, `ascii` 12 | **char** |
 | dash | `em` 49, `en` 2 | **em** |
-| fullwidth | `punctuation` 8286 | **punctuation** |
+| fullwidth | `punctuation` 8292 | **punctuation** |
 | register | `informal` 14, `formal` 1484 | **formal** |
 
 ---
@@ -144,14 +135,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (66)
+## 3. Open findings (72)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 4 |
-| 2 | Wrong content (says something other than the English) | 15 |
-| 3 | Degraded language (grammar, spelling, terminology) | 12 |
+| 2 | Wrong content (says something other than the English) | 16 |
+| 3 | Degraded language (grammar, spelling, terminology) | 17 |
 | 4 | Cosmetic (typography, spacing) | 35 |
 
 ### A. Functional, markup, variables & plurals
@@ -282,6 +273,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Loading URL`
     - Suggest: `加载方 URL`
     - Developer comment says this is the URL that loads the URL being tested (a frame's URL), i.e. a label, not a status message.
+- `user-context-banking2` — `toolkit/toolkit/global/contextual-identity.ftl` — "Banking" is rendered as 金融 (finance) rather than 银行/网银.
+    - Current: `金融`
+    - Source: `label: Banking`
+    - Suggest: `银行`
+    - The en-US container name is specifically Banking; 金融 broadens it to finance in general.
 - `moz-box-link-opens-in-new-tab` — `toolkit/toolkit/global/mozBoxBase.ftl` — "a new tab" is translated as "新建窗口" (new window) instead of a new tab.
     - Current: `新建窗口打开`
     - Source: `Opens in a new tab`
@@ -294,6 +290,11 @@ _Nothing in this category._
 
 ### D. Terminology, register & consistency
 
+- `smartwindow-footer-history` — `browser/browser/aiWindow.ftl` — The same source word "History" is rendered inconsistently as 历史记录 (aria-label/tooltip) and 历史 (label).
+    - Current: `label: 历史`
+    - Source: `aria-label: History label: History tooltiptext: History`
+    - Suggest: `label: 历史记录`
+    - en-US uses the identical string for all three attributes; zh-CN uses 历史记录 elsewhere for History, so the visible label should match.
 - `refresh-unused-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — Uses informal 你 instead of the locale's formal 您, inconsistent with the parallel string refresh-reinstalled-profile-infobar-message.
     - Current: `看起来你有一段时间没有打开`
     - Source: `It looks like you haven’t started { -brand-short-name } in a while. Do you want to clean it up for a fresh, like-new experience? And by the way, welcome back!`
@@ -323,11 +324,31 @@ _Nothing in this category._
     - Source: `(value): Add new container accesskey: A`
     - Suggest: `添加新身份标签`
     - en-US "Add new container" refers to the Container feature; "身份" alone means "identity" and loses the container concept, and is inconsistent with the feature's established zh-CN name.
+- `user-context-add-container2` — `toolkit/toolkit/global/contextual-identity.ftl` — "container" is rendered as 「身份」 instead of the established zh-CN term 「容器」.
+    - Current: `添加新身份`
+    - Source: `label: Add new container`
+    - Suggest: `添加新容器`
+    - Firefox Container Tabs are consistently translated as 容器标签页/容器 in zh-CN; 身份 names a different concept and is inconsistent with the rest of the container UI.
+- `user-context-add-container2-panel-item` — `toolkit/toolkit/global/contextual-identity.ftl` — "container" is rendered as 「身份」 instead of the established zh-CN term 「容器」.
+    - Current: `添加新身份`
+    - Source: `Add new container`
+    - Suggest: `添加新容器`
+    - Inconsistent with the zh-CN term 容器 used for Firefox container tabs.
 - `user-context-manage-containers-panel-item` — `toolkit/toolkit/global/contextual-identity.ftl` — "Manage containers" rendered as "管理身份", dropping the container terminology.
     - Current: `管理身份`
     - Source: `(value): Manage containers accesskey: o`
     - Suggest: `管理身份标签`
     - en-US "containers" is the Container feature name; "身份" alone means "identity" and is inconsistent with the feature's established zh-CN rendering.
+- `user-context-manage-containers2` — `toolkit/toolkit/global/contextual-identity.ftl` — "containers" is rendered as 「身份」 instead of the established zh-CN term 「容器」.
+    - Current: `管理身份`
+    - Source: `label: Manage containers`
+    - Suggest: `管理容器`
+    - Firefox Container Tabs are consistently translated as 容器 in zh-CN; 身份 names a different concept.
+- `user-context-manage-containers2-panel-item` — `toolkit/toolkit/global/contextual-identity.ftl` — "containers" is rendered as 「身份」 instead of the established zh-CN term 「容器」.
+    - Current: `管理身份`
+    - Source: `Manage containers`
+    - Suggest: `管理容器`
+    - Inconsistent with the zh-CN term 容器 used for Firefox container tabs.
 
 ### E. Typography, punctuation & spacing
 

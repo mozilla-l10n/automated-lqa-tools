@@ -2238,6 +2238,7 @@
   "genai-settings-chat-lechat-links-2": "44a8ef7f aa05367e",
   "genai-settings-chat-localhost-links": "de9be671 e4904358",
   "genai-shortcut-button": "e6c0f843 12e89a46",
+  "genai-shortcut-button-2": "2a1bba08 6cd72e29 76fe5c82",
   "genai-shortcuts-hide": "0e61da32 091ac8c1",
   "genai-shortcuts-selected-warning": "5ba18c3d 0b21d379",
   "genai-shortcuts-selected-warning-generic": "5197f398 15672be5",
@@ -13601,8 +13602,11 @@
  "toolkit/toolkit/global/contextual-identity.ftl": {
   "user-context-add-container": "5d40664d d219ebce",
   "user-context-add-container-panel-item": "5ba74f8a 774d69d2",
+  "user-context-add-container2": "1b93c294 2523dc86",
+  "user-context-add-container2-panel-item": "7b5ca3ee d5f64086",
   "user-context-banking": "6f219223 971fcdd2",
   "user-context-banking-panel-item": "02f0a4a0 a30f554d",
+  "user-context-banking2": "bf62ca6f e3207453",
   "user-context-color-blue": "55086c65 6d398253",
   "user-context-color-cyan": "1c99e7ba 1e6f57bf",
   "user-context-color-gray": "1d90e4c1 a606b716",
@@ -13628,14 +13632,21 @@
   "user-context-icon-vacation": "905a384a 5aa81965",
   "user-context-manage-containers": "5d26a6f4 443208c1",
   "user-context-manage-containers-panel-item": "aacc65aa 65288fea",
+  "user-context-manage-containers2": "429cec5a a2251bfa",
+  "user-context-manage-containers2-panel-item": "045c46f0 0e3f2835",
   "user-context-new-tab": "d859d84e 9a55d246",
   "user-context-new-tab-panel-item": "8522c5fe 42c57d42",
+  "user-context-new-tab2": "7a766665 827fa8a9",
+  "user-context-new-tab2-panel-item": "29a59364 8de96fe3",
   "user-context-personal": "9ade609a 9ade609a",
   "user-context-personal-panel-item": "7e4a9868 7e4a9868",
+  "user-context-personal2": "f2b92037 f2b92037",
   "user-context-shopping": "872ca0dc f1429f17",
   "user-context-shopping-panel-item": "165a774a f8c485e2",
+  "user-context-shopping2": "cf08aacd 19271e25",
   "user-context-work": "50861ef3 634c1f5c",
-  "user-context-work-panel-item": "74521bf1 5f06539a"
+  "user-context-work-panel-item": "74521bf1 5f06539a",
+  "user-context-work2": "6aad2b08 3323dfe7"
  },
  "toolkit/toolkit/global/cookieBannerHandling.ftl": {
   "cookie-banner-handled-webconsole": "3524defb cc651162"

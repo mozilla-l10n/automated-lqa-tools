@@ -190,7 +190,7 @@
   "file": "browser/browser/defaultBrowserNotification.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-09-14",
+  "last_seen": "2026-09-21",
   "locale": "it",
   "origin": {},
   "rationale": "In the source this string quotes “Web browser”, which is exactly the value of `desktop-entry-generic-name` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -329,6 +329,30 @@
   "string_id": "launch-on-login-autostart-infobar-message",
   "suggest": "",
   "summary": "✅ launch-on-login-autostart-infobar-message — browser/browser/newtab/asrouter.ftl:303 — double space removed.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Impostazioni di ricerca",
+  "dismissed_because": "",
+  "fid": "18b97a8dc534",
+  "file": "browser/browser/newtab/newtab.ftl",
+  "first_seen": "2026-09-21",
+  "impact": 3,
+  "last_seen": "2026-09-21",
+  "locale": "it",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source says \"Search options\"; \"Impostazioni\" means settings, and the sibling string \"More options\" is correctly rendered \"Altre opzioni\", making the terminology inconsistent.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "8fc34380",
+  "string_id": "newtab-search-widget-menu-button",
+  "suggest": "Opzioni di ricerca",
+  "summary": "\"Search options\" translated as \"Impostazioni di ricerca\" (search settings) instead of \"Opzioni di ricerca\".",
   "suppressed_by": ""
  },
  {
@@ -1144,7 +1168,7 @@
   "file": "toolkit/toolkit/about/aboutAddons.ftl",
   "first_seen": "2026-09-03",
   "impact": 2,
-  "last_seen": "2026-09-14",
+  "last_seen": "2026-09-21",
   "locale": "it",
   "origin": {},
   "rationale": "The label is “Fai una donazione”. An access key not in the label cannot be underlined and is unreachable by keyboard.",

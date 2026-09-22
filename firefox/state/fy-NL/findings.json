@@ -4956,6 +4956,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "Jo bewarre ôfbyldingen en eftergrûnen",
+  "dismissed_because": "",
+  "fid": "31433255a0fc",
+  "file": "browser/browser/newtab/newtab.ftl",
+  "first_seen": "2026-09-21",
+  "impact": 2,
+  "last_seen": "2026-09-21",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The en-US names one thing — the \"Your images\" folder — and explains it as wallpapers the user saved; the Frisian lists images and wallpapers as two things, losing the link to the \"Jo ôfbyldingen\" label.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "c31189c3",
+  "string_id": "newtab-wallpaper-your-images-folder",
+  "suggest": "Jo ôfbyldingen, eftergrûnen dy’t jo bewarre hawwe",
+  "summary": "The accessible name changes \"Your images, wallpapers that you have saved\" into \"Your saved images and wallpapers\", turning an appositive description into two separate categories.",
+  "suppressed_by": ""
+ },
+ {
   "category": "E",
   "check": "legacy",
   "current": "",
@@ -5452,6 +5476,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "Hâld de iennige grutte ûnôfhinklike browser ien klik fuort",
+  "dismissed_because": "",
+  "fid": "a6605c65d215",
+  "file": "browser/browser/newtab/onboarding.ftl",
+  "first_seen": "2026-09-21",
+  "impact": 3,
+  "last_seen": "2026-09-21",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The en-US means keeping the browser easily reachable (one click away); \"ien klik fuort\" reads as removing/keeping it away.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "7d40f99a",
+  "string_id": "onboarding-refresh-tou-pin-unchecked",
+  "suggest": "Hâld de iennige grutte ûnôfhinklike browser op ien klik ôfstân",
+  "summary": "\"a click away\" is rendered as \"ien klik fuort\", which in Frisian/Dutch idiom says the browser is one click *away/gone* rather than within one click's reach.",
+  "suppressed_by": ""
+ },
+ {
   "category": "A",
   "check": "legacy",
   "current": "",
@@ -5737,6 +5785,30 @@
   "string_id": "panic-button-open-new-window",
   "suggest": "In nij, skjin finster iepenje",
   "summary": "\"clean\" dropped → In nij, skjin finster iepenje",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "Spraakwerkenningsmodel download.",
+  "dismissed_because": "",
+  "fid": "dd3fa4f1fcec",
+  "file": "browser/browser/permissions.ftl",
+  "first_seen": "2026-09-21",
+  "impact": 3,
+  "last_seen": "2026-09-21",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "en-US \"Speech recognition model downloaded.\" states completion; the Frisian lacks a past participle form, reading as a noun/infinitive rather than \"is downloaden\".",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "09282b37",
+  "string_id": "speech-recognition-model-download-complete-message",
+  "suggest": "Spraakwerkenningsmodel download.\u0000",
+  "summary": "Past participle missing: \"download\" should be \"download(e)\" as a finished action, i.e. \"downloaden\"/\"ynladen\".",
   "suppressed_by": ""
  },
  {
@@ -8976,14 +9048,14 @@
   "file": "browser/browser/protections.ftl",
   "first_seen": "2026-08-11",
   "impact": 4,
-  "last_seen": "2026-09-14",
+  "last_seen": "2026-09-21",
   "locale": "fy-NL",
   "origin": {
    "report": "legacy",
    "section": "I. Typography & punctuation",
    "severity": "S5"
   },
-  "rationale": "The locale's quote convention is `curly-single` (793 occurrences).",
+  "rationale": "The locale's quote convention is `curly-single` (799 occurrences).",
   "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
@@ -10725,6 +10797,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "JSON-regels",
+  "dismissed_because": "",
+  "fid": "ce437101f2fe",
+  "file": "devtools/client/netmonitor.properties",
+  "first_seen": "2026-09-21",
+  "impact": 2,
+  "last_seen": "2026-09-21",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The developer comment explains this is the JSON Lines (JSONL/NDJSON) format name displayed as the payload type; it is a format identifier, not descriptive text.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "6e6db337",
+  "string_id": "jsonlScopeName",
+  "suggest": "JSON Lines",
+  "summary": "\"JSON Lines\" is a format name that should not be translated.",
+  "suppressed_by": ""
+ },
+ {
   "category": "C",
   "check": "legacy",
   "current": "Ynstellen bewarje",
@@ -11071,7 +11167,7 @@
   "file": "devtools/client/styleeditor.ftl",
   "first_seen": "2026-09-03",
   "impact": 2,
-  "last_seen": "2026-09-14",
+  "last_seen": "2026-09-21",
   "locale": "fy-NL",
   "origin": {},
   "rationale": "The label is “Bewarje”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
@@ -12023,6 +12119,30 @@
   "string_id": "statePartiallyChecked",
   "suggest": "foar in part oanfinke",
   "summary": "Wrong participle form: \"oanfinkt\" should be the past participle \"oanfinkt\" → \"oanfinke\"/\"oanfinkt\" mismatch with adjectival usage.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
+  "current": "Machtigingenbelied",
+  "dismissed_because": "",
+  "fid": "0f2e44dc31ca",
+  "file": "dom/chrome/security/security.properties",
+  "first_seen": "2026-09-21",
+  "impact": 3,
+  "last_seen": "2026-09-21",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "Same en-US term \"Permissions Policy\" rendered two different ways across related console messages.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "e4a3977e",
+  "string_id": "PermissionsPolicyUnsupportedFeatureName",
+  "suggest": "Machtigingsbelied",
+  "summary": "\"Permissions Policy\" is rendered as \"Machtigingenbelied\" here but as \"machtigingsbelied\" in dom.properties, an inconsistent term for the same spec name.",
   "suppressed_by": ""
  },
  {
@@ -13173,6 +13293,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "label: Lochboek wiskje",
+  "dismissed_because": "",
+  "fid": "4660f0acdf03",
+  "file": "toolkit/services/aboutSyncLog.ftl",
+  "first_seen": "2026-09-21",
+  "impact": 3,
+  "last_seen": "2026-09-21",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "en-US \"Clear logs\" is plural and all other strings on this page use \"lochboeken\".",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "6fd281c9",
+  "string_id": "about-sync-log-clear-button",
+  "suggest": "label: Lochboeken wiskje",
+  "summary": "Plural \"logs\" rendered as singular \"Lochboek\", inconsistent with the other strings in the same surface.",
+  "suppressed_by": ""
+ },
+ {
   "category": "E",
   "check": "legacy",
   "current": "",
@@ -13904,6 +14048,30 @@
   "string_id": "legacy-extensions-description",
   "suggest": "",
   "summary": "Two main clauses run together — missing en",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "spraakwerkenning op apparaten",
+  "dismissed_because": "",
+  "fid": "a0ad7c40facf",
+  "file": "toolkit/toolkit/about/aboutAddons.ftl",
+  "first_seen": "2026-09-21",
+  "impact": 3,
+  "last_seen": "2026-09-21",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "en-US says on-device (local, on this device), not \"on devices\".",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "93c1a93a",
+  "string_id": "mlmodel-speech-recognition",
+  "suggest": "spraakwerkenning op it apparaat",
+  "summary": "\"on-device\" rendered as plural \"op apparaten\" (on devices), losing the on-device sense.",
   "suppressed_by": ""
  },
  {
@@ -15001,6 +15169,30 @@
   "string_id": "about-pdf-dropzone-error-generic",
   "suggest": "It opladen",
   "summary": "De oplaad → It opladen",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "Notysje tafoegje",
+  "dismissed_because": "",
+  "fid": "939862352e95",
+  "file": "toolkit/toolkit/about/aboutPDF.ftl",
+  "first_seen": "2026-09-21",
+  "impact": 3,
+  "last_seen": "2026-09-21",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The en-US \"Add notes\" is plural; the Frisian uses the singular form.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "2580b843",
+  "string_id": "about-pdf-feature-comments-heading",
+  "suggest": "Notysjes tafoegje",
+  "summary": "Plural \"notes\" rendered as singular \"Notysje\".",
   "suppressed_by": ""
  },
  {
@@ -17819,6 +18011,54 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "probearret betellingsgegevens fuort te smiten",
+  "dismissed_because": "",
+  "fid": "17e8a5e486a6",
+  "file": "toolkit/toolkit/formautofill/formAutofill.ftl",
+  "first_seen": "2026-09-21",
+  "impact": 2,
+  "last_seen": "2026-09-21",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The en-US says \"stored payment method information\"; the translation omits \"stored\" and widens the scope to payment data in general.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "41f0e74d",
+  "string_id": "autofill-delete-payment-method-os-prompt-other",
+  "suggest": "probearret bewarre ynformaasje oer betellingsmetoaden fuort te smiten",
+  "summary": "Drops \"stored\" and renders \"payment method information\" as \"betellingsgegevens\" (payment data).",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "bewarre betellingsgegevens fuort te smiten",
+  "dismissed_because": "",
+  "fid": "22143cd4fe3f",
+  "file": "toolkit/toolkit/formautofill/formAutofill.ftl",
+  "first_seen": "2026-09-21",
+  "impact": 2,
+  "last_seen": "2026-09-21",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source refers to payment method information; the Frisian says payment data generally, a broader claim than the source.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "6c642735",
+  "string_id": "autofill-delete-payment-method-os-prompt-windows",
+  "suggest": "bewarre ynformaasje oer betellingsmetoaden fuort te smiten",
+  "summary": "\"stored payment method information\" is translated as \"bewarre betellingsgegevens\" (stored payment data) instead of payment method information.",
+  "suppressed_by": ""
+ },
+ {
   "category": "E",
   "check": "legacy",
   "current": "",
@@ -19209,6 +19449,30 @@
   "string_id": "region-name-za",
   "suggest": "Súd-Afrika",
   "summary": "Zuid-Afrika → Súd-Afrika — Dutch; the file uses Súd- for kr, ss, gs",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
+  "current": "Betelmetoade fuortsmite?",
+  "dismissed_because": "",
+  "fid": "5c6a292e0482",
+  "file": "toolkit/toolkit/main-window/autocomplete.ftl",
+  "first_seen": "2026-09-21",
+  "impact": 3,
+  "last_seen": "2026-09-21",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "autocomplete-edit-payment-method and autocomplete-delete-payment-method in the same file use \"betellingsmetoade\"; the inconsistent term appears in the same UI surface.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "8bda1979",
+  "string_id": "autocomplete-remove-payment-method-title",
+  "suggest": "Betellingsmetoade fuortsmite?",
+  "summary": "\"payment method\" is rendered \"Betelmetoade\" here but \"betellingsmetoade\" in the neighbouring strings of the same dialog.",
   "suppressed_by": ""
  },
  {

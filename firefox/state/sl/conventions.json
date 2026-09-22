@@ -1,8 +1,8 @@
 {
  "_meta": {
   "locale": "sl",
-  "prose_chunks": 16192,
-  "strings": 15539
+  "prose_chunks": 16240,
+  "strings": 15583
  },
  "apostrophe": {
   "straight": 51,
@@ -10,7 +10,7 @@
  },
  "dash": {
   "em": 13,
-  "en": 115
+  "en": 116
  },
  "ellipsis": {
   "ascii": 33,
@@ -33,7 +33,7 @@
   "curly-double": 267,
   "curly-single": 50,
   "guillemet": 5,
-  "straight-double": 257
+  "straight-double": 258
  },
  "register": {
   "formal": 514,

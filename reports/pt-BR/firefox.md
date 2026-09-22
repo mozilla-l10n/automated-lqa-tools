@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e44f1369fb6d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8ffd279d75ec` |
-| **Previous run** | 2026-09-07 @ `3c0c507b8d42` |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
+| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 138 of 16,152 |
+| **Strings reviewed this run** | 81 of 16,233 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,120 +18,27 @@ Also for pt-BR: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (25)
+### 🆕 New findings (3)
 
-- `screenshotFilenameManual` — `devtools/shared/screenshot.properties` — `screenshotFilenameManual` uses straight double quotes
-    - Current: `O nome do arquivo (deve ter extensão ".png") onde gravar a captura de tela.`
-    - Source: `The name of the file (should have a ‘.png’ extension) to which we write the screenshot.`
-    - The locale's quote convention is `curly-double` (583 occurrences).
-- `CookieRejectedNonRequiresSecure2` — `netwerk/necko.properties` — `CookieRejectedNonRequiresSecure2` uses straight double quotes
-    - Current: `O cookie "%1$S" foi rejeitado porque tem o atributo "SameSite=None", mas está faltando o atributo "secure".`
-    - Source: `Cookie “%1$S” rejected because it has the “SameSite=None” attribute but is missing the “secure” attribute.`
-    - The locale's quote convention is `curly-double` (583 occurrences).
-- `CookieLaxForcedForBeta2` — `netwerk/necko.properties` — `CookieLaxForcedForBeta2` uses straight double quotes
-    - Current: `O cookie "%1$S" não tem o atributo "SameSite" com valor válido. Em breve, cookies sem o atributo "SameSite" ou com valor inválido serão tratados como "Lax". Significa que o cookie não será mais enviado em contextos de t…`
-    - Source: `Cookie “%1$S” does not have a proper “SameSite” attribute value. Soon, cookies without the “SameSite” attribute or with an invalid value will be treated as “Lax”. This means that the cookie will no longer be sent in thi…`
-    - The locale's quote convention is `curly-double` (583 occurrences).
-- `CookieSameSiteValueInvalid2` — `netwerk/necko.properties` — `CookieSameSiteValueInvalid2` uses straight double quotes
-    - Current: `Valor inválido de "SameSite" no cookie "%1$S". Os valores suportados são: "Lax", "Strict" e "None".`
-    - Source: `Invalid “SameSite“ value for cookie “%1$S”. The supported values are: “Lax“, “Strict“, “None“.`
-    - The locale's quote convention is `curly-double` (583 occurrences).
-- `MediaLoadUnsupportedTypeAttribute` — `dom/chrome/dom/dom.properties` — `MediaLoadUnsupportedTypeAttribute` uses straight double quotes
-    - Current: `O atributo "type" especificado de "%1$S" não é suportado. Falha no carregamento do recurso de mídia %2$S.`
-    - Source: `Specified “type” attribute of “%1$S” is not supported. Load of media resource %2$S failed.`
-    - The locale's quote convention is `curly-double` (583 occurrences).
-- `MediaLoadUnsupportedMimeType` — `dom/chrome/dom/dom.properties` — `MediaLoadUnsupportedMimeType` uses straight double quotes
-    - Current: `O atributo HTTP "Content-Type" de "%1$S" não é suportado. Falha no carregamento do recurso de mídia %2$S.`
-    - Source: `HTTP “Content-Type” of “%1$S” is not supported. Load of media resource %2$S failed.`
-    - The locale's quote convention is `curly-double` (583 occurrences).
-- `MalformedIntegrityHash` — `dom/chrome/security/security.properties` — `MalformedIntegrityHash` uses straight double quotes
-    - Current: `O elemento de script tem uma hash mal formada no atributo de integridade: "%1$S". O formato correto é "<algorítmo do hash>-<valor do hash>".`
-    - Source: `The script element has a malformed hash in its integrity attribute: “%1$S”. The correct format is “<hash algorithm>-<hash value>”.`
-    - The locale's quote convention is `curly-double` (583 occurrences).
-- `IneligibleResource` — `dom/chrome/security/security.properties` — `IneligibleResource` uses straight double quotes
-    - Current: `"%1$S" não é elegível para verificações de integridade, pois não é ativado por CORS nem é same-origin.`
-    - Source: `“%1$S” is not eligible for integrity checks since it’s neither CORS-enabled nor same-origin.`
-    - The locale's quote convention is `curly-double` (583 occurrences).
-- `UnsupportedHashAlg` — `dom/chrome/security/security.properties` — `UnsupportedHashAlg` uses straight double quotes
-    - Current: `Algoritmo hash não suportado no atributo 'integrity': "%1$S"`
-    - Source: `Unsupported hash algorithm in the integrity attribute: “%1$S”`
-    - The locale's quote convention is `curly-double` (583 occurrences).
-- `PrincipalWritingModePropagationWarning` — `dom/chrome/layout/layout_errors.properties` — `PrincipalWritingModePropagationWarning` uses straight double quotes
-    - Current: `Ao renderizar o elemento <html>, os valores usados das propriedades CSS "writing-mode", "direction" e "text-orientation" no elemento <html> são obtidos dos valores calculados do elemento <body>, não dos próprios valores…`
-    - Source: `When rendering the <html> element, the used values of CSS properties “writing-mode”, “direction”, and “text-orientation” on the <html> element are taken from the computed values of the <body> element, not from the <html…`
-    - The locale's quote convention is `curly-double` (583 occurrences).
-- `main-context-menu-pdfjs-save-page` — `browser/browser/browserContext.ftl` — `main-context-menu-pdfjs-save-page` uses three dots where this locale uses …
-    - Current: `Salvar seleção como...`
-    - Source: `label: Save selection as…`
-    - The tree uses … 384 times against 3 ASCII runs.
-- `webrtc-indicator-menuitem-sharing-browser-with` — `browser/browser/webrtcIndicator.ftl` — `webrtc-indicator-menuitem-sharing-browser-with` uses straight double quotes
-    - Current: `Compartilhando uma aba com "{ $streamTitle }"`
-    - Source: `label: Sharing a Tab with “{ $streamTitle }”`
-    - The locale's quote convention is `curly-double` (583 occurrences).
-- `home-homepage-custom-url` — `browser/browser/preferences/preferences.ftl` — `home-homepage-custom-url` uses three dots where this locale uses …
-    - Current: `Cole uma URL...`
-    - Source: `placeholder: Paste a URL…`
-    - The tree uses … 384 times against 3 ASCII runs.
-- `policy-DisableForgetButton` — `browser/browser/policies/policies-descriptions.ftl` — `policy-DisableForgetButton` uses straight double quotes
-    - Current: `Impedir acesso ao botão "Esquecer".`
-    - Source: `Prevent access to the Forget button.`
-    - The locale's quote convention is `curly-double` (583 occurrences).
-- `policy-DisableProfileRefresh` — `browser/browser/policies/policies-descriptions.ftl` — `policy-DisableProfileRefresh` uses straight double quotes
-    - Current: `Desativar o botão "Restaurar o { -brand-short-name }" na página about:support.`
-    - Source: `Disable the Refresh { -brand-short-name } button in the about:support page.`
-    - The locale's quote convention is `curly-double` (583 occurrences).
-- `policy-Extensions` — `browser/browser/policies/policies-descriptions.ftl` — `policy-Extensions` uses straight double quotes
-    - Current: `Instalar, desinstalar e bloquear extensões. A opção “Instalar” recebe URLs ou caminhos como parâmetros. As opções “Desinstalar” e "Bloqueado" usam IDs de extensões.`
-    - Source: `Install, uninstall or lock extensions. The Install option takes URLs or paths as parameters. The Uninstall and Locked options take extension IDs.`
-    - The locale's quote convention is `curly-double` (583 occurrences).
-- `policy-HardwareAcceleration` — `browser/browser/policies/policies-descriptions.ftl` — `policy-HardwareAcceleration` uses straight double quotes
-    - Current: `Caso definido como "false", desativar a aceleração de hardware.`
-    - Source: `If false, turn off hardware acceleration.`
-    - The locale's quote convention is `curly-double` (583 occurrences).
-- `policy-OfferToSaveLogins` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OfferToSaveLogins` uses straight double quotes
-    - Current: `Impor as configurações para permitir que o { -brand-short-name } ofereça memorizar contas de acesso e senhas salvas. Tanto "true" como "false" são valores aceitos.`
-    - Source: `Enforce the setting to allow { -brand-short-name } to offer to remember saved logins and passwords. Both true and false values are accepted.`
-    - The locale's quote convention is `curly-double` (583 occurrences).
-- `newtab-discovery-empty-section-topstories-loading` — `browser/browser/newtab/newtab.ftl` — `newtab-discovery-empty-section-topstories-loading` uses three dots where this locale uses …
-    - Current: `Carregando...`
-    - Source: `Loading…`
-    - The tree uses … 384 times against 3 ASCII runs.
-- `experimental-features-fx-web-apps-description` — `toolkit/toolkit/firefoxlabs/features.ftl` — `experimental-features-fx-web-apps-description` uses straight double quotes
-    - Current: `Abra sites que você visita com frequência como aplicativos web a partir da barra de tarefas. Procure o ícone "Adicionar aba à barra de tarefas" à direita da barra de endereços para abrir o site em uma janela simplificad…`
-    - Source: `Open sites you frequently visit as a web app from your taskbar. Look for the “Add tab to taskbar” icon to the right the address bar to launch that site in a streamlined window with all of { -brand-product-name }’s prote…`
-    - The locale's quote convention is `curly-double` (583 occurrences).
-- `profile-has-selectable-profiles-message` — `toolkit/toolkit/global/profileSelection.ftl` — `profile-has-selectable-profiles-message` uses straight double quotes
-    - Current: `Para excluir este perfil, o abra e selecione "Gerenciar perfis" na seção de perfis do menu do { -brand-short-name }. Após excluir quaisquer perfis adicionais que você tenha criado aqui, pode voltar para about:profiles e…`
-    - Source: `To delete this profile, open it and select ”Manage profiles” from the profiles section of the { -brand-short-name } menu. After deleting any additional profiles you have created here, you can return to about:profiles an…`
-    - The locale's quote convention is `curly-double` (583 occurrences).
-- `speech-recognition-model-download-message` — `browser/browser/permissions.ftl` — Awkward/ungrammatical rendering of the download sentence and the "~" size approximation is dropped into odd phrasing.
-    - Current: `Para ser configurado, começará a ser baixado aproximadamente { $sizeMB } MB quando você continuar.`
-    - Source: `{ -brand-short-name } runs speech recognition locally, so the audio never leaves your device. To set this up, a ~{ $sizeMB } MB download will start when you continue.`
-    - Suggest: `Para configurar, será iniciado o download de aproximadamente { $sizeMB } MB quando você continuar.`
-    - The en-US says "To set this up, a ~{ $sizeMB } MB download will start when you continue." The pt-BR construction "Para ser configurado, começará a ser baixado aproximadamente X MB" is grammatically incorrect (subject/verb agreement and impersonal construction) and obscures the meaning.
-- `site-rules-status-heading` — `browser/browser/ipProtection.ftl` — "Your rule" translated as "Regra personalizada" (Custom rule).
-    - Current: `Regra personalizada`
-    - Source: `Your rule`
-    - Suggest: `Sua regra`
-    - The en-US heading is "Your rule", referring to a user-defined rule; "Regra personalizada" means "Custom rule", a different label.
-- `pdfjs-enabled-xfa` — `toolkit/toolkit/about/aboutSupport.ftl` — Agreement error: "Formulários XFA ativado" should be plural "ativados".
-    - Current: `Formulários XFA ativado`
-    - Source: `XFA Forms Enabled`
-    - Suggest: `Formulários XFA ativados`
-    - "Formulários" is plural, so the adjective must agree: "ativados".
-- `newtab-wallpaper-firefox-sitting-hill-dark` — `browser/browser/newtab/newtab.ftl` — Agreement error in "montes roxo escuro"; should be "montes roxo-escuros" or "montes de tom roxo escuro".
-    - Current: `Uma raposa sentada sobre montes roxo escuro`
-    - Source: `A fox sitting on dark purple hills`
-    - Suggest: `Uma raposa sentada sobre montes roxo-escuros`
-    - The en-US "dark purple hills" requires an adjective agreeing with the plural noun "montes".
+- `FullscreenDeniedPermissionsPolicy` — `dom/chrome/dom/dom.properties` — Stray space before the final period.
+    - Current: `diretivas Permissions Policy .`
+    - Source: `Request for fullscreen was denied because of Permissions Policy directives.`
+    - Suggest: `diretivas Permissions Policy.`
+    - The en-US has no space before the period; the extra space is a typography defect in the user-visible text.
+- `browser-languages-update-error` — `browser/browser/preferences/languages.ftl` — "or try again" rendered as "e tente novamente" (and), changing the alternative into a conjunction.
+    - Current: `Verifique a conexão com a internet e tente novamente.`
+    - Source: `message: { -brand-short-name } can’t update your languages right now. Check that you are connected to the internet or try again.`
+    - Suggest: `Verifique se você está conectado à internet ou tente novamente.`
+    - The en-US offers two alternatives ("Check that you are connected to the internet or try again"); the translation joins them with "e".
+- `about-pdf-feature-organize-description` — `toolkit/toolkit/about/aboutPDF.ftl` — "merge" (juntar/mesclar) was rendered as "misture" (mix/blend), which is not the PDF operation described.
+    - Current: `Reordene, remova, misture e exporte páginas.`
+    - Source: `Reorder, remove, merge, and export pages.`
+    - Suggest: `Reordene, remova, mescle e exporte páginas.`
+    - The en-US "merge" means combining pages/documents; "misturar" means to mix/shuffle, a different action. Elsewhere in the same feature set (pdf-features-notification-message) "merge" is translated as "juntar".
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `about-processes-utility-actor-hw-inference` — `toolkit/toolkit/about/aboutProcesses.ftl` — "Hardware Accelerated Inference" was rendered as "inference of hardware acceleration", inverting the modifier relationship.
-    - Current: `Inferência de aceleração de hardware`
-    - Source: `Hardware Accelerated Inference`
-    - Suggest: `Inferência acelerada por hardware`
-    - In en-US, "Hardware Accelerated" modifies "Inference": inference that is accelerated by hardware. The pt-BR reverses this to "inference of hardware acceleration".
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -141,152 +48,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (64)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `about-logins-confirm-remove-all-dialog-message` — `browser/browser/aboutLogins.ftl` — about-logins-confirm-remove-all-dialog-message, about-logins-confirm-remove-all-sync-dialog-message (all variants) — aboutLogins.ftl — restrictive relative with indefinite antecedent: quaisquer alertas de vazamento que aparecem aqui → que apareçam aqui (the newer …-message2/-message3 avoid the construction)
-    - Current: `quaisquer alertas de vazamento que aparecem aqui`
-    - Suggest: `que apareçam aqui`
-- `about-logins-confirm-remove-all-sync-dialog-message` — `browser/browser/aboutLogins.ftl` — about-logins-confirm-remove-all-sync-dialog-message ([other]) — aboutLogins.ftl — Serão removidas todos as contas → todas as contas
-    - Current: `Serão removidas todos as contas`
-    - Suggest: `todas as contas`
-- `pocket-panel-saved-removed-updated` — `browser/browser/aboutPocket.ftl` — "from Saves" dropped, making it identical to pocket-panel-saved-page-removed. Suggest: Página removida do que você salvou
-    - Suggest: `Página removida do que você salvou`
-- `addon-domain-blocked-by-policy` — `browser/browser/addonNotifications.ftl` — "software": xpinstall-prompt, xpinstall-disabled-locked, xpinstall-disabled, xpinstall-disabled-by-policy, addon-domain-blocked-by-policy, addon-install-domain-blocked-by-policy render it as um programa / software / programas
-- `xpinstall-disabled-locked` — `browser/browser/addonNotifications.ftl` — "software": xpinstall-prompt, xpinstall-disabled-locked, xpinstall-disabled, xpinstall-disabled-by-policy, addon-domain-blocked-by-policy, addon-install-domain-blocked-by-policy render it as um programa / software / programas
-- `enable-devtools-popup-description2` — `browser/browser/browser.ftl` — restore-page-problem-desc (aboutSessionRestore.ftl), crashed-single-offer-help-message, crashed-multiple-offer-help-message (aboutTabCrashed.ftl), enable-devtools-popup-description2 (browser.ftl), pin-tabs-callout-1-subtitle, pin-tabs-callout-2-subtitle (featureCallout.ftl), permissions-exceptions-manage-etp-desc (preferences/permissions.ftl), update-setting-write-failure-message2 (preferences.ft…
-- `quickactions-cmd-clearhistory` — `browser/browser/browser.ftl` — Lowercase where the sibling is capitalized: about-webrtc-fold-hide-msg/-show-msg, about-webrtc-raw-cand-hide-msg/-show-msg, about-webrtc-log-hide-msg/-show-msg and the matching .title attributes (aboutWebrtc.ftl); about-webrtc-aec-logging-off-state-msg, about-webrtc-save-page-msg (aboutWebrtc.ftl); about-telemetry-current-data-sidebar (aboutTelemetry.ftl); quickactions-cmd-clearhistory, quickacti…
-    - Suggest: `-show-msg`
-- `firefoxview-closed-tabs-placeholder-body` — `browser/browser/firefoxView.ftl` — transitive verb without object: você pode recuperar aqui → você pode recuperá-la aqui
-    - Current: `você pode recuperar aqui`
-    - Suggest: `você pode recuperá-la aqui`
-- `firefoxview-tabpickup-header` — `browser/browser/firefoxView.ftl` — "tab pickup": Escolha de abas (firefoxview-tabpickup-header) vs coleta de abas (continuous-onboarding-firefox-view-tab-pickup-title) vs sincronização de abas (callout-firefox-view-tab-pickup-title)
-    - Current: `Escolha de abas`
-- `genai-menu-ask-provider` — `browser/browser/genai.ftl` — "Ask { $provider }": Consultar (genai-menu-ask-provider, genai-input-ask-provider, genai-shortcut-button) vs Perguntar ao (genai-menu-ask-provider-2)
-    - Current: `Consultar`
-- `genai-onboarding-description` — `browser/browser/genai.ftl` — "AI chatbot": robô de conversa (genai-onboarding-description, sidebar-customization-callout-1-subtitle) vs chatbot de inteligência artificial everywhere else — including the next sentence of genai-onboarding-description itself
-    - Current: `robô de conversa`
-- `import-safari-permissions-string` — `browser/browser/migration.ftl` — a pasta “Safari“ → “Safari” (the other quotes in the same string are correct; note en-US also has this defect in this string)
-    - Current: `a pasta “Safari“`
-    - Suggest: `“Safari”`
-- `newtab-empty-section-topstories` — `browser/browser/newtab/newtab.ftl` — mais grandes histórias através da web → mais grandes histórias de toda a web (the generic variant uses "na web")
-    - Current: `mais grandes histórias através da web`
-    - Suggest: `mais grandes histórias de toda a web`
-- `addons-button-label` — `browser/browser/preferences/preferences.ftl` — addons-button-label2 (.label, .title), addons-button-label — preferences.ftl — Extensões e Temas → Extensões e temas
-    - Current: `Extensões e Temas`
-    - Suggest: `Extensões e temas`
-- `collection-studies-description` — `browser/browser/preferences/preferences.ftl` — antes de ser liberados para todos → antes de serem liberados para todos
-    - Current: `antes de ser liberados para todos`
-    - Suggest: `antes de serem liberados para todos`
-- `is-default` — `browser/browser/preferences/preferences.ftl` — content-blocking-etp-blocking-desc, is-default, is-not-default, is-default-browser-2 — preferences.ftl — these four start with a bare { -brand-short-name } while the rest of the file uses O { -brand-short-name }
-- `is-not-default` — `browser/browser/preferences/preferences.ftl` — content-blocking-etp-blocking-desc, is-default, is-not-default, is-default-browser-2 — preferences.ftl — these four start with a bare { -brand-short-name } while the rest of the file uses O { -brand-short-name }
-- `performance-use-recommended-settings-desc` — `browser/browser/preferences/preferences.ftl` — contains a sentence that no longer exists in en-US: "Desmarque se quiser alterar o uso de aceleração de hardware." Suggest: drop it.
-- `referrals-section-header` — `browser/browser/preferences/preferences.ftl` — the object is dropped, leaving the sentence incomplete. Current: Convidar a usar o navegador que põe a privacidade em primeiro lugar. → Suggest: Convide alguém a escolher o navegador que põe a privacidade em primeiro lugar.
-    - Current: `Convidar a usar o navegador que põe a privacidade em primeiro lugar.`
-    - Suggest: `Convide alguém a escolher o navegador que põe a privacidade em primeiro lugar.`
-- `search-suggestions-cant-show` — `browser/browser/preferences/preferences.ftl` — search-suggestions-cant-show, search-suggestions-cant-show-2 (.message) — barra de endereço (singular); ~20 other strings use barra de endereços
-- `default-bookmarks-toolbarfolder-description` — `browser/browser/profile/default-bookmarks.ftl` — Adicione favoritos nesta pasta para aparecer na barra de favoritos → …para que apareçam na barra de favoritos
-    - Current: `Adicione favoritos nesta pasta para aparecer na barra de favoritos`
-    - Suggest: `…para que apareçam na barra de favoritos`
-- `report-broken-site-panel-reason-media2` — `browser/browser/reportBrokenSite.ftl` — report-broken-site-panel-reason-media-moz-box-button (.label), report-broken-site-panel-reason-media2 (.label) — reportBrokenSite.ftl — mixes gerund and past participle on one auxiliary: O vídeo não está carregando ou reproduzido → O vídeo não está sendo reproduzido ou carregado
-    - Current: `O vídeo não está carregando ou reproduzido`
-    - Suggest: `O vídeo não está sendo reproduzido ou carregado`
-- `removed-search-engine-message` — `browser/browser/search.ftl` — removed-search-engine-message/-message2 (vá em configurações) vs reset-search-settings-message (vá nas configurações)
-    - Suggest: `-message2`
-- `tabbrowser-container-tab-title` — `browser/browser/tabbrowser.ftl` — { $title } - { $containerName } → —
-    - Current: `{ $title } - { $containerName }`
-    - Suggest: `—`
-- `e10s.accessibilityNotice.jawsMessage` — `browser/chrome/browser/browser.properties` — e10s.accessibilityNotice.jawsMessage (browser.properties) — subject "A exibição" is feminine: foi desativado → foi desativada
-    - Current: `foi desativado`
-    - Suggest: `foi desativada`
-- `permission.popup.label` — `browser/chrome/browser/sitePermissions.properties` — permission.popup-only.label, permission.popup.label, permission.popup-and-framebusting.label (sitePermissions.properties) — the pop-up qualifier is dropped, so the permission reads as any window/tab opening: Abrir janelas ou abas → Abrir janelas popup; Abertura de janelas e redirecionamento de terceiros → Janelas popup e redirecionamentos de terceiros
-    - Current: `Abrir janelas ou abas`
-    - Suggest: `Abrir janelas popup`
-- `bookmark1_label` — `browser/pdfviewer/viewer.properties` — bookmark1label — Pagina atual → Página atual (same typo as the .ftl pdfjs-bookmark-button-label; every other entry in the file uses "Página")
-    - Current: `Pagina atual`
-    - Suggest: `Página atual`
-- `document_outline.title` — `browser/pdfviewer/viewer.properties` — duplo-clique → duplo clique
-    - Suggest: `duplo clique`
-- `document_outline.title` — `browser/pdfviewer/viewer.properties` — duplo-clique / Duplo-clique → clique duplo (unhyphenated; low priority, but currently inconsistent)
-    - Suggest: `clique duplo`
-- `document_properties_page_size_name_legal` — `browser/pdfviewer/viewer.properties` — documentpropertiespagesizenamelegal — a paper-size name translated as a subject area. Current: Jurídico → Suggest: Ofício or keep Legal (the sibling …nameletter correctly uses Carta)
-    - Current: `Jurídico`
-    - Suggest: `Ofício`
-- `print_progress_percent` — `browser/pdfviewer/viewer.properties` — printprogresspercent — space before %: {{progress}} % → {{progress}}% (cf. pagescalepercent)
-    - Current: `{{progress}} %`
-    - Suggest: `{{progress}}%`
-- `noDomMutationBreakpoints` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints` quotes “Interromper em…” but the string it names, `watchpoints.submenu`, reads “Interromper ao…”
-    - Current: `Clique com o botão direito em um elemento no %S e selecione “Interromper em…” para adicionar um breakpoint`
-    - Suggest: `Interromper ao…`
-    - In the source this string quotes “Break on…”, which is exactly the value of `watchpoints.submenu` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `sourceFooter.mappedSourceTooltip` — `devtools/client/debugger.properties` — (fonte mapeado de %S) → (fonte mapeada de %S)
-    - Current: `(fonte mapeado de %S)`
-    - Suggest: `(fonte mapeada de %S)`
-- `client-auth-site-description` — `security/manager/security/pippki/pippki.ftl` — client-auth-site-description, client-auth-site-identification — security/manager/security/pippki/pippki.ftl — enclisis is not allowed after "que": solicitou que você identifique-se → solicitou que você se identifique
-    - Current: `solicitou que você identifique-se`
-    - Suggest: `solicitou que você se identifique`
-- `formPostSecureToInsecureWarning.message` — `toolkit/chrome/global/browser.properties` — "Tem certeza que" (queísmo) in form-post-secure-to-insecure-warning-message, formPostSecureToInsecureWarning.message, download-ui-confirm-quit-cancel-downloads, -cancel-downloads-mac, download-ui-confirm-leave-private-browsing-windows-cancel-downloads, download-ui-file-executable-security-warning → Tem certeza de que
-    - Suggest: `Tem certeza de que`
-- `addon-permissions-empty` — `toolkit/toolkit/about/aboutAddons.ftl` — nenhum permissão → nenhuma permissão
-    - Current: `nenhum permissão`
-    - Suggest: `nenhuma permissão`
-- `details-notification-blocked` — `toolkit/toolkit/about/aboutAddons.ftl` — details-notification-blocked, details-notification-softblocked prepend O to an arbitrary add-on name; all sibling notifications don't (and the article can disagree with the name)
-- `details-notification-softblocked` — `toolkit/toolkit/about/aboutAddons.ftl` — details-notification-blocked, details-notification-softblocked prepend O to an arbitrary add-on name; all sibling notifications don't (and the article can disagree with the name)
-- `discopane-notice-recommendations` — `toolkit/toolkit/about/aboutAddons.ftl` — discopane-notice-recommendations, discopane-notice-recommendations2 (.message) — aboutAddons.ftl — trailing space before the line wrap
-- `five-star-rating` — `toolkit/toolkit/about/aboutAddons.ftl` — five-star-rating.title, detail-rating, addon-detail-rating-label, addon-detail-reviews-link
-- `about-glean-adhoc-explanation` — `toolkit/toolkit/about/aboutGlean.ftl` — about-glean-adhoc-explanation, about-glean-adhoc-explanation2 — toolkit/toolkit/about/aboutGlean.ftl — the <i>ad hoc</i> emphasis from en-US is dropped (translated as "mais específicos"). Low impact; restore the italics if the wording is revised.
-- `about-networking-rcwn-std-dev-long` — `toolkit/toolkit/about/aboutNetworking.ftl` — Desvio-padrão → Desvio padrão
-    - Current: `Desvio-padrão`
-    - Suggest: `Desvio padrão`
-- `title-label` — `toolkit/toolkit/about/aboutPlugins.ftl` — the page title "About Plugins" was translated as the list heading, duplicating installed-plugins-label. Current: Plugins instalados → Suggest: Sobre os plugins
-    - Current: `Plugins instalados`
-    - Suggest: `Sobre os plugins`
-- `about-processes-remote-sandbox-broker-process` — `toolkit/toolkit/about/aboutProcesses.ftl` — remoto ({ $pid }) → single space
-    - Current: `remoto ({ $pid })`
-    - Suggest: `single space`
-- `rights-intro-point-2` — `toolkit/toolkit/about/aboutRights.ftl` — incluindo, entre outras, ao nome ou logotipo do Firefox → incluindo, entre outros, o nome ou o logotipo do Firefox
-    - Current: `incluindo, entre outras, ao nome ou logotipo do Firefox`
-    - Suggest: `incluindo, entre outros, o nome ou o logotipo do Firefox`
-- `rights-intro-point-3` — `toolkit/toolkit/about/aboutRights.ftl` — missing object: permissão para usar para aperfeiçoar seus produtos → permissão para usá-la para aperfeiçoar seus produtos
-    - Current: `permissão para usar para aperfeiçoar seus produtos`
-    - Suggest: `permissão para usá-la para aperfeiçoar seus produtos`
-- `rights-intro-point-5-unbranded` — `toolkit/toolkit/about/aboutRights.ftl` — devem tem um link → devem ter um link
-    - Current: `devem tem um link`
-    - Suggest: `devem ter um link`
-- `rights-webservices-term-4` — `toolkit/toolkit/about/aboutRights.ftl` — missing crase, parallel with "quanto à qualidade" later in the same sentence: quanto a seleção dos Serviços → quanto à seleção dos Serviços
-    - Current: `quanto a seleção dos Serviços`
-    - Suggest: `quanto à seleção dos Serviços`
-- `rights-webservices-term-7` — `toolkit/toolkit/about/aboutRights.ftl` — "parte" is feminine: for identificado como inválido → for identificada como inválida
-    - Current: `for identificado como inválido`
-    - Suggest: `for identificada como inválida`
-- `rights-webservices-unbranded` — `toolkit/toolkit/about/aboutRights.ftl` — European clitic placement: instruções de como os desativar → instruções de como desativá-los
-    - Current: `instruções de como os desativar`
-    - Suggest: `instruções de como desativá-los`
-- `about-webrtc-aec-logging-off-state-msg` — `toolkit/toolkit/about/aboutWebrtc.ftl` — about-webrtc-aec-logging-toggled-off-state-msg, about-webrtc-aec-logging-off-state-msg — aboutWebrtc.ftl — Arquivos de log capturados podem ser encontradas → encontrados (also fixes the stray lowercase initial in the second string)
-    - Current: `Arquivos de log capturados podem ser encontradas`
-    - Suggest: `encontrados`
-- `about-webrtc-aec-logging-off-state-msg` — `toolkit/toolkit/about/aboutWebrtc.ftl` — Lowercase where the sibling is capitalized: about-webrtc-fold-hide-msg/-show-msg, about-webrtc-raw-cand-hide-msg/-show-msg, about-webrtc-log-hide-msg/-show-msg and the matching .title attributes (aboutWebrtc.ftl); about-webrtc-aec-logging-off-state-msg, about-webrtc-save-page-msg (aboutWebrtc.ftl); about-telemetry-current-data-sidebar (aboutTelemetry.ftl); quickactions-cmd-clearhistory, quickacti…
-    - Suggest: `-show-msg`
-- `about-webrtc-aec-logging-on-state-msg` — `toolkit/toolkit/about/aboutWebrtc.ftl` — about-webrtc-aec-logging-on-state-msg, about-webrtc-aec-logging-toggled-on-state-msg — aboutWebrtc.ftl — "caller" is the person on the call. Current: fale com o remetente da chamada → Suggest: fale com o interlocutor da chamada
-    - Current: `fale com o remetente da chamada`
-    - Suggest: `fale com o interlocutor da chamada`
-- `about-webrtc-debug-mode-off-state-msg` — `toolkit/toolkit/about/aboutWebrtc.ftl` — "trace log": registro de acompanhamento vs registro de execução (about-webrtc-debug-mode-off-state-msg / -on-state-msg)
-    - Current: `registro de acompanhamento`
-    - Suggest: `registro de execução`
-- `about-webrtc-fold-hide-msg` — `toolkit/toolkit/about/aboutWebrtc.ftl` — Lowercase where the sibling is capitalized: about-webrtc-fold-hide-msg/-show-msg, about-webrtc-raw-cand-hide-msg/-show-msg, about-webrtc-log-hide-msg/-show-msg and the matching .title attributes (aboutWebrtc.ftl); about-webrtc-aec-logging-off-state-msg, about-webrtc-save-page-msg (aboutWebrtc.ftl); about-telemetry-current-data-sidebar (aboutTelemetry.ftl); quickactions-cmd-clearhistory, quickacti…
-    - Suggest: `-show-msg`
-- `about-webrtc-log-hide-msg` — `toolkit/toolkit/about/aboutWebrtc.ftl` — Lowercase where the sibling is capitalized: about-webrtc-fold-hide-msg/-show-msg, about-webrtc-raw-cand-hide-msg/-show-msg, about-webrtc-log-hide-msg/-show-msg and the matching .title attributes (aboutWebrtc.ftl); about-webrtc-aec-logging-off-state-msg, about-webrtc-save-page-msg (aboutWebrtc.ftl); about-telemetry-current-data-sidebar (aboutTelemetry.ftl); quickactions-cmd-clearhistory, quickacti…
-    - Suggest: `-show-msg`
-- `about-webrtc-raw-cand-hide-msg` — `toolkit/toolkit/about/aboutWebrtc.ftl` — Lowercase where the sibling is capitalized: about-webrtc-fold-hide-msg/-show-msg, about-webrtc-raw-cand-hide-msg/-show-msg, about-webrtc-log-hide-msg/-show-msg and the matching .title attributes (aboutWebrtc.ftl); about-webrtc-aec-logging-off-state-msg, about-webrtc-save-page-msg (aboutWebrtc.ftl); about-telemetry-current-data-sidebar (aboutTelemetry.ftl); quickactions-cmd-clearhistory, quickacti…
-    - Suggest: `-show-msg`
-- `about-webrtc-save-page-msg` — `toolkit/toolkit/about/aboutWebrtc.ftl` — Lowercase where the sibling is capitalized: about-webrtc-fold-hide-msg/-show-msg, about-webrtc-raw-cand-hide-msg/-show-msg, about-webrtc-log-hide-msg/-show-msg and the matching .title attributes (aboutWebrtc.ftl); about-webrtc-aec-logging-off-state-msg, about-webrtc-save-page-msg (aboutWebrtc.ftl); about-telemetry-current-data-sidebar (aboutTelemetry.ftl); quickactions-cmd-clearhistory, quickacti…
-    - Suggest: `-show-msg`
-- `abuse-report-messagebar-error-recent-submit` — `toolkit/toolkit/about/abuseReports.ftl` — outra denúncia foi enviado → foi enviada
-    - Current: `outra denúncia foi enviado`
-    - Suggest: `foi enviada`
-- `abuse-report-settings-suggestions-search` — `toolkit/toolkit/about/abuseReports.ftl` — abuse-report-settings-suggestions-search, -homepage — abuseReports.ftl — en-US imperative "Change your…": Muda sua configuração → Mude sua configuração
-    - Current: `Muda sua configuração`
-    - Suggest: `Mude sua configuração`
-- _…and 4 more._
+_Nothing retired._
 
 ---
 
@@ -294,11 +58,11 @@ _Nothing to re-read._
 
 | Check | Result |
 |---|---|
-| Files | 325 |
-| Strings | 16,152 |
-| Missing strings | 16 |
+| Files | 326 |
+| Strings | 16,233 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -313,22 +77,7 @@ _Nothing to re-read._
 
 ### Completeness
 
-**16 strings** are not translated yet, concentrated in:
-
-- `browser/browser/newtab/onboarding.ftl` — 3
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 3
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 3
-- `browser/browser/newtab/newtab.ftl` — 2
-- `toolkit/toolkit/about/pdfFeaturesNotification.ftl` — 2
-- `dom/chrome/dom/dom.properties` — 1
-- `toolkit/toolkit/about/aboutAddons.ftl` — 1
-- `toolkit/toolkit/global/theme-picker.ftl` — 1
-
-**Files absent from the locale:**
-
-- `toolkit/toolkit/about/pdfFeaturesNotification.ftl`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -336,12 +85,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 583, `curly-single` 123, `straight-double` 63 | **curly-double** |
+| quotes | `curly-double` 588, `curly-single` 123, `straight-double` 63 | **curly-double** |
 | apostrophe | `typographic` 136, `straight` 106 | _mixed_ |
 | ellipsis | `char` 384, `ascii` 3 | **char** |
 | dash | `em` 47, `en` 1 | **em** |
 | nbsp | `total` 10, `narrow` 9, `before-punctuation` 5, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 1489 | **informal** |
+| register | `informal` 1500 | **informal** |
 
 ---
 
@@ -351,15 +100,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (523)
+## 3. Open findings (526)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 11 |
-| 2 | Wrong content (says something other than the English) | 180 |
+| 2 | Wrong content (says something other than the English) | 182 |
 | 3 | Degraded language (grammar, spelling, terminology) | 252 |
-| 4 | Cosmetic (typography, spacing) | 80 |
+| 4 | Cosmetic (typography, spacing) | 81 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -568,6 +317,11 @@ _Nothing reported._
     - Current: `Conexão falhou.`
     - Source: `Pairing unsuccessful.`
     - Suggest: `Falha no pareamento.`
+- `browser-languages-update-error` — `browser/browser/preferences/languages.ftl` — "or try again" rendered as "e tente novamente" (and), changing the alternative into a conjunction.
+    - Current: `Verifique a conexão com a internet e tente novamente.`
+    - Source: `message: { -brand-short-name } can’t update your languages right now. Check that you are connected to the internet or try again.`
+    - Suggest: `Verifique se você está conectado à internet ou tente novamente.`
+    - The en-US offers two alternatives ("Check that you are connected to the internet or try again"); the translation joins them with "e".
 - `more-from-moz-mozilla-monitor-global-description` — `browser/browser/preferences/moreFromMozilla.ftl` — Current: Receba alertas quando seus dados estiverem em vazamentos de dados. → Suggest: Receba alertas quando seus dados aparecerem em um vazamento.
     - Current: `Receba alertas quando seus dados estiverem em vazamentos de dados.`
     - Source: `Get alerts when your data has been in a breach.`
@@ -615,11 +369,7 @@ _Nothing reported._
     - Suggest: `pasta do menu Iniciar`
 - `about-debugging-page-title-runtime-page` — `devtools/client/aboutdebugging.ftl` — "Runtime" is the page name, not a duration. Current: Depuração - Tempo de execução / { $selectedRuntimeId } → Suggest: Depuração - Runtime / { $selectedRuntimeId }
     - Source: `Debugging - Runtime / { $selectedRuntimeId }`
-- `about-debugging-setup-usb-step-enable-dev-menu2` — `devtools/client/aboutdebugging.ftl` — about-debugging-setup-usb-step-enable-dev-menu2, -enable-debug2 — aboutdebugging.ftl — the Android UI the string points at is "Opções do desenvolvedor". Current: menu de desenvolvimento → Suggest: menu do desenvolvedor
-    - Current: `menu de desenvolvimento`
-    - Source: `Enable Developer menu on your Android device.`
-    - Suggest: `menu do desenvolvedor`
-- _…and 118 more; see `state/` for the full list._
+- _…and 120 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -1096,13 +846,13 @@ _Nothing reported._
 - `windows-10-eos-callout-addons-title` — `browser/browser/newtab/asrouter.ftl` — Trailing period added where en-US has none: ipprotection-connection-status-blocked-error-title-1 (.aria-label too), security-privacy-issue-warning-third-party-cookies (.label, preferences.ftl), newtab-wallpaper-sky-with-pink-clouds, newtab-shortcuts-highlight-title, newtab-report-ads-reason-seen-it-too-many-times (.label) (newtab.ftl), windows-10-eos-callout-addons-title (asrouter.ftl), tab-group…
     - Source: `Try add-ons: simple upgrades, big impacts`
     - Suggest: `.aria-label`
-- `newtab-discovery-empty-section-topstories-loading` — `browser/browser/newtab/newtab.ftl` — main-context-menu-pdfjs-save-page (.label, browserContext.ftl), home-homepage-custom-url (.placeholder, preferences.ftl), newtab-discovery-empty-section-topstories-loading (newtab.ftl).
-    - Source: `Loading…`
-    - Suggest: `.label`
 - `newtab-discovery-empty-section-topstories-loading` — `browser/browser/newtab/newtab.ftl` — `newtab-discovery-empty-section-topstories-loading` uses three dots where this locale uses …
     - Current: `Carregando...`
     - Source: `Loading…`
     - The tree uses … 384 times against 3 ASCII runs.
+- `newtab-discovery-empty-section-topstories-loading` — `browser/browser/newtab/newtab.ftl` — main-context-menu-pdfjs-save-page (.label, browserContext.ftl), home-homepage-custom-url (.placeholder, preferences.ftl), newtab-discovery-empty-section-topstories-loading (newtab.ftl).
+    - Source: `Loading…`
+    - Suggest: `.label`
 - `newtab-report-ads-reason-seen-it-too-many-times` — `browser/browser/newtab/newtab.ftl` — Trailing period added where en-US has none: ipprotection-connection-status-blocked-error-title-1 (.aria-label too), security-privacy-issue-warning-third-party-cookies (.label, preferences.ftl), newtab-wallpaper-sky-with-pink-clouds, newtab-shortcuts-highlight-title, newtab-report-ads-reason-seen-it-too-many-times (.label) (newtab.ftl), windows-10-eos-callout-addons-title (asrouter.ftl), tab-group…
     - Source: `label: I’ve seen it too many times`
     - Suggest: `.aria-label`
@@ -1130,25 +880,25 @@ _Nothing reported._
 - `policy-DisableForgetButton` — `browser/browser/policies/policies-descriptions.ftl` — `policy-DisableForgetButton` uses straight double quotes
     - Current: `Impedir acesso ao botão "Esquecer".`
     - Source: `Prevent access to the Forget button.`
-    - The locale's quote convention is `curly-double` (583 occurrences).
+    - The locale's quote convention is `curly-double` (588 occurrences).
 - `policy-DisableProfileRefresh` — `browser/browser/policies/policies-descriptions.ftl` — `policy-DisableProfileRefresh` uses straight double quotes
     - Current: `Desativar o botão "Restaurar o { -brand-short-name }" na página about:support.`
     - Source: `Disable the Refresh { -brand-short-name } button in the about:support page.`
-    - The locale's quote convention is `curly-double` (583 occurrences).
+    - The locale's quote convention is `curly-double` (588 occurrences).
 - `policy-Extensions` — `browser/browser/policies/policies-descriptions.ftl` — `policy-Extensions` uses straight double quotes
     - Current: `Instalar, desinstalar e bloquear extensões. A opção “Instalar” recebe URLs ou caminhos como parâmetros. As opções “Desinstalar” e "Bloqueado" usam IDs de extensões.`
     - Source: `Install, uninstall or lock extensions. The Install option takes URLs or paths as parameters. The Uninstall and Locked options take extension IDs.`
-    - The locale's quote convention is `curly-double` (583 occurrences).
+    - The locale's quote convention is `curly-double` (588 occurrences).
 - `policy-GenerativeAI` — `browser/browser/policies/policies-descriptions.ftl` — Final period dropped: ipprotection-feature-introduction-link-text-captive-portal-1 (ipProtection.ftl), policy-GenerativeAI (policies-descriptions.ftl)
     - Source: `Configure generative AI features.`
 - `policy-HardwareAcceleration` — `browser/browser/policies/policies-descriptions.ftl` — `policy-HardwareAcceleration` uses straight double quotes
     - Current: `Caso definido como "false", desativar a aceleração de hardware.`
     - Source: `If false, turn off hardware acceleration.`
-    - The locale's quote convention is `curly-double` (583 occurrences).
+    - The locale's quote convention is `curly-double` (588 occurrences).
 - `policy-OfferToSaveLogins` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OfferToSaveLogins` uses straight double quotes
     - Current: `Impor as configurações para permitir que o { -brand-short-name } ofereça memorizar contas de acesso e senhas salvas. Tanto "true" como "false" são valores aceitos.`
     - Source: `Enforce the setting to allow { -brand-short-name } to offer to remember saved logins and passwords. Both true and false values are accepted.`
-    - The locale's quote convention is `curly-double` (583 occurrences).
+    - The locale's quote convention is `curly-double` (588 occurrences).
 - `connection-proxy-noproxy-localhost-desc-2` — `browser/browser/preferences/connection.ftl` — serial comma before "e" is not pt-BR usage: 127.0.0.1/8, e ::1 → 127.0.0.1/8 e ::1
     - Source: `Connections to localhost, 127.0.0.1/8, and ::1 are never proxied.`
 - `autofill-card-expires-year` — `browser/browser/preferences/formAutofill.ftl` — autofill-card-expires-month, autofill-card-expires-year — preferences/formAutofill.ftl — Mês de Expiração / Ano de Expiração → sentence case (the -2 variants are correct)
@@ -1192,7 +942,7 @@ _Nothing reported._
 - `webrtc-indicator-menuitem-sharing-browser-with` — `browser/browser/webrtcIndicator.ftl` — `webrtc-indicator-menuitem-sharing-browser-with` uses straight double quotes
     - Current: `Compartilhando uma aba com "{ $streamTitle }"`
     - Source: `label: Sharing a Tab with “{ $streamTitle }”`
-    - The locale's quote convention is `curly-double` (583 occurrences).
+    - The locale's quote convention is `curly-double` (588 occurrences).
 - `storage-add-button` — `devtools/client/storage.ftl` — storage-add-button (.title), storage-context-menu-add-item (.label) — devtools/client/storage.ftl — Adicionar Item → Adicionar item
     - Current: `Adicionar Item`
     - Source: `title: Add Item`
@@ -1220,24 +970,25 @@ _Nothing reported._
 - `screenshotFilenameManual` — `devtools/shared/screenshot.properties` — `screenshotFilenameManual` uses straight double quotes
     - Current: `O nome do arquivo (deve ter extensão ".png") onde gravar a captura de tela.`
     - Source: `The name of the file (should have a ‘.png’ extension) to which we write the screenshot.`
-    - The locale's quote convention is `curly-double` (583 occurrences).
+    - The locale's quote convention is `curly-double` (588 occurrences).
+- `FullscreenDeniedPermissionsPolicy` — `dom/chrome/dom/dom.properties` — Stray space before the final period.
+    - Current: `diretivas Permissions Policy .`
+    - Source: `Request for fullscreen was denied because of Permissions Policy directives.`
+    - Suggest: `diretivas Permissions Policy.`
+    - The en-US has no space before the period; the extra space is a typography defect in the user-visible text.
 - `MediaLoadUnsupportedMimeType` — `dom/chrome/dom/dom.properties` — `MediaLoadUnsupportedMimeType` uses straight double quotes
     - Current: `O atributo HTTP "Content-Type" de "%1$S" não é suportado. Falha no carregamento do recurso de mídia %2$S.`
     - Source: `HTTP “Content-Type” of “%1$S” is not supported. Load of media resource %2$S failed.`
-    - The locale's quote convention is `curly-double` (583 occurrences).
+    - The locale's quote convention is `curly-double` (588 occurrences).
 - `MediaLoadUnsupportedTypeAttribute` — `dom/chrome/dom/dom.properties` — `MediaLoadUnsupportedTypeAttribute` uses straight double quotes
     - Current: `O atributo "type" especificado de "%1$S" não é suportado. Falha no carregamento do recurso de mídia %2$S.`
     - Source: `Specified “type” attribute of “%1$S” is not supported. Load of media resource %2$S failed.`
-    - The locale's quote convention is `curly-double` (583 occurrences).
+    - The locale's quote convention is `curly-double` (588 occurrences).
 - `PrincipalWritingModePropagationWarning` — `dom/chrome/layout/layout_errors.properties` — `PrincipalWritingModePropagationWarning` uses straight double quotes
     - Current: `Ao renderizar o elemento <html>, os valores usados das propriedades CSS "writing-mode", "direction" e "text-orientation" no elemento <html> são obtidos dos valores calculados do elemento <body>, não dos próprios valores…`
     - Source: `When rendering the <html> element, the used values of CSS properties “writing-mode”, “direction”, and “text-orientation” on the <html> element are taken from the computed values of the <body> element, not from the <html…`
-    - The locale's quote convention is `curly-double` (583 occurrences).
-- `IneligibleResource` — `dom/chrome/security/security.properties` — `IneligibleResource` uses straight double quotes
-    - Current: `"%1$S" não é elegível para verificações de integridade, pois não é ativado por CORS nem é same-origin.`
-    - Source: `“%1$S” is not eligible for integrity checks since it’s neither CORS-enabled nor same-origin.`
-    - The locale's quote convention is `curly-double` (583 occurrences).
-- _…and 20 more; see `state/` for the full list._
+    - The locale's quote convention is `curly-double` (588 occurrences).
+- _…and 21 more; see `state/` for the full list._
 
 ---
 

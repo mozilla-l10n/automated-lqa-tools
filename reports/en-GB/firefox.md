@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e44f1369fb6d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8ffd279d75ec` |
-| **Previous run** | 2026-09-07 @ `3c0c507b8d42` |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
+| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 104 of 16,168 |
+| **Strings reviewed this run** | 65 of 16,233 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,21 +18,13 @@ Also for en-GB: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `newtab-customize-panel-back-button` — `browser/browser/newtab/newtab.ftl` — "Customize" in the panel name is a UI reference that should not have been changed by the -ise adaptation if the panel label is Customize; but the localized form is inconsistent with the rest of the locale's handling of this label.
-    - Current: `Back to Customise`
-    - Source: `aria-label: Back to Customize title: Back to Customize`
-    - Suggest: `Back to Customize`
-    - The string refers to the Customize panel by name; the panel's own label in en-GB newtab.ftl is "Customize", so renaming it here breaks the reference.
+_No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `urlbar-searchmode-dropmarker2` — `browser/browser/browser.ftl` — Sentence case of the source has been changed to title case without cause.
-    - Current: `Pick a Search Engine`
-    - Source: `title: Pick a search engine`
-    - Suggest: `Pick a search engine`
-    - en-US reads "Pick a search engine" in sentence case; en-GB does not require title case here and the capitalisation change is an unwarranted departure from the source.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -42,16 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (2)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `PINotInProlog` — `dom/chrome/layout/xul.properties` — "prolog" (the XML technical term) was over-corrected to "prologue", and the sibling string keeps "prolog".
-    - Current: `does not have any effect outside the prologue any longer`
-    - Suggest: `does not have any effect outside the prolog any longer`
-    - "prolog" here is the XML specification term (the XML prolog), not the ordinary word; the immediately following string PINotInProlog2 in the same file correctly keeps "outside the prolog", so the file contradicts itself.
-- `discopane-intro` — `toolkit/toolkit/about/aboutAddons.ftl` — "software programmes" uses the broadcast/schedule sense; British English spells computer programs "programs".
-    - Current: `These small software programmes are`
-    - Suggest: `These small software programs are`
-    - In en-GB, "programme" means a broadcast or plan; a computer program is spelled "program". The rest of this locale follows that rule (toolkit/toolkit/global/extensions.ftl "Another program on your computer…", toolkit/toolkit/neterror/certError.ftl "if an antivirus program…", toolkit/toolkit/neterror/nsserrors.ftl "enabled in this program").
+_Nothing retired._
 
 ---
 
@@ -60,7 +45,7 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 326 |
-| Strings | 16,168 |
+| Strings | 16,233 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -86,8 +71,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 533, `curly-single` 93, `straight-double` 55 | **curly-double** |
-| apostrophe | `typographic` 988, `straight` 43 | **typographic** |
+| quotes | `curly-double` 538, `curly-single` 93, `straight-double` 55 | **curly-double** |
+| apostrophe | `typographic` 994, `straight` 43 | **typographic** |
 | ellipsis | `char` 389, `ascii` 1 | **char** |
 | dash | `em` 81, `en` 4 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |

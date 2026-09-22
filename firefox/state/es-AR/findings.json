@@ -464,7 +464,7 @@
   "file": "browser/browser/appMenuNotifications.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-09-14",
+  "last_seen": "2026-09-21",
   "locale": "es-AR",
   "origin": {},
   "rationale": "The label is “Mantener los cambios”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
@@ -510,7 +510,7 @@
   "file": "browser/browser/appMenuNotifications.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-09-14",
+  "last_seen": "2026-09-21",
   "locale": "es-AR",
   "origin": {},
   "rationale": "The label is “Mantener los cambios”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
@@ -951,6 +951,30 @@
   "string_id": "toolbar-button-share-tab",
   "suggest": "Compartir esta página",
   "summary": "«está página» — verb form instead of demonstrative «esta».",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "puede cerrar sesión en los sitios web",
+  "dismissed_because": "",
+  "fid": "dc58d074fb2b",
+  "file": "browser/browser/browser.ftl",
+  "first_seen": "2026-09-21",
+  "impact": 2,
+  "last_seen": "2026-09-21",
+  "locale": "es-AR",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The en-US says removing cookies may log the user out; the Spanish literally reads as the removal closing session, omitting that it is the user's session.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "28e981de",
+  "string_id": "trustpanel-clear-cookies-description",
+  "suggest": "puede cerrar tu sesión en los sitios web",
+  "summary": "\"might log you out of websites\" translated as \"puede cerrar sesión en los sitios web\", losing the subject/object relation (the user being logged out).",
   "suppressed_by": ""
  },
  {
@@ -2586,6 +2610,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "Establecer políticas de manera que las WebExtensions puedan acceder mediante chrome.storage.managed.",
+  "dismissed_because": "",
+  "fid": "984c523b6a34",
+  "file": "browser/browser/policies/policies-descriptions.ftl",
+  "first_seen": "2026-09-21",
+  "impact": 2,
+  "last_seen": "2026-09-21",
+  "locale": "es-AR",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The en-US says the policies themselves are accessible via chrome.storage.managed; the Spanish turns it into a purpose clause.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "38f73004",
+  "string_id": "policy-3rdparty",
+  "suggest": "Establecer políticas a las que las WebExtensions pueden acceder mediante chrome.storage.managed.",
+  "summary": "\"Set policies that WebExtensions can access\" rendered as \"Establecer políticas de manera que...\" changes the meaning to setting policies so that extensions can access.",
+  "suppressed_by": ""
+ },
+ {
   "category": "A",
   "check": "llm",
   "current": "el comando de menú configurado como Fondo de escritorio",
@@ -2618,7 +2666,7 @@
   "file": "browser/browser/policies/policies-descriptions.ftl",
   "first_seen": "2026-09-14",
   "impact": 2,
-  "last_seen": "2026-09-14",
+  "last_seen": "2026-09-21",
   "locale": "es-AR",
   "origin": {},
   "rationale": "In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -6228,7 +6276,7 @@
   "file": "devtools/shared/webconsole.properties",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-09-14",
+  "last_seen": "2026-09-21",
   "locale": "es-AR",
   "origin": {},
   "rationale": "In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -8592,6 +8640,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "C",
+  "check": "llm",
+  "current": "Es simp,e, gratis y privado.",
+  "dismissed_because": "",
+  "fid": "3b2b4cc268b2",
+  "file": "toolkit/toolkit/about/aboutPDF.ftl",
+  "first_seen": "2026-09-21",
+  "impact": 3,
+  "last_seen": "2026-09-21",
+  "locale": "es-AR",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The en-US says \"It's simple, free, and private.\"; \"simp,e\" is a misspelling with a comma typed instead of the letter l.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "fa036540",
+  "string_id": "about-pdf-features-intro",
+  "suggest": "Es simple, gratis y privado.",
+  "summary": "Typo: \"simp,e\" instead of \"simple\".",
+  "suppressed_by": ""
+ },
+ {
   "category": "A",
   "check": "llm",
   "current": "about-processes-privilegedabout-process = Acerca de las páginas ({ $pid })",
@@ -9645,6 +9717,30 @@
   "string_id": "-mdn-brand-name",
   "suggest": "MDN Web Docs",
   "summary": "Brand name \"MDN Web Docs\" translated",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "Ésto puede tardar un momento.",
+  "dismissed_because": "",
+  "fid": "45b19b7b8856",
+  "file": "toolkit/toolkit/contentanalysis/contentanalysis.ftl",
+  "first_seen": "2026-09-21",
+  "impact": 3,
+  "last_seen": "2026-09-21",
+  "locale": "es-AR",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "Spanish orthography: the neuter demonstrative \"esto\" is never accented.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "f3bfb08f",
+  "string_id": "contentanalysis-slow-agent-dialog-body-clipboard-copy",
+  "suggest": "Esto puede tardar un momento.",
+  "summary": "\"Ésto\" is misspelled; the demonstrative pronoun \"esto\" never takes an accent.",
   "suppressed_by": ""
  },
  {

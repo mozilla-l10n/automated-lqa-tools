@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-14 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `e44f1369fb6d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8ffd279d75ec` |
-| **Previous run** | 2026-09-07 @ `3c0c507b8d42` |
+| **Generated** | 2026-09-21 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
+| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 32 of 16,053 |
+| **Strings reviewed this run** | 180 of 16,233 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,58 @@ Also for nl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (10)
 
-_No new findings._
+- `perftools-thread-jxl-img-decode` — `devtools/client/perftools.ftl` — "image decoding" is rendered as "afbeeldingsontsleuteling" (image decryption) instead of "afbeeldingsdecodering".
+    - Current: `JPEG XL-afbeeldingsontsleutelingsthreads`
+    - Source: `title: JPEG XL image decoding threads`
+    - Suggest: `JPEG XL-afbeeldingsdecoderingsthreads`
+    - "Ontsleuteling" means decryption, not decoding of an image format.
+- `newtab-wallpaper-your-images-folder` — `browser/browser/newtab/newtab.ftl` — The accessible name drops the "Your images" folder label and turns one description into two categories of items.
+    - Current: `aria-label: Uw opgeslagen afbeeldingen en achtergronden`
+    - Source: `aria-label: Your images, wallpapers that you have saved`
+    - Suggest: `aria-label: Uw afbeeldingen, achtergronden die u hebt opgeslagen`
+    - en-US is "Your images, wallpapers that you have saved": the folder name "Your images" followed by an apposition. The Dutch reads as "your saved images and wallpapers", listing two separate things and losing the folder name a screen reader needs.
+- `newtab-nova-customization-callout-message` — `browser/browser/newtab/newtab.ftl` — "make the new Firefox feel more like yours" is rendered as "meer van u lijkt" (appears to be more yours), dropping the "feel" and creating an odd claim.
+    - Current: `waardoor de nieuwe { -brand-product-name } meer van u lijkt`
+    - Source: `Explore light or dark themes and wallpapers that make the new { -brand-product-name } feel more like yours.`
+    - Suggest: `waardoor de nieuwe { -brand-product-name } meer als van uzelf aanvoelt`
+    - The en-US says themes and wallpapers make the browser *feel* more like yours; the Dutch 'meer van u lijkt' means it seems to belong to you more, a different statement and ungrammatical-sounding without 'aanvoelt'.
+- `onboarding-refresh-tou-default-unchecked` — `browser/browser/newtab/onboarding.ftl` — "every time you browse" is rendered as "tijdens het navigeren", and "Keep" is dropped, turning the line into a claim rather than the retained-protection statement.
+    - Current: `Altijd ingebouwde bescherming tijdens het navigeren`
+    - Source: `Keep built-in protection every time you browse`
+    - Suggest: `Behoud ingebouwde bescherming telkens wanneer u surft`
+    - The source describes keeping built-in protection every time the user browses; the Dutch omits 'Keep' and uses 'navigeren' (navigating) instead of browsing.
+- `about-pdf-features-intro` — `toolkit/toolkit/about/aboutPDF.ftl` — “right where you browse” rendered as “waar u navigeert”, which misses the sense of “right in your browser”.
+    - Current: `Lees, markeer en onderteken PDF’s waar u navigeert.`
+    - Source: `Read, mark up, and sign PDFs right where you browse. It’s simple, free, and private.`
+    - Suggest: `Lees, markeer en onderteken PDF’s direct in uw browser.`
+    - The en-US means PDFs can be handled in the same place you browse; “waar u navigeert” (where you navigate) is not the same statement.
+- `about-pdf-feature-details-description` — `toolkit/toolkit/about/aboutPDF.ftl` — “outlines” (PDF document outline / bookmarks) translated as “contouren”, a graphical term.
+    - Current: `Gebruik contouren, bijlagen en eigenschappen`
+    - Source: `Use outlines, attachments, and properties to move through PDFs.`
+    - Suggest: `Gebruik overzichten, bijlagen en eigenschappen`
+    - In PDF viewers “outline” is the document structure/bookmark panel; “contouren” means visual outlines and is the wrong terminology.
+- `about-pdf-feature-annotate-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — “Mark up PDFs” rendered as “PDF’s opmaken” (format PDFs) instead of annotating/marking up.
+    - Current: `PDF’s opmaken`
+    - Source: `Mark up PDFs`
+    - Suggest: `PDF’s annoteren`
+    - “Opmaken” means to format/lay out; the source means adding annotations (text, highlights, drawings), as the description confirms.
+- `about-pdf-feature-presentation-description` — `toolkit/toolkit/about/aboutPDF.ftl` — “a clean view” translated literally as “een schoon beeld” (a clean/washed image).
+    - Current: `Deel een schoon beeld in presentatiemodus.`
+    - Source: `Share a clean view in presentation mode.`
+    - Suggest: `Deel een overzichtelijke weergave in presentatiemodus.`
+    - “Clean view” means an uncluttered/distraction-free view; “schoon beeld” in Dutch reads as physically clean and does not convey that.
+- `autofill-delete-payment-method-os-prompt-other` — `toolkit/toolkit/formautofill/formAutofill.ftl` — The word "opgeslagen" (stored) is missing from the Dutch rendering.
+    - Current: `probeert betalingsgegevens te verwijderen`
+    - Source: `{ -brand-short-name } is trying to delete stored payment method information.`
+    - Suggest: `probeert opgeslagen betalingsgegevens te verwijderen`
+    - The en-US says "delete stored payment method information"; the parallel -windows string correctly uses "opgeslagen betalingsgegevens". Dropping it broadens the claim to all payment data.
+- `autofill-delete-payment-method-os-prompt-macos` — `toolkit/toolkit/formautofill/formAutofill.ftl` — "betalingsmethode" is inconsistent with "betalingsgegevens"/"Betaalmethode" used elsewhere for payment method information.
+    - Current: `opgeslagen betalingsmethode verwijderen`
+    - Source: `delete stored payment method information`
+    - Suggest: `opgeslagen betalingsgegevens verwijderen`
+    - The en-US "stored payment method information" is rendered as "opgeslagen betalingsgegevens" in the sibling Windows string; the macOS string uses a different term for the same concept.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,50 +83,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (27)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `about-logins-edit-login-os-auth-dialog-message-macosx` — `browser/browser/aboutLogins.ftl` — about-logins-edit-login-os-auth-dialog-message-macosx, about-logins-reveal-password-os-auth-dialog-message-macosx, about-logins-copy-password-os-auth-dialog-message-macosx — browser/browser/aboutLogins.ftl — the comment says to supply only the reason, which macOS prefixes with "Firefox is trying to …". These are imperatives, so the resulting sentence breaks. Current: "bewerk de opgeslagen aanmeld…
-    - Suggest: `…message2-macosx`
-- `enable-devtools-popup-description2` — `browser/browser/browser.ftl` — en-US "Browser Tools menu"; nl points at the "Extra" menu. Suggest: "…via het menu Browserhulpmiddelen…"
-- `cfr-doorhanger-bookmark-fxa-body` — `browser/browser/newtab/asrouter.ftl` — "this bookmark" generalised. Suggest: "…dat u niet zonder deze bladwijzer zit…" (cf. -body-2)
-- `firefoxview-cfr-body-v2` — `browser/browser/newtab/asrouter.ftl` — firefoxview-cfr-body-v2, set-default-menu-message-row-layout-subtitle, set-default-menu-message-split-layout-subtitle ([other]), fxa-menu-message-sync-devices-secondary-text, fxa-menu-message-sync-devices-secondary-text2 — newtab/asrouter.ftl — "Get" rendered as "Ontvang" (= receive), not idiomatic for these objects. Suggest: "Haal … terug", "Geniet van …", "Surf sneller met …", "Beschik direct o…
-- `newtab-custom-pocket-subtitle` — `browser/browser/newtab/newtab.ftl` — "samengesteld" vs "verzameld" in home-prefs-stories-header2.description, newtab-custom-stories-toggle.description.
-- `mr2022-onboarding-import-header` — `browser/browser/newtab/onboarding.ftl` — create-backup-screen-2-easy-label, mr2022-onboarding-import-header — newtab/onboarding.ftl — "setup" is configuration, not software installation. Current: "Eenvoudige instellingen" / "Razendsnelle installatie" → Suggest: "Eenvoudig instellen" / "Razendsnel instellen"
-- `containers-icon-briefcase` — `browser/browser/preferences/containers.ftl` — "Briefcase" is the depicted object. Current: "Werkmap" → Suggest: "Aktetas" (and align briefcase-avatar/briefcase-avatar-alt in profiles.ftl, which also say "Werkmap" while briefcase-avatar-tooltip says "Aktetas")
-- `permissions-exceptions-popup-window2` — `browser/browser/preferences/permissions.ftl` — permissions-exceptions-popup-window3 (.title) vs permissions-exceptions-popup-window2 — preferences/permissions.ftl — "Allowed Websites" as "Toegestane websites" vs "Websites met toestemming"; and -window3 uses "doorleidingen" where the whole tree otherwise uses "omleidingen" for third-party redirects (site-permissions-unblock-redirect, browser.ftl pop-up strings).
-    - Suggest: `.title`
-- `content-blocking-cross-site-tracking-cookies-plus-isolate` — `browser/browser/preferences/preferences.ftl` — sitedata-option-block-cross-site-cookies (.label), content-blocking-cross-site-tracking-cookies-plus-isolate — preferences/preferences.ftl — same stray comma before "en".
-    - Suggest: `.label`
-- `pane-experimental-search-results-header` — `browser/browser/preferences/preferences.ftl` — "Proceed with Caution" rendered differently from pane-experimental-subtitle ("Ga voorzichtig verder").
-- `preferences-default-zoom` — `browser/browser/preferences/preferences.ftl` — preferences-default-zoom-label, preferences-default-zoom, preferences-default-zoom-select (.aria-label) — preferences/preferences.ftl — Current: "Standaard zoom" → Suggest: "Standaardzoom" (the warning strings already write it closed)
-    - Suggest: `"Standaardzoom"`
-- `preferences-text-zoom-override-warning` — `browser/browser/preferences/preferences.ftl` — preferences-text-zoom-override-warning, -warning2 (.message) — preferences/preferences.ftl — quote the option as "‘Alleen tekst zoomen’" but the actual checkbox preferences-zoom-text-only is "Alleen tekst inzoomen".
-    - Suggest: `-warning2`
-- `preferences-web-appearance-header` — `browser/browser/preferences/preferences.ftl` — appearance-group2 (.label), preferences-web-appearance-header, web-appearance-group (.aria-label) — preferences/preferences.ftl — definite singular implies one specific site. Current: "Uiterlijk van de website" → Suggest: "Uiterlijk van websites"
-    - Suggest: `"Uiterlijk van websites"`
-- `sitedata-option-block-cross-site-cookies` — `browser/browser/preferences/preferences.ftl` — sitedata-option-block-cross-site-cookies (.label), content-blocking-cross-site-tracking-cookies-plus-isolate — preferences/preferences.ftl — same stray comma before "en".
-    - Suggest: `.label`
-- `report-broken-site-panel-reason-adblocker2` — `browser/browser/reportBrokenSite.ftl` — report-broken-site-panel-reason-adblocker2 (.label), report-broken-site-panel-reason-adblocker-moz-box-button (.label) — reportBrokenSite.ftl — missing determiner. Current: "Website vroeg om adblocker uit te schakelen" → Suggest: "…om de adblocker uit te schakelen"
-    - Suggest: `"…om de adblocker uit te schakelen"`
-- `select-translations-panel-unsupported-language-message-known` — `browser/browser/translations.ftl` — select-translations-panel-unsupported-language-message-known vs translations-panel-error-unsupported-hint-known — translations.ftl — the same en-US sentence is rendered "Sorry, we ondersteunen nog geen { $language }." and "Sorry, we ondersteunen het { $language } nog niet." Pick one (the article form is the more standard Dutch construction with language names).
-- `translations-panel-error-unsupported-hint-known` — `browser/browser/translations.ftl` — select-translations-panel-unsupported-language-message-known vs translations-panel-error-unsupported-hint-known — translations.ftl — the same en-US sentence is rendered "Sorry, we ondersteunen nog geen { $language }." and "Sorry, we ondersteunen het { $language } nog niet." Pick one (the article form is the more standard Dutch construction with language names).
-- `unified-extensions-mb-blocklist-warning-single` — `browser/browser/unifiedExtensions.ftl` — unified-extensions-mb-blocklist-warning-single (.message), -single2 (.message) — browser/browser/unifiedExtensions.ftl — masculine pronoun for "extensie". Current: "U kunt hem inschakelen…" → Suggest: "U kunt deze inschakelen…" (the plural variants correctly use "ze")
-    - Suggest: `"U kunt deze inschakelen…"`
-- `unified-extensions-mb-blocklist-warning-single` — `browser/browser/unifiedExtensions.ftl` — unifiedExtensions.ftl — "risicovol" vs "riskant" in -single2 / -multiple2 and unified-extensions-item-messagebar-softblocked.
-    - Suggest: `-single2`
-- `addon-badge-line3` — `toolkit/toolkit/about/aboutAddons.ftl` — addon-badge-line3 (.title), addon-badge-line4 (.title) — toolkit/toolkit/about/aboutAddons.ftl — the dev comment states that "Mozilla" is hard-coded on purpose "because … we don't want forks to display 'by Fork'". nl adds "Firefox". Current: "Officiële door Mozilla Firefox gebouwde extensie." → Suggest: "Officiële door Mozilla gebouwde extensie."
-    - Suggest: `"Officiële door Mozilla gebouwde extensie."`
-- `details-notification-soft-blocked-extension-disabled` — `toolkit/toolkit/about/aboutAddons.ftl` — missing auxiliary. Suggest: "Deze extensie is beperkt wegens schending van het beleid…"
-    - Suggest: `.message`
-- `about-glean-about-data-explanation` — `toolkit/toolkit/about/aboutGlean.ftl` — about-glean-about-data-list-item-dictionary, about-glean-about-data-explanation — about/aboutGlean.ftl — the Glean Dictionary is a catalogue, not a library. Suggest: "{ -glean-brand-name } Dictionary"
-- `about-reader-color-scheme-light` — `toolkit/toolkit/about/aboutReader.ftl` — about/aboutReader.ftl — "Kleurenschema Licht" → "Kleurenschema licht"
-    - Suggest: `"Kleurenschema licht"`
-- `rights-intro-point-6` — `toolkit/toolkit/about/aboutRights.ftl` — missing linking -s-; aboutSupport.ftl correctly uses "inhoudsontsleutelingsmodules". Current: "inhouddecoderingsmodules" → Suggest: "inhoudsdecoderingsmodules"
-    - Suggest: `"inhoudsdecoderingsmodules"`
-- `experimental-features-abouthome-startup-cache-description` — `toolkit/toolkit/featuregates/features.ftl` — relative clause collapsed, so the cache rather than the document is said to be loaded. Suggest: "Een opstartbuffer voor het initiële about:home-document dat bij opstarten standaard wordt geladen."
-- `experimental-features-devtools-compatibility-panel-description` — `toolkit/toolkit/featuregates/features.ftl` — possessor swapped. en-US "your app's cross-browser compatibility status". Suggest: "…over de cross-browsercompatibiliteitsstatus van uw app"
-- `experimental-features-auto-pip` — `toolkit/toolkit/firefoxlabs/features.ftl` — Current: "…bij tabblad wisselen" → Suggest: "…bij wisselen van tabblad"
-    - Suggest: `"…bij wisselen van tabblad"`
+_Nothing retired._
 
 ---
 
@@ -86,8 +94,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 326 |
-| Strings | 16,053 |
-| Missing strings | 115 |
+| Strings | 16,233 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -104,22 +112,7 @@ _Nothing to re-read._
 
 ### Completeness
 
-**115 strings** are not translated yet, concentrated in:
-
-- `browser/browser/newtab/newtab.ftl` — 31
-- `browser/browser/newtab/onboarding.ftl` — 19
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 16
-- `browser/browser/permissions.ftl` — 10
-- `browser/browser/ipProtection.ftl` — 7
-- `toolkit/toolkit/about/aboutSupport.ftl` — 5
-- `devtools/client/inspector.ftl` — 4
-- `browser/browser/newtab/asrouter.ftl` — 4
-- `dom/chrome/dom/dom.properties` — 3
-- `browser/browser/aiWindow.ftl` — 3
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 3
-- `browser/browser/sync.ftl` — 2
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -127,12 +120,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-single` 807, `straight-double` 25, `curly-double` 9 | **curly-single** |
-| apostrophe | `typographic` 1013 | **typographic** |
+| quotes | `curly-single` 812, `straight-double` 25, `curly-double` 9 | **curly-single** |
+| apostrophe | `typographic` 1025 | **typographic** |
 | ellipsis | `char` 389 | **char** |
-| dash | `en` 108 | **en** |
+| dash | `en` 110 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `formal` 2639 | **formal** |
+| register | `formal` 2673 | **formal** |
 
 ---
 
@@ -142,14 +135,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (329)
+## 3. Open findings (339)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 10 |
-| 2 | Wrong content (says something other than the English) | 111 |
-| 3 | Degraded language (grammar, spelling, terminology) | 181 |
+| 2 | Wrong content (says something other than the English) | 116 |
+| 3 | Degraded language (grammar, spelling, terminology) | 186 |
 | 4 | Cosmetic (typography, spacing) | 27 |
 
 ### A. Functional, markup, variables & plurals
@@ -214,6 +207,11 @@ _Nothing reported._
 - `home-prefs-highlights-option-most-recent-download-srd` — `browser/browser/newtab/newtab.ftl` — home-prefs-highlights-option-most-recent-download, home-prefs-highlights-option-most-recent-download-srd — preferences/preferences.ftl, newtab/newtab.ftl — noun phrase rendered as a participle. Current: "Meest recent gedownload" → Suggest: "Meest recente download"
     - Source: `label: Most recent download`
     - Suggest: `"Meest recente download"`
+- `newtab-nova-customization-callout-message` — `browser/browser/newtab/newtab.ftl` — "make the new Firefox feel more like yours" is rendered as "meer van u lijkt" (appears to be more yours), dropping the "feel" and creating an odd claim.
+    - Current: `waardoor de nieuwe { -brand-product-name } meer van u lijkt`
+    - Source: `Explore light or dark themes and wallpapers that make the new { -brand-product-name } feel more like yours.`
+    - Suggest: `waardoor de nieuwe { -brand-product-name } meer als van uzelf aanvoelt`
+    - The en-US says themes and wallpapers make the browser *feel* more like yours; the Dutch 'meer van u lijkt' means it seems to belong to you more, a different statement and ungrammatical-sounding without 'aanvoelt'.
 - `newtab-recent-searches-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Recent searches options" is rendered as "Recente-zoekresultatenopties" (recent search results), inconsistent with "Recente zoekopdrachten" used elsewhere for the same widget.
     - Current: `aria-label: Recente-zoekresultatenopties`
     - Source: `aria-label: Recent searches options`
@@ -223,6 +221,11 @@ _Nothing reported._
     - Source: `Following`
 - `newtab-section-unfollow-button-label` — `browser/browser/newtab/newtab.ftl` — newtab-section-following-button, newtab-section-unfollow-button-label (.aria-label) — newtab/newtab.ftl — "Volgend" means next. Current: "Volgend" → Suggest: "Gevolgd" (matches newtab-section-mangage-topics-followed-topics)
     - Source: `aria-label: Following: Unfollow { $topic }`
+- `newtab-wallpaper-your-images-folder` — `browser/browser/newtab/newtab.ftl` — The accessible name drops the "Your images" folder label and turns one description into two categories of items.
+    - Current: `aria-label: Uw opgeslagen afbeeldingen en achtergronden`
+    - Source: `aria-label: Your images, wallpapers that you have saved`
+    - Suggest: `aria-label: Uw afbeeldingen, achtergronden die u hebt opgeslagen`
+    - en-US is "Your images, wallpapers that you have saved": the folder name "Your images" followed by an apposition. The Dutch reads as "your saved images and wallpapers", listing two separate things and losing the folder name a screen reader needs.
 - `newtab-widget-message-copy` — `browser/browser/newtab/newtab.ftl` — "stretch breaks" became "long breaks". Suggest: "…tot pauzes om te bewegen"
     - Source: `From quick reminders to daily to-dos, focus sessions to stretch breaks — stay on task and on time.`
 - `newtab-widget-timer-label-play` — `browser/browser/newtab/newtab.ftl` — timer control, not media playback. Current: "Afspelen" → Suggest: "Starten"
@@ -230,6 +233,11 @@ _Nothing reported._
     - Suggest: `"Starten"`
 - `create-backup-screen-2-easy-label` — `browser/browser/newtab/onboarding.ftl` — create-backup-screen-2-easy-label, mr2022-onboarding-import-header — newtab/onboarding.ftl — "setup" is configuration, not software installation. Current: "Eenvoudige instellingen" / "Razendsnelle installatie" → Suggest: "Eenvoudig instellen" / "Razendsnel instellen"
     - Source: `Easy setup`
+- `onboarding-refresh-tou-default-unchecked` — `browser/browser/newtab/onboarding.ftl` — "every time you browse" is rendered as "tijdens het navigeren", and "Keep" is dropped, turning the line into a claim rather than the retained-protection statement.
+    - Current: `Altijd ingebouwde bescherming tijdens het navigeren`
+    - Source: `Keep built-in protection every time you browse`
+    - Suggest: `Behoud ingebouwde bescherming telkens wanneer u surft`
+    - The source describes keeping built-in protection every time the user browses; the Dutch omits 'Keep' and uses 'navigeren' (navigating) instead of browsing.
 - `onboarding-sign-up-description` — `browser/browser/newtab/onboarding.ftl` — "any device" weakened to "a device". Suggest: "…op een willekeurig apparaat…"
     - Source: `Sign up for an account and all of your important info — passwords, bookmarks, and more — will be securely stored and available when you sign in to any device.`
 - `restored-from-backup-success-title` — `browser/browser/newtab/onboarding.ftl` — possessive dropped. Suggest: "We zijn terug! Uw { -brand-short-name }-gegevens zijn hersteld."
@@ -298,6 +306,11 @@ _Nothing reported._
 - `perftools-thread-img-decoder` — `devtools/client/perftools.ftl` — decoding as decryption. Current: "Afbeeldingsontsleutelingsthreads" → Suggest: "Afbeeldingsdecoderingsthreads"
     - Source: `title: Image decoding threads`
     - Suggest: `"Afbeeldingsdecoderingsthreads"`
+- `perftools-thread-jxl-img-decode` — `devtools/client/perftools.ftl` — "image decoding" is rendered as "afbeeldingsontsleuteling" (image decryption) instead of "afbeeldingsdecodering".
+    - Current: `JPEG XL-afbeeldingsontsleutelingsthreads`
+    - Source: `title: JPEG XL image decoding threads`
+    - Suggest: `JPEG XL-afbeeldingsdecoderingsthreads`
+    - "Ontsleuteling" means decryption, not decoding of an image format.
 - `perftools-thread-timer` — `devtools/client/perftools.ftl` — subject/object swapped. en-US "The thread handling timers". Current: "De timers voor het afhandelen van threads…" → Suggest: "De thread die timers afhandelt…"
     - Source: `title: The thread handling timers (setTimeout, setInterval, nsITimer)`
     - Suggest: `"De thread die timers afhandelt…"`
@@ -332,15 +345,7 @@ _Nothing reported._
     - Suggest: `"Autoriteiten"`
 - `pkcs12-decode-err` — `security/manager/security/certificates/certManager.ftl` — "format" turned into "encrypted in the format". Suggest: "Het heeft niet de PKCS #12-indeling, is beschadigd, …"
     - Source: `Failed to decode the file. Either it is not in PKCS #12 format, has been corrupted, or the password you entered was incorrect.`
-- `pippki-failed-pw-change` — `security/manager/security/pippki/pippki.ftl` — pippki-failed-pw-change, pippki-incorrect-pw, pippki-pw-erased-ok, pippki-pw-not-wanted, pippki-pw-change2empty-in-fips-mode — security/.../pippki.ftl — these belong to the device password dialog (change-device-password-window); en-US says plain "password", but nl says "hoofdwachtwoord" (Primary Password). Suggest: use "wachtwoord" in these five; keep "hoofdwachtwoord" only in the reset-primary-p…
-    - Source: `Unable to change password.`
-- `pippki-incorrect-pw` — `security/manager/security/pippki/pippki.ftl` — pippki-failed-pw-change, pippki-incorrect-pw, pippki-pw-erased-ok, pippki-pw-not-wanted, pippki-pw-change2empty-in-fips-mode — security/.../pippki.ftl — these belong to the device password dialog (change-device-password-window); en-US says plain "password", but nl says "hoofdwachtwoord" (Primary Password). Suggest: use "wachtwoord" in these five; keep "hoofdwachtwoord" only in the reset-primary-p…
-    - Source: `You did not enter the correct current password. Please try again.`
-- `pippki-pw-change2empty-in-fips-mode` — `security/manager/security/pippki/pippki.ftl` — pippki-failed-pw-change, pippki-incorrect-pw, pippki-pw-erased-ok, pippki-pw-not-wanted, pippki-pw-change2empty-in-fips-mode — security/.../pippki.ftl — these belong to the device password dialog (change-device-password-window); en-US says plain "password", but nl says "hoofdwachtwoord" (Primary Password). Suggest: use "wachtwoord" in these five; keep "hoofdwachtwoord" only in the reset-primary-p…
-    - Source: `You are currently in FIPS mode. FIPS requires a non-empty password.`
-- `pippki-pw-erased-ok` — `security/manager/security/pippki/pippki.ftl` — pippki-failed-pw-change, pippki-incorrect-pw, pippki-pw-erased-ok, pippki-pw-not-wanted, pippki-pw-change2empty-in-fips-mode — security/.../pippki.ftl — these belong to the device password dialog (change-device-password-window); en-US says plain "password", but nl says "hoofdwachtwoord" (Primary Password). Suggest: use "wachtwoord" in these five; keep "hoofdwachtwoord" only in the reset-primary-p…
-    - Source: `You have deleted your password. { pippki-pw-empty-warning }`
-- _…and 50 more; see `state/` for the full list._
+- _…and 58 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -633,7 +638,7 @@ _Nothing reported._
 - `options-show-user-agent-shadow-dom-tooltip` — `devtools/client/toolbox-options.ftl` — options-show-user-agent-shadow-dom-tooltip (.title) — "schaduw-DOM-elementen" while its own label keeps "Shadow DOM".
     - Source: `title: Turning this on will show Shadow DOM elements handled by the browser.`
     - Suggest: `.title`
-- _…and 39 more; see `state/` for the full list._
+- _…and 41 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
