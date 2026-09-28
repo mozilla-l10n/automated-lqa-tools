@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
-| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
+| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 115 of 16,233 |
+| **Strings reviewed this run** | 44 of 16,263 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,43 +18,13 @@ Also for cs: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (7)
+### 🆕 New findings (1)
 
-- `newtab-recent-searches-empty-recent` — `browser/browser/newtab/newtab.ftl` — "pick them up again" (resume/reuse the searches) is rendered as "znovu obnovit" (restore again), and the number disagrees with the pronoun.
-    - Current: `Nedávné vyhledávání se zobrazí zde, takže je můžete kdykoli znovu obnovit.`
-    - Source: `Recent searches will show here so you can pick them up again anytime.`
-    - Suggest: `Nedávná vyhledávání se zobrazí zde, takže v nich můžete kdykoli pokračovat.`
-    - The en-US says recent searches appear here so the user can resume them anytime; "znovu obnovit" means restore, and singular "Nedávné vyhledávání" conflicts with the plural pronoun "je".
-- `onboarding-refresh-tou-pin` — `browser/browser/newtab/onboarding.ftl` — The two plural/platform variants use inconsistent verb forms (infinitive vs. imperative) and an unnatural possessive.
-    - Current: `[other] Přidejte si aplikaci { -brand-short-name } na vaši lištu`
-    - Source: `{$sel_1 ->} [macos] Keep { -brand-short-name } in Dock [other] Add { -brand-short-name } to your taskbar`
-    - Suggest: `[other] Přidat { -brand-short-name } na lištu`
-    - The macOS variant uses the infinitive checkbox label form ("Ponechat"), while the other variant switches to imperative plus a redundant "vaši"; both are the same checkbox label in en-US.
-- `onboarding-refresh-tou-pin-unchecked` — `browser/browser/newtab/onboarding.ftl` — "a click away" rendered as "na jedno klepnutí" using outdated terminology inconsistent with current Firefox cs usage ("kliknutí").
-    - Current: `na jedno klepnutí`
-    - Source: `Keep the only major independent browser a click away`
-    - Suggest: `na jedno kliknutí`
-    - Czech Firefox uses "kliknutí" for mouse clicks; "klepnutí" is the legacy/tap term.
-- `onboarding-minimal-tabs-tooltip` — `browser/browser/newtab/onboarding.ftl` — "along the side of the screen" (singular side) translated as "po stranách obrazovky" (on the sides, plural).
-    - Current: `jako malé ikony po stranách obrazovky`
-    - Source: `title: A browser window displaying tabs as small icons along the side of the screen, in a minimized sidebar.`
-    - Suggest: `jako malé ikony podél okraje obrazovky`
-    - The source describes tabs along one side of the screen in a minimized sidebar, not on multiple sides.
-- `onboarding-minimal-tabs-description` — `browser/browser/newtab/onboarding.ftl` — "along the side of the screen" (singular side) translated as "po stranách obrazovky" (on the sides, plural).
-    - Current: `jako malé ikony po stranách obrazovky`
-    - Source: `aria-description: A browser window displaying tabs as small icons along the side of the screen, in a minimized sidebar.`
-    - Suggest: `jako malé ikony podél okraje obrazovky`
-    - The source describes tabs along one side of the screen in a minimized sidebar, not on multiple sides.
-- `about-pdf-feature-organize-description` — `toolkit/toolkit/about/aboutPDF.ftl` — Mixed verb aspect in the list of actions: perfective "Změňte pořadí" followed by imperfective "odstraňujte, slučujte".
-    - Current: `Změňte pořadí, odstraňujte, slučujte a exportujte stránky.`
-    - Source: `Reorder, remove, merge, and export pages.`
-    - Suggest: `Měňte pořadí stránek, odstraňujte je, slučujte a exportujte.`
-    - The en-US lists parallel actions; the Czech mixes aspects inconsistently within one list.
-- `onboarding-refresh-tou-default-unchecked` — `browser/browser/newtab/onboarding.ftl` — "Mějte vestavěnou ochranu při každém prohlížení" is an awkward literal rendering of "Keep built-in protection every time you browse".
-    - Current: `Mějte vestavěnou ochranu při každém prohlížení`
-    - Source: `Keep built-in protection every time you browse`
-    - Suggest: `Zachovejte si vestavěnou ochranu při každém prohlížení`
-    - The imperative "Mějte" is not idiomatic Czech for "keep" in the sense of retaining a protection setting.
+- `places-add-bookmark` — `browser/browser/places.ftl` — Missing ellipsis present in the source label "Add Bookmark…".
+    - Current: `Nová záložka`
+    - Source: `accesskey: k label: Add Bookmark…`
+    - Suggest: `Nová záložka…`
+    - The en-US label ends with an ellipsis indicating a dialog follows; the Czech drops it.
 
 ### ✅ Fixed since the last run (0)
 
@@ -79,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 326 |
-| Strings | 16,233 |
-| Missing strings | 0 |
+| Strings | 16,263 |
+| Missing strings | 42 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -97,7 +67,22 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**42 strings** are not translated yet, concentrated in:
+
+- `browser/browser/aboutRestartRequired.ftl` — 13
+- `browser/browser/ipProtection.ftl` — 7
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 5
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 3
+- `browser/browser/preferences/preferences.ftl` — 3
+- `toolkit/toolkit/about/aboutLogging.ftl` — 2
+- `browser/browser/appmenu.ftl` — 2
+- `browser/browser/newtab/newtab.ftl` — 2
+- `toolkit/toolkit/payments/payments.ftl` — 1
+- `browser/browser/genai.ftl` — 1
+- `browser/browser/places.ftl` — 1
+- `browser/browser/sidebar.ftl` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -107,7 +92,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `german-double` 465, `curly-double` 215, `curly-single` 56, `straight-double` 43, `polish-double` 2 | _mixed_ |
 | apostrophe | `typographic` 70, `straight` 9 | **typographic** |
-| ellipsis | `char` 382, `ascii` 3 | **char** |
+| ellipsis | `char` 380, `ascii` 3 | **char** |
 | dash | `em` 65, `en` 30 | _mixed_ |
 | nbsp | `total` 13, `before-punctuation` 3, `space-before-punctuation` 7 | _mixed_ |
 
@@ -120,7 +105,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (239)
+## 3. Open findings (240)
 
 
 | Impact | Meaning | Count |
@@ -128,7 +113,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | 1 | Broken output (blank value, broken markup, wrong variable) | 41 |
 | 2 | Wrong content (says something other than the English) | 117 |
 | 3 | Degraded language (grammar, spelling, terminology) | 58 |
-| 4 | Cosmetic (typography, spacing) | 18 |
+| 4 | Cosmetic (typography, spacing) | 19 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -1046,6 +1031,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `{ $provider } ∙ Sponsored`
     - Suggest: `{ $provider } ∙ Sponzorované`
     - en-US has spaces on both sides of "∙"; the same defect is repeated in newtab-weather-see-forecast-description.
+- `places-add-bookmark` — `browser/browser/places.ftl` — Missing ellipsis present in the source label "Add Bookmark…".
+    - Current: `Nová záložka`
+    - Source: `accesskey: k label: Add Bookmark…`
+    - Suggest: `Nová záložka…`
+    - The en-US label ends with an ellipsis indicating a dialog follows; the Czech drops it.
 - `more-from-moz-mozilla-monitor-card` — `browser/browser/preferences/moreFromMozilla.ftl` — "Internetu" is capitalized, contrary to the rest of the file.
     - Current: `kde na Internetu došlo k úniku`
     - Source: `description: Find out where your personal info has been exposed online with a free scan. label: { -mozmonitor-brand-name }`
@@ -1074,7 +1064,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `netmonitor.context.perfTools` — `devtools/client/netmonitor.properties` — `netmonitor.context.perfTools` uses three dots where this locale uses …
     - Current: `Zahájit analýzu výkonu...`
     - Source: `Start Performance Analysis…`
-    - The tree uses … 382 times against 3 ASCII runs.
+    - The tree uses … 380 times against 3 ASCII runs.
 - `styleeditor-stylesheet-rule-count` — `devtools/client/styleeditor.ftl` — Doubled period in the [few] plural variant
     - Current: `{ $ruleCount } pravidla..`
     - Source: `{$ruleCount ->} [one] { $ruleCount } rule. [other] { $ruleCount } rules.`
@@ -1083,7 +1073,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `crashreporter-submit-waiting-hardware-tests` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-submit-waiting-hardware-tests` uses three dots where this locale uses …
     - Current: `Probíhá kontrola problémů s hardwarem a konfigurací...`
     - Source: `Checking for hardware and configuration problems…`
-    - The tree uses … 382 times against 3 ASCII runs.
+    - The tree uses … 380 times against 3 ASCII runs.
 - `gpu-vendor-id` — `toolkit/toolkit/about/aboutSupport.ftl` — "Vendor" rendered as "prodejce" (seller), inconsistent with the rest of the page
     - Current: `ID prodejce`
     - Source: `Vendor ID`
@@ -1122,7 +1112,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `pdfjs-free-text2` — `toolkit/toolkit/pdfviewer/viewer.ftl` — `pdfjs-free-text2` uses three dots where this locale uses …
     - Current: `Začněte psát...`
     - Source: `aria-label: Text Editor default-content: Start typing…`
-    - The tree uses … 382 times against 3 ASCII runs.
+    - The tree uses … 380 times against 3 ASCII runs.
 
 ---
 

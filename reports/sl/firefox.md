@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
-| **Previous run** | 2026-09-14 @ `fc8fd09d4a18` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
+| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 44 of 15,583 |
+| **Strings reviewed this run** | 90 of 15,660 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,22 +18,35 @@ Also for sl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (4)
 
-- `newtab-wallpaper-firefox-desert-light` — `browser/browser/newtab/newtab.ftl` — "A fox running" translated as "a fox sitting".
-    - Current: `Lisica, ki sedi v svetli puščavi`
-    - Source: `A fox running across a light desert`
-    - Suggest: `Lisica, ki teče po svetli puščavi`
-    - The en-US says the fox is running across a light desert, not sitting; the dark variant is the sitting one.
-- `newtab-recent-searches-row-remove` — `browser/browser/newtab/newtab.ftl` — Straight ASCII double quotes used instead of the curly quotes in the source.
-    - Current: `Odstrani "{ $search }" iz nedavnih iskanj`
-    - Source: `aria-label: Remove “{ $search }” from recent searches`
-    - Suggest: `Odstrani „{ $search }“ iz nedavnih iskanj`
-    - The en-US uses typographic quotes “ ”; Slovenian convention here uses curly quotes.
+- `about-pdf-feature-organize-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — "Organize pages" translated as "Organizirajte dokumente" (organize documents) instead of pages.
+    - Current: `Organizirajte dokumente`
+    - Source: `Organize pages`
+    - Suggest: `Organizirajte strani`
+    - The en-US refers to pages within a PDF, not documents; the description in the same feature block also talks about reordering pages.
+- `about-pdf-feature-organize-description` — `toolkit/toolkit/about/aboutPDF.ftl` — "export pages" rendered as "posamič izvozite" (export individually), adding a claim not in the source.
+    - Current: `jih odstranite, združite ali posamič izvozite`
+    - Source: `Reorder, remove, merge, and export pages.`
+    - Suggest: `jih odstranite, združite in izvozite`
+    - The source says "Reorder, remove, merge, and export pages" with no statement that export happens individually.
+- `about-pdf-feature-comments-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — "Add notes" rendered as "Pišite opombe" (write notes) instead of adding notes.
+    - Current: `Pišite opombe`
+    - Source: `Add notes`
+    - Suggest: `Dodajte opombe`
+    - The source heading is "Add notes"; the verb "dodajte" is the established rendering of "add" in the sibling strings.
+- `speech-recognition-model-download-message` — `browser/browser/permissions.ftl` — The Slovenian drops "when you continue" and mangles "the audio never leaves your device" into a relative clause saying the device never leaves the audio.
+    - Current: `V { -brand-short-name } prepoznavanje govora poteka na napravi, ki je zvok v nobenem trenutku ne zapusti. V ta namen bo na napravo preneslo ~{ $sizeMB } MB podatkov.`
+    - Source: `{ -brand-short-name } runs speech recognition locally, so the audio never leaves your device. To set this up, a ~{ $sizeMB } MB download will start when you continue.`
+    - Suggest: `V { -brand-short-name } prepoznavanje govora poteka krajevno, zato zvok nikoli ne zapusti vaše naprave. Za nastavitev se bo ob nadaljevanju začel prenos velikosti ~{ $sizeMB } MB.`
+    - The en-US says the download will start when you continue; the target states it will simply be downloaded, omitting the condition, and the second sentence also lacks a subject ("bo na napravo preneslo").
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `main-context-menu-media-video-leave-fullscreen` — `browser/browser/browserContext.ftl` — Access key `j` of `main-context-menu-media-video-leave-fullscreen` is not present in its label
+    - Current: `j`
+    - Source: `accesskey: u label: Exit Full Screen`
+    - The label is “Izhod iz celozaslonskega načina”. An access key not in the label cannot be underlined and is unreachable by keyboard.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -53,11 +66,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 325 |
-| Strings | 15,583 |
-| Missing strings | 650 |
+| Files | 326 |
+| Strings | 15,660 |
+| Missing strings | 645 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -66,30 +79,26 @@ _Nothing retired._
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 4 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 1 |
+| Access keys not in their label | 0 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 28 |
 
 ### Completeness
 
-**650 strings** are not translated yet, concentrated in:
+**645 strings** are not translated yet, concentrated in:
 
 - `browser/browser/aiWindow.ftl` — 139
 - `browser/browser/aiWindowContent.ftl` — 67
-- `dom/chrome/dom/dom.properties` — 48
+- `browser/browser/ipProtection.ftl` — 51
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 48
-- `browser/browser/ipProtection.ftl` — 44
+- `dom/chrome/dom/dom.properties` — 48
 - `browser/browser/aiFeatures.ftl` — 27
 - `dom/chrome/security/security.properties` — 25
-- `browser/browser/newtab/newtab.ftl` — 23
+- `browser/browser/newtab/newtab.ftl` — 21
 - `browser/browser/preferences/preferences.ftl` — 19
-- `toolkit/toolkit/about/aboutPDF.ftl` — 19
-- `devtools/client/debugger.properties` — 16
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 16
-
-**Files absent from the locale:**
-
-- `toolkit/toolkit/about/pdfFeaturesNotification.ftl`
+- `browser/browser/aboutRestartRequired.ftl` — 18
+- `devtools/client/debugger.properties` — 17
+- `toolkit/toolkit/about/aboutGlean.ftl` — 14
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -101,10 +110,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 267, `straight-double` 258, `curly-single` 50, `guillemet` 5 | _mixed_ |
 | apostrophe | `typographic` 50, `straight` 51 | _mixed_ |
-| ellipsis | `char` 356, `ascii` 33 | **char** |
-| dash | `em` 13, `en` 116 | **en** |
+| ellipsis | `char` 354, `ascii` 33 | **char** |
+| dash | `em` 13, `en` 118 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 8 | _mixed_ |
-| register | `informal` 8, `formal` 514 | **formal** |
+| register | `informal` 8, `formal` 519 | **formal** |
 
 ---
 
@@ -115,7 +124,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (43)
+## 3. Open findings (46)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -130,16 +139,13 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 12 |
-| 3 | Degraded language (grammar, spelling, terminology) | 24 |
+| 2 | Wrong content (says something other than the English) | 14 |
+| 3 | Degraded language (grammar, spelling, terminology) | 25 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
 ### A. Functional, markup, variables & plurals
 
-- `main-context-menu-media-video-leave-fullscreen` — `browser/browser/browserContext.ftl` — Access key `j` of `main-context-menu-media-video-leave-fullscreen` is not present in its label
-    - Current: `j`
-    - Source: `accesskey: u label: Exit Full Screen`
-    - The label is “Izhod iz celozaslonskega načina”. An access key not in the label cannot be underlined and is unreachable by keyboard.
+_Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -168,6 +174,11 @@ _Also listed under their own category below._
     - Source: `By continuing, you agree to the <a data-l10n-name="terms_of_use">{ -brand-product-name } Terms of Use</a> and our <a data-l10n-name="privacy_notice">Privacy Notice</a>. To help improve the browser, { -brand-product-name…`
     - Suggest: `Za izboljšanje brskalnika { -brand-product-name } pošilja { -vendor-short-name } diagnostične podatke in podatke o uporabi.`
     - In en-US the subject is { -brand-product-name } which sends data to { -vendor-short-name }; the Slovenian makes { -vendor-short-name } the sender and attaches the brand name to "brskalnika", reversing the roles and dropping the recipient.
+- `speech-recognition-model-download-message` — `browser/browser/permissions.ftl` — The Slovenian drops "when you continue" and mangles "the audio never leaves your device" into a relative clause saying the device never leaves the audio.
+    - Current: `V { -brand-short-name } prepoznavanje govora poteka na napravi, ki je zvok v nobenem trenutku ne zapusti. V ta namen bo na napravo preneslo ~{ $sizeMB } MB podatkov.`
+    - Source: `{ -brand-short-name } runs speech recognition locally, so the audio never leaves your device. To set this up, a ~{ $sizeMB } MB download will start when you continue.`
+    - Suggest: `V { -brand-short-name } prepoznavanje govora poteka krajevno, zato zvok nikoli ne zapusti vaše naprave. Za nastavitev se bo ob nadaljevanju začel prenos velikosti ~{ $sizeMB } MB.`
+    - The en-US says the download will start when you continue; the target states it will simply be downloaded, omitting the condition, and the second sentence also lacks a subject ("bo na napravo preneslo").
 - `outline.placeholder.functions` — `devtools/client/debugger.properties` — "Filter functions" (verb + object) translated as a noun phrase "Filter funkcij" (filter of functions).
     - Current: `Filter funkcij`
     - Source: `Filter functions`
@@ -178,6 +189,21 @@ _Also listed under their own category below._
     - Source: `title: List and view stylesheets in the debugger`
     - Suggest: `Prikaži seznam slogovnih predlog in si jih oglej v razhroščevalniku`
     - The en-US says "List and view stylesheets"; the Slovenian only mentions listing them.
+- `about-pdf-feature-comments-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — "Add notes" rendered as "Pišite opombe" (write notes) instead of adding notes.
+    - Current: `Pišite opombe`
+    - Source: `Add notes`
+    - Suggest: `Dodajte opombe`
+    - The source heading is "Add notes"; the verb "dodajte" is the established rendering of "add" in the sibling strings.
+- `about-pdf-feature-organize-description` — `toolkit/toolkit/about/aboutPDF.ftl` — "export pages" rendered as "posamič izvozite" (export individually), adding a claim not in the source.
+    - Current: `jih odstranite, združite ali posamič izvozite`
+    - Source: `Reorder, remove, merge, and export pages.`
+    - Suggest: `jih odstranite, združite in izvozite`
+    - The source says "Reorder, remove, merge, and export pages" with no statement that export happens individually.
+- `about-pdf-feature-organize-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — "Organize pages" translated as "Organizirajte dokumente" (organize documents) instead of pages.
+    - Current: `Organizirajte dokumente`
+    - Source: `Organize pages`
+    - Suggest: `Organizirajte strani`
+    - The en-US refers to pages within a PDF, not documents; the description in the same feature block also talks about reordering pages.
 - `support-remote-experiments-title` — `toolkit/toolkit/about/aboutSupport.ftl` — "Remote Experiments" (experiments delivered remotely) is rendered as "Poskusi na daljavo", which means experiments performed at a distance.
     - Current: `Poskusi na daljavo`
     - Source: `Remote Experiments`
@@ -331,8 +357,9 @@ _Suppressions live in `locales/sl/suppressions.yaml`. Removing a rule brings its
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (43)
+### Fixed to date (44)
 
+- `main-context-menu-media-video-leave-fullscreen` — `browser/browser/browserContext.ftl` — fixed 2026-09-28
 - `pkcs12-decode-err` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-08-24
 - `about-logins-confirm-export-dialog-message2` — `browser/browser/aboutLogins.ftl` — fixed 2026-07-29 (undated)
 - `restore-page-problem-desc` — `browser/browser/aboutSessionRestore.ftl` — fixed 2026-07-29 (undated)
@@ -372,4 +399,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `region-name-tr` — `toolkit/toolkit/intl/regionNames.ftl` — fixed 2026-07-29 (undated)
 - `cert-error-symantec-distrust-description` — `toolkit/toolkit/neterror/certError.ftl` — fixed 2026-07-29 (undated)
 - `cert-error-trust-cert-invalid` — `toolkit/toolkit/neterror/certError.ftl` — fixed 2026-07-29 (undated)
-- `certerror-mitm-what-can-you-do-about-it-corporate` — `toolkit/toolkit/neterror/netError.ftl` — fixed 2026-07-29 (undated)

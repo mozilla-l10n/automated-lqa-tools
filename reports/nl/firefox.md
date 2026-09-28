@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
-| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
+| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 180 of 16,233 |
+| **Strings reviewed this run** | 33 of 16,251 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,58 +18,9 @@ Also for nl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (10)
+### 🆕 New findings (0)
 
-- `perftools-thread-jxl-img-decode` — `devtools/client/perftools.ftl` — "image decoding" is rendered as "afbeeldingsontsleuteling" (image decryption) instead of "afbeeldingsdecodering".
-    - Current: `JPEG XL-afbeeldingsontsleutelingsthreads`
-    - Source: `title: JPEG XL image decoding threads`
-    - Suggest: `JPEG XL-afbeeldingsdecoderingsthreads`
-    - "Ontsleuteling" means decryption, not decoding of an image format.
-- `newtab-wallpaper-your-images-folder` — `browser/browser/newtab/newtab.ftl` — The accessible name drops the "Your images" folder label and turns one description into two categories of items.
-    - Current: `aria-label: Uw opgeslagen afbeeldingen en achtergronden`
-    - Source: `aria-label: Your images, wallpapers that you have saved`
-    - Suggest: `aria-label: Uw afbeeldingen, achtergronden die u hebt opgeslagen`
-    - en-US is "Your images, wallpapers that you have saved": the folder name "Your images" followed by an apposition. The Dutch reads as "your saved images and wallpapers", listing two separate things and losing the folder name a screen reader needs.
-- `newtab-nova-customization-callout-message` — `browser/browser/newtab/newtab.ftl` — "make the new Firefox feel more like yours" is rendered as "meer van u lijkt" (appears to be more yours), dropping the "feel" and creating an odd claim.
-    - Current: `waardoor de nieuwe { -brand-product-name } meer van u lijkt`
-    - Source: `Explore light or dark themes and wallpapers that make the new { -brand-product-name } feel more like yours.`
-    - Suggest: `waardoor de nieuwe { -brand-product-name } meer als van uzelf aanvoelt`
-    - The en-US says themes and wallpapers make the browser *feel* more like yours; the Dutch 'meer van u lijkt' means it seems to belong to you more, a different statement and ungrammatical-sounding without 'aanvoelt'.
-- `onboarding-refresh-tou-default-unchecked` — `browser/browser/newtab/onboarding.ftl` — "every time you browse" is rendered as "tijdens het navigeren", and "Keep" is dropped, turning the line into a claim rather than the retained-protection statement.
-    - Current: `Altijd ingebouwde bescherming tijdens het navigeren`
-    - Source: `Keep built-in protection every time you browse`
-    - Suggest: `Behoud ingebouwde bescherming telkens wanneer u surft`
-    - The source describes keeping built-in protection every time the user browses; the Dutch omits 'Keep' and uses 'navigeren' (navigating) instead of browsing.
-- `about-pdf-features-intro` — `toolkit/toolkit/about/aboutPDF.ftl` — “right where you browse” rendered as “waar u navigeert”, which misses the sense of “right in your browser”.
-    - Current: `Lees, markeer en onderteken PDF’s waar u navigeert.`
-    - Source: `Read, mark up, and sign PDFs right where you browse. It’s simple, free, and private.`
-    - Suggest: `Lees, markeer en onderteken PDF’s direct in uw browser.`
-    - The en-US means PDFs can be handled in the same place you browse; “waar u navigeert” (where you navigate) is not the same statement.
-- `about-pdf-feature-details-description` — `toolkit/toolkit/about/aboutPDF.ftl` — “outlines” (PDF document outline / bookmarks) translated as “contouren”, a graphical term.
-    - Current: `Gebruik contouren, bijlagen en eigenschappen`
-    - Source: `Use outlines, attachments, and properties to move through PDFs.`
-    - Suggest: `Gebruik overzichten, bijlagen en eigenschappen`
-    - In PDF viewers “outline” is the document structure/bookmark panel; “contouren” means visual outlines and is the wrong terminology.
-- `about-pdf-feature-annotate-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — “Mark up PDFs” rendered as “PDF’s opmaken” (format PDFs) instead of annotating/marking up.
-    - Current: `PDF’s opmaken`
-    - Source: `Mark up PDFs`
-    - Suggest: `PDF’s annoteren`
-    - “Opmaken” means to format/lay out; the source means adding annotations (text, highlights, drawings), as the description confirms.
-- `about-pdf-feature-presentation-description` — `toolkit/toolkit/about/aboutPDF.ftl` — “a clean view” translated literally as “een schoon beeld” (a clean/washed image).
-    - Current: `Deel een schoon beeld in presentatiemodus.`
-    - Source: `Share a clean view in presentation mode.`
-    - Suggest: `Deel een overzichtelijke weergave in presentatiemodus.`
-    - “Clean view” means an uncluttered/distraction-free view; “schoon beeld” in Dutch reads as physically clean and does not convey that.
-- `autofill-delete-payment-method-os-prompt-other` — `toolkit/toolkit/formautofill/formAutofill.ftl` — The word "opgeslagen" (stored) is missing from the Dutch rendering.
-    - Current: `probeert betalingsgegevens te verwijderen`
-    - Source: `{ -brand-short-name } is trying to delete stored payment method information.`
-    - Suggest: `probeert opgeslagen betalingsgegevens te verwijderen`
-    - The en-US says "delete stored payment method information"; the parallel -windows string correctly uses "opgeslagen betalingsgegevens". Dropping it broadens the claim to all payment data.
-- `autofill-delete-payment-method-os-prompt-macos` — `toolkit/toolkit/formautofill/formAutofill.ftl` — "betalingsmethode" is inconsistent with "betalingsgegevens"/"Betaalmethode" used elsewhere for payment method information.
-    - Current: `opgeslagen betalingsmethode verwijderen`
-    - Source: `delete stored payment method information`
-    - Suggest: `opgeslagen betalingsgegevens verwijderen`
-    - The en-US "stored payment method information" is rendered as "opgeslagen betalingsgegevens" in the sibling Windows string; the macOS string uses a different term for the same concept.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -94,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 326 |
-| Strings | 16,233 |
-| Missing strings | 0 |
+| Strings | 16,251 |
+| Missing strings | 54 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -112,7 +63,22 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**54 strings** are not translated yet, concentrated in:
+
+- `browser/browser/aboutRestartRequired.ftl` — 18
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 9
+- `browser/browser/ipProtection.ftl` — 7
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 4
+- `browser/browser/appmenu.ftl` — 3
+- `browser/browser/preferences/preferences.ftl` — 3
+- `toolkit/toolkit/about/aboutLogging.ftl` — 2
+- `browser/browser/newtab/newtab.ftl` — 2
+- `toolkit/toolkit/payments/payments.ftl` — 1
+- `browser/browser/backupSettings.ftl` — 1
+- `browser/browser/genai.ftl` — 1
+- `browser/browser/places.ftl` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -122,10 +88,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-single` 812, `straight-double` 25, `curly-double` 9 | **curly-single** |
 | apostrophe | `typographic` 1025 | **typographic** |
-| ellipsis | `char` 389 | **char** |
+| ellipsis | `char` 387 | **char** |
 | dash | `en` 110 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `formal` 2673 | **formal** |
+| register | `formal` 2683 | **formal** |
 
 ---
 

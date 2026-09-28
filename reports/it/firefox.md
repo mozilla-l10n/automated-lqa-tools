@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
-| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
+| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 73 of 16,460 |
+| **Strings reviewed this run** | 85 of 16,552 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,38 @@ Also for it: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (6)
 
-- `newtab-search-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Search options" translated as "Impostazioni di ricerca" (search settings) instead of "Opzioni di ricerca".
-    - Current: `Impostazioni di ricerca`
-    - Source: `aria-label: Search options`
-    - Suggest: `Opzioni di ricerca`
-    - The source says "Search options"; "Impostazioni" means settings, and the sibling string "More options" is correctly rendered "Altre opzioni", making the terminology inconsistent.
+- `about-logging-preset-vpn-description` — `toolkit/toolkit/about/aboutLogging.ftl` — "Log modules" (verb + object: log the modules) rendered as the noun phrase "Moduli di registrazione".
+    - Current: `Moduli di registrazione per diagnosticare problemi con la VPN integrata (IP Protection).`
+    - Source: `Log modules to diagnose IP Protection (VPN) issues`
+    - Suggest: `Registra i moduli per diagnosticare problemi con IP Protection (VPN).`
+    - The en-US is an imperative describing the preset action ("Log modules to diagnose…"), not a noun phrase; also "IP Protection (VPN)" is reversed and expanded to "VPN integrata (IP Protection)".
+- `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl` — "help keep your browsing private" rendered as an absolute "impediscono" (prevent), dropping the hedge.
+    - Current: `Le finestre anonime impediscono agli altri utenti di questo dispositivo di vedere la tua attività di navigazione.`
+    - Source: `Private Windows help keep your browsing private from others on this device. They don’t make you anonymous or clear all of your data.`
+    - Suggest: `Le finestre anonime aiutano a nascondere la tua attività di navigazione agli altri utenti di questo dispositivo.`
+    - The source says Private Windows "help keep" browsing private; the Italian asserts they outright prevent other users from seeing the activity, a stronger promise than the product makes.
+- `about-private-browsing-spotlight-basics-strict-tracking` — `browser/browser/aboutPrivateBrowsing.ftl` — "stronger tracking protections" rendered as "più aggressiva" (more aggressive).
+    - Current: `per una protezione antitracciamento più aggressiva`
+    - Source: `Switch to Strict in settings for stronger tracking protections.`
+    - Suggest: `per una protezione antitracciamento più efficace`
+    - The source says the protection is stronger, not more aggressive; "aggressiva" carries a different connotation than en-US "stronger".
+- `restart-required-single-instance-answer-2` — `browser/browser/aboutRestartRequired.ftl` — The security claim is attached to the wrong subject and the sentence structure changes the meaning ("Riavviando { -brand-short-name }, continuerà..." implies the OS/browser continues).
+    - Current: `Riavviando { -brand-short-name }, continuerà a funzionare normalmente e in sicurezza.`
+    - Source: `This can happen during a long browsing session, or when your operating system updates { -brand-short-name }. Restarting keeps { -brand-short-name } secure and working normally.`
+    - Suggest: `Il riavvio consente a { -brand-short-name } di restare sicuro e di funzionare normalmente.`
+    - En-US: "Restarting keeps { -brand-short-name } secure and working normally." The Italian gerund construction leaves the subject of "continuerà" dangling and turns the statement into a promise that something will keep working, rather than that restarting keeps the browser secure.
+- `restart-required-fix-question` — `browser/browser/aboutRestartRequired.ftl` — "Is { -brand-short-name } working on a fix?" is rendered with the brand as the subject working on a fix, which is fine, but the question mark sentence loses "really"; main issue: brand name used as a company.
+    - Current: `{ -brand-short-name } sta lavorando a una soluzione?`
+    - Source: `This is really annoying! Is { -brand-short-name } working on a fix?`
+    - Suggest: `Il team di { -brand-short-name } sta lavorando a una soluzione?`
+    - Mirrors the en-US subject; reporting only if considered defective.
+- `newtab-stocks-search-hint` — `browser/browser/newtab/newtab.ftl` — "Search for symbols" is translated as "Cerca azioni" (search for stocks) instead of ticker symbols.
+    - Current: `Cerca azioni o aziende da aggiungere alla tua lista`
+    - Source: `Search for symbols or companies to add to your watchlist`
+    - Suggest: `Cerca simboli o aziende da aggiungere alla tua lista di controllo`
+    - En-US says "symbols or companies"; the sibling strings correctly render "symbol" as "simbolo" ("Cerca per nome o simbolo"), so "azioni" is inconsistent and drops the ticker-symbol meaning.
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,9 +74,9 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 336 |
-| Strings | 16,460 |
+| Strings | 16,552 |
 | Missing strings | 0 |
-| Obsolete strings | 13 |
+| Obsolete strings | 20 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 10 |
 | Fluent / properties syntax errors | 0 |
@@ -82,7 +107,7 @@ The locale is complete against the en-US source.
 - `toolkit/toolkit/enterprise/enterprise.ftl`
 - `toolkit/toolkit/enterprise/felt.ftl`
 
-_214 strings. These files exist in the locale tree but not in the en-US reference — they are maintained elsewhere. The model review is a comparison against en-US, so it skips them entirely; only the checks that need no reference ran. Nothing reported from these files means nothing was looked for, not that they are clean._
+_227 strings. These files exist in the locale tree but not in the en-US reference — they are maintained elsewhere. The model review is a comparison against en-US, so it skips them entirely; only the checks that need no reference ran. Nothing reported from these files means nothing was looked for, not that they are clean._
 
 ### Conventions detected in this locale
 
@@ -91,11 +116,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 951, `straight-double` 25 | **curly-double** |
-| apostrophe | `typographic` 1748, `straight` 6 | **typographic** |
+| apostrophe | `typographic` 1753, `straight` 6 | **typographic** |
 | ellipsis | `char` 408 | **char** |
-| dash | `em` 51, `en` 16 | **em** |
+| dash | `em` 51, `en` 17 | **em** |
 | nbsp | `total` 12, `before-punctuation` 4, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 713, `formal` 47 | **informal** |
+| register | `informal` 720, `formal` 47 | **informal** |
 
 ---
 
@@ -105,14 +130,23 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (10)
+## 3. Open findings (16)
 
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+
+- `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl` — "help keep your browsing private" rendered as an absolute "impediscono" (prevent), dropping the hedge.
+    - Current: `Le finestre anonime impediscono agli altri utenti di questo dispositivo di vedere la tua attività di navigazione.`
+    - Source: `Private Windows help keep your browsing private from others on this device. They don’t make you anonymous or clear all of your data.`
+    - Suggest: `Le finestre anonime aiutano a nascondere la tua attività di navigazione agli altri utenti di questo dispositivo.`
+    - The source says Private Windows "help keep" browsing private; the Italian asserts they outright prevent other users from seeing the activity, a stronger promise than the product makes.
+
+_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 2 |
-| 3 | Degraded language (grammar, spelling, terminology) | 6 |
+| 2 | Wrong content (says something other than the English) | 5 |
+| 3 | Degraded language (grammar, spelling, terminology) | 9 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
@@ -124,11 +158,36 @@ _Nothing reported._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `about-private-browsing-spotlight-basics-strict-tracking` — `browser/browser/aboutPrivateBrowsing.ftl` — "stronger tracking protections" rendered as "più aggressiva" (more aggressive).
+    - Current: `per una protezione antitracciamento più aggressiva`
+    - Source: `Switch to Strict in settings for stronger tracking protections.`
+    - Suggest: `per una protezione antitracciamento più efficace`
+    - The source says the protection is stronger, not more aggressive; "aggressiva" carries a different connotation than en-US "stronger".
+- `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl` — "help keep your browsing private" rendered as an absolute "impediscono" (prevent), dropping the hedge.
+    - Current: `Le finestre anonime impediscono agli altri utenti di questo dispositivo di vedere la tua attività di navigazione.`
+    - Source: `Private Windows help keep your browsing private from others on this device. They don’t make you anonymous or clear all of your data.`
+    - Suggest: `Le finestre anonime aiutano a nascondere la tua attività di navigazione agli altri utenti di questo dispositivo.`
+    - The source says Private Windows "help keep" browsing private; the Italian asserts they outright prevent other users from seeing the activity, a stronger promise than the product makes.
+- `restart-required-fix-question` — `browser/browser/aboutRestartRequired.ftl` — "Is { -brand-short-name } working on a fix?" is rendered with the brand as the subject working on a fix, which is fine, but the question mark sentence loses "really"; main issue: brand name used as a company.
+    - Current: `{ -brand-short-name } sta lavorando a una soluzione?`
+    - Source: `This is really annoying! Is { -brand-short-name } working on a fix?`
+    - Suggest: `Il team di { -brand-short-name } sta lavorando a una soluzione?`
+    - Mirrors the en-US subject; reporting only if considered defective.
+- `restart-required-single-instance-answer-2` — `browser/browser/aboutRestartRequired.ftl` — The security claim is attached to the wrong subject and the sentence structure changes the meaning ("Riavviando { -brand-short-name }, continuerà..." implies the OS/browser continues).
+    - Current: `Riavviando { -brand-short-name }, continuerà a funzionare normalmente e in sicurezza.`
+    - Source: `This can happen during a long browsing session, or when your operating system updates { -brand-short-name }. Restarting keeps { -brand-short-name } secure and working normally.`
+    - Suggest: `Il riavvio consente a { -brand-short-name } di restare sicuro e di funzionare normalmente.`
+    - En-US: "Restarting keeps { -brand-short-name } secure and working normally." The Italian gerund construction leaves the subject of "continuerà" dangling and turns the statement into a promise that something will keep working, rather than that restarting keeps the browser secure.
 - `newtab-search-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Search options" translated as "Impostazioni di ricerca" (search settings) instead of "Opzioni di ricerca".
     - Current: `Impostazioni di ricerca`
     - Source: `aria-label: Search options`
     - Suggest: `Opzioni di ricerca`
     - The source says "Search options"; "Impostazioni" means settings, and the sibling string "More options" is correctly rendered "Altre opzioni", making the terminology inconsistent.
+- `newtab-stocks-search-hint` — `browser/browser/newtab/newtab.ftl` — "Search for symbols" is translated as "Cerca azioni" (search for stocks) instead of ticker symbols.
+    - Current: `Cerca azioni o aziende da aggiungere alla tua lista`
+    - Source: `Search for symbols or companies to add to your watchlist`
+    - Suggest: `Cerca simboli o aziende da aggiungere alla tua lista di controllo`
+    - En-US says "symbols or companies"; the sibling strings correctly render "symbol" as "simbolo" ("Cerca per nome o simbolo"), so "azioni" is inconsistent and drops the ticker-symbol meaning.
 - `newtab-wallpaper-firefox-sitting-hill-dark` — `browser/browser/newtab/newtab.ftl` — "sitting" rendered as "accovacciata" (crouching), inconsistent with the parallel string which uses "seduta".
     - Current: `Una volpe accovacciata su colline viola scuro`
     - Source: `A fox sitting on dark purple hills`
@@ -144,6 +203,11 @@ _Nothing reported._
     - Source: `No sync logs have been recorded.`
     - Suggest: `Non è stato registrato alcun registro di sincronizzazione.`
     - The en-US says logs have not been recorded, not that a search failed to find them.
+- `about-logging-preset-vpn-description` — `toolkit/toolkit/about/aboutLogging.ftl` — "Log modules" (verb + object: log the modules) rendered as the noun phrase "Moduli di registrazione".
+    - Current: `Moduli di registrazione per diagnosticare problemi con la VPN integrata (IP Protection).`
+    - Source: `Log modules to diagnose IP Protection (VPN) issues`
+    - Suggest: `Registra i moduli per diagnosticare problemi con IP Protection (VPN).`
+    - The en-US is an imperative describing the preset action ("Log modules to diagnose…"), not a noun phrase; also "IP Protection (VPN)" is reversed and expanded to "VPN integrata (IP Protection)".
 - `neterror-search-cta-search-button` — `toolkit/toolkit/neterror/netError.ftl` — Tooltip translated as an imperative command instead of a description of what the button does.
     - Current: `tooltiptext: Apri i risultati di ricerca in una nuova scheda`
     - Source: `accesskey: c label: Search tooltiptext: Opens search results in a new tab`

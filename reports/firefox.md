@@ -1,15 +1,15 @@
 # Firefox (desktop + shared toolkit/dom strings) — l10n QA
 
-- **Generated:** 2026-09-21
+- **Generated:** 2026-09-28
 - **Locales tracked:** 20 (20 with recorded state)
-- **Findings:** 6,256 raised, 2,102 fixed (33%), 3,527 open
+- **Findings:** 6,326 raised, 2,104 fixed (33%), 3,593 open
 - **Closed by a person:** 19 dismissed, 15 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
 ## Read these first
 
-### Reads as a deliberate edit (11)
+### Reads as a deliberate edit (19)
 
 The translation makes the product assert something the en-US never said. Nothing here says the change was intended — that cannot be read off the text, which is exactly the problem, because a user cannot read it off either.
 
@@ -17,14 +17,34 @@ The translation makes the product assert something the en-US never said. Nothing
     - "Split" (PDFs aufteilen/teilen in Einzeldokumente) is rendered as "PDFs teilen", which in German primarily means "share".
     - Current: `PDFs teilen, zusammenführen und mehr.`
     - Suggest: `PDFs aufteilen, zusammenführen und mehr.`
+- **`fr`** `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl`
+    - "help keep your browsing private from others on this device" loses the "from others" element, changing the claim.
+    - Current: `Les fenêtres privées permettent de garder votre navigation privée sur cet appareil.`
+    - Suggest: `Les fenêtres privées permettent de préserver la confidentialité de votre navigation vis-à-vis des autres personnes qui utilisent cet appareil.`
+- **`hu`** `about-private-browsing-private-window-redesign-subheader` — `browser/browser/aboutPrivateBrowsing.ftl`
+    - "is designed to protect your privacy" rendered as an unconditional "protects your privacy".
+    - Current: `a beépített követés elleni védelmének köszönhetően megvédi a magánszféráját`
+    - Suggest: `úgy lett tervezve, hogy a beépített követés elleni védelemmel megvédje a magánszféráját böngészés közben`
+- **`hu`** `restart-required-intro2` — `browser/browser/aboutRestartRequired.ftl`
+    - "needs to finish an update. Restart to..." rendered as statements that the browser finishes the update and will restart itself, dropping the instruction to the user.
+    - Current: `A { -brand-short-name } befejezi a frissítést. Újraindul, hogy a dolgok biztonságosak és zökkenőmentesek legyenek.`
+    - Suggest: `A { -brand-short-name }nak be kell fejeznie a frissítést. Indítsa újra, hogy a dolgok biztonságosak és zökkenőmentesek legyenek.`
 - **`hu`** `ip-protection-site-rules-button` — `browser/browser/ipProtection.ftl`
     - The description reverses who needs the extra privacy, asserting that the sites must provide privacy rather than that the user wants extra privacy on them.
     - Current: `Állítson be szabályokat azokhoz a webhelyekhez, amelyeknek fokozott adatvédelmet kell biztosítaniuk, vagy ki kell kapcsolni a VPN-t.`
     - Suggest: `Állítson be szabályokat azokhoz a webhelyekhez, amelyeknél fokozott adatvédelemre van szükség, vagy amelyeknél ki kell kapcsolni a VPN-t.`
+- **`hu`** `about-pdf-features-intro` — `toolkit/toolkit/about/aboutPDF.ftl`
+    - "private" rendered as "biztonságos" (secure).
+    - Current: `Egyszerű, ingyenes és biztonságos.`
+    - Suggest: `Egyszerű, ingyenes és privát.`
 - **`hu`** `autofill-delete-payment-method-os-prompt-windows` — `toolkit/toolkit/formautofill/formAutofill.ftl`
     - "delete stored payment method information" was rendered as "akar használni" (wants to use) instead of "törölni akarja" (wants to delete).
     - Current: `A { -brand-short-name } tárolt fizetésimód-információkat akar használni.`
     - Suggest: `A { -brand-short-name } törölni akarja a tárolt fizetésimód-információkat.`
+- **`it`** `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl`
+    - "help keep your browsing private" rendered as an absolute "impediscono" (prevent), dropping the hedge.
+    - Current: `Le finestre anonime impediscono agli altri utenti di questo dispositivo di vedere la tua attività di navigazione.`
+    - Suggest: `Le finestre anonime aiutano a nascondere la tua attività di navigazione agli altri utenti di questo dispositivo.`
 - **`ja`** `refresh-reinstalled-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl`
     - Adds a claim about a leftover previous profile that the en-US does not make.
     - Current: `{ -brand-short-name } が再インストールされ前回のプロファイルが残っています。新品の状態にリフレッシュしますか？`
@@ -45,6 +65,18 @@ The translation makes the product assert something the en-US never said. Nothing
     - "Diagnostic logs written by sync." is translated as "diagnoses the logs written by sync", turning a noun phrase into an action.
     - Current: `description: 同期機能により書き込まれたログを診断します。`
     - Suggest: `description: 同期機能により書き込まれた診断ログです。`
+- **`ru`** `about-private-browsing-spotlight-basics-activity-seen` — `browser/browser/aboutPrivateBrowsing.ftl`
+    - "Some activity may still be seen by sites…" mistranslated as "Some sites … may track some activity".
+    - Current: `Некоторые сайты, поисковые системы, интернет-провайдеры или ваш работодатель могут отслеживать некоторую активность.`
+    - Suggest: `Некоторая активность всё же может быть видна сайтам, поисковым системам, интернет-провайдерам или вашему работодателю.`
+- **`ru`** `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl`
+    - "don’t clear all of your data" reversed into "do not delete any of your data".
+    - Current: `не удаляют какие-либо ваши данные`
+    - Suggest: `не удаляют все ваши данные`
+- **`ru`** `restart-required-multiple-instances-answer` — `browser/browser/aboutRestartRequired.ftl`
+    - "the open one can be left on an older version" mistranslated as a permission/action "the open one can be left" addressed to the user.
+    - Current: `открытый можно оставить в более старой версии`
+    - Suggest: `открытый может остаться на более старой версии`
 - **`ru`** `nova-early-access-infobar-title` — `browser/browser/newtab/asrouter.ftl`
     - "is getting a new look" (future/ongoing) translated as a completed change "Обновлён внешний вид".
     - Current: `<strong>Обновлён внешний вид { -brand-product-name }.</strong>`
@@ -118,32 +150,32 @@ The value does not render as intended: a blank string, broken markup, a variable
     - Suggest: `…message2-macosx`
 - _…and 272 more, in the per-locale reports linked below._
 
-### Wrong content — impact 2 (1390)
+### Wrong content — impact 2 (1422)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/firefox.md`.
 
 | Locale | Last run | Mode | Commit | Strings | Missing | Open | Impact 1–2 | Fixed | Dismissed | Suppressed |
 |---|---|---|---|---|---|---|---|---|---|---|
-| [cs](cs/firefox.md) | 2026-09-21 | incremental | `3f7b6c3c` | 16,233 | 0 | **239** | 158 | 3 | 0 | 0 |
-| [de](de/firefox.md) | 2026-09-21 | incremental | `3f7b6c3c` | 16,447 | 0 | **23** | 14 | 42 | 0 | 0 |
-| [en-CA](en-CA/firefox.md) | 2026-09-21 | incremental | `3f7b6c3c` | 16,246 | 0 | **0** | 0 | 15 | 1 | 0 |
-| [en-GB](en-GB/firefox.md) | 2026-09-21 | incremental | `3f7b6c3c` | 16,233 | 0 | **16** | 11 | 13 | 0 | 12 |
-| [es-AR](es-AR/firefox.md) | 2026-09-21 | incremental | `3f7b6c3c` | 16,201 | 32 | **273** | 155 | 142 | 0 | 0 |
-| [es-ES](es-ES/firefox.md) | 2026-09-21 | incremental | `3f7b6c3c` | 15,167 | 1,066 | **36** | 20 | 113 | 0 | 0 |
-| [es-MX](es-MX/firefox.md) | 2026-09-21 | incremental | `3f7b6c3c` | 15,810 | 423 | **43** | 14 | 205 | 0 | 0 |
-| [fr](fr/firefox.md) | 2026-09-21 | incremental | `3f7b6c3c` | 16,433 | 0 | **26** | 9 | 62 | 1 | 0 |
-| [fy-NL](fy-NL/firefox.md) | 2026-09-21 | incremental | `3f7b6c3c` | 16,233 | 0 | **457** | 128 | 274 | 4 | 0 |
-| [hu](hu/firefox.md) | 2026-09-21 | incremental | `3f7b6c3c` | 16,170 | 63 | **243** | 139 | 5 | 0 | 0 |
-| [id](id/firefox.md) | 2026-09-21 | incremental | `3f7b6c3c` | 13,716 | 2,517 | **278** | 216 | 1 | 0 | 0 |
-| [it](it/firefox.md) | 2026-09-21 | incremental | `3f7b6c3c` | 16,460 | 0 | **10** | 2 | 56 | 6 | 2 |
-| [ja](ja/firefox.md) | 2026-09-21 | incremental | `3f7b6c3c` | 16,183 | 54 | **123** | 57 | 271 | 0 | 0 |
-| [nl](nl/firefox.md) | 2026-09-21 | incremental | `3f7b6c3c` | 16,233 | 0 | **339** | 126 | 127 | 0 | 0 |
-| [pl](pl/firefox.md) | 2026-09-21 | incremental | `3f7b6c3c` | 16,233 | 0 | **75** | 53 | 168 | 2 | 0 |
-| [pt-BR](pt-BR/firefox.md) | 2026-09-21 | incremental | `3f7b6c3c` | 16,233 | 0 | **526** | 193 | 138 | 5 | 0 |
-| [ru](ru/firefox.md) | 2026-09-21 | incremental | `3f7b6c3c` | 16,233 | 0 | **556** | 296 | 182 | 0 | 0 |
-| [sl](sl/firefox.md) | 2026-09-21 | incremental | `3f7b6c3c` | 15,583 | 650 | **43** | 12 | 43 | 0 | 1 |
-| [tr](tr/firefox.md) | 2026-09-21 | incremental | `3f7b6c3c` | 16,175 | 58 | **149** | 54 | 193 | 0 | 0 |
-| [zh-CN](zh-CN/firefox.md) | 2026-09-21 | incremental | `3f7b6c3c` | 16,005 | 228 | **72** | 20 | 49 | 0 | 0 |
+| [cs](cs/firefox.md) | 2026-09-28 | incremental | `92e0a489` | 16,263 | 42 | **240** | 158 | 3 | 0 | 0 |
+| [de](de/firefox.md) | 2026-09-28 | incremental | `92e0a489` | 16,532 | 0 | **29** | 16 | 42 | 0 | 0 |
+| [en-CA](en-CA/firefox.md) | 2026-09-28 | incremental | `92e0a489` | 16,235 | 70 | **0** | 0 | 15 | 1 | 0 |
+| [en-GB](en-GB/firefox.md) | 2026-09-28 | incremental | `92e0a489` | 16,305 | 0 | **16** | 11 | 13 | 0 | 12 |
+| [es-AR](es-AR/firefox.md) | 2026-09-28 | incremental | `92e0a489` | 16,270 | 35 | **277** | 156 | 143 | 0 | 0 |
+| [es-ES](es-ES/firefox.md) | 2026-09-28 | incremental | `92e0a489` | 15,170 | 1,135 | **36** | 20 | 113 | 0 | 0 |
+| [es-MX](es-MX/firefox.md) | 2026-09-28 | incremental | `92e0a489` | 15,824 | 481 | **44** | 15 | 205 | 0 | 0 |
+| [fr](fr/firefox.md) | 2026-09-28 | incremental | `92e0a489` | 16,532 | 0 | **33** | 14 | 62 | 1 | 0 |
+| [fy-NL](fy-NL/firefox.md) | 2026-09-28 | incremental | `92e0a489` | 16,251 | 54 | **459** | 130 | 274 | 4 | 0 |
+| [hu](hu/firefox.md) | 2026-09-28 | incremental | `92e0a489` | 16,301 | 4 | **251** | 144 | 5 | 0 | 0 |
+| [id](id/firefox.md) | 2026-09-28 | incremental | `92e0a489` | 13,724 | 2,581 | **278** | 216 | 1 | 0 | 0 |
+| [it](it/firefox.md) | 2026-09-28 | incremental | `92e0a489` | 16,552 | 0 | **16** | 5 | 56 | 6 | 2 |
+| [ja](ja/firefox.md) | 2026-09-28 | incremental | `92e0a489` | 16,194 | 124 | **125** | 57 | 271 | 0 | 0 |
+| [nl](nl/firefox.md) | 2026-09-28 | incremental | `92e0a489` | 16,251 | 54 | **339** | 126 | 127 | 0 | 0 |
+| [pl](pl/firefox.md) | 2026-09-28 | incremental | `92e0a489` | 16,251 | 54 | **79** | 53 | 168 | 2 | 0 |
+| [pt-BR](pt-BR/firefox.md) | 2026-09-28 | incremental | `92e0a489` | 16,273 | 32 | **529** | 194 | 138 | 5 | 0 |
+| [ru](ru/firefox.md) | 2026-09-28 | incremental | `92e0a489` | 16,305 | 0 | **570** | 304 | 182 | 0 | 0 |
+| [sl](sl/firefox.md) | 2026-09-28 | incremental | `92e0a489` | 15,660 | 645 | **46** | 14 | 44 | 0 | 1 |
+| [tr](tr/firefox.md) | 2026-09-28 | incremental | `92e0a489` | 16,271 | 34 | **154** | 56 | 193 | 0 | 0 |
+| [zh-CN](zh-CN/firefox.md) | 2026-09-28 | incremental | `92e0a489` | 16,020 | 285 | **72** | 20 | 49 | 0 | 0 |
 
 **Impact 1–2** is the queue that matters: broken output and wrong content. Impact 3–4 is language polish and typography.
 

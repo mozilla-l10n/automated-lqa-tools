@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
-| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
+| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 169 of 16,233 |
+| **Strings reviewed this run** | 34 of 16,251 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,43 +18,28 @@ Also for pl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (7)
+### 🆕 New findings (4)
 
-- `columnBreakpoint.label` — `devtools/client/debugger.properties` — The word "Column" from "Column breakpoint" is dropped, so the accessible name no longer identifies the marker as a column breakpoint.
-    - Current: `Punkt wstrzymania w wierszu %1$S, w kolumnie %2$S`
-    - Source: `Column breakpoint at line %1$S, column %2$S`
-    - Suggest: `Kolumnowy punkt wstrzymania w wierszu %1$S, w kolumnie %2$S`
-    - en-US is "Column breakpoint at line %1$S, column %2$S"; the type qualifier "Column" is missing in the Polish.
-- `site-rules-status-heading` — `browser/browser/ipProtection.ftl` — "Your rule" is rendered as "Reguła użytkownika" (the user's rule, third-person), losing the second-person address used elsewhere in the locale.
-    - Current: `Reguła użytkownika`
-    - Source: `Your rule`
-    - Suggest: `Twoja reguła`
-    - en-US "Your rule" addresses the user directly; the informal register is the locale convention.
-- `onboarding-refresh-tou-pin` — `browser/browser/newtab/onboarding.ftl` — "Keep { -brand-short-name } in Dock" rendered as "Zatrzymaj" (stop/halt), not "keep/leave in place".
-    - Current: `Zatrzymaj { -brand-short-name } w Docku`
-    - Source: `{$sel_1 ->} [macos] Keep { -brand-short-name } in Dock [other] Add { -brand-short-name } to your taskbar`
-    - Suggest: `Pozostaw { -brand-short-name } w Docku`
-    - In this checkbox "Keep … in Dock" means to leave the app pinned in the Dock; Polish "Zatrzymaj" primarily means "stop/halt", which changes the action described.
-- `about-pdf-feature-annotate-description` — `toolkit/toolkit/about/aboutPDF.ftl` — "Add text" rendered as "Dodawaj napisy" (add captions) instead of adding text.
-    - Current: `Dodawaj napisy, wyróżniaj tekst i rysuj po plikach PDF.`
-    - Source: `Add text, highlights, and drawings.`
-    - Suggest: `Dodawaj tekst, wyróżnienia i rysunki.`
-    - The en-US "Add text, highlights, and drawings" refers to adding text to the PDF; "napisy" means captions/subtitles, and "rysuj po plikach PDF" adds content not in the source.
-- `newtab-error-fallback-refresh-link` — `browser/browser/newtab/newtab.ftl` — Missing sentence-final period present in the source.
-    - Current: `Odśwież stronę, aby spróbować ponownie`
-    - Source: `Refresh page to try again.`
-    - Suggest: `Odśwież stronę, aby spróbować ponownie.`
-    - The en-US string ends with a full stop ("Refresh page to try again."); the Polish drops it.
-- `experimental-features-media-jxl` — `toolkit/toolkit/firefoxlabs/features.ftl` — Title translated despite developer comment requiring it be kept in English.
-    - Current: `Multimedia: JPEG XL`
-    - Source: `label: Media: JPEG XL`
-    - Suggest: `Media: JPEG XL`
-    - The developer comment says the experiment title should be kept in English; "Media" was changed to "Multimedia".
-- `pdfjs-editor-add-signature-save-warning-message` — `toolkit/toolkit/pdfviewer/viewer.ftl` — "You've reached the limit" rendered as "limit exceeded".
-    - Current: `Przekroczono ograniczenie wynoszące pięć`
-    - Source: `You’ve reached the limit of 5 saved signatures. Remove one to save more.`
-    - Suggest: `Osiągnięto ograniczenie wynoszące pięć`
-    - The en-US says the limit of 5 has been reached, not exceeded.
+- `newtab-privacy-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Privacy options" rendered as "Opcje widżetu prywatności" (privacy widget options), adding "widżetu" not present in the source.
+    - Current: `Opcje widżetu prywatności`
+    - Source: `aria-label: Privacy options title: Privacy options`
+    - Suggest: `Opcje prywatności`
+    - The en-US string is "Privacy options"; the other widget menu button (Clock options) is translated literally as "Opcje zegara", so the added "widżetu" is inconsistent and not in the source.
+- `newtab-search-widget-title` — `browser/browser/newtab/newtab.ftl` — "Search" (widget heading, a noun naming the search feature) rendered as plural "Wyszukiwania".
+    - Current: `Wyszukiwania`
+    - Source: `Search`
+    - Suggest: `Wyszukiwanie`
+    - The source is the singular heading "Search"; the plural "Wyszukiwania" (searches) is grammatically odd as a widget title and inconsistent with other Search strings such as "Ustawienia wyszukiwania".
+- `newtab-search-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Search options" rendered with a plural noun "Opcje wyszukiwań" (options of searches).
+    - Current: `aria-label: Opcje wyszukiwań`
+    - Source: `aria-label: Search options`
+    - Suggest: `aria-label: Opcje wyszukiwania`
+    - The source is "Search options"; standard Firefox pl terminology is "wyszukiwania" in the genitive singular, as in "Ustawienia wyszukiwania".
+- `newtab-custom-widget-search-toggle` — `browser/browser/newtab/newtab.ftl` — Widget toggle label "Search" rendered as plural "Wyszukiwania".
+    - Current: `label: Wyszukiwania`
+    - Source: `label: Search`
+    - Suggest: `label: Wyszukiwanie`
+    - The source is the singular widget name "Search", matching the widget title; the plural is inconsistent with the other widget toggles (e.g. "Krzyżówka").
 
 ### ✅ Fixed since the last run (0)
 
@@ -79,8 +64,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 326 |
-| Strings | 16,233 |
-| Missing strings | 0 |
+| Strings | 16,251 |
+| Missing strings | 54 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -97,7 +82,22 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**54 strings** are not translated yet, concentrated in:
+
+- `browser/browser/aboutRestartRequired.ftl` — 18
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 9
+- `browser/browser/ipProtection.ftl` — 7
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 4
+- `browser/browser/appmenu.ftl` — 3
+- `browser/browser/preferences/preferences.ftl` — 3
+- `toolkit/toolkit/about/aboutLogging.ftl` — 2
+- `browser/browser/newtab/newtab.ftl` — 2
+- `toolkit/toolkit/payments/payments.ftl` — 1
+- `browser/browser/backupSettings.ftl` — 1
+- `browser/browser/genai.ftl` — 1
+- `browser/browser/places.ftl` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -107,10 +107,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `polish-double` 1418, `straight-double` 36, `german-double` 7, `curly-double` 2 | **polish-double** |
 | apostrophe | `straight` 1 | **straight** |
-| ellipsis | `char` 396 | **char** |
+| ellipsis | `char` 394 | **char** |
 | dash | `em` 121, `en` 14 | **em** |
-| nbsp | `total` 4784, `narrow` 3, `before-punctuation` 39, `space-before-punctuation` 14 | **total** |
-| register | `informal` 76 | **informal** |
+| nbsp | `total` 4791, `narrow` 3, `before-punctuation` 39, `space-before-punctuation` 14 | **total** |
+| register | `informal` 77 | **informal** |
 
 ---
 
@@ -120,14 +120,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (75)
+## 3. Open findings (79)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 10 |
 | 2 | Wrong content (says something other than the English) | 43 |
-| 3 | Degraded language (grammar, spelling, terminology) | 19 |
+| 3 | Degraded language (grammar, spelling, terminology) | 23 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
@@ -279,11 +279,31 @@ _Nothing reported._
     - Source: `Your rule`
     - Suggest: `Twoja reguła`
     - en-US "Your rule" addresses the user directly; the informal register is the locale convention.
+- `newtab-custom-widget-search-toggle` — `browser/browser/newtab/newtab.ftl` — Widget toggle label "Search" rendered as plural "Wyszukiwania".
+    - Current: `label: Wyszukiwania`
+    - Source: `label: Search`
+    - Suggest: `label: Wyszukiwanie`
+    - The source is the singular widget name "Search", matching the widget title; the plural is inconsistent with the other widget toggles (e.g. "Krzyżówka").
 - `newtab-privacy-empty-state-tally` — `browser/browser/newtab/newtab.ftl` — "See a running tally here" translated without the running/updating total sense.
     - Current: `Tutaj zobaczysz liczbę zablokowanych elementów.`
     - Source: `See a running tally here.`
     - Suggest: `Tutaj zobaczysz rosnącą liczbę zablokowanych elementów.`
     - The developer comment explicitly explains "a running tally" is a total that keeps updating as the user browses; the Polish renders it as a static count.
+- `newtab-privacy-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Privacy options" rendered as "Opcje widżetu prywatności" (privacy widget options), adding "widżetu" not present in the source.
+    - Current: `Opcje widżetu prywatności`
+    - Source: `aria-label: Privacy options title: Privacy options`
+    - Suggest: `Opcje prywatności`
+    - The en-US string is "Privacy options"; the other widget menu button (Clock options) is translated literally as "Opcje zegara", so the added "widżetu" is inconsistent and not in the source.
+- `newtab-search-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Search options" rendered with a plural noun "Opcje wyszukiwań" (options of searches).
+    - Current: `aria-label: Opcje wyszukiwań`
+    - Source: `aria-label: Search options`
+    - Suggest: `aria-label: Opcje wyszukiwania`
+    - The source is "Search options"; standard Firefox pl terminology is "wyszukiwania" in the genitive singular, as in "Ustawienia wyszukiwania".
+- `newtab-search-widget-title` — `browser/browser/newtab/newtab.ftl` — "Search" (widget heading, a noun naming the search feature) rendered as plural "Wyszukiwania".
+    - Current: `Wyszukiwania`
+    - Source: `Search`
+    - Suggest: `Wyszukiwanie`
+    - The source is the singular heading "Search"; the plural "Wyszukiwania" (searches) is grammatically odd as a widget title and inconsistent with other Search strings such as "Ustawienia wyszukiwania".
 - `onboarding-refresh-tou-pin` — `browser/browser/newtab/onboarding.ftl` — "Keep { -brand-short-name } in Dock" rendered as "Zatrzymaj" (stop/halt), not "keep/leave in place".
     - Current: `Zatrzymaj { -brand-short-name } w Docku`
     - Source: `{$sel_1 ->} [macos] Keep { -brand-short-name } in Dock [other] Add { -brand-short-name } to your taskbar`

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
-| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
+| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 10 of 15,810 |
+| **Strings reviewed this run** | 19 of 15,824 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -20,16 +20,16 @@ Also for es-MX: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ### 🆕 New findings (2)
 
-- `genai-shortcut-button-2` — `browser/browser/genai.ftl` — "Preguntar { $provider }" lacks the preposition "a" required before the provider name in Spanish.
-    - Current: `Preguntar { $provider }`
-    - Source: `aria-label: Ask { $provider } tooltiptext: Ask { $provider }`
-    - Suggest: `Preguntar a { $provider }`
-    - In Spanish the person/entity asked takes the preposition "a"; "Preguntar Claude" is ungrammatical for en-US "Ask { $provider }".
-- `user-context-shopping2` — `toolkit/toolkit/global/contextual-identity.ftl` — "Shopping" as a container label is rendered with the verb "Comprar" instead of a noun like "Compras".
-    - Current: `Comprar`
-    - Source: `label: Shopping`
-    - Suggest: `Compras`
-    - The sibling labels (Trabajo, Banca) are nouns naming a context; en-US "Shopping" is a noun here, not an action.
+- `ipprotection-site-inclusions-callout-secondary-button-lapsed-users` — `browser/browser/ipProtection.ftl` — "Dismiss" translated as "Ahora no" (Not now), duplicating the other button's label.
+    - Current: `No ahora`
+    - Source: `Dismiss`
+    - Suggest: `Descartar`
+    - The en-US is "Dismiss", not "Not now"; the sibling string "Not now" is already rendered "Ahora no". Also the word order "No ahora" is not idiomatic.
+- `edit-controls.label` — `browser/chrome/browser/customizableui/customizableWidgets.properties` — "Edit controls" (a noun phrase naming the cut/copy/paste widget) rendered as an imperative verb phrase "Editar controles".
+    - Current: `Editar controles`
+    - Source: `Edit controls`
+    - Suggest: `Controles de edición`
+    - In customizableWidgets, "Edit controls" is the name of the toolbar widget containing Cut/Copy/Paste, i.e. "editing controls", not an instruction to edit controls.
 
 ### ✅ Fixed since the last run (0)
 
@@ -43,9 +43,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `preferences-ai-controls-sidebar-chatbot-group-2` — `browser/browser/preferences/preferences.ftl` — "Keep a chatbot in view" rendered as "Mantén tu chatbot" (your chatbot).
+    - Current: `Mantén tu chatbot a la vista mientras navegas.`
+    - Suggest: `Mantén un chatbot a la vista mientras navegas.`
+    - The source uses the indefinite "a chatbot"; "tu chatbot" asserts the user already has one.
 
 ---
 
@@ -54,8 +57,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 320 |
-| Strings | 15,810 |
-| Missing strings | 423 |
+| Strings | 15,824 |
+| Missing strings | 481 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 6 |
 | Files with no en-US counterpart | 0 |
@@ -72,20 +75,20 @@ _Nothing retired._
 
 ### Completeness
 
-**423 strings** are not translated yet, concentrated in:
+**481 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 99
-- `toolkit/services/aboutSyncLog.ftl` — 28
+- `browser/browser/newtab/newtab.ftl` — 105
+- `toolkit/services/aboutSyncLog.ftl` — 26
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 23
 - `toolkit/toolkit/about/aboutPDF.ftl` — 21
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 20
 - `browser/browser/newtab/onboarding.ftl` — 19
-- `browser/browser/sharePanel.ftl` — 17
+- `browser/browser/aboutRestartRequired.ftl` — 18
+- `browser/browser/ipProtection.ftl` — 18
 - `toolkit/toolkit/about/aboutAddons.ftl` — 17
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 16
-- `toolkit/toolkit/neterror/netError.ftl` — 14
-- `browser/browser/preferences/preferences.ftl` — 12
-- `browser/browser/ipProtection.ftl` — 11
-- `browser/browser/featureCallout.ftl` — 10
+- `browser/browser/aboutPrivateBrowsing.ftl` — 16
+- `browser/browser/preferences/preferences.ftl` — 15
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 13
 
 **Files absent from the locale:**
 
@@ -110,7 +113,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | dash | `em` 50, `en` 1 | **em** |
 | nbsp | `total` 16, `narrow` 10, `before-punctuation` 12, `space-before-punctuation` 6 | _mixed_ |
 | inverted marks | `open-question` 316, `open-exclamation` 72 | **open-question** |
-| register | `informal` 1208, `formal` 206 | **informal** |
+| register | `informal` 1209, `formal` 206 | **informal** |
 
 ---
 
@@ -123,13 +126,13 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (43)
+## 3. Open findings (44)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 14 |
+| 2 | Wrong content (says something other than the English) | 15 |
 | 3 | Degraded language (grammar, spelling, terminology) | 23 |
 | 4 | Cosmetic (typography, spacing) | 6 |
 
@@ -139,6 +142,11 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `ipprotection-site-inclusions-callout-secondary-button-lapsed-users` — `browser/browser/ipProtection.ftl` — "Dismiss" translated as "Ahora no" (Not now), duplicating the other button's label.
+    - Current: `No ahora`
+    - Source: `Dismiss`
+    - Suggest: `Descartar`
+    - The en-US is "Dismiss", not "Not now"; the sibling string "Not now" is already rendered "Ahora no". Also the word order "No ahora" is not idiomatic.
 - `migration-safari-password-import-post-sequoia-step2` — `browser/browser/migrationWizard.ftl` — The menu path "Export All Passwords to File…" lost the "to File" part.
     - Current: `Exportar todas las contraseñas…`
     - Source: `From the menu bar at the top of the screen, choose File > Export All Passwords to File…`
@@ -174,11 +182,6 @@ _Nothing in this category._
     - Source: `label: No passports added`
     - Suggest: `No se han agregado pasaportes`
     - The source label says "added", not "stored"; the developer comment distinguishes stored vs. the label wording.
-- `preferences-ai-controls-sidebar-chatbot-group-2` — `browser/browser/preferences/preferences.ftl` — "Keep a chatbot in view" rendered as "Mantén tu chatbot" (your chatbot).
-    - Current: `Mantén tu chatbot a la vista mientras navegas.`
-    - Source: `description: Keep a chatbot in view as you browse. Choose from Anthropic Claude, ChatGPT, Copilot, Google Gemini, and Mistral Vibe. label: AI chatbot providers in sidebar`
-    - Suggest: `Mantén un chatbot a la vista mientras navegas.`
-    - The source uses the indefinite "a chatbot"; "tu chatbot" asserts the user already has one.
 - `security-privacy-issue-warning-doh2` — `browser/browser/preferences/preferences.ftl` — "sites you’re about to visit" translated as "sitios que visitas", losing the future sense.
     - Current: `conozca los sitios que visitas`
     - Source: `description: DNS over HTTPS helps hide what sites you’re about to visit from your network provider. label: DNS over HTTPS is disabled`
@@ -189,6 +192,11 @@ _Nothing in this category._
     - Source: `description: Encrypted Client Hello helps hide what sites you’re about to visit from your network provider. label: Encrypted Client Hello is disabled`
     - Suggest: `conozca los sitios que estás por visitar`
     - The en-US refers to sites the user is about to visit; the Spanish states sites the user visits generally.
+- `edit-controls.label` — `browser/chrome/browser/customizableui/customizableWidgets.properties` — "Edit controls" (a noun phrase naming the cut/copy/paste widget) rendered as an imperative verb phrase "Editar controles".
+    - Current: `Editar controles`
+    - Source: `Edit controls`
+    - Suggest: `Controles de edición`
+    - In customizableWidgets, "Edit controls" is the name of the toolbar widget containing Cut/Copy/Paste, i.e. "editing controls", not an instruction to edit controls.
 - `perftools-presets-networking-with-logs-description` — `devtools/client/perftools.ftl` — "networking logs" rendered as "registros de tráfico" and "the URLs you visit" changed to past tense.
     - Current: `incluyendo registros de tráfico`
     - Source: `Preset for investigating networking bugs in { -brand-shorter-name }, including networking logs. These logs may contain sensitive information such as the URLs you visit.`

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
-| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
+| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 81 of 16,233 |
+| **Strings reviewed this run** | 62 of 16,273 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -20,21 +20,21 @@ Also for pt-BR: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ### 🆕 New findings (3)
 
-- `FullscreenDeniedPermissionsPolicy` — `dom/chrome/dom/dom.properties` — Stray space before the final period.
-    - Current: `diretivas Permissions Policy .`
-    - Source: `Request for fullscreen was denied because of Permissions Policy directives.`
-    - Suggest: `diretivas Permissions Policy.`
-    - The en-US has no space before the period; the extra space is a typography defect in the user-visible text.
-- `browser-languages-update-error` — `browser/browser/preferences/languages.ftl` — "or try again" rendered as "e tente novamente" (and), changing the alternative into a conjunction.
-    - Current: `Verifique a conexão com a internet e tente novamente.`
-    - Source: `message: { -brand-short-name } can’t update your languages right now. Check that you are connected to the internet or try again.`
-    - Suggest: `Verifique se você está conectado à internet ou tente novamente.`
-    - The en-US offers two alternatives ("Check that you are connected to the internet or try again"); the translation joins them with "e".
-- `about-pdf-feature-organize-description` — `toolkit/toolkit/about/aboutPDF.ftl` — "merge" (juntar/mesclar) was rendered as "misture" (mix/blend), which is not the PDF operation described.
-    - Current: `Reordene, remova, misture e exporte páginas.`
-    - Source: `Reorder, remove, merge, and export pages.`
-    - Suggest: `Reordene, remova, mescle e exporte páginas.`
-    - The en-US "merge" means combining pages/documents; "misturar" means to mix/shuffle, a different action. Elsewhere in the same feature set (pdf-features-notification-message) "merge" is translated as "juntar".
+- `restart-required-unsaved-work-answer` — `browser/browser/aboutRestartRequired.ftl` — Verb form error: "irá reabri" should be "irá reabrir".
+    - Current: `O { -brand-short-name } irá reabri as abas`
+    - Source: `Possibly, and we know that’s frustrating. { -brand-short-name } will reopen your tabs, but unsaved work inside webpages, like text in a form, may not be restored. Private Windows won’t reopen to protect your privacy.`
+    - Suggest: `O { -brand-short-name } irá reabrir as abas`
+    - The infinitive after "irá" must be "reabrir"; "reabri" is a misspelling/wrong form.
+- `restart-required-single-instance-question` — `browser/browser/aboutRestartRequired.ftl` — English word "profiles" left untranslated where the locale uses "perfis".
+    - Current: `Não uso vários profiles ou instâncias.`
+    - Source: `I don’t use multiple profiles or instances. Why is this happening?`
+    - Suggest: `Não uso vários perfis ou instâncias.`
+    - en-US "profiles" is rendered "perfis" in the neighboring strings (restart-required-multiple-instances-question/answer); leaving "profiles" is inconsistent English.
+- `restart-required-why-now-answer` — `browser/browser/aboutRestartRequired.ftl` — "when an update can’t wait until your next restart" rendered as the update needing to be installed before the next restart.
+    - Current: `ou quando uma atualização precisa ser instalada antes da próxima vez que reiniciar`
+    - Source: `This can happen when another { -brand-short-name } profile or instance updates, or when an update can’t wait until your next restart.`
+    - Suggest: `ou quando uma atualização não pode esperar até o próximo reinício`
+    - The en-US says the update can't wait until the next restart; the translation asserts it must be installed before the next restart, which changes the stated condition.
 
 ### ✅ Fixed since the last run (0)
 
@@ -59,8 +59,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 326 |
-| Strings | 16,233 |
-| Missing strings | 0 |
+| Strings | 16,273 |
+| Missing strings | 32 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -77,7 +77,21 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**32 strings** are not translated yet, concentrated in:
+
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 9
+- `browser/browser/ipProtection.ftl` — 7
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 4
+- `browser/browser/preferences/preferences.ftl` — 3
+- `toolkit/toolkit/about/aboutLogging.ftl` — 2
+- `browser/browser/newtab/newtab.ftl` — 2
+- `toolkit/toolkit/payments/payments.ftl` — 1
+- `browser/browser/appmenu.ftl` — 1
+- `browser/browser/places.ftl` — 1
+- `browser/browser/sidebar.ftl` — 1
+- `browser/browser/preferences/browserIcon.ftl` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -87,10 +101,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 588, `curly-single` 123, `straight-double` 63 | **curly-double** |
 | apostrophe | `typographic` 136, `straight` 106 | _mixed_ |
-| ellipsis | `char` 384, `ascii` 3 | **char** |
+| ellipsis | `char` 382, `ascii` 3 | **char** |
 | dash | `em` 47, `en` 1 | **em** |
 | nbsp | `total` 10, `narrow` 9, `before-punctuation` 5, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 1500 | **informal** |
+| register | `informal` 1506 | **informal** |
 
 ---
 
@@ -100,14 +114,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (526)
+## 3. Open findings (529)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 11 |
-| 2 | Wrong content (says something other than the English) | 182 |
-| 3 | Degraded language (grammar, spelling, terminology) | 252 |
+| 2 | Wrong content (says something other than the English) | 183 |
+| 3 | Degraded language (grammar, spelling, terminology) | 254 |
 | 4 | Cosmetic (typography, spacing) | 81 |
 
 ### A. Functional, markup, variables & plurals
@@ -152,6 +166,11 @@ _Nothing reported._
     - Current: `Instale o { -focus-brand-name }`
     - Source: `Download { -focus-brand-name }`
     - Suggest: `Baixe o { -focus-brand-name }`
+- `restart-required-why-now-answer` — `browser/browser/aboutRestartRequired.ftl` — "when an update can’t wait until your next restart" rendered as the update needing to be installed before the next restart.
+    - Current: `ou quando uma atualização precisa ser instalada antes da próxima vez que reiniciar`
+    - Source: `This can happen when another { -brand-short-name } profile or instance updates, or when an update can’t wait until your next restart.`
+    - Suggest: `ou quando uma atualização não pode esperar até o próximo reinício`
+    - The en-US says the update can't wait until the next restart; the translation asserts it must be installed before the next restart, which changes the stated condition.
 - `about-unloads-column-processes` — `browser/browser/aboutUnloads.ftl` — Current: IDs dos processos encarregados pelo conteúdo da aba → Suggest: IDs dos processos que hospedam o conteúdo da aba
     - Current: `IDs dos processos encarregados pelo conteúdo da aba`
     - Source: `(value): Process IDs title: IDs of the processes hosting tab’s content`
@@ -367,9 +386,7 @@ _Nothing reported._
     - Current: `pasta do Menu Iniciar`
     - Source: `Select the Start Menu folder in which you would like to create the program’s shortcuts. You can also enter a name to create a new folder.`
     - Suggest: `pasta do menu Iniciar`
-- `about-debugging-page-title-runtime-page` — `devtools/client/aboutdebugging.ftl` — "Runtime" is the page name, not a duration. Current: Depuração - Tempo de execução / { $selectedRuntimeId } → Suggest: Depuração - Runtime / { $selectedRuntimeId }
-    - Source: `Debugging - Runtime / { $selectedRuntimeId }`
-- _…and 120 more; see `state/` for the full list._
+- _…and 121 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -381,6 +398,11 @@ _Nothing reported._
     - Current: `Ativa`
     - Source: `title: Active`
     - Suggest: `Ativas`
+- `restart-required-unsaved-work-answer` — `browser/browser/aboutRestartRequired.ftl` — Verb form error: "irá reabri" should be "irá reabrir".
+    - Current: `O { -brand-short-name } irá reabri as abas`
+    - Source: `Possibly, and we know that’s frustrating. { -brand-short-name } will reopen your tabs, but unsaved work inside webpages, like text in a form, may not be restored. Private Windows won’t reopen to protect your privacy.`
+    - Suggest: `O { -brand-short-name } irá reabrir as abas`
+    - The infinitive after "irá" must be "reabrir"; "reabri" is a misspelling/wrong form.
 - `crashed-report-sent` — `browser/browser/aboutTabCrashed.ftl` — Relato do falha → Relato da falha
     - Current: `Relato do falha`
     - Source: `Crash report already submitted; thank you for helping make { -brand-short-name } better!`
@@ -596,11 +618,7 @@ _Nothing reported._
     - Current: `de uma atualizações para outra`
     - Source: `Prevent { -brand-short-name } from applying performance, stability, and feature changes between updates.`
     - Suggest: `de uma atualização para outra`
-- `policy-NoDefaultBookmarks` — `browser/browser/policies/policies-descriptions.ftl` — os favoritos inteligente → os favoritos inteligentes
-    - Current: `os favoritos inteligente`
-    - Source: `Disable creation of the default bookmarks bundled with { -brand-short-name }, and the Smart Bookmarks (Most Visited, Recent Tags). Note: this policy is only effective if used before the first run of the profile.`
-    - Suggest: `os favoritos inteligentes`
-- _…and 83 more; see `state/` for the full list._
+- _…and 84 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -618,6 +636,11 @@ _Nothing reported._
     - Current: `Pesquisar na web`
     - Source: `Search the web`
     - Suggest: `Pesquisar na internet`
+- `restart-required-single-instance-question` — `browser/browser/aboutRestartRequired.ftl` — English word "profiles" left untranslated where the locale uses "perfis".
+    - Current: `Não uso vários profiles ou instâncias.`
+    - Source: `I don’t use multiple profiles or instances. Why is this happening?`
+    - Suggest: `Não uso vários perfis ou instâncias.`
+    - en-US "profiles" is rendered "perfis" in the neighboring strings (restart-required-multiple-instances-question/answer); leaving "profiles" is inconsistent English.
 - `crashed-request-auto-submit-title` — `browser/browser/aboutTabCrashed.ftl` — "Report"/"Relatar": crashed-request-auto-submit-title uses Informar; the rest of aboutTabCrashed.ftl uses Relatar
     - Source: `Report background tabs`
     - Suggest: `Informar`
@@ -781,11 +804,7 @@ _Nothing reported._
 - `reset-search-settings-message` — `browser/browser/search.ftl` — removed-search-engine-message/-message2 (vá em configurações) vs reset-search-settings-message (vá nas configurações)
     - Source: `Due to a technical issue, your default search engine has been changed back to { $newEngine }. To change the default search engine, go to settings.`
     - Suggest: `-message2`
-- `sidebar-show-on-the-right` — `browser/browser/sidebar.ftl` — Painel no lado direito vs Mover o painel para a esquerda; en-US is a matched pair
-    - Current: `Painel no lado direito`
-    - Source: `label: Move sidebar to the right`
-    - Suggest: `Mover o painel para a esquerda`
-- _…and 51 more; see `state/` for the full list._
+- _…and 52 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -812,7 +831,7 @@ _Nothing reported._
 - `main-context-menu-pdfjs-save-page` — `browser/browser/browserContext.ftl` — `main-context-menu-pdfjs-save-page` uses three dots where this locale uses …
     - Current: `Salvar seleção como...`
     - Source: `label: Save selection as…`
-    - The tree uses … 384 times against 3 ASCII runs.
+    - The tree uses … 382 times against 3 ASCII runs.
 - `contextual-manager-passwords-no-passwords-message` — `browser/browser/contextual-manager.ftl` — Comma where a period belongs: contextual-manager-passwords-no-passwords-message (contextual-manager.ftl) — são criptografadas, Estamos atentos → criptografadas. Estamos atentos
     - Current: `são criptografadas, Estamos atentos`
     - Source: `All passwords are encrypted and we’ll watch out for breaches and alerts if you’re affected.`
@@ -849,7 +868,7 @@ _Nothing reported._
 - `newtab-discovery-empty-section-topstories-loading` — `browser/browser/newtab/newtab.ftl` — `newtab-discovery-empty-section-topstories-loading` uses three dots where this locale uses …
     - Current: `Carregando...`
     - Source: `Loading…`
-    - The tree uses … 384 times against 3 ASCII runs.
+    - The tree uses … 382 times against 3 ASCII runs.
 - `newtab-discovery-empty-section-topstories-loading` — `browser/browser/newtab/newtab.ftl` — main-context-menu-pdfjs-save-page (.label, browserContext.ftl), home-homepage-custom-url (.placeholder, preferences.ftl), newtab-discovery-empty-section-topstories-loading (newtab.ftl).
     - Source: `Loading…`
     - Suggest: `.label`
@@ -921,7 +940,7 @@ _Nothing reported._
 - `home-homepage-custom-url` — `browser/browser/preferences/preferences.ftl` — `home-homepage-custom-url` uses three dots where this locale uses …
     - Current: `Cole uma URL...`
     - Source: `placeholder: Paste a URL…`
-    - The tree uses … 384 times against 3 ASCII runs.
+    - The tree uses … 382 times against 3 ASCII runs.
 - `security-privacy-issue-warning-third-party-cookies` — `browser/browser/preferences/preferences.ftl` — Trailing period added where en-US has none: ipprotection-connection-status-blocked-error-title-1 (.aria-label too), security-privacy-issue-warning-third-party-cookies (.label, preferences.ftl), newtab-wallpaper-sky-with-pink-clouds, newtab-shortcuts-highlight-title, newtab-report-ads-reason-seen-it-too-many-times (.label) (newtab.ftl), windows-10-eos-callout-addons-title (asrouter.ftl), tab-group…
     - Source: `description: Third-party cookies are used to track you across websites. label: Third-party cookies are enabled`
     - Suggest: `.aria-label`

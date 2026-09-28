@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
-| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
+| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 65 of 16,447 |
+| **Strings reviewed this run** | 85 of 16,532 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,28 +18,38 @@ Also for de: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (6)
 
-- `splitter.label` — `devtools/client/components.properties` — Plural "panels" rendered as singular "des Bereichs".
-    - Current: `Größe des Bereichs ändern`
-    - Source: `Resize panels`
-    - Suggest: `Größe der Bereiche ändern`
-    - The source says "Resize panels" (both panels of a split view, per the comment); the German refers to only one panel.
-- `translations-panel-revisit-to-label` — `browser/browser/translations.ftl` — Wrong preposition for "Translate to".
-    - Current: `Übersetzen auf`
-    - Source: `Translate to`
-    - Suggest: `Übersetzen in`
-    - German uses "übersetzen in" (eine Sprache), not "übersetzen auf".
-- `about-pdf-feature-organize-description` — `toolkit/toolkit/about/aboutPDF.ftl` — "Reorder" is translated as "sortieren" (sort) instead of "neu anordnen" (reorder).
-    - Current: `Seiten sortieren, löschen, zusammenführen und exportieren.`
-    - Source: `Reorder, remove, merge, and export pages.`
-    - Suggest: `Seiten neu anordnen, löschen, zusammenführen und exportieren.`
-    - The en-US "Reorder" means rearranging pages manually, not sorting them; "sortieren" names a different function.
-- `user-context-personal2` — `toolkit/toolkit/global/contextual-identity.ftl` — "Personal" is rendered as "Freizeit" (leisure), which names a different category.
-    - Current: `Freizeit`
-    - Source: `label: Personal`
-    - Suggest: `Persönlich`
-    - The en-US container label "Personal" contrasts with "Work"; "Freizeit" means leisure/free time, not personal.
+- `restart-required-why-now-answer` — `browser/browser/aboutRestartRequired.ftl` — Brand placeable replaced with hardcoded "Firefox" in the first occurrence.
+    - Current: `wenn ein anderes Firefox-Profil`
+    - Source: `This can happen when another { -brand-short-name } profile or instance updates, or when an update can’t wait until your next restart.`
+    - Suggest: `wenn ein anderes { -brand-short-name }-Profil`
+    - The en-US uses { -brand-short-name } for the profile reference; hardcoding "Firefox" breaks brand substitution for other builds.
+- `about-logging-preset-vpn-description` — `toolkit/toolkit/about/aboutLogging.ftl` — Descriptive label rendered as an imperative addressed to the user instead of a noun-phrase description of the preset.
+    - Current: `Protokollieren Sie Module zur Diagnose`
+    - Source: `Log modules to diagnose IP Protection (VPN) issues`
+    - Suggest: `Module zur Diagnose von Problemen mit dem IP-Schutz (VPN) protokollieren`
+    - The en-US "Log modules to diagnose…" is a preset description, not an instruction to the user; sibling preset descriptions use an infinitive/noun phrase.
+- `restart-required-see-more-button` — `browser/browser/aboutRestartRequired.ftl` — "See more" (expand the details section) is rendered as "Mehr erfahren" (learn more), inconsistent with its counterpart "Weniger anzeigen".
+    - Current: `Mehr erfahren`
+    - Source: `See more`
+    - Suggest: `Mehr anzeigen`
+    - The developer comment says the button expands the "More details" section; the collapse counterpart is translated "Weniger anzeigen", so the expand label should be "Mehr anzeigen", not a "learn more" link phrase.
+- `restart-required-fix-answer` — `browser/browser/aboutRestartRequired.ftl` — "Follow our progress in Bugzilla bug 2072739" is rendered as "Den aktuellen Stand finden Sie …", dropping the sense of following ongoing progress.
+    - Current: `Den aktuellen Stand finden Sie im Bugzilla-Fehler 2072739.`
+    - Source: `Yes. We know this is disruptive, and we’re working on a fix to prevent it. Follow our progress in Bugzilla bug 2072739.`
+    - Suggest: `Verfolgen Sie unseren Fortschritt im Bugzilla-Fehler 2072739.`
+    - The English asks users to follow the team's progress; the German states the current status can be found there, a different statement.
+- `appmenu-fxa-sign-in-promo-link` — `browser/browser/appmenu.ftl` — "Sign in" is translated "Einloggen" instead of the established Firefox German term "Anmelden".
+    - Current: `Einloggen`
+    - Source: `Sign in`
+    - Suggest: `Anmelden`
+    - Firefox de consistently uses "Anmelden" for "Sign in"; the sibling string in the same promo even says "Promo für Anmeldung schließen", making this inconsistent.
+- `ipprotection-site-inclusions-callout-title-lapsed-users` — `browser/browser/ipProtection.ftl` — "Try built-in VPN, now site by site" loses "site by site" nuance, rendered as "gezielt für einzelne Websites testen".
+    - Current: `Integriertes VPN jetzt gezielt für einzelne Websites testen`
+    - Source: `Try built-in VPN, now site by site`
+    - Suggest: `Integriertes VPN testen – jetzt Website für Website`
+    - The English emphasizes the new per-site capability ("site by site"); the German adds "gezielt" and blurs it, though meaning is close.
 
 ### ✅ Fixed since the last run (0)
 
@@ -64,7 +74,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 336 |
-| Strings | 16,447 |
+| Strings | 16,532 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -101,7 +111,7 @@ _Completeness is reported, never raised as a finding: a missing string needs tra
 - `toolkit/toolkit/enterprise/enterprise.ftl`
 - `toolkit/toolkit/enterprise/felt.ftl`
 
-_214 strings. These files exist in the locale tree but not in the en-US reference — they are maintained elsewhere. The model review is a comparison against en-US, so it skips them entirely; only the checks that need no reference ran. Nothing reported from these files means nothing was looked for, not that they are clean._
+_227 strings. These files exist in the locale tree but not in the en-US reference — they are maintained elsewhere. The model review is a comparison against en-US, so it skips them entirely; only the checks that need no reference ran. Nothing reported from these files means nothing was looked for, not that they are clean._
 
 ### Conventions detected in this locale
 
@@ -109,12 +119,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `straight-double` 729, `curly-double` 69, `german-double` 14, `curly-single` 2 | **straight-double** |
+| quotes | `straight-double` 730, `curly-double` 69, `german-double` 14, `curly-single` 2 | **straight-double** |
 | apostrophe | `typographic` 6, `straight` 114 | **straight** |
-| ellipsis | `char` 405 | **char** |
-| dash | `em` 17, `en` 69 | **en** |
+| ellipsis | `char` 402 | **char** |
+| dash | `em` 17, `en` 71 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 12, `formal` 3868 | **formal** |
+| register | `informal` 12, `formal` 3906 | **formal** |
 
 ---
 
@@ -124,7 +134,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (23)
+## 3. Open findings (29)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -139,8 +149,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 14 |
-| 3 | Degraded language (grammar, spelling, terminology) | 7 |
+| 2 | Wrong content (says something other than the English) | 16 |
+| 3 | Degraded language (grammar, spelling, terminology) | 11 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
@@ -152,6 +162,26 @@ _Also listed under their own category below._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `restart-required-fix-answer` — `browser/browser/aboutRestartRequired.ftl` — "Follow our progress in Bugzilla bug 2072739" is rendered as "Den aktuellen Stand finden Sie …", dropping the sense of following ongoing progress.
+    - Current: `Den aktuellen Stand finden Sie im Bugzilla-Fehler 2072739.`
+    - Source: `Yes. We know this is disruptive, and we’re working on a fix to prevent it. Follow our progress in Bugzilla bug 2072739.`
+    - Suggest: `Verfolgen Sie unseren Fortschritt im Bugzilla-Fehler 2072739.`
+    - The English asks users to follow the team's progress; the German states the current status can be found there, a different statement.
+- `restart-required-see-more-button` — `browser/browser/aboutRestartRequired.ftl` — "See more" (expand the details section) is rendered as "Mehr erfahren" (learn more), inconsistent with its counterpart "Weniger anzeigen".
+    - Current: `Mehr erfahren`
+    - Source: `See more`
+    - Suggest: `Mehr anzeigen`
+    - The developer comment says the button expands the "More details" section; the collapse counterpart is translated "Weniger anzeigen", so the expand label should be "Mehr anzeigen", not a "learn more" link phrase.
+- `restart-required-why-now-answer` — `browser/browser/aboutRestartRequired.ftl` — Brand placeable replaced with hardcoded "Firefox" in the first occurrence.
+    - Current: `wenn ein anderes Firefox-Profil`
+    - Source: `This can happen when another { -brand-short-name } profile or instance updates, or when an update can’t wait until your next restart.`
+    - Suggest: `wenn ein anderes { -brand-short-name }-Profil`
+    - The en-US uses { -brand-short-name } for the profile reference; hardcoding "Firefox" breaks brand substitution for other builds.
+- `ipprotection-site-inclusions-callout-title-lapsed-users` — `browser/browser/ipProtection.ftl` — "Try built-in VPN, now site by site" loses "site by site" nuance, rendered as "gezielt für einzelne Websites testen".
+    - Current: `Integriertes VPN jetzt gezielt für einzelne Websites testen`
+    - Source: `Try built-in VPN, now site by site`
+    - Suggest: `Integriertes VPN testen – jetzt Website für Website`
+    - The English emphasizes the new per-site capability ("site by site"); the German adds "gezielt" and blurs it, though meaning is close.
 - `newtab-wallpaper-firefox-sky-light` — `browser/browser/newtab/newtab.ftl` — "Light hills" (helle Hügel) mistranslated as "Leichte Hügel" (lightweight hills).
     - Current: `Leichte Hügel unter einem sanften Himmel`
     - Source: `Light hills under a soft sky`
@@ -223,6 +253,11 @@ _Also listed under their own category below._
     - Source: `Want to help? <label data-l10n-name="helpus-donateLink">Make a donation</label>, <label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>, or <label data-l10n-name="helpus-getInvolvedLink">g…`
     - Suggest: `empfehlen Sie { -brand-product-name }`
     - The developer comments for the parallel referral strings state that "Share" means recommending/referring the browser; the de tree consistently uses "empfehlen", so "Teilen" (file sharing sense) is inconsistent and misleading.
+- `appmenu-fxa-sign-in-promo-link` — `browser/browser/appmenu.ftl` — "Sign in" is translated "Einloggen" instead of the established Firefox German term "Anmelden".
+    - Current: `Einloggen`
+    - Source: `Sign in`
+    - Suggest: `Anmelden`
+    - Firefox de consistently uses "Anmelden" for "Sign in"; the sibling string in the same promo even says "Promo für Anmeldung schließen", making this inconsistent.
 - `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — `backup-file-moz-browser-restore-step-2-1` quotes “Ihre Daten wiederherstellen” but the string it names, `restore-from-backup-header`, reads “Daten wiederherstellen”
     - Current: `Klicken Sie auf "Ihre Daten wiederherstellen" und wählen Sie diese Datei`
     - Source: `Click “Restore your data” and select this file`
@@ -255,6 +290,11 @@ _Also listed under their own category below._
     - In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `xslt-bad-value` — `dom/dom/xslt.ftl` — "Chronik" is the established term.
     - Source: `Attribute value illegal in XSLT 1.0.`
+- `about-logging-preset-vpn-description` — `toolkit/toolkit/about/aboutLogging.ftl` — Descriptive label rendered as an imperative addressed to the user instead of a noun-phrase description of the preset.
+    - Current: `Protokollieren Sie Module zur Diagnose`
+    - Source: `Log modules to diagnose IP Protection (VPN) issues`
+    - Suggest: `Module zur Diagnose von Problemen mit dem IP-Schutz (VPN) protokollieren`
+    - The en-US "Log modules to diagnose…" is a preset description, not an instruction to the user; sibling preset descriptions use an infinitive/noun phrase.
 
 ### E. Typography, punctuation & spacing
 

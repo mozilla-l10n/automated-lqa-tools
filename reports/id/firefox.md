@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
-| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
+| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 11 of 13,716 |
+| **Strings reviewed this run** | 11 of 13,724 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 321 |
-| Strings | 13,716 |
-| Missing strings | 2,517 |
+| Strings | 13,724 |
+| Missing strings | 2,581 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 5 |
 | Files with no en-US counterpart | 0 |
@@ -63,11 +63,11 @@ _Nothing retired._
 
 ### Completeness
 
-**2,517 strings** are not translated yet, concentrated in:
+**2,581 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 472
-- `browser/browser/preferences/preferences.ftl` — 430
-- `browser/browser/ipProtection.ftl` — 125
+- `browser/browser/newtab/newtab.ftl` — 478
+- `browser/browser/preferences/preferences.ftl` — 432
+- `browser/browser/ipProtection.ftl` — 133
 - `browser/browser/newtab/onboarding.ftl` — 117
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 88
 - `browser/browser/newtab/asrouter.ftl` — 80
@@ -75,8 +75,8 @@ _Nothing retired._
 - `browser/browser/featureCallout.ftl` — 57
 - `browser/browser/profiles.ftl` — 56
 - `browser/browser/tabbrowser.ftl` — 41
-- `toolkit/toolkit/neterror/netError.ftl` — 41
 - `browser/browser/customkeys.ftl` — 40
+- `toolkit/toolkit/neterror/netError.ftl` — 39
 
 **Files absent from the locale:**
 

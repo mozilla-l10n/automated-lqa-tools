@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
-| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
+| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 11 of 16,183 |
+| **Strings reviewed this run** | 15 of 16,194 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for ja: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `newtab-stocks-search-button` — `browser/browser/newtab/newtab.ftl` — The .label uses the verb form 〜します instead of the noun form required for labels.
+    - Current: `label: 検索します`
+    - Source: `aria-label: Search by name or symbol label: Search title: Search by name or symbol`
+    - Suggest: `label: 検索`
+    - Per the locale convention, .label uses the noun form (検索) while .title uses 〜します; here the button label reads as a sentence-style verb.
+- `newtab-stocks-watchlist-empty-search` — `browser/browser/newtab/newtab.ftl` — The .label uses the verb form 〜します instead of the noun form required for labels.
+    - Current: `label: 検索します`
+    - Source: `aria-label: Search by name or symbol label: Search title: Search by name or symbol`
+    - Suggest: `label: 検索`
+    - Per the locale convention, .label uses the noun form (検索) while .title uses 〜します; here the button label reads as a sentence-style verb.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,9 +54,9 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 326 |
-| Strings | 16,183 |
-| Missing strings | 54 |
-| Obsolete strings | 4 |
+| Strings | 16,194 |
+| Missing strings | 124 |
+| Obsolete strings | 13 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -63,20 +72,20 @@ _Nothing retired._
 
 ### Completeness
 
-**54 strings** are not translated yet, concentrated in:
+**124 strings** are not translated yet, concentrated in:
 
 - `toolkit/toolkit/about/aboutPDF.ftl` — 20
-- `browser/browser/newtab/newtab.ftl` — 8
+- `browser/browser/aboutRestartRequired.ftl` — 18
+- `browser/browser/aboutPrivateBrowsing.ftl` — 13
+- `browser/browser/newtab/newtab.ftl` — 12
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 9
+- `browser/browser/ipProtection.ftl` — 7
 - `toolkit/toolkit/contentanalysis/contentanalysis.ftl` — 6
-- `devtools/client/debugger.properties` — 4
-- `dom/chrome/security/security.properties` — 3
-- `browser/browser/genai.ftl` — 3
-- `dom/chrome/dom/dom.properties` — 2
-- `devtools/client/components.properties` — 1
-- `devtools/client/perftools.ftl` — 1
-- `devtools/client/sourceeditor.properties` — 1
-- `browser/browser/migrationWizard.ftl` — 1
-- `browser/browser/translations.ftl` — 1
+- `devtools/client/debugger.properties` — 5
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 4
+- `browser/browser/genai.ftl` — 4
+- `browser/browser/appmenu.ftl` — 3
+- `browser/browser/preferences/preferences.ftl` — 3
 
 **Files present but identical to en-US:**
 
@@ -96,7 +105,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | ellipsis | `ascii` 388 | **ascii** |
 | dash | `em` 55, `en` 1 | **em** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 5 | _mixed_ |
-| fullwidth | `punctuation` 4922 | **punctuation** |
+| fullwidth | `punctuation` 4921 | **punctuation** |
 
 ---
 
@@ -106,7 +115,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (123)
+## 3. Open findings (125)
 
 > **Reads as a deliberate edit (5).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -142,7 +151,7 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 8 |
 | 2 | Wrong content (says something other than the English) | 49 |
-| 3 | Degraded language (grammar, spelling, terminology) | 37 |
+| 3 | Degraded language (grammar, spelling, terminology) | 39 |
 | 4 | Cosmetic (typography, spacing) | 29 |
 
 ### A. Functional, markup, variables & plurals
@@ -556,11 +565,21 @@ _Also listed under their own category below._
 - `newtab-picture-show-button` — `browser/browser/newtab/newtab.ftl` — browser/browser/newtab/newtab.ftl — 今日の写真 vs 今日の一枚 in four other strings for the same object.
     - Source: `aria-label: Show today’s picture title: Show today’s picture`
     - Suggest: `今日の写真`
+- `newtab-stocks-search-button` — `browser/browser/newtab/newtab.ftl` — The .label uses the verb form 〜します instead of the noun form required for labels.
+    - Current: `label: 検索します`
+    - Source: `aria-label: Search by name or symbol label: Search title: Search by name or symbol`
+    - Suggest: `label: 検索`
+    - Per the locale convention, .label uses the noun form (検索) while .title uses 〜します; here the button label reads as a sentence-style verb.
 - `newtab-stocks-search-input` — `browser/browser/newtab/newtab.ftl` — The placeholder for the search input is rendered as a verb phrase "〜します" instead of a noun/placeholder form.
     - Current: `placeholder: 企業名または銘柄コードで検索します`
     - Source: `aria-label: Search by name or symbol placeholder: Search by name or symbol`
     - Suggest: `placeholder: 企業名または銘柄コードで検索`
     - The developer comment says this is a placeholder text in the input field; the locale convention reserves 〜します for .title tooltips, not placeholders, and the identical aria-label uses the noun form.
+- `newtab-stocks-watchlist-empty-search` — `browser/browser/newtab/newtab.ftl` — The .label uses the verb form 〜します instead of the noun form required for labels.
+    - Current: `label: 検索します`
+    - Source: `aria-label: Search by name or symbol label: Search title: Search by name or symbol`
+    - Suggest: `label: 検索`
+    - Per the locale convention, .label uses the noun form (検索) while .title uses 〜します; here the button label reads as a sentence-style verb.
 - `newtab-weather-menu-change-temperature-units-fahrenheit` — `browser/browser/newtab/newtab.ftl` — browser/browser/newtab/newtab.ftl — ファーレンハイト度 / セルシウス度 vs 華氏 / 摂氏 in the option labels of the same menu.
     - Source: `Switch to Fahrenheit`
     - Suggest: `ファーレンハイト度`
