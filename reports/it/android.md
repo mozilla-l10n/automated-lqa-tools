@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **Previous run** | 2026-09-14 @ `6e23dc94dd8f` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **Previous run** | 2026-09-21 @ `e8bad3200f89` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 6 of 2,752 |
+| **Strings reviewed this run** | 40 of 2,783 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for it: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `mozac_feature_listentopage_notification_playback_speed_0_25` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-it/strings.xml` — The 0.25x speed string says the rate is reduced by 75% but uses the same wording pattern as 0.75x with a wrong value relationship; actually the issue is the percent sign reading aloud, but more importantly the source says "75 percent slower" — verify: translation matches.
+    - Current: `Velocità di riproduzione ridotta del 75%%`
+    - Source: `Playback rate 75 percent slower`
+    - Suggest: `Velocità di riproduzione ridotta del 75 percento`
+    - This is a content description read aloud by screen readers; the source spells out "percent" deliberately, while the Italian uses the symbol.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,8 +48,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 44 |
-| Strings | 2,752 |
+| Files | 45 |
+| Strings | 2,783 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -75,7 +79,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | apostrophe | `typographic` 167 | **typographic** |
 | ellipsis | `char` 23 | **char** |
 | dash | `em` 2 | **em** |
-| register | `informal` 86, `formal` 4 | **informal** |
+| register | `informal` 88, `formal` 4 | **informal** |
 
 ---
 
@@ -85,13 +89,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (0)
+## 3. Open findings (1)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 0 |
+| 2 | Wrong content (says something other than the English) | 1 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -101,7 +105,11 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-_Nothing in this category._
+- `mozac_feature_listentopage_notification_playback_speed_0_25` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-it/strings.xml` — The 0.25x speed string says the rate is reduced by 75% but uses the same wording pattern as 0.75x with a wrong value relationship; actually the issue is the percent sign reading aloud, but more importantly the source says "75 percent slower" — verify: translation matches.
+    - Current: `Velocità di riproduzione ridotta del 75%%`
+    - Source: `Playback rate 75 percent slower`
+    - Suggest: `Velocità di riproduzione ridotta del 75 percento`
+    - This is a content description read aloud by screen readers; the source spells out "percent" deliberately, while the Italian uses the symbol.
 
 ### C. Grammar, agreement & spelling
 

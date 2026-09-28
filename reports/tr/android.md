@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **Previous run** | 2026-09-14 @ `6e23dc94dd8f` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **Previous run** | 2026-09-21 @ `e8bad3200f89` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 4 of 2,747 |
+| **Strings reviewed this run** | 19 of 2,756 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -24,11 +24,11 @@ _No new findings._
 
 ### ✅ Fixed since the last run (1)
 
-- `customize_toggle_continue` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — Homescreen section title "Continue" translated as "İleri" (Forward/Next).
+- `recent_tabs_header_2` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Continue" (continue browsing where you left off) rendered as "İleri" (Forward/Next).
     - Current: `İleri`
     - Source: `Continue`
     - Suggest: `Devam edin`
-    - Per the developer comment this names the section that lets users continue where they left off; "İleri" means "forward/next" and does not convey "continue".
+    - The header invites the user to continue browsing the most recent tab; "İleri" means "forward/next" and is the standard label for the forward navigation button, not "continue".
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -48,9 +48,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 44 |
-| Strings | 2,747 |
-| Missing strings | 5 |
+| Files | 45 |
+| Strings | 2,756 |
+| Missing strings | 27 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -67,9 +67,10 @@ _Nothing retired._
 
 ### Completeness
 
-**5 strings** are not translated yet, concentrated in:
+**27 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — 5
+- `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — 17
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-tr/strings.xml` — 10
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -80,7 +81,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 14, `straight-double` 2 | **curly-double** |
-| apostrophe | `typographic` 153, `straight` 1 | **typographic** |
+| apostrophe | `typographic` 154, `straight` 1 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | register | `informal` 2, `formal` 18 | **formal** |
 
@@ -92,13 +93,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (139)
+## 3. Open findings (138)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 76 |
+| 2 | Wrong content (says something other than the English) | 75 |
 | 3 | Degraded language (grammar, spelling, terminology) | 57 |
 | 4 | Cosmetic (typography, spacing) | 6 |
 
@@ -403,12 +404,12 @@ _Nothing in this category._
     - Source: `Share link nearby`
     - Suggest: `Bağlantıyı yakındakilerle paylaş`
     - The source "Share link nearby" is neutral; the first-person "yakınımdakilerle" (with those near me) is inconsistent with the body text which uses "yakınınızdaki kişilerle" (formal second person).
-- `recent_tabs_header_2` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Continue" (continue browsing where you left off) rendered as "İleri" (Forward/Next).
-    - Current: `İleri`
-    - Source: `Continue`
-    - Suggest: `Devam edin`
-    - The header invites the user to continue browsing the most recent tab; "İleri" means "forward/next" and is the standard label for the forward navigation button, not "continue".
-- _…and 25 more; see `state/` for the full list._
+- `remote_improvements_description` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "between updates" is mistranslated as "her güncellemede" (with every update).
+    - Current: `Firefox her güncellemede özellikleri`
+    - Source: `Firefox will improve features, performance, and stability between updates. Changes applied remotely.`
+    - Suggest: `Firefox, güncellemeler arasında özellikleri`
+    - The source says improvements happen between updates (remotely, without an update), whereas the target says they happen with each update — the opposite point.
+- _…and 24 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -667,7 +668,7 @@ _Nothing in this category._
     - Current: `Çökme raporu %1$s'ya gönderiliyor`
     - Source: `Sending crash report to %1$s`
     - Suggest: `%1$s’ya`
-    - The tree uses ’ 153 times against 1 straight.
+    - The tree uses ’ 154 times against 1 straight.
 - `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
     - Current: `Web adresi "https://" veya "http://" içermelidir`
     - Source: `Web address must contain “https://” or “http://”`
@@ -709,8 +710,9 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (4)
+### Fixed to date (5)
 
+- `recent_tabs_header_2` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — fixed 2026-09-28
 - `customize_toggle_continue` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — fixed 2026-09-21
 - `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-tr/strings.xml` — fixed 2026-08-22
 - `bookmark_url_label` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — fixed 2026-08-22

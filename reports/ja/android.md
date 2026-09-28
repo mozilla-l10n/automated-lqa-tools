@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **Previous run** | 2026-09-14 @ `6e23dc94dd8f` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **Previous run** | 2026-09-21 @ `e8bad3200f89` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 6 of 2,752 |
+| **Strings reviewed this run** | 41 of 2,783 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for ja: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `mozac_feature_listentopage_notification_playback_speed_0_5` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-ja/strings.xml` — "half speed" rendered as "0.5 倍" is fine, but the sibling speed strings use "%" phrasing; however the real issue is the inconsistent construction
+    - Current: `再生速度を 0.5 倍に設定します`
+    - Source: `Playback set to half speed`
+    - Suggest: `再生速度を 0.5 倍 (半分) に設定します`
+    - Placeholder finding
+- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — "your data" is rendered as "ユーザーデータ" (user data) and "Extend" as "展開" (expand/unfold) instead of extending functionality.
+    - Current: `開いているタブのユーザーデータへアクセスするため、開発ツールを展開します。`
+    - Source: `Extend developer tools to access your data in open tabs.`
+    - Suggest: `開いているタブ内のあなたのデータにアクセスできるよう、開発ツールを拡張します。`
+    - The source says "Extend developer tools to access your data in open tabs." "展開" means to unfold/deploy, not to extend capabilities; "拡張" is the established term. Also "your data" refers to the user's own data, not generic "user data".
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,8 +53,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 44 |
-| Strings | 2,752 |
+| Files | 45 |
+| Strings | 2,783 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -73,7 +82,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 10, `corner` 2 | **curly-double** |
 | ellipsis | `char` 11, `ascii` 10 | _mixed_ |
-| fullwidth | `punctuation` 720 | **punctuation** |
+| fullwidth | `punctuation` 723 | **punctuation** |
 
 ---
 
@@ -83,13 +92,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (148)
+## 3. Open findings (150)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 116 |
+| 2 | Wrong content (says something other than the English) | 118 |
 | 3 | Degraded language (grammar, spelling, terminology) | 25 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
@@ -137,6 +146,11 @@ _Nothing reported._
     - Source: `%1$s could not be installed because it can only be installed by an organization using enterprise policies, which isn‘t supported on this platform.`
     - Suggest: `これはエンタープライズポリシーを使用する組織によってのみインストールできますが、この方法はこのプラットフォームではサポートされていません。`
     - The source's "only be installed by" (排他) is dropped, changing the meaning of why installation failed.
+- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — "your data" is rendered as "ユーザーデータ" (user data) and "Extend" as "展開" (expand/unfold) instead of extending functionality.
+    - Current: `開いているタブのユーザーデータへアクセスするため、開発ツールを展開します。`
+    - Source: `Extend developer tools to access your data in open tabs.`
+    - Suggest: `開いているタブ内のあなたのデータにアクセスできるよう、開発ツールを拡張します。`
+    - The source says "Extend developer tools to access your data in open tabs." "展開" means to unfold/deploy, not to extend capabilities; "拡張" is the established term. Also "your data" refers to the user's own data, not generic "user data".
 - `mozac_feature_addons_permissions_user_scripts_extra_warning` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — "extensions or sources you trust" is mistranslated so that "trusted" only modifies sources, allowing any extension's scripts.
     - Current: `拡張機能や信頼できるソースからのスクリプト以外は実行しないでください。`
     - Source: `Unverified scripts can pose security and privacy risks. Only run scripts from extensions or sources you trust.`
@@ -192,6 +206,11 @@ _Nothing reported._
     - Source: `VPN isn’t working right now so your location may be visible. Continue browsing without VPN, or choose tabs to close.`
     - Suggest: `閉じるタブを選択してください`
     - The source offers the option of choosing which tabs to close (the companion button leads to the tabs tray to select sensitive tabs); the translation just orders closing tabs.
+- `mozac_feature_listentopage_notification_playback_speed_0_5` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-ja/strings.xml` — "half speed" rendered as "0.5 倍" is fine, but the sibling speed strings use "%" phrasing; however the real issue is the inconsistent construction
+    - Current: `再生速度を 0.5 倍に設定します`
+    - Source: `Playback set to half speed`
+    - Suggest: `再生速度を 0.5 倍 (半分) に設定します`
+    - Placeholder finding
 - `mozac_feature_prompts_suggest_strong_password_message` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-ja/strings.xml` — Dialog title "Use strong password: %1$s" is rendered as an imperative request to the user rather than a label introducing the generated password.
     - Current: `強固なパスワードを使用してください: %1$s`
     - Source: `Use strong password: %1$s`
@@ -392,17 +411,7 @@ _Nothing reported._
     - Source: `Leave no traces on this device`
     - Suggest: `この端末に痕跡を残しません`
     - The source says no traces are left on the device; the translation says the device is prevented from tracking, which is a different meaning.
-- `firefox_labs_website_isolation_description` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "An extra barrier between websites" is rendered vaguely as "追加機能", losing the barrier-between-websites meaning.
-    - Current: `タブ間でデータ保護を強化する追加機能です。`
-    - Source: `An extra barrier between websites that helps protect your data across tabs. May affect performance, stability, website compatibility, and how browsing history is saved.`
-    - Suggest: `ウェブサイト間に追加の隔壁を設け、タブをまたいだデータの保護を助けます。`
-    - The source describes a barrier between websites protecting data across tabs; the translation omits "between websites" and replaces "barrier" with a generic "additional feature".
-- `fxa_tabs_closed_notification_title` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — The notification title implies closing tabs of the app named by %1$s rather than "%1$s: N tabs closed".
-    - Current: `%1$s のタブを %2$d 個閉じました`
-    - Source: `%1$s tabs closed: %2$d`
-    - Suggest: `%1$s: %2$d 個のタブを閉じました`
-    - %1$s is the app name used as a notification title prefix; "%1$s のタブ" wrongly reads as "tabs belonging to <app>" being closed, whereas the source states the app closed N tabs.
-- _…and 59 more; see `state/` for the full list._
+- _…and 61 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

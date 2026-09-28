@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **Previous run** | 2026-09-14 @ `6e23dc94dd8f` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **Previous run** | 2026-09-21 @ `e8bad3200f89` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 6 of 2,744 |
+| **Strings reviewed this run** | 40 of 2,775 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -20,16 +20,16 @@ Also for id: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ### 🆕 New findings (2)
 
-- `preference_top_tab_strip` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Top" as a position option is rendered "Puncak" (summit/peak) instead of "Atas".
-    - Current: `Puncak`
-    - Source: `Top`
-    - Suggest: `Atas`
-    - The preference sets the tab bar to the top of the screen; Indonesian uses "Atas" for screen position, while "Puncak" means summit/peak.
-- `preference_bottom_tab_strip` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Bottom" as a position option is rendered "Dasar" (base/basic) instead of "Bawah".
-    - Current: `Dasar`
-    - Source: `Bottom`
-    - Suggest: `Bawah`
-    - The preference sets the tab bar to the bottom of the screen; Indonesian uses "Bawah" for screen position, while "Dasar" means base/foundation or "basic".
+- `mozac_browser_errorpages_archive_wayback_machine` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-in/strings.xml` — The proper name of the Internet Archive service "Wayback Machine" was translated.
+    - Current: `Mesin Wayback`
+    - Source: `Wayback Machine`
+    - Suggest: `Wayback Machine`
+    - The developer comment states this is the name of the Internet Archive service; product/service names are not translated.
+- `preferences_category_sync_controls` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — Category header "Sync" rendered as the imperative verb "Sinkronkan" instead of a noun.
+    - Current: `Sinkronkan`
+    - Source: `Sync`
+    - Suggest: `Sinkronisasi`
+    - The comment says Sync is short for "Synchronization", i.e. a noun heading a preference category, not a command to synchronize.
 
 ### ✅ Fixed since the last run (0)
 
@@ -53,8 +53,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 44 |
-| Strings | 2,744 |
+| Files | 45 |
+| Strings | 2,775 |
 | Missing strings | 8 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -96,14 +96,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (163)
+## 3. Open findings (165)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 90 |
-| 3 | Degraded language (grammar, spelling, terminology) | 69 |
+| 2 | Wrong content (says something other than the English) | 91 |
+| 3 | Degraded language (grammar, spelling, terminology) | 70 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
@@ -117,6 +117,11 @@ _Nothing in this category._
     - Source: `The page at %1$s says:`
     - Suggest: `Laman di %1$s mengatakan:`
     - The source means the page located at the URL says something; "dari" (from) and "menjelaskan" (explains) misrepresent it, and the parallel string mozac_browser_engine_system_auth_message uses "mengatakan".
+- `mozac_browser_errorpages_archive_wayback_machine` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-in/strings.xml` — The proper name of the Internet Archive service "Wayback Machine" was translated.
+    - Current: `Mesin Wayback`
+    - Source: `Wayback Machine`
+    - Suggest: `Wayback Machine`
+    - The developer comment states this is the name of the Internet Archive service; product/service names are not translated.
 - `mozac_browser_errorpages_content_crashed_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-in/strings.xml` — "website owners" is translated as "pengguna situs Web" (website users) instead of owners.
     - Current: `Silakan hubungi pengguna situs Web untuk mengabarkan masalah ini kepada mereka.`
     - Source: `{ <p> }The page you are trying to view cannot be shown because an error in the data transmission was detected.{ </p> } { <ul> } { <li> }Please contact the website owners to inform them of this problem.{ </li> } { </ul> }`
@@ -407,12 +412,7 @@ _Nothing in this category._
     - Source: `Speedy, safe, and won’t sell you out. Browsing just got better.`
     - Suggest: `tidak akan mengkhianati Anda`
     - "Sell you out" means betray/give away your data, not literally selling the user; the literal rendering conveys a different meaning.
-- `open_all_warning_confirm` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — Confirm button label translated as a noun phrase "open tabs" instead of the imperative action "Open tabs".
-    - Current: `Tab terbuka`
-    - Source: `Open tabs`
-    - Suggest: `Buka tab`
-    - The developer comment says this is the dialog button for confirming opening all tabs; "Tab terbuka" means "opened tabs" (a state), not the action command.
-- _…and 34 more; see `state/` for the full list._
+- _…and 35 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -679,6 +679,11 @@ _Nothing in this category._
     - Source: `Engines visible on the search menu`
     - Suggest: `Mesin pencari yang terlihat di menu pencarian`
     - The preference category concerns search engines shown in the search menu; elsewhere in the same file "search engine" is translated "mesin pencari" (see preferences_category_select_private_search_engine). "Mesin peramban" means browser engine.
+- `preferences_category_sync_controls` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — Category header "Sync" rendered as the imperative verb "Sinkronkan" instead of a noun.
+    - Current: `Sinkronkan`
+    - Source: `Sync`
+    - Suggest: `Sinkronisasi`
+    - The comment says Sync is short for "Synchronization", i.e. a noun heading a preference category, not a command to synchronize.
 - `preferences_passwords_exceptions` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Exceptions" is rendered "Kekecualian" here but "pengecualian" in the related remove-all string on the same screen.
     - Current: `Kekecualian`
     - Source: `Exceptions`

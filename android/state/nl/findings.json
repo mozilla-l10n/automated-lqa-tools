@@ -1,5 +1,29 @@
 [
  {
+  "category": "C",
+  "check": "llm",
+  "current": "vanuit %2$s van the Internet Archive",
+  "dismissed_because": "",
+  "fid": "45de14c1a167",
+  "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+  "first_seen": "2026-09-28",
+  "impact": 3,
+  "last_seen": "2026-09-28",
+  "locale": "nl",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The source reads \"the Internet Archive’s %2$s\"; the Dutch keeps the English article \"the\" instead of the Dutch \"het\", which is a grammar/spelling error.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "9734a7ea",
+  "string_id": "mozac_browser_errorpages_archive_description",
+  "suggest": "vanuit %2$s van het Internet Archive",
+  "summary": "Untranslated English article \"the\" left in the Dutch sentence before \"Internet Archive\".",
+  "suppressed_by": ""
+ },
+ {
   "category": "B",
   "check": "llm",
   "current": "Probeer het over een paar seconden opnieuw.",
@@ -1311,8 +1335,8 @@
   },
   "rationale": "In Dutch (and in Mozilla nl terminology) ‘account’ is a het-woord: ‘dit account’, not ‘deze account’.",
   "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
+  "resolved_on": "2026-09-28",
+  "status": "obsolete",
   "string_hash": "b6938462",
   "string_id": "sync_no_devices_available_description",
   "suggest": "met dit account",

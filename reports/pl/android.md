@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **Previous run** | 2026-09-14 @ `6e23dc94dd8f` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **Previous run** | 2026-09-21 @ `e8bad3200f89` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 13 of 2,752 |
+| **Strings reviewed this run** | 2 of 2,745 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for pl: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `mozac_feature_addons_author` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-pl/strings.xml` — Singular "Author" rendered as plural "Autorzy".
-    - Current: `Autorzy`
-    - Source: `Author`
-    - Suggest: `Autor`
-    - The developer comment says "The author of an add-on" — a single author label, not a list heading.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,10 +45,10 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,752 |
-| Missing strings | 0 |
+| Strings | 2,745 |
+| Missing strings | 38 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -67,7 +63,17 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**38 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — 19
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml` — 18
+- `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-pl/strings.xml` — 1
+
+**Files absent from the locale:**
+
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml`
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -78,7 +84,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | quotes | `polish-double` 84 | **polish-double** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 2, `en` 3 | _mixed_ |
-| nbsp | `total` 652, `before-punctuation` 14 | **total** |
+| nbsp | `total` 653, `before-punctuation` 14 | **total** |
 | register | `informal` 9 | **informal** |
 
 ---

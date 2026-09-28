@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **Previous run** | 2026-09-14 @ `6e23dc94dd8f` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **Previous run** | 2026-09-21 @ `e8bad3200f89` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 6 of 2,752 |
+| **Strings reviewed this run** | 9 of 2,752 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `sync_no_devices_available_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "Any devices signed in and syncing to this account will appear here" is translated as "Todos os dispositivos ... aparecem aqui", changing the conditional future statement into a present-tense assertion about all devices.
+    - Current: `Todos os dispositivos conectados e sincronizados com esta conta aparecem aqui.`
+    - Suggest: `Qualquer dispositivo conectado e sincronizando com esta conta aparecerá aqui.`
+    - The source states that any device signed in and syncing will appear here; the translation asserts that all such devices already appear here.
 
 ---
 
@@ -44,9 +47,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 44 |
+| Files | 45 |
 | Strings | 2,752 |
-| Missing strings | 0 |
+| Missing strings | 31 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,7 +66,12 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**31 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-pt-rBR/strings.xml` — 16
+- `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — 15
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -83,13 +91,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (117)
+## 3. Open findings (116)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 70 |
+| 2 | Wrong content (says something other than the English) | 69 |
 | 3 | Degraded language (grammar, spelling, terminology) | 38 |
 | 4 | Cosmetic (typography, spacing) | 9 |
 
@@ -399,7 +407,7 @@ _Nothing in this category._
     - Source: `Active`
     - Suggest: `Ativos`
     - Per the developer comment this is the title of the section listing active studies, not an on/off state; "Ativado" duplicates studies_on and misrepresents the plural section heading.
-- _…and 12 more; see `state/` for the full list._
+- _…and 11 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

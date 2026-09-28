@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **Previous run** | 2026-09-14 @ `6e23dc94dd8f` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **Previous run** | 2026-09-21 @ `e8bad3200f89` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,742 |
+| **Strings reviewed this run** | 0 of 2,733 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `sync_no_devices_available_description` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "Any devices ... will appear here" is rendered as "所有…设备都将显示在这里", asserting all such devices are shown rather than stating that devices which sign in and sync will appear.
+    - Current: `所有已登录并与此账户同步的设备都将显示在这里。`
+    - Suggest: `任何登录此账户并同步的设备都会显示在这里。`
+    - The source is a conditional statement about future devices; "所有…都将显示" changes it into a blanket claim.
 
 ---
 
@@ -45,10 +48,10 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 43 |
-| Strings | 2,742 |
-| Missing strings | 10 |
+| Strings | 2,733 |
+| Missing strings | 50 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 2 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,14 +66,17 @@ _Nothing retired._
 
 ### Completeness
 
-**10 strings** are not translated yet, concentrated in:
+**50 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — 9
+- `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — 28
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml` — 18
+- `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-zh-rCN/strings.xml` — 3
 - `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 1
 
 **Files absent from the locale:**
 
 - `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml`
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -82,7 +88,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 74 | **curly-double** |
 | ellipsis | `char` 21 | **char** |
-| fullwidth | `punctuation` 1018 | **punctuation** |
+| fullwidth | `punctuation` 1017 | **punctuation** |
 | register | `informal` 3, `formal` 261 | **formal** |
 
 ---
@@ -93,13 +99,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (145)
+## 3. Open findings (144)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 100 |
+| 2 | Wrong content (says something other than the English) | 99 |
 | 3 | Degraded language (grammar, spelling, terminology) | 37 |
 | 4 | Cosmetic (typography, spacing) | 8 |
 
@@ -409,7 +415,7 @@ _Nothing in this category._
     - Source: `Permission denied`
     - Suggest: `权限被拒绝`
     - The toast appears when the user denies the camera permission; "拒绝访问" loses the notion of a permission and reads as an imperative/ambiguous phrase.
-- _…and 47 more; see `state/` for the full list._
+- _…and 46 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **Previous run** | 2026-09-14 @ `6e23dc94dd8f` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **Previous run** | 2026-09-21 @ `e8bad3200f89` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 39 of 2,752 |
+| **Strings reviewed this run** | 9 of 2,752 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -20,11 +20,11 @@ Also for fy-NL: [firefox](firefox.md)
 
 ### 🆕 New findings (1)
 
-- `tab_indicator_media_playing` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Playing media" is rendered as an infinitive phrase ("to play media") instead of a descriptive state.
-    - Current: `Media ôfspylje`
-    - Source: `Playing media`
-    - Suggest: `Media wurdt ôfspile`
-    - The source is a content description for an indicator showing that media is currently playing; "Media ôfspylje" reads as the command/infinitive "play media", not the state.
+- `mozac_browser_errorpages_archive_description` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fy-rNL/strings.xml` — English word "the" left in the Frisian sentence and the phrasing duplicates "fan" awkwardly.
+    - Current: `fan %2$s út fan the Internet Archive`
+    - Source: `%1$s can look for an earlier version of this page from the Internet Archive’s %2$s.`
+    - Suggest: `fan %2$s fan it Internet Archive`
+    - The source reads "from the Internet Archive’s %2$s"; the target contains the untranslated English article "the" and a redundant "út fan" construction.
 
 ### ✅ Fixed since the last run (0)
 
@@ -48,9 +48,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 44 |
+| Files | 45 |
 | Strings | 2,752 |
-| Missing strings | 0 |
+| Missing strings | 31 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -67,7 +67,12 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**31 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — 16
+- `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — 15
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -76,7 +81,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-single` 16 | **curly-single** |
-| apostrophe | `typographic` 95, `straight` 8 | **typographic** |
+| apostrophe | `typographic` 94, `straight` 8 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `en` 6 | **en** |
 
@@ -88,14 +93,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (166)
+## 3. Open findings (167)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 59 |
-| 3 | Degraded language (grammar, spelling, terminology) | 96 |
+| 3 | Degraded language (grammar, spelling, terminology) | 97 |
 | 4 | Cosmetic (typography, spacing) | 11 |
 
 ### A. Functional, markup, variables & plurals
@@ -412,6 +417,11 @@ _Nothing in this category._
     - Source: `Check Archived Version`
     - Suggest: `Argyfferzje kontrolearje`
     - Elsewhere in the same file the archive is rendered "argyf"/"argyftsjinst"; "Argivearre" is an inconsistent, non-standard derivation.
+- `mozac_browser_errorpages_archive_description` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fy-rNL/strings.xml` — English word "the" left in the Frisian sentence and the phrasing duplicates "fan" awkwardly.
+    - Current: `fan %2$s út fan the Internet Archive`
+    - Source: `%1$s can look for an earlier version of this page from the Internet Archive’s %2$s.`
+    - Suggest: `fan %2$s fan it Internet Archive`
+    - The source reads "from the Internet Archive’s %2$s"; the target contains the untranslated English article "the" and a redundant "út fan" construction.
 - `mozac_browser_errorpages_connection_failure_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fy-rNL/strings.xml` — Predicative adjective wrongly inflected: "oerbelêste" should be "oerbelêst".
     - Current: `of oerbelêste`
     - Source: `{ <ul> } { <li> }The site could be temporarily unavailable or too busy. Try again in a few moments.{ </li> } { <li> }If you are unable to load any pages, check your device’s data or Wi-Fi connection.{ </li> } { </ul> }`
@@ -702,12 +712,7 @@ _Nothing in this category._
     - Source: `Helpful tools`
     - Suggest: `Nuttige ark`
     - Source is "Helpful tools" (plural, collective); the Frisian adjective before the collective noun "ark" requires the inflected form "nuttige".
-- `setup_checklist_subtitle_3_steps_first_step` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Goed j!" is a garbled/incomplete rendering of "Great start!".
-    - Current: `Goed j!`
-    - Source: `Great start! You’ve completed 1 out of 3 steps.`
-    - Suggest: `Goed begjin!`
-    - The source "Great start!" should read "Goed begjin!"; "Goed j" is not a Frisian word/phrase and appears to be a truncation.
-- _…and 21 more; see `state/` for the full list._
+- _…and 22 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -802,38 +807,38 @@ _Nothing in this category._
 - `download_content_type_filter_video` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `download_content_type_filter_video` uses a straight apostrophe
     - Current: `Fideo's`
     - Source: `Videos`
-    - The tree uses ’ 95 times against 8 straight.
+    - The tree uses ’ 94 times against 8 straight.
 - `etp_known_fingerprinters_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `etp_known_fingerprinters_description` uses a straight apostrophe
     - Current: `Foarkomt dat unyk identifisearbere gegevens oer jo apparaat sammele wurde dy't brûkt wurde kinne foar folchdoeleinen.`
     - Source: `Stops uniquely identifiable data from being collected about your device that can be used for tracking purposes.`
     - Suggest: `dy’t brûkt wurde kinne`
-    - The tree uses ’ 95 times against 8 straight.
+    - The tree uses ’ 94 times against 8 straight.
 - `nova_onboarding_marketing_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `nova_onboarding_marketing_body_2` uses a straight apostrophe
     - Current: `Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht.`
     - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
-    - The tree uses ’ 95 times against 8 straight.
+    - The tree uses ’ 94 times against 8 straight.
 - `onboarding_marketing_body_1` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `onboarding_marketing_body_1` uses a straight apostrophe
     - Current: `Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht.`
     - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
     - Suggest: `Mozilla’s`
-    - The tree uses ’ 95 times against 8 straight.
+    - The tree uses ’ 94 times against 8 straight.
 - `onboarding_marketing_redesign_opt_out_checkbox` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `onboarding_marketing_redesign_opt_out_checkbox` uses a straight apostrophe
     - Current: `Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht.`
     - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
     - Suggest: `Mozilla’s`
-    - The tree uses ’ 95 times against 8 straight.
+    - The tree uses ’ 94 times against 8 straight.
 - `preferences_marketing_data_description_4` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `preferences_marketing_data_description_4` uses a straight apostrophe
     - Current: `Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke.`
     - Source: `Share how you discovered Firefox and that you use it with Mozilla’s marketing technology partners.`
-    - The tree uses ’ 95 times against 8 straight.
+    - The tree uses ’ 94 times against 8 straight.
 - `tab_tray_inactive_auto_close_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `tab_tray_inactive_auto_close_body_2` uses a straight apostrophe
     - Current: `%1$s kin ljepblêden dy't jo de ôfrûne moanne net besjoen hawwe slute.`
     - Source: `%1$s can close tabs you haven’t viewed over the past month.`
-    - The tree uses ’ 95 times against 8 straight.
+    - The tree uses ’ 94 times against 8 straight.
 - `uninstall_survey_option_4_v2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `uninstall_survey_option_4_v2` uses a straight apostrophe
     - Current: `Fideo's, downloads of media wurken net`
     - Source: `Videos, downloads, or media didn’t work`
-    - The tree uses ’ 95 times against 8 straight.
+    - The tree uses ’ 94 times against 8 straight.
 
 ---
 

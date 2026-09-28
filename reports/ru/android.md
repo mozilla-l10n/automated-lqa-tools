@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **Previous run** | 2026-09-14 @ `6e23dc94dd8f` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **Previous run** | 2026-09-21 @ `e8bad3200f89` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 6 of 2,752 |
+| **Strings reviewed this run** | 40 of 2,783 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for ru: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `preferences_tab_groups_description` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "you can name" mistranslated as "переименовать" (rename).
+    - Current: `которые вы сможете переименовать и сохранить`
+    - Source: `Organize your tabs into groups you can name and save.`
+    - Suggest: `которым вы сможете дать имя и которые сможете сохранить`
+    - The source says groups you can name (give a name to), not rename.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,9 +38,16 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (2)
 
-_Nothing retired._
+- `history_older` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "Старее" is a non-standard comparative form used as a history group header.
+    - Current: `Старее`
+    - Suggest: `Ранее`
+    - Source "Older" heads history entries older than the last month; "Старее" is colloquial/incorrect Russian for this heading.
+- `sync_no_devices_available_description` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "Any devices" is rendered as "Все устройства" but the sentence structure also mistranslates "signed in and syncing to this account".
+    - Current: `Все устройства, на которых выполнен вход в этот аккаунт и синхронизация с ним, появятся здесь.`
+    - Suggest: `Здесь будут показаны устройства, на которых выполнен вход в этот аккаунт и включена синхронизация с ним.`
+    - "and syncing" describes an ongoing sync state, but "выполнен вход ... и синхронизация" makes "синхронизация" governed by "выполнен вход", producing an ungrammatical/incorrect statement.
 
 ---
 
@@ -44,8 +55,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 44 |
-| Strings | 2,752 |
+| Files | 45 |
+| Strings | 2,783 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -74,7 +85,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | quotes | `guillemet` 43, `straight-double` 2 | **guillemet** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 6 | **em** |
-| register | `informal` 145, `formal` 470 | **formal** |
+| register | `informal` 145, `formal` 477 | **formal** |
 
 ---
 
@@ -84,14 +95,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (156)
+## 3. Open findings (155)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 88 |
-| 3 | Degraded language (grammar, spelling, terminology) | 63 |
+| 3 | Degraded language (grammar, spelling, terminology) | 62 |
 | 4 | Cosmetic (typography, spacing) | 5 |
 
 ### A. Functional, markup, variables & plurals
@@ -489,11 +500,6 @@ _Nothing in this category._
     - Source: `Files you download will appear here.`
     - Suggest: `Скачанные вами файлы будут находиться здесь.`
     - After «будут» the infinitive «находиться» (with soft sign) is required; «находится» is 3rd person singular.
-- `history_older` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "Старее" is a non-standard comparative form used as a history group header.
-    - Current: `Старее`
-    - Source: `Older`
-    - Suggest: `Ранее`
-    - Source "Older" heads history entries older than the last month; "Старее" is colloquial/incorrect Russian for this heading.
 - `ip_protection_location_recommended_label` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — Plural adjective used for a singular option label "Recommended".
     - Current: `Рекомендуемые`
     - Source: `Recommended`

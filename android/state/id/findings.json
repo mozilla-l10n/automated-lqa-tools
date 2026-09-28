@@ -48,6 +48,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "Mesin Wayback",
+  "dismissed_because": "",
+  "fid": "326995c8aee0",
+  "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+  "first_seen": "2026-09-28",
+  "impact": 2,
+  "last_seen": "2026-09-28",
+  "locale": "id",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The developer comment states this is the name of the Internet Archive service; product/service names are not translated.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "d1ca1bd4",
+  "string_id": "mozac_browser_errorpages_archive_wayback_machine",
+  "suggest": "Wayback Machine",
+  "summary": "The proper name of the Internet Archive service \"Wayback Machine\" was translated.",
+  "suppressed_by": ""
+ },
+ {
   "category": "E",
   "check": "llm",
   "current": "terlalu sibuk . Cobalah",
@@ -2144,7 +2168,7 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-09-21",
+  "last_seen": "2026-09-28",
   "locale": "id",
   "origin": {},
   "rationale": "In the source this string quotes “Never translate this site”, which is exactly the value of `translation_option_bottom_sheet_never_translate_site` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -2827,6 +2851,30 @@
   "string_id": "preferences_category_engines_in_search_menu",
   "suggest": "Mesin pencari yang terlihat di menu pencarian",
   "summary": "\"Engines\" (search engines) is rendered as \"Mesin peramban\" (browser engines) instead of \"Mesin pencari\".",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
+  "current": "Sinkronkan",
+  "dismissed_because": "",
+  "fid": "c4b75e4629d5",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-09-28",
+  "impact": 3,
+  "last_seen": "2026-09-28",
+  "locale": "id",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The comment says Sync is short for \"Synchronization\", i.e. a noun heading a preference category, not a command to synchronize.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "d3e30f76",
+  "string_id": "preferences_category_sync_controls",
+  "suggest": "Sinkronisasi",
+  "summary": "Category header \"Sync\" rendered as the imperative verb \"Sinkronkan\" instead of a noun.",
   "suppressed_by": ""
  },
  {
