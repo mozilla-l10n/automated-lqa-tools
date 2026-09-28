@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
-| **Previous run** | 2026-09-14 @ `e8592a898dc1` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
+| **Previous run** | 2026-09-21 @ `26f50d4ce7b1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 29 of 1,950 |
+| **Strings reviewed this run** | 19 of 1,969 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,26 +18,13 @@ Also for es-AR: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `QuickAnswers.Settings.Footer.v158` — `es-AR/firefox-ios.xliff` — Plural "short answers" rendered as singular "una respuesta corta".
-    - Current: `recibí una respuesta corta`
-    - Source: `Ask out loud and get short answers. We don’t store your voice, questions, or answers.`
-    - Suggest: `recibí respuestas cortas`
-    - The en-US says "get short answers" (plural); the target says the user gets a single short answer.
-- `QuickAnswers.Errors.DailyLimitMessage.v158` — `es-AR/firefox-ios.xliff` — Feature name capitalized inconsistently as "Respuestas Rápidas" versus "Respuestas rápidas" elsewhere.
-    - Current: `Respuestas Rápidas`
-    - Source: `Try Quick Answers again tomorrow.`
-    - Suggest: `Respuestas rápidas`
-    - Other strings in the same feature (QuickAnswers.Settings.Title, AccessibilityLabels.OpenQuickAnswers) use "Respuestas rápidas"; Spanish does not use title case.
+_No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `Menu.EnhancedTrackingProtection.ClearData.AlertText.v128` — `es-AR/firefox-ios.xliff` — "might log you out of websites" is rendered as an impersonal "puede cerrar sesión en los sitios web", losing the sense that it may sign the user out.
-    - Current: `puede cerrar sesión en los sitios web`
-    - Source: `Removing cookies and site data for %@ might log you out of websites and clear shopping carts.`
-    - Suggest: `puede cerrar tu sesión en los sitios web`
-    - The source says the action may log the user out; the Spanish as written lacks the possessive/object and reads as the act itself closing a session, not the user's.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -58,7 +45,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,950 |
+| Strings | 1,969 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -82,7 +69,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `straight-double` 7, `curly-double` 3, `curly-single` 2 | _mixed_ |
 | apostrophe | `typographic` 2 | **typographic** |
-| ellipsis | `char` 23 | **char** |
+| ellipsis | `char` 27 | **char** |
 | dash | `em` 2, `en` 2 | _mixed_ |
 | inverted marks | `open-question` 42, `open-exclamation` 9 | **open-question** |
 

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
-| **Previous run** | 2026-09-14 @ `8f5aca68ae4b` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
+| **Previous run** | 2026-09-21 @ `26f50d4ce7b1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 28 of 1,950 |
+| **Strings reviewed this run** | 22 of 1,969 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -20,20 +20,24 @@ Also for fr: [android](android.md) · [firefox](firefox.md)
 
 ### 🆕 New findings (2)
 
+- `QuickAnswers.OptInRedesign.PrivateByDesignTitle.v158` — `fr/firefox-ios.xliff` — Missing feminine agreement in "vie privé".
+    - Current: `Conçu pour protéger votre vie privé`
+    - Source: `Private By Design`
+    - Suggest: `Conçu pour protéger votre vie privée`
+    - "vie" is feminine, so the adjective must be "privée".
+- `QuickAnswers.PrivacyBanner.Title.v158` — `fr/firefox-ios.xliff` — Missing feminine agreement in "vie privé".
+    - Current: `Conçu pour protéger votre vie privé`
+    - Source: `Private by Design`
+    - Suggest: `Conçu pour protéger votre vie privée`
+    - "vie" is feminine, so the adjective must be "privée".
+
+### ✅ Fixed since the last run (1)
+
 - `QuickAnswers.ContentView.Footer.v158` — `fr/firefox-ios.xliff` — "Powered by %@" is mistranslated as "Mis en avant par %@" (promoted/highlighted by).
     - Current: `Mis en avant par %@`
     - Source: `Powered by %@ · Answers can contain mistakes.`
     - Suggest: `Propulsé par %@`
     - "Powered by" indicates the AI model providing the answer; "mis en avant par" means "featured/promoted by", a different claim about the relationship with the provider.
-- `QuickAnswers.ContentView.Answering.v158` — `fr/firefox-ios.xliff` — The loading label "Answering…" (an ongoing action) is rendered as the noun "Réponse…".
-    - Current: `Réponse…`
-    - Source: `Answering…`
-    - Suggest: `Réponse en cours…`
-    - The source is a progress indicator shown while the answer is being fetched; the bare noun "Réponse…" reads as a label for the answer itself rather than an in-progress state.
-
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -54,7 +58,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,950 |
+| Strings | 1,969 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -77,11 +81,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 18 | **guillemet** |
-| apostrophe | `typographic` 361 | **typographic** |
-| ellipsis | `char` 23 | **char** |
+| apostrophe | `typographic` 367 | **typographic** |
+| ellipsis | `char` 27 | **char** |
 | dash | `em` 3, `en` 1 | **em** |
 | nbsp | `total` 154, `before-punctuation` 96 | _mixed_ |
-| register | `formal` 292 | **formal** |
+| register | `formal` 308 | **formal** |
 
 ---
 
@@ -91,14 +95,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (46)
+## 3. Open findings (47)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 30 |
-| 3 | Degraded language (grammar, spelling, terminology) | 15 |
+| 2 | Wrong content (says something other than the English) | 29 |
+| 3 | Degraded language (grammar, spelling, terminology) | 17 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
@@ -182,11 +186,6 @@ _Nothing in this category._
     - Source: `Answering…`
     - Suggest: `Réponse en cours…`
     - The source is a progress indicator shown while the answer is being fetched; the bare noun "Réponse…" reads as a label for the answer itself rather than an in-progress state.
-- `QuickAnswers.ContentView.Footer.v158` — `fr/firefox-ios.xliff` — "Powered by %@" is mistranslated as "Mis en avant par %@" (promoted/highlighted by).
-    - Current: `Mis en avant par %@`
-    - Source: `Powered by %@ · Answers can contain mistakes.`
-    - Suggest: `Propulsé par %@`
-    - "Powered by" indicates the AI model providing the answer; "mis en avant par" means "featured/promoted by", a different claim about the relationship with the provider.
 - `ScanQRCode.ConfirmOpenURL.Message.v129` — `fr/firefox-ios.xliff` — The French reverses the roles: it says "allow opening Firefox" instead of "allow Firefox to open" (the scanned URL).
     - Current: `Autoriser l’ouverture de %@ ?`
     - Source: `Allow %@ to open?`
@@ -300,6 +299,16 @@ _Nothing in this category._
     - Source: `Limited Edition Wallpaper`
     - Suggest: `Fond d’écran en édition limitée`
     - "édition" is feminine, so the adjective must be "limitée" (Limited Edition Wallpaper).
+- `QuickAnswers.OptInRedesign.PrivateByDesignTitle.v158` — `fr/firefox-ios.xliff` — Missing feminine agreement in "vie privé".
+    - Current: `Conçu pour protéger votre vie privé`
+    - Source: `Private By Design`
+    - Suggest: `Conçu pour protéger votre vie privée`
+    - "vie" is feminine, so the adjective must be "privée".
+- `QuickAnswers.PrivacyBanner.Title.v158` — `fr/firefox-ios.xliff` — Missing feminine agreement in "vie privé".
+    - Current: `Conçu pour protéger votre vie privé`
+    - Source: `Private by Design`
+    - Suggest: `Conçu pour protéger votre vie privée`
+    - "vie" is feminine, so the adjective must be "privée".
 - `Settings.ScrollToHideTabAndAddressBar.Title.v138` — `fr/firefox-ios.xliff` — "la barre d’adresse et d’onglets" incorrectly merges two separate bars (tab bar and address bar) into one.
     - Current: `Faire défiler pour masquer la barre d’adresse et d’onglets`
     - Source: `Scroll to Hide Tab and Address Bar`
@@ -367,6 +376,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (1)
 
-_Nothing fixed yet._
+- `QuickAnswers.ContentView.Footer.v158` — `fr/firefox-ios.xliff` — fixed 2026-09-28

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
-| **Previous run** | 2026-09-14 @ `8f5aca68ae4b` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
+| **Previous run** | 2026-09-21 @ `26f50d4ce7b1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 32 of 1,950 |
+| **Strings reviewed this run** | 3 of 1,953 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for nl: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `QuickAnswers.Settings.Title.v158` — `nl/firefox-ios.xliff` — Feature name capitalized inconsistently: "Snelle Antwoorden" here vs. "Snelle antwoorden" elsewhere in the same feature.
-    - Current: `Snelle Antwoorden`
-    - Source: `Quick Answers`
-    - Suggest: `Snelle antwoorden`
-    - Other strings in this batch (QuickAnswers.Errors.DailyLimitMessage, PermissionAlertTitle, AccessibilityLabels.OpenQuickAnswers) render the feature name as "Snelle antwoorden"; Dutch does not use title case.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,950 |
-| Missing strings | 0 |
+| Strings | 1,953 |
+| Missing strings | 16 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,7 +59,12 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**16 strings** are not translated yet, concentrated in:
+
+- `nl/firefox-ios.xliff` — 15
+- `nl/firefox-ios.xliff` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -73,9 +74,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-single` 14 | **curly-single** |
 | apostrophe | `typographic` 31 | **typographic** |
-| ellipsis | `char` 23 | **char** |
+| ellipsis | `char` 24 | **char** |
 | dash | `en` 4 | **en** |
-| register | `formal` 287 | **formal** |
+| register | `formal` 288 | **formal** |
 
 ---
 

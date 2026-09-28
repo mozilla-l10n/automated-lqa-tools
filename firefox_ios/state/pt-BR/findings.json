@@ -504,6 +504,54 @@
   "suppressed_by": ""
  },
  {
+  "category": "C",
+  "check": "llm",
+  "current": "Não armazenamos sua voz, suas perguntas nem respostas.",
+  "dismissed_because": "",
+  "fid": "14a337384c85",
+  "file": "Shared/Supporting Files/en-US.lproj/QuickAnswers.strings",
+  "first_seen": "2026-09-28",
+  "impact": 3,
+  "last_seen": "2026-09-28",
+  "locale": "pt-BR",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source lists \"your voice, questions, or answers\" — all possessed by the user; the pt-BR mixes \"sua voz, suas perguntas\" with a bare \"respostas\", breaking agreement in the enumeration.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "9f8fe0b1",
+  "string_id": "QuickAnswers.OptInRedesign.NothingGetsSavedDescription.v158",
+  "suggest": "Não armazenamos sua voz, suas perguntas nem suas respostas.",
+  "summary": "Missing possessive/article makes the list inconsistent: \"nem respostas\" drops the parallel determiner used for the other items.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
+  "current": "Privativo por projeto",
+  "dismissed_because": "",
+  "fid": "3524e8e2f488",
+  "file": "Shared/Supporting Files/en-US.lproj/QuickAnswers.strings",
+  "first_seen": "2026-09-28",
+  "impact": 3,
+  "last_seen": "2026-09-28",
+  "locale": "pt-BR",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The same source phrase \"Private by Design\" appears in QuickAnswers.PrivacyBanner.Title.v158 as \"Projetado para privacidade\"; \"Privativo por projeto\" is a literal, misleading rendering of the same term in the same feature.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "37f9696c",
+  "string_id": "QuickAnswers.OptInRedesign.PrivateByDesignTitle.v158",
+  "suggest": "Projetado para privacidade",
+  "summary": "\"Private By Design\" is rendered as \"Privativo por projeto\" here but as \"Projetado para privacidade\" in the privacy banner title, an inconsistent and unidiomatic rendering.",
+  "suppressed_by": ""
+ },
+ {
   "category": "B",
   "check": "llm",
   "current": "Incluir números de telefone e endereços de email",

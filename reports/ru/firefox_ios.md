@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
-| **Previous run** | 2026-09-14 @ `e8592a898dc1` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
+| **Previous run** | 2026-09-21 @ `26f50d4ce7b1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 29 of 1,950 |
+| **Strings reviewed this run** | 19 of 1,969 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,31 +18,17 @@ Also for ru: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (1)
 
-- `QuickAnswers.Tip.Title.v158` — `ru/firefox-ios.xliff` — "Ask Out Loud for Quick Answers" is rendered as "Ask quick questions out loud", swapping the feature name onto the questions.
-    - Current: `Задать быстрые вопросы вслух`
-    - Source: `Ask Out Loud for Quick Answers`
-    - Suggest: `Задайте вопрос вслух и получите быстрые ответы`
-    - The source says to ask aloud in order to get Quick Answers (the feature name); the Russian says to ask "quick questions", losing the feature name and changing the meaning.
-- `QuickAnswers.Errors.OpenSettings.v158` — `ru/firefox-ios.xliff` — iOS Settings app is rendered "Параметры" instead of the established Apple/Firefox iOS term "Настройки".
-    - Current: `Открыть Параметры`
-    - Source: `Open Settings`
-    - Suggest: `Открыть Настройки`
-    - The comment says the button opens the iOS Settings app, which is called «Настройки» in Russian iOS; «Параметры» is the Windows term.
-- `QuickAnswers.Errors.PermissionAlertTitle.v158` — `ru/firefox-ios.xliff` — "Settings" rendered as "Параметры" instead of the iOS term "Настройки".
-    - Current: `Изменить Параметры для Быстрых ответов`
-    - Source: `Change Settings to Use Quick Answers`
-    - Suggest: `Изменить Настройки для Быстрых ответов`
-    - Refers to the iOS Settings app, localized as «Настройки» on iOS.
+- `QuickAnswers.ContentView.Listening.v158` — `ru/firefox-ios.xliff` — "Listening" (the app is listening) is rendered as an imperative telling the user to listen.
+    - Current: `Слушайте, спрашивайте что угодно…`
+    - Source: `Listening, ask anything…`
+    - Suggest: `Слушаю, спрашивайте что угодно…`
+    - Per the comment, this is a placeholder shown while the microphone is active and waiting for the user to speak — the app is listening, not the user. The imperative «Слушайте» reverses who is doing the listening.
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `Open & Fill` — `ru/firefox-ios.xliff` — Unwarranted capital letter mid-phrase in Russian.
-    - Current: `Открыть и Заполнить`
-    - Source: `Open & Fill`
-    - Suggest: `Открыть и заполнить`
-    - Russian sentence-case rules do not capitalize the second verb; en-US title case must not be copied.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -63,7 +49,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,950 |
+| Strings | 1,969 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -86,9 +72,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 23 | **guillemet** |
-| ellipsis | `char` 23 | **char** |
+| ellipsis | `char` 27 | **char** |
 | dash | `em` 6, `en` 1 | **em** |
-| register | `informal` 83, `formal` 279 | **formal** |
+| register | `informal` 87, `formal` 288 | **formal** |
 
 ---
 
@@ -98,7 +84,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (91)
+## 3. Open findings (92)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -113,7 +99,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 43 |
+| 2 | Wrong content (says something other than the English) | 44 |
 | 3 | Degraded language (grammar, spelling, terminology) | 45 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
@@ -188,6 +174,11 @@ _Nothing in this category._
     - Source: `Trackers blocked this week`
     - Suggest: `Трекеров заблокировано на этой неделе`
     - The developer comment says the number of blocked trackers appears in bold above this text, so the label must read as a caption for that number (genitive), not a standalone sentence.
+- `QuickAnswers.ContentView.Listening.v158` — `ru/firefox-ios.xliff` — "Listening" (the app is listening) is rendered as an imperative telling the user to listen.
+    - Current: `Слушайте, спрашивайте что угодно…`
+    - Source: `Listening, ask anything…`
+    - Suggest: `Слушаю, спрашивайте что угодно…`
+    - Per the comment, this is a placeholder shown while the microphone is active and waiting for the user to speak — the app is listening, not the user. The imperative «Слушайте» reverses who is doing the listening.
 - `QuickAnswers.Tip.Title.v158` — `ru/firefox-ios.xliff` — "Ask Out Loud for Quick Answers" is rendered as "Ask quick questions out loud", swapping the feature name onto the questions.
     - Current: `Задать быстрые вопросы вслух`
     - Source: `Ask Out Loud for Quick Answers`

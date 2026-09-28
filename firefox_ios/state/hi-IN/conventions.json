@@ -1,20 +1,20 @@
 {
  "_meta": {
   "locale": "hi-IN",
-  "prose_chunks": 603,
-  "strings": 603
+  "prose_chunks": 1950,
+  "strings": 1950
  },
  "apostrophe": {
-  "straight": 0,
+  "straight": 11,
   "typographic": 0
  },
  "dash": {
-  "em": 1,
+  "em": 5,
   "en": 0
  },
  "ellipsis": {
   "ascii": 0,
-  "char": 5
+  "char": 23
  },
  "fullwidth": {
   "punctuation": 0
@@ -29,5 +29,7 @@
   "space-before-punctuation": 0,
   "total": 0
  },
- "quotes": {}
+ "quotes": {
+  "curly-double": 4
+ }
 }

@@ -800,8 +800,20 @@
  },
  "Shared/Supporting Files/en-US.lproj/QuickAnswers.strings": {
   "QuickAnswers.AccessibilityLabels.Close.v158": "cc1a4a29 0e7c6115 41e2a5cf",
+  "QuickAnswers.ContentView.AboutYourPrivacy.v158": "d76686f2 7533760f 5a1b1589",
+  "QuickAnswers.ContentView.Answering.v158": "9adffa12 9d1c4fa0 e4cbba5b",
+  "QuickAnswers.ContentView.Placeholder.v158": "3c0666ef 07b487b5 d5c1aeb3",
+  "QuickAnswers.ContentView.SearchingSources.v158": "a2fbb639 955b7c57 a6d3ccc8",
   "QuickAnswers.ContentView.Sources.v158": "abf3a430 5eb95cd9 2d3bdb88",
-  "QuickAnswers.Errors.OK.v158": "5db9a5e6 322b41af 2a812743"
+  "QuickAnswers.ContentView.Thinking.v158": "28e8ea80 c2a5972a 17e9ea87",
+  "QuickAnswers.Errors.DailyLimitTitle.v158": "736887fa 47c8a164 a3140623",
+  "QuickAnswers.Errors.GenericErrorMessage.v158": "d43005cc f18ad955 84d0b054",
+  "QuickAnswers.Errors.GenericErrorTitle.v158": "ac6fbc09 57f4185b 767e6b2f",
+  "QuickAnswers.Errors.OK.v158": "5db9a5e6 322b41af 2a812743",
+  "QuickAnswers.Errors.OpenSettings.v158": "56bd696b bec9f5cb 96ff3dfe",
+  "QuickAnswers.OptIn.LearnMore.v158": "ee0db254 d9b20450 736ecf7e",
+  "QuickAnswers.OptIn.Title.v158": "03dfddaa 3c025f61 ae92ee8d",
+  "QuickAnswers.Tip.Message.v158": "466dc5fc c7203227 a0ce0025"
  },
  "Shared/Supporting Files/en-US.lproj/ReaderModeBar.strings": {
   "ReaderModeBar.SummarizeButtonAccessibilityLabel.v150": "b0fd068c 83de9990 45fa80a3"
@@ -879,6 +891,7 @@
   "CreditCards.Settings.UseASavedCard.v122": "a34b49a4 caa702a9 1584677c",
   "CreditCards.Settings.UseSavedCardFromKeyboard.v112": "a34b49a4 caa702a9 2fc26843",
   "FxA.FirefoxAccount.v119": "04eb27dd f38ba9ee a402065d",
+  "QuickAnswers.Settings.LearnMore.v158": "ee0db254 d9b20450 9378d0d2",
   "QuickAnswers.Settings.StatusOff.v158": "cd8796af 4c5ca662 838cce79",
   "QuickAnswers.Settings.StatusOn.v158": "b0be65be 201cd7a0 88bef294",
   "Settings.AIControls.AIPoweredFeaturesSection.AvailableStatus.v151": "2b7cac31 98d71668 82a6d9e6",
@@ -917,6 +930,7 @@
   "Settings.Autoplay.BlockAudioAndVideo.v137": "eecef9b7 a9a59753 17483845",
   "Settings.Autoplay.Footer.v137": "5e5f0190 ddb053ea 17483845",
   "Settings.Autoplay.SettingsTitle.v137": "5495ecb2 3d0b2720 f9033318",
+  "Settings.BoolSetting.LearnMoreAction.v157": "ee0db254 8ed49578 b08cfb8c",
   "Settings.Browsing.AdBlocker.Description.v155": "dcba68cd 7262855c 9bb6c254",
   "Settings.Browsing.AdBlocker.LearnMore.v155": "ee0db254 d9b20450 96eba1fe",
   "Settings.Browsing.AdBlocker.Title.v155": "68a196ed ef07e8df 9f9096d1",

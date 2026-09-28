@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
-| **Previous run** | 2026-09-14 @ `e8592a898dc1` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
+| **Previous run** | 2026-09-21 @ `26f50d4ce7b1` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 1,911 |
 
@@ -46,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 95 |
 | Strings | 1,911 |
-| Missing strings | 39 |
+| Missing strings | 58 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 2 |
 | Files with no en-US counterpart | 0 |
@@ -59,10 +59,10 @@ _Nothing retired._
 
 ### Completeness
 
-**39 strings** are not translated yet, concentrated in:
+**58 strings** are not translated yet, concentrated in:
 
-- `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings` — 22
-- `en-CA/firefox-ios.xliff` — 7
+- `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings` — 40
+- `en-CA/firefox-ios.xliff` — 8
 - `en-CA/firefox-ios.xliff` — 3
 - `Shared/Supporting Files/en-US.lproj/GoogleLens.strings` — 2
 - `en-CA/firefox-ios.xliff` — 2
