@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
-| **Previous run** | 2026-09-17 @ `8f5aca68ae4b` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
+| **Previous run** | 2026-09-21 @ `26f50d4ce7b1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 547 |
+| **Strings reviewed this run** | 0 of 547 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -46,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 22 |
 | Strings | 547 |
-| Missing strings | 1,403 |
+| Missing strings | 1,422 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 75 |
 | Files with no en-US counterpart | 0 |
@@ -59,20 +59,20 @@ _Nothing retired._
 
 ### Completeness
 
-**1,403 strings** are not translated yet, concentrated in:
+**1,422 strings** are not translated yet, concentrated in:
 
 - `fa/firefox-ios.xliff` — 182
 - `Shared/Supporting Files/en-US.lproj/Onboarding.strings` — 158
+- `Shared/Supporting Files/en-US.lproj/Settings.strings` — 152
 - `Shared/Supporting Files/en-US.lproj/MainMenu.strings` — 151
-- `Shared/Supporting Files/en-US.lproj/Settings.strings` — 151
 - `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — 73
 - `Shared/Supporting Files/en-US.lproj/WebCompatReporter.strings` — 52
 - `Shared/Supporting Files/en-US.lproj/EditAddress.strings` — 48
 - `Shared/Supporting Files/en-US.lproj/EnhancedTrackingProtection.strings` — 43
 - `Shared/Supporting Files/en-US.lproj/AppIconSelection.strings` — 42
+- `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings` — 40
 - `Shared/Supporting Files/en-US.lproj/Bookmarks.strings` — 32
 - `Shared/Supporting Files/en-US.lproj/NativeErrorPage.strings` — 32
-- `Shared/Supporting Files/en-US.lproj/Translations.strings` — 31
 
 **Files absent from the locale:**
 

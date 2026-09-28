@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
-| **Previous run** | 2026-09-14 @ `8f5aca68ae4b` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
+| **Previous run** | 2026-09-21 @ `26f50d4ce7b1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 14 of 1,897 |
+| **Strings reviewed this run** | 72 of 1,969 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,33 @@ Also for es-MX: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (5)
 
-_No new findings._
+- `PrivacyDashboard.CategoryAccessibilityLabel.v156` — `es-MX/firefox-ios.xliff` — "blocked" rendered as "total bloqueados", adding a "total" the source does not have.
+    - Current: `%1$@, total bloqueados: %2$@`
+    - Source: `%1$@, blocked: %2$@`
+    - Suggest: `%1$@, bloqueados: %2$@`
+    - The en-US accessibility label is simply "%1$@, blocked: %2$@"; "total" is added content.
+- `NativeErrorPage.Wayback.Error.FooterDescription.v155` — `es-MX/firefox-ios.xliff` — "an earlier version" translated as "una versión archivada" (an archived version).
+    - Current: `puede buscar una versión archivada de esta página`
+    - Source: `%1$@ can look for an earlier version of this page from the Internet Archive’s %2$@.`
+    - Suggest: `puede buscar una versión anterior de esta página`
+    - The source says "an earlier version of this page", not "archived version".
+- `QuickAnswers.OptInRedesign.NothingGetsSavedDescription.v158` — `es-MX/firefox-ios.xliff` — Negative enumeration should use "ni" rather than "o" in Spanish.
+    - Current: `No almacenamos tu voz, tus preguntas o tus respuestas.`
+    - Source: `We don’t store your voice, questions, or answers.`
+    - Suggest: `No almacenamos tu voz, tus preguntas ni tus respuestas.`
+    - In Spanish a negated list takes "ni"; the sibling string uses "No almacenamos tu voz ni tus preguntas."
+- `WebCompatReporter.Preview.Data.PageElements.v155` — `es-MX/firefox-ios.xliff` — "site issues" rendered as "problemas de navegación" (browsing problems) instead of problems on the site.
+    - Current: `suelen causar problemas de navegación`
+    - Source: `Information about page elements that have been known to cause site issues`
+    - Suggest: `suelen causar problemas en los sitios`
+    - The en-US says page elements known to cause issues on sites; "problemas de navegación" changes the subject to browsing problems.
+- `QuickAnswers.Settings.Footer.v158` — `es-MX/firefox-ios.xliff` — Negative enumeration should use "ni" rather than "o".
+    - Current: `No almacenamos tu voz, tus preguntas o tus respuestas.`
+    - Source: `Ask out loud and get short answers. We don’t store your voice, questions, or answers.`
+    - Suggest: `No almacenamos tu voz, tus preguntas ni tus respuestas.`
+    - In Spanish, a negated list requires "ni" for the final item; "o" is ungrammatical here and weakens the scope of the negation.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +68,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 96 |
-| Strings | 1,897 |
-| Missing strings | 53 |
+| Files | 97 |
+| Strings | 1,969 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,20 +83,7 @@ _Nothing retired._
 
 ### Completeness
 
-**53 strings** are not translated yet, concentrated in:
-
-- `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings` — 22
-- `es-MX/firefox-ios.xliff` — 17
-- `es-MX/firefox-ios.xliff` — 7
-- `es-MX/firefox-ios.xliff` — 4
-- `es-MX/firefox-ios.xliff` — 2
-- `es-MX/firefox-ios.xliff` — 1
-
-**Files absent from the locale:**
-
-- `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -82,10 +93,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-single` 8, `curly-double` 4, `straight-double` 3 | _mixed_ |
 | apostrophe | `typographic` 8 | **typographic** |
-| ellipsis | `char` 21 | **char** |
+| ellipsis | `char` 27 | **char** |
 | dash | `em` 2 | **em** |
 | inverted marks | `open-question` 42, `open-exclamation` 8 | **open-question** |
-| register | `informal` 150, `formal` 5 | **informal** |
+| register | `informal` 177, `formal` 5 | **informal** |
 
 ---
 
@@ -95,14 +106,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (122)
+## 3. Open findings (127)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 64 |
-| 3 | Degraded language (grammar, spelling, terminology) | 49 |
+| 2 | Wrong content (says something other than the English) | 65 |
+| 3 | Degraded language (grammar, spelling, terminology) | 53 |
 | 4 | Cosmetic (typography, spacing) | 9 |
 
 ### A. Functional, markup, variables & plurals
@@ -220,6 +231,11 @@ _Nothing reported._
     - Source: `The site may be busy or unavailable. Try again later. If other pages won’t load, check your Wi-Fi or data connection. %@ can also search the Wayback Machine for an earlier version of this page.`
     - Suggest: `Si otras páginas no cargan`
     - The source conditions on other pages failing to load; the translation is close but shifts the subject. Minor, but the bigger issue is the omission of "also": %@ can *also* search the Wayback Machine.
+- `NativeErrorPage.Wayback.Error.FooterDescription.v155` — `es-MX/firefox-ios.xliff` — "an earlier version" translated as "una versión archivada" (an archived version).
+    - Current: `puede buscar una versión archivada de esta página`
+    - Source: `%1$@ can look for an earlier version of this page from the Internet Archive’s %2$@.`
+    - Suggest: `puede buscar una versión anterior de esta página`
+    - The source says "an earlier version of this page", not "archived version".
 - `Onboarding.Modern.BrandRefresh.TermsOfUse.Description.v148` — `es-MX/firefox-ios.xliff` — "won't sell you out" is rendered as the generic "confiable", dropping the claim about not selling users out.
     - Current: `Rápido, seguro y confiable.`
     - Source: `Speedy, safe, and won’t sell you out. Browsing just got better.`
@@ -245,6 +261,11 @@ _Nothing reported._
     - Source: `Data about your device, hardware configuration, and how you use %1$@ helps improve features, performance, and stability for everyone. %2$@`
     - Suggest: `para todos`
     - The en-US says "for everyone"; the translation asserts a geographic scope ("users all over the world") the source never stated.
+- `PrivacyDashboard.CategoryAccessibilityLabel.v156` — `es-MX/firefox-ios.xliff` — "blocked" rendered as "total bloqueados", adding a "total" the source does not have.
+    - Current: `%1$@, total bloqueados: %2$@`
+    - Source: `%1$@, blocked: %2$@`
+    - Suggest: `%1$@, bloqueados: %2$@`
+    - The en-US accessibility label is simply "%1$@, blocked: %2$@"; "total" is added content.
 - `CreditCards.Settings.Done.v114` — `es-MX/firefox-ios.xliff` — "Done" translated as "Cerrar" (Close) instead of "Listo".
     - Current: `Cerrar`
     - Source: `Done`
@@ -300,6 +321,11 @@ _Nothing reported._
     - Source: `To`
     - Suggest: `A`
     - The label is the short form of "Translate To", which is translated elsewhere in the same sheet as "Traducir a"; "Para" is the wrong preposition here and breaks consistency with the "De" label pair.
+- `WebCompatReporter.Preview.Data.PageElements.v155` — `es-MX/firefox-ios.xliff` — "site issues" rendered as "problemas de navegación" (browsing problems) instead of problems on the site.
+    - Current: `suelen causar problemas de navegación`
+    - Source: `Information about page elements that have been known to cause site issues`
+    - Suggest: `suelen causar problemas en los sitios`
+    - The en-US says page elements known to cause issues on sites; "problemas de navegación" changes the subject to browsing problems.
 - `WebCompatReporter.SubOption.CaptionsMissing.v154` — `es-MX/firefox-ios.xliff` — "Captions are missing" is rendered as "subtitles don't load", changing the meaning.
     - Current: `Los subtítulos no cargan`
     - Source: `Captions are missing`
@@ -400,22 +426,7 @@ _Nothing reported._
     - Source: `New tab arrived from another device.`
     - Suggest: `Llegó una nueva pestaña desde otro dispositivo.`
     - The source says a tab arrived (was received) from another device; "agregada" says it was added, which differs from the en-US and from the sibling string's "Se recibió una pestaña".
-- `Settings.AddCustomEngine.Title` — `es-MX/firefox-ios.xliff` — "Add Search Engine" translated as "Agregar motor", dropping "search" and diverging from the identical source string elsewhere.
-    - Current: `Agregar motor`
-    - Source: `Add Search Engine`
-    - Suggest: `Agregar motor de búsqueda`
-    - Source is "Add Search Engine"; Settings.AddCustomEngine with the same source is translated "Agregar motor de búsqueda".
-- `Settings.Disconnect.Body` — `es-MX/firefox-ios.xliff` — "any of your browsing data" mistranslated as "nada en tu historial de navegación" (browsing history).
-    - Current: `no eliminará nada en tu historial de navegación en este dispositivo`
-    - Source: `Firefox will stop syncing with your account, but won’t delete any of your browsing data on this device.`
-    - Suggest: `no eliminará ninguno de tus datos de navegación en este dispositivo`
-    - The source says browsing data, not browsing history; the Spanish narrows the scope of what is preserved.
-- `Settings.FxA.Sync.SectionName` — `es-MX/firefox-ios.xliff` — "Sync Settings" (noun phrase, section title) rendered as an imperative "Sincronizar configuraciones" (Sync the settings).
-    - Current: `Sincronizar configuraciones`
-    - Source: `Sync Settings`
-    - Suggest: `Configuración de Sync`
-    - The developer comment says it is a section title for sync settings; the translation reverses the head noun and reads as a command to sync settings.
-- _…and 14 more; see `state/` for the full list._
+- _…and 17 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -464,11 +475,21 @@ _Nothing reported._
     - Source: `System Auto`
     - Suggest: `Sistema automático`
     - Spanish does not use English title case for adjectives in UI labels.
+- `QuickAnswers.OptInRedesign.NothingGetsSavedDescription.v158` — `es-MX/firefox-ios.xliff` — Negative enumeration should use "ni" rather than "o" in Spanish.
+    - Current: `No almacenamos tu voz, tus preguntas o tus respuestas.`
+    - Source: `We don’t store your voice, questions, or answers.`
+    - Suggest: `No almacenamos tu voz, tus preguntas ni tus respuestas.`
+    - In Spanish a negated list takes "ni"; the sibling string uses "No almacenamos tu voz ni tus preguntas."
 - `Settings.SearchZero.TrendingSearches.Toggle.v146` — `es-MX/firefox-ios.xliff` — "Mostrar tendencias de búsquedas" has an incorrect plural/construction for "Show Trending Searches".
     - Current: `Mostrar tendencias de búsquedas`
     - Source: `Show Trending Searches`
     - Suggest: `Mostrar búsquedas en tendencia`
     - The source refers to the trending searches list; "tendencias de búsquedas" is ungrammatical (should be "de búsqueda" at minimum) and does not match the section title "Tendencias en %@".
+- `QuickAnswers.Settings.Footer.v158` — `es-MX/firefox-ios.xliff` — Negative enumeration should use "ni" rather than "o".
+    - Current: `No almacenamos tu voz, tus preguntas o tus respuestas.`
+    - Source: `Ask out loud and get short answers. We don’t store your voice, questions, or answers.`
+    - Suggest: `No almacenamos tu voz, tus preguntas ni tus respuestas.`
+    - In Spanish, a negated list requires "ni" for the final item; "o" is ungrammatical here and weakens the scope of the negation.
 - `Settings.AIControls.BlockAIEnhancementsDescription.v151` — `es-MX/firefox-ios.xliff` — Number agreement error: "estas funcionalidad" should be singular or plural consistently.
     - Current: `Si bloqueas estas funcionalidad`
     - Source: `Blocking means you won’t see new or current AI enhancements in %@, or pop-ups about them.`

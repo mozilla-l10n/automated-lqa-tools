@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
-| **Previous run** | 2026-09-14 @ `8f5aca68ae4b` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
+| **Previous run** | 2026-09-21 @ `26f50d4ce7b1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 28 of 1,950 |
+| **Strings reviewed this run** | 19 of 1,969 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for id: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `QuickAnswers.PrivacyBanner.Description.v158` — `id/firefox-ios.xliff` — The negation only applies to the first item, so the translation states that the app does use data to train AI models and uses the voice to identify the user.
+    - Current: `%@ tidak menyimpan audio atau pertanyaan Anda, menggunakan data Anda untuk melatih model AI, atau menggunakan suara Anda untuk mengidentifikasi Anda.`
+    - Source: `%@ doesn’t store your audio or questions, use your data to train AI models, or use your voice to identify you.`
+    - Suggest: `%@ tidak menyimpan audio atau pertanyaan Anda, tidak menggunakan data Anda untuk melatih model AI, dan tidak menggunakan suara Anda untuk mengidentifikasi Anda.`
+    - In English "doesn't" distributes over all three verbs; in Indonesian the negation must be repeated, otherwise the sentence reads as an affirmative claim that the app trains AI models on user data and identifies users by voice.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,7 +49,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,950 |
+| Strings | 1,969 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -69,7 +73,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 4, `curly-single` 1 | **curly-double** |
 | apostrophe | `typographic` 1 | **typographic** |
-| ellipsis | `char` 23 | **char** |
+| ellipsis | `char` 27 | **char** |
 | dash | `em` 2, `en` 2 | _mixed_ |
 
 ---
@@ -80,10 +84,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (97)
+## 3. Open findings (98)
 
-> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
+- `QuickAnswers.PrivacyBanner.Description.v158` — `id/firefox-ios.xliff` — The negation only applies to the first item, so the translation states that the app does use data to train AI models and uses the voice to identify the user.
+    - Current: `%@ tidak menyimpan audio atau pertanyaan Anda, menggunakan data Anda untuk melatih model AI, atau menggunakan suara Anda untuk mengidentifikasi Anda.`
+    - Source: `%@ doesn’t store your audio or questions, use your data to train AI models, or use your voice to identify you.`
+    - Suggest: `%@ tidak menyimpan audio atau pertanyaan Anda, tidak menggunakan data Anda untuk melatih model AI, dan tidak menggunakan suara Anda untuk mengidentifikasi Anda.`
+    - In English "doesn't" distributes over all three verbs; in Indonesian the negation must be repeated, otherwise the sentence reads as an affirmative claim that the app trains AI models on user data and identifies users by voice.
 - `Search.ThirdPartyEngines.DuplicateErrorMessage` — `id/firefox-ios.xliff` — Error message translated as a success ("has been successfully added") instead of stating the engine was already added.
     - Current: `Mesin pencari dengan judul ini atau URL telah berhasil ditambahkan.`
     - Source: `A search engine with this title or URL has already been added.`
@@ -100,7 +109,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 37 |
+| 2 | Wrong content (says something other than the English) | 38 |
 | 3 | Degraded language (grammar, spelling, terminology) | 48 |
 | 4 | Cosmetic (typography, spacing) | 12 |
 
@@ -184,6 +193,11 @@ _Also listed under their own category below._
     - Source: `Tracking Content`
     - Suggest: `Konten Pelacak`
     - The source names a category of blocked content (content that tracks), not the act of tracking content; the Indonesian reverses the modifier and head.
+- `QuickAnswers.PrivacyBanner.Description.v158` — `id/firefox-ios.xliff` — The negation only applies to the first item, so the translation states that the app does use data to train AI models and uses the voice to identify the user.
+    - Current: `%@ tidak menyimpan audio atau pertanyaan Anda, menggunakan data Anda untuk melatih model AI, atau menggunakan suara Anda untuk mengidentifikasi Anda.`
+    - Source: `%@ doesn’t store your audio or questions, use your data to train AI models, or use your voice to identify you.`
+    - Suggest: `%@ tidak menyimpan audio atau pertanyaan Anda, tidak menggunakan data Anda untuk melatih model AI, dan tidak menggunakan suara Anda untuk mengidentifikasi Anda.`
+    - In English "doesn't" distributes over all three verbs; in Indonesian the negation must be repeated, otherwise the sentence reads as an affirmative claim that the app trains AI models on user data and identifies users by voice.
 - `Settings.Notifications.SyncNotificationsTitle.v112` — `id/firefox-ios.xliff` — The Sync feature name is translated as "Penyelarasan" instead of kept as the product feature name "Sync".
     - Current: `Penyelarasan`
     - Source: `Sync`

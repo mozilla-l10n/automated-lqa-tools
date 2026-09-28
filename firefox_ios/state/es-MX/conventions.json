@@ -1,8 +1,8 @@
 {
  "_meta": {
   "locale": "es-MX",
-  "prose_chunks": 1897,
-  "strings": 1897
+  "prose_chunks": 1969,
+  "strings": 1969
  },
  "apostrophe": {
   "straight": 0,
@@ -14,7 +14,7 @@
  },
  "ellipsis": {
   "ascii": 0,
-  "char": 21
+  "char": 27
  },
  "fullwidth": {
   "punctuation": 0
@@ -36,6 +36,6 @@
  },
  "register": {
   "formal": 5,
-  "informal": 150
+  "informal": 177
  }
 }

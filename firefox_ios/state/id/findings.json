@@ -816,6 +816,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "%@ tidak menyimpan audio atau pertanyaan Anda, menggunakan data Anda untuk melatih model AI, atau menggunakan suara Anda untuk mengidentifikasi Anda.",
+  "dismissed_because": "",
+  "fid": "60c122d0b609",
+  "file": "Shared/Supporting Files/en-US.lproj/QuickAnswers.strings",
+  "first_seen": "2026-09-28",
+  "impact": 2,
+  "last_seen": "2026-09-28",
+  "locale": "id",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "In English \"doesn't\" distributes over all three verbs; in Indonesian the negation must be repeated, otherwise the sentence reads as an affirmative claim that the app trains AI models on user data and identifies users by voice.",
+  "reads_as_deliberate": true,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "5571f5f0",
+  "string_id": "QuickAnswers.PrivacyBanner.Description.v158",
+  "suggest": "%@ tidak menyimpan audio atau pertanyaan Anda, tidak menggunakan data Anda untuk melatih model AI, dan tidak menggunakan suara Anda untuk mengidentifikasi Anda.",
+  "summary": "The negation only applies to the first item, so the translation states that the app does use data to train AI models and uses the voice to identify the user.",
+  "suppressed_by": ""
+ },
+ {
   "category": "D",
   "check": "llm",
   "current": "topeng surel",

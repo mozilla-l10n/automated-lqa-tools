@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
-| **Previous run** | 2026-09-14 @ `8f5aca68ae4b` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
+| **Previous run** | 2026-09-21 @ `26f50d4ce7b1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 5 of 1,927 |
+| **Strings reviewed this run** | 43 of 1,969 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for ja: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `QuickAnswers.ContentView.Listening.v158` — `ja/firefox-ios.xliff` — The "Listening" state indicator is dropped from the translation.
+    - Current: `何でも質問してください...`
+    - Source: `Listening, ask anything…`
+    - Suggest: `聞き取り中です。何でも質問してください...`
+    - The source "Listening, ask anything…" tells the user the microphone is active and listening; the Japanese only says "ask anything", making it identical to the non-listening placeholder string (Placeholder.v158) and losing the state information.
+- `QuickAnswers.OptInRedesign.NoTrainingDescription.v158` — `ja/firefox-ios.xliff` — "our systems" narrowed to "our AI systems".
+    - Current: `私たちの AI システムの学習`
+    - Source: `We don’t use your data to train our systems.`
+    - Suggest: `私たちのシステムの学習`
+    - The source says "train our systems" without limiting it to AI systems; the Japanese adds "AI", narrowing the commitment the product makes.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +54,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,927 |
-| Missing strings | 23 |
+| Strings | 1,969 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -59,12 +68,7 @@ _Nothing retired._
 
 ### Completeness
 
-**23 strings** are not translated yet, concentrated in:
-
-- `ja/firefox-ios.xliff` — 17
-- `ja/firefox-ios.xliff` — 6
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -73,8 +77,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `corner` 11, `curly-double` 3 | **corner** |
-| ellipsis | `char` 11, `ascii` 11 | _mixed_ |
-| fullwidth | `punctuation` 396 | **punctuation** |
+| ellipsis | `char` 11, `ascii` 16 | _mixed_ |
+| fullwidth | `punctuation` 412 | **punctuation** |
 
 ---
 
@@ -84,9 +88,9 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (110)
+## 3. Open findings (112)
 
-> **Reads as a deliberate edit (7).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (8).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `NSFaceIDUsageDescription` — `ja/firefox-ios.xliff` — "payment methods" is rendered as 「暗号化されたカード情報」 (encrypted card information), adding a claim not in the source.
     - Current: `保存されたログイン情報と暗号化されたカード情報にアクセスするには Face ID が必要です。`
@@ -113,6 +117,11 @@ _Nothing reported._
     - Source: `To help improve the browser, %1$@ sends diagnostic and interaction data to %2$@. %3$@`
     - Suggest: `診断データとインタラクションデータ`
     - en-US "diagnostic and interaction data" refers to usage/interaction telemetry; 「対話データ」 implies conversation data, asserting the product collects something different from what the source says.
+- `QuickAnswers.OptInRedesign.NoTrainingDescription.v158` — `ja/firefox-ios.xliff` — "our systems" narrowed to "our AI systems".
+    - Current: `私たちの AI システムの学習`
+    - Source: `We don’t use your data to train our systems.`
+    - Suggest: `私たちのシステムの学習`
+    - The source says "train our systems" without limiting it to AI systems; the Japanese adds "AI", narrowing the commitment the product makes.
 - `WebCompatReporter.Preview.Data.PageLanguages.v155` — `ja/firefox-ios.xliff` — A bullet-point noun phrase is rendered as a past-tense sentence, changing the meaning.
     - Current: `言語設定がこのページに送信されました`
     - Source: `Language preferences sent to this page`
@@ -129,7 +138,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 60 |
+| 2 | Wrong content (says something other than the English) | 62 |
 | 3 | Degraded language (grammar, spelling, terminology) | 44 |
 | 4 | Cosmetic (typography, spacing) | 6 |
 
@@ -313,6 +322,16 @@ _Also listed under their own category below._
     - Source: `%@ blocks trackers as you browse, you’ll see them here.`
     - Suggest: `%@ は閲覧中にトラッカーをブロックします。ブロックしたトラッカーはここに表示されます。`
     - This string is shown when no trackers have been blocked yet; the past-tense Japanese implies trackers were already blocked and will be listed.
+- `QuickAnswers.ContentView.Listening.v158` — `ja/firefox-ios.xliff` — The "Listening" state indicator is dropped from the translation.
+    - Current: `何でも質問してください...`
+    - Source: `Listening, ask anything…`
+    - Suggest: `聞き取り中です。何でも質問してください...`
+    - The source "Listening, ask anything…" tells the user the microphone is active and listening; the Japanese only says "ask anything", making it identical to the non-listening placeholder string (Placeholder.v158) and losing the state information.
+- `QuickAnswers.OptInRedesign.NoTrainingDescription.v158` — `ja/firefox-ios.xliff` — "our systems" narrowed to "our AI systems".
+    - Current: `私たちの AI システムの学習`
+    - Source: `We don’t use your data to train our systems.`
+    - Suggest: `私たちのシステムの学習`
+    - The source says "train our systems" without limiting it to AI systems; the Japanese adds "AI", narrowing the commitment the product makes.
 - `CreditCard.RememberCard.SecondaryButtonTitle.v115` — `ja/firefox-ios.xliff` — "Not Now" is translated as "今回は記憶しない" ("Don't remember this time"), which states something the source does not.
     - Current: `今回は記憶しない`
     - Source: `Not Now`
@@ -433,17 +452,7 @@ _Also listed under their own category below._
     - Source: `Upcoming`
     - Suggest: `開催予定`
     - The developer comment says this labels an upcoming match in the round phase. 「近日公開」 is used for releases (films, features) being published soon and is wrong for a scheduled match.
-- `WorldCup.HomepageWidget.TemporaryView.Description.v151` — `ja/firefox-ios.xliff` — "as the World Cup approaches" is rendered as 「ワールドカップ開催についての」, attaching the phrase to the topic of the updates rather than the timing.
-    - Current: `ワールドカップ開催についての最新情報をお伝えします`
-    - Source: `We’ll keep you updated as the World Cup approaches`
-    - Suggest: `ワールドカップ開催が近づくにつれて最新情報をお伝えします`
-    - The source says updates will be provided as the World Cup approaches; the translation says updates about the World Cup being held, losing the temporal meaning.
-- `Menu.ZoomPage.DecreaseZoom.AccessibilityLabel.v113` — `ja/firefox-ios.xliff` — Adds "縮小する" not present in the source "Decrease Zoom Level".
-    - Current: `ズームレベルを下げて縮小する`
-    - Source: `Decrease Zoom Level`
-    - Suggest: `ズームレベルを下げる`
-    - The source is simply "Decrease Zoom Level"; the added 「縮小する」 is extra content not in the en-US string.
-- _…and 26 more; see `state/` for the full list._
+- _…and 28 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

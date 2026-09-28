@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
-| **Previous run** | 2026-09-14 @ `e8592a898dc1` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
+| **Previous run** | 2026-09-21 @ `26f50d4ce7b1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 27 of 1,949 |
+| **Strings reviewed this run** | 20 of 1,969 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for pt-BR: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `QuickAnswers.OptInRedesign.NothingGetsSavedDescription.v158` — `pt-BR/firefox-ios.xliff` — Missing possessive/article makes the list inconsistent: "nem respostas" drops the parallel determiner used for the other items.
+    - Current: `Não armazenamos sua voz, suas perguntas nem respostas.`
+    - Source: `We don’t store your voice, questions, or answers.`
+    - Suggest: `Não armazenamos sua voz, suas perguntas nem suas respostas.`
+    - The source lists "your voice, questions, or answers" — all possessed by the user; the pt-BR mixes "sua voz, suas perguntas" with a bare "respostas", breaking agreement in the enumeration.
+- `QuickAnswers.OptInRedesign.PrivateByDesignTitle.v158` — `pt-BR/firefox-ios.xliff` — "Private By Design" is rendered as "Privativo por projeto" here but as "Projetado para privacidade" in the privacy banner title, an inconsistent and unidiomatic rendering.
+    - Current: `Privativo por projeto`
+    - Source: `Private By Design`
+    - Suggest: `Projetado para privacidade`
+    - The same source phrase "Private by Design" appears in QuickAnswers.PrivacyBanner.Title.v158 as "Projetado para privacidade"; "Privativo por projeto" is a literal, misleading rendering of the same term in the same feature.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +54,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,949 |
-| Missing strings | 1 |
+| Strings | 1,969 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -59,11 +68,7 @@ _Nothing retired._
 
 ### Completeness
 
-**1 strings** are not translated yet, concentrated in:
-
-- `pt-BR/firefox-ios.xliff` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -73,9 +78,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-single` 6, `curly-double` 4 | _mixed_ |
 | apostrophe | `typographic` 6 | **typographic** |
-| ellipsis | `char` 23 | **char** |
+| ellipsis | `char` 27 | **char** |
 | dash | `em` 1 | **em** |
-| register | `informal` 145 | **informal** |
+| register | `informal` 152 | **informal** |
 
 ---
 
@@ -85,7 +90,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (57)
+## 3. Open findings (59)
 
 > **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -106,7 +111,7 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 35 |
-| 3 | Degraded language (grammar, spelling, terminology) | 19 |
+| 3 | Degraded language (grammar, spelling, terminology) | 21 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
@@ -333,6 +338,11 @@ _Nothing in this category._
     - Source: `Choose a %@ Wallpaper`
     - Suggest: `Escolha um fundo de tela do %@`
     - "Wallpaper" is rendered "fundo de tela" elsewhere in the same screen; "fundo da tela" is incorrect.
+- `QuickAnswers.OptInRedesign.NothingGetsSavedDescription.v158` — `pt-BR/firefox-ios.xliff` — Missing possessive/article makes the list inconsistent: "nem respostas" drops the parallel determiner used for the other items.
+    - Current: `Não armazenamos sua voz, suas perguntas nem respostas.`
+    - Source: `We don’t store your voice, questions, or answers.`
+    - Suggest: `Não armazenamos sua voz, suas perguntas nem suas respostas.`
+    - The source lists "your voice, questions, or answers" — all possessed by the user; the pt-BR mixes "sua voz, suas perguntas" with a bare "respostas", breaking agreement in the enumeration.
 - `Settings.AIControls.AIPoweredFeaturesSection.AvailableStatusDescription.v151` — `pt-BR/firefox-ios.xliff` — Duplicated/garbled wording "você e pode usar" instead of "você pode usar".
     - Current: `**Disponível**: O recurso aparece e você e pode usar.`
     - Source: `**Available**: You’ll see the feature and can use it.`
@@ -381,6 +391,11 @@ _Nothing in this category._
     - Source: `Add a name`
     - Suggest: `Adicione um nome`
     - "Add a name" here is an inline error instruction to the user, like "Insira uma data de expiração válida" and "Digite um número de cartão válido" in the same file; the infinitive "Adicionar" reads as a button label and breaks consistency on the same screen.
+- `QuickAnswers.OptInRedesign.PrivateByDesignTitle.v158` — `pt-BR/firefox-ios.xliff` — "Private By Design" is rendered as "Privativo por projeto" here but as "Projetado para privacidade" in the privacy banner title, an inconsistent and unidiomatic rendering.
+    - Current: `Privativo por projeto`
+    - Source: `Private By Design`
+    - Suggest: `Projetado para privacidade`
+    - The same source phrase "Private by Design" appears in QuickAnswers.PrivacyBanner.Title.v158 as "Projetado para privacidade"; "Privativo por projeto" is a literal, misleading rendering of the same term in the same feature.
 - `WorldCup.HomepageWidget.RoundPhase.Round32Label.v151` — `pt-BR/firefox-ios.xliff` — "ROUND OF 32" rendered in sentence case and with inconsistent phrasing compared to the other round-phase labels.
     - Current: `Fase dos 32`
     - Source: `ROUND OF 32`

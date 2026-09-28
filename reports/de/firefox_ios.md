@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
-| **Previous run** | 2026-09-14 @ `8f5aca68ae4b` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
+| **Previous run** | 2026-09-21 @ `26f50d4ce7b1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 28 of 1,950 |
+| **Strings reviewed this run** | 19 of 1,969 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for de: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `QuickAnswers.ContentView.Answering.v158` — `de/firefox-ios.xliff` — "Answering…" (progress while an answer is fetched) is rendered as the noun/verb "Antworten…", which reads as "Answers" or an imperative, not as a loading state.
-    - Current: `Antworten…`
-    - Source: `Answering…`
-    - Suggest: `Antwort wird erstellt…`
-    - The source is a loading label indicating the system is in the process of answering; German "Antworten…" is ambiguous and does not convey an ongoing action.
-- `QuickAnswers.Settings.Footer.v158` — `de/firefox-ios.xliff` — Plural "get short answers" is rendered as singular "erhalten Sie eine kurze Antwort".
-    - Current: `Stellen Sie Ihre Frage einfach laut und erhalten Sie eine kurze Antwort.`
-    - Source: `Ask out loud and get short answers. We don’t store your voice, questions, or answers.`
-    - Suggest: `Stellen Sie Ihre Fragen einfach laut und erhalten Sie kurze Antworten.`
-    - The en-US settings footer says "Ask out loud and get short answers" (plural, describing repeated use), while the German limits it to one question and one answer.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -54,7 +45,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,950 |
+| Strings | 1,969 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -77,9 +68,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `german-double` 16 | **german-double** |
-| ellipsis | `char` 23 | **char** |
+| ellipsis | `char` 27 | **char** |
 | dash | `en` 8 | **en** |
-| register | `informal` 1, `formal` 433 | **formal** |
+| register | `informal` 1, `formal` 450 | **formal** |
 
 ---
 

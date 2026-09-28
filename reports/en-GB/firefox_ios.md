@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `26f50d4ce7b1` |
-| **Previous run** | 2026-09-14 @ `e8592a898dc1` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
+| **Previous run** | 2026-09-21 @ `26f50d4ce7b1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 28 of 1,950 |
+| **Strings reviewed this run** | 19 of 1,969 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for en-GB: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `QuickAnswers.Errors.OK.v158` — `en-GB/firefox-ios.xliff` — "OK" has been changed to "Ok", which is not an en-GB adaptation and breaks the standard iOS button capitalisation.
-    - Current: `Ok`
-    - Source: `OK`
-    - Suggest: `OK`
-    - The source is "OK"; en-GB uses the same form. "Ok" is an unnecessary and non-standard alteration of a platform button label.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,7 +45,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,950 |
+| Strings | 1,969 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -72,8 +68,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-single` 10, `curly-double` 4 | _mixed_ |
-| apostrophe | `typographic` 93 | **typographic** |
-| ellipsis | `char` 23 | **char** |
+| apostrophe | `typographic` 97 | **typographic** |
+| ellipsis | `char` 27 | **char** |
 | dash | `em` 3, `en` 2 | _mixed_ |
 
 ---
