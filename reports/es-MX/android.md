@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **Previous run** | 2026-09-14 @ `6e23dc94dd8f` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **Previous run** | 2026-09-21 @ `e8bad3200f89` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 66 of 2,752 |
+| **Strings reviewed this run** | 9 of 2,752 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,36 +18,17 @@ Also for es-MX: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (1)
 
-- `mozac_feature_summarize_feedback_state_submitted` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-es-rMX/strings.xml` — "Rating submitted" mistranslated as "Fecha enviada" (date sent).
-    - Current: `Fecha enviada`
-    - Source: `Rating submitted`
-    - Suggest: `Calificación enviada`
-    - The source announces that the user's rating (thumbs up/down) was submitted; "Fecha" means date, likely a confusion with "Rated"/"Date". Screen reader users would hear the wrong information.
-- `custom_accessibility_action_reorder_tab_right` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "Move tab right" drops the object "tab", unlike the parallel up/down/left actions.
-    - Current: `Mover a la derecha`
-    - Source: `Move tab right`
-    - Suggest: `Mover pestaña a la derecha`
-    - The source says "Move tab right" and the sibling strings translate "tab"; omitting it makes the accessibility action inconsistent and less informative.
-- `sync_send_tab_error_connection_text` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "Then" is dropped, losing the sequence after reconnecting.
-    - Current: `Intenta reenviar tu pestaña.`
-    - Source: `Then try resending your tab.`
-    - Suggest: `Luego, intenta reenviar tu pestaña.`
-    - The source "Then try resending your tab." follows on from "Check your internet connection"; the Spanish omits the sequencing word.
-- `mozac_summarize_paywalled_content_error_title` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-es-rMX/strings.xml` — Trailing period added to a title that has none in the source.
-    - Current: `No se puede resumir el contenido de pago.`
-    - Source: `Can’t summarize paywalled content`
-    - Suggest: `No se puede resumir el contenido de pago`
-    - The source is an error screen title without final punctuation; the added period deviates from the source's title styling.
+- `mozac_browser_errorpages_archive_description` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-es-rMX/strings.xml` — "an earlier version" is rendered as "una versión archivada", dropping the notion of an earlier/previous version.
+    - Current: `puede buscar una versión archivada de esta página`
+    - Source: `%1$s can look for an earlier version of this page from the Internet Archive’s %2$s.`
+    - Suggest: `puede buscar una versión anterior de esta página`
+    - The en-US says the app looks for an earlier (previous) version of the page from the Internet Archive; "archivada" states a different fact about which version is retrieved.
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `ip_protection_location_recommended_label` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "Recommended" is a label for a single location option and should be singular, not plural.
-    - Current: `Recomendados`
-    - Source: `Recommended`
-    - Suggest: `Recomendada`
-    - The label refers to the recommended automatic location option (singular, feminine "ubicación"); the plural masculine "Recomendados" does not agree.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -67,9 +48,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 44 |
+| Files | 45 |
 | Strings | 2,752 |
-| Missing strings | 0 |
+| Missing strings | 31 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -86,7 +67,12 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**31 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-es-rMX/strings.xml` — 16
+- `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — 15
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -108,13 +94,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (155)
+## 3. Open findings (156)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 83 |
+| 2 | Wrong content (says something other than the English) | 84 |
 | 3 | Degraded language (grammar, spelling, terminology) | 62 |
 | 4 | Cosmetic (typography, spacing) | 10 |
 
@@ -124,6 +110,11 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `mozac_browser_errorpages_archive_description` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-es-rMX/strings.xml` — "an earlier version" is rendered as "una versión archivada", dropping the notion of an earlier/previous version.
+    - Current: `puede buscar una versión archivada de esta página`
+    - Source: `%1$s can look for an earlier version of this page from the Internet Archive’s %2$s.`
+    - Suggest: `puede buscar una versión anterior de esta página`
+    - The en-US says the app looks for an earlier (previous) version of the page from the Internet Archive; "archivada" states a different fact about which version is retrieved.
 - `mozac_browser_errorpages_archive_unreachable` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-es-rMX/strings.xml` — "the archive service" is translated as "el servicio de archivos" (file service) instead of the archiving service.
     - Current: `No pudimos acceder al servicio de archivos.`
     - Source: `Couldn’t reach the archive service.`
@@ -419,12 +410,7 @@ _Nothing in this category._
     - Source: `Known Fingerprinters`
     - Suggest: `Detectores de huellas digitales conocidos`
     - Fingerprinters are scripts/entities that perform digital fingerprinting; "huellas dactilares" (physical fingerprints) names the wrong thing.
-- `preference_enhanced_tracking_protection_strict_description_4` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "Stronger tracking protection" translated as "Protección contra rastreo mejorada", which duplicates the feature name "Enhanced Tracking Protection".
-    - Current: `Protección contra rastreo mejorada y mayor rendimiento`
-    - Source: `Stronger tracking protection and faster performance, but some sites may not work properly.`
-    - Suggest: `Protección contra rastreo más fuerte y mayor rendimiento`
-    - "Stronger" is a comparative describing the strict level; "mejorada" is the established rendering of "Enhanced" in preference_enhanced_tracking_protection, creating a confusing collision.
-- _…and 28 more; see `state/` for the full list._
+- _…and 29 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

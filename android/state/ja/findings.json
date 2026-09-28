@@ -290,6 +290,30 @@
  {
   "category": "B",
   "check": "llm",
+  "current": "開いているタブのユーザーデータへアクセスするため、開発ツールを展開します。",
+  "dismissed_because": "",
+  "fid": "89eb7e23e2f8",
+  "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+  "first_seen": "2026-09-28",
+  "impact": 2,
+  "last_seen": "2026-09-28",
+  "locale": "ja",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source says \"Extend developer tools to access your data in open tabs.\" \"展開\" means to unfold/deploy, not to extend capabilities; \"拡張\" is the established term. Also \"your data\" refers to the user's own data, not generic \"user data\".",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "07351a7b",
+  "string_id": "mozac_feature_addons_permissions_devtools_description_for_update",
+  "suggest": "開いているタブ内のあなたのデータにアクセスできるよう、開発ツールを拡張します。",
+  "summary": "\"your data\" is rendered as \"ユーザーデータ\" (user data) and \"Extend\" as \"展開\" (expand/unfold) instead of extending functionality.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
   "current": "拡張機能や信頼できるソースからのスクリプト以外は実行しないでください。",
   "dismissed_because": "",
   "fid": "d72dbc717e17",
@@ -573,6 +597,30 @@
   "string_id": "mozac_feature_ipprotection_unavaliable_dialog_body",
   "suggest": "閉じるタブを選択してください",
   "summary": "\"choose tabs to close\" is mistranslated as simply \"close tabs\", losing the choice/selection meaning.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "再生速度を 0.5 倍に設定します",
+  "dismissed_because": "",
+  "fid": "8eb008c74db8",
+  "file": "mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml",
+  "first_seen": "2026-09-28",
+  "impact": 2,
+  "last_seen": "2026-09-28",
+  "locale": "ja",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "Placeholder finding",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "81615ae1",
+  "string_id": "mozac_feature_listentopage_notification_playback_speed_0_5",
+  "suggest": "再生速度を 0.5 倍 (半分) に設定します",
+  "summary": "\"half speed\" rendered as \"0.5 倍\" is fine, but the sibling speed strings use \"%\" phrasing; however the real issue is the inconsistent construction",
   "suppressed_by": ""
  },
  {
@@ -1664,7 +1712,7 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-09-21",
+  "last_seen": "2026-09-28",
   "locale": "ja",
   "origin": {},
   "rationale": "ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",

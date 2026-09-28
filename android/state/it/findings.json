@@ -120,6 +120,30 @@
  {
   "category": "B",
   "check": "llm",
+  "current": "Velocità di riproduzione ridotta del 75%%",
+  "dismissed_because": "",
+  "fid": "512a10c2e4c0",
+  "file": "mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml",
+  "first_seen": "2026-09-28",
+  "impact": 2,
+  "last_seen": "2026-09-28",
+  "locale": "it",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "This is a content description read aloud by screen readers; the source spells out \"percent\" deliberately, while the Italian uses the symbol.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "7c3b3bd7",
+  "string_id": "mozac_feature_listentopage_notification_playback_speed_0_25",
+  "suggest": "Velocità di riproduzione ridotta del 75 percento",
+  "summary": "The 0.25x speed string says the rate is reduced by 75% but uses the same wording pattern as 0.75x with a wrong value relationship; actually the issue is the percent sign reading aloud, but more importantly the source says \"75 percent slower\" — verify: translation matches.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
   "current": "Vai su",
   "dismissed_because": "",
   "fid": "85d686a76fd8",

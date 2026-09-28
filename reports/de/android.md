@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **Previous run** | 2026-09-14 @ `6e23dc94dd8f` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **Previous run** | 2026-09-21 @ `e8bad3200f89` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 6 of 2,752 |
+| **Strings reviewed this run** | 40 of 2,783 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for de: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `preferences_category_sync_controls` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Category heading "Sync" rendered as a verb ("Synchronisieren") instead of the noun used elsewhere ("Synchronisation").
+    - Current: `Synchronisieren`
+    - Source: `Sync`
+    - Suggest: `Synchronisation`
+    - The comment says it is a preference category title, short for "Synchronization"; the noun form is used in the neighbouring strings ("Konto und Synchronisation"), so the imperative verb is inconsistent terminology.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,9 +38,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `sync_no_devices_available_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "mit ihnen synchronisieren" uses lowercase "ihnen" and mistranslates "syncing to this account".
+    - Current: `Alle Geräte, die mit diesem Konto angemeldet sind und mit ihnen synchronisieren, werden hier angezeigt.`
+    - Suggest: `Alle Geräte, die bei diesem Konto angemeldet sind und damit synchronisieren, werden hier angezeigt.`
+    - The source says devices signed in and syncing to this account; "mit ihnen" (plural pronoun, lowercase) refers to nothing and is grammatically wrong — it should refer back to the account (singular).
 
 ---
 
@@ -44,8 +51,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 44 |
-| Strings | 2,752 |
+| Files | 45 |
+| Strings | 2,783 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -74,7 +81,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | quotes | `german-double` 23, `curly-double` 1, `straight-double` 1 | **german-double** |
 | ellipsis | `char` 22 | **char** |
 | dash | `en` 6 | **en** |
-| register | `formal` 649 | **formal** |
+| register | `formal` 654 | **formal** |
 
 ---
 
@@ -444,11 +451,6 @@ _Nothing in this category._
     - Source: `Fill and save usernames and passwords in websites while using %1$s.`
     - Suggest: `auf Websites bei Nutzung von %1$s`
     - Source says "in websites" (plural); the German singular without article is grammatically wrong.
-- `sync_no_devices_available_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "mit ihnen synchronisieren" uses lowercase "ihnen" and mistranslates "syncing to this account".
-    - Current: `Alle Geräte, die mit diesem Konto angemeldet sind und mit ihnen synchronisieren, werden hier angezeigt.`
-    - Source: `Any devices signed in and syncing to this account will appear here.`
-    - Suggest: `Alle Geräte, die bei diesem Konto angemeldet sind und damit synchronisieren, werden hier angezeigt.`
-    - The source says devices signed in and syncing to this account; "mit ihnen" (plural pronoun, lowercase) refers to nothing and is grammatically wrong — it should refer back to the account (singular).
 - `terms_of_use_prompt_body_line_two_alternative_link` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Inline link text "here" is capitalized as "Hier" although it appears mid-sentence in "Weitere Informationen %1$s."
     - Current: `Hier`
     - Source: `here`
@@ -562,6 +564,11 @@ _Nothing in this category._
     - Source: `Start customizing`
     - Suggest: `Anpassung starten`
     - "Start customizing" is a short button label; the German is a drastically longer sentence-style phrasing inconsistent with other button labels in this set (e.g. "Benachrichtigungen aktivieren").
+- `preferences_category_sync_controls` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Category heading "Sync" rendered as a verb ("Synchronisieren") instead of the noun used elsewhere ("Synchronisation").
+    - Current: `Synchronisieren`
+    - Source: `Sync`
+    - Suggest: `Synchronisation`
+    - The comment says it is a preference category title, short for "Synchronization"; the noun form is used in the neighbouring strings ("Konto und Synchronisation"), so the imperative verb is inconsistent terminology.
 - `preferences_credit_cards_sync_cards` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Sync cards" rendered as "Kreditkarten synchronisieren" while the parallel string uses "Karten".
     - Current: `Kreditkarten synchronisieren`
     - Source: `Sync cards`

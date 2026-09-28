@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **Previous run** | 2026-09-17 @ `51a5854c742d` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **Previous run** | 2026-09-21 @ `e8bad3200f89` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,594 |
+| **Strings reviewed this run** | 1 of 2,585 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,10 +45,10 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 39 |
-| Strings | 2,594 |
-| Missing strings | 158 |
+| Strings | 2,585 |
+| Missing strings | 198 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 5 |
+| Files absent from the locale | 6 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,26 +63,27 @@ _Nothing retired._
 
 ### Completeness
 
-**158 strings** are not translated yet, concentrated in:
+**198 strings** are not translated yet, concentrated in:
 
 - `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — 61
 - `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — 31
+- `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — 26
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml` — 18
 - `mozilla-mobile/android-components/components/feature/app-links/src/main/res/values-fa/strings.xml` — 11
+- `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — 9
 - `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fa/strings.xml` — 7
-- `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — 7
-- `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — 6
 - `mozilla-mobile/android-components/components/compose/base/src/main/res/values-fa/strings.xml` — 6
 - `mozilla-mobile/fenix/app/longfox/src/main/res/values-fa/strings.xml` — 6
+- `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-fa/strings.xml` — 4
 - `mozilla-mobile/android-components/components/feature/protection-dashboard/src/main/res/values/strings.xml` — 4
 - `mozilla-mobile/android-components/components/feature/ipprotection/src/main/res/values/strings.xml` — 4
-- `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-fa/strings.xml` — 4
-- `mozilla-mobile/android-components/components/feature/password-importer/src/main/res/values/strings.xml` — 3
 
 **Files absent from the locale:**
 
 - `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml`
 - `mozilla-mobile/android-components/components/feature/importer/src/main/res/values/strings.xml`
 - `mozilla-mobile/android-components/components/feature/ipprotection/src/main/res/values/strings.xml`
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml`
 - `mozilla-mobile/android-components/components/feature/password-importer/src/main/res/values/strings.xml`
 - `mozilla-mobile/android-components/components/feature/protection-dashboard/src/main/res/values/strings.xml`
 

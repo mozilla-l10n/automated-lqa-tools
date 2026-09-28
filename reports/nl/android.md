@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **Previous run** | 2026-09-14 @ `6e23dc94dd8f` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **Previous run** | 2026-09-21 @ `e8bad3200f89` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 20 of 2,752 |
+| **Strings reviewed this run** | 9 of 2,752 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for nl: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `mozac_browser_errorpages_archive_description` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-nl/strings.xml` — Untranslated English article "the" left in the Dutch sentence before "Internet Archive".
+    - Current: `vanuit %2$s van the Internet Archive`
+    - Source: `%1$s can look for an earlier version of this page from the Internet Archive’s %2$s.`
+    - Suggest: `vanuit %2$s van het Internet Archive`
+    - The source reads "the Internet Archive’s %2$s"; the Dutch keeps the English article "the" instead of the Dutch "het", which is a grammar/spelling error.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,9 +38,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `sync_no_devices_available_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — Wrong article gender with ‘account’ (het account) and ‘Alle’ instead of ‘Alle apparaten die … ’ mismatch.
+    - Current: `met deze account`
+    - Suggest: `met dit account`
+    - In Dutch (and in Mozilla nl terminology) ‘account’ is a het-woord: ‘dit account’, not ‘deze account’.
 
 ---
 
@@ -44,9 +51,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 44 |
+| Files | 45 |
 | Strings | 2,752 |
-| Missing strings | 0 |
+| Missing strings | 31 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,7 +70,12 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**31 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-nl/strings.xml` — 16
+- `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — 15
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -328,6 +340,11 @@ _Nothing reported._
 
 ### C. Grammar, agreement & spelling
 
+- `mozac_browser_errorpages_archive_description` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-nl/strings.xml` — Untranslated English article "the" left in the Dutch sentence before "Internet Archive".
+    - Current: `vanuit %2$s van the Internet Archive`
+    - Source: `%1$s can look for an earlier version of this page from the Internet Archive’s %2$s.`
+    - Suggest: `vanuit %2$s van het Internet Archive`
+    - The source reads "the Internet Archive’s %2$s"; the Dutch keeps the English article "the" instead of the Dutch "het", which is a grammar/spelling error.
 - `mozac_browser_errorpages_net_interrupt_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-nl/strings.xml` — Missing hyphen makes "de gegevens of Wi-Fi-verbinding" ungrammatical compared with the parallel strings.
     - Current: `controleer dan de gegevens of Wi-Fi-verbinding van uw apparaat`
     - Source: `{ <p> }The browser connected successfully, but the connection was interrupted while transferring information. Please try again.{ </p> } { <ul> } { <li> }The site could be temporarily unavailable or too busy. Try again i…`
@@ -363,11 +380,6 @@ _Nothing reported._
     - Source: `One tap helps stop companies spying on your clicks.`
     - Suggest: `Met één tik voorkomt u dat bedrijven uw klikken bespioneren.`
     - The Dutch clause has no subject; "Met één tik voorkomen dat…" is not a well-formed sentence, unlike the source "One tap helps stop companies spying on your clicks."
-- `sync_no_devices_available_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — Wrong article gender with ‘account’ (het account) and ‘Alle’ instead of ‘Alle apparaten die … ’ mismatch.
-    - Current: `met deze account`
-    - Source: `Any devices signed in and syncing to this account will appear here.`
-    - Suggest: `met dit account`
-    - In Dutch (and in Mozilla nl terminology) ‘account’ is a het-woord: ‘dit account’, not ‘deze account’.
 - `terms_of_use_prompt_body_line_two_alternative` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — Sentence reads awkwardly/ungrammatically with the link placeholder inserted mid-sentence.
     - Current: `U vindt %1$s meer info.`
     - Source: `You can learn more %1$s.`

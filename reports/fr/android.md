@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e8bad3200f89` |
-| **Previous run** | 2026-09-14 @ `6e23dc94dd8f` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
+| **Previous run** | 2026-09-21 @ `e8bad3200f89` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 6 of 2,752 |
+| **Strings reviewed this run** | 40 of 2,783 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,28 @@ Also for fr: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (5)
 
-_No new findings._
+- `mozac_feature_listentopage_notification_playback_speed_0_25` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — `mozac_feature_listentopage_notification_playback_speed_0_25` has placeholders %1$i where the source has none
+    - Current: `Vitesse de lecture 75 % inférieure`
+    - Source: `Playback rate 75 percent slower`
+    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+- `mozac_feature_listentopage_notification_playback_speed_0_75` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — `mozac_feature_listentopage_notification_playback_speed_0_75` has placeholders %1$i where the source has none
+    - Current: `Vitesse de lecture 25 % inférieure`
+    - Source: `Playback rate 25 percent slower`
+    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+- `mozac_feature_listentopage_notification_playback_speed_1_25` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — `mozac_feature_listentopage_notification_playback_speed_1_25` has placeholders %1$p where the source has none
+    - Current: `Vitesse de lecture 25 % plus rapide`
+    - Source: `Playback rate 25 percent faster`
+    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+- `mozac_feature_listentopage_notification_playback_speed_1_5` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — `mozac_feature_listentopage_notification_playback_speed_1_5` has placeholders %1$p where the source has none
+    - Current: `Vitesse de lecture 50 % plus rapide`
+    - Source: `Playback rate 50 percent faster`
+    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+- `mozac_feature_listentopage_notification_playback_speed_1_75` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — `mozac_feature_listentopage_notification_playback_speed_1_75` has placeholders %1$p where the source has none
+    - Current: `Vitesse de lecture 75 % plus rapide`
+    - Source: `Playback rate 75 percent faster`
+    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,9 +53,16 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (2)
 
-_Nothing retired._
+- `history_older` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Older" is rendered as "Avant le mois dernier" (before last month), which states a specific period not in the source.
+    - Current: `Avant le mois dernier`
+    - Suggest: `Plus ancien`
+    - The header groups history older than the last month; the source is the generic "Older", and the French invents an explicit time frame.
+- `sync_no_devices_available_description` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Any devices" (i.e. tout appareil qui sera connecté) is translated as "Tous les appareils", changing the meaning in a context where no devices exist.
+    - Current: `Tous les appareils connectés et synchronisés avec ce compte apparaîtront ici.`
+    - Suggest: `Tout appareil connecté et synchronisé avec ce compte apparaîtra ici.`
+    - The English "Any devices signed in and syncing to this account will appear here" is a conditional/generic statement, shown precisely when there are no devices; "Tous les appareils" implies existing devices.
 
 ---
 
@@ -44,8 +70,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 44 |
-| Strings | 2,752 |
+| Files | 45 |
+| Strings | 2,783 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -53,7 +79,7 @@ _Nothing retired._
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
-| printf placeholder mismatches | 0 |
+| printf placeholder mismatches | 5 |
 | Plural / select selector mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 0 |
@@ -72,11 +98,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 23 | **guillemet** |
-| apostrophe | `typographic` 689 | **typographic** |
+| apostrophe | `typographic` 693 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 2 | **em** |
-| nbsp | `total` 199, `before-punctuation` 137, `space-before-punctuation` 64 | _mixed_ |
-| register | `formal` 436 | **formal** |
+| nbsp | `total` 210, `before-punctuation` 142, `space-before-punctuation` 64 | _mixed_ |
+| register | `formal` 440 | **formal** |
 
 ---
 
@@ -86,19 +112,38 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (77)
+## 3. Open findings (80)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 55 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 5 |
+| 2 | Wrong content (says something other than the English) | 53 |
 | 3 | Degraded language (grammar, spelling, terminology) | 18 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
 
-_Nothing in this category._
+- `mozac_feature_listentopage_notification_playback_speed_0_25` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — `mozac_feature_listentopage_notification_playback_speed_0_25` has placeholders %1$i where the source has none
+    - Current: `Vitesse de lecture 75 % inférieure`
+    - Source: `Playback rate 75 percent slower`
+    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+- `mozac_feature_listentopage_notification_playback_speed_0_75` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — `mozac_feature_listentopage_notification_playback_speed_0_75` has placeholders %1$i where the source has none
+    - Current: `Vitesse de lecture 25 % inférieure`
+    - Source: `Playback rate 25 percent slower`
+    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+- `mozac_feature_listentopage_notification_playback_speed_1_25` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — `mozac_feature_listentopage_notification_playback_speed_1_25` has placeholders %1$p where the source has none
+    - Current: `Vitesse de lecture 25 % plus rapide`
+    - Source: `Playback rate 25 percent faster`
+    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+- `mozac_feature_listentopage_notification_playback_speed_1_5` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — `mozac_feature_listentopage_notification_playback_speed_1_5` has placeholders %1$p where the source has none
+    - Current: `Vitesse de lecture 50 % plus rapide`
+    - Source: `Playback rate 50 percent faster`
+    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+- `mozac_feature_listentopage_notification_playback_speed_1_75` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — `mozac_feature_listentopage_notification_playback_speed_1_75` has placeholders %1$p where the source has none
+    - Current: `Vitesse de lecture 75 % plus rapide`
+    - Source: `Playback rate 75 percent faster`
+    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -262,11 +307,6 @@ _Nothing in this category._
     - Source: `Help catch trackers`
     - Suggest: `Aidez à attraper les traqueurs`
     - Source is "Help catch trackers", with no first-person object; the translation invents an addressee.
-- `history_older` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Older" is rendered as "Avant le mois dernier" (before last month), which states a specific period not in the source.
-    - Current: `Avant le mois dernier`
-    - Source: `Older`
-    - Suggest: `Plus ancien`
-    - The header groups history older than the last month; the source is the generic "Older", and the French invents an explicit time frame.
 - `ip_protection_location_selection_reset_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Switched to the recommended location" is rendered as "Connexion à l’emplacement recommandé" (connecting to), losing the completed switch.
     - Current: `Connexion à l’emplacement recommandé.`
     - Source: `Selected VPN location unavailable. Switched to the recommended location.`
@@ -337,11 +377,6 @@ _Nothing in this category._
     - Source: `Sync failed. Last synced: never`
     - Suggest: `La synchronisation a échoué. Dernière synchronisation : jamais`
     - The source says "Last synced: never", not "Last success"; the sibling string sync_failed_summary uses "Last success" and is already translated as "Dernier succès".
-- `sync_no_devices_available_description` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Any devices" (i.e. tout appareil qui sera connecté) is translated as "Tous les appareils", changing the meaning in a context where no devices exist.
-    - Current: `Tous les appareils connectés et synchronisés avec ce compte apparaîtront ici.`
-    - Source: `Any devices signed in and syncing to this account will appear here.`
-    - Suggest: `Tout appareil connecté et synchronisé avec ce compte apparaîtra ici.`
-    - The English "Any devices signed in and syncing to this account will appear here" is a conditional/generic statement, shown precisely when there are no devices; "Tous les appareils" implies existing devices.
 - `tab_group_onboarding_item_dismiss_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "onboarding" is rendered as « accueil » (welcome/reception), which misnames the onboarding card being dismissed.
     - Current: `Fermer l’accueil des groupes d’onglets`
     - Source: `Dismiss tab group onboarding`
