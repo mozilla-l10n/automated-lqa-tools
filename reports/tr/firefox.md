@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
-| **Previous run** | 2026-09-14 @ `fc8fd09d4a18` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
+| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 31 of 16,175 |
+| **Strings reviewed this run** | 111 of 16,271 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,23 +18,33 @@ Also for tr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (5)
 
-- `contentanalysis-slow-agent-dialog-body-clipboard-copy` — `toolkit/toolkit/contentanalysis/contentanalysis.ftl` — Ungrammatical phrase “kopyalarınız içeriği” instead of “kopyaladığınız içeriği”.
-    - Current: `kopyalarınız içeriği`
-    - Source: `{ $agent } is reviewing what you copied against your organization’s data policies. This may take a moment.`
-    - Suggest: `kopyaladığınız içeriği`
-    - The source says “what you copied”; the Turkish relative clause is malformed and does not parse as “the content you copied”.
-- `contentanalysis-operationtype-clipboard-copy` — `toolkit/toolkit/contentanalysis/contentanalysis.ftl` — “copied content” (a noun phrase naming the operation) is rendered as the sentence “content was copied”.
-    - Current: `içerik kopyalandı`
-    - Source: `copied content`
-    - Suggest: `kopyalanan içerik`
-    - The en-US is a noun phrase describing the operation type, not a statement that copying happened.
-- `genai-shortcut-button-2` — `browser/browser/genai.ftl` — Adds “sohbet botuna” (chat bot), which the source does not say.
-    - Current: `{ $provider } sohbet botuna sor`
-    - Source: `aria-label: Ask { $provider } tooltiptext: Ask { $provider }`
-    - Suggest: `{ $provider } botuna sor`
-    - Source is simply “Ask { $provider }”, where $provider is the AI chat provider name; “sohbet botuna” inserts a characterization not present in the source.
+- `credit-card-label-with-security-code` — `toolkit/toolkit/payments/payments.ftl` — The aria-label variant drops the comma separating the card description from "CVV saved".
+    - Current: `aria-label: { $ariaLabel } CVV kaydedildi`
+    - Source: `(value): { $label } \| CVV saved aria-label: { $ariaLabel }, CVV saved`
+    - Suggest: `aria-label: { $ariaLabel }, CVV kaydedildi`
+    - The developer comment states the accessibility label uses a comma so it is read as part of the same sentence; the source is "{ $ariaLabel }, CVV saved" but the Turkish omits the comma.
+- `about-private-browsing-spotlight-basics-learn-more` — `browser/browser/aboutPrivateBrowsing.ftl` — Informal imperative "al" breaks the locale's formal (siz) register.
+    - Current: `Daha fazla bilgi al`
+    - Source: `Learn more`
+    - Suggest: `Daha fazla bilgi alın`
+    - The tr convention is formal siz; other imperatives in this batch use formal forms ("kullanın", "deneyin").
+- `appmenu-fxa-sign-in-promo-link` — `browser/browser/appmenu.ftl` — Informal imperative "Giriş yap" breaks the locale's formal (siz) register.
+    - Current: `Giriş yap`
+    - Source: `Sign in`
+    - Suggest: `Giriş yapın`
+    - The established register for tr is formal siz.
+- `about-private-browsing-spotlight-basics-activity-seen` — `browser/browser/aboutPrivateBrowsing.ftl` — "or your employer" rendered with "ve" (and), turning a list of alternatives into a conjunction.
+    - Current: `internet servis sağlayıcınız ve işvereniniz yine de görebilir`
+    - Source: `Some activity may still be seen by sites, search engines, internet providers, or your employer.`
+    - Suggest: `internet servis sağlayıcınız veya işvereniniz yine de görebilir`
+    - The en-US uses "or" for the final list item; "ve" asserts that all of these parties see the activity.
+- `NavigationChangeFloodingPrevented` — `dom/chrome/dom/dom.properties` — The Turkish drops "navigate" as a separate action and attaches "gezinme" to "history", changing the meaning.
+    - Current: `Kısa süre içinde history üzerinde çok fazla gezinme veya değişiklik yapma girişiminde bulunuldu.`
+    - Source: `Too many attempts to navigate or modify history within a short timeframe.`
+    - Suggest: `Kısa süre içinde çok fazla gezinme veya history değiştirme girişiminde bulunuldu.`
+    - The en-US says "navigate or modify history": navigation is not limited to history. The Turkish says "too many attempts to navigate or modify within history".
 
 ### ✅ Fixed since the last run (0)
 
@@ -59,8 +69,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 326 |
-| Strings | 16,175 |
-| Missing strings | 58 |
+| Strings | 16,271 |
+| Missing strings | 34 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -77,20 +87,16 @@ _Nothing retired._
 
 ### Completeness
 
-**58 strings** are not translated yet, concentrated in:
+**34 strings** are not translated yet, concentrated in:
 
-- `toolkit/toolkit/about/aboutPDF.ftl` — 19
-- `browser/browser/newtab/newtab.ftl` — 14
-- `browser/browser/newtab/onboarding.ftl` — 6
-- `dom/chrome/dom/dom.properties` — 4
-- `dom/chrome/security/security.properties` — 3
-- `browser/browser/genai.ftl` — 3
-- `devtools/client/components.properties` — 1
-- `devtools/client/debugger.properties` — 1
-- `devtools/client/perftools.ftl` — 1
-- `browser/browser/translations.ftl` — 1
-- `browser/browser/preferences/languages.ftl` — 1
-- `browser/browser/policies/policies-descriptions.ftl` — 1
+- `browser/browser/aboutRestartRequired.ftl` — 14
+- `browser/browser/ipProtection.ftl` — 7
+- `browser/browser/newtab/newtab.ftl` — 4
+- `browser/browser/newtab/onboarding.ftl` — 4
+- `browser/browser/aboutPrivateBrowsing.ftl` — 2
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 1
+- `browser/browser/backupSettings.ftl` — 1
+- `browser/browser/sidebar.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -100,9 +106,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 603, `curly-single` 156, `straight-double` 29 | **curly-double** |
-| apostrophe | `typographic` 861, `straight` 46 | **typographic** |
-| ellipsis | `char` 388 | **char** |
+| quotes | `curly-double` 608, `curly-single` 156, `straight-double` 29 | **curly-double** |
+| apostrophe | `typographic` 866, `straight` 46 | **typographic** |
+| ellipsis | `char` 386 | **char** |
 | dash | `em` 44, `en` 2 | **em** |
 | nbsp | `total` 6, `before-punctuation` 2, `space-before-punctuation` 5 | _mixed_ |
 | register | `informal` 2, `formal` 46 | **formal** |
@@ -115,7 +121,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (149)
+## 3. Open findings (154)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -130,9 +136,9 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 3 |
-| 2 | Wrong content (says something other than the English) | 51 |
-| 3 | Degraded language (grammar, spelling, terminology) | 61 |
-| 4 | Cosmetic (typography, spacing) | 34 |
+| 2 | Wrong content (says something other than the English) | 53 |
+| 3 | Degraded language (grammar, spelling, terminology) | 63 |
+| 4 | Cosmetic (typography, spacing) | 35 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -151,6 +157,11 @@ _Also listed under their own category below._
     - Source: `{$count ->} [1] This will remove the password saved to { -brand-short-name } on all your synced devices. This will also remove any breach alerts that appear here. You cannot undo this action. [other] This will remove al…`
     - Suggest: `[1] Bu işlem { -brand-short-name } tarayıcınıza kaydettiğiniz parolayı eşitlenen tüm cihazlardan silecektir.`
     - en-US singular says "This will remove the password saved to…" (one password); the Turkish singular variants say "tüm parolaları" (all passwords), matching the plural form instead.
+- `about-private-browsing-spotlight-basics-activity-seen` — `browser/browser/aboutPrivateBrowsing.ftl` — "or your employer" rendered with "ve" (and), turning a list of alternatives into a conjunction.
+    - Current: `internet servis sağlayıcınız ve işvereniniz yine de görebilir`
+    - Source: `Some activity may still be seen by sites, search engines, internet providers, or your employer.`
+    - Suggest: `internet servis sağlayıcınız veya işvereniniz yine de görebilir`
+    - The en-US uses "or" for the final list item; "ve" asserts that all of these parties see the activity.
 - `extension-nova-dusk-name` — `browser/browser/appExtensionFields.ftl` — "Dusk" (just after sunset) is translated as "Şafak" (dawn), the opposite time of day.
     - Current: `Şafak`
     - Source: `Dusk`
@@ -263,6 +274,11 @@ _Also listed under their own category below._
     - Source: `(value): No preference aria-label: Enable no preference for reduced motion emulation`
     - Suggest: `Azaltılmış hareket öykünümü için “tercih yok” seçeneğini etkinleştir`
     - en-US is "Enable no preference for reduced motion emulation"; the Turkish renders it as a negative imperative ("do not specify a preference") and omits "Enable". It also uses "Daha az hareket" whereas the sibling strings consistently use "Azaltılmış hareket".
+- `NavigationChangeFloodingPrevented` — `dom/chrome/dom/dom.properties` — The Turkish drops "navigate" as a separate action and attaches "gezinme" to "history", changing the meaning.
+    - Current: `Kısa süre içinde history üzerinde çok fazla gezinme veya değişiklik yapma girişiminde bulunuldu.`
+    - Source: `Too many attempts to navigate or modify history within a short timeframe.`
+    - Suggest: `Kısa süre içinde çok fazla gezinme veya history değiştirme girişiminde bulunuldu.`
+    - The en-US says "navigate or modify history": navigation is not limited to history. The Turkish says "too many attempts to navigate or modify within history".
 - `SpeechRecognitionBlockedByAIControlsWarning` — `dom/chrome/dom/dom.properties` — The Turkish drops the subject "SpeechRecognition" reporting itself as unavailable and turns "refuses to start" into a passive "could not be started".
     - Current: `SpeechRecognition kullanılamadığını bildirdi ve başlatılamadı`
     - Source: `On-device speech recognition is turned off in the user’s AI Controls settings, so SpeechRecognition reports itself as unavailable and refuses to start.`
@@ -382,6 +398,16 @@ _Also listed under their own category below._
 
 ### D. Terminology, register & consistency
 
+- `about-private-browsing-spotlight-basics-learn-more` — `browser/browser/aboutPrivateBrowsing.ftl` — Informal imperative "al" breaks the locale's formal (siz) register.
+    - Current: `Daha fazla bilgi al`
+    - Source: `Learn more`
+    - Suggest: `Daha fazla bilgi alın`
+    - The tr convention is formal siz; other imperatives in this batch use formal forms ("kullanın", "deneyin").
+- `appmenu-fxa-sign-in-promo-link` — `browser/browser/appmenu.ftl` — Informal imperative "Giriş yap" breaks the locale's formal (siz) register.
+    - Current: `Giriş yap`
+    - Source: `Sign in`
+    - Suggest: `Giriş yapın`
+    - The established register for tr is formal siz.
 - `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — `backup-file-moz-browser-restore-step-2-1` quotes “Verilerimi geri yükle” but the string it names, `restore-from-backup-header`, reads “Verilerinizi geri yükleyin”
     - Current: `“Verilerimi geri yükle”ye tıklayıp bu dosyayı seçin`
     - Source: `Click “Restore your data” and select this file`
@@ -526,7 +552,7 @@ _Also listed under their own category below._
 - `reader-view-enter-button` — `browser/browser/browser.ftl` — `reader-view-enter-button` uses a straight apostrophe
     - Current: `Okuyucu Görünümü'ne geç`
     - Source: `aria-label: Enter Reader View`
-    - The tree uses ’ 861 times against 46 straight.
+    - The tree uses ’ 866 times against 46 straight.
 - `reader-view-enter-button` — `browser/browser/browser.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
     - Source: `aria-label: Enter Reader View`
 - `menu-view-enter-readerview` — `browser/browser/menubar.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
@@ -534,13 +560,13 @@ _Also listed under their own category below._
 - `menu-view-enter-readerview` — `browser/browser/menubar.ftl` — `menu-view-enter-readerview` uses a straight apostrophe
     - Current: `Okuyucu Görünümü'ne geç`
     - Source: `accesskey: R label: Enter Reader View`
-    - The tree uses ’ 861 times against 46 straight.
+    - The tree uses ’ 866 times against 46 straight.
 - `mr2022-onboarding-pin-primary-button-label` — `browser/browser/newtab/onboarding.ftl` — set-password-reminder (security/…/pippki.ftl), protections-vpn-header-content-subscribed (browser/protections.ftl), permissions-block-popups-exceptions-button4.description (browser/preferences/preferences.ftl), mr2022-onboarding-pin-primary-button-label [macos variant] (browser/newtab/onboarding.ftl), profiles-delete-profile-confirm (toolkit/about/aboutProfiles.ftl), rights-webservices-term-3, ri…
     - Source: `{$sel_1 ->} [macos] Keep { -brand-short-name } in Dock [other] Pin { -brand-short-name } to taskbar`
 - `policy-DisableSafeMode` — `browser/browser/policies/policies-descriptions.ftl` — `policy-DisableSafeMode` uses a straight apostrophe
     - Current: `Güvenli kipte yeniden başlatma özelliğini devre dışı bırak. Not: Güvenli kipe girmek için kullanılan Shift tuşu, Windows'ta ancak Grup İlkesi ile devre dışı bırakılabilir.`
     - Source: `Disable the feature to restart in Safe Mode. Note: the Shift key to enter Safe Mode can only be disabled on Windows using Group Policy.`
-    - The tree uses ’ 861 times against 46 straight.
+    - The tree uses ’ 866 times against 46 straight.
 - `policy-DisableSafeMode` — `browser/browser/policies/policies-descriptions.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
     - Source: `Disable the feature to restart in Safe Mode. Note: the Shift key to enter Safe Mode can only be disabled on Windows using Group Policy.`
 - `connection-dns-over-https-url-item-default` — `browser/browser/preferences/connection.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
@@ -548,97 +574,102 @@ _Also listed under their own category below._
 - `connection-dns-over-https-url-item-default` — `browser/browser/preferences/connection.ftl` — `connection-dns-over-https-url-item-default` uses a straight apostrophe
     - Current: `DNS'i HTTPS üzerinden çözümlemek için varsayılan URL'yi kullan`
     - Source: `label: { $name } (Default) tooltiptext: Use the default URL for resolving DNS over HTTPS`
-    - The tree uses ’ 861 times against 46 straight.
+    - The tree uses ’ 866 times against 46 straight.
 - `permissions-block-popups-exceptions-button4` — `browser/browser/preferences/preferences.ftl` — set-password-reminder (security/…/pippki.ftl), protections-vpn-header-content-subscribed (browser/protections.ftl), permissions-block-popups-exceptions-button4.description (browser/preferences/preferences.ftl), mr2022-onboarding-pin-primary-button-label [macos variant] (browser/newtab/onboarding.ftl), profiles-delete-profile-confirm (toolkit/about/aboutProfiles.ftl), rights-webservices-term-3, ri…
     - Source: `accesskey: E description: Add websites that can open pop-ups and use third-party redirects. label: Manage exceptions searchkeywords: popups`
 - `BadOpaqueRedirectInterceptionWithURL` — `dom/chrome/dom/dom.properties` — `BadOpaqueRedirectInterceptionWithURL` uses a straight apostrophe
     - Current: `'%S' yüklenemedi. Bir ServiceWorker, navigasyon dışı bir FetchEvent'i işlerken FetchEvent.respondWith()'e bir opaqueredirect Response aktardı.`
     - Source: `Failed to load ‘%S’. A ServiceWorker passed an opaqueredirect Response to FetchEvent.respondWith() while handling a non-navigation FetchEvent.`
-    - The tree uses ’ 861 times against 46 straight.
+    - The tree uses ’ 866 times against 46 straight.
 - `BlockAutoplayWebAudioStartError` — `dom/chrome/dom/dom.properties` — `BlockAutoplayWebAudioStartError` uses a straight apostrophe
     - Current: `Bir AudioContext'in otomatik başlaması engellendi. AudioContext, sayfadaki bir kullanıcı hareketinden sonra oluşturulmalı veya devam ettirilmelidir.`
     - Source: `An AudioContext was prevented from starting automatically. It must be created or resumed after a user gesture on the page.`
-    - The tree uses ’ 861 times against 46 straight.
+    - The tree uses ’ 866 times against 46 straight.
 - `InterceptedErrorResponseWithURL` — `dom/chrome/dom/dom.properties` — `InterceptedErrorResponseWithURL` uses a straight apostrophe
     - Current: `'%S' yüklenemedi. Bir ServiceWorker, FetchEvent.respondWith()'e bir Error Response aktardı. Bu genellikle ServiceWorker'ın geçersiz bir fetch() çağrısı yaptığını gösterir.`
     - Source: `Failed to load ‘%S’. A ServiceWorker passed an Error Response to FetchEvent.respondWith(). This typically means the ServiceWorker performed an invalid fetch() call.`
-    - The tree uses ’ 861 times against 46 straight.
+    - The tree uses ’ 866 times against 46 straight.
 - `InterceptedUsedResponseWithURL` — `dom/chrome/dom/dom.properties` — `InterceptedUsedResponseWithURL` uses a straight apostrophe
     - Current: `'%S' yüklenemedi. Bir ServiceWorker, FetchEvent.respondWith()'e kullanılmış bir Response aktardı. Bir Response'un gövdesi yalnızca bir kez okunabilir. Gövdeye birden fazla kez ulaşmak için Response.clone() kullanın.`
     - Source: `Failed to load ‘%S’. A ServiceWorker passed a used Response to FetchEvent.respondWith(). The body of a Response may only be read once. Use Response.clone() to access the body multiple times.`
-    - The tree uses ’ 861 times against 46 straight.
+    - The tree uses ’ 866 times against 46 straight.
 - `LenientThisWarning` — `dom/chrome/dom/dom.properties` — `LenientThisWarning` uses a straight apostrophe
     - Current: `“this” nesnesi yanlış olduğundan [LenientThis] içeren özelliğin get veya set'i yok sayılıyor.`
     - Source: `Ignoring get or set of property that has [LenientThis] because the “this” object is incorrect.`
-    - The tree uses ’ 861 times against 46 straight.
+    - The tree uses ’ 866 times against 46 straight.
 - `ManifestIdIsInvalid` — `dom/chrome/dom/dom.properties` — `ManifestIdIsInvalid` uses a straight apostrophe
     - Current: `id elemanı geçerli bir URL'ye işaret etmiyor.`
     - Source: `The id member did not resolve to a valid URL.`
-    - The tree uses ’ 861 times against 46 straight.
+    - The tree uses ’ 866 times against 46 straight.
 - `MediaEMENoCodecsDeprecatedWarning` — `dom/chrome/dom/dom.properties` — `MediaEMENoCodecsDeprecatedWarning` uses straight double quotes
     - Current: `contentType olmadan "codecs" ifadesine sahip audioCapabilities ve videoCapabilities içeren MediaKeySystemConfiguration adayını aktarmadan navigator.requestMediaKeySystemAccess() çağrısı gerçekleştirmek (%S adresinde) ar…`
     - Source: `Calling navigator.requestMediaKeySystemAccess() (at %S) passing a candidate MediaKeySystemConfiguration containing audioCapabilities or videoCapabilities without a contentType with a “codecs” string is deprecated and wi…`
-    - The locale's quote convention is `curly-double` (603 occurrences).
+    - The locale's quote convention is `curly-double` (608 occurrences).
 - `NavigatorGetUserMediaWarning` — `dom/chrome/dom/dom.properties` — `NavigatorGetUserMediaWarning` uses a straight apostrophe
     - Current: `navigator.mozGetUserMedia'nın yerini navigator.mediaDevices.getUserMedia almıştır`
     - Source: `navigator.mozGetUserMedia has been replaced by navigator.mediaDevices.getUserMedia`
-    - The tree uses ’ 861 times against 46 straight.
+    - The tree uses ’ 866 times against 46 straight.
 - `PushMessageBadCryptoError` — `dom/chrome/dom/dom.properties` — `PushMessageBadCryptoError` uses a straight apostrophe
     - Current: `'%1$S' kapsamının ServiceWorker'ı bir anında ilet mesajını çözemedi. Şifreleme ile ilgili yardım için lütfen https://developer.mozilla.org/docs/Web/API/Push_API/Using_the_Push_API#Encryption adresine bakın.`
     - Source: `The ServiceWorker for scope ‘%1$S’ failed to decrypt a push message. For help with encryption, please see https://developer.mozilla.org/docs/Web/API/Push_API/Using_the_Push_API#Encryption`
-    - The tree uses ’ 861 times against 46 straight.
+    - The tree uses ’ 866 times against 46 straight.
 - `PushMessageBadSalt` — `dom/chrome/dom/dom.properties` — `PushMessageBadSalt` uses straight double quotes
     - Current: `‘%1$S’ kapsamı için ServiceWorker bir push iletisini çözmeyi başaramadı. ‘Encryption‘ üst bilgisinde yer alan ‘salt‘ değişkeni base64url olarak kodlanmış (https://tools.ietf.org/html/rfc7515#appendix-C) ve kodlamadan ön…`
     - Source: `The ServiceWorker for scope ‘%1$S’ failed to decrypt a push message. The ‘salt‘ parameter in the ‘Encryption‘ header must be base64url-encoded (https://tools.ietf.org/html/rfc7515#appendix-C), and be at least 16 bytes b…`
-    - The locale's quote convention is `curly-double` (603 occurrences).
+    - The locale's quote convention is `curly-double` (608 occurrences).
 - `RewriteYouTubeEmbedPathParams` — `dom/chrome/dom/dom.properties` — `RewriteYouTubeEmbedPathParams` uses a straight apostrophe
     - Current: `Eski tarz YouTube Flash embed (%S) yerine iframe embed (%S) yazılıyor. iframe embed'lerindeki parametreler desteklenmediği için dönüştürüldüler. Mümkünse lütfen sayfayı güncelleyerek embed/object yerine iframe kullanın.`
     - Source: `Rewriting old-style YouTube Flash embed (%S) to iframe embed (%S). Params were unsupported by iframe embeds and converted. Please update page to use iframe instead of embed/object, if possible.`
-    - The tree uses ’ 861 times against 46 straight.
+    - The tree uses ’ 866 times against 46 straight.
 - `SVGDeselectAllWarning` — `dom/chrome/dom/dom.properties` — `SVGDeselectAllWarning` uses a straight apostrophe
     - Current: `SVGSVGElement.deselectAll, Selection API'sindeki işlevle benzer olduğu için kullanımdan kaldırılmıştır.`
     - Source: `SVGSVGElement.deselectAll is deprecated as it duplicates functionality from the Selection API.`
-    - The tree uses ’ 861 times against 46 straight.
+    - The tree uses ’ 866 times against 46 straight.
 - `SVGRefLoopWarning` — `dom/chrome/dom/dom.properties` — `SVGRefLoopWarning` uses a straight apostrophe
     - Current: `%S SVG'si (“%S” kimliğine sahip) bir başvuru döngüsüne sahip.`
     - Source: `The SVG <%S> with ID “%S” has a reference loop.`
-    - The tree uses ’ 861 times against 46 straight.
+    - The tree uses ’ 866 times against 46 straight.
 - `ScriptSourceMalformed` — `dom/chrome/dom/dom.properties` — `ScriptSourceMalformed` uses a straight apostrophe
     - Current: `<script> kaynak URI'sı kusurlu: “%S”.`
     - Source: `<script> source URI is malformed: “%S”.`
-    - The tree uses ’ 861 times against 46 straight.
+    - The tree uses ’ 866 times against 46 straight.
 - `TargetPrincipalDoesNotMatch` — `dom/chrome/dom/dom.properties` — `TargetPrincipalDoesNotMatch` uses a straight apostrophe
     - Current: `'DOMWindow'da 'postMessage' çalıştırılamadı. Sağlanan hedef köken ('%S') alıcının pencere kökeniyle ('%S') eşleşmiyor.`
     - Source: `Failed to execute ‘postMessage’ on ‘DOMWindow’: The target origin provided (‘%S’) does not match the recipient window’s origin (‘%S’).`
-    - The tree uses ’ 861 times against 46 straight.
+    - The tree uses ’ 866 times against 46 straight.
 - `PEDisallowedImportRule` — `dom/chrome/layout/css.properties` — `PEDisallowedImportRule` uses straight double quotes
     - Current: `@import kuralları, "constructed" stil sayfalarında henüz geçerli değildir.`
     - Source: `@import rules are not yet valid in constructed stylesheets.`
-    - The locale's quote convention is `curly-double` (603 occurrences).
+    - The locale's quote convention is `curly-double` (608 occurrences).
 - `errProcessingInstruction` — `dom/chrome/layout/htmlparser.properties` — `errProcessingInstruction` uses a straight apostrophe
     - Current: `“<?” görüldü. Olası sebep: HTML içinde XML işleme talimatı girişimi. (XML işleme talimatları HTML'de desteklenmez.)`
     - Source: `Saw “<?”. Probable cause: Attempt to use an XML processing instruction in HTML. (XML processing instructions are not supported in HTML.)`
-    - The tree uses ’ 861 times against 46 straight.
+    - The tree uses ’ 866 times against 46 straight.
 - `about-glean-label-for-tag-pings-with-requirements` — `toolkit/toolkit/about/aboutGlean.ftl` — `about-glean-label-for-tag-pings-with-requirements` uses a straight apostrophe
     - Current: `Ping'lerinizi daha sonra tanıyabilmeniz için akılda kalıcı bir hata ayıklama etiketi <span>(en fazla 20 karakter; yalnızca harf, rakam ve “-”)</span> belirleyin.`
     - Source: `Set a memorable debug tag <span>(20 characters or fewer, alphanumerics and - only)</span> so you can recognize your pings later.`
-    - The tree uses ’ 861 times against 46 straight.
+    - The tree uses ’ 866 times against 46 straight.
 - `profiles-opendir` — `toolkit/toolkit/about/aboutProfiles.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
     - Source: `{$sel_1 ->} [macos] Show in Finder [windows] Open Folder [other] Open Directory`
 - `profiles-opendir` — `toolkit/toolkit/about/aboutProfiles.ftl` — `profiles-opendir` uses a straight apostrophe
     - Current: `{$sel_1 ->} [macos] Finder'da göster [windows] Klasörü aç [other] Dizini aç`
     - Source: `{$sel_1 ->} [macos] Show in Finder [windows] Open Folder [other] Open Directory`
-    - The tree uses ’ 861 times against 46 straight.
+    - The tree uses ’ 866 times against 46 straight.
 - `show-dir-label` — `toolkit/toolkit/about/aboutSupport.ftl` — `show-dir-label` uses a straight apostrophe
     - Current: `{$sel_1 ->} [macos] Finder'da göster [windows] Klasörü aç [other] Dizini aç`
     - Source: `{$sel_1 ->} [macos] Show in Finder [windows] Open Folder [other] Open Directory`
-    - The tree uses ’ 861 times against 46 straight.
+    - The tree uses ’ 866 times against 46 straight.
 - `show-dir-label` — `toolkit/toolkit/about/aboutSupport.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
     - Source: `{$sel_1 ->} [macos] Show in Finder [windows] Open Folder [other] Open Directory`
 - `about-webrtc-save-page-dialog-title` — `toolkit/toolkit/about/aboutWebrtc.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
     - Source: `save about:webrtc as`
 - `experimental-features-media-jxl-description` — `toolkit/toolkit/firefoxlabs/features.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
     - Source: `With this feature enabled, { -brand-short-name } supports the JPEG XL (JXL) format. This is an enhanced image file format that supports lossless transition from traditional JPEG files. See <a data-l10n-name="bugzilla">b…`
+- `credit-card-label-with-security-code` — `toolkit/toolkit/payments/payments.ftl` — The aria-label variant drops the comma separating the card description from "CVV saved".
+    - Current: `aria-label: { $ariaLabel } CVV kaydedildi`
+    - Source: `(value): { $label } \| CVV saved aria-label: { $ariaLabel }, CVV saved`
+    - Suggest: `aria-label: { $ariaLabel }, CVV kaydedildi`
+    - The developer comment states the accessibility label uses a comma so it is read as part of the same sentence; the source is "{ $ariaLabel }, CVV saved" but the Turkish omits the comma.
 
 ---
 

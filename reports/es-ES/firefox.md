@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
-| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
+| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 11 of 15,167 |
+| **Strings reviewed this run** | 6 of 15,170 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 318 |
-| Strings | 15,167 |
-| Missing strings | 1,066 |
+| Strings | 15,170 |
+| Missing strings | 1,135 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 8 |
 | Files with no en-US counterpart | 0 |
@@ -63,18 +63,18 @@ _Nothing retired._
 
 ### Completeness
 
-**1,066 strings** are not translated yet, concentrated in:
+**1,135 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 202
+- `browser/browser/newtab/newtab.ftl` — 208
 - `browser/browser/aiWindow.ftl` — 134
-- `browser/browser/appmenu.ftl` — 65
+- `browser/browser/appmenu.ftl` — 68
 - `browser/browser/aiWindowContent.ftl` — 51
 - `browser/browser/newtab/onboarding.ftl` — 42
-- `browser/browser/browser.ftl` — 30
+- `browser/browser/browser.ftl` — 36
 - `toolkit/toolkit/global/theme-picker.ftl` — 29
 - `devtools/client/toolbox-options.ftl` — 28
-- `toolkit/services/aboutSyncLog.ftl` — 28
 - `toolkit/toolkit/about/url-classifier.ftl` — 26
+- `toolkit/services/aboutSyncLog.ftl` — 26
 - `browser/browser/firefoxView.ftl` — 23
 - `toolkit/toolkit/about/aboutPDF.ftl` — 22
 

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
-| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
+| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 38 of 16,005 |
+| **Strings reviewed this run** | 26 of 16,020 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,38 +18,13 @@ Also for zh-CN: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (6)
+### 🆕 New findings (1)
 
-- `user-context-add-container2` — `toolkit/toolkit/global/contextual-identity.ftl` — "container" is rendered as 「身份」 instead of the established zh-CN term 「容器」.
-    - Current: `添加新身份`
-    - Source: `label: Add new container`
-    - Suggest: `添加新容器`
-    - Firefox Container Tabs are consistently translated as 容器标签页/容器 in zh-CN; 身份 names a different concept and is inconsistent with the rest of the container UI.
-- `user-context-manage-containers2` — `toolkit/toolkit/global/contextual-identity.ftl` — "containers" is rendered as 「身份」 instead of the established zh-CN term 「容器」.
-    - Current: `管理身份`
-    - Source: `label: Manage containers`
-    - Suggest: `管理容器`
-    - Firefox Container Tabs are consistently translated as 容器 in zh-CN; 身份 names a different concept.
-- `user-context-add-container2-panel-item` — `toolkit/toolkit/global/contextual-identity.ftl` — "container" is rendered as 「身份」 instead of the established zh-CN term 「容器」.
-    - Current: `添加新身份`
-    - Source: `Add new container`
-    - Suggest: `添加新容器`
-    - Inconsistent with the zh-CN term 容器 used for Firefox container tabs.
-- `user-context-manage-containers2-panel-item` — `toolkit/toolkit/global/contextual-identity.ftl` — "containers" is rendered as 「身份」 instead of the established zh-CN term 「容器」.
-    - Current: `管理身份`
-    - Source: `Manage containers`
-    - Suggest: `管理容器`
-    - Inconsistent with the zh-CN term 容器 used for Firefox container tabs.
-- `smartwindow-footer-history` — `browser/browser/aiWindow.ftl` — The same source word "History" is rendered inconsistently as 历史记录 (aria-label/tooltip) and 历史 (label).
-    - Current: `label: 历史`
-    - Source: `aria-label: History label: History tooltiptext: History`
-    - Suggest: `label: 历史记录`
-    - en-US uses the identical string for all three attributes; zh-CN uses 历史记录 elsewhere for History, so the visible label should match.
-- `user-context-banking2` — `toolkit/toolkit/global/contextual-identity.ftl` — "Banking" is rendered as 金融 (finance) rather than 银行/网银.
-    - Current: `金融`
-    - Source: `label: Banking`
-    - Suggest: `银行`
-    - The en-US container name is specifically Banking; 金融 broadens it to finance in general.
+- `ipprotection-site-inclusions-callout-secondary-button-lapsed-users` — `browser/browser/ipProtection.ftl` — "Dismiss" is rendered as "知道了" ("Got it"), which changes the button's meaning.
+    - Current: `知道了`
+    - Source: `Dismiss`
+    - Suggest: `关闭`
+    - en-US "Dismiss" means to close/dismiss the callout; "知道了" means "Got it", an acknowledgement, which is a different label.
 
 ### ✅ Fixed since the last run (0)
 
@@ -63,9 +38,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `share-panel-os-share` — `browser/browser/sharePanel.ftl` — "Share with…" is rendered as the noun phrase "共享方式" and the ellipsis is dropped.
+    - Current: `label: 共享方式`
+    - Suggest: `label: 共享至…`
+    - en-US is an action menu item "Share with…"; "共享方式" means "sharing method", and the trailing ellipsis indicating a follow-up dialog is missing.
 
 ---
 
@@ -74,8 +52,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 325 |
-| Strings | 16,005 |
-| Missing strings | 228 |
+| Strings | 16,020 |
+| Missing strings | 285 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
@@ -92,20 +70,20 @@ _Nothing retired._
 
 ### Completeness
 
-**228 strings** are not translated yet, concentrated in:
+**285 strings** are not translated yet, concentrated in:
 
-- `toolkit/toolkit/about/aboutPDF.ftl` — 21
 - `toolkit/services/aboutSyncLog.ftl` — 20
-- `browser/browser/newtab/onboarding.ftl` — 19
+- `toolkit/toolkit/about/aboutPDF.ftl` — 19
+- `browser/browser/aboutRestartRequired.ftl` — 18
 - `devtools/client/toolbox-options.ftl` — 18
 - `toolkit/toolkit/about/aboutNetworking.ftl` — 16
+- `browser/browser/ipProtection.ftl` — 16
+- `browser/browser/newtab/newtab.ftl` — 16
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 14
 - `dom/chrome/dom/dom.properties` — 14
-- `browser/browser/newtab/newtab.ftl` — 12
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 13
+- `browser/browser/aboutPrivateBrowsing.ftl` — 13
 - `toolkit/toolkit/about/url-classifier.ftl` — 12
-- `toolkit/toolkit/neterror/netError.ftl` — 12
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 10
-- `browser/browser/ipProtection.ftl` — 9
-- `devtools/client/inspector.ftl` — 7
 
 **Files absent from the locale:**
 
@@ -123,8 +101,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | apostrophe | `typographic` 42, `straight` 20 | _mixed_ |
 | ellipsis | `char` 369, `ascii` 12 | **char** |
 | dash | `em` 49, `en` 2 | **em** |
-| fullwidth | `punctuation` 8292 | **punctuation** |
-| register | `informal` 14, `formal` 1484 | **formal** |
+| fullwidth | `punctuation` 8291 | **punctuation** |
+| register | `informal` 14, `formal` 1486 | **formal** |
 
 ---
 
@@ -217,6 +195,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Local laws and restrictions limit where you can use VPN. <a data-l10n-name="learn-more-link">Learn more</a>`
     - Suggest: `VPN 并非在所有位置都可用`
     - en-US states plainly that local laws and restrictions limit where VPN can be used; the Chinese adds "可能" (possibly), weakening the assertion.
+- `ipprotection-site-inclusions-callout-secondary-button-lapsed-users` — `browser/browser/ipProtection.ftl` — "Dismiss" is rendered as "知道了" ("Got it"), which changes the button's meaning.
+    - Current: `知道了`
+    - Source: `Dismiss`
+    - Suggest: `关闭`
+    - en-US "Dismiss" means to close/dismiss the callout; "知道了" means "Got it", an acknowledgement, which is a different label.
 - `newtab-carousel-next` — `browser/browser/newtab/newtab.ftl` — "Next" is translated as "上一篇" (previous), duplicating the previous-button label.
     - Current: `上一篇`
     - Source: `aria-label: Next`
@@ -242,11 +225,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `label: An app or service may see your encrypted traffic.`
     - Suggest: `某个应用或服务可能可以看到您的加密流量。`
     - The source is an indefinite "An app or service", not "other apps or services".
-- `share-panel-os-share` — `browser/browser/sharePanel.ftl` — "Share with…" is rendered as the noun phrase "共享方式" and the ellipsis is dropped.
-    - Current: `label: 共享方式`
-    - Source: `label: Share with…`
-    - Suggest: `label: 共享至…`
-    - en-US is an action menu item "Share with…"; "共享方式" means "sharing method", and the trailing ellipsis indicating a follow-up dialog is missing.
 - `share-panel-os-share-2` — `browser/browser/sharePanel.ftl` — The [other] variant drops the ellipsis and renders "Share with…" as "共享方式" ("sharing method"), inconsistent with the other variants.
     - Current: `[other] 共享方式`
     - Source: `label: {$sel_1 ->} [windows] Share with Windows… [macos] Share with Mac… [other] Share with…`

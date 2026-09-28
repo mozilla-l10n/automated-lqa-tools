@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
-| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
+| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 11 of 16,170 |
+| **Strings reviewed this run** | 148 of 16,301 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,48 @@ Also for hu: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (8)
 
-_No new findings._
+- `contentanalysis-slow-agent-dialog-body-clipboard-copy` — `toolkit/toolkit/contentanalysis/contentanalysis.ftl` — "what you copied" was translated as "amit nyomtatott" (what you printed).
+    - Current: `amit nyomtatott`
+    - Source: `{ $agent } is reviewing what you copied against your organization’s data policies. This may take a moment.`
+    - Suggest: `amit másolt`
+    - The en-US string is about clipboard copy (see string id and source "what you copied"), not printing.
+- `about-pdf-features-intro` — `toolkit/toolkit/about/aboutPDF.ftl` — "private" rendered as "biztonságos" (secure).
+    - Current: `Egyszerű, ingyenes és biztonságos.`
+    - Source: `Read, mark up, and sign PDFs right where you browse. It’s simple, free, and private.`
+    - Suggest: `Egyszerű, ingyenes és privát.`
+    - The source claims the tools are private; the Hungarian claims they are secure, a different assertion about the product.
+- `restart-required-intro2` — `browser/browser/aboutRestartRequired.ftl` — "needs to finish an update. Restart to..." rendered as statements that the browser finishes the update and will restart itself, dropping the instruction to the user.
+    - Current: `A { -brand-short-name } befejezi a frissítést. Újraindul, hogy a dolgok biztonságosak és zökkenőmentesek legyenek.`
+    - Source: `{ -brand-short-name } needs to finish an update. Restart to keep things secure and smooth.`
+    - Suggest: `A { -brand-short-name }nak be kell fejeznie a frissítést. Indítsa újra, hogy a dolgok biztonságosak és zökkenőmentesek legyenek.`
+    - The en-US asks the user to restart ("Restart to keep things secure"); the Hungarian asserts that the browser finishes the update and restarts by itself, removing the call to action.
+- `about-private-browsing-private-window-redesign-subheader` — `browser/browser/aboutPrivateBrowsing.ftl` — "is designed to protect your privacy" rendered as an unconditional "protects your privacy".
+    - Current: `a beépített követés elleni védelmének köszönhetően megvédi a magánszféráját`
+    - Source: `{ -brand-short-name } is designed to protect your privacy as you browse, with built-in tracking protections. Closing this window erases its history, cookies, and site data to keep your browsing private from others who u…`
+    - Suggest: `úgy lett tervezve, hogy a beépített követés elleni védelemmel megvédje a magánszféráját böngészés közben`
+    - The en-US hedges with "is designed to protect your privacy as you browse"; the Hungarian states outright that it protects the user's privacy, a stronger promise than the source makes, and also drops "as you browse".
+- `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl` — Agreement error: "az eszköz többi felhasználói" should be singular-agreeing "a többi felhasználó".
+    - Current: `az eszköz többi felhasználói elől`
+    - Source: `Private Windows help keep your browsing private from others on this device. They don’t make you anonymous or clear all of your data.`
+    - Suggest: `az eszköz többi felhasználója elől`
+    - In Hungarian "többi" takes a singular noun; "többi felhasználói" is ungrammatical.
+- `about-private-browsing-spotlight-basics-malware-alerts` — `browser/browser/aboutPrivateBrowsing.ftl` — Missing object pronoun: "automatikusan értesíti" lacks the "Önt" object present in "alerts you".
+    - Current: `automatikusan értesíti a rosszindulatú és megtévesztő webhelyekről`
+    - Source: `{ -brand-short-name } automatically alerts you about malware and deceptive sites.`
+    - Suggest: `automatikusan értesíti Önt a rosszindulatú és megtévesztő webhelyekről`
+    - The en-US "alerts you" has an explicit object; without it the Hungarian sentence reads as if the sites are being notified.
+- `places-add-bookmark` — `browser/browser/places.ftl` — Singular "Add Bookmark…" is rendered as plural "Könyvjelzők hozzáadása…" (Add bookmarks).
+    - Current: `Könyvjelzők hozzáadása…`
+    - Source: `accesskey: k label: Add Bookmark…`
+    - Suggest: `Könyvjelző hozzáadása…`
+    - The en-US string adds a single bookmark; the Hungarian plural claims multiple bookmarks are added.
+- `newtab-clock-widget-menu-button2` — `browser/browser/newtab/newtab.ftl` — "Clock options" translated as "Órabeállítások" (clock settings) instead of options for the clock widget menu.
+    - Current: `Órabeállítások`
+    - Source: `aria-label: Clock options title: Clock options`
+    - Suggest: `Óra beállításai`
+    - The source is a menu button label "Clock options"; the compound "Órabeállítások" reads as hourly/clock-rate settings and does not convey the widget's options menu.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +83,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 325 |
-| Strings | 16,170 |
-| Missing strings | 63 |
+| Files | 326 |
+| Strings | 16,301 |
+| Missing strings | 4 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,24 +102,10 @@ _Nothing retired._
 
 ### Completeness
 
-**63 strings** are not translated yet, concentrated in:
+**4 strings** are not translated yet, concentrated in:
 
-- `toolkit/toolkit/about/aboutPDF.ftl` — 20
-- `browser/browser/newtab/newtab.ftl` — 13
-- `toolkit/toolkit/contentanalysis/contentanalysis.ftl` — 6
-- `devtools/client/debugger.properties` — 4
-- `dom/chrome/security/security.properties` — 3
-- `browser/browser/genai.ftl` — 3
-- `dom/chrome/dom/dom.properties` — 2
-- `toolkit/toolkit/about/pdfFeaturesNotification.ftl` — 2
-- `devtools/client/components.properties` — 1
-- `devtools/client/perftools.ftl` — 1
-- `devtools/client/sourceeditor.properties` — 1
-- `browser/browser/migrationWizard.ftl` — 1
-
-**Files absent from the locale:**
-
-- `toolkit/toolkit/about/pdfFeaturesNotification.ftl`
+- `browser/browser/ipProtection.ftl` — 3
+- `browser/browser/aboutRestartRequired.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -90,9 +115,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `polish-double` 792, `straight-double` 33, `german-double` 2, `curly-single` 1 | **polish-double** |
+| quotes | `polish-double` 798, `straight-double` 33, `german-double` 2, `curly-single` 1 | **polish-double** |
 | apostrophe | `typographic` 1, `straight` 1 | _mixed_ |
-| ellipsis | `char` 389, `ascii` 4 | **char** |
+| ellipsis | `char` 387, `ascii` 4 | **char** |
 | dash | `em` 2, `en` 130 | **en** |
 | nbsp | `total` 6, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
@@ -104,15 +129,30 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (243)
+## 3. Open findings (251)
 
-> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (5).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
+- `about-private-browsing-private-window-redesign-subheader` — `browser/browser/aboutPrivateBrowsing.ftl` — "is designed to protect your privacy" rendered as an unconditional "protects your privacy".
+    - Current: `a beépített követés elleni védelmének köszönhetően megvédi a magánszféráját`
+    - Source: `{ -brand-short-name } is designed to protect your privacy as you browse, with built-in tracking protections. Closing this window erases its history, cookies, and site data to keep your browsing private from others who u…`
+    - Suggest: `úgy lett tervezve, hogy a beépített követés elleni védelemmel megvédje a magánszféráját böngészés közben`
+    - The en-US hedges with "is designed to protect your privacy as you browse"; the Hungarian states outright that it protects the user's privacy, a stronger promise than the source makes, and also drops "as you browse".
+- `restart-required-intro2` — `browser/browser/aboutRestartRequired.ftl` — "needs to finish an update. Restart to..." rendered as statements that the browser finishes the update and will restart itself, dropping the instruction to the user.
+    - Current: `A { -brand-short-name } befejezi a frissítést. Újraindul, hogy a dolgok biztonságosak és zökkenőmentesek legyenek.`
+    - Source: `{ -brand-short-name } needs to finish an update. Restart to keep things secure and smooth.`
+    - Suggest: `A { -brand-short-name }nak be kell fejeznie a frissítést. Indítsa újra, hogy a dolgok biztonságosak és zökkenőmentesek legyenek.`
+    - The en-US asks the user to restart ("Restart to keep things secure"); the Hungarian asserts that the browser finishes the update and restarts by itself, removing the call to action.
 - `ip-protection-site-rules-button` — `browser/browser/ipProtection.ftl` — The description reverses who needs the extra privacy, asserting that the sites must provide privacy rather than that the user wants extra privacy on them.
     - Current: `Állítson be szabályokat azokhoz a webhelyekhez, amelyeknek fokozott adatvédelmet kell biztosítaniuk, vagy ki kell kapcsolni a VPN-t.`
     - Source: `description: Set rules for sites that need extra privacy or VPN turned off. label: Manage website rules`
     - Suggest: `Állítson be szabályokat azokhoz a webhelyekhez, amelyeknél fokozott adatvédelemre van szükség, vagy amelyeknél ki kell kapcsolni a VPN-t.`
     - en-US "sites that need extra privacy or VPN turned off" means sites for which the user needs extra privacy; the Hungarian says the sites are obliged to provide extra privacy.
+- `about-pdf-features-intro` — `toolkit/toolkit/about/aboutPDF.ftl` — "private" rendered as "biztonságos" (secure).
+    - Current: `Egyszerű, ingyenes és biztonságos.`
+    - Source: `Read, mark up, and sign PDFs right where you browse. It’s simple, free, and private.`
+    - Suggest: `Egyszerű, ingyenes és privát.`
+    - The source claims the tools are private; the Hungarian claims they are secure, a different assertion about the product.
 - `autofill-delete-payment-method-os-prompt-windows` — `toolkit/toolkit/formautofill/formAutofill.ftl` — "delete stored payment method information" was rendered as "akar használni" (wants to use) instead of "törölni akarja" (wants to delete).
     - Current: `A { -brand-short-name } tárolt fizetésimód-információkat akar használni.`
     - Source: `{ -brand-short-name } is trying to delete stored payment method information. Confirm access to this Windows account below.`
@@ -124,8 +164,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 26 |
-| 2 | Wrong content (says something other than the English) | 113 |
-| 3 | Degraded language (grammar, spelling, terminology) | 75 |
+| 2 | Wrong content (says something other than the English) | 118 |
+| 3 | Degraded language (grammar, spelling, terminology) | 78 |
 | 4 | Cosmetic (typography, spacing) | 25 |
 
 ### A. Functional, markup, variables & plurals
@@ -433,6 +473,16 @@ _Also listed under their own category below._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `about-private-browsing-private-window-redesign-subheader` — `browser/browser/aboutPrivateBrowsing.ftl` — "is designed to protect your privacy" rendered as an unconditional "protects your privacy".
+    - Current: `a beépített követés elleni védelmének köszönhetően megvédi a magánszféráját`
+    - Source: `{ -brand-short-name } is designed to protect your privacy as you browse, with built-in tracking protections. Closing this window erases its history, cookies, and site data to keep your browsing private from others who u…`
+    - Suggest: `úgy lett tervezve, hogy a beépített követés elleni védelemmel megvédje a magánszféráját böngészés közben`
+    - The en-US hedges with "is designed to protect your privacy as you browse"; the Hungarian states outright that it protects the user's privacy, a stronger promise than the source makes, and also drops "as you browse".
+- `restart-required-intro2` — `browser/browser/aboutRestartRequired.ftl` — "needs to finish an update. Restart to..." rendered as statements that the browser finishes the update and will restart itself, dropping the instruction to the user.
+    - Current: `A { -brand-short-name } befejezi a frissítést. Újraindul, hogy a dolgok biztonságosak és zökkenőmentesek legyenek.`
+    - Source: `{ -brand-short-name } needs to finish an update. Restart to keep things secure and smooth.`
+    - Suggest: `A { -brand-short-name }nak be kell fejeznie a frissítést. Indítsa újra, hogy a dolgok biztonságosak és zökkenőmentesek legyenek.`
+    - The en-US asks the user to restart ("Restart to keep things secure"); the Hungarian asserts that the browser finishes the update and restarts by itself, removing the call to action.
 - `ip-protection-site-rules-button` — `browser/browser/ipProtection.ftl` — The description reverses who needs the extra privacy, asserting that the sites must provide privacy rather than that the user wants extra privacy on them.
     - Current: `Állítson be szabályokat azokhoz a webhelyekhez, amelyeknek fokozott adatvédelmet kell biztosítaniuk, vagy ki kell kapcsolni a VPN-t.`
     - Source: `description: Set rules for sites that need extra privacy or VPN turned off. label: Manage website rules`
@@ -453,6 +503,11 @@ _Also listed under their own category below._
     - Source: `By continuing, you agree to the <a data-l10n-name="terms_of_use">{ -brand-product-name } Terms of Use</a> and our <a data-l10n-name="privacy_notice">Privacy Notice</a>. To help improve the browser, { -brand-product-name…`
     - Suggest: `diagnosztikai és interakciós adatokat`
     - en-US says "diagnostic and interaction data"; "használati" means usage, a different data category in Mozilla's privacy terminology.
+- `places-add-bookmark` — `browser/browser/places.ftl` — Singular "Add Bookmark…" is rendered as plural "Könyvjelzők hozzáadása…" (Add bookmarks).
+    - Current: `Könyvjelzők hozzáadása…`
+    - Source: `accesskey: k label: Add Bookmark…`
+    - Suggest: `Könyvjelző hozzáadása…`
+    - The en-US string adds a single bookmark; the Hungarian plural claims multiple bookmarks are added.
 - `containers-site-container-label` — `browser/browser/preferences/containers.ftl` — Singular "Container" label rendered as plural "Konténerek".
     - Current: `label: Konténerek`
     - Source: `label: Container`
@@ -508,6 +563,16 @@ _Also listed under their own category below._
     - Source: `Sync logs`
     - Suggest: `Szinkronizálási naplók`
     - The en-US is a noun phrase naming the logs written by Sync (see about-sync-log-page-header description); the Hungarian turns it into a verbal phrase meaning "syncing the logs".
+- `about-pdf-features-intro` — `toolkit/toolkit/about/aboutPDF.ftl` — "private" rendered as "biztonságos" (secure).
+    - Current: `Egyszerű, ingyenes és biztonságos.`
+    - Source: `Read, mark up, and sign PDFs right where you browse. It’s simple, free, and private.`
+    - Suggest: `Egyszerű, ingyenes és privát.`
+    - The source claims the tools are private; the Hungarian claims they are secure, a different assertion about the product.
+- `contentanalysis-slow-agent-dialog-body-clipboard-copy` — `toolkit/toolkit/contentanalysis/contentanalysis.ftl` — "what you copied" was translated as "amit nyomtatott" (what you printed).
+    - Current: `amit nyomtatott`
+    - Source: `{ $agent } is reviewing what you copied against your organization’s data policies. This may take a moment.`
+    - Suggest: `amit másolt`
+    - The en-US string is about clipboard copy (see string id and source "what you copied"), not printing.
 - `autofill-delete-payment-method-os-prompt-windows` — `toolkit/toolkit/formautofill/formAutofill.ftl` — "delete stored payment method information" was rendered as "akar használni" (wants to use) instead of "törölni akarja" (wants to delete).
     - Current: `A { -brand-short-name } tárolt fizetésimód-információkat akar használni.`
     - Source: `{ -brand-short-name } is trying to delete stored payment method information. Confirm access to this Windows account below.`
@@ -536,6 +601,16 @@ _Also listed under their own category below._
     - Source: `We now automatically refuse many cookie banners so you can get tracked less and go back to distraction-free browsing.`
     - Suggest: `így kevesebb nyomkövetést kap`
     - “kevesebb” must be uninflected when modifying the accusative noun; “kevesebbet nyomkövetést” doubles the accusative marking.
+- `about-private-browsing-spotlight-basics-malware-alerts` — `browser/browser/aboutPrivateBrowsing.ftl` — Missing object pronoun: "automatikusan értesíti" lacks the "Önt" object present in "alerts you".
+    - Current: `automatikusan értesíti a rosszindulatú és megtévesztő webhelyekről`
+    - Source: `{ -brand-short-name } automatically alerts you about malware and deceptive sites.`
+    - Suggest: `automatikusan értesíti Önt a rosszindulatú és megtévesztő webhelyekről`
+    - The en-US "alerts you" has an explicit object; without it the Hungarian sentence reads as if the sites are being notified.
+- `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl` — Agreement error: "az eszköz többi felhasználói" should be singular-agreeing "a többi felhasználó".
+    - Current: `az eszköz többi felhasználói elől`
+    - Source: `Private Windows help keep your browsing private from others on this device. They don’t make you anonymous or clear all of your data.`
+    - Suggest: `az eszköz többi felhasználója elől`
+    - In Hungarian "többi" takes a singular noun; "többi felhasználói" is ungrammatical.
 - `ai-window-delete-all-memories-message` — `browser/browser/aiFeatures.ftl` — A leftover verb makes the sentence ungrammatical.
     - Current: `akkor vegye kapcsolja ki a „Tanulás…” lehetőségeket`
     - Source: `Existing memories will be deleted. If you don’t want any new memories created, uncheck the options to “Learn from…” in { -smart-window-brand-name } settings.`
@@ -774,6 +849,11 @@ _Also listed under their own category below._
     - Source: `Find out how`
     - Suggest: `Tudja meg, hogyan`
     - Hungarian requires a comma before a subordinating conjunction; the same file writes "Tudja meg, hogyan működik…" (newtab-privacy-modal-link).
+- `newtab-clock-widget-menu-button2` — `browser/browser/newtab/newtab.ftl` — "Clock options" translated as "Órabeállítások" (clock settings) instead of options for the clock widget menu.
+    - Current: `Órabeállítások`
+    - Source: `aria-label: Clock options title: Clock options`
+    - Suggest: `Óra beállításai`
+    - The source is a menu button label "Clock options"; the compound "Órabeállítások" reads as hourly/clock-rate settings and does not convey the widget's options menu.
 - `newtab-widget-section-feedback` — `browser/browser/newtab/newtab.ftl` — Missing comma before the subordinate clause.
     - Current: `Mondja el nekünk mit gondol`
     - Source: `Tell us what you think`
@@ -1024,12 +1104,7 @@ _Also listed under their own category below._
     - Source: `Certificate nickname already in use.`
     - Suggest: `A tanúsítvány neve már használatban van.`
     - en-US: “Certificate nickname already in use.” As written the string is a dangling conditional clause, not a statement.
-- `SEC_ERROR_OLD_KRL` — `security/manager/chrome/pipnss/nsserrors.properties` — Wrong article “Az” before “KRL”, and the “new” KRL is not identified.
-    - Current: `Az KRL régebbi mint a jelenlegi.`
-    - Source: `New KRL is not later than the current one.`
-    - Suggest: `Az új KRL nem újabb, mint a jelenlegi.`
-    - en-US: “New KRL is not later than the current one.” Hungarian uses “a” before the consonant-initial “KRL”, and the sentence needs a comma before “mint”.
-- _…and 13 more; see `state/` for the full list._
+- _…and 14 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -1071,7 +1146,7 @@ _Also listed under their own category below._
 - `Strings.InfoText` — `browser/updater/updater.ini` — `Strings.InfoText` uses three dots where this locale uses …
     - Current: `A %MOZ_APP_DISPLAYNAME% telepíti a frissítéseket, és pár pillanat múlva elindul...`
     - Source: `%MOZ_APP_DISPLAYNAME% is installing your updates and will start in a few moments…`
-    - The tree uses … 389 times against 4 ASCII runs.
+    - The tree uses … 387 times against 4 ASCII runs.
 - `heading` — `dom/chrome/accessibility/AccessFu.properties` — “heading” is translated as “fejléc”, the same word used for “header”, collapsing two distinct roles.
     - Current: `heading = fejléc`
     - Source: `heading`
@@ -1080,31 +1155,31 @@ _Also listed under their own category below._
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `A billentyűesemény nem érhető el GTK2 alatt: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (792 occurrences).
+    - The locale's quote convention is `polish-double` (798 occurrences).
 - `WinConflict2` — `dom/chrome/dom/dom.properties` — `WinConflict2` uses straight double quotes
     - Current: `A billentyűesemény nem érhető el egyes billentyűzetkiosztások esetén: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on some keyboard layouts: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (792 occurrences).
+    - The locale's quote convention is `polish-double` (798 occurrences).
 - `TooLargeDashedRadius` — `dom/chrome/layout/css.properties` — `TooLargeDashedRadius` uses straight double quotes
     - Current: `A szegélysugár túl nagy a "dashed" stílushoz (a korlát 100000px). Megjelenítés tömörként.`
     - Source: `Border radius is too large for ‘dashed’ style (the limit is 100000px). Rendering as solid.`
-    - The locale's quote convention is `polish-double` (792 occurrences).
+    - The locale's quote convention is `polish-double` (798 occurrences).
 - `TooLargeDottedRadius` — `dom/chrome/layout/css.properties` — `TooLargeDottedRadius` uses straight double quotes
     - Current: `A szegélysugár túl nagy a "dotted" stílushoz (a korlát 100000px). Megjelenítés tömörként.`
     - Source: `Border radius is too large for ‘dotted’ style (the limit is 100000px). Rendering as solid.`
-    - The locale's quote convention is `polish-double` (792 occurrences).
+    - The locale's quote convention is `polish-double` (798 occurrences).
 - `crashreporter-button-details` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-button-details` uses three dots where this locale uses …
     - Current: `Részletek...`
     - Source: `Details…`
-    - The tree uses … 389 times against 4 ASCII runs.
+    - The tree uses … 387 times against 4 ASCII runs.
 - `crashreporter-resubmit-status` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-resubmit-status` uses three dots where this locale uses …
     - Current: `A korábban sikertelenül elküldött bejelentések újraküldése...`
     - Source: `Resending reports that previously failed to send…`
-    - The tree uses … 389 times against 4 ASCII runs.
+    - The tree uses … 387 times against 4 ASCII runs.
 - `crashreporter-submit-in-progress` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-submit-in-progress` uses three dots where this locale uses …
     - Current: `Bejelentés elküldése...`
     - Source: `Submitting your report…`
-    - The tree uses … 389 times against 4 ASCII runs.
+    - The tree uses … 387 times against 4 ASCII runs.
 - `about-webrtc-consecutive-frames` — `toolkit/toolkit/about/aboutWebrtc.ftl` — Video "frames" rendered as "keretek" (borders) instead of "képkockák" used elsewhere in the file.
     - Current: `Egymást követő keretek`
     - Source: `Consecutive Frames`

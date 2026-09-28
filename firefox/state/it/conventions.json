@@ -1,16 +1,16 @@
 {
  "_meta": {
   "locale": "it",
-  "prose_chunks": 17216,
-  "strings": 16460
+  "prose_chunks": 17321,
+  "strings": 16552
  },
  "apostrophe": {
   "straight": 6,
-  "typographic": 1748
+  "typographic": 1753
  },
  "dash": {
   "em": 51,
-  "en": 16
+  "en": 17
  },
  "ellipsis": {
   "ascii": 0,
@@ -35,6 +35,6 @@
  },
  "register": {
   "formal": 47,
-  "informal": 713
+  "informal": 720
  }
 }

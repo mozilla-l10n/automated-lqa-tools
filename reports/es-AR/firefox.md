@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
-| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
+| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 73 of 16,201 |
+| **Strings reviewed this run** | 84 of 16,270 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,32 +18,41 @@ Also for es-AR: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (5)
+
+- `credit-card-label-with-security-code` — `toolkit/toolkit/payments/payments.ftl` — The aria-label uses plural "guardados" while the parallel value and all other CVV strings use singular "guardado".
+    - Current: `aria-label: { $ariaLabel }, CVV guardados`
+    - Source: `(value): { $label } \| CVV saved aria-label: { $ariaLabel }, CVV saved`
+    - Suggest: `aria-label: { $ariaLabel }, CVV guardado`
+    - "CVV saved" refers to a single security code; the visible value in the same message and the credit-card-doorhanger-details-* strings use "CVV guardado". The plural is an agreement error and an inconsistency.
+- `about-private-browsing-private-window-redesign-subheader` — `browser/browser/aboutPrivateBrowsing.ftl` — "keep your browsing private from others who use this device" is rendered as "mantener privada la navegación de otras personas", which says the browsing belongs to other people.
+    - Current: `para mantener privada la navegación de otras personas que usen este dispositivo`
+    - Source: `{ -brand-short-name } is designed to protect your privacy as you browse, with built-in tracking protections. Closing this window erases its history, cookies, and site data to keep your browsing private from others who u…`
+    - Suggest: `para mantener su navegación privada frente a otras personas que usen este dispositivo`
+    - The en-US means keeping the user's browsing hidden from other people using the device; the Spanish as written reads as keeping other people's browsing private, reversing whose data is protected.
+- `restart-required-fix-answer` — `browser/browser/aboutRestartRequired.ftl` — "Follow our progress in Bugzilla bug 2072739" is rendered with an added "en" and "número", altering the bug reference wording.
+    - Current: `Siga nuestro progreso en Bugzilla en bug número 2072739.`
+    - Source: `Yes. We know this is disruptive, and we’re working on a fix to prevent it. Follow our progress in Bugzilla bug 2072739.`
+    - Suggest: `Siga nuestro progreso en el bug 2072739 de Bugzilla.`
+    - The source references "Bugzilla bug 2072739"; the target's "en Bugzilla en bug número" is ungrammatical/duplicated preposition.
+- `ipprotection-site-inclusions-callout-title-lapsed-users` — `browser/browser/ipProtection.ftl` — Trailing period added to a title that has none in the source.
+    - Current: `Pruebe la VPN integrada, ahora sitio por sitio.`
+    - Source: `Try built-in VPN, now site by site`
+    - Suggest: `Pruebe la VPN integrada, ahora sitio por sitio`
+    - The en-US title "Try built-in VPN, now site by site" has no final punctuation.
+- `callout-pdfjs-draw-body-a` — `browser/browser/featureCallout.ftl` — Uses the peninsular "usted" imperative forms instead of the es-AR voseo/register used elsewhere.
+    - Current: `Haga anotaciones en los archivos PDF y luego guarde los cambios.`
+    - Source: `Mark up PDFs, then save your changes.`
+    - Suggest: `Hacé anotaciones en los archivos PDF y luego guardá los cambios.`
+    - es-AR addresses the user with voseo imperatives; "Haga"/"guarde" is the wrong form of address for this locale.
+
+### ✅ Fixed since the last run (1)
 
 - `about-pdf-features-intro` — `toolkit/toolkit/about/aboutPDF.ftl` — Typo: "simp,e" instead of "simple".
     - Current: `Es simp,e, gratis y privado.`
     - Source: `Read, mark up, and sign PDFs right where you browse. It’s simple, free, and private.`
     - Suggest: `Es simple, gratis y privado.`
     - The en-US says "It's simple, free, and private."; "simp,e" is a misspelling with a comma typed instead of the letter l.
-- `contentanalysis-slow-agent-dialog-body-clipboard-copy` — `toolkit/toolkit/contentanalysis/contentanalysis.ftl` — "Ésto" is misspelled; the demonstrative pronoun "esto" never takes an accent.
-    - Current: `Ésto puede tardar un momento.`
-    - Source: `{ $agent } is reviewing what you copied against your organization’s data policies. This may take a moment.`
-    - Suggest: `Esto puede tardar un momento.`
-    - Spanish orthography: the neuter demonstrative "esto" is never accented.
-- `policy-3rdparty` — `browser/browser/policies/policies-descriptions.ftl` — "Set policies that WebExtensions can access" rendered as "Establecer políticas de manera que..." changes the meaning to setting policies so that extensions can access.
-    - Current: `Establecer políticas de manera que las WebExtensions puedan acceder mediante chrome.storage.managed.`
-    - Source: `Set policies that WebExtensions can access via chrome.storage.managed.`
-    - Suggest: `Establecer políticas a las que las WebExtensions pueden acceder mediante chrome.storage.managed.`
-    - The en-US says the policies themselves are accessible via chrome.storage.managed; the Spanish turns it into a purpose clause.
-- `trustpanel-clear-cookies-description` — `browser/browser/browser.ftl` — "might log you out of websites" translated as "puede cerrar sesión en los sitios web", losing the subject/object relation (the user being logged out).
-    - Current: `puede cerrar sesión en los sitios web`
-    - Source: `Removing cookies and site data might log you out of websites and clear shopping carts.`
-    - Suggest: `puede cerrar tu sesión en los sitios web`
-    - The en-US says removing cookies may log the user out; the Spanish literally reads as the removal closing session, omitting that it is the user's session.
-
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -64,8 +73,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 326 |
-| Strings | 16,201 |
-| Missing strings | 32 |
+| Strings | 16,270 |
+| Missing strings | 35 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -82,19 +91,20 @@ _Nothing retired._
 
 ### Completeness
 
-**32 strings** are not translated yet, concentrated in:
+**35 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 11
+- `browser/browser/newtab/newtab.ftl` — 12
 - `toolkit/toolkit/about/url-classifier.ftl` — 6
-- `browser/browser/featureCallout.ftl` — 4
+- `browser/browser/featureCallout.ftl` — 3
 - `dom/chrome/security/security.properties` — 3
+- `browser/browser/aboutPrivateBrowsing.ftl` — 2
 - `browser/browser/preferences/preferences.ftl` — 2
-- `devtools/client/debugger.properties` — 1
+- `toolkit/toolkit/global/processTypes.ftl` — 1
+- `toolkit/toolkit/about/aboutAddons.ftl` — 1
+- `browser/browser/appmenu.ftl` — 1
+- `browser/browser/ipProtection.ftl` — 1
 - `browser/browser/newtab/asrouter.ftl` — 1
 - `browser/browser/newtab/onboarding.ftl` — 1
-- `toolkit/toolkit/about/aboutAddons.ftl` — 1
-- `toolkit/toolkit/about/aboutPDF.ftl` — 1
-- `toolkit/toolkit/global/processTypes.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -106,10 +116,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 466, `straight-double` 137, `curly-single` 93 | **curly-double** |
 | apostrophe | `typographic` 105, `straight` 67 | _mixed_ |
-| ellipsis | `char` 388, `ascii` 1 | **char** |
+| ellipsis | `char` 386, `ascii` 1 | **char** |
 | dash | `em` 61, `en` 1 | **em** |
 | nbsp | `total` 5, `before-punctuation` 3, `space-before-punctuation` 7 | _mixed_ |
-| inverted marks | `open-question` 319, `open-exclamation` 68 | **open-question** |
+| inverted marks | `open-question` 327, `open-exclamation` 69 | **open-question** |
 
 ---
 
@@ -120,15 +130,15 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (273)
+## 3. Open findings (277)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 48 |
-| 2 | Wrong content (says something other than the English) | 107 |
-| 3 | Degraded language (grammar, spelling, terminology) | 85 |
-| 4 | Cosmetic (typography, spacing) | 28 |
+| 2 | Wrong content (says something other than the English) | 108 |
+| 3 | Degraded language (grammar, spelling, terminology) | 87 |
+| 4 | Cosmetic (typography, spacing) | 29 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -439,6 +449,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Firefox and the Firefox logos are trademarks of the Mozilla Foundation.`
     - Suggest: `Mozilla Foundation`
     - "Mozilla Foundation" is the legal entity name in a trademark notice and must not be translated.
+- `about-private-browsing-private-window-redesign-subheader` — `browser/browser/aboutPrivateBrowsing.ftl` — "keep your browsing private from others who use this device" is rendered as "mantener privada la navegación de otras personas", which says the browsing belongs to other people.
+    - Current: `para mantener privada la navegación de otras personas que usen este dispositivo`
+    - Source: `{ -brand-short-name } is designed to protect your privacy as you browse, with built-in tracking protections. Closing this window erases its history, cookies, and site data to keep your browsing private from others who u…`
+    - Suggest: `para mantener su navegación privada frente a otras personas que usen este dispositivo`
+    - The en-US means keeping the user's browsing hidden from other people using the device; the Spanish as written reads as keeping other people's browsing private, reversing whose data is protected.
+- `restart-required-fix-answer` — `browser/browser/aboutRestartRequired.ftl` — "Follow our progress in Bugzilla bug 2072739" is rendered with an added "en" and "número", altering the bug reference wording.
+    - Current: `Siga nuestro progreso en Bugzilla en bug número 2072739.`
+    - Source: `Yes. We know this is disruptive, and we’re working on a fix to prevent it. Follow our progress in Bugzilla bug 2072739.`
+    - Suggest: `Siga nuestro progreso en el bug 2072739 de Bugzilla.`
+    - The source references "Bugzilla bug 2072739"; the target's "en Bugzilla en bug número" is ungrammatical/duplicated preposition.
 - `restore-page-show-tabs` — `browser/browser/aboutSessionRestore.ftl` — "View" translated as "Mostrar" (show) instead of "Ver".
     - Current: `Mostrar pestañas anteriores`
     - Source: `View Previous Tabs`
@@ -936,6 +956,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### D. Terminology, register & consistency
 
+- `callout-pdfjs-draw-body-a` — `browser/browser/featureCallout.ftl` — Uses the peninsular "usted" imperative forms instead of the es-AR voseo/register used elsewhere.
+    - Current: `Haga anotaciones en los archivos PDF y luego guarde los cambios.`
+    - Source: `Mark up PDFs, then save your changes.`
+    - Suggest: `Hacé anotaciones en los archivos PDF y luego guardá los cambios.`
+    - es-AR addresses the user with voseo imperatives; "Haga"/"guarde" is the wrong form of address for this locale.
 - `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Novedades” but the string it names, `releaseNotes-link`, reads “Qué hay de nuevo”
     - Current: `Anular la página "Novedades" posterior a la actualización. Establecer esta política en blanco si quiere deshabilitar la página posterior a la actualización.`
     - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
@@ -1089,6 +1114,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Got travel plans? Take privacy with you.`
     - Suggest: `¿Tiene planes de viaje? Lleve su privacidad con usted.`
     - ipprotection-feature-introduction-description-summer-promo and the rest of the file use usted.
+- `ipprotection-site-inclusions-callout-title-lapsed-users` — `browser/browser/ipProtection.ftl` — Trailing period added to a title that has none in the source.
+    - Current: `Pruebe la VPN integrada, ahora sitio por sitio.`
+    - Source: `Try built-in VPN, now site by site`
+    - Suggest: `Pruebe la VPN integrada, ahora sitio por sitio`
+    - The en-US title "Try built-in VPN, now site by site" has no final punctuation.
 - `newtab-section-mangage-topics-title` — `browser/browser/newtab/newtab.ftl` — “Topics” rendered as “Tópicos” while the same panel uses “temas”.
     - Current: `Tópicos`
     - Source: `Topics`
@@ -1210,8 +1240,9 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (142)
+### Fixed to date (143)
 
+- `about-pdf-features-intro` — `toolkit/toolkit/about/aboutPDF.ftl` — fixed 2026-09-28
 - `tou-existing-user-spotlight-body` — `browser/browser/termsofuse.ftl` — fixed 2026-09-01
 - `inactive-css-not-grid-or-flex-or-absolutely-positioned-item-fix` — `devtools/client/tooltips.ftl` — fixed 2026-09-01
 - `inactive-css-not-grid-or-flex-or-absolutely-positioned-item-fix-1` — `devtools/client/tooltips.ftl` — fixed 2026-09-01
@@ -1251,4 +1282,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `ipprotection-come-back-title` — `browser/browser/ipProtection.ftl` — fixed 2026-08-25
 - `ipprotection-locations-unavailable-label-1` — `browser/browser/ipProtection.ftl` — fixed 2026-08-25
 - `unauthenticated-private-location-message` — `browser/browser/ipProtection.ftl` — fixed 2026-08-25
-- `annotations-default-pdf-handler-body` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-25

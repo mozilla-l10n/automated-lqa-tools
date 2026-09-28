@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-21 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3f7b6c3c060f` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `749ea3a23fef` |
-| **Previous run** | 2026-09-14 @ `e44f1369fb6d` |
+| **Generated** | 2026-09-28 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
+| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 91 of 16,233 |
+| **Strings reviewed this run** | 86 of 16,305 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,71 +18,82 @@ Also for ru: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (8)
+### 🆕 New findings (14)
 
-- `SpeechRecognitionIsolatedTrackWarning` — `dom/chrome/dom/dom.properties` — "SpeechRecognition" was replaced with the non-existent API name "SpeechRecovery", despite the developer comment saying not to translate it.
-    - Current: `SpeechRecovery.start()`
-    - Source: `The MediaStreamTrack passed to SpeechRecognition.start() carries cross-origin content, so SpeechRecognition will only be fed silence.`
-    - Suggest: `SpeechRecognition.start()`
-    - The developer comment explicitly says not to translate "SpeechRecognition"; the target renames the API to "SpeechRecovery" in both places.
-- `contentanalysis-block-dialog-body-clipboard-copy` — `toolkit/toolkit/contentanalysis/contentanalysis.ftl` — "copy this content" is translated as "вставить" (paste) instead of "копировать".
-    - Current: `вам не разрешено вставлять это содержимое`
-    - Source: `Under your organization’s data protection policies, you’re not permitted to copy this content. Contact your administrator for more info.`
-    - Suggest: `вам не разрешено копировать это содержимое`
-    - The en-US says "you’re not permitted to copy this content"; the translation says pasting, which is a different operation and inconsistent with the dialog title.
-- `columnBreakpoint.label` — `devtools/client/debugger.properties` — The "Column breakpoint" qualifier is dropped, so the accessible name no longer distinguishes a column breakpoint.
-    - Current: `Точка останова на строке %1$S, столбец %2$S`
-    - Source: `Column breakpoint at line %1$S, column %2$S`
-    - Suggest: `Точка останова в столбце, строка %1$S, столбец %2$S`
-    - en-US "Column breakpoint at line %1$S, column %2$S" names the marker as a column breakpoint; the Russian omits that qualification.
-- `about-pdf-feature-organize-description` — `toolkit/toolkit/about/aboutPDF.ftl` — "Reorder" rendered as "Пересортируйте" (re-sort) and the verb aspect/mood is inconsistent with the rest of the list.
-    - Current: `Пересортируйте, удаляйте, объединяйте и экспортируйте страницы.`
-    - Source: `Reorder, remove, merge, and export pages.`
-    - Suggest: `Переупорядочивайте, удаляйте, объединяйте и экспортируйте страницы.`
-    - The source describes manually reordering pages, not sorting them; also the first verb is perfective while the rest are imperfective, breaking the list.
-- `about-pdf-feature-view-description` — `toolkit/toolkit/about/aboutPDF.ftl` — Perfective "Прокрутите" used where the source describes an ongoing capability, inconsistent with neighbouring descriptions.
-    - Current: `Прокрутите по вертикали или горизонтали или переключите макеты страниц.`
-    - Source: `Scroll vertically or horizontally, or switch page layouts.`
-    - Suggest: `Прокручивайте по вертикали или горизонтали или переключайте макеты страниц.`
-    - Other feature descriptions use imperfective imperatives (Создавайте, Добавляйте, Используйте); the source lists a capability, not a one-time action.
-- `about-pdf-feature-presentation-description` — `toolkit/toolkit/about/aboutPDF.ftl` — "a clean view" rendered literally as "чистым видом", which is not idiomatic and loses the meaning of an uncluttered display.
-    - Current: `Поделиться чистым видом в режиме презентации.`
-    - Source: `Share a clean view in presentation mode.`
-    - Suggest: `Делитесь чистым, ничем не загромождённым изображением в режиме презентации.`
-    - The source means presenting an uncluttered view; «чистым видом» reads as "clean appearance" and the perfective infinitive breaks the imperative pattern of the other descriptions.
-- `about-pdf-feature-images-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — "accessible images" rendered as "доступные изображения" (available images) rather than accessibility-enabled images.
-    - Current: `Загрузить доступные изображения`
-    - Source: `Upload accessible images`
-    - Suggest: `Загружайте изображения с поддержкой доступности`
-    - The description mentions alt text, so "accessible" is the accessibility sense; «доступные» means "available".
-- `tab-context-close-n-tabs2` — `browser/browser/tabContextMenu.ftl` — The accesskey uses a Cyrillic "С" instead of the Latin "C" from the source, which will not match the Latin label characters.
-    - Current: `accesskey: С`
-    - Source: `accesskey: C label: {$tabCount ->} [1] Close [other] Close { $tabCount } Tabs`
-    - Suggest: `accesskey: C`
-    - Per the locale's systemic decision access keys are kept from English; a Cyrillic homoglyph is not the English key and cannot match the label.
+- `credit-card-doorhanger-save-security-codes-checkbox` — `toolkit/toolkit/formautofill/formAutofill.ftl` — Checkbox label rendered as an imperative command to the user instead of a statement about the setting.
+    - Current: `Всегда сохраняйте коды безопасности для способов оплаты.`
+    - Source: `label: Always save security codes for payment methods.`
+    - Suggest: `Всегда сохранять коды безопасности для способов оплаты.`
+    - The en-US is a checkbox option label ("Always save security codes…"); Russian checkbox labels use the infinitive, not a second-person imperative addressed to the user.
+- `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl` — "don’t clear all of your data" reversed into "do not delete any of your data".
+    - Current: `не удаляют какие-либо ваши данные`
+    - Source: `Private Windows help keep your browsing private from others on this device. They don’t make you anonymous or clear all of your data.`
+    - Suggest: `не удаляют все ваши данные`
+    - The en-US says private windows do not clear *all* of your data (i.e. some data is cleared); the Russian asserts that no data at all is deleted, which contradicts the product's behaviour.
+- `about-private-browsing-spotlight-basics-activity-seen` — `browser/browser/aboutPrivateBrowsing.ftl` — "Some activity may still be seen by sites…" mistranslated as "Some sites … may track some activity".
+    - Current: `Некоторые сайты, поисковые системы, интернет-провайдеры или ваш работодатель могут отслеживать некоторую активность.`
+    - Source: `Some activity may still be seen by sites, search engines, internet providers, or your employer.`
+    - Suggest: `Некоторая активность всё же может быть видна сайтам, поисковым системам, интернет-провайдерам или вашему работодателю.`
+    - In the source "some" qualifies the activity, not the sites, and the verb is "be seen", not "track"; the Russian moves the quantifier and states that these parties actively track the user.
+- `about-private-browsing-spotlight-basics-no-sell-data` — `browser/browser/aboutPrivateBrowsing.ftl` — "participating sites" rendered as "сайты участников" (sites of participants) instead of "участвующие сайты".
+    - Current: `сайты участников`
+    - Source: `{ -brand-short-name } automatically asks participating sites not to sell or share your personal data.`
+    - Suggest: `участвующие сайты`
+    - Per the developer comment, "participating sites" means websites that honor GPC signals; "сайты участников" names sites belonging to some participants instead.
+- `restart-required-multiple-instances-answer` — `browser/browser/aboutRestartRequired.ftl` — "the open one can be left on an older version" mistranslated as a permission/action "the open one can be left" addressed to the user.
+    - Current: `открытый можно оставить в более старой версии`
+    - Source: `If one profile or instance updates while another is still open, the open one can be left on an older version. Restarting keeps everything on the same version.`
+    - Suggest: `открытый может остаться на более старой версии`
+    - The en-US describes an unwanted outcome (the still-open instance ends up running an older version); the Russian impersonal "можно оставить" says it is permissible to leave it on the older version.
+- `restart-required-multiple-instances-answer` — `browser/browser/aboutRestartRequired.ftl` — "instances" transliterated as "инстанс", inconsistent with "экземпляры" used in the sibling string.
+    - Current: `Если один профиль или инстанс обновляются`
+    - Source: `If one profile or instance updates while another is still open, the open one can be left on an older version. Restarting keeps everything on the same version.`
+    - Suggest: `Если один профиль или экземпляр обновляется`
+    - restart-required-multiple-instances-question renders "instances" as "экземплярами"; the jargon "инстанс" in the same surface is inconsistent terminology.
+- `restart-required-single-instance-question` — `browser/browser/aboutRestartRequired.ftl` — "instances" transliterated as "инстансов", inconsistent with "экземпляры" used elsewhere in the same file.
+    - Current: `Я не использую несколько профилей или инстансов.`
+    - Source: `I don’t use multiple profiles or instances. Why is this happening?`
+    - Suggest: `Я не использую несколько профилей или экземпляров.`
+    - The same surface renders "instances" as "экземплярами" in restart-required-multiple-instances-question; the jargon "инстансов" is inconsistent.
+- `about-logging-preset-vpn-description` — `toolkit/toolkit/about/aboutLogging.ftl` — "Log modules to diagnose…" mistranslated as "Log modules" (модули журнала) instead of "logging modules for diagnosing".
+    - Current: `Модули журнала для диагностики проблем защиты IP (VPN)`
+    - Source: `Log modules to diagnose IP Protection (VPN) issues`
+    - Suggest: `Модули логирования для диагностики проблем защиты IP (VPN)`
+    - The source refers to the logging modules enabled by this preset; "модули журнала" reads as modules belonging to a log, changing the meaning of the preset description.
+- `restart-required-single-instance-answer-2` — `browser/browser/aboutRestartRequired.ftl` — The Russian makes { -brand-short-name } the operating system being updated instead of the object of the OS update.
+    - Current: `при обновлении вашей операционной системы { -brand-short-name }`
+    - Source: `This can happen during a long browsing session, or when your operating system updates { -brand-short-name }. Restarting keeps { -brand-short-name } secure and working normally.`
+    - Suggest: `когда ваша операционная система обновляет { -brand-short-name }`
+    - en-US: "when your operating system updates { -brand-short-name }" — the OS updates Firefox; the translation reads "when updating your operating system Firefox".
+- `places-share-folder3` — `browser/browser/places.ftl` — The "New" badge is mistranslated as the verb "Create".
+    - Current: `badge: Создать`
+    - Source: `accesskey: a badge: New label: Share Folder`
+    - Suggest: `badge: Новое`
+    - The badge text "New" promotes a new feature; "Создать" means "Create", a different meaning.
+- `autofill-payment-methods-save-security-codes-checkbox` — `browser/browser/preferences/preferences.ftl` — Checkbox label rendered as an imperative instead of the infinitive used for settings labels.
+    - Current: `label: Сохраните коды безопасности`
+    - Source: `accesskey: c label: Save security codes`
+    - Suggest: `label: Сохранять коды безопасности`
+    - en-US "Save security codes" is a preference checkbox label; Russian settings use the infinitive "Сохранять", not the imperative "Сохраните".
+- `ipprotection-feature-introduction-description-inclusions` — `browser/browser/ipProtection.ftl` — Imperative "Set the VPN on or off" rendered as a third-person statement "Turns VPN on or off".
+    - Current: `Включает или выключает VPN для определенных сайтов.`
+    - Source: `Help hide your location for <a data-l10n-name="learn-more-vpn">extra privacy</a> as you browse. Set the VPN on or off for certain sites.`
+    - Suggest: `Включайте или выключайте VPN для определённых сайтов.`
+    - en-US instructs the user to set the VPN on or off for certain sites; the Russian asserts that the feature does it.
+- `ipprotection-site-inclusions-callout-title-existing-users` — `browser/browser/ipProtection.ftl` — "Set built-in VPN rules" mistranslated as "Set built-in VPN rules" with the adjective attached to "rules".
+    - Current: `Установите встроенные правила VPN`
+    - Source: `Set built-in VPN rules, then browse on`
+    - Suggest: `Установите правила встроенного VPN`
+    - In en-US "built-in" modifies VPN, not the rules; the rules are user-defined, not built in.
+- `ipprotection-feature-introduction-description-inclusions` — `browser/browser/ipProtection.ftl` — Missing diaeresis in "своё"/"определённых".
+    - Current: `свое местоположение`
+    - Source: `Help hide your location for <a data-l10n-name="learn-more-vpn">extra privacy</a> as you browse. Set the VPN on or off for certain sites.`
+    - Suggest: `своё местоположение`
+    - Russian spelling requires ё in "своё"; the locale otherwise uses ё consistently.
 
-### ✅ Fixed since the last run (5)
+### ✅ Fixed since the last run (0)
 
-- `smart-window-closed-tabs-summary` — `browser/browser/aiWindowContent.ftl` — smart-window-closed-tabs-summary ([one]) — aiWindowContent.ftl — Вкладка закрыты → Вкладка закрыта
-    - Current: `Вкладка закрыты`
-    - Source: `{$count ->} [one] Done! Tab closed. [other] Done! Tabs closed.`
-    - Suggest: `Вкладка закрыта`
-- `smart-window-restore-success-summary` — `browser/browser/aiWindowContent.ftl` — smart-window-restore-success-summary ([one]) — Вкладки закрыта → Вкладка закрыта
-    - Current: `Вкладки закрыта`
-    - Source: `{$count ->} [one] Tab closed, then restored. [other] Tabs closed, then restored.`
-    - Suggest: `Вкладка закрыта`
-- `preferences-etp-tracker-count-enabled` — `browser/browser/preferences/preferences.ftl` — en-US "Show trackers blocked in address bar" (show the count in the address bar). Current: Показать трекеры, заблокированные в адресной строке (trackers blocked inside the address bar) → Suggest: Показывать в адресной строке число заблокированных трекеров
-    - Current: `Показать трекеры, заблокированные в адресной строке`
-    - Source: `label: Show trackers blocked in address bar`
-    - Suggest: `Показывать в адресной строке число заблокированных трекеров`
-- `tab-context-close-n-tabs2` — `browser/browser/tabContextMenu.ftl` — tab-context-close-n-tabs2 (.label, [one]) — tabbrowser.ftl — nominative instead of accusative: Закрыть { $tabCount } вкладка → вкладку
-    - Current: `Закрыть { $tabCount } вкладка`
-    - Source: `accesskey: C label: {$tabCount ->} [1] Close [other] Close { $tabCount } Tabs`
-    - Suggest: `вкладку`
-- `webconsole.menu.openInNetworkPanel.label` — `devtools/shared/webconsole.properties` — audio-backend-class stray Title Case: support-remote-experiments-title/-features-title (see §3.J), shortest-paths.header/shortest-paths.select-node (memory.properties, Кратчайшие Пути (от Корней Сборщика Мусора)), ssl-error-sym-key-context-failure/-unwrap-failure and ssl-error-unknown-ca-alert (nsserrors.ftl), pageInfoCertificateTransparencyCompliant (pippki.properties), netmonitor.timings.servic…
-    - Current: `Панели Сеть`
-    - Source: `Open in Network Panel`
-    - Suggest: `панели «Сеть»`
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -103,7 +114,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 326 |
-| Strings | 16,233 |
+| Strings | 16,305 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -115,7 +126,7 @@ _Nothing retired._
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 3 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 135 |
+| Access keys not in their label | 136 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 4 |
 
@@ -131,24 +142,39 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `guillemet` 1058, `straight-double` 27, `curly-single` 5, `curly-double` 4 | **guillemet** |
 | apostrophe | `typographic` 9, `straight` 15 | _mixed_ |
-| ellipsis | `char` 392, `ascii` 5 | **char** |
+| ellipsis | `char` 390, `ascii` 5 | **char** |
 | dash | `em` 128, `en` 5 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 7 | _mixed_ |
-| register | `informal` 932, `formal` 3133 | **formal** |
+| register | `informal` 947, `formal` 3152 | **formal** |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **accesskey — 135 strings** — 135 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
-    - Affected: `addon-install-or-update-from-file`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-showrecentsearches-option-2`, `appmenu-theme-installed`, `appmenu-update-available2`, `appmenu-update-manual2`, `autofill-addresses-checkbox-message`, `autofill-addresses-manage-addresses-button`, `autofill-payment-methods-manage-payments-button`, `autofill-reauth-payment-methods-checkbox-2`, `browser-containers-settings-2`, `browsing-picture-in-picture-enable-when-switching-tabs` …and 123 more
+- **accesskey — 136 strings** — 136 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
+    - Affected: `addon-install-or-update-from-file`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-showrecentsearches-option-2`, `appmenu-theme-installed`, `appmenu-update-available2`, `appmenu-update-manual2`, `autofill-addresses-checkbox-message`, `autofill-addresses-manage-addresses-button`, `autofill-payment-methods-manage-payments-button`, `autofill-reauth-payment-methods-checkbox-2`, `browser-containers-settings-2`, `browsing-picture-in-picture-enable-when-switching-tabs` …and 124 more
 
 ---
 
-## 3. Open findings (556)
+## 3. Open findings (570)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (4).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
+- `about-private-browsing-spotlight-basics-activity-seen` — `browser/browser/aboutPrivateBrowsing.ftl` — "Some activity may still be seen by sites…" mistranslated as "Some sites … may track some activity".
+    - Current: `Некоторые сайты, поисковые системы, интернет-провайдеры или ваш работодатель могут отслеживать некоторую активность.`
+    - Source: `Some activity may still be seen by sites, search engines, internet providers, or your employer.`
+    - Suggest: `Некоторая активность всё же может быть видна сайтам, поисковым системам, интернет-провайдерам или вашему работодателю.`
+    - In the source "some" qualifies the activity, not the sites, and the verb is "be seen", not "track"; the Russian moves the quantifier and states that these parties actively track the user.
+- `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl` — "don’t clear all of your data" reversed into "do not delete any of your data".
+    - Current: `не удаляют какие-либо ваши данные`
+    - Source: `Private Windows help keep your browsing private from others on this device. They don’t make you anonymous or clear all of your data.`
+    - Suggest: `не удаляют все ваши данные`
+    - The en-US says private windows do not clear *all* of your data (i.e. some data is cleared); the Russian asserts that no data at all is deleted, which contradicts the product's behaviour.
+- `restart-required-multiple-instances-answer` — `browser/browser/aboutRestartRequired.ftl` — "the open one can be left on an older version" mistranslated as a permission/action "the open one can be left" addressed to the user.
+    - Current: `открытый можно оставить в более старой версии`
+    - Source: `If one profile or instance updates while another is still open, the open one can be left on an older version. Restarting keeps everything on the same version.`
+    - Suggest: `открытый может остаться на более старой версии`
+    - The en-US describes an unwanted outcome (the still-open instance ends up running an older version); the Russian impersonal "можно оставить" says it is permissible to leave it on the older version.
 - `nova-early-access-infobar-title` — `browser/browser/newtab/asrouter.ftl` — "is getting a new look" (future/ongoing) translated as a completed change "Обновлён внешний вид".
     - Current: `<strong>Обновлён внешний вид { -brand-product-name }.</strong>`
     - Source: `<strong>{ -brand-product-name } is getting a new look.</strong> You’re previewing an early, unpolished version before the launch later this year.`
@@ -160,8 +186,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 44 |
-| 2 | Wrong content (says something other than the English) | 252 |
-| 3 | Degraded language (grammar, spelling, terminology) | 203 |
+| 2 | Wrong content (says something other than the English) | 260 |
+| 3 | Degraded language (grammar, spelling, terminology) | 209 |
 | 4 | Cosmetic (typography, spacing) | 57 |
 
 ### A. Functional, markup, variables & plurals
@@ -266,6 +292,31 @@ _Also listed under their own category below._
     - Current: `Скачивание { -focus-brand-name }`
     - Source: `Download { -focus-brand-name }`
     - Suggest: `Скачать { -focus-brand-name }`
+- `about-private-browsing-spotlight-basics-activity-seen` — `browser/browser/aboutPrivateBrowsing.ftl` — "Some activity may still be seen by sites…" mistranslated as "Some sites … may track some activity".
+    - Current: `Некоторые сайты, поисковые системы, интернет-провайдеры или ваш работодатель могут отслеживать некоторую активность.`
+    - Source: `Some activity may still be seen by sites, search engines, internet providers, or your employer.`
+    - Suggest: `Некоторая активность всё же может быть видна сайтам, поисковым системам, интернет-провайдерам или вашему работодателю.`
+    - In the source "some" qualifies the activity, not the sites, and the verb is "be seen", not "track"; the Russian moves the quantifier and states that these parties actively track the user.
+- `about-private-browsing-spotlight-basics-no-sell-data` — `browser/browser/aboutPrivateBrowsing.ftl` — "participating sites" rendered as "сайты участников" (sites of participants) instead of "участвующие сайты".
+    - Current: `сайты участников`
+    - Source: `{ -brand-short-name } automatically asks participating sites not to sell or share your personal data.`
+    - Suggest: `участвующие сайты`
+    - Per the developer comment, "participating sites" means websites that honor GPC signals; "сайты участников" names sites belonging to some participants instead.
+- `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl` — "don’t clear all of your data" reversed into "do not delete any of your data".
+    - Current: `не удаляют какие-либо ваши данные`
+    - Source: `Private Windows help keep your browsing private from others on this device. They don’t make you anonymous or clear all of your data.`
+    - Suggest: `не удаляют все ваши данные`
+    - The en-US says private windows do not clear *all* of your data (i.e. some data is cleared); the Russian asserts that no data at all is deleted, which contradicts the product's behaviour.
+- `restart-required-multiple-instances-answer` — `browser/browser/aboutRestartRequired.ftl` — "the open one can be left on an older version" mistranslated as a permission/action "the open one can be left" addressed to the user.
+    - Current: `открытый можно оставить в более старой версии`
+    - Source: `If one profile or instance updates while another is still open, the open one can be left on an older version. Restarting keeps everything on the same version.`
+    - Suggest: `открытый может остаться на более старой версии`
+    - The en-US describes an unwanted outcome (the still-open instance ends up running an older version); the Russian impersonal "можно оставить" says it is permissible to leave it on the older version.
+- `restart-required-single-instance-answer-2` — `browser/browser/aboutRestartRequired.ftl` — The Russian makes { -brand-short-name } the operating system being updated instead of the object of the OS update.
+    - Current: `при обновлении вашей операционной системы { -brand-short-name }`
+    - Source: `This can happen during a long browsing session, or when your operating system updates { -brand-short-name }. Restarting keeps { -brand-short-name } secure and working normally.`
+    - Suggest: `когда ваша операционная система обновляет { -brand-short-name }`
+    - en-US: "when your operating system updates { -brand-short-name }" — the OS updates Firefox; the translation reads "when updating your operating system Firefox".
 - `about-unloads-learn-more` — `browser/browser/aboutUnloads.ftl` — about-unloads-page-title, about-unloads-intro, about-unloads-learn-more — aboutUnloads.ftl — the feature unloads tabs in general. Current: Выгрузка вкладки → Suggest: Выгрузка вкладок
     - Current: `Выгрузка вкладки`
     - Source: `See <a data-l10n-name="doc-link">Tab Unloading</a> to learn more about the feature and this page.`
@@ -400,6 +451,11 @@ _Also listed under their own category below._
 - `ip-protection-bandwidth-warning-infobar-message-75` — `browser/browser/ipProtection.ftl` — several: ipprotection-summer-promo-offramp-generic-title ("built-in" modifies VPN, not the limits → Лимиты встроенного VPN…); ipprotection-feature-introduction-link-text-privacy-2 and ipprotection-location-selection-callout-description-1 hardcode "5 местоположений" where en-US says "multiple"/"several"; ipprotection-feature-introduction-link-text-captive-portal-1 drops and inverts the "hide where…
     - Source: `<strong>Getting close to your VPN limit.</strong> You have { $usageLeft } GB left. Your data will reset at the start of next month.`
     - Suggest: `Лимиты встроенного VPN…`
+- `ipprotection-feature-introduction-description-inclusions` — `browser/browser/ipProtection.ftl` — Imperative "Set the VPN on or off" rendered as a third-person statement "Turns VPN on or off".
+    - Current: `Включает или выключает VPN для определенных сайтов.`
+    - Source: `Help hide your location for <a data-l10n-name="learn-more-vpn">extra privacy</a> as you browse. Set the VPN on or off for certain sites.`
+    - Suggest: `Включайте или выключайте VPN для определённых сайтов.`
+    - en-US instructs the user to set the VPN on or off for certain sites; the Russian asserts that the feature does it.
 - `ipprotection-feature-introduction-link-text-captive-portal-1` — `browser/browser/ipProtection.ftl` — several: ipprotection-summer-promo-offramp-generic-title ("built-in" modifies VPN, not the limits → Лимиты встроенного VPN…); ipprotection-feature-introduction-link-text-privacy-2 and ipprotection-location-selection-callout-description-1 hardcode "5 местоположений" where en-US says "multiple"/"several"; ipprotection-feature-introduction-link-text-captive-portal-1 drops and inverts the "hide where…
     - Source: `Get <a data-l10n-name="learn-more-vpn">extra privacy</a> by choosing from several locations to hide where you browse.`
     - Suggest: `Лимиты встроенного VPN…`
@@ -415,6 +471,11 @@ _Also listed under their own category below._
 - `ipprotection-message-continuous-onboarding-site-settings` — `browser/browser/ipProtection.ftl` — several: ipprotection-summer-promo-offramp-generic-title ("built-in" modifies VPN, not the limits → Лимиты встроенного VPN…); ipprotection-feature-introduction-link-text-privacy-2 and ipprotection-location-selection-callout-description-1 hardcode "5 местоположений" where en-US says "multiple"/"several"; ipprotection-feature-introduction-link-text-captive-portal-1 drops and inverts the "hide where…
     - Source: `{ -brand-short-name } will remember which websites you’ve set to use VPN. Update these in <a data-l10n-name="setting-link">settings</a> anytime.`
     - Suggest: `Лимиты встроенного VPN…`
+- `ipprotection-site-inclusions-callout-title-existing-users` — `browser/browser/ipProtection.ftl` — "Set built-in VPN rules" mistranslated as "Set built-in VPN rules" with the adjective attached to "rules".
+    - Current: `Установите встроенные правила VPN`
+    - Source: `Set built-in VPN rules, then browse on`
+    - Suggest: `Установите правила встроенного VPN`
+    - In en-US "built-in" modifies VPN, not the rules; the rules are user-defined, not built in.
 - `ipprotection-summer-promo-offramp-generic-title` — `browser/browser/ipProtection.ftl` — several: ipprotection-summer-promo-offramp-generic-title ("built-in" modifies VPN, not the limits → Лимиты встроенного VPN…); ipprotection-feature-introduction-link-text-privacy-2 and ipprotection-location-selection-callout-description-1 hardcode "5 местоположений" where en-US says "multiple"/"several"; ipprotection-feature-introduction-link-text-captive-portal-1 drops and inverts the "hide where…
     - Source: `Your built-in VPN limits reset September 1`
     - Suggest: `Лимиты встроенного VPN…`
@@ -451,28 +512,7 @@ _Also listed under their own category below._
     - Current: `Полное время`
     - Source: `Full time`
     - Suggest: `Основное время`
-- `newtab-sports-widget-team-name-label-civ` — `browser/browser/newtab/newtab.ftl` — ASCII apostrophe in Кот-д'Ивуар
-    - Source: `label: Ivory Coast`
-    - Suggest: `.label`
-- `newtab-wallpaper-blue-flowers` — `browser/browser/newtab/newtab.ftl` — Wallpaper descriptions — newtab.ftl — newtab-wallpaper-light-landscape renders "mist" as дым (smoke); newtab-wallpaper-blue-flowers says цветов с голубыми цветами (repeats the word, loses "petaled"); newtab-wallpaper-celestial-eclipse-time-lapse renders "time lapse" as Хронометраж; newtab-wallpaper-celestial-river renders "satellite" as Космический
-    - Source: `Closeup photography of blue-petaled flowers in bloom`
-- `newtab-wallpaper-celestial-eclipse-time-lapse` — `browser/browser/newtab/newtab.ftl` — Wallpaper descriptions — newtab.ftl — newtab-wallpaper-light-landscape renders "mist" as дым (smoke); newtab-wallpaper-blue-flowers says цветов с голубыми цветами (repeats the word, loses "petaled"); newtab-wallpaper-celestial-eclipse-time-lapse renders "time lapse" as Хронометраж; newtab-wallpaper-celestial-river renders "satellite" as Космический
-    - Source: `Lunar eclipse time lapse`
-- `newtab-wallpaper-celestial-river` — `browser/browser/newtab/newtab.ftl` — Wallpaper descriptions — newtab.ftl — newtab-wallpaper-light-landscape renders "mist" as дым (smoke); newtab-wallpaper-blue-flowers says цветов с голубыми цветами (repeats the word, loses "petaled"); newtab-wallpaper-celestial-eclipse-time-lapse renders "time lapse" as Хронометраж; newtab-wallpaper-celestial-river renders "satellite" as Космический
-    - Source: `Satellite image of river`
-- `newtab-wallpaper-light-landscape` — `browser/browser/newtab/newtab.ftl` — Wallpaper descriptions — newtab.ftl — newtab-wallpaper-light-landscape renders "mist" as дым (smoke); newtab-wallpaper-blue-flowers says цветов с голубыми цветами (repeats the word, loses "petaled"); newtab-wallpaper-celestial-eclipse-time-lapse renders "time lapse" as Хронометраж; newtab-wallpaper-celestial-river renders "satellite" as Космический
-    - Source: `Blue mist mountain landscape`
-- `newtab-wallpaper-your-images-folder` — `browser/browser/newtab/newtab.ftl` — Appositive "Your images, wallpapers that you have saved" turned into a list of two things ("Your images and wallpapers").
-    - Current: `Ваши изображения и обои, которые вы сохранили`
-    - Source: `aria-label: Your images, wallpapers that you have saved`
-    - Suggest: `Ваши изображения — обои, которые вы сохранили`
-    - The en-US label names one tile ("Your images") and then explains it ("wallpapers that you have saved"); the Russian «и» makes it two separate categories.
-- `newtab-widget-lists-change-list` — `browser/browser/newtab/newtab.ftl` — "Change list" (switch which list is shown) rendered as "Изменить список" (edit the list).
-    - Current: `Изменить список`
-    - Source: `aria-label: Change list title: Change list`
-    - Suggest: `Сменить список`
-    - The developer comment states "Change" is a verb meaning the button switches which list is shown; «Изменить список» means to modify the list's contents.
-- _…and 192 more; see `state/` for the full list._
+- _…and 201 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -555,6 +595,11 @@ _Also listed under their own category below._
     - Current: `{ $maxUsage } ГБ VPN, обновлён`
     - Source: `{ $maxUsage } GB of VPN, refreshed and ready to go`
     - Suggest: `обновлены`
+- `ipprotection-feature-introduction-description-inclusions` — `browser/browser/ipProtection.ftl` — Missing diaeresis in "своё"/"определённых".
+    - Current: `свое местоположение`
+    - Source: `Help hide your location for <a data-l10n-name="learn-more-vpn">extra privacy</a> as you browse. Set the VPN on or off for certain sites.`
+    - Suggest: `своё местоположение`
+    - Russian spelling requires ё in "своё"; the locale otherwise uses ё consistently.
 - `ipprotection-locations-subview-promo` — `browser/browser/ipProtection.ftl` — ipprotection-locations-subview-promo (.message) and ip-protection-vpn-upgrade-link-1 (.description) — ipProtection.ftl — the ungrammatical на до 5 устройствах → Suggest: не более чем на 5 устройствах
     - Current: `на до 5 устройствах`
     - Source: `heading: Take protection further with { -mozilla-vpn-brand-name } message: Choose from 300+ locations and protect all your apps on up to 5 devices.`
@@ -629,6 +674,11 @@ _Also listed under their own category below._
 - `permissions-site-notification-desc` — `browser/browser/preferences/permissions.ftl` — Missing comma before a subordinate clause or participial phrase: permissions-site-notification-desc, -location-desc, -xr-desc, -camera-desc, -microphone-desc (permissions.ftl, 5 strings; the speaker and cookie siblings do it correctly); startup-cache-dialog-title2 (aboutSupport.ftl); about-logins-copy-password-os-auth-dialog-message-win and contextual-manager-passwords-copy-password-os-auth-dialo…
     - Source: `The following websites have requested to send you notifications. You can specify which websites are allowed to send you notifications. You can also block new requests asking to allow notifications.`
     - Suggest: `-location-desc`
+- `autofill-payment-methods-save-security-codes-checkbox` — `browser/browser/preferences/preferences.ftl` — Checkbox label rendered as an imperative instead of the infinitive used for settings labels.
+    - Current: `label: Сохраните коды безопасности`
+    - Source: `accesskey: c label: Save security codes`
+    - Suggest: `label: Сохранять коды безопасности`
+    - en-US "Save security codes" is a preference checkbox label; Russian settings use the infinitive "Сохранять", not the imperative "Сохраните".
 - `cookie-banner-blocker-checkbox-label` — `browser/browser/preferences/preferences.ftl` — cookie-banner-blocker-checkbox-label (.label) and cookie-banner-blocker-header — preferences.ftl — prepositional instead of genitive after от, wrong number, and куки left undeclined
     - Source: `label: Automatically refuse cookie banners`
     - Suggest: `.label`
@@ -679,18 +729,20 @@ _Also listed under their own category below._
     - Current: `Переместить вкладки в`
     - Source: `accesskey: v label: {$tabCount ->} [1] Move Tab to [other] Move { $tabCount } Tabs to`
     - Suggest: `вкладку`
-- `tab-context-badge-new` — `browser/browser/tabbrowser.ftl` — wrong gender vs every other "New" badge in scope: Новый → Новое
-    - Current: `Новый`
-    - Source: `New`
-    - Suggest: `Новое`
-- `tab-group-editor-name-field` — `browser/browser/tabbrowser.ftl` — Шоппинг → Шопинг (orthographic norm)
-    - Current: `Шоппинг`
-    - Source: `placeholder: Example: Shopping`
-    - Suggest: `Шопинг`
-- _…and 76 more; see `state/` for the full list._
+- _…and 79 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
+- `restart-required-multiple-instances-answer` — `browser/browser/aboutRestartRequired.ftl` — "instances" transliterated as "инстанс", inconsistent with "экземпляры" used in the sibling string.
+    - Current: `Если один профиль или инстанс обновляются`
+    - Source: `If one profile or instance updates while another is still open, the open one can be left on an older version. Restarting keeps everything on the same version.`
+    - Suggest: `Если один профиль или экземпляр обновляется`
+    - restart-required-multiple-instances-question renders "instances" as "экземплярами"; the jargon "инстанс" in the same surface is inconsistent terminology.
+- `restart-required-single-instance-question` — `browser/browser/aboutRestartRequired.ftl` — "instances" transliterated as "инстансов", inconsistent with "экземпляры" used elsewhere in the same file.
+    - Current: `Я не использую несколько профилей или инстансов.`
+    - Source: `I don’t use multiple profiles or instances. Why is this happening?`
+    - Suggest: `Я не использую несколько профилей или экземпляров.`
+    - The same surface renders "instances" as "экземплярами" in restart-required-multiple-instances-question; the jargon "инстансов" is inconsistent.
 - `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — `backup-file-moz-browser-restore-step-2-1` quotes “Восстановить ваши данные” but the string it names, `restore-from-backup-header`, reads “Восстановите свои данные”
     - Current: `Нажмите «Восстановить ваши данные» и выберите этот файл`
     - Source: `Click “Restore your data” and select this file`
@@ -855,12 +907,7 @@ _Also listed under their own category below._
     - Source: ``Original variables name mapping in the debugger is disabled. Evaluation results might not be accurate. Click the `Show original variables` checkbox in the debugger scopes panel to enable.``
 - `webconsole.input.selector.tooltip` — `devtools/shared/webconsole.properties` — evaluationNotifcation.noOriginalVariableMapping.msg and webconsole.input.selector.tooltip use оценка (assessment) where JS evaluation is вычисление everywhere else — the only two occurrences in all of devtools
     - Source: `Select evaluation context`
-- `webconsole.logsFilterButton.label` — `devtools/shared/webconsole.properties` — webconsole.logsFilterButton.label singular Лог vs plural siblings; netmonitor.headers.status Состояние vs Статус in adjacent labels; netmonitor.toolbar.resetColumns Восстановить колонки vs Сбросить сортировку/столбца; netmonitor.ws.context.copyFrameAsHex breaks the Копировать как X pattern
-    - Source: `Logs`
-    - Suggest: `Лог`
-- `webconsole.message.commands.startTracingToProfiler` — `devtools/shared/webconsole.properties` — webconsole.message.commands.startTracingToProfiler names the same panel twice, once English and once transliterated
-    - Source: `Started tracing to the Profiler. The traces will be displayed in the profiler on stop.`
-- _…and 7 more; see `state/` for the full list._
+- _…and 9 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -879,7 +926,7 @@ _Also listed under their own category below._
     - Current: `Выполняется резервное копирование...`
     - Source: `Backup in progress…`
     - Suggest: `…`
-    - The tree uses … 392 times against 5 ASCII runs.
+    - The tree uses … 390 times against 5 ASCII runs.
 - `contextual-manager-password-login-line-with-alert` — `browser/browser/contextual-manager.ftl` — (предупреждение) lowercase while the origin/username variants capitalize it
     - Source: `aria-label: Copy password (Warning) title: Copy password (Warning)`
 - `sidebar-callout-survey-features-question` — `browser/browser/featureCallout.ftl` — same
@@ -915,7 +962,7 @@ _Also listed under their own category below._
     - Current: `Отключает команды отправки отзывов в меню Справка («Отправить отзыв...» и «Сообщить о поддельном сайте...»).`
     - Source: `Disable commands to send feedback from the Help menu (Submit Feedback and Report Deceptive Site).`
     - Suggest: `…`
-    - The tree uses … 392 times against 5 ASCII runs.
+    - The tree uses … 390 times against 5 ASCII runs.
 - `policy-GenerativeAI` — `browser/browser/policies/policies-descriptions.ftl` — Trailing period added or dropped vs en-US: dropped in policy-GenerativeAI, policy-LegacyProfiles, multi-profile-spotlight-body, set-default-menu-message-split-layout-subtitle ([macos]), security-privacy-issue-warning-ech2, blocked-mismatched-version, menu-help-share-ideas (.label, missing the source's ellipsis), permission-dialog-set-change-app-link; added in browsing-use-full-keyboard-navigation…
     - Source: `Configure generative AI features.`
 - `policy-LegacyProfiles` — `browser/browser/policies/policies-descriptions.ftl` — Trailing period added or dropped vs en-US: dropped in policy-GenerativeAI, policy-LegacyProfiles, multi-profile-spotlight-body, set-default-menu-message-split-layout-subtitle ([macos]), security-privacy-issue-warning-ech2, blocked-mismatched-version, menu-help-share-ideas (.label, missing the source's ellipsis), permission-dialog-set-change-app-link; added in browsing-use-full-keyboard-navigation…
@@ -943,7 +990,7 @@ _Also listed under their own category below._
     - Current: `Вы ничего не синхронизируете... пока. Запустите синхронизацию, чтобы получить все ваши данные на всех ваших устройствах.`
     - Source: `description: You aren’t syncing anything… yet. Start syncing to get all of your data on all your devices. label: Manage synced data`
     - Suggest: `…`
-    - The tree uses … 392 times against 5 ASCII runs.
+    - The tree uses … 390 times against 5 ASCII runs.
 - `protections-vpn-header-content-subscribed` — `browser/browser/protections.ftl` — Stray space before punctuation: protections-vpn-header-content-subscribed (Apple App Store .), extension-controlled-enable and settings-translations-subpage-never-translate-sites-description (preferences.ftl), fp-certerror-not-yet-valid-why-dangerous-body (certError.ftl), PEAttSelNoBar and PEAttSelUnexpected (css.properties), networkMenu.ws.summary.framesCount2 and charts.totalSecondsNonBlocking…
     - Source: `{$count ->} [other] Using the { -mozilla-vpn-brand-name } encrypts all your traffic and hides your location — on up to { $count } devices. Get the most from your subscription — add it from the <a data-l10n-name="playsto…`
     - Suggest: `Apple App Store .`
@@ -1014,7 +1061,7 @@ _Also listed under their own category below._
     - Current: `Начните ввод...`
     - Source: `aria-label: Text Editor default-content: Start typing…`
     - Suggest: `…`
-    - The tree uses … 392 times against 5 ASCII runs.
+    - The tree uses … 390 times against 5 ASCII runs.
 - `pdfjs-print-progress-percent` — `toolkit/toolkit/pdfviewer/viewer.ftl` — Missing space between number and unit: timer.end (mobile/android/chrome/browser.properties), console-timer-end (geckoViewConsole.ftl), throttling.profile.label (network-throttling.properties — spaced in …description, unspaced here), newtab-wallpaper-error-max-file-size ({ $filesize }МБ), printprogresspercent (browser/pdfviewer/viewer.properties — space added before %), pdfjs-print-progress-percen…
     - Source: `{ $progress }%`
 
