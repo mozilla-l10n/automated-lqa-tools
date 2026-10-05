@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
-| **Previous run** | 2026-09-21 @ `e8bad3200f89` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
+| **Previous run** | 2026-09-28 @ `65850771ebc2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 40 of 2,775 |
+| **Strings reviewed this run** | 4 of 2,779 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for id: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `mozac_browser_errorpages_archive_wayback_machine` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-in/strings.xml` — The proper name of the Internet Archive service "Wayback Machine" was translated.
-    - Current: `Mesin Wayback`
-    - Source: `Wayback Machine`
-    - Suggest: `Wayback Machine`
-    - The developer comment states this is the name of the Internet Archive service; product/service names are not translated.
-- `preferences_category_sync_controls` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — Category header "Sync" rendered as the imperative verb "Sinkronkan" instead of a noun.
-    - Current: `Sinkronkan`
-    - Source: `Sync`
-    - Suggest: `Sinkronisasi`
-    - The comment says Sync is short for "Synchronization", i.e. a noun heading a preference category, not a command to synchronize.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -54,7 +45,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 45 |
-| Strings | 2,775 |
+| Strings | 2,779 |
 | Missing strings | 8 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |

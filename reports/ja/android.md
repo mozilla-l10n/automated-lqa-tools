@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
-| **Previous run** | 2026-09-21 @ `e8bad3200f89` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
+| **Previous run** | 2026-09-28 @ `65850771ebc2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 41 of 2,783 |
+| **Strings reviewed this run** | 0 of 2,783 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for ja: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `mozac_feature_listentopage_notification_playback_speed_0_5` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-ja/strings.xml` — "half speed" rendered as "0.5 倍" is fine, but the sibling speed strings use "%" phrasing; however the real issue is the inconsistent construction
-    - Current: `再生速度を 0.5 倍に設定します`
-    - Source: `Playback set to half speed`
-    - Suggest: `再生速度を 0.5 倍 (半分) に設定します`
-    - Placeholder finding
-- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — "your data" is rendered as "ユーザーデータ" (user data) and "Extend" as "展開" (expand/unfold) instead of extending functionality.
-    - Current: `開いているタブのユーザーデータへアクセスするため、開発ツールを展開します。`
-    - Source: `Extend developer tools to access your data in open tabs.`
-    - Suggest: `開いているタブ内のあなたのデータにアクセスできるよう、開発ツールを拡張します。`
-    - The source says "Extend developer tools to access your data in open tabs." "展開" means to unfold/deploy, not to extend capabilities; "拡張" is the established term. Also "your data" refers to the user's own data, not generic "user data".
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -55,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 45 |
 | Strings | 2,783 |
-| Missing strings | 0 |
+| Missing strings | 4 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -72,7 +63,11 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**4 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — 4
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 

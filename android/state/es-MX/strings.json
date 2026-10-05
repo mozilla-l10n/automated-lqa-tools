@@ -478,8 +478,13 @@
   "mozac_feature_ipprotection_unavaliable_dialog_title": "d0b91f58 1685cfd5"
  },
  "mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml": {
+  "mozac_feature_listentopage_audio": "7cd050a7 7cd050a7 f0b46f05",
+  "mozac_feature_listentopage_close": "6de89233 0e7c6115 7d27781c",
+  "mozac_feature_listentopage_forward_30_sec": "1905a371 dcce7739 8a4ffa91",
   "mozac_feature_listentopage_notification_skip_back": "18c794a7 c86fdccf d6aaf6cd",
-  "mozac_feature_listentopage_notification_skip_forward": "94d3afac acdd2528 520ab3e3"
+  "mozac_feature_listentopage_notification_skip_forward": "94d3afac acdd2528 520ab3e3",
+  "mozac_feature_listentopage_pause": "a7fde656 c38c54ba e06f822f",
+  "mozac_feature_listentopage_play": "84ad40ed 7c46aa47 e4c30b48"
  },
  "mozilla-mobile/android-components/components/feature/media/src/main/res/values/strings.xml": {
   "mozac_feature_media_notification_action_next": "ea1cad80 1badbe57",
@@ -2217,6 +2222,7 @@
   "search_widget_voice": "01b5c3d4 4d7d5ede",
   "select_bookmark_search_button_content_description": "eecdf718 a4a106d5",
   "send_to_devices_bottom_sheet_close_content_description": "b70e4044 ed375288",
+  "send_to_devices_device_selected_content_description": "be8de550 d6785bd0 c7a02908",
   "sent_from_firefox_template": "cd4bb26c 0e96522f",
   "sent_from_firefox_template_short": "658dc941 a8c0c8fd",
   "settings": "b41f75cf 58def853",
@@ -2321,9 +2327,11 @@
   "sync_send_tab_error_auth_button": "6695d355 e485cb58 ef393b17",
   "sync_send_tab_error_auth_remove_account": "caad0e5f 69b399e5 89d363e5",
   "sync_send_tab_error_auth_title": "9bac2b4a f2d129c1 c3549ab7",
+  "sync_send_tab_error_connection_button": "74f1c6f2 67f53444 5105ddc4",
   "sync_send_tab_error_connection_text": "5b7c36da 487315a9 d39a4c96",
   "sync_send_tab_error_connection_title": "1840aa7a 5f5d0782 dccf081d",
   "sync_send_to_all": "03ca3b02 883c49e3",
+  "sync_send_to_selected_devices": "f51042b0 3f7ab45b 07371f78",
   "sync_sent_tab_error_snackbar": "7f194d8a e375b7fc",
   "sync_sent_tab_error_snackbar_action": "7161b056 b49d89ce",
   "sync_sent_tab_snackbar_2": "afd47dfd 0899c790",

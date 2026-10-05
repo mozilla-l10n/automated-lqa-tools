@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
-| **Previous run** | 2026-09-21 @ `e8bad3200f89` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
+| **Previous run** | 2026-09-28 @ `65850771ebc2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 9 of 2,752 |
+| **Strings reviewed this run** | 35 of 2,787 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for nl: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `mozac_browser_errorpages_archive_description` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-nl/strings.xml` — Untranslated English article "the" left in the Dutch sentence before "Internet Archive".
-    - Current: `vanuit %2$s van the Internet Archive`
-    - Source: `%1$s can look for an earlier version of this page from the Internet Archive’s %2$s.`
-    - Suggest: `vanuit %2$s van het Internet Archive`
-    - The source reads "the Internet Archive’s %2$s"; the Dutch keeps the English article "the" instead of the Dutch "het", which is a grammar/spelling error.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -38,12 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `sync_no_devices_available_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — Wrong article gender with ‘account’ (het account) and ‘Alle’ instead of ‘Alle apparaten die … ’ mismatch.
-    - Current: `met deze account`
-    - Suggest: `met dit account`
-    - In Dutch (and in Mozilla nl terminology) ‘account’ is a het-woord: ‘dit account’, not ‘deze account’.
+_Nothing retired._
 
 ---
 
@@ -52,8 +45,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 45 |
-| Strings | 2,752 |
-| Missing strings | 31 |
+| Strings | 2,787 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -70,12 +63,7 @@ _Nothing to re-read._
 
 ### Completeness
 
-**31 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-nl/strings.xml` — 16
-- `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — 15
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -87,7 +75,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | apostrophe | `typographic` 46 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `en` 6 | **en** |
-| register | `formal` 427 | **formal** |
+| register | `formal` 435 | **formal** |
 
 ---
 

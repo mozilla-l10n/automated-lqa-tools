@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
-| **Previous run** | 2026-09-21 @ `e8bad3200f89` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
+| **Previous run** | 2026-09-28 @ `65850771ebc2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 40 of 2,783 |
+| **Strings reviewed this run** | 11 of 2,787 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,7 +18,15 @@ Also for fr: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (5)
+### 🆕 New findings (1)
+
+- `sign_out_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Wrong preposition: "se déconnecter de votre compte" should be "se déconnecter de son compte" or rather "Se déconnecter du compte"; the possessive conflicts with the reflexive pronoun.
+    - Current: `Se déconnecter de votre compte ?`
+    - Source: `Sign out of your account?`
+    - Suggest: `Vous déconnecter de votre compte ?`
+    - In French, "se déconnecter" with the infinitive keeps the third-person reflexive; combined with "votre compte" addressed to the user, the correct form is "Vous déconnecter de votre compte ?".
+
+### ✅ Fixed since the last run (5)
 
 - `mozac_feature_listentopage_notification_playback_speed_0_25` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — `mozac_feature_listentopage_notification_playback_speed_0_25` has placeholders %1$i where the source has none
     - Current: `Vitesse de lecture 75 % inférieure`
@@ -41,10 +49,6 @@ Also for fr: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
     - Source: `Playback rate 75 percent faster`
     - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
 
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
-
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
 _Nothing withdrawn._
@@ -53,16 +57,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (2)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `history_older` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Older" is rendered as "Avant le mois dernier" (before last month), which states a specific period not in the source.
-    - Current: `Avant le mois dernier`
-    - Suggest: `Plus ancien`
-    - The header groups history older than the last month; the source is the generic "Older", and the French invents an explicit time frame.
-- `sync_no_devices_available_description` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Any devices" (i.e. tout appareil qui sera connecté) is translated as "Tous les appareils", changing the meaning in a context where no devices exist.
-    - Current: `Tous les appareils connectés et synchronisés avec ce compte apparaîtront ici.`
-    - Suggest: `Tout appareil connecté et synchronisé avec ce compte apparaîtra ici.`
-    - The English "Any devices signed in and syncing to this account will appear here" is a conditional/generic statement, shown precisely when there are no devices; "Tous les appareils" implies existing devices.
+_Nothing retired._
 
 ---
 
@@ -71,7 +68,7 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 45 |
-| Strings | 2,783 |
+| Strings | 2,787 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -79,7 +76,7 @@ _Nothing to re-read._
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
-| printf placeholder mismatches | 5 |
+| printf placeholder mismatches | 0 |
 | Plural / select selector mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 0 |
@@ -101,8 +98,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | apostrophe | `typographic` 693 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 2 | **em** |
-| nbsp | `total` 210, `before-punctuation` 142, `space-before-punctuation` 64 | _mixed_ |
-| register | `formal` 440 | **formal** |
+| nbsp | `total` 211, `before-punctuation` 143, `space-before-punctuation` 64 | _mixed_ |
+| register | `formal` 442 | **formal** |
 
 ---
 
@@ -112,38 +109,19 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (80)
+## 3. Open findings (76)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 5 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 53 |
-| 3 | Degraded language (grammar, spelling, terminology) | 18 |
+| 3 | Degraded language (grammar, spelling, terminology) | 19 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
 
-- `mozac_feature_listentopage_notification_playback_speed_0_25` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — `mozac_feature_listentopage_notification_playback_speed_0_25` has placeholders %1$i where the source has none
-    - Current: `Vitesse de lecture 75 % inférieure`
-    - Source: `Playback rate 75 percent slower`
-    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
-- `mozac_feature_listentopage_notification_playback_speed_0_75` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — `mozac_feature_listentopage_notification_playback_speed_0_75` has placeholders %1$i where the source has none
-    - Current: `Vitesse de lecture 25 % inférieure`
-    - Source: `Playback rate 25 percent slower`
-    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
-- `mozac_feature_listentopage_notification_playback_speed_1_25` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — `mozac_feature_listentopage_notification_playback_speed_1_25` has placeholders %1$p where the source has none
-    - Current: `Vitesse de lecture 25 % plus rapide`
-    - Source: `Playback rate 25 percent faster`
-    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
-- `mozac_feature_listentopage_notification_playback_speed_1_5` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — `mozac_feature_listentopage_notification_playback_speed_1_5` has placeholders %1$p where the source has none
-    - Current: `Vitesse de lecture 50 % plus rapide`
-    - Source: `Playback rate 50 percent faster`
-    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
-- `mozac_feature_listentopage_notification_playback_speed_1_75` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — `mozac_feature_listentopage_notification_playback_speed_1_75` has placeholders %1$p where the source has none
-    - Current: `Vitesse de lecture 75 % plus rapide`
-    - Source: `Playback rate 75 percent faster`
-    - The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.
+_Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -465,6 +443,11 @@ _Nothing reported._
     - Source: `Enables fingerprinting protection to stop suspected fingerprinters.`
     - Suggest: `Active la protection`
     - The developer comment says this is a description of fingerprinters blocked by the protection; the source "Enables fingerprinting protection" is descriptive, not an imperative, matching the other description strings in the same group ("Efface…", "Limite…", "Empêche…").
+- `sign_out_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Wrong preposition: "se déconnecter de votre compte" should be "se déconnecter de son compte" or rather "Se déconnecter du compte"; the possessive conflicts with the reflexive pronoun.
+    - Current: `Se déconnecter de votre compte ?`
+    - Source: `Sign out of your account?`
+    - Suggest: `Vous déconnecter de votre compte ?`
+    - In French, "se déconnecter" with the infinitive keeps the third-person reflexive; combined with "votre compte" addressed to the user, the correct form is "Vous déconnecter de votre compte ?".
 
 ### D. Terminology, register & consistency
 
@@ -552,6 +535,10 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (5)
 
-_Nothing fixed yet._
+- `mozac_feature_listentopage_notification_playback_speed_0_25` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — fixed 2026-10-05
+- `mozac_feature_listentopage_notification_playback_speed_0_75` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — fixed 2026-10-05
+- `mozac_feature_listentopage_notification_playback_speed_1_25` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — fixed 2026-10-05
+- `mozac_feature_listentopage_notification_playback_speed_1_5` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — fixed 2026-10-05
+- `mozac_feature_listentopage_notification_playback_speed_1_75` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — fixed 2026-10-05
