@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
-| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
+| **Previous run** | 2026-09-28 @ `92e0a4895124` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 90 of 15,660 |
+| **Strings reviewed this run** | 55 of 15,714 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -20,33 +20,30 @@ Also for sl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ### 🆕 New findings (4)
 
-- `about-pdf-feature-organize-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — "Organize pages" translated as "Organizirajte dokumente" (organize documents) instead of pages.
-    - Current: `Organizirajte dokumente`
-    - Source: `Organize pages`
-    - Suggest: `Organizirajte strani`
-    - The en-US refers to pages within a PDF, not documents; the description in the same feature block also talks about reordering pages.
-- `about-pdf-feature-organize-description` — `toolkit/toolkit/about/aboutPDF.ftl` — "export pages" rendered as "posamič izvozite" (export individually), adding a claim not in the source.
-    - Current: `jih odstranite, združite ali posamič izvozite`
-    - Source: `Reorder, remove, merge, and export pages.`
-    - Suggest: `jih odstranite, združite in izvozite`
-    - The source says "Reorder, remove, merge, and export pages" with no statement that export happens individually.
-- `about-pdf-feature-comments-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — "Add notes" rendered as "Pišite opombe" (write notes) instead of adding notes.
-    - Current: `Pišite opombe`
-    - Source: `Add notes`
-    - Suggest: `Dodajte opombe`
-    - The source heading is "Add notes"; the verb "dodajte" is the established rendering of "add" in the sibling strings.
-- `speech-recognition-model-download-message` — `browser/browser/permissions.ftl` — The Slovenian drops "when you continue" and mangles "the audio never leaves your device" into a relative clause saying the device never leaves the audio.
-    - Current: `V { -brand-short-name } prepoznavanje govora poteka na napravi, ki je zvok v nobenem trenutku ne zapusti. V ta namen bo na napravo preneslo ~{ $sizeMB } MB podatkov.`
-    - Source: `{ -brand-short-name } runs speech recognition locally, so the audio never leaves your device. To set this up, a ~{ $sizeMB } MB download will start when you continue.`
-    - Suggest: `V { -brand-short-name } prepoznavanje govora poteka krajevno, zato zvok nikoli ne zapusti vaše naprave. Za nastavitev se bo ob nadaljevanju začel prenos velikosti ~{ $sizeMB } MB.`
-    - The en-US says the download will start when you continue; the target states it will simply be downloaded, omitting the condition, and the second sentence also lacks a subject ("bo na napravo preneslo").
+- `about-pdf-feature-annotate-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — "Mark up PDFs" is rendered as "Označujte dokumente", dropping the PDF qualifier used consistently in the surrounding strings.
+    - Current: `Označujte dokumente`
+    - Source: `Mark up PDFs`
+    - Suggest: `Označujte dokumente PDF`
+    - The en-US explicitly says PDFs; other strings in the same file keep "PDF" (e.g. "datoteke PDF", "dokumentih PDF").
+- `about-pdf-feature-presentation-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — "Present PDFs fullscreen" is rendered without the PDF qualifier.
+    - Current: `Predstavite dokumente v celozaslonskem načinu`
+    - Source: `Present PDFs fullscreen`
+    - Suggest: `Predstavite dokumente PDF v celozaslonskem načinu`
+    - The en-US says PDFs; the locale elsewhere keeps "PDF" with "dokumenti"/"datoteke".
+- `appmenu-fxa-sign-in-promo-heading2` — `browser/browser/appmenu.ftl` — "everywhere" is translated as "kjerkoli" (anywhere) instead of "povsod" (everywhere).
+    - Current: `Sinhronizirajte svoje podatke kjerkoli`
+    - Source: `Sync your data everywhere`
+    - Suggest: `Sinhronizirajte svoje podatke povsod`
+    - en-US "Sync your data everywhere" means across all devices; "kjerkoli" means "anywhere", shifting the meaning.
+- `password-rules-email-description2` — `browser/browser/backupSettings.ftl` — Missing predicate agreement/copula wording: "ni e-poštni naslov" should use the genitive after the negated copula.
+    - Current: `ni e-poštni naslov`
+    - Source: `Not an email address`
+    - Suggest: `ni e-poštni naslov (npr. "Ni e-poštni naslov" → "Ni e-poštnega naslova")`
+    - In Slovenian the negated 'biti' requires the genitive: 'ni e-poštnega naslova'. Also, the string begins a UI message and should be capitalized like the en-US 'Not an email address'.
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `main-context-menu-media-video-leave-fullscreen` — `browser/browser/browserContext.ftl` — Access key `j` of `main-context-menu-media-video-leave-fullscreen` is not present in its label
-    - Current: `j`
-    - Source: `accesskey: u label: Exit Full Screen`
-    - The label is “Izhod iz celozaslonskega načina”. An access key not in the label cannot be underlined and is unreachable by keyboard.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -67,8 +64,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 326 |
-| Strings | 15,660 |
-| Missing strings | 645 |
+| Strings | 15,714 |
+| Missing strings | 641 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -85,20 +82,20 @@ _Nothing retired._
 
 ### Completeness
 
-**645 strings** are not translated yet, concentrated in:
+**641 strings** are not translated yet, concentrated in:
 
-- `browser/browser/aiWindow.ftl` — 139
+- `browser/browser/aiWindow.ftl` — 140
 - `browser/browser/aiWindowContent.ftl` — 67
 - `browser/browser/ipProtection.ftl` — 51
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 48
 - `dom/chrome/dom/dom.properties` — 48
+- `browser/browser/newtab/newtab.ftl` — 37
 - `browser/browser/aiFeatures.ftl` — 27
 - `dom/chrome/security/security.properties` — 25
-- `browser/browser/newtab/newtab.ftl` — 21
-- `browser/browser/preferences/preferences.ftl` — 19
-- `browser/browser/aboutRestartRequired.ftl` — 18
-- `devtools/client/debugger.properties` — 17
-- `toolkit/toolkit/about/aboutGlean.ftl` — 14
+- `browser/browser/preferences/preferences.ftl` — 20
+- `toolkit/toolkit/about/aboutGlean.ftl` — 16
+- `devtools/client/debugger.properties` — 16
+- `toolkit/toolkit/about/aboutWebrtc.ftl` — 14
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -110,10 +107,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 267, `straight-double` 258, `curly-single` 50, `guillemet` 5 | _mixed_ |
 | apostrophe | `typographic` 50, `straight` 51 | _mixed_ |
-| ellipsis | `char` 354, `ascii` 33 | **char** |
+| ellipsis | `char` 355, `ascii` 33 | **char** |
 | dash | `em` 13, `en` 118 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 8 | _mixed_ |
-| register | `informal` 8, `formal` 519 | **formal** |
+| register | `informal` 8, `formal` 521 | **formal** |
 
 ---
 
@@ -124,7 +121,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (46)
+## 3. Open findings (50)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -139,8 +136,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 14 |
-| 3 | Degraded language (grammar, spelling, terminology) | 25 |
+| 2 | Wrong content (says something other than the English) | 15 |
+| 3 | Degraded language (grammar, spelling, terminology) | 28 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
 ### A. Functional, markup, variables & plurals
@@ -149,6 +146,11 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `appmenu-fxa-sign-in-promo-heading2` — `browser/browser/appmenu.ftl` — "everywhere" is translated as "kjerkoli" (anywhere) instead of "povsod" (everywhere).
+    - Current: `Sinhronizirajte svoje podatke kjerkoli`
+    - Source: `Sync your data everywhere`
+    - Suggest: `Sinhronizirajte svoje podatke povsod`
+    - en-US "Sync your data everywhere" means across all devices; "kjerkoli" means "anywhere", shifting the meaning.
 - `refresh-reinstalled-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — "you’ve reinstalled" rendered impersonally as "je nameščen na novo" (it has been newly installed), dropping the user as agent.
     - Current: `Kaže, da je { -brand-short-name } nameščen na novo.`
     - Source: `Looks like you’ve reinstalled { -brand-short-name }. Want us to clean it up for a fresh, like-new experience?`
@@ -189,6 +191,11 @@ _Nothing in this category._
     - Source: `title: List and view stylesheets in the debugger`
     - Suggest: `Prikaži seznam slogovnih predlog in si jih oglej v razhroščevalniku`
     - The en-US says "List and view stylesheets"; the Slovenian only mentions listing them.
+- `about-pdf-feature-annotate-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — "Mark up PDFs" is rendered as "Označujte dokumente", dropping the PDF qualifier used consistently in the surrounding strings.
+    - Current: `Označujte dokumente`
+    - Source: `Mark up PDFs`
+    - Suggest: `Označujte dokumente PDF`
+    - The en-US explicitly says PDFs; other strings in the same file keep "PDF" (e.g. "datoteke PDF", "dokumentih PDF").
 - `about-pdf-feature-comments-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — "Add notes" rendered as "Pišite opombe" (write notes) instead of adding notes.
     - Current: `Pišite opombe`
     - Source: `Add notes`
@@ -204,6 +211,11 @@ _Nothing in this category._
     - Source: `Organize pages`
     - Suggest: `Organizirajte strani`
     - The en-US refers to pages within a PDF, not documents; the description in the same feature block also talks about reordering pages.
+- `about-pdf-feature-presentation-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — "Present PDFs fullscreen" is rendered without the PDF qualifier.
+    - Current: `Predstavite dokumente v celozaslonskem načinu`
+    - Source: `Present PDFs fullscreen`
+    - Suggest: `Predstavite dokumente PDF v celozaslonskem načinu`
+    - The en-US says PDFs; the locale elsewhere keeps "PDF" with "dokumenti"/"datoteke".
 - `support-remote-experiments-title` — `toolkit/toolkit/about/aboutSupport.ftl` — "Remote Experiments" (experiments delivered remotely) is rendered as "Poskusi na daljavo", which means experiments performed at a distance.
     - Current: `Poskusi na daljavo`
     - Source: `Remote Experiments`
@@ -212,6 +224,11 @@ _Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
+- `password-rules-email-description2` — `browser/browser/backupSettings.ftl` — Missing predicate agreement/copula wording: "ni e-poštni naslov" should use the genitive after the negated copula.
+    - Current: `ni e-poštni naslov`
+    - Source: `Not an email address`
+    - Suggest: `ni e-poštni naslov (npr. "Ni e-poštni naslov" → "Ni e-poštnega naslova")`
+    - In Slovenian the negated 'biti' requires the genitive: 'ni e-poštnega naslova'. Also, the string begins a UI message and should be capitalized like the en-US 'Not an email address'.
 - `content-sharing-modal-generic-error-2` — `browser/browser/contentSharing.ftl` — "Strani a deljenje…" → "Strani za deljenje…".
     - Source: `heading: Something went wrong message: We couldn’t create your shared page this time. Try again later.`
     - Suggest: `"Strani za deljenje…".`

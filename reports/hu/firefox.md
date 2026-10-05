@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
-| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
+| **Previous run** | 2026-09-28 @ `92e0a4895124` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 148 of 16,301 |
+| **Strings reviewed this run** | 56 of 16,355 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,48 +18,23 @@ Also for hu: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (8)
+### 🆕 New findings (3)
 
-- `contentanalysis-slow-agent-dialog-body-clipboard-copy` — `toolkit/toolkit/contentanalysis/contentanalysis.ftl` — "what you copied" was translated as "amit nyomtatott" (what you printed).
-    - Current: `amit nyomtatott`
-    - Source: `{ $agent } is reviewing what you copied against your organization’s data policies. This may take a moment.`
-    - Suggest: `amit másolt`
-    - The en-US string is about clipboard copy (see string id and source "what you copied"), not printing.
-- `about-pdf-features-intro` — `toolkit/toolkit/about/aboutPDF.ftl` — "private" rendered as "biztonságos" (secure).
-    - Current: `Egyszerű, ingyenes és biztonságos.`
-    - Source: `Read, mark up, and sign PDFs right where you browse. It’s simple, free, and private.`
-    - Suggest: `Egyszerű, ingyenes és privát.`
-    - The source claims the tools are private; the Hungarian claims they are secure, a different assertion about the product.
-- `restart-required-intro2` — `browser/browser/aboutRestartRequired.ftl` — "needs to finish an update. Restart to..." rendered as statements that the browser finishes the update and will restart itself, dropping the instruction to the user.
-    - Current: `A { -brand-short-name } befejezi a frissítést. Újraindul, hogy a dolgok biztonságosak és zökkenőmentesek legyenek.`
-    - Source: `{ -brand-short-name } needs to finish an update. Restart to keep things secure and smooth.`
-    - Suggest: `A { -brand-short-name }nak be kell fejeznie a frissítést. Indítsa újra, hogy a dolgok biztonságosak és zökkenőmentesek legyenek.`
-    - The en-US asks the user to restart ("Restart to keep things secure"); the Hungarian asserts that the browser finishes the update and restarts by itself, removing the call to action.
-- `about-private-browsing-private-window-redesign-subheader` — `browser/browser/aboutPrivateBrowsing.ftl` — "is designed to protect your privacy" rendered as an unconditional "protects your privacy".
-    - Current: `a beépített követés elleni védelmének köszönhetően megvédi a magánszféráját`
-    - Source: `{ -brand-short-name } is designed to protect your privacy as you browse, with built-in tracking protections. Closing this window erases its history, cookies, and site data to keep your browsing private from others who u…`
-    - Suggest: `úgy lett tervezve, hogy a beépített követés elleni védelemmel megvédje a magánszféráját böngészés közben`
-    - The en-US hedges with "is designed to protect your privacy as you browse"; the Hungarian states outright that it protects the user's privacy, a stronger promise than the source makes, and also drops "as you browse".
-- `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl` — Agreement error: "az eszköz többi felhasználói" should be singular-agreeing "a többi felhasználó".
-    - Current: `az eszköz többi felhasználói elől`
-    - Source: `Private Windows help keep your browsing private from others on this device. They don’t make you anonymous or clear all of your data.`
-    - Suggest: `az eszköz többi felhasználója elől`
-    - In Hungarian "többi" takes a singular noun; "többi felhasználói" is ungrammatical.
-- `about-private-browsing-spotlight-basics-malware-alerts` — `browser/browser/aboutPrivateBrowsing.ftl` — Missing object pronoun: "automatikusan értesíti" lacks the "Önt" object present in "alerts you".
-    - Current: `automatikusan értesíti a rosszindulatú és megtévesztő webhelyekről`
-    - Source: `{ -brand-short-name } automatically alerts you about malware and deceptive sites.`
-    - Suggest: `automatikusan értesíti Önt a rosszindulatú és megtévesztő webhelyekről`
-    - The en-US "alerts you" has an explicit object; without it the Hungarian sentence reads as if the sites are being notified.
-- `places-add-bookmark` — `browser/browser/places.ftl` — Singular "Add Bookmark…" is rendered as plural "Könyvjelzők hozzáadása…" (Add bookmarks).
-    - Current: `Könyvjelzők hozzáadása…`
-    - Source: `accesskey: k label: Add Bookmark…`
-    - Suggest: `Könyvjelző hozzáadása…`
-    - The en-US string adds a single bookmark; the Hungarian plural claims multiple bookmarks are added.
-- `newtab-clock-widget-menu-button2` — `browser/browser/newtab/newtab.ftl` — "Clock options" translated as "Órabeállítások" (clock settings) instead of options for the clock widget menu.
-    - Current: `Órabeállítások`
-    - Source: `aria-label: Clock options title: Clock options`
-    - Suggest: `Óra beállításai`
-    - The source is a menu button label "Clock options"; the compound "Órabeállítások" reads as hourly/clock-rate settings and does not convey the widget's options menu.
+- `restart-required-fix-answer` — `browser/browser/aboutRestartRequired.ftl` — "Follow our progress in Bugzilla bug 2072739" is rendered as "Follow the Bugzilla bug 2072739", dropping "our progress".
+    - Current: `Kövesse a Bugzilla 2072739-es számú hibáját.`
+    - Source: `Yes. We know this is disruptive, and we’re working on a fix to prevent it. Follow our progress in Bugzilla bug 2072739.`
+    - Suggest: `Kövesse nyomon az előrehaladásunkat a Bugzilla 2072739-es számú hibájában.`
+    - The en-US asks the user to follow the team's progress on the fix; the Hungarian only says to follow the bug.
+- `sync-syncing-across-devices-empty-state3` — `browser/browser/preferences/preferences.ftl` — "Choose what to sync on this device" is rendered in conditional mood as "what you would sync".
+    - Current: `Válassza ki, hogy mit szinkronizálna ezen az eszközön.`
+    - Source: `description: You aren’t syncing anything… yet. Choose what to sync on this device. label: Manage synced data`
+    - Suggest: `Válassza ki, hogy mit szinkronizáljon ezen az eszközön.`
+    - The source is an imperative instruction to choose what to sync; the conditional "szinkronizálna" changes the meaning.
+- `autocomplete-more-options` — `toolkit/toolkit/main-window/autocomplete.ftl` — "More options" translated as "További beállítások" (more settings) while the parallel string uses "lehetőségei" (options).
+    - Current: `További beállítások`
+    - Source: `More options`
+    - Suggest: `További lehetőségek`
+    - The tooltip opens an edit/delete action menu, not settings; the sibling string autocomplete-more-options-for-entry correctly uses "lehetőségei".
 
 ### ✅ Fixed since the last run (0)
 
@@ -84,8 +59,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 326 |
-| Strings | 16,301 |
-| Missing strings | 4 |
+| Strings | 16,355 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -102,12 +77,7 @@ _Nothing retired._
 
 ### Completeness
 
-**4 strings** are not translated yet, concentrated in:
-
-- `browser/browser/ipProtection.ftl` — 3
-- `browser/browser/aboutRestartRequired.ftl` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -117,7 +87,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `polish-double` 798, `straight-double` 33, `german-double` 2, `curly-single` 1 | **polish-double** |
 | apostrophe | `typographic` 1, `straight` 1 | _mixed_ |
-| ellipsis | `char` 387, `ascii` 4 | **char** |
+| ellipsis | `char` 391, `ascii` 4 | **char** |
 | dash | `em` 2, `en` 130 | **en** |
 | nbsp | `total` 6, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
@@ -129,7 +99,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (251)
+## 3. Open findings (254)
 
 > **Reads as a deliberate edit (5).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -164,8 +134,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 26 |
-| 2 | Wrong content (says something other than the English) | 118 |
-| 3 | Degraded language (grammar, spelling, terminology) | 78 |
+| 2 | Wrong content (says something other than the English) | 120 |
+| 3 | Degraded language (grammar, spelling, terminology) | 79 |
 | 4 | Cosmetic (typography, spacing) | 25 |
 
 ### A. Functional, markup, variables & plurals
@@ -478,6 +448,11 @@ _Also listed under their own category below._
     - Source: `{ -brand-short-name } is designed to protect your privacy as you browse, with built-in tracking protections. Closing this window erases its history, cookies, and site data to keep your browsing private from others who u…`
     - Suggest: `úgy lett tervezve, hogy a beépített követés elleni védelemmel megvédje a magánszféráját böngészés közben`
     - The en-US hedges with "is designed to protect your privacy as you browse"; the Hungarian states outright that it protects the user's privacy, a stronger promise than the source makes, and also drops "as you browse".
+- `restart-required-fix-answer` — `browser/browser/aboutRestartRequired.ftl` — "Follow our progress in Bugzilla bug 2072739" is rendered as "Follow the Bugzilla bug 2072739", dropping "our progress".
+    - Current: `Kövesse a Bugzilla 2072739-es számú hibáját.`
+    - Source: `Yes. We know this is disruptive, and we’re working on a fix to prevent it. Follow our progress in Bugzilla bug 2072739.`
+    - Suggest: `Kövesse nyomon az előrehaladásunkat a Bugzilla 2072739-es számú hibájában.`
+    - The en-US asks the user to follow the team's progress on the fix; the Hungarian only says to follow the bug.
 - `restart-required-intro2` — `browser/browser/aboutRestartRequired.ftl` — "needs to finish an update. Restart to..." rendered as statements that the browser finishes the update and will restart itself, dropping the instruction to the user.
     - Current: `A { -brand-short-name } befejezi a frissítést. Újraindul, hogy a dolgok biztonságosak és zökkenőmentesek legyenek.`
     - Source: `{ -brand-short-name } needs to finish an update. Restart to keep things secure and smooth.`
@@ -528,6 +503,11 @@ _Also listed under their own category below._
     - Source: `Post town`
     - Suggest: `Postaváros`
     - The comment marks this as secondary address information for GB/NO/SE — the town used for postal routing, not a postal facility ("postaállomás").
+- `sync-syncing-across-devices-empty-state3` — `browser/browser/preferences/preferences.ftl` — "Choose what to sync on this device" is rendered in conditional mood as "what you would sync".
+    - Current: `Válassza ki, hogy mit szinkronizálna ezen az eszközön.`
+    - Source: `description: You aren’t syncing anything… yet. Choose what to sync on this device. label: Manage synced data`
+    - Suggest: `Válassza ki, hogy mit szinkronizáljon ezen az eszközön.`
+    - The source is an imperative instruction to choose what to sync; the conditional "szinkronizálna" changes the meaning.
 - `fxa-menu-signed-out-title` — `browser/browser/sync.ftl` — "Sign in to sync" is rendered as "Sign in to Sync" treating sync as the product name, and the brand is inflected oddly.
     - Current: `Jelentkezzen be a Syncbe`
     - Source: `Sign in to sync`
@@ -1104,7 +1084,7 @@ _Also listed under their own category below._
     - Source: `Certificate nickname already in use.`
     - Suggest: `A tanúsítvány neve már használatban van.`
     - en-US: “Certificate nickname already in use.” As written the string is a dangling conditional clause, not a statement.
-- _…and 14 more; see `state/` for the full list._
+- _…and 15 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -1146,7 +1126,7 @@ _Also listed under their own category below._
 - `Strings.InfoText` — `browser/updater/updater.ini` — `Strings.InfoText` uses three dots where this locale uses …
     - Current: `A %MOZ_APP_DISPLAYNAME% telepíti a frissítéseket, és pár pillanat múlva elindul...`
     - Source: `%MOZ_APP_DISPLAYNAME% is installing your updates and will start in a few moments…`
-    - The tree uses … 387 times against 4 ASCII runs.
+    - The tree uses … 391 times against 4 ASCII runs.
 - `heading` — `dom/chrome/accessibility/AccessFu.properties` — “heading” is translated as “fejléc”, the same word used for “header”, collapsing two distinct roles.
     - Current: `heading = fejléc`
     - Source: `heading`
@@ -1171,15 +1151,15 @@ _Also listed under their own category below._
 - `crashreporter-button-details` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-button-details` uses three dots where this locale uses …
     - Current: `Részletek...`
     - Source: `Details…`
-    - The tree uses … 387 times against 4 ASCII runs.
+    - The tree uses … 391 times against 4 ASCII runs.
 - `crashreporter-resubmit-status` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-resubmit-status` uses three dots where this locale uses …
     - Current: `A korábban sikertelenül elküldött bejelentések újraküldése...`
     - Source: `Resending reports that previously failed to send…`
-    - The tree uses … 387 times against 4 ASCII runs.
+    - The tree uses … 391 times against 4 ASCII runs.
 - `crashreporter-submit-in-progress` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-submit-in-progress` uses three dots where this locale uses …
     - Current: `Bejelentés elküldése...`
     - Source: `Submitting your report…`
-    - The tree uses … 387 times against 4 ASCII runs.
+    - The tree uses … 391 times against 4 ASCII runs.
 - `about-webrtc-consecutive-frames` — `toolkit/toolkit/about/aboutWebrtc.ftl` — Video "frames" rendered as "keretek" (borders) instead of "képkockák" used elsewhere in the file.
     - Current: `Egymást követő keretek`
     - Source: `Consecutive Frames`

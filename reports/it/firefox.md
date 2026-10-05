@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
-| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
+| **Previous run** | 2026-09-28 @ `92e0a4895124` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 85 of 16,552 |
+| **Strings reviewed this run** | 54 of 16,584 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,38 +18,18 @@ Also for it: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (6)
+### 🆕 New findings (2)
 
-- `about-logging-preset-vpn-description` — `toolkit/toolkit/about/aboutLogging.ftl` — "Log modules" (verb + object: log the modules) rendered as the noun phrase "Moduli di registrazione".
-    - Current: `Moduli di registrazione per diagnosticare problemi con la VPN integrata (IP Protection).`
-    - Source: `Log modules to diagnose IP Protection (VPN) issues`
-    - Suggest: `Registra i moduli per diagnosticare problemi con IP Protection (VPN).`
-    - The en-US is an imperative describing the preset action ("Log modules to diagnose…"), not a noun phrase; also "IP Protection (VPN)" is reversed and expanded to "VPN integrata (IP Protection)".
-- `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl` — "help keep your browsing private" rendered as an absolute "impediscono" (prevent), dropping the hedge.
-    - Current: `Le finestre anonime impediscono agli altri utenti di questo dispositivo di vedere la tua attività di navigazione.`
-    - Source: `Private Windows help keep your browsing private from others on this device. They don’t make you anonymous or clear all of your data.`
-    - Suggest: `Le finestre anonime aiutano a nascondere la tua attività di navigazione agli altri utenti di questo dispositivo.`
-    - The source says Private Windows "help keep" browsing private; the Italian asserts they outright prevent other users from seeing the activity, a stronger promise than the product makes.
-- `about-private-browsing-spotlight-basics-strict-tracking` — `browser/browser/aboutPrivateBrowsing.ftl` — "stronger tracking protections" rendered as "più aggressiva" (more aggressive).
-    - Current: `per una protezione antitracciamento più aggressiva`
-    - Source: `Switch to Strict in settings for stronger tracking protections.`
-    - Suggest: `per una protezione antitracciamento più efficace`
-    - The source says the protection is stronger, not more aggressive; "aggressiva" carries a different connotation than en-US "stronger".
-- `restart-required-single-instance-answer-2` — `browser/browser/aboutRestartRequired.ftl` — The security claim is attached to the wrong subject and the sentence structure changes the meaning ("Riavviando { -brand-short-name }, continuerà..." implies the OS/browser continues).
-    - Current: `Riavviando { -brand-short-name }, continuerà a funzionare normalmente e in sicurezza.`
-    - Source: `This can happen during a long browsing session, or when your operating system updates { -brand-short-name }. Restarting keeps { -brand-short-name } secure and working normally.`
-    - Suggest: `Il riavvio consente a { -brand-short-name } di restare sicuro e di funzionare normalmente.`
-    - En-US: "Restarting keeps { -brand-short-name } secure and working normally." The Italian gerund construction leaves the subject of "continuerà" dangling and turns the statement into a promise that something will keep working, rather than that restarting keeps the browser secure.
-- `restart-required-fix-question` — `browser/browser/aboutRestartRequired.ftl` — "Is { -brand-short-name } working on a fix?" is rendered with the brand as the subject working on a fix, which is fine, but the question mark sentence loses "really"; main issue: brand name used as a company.
-    - Current: `{ -brand-short-name } sta lavorando a una soluzione?`
-    - Source: `This is really annoying! Is { -brand-short-name } working on a fix?`
-    - Suggest: `Il team di { -brand-short-name } sta lavorando a una soluzione?`
-    - Mirrors the en-US subject; reporting only if considered defective.
-- `newtab-stocks-search-hint` — `browser/browser/newtab/newtab.ftl` — "Search for symbols" is translated as "Cerca azioni" (search for stocks) instead of ticker symbols.
-    - Current: `Cerca azioni o aziende da aggiungere alla tua lista`
-    - Source: `Search for symbols or companies to add to your watchlist`
-    - Suggest: `Cerca simboli o aziende da aggiungere alla tua lista di controllo`
-    - En-US says "symbols or companies"; the sibling strings correctly render "symbol" as "simbolo" ("Cerca per nome o simbolo"), so "azioni" is inconsistent and drops the ticker-symbol meaning.
+- `newtab-stocks-widget-open-menu-button` — `browser/browser/newtab/newtab.ftl` — The Finance widget is called "Mercati finanziari" elsewhere, but here the menu button calls it "Azioni", creating an inconsistent widget name on the same surface.
+    - Current: `Apri menu per il widget Azioni`
+    - Source: `aria-label: Open stocks menu title: Open stocks menu`
+    - Suggest: `Apri menu per il widget Mercati finanziari`
+    - newtab-stocks-widget-menu-button2 and newtab-stocks-widget-title2 render the same widget as "Mercati finanziari"; using "Azioni" for the same widget's menu button is inconsistent (and "Azioni" is also ambiguous with "actions").
+- `urlbar-result-menu-remove-top-site` — `browser/browser/browser.ftl` — "Remove this top site" is rendered as "Rimuovi dai siti principali" (remove from top sites) instead of removing the site itself.
+    - Current: `Rimuovi dai siti principali`
+    - Source: `(value): Remove this top site accesskey: T`
+    - Suggest: `Rimuovi questo sito principale`
+    - The en-US action removes this top site entry; the Italian states removal from the top sites list, which changes the object of the action.
 
 ### ✅ Fixed since the last run (0)
 
@@ -74,9 +54,9 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 336 |
-| Strings | 16,552 |
+| Strings | 16,584 |
 | Missing strings | 0 |
-| Obsolete strings | 20 |
+| Obsolete strings | 2 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 10 |
 | Fluent / properties syntax errors | 0 |
@@ -117,10 +97,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 951, `straight-double` 25 | **curly-double** |
 | apostrophe | `typographic` 1753, `straight` 6 | **typographic** |
-| ellipsis | `char` 408 | **char** |
+| ellipsis | `char` 409 | **char** |
 | dash | `em` 51, `en` 17 | **em** |
 | nbsp | `total` 12, `before-punctuation` 4, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 720, `formal` 47 | **informal** |
+| register | `informal` 721, `formal` 47 | **informal** |
 
 ---
 
@@ -130,7 +110,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (16)
+## 3. Open findings (18)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -145,8 +125,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 5 |
-| 3 | Degraded language (grammar, spelling, terminology) | 9 |
+| 2 | Wrong content (says something other than the English) | 6 |
+| 3 | Degraded language (grammar, spelling, terminology) | 10 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
@@ -178,6 +158,11 @@ _Also listed under their own category below._
     - Source: `This can happen during a long browsing session, or when your operating system updates { -brand-short-name }. Restarting keeps { -brand-short-name } secure and working normally.`
     - Suggest: `Il riavvio consente a { -brand-short-name } di restare sicuro e di funzionare normalmente.`
     - En-US: "Restarting keeps { -brand-short-name } secure and working normally." The Italian gerund construction leaves the subject of "continuerà" dangling and turns the statement into a promise that something will keep working, rather than that restarting keeps the browser secure.
+- `urlbar-result-menu-remove-top-site` — `browser/browser/browser.ftl` — "Remove this top site" is rendered as "Rimuovi dai siti principali" (remove from top sites) instead of removing the site itself.
+    - Current: `Rimuovi dai siti principali`
+    - Source: `(value): Remove this top site accesskey: T`
+    - Suggest: `Rimuovi questo sito principale`
+    - The en-US action removes this top site entry; the Italian states removal from the top sites list, which changes the object of the action.
 - `newtab-search-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Search options" translated as "Impostazioni di ricerca" (search settings) instead of "Opzioni di ricerca".
     - Current: `Impostazioni di ricerca`
     - Source: `aria-label: Search options`
@@ -224,6 +209,11 @@ _Also listed under their own category below._
 
 ### D. Terminology, register & consistency
 
+- `newtab-stocks-widget-open-menu-button` — `browser/browser/newtab/newtab.ftl` — The Finance widget is called "Mercati finanziari" elsewhere, but here the menu button calls it "Azioni", creating an inconsistent widget name on the same surface.
+    - Current: `Apri menu per il widget Azioni`
+    - Source: `aria-label: Open stocks menu title: Open stocks menu`
+    - Suggest: `Apri menu per il widget Mercati finanziari`
+    - newtab-stocks-widget-menu-button2 and newtab-stocks-widget-title2 render the same widget as "Mercati finanziari"; using "Azioni" for the same widget's menu button is inconsistent (and "Azioni" is also ambiguous with "actions").
 - `newtab-wallpaper-firefox-hills-light` — `browser/browser/newtab/newtab.ftl` — "light hills" rendered as "colline chiare" here but "colline luminose" in the other light-hills strings.
     - Current: `Una volpe corre su colline chiare`
     - Source: `A fox running over light hills`

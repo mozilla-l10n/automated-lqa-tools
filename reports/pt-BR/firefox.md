@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
-| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
+| **Previous run** | 2026-09-28 @ `92e0a4895124` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 62 of 16,273 |
+| **Strings reviewed this run** | 83 of 16,355 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -20,21 +20,20 @@ Also for pt-BR: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ### 🆕 New findings (3)
 
-- `restart-required-unsaved-work-answer` — `browser/browser/aboutRestartRequired.ftl` — Verb form error: "irá reabri" should be "irá reabrir".
-    - Current: `O { -brand-short-name } irá reabri as abas`
-    - Source: `Possibly, and we know that’s frustrating. { -brand-short-name } will reopen your tabs, but unsaved work inside webpages, like text in a form, may not be restored. Private Windows won’t reopen to protect your privacy.`
-    - Suggest: `O { -brand-short-name } irá reabrir as abas`
-    - The infinitive after "irá" must be "reabrir"; "reabri" is a misspelling/wrong form.
-- `restart-required-single-instance-question` — `browser/browser/aboutRestartRequired.ftl` — English word "profiles" left untranslated where the locale uses "perfis".
-    - Current: `Não uso vários profiles ou instâncias.`
-    - Source: `I don’t use multiple profiles or instances. Why is this happening?`
-    - Suggest: `Não uso vários perfis ou instâncias.`
-    - en-US "profiles" is rendered "perfis" in the neighboring strings (restart-required-multiple-instances-question/answer); leaving "profiles" is inconsistent English.
-- `restart-required-why-now-answer` — `browser/browser/aboutRestartRequired.ftl` — "when an update can’t wait until your next restart" rendered as the update needing to be installed before the next restart.
-    - Current: `ou quando uma atualização precisa ser instalada antes da próxima vez que reiniciar`
-    - Source: `This can happen when another { -brand-short-name } profile or instance updates, or when an update can’t wait until your next restart.`
-    - Suggest: `ou quando uma atualização não pode esperar até o próximo reinício`
-    - The en-US says the update can't wait until the next restart; the translation asserts it must be installed before the next restart, which changes the stated condition.
+- `sync-syncing-across-devices-empty-state3` — `browser/browser/preferences/preferences.ftl` — `sync-syncing-across-devices-empty-state3` uses three dots where this locale uses …
+    - Current: `Não está sincronizando nada... ainda. Escolha o que sincronizar neste dispositivo.`
+    - Source: `description: You aren’t syncing anything… yet. Choose what to sync on this device. label: Manage synced data`
+    - The tree uses … 385 times against 4 ASCII runs.
+- `menu-share-links` — `browser/browser/browser.ftl` — Typo: "iink" instead of "link" in the singular variant.
+    - Current: `[one] { $count } iink`
+    - Source: `label: {$count ->} [one] { $count } Link [other] { $count } Links`
+    - Suggest: `[one] { $count } link`
+    - The en-US says "Link"; the pt-BR singular variant contains a misspelling "iink".
+- `sync-syncing-across-devices-empty-state3` — `browser/browser/preferences/preferences.ftl` — ASCII three-dot ellipsis used instead of the house ellipsis character.
+    - Current: `Não está sincronizando nada... ainda.`
+    - Source: `description: You aren’t syncing anything… yet. Choose what to sync on this device. label: Manage synced data`
+    - Suggest: `Não está sincronizando nada… ainda.`
+    - The pt-BR convention is the ellipsis character (…), as in the en-US source "anything… yet".
 
 ### ✅ Fixed since the last run (0)
 
@@ -59,8 +58,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 326 |
-| Strings | 16,273 |
-| Missing strings | 32 |
+| Strings | 16,355 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -73,25 +72,11 @@ _Nothing retired._
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 3 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 21 |
+| Typography deviations from this locale's own norm | 22 |
 
 ### Completeness
 
-**32 strings** are not translated yet, concentrated in:
-
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 9
-- `browser/browser/ipProtection.ftl` — 7
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 4
-- `browser/browser/preferences/preferences.ftl` — 3
-- `toolkit/toolkit/about/aboutLogging.ftl` — 2
-- `browser/browser/newtab/newtab.ftl` — 2
-- `toolkit/toolkit/payments/payments.ftl` — 1
-- `browser/browser/appmenu.ftl` — 1
-- `browser/browser/places.ftl` — 1
-- `browser/browser/sidebar.ftl` — 1
-- `browser/browser/preferences/browserIcon.ftl` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -101,10 +86,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 588, `curly-single` 123, `straight-double` 63 | **curly-double** |
 | apostrophe | `typographic` 136, `straight` 106 | _mixed_ |
-| ellipsis | `char` 382, `ascii` 3 | **char** |
+| ellipsis | `char` 385, `ascii` 4 | **char** |
 | dash | `em` 47, `en` 1 | **em** |
 | nbsp | `total` 10, `narrow` 9, `before-punctuation` 5, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 1506 | **informal** |
+| register | `informal` 1511 | **informal** |
 
 ---
 
@@ -114,15 +99,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (529)
+## 3. Open findings (532)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 11 |
 | 2 | Wrong content (says something other than the English) | 183 |
-| 3 | Degraded language (grammar, spelling, terminology) | 254 |
-| 4 | Cosmetic (typography, spacing) | 81 |
+| 3 | Degraded language (grammar, spelling, terminology) | 255 |
+| 4 | Cosmetic (typography, spacing) | 83 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -464,6 +449,11 @@ _Nothing reported._
     - Current: `cartões de créditos`
     - Source: `Your connection to this site is not private. Information you submit could be viewed by others (like passwords, messages, credit cards, etc.).`
     - Suggest: `cartões de crédito`
+- `menu-share-links` — `browser/browser/browser.ftl` — Typo: "iink" instead of "link" in the singular variant.
+    - Current: `[one] { $count } iink`
+    - Source: `label: {$count ->} [one] { $count } Link [other] { $count } Links`
+    - Suggest: `[one] { $count } link`
+    - The en-US says "Link"; the pt-BR singular variant contains a misspelling "iink".
 - `pointerlock-warning-no-domain` — `browser/browser/browser.ftl` — the sibling pointerlock-warning-domain uses the imperative: Pressionar Esc → Pressione Esc
     - Current: `Pressionar Esc`
     - Source: `This document has control of your pointer. Press Esc to take back control.`
@@ -614,11 +604,7 @@ _Nothing reported._
     - Current: `ou uma pasta especificada dentro deles`
     - Source: `Create bookmarks in the Bookmarks toolbar, Bookmarks menu, or a specified folder inside them.`
     - Suggest: `ou em uma pasta especificada dentro deles`
-- `policy-DisableRemoteImprovements` — `browser/browser/policies/policies-descriptions.ftl` — de uma atualizações para outra → de uma atualização para outra
-    - Current: `de uma atualizações para outra`
-    - Source: `Prevent { -brand-short-name } from applying performance, stability, and feature changes between updates.`
-    - Suggest: `de uma atualização para outra`
-- _…and 84 more; see `state/` for the full list._
+- _…and 85 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -831,7 +817,7 @@ _Nothing reported._
 - `main-context-menu-pdfjs-save-page` — `browser/browser/browserContext.ftl` — `main-context-menu-pdfjs-save-page` uses three dots where this locale uses …
     - Current: `Salvar seleção como...`
     - Source: `label: Save selection as…`
-    - The tree uses … 382 times against 3 ASCII runs.
+    - The tree uses … 385 times against 4 ASCII runs.
 - `contextual-manager-passwords-no-passwords-message` — `browser/browser/contextual-manager.ftl` — Comma where a period belongs: contextual-manager-passwords-no-passwords-message (contextual-manager.ftl) — são criptografadas, Estamos atentos → criptografadas. Estamos atentos
     - Current: `são criptografadas, Estamos atentos`
     - Source: `All passwords are encrypted and we’ll watch out for breaches and alerts if you’re affected.`
@@ -868,7 +854,7 @@ _Nothing reported._
 - `newtab-discovery-empty-section-topstories-loading` — `browser/browser/newtab/newtab.ftl` — `newtab-discovery-empty-section-topstories-loading` uses three dots where this locale uses …
     - Current: `Carregando...`
     - Source: `Loading…`
-    - The tree uses … 382 times against 3 ASCII runs.
+    - The tree uses … 385 times against 4 ASCII runs.
 - `newtab-discovery-empty-section-topstories-loading` — `browser/browser/newtab/newtab.ftl` — main-context-menu-pdfjs-save-page (.label, browserContext.ftl), home-homepage-custom-url (.placeholder, preferences.ftl), newtab-discovery-empty-section-topstories-loading (newtab.ftl).
     - Source: `Loading…`
     - Suggest: `.label`
@@ -940,10 +926,19 @@ _Nothing reported._
 - `home-homepage-custom-url` — `browser/browser/preferences/preferences.ftl` — `home-homepage-custom-url` uses three dots where this locale uses …
     - Current: `Cole uma URL...`
     - Source: `placeholder: Paste a URL…`
-    - The tree uses … 382 times against 3 ASCII runs.
+    - The tree uses … 385 times against 4 ASCII runs.
 - `security-privacy-issue-warning-third-party-cookies` — `browser/browser/preferences/preferences.ftl` — Trailing period added where en-US has none: ipprotection-connection-status-blocked-error-title-1 (.aria-label too), security-privacy-issue-warning-third-party-cookies (.label, preferences.ftl), newtab-wallpaper-sky-with-pink-clouds, newtab-shortcuts-highlight-title, newtab-report-ads-reason-seen-it-too-many-times (.label) (newtab.ftl), windows-10-eos-callout-addons-title (asrouter.ftl), tab-group…
     - Source: `description: Third-party cookies are used to track you across websites. label: Third-party cookies are enabled`
     - Suggest: `.aria-label`
+- `sync-syncing-across-devices-empty-state3` — `browser/browser/preferences/preferences.ftl` — `sync-syncing-across-devices-empty-state3` uses three dots where this locale uses …
+    - Current: `Não está sincronizando nada... ainda. Escolha o que sincronizar neste dispositivo.`
+    - Source: `description: You aren’t syncing anything… yet. Choose what to sync on this device. label: Manage synced data`
+    - The tree uses … 385 times against 4 ASCII runs.
+- `sync-syncing-across-devices-empty-state3` — `browser/browser/preferences/preferences.ftl` — ASCII three-dot ellipsis used instead of the house ellipsis character.
+    - Current: `Não está sincronizando nada... ainda.`
+    - Source: `description: You aren’t syncing anything… yet. Choose what to sync on this device. label: Manage synced data`
+    - Suggest: `Não está sincronizando nada… ainda.`
+    - The pt-BR convention is the ellipsis character (…), as in the en-US source "anything… yet".
 - `update-setting-write-failure-message2` — `browser/browser/preferences/preferences.ftl` — restore-page-problem-desc (aboutSessionRestore.ftl), crashed-single-offer-help-message, crashed-multiple-offer-help-message (aboutTabCrashed.ftl), enable-devtools-popup-description2 (browser.ftl), pin-tabs-callout-1-subtitle, pin-tabs-callout-2-subtitle (featureCallout.ftl), permissions-exceptions-manage-etp-desc (preferences/permissions.ftl), update-setting-write-failure-message2 (preferences.ft…
     - Source: `{ -brand-short-name } encountered an error and didn’t save this change. Note that changing this update setting requires permission to write to the file below. You or a system administrator may be able to resolve the err…`
 - `tabbrowser-tab-label-tab-split-view-right` — `browser/browser/tabbrowser.ftl` — , Exibição dividida à direita → lowercase (the -left pair is lowercase)
@@ -999,15 +994,7 @@ _Nothing reported._
     - Current: `O atributo HTTP "Content-Type" de "%1$S" não é suportado. Falha no carregamento do recurso de mídia %2$S.`
     - Source: `HTTP “Content-Type” of “%1$S” is not supported. Load of media resource %2$S failed.`
     - The locale's quote convention is `curly-double` (588 occurrences).
-- `MediaLoadUnsupportedTypeAttribute` — `dom/chrome/dom/dom.properties` — `MediaLoadUnsupportedTypeAttribute` uses straight double quotes
-    - Current: `O atributo "type" especificado de "%1$S" não é suportado. Falha no carregamento do recurso de mídia %2$S.`
-    - Source: `Specified “type” attribute of “%1$S” is not supported. Load of media resource %2$S failed.`
-    - The locale's quote convention is `curly-double` (588 occurrences).
-- `PrincipalWritingModePropagationWarning` — `dom/chrome/layout/layout_errors.properties` — `PrincipalWritingModePropagationWarning` uses straight double quotes
-    - Current: `Ao renderizar o elemento <html>, os valores usados das propriedades CSS "writing-mode", "direction" e "text-orientation" no elemento <html> são obtidos dos valores calculados do elemento <body>, não dos próprios valores…`
-    - Source: `When rendering the <html> element, the used values of CSS properties “writing-mode”, “direction”, and “text-orientation” on the <html> element are taken from the computed values of the <body> element, not from the <html…`
-    - The locale's quote convention is `curly-double` (588 occurrences).
-- _…and 21 more; see `state/` for the full list._
+- _…and 23 more; see `state/` for the full list._
 
 ---
 

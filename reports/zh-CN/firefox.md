@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
-| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
+| **Previous run** | 2026-09-28 @ `92e0a4895124` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 26 of 16,020 |
+| **Strings reviewed this run** | 3 of 16,021 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -20,11 +20,11 @@ Also for zh-CN: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ### 🆕 New findings (1)
 
-- `ipprotection-site-inclusions-callout-secondary-button-lapsed-users` — `browser/browser/ipProtection.ftl` — "Dismiss" is rendered as "知道了" ("Got it"), which changes the button's meaning.
-    - Current: `知道了`
-    - Source: `Dismiss`
-    - Suggest: `关闭`
-    - en-US "Dismiss" means to close/dismiss the callout; "知道了" means "Got it", an acknowledgement, which is a different label.
+- `restart-required-heading2` — `browser/browser/aboutRestartRequired.ftl` — "a quick restart" is rendered as "立即重启" (restart immediately), changing the meaning from a brief restart to an immediate one.
+    - Current: `需要立即重启`
+    - Source: `Sorry, { -brand-short-name } needs a quick restart`
+    - Suggest: `需要快速重启一下`
+    - en-US says the browser needs a quick (short) restart, not that it must restart right now; 立即 asserts urgency the source does not state.
 
 ### ✅ Fixed since the last run (0)
 
@@ -38,12 +38,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `share-panel-os-share` — `browser/browser/sharePanel.ftl` — "Share with…" is rendered as the noun phrase "共享方式" and the ellipsis is dropped.
-    - Current: `label: 共享方式`
-    - Suggest: `label: 共享至…`
-    - en-US is an action menu item "Share with…"; "共享方式" means "sharing method", and the trailing ellipsis indicating a follow-up dialog is missing.
+_Nothing retired._
 
 ---
 
@@ -52,8 +49,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 325 |
-| Strings | 16,020 |
-| Missing strings | 285 |
+| Strings | 16,021 |
+| Missing strings | 334 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
@@ -70,16 +67,16 @@ _Nothing to re-read._
 
 ### Completeness
 
-**285 strings** are not translated yet, concentrated in:
+**334 strings** are not translated yet, concentrated in:
 
+- `browser/browser/newtab/newtab.ftl` — 34
 - `toolkit/services/aboutSyncLog.ftl` — 20
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 19
 - `toolkit/toolkit/about/aboutPDF.ftl` — 19
-- `browser/browser/aboutRestartRequired.ftl` — 18
 - `devtools/client/toolbox-options.ftl` — 18
+- `browser/browser/aboutRestartRequired.ftl` — 17
 - `toolkit/toolkit/about/aboutNetworking.ftl` — 16
 - `browser/browser/ipProtection.ftl` — 16
-- `browser/browser/newtab/newtab.ftl` — 16
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 14
 - `dom/chrome/dom/dom.properties` — 14
 - `toolkit/toolkit/formautofill/formAutofill.ftl` — 13
 - `browser/browser/aboutPrivateBrowsing.ftl` — 13
@@ -101,7 +98,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | apostrophe | `typographic` 42, `straight` 20 | _mixed_ |
 | ellipsis | `char` 369, `ascii` 12 | **char** |
 | dash | `em` 49, `en` 2 | **em** |
-| fullwidth | `punctuation` 8291 | **punctuation** |
+| fullwidth | `punctuation` 8292 | **punctuation** |
 | register | `informal` 14, `formal` 1486 | **formal** |
 
 ---
@@ -113,13 +110,13 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (72)
+## 3. Open findings (73)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 4 |
-| 2 | Wrong content (says something other than the English) | 16 |
+| 2 | Wrong content (says something other than the English) | 17 |
 | 3 | Degraded language (grammar, spelling, terminology) | 17 |
 | 4 | Cosmetic (typography, spacing) | 35 |
 
@@ -180,6 +177,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `restart-required-heading2` — `browser/browser/aboutRestartRequired.ftl` — "a quick restart" is rendered as "立即重启" (restart immediately), changing the meaning from a brief restart to an immediate one.
+    - Current: `需要立即重启`
+    - Source: `Sorry, { -brand-short-name } needs a quick restart`
+    - Suggest: `需要快速重启一下`
+    - en-US says the browser needs a quick (short) restart, not that it must restart right now; 立即 asserts urgency the source does not state.
 - `aiwindow-starter-writing-proofread` — `browser/browser/aiWindow.ftl` — "message" rendered as "邮件" (email), narrowing the meaning.
     - Current: `校对邮件`
     - Source: `Proofread a message`

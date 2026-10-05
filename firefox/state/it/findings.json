@@ -226,6 +226,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "Rimuovi dai siti principali",
+  "dismissed_because": "",
+  "fid": "b289f8cf12c5",
+  "file": "browser/browser/browser.ftl",
+  "first_seen": "2026-10-05",
+  "impact": 2,
+  "last_seen": "2026-10-05",
+  "locale": "it",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The en-US action removes this top site entry; the Italian states removal from the top sites list, which changes the object of the action.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "2e932339",
+  "string_id": "urlbar-result-menu-remove-top-site",
+  "suggest": "Rimuovi questo sito principale",
+  "summary": "\"Remove this top site\" is rendered as \"Rimuovi dai siti principali\" (remove from top sites) instead of removing the site itself.",
+  "suppressed_by": ""
+ },
+ {
   "category": "C",
   "check": "legacy",
   "current": "Fai clic on",
@@ -286,7 +310,7 @@
   "file": "browser/browser/defaultBrowserNotification.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-09-28",
+  "last_seen": "2026-10-05",
   "locale": "it",
   "origin": {},
   "rationale": "In the source this string quotes “Web browser”, which is exactly the value of `desktop-entry-generic-name` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -473,6 +497,30 @@
   "string_id": "newtab-stocks-search-hint",
   "suggest": "Cerca simboli o aziende da aggiungere alla tua lista di controllo",
   "summary": "\"Search for symbols\" is translated as \"Cerca azioni\" (search for stocks) instead of ticker symbols.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
+  "current": "Apri menu per il widget Azioni",
+  "dismissed_because": "",
+  "fid": "04855800a04e",
+  "file": "browser/browser/newtab/newtab.ftl",
+  "first_seen": "2026-10-05",
+  "impact": 3,
+  "last_seen": "2026-10-05",
+  "locale": "it",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "newtab-stocks-widget-menu-button2 and newtab-stocks-widget-title2 render the same widget as \"Mercati finanziari\"; using \"Azioni\" for the same widget's menu button is inconsistent (and \"Azioni\" is also ambiguous with \"actions\").",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "0861f67f",
+  "string_id": "newtab-stocks-widget-open-menu-button",
+  "suggest": "Apri menu per il widget Mercati finanziari",
+  "summary": "The Finance widget is called \"Mercati finanziari\" elsewhere, but here the menu button calls it \"Azioni\", creating an inconsistent widget name on the same surface.",
   "suppressed_by": ""
  },
  {
@@ -1288,7 +1336,7 @@
   "file": "toolkit/toolkit/about/aboutAddons.ftl",
   "first_seen": "2026-09-03",
   "impact": 2,
-  "last_seen": "2026-09-28",
+  "last_seen": "2026-10-05",
   "locale": "it",
   "origin": {},
   "rationale": "The label is “Fai una donazione”. An access key not in the label cannot be underlined and is unreachable by keyboard.",

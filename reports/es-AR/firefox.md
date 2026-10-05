@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
-| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
+| **Previous run** | 2026-09-28 @ `92e0a4895124` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 84 of 16,270 |
+| **Strings reviewed this run** | 39 of 16,308 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,41 +18,13 @@ Also for es-AR: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (5)
+### 🆕 New findings (0)
 
-- `credit-card-label-with-security-code` — `toolkit/toolkit/payments/payments.ftl` — The aria-label uses plural "guardados" while the parallel value and all other CVV strings use singular "guardado".
-    - Current: `aria-label: { $ariaLabel }, CVV guardados`
-    - Source: `(value): { $label } \| CVV saved aria-label: { $ariaLabel }, CVV saved`
-    - Suggest: `aria-label: { $ariaLabel }, CVV guardado`
-    - "CVV saved" refers to a single security code; the visible value in the same message and the credit-card-doorhanger-details-* strings use "CVV guardado". The plural is an agreement error and an inconsistency.
-- `about-private-browsing-private-window-redesign-subheader` — `browser/browser/aboutPrivateBrowsing.ftl` — "keep your browsing private from others who use this device" is rendered as "mantener privada la navegación de otras personas", which says the browsing belongs to other people.
-    - Current: `para mantener privada la navegación de otras personas que usen este dispositivo`
-    - Source: `{ -brand-short-name } is designed to protect your privacy as you browse, with built-in tracking protections. Closing this window erases its history, cookies, and site data to keep your browsing private from others who u…`
-    - Suggest: `para mantener su navegación privada frente a otras personas que usen este dispositivo`
-    - The en-US means keeping the user's browsing hidden from other people using the device; the Spanish as written reads as keeping other people's browsing private, reversing whose data is protected.
-- `restart-required-fix-answer` — `browser/browser/aboutRestartRequired.ftl` — "Follow our progress in Bugzilla bug 2072739" is rendered with an added "en" and "número", altering the bug reference wording.
-    - Current: `Siga nuestro progreso en Bugzilla en bug número 2072739.`
-    - Source: `Yes. We know this is disruptive, and we’re working on a fix to prevent it. Follow our progress in Bugzilla bug 2072739.`
-    - Suggest: `Siga nuestro progreso en el bug 2072739 de Bugzilla.`
-    - The source references "Bugzilla bug 2072739"; the target's "en Bugzilla en bug número" is ungrammatical/duplicated preposition.
-- `ipprotection-site-inclusions-callout-title-lapsed-users` — `browser/browser/ipProtection.ftl` — Trailing period added to a title that has none in the source.
-    - Current: `Pruebe la VPN integrada, ahora sitio por sitio.`
-    - Source: `Try built-in VPN, now site by site`
-    - Suggest: `Pruebe la VPN integrada, ahora sitio por sitio`
-    - The en-US title "Try built-in VPN, now site by site" has no final punctuation.
-- `callout-pdfjs-draw-body-a` — `browser/browser/featureCallout.ftl` — Uses the peninsular "usted" imperative forms instead of the es-AR voseo/register used elsewhere.
-    - Current: `Haga anotaciones en los archivos PDF y luego guarde los cambios.`
-    - Source: `Mark up PDFs, then save your changes.`
-    - Suggest: `Hacé anotaciones en los archivos PDF y luego guardá los cambios.`
-    - es-AR addresses the user with voseo imperatives; "Haga"/"guarde" is the wrong form of address for this locale.
+_No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `about-pdf-features-intro` — `toolkit/toolkit/about/aboutPDF.ftl` — Typo: "simp,e" instead of "simple".
-    - Current: `Es simp,e, gratis y privado.`
-    - Source: `Read, mark up, and sign PDFs right where you browse. It’s simple, free, and private.`
-    - Suggest: `Es simple, gratis y privado.`
-    - The en-US says "It's simple, free, and private."; "simp,e" is a misspelling with a comma typed instead of the letter l.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -73,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 326 |
-| Strings | 16,270 |
-| Missing strings | 35 |
+| Strings | 16,308 |
+| Missing strings | 47 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -91,20 +63,20 @@ _Nothing retired._
 
 ### Completeness
 
-**35 strings** are not translated yet, concentrated in:
+**47 strings** are not translated yet, concentrated in:
 
 - `browser/browser/newtab/newtab.ftl` — 12
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 7
 - `toolkit/toolkit/about/url-classifier.ftl` — 6
+- `browser/browser/preferences/preferences.ftl` — 6
 - `browser/browser/featureCallout.ftl` — 3
 - `dom/chrome/security/security.properties` — 3
+- `toolkit/toolkit/about/aboutGlean.ftl` — 2
 - `browser/browser/aboutPrivateBrowsing.ftl` — 2
-- `browser/browser/preferences/preferences.ftl` — 2
 - `toolkit/toolkit/global/processTypes.ftl` — 1
 - `toolkit/toolkit/about/aboutAddons.ftl` — 1
 - `browser/browser/appmenu.ftl` — 1
-- `browser/browser/ipProtection.ftl` — 1
-- `browser/browser/newtab/asrouter.ftl` — 1
-- `browser/browser/newtab/onboarding.ftl` — 1
+- `browser/browser/profiles.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -116,7 +88,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 466, `straight-double` 137, `curly-single` 93 | **curly-double** |
 | apostrophe | `typographic` 105, `straight` 67 | _mixed_ |
-| ellipsis | `char` 386, `ascii` 1 | **char** |
+| ellipsis | `char` 389, `ascii` 1 | **char** |
 | dash | `em` 61, `en` 1 | **em** |
 | nbsp | `total` 5, `before-punctuation` 3, `space-before-punctuation` 7 | _mixed_ |
 | inverted marks | `open-question` 327, `open-exclamation` 69 | **open-question** |

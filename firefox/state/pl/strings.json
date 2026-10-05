@@ -15611,7 +15611,7 @@
  },
  "toolkit/toolkit/main-window/autocomplete.ftl": {
   "autocomplete-delete-address": "ae27fb11 9efbd1c5",
-  "autocomplete-delete-form-history-entry2": "5e1510e3 08444e8c c556eafd",
+  "autocomplete-delete-form-history-entry2": "5e1510e3 08444e8c f8799bc6",
   "autocomplete-delete-password": "4118fa91 7d00ef95",
   "autocomplete-delete-payment-method": "f8ad12d1 72150561",
   "autocomplete-edit-address": "1d1f5c8a e9bb5deb",

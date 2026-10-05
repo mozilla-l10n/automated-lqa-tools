@@ -266,6 +266,7 @@
  "browser/browser/aboutRestartRequired.ftl": {
   "restart-button-label": "a2d96006 c589d994",
   "restart-required-heading": "86999caf ce274960",
+  "restart-required-heading2": "8bbf073e 435ba8fe",
   "restart-required-intro": "62edccde 01562abe",
   "restart-required-title": "c4b86574 50861486",
   "window-restoration-info": "e723401e 8cf73158"
@@ -4525,7 +4526,7 @@
   "managed-bookmarks": "5b88b134 09ef46d7",
   "managed-bookmarks-subfolder": "7bbba25f ca37aeba",
   "other-bookmarks-folder": "a735c644 2b7f3dac",
-  "places-add-bookmark": "33aceb8d 2507ee0e",
+  "places-add-bookmark": "4a336aea 2507ee0e",
   "places-add-folder": "7dfb5b49 9e5f4dd6",
   "places-add-folder-contextmenu": "f89f2e50 7e4f3a5e",
   "places-add-separator": "bb43bc2c 0ff15206",
@@ -4568,7 +4569,7 @@
   "places-open-all-bookmarks": "740eb91f 6b7c5e59",
   "places-open-all-in-tabs": "29ed09de aafe197b",
   "places-open-in-container-tab": "1b2b3e97 c35dd7f6",
-  "places-open-in-private-window": "59143ec2 f14bbf68",
+  "places-open-in-private-window": "3c62399b f14bbf68",
   "places-open-in-tab": "76d4f629 1e360239",
   "places-open-in-window": "cdefd4d7 2224ba3b",
   "places-organize-button": "b9799777 c1951ada",

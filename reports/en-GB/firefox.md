@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
-| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
+| **Previous run** | 2026-09-28 @ `92e0a4895124` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 85 of 16,305 |
+| **Strings reviewed this run** | 51 of 16,355 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for en-GB: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `urlbar-result-menu-remove-top-site` — `browser/browser/browser.ftl` — Access key changed from uppercase "T" to lowercase "t", which no longer matches the source's access key.
+    - Current: `accesskey: t`
+    - Source: `(value): Remove this top site accesskey: T`
+    - Suggest: `accesskey: T`
+    - The en-US access key is "T"; en-GB has no reason to alter the access key since the label text "Remove this top site" is identical.
+- `main-context-menu-inspect-a11y-properties2` — `browser/browser/browserContext.ftl` — Access key changed from "y" to "I" although the label is identical to the source.
+    - Current: `accesskey: I`
+    - Source: `accesskey: y label: Inspect Accessibility Properties`
+    - Suggest: `accesskey: y`
+    - The label "Inspect Accessibility Properties" is unchanged from en-US, so the access key should remain "y"; changing it risks collisions with other menu items that use "I".
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,7 +54,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 326 |
-| Strings | 16,305 |
+| Strings | 16,355 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -72,8 +81,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 538, `curly-single` 93, `straight-double` 55 | **curly-double** |
-| apostrophe | `typographic` 1004, `straight` 43 | **typographic** |
-| ellipsis | `char` 387, `ascii` 1 | **char** |
+| apostrophe | `typographic` 1005, `straight` 43 | **typographic** |
+| ellipsis | `char` 391, `ascii` 1 | **char** |
 | dash | `em` 81, `en` 4 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
@@ -86,12 +95,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (16)
+## 3. Open findings (18)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 4 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 6 |
 | 2 | Wrong content (says something other than the English) | 7 |
 | 3 | Degraded language (grammar, spelling, terminology) | 4 |
 | 4 | Cosmetic (typography, spacing) | 1 |
@@ -103,6 +112,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `{$count ->} [1] This will remove the password saved to { -brand-short-name } on all your synced devices. This will also remove any breach alerts that appear here. You cannot undo this action. [other] This will remove al…`
     - Suggest: `[1] This will remove the password saved to`
     - The en-US [1] case reads "This will remove the password saved to…"; the singular plural form must stay singular in the count=1 variant.
+- `urlbar-result-menu-remove-top-site` — `browser/browser/browser.ftl` — Access key changed from uppercase "T" to lowercase "t", which no longer matches the source's access key.
+    - Current: `accesskey: t`
+    - Source: `(value): Remove this top site accesskey: T`
+    - Suggest: `accesskey: T`
+    - The en-US access key is "T"; en-GB has no reason to alter the access key since the label text "Remove this top site" is identical.
+- `main-context-menu-inspect-a11y-properties2` — `browser/browser/browserContext.ftl` — Access key changed from "y" to "I" although the label is identical to the source.
+    - Current: `accesskey: I`
+    - Source: `accesskey: y label: Inspect Accessibility Properties`
+    - Suggest: `accesskey: y`
+    - The label "Inspect Accessibility Properties" is unchanged from en-US, so the access key should remain "y"; changing it risks collisions with other menu items that use "I".
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 

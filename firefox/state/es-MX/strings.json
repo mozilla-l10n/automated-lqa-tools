@@ -222,6 +222,7 @@
   "no-specified-policies-message": "2ec0d3d8 fbe26d8c",
   "policy-errors": "3d9935a3 4b723e24",
   "policy-name": "e76fdacf 8e3a613b",
+  "policy-not-fully-applied": "8b424d35 82bbbf63 fc4487c7",
   "policy-value": "b2aa09b5 9e414c27"
  },
  "browser/browser/aboutPrivateBrowsing.ftl": {
@@ -14537,6 +14538,9 @@
  "toolkit/toolkit/global/mozPageHeader.ftl": {
   "back-nav-button-title": "9ffca7a4 acea1590",
   "back-nav-button-title2": "9c514c89 4ee6dcd9"
+ },
+ "toolkit/toolkit/global/mozPromo.ftl": {
+  "moz-promo-close-button": "fa7191b6 582d435a"
  },
  "toolkit/toolkit/global/mozSupportLink.ftl": {
   "moz-support-link-text": "1a3a2a12 d9b20450"
