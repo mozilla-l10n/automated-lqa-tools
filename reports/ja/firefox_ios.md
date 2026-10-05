@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
-| **Previous run** | 2026-09-21 @ `26f50d4ce7b1` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
+| **Previous run** | 2026-09-28 @ `76fd90c3d050` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 43 of 1,969 |
+| **Strings reviewed this run** | 0 of 1,969 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for ja: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `QuickAnswers.ContentView.Listening.v158` — `ja/firefox-ios.xliff` — The "Listening" state indicator is dropped from the translation.
-    - Current: `何でも質問してください...`
-    - Source: `Listening, ask anything…`
-    - Suggest: `聞き取り中です。何でも質問してください...`
-    - The source "Listening, ask anything…" tells the user the microphone is active and listening; the Japanese only says "ask anything", making it identical to the non-listening placeholder string (Placeholder.v158) and losing the state information.
-- `QuickAnswers.OptInRedesign.NoTrainingDescription.v158` — `ja/firefox-ios.xliff` — "our systems" narrowed to "our AI systems".
-    - Current: `私たちの AI システムの学習`
-    - Source: `We don’t use your data to train our systems.`
-    - Suggest: `私たちのシステムの学習`
-    - The source says "train our systems" without limiting it to AI systems; the Japanese adds "AI", narrowing the commitment the product makes.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

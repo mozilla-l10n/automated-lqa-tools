@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
-| **Previous run** | 2026-09-21 @ `26f50d4ce7b1` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
+| **Previous run** | 2026-09-28 @ `76fd90c3d050` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 20 of 1,969 |
+| **Strings reviewed this run** | 0 of 1,969 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for pt-BR: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `QuickAnswers.OptInRedesign.NothingGetsSavedDescription.v158` — `pt-BR/firefox-ios.xliff` — Missing possessive/article makes the list inconsistent: "nem respostas" drops the parallel determiner used for the other items.
-    - Current: `Não armazenamos sua voz, suas perguntas nem respostas.`
-    - Source: `We don’t store your voice, questions, or answers.`
-    - Suggest: `Não armazenamos sua voz, suas perguntas nem suas respostas.`
-    - The source lists "your voice, questions, or answers" — all possessed by the user; the pt-BR mixes "sua voz, suas perguntas" with a bare "respostas", breaking agreement in the enumeration.
-- `QuickAnswers.OptInRedesign.PrivateByDesignTitle.v158` — `pt-BR/firefox-ios.xliff` — "Private By Design" is rendered as "Privativo por projeto" here but as "Projetado para privacidade" in the privacy banner title, an inconsistent and unidiomatic rendering.
-    - Current: `Privativo por projeto`
-    - Source: `Private By Design`
-    - Suggest: `Projetado para privacidade`
-    - The same source phrase "Private by Design" appears in QuickAnswers.PrivacyBanner.Title.v158 as "Projetado para privacidade"; "Privativo por projeto" is a literal, misleading rendering of the same term in the same feature.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

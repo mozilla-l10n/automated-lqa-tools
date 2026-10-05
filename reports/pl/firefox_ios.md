@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
-| **Previous run** | 2026-09-21 @ `26f50d4ce7b1` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
+| **Previous run** | 2026-09-28 @ `76fd90c3d050` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,950 |
+| **Strings reviewed this run** | 26 of 1,969 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for pl: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `QuickAnswers.Settings.EnableQuickAnswers.v158` — `pl/firefox-ios.xliff` — The toggle label drops the "Enable" verb, rendering only the feature name.
+    - Current: `Szybkie odpowiedzi`
+    - Source: `Enable Quick Answers`
+    - Suggest: `Włącz szybkie odpowiedzi`
+    - Source is "Enable Quick Answers", the label of a toggle; the Polish omits "Enable".
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,950 |
-| Missing strings | 19 |
+| Strings | 1,969 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -59,12 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**19 strings** are not translated yet, concentrated in:
-
-- `pl/firefox-ios.xliff` — 18
-- `pl/firefox-ios.xliff` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -73,10 +72,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `polish-double` 22 | **polish-double** |
-| ellipsis | `char` 23 | **char** |
+| ellipsis | `char` 27 | **char** |
 | dash | `em` 6, `en` 1 | **em** |
-| nbsp | `total` 441, `before-punctuation` 9 | **total** |
-| register | `informal` 11 | **informal** |
+| nbsp | `total` 444, `before-punctuation` 9 | **total** |
+| register | `informal` 12 | **informal** |
 
 ---
 
@@ -86,7 +85,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (71)
+## 3. Open findings (72)
 
 > **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -106,7 +105,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 39 |
+| 2 | Wrong content (says something other than the English) | 40 |
 | 3 | Degraded language (grammar, spelling, terminology) | 28 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
@@ -186,6 +185,11 @@ _Nothing in this category._
     - Source: `You’ve used your 5 free email masks, so we picked one for you to reuse.`
     - Suggest: `Wszystkie 5 bezpłatnych masek dla adresów e-mail zostało już wykorzystanych, więc wybraliśmy jedną, której można użyć ponownie.`
     - The source states the user has used up their free allowance; the Polish says masks were created, losing the meaning that the limit was reached.
+- `QuickAnswers.Settings.EnableQuickAnswers.v158` — `pl/firefox-ios.xliff` — The toggle label drops the "Enable" verb, rendering only the feature name.
+    - Current: `Szybkie odpowiedzi`
+    - Source: `Enable Quick Answers`
+    - Suggest: `Włącz szybkie odpowiedzi`
+    - Source is "Enable Quick Answers", the label of a toggle; the Polish omits "Enable".
 - `Settings.AIControls.BlockAIEnhancementsDescription.v151` — `pl/firefox-ios.xliff` — "or pop-ups about them" is rendered as "czy nawet informacji o nich", adding "nawet" and dropping the notion of pop-ups.
     - Current: `czy nawet informacji o nich`
     - Source: `Blocking means you won’t see new or current AI enhancements in %@, or pop-ups about them.`

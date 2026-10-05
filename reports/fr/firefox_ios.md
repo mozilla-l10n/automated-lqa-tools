@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
-| **Previous run** | 2026-09-21 @ `26f50d4ce7b1` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
+| **Previous run** | 2026-09-28 @ `76fd90c3d050` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 22 of 1,969 |
+| **Strings reviewed this run** | 0 of 1,969 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,26 +18,13 @@ Also for fr: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `QuickAnswers.OptInRedesign.PrivateByDesignTitle.v158` — `fr/firefox-ios.xliff` — Missing feminine agreement in "vie privé".
-    - Current: `Conçu pour protéger votre vie privé`
-    - Source: `Private By Design`
-    - Suggest: `Conçu pour protéger votre vie privée`
-    - "vie" is feminine, so the adjective must be "privée".
-- `QuickAnswers.PrivacyBanner.Title.v158` — `fr/firefox-ios.xliff` — Missing feminine agreement in "vie privé".
-    - Current: `Conçu pour protéger votre vie privé`
-    - Source: `Private by Design`
-    - Suggest: `Conçu pour protéger votre vie privée`
-    - "vie" is feminine, so the adjective must be "privée".
+_No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `QuickAnswers.ContentView.Footer.v158` — `fr/firefox-ios.xliff` — "Powered by %@" is mistranslated as "Mis en avant par %@" (promoted/highlighted by).
-    - Current: `Mis en avant par %@`
-    - Source: `Powered by %@ · Answers can contain mistakes.`
-    - Suggest: `Propulsé par %@`
-    - "Powered by" indicates the AI model providing the answer; "mis en avant par" means "featured/promoted by", a different claim about the relationship with the provider.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

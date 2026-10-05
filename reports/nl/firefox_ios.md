@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
-| **Previous run** | 2026-09-21 @ `26f50d4ce7b1` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
+| **Previous run** | 2026-09-28 @ `76fd90c3d050` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 3 of 1,953 |
+| **Strings reviewed this run** | 16 of 1,969 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,28 @@ Also for nl: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (4)
 
-_No new findings._
+- `QuickAnswers.ContentView.Listening.v158` — `nl/firefox-ios.xliff` — 'ask anything' is rendered as the idiom 'vraag maar raak', which means 'ask away/randomly' rather than 'ask anything'.
+    - Current: `Luisteren, vraag maar raak…`
+    - Source: `Listening, ask anything…`
+    - Suggest: `Luisteren, stel een willekeurige vraag…`
+    - The source invites the user to ask anything; 'vraag maar raak' is a colloquial phrase suggesting haphazard asking and shifts register and meaning.
+- `QuickAnswers.OptInRedesign.PrivateByDesignTitle.v158` — `nl/firefox-ios.xliff` — 'Ontworpen voor privé' is ungrammatical; 'privé' is an adjective/adverb and cannot be the object here.
+    - Current: `Ontworpen voor privé`
+    - Source: `Private By Design`
+    - Suggest: `Privacy door ontwerp`
+    - 'Private by Design' means privacy is built in; the Dutch reads as 'designed for private', which is not idiomatic or grammatical Dutch.
+- `QuickAnswers.PrivacyBanner.Title.v158` — `nl/firefox-ios.xliff` — 'Ontworpen voor privé' is ungrammatical rendering of 'Private by Design'.
+    - Current: `Ontworpen voor privé`
+    - Source: `Private by Design`
+    - Suggest: `Privacy door ontwerp`
+    - 'privé' cannot serve as a noun object; the phrase does not convey that privacy is built into the design.
+- `QuickAnswers.OptInRedesign.Title.v158` — `nl/firefox-ios.xliff` — Feature name capitalized inconsistently: 'Snelle Antwoorden' here vs 'Snelle antwoorden' in Settings and 'Snel antwoord' elsewhere.
+    - Current: `Snelle Antwoorden proberen`
+    - Source: `Try Quick Answers`
+    - Suggest: `Snelle antwoorden proberen`
+    - Dutch does not use title case; the same feature name is written 'Snelle antwoorden' in QuickAnswers.Settings.EnableQuickAnswers.v158.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +64,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,953 |
-| Missing strings | 16 |
+| Strings | 1,969 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -59,12 +78,7 @@ _Nothing retired._
 
 ### Completeness
 
-**16 strings** are not translated yet, concentrated in:
-
-- `nl/firefox-ios.xliff` — 15
-- `nl/firefox-ios.xliff` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -74,9 +88,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-single` 14 | **curly-single** |
 | apostrophe | `typographic` 31 | **typographic** |
-| ellipsis | `char` 24 | **char** |
+| ellipsis | `char` 27 | **char** |
 | dash | `en` 4 | **en** |
-| register | `formal` 288 | **formal** |
+| register | `formal` 298 | **formal** |
 
 ---
 
@@ -86,14 +100,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (50)
+## 3. Open findings (54)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 22 |
-| 3 | Degraded language (grammar, spelling, terminology) | 27 |
+| 2 | Wrong content (says something other than the English) | 23 |
+| 3 | Degraded language (grammar, spelling, terminology) | 30 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
@@ -167,6 +181,11 @@ _Nothing in this category._
     - Source: `Data about your device, hardware configuration, and how you use %1$@ helps improve features, performance, and stability for everyone. %2$@`
     - Suggest: `voor iedereen`
     - The source says the data helps improve features, performance and stability "for everyone", not "for users everywhere".
+- `QuickAnswers.ContentView.Listening.v158` — `nl/firefox-ios.xliff` — 'ask anything' is rendered as the idiom 'vraag maar raak', which means 'ask away/randomly' rather than 'ask anything'.
+    - Current: `Luisteren, vraag maar raak…`
+    - Source: `Listening, ask anything…`
+    - Suggest: `Luisteren, stel een willekeurige vraag…`
+    - The source invites the user to ask anything; 'vraag maar raak' is a colloquial phrase suggesting haphazard asking and shifts register and meaning.
 - `Summarizer.Footnote.Label.v144` — `nl/firefox-ios.xliff` — "Summarization can make errors" is translated as "samenvattingen kunnen fouten bevatten", shifting the meaning about the feature.
     - Current: `Noot: samenvattingen kunnen fouten bevatten.`
     - Source: `Note: Summarization can make errors.`
@@ -245,6 +264,16 @@ _Nothing in this category._
     - Source: `%1$@ can look for an earlier version of this page from the Internet Archive’s %2$@.`
     - Suggest: `van het Internet Archive`
     - The source reads "the Internet Archive’s %2$@"; the Dutch keeps the English article "the" inside a Dutch sentence, which is ungrammatical.
+- `QuickAnswers.OptInRedesign.PrivateByDesignTitle.v158` — `nl/firefox-ios.xliff` — 'Ontworpen voor privé' is ungrammatical; 'privé' is an adjective/adverb and cannot be the object here.
+    - Current: `Ontworpen voor privé`
+    - Source: `Private By Design`
+    - Suggest: `Privacy door ontwerp`
+    - 'Private by Design' means privacy is built in; the Dutch reads as 'designed for private', which is not idiomatic or grammatical Dutch.
+- `QuickAnswers.PrivacyBanner.Title.v158` — `nl/firefox-ios.xliff` — 'Ontworpen voor privé' is ungrammatical rendering of 'Private by Design'.
+    - Current: `Ontworpen voor privé`
+    - Source: `Private by Design`
+    - Suggest: `Privacy door ontwerp`
+    - 'privé' cannot serve as a noun object; the phrase does not convey that privacy is built into the design.
 - `Search.Google.Title.v108` — `nl/firefox-ios.xliff` — Incorrect capitalization of the common noun in "Google Zoeken".
     - Current: `Google Zoeken`
     - Source: `Google Search`
@@ -328,6 +357,11 @@ _Nothing in this category._
     - Source: `Turn On Notifications`
     - Suggest: `Meldingen inschakelen`
     - Onboarding.Notification.Title.v120 on the same screen uses "Meldingen" for Notifications; the two renderings are inconsistent within one screen.
+- `QuickAnswers.OptInRedesign.Title.v158` — `nl/firefox-ios.xliff` — Feature name capitalized inconsistently: 'Snelle Antwoorden' here vs 'Snelle antwoorden' in Settings and 'Snel antwoord' elsewhere.
+    - Current: `Snelle Antwoorden proberen`
+    - Source: `Try Quick Answers`
+    - Suggest: `Snelle antwoorden proberen`
+    - Dutch does not use title case; the same feature name is written 'Snelle antwoorden' in QuickAnswers.Settings.EnableQuickAnswers.v158.
 - `QuickAnswers.Settings.Title.v158` — `nl/firefox-ios.xliff` — Feature name capitalized inconsistently: "Snelle Antwoorden" here vs. "Snelle antwoorden" elsewhere in the same feature.
     - Current: `Snelle Antwoorden`
     - Source: `Quick Answers`

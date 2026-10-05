@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
-| **Previous run** | 2026-09-21 @ `26f50d4ce7b1` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
+| **Previous run** | 2026-09-28 @ `76fd90c3d050` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 19 of 1,969 |
+| **Strings reviewed this run** | 0 of 1,969 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for ru: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `QuickAnswers.ContentView.Listening.v158` — `ru/firefox-ios.xliff` — "Listening" (the app is listening) is rendered as an imperative telling the user to listen.
-    - Current: `Слушайте, спрашивайте что угодно…`
-    - Source: `Listening, ask anything…`
-    - Suggest: `Слушаю, спрашивайте что угодно…`
-    - Per the comment, this is a placeholder shown while the microphone is active and waiting for the user to speak — the app is listening, not the user. The imperative «Слушайте» reverses who is doing the listening.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

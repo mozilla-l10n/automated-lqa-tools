@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
-| **Previous run** | 2026-09-21 @ `26f50d4ce7b1` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
+| **Previous run** | 2026-09-28 @ `76fd90c3d050` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 547 |
+| **Strings reviewed this run** | 1,567 of 1,969 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,164 +18,337 @@ Also for fa: [android](android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (416)
 
-_No new findings._
+- `FirefoxHomepage.JumpBackIn.TabPickup.ShowAll.ButtonTitle.v104` — `fa/firefox-ios.xliff` — "synced tabs" rendered with a noun phrase meaning "tabs of synchronization" rather than "synced tabs".
+    - Current: `زبانه‌های همگام‌سازی‌شده`
+    - Source: `See all synced tabs`
+    - Suggest: `زبانه‌های همگام‌شده`
+    - Elsewhere the same concept is translated consistently; here the construction is awkward, though the sibling string LibraryPanel.History.SyncedHistory uses تاریخچه همگام‌سازی‌شده. Minor consistency/grammar issue.
+- `Menu.EnhancedTrackingProtectionOff.Title` — `fa/firefox-ios.xliff` — "site" translated as پایگاه instead of the standard سایت used elsewhere in the same file.
+    - Current: `محافظت‌ها برای این پایگاه‌ خاموش است`
+    - Source: `Protections are OFF for this site`
+    - Suggest: `محافظت‌ها برای این سایت خاموش است`
+    - LibraryPanel.History.ClearGroupedTabsTitle renders "sites" as سایت‌ها; using پایگاه here (plus a stray ZWNJ before the space) is inconsistent terminology on related screens.
+- `Menu.EnhancedTrackingProtectionOn.Title` — `fa/firefox-ios.xliff` — "site" translated as پایگاه instead of the standard سایت used elsewhere in the same file.
+    - Current: `محافظت‌ها برای این پایگاه‌ روشن است`
+    - Source: `Protections are ON for this site`
+    - Suggest: `محافظت‌ها برای این سایت روشن است`
+    - Inconsistent with سایت used in other strings of this file; also contains a stray ZWNJ before the space.
+- `Logins.PasscodeRequirement.Warning` — `fa/firefox-ios.xliff` — "device passcode" translated as رمز عبور (password) rather than the passcode term.
+    - Current: `باید رمز عبور دستگاه را فعال کرده باشید`
+    - Source: `To use the AutoFill feature for Firefox, you must have a device passcode enabled.`
+    - Suggest: `باید رمز عبور (گذرواژه) دستگاه را فعال کرده باشید`
+    - The file consistently uses گذرواژه for password; passcode should be distinguished, e.g. رمز دستگاه, to avoid confusion with Firefox passwords discussed in the same screen.
+- `Settings.Home.Option.Wallpaper.CollectionTitle` — `fa/firefox-ios.xliff` — Section title for wallpaper collections is translated as "Opening screen" instead of referring to wallpaper/collection.
+    - Current: `صفحهٔ آغاز`
+    - Source: `OPENING SCREEN`
+    - Suggest: `مجموعه‌ها`
+    - The comment says this is the title of the section that lets users change wallpaper settings; the fa text duplicates the unrelated "Opening screen" string (Settings.Home.Option.StartAtHome.Title), so it labels the wrong screen section.
+- `Alerts.AddToCalendar.Body.v134` — `fa/firefox-ios.xliff` — Translation is broken machine output: contains untranslated English word "asking" and ungrammatical Persian.
+    - Current: `%@ است asking به دریافت یک پرونده و افزودن یک رویداد به شما تقویم.`
+    - Source: `%@ is asking to download a file and add an event to your calendar.`
+    - Suggest: `%@ درخواست دارد یک پرونده دریافت کند و رویدادی به تقویم شما بیفزاید.`
+    - The en-US says "%@ is asking to download a file and add an event to your calendar." The target leaves "asking" in English and has broken syntax ("به شما تقویم" instead of "به تقویم شما").
+- `Alerts.AddToCalendar.BodyDefault.v134` — `fa/firefox-ios.xliff` — Translation is broken machine output: contains untranslated English word "asking" and ungrammatical Persian.
+    - Current: `این وبگاه است asking به دریافت یک پرونده و افزودن یک رویداد به شما تقویم.`
+    - Source: `This site is asking to download a file and add an event to your calendar.`
+    - Suggest: `این وبگاه درخواست دارد یک پرونده دریافت کند و رویدادی به تقویم شما بیفزاید.`
+    - The en-US says "This site is asking to download a file and add an event to your calendar." The target leaves "asking" in English and has broken word order ("به شما تقویم").
+- `Alerts.FeltDeletion.Body.v122` — `fa/firefox-ios.xliff` — Ungrammatical word-by-word rendering with Latin commas instead of Persian commas.
+    - Current: `بستن همه خصوصی زبانه‌ها و حذف کردن تاریخچه, کوکی‌ها, و همه دیگر وبگاه داده.`
+    - Source: `Close all private tabs and delete history, cookies, and all other site data.`
+    - Suggest: `بستن همهٔ زبانه‌های خصوصی و حذف تاریخچه، کوکی‌ها و همهٔ داده‌های دیگر وبگاه‌ها.`
+    - The source "Close all private tabs and delete history, cookies, and all other site data." is rendered with English adjective order ("همه خصوصی زبانه‌ها", "همه دیگر وبگاه داده") which is not valid Persian, and uses ASCII commas instead of the Persian comma «،».
+- `Alerts.RestoreTabs.Title.v109.v2` — `fa/firefox-ios.xliff` — The word "crashed" is left untranslated and the rest is ungrammatical word salad.
+    - Current: `%@ crashed. بازیابی شما زبانه‌ها؟`
+    - Source: `%@ crashed. Restore your tabs?`
+    - Suggest: `%@ از کار افتاد. زبانه‌های شما بازیابی شود؟`
+    - The source "%@ crashed. Restore your tabs?" is only half-translated; "crashed" remains in English and "بازیابی شما زبانه‌ها؟" has wrong word order/possessive.
+- `Settings.AppIconSelection.AppIconNames.BlueHour.Title.v137` — `fa/firefox-ios.xliff` — "Blue Hour" rendered with reversed Persian word order, yielding nonsense.
+    - Current: `آبی ساعت`
+    - Source: `Blue Hour`
+    - Suggest: `ساعت آبی`
+    - Persian noun-adjective order requires "ساعت آبی"; compare the correctly ordered "ساعت طلایی" for Golden Hour in the same screen.
+- `Settings.AppIconSelection.AppIconNames.DarkPurple.Title.v136` — `fa/firefox-ios.xliff` — "Dark Purple" rendered with reversed word order.
+    - Current: `تیره بنفش`
+    - Source: `Dark Purple`
+    - Suggest: `بنفش تیره`
+    - In Persian the modifier follows the noun/colour: "بنفش تیره" means dark purple; "تیره بنفش" is ungrammatical.
+- `Settings.AppIconSelection.AppIconNames.Fun.Cool.Title.146` — `fa/firefox-ios.xliff` — "Cool" (stylish, fox with sunglasses) translated as "خنک" (cool in temperature).
+    - Current: `خنک`
+    - Source: `Cool`
+    - Suggest: `باحال`
+    - The developer comment describes a fox with sunglasses, i.e. "cool" in the sense of stylish, not low temperature.
+- `Bookmarks.EmptyState.Root.Body.v135` — `fa/firefox-ios.xliff` — Translation is partially untranslated and garbled, leaving English fragments and broken grammar.
+    - Current: `ما’ll also grab نشانک‌ها از دیگر همگام‌شده دستگاه‌ها.`
+    - Source: `Save sites as you browse. We’ll also grab bookmarks from other synced devices.`
+    - Suggest: `ما نشانک‌ها را از دیگر دستگاه‌های همگام‌شده نیز دریافت می‌کنیم.`
+    - The en-US "We’ll also grab bookmarks from other synced devices." is left half-English ("’ll also grab") and the Persian word order is broken.
+- `Bookmarks.EmptyState.Root.BodySignedOut.v135` — `fa/firefox-ios.xliff` — Second sentence is left mostly in English and garbled.
+    - Current: `Sign در به grab نشانک‌ها از دیگر همگام‌شده دستگاه‌ها.`
+    - Source: `Save sites as you browse. Sign in to grab bookmarks from other synced devices.`
+    - Suggest: `برای دریافت نشانک‌ها از دیگر دستگاه‌های همگام‌شده وارد شوید.`
+    - The en-US "Sign in to grab bookmarks from other synced devices." is left untranslated/broken ("Sign در به grab").
+- `Bookmarks.Menu.EditBookmarkDesktopBookmarksLabel.v136` — `fa/firefox-ios.xliff` — "BOOKMARKS" is left in English and corrupted with the Persian word "تأیید" inserted.
+    - Current: `رومیزی BOتأییدMARKS`
+    - Source: `DESKTOP BOOKMARKS`
+    - Suggest: `نشانک‌های رومیزی`
+    - The source is "DESKTOP BOOKMARKS"; the target contains the garbled token "BOتأییدMARKS" instead of a translation of "BOOKMARKS".
+- `Bookmarks.Menu.EditBookmarkMobileBookmarksLabel.v154` — `fa/firefox-ios.xliff` — "BOOKMARKS" is left in English and corrupted with the Persian word "تأیید" inserted.
+    - Current: `تلفن همراه BOتأییدMARKS`
+    - Source: `MOBILE BOOKMARKS`
+    - Suggest: `نشانک‌های تلفن همراه`
+    - The source is "MOBILE BOOKMARKS"; the target contains the garbled token "BOتأییدMARKS" instead of a translation of "BOOKMARKS".
+- `Bookmarks.Menu.SavedBookmarkToastDefaultFolderLabel.v136` — `fa/firefox-ios.xliff` — Stray English "d" suffix attached to the Persian verb, and non-guillemet quotes.
+    - Current: `ذخیرهd در “نشانک‌ها”`
+    - Source: `Saved in “Bookmarks”`
+    - Suggest: `در «نشانک‌ها» ذخیره شد`
+    - "Saved" was partially replaced leaving "ذخیرهd", which is not a Persian word; the locale convention is guillemets, as used in Bookmarks.Menu.DeletedBookmark.
+- `Bookmarks.Menu.SavedBookmarkToastLabel.v136` — `fa/firefox-ios.xliff` — Stray English "d" suffix attached to the Persian verb, and non-guillemet quotes.
+    - Current: `ذخیرهd در “%@”`
+    - Source: `Saved in “%@”`
+    - Suggest: `در «%@» ذخیره شد`
+    - "Saved" was partially replaced leaving "ذخیرهd", which is not a Persian word; the locale convention is guillemets.
+- `CameraAccess.DisabledAlertMessage.v153` — `fa/firefox-ios.xliff` — The Persian text is ungrammatical word-salad, apparently machine-generated, and does not convey the source instruction.
+    - Current: `رفتن به تنظیمات > %@ در شما دستگاه به اجازه Firefox به استفاده شما دوربین.`
+    - Source: `Go to Settings > %@ on your device to allow Firefox to use your camera.`
+    - Suggest: `در دستگاه خود به تنظیمات > %@ بروید تا به Firefox اجازه دهید از دوربین شما استفاده کند.`
+    - The source says "Go to Settings > %@ on your device to allow Firefox to use your camera." The target is a literal word-by-word rendering with wrong word order and wrong particles ("در شما دستگاه", "به اجازه", "استفاده شما دوربین"), which is not comprehensible Persian.
+- `ContextualHints.Translations.Title.v145` — `fa/firefox-ios.xliff` — Untranslated English word "Speaks" left in the string and word order is ungrammatical.
+    - Current: `%@ Speaks شما زبان`
+    - Source: `%@ Speaks Your Language`
+    - Suggest: `%@ به زبان شما صحبت می‌کند`
+    - The source "%@ Speaks Your Language" should be fully translated; "Speaks" remains in English and "شما زبان" is an incorrect possessive construction.
+- `Settings.Home.Option.ThoughtProvokingStories.subtitle.v116` — `fa/firefox-ios.xliff` — The English word "by" is left untranslated inside the Persian string.
+    - Current: `مقاله‌ها ارائه‌شده by %@`
+    - Source: `Articles powered by %@`
+    - Suggest: `مقاله‌ها ارائه‌شده توسط %@`
+    - Source "Articles powered by %@"; the preposition "by" was not translated into Persian.
+- `Addresses.EditAddress.Alert.Title.v129` — `fa/firefox-ios.xliff` — Corrupted translation: "Address" was partially translated leaving the mangled token "افزودنress".
+    - Current: `حذف افزودنress`
+    - Source: `Remove Address`
+    - Suggest: `حذف نشانی`
+    - Source is "Remove Address"; the target reads "حذف افزودنress", where "Add" was replaced by "افزودن" inside the word "Address", producing nonsense.
+- `Addresses.EditAddress.RemoveAddressButtonTitle.v129` — `fa/firefox-ios.xliff` — Translation contains a corrupted mix of Persian and leftover English characters instead of "Remove Address".
+    - Current: `حذف افزودنress`
+    - Source: `Remove Address`
+    - Suggest: `حذف نشانی`
+    - The source is "Remove Address"; the target reads "delete add-ress" with a stray English fragment "ress" and the wrong word "افزودن" (add).
+- `Addresses.EditAddress.AutofillAddressPin.v129` — `fa/firefox-ios.xliff` — "Pin" (the Indian Postal Index Number) is translated as the verb "to pin/attach".
+    - Current: `سنجاق کردن`
+    - Source: `Pin`
+    - Suggest: `کد پستی (PIN)`
+    - The developer comment states this is the PIN (Postal Index Number) field used in India, not the action of pinning something.
+- `Addresses.EditAddress.AutofillAddressPostTown.v129` — `fa/firefox-ios.xliff` — "Post town" is left half-untranslated as "Post شهر".
+    - Current: `Post شهر`
+    - Source: `Post town`
+    - Suggest: `شهر پستی`
+    - The English word "Post" remains untranslated and mixed into the Persian text, producing a nonsensical label for the post town field.
+- `Menu.EnhancedTrackingProtection.Certificates.CommonName.v131` — `fa/firefox-ios.xliff` — "Common Name" is left half-untranslated as "Common نام", producing a nonsensical mixed-language label.
+    - Current: `Common نام`
+    - Source: `Common Name`
+    - Suggest: `نام مشترک (Common Name)`
+    - The source term "Common Name" is a certificate field; the translation mechanically renders only "Name" into Persian and leaves "Common" in English, which is not a valid Persian phrase.
+- `Menu.EnhancedTrackingProtection.Certificates.IssuerName.v131` — `fa/firefox-ios.xliff` — "صادرکننده نام" reverses the Persian noun-modifier order; it should be "نام صادرکننده".
+    - Current: `صادرکننده نام`
+    - Source: `Issuer Name`
+    - Suggest: `نام صادرکننده`
+    - Persian ezafe order puts the head noun first: "Issuer Name" = "نام صادرکننده". As written it reads "issuer name" word-by-word in English order and is ungrammatical.
+- `Menu.EnhancedTrackingProtection.Certificates.SubjectAltNames.v131` — `fa/firefox-ios.xliff` — "موضوع Alt نامs" contains a stray English plural "s" attached to the Persian word and wrong word order.
+    - Current: `موضوع Alt نامs`
+    - Source: `Subject Alt Names`
+    - Suggest: `نام‌های جایگزین موضوع`
+    - The English plural suffix "s" has been appended to the Persian "نام", and the phrase keeps English word order; the result is not valid Persian.
+- `Menu.EnhancedTrackingProtection.Certificates.SubjectAltNamesDNSName.v131` — `fa/firefox-ios.xliff` — "DNS نام" uses English word order; Persian requires "نام DNS".
+    - Current: `DNS نام`
+    - Source: `DNS Name`
+    - Suggest: `نام DNS`
+    - In Persian the head noun precedes the modifier, so "DNS Name" is "نام DNS".
+- `Menu.EnhancedTrackingProtection.Certificates.SubjectName.v131` — `fa/firefox-ios.xliff` — "موضوع نام" reverses the Persian word order; it should be "نام موضوع".
+    - Current: `موضوع نام`
+    - Source: `Subject Name`
+    - Suggest: `نام موضوع`
+    - Persian ezafe order requires the head noun "نام" first: "Subject Name" = "نام موضوع".
+- `CreditCard.EditCard.ToggleToAllowAutofillTitle.v122` — `fa/firefox-ios.xliff` — "Save and Fill" is rendered as "ذخیره و پرکردن خودکار" (save and autofill), adding "automatic" not present in the source.
+    - Current: `ذخیره و پرکردن خودکار روش‌های پرداخت`
+    - Source: `Save and Fill Payment Methods`
+    - Suggest: `ذخیره و پرکردن روش‌های پرداخت`
+    - The en-US says "Save and Fill Payment Methods"; the translation adds "خودکار" (automatic), which the source label does not state.
+- `Menu.EnhancedTrackingProtection.On.Title.v128` — `fa/firefox-ios.xliff` — Ungrammatical word-salad rendering of "%@ is on guard".
+    - Current: `%@ است در محافظ`
+    - Source: `%@ is on guard`
+    - Suggest: `%@ نگهبانی می‌دهد`
+    - The Persian "%@ است در محافظ" is not grammatical Persian word order and does not convey "is on guard".
+- `ExternalLink.ExternalInvalidLinkMessage.v136` — `fa/firefox-ios.xliff` — String is a broken mix of untranslated English words and Persian, unintelligible to users.
+    - Current: `برنامه required به باز کردن آن پیوند می‌تواند’t باشد found.`
+    - Source: `The application required to open that link can’t be found.`
+    - Suggest: `برنامهٔ لازم برای باز کردن آن پیوند پیدا نشد.`
+    - The source says the required application can't be found; the target leaves "required", "can’t", "found" in English and is grammatically broken.
+- `FirefoxHome.PrivacyNotice.Body.v148` — `fa/firefox-ios.xliff` — Partially untranslated, ungrammatical rendering mixing English fragments.
+    - Current: `ما’ve به‌روزرسانی‌شده ما %1$@ به reflect جدیدترین ویژگی‌ها در %2$@. %3$@`
+    - Source: `We’ve updated our %1$@ to reflect the latest features in %2$@. %3$@`
+    - Suggest: `ما %1$@ خود را به‌روزرسانی کردیم تا جدیدترین ویژگی‌های %2$@ را بازتاب دهد. %3$@`
+    - Source: "We’ve updated our %1$@ to reflect the latest features in %2$@." The target keeps "’ve" and "reflect" in English and is not grammatical Persian.
+- `FirefoxHomepage.FeltPrivacyUI.Body.v122` — `fa/firefox-ios.xliff` — String largely untranslated and corrupted, with English words and Latin commas.
+    - Current: `%@ deletes شما کوکی‌ها, تاریخچه, و وبگاه datیک when شما بستن همه شما خصوصی زبانه‌ها.`
+    - Source: `%@ deletes your cookies, history, and site data when you close all your private tabs.`
+    - Suggest: `%@ وقتی همهٔ زبانه‌های خصوصی خود را ببندید، کوکی‌ها، تاریخچه و داده‌های وبگاه شما را حذف می‌کند.`
+    - Source: "%@ deletes your cookies, history, and site data when you close all your private tabs." The target leaves "deletes", "when", "dat" untranslated and is ungrammatical.
+- `Menu.EnhancedTrackingProtection.Details.NoTrackers.v131` — `fa/firefox-ios.xliff` — "No trackers found" translated as "no tracking found" instead of trackers (ردیاب).
+    - Current: `ردیابی پیدا نشد`
+    - Source: `No trackers found`
+    - Suggest: `ردیابی پیدا نشد → ردیابی‌کننده‌ای پیدا نشد`
+    - Other strings in the same file use «ردیاب» for "tracker"; here «ردیابی» means "tracking", an inconsistent and inaccurate term for the noun "trackers".
+- `Menu.EnhancedTrackingProtection.Switch.Title.v128` — `fa/firefox-ios.xliff` — "Enhanced Tracking Protection" mistranslated as "optimizing protection from followers" and inconsistent with «ردیاب» used elsewhere in this file.
+    - Current: `بهینه سازی محافظت از دنبال کنندگان`
+    - Source: `Enhanced Tracking Protection`
+    - Suggest: `محافظت پیشرفته در برابر ردیابی`
+    - The source names the feature "Enhanced Tracking Protection"; the target says "optimization of protection of/from followers", uses a different term for trackers than the rest of the screen, and reads as protecting trackers rather than from them.
+- `FirefoxHomepage.TrackerBlocker.NoTrackersBlocked.v153` — `fa/firefox-ios.xliff` — Untranslated English fragment "’re" left inside the Persian string, producing broken text.
+    - Current: `شما’re محافظت‌شده`
+    - Source: `You’re Protected`
+    - Suggest: `شما محافظت می‌شوید`
+    - The source "You’re Protected" was machine-mangled; the English contraction remnant "’re" remains in the Persian text.
+- `FirefoxHomepage.TrackerBlocker.TrackersBlocked.v153b` — `fa/firefox-ios.xliff` — Ungrammatical word-for-word rendering of "Trackers Blocked".
+    - Current: `ردیاب‌ها مسدود: %@`
+    - Source: `Trackers Blocked: %@`
+    - Suggest: `ردیاب‌های مسدودشده: %@`
+    - "ردیاب‌ها مسدود" is not grammatical Persian; the adjective/participle must agree via ezafe as "ردیاب‌های مسدودشده".
+- `FirefoxHomepage.TrackerBlocker.TrackersBlocked.v155` — `fa/firefox-ios.xliff` — Ungrammatical word-for-word rendering of "Trackers Blocked".
+    - Current: `ردیاب‌ها مسدود: %@`
+    - Source: `Trackers Blocked: %@`
+    - Suggest: `ردیاب‌های مسدودشده: %@`
+    - "ردیاب‌ها مسدود" is not grammatical Persian; it needs ezafe and the participle form.
+- `LoginsList.Title.v122` — `fa/firefox-ios.xliff` — Word order reversed: adjective placed before the noun, which is ungrammatical in Persian.
+    - Current: `ذخیره‌شده گذرواژه‌ها`
+    - Source: `SAVED PASSWORDS`
+    - Suggest: `گذرواژه‌های ذخیره‌شده`
+    - Persian places the modifier after the noun with ezafe; "ذخیره‌شده گذرواژه‌ها" is a literal English word order.
+- `FirefoxHomepage.Pocket.Footer.Title.v116` — `fa/firefox-ios.xliff` — Partially untranslated and ungrammatical: English "by" left in, and "خانواده" misplaced.
+    - Current: `ارائه‌شده by %1$@. بخشِ %2$@ خانواده.`
+    - Source: `Powered by %1$@. Part of the %2$@ family.`
+    - Suggest: `ارائه‌شده توسط %1$@. بخشی از خانوادهٔ %2$@.`
+    - The English preposition "by" remains untranslated and the second sentence has English word order, making it unreadable in Persian.
+- `CloseTab.ArrivingNotification.title.v133` — `fa/firefox-ios.xliff` — Ungrammatical literal word order for "%1$@ tabs closed".
+    - Current: `%1$@ زبانه‌ها بسته‌شده: %2$@`
+    - Source: `%1$@ tabs closed: %2$@`
+    - Suggest: `زبانه‌های بسته‌شدهٔ %1$@: %2$@`
+    - The Persian lacks ezafe linking and copies English word order, yielding ungrammatical text.
+- `ContextualHints.FirefoxHomepage.JumpBackIn.PersonalizedHome` — `fa/firefox-ios.xliff` — String is largely untranslated/garbled, with English words, English commas, and a missing space ("resultsخواهد").
+    - Current: `Meet شما شخصی‌سازی‌شده صفحهٔ اصلی. اخیر زبانه‌ها, نشانک‌ها, و جست‌و‌جو resultsخواهد ظاهر می‌شوند here.`
+    - Source: `Meet your personalized homepage. Recent tabs, bookmarks, and search results will appear here.`
+    - Suggest: `با صفحهٔ اصلی شخصی‌سازی‌شدهٔ خود آشنا شوید. زبانه‌های اخیر، نشانک‌ها و نتایج جست‌وجو اینجا ظاهر می‌شوند.`
+    - Mixed English ("Meet", "results", "here"), broken word order and a missing space make the hint unreadable.
+- `KeyboardAccessory.NextButton.Accessibility.Label.v124` — `fa/firefox-ios.xliff` — Partially untranslated: "form field" left in English.
+    - Current: `بعدی form field`
+    - Source: `Next form field`
+    - Suggest: `فیلد بعدی فرم`
+    - The source "Next form field" is only half-translated; the English words remain.
+- `KeyboardAccessory.PreviousButton.Accessibility.Label.v124` — `fa/firefox-ios.xliff` — Partially untranslated: "form field" left in English.
+    - Current: `قبلی form field`
+    - Source: `Previous form field`
+    - Suggest: `فیلد قبلی فرم`
+    - The source "Previous form field" is only half-translated; the English words remain.
+- `ContextualHints.MainMenu.MenuRedesign.Body.v142` — `fa/firefox-ios.xliff` — Translation left partly in English with untranslated words "at" and "fingertips".
+    - Current: `نشانک‌ها, تاریخچه, و تنظیمات — همه at شما fingertips.`
+    - Source: `Bookmarks, history, and settings — all at your fingertips.`
+    - Suggest: `نشانک‌ها، تاریخچه و تنظیمات — همه در دسترس شما.`
+    - The en-US "all at your fingertips" is not translated; English words remain inside the Persian string, and Latin commas are used instead of Persian «،».
+- `ContextualHints.MainMenu.NewMenu.Body.v132` — `fa/firefox-ios.xliff` — Untranslated English words and garbled word order render the sentence meaningless in Persian.
+    - Current: `یافتن what شما need سریع‌تر, از خصوصی مرور به ذخیره عمل‌ها.`
+    - Source: `Find what you need faster, from private browsing to save actions.`
+    - Suggest: `آنچه را نیاز دارید سریع‌تر پیدا کنید، از مرور خصوصی تا عمل‌های ذخیره.`
+    - Source "Find what you need faster, from private browsing to save actions." is only partially translated; "what", "need" remain English and the phrase structure is broken.
+- `ContextualHints.MainMenu.NewMenu.Title.v132` — `fa/firefox-ios.xliff` — "streamlined" left untranslated in English.
+    - Current: `جدید: streamlined منو`
+    - Source: `New: streamlined menu`
+    - Suggest: `جدید: منوی ساده‌شده`
+    - The source word "streamlined" is not translated, leaving English in the Persian UI.
+- `MainMenu.Account.AccessibilityLabels.MainButton.v132` — `fa/firefox-ios.xliff` — "Sign in" left untranslated, producing a mixed English/Persian accessibility label.
+    - Current: `Sign در به همگام‌سازی گذرواژه‌ها, زبانه‌ها, و بیشتر`
+    - Source: `Sign in to sync passwords, tabs, and more`
+    - Suggest: `برای همگام‌سازی گذرواژه‌ها، زبانه‌ها و بیشتر وارد شوید`
+    - Source "Sign in to sync passwords, tabs, and more" is partly untranslated and syntactically broken.
+- `MainMenu.Account.SignedIn.Description.v141` — `fa/firefox-ios.xliff` — English words "what" and "back up" left untranslated.
+    - Current: `مدیریت what شما back up و همگام‌سازی`
+    - Source: `Manage what you back up and sync`
+    - Suggest: `مدیریت آنچه پشتیبان‌گیری و همگام‌سازی می‌کنید`
+    - Source "Manage what you back up and sync" is only partially translated, leaving English in the Persian UI.
+- `MainMenu.Account.SyncError.Title.v131` — `fa/firefox-ios.xliff` — "Sign back in" left untranslated, producing a broken mixed-language string.
+    - Current: `Sign back در به همگام‌سازی`
+    - Source: `Sign back in to sync`
+    - Suggest: `برای همگام‌سازی دوباره وارد شوید`
+    - Source "Sign back in to sync" is not translated into Persian.
+- `MainMenu.HeaderBanner.Subtitle.v142` — `fa/firefox-ios.xliff` — "Takes" left untranslated in English.
+    - Current: `Takes ثانیه. تغییر هر زمان.`
+    - Source: `Takes seconds. Change anytime.`
+    - Suggest: `چند ثانیه طول می‌کشد. هر زمان تغییر دهید.`
+    - Source "Takes seconds. Change anytime." is only partially translated.
+- `MainMenu.HeaderBanner.Title.v142` — `fa/firefox-ios.xliff` — "Make" left untranslated and sentence structure broken.
+    - Current: `Make %@ شما پیش‌فرض`
+    - Source: `Make %@ your default`
+    - Suggest: `%@ را پیش‌فرض خود کنید`
+    - Source "Make %@ your default" is not properly translated into Persian.
+- `MainMenu.SettingsSection.AccessibilityLabels.CustomizeHomepage.v132` — `fa/firefox-ios.xliff` — Hybrid word "سفارشیize" contains a stray English suffix.
+    - Current: `سفارشیize صفحهٔ اصلی`
+    - Source: `Customize Homepage`
+    - Suggest: `سفارشی‌سازی صفحهٔ اصلی`
+    - "Customize" was partly machine-translated, leaving "ize" attached to the Persian word.
+- `MainMenu.Account.SyncError.Description.v131` — `fa/firefox-ios.xliff` — "Syncing paused" rendered with a redundant progressive phrase that contradicts itself.
+    - Current: `در حال همگام‌سازی متوقف‌شده`
+    - Source: `Syncing paused`
+    - Suggest: `همگام‌سازی متوقف شد`
+    - "در حال همگام‌سازی" means "syncing in progress", which conflicts with "متوقف‌شده" (paused); the source states that syncing is paused.
+- `MainMenu.SettingsSection.CustomizeHomepage.Title.v131` — `fa/firefox-ios.xliff` — Untranslated English fragment "ize" left inside the Persian word, producing "سفارشیize".
+    - Current: `سفارشیize صفحهٔ اصلی`
+    - Source: `Customize Homepage`
+    - Suggest: `سفارشی‌سازی صفحهٔ اصلی`
+    - The source is "Customize Homepage"; the target contains a corrupted hybrid word mixing Persian "سفارشی" with the English suffix "ize".
+- `Microsurvey.Survey.OptionsOrder.AccessibilityLabel.v129` — `fa/firefox-ios.xliff` — "out of" mistranslated literally as "بیرونِ" (outside of) instead of the counting sense "از".
+    - Current: `%1$@ بیرونِ %2$@`
+    - Source: `%1$@ out of %2$@`
+    - Suggest: `%1$@ از %2$@`
+    - The comment says the output is like "1 out of 6", i.e. item N of M; "بیرونِ" means "outside of" and is nonsense here.
+- `Microsurvey.Survey.PrivacyPolicyLink.v127` — `fa/firefox-ios.xliff` — The word "notice" is left untranslated, producing a mixed English/Persian string.
+    - Current: `حریم خصوصی notice`
+    - Source: `Privacy notice`
+    - Suggest: `اعلامیهٔ حریم خصوصی`
+    - en-US "Privacy notice" must be fully translated; "notice" remains in English.
+- `NativeErrorPage.NoInternetConnection.Description.v131` — `fa/firefox-ios.xliff` — Translation is partly untranslated and ungrammatical word-for-word Persian.
+    - Current: `تلاش کنید connecting در یک متفاوت دستگاه. بررسی شما مودم یا مسیریاب. قطع اتصال و اتصال مجدد به Wi-Fi.`
+    - Source: `Try connecting on a different device. Check your modem or router. Disconnect and reconnect to Wi-Fi.`
+    - Suggest: `اتصال با دستگاهی دیگر را امتحان کنید. مودم یا مسیریاب خود را بررسی کنید. اتصال Wi-Fi را قطع و دوباره وصل کنید.`
+    - "connecting" is left in English and the syntax ("بررسی شما مودم", "یک متفاوت دستگاه") is not grammatical Persian.
+- _…and 356 more._
 
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
-
-### ↩︎ Withdrawn — no longer considered a defect (0)
-
-_Nothing withdrawn._
-
-### 🔁 String changed, defect not verifiable — needs a re-read (0)
-
-_Nothing to re-read._
-
-### 🗑 Retired — the string no longer exists upstream (0)
-
-_Nothing retired._
-
----
-
-## 1. Health check
-
-| Check | Result |
-|---|---|
-| Files | 22 |
-| Strings | 547 |
-| Missing strings | 1,422 |
-| Obsolete strings | 0 |
-| Files absent from the locale | 75 |
-| Files with no en-US counterpart | 0 |
-| Fluent / properties syntax errors | 0 |
-| Reference files that did not parse | 0 |
-| printf placeholder mismatches | 0 |
-| Text quoting a UI label that no longer matches | 0 |
-| Source-language spellings left unchanged | 0 |
-| Typography deviations from this locale's own norm | 0 |
-
-### Completeness
-
-**1,422 strings** are not translated yet, concentrated in:
-
-- `fa/firefox-ios.xliff` — 182
-- `Shared/Supporting Files/en-US.lproj/Onboarding.strings` — 158
-- `Shared/Supporting Files/en-US.lproj/Settings.strings` — 152
-- `Shared/Supporting Files/en-US.lproj/MainMenu.strings` — 151
-- `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — 73
-- `Shared/Supporting Files/en-US.lproj/WebCompatReporter.strings` — 52
-- `Shared/Supporting Files/en-US.lproj/EditAddress.strings` — 48
-- `Shared/Supporting Files/en-US.lproj/EnhancedTrackingProtection.strings` — 43
-- `Shared/Supporting Files/en-US.lproj/AppIconSelection.strings` — 42
-- `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings` — 40
-- `Shared/Supporting Files/en-US.lproj/Bookmarks.strings` — 32
-- `Shared/Supporting Files/en-US.lproj/NativeErrorPage.strings` — 32
-
-**Files absent from the locale:**
-
-- `Extensions/ActionExtension/en-US.lproj/InfoPlist.strings`
-- `Shared/Supporting Files/en-US.lproj/ActivityStream.strings`
-- `Shared/Supporting Files/en-US.lproj/AddressToolbar.strings`
-- `Shared/Supporting Files/en-US.lproj/Alert.strings`
-- `Shared/Supporting Files/en-US.lproj/Alerts.strings`
-- `Shared/Supporting Files/en-US.lproj/AppIconSelection.strings`
-- `Shared/Supporting Files/en-US.lproj/BiometricAuthentication.strings`
-- `Shared/Supporting Files/en-US.lproj/Bookmarks.strings`
-- `Shared/Supporting Files/en-US.lproj/BottomSheet.strings`
-- `Shared/Supporting Files/en-US.lproj/Camera.strings`
-- `Shared/Supporting Files/en-US.lproj/ContextualHints.strings`
-- `Shared/Supporting Files/en-US.lproj/CredentialProvider.strings`
-- `Shared/Supporting Files/en-US.lproj/Credentials.strings`
-- `Shared/Supporting Files/en-US.lproj/CustomizeFirefoxHome.strings`
-- `Shared/Supporting Files/en-US.lproj/DisplayCard.strings`
-- `Shared/Supporting Files/en-US.lproj/Edit Card.strings`
-- `Shared/Supporting Files/en-US.lproj/EditAddress.strings`
-- `Shared/Supporting Files/en-US.lproj/EditCard.strings`
-- `Shared/Supporting Files/en-US.lproj/EngagementNotification.strings`
-- `Shared/Supporting Files/en-US.lproj/EnhancedTrackingProtection.strings`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
-
-### Conventions detected in this locale
-
-Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
-
-| Convention | Counts | Inferred |
-|---|---|---|
-| quotes | `guillemet` 1 | **guillemet** |
-| ellipsis | `char` 5 | **char** |
-
----
-
-## 2. Systemic items (decisions, not line items)
-
-_Nothing reported._
-
----
-
-## 3. Open findings (88)
-
-> **Reads as a deliberate edit (7).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.` — `fa/firefox-ios.xliff` — "tapping" rendered as "tapping and holding", and "book plus icon" loses the plus.
-    - Current: `با تپ کردن و نگه داشتن آیکون کتاب`
-    - Source: `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.`
-    - Suggest: `با تپ کردن آیکون کتاب به‌همراه علامت مثبت`
-    - The source says simply "tapping the book plus icon"; the translation instructs a tap-and-hold gesture, giving the user wrong instructions.
-- `Settings.Disconnect.Body` — `fa/firefox-ios.xliff` — The qualifier "browsing data" is rendered as just "any data", widening the claim about what is not deleted.
-    - Current: `هیچ گونه اطلاعاتی از روی دستگاه شما پاک نخواهد کرد`
-    - Source: `Firefox will stop syncing with your account, but won’t delete any of your browsing data on this device.`
-    - Suggest: `هیچ‌گونه اطلاعات مرور شما را از روی این دستگاه پاک نخواهد کرد`
-    - en-US says it won’t delete any of your browsing data on this device; the translation drops "browsing", asserting that no data at all is deleted.
-- `Settings.SendUsage.Message` — `fa/firefox-ios.xliff` — The translation drops "strives to" and "provide", asserting Mozilla only collects data that helps improve Firefox.
-    - Current: `موزیلا تنها اطلاعاتی که به بهینه‌سازی فایرفاکس برای همه کمک می‌کند را جمع‌آوری می‌کند.`
-    - Source: `Mozilla strives to only collect what we need to provide and improve Firefox for everyone.`
-    - Suggest: `موزیلا تلاش می‌کند تنها اطلاعاتی را جمع‌آوری کند که برای ارائه و بهبود فایرفاکس برای همه لازم است.`
-    - The source is a hedged statement of effort ("strives to only collect what we need"); the translation turns it into an unqualified claim about the product's data collection.
-- `Settings.WebsiteData.ConfirmPrompt` — `fa/firefox-ios.xliff` — "will clear" weakened to "can clear" (می‌تواند حذف کند).
-    - Current: `این اقدام می تواند تمام اطلاعات پایگاه اینترنتی را حذف کند`
-    - Source: `This action will clear all of your website data. It cannot be undone.`
-    - Suggest: `این اقدام تمام اطلاعات پایگاه اینترنتی را حذف می‌کند`
-    - The source states the action will clear all website data; the target says it may/can, changing the certainty of the stated behaviour.
-- `Well, this is embarrassing.` — `fa/firefox-ios.xliff` — "this is embarrassing" is rendered as "we are very sorry", an apology the source does not make.
-    - Current: `راستش، بسیار متاسفیم.`
-    - Source: `Well, this is embarrassing.`
-    - Suggest: `خب، این شرم‌آور است.`
-    - The en-US expresses embarrassment about the situation, not an apology from the product.
-- `Logins will be permanently removed.` — `fa/firefox-ios.xliff` — Future-tense warning rendered as past tense, telling the user the deletion already happened.
-    - Current: `ورود‌ها برای همیشه حذف شد.`
-    - Source: `Logins will be permanently removed.`
-    - Suggest: `ورودها برای همیشه حذف خواهند شد.`
-    - The en-US is a warning prompt before deletion ("will be permanently removed"); the Persian past tense «حذف شد» states the removal is already done.
-- `Logins will be removed from all connected devices.` — `fa/firefox-ios.xliff` — Future tense rendered as past tense and "connected devices" reduced to "all devices".
-    - Current: `ورود‌ها بر روی تمامی دستگاه‌ها حذف شد.`
-    - Source: `Logins will be removed from all connected devices.`
-    - Suggest: `ورودها از همه دستگاه‌های متصل حذف خواهند شد.`
-    - Source is a pre-deletion warning: "will be removed from all connected devices"; the translation uses past tense and drops "connected".
-
-_Also listed under their own category below._
-
-| Impact | Meaning | Count |
-|---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 41 |
-| 3 | Degraded language (grammar, spelling, terminology) | 38 |
-| 4 | Cosmetic (typography, spacing) | 9 |
-
-### A. Functional, markup, variables & plurals
-
-_Nothing in this category._
-
-### B. Mistranslation, reversed meaning, wrong names & brand
+### ✅ Fixed since the last run (42)
 
 - `Use your fingerprint to access Logins now.` — `fa/firefox-ios.xliff` — "Logins" translated as "ورود" (act of logging in) rather than saved logins.
     - Current: `استفاده از اثرانگشت برای دسترسی به ورود.`
     - Source: `Use your fingerprint to access Logins now.`
     - Suggest: `برای دسترسی به ورودها از اثر انگشت خود استفاده کنید.`
     - The source refers to the saved Logins list (rendered elsewhere in this batch as "ورودهای ذخیره شده"); the singular "ورود" reads as the action of logging in.
+- `This action will clear all of your private data, including history from your synced devices.` — `fa/firefox-ios.xliff` — Garbled clause: "تاریخچه که از روی دستگاه‌های همگام شما وجود دارد" is ungrammatical.
+    - Current: `شامل تاریخچه که از روی دستگاه‌های همگام شما وجود دارد`
+    - Source: `This action will clear all of your private data, including history from your synced devices.`
+    - Suggest: `شامل تاریخچهٔ دستگاه‌های همگام‌شدهٔ شما`
+    - The relative clause lacks the required ezafe/relative construction and reads as broken Persian compared with the source "including history from your synced devices".
+- `DefaultBrowserCard.Description` — `fa/firefox-ios.xliff` — Space before commas instead of after ("سایت ها ، ایمیل ها").
+    - Current: `پیوندهای وب سایت ها ، ایمیل ها و پیام ها را`
+    - Source: `Set links from websites, emails, and Messages to open automatically in Firefox.`
+    - Suggest: `پیوندهای وب‌سایت‌ها، ایمیل‌ها و پیام‌ها را`
+    - Persian punctuation places the comma immediately after the preceding word; the space before the comma is a typography error.
+- `DefaultBrowserCard.Title` — `fa/firefox-ios.xliff` — Spelling error "یش‌فرض" instead of "پیش‌فرض" and missing object marker "را".
+    - Current: `مرورگر یش‌فرض خود تغییر دهید`
+    - Source: `Switch Your Default Browser`
+    - Suggest: `مرورگر پیش‌فرض خود را تغییر دهید`
+    - "یش‌فرض" is a misspelling of "پیش‌فرض" (default), and the direct-object marker "را" is missing, making the sentence ungrammatical.
+- `DefaultBrowserOnboarding.Description1` — `fa/firefox-ios.xliff` — Step numbering inconsistent: Latin digits here and in step 3 but Persian digit in step 2.
+    - Current: `1. برو به تنظیمات`
+    - Source: `1. Go to Settings`
+    - Suggest: `۱. برو به تنظیمات`
+    - The three onboarding steps appear together on one screen; mixing "1.", "۲." and "3." is inconsistent numbering.
 - `DefaultBrowserOnboarding.Description2` — `fa/firefox-ios.xliff` — Instruction step mistranslated as "Set as default browser" instead of "Tap Default Browser App".
     - Current: `۲. تبدیل به مرورگر پیش‌فرض`
     - Source: `2. Tap Default Browser App`
@@ -191,16 +364,61 @@ _Nothing in this category._
     - Source: `Failed to Add Pass`
     - Suggest: `اضافه کردن کارت (pass) شکست خورد`
     - Per the developer comment this is the Apple Wallet 'Add Pass Failed' alert; "گذرواژه" means password.
+- `BreachAlerts.Description` — `fa/firefox-ios.xliff` — Spaces placed before commas and a broken-off verb suffix («داده اید», «گذرواژه ها») violate Persian punctuation and ZWNJ conventions.
+    - Current: `از آخرین باری که گذرواژه خود را تغییر داده اید ، گذرواژه ها درز کرده یا به سرقت رفته اند. برای محافظت از این حساب ، وارد سایت شوید و گذرواژه خود را تغییر دهید.`
+    - Source: `Passwords were leaked or stolen since you last changed your password. To protect this account, log in to the site and change your password.`
+    - Suggest: `از آخرین باری که گذرواژه خود را تغییر داده‌اید، گذرواژه‌ها درز کرده یا به سرقت رفته‌اند. برای محافظت از این حساب، وارد سایت شوید و گذرواژه خود را تغییر دهید.`
+    - Persian punctuation places the comma «،» directly after the preceding word with no space before it, and plural/verb suffixes attach with ZWNJ.
+- `Changes font type.` — `fa/firefox-ios.xliff` — Missing sentence-final period present in the source.
+    - Current: `تغییر نوع فونت`
+    - Source: `Changes font type.`
+    - Suggest: `تغییر نوع فونت.`
+    - Source "Changes font type." ends with a period, as does the sibling string "Changes color theme." which was translated with a period.
+- `ContextMenu.BookmarkLinkButtonTitle` — `fa/firefox-ios.xliff` — Word order reversed: «پیوند نشانک» means "bookmark's link" rather than the action "Bookmark Link".
+    - Current: `پیوند نشانک`
+    - Source: `Bookmark Link`
+    - Suggest: `نشانک‌گذاری پیوند`
+    - The string is a context menu action for bookmarking a link URL; the Persian noun order makes it a possessive phrase with the wrong meaning.
+- `ContextMenu.CopyImageButtonTitle` — `fa/firefox-ios.xliff` — "Copy" is rendered as «برداشت» (pick up/withdraw) instead of the standard «رونوشت/کپی», inconsistent with ClipboardToast.GoToCopiedLink.Title which uses «رونوشت».
+    - Current: `برداشت تصویر`
+    - Source: `Copy Image`
+    - Suggest: `رونوشت از تصویر`
+    - The same source term "copy" is translated «رونوشت» in ClipboardToast.GoToCopiedLink.Title but «برداشت» here, which does not mean copy in Persian.
+- `ContextMenu.OpenInNewTabButtonTitle` — `fa/firefox-ios.xliff` — "Tab" is rendered as «تب» here while other strings in the same file use «زبانه».
+    - Current: `بازکردن در تب جدید`
+    - Source: `Open in New Tab`
+    - Suggest: `بازکردن در زبانهٔ جدید`
+    - ContextMenu.ButtonToast.NewTabOpened.LabelText and Closing tab use «زبانه» for tab; using «تب» on the same screen group is inconsistent.
 - `CoverSheet.v24.ETP.Description` — `fa/firefox-ios.xliff` — The ETP description is mistranslated: it tells the user they stop ads "from around themselves", drops "even more" and leaves "Strict" untranslated/unlocalized.
     - Current: `حفاظت از ردیابی پیشرفته داخلی به شما کمک می کند تبلیغات را از اطراف خود متوقف کنید. برای مسدود کردن ردیابها ، تبلیغات و پنجره های بیشتر ، Strict را روشن کنید.`
     - Source: `Built-in Enhanced Tracking Protection helps stop ads from following you around. Turn on Strict to block even more trackers, ads, and popups.`
     - Suggest: `«حفاظت پیشرفته در برابر ردیابی» داخلی کمک می‌کند تبلیغات شما را در وب دنبال نکنند. برای مسدود کردن ردیاب‌ها، تبلیغات و پنجره‌های بازشوی بیشتر، حالت «سخت‌گیرانه» را روشن کنید.`
     - Source says ETP helps stop ads from following you around and to turn on Strict to block even more trackers, ads and popups; the Persian says the user stops ads "from around themselves" and omits "popups" as a distinct item (پنجره‌های بازشو), while "Strict" is the name of a setting that is localized elsewhere.
+- `Downloads.CancelDialog.Message` — `fa/firefox-ios.xliff` — Uses the loanword "کنسل" instead of the standard term "لغو" used elsewhere on the same screen.
+    - Current: `کنسل کنید`
+    - Source: `Are you sure you want to cancel this download?`
+    - Suggest: `لغو کنید`
+    - The same dialog's Cancel button uses "لغو"; "کنسل" is inconsistent colloquial terminology.
 - `Downloads.CancelDialog.Title` — `fa/firefox-ios.xliff` — "Cancel Download" is rendered as "لغو کنسل" ("cancel cancel"), losing the word "download".
     - Current: `لغو کنسل`
     - Source: `Cancel Download`
     - Suggest: `لغو دریافت`
     - The source title is "Cancel Download"; the noun "download" was replaced by a second word meaning "cancel".
+- `Downloads.Toast.Cancelled.LabelText` — `fa/firefox-ios.xliff` — Singular "Download Cancelled" rendered as a plural noun phrase with an incorrectly spaced ezafe plural.
+    - Current: `دریافت های لغو شده`
+    - Source: `Download Cancelled`
+    - Suggest: `دریافت لغو شد`
+    - Source is a status toast "Download Cancelled" (a sentence about one download), not "cancelled downloads"; also "های" must be attached with ZWNJ as "دریافت‌ها".
+- `Downloads.Toast.Failed.LabelText` — `fa/firefox-ios.xliff` — "Download Failed" rendered as plural "faulty downloads" with incorrect spacing.
+    - Current: `دریافت های اشکال دار`
+    - Source: `Download Failed`
+    - Suggest: `دریافت ناموفق بود`
+    - Source is a toast confirming that the download has failed; the target is a plural noun phrase meaning "defective downloads" and misspaces the plural suffix.
+- `Downloads.Toast.MultipleFiles.DescriptionText` — `fa/firefox-ios.xliff` — Missing spaces around the numbers in "1از%d پرونده".
+    - Current: `1از%d پرونده`
+    - Source: `1 of %d files`
+    - Suggest: `۱ از %d پرونده`
+    - The source "1 of %d files" has spaces separating the words; the target runs the digit, preposition and placeholder together.
 - `ErrorPages.VisitOnce.Button` — `fa/firefox-ios.xliff` — "Visit site anyway" rendered awkwardly as "visit the website in any case".
     - Current: `بازدید از پایگاه اینترنتی در هر صورتی`
     - Source: `Visit site anyway`
@@ -226,322 +444,6 @@ _Nothing in this category._
     - Source: `Close Tab`
     - Suggest: `بستن زبانه`
     - The source is the command "Close Tab" (closing the current tab, per the comment); the translation means "closed tabs".
-- `Light` — `fa/firefox-ios.xliff` — "Light" (light theme) is translated as "نور" (light/ray) instead of the theme name "روشن".
-    - Current: `نور`
-    - Source: `Light`
-    - Suggest: `روشن`
-    - The developer comment says this is the Light theme setting in Reading View; "نور" means the physical light/ray, not the light theme.
-- `Logins` — `fa/firefox-ios.xliff` — "Logins" (saved credentials) rendered as "ورود" (the act of logging in).
-    - Current: `ورود`
-    - Source: `Logins`
-    - Suggest: `ورودها`
-    - The comment describes a toggle for syncing saved logins; the singular verbal noun "ورود" names the act of signing in, not the stored logins.
-- `Menu.AddToReadingList.Confirm` — `fa/firefox-ios.xliff` — "Reading List" is rendered as "فهرست پخش" (playlist) instead of "فهرست خواندن".
-    - Current: `به فهرست پخش اضافه شد`
-    - Source: `Added To Reading List`
-    - Suggest: `به فهرست خواندن اضافه شد`
-    - The source and comment refer to the reading list; "فهرست پخش" means playlist, a different feature.
-- `Menu.Copy.Title` — `fa/firefox-ios.xliff` — "Copy Address" translated as "برداشت آدرس" instead of "رونوشت آدرس" (copy).
-    - Current: `برداشت آدرس`
-    - Source: `Copy Address`
-    - Suggest: `رونوشت آدرس`
-    - The button copies the URL; "برداشت" means take/withdraw, and the same file uses "رونوشت" for copy in Menu.CopyURL.Confirm.
-- `Menu.PasteAndGo.Title` — `fa/firefox-ios.xliff` — "Paste & Go" is translated as "برداشتن و چسباندن" (cut/copy and paste), losing the "Go" action.
-    - Current: `برداشتن و چسباندن`
-    - Source: `Paste & Go`
-    - Suggest: `چسباندن و رفتن`
-    - The comment says the button pastes and navigates to a URL; the translation says "take and paste" instead.
-- `Menu.TrackingProtectionBlockedContent.Title` — `fa/firefox-ios.xliff` — "Tracking content" rendered as the imperative/verbal phrase "tracking content" (following content) instead of the noun phrase "tracker content".
-    - Current: `دنبال کردن محتوا`
-    - Source: `Tracking content`
-    - Suggest: `محتوای ردیاب`
-    - The source is a noun phrase naming a category of blocked content (content that contains trackers); the Persian says "following/tracking the content", i.e. an action performed on content, which reverses the relationship.
-- `Menu.TrackingProtectionDescription.SocialNetworksNew` — `fa/firefox-ios.xliff` — The clause "how much social media companies can see what you do online" drops the "what you do online" element, changing the claim to what companies "seek to see".
-    - Current: `باعث کاهش میزان چیزی شود که شبکه های اجتماعی در پی دیدن آن هستند`
-    - Source: `Social networks place trackers on other websites to build a more complete and targeted profile of you. Blocking these trackers reduces how much social media companies can see what do you online.`
-    - Suggest: `باعث کاهش میزان دیدِ شبکه‌های اجتماعی از فعالیت‌های آنلاین شما شود`
-    - The source states blocking reduces how much social media companies can see of your online activity; the Persian says it reduces the amount of "what they seek to see", losing the online-activity object and the ability sense.
-- `PhotonMenu.close` — `fa/firefox-ios.xliff` — The "Close" button is translated as the adjective "بسته" (closed) instead of the verb "بستن".
-    - Current: `بسته`
-    - Source: `Close`
-    - Suggest: `بستن`
-    - Developer comment says it is a button for closing the menu; Persian button labels use the infinitive «بستن», while «بسته» means "closed/package".
-- `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.` — `fa/firefox-ios.xliff` — "tapping" rendered as "tapping and holding", and "book plus icon" loses the plus.
-    - Current: `با تپ کردن و نگه داشتن آیکون کتاب`
-    - Source: `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.`
-    - Suggest: `با تپ کردن آیکون کتاب به‌همراه علامت مثبت`
-    - The source says simply "tapping the book plus icon"; the translation instructs a tap-and-hold gesture, giving the user wrong instructions.
-- `Search.ThirdPartyEngines.AddSuccess` — `fa/firefox-ios.xliff` — Success confirmation "Added Search engine!" translated as an action label "Add search engine".
-    - Current: `افزودن موتور جست‌وجو`
-    - Source: `Added Search engine!`
-    - Suggest: `موتور جست‌وجو افزوده شد!`
-    - The source is a success message stating the engine was added; the translation reads as an infinitive/action "adding a search engine", losing the completed state.
-- `Search.ThirdPartyEngines.DuplicateErrorMessage` — `fa/firefox-ios.xliff` — "title or URL" translated as "title and URL".
-    - Current: `با این عنوان و آدرس`
-    - Source: `A search engine with this title or URL has already been added.`
-    - Suggest: `با این عنوان یا آدرس`
-    - The source's disjunction (either matching title or matching URL) is turned into a conjunction, changing the condition described.
-- `SendTo.NoDevicesFound.Message` — `fa/firefox-ios.xliff` — "this Firefox Account" reduced to "Firefox", dropping the account reference.
-    - Current: `متصل به فایرفاکس برای همگام‌سازی ندارید`
-    - Source: `You don’t have any other devices connected to this Firefox Account available to sync.`
-    - Suggest: `متصل به این حساب فایرفاکس برای همگام‌سازی ندارید`
-    - The source refers to devices connected to this Firefox Account, not to Firefox generally.
-- `SentTab_TabArrivingNotification_NoDevice_body` — `fa/firefox-ios.xliff` — Singular "another device" rendered as plural "other devices".
-    - Current: `از دستگاه‌های دیگری رسیده است`
-    - Source: `New tab arrived from another device.`
-    - Suggest: `از دستگاه دیگری رسیده است`
-    - The source says the tab arrived from another (single) device.
-- `Settings.AddCustomEngine.URLPlaceholder` — `fa/firefox-ios.xliff` — "Query" is mistranslated as "رکورد جست‌وجو" (search record).
-    - Current: `رکورد جست‌وجو را با %s جایگزین کنید`
-    - Source: `URL (Replace Query with %s)`
-    - Suggest: `عبارت جست‌وجو را با %s جایگزین کنید`
-    - The source asks the user to replace the query string with %s; "رکورد" (record) is not the query term.
-- `Settings.CopyAppVersion.Title` — `fa/firefox-ios.xliff` — "Copied to clipboard" is rendered as an infinitive/action phrase "pouring into clipboard" rather than a completed confirmation.
-    - Current: `ریختن داخل کلیپ بورد`
-    - Source: `Copied to clipboard`
-    - Suggest: `در حافظهٔ موقت رونوشت شد`
-    - The source is a confirmation that the version was copied; the Persian uses "ریختن" (pouring) as an action noun, not stating the copy happened.
-- `Settings.Disconnect.Body` — `fa/firefox-ios.xliff` — The qualifier "browsing data" is rendered as just "any data", widening the claim about what is not deleted.
-    - Current: `هیچ گونه اطلاعاتی از روی دستگاه شما پاک نخواهد کرد`
-    - Source: `Firefox will stop syncing with your account, but won’t delete any of your browsing data on this device.`
-    - Suggest: `هیچ‌گونه اطلاعات مرور شما را از روی این دستگاه پاک نخواهد کرد`
-    - en-US says it won’t delete any of your browsing data on this device; the translation drops "browsing", asserting that no data at all is deleted.
-- `Settings.DisplayTheme.SwitchMode.SectionHeader` — `fa/firefox-ios.xliff` — "Switch Mode" rendered as "حالت تغییر" reverses the head noun (mode of change instead of switching mode).
-    - Current: `حالت تغییر`
-    - Source: `Switch Mode`
-    - Suggest: `حالت تغییر زمینه`
-    - The section header controls how the theme switches; the Persian phrase inverts the noun relation and reads as "change mode" ambiguously.
-- `Settings.OpenWith.SectionName` — `fa/firefox-ios.xliff` — "Mail App" left partly untranslated as the English word "Mail".
-    - Current: `برنامه Mail`
-    - Source: `Mail App`
-    - Suggest: `برنامهٔ پست الکترونیکی`
-    - "Mail" here is a generic app category, not a brand to keep in English; elsewhere in the same screen the locale uses «پست‌الکترونیکی».
-- `Settings.SendUsage.Message` — `fa/firefox-ios.xliff` — The translation drops "strives to" and "provide", asserting Mozilla only collects data that helps improve Firefox.
-    - Current: `موزیلا تنها اطلاعاتی که به بهینه‌سازی فایرفاکس برای همه کمک می‌کند را جمع‌آوری می‌کند.`
-    - Source: `Mozilla strives to only collect what we need to provide and improve Firefox for everyone.`
-    - Suggest: `موزیلا تلاش می‌کند تنها اطلاعاتی را جمع‌آوری کند که برای ارائه و بهبود فایرفاکس برای همه لازم است.`
-    - The source is a hedged statement of effort ("strives to only collect what we need"); the translation turns it into an unqualified claim about the product's data collection.
-- `Settings.ShowLinkPreviews.Title` — `fa/firefox-ios.xliff` — "Show Link Previews" is rendered with "پخش" (play/broadcast) instead of "نمایش" (show).
-    - Current: `پخش پیش نمایش پیوند`
-    - Source: `Show Link Previews`
-    - Suggest: `نمایش پیش‌نمایش پیوندها`
-    - The source means to display link previews; «پخش» means to play/broadcast, which is the wrong verb and inconsistent with «نمایش» used elsewhere in this file.
-- `Settings.TrackingProtection.ProtectionCellFooter` — `fa/firefox-ios.xliff` — The translation says it helps stop "tracking of ads in your browsing" instead of stopping advertisers from tracking your browsing.
-    - Current: `به جلوگیری از ردیابی تبلیغات در مرور شما کمک می کند`
-    - Source: `Reduces targeted ads and helps stop advertisers from tracking your browsing.`
-    - Suggest: `به جلوگیری از ردیابی مرور شما توسط تبلیغ‌کنندگان کمک می‌کند`
-    - The en-US says advertisers track you; the Persian reverses the roles, saying ads are being tracked.
-- `Settings.TrackingProtection.ProtectionLevelStandard.Description` — `fa/firefox-ios.xliff` — "some ad tracking" is rendered as "چند دنبال کننده" (a few trackers), changing the object of the permission.
-    - Current: `به چند دنبال کننده اجازه فعالیت داده می‌شود`
-    - Source: `Allows some ad tracking so websites function properly.`
-    - Suggest: `برخی ردیابی‌های تبلیغاتی مجاز است`
-    - The source allows some ad tracking, not a specific small number of trackers.
-- `Settings.TrackingProtection.ProtectionLevelStrict.Description` — `fa/firefox-ios.xliff` — "popups" is dropped; the translation says "more trackers, ads and windows" with "more" attached to the wrong noun.
-    - Current: `ردگیرها ، تبلیغات و پنجره های بیشتر را مسدود می کند`
-    - Source: `Blocks more trackers, ads, and popups. Pages load faster, but some functionality may not work.`
-    - Suggest: `ردگیرها، تبلیغات و پنجره‌های بازشوی بیشتری را مسدود می‌کند`
-    - The source says "Blocks more trackers, ads, and popups"; "پنجره‌ها" alone means plain windows, not popups.
-- `Settings.TrackingProtectionOption.NormalBrowsingLabelOn` — `fa/firefox-ios.xliff` — "Enhanced Tracking Protection" rendered as "optimizing protection from followers", reversing the head noun and mistranslating "trackers".
-    - Current: `بهینه سازی محافظت از دنبال کنندگان`
-    - Source: `Enhanced Tracking Protection`
-    - Suggest: `محافظت پیشرفته در برابر ردگیری`
-    - The source is a noun phrase "Enhanced Tracking Protection"; the target reads as "optimization of protection of followers", i.e. protecting the trackers, and is inconsistent with "محافظت در برابر ردگیری" used for Tracking Protection in the same screen.
-- `Settings.WebsiteData.ConfirmPrompt` — `fa/firefox-ios.xliff` — "will clear" weakened to "can clear" (می‌تواند حذف کند).
-    - Current: `این اقدام می تواند تمام اطلاعات پایگاه اینترنتی را حذف کند`
-    - Source: `This action will clear all of your website data. It cannot be undone.`
-    - Suggest: `این اقدام تمام اطلاعات پایگاه اینترنتی را حذف می‌کند`
-    - The source states the action will clear all website data; the target says it may/can, changing the certainty of the stated behaviour.
-- `Tab %@ of %@` — `fa/firefox-ios.xliff` — English "of" left untranslated in the VoiceOver tab position string.
-    - Current: `زبانه %1$@ of %2$@`
-    - Source: `Tab %1$@ of %2$@`
-    - Suggest: `زبانه %1$@ از %2$@`
-    - "of" should be rendered as "از" in Persian; leaving English is untranslated content read aloud by VoiceOver.
-- `Tabs %@ to %@ of %@` — `fa/firefox-ios.xliff` — English "to" and "of" left untranslated in the VoiceOver tab range string.
-    - Current: `زبانه‌های %1$@ to %2$@ of %3$@`
-    - Source: `Tabs %1$@ to %2$@ of %3$@`
-    - Suggest: `زبانه‌های %1$@ تا %2$@ از %3$@`
-    - The connectors "to"/"of" remain in English, so VoiceOver reads English words in a Persian sentence.
-- `TranslationToastHandler.PromptTranslate.Title` — `fa/firefox-ios.xliff` — The translation reverses the roles of the target language and the translation service.
-    - Current: `%2$@ به %3$@ ترجمه شود؟`
-    - Source: `This page appears to be in %1$@. Translate to %2$@ with %3$@?`
-    - Suggest: `با %3$@ به %2$@ ترجمه شود؟`
-    - Per the comment, %2$@ is the local language and %3$@ is the service name; the source says "Translate to %2$@ with %3$@", but the target reads "translate %2$@ into %3$@".
-- `Welcome to your Reading List` — `fa/firefox-ios.xliff` — "Reading List" is rendered as "reader view" instead of the reading list feature.
-    - Current: `به نمای خواندن خوش‌ آمدید`
-    - Source: `Welcome to your Reading List`
-    - Suggest: `به فهرست خواندنی خود خوش آمدید`
-    - The source refers to the user's Reading List, not to Reader View (نمای خواندن).
-- `Well, this is embarrassing.` — `fa/firefox-ios.xliff` — "this is embarrassing" is rendered as "we are very sorry", an apology the source does not make.
-    - Current: `راستش، بسیار متاسفیم.`
-    - Source: `Well, this is embarrassing.`
-    - Suggest: `خب، این شرم‌آور است.`
-    - The en-US expresses embarrassment about the situation, not an apology from the product.
-- `You don’t have any tabs open in Firefox on your other devices.` — `fa/firefox-ios.xliff` — "any tabs open" is rendered as "any other open tabs", misplacing "other".
-    - Current: `شما هیچ‌گونه زبانه باز دیگری در فایرفاکس در دستگاه‌های دیگر ندارید.`
-    - Source: `You don’t have any tabs open in Firefox on your other devices.`
-    - Suggest: `شما هیچ زبانهٔ بازی در فایرفاکس روی دستگاه‌های دیگر خود ندارید.`
-    - In the source "other" modifies devices only; the translation adds "other" to tabs as well.
-- `more than a week ago` — `fa/firefox-ios.xliff` — "more than a week ago" is rendered as "more than a few weeks ago".
-    - Current: `بیش از چند هفته قبل`
-    - Source: `more than a week ago`
-    - Suggest: `بیش از یک هفته قبل`
-    - The source says one week, not several weeks.
-- `read` — `fa/firefox-ios.xliff` — "read" (past participle/adjective) is translated as the verbal noun "reading".
-    - Current: `خواندن`
-    - Source: `read`
-    - Suggest: `خوانده‌شده`
-    - The comment states it is a past participle functioning as an adjective describing an article already read; the counterpart string uses خوانده‌ نشده.
-- `Enter Search Mode` — `fa/firefox-ios.xliff` — "Enter" (the verb, to go into search mode) mistranslated as "entering/inputting".
-    - Current: `وارد‌کردن حالت جست‌و‌جو`
-    - Source: `Enter Search Mode`
-    - Suggest: `ورود به حالت جست‌و‌جو`
-    - The accessibility label means entering/activating search mode; «وارد‌کردن» means to input something, not to enter a mode.
-- `Logins will be permanently removed.` — `fa/firefox-ios.xliff` — Future-tense warning rendered as past tense, telling the user the deletion already happened.
-    - Current: `ورود‌ها برای همیشه حذف شد.`
-    - Source: `Logins will be permanently removed.`
-    - Suggest: `ورودها برای همیشه حذف خواهند شد.`
-    - The en-US is a warning prompt before deletion ("will be permanently removed"); the Persian past tense «حذف شد» states the removal is already done.
-- `Logins will be removed from all connected devices.` — `fa/firefox-ios.xliff` — Future tense rendered as past tense and "connected devices" reduced to "all devices".
-    - Current: `ورود‌ها بر روی تمامی دستگاه‌ها حذف شد.`
-    - Source: `Logins will be removed from all connected devices.`
-    - Suggest: `ورودها از همه دستگاه‌های متصل حذف خواهند شد.`
-    - Source is a pre-deletion warning: "will be removed from all connected devices"; the translation uses past tense and drops "connected".
-- `Open & Fill` — `fa/firefox-ios.xliff` — Menu action "Open & Fill" rendered as a past participle/adjective instead of a command.
-    - Current: `باز‌شده و پر`
-    - Source: `Open & Fill`
-    - Suggest: `باز کردن و پر کردن`
-    - This is a text-selection menu item (an action). «باز‌شده و پر» means "opened and full", not the actions Open and Fill.
-- `Menu.SharePageAction.Title` — `fa/firefox-ios.xliff` — "Share Page With…" translated as "Share address with…".
-    - Current: `اشتراک‌گذاری آدرس با…`
-    - Source: `Share Page With…`
-    - Suggest: `اشتراک‌گذاری صفحه با…`
-    - The source and comment refer to sharing the page, not the address/URL.
-- `Menu.ViewMobileSiteAction.Title` — `fa/firefox-ios.xliff` — "Site" dropped from "Request Mobile Site", unlike the parallel desktop string.
-    - Current: `درخواست نسخه تلفن‌همراه`
-    - Source: `Request Mobile Site`
-    - Suggest: `درخواست نسخه تلفن‌همراه پایگاه`
-    - The desktop counterpart renders "Site" as «پایگاه»; here the noun is missing, making the label incomplete and inconsistent on the same menu.
-- `TodayWidget.GoToCopiedLinkLabelV1` — `fa/firefox-ios.xliff` — "copied link" rendered as "پیوند برداشت شده" (picked-up/taken link) instead of copied link.
-    - Current: `برو به پیوند برداشت شده`
-    - Source: `Go to copied link`
-    - Suggest: `برو به پیوند رونوشت‌شده`
-    - The source and comment say "Go to link pasted on the clipboard" / copied link; "برداشت شده" means removed/taken, not copied. The parallel string V2 correctly uses "رونوشت شده".
-
-### C. Grammar, agreement & spelling
-
-- `This action will clear all of your private data, including history from your synced devices.` — `fa/firefox-ios.xliff` — Garbled clause: "تاریخچه که از روی دستگاه‌های همگام شما وجود دارد" is ungrammatical.
-    - Current: `شامل تاریخچه که از روی دستگاه‌های همگام شما وجود دارد`
-    - Source: `This action will clear all of your private data, including history from your synced devices.`
-    - Suggest: `شامل تاریخچهٔ دستگاه‌های همگام‌شدهٔ شما`
-    - The relative clause lacks the required ezafe/relative construction and reads as broken Persian compared with the source "including history from your synced devices".
-- `DefaultBrowserCard.Title` — `fa/firefox-ios.xliff` — Spelling error "یش‌فرض" instead of "پیش‌فرض" and missing object marker "را".
-    - Current: `مرورگر یش‌فرض خود تغییر دهید`
-    - Source: `Switch Your Default Browser`
-    - Suggest: `مرورگر پیش‌فرض خود را تغییر دهید`
-    - "یش‌فرض" is a misspelling of "پیش‌فرض" (default), and the direct-object marker "را" is missing, making the sentence ungrammatical.
-- `ContextMenu.BookmarkLinkButtonTitle` — `fa/firefox-ios.xliff` — Word order reversed: «پیوند نشانک» means "bookmark's link" rather than the action "Bookmark Link".
-    - Current: `پیوند نشانک`
-    - Source: `Bookmark Link`
-    - Suggest: `نشانک‌گذاری پیوند`
-    - The string is a context menu action for bookmarking a link URL; the Persian noun order makes it a possessive phrase with the wrong meaning.
-- `ContextMenu.DownloadLinkButtonTitle` — `fa/firefox-ios.xliff` — Word order reversed: «پیوند دریافت» reads as "receive link" noun phrase incorrectly instead of "download the link".
-    - Current: `پیوند دریافت`
-    - Source: `Download Link`
-    - Suggest: `دریافت پیوند`
-    - Source is the command "Download Link"; Persian head-modifier order requires «دریافت پیوند», as done correctly in «همرسانی پیوند» for "Share Link".
-- `Downloads` — `fa/firefox-ios.xliff` — Doubled ZWNJ/spacing artifact in "دریافت‌‌ها".
-    - Current: `دریافت‌‌ها`
-    - Source: `Downloads`
-    - Suggest: `دریافت‌ها`
-    - Contains two zero-width non-joiners where one is required; the sibling string Downloads.Toast.GoToDownloads.Button uses the correct single form.
-- `Downloads.Toast.Cancelled.LabelText` — `fa/firefox-ios.xliff` — Singular "Download Cancelled" rendered as a plural noun phrase with an incorrectly spaced ezafe plural.
-    - Current: `دریافت های لغو شده`
-    - Source: `Download Cancelled`
-    - Suggest: `دریافت لغو شد`
-    - Source is a status toast "Download Cancelled" (a sentence about one download), not "cancelled downloads"; also "های" must be attached with ZWNJ as "دریافت‌ها".
-- `Downloads.Toast.Failed.LabelText` — `fa/firefox-ios.xliff` — "Download Failed" rendered as plural "faulty downloads" with incorrect spacing.
-    - Current: `دریافت های اشکال دار`
-    - Source: `Download Failed`
-    - Suggest: `دریافت ناموفق بود`
-    - Source is a toast confirming that the download has failed; the target is a plural noun phrase meaning "defective downloads" and misspaces the plural suffix.
-- `Menu.TrackingProtectionDescription.CryptominersNew` — `fa/firefox-ios.xliff` — Spelling error "در سدد" (should be "درصدد") plus colloquial "رو میخورند".
-    - Current: `در سدد استفاده`
-    - Source: `Cryptominers secretly use your system’s computing power to mine digital money. Cryptomining scripts drain your battery, slow down your computer, and can increase your energy bill.`
-    - Suggest: `درصدد استفاده`
-    - "سدد" is a misspelling of "صدد"; the phrase «درصدد» is the correct form.
-- `Menu.TrackingProtectionFingerprintersBlocked.Title` — `fa/firefox-ios.xliff` — Spelling error: "کنندگاه" should be "کنندگان".
-    - Current: `برداشت کنندگاه اثر انگشت`
-    - Source: `Fingerprinters`
-    - Suggest: `برداشت کنندگان اثر انگشت`
-    - Plural suffix is misspelled (کنندگاه instead of کنندگان).
-- `Open articles in Reader View by tapping the book icon when it appears in the title bar.` — `fa/firefox-ios.xliff` — Spelling error: "وفتی" should be "وقتی".
-    - Current: `وفتی در عنوان بار نمایش داده شد`
-    - Source: `Open articles in Reader View by tapping the book icon when it appears in the title bar.`
-    - Suggest: `وقتی در نوار عنوان نمایش داده شد`
-    - Typo (و+ف instead of و+ق) and "عنوان بار" reverses the Persian word order for "title bar" (نوار عنوان).
-- `Search.ThirdPartyEngines.FailedMessage` — `fa/firefox-ios.xliff` — Ungrammatical phrasing mixing "قادر به" with "وجود ندارد".
-    - Current: `قادر به افزودن سرویس دهنده جست‌و‌جو وجود ندارد.`
-    - Source: `The search provider could not be added.`
-    - Suggest: `سرویس‌دهنده جست‌وجو اضافه نشد.`
-    - "قادر به ... وجود ندارد" is not valid Persian; the source simply says the provider could not be added.
-- `Settings.ClearAllWebsiteData.Clear.Button` — `fa/firefox-ios.xliff` — "all Website Data" rendered with singular "پایگاه اینترنتی" though the source is plural/all websites.
-    - Current: `پاک‌سازی تمام اطلاعات پایگاه اینترنتی`
-    - Source: `Clear All Website Data`
-    - Suggest: `پاک‌سازی تمام اطلاعات پایگاه‌های اینترنتی`
-    - The button clears data for all websites; other strings in the same file use the plural "پایگاه‌های اینترنتی".
-- `Settings.LoginsAndPasswordsTitle` — `fa/firefox-ios.xliff` — Incorrect plural spacing: «ورود ها» should be written «ورودها».
-    - Current: `ورود ها و کلمات عبور`
-    - Source: `Logins & Passwords`
-    - Suggest: `ورودها و گذرواژه‌ها`
-    - Persian plural suffix «ها» must be attached or joined with ZWNJ, not a plain space; the same file writes «ورودها» correctly in Settings.SaveLogins.Title.
-- `ShareExtension.SeachInFirefoxAction.Title` — `fa/firefox-ios.xliff` — "این" typo instead of the preposition "در" in "Search in Firefox".
-    - Current: `جست‌وجو این فایرفاکس`
-    - Source: `Search in Firefox`
-    - Suggest: `جست‌وجو در فایرفاکس`
-    - The source means "Search in Firefox"; "این" (this) makes the phrase ungrammatical.
-- `There was a problem accessing tabs from your other devices. Try again in a few moments.` — `fa/firefox-ios.xliff` — Duplicated adverb "دوباره مجددا" (again again).
-    - Current: `چند لحظه دیگر دوباره مجددا اقدام بفرمایید.`
-    - Source: `There was a problem accessing tabs from your other devices. Try again in a few moments.`
-    - Suggest: `چند لحظه دیگر دوباره اقدام کنید.`
-    - "دوباره" and "مجدداً" are synonyms; using both is a redundancy error not present in the source.
-- `Web content` — `fa/firefox-ios.xliff` — Missing ezafe: "محتوا وب" should be "محتوای وب".
-    - Current: `محتوا وب`
-    - Source: `Web content`
-    - Suggest: `محتوای وب`
-    - Persian requires the ezafe suffix -ی on محتوا when followed by وب.
-- `more than a month ago` — `fa/firefox-ios.xliff` — The "ago" part is dropped, leaving "more than a month".
-    - Current: `بیش از یک ماه`
-    - Source: `more than a month ago`
-    - Suggest: `بیش از یک ماه قبل`
-    - The source is a relative past date "more than a month ago"; without قبل/پیش the string reads as a duration.
-- `Search Settings` — `fa/firefox-ios.xliff` — "جست‌و جو" has a stray space instead of consistent ZWNJ spelling "جست‌وجو".
-    - Current: `تنظیمات جست‌و جو`
-    - Source: `Search Settings`
-    - Suggest: `تنظیمات جست‌وجو`
-    - The word is written with a space in the middle, inconsistent with the standard "جست‌وجو" used elsewhere in the batch.
-- `TodayWidget.TopSitesGalleryDescription` — `fa/firefox-ios.xliff` — Missing ZWNJ in "سایتهای" and missing final hamza/adverb form "اخیراً".
-    - Current: `میانبرهایی را به سایتهای مکرر و اخیرا بازدید شده اضافه کنید.`
-    - Source: `Add shortcuts to frequently and recently visited sites.`
-    - Suggest: `میان‌برهایی را به سایت‌های پربازدید و اخیراً بازدیدشده اضافه کنید.`
-    - Persian orthography requires ZWNJ before the plural suffix (سایت‌های) and the tanwin on اخیراً; also "سایت‌های مکرر" (frequent sites) is ungrammatical for "frequently visited sites".
-
-### D. Terminology, register & consistency
-
-- `ContextMenu.CopyImageButtonTitle` — `fa/firefox-ios.xliff` — "Copy" is rendered as «برداشت» (pick up/withdraw) instead of the standard «رونوشت/کپی», inconsistent with ClipboardToast.GoToCopiedLink.Title which uses «رونوشت».
-    - Current: `برداشت تصویر`
-    - Source: `Copy Image`
-    - Suggest: `رونوشت از تصویر`
-    - The same source term "copy" is translated «رونوشت» in ClipboardToast.GoToCopiedLink.Title but «برداشت» here, which does not mean copy in Persian.
-- `ContextMenu.OpenInNewTabButtonTitle` — `fa/firefox-ios.xliff` — "Tab" is rendered as «تب» here while other strings in the same file use «زبانه».
-    - Current: `بازکردن در تب جدید`
-    - Source: `Open in New Tab`
-    - Suggest: `بازکردن در زبانهٔ جدید`
-    - ContextMenu.ButtonToast.NewTabOpened.LabelText and Closing tab use «زبانه» for tab; using «تب» on the same screen group is inconsistent.
-- `Downloads.CancelDialog.Message` — `fa/firefox-ios.xliff` — Uses the loanword "کنسل" instead of the standard term "لغو" used elsewhere on the same screen.
-    - Current: `کنسل کنید`
-    - Source: `Are you sure you want to cancel this download?`
-    - Suggest: `لغو کنید`
-    - The same dialog's Cancel button uses "لغو"; "کنسل" is inconsistent colloquial terminology.
 - `Hotkeys.PrivateMode.DiscoveryTitle` — `fa/firefox-ios.xliff` — "Private Browsing Mode" uses "ناشناس" (anonymous/incognito) while the related string uses "خصوصی" for private.
     - Current: `حالت مرورِ ناشناس`
     - Source: `Private Browsing Mode`
@@ -552,6 +454,853 @@ _Nothing in this category._
     - Source: `Close All Inactive Tabs`
     - Suggest: `بستن همه زبانه‌های غیرفعال`
     - "Tab" is rendered "زبانه" throughout this file (New Tab, Show Next Tab, etc.); "برگه" is an inconsistent term.
+- `Light` — `fa/firefox-ios.xliff` — "Light" (light theme) is translated as "نور" (light/ray) instead of the theme name "روشن".
+    - Current: `نور`
+    - Source: `Light`
+    - Suggest: `روشن`
+    - The developer comment says this is the Light theme setting in Reading View; "نور" means the physical light/ray, not the light theme.
+- `Menu.AddToReadingList.Confirm` — `fa/firefox-ios.xliff` — "Reading List" is rendered as "فهرست پخش" (playlist) instead of "فهرست خواندن".
+    - Current: `به فهرست پخش اضافه شد`
+    - Source: `Added To Reading List`
+    - Suggest: `به فهرست خواندن اضافه شد`
+    - The source and comment refer to the reading list; "فهرست پخش" means playlist, a different feature.
+- `Menu.Copy.Title` — `fa/firefox-ios.xliff` — "Copy Address" translated as "برداشت آدرس" instead of "رونوشت آدرس" (copy).
+    - Current: `برداشت آدرس`
+    - Source: `Copy Address`
+    - Suggest: `رونوشت آدرس`
+    - The button copies the URL; "برداشت" means take/withdraw, and the same file uses "رونوشت" for copy in Menu.CopyURL.Confirm.
+- `SendTo.NoDevicesFound.Message` — `fa/firefox-ios.xliff` — "this Firefox Account" is rendered just as "Firefox", dropping the account reference.
+    - Current: `متصل به Firefox برای همگام‌سازی`
+    - Source: `You don’t have any other devices connected to this Firefox Account available to sync.`
+    - Suggest: `متصل به این حساب کاربری Firefox برای همگام‌سازی`
+    - The source refers to devices connected to this Firefox Account; the translation refers only to Firefox, inconsistent with other strings that translate "Firefox Account" as "حساب کاربری Firefox".
+- `Settings.ClearAllWebsiteData.Clear.Button` — `fa/firefox-ios.xliff` — "all Website Data" rendered with singular "پایگاه اینترنتی" though the source is plural/all websites.
+    - Current: `پاک‌سازی تمام اطلاعات پایگاه اینترنتی`
+    - Source: `Clear All Website Data`
+    - Suggest: `پاک‌سازی تمام اطلاعات پایگاه‌های اینترنتی`
+    - The button clears data for all websites; other strings in the same file use the plural "پایگاه‌های اینترنتی".
+- `Settings.SendUsage.Message` — `fa/firefox-ios.xliff` — "strives to only collect what we need to provide and improve Firefox" is rendered as a flat claim that Mozilla only collects data that helps improve Firefox, dropping "strives" and "provide".
+    - Current: `Mozilla تنها اطلاعاتی که به بهینه‌سازی Firefox برای همه کمک می‌کند را جمع‌آوری می‌کند.`
+    - Source: `Mozilla strives to only collect what we need to provide and improve Firefox for everyone.`
+    - Suggest: `Mozilla تلاش می‌کند تنها اطلاعاتی را جمع‌آوری کند که برای ارائه و بهبود Firefox برای همه نیاز دارد.`
+    - The source is a statement of effort ("strives to"); the translation asserts it as an absolute fact about data collection.
+- `Settings.WebsiteData.ConfirmPrompt` — `fa/firefox-ios.xliff` — "will clear" rendered as "می‌تواند ... حذف کند" (can/may clear), weakening a definite statement.
+    - Current: `این اقدام می تواند تمام اطلاعات وبگاه را حذف کند`
+    - Source: `This action will clear all of your website data. It cannot be undone.`
+    - Suggest: `این اقدام تمام اطلاعات وبگاه شما را حذف خواهد کرد`
+    - The source states the action will clear all of your website data; the Persian turns it into a possibility rather than a certainty.
+- `ShareExtension.SeachInFirefoxAction.Title` — `fa/firefox-ios.xliff` — "جست‌وجو این Firefox" is ungrammatical; should be "جست‌وجو در Firefox" (Search in Firefox).
+    - Current: `جست‌وجو این Firefox`
+    - Source: `Search in Firefox`
+    - Suggest: `جست‌وجو در Firefox`
+    - Source is "Search in Firefox"; "این" (this) is a typo for the preposition "در" (in), making the phrase meaningless.
+- `You don’t have any tabs open in Firefox on your other devices.` — `fa/firefox-ios.xliff` — "any tabs open" is rendered as "any other open tabs", misplacing "other".
+    - Current: `شما هیچ‌گونه زبانه باز دیگری در فایرفاکس در دستگاه‌های دیگر ندارید.`
+    - Source: `You don’t have any tabs open in Firefox on your other devices.`
+    - Suggest: `شما هیچ زبانهٔ بازی در فایرفاکس روی دستگاه‌های دیگر خود ندارید.`
+    - In the source "other" modifies devices only; the translation adds "other" to tabs as well.
+- `Logins` — `fa/firefox-ios.xliff` — "Logins" (saved credentials) rendered as "ورود" (the act of logging in).
+    - Current: `ورود`
+    - Source: `Logins`
+    - Suggest: `ورودها`
+    - The comment describes a toggle for syncing saved logins; the singular verbal noun "ورود" names the act of signing in, not the stored logins.
+- `Menu.TrackingProtectionDescription.SocialNetworksNew` — `fa/firefox-ios.xliff` — The final clause drops "what you do online", changing "reduces how much social media companies can see what you do online" to a vague "reduces how much they want to see".
+    - Current: `می‌تواند باعث کاهش میزان چیزی شود که شبکه های اجتماعی در پی دیدن آن هستند`
+    - Source: `Social networks place trackers on other websites to build a more complete and targeted profile of you. Blocking these trackers reduces how much social media companies can see what do you online.`
+    - Suggest: `میزان آنچه را که شرکت‌های رسانه اجتماعی از فعالیت‌های آنلاین شما می‌بینند کاهش می‌دهد`
+    - The en-US says blocking reduces how much social media companies can see of what you do online; the Persian says it reduces the amount of what they are seeking to see, losing the online-activity object and the "can see" sense.
+- `SendTo.NoDevicesFound.Message` — `fa/firefox-ios.xliff` — "this Firefox Account" is rendered just as "Firefox", dropping the account reference.
+    - Current: `متصل به Firefox برای همگام‌سازی`
+    - Source: `You don’t have any other devices connected to this Firefox Account available to sync.`
+    - Suggest: `متصل به این حساب کاربری Firefox برای همگام‌سازی`
+    - The source refers to devices connected to this Firefox Account; the translation refers only to Firefox, inconsistent with other strings that translate "Firefox Account" as "حساب کاربری Firefox".
+- `Settings.Disconnect.Body` — `fa/firefox-ios.xliff` — The translation drops "browsing" from "browsing data", claiming no data at all will be deleted.
+    - Current: `اما هیچ گونه اطلاعاتی از روی دستگاه شما پاک نخواهد کرد`
+    - Source: `Firefox will stop syncing with your account, but won’t delete any of your browsing data on this device.`
+    - Suggest: `اما هیچ‌گونه اطلاعات مرور شما را از روی این دستگاه پاک نخواهد کرد`
+    - en-US says it won't delete any of your browsing data on this device; the Persian says it will not delete any data at all, a broader claim than the source.
+- `Settings.SendUsage.Message` — `fa/firefox-ios.xliff` — "strives to only collect what we need to provide and improve Firefox" is rendered as a flat claim that Mozilla only collects data that helps improve Firefox, dropping "strives" and "provide".
+    - Current: `Mozilla تنها اطلاعاتی که به بهینه‌سازی Firefox برای همه کمک می‌کند را جمع‌آوری می‌کند.`
+    - Source: `Mozilla strives to only collect what we need to provide and improve Firefox for everyone.`
+    - Suggest: `Mozilla تلاش می‌کند تنها اطلاعاتی را جمع‌آوری کند که برای ارائه و بهبود Firefox برای همه نیاز دارد.`
+    - The source is a statement of effort ("strives to"); the translation asserts it as an absolute fact about data collection.
+- `Settings.WebsiteData.ConfirmPrompt` — `fa/firefox-ios.xliff` — "will clear" rendered as "می‌تواند ... حذف کند" (can/may clear), weakening a definite statement.
+    - Current: `این اقدام می تواند تمام اطلاعات وبگاه را حذف کند`
+    - Source: `This action will clear all of your website data. It cannot be undone.`
+    - Suggest: `این اقدام تمام اطلاعات وبگاه شما را حذف خواهد کرد`
+    - The source states the action will clear all of your website data; the Persian turns it into a possibility rather than a certainty.
+- `ShareExtension.SeachInFirefoxAction.Title` — `fa/firefox-ios.xliff` — "جست‌وجو این Firefox" is ungrammatical; should be "جست‌وجو در Firefox" (Search in Firefox).
+    - Current: `جست‌وجو این Firefox`
+    - Source: `Search in Firefox`
+    - Suggest: `جست‌وجو در Firefox`
+    - Source is "Search in Firefox"; "این" (this) is a typo for the preposition "در" (in), making the phrase meaningless.
+
+### ↩︎ Withdrawn — no longer considered a defect (0)
+
+_Nothing withdrawn._
+
+### 🔁 String changed, defect not verifiable — needs a re-read (0)
+
+_Nothing to re-read._
+
+### 🗑 Retired — the string no longer exists upstream (0)
+
+_Nothing retired._
+
+---
+
+## 1. Health check
+
+| Check | Result |
+|---|---|
+| Files | 97 |
+| Strings | 1,969 |
+| Missing strings | 0 |
+| Obsolete strings | 0 |
+| Files absent from the locale | 0 |
+| Files with no en-US counterpart | 0 |
+| Fluent / properties syntax errors | 0 |
+| Reference files that did not parse | 0 |
+| printf placeholder mismatches | 0 |
+| Text quoting a UI label that no longer matches | 0 |
+| Source-language spellings left unchanged | 0 |
+| Typography deviations from this locale's own norm | 0 |
+
+### Completeness
+
+The locale is complete against the en-US source.
+
+### Conventions detected in this locale
+
+Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
+
+| Convention | Counts | Inferred |
+|---|---|---|
+| quotes | `curly-single` 8, `guillemet` 5, `curly-double` 3 | _mixed_ |
+| apostrophe | `typographic` 37 | **typographic** |
+| ellipsis | `char` 27 | **char** |
+| dash | `em` 1 | **em** |
+
+---
+
+## 2. Systemic items (decisions, not line items)
+
+_Nothing reported._
+
+---
+
+## 3. Open findings (460)
+
+> **Reads as a deliberate edit (4).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+
+- `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.` — `fa/firefox-ios.xliff` — "tapping" rendered as "tapping and holding", and "book plus icon" loses the plus.
+    - Current: `با تپ کردن و نگه داشتن آیکون کتاب`
+    - Source: `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.`
+    - Suggest: `با تپ کردن آیکون کتاب به‌همراه علامت مثبت`
+    - The source says simply "tapping the book plus icon"; the translation instructs a tap-and-hold gesture, giving the user wrong instructions.
+- `Well, this is embarrassing.` — `fa/firefox-ios.xliff` — "this is embarrassing" is rendered as "we are very sorry", an apology the source does not make.
+    - Current: `راستش، بسیار متاسفیم.`
+    - Source: `Well, this is embarrassing.`
+    - Suggest: `خب، این شرم‌آور است.`
+    - The en-US expresses embarrassment about the situation, not an apology from the product.
+- `Logins will be permanently removed.` — `fa/firefox-ios.xliff` — Future-tense warning rendered as past tense, telling the user the deletion already happened.
+    - Current: `ورود‌ها برای همیشه حذف شد.`
+    - Source: `Logins will be permanently removed.`
+    - Suggest: `ورودها برای همیشه حذف خواهند شد.`
+    - The en-US is a warning prompt before deletion ("will be permanently removed"); the Persian past tense «حذف شد» states the removal is already done.
+- `Logins will be removed from all connected devices.` — `fa/firefox-ios.xliff` — Future tense rendered as past tense and "connected devices" reduced to "all devices".
+    - Current: `ورود‌ها بر روی تمامی دستگاه‌ها حذف شد.`
+    - Source: `Logins will be removed from all connected devices.`
+    - Suggest: `ورودها از همه دستگاه‌های متصل حذف خواهند شد.`
+    - Source is a pre-deletion warning: "will be removed from all connected devices"; the translation uses past tense and drops "connected".
+
+_Also listed under their own category below._
+
+| Impact | Meaning | Count |
+|---|---|---|
+| 1 | Broken output (blank value, broken markup, wrong variable) | 3 |
+| 2 | Wrong content (says something other than the English) | 229 |
+| 3 | Degraded language (grammar, spelling, terminology) | 223 |
+| 4 | Cosmetic (typography, spacing) | 5 |
+
+### A. Functional, markup, variables & plurals
+
+- `WorldCup.GroupPhase.GroupD.Title.v151` — `fa/firefox-ios.xliff` — The group letter "D" is missing from the translation.
+    - Current: `گروه`
+    - Source: `Group D`
+    - Suggest: `گروه D`
+    - Source is "Group D"; the identifying letter was dropped, leaving an unidentifiable label.
+- `WorldCup.HomepageWidget.CountDown.DayLabel.v151` — `fa/firefox-ios.xliff` — Placeholder text "ترجمه‌نشده" shipped instead of a 1–2 character day abbreviation.
+    - Current: `ترجمه‌نشده`
+    - Source: `D`
+    - Suggest: `ر`
+    - The comment limits the string to 1–2 characters as an abbreviation for "Days"; the target is a literal "untranslated" marker that will be truncated to nonsense.
+
+### B. Mistranslation, reversed meaning, wrong names & brand
+
+- `Alerts.RestoreTabs.Title.v109.v2` — `fa/firefox-ios.xliff` — The word "crashed" is left untranslated and the rest is ungrammatical word salad.
+    - Current: `%@ crashed. بازیابی شما زبانه‌ها؟`
+    - Source: `%@ crashed. Restore your tabs?`
+    - Suggest: `%@ از کار افتاد. زبانه‌های شما بازیابی شود؟`
+    - The source "%@ crashed. Restore your tabs?" is only half-translated; "crashed" remains in English and "بازیابی شما زبانه‌ها؟" has wrong word order/possessive.
+- `Settings.AppIconSelection.AppIconNames.Fun.Cool.Title.146` — `fa/firefox-ios.xliff` — "Cool" (stylish, fox with sunglasses) translated as "خنک" (cool in temperature).
+    - Current: `خنک`
+    - Source: `Cool`
+    - Suggest: `باحال`
+    - The developer comment describes a fox with sunglasses, i.e. "cool" in the sense of stylish, not low temperature.
+- `Bookmarks.EmptyState.Root.Body.v135` — `fa/firefox-ios.xliff` — Translation is partially untranslated and garbled, leaving English fragments and broken grammar.
+    - Current: `ما’ll also grab نشانک‌ها از دیگر همگام‌شده دستگاه‌ها.`
+    - Source: `Save sites as you browse. We’ll also grab bookmarks from other synced devices.`
+    - Suggest: `ما نشانک‌ها را از دیگر دستگاه‌های همگام‌شده نیز دریافت می‌کنیم.`
+    - The en-US "We’ll also grab bookmarks from other synced devices." is left half-English ("’ll also grab") and the Persian word order is broken.
+- `Bookmarks.EmptyState.Root.BodySignedOut.v135` — `fa/firefox-ios.xliff` — Second sentence is left mostly in English and garbled.
+    - Current: `Sign در به grab نشانک‌ها از دیگر همگام‌شده دستگاه‌ها.`
+    - Source: `Save sites as you browse. Sign in to grab bookmarks from other synced devices.`
+    - Suggest: `برای دریافت نشانک‌ها از دیگر دستگاه‌های همگام‌شده وارد شوید.`
+    - The en-US "Sign in to grab bookmarks from other synced devices." is left untranslated/broken ("Sign در به grab").
+- `Bookmarks.Menu.EditBookmarkDesktopBookmarksLabel.v136` — `fa/firefox-ios.xliff` — "BOOKMARKS" is left in English and corrupted with the Persian word "تأیید" inserted.
+    - Current: `رومیزی BOتأییدMARKS`
+    - Source: `DESKTOP BOOKMARKS`
+    - Suggest: `نشانک‌های رومیزی`
+    - The source is "DESKTOP BOOKMARKS"; the target contains the garbled token "BOتأییدMARKS" instead of a translation of "BOOKMARKS".
+- `Bookmarks.Menu.EditBookmarkMobileBookmarksLabel.v154` — `fa/firefox-ios.xliff` — "BOOKMARKS" is left in English and corrupted with the Persian word "تأیید" inserted.
+    - Current: `تلفن همراه BOتأییدMARKS`
+    - Source: `MOBILE BOOKMARKS`
+    - Suggest: `نشانک‌های تلفن همراه`
+    - The source is "MOBILE BOOKMARKS"; the target contains the garbled token "BOتأییدMARKS" instead of a translation of "BOOKMARKS".
+- `Addresses.EditAddress.AutofillAddressPin.v129` — `fa/firefox-ios.xliff` — "Pin" (the Indian Postal Index Number) is translated as the verb "to pin/attach".
+    - Current: `سنجاق کردن`
+    - Source: `Pin`
+    - Suggest: `کد پستی (PIN)`
+    - The developer comment states this is the PIN (Postal Index Number) field used in India, not the action of pinning something.
+- `Addresses.EditAddress.AutofillAddressPostTown.v129` — `fa/firefox-ios.xliff` — "Post town" is left half-untranslated as "Post شهر".
+    - Current: `Post شهر`
+    - Source: `Post town`
+    - Suggest: `شهر پستی`
+    - The English word "Post" remains untranslated and mixed into the Persian text, producing a nonsensical label for the post town field.
+- `CreditCard.EditCard.ToggleToAllowAutofillTitle.v122` — `fa/firefox-ios.xliff` — "Save and Fill" is rendered as "ذخیره و پرکردن خودکار" (save and autofill), adding "automatic" not present in the source.
+    - Current: `ذخیره و پرکردن خودکار روش‌های پرداخت`
+    - Source: `Save and Fill Payment Methods`
+    - Suggest: `ذخیره و پرکردن روش‌های پرداخت`
+    - The en-US says "Save and Fill Payment Methods"; the translation adds "خودکار" (automatic), which the source label does not state.
+- `Menu.EnhancedTrackingProtection.Certificates.CommonName.v131` — `fa/firefox-ios.xliff` — "Common Name" is left half-untranslated as "Common نام", producing a nonsensical mixed-language label.
+    - Current: `Common نام`
+    - Source: `Common Name`
+    - Suggest: `نام مشترک (Common Name)`
+    - The source term "Common Name" is a certificate field; the translation mechanically renders only "Name" into Persian and leaves "Common" in English, which is not a valid Persian phrase.
+- `Menu.EnhancedTrackingProtection.Details.NoTrackers.v131` — `fa/firefox-ios.xliff` — "No trackers found" translated as "no tracking found" instead of trackers (ردیاب).
+    - Current: `ردیابی پیدا نشد`
+    - Source: `No trackers found`
+    - Suggest: `ردیابی پیدا نشد → ردیابی‌کننده‌ای پیدا نشد`
+    - Other strings in the same file use «ردیاب» for "tracker"; here «ردیابی» means "tracking", an inconsistent and inaccurate term for the noun "trackers".
+- `ExternalLink.ExternalInvalidLinkMessage.v136` — `fa/firefox-ios.xliff` — String is a broken mix of untranslated English words and Persian, unintelligible to users.
+    - Current: `برنامه required به باز کردن آن پیوند می‌تواند’t باشد found.`
+    - Source: `The application required to open that link can’t be found.`
+    - Suggest: `برنامهٔ لازم برای باز کردن آن پیوند پیدا نشد.`
+    - The source says the required application can't be found; the target leaves "required", "can’t", "found" in English and is grammatically broken.
+- `FirefoxHome.PrivacyNotice.Body.v148` — `fa/firefox-ios.xliff` — Partially untranslated, ungrammatical rendering mixing English fragments.
+    - Current: `ما’ve به‌روزرسانی‌شده ما %1$@ به reflect جدیدترین ویژگی‌ها در %2$@. %3$@`
+    - Source: `We’ve updated our %1$@ to reflect the latest features in %2$@. %3$@`
+    - Suggest: `ما %1$@ خود را به‌روزرسانی کردیم تا جدیدترین ویژگی‌های %2$@ را بازتاب دهد. %3$@`
+    - Source: "We’ve updated our %1$@ to reflect the latest features in %2$@." The target keeps "’ve" and "reflect" in English and is not grammatical Persian.
+- `FirefoxHomepage.FeltPrivacyUI.Body.v122` — `fa/firefox-ios.xliff` — String largely untranslated and corrupted, with English words and Latin commas.
+    - Current: `%@ deletes شما کوکی‌ها, تاریخچه, و وبگاه datیک when شما بستن همه شما خصوصی زبانه‌ها.`
+    - Source: `%@ deletes your cookies, history, and site data when you close all your private tabs.`
+    - Suggest: `%@ وقتی همهٔ زبانه‌های خصوصی خود را ببندید، کوکی‌ها، تاریخچه و داده‌های وبگاه شما را حذف می‌کند.`
+    - Source: "%@ deletes your cookies, history, and site data when you close all your private tabs." The target leaves "deletes", "when", "dat" untranslated and is ungrammatical.
+- `ContextualHints.MainMenu.MenuRedesign.Body.v142` — `fa/firefox-ios.xliff` — Translation left partly in English with untranslated words "at" and "fingertips".
+    - Current: `نشانک‌ها, تاریخچه, و تنظیمات — همه at شما fingertips.`
+    - Source: `Bookmarks, history, and settings — all at your fingertips.`
+    - Suggest: `نشانک‌ها، تاریخچه و تنظیمات — همه در دسترس شما.`
+    - The en-US "all at your fingertips" is not translated; English words remain inside the Persian string, and Latin commas are used instead of Persian «،».
+- `ContextualHints.MainMenu.NewMenu.Body.v132` — `fa/firefox-ios.xliff` — Untranslated English words and garbled word order render the sentence meaningless in Persian.
+    - Current: `یافتن what شما need سریع‌تر, از خصوصی مرور به ذخیره عمل‌ها.`
+    - Source: `Find what you need faster, from private browsing to save actions.`
+    - Suggest: `آنچه را نیاز دارید سریع‌تر پیدا کنید، از مرور خصوصی تا عمل‌های ذخیره.`
+    - Source "Find what you need faster, from private browsing to save actions." is only partially translated; "what", "need" remain English and the phrase structure is broken.
+- `ContextualHints.MainMenu.NewMenu.Title.v132` — `fa/firefox-ios.xliff` — "streamlined" left untranslated in English.
+    - Current: `جدید: streamlined منو`
+    - Source: `New: streamlined menu`
+    - Suggest: `جدید: منوی ساده‌شده`
+    - The source word "streamlined" is not translated, leaving English in the Persian UI.
+- `MainMenu.Account.AccessibilityLabels.MainButton.v132` — `fa/firefox-ios.xliff` — "Sign in" left untranslated, producing a mixed English/Persian accessibility label.
+    - Current: `Sign در به همگام‌سازی گذرواژه‌ها, زبانه‌ها, و بیشتر`
+    - Source: `Sign in to sync passwords, tabs, and more`
+    - Suggest: `برای همگام‌سازی گذرواژه‌ها، زبانه‌ها و بیشتر وارد شوید`
+    - Source "Sign in to sync passwords, tabs, and more" is partly untranslated and syntactically broken.
+- `MainMenu.Account.SignedIn.Description.v141` — `fa/firefox-ios.xliff` — English words "what" and "back up" left untranslated.
+    - Current: `مدیریت what شما back up و همگام‌سازی`
+    - Source: `Manage what you back up and sync`
+    - Suggest: `مدیریت آنچه پشتیبان‌گیری و همگام‌سازی می‌کنید`
+    - Source "Manage what you back up and sync" is only partially translated, leaving English in the Persian UI.
+- `MainMenu.Account.SyncError.Title.v131` — `fa/firefox-ios.xliff` — "Sign back in" left untranslated, producing a broken mixed-language string.
+    - Current: `Sign back در به همگام‌سازی`
+    - Source: `Sign back in to sync`
+    - Suggest: `برای همگام‌سازی دوباره وارد شوید`
+    - Source "Sign back in to sync" is not translated into Persian.
+- `MainMenu.HeaderBanner.Subtitle.v142` — `fa/firefox-ios.xliff` — "Takes" left untranslated in English.
+    - Current: `Takes ثانیه. تغییر هر زمان.`
+    - Source: `Takes seconds. Change anytime.`
+    - Suggest: `چند ثانیه طول می‌کشد. هر زمان تغییر دهید.`
+    - Source "Takes seconds. Change anytime." is only partially translated.
+- `MainMenu.HeaderBanner.Title.v142` — `fa/firefox-ios.xliff` — "Make" left untranslated and sentence structure broken.
+    - Current: `Make %@ شما پیش‌فرض`
+    - Source: `Make %@ your default`
+    - Suggest: `%@ را پیش‌فرض خود کنید`
+    - Source "Make %@ your default" is not properly translated into Persian.
+- `Microsurvey.Survey.OptionsOrder.AccessibilityLabel.v129` — `fa/firefox-ios.xliff` — "out of" mistranslated literally as "بیرونِ" (outside of) instead of the counting sense "از".
+    - Current: `%1$@ بیرونِ %2$@`
+    - Source: `%1$@ out of %2$@`
+    - Suggest: `%1$@ از %2$@`
+    - The comment says the output is like "1 out of 6", i.e. item N of M; "بیرونِ" means "outside of" and is nonsense here.
+- `DefaultBrowserPopup.FirstLabel.v114` — `fa/firefox-ios.xliff` — English word "Go" left untranslated in the Persian instruction.
+    - Current: `1. Go به *تنظیمات*`
+    - Source: `1. Go to *Settings*`
+    - Suggest: `۱. به *تنظیمات* بروید`
+    - The source "1. Go to *Settings*" is only partially translated; "Go" remains English, producing a mixed-language instruction.
+- `DefaultBrowserPopup.SecondLabel.v114` — `fa/firefox-ios.xliff` — "Tap" left untranslated and "Default Browser App" word order is garbled.
+    - Current: `2. Tap *پیش‌فرض مرورگر برنامه*`
+    - Source: `2. Tap *Default Browser App*`
+    - Suggest: `۲. روی *برنامهٔ مرورگر پیش‌فرض* بزنید`
+    - The verb "Tap" is untranslated and the noun phrase is rendered in English word order, which is ungrammatical in Persian.
+- `Onboarding.Customization.Intro.Description.v123` — `fa/firefox-ios.xliff` — Word-for-word garbled rendering with untranslated English words and a mistranslation of "match" as "مسابقه" (competition).
+    - Current: `تنظیم شما پوسته و نوار ابزار به مسابقه شما unique مرور style.`
+    - Source: `Set your theme and toolbar to match your unique browsing style.`
+    - Suggest: `پوسته و نوار ابزار خود را طوری تنظیم کنید که با سبک مرور منحصربه‌فرد شما هماهنگ باشد.`
+    - The source says to set theme and toolbar to match the user's unique browsing style; the target leaves "unique" and "style" in English and renders "match" as "مسابقه" (a contest), making it meaningless.
+- `Onboarding.Customization.Theme.Description.v123` — `fa/firefox-ios.xliff` — Untranslated "See" and a nonsensical rendering of "in the best light".
+    - Current: `See وب در بهترین روشن.`
+    - Source: `See the web in the best light.`
+    - Suggest: `وب را در بهترین حالت ببینید.`
+    - The English verb is left untranslated and "best light" is rendered word-for-word as "بهترین روشن", which is ungrammatical and meaningless.
+- `Onboarding.IntroDescriptionPart1.v114` — `fa/firefox-ios.xliff` — "For good" (for the benefit of good) mistranslated as "برای همیشه" (forever).
+    - Current: `برای همیشه.`
+    - Source: `Indie. Non-profit. For good.`
+    - Suggest: `برای خیر.`
+    - "For good" here means for the common good, not "forever"; "برای همیشه" states a different fact.
+- `Onboarding.IntroDescriptionPart2.v114` — `fa/firefox-ios.xliff` — English words "Committed" and "promise" left untranslated and word order garbled.
+    - Current: `Committed به promiseِ یک بهتر اینترنت برای همه.`
+    - Source: `Committed to the promise of a better Internet for everyone.`
+    - Suggest: `متعهد به وعدهٔ اینترنتی بهتر برای همه.`
+    - The source sentence is only partially translated, leaving English words and an ungrammatical Persian noun phrase.
+- `Onboarding.Modern.BrandRefresh.Customization.Theme.Description.v148` — `fa/firefox-ios.xliff` — Largely untranslated and garbled: "have", "putting" left in English and "match" rendered as "مسابقه" (competition).
+    - Current: `انتخاب کنید شما موردعلاقه پوسته یا have %@ مسابقه شما دستگاه, putting شما در کنترل.`
+    - Source: `Pick your favorite theme or have %@ match your device, putting you in control.`
+    - Suggest: `پوستهٔ موردعلاقهٔ خود را انتخاب کنید یا بگذارید %@ با دستگاه شما هماهنگ شود، تا کنترل در دست شما باشد.`
+    - The source asks the user to pick a theme or have the app match the device; the target keeps English words, mistranslates "match" as a contest, and uses an English comma.
+- `Onboarding.Modern.BrandRefresh.Marketing.LearnMoreLink.v148` — `fa/firefox-ios.xliff` — Link text left partly in English and ungrammatical.
+    - Current: `How ما استفاده داده`
+    - Source: `How we use the data`
+    - Suggest: `چگونه از داده‌ها استفاده می‌کنیم`
+    - "How we use the data" is partially untranslated ("How") and the remainder is not grammatical Persian.
+- `Onboarding.Modern.BrandRefresh.Marketing.Title.v148` — `fa/firefox-ios.xliff` — Title left partly in English and ungrammatical.
+    - Current: `کمک ما build یک بهتر اینترنت`
+    - Source: `Help us build a better internet`
+    - Suggest: `به ما کمک کنید اینترنت بهتری بسازیم`
+    - "Help us build a better internet" is rendered word-for-word with "build" untranslated.
+- `Onboarding.Modern.BrandRefresh.Notification.Title.v148` — `fa/firefox-ios.xliff` — Title is corrupted: "Notifications" became "خیرtifications" and most of the sentence is untranslated English.
+    - Current: `خیرtifications کمک شما stay safer با %@`
+    - Source: `Notifications help you stay safer with %@`
+    - Suggest: `اعلان‌ها به شما کمک می‌کنند با %@ ایمن‌تر بمانید`
+    - The source "Notifications help you stay safer with %@" has been mangled by a bad find-and-replace ("No" → "خیر") and left largely in English.
+- `Onboarding.Modern.BrandRefresh.Sync.SignIn.Action.v148` — `fa/firefox-ios.xliff` — Button label left partly in English.
+    - Current: `Start در حال همگام‌سازی`
+    - Source: `Start Syncing`
+    - Suggest: `شروع همگام‌سازی`
+    - "Start Syncing" retains the untranslated word "Start" and the rest is ungrammatical.
+- `Onboarding.Modern.BrandRefresh.TermsOfUse.AgreementButtonTitle.v148` — `fa/firefox-ios.xliff` — Button title left untranslated in English.
+    - Current: `Agree و continue`
+    - Source: `Agree and continue`
+    - Suggest: `پذیرش و ادامه`
+    - "Agree and continue" was not translated apart from the conjunction.
+- `Onboarding.Modern.BrandRefresh.TermsOfUse.ManagePreferenceAgreement.v148` — `fa/firefox-ios.xliff` — Agreement text is largely untranslated and corrupted ("datیک"), with a Latin comma.
+    - Current: `به کمک بهبود مرورگر, %1$@ sends تشخیصی و تعامل datیک به %2$@. %3$@`
+    - Source: `To help improve the browser, %1$@ sends diagnostic and interaction data to %2$@. %3$@`
+    - Suggest: `برای کمک به بهبود مرورگر، %1$@ داده‌های تشخیصی و تعاملی را به %2$@ ارسال می‌کند. %3$@`
+    - The source sentence is left mostly in English and "data" has been mangled into "datیک".
+- `Onboarding.Modern.BrandRefresh.TermsOfUse.PrivacyNoticeAgreement.v148` — `fa/firefox-ios.xliff` — Agreement text left partly in English and ungrammatical.
+    - Current: `%1$@ cares about شما حریم خصوصی. خواندن بیشتر در ما %2$@`
+    - Source: `%1$@ cares about your privacy. Read more in our %2$@`
+    - Suggest: `%1$@ به حریم خصوصی شما اهمیت می‌دهد. در %2$@ ما بیشتر بخوانید`
+    - "cares about" is untranslated and the remainder follows English word order.
+- `Onboarding.Modern.BrandRefresh.TermsOfUse.TermsOfUseAgreement.v148` — `fa/firefox-ios.xliff` — Agreement text left partly in English.
+    - Current: `By continuing, شما agree به %@`
+    - Source: `By continuing, you agree to the %@`
+    - Suggest: `با ادامه دادن، شما %@ را می‌پذیرید`
+    - "By continuing" and "agree" remain untranslated English.
+- `Onboarding.Modern.BrandRefresh.TermsOfUse.Title.v148` — `fa/firefox-ios.xliff` — Title left partly in English and word-for-word.
+    - Current: `دریافت ready به اجرا free`
+    - Source: `Get ready to run free`
+    - Suggest: `آمادهٔ آزادی شوید`
+    - "Get ready to run free" is rendered literally with "ready" and "free" untranslated.
+- `Onboarding.Modern.BrandRefresh.Welcome.Title.v148.v2` — `fa/firefox-ios.xliff` — Title left partly in English ("built-in") and word-for-word.
+    - Current: `باز کردن شما پیوندها با built-in حریم خصوصی`
+    - Source: `Open your links with built-in privacy`
+    - Suggest: `پیوندهای خود را با حریم خصوصی داخلی باز کنید`
+    - "built-in" is untranslated and the sentence follows English word order.
+- `Onboarding.Modern.BrandRefresh.Welcome.TitleV3.v149` — `fa/firefox-ios.xliff` — Title left partly in English ("built-in") and word-for-word.
+    - Current: `باز کردن همه شما پیوندها با built-in حریم خصوصی`
+    - Source: `Open all your links with built-in privacy`
+    - Suggest: `همهٔ پیوندهای خود را با حریم خصوصی داخلی باز کنید`
+    - "built-in" is untranslated and the sentence follows English word order.
+- `Onboarding.Modern.Customization.Theme.Description.v145` — `fa/firefox-ios.xliff` — Description is a word-for-word machine rendering with untranslated English and a mistranslated "match".
+    - Current: `انتخاب کنید شما موردعلاقه پوسته یا have %@ مسابقه شما دستگاه, putting شما در کنترل.`
+    - Source: `Pick your favorite theme or have %@ match your device, putting you in control.`
+    - Suggest: `پوستهٔ موردعلاقه‌تان را انتخاب کنید یا بگذارید %@ با دستگاه شما هماهنگ شود تا کنترل در دست شما باشد.`
+    - "have" and "putting" are untranslated, and "match" is rendered as "مسابقه" (a contest) instead of matching the device theme.
+- `Onboarding.Modern.Customization.Toolbar.Title.v140` — `fa/firefox-ios.xliff` — Title left half-untranslated and ungrammatical word salad instead of "Choose where to put your address bar".
+    - Current: `انتخاب کنید where به put شما نشانی نوار`
+    - Source: `Choose where to put your address bar`
+    - Suggest: `انتخاب کنید نوار نشانی کجا قرار بگیرد`
+    - English words "where" and "put" remain untranslated and the word order is not Persian; the meaning of the source title is lost.
+- `Onboarding.Modern.Sync.Description.v145` — `fa/firefox-ios.xliff` — Largely untranslated and incoherent; English words remain and the encryption sentence is broken.
+    - Current: `شما نشانک‌ها, گذرواژه‌ها, و بیشتر همگام‌سازی در هر دستگاه. Everything’ محافظت‌شده با encryption, so فقط شمامی‌تواند دسترسی it.`
+    - Source: `Your bookmarks, passwords, and more sync on any device. Everything’s protected with encryption, so only you can access it.`
+    - Suggest: `نشانک‌ها، گذرواژه‌ها و موارد دیگر روی هر دستگاهی همگام‌سازی می‌شوند. همه‌چیز با رمزگذاری محافظت می‌شود، بنابراین فقط شما می‌توانید به آن دسترسی داشته باشید.`
+    - The source sentence is not rendered in Persian: "Everything’", "encryption", "so", "it" are left in English and "شمامی‌تواند" is a run-together ungrammatical form.
+- `Onboarding.Modern.Sync.SignIn.Action.v140` — `fa/firefox-ios.xliff` — "Start" left untranslated and "Syncing" rendered as a progress state.
+    - Current: `Start در حال همگام‌سازی`
+    - Source: `Start Syncing`
+    - Suggest: `شروع همگام‌سازی`
+    - The button label "Start Syncing" is an action; the target leaves "Start" in English and uses "در حال همگام‌سازی" (currently syncing).
+- `Onboarding.Modern.Sync.SignIn.Action.v145` — `fa/firefox-ios.xliff` — "Start" left untranslated and "Syncing" rendered as a progress state.
+    - Current: `Start در حال همگام‌سازی`
+    - Source: `Start Syncing`
+    - Suggest: `شروع همگام‌سازی`
+    - The button label "Start Syncing" is an action; the target leaves "Start" in English and uses "در حال همگام‌سازی" (currently syncing).
+- `Onboarding.Modern.Sync.Title.v145` — `fa/firefox-ios.xliff` — Title largely untranslated: "Take" and "adventures" remain in English and the phrase is ungrammatical.
+    - Current: `Take %@ در همه شما مرور adventures`
+    - Source: `Take %@ on all your browsing adventures`
+    - Suggest: `%@ را در همهٔ ماجراجویی‌های مرور خود همراه داشته باشید`
+    - The source "Take %@ on all your browsing adventures" is not rendered in Persian.
+- `Onboarding.Modern.TermsOfService.ManagePreferenceAgreement.v140` — `fa/firefox-ios.xliff` — Partially untranslated and corrupted: "sends" in English and "datیک" for "data".
+    - Current: `به کمک بهبود مرورگر, %1$@ sends تشخیصی و تعامل datیک به %2$@. %3$@`
+    - Source: `To help improve the browser, %1$@ sends diagnostic and interaction data to %2$@. %3$@`
+    - Suggest: `برای کمک به بهبود مرورگر، %1$@ داده‌های تشخیصی و تعاملی را به %2$@ ارسال می‌کند. %3$@`
+    - The verb "sends" is untranslated and "data" was mangled into "datیک"; Latin comma used instead of Persian comma.
+- `Onboarding.Modern.TermsOfService.ManagePreferenceAgreement.v145` — `fa/firefox-ios.xliff` — Partially untranslated and corrupted: "sends" in English and "datیک" for "data".
+    - Current: `به کمک بهبود مرورگر, %1$@ sends تشخیصی و تعامل datیک به %2$@. %3$@`
+    - Source: `To help improve the browser, %1$@ sends diagnostic and interaction data to %2$@. %3$@`
+    - Suggest: `برای کمک به بهبود مرورگر، %1$@ داده‌های تشخیصی و تعاملی را به %2$@ ارسال می‌کند. %3$@`
+    - The verb "sends" is untranslated and "data" was mangled into "datیک"; Latin comma used instead of Persian comma.
+- `Onboarding.Modern.TermsOfService.PrivacyNoticeAgreement.v140` — `fa/firefox-ios.xliff` — "cares about" left untranslated and the sentence is ungrammatical Persian.
+    - Current: `%1$@ cares about شما حریم خصوصی. خواندن بیشتر در ما %2$@`
+    - Source: `%1$@ cares about your privacy. Read more in our %2$@`
+    - Suggest: `%1$@ به حریم خصوصی شما اهمیت می‌دهد. در %2$@ ما بیشتر بخوانید`
+    - A key verb phrase remains in English and the possessive/word order is not Persian.
+- `Onboarding.Modern.TermsOfService.PrivacyNoticeAgreement.v145` — `fa/firefox-ios.xliff` — "cares about" left untranslated and the sentence is ungrammatical Persian.
+    - Current: `%1$@ cares about شما حریم خصوصی. خواندن بیشتر در ما %2$@`
+    - Source: `%1$@ cares about your privacy. Read more in our %2$@`
+    - Suggest: `%1$@ به حریم خصوصی شما اهمیت می‌دهد. در %2$@ ما بیشتر بخوانید`
+    - A key verb phrase remains in English and the possessive/word order is not Persian.
+- `Onboarding.Modern.TermsOfService.PrivacyPreferences.Title.v140` — `fa/firefox-ios.xliff` — "make" left untranslated and the sentence is ungrammatical.
+    - Current: `کمک ما make %@ بهتر`
+    - Source: `Help us make %@ better`
+    - Suggest: `به ما کمک کنید %@ را بهتر کنیم`
+    - The verb "make" remains English and the imperative "Help us make %@ better" is not conveyed grammatically.
+- `Onboarding.Modern.TermsOfService.Subtitle.v140` — `fa/firefox-ios.xliff` — Three separate lines merged into one run-on and partly untranslated ("sites lightning").
+    - Current: `بارگذاری sites lightning سریع خودکار ردیابی محافظت همگام‌سازی در همه شما دستگاه‌ها`
+    - Source: `Load sites lightning fast Automatic tracking protection Sync on all your devices`
+    - Suggest: `بارگذاری فوق‌سریع وبگاه‌ها محافظت خودکار در برابر ردیابی همگام‌سازی روی همهٔ دستگاه‌های شما`
+    - The source has three distinct lines; the target runs them together and leaves "sites lightning" untranslated, making the text incomprehensible.
+- `Onboarding.Modern.TermsOfService.TermsOfServiceAgreement.v140` — `fa/firefox-ios.xliff` — Mostly untranslated: "By continuing" and "agree" remain in English.
+    - Current: `By continuing, شما agree به %@`
+    - Source: `By continuing, you agree to the %@`
+    - Suggest: `با ادامه دادن، شما با %@ موافقت می‌کنید`
+    - Key parts of the source sentence are left in English.
+- `Onboarding.Modern.TermsOfService.TermsOfServiceAgreement.v145` — `fa/firefox-ios.xliff` — Mostly untranslated: "By continuing" and "agree" remain in English.
+    - Current: `By continuing, شما agree به %@`
+    - Source: `By continuing, you agree to the %@`
+    - Suggest: `با ادامه دادن، شما با %@ موافقت می‌کنید`
+    - Key parts of the source sentence are left in English.
+- `Onboarding.Modern.TermsOfService.Title.v140` — `fa/firefox-ios.xliff` — "Upgrade" left untranslated and phrase ungrammatical.
+    - Current: `Upgrade شما مرور`
+    - Source: `Upgrade your browsing`
+    - Suggest: `مرور خود را ارتقا دهید`
+    - The source verb is not translated and the possessive construction is not Persian.
+- `Onboarding.Modern.TermsOfService.Title.v145` — `fa/firefox-ios.xliff` — "Take charge" left untranslated in the title.
+    - Current: `Take chargeِ اینترنت`
+    - Source: `Take charge of the internet`
+    - Suggest: `کنترل اینترنت را به دست بگیرید`
+    - The main verb phrase of "Take charge of the internet" is untranslated English with a stray Persian ezafe attached.
+- `Onboarding.Notification.Title.v120` — `fa/firefox-ios.xliff` — Title is garbled machine output mixing English and a mistranslated "No" fragment instead of translating "Notifications help you stay safer".
+    - Current: `خیرtifications کمک شما stay safer با %@`
+    - Source: `Notifications help you stay safer with %@`
+    - Suggest: `اعلان‌ها به شما کمک می‌کنند با %@ ایمن‌تر بمانید`
+    - "Notifications" was partially translated as «خیر» (no) plus the leftover "tifications", and "stay safer" is left in English; the string is unreadable in Persian.
+- `Onboarding.Notification.TurnOnNotifications.Action.v114` — `fa/firefox-ios.xliff` — Button text is garbled: "Notifications" rendered as «خیرtifications» and "On" duplicated.
+    - Current: `روشن روشن خیرtifications`
+    - Source: `Turn On Notifications`
+    - Suggest: `روشن کردن اعلان‌ها`
+    - The en-US "Turn On Notifications" is mangled into untranslatable text with a stray «خیر» (no) replacing "No" in "Notifications".
+- `Onboarding.Sync.Description.v123` — `fa/firefox-ios.xliff` — Sentence largely untranslated and garbled, leaving English words and broken grammar.
+    - Current: `%@ encrypts شما گذرواژه‌ها, نشانک‌ها, و بیشتر when شما’re همگام‌شده.`
+    - Source: `%@ encrypts your passwords, bookmarks, and more when you’re synced.`
+    - Suggest: `%@ هنگامی که همگام‌سازی کرده باشید، گذرواژه‌ها، نشانک‌ها و موارد دیگر شما را رمزگذاری می‌کند.`
+    - "encrypts", "when", "you're" are left in English and the Persian word order/punctuation is broken; also uses Latin commas instead of «،».
+- _…and 149 more; see `state/` for the full list._
+
+### C. Grammar, agreement & spelling
+
+- `Alerts.AddToCalendar.Body.v134` — `fa/firefox-ios.xliff` — Translation is broken machine output: contains untranslated English word "asking" and ungrammatical Persian.
+    - Current: `%@ است asking به دریافت یک پرونده و افزودن یک رویداد به شما تقویم.`
+    - Source: `%@ is asking to download a file and add an event to your calendar.`
+    - Suggest: `%@ درخواست دارد یک پرونده دریافت کند و رویدادی به تقویم شما بیفزاید.`
+    - The en-US says "%@ is asking to download a file and add an event to your calendar." The target leaves "asking" in English and has broken syntax ("به شما تقویم" instead of "به تقویم شما").
+- `Alerts.AddToCalendar.BodyDefault.v134` — `fa/firefox-ios.xliff` — Translation is broken machine output: contains untranslated English word "asking" and ungrammatical Persian.
+    - Current: `این وبگاه است asking به دریافت یک پرونده و افزودن یک رویداد به شما تقویم.`
+    - Source: `This site is asking to download a file and add an event to your calendar.`
+    - Suggest: `این وبگاه درخواست دارد یک پرونده دریافت کند و رویدادی به تقویم شما بیفزاید.`
+    - The en-US says "This site is asking to download a file and add an event to your calendar." The target leaves "asking" in English and has broken word order ("به شما تقویم").
+- `Alerts.FeltDeletion.Body.v122` — `fa/firefox-ios.xliff` — Ungrammatical word-by-word rendering with Latin commas instead of Persian commas.
+    - Current: `بستن همه خصوصی زبانه‌ها و حذف کردن تاریخچه, کوکی‌ها, و همه دیگر وبگاه داده.`
+    - Source: `Close all private tabs and delete history, cookies, and all other site data.`
+    - Suggest: `بستن همهٔ زبانه‌های خصوصی و حذف تاریخچه، کوکی‌ها و همهٔ داده‌های دیگر وبگاه‌ها.`
+    - The source "Close all private tabs and delete history, cookies, and all other site data." is rendered with English adjective order ("همه خصوصی زبانه‌ها", "همه دیگر وبگاه داده") which is not valid Persian, and uses ASCII commas instead of the Persian comma «،».
+- `Settings.AppIconSelection.AppIconNames.BlueHour.Title.v137` — `fa/firefox-ios.xliff` — "Blue Hour" rendered with reversed Persian word order, yielding nonsense.
+    - Current: `آبی ساعت`
+    - Source: `Blue Hour`
+    - Suggest: `ساعت آبی`
+    - Persian noun-adjective order requires "ساعت آبی"; compare the correctly ordered "ساعت طلایی" for Golden Hour in the same screen.
+- `Settings.AppIconSelection.AppIconNames.DarkPurple.Title.v136` — `fa/firefox-ios.xliff` — "Dark Purple" rendered with reversed word order.
+    - Current: `تیره بنفش`
+    - Source: `Dark Purple`
+    - Suggest: `بنفش تیره`
+    - In Persian the modifier follows the noun/colour: "بنفش تیره" means dark purple; "تیره بنفش" is ungrammatical.
+- `Bookmarks.Menu.SavedBookmarkToastDefaultFolderLabel.v136` — `fa/firefox-ios.xliff` — Stray English "d" suffix attached to the Persian verb, and non-guillemet quotes.
+    - Current: `ذخیرهd در “نشانک‌ها”`
+    - Source: `Saved in “Bookmarks”`
+    - Suggest: `در «نشانک‌ها» ذخیره شد`
+    - "Saved" was partially replaced leaving "ذخیرهd", which is not a Persian word; the locale convention is guillemets, as used in Bookmarks.Menu.DeletedBookmark.
+- `Bookmarks.Menu.SavedBookmarkToastLabel.v136` — `fa/firefox-ios.xliff` — Stray English "d" suffix attached to the Persian verb, and non-guillemet quotes.
+    - Current: `ذخیرهd در “%@”`
+    - Source: `Saved in “%@”`
+    - Suggest: `در «%@» ذخیره شد`
+    - "Saved" was partially replaced leaving "ذخیرهd", which is not a Persian word; the locale convention is guillemets.
+- `CameraAccess.DisabledAlertMessage.v153` — `fa/firefox-ios.xliff` — The Persian text is ungrammatical word-salad, apparently machine-generated, and does not convey the source instruction.
+    - Current: `رفتن به تنظیمات > %@ در شما دستگاه به اجازه Firefox به استفاده شما دوربین.`
+    - Source: `Go to Settings > %@ on your device to allow Firefox to use your camera.`
+    - Suggest: `در دستگاه خود به تنظیمات > %@ بروید تا به Firefox اجازه دهید از دوربین شما استفاده کند.`
+    - The source says "Go to Settings > %@ on your device to allow Firefox to use your camera." The target is a literal word-by-word rendering with wrong word order and wrong particles ("در شما دستگاه", "به اجازه", "استفاده شما دوربین"), which is not comprehensible Persian.
+- `ContextualHints.Translations.Title.v145` — `fa/firefox-ios.xliff` — Untranslated English word "Speaks" left in the string and word order is ungrammatical.
+    - Current: `%@ Speaks شما زبان`
+    - Source: `%@ Speaks Your Language`
+    - Suggest: `%@ به زبان شما صحبت می‌کند`
+    - The source "%@ Speaks Your Language" should be fully translated; "Speaks" remains in English and "شما زبان" is an incorrect possessive construction.
+- `Settings.Home.Option.ThoughtProvokingStories.subtitle.v116` — `fa/firefox-ios.xliff` — The English word "by" is left untranslated inside the Persian string.
+    - Current: `مقاله‌ها ارائه‌شده by %@`
+    - Source: `Articles powered by %@`
+    - Suggest: `مقاله‌ها ارائه‌شده توسط %@`
+    - Source "Articles powered by %@"; the preposition "by" was not translated into Persian.
+- `Addresses.EditAddress.Alert.Title.v129` — `fa/firefox-ios.xliff` — Corrupted translation: "Address" was partially translated leaving the mangled token "افزودنress".
+    - Current: `حذف افزودنress`
+    - Source: `Remove Address`
+    - Suggest: `حذف نشانی`
+    - Source is "Remove Address"; the target reads "حذف افزودنress", where "Add" was replaced by "افزودن" inside the word "Address", producing nonsense.
+- `Addresses.EditAddress.RemoveAddressButtonTitle.v129` — `fa/firefox-ios.xliff` — Translation contains a corrupted mix of Persian and leftover English characters instead of "Remove Address".
+    - Current: `حذف افزودنress`
+    - Source: `Remove Address`
+    - Suggest: `حذف نشانی`
+    - The source is "Remove Address"; the target reads "delete add-ress" with a stray English fragment "ress" and the wrong word "افزودن" (add).
+- `Menu.EnhancedTrackingProtection.Certificates.IssuerName.v131` — `fa/firefox-ios.xliff` — "صادرکننده نام" reverses the Persian noun-modifier order; it should be "نام صادرکننده".
+    - Current: `صادرکننده نام`
+    - Source: `Issuer Name`
+    - Suggest: `نام صادرکننده`
+    - Persian ezafe order puts the head noun first: "Issuer Name" = "نام صادرکننده". As written it reads "issuer name" word-by-word in English order and is ungrammatical.
+- `Menu.EnhancedTrackingProtection.Certificates.SubjectAltNames.v131` — `fa/firefox-ios.xliff` — "موضوع Alt نامs" contains a stray English plural "s" attached to the Persian word and wrong word order.
+    - Current: `موضوع Alt نامs`
+    - Source: `Subject Alt Names`
+    - Suggest: `نام‌های جایگزین موضوع`
+    - The English plural suffix "s" has been appended to the Persian "نام", and the phrase keeps English word order; the result is not valid Persian.
+- `Menu.EnhancedTrackingProtection.Certificates.SubjectAltNamesDNSName.v131` — `fa/firefox-ios.xliff` — "DNS نام" uses English word order; Persian requires "نام DNS".
+    - Current: `DNS نام`
+    - Source: `DNS Name`
+    - Suggest: `نام DNS`
+    - In Persian the head noun precedes the modifier, so "DNS Name" is "نام DNS".
+- `Menu.EnhancedTrackingProtection.Certificates.SubjectName.v131` — `fa/firefox-ios.xliff` — "موضوع نام" reverses the Persian word order; it should be "نام موضوع".
+    - Current: `موضوع نام`
+    - Source: `Subject Name`
+    - Suggest: `نام موضوع`
+    - Persian ezafe order requires the head noun "نام" first: "Subject Name" = "نام موضوع".
+- `Menu.EnhancedTrackingProtection.On.Title.v128` — `fa/firefox-ios.xliff` — Ungrammatical word-salad rendering of "%@ is on guard".
+    - Current: `%@ است در محافظ`
+    - Source: `%@ is on guard`
+    - Suggest: `%@ نگهبانی می‌دهد`
+    - The Persian "%@ است در محافظ" is not grammatical Persian word order and does not convey "is on guard".
+- `FirefoxHomepage.TrackerBlocker.NoTrackersBlocked.v153` — `fa/firefox-ios.xliff` — Untranslated English fragment "’re" left inside the Persian string, producing broken text.
+    - Current: `شما’re محافظت‌شده`
+    - Source: `You’re Protected`
+    - Suggest: `شما محافظت می‌شوید`
+    - The source "You’re Protected" was machine-mangled; the English contraction remnant "’re" remains in the Persian text.
+- `FirefoxHomepage.TrackerBlocker.TrackersBlocked.v153b` — `fa/firefox-ios.xliff` — Ungrammatical word-for-word rendering of "Trackers Blocked".
+    - Current: `ردیاب‌ها مسدود: %@`
+    - Source: `Trackers Blocked: %@`
+    - Suggest: `ردیاب‌های مسدودشده: %@`
+    - "ردیاب‌ها مسدود" is not grammatical Persian; the adjective/participle must agree via ezafe as "ردیاب‌های مسدودشده".
+- `FirefoxHomepage.TrackerBlocker.TrackersBlocked.v155` — `fa/firefox-ios.xliff` — Ungrammatical word-for-word rendering of "Trackers Blocked".
+    - Current: `ردیاب‌ها مسدود: %@`
+    - Source: `Trackers Blocked: %@`
+    - Suggest: `ردیاب‌های مسدودشده: %@`
+    - "ردیاب‌ها مسدود" is not grammatical Persian; it needs ezafe and the participle form.
+- `LoginsList.Title.v122` — `fa/firefox-ios.xliff` — Word order reversed: adjective placed before the noun, which is ungrammatical in Persian.
+    - Current: `ذخیره‌شده گذرواژه‌ها`
+    - Source: `SAVED PASSWORDS`
+    - Suggest: `گذرواژه‌های ذخیره‌شده`
+    - Persian places the modifier after the noun with ezafe; "ذخیره‌شده گذرواژه‌ها" is a literal English word order.
+- `FirefoxHomepage.Pocket.Footer.Title.v116` — `fa/firefox-ios.xliff` — Partially untranslated and ungrammatical: English "by" left in, and "خانواده" misplaced.
+    - Current: `ارائه‌شده by %1$@. بخشِ %2$@ خانواده.`
+    - Source: `Powered by %1$@. Part of the %2$@ family.`
+    - Suggest: `ارائه‌شده توسط %1$@. بخشی از خانوادهٔ %2$@.`
+    - The English preposition "by" remains untranslated and the second sentence has English word order, making it unreadable in Persian.
+- `CloseTab.ArrivingNotification.title.v133` — `fa/firefox-ios.xliff` — Ungrammatical literal word order for "%1$@ tabs closed".
+    - Current: `%1$@ زبانه‌ها بسته‌شده: %2$@`
+    - Source: `%1$@ tabs closed: %2$@`
+    - Suggest: `زبانه‌های بسته‌شدهٔ %1$@: %2$@`
+    - The Persian lacks ezafe linking and copies English word order, yielding ungrammatical text.
+- `ContextualHints.FirefoxHomepage.JumpBackIn.PersonalizedHome` — `fa/firefox-ios.xliff` — String is largely untranslated/garbled, with English words, English commas, and a missing space ("resultsخواهد").
+    - Current: `Meet شما شخصی‌سازی‌شده صفحهٔ اصلی. اخیر زبانه‌ها, نشانک‌ها, و جست‌و‌جو resultsخواهد ظاهر می‌شوند here.`
+    - Source: `Meet your personalized homepage. Recent tabs, bookmarks, and search results will appear here.`
+    - Suggest: `با صفحهٔ اصلی شخصی‌سازی‌شدهٔ خود آشنا شوید. زبانه‌های اخیر، نشانک‌ها و نتایج جست‌وجو اینجا ظاهر می‌شوند.`
+    - Mixed English ("Meet", "results", "here"), broken word order and a missing space make the hint unreadable.
+- `KeyboardAccessory.NextButton.Accessibility.Label.v124` — `fa/firefox-ios.xliff` — Partially untranslated: "form field" left in English.
+    - Current: `بعدی form field`
+    - Source: `Next form field`
+    - Suggest: `فیلد بعدی فرم`
+    - The source "Next form field" is only half-translated; the English words remain.
+- `KeyboardAccessory.PreviousButton.Accessibility.Label.v124` — `fa/firefox-ios.xliff` — Partially untranslated: "form field" left in English.
+    - Current: `قبلی form field`
+    - Source: `Previous form field`
+    - Suggest: `فیلد قبلی فرم`
+    - The source "Previous form field" is only half-translated; the English words remain.
+- `MainMenu.Account.SyncError.Description.v131` — `fa/firefox-ios.xliff` — "Syncing paused" rendered with a redundant progressive phrase that contradicts itself.
+    - Current: `در حال همگام‌سازی متوقف‌شده`
+    - Source: `Syncing paused`
+    - Suggest: `همگام‌سازی متوقف شد`
+    - "در حال همگام‌سازی" means "syncing in progress", which conflicts with "متوقف‌شده" (paused); the source states that syncing is paused.
+- `MainMenu.SettingsSection.AccessibilityLabels.CustomizeHomepage.v132` — `fa/firefox-ios.xliff` — Hybrid word "سفارشیize" contains a stray English suffix.
+    - Current: `سفارشیize صفحهٔ اصلی`
+    - Source: `Customize Homepage`
+    - Suggest: `سفارشی‌سازی صفحهٔ اصلی`
+    - "Customize" was partly machine-translated, leaving "ize" attached to the Persian word.
+- `MainMenu.SettingsSection.CustomizeHomepage.Title.v131` — `fa/firefox-ios.xliff` — Untranslated English fragment "ize" left inside the Persian word, producing "سفارشیize".
+    - Current: `سفارشیize صفحهٔ اصلی`
+    - Source: `Customize Homepage`
+    - Suggest: `سفارشی‌سازی صفحهٔ اصلی`
+    - The source is "Customize Homepage"; the target contains a corrupted hybrid word mixing Persian "سفارشی" with the English suffix "ize".
+- `Microsurvey.Survey.PrivacyPolicyLink.v127` — `fa/firefox-ios.xliff` — The word "notice" is left untranslated, producing a mixed English/Persian string.
+    - Current: `حریم خصوصی notice`
+    - Source: `Privacy notice`
+    - Suggest: `اعلامیهٔ حریم خصوصی`
+    - en-US "Privacy notice" must be fully translated; "notice" remains in English.
+- `NativeErrorPage.NoInternetConnection.Description.v131` — `fa/firefox-ios.xliff` — Translation is partly untranslated and ungrammatical word-for-word Persian.
+    - Current: `تلاش کنید connecting در یک متفاوت دستگاه. بررسی شما مودم یا مسیریاب. قطع اتصال و اتصال مجدد به Wi-Fi.`
+    - Source: `Try connecting on a different device. Check your modem or router. Disconnect and reconnect to Wi-Fi.`
+    - Suggest: `اتصال با دستگاهی دیگر را امتحان کنید. مودم یا مسیریاب خود را بررسی کنید. اتصال Wi-Fi را قطع و دوباره وصل کنید.`
+    - "connecting" is left in English and the syntax ("بررسی شما مودم", "یک متفاوت دستگاه") is not grammatical Persian.
+- `NativeErrorPage.NoInternetConnection.TitleLabel.v131` — `fa/firefox-ios.xliff` — String is largely untranslated and ungrammatical, including a stray apostrophe.
+    - Current: `Looks like وجود دارد’ یک مشکل با شما اینترنت اتصال.`
+    - Source: `Looks like there’s a problem with your internet connection.`
+    - Suggest: `به نظر می‌رسد مشکلی در اتصال اینترنت شما وجود دارد.`
+    - en-US "Looks like there’s a problem with your internet connection." is rendered with untranslated English and broken Persian word order.
+- `NativeErrorPage.Wayback.Error.Checking.v155` — `fa/firefox-ios.xliff` — String left in English instead of being translated.
+    - Current: `Checking Archive…`
+    - Source: `Checking the Archive…`
+    - Suggest: `در حال بررسی بایگانی…`
+    - en-US "Checking the Archive…" is a user-visible button label and should be in Persian, as elsewhere in the file "archive" is "بایگانی".
+- `Onboarding.Customization.Intro.Continue.Action.v123` — `fa/firefox-ios.xliff` — Half-translated word "سفارشیize" mixes Persian and English.
+    - Current: `سفارشیize %@`
+    - Source: `Customize %@`
+    - Suggest: `شخصی‌سازی %@`
+    - "Customize" was partly translated leaving the English suffix "ize" attached, producing a nonsense word.
+- `Onboarding.Customization.Intro.Title.v123` — `fa/firefox-ios.xliff` — English verb "puts" left untranslated.
+    - Current: `%@ puts شما در کنترل`
+    - Source: `%@ puts you in control`
+    - Suggest: `%@ کنترل را به شما می‌دهد`
+    - The source "%@ puts you in control" is only partly translated, leaving the English verb in the Persian sentence.
+- `Onboarding.Customization.Theme.Title.v123` — `fa/firefox-ios.xliff` — Ungrammatical English word order in Persian title.
+    - Current: `انتخاب کنید یک پوسته`
+    - Source: `Pick a theme`
+    - Suggest: `یک پوسته انتخاب کنید`
+    - Persian places the object before the verb; the literal English order is ungrammatical.
+- `Onboarding.Customization.Theme.Title.v143` — `fa/firefox-ios.xliff` — Ungrammatical word order and wrong possessive form for "your theme".
+    - Current: `انتخاب کنید شما پوسته`
+    - Source: `Choose your theme`
+    - Suggest: `پوستهٔ خود را انتخاب کنید`
+    - "شما پوسته" is an English-style possessive that is ungrammatical in Persian, and the verb is misplaced.
+- `Onboarding.Customization.Toolbar.Title.v123` — `fa/firefox-ios.xliff` — Ungrammatical English word order for "Pick a toolbar placement".
+    - Current: `انتخاب کنید یک نوار ابزار جایگاه`
+    - Source: `Pick a toolbar placement`
+    - Suggest: `جایگاه نوار ابزار را انتخاب کنید`
+    - The noun phrase and verb follow English order, which is ungrammatical in Persian.
+- `Onboarding.Modern.BrandRefresh.Customization.Theme.Title.v148` — `fa/firefox-ios.xliff` — Word-for-word machine rendering produces ungrammatical Persian for "Pick your theme".
+    - Current: `انتخاب کنید شما پوسته`
+    - Source: `Pick your theme`
+    - Suggest: `پوستهٔ خود را انتخاب کنید`
+    - The source "Pick your theme" is rendered with English word order, yielding broken Persian syntax.
+- `Onboarding.Modern.BrandRefresh.Customization.Toolbar.Title.v148` — `fa/firefox-ios.xliff` — "Choose your address bar" is rendered with English word order and a reversed compound, producing ungrammatical Persian.
+    - Current: `انتخاب کنید شما نشانی نوار`
+    - Source: `Choose your address bar`
+    - Suggest: `نوار نشانی خود را انتخاب کنید`
+    - "نشانی نوار" reverses the Persian compound "نوار نشانی" and the sentence order is not Persian.
+- `Onboarding.Modern.BrandRefresh.Notification.TurnOn.Action.v148` — `fa/firefox-ios.xliff` — "Turn on notifications" rendered literally as "روشن در اعلان‌ها", which is not Persian.
+    - Current: `روشن در اعلان‌ها`
+    - Source: `Turn on notifications`
+    - Suggest: `روشن کردن اعلان‌ها`
+    - The phrasal verb "turn on" was translated word-by-word ("on" → "در"), producing a meaningless button label.
+- `Onboarding.Modern.Customization.Theme.Title.v145` — `fa/firefox-ios.xliff` — Word-for-word machine rendering produces ungrammatical Persian for "Pick your theme".
+    - Current: `انتخاب کنید شما پوسته`
+    - Source: `Pick your theme`
+    - Suggest: `پوستهٔ خود را انتخاب کنید`
+    - The source "Pick your theme" is rendered with English word order, yielding broken Persian syntax.
+- `Onboarding.Modern.Customization.Toolbar.Title.v145` — `fa/firefox-ios.xliff` — Ungrammatical literal word-by-word rendering of "Choose your address bar".
+    - Current: `انتخاب کنید شما نشانی نوار`
+    - Source: `Choose your address bar`
+    - Suggest: `نوار نشانی خود را انتخاب کنید`
+    - Persian requires the possessive and noun-adjective order; "شما نشانی نوار" is not grammatical Persian.
+- `Onboarding.Modern.Sync.Description.v140` — `fa/firefox-ios.xliff` — Ungrammatical word-for-word rendering with Latin commas instead of Persian commas.
+    - Current: `دریافت شما نشانک‌ها, تاریخچه, و گذرواژه‌ها در هر دستگاه.`
+    - Source: `Get your bookmarks, history, and passwords on any device.`
+    - Suggest: `نشانک‌ها، تاریخچه و گذرواژه‌های خود را روی هر دستگاهی دریافت کنید.`
+    - "دریافت شما نشانک‌ها" is not Persian grammar, and Latin commas are used instead of the Persian comma «،».
+- `Onboarding.Modern.Sync.Skip.Action.v140` — `fa/firefox-ios.xliff` — Corrupted rendering "خیرt" for "Not now".
+    - Current: `خیرt اکنون`
+    - Source: `Not now`
+    - Suggest: `اکنون نه`
+    - The English "Not" was partially replaced leaving a stray Latin "t"; the result is not a valid Persian phrase.
+- `Onboarding.Modern.Sync.Skip.Action.v145` — `fa/firefox-ios.xliff` — Corrupted rendering "خیرt" for "Not now".
+    - Current: `خیرt اکنون`
+    - Source: `Not now`
+    - Suggest: `اکنون نه`
+    - The English "Not" was partially replaced leaving a stray Latin "t"; the result is not a valid Persian phrase.
+- `Onboarding.Modern.TermsOfService.PrivacyPreferences.SendCrashReportsTitle.v140` — `fa/firefox-ios.xliff` — Corrupted hybrid word "خودکارally" and ungrammatical word order.
+    - Current: `خودکارally ارسال خرابی گزارش‌ها`
+    - Source: `Automatically send crash reports`
+    - Suggest: `ارسال خودکار گزارش‌های خرابی`
+    - "Automatically" was partially replaced leaving the English suffix "ally"; noun phrase order is also wrong.
+- `Onboarding.Modern.TermsOfService.PrivacyPreferences.SendTechnicalDataTitle.v140` — `fa/firefox-ios.xliff` — Corrupted word "datیک" for "data" and ungrammatical phrase order.
+    - Current: `ارسال فنی و تعامل datیک به %@`
+    - Source: `Send technical and interaction data to %@`
+    - Suggest: `ارسال داده‌های فنی و تعاملی به %@`
+    - "data" was mangled into "datیک" and the adjectives are not attached to a noun in Persian order.
+- `Onboarding.TermsOfService.PrivacyPreferences.SendCrashReportsTitle.v135` — `fa/firefox-ios.xliff` — Title contains the untranslated English suffix "ally" and reversed word order.
+    - Current: `خودکارally ارسال خرابی گزارش‌ها`
+    - Source: `Automatically send crash reports`
+    - Suggest: `ارسال خودکار گزارش‌های خرابی`
+    - "Automatically" was half-translated as «خودکارally» and "crash reports" is rendered in English word order, producing invalid Persian.
+- `Onboarding.TermsOfService.PrivacyPreferences.SendTechnicalDataTitle.v135` — `fa/firefox-ios.xliff` — Title contains the nonsense word «datیک» instead of «داده‌ها».
+    - Current: `ارسال فنی و تعامل datیک به %@`
+    - Source: `Send technical and interaction data to %@`
+    - Suggest: `ارسال داده‌های فنی و تعاملی به %@`
+    - "data" was not translated and appears as a garbled mix of Latin and Persian letters.
+- `Onboarding.TermsOfService.Subtitle.v136` — `fa/firefox-ios.xliff` — Subtitle uses English word order producing ungrammatical Persian.
+    - Current: `سریع و امن وب مرور`
+    - Source: `Fast and secure web browsing`
+    - Suggest: `مرور سریع و امن وب`
+    - A literal word-for-word rendering of "Fast and secure web browsing" that is not valid Persian syntax.
+- `PasswordAutofill.UseSavedPasswordFromHeader.v124` — `fa/firefox-ios.xliff` — Word order is English-style and ungrammatical in Persian.
+    - Current: `استفاده ذخیره‌شده گذرواژه؟`
+    - Source: `Use saved password?`
+    - Suggest: `از گذرواژهٔ ذخیره‌شده استفاده شود؟`
+    - Persian requires noun before adjective and a proper verb phrase; the current string is a word-by-word calque.
+- `PasswordAutofill.UseSavedPasswordFromKeyboard.v124` — `fa/firefox-ios.xliff` — Word order is English-style and ungrammatical in Persian.
+    - Current: `استفاده ذخیره‌شده گذرواژه`
+    - Source: `Use saved password`
+    - Suggest: `استفاده از گذرواژهٔ ذخیره‌شده`
+    - Word-by-word calque; Persian needs noun-adjective order and the preposition "از".
+- `PasswordGenerator.UsePasswordButtonLabel.v132` — `fa/firefox-ios.xliff` — Missing preposition; ungrammatical Persian.
+    - Current: `استفاده گذرواژه`
+    - Source: `Use Password`
+    - Suggest: `استفاده از گذرواژه`
+    - Persian requires "از" after "استفاده"; the current form is a calque of English.
+- `PrivacyDashboard.Fingerprinters.v155` — `fa/firefox-ios.xliff` — Misspelling of "کنندگان".
+    - Current: `برداشت کنندگاه اثر انگشت`
+    - Source: `Fingerprinters`
+    - Suggest: `برداشت‌کنندگان اثر انگشت`
+    - "کنندگاه" is not a word; the correct plural agent form is "کنندگان".
+- `PrivacyDashboard.HeaderLabel.v155` — `fa/firefox-ios.xliff` — Ungrammatical calque; missing participle form "مسدودشده".
+    - Current: `ردیاب‌ها مسدود این هفته`
+    - Source: `Trackers blocked this week`
+    - Suggest: `ردیاب‌های مسدودشده در این هفته`
+    - "ردیاب‌ها مسدود این هفته" is not grammatical Persian for "Trackers blocked this week".
+- `PrivacyDashboard.HeaderLabelAccessibilityLabel.v156` — `fa/firefox-ios.xliff` — Ungrammatical calque; missing participle form "مسدودشده".
+    - Current: `ردیاب‌ها مسدود این هفته: %@`
+    - Source: `Trackers blocked this week: %@`
+    - Suggest: `ردیاب‌های مسدودشده در این هفته: %@`
+    - Same broken construction as the header label; not grammatical Persian.
+- `QuickAnswers.AccessibilityLabels.OpenQuickAnswers.v158` — `fa/firefox-ios.xliff` — Adjective-noun order reversed: "سریع پاسخ‌ها" instead of "پاسخ‌های سریع".
+    - Current: `باز کردن سریع پاسخ‌ها`
+    - Source: `Open Quick Answers`
+    - Suggest: `باز کردن پاسخ‌های سریع`
+    - Persian puts the adjective after the noun; the current text reads as "quickly opening answers".
+- `QuickAnswers.ContentView.SearchingSources.v158` — `fa/firefox-ios.xliff` — English "-ing" suffix appended to a Persian word.
+    - Current: `جست‌و‌جوing منابع…`
+    - Source: `Searching sources…`
+    - Suggest: `در حال جست‌وجوی منابع…`
+    - "جست‌و‌جوing" is a corrupted hybrid of Persian and English morphology.
+- `QuickAnswers.Errors.DailyLimitMessage.v158` — `fa/firefox-ios.xliff` — Word-by-word machine rendering with broken Persian word order and untranslated feature name structure.
+    - Current: `تلاش کنید سریع پاسخ‌ها دوباره فردا.`
+    - Source: `Try Quick Answers again tomorrow.`
+    - Suggest: `فردا دوباره پاسخ‌های سریع را امتحان کنید.`
+    - The en-US 'Try Quick Answers again tomorrow.' is rendered as ungrammatical Persian with English word order; 'سریع پاسخ‌ها' also reverses the Persian noun-adjective order.
+- _…and 167 more; see `state/` for the full list._
+
+### D. Terminology, register & consistency
+
+- `Menu.EnhancedTrackingProtection.Switch.Title.v128` — `fa/firefox-ios.xliff` — "Enhanced Tracking Protection" mistranslated as "optimizing protection from followers" and inconsistent with «ردیاب» used elsewhere in this file.
+    - Current: `بهینه سازی محافظت از دنبال کنندگان`
+    - Source: `Enhanced Tracking Protection`
+    - Suggest: `محافظت پیشرفته در برابر ردیابی`
+    - The source names the feature "Enhanced Tracking Protection"; the target says "optimization of protection of/from followers", uses a different term for trackers than the rest of the screen, and reads as protecting trackers rather than from them.
+- `RelayMask.RelayEmailMaskInsertedA11yAnnouncement.v147` — `fa/firefox-ios.xliff` — 'رایانامه پوشان درج‌شده' uses reversed compound order inconsistent with the rest of the file.
+    - Current: `رایانامه پوشان درج‌شده`
+    - Source: `Email mask inserted`
+    - Suggest: `پوشان رایانامه درج شد`
+    - Other strings in the same file use 'پوشان رایانامه'; the current order is an English calque.
+- `RelayMask.RelayEmailMaskSettingsManageEmailMasks.v146` — `fa/firefox-ios.xliff` — 'رایانامه پوشان‌ها' reverses the compound order used elsewhere in the same file.
+    - Current: `مدیریت رایانامه پوشان‌ها`
+    - Source: `Manage Email Masks`
+    - Suggest: `مدیریت پوشان‌های رایانامه`
+    - Other strings in RelayMask.strings use 'پوشان‌های رایانامه'; this one is inconsistent and ungrammatical.
+- `RelayMask.RelayEmailMaskSettingsTitle.v146` — `fa/firefox-ios.xliff` — 'رایانامه پوشان‌ها' reverses the compound order used elsewhere in the same file.
+    - Current: `رایانامه پوشان‌ها`
+    - Source: `Email Masks`
+    - Suggest: `پوشان‌های رایانامه`
+    - Inconsistent with 'پوشان‌های رایانامه' used in other strings of the same settings screen, and not grammatical Persian.
+- `SearchZero.TrendingSearches.SectionTitle.v146` — `fa/firefox-ios.xliff` — "Trending" rendered as the non-word "رونددار".
+    - Current: `رونددار در %@`
+    - Source: `Trending on %@`
+    - Suggest: `پرطرفدار در %@`
+    - "رونددار" is not an established Persian term for "trending"; standard renderings are "پرطرفدار" or "داغ".
+- `DefaultBrowserOnboarding.Description1` — `fa/firefox-ios.xliff` — Informal imperative "برو" conflicts with the formal imperative used in the sibling steps ("لمس کنید", "انتخاب کنید").
+    - Current: `۱. برو به تنظیمات`
+    - Source: `1. Go to Settings`
+    - Suggest: `۱. به تنظیمات بروید`
+    - The two following onboarding steps use the formal plural imperative; this step uses the informal singular, an inconsistent register on the same card.
+- `ClipboardToast.GoToCopiedLink.Title` — `fa/firefox-ios.xliff` — Colloquial/spoken register ("بریم") instead of the standard formal written form used throughout the UI.
+    - Current: `به پیوند رونوشت‌شده بریم؟`
+    - Source: `Go to copied link?`
+    - Suggest: `به پیوند رونوشت‌شده بروید؟`
+    - All other strings in this file use formal written Persian; "بریم" is informal colloquial and breaks the established register.
+- `Downloads.Alert.DownloadNow` — `fa/firefox-ios.xliff` — Button label rendered as a full imperative sentence instead of a short action label.
+    - Current: `هم‌اکنون دریافت کنید`
+    - Source: `Download Now`
+    - Suggest: `هم‌اکنون دریافت`
+    - The comment identifies it as a button label; other download buttons here use noun forms ("لغو دریافت").
+- `Logins.PasscodeRequirement.Warning` — `fa/firefox-ios.xliff` — "device passcode" translated as رمز عبور (password) rather than the passcode term.
+    - Current: `باید رمز عبور دستگاه را فعال کرده باشید`
+    - Source: `To use the AutoFill feature for Firefox, you must have a device passcode enabled.`
+    - Suggest: `باید رمز عبور (گذرواژه) دستگاه را فعال کرده باشید`
+    - The file consistently uses گذرواژه for password; passcode should be distinguished, e.g. رمز دستگاه, to avoid confusion with Firefox passwords discussed in the same screen.
+- `Menu.EnhancedTrackingProtectionOff.Title` — `fa/firefox-ios.xliff` — "site" translated as پایگاه instead of the standard سایت used elsewhere in the same file.
+    - Current: `محافظت‌ها برای این پایگاه‌ خاموش است`
+    - Source: `Protections are OFF for this site`
+    - Suggest: `محافظت‌ها برای این سایت خاموش است`
+    - LibraryPanel.History.ClearGroupedTabsTitle renders "sites" as سایت‌ها; using پایگاه here (plus a stray ZWNJ before the space) is inconsistent terminology on related screens.
+- `Menu.EnhancedTrackingProtectionOn.Title` — `fa/firefox-ios.xliff` — "site" translated as پایگاه instead of the standard سایت used elsewhere in the same file.
+    - Current: `محافظت‌ها برای این پایگاه‌ روشن است`
+    - Source: `Protections are ON for this site`
+    - Suggest: `محافظت‌ها برای این سایت روشن است`
+    - Inconsistent with سایت used in other strings of this file; also contains a stray ZWNJ before the space.
 - `Menu.WhatsNew.Title` — `fa/firefox-ios.xliff` — Colloquial/spoken register ("اومده") used for a UI menu title.
     - Current: `چه چیز جدیدی اومده`
     - Source: `What’s New`
@@ -575,31 +1324,21 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
-- `DefaultBrowserCard.Description` — `fa/firefox-ios.xliff` — Space before commas instead of after ("سایت ها ، ایمیل ها").
-    - Current: `پیوندهای وب سایت ها ، ایمیل ها و پیام ها را`
-    - Source: `Set links from websites, emails, and Messages to open automatically in Firefox.`
-    - Suggest: `پیوندهای وب‌سایت‌ها، ایمیل‌ها و پیام‌ها را`
-    - Persian punctuation places the comma immediately after the preceding word; the space before the comma is a typography error.
-- `DefaultBrowserOnboarding.Description1` — `fa/firefox-ios.xliff` — Step numbering inconsistent: Latin digits here and in step 3 but Persian digit in step 2.
-    - Current: `1. برو به تنظیمات`
-    - Source: `1. Go to Settings`
-    - Suggest: `۱. برو به تنظیمات`
-    - The three onboarding steps appear together on one screen; mixing "1.", "۲." and "3." is inconsistent numbering.
-- `BreachAlerts.Description` — `fa/firefox-ios.xliff` — Spaces placed before commas and a broken-off verb suffix («داده اید», «گذرواژه ها») violate Persian punctuation and ZWNJ conventions.
-    - Current: `از آخرین باری که گذرواژه خود را تغییر داده اید ، گذرواژه ها درز کرده یا به سرقت رفته اند. برای محافظت از این حساب ، وارد سایت شوید و گذرواژه خود را تغییر دهید.`
-    - Source: `Passwords were leaked or stolen since you last changed your password. To protect this account, log in to the site and change your password.`
-    - Suggest: `از آخرین باری که گذرواژه خود را تغییر داده‌اید، گذرواژه‌ها درز کرده یا به سرقت رفته‌اند. برای محافظت از این حساب، وارد سایت شوید و گذرواژه خود را تغییر دهید.`
-    - Persian punctuation places the comma «،» directly after the preceding word with no space before it, and plural/verb suffixes attach with ZWNJ.
-- `Changes font type.` — `fa/firefox-ios.xliff` — Missing sentence-final period present in the source.
-    - Current: `تغییر نوع فونت`
-    - Source: `Changes font type.`
-    - Suggest: `تغییر نوع فونت.`
-    - Source "Changes font type." ends with a period, as does the sibling string "Changes color theme." which was translated with a period.
-- `Downloads.Toast.MultipleFiles.DescriptionText` — `fa/firefox-ios.xliff` — Missing spaces around the numbers in "1از%d پرونده".
-    - Current: `1از%d پرونده`
-    - Source: `1 of %d files`
-    - Suggest: `۱ از %d پرونده`
-    - The source "1 of %d files" has spaces separating the words; the target runs the digit, preposition and placeholder together.
+- `Settings.AutofillAndPassword.Title.v137` — `fa/firefox-ios.xliff` — The ampersand is kept instead of the Persian conjunction "و".
+    - Current: `پرکردن‌های خودکار & گذرواژه‌ها`
+    - Source: `Autofills & Passwords`
+    - Suggest: `پرکردن‌های خودکار و گذرواژه‌ها`
+    - In Persian the "&" is not used as a conjunction; it should be rendered as "و".
+- `WorldCup.HomepageWidget.RoundPhase.Round16Label.v151` — `fa/firefox-ios.xliff` — Stray standalone ezāfe diacritic with spaces in "دور ِ 16".
+    - Current: `دور ِ 16`
+    - Source: `ROUND OF 16`
+    - Suggest: `دور ۱۶ تیمی`
+    - The kasra is written as a separate character surrounded by spaces, which is not valid Persian typography; the phrase for 'Round of 16' is "دور ۱۶ تیمی" / "یک‌هشتم نهایی".
+- `WorldCup.HomepageWidget.RoundPhase.Round32Label.v151` — `fa/firefox-ios.xliff` — Stray standalone ezāfe diacritic with spaces in "دور ِ 32".
+    - Current: `دور ِ 32`
+    - Source: `ROUND OF 32`
+    - Suggest: `دور ۳۲ تیمی`
+    - The kasra is written as a separate space-delimited character, which is invalid Persian typography.
 - `ScanQRCode.Instructions.Label` — `fa/firefox-ios.xliff` — Missing space between "کد" and "QR".
     - Current: `کدQR`
     - Source: `Align QR code within frame to scan`
@@ -641,6 +1380,43 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (38)
 
-_Nothing fixed yet._
+- `Use your fingerprint to access Logins now.` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `This action will clear all of your private data, including history from your synced devices.` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `DefaultBrowserCard.Description` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `DefaultBrowserCard.Title` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `DefaultBrowserOnboarding.Description1` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `DefaultBrowserOnboarding.Description2` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `AddPass.Error.Message` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `AddPass.Error.Title` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `BreachAlerts.Description` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `Changes font type.` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `ContextMenu.BookmarkLinkButtonTitle` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `ContextMenu.CopyImageButtonTitle` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `ContextMenu.OpenInNewTabButtonTitle` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `CoverSheet.v24.ETP.Description` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `Downloads.CancelDialog.Message` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `Downloads.CancelDialog.Title` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `Downloads.Toast.Cancelled.LabelText` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `Downloads.Toast.Failed.LabelText` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `Downloads.Toast.MultipleFiles.DescriptionText` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `ErrorPages.VisitOnce.Button` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `ExternalLink.AppStore.GenericConfirmationTitle` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `HistoryPanel.ClearHistoryMenuOptionTheLastHour` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `HistoryPanel.EmptyState.Title` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `Hotkeys.CloseTab.DiscoveryTitle` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `Hotkeys.PrivateMode.DiscoveryTitle` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `InactiveTabs.TabTray.CloseButtonTitle` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `Light` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `Logins` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `Menu.AddToReadingList.Confirm` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `Menu.Copy.Title` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `Menu.TrackingProtectionDescription.SocialNetworksNew` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `SendTo.NoDevicesFound.Message` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `Settings.ClearAllWebsiteData.Clear.Button` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `Settings.Disconnect.Body` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `Settings.SendUsage.Message` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `Settings.WebsiteData.ConfirmPrompt` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `ShareExtension.SeachInFirefoxAction.Title` — `fa/firefox-ios.xliff` — fixed 2026-10-05
+- `You don’t have any tabs open in Firefox on your other devices.` — `fa/firefox-ios.xliff` — fixed 2026-10-05

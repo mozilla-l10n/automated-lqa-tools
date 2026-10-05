@@ -1,15 +1,15 @@
 # Firefox for iOS — l10n QA
 
-- **Generated:** 2026-09-28
+- **Generated:** 2026-10-05
 - **Locales tracked:** 21 (21 with recorded state)
-- **Findings:** 2,766 raised, 120 fixed (4%), 1,462 open
+- **Findings:** 3,185 raised, 159 fixed (4%), 1,842 open
 - **Closed by a person:** 21 dismissed, 52 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
 ## Read these first
 
-### Reads as a deliberate edit (41)
+### Reads as a deliberate edit (38)
 
 The translation makes the product assert something the en-US never said. Nothing here says the change was intended — that cannot be read off the text, which is exactly the problem, because a user cannot read it off either.
 
@@ -45,18 +45,6 @@ The translation makes the product assert something the en-US never said. Nothing
     - "tapping" rendered as "tapping and holding", and "book plus icon" loses the plus.
     - Current: `با تپ کردن و نگه داشتن آیکون کتاب`
     - Suggest: `با تپ کردن آیکون کتاب به‌همراه علامت مثبت`
-- **`fa`** `Settings.Disconnect.Body` — `Shared/en-US.lproj/Localizable.strings`
-    - The qualifier "browsing data" is rendered as just "any data", widening the claim about what is not deleted.
-    - Current: `هیچ گونه اطلاعاتی از روی دستگاه شما پاک نخواهد کرد`
-    - Suggest: `هیچ‌گونه اطلاعات مرور شما را از روی این دستگاه پاک نخواهد کرد`
-- **`fa`** `Settings.SendUsage.Message` — `Shared/en-US.lproj/Localizable.strings`
-    - The translation drops "strives to" and "provide", asserting Mozilla only collects data that helps improve Firefox.
-    - Current: `موزیلا تنها اطلاعاتی که به بهینه‌سازی فایرفاکس برای همه کمک می‌کند را جمع‌آوری می‌کند.`
-    - Suggest: `موزیلا تلاش می‌کند تنها اطلاعاتی را جمع‌آوری کند که برای ارائه و بهبود فایرفاکس برای همه لازم است.`
-- **`fa`** `Settings.WebsiteData.ConfirmPrompt` — `Shared/en-US.lproj/Localizable.strings`
-    - "will clear" weakened to "can clear" (می‌تواند حذف کند).
-    - Current: `این اقدام می تواند تمام اطلاعات پایگاه اینترنتی را حذف کند`
-    - Suggest: `این اقدام تمام اطلاعات پایگاه اینترنتی را حذف می‌کند`
 - **`fa`** `Well, this is embarrassing.` — `Shared/en-US.lproj/Localizable.strings`
     - "this is embarrassing" is rendered as "we are very sorry", an apology the source does not make.
     - Current: `راستش، بسیار متاسفیم.`
@@ -133,46 +121,67 @@ The translation makes the product assert something the en-US never said. Nothing
     - "between updates" was rendered as "a cada atualização" (with each update), reversing the meaning.
     - Current: `melhora funcionalidades, desempenho e estabilidade a cada atualização`
     - Suggest: `melhora funcionalidades, desempenho e estabilidade entre atualizações`
-- _…and 11 more, in the per-locale reports linked below._
+- **`pt-BR`** `Block Pop-up Windows` — `Shared/en-US.lproj/Localizable.strings`
+    - Translation adds "ou abas" (or tabs), which the source does not say.
+    - Current: `Bloquear abertura de janelas ou abas`
+    - Suggest: `Bloquear janelas pop-up`
+- **`ru`** `NSFaceIDUsageDescription` — `Client/en-US.lproj/InfoPlist.strings`
+    - "saved passwords and payment methods" translated as "сохранённым логинам и зашифрованным картам" (saved logins and encrypted cards).
+    - Current: `Firefox требует Face ID для доступа к вашим сохранённым логинам и зашифрованным картам.`
+    - Suggest: `Firefox требует Face ID для доступа к вашим сохранённым паролям и способам оплаты.`
+- **`sl`** `Settings.AIControls.AIPoweredFeaturesSection.BlockedStatusDescriptionV2.v151` — `Shared/Supporting Files/en-US.lproj/Settings.strings`
+    - The qualifier "For on-device AI" is dropped, so the Slovenian states unconditionally that downloaded AI models will be removed.
+    - Current: `Morebitni modeli UI, ki so se že prenesli na napravo, bodo odstranjeni.`
+    - Suggest: `Pri UI, ki se izvaja na napravi, bodo odstranjeni vsi preneseni modeli.`
+- _…and 8 more, in the per-locale reports linked below._
 
-### Broken output — impact 1 (1)
+### Broken output — impact 1 (4)
 
 The value does not render as intended: a blank string, broken markup, a variable the source never passes.
 
-`de` 1
+`fa` 3 · `de` 1
 
 - **`de`** `TranslationToastHandler.PromptTranslate.Title` — `Shared/en-US.lproj/Localizable.strings`
     - Reordered numbered placeholders are fine, but %1$@ preceded by "auf" should agree; main issue is the swapped order of %3$@ and %2$@ relative to the source sentence structure.
     - Current: `Mit %3$@ auf %2$@ übersetzen?`
     - Suggest: `Mit %3$@ in %2$@ übersetzen?`
+- **`fa`** `QuickAnswers.OptInRedesign.NothingGetsSavedTitle.v158` — `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings`
+    - Mixed English/Persian garbled output 'خیرthing Gets ذخیرهd'.
+    - Current: `خیرthing Gets ذخیرهd`
+    - Suggest: `هیچ‌چیز ذخیره نمی‌شود`
+- **`fa`** `TabToolbar.Accessibility.DataClearance.v122` — `Shared/Supporting Files/en-US.lproj/TabToolbar.strings`
+    - Target is corrupted: English word fragments spliced with Persian ('Datیک پاک کردنance').
+    - Current: `Datیک پاک کردنance`
+    - Suggest: `پاک‌سازی داده‌ها`
+- _…and 1 more, in the per-locale reports linked below._
 
-### Wrong content — impact 2 (720)
+### Wrong content — impact 2 (912)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/firefox_ios.md`.
 
 | Locale | Last run | Mode | Commit | Strings | Missing | Open | Impact 1–2 | Fixed | Dismissed | Suppressed |
 |---|---|---|---|---|---|---|---|---|---|---|
-| [cs](cs/firefox_ios.md) | 2026-09-28 | incremental | `76fd90c3` | 1,955 | 14 | **94** | 53 | 0 | 0 | 0 |
-| [de](de/firefox_ios.md) | 2026-09-28 | incremental | `76fd90c3` | 1,969 | 0 | **90** | 28 | 2 | 0 | 0 |
-| [en-CA](en-CA/firefox_ios.md) | 2026-09-28 | incremental | `76fd90c3` | 1,911 | 58 | **2** | 0 | 16 | 0 | 0 |
-| [en-GB](en-GB/firefox_ios.md) | 2026-09-28 | incremental | `76fd90c3` | 1,969 | 0 | **9** | 4 | 3 | 0 | 50 |
-| [es-AR](es-AR/firefox_ios.md) | 2026-09-28 | incremental | `76fd90c3` | 1,969 | 0 | **101** | 43 | 1 | 0 | 0 |
-| [es-ES](es-ES/firefox_ios.md) | 2026-09-28 | incremental | `76fd90c3` | 1,922 | 47 | **63** | 33 | 0 | 0 | 0 |
-| [es-MX](es-MX/firefox_ios.md) | 2026-09-28 | incremental | `76fd90c3` | 1,969 | 0 | **127** | 65 | 1 | 0 | 0 |
-| [fa](fa/firefox_ios.md) | 2026-09-28 | incremental | `76fd90c3` | 547 | 1,422 | **88** | 41 | 0 | 0 | 0 |
-| [fr](fr/firefox_ios.md) | 2026-09-28 | incremental | `76fd90c3` | 1,969 | 0 | **47** | 29 | 1 | 0 | 0 |
-| [hi-IN](hi-IN/firefox_ios.md) | 2026-09-28 | incremental | `76fd90c3` | 1,950 | 19 | **17** | 14 | 79 | 0 | 0 |
-| [hu](hu/firefox_ios.md) | 2026-09-28 | incremental | `76fd90c3` | 1,969 | 0 | **94** | 40 | 0 | 0 | 0 |
-| [id](id/firefox_ios.md) | 2026-09-28 | incremental | `76fd90c3` | 1,969 | 0 | **98** | 38 | 0 | 0 | 0 |
-| [it](it/firefox_ios.md) | 2026-09-28 | incremental | `76fd90c3` | 1,969 | 0 | **7** | 5 | 16 | 21 | 2 |
-| [ja](ja/firefox_ios.md) | 2026-09-28 | incremental | `76fd90c3` | 1,969 | 0 | **112** | 62 | 0 | 0 | 0 |
-| [nl](nl/firefox_ios.md) | 2026-09-28 | incremental | `76fd90c3` | 1,953 | 16 | **50** | 22 | 0 | 0 | 0 |
-| [pl](pl/firefox_ios.md) | 2026-09-28 | incremental | `76fd90c3` | 1,950 | 19 | **71** | 39 | 0 | 0 | 0 |
-| [pt-BR](pt-BR/firefox_ios.md) | 2026-09-28 | incremental | `76fd90c3` | 1,969 | 0 | **59** | 35 | 0 | 0 | 0 |
-| [ru](ru/firefox_ios.md) | 2026-09-28 | incremental | `76fd90c3` | 1,969 | 0 | **92** | 44 | 1 | 0 | 0 |
-| [sl](sl/firefox_ios.md) | 2026-09-28 | incremental | `76fd90c3` | 1,929 | 40 | **89** | 40 | 0 | 0 | 0 |
-| [tr](tr/firefox_ios.md) | 2026-09-28 | incremental | `76fd90c3` | 1,941 | 28 | **83** | 45 | 0 | 0 | 0 |
-| [zh-CN](zh-CN/firefox_ios.md) | 2026-09-28 | incremental | `76fd90c3` | 1,922 | 47 | **69** | 41 | 0 | 0 | 0 |
+| [cs](cs/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,969 | 0 | **96** | 53 | 0 | 0 | 0 |
+| [de](de/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,969 | 0 | **90** | 28 | 2 | 0 | 0 |
+| [en-CA](en-CA/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,911 | 58 | **2** | 0 | 16 | 0 | 0 |
+| [en-GB](en-GB/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,969 | 0 | **9** | 4 | 3 | 0 | 50 |
+| [es-AR](es-AR/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,969 | 0 | **101** | 43 | 1 | 0 | 0 |
+| [es-ES](es-ES/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,922 | 47 | **63** | 33 | 0 | 0 | 0 |
+| [es-MX](es-MX/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,969 | 0 | **127** | 65 | 1 | 0 | 0 |
+| [fa](fa/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,969 | 0 | **460** | 232 | 38 | 0 | 0 |
+| [fr](fr/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,969 | 0 | **47** | 29 | 1 | 0 | 0 |
+| [hi-IN](hi-IN/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,950 | 19 | **17** | 14 | 79 | 0 | 0 |
+| [hu](hu/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,969 | 0 | **94** | 40 | 0 | 0 | 0 |
+| [id](id/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,969 | 0 | **98** | 38 | 0 | 0 | 0 |
+| [it](it/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,969 | 0 | **7** | 5 | 16 | 21 | 2 |
+| [ja](ja/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,969 | 0 | **112** | 62 | 0 | 0 | 0 |
+| [nl](nl/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,969 | 0 | **54** | 23 | 0 | 0 | 0 |
+| [pl](pl/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,969 | 0 | **72** | 40 | 0 | 0 | 0 |
+| [pt-BR](pt-BR/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,969 | 0 | **59** | 35 | 0 | 0 | 0 |
+| [ru](ru/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,969 | 0 | **92** | 44 | 1 | 0 | 0 |
+| [sl](sl/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,929 | 40 | **89** | 40 | 0 | 0 | 0 |
+| [tr](tr/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,969 | 0 | **85** | 47 | 0 | 0 | 0 |
+| [zh-CN](zh-CN/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,966 | 3 | **68** | 41 | 1 | 0 | 0 |
 
 **Impact 1–2** is the queue that matters: broken output and wrong content. Impact 3–4 is language polish and typography.
 
