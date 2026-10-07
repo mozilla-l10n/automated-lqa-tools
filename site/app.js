@@ -121,6 +121,24 @@ function apply(route, { push = true } = {}) {
   show(locale, project);
 }
 
+// In-page links -- the table of contents and "↑ Contents" -- name an id, not
+// a route. Left to the browser they would change the hash, and the router
+// would read `#sec-…` as a bad route and fall back to the default page.
+function onReportClick(event) {
+  const link = event.target.closest && event.target.closest("a[href^='#']");
+  if (!link) return;
+  const id = link.getAttribute("href").slice(1);
+  if (id.startsWith("/")) return; // a route: hashchange handles it
+  const target = document.getElementById(id);
+  if (!target || !els.report.contains(target)) return;
+  event.preventDefault();
+  target.scrollIntoView({ block: "start" });
+  // Move focus too, so the next Tab continues from the section the reader
+  // jumped to rather than from the link they clicked.
+  if (!target.hasAttribute("tabindex")) target.setAttribute("tabindex", "-1");
+  target.focus({ preventScroll: true });
+}
+
 function onSelect() {
   apply({ locale: els.locale.value, project: els.project.value });
 }
@@ -143,6 +161,7 @@ async function start() {
   fillLocales();
   els.locale.addEventListener("change", onSelect);
   els.project.addEventListener("change", onSelect);
+  els.report.addEventListener("click", onReportClick);
   // A link inside a report (a summary row, or "Also for it:") just changes
   // the hash; treat that as navigation and keep the dropdowns in step.
   window.addEventListener("hashchange", () => apply(readHash(), { push: false }));

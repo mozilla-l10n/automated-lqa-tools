@@ -1,7 +1,8 @@
 // Exercise app.js against a minimal DOM.
 //
 // The build script is Python and is checked by running it; this covers the
-// part of the site that is not: the dropdown logic. Coverage is ragged --
+// part of the site that is not: the dropdown logic, and the in-page links of
+// the table of contents, which have to coexist with a hash router. Coverage is ragged --
 // not every project reviews every locale -- so the project list depends on
 // the locale, and moving to a locale that lacks the current project must
 // fall back instead of requesting a report that does not exist. That is easy
@@ -26,9 +27,11 @@ const mk = (tag) => ({tag, children:[], value:'', textContent:'', disabled:false
   addEventListener(n,f){(this.on ||= {})[n]=f;}, get options(){return this.children;}});
 const els = {locale:mk('select'), project:mk('select'), report:mk('main'),
              status:mk('span'), generated:mk('span')};
+// Elements inside a report, for the in-page link tests.
+const inReport = {};
 globalThis.document = {
   getElementById:(id)=>({locale:els.locale,project:els.project,report:els.report,
-                         status:els.status,generated:els.generated}[id]),
+                         status:els.status,generated:els.generated}[id] ?? inReport[id]),
   createElement:(t)=>mk(t), title:'',
 };
 globalThis.location = {hash:''};
@@ -102,7 +105,44 @@ location.hash=`#/${LINKED}/${LINKED_PROJECT}`;
 await listeners.hashchange(); await new Promise(r=>setTimeout(r,400));
 check(els.locale.value===LINKED && els.project.value===LINKED_PROJECT,
       'dropdowns follow the hash');
-check(els.report.innerHTML.includes('<h1>'), 'and the report is rendered');
+check(/<h1[\s>]/.test(els.report.innerHTML), 'and the report is rendered');
+
+console.log('\nTable of contents');
+// Every link in it has to land on a heading of the same page, and no heading
+// may take an id the page itself uses: app.js finds its controls by id.
+const PAGE_IDS = ['locale', 'project', 'report', 'status', 'generated'];
+const pages = [...manifest.summaries.map((p) => `r/${p}.html`),
+  ...covered.flatMap(([loc, ps]) => ps.map((p) => `r/${loc}/${p}.html`))];
+let dangling = [], clashing = [], withToc = 0;
+for (const page of pages) {
+  const body = fs.readFileSync(BASE + page, 'utf8');
+  const ids = new Set([...body.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1]));
+  if (body.includes('<nav id="contents"')) withToc++;
+  for (const [, id] of body.matchAll(/href="#([^/"][^"]*)"/g)) {
+    if (!ids.has(id)) dangling.push(`${page}#${id}`);
+  }
+  for (const id of PAGE_IDS) if (ids.has(id)) clashing.push(`${page}#${id}`);
+}
+check(withToc > 0, `pages carry a table of contents (${withToc} of ${pages.length})`);
+check(!dangling.length, `every in-page link has a target (${dangling.slice(0, 3).join(', ')})`);
+check(!clashing.length, `no heading takes an id the page uses (${clashing.slice(0, 3).join(', ')})`);
+
+const section = {scrolled:false, hasAttribute:()=>false, setAttribute(){}, focus(){},
+                 scrollIntoView(){this.scrolled=true;}};
+inReport['sec-x'] = section;
+els.report.contains = (node) => node === section;
+const click = (href) => {
+  const ev = {prevented:false, preventDefault(){this.prevented=true;},
+              target:{closest:()=>({getAttribute:()=>href})}};
+  els.report.on.click(ev);
+  return ev;
+};
+const routeBefore = location.hash;
+const inPage = click('#sec-x');
+check(inPage.prevented && section.scrolled && location.hash === routeBefore,
+      'a contents link scrolls to its section without touching the route');
+check(!click('#/all/firefox').prevented, 'while a route link inside a report is left to the router');
+check(!click('#nowhere').prevented, 'and a link to an id outside the report is left alone');
 
 console.log('\nBad input');
 location.hash=`#/nope/${PROJECTS[0]}`; await listeners.hashchange(); await new Promise(r=>setTimeout(r,300));

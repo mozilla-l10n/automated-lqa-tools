@@ -70,6 +70,32 @@ th { background: var(--code-bg); }
 /* The key/value tables in a locale report have an empty header row. */
 thead tr:empty, thead th:empty:only-child { display: none; }
 
+/* Table of contents, built from the report's own headings by build.py. Two
+   columns where there is room: a locale report has about twenty entries. */
+h2, h3, .toc { scroll-margin-top: 5rem; }
+h2:focus, h3:focus { outline: none; }
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+.toc {
+  margin: 1.5rem 0; padding: .8rem 1.25rem;
+  border: 1px solid var(--line); border-radius: 6px;
+}
+.toc h2 { margin: 0 0 .4rem; padding: 0; border: 0; font-size: 1rem; }
+.toc ul { margin: 0; padding-left: 1.1rem; }
+.toc > ul { columns: 2 20rem; column-gap: 2rem; padding-left: 0; list-style: none; }
+.toc > ul > li { break-inside: avoid; margin: 0 0 .4rem; }
+.toc > ul > li > a { font-weight: 600; }
+.toc li li { margin: 0; font-size: .92rem; }
+.toc a { text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+.to-contents {
+  position: fixed; right: 1rem; bottom: 1rem; z-index: 5;
+  padding: .35rem .85rem; font-size: .85rem; text-decoration: none;
+  background: var(--bg); border: 1px solid var(--line); border-radius: 999px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
+}
+
 li { margin: .2rem 0; }
 li > ul { margin: .2rem 0; }
 

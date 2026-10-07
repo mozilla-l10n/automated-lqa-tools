@@ -22,6 +22,9 @@ read. Escaping leaves markdown's own syntax characters alone, so tables and
 headings still work. One round of it is undone again inside code spans, where
 the renderer escapes the same characters a second time -- see `_DOUBLED`.
 
+A locale report runs to hundreds of findings, so each page leads with a
+table of contents built from its own headings -- see `TOC_MIN_ENTRIES`.
+
     python site/build.py [--out _site]
 """
 
@@ -44,6 +47,18 @@ sys.path.insert(0, os.path.join(_ROOT, "lib"))
 import config  # noqa: E402
 
 STATIC = ("index.html", "app.js", "style.css")
+
+# Headings that go into a page's table of contents, and how many it needs
+# before one is worth the space. A locale report has about twenty `##`/`###`
+# sections over several hundred lines; the cross-locale summary has six.
+TOC_DEPTH = "2-3"
+TOC_MIN_ENTRIES = 4
+
+# Every heading id carries this prefix. Unprefixed, a report heading called
+# "Status" would get `id="status"` and collide with the page's own status
+# element, which app.js looks up by id. It is also how app.js tells an in-page
+# link from a `#/<locale>/<project>` route.
+ANCHOR_PREFIX = "sec-"
 
 # `[ru](ru/firefox.md)` in a summary, `[android](android.md)` in a locale
 # report. Both have to become in-page routes or they would leave the site.
@@ -121,18 +136,50 @@ def discover_projects() -> list:
     return found
 
 
+def _slugify(value: str, separator: str) -> str:
+    from markdown.extensions.toc import slugify_unicode
+
+    return ANCHOR_PREFIX + slugify_unicode(value, separator)
+
+
+def _with_toc(body: str, toc: str) -> str:
+    """Put the table of contents before the first section.
+
+    Not at the very top: a report opens with its title and a few lines
+    saying what it covers, and that is what a reader should see first. The
+    "back to contents" link is fixed to the corner, because the place it is
+    needed is three hundred findings further down.
+    """
+    if toc.count("<li>") < TOC_MIN_ENTRIES:
+        return body
+    entries = toc.strip()
+    entries = entries[entries.index("<ul>"):entries.rindex("</ul>") + len("</ul>")]
+    nav = (
+        '<nav id="contents" class="toc" aria-label="Contents">'
+        f"<h2>Contents</h2>{entries}</nav>\n"
+        '<a class="to-contents" href="#contents">↑ Contents</a>\n'
+    )
+    at = body.find("<h2")
+    return body + nav if at < 0 else body[:at] + nav + body[at:]
+
+
 def render(path: str, locale: str | None) -> str:
     """One report as an HTML fragment, safe to inject."""
     import markdown
+    from markdown.extensions.toc import TocExtension
 
     with open(path, encoding="utf-8") as fh:
         source = fh.read()
 
-    body = markdown.markdown(
-        html.escape(source),
-        extensions=["tables", "sane_lists"],
+    md = markdown.Markdown(
+        extensions=[
+            "tables",
+            "sane_lists",
+            TocExtension(toc_depth=TOC_DEPTH, slugify=_slugify),
+        ],
         output_format="html5",
     )
+    body = _with_toc(md.convert(html.escape(source)), md.toc)
 
     body = _CODE.sub(
         lambda m: f"<code>{_DOUBLED.sub(r'&\1;', m.group(1))}</code>", body
