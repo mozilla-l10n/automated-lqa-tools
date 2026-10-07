@@ -1296,6 +1296,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "تنظیمات اتصال به اینترنت خود را بررسی کرده و دوباره تلاش کنید.",
+  "dismissed_because": "",
+  "fid": "c14969c57a5d",
+  "file": "Shared/Supporting Files/en-US.lproj/NativeErrorPage.strings",
+  "first_seen": "2026-10-07",
+  "impact": 3,
+  "last_seen": "2026-10-07",
+  "locale": "fa",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source refers generically to connection settings (which may include firewall/proxy settings), not specifically internet connection settings.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "58b16ad0",
+  "string_id": "NativeErrorPage.GenericError.Description.v158",
+  "suggest": "تنظیمات اتصال خود را بررسی کرده و دوباره تلاش کنید.",
+  "summary": "\"Check your connection settings\" expanded to \"your internet connection settings\".",
+  "suppressed_by": ""
+ },
+ {
   "category": "C",
   "check": "llm",
   "current": "تلاش کنید connecting در یک متفاوت دستگاه. بررسی شما مودم یا مسیریاب. قطع اتصال و اتصال مجدد به Wi-Fi.",
@@ -2541,6 +2565,30 @@
   "string_id": "Onboarding.Modern.TermsOfService.Title.v145",
   "suggest": "کنترل اینترنت را به دست بگیرید",
   "summary": "\"Take charge\" left untranslated in the title.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "به‌روزرسانی‌های امنیتی",
+  "dismissed_because": "",
+  "fid": "45fbac79bd9f",
+  "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+  "first_seen": "2026-10-07",
+  "impact": 2,
+  "last_seen": "2026-10-07",
+  "locale": "fa",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source says \"%@ protection updates\" (updates about the browser's protections), not security updates; امنیتی means \"security\", a different claim about what the notifications contain.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "291ee44f",
+  "string_id": "Onboarding.MultiDay.NotificationCard.BodyText.v159",
+  "suggest": "به‌روزرسانی‌های حفاظتی",
+  "summary": "\"protection updates\" rendered as \"security updates\" (امنیتی) instead of protection/حفاظت.",
   "suppressed_by": ""
  },
  {
