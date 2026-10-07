@@ -2,7 +2,7 @@
 
 - **Generated:** 2026-10-07
 - **Locales tracked:** 22 (22 with recorded state)
-- **Findings:** 2,959 raised, 288 fixed (9%), 2,334 open
+- **Findings:** 2,961 raised, 303 fixed (10%), 2,321 open
 - **Closed by a person:** 24 dismissed, 68 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
@@ -46,7 +46,7 @@ The translation makes the product assert something the en-US never said. Nothing
 
 _Nothing open at impact 1._
 
-### Wrong content — impact 2 (1275)
+### Wrong content — impact 2 (1272)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/android.md`.
 
@@ -59,7 +59,7 @@ Too many to list here; the per-locale counts are in the table below and every on
 | [es-AR](es-AR/android.md) | 2026-10-05 | incremental | `d82f3577` | 2,787 | 0 | **122** | 44 | 0 | 0 | 0 |
 | [es-ES](es-ES/android.md) | 2026-10-05 | incremental | `d82f3577` | 2,737 | 50 | **120** | 52 | 1 | 0 | 0 |
 | [es-MX](es-MX/android.md) | 2026-10-05 | incremental | `d82f3577` | 2,760 | 27 | **156** | 84 | 1 | 0 | 0 |
-| [fa](fa/android.md) | 2026-10-07 | incremental | `74db2d1b` | 2,794 | 0 | **142** | 58 | 11 | 0 | 0 |
+| [fa](fa/android.md) | 2026-10-07 | incremental | `df6b5b99` | 2,794 | 0 | **129** | 55 | 26 | 0 | 0 |
 | [fr](fr/android.md) | 2026-10-05 | incremental | `d82f3577` | 2,787 | 0 | **76** | 53 | 5 | 0 | 0 |
 | [fy-NL](fy-NL/android.md) | 2026-10-05 | incremental | `d82f3577` | 2,752 | 35 | **167** | 59 | 0 | 0 | 0 |
 | [hi-IN](hi-IN/android.md) | 2026-10-05 | incremental | `d82f3577` | 2,666 | 121 | **26** | 6 | 213 | 8 | 0 |
