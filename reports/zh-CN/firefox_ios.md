@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
-| **Previous run** | 2026-09-21 @ `26f50d4ce7b1` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
+| **Previous run** | 2026-09-28 @ `76fd90c3d050` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,922 |
+| **Strings reviewed this run** | 45 of 1,966 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,13 @@ Also for zh-CN: [android](android.md) · [firefox](firefox.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `Settings.AIControls.AIPoweredFeaturesSection.QuickAnswersSection.Message.v154` — `zh-CN/firefox-ios.xliff` — "Your voice" rendered as "您的声音" reads as the sound itself rather than voice input/recordings.
+    - Current: `您的声音、问题和答案永远不会被存储。`
+    - Source: `Your voice, questions, and answers are never stored.`
+    - Suggest: `您的语音、问题和答案永远不会被存储。`
+    - In the context of a Quick Answers voice feature, "voice" means voice input (语音); 声音 is generic sound.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -44,11 +48,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 96 |
-| Strings | 1,922 |
-| Missing strings | 47 |
+| Files | 97 |
+| Strings | 1,966 |
+| Missing strings | 3 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,14 +63,9 @@ _Nothing retired._
 
 ### Completeness
 
-**47 strings** are not translated yet, concentrated in:
+**3 strings** are not translated yet, concentrated in:
 
-- `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings` — 40
-- `zh-CN/firefox-ios.xliff` — 7
-
-**Files absent from the locale:**
-
-- `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings`
+- `zh-CN/firefox-ios.xliff` — 3
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -76,10 +75,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 44 | **curly-double** |
-| ellipsis | `char` 20 | **char** |
-| fullwidth | `punctuation` 567 | **punctuation** |
-| register | `informal` 1, `formal` 138 | **formal** |
+| quotes | `curly-double` 46 | **curly-double** |
+| ellipsis | `char` 25 | **char** |
+| fullwidth | `punctuation` 588 | **punctuation** |
+| register | `informal` 1, `formal` 147 | **formal** |
 
 ---
 
@@ -89,7 +88,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (69)
+## 3. Open findings (68)
 
 > **Reads as a deliberate edit (5).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -125,7 +124,7 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 41 |
-| 3 | Degraded language (grammar, spelling, terminology) | 23 |
+| 3 | Degraded language (grammar, spelling, terminology) | 22 |
 | 4 | Cosmetic (typography, spacing) | 5 |
 
 ### A. Functional, markup, variables & plurals
@@ -219,11 +218,6 @@ _Nothing in this category._
     - Source: `Allow %@ to open?`
     - Suggest: `要允许打开 %@ 吗？`
     - In the source, %@ is the app name and the prompt asks whether to allow the app to open; the added object "此链接" is not in the source.
-- `Settings.AIControls.AIPoweredFeaturesSection.QuickAnswersSection.Message.v154` — `zh-CN/firefox-ios.xliff` — "Your voice" rendered as "您的声音" reads as the sound itself rather than voice input/recordings.
-    - Current: `您的声音、问题和答案永远不会被存储。`
-    - Source: `Your voice, questions, and answers are never stored.`
-    - Suggest: `您的语音、问题和答案永远不会被存储。`
-    - In the context of a Quick Answers voice feature, "voice" means voice input (语音); 声音 is generic sound.
 - `Settings.Browsing.BackgroundAudio.Title.v156` — `zh-CN/firefox-ios.xliff` — "Background Audio" is translated as "背景音乐" (background music), which misstates the feature.
     - Current: `背景音乐`
     - Source: `Background Audio`
@@ -509,6 +503,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (1)
 
-_Nothing fixed yet._
+- `Settings.AIControls.AIPoweredFeaturesSection.QuickAnswersSection.Message.v154` — `zh-CN/firefox-ios.xliff` — fixed 2026-10-05

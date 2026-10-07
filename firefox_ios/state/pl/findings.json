@@ -530,6 +530,30 @@
  {
   "category": "B",
   "check": "llm",
+  "current": "Szybkie odpowiedzi",
+  "dismissed_because": "",
+  "fid": "d9b0e734bbab",
+  "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+  "first_seen": "2026-10-05",
+  "impact": 2,
+  "last_seen": "2026-10-05",
+  "locale": "pl",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "Source is \"Enable Quick Answers\", the label of a toggle; the Polish omits \"Enable\".",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "865f0882",
+  "string_id": "QuickAnswers.Settings.EnableQuickAnswers.v158",
+  "suggest": "Włącz szybkie odpowiedzi",
+  "summary": "The toggle label drops the \"Enable\" verb, rendering only the feature name.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
   "current": "czy nawet informacji o nich",
   "dismissed_because": "",
   "fid": "5bd629882914",

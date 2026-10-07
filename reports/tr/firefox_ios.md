@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
-| **Previous run** | 2026-09-21 @ `26f50d4ce7b1` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
+| **Previous run** | 2026-09-28 @ `76fd90c3d050` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 14 of 1,941 |
+| **Strings reviewed this run** | 28 of 1,969 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for tr: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `QuickAnswers.ContentView.Footer.v158` — `tr/firefox-ios.xliff` — "Powered by %@" rendered as "Model: %@", losing the attribution wording.
+    - Current: `Model: %@ · Yanıtlar hatalı olabilir.`
+    - Source: `Powered by %@ · Answers can contain mistakes.`
+    - Suggest: `%@ tarafından sağlanıyor · Yanıtlar hatalı olabilir.`
+    - The source credits the provider ("Powered by"); "Model:" states the model name instead, which is a different statement about the attribution.
+- `QuickAnswers.ContentView.Listening.v158` — `tr/firefox-ios.xliff` — "ask anything" translated as "İstediğinizi sorun" is acceptable, but "Listening," turned into a separate sentence "Dinliyorum." — not a defect; the real issue is none.
+    - Current: `Dinliyorum. İstediğinizi sorun…`
+    - Source: `Listening, ask anything…`
+    - Suggest: `Dinliyorum, istediğinizi sorun…`
+    - Minor punctuation split; en-US uses a single clause separated by a comma.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +54,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,941 |
-| Missing strings | 28 |
+| Strings | 1,969 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -59,12 +68,7 @@ _Nothing retired._
 
 ### Completeness
 
-**28 strings** are not translated yet, concentrated in:
-
-- `tr/firefox-ios.xliff` — 25
-- `tr/firefox-ios.xliff` — 3
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -74,7 +78,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-single` 10, `curly-double` 6 | _mixed_ |
 | apostrophe | `typographic` 105 | **typographic** |
-| ellipsis | `char` 25 | **char** |
+| ellipsis | `char` 27 | **char** |
 | register | `formal` 7 | **formal** |
 
 ---
@@ -85,7 +89,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (83)
+## 3. Open findings (85)
 
 > **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -110,7 +114,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 45 |
+| 2 | Wrong content (says something other than the English) | 47 |
 | 3 | Degraded language (grammar, spelling, terminology) | 35 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
@@ -219,6 +223,16 @@ _Also listed under their own category below._
     - Source: `%1$@, blocked: %2$@`
     - Suggest: `%1$@, engellenen: %2$@`
     - Per the comment, %1$@ is the category name (e.g. Fingerprinters) and %2$@ the count; the source is "%1$@, blocked: %2$@". Inserting "takip kodu" mislabels e.g. cookies/content categories as trackers.
+- `QuickAnswers.ContentView.Footer.v158` — `tr/firefox-ios.xliff` — "Powered by %@" rendered as "Model: %@", losing the attribution wording.
+    - Current: `Model: %@ · Yanıtlar hatalı olabilir.`
+    - Source: `Powered by %@ · Answers can contain mistakes.`
+    - Suggest: `%@ tarafından sağlanıyor · Yanıtlar hatalı olabilir.`
+    - The source credits the provider ("Powered by"); "Model:" states the model name instead, which is a different statement about the attribution.
+- `QuickAnswers.ContentView.Listening.v158` — `tr/firefox-ios.xliff` — "ask anything" translated as "İstediğinizi sorun" is acceptable, but "Listening," turned into a separate sentence "Dinliyorum." — not a defect; the real issue is none.
+    - Current: `Dinliyorum. İstediğinizi sorun…`
+    - Source: `Listening, ask anything…`
+    - Suggest: `Dinliyorum, istediğinizi sorun…`
+    - Minor punctuation split; en-US uses a single clause separated by a comma.
 - `SecondaryButton.Label.v112` — `tr/firefox-ios.xliff` — "No Thanks" rendered as just "Hayır", dropping the "thanks" politeness element.
     - Current: `Hayır`
     - Source: `No Thanks`

@@ -744,6 +744,54 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "Vaše data nepoužíváme k trénování AI systémů",
+  "dismissed_because": "",
+  "fid": "b163e4163f5b",
+  "file": "Shared/Supporting Files/en-US.lproj/QuickAnswers.strings",
+  "first_seen": "2026-10-05",
+  "impact": 3,
+  "last_seen": "2026-10-05",
+  "locale": "cs",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source \"No Training With Your Data\" is a short row title; the Czech repeats the description string (\"Vaše data nepoužíváme k trénování našich systémů\") almost verbatim, so title and description become duplicates.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "b01130e7",
+  "string_id": "QuickAnswers.OptInRedesign.NoTrainingTitle.v158",
+  "suggest": "Žádné trénování na vašich datech",
+  "summary": "Title is rendered as a full sentence duplicating the description rather than a short title.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "Zpět na Rychlá odpověď",
+  "dismissed_because": "",
+  "fid": "44141871bca5",
+  "file": "Shared/Supporting Files/en-US.lproj/QuickAnswers.strings",
+  "first_seen": "2026-10-05",
+  "impact": 3,
+  "last_seen": "2026-10-05",
+  "locale": "cs",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "Czech preposition \"na\" with direction requires the accusative; the nominative \"Rychlá odpověď\" is ungrammatical.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "0eeffb51",
+  "string_id": "QuickAnswers.ReturnPill.ReturnToQuickAnswerAccessibilityLabel.v158",
+  "suggest": "Zpět na Rychlou odpověď",
+  "summary": "Wrong case after the preposition \"na\"; should be accusative \"Rychlou odpověď\".",
+  "suppressed_by": ""
+ },
+ {
   "category": "D",
   "check": "llm",
   "current": "Vyplnit průzkum",

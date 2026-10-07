@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
-| **Previous run** | 2026-09-21 @ `26f50d4ce7b1` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
+| **Previous run** | 2026-09-28 @ `76fd90c3d050` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 72 of 1,969 |
+| **Strings reviewed this run** | 0 of 1,969 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,33 +18,9 @@ Also for es-MX: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (5)
+### 🆕 New findings (0)
 
-- `PrivacyDashboard.CategoryAccessibilityLabel.v156` — `es-MX/firefox-ios.xliff` — "blocked" rendered as "total bloqueados", adding a "total" the source does not have.
-    - Current: `%1$@, total bloqueados: %2$@`
-    - Source: `%1$@, blocked: %2$@`
-    - Suggest: `%1$@, bloqueados: %2$@`
-    - The en-US accessibility label is simply "%1$@, blocked: %2$@"; "total" is added content.
-- `NativeErrorPage.Wayback.Error.FooterDescription.v155` — `es-MX/firefox-ios.xliff` — "an earlier version" translated as "una versión archivada" (an archived version).
-    - Current: `puede buscar una versión archivada de esta página`
-    - Source: `%1$@ can look for an earlier version of this page from the Internet Archive’s %2$@.`
-    - Suggest: `puede buscar una versión anterior de esta página`
-    - The source says "an earlier version of this page", not "archived version".
-- `QuickAnswers.OptInRedesign.NothingGetsSavedDescription.v158` — `es-MX/firefox-ios.xliff` — Negative enumeration should use "ni" rather than "o" in Spanish.
-    - Current: `No almacenamos tu voz, tus preguntas o tus respuestas.`
-    - Source: `We don’t store your voice, questions, or answers.`
-    - Suggest: `No almacenamos tu voz, tus preguntas ni tus respuestas.`
-    - In Spanish a negated list takes "ni"; the sibling string uses "No almacenamos tu voz ni tus preguntas."
-- `WebCompatReporter.Preview.Data.PageElements.v155` — `es-MX/firefox-ios.xliff` — "site issues" rendered as "problemas de navegación" (browsing problems) instead of problems on the site.
-    - Current: `suelen causar problemas de navegación`
-    - Source: `Information about page elements that have been known to cause site issues`
-    - Suggest: `suelen causar problemas en los sitios`
-    - The en-US says page elements known to cause issues on sites; "problemas de navegación" changes the subject to browsing problems.
-- `QuickAnswers.Settings.Footer.v158` — `es-MX/firefox-ios.xliff` — Negative enumeration should use "ni" rather than "o".
-    - Current: `No almacenamos tu voz, tus preguntas o tus respuestas.`
-    - Source: `Ask out loud and get short answers. We don’t store your voice, questions, or answers.`
-    - Suggest: `No almacenamos tu voz, tus preguntas ni tus respuestas.`
-    - In Spanish, a negated list requires "ni" for the final item; "o" is ungrammatical here and weakens the scope of the negation.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

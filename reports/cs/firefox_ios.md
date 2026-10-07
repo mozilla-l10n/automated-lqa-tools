@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `76fd90c3d050` |
-| **Previous run** | 2026-09-21 @ `26f50d4ce7b1` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
+| **Previous run** | 2026-09-28 @ `76fd90c3d050` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 5 of 1,955 |
+| **Strings reviewed this run** | 14 of 1,969 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for cs: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `QuickAnswers.ReturnPill.ReturnToQuickAnswerAccessibilityLabel.v158` — `cs/firefox-ios.xliff` — Wrong case after the preposition "na"; should be accusative "Rychlou odpověď".
+    - Current: `Zpět na Rychlá odpověď`
+    - Source: `Return to Quick Answer`
+    - Suggest: `Zpět na Rychlou odpověď`
+    - Czech preposition "na" with direction requires the accusative; the nominative "Rychlá odpověď" is ungrammatical.
+- `QuickAnswers.OptInRedesign.NoTrainingTitle.v158` — `cs/firefox-ios.xliff` — Title is rendered as a full sentence duplicating the description rather than a short title.
+    - Current: `Vaše data nepoužíváme k trénování AI systémů`
+    - Source: `No Training With Your Data`
+    - Suggest: `Žádné trénování na vašich datech`
+    - The source "No Training With Your Data" is a short row title; the Czech repeats the description string ("Vaše data nepoužíváme k trénování našich systémů") almost verbatim, so title and description become duplicates.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +54,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,955 |
-| Missing strings | 14 |
+| Strings | 1,969 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -59,12 +68,7 @@ _Nothing retired._
 
 ### Completeness
 
-**14 strings** are not translated yet, concentrated in:
-
-- `cs/firefox-ios.xliff` — 13
-- `cs/firefox-ios.xliff` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -84,7 +88,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (94)
+## 3. Open findings (96)
 
 > **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -110,7 +114,7 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 53 |
-| 3 | Degraded language (grammar, spelling, terminology) | 35 |
+| 3 | Degraded language (grammar, spelling, terminology) | 37 |
 | 4 | Cosmetic (typography, spacing) | 6 |
 
 ### A. Functional, markup, variables & plurals
@@ -219,6 +223,11 @@ _Nothing in this category._
     - Source: `Cross-Site Tracking Cookies`
     - Suggest: `Sledovací cookies mezi servery`
     - The source specifies cross-site tracking cookies; the Czech omits the cross-site qualifier, which is the distinguishing category name in the tracker list.
+- `QuickAnswers.OptInRedesign.NoTrainingTitle.v158` — `cs/firefox-ios.xliff` — Title is rendered as a full sentence duplicating the description rather than a short title.
+    - Current: `Vaše data nepoužíváme k trénování AI systémů`
+    - Source: `No Training With Your Data`
+    - Suggest: `Žádné trénování na vašich datech`
+    - The source "No Training With Your Data" is a short row title; the Czech repeats the description string ("Vaše data nepoužíváme k trénování našich systémů") almost verbatim, so title and description become duplicates.
 - `CreditCard.Settings.EmptyListTitle.v122` — `cs/firefox-ios.xliff` — Plural "Cards" rendered as singular "platební kartu".
     - Current: `Uložit platební kartu do aplikace %@`
     - Source: `Save Cards to %@`
@@ -414,12 +423,7 @@ _Nothing in this category._
     - Source: `You don’t have any tabs open in Firefox on your other devices.`
     - Suggest: `Na vašich dalších zařízeních nemáte ve Firefoxu otevřené žádné panely.`
     - Source says "in Firefox on your other devices"; the Czech omits both "in Firefox" and "other".
-- `Created %@` — `cs/firefox-ios.xliff` — "Created" is translated as "Uloženo" (Saved).
-    - Current: `Uloženo %@`
-    - Source: `Created %@`
-    - Suggest: `Vytvořeno %@`
-    - The developer comment says the label describes when the login was created, not saved.
-- _…and 6 more; see `state/` for the full list._
+- _…and 7 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -438,6 +442,11 @@ _Nothing in this category._
     - Source: `OK`
     - Suggest: `OK`
     - The source is the standard button label "OK"; Czech Firefox consistently uses "OK" in uppercase.
+- `QuickAnswers.ReturnPill.ReturnToQuickAnswerAccessibilityLabel.v158` — `cs/firefox-ios.xliff` — Wrong case after the preposition "na"; should be accusative "Rychlou odpověď".
+    - Current: `Zpět na Rychlá odpověď`
+    - Source: `Return to Quick Answer`
+    - Suggest: `Zpět na Rychlou odpověď`
+    - Czech preposition "na" with direction requires the accusative; the nominative "Rychlá odpověď" is ungrammatical.
 - `CreditCard.SnackBar.UpdatedCardLabel.v122` — `cs/firefox-ios.xliff` — Agreement error: "Informace" (plural) with singular verb form "byla aktualizována".
     - Current: `Informace o kartě byla aktualizována`
     - Source: `Card Information Updated`
