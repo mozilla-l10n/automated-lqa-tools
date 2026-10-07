@@ -4,3 +4,4 @@ __pycache__/
 .DS_Store
 /work/
 _site/
+.claude/settings.local.json
