@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
-| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
+| **Previous run** | 2026-09-28 @ `92e0a4895124` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 11 of 13,724 |
+| **Strings reviewed this run** | 0 of 13,724 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -46,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 321 |
 | Strings | 13,724 |
-| Missing strings | 2,581 |
+| Missing strings | 2,631 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 5 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +63,20 @@ _Nothing retired._
 
 ### Completeness
 
-**2,581 strings** are not translated yet, concentrated in:
+**2,631 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 478
-- `browser/browser/preferences/preferences.ftl` — 432
+- `browser/browser/newtab/newtab.ftl` — 496
+- `browser/browser/preferences/preferences.ftl` — 436
 - `browser/browser/ipProtection.ftl` — 133
-- `browser/browser/newtab/onboarding.ftl` — 117
+- `browser/browser/newtab/onboarding.ftl` — 118
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 88
 - `browser/browser/newtab/asrouter.ftl` — 80
 - `toolkit/toolkit/about/aboutAddons.ftl` — 60
 - `browser/browser/featureCallout.ftl` — 57
-- `browser/browser/profiles.ftl` — 56
+- `browser/browser/profiles.ftl` — 57
+- `toolkit/toolkit/about/aboutGlean.ftl` — 41
 - `browser/browser/tabbrowser.ftl` — 41
 - `browser/browser/customkeys.ftl` — 40
-- `toolkit/toolkit/neterror/netError.ftl` — 39
 
 **Files absent from the locale:**
 

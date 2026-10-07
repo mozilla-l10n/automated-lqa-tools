@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
-| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
+| **Previous run** | 2026-09-28 @ `92e0a4895124` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 15 of 16,194 |
+| **Strings reviewed this run** | 140 of 16,305 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,7 +18,70 @@ Also for ja: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (12)
+
+- `credit-card-doorhanger-save-security-codes-checkbox` — `toolkit/toolkit/formautofill/formAutofill.ftl` — "Always save security codes for payment methods" is rendered as saving security codes *to* payment methods, reversing the grammatical relation.
+    - Current: `常にセキュリティコードを支払い方法に保存する`
+    - Source: `label: Always save security codes for payment methods.`
+    - Suggest: `支払い方法のセキュリティコードを常に保存する`
+    - The en-US means the security code belonging to a payment method is always saved; the Japanese says the security code is saved into the payment method, which states a different operation.
+- `about-networking-ssl-tokens-summary-certs` — `toolkit/toolkit/about/aboutNetworking.ftl` — "distinct" (number of unique certificates) is translated as 「差異」 (difference), naming the wrong quantity.
+    - Current: `差異`
+    - Source: `Stored certs: { $references } ({ $totalBytes } B), distinct: { $distinct } ({ $distinctBytes } B)`
+    - Suggest: `固有`
+    - The developer comment states $distinct is the number of unique certificates across all tokens; 「差異」 means "difference/discrepancy", not "distinct/unique".
+- `about-private-browsing-spotlight-basics-no-sell-data` — `browser/browser/aboutPrivateBrowsing.ftl` — The translation says the browser checks site involvement and does not sell/share the user's data, instead of automatically asking participating sites not to sell or share it.
+    - Current: `{ -brand-short-name } はサイトへの関与を自動的に確認し、あなたの個人データを販売または共有しません。`
+    - Source: `{ -brand-short-name } automatically asks participating sites not to sell or share your personal data.`
+    - Suggest: `{ -brand-short-name } は対応サイトに対して、あなたの個人データを販売または共有しないよう自動的に要求します。`
+    - en-US: "automatically asks participating sites not to sell or share your personal data". The Japanese makes the browser itself the party that does not sell data and drops the request to participating sites.
+- `restart-required-heading2` — `browser/browser/aboutRestartRequired.ftl` — "needs a quick restart" (a brief restart) is rendered as "needs to be restarted immediately".
+    - Current: `{ -brand-short-name } をすぐに再起動する必要があります`
+    - Source: `Sorry, { -brand-short-name } needs a quick restart`
+    - Suggest: `{ -brand-short-name } を少しの間再起動する必要があります`
+    - en-US "a quick restart" means a short restart, not an urgent/immediate one; the Japanese 「すぐに」 changes the meaning to urgency.
+- `about-private-browsing-spotlight-basics-activity-seen` — `browser/browser/aboutPrivateBrowsing.ftl` — The hedge "may still be seen" is rendered as a flat statement that sites and others can see activity.
+    - Current: `一部のアクティビティはウェブサイトや検索エンジン、インターネットプロバイダーあるいはあなたの雇用者が見ることができます。`
+    - Source: `Some activity may still be seen by sites, search engines, internet providers, or your employer.`
+    - Suggest: `一部のアクティビティは、ウェブサイトや検索エンジン、インターネットプロバイダー、あるいはあなたの雇用者に見られる可能性があります。`
+    - en-US uses "may still be seen"; the Japanese asserts the capability as a certainty, removing the modal hedge.
+- `restart-required-multiple-instances-answer` — `browser/browser/aboutRestartRequired.ftl` — "can be left on an older version" (possibility) is rendered as a certainty.
+    - Current: `開いているものが古いバージョンのままになってしまいます`
+    - Source: `If one profile or instance updates while another is still open, the open one can be left on an older version. Restarting keeps everything on the same version.`
+    - Suggest: `開いているものが古いバージョンのままになることがあります`
+    - en-US uses "can be left"; the Japanese states it as a definite outcome.
+- `restart-required-fix-answer` — `browser/browser/aboutRestartRequired.ftl` — The acknowledgement "We know this is disruptive" is dropped from the translation.
+    - Current: `はい。私たちはこのような動作を改善するよう努力しています。`
+    - Source: `Yes. We know this is disruptive, and we’re working on a fix to prevent it. Follow our progress in Bugzilla bug 2072739.`
+    - Suggest: `はい。ご迷惑をおかけしていることは承知しており、このような動作が起きないよう修正に取り組んでいます。`
+    - en-US: "Yes. We know this is disruptive, and we’re working on a fix to prevent it." The admission that the behavior is disruptive is omitted.
+- `about-pdf-feature-details-description` — `toolkit/toolkit/about/aboutPDF.ftl` — "move through PDFs" (navigate) is rendered as "display PDF details".
+    - Current: `アウトライン、添付、プロパティを利用して PDF の詳細を表示します。`
+    - Source: `Use outlines, attachments, and properties to move through PDFs.`
+    - Suggest: `アウトライン、添付ファイル、プロパティを利用して PDF 内を移動します。`
+    - en-US says these features are used to move through (navigate) PDFs, not to display details.
+- `sidebar-history-sort-option-most-visited` — `browser/browser/sidebar.ftl` — "Most visited" rendered as "most displayed/viewed count" instead of visit count order.
+    - Current: `表示回数の多い順`
+    - Source: `label: Most visited`
+    - Suggest: `訪問回数の多い順`
+    - The en-US sorts history by number of visits (visited), not by display count; ja elsewhere uses 訪問回数 for visit count.
+- `SpeechRecognitionIsolatedTrackWarning` — `dom/chrome/dom/dom.properties` — The warning says silence "will be returned" instead of silence being fed to SpeechRecognition.
+    - Current: `沈黙のみが返されます`
+    - Source: `The MediaStreamTrack passed to SpeechRecognition.start() carries cross-origin content, so SpeechRecognition will only be fed silence.`
+    - Suggest: `SpeechRecognition には無音のみが入力されます`
+    - en-US: "SpeechRecognition will only be fed silence" — the recognizer receives silence as input; the ja reverses the direction to silence being returned.
+- `newtab-nova-customization-callout-message` — `browser/browser/newtab/newtab.ftl` — "make the new { -brand-product-name } feel more like yours" rendered as giving the browser a new appearance, losing the personalization meaning.
+    - Current: `{ -brand-product-name } を新たな装いにする壁紙やライトテーマ、ダークテーマ`
+    - Source: `Explore light or dark themes and wallpapers that make the new { -brand-product-name } feel more like yours.`
+    - Suggest: `新しい { -brand-product-name } をより自分らしく感じられるようにする壁紙やライトテーマ、ダークテーマ`
+    - The source says the themes/wallpapers make the new browser feel more like the user's own; the ja instead says they give it a new look, and drops "new" as a modifier of the product.
+- `columnBreakpoint.label` — `devtools/client/debugger.properties` — ASCII comma used between the line and column instead of the fullwidth punctuation convention.
+    - Current: `列ブレークポイント: 行 %1$S, 列 %2$S`
+    - Source: `Column breakpoint at line %1$S, column %2$S`
+    - Suggest: `列ブレークポイント: 行 %1$S、列 %2$S`
+    - The ja convention uses fullwidth punctuation; a bare ASCII comma separating clauses in Japanese text is a typography deviation.
+
+### ✅ Fixed since the last run (2)
 
 - `newtab-stocks-search-button` — `browser/browser/newtab/newtab.ftl` — The .label uses the verb form 〜します instead of the noun form required for labels.
     - Current: `label: 検索します`
@@ -30,10 +93,6 @@ Also for ja: [android](android.md) · [firefox_ios](firefox_ios.md)
     - Source: `aria-label: Search by name or symbol label: Search title: Search by name or symbol`
     - Suggest: `label: 検索`
     - Per the locale convention, .label uses the noun form (検索) while .title uses 〜します; here the button label reads as a sentence-style verb.
-
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -54,9 +113,9 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 326 |
-| Strings | 16,194 |
-| Missing strings | 124 |
-| Obsolete strings | 13 |
+| Strings | 16,305 |
+| Missing strings | 50 |
+| Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -72,20 +131,20 @@ _Nothing retired._
 
 ### Completeness
 
-**124 strings** are not translated yet, concentrated in:
+**50 strings** are not translated yet, concentrated in:
 
-- `toolkit/toolkit/about/aboutPDF.ftl` — 20
-- `browser/browser/aboutRestartRequired.ftl` — 18
-- `browser/browser/aboutPrivateBrowsing.ftl` — 13
-- `browser/browser/newtab/newtab.ftl` — 12
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 9
-- `browser/browser/ipProtection.ftl` — 7
-- `toolkit/toolkit/contentanalysis/contentanalysis.ftl` — 6
-- `devtools/client/debugger.properties` — 5
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 4
-- `browser/browser/genai.ftl` — 4
-- `browser/browser/appmenu.ftl` — 3
-- `browser/browser/preferences/preferences.ftl` — 3
+- `browser/browser/newtab/newtab.ftl` — 18
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 7
+- `browser/browser/browser.ftl` — 6
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 5
+- `browser/browser/preferences/preferences.ftl` — 4
+- `toolkit/toolkit/about/aboutGlean.ftl` — 2
+- `browser/browser/menubar.ftl` — 2
+- `toolkit/toolkit/global/theme-picker.ftl` — 1
+- `browser/browser/aiWindow.ftl` — 1
+- `browser/browser/browserContext.ftl` — 1
+- `browser/browser/firefoxView.ftl` — 1
+- `browser/browser/profiles.ftl` — 1
 
 **Files present but identical to en-US:**
 
@@ -100,12 +159,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 434, `curly-single` 182, `straight-double` 120, `corner` 5 | _mixed_ |
+| quotes | `curly-double` 439, `curly-single` 182, `straight-double` 120, `corner` 5 | _mixed_ |
 | apostrophe | `typographic` 259, `straight` 11 | **typographic** |
-| ellipsis | `ascii` 388 | **ascii** |
+| ellipsis | `ascii` 386 | **ascii** |
 | dash | `em` 55, `en` 1 | **em** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 5 | _mixed_ |
-| fullwidth | `punctuation` 4921 | **punctuation** |
+| fullwidth | `punctuation` 4981 | **punctuation** |
 
 ---
 
@@ -115,10 +174,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (125)
+## 3. Open findings (135)
 
-> **Reads as a deliberate edit (5).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (6).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
+- `about-private-browsing-spotlight-basics-no-sell-data` — `browser/browser/aboutPrivateBrowsing.ftl` — The translation says the browser checks site involvement and does not sell/share the user's data, instead of automatically asking participating sites not to sell or share it.
+    - Current: `{ -brand-short-name } はサイトへの関与を自動的に確認し、あなたの個人データを販売または共有しません。`
+    - Source: `{ -brand-short-name } automatically asks participating sites not to sell or share your personal data.`
+    - Suggest: `{ -brand-short-name } は対応サイトに対して、あなたの個人データを販売または共有しないよう自動的に要求します。`
+    - en-US: "automatically asks participating sites not to sell or share your personal data". The Japanese makes the browser itself the party that does not sell data and drops the request to participating sites.
 - `refresh-reinstalled-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — Adds a claim about a leftover previous profile that the en-US does not make.
     - Current: `{ -brand-short-name } が再インストールされ前回のプロファイルが残っています。新品の状態にリフレッシュしますか？`
     - Source: `Looks like you’ve reinstalled { -brand-short-name }. Want us to clean it up for a fresh, like-new experience?`
@@ -150,9 +214,9 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 8 |
-| 2 | Wrong content (says something other than the English) | 49 |
-| 3 | Degraded language (grammar, spelling, terminology) | 39 |
-| 4 | Cosmetic (typography, spacing) | 29 |
+| 2 | Wrong content (says something other than the English) | 60 |
+| 3 | Degraded language (grammar, spelling, terminology) | 37 |
+| 4 | Cosmetic (typography, spacing) | 30 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -277,6 +341,31 @@ _Also listed under their own category below._
 - `about-private-browsing-felt-privacy-v1-info-header` — `browser/browser/aboutPrivateBrowsing.ftl` — about-private-browsing-felt-privacy-v1-info-header (aboutPrivateBrowsing.ftl) — "Leave no traces on this device" → この端末を追跡させません. → この端末に痕跡を残しません Verified.
     - Source: `Leave no traces on this device`
     - Suggest: `この端末を追跡させません`
+- `about-private-browsing-spotlight-basics-activity-seen` — `browser/browser/aboutPrivateBrowsing.ftl` — The hedge "may still be seen" is rendered as a flat statement that sites and others can see activity.
+    - Current: `一部のアクティビティはウェブサイトや検索エンジン、インターネットプロバイダーあるいはあなたの雇用者が見ることができます。`
+    - Source: `Some activity may still be seen by sites, search engines, internet providers, or your employer.`
+    - Suggest: `一部のアクティビティは、ウェブサイトや検索エンジン、インターネットプロバイダー、あるいはあなたの雇用者に見られる可能性があります。`
+    - en-US uses "may still be seen"; the Japanese asserts the capability as a certainty, removing the modal hedge.
+- `about-private-browsing-spotlight-basics-no-sell-data` — `browser/browser/aboutPrivateBrowsing.ftl` — The translation says the browser checks site involvement and does not sell/share the user's data, instead of automatically asking participating sites not to sell or share it.
+    - Current: `{ -brand-short-name } はサイトへの関与を自動的に確認し、あなたの個人データを販売または共有しません。`
+    - Source: `{ -brand-short-name } automatically asks participating sites not to sell or share your personal data.`
+    - Suggest: `{ -brand-short-name } は対応サイトに対して、あなたの個人データを販売または共有しないよう自動的に要求します。`
+    - en-US: "automatically asks participating sites not to sell or share your personal data". The Japanese makes the browser itself the party that does not sell data and drops the request to participating sites.
+- `restart-required-fix-answer` — `browser/browser/aboutRestartRequired.ftl` — The acknowledgement "We know this is disruptive" is dropped from the translation.
+    - Current: `はい。私たちはこのような動作を改善するよう努力しています。`
+    - Source: `Yes. We know this is disruptive, and we’re working on a fix to prevent it. Follow our progress in Bugzilla bug 2072739.`
+    - Suggest: `はい。ご迷惑をおかけしていることは承知しており、このような動作が起きないよう修正に取り組んでいます。`
+    - en-US: "Yes. We know this is disruptive, and we’re working on a fix to prevent it." The admission that the behavior is disruptive is omitted.
+- `restart-required-heading2` — `browser/browser/aboutRestartRequired.ftl` — "needs a quick restart" (a brief restart) is rendered as "needs to be restarted immediately".
+    - Current: `{ -brand-short-name } をすぐに再起動する必要があります`
+    - Source: `Sorry, { -brand-short-name } needs a quick restart`
+    - Suggest: `{ -brand-short-name } を少しの間再起動する必要があります`
+    - en-US "a quick restart" means a short restart, not an urgent/immediate one; the Japanese 「すぐに」 changes the meaning to urgency.
+- `restart-required-multiple-instances-answer` — `browser/browser/aboutRestartRequired.ftl` — "can be left on an older version" (possibility) is rendered as a certainty.
+    - Current: `開いているものが古いバージョンのままになってしまいます`
+    - Source: `If one profile or instance updates while another is still open, the open one can be left on an older version. Restarting keeps everything on the same version.`
+    - Suggest: `開いているものが古いバージョンのままになることがあります`
+    - en-US uses "can be left"; the Japanese states it as a definite outcome.
 - `trustpanel-blocker-description` — `browser/browser/browser.ftl` — trustpanel-blocker-description (browser.ftl) — text copied from trustpanel-etp-description-disabled, adding a condition absent from en-US. → …そのため、できるだけ多くのトラッカーをブロックします。
     - Source: `{ -brand-product-name } thinks companies should follow you less. So we block as many as we can.`
     - Suggest: `…そのため、できるだけ多くのトラッカーをブロックします。`
@@ -308,6 +397,11 @@ _Also listed under their own category below._
     - Source: `It looks like you haven’t started { -brand-short-name } in a while. Do you want to clean it up for a fresh, like-new experience? And by the way, welcome back!`
     - Suggest: `{ -brand-short-name } はしばらく使われていないようです。新品のような状態にするためにクリーンアップしますか？ ところで、お帰りなさい！`
     - en-US ends with "And by the way, welcome back!"; the Japanese relocates it and drops the "by the way" framing.
+- `newtab-nova-customization-callout-message` — `browser/browser/newtab/newtab.ftl` — "make the new { -brand-product-name } feel more like yours" rendered as giving the browser a new appearance, losing the personalization meaning.
+    - Current: `{ -brand-product-name } を新たな装いにする壁紙やライトテーマ、ダークテーマ`
+    - Source: `Explore light or dark themes and wallpapers that make the new { -brand-product-name } feel more like yours.`
+    - Suggest: `新しい { -brand-product-name } をより自分らしく感じられるようにする壁紙やライトテーマ、ダークテーマ`
+    - The source says the themes/wallpapers make the new browser feel more like the user's own; the ja instead says they give it a new look, and drops "new" as a modifier of the product.
 - `newtab-recent-searches-empty-recent` — `browser/browser/newtab/newtab.ftl` — Empty-state message turned into a statement that searches are shown, contradicting the empty state.
     - Current: `ここに表示される最近の検索から選んでいつでも再検索できます。`
     - Source: `Recent searches will show here so you can pick them up again anytime.`
@@ -407,6 +501,11 @@ _Also listed under their own category below._
     - Suggest: `…プライバシーを保護できます。`
 - `safeb-blocked-malware-page-short-desc` — `browser/browser/safebrowsing/blockedSite.ftl` — see G and H.
     - Source: `{ -brand-short-name } blocked this page because it might attempt to install malicious software that may steal or delete personal information on your computer.`
+- `sidebar-history-sort-option-most-visited` — `browser/browser/sidebar.ftl` — "Most visited" rendered as "most displayed/viewed count" instead of visit count order.
+    - Current: `表示回数の多い順`
+    - Source: `label: Most visited`
+    - Suggest: `訪問回数の多い順`
+    - The en-US sorts history by number of visits (visited), not by display count; ja elsewhere uses 訪問回数 for visit count.
 - `decoder.noCodecs.button` — `browser/chrome/browser/browser.properties` — "Learn how" button label translated as "利用方法" (usage/how to use) rather than a learn-more style label.
     - Current: `利用方法`
     - Source: `Learn how`
@@ -426,6 +525,11 @@ _Also listed under their own category below._
     - Source: `tree table`
     - Suggest: `ツリーテーブル`
     - The source is the accessibility role name "tree table"; "折りたたみリスト" (collapsible list) does not denote a table role and mis-announces the element to screen reader users.
+- `SpeechRecognitionIsolatedTrackWarning` — `dom/chrome/dom/dom.properties` — The warning says silence "will be returned" instead of silence being fed to SpeechRecognition.
+    - Current: `沈黙のみが返されます`
+    - Source: `The MediaStreamTrack passed to SpeechRecognition.start() carries cross-origin content, so SpeechRecognition will only be fed silence.`
+    - Suggest: `SpeechRecognition には無音のみが入力されます`
+    - en-US: "SpeechRecognition will only be fed silence" — the recognizer receives silence as input; the ja reverses the direction to silence being returned.
 - `about-sync-log-empty-filtered` — `toolkit/services/aboutSyncLog.ftl` — "the current filters" is translated as "the current search".
     - Current: `現在の検索と一致するログはありません。`
     - Source: `No logs match the current filters.`
@@ -447,6 +551,16 @@ _Also listed under their own category below._
 - `about-networking-logging` — `toolkit/toolkit/about/aboutNetworking.ftl` — about-networking-logging (aboutNetworking.ftl) — same over-specification; the row links to the general about:logging page. → ログ記録
     - Source: `Logging`
     - Suggest: `ログ記録`
+- `about-networking-ssl-tokens-summary-certs` — `toolkit/toolkit/about/aboutNetworking.ftl` — "distinct" (number of unique certificates) is translated as 「差異」 (difference), naming the wrong quantity.
+    - Current: `差異`
+    - Source: `Stored certs: { $references } ({ $totalBytes } B), distinct: { $distinct } ({ $distinctBytes } B)`
+    - Suggest: `固有`
+    - The developer comment states $distinct is the number of unique certificates across all tokens; 「差異」 means "difference/discrepancy", not "distinct/unique".
+- `about-pdf-feature-details-description` — `toolkit/toolkit/about/aboutPDF.ftl` — "move through PDFs" (navigate) is rendered as "display PDF details".
+    - Current: `アウトライン、添付、プロパティを利用して PDF の詳細を表示します。`
+    - Source: `Use outlines, attachments, and properties to move through PDFs.`
+    - Suggest: `アウトライン、添付ファイル、プロパティを利用して PDF 内を移動します。`
+    - en-US says these features are used to move through (navigate) PDFs, not to display details.
 - `profiles-launch-profile` — `toolkit/toolkit/about/aboutProfiles.ftl` — profiles-launch-profile (aboutProfiles.ftl) — "Launch profile in new browser" → 別のプロセスで ("in another process"). → 新しいブラウザーで起動
     - Source: `Launch profile in new browser`
     - Suggest: `別のプロセスで`
@@ -470,34 +584,7 @@ _Also listed under their own category below._
 - `about-webauthn-auth-option-uv` — `toolkit/toolkit/about/aboutWebauthn.ftl` — about-webauthn-auth-option-uv (+ -alwaysuv, -makecreduvnotrqd, about-webauthn-auth-info-uv-modality) — CTAP2 "user verification" (PIN or biometrics) → 生体認証 (biometrics only). → ユーザー検証 (UV) Verified.
     - Source: `User verification`
     - Suggest: `生体認証`
-- `about-webrtc-local-candidate` — `toolkit/toolkit/about/aboutWebrtc.ftl` — about-webrtc-local-candidate (+ -remote-candidate, -raw-candidates-heading, -raw-local-candidate, -raw-remote-candidate, -raw-cand-, -trickle-caption-msg) — ICE "candidate" rendered 通信情報 ("communication info") throughout, losing the spec term and making the ICE tables unreadable against the standard. → 候補 / ICE 候補
-    - Current: `通信情報`
-    - Source: `Local Candidate`
-    - Suggest: `候補`
-- `webext-perms-header-data-collection-is-none` — `toolkit/toolkit/global/extensions.ftl` — adds a qualifier not in the source and contradicts the neighbouring 必要なデータ収集. Current 任意のデータ収集: → データ収集:
-    - Current: `任意のデータ収集:`
-    - Source: `Data collection:`
-    - Suggest: `データ収集:`
-- `webext-perms-host-description-all-urls` — `toolkit/toolkit/global/extensions.ftl` — modifier scope: 保存された attaches to ウェブサイト, giving "all saved websites". → すべてのウェブサイトのユーザーデータへのアクセス
-    - Current: `保存された`
-    - Source: `Access your data for all websites`
-    - Suggest: `すべてのウェブサイトのユーザーデータへのアクセス`
-- `language-name-ie` — `toolkit/toolkit/intl/languageNames.ftl` — Interlingue — インターリング — インターリングエ — truncated; ia = インターリングア is a different language
-    - Current: `インターリング`
-    - Source: `Interlingue`
-    - Suggest: `インターリングエ`
-- `pdfjs-editor-alt-text-add-description-description` — `toolkit/toolkit/pdfviewer/viewer.ftl` — "setting" (scene/surroundings) taken as "settings/configuration". → 被写体や場面、動作
-    - Source: `Aim for 1-2 sentences that describe the subject, setting, or actions.`
-    - Suggest: `被写体や場面、動作`
-- `remove-primary-password-warning1` — `toolkit/toolkit/preferences/preferences.ftl` — see S2 for the term; no other defect.
-    - Source: `Your Primary Password is used to protect sensitive information like logins and passwords.`
-- `print-progress` — `toolkit/toolkit/printing/printDialogs.ftl` — "Progress:" is a noun label before a percentage; ja 進行中: = "in progress:". → 進行状況:
-    - Current: `進行中:`
-    - Source: `value: Progress:`
-    - Suggest: `進行状況:`
-- `webauthn-register-direct-prompt` — `toolkit/toolkit/webauthnDialog.ftl` — webauthn-register-direct-prompt (webauthnDialog.ftl) — modifier scope: reads as "information about additional security keys" rather than "additional information about the security key". → split the privacy clause into its own sentence.
-    - Source: `{ $hostname } is requesting extended information about your security key, which may affect your privacy.`
-    - Suggest: `split the privacy clause into its own sentence.`
+- _…and 9 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -565,21 +652,11 @@ _Also listed under their own category below._
 - `newtab-picture-show-button` — `browser/browser/newtab/newtab.ftl` — browser/browser/newtab/newtab.ftl — 今日の写真 vs 今日の一枚 in four other strings for the same object.
     - Source: `aria-label: Show today’s picture title: Show today’s picture`
     - Suggest: `今日の写真`
-- `newtab-stocks-search-button` — `browser/browser/newtab/newtab.ftl` — The .label uses the verb form 〜します instead of the noun form required for labels.
-    - Current: `label: 検索します`
-    - Source: `aria-label: Search by name or symbol label: Search title: Search by name or symbol`
-    - Suggest: `label: 検索`
-    - Per the locale convention, .label uses the noun form (検索) while .title uses 〜します; here the button label reads as a sentence-style verb.
 - `newtab-stocks-search-input` — `browser/browser/newtab/newtab.ftl` — The placeholder for the search input is rendered as a verb phrase "〜します" instead of a noun/placeholder form.
     - Current: `placeholder: 企業名または銘柄コードで検索します`
     - Source: `aria-label: Search by name or symbol placeholder: Search by name or symbol`
     - Suggest: `placeholder: 企業名または銘柄コードで検索`
     - The developer comment says this is a placeholder text in the input field; the locale convention reserves 〜します for .title tooltips, not placeholders, and the identical aria-label uses the noun form.
-- `newtab-stocks-watchlist-empty-search` — `browser/browser/newtab/newtab.ftl` — The .label uses the verb form 〜します instead of the noun form required for labels.
-    - Current: `label: 検索します`
-    - Source: `aria-label: Search by name or symbol label: Search title: Search by name or symbol`
-    - Suggest: `label: 検索`
-    - Per the locale convention, .label uses the noun form (検索) while .title uses 〜します; here the button label reads as a sentence-style verb.
 - `newtab-weather-menu-change-temperature-units-fahrenheit` — `browser/browser/newtab/newtab.ftl` — browser/browser/newtab/newtab.ftl — ファーレンハイト度 / セルシウス度 vs 華氏 / 摂氏 in the option labels of the same menu.
     - Source: `Switch to Fahrenheit`
     - Suggest: `ファーレンハイト度`
@@ -634,6 +711,11 @@ _Also listed under their own category below._
     - Source: `To add a site, open the <img data-l10n-name="translations-icon"/> translation panel, select <img data-l10n-name="settings-icon"/> translation settings, then choose “Never translate this site”`
 - `sync-mobile-promo` — `browser/browser/preferences/preferences.ftl` — translate-attribution, extension-controlled-enable, settings-translations-subpage-never-translate-sites-description, sync-mobile-promo — browser/browser/preferences/preferences.ftl. Verified (translate-attribution).
     - Source: `Download Firefox for <img data-l10n-name="android-icon"/> <a data-l10n-name="android-link">Android</a> or <img data-l10n-name="ios-icon"/> <a data-l10n-name="ios-link">iOS</a> to sync with your mobile device.`
+- `columnBreakpoint.label` — `devtools/client/debugger.properties` — ASCII comma used between the line and column instead of the fullwidth punctuation convention.
+    - Current: `列ブレークポイント: 行 %1$S, 列 %2$S`
+    - Source: `Column breakpoint at line %1$S, column %2$S`
+    - Suggest: `列ブレークポイント: 行 %1$S、列 %2$S`
+    - The ja convention uses fullwidth punctuation; a bare ASCII comma separating clauses in Japanese text is a typography deviation.
 - `xslt-aborted` — `dom/dom/xslt.ftl` — dom/dom/xslt.ftl.
     - Source: `XSLT transformation was terminated by <xsl:message>.`
 - `console-stacktrace` — `mobile/android/mobile/android/geckoViewConsole.ftl` — two ASCII commas between Japanese-labelled fields. Verified.
@@ -664,8 +746,10 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (271)
+### Fixed to date (273)
 
+- `newtab-stocks-search-button` — `browser/browser/newtab/newtab.ftl` — fixed 2026-10-05
+- `newtab-stocks-watchlist-empty-search` — `browser/browser/newtab/newtab.ftl` — fixed 2026-10-05
 - `tab-group-editor-action-ungroup` — `browser/browser/tabbrowser.ftl` — fixed 2026-09-14
 - `abuse-report-policy-reason-v2` — `toolkit/toolkit/about/abuseReports.ftl` — fixed 2026-08-25
 - `about-logins-import-dialog-error-unable-to-read-description` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-24
@@ -704,5 +788,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `security-enable-safe-browsing` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
 - `sync-currently-syncing-addresses` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
 - `sync-engine-addresses` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
-- `translate-attribution` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
-- `restored-profile-page-header-description` — `browser/browser/profiles.ftl` — fixed 2026-08-24

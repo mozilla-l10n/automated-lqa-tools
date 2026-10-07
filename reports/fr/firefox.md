@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
-| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
+| **Previous run** | 2026-09-28 @ `92e0a4895124` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 91 of 16,532 |
+| **Strings reviewed this run** | 62 of 16,582 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,47 +18,40 @@ Also for fr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (7)
+### 🆕 New findings (4)
 
-- `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl` — Wrong pronoun gender/agreement: "Ils" refers to "Les fenêtres privées" (feminine plural) and should be "Elles".
-    - Current: `Ils ne vous rendent pas anonyme`
-    - Source: `Private Windows help keep your browsing private from others on this device. They don’t make you anonymous or clear all of your data.`
-    - Suggest: `Elles ne vous rendent pas anonyme`
-    - The antecedent is "Les fenêtres privées", feminine plural, so the subject pronoun must be "Elles".
-- `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl` — "help keep your browsing private from others on this device" loses the "from others" element, changing the claim.
-    - Current: `Les fenêtres privées permettent de garder votre navigation privée sur cet appareil.`
-    - Source: `Private Windows help keep your browsing private from others on this device. They don’t make you anonymous or clear all of your data.`
-    - Suggest: `Les fenêtres privées permettent de préserver la confidentialité de votre navigation vis-à-vis des autres personnes qui utilisent cet appareil.`
-    - The en-US scopes the privacy benefit to other users of the device; the French implies browsing is kept private on the device generally, a broader claim than the source makes.
-- `about-logging-preset-vpn-description` — `toolkit/toolkit/about/aboutLogging.ftl` — "Log modules" (verb phrase: enable logging for modules) rendered as a noun phrase "Modules de journalisation".
-    - Current: `Modules de journalisation pour diagnostiquer`
-    - Source: `Log modules to diagnose IP Protection (VPN) issues`
-    - Suggest: `Journaliser les modules permettant de diagnostiquer`
-    - The source is a description of a logging preset instructing which modules to log; "Modules de journalisation" means "logging modules", a different thing.
-- `ipprotection-feature-introduction-description-private-browsing-1` — `browser/browser/ipProtection.ftl` — The second sentence's ending is mistranslated and truncated, losing the meaning "and off where you don’t [want it]".
-    - Current: `et le désactiver là où vous n’en avez pas`
-    - Source: `Help hide your location for <a data-l10n-name="learn-more-vpn">extra privacy</a> as you browse. Set rules to turn on the VPN for extra privacy or location-based browsing, and off where you don’t.`
-    - Suggest: `et le désactiver là où vous n’en avez pas besoin`
-    - The en-US says "and off where you don’t" (i.e. where you don't want extra privacy); the French ends with "là où vous n’en avez pas", which is incomplete and meaningless in French.
+- `autocomplete-delete-address-entry` — `toolkit/toolkit/main-window/autocomplete.ftl` — `autocomplete-delete-address-entry` uses a straight apostrophe
+    - Current: `Supprimer l'adresse { $entry }`
+    - Source: `Delete address { $entry }`
+    - The tree uses ’ 5063 times against 11 straight.
+- `autocomplete-delete-address-entry` — `toolkit/toolkit/main-window/autocomplete.ftl` — Straight apostrophe used instead of the typographic apostrophe required by the locale.
+    - Current: `Supprimer l'adresse`
+    - Source: `Delete address { $entry }`
+    - Suggest: `Supprimer l’adresse`
+    - The locale convention is the typographic apostrophe ’ (5633 vs 10).
+- `sync-syncing-across-devices-empty-state3` — `browser/browser/preferences/preferences.ftl` — "You aren’t syncing anything… yet" is rendered as "you don't have to sync anything", changing the meaning.
+    - Current: `Vous ne devez rien synchroniser… pour l’instant.`
+    - Source: `description: You aren’t syncing anything… yet. Choose what to sync on this device. label: Manage synced data`
+    - Suggest: `Vous ne synchronisez rien… pour l’instant.`
+    - The en-US states a fact about the current state (nothing is being synced), not an absence of obligation.
+- `newtab-stocks-widget-menu-button2` — `browser/browser/newtab/newtab.ftl` — "Finance options" mistranslated as "Options de financement" (funding options).
+    - Current: `Options de financement`
+    - Source: `aria-label: Finance options title: Finance options`
+    - Suggest: `Options de finance`
+    - "Finance" here names the finance/stocks widget; "financement" means funding, a different concept.
+
+### ✅ Fixed since the last run (2)
+
 - `ipprotection-feature-introduction-description-inclusions` — `browser/browser/ipProtection.ftl` — "as you browse" is rendered twice, producing a redundant duplicated phrase.
     - Current: `Lorsque vous naviguez, vous pouvez masquer votre localisation pour <a data-l10n-name="learn-more-vpn">plus de confidentialité</a> pendant votre navigation.`
     - Source: `Help hide your location for <a data-l10n-name="learn-more-vpn">extra privacy</a> as you browse. Set the VPN on or off for certain sites.`
     - Suggest: `Masquez votre localisation pour <a data-l10n-name="learn-more-vpn">plus de confidentialité</a> pendant votre navigation.`
     - The source has a single "as you browse"; the French repeats it as both "Lorsque vous naviguez" and "pendant votre navigation".
-- `ipprotection-site-inclusions-callout-description` — `browser/browser/ipProtection.ftl` — "location-based browsing" is rendered as accessing sites from another location, changing the meaning.
-    - Current: `Activez-le sur les sites où vous souhaitez renforcer votre confidentialité ou y accéder depuis un autre emplacement`
-    - Source: `Turn it on when you want extra privacy or location-based browsing, and off where you don’t.`
-    - Suggest: `Activez-le lorsque vous souhaitez renforcer votre confidentialité ou naviguer en fonction de votre localisation`
-    - The en-US says "when you want extra privacy or location-based browsing"; the French adds "sur les sites" and reinterprets it as accessing sites from another location.
-- `newtab-custom-widget-crossword-toggle` — `browser/browser/newtab/newtab.ftl` — "Crossword" translated as "Mots fléchés" (arrow-word puzzle), a different puzzle type.
-    - Current: `label: Mots fléchés`
-    - Source: `label: Crossword`
-    - Suggest: `label: Mots croisés`
-    - A crossword is "mots croisés" in French; "mots fléchés" is a distinct puzzle format.
-
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
+- `ipprotection-feature-introduction-description-private-browsing-1` — `browser/browser/ipProtection.ftl` — The second sentence's ending is mistranslated and truncated, losing the meaning "and off where you don’t [want it]".
+    - Current: `et le désactiver là où vous n’en avez pas`
+    - Source: `Help hide your location for <a data-l10n-name="learn-more-vpn">extra privacy</a> as you browse. Set rules to turn on the VPN for extra privacy or location-based browsing, and off where you don’t.`
+    - Suggest: `et le désactiver là où vous n’en avez pas besoin`
+    - The en-US says "and off where you don’t" (i.e. where you don't want extra privacy); the French ends with "là où vous n’en avez pas", which is incomplete and meaningless in French.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -79,7 +72,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 336 |
-| Strings | 16,532 |
+| Strings | 16,582 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -93,7 +86,7 @@ _Nothing retired._
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 0 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 4 |
+| Typography deviations from this locale's own norm | 5 |
 
 ### Completeness
 
@@ -120,12 +113,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `guillemet` 1032, `straight-double` 31, `curly-double` 2, `curly-single` 1 | **guillemet** |
-| apostrophe | `typographic` 5048, `straight` 10 | **typographic** |
-| ellipsis | `char` 397 | **char** |
+| quotes | `guillemet` 1035, `straight-double` 31, `curly-double` 2, `curly-single` 1 | **guillemet** |
+| apostrophe | `typographic` 5063, `straight` 11 | **typographic** |
+| ellipsis | `char` 401 | **char** |
 | dash | `em` 42, `en` 9 | **em** |
-| nbsp | `total` 3975, `before-punctuation` 1742 | _mixed_ |
-| register | `formal` 2834 | **formal** |
+| nbsp | `total` 3985, `before-punctuation` 1744 | _mixed_ |
+| register | `formal` 2836 | **formal** |
 
 ---
 
@@ -135,24 +128,29 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (33)
+## 3. Open findings (35)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl` — "help keep your browsing private from others on this device" loses the "from others" element, changing the claim.
     - Current: `Les fenêtres privées permettent de garder votre navigation privée sur cet appareil.`
     - Source: `Private Windows help keep your browsing private from others on this device. They don’t make you anonymous or clear all of your data.`
     - Suggest: `Les fenêtres privées permettent de préserver la confidentialité de votre navigation vis-à-vis des autres personnes qui utilisent cet appareil.`
     - The en-US scopes the privacy benefit to other users of the device; the French implies browsing is kept private on the device generally, a broader claim than the source makes.
+- `sync-syncing-across-devices-empty-state3` — `browser/browser/preferences/preferences.ftl` — "You aren’t syncing anything… yet" is rendered as "you don't have to sync anything", changing the meaning.
+    - Current: `Vous ne devez rien synchroniser… pour l’instant.`
+    - Source: `description: You aren’t syncing anything… yet. Choose what to sync on this device. label: Manage synced data`
+    - Suggest: `Vous ne synchronisez rien… pour l’instant.`
+    - The en-US states a fact about the current state (nothing is being synced), not an absence of obligation.
 
 _Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 14 |
-| 3 | Degraded language (grammar, spelling, terminology) | 14 |
-| 4 | Cosmetic (typography, spacing) | 5 |
+| 2 | Wrong content (says something other than the English) | 15 |
+| 3 | Degraded language (grammar, spelling, terminology) | 13 |
+| 4 | Cosmetic (typography, spacing) | 7 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -165,11 +163,6 @@ _Nothing in this category._
     - Source: `Private Windows help keep your browsing private from others on this device. They don’t make you anonymous or clear all of your data.`
     - Suggest: `Les fenêtres privées permettent de préserver la confidentialité de votre navigation vis-à-vis des autres personnes qui utilisent cet appareil.`
     - The en-US scopes the privacy benefit to other users of the device; the French implies browsing is kept private on the device generally, a broader claim than the source makes.
-- `ipprotection-feature-introduction-description-private-browsing-1` — `browser/browser/ipProtection.ftl` — The second sentence's ending is mistranslated and truncated, losing the meaning "and off where you don’t [want it]".
-    - Current: `et le désactiver là où vous n’en avez pas`
-    - Source: `Help hide your location for <a data-l10n-name="learn-more-vpn">extra privacy</a> as you browse. Set rules to turn on the VPN for extra privacy or location-based browsing, and off where you don’t.`
-    - Suggest: `et le désactiver là où vous n’en avez pas besoin`
-    - The en-US says "and off where you don’t" (i.e. where you don't want extra privacy); the French ends with "là où vous n’en avez pas", which is incomplete and meaningless in French.
 - `ipprotection-site-inclusions-callout-description` — `browser/browser/ipProtection.ftl` — "location-based browsing" is rendered as accessing sites from another location, changing the meaning.
     - Current: `Activez-le sur les sites où vous souhaitez renforcer votre confidentialité ou y accéder depuis un autre emplacement`
     - Source: `Turn it on when you want extra privacy or location-based browsing, and off where you don’t.`
@@ -190,11 +183,21 @@ _Nothing in this category._
     - Source: `label: Crossword`
     - Suggest: `label: Mots croisés`
     - A crossword is "mots croisés" in French; "mots fléchés" is a distinct puzzle format.
+- `newtab-stocks-widget-menu-button2` — `browser/browser/newtab/newtab.ftl` — "Finance options" mistranslated as "Options de financement" (funding options).
+    - Current: `Options de financement`
+    - Source: `aria-label: Finance options title: Finance options`
+    - Suggest: `Options de finance`
+    - "Finance" here names the finance/stocks widget; "financement" means funding, a different concept.
 - `preferences-ai-controls-sidebar-chatbot-group-3` — `browser/browser/preferences/preferences.ftl` — "Keep a chatbot in view" rendered as "Gardez un œil sur un chatbot" (keep an eye on a chatbot), reversing who watches whom.
     - Current: `Gardez un œil sur un chatbot pendant votre navigation.`
     - Source: `description: Keep a chatbot in view as you browse. Choose from multiple providers and switch anytime. label: AI chatbot providers in sidebar`
     - Suggest: `Gardez un chatbot sous les yeux pendant votre navigation.`
     - The en-US means the chatbot stays visible while browsing, not that the user should monitor the chatbot.
+- `sync-syncing-across-devices-empty-state3` — `browser/browser/preferences/preferences.ftl` — "You aren’t syncing anything… yet" is rendered as "you don't have to sync anything", changing the meaning.
+    - Current: `Vous ne devez rien synchroniser… pour l’instant.`
+    - Source: `description: You aren’t syncing anything… yet. Choose what to sync on this device. label: Manage synced data`
+    - Suggest: `Vous ne synchronisez rien… pour l’instant.`
+    - The en-US states a fact about the current state (nothing is being synced), not an absence of obligation.
 - `tls-key-logging-notice-nav` — `browser/browser/preferences/preferences.ftl` — "may see your encrypted traffic" translated as "pourrait accéder à" (could access), altering the claim.
     - Current: `pourrait accéder à votre trafic chiffré`
     - Source: `label: An app or service may see your encrypted traffic.`
@@ -246,11 +249,6 @@ _Nothing in this category._
     - Source: `Private Windows help keep your browsing private from others on this device. They don’t make you anonymous or clear all of your data.`
     - Suggest: `Elles ne vous rendent pas anonyme`
     - The antecedent is "Les fenêtres privées", feminine plural, so the subject pronoun must be "Elles".
-- `ipprotection-feature-introduction-description-inclusions` — `browser/browser/ipProtection.ftl` — "as you browse" is rendered twice, producing a redundant duplicated phrase.
-    - Current: `Lorsque vous naviguez, vous pouvez masquer votre localisation pour <a data-l10n-name="learn-more-vpn">plus de confidentialité</a> pendant votre navigation.`
-    - Source: `Help hide your location for <a data-l10n-name="learn-more-vpn">extra privacy</a> as you browse. Set the VPN on or off for certain sites.`
-    - Suggest: `Masquez votre localisation pour <a data-l10n-name="learn-more-vpn">plus de confidentialité</a> pendant votre navigation.`
-    - The source has a single "as you browse"; the French repeats it as both "Lorsque vous naviguez" and "pendant votre navigation".
 - `about-pdf-feature-organize-description` — `toolkit/toolkit/about/aboutPDF.ftl` — Verb "exporter" is in the infinitive instead of the imperative, breaking the list of imperatives.
     - Current: `Réorganisez, supprimez, fusionnez et exporter des pages.`
     - Source: `Reorder, remove, merge, and export pages.`
@@ -290,15 +288,15 @@ _Nothing in this category._
 
 - `felt-error-warning-download-attempt-failed-contact-admin` — `browser/browser/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
     - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
-    - The tree uses ’ 5048 times against 10 straight.
+    - The tree uses ’ 5063 times against 11 straight.
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `L’évènement « key » n’est pas disponible dans GTK2 : key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `guillemet` (1032 occurrences).
+    - The locale's quote convention is `guillemet` (1035 occurrences).
 - `WinConflict2` — `dom/chrome/dom/dom.properties` — `WinConflict2` uses straight double quotes
     - Current: `L’évènement « key » n’est pas disponible pour certaines dispositions de clavier : key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on some keyboard layouts: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `guillemet` (1032 occurrences).
+    - The locale's quote convention is `guillemet` (1035 occurrences).
 - `about-sync-log-row-success` — `toolkit/services/aboutSyncLog.ftl` — Em dash replaced by a colon, inconsistent with the sibling error string.
     - Current: `Succès : { $date }`
     - Source: `heading: Success — { $date }`
@@ -306,7 +304,16 @@ _Nothing in this category._
     - en-US uses "Success — { $date }" and the parallel string about-sync-log-row-error keeps the em dash in French; the locale convention is the em dash.
 - `felt-error-warning-download-attempt-failed-contact-admin` — `toolkit/toolkit/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
     - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
-    - The tree uses ’ 5048 times against 10 straight.
+    - The tree uses ’ 5063 times against 11 straight.
+- `autocomplete-delete-address-entry` — `toolkit/toolkit/main-window/autocomplete.ftl` — `autocomplete-delete-address-entry` uses a straight apostrophe
+    - Current: `Supprimer l'adresse { $entry }`
+    - Source: `Delete address { $entry }`
+    - The tree uses ’ 5063 times against 11 straight.
+- `autocomplete-delete-address-entry` — `toolkit/toolkit/main-window/autocomplete.ftl` — Straight apostrophe used instead of the typographic apostrophe required by the locale.
+    - Current: `Supprimer l'adresse`
+    - Source: `Delete address { $entry }`
+    - Suggest: `Supprimer l’adresse`
+    - The locale convention is the typographic apostrophe ’ (5633 vs 10).
 
 ---
 
@@ -328,8 +335,10 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (62)
+### Fixed to date (64)
 
+- `ipprotection-feature-introduction-description-inclusions` — `browser/browser/ipProtection.ftl` — fixed 2026-10-05
+- `ipprotection-feature-introduction-description-private-browsing-1` — `browser/browser/ipProtection.ftl` — fixed 2026-10-05
 - `pdf-features-notification` — `toolkit/toolkit/about/pdfFeaturesNotification.ftl` — fixed 2026-09-21
 - `newtab-privacy-empty-state-tally` — `browser/browser/newtab/newtab.ftl` — fixed 2026-09-14
 - `aiwindow-firstrun-default-checkbox-label` — `browser/browser/aiWindow.ftl` — fixed 2026-09-03
@@ -368,5 +377,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `permissions-header3` — `browser/browser/preferences/preferences.ftl` — fixed 2026-07-26
 - `monitor-breaches-resolved-description` — `browser/browser/protections.ftl` — fixed 2026-07-26
 - `tabbrowser-container-tab-title` — `browser/browser/tabbrowser.ftl` — fixed 2026-07-26
-- `tabbrowser-manager-mute-tab` — `browser/browser/tabbrowser.ftl` — fixed 2026-07-26
-- `accessibility-text-label-issue-area` — `devtools/client/accessibility.ftl` — fixed 2026-07-26

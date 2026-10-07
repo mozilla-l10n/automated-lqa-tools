@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
-| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
+| **Previous run** | 2026-09-28 @ `92e0a4895124` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 31 of 16,251 |
+| **Strings reviewed this run** | 1 of 16,251 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for fy-NL: [android](android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl` — "or clear all of your data" is rendered as "and do not erase all your data", which in Frisian reads as if not all data is erased, but the negation placement changes the claim.
-    - Current: `Se meitsje jo net anonym en wiskje al jo gegevens net.`
-    - Source: `Private Windows help keep your browsing private from others on this device. They don’t make you anonymous or clear all of your data.`
-    - Suggest: `Se meitsje jo net anonym en wiskje net al jo gegevens.`
-    - The source says Private Windows do not make you anonymous or clear all of your data. Placing 'net' after 'al jo gegevens' yields the ambiguous/incorrect scope 'they do not erase all your data'; the negation should precede the quantifier.
-- `edit-controls.label` — `browser/chrome/browser/customizableui/customizableWidgets.properties` — "Edit controls" (the noun phrase naming the cut/copy/paste widget) is translated as the imperative "Edit the controls".
-    - Current: `Betsjinningen bewurkje`
-    - Source: `Edit controls`
-    - Suggest: `Bewurkingsbetsjinningen`
-    - In customizableWidgets, 'Edit controls' is the name of the toolbar widget containing Cut/Copy/Paste ('edit' is an attributive noun), not an instruction to edit controls.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -55,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 326 |
 | Strings | 16,251 |
-| Missing strings | 54 |
+| Missing strings | 104 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -72,20 +63,20 @@ _Nothing retired._
 
 ### Completeness
 
-**54 strings** are not translated yet, concentrated in:
+**104 strings** are not translated yet, concentrated in:
 
+- `browser/browser/newtab/newtab.ftl` — 20
 - `browser/browser/aboutRestartRequired.ftl` — 18
 - `toolkit/toolkit/formautofill/formAutofill.ftl` — 9
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 9
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 7
 - `browser/browser/ipProtection.ftl` — 7
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 4
+- `browser/browser/preferences/preferences.ftl` — 7
+- `browser/browser/browser.ftl` — 6
 - `browser/browser/appmenu.ftl` — 3
-- `browser/browser/preferences/preferences.ftl` — 3
+- `toolkit/toolkit/about/aboutGlean.ftl` — 2
 - `toolkit/toolkit/about/aboutLogging.ftl` — 2
-- `browser/browser/newtab/newtab.ftl` — 2
-- `toolkit/toolkit/payments/payments.ftl` — 1
-- `browser/browser/backupSettings.ftl` — 1
-- `browser/browser/genai.ftl` — 1
-- `browser/browser/places.ftl` — 1
+- `browser/browser/menubar.ftl` — 2
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

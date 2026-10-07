@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
-| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
+| **Previous run** | 2026-09-28 @ `92e0a4895124` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 85 of 16,532 |
+| **Strings reviewed this run** | 53 of 16,582 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,38 +18,13 @@ Also for de: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (6)
+### 🆕 New findings (1)
 
-- `restart-required-why-now-answer` — `browser/browser/aboutRestartRequired.ftl` — Brand placeable replaced with hardcoded "Firefox" in the first occurrence.
-    - Current: `wenn ein anderes Firefox-Profil`
-    - Source: `This can happen when another { -brand-short-name } profile or instance updates, or when an update can’t wait until your next restart.`
-    - Suggest: `wenn ein anderes { -brand-short-name }-Profil`
-    - The en-US uses { -brand-short-name } for the profile reference; hardcoding "Firefox" breaks brand substitution for other builds.
-- `about-logging-preset-vpn-description` — `toolkit/toolkit/about/aboutLogging.ftl` — Descriptive label rendered as an imperative addressed to the user instead of a noun-phrase description of the preset.
-    - Current: `Protokollieren Sie Module zur Diagnose`
-    - Source: `Log modules to diagnose IP Protection (VPN) issues`
-    - Suggest: `Module zur Diagnose von Problemen mit dem IP-Schutz (VPN) protokollieren`
-    - The en-US "Log modules to diagnose…" is a preset description, not an instruction to the user; sibling preset descriptions use an infinitive/noun phrase.
-- `restart-required-see-more-button` — `browser/browser/aboutRestartRequired.ftl` — "See more" (expand the details section) is rendered as "Mehr erfahren" (learn more), inconsistent with its counterpart "Weniger anzeigen".
-    - Current: `Mehr erfahren`
-    - Source: `See more`
-    - Suggest: `Mehr anzeigen`
-    - The developer comment says the button expands the "More details" section; the collapse counterpart is translated "Weniger anzeigen", so the expand label should be "Mehr anzeigen", not a "learn more" link phrase.
-- `restart-required-fix-answer` — `browser/browser/aboutRestartRequired.ftl` — "Follow our progress in Bugzilla bug 2072739" is rendered as "Den aktuellen Stand finden Sie …", dropping the sense of following ongoing progress.
-    - Current: `Den aktuellen Stand finden Sie im Bugzilla-Fehler 2072739.`
-    - Source: `Yes. We know this is disruptive, and we’re working on a fix to prevent it. Follow our progress in Bugzilla bug 2072739.`
-    - Suggest: `Verfolgen Sie unseren Fortschritt im Bugzilla-Fehler 2072739.`
-    - The English asks users to follow the team's progress; the German states the current status can be found there, a different statement.
-- `appmenu-fxa-sign-in-promo-link` — `browser/browser/appmenu.ftl` — "Sign in" is translated "Einloggen" instead of the established Firefox German term "Anmelden".
-    - Current: `Einloggen`
-    - Source: `Sign in`
-    - Suggest: `Anmelden`
-    - Firefox de consistently uses "Anmelden" for "Sign in"; the sibling string in the same promo even says "Promo für Anmeldung schließen", making this inconsistent.
-- `ipprotection-site-inclusions-callout-title-lapsed-users` — `browser/browser/ipProtection.ftl` — "Try built-in VPN, now site by site" loses "site by site" nuance, rendered as "gezielt für einzelne Websites testen".
-    - Current: `Integriertes VPN jetzt gezielt für einzelne Websites testen`
-    - Source: `Try built-in VPN, now site by site`
-    - Suggest: `Integriertes VPN testen – jetzt Website für Website`
-    - The English emphasizes the new per-site capability ("site by site"); the German adds "gezielt" and blurs it, though meaning is close.
+- `addressbar-skip-result-menu-on-tab` — `browser/browser/preferences/preferences.ftl` — Checkbox label rendered as an imperative instruction instead of a noun/infinitive setting label.
+    - Current: `Überspringen Sie das Ergebnismenü, wenn Sie die Tab-Taste zum Verschieben des Fokus verwenden`
+    - Source: `label: Skip the results menu when using the tab key to move focus`
+    - Suggest: `Ergebnismenü überspringen, wenn Sie die Tab-Taste zum Verschieben des Fokus verwenden`
+    - The en-US "Skip the results menu when…" is a settings checkbox label, not a command to the user; the parallel menu item urlbar-view-context-menu-skip-menu-with-tab is correctly rendered as "Dieses Menü überspringen, wenn …".
 
 ### ✅ Fixed since the last run (0)
 
@@ -74,7 +49,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 336 |
-| Strings | 16,532 |
+| Strings | 16,582 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -121,10 +96,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `straight-double` 730, `curly-double` 69, `german-double` 14, `curly-single` 2 | **straight-double** |
 | apostrophe | `typographic` 6, `straight` 114 | **straight** |
-| ellipsis | `char` 402 | **char** |
+| ellipsis | `char` 406 | **char** |
 | dash | `em` 17, `en` 71 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 12, `formal` 3906 | **formal** |
+| register | `informal` 12, `formal` 3911 | **formal** |
 
 ---
 
@@ -134,7 +109,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (29)
+## 3. Open findings (30)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -150,7 +125,7 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 16 |
-| 3 | Degraded language (grammar, spelling, terminology) | 11 |
+| 3 | Degraded language (grammar, spelling, terminology) | 12 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
@@ -278,6 +253,11 @@ _Also listed under their own category below._
     - Source: `Choose “Download file” and save it to your device.`
     - Suggest: `Datei speichern unter…`
     - In the source this string quotes “Download file”, which is exactly the value of `downloadFile.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `addressbar-skip-result-menu-on-tab` — `browser/browser/preferences/preferences.ftl` — Checkbox label rendered as an imperative instruction instead of a noun/infinitive setting label.
+    - Current: `Überspringen Sie das Ergebnismenü, wenn Sie die Tab-Taste zum Verschieben des Fokus verwenden`
+    - Source: `label: Skip the results menu when using the tab key to move focus`
+    - Suggest: `Ergebnismenü überspringen, wenn Sie die Tab-Taste zum Verschieben des Fokus verwenden`
+    - The en-US "Skip the results menu when…" is a settings checkbox label, not a command to the user; the parallel menu item urlbar-view-context-menu-skip-menu-with-tab is correctly rendered as "Dieses Menü überspringen, wenn …".
 - `toolbox-local-mode-notice` — `devtools/client/toolbox.ftl` — `toolbox-local-mode-notice` quotes “Lokalen Modus” but the string it names, `options-local-mode-label`, reads “Lokaler Modus”
     - Current: `Dieses Dokument kann auch über den "Lokalen Modus" der DevTools von "{ $url }" geladen werden, der im Einstellungsbereich aktiviert werden kann.`
     - Source: `This document could also be loaded from “{ $url }” using DevTools “Local Mode”, which can be enabled in the settings panel.`

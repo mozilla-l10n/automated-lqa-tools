@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
-| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
+| **Previous run** | 2026-09-28 @ `92e0a4895124` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 34 of 16,251 |
+| **Strings reviewed this run** | 1 of 16,251 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,28 +18,9 @@ Also for pl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (0)
 
-- `newtab-privacy-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Privacy options" rendered as "Opcje widżetu prywatności" (privacy widget options), adding "widżetu" not present in the source.
-    - Current: `Opcje widżetu prywatności`
-    - Source: `aria-label: Privacy options title: Privacy options`
-    - Suggest: `Opcje prywatności`
-    - The en-US string is "Privacy options"; the other widget menu button (Clock options) is translated literally as "Opcje zegara", so the added "widżetu" is inconsistent and not in the source.
-- `newtab-search-widget-title` — `browser/browser/newtab/newtab.ftl` — "Search" (widget heading, a noun naming the search feature) rendered as plural "Wyszukiwania".
-    - Current: `Wyszukiwania`
-    - Source: `Search`
-    - Suggest: `Wyszukiwanie`
-    - The source is the singular heading "Search"; the plural "Wyszukiwania" (searches) is grammatically odd as a widget title and inconsistent with other Search strings such as "Ustawienia wyszukiwania".
-- `newtab-search-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Search options" rendered with a plural noun "Opcje wyszukiwań" (options of searches).
-    - Current: `aria-label: Opcje wyszukiwań`
-    - Source: `aria-label: Search options`
-    - Suggest: `aria-label: Opcje wyszukiwania`
-    - The source is "Search options"; standard Firefox pl terminology is "wyszukiwania" in the genitive singular, as in "Ustawienia wyszukiwania".
-- `newtab-custom-widget-search-toggle` — `browser/browser/newtab/newtab.ftl` — Widget toggle label "Search" rendered as plural "Wyszukiwania".
-    - Current: `label: Wyszukiwania`
-    - Source: `label: Search`
-    - Suggest: `label: Wyszukiwanie`
-    - The source is the singular widget name "Search", matching the widget title; the plural is inconsistent with the other widget toggles (e.g. "Krzyżówka").
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -65,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 326 |
 | Strings | 16,251 |
-| Missing strings | 54 |
+| Missing strings | 104 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -82,20 +63,20 @@ _Nothing retired._
 
 ### Completeness
 
-**54 strings** are not translated yet, concentrated in:
+**104 strings** are not translated yet, concentrated in:
 
+- `browser/browser/newtab/newtab.ftl` — 20
 - `browser/browser/aboutRestartRequired.ftl` — 18
 - `toolkit/toolkit/formautofill/formAutofill.ftl` — 9
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 9
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 7
 - `browser/browser/ipProtection.ftl` — 7
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 4
+- `browser/browser/preferences/preferences.ftl` — 7
+- `browser/browser/browser.ftl` — 6
 - `browser/browser/appmenu.ftl` — 3
-- `browser/browser/preferences/preferences.ftl` — 3
+- `toolkit/toolkit/about/aboutGlean.ftl` — 2
 - `toolkit/toolkit/about/aboutLogging.ftl` — 2
-- `browser/browser/newtab/newtab.ftl` — 2
-- `toolkit/toolkit/payments/payments.ftl` — 1
-- `browser/browser/backupSettings.ftl` — 1
-- `browser/browser/genai.ftl` — 1
-- `browser/browser/places.ftl` — 1
+- `browser/browser/menubar.ftl` — 2
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

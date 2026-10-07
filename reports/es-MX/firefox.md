@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
-| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
+| **Previous run** | 2026-09-28 @ `92e0a4895124` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 19 of 15,824 |
+| **Strings reviewed this run** | 2 of 15,826 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for es-MX: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `ipprotection-site-inclusions-callout-secondary-button-lapsed-users` — `browser/browser/ipProtection.ftl` — "Dismiss" translated as "Ahora no" (Not now), duplicating the other button's label.
-    - Current: `No ahora`
-    - Source: `Dismiss`
-    - Suggest: `Descartar`
-    - The en-US is "Dismiss", not "Not now"; the sibling string "Not now" is already rendered "Ahora no". Also the word order "No ahora" is not idiomatic.
-- `edit-controls.label` — `browser/chrome/browser/customizableui/customizableWidgets.properties` — "Edit controls" (a noun phrase naming the cut/copy/paste widget) rendered as an imperative verb phrase "Editar controles".
-    - Current: `Editar controles`
-    - Source: `Edit controls`
-    - Suggest: `Controles de edición`
-    - In customizableWidgets, "Edit controls" is the name of the toolbar widget containing Cut/Copy/Paste, i.e. "editing controls", not an instruction to edit controls.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -43,12 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `preferences-ai-controls-sidebar-chatbot-group-2` — `browser/browser/preferences/preferences.ftl` — "Keep a chatbot in view" rendered as "Mantén tu chatbot" (your chatbot).
-    - Current: `Mantén tu chatbot a la vista mientras navegas.`
-    - Suggest: `Mantén un chatbot a la vista mientras navegas.`
-    - The source uses the indefinite "a chatbot"; "tu chatbot" asserts the user already has one.
+_Nothing retired._
 
 ---
 
@@ -56,11 +44,11 @@ _Nothing to re-read._
 
 | Check | Result |
 |---|---|
-| Files | 320 |
-| Strings | 15,824 |
-| Missing strings | 481 |
+| Files | 321 |
+| Strings | 15,826 |
+| Missing strings | 529 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 6 |
+| Files absent from the locale | 5 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -75,19 +63,19 @@ _Nothing to re-read._
 
 ### Completeness
 
-**481 strings** are not translated yet, concentrated in:
+**529 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 105
+- `browser/browser/newtab/newtab.ftl` — 123
 - `toolkit/services/aboutSyncLog.ftl` — 26
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 25
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 23
 - `toolkit/toolkit/about/aboutPDF.ftl` — 21
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 20
-- `browser/browser/newtab/onboarding.ftl` — 19
+- `browser/browser/newtab/onboarding.ftl` — 20
+- `browser/browser/preferences/preferences.ftl` — 19
 - `browser/browser/aboutRestartRequired.ftl` — 18
 - `browser/browser/ipProtection.ftl` — 18
 - `toolkit/toolkit/about/aboutAddons.ftl` — 17
 - `browser/browser/aboutPrivateBrowsing.ftl` — 16
-- `browser/browser/preferences/preferences.ftl` — 15
 - `toolkit/toolkit/formautofill/formAutofill.ftl` — 13
 
 **Files absent from the locale:**
@@ -95,7 +83,6 @@ _Nothing to re-read._
 - `browser/browser/sharePanel.ftl`
 - `toolkit/services/aboutSyncLog.ftl`
 - `toolkit/toolkit/about/pdfFeaturesNotification.ftl`
-- `toolkit/toolkit/global/mozPromo.ftl`
 - `toolkit/toolkit/global/rosettaNotification.ftl`
 - `toolkit/toolkit/pdfviewer/embedFallback.ftl`
 

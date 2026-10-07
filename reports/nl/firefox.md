@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `92e0a4895124` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `816ea3e8b893` |
-| **Previous run** | 2026-09-21 @ `3f7b6c3c060f` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
+| **Previous run** | 2026-09-28 @ `92e0a4895124` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 33 of 16,251 |
+| **Strings reviewed this run** | 65 of 16,315 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,23 @@ Also for nl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `restart-required-unsaved-work-answer` — `browser/browser/aboutRestartRequired.ftl` — "may not be restored" rendered as "kan niet worden hersteld", turning a possibility into a certainty that unsaved work cannot be restored.
+    - Current: `zoals tekst in een formulier, kan niet worden hersteld`
+    - Source: `Possibly, and we know that’s frustrating. { -brand-short-name } will reopen your tabs, but unsaved work inside webpages, like text in a form, may not be restored. Private Windows won’t reopen to protect your privacy.`
+    - Suggest: `zoals tekst in een formulier, kan mogelijk niet worden hersteld`
+    - The en-US says unsaved work "may not be restored" (possible loss); the Dutch asserts flatly that it cannot be restored.
+- `restart-required-multiple-instances-answer` — `browser/browser/aboutRestartRequired.ftl` — "the open one" mistranslated as "de open versie", and "can be left on an older version" rendered as "op een oudere versie worden gehouden".
+    - Current: `kan de open versie op een oudere versie worden gehouden`
+    - Source: `If one profile or instance updates while another is still open, the open one can be left on an older version. Restarting keeps everything on the same version.`
+    - Suggest: `kan het geopende exemplaar op een oudere versie blijven staan`
+    - The en-US refers to the still-open profile/instance remaining on an older version, not to "the open version" being held on an older version; the Dutch sentence says "the open version ... on an older version", which is confused.
+- `restart-required-single-instance-answer-2` — `browser/browser/aboutRestartRequired.ftl` — "keeps { -brand-short-name } secure and working normally" rendered as "houdt { -brand-short-name } veilig en normaal", dropping "working".
+    - Current: `Herstarten houdt { -brand-short-name } veilig en normaal.`
+    - Source: `This can happen during a long browsing session, or when your operating system updates { -brand-short-name }. Restarting keeps { -brand-short-name } secure and working normally.`
+    - Suggest: `Herstarten houdt { -brand-short-name } veilig en zorgt dat het normaal blijft werken.`
+    - The en-US says restarting keeps the browser secure and working normally; "veilig en normaal" loses the sense of functioning correctly and is ungrammatical as a predicate here.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +59,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 326 |
-| Strings | 16,251 |
-| Missing strings | 54 |
+| Strings | 16,315 |
+| Missing strings | 40 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +77,20 @@ _Nothing retired._
 
 ### Completeness
 
-**54 strings** are not translated yet, concentrated in:
+**40 strings** are not translated yet, concentrated in:
 
-- `browser/browser/aboutRestartRequired.ftl` — 18
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 9
-- `browser/browser/ipProtection.ftl` — 7
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 4
-- `browser/browser/appmenu.ftl` — 3
-- `browser/browser/preferences/preferences.ftl` — 3
-- `toolkit/toolkit/about/aboutLogging.ftl` — 2
-- `browser/browser/newtab/newtab.ftl` — 2
-- `toolkit/toolkit/payments/payments.ftl` — 1
-- `browser/browser/backupSettings.ftl` — 1
-- `browser/browser/genai.ftl` — 1
-- `browser/browser/places.ftl` — 1
+- `browser/browser/newtab/newtab.ftl` — 17
+- `browser/browser/browser.ftl` — 6
+- `browser/browser/preferences/preferences.ftl` — 4
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 3
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 2
+- `browser/browser/menubar.ftl` — 2
+- `toolkit/toolkit/about/aboutGlean.ftl` — 1
+- `browser/browser/aiWindow.ftl` — 1
+- `browser/browser/browserContext.ftl` — 1
+- `browser/browser/firefoxView.ftl` — 1
+- `browser/browser/profiles.ftl` — 1
+- `browser/browser/newtab/onboarding.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -87,11 +101,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-single` 812, `straight-double` 25, `curly-double` 9 | **curly-single** |
-| apostrophe | `typographic` 1025 | **typographic** |
+| apostrophe | `typographic` 1027 | **typographic** |
 | ellipsis | `char` 387 | **char** |
 | dash | `en` 110 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `formal` 2683 | **formal** |
+| register | `formal` 2697 | **formal** |
 
 ---
 
@@ -101,14 +115,23 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (339)
+## 3. Open findings (342)
 
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+
+- `restart-required-unsaved-work-answer` — `browser/browser/aboutRestartRequired.ftl` — "may not be restored" rendered as "kan niet worden hersteld", turning a possibility into a certainty that unsaved work cannot be restored.
+    - Current: `zoals tekst in een formulier, kan niet worden hersteld`
+    - Source: `Possibly, and we know that’s frustrating. { -brand-short-name } will reopen your tabs, but unsaved work inside webpages, like text in a form, may not be restored. Private Windows won’t reopen to protect your privacy.`
+    - Suggest: `zoals tekst in een formulier, kan mogelijk niet worden hersteld`
+    - The en-US says unsaved work "may not be restored" (possible loss); the Dutch asserts flatly that it cannot be restored.
+
+_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 10 |
-| 2 | Wrong content (says something other than the English) | 116 |
-| 3 | Degraded language (grammar, spelling, terminology) | 186 |
+| 2 | Wrong content (says something other than the English) | 117 |
+| 3 | Degraded language (grammar, spelling, terminology) | 188 |
 | 4 | Cosmetic (typography, spacing) | 27 |
 
 ### A. Functional, markup, variables & plurals
@@ -144,6 +167,11 @@ _Nothing reported._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `restart-required-unsaved-work-answer` — `browser/browser/aboutRestartRequired.ftl` — "may not be restored" rendered as "kan niet worden hersteld", turning a possibility into a certainty that unsaved work cannot be restored.
+    - Current: `zoals tekst in een formulier, kan niet worden hersteld`
+    - Source: `Possibly, and we know that’s frustrating. { -brand-short-name } will reopen your tabs, but unsaved work inside webpages, like text in a form, may not be restored. Private Windows won’t reopen to protect your privacy.`
+    - Suggest: `zoals tekst in een formulier, kan mogelijk niet worden hersteld`
+    - The en-US says unsaved work "may not be restored" (possible loss); the Dutch asserts flatly that it cannot be restored.
 - `profiler-popup-presets-ml-description` — `browser/browser/appmenu.ftl` — perftools-presets-ml-description2, profiler-popup-presets-ml-description — client/perftools.ftl, browser/browser/appmenu.ftl — "machine learning" became "machine translation". Suggest: "…bugs in machinaal leren…"
     - Source: `Preset for investigating machine learning bugs in { -brand-shorter-name }.`
 - `other-backup-files-founds` — `browser/browser/backupSettings.ftl` — en-US "Note:". Current: "<b>Noot:</b>" → Suggest: "<b>Opmerking:</b>"
@@ -309,12 +337,20 @@ _Nothing reported._
 - `certmgr-tab-ca` — `security/manager/security/certificates/certManager.ftl` — the tab lists certificate authorities. Current: "Organisaties" → Suggest: "Autoriteiten"
     - Source: `label: Authorities`
     - Suggest: `"Autoriteiten"`
-- `pkcs12-decode-err` — `security/manager/security/certificates/certManager.ftl` — "format" turned into "encrypted in the format". Suggest: "Het heeft niet de PKCS #12-indeling, is beschadigd, …"
-    - Source: `Failed to decode the file. Either it is not in PKCS #12 format, has been corrupted, or the password you entered was incorrect.`
-- _…and 58 more; see `state/` for the full list._
+- _…and 59 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
+- `restart-required-multiple-instances-answer` — `browser/browser/aboutRestartRequired.ftl` — "the open one" mistranslated as "de open versie", and "can be left on an older version" rendered as "op een oudere versie worden gehouden".
+    - Current: `kan de open versie op een oudere versie worden gehouden`
+    - Source: `If one profile or instance updates while another is still open, the open one can be left on an older version. Restarting keeps everything on the same version.`
+    - Suggest: `kan het geopende exemplaar op een oudere versie blijven staan`
+    - The en-US refers to the still-open profile/instance remaining on an older version, not to "the open version" being held on an older version; the Dutch sentence says "the open version ... on an older version", which is confused.
+- `restart-required-single-instance-answer-2` — `browser/browser/aboutRestartRequired.ftl` — "keeps { -brand-short-name } secure and working normally" rendered as "houdt { -brand-short-name } veilig en normaal", dropping "working".
+    - Current: `Herstarten houdt { -brand-short-name } veilig en normaal.`
+    - Source: `This can happen during a long browsing session, or when your operating system updates { -brand-short-name }. Restarting keeps { -brand-short-name } secure and working normally.`
+    - Suggest: `Herstarten houdt { -brand-short-name } veilig en zorgt dat het normaal blijft werken.`
+    - The en-US says restarting keeps the browser secure and working normally; "veilig en normaal" loses the sense of functioning correctly and is ungrammatical as a predicate here.
 - `ai-window-learn-from-browsing-activity` — `browser/browser/aiFeatures.ftl` — "in de klassieke en Slimme Vensters" mixes a lone adjective with a plural brand term; en-US "in Classic and Smart Windows". Worth rewording.
     - Source: `label: Learn from browsing in Classic and { -smart-window-brand-name }`
     - Suggest: `.label`
@@ -459,12 +495,7 @@ _Nothing reported._
     - Source: `Paused on property get`
 - `whypaused-set-watchpoint` — `devtools/shared/debugger-paused-reasons.ftl` — devtools/shared/debugger-paused-reasons.ftl — the get/set pair is broken: one translated, one keeps the English keyword. Suggest: "Gepauzeerd bij property get" / "Gepauzeerd bij property set"
     - Source: `Paused on property set`
-- `xslt-var-already-set` — `dom/dom/xslt.ftl` — compound split, and "verbergt" for "shadows". Suggest: "Variabelebinding overschaduwt een variabelebinding binnen dezelfde sjabloon."
-    - Source: `Variable binding shadows variable binding within the same template.`
-- `certmgr-backup-all` — `security/manager/security/certificates/certManager.ftl` — dangling "alle". Current: "Reservekopie van alle maken…" → Suggest: "Reservekopie van alles maken…"
-    - Source: `accesskey: k label: Backup All…`
-    - Suggest: `"Reservekopie van alles maken…"`
-- _…and 22 more; see `state/` for the full list._
+- _…and 24 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
