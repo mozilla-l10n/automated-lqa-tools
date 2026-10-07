@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
-| **Previous run** | 2026-09-28 @ `65850771ebc2` |
+| **Generated** | 2026-10-07 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `74db2d1b6025` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `74db2d1b6025` |
+| **Previous run** | 2026-10-05 @ `d82f35778c8b` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 64 of 2,625 |
+| **Strings reviewed this run** | 193 of 2,794 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,96 +18,116 @@ Also for fa: [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (9)
+### 🆕 New findings (12)
 
-- `mozac_feature_contextmenu_snackbar_link_text_copied` — `mozilla-mobile/android-components/components/feature/contextmenu/src/main/res/values-fa/strings.xml` — "Link text copied to clipboard" is rendered as an ungrammatical noun phrase that swaps the words and loses the verb.
-    - Current: `پیوند متن رونوشت شده در تخته‌گیره`
-    - Source: `Link text copied to clipboard`
-    - Suggest: `متن پیوند در تخته‌گیره رونوشت شد`
-    - Source is a confirmation sentence: the link text was copied to the clipboard. The target reverses «متن پیوند» into «پیوند متن» (text's link) and uses a participial fragment instead of a completed action.
-- `mozac_feature_contextmenu_copy_link_text` — `mozilla-mobile/android-components/components/feature/contextmenu/src/main/res/values-fa/strings.xml` — Context menu item label is rendered as an imperative sentence instead of a noun-phrase action label.
-    - Current: `متن پیوند را رونوشت کنید`
-    - Source: `Copy link text`
-    - Suggest: `رونوشت از متن پیوند`
-    - Other context menu items are nominal labels; the source "Copy link text" is a menu action label, not an instruction addressed to the user.
-- `preferences_inactive_tabs_toggle_title` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "Inactive tabs" is translated as "broken/out-of-order tabs".
-    - Current: `زبانه‌های ازکار افتاده`
-    - Source: `Inactive tabs`
-    - Suggest: `زبانه‌های غیرفعال`
-    - «از کار افتاده» means broken down/defunct, not inactive; the feature refers to tabs the user has not used recently.
-- `sign_out_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — Confirmation question is phrased as an imperative addressed to the user rather than a question about the action.
-    - Current: `از حساب کاربریتان خارج شوید؟`
-    - Source: `Sign out of your account?`
-    - Suggest: `از حساب کاربری‌تان خارج می‌شوید؟`
-    - The source asks for confirmation of the action; the subjunctive/imperative form reads as a command rather than a confirmation prompt.
-- `onboarding_first_screen_privacy_notice_link_2` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — "Privacy Notice" is rendered as "privacy tips/points" instead of the legal document name.
-    - Current: `نکات حفظ حریم خصوصی`
+- `mozac_feature_addons_permissions_clipboard_read_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — "clipboard" is rendered as «تخته‌برش» (cutting board) instead of the standard Persian term «تخته‌گیره»/«بریده‌دان».
+    - Current: `دریافت داده از تخته‌برش.`
+    - Source: `Get data from the clipboard.`
+    - Suggest: `دریافت داده از تخته‌گیره.`
+    - The established Mozilla fa term for "clipboard" is تخته‌گیره; تخته‌برش means a cutting board and is not the UI term.
+- `mozac_feature_addons_permissions_clipboard_write_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — "clipboard" is rendered as «تخته‌برش» (cutting board) instead of the standard Persian term «تخته‌گیره».
+    - Current: `وارد کردن داده در تخته‌برش.`
+    - Source: `Input data to the clipboard.`
+    - Suggest: `وارد کردن داده در تخته‌گیره.`
+    - The established Mozilla fa term for "clipboard" is تخته‌گیره; تخته‌برش means a cutting board and is not the UI term.
+- `webauthn_related_origin_use_message` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fa/strings.xml` — The translation says "use %2$s's passkey" instead of "use a passkey for %2$s".
+    - Current: `می‌خواهد از کلید عبور %2$s استفاده کند`
+    - Source: `%1$s wants to use a passkey for %2$s.`
+    - Suggest: `می‌خواهد از یک کلید عبور برای %2$s استفاده کند`
+    - Source is "wants to use a passkey for %2$s"; the parallel create string correctly uses «برای %2$s», but here the preposition is dropped, turning it into a possessive construction.
+- `mozac_browser_errorpages_archive_description` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — The placeholder roles are swapped: %2$s is the archive service name (a link), but the translation treats it as a location and inverts the relationship with Internet Archive.
+    - Current: `نسخهٔ قدیمی‌تری از این صفحه را در %2$s از Internet Archive جست‌وجو کند`
+    - Source: `%1$s can look for an earlier version of this page from the Internet Archive’s %2$s.`
+    - Suggest: `می‌تواند با %2$s از Internet Archive به دنبال نسخهٔ قدیمی‌تری از این صفحه بگردد`
+    - Source: "from the Internet Archive’s %2$s" — %2$s is the name of the archive service belonging to the Internet Archive; the translation reads as searching "in %2$s from Internet Archive", garbling the possessive relationship.
+- `lens_camera_loading_status` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "Looking this up" is rendered as a first-person "I am looking for this" rather than a neutral status.
+    - Current: `به دنبال این هستم`
+    - Source: `Looking this up`
+    - Suggest: `در حال جست‌وجوی این مورد`
+    - The source is an impersonal progress status shown under the image; the Persian uses first-person singular, making the app speak as "I", which is not the register used elsewhere (e.g. "در حال بررسی بایگانی").
+- `lens_camera_upload_failed` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — First-person phrasing ("I couldn’t get results") instead of the impersonal source wording.
+    - Current: `نتوانستم از Google Lens نتیجه بگیرم`
+    - Source: `Couldn’t get results from Google Lens`
+    - Suggest: `دریافت نتیجه از Google Lens ممکن نشد`
+    - Source "Couldn’t get results from Google Lens" is impersonal; other error strings in the batch use impersonal forms ("دسترسی به سرویس بایگانی ممکن نشد"), so the first-person verb breaks register and consistency.
+- `firstrun_shortcut_title` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Ungrammatical phrase: object marker "را" misplaced, making "افزودن میان‌برها را به صفحه خانگی شما" incorrect Persian.
+    - Current: `افزودن میان‌برها را به صفحه خانگی شما`
+    - Source: `Add shortcuts to your home screen`
+    - Suggest: `افزودن میان‌بر به صفحهٔ خانگی`
+    - The source is "Add shortcuts to your home screen"; the Persian noun-phrase title cannot take the object marker "را" after the verbal noun, producing broken grammar.
+- `preference_performance_block_javascript_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Misspelling "بارگزاری" should be "بارگذاری".
+    - Current: `بارگزاری`
+    - Source: `Pages may load faster, but may also behave unexpectedly`
+    - Suggest: `بارگذاری`
+    - Standard Persian spelling of "loading" is بارگذاری; بارگزاری is a common misspelling.
+- `content_description_reload` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Misspelling "بارگزاری" should be "بارگذاری".
+    - Current: `بارگزاری مجدد وب‌سایت`
+    - Source: `Reload website`
+    - Suggest: `بارگذاری مجدد وب‌سایت`
+    - Standard Persian spelling of "loading" is بارگذاری.
+- `content_description_stop` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Misspelling "بارگزاری" should be "بارگذاری".
+    - Current: `توقف بارگزاری وب‌سایت`
+    - Source: `Stop loading website`
+    - Suggest: `توقف بارگذاری وب‌سایت`
+    - Standard Persian spelling of "loading" is بارگذاری.
+- `preference_mozilla_telemetry_summary2` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — "provide and improve" rendered as "بهینه‌سازی و بهبود" (optimize and improve), dropping "provide"; also "for everyone" is omitted.
+    - Current: `تنها اطلاعاتی که برای بهینه‌سازی و بهبود %1$s به آنها نیاز دارد را جمع‌آوری کند`
+    - Source: `Mozilla strives to collect only what we need to provide and improve %1$s for everyone.`
+    - Suggest: `تنها اطلاعاتی را که برای ارائه و بهبود %1$s برای همه به آن‌ها نیاز دارد جمع‌آوری کند`
+    - The source says Mozilla collects only what is needed to provide and improve the app for everyone; the translation changes "provide" to "optimize" and drops "for everyone".
+- `preference_privacy_notice` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — "Privacy Notice" translated as "نکات حفظ محرمانگی" (privacy tips/points) instead of the legal notice term.
+    - Current: `نکات حفظ محرمانگی`
     - Source: `Privacy Notice`
     - Suggest: `اعلامیهٔ حریم خصوصی`
-    - The link points to Mozilla's Privacy Notice, a legal notice; «نکات» means tips/points and misnames the document.
-- `custom_tab_copy_url_action` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — "URL copied" is rendered as "Copy/remove URL" instead of a confirmation that the URL was copied.
-    - Current: `برداشتن نشانی اینترنتی`
-    - Source: `URL copied`
-    - Suggest: `نشانی اینترنتی رونوشت شد`
-    - The source is a confirmation message shown after the URL has been copied; the target says "removing/taking the URL", which is a different action and tense.
-- `text_selection_search_action_focus` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Brand name "Focus" transliterated as «فوکوس» despite the developer comment forbidding translation or transliteration.
-    - Current: `جست‌و‌جو در فوکوس`
-    - Source: `Search in Focus`
-    - Suggest: `جست‌و‌جو در Focus`
-    - Developer comment states: "Do not translate or transliterate Focus." The sibling strings keep "Focus Beta"/"Focus Nightly" in Latin script.
-- `preference_safe_browsing_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — The translation mis-parses the source: it blocks "deceptive reports and site attacks, site malware and site unwanted software" instead of deceptive/attack sites, malware sites and unwanted software sites.
-    - Current: `مسدود کردن گزارش‌های فریبنده و حملات سایت‌ها،‌ بدافزارهای سایت‌ها و نرم‌افزارهای ناخواسته سایت‌ها.`
-    - Source: `Block reported deceptive and attack sites, malware sites, and unwanted software sites.`
-    - Suggest: `مسدود کردن سایت‌های فریبنده و مهاجم گزارش‌شده، سایت‌های بدافزار و سایت‌های نرم‌افزار ناخواسته.`
-    - In the source, "reported" modifies the sites and each item is a kind of site; the Persian turns them into reports, attacks, malware and software belonging to sites, changing what is blocked.
-- `preference_remote_debugging` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — "Remote" is dropped from "Remote debugging via USB/Wi-Fi".
-    - Current: `اشکال‌زدایی از طریق USB/Wi-Fi`
-    - Source: `Remote debugging via USB/Wi-Fi`
-    - Suggest: `اشکال‌زدایی از راه دور از طریق USB/Wi-Fi`
-    - The source specifies remote debugging; the qualifier is missing in the target.
+    - The developer comment says this links to the Focus privacy notice, a legal document; "نکات" means tips/points, not notice.
 
-### ✅ Fixed since the last run (8)
+### ✅ Fixed since the last run (9)
 
-- `custom_tab_copy_url_action` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — "URL copied" is rendered as "Copy/remove URL" instead of a confirmation that the URL was copied.
-    - Current: `برداشتن نشانی اینترنتی`
-    - Source: `URL copied`
-    - Suggest: `نشانی اینترنتی رونوشت شد`
-    - The source is a confirmation message shown after the URL has been copied; the target says "removing/taking the URL", which is a different action and tense.
-- `preference_exceptions` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Misspelled Persian plural of "exception".
-    - Current: `استثناعات`
-    - Source: `Exceptions`
-    - Suggest: `استثناها`
-    - The correct Persian form is «استثناها» (or «استثناءات»); «استثناعات» is a misspelling.
-- `preference_remote_debugging` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — "Remote" is dropped from "Remote debugging via USB/Wi-Fi".
-    - Current: `اشکال‌زدایی از طریق USB/Wi-Fi`
-    - Source: `Remote debugging via USB/Wi-Fi`
-    - Suggest: `اشکال‌زدایی از راه دور از طریق USB/Wi-Fi`
-    - The source specifies remote debugging; the qualifier is missing in the target.
-- `preference_safe_browsing_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — The translation mis-parses the source: it blocks "deceptive reports and site attacks, site malware and site unwanted software" instead of deceptive/attack sites, malware sites and unwanted software sites.
-    - Current: `مسدود کردن گزارش‌های فریبنده و حملات سایت‌ها،‌ بدافزارهای سایت‌ها و نرم‌افزارهای ناخواسته سایت‌ها.`
-    - Source: `Block reported deceptive and attack sites, malware sites, and unwanted software sites.`
-    - Suggest: `مسدود کردن سایت‌های فریبنده و مهاجم گزارش‌شده، سایت‌های بدافزار و سایت‌های نرم‌افزار ناخواسته.`
-    - In the source, "reported" modifies the sites and each item is a kind of site; the Persian turns them into reports, attacks, malware and software belonging to sites, changing what is blocked.
-- `text_selection_search_action_focus_beta` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Brand name "Focus Beta" transliterated as "فوکوس بتا" despite the developer comment forbidding transliteration.
-    - Current: `جستجو در فوکوس بتا`
-    - Source: `Search in Focus Beta`
-    - Suggest: `جستجو در Focus Beta`
-    - The developer comment states: "Do not translate or transliterate Focus Beta." The sibling string keeps "Focus Nightly" in Latin script.
-- `custom_tab_copy_url_action` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — "URL copied" is rendered as "Copy/remove URL" instead of a confirmation that the URL was copied.
-    - Current: `برداشتن نشانی اینترنتی`
-    - Source: `URL copied`
-    - Suggest: `نشانی اینترنتی رونوشت شد`
-    - The source is a confirmation message shown after the URL has been copied; the target says "removing/taking the URL", which is a different action and tense.
-- `preference_remote_debugging` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — "Remote" is dropped from "Remote debugging via USB/Wi-Fi".
-    - Current: `اشکال‌زدایی از طریق USB/Wi-Fi`
-    - Source: `Remote debugging via USB/Wi-Fi`
-    - Suggest: `اشکال‌زدایی از راه دور از طریق USB/Wi-Fi`
-    - The source specifies remote debugging; the qualifier is missing in the target.
-- `preference_safe_browsing_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — The translation mis-parses the source: it blocks "deceptive reports and site attacks, site malware and site unwanted software" instead of deceptive/attack sites, malware sites and unwanted software sites.
-    - Current: `مسدود کردن گزارش‌های فریبنده و حملات سایت‌ها،‌ بدافزارهای سایت‌ها و نرم‌افزارهای ناخواسته سایت‌ها.`
-    - Source: `Block reported deceptive and attack sites, malware sites, and unwanted software sites.`
-    - Suggest: `مسدود کردن سایت‌های فریبنده و مهاجم گزارش‌شده، سایت‌های بدافزار و سایت‌های نرم‌افزار ناخواسته.`
-    - In the source, "reported" modifies the sites and each item is a kind of site; the Persian turns them into reports, attacks, malware and software belonging to sites, changing what is blocked.
+- `download_firefox` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — The brand name Firefox is transliterated as "فایرفاکس" instead of kept as "Firefox".
+    - Current: `دریافت فایرفاکس`
+    - Source: `Download Firefox`
+    - Suggest: `دریافت Firefox`
+    - Brand names such as Firefox must not be translated or transliterated; other strings in the batch keep "Mozilla" in Latin script.
+- `feedback_erase_custom_tab` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Singular "Tab's browsing history" rendered as plural "tabs of the browser".
+    - Current: `تاریخچه زبانه‌های مرورگر پاک شده است.`
+    - Source: `Tab’s browsing history has been erased.`
+    - Suggest: `تاریخچهٔ مرور زبانه پاک شده است.`
+    - The source refers to a single custom tab's browsing history; the translation says the history of the browser's tabs (plural), widening the scope of what was erased.
+- `notification_browsing_session_channel_name` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — "Private browsing" rendered as "anonymous browsing" (ناشناس) instead of the standard خصوصی.
+    - Current: `نشستِ مرور ناشناس`
+    - Source: `Private browsing session`
+    - Suggest: `نشستِ مرور خصوصی`
+    - Elsewhere in the batch "private" is translated as خصوصی (e.g. onboarding_first_screen_subtitle); ناشناس means "anonymous/unknown" and is inconsistent terminology for Private browsing.
+- `preference_mozilla_telemetry_summary2` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — "provide and improve" rendered as "بهینه‌سازی و بهبود" (optimize and improve), dropping "provide"; also "for everyone" is omitted.
+    - Current: `تنها اطلاعاتی که برای بهینه‌سازی و بهبود %1$s به آنها نیاز دارد را جمع‌آوری کند`
+    - Source: `Mozilla strives to collect only what we need to provide and improve %1$s for everyone.`
+    - Suggest: `تنها اطلاعاتی را که برای ارائه و بهبود %1$s برای همه به آن‌ها نیاز دارد جمع‌آوری کند`
+    - The source says Mozilla collects only what is needed to provide and improve the app for everyone; the translation changes "provide" to "optimize" and drops "for everyone".
+- `preference_performance_block_javascript_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Misspelling "بارگزاری" should be "بارگذاری".
+    - Current: `بارگزاری`
+    - Source: `Pages may load faster, but may also behave unexpectedly`
+    - Suggest: `بارگذاری`
+    - Standard Persian spelling of "loading" is بارگذاری; بارگزاری is a common misspelling.
+- `preference_privacy_notice` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — "Privacy Notice" translated as "نکات حفظ محرمانگی" (privacy tips/points) instead of the legal notice term.
+    - Current: `نکات حفظ محرمانگی`
+    - Source: `Privacy Notice`
+    - Suggest: `اعلامیهٔ حریم خصوصی`
+    - The developer comment says this links to the Focus privacy notice, a legal document; "نکات" means tips/points, not notice.
+- `preference_mozilla_telemetry_summary2` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — "provide and improve" rendered as "بهینه‌سازی و بهبود" (optimize and improve), dropping "provide"; also "for everyone" is omitted.
+    - Current: `تنها اطلاعاتی که برای بهینه‌سازی و بهبود %1$s به آنها نیاز دارد را جمع‌آوری کند`
+    - Source: `Mozilla strives to collect only what we need to provide and improve %1$s for everyone.`
+    - Suggest: `تنها اطلاعاتی را که برای ارائه و بهبود %1$s برای همه به آن‌ها نیاز دارد جمع‌آوری کند`
+    - The source says Mozilla collects only what is needed to provide and improve the app for everyone; the translation changes "provide" to "optimize" and drops "for everyone".
+- `preference_performance_block_javascript_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Misspelling "بارگزاری" should be "بارگذاری".
+    - Current: `بارگزاری`
+    - Source: `Pages may load faster, but may also behave unexpectedly`
+    - Suggest: `بارگذاری`
+    - Standard Persian spelling of "loading" is بارگذاری; بارگزاری is a common misspelling.
+- `preference_privacy_notice` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — "Privacy Notice" translated as "نکات حفظ محرمانگی" (privacy tips/points) instead of the legal notice term.
+    - Current: `نکات حفظ محرمانگی`
+    - Source: `Privacy Notice`
+    - Suggest: `اعلامیهٔ حریم خصوصی`
+    - The developer comment says this links to the Focus privacy notice, a legal document; "نکات" means tips/points, not notice.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -127,11 +147,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 42 |
-| Strings | 2,625 |
-| Missing strings | 162 |
+| Files | 45 |
+| Strings | 2,794 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 3 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -146,28 +166,7 @@ _Nothing retired._
 
 ### Completeness
 
-**162 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — 48
-- `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — 31
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml` — 18
-- `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — 12
-- `mozilla-mobile/android-components/components/feature/app-links/src/main/res/values-fa/strings.xml` — 11
-- `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — 9
-- `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fa/strings.xml` — 7
-- `mozilla-mobile/android-components/components/compose/base/src/main/res/values-fa/strings.xml` — 6
-- `mozilla-mobile/fenix/app/longfox/src/main/res/values-fa/strings.xml` — 6
-- `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-fa/strings.xml` — 4
-- `mozilla-mobile/android-components/components/feature/protection-dashboard/src/main/res/values/strings.xml` — 4
-- `mozilla-mobile/android-components/components/feature/ipprotection/src/main/res/values/strings.xml` — 4
-
-**Files absent from the locale:**
-
-- `mozilla-mobile/android-components/components/feature/ipprotection/src/main/res/values/strings.xml`
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml`
-- `mozilla-mobile/android-components/components/feature/protection-dashboard/src/main/res/values/strings.xml`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -186,9 +185,9 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (139)
+## 3. Open findings (142)
 
-> **Reads as a deliberate edit (8).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (7).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `mozac_browser_errorpages_net_reset_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — First paragraph translates the net-interrupt message instead of "The network link was interrupted while negotiating a connection."
     - Current: `مرورگر با موفقیت متصل شد ، اما هنگام انتقال اطلاعات ، اتصال قطع شد. لطفا دوباره امتحان کنید.`
@@ -220,11 +219,6 @@ _Nothing reported._
     - Source: `Firefox is fast and private`
     - Suggest: `‏Firefox سریع و خصوصی است`
     - The source says Firefox is fast and private; the translation claims it is fast and secure, a different property claim about the product.
-- `feedback_erase_custom_tab` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Singular "Tab's browsing history" rendered as plural "tabs of the browser".
-    - Current: `تاریخچه زبانه‌های مرورگر پاک شده است.`
-    - Source: `Tab’s browsing history has been erased.`
-    - Suggest: `تاریخچهٔ مرور زبانه پاک شده است.`
-    - The source refers to a single custom tab's browsing history; the translation says the history of the browser's tabs (plural), widening the scope of what was erased.
 - `tab_crash_report_description` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — "we never save and cannot restore this tab" rendered as "we cannot save and restore this tab", losing the "never save" assertion.
     - Current: `به عنوان یک مرورگر خصوصی نمی توانیم این زبانه را ذخیره و بازیابی کنیم.`
     - Source: `As a private browser, we never save and cannot restore this tab.`
@@ -236,8 +230,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 60 |
-| 3 | Degraded language (grammar, spelling, terminology) | 66 |
+| 2 | Wrong content (says something other than the English) | 58 |
+| 3 | Degraded language (grammar, spelling, terminology) | 71 |
 | 4 | Cosmetic (typography, spacing) | 13 |
 
 ### A. Functional, markup, variables & plurals
@@ -246,6 +240,11 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `mozac_browser_errorpages_archive_description` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — The placeholder roles are swapped: %2$s is the archive service name (a link), but the translation treats it as a location and inverts the relationship with Internet Archive.
+    - Current: `نسخهٔ قدیمی‌تری از این صفحه را در %2$s از Internet Archive جست‌وجو کند`
+    - Source: `%1$s can look for an earlier version of this page from the Internet Archive’s %2$s.`
+    - Suggest: `می‌تواند با %2$s از Internet Archive به دنبال نسخهٔ قدیمی‌تری از این صفحه بگردد`
+    - Source: "from the Internet Archive’s %2$s" — %2$s is the name of the archive service belonging to the Internet Archive; the translation reads as searching "in %2$s from Internet Archive", garbling the possessive relationship.
 - `mozac_browser_errorpages_file_not_found_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — Third bullet asks about access permissions to the "address" instead of to the requested item.
     - Current: `آیا مجوزهای دسترسی کافی برای دست‌یابی به این نشانی را دارید؟`
     - Source: `{ <ul> } { <li> }Could the item have been renamed, removed, or relocated?{ </li> } { <li> }Is there a spelling, capitalization, or other typographical error in the address?{ </li> } { <li> }Do you have sufficient access…`
@@ -381,6 +380,11 @@ _Nothing in this category._
     - Source: `Prevent this page from creating additional dialogs`
     - Suggest: `از ایجاد محاوره‌های بیشتر توسط این صفحه جلوگیری شود`
     - The source refers to additional dialogs, not new windows; the neighbouring strings use separate wording for windows. Also a trailing period was added that the source lacks.
+- `webauthn_related_origin_use_message` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fa/strings.xml` — The translation says "use %2$s's passkey" instead of "use a passkey for %2$s".
+    - Current: `می‌خواهد از کلید عبور %2$s استفاده کند`
+    - Source: `%1$s wants to use a passkey for %2$s.`
+    - Suggest: `می‌خواهد از یک کلید عبور برای %2$s استفاده کند`
+    - Source is "wants to use a passkey for %2$s"; the parallel create string correctly uses «برای %2$s», but here the preposition is dropped, turning it into a possessive construction.
 - `mozac_feature_sitepermissions_notification_permission_rationale_dialog_message` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-fa/strings.xml` — Mistranslation: the source asks the user to allow notifications in the app, not to let the app receive them.
     - Current: `باید به %1$s اجازه دهید آنها را دریافت کند`
     - Source: `You’ll need to allow notifications in %1$s to receive them from this website.`
@@ -496,6 +500,11 @@ _Nothing in this category._
     - Source: `%1$d GB limit reached`
     - Suggest: `به سقف %1$d گیگابایت رسیدید`
     - The source says the user has reached the %1$d GB limit; "سقف ... به پایان رسید" says the limit itself ended, which is not the source meaning.
+- `lens_camera_loading_status` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "Looking this up" is rendered as a first-person "I am looking for this" rather than a neutral status.
+    - Current: `به دنبال این هستم`
+    - Source: `Looking this up`
+    - Suggest: `در حال جست‌وجوی این مورد`
+    - The source is an impersonal progress status shown under the image; the Persian uses first-person singular, making the app speak as "I", which is not the register used elsewhere (e.g. "در حال بررسی بایگانی").
 - `microsurvey_describe_your_experience_title` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "Which best describes your experience" is rendered as "describes your experience better", losing the superlative selection sense.
     - Current: `کدام گزینه تجربهٔ شما را تا کنون بهتر توصیف می‌کند؟`
     - Source: `Help us improve Firefox. Which best describes your experience so far?`
@@ -531,22 +540,7 @@ _Nothing in this category._
     - Source: `Allows Mozilla to install and run studies`
     - Suggest: `اجازه به Mozilla برای نصب و اجرای مطالعات`
     - Source: "Allows Mozilla to install and run studies"; the related title preference_experiments_2 translates "Studies" as "مطالعات" only.
-- `preference_option_autoplay_allowed_wifi_only2` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — The translation drops "only" applying to cellular data and misplaces it, saying "block audio and video only on mobile internet" vs. source "Block audio and video on cellular data only".
-    - Current: `مسدود کردن صدا و تصویر فقط روی اینترنت همراه`
-    - Source: `Block audio and video on cellular data only`
-    - Suggest: `مسدود کردن صدا و تصویر فقط روی داده‌های تلفن همراه`
-    - Minor: source means blocking occurs only on cellular data; the Persian ordering is acceptable, but "اینترنت همراه" vs "داده تلفن همراه" terminology.
-- `preferences_inactive_tabs_toggle_title` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "Inactive tabs" is translated as "broken/out-of-order tabs".
-    - Current: `زبانه‌های ازکار افتاده`
-    - Source: `Inactive tabs`
-    - Suggest: `زبانه‌های غیرفعال`
-    - «از کار افتاده» means broken down/defunct, not inactive; the feature refers to tabs the user has not used recently.
-- `preferences_pbm_lock_screen_summary_3` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "sharing" is rendered as "screen sharing", narrowing/changing what the feature blocks.
-    - Current: `اشتراک‌گذاری صفحه`
-    - Source: `View tabs with your fingerprint, PIN, or face unlock. Turning this on also prevents screen capture and sharing.`
-    - Suggest: `اشتراک‌گذاری`
-    - The source says "prevents screen capture and sharing"; the target adds "صفحه" (screen) to sharing, asserting it blocks screen sharing specifically.
-- _…and 22 more; see `state/` for the full list._
+- _…and 21 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -670,6 +664,21 @@ _Nothing in this category._
     - Source: `{ <p> }%1$s puts you in control.{ </p> } { <p> }Use it as a private browser: { <ul> } { <li> }Search and browse right in the app{ </li> } { <li> }Block trackers (or update settings to allow trackers){ </li> } { <li> }Er…`
     - Suggest: `مأموریت ما ترویج اینترنتی سالم و باز است`
     - "تا" is not grammatical here; the sentence "Our mission is to foster a healthy, open Internet" needs a noun/infinitive phrase.
+- `content_description_reload` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Misspelling "بارگزاری" should be "بارگذاری".
+    - Current: `بارگزاری مجدد وب‌سایت`
+    - Source: `Reload website`
+    - Suggest: `بارگذاری مجدد وب‌سایت`
+    - Standard Persian spelling of "loading" is بارگذاری.
+- `content_description_stop` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Misspelling "بارگزاری" should be "بارگذاری".
+    - Current: `توقف بارگزاری وب‌سایت`
+    - Source: `Stop loading website`
+    - Suggest: `توقف بارگذاری وب‌سایت`
+    - Standard Persian spelling of "loading" is بارگذاری.
+- `firstrun_shortcut_title` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Ungrammatical phrase: object marker "را" misplaced, making "افزودن میان‌برها را به صفحه خانگی شما" incorrect Persian.
+    - Current: `افزودن میان‌برها را به صفحه خانگی شما`
+    - Source: `Add shortcuts to your home screen`
+    - Suggest: `افزودن میان‌بر به صفحهٔ خانگی`
+    - The source is "Add shortcuts to your home screen"; the Persian noun-phrase title cannot take the object marker "را" after the verbal noun, producing broken grammar.
 - `notification_action_erase_and_open` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Imperative verb form mixed with noun form: "حذف و باز کن" is inconsistent and ungrammatical as a notification action label.
     - Current: `حذف و باز کن`
     - Source: `Erase and Open`
@@ -685,11 +694,6 @@ _Nothing in this category._
     - Source: `You have disabled content blocking for these websites.`
     - Suggest: `برای این سایت‌ها`
     - Source says "for these websites" (plural); the translation uses the singular "این سایت".
-- `preference_performance_block_javascript_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Spelling error: "غیر متنظره" should be "غیرمنتظره".
-    - Current: `غیر متنظره`
-    - Source: `Pages may load faster, but may also behave unexpectedly`
-    - Suggest: `غیرمنتظره`
-    - Typo — letters transposed in منتظره ("unexpected").
 - `tab_crash_report_description` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Missing zero-width non-joiner in "نمی توانیم" (space instead of ZWNJ).
     - Current: `نمی توانیم`
     - Source: `As a private browser, we never save and cannot restore this tab.`
@@ -698,6 +702,16 @@ _Nothing in this category._
 
 ### D. Terminology, register & consistency
 
+- `mozac_feature_addons_permissions_clipboard_read_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — "clipboard" is rendered as «تخته‌برش» (cutting board) instead of the standard Persian term «تخته‌گیره»/«بریده‌دان».
+    - Current: `دریافت داده از تخته‌برش.`
+    - Source: `Get data from the clipboard.`
+    - Suggest: `دریافت داده از تخته‌گیره.`
+    - The established Mozilla fa term for "clipboard" is تخته‌گیره; تخته‌برش means a cutting board and is not the UI term.
+- `mozac_feature_addons_permissions_clipboard_write_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — "clipboard" is rendered as «تخته‌برش» (cutting board) instead of the standard Persian term «تخته‌گیره».
+    - Current: `وارد کردن داده در تخته‌برش.`
+    - Source: `Input data to the clipboard.`
+    - Suggest: `وارد کردن داده در تخته‌گیره.`
+    - The established Mozilla fa term for "clipboard" is تخته‌گیره; تخته‌برش means a cutting board and is not the UI term.
 - `mozac_feature_addons_permissions_declarative_net_request_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — Permission description rendered as an imperative command to the browser instead of a noun/gerund phrase like the parallel strings.
     - Current: `محتوا را در هر صفحه‌ای مسدود کن`
     - Source: `Block content on any page`
@@ -753,6 +767,11 @@ _Nothing in this category._
     - Source: `Enhanced Tracking Protection is off for these websites`
     - Suggest: `محافظت پیشرفته در برابر ردیابی برای این وب‌سایت‌ها خاموش است`
     - The source names the feature "Enhanced Tracking Protection"; the translation renders it as plain "Tracking Protection", inconsistent with the feature name.
+- `lens_camera_upload_failed` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — First-person phrasing ("I couldn’t get results") instead of the impersonal source wording.
+    - Current: `نتوانستم از Google Lens نتیجه بگیرم`
+    - Source: `Couldn’t get results from Google Lens`
+    - Suggest: `دریافت نتیجه از Google Lens ممکن نشد`
+    - Source "Couldn’t get results from Google Lens" is impersonal; other error strings in the batch use impersonal forms ("دسترسی به سرویس بایگانی ممکن نشد"), so the first-person verb breaks register and consistency.
 - `logins_warning_dialog_set_up_now` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "Set up now" is rendered with an unnatural, overly long phrase for a dialog button.
     - Current: `راه‌اندازی در همین لحظه`
     - Source: `Set up now`
@@ -768,11 +787,6 @@ _Nothing in this category._
     - Source: `Common myths about private browsing`
     - Suggest: `باورهای نادرست و رایج دربارهٔ مرور ناشناس`
     - private_browsing_a11y_session_announcement translates "Private browsing session" as «نشست مرور ناشناس»; the same feature name should be consistent.
-- `notification_browsing_session_channel_name` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — "Private browsing" rendered as "anonymous browsing" (ناشناس) instead of the standard خصوصی.
-    - Current: `نشستِ مرور ناشناس`
-    - Source: `Private browsing session`
-    - Suggest: `نشستِ مرور خصوصی`
-    - Elsewhere in the batch "private" is translated as خصوصی (e.g. onboarding_first_screen_subtitle); ناشناس means "anonymous/unknown" and is inconsistent terminology for Private browsing.
 - `onboarding_first_screen_privacy_notice_link_2` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — "Privacy Notice" is rendered as "privacy tips/points" instead of the legal document name.
     - Current: `نکات حفظ حریم خصوصی`
     - Source: `Privacy Notice`
@@ -862,8 +876,14 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (5)
+### Fixed to date (11)
 
+- `download_firefox` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-07
+- `feedback_erase_custom_tab` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-07
+- `notification_browsing_session_channel_name` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-07
+- `preference_mozilla_telemetry_summary2` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-07
+- `preference_performance_block_javascript_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-07
+- `preference_privacy_notice` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-07
 - `custom_tab_copy_url_action` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-05
 - `preference_exceptions` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-05
 - `preference_remote_debugging` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-05

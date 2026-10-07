@@ -1,15 +1,15 @@
 # Firefox for Android, Focus, and the shared Android Components — l10n QA
 
-- **Generated:** 2026-10-05
+- **Generated:** 2026-10-07
 - **Locales tracked:** 22 (22 with recorded state)
-- **Findings:** 2,950 raised, 282 fixed (9%), 2,331 open
+- **Findings:** 2,959 raised, 288 fixed (9%), 2,334 open
 - **Closed by a person:** 24 dismissed, 68 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
 ## Read these first
 
-### Reads as a deliberate edit (8)
+### Reads as a deliberate edit (7)
 
 The translation makes the product assert something the en-US never said. Nothing here says the change was intended — that cannot be read off the text, which is exactly the problem, because a user cannot read it off either.
 
@@ -37,10 +37,6 @@ The translation makes the product assert something the en-US never said. Nothing
     - "private" is rendered as "امن" (secure/safe) instead of "خصوصی" (private).
     - Current: `‏Firefox سریع و امن است`
     - Suggest: `‏Firefox سریع و خصوصی است`
-- **`fa`** `feedback_erase_custom_tab` — `mozilla-mobile/focus-android/app/src/main/res/values/strings.xml`
-    - Singular "Tab's browsing history" rendered as plural "tabs of the browser".
-    - Current: `تاریخچه زبانه‌های مرورگر پاک شده است.`
-    - Suggest: `تاریخچهٔ مرور زبانه پاک شده است.`
 - **`fa`** `tab_crash_report_description` — `mozilla-mobile/focus-android/app/src/main/res/values/strings.xml`
     - "we never save and cannot restore this tab" rendered as "we cannot save and restore this tab", losing the "never save" assertion.
     - Current: `به عنوان یک مرورگر خصوصی نمی توانیم این زبانه را ذخیره و بازیابی کنیم.`
@@ -50,7 +46,7 @@ The translation makes the product assert something the en-US never said. Nothing
 
 _Nothing open at impact 1._
 
-### Wrong content — impact 2 (1277)
+### Wrong content — impact 2 (1275)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/android.md`.
 
@@ -63,7 +59,7 @@ Too many to list here; the per-locale counts are in the table below and every on
 | [es-AR](es-AR/android.md) | 2026-10-05 | incremental | `d82f3577` | 2,787 | 0 | **122** | 44 | 0 | 0 | 0 |
 | [es-ES](es-ES/android.md) | 2026-10-05 | incremental | `d82f3577` | 2,737 | 50 | **120** | 52 | 1 | 0 | 0 |
 | [es-MX](es-MX/android.md) | 2026-10-05 | incremental | `d82f3577` | 2,760 | 27 | **156** | 84 | 1 | 0 | 0 |
-| [fa](fa/android.md) | 2026-10-05 | incremental | `d82f3577` | 2,625 | 162 | **139** | 60 | 5 | 0 | 0 |
+| [fa](fa/android.md) | 2026-10-07 | incremental | `74db2d1b` | 2,794 | 0 | **142** | 58 | 11 | 0 | 0 |
 | [fr](fr/android.md) | 2026-10-05 | incremental | `d82f3577` | 2,787 | 0 | **76** | 53 | 5 | 0 | 0 |
 | [fy-NL](fy-NL/android.md) | 2026-10-05 | incremental | `d82f3577` | 2,752 | 35 | **167** | 59 | 0 | 0 | 0 |
 | [hi-IN](hi-IN/android.md) | 2026-10-05 | incremental | `d82f3577` | 2,666 | 121 | **26** | 6 | 213 | 8 | 0 |
