@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.venv/bin/python lib/run.py:*)",
+      "Bash(.venv/bin/python lib/summary.py:*)",
+      "Bash(.venv/bin/python firefox/tools/selftest.py:*)",
+      "Bash(.venv/bin/python android/tools/selftest.py:*)",
+      "Bash(uv run lib/run.py:*)",
+      "Bash(uv run lib/summary.py:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)"
+    ]
+  }
+}

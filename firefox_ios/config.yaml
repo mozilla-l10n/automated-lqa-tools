@@ -100,3 +100,10 @@ locales:
   - sl
   - tr
   - zh-CN
+
+# Where these strings live in Pontoon, for lib/suggest.py. Pontoon holds the
+# whole locale as one resource and keys each string by [group, id].
+pontoon:
+  projects:
+    - slug: firefox-for-ios
+      resource: firefox-ios.xliff

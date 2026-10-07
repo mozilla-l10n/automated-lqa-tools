@@ -108,3 +108,13 @@ check_overrides:
 # findings. Unadapted access keys and a house quote style are choices for the
 # locale team to make once, not hundreds of bugs.
 systemic_threshold: 25
+
+# Where these strings live in Pontoon, for lib/suggest.py. First glob that
+# matches the reference path wins; that path is also the resource path. The
+# enterprise files are synced from another repository and localized in a
+# project of their own.
+pontoon:
+  projects:
+    - slug: firefox-enterprise
+      paths: ["*/enterprise/*", "*-enterprise.ftl"]
+    - slug: firefox

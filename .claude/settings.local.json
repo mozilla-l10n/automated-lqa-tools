@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.venv/bin/python *)",
+      "Bash(awk -F: '{s+=$2} END {print s}')",
+      "Bash(node site/selftest.mjs)",
+      "Bash(gh run *)",
+      "Bash(echo \"exit=$?\")",
+      "Bash(git check-ignore *)",
+      "Bash(echo \"exit=$? \\(expect 1, with a clear message\\)\")",
+      "Bash(set -e)",
+      "Bash(gh api *)",
+      "Bash(awk -F'\\\\t' '$1==\"review \\(fr\\)\" && \\($2==\"Check out firefoxios-l10n\" || $2==\"Cache the upstream clones\"\\)' /tmp/iosrun.log)",
+      "Bash(awk -F'\\\\t' '$1==\"propose\" && \\($2==\"Apply them\"||$2==\"Commit\"\\)' /tmp/iosrun.log)",
+      "Bash(awk -F'\\\\t' '$1==\"propose\"' /tmp/iosrun.log)",
+      "Bash(git fetch *)",
+      "Bash(git rebase *)",
+      "Bash(echo \"clean=$?\")",
+      "Bash(git add *)",
+      "Bash(GIT_EDITOR=true git rebase --continue)",
+      "Bash(echo \"=== exit $? ===\")",
+      "Read(//Users/flodolo/github/android-l10n/**)",
+      "Read(//Users/flodolo/github/android-l10n/mozilla-mobile/fenix/app/src/main/res/**)"
+    ]
+  }
+}

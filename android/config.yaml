@@ -107,3 +107,13 @@ locales:
   - sl
   - tr
   - zh-CN
+
+# Where these strings live in Pontoon, for lib/suggest.py. First glob that
+# matches the reference path wins; that path is also the resource path.
+# Android Components is localized inside the Firefox for Android project.
+pontoon:
+  projects:
+    - slug: focus-for-android
+      paths: ["mozilla-mobile/focus-android/*"]
+    - slug: firefox-for-android
+      paths: ["mozilla-mobile/fenix/*", "mozilla-mobile/android-components/*"]
