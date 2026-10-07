@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
-| **Previous run** | 2026-09-21 @ `e8bad3200f89` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
+| **Previous run** | 2026-09-28 @ `65850771ebc2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 40 of 2,783 |
+| **Strings reviewed this run** | 5 of 2,787 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for es-AR: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `browser_toolbar_live_page_toast` — `mozilla-mobile/fenix/app/src/main/res/values-es-rAR/strings.xml` — "Pagina" is missing its accent; should be "Página".
+    - Current: `Pagina actual`
+    - Source: `Live page`
+    - Suggest: `Página actual`
+    - Spanish requires the accent on "Página"; "Pagina" is a different word/misspelling.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,7 +49,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 45 |
-| Strings | 2,783 |
+| Strings | 2,787 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -73,7 +77,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 12, `straight-double` 3 | **curly-double** |
 | ellipsis | `char` 21 | **char** |
-| inverted marks | `open-question` 106, `open-exclamation` 26 | **open-question** |
+| inverted marks | `open-question` 107, `open-exclamation` 26 | **open-question** |
 
 ---
 
@@ -83,14 +87,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (121)
+## 3. Open findings (122)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 44 |
-| 3 | Degraded language (grammar, spelling, terminology) | 70 |
+| 3 | Degraded language (grammar, spelling, terminology) | 71 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
 ### A. Functional, markup, variables & plurals
@@ -377,6 +381,11 @@ _Nothing in this category._
     - Source: `Item Menu for %s`
     - Suggest: `Menú del ítem para %s`
     - The source "Item Menu for %s" is a noun-noun compound; Spanish cannot juxtapose nouns this way, it needs "Menú de ítem/del ítem". This is a screen-reader content description, so clarity matters.
+- `browser_toolbar_live_page_toast` — `mozilla-mobile/fenix/app/src/main/res/values-es-rAR/strings.xml` — "Pagina" is missing its accent; should be "Página".
+    - Current: `Pagina actual`
+    - Source: `Live page`
+    - Suggest: `Página actual`
+    - Spanish requires the accent on "Página"; "Pagina" is a different word/misspelling.
 - `create_collection_deselect_all` — `mozilla-mobile/fenix/app/src/main/res/values-es-rAR/strings.xml` — "Dejar deseleccionar todo" is ungrammatical for "Deselect all".
     - Current: `Dejar deseleccionar todo`
     - Source: `Deselect all`

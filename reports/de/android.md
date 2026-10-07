@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
-| **Previous run** | 2026-09-21 @ `e8bad3200f89` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
+| **Previous run** | 2026-09-28 @ `65850771ebc2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 40 of 2,783 |
+| **Strings reviewed this run** | 5 of 2,787 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for de: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `preferences_category_sync_controls` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Category heading "Sync" rendered as a verb ("Synchronisieren") instead of the noun used elsewhere ("Synchronisation").
-    - Current: `Synchronisieren`
-    - Source: `Sync`
-    - Suggest: `Synchronisation`
-    - The comment says it is a preference category title, short for "Synchronization"; the noun form is used in the neighbouring strings ("Konto und Synchronisation"), so the imperative verb is inconsistent terminology.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -38,12 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `sync_no_devices_available_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "mit ihnen synchronisieren" uses lowercase "ihnen" and mistranslates "syncing to this account".
-    - Current: `Alle Geräte, die mit diesem Konto angemeldet sind und mit ihnen synchronisieren, werden hier angezeigt.`
-    - Suggest: `Alle Geräte, die bei diesem Konto angemeldet sind und damit synchronisieren, werden hier angezeigt.`
-    - The source says devices signed in and syncing to this account; "mit ihnen" (plural pronoun, lowercase) refers to nothing and is grammatically wrong — it should refer back to the account (singular).
+_Nothing retired._
 
 ---
 
@@ -52,7 +45,7 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 45 |
-| Strings | 2,783 |
+| Strings | 2,787 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |

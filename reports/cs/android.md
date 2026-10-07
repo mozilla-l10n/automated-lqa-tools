@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
-| **Previous run** | 2026-09-21 @ `e8bad3200f89` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
+| **Previous run** | 2026-09-28 @ `65850771ebc2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 9 of 2,752 |
+| **Strings reviewed this run** | 35 of 2,787 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,26 +18,9 @@ Also for cs: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (0)
 
-- `mozac_feature_listentopage_notification_skip_back` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-cs/strings.xml` — `mozac_feature_listentopage_notification_skip_back` is missing the ['many'] plural form
-    - Current: `{$quantity ->} [one] Zpět %1$d sekunda [few] Zpět %1$d sekundy [other] Zpět %1$d sekund`
-    - Source: `{$quantity ->} [one] Back %1$d second [other] Back %1$d seconds`
-    - This locale uses ['few', 'many', 'one', 'other'] in most of its plurals, and en-US pluralizes this string. The catch-all variant will be shown instead, giving the wrong grammatical form.
-- `mozac_feature_listentopage_notification_skip_forward` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-cs/strings.xml` — `mozac_feature_listentopage_notification_skip_forward` is missing the ['many'] plural form
-    - Current: `{$quantity ->} [one] Vpřed o %1$d sekundu [few] Vpřed o %1$d sekundy [other] Vpřed o %1$d sekund`
-    - Source: `{$quantity ->} [one] Forward %1$d second [other] Forward %1$d seconds`
-    - This locale uses ['few', 'many', 'one', 'other'] in most of its plurals, and en-US pluralizes this string. The catch-all variant will be shown instead, giving the wrong grammatical form.
-- `mozac_feature_listentopage_notification_skip_back` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-cs/strings.xml` — The "one" variant uses the nominative "sekunda" without the preposition "o", breaking grammatical agreement and being inconsistent with the parallel forward string.
-    - Current: `Zpět %1$d sekunda`
-    - Source: `{$quantity ->} [one] Back %1$d second [other] Back %1$d seconds`
-    - Suggest: `Zpět o %1$d sekundu`
-    - The source means moving back by N seconds; Czech requires "o %1$d sekundu" (accusative), as the sibling string mozac_feature_listentopage_notification_skip_forward correctly does.
-- `mozac_feature_listentopage_notification_skip_back` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-cs/strings.xml` — The few/other variants omit the preposition "o" used in the corresponding forward string, leaving inconsistent phrasing.
-    - Current: `Zpět %1$d sekundy`
-    - Source: `{$quantity ->} [one] Back %1$d second [other] Back %1$d seconds`
-    - Suggest: `Zpět o %1$d sekundy`
-    - The parallel string uses "Vpřed o %1$d sekundy"; "Zpět %1$d sekundy" is ungrammatical/inconsistent for expressing a skip amount.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -51,12 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `sync_no_devices_available` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — Gender agreement error: "žádné zařízení" (neuter plural) requires "nejsou k dispozici žádná zařízení".
-    - Current: `K dispozici nejsou žádné zařízení`
-    - Suggest: `K dispozici nejsou žádná zařízení`
-    - "zařízení" is neuter; the plural determiner must be "žádná", not the feminine/masculine-inanimate "žádné".
+_Nothing retired._
 
 ---
 
@@ -65,8 +45,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 45 |
-| Strings | 2,752 |
-| Missing strings | 31 |
+| Strings | 2,787 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -83,12 +63,7 @@ _Nothing to re-read._
 
 ### Completeness
 
-**31 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-cs/strings.xml` — 16
-- `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — 15
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 

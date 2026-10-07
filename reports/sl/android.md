@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
-| **Previous run** | 2026-09-21 @ `e8bad3200f89` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
+| **Previous run** | 2026-09-28 @ `65850771ebc2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,736 |
+| **Strings reviewed this run** | 36 of 2,772 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -44,11 +44,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 44 |
-| Strings | 2,736 |
-| Missing strings | 47 |
+| Files | 45 |
+| Strings | 2,772 |
+| Missing strings | 15 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,17 +63,12 @@ _Nothing retired._
 
 ### Completeness
 
-**47 strings** are not translated yet, concentrated in:
+**15 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — 20
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml` — 18
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-sl/strings.xml` — 7
 - `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-sl/strings.xml` — 5
-- `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-sl/strings.xml` — 3
+- `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — 2
 - `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-sl/strings.xml` — 1
-
-**Files absent from the locale:**
-
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -86,7 +81,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | quotes | `straight-double` 14, `curly-double` 4 | **straight-double** |
 | ellipsis | `char` 21 | **char** |
 | dash | `en` 5 | **en** |
-| register | `informal` 4, `formal` 93 | **formal** |
+| register | `informal` 4, `formal` 94 | **formal** |
 
 ---
 

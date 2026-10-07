@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
-| **Previous run** | 2026-09-21 @ `e8bad3200f89` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
+| **Previous run** | 2026-09-28 @ `65850771ebc2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 9 of 2,752 |
+| **Strings reviewed this run** | 8 of 2,760 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for es-MX: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `mozac_browser_errorpages_archive_description` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-es-rMX/strings.xml` — "an earlier version" is rendered as "una versión archivada", dropping the notion of an earlier/previous version.
-    - Current: `puede buscar una versión archivada de esta página`
-    - Source: `%1$s can look for an earlier version of this page from the Internet Archive’s %2$s.`
-    - Suggest: `puede buscar una versión anterior de esta página`
-    - The en-US says the app looks for an earlier (previous) version of the page from the Internet Archive; "archivada" states a different fact about which version is retrieved.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 45 |
-| Strings | 2,752 |
-| Missing strings | 31 |
+| Strings | 2,760 |
+| Missing strings | 27 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -67,10 +63,10 @@ _Nothing retired._
 
 ### Completeness
 
-**31 strings** are not translated yet, concentrated in:
+**27 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-es-rMX/strings.xml` — 16
-- `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — 15
+- `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — 16
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-es-rMX/strings.xml` — 11
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

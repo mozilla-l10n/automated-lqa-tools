@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
-| **Previous run** | 2026-09-21 @ `e8bad3200f89` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
+| **Previous run** | 2026-09-28 @ `65850771ebc2` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 2,733 |
 
@@ -34,12 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `sync_no_devices_available_description` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "Any devices ... will appear here" is rendered as "所有…设备都将显示在这里", asserting all such devices are shown rather than stating that devices which sign in and sync will appear.
-    - Current: `所有已登录并与此账户同步的设备都将显示在这里。`
-    - Suggest: `任何登录此账户并同步的设备都会显示在这里。`
-    - The source is a conditional statement about future devices; "所有…都将显示" changes it into a blanket claim.
+_Nothing retired._
 
 ---
 
@@ -49,7 +46,7 @@ _Nothing to re-read._
 |---|---|
 | Files | 43 |
 | Strings | 2,733 |
-| Missing strings | 50 |
+| Missing strings | 54 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 2 |
 | Files with no en-US counterpart | 0 |
@@ -66,9 +63,9 @@ _Nothing to re-read._
 
 ### Completeness
 
-**50 strings** are not translated yet, concentrated in:
+**54 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — 28
+- `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — 32
 - `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml` — 18
 - `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-zh-rCN/strings.xml` — 3
 - `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 1

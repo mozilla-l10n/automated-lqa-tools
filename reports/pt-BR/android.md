@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-09-28 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `65850771ebc2` |
-| **Previous run** | 2026-09-21 @ `e8bad3200f89` |
+| **Generated** | 2026-10-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
+| **Previous run** | 2026-09-28 @ `65850771ebc2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 9 of 2,752 |
+| **Strings reviewed this run** | 35 of 2,787 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for pt-BR: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `mozac_feature_listentopage_notification_playback_speed_0_25` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-pt-rBR/strings.xml` — Source says the rate is 75 percent slower (0.25x); target omits nothing but mislabels… actually the rate value matches, see rationale.
+    - Current: `Reprodução 75 por cento mais lenta`
+    - Source: `Playback rate 75 percent slower`
+    - Suggest: `Velocidade de reprodução 75 por cento mais lenta`
+    - Minor: source "Playback rate" is rendered as just "Reprodução" while the sibling strings use "Velocidade de reprodução"; inconsistent terminology on the same surface.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,12 +38,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `sync_no_devices_available_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "Any devices signed in and syncing to this account will appear here" is translated as "Todos os dispositivos ... aparecem aqui", changing the conditional future statement into a present-tense assertion about all devices.
-    - Current: `Todos os dispositivos conectados e sincronizados com esta conta aparecem aqui.`
-    - Suggest: `Qualquer dispositivo conectado e sincronizando com esta conta aparecerá aqui.`
-    - The source states that any device signed in and syncing will appear here; the translation asserts that all such devices already appear here.
+_Nothing retired._
 
 ---
 
@@ -48,8 +49,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 45 |
-| Strings | 2,752 |
-| Missing strings | 31 |
+| Strings | 2,787 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -66,12 +67,7 @@ _Nothing to re-read._
 
 ### Completeness
 
-**31 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-pt-rBR/strings.xml` — 16
-- `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — 15
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -81,7 +77,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 13, `straight-double` 2 | **curly-double** |
 | ellipsis | `char` 21 | **char** |
-| register | `informal` 227 | **informal** |
+| register | `informal` 231 | **informal** |
 
 ---
 
@@ -91,13 +87,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (116)
+## 3. Open findings (117)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 69 |
+| 2 | Wrong content (says something other than the English) | 70 |
 | 3 | Degraded language (grammar, spelling, terminology) | 38 |
 | 4 | Cosmetic (typography, spacing) | 9 |
 
@@ -132,6 +128,11 @@ _Nothing in this category._
     - Source: `Importing bookmarks`
     - Suggest: `Importando favoritos`
     - The source is a present-participle title of a loading dialog indicating the action in progress; "Importação de favoritos" loses the in-progress sense.
+- `mozac_feature_listentopage_notification_playback_speed_0_25` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-pt-rBR/strings.xml` — Source says the rate is 75 percent slower (0.25x); target omits nothing but mislabels… actually the rate value matches, see rationale.
+    - Current: `Reprodução 75 por cento mais lenta`
+    - Source: `Playback rate 75 percent slower`
+    - Suggest: `Velocidade de reprodução 75 por cento mais lenta`
+    - Minor: source "Playback rate" is rendered as just "Reprodução" while the sibling strings use "Velocidade de reprodução"; inconsistent terminology on the same surface.
 - `mozac_feature_prompts_suggest_strong_password_description_3` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-pt-rBR/strings.xml` — The future tense "It’ll be saved" is rendered as present "Ela é salva".
     - Current: `Ela é salva na sua conta para uso futuro.`
     - Source: `Protect your account by using a strong, randomly generated password. It’ll be saved into your account for future use.`
@@ -402,12 +403,7 @@ _Nothing in this category._
     - Source: `Navigate back`
     - Suggest: `Voltar`
     - This is the back button on the Stories screen top app bar, not a web page navigation; the source is simply "Navigate back".
-- `studies_active` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Section title "Active" (list of active studies) translated as "Ativado" (enabled), the same wording used for the on/off state string.
-    - Current: `Ativado`
-    - Source: `Active`
-    - Suggest: `Ativos`
-    - Per the developer comment this is the title of the section listing active studies, not an on/off state; "Ativado" duplicates studies_on and misrepresents the plural section heading.
-- _…and 11 more; see `state/` for the full list._
+- _…and 12 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

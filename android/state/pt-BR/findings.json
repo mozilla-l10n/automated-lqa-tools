@@ -240,6 +240,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "Reprodução 75 por cento mais lenta",
+  "dismissed_because": "",
+  "fid": "e24874e52de5",
+  "file": "mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml",
+  "first_seen": "2026-10-05",
+  "impact": 2,
+  "last_seen": "2026-10-05",
+  "locale": "pt-BR",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "Minor: source \"Playback rate\" is rendered as just \"Reprodução\" while the sibling strings use \"Velocidade de reprodução\"; inconsistent terminology on the same surface.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "ef83b4c5",
+  "string_id": "mozac_feature_listentopage_notification_playback_speed_0_25",
+  "suggest": "Velocidade de reprodução 75 por cento mais lenta",
+  "summary": "Source says the rate is 75 percent slower (0.25x); target omits nothing but mislabels… actually the rate value matches, see rationale.",
+  "suppressed_by": ""
+ },
+ {
   "category": "C",
   "check": "llm",
   "current": "Toque para abrir a aba que usa seu microfone e câmera.",
@@ -680,7 +704,7 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-09-28",
+  "last_seen": "2026-10-05",
   "locale": "pt-BR",
   "origin": {},
   "rationale": "The locale's quote convention is `curly-double` (13 occurrences).",
@@ -2070,7 +2094,7 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-09-28",
+  "last_seen": "2026-10-05",
   "locale": "pt-BR",
   "origin": {},
   "rationale": "The locale's quote convention is `curly-double` (13 occurrences).",
