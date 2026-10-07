@@ -1,8 +1,8 @@
 # Firefox for iOS — l10n QA
 
-- **Generated:** 2026-10-05
+- **Generated:** 2026-10-07
 - **Locales tracked:** 21 (21 with recorded state)
-- **Findings:** 3,185 raised, 159 fixed (4%), 1,842 open
+- **Findings:** 3,187 raised, 159 fixed (4%), 1,844 open
 - **Closed by a person:** 21 dismissed, 52 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
@@ -155,7 +155,7 @@ The value does not render as intended: a blank string, broken markup, a variable
     - Suggest: `پاک‌سازی داده‌ها`
 - _…and 1 more, in the per-locale reports linked below._
 
-### Wrong content — impact 2 (912)
+### Wrong content — impact 2 (913)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/firefox_ios.md`.
 
@@ -168,7 +168,7 @@ Too many to list here; the per-locale counts are in the table below and every on
 | [es-AR](es-AR/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,969 | 0 | **101** | 43 | 1 | 0 | 0 |
 | [es-ES](es-ES/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,922 | 47 | **63** | 33 | 0 | 0 | 0 |
 | [es-MX](es-MX/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,969 | 0 | **127** | 65 | 1 | 0 | 0 |
-| [fa](fa/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,969 | 0 | **460** | 232 | 38 | 0 | 0 |
+| [fa](fa/firefox_ios.md) | 2026-10-07 | incremental | `e7f33082` | 1,984 | 0 | **462** | 233 | 38 | 0 | 0 |
 | [fr](fr/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,969 | 0 | **47** | 29 | 1 | 0 | 0 |
 | [hi-IN](hi-IN/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,950 | 19 | **17** | 14 | 79 | 0 | 0 |
 | [hu](hu/firefox_ios.md) | 2026-10-05 | incremental | `ef278c60` | 1,969 | 0 | **94** | 40 | 0 | 0 | 0 |
