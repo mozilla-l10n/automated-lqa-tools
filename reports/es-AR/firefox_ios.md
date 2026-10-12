@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
-| **Previous run** | 2026-09-28 @ `76fd90c3d050` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
+| **Previous run** | 2026-10-05 @ `ef278c60f343` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,969 |
+| **Strings reviewed this run** | 17 of 1,986 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for es-AR: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `NativeErrorPage.GenericError.Description.v158` — `es-AR/firefox-ios.xliff` — Uses "usted" forms (Verifique, su, intente) while the rest of the es-AR localization uses voseo/tuteo.
+    - Current: `Verifique la configuración de su conexión e intente nuevamente.`
+    - Source: `The site may be temporarily unavailable, it may have moved to a different address, or your firewall or proxy may be blocking the connection.  Check your connection settings and try again.`
+    - Suggest: `Verificá la configuración de tu conexión e intentá nuevamente.`
+    - es-AR established form of address is voseo (e.g., "Mantenete", "Conseguí", "Obtené", "tu informe"); this string switches to the formal "usted" register.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,7 +49,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,969 |
+| Strings | 1,986 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -81,7 +85,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (101)
+## 3. Open findings (102)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -97,7 +101,7 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 43 |
-| 3 | Degraded language (grammar, spelling, terminology) | 55 |
+| 3 | Degraded language (grammar, spelling, terminology) | 56 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
@@ -502,6 +506,11 @@ _Nothing in this category._
     - Source: `Hide advanced`
     - Suggest: `Ocultar detalles avanzados`
     - The button hides the advanced information section; "avanzadas" has no referent in Spanish here.
+- `NativeErrorPage.GenericError.Description.v158` — `es-AR/firefox-ios.xliff` — Uses "usted" forms (Verifique, su, intente) while the rest of the es-AR localization uses voseo/tuteo.
+    - Current: `Verifique la configuración de su conexión e intente nuevamente.`
+    - Source: `The site may be temporarily unavailable, it may have moved to a different address, or your firewall or proxy may be blocking the connection.  Check your connection settings and try again.`
+    - Suggest: `Verificá la configuración de tu conexión e intentá nuevamente.`
+    - es-AR established form of address is voseo (e.g., "Mantenete", "Conseguí", "Obtené", "tu informe"); this string switches to the formal "usted" register.
 - `PrivacyDashboard.Fingerprinters.v155` — `es-AR/firefox-ios.xliff` — "Fingerprinters" translated as "Detectores de huellas digitales" instead of the Firefox term "Detectores de huellas (digitales)" used for the tracker category.
     - Current: `Detectores de huellas digitales`
     - Source: `Fingerprinters`

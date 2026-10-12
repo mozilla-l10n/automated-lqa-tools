@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
-| **Previous run** | 2026-09-28 @ `76fd90c3d050` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
+| **Previous run** | 2026-10-05 @ `ef278c60f343` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 14 of 1,969 |
+| **Strings reviewed this run** | 17 of 1,986 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,13 @@ Also for cs: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (1)
 
-- `QuickAnswers.ReturnPill.ReturnToQuickAnswerAccessibilityLabel.v158` — `cs/firefox-ios.xliff` — Wrong case after the preposition "na"; should be accusative "Rychlou odpověď".
-    - Current: `Zpět na Rychlá odpověď`
-    - Source: `Return to Quick Answer`
-    - Suggest: `Zpět na Rychlou odpověď`
-    - Czech preposition "na" with direction requires the accusative; the nominative "Rychlá odpověď" is ungrammatical.
-- `QuickAnswers.OptInRedesign.NoTrainingTitle.v158` — `cs/firefox-ios.xliff` — Title is rendered as a full sentence duplicating the description rather than a short title.
-    - Current: `Vaše data nepoužíváme k trénování AI systémů`
-    - Source: `No Training With Your Data`
-    - Suggest: `Žádné trénování na vašich datech`
-    - The source "No Training With Your Data" is a short row title; the Czech repeats the description string ("Vaše data nepoužíváme k trénování našich systémů") almost verbatim, so title and description become duplicates.
+- `NativeErrorPage.GenericError.Description.v158.withoutURL` — `cs/firefox-ios.xliff` — "couldn’t reach" is rendered as "se nepodařilo načíst" (couldn't load), changing the stated failure.
+    - Current: `se nepodařilo načíst požadovanou URL`
+    - Source: `%1$@ couldn’t reach the requested URL.`
+    - Suggest: `se nepodařilo spojit s požadovanou URL adresou`
+    - The source says the app could not reach the requested URL (connection failure), not that it failed to load it.
 
 ### ✅ Fixed since the last run (0)
 
@@ -54,7 +49,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,969 |
+| Strings | 1,986 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -88,7 +83,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (96)
+## 3. Open findings (97)
 
 > **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -113,7 +108,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 53 |
+| 2 | Wrong content (says something other than the English) | 54 |
 | 3 | Degraded language (grammar, spelling, terminology) | 37 |
 | 4 | Cosmetic (typography, spacing) | 6 |
 
@@ -183,6 +178,11 @@ _Nothing in this category._
     - Source: `View the site’s certificate`
     - Suggest: `Zobrazit certifikát stránky`
     - The source says the site's certificate; other strings on the same page translate "site" as "stránka"/"web", making "serveru" inconsistent.
+- `NativeErrorPage.GenericError.Description.v158.withoutURL` — `cs/firefox-ios.xliff` — "couldn’t reach" is rendered as "se nepodařilo načíst" (couldn't load), changing the stated failure.
+    - Current: `se nepodařilo načíst požadovanou URL`
+    - Source: `%1$@ couldn’t reach the requested URL.`
+    - Suggest: `se nepodařilo spojit s požadovanou URL adresou`
+    - The source says the app could not reach the requested URL (connection failure), not that it failed to load it.
 - `Onboarding.IntroDescriptionPart1.v114` — `cs/firefox-ios.xliff` — "For good" (meaning for the common good/benefit) is rendered as "Navždy" (forever).
     - Current: `Nezávislý. Neziskový. Navždy.`
     - Source: `Indie. Non-profit. For good.`
@@ -418,12 +418,7 @@ _Nothing in this category._
     - Source: `Search with Firefox`
     - Suggest: `Vyhledat pomocí Firefoxu`
     - The source names the product performing the search; the Czech omits it entirely.
-- `You don’t have any tabs open in Firefox on your other devices.` — `cs/firefox-ios.xliff` — The Firefox brand reference is dropped from the message.
-    - Current: `Ve vašich zařízeních nejsou otevřené žádné panely.`
-    - Source: `You don’t have any tabs open in Firefox on your other devices.`
-    - Suggest: `Na vašich dalších zařízeních nemáte ve Firefoxu otevřené žádné panely.`
-    - Source says "in Firefox on your other devices"; the Czech omits both "in Firefox" and "other".
-- _…and 7 more; see `state/` for the full list._
+- _…and 8 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-07 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `e7f33082c399` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `e7f33082c399` |
-| **Previous run** | 2026-10-05 @ `ef278c60f343` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
+| **Previous run** | 2026-10-07 @ `e7f33082c399` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 16 of 1,984 |
+| **Strings reviewed this run** | 24 of 1,986 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,125 +18,11 @@ Also for fa: [android](android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `Onboarding.MultiDay.NotificationCard.BodyText.v159` — `fa/firefox-ios.xliff` — "protection updates" rendered as "security updates" (امنیتی) instead of protection/حفاظت.
-    - Current: `به‌روزرسانی‌های امنیتی`
-    - Source: `Get %@ protection updates, tips, and your privacy report.`
-    - Suggest: `به‌روزرسانی‌های حفاظتی`
-    - The source says "%@ protection updates" (updates about the browser's protections), not security updates; امنیتی means "security", a different claim about what the notifications contain.
-- `NativeErrorPage.GenericError.Description.v158` — `fa/firefox-ios.xliff` — "Check your connection settings" expanded to "your internet connection settings".
-    - Current: `تنظیمات اتصال به اینترنت خود را بررسی کرده و دوباره تلاش کنید.`
-    - Source: `The site may be temporarily unavailable, it may have moved to a different address, or your firewall or proxy may be blocking the connection.  Check your connection settings and try again.`
-    - Suggest: `تنظیمات اتصال خود را بررسی کرده و دوباره تلاش کنید.`
-    - The source refers generically to connection settings (which may include firewall/proxy settings), not specifically internet connection settings.
+_No new findings._
 
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
-
-### ↩︎ Withdrawn — no longer considered a defect (0)
-
-_Nothing withdrawn._
-
-### 🔁 String changed, defect not verifiable — needs a re-read (0)
-
-_Nothing to re-read._
-
-### 🗑 Retired — the string no longer exists upstream (0)
-
-_Nothing retired._
-
----
-
-## 1. Health check
-
-| Check | Result |
-|---|---|
-| Files | 97 |
-| Strings | 1,984 |
-| Missing strings | 0 |
-| Obsolete strings | 0 |
-| Files absent from the locale | 0 |
-| Files with no en-US counterpart | 0 |
-| Fluent / properties syntax errors | 0 |
-| Reference files that did not parse | 0 |
-| printf placeholder mismatches | 0 |
-| Text quoting a UI label that no longer matches | 0 |
-| Source-language spellings left unchanged | 0 |
-| Typography deviations from this locale's own norm | 0 |
-
-### Completeness
-
-The locale is complete against the en-US source.
-
-### Conventions detected in this locale
-
-Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
-
-| Convention | Counts | Inferred |
-|---|---|---|
-| quotes | `curly-single` 8, `guillemet` 5, `curly-double` 3 | _mixed_ |
-| apostrophe | `typographic` 37 | **typographic** |
-| ellipsis | `char` 27 | **char** |
-| dash | `em` 1 | **em** |
-
----
-
-## 2. Systemic items (decisions, not line items)
-
-_Nothing reported._
-
----
-
-## 3. Open findings (462)
-
-> **Reads as a deliberate edit (4).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.` — `fa/firefox-ios.xliff` — "tapping" rendered as "tapping and holding", and "book plus icon" loses the plus.
-    - Current: `با تپ کردن و نگه داشتن آیکون کتاب`
-    - Source: `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.`
-    - Suggest: `با تپ کردن آیکون کتاب به‌همراه علامت مثبت`
-    - The source says simply "tapping the book plus icon"; the translation instructs a tap-and-hold gesture, giving the user wrong instructions.
-- `Well, this is embarrassing.` — `fa/firefox-ios.xliff` — "this is embarrassing" is rendered as "we are very sorry", an apology the source does not make.
-    - Current: `راستش، بسیار متاسفیم.`
-    - Source: `Well, this is embarrassing.`
-    - Suggest: `خب، این شرم‌آور است.`
-    - The en-US expresses embarrassment about the situation, not an apology from the product.
-- `Logins will be permanently removed.` — `fa/firefox-ios.xliff` — Future-tense warning rendered as past tense, telling the user the deletion already happened.
-    - Current: `ورود‌ها برای همیشه حذف شد.`
-    - Source: `Logins will be permanently removed.`
-    - Suggest: `ورودها برای همیشه حذف خواهند شد.`
-    - The en-US is a warning prompt before deletion ("will be permanently removed"); the Persian past tense «حذف شد» states the removal is already done.
-- `Logins will be removed from all connected devices.` — `fa/firefox-ios.xliff` — Future tense rendered as past tense and "connected devices" reduced to "all devices".
-    - Current: `ورود‌ها بر روی تمامی دستگاه‌ها حذف شد.`
-    - Source: `Logins will be removed from all connected devices.`
-    - Suggest: `ورودها از همه دستگاه‌های متصل حذف خواهند شد.`
-    - Source is a pre-deletion warning: "will be removed from all connected devices"; the translation uses past tense and drops "connected".
-
-_Also listed under their own category below._
-
-| Impact | Meaning | Count |
-|---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 3 |
-| 2 | Wrong content (says something other than the English) | 230 |
-| 3 | Degraded language (grammar, spelling, terminology) | 224 |
-| 4 | Cosmetic (typography, spacing) | 5 |
-
-### A. Functional, markup, variables & plurals
-
-- `WorldCup.GroupPhase.GroupD.Title.v151` — `fa/firefox-ios.xliff` — The group letter "D" is missing from the translation.
-    - Current: `گروه`
-    - Source: `Group D`
-    - Suggest: `گروه D`
-    - Source is "Group D"; the identifying letter was dropped, leaving an unidentifiable label.
-- `WorldCup.HomepageWidget.CountDown.DayLabel.v151` — `fa/firefox-ios.xliff` — Placeholder text "ترجمه‌نشده" shipped instead of a 1–2 character day abbreviation.
-    - Current: `ترجمه‌نشده`
-    - Source: `D`
-    - Suggest: `ر`
-    - The comment limits the string to 1–2 characters as an abbreviation for "Days"; the target is a literal "untranslated" marker that will be truncated to nonsense.
-
-### B. Mistranslation, reversed meaning, wrong names & brand
+### ✅ Fixed since the last run (18)
 
 - `Alerts.RestoreTabs.Title.v109.v2` — `fa/firefox-ios.xliff` — The word "crashed" is left untranslated and the rest is ungrammatical word salad.
     - Current: `%@ crashed. بازیابی شما زبانه‌ها؟`
@@ -188,6 +74,130 @@ _Also listed under their own category below._
     - Source: `Common Name`
     - Suggest: `نام مشترک (Common Name)`
     - The source term "Common Name" is a certificate field; the translation mechanically renders only "Name" into Persian and leaves "Common" in English, which is not a valid Persian phrase.
+- `Onboarding.Welcome.Title.TreatementA.v120` — `fa/firefox-ios.xliff` — Title left partly in English and grammatically broken.
+    - Current: `ما love keeping شما امن`
+    - Source: `We love keeping you safe`
+    - Suggest: `ما عاشق این هستیم که شما را ایمن نگه داریم`
+    - "We love keeping you safe" is not translated; English words remain mid-sentence.
+- `QuickAnswers.OptInRedesign.NothingGetsSavedTitle.v158` — `fa/firefox-ios.xliff` — Mixed English/Persian garbled output 'خیرthing Gets ذخیرهd'.
+    - Current: `خیرthing Gets ذخیرهd`
+    - Source: `Nothing Gets Saved`
+    - Suggest: `هیچ‌چیز ذخیره نمی‌شود`
+    - Word fragments of the English source were substituted mid-word, producing nonsense text in the UI.
+- `TabToolbar.Accessibility.DataClearance.v122` — `fa/firefox-ios.xliff` — Target is corrupted: English word fragments spliced with Persian ('Datیک پاک کردنance').
+    - Current: `Datیک پاک کردنance`
+    - Source: `Data Clearance`
+    - Suggest: `پاک‌سازی داده‌ها`
+    - The accessibility label for 'Data Clearance' is mangled and unreadable for screen-reader users.
+- `Open articles in Reader View by tapping the book icon when it appears in the title bar.` — `fa/firefox-ios.xliff` — Spelling error: "وفتی" should be "وقتی".
+    - Current: `وفتی در عنوان بار نمایش داده شد`
+    - Source: `Open articles in Reader View by tapping the book icon when it appears in the title bar.`
+    - Suggest: `وقتی در نوار عنوان نمایش داده شد`
+    - Typo (و+ف instead of و+ق) and "عنوان بار" reverses the Persian word order for "title bar" (نوار عنوان).
+- `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.` — `fa/firefox-ios.xliff` — "tapping" rendered as "tapping and holding", and "book plus icon" loses the plus.
+    - Current: `با تپ کردن و نگه داشتن آیکون کتاب`
+    - Source: `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.`
+    - Suggest: `با تپ کردن آیکون کتاب به‌همراه علامت مثبت`
+    - The source says simply "tapping the book plus icon"; the translation instructs a tap-and-hold gesture, giving the user wrong instructions.
+- `Logins will be permanently removed.` — `fa/firefox-ios.xliff` — Future-tense warning rendered as past tense, telling the user the deletion already happened.
+    - Current: `ورود‌ها برای همیشه حذف شد.`
+    - Source: `Logins will be permanently removed.`
+    - Suggest: `ورودها برای همیشه حذف خواهند شد.`
+    - The en-US is a warning prompt before deletion ("will be permanently removed"); the Persian past tense «حذف شد» states the removal is already done.
+- `Logins will be removed from all connected devices.` — `fa/firefox-ios.xliff` — Future tense rendered as past tense and "connected devices" reduced to "all devices".
+    - Current: `ورود‌ها بر روی تمامی دستگاه‌ها حذف شد.`
+    - Source: `Logins will be removed from all connected devices.`
+    - Suggest: `ورودها از همه دستگاه‌های متصل حذف خواهند شد.`
+    - Source is a pre-deletion warning: "will be removed from all connected devices"; the translation uses past tense and drops "connected".
+- `WorldCup.GroupPhase.GroupD.Title.v151` — `fa/firefox-ios.xliff` — The group letter "D" is missing from the translation.
+    - Current: `گروه`
+    - Source: `Group D`
+    - Suggest: `گروه D`
+    - Source is "Group D"; the identifying letter was dropped, leaving an unidentifiable label.
+
+### ↩︎ Withdrawn — no longer considered a defect (0)
+
+_Nothing withdrawn._
+
+### 🔁 String changed, defect not verifiable — needs a re-read (0)
+
+_Nothing to re-read._
+
+### 🗑 Retired — the string no longer exists upstream (0)
+
+_Nothing retired._
+
+---
+
+## 1. Health check
+
+| Check | Result |
+|---|---|
+| Files | 97 |
+| Strings | 1,986 |
+| Missing strings | 0 |
+| Obsolete strings | 0 |
+| Files absent from the locale | 0 |
+| Files with no en-US counterpart | 0 |
+| Fluent / properties syntax errors | 0 |
+| Reference files that did not parse | 0 |
+| printf placeholder mismatches | 0 |
+| Text quoting a UI label that no longer matches | 0 |
+| Source-language spellings left unchanged | 0 |
+| Typography deviations from this locale's own norm | 0 |
+
+### Completeness
+
+The locale is complete against the en-US source.
+
+### Conventions detected in this locale
+
+Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
+
+| Convention | Counts | Inferred |
+|---|---|---|
+| quotes | `curly-single` 8, `guillemet` 5, `curly-double` 3 | _mixed_ |
+| apostrophe | `typographic` 36 | **typographic** |
+| ellipsis | `char` 27 | **char** |
+| dash | `em` 1 | **em** |
+
+---
+
+## 2. Systemic items (decisions, not line items)
+
+_Nothing reported._
+
+---
+
+## 3. Open findings (444)
+
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+
+- `Well, this is embarrassing.` — `fa/firefox-ios.xliff` — "this is embarrassing" is rendered as "we are very sorry", an apology the source does not make.
+    - Current: `راستش، بسیار متاسفیم.`
+    - Source: `Well, this is embarrassing.`
+    - Suggest: `خب، این شرم‌آور است.`
+    - The en-US expresses embarrassment about the situation, not an apology from the product.
+
+_Also listed under their own category below._
+
+| Impact | Meaning | Count |
+|---|---|---|
+| 1 | Broken output (blank value, broken markup, wrong variable) | 1 |
+| 2 | Wrong content (says something other than the English) | 216 |
+| 3 | Degraded language (grammar, spelling, terminology) | 222 |
+| 4 | Cosmetic (typography, spacing) | 5 |
+
+### A. Functional, markup, variables & plurals
+
+- `WorldCup.HomepageWidget.CountDown.DayLabel.v151` — `fa/firefox-ios.xliff` — Placeholder text "ترجمه‌نشده" shipped instead of a 1–2 character day abbreviation.
+    - Current: `ترجمه‌نشده`
+    - Source: `D`
+    - Suggest: `ر`
+    - The comment limits the string to 1–2 characters as an abbreviation for "Days"; the target is a literal "untranslated" marker that will be truncated to nonsense.
+
+### B. Mistranslation, reversed meaning, wrong names & brand
+
 - `Menu.EnhancedTrackingProtection.Details.NoTrackers.v131` — `fa/firefox-ios.xliff` — "No trackers found" translated as "no tracking found" instead of trackers (ردیاب).
     - Current: `ردیابی پیدا نشد`
     - Source: `No trackers found`
@@ -438,7 +448,57 @@ _Also listed under their own category below._
     - Source: `Notifications help you stay safer with %@`
     - Suggest: `اعلان‌ها به شما کمک می‌کنند با %@ ایمن‌تر بمانید`
     - "Notifications" was partially translated as «خیر» (no) plus the leftover "tifications", and "stay safer" is left in English; the string is unreadable in Persian.
-- _…and 151 more; see `state/` for the full list._
+- `Onboarding.Notification.TurnOnNotifications.Action.v114` — `fa/firefox-ios.xliff` — Button text is garbled: "Notifications" rendered as «خیرtifications» and "On" duplicated.
+    - Current: `روشن روشن خیرtifications`
+    - Source: `Turn On Notifications`
+    - Suggest: `روشن کردن اعلان‌ها`
+    - The en-US "Turn On Notifications" is mangled into untranslatable text with a stray «خیر» (no) replacing "No" in "Notifications".
+- `Onboarding.Sync.Description.v123` — `fa/firefox-ios.xliff` — Sentence largely untranslated and garbled, leaving English words and broken grammar.
+    - Current: `%@ encrypts شما گذرواژه‌ها, نشانک‌ها, و بیشتر when شما’re همگام‌شده.`
+    - Source: `%@ encrypts your passwords, bookmarks, and more when you’re synced.`
+    - Suggest: `%@ هنگامی که همگام‌سازی کرده باشید، گذرواژه‌ها، نشانک‌ها و موارد دیگر شما را رمزگذاری می‌کند.`
+    - "encrypts", "when", "you're" are left in English and the Persian word order/punctuation is broken; also uses Latin commas instead of «،».
+- `Onboarding.TermsOfService.ManagePreferenceAgreement.v135` — `fa/firefox-ios.xliff` — Agreement text is garbled machine output with untranslated English and the nonsense word «datیک».
+    - Current: `به کمک بهبود مرورگر, %1$@ sends تشخیصی و تعامل datیک به %2$@. %3$@`
+    - Source: `To help improve the browser, %1$@ sends diagnostic and interaction data to %2$@. %3$@`
+    - Suggest: `برای کمک به بهبود مرورگر، %1$@ داده‌های تشخیصی و تعاملی را به %2$@ ارسال می‌کند. %3$@`
+    - "sends" is left in English and "data" became «datیک»; the sentence is not valid Persian.
+- `Onboarding.TermsOfService.PrivacyNoticeAgreement.v135` — `fa/firefox-ios.xliff` — Sentence left mostly untranslated and ungrammatical.
+    - Current: `%1$@ cares about شما حریم خصوصی. خواندن بیشتر در ما %2$@`
+    - Source: `%1$@ cares about your privacy. Read more in our %2$@`
+    - Suggest: `%1$@ به حریم خصوصی شما اهمیت می‌دهد. در %2$@ ما بیشتر بخوانید`
+    - "cares about" remains in English and the Persian phrasing («خواندن بیشتر در ما») is word-for-word broken.
+- `Onboarding.TermsOfService.PrivacyPreferences.Title.v135` — `fa/firefox-ios.xliff` — Title left partly in English and ungrammatical.
+    - Current: `کمک ما make %@ بهتر`
+    - Source: `Help us make %@ better`
+    - Suggest: `به ما کمک کنید %@ را بهتر کنیم`
+    - "make" remains in English and the Persian is a word-for-word non-sentence.
+- `Onboarding.TermsOfService.TermsOfServiceAgreement.v135` — `fa/firefox-ios.xliff` — Agreement text left largely untranslated in English.
+    - Current: `By continuing, شما agree به %@`
+    - Source: `By continuing, you agree to the %@`
+    - Suggest: `با ادامه دادن، شما %@ را می‌پذیرید`
+    - "By continuing" and "agree" remain in English, so the consent text is not localized.
+- `Onboarding.TermsOfService.Title.v135` — `fa/firefox-ios.xliff` — "Welcome" left untranslated in the title.
+    - Current: `Welcome به %@`
+    - Source: `Welcome to %@`
+    - Suggest: `به %@ خوش آمدید`
+    - The English word "Welcome" is not translated into Persian.
+- `Onboarding.Welcome.Link.Action.v114` — `fa/firefox-ios.xliff` — Partially untranslated and ungrammatical; "notice" left in English and word order is broken.
+    - Current: `بیشتر بدانید در ما حریم خصوصی notice`
+    - Source: `Learn more in our privacy notice`
+    - Suggest: `در اعلامیهٔ حریم خصوصی ما بیشتر بدانید`
+    - en-US "Learn more in our privacy notice" is rendered as a word-by-word mix leaving "notice" in English.
+- `Onboarding.Welcome.Title.v114` — `fa/firefox-ios.xliff` — Title left partly in English.
+    - Current: `Welcome به یک independent اینترنت`
+    - Source: `Welcome to an independent internet`
+    - Suggest: `به اینترنتی مستقل خوش آمدید`
+    - "Welcome" and "independent" remain untranslated in the Persian string.
+- `PasswordAutofill.LoginListCellNoUsername.v129` — `fa/firefox-ios.xliff` — "(no username)" rendered as a nonsensical mix with "username" untranslated.
+    - Current: `(نه username)`
+    - Source: `(no username)`
+    - Suggest: `(بدون نام کاربری)`
+    - The source means "no username saved"; "نه username" is ungrammatical and leaves the term in English.
+- _…and 136 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -742,7 +802,7 @@ _Also listed under their own category below._
     - Source: `Try Quick Answers again tomorrow.`
     - Suggest: `فردا دوباره پاسخ‌های سریع را امتحان کنید.`
     - The en-US 'Try Quick Answers again tomorrow.' is rendered as ungrammatical Persian with English word order; 'سریع پاسخ‌ها' also reverses the Persian noun-adjective order.
-- _…and 167 more; see `state/` for the full list._
+- _…and 165 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -880,8 +940,26 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (38)
+### Fixed to date (56)
 
+- `Alerts.RestoreTabs.Title.v109.v2` — `fa/firefox-ios.xliff` — fixed 2026-10-12
+- `Settings.AppIconSelection.AppIconNames.Fun.Cool.Title.146` — `fa/firefox-ios.xliff` — fixed 2026-10-12
+- `Bookmarks.EmptyState.Root.Body.v135` — `fa/firefox-ios.xliff` — fixed 2026-10-12
+- `Bookmarks.EmptyState.Root.BodySignedOut.v135` — `fa/firefox-ios.xliff` — fixed 2026-10-12
+- `Bookmarks.Menu.EditBookmarkDesktopBookmarksLabel.v136` — `fa/firefox-ios.xliff` — fixed 2026-10-12
+- `Bookmarks.Menu.EditBookmarkMobileBookmarksLabel.v154` — `fa/firefox-ios.xliff` — fixed 2026-10-12
+- `Addresses.EditAddress.AutofillAddressPin.v129` — `fa/firefox-ios.xliff` — fixed 2026-10-12
+- `Addresses.EditAddress.AutofillAddressPostTown.v129` — `fa/firefox-ios.xliff` — fixed 2026-10-12
+- `CreditCard.EditCard.ToggleToAllowAutofillTitle.v122` — `fa/firefox-ios.xliff` — fixed 2026-10-12
+- `Menu.EnhancedTrackingProtection.Certificates.CommonName.v131` — `fa/firefox-ios.xliff` — fixed 2026-10-12
+- `Onboarding.Welcome.Title.TreatementA.v120` — `fa/firefox-ios.xliff` — fixed 2026-10-12
+- `QuickAnswers.OptInRedesign.NothingGetsSavedTitle.v158` — `fa/firefox-ios.xliff` — fixed 2026-10-12
+- `TabToolbar.Accessibility.DataClearance.v122` — `fa/firefox-ios.xliff` — fixed 2026-10-12
+- `WorldCup.GroupPhase.GroupD.Title.v151` — `fa/firefox-ios.xliff` — fixed 2026-10-12
+- `Open articles in Reader View by tapping the book icon when it appears in the title bar.` — `fa/firefox-ios.xliff` — fixed 2026-10-12
+- `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.` — `fa/firefox-ios.xliff` — fixed 2026-10-12
+- `Logins will be permanently removed.` — `fa/firefox-ios.xliff` — fixed 2026-10-12
+- `Logins will be removed from all connected devices.` — `fa/firefox-ios.xliff` — fixed 2026-10-12
 - `Use your fingerprint to access Logins now.` — `fa/firefox-ios.xliff` — fixed 2026-10-05
 - `This action will clear all of your private data, including history from your synced devices.` — `fa/firefox-ios.xliff` — fixed 2026-10-05
 - `DefaultBrowserCard.Description` — `fa/firefox-ios.xliff` — fixed 2026-10-05
@@ -904,19 +982,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `ErrorPages.VisitOnce.Button` — `fa/firefox-ios.xliff` — fixed 2026-10-05
 - `ExternalLink.AppStore.GenericConfirmationTitle` — `fa/firefox-ios.xliff` — fixed 2026-10-05
 - `HistoryPanel.ClearHistoryMenuOptionTheLastHour` — `fa/firefox-ios.xliff` — fixed 2026-10-05
-- `HistoryPanel.EmptyState.Title` — `fa/firefox-ios.xliff` — fixed 2026-10-05
-- `Hotkeys.CloseTab.DiscoveryTitle` — `fa/firefox-ios.xliff` — fixed 2026-10-05
-- `Hotkeys.PrivateMode.DiscoveryTitle` — `fa/firefox-ios.xliff` — fixed 2026-10-05
-- `InactiveTabs.TabTray.CloseButtonTitle` — `fa/firefox-ios.xliff` — fixed 2026-10-05
-- `Light` — `fa/firefox-ios.xliff` — fixed 2026-10-05
-- `Logins` — `fa/firefox-ios.xliff` — fixed 2026-10-05
-- `Menu.AddToReadingList.Confirm` — `fa/firefox-ios.xliff` — fixed 2026-10-05
-- `Menu.Copy.Title` — `fa/firefox-ios.xliff` — fixed 2026-10-05
-- `Menu.TrackingProtectionDescription.SocialNetworksNew` — `fa/firefox-ios.xliff` — fixed 2026-10-05
-- `SendTo.NoDevicesFound.Message` — `fa/firefox-ios.xliff` — fixed 2026-10-05
-- `Settings.ClearAllWebsiteData.Clear.Button` — `fa/firefox-ios.xliff` — fixed 2026-10-05
-- `Settings.Disconnect.Body` — `fa/firefox-ios.xliff` — fixed 2026-10-05
-- `Settings.SendUsage.Message` — `fa/firefox-ios.xliff` — fixed 2026-10-05
-- `Settings.WebsiteData.ConfirmPrompt` — `fa/firefox-ios.xliff` — fixed 2026-10-05
-- `ShareExtension.SeachInFirefoxAction.Title` — `fa/firefox-ios.xliff` — fixed 2026-10-05
-- `You don’t have any tabs open in Firefox on your other devices.` — `fa/firefox-ios.xliff` — fixed 2026-10-05

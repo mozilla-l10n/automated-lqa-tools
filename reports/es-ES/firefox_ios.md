@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
-| **Previous run** | 2026-09-28 @ `76fd90c3d050` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
+| **Previous run** | 2026-10-05 @ `ef278c60f343` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 1,922 |
 
@@ -46,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 96 |
 | Strings | 1,922 |
-| Missing strings | 47 |
+| Missing strings | 64 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
@@ -59,10 +59,13 @@ _Nothing retired._
 
 ### Completeness
 
-**47 strings** are not translated yet, concentrated in:
+**64 strings** are not translated yet, concentrated in:
 
 - `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings` — 40
+- `es-ES/firefox-ios.xliff` — 11
 - `es-ES/firefox-ios.xliff` — 7
+- `es-ES/firefox-ios.xliff` — 4
+- `es-ES/firefox-ios.xliff` — 2
 
 **Files absent from the locale:**
 

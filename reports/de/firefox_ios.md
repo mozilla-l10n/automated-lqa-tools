@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
-| **Previous run** | 2026-09-28 @ `76fd90c3d050` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
+| **Previous run** | 2026-10-05 @ `ef278c60f343` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,969 |
+| **Strings reviewed this run** | 17 of 1,986 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for de: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `NativeErrorPage.GenericError.Description.v158.withoutURL` — `de/firefox-ios.xliff` — "couldn’t reach the requested URL" rendered as "couldn't access the requested URL".
+    - Current: `konnte nicht auf die angeforderte URL zugreifen`
+    - Source: `%1$@ couldn’t reach the requested URL.`
+    - Suggest: `konnte die angeforderte URL nicht erreichen`
+    - The source says the app could not reach (connect to) the URL; "zugreifen" means access, shifting the meaning from a connection failure to an access/permission problem.
+- `Onboarding.MultiDay.SyncCard.BodyText.v159` — `de/firefox-ios.xliff` — "Instantly" is dropped from the translation.
+    - Current: `Holen Sie sich Passwörter, Chronik und mehr auf jedem Gerät.`
+    - Source: `Instantly get passwords, history, and more on any device.`
+    - Suggest: `Holen Sie sich sofort Passwörter, Chronik und mehr auf jedem Gerät.`
+    - The source promises immediate availability ("Instantly get"); the German omits this qualifier entirely.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,7 +54,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,969 |
+| Strings | 1,986 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -70,7 +79,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | quotes | `german-double` 16 | **german-double** |
 | ellipsis | `char` 27 | **char** |
 | dash | `en` 8 | **en** |
-| register | `informal` 1, `formal` 450 | **formal** |
+| register | `informal` 1, `formal` 462 | **formal** |
 
 ---
 
@@ -80,7 +89,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (90)
+## 3. Open findings (92)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -95,7 +104,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 1 |
-| 2 | Wrong content (says something other than the English) | 27 |
+| 2 | Wrong content (says something other than the English) | 29 |
 | 3 | Degraded language (grammar, spelling, terminology) | 52 |
 | 4 | Cosmetic (typography, spacing) | 10 |
 
@@ -174,6 +183,11 @@ _Also listed under their own category below._
     - Source: `Unselected`
     - Suggest: `Nicht ausgewählt`
     - The developer comment says this accessibility label "states whether the survey option was not selected", i.e. a static state, not an action of deselecting.
+- `NativeErrorPage.GenericError.Description.v158.withoutURL` — `de/firefox-ios.xliff` — "couldn’t reach the requested URL" rendered as "couldn't access the requested URL".
+    - Current: `konnte nicht auf die angeforderte URL zugreifen`
+    - Source: `%1$@ couldn’t reach the requested URL.`
+    - Suggest: `konnte die angeforderte URL nicht erreichen`
+    - The source says the app could not reach (connect to) the URL; "zugreifen" means access, shifting the meaning from a connection failure to an access/permission problem.
 - `NativeErrorPage.Wayback.Error.Title.v154` — `de/firefox-ios.xliff` — Adds an "Fehler:" prefix not present in the source "Unable to connect".
     - Current: `Fehler: Verbindung fehlgeschlagen`
     - Source: `Unable to connect`
@@ -194,6 +208,11 @@ _Also listed under their own category below._
     - Source: `Your bookmarks, passwords, and more sync on any device. Everything’s protected with encryption, so only you can access it.`
     - Suggest: `Ihre Lesezeichen, Passwörter und mehr werden auf allen Geräten synchronisiert.`
     - The source says data syncs on any device; "mit jedem Gerät" states syncing with every device, a different claim.
+- `Onboarding.MultiDay.SyncCard.BodyText.v159` — `de/firefox-ios.xliff` — "Instantly" is dropped from the translation.
+    - Current: `Holen Sie sich Passwörter, Chronik und mehr auf jedem Gerät.`
+    - Source: `Instantly get passwords, history, and more on any device.`
+    - Suggest: `Holen Sie sich sofort Passwörter, Chronik und mehr auf jedem Gerät.`
+    - The source promises immediate availability ("Instantly get"); the German omits this qualifier entirely.
 - `Onboarding.Notification.Title.v120` — `de/firefox-ios.xliff` — "Notifications help you stay safer with %@" is translated as helping to make Firefox safer instead of helping the user stay safer.
     - Current: `Benachrichtigungen helfen Ihnen, %@ noch sicherer zu machen`
     - Source: `Notifications help you stay safer with %@`

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
-| **Previous run** | 2026-09-28 @ `76fd90c3d050` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
+| **Previous run** | 2026-10-05 @ `ef278c60f343` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 28 of 1,969 |
+| **Strings reviewed this run** | 22 of 1,986 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -20,16 +20,16 @@ Also for tr: [android](android.md) · [firefox](firefox.md)
 
 ### 🆕 New findings (2)
 
-- `QuickAnswers.ContentView.Footer.v158` — `tr/firefox-ios.xliff` — "Powered by %@" rendered as "Model: %@", losing the attribution wording.
-    - Current: `Model: %@ · Yanıtlar hatalı olabilir.`
-    - Source: `Powered by %@ · Answers can contain mistakes.`
-    - Suggest: `%@ tarafından sağlanıyor · Yanıtlar hatalı olabilir.`
-    - The source credits the provider ("Powered by"); "Model:" states the model name instead, which is a different statement about the attribution.
-- `QuickAnswers.ContentView.Listening.v158` — `tr/firefox-ios.xliff` — "ask anything" translated as "İstediğinizi sorun" is acceptable, but "Listening," turned into a separate sentence "Dinliyorum." — not a defect; the real issue is none.
-    - Current: `Dinliyorum. İstediğinizi sorun…`
-    - Source: `Listening, ask anything…`
-    - Suggest: `Dinliyorum, istediğinizi sorun…`
-    - Minor punctuation split; en-US uses a single clause separated by a comma.
+- `Onboarding.MultiDay.SyncCard.AcceptButtonText.v159` — `tr/firefox-ios.xliff` — Informal imperative "giriş yap" breaks the locale's formal register used in all neighbouring strings.
+    - Current: `Eşitlemek için giriş yap`
+    - Source: `Sign in to Sync`
+    - Suggest: `Eşitlemek için giriş yapın`
+    - The tr locale uses the formal address form (e.g. "Bildirimleri etkinleştir"-style buttons aside, body strings use "-in" forms like "haberdar olun", "erişin", "seçin"); "giriş yap" is the informal singular imperative.
+- `Settings.Summarize.LanguageSection.Title.v149` — `tr/firefox-ios.xliff` — Section title rendered in all caps while the source uses title case.
+    - Current: `DİL`
+    - Source: `Language`
+    - Suggest: `Dil`
+    - The en-US source is "Language"; the uppercase styling is applied by the OS, so the string itself should not be all caps.
 
 ### ✅ Fixed since the last run (0)
 
@@ -54,7 +54,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,969 |
+| Strings | 1,986 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -89,7 +89,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (85)
+## 3. Open findings (87)
 
 > **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -115,8 +115,8 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 47 |
-| 3 | Degraded language (grammar, spelling, terminology) | 35 |
-| 4 | Cosmetic (typography, spacing) | 3 |
+| 3 | Degraded language (grammar, spelling, terminology) | 36 |
+| 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -514,6 +514,11 @@ _Also listed under their own category below._
     - Source: `Say goodbye to creepy trackers`
     - Suggest: `Ürpertici takipçilere veda edin`
     - Firefox tr uses "takipçi" for tracker (e.g. "izlenme koruması"); "takip kodu" is a different, script-specific term.
+- `Onboarding.MultiDay.SyncCard.AcceptButtonText.v159` — `tr/firefox-ios.xliff` — Informal imperative "giriş yap" breaks the locale's formal register used in all neighbouring strings.
+    - Current: `Eşitlemek için giriş yap`
+    - Source: `Sign in to Sync`
+    - Suggest: `Eşitlemek için giriş yapın`
+    - The tr locale uses the formal address form (e.g. "Bildirimleri etkinleştir"-style buttons aside, body strings use "-in" forms like "haberdar olun", "erişin", "seçin"); "giriş yap" is the informal singular imperative.
 - `Settings.SearchZero.TrendingSearches.Toggle.v146` — `tr/firefox-ios.xliff` — "Trending Searches" is translated as "Arama trendleri" here but as "gündem" in the related section title, and it is inconsistent with "Son aramaları göster".
     - Current: `Arama trendlerini göster`
     - Source: `Show Trending Searches`
@@ -552,6 +557,11 @@ _Also listed under their own category below._
     - Source: `View Card`
     - Suggest: `Kartı görüntüle`
     - Turkish does not use title case; the rest of the EditCard strings consistently use sentence case.
+- `Settings.Summarize.LanguageSection.Title.v149` — `tr/firefox-ios.xliff` — Section title rendered in all caps while the source uses title case.
+    - Current: `DİL`
+    - Source: `Language`
+    - Suggest: `Dil`
+    - The en-US source is "Language"; the uppercase styling is applied by the OS, so the string itself should not be all caps.
 - `FirefoxHome.Stories.Minutes.v140` — `tr/firefox-ios.xliff` — Stray period in abbreviated minutes label, inconsistent with FirefoxHome.Pocket.Minutes.v99 ("%d dk").
     - Current: `%d dk.`
     - Source: `min: %d`

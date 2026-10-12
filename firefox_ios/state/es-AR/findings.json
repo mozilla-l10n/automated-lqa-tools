@@ -504,6 +504,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "D",
+  "check": "llm",
+  "current": "Verifique la configuración de su conexión e intente nuevamente.",
+  "dismissed_because": "",
+  "fid": "cdc5e5d2c581",
+  "file": "Shared/Supporting Files/en-US.lproj/NativeErrorPage.strings",
+  "first_seen": "2026-10-12",
+  "impact": 3,
+  "last_seen": "2026-10-12",
+  "locale": "es-AR",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "es-AR established form of address is voseo (e.g., \"Mantenete\", \"Conseguí\", \"Obtené\", \"tu informe\"); this string switches to the formal \"usted\" register.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "3b8e4bd8",
+  "string_id": "NativeErrorPage.GenericError.Description.v158",
+  "suggest": "Verificá la configuración de tu conexión e intentá nuevamente.",
+  "summary": "Uses \"usted\" forms (Verifique, su, intente) while the rest of the es-AR localization uses voseo/tuteo.",
+  "suppressed_by": ""
+ },
+ {
   "category": "B",
   "check": "llm",
   "current": "Probá conectarte a un dispositivo diferente.",

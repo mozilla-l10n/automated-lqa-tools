@@ -410,6 +410,30 @@
  {
   "category": "B",
   "check": "llm",
+  "current": "se nepodařilo načíst požadovanou URL",
+  "dismissed_because": "",
+  "fid": "dcb2f3b5f1b1",
+  "file": "Shared/Supporting Files/en-US.lproj/NativeErrorPage.strings",
+  "first_seen": "2026-10-12",
+  "impact": 2,
+  "last_seen": "2026-10-12",
+  "locale": "cs",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source says the app could not reach the requested URL (connection failure), not that it failed to load it.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "92dc91ea",
+  "string_id": "NativeErrorPage.GenericError.Description.v158.withoutURL",
+  "suggest": "se nepodařilo spojit s požadovanou URL adresou",
+  "summary": "\"couldn’t reach\" is rendered as \"se nepodařilo načíst\" (couldn't load), changing the stated failure.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
   "current": "Nezávislý. Neziskový. Navždy.",
   "dismissed_because": "",
   "fid": "4bd01e8a2401",
