@@ -21,3 +21,6 @@ written here is what the model is told to treat as correct._
 - The en dash is the house dash; do not suggest an em dash.
 - "Primary Password" is deliberately translated with the legacy term.
 -->
+
+- "WiFi" (no hyphen) is the house spelling for en-US "Wi-Fi"; never flag it or
+  suggest "Wi-Fi".
