@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
-| **Previous run** | 2026-09-28 @ `65850771ebc2` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a400fea340fd` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a400fea340fd` |
+| **Previous run** | 2026-10-05 @ `d82f35778c8b` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 35 of 2,787 |
+| **Strings reviewed this run** | 11 of 2,793 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `preferences_inactive_tabs` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — Translation says "Moving inactive tabs" instead of "Move old tabs to inactive".
+    - Current: `Přesun neaktivních panelů`
+    - Suggest: `Přesouvat staré panely mezi neaktivní`
+    - The source describes moving old (unused) tabs into the inactive section; the Czech reverses it to moving tabs that are already inactive.
 
 ---
 
@@ -45,7 +48,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 45 |
-| Strings | 2,787 |
+| Strings | 2,793 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -83,13 +86,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (133)
+## 3. Open findings (132)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 76 |
+| 2 | Wrong content (says something other than the English) | 75 |
 | 3 | Degraded language (grammar, spelling, terminology) | 46 |
 | 4 | Cosmetic (typography, spacing) | 11 |
 
@@ -361,11 +364,6 @@ _Nothing reported._
     - Source: `Ask when I delete files`
     - Suggest: `Zeptat se, když mažu soubory`
     - Source is "Ask when I delete files" — the user deleting files; the Czech reads as an impersonal "upon deletion of a file".
-- `preferences_inactive_tabs` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — Translation says "Moving inactive tabs" instead of "Move old tabs to inactive".
-    - Current: `Přesun neaktivních panelů`
-    - Source: `Move old tabs to inactive`
-    - Suggest: `Přesouvat staré panely mezi neaktivní`
-    - The source describes moving old (unused) tabs into the inactive section; the Czech reverses it to moving tabs that are already inactive.
 - `preferences_inactive_tabs_title` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — "haven’t viewed" rendered as "neotevřeli" (haven't opened).
     - Current: `které jste dva týdny neotevřeli`
     - Source: `Tabs you haven’t viewed for two weeks get moved to the inactive section.`
@@ -406,7 +404,12 @@ _Nothing reported._
     - Source: `Enter a web address`
     - Suggest: `Zadejte webovou adresu`
     - The source asks for a web address (URL), not a web page; the field is the hostname field.
-- _…and 21 more; see `state/` for the full list._
+- `search_suggestions_delete_history_item_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — Translation adds "Adresa" (address) although the placeholder may be a search term, not only a URL.
+    - Current: `Adresa %1$s byla smazána z historie`
+    - Source: `Deleted %1$s from history`
+    - Suggest: `%1$s bylo smazáno z historie`
+    - The developer comment says %1$s is the shortened URL OR the actual deleted search term; prefixing with "Adresa" (address) makes the message wrong for search terms.
+- _…and 20 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

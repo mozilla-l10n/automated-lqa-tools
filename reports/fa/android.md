@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-07 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `df6b5b99b499` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `df6b5b99b499` |
-| **Previous run** | 2026-10-07 @ `74db2d1b6025` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
+| **Previous run** | 2026-10-07 @ `df6b5b99b499` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 16 of 2,794 |
+| **Strings reviewed this run** | 18 of 2,793 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,106 +18,76 @@ Also for fa: [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (2)
 
-- `mozac_browser_errorpages_safe_harmful_uri_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — "potentially harmful site" is rendered as "attack site", duplicating the malware string instead of translating this one.
-    - Current: `وبگاه %1$s به عنوان یک وبگاه تهاجمی گزارش شده`
-    - Source: `{ <p> }The site at %1$s has been reported as a potentially harmful site and has been blocked based on your security preferences.{ </p> }`
-    - Suggest: `وبگاه %1$s به عنوان یک وبگاه بالقوه مضر گزارش شده`
-    - The source says the site was reported as a potentially harmful site; the translation says it was reported as an attack site (تهاجمی), which is the wording of the separate malware message.
-- `mozac_browser_errorpages_unknown_protocol_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — Duplicated "جهت شناسایی/برای شناسایی" in the last bullet makes the sentence redundant and ungrammatical.
-    - Current: `برخی قراردادها ممکن است برای شناسایی نیاز به نرم‌افزار یا افزایه‌های دیگری جهت شناسایی داشته باشند.`
-    - Source: `{ <p> }The address specifies a protocol (e.g., { <q> }wxyz://{ </q> }) the browser does not recognize, so the browser cannot properly connect to the site.{ </p> } { <ul> } { <li> }Are you trying to access multimedia or…`
-    - Suggest: `برخی قراردادها ممکن است نیاز به نرم‌افزار یا افزایه‌های دیگری جهت شناسایی داشته باشند.`
-    - The phrase for "before the browser can recognize them" is repeated twice in the same clause.
-- `mozac_browser_errorpages_port_blocked_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — "مشخصا" is used where the source has "specified a port", producing a broken clause.
-    - Current: `نشانی درخواست مشخصا (به عنوان مثال`
-    - Source: `{ <p> }The requested address specified a port (e.g., { <q> }mozilla.org:80{ </q> } for port 80 on mozilla.org) normally used for purposes { <em> }other{ </em> } than Web browsing. The browser has canceled the request fo…`
-    - Suggest: `نشانی درخواست‌شده درگاهی را مشخص کرده است (به عنوان مثال`
-    - The source says the requested address specified a port; the Persian adverb مشخصا ("specifically") leaves the sentence without a verb for "specified".
+- `mozac_browser_errorpages_file_not_found_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — Arabic yeh "آيا" instead of Persian "آیا", misspelled "املائی", and colloquial "دیگه‌ی" in a formal error page.
+    - Current: `آيا در نشانی غلط املائی، حروف بزرگی و کوچکی یا مشکلات دیگه‌ی نوشتاری وجود دارد؟`
+    - Source: `{ <ul> } { <li> }Could the item have been renamed, removed, or relocated?{ </li> } { <li> }Is there a spelling, capitalization, or other typographical error in the address?{ </li> } { <li> }Do you have sufficient access…`
+    - Suggest: `آیا در نشانی غلط املایی، حروف بزرگ و کوچک یا مشکلات نوشتاری دیگری وجود دارد؟`
+    - The line uses the Arabic letter ي in «آيا» (other lines in the same string use the correct Persian ی), and «دیگه‌ی» is colloquial register inconsistent with the rest of the formal error text.
+- `preference_autocomplete_add_confirmation` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Spurious comma splits the noun phrase, changing the reading of "New custom URL added."
+    - Current: `نشانی اینترنتی، سفارشی جدید اضافه شد.`
+    - Source: `New custom URL added.`
+    - Suggest: `نشانی اینترنتی سفارشی جدید اضافه شد.`
+    - The comma after «نشانی اینترنتی» breaks the phrase "new custom URL" into two parts and makes the sentence ungrammatical.
 
-### ✅ Fixed since the last run (16)
+### ✅ Fixed since the last run (11)
 
-- `mozac_browser_errorpages_archive_description` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — The placeholder roles are swapped: %2$s is the archive service name (a link), but the translation treats it as a location and inverts the relationship with Internet Archive.
-    - Current: `نسخهٔ قدیمی‌تری از این صفحه را در %2$s از Internet Archive جست‌وجو کند`
-    - Source: `%1$s can look for an earlier version of this page from the Internet Archive’s %2$s.`
-    - Suggest: `می‌تواند با %2$s از Internet Archive به دنبال نسخهٔ قدیمی‌تری از این صفحه بگردد`
-    - Source: "from the Internet Archive’s %2$s" — %2$s is the name of the archive service belonging to the Internet Archive; the translation reads as searching "in %2$s from Internet Archive", garbling the possessive relationship.
-- `mozac_browser_errorpages_port_blocked_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — Missing spaces around inline markup and after punctuation, plus broken spacing in several words.
-    - Current: `نشانی درخواست مشخصا(به عنوان مثال{ <q> }mozilla.org:80{ </q> }برای درگاه ۸۰ بر روی mozilla.org) ازدرگاهی استفاده می کندکه`
-    - Source: `{ <p> }The requested address specified a port (e.g., { <q> }mozilla.org:80{ </q> } for port 80 on mozilla.org) normally used for purposes { <em> }other{ </em> } than Web browsing. The browser has canceled the request fo…`
-    - Suggest: `نشانی درخواست‌شده درگاهی را مشخص کرده است (به عنوان مثال { <q> }mozilla.org:80{ </q> } برای درگاه ۸۰ بر روی mozilla.org) که در حالت عادی`
-    - Words are run together ("ازدرگاهی", "می کندکه", "لغوکرد") and spaces are missing before/after the inline <q> markup and after the sentence-ending period, which the user reads as broken text.
-- `mozac_browser_errorpages_safe_browsing_malware_uri_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — Missing space between پایگاه and the %1$s placeholder, so the URL runs into the preceding word.
-    - Current: `پایگاه%1$s`
-    - Source: `{ <p> }The site at %1$s has been reported as an attack site and has been blocked based on your security preferences.{ </p> }`
-    - Suggest: `پایگاه %1$s`
-    - The rendered sentence needs a space between the word and the inserted URL.
-- `mozac_browser_errorpages_safe_harmful_uri_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — "potentially harmful site" is rendered as "attack site", duplicating the malware string instead of translating this one.
-    - Current: `وبگاه %1$s به عنوان یک وبگاه تهاجمی گزارش شده`
-    - Source: `{ <p> }The site at %1$s has been reported as a potentially harmful site and has been blocked based on your security preferences.{ </p> }`
-    - Suggest: `وبگاه %1$s به عنوان یک وبگاه بالقوه مضر گزارش شده`
-    - The source says the site was reported as a potentially harmful site; the translation says it was reported as an attack site (تهاجمی), which is the wording of the separate malware message.
-- `mozac_browser_errorpages_unknown_protocol_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — The untranslated English abbreviation "e.g." is left inside the parentheses in addition to the Persian "مثلا", duplicating it.
-    - Current: `قراردادی مثلا (e.g. { <q> }wxyz://{ </q> })`
-    - Source: `{ <p> }The address specifies a protocol (e.g., { <q> }wxyz://{ </q> }) the browser does not recognize, so the browser cannot properly connect to the site.{ </p> } { <ul> } { <li> }Are you trying to access multimedia or…`
-    - Suggest: `قراردادی (مثلاً { <q> }wxyz://{ </q> })`
-    - The source has "(e.g., wxyz://)"; the translation both translates it as مثلا and keeps the English "e.g.", and misplaces the parenthesis.
-- `mozac_compose_base_close_button_content_description` — `mozilla-mobile/android-components/components/compose/base/src/main/res/values-fa/strings.xml` — Trailing zero-width non-joiner after "بستن".
-    - Current: `بستن‌`
-    - Source: `Close`
-    - Suggest: `بستن`
-    - The Persian text ends with a stray ZWNJ character that has no function at the end of a word.
-- `mozac_feature_addons_failed_to_remove` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — Missing space between the word and the placeholder.
-    - Current: `شکست در حذف%1$s`
-    - Source: `Failed to remove %1$s`
-    - Suggest: `شکست در حذف %1$s`
-    - The add-on name would be glued to the preceding word in the rendered text.
-- `mozac_feature_addons_permissions_clipboard_read_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — "clipboard" is rendered as «تخته‌برش» (cutting board) instead of the standard Persian term «تخته‌گیره»/«بریده‌دان».
-    - Current: `دریافت داده از تخته‌برش.`
-    - Source: `Get data from the clipboard.`
-    - Suggest: `دریافت داده از تخته‌گیره.`
-    - The established Mozilla fa term for "clipboard" is تخته‌گیره; تخته‌برش means a cutting board and is not the UI term.
-- `mozac_feature_addons_permissions_clipboard_write_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — "clipboard" is rendered as «تخته‌برش» (cutting board) instead of the standard Persian term «تخته‌گیره».
-    - Current: `وارد کردن داده در تخته‌برش.`
-    - Source: `Input data to the clipboard.`
-    - Suggest: `وارد کردن داده در تخته‌گیره.`
-    - The established Mozilla fa term for "clipboard" is تخته‌گیره; تخته‌برش means a cutting board and is not the UI term.
-- `mozac_feature_addons_successfully_installed` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — Missing space between the placeholder and the following word.
-    - Current: `%1$sبا موفقیت نصب شد`
-    - Source: `Successfully installed %1$s`
-    - Suggest: `%1$s با موفقیت نصب شد`
-    - The add-on name will run into the next word with no separating space.
-- `mozac_feature_addons_successfully_removed` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — Missing space between the placeholder and the following word.
-    - Current: `%1$sبا موفقیت حذف شد`
-    - Source: `Successfully removed %1$s`
-    - Suggest: `%1$s با موفقیت حذف شد`
-    - The add-on name will run into the next word with no separating space.
-- `mozac_feature_addons_user_rating_count_2` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — Missing space after the colon before the placeholder.
-    - Current: `بررسی‌های:%1$s`
-    - Source: `Reviews: %1$s`
-    - Suggest: `بررسی‌ها: %1$s`
-    - Source "Reviews: %1$s" has a space after the colon; the target also uses an incorrect ezafe form "بررسی‌های".
-- `mozac_feature_prompt_update_confirmation` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fa/strings.xml` — Trailing stray zero-width non-joiner after "به‌روزرسانی".
-    - Current: `به‌روزرسانی‌`
-    - Source: `Update`
-    - Suggest: `به‌روزرسانی`
-    - The button label ends with an extraneous ZWNJ character not present in the equivalent strings (e.g. mozac_feature_prompt_login_update_headline_2).
-- `webauthn_related_origin_use_message` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fa/strings.xml` — The translation says "use %2$s's passkey" instead of "use a passkey for %2$s".
-    - Current: `می‌خواهد از کلید عبور %2$s استفاده کند`
-    - Source: `%1$s wants to use a passkey for %2$s.`
-    - Suggest: `می‌خواهد از یک کلید عبور برای %2$s استفاده کند`
-    - Source is "wants to use a passkey for %2$s"; the parallel create string correctly uses «برای %2$s», but here the preposition is dropped, turning it into a possessive construction.
-- `mozac_browser_errorpages_safe_harmful_uri_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — "potentially harmful site" is rendered as "attack site", duplicating the malware string instead of translating this one.
-    - Current: `وبگاه %1$s به عنوان یک وبگاه تهاجمی گزارش شده`
-    - Source: `{ <p> }The site at %1$s has been reported as a potentially harmful site and has been blocked based on your security preferences.{ </p> }`
-    - Suggest: `وبگاه %1$s به عنوان یک وبگاه بالقوه مضر گزارش شده`
-    - The source says the site was reported as a potentially harmful site; the translation says it was reported as an attack site (تهاجمی), which is the wording of the separate malware message.
-- `mozac_feature_addons_updater_dialog_last_attempt` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — Missing colon after the label, which is followed by the date per the developer comment.
-    - Current: `آخرین تلاش`
-    - Source: `Last attempt:`
-    - Suggest: `آخرین تلاش:`
-    - Source is "Last attempt:" and the comment states it is followed by the date; the colon was dropped, unlike the parallel "وضعیت:" string.
+- `mozac_browser_errorpages_file_not_found_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — Third bullet asks about access permissions to the "address" instead of to the requested item.
+    - Current: `آیا مجوزهای دسترسی کافی برای دست‌یابی به این نشانی را دارید؟`
+    - Source: `{ <ul> } { <li> }Could the item have been renamed, removed, or relocated?{ </li> } { <li> }Is there a spelling, capitalization, or other typographical error in the address?{ </li> } { <li> }Do you have sufficient access…`
+    - Suggest: `آیا مجوزهای دسترسی کافی برای دست‌یابی به مورد درخواستی را دارید؟`
+    - The source asks about sufficient access permissions to the requested item, not to the address.
+- `mozac_browser_errorpages_net_reset_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — First paragraph translates the net-interrupt message instead of "The network link was interrupted while negotiating a connection."
+    - Current: `مرورگر با موفقیت متصل شد ، اما هنگام انتقال اطلاعات ، اتصال قطع شد. لطفا دوباره امتحان کنید.`
+    - Source: `{ <p> }The network link was interrupted while negotiating a connection. Please try again.{ </p> } { <ul> } { <li> }The site could be temporarily unavailable or too busy. Try again in a few moments.{ </li> } { <li> }If y…`
+    - Suggest: `پیوند شبکه در هنگام برقراری اتّصال قطع شد. لطفاً دوباره تلاش کنید.`
+    - The source says the network link was interrupted while negotiating a connection; the target claims the browser connected successfully and the connection dropped while transferring information (text copied from the net_interrupt string).
+- `mozac_feature_addons_permissions_all_urls_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — Adds "all" to the data being accessed, which the source does not say.
+    - Current: `دسترسی به تمامی اطلاعات شما برای تمامی پایگاه های اینترنتی`
+    - Source: `Access your data for all websites`
+    - Suggest: `دسترسی به داده‌های شما برای همهٔ وب‌گاه‌ها`
+    - Source is "Access your data for all websites"; "all" modifies websites, not the user's data, so the translation claims a broader permission scope.
+- `content_description_reload` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Misspelling "بارگزاری" should be "بارگذاری".
+    - Current: `بارگزاری مجدد وب‌سایت`
+    - Source: `Reload website`
+    - Suggest: `بارگذاری مجدد وب‌سایت`
+    - Standard Persian spelling of "loading" is بارگذاری.
+- `content_description_stop` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Misspelling "بارگزاری" should be "بارگذاری".
+    - Current: `توقف بارگزاری وب‌سایت`
+    - Source: `Stop loading website`
+    - Suggest: `توقف بارگذاری وب‌سایت`
+    - Standard Persian spelling of "loading" is بارگذاری.
+- `firstrun_shortcut_title` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Ungrammatical phrase: object marker "را" misplaced, making "افزودن میان‌برها را به صفحه خانگی شما" incorrect Persian.
+    - Current: `افزودن میان‌برها را به صفحه خانگی شما`
+    - Source: `Add shortcuts to your home screen`
+    - Suggest: `افزودن میان‌بر به صفحهٔ خانگی`
+    - The source is "Add shortcuts to your home screen"; the Persian noun-phrase title cannot take the object marker "را" after the verbal noun, producing broken grammar.
+- `onboarding_first_screen_title` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Stray space after the ZWNJ in "خوش‌ آمدید".
+    - Current: `به %1$s خوش‌ آمدید`
+    - Source: `Welcome to %1$s`
+    - Suggest: `به %1$s خوش آمدید`
+    - The word contains both a ZWNJ and a space, producing incorrect spacing.
+- `preference_autocomplete_add_confirmation` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Spurious comma splits the noun phrase, changing the reading of "New custom URL added."
+    - Current: `نشانی اینترنتی، سفارشی جدید اضافه شد.`
+    - Source: `New custom URL added.`
+    - Suggest: `نشانی اینترنتی سفارشی جدید اضافه شد.`
+    - The comma after «نشانی اینترنتی» breaks the phrase "new custom URL" into two parts and makes the sentence ungrammatical.
+- `tab_crash_report_description` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — "we never save and cannot restore this tab" rendered as "we cannot save and restore this tab", losing the "never save" assertion.
+    - Current: `به عنوان یک مرورگر خصوصی نمی توانیم این زبانه را ذخیره و بازیابی کنیم.`
+    - Source: `As a private browser, we never save and cannot restore this tab.`
+    - Suggest: `به عنوان یک مرورگر خصوصی، ما هرگز این زبانه را ذخیره نمی‌کنیم و نمی‌توانیم آن را بازیابی کنیم.`
+    - The source distinguishes a deliberate policy (never save) from an inability (cannot restore); the translation states only inability, changing what the product says about its own behaviour.
+- `tab_crash_report_description` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Missing zero-width non-joiner in "نمی توانیم" (space instead of ZWNJ).
+    - Current: `نمی توانیم`
+    - Source: `As a private browser, we never save and cannot restore this tab.`
+    - Suggest: `نمی‌توانیم`
+    - Persian prefix "نمی" must join the verb with a ZWNJ, as done elsewhere in this batch (e.g. "می‌کنید").
+- `preference_autocomplete_add_confirmation` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Spurious comma splits the noun phrase, changing the reading of "New custom URL added."
+    - Current: `نشانی اینترنتی، سفارشی جدید اضافه شد.`
+    - Source: `New custom URL added.`
+    - Suggest: `نشانی اینترنتی سفارشی جدید اضافه شد.`
+    - The comma after «نشانی اینترنتی» breaks the phrase "new custom URL" into two parts and makes the sentence ungrammatical.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -138,7 +108,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 45 |
-| Strings | 2,794 |
+| Strings | 2,793 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -175,15 +145,10 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (129)
+## 3. Open findings (120)
 
-> **Reads as a deliberate edit (7).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (4).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
-- `mozac_browser_errorpages_net_reset_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — First paragraph translates the net-interrupt message instead of "The network link was interrupted while negotiating a connection."
-    - Current: `مرورگر با موفقیت متصل شد ، اما هنگام انتقال اطلاعات ، اتصال قطع شد. لطفا دوباره امتحان کنید.`
-    - Source: `{ <p> }The network link was interrupted while negotiating a connection. Please try again.{ </p> } { <ul> } { <li> }The site could be temporarily unavailable or too busy. Try again in a few moments.{ </li> } { <li> }If y…`
-    - Suggest: `پیوند شبکه در هنگام برقراری اتّصال قطع شد. لطفاً دوباره تلاش کنید.`
-    - The source says the network link was interrupted while negotiating a connection; the target claims the browser connected successfully and the connection dropped while transferring information (text copied from the net_interrupt string).
 - `mozac_browser_errorpages_net_reset_title` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — "The connection was reset" is rendered as "the connection was re-established", reversing the meaning of the error.
     - Current: `اتصال از نو برقرار شد`
     - Source: `The connection was reset`
@@ -194,11 +159,6 @@ _Nothing reported._
     - Source: `{ <p> }The requested site did not respond to a connection request and the browser has stopped waiting for a reply.{ </p> } { <ul> } { <li> }Could the server be experiencing high demand or a temporary outage? Try again l…`
     - Suggest: `تنظیمات نادرست می‌تواند در مرور وب اختلال ایجاد کند.`
     - The source hedges with "can interfere"; the target asserts that incorrect settings do prevent Web browsing.
-- `mozac_feature_addons_permissions_all_urls_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — Adds "all" to the data being accessed, which the source does not say.
-    - Current: `دسترسی به تمامی اطلاعات شما برای تمامی پایگاه های اینترنتی`
-    - Source: `Access your data for all websites`
-    - Suggest: `دسترسی به داده‌های شما برای همهٔ وب‌گاه‌ها`
-    - Source is "Access your data for all websites"; "all" modifies websites, not the user's data, so the translation claims a broader permission scope.
 - `email_masks_max_free_tier_reached` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — The translation adds "at random" which the source does not say.
     - Current: `یکی از آن‌ها را به‌صورت تصادفی برای استفادهٔ مجدد انتخاب کردیم`
     - Source: `You’ve used your 5 free email masks, so we picked one for you to reuse.`
@@ -209,20 +169,15 @@ _Nothing reported._
     - Source: `Firefox is fast and private`
     - Suggest: `‏Firefox سریع و خصوصی است`
     - The source says Firefox is fast and private; the translation claims it is fast and secure, a different property claim about the product.
-- `tab_crash_report_description` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — "we never save and cannot restore this tab" rendered as "we cannot save and restore this tab", losing the "never save" assertion.
-    - Current: `به عنوان یک مرورگر خصوصی نمی توانیم این زبانه را ذخیره و بازیابی کنیم.`
-    - Source: `As a private browser, we never save and cannot restore this tab.`
-    - Suggest: `به عنوان یک مرورگر خصوصی، ما هرگز این زبانه را ذخیره نمی‌کنیم و نمی‌توانیم آن را بازیابی کنیم.`
-    - The source distinguishes a deliberate policy (never save) from an inability (cannot restore); the translation states only inability, changing what the product says about its own behaviour.
 
 _Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 55 |
-| 3 | Degraded language (grammar, spelling, terminology) | 71 |
-| 4 | Cosmetic (typography, spacing) | 3 |
+| 2 | Wrong content (says something other than the English) | 51 |
+| 3 | Degraded language (grammar, spelling, terminology) | 68 |
+| 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -230,21 +185,11 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `mozac_browser_errorpages_file_not_found_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — Third bullet asks about access permissions to the "address" instead of to the requested item.
-    - Current: `آیا مجوزهای دسترسی کافی برای دست‌یابی به این نشانی را دارید؟`
-    - Source: `{ <ul> } { <li> }Could the item have been renamed, removed, or relocated?{ </li> } { <li> }Is there a spelling, capitalization, or other typographical error in the address?{ </li> } { <li> }Do you have sufficient access…`
-    - Suggest: `آیا مجوزهای دسترسی کافی برای دست‌یابی به مورد درخواستی را دارید؟`
-    - The source asks about sufficient access permissions to the requested item, not to the address.
 - `mozac_browser_errorpages_invalid_content_encoding_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — "invalid" form of compression rendered as "ناشناخته" (unknown).
     - Current: `از گونه‌ای ناشناخته یا پشتیبانی نشده از فشرده‌سازی استفاده می‌کند`
     - Source: `{ <p> }The page you are trying to view cannot be shown because it uses an invalid or unsupported form of compression.{ </p> } { <ul> } { <li> }Please contact the website owners to inform them of this problem.{ </li> } {…`
     - Suggest: `از گونه‌ای نامعتبر یا پشتیبانی‌نشده از فشرده‌سازی استفاده می‌کند`
     - The source says the compression form is invalid or unsupported, not unknown.
-- `mozac_browser_errorpages_net_reset_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — First paragraph translates the net-interrupt message instead of "The network link was interrupted while negotiating a connection."
-    - Current: `مرورگر با موفقیت متصل شد ، اما هنگام انتقال اطلاعات ، اتصال قطع شد. لطفا دوباره امتحان کنید.`
-    - Source: `{ <p> }The network link was interrupted while negotiating a connection. Please try again.{ </p> } { <ul> } { <li> }The site could be temporarily unavailable or too busy. Try again in a few moments.{ </li> } { <li> }If y…`
-    - Suggest: `پیوند شبکه در هنگام برقراری اتّصال قطع شد. لطفاً دوباره تلاش کنید.`
-    - The source says the network link was interrupted while negotiating a connection; the target claims the browser connected successfully and the connection dropped while transferring information (text copied from the net_interrupt string).
 - `mozac_browser_errorpages_net_reset_title` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — "The connection was reset" is rendered as "the connection was re-established", reversing the meaning of the error.
     - Current: `اتصال از نو برقرار شد`
     - Source: `The connection was reset`
@@ -285,11 +230,6 @@ _Nothing in this category._
     - Source: `Installed`
     - Suggest: `نصب‌شده`
     - Per the developer comment this is a section label listing installed add-ons, not a completion message.
-- `mozac_feature_addons_permissions_all_urls_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — Adds "all" to the data being accessed, which the source does not say.
-    - Current: `دسترسی به تمامی اطلاعات شما برای تمامی پایگاه های اینترنتی`
-    - Source: `Access your data for all websites`
-    - Suggest: `دسترسی به داده‌های شما برای همهٔ وب‌گاه‌ها`
-    - Source is "Access your data for all websites"; "all" modifies websites, not the user's data, so the translation claims a broader permission scope.
 - `mozac_feature_addons_permissions_data_collection_searchTerms_long_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — "search terms" mistranslated as "شرایط جستجو" (search conditions).
     - Current: `هم‌رسانی شرایط جستجو با توسعه‌دهنده افزونه`
     - Source: `Share search terms with extension developer`
@@ -530,7 +470,22 @@ _Nothing in this category._
     - Source: `View tabs with your fingerprint, PIN, or face unlock. Turning this on also prevents screen capture and sharing.`
     - Suggest: `اشتراک‌گذاری`
     - The source says "prevents screen capture and sharing"; the target adds "صفحه" (screen) to sharing, asserting it blocks screen sharing specifically.
-- _…and 18 more; see `state/` for the full list._
+- `restart_and_shortcuts_removal_warning_dialog_body` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — Translation adds "تمام" (all), claiming removal of all sites/shortcuts where the source says "any sites and shortcuts you've saved".
+    - Current: `تغییر آیکون باعث حذف تمام سایت‌ها و میان‌برهایی می‌شود که در صفحهٔ اصلی خود ذخیره کرده‌اید.`
+    - Source: `Changing the icon will remove any sites and shortcuts you’ve saved to your Home screen.   %1$s may close. Tap your new icon to reopen.`
+    - Suggest: `تغییر آیکون باعث حذف سایت‌ها و میان‌برهایی می‌شود که در صفحهٔ اصلی خود ذخیره کرده‌اید.`
+    - The source is "any sites and shortcuts you’ve saved to your Home screen"; adding "تمام" (all) is not a material change... actually it broadens the claim about what is deleted.
+- `saved_login_duplicate` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "A login" rendered as "ورودی" (an entry/input), not the login/account credential meaning.
+    - Current: `ورودی با این نام کاربری از قبل وجود دارد`
+    - Source: `A login with that username already exists`
+    - Suggest: `ورودی با این نام کاربری از قبل وجود دارد ← «گذرواژه‌ای با این نام کاربری از قبل وجود دارد»`
+    - "ورودی" means "entry/input" in Persian and does not convey a saved login credential; other strings in this surface use "ورود"/"گذرواژه".
+- `search_settings_google_lens_description` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — The brand name "Google" is transliterated as «گوگل» while the related title string keeps the Latin "Google Lens", creating brand inconsistency.
+    - Current: `ارسال تصاویر و عکس‌ها به گوگل برای جست‌وجوی بصری.`
+    - Source: `Sends images and photos to Google for visual search.`
+    - Suggest: `ارسال تصاویر و عکس‌ها به Google برای جست‌وجوی بصری.`
+    - Brand names must stay untranslated/untransliterated; the sibling string search_settings_google_lens_title uses "Google Lens" in Latin script.
+- _…and 14 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -544,6 +499,11 @@ _Nothing in this category._
     - Source: `Access to the file was denied`
     - Suggest: `دسترسی به این پرونده رد شد`
     - The source states a completed event ("Access to the file was denied"); the Persian present tense describes an ongoing/general behaviour.
+- `mozac_browser_errorpages_file_not_found_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — Arabic yeh "آيا" instead of Persian "آیا", misspelled "املائی", and colloquial "دیگه‌ی" in a formal error page.
+    - Current: `آيا در نشانی غلط املائی، حروف بزرگی و کوچکی یا مشکلات دیگه‌ی نوشتاری وجود دارد؟`
+    - Source: `{ <ul> } { <li> }Could the item have been renamed, removed, or relocated?{ </li> } { <li> }Is there a spelling, capitalization, or other typographical error in the address?{ </li> } { <li> }Do you have sufficient access…`
+    - Suggest: `آیا در نشانی غلط املایی، حروف بزرگ و کوچک یا مشکلات نوشتاری دیگری وجود دارد؟`
+    - The line uses the Arabic letter ي in «آيا» (other lines in the same string use the correct Persian ی), and «دیگه‌ی» is colloquial register inconsistent with the rest of the formal error text.
 - `mozac_browser_errorpages_port_blocked_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — "مشخصا" is used where the source has "specified a port", producing a broken clause.
     - Current: `نشانی درخواست مشخصا (به عنوان مثال`
     - Source: `{ <p> }The requested address specified a port (e.g., { <q> }mozilla.org:80{ </q> } for port 80 on mozilla.org) normally used for purposes { <em> }other{ </em> } than Web browsing. The browser has canceled the request fo…`
@@ -664,21 +624,6 @@ _Nothing in this category._
     - Source: `{ <p> }%1$s puts you in control.{ </p> } { <p> }Use it as a private browser: { <ul> } { <li> }Search and browse right in the app{ </li> } { <li> }Block trackers (or update settings to allow trackers){ </li> } { <li> }Er…`
     - Suggest: `مأموریت ما ترویج اینترنتی سالم و باز است`
     - "تا" is not grammatical here; the sentence "Our mission is to foster a healthy, open Internet" needs a noun/infinitive phrase.
-- `content_description_reload` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Misspelling "بارگزاری" should be "بارگذاری".
-    - Current: `بارگزاری مجدد وب‌سایت`
-    - Source: `Reload website`
-    - Suggest: `بارگذاری مجدد وب‌سایت`
-    - Standard Persian spelling of "loading" is بارگذاری.
-- `content_description_stop` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Misspelling "بارگزاری" should be "بارگذاری".
-    - Current: `توقف بارگزاری وب‌سایت`
-    - Source: `Stop loading website`
-    - Suggest: `توقف بارگذاری وب‌سایت`
-    - Standard Persian spelling of "loading" is بارگذاری.
-- `firstrun_shortcut_title` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Ungrammatical phrase: object marker "را" misplaced, making "افزودن میان‌برها را به صفحه خانگی شما" incorrect Persian.
-    - Current: `افزودن میان‌برها را به صفحه خانگی شما`
-    - Source: `Add shortcuts to your home screen`
-    - Suggest: `افزودن میان‌بر به صفحهٔ خانگی`
-    - The source is "Add shortcuts to your home screen"; the Persian noun-phrase title cannot take the object marker "را" after the verbal noun, producing broken grammar.
 - `notification_action_erase_and_open` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Imperative verb form mixed with noun form: "حذف و باز کن" is inconsistent and ungrammatical as a notification action label.
     - Current: `حذف و باز کن`
     - Source: `Erase and Open`
@@ -694,11 +639,6 @@ _Nothing in this category._
     - Source: `You have disabled content blocking for these websites.`
     - Suggest: `برای این سایت‌ها`
     - Source says "for these websites" (plural); the translation uses the singular "این سایت".
-- `tab_crash_report_description` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Missing zero-width non-joiner in "نمی توانیم" (space instead of ZWNJ).
-    - Current: `نمی توانیم`
-    - Source: `As a private browser, we never save and cannot restore this tab.`
-    - Suggest: `نمی‌توانیم`
-    - Persian prefix "نمی" must join the verb with a ZWNJ, as done elsewhere in this batch (e.g. "می‌کنید").
 
 ### D. Terminology, register & consistency
 
@@ -785,16 +725,7 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
-- `onboarding_first_screen_title` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Stray space after the ZWNJ in "خوش‌ آمدید".
-    - Current: `به %1$s خوش‌ آمدید`
-    - Source: `Welcome to %1$s`
-    - Suggest: `به %1$s خوش آمدید`
-    - The word contains both a ZWNJ and a space, producing incorrect spacing.
-- `preference_autocomplete_add_confirmation` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Missing sentence-final period present in the source.
-    - Current: `نشانی سفارشی جدید اضافه شد`
-    - Source: `New custom URL added.`
-    - Suggest: `نشانی سفارشی جدید اضافه شد.`
-    - Source ends with a full stop; other translated sentences in this batch keep it.
+_Nothing in this category._
 
 ---
 
@@ -816,8 +747,18 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (26)
+### Fixed to date (36)
 
+- `mozac_browser_errorpages_file_not_found_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — fixed 2026-10-12
+- `mozac_browser_errorpages_net_reset_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — fixed 2026-10-12
+- `mozac_feature_addons_permissions_all_urls_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — fixed 2026-10-12
+- `content_description_reload` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-12
+- `content_description_stop` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-12
+- `firstrun_shortcut_title` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-12
+- `onboarding_first_screen_title` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-12
+- `preference_autocomplete_add_confirmation` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-12
+- `tab_crash_report_description` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-12
+- `tab_crash_report_description` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-12
 - `mozac_browser_errorpages_archive_description` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — fixed 2026-10-07
 - `mozac_browser_errorpages_port_blocked_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — fixed 2026-10-07
 - `mozac_browser_errorpages_safe_browsing_malware_uri_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — fixed 2026-10-07

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
-| **Previous run** | 2026-09-28 @ `65850771ebc2` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a400fea340fd` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a400fea340fd` |
+| **Previous run** | 2026-10-05 @ `d82f35778c8b` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 5 of 2,787 |
+| **Strings reviewed this run** | 11 of 2,793 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,7 +45,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 45 |
-| Strings | 2,787 |
+| Strings | 2,793 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -71,10 +71,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `german-double` 23, `curly-double` 1, `straight-double` 1 | **german-double** |
+| quotes | `german-double` 22, `curly-double` 1, `straight-double` 1 | **german-double** |
 | ellipsis | `char` 22 | **char** |
 | dash | `en` 6 | **en** |
-| register | `formal` 654 | **formal** |
+| register | `formal` 657 | **formal** |
 
 ---
 
@@ -589,7 +589,7 @@ _Nothing in this category._
     - Current: `"Seite durchsuchen" deaktivieren`
     - Source: `Dismiss find in page`
     - Suggest: `„Seite durchsuchen“ schließen`
-    - The locale's quote convention is `german-double` (23 occurrences).
+    - The locale's quote convention is `german-double` (22 occurrences).
 - `mozac_feature_prompt_folder_upload_confirm_message` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-de/strings.xml` — Stray straight double quote before the German opening quotation mark.
     - Current: `von "„%1$s“ hochladen`
     - Source: `Make sure you trust this site before you upload from “%1$s”.`

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
-| **Previous run** | 2026-09-28 @ `65850771ebc2` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
+| **Previous run** | 2026-10-05 @ `d82f35778c8b` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 5 of 2,787 |
+| **Strings reviewed this run** | 11 of 2,793 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for ru: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `mozac_menu_banner_dismiss_description` — `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-ru/strings.xml` — "Dismiss promotion" is rendered as "Hide the advertisement", calling the in-menu promotional banner an ad.
+    - Current: `Скрыть рекламу`
+    - Source: `Dismiss promotion`
+    - Suggest: `Закрыть промо-баннер`
+    - The source says "promotion" (a promotional banner in the menu); "реклама" means advertising, which mislabels the product's own banner as an ad.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,9 +38,16 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (2)
 
-_Nothing retired._
+- `browser_menu_default_banner_dismiss_promotion` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "Dismiss promotion" is rendered as "Скрыть рекламу" (hide advertisement), which misstates the banner as an ad.
+    - Current: `Скрыть рекламу`
+    - Suggest: `Закрыть предложение`
+    - The banner promotes making the app default; "реклама" (advertisement) is not what the source means by "promotion".
+- `preferences_tab_view` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "Tab view" (the tab display style setting) is rendered as "Просмотр вкладок" (viewing tabs), an action rather than a view mode.
+    - Current: `Просмотр вкладок`
+    - Suggest: `Вид вкладок`
+    - The preference lets the user choose how tabs are displayed (list/grid); "Просмотр вкладок" reads as the act of browsing tabs, not the layout/view style.
 
 ---
 
@@ -45,7 +56,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 45 |
-| Strings | 2,787 |
+| Strings | 2,793 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -74,7 +85,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | quotes | `guillemet` 43, `straight-double` 2 | **guillemet** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 6 | **em** |
-| register | `informal` 145, `formal` 480 | **formal** |
+| register | `informal` 146, `formal` 482 | **formal** |
 
 ---
 
@@ -84,13 +95,22 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (155)
+## 3. Open findings (154)
 
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+
+- `mozac_menu_banner_dismiss_description` — `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-ru/strings.xml` — "Dismiss promotion" is rendered as "Hide the advertisement", calling the in-menu promotional banner an ad.
+    - Current: `Скрыть рекламу`
+    - Source: `Dismiss promotion`
+    - Suggest: `Закрыть промо-баннер`
+    - The source says "promotion" (a promotional banner in the menu); "реклама" means advertising, which mislabels the product's own banner as an ad.
+
+_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 88 |
+| 2 | Wrong content (says something other than the English) | 87 |
 | 3 | Degraded language (grammar, spelling, terminology) | 62 |
 | 4 | Cosmetic (typography, spacing) | 5 |
 
@@ -135,6 +155,11 @@ _Nothing in this category._
     - Source: `Unexpected response from server`
     - Suggest: `Неожиданный ответ сервера`
     - Source is "Unexpected response from server"; the target says "unknown/unidentified" and additionally exposes two unresolved translation variants separated by a slash in a page heading.
+- `mozac_menu_banner_dismiss_description` — `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-ru/strings.xml` — "Dismiss promotion" is rendered as "Hide the advertisement", calling the in-menu promotional banner an ad.
+    - Current: `Скрыть рекламу`
+    - Source: `Dismiss promotion`
+    - Suggest: `Закрыть промо-баннер`
+    - The source says "promotion" (a promotional banner in the menu); "реклама" means advertising, which mislabels the product's own banner as an ad.
 - `mozac_feature_addons_failed_to_load_extensions` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — "Try again later" is expanded into "Подождите некоторое время и попробуйте снова", adding content not in the source.
     - Current: `Не удалось загрузить расширения. Подождите некоторое время и попробуйте снова.`
     - Source: `Couldn’t load extensions. Try again later.`
@@ -245,11 +270,6 @@ _Nothing in this category._
     - Source: `Close custom tab menu sheet`
     - Suggest: `Закрыть панель меню пользовательской вкладки`
     - The source refers to closing the bottom-sheet of the custom tab menu, not a "page"; the developer comment says it is a bottom sheet handlebar.
-- `browser_menu_default_banner_dismiss_promotion` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "Dismiss promotion" is rendered as "Скрыть рекламу" (hide advertisement), which misstates the banner as an ad.
-    - Current: `Скрыть рекламу`
-    - Source: `Dismiss promotion`
-    - Suggest: `Закрыть предложение`
-    - The banner promotes making the app default; "реклама" (advertisement) is not what the source means by "promotion".
 - `browser_menu_summarize_page_badge` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "New" (a badge marking a new feature) is translated as "Создать" ("Create").
     - Current: `Создать`
     - Source: `New`
@@ -400,7 +420,7 @@ _Nothing in this category._
     - Source: `Show in private sessions`
     - Suggest: `Показывать в приватных сессиях`
     - The source says "sessions", not "windows"; Android Firefox has no windows.
-- _…and 32 more; see `state/` for the full list._
+- _…and 31 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

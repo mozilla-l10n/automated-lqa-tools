@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
-| **Previous run** | 2026-09-28 @ `65850771ebc2` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
+| **Previous run** | 2026-10-05 @ `d82f35778c8b` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 25 of 2,781 |
+| **Strings reviewed this run** | 17 of 2,793 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 45 |
-| Strings | 2,781 |
-| Missing strings | 6 |
+| Strings | 2,793 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,11 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**6 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — 6
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -76,7 +72,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 14, `straight-double` 2 | **curly-double** |
-| apostrophe | `typographic` 154, `straight` 1 | **typographic** |
+| apostrophe | `typographic` 155, `straight` 1 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | register | `informal` 2, `formal` 18 | **formal** |
 
@@ -663,7 +659,7 @@ _Nothing in this category._
     - Current: `Çökme raporu %1$s'ya gönderiliyor`
     - Source: `Sending crash report to %1$s`
     - Suggest: `%1$s’ya`
-    - The tree uses ’ 154 times against 1 straight.
+    - The tree uses ’ 155 times against 1 straight.
 - `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
     - Current: `Web adresi "https://" veya "http://" içermelidir`
     - Source: `Web address must contain “https://” or “http://”`

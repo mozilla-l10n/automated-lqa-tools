@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
-| **Previous run** | 2026-09-28 @ `65850771ebc2` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
+| **Previous run** | 2026-10-05 @ `d82f35778c8b` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 2,746 |
+| **Strings reviewed this run** | 82 of 2,782 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,41 @@ Also for pl: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `nova_onboarding_marketing_body_7` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "the platform you came from" is rendered as "the platform Firefox was downloaded from", changing the meaning described in the developer comment.
+    - Current: `platformę, z której pobrano Firefoksa`
+    - Source: `You can help us reach more people by allowing Mozilla to inform the platform you came from that you use Firefox. %1$s`
+    - Suggest: `platformę, z której trafiono do Firefoksa`
+    - The comment explains "platform you came from" means the external app, website, store or campaign that directed the user to Firefox — not necessarily where it was downloaded from.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (5)
 
-_Nothing was fixed._
+- `notification_privacy_report_channel_name` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Privacy report" is rendered as "Informacja o prywatności" (privacy information) instead of a report.
+    - Current: `Informacja o prywatności`
+    - Source: `Privacy report`
+    - Suggest: `Raport prywatności`
+    - The notification channel is the weekly privacy report; "informacja" does not convey "report".
+- `nova_onboarding_marketing_body_7` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "the platform you came from" is rendered as "the platform Firefox was downloaded from", changing the meaning described in the developer comment.
+    - Current: `platformę, z której pobrano Firefoksa`
+    - Source: `You can help us reach more people by allowing Mozilla to inform the platform you came from that you use Firefox. %1$s`
+    - Suggest: `platformę, z której trafiono do Firefoksa`
+    - The comment explains "platform you came from" means the external app, website, store or campaign that directed the user to Firefox — not necessarily where it was downloaded from.
+- `preferences_google_lens_availability_caption` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — The clarification "enabled above" and "your active search engine while browsing" is reduced, dropping the reference to the setting above.
+    - Current: `gdy wyszukiwarka Google jest włączona i w danej chwili aktywna`
+    - Source: `Available only when Google is enabled above and is your active search engine while browsing.`
+    - Suggest: `gdy wyszukiwarka Google jest włączona powyżej i jest aktywną wyszukiwarką podczas przeglądania`
+    - The source specifies Google must be enabled in the setting above and be the active search engine while browsing; the Polish omits both qualifiers.
+- `preferences_privacy_report_title` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — The preference title "Enable privacy report" is rendered as "Informacja o prywatności", dropping "Enable" and mistranslating "report".
+    - Current: `Informacja o prywatności`
+    - Source: `Enable privacy report`
+    - Suggest: `Raport prywatności`
+    - Source is "Enable privacy report"; the Polish says "Privacy information", losing both the enabling action and the term "report".
+- `search_settings_google_lens_title` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Enable Google Lens search" is translated without the "Enable" verb.
+    - Current: `Wyszukiwanie w Google Lens`
+    - Source: `Enable Google Lens search`
+    - Suggest: `Włącz wyszukiwanie w Google Lens`
+    - The source title for the toggle includes "Enable"; the Polish drops it, unlike the parallel string preferences_debug_settings_google_lens_integration which keeps "Włącz".
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -44,11 +72,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 44 |
-| Strings | 2,746 |
-| Missing strings | 41 |
+| Files | 45 |
+| Strings | 2,782 |
+| Missing strings | 11 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,14 +91,12 @@ _Nothing retired._
 
 ### Completeness
 
-**41 strings** are not translated yet, concentrated in:
+**11 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — 23
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml` — 18
-
-**Files absent from the locale:**
-
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml`
+- `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — 7
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-pl/strings.xml` — 2
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-pl/strings.xml` — 1
+- `mozilla-mobile/focus-android/app/src/main/res/values-pl/strings.xml` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -83,7 +109,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | quotes | `polish-double` 84 | **polish-double** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 2, `en` 3 | _mixed_ |
-| nbsp | `total` 653, `before-punctuation` 14 | **total** |
+| nbsp | `total` 719, `before-punctuation` 20 | **total** |
 | register | `informal` 9 | **informal** |
 
 ---
@@ -94,13 +120,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (88)
+## 3. Open findings (83)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 63 |
+| 2 | Wrong content (says something other than the English) | 58 |
 | 3 | Degraded language (grammar, spelling, terminology) | 24 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
@@ -300,11 +326,6 @@ _Nothing in this category._
     - Source: `Open VPN settings`
     - Suggest: `Otwórz ustawienia VPN`
     - Source is "Open VPN settings" and the developer comment says it is a content description for a chevron button that opens the settings screen; the Polish only says "VPN settings".
-- `notification_privacy_report_channel_name` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Privacy report" translated as "Informacja o prywatności" (privacy notice/information) instead of a report about privacy.
-    - Current: `Informacja o prywatności`
-    - Source: `Privacy report`
-    - Suggest: `Raport prywatności`
-    - The source names the weekly privacy report notification channel; "Informacja o prywatności" means a privacy notice, not a report of blocked trackers.
 - `nova_onboarding_marketing_body_4` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "the platform you came from" mistranslated as "the platform Firefox was downloaded from".
     - Current: `platformę, z której pobrano Firefoksa`
     - Source: `You can help us reach more people by allowing Mozilla to inform the platform you came from that you use Firefox.`
@@ -320,11 +341,6 @@ _Nothing in this category._
     - Source: `Help us reach more people by allowing Mozilla to inform the platform you came from that you use Firefox. %1$s`
     - Suggest: `platformę, z której trafiono do Firefoksa`
     - Per the developer comment, the platform is the source that directed the user to Firefox, not the download source.
-- `nova_onboarding_marketing_body_7` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "the platform you came from" mistranslated as "the platform Firefox was downloaded from".
-    - Current: `platformę, z której pobrano Firefoksa`
-    - Source: `You can help us reach more people by allowing Mozilla to inform the platform you came from that you use Firefox. %1$s`
-    - Suggest: `platformę, z której trafiono do Firefoksa`
-    - Per the developer comment, the platform is the source that directed the user to Firefox, not the download source.
 - `onboarding_redesign_sync_body` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "tabs" was translated as "historii" (history) instead of "kart" (tabs).
     - Current: `Korzystaj z zakładek, historii i haseł na każdym urządzeniu.`
     - Source: `Get bookmarks, tabs, and passwords on any device. All protected with encryption.`
@@ -335,11 +351,6 @@ _Nothing in this category._
     - Source: `Enable Gecko logs`
     - Suggest: `Włącz dzienniki Gecko`
     - Source is "Enable Gecko logs"; the verb "Enable" is missing in the Polish string, changing the meaning of the preference.
-- `preferences_google_lens_availability_caption` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — The clarification "enabled above" and "while browsing" is dropped/altered.
-    - Current: `Dostępne tylko wtedy, gdy wyszukiwarka Google jest włączona i w danej chwili aktywna.`
-    - Source: `Available only when Google is enabled above and is your active search engine while browsing.`
-    - Suggest: `Dostępne tylko wtedy, gdy wyszukiwarka Google jest włączona powyżej i jest aktywną wyszukiwarką podczas przeglądania.`
-    - Source specifies Google must be enabled in the setting above and be the active search engine while browsing; the Polish omits both qualifiers.
 - `preferences_marketing_data_description_4` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — The phrase "with Mozilla’s marketing technology partners" is attached to "that you use it", making it read "that you use it with Mozilla's partners".
     - Current: `Podziel się informacją, skąd wiesz o Firefoksie i że go używasz z partnerami technologii marketingowych Mozilli.`
     - Source: `Share how you discovered Firefox and that you use it with Mozilla’s marketing technology partners.`
@@ -355,11 +366,6 @@ _Nothing in this category._
     - Source: `Privacy report`
     - Suggest: `Raport prywatności`
     - The source is the category header "Privacy report"; the Polish says "Other features", a completely different meaning.
-- `preferences_privacy_report_title` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Enable privacy report" is translated as "Informacja o prywatności" ("Privacy information"), dropping the enable action and mistranslating "report".
-    - Current: `Informacja o prywatności`
-    - Source: `Enable privacy report`
-    - Suggest: `Włączenie raportu prywatności`
-    - The developer comment says this is the title of a preference to enable/disable the privacy report feature; the target neither mentions enabling nor the report.
 - `protection_panel_etp_toggle_enabled_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "try turning it off" refers to tracking protection, but the Polish "spróbuj ją wyłączyć" grammatically refers to the site (witryna).
     - Current: `Jeśli coś na tej witrynie nie działa, spróbuj ją wyłączyć.`
     - Source: `If something looks broken on this site, try turning it off.`
@@ -375,11 +381,6 @@ _Nothing in this category._
     - Source: `Replace query with “%s”. Example: https://www.google.com/search?q=%s`
     - Suggest: `https://www.google.com/search?q=%s`
     - The source example URL is https://www.google.com/search?q=%s; the example URL should not be localized to a different domain, especially as the parallel suggestion-string example keeps google.com.
-- `search_settings_google_lens_title` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — Toggle title drops "Enable".
-    - Current: `Wyszukiwanie w Google Lens`
-    - Source: `Enable Google Lens search`
-    - Suggest: `Włącz wyszukiwanie w Google Lens`
-    - Source "Enable Google Lens search" includes the action "Enable", omitted in Polish.
 - `search_suggestions_delete_history_item_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — Adds "witrynę" (website), but the placeholder may be a search term, not a site.
     - Current: `Usunięto witrynę %1$s z historii`
     - Source: `Deleted %1$s from history`
@@ -410,7 +411,32 @@ _Nothing in this category._
     - Source: `Dismiss`
     - Suggest: `Odrzuć`
     - The button dismisses the Close Tabs Banner; "Zamknij" is the translation used elsewhere in this batch for "Close" and is ambiguous with closing tabs, misrepresenting the negative action.
-- _…and 8 more; see `state/` for the full list._
+- `terms_of_use_prompt_message_1` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — The translation says the Terms of Use come "from the Firefox browser" instead of "a Firefox Terms of Use" being newly introduced.
+    - Current: `Wprowadziliśmy %2$s z przeglądarki %1$s`
+    - Source: `We’ve introduced a %1$s %2$s and updated our %3$s.`
+    - Suggest: `Wprowadziliśmy %2$s przeglądarki %1$s`
+    - Source: "We’ve introduced a %1$s %2$s" — %1$s modifies the Terms of Use (Firefox Terms of Use); "z przeglądarki" (from the browser) changes the meaning.
+- `ungroup_tab_group_confirmation_dialog_body` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — The source says the tabs will remain open; the Polish rephrases it as a negation of closing, changing the statement.
+    - Current: `Karty na tym urządzeniu nie zostaną zamknięte, ale grupa zostanie usunięta.`
+    - Source: `The tabs will remain open on this device, but the group will be deleted.`
+    - Suggest: `Karty pozostaną otwarte na tym urządzeniu, ale grupa zostanie usunięta.`
+    - en-US: "The tabs will remain open on this device" — an affirmative statement about tabs remaining open, not a negative statement about closing.
+- `unsubmitted_crash_requested_by_devs_dialog_never_button` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "Never show again" is translated as "Nie pytaj ponownie" (Don't ask again), duplicating another string's wording and losing "never".
+    - Current: `Nie pytaj ponownie`
+    - Source: `Never show again`
+    - Suggest: `Nie pokazuj ponownie`
+    - en-US "Never show again" refers to not showing the dialog; "Nie pytaj ponownie" is the translation used for "Don’t ask again" elsewhere in the batch.
+- `webcompat_reporter_reason_checkout` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — "check out" is rendered as "dokonać płatności", duplicating "zapłacić" and losing the checkout meaning.
+    - Current: `Nie można zapłacić, dokonać płatności ani zrobić zakupów`
+    - Source: `Can’t pay, check out or shop`
+    - Suggest: `Nie można zapłacić, sfinalizować zamówienia ani zrobić zakupów`
+    - The source lists three distinct actions: pay, check out, shop. The Polish repeats "pay" twice and drops the checkout step.
+- `crash_report_send_crash_label` — `mozilla-mobile/focus-android/app/src/main/res/values-pl/strings.xml` — The translation says "report the crash to Mozilla" using a form that reads as reporting Mozilla itself/omits "report" object correctly.
+    - Current: `Zgłoś awarię Mozilli`
+    - Source: `Send crash report to Mozilla`
+    - Suggest: `Wyślij zgłoszenie awarii do Mozilli`
+    - Source is "Send crash report to Mozilla"; "Zgłoś awarię Mozilli" reads as "Report Mozilla's crash" (genitive attached to awaria) rather than sending the report to Mozilla, and it is a checkbox label, not an action command.
+- _…and 3 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -541,6 +567,10 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (5)
 
-_Nothing fixed yet._
+- `notification_privacy_report_channel_name` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — fixed 2026-10-12
+- `nova_onboarding_marketing_body_7` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — fixed 2026-10-12
+- `preferences_google_lens_availability_caption` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — fixed 2026-10-12
+- `preferences_privacy_report_title` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — fixed 2026-10-12
+- `search_settings_google_lens_title` — `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — fixed 2026-10-12

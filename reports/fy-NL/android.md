@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
-| **Previous run** | 2026-09-28 @ `65850771ebc2` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
+| **Previous run** | 2026-10-05 @ `d82f35778c8b` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,752 |
+| **Strings reviewed this run** | 36 of 2,783 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,63 @@ Also for fy-NL: [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (11)
 
-_No new findings._
+- `mozac_feature_listentopage_notification_playback_speed_0_25` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex in "Ofspylsnelheid"; should be "Ôfspylsnelheid".
+    - Current: `Ofspylsnelheid 75 prosint stadiger`
+    - Source: `Playback rate 75 percent slower`
+    - Suggest: `Ôfspylsnelheid 75 prosint stadiger`
+    - Frisian "ôf" carries a circumflex; the same string uses "ôfspylsnelheid" correctly elsewhere (mozac_feature_listentopage_change_speed, _playback_speed_1).
+- `mozac_feature_listentopage_notification_playback_speed_0_5` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex in "Ofspyljen"; should be "Ôfspyljen".
+    - Current: `Ofspyljen ynsteld op heale snelheid`
+    - Source: `Playback set to half speed`
+    - Suggest: `Ôfspyljen ynsteld op heale snelheid`
+    - Frisian "ôf-" requires the circumflex, as used in other strings of this file.
+- `mozac_feature_listentopage_notification_playback_speed_0_75` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex in "Ofspylsnelheid"; should be "Ôfspylsnelheid".
+    - Current: `Ofspylsnelheid 25 prosint stadiger`
+    - Source: `Playback rate 25 percent slower`
+    - Suggest: `Ôfspylsnelheid 25 prosint stadiger`
+    - Frisian "ôf" carries a circumflex; inconsistent with "ôfspylsnelheid" used elsewhere in the same file.
+- `mozac_feature_listentopage_notification_playback_speed_1_25` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex in "Ofspylsnelheid"; should be "Ôfspylsnelheid".
+    - Current: `Ofspylsnelheid 25 prosint flugger`
+    - Source: `Playback rate 25 percent faster`
+    - Suggest: `Ôfspylsnelheid 25 prosint flugger`
+    - Frisian "ôf" carries a circumflex; inconsistent with "ôfspylsnelheid" used elsewhere in the same file.
+- `mozac_feature_listentopage_notification_playback_speed_1_5` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex in "Ofspylsnelheid"; should be "Ôfspylsnelheid".
+    - Current: `Ofspylsnelheid 50 prosint flugger`
+    - Source: `Playback rate 50 percent faster`
+    - Suggest: `Ôfspylsnelheid 50 prosint flugger`
+    - Frisian "ôf" carries a circumflex; inconsistent with "ôfspylsnelheid" used elsewhere in the same file.
+- `mozac_feature_listentopage_notification_playback_speed_1_75` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex in "Ofspylsnelheid"; should be "Ôfspylsnelheid".
+    - Current: `Ofspylsnelheid 75 prosint flugger`
+    - Source: `Playback rate 75 percent faster`
+    - Suggest: `Ôfspylsnelheid 75 prosint flugger`
+    - Frisian "ôf" carries a circumflex; inconsistent with "ôfspylsnelheid" used elsewhere in the same file.
+- `mozac_feature_listentopage_notification_playback_speed_2` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex in "Ofspyljen"; should be "Ôfspyljen".
+    - Current: `Ofspyljen ynsteld op dûbele snelheid`
+    - Source: `Playback set to double speed`
+    - Suggest: `Ôfspyljen ynsteld op dûbele snelheid`
+    - Frisian "ôf-" requires the circumflex, as used in other strings of this file.
+- `mozac_feature_listentopage_play` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex in "Ofspylje"; should be "Ôfspylje".
+    - Current: `Ofspylje`
+    - Source: `Play`
+    - Suggest: `Ôfspylje`
+    - Frisian "ôfspylje" is written with a circumflex, as in "ôfspylsnelheid" elsewhere in this file.
+- `sign_out_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex in "Ofmelde"; should be "Ôfmelde".
+    - Current: `Ofmelde by jo account?`
+    - Source: `Sign out of your account?`
+    - Suggest: `Ôfmelde by jo account?`
+    - Frisian "ôfmelde" is spelled with a circumflex on the ô.
+- `sign_out_dialog_confirm_button` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex in "Ofmelde"; should be "Ôfmelde".
+    - Current: `Ofmelde`
+    - Source: `Sign out`
+    - Suggest: `Ôfmelde`
+    - Frisian "ôfmelde" is spelled with a circumflex on the ô.
+- `preferences_category_sync_controls` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Misspelling "Syngronisaasje" instead of "Synchronisaasje".
+    - Current: `Syngronisaasje`
+    - Source: `Sync`
+    - Suggest: `Synchronisaasje`
+    - The Frisian word is "synchronisaasje" (cf. the related forms used in other strings); "syngronisaasje" is a misspelling.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +99,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 45 |
-| Strings | 2,752 |
-| Missing strings | 35 |
+| Strings | 2,783 |
+| Missing strings | 10 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,10 +117,11 @@ _Nothing retired._
 
 ### Completeness
 
-**35 strings** are not translated yet, concentrated in:
+**10 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — 19
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — 16
+- `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — 7
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — 2
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-fy-rNL/strings.xml` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -77,7 +132,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-single` 16 | **curly-single** |
-| apostrophe | `typographic` 94, `straight` 8 | **typographic** |
+| apostrophe | `typographic` 95, `straight` 8 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `en` 6 | **en** |
 
@@ -89,14 +144,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (167)
+## 3. Open findings (178)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 59 |
-| 3 | Degraded language (grammar, spelling, terminology) | 97 |
+| 3 | Degraded language (grammar, spelling, terminology) | 108 |
 | 4 | Cosmetic (typography, spacing) | 11 |
 
 ### A. Functional, markup, variables & plurals
@@ -488,6 +543,46 @@ _Nothing in this category._
     - Source: `No app found to open %1$s files`
     - Suggest: `Gjin app fûn om %1$s-bestannen te iepenjen`
     - The source says no app was found to open the files; 'mei' adds an instrumental sense that is not in the source and is ungrammatical here.
+- `mozac_feature_listentopage_notification_playback_speed_0_25` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex in "Ofspylsnelheid"; should be "Ôfspylsnelheid".
+    - Current: `Ofspylsnelheid 75 prosint stadiger`
+    - Source: `Playback rate 75 percent slower`
+    - Suggest: `Ôfspylsnelheid 75 prosint stadiger`
+    - Frisian "ôf" carries a circumflex; the same string uses "ôfspylsnelheid" correctly elsewhere (mozac_feature_listentopage_change_speed, _playback_speed_1).
+- `mozac_feature_listentopage_notification_playback_speed_0_5` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex in "Ofspyljen"; should be "Ôfspyljen".
+    - Current: `Ofspyljen ynsteld op heale snelheid`
+    - Source: `Playback set to half speed`
+    - Suggest: `Ôfspyljen ynsteld op heale snelheid`
+    - Frisian "ôf-" requires the circumflex, as used in other strings of this file.
+- `mozac_feature_listentopage_notification_playback_speed_0_75` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex in "Ofspylsnelheid"; should be "Ôfspylsnelheid".
+    - Current: `Ofspylsnelheid 25 prosint stadiger`
+    - Source: `Playback rate 25 percent slower`
+    - Suggest: `Ôfspylsnelheid 25 prosint stadiger`
+    - Frisian "ôf" carries a circumflex; inconsistent with "ôfspylsnelheid" used elsewhere in the same file.
+- `mozac_feature_listentopage_notification_playback_speed_1_25` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex in "Ofspylsnelheid"; should be "Ôfspylsnelheid".
+    - Current: `Ofspylsnelheid 25 prosint flugger`
+    - Source: `Playback rate 25 percent faster`
+    - Suggest: `Ôfspylsnelheid 25 prosint flugger`
+    - Frisian "ôf" carries a circumflex; inconsistent with "ôfspylsnelheid" used elsewhere in the same file.
+- `mozac_feature_listentopage_notification_playback_speed_1_5` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex in "Ofspylsnelheid"; should be "Ôfspylsnelheid".
+    - Current: `Ofspylsnelheid 50 prosint flugger`
+    - Source: `Playback rate 50 percent faster`
+    - Suggest: `Ôfspylsnelheid 50 prosint flugger`
+    - Frisian "ôf" carries a circumflex; inconsistent with "ôfspylsnelheid" used elsewhere in the same file.
+- `mozac_feature_listentopage_notification_playback_speed_1_75` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex in "Ofspylsnelheid"; should be "Ôfspylsnelheid".
+    - Current: `Ofspylsnelheid 75 prosint flugger`
+    - Source: `Playback rate 75 percent faster`
+    - Suggest: `Ôfspylsnelheid 75 prosint flugger`
+    - Frisian "ôf" carries a circumflex; inconsistent with "ôfspylsnelheid" used elsewhere in the same file.
+- `mozac_feature_listentopage_notification_playback_speed_2` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex in "Ofspyljen"; should be "Ôfspyljen".
+    - Current: `Ofspyljen ynsteld op dûbele snelheid`
+    - Source: `Playback set to double speed`
+    - Suggest: `Ôfspyljen ynsteld op dûbele snelheid`
+    - Frisian "ôf-" requires the circumflex, as used in other strings of this file.
+- `mozac_feature_listentopage_play` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex in "Ofspylje"; should be "Ôfspylje".
+    - Current: `Ofspylje`
+    - Source: `Play`
+    - Suggest: `Ôfspylje`
+    - Frisian "ôfspylje" is written with a circumflex, as in "ôfspylsnelheid" elsewhere in this file.
 - `mozac_feature_media_notification_action_play` — `mozilla-mobile/android-components/components/feature/media/src/main/res/values-fy-rNL/strings.xml` — Missing accent on the initial 'Ô' in 'Ofspylje'.
     - Current: `Ofspylje`
     - Source: `Play`
@@ -658,57 +753,17 @@ _Nothing in this category._
     - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
     - Suggest: `‘Ôfslute’`
     - Frisian spelling requires "Ôfslute" with a circumflex on the initial vowel.
+- `preferences_category_sync_controls` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Misspelling "Syngronisaasje" instead of "Synchronisaasje".
+    - Current: `Syngronisaasje`
+    - Source: `Sync`
+    - Suggest: `Synchronisaasje`
+    - The Frisian word is "synchronisaasje" (cf. the related forms used in other strings); "syngronisaasje" is a misspelling.
 - `preferences_downloads_remove_from_download_history_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Misspelling of "downloadskiednis" as "downloadskeiednis".
     - Current: `downloadskeiednis`
     - Source: `File is removed from your download history, but is still saved on your device`
     - Suggest: `downloadskiednis`
     - The word for history is "skiednis"; other strings in the same group use "downloadskiednis".
-- `preferences_passwords_exceptions` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Missing diacritic in "Utsûnderingen"; should be "Utsûnderingen" with Ú.
-    - Current: `Utsûnderingen`
-    - Source: `Exceptions`
-    - Suggest: `Útsûnderingen`
-    - Frisian "útsûnderingen" begins with ú; capitalized it is Ú, as used in the same file's string preferences_passwords_exceptions_remove_all ("Alle útsûnderingen fuortsmite").
-- `preferences_show_search_optimization_cards` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Verb form "type" should be the plural/polite form "type" → "typt" agreeing with "jo".
-    - Current: `wylst jo type`
-    - Source: `Retrieve suggestions from Mozilla as you type`
-    - Suggest: `wylst jo type `
-    - In Frisian the polite pronoun "jo" takes the -e/-je form depending on verb class; "typen" is a weak verb class II, so the correct form is "jo type" — however the standard form after "jo" for this verb is "typje".
-- `preferences_show_search_suggestions` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Misspelling of "suggestjes" as "suggesjes".
-    - Current: `Syksuggesjes toane`
-    - Source: `Show search suggestions`
-    - Suggest: `Syksuggestjes toane`
-    - Elsewhere the term is spelled "suggestjes" (e.g. "Klamboerdsuggestjes toane"); "suggesjes" drops the t.
-- `preferences_sync_tabs_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Misspelling of "ljepblêden" as "ljeplêden".
-    - Current: `Iepen ljeplêden`
-    - Source: `Open tabs`
-    - Suggest: `Iepen ljepblêden`
-    - The Frisian word for tabs is "ljepblêden" (used consistently elsewhere in this batch); "ljeplêden" is missing the b.
-- `privacy_notice_updated_homepage_message` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Duplicated/garbled verb phrase "yn Firefox te wer te jaan".
-    - Current: `om de nijste funksjes yn Firefox te wer te jaan`
-    - Source: `We’ve updated our %1$s to reflect the latest features in Firefox. %2$s`
-    - Suggest: `om de nijste funksjes yn Firefox wer te jaan`
-    - The infinitive marker "te" is duplicated, producing ungrammatical Frisian; source is "to reflect the latest features in Firefox".
-- `protection_panel_etp_disabled_no_trackers_blocked` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Misspelled verb "wirde" instead of "wurde".
-    - Current: `Trackers wirde net blokkearre`
-    - Source: `Trackers aren’t blocked`
-    - Suggest: `Trackers wurde net blokkearre`
-    - The Frisian plural present of "wurde" is "wurde"; "wirde" is a spelling error.
-- `review_prompt_feedback_button` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Misspelled verb "efterlitte"; correct Frisian is "efterlitte" written as "achterlitte"/"efterlitte" — here the spelling is wrong.
-    - Current: `Kommentaar efterlitte`
-    - Source: `Leave feedback`
-    - Suggest: `Kommentaar achterlitte`
-    - The standard Frisian verb for 'leave (behind)' is 'achterlitte'; 'efterlitte' is not the standard spelling.
-- `search_suggestions_delete_history_item_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Confirmation of a completed deletion is rendered as an infinitive/imperative instead of a past participle.
-    - Current: `%1$s út skiednis fuortsmite`
-    - Source: `Deleted %1$s from history`
-    - Suggest: `%1$s út skiednis fuortsmiten`
-    - Source "Deleted %1$s from history" is a snackbar confirming that the item has been deleted, not an action label.
-- `setup_checklist_group_helpful_tools` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Plural "tools" rendered as singular "ark" without plural marking.
-    - Current: `Nuttich ark`
-    - Source: `Helpful tools`
-    - Suggest: `Nuttige ark`
-    - Source is "Helpful tools" (plural, collective); the Frisian adjective before the collective noun "ark" requires the inflected form "nuttige".
-- _…and 22 more; see `state/` for the full list._
+- _…and 33 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -803,38 +858,38 @@ _Nothing in this category._
 - `download_content_type_filter_video` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `download_content_type_filter_video` uses a straight apostrophe
     - Current: `Fideo's`
     - Source: `Videos`
-    - The tree uses ’ 94 times against 8 straight.
+    - The tree uses ’ 95 times against 8 straight.
 - `etp_known_fingerprinters_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `etp_known_fingerprinters_description` uses a straight apostrophe
     - Current: `Foarkomt dat unyk identifisearbere gegevens oer jo apparaat sammele wurde dy't brûkt wurde kinne foar folchdoeleinen.`
     - Source: `Stops uniquely identifiable data from being collected about your device that can be used for tracking purposes.`
     - Suggest: `dy’t brûkt wurde kinne`
-    - The tree uses ’ 94 times against 8 straight.
+    - The tree uses ’ 95 times against 8 straight.
 - `nova_onboarding_marketing_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `nova_onboarding_marketing_body_2` uses a straight apostrophe
     - Current: `Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht.`
     - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
-    - The tree uses ’ 94 times against 8 straight.
+    - The tree uses ’ 95 times against 8 straight.
 - `onboarding_marketing_body_1` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `onboarding_marketing_body_1` uses a straight apostrophe
     - Current: `Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht.`
     - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
     - Suggest: `Mozilla’s`
-    - The tree uses ’ 94 times against 8 straight.
+    - The tree uses ’ 95 times against 8 straight.
 - `onboarding_marketing_redesign_opt_out_checkbox` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `onboarding_marketing_redesign_opt_out_checkbox` uses a straight apostrophe
     - Current: `Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht.`
     - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
     - Suggest: `Mozilla’s`
-    - The tree uses ’ 94 times against 8 straight.
+    - The tree uses ’ 95 times against 8 straight.
 - `preferences_marketing_data_description_4` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `preferences_marketing_data_description_4` uses a straight apostrophe
     - Current: `Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke.`
     - Source: `Share how you discovered Firefox and that you use it with Mozilla’s marketing technology partners.`
-    - The tree uses ’ 94 times against 8 straight.
+    - The tree uses ’ 95 times against 8 straight.
 - `tab_tray_inactive_auto_close_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `tab_tray_inactive_auto_close_body_2` uses a straight apostrophe
     - Current: `%1$s kin ljepblêden dy't jo de ôfrûne moanne net besjoen hawwe slute.`
     - Source: `%1$s can close tabs you haven’t viewed over the past month.`
-    - The tree uses ’ 94 times against 8 straight.
+    - The tree uses ’ 95 times against 8 straight.
 - `uninstall_survey_option_4_v2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `uninstall_survey_option_4_v2` uses a straight apostrophe
     - Current: `Fideo's, downloads of media wurken net`
     - Source: `Videos, downloads, or media didn’t work`
-    - The tree uses ’ 94 times against 8 straight.
+    - The tree uses ’ 95 times against 8 straight.
 
 ---
 

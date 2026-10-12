@@ -1,8 +1,8 @@
 {
  "_meta": {
   "locale": "ja",
-  "prose_chunks": 2783,
-  "strings": 2783
+  "prose_chunks": 2792,
+  "strings": 2792
  },
  "apostrophe": {
   "straight": 0,
@@ -17,7 +17,7 @@
   "char": 11
  },
  "fullwidth": {
-  "punctuation": 723
+  "punctuation": 726
  },
  "inverted_marks": {
   "open-exclamation": 0,

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
-| **Previous run** | 2026-09-28 @ `65850771ebc2` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
+| **Previous run** | 2026-10-05 @ `d82f35778c8b` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 8 of 2,760 |
+| **Strings reviewed this run** | 0 of 2,755 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 45 |
-| Strings | 2,760 |
-| Missing strings | 27 |
+| Strings | 2,755 |
+| Missing strings | 38 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,10 +63,12 @@ _Nothing retired._
 
 ### Completeness
 
-**27 strings** are not translated yet, concentrated in:
+**38 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — 16
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-es-rMX/strings.xml` — 11
+- `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — 23
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-es-rMX/strings.xml` — 13
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-es-rMX/strings.xml` — 1
+- `mozilla-mobile/focus-android/app/src/main/res/values-es-rMX/strings.xml` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
