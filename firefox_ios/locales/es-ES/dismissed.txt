@@ -15,3 +15,4 @@
 # recurring across strings -- a house convention, a term that is correct
 # everywhere -- write a rule in suppressions.yaml instead, or better, a
 # sentence in conventions.md so the reviewer never raises it.
+PzSrmZ-2GqvPe — straight "…" is what this file uses for every quoted menu item (all 6 PzSrmZ-*/fi3W24-* siblings); «…» appears nowhere in the locale
