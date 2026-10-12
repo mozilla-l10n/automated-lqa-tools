@@ -626,6 +626,78 @@
  {
   "category": "B",
   "check": "llm",
+  "current": "播放速度降低至四分之一",
+  "dismissed_because": "",
+  "fid": "6feb474971b2",
+  "file": "mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml",
+  "first_seen": "2026-10-12",
+  "impact": 2,
+  "last_seen": "2026-10-12",
+  "locale": "zh-CN",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "Source says the rate is 75 percent slower; the Chinese says \"reduced to one quarter\". Although numerically equivalent, the sibling strings use \"加快四分之一\" (increased BY a quarter) for \"25 percent faster\", so \"降低至\" vs \"加快\" are inconsistent in form, and the 0.75 string is outright wrong. Aligning as a percentage keeps the set consistent.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "5adb472d",
+  "string_id": "mozac_feature_listentopage_notification_playback_speed_0_25",
+  "suggest": "播放速度减慢 75%",
+  "summary": "\"75 percent slower\" (0.25× speed) rendered as \"降低至四分之一\" is fine, but the parallel string 0.75 is mistranslated; here the wording is inconsistent with the faster ones — see rationale.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "播放速度降低至四分之三",
+  "dismissed_because": "",
+  "fid": "c3eff52e460f",
+  "file": "mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml",
+  "first_seen": "2026-10-12",
+  "impact": 2,
+  "last_seen": "2026-10-12",
+  "locale": "zh-CN",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source states the rate is 25 percent slower; the sibling \"25 percent faster\" is translated as \"加快四分之一\" (delta). Mixing \"降低至\" (resulting ratio) with \"加快\" (delta) across the set is inconsistent and misleading.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "650f944c",
+  "string_id": "mozac_feature_listentopage_notification_playback_speed_0_75",
+  "suggest": "播放速度减慢 25%",
+  "summary": "\"Playback rate 25 percent slower\" is rendered as \"降低至四分之三\" but is inconsistent with the parallel \"faster\" strings which express the delta, not the resulting ratio.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "播放速度加快四分之三",
+  "dismissed_because": "",
+  "fid": "73c2d8bc268b",
+  "file": "mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml",
+  "first_seen": "2026-10-12",
+  "impact": 2,
+  "last_seen": "2026-10-12",
+  "locale": "zh-CN",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source gives a percentage increase; expressing it as 四分之三 is acceptable arithmetically but the set should state the percentage consistently as the source does.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "e0e88123",
+  "string_id": "mozac_feature_listentopage_notification_playback_speed_1_75",
+  "suggest": "播放速度加快 75%",
+  "summary": "\"Playback rate 75 percent faster\" translated as \"加快四分之三\" uses a fraction where the source states a percentage, inconsistent with the adjacent 50 percent string rendered as \"加快一半\".",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
   "current": "导入密码",
   "dismissed_because": "",
   "fid": "03994c88c078",
@@ -1101,6 +1173,30 @@
   "string_id": "browser_custom_tab_menu_handlebar_content_description",
   "suggest": "关闭自定义标签页菜单面板",
   "summary": "\"sheet\" (bottom sheet) is mistranslated as \"表单\" (form).",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
+  "current": "添加到群组",
+  "dismissed_because": "",
+  "fid": "a3921dbfebcc",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-10-12",
+  "impact": 3,
+  "last_seen": "2026-10-12",
+  "locale": "zh-CN",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "In Firefox zh-CN, tab groups are rendered with 标签页组/分组; 群组 denotes a people group and is the wrong term here.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "9388cfd2",
+  "string_id": "browser_menu_add_to_tab_group",
+  "suggest": "添加到标签页组",
+  "summary": "\"group\" (tab group) rendered as \"群组\", which in zh-CN means a social/chat group rather than a tab group.",
   "suppressed_by": ""
  },
  {
@@ -2899,6 +2995,30 @@
   "string_id": "sync_no_devices_available_description",
   "suggest": "任何登录此账户并同步的设备都会显示在这里。",
   "summary": "\"Any devices ... will appear here\" is rendered as \"所有…设备都将显示在这里\", asserting all such devices are shown rather than stating that devices which sign in and sync will appear.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "了解如何连接新设备",
+  "dismissed_because": "",
+  "fid": "0ba597754bcf",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-10-12",
+  "impact": 3,
+  "last_seen": "2026-10-12",
+  "locale": "zh-CN",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "Source is \"Learn how to connect a device\"; 新 (new) is not in the source.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "9c670652",
+  "string_id": "sync_send_tab_empty_state_link",
+  "suggest": "了解如何连接设备",
+  "summary": "\"connect a device\" is rendered as \"connect a new device\", adding \"new\" which the source does not say.",
   "suppressed_by": ""
  },
  {

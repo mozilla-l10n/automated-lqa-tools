@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
-| **Previous run** | 2026-09-28 @ `65850771ebc2` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
+| **Previous run** | 2026-10-05 @ `d82f35778c8b` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 35 of 2,787 |
+| **Strings reviewed this run** | 6 of 2,788 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for pt-BR: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `mozac_feature_listentopage_notification_playback_speed_0_25` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-pt-rBR/strings.xml` — Source says the rate is 75 percent slower (0.25x); target omits nothing but mislabels… actually the rate value matches, see rationale.
-    - Current: `Reprodução 75 por cento mais lenta`
-    - Source: `Playback rate 75 percent slower`
-    - Suggest: `Velocidade de reprodução 75 por cento mais lenta`
-    - Minor: source "Playback rate" is rendered as just "Reprodução" while the sibling strings use "Velocidade de reprodução"; inconsistent terminology on the same surface.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 45 |
-| Strings | 2,787 |
-| Missing strings | 0 |
+| Strings | 2,788 |
+| Missing strings | 5 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -67,7 +63,14 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**5 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-pt-rBR/strings.xml` — 2
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-pt-rBR/strings.xml` — 1
+- `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — 1
+- `mozilla-mobile/focus-android/app/src/main/res/values-pt-rBR/strings.xml` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -87,7 +90,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (117)
+## 3. Open findings (114)
 
 
 | Impact | Meaning | Count |
@@ -95,7 +98,7 @@ _Nothing reported._
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 70 |
 | 3 | Degraded language (grammar, spelling, terminology) | 38 |
-| 4 | Cosmetic (typography, spacing) | 9 |
+| 4 | Cosmetic (typography, spacing) | 6 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -593,11 +596,6 @@ _Nothing in this category._
     - Source: `Web address must contain “https://” or “http://”`
     - Suggest: `O endereço web deve conter “https://” ou “http://”`
     - The locale's quote convention is `curly-double` (13 occurrences).
-- `change_file_extension_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Exclamation mark added where the source ends with a period.
-    - Current: `risco para o seu dispositivo!`
-    - Source: `This might open the file in a different app and be risky for your device.`
-    - Suggest: `risco para o seu dispositivo.`
-    - The source is a neutral statement ending in a period; the exclamation mark changes the tone and punctuation.
 - `connection_security_panel_local_pdf` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Translation adds a final period not present in the source.
     - Current: `Esta página está armazenada em seu dispositivo.`
     - Source: `This page is stored on your device`
@@ -608,16 +606,6 @@ _Nothing in this category._
     - Source: `Blocked`
     - Suggest: `Bloqueado`
     - Source is the header "Blocked" with no punctuation; the trailing colon is added by the translation.
-- `ip_protection_onboarding_body` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Brand term "Wi-Fi" written as "WiFi", dropping the hyphen used in the source.
-    - Current: `redes públicas de WiFi`
-    - Source: `%1$s by hiding your location, even on public Wi-Fi. Get %2$d GB free every month.`
-    - Suggest: `redes públicas de Wi-Fi`
-    - The source uses the official trademark spelling "Wi-Fi"; pt-BR strings elsewhere keep "Wi-Fi".
-- `ip_protection_promo_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Brand term "Wi-Fi" written as "WiFi", dropping the hyphen used in the source.
-    - Current: `redes públicas de WiFi`
-    - Source: `Browse with extra protection by hiding your location, even on public Wi-Fi. %s`
-    - Suggest: `redes públicas de Wi-Fi`
-    - The source uses the official trademark spelling "Wi-Fi"; pt-BR strings elsewhere keep "Wi-Fi".
 - `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — `preference_summary_delete_browsing_data_on_quit_2` uses straight double quotes
     - Current: `Excluir automaticamente os dados de navegação selecionados abaixo ao tocar em "Sair" no menu principal`
     - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
@@ -642,9 +630,11 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (0)
+### Dismissed by hand (3)
 
-_Nothing dismissed._
+- `change_file_extension_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — the exclamation mark is a wanted change
+- `ip_protection_onboarding_body` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "WiFi" is the spelling pt-BR uses throughout (9 strings, no "Wi-Fi"); intended
+- `ip_protection_promo_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "WiFi" is the spelling pt-BR uses throughout (9 strings, no "Wi-Fi"); intended
 
 _One line each in `locales/pt-BR/dismissed.txt`. Delete the line and the finding returns._
 

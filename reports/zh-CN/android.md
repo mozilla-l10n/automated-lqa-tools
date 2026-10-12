@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
-| **Previous run** | 2026-09-28 @ `65850771ebc2` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
+| **Previous run** | 2026-10-05 @ `d82f35778c8b` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,733 |
+| **Strings reviewed this run** | 60 of 2,788 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,33 @@ Also for zh-CN: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (5)
 
-_No new findings._
+- `mozac_feature_listentopage_notification_playback_speed_0_25` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-zh-rCN/strings.xml` — "75 percent slower" (0.25× speed) rendered as "降低至四分之一" is fine, but the parallel string 0.75 is mistranslated; here the wording is inconsistent with the faster ones — see rationale.
+    - Current: `播放速度降低至四分之一`
+    - Source: `Playback rate 75 percent slower`
+    - Suggest: `播放速度减慢 75%`
+    - Source says the rate is 75 percent slower; the Chinese says "reduced to one quarter". Although numerically equivalent, the sibling strings use "加快四分之一" (increased BY a quarter) for "25 percent faster", so "降低至" vs "加快" are inconsistent in form, and the 0.75 string is outright wrong. Aligning as a percentage keeps the set consistent.
+- `mozac_feature_listentopage_notification_playback_speed_0_75` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-zh-rCN/strings.xml` — "Playback rate 25 percent slower" is rendered as "降低至四分之三" but is inconsistent with the parallel "faster" strings which express the delta, not the resulting ratio.
+    - Current: `播放速度降低至四分之三`
+    - Source: `Playback rate 25 percent slower`
+    - Suggest: `播放速度减慢 25%`
+    - The source states the rate is 25 percent slower; the sibling "25 percent faster" is translated as "加快四分之一" (delta). Mixing "降低至" (resulting ratio) with "加快" (delta) across the set is inconsistent and misleading.
+- `mozac_feature_listentopage_notification_playback_speed_1_75` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-zh-rCN/strings.xml` — "Playback rate 75 percent faster" translated as "加快四分之三" uses a fraction where the source states a percentage, inconsistent with the adjacent 50 percent string rendered as "加快一半".
+    - Current: `播放速度加快四分之三`
+    - Source: `Playback rate 75 percent faster`
+    - Suggest: `播放速度加快 75%`
+    - The source gives a percentage increase; expressing it as 四分之三 is acceptable arithmetically but the set should state the percentage consistently as the source does.
+- `browser_menu_add_to_tab_group` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "group" (tab group) rendered as "群组", which in zh-CN means a social/chat group rather than a tab group.
+    - Current: `添加到群组`
+    - Source: `Add to group`
+    - Suggest: `添加到标签页组`
+    - In Firefox zh-CN, tab groups are rendered with 标签页组/分组; 群组 denotes a people group and is the wrong term here.
+- `sync_send_tab_empty_state_link` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "connect a device" is rendered as "connect a new device", adding "new" which the source does not say.
+    - Current: `了解如何连接新设备`
+    - Source: `Learn how to connect a device`
+    - Suggest: `了解如何连接设备`
+    - Source is "Learn how to connect a device"; 新 (new) is not in the source.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +68,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 43 |
-| Strings | 2,733 |
-| Missing strings | 54 |
+| Files | 45 |
+| Strings | 2,788 |
+| Missing strings | 5 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 2 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,17 +87,12 @@ _Nothing retired._
 
 ### Completeness
 
-**54 strings** are not translated yet, concentrated in:
+**5 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — 32
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml` — 18
-- `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-zh-rCN/strings.xml` — 3
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 1
-
-**Files absent from the locale:**
-
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml`
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml`
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-zh-rCN/strings.xml` — 2
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-zh-rCN/strings.xml` — 1
+- `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — 1
+- `mozilla-mobile/focus-android/app/src/main/res/values-zh-rCN/strings.xml` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -83,10 +102,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 74 | **curly-double** |
+| quotes | `curly-double` 75 | **curly-double** |
 | ellipsis | `char` 21 | **char** |
-| fullwidth | `punctuation` 1017 | **punctuation** |
-| register | `informal` 3, `formal` 261 | **formal** |
+| fullwidth | `punctuation` 1025 | **punctuation** |
+| register | `informal` 3, `formal` 262 | **formal** |
 
 ---
 
@@ -96,14 +115,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (144)
+## 3. Open findings (149)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 99 |
-| 3 | Degraded language (grammar, spelling, terminology) | 37 |
+| 2 | Wrong content (says something other than the English) | 102 |
+| 3 | Degraded language (grammar, spelling, terminology) | 39 |
 | 4 | Cosmetic (typography, spacing) | 8 |
 
 ### A. Functional, markup, variables & plurals
@@ -212,6 +231,21 @@ _Nothing in this category._
     - Source: `VPN isn’t working right now so your location may be visible. Continue browsing without VPN, or choose tabs to close.`
     - Suggest: `或者选择要关闭的标签页`
     - The source means the user picks which tabs to close; the Chinese reads as "select a tab in order to close", which is ambiguous/incorrect.
+- `mozac_feature_listentopage_notification_playback_speed_0_25` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-zh-rCN/strings.xml` — "75 percent slower" (0.25× speed) rendered as "降低至四分之一" is fine, but the parallel string 0.75 is mistranslated; here the wording is inconsistent with the faster ones — see rationale.
+    - Current: `播放速度降低至四分之一`
+    - Source: `Playback rate 75 percent slower`
+    - Suggest: `播放速度减慢 75%`
+    - Source says the rate is 75 percent slower; the Chinese says "reduced to one quarter". Although numerically equivalent, the sibling strings use "加快四分之一" (increased BY a quarter) for "25 percent faster", so "降低至" vs "加快" are inconsistent in form, and the 0.75 string is outright wrong. Aligning as a percentage keeps the set consistent.
+- `mozac_feature_listentopage_notification_playback_speed_0_75` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-zh-rCN/strings.xml` — "Playback rate 25 percent slower" is rendered as "降低至四分之三" but is inconsistent with the parallel "faster" strings which express the delta, not the resulting ratio.
+    - Current: `播放速度降低至四分之三`
+    - Source: `Playback rate 25 percent slower`
+    - Suggest: `播放速度减慢 25%`
+    - The source states the rate is 25 percent slower; the sibling "25 percent faster" is translated as "加快四分之一" (delta). Mixing "降低至" (resulting ratio) with "加快" (delta) across the set is inconsistent and misleading.
+- `mozac_feature_listentopage_notification_playback_speed_1_75` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-zh-rCN/strings.xml` — "Playback rate 75 percent faster" translated as "加快四分之三" uses a fraction where the source states a percentage, inconsistent with the adjacent 50 percent string rendered as "加快一半".
+    - Current: `播放速度加快四分之三`
+    - Source: `Playback rate 75 percent faster`
+    - Suggest: `播放速度加快 75%`
+    - The source gives a percentage increase; expressing it as 四分之三 is acceptable arithmetically but the set should state the percentage consistently as the source does.
 - `mozac_feature_passwords_importer_dialog_title` — `mozilla-mobile/android-components/components/feature/password-importer/src/main/res/values-zh-rCN/strings.xml` — Progress title "Importing passwords" rendered as an imperative/action label instead of ongoing state.
     - Current: `导入密码`
     - Source: `Importing passwords`
@@ -397,22 +431,7 @@ _Nothing in this category._
     - Source: `Items: %d`
     - Suggest: `项目：%d`
     - The source is a label-colon-value format; the translation restructures it, losing the label form.
-- `ip_protection_data_limit_reached_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "Access will reset next month" is mistranslated as "使用权限将于下个月重置" — acceptable — but "已用完" states data is exhausted while source says "used"; actually the snackbar signals the limit is reached, so retain, however "流量已用完" drops the amount semantics.
-    - Current: `%1$d GB VPN 流量已用完，使用权限将于下个月重置。`
-    - Source: `%1$d GB of VPN data used. Access will reset next month.`
-    - Suggest: `已用完 %1$d GB VPN 流量，使用权限将于下个月重置。`
-    - The source reads "%1$d GB of VPN data used"; the Chinese word order makes "%1$d GB VPN 流量" the subject of "已用完" awkwardly and reads as a fragment. Reordering keeps the meaning and grammar.
-- `ip_protection_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "Navigate back" is rendered as "浏览上一页" (browse the previous page), which describes page navigation rather than the back button of the settings screen.
-    - Current: `浏览上一页`
-    - Source: `Navigate back`
-    - Suggest: `返回`
-    - The developer comment says this is the content description for the settings screen top bar back button; "浏览上一页" wrongly implies browsing to a previous web page.
-- `lens_camera_permission_denied` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "Permission denied" is translated as "拒绝访问" (access denied/refuse access) instead of indicating the permission was denied.
-    - Current: `拒绝访问`
-    - Source: `Permission denied`
-    - Suggest: `权限被拒绝`
-    - The toast appears when the user denies the camera permission; "拒绝访问" loses the notion of a permission and reads as an imperative/ambiguous phrase.
-- _…and 46 more; see `state/` for the full list._
+- _…and 50 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -474,6 +493,11 @@ _Nothing in this category._
     - Source: `Duplicate tab`
     - Suggest: `复制标签页`
     - The established zh-CN term for the Duplicate tab menu option is 复制标签页; 克隆 is inconsistent terminology.
+- `browser_menu_add_to_tab_group` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "group" (tab group) rendered as "群组", which in zh-CN means a social/chat group rather than a tab group.
+    - Current: `添加到群组`
+    - Source: `Add to group`
+    - Suggest: `添加到标签页组`
+    - In Firefox zh-CN, tab groups are rendered with 标签页组/分组; 群组 denotes a people group and is the wrong term here.
 - `browser_menu_read` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "Reader view" rendered as 阅读模式 while browser_menu_customize_reader_view_2 uses 阅读器视图 on the same menu.
     - Current: `阅读模式`
     - Source: `Reader view`

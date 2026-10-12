@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `d82f35778c8b` |
-| **Previous run** | 2026-09-28 @ `65850771ebc2` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
+| **Previous run** | 2026-10-05 @ `d82f35778c8b` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,666 |
+| **Strings reviewed this run** | 42 of 2,703 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -44,11 +44,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 44 |
-| Strings | 2,666 |
-| Missing strings | 121 |
+| Files | 45 |
+| Strings | 2,703 |
+| Missing strings | 90 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,16 +63,12 @@ _Nothing retired._
 
 ### Completeness
 
-**121 strings** are not translated yet, concentrated in:
+**90 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/focus-android/app/src/main/res/values-hi-rIN/strings.xml` — 79
-- `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — 23
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml` — 18
-- `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-hi-rIN/strings.xml` — 1
-
-**Files absent from the locale:**
-
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml`
+- `mozilla-mobile/focus-android/app/src/main/res/values-hi-rIN/strings.xml` — 80
+- `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — 7
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-hi-rIN/strings.xml` — 2
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-hi-rIN/strings.xml` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -83,7 +79,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 13 | **curly-double** |
-| apostrophe | `straight` 6 | **straight** |
+| apostrophe | `straight` 5 | **straight** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 1 | **em** |
 
