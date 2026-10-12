@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
-| **Previous run** | 2026-09-28 @ `92e0a4895124` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
+| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 83 of 16,355 |
+| **Strings reviewed this run** | 45 of 16,378 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,22 +18,13 @@ Also for pt-BR: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (1)
 
-- `sync-syncing-across-devices-empty-state3` — `browser/browser/preferences/preferences.ftl` — `sync-syncing-across-devices-empty-state3` uses three dots where this locale uses …
-    - Current: `Não está sincronizando nada... ainda. Escolha o que sincronizar neste dispositivo.`
-    - Source: `description: You aren’t syncing anything… yet. Choose what to sync on this device. label: Manage synced data`
-    - The tree uses … 385 times against 4 ASCII runs.
-- `menu-share-links` — `browser/browser/browser.ftl` — Typo: "iink" instead of "link" in the singular variant.
-    - Current: `[one] { $count } iink`
-    - Source: `label: {$count ->} [one] { $count } Link [other] { $count } Links`
-    - Suggest: `[one] { $count } link`
-    - The en-US says "Link"; the pt-BR singular variant contains a misspelling "iink".
-- `sync-syncing-across-devices-empty-state3` — `browser/browser/preferences/preferences.ftl` — ASCII three-dot ellipsis used instead of the house ellipsis character.
-    - Current: `Não está sincronizando nada... ainda.`
-    - Source: `description: You aren’t syncing anything… yet. Choose what to sync on this device. label: Manage synced data`
-    - Suggest: `Não está sincronizando nada… ainda.`
-    - The pt-BR convention is the ellipsis character (…), as in the en-US source "anything… yet".
+- `pictureinpicture-subtitles-toggle` — `toolkit/toolkit/pictureinpicture/pictureinpicture.ftl` — "Subtítulos" is Spanish spelling; pt-BR is "Legendas".
+    - Current: `Subtítulos`
+    - Source: `label: Subtitles`
+    - Suggest: `Legendas`
+    - en-US "Subtitles" is rendered in pt-BR as "Legendas"; "Subtítulos" is not a Brazilian Portuguese term (it is Spanish).
 
 ### ✅ Fixed since the last run (0)
 
@@ -57,9 +48,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 326 |
-| Strings | 16,355 |
-| Missing strings | 0 |
+| Files | 327 |
+| Strings | 16,378 |
+| Missing strings | 26 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -76,7 +67,20 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**26 strings** are not translated yet, concentrated in:
+
+- `browser/browser/newtab/onboarding.ftl` — 10
+- `browser/browser/genai.ftl` — 4
+- `browser/browser/preferences/preferences.ftl` — 3
+- `browser/browser/defaultBrowserNotification.ftl` — 2
+- `browser/browser/newtab/asrouter.ftl` — 2
+- `browser/browser/menubar.ftl` — 1
+- `browser/browser/policies/policies-descriptions.ftl` — 1
+- `browser/browser/newtab/newtab.ftl` — 1
+- `dom/chrome/dom/dom.properties` — 1
+- `dom/chrome/security/security.properties` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -86,10 +90,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 588, `curly-single` 123, `straight-double` 63 | **curly-double** |
 | apostrophe | `typographic` 136, `straight` 106 | _mixed_ |
-| ellipsis | `char` 385, `ascii` 4 | **char** |
+| ellipsis | `char` 390, `ascii` 4 | **char** |
 | dash | `em` 47, `en` 1 | **em** |
 | nbsp | `total` 10, `narrow` 9, `before-punctuation` 5, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 1511 | **informal** |
+| register | `informal` 1512 | **informal** |
 
 ---
 
@@ -99,14 +103,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (532)
+## 3. Open findings (533)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 11 |
 | 2 | Wrong content (says something other than the English) | 183 |
-| 3 | Degraded language (grammar, spelling, terminology) | 255 |
+| 3 | Degraded language (grammar, spelling, terminology) | 256 |
 | 4 | Cosmetic (typography, spacing) | 83 |
 
 ### A. Functional, markup, variables & plurals
@@ -604,7 +608,7 @@ _Nothing reported._
     - Current: `ou uma pasta especificada dentro deles`
     - Source: `Create bookmarks in the Bookmarks toolbar, Bookmarks menu, or a specified folder inside them.`
     - Suggest: `ou em uma pasta especificada dentro deles`
-- _…and 85 more; see `state/` for the full list._
+- _…and 86 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -817,7 +821,7 @@ _Nothing reported._
 - `main-context-menu-pdfjs-save-page` — `browser/browser/browserContext.ftl` — `main-context-menu-pdfjs-save-page` uses three dots where this locale uses …
     - Current: `Salvar seleção como...`
     - Source: `label: Save selection as…`
-    - The tree uses … 385 times against 4 ASCII runs.
+    - The tree uses … 390 times against 4 ASCII runs.
 - `contextual-manager-passwords-no-passwords-message` — `browser/browser/contextual-manager.ftl` — Comma where a period belongs: contextual-manager-passwords-no-passwords-message (contextual-manager.ftl) — são criptografadas, Estamos atentos → criptografadas. Estamos atentos
     - Current: `são criptografadas, Estamos atentos`
     - Source: `All passwords are encrypted and we’ll watch out for breaches and alerts if you’re affected.`
@@ -854,7 +858,7 @@ _Nothing reported._
 - `newtab-discovery-empty-section-topstories-loading` — `browser/browser/newtab/newtab.ftl` — `newtab-discovery-empty-section-topstories-loading` uses three dots where this locale uses …
     - Current: `Carregando...`
     - Source: `Loading…`
-    - The tree uses … 385 times against 4 ASCII runs.
+    - The tree uses … 390 times against 4 ASCII runs.
 - `newtab-discovery-empty-section-topstories-loading` — `browser/browser/newtab/newtab.ftl` — main-context-menu-pdfjs-save-page (.label, browserContext.ftl), home-homepage-custom-url (.placeholder, preferences.ftl), newtab-discovery-empty-section-topstories-loading (newtab.ftl).
     - Source: `Loading…`
     - Suggest: `.label`
@@ -926,19 +930,19 @@ _Nothing reported._
 - `home-homepage-custom-url` — `browser/browser/preferences/preferences.ftl` — `home-homepage-custom-url` uses three dots where this locale uses …
     - Current: `Cole uma URL...`
     - Source: `placeholder: Paste a URL…`
-    - The tree uses … 385 times against 4 ASCII runs.
+    - The tree uses … 390 times against 4 ASCII runs.
 - `security-privacy-issue-warning-third-party-cookies` — `browser/browser/preferences/preferences.ftl` — Trailing period added where en-US has none: ipprotection-connection-status-blocked-error-title-1 (.aria-label too), security-privacy-issue-warning-third-party-cookies (.label, preferences.ftl), newtab-wallpaper-sky-with-pink-clouds, newtab-shortcuts-highlight-title, newtab-report-ads-reason-seen-it-too-many-times (.label) (newtab.ftl), windows-10-eos-callout-addons-title (asrouter.ftl), tab-group…
     - Source: `description: Third-party cookies are used to track you across websites. label: Third-party cookies are enabled`
     - Suggest: `.aria-label`
-- `sync-syncing-across-devices-empty-state3` — `browser/browser/preferences/preferences.ftl` — `sync-syncing-across-devices-empty-state3` uses three dots where this locale uses …
-    - Current: `Não está sincronizando nada... ainda. Escolha o que sincronizar neste dispositivo.`
-    - Source: `description: You aren’t syncing anything… yet. Choose what to sync on this device. label: Manage synced data`
-    - The tree uses … 385 times against 4 ASCII runs.
 - `sync-syncing-across-devices-empty-state3` — `browser/browser/preferences/preferences.ftl` — ASCII three-dot ellipsis used instead of the house ellipsis character.
     - Current: `Não está sincronizando nada... ainda.`
     - Source: `description: You aren’t syncing anything… yet. Choose what to sync on this device. label: Manage synced data`
     - Suggest: `Não está sincronizando nada… ainda.`
     - The pt-BR convention is the ellipsis character (…), as in the en-US source "anything… yet".
+- `sync-syncing-across-devices-empty-state3` — `browser/browser/preferences/preferences.ftl` — `sync-syncing-across-devices-empty-state3` uses three dots where this locale uses …
+    - Current: `Não está sincronizando nada... ainda. Escolha o que sincronizar neste dispositivo.`
+    - Source: `description: You aren’t syncing anything… yet. Choose what to sync on this device. label: Manage synced data`
+    - The tree uses … 390 times against 4 ASCII runs.
 - `update-setting-write-failure-message2` — `browser/browser/preferences/preferences.ftl` — restore-page-problem-desc (aboutSessionRestore.ftl), crashed-single-offer-help-message, crashed-multiple-offer-help-message (aboutTabCrashed.ftl), enable-devtools-popup-description2 (browser.ftl), pin-tabs-callout-1-subtitle, pin-tabs-callout-2-subtitle (featureCallout.ftl), permissions-exceptions-manage-etp-desc (preferences/permissions.ftl), update-setting-write-failure-message2 (preferences.ft…
     - Source: `{ -brand-short-name } encountered an error and didn’t save this change. Note that changing this update setting requires permission to write to the file below. You or a system administrator may be able to resolve the err…`
 - `tabbrowser-tab-label-tab-split-view-right` — `browser/browser/tabbrowser.ftl` — , Exibição dividida à direita → lowercase (the -left pair is lowercase)

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
-| **Previous run** | 2026-09-28 @ `92e0a4895124` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
+| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 121 of 16,355 |
+| **Strings reviewed this run** | 21 of 16,354 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,10 +45,10 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 326 |
-| Strings | 16,355 |
-| Missing strings | 0 |
+| Strings | 16,354 |
+| Missing strings | 50 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,7 +63,26 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**50 strings** are not translated yet, concentrated in:
+
+- `browser/browser/autoTabGrouping.ftl` — 15
+- `browser/browser/newtab/onboarding.ftl` — 10
+- `browser/browser/browser.ftl` — 6
+- `browser/browser/genai.ftl` — 4
+- `browser/browser/preferences/preferences.ftl` — 3
+- `browser/browser/browserSets.ftl` — 2
+- `browser/browser/defaultBrowserNotification.ftl` — 2
+- `browser/browser/newtab/asrouter.ftl` — 2
+- `browser/browser/aiWindow.ftl` — 1
+- `browser/browser/menubar.ftl` — 1
+- `browser/browser/policies/policies-descriptions.ftl` — 1
+- `browser/browser/newtab/newtab.ftl` — 1
+
+**Files absent from the locale:**
+
+- `browser/browser/autoTabGrouping.ftl`
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -73,7 +92,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 687, `curly-single` 64, `straight-double` 25 | **curly-double** |
 | apostrophe | `typographic` 992, `straight` 4 | **typographic** |
-| ellipsis | `char` 391 | **char** |
+| ellipsis | `char` 395 | **char** |
 | dash | `em` 82, `en` 3 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 

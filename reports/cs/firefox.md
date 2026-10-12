@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
-| **Previous run** | 2026-09-28 @ `92e0a4895124` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
+| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 93 of 16,355 |
+| **Strings reviewed this run** | 31 of 16,363 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,47 +18,31 @@ Also for cs: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (7)
+### 🆕 New findings (2)
 
-- `about-logging-preset-vpn-description` — `toolkit/toolkit/about/aboutLogging.ftl` — "Log modules" (modules to be logged) rendered as "Moduly protokolů" (modules of logs), reversing the meaning.
-    - Current: `Moduly protokolů pro diagnostiku problémů s IP Protection (VPN).`
-    - Source: `Log modules to diagnose IP Protection (VPN) issues`
-    - Suggest: `Protokolovat moduly pro diagnostiku problémů s IP Protection (VPN)`
-    - The en-US means logging the modules needed to diagnose IP Protection issues; "Moduly protokolů" means "modules of logs". Other preset descriptions in this file use the verb form.
-- `restart-required-unsaved-work-answer` — `browser/browser/aboutRestartRequired.ftl` — "Private Windows won’t reopen" translated as "Anonymní okna nelze znovu otevřít" (private windows cannot be reopened), stating an impossibility rather than a choice.
-    - Current: `Anonymní okna nelze z důvodu ochrany vašeho soukromí znovu otevřít.`
-    - Source: `Possibly, and we know that’s frustrating. { -brand-short-name } will reopen your tabs, but unsaved work inside webpages, like text in a form, may not be restored. Private Windows won’t reopen to protect your privacy.`
-    - Suggest: `Anonymní okna se z důvodu ochrany vašeho soukromí znovu neotevřou.`
-    - The source says the browser will not reopen private windows; the Czech asserts the user cannot reopen them at all, which is a different claim about product behaviour.
-- `autofill-payment-methods-save-security-codes-checkbox` — `browser/browser/preferences/preferences.ftl` — Misspelled adjective "bezpečností" instead of "bezpečnostní".
-    - Current: `Ukládat bezpečností kódy`
-    - Source: `accesskey: c label: Save security codes`
-    - Suggest: `Ukládat bezpečnostní kódy`
-    - "Security codes" is "bezpečnostní kódy"; "bezpečností" is the instrumental of the noun "bezpečnost" and is a spelling error here.
-- `ipprotection-feature-introduction-description-private-browsing-1` — `browser/browser/ipProtection.ftl` — "extra privacy" mistranslated as "zvlášť soukromí", which is not meaningful Czech.
-    - Current: `<a data-l10n-name="learn-more-vpn">zvlášť soukromí</a>`
-    - Source: `Help hide your location for <a data-l10n-name="learn-more-vpn">extra privacy</a> as you browse. Set rules to turn on the VPN for extra privacy or location-based browsing, and off where you don’t.`
-    - Suggest: `<a data-l10n-name="learn-more-vpn">větší soukromí</a>`
-    - "extra privacy" means more privacy; the sibling string renders it as "větší soukromí". "zvlášť soukromí" is ungrammatical and inconsistent.
-- `urlbar-result-menu-remove-top-site` — `browser/browser/browser.ftl` — Menu command rendered as a 3rd-person description ("Odebere") instead of an imperative/infinitive command.
-    - Current: `Odebere tuto top stránku`
+- `prefs-syncing-off-3` — `browser/browser/preferences/preferences.ftl` — "on this device" rendered as "na svém zařízení" (on your device), losing the reference to the current device.
+    - Current: `a další data na svém zařízení`
+    - Source: `description: Turn on sync to get your bookmarks, passwords, history, and more on this device. label: Syncing is OFF`
+    - Suggest: `a další data na tomto zařízení`
+    - The en-US says "on this device", and the developer comment makes clear the string is about the current device where sync is disabled; "na svém zařízení" is vague and loses that.
+- `urlbar-result-menu-remove-top-site` — `browser/browser/browser.ftl` — "top site" rendered as the anglicism "top stránka" instead of the established Czech term for Top Sites.
+    - Current: `Odebrat tuto top stránku`
     - Source: `(value): Remove this top site accesskey: T`
-    - Suggest: `Odebrat tuto top stránku`
-    - "Remove this top site" is a menu item label; Czech menu commands use the infinitive, as in the neighbouring strings ("Nastavit pravidla", "Sdílet složku").
-- `newtab-privacy-widget-open-menu-button` — `browser/browser/newtab/newtab.ftl` — Button label rendered in 3rd person ("Otevře") instead of the infinitive used for the parallel strings.
-    - Current: `aria-label: Otevře nabídku ochrany soukromí`
-    - Source: `aria-label: Open privacy menu title: Open privacy menu`
-    - Suggest: `aria-label: Otevřít nabídku ochrany soukromí`
-    - The parallel string newtab-picture-widget-open-menu-button uses "Otevřít nabídku…"; "Open … menu" is an action label, so the inconsistent 3rd-person form is wrong here.
-- `newtab-stocks-widget-open-menu-button` — `browser/browser/newtab/newtab.ftl` — Button label rendered in 3rd person ("Otevře") instead of the infinitive used for the parallel strings.
-    - Current: `aria-label: Otevře nabídku pro akcie`
-    - Source: `aria-label: Open stocks menu title: Open stocks menu`
-    - Suggest: `aria-label: Otevřít nabídku s akciemi`
-    - The parallel string newtab-picture-widget-open-menu-button uses "Otevřít nabídku…"; the inconsistent 3rd-person form is wrong for this action label.
+    - Suggest: `Odebrat tuto nejnavštěvovanější stránku`
+    - The cs locale translates "Top Sites" as "nejnavštěvovanější stránky"; "top stránka" is an inconsistent anglicism.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (2)
 
-_Nothing was fixed._
+- `urlbar-result-menu-remove-top-site` — `browser/browser/browser.ftl` — "top site" rendered as the anglicism "top stránka" instead of the established Czech term for Top Sites.
+    - Current: `Odebrat tuto top stránku`
+    - Source: `(value): Remove this top site accesskey: T`
+    - Suggest: `Odebrat tuto nejnavštěvovanější stránku`
+    - The cs locale translates "Top Sites" as "nejnavštěvovanější stránky"; "top stránka" is an inconsistent anglicism.
+- `urlbar-result-menu-remove-top-site` — `browser/browser/browser.ftl` — "top site" rendered as the anglicism "top stránka" instead of the established Czech term for Top Sites.
+    - Current: `Odebrat tuto top stránku`
+    - Source: `(value): Remove this top site accesskey: T`
+    - Suggest: `Odebrat tuto nejnavštěvovanější stránku`
+    - The cs locale translates "Top Sites" as "nejnavštěvovanější stránky"; "top stránka" is an inconsistent anglicism.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -68,9 +52,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `newtab-stocks-widget-open-menu-button` — `browser/browser/newtab/newtab.ftl` — Button label rendered in 3rd person ("Otevře") instead of the infinitive used for the parallel strings.
+    - Current: `aria-label: Otevře nabídku pro akcie`
+    - Suggest: `aria-label: Otevřít nabídku s akciemi`
+    - The parallel string newtab-picture-widget-open-menu-button uses "Otevřít nabídku…"; the inconsistent 3rd-person form is wrong for this action label.
 
 ---
 
@@ -78,9 +65,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 326 |
-| Strings | 16,355 |
-| Missing strings | 0 |
+| Files | 327 |
+| Strings | 16,363 |
+| Missing strings | 41 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -97,7 +84,22 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**41 strings** are not translated yet, concentrated in:
+
+- `browser/browser/autoTabGrouping.ftl` — 13
+- `browser/browser/newtab/onboarding.ftl` — 10
+- `browser/browser/genai.ftl` — 4
+- `browser/browser/browser.ftl` — 3
+- `browser/browser/defaultBrowserNotification.ftl` — 2
+- `browser/browser/preferences/preferences.ftl` — 2
+- `browser/browser/newtab/asrouter.ftl` — 2
+- `browser/browser/aiWindow.ftl` — 1
+- `browser/browser/policies/policies-descriptions.ftl` — 1
+- `browser/browser/newtab/newtab.ftl` — 1
+- `dom/chrome/dom/dom.properties` — 1
+- `dom/chrome/security/security.properties` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -107,7 +109,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `german-double` 465, `curly-double` 215, `curly-single` 56, `straight-double` 43, `polish-double` 2 | _mixed_ |
 | apostrophe | `typographic` 70, `straight` 9 | **typographic** |
-| ellipsis | `char` 383, `ascii` 3 | **char** |
+| ellipsis | `char` 387, `ascii` 3 | **char** |
 | dash | `em` 65, `en` 30 | _mixed_ |
 | nbsp | `total` 13, `before-punctuation` 3, `space-before-punctuation` 7 | _mixed_ |
 
@@ -120,7 +122,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (247)
+## 3. Open findings (246)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -135,8 +137,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 41 |
-| 2 | Wrong content (says something other than the English) | 119 |
-| 3 | Degraded language (grammar, spelling, terminology) | 63 |
+| 2 | Wrong content (says something other than the English) | 120 |
+| 3 | Degraded language (grammar, spelling, terminology) | 61 |
 | 4 | Cosmetic (typography, spacing) | 19 |
 
 ### A. Functional, markup, variables & plurals
@@ -485,6 +487,11 @@ _Also listed under their own category below._
     - Source: `label: Block cross-site tracking cookies`
     - Suggest: `Blokovat sledovací cookies mezi weby`
     - en-US says "cross-site tracking cookies"; "cookies třetích stran" means third-party cookies, which is a distinct ETP setting/term.
+- `prefs-syncing-off-3` — `browser/browser/preferences/preferences.ftl` — "on this device" rendered as "na svém zařízení" (on your device), losing the reference to the current device.
+    - Current: `a další data na svém zařízení`
+    - Source: `description: Turn on sync to get your bookmarks, passwords, history, and more on this device. label: Syncing is OFF`
+    - Suggest: `a další data na tomto zařízení`
+    - The en-US says "on this device", and the developer comment makes clear the string is about the current device where sync is disabled; "na svém zařízení" is vague and loses that.
 - `menu-view-resource-monitor` — `browser/browser/sidebar.ftl` — "Resource Monitor" is rendered as "Správce procesů" (Process Manager), naming a different feature.
     - Current: `Správce procesů`
     - Source: `label: Resource Monitor`
@@ -766,11 +773,6 @@ _Also listed under their own category below._
     - Source: `{$count ->} [one] { $count } Cross-site tracking cookie [other] { $count } Cross-site tracking cookies`
     - Suggest: `[one] { $count } sledovací cookie třetí strany`
     - Later strings in the same panel (trustpanel-tracking-cookies-blocking-tab-header) correctly use “sledovací cookie třetí strany”.
-- `urlbar-result-menu-remove-top-site` — `browser/browser/browser.ftl` — Menu command rendered as a 3rd-person description ("Odebere") instead of an imperative/infinitive command.
-    - Current: `Odebere tuto top stránku`
-    - Source: `(value): Remove this top site accesskey: T`
-    - Suggest: `Odebrat tuto top stránku`
-    - "Remove this top site" is a menu item label; Czech menu commands use the infinitive, as in the neighbouring strings ("Nastavit pravidla", "Sdílet složku").
 - `requested-crash-reports-message-new` — `browser/browser/contentCrash.ftl` — The [few]/[many] branches keep the singular “toto hlášení bude ignorováno”.
     - Current: `[few] Máte { $reportCount } neodeslaná hlášení o pádech týkající se pádu, který řešíme. Jejich odeslání nám pomůže { -brand-product-name } zlepšit. Zavřením tohoto oznámení bude toto hlášení ignorováno.`
     - Source: `{$reportCount ->} [one] You have an unsent crash report related to crashes being investigated, sending it will help us improve { -brand-product-name }. Closing this notification will ignore this report. [other] You have…`
@@ -821,11 +823,6 @@ _Also listed under their own category below._
     - Source: `aria-label: Open privacy menu title: Open privacy menu`
     - Suggest: `aria-label: Otevřít nabídku ochrany soukromí`
     - The parallel string newtab-picture-widget-open-menu-button uses "Otevřít nabídku…"; "Open … menu" is an action label, so the inconsistent 3rd-person form is wrong here.
-- `newtab-stocks-widget-open-menu-button` — `browser/browser/newtab/newtab.ftl` — Button label rendered in 3rd person ("Otevře") instead of the infinitive used for the parallel strings.
-    - Current: `aria-label: Otevře nabídku pro akcie`
-    - Source: `aria-label: Open stocks menu title: Open stocks menu`
-    - Suggest: `aria-label: Otevřít nabídku s akciemi`
-    - The parallel string newtab-picture-widget-open-menu-button uses "Otevřít nabídku…"; the inconsistent 3rd-person form is wrong for this action label.
 - `desktop-to-mobile-subtitle` — `browser/browser/newtab/onboarding.ftl` — `desktop-to-mobile-subtitle` quotes “Synchronizovat s mobilním telefonem” but the string it names, `sync-to-mobile-button-label`, reads “Synchronizace s mobilem”
     - Current: `{$sel_1 ->} [with-cases] Naskenujte QR kód a stáhněte si { -brand-product-name } pro mobily. Po instalaci vyberte možnost "Synchronizovat s mobilním telefonem" a získejte přístup ke svým heslům, záložkám a dalším údajům…`
     - Source: `Scan the QR code to download { -brand-product-name } for mobile. Once installed, select “Sync to mobile” to access your passwords, bookmarks, and more on the go.`
@@ -1011,7 +1008,17 @@ _Also listed under their own category below._
     - Source: `An invalid form control is not focusable.`
     - Suggest: `Na neplatný ovládací prvek formuláře se nelze přepnout klávesnicí.`
     - “není možné dosáhnout” requires a genitive object; the sentence as written is ungrammatical. The sibling InvalidNamedFormControlUnfocusable is phrased correctly.
-- _…and 10 more; see `state/` for the full list._
+- `PushMessageBadRecordSize` — `dom/chrome/dom/dom.properties` — Misspelling “Paramter” for “Parametr”.
+    - Current: `Paramter ‘rs‘`
+    - Source: `The ServiceWorker for scope ‘%1$S’ failed to decrypt a push message. The ‘rs‘ parameter of the ‘Encryption‘ header must be between %2$S and 2^36-31, or omitted entirely. See https://tools.ietf.org/html/draft-ietf-httpbi…`
+    - Suggest: `Parametr ‘rs‘`
+    - Plain spelling error; sibling strings use “Parametr”.
+- `ServiceWorkerRegisterStorageError` — `dom/chrome/dom/dom.properties` — Case error: coordinated noun after “nebo” left in nominative.
+    - Current: `omezený uživatelským nastavením nebo režim anonymního prohlížení`
+    - Source: `Failed to register/update a ServiceWorker for scope ‘%S’: Storage access is restricted in this context due to user settings or private browsing mode.`
+    - Suggest: `omezený uživatelským nastavením nebo režimem anonymního prohlížení`
+    - “omezený” governs the instrumental; the second conjunct must be “režimem”. The same error repeats in ServiceWorkerGetRegistrationStorageError, ServiceWorkerGetClientStorageError and ServiceWorkerPostMessageStorageError.
+- _…and 8 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -1108,7 +1115,7 @@ _Also listed under their own category below._
 - `netmonitor.context.perfTools` — `devtools/client/netmonitor.properties` — `netmonitor.context.perfTools` uses three dots where this locale uses …
     - Current: `Zahájit analýzu výkonu...`
     - Source: `Start Performance Analysis…`
-    - The tree uses … 383 times against 3 ASCII runs.
+    - The tree uses … 387 times against 3 ASCII runs.
 - `styleeditor-stylesheet-rule-count` — `devtools/client/styleeditor.ftl` — Doubled period in the [few] plural variant
     - Current: `{ $ruleCount } pravidla..`
     - Source: `{$ruleCount ->} [one] { $ruleCount } rule. [other] { $ruleCount } rules.`
@@ -1117,7 +1124,7 @@ _Also listed under their own category below._
 - `crashreporter-submit-waiting-hardware-tests` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-submit-waiting-hardware-tests` uses three dots where this locale uses …
     - Current: `Probíhá kontrola problémů s hardwarem a konfigurací...`
     - Source: `Checking for hardware and configuration problems…`
-    - The tree uses … 383 times against 3 ASCII runs.
+    - The tree uses … 387 times against 3 ASCII runs.
 - `gpu-vendor-id` — `toolkit/toolkit/about/aboutSupport.ftl` — "Vendor" rendered as "prodejce" (seller), inconsistent with the rest of the page
     - Current: `ID prodejce`
     - Source: `Vendor ID`
@@ -1156,7 +1163,7 @@ _Also listed under their own category below._
 - `pdfjs-free-text2` — `toolkit/toolkit/pdfviewer/viewer.ftl` — `pdfjs-free-text2` uses three dots where this locale uses …
     - Current: `Začněte psát...`
     - Source: `aria-label: Text Editor default-content: Start typing…`
-    - The tree uses … 383 times against 3 ASCII runs.
+    - The tree uses … 387 times against 3 ASCII runs.
 
 ---
 
@@ -1178,8 +1185,9 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (3)
+### Fixed to date (4)
 
+- `urlbar-result-menu-remove-top-site` — `browser/browser/browser.ftl` — fixed 2026-10-12
 - `main-context-menu-reveal-password` — `browser/browser/browserContext.ftl` — fixed 2026-09-14
 - `webext-perms-update-list-intro-with-data-collection` — `toolkit/toolkit/global/extensions.ftl` — fixed 2026-09-02
 - `protections-panel-cookie-banner-blocker-view-turn-on-for-site` — `browser/browser/protectionsPanel.ftl` — fixed 2026-09-01

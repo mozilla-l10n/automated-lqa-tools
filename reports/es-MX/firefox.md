@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
-| **Previous run** | 2026-09-28 @ `92e0a4895124` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
+| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 15,826 |
+| **Strings reviewed this run** | 23 of 15,838 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for es-MX: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `content-analysis-indicator-tooltip` — `browser/browser/browser.ftl` — Formal address ("Haga") used where the locale convention is informal, and "click" is left untranslated/misspelled.
+    - Current: `Haga click para saber más información.`
+    - Source: `tooltiptext: Data Loss Prevention (DLP) by { $agentName }. Click for more info.`
+    - Suggest: `Haz clic para saber más información.`
+    - es-MX convention is informal address (tú); also "click" should be "clic" in Spanish.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,9 +48,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 321 |
-| Strings | 15,826 |
-| Missing strings | 529 |
+| Files | 322 |
+| Strings | 15,838 |
+| Missing strings | 566 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 5 |
 | Files with no en-US counterpart | 0 |
@@ -57,21 +61,21 @@ _Nothing retired._
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 4 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 121 |
+| Access keys not in their label | 119 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 108 |
 
 ### Completeness
 
-**529 strings** are not translated yet, concentrated in:
+**566 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 123
+- `browser/browser/newtab/newtab.ftl` — 118
+- `browser/browser/newtab/onboarding.ftl` — 30
 - `toolkit/services/aboutSyncLog.ftl` — 26
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 25
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 23
+- `browser/browser/preferences/preferences.ftl` — 22
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 21
 - `toolkit/toolkit/about/aboutPDF.ftl` — 21
-- `browser/browser/newtab/onboarding.ftl` — 20
-- `browser/browser/preferences/preferences.ftl` — 19
 - `browser/browser/aboutRestartRequired.ftl` — 18
 - `browser/browser/ipProtection.ftl` — 18
 - `toolkit/toolkit/about/aboutAddons.ftl` — 17
@@ -96,31 +100,31 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 461, `straight-double` 130, `curly-single` 78, `guillemet` 1 | **curly-double** |
 | apostrophe | `typographic` 90, `straight` 37 | _mixed_ |
-| ellipsis | `char` 362, `ascii` 19 | **char** |
+| ellipsis | `char` 366, `ascii` 19 | **char** |
 | dash | `em` 50, `en` 1 | **em** |
 | nbsp | `total` 16, `narrow` 10, `before-punctuation` 12, `space-before-punctuation` 6 | _mixed_ |
 | inverted marks | `open-question` 316, `open-exclamation` 72 | **open-question** |
-| register | `informal` 1209, `formal` 206 | **informal** |
+| register | `informal` 1208, `formal` 206 | **informal** |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **accesskey — 121 strings** — 121 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
-    - Affected: `addressbar-locbar-clipboard-option`, `addressbar-locbar-openpage-option`, `addressbar-locbar-quickactions-option`, `appmenu-addon-post-install-pin-toolbarbutton-checkbox`, `appmenu-help-more-troubleshooting-info`, `appmenu-help-not-deceptive`, `appmenu-homepage-controlled-changes`, `appmenu-new-tab-controlled-changes`, `appmenu-tab-hide-controlled`, `appmenu-theme-installed`, `appmenu-update-available2`, `appmenu-update-manual2` …and 108 more
+- **accesskey — 119 strings** — 119 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
+    - Affected: `addressbar-locbar-clipboard-option`, `addressbar-locbar-openpage-option`, `addressbar-locbar-quickactions-option`, `appmenu-addon-post-install-pin-toolbarbutton-checkbox`, `appmenu-help-more-troubleshooting-info`, `appmenu-help-not-deceptive`, `appmenu-homepage-controlled-changes`, `appmenu-new-tab-controlled-changes`, `appmenu-tab-hide-controlled`, `appmenu-theme-installed`, `appmenu-update-available2`, `appmenu-update-manual2` …and 106 more
 - **typography — 108 strings** — 108 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
     - Affected: `BlockMixedActiveContent`, `BlockMixedDisplayContent`, `CORSPreflightDidNotSucceed3`, `CookieRejectedByPermissionManager`, `CookieRejectedInvalidCharName`, `CookieSameSiteValueInvalid2`, `FullscreenDeniedContainerNotAllowed`, `ImageMapCircleNegativeRadius`, `ImageMapCircleWrongNumberOfCoords`, `ImageMapPolyOddNumberOfCoords`, `ImageMapPolyWrongNumberOfCoords`, `ImageMapRectBoundsError` …and 96 more
 
 ---
 
-## 3. Open findings (44)
+## 3. Open findings (45)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 15 |
-| 3 | Degraded language (grammar, spelling, terminology) | 23 |
+| 3 | Degraded language (grammar, spelling, terminology) | 24 |
 | 4 | Cosmetic (typography, spacing) | 6 |
 
 ### A. Functional, markup, variables & plurals
@@ -234,6 +238,11 @@ _Nothing in this category._
 
 ### D. Terminology, register & consistency
 
+- `content-analysis-indicator-tooltip` — `browser/browser/browser.ftl` — Formal address ("Haga") used where the locale convention is informal, and "click" is left untranslated/misspelled.
+    - Current: `Haga click para saber más información.`
+    - Source: `tooltiptext: Data Loss Prevention (DLP) by { $agentName }. Click for more info.`
+    - Suggest: `Haz clic para saber más información.`
+    - es-MX convention is informal address (tú); also "click" should be "clic" in Spanish.
 - `desktop-to-mobile-subtitle` — `browser/browser/newtab/onboarding.ftl` — `desktop-to-mobile-subtitle` quotes “Sincronizar con el móvil” but the string it names, `sync-to-mobile-button-label`, reads “Sincronización con el móvil”
     - Current: `Escanea el código QR para descargar { -brand-product-name } para móvil. Una vez instalado, seleccione "Sincronizar con el móvil" para acceder a sus contraseñas, marcadores y mucho más sobre la marcha.`
     - Source: `Scan the QR code to download { -brand-product-name } for mobile. Once installed, select “Sync to mobile” to access your passwords, bookmarks, and more on the go.`

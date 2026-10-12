@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
-| **Previous run** | 2026-09-28 @ `92e0a4895124` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
+| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 39 of 16,308 |
+| **Strings reviewed this run** | 79 of 16,365 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for es-AR: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `genai-prompts-summarize-page` — `browser/browser/genai.ftl` — Imperative uses tuteo "Resume"/"Debes" while the rest of the locale (and this same file) uses the usted form.
+    - Current: `Resume la página web en { $url } usando un lenguaje preciso y conciso. Debes usar encabezados y listas con viñetas en el resumen para hacerlo escaneable. Debes mantener el significado y exactitud fáctica.`
+    - Source: `Please summarize the webpage at { $url } using precise and concise language. Use headers and bulleted lists in the summary, to make it scannable. Maintain the meaning and factual accuracy.`
+    - Suggest: `Resuma la página web en { $url } usando un lenguaje preciso y conciso. Use encabezados y listas con viñetas en el resumen para hacerlo escaneable. Mantenga el significado y la exactitud fáctica.`
+    - es-AR Firefox consistently addresses with usted (e.g. "Obtenga acceso rápido…", "Seleccione { -brand-short-name }…" in this batch); this string switches to tú/vos forms.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,9 +48,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 326 |
-| Strings | 16,308 |
-| Missing strings | 47 |
+| Files | 327 |
+| Strings | 16,365 |
+| Missing strings | 39 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +67,20 @@ _Nothing retired._
 
 ### Completeness
 
-**47 strings** are not translated yet, concentrated in:
+**39 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 12
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 7
+- `browser/browser/newtab/newtab.ftl` — 11
 - `toolkit/toolkit/about/url-classifier.ftl` — 6
-- `browser/browser/preferences/preferences.ftl` — 6
+- `browser/browser/preferences/preferences.ftl` — 5
 - `browser/browser/featureCallout.ftl` — 3
 - `dom/chrome/security/security.properties` — 3
-- `toolkit/toolkit/about/aboutGlean.ftl` — 2
 - `browser/browser/aboutPrivateBrowsing.ftl` — 2
+- `browser/browser/autoTabGrouping.ftl` — 2
+- `browser/browser/newtab/asrouter.ftl` — 2
 - `toolkit/toolkit/global/processTypes.ftl` — 1
 - `toolkit/toolkit/about/aboutAddons.ftl` — 1
+- `browser/browser/aiWindow.ftl` — 1
 - `browser/browser/appmenu.ftl` — 1
-- `browser/browser/profiles.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -86,12 +90,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 466, `straight-double` 137, `curly-single` 93 | **curly-double** |
+| quotes | `curly-double` 468, `straight-double` 137, `curly-single` 93 | **curly-double** |
 | apostrophe | `typographic` 105, `straight` 67 | _mixed_ |
-| ellipsis | `char` 389, `ascii` 1 | **char** |
+| ellipsis | `char` 395, `ascii` 1 | **char** |
 | dash | `em` 61, `en` 1 | **em** |
 | nbsp | `total` 5, `before-punctuation` 3, `space-before-punctuation` 7 | _mixed_ |
-| inverted marks | `open-question` 327, `open-exclamation` 69 | **open-question** |
+| inverted marks | `open-question` 324, `open-exclamation` 69 | **open-question** |
 
 ---
 
@@ -102,14 +106,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (277)
+## 3. Open findings (278)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 48 |
 | 2 | Wrong content (says something other than the English) | 108 |
-| 3 | Degraded language (grammar, spelling, terminology) | 87 |
+| 3 | Degraded language (grammar, spelling, terminology) | 88 |
 | 4 | Cosmetic (typography, spacing) | 29 |
 
 ### A. Functional, markup, variables & plurals
@@ -933,6 +937,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Mark up PDFs, then save your changes.`
     - Suggest: `Hacé anotaciones en los archivos PDF y luego guardá los cambios.`
     - es-AR addresses the user with voseo imperatives; "Haga"/"guarde" is the wrong form of address for this locale.
+- `genai-prompts-summarize-page` — `browser/browser/genai.ftl` — Imperative uses tuteo "Resume"/"Debes" while the rest of the locale (and this same file) uses the usted form.
+    - Current: `Resume la página web en { $url } usando un lenguaje preciso y conciso. Debes usar encabezados y listas con viñetas en el resumen para hacerlo escaneable. Debes mantener el significado y exactitud fáctica.`
+    - Source: `Please summarize the webpage at { $url } using precise and concise language. Use headers and bulleted lists in the summary, to make it scannable. Maintain the meaning and factual accuracy.`
+    - Suggest: `Resuma la página web en { $url } usando un lenguaje preciso y conciso. Use encabezados y listas con viñetas en el resumen para hacerlo escaneable. Mantenga el significado y la exactitud fáctica.`
+    - es-AR Firefox consistently addresses with usted (e.g. "Obtenga acceso rápido…", "Seleccione { -brand-short-name }…" in this batch); this string switches to tú/vos forms.
 - `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Novedades” but the string it names, `releaseNotes-link`, reads “Qué hay de nuevo”
     - Current: `Anular la página "Novedades" posterior a la actualización. Establecer esta política en blanco si quiere deshabilitar la página posterior a la actualización.`
     - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`

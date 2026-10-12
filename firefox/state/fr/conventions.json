@@ -1,12 +1,12 @@
 {
  "_meta": {
   "locale": "fr",
-  "prose_chunks": 17363,
-  "strings": 16582
+  "prose_chunks": 17420,
+  "strings": 16626
  },
  "apostrophe": {
-  "straight": 11,
-  "typographic": 5063
+  "straight": 10,
+  "typographic": 5077
  },
  "dash": {
   "em": 42,
@@ -14,7 +14,7 @@
  },
  "ellipsis": {
   "ascii": 0,
-  "char": 401
+  "char": 407
  },
  "fullwidth": {
   "punctuation": 0
@@ -27,16 +27,16 @@
   "before-punctuation": 1744,
   "narrow": 0,
   "space-before-punctuation": 0,
-  "total": 3985
+  "total": 3987
  },
  "quotes": {
   "curly-double": 2,
   "curly-single": 1,
-  "guillemet": 1035,
+  "guillemet": 1037,
   "straight-double": 31
  },
  "register": {
-  "formal": 2836,
+  "formal": 2843,
   "informal": 0
  }
 }

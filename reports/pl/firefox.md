@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
-| **Previous run** | 2026-09-28 @ `92e0a4895124` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
+| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 16,251 |
+| **Strings reviewed this run** | 141 of 16,358 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,28 @@ Also for pl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (4)
 
-_No new findings._
+- `credit-card-save-doorhanger-description-security-code` — `toolkit/toolkit/formautofill/formAutofill.ftl` — The Polish reverses the statement "only you can use them" into "nobody else can use them" — actually it drops the assurance that the user can use them.
+    - Current: `dzięki czemu nikt inny nie może używać ich do wypełniania formularzy płatności`
+    - Source: `{ -brand-short-name } encrypts your card number and security code, so only you can use them to fill payment forms.`
+    - Suggest: `dzięki czemu tylko Ty możesz używać ich do wypełniania formularzy płatności`
+    - en-US says "so only you can use them to fill payment forms"; the Polish asserts that no one else can use them, a claim about third parties the source frames as the user's exclusive ability.
+- `protections-panel-smartblock-blocking-toggle` — `browser/browser/protectionsPanel.ftl` — "Allow { $trackername }" rendered as "Zezwól z serwisu…", which is ungrammatical and changes the meaning of the toggle.
+    - Current: `Zezwól z serwisu { $trackername }`
+    - Source: `label: Allow { $trackername }`
+    - Suggest: `Zezwalaj na { $trackername }`
+    - The source is a toggle label allowing the named tracker; "Zezwól z serwisu X" is not a valid Polish construction (zezwolić requires "na") and does not say the tracker is allowed.
+- `sync-choose-what-to-sync-dialog4` — `browser/browser/preferences/preferences.ftl` — Dialog title "Manage what syncs…" translated as "Wybierz, co ma być synchronizowane…" (Choose what is synced).
+    - Current: `Wybierz, co ma być synchronizowane na wszystkich połączonych urządzeniach`
+    - Source: `buttonaccesskeyaccept: S buttonaccesskeyextra2: D buttonlabelaccept: Save buttonlabelextra2: Disconnect… style: min-width: 36em; title: Manage what syncs on all your connected devices`
+    - Suggest: `Zarządzaj tym, co jest synchronizowane na wszystkich połączonych urządzeniach`
+    - en-US says "Manage what syncs"; the Polish says "Choose", a leftover from the previous string version.
+- `onboarding-carousel-nav` — `browser/browser/newtab/onboarding.ftl` — "Feature highlights" (highlights of a feature) translated as "Najlepsze funkcje" (best features).
+    - Current: `Najlepsze funkcje`
+    - Source: `aria-label: Feature highlights`
+    - Suggest: `Najważniejsze informacje o funkcji`
+    - The developer comment states the string means "Highlights of a feature" (feature is a noun, singular); the Polish renders it as a list of the best features.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,10 +64,10 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 326 |
-| Strings | 16,251 |
-| Missing strings | 104 |
+| Strings | 16,358 |
+| Missing strings | 46 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,20 +82,24 @@ _Nothing retired._
 
 ### Completeness
 
-**104 strings** are not translated yet, concentrated in:
+**46 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 20
-- `browser/browser/aboutRestartRequired.ftl` — 18
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 9
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 9
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 7
-- `browser/browser/ipProtection.ftl` — 7
-- `browser/browser/preferences/preferences.ftl` — 7
-- `browser/browser/browser.ftl` — 6
-- `browser/browser/appmenu.ftl` — 3
-- `toolkit/toolkit/about/aboutGlean.ftl` — 2
-- `toolkit/toolkit/about/aboutLogging.ftl` — 2
-- `browser/browser/menubar.ftl` — 2
+- `browser/browser/autoTabGrouping.ftl` — 15
+- `browser/browser/newtab/onboarding.ftl` — 10
+- `browser/browser/browser.ftl` — 4
+- `browser/browser/genai.ftl` — 4
+- `browser/browser/preferences/preferences.ftl` — 3
+- `browser/browser/defaultBrowserNotification.ftl` — 2
+- `browser/browser/newtab/asrouter.ftl` — 2
+- `browser/browser/aiWindow.ftl` — 1
+- `browser/browser/menubar.ftl` — 1
+- `browser/browser/policies/policies-descriptions.ftl` — 1
+- `browser/browser/newtab/newtab.ftl` — 1
+- `dom/chrome/dom/dom.properties` — 1
+
+**Files absent from the locale:**
+
+- `browser/browser/autoTabGrouping.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -86,11 +109,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `polish-double` 1418, `straight-double` 36, `german-double` 7, `curly-double` 2 | **polish-double** |
+| quotes | `polish-double` 1419, `straight-double` 36, `german-double` 7, `curly-double` 2 | **polish-double** |
 | apostrophe | `straight` 1 | **straight** |
-| ellipsis | `char` 394 | **char** |
-| dash | `em` 121, `en` 14 | **em** |
-| nbsp | `total` 4791, `narrow` 3, `before-punctuation` 39, `space-before-punctuation` 14 | **total** |
+| ellipsis | `char` 402 | **char** |
+| dash | `em` 122, `en` 14 | **em** |
+| nbsp | `total` 4821, `narrow` 3, `before-punctuation` 39, `space-before-punctuation` 14 | **total** |
 | register | `informal` 77 | **informal** |
 
 ---
@@ -101,13 +124,22 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (79)
+## 3. Open findings (83)
 
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+
+- `credit-card-save-doorhanger-description-security-code` — `toolkit/toolkit/formautofill/formAutofill.ftl` — The Polish reverses the statement "only you can use them" into "nobody else can use them" — actually it drops the assurance that the user can use them.
+    - Current: `dzięki czemu nikt inny nie może używać ich do wypełniania formularzy płatności`
+    - Source: `{ -brand-short-name } encrypts your card number and security code, so only you can use them to fill payment forms.`
+    - Suggest: `dzięki czemu tylko Ty możesz używać ich do wypełniania formularzy płatności`
+    - en-US says "so only you can use them to fill payment forms"; the Polish asserts that no one else can use them, a claim about third parties the source frames as the user's exclusive ability.
+
+_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 10 |
-| 2 | Wrong content (says something other than the English) | 43 |
+| 2 | Wrong content (says something other than the English) | 47 |
 | 3 | Degraded language (grammar, spelling, terminology) | 23 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
@@ -285,6 +317,11 @@ _Nothing reported._
     - Source: `Search`
     - Suggest: `Wyszukiwanie`
     - The source is the singular heading "Search"; the plural "Wyszukiwania" (searches) is grammatically odd as a widget title and inconsistent with other Search strings such as "Ustawienia wyszukiwania".
+- `onboarding-carousel-nav` — `browser/browser/newtab/onboarding.ftl` — "Feature highlights" (highlights of a feature) translated as "Najlepsze funkcje" (best features).
+    - Current: `Najlepsze funkcje`
+    - Source: `aria-label: Feature highlights`
+    - Suggest: `Najważniejsze informacje o funkcji`
+    - The developer comment states the string means "Highlights of a feature" (feature is a noun, singular); the Polish renders it as a list of the best features.
 - `onboarding-refresh-tou-pin` — `browser/browser/newtab/onboarding.ftl` — "Keep { -brand-short-name } in Dock" rendered as "Zatrzymaj" (stop/halt), not "keep/leave in place".
     - Current: `Zatrzymaj { -brand-short-name } w Docku`
     - Source: `{$sel_1 ->} [macos] Keep { -brand-short-name } in Dock [other] Add { -brand-short-name } to your taskbar`
@@ -318,6 +355,16 @@ _Nothing reported._
     - Source: `heading: Heads up! Some sites may not work as expected. message: Some sites build trackers into their features or content. When { -brand-short-name } blocks them, the site looks broken. Try using “Fix site issue” or tur…`
     - Suggest: `Spróbuj użyć opcji „Napraw problem z witryną”`
     - The en-US refers to the "Fix site issue" action for the current site, not to a preferences pane; adding "ustawień" and pluralizing to "stronami" changes the referenced UI element.
+- `sync-choose-what-to-sync-dialog4` — `browser/browser/preferences/preferences.ftl` — Dialog title "Manage what syncs…" translated as "Wybierz, co ma być synchronizowane…" (Choose what is synced).
+    - Current: `Wybierz, co ma być synchronizowane na wszystkich połączonych urządzeniach`
+    - Source: `buttonaccesskeyaccept: S buttonaccesskeyextra2: D buttonlabelaccept: Save buttonlabelextra2: Disconnect… style: min-width: 36em; title: Manage what syncs on all your connected devices`
+    - Suggest: `Zarządzaj tym, co jest synchronizowane na wszystkich połączonych urządzeniach`
+    - en-US says "Manage what syncs"; the Polish says "Choose", a leftover from the previous string version.
+- `protections-panel-smartblock-blocking-toggle` — `browser/browser/protectionsPanel.ftl` — "Allow { $trackername }" rendered as "Zezwól z serwisu…", which is ungrammatical and changes the meaning of the toggle.
+    - Current: `Zezwól z serwisu { $trackername }`
+    - Source: `label: Allow { $trackername }`
+    - Suggest: `Zezwalaj na { $trackername }`
+    - The source is a toggle label allowing the named tracker; "Zezwól z serwisu X" is not a valid Polish construction (zezwolić requires "na") and does not say the tracker is allowed.
 - `fxa-menu-sync-description` — `browser/browser/sync.ftl` — "Access your web anywhere" is mistranslated as "Use your network wherever you are".
     - Current: `Korzystaj ze swojej sieci, gdziekolwiek jesteś`
     - Source: `Access your web anywhere`
@@ -360,6 +407,11 @@ _Nothing reported._
     - Source: `label: Media: JPEG XL`
     - Suggest: `Media: JPEG XL`
     - The developer comment says the experiment title should be kept in English; "Media" was changed to "Multimedia".
+- `credit-card-save-doorhanger-description-security-code` — `toolkit/toolkit/formautofill/formAutofill.ftl` — The Polish reverses the statement "only you can use them" into "nobody else can use them" — actually it drops the assurance that the user can use them.
+    - Current: `dzięki czemu nikt inny nie może używać ich do wypełniania formularzy płatności`
+    - Source: `{ -brand-short-name } encrypts your card number and security code, so only you can use them to fill payment forms.`
+    - Suggest: `dzięki czemu tylko Ty możesz używać ich do wypełniania formularzy płatności`
+    - en-US says "so only you can use them to fill payment forms"; the Polish asserts that no one else can use them, a claim about third parties the source frames as the user's exclusive ability.
 - `user-context-color-purple` — `toolkit/toolkit/global/contextual-identity.ftl` — "Fioletowy", identical to user-context-color-violet; two container swatches become indistinguishable, notably for screen-reader users. → purple = "Purpurowy", keep violet = "Fioletowy".
     - Source: `label: Purple`
     - Suggest: `purple`
@@ -456,11 +508,11 @@ _Nothing reported._
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `Zdarzenie klawisza jest niedostępne dla GTK2: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (1418 occurrences).
+    - The locale's quote convention is `polish-double` (1419 occurrences).
 - `WinConflict2` — `dom/chrome/dom/dom.properties` — `WinConflict2` uses straight double quotes
     - Current: `Zdarzenie klawisza jest niedostępne przy niektórych układach klawiatury: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on some keyboard layouts: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (1418 occurrences).
+    - The locale's quote convention is `polish-double` (1419 occurrences).
 
 ---
 

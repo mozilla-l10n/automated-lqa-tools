@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
-| **Previous run** | 2026-09-28 @ `92e0a4895124` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
+| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 16,251 |
+| **Strings reviewed this run** | 127 of 16,358 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,48 @@ Also for fy-NL: [android](android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (8)
 
-_No new findings._
+- `restart-required-single-instance-answer-2` — `browser/browser/aboutRestartRequired.ftl` — "wykst" is a misspelling of "wylst" (while/during).
+    - Current: `Dit kin barre wykst in lange navigaasjesesje`
+    - Source: `This can happen during a long browsing session, or when your operating system updates { -brand-short-name }. Restarting keeps { -brand-short-name } secure and working normally.`
+    - Suggest: `Dit kin barre by in lange navigaasjesesje`
+    - The en-US says "during a long browsing session"; "wykst" is not a Frisian word (typo for "wylst").
+- `restart-required-multiple-instances-question` — `browser/browser/aboutRestartRequired.ftl` — "Why" is rendered as "Hoe" (how).
+    - Current: `Hoe kin dit barre by meardere profilen`
+    - Source: `Why can this happen with multiple profiles or { -brand-short-name } instances?`
+    - Suggest: `Wêrom kin dit barre by meardere profilen`
+    - The source asks "Why can this happen…"; the Frisian asks "How can this happen".
+- `restart-required-multiple-instances-answer` — `browser/browser/aboutRestartRequired.ftl` — "the open one" (the open profile/instance) is rendered as "de iepen ferzje" (the open version).
+    - Current: `kin de iepen ferzje op in âldere ferzje hâlden wurde`
+    - Source: `If one profile or instance updates while another is still open, the open one can be left on an older version. Restarting keeps everything on the same version.`
+    - Suggest: `kin dejinge dy’t iepen is op in âldere ferzje bliuwe`
+    - The source refers to the still-open profile or instance, not to a "version"; the translation also repeats "ferzje" nonsensically.
+- `restart-required-unsaved-work-answer` — `browser/browser/aboutRestartRequired.ftl` — "inside webpages" translated as "binnen websites" (inside websites).
+    - Current: `net-bewarre wurk binnen websites`
+    - Source: `Possibly, and we know that’s frustrating. { -brand-short-name } will reopen your tabs, but unsaved work inside webpages, like text in a form, may not be restored. Private Windows won’t reopen to protect your privacy.`
+    - Suggest: `net-bewarre wurk binnen websiden`
+    - en-US says "webpages"; fy-NL uses "websiden" for pages, "websites" for sites.
+- `main-context-menu-edit-bookmark-2` — `browser/browser/browserContext.ftl` — Tooltip adds an ellipsis that the source does not have.
+    - Current: `tooltiptext: Blêdwizer bewurkje…`
+    - Source: `aria-label: Edit Bookmark… tooltiptext: Edit bookmark`
+    - Suggest: `tooltiptext: Blêdwizer bewurkje`
+    - The en-US tooltiptext is "Edit bookmark" without ellipsis (only the aria-label has one).
+- `main-context-menu-bookmark-page-2` — `browser/browser/browserContext.ftl` — Tooltip text has an ellipsis that the source does not have.
+    - Current: `tooltiptext: Blêdwizer foar side meitsje…`
+    - Source: `aria-label: Bookmark Page… tooltiptext: Bookmark page`
+    - Suggest: `tooltiptext: Blêdwizer foar side meitsje`
+    - en-US tooltiptext is "Bookmark page" without ellipsis; only the aria-label has one.
+- `genai-shortcut-button-3` — `browser/browser/genai.ftl` — "Ask about this text" is rendered as a noun phrase "Questions about this text" instead of the imperative verb.
+    - Current: `aria-label: Fragen oer dizze tekst`
+    - Source: `aria-label: Ask about this text tooltiptext: Ask about this text`
+    - Suggest: `aria-label: Freegje oer dizze tekst`
+    - The source is an imperative action label; "Fragen oer dizze tekst" reads as "Questions about this text".
+- `newtab-picture-widget-open-menu-button` — `browser/browser/newtab/newtab.ftl` — Mistranslated/misparsed compound: "Ofbylding fan it dei-menu" means "the day menu's picture" instead of "picture of the day menu"; also missing diacritic on "Ôfbylding".
+    - Current: `aria-label: Ofbylding fan it dei-menu iepenje`
+    - Source: `aria-label: Open picture of the day menu title: Open picture of the day menu`
+    - Suggest: `aria-label: Menu Ôfbylding fan de dei iepenje`
+    - Source means the menu of the "picture of the day" widget; the Frisian attaches "menu" to "dei", and the Frisian word is spelled "Ôfbylding".
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,9 +73,16 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (2)
 
-_Nothing retired._
+- `newtab-recent-searches-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Recent searches options" is rendered as "Resinte-sykresultatenopsjes" (recent search *results* options) instead of "sykopdrachten" used consistently elsewhere.
+    - Current: `Resinte-sykresultatenopsjes`
+    - Suggest: `Opsjes foar resinte sykopdrachten`
+    - The widget is "Recent searches" = "Resinte sykopdrachten" in all other strings; "sykresultaten" means search results, a different thing.
+- `autocomplete-remove-payment-method-title` — `toolkit/toolkit/main-window/autocomplete.ftl` — "payment method" is rendered "Betelmetoade" here but "betellingsmetoade" in the neighbouring strings of the same dialog.
+    - Current: `Betelmetoade fuortsmite?`
+    - Suggest: `Betellingsmetoade fuortsmite?`
+    - autocomplete-edit-payment-method and autocomplete-delete-payment-method in the same file use "betellingsmetoade"; the inconsistent term appears in the same UI surface.
 
 ---
 
@@ -45,10 +91,10 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 326 |
-| Strings | 16,251 |
-| Missing strings | 104 |
+| Strings | 16,358 |
+| Missing strings | 46 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,20 +109,24 @@ _Nothing retired._
 
 ### Completeness
 
-**104 strings** are not translated yet, concentrated in:
+**46 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 20
-- `browser/browser/aboutRestartRequired.ftl` — 18
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 9
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 9
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 7
-- `browser/browser/ipProtection.ftl` — 7
-- `browser/browser/preferences/preferences.ftl` — 7
-- `browser/browser/browser.ftl` — 6
-- `browser/browser/appmenu.ftl` — 3
-- `toolkit/toolkit/about/aboutGlean.ftl` — 2
-- `toolkit/toolkit/about/aboutLogging.ftl` — 2
-- `browser/browser/menubar.ftl` — 2
+- `browser/browser/autoTabGrouping.ftl` — 15
+- `browser/browser/newtab/onboarding.ftl` — 10
+- `browser/browser/browser.ftl` — 4
+- `browser/browser/genai.ftl` — 4
+- `browser/browser/preferences/preferences.ftl` — 3
+- `browser/browser/defaultBrowserNotification.ftl` — 2
+- `browser/browser/newtab/asrouter.ftl` — 2
+- `browser/browser/aiWindow.ftl` — 1
+- `browser/browser/menubar.ftl` — 1
+- `browser/browser/policies/policies-descriptions.ftl` — 1
+- `browser/browser/newtab/newtab.ftl` — 1
+- `dom/chrome/dom/dom.properties` — 1
+
+**Files absent from the locale:**
+
+- `browser/browser/autoTabGrouping.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -87,8 +137,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-single` 799, `straight-double` 26, `curly-double` 16 | **curly-single** |
-| apostrophe | `typographic` 1479 | **typographic** |
-| ellipsis | `char` 386 | **char** |
+| apostrophe | `typographic` 1482 | **typographic** |
+| ellipsis | `char` 396 | **char** |
 | dash | `em` 10, `en` 83 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 7 | _mixed_ |
 
@@ -100,15 +150,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (459)
+## 3. Open findings (465)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 12 |
-| 2 | Wrong content (says something other than the English) | 118 |
-| 3 | Degraded language (grammar, spelling, terminology) | 232 |
-| 4 | Cosmetic (typography, spacing) | 97 |
+| 2 | Wrong content (says something other than the English) | 120 |
+| 3 | Degraded language (grammar, spelling, terminology) | 234 |
+| 4 | Cosmetic (typography, spacing) | 99 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -168,6 +218,21 @@ _Nothing reported._
     - Source: `Private Windows help keep your browsing private from others on this device. They don’t make you anonymous or clear all of your data.`
     - Suggest: `Se meitsje jo net anonym en wiskje net al jo gegevens.`
     - The source says Private Windows do not make you anonymous or clear all of your data. Placing 'net' after 'al jo gegevens' yields the ambiguous/incorrect scope 'they do not erase all your data'; the negation should precede the quantifier.
+- `restart-required-multiple-instances-answer` — `browser/browser/aboutRestartRequired.ftl` — "the open one" (the open profile/instance) is rendered as "de iepen ferzje" (the open version).
+    - Current: `kin de iepen ferzje op in âldere ferzje hâlden wurde`
+    - Source: `If one profile or instance updates while another is still open, the open one can be left on an older version. Restarting keeps everything on the same version.`
+    - Suggest: `kin dejinge dy’t iepen is op in âldere ferzje bliuwe`
+    - The source refers to the still-open profile or instance, not to a "version"; the translation also repeats "ferzje" nonsensically.
+- `restart-required-multiple-instances-question` — `browser/browser/aboutRestartRequired.ftl` — "Why" is rendered as "Hoe" (how).
+    - Current: `Hoe kin dit barre by meardere profilen`
+    - Source: `Why can this happen with multiple profiles or { -brand-short-name } instances?`
+    - Suggest: `Wêrom kin dit barre by meardere profilen`
+    - The source asks "Why can this happen…"; the Frisian asks "How can this happen".
+- `restart-required-unsaved-work-answer` — `browser/browser/aboutRestartRequired.ftl` — "inside webpages" translated as "binnen websites" (inside websites).
+    - Current: `net-bewarre wurk binnen websites`
+    - Source: `Possibly, and we know that’s frustrating. { -brand-short-name } will reopen your tabs, but unsaved work inside webpages, like text in a form, may not be restored. Private Windows won’t reopen to protect your privacy.`
+    - Suggest: `net-bewarre wurk binnen websiden`
+    - en-US says "webpages"; fy-NL uses "websiden" for pages, "websites" for sites.
 - `restore-page-list-header` — `browser/browser/aboutSessionRestore.ftl` — Skermen en ljepblêden → Finsters en ljepblêden
     - Current: `Skermen en ljepblêden`
     - Source: `label: Windows and Tabs`
@@ -266,17 +331,17 @@ _Nothing reported._
     - Current: `is dit foar in part de gearfetting`
     - Source: `message: Since the page is long, this is a partial summary.`
     - Suggest: `is dit in dielgearfetting`
+- `genai-shortcut-button-3` — `browser/browser/genai.ftl` — "Ask about this text" is rendered as a noun phrase "Questions about this text" instead of the imperative verb.
+    - Current: `aria-label: Fragen oer dizze tekst`
+    - Source: `aria-label: Ask about this text tooltiptext: Ask about this text`
+    - Suggest: `aria-label: Freegje oer dizze tekst`
+    - The source is an imperative action label; "Fragen oer dizze tekst" reads as "Questions about this text".
 - `menu-history-undo-window-menu` — `browser/browser/menubar.ftl` — Koartlyn sluten skermen → … finsters
     - Current: `Koartlyn sluten skermen`
     - Source: `label: Recently Closed Windows`
     - Suggest: `… finsters`
 - `newtab-privacy-message-streak` — `browser/browser/newtab/newtab.ftl` — "op rige" dropped in the singular variant only
     - Source: `{$count ->} [one] You’ve been protected { $count } day in a row. [other] You’ve been protected { $count } days in a row.`
-- `newtab-recent-searches-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Recent searches options" is rendered as "Resinte-sykresultatenopsjes" (recent search *results* options) instead of "sykopdrachten" used consistently elsewhere.
-    - Current: `Resinte-sykresultatenopsjes`
-    - Source: `aria-label: Recent searches options`
-    - Suggest: `Opsjes foar resinte sykopdrachten`
-    - The widget is "Recent searches" = "Resinte sykopdrachten" in all other strings; "sykresultaten" means search results, a different thing.
 - `newtab-section-following-button` — `browser/browser/newtab/newtab.ftl` — Folgjend ("next") → Folge ("following")
     - Current: `Folgjend`
     - Source: `Following`
@@ -381,18 +446,7 @@ _Nothing reported._
     - Current: `Foltôgje:`
     - Source: `Finish: { $formattedTime }`
     - Suggest: `Klear:`
-- `jsonlScopeName` — `devtools/client/netmonitor.properties` — "JSON Lines" is a format name that should not be translated.
-    - Current: `JSON-regels`
-    - Source: `JSON Lines`
-    - Suggest: `JSON Lines`
-    - The developer comment explains this is the JSON Lines (JSONL/NDJSON) format name displayed as the payload type; it is a format identifier, not descriptive text.
-- `perftools-heading-features-default` — `devtools/client/perftools.ftl` — (standert oan oanrekommandearre) — two words collide; → (oanrekommandearre, standert oan)
-    - Current: `(standert oan oanrekommandearre)`
-    - Source: `Features (Recommended on by default)`
-    - Suggest: `(oanrekommandearre, standert oan)`
-- `perftools-presets-ml-description2` — `devtools/client/perftools.ftl` — Same ML/MT confusion
-    - Source: `Preset for investigating machine learning bugs in { -brand-shorter-name }.`
-- _…and 60 more; see `state/` for the full list._
+- _…and 63 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -412,6 +466,11 @@ _Nothing reported._
     - Current: `al jo priveefinster`
     - Source: `We’ll erase every search and sign-in when you close all your Private Windows. { -brand-short-name }’s built-in protections are on here too, like blocking trackers.`
     - Suggest: `al jo priveefinsters`
+- `restart-required-single-instance-answer-2` — `browser/browser/aboutRestartRequired.ftl` — "wykst" is a misspelling of "wylst" (while/during).
+    - Current: `Dit kin barre wykst in lange navigaasjesesje`
+    - Source: `This can happen during a long browsing session, or when your operating system updates { -brand-short-name }. Restarting keeps { -brand-short-name } secure and working normally.`
+    - Suggest: `Dit kin barre by in lange navigaasjesesje`
+    - The en-US says "during a long browsing session"; "wykst" is not a Frisian word (typo for "wylst").
 - `welcome-back-restore-some-label` — `browser/browser/aboutSessionRestore.ftl` — dy’t jo winske (past) → dy’t jo winskje
     - Current: `dy’t jo winske`
     - Source: `Restore only the ones you want`
@@ -548,6 +607,11 @@ _Nothing reported._
     - Current: `Kin jo net wachtsje?`
     - Source: `You’ve caught up. Check back later for more stories. Can’t wait? Select a popular topic to find more great stories from around the web.`
     - Suggest: `Kinne jo net wachtsje?`
+- `newtab-picture-widget-open-menu-button` — `browser/browser/newtab/newtab.ftl` — Mistranslated/misparsed compound: "Ofbylding fan it dei-menu" means "the day menu's picture" instead of "picture of the day menu"; also missing diacritic on "Ôfbylding".
+    - Current: `aria-label: Ofbylding fan it dei-menu iepenje`
+    - Source: `aria-label: Open picture of the day menu title: Open picture of the day menu`
+    - Suggest: `aria-label: Menu Ôfbylding fan de dei iepenje`
+    - Source means the menu of the "picture of the day" widget; the Frisian attaches "menu" to "dei", and the Frisian word is spelled "Ôfbylding".
 - `newtab-privacy-message-promo-monitor-1` — `browser/browser/newtab/newtab.ftl` — foar komme → foarkomme
     - Current: `foar komme`
     - Source: `Find out if your personal info shows up in a data breach.`
@@ -622,15 +686,7 @@ _Nothing reported._
     - Current: `tasean`
     - Source: `Allow HTTPS-Only Mode to be enabled.`
     - Suggest: `tastean`
-- `policy-ManagedBookmarks` — `browser/browser/policies/policies-descriptions.ftl` — wizige wurde kin → wizige wurde kinne
-    - Current: `wizige wurde kin`
-    - Source: `Configures a list of bookmarks managed by an administrator that cannot be changed by the user.`
-    - Suggest: `wizige wurde kinne`
-- `policy-UseSystemPrintDialog` — `browser/browser/policies/policies-descriptions.ftl` — systeemdialoochfienster fan it systeem → printdialoochfinster fan it systeem
-    - Current: `systeemdialoochfienster fan it systeem`
-    - Source: `Print using the system print dialog.`
-    - Suggest: `printdialoochfinster fan it systeem`
-- _…and 151 more; see `state/` for the full list._
+- _…and 153 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -700,11 +756,6 @@ _Nothing reported._
     - Current: `Startside`
     - Source: `Homepage`
     - Suggest: `Begjinside`
-- `autocomplete-remove-payment-method-title` — `toolkit/toolkit/main-window/autocomplete.ftl` — "payment method" is rendered "Betelmetoade" here but "betellingsmetoade" in the neighbouring strings of the same dialog.
-    - Current: `Betelmetoade fuortsmite?`
-    - Source: `Remove payment method?`
-    - Suggest: `Betellingsmetoade fuortsmite?`
-    - autocomplete-edit-payment-method and autocomplete-delete-payment-method in the same file use "betellingsmetoade"; the inconsistent term appears in the same UI surface.
 
 ### E. Typography, punctuation & spacing
 
@@ -736,8 +787,18 @@ _Nothing reported._
     - Source: `{$popupCount ->} [0] { -brand-short-name } prevented this site from redirecting. [1] { -brand-short-name } prevented this site from opening a pop-up window and redirecting. [other] { -brand-short-name } prevented this s…`
 - `main-context-menu-bookmark-page` — `browser/browser/browserContext.ftl` — Added where en-US has none: add-engine-button (both search.ftl and preferences/addEngine.ftl) · quickactions-plugins · main-context-menu-bookmark-page.tooltiptext · main-context-menu-edit-bookmark.tooltiptext.
     - Source: `accesskey: m aria-label: Bookmark Page… tooltiptext: Bookmark page`
+- `main-context-menu-bookmark-page-2` — `browser/browser/browserContext.ftl` — Tooltip text has an ellipsis that the source does not have.
+    - Current: `tooltiptext: Blêdwizer foar side meitsje…`
+    - Source: `aria-label: Bookmark Page… tooltiptext: Bookmark page`
+    - Suggest: `tooltiptext: Blêdwizer foar side meitsje`
+    - en-US tooltiptext is "Bookmark page" without ellipsis; only the aria-label has one.
 - `main-context-menu-edit-bookmark` — `browser/browser/browserContext.ftl` — Added where en-US has none: add-engine-button (both search.ftl and preferences/addEngine.ftl) · quickactions-plugins · main-context-menu-bookmark-page.tooltiptext · main-context-menu-edit-bookmark.tooltiptext.
     - Source: `accesskey: m aria-label: Edit Bookmark… tooltiptext: Edit bookmark`
+- `main-context-menu-edit-bookmark-2` — `browser/browser/browserContext.ftl` — Tooltip adds an ellipsis that the source does not have.
+    - Current: `tooltiptext: Blêdwizer bewurkje…`
+    - Source: `aria-label: Edit Bookmark… tooltiptext: Edit bookmark`
+    - Suggest: `tooltiptext: Blêdwizer bewurkje`
+    - The en-US tooltiptext is "Edit bookmark" without ellipsis (only the aria-label has one).
 - `default-browser-guidance-notification-info-page` — `browser/browser/defaultBrowserNotification.ftl` — Added: import-source-page-title · findbar-fast-find-links.placeholder · app-basics-disk-available · detail-rating.value · default-browser-guidance-notification-info-page · inactive-css-at-position-try-not-supported.
     - Source: `Show me`
 - `bookmark-overlay-tags-empty-description` — `browser/browser/editBookmarkOverlay.ftl` — appmenuitem-monitor-description2 · bookmark-overlay-tags-empty-description.placeholder · choose-language-description · confirm-browser-language-change-description · download-always-ask-where2.label · home-prefs-weather-description · forms-master-pw-fips-desc · preferences-doh-status-item-not-active.message · preferences-doh-status-item-not-active-local.message · onboarding-refresh-import-title ·…
@@ -834,12 +895,7 @@ _Nothing reported._
     - Source: `To add a site, open the <img data-l10n-name="translations-icon"/> translation panel, select <img data-l10n-name="settings-icon"/> translation settings, then choose “Never translate this site”`
 - `sync-mobile-promo` — `browser/browser/preferences/preferences.ftl` — about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…
     - Source: `Download Firefox for <img data-l10n-name="android-icon"/> <a data-l10n-name="android-link">Android</a> or <img data-l10n-name="ios-icon"/> <a data-l10n-name="ios-link">iOS</a> to sync with your mobile device.`
-- `website-remove-language-button` — `browser/browser/preferences/preferences.ftl` — website-remove-language-button.aria-label and .title (en-US: "Remove { $locale }") · newtab-widget-lists-menu-delete (en-US: "Delete this list") · delete-ca-cert-confirm (en-US is declarative).
-    - Source: `aria-label: Remove { $locale } title: Remove { $locale }`
-    - Suggest: `.title`
-- `monitor-header-content-signed-in` — `browser/browser/protections.ftl` — pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…
-    - Source: `{ -monitor-brand-name } warns you if your info has appeared in a known data breach.`
-- _…and 37 more; see `state/` for the full list._
+- _…and 39 more; see `state/` for the full list._
 
 ---
 
