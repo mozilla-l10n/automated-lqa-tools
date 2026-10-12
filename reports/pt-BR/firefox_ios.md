@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
-| **Previous run** | 2026-09-28 @ `76fd90c3d050` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
+| **Previous run** | 2026-10-05 @ `ef278c60f343` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,969 |
+| **Strings reviewed this run** | 17 of 1,986 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for pt-BR: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `Onboarding.MultiDay.HomeScreenNotificationsPopup.Title.v159` — `pt-BR/firefox-ios.xliff` — "noticias" is missing the accent; correct spelling is "notícias".
+    - Current: `Receba noticias de novos recursos de privacidade`
+    - Source: `Get fresh privacy features`
+    - Suggest: `Receba notícias de novos recursos de privacidade`
+    - Portuguese spelling requires the acute accent in "notícias".
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,7 +49,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,969 |
+| Strings | 1,986 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -71,7 +75,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | apostrophe | `typographic` 6 | **typographic** |
 | ellipsis | `char` 27 | **char** |
 | dash | `em` 1 | **em** |
-| register | `informal` 152 | **informal** |
+| register | `informal` 153 | **informal** |
 
 ---
 
@@ -81,7 +85,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (59)
+## 3. Open findings (58)
 
 > **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -103,7 +107,7 @@ _Also listed under their own category below._
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 35 |
 | 3 | Degraded language (grammar, spelling, terminology) | 21 |
-| 4 | Cosmetic (typography, spacing) | 3 |
+| 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -299,11 +303,6 @@ _Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
-- `ContextualHints.FeltDeletion.Body.v122` — `pt-BR/firefox-ios.xliff` — Imperative sentence rendered in third person singular, breaking the parallel with the preceding imperative.
-    - Current: `Exclui o histórico, cookies, tudo.`
-    - Source: `Tap here to start a fresh private session. Delete your history, cookies — everything.`
-    - Suggest: `Exclua o histórico, os cookies, tudo.`
-    - The source "Delete your history, cookies — everything." is an imperative like the preceding "Tap here"; "Exclui" reads as indicative third person.
 - `Menu.EnhancedTrackingProtection.Certificates.ValidityNotAfter.v131` — `pt-BR/firefox-ios.xliff` — Inconsistent phrasing between the paired validity labels: "Não após" vs "Não antes de".
     - Current: `Não após`
     - Source: `Not After`
@@ -319,6 +318,11 @@ _Nothing in this category._
     - Source: `The owner of %@ hasn’t set it up properly and a secure connection can’t be created.`
     - Suggest: `O proprietário de %@ não o configurou corretamente e não é possível criar uma conexão segura.`
     - The source says the owner "hasn’t set it up properly and a secure connection can’t be created"; the translation drops the object of "configurou" and joins the clauses with a comma instead of "e".
+- `Onboarding.MultiDay.HomeScreenNotificationsPopup.Title.v159` — `pt-BR/firefox-ios.xliff` — "noticias" is missing the accent; correct spelling is "notícias".
+    - Current: `Receba noticias de novos recursos de privacidade`
+    - Source: `Get fresh privacy features`
+    - Suggest: `Receba notícias de novos recursos de privacidade`
+    - Portuguese spelling requires the acute accent in "notícias".
 - `Onboarding.Wallpaper.Action.v114` — `pt-BR/firefox-ios.xliff` — "fundo da tela" should be "fundo de tela", inconsistent with the other wallpaper strings in the same screen.
     - Current: `Escolha um fundo da tela`
     - Source: `Set Wallpaper`
@@ -400,11 +404,6 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
-- `ContextualHints.FeltDeletion.Body.v122` — `pt-BR/firefox-ios.xliff` — The em dash of the source was replaced by a comma, and the locale convention is the em dash.
-    - Current: `cookies, tudo`
-    - Source: `Tap here to start a fresh private session. Delete your history, cookies — everything.`
-    - Suggest: `cookies — tudo`
-    - Source uses an em dash before "everything"; pt-BR house dash is the em dash, so the punctuation should be preserved.
 - `Keyboard.Shortcuts.RefreshWithoutCache.v108` — `pt-BR/firefox-ios.xliff` — Stray capital letter mid-phrase in "Recarregar Ignorando cache".
     - Current: `Recarregar Ignorando cache`
     - Source: `Reload Ignoring Cache`
@@ -420,9 +419,10 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (0)
+### Dismissed by hand (2)
 
-_Nothing dismissed._
+- `ContextualHints.FeltDeletion.Body.v122` — `pt-BR/firefox-ios.xliff` — the comma in place of the source em dash is a wanted change
+- `ContextualHints.FeltDeletion.Body.v122` — `pt-BR/firefox-ios.xliff` — the comma in place of the source em dash is a wanted change
 
 _One line each in `locales/pt-BR/dismissed.txt`. Delete the line and the finding returns._
 

@@ -576,6 +576,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "D",
+  "check": "llm",
+  "current": "Eşitlemek için giriş yap",
+  "dismissed_because": "",
+  "fid": "8b0032b30be5",
+  "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+  "first_seen": "2026-10-12",
+  "impact": 3,
+  "last_seen": "2026-10-12",
+  "locale": "tr",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The tr locale uses the formal address form (e.g. \"Bildirimleri etkinleştir\"-style buttons aside, body strings use \"-in\" forms like \"haberdar olun\", \"erişin\", \"seçin\"); \"giriş yap\" is the informal singular imperative.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "b20e789d",
+  "string_id": "Onboarding.MultiDay.SyncCard.AcceptButtonText.v159",
+  "suggest": "Eşitlemek için giriş yapın",
+  "summary": "Informal imperative \"giriş yap\" breaks the locale's formal register used in all neighbouring strings.",
+  "suppressed_by": ""
+ },
+ {
   "category": "B",
   "check": "llm",
   "current": "Cihazlarınız arasında güvenle geçiş yapın",
@@ -1005,6 +1029,30 @@
   "string_id": "Settings.Studies.Message.v148",
   "suggest": "%@ özellikleri test etmek için rastgele kullanıcılar seçer, bu da herkes için kaliteyi artırır.",
   "summary": "\"test features\" translated as \"yeni özellikleri test eder\" adding \"new\", and the clause is restructured into a first-person claim.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "E",
+  "check": "llm",
+  "current": "DİL",
+  "dismissed_because": "",
+  "fid": "19012b2c1cfc",
+  "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+  "first_seen": "2026-10-12",
+  "impact": 4,
+  "last_seen": "2026-10-12",
+  "locale": "tr",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The en-US source is \"Language\"; the uppercase styling is applied by the OS, so the string itself should not be all caps.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "78ad36de",
+  "string_id": "Settings.Summarize.LanguageSection.Title.v149",
+  "suggest": "Dil",
+  "summary": "Section title rendered in all caps while the source uses title case.",
   "suppressed_by": ""
  },
  {

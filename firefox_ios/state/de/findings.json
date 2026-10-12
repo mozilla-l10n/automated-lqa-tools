@@ -552,6 +552,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "konnte nicht auf die angeforderte URL zugreifen",
+  "dismissed_because": "",
+  "fid": "a48c9182c1eb",
+  "file": "Shared/Supporting Files/en-US.lproj/NativeErrorPage.strings",
+  "first_seen": "2026-10-12",
+  "impact": 2,
+  "last_seen": "2026-10-12",
+  "locale": "de",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source says the app could not reach (connect to) the URL; \"zugreifen\" means access, shifting the meaning from a connection failure to an access/permission problem.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "c5fbf62a",
+  "string_id": "NativeErrorPage.GenericError.Description.v158.withoutURL",
+  "suggest": "konnte die angeforderte URL nicht erreichen",
+  "summary": "\"couldn’t reach the requested URL\" rendered as \"couldn't access the requested URL\".",
+  "suppressed_by": ""
+ },
+ {
   "category": "C",
   "check": "llm",
   "current": "Überprüfen Sie Ihr Modem oder Router.",
@@ -717,6 +741,30 @@
   "string_id": "Onboarding.Modern.Welcome.Title.v145",
   "suggest": "gruseligen Trackern",
   "summary": "\"trackers\" is rendered as \"Verfolgern\" instead of the established term \"Tracker\".",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Holen Sie sich Passwörter, Chronik und mehr auf jedem Gerät.",
+  "dismissed_because": "",
+  "fid": "1949ef0aa4ea",
+  "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+  "first_seen": "2026-10-12",
+  "impact": 2,
+  "last_seen": "2026-10-12",
+  "locale": "de",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source promises immediate availability (\"Instantly get\"); the German omits this qualifier entirely.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "e199a6da",
+  "string_id": "Onboarding.MultiDay.SyncCard.BodyText.v159",
+  "suggest": "Holen Sie sich sofort Passwörter, Chronik und mehr auf jedem Gerät.",
+  "summary": "\"Instantly\" is dropped from the translation.",
   "suppressed_by": ""
  },
  {

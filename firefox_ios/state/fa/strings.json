@@ -48,7 +48,7 @@
   "Alerts.RestoreTabs.Button.No.v109": "f43d7736 f4959fa8 d8ae475d",
   "Alerts.RestoreTabs.Button.Yes.v109": "2d9fed27 20c7c4c0 dd0eba5a",
   "Alerts.RestoreTabs.Message.v109": "a05f7d54 35454180 68a4d25f",
-  "Alerts.RestoreTabs.Title.v109.v2": "af9efb74 23bd0bc4 fed2ab70"
+  "Alerts.RestoreTabs.Title.v109.v2": "d9115c22 23bd0bc4 fed2ab70"
  },
  "Shared/Supporting Files/en-US.lproj/AppIconSelection.strings": {
   "Settings.AppIconSelection.Accessibility.AppIconSelectedLabel.v136": "ac5da6e7 d6785bd0 7256930d",
@@ -60,7 +60,7 @@
   "Settings.AppIconSelection.AppIconNames.Dark.Title.v139": "41b9fb63 c567bb3e 7e13af9b",
   "Settings.AppIconSelection.AppIconNames.DarkPurple.Title.v136": "1a2a026d c220a27e 2490195b",
   "Settings.AppIconSelection.AppIconNames.FromContributors.Momo.Title.v139": "ce60c79d ce60c79d 1e7f3ee3",
-  "Settings.AppIconSelection.AppIconNames.Fun.Cool.Title.146": "52175a78 85fe3fce 1fce72b3",
+  "Settings.AppIconSelection.AppIconNames.Fun.Cool.Title.146": "ecf4f49b 85fe3fce 1fce72b3",
   "Settings.AppIconSelection.AppIconNames.Fun.Cuddling.Title.146": "cbdb662d 0a1f6eeb 5331198a",
   "Settings.AppIconSelection.AppIconNames.Fun.Flaming.Title.146": "21b4ccab e485e11d 9ee33ce1",
   "Settings.AppIconSelection.AppIconNames.GoldenHour.Title.v137": "f40edf0f c992adf1 5e29dc28",
@@ -110,8 +110,8 @@
  "Shared/Supporting Files/en-US.lproj/Bookmarks.strings": {
   "Bookmarks.EmptyState.Nested.Body.v135": "3b5f39bb 0b24c828 78d357b3",
   "Bookmarks.EmptyState.Nested.Title.v135": "2e3bcf86 2005376d 1ac47ad5",
-  "Bookmarks.EmptyState.Root.Body.v135": "b8c8a6af 8038ca9d af1ee5e6",
-  "Bookmarks.EmptyState.Root.BodySignedOut.v135": "8f97a785 5bf80d89 a2483316",
+  "Bookmarks.EmptyState.Root.Body.v135": "9509de18 8038ca9d af1ee5e6",
+  "Bookmarks.EmptyState.Root.BodySignedOut.v135": "3a59b965 5bf80d89 a2483316",
   "Bookmarks.EmptyState.Root.ButtonTitle.v136": "0194a790 6be48633 cc60f7d1",
   "Bookmarks.EmptyState.Root.Title.v135": "12bb22f1 252095bc 50947d84",
   "Bookmarks.Menu.AllBookmarks.v131": "015ac4e6 fd088f04 715f4161",
@@ -122,12 +122,12 @@
   "Bookmarks.Menu.EditBookmark.v131": "5eaa8da3 f2c491c0 13b563a4",
   "Bookmarks.Menu.EditBookmarkAllFoldersLabel.v154": "817eb51a eebb691c ed2a0b53",
   "Bookmarks.Menu.EditBookmarkChangeLocationLabel.v154": "83ddcfac 2bdcded8 c1106ce7",
-  "Bookmarks.Menu.EditBookmarkDesktopBookmarksLabel.v136": "fc3d8943 e205dc81 186a1568",
+  "Bookmarks.Menu.EditBookmarkDesktopBookmarksLabel.v136": "b6bd2bb7 e205dc81 186a1568",
   "Bookmarks.Menu.EditBookmarkDesktopGroupLabel.v154": "3d036b5c 26e9ea7f 6ccb29c8",
   "Bookmarks.Menu.EditBookmarkGroupCollapsedValue.v154": "b59ad5cf 0eabf24c 43490dce",
   "Bookmarks.Menu.EditBookmarkGroupExpandedValue.v154": "9c7428fb fcd3e1ef fd1c7f2e",
   "Bookmarks.Menu.EditBookmarkLocationLabel.v154": "05427da3 3d0aa4e0 464ae8c0",
-  "Bookmarks.Menu.EditBookmarkMobileBookmarksLabel.v154": "f39985e4 fd952fa2 77ce58a3",
+  "Bookmarks.Menu.EditBookmarkMobileBookmarksLabel.v154": "f937d70d fd952fa2 77ce58a3",
   "Bookmarks.Menu.EditBookmarkMobileGroupLabel.v154": "4a997d81 16d6e3e5 2042cb60",
   "Bookmarks.Menu.EditBookmarkParentFolderBreadcrumbFormat.v154": "2e79107a 2e79107a 388c0c04",
   "Bookmarks.Menu.EditBookmarkSave.v135": "7f7d7d22 effd3b79 167a8ae0",
@@ -206,8 +206,8 @@
   "Addresses.EditAddress.AutofillAddressOblast.v129": "4bfbdd18 4bfbdd18 6967da0f",
   "Addresses.EditAddress.AutofillAddressOrganization.v129": "0c1741a2 f2ff868c 0ffbf0a2",
   "Addresses.EditAddress.AutofillAddressParish.v129": "60b4321d 6b44dec5 0796019d",
-  "Addresses.EditAddress.AutofillAddressPin.v129": "e3d4d578 c5b396e4 b5f9c853",
-  "Addresses.EditAddress.AutofillAddressPostTown.v129": "ebd4c39c d997e3b0 c733d989",
+  "Addresses.EditAddress.AutofillAddressPin.v129": "545499d0 c5b396e4 b5f9c853",
+  "Addresses.EditAddress.AutofillAddressPostTown.v129": "b53bfd9e d997e3b0 c733d989",
   "Addresses.EditAddress.AutofillAddressPostalCode.v129": "545499d0 c372619c 33718e3d",
   "Addresses.EditAddress.AutofillAddressPrefecture.v129": "10b31a10 3bffb2dd 4c677ae2",
   "Addresses.EditAddress.AutofillAddressProvince.v129": "10b31a10 c50d15c9 15d29db2",
@@ -249,7 +249,7 @@
   "CreditCard.EditCard.RevealLabel.v114": "b3a50ccb 42109c97 01f585e7",
   "CreditCard.EditCard.SaveNavBarButtonLabel.v113": "7f7d7d22 effd3b79 9d3e9213",
   "CreditCard.EditCard.SavedCardListTitle.v112": "2f05bc39 aec02895 a94f4cd5",
-  "CreditCard.EditCard.ToggleToAllowAutofillTitle.v122": "78d6165e 4f12c2e7 7b390e99",
+  "CreditCard.EditCard.ToggleToAllowAutofillTitle.v122": "5a5f4a7b 4f12c2e7 7b390e99",
   "CreditCard.EditCard.ViewCreditCardTitle.v116": "6d84c0cf 41008d80 d96830f6"
  },
  "Shared/Supporting Files/en-US.lproj/EngagementNotification.strings": {
@@ -263,7 +263,7 @@
  "Shared/Supporting Files/en-US.lproj/EnhancedTrackingProtection.strings": {
   "MainMenu.Account.AccessibilityLabels.BackButton.v137": "b7b35c80 d2107963 23537fdf",
   "MainMenu.Account.AccessibilityLabels.CloseButton.v137": "f550e7c7 0e7c6115 1ba72921",
-  "Menu.EnhancedTrackingProtection.Certificates.CommonName.v131": "271bcac8 6c1f0669 58775279",
+  "Menu.EnhancedTrackingProtection.Certificates.CommonName.v131": "a986a5c3 6c1f0669 58775279",
   "Menu.EnhancedTrackingProtection.Certificates.IssuerCountry.v131": "d8d09cce 5bb08775 87e928ce",
   "Menu.EnhancedTrackingProtection.Certificates.IssuerName.v131": "1fb09472 f21957eb 6304fd6c",
   "Menu.EnhancedTrackingProtection.Certificates.IssuerOrganization.v131": "0c1741a2 f2ff868c a23221bc",
@@ -276,7 +276,7 @@
   "Menu.EnhancedTrackingProtection.Certificates.ValidityNotBefore.v131": "4e6ca0e8 8d05dd07 db9531f4",
   "Menu.EnhancedTrackingProtection.ClearData.AlertCancelButton.v128": "8849feb6 871d661d 07414206",
   "Menu.EnhancedTrackingProtection.ClearData.AlertOkButton.v128": "a957b44c 730cab26 07414206",
-  "Menu.EnhancedTrackingProtection.ClearData.AlertText.v128": "b054a4c1 60051a2c 9e44a99f",
+  "Menu.EnhancedTrackingProtection.ClearData.AlertText.v128": "bda243a1 60051a2c 9e44a99f",
   "Menu.EnhancedTrackingProtection.ClearData.AlertTitle.v128": "a4140a61 75622cea 5a296b11",
   "Menu.EnhancedTrackingProtection.ClearData.ButtonTitle.v128": "a4140a61 75622cea 689517e0",
   "Menu.EnhancedTrackingProtection.ClearData.ToastMessage.v128": "4ceca2d3 b98e3d42 81da1367",
@@ -737,7 +737,7 @@
   "Onboarding.MultiDay.NotificationCard.AcceptButtonText.v159": "318c4b65 8518fb28 23be3f70",
   "Onboarding.MultiDay.NotificationCard.BodyText.v159": "291ee44f 18322399 5847e746",
   "Onboarding.MultiDay.NotificationCard.DeclineButtonText.v159": "a7d3e417 ea2c8b0d cb493f6c",
-  "Onboarding.MultiDay.NotificationCard.Title.v159": "02a3ce7b 614699d2 9e52233c",
+  "Onboarding.MultiDay.NotificationCard.Title.v159": "02a3ce7b 614699d2 594b705c",
   "Onboarding.MultiDay.SyncCard.AcceptButtonText.v159": "0194a790 6be48633 44e30e82",
   "Onboarding.MultiDay.SyncCard.BodyText.v159": "db0b0696 5b61228a c81520cd",
   "Onboarding.MultiDay.SyncCard.Title.v159": "e33ea1c6 066b57d6 2ae7ba3a",
@@ -778,7 +778,7 @@
   "Onboarding.Welcome.Description.v120": "0181bd6e 1022c77c 364cbab7",
   "Onboarding.Welcome.Link.Action.v114": "e8bf3a87 e22c5bd6 68ce2114",
   "Onboarding.Welcome.Skip.v114": "772649d1 dfb31eca 2527904c",
-  "Onboarding.Welcome.Title.TreatementA.v120": "40a6dbd7 8edee85e 42b6b9a4",
+  "Onboarding.Welcome.Title.TreatementA.v120": "e0bdbafa 8edee85e 42b6b9a4",
   "Onboarding.Welcome.Title.v114": "15e67d88 309cad48 42b6b9a4"
  },
  "Shared/Supporting Files/en-US.lproj/PasswordAutofill.strings": {
@@ -843,7 +843,7 @@
   "QuickAnswers.OptInRedesign.NoTrainingDescription.v158": "9df2a164 66140038 9c6f54bb",
   "QuickAnswers.OptInRedesign.NoTrainingTitle.v158": "749482bc ef1d3c53 7618f32b",
   "QuickAnswers.OptInRedesign.NothingGetsSavedDescription.v158": "4ee1437c 829a0acc 4bb48a32",
-  "QuickAnswers.OptInRedesign.NothingGetsSavedTitle.v158": "a9c41427 f8fc9071 4d46cbff",
+  "QuickAnswers.OptInRedesign.NothingGetsSavedTitle.v158": "51ceaa4e f8fc9071 4d46cbff",
   "QuickAnswers.OptInRedesign.PrivateByDesignDescription.v158": "00c28923 c7d8d3ca 0458d0cd",
   "QuickAnswers.OptInRedesign.PrivateByDesignTitle.v158": "c92ac1bd 3fbb6535 7dc31d26",
   "QuickAnswers.OptInRedesign.Title.v158": "c82d8eb0 9a638568 ae92ee8d",
@@ -1127,7 +1127,7 @@
   "TopSites.RemoveButton.LargeContentTitle.v122": "f39203dd 458f6473 5892e78c"
  },
  "Shared/Supporting Files/en-US.lproj/TabToolbar.strings": {
-  "TabToolbar.Accessibility.DataClearance.v122": "f89e30a9 99e76734 377b1d8c"
+  "TabToolbar.Accessibility.DataClearance.v122": "e17fc6f3 99e76734 377b1d8c"
  },
  "Shared/Supporting Files/en-US.lproj/TabsTray.strings": {
   "CloseTabsToast.Button.v113": "9dc9fba8 9dc9fba8 63952015",
@@ -1308,7 +1308,7 @@
   "WorldCup.GroupPhase.GroupA.Title.v151": "a2eaa4a9 a3e51f37 61be9985",
   "WorldCup.GroupPhase.GroupB.Title.v151": "717a979d 5dd0b04f 8b9f03d4",
   "WorldCup.GroupPhase.GroupC.Title.v151": "5b89b805 bfa8a928 e98be246",
-  "WorldCup.GroupPhase.GroupD.Title.v151": "1a842270 d29cd6f7 048dfd0f",
+  "WorldCup.GroupPhase.GroupD.Title.v151": "bc1c81aa d29cd6f7 048dfd0f",
   "WorldCup.GroupPhase.GroupE.Title.v151": "c121aaea 632c5d35 ce7a0767",
   "WorldCup.GroupPhase.GroupF.Title.v151": "7d5821d2 d43abeb5 34e55c9a",
   "WorldCup.GroupPhase.GroupG.Title.v151": "69fc4ce1 df551700 dad84710",
@@ -1482,7 +1482,7 @@
   "Bookmarks.EditBookmark.Label": "5eaa8da3 f2c491c0 e703478d",
   "Bookmarks.EditFolder.Label": "ecacbc57 fb48c372 b4a23227",
   "Bookmarks.Folder.Label": "e7480455 f6919643 39a7cce7",
-  "Bookmarks.Menu.DesktopBookmarks": "df5f5d98 13fb7c2b 769e4e2d",
+  "Bookmarks.Menu.DesktopBookmarks": "b6bd2bb7 13fb7c2b 769e4e2d",
   "Bookmarks.NewBookmark.Label": "a43e5ccb f83550ca 809bca57",
   "Bookmarks.NewFolder.Label": "ac32379f bc5d31a6 ef265ded",
   "Bookmarks.NewSeparator.Label": "aa4b29d1 acb2e398 5103c12e",
@@ -1737,7 +1737,7 @@
   "Oops! Firefox crashed": "93e95dc6 37f15de3 00d38f64",
   "Open Settings": "ad69eeb5 bec9f5cb 04851758",
   "Open Tabs": "1075d7e3 d61058e8 e5727a81",
-  "Open articles in Reader View by tapping the book icon when it appears in the title bar.": "12e8ed86 3b13d72e 87837d1c",
+  "Open articles in Reader View by tapping the book icon when it appears in the title bar.": "0f9ba1ad 3b13d72e 87837d1c",
   "OpenURL.Error.Message": "17e75a55 ac321d32 32456f46",
   "OpenURL.Error.Title": "27862b8d d765b34b 1d6f5b8d",
   "Password": "1dd00362 907cdcda fea40c51",
@@ -1766,7 +1766,7 @@
   "ReopenAlert.Title": "56f5acd8 0f74797b 666f71ba",
   "Reset text size": "8e2a34b3 f4607a64 7985ddb2",
   "Sans-serif": "dc7d5593 dc7d5593 65666c41",
-  "Save pages to your Reading List by tapping the book plus icon in the Reader View controls.": "ba4b809c 87a455ab 87837d1c",
+  "Save pages to your Reading List by tapping the book plus icon in the Reader View controls.": "c7d0e8eb 87a455ab 87837d1c",
   "ScanQRCode.Error.OK.Button": "a2e2d28a 322b41af e3c20412",
   "ScanQRCode.Instructions.Label": "bf857a8f 9f838538 4c8e738c",
   "ScanQRCode.InvalidDataError.Message": "646781d8 b253d12f 91290abf",
@@ -2070,8 +2070,8 @@
   "Enter Search Mode": "b094686b 22d25a9b ea09eed3",
   "Hide": "105e98d3 faf2bf49 8b9456ee",
   "LoginList.DeleteToast.v135": "308b582c c0f0404a 670b4a74",
-  "Logins will be permanently removed.": "5f591486 f85d3973 d244ee42",
-  "Logins will be removed from all connected devices.": "368d64b6 e087e8d6 2ba3efec",
+  "Logins will be permanently removed.": "12e1dd70 f85d3973 d244ee42",
+  "Logins will be removed from all connected devices.": "08c32bde e087e8d6 2ba3efec",
   "Modified %@": "378d11ae 402211ea 0cdff540",
   "No logins found": "bdb776a3 5a875044 7d84f96e",
   "NoLoginsFound.Title.v122": "97dbee2d 0ed590ad 7d84f96e",
@@ -2122,6 +2122,8 @@
  "Shared/en-US.lproj/Search.strings": {
   "%@ search": "d5e8cb3a 96b1c913 d67060bc",
   "Search Settings": "6fd12966 17978b25 52378033",
+  "Search.ResultsAbove.A11yAnnouncement.v158": "b4a24d59 30771ce3 82228132",
+  "Search.ResultsBelow.A11yAnnouncement.v158": "1e79a578 27b7349f 5dbf6bbf",
   "Search.SponsoredSuggestionDescription.v119": "03dcfb20 31b7b94f 16ab3d7a"
  },
  "Shared/en-US.lproj/Shared.strings": {
@@ -2131,7 +2133,7 @@
   "Bookmarks": "a249d404 11ce5543 ddb48330",
   "Bookmarks Menu": "7c7ef873 1bada4d8 9c7a3596",
   "Bookmarks Toolbar": "85a0f7e5 454bb6ed c0104f6c",
-  "Mobile Bookmarks": "e3430baa 510a5db8 9a7503e7",
+  "Mobile Bookmarks": "f937d70d 510a5db8 9a7503e7",
   "Unsorted Bookmarks": "e8e61d48 f0cbfbea bc4b1860"
  },
  "Shared/en-US.lproj/Today.strings": {

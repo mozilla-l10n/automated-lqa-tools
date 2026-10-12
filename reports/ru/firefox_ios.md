@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
-| **Previous run** | 2026-09-28 @ `76fd90c3d050` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
+| **Previous run** | 2026-10-05 @ `ef278c60f343` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,969 |
+| **Strings reviewed this run** | 17 of 1,986 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for ru: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `NativeErrorPage.GenericError.Description.v158.withoutURL` — `ru/firefox-ios.xliff` — Inconsistent construction: "%1$@ не смог" vs. the parallel string's "%1$@ не удалось"; also "связаться с URL" is odd for "reach the URL".
+    - Current: `%1$@ не смог связаться с запрошенным URL.`
+    - Source: `%1$@ couldn’t reach the requested URL.`
+    - Suggest: `%1$@ не удалось открыть запрошенный URL.`
+    - The sibling string uses the impersonal "%1$@ не удалось соединиться с"; here the masculine agreement "не смог" is forced on the app-name placeholder and "связаться с URL" misrenders "reach the requested URL".
+- `Onboarding.MultiDay.NotificationCard.BodyText.v159` — `ru/firefox-ios.xliff` — The app name placeholder modifies only "отчёт о конфиденциальности" instead of "protection updates", changing the meaning.
+    - Current: `Получайте обновления защиты, советы и отчёт о конфиденциальности %@.`
+    - Source: `Get %@ protection updates, tips, and your privacy report.`
+    - Suggest: `Получайте обновления защиты %@, советы и отчёт о конфиденциальности.`
+    - In the source "%@ protection updates" — the app name qualifies the protection updates; the Russian attaches it to the privacy report at the end of the list.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,7 +54,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,969 |
+| Strings | 1,986 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -70,7 +79,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | quotes | `guillemet` 23 | **guillemet** |
 | ellipsis | `char` 27 | **char** |
 | dash | `em` 6, `en` 1 | **em** |
-| register | `informal` 87, `formal` 288 | **formal** |
+| register | `informal` 89, `formal` 290 | **formal** |
 
 ---
 
@@ -80,7 +89,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (92)
+## 3. Open findings (94)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -95,8 +104,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 44 |
-| 3 | Degraded language (grammar, spelling, terminology) | 45 |
+| 2 | Wrong content (says something other than the English) | 45 |
+| 3 | Degraded language (grammar, spelling, terminology) | 46 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
@@ -165,6 +174,11 @@ _Nothing in this category._
     - Source: `Pick your favorite theme or have %@ match your device, putting you in control.`
     - Suggest: `или позвольте %@ подстроиться под ваше устройство`
     - The source offers the option to let the app follow the device theme, not to wait for it to do so.
+- `Onboarding.MultiDay.NotificationCard.BodyText.v159` — `ru/firefox-ios.xliff` — The app name placeholder modifies only "отчёт о конфиденциальности" instead of "protection updates", changing the meaning.
+    - Current: `Получайте обновления защиты, советы и отчёт о конфиденциальности %@.`
+    - Source: `Get %@ protection updates, tips, and your privacy report.`
+    - Suggest: `Получайте обновления защиты %@, советы и отчёт о конфиденциальности.`
+    - In the source "%@ protection updates" — the app name qualifies the protection updates; the Russian attaches it to the privacy report at the end of the list.
 - `PrivacyDashboard.HeaderLabel.v155` — `ru/firefox-ios.xliff` — Header is a label under a bold count; Russian phrasing loses the count-caption structure.
     - Current: `На этой неделе заблокированы трекеры`
     - Source: `Trackers blocked this week`
@@ -413,6 +427,11 @@ _Nothing in this category._
     - Source: `Village or Township`
     - Suggest: `Деревня или посёлок`
     - The file consistently uses ё (удалён, сохранён, СОХРАНЁННЫЕ); "поселок" should be "посёлок".
+- `NativeErrorPage.GenericError.Description.v158.withoutURL` — `ru/firefox-ios.xliff` — Inconsistent construction: "%1$@ не смог" vs. the parallel string's "%1$@ не удалось"; also "связаться с URL" is odd for "reach the URL".
+    - Current: `%1$@ не смог связаться с запрошенным URL.`
+    - Source: `%1$@ couldn’t reach the requested URL.`
+    - Suggest: `%1$@ не удалось открыть запрошенный URL.`
+    - The sibling string uses the impersonal "%1$@ не удалось соединиться с"; here the masculine agreement "не смог" is forced on the app-name placeholder and "связаться с URL" misrenders "reach the requested URL".
 - `Onboarding.Modern.BrandRefresh.Welcome.Description.v148` — `ru/firefox-ios.xliff` — Ungrammatical calque "блокируем компании от отслеживания".
     - Current: `автоматически блокируем компании от отслеживания ваших кликов`
     - Source: `We protect your data and automatically block companies from spying on your clicks.`

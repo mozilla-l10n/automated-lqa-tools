@@ -1106,6 +1106,30 @@
  {
   "category": "B",
   "check": "llm",
+  "current": "Sync にログイン",
+  "dismissed_because": "",
+  "fid": "e6cd40fce4f7",
+  "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+  "first_seen": "2026-10-12",
+  "impact": 2,
+  "last_seen": "2026-10-12",
+  "locale": "ja",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "Per the developer comment the button directs the user to sign in to their Mozilla account in order to use sync; \"Sync にログイン\" states the user logs into a service called Sync.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "1cfe799c",
+  "string_id": "Onboarding.MultiDay.SyncCard.AcceptButtonText.v159",
+  "suggest": "ログインして同期",
+  "summary": "\"Sign in to Sync\" is rendered as \"log in to Sync\" rather than signing in to enable syncing.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
   "current": "あなたに語りかける壁紙を選んでください。",
   "dismissed_because": "",
   "fid": "4bca6b7659b2",
@@ -4461,6 +4485,54 @@
   "string_id": "Firefox won’t remember any of your history or cookies, but new bookmarks will be saved.",
   "suggest": "新しいブックマークは保存されます。",
   "summary": "\"new bookmarks will be saved\" is rendered as \"bookmarks can be saved\" and the Firefox subject is dropped, weakening the statement.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "検索候補: %d 件",
+  "dismissed_because": "",
+  "fid": "e70310c4f512",
+  "file": "Shared/en-US.lproj/Search.strings",
+  "first_seen": "2026-10-12",
+  "impact": 2,
+  "last_seen": "2026-10-12",
+  "locale": "ja",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The developer comment states the announcement tells the user the results are located above the address bar; \"above\" is unrendered, and the result is indistinguishable from the ResultsBelow string.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "652f0957",
+  "string_id": "Search.ResultsAbove.A11yAnnouncement.v158",
+  "suggest": "上に検索候補: %d 件",
+  "summary": "The translation drops \"above\", losing the positional information the VoiceOver announcement must convey and making it identical to the \"below\" string.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "検索候補: %d 件",
+  "dismissed_because": "",
+  "fid": "4a53b4e28a7d",
+  "file": "Shared/en-US.lproj/Search.strings",
+  "first_seen": "2026-10-12",
+  "impact": 2,
+  "last_seen": "2026-10-12",
+  "locale": "ja",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The developer comment states the announcement tells the user the results are located below the address bar; \"below\" is unrendered, and the result is indistinguishable from the ResultsAbove string.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "652f0957",
+  "string_id": "Search.ResultsBelow.A11yAnnouncement.v158",
+  "suggest": "下に検索候補: %d 件",
+  "summary": "The translation drops \"below\", losing the positional information the VoiceOver announcement must convey and making it identical to the \"above\" string.",
   "suppressed_by": ""
  },
  {

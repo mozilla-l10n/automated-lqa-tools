@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
-| **Previous run** | 2026-09-28 @ `76fd90c3d050` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
+| **Previous run** | 2026-10-05 @ `ef278c60f343` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 45 of 1,966 |
+| **Strings reviewed this run** | 0 of 1,966 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,13 +22,9 @@ Also for zh-CN: [android](android.md) · [firefox](firefox.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `Settings.AIControls.AIPoweredFeaturesSection.QuickAnswersSection.Message.v154` — `zh-CN/firefox-ios.xliff` — "Your voice" rendered as "您的声音" reads as the sound itself rather than voice input/recordings.
-    - Current: `您的声音、问题和答案永远不会被存储。`
-    - Source: `Your voice, questions, and answers are never stored.`
-    - Suggest: `您的语音、问题和答案永远不会被存储。`
-    - In the context of a Quick Answers voice feature, "voice" means voice input (语音); 声音 is generic sound.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -50,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 97 |
 | Strings | 1,966 |
-| Missing strings | 3 |
+| Missing strings | 20 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,9 +59,12 @@ _Nothing retired._
 
 ### Completeness
 
-**3 strings** are not translated yet, concentrated in:
+**20 strings** are not translated yet, concentrated in:
 
+- `zh-CN/firefox-ios.xliff` — 11
+- `zh-CN/firefox-ios.xliff` — 4
 - `zh-CN/firefox-ios.xliff` — 3
+- `zh-CN/firefox-ios.xliff` — 2
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

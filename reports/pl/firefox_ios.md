@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
-| **Previous run** | 2026-09-28 @ `76fd90c3d050` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
+| **Previous run** | 2026-10-05 @ `ef278c60f343` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 26 of 1,969 |
+| **Strings reviewed this run** | 0 of 1,969 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for pl: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `QuickAnswers.Settings.EnableQuickAnswers.v158` — `pl/firefox-ios.xliff` — The toggle label drops the "Enable" verb, rendering only the feature name.
-    - Current: `Szybkie odpowiedzi`
-    - Source: `Enable Quick Answers`
-    - Suggest: `Włącz szybkie odpowiedzi`
-    - Source is "Enable Quick Answers", the label of a toggle; the Polish omits "Enable".
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -50,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 97 |
 | Strings | 1,969 |
-| Missing strings | 0 |
+| Missing strings | 17 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,7 +59,13 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**17 strings** are not translated yet, concentrated in:
+
+- `pl/firefox-ios.xliff` — 11
+- `pl/firefox-ios.xliff` — 4
+- `pl/firefox-ios.xliff` — 2
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 

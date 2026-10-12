@@ -336,6 +336,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "C",
+  "check": "llm",
+  "current": "%1$@ не смог связаться с запрошенным URL.",
+  "dismissed_because": "",
+  "fid": "7b848acc43b2",
+  "file": "Shared/Supporting Files/en-US.lproj/NativeErrorPage.strings",
+  "first_seen": "2026-10-12",
+  "impact": 3,
+  "last_seen": "2026-10-12",
+  "locale": "ru",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The sibling string uses the impersonal \"%1$@ не удалось соединиться с\"; here the masculine agreement \"не смог\" is forced on the app-name placeholder and \"связаться с URL\" misrenders \"reach the requested URL\".",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "aa20fd7d",
+  "string_id": "NativeErrorPage.GenericError.Description.v158.withoutURL",
+  "suggest": "%1$@ не удалось открыть запрошенный URL.",
+  "summary": "Inconsistent construction: \"%1$@ не смог\" vs. the parallel string's \"%1$@ не удалось\"; also \"связаться с URL\" is odd for \"reach the URL\".",
+  "suppressed_by": ""
+ },
+ {
   "category": "B",
   "check": "llm",
   "current": "в Интернет-архиве %2$@",
@@ -501,6 +525,30 @@
   "string_id": "Onboarding.Modern.Sync.Description.v145",
   "suggest": "Всё защищено шифрованием",
   "summary": "Misspelling of the short participle \"защищено\".",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Получайте обновления защиты, советы и отчёт о конфиденциальности %@.",
+  "dismissed_because": "",
+  "fid": "0a238d9921f6",
+  "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+  "first_seen": "2026-10-12",
+  "impact": 2,
+  "last_seen": "2026-10-12",
+  "locale": "ru",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "In the source \"%@ protection updates\" — the app name qualifies the protection updates; the Russian attaches it to the privacy report at the end of the list.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "97d85cc1",
+  "string_id": "Onboarding.MultiDay.NotificationCard.BodyText.v159",
+  "suggest": "Получайте обновления защиты %@, советы и отчёт о конфиденциальности.",
+  "summary": "The app name placeholder modifies only \"отчёт о конфиденциальности\" instead of \"protection updates\", changing the meaning.",
   "suppressed_by": ""
  },
  {

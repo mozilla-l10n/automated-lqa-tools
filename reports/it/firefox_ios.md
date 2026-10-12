@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ef278c60f343` |
-| **Previous run** | 2026-09-28 @ `76fd90c3d050` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
+| **Previous run** | 2026-10-05 @ `ef278c60f343` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,969 |
+| **Strings reviewed this run** | 17 of 1,986 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,7 +45,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,969 |
+| Strings | 1,986 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -68,10 +68,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 15 | **curly-double** |
-| apostrophe | `typographic` 72 | **typographic** |
+| apostrophe | `typographic` 73 | **typographic** |
 | ellipsis | `char` 28 | **char** |
 | dash | `em` 1 | **em** |
-| register | `informal` 82, `formal` 4 | **informal** |
+| register | `informal` 84, `formal` 4 | **informal** |
 
 ---
 
