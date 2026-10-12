@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
-| **Previous run** | 2026-09-28 @ `92e0a4895124` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
+| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 53 of 16,582 |
+| **Strings reviewed this run** | 71 of 16,626 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,43 @@ Also for de: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (7)
 
-- `addressbar-skip-result-menu-on-tab` — `browser/browser/preferences/preferences.ftl` — Checkbox label rendered as an imperative instruction instead of a noun/infinitive setting label.
-    - Current: `Überspringen Sie das Ergebnismenü, wenn Sie die Tab-Taste zum Verschieben des Fokus verwenden`
-    - Source: `label: Skip the results menu when using the tab key to move focus`
-    - Suggest: `Ergebnismenü überspringen, wenn Sie die Tab-Taste zum Verschieben des Fokus verwenden`
-    - The en-US "Skip the results menu when…" is a settings checkbox label, not a command to the user; the parallel menu item urlbar-view-context-menu-skip-menu-with-tab is correctly rendered as "Dieses Menü überspringen, wenn …".
+- `smartwindow-organize-tabs-button` — `browser/browser/autoTabGrouping.ftl` — "Organize Tabs" is rendered as "Tabs verwalten" (manage tabs) instead of "Tabs organisieren".
+    - Current: `label: Tabs verwalten`
+    - Source: `label: Organize Tabs tooltiptext: Organize Tabs`
+    - Suggest: `label: Tabs organisieren`
+    - The en-US "Organize" means arranging/grouping tabs (the feature clusters tabs into groups); "verwalten" is the established German rendering of "Manage", which is a different term used elsewhere (e.g. "Manage shortcuts" → "Tastenkombinationen verwalten").
+- `smartwindow-group-tabs-loading` — `browser/browser/autoTabGrouping.ftl` — The German says tabs are being checked "for useful groups" in a way that implies searching for existing groups, contrary to the developer comment.
+    - Current: `Tabs werden auf nützliche Gruppen überprüft…`
+    - Source: `Checking tabs for useful groups…`
+    - Suggest: `Tabs werden auf nützliche Gruppierungen geprüft…`
+    - The comment states the model is forming new groups from the tabs, not searching for groups that already exist; "Tabs werden auf … Gruppen überprüft" reads as inspecting tabs for groups they belong to.
+- `smartwindow-group-tabs-all-sorted` — `browser/browser/autoTabGrouping.ftl` — "Nice work organizing your tabs" is turned into a factual claim that the user's tabs are now perfectly organized.
+    - Current: `Ihre Tabs sind jetzt bestens organisiert`
+    - Source: `Nice work organizing your tabs`
+    - Suggest: `Gut gemacht beim Organisieren Ihrer Tabs`
+    - The source praises the user's action; the German instead asserts a state ("your tabs are now optimally organized") that the source never claims.
+- `prefs-syncing-off-3` — `browser/browser/preferences/preferences.ftl` — "get ... on this device" rendered as "auf dieses Gerät zu übertragen" (transfer onto this device) changes the stated action direction/claim of sync.
+    - Current: `um Ihre Lesezeichen, Passwörter, Chronik und mehr auf dieses Gerät zu übertragen`
+    - Source: `description: Turn on sync to get your bookmarks, passwords, history, and more on this device. label: Syncing is OFF`
+    - Suggest: `um Ihre Lesezeichen, Passwörter, Chronik und mehr auf diesem Gerät zu erhalten`
+    - The en-US says to get the data on this device (sync); the German says it will be transferred to this device, a one-directional claim not in the source.
+- `sync-syncing-across-devices-heading-3` — `browser/browser/preferences/preferences.ftl` — "Data syncing on this device" translated as "Auf diesem Gerät synchronisierte Daten" (data already synced), changing the heading's meaning.
+    - Current: `Auf diesem Gerät synchronisierte Daten`
+    - Source: `Data syncing on this device`
+    - Suggest: `Datensynchronisation auf diesem Gerät`
+    - The source is about the ongoing syncing of data on this device, not a list of data that has been synced; the German past participle asserts completed action.
+- `content-analysis-indicator-tooltip` — `browser/browser/browser.ftl` — Wrong preposition in "Verhinderung vor Datenverlust".
+    - Current: `Verhinderung vor Datenverlust (DLP)`
+    - Source: `tooltiptext: Data Loss Prevention (DLP) by { $agentName }. Click for more info.`
+    - Suggest: `Verhinderung von Datenverlust (DLP)`
+    - German "Verhinderung" takes the genitive/"von", not "vor"; "Verhinderung vor" is ungrammatical.
+- `SecureUpgradeRequest` — `dom/chrome/security/security.properties` — "insecure request" rendered as "nicht verschlüsselte Anfrage" (unencrypted), narrowing the meaning.
+    - Current: `Die nicht verschlüsselte Anfrage`
+    - Source: `%1$S: Upgrading insecure request “%2$S” to use “%3$S”.`
+    - Suggest: `Die unsichere Anfrage`
+    - The en-US says "insecure", which is the established term (unsicher); "nicht verschlüsselt" states a different, narrower fact about the request.
 
 ### ✅ Fixed since the last run (0)
 
@@ -48,8 +78,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 336 |
-| Strings | 16,582 |
+| Files | 337 |
+| Strings | 16,626 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -86,7 +116,7 @@ _Completeness is reported, never raised as a finding: a missing string needs tra
 - `toolkit/toolkit/enterprise/enterprise.ftl`
 - `toolkit/toolkit/enterprise/felt.ftl`
 
-_227 strings. These files exist in the locale tree but not in the en-US reference — they are maintained elsewhere. The model review is a comparison against en-US, so it skips them entirely; only the checks that need no reference ran. Nothing reported from these files means nothing was looked for, not that they are clean._
+_222 strings. These files exist in the locale tree but not in the en-US reference — they are maintained elsewhere. The model review is a comparison against en-US, so it skips them entirely; only the checks that need no reference ran. Nothing reported from these files means nothing was looked for, not that they are clean._
 
 ### Conventions detected in this locale
 
@@ -94,12 +124,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `straight-double` 730, `curly-double` 69, `german-double` 14, `curly-single` 2 | **straight-double** |
+| quotes | `straight-double` 732, `curly-double` 69, `german-double` 14, `curly-single` 2 | **straight-double** |
 | apostrophe | `typographic` 6, `straight` 114 | **straight** |
-| ellipsis | `char` 406 | **char** |
-| dash | `em` 17, `en` 71 | **en** |
+| ellipsis | `char` 412 | **char** |
+| dash | `em` 17, `en` 69 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 12, `formal` 3911 | **formal** |
+| register | `informal` 12, `formal` 3926 | **formal** |
 
 ---
 
@@ -109,10 +139,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (30)
+## 3. Open findings (37)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
+- `smartwindow-group-tabs-all-sorted` — `browser/browser/autoTabGrouping.ftl` — "Nice work organizing your tabs" is turned into a factual claim that the user's tabs are now perfectly organized.
+    - Current: `Ihre Tabs sind jetzt bestens organisiert`
+    - Source: `Nice work organizing your tabs`
+    - Suggest: `Gut gemacht beim Organisieren Ihrer Tabs`
+    - The source praises the user's action; the German instead asserts a state ("your tabs are now optimally organized") that the source never claims.
 - `pdf-features-notification-message` — `toolkit/toolkit/about/pdfFeaturesNotification.ftl` — "Split" (PDFs aufteilen/teilen in Einzeldokumente) is rendered as "PDFs teilen", which in German primarily means "share".
     - Current: `PDFs teilen, zusammenführen und mehr.`
     - Source: `Split, merge, and more. <a data-l10n-name="features-link">See PDF features</a>`
@@ -124,8 +159,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 16 |
-| 3 | Degraded language (grammar, spelling, terminology) | 12 |
+| 2 | Wrong content (says something other than the English) | 20 |
+| 3 | Degraded language (grammar, spelling, terminology) | 15 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
@@ -152,6 +187,21 @@ _Also listed under their own category below._
     - Source: `This can happen when another { -brand-short-name } profile or instance updates, or when an update can’t wait until your next restart.`
     - Suggest: `wenn ein anderes { -brand-short-name }-Profil`
     - The en-US uses { -brand-short-name } for the profile reference; hardcoding "Firefox" breaks brand substitution for other builds.
+- `smartwindow-group-tabs-all-sorted` — `browser/browser/autoTabGrouping.ftl` — "Nice work organizing your tabs" is turned into a factual claim that the user's tabs are now perfectly organized.
+    - Current: `Ihre Tabs sind jetzt bestens organisiert`
+    - Source: `Nice work organizing your tabs`
+    - Suggest: `Gut gemacht beim Organisieren Ihrer Tabs`
+    - The source praises the user's action; the German instead asserts a state ("your tabs are now optimally organized") that the source never claims.
+- `smartwindow-group-tabs-loading` — `browser/browser/autoTabGrouping.ftl` — The German says tabs are being checked "for useful groups" in a way that implies searching for existing groups, contrary to the developer comment.
+    - Current: `Tabs werden auf nützliche Gruppen überprüft…`
+    - Source: `Checking tabs for useful groups…`
+    - Suggest: `Tabs werden auf nützliche Gruppierungen geprüft…`
+    - The comment states the model is forming new groups from the tabs, not searching for groups that already exist; "Tabs werden auf … Gruppen überprüft" reads as inspecting tabs for groups they belong to.
+- `smartwindow-organize-tabs-button` — `browser/browser/autoTabGrouping.ftl` — "Organize Tabs" is rendered as "Tabs verwalten" (manage tabs) instead of "Tabs organisieren".
+    - Current: `label: Tabs verwalten`
+    - Source: `label: Organize Tabs tooltiptext: Organize Tabs`
+    - Suggest: `label: Tabs organisieren`
+    - The en-US "Organize" means arranging/grouping tabs (the feature clusters tabs into groups); "verwalten" is the established German rendering of "Manage", which is a different term used elsewhere (e.g. "Manage shortcuts" → "Tastenkombinationen verwalten").
 - `ipprotection-site-inclusions-callout-title-lapsed-users` — `browser/browser/ipProtection.ftl` — "Try built-in VPN, now site by site" loses "site by site" nuance, rendered as "gezielt für einzelne Websites testen".
     - Current: `Integriertes VPN jetzt gezielt für einzelne Websites testen`
     - Source: `Try built-in VPN, now site by site`
@@ -167,6 +217,16 @@ _Also listed under their own category below._
     - Source: `Bring in your data`
     - Suggest: `Importieren Sie Ihre Daten`
     - The string heads the import step of onboarding; en-US means importing existing data, not typing data in.
+- `prefs-syncing-off-3` — `browser/browser/preferences/preferences.ftl` — "get ... on this device" rendered as "auf dieses Gerät zu übertragen" (transfer onto this device) changes the stated action direction/claim of sync.
+    - Current: `um Ihre Lesezeichen, Passwörter, Chronik und mehr auf dieses Gerät zu übertragen`
+    - Source: `description: Turn on sync to get your bookmarks, passwords, history, and more on this device. label: Syncing is OFF`
+    - Suggest: `um Ihre Lesezeichen, Passwörter, Chronik und mehr auf diesem Gerät zu erhalten`
+    - The en-US says to get the data on this device (sync); the German says it will be transferred to this device, a one-directional claim not in the source.
+- `sync-syncing-across-devices-heading-3` — `browser/browser/preferences/preferences.ftl` — "Data syncing on this device" translated as "Auf diesem Gerät synchronisierte Daten" (data already synced), changing the heading's meaning.
+    - Current: `Auf diesem Gerät synchronisierte Daten`
+    - Source: `Data syncing on this device`
+    - Suggest: `Datensynchronisation auf diesem Gerät`
+    - The source is about the ongoing syncing of data on this device, not a list of data that has been synced; the German past participle asserts completed action.
 - `splitter.label` — `devtools/client/components.properties` — Plural "panels" rendered as singular "des Bereichs".
     - Current: `Größe des Bereichs ändern`
     - Source: `Resize panels`
@@ -182,6 +242,11 @@ _Also listed under their own category below._
     - Source: `On-device speech recognition is turned off in the user’s AI Controls settings, so SpeechRecognition reports itself as unavailable and refuses to start.`
     - Suggest: `daher meldet SpeechRecognition sich selbst als nicht verfügbar`
     - The developer comment states: Do not translate "SpeechRecognition" — it is the Web API interface name, but it was localized as "die Spracherkennung".
+- `SecureUpgradeRequest` — `dom/chrome/security/security.properties` — "insecure request" rendered as "nicht verschlüsselte Anfrage" (unencrypted), narrowing the meaning.
+    - Current: `Die nicht verschlüsselte Anfrage`
+    - Source: `%1$S: Upgrading insecure request “%2$S” to use “%3$S”.`
+    - Suggest: `Die unsichere Anfrage`
+    - The en-US says "insecure", which is the established term (unsicher); "nicht verschlüsselt" states a different, narrower fact about the request.
 - `about-pdf-feature-organize-description` — `toolkit/toolkit/about/aboutPDF.ftl` — "Reorder" is translated as "sortieren" (sort) instead of "neu anordnen" (reorder).
     - Current: `Seiten sortieren, löschen, zusammenführen und exportieren.`
     - Source: `Reorder, remove, merge, and export pages.`
@@ -205,6 +270,11 @@ _Also listed under their own category below._
 
 ### C. Grammar, agreement & spelling
 
+- `content-analysis-indicator-tooltip` — `browser/browser/browser.ftl` — Wrong preposition in "Verhinderung vor Datenverlust".
+    - Current: `Verhinderung vor Datenverlust (DLP)`
+    - Source: `tooltiptext: Data Loss Prevention (DLP) by { $agentName }. Click for more info.`
+    - Suggest: `Verhinderung von Datenverlust (DLP)`
+    - German "Verhinderung" takes the genitive/"von", not "vor"; "Verhinderung vor" is ungrammatical.
 - `ip-protection-description-1` — `browser/browser/ipProtection.ftl` — Clause structure makes the user the subject of hiding, breaking agreement with the impersonal main clause.
     - Current: `Sorgt für mehr Privatsphäre, indem Sie Ihren Standort beim Surfen verbergen.`
     - Source: `description: Get extra privacy by hiding your location while browsing. label: Built-in VPN`

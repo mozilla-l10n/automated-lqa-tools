@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
-| **Previous run** | 2026-09-28 @ `92e0a4895124` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
+| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 51 of 16,355 |
+| **Strings reviewed this run** | 71 of 16,404 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,28 +18,38 @@ Also for ru: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (6)
 
-- `newtab-picture-widget-open-menu-button` — `browser/browser/newtab/newtab.ftl` — "Open picture of the day menu" is mistranslated as "Open the picture of the menu of the day" — the words are misordered.
-    - Current: `Открыть изображение меню дня`
-    - Source: `aria-label: Open picture of the day menu title: Open picture of the day menu`
-    - Suggest: `Открыть меню «Изображение дня»`
-    - The source means opening the menu of the "picture of the day" widget; the Russian reads as opening an image of the day's menu.
-- `newtab-stocks-widget-menu-button2` — `browser/browser/newtab/newtab.ftl` — "Finance options" (widget settings/options menu) is rendered as "Финансовые возможности" (financial opportunities).
-    - Current: `Финансовые возможности`
-    - Source: `aria-label: Finance options title: Finance options`
-    - Suggest: `Настройки финансов`
-    - "Options" here means the widget's options/settings button, not "possibilities"; the developer comment says it's the icon-only options button in the widget toolbar.
-- `autocomplete-more-options` — `toolkit/toolkit/main-window/autocomplete.ftl` — "More options" tooltip rendered as "Другие настройки" (other settings), inconsistent with the related string's "Больше настроек" and with the menu being edit/delete actions.
-    - Current: `Другие настройки`
-    - Source: `More options`
-    - Suggest: `Больше настроек`
-    - The comment says it opens the edit/delete menu; the sibling string autocomplete-more-options-for-entry uses "Больше настроек", so "Другие настройки" is inconsistent.
-- `newtab-horoscopes-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — Misspelling of "гороскопов".
-    - Current: `Настройки горскопов`
-    - Source: `aria-label: Horoscopes options`
-    - Suggest: `Настройки гороскопов`
-    - "горскопов" is a typo; the correct Russian word is "гороскопов" (as used in newtab-custom-widget-horoscopes-toggle).
+- `smartwindow-organize-tabs-button` — `browser/browser/autoTabGrouping.ftl` — Button label "Organize Tabs" rendered as an imperative addressed to the user instead of the noun-style action used for toolbar commands.
+    - Current: `label: Организуйте вкладки`
+    - Source: `label: Organize Tabs tooltiptext: Organize Tabs`
+    - Suggest: `label: Организовать вкладки`
+    - en-US "Organize Tabs" is a command label; Russian UI commands use the infinitive (compare "Создать все группы", "Разгруппировать вкладки" in the same file), not the imperative "Организуйте".
+- `smartwindow-group-tabs-panel-heading` — `browser/browser/autoTabGrouping.ftl` — Panel heading "Organize Tabs" rendered as an imperative sentence instead of an action/heading form.
+    - Current: `Организуйте вкладки`
+    - Source: `Organize Tabs`
+    - Suggest: `Организовать вкладки`
+    - The en-US is a heading/command, consistent with other infinitive action strings in the same panel; the imperative "Организуйте вкладки" addresses the user as instruction.
+- `smartwindow-group-tabs-just-created-heading` — `browser/browser/autoTabGrouping.ftl` — Heading for a list of groups uses singular masculine "Только что создан" where the source heads a list of several groups.
+    - Current: `Только что создан`
+    - Source: `Just created`
+    - Suggest: `Только что созданы`
+    - Developer comment says it heads the list of groups the user just created; the singular masculine participle does not agree with "группы".
+- `content-analysis-panel-text-styled2` — `browser/browser/browser.ftl` — Missing comma before the subordinate clause introduced by "чтобы".
+    - Current: `<b>{ $agentName }</b> чтобы контролировать`
+    - Source: `Your organization uses <b>{ $agentName }</b> to control how sensitive data may be shared. <a data-l10n-name="info">Learn more</a>`
+    - Suggest: `<b>{ $agentName }</b>, чтобы контролировать`
+    - Russian punctuation requires a comma before "чтобы" introducing a purpose clause.
+- `SafePromiseResolveReorderingWarning` — `dom/chrome/dom/dom.properties` — "reordered" was translated as "переименован" (renamed) instead of "изменён" (reordered).
+    - Current: `Порядок выполнения микрозадач на этой странице был переименован`
+    - Source: `The execution of microtasks on this page was reordered to avoid unsafe execution.`
+    - Suggest: `Порядок выполнения микрозадач на этой странице был изменён`
+    - en-US says the execution was reordered; "переименован" means "renamed", which is a different (and nonsensical) statement about the order.
+- `genai-prompts-summarize-page` — `browser/browser/genai.ftl` — "summarize the webpage" rendered as "опиши веб-страницу" (describe the webpage) and "scannable" as "удобочитаемой".
+    - Current: `опиши веб-страницу на { $url }`
+    - Source: `Please summarize the webpage at { $url } using precise and concise language. Use headers and bulleted lists in the summary, to make it scannable. Maintain the meaning and factual accuracy.`
+    - Suggest: `сделай краткую сводку веб-страницы на { $url }`
+    - The source asks the model to summarize, not to describe; the prompt's purpose per the comment is a summary at a glance.
 
 ### ✅ Fixed since the last run (0)
 
@@ -53,9 +63,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `newtab-stocks-widget-menu-button2` — `browser/browser/newtab/newtab.ftl` — "Finance options" (widget settings/options menu) is rendered as "Финансовые возможности" (financial opportunities).
+    - Current: `Финансовые возможности`
+    - Suggest: `Настройки финансов`
+    - "Options" here means the widget's options/settings button, not "possibilities"; the developer comment says it's the icon-only options button in the widget toolbar.
 
 ---
 
@@ -63,8 +76,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 326 |
-| Strings | 16,355 |
+| Files | 327 |
+| Strings | 16,404 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -76,7 +89,7 @@ _Nothing retired._
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 3 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 143 |
+| Access keys not in their label | 140 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 4 |
 
@@ -90,23 +103,23 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `guillemet` 1058, `straight-double` 27, `curly-single` 5, `curly-double` 4 | **guillemet** |
+| quotes | `guillemet` 1060, `straight-double` 27, `curly-single` 5, `curly-double` 4 | **guillemet** |
 | apostrophe | `typographic` 9, `straight` 15 | _mixed_ |
-| ellipsis | `char` 394, `ascii` 5 | **char** |
+| ellipsis | `char` 400, `ascii` 5 | **char** |
 | dash | `em` 128, `en` 5 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 7 | _mixed_ |
-| register | `informal` 948, `formal` 3159 | **formal** |
+| register | `informal` 948, `formal` 3167 | **formal** |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **accesskey — 143 strings** — 143 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
-    - Affected: `addon-install-or-update-from-file`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-showrecentsearches-option-2`, `appmenu-theme-installed`, `appmenu-update-available2`, `appmenu-update-manual2`, `autofill-addresses-checkbox-message`, `autofill-addresses-manage-addresses-button`, `autofill-payment-methods-manage-payments-button`, `autofill-reauth-payment-methods-checkbox-2`, `browser-containers-settings-2`, `browsing-picture-in-picture-enable-when-switching-tabs` …and 131 more
+- **accesskey — 140 strings** — 140 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
+    - Affected: `addon-install-or-update-from-file`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-showrecentsearches-option-2`, `appmenu-theme-installed`, `appmenu-update-available2`, `appmenu-update-manual2`, `autofill-addresses-checkbox-message`, `autofill-addresses-manage-addresses-button`, `autofill-payment-methods-manage-payments-button`, `autofill-reauth-payment-methods-checkbox-2`, `browser-containers-settings-2`, `browsing-picture-in-picture-enable-when-switching-tabs` …and 128 more
 
 ---
 
-## 3. Open findings (574)
+## 3. Open findings (579)
 
 > **Reads as a deliberate edit (4).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -136,9 +149,9 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 44 |
-| 2 | Wrong content (says something other than the English) | 262 |
-| 3 | Degraded language (grammar, spelling, terminology) | 211 |
-| 4 | Cosmetic (typography, spacing) | 57 |
+| 2 | Wrong content (says something other than the English) | 263 |
+| 3 | Degraded language (grammar, spelling, terminology) | 214 |
+| 4 | Cosmetic (typography, spacing) | 58 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -375,6 +388,11 @@ _Also listed under their own category below._
     - Current: `по кнопке с блестками`
     - Source: `Right-click the sparkles button in the sidebar and choose “Summarize Page”. The first time, you’ll also choose an AI chatbot.`
     - Suggest: `с блёстками`
+- `genai-prompts-summarize-page` — `browser/browser/genai.ftl` — "summarize the webpage" rendered as "опиши веб-страницу" (describe the webpage) and "scannable" as "удобочитаемой".
+    - Current: `опиши веб-страницу на { $url }`
+    - Source: `Please summarize the webpage at { $url } using precise and concise language. Use headers and bulleted lists in the summary, to make it scannable. Maintain the meaning and factual accuracy.`
+    - Suggest: `сделай краткую сводку веб-страницы на { $url }`
+    - The source asks the model to summarize, not to describe; the prompt's purpose per the comment is a summary at a glance.
 - `genai-settings-chat-lechat-links-2` — `browser/browser/genai.ftl` — en-US attributes the documents to "Mistral AI"; the ru drops the vendor (the older -lechat-links keeps it)
     - Source: `By choosing Mistral Vibe, you agree to the Mistral AI <a data-l10n-name="link1">Terms of Service</a> and <a data-l10n-name="link2">Privacy Policy</a>.`
 - `link-preview-first-time-setup-message` — `browser/browser/genai.ftl` — "key points" as "ключевые точки" — genai.ftl — a geometric term. Affects link-preview-key-points-header, link-preview-key-points-disclaimer, link-preview-settings-key-points, link-preview-optin-message, link-preview-generation-error-missing-data-v2, link-preview-setup-faster-next-time, link-preview-first-time-setup-message (7 strings) → Suggest: ключевые моменты / основные тезисы
@@ -458,12 +476,7 @@ _Also listed under their own category below._
     - Current: `Макасар`
     - Source: `Makassar`
     - Suggest: `Макассар`
-- `newtab-picture-widget-open-menu-button` — `browser/browser/newtab/newtab.ftl` — "Open picture of the day menu" is mistranslated as "Open the picture of the menu of the day" — the words are misordered.
-    - Current: `Открыть изображение меню дня`
-    - Source: `aria-label: Open picture of the day menu title: Open picture of the day menu`
-    - Suggest: `Открыть меню «Изображение дня»`
-    - The source means opening the menu of the "picture of the day" widget; the Russian reads as opening an image of the day's menu.
-- _…and 203 more; see `state/` for the full list._
+- _…and 204 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -505,6 +518,11 @@ _Also listed under their own category below._
     - Source: `{ -smart-window-brand-name } can learn from your chats, browsing, or both to create memories. They make answers more helpful over time.`
 - `smartwindow-nl-retry-message` — `browser/browser/aiWindowContent.ftl` — smartwindow-nl-retry-message, restore-from-backup-profiles-disabled-message, smart-window-block-description-chats — see §3.H for the ё issues in these
     - Source: `If you still want to close tabs, choose <strong>Retry</strong> and make your selection in the card that opens.`
+- `smartwindow-group-tabs-just-created-heading` — `browser/browser/autoTabGrouping.ftl` — Heading for a list of groups uses singular masculine "Только что создан" where the source heads a list of several groups.
+    - Current: `Только что создан`
+    - Source: `Just created`
+    - Suggest: `Только что созданы`
+    - Developer comment says it heads the list of groups the user just created; the singular masculine participle does not agree with "группы".
 - `restore-from-backup-profiles-disabled-message` — `browser/browser/backupSettings.ftl` — smartwindow-nl-retry-message, restore-from-backup-profiles-disabled-message, smart-window-block-description-chats — see §3.H for the ё issues in these
     - Source: `This will replace all your current { -brand-short-name } data with your backup.`
 - `trustpanel-insecure-description` — `browser/browser/browser.ftl` — the pronoun does not agree with данные. Current: Его можно просмотреть → Suggest: Их можно просмотреть
@@ -678,10 +696,7 @@ _Also listed under their own category below._
 - `safeb-blocked-phishing-page-error-desc-override` — `browser/browser/safebrowsing/blockedSite.ftl` — Spurious comma: before a single или in elevation-more-elevated, pleaseSelect, policy-Bookmarks, safeb-blocked-phishing-page-error-desc-override, helpus-referrals, aiwindow-firstrun-memories-subtitle; before и in mr2022-onboarding-mobile-download-subtitle, newtab-wallpaper-feature-highlight-subtitle, details-notification-hard-blocked-other; after a leading prepositional phrase in abuse-report-sett…
     - Current: `или`
     - Source: `<span data-l10n-name='sitename'>{ $sitename }</span> has been <a data-l10n-name='error_desc_link'>reported as a deceptive site</a>. You can <a data-l10n-name='report_detection'>report a detection problem</a> or <a data-…`
-- `reset-search-settings-message` — `browser/browser/search.ftl` — Spurious comma: before a single или in elevation-more-elevated, pleaseSelect, policy-Bookmarks, safeb-blocked-phishing-page-error-desc-override, helpus-referrals, aiwindow-firstrun-memories-subtitle; before и in mr2022-onboarding-mobile-download-subtitle, newtab-wallpaper-feature-highlight-subtitle, details-notification-hard-blocked-other; after a leading prepositional phrase in abuse-report-sett…
-    - Current: `или`
-    - Source: `Due to a technical issue, your default search engine has been changed back to { $newEngine }. To change the default search engine, go to settings.`
-- _…and 80 more; see `state/` for the full list._
+- _…and 81 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -695,6 +710,16 @@ _Also listed under their own category below._
     - Source: `I don’t use multiple profiles or instances. Why is this happening?`
     - Suggest: `Я не использую несколько профилей или экземпляров.`
     - The same surface renders "instances" as "экземплярами" in restart-required-multiple-instances-question; the jargon "инстансов" is inconsistent.
+- `smartwindow-group-tabs-panel-heading` — `browser/browser/autoTabGrouping.ftl` — Panel heading "Organize Tabs" rendered as an imperative sentence instead of an action/heading form.
+    - Current: `Организуйте вкладки`
+    - Source: `Organize Tabs`
+    - Suggest: `Организовать вкладки`
+    - The en-US is a heading/command, consistent with other infinitive action strings in the same panel; the imperative "Организуйте вкладки" addresses the user as instruction.
+- `smartwindow-organize-tabs-button` — `browser/browser/autoTabGrouping.ftl` — Button label "Organize Tabs" rendered as an imperative addressed to the user instead of the noun-style action used for toolbar commands.
+    - Current: `label: Организуйте вкладки`
+    - Source: `label: Organize Tabs tooltiptext: Organize Tabs`
+    - Suggest: `label: Организовать вкладки`
+    - en-US "Organize Tabs" is a command label; Russian UI commands use the infinitive (compare "Создать все группы", "Разгруппировать вкладки" in the same file), not the imperative "Организуйте".
 - `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — `backup-file-moz-browser-restore-step-2-1` quotes “Восстановить ваши данные” but the string it names, `restore-from-backup-header`, reads “Восстановите свои данные”
     - Current: `Нажмите «Восстановить ваши данные» и выберите этот файл`
     - Source: `Click “Restore your data” and select this file`
@@ -855,11 +880,7 @@ _Also listed under their own category below._
     - Source: `Jump to declaration`
 - `styleinspector.contextmenu.copyDeclaration` — `devtools/shared/styleinspector.properties` — styleinspector.contextmenu.copyDeclaration and changes.contextmenu.copyDeclaration use декларацию where rule.jumpDeclaration.title uses объявление
     - Source: `Copy Declaration`
-- `evaluationNotifcation.noOriginalVariableMapping.msg` — `devtools/shared/webconsole.properties` — evaluationNotifcation.noOriginalVariableMapping.msg and webconsole.input.selector.tooltip use оценка (assessment) where JS evaluation is вычисление everywhere else — the only two occurrences in all of devtools
-    - Source: ``Original variables name mapping in the debugger is disabled. Evaluation results might not be accurate. Click the `Show original variables` checkbox in the debugger scopes panel to enable.``
-- `webconsole.input.selector.tooltip` — `devtools/shared/webconsole.properties` — evaluationNotifcation.noOriginalVariableMapping.msg and webconsole.input.selector.tooltip use оценка (assessment) where JS evaluation is вычисление everywhere else — the only two occurrences in all of devtools
-    - Source: `Select evaluation context`
-- _…and 10 more; see `state/` for the full list._
+- _…and 12 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -878,7 +899,12 @@ _Also listed under their own category below._
     - Current: `Выполняется резервное копирование...`
     - Source: `Backup in progress…`
     - Suggest: `…`
-    - The tree uses … 394 times against 5 ASCII runs.
+    - The tree uses … 400 times against 5 ASCII runs.
+- `content-analysis-panel-text-styled2` — `browser/browser/browser.ftl` — Missing comma before the subordinate clause introduced by "чтобы".
+    - Current: `<b>{ $agentName }</b> чтобы контролировать`
+    - Source: `Your organization uses <b>{ $agentName }</b> to control how sensitive data may be shared. <a data-l10n-name="info">Learn more</a>`
+    - Suggest: `<b>{ $agentName }</b>, чтобы контролировать`
+    - Russian punctuation requires a comma before "чтобы" introducing a purpose clause.
 - `contextual-manager-password-login-line-with-alert` — `browser/browser/contextual-manager.ftl` — (предупреждение) lowercase while the origin/username variants capitalize it
     - Source: `aria-label: Copy password (Warning) title: Copy password (Warning)`
 - `sidebar-callout-survey-features-question` — `browser/browser/featureCallout.ftl` — same
@@ -914,7 +940,7 @@ _Also listed under their own category below._
     - Current: `Отключает команды отправки отзывов в меню Справка («Отправить отзыв...» и «Сообщить о поддельном сайте...»).`
     - Source: `Disable commands to send feedback from the Help menu (Submit Feedback and Report Deceptive Site).`
     - Suggest: `…`
-    - The tree uses … 394 times against 5 ASCII runs.
+    - The tree uses … 400 times against 5 ASCII runs.
 - `policy-GenerativeAI` — `browser/browser/policies/policies-descriptions.ftl` — Trailing period added or dropped vs en-US: dropped in policy-GenerativeAI, policy-LegacyProfiles, multi-profile-spotlight-body, set-default-menu-message-split-layout-subtitle ([macos]), security-privacy-issue-warning-ech2, blocked-mismatched-version, menu-help-share-ideas (.label, missing the source's ellipsis), permission-dialog-set-change-app-link; added in browsing-use-full-keyboard-navigation…
     - Source: `Configure generative AI features.`
 - `policy-LegacyProfiles` — `browser/browser/policies/policies-descriptions.ftl` — Trailing period added or dropped vs en-US: dropped in policy-GenerativeAI, policy-LegacyProfiles, multi-profile-spotlight-body, set-default-menu-message-split-layout-subtitle ([macos]), security-privacy-issue-warning-ech2, blocked-mismatched-version, menu-help-share-ideas (.label, missing the source's ellipsis), permission-dialog-set-change-app-link; added in browsing-use-full-keyboard-navigation…
@@ -942,7 +968,7 @@ _Also listed under their own category below._
     - Current: `Вы ничего не синхронизируете... пока. Запустите синхронизацию, чтобы получить все ваши данные на всех ваших устройствах.`
     - Source: `description: You aren’t syncing anything… yet. Start syncing to get all of your data on all your devices. label: Manage synced data`
     - Suggest: `…`
-    - The tree uses … 394 times against 5 ASCII runs.
+    - The tree uses … 400 times against 5 ASCII runs.
 - `protections-vpn-header-content-subscribed` — `browser/browser/protections.ftl` — Stray space before punctuation: protections-vpn-header-content-subscribed (Apple App Store .), extension-controlled-enable and settings-translations-subpage-never-translate-sites-description (preferences.ftl), fp-certerror-not-yet-valid-why-dangerous-body (certError.ftl), PEAttSelNoBar and PEAttSelUnexpected (css.properties), networkMenu.ws.summary.framesCount2 and charts.totalSecondsNonBlocking…
     - Source: `{$count ->} [other] Using the { -mozilla-vpn-brand-name } encrypts all your traffic and hides your location — on up to { $count } devices. Get the most from your subscription — add it from the <a data-l10n-name="playsto…`
     - Suggest: `Apple App Store .`
@@ -1013,7 +1039,7 @@ _Also listed under their own category below._
     - Current: `Начните ввод...`
     - Source: `aria-label: Text Editor default-content: Start typing…`
     - Suggest: `…`
-    - The tree uses … 394 times against 5 ASCII runs.
+    - The tree uses … 400 times against 5 ASCII runs.
 - `pdfjs-print-progress-percent` — `toolkit/toolkit/pdfviewer/viewer.ftl` — Missing space between number and unit: timer.end (mobile/android/chrome/browser.properties), console-timer-end (geckoViewConsole.ftl), throttling.profile.label (network-throttling.properties — spaced in …description, unspaced here), newtab-wallpaper-error-max-file-size ({ $filesize }МБ), printprogresspercent (browser/pdfviewer/viewer.properties — space added before %), pdfjs-print-progress-percen…
     - Source: `{ $progress }%`
 

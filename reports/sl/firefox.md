@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
-| **Previous run** | 2026-09-28 @ `92e0a4895124` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
+| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 55 of 15,714 |
+| **Strings reviewed this run** | 21 of 15,715 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,28 +18,9 @@ Also for sl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (0)
 
-- `about-pdf-feature-annotate-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — "Mark up PDFs" is rendered as "Označujte dokumente", dropping the PDF qualifier used consistently in the surrounding strings.
-    - Current: `Označujte dokumente`
-    - Source: `Mark up PDFs`
-    - Suggest: `Označujte dokumente PDF`
-    - The en-US explicitly says PDFs; other strings in the same file keep "PDF" (e.g. "datoteke PDF", "dokumentih PDF").
-- `about-pdf-feature-presentation-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — "Present PDFs fullscreen" is rendered without the PDF qualifier.
-    - Current: `Predstavite dokumente v celozaslonskem načinu`
-    - Source: `Present PDFs fullscreen`
-    - Suggest: `Predstavite dokumente PDF v celozaslonskem načinu`
-    - The en-US says PDFs; the locale elsewhere keeps "PDF" with "dokumenti"/"datoteke".
-- `appmenu-fxa-sign-in-promo-heading2` — `browser/browser/appmenu.ftl` — "everywhere" is translated as "kjerkoli" (anywhere) instead of "povsod" (everywhere).
-    - Current: `Sinhronizirajte svoje podatke kjerkoli`
-    - Source: `Sync your data everywhere`
-    - Suggest: `Sinhronizirajte svoje podatke povsod`
-    - en-US "Sync your data everywhere" means across all devices; "kjerkoli" means "anywhere", shifting the meaning.
-- `password-rules-email-description2` — `browser/browser/backupSettings.ftl` — Missing predicate agreement/copula wording: "ni e-poštni naslov" should use the genitive after the negated copula.
-    - Current: `ni e-poštni naslov`
-    - Source: `Not an email address`
-    - Suggest: `ni e-poštni naslov (npr. "Ni e-poštni naslov" → "Ni e-poštnega naslova")`
-    - In Slovenian the negated 'biti' requires the genitive: 'ni e-poštnega naslova'. Also, the string begins a UI message and should be capitalized like the en-US 'Not an email address'.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -64,10 +45,10 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 326 |
-| Strings | 15,714 |
-| Missing strings | 641 |
+| Strings | 15,715 |
+| Missing strings | 689 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -82,20 +63,24 @@ _Nothing retired._
 
 ### Completeness
 
-**641 strings** are not translated yet, concentrated in:
+**689 strings** are not translated yet, concentrated in:
 
-- `browser/browser/aiWindow.ftl` — 140
+- `browser/browser/aiWindow.ftl` — 141
 - `browser/browser/aiWindowContent.ftl` — 67
 - `browser/browser/ipProtection.ftl` — 51
+- `dom/chrome/dom/dom.properties` — 49
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 48
-- `dom/chrome/dom/dom.properties` — 48
-- `browser/browser/newtab/newtab.ftl` — 37
+- `browser/browser/newtab/newtab.ftl` — 36
 - `browser/browser/aiFeatures.ftl` — 27
-- `dom/chrome/security/security.properties` — 25
-- `browser/browser/preferences/preferences.ftl` — 20
+- `dom/chrome/security/security.properties` — 26
+- `browser/browser/preferences/preferences.ftl` — 23
 - `toolkit/toolkit/about/aboutGlean.ftl` — 16
 - `devtools/client/debugger.properties` — 16
-- `toolkit/toolkit/about/aboutWebrtc.ftl` — 14
+- `browser/browser/autoTabGrouping.ftl` — 15
+
+**Files absent from the locale:**
+
+- `browser/browser/autoTabGrouping.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -107,7 +92,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 267, `straight-double` 258, `curly-single` 50, `guillemet` 5 | _mixed_ |
 | apostrophe | `typographic` 50, `straight` 51 | _mixed_ |
-| ellipsis | `char` 355, `ascii` 33 | **char** |
+| ellipsis | `char` 359, `ascii` 33 | **char** |
 | dash | `em` 13, `en` 118 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 8 | _mixed_ |
 | register | `informal` 8, `formal` 521 | **formal** |

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
-| **Previous run** | 2026-09-28 @ `92e0a4895124` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
+| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 140 of 16,305 |
+| **Strings reviewed this run** | 21 of 16,325 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,81 +18,13 @@ Also for ja: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (12)
+### 🆕 New findings (0)
 
-- `credit-card-doorhanger-save-security-codes-checkbox` — `toolkit/toolkit/formautofill/formAutofill.ftl` — "Always save security codes for payment methods" is rendered as saving security codes *to* payment methods, reversing the grammatical relation.
-    - Current: `常にセキュリティコードを支払い方法に保存する`
-    - Source: `label: Always save security codes for payment methods.`
-    - Suggest: `支払い方法のセキュリティコードを常に保存する`
-    - The en-US means the security code belonging to a payment method is always saved; the Japanese says the security code is saved into the payment method, which states a different operation.
-- `about-networking-ssl-tokens-summary-certs` — `toolkit/toolkit/about/aboutNetworking.ftl` — "distinct" (number of unique certificates) is translated as 「差異」 (difference), naming the wrong quantity.
-    - Current: `差異`
-    - Source: `Stored certs: { $references } ({ $totalBytes } B), distinct: { $distinct } ({ $distinctBytes } B)`
-    - Suggest: `固有`
-    - The developer comment states $distinct is the number of unique certificates across all tokens; 「差異」 means "difference/discrepancy", not "distinct/unique".
-- `about-private-browsing-spotlight-basics-no-sell-data` — `browser/browser/aboutPrivateBrowsing.ftl` — The translation says the browser checks site involvement and does not sell/share the user's data, instead of automatically asking participating sites not to sell or share it.
-    - Current: `{ -brand-short-name } はサイトへの関与を自動的に確認し、あなたの個人データを販売または共有しません。`
-    - Source: `{ -brand-short-name } automatically asks participating sites not to sell or share your personal data.`
-    - Suggest: `{ -brand-short-name } は対応サイトに対して、あなたの個人データを販売または共有しないよう自動的に要求します。`
-    - en-US: "automatically asks participating sites not to sell or share your personal data". The Japanese makes the browser itself the party that does not sell data and drops the request to participating sites.
-- `restart-required-heading2` — `browser/browser/aboutRestartRequired.ftl` — "needs a quick restart" (a brief restart) is rendered as "needs to be restarted immediately".
-    - Current: `{ -brand-short-name } をすぐに再起動する必要があります`
-    - Source: `Sorry, { -brand-short-name } needs a quick restart`
-    - Suggest: `{ -brand-short-name } を少しの間再起動する必要があります`
-    - en-US "a quick restart" means a short restart, not an urgent/immediate one; the Japanese 「すぐに」 changes the meaning to urgency.
-- `about-private-browsing-spotlight-basics-activity-seen` — `browser/browser/aboutPrivateBrowsing.ftl` — The hedge "may still be seen" is rendered as a flat statement that sites and others can see activity.
-    - Current: `一部のアクティビティはウェブサイトや検索エンジン、インターネットプロバイダーあるいはあなたの雇用者が見ることができます。`
-    - Source: `Some activity may still be seen by sites, search engines, internet providers, or your employer.`
-    - Suggest: `一部のアクティビティは、ウェブサイトや検索エンジン、インターネットプロバイダー、あるいはあなたの雇用者に見られる可能性があります。`
-    - en-US uses "may still be seen"; the Japanese asserts the capability as a certainty, removing the modal hedge.
-- `restart-required-multiple-instances-answer` — `browser/browser/aboutRestartRequired.ftl` — "can be left on an older version" (possibility) is rendered as a certainty.
-    - Current: `開いているものが古いバージョンのままになってしまいます`
-    - Source: `If one profile or instance updates while another is still open, the open one can be left on an older version. Restarting keeps everything on the same version.`
-    - Suggest: `開いているものが古いバージョンのままになることがあります`
-    - en-US uses "can be left"; the Japanese states it as a definite outcome.
-- `restart-required-fix-answer` — `browser/browser/aboutRestartRequired.ftl` — The acknowledgement "We know this is disruptive" is dropped from the translation.
-    - Current: `はい。私たちはこのような動作を改善するよう努力しています。`
-    - Source: `Yes. We know this is disruptive, and we’re working on a fix to prevent it. Follow our progress in Bugzilla bug 2072739.`
-    - Suggest: `はい。ご迷惑をおかけしていることは承知しており、このような動作が起きないよう修正に取り組んでいます。`
-    - en-US: "Yes. We know this is disruptive, and we’re working on a fix to prevent it." The admission that the behavior is disruptive is omitted.
-- `about-pdf-feature-details-description` — `toolkit/toolkit/about/aboutPDF.ftl` — "move through PDFs" (navigate) is rendered as "display PDF details".
-    - Current: `アウトライン、添付、プロパティを利用して PDF の詳細を表示します。`
-    - Source: `Use outlines, attachments, and properties to move through PDFs.`
-    - Suggest: `アウトライン、添付ファイル、プロパティを利用して PDF 内を移動します。`
-    - en-US says these features are used to move through (navigate) PDFs, not to display details.
-- `sidebar-history-sort-option-most-visited` — `browser/browser/sidebar.ftl` — "Most visited" rendered as "most displayed/viewed count" instead of visit count order.
-    - Current: `表示回数の多い順`
-    - Source: `label: Most visited`
-    - Suggest: `訪問回数の多い順`
-    - The en-US sorts history by number of visits (visited), not by display count; ja elsewhere uses 訪問回数 for visit count.
-- `SpeechRecognitionIsolatedTrackWarning` — `dom/chrome/dom/dom.properties` — The warning says silence "will be returned" instead of silence being fed to SpeechRecognition.
-    - Current: `沈黙のみが返されます`
-    - Source: `The MediaStreamTrack passed to SpeechRecognition.start() carries cross-origin content, so SpeechRecognition will only be fed silence.`
-    - Suggest: `SpeechRecognition には無音のみが入力されます`
-    - en-US: "SpeechRecognition will only be fed silence" — the recognizer receives silence as input; the ja reverses the direction to silence being returned.
-- `newtab-nova-customization-callout-message` — `browser/browser/newtab/newtab.ftl` — "make the new { -brand-product-name } feel more like yours" rendered as giving the browser a new appearance, losing the personalization meaning.
-    - Current: `{ -brand-product-name } を新たな装いにする壁紙やライトテーマ、ダークテーマ`
-    - Source: `Explore light or dark themes and wallpapers that make the new { -brand-product-name } feel more like yours.`
-    - Suggest: `新しい { -brand-product-name } をより自分らしく感じられるようにする壁紙やライトテーマ、ダークテーマ`
-    - The source says the themes/wallpapers make the new browser feel more like the user's own; the ja instead says they give it a new look, and drops "new" as a modifier of the product.
-- `columnBreakpoint.label` — `devtools/client/debugger.properties` — ASCII comma used between the line and column instead of the fullwidth punctuation convention.
-    - Current: `列ブレークポイント: 行 %1$S, 列 %2$S`
-    - Source: `Column breakpoint at line %1$S, column %2$S`
-    - Suggest: `列ブレークポイント: 行 %1$S、列 %2$S`
-    - The ja convention uses fullwidth punctuation; a bare ASCII comma separating clauses in Japanese text is a typography deviation.
+_No new findings._
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (0)
 
-- `newtab-stocks-search-button` — `browser/browser/newtab/newtab.ftl` — The .label uses the verb form 〜します instead of the noun form required for labels.
-    - Current: `label: 検索します`
-    - Source: `aria-label: Search by name or symbol label: Search title: Search by name or symbol`
-    - Suggest: `label: 検索`
-    - Per the locale convention, .label uses the noun form (検索) while .title uses 〜します; here the button label reads as a sentence-style verb.
-- `newtab-stocks-watchlist-empty-search` — `browser/browser/newtab/newtab.ftl` — The .label uses the verb form 〜します instead of the noun form required for labels.
-    - Current: `label: 検索します`
-    - Source: `aria-label: Search by name or symbol label: Search title: Search by name or symbol`
-    - Suggest: `label: 検索`
-    - Per the locale convention, .label uses the noun form (検索) while .title uses 〜します; here the button label reads as a sentence-style verb.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -113,10 +45,10 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 326 |
-| Strings | 16,305 |
-| Missing strings | 50 |
-| Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Strings | 16,325 |
+| Missing strings | 98 |
+| Obsolete strings | 19 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -131,20 +63,24 @@ _Nothing retired._
 
 ### Completeness
 
-**50 strings** are not translated yet, concentrated in:
+**98 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 18
+- `browser/browser/newtab/newtab.ftl` — 17
+- `browser/browser/autoTabGrouping.ftl` — 15
+- `browser/browser/browser.ftl` — 12
+- `browser/browser/newtab/onboarding.ftl` — 11
 - `toolkit/toolkit/about/aboutProcesses.ftl` — 7
-- `browser/browser/browser.ftl` — 6
+- `browser/browser/preferences/preferences.ftl` — 7
 - `toolkit/toolkit/main-window/autocomplete.ftl` — 5
-- `browser/browser/preferences/preferences.ftl` — 4
+- `browser/browser/genai.ftl` — 4
+- `browser/browser/menubar.ftl` — 3
 - `toolkit/toolkit/about/aboutGlean.ftl` — 2
-- `browser/browser/menubar.ftl` — 2
-- `toolkit/toolkit/global/theme-picker.ftl` — 1
-- `browser/browser/aiWindow.ftl` — 1
-- `browser/browser/browserContext.ftl` — 1
-- `browser/browser/firefoxView.ftl` — 1
-- `browser/browser/profiles.ftl` — 1
+- `browser/browser/aiWindow.ftl` — 2
+- `browser/browser/browserSets.ftl` — 2
+
+**Files absent from the locale:**
+
+- `browser/browser/autoTabGrouping.ftl`
 
 **Files present but identical to en-US:**
 
@@ -161,7 +97,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 439, `curly-single` 182, `straight-double` 120, `corner` 5 | _mixed_ |
 | apostrophe | `typographic` 259, `straight` 11 | **typographic** |
-| ellipsis | `ascii` 386 | **ascii** |
+| ellipsis | `ascii` 390 | **ascii** |
 | dash | `em` 55, `en` 1 | **em** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 5 | _mixed_ |
 | fullwidth | `punctuation` 4981 | **punctuation** |

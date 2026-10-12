@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
-| **Previous run** | 2026-09-28 @ `92e0a4895124` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
+| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 65 of 16,315 |
+| **Strings reviewed this run** | 63 of 16,358 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,23 +18,18 @@ Also for nl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (2)
 
-- `restart-required-unsaved-work-answer` — `browser/browser/aboutRestartRequired.ftl` — "may not be restored" rendered as "kan niet worden hersteld", turning a possibility into a certainty that unsaved work cannot be restored.
-    - Current: `zoals tekst in een formulier, kan niet worden hersteld`
-    - Source: `Possibly, and we know that’s frustrating. { -brand-short-name } will reopen your tabs, but unsaved work inside webpages, like text in a form, may not be restored. Private Windows won’t reopen to protect your privacy.`
-    - Suggest: `zoals tekst in een formulier, kan mogelijk niet worden hersteld`
-    - The en-US says unsaved work "may not be restored" (possible loss); the Dutch asserts flatly that it cannot be restored.
-- `restart-required-multiple-instances-answer` — `browser/browser/aboutRestartRequired.ftl` — "the open one" mistranslated as "de open versie", and "can be left on an older version" rendered as "op een oudere versie worden gehouden".
-    - Current: `kan de open versie op een oudere versie worden gehouden`
-    - Source: `If one profile or instance updates while another is still open, the open one can be left on an older version. Restarting keeps everything on the same version.`
-    - Suggest: `kan het geopende exemplaar op een oudere versie blijven staan`
-    - The en-US refers to the still-open profile/instance remaining on an older version, not to "the open version" being held on an older version; the Dutch sentence says "the open version ... on an older version", which is confused.
-- `restart-required-single-instance-answer-2` — `browser/browser/aboutRestartRequired.ftl` — "keeps { -brand-short-name } secure and working normally" rendered as "houdt { -brand-short-name } veilig en normaal", dropping "working".
-    - Current: `Herstarten houdt { -brand-short-name } veilig en normaal.`
-    - Source: `This can happen during a long browsing session, or when your operating system updates { -brand-short-name }. Restarting keeps { -brand-short-name } secure and working normally.`
-    - Suggest: `Herstarten houdt { -brand-short-name } veilig en zorgt dat het normaal blijft werken.`
-    - The en-US says restarting keeps the browser secure and working normally; "veilig en normaal" loses the sense of functioning correctly and is ungrammatical as a predicate here.
+- `about-processes-unload-tab` — `toolkit/toolkit/about/aboutProcesses.ftl` — "Unload tab" is rendered as "Tabblad lossen", which means physically unloading/untying rather than freeing a tab from memory.
+    - Current: `Tabblad lossen`
+    - Source: `title: Unload tab`
+    - Suggest: `Tabblad ontladen`
+    - en-US "Unload tab" means releasing the tab from memory; Dutch "lossen" (to unload cargo/untie) is not the computing sense and is not understandable here.
+- `newtab-picture-widget-open-menu-button` — `browser/browser/newtab/newtab.ftl` — Wrong article/agreement in the compound: “Afbeelding van het dag-menu” should be “Afbeelding van de dag”.
+    - Current: `Afbeelding van het dag-menu openen`
+    - Source: `aria-label: Open picture of the day menu title: Open picture of the day menu`
+    - Suggest: `Menu Afbeelding van de dag openen`
+    - en-US “Open picture of the day menu”: the widget is “picture of the day” (afbeelding van de dag); “het dag” is ungrammatical and misparses the compound.
 
 ### ✅ Fixed since the last run (0)
 
@@ -48,9 +43,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `newtab-recent-searches-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Recent searches options" is rendered as "Recente-zoekresultatenopties" (recent search results), inconsistent with "Recente zoekopdrachten" used elsewhere for the same widget.
+    - Current: `aria-label: Recente-zoekresultatenopties`
+    - Suggest: `aria-label: Opties voor recente zoekopdrachten`
+    - The en-US says "searches", not "search results"; all other strings for this widget use "Recente zoekopdrachten".
 
 ---
 
@@ -59,10 +57,10 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 326 |
-| Strings | 16,315 |
-| Missing strings | 40 |
+| Strings | 16,358 |
+| Missing strings | 46 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -77,20 +75,24 @@ _Nothing retired._
 
 ### Completeness
 
-**40 strings** are not translated yet, concentrated in:
+**46 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 17
-- `browser/browser/browser.ftl` — 6
-- `browser/browser/preferences/preferences.ftl` — 4
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 3
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 2
-- `browser/browser/menubar.ftl` — 2
-- `toolkit/toolkit/about/aboutGlean.ftl` — 1
+- `browser/browser/autoTabGrouping.ftl` — 15
+- `browser/browser/newtab/onboarding.ftl` — 10
+- `browser/browser/browser.ftl` — 4
+- `browser/browser/genai.ftl` — 4
+- `browser/browser/preferences/preferences.ftl` — 3
+- `browser/browser/defaultBrowserNotification.ftl` — 2
+- `browser/browser/newtab/asrouter.ftl` — 2
 - `browser/browser/aiWindow.ftl` — 1
-- `browser/browser/browserContext.ftl` — 1
-- `browser/browser/firefoxView.ftl` — 1
-- `browser/browser/profiles.ftl` — 1
-- `browser/browser/newtab/onboarding.ftl` — 1
+- `browser/browser/menubar.ftl` — 1
+- `browser/browser/policies/policies-descriptions.ftl` — 1
+- `browser/browser/newtab/newtab.ftl` — 1
+- `dom/chrome/dom/dom.properties` — 1
+
+**Files absent from the locale:**
+
+- `browser/browser/autoTabGrouping.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -102,10 +104,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-single` 812, `straight-double` 25, `curly-double` 9 | **curly-single** |
 | apostrophe | `typographic` 1027 | **typographic** |
-| ellipsis | `char` 387 | **char** |
+| ellipsis | `char` 395 | **char** |
 | dash | `en` 110 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `formal` 2697 | **formal** |
+| register | `formal` 2699 | **formal** |
 
 ---
 
@@ -115,7 +117,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (342)
+## 3. Open findings (343)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -131,7 +133,7 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 10 |
 | 2 | Wrong content (says something other than the English) | 117 |
-| 3 | Degraded language (grammar, spelling, terminology) | 188 |
+| 3 | Degraded language (grammar, spelling, terminology) | 189 |
 | 4 | Cosmetic (typography, spacing) | 27 |
 
 ### A. Functional, markup, variables & plurals
@@ -206,11 +208,6 @@ _Also listed under their own category below._
     - Source: `Explore light or dark themes and wallpapers that make the new { -brand-product-name } feel more like yours.`
     - Suggest: `waardoor de nieuwe { -brand-product-name } meer als van uzelf aanvoelt`
     - The en-US says themes and wallpapers make the browser *feel* more like yours; the Dutch 'meer van u lijkt' means it seems to belong to you more, a different statement and ungrammatical-sounding without 'aanvoelt'.
-- `newtab-recent-searches-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Recent searches options" is rendered as "Recente-zoekresultatenopties" (recent search results), inconsistent with "Recente zoekopdrachten" used elsewhere for the same widget.
-    - Current: `aria-label: Recente-zoekresultatenopties`
-    - Source: `aria-label: Recent searches options`
-    - Suggest: `aria-label: Opties voor recente zoekopdrachten`
-    - The en-US says "searches", not "search results"; all other strings for this widget use "Recente zoekopdrachten".
 - `newtab-section-following-button` — `browser/browser/newtab/newtab.ftl` — newtab-section-following-button, newtab-section-unfollow-button-label (.aria-label) — newtab/newtab.ftl — "Volgend" means next. Current: "Volgend" → Suggest: "Gevolgd" (matches newtab-section-mangage-topics-followed-topics)
     - Source: `Following`
 - `newtab-section-unfollow-button-label` — `browser/browser/newtab/newtab.ftl` — newtab-section-following-button, newtab-section-unfollow-button-label (.aria-label) — newtab/newtab.ftl — "Volgend" means next. Current: "Volgend" → Suggest: "Gevolgd" (matches newtab-section-mangage-topics-followed-topics)
@@ -337,6 +334,8 @@ _Also listed under their own category below._
 - `certmgr-tab-ca` — `security/manager/security/certificates/certManager.ftl` — the tab lists certificate authorities. Current: "Organisaties" → Suggest: "Autoriteiten"
     - Source: `label: Authorities`
     - Suggest: `"Autoriteiten"`
+- `pkcs12-decode-err` — `security/manager/security/certificates/certManager.ftl` — "format" turned into "encrypted in the format". Suggest: "Het heeft niet de PKCS #12-indeling, is beschadigd, …"
+    - Source: `Failed to decode the file. Either it is not in PKCS #12 format, has been corrupted, or the password you entered was incorrect.`
 - _…and 59 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
@@ -402,6 +401,11 @@ _Also listed under their own category below._
     - Source: `<strong>Open { -brand-short-name } every time you restart your computer?</strong> To manage your Startup preferences, search “startup” in settings.`
 - `launch-on-login-infobar-message` — `browser/browser/newtab/asrouter.ftl` — launch-on-login-infobar-message, launch-on-login-infobar-final-message — newtab/asrouter.ftl — "telkens dat" is not standard Dutch. Suggest: "telkens wanneer" (as in launch-options-spotlight-title-launch-on-login)
     - Source: `<strong>Open { -brand-short-name } every time you restart your computer?</strong> Now you can set { -brand-short-name } to open automatically when you restart your device.`
+- `newtab-picture-widget-open-menu-button` — `browser/browser/newtab/newtab.ftl` — Wrong article/agreement in the compound: “Afbeelding van het dag-menu” should be “Afbeelding van de dag”.
+    - Current: `Afbeelding van het dag-menu openen`
+    - Source: `aria-label: Open picture of the day menu title: Open picture of the day menu`
+    - Suggest: `Menu Afbeelding van de dag openen`
+    - en-US “Open picture of the day menu”: the widget is “picture of the day” (afbeelding van de dag); “het dag” is ungrammatical and misparses the compound.
 - `newtab-privacy-message-daily-cap` — `browser/browser/newtab/newtab.ftl` — newtab-privacy-message-info-5, newtab-privacy-message-daily-cap — newtab/newtab.ftl — plural subject with singular verb. Current: "…betekent…" → Suggest: "…betekenen…" (and -info-5: "across sites" → "op verschillende websites")
     - Source: `(100+ trackers blocked today.) Fewer trackers means more privacy.`
     - Suggest: `-info-5`
@@ -493,9 +497,7 @@ _Also listed under their own category below._
     - Suggest: `"Naar regel springen…"`
 - `whypaused-get-watchpoint` — `devtools/shared/debugger-paused-reasons.ftl` — devtools/shared/debugger-paused-reasons.ftl — the get/set pair is broken: one translated, one keeps the English keyword. Suggest: "Gepauzeerd bij property get" / "Gepauzeerd bij property set"
     - Source: `Paused on property get`
-- `whypaused-set-watchpoint` — `devtools/shared/debugger-paused-reasons.ftl` — devtools/shared/debugger-paused-reasons.ftl — the get/set pair is broken: one translated, one keeps the English keyword. Suggest: "Gepauzeerd bij property get" / "Gepauzeerd bij property set"
-    - Source: `Paused on property set`
-- _…and 24 more; see `state/` for the full list._
+- _…and 25 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 

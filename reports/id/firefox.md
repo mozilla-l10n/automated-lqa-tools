@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
-| **Previous run** | 2026-09-28 @ `92e0a4895124` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
+| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 13,724 |
+| **Strings reviewed this run** | 58 of 13,770 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for id: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `toolbar-button-share-tab` — `browser/browser/browser.ftl` — Stray capitalization of "Ini" mid-sentence in the tooltip.
+    - Current: `Bagikan laman Ini`
+    - Source: `label: Share tooltiptext: Share this page`
+    - Suggest: `Bagikan laman ini`
+    - "ini" is a demonstrative in the middle of a sentence; capitalizing it is a spelling/capitalization error not present in the en-US sentence case.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,10 +49,10 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 321 |
-| Strings | 13,724 |
-| Missing strings | 2,631 |
+| Strings | 13,770 |
+| Missing strings | 2,634 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 5 |
+| Files absent from the locale | 6 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,14 +67,14 @@ _Nothing retired._
 
 ### Completeness
 
-**2,631 strings** are not translated yet, concentrated in:
+**2,634 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 496
-- `browser/browser/preferences/preferences.ftl` — 436
-- `browser/browser/ipProtection.ftl` — 133
-- `browser/browser/newtab/onboarding.ftl` — 118
+- `browser/browser/newtab/newtab.ftl` — 491
+- `browser/browser/preferences/preferences.ftl` — 439
+- `browser/browser/newtab/onboarding.ftl` — 128
+- `browser/browser/ipProtection.ftl` — 120
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 88
-- `browser/browser/newtab/asrouter.ftl` — 80
+- `browser/browser/newtab/asrouter.ftl` — 82
 - `toolkit/toolkit/about/aboutAddons.ftl` — 60
 - `browser/browser/featureCallout.ftl` — 57
 - `browser/browser/profiles.ftl` — 57
@@ -80,6 +84,7 @@ _Nothing retired._
 
 **Files absent from the locale:**
 
+- `browser/browser/autoTabGrouping.ftl`
 - `browser/browser/sharePanel.ftl`
 - `toolkit/services/aboutSyncLog.ftl`
 - `toolkit/toolkit/about/pdfFeaturesNotification.ftl`
@@ -96,7 +101,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 410, `straight-double` 111, `curly-single` 78 | **curly-double** |
 | apostrophe | `typographic` 88, `straight` 41 | _mixed_ |
-| ellipsis | `char` 348, `ascii` 9 | **char** |
+| ellipsis | `char` 352, `ascii` 9 | **char** |
 | dash | `em` 50, `en` 1 | **em** |
 | nbsp | `total` 8, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
@@ -109,14 +114,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (278)
+## 3. Open findings (279)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 66 |
 | 2 | Wrong content (says something other than the English) | 150 |
-| 3 | Degraded language (grammar, spelling, terminology) | 46 |
+| 3 | Degraded language (grammar, spelling, terminology) | 47 |
 | 4 | Cosmetic (typography, spacing) | 15 |
 
 ### A. Functional, markup, variables & plurals
@@ -564,6 +569,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `{$sel_1 ->} [macos] TSV Document [other] TSV File`
     - Suggest: `[macos] Dokumen TSV`
     - en-US distinguishes "TSV Document" (macOS) from "TSV File"; the CSV filter right above correctly uses "Dokumen CSV" vs "Berkas CSV", so the TSV macOS variant is wrong.
+- `toolbar-button-share-tab` — `browser/browser/browser.ftl` — Stray capitalization of "Ini" mid-sentence in the tooltip.
+    - Current: `Bagikan laman Ini`
+    - Source: `label: Share tooltiptext: Share this page`
+    - Suggest: `Bagikan laman ini`
+    - "ini" is a demonstrative in the middle of a sentence; capitalizing it is a spelling/capitalization error not present in the en-US sentence case.
 - `urlbar-result-explanation-last-visited-absolute` — `browser/browser/browser.ftl` — Passive/active mismatch: "Terakhir Anda kunjungi" is ungrammatical mixing of active and passive forms.
     - Current: `Terakhir Anda kunjungi pada { $date }`
     - Source: `You last visited on { $date }`

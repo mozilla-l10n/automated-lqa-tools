@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ff2ee909fb8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9228382dd70d` |
-| **Previous run** | 2026-09-28 @ `92e0a4895124` |
+| **Generated** | 2026-10-12 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
+| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 51 of 16,355 |
+| **Strings reviewed this run** | 71 of 16,404 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,13 @@ Also for en-GB: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (1)
 
-- `urlbar-result-menu-remove-top-site` — `browser/browser/browser.ftl` — Access key changed from uppercase "T" to lowercase "t", which no longer matches the source's access key.
-    - Current: `accesskey: t`
-    - Source: `(value): Remove this top site accesskey: T`
-    - Suggest: `accesskey: T`
-    - The en-US access key is "T"; en-GB has no reason to alter the access key since the label text "Remove this top site" is identical.
-- `main-context-menu-inspect-a11y-properties2` — `browser/browser/browserContext.ftl` — Access key changed from "y" to "I" although the label is identical to the source.
-    - Current: `accesskey: I`
-    - Source: `accesskey: y label: Inspect Accessibility Properties`
-    - Suggest: `accesskey: y`
-    - The label "Inspect Accessibility Properties" is unchanged from en-US, so the access key should remain "y"; changing it risks collisions with other menu items that use "I".
+- `sync-syncing-across-devices-heading-3` — `browser/browser/preferences/preferences.ftl` — "Data syncing" rendered as "Data synchronising", which is ungrammatical; the noun form "synchronisation" is required.
+    - Current: `Data synchronising on this device`
+    - Source: `Data syncing on this device`
+    - Suggest: `Data synchronisation on this device`
+    - The en-US "Data syncing on this device" uses "syncing" as a gerund noun; "Data synchronising" is not grammatical English. The locale elsewhere uses "synchronisation" for this noun use (e.g. "Synchronisation is OFF").
 
 ### ✅ Fixed since the last run (0)
 
@@ -53,8 +48,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 326 |
-| Strings | 16,355 |
+| Files | 327 |
+| Strings | 16,404 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -80,9 +75,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 538, `curly-single` 93, `straight-double` 55 | **curly-double** |
+| quotes | `curly-double` 540, `curly-single` 93, `straight-double` 55 | **curly-double** |
 | apostrophe | `typographic` 1005, `straight` 43 | **typographic** |
-| ellipsis | `char` 391, `ascii` 1 | **char** |
+| ellipsis | `char` 397, `ascii` 1 | **char** |
 | dash | `em` 81, `en` 4 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
@@ -95,14 +90,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (18)
+## 3. Open findings (19)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 6 |
 | 2 | Wrong content (says something other than the English) | 7 |
-| 3 | Degraded language (grammar, spelling, terminology) | 4 |
+| 3 | Degraded language (grammar, spelling, terminology) | 5 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
@@ -173,6 +168,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### C. Grammar, agreement & spelling
 
+- `sync-syncing-across-devices-heading-3` — `browser/browser/preferences/preferences.ftl` — "Data syncing" rendered as "Data synchronising", which is ungrammatical; the noun form "synchronisation" is required.
+    - Current: `Data synchronising on this device`
+    - Source: `Data syncing on this device`
+    - Suggest: `Data synchronisation on this device`
+    - The en-US "Data syncing on this device" uses "syncing" as a gerund noun; "Data synchronising" is not grammatical English. The locale elsewhere uses "synchronisation" for this noun use (e.g. "Synchronisation is OFF").
 - `discopane-intro3` — `toolkit/toolkit/about/aboutAddons.ftl` — "software programmes" uses the broadcast/schedule sense; British English spells computer programs "programs".
     - Current: `so much more. These small software programmes are often developed by a third party.`
     - Source: `Extensions and themes let you customize { -brand-product-name }. They can boost privacy, enhance productivity, improve media, change the way { -brand-product-name } looks, and so much more. These small software programs…`
