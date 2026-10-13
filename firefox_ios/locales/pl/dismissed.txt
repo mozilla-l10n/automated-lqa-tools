@@ -15,3 +15,7 @@
 # recurring across strings -- a house convention, a term that is correct
 # everywhere -- write a rule in suppressions.yaml instead, or better, a
 # sentence in conventions.md so the reviewer never raises it.
+Onboarding.Modern.BrandRefresh.TermsOfUse.AgreementButtonTitle.v148 — "Zgadzam się, kontynuuj" is a normal Polish button-label pattern; not a punctuation defect
+Oops! Firefox crashed — the ":(" stands in for "Oops!" as the expression of regret; deliberate tone
+The page could not be displayed in Reader View. — no final period, like pl's other short status/error messages ("Nie można było wczytać strony")
+Firefox won’t remember any of your history or cookies, but new bookmarks will be saved. — no final period, like pl's other short one-sentence status texts

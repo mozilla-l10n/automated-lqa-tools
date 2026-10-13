@@ -15,3 +15,4 @@
 # recurring across strings -- a house convention, a term that is correct
 # everywhere -- write a rule in suppressions.yaml instead, or better, a
 # sentence in conventions.md so the reviewer never raises it.
+When Leaving Private Browsing — lowercase is deliberate: shown under "Zavřít anonymní panely" and reads as its continuation
