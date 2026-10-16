@@ -1,0 +1,24 @@
+[
+ {
+  "category": "D",
+  "check": "ui_references",
+  "current": "Uuden sivuston lisääminen: Käy sivustolla ja valitse käännösvalikosta “Älä käännä koskaan tätä sivustoa”.",
+  "dismissed_because": "",
+  "fid": "1facece376f8",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-10-16",
+  "impact": 2,
+  "last_seen": "2026-10-16",
+  "locale": "fi",
+  "origin": {},
+  "rationale": "In the source this string quotes “Never translate this site”, which is exactly the value of `translation_option_bottom_sheet_never_translate_site` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "11918c52",
+  "string_id": "never_translate_site_header_preference",
+  "suggest": "Älä koskaan käännä sivustoa",
+  "summary": "`never_translate_site_header_preference` quotes “Älä käännä koskaan tätä sivustoa” but the string it names, `translation_option_bottom_sheet_never_translate_site`, reads “Älä koskaan käännä sivustoa”",
+  "suppressed_by": ""
+ }
+]
