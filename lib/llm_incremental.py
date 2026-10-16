@@ -2,11 +2,13 @@
 
 This is the path that runs on almost every execution. It is deliberately
 *not* agentic: the strings to review are already known, so there is nothing
-to explore. A plain batched Messages call with a forced tool schema is
+to explore. A plain batched Messages call with a strict tool schema is
 leaner, reproducible, and testable with recorded fixtures.
 
-Structured output is enforced by ``tool_choice``, so a malformed response is
-a retryable API-level error rather than something to parse out of prose.
+The tool cannot be forced: Opus 5.5 rejects ``tool_choice`` of type
+``tool`` or ``any`` with a 400. The prompt asks for exactly one call and
+``strict`` makes any call it does make schema-valid; a reply with no call at
+all is caught by ``collect`` and the batch is not counted as reviewed.
 """
 
 from __future__ import annotations
@@ -96,7 +98,21 @@ def _schema(project) -> dict:
     with open(
         os.path.join(project.root, "prompts", "finding_schema.json"), encoding="utf-8"
     ) as fh:
-        return json.load(fh)
+        tool = json.load(fh)
+    _close(tool["input_schema"])
+    return {**tool, "strict": True}
+
+
+def _close(node) -> None:
+    """Strict tool use needs ``additionalProperties: false`` on every object."""
+    if isinstance(node, dict):
+        if node.get("type") == "object":
+            node.setdefault("additionalProperties", False)
+        for value in node.values():
+            _close(value)
+    elif isinstance(node, list):
+        for value in node:
+            _close(value)
 
 
 def _call(client, model, system, batch, tool, max_tokens, attempts=4):
@@ -108,7 +124,6 @@ def _call(client, model, system, batch, tool, max_tokens, attempts=4):
                 max_tokens=max_tokens,
                 system=system,
                 tools=[tool],
-                tool_choice={"type": "tool", "name": tool["name"]},
                 messages=[{"role": "user", "content": batch}],
             )
         except (anthropic.RateLimitError, anthropic.APIStatusError, anthropic.APIConnectionError) as exc:

@@ -25,12 +25,12 @@ exclude:
   - "**/*.aff"
 
 llm:
-  model: claude-opus-5
+  model: claude-opus-5-5
   # Incremental reviews batch this many strings per request.
   batch_size: 40
   max_output_tokens: 16000
   # Baseline (from-scratch) reviews run headless `claude` per partition.
-  baseline_model: claude-opus-5
+  baseline_model: claude-opus-5-5
   baseline_timeout_seconds: 3600
 
 # Locales that are variants of the source language rather than
@@ -45,13 +45,16 @@ variants:
 # Locales checked by this project. Adding a code here triggers a full
 # from-scratch baseline on the next run (see docs/adding-a-locale.md).
 locales:
+  - ar
   - cs
   - de
+  - el
   - en-CA
   - en-GB
   - es-AR
   - es-ES
   - es-MX
+  - fi
   - fr
   - fy-NL
   - hu
@@ -61,10 +64,16 @@ locales:
   - nl
   - pl
   - pt-BR
+  - pt-PT
   - ru
+  - sk
   - sl
+  - sv-SE
   - tr
+  - uk
+  - vi
   - zh-CN
+  - zh-TW
 
 # Checks this project runs, in report order. Shared ones come from
 # lib/common_checks.py; term_params, accesskey and markup are Fluent-specific
