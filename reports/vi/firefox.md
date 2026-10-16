@@ -1,0 +1,1375 @@
+# Firefox l10n QA — vi
+
+| | |
+|---|---|
+| **Generated** | 2026-10-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `db2cfca9d18c` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `af4e7312bee1` |
+| **Previous run** | _none — this is the baseline_ @ `—` |
+| **Mode** | baseline |
+| **Strings reviewed this run** | 14,524 of 16,144 |
+
+Findings are keyed by string id, never by line number. The locale is assessed against its source only.
+
+> **The reviewer did not finish this run.** It did not review 1 of 9 partition(s): platform. Re-run with --partitions platform. What it read is here and is kept; the strings it never reached are unreviewed, and the next run resumes at the first of them.
+
+
+
+---
+
+## Changes in this run
+
+### 🆕 New findings (291)
+
+- `default-browser-guidance-notification-body-instruction-win10` — `browser/browser/defaultBrowserNotification.ftl` — `default-browser-guidance-notification-body-instruction-win10` quotes “Trình duyệt Web” but the string it names, `desktop-entry-generic-name`, reads “Trình duyệt web”
+    - Current: `Bước 1: Đi tới Cài đặt > Ứng dụng mặc định Bước 2: Cuộn xuống đến “Trình duyệt Web” Bước 3: Chọn { -brand-short-name }`
+    - Source: `Step 1: Go to Settings > Default apps Step 2: Scroll down to “Web browser” Step 3: Select and choose { -brand-short-name }`
+    - Suggest: `Trình duyệt web`
+    - In the source this string quotes “Web browser”, which is exactly the value of `desktop-entry-generic-name` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `splitview-onboarding-callout-subtitle-1` — `browser/browser/featureCallout.ftl` — `splitview-onboarding-callout-subtitle-1` quotes “Chế độ xem cửa sổ” but the string it names, `customkeys-view-add-split-view`, reads “Chế độ chia cửa sổ”
+    - Current: `Nhấp chuột phải vào thẻ này và chọn “Chế độ xem cửa sổ” để xem hai thẻ cùng một lúc.`
+    - Source: `Right-click this tab and choose “Add Split View” to see two tabs at once.`
+    - Suggest: `Chế độ chia cửa sổ`
+    - In the source this string quotes “Add Split View”, which is exactly the value of `customkeys-view-add-split-view` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `migration-chrome-windows-password-import-step3` — `browser/browser/migrationWizard.ftl` — `migration-chrome-windows-password-import-step3` quotes “Tải tệp xuống” but the string it names, `downloadFile.label`, reads “Tải tập tin”
+    - Current: `Chọn “Tải tệp xuống” và lưu vào thiết bị của bạn.`
+    - Source: `Choose “Download file” and save it to your device.`
+    - Suggest: `Tải tập tin`
+    - In the source this string quotes “Download file”, which is exactly the value of `downloadFile.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `toolbox-local-mode-notice` — `devtools/client/toolbox.ftl` — `toolbox-local-mode-notice` quotes “Local Mode” but the string it names, `options-local-mode-label`, reads “Chế độ cục bộ (local mode)”
+    - Current: `Document này cũng có thể được tải từ “{ $url }” bằng “Local Mode” của DevTools, có thể bật trong bảng cài đặt.`
+    - Source: `This document could also be loaded from “{ $url }” using DevTools “Local Mode”, which can be enabled in the settings panel.`
+    - Suggest: `Chế độ cục bộ (local mode)`
+    - In the source this string quotes “Local Mode”, which is exactly the value of `options-local-mode-label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `permissions-site-location-disable-desc` — `browser/browser/preferences/permissions.ftl` — The second sentence says 'Blocking notifications' when it should say 'Blocking access to your location'.
+    - Current: `Chặn thông báo có thể ảnh hưởng đến một số tính năng trang web.`
+    - Source: `This will prevent any websites not listed above from requesting permission to access your location. Blocking access to your location may break some website features.`
+    - Suggest: `Chặn quyền truy cập vị trí của bạn có thể ảnh hưởng đến một số tính năng trang web.`
+    - en-US: 'Blocking access to your location may break some website features.' The text looks copied from the notification dialog, so the location dialog warns about the wrong permission.
+- `permissions-site-camera-disable-desc` — `browser/browser/preferences/permissions.ftl` — The camera dialog warns about 'Blocking notifications' when it should say 'Blocking access to your camera'.
+    - Current: `Chặn thông báo có thể ảnh hưởng đến một số tính năng trang web.`
+    - Source: `This will prevent any websites not listed above from requesting permission to access your camera. Blocking access to your camera may break some website features.`
+    - Suggest: `Chặn quyền truy cập máy ảnh của bạn có thể ảnh hưởng đến một số tính năng trang web.`
+    - en-US: 'Blocking access to your camera may break some website features.' This is the same copy-paste from the notification string.
+- `permissions-site-microphone-disable-desc` — `browser/browser/preferences/permissions.ftl` — The microphone dialog warns about 'Blocking notifications' when it should say 'Blocking access to your microphone'.
+    - Current: `Chặn thông báo có thể ảnh hưởng đến một số tính năng trang web.`
+    - Source: `This will prevent any websites not listed above from requesting permission to access your microphone. Blocking access to your microphone may break some website features.`
+    - Suggest: `Chặn quyền truy cập micrô của bạn có thể ảnh hưởng đến một số tính năng trang web.`
+    - en-US: 'Blocking access to your microphone may break some website features.' This is the same copy-paste from the notification string.
+- `site-data-removing-header` — `browser/browser/preferences/siteDataSettings.ftl` — The header says the dialog removes 'cache' and site data, but it actually removes cookies and site data.
+    - Current: `Xóa cache và dữ liệu trang`
+    - Source: `Removing Cookies and Site Data`
+    - Suggest: `Xóa cookie và dữ liệu trang`
+    - en-US: 'Removing Cookies and Site Data'. The dialog's own description and table both talk about cookies. Clearing cache is a separate, harmless action, so this header misstates what is being deleted. It is also reused as the dialog title.
+- `sitedata-option-block-unvisited` — `browser/browser/preferences/preferences.ftl` — 'Unvisited websites' is translated as 'unwanted websites'.
+    - Current: `Cookie từ các trang web không mong muốn`
+    - Source: `label: Cookies from unvisited websites`
+    - Suggest: `Cookie từ các trang web chưa từng truy cập`
+    - en-US: 'Cookies from unvisited websites'. 'không mong muốn' means unwanted, which names a different blocking criterion. The locale itself uses 'chưa từng truy cập' in preferences-etp-custom-cookie-behavior-block-unvisited.
+- `content-blocking-unvisited-cookies` — `browser/browser/preferences/preferences.ftl` — 'Unvisited sites' is translated as 'unwanted sites'.
+    - Current: `Cookie từ các trang không mong muốn`
+    - Source: `Cookies from unvisited sites`
+    - Suggest: `Cookie từ các trang chưa từng truy cập`
+    - en-US: 'Cookies from unvisited sites'. 'không mong muốn' means unwanted, not unvisited.
+- `sitedata-option-block-all` — `browser/browser/preferences/preferences.ftl` — The warning that blocking all cookies 'will cause' websites to break has been softened to 'may cause'.
+    - Current: `(có thể khiến các trang web bị hỏng)`
+    - Source: `label: All cookies (will cause websites to break)`
+    - Suggest: `(sẽ khiến các trang web bị hỏng)`
+    - en-US deliberately separates 'may cause' (all cross-site cookies) from 'will cause' (all cookies). This rendering removes that distinction. The parallel string preferences-etp-custom-cookie-behavior-block-all correctly uses 'sẽ'.
+- `search-keyword-warning-title` — `browser/browser/preferences/preferences.ftl` — 'Duplicate' (an adjective) is translated as the verb 'clone', so the title reads 'Clone Keyword'.
+    - Current: `Nhân bản Từ khóa`
+    - Source: `Duplicate Keyword`
+    - Suggest: `Từ khóa trùng lặp`
+    - The developer comment says 'Duplicate' is an adjective here. The title warns that a keyword is already in use. 'Nhân bản' means to clone or replicate.
+- `update-application-warning-cross-user-setting-2` — `browser/browser/preferences/preferences.ftl` — 'Profiles using this installation' is translated as 'by means of using this setting'.
+    - Current: `bằng cách sử dụng cài đặt { -brand-short-name } này`
+    - Source: `message: This setting will apply to all Windows accounts and { -brand-short-name } profiles using this installation of { -brand-short-name }.`
+    - Suggest: `sử dụng bản cài đặt { -brand-short-name } này`
+    - en-US: 'all Windows accounts and Firefox profiles using this installation of Firefox'. 'bằng cách sử dụng' means 'by way of', and 'cài đặt' here reads as 'setting'. The sentence no longer says the change affects every profile sharing this installation.
+- `browsing-use-cursor-navigation` — `browser/browser/preferences/preferences.ftl` — 'Always use the cursor keys' became 'Allow using the cursor', which loses both 'always' and 'keys'.
+    - Current: `Cho phép dùng con trỏ để di chuyển bên trong trang`
+    - Source: `accesskey: k label: Always use the cursor keys to navigate within pages`
+    - Suggest: `Luôn dùng các phím mũi tên để di chuyển bên trong trang`
+    - This setting is caret browsing with the arrow (cursor) keys. 'con trỏ' alone suggests the mouse pointer, and 'Cho phép' (allow) is not 'Always'.
+- `privacy-header` — `browser/browser/preferences/preferences.ftl` — 'Browser Privacy' is translated as 'Private browsing', which is a different feature.
+    - Current: `Duyệt web riêng tư`
+    - Source: `Browser Privacy`
+    - Suggest: `Quyền riêng tư của trình duyệt`
+    - The locale uses 'duyệt web riêng tư' for private browsing mode (e.g. history-private-browsing-permanent), so this header names the wrong thing.
+- `forms-saved-passwords-searchkeywords` — `browser/browser/preferences/preferences.ftl` — 'Logins for the following sites are stored' is rendered as 'Log in so that the following sites are stored'.
+    - Current: `Đăng nhập để các trang web sau đây được lưu trữ trên máy tính của bạn`
+    - Source: `Logins for the following sites are stored on your computer`
+    - Suggest: `Thông tin đăng nhập cho các trang web sau đây được lưu trữ trên máy tính của bạn`
+    - The noun 'Logins' was read as the verb 'log in', which turns the sentence into nonsense. This string is only used as search keywords, so the impact is low.
+- `autofill-address-department` — `browser/browser/preferences/formAutofill.ftl` — The administrative region 'Department' (Colombia, Nicaragua) is translated as 'Sở', which means a government agency.
+    - Current: `Sở`
+    - Source: `Department`
+    - Suggest: `Tỉnh`
+    - The comment says this is the first-level division below the country. 'Sở' means a government department or office, not a territory.
+- `httpsonly-radio-enabled-pbm` — `browser/browser/preferences/preferences.ftl` — The feature name 'HTTPS-Only Mode' loses its 'Only' and becomes 'HTTPS mode'.
+    - Current: `Chỉ kích hoạt chế độ HTTPS trong các cửa sổ riêng tư`
+    - Source: `label: Enable HTTPS-Only Mode in private windows only`
+    - Suggest: `Chỉ kích hoạt chế độ chỉ HTTPS trong các cửa sổ riêng tư`
+    - Every sibling string uses 'chế độ chỉ HTTPS'. Here 'Chỉ' was moved to the front as 'only enable', so the feature name no longer matches.
+- `content-blocking-etp-standard-tcp-rollout-description` — `browser/browser/preferences/preferences.ftl` — 'Contains' is translated literally as 'chứa' (holds), but the comment says it means isolates or limits.
+    - Current: `Trình chống cookie chung chứa các cookie cho trang web bạn đang truy cập`
+    - Source: `Total Cookie Protection contains cookies to the site you’re on, so trackers can’t use them to follow you between sites.`
+    - Suggest: `Trình chống cookie chung giới hạn cookie trong trang web bạn đang truy cập`
+    - The developer comment says 'Contains' means 'isolates', 'limits'. 'chứa các cookie cho trang web' reads as 'holds cookies for the site', which does not explain the isolation.
+- `appearance-browser-icon-requirement` — `browser/browser/preferences/browserIcon.ftl` — The phrase 'bonus fox icons' is garbled into 'biểu tượng cáo nhận thêm'.
+    - Current: `các biểu tượng cáo nhận thêm`
+    - Source: `message: Complete and unlock bonus fox icons to personalize { -brand-short-name }.`
+    - Suggest: `các biểu tượng cáo bổ sung`
+    - 'cáo nhận thêm' does not parse. It looks like a broken edit of 'cáo' (fox) followed by stray words.
+- `download-private-browsing-delete2` — `browser/browser/preferences/preferences.ftl` — The word 'bị' is doubled, which makes the sentence ungrammatical.
+    - Current: `khi bị cửa sổ bị đóng`
+    - Source: `accesskey: D label: Delete private window downloads on close`
+    - Suggest: `khi cửa sổ bị đóng`
+    - The first 'bị' is stray.
+- `browser-containers-enabled-2` — `browser/browser/preferences/preferences.ftl` — Spelling: 'ngăng' should be 'ngăn'.
+    - Current: `ngăng chứa thẻ`
+    - Source: `accesskey: n label: Use Container Tabs`
+    - Suggest: `ngăn chứa thẻ`
+    - This is a typo of the locale's container term 'ngăn chứa'.
+- `update-application-heading` — `browser/browser/preferences/preferences.ftl` — Spelling: 'cải thiên' should be 'cải thiện'.
+    - Current: `cải thiên`
+    - Source: `description: Updates improve { -brand-short-name }’s speed, stability, and security. label: { -brand-short-name } updates`
+    - Suggest: `cải thiện`
+    - Wrong tone mark.
+- `sync-mobile-promo` — `browser/browser/preferences/preferences.ftl` — Spelling: 'đồng bị' should be 'đồng bộ'.
+    - Current: `đồng bị`
+    - Source: `Download Firefox for <img data-l10n-name="android-icon"/> <a data-l10n-name="android-link">Android</a> or <img data-l10n-name="ios-icon"/> <a data-l10n-name="ios-link">iOS</a> to sync with your mobile device.`
+    - Suggest: `đồng bộ`
+    - Typo in the word for 'sync'.
+- `data-collection-link` — `browser/browser/preferences/preferences.ftl` — Spelling: 'riêng tự' should be 'riêng tư'.
+    - Current: `quyền riêng tự`
+    - Source: `View Privacy Notice`
+    - Suggest: `quyền riêng tư`
+    - Wrong tone mark on 'tư' in the Privacy Notice link.
+- `content-blocking-fingerprinters` — `browser/browser/preferences/preferences.ftl` — The English gloss in parentheses is misspelled as 'Fingerprintng'.
+    - Current: `Fingerprintng`
+    - Source: `Fingerprinters`
+    - Suggest: `Fingerprinting`
+    - A letter is missing from the user-visible parenthetical.
+- `permissions-site-location-disable-label` — `browser/browser/preferences/permissions.ftl` — Spelling: 'tru cập' should be 'truy cập'.
+    - Current: `tru cập`
+    - Source: `label: Block new requests asking to access your location`
+    - Suggest: `truy cập`
+    - A letter is missing.
+- `permissions-site-camera-disable-label` — `browser/browser/preferences/permissions.ftl` — Spelling: 'tru cập' should be 'truy cập'.
+    - Current: `tru cập`
+    - Source: `label: Block new requests asking to access your camera`
+    - Suggest: `truy cập`
+    - A letter is missing.
+- `permissions-site-microphone-disable-label` — `browser/browser/preferences/permissions.ftl` — Spelling: 'tru cập' should be 'truy cập'.
+    - Current: `tru cập`
+    - Source: `label: Block new requests asking to access your microphone`
+    - Suggest: `truy cập`
+    - A letter is missing.
+- `site-data-settings-window` — `browser/browser/preferences/siteDataSettings.ftl` — The window title has a double space between 'cookie' and 'và'.
+    - Current: `cookie  và`
+    - Source: `title: Manage Cookies and Site Data`
+    - Suggest: `cookie và`
+    - The double space is visible in the window title.
+- `set-default-menu-message-simple-layout-title-variant` — `browser/browser/newtab/asrouter.ftl` — The negation is dropped. The menu message says Firefox IS the user's default browser.
+    - Current: `{ -brand-short-name } là trình duyệt mặc định của bạn`
+    - Source: `{ -brand-short-name } is not your primary browser`
+    - Suggest: `{ -brand-short-name } không phải là trình duyệt chính của bạn`
+    - The en-US is 'Firefox is not your primary browser'. This message is shown to users for whom Firefox is not the default, so the Vietnamese tells them something false about the state of their own system.
+- `onboarding-refresh-gratitude-subtitle` — `browser/browser/newtab/onboarding.ftl` — 'Only major browser backed by a non-profit' became 'the only browser backed by a non-profit'.
+    - Current: `trình duyệt duy nhất được hỗ trợ bởi một tổ chức phi lợi nhuận`
+    - Source: `Thank you for using { -brand-short-name }, the only major browser backed by a non-profit. With your support, we’re working to make the internet safer and more accessible for everyone.`
+    - Suggest: `trình duyệt lớn duy nhất được hỗ trợ bởi một tổ chức phi lợi nhuận`
+    - Dropping 'major' turns a qualified claim into an absolute one: that no other browser at all is backed by a non-profit. The same file and asrouter.ftl keep 'lớn' in the parallel strings (welcome-back-spotlight-subtitle, onboarding-refresh-tou-pin-unchecked).
+- `smartwindow-onboarding-subtitle` — `browser/browser/newtab/onboarding.ftl` — The idiom 'without missing a beat' was rendered as 'quickly and accurately', which adds an accuracy claim for the AI feature.
+    - Current: `một cách nhanh chóng và chính xác`
+    - Source: `Summarize, compare, and ask questions without missing a beat.`
+    - Suggest: `một cách nhanh chóng, liền mạch`
+    - The en-US only says the user can summarize and ask questions smoothly. 'chính xác' (accurately) makes the product promise that its AI answers are correct, which the source never says.
+- `newtab-section-header-stories` — `browser/browser/newtab/newtab.ftl` — 'Thought-provoking stories' was rendered as 'ideologically inciting stories'.
+    - Current: `Những câu chuyện kích động tư tưởng`
+    - Source: `Thought-provoking stories`
+    - Suggest: `Những câu chuyện đáng suy ngẫm`
+    - 'kích động' means to incite or agitate and is strongly negative. The header ends up describing the recommended content as inflammatory rather than thought-provoking.
+- `cfr-doorhanger-doh-body` — `browser/browser/newtab/asrouter.ftl` — 'Your privacy matters' was rendered as 'Your privacy problem'.
+    - Current: `Vấn đề riêng tư của bạn.`
+    - Source: `Your privacy matters. { -brand-short-name } now securely routes your DNS requests whenever possible to a partner service to protect you while you browse.`
+    - Suggest: `Quyền riêng tư của bạn rất quan trọng.`
+    - 'matters' (is important) was read as the noun 'matter/issue'. The Vietnamese opens with the meaningless fragment 'Your privacy issue.'
+- `newtab-wallpaper-feature-highlight-subtitle` — `browser/browser/newtab/newtab.ftl` — 'Choose your favorite' (wallpaper) became 'choose your favorite tab'.
+    - Current: `Hãy chọn thẻ yêu thích của bạn`
+    - Source: `Choose your favorite and make every new tab feel like home.`
+    - Suggest: `Hãy chọn hình nền yêu thích của bạn`
+    - This is the wallpaper feature highlight, and 'favorite' refers to a wallpaper. 'thẻ' means tab, so the instruction makes no sense here.
+- `newtab-sports-widget-follow-teams-title` — `browser/browser/newtab/newtab.ftl` — 'Follow up to N teams' lost 'up to' and uses 'nhóm' (group) instead of 'đội' (team).
+    - Current: `Theo dõi { $number } nhóm`
+    - Source: `{$number ->} [other] Follow up to { $number } teams`
+    - Suggest: `Theo dõi tối đa { $number } đội`
+    - The variable is a maximum, but the Vietnamese tells the user to follow exactly N. 'nhóm' also clashes with 'Theo dõi đội' used for teams elsewhere in the same widget.
+- `newtab-sports-widget-watch-stream-select-games-only` — `browser/browser/newtab/newtab.ftl` — 'Select games only' (the provider streams only some matches) was rendered as the imperative 'only choose matches'.
+    - Current: `Chỉ chọn trận đấu`
+    - Source: `Select games only`
+    - Suggest: `Chỉ một số trận đấu`
+    - The comment says this tag means the provider only streams some matches. The Vietnamese reads as an instruction to the user.
+- `newtab-sports-widget-loading-more` — `browser/browser/newtab/newtab.ftl` — 'Loading more matches' (sports games) was rendered as 'loading more matching results'.
+    - Current: `Đang tải thêm kết quả phù hợp…`
+    - Source: `Loading more matches…`
+    - Suggest: `Đang tải thêm trận đấu…`
+    - The comment says the status appears while more matches (games) are being fetched. 'kết quả phù hợp' means search matches.
+- `newtab-stocks-added-to-watchlist` — `browser/browser/newtab/newtab.ftl` — The past-tense confirmation 'Added X to watchlist' was rendered as the imperative 'Add X to watchlist'.
+    - Current: `Thêm { $name } vào danh sách theo dõi`
+    - Source: `Added { $name } to watchlist`
+    - Suggest: `Đã thêm { $name } vào danh sách theo dõi`
+    - The screen reader announces this after the action is done. Without 'Đã' it sounds like the button label, not a confirmation.
+- `newtab-stocks-removed-from-watchlist` — `browser/browser/newtab/newtab.ftl` — The past-tense confirmation 'Removed X from watchlist' was rendered as the imperative 'Remove X'.
+    - Current: `Xoá { $name } khỏi danh sách theo dõi`
+    - Source: `Removed { $name } from watchlist`
+    - Suggest: `Đã xoá { $name } khỏi danh sách theo dõi`
+    - The screen reader announces this after removal. As written it is identical to the remove button's label.
+- `newtab-privacy-message-daily-cap` — `browser/browser/newtab/newtab.ftl` — '100+' lost its '+' and now states exactly 100 trackers.
+    - Current: `(100 trình theo dõi đã bị chặn hôm nay.)`
+    - Source: `(100+ trackers blocked today.) Fewer trackers means more privacy.`
+    - Suggest: `(Hơn 100 trình theo dõi đã bị chặn hôm nay.)`
+    - The comment says this is shown when the count reaches the display cap, so the real count is 100 or more.
+- `mr2022-onboarding-set-default-title` — `browser/browser/newtab/onboarding.ftl` — 'go-to browser' was rendered literally as 'access browser'.
+    - Current: `trình duyệt truy cập của bạn`
+    - Source: `Make { -brand-short-name } your go-to browser`
+    - Suggest: `trình duyệt ưa thích của bạn`
+    - 'go-to' means preferred or most-used, not 'truy cập' (access). The resulting title makes no sense.
+- `onboarding-infrequent-import-subtitle` — `browser/browser/newtab/onboarding.ftl` — 'settling in' was rendered as 'giải quyết' (resolving/solving).
+    - Current: `Cho dù bạn đang giải quyết hay chỉ ghé qua`
+    - Source: `Whether you’re settling in or just stopping by, remember you can import your bookmarks, passwords, and more.`
+    - Suggest: `Cho dù bạn định ở lại lâu dài hay chỉ ghé qua`
+    - 'giải quyết' means to solve a problem. That is unrelated to settling in as a new user.
+- `newtab-carousel-play` — `browser/browser/newtab/newtab.ftl` — Spelling error: 'Tiêp' should be 'Tiếp'.
+    - Current: `Tiêp tục tự động phát`
+    - Source: `aria-label: Resume autoplay`
+    - Suggest: `Tiếp tục tự động phát`
+    - The accent is missing on 'Tiếp'.
+- `newtab-widget-section-show-less` — `browser/browser/newtab/newtab.ftl` — Typo: 'ích' should be 'ít' (fewer).
+    - Current: `Hiện ích widget hơn`
+    - Source: `label: Show fewer widgets`
+    - Suggest: `Hiện ít widget hơn`
+    - 'Show fewer widgets' needs 'ít'. 'ích' is a different word and the label reads as garbled.
+- `windows-10-eos-challenger-callout-title` — `browser/browser/newtab/asrouter.ftl` — Typo: 'điểm nhắn' should be 'điểm nhấn'.
+    - Current: `Đó chính là điểm nhắn.`
+    - Source: `{ -brand-product-name } isn’t preloaded like other Big Tech browsers. That’s the point.`
+    - Suggest: `Đó chính là điểm nhấn.`
+    - 'điểm nhấn' (the point/highlight) is what is meant. 'nhắn' means to send a message.
+- `smartwindow-switcher-callout` — `browser/browser/newtab/onboarding.ftl` — Typo: 'thông mình' should be 'thông minh'.
+    - Current: `cửa sổ thông mình`
+    - Source: `Switch between Smart and Classic Windows anytime.`
+    - Suggest: `cửa sổ thông minh`
+    - Misspelling of 'thông minh' (smart).
+- `smartwindow-existing-user-fx-tou-body` — `browser/browser/newtab/onboarding.ftl` — Typo: 'diều khoản' should be 'điều khoản'.
+    - Current: `diều khoản sử dụng`
+    - Source: `To use { -smart-window-brand-name }, please accept the <a data-l10n-name="terms_of_use">Terms of Use</a> and updated <a data-l10n-name="privacy_notice">Privacy Notice</a>.`
+    - Suggest: `điều khoản sử dụng`
+    - 'd' was typed in place of 'đ'.
+- `policy-SkipTermsOfUse2` — `browser/browser/policies/policies-descriptions.ftl` — Typo: 'diều khoản' should be 'điều khoản'.
+    - Current: `diều khoản sử dụng thay mặt`
+    - Source: `Do not display the Terms of Use and Privacy Notice upon startup. You represent that you accept and have the authority to accept the Terms of Use on behalf of all individuals to whom you provide access to this browser.`
+    - Suggest: `điều khoản sử dụng thay mặt`
+    - 'd' was typed in place of 'đ'. The first mention in the same string is spelled correctly.
+- `policy-DisableRemoteSettingsAndAcceptSecurityConsequences` — `browser/browser/policies/policies-descriptions.ftl` — Typo: 'tự xa' should be 'từ xa' (remote).
+    - Current: `cài đặt tự xa`
+    - Source: `Disable remote settings.`
+    - Suggest: `cài đặt từ xa`
+    - 'từ xa' means remote. 'tự xa' is not a word.
+- `newtab-custom-web-notifications-toggle` — `browser/browser/newtab/newtab.ftl` — New Tab shortcuts are called 'phím tắt' (keyboard shortcuts) here, but 'lối tắt' everywhere else.
+    - Current: `trên các phím tắt của chúng`
+    - Source: `description: Show notifications from your sites on their shortcuts label: Web notifications`
+    - Suggest: `trên các lối tắt của chúng`
+    - Every other string in newtab.ftl uses 'Lối tắt' for top-site shortcuts. 'phím tắt' means keyboard shortcut.
+- `search-tags` — `browser/browser/touchbar/touchbar.ftl` — 'Tags' was rendered as 'Thẻ', the word the locale uses for tabs.
+    - Current: `Thẻ`
+    - Source: `Tags`
+    - Suggest: `Nhãn`
+    - places.ftl translates bookmark tags as 'Nhãn'. 'Thẻ' is tabs, and this button sits right next to 'Thẻ đang mở' (Open Tabs).
+- `policy-NoDefaultBookmarks` — `browser/browser/policies/policies-descriptions.ftl` — 'Recent Tags' was rendered as 'thẻ gần đây' (recent tabs).
+    - Current: `thẻ gần đây`
+    - Source: `Disable creation of the default bookmarks bundled with { -brand-short-name }, and the Smart Bookmarks (Most Visited, Recent Tags). Note: this policy is only effective if used before the first run of the profile.`
+    - Suggest: `nhãn gần đây`
+    - Elsewhere the locale translates tags as 'Nhãn'. 'thẻ' means tabs, which is a different feature.
+- `onboarding-refresh-terms-of-use-with-links` — `browser/browser/newtab/onboarding.ftl` — 'Terms of Use' was rendered as 'Điều khoản dịch vụ' (Terms of Service) instead of the locale's 'Điều khoản sử dụng'.
+    - Current: `Điều khoản dịch vụ của { -brand-product-name }`
+    - Source: `By continuing, you agree to the <a data-l10n-name="terms_of_use">{ -brand-product-name } Terms of Use</a> and our <a data-l10n-name="privacy_notice">Privacy Notice</a>. To help improve the browser, { -brand-product-name…`
+    - Suggest: `Điều khoản sử dụng của { -brand-product-name }`
+    - The same file (smartwindow-existing-user-fx-tou-title) and policies use 'Điều khoản sử dụng' for this legal document. Terms of Service is a different document name.
+- `newtab-sports-widget-message-survey-title` — `browser/browser/newtab/newtab.ftl` — Widgets are called 'tiện ích' in the survey strings, but 'widget' throughout the rest of New Tab.
+    - Current: `Giúp chúng tôi cải thiện các tiện ích`
+    - Source: `Help us make widgets better`
+    - Suggest: `Giúp chúng tôi cải thiện các widget`
+    - newtab.ftl consistently uses 'widget', and the locale uses 'tiện ích' for add-ons/extensions. Users will think the survey is about extensions. The same issue appears in the survey-widget-title and survey-widget-body strings.
+- `policy-DisableDefaultBrowserAgent` — `browser/browser/policies/policies-descriptions.ftl` — 'default browser agent' was rendered as 'tác nhân người dùng' (user agent).
+    - Current: `Ngăn chặn tác nhân người dùng trình duyệt mặc định làm bất cứ điều gì. Chỉ dành cho Windows, không có tác nhân người dùng nào khả dụng cho các nền tảng khác.`
+    - Source: `Prevent the default browser agent from taking any actions. Only applicable to Windows; other platforms don’t have the agent.`
+    - Suggest: `Ngăn chặn tác nhân trình duyệt mặc định thực hiện bất kỳ hành động nào. Chỉ áp dụng cho Windows; các nền tảng khác không có tác nhân này.`
+    - 'User agent' is a different web concept. The newer policy-DisableDefaultBrowserAgent2 correctly says 'tác nhân trình duyệt mặc định'.
+- `policy-GenerativeAI` — `browser/browser/policies/policies-descriptions.ftl` — 'generative AI' was rendered as 'AI tạo ra' ('AI created / AI that is made').
+    - Current: `Cấu hình các tính năng AI tạo ra.`
+    - Source: `Configure generative AI features.`
+    - Suggest: `Cấu hình các tính năng AI tạo sinh.`
+    - The standard Vietnamese term for generative AI is 'AI tạo sinh'. 'AI tạo ra' is ambiguous and reads as 'features AI created'.
+- `policy-DisableSafeMode` — `browser/browser/policies/policies-descriptions.ftl` — 'Disable the feature to restart in Safe Mode' was rendered as 'Turn off this feature in order to restart in safe mode'.
+    - Current: `Tắt tính năng này để khởi động lại ở chế độ an toàn.`
+    - Source: `Disable the feature to restart in Safe Mode. Note: the Shift key to enter Safe Mode can only be disabled on Windows using Group Policy.`
+    - Suggest: `Tắt tính năng khởi động lại ở chế độ an toàn.`
+    - The Vietnamese turns the policy's object into a purpose clause, so it says the opposite of what the policy does.
+- `WARN_RESTART_REQUIRED_UNINSTALL` — `browser/installer/custom.properties` — 'a previous uninstall' lost 'previous', so the restart sounds like it is for the current operation.
+    - Current: `để hoàn tất việc gỡ bỏ $BrandShortName`
+    - Source: `Your computer must be restarted to complete a previous uninstall of $BrandShortName. Do you want to reboot now?`
+    - Suggest: `để hoàn tất việc gỡ bỏ $BrandShortName trước đó`
+    - The installer is asking for a restart to finish an earlier uninstall, not the one in progress. WARN_RESTART_REQUIRED_UPGRADE has the same omission ('việc nâng cấp' should be 'việc nâng cấp ... trước đó').
+- _…and 231 more._
+
+### ✅ Fixed since the last run (0)
+
+_Nothing was fixed._
+
+### ↩︎ Withdrawn — no longer considered a defect (0)
+
+_Nothing withdrawn._
+
+### 🔁 String changed, defect not verifiable — needs a re-read (0)
+
+_Nothing to re-read._
+
+### 🗑 Retired — the string no longer exists upstream (0)
+
+_Nothing retired._
+
+---
+
+## 1. Health check
+
+| Check | Result |
+|---|---|
+| Files | 327 |
+| Strings | 16,144 |
+| Missing strings | 373 |
+| Obsolete strings | 1 |
+| Files absent from the locale | 1 |
+| Files with no en-US counterpart | 0 |
+| Fluent / properties syntax errors | 0 |
+| Reference files that did not parse | 0 |
+| Variable & placeholder mismatches | 0 |
+| Term parameter mismatches | 0 |
+| Plural variants (dead or missing forms) | 0 |
+| Text quoting a UI label that no longer matches | 4 |
+| Source-language spellings left unchanged | 0 |
+| Access keys not in their label | 548 |
+| Markup & `data-l10n-name` defects | 0 |
+| Typography deviations from this locale's own norm | 73 |
+
+### Completeness
+
+**373 strings** are not translated yet, concentrated in:
+
+- `devtools/client/debugger.properties` — 57
+- `toolkit/toolkit/about/aboutWebauthn.ftl` — 40
+- `dom/chrome/dom/dom.properties` — 29
+- `devtools/client/tooltips.ftl` — 28
+- `dom/chrome/security/csp.properties` — 18
+- `toolkit/toolkit/about/aboutWebrtc.ftl` — 17
+- `toolkit/toolkit/about/url-classifier.ftl` — 16
+- `dom/chrome/layout/htmlparser.properties` — 15
+- `toolkit/toolkit/about/aboutGlean.ftl` — 13
+- `devtools/client/perftools.ftl` — 11
+- `dom/chrome/accessibility/AccessFu.properties` — 10
+- `toolkit/toolkit/global/viewSource.ftl` — 10
+
+**Files absent from the locale:**
+
+- `toolkit/toolkit/global/viewSource.ftl`
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+
+### Conventions detected in this locale
+
+Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
+
+| Convention | Counts | Inferred |
+|---|---|---|
+| quotes | `curly-double` 493, `curly-single` 133, `straight-double` 88 | **curly-double** |
+| apostrophe | `typographic` 134, `straight` 12 | **typographic** |
+| ellipsis | `char` 374, `ascii` 18 | **char** |
+| dash | `em` 67, `en` 3 | **em** |
+| nbsp | `space-before-punctuation` 6 | **space-before-punctuation** |
+
+---
+
+## 2. Systemic items (decisions, not line items)
+
+- **accesskey — 548 strings** — 548 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
+    - Affected: `addon-install-accept-button`, `addon-install-cancel-button`, `addon-manage-extensions-shortcuts`, `addon-open-about-debugging`, `addon-updates-reset-updates-to-automatic`, `addon-updates-reset-updates-to-manual`, `addon-updates-update-addons-automatically`, `addon-updates-view-updates`, `addressbar-locbar-bookmarks-option`, `addressbar-locbar-clipboard-option`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-openpage-option` …and 529 more
+- **typography — 73 strings** — 73 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
+    - Affected: `BlockMixedActiveContent`, `BlockMixedDisplayContent`, `CookieRejectedAttributeExpiryOversize`, `FullscreenDeniedContainerNotAllowed`, `MediaLoadUnsupportedMimeType`, `MediaLoadUnsupportedTypeAttribute`, `MimeNotCss`, `MimeNotCssWarn`, `about-debugging-network-location-form-duplicate`, `about-debugging-network-location-form-invalid`, `about-debugging-setup-usb-status-updating`, `about-debugging-setup-usb-updating-button` …and 60 more
+
+---
+
+## 3. Open findings (291)
+
+
+| Impact | Meaning | Count |
+|---|---|---|
+| 1 | Broken output (blank value, broken markup, wrong variable) | 214 |
+| 2 | Wrong content (says something other than the English) | 77 |
+| 3 | Degraded language (grammar, spelling, terminology) | 0 |
+| 4 | Cosmetic (typography, spacing) | 0 |
+
+### A. Functional, markup, variables & plurals
+
+- `about-logins-list-section-week` — `browser/browser/aboutLogins.ftl` — 'Last 7 days' was translated as '7 days ago'
+    - Current: `7 ngày trước`
+    - Source: `Last 7 days`
+    - Suggest: `7 ngày qua`
+    - '7 ngày trước' means a single point in time 7 days ago. The section header covers the whole period of the last 7 days.
+- `about-private-browsing-nova-info-header` — `browser/browser/aboutPrivateBrowsing.ftl` — 'You're off the record' became 'Minimize disclosure of your information', a different privacy claim
+    - Current: `Hạn chế tối đa tiết lộ thông tin của bạn`
+    - Source: `You’re off the record`
+    - Suggest: `Hoạt động duyệt web của bạn sẽ bị xóa`
+    - The comment says the idiom means you are not being recorded, with the fallback 'Your browsing will be deleted'. The Vietnamese instead says the browser keeps your information from being disclosed as much as possible. Private windows do not do that: sites and ISPs can still see activity.
+- `smart-window-model-custom-save-confirmation` — `browser/browser/aiFeatures.ftl` — Adds 'product' ('mô hình sản phẩm' = product model) where en-US just says 'Model details saved'
+    - Current: `mô hình sản phẩm`
+    - Source: `Model details saved. Start a new chat to test.`
+    - Suggest: `mô hình`
+    - This refers to the user's custom AI model. 'mô hình sản phẩm' means a product model, which is a different thing.
+- `smartwindow-assistant-citations-more-label` — `browser/browser/aiWindowContent.ftl` — '+N more' citation sources became '+N more tabs'
+    - Current: `+{ $count } thẻ khác`
+    - Source: `+{ $count } more`
+    - Suggest: `+{ $count } nguồn khác`
+    - The comment says the count is of additional hidden citation sources. Those are not necessarily tabs.
+- `extension-nova-lagoon-name` — `browser/browser/appExtensionFields.ftl` — 'Lagoon' was translated as 'San hô' (coral)
+    - Current: `San hô`
+    - Source: `Lagoon`
+    - Suggest: `Đầm phá`
+    - The comment says it refers to a sheltered body of water for a blue theme. Coral is a pink/orange organism, so the name suggests the wrong colour.
+- `extension-nova-pine-name` — `browser/browser/appExtensionFields.ftl` — 'Pine' (pine trees) was translated as 'Nhựa thông' (pine resin)
+    - Current: `Nhựa thông`
+    - Source: `Pine`
+    - Suggest: `Rừng thông`
+    - The comment says the green theme refers to pine trees. Resin is amber-coloured, not green.
+- `appmenu-search-history` — `browser/browser/appmenu.ftl` — The action 'Search History' became the noun 'search history'
+    - Current: `Lịch sử tìm kiếm`
+    - Source: `label: Search History`
+    - Suggest: `Tìm kiếm lịch sử`
+    - The comment says the item lets you search through the browser's history. 'Lịch sử tìm kiếm' means 'the history of searches'.
+- `default-browser-notification-privacy-body-text` — `browser/browser/backgroundtasks/defaultagent.ftl` — 'Your default changed' (the default browser) became 'Your settings changed'.
+    - Current: `Cài đặt của bạn đã thay đổi.`
+    - Source: `Your default changed. Come back to { -brand-short-name } for built-in privacy and protection.`
+    - Suggest: `Trình duyệt mặc định của bạn đã thay đổi.`
+    - The notification is about the default browser being changed. Saying generic settings changed is vague and could alarm the user.
+- `identity-permissions-storage-access-hint` — `browser/browser/browser.ftl` — Says these parties can 'get your information on this site' instead of using 'site data'
+    - Current: `và lấy thông tin của bạn trên trang web này`
+    - Source: `These parties can use cross-site cookies and site data while you are on this site.`
+    - Suggest: `và dữ liệu trang web khi bạn đang ở trang web này`
+    - en-US: 'These parties can use cross-site cookies and site data while you are on this site.' The Vietnamese claims the third parties harvest the user's personal information, which the source does not say.
+- `trustpanel-description-disabled` — `browser/browser/browser.ftl` — 'Firefox is off-duty' became 'Firefox no longer works'
+    - Current: `{ -brand-product-name } không còn hoạt động.`
+    - Source: `{ -brand-product-name } is off-duty. We suggest turning protections back on.`
+    - Suggest: `{ -brand-product-name } đang tạm ngừng bảo vệ.`
+    - The source means protections are paused for this site. 'không còn hoạt động' reads as the browser itself having stopped working.
+- `confirmation-hint-duplicate-tabs-closed` — `browser/browser/confirmationHints.ftl` — The confirmation 'Closed N tabs' reads as the command 'Close N tabs'
+    - Current: `Đóng { $tabCount } thẻ`
+    - Source: `{$tabCount ->} [one] Closed { $tabCount } tab [other] Closed { $tabCount } tabs`
+    - Suggest: `Đã đóng { $tabCount } thẻ`
+    - This hint confirms a finished action. The other hints in the file use 'Đã …'.
+- `content-sharing-modal-description-2` — `browser/browser/contentSharing.ftl` — Drops 'create a page of links'; reads as 'sign in to easily share a page with links'
+    - Current: `Đăng nhập để dễ dàng chia sẻ trang với các liên kết.`
+    - Source: `Sign in to create an easy to share page of links. It can’t be edited or deleted and expires after 7 days.`
+    - Suggest: `Đăng nhập để tạo một trang chứa các liên kết dễ chia sẻ.`
+    - en-US: 'Sign in to create an easy to share page of links.' Without that, the next sentence's 'Nó' (it) has nothing clear to refer to.
+- `content-sharing-modal-description-signed-in` — `browser/browser/contentSharing.ftl` — Says 'We have shared the page with your links' instead of 'We made an easy-to-share page with your links'
+    - Current: `Chúng tôi đã chia sẻ trang với các liên kết của bạn.`
+    - Source: `We made an easy to share page with your links. It can’t be edited or deleted and expires after 7 days.`
+    - Suggest: `Chúng tôi đã tạo một trang chứa các liên kết của bạn để dễ dàng chia sẻ.`
+    - The product has only created the page. The Vietnamese tells the user their links have already been shared, i.e. published, before they have shared anything.
+- `contextual-manager-passwords-update-label` — `browser/browser/contextual-manager.ftl` — 'Update password' became 'Password updated'
+    - Current: `Đã cập nhật mật khẩu`
+    - Source: `label: Update password`
+    - Suggest: `Cập nhật mật khẩu`
+    - This is the label for the edit form, paired with 'Thêm mật khẩu' (Add password). The past tense reads as a completed action.
+- `firefoxview-dont-remember-history-empty-header-3` — `browser/browser/firefoxView.ftl` — 'You're off the record' became 'Minimize disclosure of your information'
+    - Current: `Hạn chế tối đa tiết lộ thông tin của bạn`
+    - Source: `You’re off the record`
+    - Suggest: `Lịch sử duyệt web của bạn không được ghi lại`
+    - The comment says the point is that history activity is not recorded or shown. The Vietnamese claims the browser limits how much of your information is disclosed, which is a different promise.
+- `firefoxview-search-text-box-history` — `browser/browser/firefoxView.ftl` — Placeholder 'Search history' (verb) became the noun 'search history'
+    - Current: `Lịch sử tìm kiếm`
+    - Source: `placeholder: Search history`
+    - Suggest: `Tìm kiếm lịch sử`
+    - The comment says 'search' is a verb here. The sibling placeholders all use 'Tìm kiếm …'.
+- `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — 'Generative AI Prohibited Use Policy' reads as 'policy banning the use of creative AI'
+    - Current: `chính sách cấm sử dụng AI sáng tạo`
+    - Source: `By choosing Google Gemini, you agree to the <a data-l10n-name="link1">Google Terms of Service</a>, <a data-l10n-name="link2">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name="link3">Gemini Apps Privacy Not…`
+    - Suggest: `chính sách về các hành vi bị cấm khi sử dụng AI tạo sinh`
+    - Google's policy lists prohibited uses of generative AI. The Vietnamese word order says the policy prohibits using (creative) AI at all, which contradicts choosing Gemini.
+- `ipprotection-summer-promo-offramp-generic-description-default-browser-users-no-upgrade` — `browser/browser/ipProtection.ftl` — The VPN data allowance is described as 'storage capacity'
+    - Current: `GB dung lượng lưu trữ`
+    - Source: `Use your { $maxUsage } GB and more than 20 locations for extra privacy to make your browsing harder to trace back to you.`
+    - Suggest: `GB dữ liệu`
+    - $maxUsage is the monthly VPN data allowance, not storage. The sibling generic-description and the rest of the file call it 'dữ liệu'.
+- `migration-imported-edge-reading-list` — `browser/browser/migrationWizard.ftl` — 'Reading List' is translated as the verb phrase 'Reading the list'.
+    - Current: `Đang đọc danh sách (từ Edge)`
+    - Source: `Reading List (From Edge)`
+    - Suggest: `Danh sách đọc (từ Edge)`
+    - Same error as the Safari string. This is a folder name and should be a noun.
+- `migration-imported-safari-reading-list` — `browser/browser/migrationWizard.ftl` — 'Reading List' is translated as the verb phrase 'Reading the list'.
+    - Current: `Đang đọc danh sách (Từ Safari)`
+    - Source: `Reading List (From Safari)`
+    - Suggest: `Danh sách đọc (Từ Safari)`
+    - This is the name of the imported bookmarks folder (a noun). 'Đang đọc danh sách' means 'currently reading the list'.
+- `cfr-doorhanger-doh-body` — `browser/browser/newtab/asrouter.ftl` — 'Your privacy matters' was rendered as 'Your privacy problem'.
+    - Current: `Vấn đề riêng tư của bạn.`
+    - Source: `Your privacy matters. { -brand-short-name } now securely routes your DNS requests whenever possible to a partner service to protect you while you browse.`
+    - Suggest: `Quyền riêng tư của bạn rất quan trọng.`
+    - 'matters' (is important) was read as the noun 'matter/issue'. The Vietnamese opens with the meaningless fragment 'Your privacy issue.'
+- `set-default-menu-message-simple-layout-title-variant` — `browser/browser/newtab/asrouter.ftl` — The negation is dropped. The menu message says Firefox IS the user's default browser.
+    - Current: `{ -brand-short-name } là trình duyệt mặc định của bạn`
+    - Source: `{ -brand-short-name } is not your primary browser`
+    - Suggest: `{ -brand-short-name } không phải là trình duyệt chính của bạn`
+    - The en-US is 'Firefox is not your primary browser'. This message is shown to users for whom Firefox is not the default, so the Vietnamese tells them something false about the state of their own system.
+- `newtab-privacy-message-daily-cap` — `browser/browser/newtab/newtab.ftl` — '100+' lost its '+' and now states exactly 100 trackers.
+    - Current: `(100 trình theo dõi đã bị chặn hôm nay.)`
+    - Source: `(100+ trackers blocked today.) Fewer trackers means more privacy.`
+    - Suggest: `(Hơn 100 trình theo dõi đã bị chặn hôm nay.)`
+    - The comment says this is shown when the count reaches the display cap, so the real count is 100 or more.
+- `newtab-section-header-stories` — `browser/browser/newtab/newtab.ftl` — 'Thought-provoking stories' was rendered as 'ideologically inciting stories'.
+    - Current: `Những câu chuyện kích động tư tưởng`
+    - Source: `Thought-provoking stories`
+    - Suggest: `Những câu chuyện đáng suy ngẫm`
+    - 'kích động' means to incite or agitate and is strongly negative. The header ends up describing the recommended content as inflammatory rather than thought-provoking.
+- `newtab-sports-widget-follow-teams-title` — `browser/browser/newtab/newtab.ftl` — 'Follow up to N teams' lost 'up to' and uses 'nhóm' (group) instead of 'đội' (team).
+    - Current: `Theo dõi { $number } nhóm`
+    - Source: `{$number ->} [other] Follow up to { $number } teams`
+    - Suggest: `Theo dõi tối đa { $number } đội`
+    - The variable is a maximum, but the Vietnamese tells the user to follow exactly N. 'nhóm' also clashes with 'Theo dõi đội' used for teams elsewhere in the same widget.
+- `newtab-sports-widget-loading-more` — `browser/browser/newtab/newtab.ftl` — 'Loading more matches' (sports games) was rendered as 'loading more matching results'.
+    - Current: `Đang tải thêm kết quả phù hợp…`
+    - Source: `Loading more matches…`
+    - Suggest: `Đang tải thêm trận đấu…`
+    - The comment says the status appears while more matches (games) are being fetched. 'kết quả phù hợp' means search matches.
+- `newtab-sports-widget-watch-stream-select-games-only` — `browser/browser/newtab/newtab.ftl` — 'Select games only' (the provider streams only some matches) was rendered as the imperative 'only choose matches'.
+    - Current: `Chỉ chọn trận đấu`
+    - Source: `Select games only`
+    - Suggest: `Chỉ một số trận đấu`
+    - The comment says this tag means the provider only streams some matches. The Vietnamese reads as an instruction to the user.
+- `newtab-stocks-added-to-watchlist` — `browser/browser/newtab/newtab.ftl` — The past-tense confirmation 'Added X to watchlist' was rendered as the imperative 'Add X to watchlist'.
+    - Current: `Thêm { $name } vào danh sách theo dõi`
+    - Source: `Added { $name } to watchlist`
+    - Suggest: `Đã thêm { $name } vào danh sách theo dõi`
+    - The screen reader announces this after the action is done. Without 'Đã' it sounds like the button label, not a confirmation.
+- `newtab-stocks-removed-from-watchlist` — `browser/browser/newtab/newtab.ftl` — The past-tense confirmation 'Removed X from watchlist' was rendered as the imperative 'Remove X'.
+    - Current: `Xoá { $name } khỏi danh sách theo dõi`
+    - Source: `Removed { $name } from watchlist`
+    - Suggest: `Đã xoá { $name } khỏi danh sách theo dõi`
+    - The screen reader announces this after removal. As written it is identical to the remove button's label.
+- `newtab-wallpaper-feature-highlight-subtitle` — `browser/browser/newtab/newtab.ftl` — 'Choose your favorite' (wallpaper) became 'choose your favorite tab'.
+    - Current: `Hãy chọn thẻ yêu thích của bạn`
+    - Source: `Choose your favorite and make every new tab feel like home.`
+    - Suggest: `Hãy chọn hình nền yêu thích của bạn`
+    - This is the wallpaper feature highlight, and 'favorite' refers to a wallpaper. 'thẻ' means tab, so the instruction makes no sense here.
+- `mr2022-onboarding-privacy-segmentation-image-alt` — `browser/browser/newtab/onboarding.ftl` — 'high five' was translated literally as 'cao năm' ('tall five'), which means nothing in Vietnamese.
+    - Current: `cao năm`
+    - Source: `aria-label: Light-skinned and dark-skinned hands high five`
+    - Suggest: `đập tay`
+    - Screen-reader users hear a meaningless description. The Vietnamese gesture is 'đập tay'.
+- `mr2022-onboarding-set-default-title` — `browser/browser/newtab/onboarding.ftl` — 'go-to browser' was rendered literally as 'access browser'.
+    - Current: `trình duyệt truy cập của bạn`
+    - Source: `Make { -brand-short-name } your go-to browser`
+    - Suggest: `trình duyệt ưa thích của bạn`
+    - 'go-to' means preferred or most-used, not 'truy cập' (access). The resulting title makes no sense.
+- `onboarding-infrequent-import-subtitle` — `browser/browser/newtab/onboarding.ftl` — 'settling in' was rendered as 'giải quyết' (resolving/solving).
+    - Current: `Cho dù bạn đang giải quyết hay chỉ ghé qua`
+    - Source: `Whether you’re settling in or just stopping by, remember you can import your bookmarks, passwords, and more.`
+    - Suggest: `Cho dù bạn định ở lại lâu dài hay chỉ ghé qua`
+    - 'giải quyết' means to solve a problem. That is unrelated to settling in as a new user.
+- `onboarding-refresh-gratitude-subtitle` — `browser/browser/newtab/onboarding.ftl` — 'Only major browser backed by a non-profit' became 'the only browser backed by a non-profit'.
+    - Current: `trình duyệt duy nhất được hỗ trợ bởi một tổ chức phi lợi nhuận`
+    - Source: `Thank you for using { -brand-short-name }, the only major browser backed by a non-profit. With your support, we’re working to make the internet safer and more accessible for everyone.`
+    - Suggest: `trình duyệt lớn duy nhất được hỗ trợ bởi một tổ chức phi lợi nhuận`
+    - Dropping 'major' turns a qualified claim into an absolute one: that no other browser at all is backed by a non-profit. The same file and asrouter.ftl keep 'lớn' in the parallel strings (welcome-back-spotlight-subtitle, onboarding-refresh-tou-pin-unchecked).
+- `smartwindow-onboarding-subtitle` — `browser/browser/newtab/onboarding.ftl` — The idiom 'without missing a beat' was rendered as 'quickly and accurately', which adds an accuracy claim for the AI feature.
+    - Current: `một cách nhanh chóng và chính xác`
+    - Source: `Summarize, compare, and ask questions without missing a beat.`
+    - Suggest: `một cách nhanh chóng, liền mạch`
+    - The en-US only says the user can summarize and ask questions smoothly. 'chính xác' (accurately) makes the product promise that its AI answers are correct, which the source never says.
+- `origin-controls-state-temporary-access` — `browser/browser/originControls.ftl` — The access scope 'for this visit' becomes 'on this site', so temporary access reads as lasting access.
+    - Current: `Có thể đọc và thay đổi dữ liệu trên trang này`
+    - Source: `Can read and change data for this visit`
+    - Suggest: `Có thể đọc và thay đổi dữ liệu trong lần truy cập này`
+    - en-US: 'Can read and change data for this visit'. This state means the access is temporary. The Vietnamese is the same as a permanent per-site grant, so it misleads the user about how long the extension has access.
+- `policy-DisableSafeMode` — `browser/browser/policies/policies-descriptions.ftl` — 'Disable the feature to restart in Safe Mode' was rendered as 'Turn off this feature in order to restart in safe mode'.
+    - Current: `Tắt tính năng này để khởi động lại ở chế độ an toàn.`
+    - Source: `Disable the feature to restart in Safe Mode. Note: the Shift key to enter Safe Mode can only be disabled on Windows using Group Policy.`
+    - Suggest: `Tắt tính năng khởi động lại ở chế độ an toàn.`
+    - The Vietnamese turns the policy's object into a purpose clause, so it says the opposite of what the policy does.
+- `policy-GenerativeAI` — `browser/browser/policies/policies-descriptions.ftl` — 'generative AI' was rendered as 'AI tạo ra' ('AI created / AI that is made').
+    - Current: `Cấu hình các tính năng AI tạo ra.`
+    - Source: `Configure generative AI features.`
+    - Suggest: `Cấu hình các tính năng AI tạo sinh.`
+    - The standard Vietnamese term for generative AI is 'AI tạo sinh'. 'AI tạo ra' is ambiguous and reads as 'features AI created'.
+- `autofill-address-department` — `browser/browser/preferences/formAutofill.ftl` — The administrative region 'Department' (Colombia, Nicaragua) is translated as 'Sở', which means a government agency.
+    - Current: `Sở`
+    - Source: `Department`
+    - Suggest: `Tỉnh`
+    - The comment says this is the first-level division below the country. 'Sở' means a government department or office, not a territory.
+- `permissions-site-camera-disable-desc` — `browser/browser/preferences/permissions.ftl` — The camera dialog warns about 'Blocking notifications' when it should say 'Blocking access to your camera'.
+    - Current: `Chặn thông báo có thể ảnh hưởng đến một số tính năng trang web.`
+    - Source: `This will prevent any websites not listed above from requesting permission to access your camera. Blocking access to your camera may break some website features.`
+    - Suggest: `Chặn quyền truy cập máy ảnh của bạn có thể ảnh hưởng đến một số tính năng trang web.`
+    - en-US: 'Blocking access to your camera may break some website features.' This is the same copy-paste from the notification string.
+- `permissions-site-location-disable-desc` — `browser/browser/preferences/permissions.ftl` — The second sentence says 'Blocking notifications' when it should say 'Blocking access to your location'.
+    - Current: `Chặn thông báo có thể ảnh hưởng đến một số tính năng trang web.`
+    - Source: `This will prevent any websites not listed above from requesting permission to access your location. Blocking access to your location may break some website features.`
+    - Suggest: `Chặn quyền truy cập vị trí của bạn có thể ảnh hưởng đến một số tính năng trang web.`
+    - en-US: 'Blocking access to your location may break some website features.' The text looks copied from the notification dialog, so the location dialog warns about the wrong permission.
+- `permissions-site-microphone-disable-desc` — `browser/browser/preferences/permissions.ftl` — The microphone dialog warns about 'Blocking notifications' when it should say 'Blocking access to your microphone'.
+    - Current: `Chặn thông báo có thể ảnh hưởng đến một số tính năng trang web.`
+    - Source: `This will prevent any websites not listed above from requesting permission to access your microphone. Blocking access to your microphone may break some website features.`
+    - Suggest: `Chặn quyền truy cập micrô của bạn có thể ảnh hưởng đến một số tính năng trang web.`
+    - en-US: 'Blocking access to your microphone may break some website features.' This is the same copy-paste from the notification string.
+- `browsing-use-cursor-navigation` — `browser/browser/preferences/preferences.ftl` — 'Always use the cursor keys' became 'Allow using the cursor', which loses both 'always' and 'keys'.
+    - Current: `Cho phép dùng con trỏ để di chuyển bên trong trang`
+    - Source: `accesskey: k label: Always use the cursor keys to navigate within pages`
+    - Suggest: `Luôn dùng các phím mũi tên để di chuyển bên trong trang`
+    - This setting is caret browsing with the arrow (cursor) keys. 'con trỏ' alone suggests the mouse pointer, and 'Cho phép' (allow) is not 'Always'.
+- `content-blocking-etp-standard-tcp-rollout-description` — `browser/browser/preferences/preferences.ftl` — 'Contains' is translated literally as 'chứa' (holds), but the comment says it means isolates or limits.
+    - Current: `Trình chống cookie chung chứa các cookie cho trang web bạn đang truy cập`
+    - Source: `Total Cookie Protection contains cookies to the site you’re on, so trackers can’t use them to follow you between sites.`
+    - Suggest: `Trình chống cookie chung giới hạn cookie trong trang web bạn đang truy cập`
+    - The developer comment says 'Contains' means 'isolates', 'limits'. 'chứa các cookie cho trang web' reads as 'holds cookies for the site', which does not explain the isolation.
+- `content-blocking-unvisited-cookies` — `browser/browser/preferences/preferences.ftl` — 'Unvisited sites' is translated as 'unwanted sites'.
+    - Current: `Cookie từ các trang không mong muốn`
+    - Source: `Cookies from unvisited sites`
+    - Suggest: `Cookie từ các trang chưa từng truy cập`
+    - en-US: 'Cookies from unvisited sites'. 'không mong muốn' means unwanted, not unvisited.
+- `forms-saved-passwords-searchkeywords` — `browser/browser/preferences/preferences.ftl` — 'Logins for the following sites are stored' is rendered as 'Log in so that the following sites are stored'.
+    - Current: `Đăng nhập để các trang web sau đây được lưu trữ trên máy tính của bạn`
+    - Source: `Logins for the following sites are stored on your computer`
+    - Suggest: `Thông tin đăng nhập cho các trang web sau đây được lưu trữ trên máy tính của bạn`
+    - The noun 'Logins' was read as the verb 'log in', which turns the sentence into nonsense. This string is only used as search keywords, so the impact is low.
+- `privacy-header` — `browser/browser/preferences/preferences.ftl` — 'Browser Privacy' is translated as 'Private browsing', which is a different feature.
+    - Current: `Duyệt web riêng tư`
+    - Source: `Browser Privacy`
+    - Suggest: `Quyền riêng tư của trình duyệt`
+    - The locale uses 'duyệt web riêng tư' for private browsing mode (e.g. history-private-browsing-permanent), so this header names the wrong thing.
+- `search-keyword-warning-title` — `browser/browser/preferences/preferences.ftl` — 'Duplicate' (an adjective) is translated as the verb 'clone', so the title reads 'Clone Keyword'.
+    - Current: `Nhân bản Từ khóa`
+    - Source: `Duplicate Keyword`
+    - Suggest: `Từ khóa trùng lặp`
+    - The developer comment says 'Duplicate' is an adjective here. The title warns that a keyword is already in use. 'Nhân bản' means to clone or replicate.
+- `sitedata-option-block-all` — `browser/browser/preferences/preferences.ftl` — The warning that blocking all cookies 'will cause' websites to break has been softened to 'may cause'.
+    - Current: `(có thể khiến các trang web bị hỏng)`
+    - Source: `label: All cookies (will cause websites to break)`
+    - Suggest: `(sẽ khiến các trang web bị hỏng)`
+    - en-US deliberately separates 'may cause' (all cross-site cookies) from 'will cause' (all cookies). This rendering removes that distinction. The parallel string preferences-etp-custom-cookie-behavior-block-all correctly uses 'sẽ'.
+- `sitedata-option-block-unvisited` — `browser/browser/preferences/preferences.ftl` — 'Unvisited websites' is translated as 'unwanted websites'.
+    - Current: `Cookie từ các trang web không mong muốn`
+    - Source: `label: Cookies from unvisited websites`
+    - Suggest: `Cookie từ các trang web chưa từng truy cập`
+    - en-US: 'Cookies from unvisited websites'. 'không mong muốn' means unwanted, which names a different blocking criterion. The locale itself uses 'chưa từng truy cập' in preferences-etp-custom-cookie-behavior-block-unvisited.
+- `update-application-warning-cross-user-setting-2` — `browser/browser/preferences/preferences.ftl` — 'Profiles using this installation' is translated as 'by means of using this setting'.
+    - Current: `bằng cách sử dụng cài đặt { -brand-short-name } này`
+    - Source: `message: This setting will apply to all Windows accounts and { -brand-short-name } profiles using this installation of { -brand-short-name }.`
+    - Suggest: `sử dụng bản cài đặt { -brand-short-name } này`
+    - en-US: 'all Windows accounts and Firefox profiles using this installation of Firefox'. 'bằng cách sử dụng' means 'by way of', and 'cài đặt' here reads as 'setting'. The sentence no longer says the change affects every profile sharing this installation.
+- `site-data-removing-header` — `browser/browser/preferences/siteDataSettings.ftl` — The header says the dialog removes 'cache' and site data, but it actually removes cookies and site data.
+    - Current: `Xóa cache và dữ liệu trang`
+    - Source: `Removing Cookies and Site Data`
+    - Suggest: `Xóa cookie và dữ liệu trang`
+    - en-US: 'Removing Cookies and Site Data'. The dialog's own description and table both talk about cookies. Clearing cache is a separate, harmless action, so this header misstates what is being deleted. It is also reused as the dialog title.
+- `avatar-selector-custom-tab` — `browser/browser/profiles.ftl` — 'Custom' (a user-supplied avatar) is translated as 'Tùy chọn' ('Options').
+    - Current: `Tùy chọn`
+    - Source: `Custom`
+    - Suggest: `Tùy chỉnh`
+    - This tab is for uploading a custom image. The same file uses 'Tuỳ chỉnh ảnh đại diện' for custom avatar.
+- `profiles-blue-theme-title` — `browser/browser/profiles.ftl` — The tooltip for the blue theme says 'green' (xanh lục).
+    - Current: `Áp dụng chủ đề màu xanh lục`
+    - Source: `title: Apply blue theme`
+    - Suggest: `Áp dụng chủ đề màu xanh dương`
+    - en-US: 'Apply blue theme'. The label above it is correctly 'Xanh dương', but the title repeats the green theme's text, so two swatches have the same tooltip.
+- `cryptominer-tab-content` — `browser/browser/protections.ftl` — 'Cryptomining scripts' is translated as 'encryption scripts'.
+    - Current: `Các tập lệnh mã hóa`
+    - Source: `Cryptominers use your system’s computing power to mine digital money. Cryptomining scripts drain your battery, slow down your computer, and can increase your energy bill. <a data-l10n-name="learn-more-link">Learn more</…`
+    - Suggest: `Các tập lệnh đào tiền điện tử`
+    - 'Mã hóa' means encryption. The source means scripts that mine cryptocurrency.
+- `monitor-partial-breaches-motivation-title-middle` — `browser/browser/protections.ftl` — 'Keep it up!' is calqued as 'Hãy giữ nó!' ('Hold on to it!').
+    - Current: `Hãy giữ nó!`
+    - Source: `Keep it up!`
+    - Suggest: `Hãy tiếp tục nhé!`
+    - The idiom means 'keep going'. The same calque is in monitor-partial-breaches-motivation-title-end ('Sắp xong! Hãy giữ nó.').
+- `protection-report-page-summary-default` — `browser/browser/protections.ftl` — This string is shown when protections are on, but it says 'can protect' instead of 'protects'.
+    - Current: `{ -brand-short-name } có thể bảo vệ quyền riêng tư của bạn`
+    - Source: `{ -brand-short-name } protects your privacy behind the scenes while you browse. This is a personalized summary of those protections, including tools to take control of your online security.`
+    - Suggest: `{ -brand-short-name } bảo vệ quyền riêng tư của bạn`
+    - The developer comment says this string must be 'more assertive' than the 'can' variant because Firefox is actively protecting. The Vietnamese is identical to protection-report-page-summary.
+- `protections-vpn-banner-content` — `browser/browser/protections.ftl` — 'Try Mozilla VPN risk-free' is rendered as 'try Mozilla VPN for free'.
+    - Current: `Hãy dùng thử { -mozilla-vpn-brand-name } miễn phí`
+    - Source: `Try { -mozilla-vpn-brand-name } risk-free and see why TechRadar says, “its speed, simplicity and low monthly price make it worth a look.”`
+    - Suggest: `Hãy dùng thử { -mozilla-vpn-brand-name } mà không gặp rủi ro`
+    - 'Risk-free' refers to a money-back guarantee, not a free trial. The Vietnamese promises a free product, which is a pricing claim the source never makes.
+- `protections-panel-cryptominers` — `browser/browser/protectionsPanel.ftl` — 'Cryptomining scripts' is translated as 'encryption scripts'.
+    - Current: `Các tập lệnh mã hóa`
+    - Source: `Cryptominers use your system’s computing power to mine digital money. Cryptomining scripts drain your battery, slow down your computer, and can increase your energy bill.`
+    - Suggest: `Các tập lệnh đào tiền điện tử`
+    - 'Mã hóa' means encryption, not cryptocurrency mining.
+- `safeb-blocked-harmful-page-short-desc` — `browser/browser/safebrowsing/blockedSite.ftl` — 'because it might try to install' became 'because it tries to install', so the hedge is gone.
+    - Current: `vì nó cố gắng cài ứng dụng nguy hiểm`
+    - Source: `{ -brand-short-name } blocked this page because it might try to install dangerous apps that steal or delete your information (for example, photos, passwords, messages and credit cards).`
+    - Suggest: `vì nó có thể cố gắng cài ứng dụng nguy hiểm`
+    - The en-US only says the page might try this. The Vietnamese states it as fact.
+- _…and 108 more; see `state/` for the full list._
+
+### B. Mistranslation, reversed meaning, wrong names & brand
+
+_Nothing in this category._
+
+### C. Grammar, agreement & spelling
+
+- `aiwindow-input-model-select-button-label-custom` — `browser/browser/aiWindow.ftl` — 'Custom' model was translated as 'Tùy chọn' (Options), unlike 'Tùy chỉnh' used elsewhere
+    - Current: `Tùy chọn`
+    - Source: `Custom`
+    - Suggest: `Tùy chỉnh`
+    - aiFeatures.ftl uses 'Tùy chỉnh: Sử dụng LLM của riêng bạn' for the same custom model. 'Tùy chọn' means 'Options', which is a different concept in this UI.
+- `bookmark-overlay-tags-caption-label` — `browser/browser/editBookmarkOverlay.ftl` — 'Tags' rendered as 'thẻ' (the locale's word for browser tabs) instead of 'nhãn'
+    - Current: `Sử dụng các thẻ`
+    - Source: `Use tags to organize and search for bookmarks from the address bar`
+    - Suggest: `Sử dụng các nhãn`
+    - The same panel labels the tags field 'Nhãn'. 'thẻ' means tabs throughout the locale, so users will read this as 'use tabs'.
+- `splitview-onboarding-callout-subtitle-1` — `browser/browser/featureCallout.ftl` — The quoted menu item doesn't match the real menu label
+    - Current: `“Chế độ xem cửa sổ”`
+    - Source: `Right-click this tab and choose “Add Split View” to see two tabs at once.`
+    - Suggest: `“Chế độ chia cửa sổ”`
+    - The tab context menu item (tab-context-add-split-view) is 'Chế độ chia cửa sổ', and subtitle-2 quotes it correctly. Users looking for 'Chế độ xem cửa sổ' won't find it.
+- `toolbar-button-firefox-view-2` — `browser/browser/firefoxView.ftl` — The English word 'windows' was left untranslated mid-sentence
+    - Current: `trên windows`
+    - Source: `label: { -firefoxview-brand-name } tooltiptext: View recent browsing across windows and devices`
+    - Suggest: `trên các cửa sổ`
+    - The locale always translates 'window' as 'cửa sổ'. A lowercase 'windows' here can be mistaken for the OS name.
+- `migration-wizard-progress-extensions-support-link` — `browser/browser/migrationWizard.ftl` — 'how' is missing, so the sentence is ungrammatical.
+    - Current: `Tìm hiểu { -brand-product-name } tìm tiện ích mở rộng tương tự`
+    - Source: `Learn how { -brand-product-name } matches extensions`
+    - Suggest: `Tìm hiểu cách { -brand-product-name } tìm tiện ích mở rộng tương tự`
+    - en-US: 'Learn how { -brand-product-name } matches extensions'. Without 'cách' the link text reads 'Learn Firefox find similar extensions'.
+- `newtab-clock-city-fr-marseille` — `browser/browser/newtab/newtab.ftl` — Marseille is given the archaic transliteration 'Mạc-xây', while all the other French cities keep their Latin spelling.
+    - Current: `Mạc-xây`
+    - Source: `Marseille`
+    - Suggest: `Marseille`
+    - Paris, Lyon and Toulouse are left as-is in the same list, and modern Vietnamese usage (e.g. Vietnamese Wikipedia) writes Marseille.
+- `newtab-custom-web-notifications-toggle` — `browser/browser/newtab/newtab.ftl` — New Tab shortcuts are called 'phím tắt' (keyboard shortcuts) here, but 'lối tắt' everywhere else.
+    - Current: `trên các phím tắt của chúng`
+    - Source: `description: Show notifications from your sites on their shortcuts label: Web notifications`
+    - Suggest: `trên các lối tắt của chúng`
+    - Every other string in newtab.ftl uses 'Lối tắt' for top-site shortcuts. 'phím tắt' means keyboard shortcut.
+- `newtab-sports-widget-message-survey-title` — `browser/browser/newtab/newtab.ftl` — Widgets are called 'tiện ích' in the survey strings, but 'widget' throughout the rest of New Tab.
+    - Current: `Giúp chúng tôi cải thiện các tiện ích`
+    - Source: `Help us make widgets better`
+    - Suggest: `Giúp chúng tôi cải thiện các widget`
+    - newtab.ftl consistently uses 'widget', and the locale uses 'tiện ích' for add-ons/extensions. Users will think the survey is about extensions. The same issue appears in the survey-widget-title and survey-widget-body strings.
+- `onboarding-refresh-terms-of-use-with-links` — `browser/browser/newtab/onboarding.ftl` — 'Terms of Use' was rendered as 'Điều khoản dịch vụ' (Terms of Service) instead of the locale's 'Điều khoản sử dụng'.
+    - Current: `Điều khoản dịch vụ của { -brand-product-name }`
+    - Source: `By continuing, you agree to the <a data-l10n-name="terms_of_use">{ -brand-product-name } Terms of Use</a> and our <a data-l10n-name="privacy_notice">Privacy Notice</a>. To help improve the browser, { -brand-product-name…`
+    - Suggest: `Điều khoản sử dụng của { -brand-product-name }`
+    - The same file (smartwindow-existing-user-fx-tou-title) and policies use 'Điều khoản sử dụng' for this legal document. Terms of Service is a different document name.
+- `panic-button-2hr` — `browser/browser/panicButton.ftl` — 'Two hours' does not follow the pattern of its siblings, so it does not complete the prefix sentence.
+    - Current: `Hai tiếng`
+    - Source: `label: Two hours`
+    - Suggest: `Hai tiếng trước`
+    - The prefix is 'Xóa dữ liệu từ thời điểm:' and the other options are 'Năm phút trước' and '24 giờ trước'. 'Hai tiếng' alone gives 'from the moment: two hours', which is not a sentence.
+- `policy-DisableDefaultBrowserAgent` — `browser/browser/policies/policies-descriptions.ftl` — 'default browser agent' was rendered as 'tác nhân người dùng' (user agent).
+    - Current: `Ngăn chặn tác nhân người dùng trình duyệt mặc định làm bất cứ điều gì. Chỉ dành cho Windows, không có tác nhân người dùng nào khả dụng cho các nền tảng khác.`
+    - Source: `Prevent the default browser agent from taking any actions. Only applicable to Windows; other platforms don’t have the agent.`
+    - Suggest: `Ngăn chặn tác nhân trình duyệt mặc định thực hiện bất kỳ hành động nào. Chỉ áp dụng cho Windows; các nền tảng khác không có tác nhân này.`
+    - 'User agent' is a different web concept. The newer policy-DisableDefaultBrowserAgent2 correctly says 'tác nhân trình duyệt mặc định'.
+- `policy-NoDefaultBookmarks` — `browser/browser/policies/policies-descriptions.ftl` — 'Recent Tags' was rendered as 'thẻ gần đây' (recent tabs).
+    - Current: `thẻ gần đây`
+    - Source: `Disable creation of the default bookmarks bundled with { -brand-short-name }, and the Smart Bookmarks (Most Visited, Recent Tags). Note: this policy is only effective if used before the first run of the profile.`
+    - Suggest: `nhãn gần đây`
+    - Elsewhere the locale translates tags as 'Nhãn'. 'thẻ' means tabs, which is a different feature.
+- `appearance-browser-icon-requirement` — `browser/browser/preferences/browserIcon.ftl` — The phrase 'bonus fox icons' is garbled into 'biểu tượng cáo nhận thêm'.
+    - Current: `các biểu tượng cáo nhận thêm`
+    - Source: `message: Complete and unlock bonus fox icons to personalize { -brand-short-name }.`
+    - Suggest: `các biểu tượng cáo bổ sung`
+    - 'cáo nhận thêm' does not parse. It looks like a broken edit of 'cáo' (fox) followed by stray words.
+- `permissions-site-camera-disable-label` — `browser/browser/preferences/permissions.ftl` — Spelling: 'tru cập' should be 'truy cập'.
+    - Current: `tru cập`
+    - Source: `label: Block new requests asking to access your camera`
+    - Suggest: `truy cập`
+    - A letter is missing.
+- `permissions-site-location-disable-label` — `browser/browser/preferences/permissions.ftl` — Spelling: 'tru cập' should be 'truy cập'.
+    - Current: `tru cập`
+    - Source: `label: Block new requests asking to access your location`
+    - Suggest: `truy cập`
+    - A letter is missing.
+- `permissions-site-microphone-disable-label` — `browser/browser/preferences/permissions.ftl` — Spelling: 'tru cập' should be 'truy cập'.
+    - Current: `tru cập`
+    - Source: `label: Block new requests asking to access your microphone`
+    - Suggest: `truy cập`
+    - A letter is missing.
+- `browser-containers-enabled-2` — `browser/browser/preferences/preferences.ftl` — Spelling: 'ngăng' should be 'ngăn'.
+    - Current: `ngăng chứa thẻ`
+    - Source: `accesskey: n label: Use Container Tabs`
+    - Suggest: `ngăn chứa thẻ`
+    - This is a typo of the locale's container term 'ngăn chứa'.
+- `content-blocking-fingerprinters` — `browser/browser/preferences/preferences.ftl` — The English gloss in parentheses is misspelled as 'Fingerprintng'.
+    - Current: `Fingerprintng`
+    - Source: `Fingerprinters`
+    - Suggest: `Fingerprinting`
+    - A letter is missing from the user-visible parenthetical.
+- `data-collection-link` — `browser/browser/preferences/preferences.ftl` — Spelling: 'riêng tự' should be 'riêng tư'.
+    - Current: `quyền riêng tự`
+    - Source: `View Privacy Notice`
+    - Suggest: `quyền riêng tư`
+    - Wrong tone mark on 'tư' in the Privacy Notice link.
+- `download-private-browsing-delete2` — `browser/browser/preferences/preferences.ftl` — The word 'bị' is doubled, which makes the sentence ungrammatical.
+    - Current: `khi bị cửa sổ bị đóng`
+    - Source: `accesskey: D label: Delete private window downloads on close`
+    - Suggest: `khi cửa sổ bị đóng`
+    - The first 'bị' is stray.
+- `sync-mobile-promo` — `browser/browser/preferences/preferences.ftl` — Spelling: 'đồng bị' should be 'đồng bộ'.
+    - Current: `đồng bị`
+    - Source: `Download Firefox for <img data-l10n-name="android-icon"/> <a data-l10n-name="android-link">Android</a> or <img data-l10n-name="ios-icon"/> <a data-l10n-name="ios-link">iOS</a> to sync with your mobile device.`
+    - Suggest: `đồng bộ`
+    - Typo in the word for 'sync'.
+- `update-application-heading` — `browser/browser/preferences/preferences.ftl` — Spelling: 'cải thiên' should be 'cải thiện'.
+    - Current: `cải thiên`
+    - Source: `description: Updates improve { -brand-short-name }’s speed, stability, and security. label: { -brand-short-name } updates`
+    - Suggest: `cải thiện`
+    - Wrong tone mark.
+- `delete-profile-autofill` — `browser/browser/profiles.ftl` — The noun 'Autofill data' is rendered as a verb phrase, 'autofill the data'.
+    - Current: `Tự động điền dữ liệu (địa chỉ, phương thức thanh toán)`
+    - Source: `Autofill data (addresses, payment methods)`
+    - Suggest: `Dữ liệu tự động điền (địa chỉ, phương thức thanh toán)`
+    - This is an item in the list of data that will be deleted. migrationWizard.ftl uses 'dữ liệu tự động điền' for the same term.
+- `edit-profile-page-avatar-selector-opener-button` — `browser/browser/profiles.ftl` — Spelling error: 'Chỉnnh' has a doubled 'n'.
+    - Current: `Chỉnnh sửa ảnh đại diện`
+    - Source: `title: Edit avatar`
+    - Suggest: `Chỉnh sửa ảnh đại diện`
+    - Typo.
+- `profiles-appmenu-callout-tour-subtitle` — `browser/browser/profiles.ftl` — The word 'vào' is duplicated.
+    - Current: `nhấp vào vào tên hồ sơ`
+    - Source: `In the ☰ menu, tap your profile name to spin up another, edit this one, or hop between your digital lives.`
+    - Suggest: `nhấp vào tên hồ sơ`
+    - Duplicated word.
+- `safeb-blocked-harmful-page-title` — `browser/browser/safebrowsing/blockedSite.ftl` — 'malware' is left in English, while this file translates it as 'phần mềm độc hại' everywhere else.
+    - Current: `có thể chứa malware`
+    - Source: `The site ahead may contain malware`
+    - Suggest: `có thể chứa phần mềm độc hại`
+    - This file uses 'phần mềm độc hại' consistently, for example in the malware short description and the learn-more strings.
+- `safeb-blocked-malware-page-error-desc-no-override-sumo` — `browser/browser/safebrowsing/blockedSite.ftl` — The passive marker 'được' is written twice.
+    - Current: `đã được <a data-l10n-name='error_desc_link'>được báo cáo`
+    - Source: `<span data-l10n-name='sitename'>{ $sitename }</span> has been <a data-l10n-name='error_desc_link'>reported as containing malicious software</a>.`
+    - Suggest: `đã được <a data-l10n-name='error_desc_link'>báo cáo`
+    - The repeated 'được' ('đã được được báo cáo') is ungrammatical.
+- `safeb-blocked-malware-page-error-desc-override-sumo` — `browser/browser/safebrowsing/blockedSite.ftl` — The passive marker 'được' is written twice.
+    - Current: `đã được <a data-l10n-name='error_desc_link'>được báo cáo`
+    - Source: `<span data-l10n-name='sitename'>{ $sitename }</span> has been <a data-l10n-name='error_desc_link'>reported as containing malicious software</a>. You can <a data-l10n-name='ignore_warning_link'>ignore the risk</a> and go…`
+    - Suggest: `đã được <a data-l10n-name='error_desc_link'>báo cáo`
+    - The repeated 'được' ('đã được được báo cáo') is ungrammatical.
+- `protections-blocking-cookies-unvisited` — `browser/browser/siteProtections.ftl` — The verb 'chặn' (blocked) is missing, so the title has no meaning.
+    - Current: `Đã cookie trang web chưa truy cập`
+    - Source: `title: Unvisited Site Cookies Blocked`
+    - Suggest: `Đã chặn cookie trang web chưa truy cập`
+    - en-US: 'Unvisited Site Cookies Blocked'. Every sibling string uses 'Đã chặn …'.
+- `search-tags` — `browser/browser/touchbar/touchbar.ftl` — 'Tags' was rendered as 'Thẻ', the word the locale uses for tabs.
+    - Current: `Thẻ`
+    - Source: `Tags`
+    - Suggest: `Nhãn`
+    - places.ftl translates bookmark tags as 'Nhãn'. 'Thẻ' is tabs, and this button sits right next to 'Thẻ đang mở' (Open Tabs).
+- `captivePortal.infoMessage3` — `browser/chrome/browser/browser.properties` — 'network' is translated as 'hệ thống' (system), while the locale uses 'mạng' for the same captive-portal message.
+    - Current: `đăng nhập vào hệ thống này`
+    - Source: `You must log in to this network before you can access the Internet.`
+    - Suggest: `Bạn phải đăng nhập vào mạng này trước khi có thể truy cập Internet.`
+    - netError.ftl renders this with 'đăng nhập vào mạng' (neterror-captive-portal). 'hệ thống' does not mean network.
+- `captivePortal.showLoginPage2` — `browser/chrome/browser/browser.properties` — 'network login page' is translated as 'system login page'. Elsewhere the locale uses 'Mở trang đăng nhập mạng'.
+    - Current: `Mở trang đăng nhập hệ thống`
+    - Source: `Open network login page`
+    - Suggest: `Mở trang đăng nhập mạng`
+    - netError.ftl neterror-open-portal-login-page-button uses 'Mở trang đăng nhập mạng' for the same button.
+- `about-debugging-network-location-form-invalid` — `devtools/client/aboutdebugging.ftl` — A stray word 'khác' ('other') is in the error message
+    - Current: `Máy chủ lưu trữ không hợp lệ khác`
+    - Source: `Invalid host “{ $host-value }”. The expected format is “hostname:portnumber”.`
+    - Suggest: `Máy chủ lưu trữ không hợp lệ`
+    - The en-US is 'Invalid host “…”'. The added 'khác' makes the message read 'invalid other host'.
+- `about-debugging-setup-network-troubleshoot` — `devtools/client/aboutdebugging.ftl` — The link text is truncated
+    - Current: `<a>Khắc phục sự</a>`
+    - Source: `Problems connecting via network location? <a>Troubleshoot</a>`
+    - Suggest: `<a>Khắc phục sự cố</a>`
+    - 'Khắc phục sự' is missing 'cố'. The USB variant of the same string reads 'Khắc phục sự cố'.
+- `player.animationEndDelayLabel` — `devtools/client/animationinspector.properties` — 'End delay' reads as the imperative 'End the delay'
+    - Current: `Kết thúc độ trễ:`
+    - Source: `End delay:`
+    - Suggest: `Độ trễ kết thúc:`
+    - This label names the endDelay value. The Vietnamese word order makes it a verb phrase.
+- `breakpointMenuItem.deleteAll2.label` — `devtools/client/debugger.properties` — Typo: 'tắt' instead of 'tất'
+    - Current: `Xóa tắt cả`
+    - Source: `Remove all`
+    - Suggest: `Xóa tất cả`
+    - 'tắt cả' is a misspelling of 'tất cả' (all).
+- `pauseButtonTooltip` — `devtools/client/debugger.properties` — Typo: 'dùng' (use) instead of 'dừng' (stop)
+    - Current: `Tạm dùng %S`
+    - Source: `Pause %S`
+    - Suggest: `Tạm dừng %S`
+    - As written, the tooltip says 'temporarily use' instead of 'pause'.
+- `markupView.custom.tooltiptext` — `devtools/client/inspector.properties` — The word order is garbled, so the meaning is unclear
+    - Current: `Hiển thị tùy chỉnh định nghĩa thành phần`
+    - Source: `Show custom element definition`
+    - Suggest: `Hiển thị định nghĩa phần tử tùy chỉnh`
+    - The en-US is 'Show custom element definition'. The Vietnamese reads 'Show customize the component definition'.
+- `netmonitor.requestBlockingMenu.removeAllBlockedUrls` — `devtools/client/netmonitor.properties` — Typo: 'tắt' instead of 'tất'
+    - Current: `Xóa tắt cả`
+    - Source: `Remove all`
+    - Suggest: `Xóa tất cả`
+    - This is a misspelling of 'tất cả' (all).
+- `ToolboxWebconsole.tooltip2` — `devtools/client/startup.properties` — Misspelled 'khiển'
+    - Current: `Bảng điều khiẻn web`
+    - Source: `Web Console (%S)`
+    - Suggest: `Bảng điều khiển web`
+    - The tone mark is misplaced or wrong. The word is 'khiển'.
+- `whypaused-event-breakpoint` — `devtools/shared/debugger-paused-reasons.ftl` — Stray word 'trên' before 'do'
+    - Current: `trên do`
+    - Source: `Paused on event breakpoint`
+    - Suggest: `do`
+    - 'Đã tạm dừng trên do' is ungrammatical. The sibling strings use 'Đã tạm dừng do …'.
+- `serverReceiveOOBBody` — `devtools/shared/debugger.properties` — Typo 'toekn'
+    - Current: `toekn`
+    - Source: `The client should be displaying a token value.  Enter that token value here to complete authentication with this client.`
+    - Suggest: `token`
+    - This is a misspelling of 'token', which is spelled correctly earlier in the same sentence.
+- `messageRepeats.tooltip2` — `devtools/shared/webconsole.properties` — 'lập lại' is a misspelling of 'lặp lại' (repeat)
+    - Current: `#1 lập lại`
+    - Source: `#1 repeat;#1 repeats`
+    - Suggest: `#1 lần lặp lại`
+    - The tree uses 'lặp lại' for repeats, for example in animationinspector. 'lập' is the wrong word.
+- `addon-detail-rating-label` — `toolkit/toolkit/about/aboutAddons.ftl` — Spelling error: 'Xêp' should be 'Xếp'.
+    - Current: `Xêp hạng`
+    - Source: `Rating`
+    - Suggest: `Xếp hạng`
+    - The tone mark is wrong. Elsewhere in the same file the word is spelled 'Xếp hạng'.
+- `discopane-notice-recommendations2` — `toolkit/toolkit/about/aboutAddons.ftl` — The grammar is broken: 'khác' comes before the noun it modifies, giving 'dựa trên khác tiện ích mở rộng'.
+    - Current: `Nó dựa trên khác         tiện ích mở rộng mà bạn đã cài đặt`
+    - Source: `message: Some of these recommendations are personalized. They are based on other extensions you’ve installed, profile preferences, and usage statistics.`
+    - Suggest: `Chúng dựa trên các tiện ích mở rộng khác mà bạn đã cài đặt`
+    - In Vietnamese, 'khác' follows the noun. As written the sentence is ungrammatical.
+- `shortcuts-modifier-mac` — `toolkit/toolkit/about/aboutAddons.ftl` — A space is missing between 'Bao gồm' and 'Ctrl'.
+    - Current: `Bao gồmCtrl`
+    - Source: `Include Ctrl, Alt, or ⌘`
+    - Suggest: `Bao gồm Ctrl`
+    - The two words run together in the visible text.
+- `about-glean-label-for-log-pings` — `toolkit/toolkit/about/aboutGlean.ftl` — The word 'cần' is duplicated.
+    - Current: `Bạn sẽ cần phải cần`
+    - Source: `(Optional. Check the preceding box if you want pings to also be logged when they are submitted. You will additionally need to <a data-l10n-name="enable-logging-link">enable logging</a>.)`
+    - Suggest: `Bạn sẽ cần phải`
+    - This is a typo that makes the sentence ungrammatical.
+- `about-logging-preset-webcodecs-description` — `toolkit/toolkit/about/aboutLogging.ftl` — Spelling error: 'chuẩn đoán' should be 'chẩn đoán'.
+    - Current: `chuẩn đoán`
+    - Source: `Log modules to diagnose issues with WebCodecs audio/video decoders and encoders, and image decoders`
+    - Suggest: `chẩn đoán`
+    - The correct word for diagnose is 'chẩn đoán', and every other preset description in the file uses it.
+- `about-pdf-dropzone-privacy-hint` — `toolkit/toolkit/about/aboutPDF.ftl` — The syllable 'tin' is duplicated.
+    - Current: `Các tập tin tin được`
+    - Source: `Files stay private on your device.`
+    - Suggest: `Các tập tin được`
+    - This is a typo in user-facing text.
+- `about-telemetry-process` — `toolkit/toolkit/about/aboutTelemetry.ftl` — The word order follows English: the modifier comes before 'tiến trình'.
+    - Current: `{ $process } tiến trình`
+    - Source: `{ $process } process`
+    - Suggest: `Tiến trình { $process }`
+    - In Vietnamese the head noun comes first ('tiến trình nội dung'). As written it reads as '<type> processes'.
+- `about-telemetry-show-archived-ping-data` — `toolkit/toolkit/about/aboutTelemetry.ftl` — Diacritic error: 'đă' should be 'đã'.
+    - Current: `đă lưu trữ`
+    - Source: `Archived ping data`
+    - Suggest: `đã lưu trữ`
+    - The word has the wrong tone mark.
+- `third-party-intro` — `toolkit/toolkit/about/aboutThirdParty.ftl` — Misspelling 'moudle', repeated several times.
+    - Current: `Trang này hiển thị các moudle của bên thứ ba`
+    - Source: `This page shows the third-party modules which were injected into your { -brand-short-name }. Any module that is not signed by Microsoft or { -vendor-short-name } is considered to be a third-party module.`
+    - Suggest: `Trang này hiển thị các module của bên thứ ba`
+    - This is the same typo, repeated throughout the paragraph.
+- `third-party-message-empty` — `toolkit/toolkit/about/aboutThirdParty.ftl` — Misspelling: 'moudle' should be 'module'.
+    - Current: `Không có moudle`
+    - Source: `No third-party modules were detected.`
+    - Suggest: `Không có module`
+    - This is a typo.
+- `third-party-section-title` — `toolkit/toolkit/about/aboutThirdParty.ftl` — Misspelling: 'moudle' should be 'module'.
+    - Current: `moudle`
+    - Source: `List of third-party modules in { -brand-short-name }`
+    - Suggest: `module`
+    - This is a typo. The same file spells 'module' correctly elsewhere.
+- `-mdn-brand-name` — `toolkit/toolkit/branding/brandings.ftl` — The brand 'MDN Web Docs' is translated
+    - Current: `Tài liệu Web MDN`
+    - Source: `MDN Web Docs`
+    - Suggest: `MDN Web Docs`
+    - This term is in the block whose header says these names 'must be treated as a brand' and cannot be translated.
+
+### D. Terminology, register & consistency
+
+- `helpus-referrals2` — `browser/browser/aboutDialog.ftl` — Typo: 'Quyên gói' instead of 'Quyên góp' (donate)
+    - Current: `Quyên gói tài chính`
+    - Source: `Want to help? <label data-l10n-name="helpus-donateLink">Make a donation</label>, <label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>, or <label data-l10n-name="helpus-getInvolvedLink">g…`
+    - Suggest: `Quyên góp tài chính`
+    - 'Quyên gói' isn't a word. The sibling string 'helpus' correctly says 'Quyên góp tài chính'.
+- `about-private-browsing-not-private` — `browser/browser/aboutPrivateBrowsing.ftl` — The word 'riêng tư' appears twice in a row
+    - Current: `cửa sổ riêng tư riêng tư`
+    - Source: `You are currently not in a private window.`
+    - Suggest: `cửa sổ riêng tư`
+    - en-US is 'You are currently not in a private window.' The repeated word is a copy error.
+- `welcome-back-page-info-link` — `browser/browser/aboutSessionRestore.ftl` — Passive marker missing: the sentence says the add-ons 'have deleted' rather than 'have been removed'
+    - Current: `Tiện ích mở rộng và tùy biến của bạn đã xóa`
+    - Source: `Your add-ons and customizations have been removed and your browser settings have been restored to their defaults. If this didn’t fix your issue, <a data-l10n-name="link-more">learn more about what you can do.</a>`
+    - Suggest: `Tiện ích mở rộng và tùy biến của bạn đã bị xóa`
+    - Without 'bị', the add-ons become the ones doing the deleting. en-US: 'Your add-ons and customizations have been removed'.
+- `crashed-report-sent` — `browser/browser/aboutTabCrashed.ftl` — Misspelling 'trở lên' for 'trở nên' (become)
+    - Current: `trở lên tốt hơn`
+    - Source: `Crash report already submitted; thank you for helping make { -brand-short-name } better!`
+    - Suggest: `trở nên tốt hơn`
+    - 'trở nên' means 'become'. 'trở lên' is a common error.
+- `crashed-request-help-message` — `browser/browser/aboutTabCrashed.ftl` — Common misspelling 'chuẩn đoán' for 'chẩn đoán' (diagnose)
+    - Current: `chuẩn đoán`
+    - Source: `Crash reports help us diagnose problems and make { -brand-short-name } better.`
+    - Suggest: `chẩn đoán`
+    - The standard spelling of 'diagnose' is 'chẩn đoán'.
+- `crashed-restore-all-button` — `browser/browser/aboutTabCrashed.ftl` — Spelling: 'toàn bổ' instead of 'toàn bộ'
+    - Current: `toàn bổ`
+    - Source: `Restore All Crashed Tabs`
+    - Suggest: `toàn bộ`
+    - Wrong tone mark. 'toàn bộ' means 'all'.
+- `account-multiple-tabs-arriving-from-multiple-devices` — `browser/browser/accounts.ftl` — The noun 'thẻ' (tabs) is missing after the count
+    - Current: `{ $tabCount } đã tới từ thiết bị đã kết nối của bạn`
+    - Source: `{$tabCount ->} [one] { $tabCount } tab has arrived from your connected devices [other] { $tabCount } tabs have arrived from your connected devices`
+    - Suggest: `{ $tabCount } thẻ đã tới từ các thiết bị đã kết nối của bạn`
+    - As written it reads 'N have arrived from your connected device', with no noun. The sibling strings include 'thẻ'.
+- `identity-description-active-loaded-insecure` — `browser/browser/browser.ftl` — 'etc.' was written as 'vâng vâng' ('yes yes') instead of 'vân vân' / 'v.v.'
+    - Current: `vâng vâng`
+    - Source: `Information you share with this site could be viewed by others (like passwords, messages, credit cards, etc.).`
+    - Suggest: `v.v.`
+    - The Vietnamese for 'etc.' is 'vân vân' (v.v.). 'vâng vâng' means 'yes, yes'.
+- `identity-passive-loaded` — `browser/browser/browser.ftl` — Typo: 'thành phân' instead of 'thành phần' (parts)
+    - Current: `thành phân`
+    - Source: `Parts of this page are not secure (such as images).`
+    - Suggest: `thành phần`
+    - Missing tone mark changes the word. 'thành phần' means components/parts.
+- `quickactions-addons` — `browser/browser/browser.ftl` — Typo: 'tiện tích' instead of 'tiện ích'
+    - Current: `Xem tiện tích`
+    - Source: `View add-ons`
+    - Suggest: `Xem tiện ích`
+    - 'tiện tích' is not a word. The term used everywhere else is 'tiện ích'.
+- `main-context-menu-forward-2` — `browser/browser/browserContext.ftl` — The 'Forward' button label is the non-word 'Tiếc tục'
+    - Current: `Tiếc tục`
+    - Source: `accesskey: F aria-label: Forward tooltiptext: Go forward one page ({ $shortcut })`
+    - Suggest: `Tiến`
+    - 'Tiếc tục' is a misspelling of 'Tiếp tục' (continue), which is the wrong word anyway. The macOS item and customkeys use 'Tiến' for Forward. This label also feeds toolbar-button-forward-2.
+- `main-context-menu-forward-3` — `browser/browser/browserContext.ftl` — The 'Forward' aria-label is the non-word 'Tiếc tục'
+    - Current: `Tiếc tục`
+    - Source: `aria-label: Forward tooltiptext: Go forward one page ({ $shortcut })`
+    - Suggest: `Tiến`
+    - Same misspelling. Screen readers will read out a non-word.
+- `toolbar-button-forward-3` — `browser/browser/browserContext.ftl` — The 'Forward' toolbar label is the non-word 'Tiếc tục'
+    - Current: `Tiếc tục`
+    - Source: `label: Forward`
+    - Suggest: `Tiến`
+    - Same misspelling as main-context-menu-forward-2. 'Tiến' is the established term.
+- `crashed-subframe-message` — `browser/browser/contentCrash.ftl` — Misspelling 'bị vớ' (should mean 'crashed')
+    - Current: `đã bị vớ`
+    - Source: `<strong>Part of this page crashed.</strong> To let { -brand-product-name } know about this issue and get it fixed faster, please submit a report.`
+    - Suggest: `đã bị lỗi`
+    - 'vớ' means 'sock'. The matching .title string uses 'đã bị lỗi'.
+- `default-browser-guidance-notification-body-instruction-win10` — `browser/browser/defaultBrowserNotification.ftl` — `default-browser-guidance-notification-body-instruction-win10` quotes “Trình duyệt Web” but the string it names, `desktop-entry-generic-name`, reads “Trình duyệt web”
+    - Current: `Bước 1: Đi tới Cài đặt > Ứng dụng mặc định Bước 2: Cuộn xuống đến “Trình duyệt Web” Bước 3: Chọn { -brand-short-name }`
+    - Source: `Step 1: Go to Settings > Default apps Step 2: Scroll down to “Web browser” Step 3: Select and choose { -brand-short-name }`
+    - Suggest: `Trình duyệt web`
+    - In the source this string quotes “Web browser”, which is exactly the value of `desktop-entry-generic-name` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `splitview-onboarding-callout-subtitle-1` — `browser/browser/featureCallout.ftl` — `splitview-onboarding-callout-subtitle-1` quotes “Chế độ xem cửa sổ” but the string it names, `customkeys-view-add-split-view`, reads “Chế độ chia cửa sổ”
+    - Current: `Nhấp chuột phải vào thẻ này và chọn “Chế độ xem cửa sổ” để xem hai thẻ cùng một lúc.`
+    - Source: `Right-click this tab and choose “Add Split View” to see two tabs at once.`
+    - Suggest: `Chế độ chia cửa sổ`
+    - In the source this string quotes “Add Split View”, which is exactly the value of `customkeys-view-add-split-view` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `firefox-relay-get-unlimited-masks` — `browser/browser/firefoxRelay.ftl` — Typo: 'Muản lý' instead of 'Quản lý' (Manage)
+    - Current: `Muản lý mặt nạ`
+    - Source: `accesskey: M label: Manage masks`
+    - Suggest: `Quản lý mặt nạ`
+    - 'Muản' is not a word.
+- `firefoxview-tabpickup-password-locked-description-2` — `browser/browser/firefoxView.ftl` — Typo: 'ther' instead of 'thẻ'
+    - Current: `các ther`
+    - Source: `For your privacy, synced tabs are protected. Enter your { -brand-short-name } primary password to see tabs from your other devices.`
+    - Suggest: `các thẻ`
+    - Keyboard slip for 'thẻ' (tabs).
+- `ip-protection-bandwidth-left-this-month-gb` — `browser/browser/ipProtection.ftl` — Typo: 'tổng só' instead of 'tổng số'
+    - Current: `tổng só`
+    - Source: `{ $usageLeft } GB of { $maxUsage } GB left this month`
+    - Suggest: `tổng số`
+    - Wrong diacritic. The sibling strings use 'tổng số'.
+- `ip-protection-site-rule-duplicate-error` — `browser/browser/ipProtection.ftl` — Typo: 'Trạng' instead of 'Trang' (site/page)
+    - Current: `Trạng này`
+    - Source: `This site already has a rule.`
+    - Suggest: `Trang này`
+    - 'Trạng' is a different word. The error is about the website already having a rule.
+- `migration-chrome-windows-password-import-step3` — `browser/browser/migrationWizard.ftl` — `migration-chrome-windows-password-import-step3` quotes “Tải tệp xuống” but the string it names, `downloadFile.label`, reads “Tải tập tin”
+    - Current: `Chọn “Tải tệp xuống” và lưu vào thiết bị của bạn.`
+    - Source: `Choose “Download file” and save it to your device.`
+    - Suggest: `Tải tập tin`
+    - In the source this string quotes “Download file”, which is exactly the value of `downloadFile.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `windows-10-eos-challenger-callout-title` — `browser/browser/newtab/asrouter.ftl` — Typo: 'điểm nhắn' should be 'điểm nhấn'.
+    - Current: `Đó chính là điểm nhắn.`
+    - Source: `{ -brand-product-name } isn’t preloaded like other Big Tech browsers. That’s the point.`
+    - Suggest: `Đó chính là điểm nhấn.`
+    - 'điểm nhấn' (the point/highlight) is what is meant. 'nhắn' means to send a message.
+- `newtab-carousel-play` — `browser/browser/newtab/newtab.ftl` — Spelling error: 'Tiêp' should be 'Tiếp'.
+    - Current: `Tiêp tục tự động phát`
+    - Source: `aria-label: Resume autoplay`
+    - Suggest: `Tiếp tục tự động phát`
+    - The accent is missing on 'Tiếp'.
+- `newtab-topic-selection-subtitle` — `browser/browser/newtab/newtab.ftl` — Ungrammatical double classifier 'Các người chuyên gia'.
+    - Current: `Các người chuyên gia giám tuyển`
+    - Source: `Choose two or more topics. Our expert curators prioritize stories tailored to your interests. Update anytime.`
+    - Suggest: `Các chuyên gia giám tuyển`
+    - 'người' is redundant before 'chuyên gia' after 'Các', which makes the phrase ungrammatical.
+- `newtab-widget-section-show-less` — `browser/browser/newtab/newtab.ftl` — Typo: 'ích' should be 'ít' (fewer).
+    - Current: `Hiện ích widget hơn`
+    - Source: `label: Show fewer widgets`
+    - Suggest: `Hiện ít widget hơn`
+    - 'Show fewer widgets' needs 'ít'. 'ích' is a different word and the label reads as garbled.
+- `smartwindow-existing-user-fx-tou-body` — `browser/browser/newtab/onboarding.ftl` — Typo: 'diều khoản' should be 'điều khoản'.
+    - Current: `diều khoản sử dụng`
+    - Source: `To use { -smart-window-brand-name }, please accept the <a data-l10n-name="terms_of_use">Terms of Use</a> and updated <a data-l10n-name="privacy_notice">Privacy Notice</a>.`
+    - Suggest: `điều khoản sử dụng`
+    - 'd' was typed in place of 'đ'.
+- `smartwindow-switcher-callout` — `browser/browser/newtab/onboarding.ftl` — Typo: 'thông mình' should be 'thông minh'.
+    - Current: `cửa sổ thông mình`
+    - Source: `Switch between Smart and Classic Windows anytime.`
+    - Suggest: `cửa sổ thông minh`
+    - Misspelling of 'thông minh' (smart).
+- `policy-DisableRemoteSettingsAndAcceptSecurityConsequences` — `browser/browser/policies/policies-descriptions.ftl` — Typo: 'tự xa' should be 'từ xa' (remote).
+    - Current: `cài đặt tự xa`
+    - Source: `Disable remote settings.`
+    - Suggest: `cài đặt từ xa`
+    - 'từ xa' means remote. 'tự xa' is not a word.
+- `policy-SkipTermsOfUse2` — `browser/browser/policies/policies-descriptions.ftl` — Typo: 'diều khoản' should be 'điều khoản'.
+    - Current: `diều khoản sử dụng thay mặt`
+    - Source: `Do not display the Terms of Use and Privacy Notice upon startup. You represent that you accept and have the authority to accept the Terms of Use on behalf of all individuals to whom you provide access to this browser.`
+    - Suggest: `điều khoản sử dụng thay mặt`
+    - 'd' was typed in place of 'đ'. The first mention in the same string is spelled correctly.
+- `httpsonly-radio-enabled-pbm` — `browser/browser/preferences/preferences.ftl` — The feature name 'HTTPS-Only Mode' loses its 'Only' and becomes 'HTTPS mode'.
+    - Current: `Chỉ kích hoạt chế độ HTTPS trong các cửa sổ riêng tư`
+    - Source: `label: Enable HTTPS-Only Mode in private windows only`
+    - Suggest: `Chỉ kích hoạt chế độ chỉ HTTPS trong các cửa sổ riêng tư`
+    - Every sibling string uses 'chế độ chỉ HTTPS'. Here 'Chỉ' was moved to the front as 'only enable', so the feature name no longer matches.
+- `protections-popup-footer-protection-label-custom` — `browser/browser/protectionsPanel.ftl` — The 'Custom' ETP level is 'Tùy chọn' here but 'Tùy chỉnh' in Settings.
+    - Current: `Tùy chọn`
+    - Source: `(value): Custom label: Custom`
+    - Suggest: `Tùy chỉnh`
+    - preferences.ftl names the same level 'Tùy chỉnh' (enhanced-tracking-protection-setting-custom). The panel footer should match it, and 'Tùy chọn' means 'Options'.
+- `refresh-profile` — `browser/browser/safeMode.ftl` — 'Refresh Firefox' is 'Cài đặt lại' ('Reinstall') here but 'Làm mới' everywhere else.
+    - Current: `Cài đặt lại { -brand-short-name }`
+    - Source: `label: Refresh { -brand-short-name }`
+    - Suggest: `Làm mới { -brand-short-name }`
+    - The very next string in this dialog says 'làm mới { -brand-short-name }', as do resetProfile.ftl, browser.ftl and asrouter.ftl. 'Cài đặt lại' suggests a reinstall.
+- `sidebar-pins-promo-text` — `browser/browser/sidebar.ftl` — The English word 'tab' is left in, although the locale always uses 'thẻ'.
+    - Current: `Kéo các tab quan trọng vào đây`
+    - Source: `Drag important tabs here to keep them within reach`
+    - Suggest: `Kéo các thẻ quan trọng vào đây`
+    - 'Thẻ' is used for tab throughout this file and the tree.
+- `about-debugging-multiprocess-toolbox-description` — `devtools/client/aboutdebugging.ftl` — 'Process' is rendered as 'quy trình' (procedure)
+    - Current: `Quy trình chính và quy trình nội dung`
+    - Source: `Main Process and Content Processes for the target browser`
+    - Suggest: `Tiến trình chính và tiến trình nội dung`
+    - The same file and the rest of devtools use 'tiến trình' for an OS process. 'quy trình' means a workflow or procedure.
+- `inspector.browserStyles.label` — `devtools/client/inspector.properties` — 'Styles' is rendered as 'Mẫu' (template)
+    - Current: `Mẫu trình duyệt`
+    - Source: `Browser Styles`
+    - Suggest: `Kiểu của trình duyệt`
+    - The nearby filter strings use 'kiểu' for styles, and toolbox-options uses 'Hiển thị kiểu của trình duyệt'. 'Mẫu' means template or sample.
+- `heapview.field.count` — `devtools/client/memory.properties` — The 'Count' column is labelled 'Tổng số' (total), so it cannot be told apart from 'Total Count'
+    - Current: `Tổng số`
+    - Source: `Count`
+    - Suggest: `Số lượng`
+    - Count excludes subgroups and Total Count includes them. 'Tổng số' and 'Tổng cộng' both mean total.
+- `toolbox-local-mode-notice` — `devtools/client/toolbox.ftl` — `toolbox-local-mode-notice` quotes “Local Mode” but the string it names, `options-local-mode-label`, reads “Chế độ cục bộ (local mode)”
+    - Current: `Document này cũng có thể được tải từ “{ $url }” bằng “Local Mode” của DevTools, có thể bật trong bảng cài đặt.`
+    - Source: `This document could also be loaded from “{ $url }” using DevTools “Local Mode”, which can be enabled in the settings panel.`
+    - Suggest: `Chế độ cục bộ (local mode)`
+    - In the source this string quotes “Local Mode”, which is exactly the value of `options-local-mode-label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `toolbox.debugTargetInfo.targetType.process` — `devtools/client/toolbox.properties` — 'Process' is rendered as 'Quá trình' instead of the locale's 'Tiến trình'
+    - Current: `Quá trình`
+    - Source: `Process`
+    - Suggest: `Tiến trình`
+    - Everywhere else, including the same file ('đa tiến trình', 'tiến trình chính'), the locale uses 'tiến trình' for an OS process.
+- `rule.togglePseudo.tooltip` — `devtools/shared/styleinspector.properties` — 'Pseudo-classes' is rendered as 'lớp giả định' (hypothetical classes)
+    - Current: `Chuyển đổi các lớp giả định`
+    - Source: `Toggle pseudo-classes`
+    - Suggest: `Bật/tắt các lớp giả`
+    - The identical tooltip in inspector.properties uses 'lớp giả'. 'giả định' means assumed or hypothetical.
+- `webconsole.message.commands.blockedURL` — `devtools/shared/webconsole.properties` — 'Blocked' is rendered as 'khóa' (locked)
+    - Current: `hiện đã bị khóa`
+    - Source: `Requests to URL containing “%S” are now blocked`
+    - Suggest: `hiện đã bị chặn`
+    - Request blocking is 'chặn' everywhere else, including the :block usage text and the netmonitor strings.
+- `crashreporter-comment-prompt` — `toolkit/crashreporter/crashreporter.ftl` — Spelling error: 'sễ' should be 'sẽ'
+    - Current: `sễ`
+    - Source: `Add a comment (comments are publicly visible)`
+    - Suggest: `sẽ`
+    - Wrong tone mark.
+- `about-webauthn-info-subsection-title` — `toolkit/toolkit/about/aboutWebauthn.ftl` — 'Authenticator info' is rendered with the same term the page uses for 'credentials'.
+    - Current: `Thông tin xác thực`
+    - Source: `Authenticator info`
+    - Suggest: `Thông tin trình xác thực`
+    - 'Thông tin xác thực' is also the page's term for credentials, for example in about-webauthn-credential-list-subsection-title. That makes the two sections hard to tell apart.
+- `about-webrtc-local-sdp-heading` — `toolkit/toolkit/about/aboutWebrtc.ftl` — 'Local' is rendered as 'nội bộ' (internal) in the SDP headings, but as 'Cục bộ' elsewhere on the same page.
+    - Current: `SDP nội bộ`
+    - Source: `Local SDP`
+    - Suggest: `SDP cục bộ`
+    - about-webrtc-type-local uses 'Cục bộ'. 'nội bộ' means internal, which is a different concept from local.
+- `about-config-search-input1` — `toolkit/toolkit/about/config.ftl` — 'preference' is rendered as 'tùy chỉnh', which this file uses for 'custom'. The placeholder reads as 'search custom name'.
+    - Current: `Tìm kiếm tên tùy chỉnh`
+    - Source: `placeholder: Search preference name`
+    - Suggest: `Tìm kiếm tên tùy chọn`
+    - The rest of the file uses 'tùy chọn' for preference and 'tùy chỉnh' for custom (see about-config-pref-accessible-value-custom).
+- `browser-utils-url-scheme` — `toolkit/toolkit/global/browser-utils.ftl` — English word order kept: the modifier comes before the noun
+    - Current: `{ $scheme } tài nguyên`
+    - Source: `{ $scheme } resource`
+    - Suggest: `Tài nguyên { $scheme }`
+    - In Vietnamese the noun comes before its modifier, so the current text reads as 'jar: resource' in English order.
+- `webext-perms-description-tabHide` — `toolkit/toolkit/global/extensionPermissions.ftl` — Spelling error: 'hiển thỉ' should be 'hiển thị'
+    - Current: `hiển thỉ`
+    - Source: `Hide and show browser tabs`
+    - Suggest: `hiển thị`
+    - Wrong tone mark.
+- `videocontrols-error-no-source` — `toolkit/toolkit/global/videocontrols.ftl` — Spelling error: 'định đạng' should be 'định dạng'
+    - Current: `định đạng`
+    - Source: `No video with supported format and MIME type found.`
+    - Suggest: `định dạng`
+    - Typo.
+- `sec-error-expired-issuer-certificate` — `toolkit/toolkit/neterror/nsserrors.ftl` — Spelling error: 'Chúng nhận' should be 'Chứng nhận'
+    - Current: `Chúng nhận`
+    - Source: `The certificate issuer’s certificate has expired. Check your system date and time.`
+    - Suggest: `Chứng nhận`
+    - Typo.
+- `ssl-error-decompression-failure-alert` — `toolkit/toolkit/neterror/nsserrors.ftl` — 'SSL' is misspelled as 'SLL'
+    - Current: `hồ sơ SLL`
+    - Source: `SSL peer was unable to successfully decompress an SSL record it received.`
+    - Suggest: `hồ sơ SSL`
+    - en-US has 'an SSL record'.
+- `ssl-error-rx-malformed-handshake` — `toolkit/toolkit/neterror/nsserrors.ftl` — Misspelled protocol term 'Handhshake'
+    - Current: `Handhshake`
+    - Source: `SSL received a malformed Handshake record.`
+    - Suggest: `Handshake`
+    - en-US has 'Handshake'.
+
+### E. Typography, punctuation & spacing
+
+- `ai-window-manage-memories-header` — `browser/browser/aiFeatures.ftl` — A stray period splits 'while you use { Smart Window }' into two broken sentences
+    - Current: `trong khi bạn sử dụng. { -smart-window-brand-name }, vì vậy,`
+    - Source: `description: Memories are stored locally on this device to help protect your privacy. They refresh a few times a day while you use { -smart-window-brand-name }, so recent activity may take time to be reflected. heading:…`
+    - Suggest: `trong khi bạn sử dụng { -smart-window-brand-name }, vì vậy,`
+    - en-US: 'They refresh a few times a day while you use { -smart-window-brand-name }, so…'. The period cuts the brand name away from its verb.
+- `default-browser-agent-task-description` — `browser/browser/backgroundtasks/defaultagent.ftl` — There is a stray space before the final period.
+    - Current: `{ -brand-short-name } .`
+    - Source: `The Default Browser Agent task checks when the default changes from { -brand-short-name } to another browser. If the change happens under suspicious circumstances, it will prompt users to change back to { -brand-short-n…`
+    - Suggest: `{ -brand-short-name }.`
+    - Vietnamese does not put a space before a period. The space appears in the text the user reads.
+- `launch-on-login-autostart-infobar-message` — `browser/browser/newtab/asrouter.ftl` — There is a double space after the brand name in the visible text.
+    - Current: `{ -brand-short-name }  bây giờ`
+    - Source: `{ -brand-short-name } now starts up when you sign in to Windows. You can always change this later in settings.`
+    - Suggest: `{ -brand-short-name } bây giờ`
+    - The extra space is part of the rendered infobar text.
+- `site-data-settings-window` — `browser/browser/preferences/siteDataSettings.ftl` — The window title has a double space between 'cookie' and 'và'.
+    - Current: `cookie  và`
+    - Source: `title: Manage Cookies and Site Data`
+    - Suggest: `cookie và`
+    - The double space is visible in the window title.
+- `tabbrowser-confirm-close-all-duplicate-tabs-text` — `browser/browser/tabbrowser.ftl` — No space after the full stop between the two sentences.
+    - Current: `trong cửa sổ này.Thẻ hoạt động`
+    - Source: `We’ll close duplicate tabs in this window. The last active tab will stay open.`
+    - Suggest: `trong cửa sổ này. Thẻ hoạt động`
+    - Users see this as visible text, and the sentences run together.
+- `dialogTitleEdit` — `browser/chrome/browser/places/bookmarkProperties.properties` — Straight quotes are used, while the en-US and the rest of this file use curly quotes.
+    - Current: `"%S"`
+    - Source: `Properties for “%S”`
+    - Suggest: `“%S”`
+    - dialogTitleEditBookmark in the same file uses “%S”.
+- `styleeditor-no-stylesheet-tip` — `devtools/client/styleeditor.ftl` — A space is missing before the link text
+    - Current: `thích<a`
+    - Source: `Perhaps you’d like to <a data-l10n-name="append-new-stylesheet">append a new style sheet</a>?`
+    - Suggest: `thích <a`
+    - The words 'thích' and 'gắn' run together in the visible text.
+- `accessibility.text.label.issue.glyph` — `devtools/shared/accessibility.properties` — The element name mglyph is misspelled
+    - Current: `mglylyph`
+    - Source: `Use “alt” attribute to label “mglyph” elements.`
+    - Suggest: `mglyph`
+    - This is a code identifier for the MathML element, and it must match exactly.
+- `webconsole-commands-usage-block` — `devtools/shared/webconsole-commands.ftl` — The argument identifier URL_STRING is altered to URLSTRING
+    - Current: `tham số URLSTRING`
+    - Source: `:block URL_STRING  Start blocking network requests    It accepts only one URL_STRING argument, an unquoted string which will be used to block all requests whose URL includes this string.   Use :unblock or the Network Mo…`
+    - Suggest: `tham số URL_STRING`
+    - The usage line above shows ':block URL_STRING', so the identifier in the description should match it exactly.
+- `about-webauthn-auth-info-false` — `toolkit/toolkit/about/aboutWebauthn.ftl` — 'False' is translated even though the developer comment says it should not be.
+    - Current: `Sai`
+    - Source: `False`
+    - Suggest: `False`
+    - The comment reads: 'False should not be translated.'
+- `about-webauthn-auth-info-true` — `toolkit/toolkit/about/aboutWebauthn.ftl` — 'True' is translated even though the developer comment says it should not be.
+    - Current: `Đúng`
+    - Source: `True`
+    - Suggest: `True`
+    - The comment reads: 'True should not be translated.'
+- `about-webauthn-auth-option-false` — `toolkit/toolkit/about/aboutWebauthn.ftl` — 'False' is translated even though the developer comment says it should not be.
+    - Current: `Sai`
+    - Source: `False`
+    - Suggest: `False`
+    - The comment reads: 'False should not be translated.'
+- `about-webauthn-auth-option-true` — `toolkit/toolkit/about/aboutWebauthn.ftl` — 'True' is translated even though the developer comment says it should not be.
+    - Current: `Đúng`
+    - Source: `True`
+    - Suggest: `True`
+    - The comment reads: 'True should not be translated.'
+- `experimental-features-newtab-widget-lists-and-timer-description` — `toolkit/toolkit/firefoxlabs/features.ftl` — 'tab' is left in English while the locale uses 'thẻ' everywhere else
+    - Current: `khi mở một tab mới`
+    - Source: `Keep your to-do list top-of-mind when you open a new tab. From packing lists to shopping lists, make your plans in { -brand-product-name }. Set a timer to keep you focused, nudge you to stay on track, or remind you to r…`
+    - Suggest: `khi mở một thẻ mới`
+    - The sibling widget-lists-description and the whole tree say 'thẻ mới'.
+- `btp-warning-tracker-purged` — `toolkit/toolkit/global/antiTracking.ftl` — Double space before the hostname in visible text
+    - Current: `Trạng thái của  “`
+    - Source: `The state of “{ $siteHost }” was recently purged because it was detected as a bounce tracker.`
+    - Suggest: `Trạng thái của “`
+    - Two spaces where one is meant, in a user-visible message.
+- `user-context-color-violet` — `toolkit/toolkit/global/contextual-identity.ftl` — Violet and Purple have the same label, so the two swatches look identical
+    - Current: `Tím`
+    - Source: `label: Violet`
+    - Suggest: `Tím hồng`
+    - user-context-color-purple is also 'Tím', which leaves two identical labels in the colour picker.
+- `neterror-proxy-connect-failure-contact-admin` — `toolkit/toolkit/neterror/netError.ftl` — Double space between words in visible text
+    - Current: `proxy  vẫn`
+    - Source: `Contact your network administrator to make sure the proxy server is working.`
+    - Suggest: `proxy vẫn`
+    - Two spaces where one is meant, in a user-visible message.
+- `webauthn-uv-blocked-prompt` — `toolkit/toolkit/webauthnDialog.ftl` — Double space before the hostname in visible text
+    - Current: `trên  { $hostname }`
+    - Source: `User verification failed on { $hostname }. There were too many failed attempts and the built-in user verification method has been blocked.`
+    - Suggest: `trên { $hostname }`
+    - Two spaces where one is meant, in a user-visible message.
+
+---
+
+## 4. Appendix
+
+### Dismissed by hand (0)
+
+_Nothing dismissed._
+
+_One line each in `locales/vi/dismissed.txt`. Delete the line and the finding returns._
+
+### Suppressed as false positives (0)
+
+_No suppression rules have matched._
+
+### Withdrawn to date (0)
+
+_Nothing withdrawn._
+
+_A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
+
+### Fixed to date (0)
+
+_Nothing fixed yet._

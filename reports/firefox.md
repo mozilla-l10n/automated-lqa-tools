@@ -1,8 +1,8 @@
 # Firefox (desktop + shared toolkit/dom strings) — l10n QA
 
-- **Generated:** 2026-10-12
-- **Locales tracked:** 20 (20 with recorded state)
-- **Findings:** 6,429 raised, 2,115 fixed (32%), 3,675 open
+- **Generated:** 2026-10-16
+- **Locales tracked:** 29 (29 with recorded state)
+- **Findings:** 8,708 raised, 2,115 fixed (24%), 5,954 open
 - **Closed by a person:** 19 dismissed, 15 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
@@ -114,18 +114,34 @@ The translation makes the product assert something the en-US never said. Nothing
     - Current: `这是由于其他 { -brand-short-name } 配置文件或实例进行了更新`
     - Suggest: `出现这种情况，可能是由于其他 { -brand-short-name } 配置文件或实例进行了更新`
 
-### Broken output — impact 1 (289)
+### Broken output — impact 1 (1755)
 
 The value does not render as intended: a blank string, broken markup, a variable the source never passes.
 
-`id` 66 · `es-AR` 48 · `ru` 44 · `cs` 41 · `hu` 26 · `fy-NL` 12 · `pt-BR` 11 · `nl` 10 · `pl` 10 · `ja` 8 · `en-GB` 6 · `zh-CN` 4 · `tr` 3
+`vi` 214 · `sv-SE` 212 · `ar` 200 · `pt-PT` 184 · `sk` 152 · `el` 143 · `zh-TW` 141 · `uk` 112 · `fi` 108 · `id` 66 · `es-AR` 48 · `ru` 44 · `cs` 41 · `hu` 26 · `fy-NL` 12 · `pt-BR` 11 · `nl` 10 · `pl` 10 · `ja` 8 · `en-GB` 6 · `zh-CN` 4 · `tr` 3
 
+- **`ar`** `about-logins-import-report-row-description-modified2` — `browser/browser/aboutLogins.ftl`
+    - Gender disagreement: feminine verb and adjective with the masculine noun “الولوج”.
+    - Current: `حُدّثت الولوج الموجودة`
+    - Suggest: `حُدّث الولوج الموجود`
+- **`ar`** `about-logins-intro-import3` — `browser/browser/aboutLogins.ftl`
+    - Misspelled hamza in “لإضافة”.
+    - Current: `لاضافة`
+    - Suggest: `لإضافة`
 - **`cs`** `appmenuitem-new-ai-window` — `browser/browser/aiWindow.ftl`
     - `appmenuitem-new-ai-window` (`.value`) calls `-smart-window-brand-name` with ['capitalization'], but that term selects on ['case', 'plural-form']
     - Current: `Nové { -smart-window-brand-name }`
 - **`cs`** `appmenuitem-new-ai-window` — `browser/browser/aiWindow.ftl`
     - `appmenuitem-new-ai-window` (`.label`) calls `-smart-window-brand-name` with ['capitalization'], but that term selects on ['case', 'plural-form']
     - Current: `Nové { -smart-window-brand-name }`
+- **`el`** `account-connection-disconnected` — `browser/browser/accounts.ftl`
+    - Misspelling of «υπολογιστής».
+    - Current: `Αυτός ο υπολογιστείς έχει αποσυνδεθεί.`
+    - Suggest: `Αυτός ο υπολογιστής έχει αποσυνδεθεί.`
+- **`el`** `ai-window-no-memories` — `browser/browser/aiFeatures.ftl`
+    - Wrong article gender before «δραστηριότητά σας».
+    - Current: `μαθαίνει από το δραστηριότητά σας`
+    - Suggest: `μαθαίνει από τη δραστηριότητά σας`
 - **`en-GB`** `urlbar-result-menu-remove-top-site` — `browser/browser/browser.ftl`
     - Access key changed from uppercase "T" to lowercase "t", which no longer matches the source's access key.
     - Current: `accesskey: t`
@@ -142,6 +158,14 @@ The value does not render as intended: a blank string, broken markup, a variable
     - Missing accent on the interrogative “cómo”.
     - Current: `no sabe como comunicarse con el servidor`
     - Suggest: `no sabe cómo comunicarse con el servidor`
+- **`fi`** `about-logins-intro-import3` — `browser/browser/aboutLogins.ftl`
+    - Stray " a>" fragment appears as visible text at the end of the sentence.
+    - Current: `tiedostosta</a> a>.`
+    - Suggest: `tiedostosta</a>.`
+- **`fi`** `about-logins-vulnerable-alert-text2` — `browser/browser/aboutLogins.ftl`
+    - Misspelled verb form "vuosivat" instead of "vuotivat".
+    - Current: `jonka tiedot todennäköisesti vuosivat`
+    - Suggest: `jonka tiedot todennäköisesti vuotivat`
 - **`fy-NL`** `error-try-again` — `browser/browser/aboutRobots.ftl`
     - .label2 left in English while the value is translated
 - **`fy-NL`** `about-unloads-last-updated` — `browser/browser/aboutUnloads.ftl`
@@ -150,43 +174,24 @@ The value does not render as intended: a blank string, broken markup, a variable
     - The singular branches say “passwords” instead of “password”.
     - Current: `[1] Ez eltávolítja a { -brand-short-name }ba mentett jelszavakat az összes szinkronizált eszközéről.`
     - Suggest: `[1] Ez eltávolítja a { -brand-short-name }ba mentett jelszót az összes szinkronizált eszközéről.`
-- **`hu`** `smart-window-opened-tabs-summary-group` — `browser/browser/aiWindowContent.ftl`
-    - The action is attributed to the user rather than reported as completed by the assistant.
-    - Current: `Létrehozta a(z) „{ $label }” csoportot, és megnyitott { $count } lapot.`
-    - Suggest: `A(z) „{ $label }” csoport létrehozva és { $count } lap megnyitva.`
-- **`id`** `update-policy-disabled` — `browser/browser/aboutDialog.ftl`
-    - Polite pronoun "Anda" written lowercase
-    - Current: `Pembaruan dinonaktifkan oleh organisasi anda.`
-    - Suggest: `Pembaruan dinonaktifkan oleh organisasi Anda`
-- **`id`** `about-logins-import-file-picker-tsv-filter-title` — `browser/browser/aboutLogins.ftl`
-    - macOS "TSV Document" rendered as "Berkas TSV" (File)
-    - Current: `[macos] Berkas TSV`
-    - Suggest: `[macos] Dokumen TSV`
-- **`ja`** `newtab-privacy-trackers-blocked-today` — `browser/browser/newtab/newtab.ftl`
-    - comment states this is the standalone label under the big number; ja is a fragment ending in 、 that depends on the separate newtab-privacy-across-sites. → a self-contained label, e.g. 今日ブロックしたトラッカー
-    - Suggest: `今日ブロックしたトラッカー`
-- **`ja`** `info-exposed-passwords-found` — `browser/browser/protections.ftl`
-    - { $count } 件のパスワードが全漏洩データから見つかりました — 件のパスワードが全漏洩データから見つかりました
-    - Current: `{ $count } 件のパスワードが全漏洩データから見つかりました`
-    - Suggest: `件のパスワードが全漏洩データから見つかりました`
-- **`nl`** `about-logins-copy-password-os-auth-dialog-message-macosx` — `browser/browser/aboutLogins.ftl`
-    - about-logins-edit-login-os-auth-dialog-message-macosx, about-logins-reveal-password-os-auth-dialog-message-macosx, about-logins-copy-password-os-auth-dialog-message-macosx — browser/browser/aboutLogins.ftl — the comment says to supply only the reason, which macOS prefixes with "Firefox is trying to …". These are imperatives, so the resulting sentence breaks. Current: "bewerk de opgeslagen aanmeld…
-    - Suggest: `…message2-macosx`
-- _…and 274 more, in the per-locale reports linked below._
+- _…and 1740 more, in the per-locale reports linked below._
 
-### Wrong content — impact 2 (1463)
+### Wrong content — impact 2 (2194)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/firefox.md`.
 
 | Locale | Last run | Mode | Commit | Strings | Missing | Open | Impact 1–2 | Fixed | Dismissed | Suppressed |
 |---|---|---|---|---|---|---|---|---|---|---|
+| [ar](ar/firefox.md) | 2026-10-16 | incremental | `db2cfca9` | 13,329 | 3,187 | **345** | 314 | 0 | 0 | 0 |
 | [cs](cs/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,363 | 41 | **246** | 161 | 4 | 0 | 0 |
 | [de](de/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,626 | 0 | **37** | 20 | 42 | 0 | 0 |
+| [el](el/firefox.md) | 2026-10-16 | incremental | `db2cfca9` | 16,408 | 108 | **210** | 208 | 0 | 0 | 0 |
 | [en-CA](en-CA/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,354 | 50 | **0** | 0 | 15 | 1 | 0 |
 | [en-GB](en-GB/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,404 | 0 | **19** | 13 | 13 | 0 | 12 |
 | [es-AR](es-AR/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,365 | 39 | **278** | 156 | 143 | 0 | 0 |
 | [es-ES](es-ES/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 15,182 | 1,222 | **36** | 20 | 113 | 0 | 0 |
 | [es-MX](es-MX/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 15,838 | 566 | **45** | 15 | 205 | 0 | 0 |
+| [fi](fi/firefox.md) | 2026-10-16 | incremental | `db2cfca9` | 15,958 | 558 | **154** | 145 | 0 | 0 | 0 |
 | [fr](fr/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,626 | 0 | **32** | 14 | 69 | 1 | 0 |
 | [fy-NL](fy-NL/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,358 | 46 | **465** | 132 | 274 | 4 | 0 |
 | [hu](hu/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,404 | 0 | **257** | 146 | 5 | 0 | 0 |
@@ -196,12 +201,20 @@ Too many to list here; the per-locale counts are in the table below and every on
 | [nl](nl/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,358 | 46 | **343** | 127 | 127 | 0 | 0 |
 | [pl](pl/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,358 | 46 | **83** | 57 | 168 | 2 | 0 |
 | [pt-BR](pt-BR/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,378 | 26 | **533** | 194 | 138 | 5 | 0 |
+| [pt-PT](pt-PT/firefox.md) | 2026-10-16 | incremental | `db2cfca9` | 16,456 | 61 | **306** | 306 | 0 | 0 | 0 |
 | [ru](ru/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,404 | 0 | **579** | 307 | 182 | 0 | 0 |
+| [sk](sk/firefox.md) | 2026-10-16 | incremental | `db2cfca9` | 16,456 | 61 | **219** | 219 | 0 | 0 | 0 |
 | [sl](sl/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 15,715 | 689 | **50** | 15 | 44 | 0 | 1 |
+| [sv-SE](sv-SE/firefox.md) | 2026-10-16 | incremental | `db2cfca9` | 16,456 | 61 | **326** | 307 | 0 | 0 | 0 |
 | [tr](tr/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,395 | 9 | **161** | 60 | 193 | 0 | 0 |
+| [uk](uk/firefox.md) | 2026-10-16 | incremental | `db2cfca9` | 15,193 | 1,323 | **196** | 193 | 0 | 0 | 0 |
+| [vi](vi/firefox.md) | 2026-10-16 | baseline | `db2cfca9` | 16,144 | 373 | **291** | 291 | 0 | 0 | 0 |
 | [zh-CN](zh-CN/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,096 | 308 | **77** | 25 | 50 | 0 | 0 |
+| [zh-TW](zh-TW/firefox.md) | 2026-10-16 | baseline | `db2cfca9` | 16,456 | 61 | **232** | 214 | 0 | 0 | 0 |
 
 **Impact 1–2** is the queue that matters: broken output and wrong content. Impact 3–4 is language polish and typography.
+
+**Reviewed only in part:** `vi`. The reviewer stopped early; the strings it never reached are unreviewed. Each locale's own page says where it stopped.
 
 ## Adding a locale
 

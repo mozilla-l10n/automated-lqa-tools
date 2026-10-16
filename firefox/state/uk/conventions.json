@@ -1,0 +1,37 @@
+{
+ "_meta": {
+  "locale": "uk",
+  "prose_chunks": 15832,
+  "strings": 15193
+ },
+ "apostrophe": {
+  "straight": 717,
+  "typographic": 126
+ },
+ "dash": {
+  "em": 10,
+  "en": 99
+ },
+ "ellipsis": {
+  "ascii": 4,
+  "char": 381
+ },
+ "fullwidth": {
+  "punctuation": 0
+ },
+ "inverted_marks": {
+  "open-exclamation": 0,
+  "open-question": 0
+ },
+ "nbsp": {
+  "before-punctuation": 0,
+  "narrow": 0,
+  "space-before-punctuation": 7,
+  "total": 4
+ },
+ "quotes": {
+  "curly-double": 507,
+  "curly-single": 112,
+  "straight-double": 128
+ }
+}
