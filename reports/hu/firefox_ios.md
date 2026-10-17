@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **Previous run** | 2026-10-05 @ `ef278c60f343` |
+| **Generated** | 2026-10-17 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 11 of 1,980 |
+| **Strings reviewed this run** | 9 of 1,915 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,24 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (4)
 
-_Nothing retired._
+- `WorldCup.HomepageWidget.EliminatedTeamSection.Title.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Still want to Follow Along?" translated as "Még mindig követi?", changing the meaning from a future intention to a present-state question.
+    - Current: `Még mindig követi?`
+    - Suggest: `Továbbra is követni szeretné?`
+    - The source asks whether the user still wants to follow along (after their team was eliminated); the Hungarian asks whether the user is still following, losing the volitional "want to".
+- `WorldCup.HomepageWidget.ErrorLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Missing comma after "Kérjük" in the Hungarian sentence.
+    - Current: `Kérjük frissítse.`
+    - Suggest: `Kérjük, frissítse.`
+    - Hungarian orthography requires a comma after the introductory "Kérjük" before the imperative clause.
+- `WorldCup.HomepageWidget.RoundPhase.WinWorldCupLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "2026 WORLD CUP CHAMPIONS" drops "World Cup", rendering only "2026-OS VILÁGBAJNOKOK".
+    - Current: `2026-OS VILÁGBAJNOKOK`
+    - Suggest: `2026-OS VILÁGBAJNOKSÁG GYŐZTESEI`
+    - The source names the World Cup explicitly; the translation omits the competition name.
+- `WorldCup.HomepageWidget.SettingsButtonAccessibilityLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "More options" is translated as "További beállítások" (More settings).
+    - Current: `További beállítások`
+    - Suggest: `További lehetőségek`
+    - The source says "More options", not "More settings"; the comment says the button shows more options related to the widget.
 
 ---
 
@@ -44,11 +59,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 97 |
-| Strings | 1,980 |
-| Missing strings | 6 |
+| Files | 96 |
+| Strings | 1,915 |
+| Missing strings | 12 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,9 +74,14 @@ _Nothing retired._
 
 ### Completeness
 
-**6 strings** are not translated yet, concentrated in:
+**12 strings** are not translated yet, concentrated in:
 
-- `hu/firefox-ios.xliff` — 6
+- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings` — 11
+- `hu/firefox-ios.xliff` — 1
+
+**Files absent from the locale:**
+
+- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -72,7 +92,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `polish-double` 14 | **polish-double** |
-| ellipsis | `char` 31 | **char** |
+| ellipsis | `char` 32 | **char** |
 | dash | `en` 6 | **en** |
 
 ---
@@ -83,7 +103,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (94)
+## 3. Open findings (90)
 
 > **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -103,9 +123,9 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 40 |
-| 3 | Degraded language (grammar, spelling, terminology) | 50 |
-| 4 | Cosmetic (typography, spacing) | 4 |
+| 2 | Wrong content (says something other than the English) | 38 |
+| 3 | Degraded language (grammar, spelling, terminology) | 49 |
+| 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -283,21 +303,6 @@ _Nothing in this category._
     - Source: `Translate Page to…`
     - Suggest: `Oldal fordítása erre:…`
     - The source is the title of a language picker listing target languages; the "to" is essential and its omission makes the string collide with Translations.Sheet.TitleLabel ("Oldal fordítása") and with the loading label.
-- `WorldCup.HomepageWidget.EliminatedTeamSection.Title.v151` — `hu/firefox-ios.xliff` — "Still want to Follow Along?" translated as "Még mindig követi?", changing the meaning from a future intention to a present-state question.
-    - Current: `Még mindig követi?`
-    - Source: `Still want to Follow Along?`
-    - Suggest: `Továbbra is követni szeretné?`
-    - The source asks whether the user still wants to follow along (after their team was eliminated); the Hungarian asks whether the user is still following, losing the volitional "want to".
-- `WorldCup.HomepageWidget.RoundPhase.WinWorldCupLabel.v151` — `hu/firefox-ios.xliff` — "2026 WORLD CUP CHAMPIONS" drops "World Cup", rendering only "2026-OS VILÁGBAJNOKOK".
-    - Current: `2026-OS VILÁGBAJNOKOK`
-    - Source: `2026 WORLD CUP CHAMPIONS`
-    - Suggest: `2026-OS VILÁGBAJNOKSÁG GYŐZTESEI`
-    - The source names the World Cup explicitly; the translation omits the competition name.
-- `WorldCup.HomepageWidget.SettingsButtonAccessibilityLabel.v151` — `hu/firefox-ios.xliff` — "More options" is translated as "További beállítások" (More settings).
-    - Current: `További beállítások`
-    - Source: `More options`
-    - Suggest: `További lehetőségek`
-    - The source says "More options", not "More settings"; the comment says the button shows more options related to the widget.
 - `ErrorPages.CertWarning.Description` — `hu/firefox-ios.xliff` — Subject of "protect your information" is wrong: Hungarian says the site owner protects the user's data, while the source means Firefox protects it.
     - Current: `Hogy megvédje az információit az ellopásuktól, a Firefox nem kapcsolódott ehhez a webhelyhez.`
     - Source: `The owner of %@ has configured their website improperly. To protect your information from being stolen, Firefox has not connected to this website.`
@@ -577,11 +582,6 @@ _Nothing in this category._
     - Source: `here`
     - Suggest: `itt`
     - The link is inserted inside the sentence 'You can learn more here.', so Hungarian sentence-case rules require lowercase.
-- `WorldCup.HomepageWidget.ErrorLabel.v151` — `hu/firefox-ios.xliff` — Missing comma after "Kérjük" in the Hungarian sentence.
-    - Current: `Kérjük frissítse.`
-    - Source: `We couldn’t load match data. Please refresh.`
-    - Suggest: `Kérjük, frissítse.`
-    - Hungarian orthography requires a comma after the introductory "Kérjük" before the imperative clause.
 - `DefaultBrowserCard.Button.v2` — `hu/firefox-ios.xliff` — Missing comma before the subordinate clause in "Tudja meg hogyan".
     - Current: `Tudja meg hogyan`
     - Source: `Learn How`

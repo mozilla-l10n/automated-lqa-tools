@@ -91,7 +91,55 @@
   "Settings.AppIconSelection.SectionNames.Basics.Title.v139": "02f41113 3f680ba5 c3bb6f4d",
   "Settings.AppIconSelection.SectionNames.Colors.Title.v139": "9c805743 7b572e84 59180913",
   "Settings.AppIconSelection.SectionNames.Gradients.Title.v139": "96442298 4a51cfe0 da7cc35d",
-  "Settings.AppIconSelection.SectionNames.More.Title.v139": "e0ebaf06 8384698b e83602e8"
+  "Settings.AppIconSelection.SectionNames.More.Title.v139": "e0ebaf06 8384698b e83602e8",
+  "Settings.AppIconSelection.SettingsOptionName.v136": "bac112ac fd81919f 407d1705"
+ },
+ "Shared/Supporting Files/en-US.lproj/BiometricAuthentication.strings": {
+  "Biometry.Screen.UniversalAuthenticationReason.v115": "a510e7ef 47f14246 e5b05a86",
+  "Biometry.Screen.UniversalAuthenticationReason.v122": "94df6895 6433a4d3 afe9c49d"
+ },
+ "Shared/Supporting Files/en-US.lproj/BookmarkPanel.strings": {
+  "Delete": "7bf5c786 d438d1ec 0ccbc948"
+ },
+ "Shared/Supporting Files/en-US.lproj/BookmarkPanelDeleteConfirm.strings": {
+  "Bookmarks.DeleteFolderWarning.CancelButton.Label": "7be79106 871d661d 10784a04",
+  "Bookmarks.DeleteFolderWarning.DeleteButton.Label": "7bf5c786 d438d1ec 33a7eb63",
+  "Bookmarks.DeleteFolderWarning.Description": "83e75277 b8fe244e 66e73df2",
+  "Bookmarks.DeleteFolderWarning.Title": "343c29bc 6753202c 253005d3"
+ },
+ "Shared/Supporting Files/en-US.lproj/Bookmarks.strings": {
+  "Bookmarks.EmptyState.Nested.Body.v135": "60003cbd 0b24c828 78d357b3",
+  "Bookmarks.EmptyState.Nested.Title.v135": "d0c82285 2005376d 1ac47ad5",
+  "Bookmarks.EmptyState.Root.Body.v135": "5c630230 8038ca9d af1ee5e6",
+  "Bookmarks.EmptyState.Root.BodySignedOut.v135": "12fe4757 5bf80d89 a2483316",
+  "Bookmarks.EmptyState.Root.ButtonTitle.v136": "30757581 6be48633 cc60f7d1",
+  "Bookmarks.EmptyState.Root.Title.v135": "a9989574 252095bc 50947d84",
+  "Bookmarks.Menu.AllBookmarks.v131": "6aa0cb74 fd088f04 715f4161",
+  "Bookmarks.Menu.ClearTextFieldButtonA11yLabel.v139": "7bf5c786 730cab26 c4cdb66e",
+  "Bookmarks.Menu.DeleteBookmark.v132": "703c1948 c1434cff 66727280",
+  "Bookmarks.Menu.DeleteFolder.v131": "0f5c368a 1d338959 9fec2094",
+  "Bookmarks.Menu.DeletedBookmark.v131": "eabd0e87 2ab2a439 dc235636",
+  "Bookmarks.Menu.EditBookmark.v131": "55369a60 f2c491c0 13b563a4",
+  "Bookmarks.Menu.EditBookmarkAllFoldersLabel.v154": "3fbebbee eebb691c ed2a0b53",
+  "Bookmarks.Menu.EditBookmarkChangeLocationLabel.v154": "ee5d4c32 2bdcded8 c1106ce7",
+  "Bookmarks.Menu.EditBookmarkDesktopBookmarksLabel.v136": "0c266dc7 e205dc81 186a1568",
+  "Bookmarks.Menu.EditBookmarkDesktopGroupLabel.v154": "53a84005 26e9ea7f 6ccb29c8",
+  "Bookmarks.Menu.EditBookmarkGroupCollapsedValue.v154": "795892d4 0eabf24c 43490dce",
+  "Bookmarks.Menu.EditBookmarkGroupExpandedValue.v154": "151e6cd2 fcd3e1ef fd1c7f2e",
+  "Bookmarks.Menu.EditBookmarkLocationLabel.v154": "08aea365 3d0aa4e0 464ae8c0",
+  "Bookmarks.Menu.EditBookmarkMobileBookmarksLabel.v154": "ce4a4193 fd952fa2 77ce58a3",
+  "Bookmarks.Menu.EditBookmarkMobileGroupLabel.v154": "81528bc5 16d6e3e5 2042cb60",
+  "Bookmarks.Menu.EditBookmarkParentFolderBreadcrumbFormat.v154": "2e79107a 2e79107a 388c0c04",
+  "Bookmarks.Menu.EditBookmarkSave.v135": "c0f65a8f effd3b79 167a8ae0",
+  "Bookmarks.Menu.EditBookmarkSaveIn.v131": "cc217708 1048c912 9f1e2d00",
+  "Bookmarks.Menu.EditBookmarkTitle.v131": "55369a60 f2c491c0 c6d97d5f",
+  "Bookmarks.Menu.EditFolder.v131": "ce1c65d6 fb48c372 de2d0c26",
+  "Bookmarks.Menu.MoreOptionsA11yLabel.v136": "4f64b89c 3e880fe9 cd1397af",
+  "Bookmarks.Menu.RemoveFromShortcutsTitle.v139": "bcba81f6 ee8ccfa7 b2e8985e",
+  "Bookmarks.Menu.SavedBookmarkToastDefaultFolderLabel.v136": "7b84978a 0f21c6cf 043c760b",
+  "Bookmarks.Menu.SavedBookmarkToastLabel.v136": "caad98f3 158635b3 c4f08e1b",
+  "Bookmarks.Search.Placeholder.v151": "a9562b21 951662a8 39aab5d4",
+  "HomePanel.ContextMenu.Edit.v131": "cf445ed7 79ccf84c 83355b8d"
  },
  "Shared/Supporting Files/en-US.lproj/BottomSheet.strings": {
   "Addresses.BottomSheet.UseSavedAddressBottomSheet.v124": "eecccf57 a78ab860 b56cb9e0"

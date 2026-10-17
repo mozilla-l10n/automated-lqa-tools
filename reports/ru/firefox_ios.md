@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **Previous run** | 2026-10-05 @ `ef278c60f343` |
+| **Generated** | 2026-10-17 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 17 of 1,986 |
+| **Strings reviewed this run** | 15 of 1,927 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for ru: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `NativeErrorPage.GenericError.Description.v158.withoutURL` — `ru/firefox-ios.xliff` — Inconsistent construction: "%1$@ не смог" vs. the parallel string's "%1$@ не удалось"; also "связаться с URL" is odd for "reach the URL".
-    - Current: `%1$@ не смог связаться с запрошенным URL.`
-    - Source: `%1$@ couldn’t reach the requested URL.`
-    - Suggest: `%1$@ не удалось открыть запрошенный URL.`
-    - The sibling string uses the impersonal "%1$@ не удалось соединиться с"; here the masculine agreement "не смог" is forced on the app-name placeholder and "связаться с URL" misrenders "reach the requested URL".
-- `Onboarding.MultiDay.NotificationCard.BodyText.v159` — `ru/firefox-ios.xliff` — The app name placeholder modifies only "отчёт о конфиденциальности" instead of "protection updates", changing the meaning.
-    - Current: `Получайте обновления защиты, советы и отчёт о конфиденциальности %@.`
-    - Source: `Get %@ protection updates, tips, and your privacy report.`
-    - Suggest: `Получайте обновления защиты %@, советы и отчёт о конфиденциальности.`
-    - In the source "%@ protection updates" — the app name qualifies the protection updates; the Russian attaches it to the privacy report at the end of the list.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -43,9 +34,40 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (8)
 
-_Nothing retired._
+- `WorldCup.GroupPhase.GroupA.Title.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Group letter A rendered with Cyrillic "А" while all other groups keep Latin letters, breaking consistency.
+    - Current: `Группа А`
+    - Suggest: `Группа A`
+    - Groups B–L use the Latin letter; the Cyrillic А is inconsistent and may not match the official group labels.
+- `WorldCup.HomepageWidget.ErrorLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "match data" mistranslated as "данные о совпадениях" (data about matches/coincidences in the search sense) instead of football match data.
+    - Current: `данные о совпадениях`
+    - Suggest: `данные о матчах`
+    - In the World Cup context "match" means a football game (матч), not a text/search match (совпадение).
+- `WorldCup.HomepageWidget.FollowTeamCard.Description.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "live" was attached to the wrong element, producing "and other information live" instead of "live match updates".
+    - Current: `Получайте обновления по матчам и другую информацию в прямом эфире.`
+    - Suggest: `Получайте обновления матчей в прямом эфире и не только.`
+    - The source qualifies the match updates as live ("live match updates and more"); the translation shifts "в прямом эфире" to modify "другую информацию".
+- `WorldCup.HomepageWidget.FollowTeamCard.Title.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Keep Tabs on the World Cup" translated literally as browser tabs, which the developer comment explicitly forbids.
+    - Current: `Оставить вкладки о ЧМ`
+    - Suggest: `Следите за ЧМ`
+    - The comment says the idiom means staying informed and must not be translated literally as physical 'tabs'; "Оставить вкладки о ЧМ" means "Leave tabs about the World Cup" and loses the meaning.
+- `WorldCup.HomepageWidget.GetCustomWallpaperLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Get custom wallpaper" rendered as "Загрузить собственные обои" (upload your own wallpaper), changing the action.
+    - Current: `Загрузить собственные обои`
+    - Suggest: `Получить особые обои`
+    - The button selects a provided custom wallpaper, not uploads the user's own image; "собственные" plus "загрузить" implies the user supplies the file.
+- `WorldCup.HomepageWidget.MatchUnavailableLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Try refreshing" rendered as "обновить страницу" (refresh the page), but the widget refreshes match data, not a page.
+    - Current: `Попробуйте обновить страницу через несколько минут.`
+    - Suggest: `Попробуйте обновить через несколько минут.`
+    - The source says "Try refreshing in a few minutes" about the widget's match data; adding "страницу" asserts a page reload that doesn't exist here.
+- `WorldCup.HomepageWidget.RoundPhase.UpcomingLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Upcoming" for a single upcoming match is translated in the plural.
+    - Current: `Предстоящие`
+    - Suggest: `Предстоящий`
+    - The developer comment says the label is for an upcoming match (singular); the plural form does not agree.
+- `WorldCup.HomepageWidget.SettingsButtonAccessibilityLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "More options" translated as "Другие настройки" (other settings).
+    - Current: `Другие настройки`
+    - Suggest: `Другие параметры`
+    - The source is "More options" for a panel of actions (Share, Remove), not settings.
 
 ---
 
@@ -54,7 +76,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,986 |
+| Strings | 1,927 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -77,9 +99,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 23 | **guillemet** |
-| ellipsis | `char` 27 | **char** |
+| ellipsis | `char` 28 | **char** |
 | dash | `em` 6, `en` 1 | **em** |
-| register | `informal` 89, `formal` 290 | **formal** |
+| register | `informal` 89, `formal` 287 | **formal** |
 
 ---
 
@@ -89,7 +111,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (94)
+## 3. Open findings (86)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -104,8 +126,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 45 |
-| 3 | Degraded language (grammar, spelling, terminology) | 46 |
+| 2 | Wrong content (says something other than the English) | 39 |
+| 3 | Degraded language (grammar, spelling, terminology) | 44 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
@@ -254,36 +276,6 @@ _Nothing in this category._
     - Source: `Information about page elements that have been known to cause site issues`
     - Suggest: `которые, как известно, могут вызывать проблемы с сайтами`
     - The source says elements "have been known to cause" issues — a hedged statement; the Russian asserts they do cause issues.
-- `WorldCup.HomepageWidget.ErrorLabel.v151` — `ru/firefox-ios.xliff` — "match data" mistranslated as "данные о совпадениях" (data about matches/coincidences in the search sense) instead of football match data.
-    - Current: `данные о совпадениях`
-    - Source: `We couldn’t load match data. Please refresh.`
-    - Suggest: `данные о матчах`
-    - In the World Cup context "match" means a football game (матч), not a text/search match (совпадение).
-- `WorldCup.HomepageWidget.FollowTeamCard.Description.v151` — `ru/firefox-ios.xliff` — "live" was attached to the wrong element, producing "and other information live" instead of "live match updates".
-    - Current: `Получайте обновления по матчам и другую информацию в прямом эфире.`
-    - Source: `Get live match updates and more.`
-    - Suggest: `Получайте обновления матчей в прямом эфире и не только.`
-    - The source qualifies the match updates as live ("live match updates and more"); the translation shifts "в прямом эфире" to modify "другую информацию".
-- `WorldCup.HomepageWidget.FollowTeamCard.Title.v151` — `ru/firefox-ios.xliff` — "Keep Tabs on the World Cup" translated literally as browser tabs, which the developer comment explicitly forbids.
-    - Current: `Оставить вкладки о ЧМ`
-    - Source: `Keep Tabs on the World Cup`
-    - Suggest: `Следите за ЧМ`
-    - The comment says the idiom means staying informed and must not be translated literally as physical 'tabs'; "Оставить вкладки о ЧМ" means "Leave tabs about the World Cup" and loses the meaning.
-- `WorldCup.HomepageWidget.GetCustomWallpaperLabel.v151` — `ru/firefox-ios.xliff` — "Get custom wallpaper" rendered as "Загрузить собственные обои" (upload your own wallpaper), changing the action.
-    - Current: `Загрузить собственные обои`
-    - Source: `Get custom wallpaper`
-    - Suggest: `Получить особые обои`
-    - The button selects a provided custom wallpaper, not uploads the user's own image; "собственные" plus "загрузить" implies the user supplies the file.
-- `WorldCup.HomepageWidget.MatchUnavailableLabel.v151` — `ru/firefox-ios.xliff` — "Try refreshing" rendered as "обновить страницу" (refresh the page), but the widget refreshes match data, not a page.
-    - Current: `Попробуйте обновить страницу через несколько минут.`
-    - Source: `Match info is not available right now. Try refreshing in a few minutes.`
-    - Suggest: `Попробуйте обновить через несколько минут.`
-    - The source says "Try refreshing in a few minutes" about the widget's match data; adding "страницу" asserts a page reload that doesn't exist here.
-- `WorldCup.HomepageWidget.SettingsButtonAccessibilityLabel.v151` — `ru/firefox-ios.xliff` — "More options" translated as "Другие настройки" (other settings).
-    - Current: `Другие настройки`
-    - Source: `More options`
-    - Suggest: `Другие параметры`
-    - The source is "More options" for a panel of actions (Share, Remove), not settings.
 - `This action will clear all of your private data, including history from your synced devices.` — `ru/firefox-ios.xliff` — "from your synced devices" rendered as "со всех синхронизированных устройств" (from all synced devices).
     - Current: `включая историю со всех синхронизированных устройств`
     - Source: `This action will clear all of your private data, including history from your synced devices.`
@@ -462,16 +454,6 @@ _Nothing in this category._
     - Source: `Note: Summarization can make errors.`
     - Suggest: `Примечание: при резюмировании могут быть ошибки.`
     - In Russian, the word after a colon in this construction is lowercase.
-- `WorldCup.GroupPhase.GroupA.Title.v151` — `ru/firefox-ios.xliff` — Group letter A rendered with Cyrillic "А" while all other groups keep Latin letters, breaking consistency.
-    - Current: `Группа А`
-    - Source: `Group A`
-    - Suggest: `Группа A`
-    - Groups B–L use the Latin letter; the Cyrillic А is inconsistent and may not match the official group labels.
-- `WorldCup.HomepageWidget.RoundPhase.UpcomingLabel.v151` — `ru/firefox-ios.xliff` — "Upcoming" for a single upcoming match is translated in the plural.
-    - Current: `Предстоящие`
-    - Source: `Upcoming`
-    - Suggest: `Предстоящий`
-    - The developer comment says the label is for an upcoming match (singular); the plural form does not agree.
 - `Use your fingerprint to access Logins now.` — `ru/firefox-ios.xliff` — Word order makes "now" modify "use" oddly and reads as an instruction change.
     - Current: `Для доступа к Логинам теперь используйте отпечаток.`
     - Source: `Use your fingerprint to access Logins now.`

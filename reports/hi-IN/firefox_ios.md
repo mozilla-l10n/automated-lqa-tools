@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **Previous run** | 2026-10-05 @ `ef278c60f343` |
+| **Generated** | 2026-10-17 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,950 |
+| **Strings reviewed this run** | 0 of 1,876 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `WorldCup.HomepageWidget.GroupPhase.RelatedMatchesLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Related matches" rendered as "similar matches".
+    - Current: `मिलते-जुलते मैच`
+    - Suggest: `संबंधित मैच`
+    - "मिलते-जुलते" means 'similar/resembling', not 'related'; the section lists a team's other matches in the group phase.
 
 ---
 
@@ -44,11 +47,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 97 |
-| Strings | 1,950 |
-| Missing strings | 36 |
+| Files | 96 |
+| Strings | 1,876 |
+| Missing strings | 51 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,13 +62,19 @@ _Nothing retired._
 
 ### Completeness
 
-**36 strings** are not translated yet, concentrated in:
+**51 strings** are not translated yet, concentrated in:
 
-- `hi-IN/firefox-ios.xliff` — 18
+- `hi-IN/firefox-ios.xliff` — 21
+- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings` — 11
 - `hi-IN/firefox-ios.xliff` — 11
 - `hi-IN/firefox-ios.xliff` — 4
 - `hi-IN/firefox-ios.xliff` — 2
 - `hi-IN/firefox-ios.xliff` — 1
+- `hi-IN/firefox-ios.xliff` — 1
+
+**Files absent from the locale:**
+
+- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -88,13 +97,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (17)
+## 3. Open findings (16)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 14 |
+| 2 | Wrong content (says something other than the English) | 13 |
 | 3 | Degraded language (grammar, spelling, terminology) | 3 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -159,11 +168,6 @@ _Nothing in this category._
     - Source: `Information about page elements that have been known to cause site issues`
     - Suggest: `पेज के उन एलिमेंट की जानकारी जिनसे साइट में समस्याएं आने की जानकारी मिली है`
     - The en-US says elements "have been known to cause" issues; the Hindi asserts they do cause issues, stating a certainty the source does not.
-- `WorldCup.HomepageWidget.GroupPhase.RelatedMatchesLabel.v151` — `hi-IN/firefox-ios.xliff` — "Related matches" rendered as "similar matches".
-    - Current: `मिलते-जुलते मैच`
-    - Source: `Related matches`
-    - Suggest: `संबंधित मैच`
-    - "मिलते-जुलते" means 'similar/resembling', not 'related'; the section lists a team's other matches in the group phase.
 - `Menu.TrackingProtectionDescription.ContentTrackers` — `hi-IN/firefox-ios.xliff` — "might not work" is rendered as a definite "काम नहीं कर सकते" losing the hedge of possibility.
     - Current: `लेकिन कुछ बटन, फ़ॉर्म और लॉगिन फ़ील्ड काम नहीं कर सकते।`
     - Source: `Websites may load outside ads, videos, and other content that contains hidden trackers. Blocking this can make websites load faster, but some buttons, forms, and login fields, might not work.`

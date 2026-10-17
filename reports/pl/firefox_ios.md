@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **Previous run** | 2026-10-05 @ `ef278c60f343` |
+| **Generated** | 2026-10-17 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,969 |
+| **Strings reviewed this run** | 22 of 1,915 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,31 @@ Also for pl: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `Onboarding.MultiDay.NotificationCard.BodyText.v159` — `pl/firefox-ios.xliff` — "Your privacy report" is rendered as generic "information about privacy", so the specific privacy report feature is lost.
+    - Current: `informacje o prywatności, ochronie i wskazówki`
+    - Source: `Get %@ protection updates, tips, and your privacy report.`
+    - Suggest: `informacje o ochronie, wskazówki i raport prywatności`
+    - The source lists three things: protection updates, tips and the user's privacy report. The Polish lists "information about privacy, protection, and tips", which drops the privacy report and is also an awkward coordination.
+- `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.` — `pl/firefox-ios.xliff` — "Book plus icon" is rendered as just "book icon", which points to a different control.
+    - Current: `stukając ikonę książki w widoku`
+    - Source: `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.`
+    - Suggest: `stukając ikonę książki z plusem w widoku`
+    - The source names a specific "book plus" icon, which is not the plain book icon that opens Reader View (mentioned in the companion tip). Dropping "plus" points the user to the wrong icon.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (2)
 
-_Nothing was fixed._
+- `Open articles in Reader View by tapping the book icon when it appears in the title bar.` — `pl/firefox-ios.xliff` — Missing comma before the participial phrase "stukając".
+    - Current: `czytelności stukając ikonę`
+    - Source: `Open articles in Reader View by tapping the book icon when it appears in the title bar.`
+    - Suggest: `czytelności, stukając ikonę`
+    - Polish punctuation requires a comma before an adverbial participial clause (imiesłowowy równoważnik zdania).
+- `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.` — `pl/firefox-ios.xliff` — Missing comma before the adverbial participle clause "stukając".
+    - Current: `Zachowuj strony w czytelni stukając ikonę książki`
+    - Source: `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.`
+    - Suggest: `Zachowuj strony w czytelni, stukając ikonę książki`
+    - Polish punctuation requires a comma before an imiesłów przysłówkowy clause.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -34,9 +52,32 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (6)
 
-_Nothing retired._
+- `WorldCup.HomepageWidget.GetCustomWallpaperLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Get custom wallpaper" is rendered as "Ustaw piłkarską tapetę" ("Set a football wallpaper"), adding a meaning not in the source.
+    - Current: `Ustaw piłkarską tapetę`
+    - Suggest: `Pobierz własną tapetę`
+    - The source says "custom wallpaper", not "football wallpaper"; the translation both changes the verb and invents a descriptor.
+- `WorldCup.HomepageWidget.GroupPhase.RelatedMatchesLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Related matches" translated as "Pozostałe mecze" ("Remaining/other matches").
+    - Current: `Pozostałe mecze`
+    - Suggest: `Powiązane mecze`
+    - "Pozostałe" means remaining/other, which is a different set than "related" matches for the team's group.
+- `WorldCup.HomepageWidget.OfflineLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Check your internet connection" is translated as "Sprawdź poprawność połączenia" (check the correctness of the connection), altering the instruction.
+    - Current: `Sprawdź poprawność połączenia i spróbuj ponownie.`
+    - Suggest: `Sprawdź połączenie z Internetem i spróbuj ponownie.`
+    - The source asks the user to check the internet connection; the Polish asks to verify its "correctness" and drops "internet".
+- `WorldCup.HomepageWidget.RoundPhase.Round16Label.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "ROUND OF 16" is rendered as "Druga runda" (second round) instead of the established Polish term for the round of 16.
+    - Current: `Druga runda`
+    - Suggest: `1/8 finału`
+    - The source names the knockout stage with 16 teams; Polish football terminology is "1/8 finału" (or "runda 1/8 finału"). "Druga runda" merely says "second round" and does not identify the stage.
+- `WorldCup.HomepageWidget.RoundPhase.Round32Label.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "ROUND OF 32" is rendered as "Pierwsza runda" (first round) instead of the round-of-32 stage name.
+    - Current: `Pierwsza runda`
+    - Suggest: `1/16 finału`
+    - The source names the knockout stage with 32 teams; Polish uses "1/16 finału". "Pierwsza runda" says "first round", which is not the same stage designation.
+- `WorldCup.HomepageWidget.TemporaryView.Description.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Formal capitalized "Cię" used where the locale convention is informal address without honorific capitalization.
+    - Current: `Będziemy Cię informować`
+    - Suggest: `Będziemy cię informować`
+    - The pl locale uses informal register; capitalized "Cię" is the formal/courtesy form.
 
 ---
 
@@ -44,11 +85,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 97 |
-| Strings | 1,969 |
-| Missing strings | 17 |
+| Files | 96 |
+| Strings | 1,915 |
+| Missing strings | 12 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,11 +100,14 @@ _Nothing retired._
 
 ### Completeness
 
-**17 strings** are not translated yet, concentrated in:
+**12 strings** are not translated yet, concentrated in:
 
-- `pl/firefox-ios.xliff` — 11
-- `pl/firefox-ios.xliff` — 4
-- `pl/firefox-ios.xliff` — 2
+- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings` — 11
+- `pl/firefox-ios.xliff` — 1
+
+**Files absent from the locale:**
+
+- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -74,9 +118,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `polish-double` 22 | **polish-double** |
-| ellipsis | `char` 27 | **char** |
+| ellipsis | `char` 28 | **char** |
 | dash | `em` 6, `en` 1 | **em** |
-| nbsp | `total` 444, `before-punctuation` 9 | **total** |
+| nbsp | `total` 441, `before-punctuation` 9 | **total** |
 | register | `informal` 12 | **informal** |
 
 ---
@@ -87,7 +131,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (72)
+## 3. Open findings (62)
 
 > **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -107,9 +151,9 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 40 |
-| 3 | Degraded language (grammar, spelling, terminology) | 28 |
-| 4 | Cosmetic (typography, spacing) | 4 |
+| 2 | Wrong content (says something other than the English) | 37 |
+| 3 | Degraded language (grammar, spelling, terminology) | 25 |
+| 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -177,6 +221,11 @@ _Nothing in this category._
     - Source: `Say goodbye to creepy trackers`
     - Suggest: `Pożegnaj się z niepokojącymi elementami śledzącymi`
     - "Creepy" means unsettling/invasive, not "nightmarish"; the same wording is reused from the ads string.
+- `Onboarding.MultiDay.NotificationCard.BodyText.v159` — `pl/firefox-ios.xliff` — "Your privacy report" is rendered as generic "information about privacy", so the specific privacy report feature is lost.
+    - Current: `informacje o prywatności, ochronie i wskazówki`
+    - Source: `Get %@ protection updates, tips, and your privacy report.`
+    - Suggest: `informacje o ochronie, wskazówki i raport prywatności`
+    - The source lists three things: protection updates, tips and the user's privacy report. The Polish lists "information about privacy, protection, and tips", which drops the privacy report and is also an awkward coordination.
 - `RelayMask.RelayEmailMaskAvailableCFR.v146` — `pl/firefox-ios.xliff` — Placeholder for the app name is misplaced so the text reads "masks for the e-mail address Firefox Relay" instead of "Firefox Relay email masks".
     - Current: `Maski dla adresu e-mail %@ Relay są teraz dostępne na telefonie.`
     - Source: `New! %@ Relay email masks are now available on mobile.`
@@ -252,31 +301,6 @@ _Nothing in this category._
     - Source: `Images not loaded`
     - Suggest: `Obrazy nie zostały wczytane`
     - The source states the images were not loaded, not that they are continuously failing to load; the sibling option "Page not loading correctly" uses the progressive form, so the distinction is lost.
-- `WorldCup.HomepageWidget.GetCustomWallpaperLabel.v151` — `pl/firefox-ios.xliff` — "Get custom wallpaper" is rendered as "Ustaw piłkarską tapetę" ("Set a football wallpaper"), adding a meaning not in the source.
-    - Current: `Ustaw piłkarską tapetę`
-    - Source: `Get custom wallpaper`
-    - Suggest: `Pobierz własną tapetę`
-    - The source says "custom wallpaper", not "football wallpaper"; the translation both changes the verb and invents a descriptor.
-- `WorldCup.HomepageWidget.GroupPhase.RelatedMatchesLabel.v151` — `pl/firefox-ios.xliff` — "Related matches" translated as "Pozostałe mecze" ("Remaining/other matches").
-    - Current: `Pozostałe mecze`
-    - Source: `Related matches`
-    - Suggest: `Powiązane mecze`
-    - "Pozostałe" means remaining/other, which is a different set than "related" matches for the team's group.
-- `WorldCup.HomepageWidget.OfflineLabel.v151` — `pl/firefox-ios.xliff` — "Check your internet connection" is translated as "Sprawdź poprawność połączenia" (check the correctness of the connection), altering the instruction.
-    - Current: `Sprawdź poprawność połączenia i spróbuj ponownie.`
-    - Source: `Looks like you’re offline. Check your internet connection and try again.`
-    - Suggest: `Sprawdź połączenie z Internetem i spróbuj ponownie.`
-    - The source asks the user to check the internet connection; the Polish asks to verify its "correctness" and drops "internet".
-- `WorldCup.HomepageWidget.RoundPhase.Round16Label.v151` — `pl/firefox-ios.xliff` — "ROUND OF 16" is rendered as "Druga runda" (second round) instead of the established Polish term for the round of 16.
-    - Current: `Druga runda`
-    - Source: `ROUND OF 16`
-    - Suggest: `1/8 finału`
-    - The source names the knockout stage with 16 teams; Polish football terminology is "1/8 finału" (or "runda 1/8 finału"). "Druga runda" merely says "second round" and does not identify the stage.
-- `WorldCup.HomepageWidget.RoundPhase.Round32Label.v151` — `pl/firefox-ios.xliff` — "ROUND OF 32" is rendered as "Pierwsza runda" (first round) instead of the round-of-32 stage name.
-    - Current: `Pierwsza runda`
-    - Source: `ROUND OF 32`
-    - Suggest: `1/16 finału`
-    - The source names the knockout stage with 32 teams; Polish uses "1/16 finału". "Pierwsza runda" says "first round", which is not the same stage designation.
 - `Add to Bookmarks` — `pl/firefox-ios.xliff` — "Add to Bookmarks" translated as "Dodaj zakładkę" (Add bookmark), losing the target collection.
     - Current: `Dodaj zakładkę`
     - Source: `Add to Bookmarks`
@@ -347,6 +371,11 @@ _Nothing in this category._
     - Source: `Okay`
     - Suggest: `OK`
     - The source is the generic affirmative "Okay"; the Polish substitutes a different verb ("Restore"), changing the button text from the source wording.
+- `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.` — `pl/firefox-ios.xliff` — "Book plus icon" is rendered as just "book icon", which points to a different control.
+    - Current: `stukając ikonę książki w widoku`
+    - Source: `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.`
+    - Suggest: `stukając ikonę książki z plusem w widoku`
+    - The source names a specific "book plus" icon, which is not the plain book icon that opens Reader View (mentioned in the companion tip). Dropping "plus" points the user to the wrong icon.
 - `Search.ThirdPartyEngines.AddMessage` — `pl/firefox-ios.xliff` — Translation adds a claim about managing the engine in settings that the source does not contain.
     - Current: `Nowa wyszukiwarka pojawi się na pasku szybkiego wyszukiwania i będzie można nią zarządzać poprzez ustawienia.`
     - Source: `The new search engine will appear in the quick search bar.`
@@ -420,11 +449,6 @@ _Nothing in this category._
     - Source: `No history found`
     - Suggest: `Nie znaleziono historii`
     - Standard Firefox wording for "No … found" in search results is "Nie znaleziono".
-- `Open articles in Reader View by tapping the book icon when it appears in the title bar.` — `pl/firefox-ios.xliff` — Missing comma before the participial phrase "stukając".
-    - Current: `czytelności stukając ikonę`
-    - Source: `Open articles in Reader View by tapping the book icon when it appears in the title bar.`
-    - Suggest: `czytelności, stukając ikonę`
-    - Polish punctuation requires a comma before an adverbial participial clause (imiesłowowy równoważnik zdania).
 - `Settings.Tabs.CustomizeTabsSection.InactiveTabsDescription.v101` — `pl/firefox-ios.xliff` — Missing comma closing the relative clause before the predicate.
     - Current: `Karty, których nie odwiedzono od dwóch tygodni są przenoszone`
     - Source: `Tabs you haven’t viewed for two weeks get moved to the inactive section.`
@@ -453,47 +477,21 @@ _Nothing in this category._
     - Source: `Block AI Enhancements`
     - Suggest: `Blokuj ulepszenia sztucznej inteligencji`
     - Within the same AI Controls screen, AI is rendered both as "sztuczna inteligencja" (section title, header card) and "SI"; the Polish standard abbreviation is "AI"/"sztuczna inteligencja", not "SI".
-- `WorldCup.HomepageWidget.TemporaryView.Description.v151` — `pl/firefox-ios.xliff` — Formal capitalized "Cię" used where the locale convention is informal address without honorific capitalization.
-    - Current: `Będziemy Cię informować`
-    - Source: `We’ll keep you updated as the World Cup approaches`
-    - Suggest: `Będziemy cię informować`
-    - The pl locale uses informal register; capitalized "Cię" is the formal/courtesy form.
 
 ### E. Typography, punctuation & spacing
 
-- `Onboarding.Modern.BrandRefresh.TermsOfUse.AgreementButtonTitle.v148` — `pl/firefox-ios.xliff` — Comma used instead of a conjunction, changing "Agree and continue" into two clauses.
-    - Current: `Zgadzam się, kontynuuj`
-    - Source: `Agree and continue`
-    - Suggest: `Zgadzam się i kontynuuj`
-    - Source is a coordinated button label "Agree and continue"; the comma version reads as an imperative telling the user to continue.
-- `Oops! Firefox crashed` — `pl/firefox-ios.xliff` — Translation drops the "Oops!" interjection and adds an ASCII emoticon ":(" not present in the source.
-    - Current: `Firefox uległ awarii :(`
-    - Source: `Oops! Firefox crashed`
-    - Suggest: `Firefox uległ awarii`
-    - The en-US reads "Oops! Firefox crashed"; the Polish invents an emoticon instead, which is not source content and is not a Polish typographic convention.
-- `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.` — `pl/firefox-ios.xliff` — Missing comma before the adverbial participle clause "stukając".
-    - Current: `Zachowuj strony w czytelni stukając ikonę książki`
-    - Source: `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.`
-    - Suggest: `Zachowuj strony w czytelni, stukając ikonę książki`
-    - Polish punctuation requires a comma before an imiesłów przysłówkowy clause.
-- `The page could not be displayed in Reader View.` — `pl/firefox-ios.xliff` — Missing final period present in the source sentence.
-    - Current: `Strona nie może zostać wyświetlona w widoku poprawionej czytelności`
-    - Source: `The page could not be displayed in Reader View.`
-    - Suggest: `Strona nie może zostać wyświetlona w widoku poprawionej czytelności.`
-    - The en-US string ends with a period; the Polish sentence omits it.
-- `Firefox won’t remember any of your history or cookies, but new bookmarks will be saved.` — `pl/firefox-ios.xliff` — Sentence-final period is missing in the Polish translation.
-    - Current: `Firefox nie zachowa historii przeglądania ani ciasteczek (dodane zakładki zostaną zachowane)`
-    - Source: `Firefox won’t remember any of your history or cookies, but new bookmarks will be saved.`
-    - Suggest: `Firefox nie zachowa historii przeglądania ani ciasteczek (dodane zakładki zostaną zachowane).`
-    - The en-US source ends with a period; the Polish description drops the final punctuation.
+_Nothing in this category._
 
 ---
 
 ## 4. Appendix
 
-### Dismissed by hand (0)
+### Dismissed by hand (4)
 
-_Nothing dismissed._
+- `Firefox won’t remember any of your history or cookies, but new bookmarks will be saved.` — `pl/firefox-ios.xliff` — no final period, like pl's other short one-sentence status texts
+- `Onboarding.Modern.BrandRefresh.TermsOfUse.AgreementButtonTitle.v148` — `pl/firefox-ios.xliff` — "Zgadzam się, kontynuuj" is a normal Polish button-label pattern; not a punctuation defect
+- `Oops! Firefox crashed` — `pl/firefox-ios.xliff` — the ":(" stands in for "Oops!" as the expression of regret; deliberate tone
+- `The page could not be displayed in Reader View.` — `pl/firefox-ios.xliff` — no final period, like pl's other short status/error messages ("Nie można było wczytać strony")
 
 _One line each in `locales/pl/dismissed.txt`. Delete the line and the finding returns._
 
@@ -507,6 +505,7 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (2)
 
-_Nothing fixed yet._
+- `Open articles in Reader View by tapping the book icon when it appears in the title bar.` — `pl/firefox-ios.xliff` — fixed 2026-10-17
+- `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.` — `pl/firefox-ios.xliff` — fixed 2026-10-17

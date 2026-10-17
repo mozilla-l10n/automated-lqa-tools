@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **Previous run** | 2026-10-05 @ `ef278c60f343` |
+| **Generated** | 2026-10-17 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 17 of 1,986 |
+| **Strings reviewed this run** | 19 of 1,927 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,28 @@ Also for it: [android](android.md) · [firefox](firefox.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (4)
 
-_Nothing was fixed._
+- `ActivityStream.Library.Title` — `it/firefox-ios.xliff` — "Recently Saved" translated as "Aggiunti di recente" (recently added) rather than "Salvati di recente".
+    - Current: `Aggiunti di recente`
+    - Source: `Recently Saved`
+    - Suggest: `Salvati di recente`
+    - The section lists recently saved items (bookmarks/reading list); the Italian says "added" instead of "saved", diverging from the source term.
+- `Menu.TrackingProtectionDescription.Fingerprinters` — `it/firefox-ios.xliff` — "collect" rendered as "memorizzano" (store) instead of "raccolgono" (collect).
+    - Current: `I fingerprinter memorizzano vari tipi di impostazioni distintive`
+    - Source: `The settings on your browser and computer are unique. Fingerprinters collect a variety of these unique settings to create a profile of you, which can be used to track you as you browse.`
+    - Suggest: `I fingerprinter raccolgono vari tipi di impostazioni distintive`
+    - The source says fingerprinters collect these settings, not that they store them.
+- `PhotoLibrary.FirefoxWouldLikeAccessMessage` — `it/firefox-ios.xliff` — Singular "the image" rendered as plural "le immagini".
+    - Current: `Permette di salvare le immagini nel Rullino.`
+    - Source: `This allows you to save the image to your Camera Roll.`
+    - Suggest: `Permette di salvare l’immagine nel Rullino.`
+    - The en-US source refers to a single image ("save the image to your Camera Roll").
+- `Settings.Siri.SectionDescription` — `it/firefox-ios.xliff` — The translation drops "Siri shortcuts", turning "Use Siri shortcuts to quickly open Firefox via Siri" into "Use Siri to quickly open Firefox".
+    - Current: `Utilizza Siri per aprire velocemente Firefox`
+    - Source: `Use Siri shortcuts to quickly open Firefox via Siri`
+    - Suggest: `Utilizza i comandi di Siri per aprire velocemente Firefox con Siri`
+    - The source describes using Siri shortcuts; the Italian omits the shortcut concept, which is the subject of this settings section (see Settings.Siri.SectionName “Comandi di Siri”).
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,7 +64,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,986 |
+| Strings | 1,927 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -68,10 +87,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 15 | **curly-double** |
-| apostrophe | `typographic` 73 | **typographic** |
-| ellipsis | `char` 28 | **char** |
+| apostrophe | `typographic` 74 | **typographic** |
+| ellipsis | `char` 29 | **char** |
 | dash | `em` 1 | **em** |
-| register | `informal` 84, `formal` 4 | **informal** |
+| register | `informal` 82, `formal` 4 | **informal** |
 
 ---
 
@@ -81,14 +100,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (7)
+## 3. Open findings (3)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 5 |
-| 3 | Degraded language (grammar, spelling, terminology) | 2 |
+| 2 | Wrong content (says something other than the English) | 2 |
+| 3 | Degraded language (grammar, spelling, terminology) | 1 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -102,11 +121,6 @@ _Nothing in this category._
     - Source: `%@ randomly selects users to test features, which improves quality for everyone.`
     - Suggest: `contribuendo così a migliorare la qualità per tutti`
     - The en-US says "which improves quality for everyone" without specifying the browser; the Italian adds an unsourced object.
-- `ActivityStream.Library.Title` — `it/firefox-ios.xliff` — "Recently Saved" translated as "Aggiunti di recente" (recently added) rather than "Salvati di recente".
-    - Current: `Aggiunti di recente`
-    - Source: `Recently Saved`
-    - Suggest: `Salvati di recente`
-    - The section lists recently saved items (bookmarks/reading list); the Italian says "added" instead of "saved", diverging from the source term.
 - `HistoryPanel.ClearHistoryMenuOptionTodayAndYesterday` — `it/firefox-ios.xliff` — Order of days reversed relative to source "Today and Yesterday".
     - Current: `Ieri e oggi`
     - Source: `Today and Yesterday`
@@ -117,24 +131,10 @@ _Nothing in this category._
     - Source: `Cross-Site Trackers`
     - Suggest: `Traccianti intersito`
     - The source says "Cross-Site Trackers" (trackers), not "tracking content"; the current wording collides with Menu.TrackingProtectionBlockedContent.Title ("Contenuti traccianti") on the same screen.
-- `Menu.TrackingProtectionDescription.Fingerprinters` — `it/firefox-ios.xliff` — "collect" rendered as "memorizzano" (store) instead of "raccolgono" (collect).
-    - Current: `I fingerprinter memorizzano vari tipi di impostazioni distintive`
-    - Source: `The settings on your browser and computer are unique. Fingerprinters collect a variety of these unique settings to create a profile of you, which can be used to track you as you browse.`
-    - Suggest: `I fingerprinter raccolgono vari tipi di impostazioni distintive`
-    - The source says fingerprinters collect these settings, not that they store them.
-- `Settings.Siri.SectionDescription` — `it/firefox-ios.xliff` — The translation drops "Siri shortcuts", turning "Use Siri shortcuts to quickly open Firefox via Siri" into "Use Siri to quickly open Firefox".
-    - Current: `Utilizza Siri per aprire velocemente Firefox`
-    - Source: `Use Siri shortcuts to quickly open Firefox via Siri`
-    - Suggest: `Utilizza i comandi di Siri per aprire velocemente Firefox con Siri`
-    - The source describes using Siri shortcuts; the Italian omits the shortcut concept, which is the subject of this settings section (see Settings.Siri.SectionName “Comandi di Siri”).
 
 ### C. Grammar, agreement & spelling
 
-- `PhotoLibrary.FirefoxWouldLikeAccessMessage` — `it/firefox-ios.xliff` — Singular "the image" rendered as plural "le immagini".
-    - Current: `Permette di salvare le immagini nel Rullino.`
-    - Source: `This allows you to save the image to your Camera Roll.`
-    - Suggest: `Permette di salvare l’immagine nel Rullino.`
-    - The en-US source refers to a single image ("save the image to your Camera Roll").
+_Nothing in this category._
 
 ### D. Terminology, register & consistency
 
@@ -189,8 +189,12 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (16)
+### Fixed to date (20)
 
+- `ActivityStream.Library.Title` — `it/firefox-ios.xliff` — fixed 2026-10-17
+- `Menu.TrackingProtectionDescription.Fingerprinters` — `it/firefox-ios.xliff` — fixed 2026-10-17
+- `PhotoLibrary.FirefoxWouldLikeAccessMessage` — `it/firefox-ios.xliff` — fixed 2026-10-17
+- `Settings.Siri.SectionDescription` — `it/firefox-ios.xliff` — fixed 2026-10-17
 - `Biometry.Screen.UniversalAuthenticationReason.v115` — `Shared/Supporting Files/en.lproj/BiometricAuthentication.strings` — fixed 2026-08-21
 - `Menu.EnhancedTrackingProtection.ClearData.AlertText.v128` — `Shared/Supporting Files/en.lproj/EnhancedTrackingProtection.strings` — fixed 2026-08-21
 - `Onboarding.Welcome.Description.v120` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — fixed 2026-08-21

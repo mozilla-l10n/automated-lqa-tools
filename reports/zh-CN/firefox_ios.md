@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **Previous run** | 2026-10-05 @ `ef278c60f343` |
+| **Generated** | 2026-10-17 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,966 |
+| **Strings reviewed this run** | 17 of 1,909 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `WorldCup.HomepageWidget.RoundPhase.Round32Label.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "ROUND OF 32" is rendered as 十六分之一决赛, which names the wrong stage.
+    - Current: `十六分之一决赛`
+    - Suggest: `三十二强赛`
+    - Round of 32 is the stage with 32 teams (32强/1/16 finals is ambiguous). In Chinese football usage, ROUND OF 16 = 八分之一决赛 (as translated above) and ROUND OF 32 should be 三十二强赛/十六分之一决赛 — but with Round of 16 already mapped to 八分之一决赛, labelling this 十六分之一决赛 is internally consistent; however the widely used term for the 2026 World Cup stage is 三十二强赛.
 
 ---
 
@@ -44,11 +47,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 97 |
-| Strings | 1,966 |
-| Missing strings | 20 |
+| Files | 96 |
+| Strings | 1,909 |
+| Missing strings | 18 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,12 +62,17 @@ _Nothing retired._
 
 ### Completeness
 
-**20 strings** are not translated yet, concentrated in:
+**18 strings** are not translated yet, concentrated in:
 
-- `zh-CN/firefox-ios.xliff` — 11
+- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings` — 11
 - `zh-CN/firefox-ios.xliff` — 4
-- `zh-CN/firefox-ios.xliff` — 3
-- `zh-CN/firefox-ios.xliff` — 2
+- `zh-CN/firefox-ios.xliff` — 1
+- `zh-CN/firefox-ios.xliff` — 1
+- `zh-CN/firefox-ios.xliff` — 1
+
+**Files absent from the locale:**
+
+- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -75,9 +83,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 46 | **curly-double** |
-| ellipsis | `char` 25 | **char** |
-| fullwidth | `punctuation` 588 | **punctuation** |
-| register | `informal` 1, `formal` 147 | **formal** |
+| ellipsis | `char` 26 | **char** |
+| fullwidth | `punctuation` 583 | **punctuation** |
+| register | `informal` 1, `formal` 144 | **formal** |
 
 ---
 
@@ -87,7 +95,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (68)
+## 3. Open findings (67)
 
 > **Reads as a deliberate edit (5).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -122,7 +130,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 41 |
+| 2 | Wrong content (says something other than the English) | 40 |
 | 3 | Degraded language (grammar, spelling, terminology) | 22 |
 | 4 | Cosmetic (typography, spacing) | 5 |
 
@@ -262,11 +270,6 @@ _Nothing in this category._
     - Source: `A note from %@`
     - Suggest: `来自 %@ 的说明`
     - The source is a title meaning a note/message from the app, not a reminder to the user.
-- `WorldCup.HomepageWidget.RoundPhase.Round32Label.v151` — `zh-CN/firefox-ios.xliff` — "ROUND OF 32" is rendered as 十六分之一决赛, which names the wrong stage.
-    - Current: `十六分之一决赛`
-    - Source: `ROUND OF 32`
-    - Suggest: `三十二强赛`
-    - Round of 32 is the stage with 32 teams (32强/1/16 finals is ambiguous). In Chinese football usage, ROUND OF 16 = 八分之一决赛 (as translated above) and ROUND OF 32 should be 三十二强赛/十六分之一决赛 — but with Round of 16 already mapped to 八分之一决赛, labelling this 十六分之一决赛 is internally consistent; however the widely used term for the 2026 World Cup stage is 三十二强赛.
 - `Use your fingerprint to access Logins now.` — `zh-CN/firefox-ios.xliff` — "Use your fingerprint" mistranslated as "验证您的指纹" is fine, but "Enter passcode" string uses 密码 for passcode — see separate finding.
     - Current: `验证您的指纹以访问登录信息。`
     - Source: `Use your fingerprint to access Logins now.`
