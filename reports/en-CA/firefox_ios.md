@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **Previous run** | 2026-10-05 @ `ef278c60f343` |
+| **Generated** | 2026-10-17 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,911 |
+| **Strings reviewed this run** | 0 of 1,837 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -44,11 +44,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 95 |
-| Strings | 1,911 |
-| Missing strings | 75 |
+| Files | 94 |
+| Strings | 1,837 |
+| Missing strings | 90 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 2 |
+| Files absent from the locale | 3 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,9 +59,10 @@ _Nothing retired._
 
 ### Completeness
 
-**75 strings** are not translated yet, concentrated in:
+**90 strings** are not translated yet, concentrated in:
 
-- `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings` — 40
+- `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings` — 43
+- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings` — 11
 - `en-CA/firefox-ios.xliff` — 11
 - `en-CA/firefox-ios.xliff` — 8
 - `en-CA/firefox-ios.xliff` — 7
@@ -70,9 +71,11 @@ _Nothing retired._
 - `en-CA/firefox-ios.xliff` — 2
 - `en-CA/firefox-ios.xliff` — 2
 - `en-CA/firefox-ios.xliff` — 1
+- `en-CA/firefox-ios.xliff` — 1
 
 **Files absent from the locale:**
 
+- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings`
 - `Shared/Supporting Files/en-US.lproj/GoogleLens.strings`
 - `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings`
 
@@ -85,7 +88,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-single` 10, `curly-double` 4 | _mixed_ |
-| apostrophe | `typographic` 90 | **typographic** |
+| apostrophe | `typographic` 87 | **typographic** |
 | ellipsis | `char` 20 | **char** |
 | dash | `em` 3, `en` 2 | _mixed_ |
 

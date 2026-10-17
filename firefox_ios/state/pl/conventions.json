@@ -1,8 +1,8 @@
 {
  "_meta": {
   "locale": "pl",
-  "prose_chunks": 1969,
-  "strings": 1969
+  "prose_chunks": 1915,
+  "strings": 1915
  },
  "apostrophe": {
   "straight": 0,
@@ -14,7 +14,7 @@
  },
  "ellipsis": {
   "ascii": 0,
-  "char": 27
+  "char": 28
  },
  "fullwidth": {
   "punctuation": 0
@@ -27,7 +27,7 @@
   "before-punctuation": 9,
   "narrow": 0,
   "space-before-punctuation": 0,
-  "total": 444
+  "total": 441
  },
  "quotes": {
   "polish-double": 22

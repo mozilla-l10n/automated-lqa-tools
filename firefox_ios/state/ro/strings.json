@@ -144,6 +144,19 @@
  "Shared/Supporting Files/en-US.lproj/BottomSheet.strings": {
   "Addresses.BottomSheet.UseSavedAddressBottomSheet.v124": "6b25437c a78ab860 b56cb9e0"
  },
+ "Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings": {
+  "BrowserDataTransfer.ImportFailure.DismissButton.v160": "c38a75e4 b21634a9 ecd697d2",
+  "BrowserDataTransfer.ImportFailure.Message.v160": "82bbb10f 5f77c9f8 da9f3649",
+  "BrowserDataTransfer.ImportFailure.Title.v160": "ee1477a2 833c045e b24761ff",
+  "BrowserDataTransfer.ImportSuccess.GotItButton.v160": "ac200421 41cd3e20 600d26c1",
+  "BrowserDataTransfer.ImportSuccess.Message.v160": "334c6685 469f532a edc937f6",
+  "BrowserDataTransfer.ImportSuccess.Title.v160": "93a82881 1fe96e71 bdf9d80a",
+  "BrowserDataTransfer.ImportedBookmarksFolder.Title.v160": "8c0f012d ebb4f638 a0508270",
+  "BrowserDataTransfer.Settings.ExportButton.v160": "ec9a2bdc 7d444a32 84e6b1a9",
+  "BrowserDataTransfer.Settings.ImportButton.v160": "f65ff95b 96bd6fd2 0e637a01",
+  "BrowserDataTransfer.Settings.SectionTitle.v160": "1d23d52f a5b72aca 84ba8d13",
+  "BrowserDataTransfer.Settings.SupportedDataFooter.v160": "d5fc8d92 d9ec6542 3320e51d"
+ },
  "Shared/Supporting Files/en-US.lproj/Camera.strings": {
   "CameraAccess.DisabledAlertMessage.v153": "f77c6061 a6d5aa3e 22850307"
  },
@@ -1305,6 +1318,7 @@
   "Copy URL": "8826345b 0ebf2b8b 111efe11",
   "Menu.SendLinkToDevice": "0a5d79ab d015e941 2e440aaa",
   "Open Last Bookmark": "4dac80df 881fe42a f5c732fb",
+  "QuickActions.CombineWindows.Title.v155": "fb3f2b1d 1e1ff656 c20aa1c1",
   "Send to Device": "cf1dbffc b6b743f8 749ef080",
   "TabPeek.RemoveBookmark.v146": "b1df7120 02dc4436 304af0b9"
  },

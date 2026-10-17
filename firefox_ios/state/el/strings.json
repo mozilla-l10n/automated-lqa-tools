@@ -144,6 +144,17 @@
  "Shared/Supporting Files/en-US.lproj/BottomSheet.strings": {
   "Addresses.BottomSheet.UseSavedAddressBottomSheet.v124": "e1b9cd94 a78ab860 b56cb9e0"
  },
+ "Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings": {
+  "BrowserDataTransfer.ImportFailure.DismissButton.v160": "edca0a24 b21634a9 ecd697d2",
+  "BrowserDataTransfer.ImportFailure.Message.v160": "d20b128f 5f77c9f8 da9f3649",
+  "BrowserDataTransfer.ImportFailure.Title.v160": "033fbb30 833c045e b24761ff",
+  "BrowserDataTransfer.ImportSuccess.GotItButton.v160": "a2a14398 41cd3e20 600d26c1",
+  "BrowserDataTransfer.ImportSuccess.Title.v160": "e17de199 1fe96e71 bdf9d80a",
+  "BrowserDataTransfer.ImportedBookmarksFolder.Title.v160": "800ded29 ebb4f638 a0508270",
+  "BrowserDataTransfer.Settings.ExportButton.v160": "4fb73d96 7d444a32 84e6b1a9",
+  "BrowserDataTransfer.Settings.ImportButton.v160": "0a72978b 96bd6fd2 0e637a01",
+  "BrowserDataTransfer.Settings.SectionTitle.v160": "c2472ec5 a5b72aca 84ba8d13"
+ },
  "Shared/Supporting Files/en-US.lproj/Camera.strings": {
   "CameraAccess.DisabledAlertMessage.v153": "7edd0fff a6d5aa3e 22850307"
  },
@@ -729,6 +740,7 @@
   "Onboarding.Modern.Welcome.Skip.v145": "58d55c9a ea2c8b0d 23756acf",
   "Onboarding.Modern.Welcome.Title.v140": "7fa9c2d8 e5eaf45a 42b6b9a4",
   "Onboarding.Modern.Welcome.Title.v145": "cb99ac2c 37e03612 448ed1d2",
+  "Onboarding.MultiDay.HomeScreenNotificationsPopup.BodyText.v159": "933cebc0 c0a71e08 5e97469a",
   "Onboarding.MultiDay.HomeScreenNotificationsPopup.EnableButtonText.v158": "979896e1 8518fb28 3dc7dbd9",
   "Onboarding.MultiDay.HomeScreenNotificationsPopup.EnableCloseButtonText.v159": "cbc41cb6 0e7c6115 8905a46f",
   "Onboarding.MultiDay.NotificationCard.AcceptButtonText.v159": "979896e1 8518fb28 23be3f70",
@@ -1301,6 +1313,7 @@
   "Copy URL": "c12a7fef 0ebf2b8b 111efe11",
   "Menu.SendLinkToDevice": "a1076f7b d015e941 2e440aaa",
   "Open Last Bookmark": "3f264c9e 881fe42a f5c732fb",
+  "QuickActions.CombineWindows.Title.v155": "e1bfea24 1e1ff656 c20aa1c1",
   "Send to Device": "e2257d90 b6b743f8 749ef080",
   "TabPeek.RemoveBookmark.v146": "28a4caef 02dc4436 304af0b9"
  },

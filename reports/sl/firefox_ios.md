@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **Previous run** | 2026-10-05 @ `ef278c60f343` |
+| **Generated** | 2026-10-17 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 9 of 1,938 |
+| **Strings reviewed this run** | 8 of 1,872 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,36 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (7)
 
-_Nothing retired._
+- `WorldCup.CountryPicker.Close.AccessibilityLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "World Cup country picker" mistranslated as "country picker at the World Cup" instead of the picker belonging to the World Cup widget.
+    - Current: `Zapri izbirnik držav na svetovnem prvenstvu`
+    - Suggest: `Zapri izbirnik držav svetovnega prvenstva`
+    - The label closes the World Cup country picker; "na svetovnem prvenstvu" reads as being located at the championship.
+- `WorldCup.HomepageWidget.EliminatedTeamSection.Description.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Choose another team" is rendered as "Choose some other team whose progress you want to follow", altering the meaning.
+    - Current: `Izberite še kakšno ekipo, katere napredek na svetovnem prvenstvu želite spremljati.`
+    - Suggest: `Izberite drugo ekipo, da boste v koraku s svetovnim prvenstvom.`
+    - The source says to choose another team to keep up with the World Cup; the target says to choose yet another team whose progress at the World Cup you want to follow, which changes the meaning ("še kakšno" = one more, in addition).
+- `WorldCup.HomepageWidget.EliminatedTeamSection.Title.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Still want to Follow Along?" is reduced to "Are you still interested?", dropping the sense of continuing to follow.
+    - Current: `Vas še zanima?`
+    - Suggest: `Bi radi še naprej spremljali dogajanje?`
+    - The source asks whether the user wants to keep following along; the target's vague "Are you still interested?" loses that meaning.
+- `WorldCup.HomepageWidget.ErrorLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Please refresh." is translated as "Refresh the widget.", adding an object not in the source.
+    - Current: `Osvežite pripomoček.`
+    - Suggest: `Osvežite.`
+    - The source is a generic "Please refresh." without specifying the widget.
+- `WorldCup.HomepageWidget.FollowTeamCard.Close.AccessibilityLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "updates" translated as "podatke" (data) instead of updates/news.
+    - Current: `Skrij podatke o svetovnem prvenstvu`
+    - Suggest: `Skrij novosti o svetovnem prvenstvu`
+    - The source refers to World Cup updates, not to data.
+- `WorldCup.HomepageWidget.FollowTeamCard.Description.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "live match updates" is rendered as "receive updates live", shifting "live" from the matches to the receiving.
+    - Current: `V živo prejemajte obvestila o dogajanju na tekmah in še več.`
+    - Suggest: `Prejemajte obvestila o dogajanju na tekmah v živo in še več.`
+    - In en-US "live" modifies the match updates; the Slovene word order attaches it to the act of receiving.
+- `WorldCup.HomepageWidget.RoundPhase.ScrollIndicatorAccessibilityLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "matches" mistranslated as "zadetke" (goals/hits) instead of "tekme".
+    - Current: `Pomaknite se na prejšnje ali naslednje zadetke`
+    - Suggest: `Pomaknite se na prejšnje ali naslednje tekme`
+    - The source refers to previous or next matches (tekme); "zadetki" means goals or search hits, not matches.
 
 ---
 
@@ -44,11 +71,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 97 |
-| Strings | 1,938 |
-| Missing strings | 48 |
+| Files | 96 |
+| Strings | 1,872 |
+| Missing strings | 55 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,13 +86,17 @@ _Nothing retired._
 
 ### Completeness
 
-**48 strings** are not translated yet, concentrated in:
+**55 strings** are not translated yet, concentrated in:
 
-- `sl/firefox-ios.xliff` — 33
+- `sl/firefox-ios.xliff` — 36
+- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings` — 11
 - `sl/firefox-ios.xliff` — 5
-- `sl/firefox-ios.xliff` — 5
-- `sl/firefox-ios.xliff` — 3
 - `sl/firefox-ios.xliff` — 2
+- `sl/firefox-ios.xliff` — 1
+
+**Files absent from the locale:**
+
+- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -88,7 +119,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (89)
+## 3. Open findings (82)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -103,8 +134,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 40 |
-| 3 | Degraded language (grammar, spelling, terminology) | 41 |
+| 2 | Wrong content (says something other than the English) | 36 |
+| 3 | Degraded language (grammar, spelling, terminology) | 38 |
 | 4 | Cosmetic (typography, spacing) | 8 |
 
 ### A. Functional, markup, variables & plurals
@@ -263,41 +294,6 @@ _Nothing in this category._
     - Source: `Search Image with Google Lens`
     - Suggest: `Išči sliko z Google Lens`
     - The source refers to searching for the selected image with Google Lens, not for images in general.
-- `WorldCup.CountryPicker.Close.AccessibilityLabel.v151` — `sl/firefox-ios.xliff` — "World Cup country picker" mistranslated as "country picker at the World Cup" instead of the picker belonging to the World Cup widget.
-    - Current: `Zapri izbirnik držav na svetovnem prvenstvu`
-    - Source: `Close World Cup country picker`
-    - Suggest: `Zapri izbirnik držav svetovnega prvenstva`
-    - The label closes the World Cup country picker; "na svetovnem prvenstvu" reads as being located at the championship.
-- `WorldCup.HomepageWidget.EliminatedTeamSection.Description.v151` — `sl/firefox-ios.xliff` — "Choose another team" is rendered as "Choose some other team whose progress you want to follow", altering the meaning.
-    - Current: `Izberite še kakšno ekipo, katere napredek na svetovnem prvenstvu želite spremljati.`
-    - Source: `Choose another team to keep up with the World Cup.`
-    - Suggest: `Izberite drugo ekipo, da boste v koraku s svetovnim prvenstvom.`
-    - The source says to choose another team to keep up with the World Cup; the target says to choose yet another team whose progress at the World Cup you want to follow, which changes the meaning ("še kakšno" = one more, in addition).
-- `WorldCup.HomepageWidget.EliminatedTeamSection.Title.v151` — `sl/firefox-ios.xliff` — "Still want to Follow Along?" is reduced to "Are you still interested?", dropping the sense of continuing to follow.
-    - Current: `Vas še zanima?`
-    - Source: `Still want to Follow Along?`
-    - Suggest: `Bi radi še naprej spremljali dogajanje?`
-    - The source asks whether the user wants to keep following along; the target's vague "Are you still interested?" loses that meaning.
-- `WorldCup.HomepageWidget.ErrorLabel.v151` — `sl/firefox-ios.xliff` — "Please refresh." is translated as "Refresh the widget.", adding an object not in the source.
-    - Current: `Osvežite pripomoček.`
-    - Source: `We couldn’t load match data. Please refresh.`
-    - Suggest: `Osvežite.`
-    - The source is a generic "Please refresh." without specifying the widget.
-- `WorldCup.HomepageWidget.FollowTeamCard.Close.AccessibilityLabel.v151` — `sl/firefox-ios.xliff` — "updates" translated as "podatke" (data) instead of updates/news.
-    - Current: `Skrij podatke o svetovnem prvenstvu`
-    - Source: `Hide World Cup updates`
-    - Suggest: `Skrij novosti o svetovnem prvenstvu`
-    - The source refers to World Cup updates, not to data.
-- `WorldCup.HomepageWidget.FollowTeamCard.Description.v151` — `sl/firefox-ios.xliff` — "live match updates" is rendered as "receive updates live", shifting "live" from the matches to the receiving.
-    - Current: `V živo prejemajte obvestila o dogajanju na tekmah in še več.`
-    - Source: `Get live match updates and more.`
-    - Suggest: `Prejemajte obvestila o dogajanju na tekmah v živo in še več.`
-    - In en-US "live" modifies the match updates; the Slovene word order attaches it to the act of receiving.
-- `WorldCup.HomepageWidget.RoundPhase.ScrollIndicatorAccessibilityLabel.v151` — `sl/firefox-ios.xliff` — "matches" mistranslated as "zadetke" (goals/hits) instead of "tekme".
-    - Current: `Pomaknite se na prejšnje ali naslednje zadetke`
-    - Source: `Scroll to see previous or next matches`
-    - Suggest: `Pomaknite se na prejšnje ali naslednje tekme`
-    - The source refers to previous or next matches (tekme); "zadetki" means goals or search hits, not matches.
 - `Offline Website Data` — `sl/firefox-ios.xliff` — "Offline Website Data" translated as "Podatke pri delu brez povezave", dropping "Website".
     - Current: `Podatke pri delu brez povezave`
     - Source: `Offline Website Data`

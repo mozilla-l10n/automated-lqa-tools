@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **Previous run** | 2026-10-05 @ `ef278c60f343` |
+| **Generated** | 2026-10-17 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 22 of 1,986 |
+| **Strings reviewed this run** | 15 of 1,927 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for tr: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `Onboarding.MultiDay.SyncCard.AcceptButtonText.v159` — `tr/firefox-ios.xliff` — Informal imperative "giriş yap" breaks the locale's formal register used in all neighbouring strings.
-    - Current: `Eşitlemek için giriş yap`
-    - Source: `Sign in to Sync`
-    - Suggest: `Eşitlemek için giriş yapın`
-    - The tr locale uses the formal address form (e.g. "Bildirimleri etkinleştir"-style buttons aside, body strings use "-in" forms like "haberdar olun", "erişin", "seçin"); "giriş yap" is the informal singular imperative.
-- `Settings.Summarize.LanguageSection.Title.v149` — `tr/firefox-ios.xliff` — Section title rendered in all caps while the source uses title case.
-    - Current: `DİL`
-    - Source: `Language`
-    - Suggest: `Dil`
-    - The en-US source is "Language"; the uppercase styling is applied by the OS, so the string itself should not be all caps.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -43,9 +34,24 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (4)
 
-_Nothing retired._
+- `WorldCup.GroupPhase.GroupStageLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Group Stage" is rendered as "Grup maçı" (group match) instead of the tournament phase name.
+    - Current: `Grup maçı`
+    - Suggest: `Grup aşaması`
+    - The source names the tournament phase (Group Stage), not a single match; the established Turkish football term is "grup aşaması".
+- `WorldCup.HomepageWidget.GetCustomWallpaperLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Get custom wallpaper" translated as "Kişisel duvar kâğıdını indir" (download your personal wallpaper).
+    - Current: `Kişisel duvar kâğıdını indir`
+    - Suggest: `Özel duvar kâğıdını edinin`
+    - "Custom" here means a special/themed wallpaper provided by the app, not the user's personal one; "kişisel" wrongly implies the user's own wallpaper.
+- `WorldCup.HomepageWidget.RoundPhase.Round16Label.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Vowel harmony/suffix error: "16’LI TUR" should be "16’LIK TUR" or, consistent with the Round-of-32 string, "16’LI" must match the pattern used elsewhere.
+    - Current: `16’LI TUR`
+    - Suggest: `16’LİK TUR`
+    - "16" (on altı) ends in the vowel ı, so the suffix is -lık, not -lı; the parallel string uses "32’Lİ TUR" (otuz iki → -lik), showing inconsistent suffixation.
+- `WorldCup.HomepageWidget.RoundPhase.WinWorldCupLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Plural "CHAMPIONS" rendered as singular "ŞAMPİYONU".
+    - Current: `2026 DÜNYA KUPASI ŞAMPİYONU`
+    - Suggest: `2026 DÜNYA KUPASI ŞAMPİYONLARI`
+    - The source says "2026 WORLD CUP CHAMPIONS" (plural, the winning team); the Turkish uses the singular form.
 
 ---
 
@@ -54,7 +60,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,986 |
+| Strings | 1,927 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -77,8 +83,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-single` 10, `curly-double` 6 | _mixed_ |
-| apostrophe | `typographic` 105 | **typographic** |
-| ellipsis | `char` 27 | **char** |
+| apostrophe | `typographic` 100 | **typographic** |
+| ellipsis | `char` 28 | **char** |
 | register | `formal` 7 | **formal** |
 
 ---
@@ -89,7 +95,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (87)
+## 3. Open findings (83)
 
 > **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -114,8 +120,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 47 |
-| 3 | Degraded language (grammar, spelling, terminology) | 36 |
+| 2 | Wrong content (says something other than the English) | 44 |
+| 3 | Degraded language (grammar, spelling, terminology) | 35 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
@@ -323,21 +329,6 @@ _Also listed under their own category below._
     - Source: `Captions are missing`
     - Suggest: `Altyazılar eksik`
     - The source says the captions are missing (absent), not that they are not displayed; elsewhere in the same screen "missing" is rendered as "eksik" (Missing items → Öğeler eksik, Media controls are broken or missing → ... veya eksik).
-- `WorldCup.GroupPhase.GroupStageLabel.v151` — `tr/firefox-ios.xliff` — "Group Stage" is rendered as "Grup maçı" (group match) instead of the tournament phase name.
-    - Current: `Grup maçı`
-    - Source: `Group Stage`
-    - Suggest: `Grup aşaması`
-    - The source names the tournament phase (Group Stage), not a single match; the established Turkish football term is "grup aşaması".
-- `WorldCup.HomepageWidget.GetCustomWallpaperLabel.v151` — `tr/firefox-ios.xliff` — "Get custom wallpaper" translated as "Kişisel duvar kâğıdını indir" (download your personal wallpaper).
-    - Current: `Kişisel duvar kâğıdını indir`
-    - Source: `Get custom wallpaper`
-    - Suggest: `Özel duvar kâğıdını edinin`
-    - "Custom" here means a special/themed wallpaper provided by the app, not the user's personal one; "kişisel" wrongly implies the user's own wallpaper.
-- `WorldCup.HomepageWidget.RoundPhase.WinWorldCupLabel.v151` — `tr/firefox-ios.xliff` — Plural "CHAMPIONS" rendered as singular "ŞAMPİYONU".
-    - Current: `2026 DÜNYA KUPASI ŞAMPİYONU`
-    - Source: `2026 WORLD CUP CHAMPIONS`
-    - Suggest: `2026 DÜNYA KUPASI ŞAMPİYONLARI`
-    - The source says "2026 WORLD CUP CHAMPIONS" (plural, the winning team); the Turkish uses the singular form.
 - `Enter passcode` — `tr/firefox-ios.xliff` — "passcode" is translated as "parola" (password) instead of the passcode/PIN term.
     - Current: `Parolayı girin`
     - Source: `Enter passcode`
@@ -456,11 +447,6 @@ _Also listed under their own category below._
     - Source: `Your report helps us understand and fix issues in %1$@ to make it better for everyone. %2$@`
     - Suggest: `böylece uygulamayı herkes için iyileştirmemize yardımcı oluyor`
     - "iyileştirmemize" already carries the dative required by "yardımcı oluyor"; the extra "için" makes the sentence ungrammatical.
-- `WorldCup.HomepageWidget.RoundPhase.Round16Label.v151` — `tr/firefox-ios.xliff` — Vowel harmony/suffix error: "16’LI TUR" should be "16’LIK TUR" or, consistent with the Round-of-32 string, "16’LI" must match the pattern used elsewhere.
-    - Current: `16’LI TUR`
-    - Source: `ROUND OF 16`
-    - Suggest: `16’LİK TUR`
-    - "16" (on altı) ends in the vowel ı, so the suffix is -lık, not -lı; the parallel string uses "32’Lİ TUR" (otuz iki → -lik), showing inconsistent suffixation.
 - `Settings.Home.Option.Wallpaper.SwitchTitle.v99` — `tr/firefox-ios.xliff` — Toggle label rendered as an imperative sentence rather than a noun phrase title.
     - Current: `Giriş sayfasındaki Firefox logosuna dokunarak duvar kâğıdını değiştirin`
     - Source: `Change wallpaper by tapping Firefox homepage logo`

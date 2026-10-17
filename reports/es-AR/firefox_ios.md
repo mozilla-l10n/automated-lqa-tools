@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **Previous run** | 2026-10-05 @ `ef278c60f343` |
+| **Generated** | 2026-10-17 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 17 of 1,986 |
+| **Strings reviewed this run** | 18 of 1,927 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,17 +18,27 @@ Also for es-AR: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `NativeErrorPage.GenericError.Description.v158` — `es-AR/firefox-ios.xliff` — Uses "usted" forms (Verifique, su, intente) while the rest of the es-AR localization uses voseo/tuteo.
-    - Current: `Verifique la configuración de su conexión e intente nuevamente.`
-    - Source: `The site may be temporarily unavailable, it may have moved to a different address, or your firewall or proxy may be blocking the connection.  Check your connection settings and try again.`
-    - Suggest: `Verificá la configuración de tu conexión e intentá nuevamente.`
-    - es-AR established form of address is voseo (e.g., "Mantenete", "Conseguí", "Obtené", "tu informe"); this string switches to the formal "usted" register.
+_No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (3)
 
-_Nothing was fixed._
+- `LiveActivity.Downloads.FileNameText.v138` — `es-AR/firefox-ios.xliff` — Curly quotation marks from the source were replaced with straight double quotes.
+    - Current: `Descargando "%@"`
+    - Source: `Downloading “%@”`
+    - Suggest: `Descargando “%@”`
+    - The en-US uses typographic double quotes around the file name; the translation uses straight quotes, deviating from the source's typography.
+- `TopSites.RemovePage.Button` — `es-AR/firefox-ios.xliff` — Em dash from the source replaced with a hyphen.
+    - Current: `Eliminar página - %@`
+    - Source: `Remove page — %@`
+    - Suggest: `Eliminar página — %@`
+    - The en-US uses an em dash separator ("Remove page — %@"); the translation uses a plain hyphen.
+- `PzSrmZ-eHmH1H` — `es-AR/firefox-ios.xliff` — Mismatched quotation marks: opening ‘ closed with ‘ instead of ’.
+    - Current: `‘Eliminar pestañas privadas‘`
+    - Source: `Just to confirm, you wanted ‘Clear Private Tabs’?`
+    - Suggest: `“Eliminar pestañas privadas”`
+    - The closing quote is a left single quotation mark, not a proper closing quote; other strings in the same file use straight double quotes.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -38,9 +48,16 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (2)
 
-_Nothing retired._
+- `WorldCup.HomepageWidget.ErrorLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Please refresh." is rendered as the bare infinitive "Actualizar." instead of an instruction to the user.
+    - Current: `No pudimos cargar los datos de partidos. Actualizar.`
+    - Suggest: `No pudimos cargar los datos de partidos. Actualizá la página.`
+    - The source asks the user to refresh; "Actualizar." reads as a button label, not the imperative request, and breaks the voseo imperative used elsewhere in this file ("Elegí", "Conseguí").
+- `WorldCup.HomepageWidget.RoundPhase.BronzeFinalLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "BRONZE FINAL" is rendered as "TERCER PUESTO", which duplicates the separate "THIRD PLACE" label and loses the distinction between the match and the winner label.
+    - Current: `TERCER PUESTO`
+    - Suggest: `FINAL POR EL TERCER PUESTO`
+    - The source distinguishes the 'Bronze final' match (BRONZE FINAL) from the 'Third place' winner label (THIRD PLACE, translated as TERCER LUGAR); translating the match phase simply as "TERCER PUESTO" makes it a near-duplicate of the winner label instead of naming the match.
 
 ---
 
@@ -49,7 +66,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,986 |
+| Strings | 1,927 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -71,11 +88,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `straight-double` 7, `curly-double` 3, `curly-single` 2 | _mixed_ |
-| apostrophe | `typographic` 2 | **typographic** |
-| ellipsis | `char` 27 | **char** |
-| dash | `em` 2, `en` 2 | _mixed_ |
-| inverted marks | `open-question` 42, `open-exclamation` 9 | **open-question** |
+| quotes | `straight-double` 6, `curly-double` 4, `curly-single` 3 | _mixed_ |
+| apostrophe | `typographic` 3 | **typographic** |
+| ellipsis | `char` 28 | **char** |
+| dash | `em` 3, `en` 2 | _mixed_ |
+| inverted marks | `open-question` 41, `open-exclamation` 9 | **open-question** |
 
 ---
 
@@ -85,7 +102,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (102)
+## 3. Open findings (97)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -100,9 +117,9 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 43 |
-| 3 | Degraded language (grammar, spelling, terminology) | 56 |
-| 4 | Cosmetic (typography, spacing) | 3 |
+| 2 | Wrong content (says something other than the English) | 42 |
+| 3 | Degraded language (grammar, spelling, terminology) | 55 |
+| 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -205,11 +222,6 @@ _Nothing in this category._
     - Source: `Your browser’s user agent, which includes your iOS version, %@ version, and browser engine version`
     - Suggest: `que incluye tu versión de iOS`
     - The source says "your iOS version", matching "Your browser's" earlier in the sentence; "su" breaks the established informal address and can be read as referring to the browser rather than the user.
-- `WorldCup.HomepageWidget.ErrorLabel.v151` — `es-AR/firefox-ios.xliff` — "Please refresh." is rendered as the bare infinitive "Actualizar." instead of an instruction to the user.
-    - Current: `No pudimos cargar los datos de partidos. Actualizar.`
-    - Source: `We couldn’t load match data. Please refresh.`
-    - Suggest: `No pudimos cargar los datos de partidos. Actualizá la página.`
-    - The source asks the user to refresh; "Actualizar." reads as a button label, not the imperative request, and breaks the voseo imperative used elsewhere in this file ("Elegí", "Conseguí").
 - `DefaultBrowserOnboarding.Description2` — `es-AR/firefox-ios.xliff` — "Tap Default Browser App" se tradujo como si se tocara la aplicación del navegador, no la opción de ajustes llamada "Aplicación de navegador predeterminada".
     - Current: `2. Tocá la aplicación del navegador predeterminado`
     - Source: `2. Tap Default Browser App`
@@ -546,11 +558,6 @@ _Nothing in this category._
     - Source: `Items are overlapped`
     - Suggest: `Los elementos están superpuestos`
     - ItemsMisaligned, ItemsNotVisible and MissingItems on the same form all use "elementos"; this one is inconsistent.
-- `WorldCup.HomepageWidget.RoundPhase.BronzeFinalLabel.v151` — `es-AR/firefox-ios.xliff` — "BRONZE FINAL" is rendered as "TERCER PUESTO", which duplicates the separate "THIRD PLACE" label and loses the distinction between the match and the winner label.
-    - Current: `TERCER PUESTO`
-    - Source: `BRONZE FINAL`
-    - Suggest: `FINAL POR EL TERCER PUESTO`
-    - The source distinguishes the 'Bronze final' match (BRONZE FINAL) from the 'Third place' winner label (THIRD PLACE, translated as TERCER LUGAR); translating the match phase simply as "TERCER PUESTO" makes it a near-duplicate of the winner label instead of naming the match.
 - `Saved Logins` — `es-AR/firefox-ios.xliff` — "Saved Logins" rendered as "Ingresos guardados" instead of the established term "Inicios de sesión guardados".
     - Current: `Ingresos guardados`
     - Source: `Saved Logins`
@@ -614,21 +621,7 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
-- `LiveActivity.Downloads.FileNameText.v138` — `es-AR/firefox-ios.xliff` — Curly quotation marks from the source were replaced with straight double quotes.
-    - Current: `Descargando "%@"`
-    - Source: `Downloading “%@”`
-    - Suggest: `Descargando “%@”`
-    - The en-US uses typographic double quotes around the file name; the translation uses straight quotes, deviating from the source's typography.
-- `TopSites.RemovePage.Button` — `es-AR/firefox-ios.xliff` — Em dash from the source replaced with a hyphen.
-    - Current: `Eliminar página - %@`
-    - Source: `Remove page — %@`
-    - Suggest: `Eliminar página — %@`
-    - The en-US uses an em dash separator ("Remove page — %@"); the translation uses a plain hyphen.
-- `PzSrmZ-eHmH1H` — `es-AR/firefox-ios.xliff` — Mismatched quotation marks: opening ‘ closed with ‘ instead of ’.
-    - Current: `‘Eliminar pestañas privadas‘`
-    - Source: `Just to confirm, you wanted ‘Clear Private Tabs’?`
-    - Suggest: `“Eliminar pestañas privadas”`
-    - The closing quote is a left single quotation mark, not a proper closing quote; other strings in the same file use straight double quotes.
+_Nothing in this category._
 
 ---
 
@@ -650,6 +643,9 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (1)
+### Fixed to date (4)
 
+- `LiveActivity.Downloads.FileNameText.v138` — `es-AR/firefox-ios.xliff` — fixed 2026-10-17
+- `TopSites.RemovePage.Button` — `es-AR/firefox-ios.xliff` — fixed 2026-10-17
+- `PzSrmZ-eHmH1H` — `es-AR/firefox-ios.xliff` — fixed 2026-10-17
 - `Menu.EnhancedTrackingProtection.ClearData.AlertText.v128` — `es-AR/firefox-ios.xliff` — fixed 2026-09-21

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **Previous run** | 2026-10-05 @ `ef278c60f343` |
+| **Generated** | 2026-10-17 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 17 of 1,986 |
+| **Strings reviewed this run** | 15 of 1,927 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,13 @@ Also for de: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (1)
 
-- `NativeErrorPage.GenericError.Description.v158.withoutURL` — `de/firefox-ios.xliff` — "couldn’t reach the requested URL" rendered as "couldn't access the requested URL".
-    - Current: `konnte nicht auf die angeforderte URL zugreifen`
-    - Source: `%1$@ couldn’t reach the requested URL.`
-    - Suggest: `konnte die angeforderte URL nicht erreichen`
-    - The source says the app could not reach (connect to) the URL; "zugreifen" means access, shifting the meaning from a connection failure to an access/permission problem.
-- `Onboarding.MultiDay.SyncCard.BodyText.v159` — `de/firefox-ios.xliff` — "Instantly" is dropped from the translation.
-    - Current: `Holen Sie sich Passwörter, Chronik und mehr auf jedem Gerät.`
-    - Source: `Instantly get passwords, history, and more on any device.`
-    - Suggest: `Holen Sie sich sofort Passwörter, Chronik und mehr auf jedem Gerät.`
-    - The source promises immediate availability ("Instantly get"); the German omits this qualifier entirely.
+- `QuickAnswers.ContentView.ResultHeader.v160` — `de/firefox-ios.xliff` — Singular header "QUICK ANSWER" is rendered in the plural.
+    - Current: `SCHNELLE ANTWORTEN`
+    - Source: `QUICK ANSWER`
+    - Suggest: `SCHNELLE ANTWORT`
+    - The comment says the header labels the text below as a single short answer to the user's question; the plural "Antworten" does not match the singular source.
 
 ### ✅ Fixed since the last run (0)
 
@@ -43,9 +38,32 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (6)
 
-_Nothing retired._
+- `WorldCup.HomepageWidget.FollowTeamLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Wrong case: "folgen" governs the dative, so "Team folgen" needs an article or different wording.
+    - Current: `Team folgen`
+    - Suggest: `Einem Team folgen`
+    - German "folgen" takes a dative object; the bare accusative-looking "Team folgen" is ungrammatical, unlike the parallel "Team ändern"/"Team auswählen" which take the accusative.
+- `WorldCup.HomepageWidget.FulltimePenaltiesScoreLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Full time" is rendered as "Reguläre Spielzeit" here but as "Spielende" in the FT labels on the same widget.
+    - Current: `Reguläre Spielzeit • Elfmeterschießen (%@)`
+    - Suggest: `Spielende • Elfmeterschießen (%@)`
+    - The same source term "Full Time" is translated "Spielende" in WorldCup.HomepageWidget.FTLabel and FTNoParenthesisLabel; "Reguläre Spielzeit" (regular playing time) is inconsistent and also inaccurate since the match ended after penalties.
+- `WorldCup.HomepageWidget.GetCustomWallpaperLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Get custom wallpaper" is translated as "herunterladen" (download), adding a meaning the source does not have.
+    - Current: `Benutzerdefiniertes Hintergrundbild herunterladen`
+    - Suggest: `Benutzerdefiniertes Hintergrundbild erhalten`
+    - The source says "Get", not "Download"; the button selects/applies a wallpaper rather than downloading one.
+- `WorldCup.HomepageWidget.GroupPhase.RelatedMatchesLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Related matches" translated as "Verwandte Spiele" (kinship-related), the wrong sense of "related".
+    - Current: `Verwandte Spiele`
+    - Suggest: `Zugehörige Spiele`
+    - In this context "related matches" means the matches associated with the team's group; "verwandt" means related by kinship/similarity and reads wrong for sports fixtures.
+- `WorldCup.HomepageWidget.RoundPhase.Round16Label.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Round phase label is not in all caps unlike the source and the other round phase labels.
+    - Current: `Achtelfinale`
+    - Suggest: `ACHTELFINALE`
+    - Source is "ROUND OF 16" in caps, and sibling strings (VIERTELFINALE, HALBFINALE, FINALE) are capitalized; this one is not, breaking consistency on the same screen.
+- `WorldCup.HomepageWidget.RoundPhase.Round32Label.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Round phase label is not in all caps unlike the source and the other round phase labels.
+    - Current: `Runde der letzten 32`
+    - Suggest: `RUNDE DER LETZTEN 32`
+    - Source is "ROUND OF 32" in caps and the neighbouring round-phase labels are all caps in German; this one is mixed case.
 
 ---
 
@@ -54,7 +72,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,986 |
+| Strings | 1,927 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -77,9 +95,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `german-double` 16 | **german-double** |
-| ellipsis | `char` 27 | **char** |
+| ellipsis | `char` 28 | **char** |
 | dash | `en` 8 | **en** |
-| register | `informal` 1, `formal` 462 | **formal** |
+| register | `informal` 1, `formal` 455 | **formal** |
 
 ---
 
@@ -89,7 +107,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (92)
+## 3. Open findings (87)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -105,8 +123,8 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 1 |
 | 2 | Wrong content (says something other than the English) | 29 |
-| 3 | Degraded language (grammar, spelling, terminology) | 52 |
-| 4 | Cosmetic (typography, spacing) | 10 |
+| 3 | Degraded language (grammar, spelling, terminology) | 49 |
+| 4 | Cosmetic (typography, spacing) | 8 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -298,16 +316,6 @@ _Also listed under their own category below._
     - Source: `Captions are missing`
     - Suggest: `Untertitel fehlen`
     - The developer comment places this under the 'Video or audio does not play' category, where "Captions" means subtitles, not image captions.
-- `WorldCup.HomepageWidget.GetCustomWallpaperLabel.v151` — `de/firefox-ios.xliff` — "Get custom wallpaper" is translated as "herunterladen" (download), adding a meaning the source does not have.
-    - Current: `Benutzerdefiniertes Hintergrundbild herunterladen`
-    - Source: `Get custom wallpaper`
-    - Suggest: `Benutzerdefiniertes Hintergrundbild erhalten`
-    - The source says "Get", not "Download"; the button selects/applies a wallpaper rather than downloading one.
-- `WorldCup.HomepageWidget.GroupPhase.RelatedMatchesLabel.v151` — `de/firefox-ios.xliff` — "Related matches" translated as "Verwandte Spiele" (kinship-related), the wrong sense of "related".
-    - Current: `Verwandte Spiele`
-    - Source: `Related matches`
-    - Suggest: `Zugehörige Spiele`
-    - In this context "related matches" means the matches associated with the team's group; "verwandt" means related by kinship/similarity and reads wrong for sports fixtures.
 - `Menu.ZoomPage.Close.AccessibilityLabel.v113` — `de/firefox-ios.xliff` — "Zoom Panel" rendered as "Zoom-Ansicht" (zoom view) instead of the zoom panel/bar.
     - Current: `Zoom-Ansicht schließen`
     - Source: `Close Zoom Panel`
@@ -396,6 +404,11 @@ _Also listed under their own category below._
     - Source: `Close and exit %@ onboarding`
     - Suggest: `%@-Onboarding beenden und schließen`
     - German compounds with a proper-name placeholder require a hyphen (cf. "%@-Hintergrundbild" in the same file).
+- `QuickAnswers.ContentView.ResultHeader.v160` — `de/firefox-ios.xliff` — Singular header "QUICK ANSWER" is rendered in the plural.
+    - Current: `SCHNELLE ANTWORTEN`
+    - Source: `QUICK ANSWER`
+    - Suggest: `SCHNELLE ANTWORT`
+    - The comment says the header labels the text below as a single short answer to the user's question; the plural "Antworten" does not match the singular source.
 - `Settings.Search.Suggest.ShowSponsoredSuggestions.Description.v124` — `de/firefox-ios.xliff` — "gelegentlich gesponserten" should be "gelegentliche gesponserte"; the adverb changes the meaning to "occasionally sponsored".
     - Current: `mit gelegentlich gesponserten Vorschlägen`
     - Source: `Support %@ with occasional sponsored suggestions`
@@ -406,11 +419,6 @@ _Also listed under their own category below._
     - Source: `You are not signed in to your account.`
     - Suggest: `Sie sind nicht bei Ihrem Konto angemeldet.`
     - German uses "bei einem Konto angemeldet sein"; "mit" is ungrammatical here.
-- `WorldCup.HomepageWidget.FollowTeamLabel.v151` — `de/firefox-ios.xliff` — Wrong case: "folgen" governs the dative, so "Team folgen" needs an article or different wording.
-    - Current: `Team folgen`
-    - Source: `Follow team`
-    - Suggest: `Einem Team folgen`
-    - German "folgen" takes a dative object; the bare accusative-looking "Team folgen" is ungrammatical, unlike the parallel "Team ändern"/"Team auswählen" which take the accusative.
 - `Menu.TrackingProtectionDescription.ContentTrackers` — `de/firefox-ios.xliff` — Wrong plural/case form "andere Inhalten".
     - Current: `und andere Inhalten laden`
     - Source: `Websites may load outside ads, videos, and other content that contains hidden trackers. Blocking this can make websites load faster, but some buttons, forms, and login fields, might not work.`
@@ -479,11 +487,6 @@ _Also listed under their own category below._
     - Source: `Describe the issue in detail (optional)`
     - Suggest: `(optional)`
     - "freiwillig" means voluntary; the established Mozilla German term for "optional" in form fields is "optional".
-- `WorldCup.HomepageWidget.FulltimePenaltiesScoreLabel.v151` — `de/firefox-ios.xliff` — "Full time" is rendered as "Reguläre Spielzeit" here but as "Spielende" in the FT labels on the same widget.
-    - Current: `Reguläre Spielzeit • Elfmeterschießen (%@)`
-    - Source: `Full time • Penalties (%@)`
-    - Suggest: `Spielende • Elfmeterschießen (%@)`
-    - The same source term "Full Time" is translated "Spielende" in WorldCup.HomepageWidget.FTLabel and FTNoParenthesisLabel; "Reguläre Spielzeit" (regular playing time) is inconsistent and also inaccurate since the match ended after penalties.
 - `Menu.ZoomPage.DecreaseZoom.AccessibilityLabel.v113` — `de/firefox-ios.xliff` — "Zoom Level" translated as "Zoomfaktor" here but as "Zoomstufe" in the sibling string on the same screen.
     - Current: `Zoomfaktor verringern`
     - Source: `Decrease Zoom Level`
@@ -557,16 +560,6 @@ _Also listed under their own category below._
     - Source: `(no username)`
     - Suggest: `(kein Benutzername)`
     - Source is "(no username)" in lowercase; German adjective/determiner should not be capitalized here.
-- `WorldCup.HomepageWidget.RoundPhase.Round16Label.v151` — `de/firefox-ios.xliff` — Round phase label is not in all caps unlike the source and the other round phase labels.
-    - Current: `Achtelfinale`
-    - Source: `ROUND OF 16`
-    - Suggest: `ACHTELFINALE`
-    - Source is "ROUND OF 16" in caps, and sibling strings (VIERTELFINALE, HALBFINALE, FINALE) are capitalized; this one is not, breaking consistency on the same screen.
-- `WorldCup.HomepageWidget.RoundPhase.Round32Label.v151` — `de/firefox-ios.xliff` — Round phase label is not in all caps unlike the source and the other round phase labels.
-    - Current: `Runde der letzten 32`
-    - Source: `ROUND OF 32`
-    - Suggest: `RUNDE DER LETZTEN 32`
-    - Source is "ROUND OF 32" in caps and the neighbouring round-phase labels are all caps in German; this one is mixed case.
 - `Settings.Studies.Toggle.Link` — `de/firefox-ios.xliff` — Trailing period from the source "Learn More." is missing.
     - Current: `Weitere Informationen`
     - Source: `Learn More.`

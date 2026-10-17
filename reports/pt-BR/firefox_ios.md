@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **Previous run** | 2026-10-05 @ `ef278c60f343` |
+| **Generated** | 2026-10-17 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 17 of 1,986 |
+| **Strings reviewed this run** | 18 of 1,927 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,17 +18,27 @@ Also for pt-BR: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `Onboarding.MultiDay.HomeScreenNotificationsPopup.Title.v159` — `pt-BR/firefox-ios.xliff` — "noticias" is missing the accent; correct spelling is "notícias".
-    - Current: `Receba noticias de novos recursos de privacidade`
-    - Source: `Get fresh privacy features`
-    - Suggest: `Receba notícias de novos recursos de privacidade`
-    - Portuguese spelling requires the acute accent in "notícias".
+_No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (3)
 
-_Nothing was fixed._
+- `QuickAnswers.OptInRedesign.PrivateByDesignTitle.v158` — `pt-BR/firefox-ios.xliff` — "Private By Design" is rendered as "Privativo por projeto" here but as "Projetado para privacidade" in the privacy banner title, an inconsistent and unidiomatic rendering.
+    - Current: `Privativo por projeto`
+    - Source: `Private By Design`
+    - Suggest: `Projetado para privacidade`
+    - The same source phrase "Private by Design" appears in QuickAnswers.PrivacyBanner.Title.v158 as "Projetado para privacidade"; "Privativo por projeto" is a literal, misleading rendering of the same term in the same feature.
+- `Keyboard.Shortcuts.RefreshWithoutCache.v108` — `pt-BR/firefox-ios.xliff` — Stray capital letter mid-phrase in "Recarregar Ignorando cache".
+    - Current: `Recarregar Ignorando cache`
+    - Source: `Reload Ignoring Cache`
+    - Suggest: `Recarregar ignorando cache`
+    - pt-BR uses sentence case in these shortcut labels (see the other entries, e.g. "Limpar histórico recente"); "Ignorando" should not be capitalized mid-sentence.
+- `TodayWidget.MoreTabsLabel` — `pt-BR/firefox-ios.xliff` — The "+" sign placement produces "Mais +5…" instead of the intended "+5 mais".
+    - Current: `Mais +%d…`
+    - Source: `+%d More…`
+    - Suggest: `+%d mais…`
+    - The developer comment states it becomes something like "+5 more"; placing "Mais" before "+5" reads oddly and capitalizes mid-label.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -38,9 +48,24 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (4)
 
-_Nothing retired._
+- `WorldCup.HomepageWidget.RoundPhase.BronzeFinalLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "BRONZE FINAL" mistranslated as "FINAL DO BRONZE".
+    - Current: `FINAL DO BRONZE`
+    - Suggest: `FINAL DE BRONZE`
+    - The source names the bronze-medal match; "FINAL DO BRONZE" reads as "the final of the bronze" and is not the established Portuguese term (final de bronze / disputa do terceiro lugar).
+- `WorldCup.HomepageWidget.RoundPhase.Round16Label.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Hyphenation is wrong in "OITAVAS-DE FINAL"; the standard form is "OITAVAS DE FINAL".
+    - Current: `OITAVAS-DE FINAL`
+    - Suggest: `OITAVAS DE FINAL`
+    - The Portuguese term for "Round of 16" is "oitavas de final" (cf. "QUARTAS DE FINAL" in the sibling string); the misplaced hyphen is a spelling error.
+- `WorldCup.HomepageWidget.RoundPhase.Round32Label.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "ROUND OF 32" rendered in sentence case and with inconsistent phrasing compared to the other round-phase labels.
+    - Current: `Fase dos 32`
+    - Suggest: `DEZESSEIS AVOS DE FINAL`
+    - All other round-phase labels are uppercase (QUARTAS DE FINAL, SEMIFINAIS, TERCEIRO LUGAR), matching the uppercase source; this one breaks the casing and terminology pattern on the same screen.
+- `WorldCup.HomepageWidget.RoundPhase.UpcomingLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Upcoming" translated as "Seguintes" (following), not "upcoming/next".
+    - Current: `Seguintes`
+    - Suggest: `Em breve`
+    - The label marks a match that has not yet happened; "Seguintes" means "following ones" and does not convey "upcoming" for a single match.
 
 ---
 
@@ -49,7 +74,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,986 |
+| Strings | 1,927 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -73,9 +98,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-single` 6, `curly-double` 4 | _mixed_ |
 | apostrophe | `typographic` 6 | **typographic** |
-| ellipsis | `char` 27 | **char** |
+| ellipsis | `char` 28 | **char** |
 | dash | `em` 1 | **em** |
-| register | `informal` 153 | **informal** |
+| register | `informal` 149 | **informal** |
 
 ---
 
@@ -85,7 +110,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (58)
+## 3. Open findings (51)
 
 > **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -105,9 +130,9 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 35 |
-| 3 | Degraded language (grammar, spelling, terminology) | 21 |
-| 4 | Cosmetic (typography, spacing) | 2 |
+| 2 | Wrong content (says something other than the English) | 33 |
+| 3 | Degraded language (grammar, spelling, terminology) | 18 |
+| 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -215,16 +240,6 @@ _Nothing in this category._
     - Source: `We’ve introduced a %@ Terms of Use and updated our Privacy Notice.`
     - Suggest: `Lançamos os novos Termos de uso do %@`
     - The en-US says a Terms of Use document was newly introduced ("a ... Terms of Use"); the pt-BR definite phrasing does not convey the novelty.
-- `WorldCup.HomepageWidget.RoundPhase.BronzeFinalLabel.v151` — `pt-BR/firefox-ios.xliff` — "BRONZE FINAL" mistranslated as "FINAL DO BRONZE".
-    - Current: `FINAL DO BRONZE`
-    - Source: `BRONZE FINAL`
-    - Suggest: `FINAL DE BRONZE`
-    - The source names the bronze-medal match; "FINAL DO BRONZE" reads as "the final of the bronze" and is not the established Portuguese term (final de bronze / disputa do terceiro lugar).
-- `WorldCup.HomepageWidget.RoundPhase.UpcomingLabel.v151` — `pt-BR/firefox-ios.xliff` — "Upcoming" translated as "Seguintes" (following), not "upcoming/next".
-    - Current: `Seguintes`
-    - Source: `Upcoming`
-    - Suggest: `Em breve`
-    - The label marks a match that has not yet happened; "Seguintes" means "following ones" and does not convey "upcoming" for a single match.
 - `Use your fingerprint to access Logins now.` — `pt-BR/firefox-ios.xliff` — The source's "now" is dropped in the translation.
     - Current: `Use sua digital para acessar suas contas de acesso.`
     - Source: `Use your fingerprint to access Logins now.`
@@ -353,11 +368,6 @@ _Nothing in this category._
     - Source: `Try out features and ideas before they’re released to everyone.`
     - Suggest: `Experimente recursos e ideias antes de serem liberados para todos.`
     - The verb must agree with the plural subject ("recursos e ideias"); "ser" is singular and lacks the pronoun/number agreement required.
-- `WorldCup.HomepageWidget.RoundPhase.Round16Label.v151` — `pt-BR/firefox-ios.xliff` — Hyphenation is wrong in "OITAVAS-DE FINAL"; the standard form is "OITAVAS DE FINAL".
-    - Current: `OITAVAS-DE FINAL`
-    - Source: `ROUND OF 16`
-    - Suggest: `OITAVAS DE FINAL`
-    - The Portuguese term for "Round of 16" is "oitavas de final" (cf. "QUARTAS DE FINAL" in the sibling string); the misplaced hyphen is a spelling error.
 - `Decrease text size` — `pt-BR/firefox-ios.xliff` — Accessibility label uses a conjugated verb form instead of the infinitive/noun form used for the action label.
     - Current: `Diminui o tamanho do texto`
     - Source: `Decrease text size`
@@ -386,16 +396,6 @@ _Nothing in this category._
     - Source: `Add a name`
     - Suggest: `Adicione um nome`
     - "Add a name" here is an inline error instruction to the user, like "Insira uma data de expiração válida" and "Digite um número de cartão válido" in the same file; the infinitive "Adicionar" reads as a button label and breaks consistency on the same screen.
-- `QuickAnswers.OptInRedesign.PrivateByDesignTitle.v158` — `pt-BR/firefox-ios.xliff` — "Private By Design" is rendered as "Privativo por projeto" here but as "Projetado para privacidade" in the privacy banner title, an inconsistent and unidiomatic rendering.
-    - Current: `Privativo por projeto`
-    - Source: `Private By Design`
-    - Suggest: `Projetado para privacidade`
-    - The same source phrase "Private by Design" appears in QuickAnswers.PrivacyBanner.Title.v158 as "Projetado para privacidade"; "Privativo por projeto" is a literal, misleading rendering of the same term in the same feature.
-- `WorldCup.HomepageWidget.RoundPhase.Round32Label.v151` — `pt-BR/firefox-ios.xliff` — "ROUND OF 32" rendered in sentence case and with inconsistent phrasing compared to the other round-phase labels.
-    - Current: `Fase dos 32`
-    - Source: `ROUND OF 32`
-    - Suggest: `DEZESSEIS AVOS DE FINAL`
-    - All other round-phase labels are uppercase (QUARTAS DE FINAL, SEMIFINAIS, TERCEIRO LUGAR), matching the uppercase source; this one breaks the casing and terminology pattern on the same screen.
 - `Settings.DisplayTheme.BrightnessThreshold.SectionHeader` — `pt-BR/firefox-ios.xliff` — "Threshold" translated as "Tolerância", inconsistent with "limiar" used for the same term in the section footer.
     - Current: `Tolerância`
     - Source: `Threshold`
@@ -404,16 +404,7 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
-- `Keyboard.Shortcuts.RefreshWithoutCache.v108` — `pt-BR/firefox-ios.xliff` — Stray capital letter mid-phrase in "Recarregar Ignorando cache".
-    - Current: `Recarregar Ignorando cache`
-    - Source: `Reload Ignoring Cache`
-    - Suggest: `Recarregar ignorando cache`
-    - pt-BR uses sentence case in these shortcut labels (see the other entries, e.g. "Limpar histórico recente"); "Ignorando" should not be capitalized mid-sentence.
-- `TodayWidget.MoreTabsLabel` — `pt-BR/firefox-ios.xliff` — The "+" sign placement produces "Mais +5…" instead of the intended "+5 mais".
-    - Current: `Mais +%d…`
-    - Source: `+%d More…`
-    - Suggest: `+%d mais…`
-    - The developer comment states it becomes something like "+5 more"; placing "Mais" before "+5" reads oddly and capitalizes mid-label.
+_Nothing in this category._
 
 ---
 
@@ -436,6 +427,8 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (3)
 
-_Nothing fixed yet._
+- `QuickAnswers.OptInRedesign.PrivateByDesignTitle.v158` — `pt-BR/firefox-ios.xliff` — fixed 2026-10-17
+- `Keyboard.Shortcuts.RefreshWithoutCache.v108` — `pt-BR/firefox-ios.xliff` — fixed 2026-10-17
+- `TodayWidget.MoreTabsLabel` — `pt-BR/firefox-ios.xliff` — fixed 2026-10-17

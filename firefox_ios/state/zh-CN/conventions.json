@@ -1,8 +1,8 @@
 {
  "_meta": {
   "locale": "zh-CN",
-  "prose_chunks": 1966,
-  "strings": 1966
+  "prose_chunks": 1909,
+  "strings": 1909
  },
  "apostrophe": {
   "straight": 0,
@@ -14,10 +14,10 @@
  },
  "ellipsis": {
   "ascii": 0,
-  "char": 25
+  "char": 26
  },
  "fullwidth": {
-  "punctuation": 588
+  "punctuation": 583
  },
  "inverted_marks": {
   "open-exclamation": 0,
@@ -33,7 +33,7 @@
   "curly-double": 46
  },
  "register": {
-  "formal": 147,
+  "formal": 144,
   "informal": 1
  }
 }

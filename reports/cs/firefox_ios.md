@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **Previous run** | 2026-10-05 @ `ef278c60f343` |
+| **Generated** | 2026-10-17 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 17 of 1,986 |
+| **Strings reviewed this run** | 5 of 1,915 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,17 +18,22 @@ Also for cs: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `NativeErrorPage.GenericError.Description.v158.withoutURL` — `cs/firefox-ios.xliff` — "couldn’t reach" is rendered as "se nepodařilo načíst" (couldn't load), changing the stated failure.
-    - Current: `se nepodařilo načíst požadovanou URL`
-    - Source: `%1$@ couldn’t reach the requested URL.`
-    - Suggest: `se nepodařilo spojit s požadovanou URL adresou`
-    - The source says the app could not reach the requested URL (connection failure), not that it failed to load it.
+_No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (2)
 
-_Nothing was fixed._
+- `Bookmarks.Menu.DeletedBookmark.v131` — `cs/firefox-ios.xliff` — Uses straight/English curly quotes instead of the Czech german-double quotes used elsewhere in the file.
+    - Current: `Smazáno “%@”`
+    - Source: `Deleted “%@”`
+    - Suggest: `Smazáno „%@“`
+    - The cs convention is german-double quotes („ “), as used in Bookmarks.Menu.SavedBookmarkToastLabel.v136 in the same file.
+- `LiveActivity.Downloads.FileNameText.v138` — `cs/firefox-ios.xliff` — Straight/English-style quotes used instead of the Czech german-double quotes.
+    - Current: `Stahuje se “%@”`
+    - Source: `Downloading “%@”`
+    - Suggest: `Stahuje se „%@“`
+    - The locale convention is german-double quotes; the current string uses “ ” (English opening/closing pair).
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -38,9 +43,20 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (3)
 
-_Nothing retired._
+- `WorldCup.HomepageWidget.MatchUnavailableLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Try refreshing in a few minutes" is translated as reloading the page rather than refreshing the widget data.
+    - Current: `Zkuste stránku za chvíli znovu načíst.`
+    - Suggest: `Zkuste to za pár minut znovu načíst.`
+    - The source refers to refreshing the widget's match data, not a page; the Czech adds "stránku" (the page), which the source never says.
+- `WorldCup.HomepageWidget.RoundPhase.ScrollIndicatorAccessibilityLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Accessibility label says "scroll the page" although the scrolling applies to the widget's match list.
+    - Current: `Posuňte stránku a podívejte se`
+    - Suggest: `Posunutím zobrazíte`
+    - The source says "Scroll to see previous or next matches"; "stránku" (the page) is not in the source and misdescribes the control.
+- `WorldCup.HomepageWidget.RoundPhase.WinWorldCupLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "2026 WORLD CUP CHAMPIONS" is rendered as just "MISTROVSTVÍ SVĚTA 2026" (World Cup 2026), losing the "champions" meaning.
+    - Current: `MISTROVSTVÍ SVĚTA 2026`
+    - Suggest: `MISTŘI SVĚTA 2026`
+    - The source labels the championship winner; the Czech only names the tournament, not the champions.
 
 ---
 
@@ -48,11 +64,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 97 |
-| Strings | 1,986 |
-| Missing strings | 0 |
+| Files | 96 |
+| Strings | 1,915 |
+| Missing strings | 12 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,7 +79,16 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**12 strings** are not translated yet, concentrated in:
+
+- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings` — 11
+- `cs/firefox-ios.xliff` — 1
+
+**Files absent from the locale:**
+
+- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings`
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -71,8 +96,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `german-double` 13, `curly-double` 2 | **german-double** |
-| ellipsis | `char` 27 | **char** |
+| quotes | `german-double` 15 | **german-double** |
+| ellipsis | `char` 28 | **char** |
 | dash | `em` 1, `en` 2 | _mixed_ |
 
 ---
@@ -83,7 +108,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (97)
+## 3. Open findings (91)
 
 > **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -108,9 +133,9 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 54 |
-| 3 | Degraded language (grammar, spelling, terminology) | 37 |
-| 4 | Cosmetic (typography, spacing) | 6 |
+| 2 | Wrong content (says something other than the English) | 53 |
+| 3 | Degraded language (grammar, spelling, terminology) | 35 |
+| 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -268,21 +293,6 @@ _Nothing in this category._
     - Source: `There is no video`
     - Suggest: `Není zde žádné video`
     - The source says no video exists/no video track, parallel to "There is no audio" which was translated as "Není slyšet žádný zvuk"; the Czech instead claims the video fails to display.
-- `WorldCup.HomepageWidget.MatchUnavailableLabel.v151` — `cs/firefox-ios.xliff` — "Try refreshing in a few minutes" is translated as reloading the page rather than refreshing the widget data.
-    - Current: `Zkuste stránku za chvíli znovu načíst.`
-    - Source: `Match info is not available right now. Try refreshing in a few minutes.`
-    - Suggest: `Zkuste to za pár minut znovu načíst.`
-    - The source refers to refreshing the widget's match data, not a page; the Czech adds "stránku" (the page), which the source never says.
-- `WorldCup.HomepageWidget.RoundPhase.ScrollIndicatorAccessibilityLabel.v151` — `cs/firefox-ios.xliff` — Accessibility label says "scroll the page" although the scrolling applies to the widget's match list.
-    - Current: `Posuňte stránku a podívejte se`
-    - Source: `Scroll to see previous or next matches`
-    - Suggest: `Posunutím zobrazíte`
-    - The source says "Scroll to see previous or next matches"; "stránku" (the page) is not in the source and misdescribes the control.
-- `WorldCup.HomepageWidget.RoundPhase.WinWorldCupLabel.v151` — `cs/firefox-ios.xliff` — "2026 WORLD CUP CHAMPIONS" is rendered as just "MISTROVSTVÍ SVĚTA 2026" (World Cup 2026), losing the "champions" meaning.
-    - Current: `MISTROVSTVÍ SVĚTA 2026`
-    - Source: `2026 WORLD CUP CHAMPIONS`
-    - Suggest: `MISTŘI SVĚTA 2026`
-    - The source labels the championship winner; the Czech only names the tournament, not the champions.
 - `This action will clear all of your private data, including history from your synced devices.` — `cs/firefox-ios.xliff` — "all of your private data" is rendered as "všechna vaše data", dropping "private"/soukromá.
     - Current: `Tato akce smaže všechna vaše data, včetně historie prohlížení ze všech synchronizovaných zařízení.`
     - Source: `This action will clear all of your private data, including history from your synced devices.`
@@ -418,7 +428,22 @@ _Nothing in this category._
     - Source: `Search with Firefox`
     - Suggest: `Vyhledat pomocí Firefoxu`
     - The source names the product performing the search; the Czech omits it entirely.
-- _…and 8 more; see `state/` for the full list._
+- `You don’t have any tabs open in Firefox on your other devices.` — `cs/firefox-ios.xliff` — The Firefox brand reference is dropped from the message.
+    - Current: `Ve vašich zařízeních nejsou otevřené žádné panely.`
+    - Source: `You don’t have any tabs open in Firefox on your other devices.`
+    - Suggest: `Na vašich dalších zařízeních nemáte ve Firefoxu otevřené žádné panely.`
+    - Source says "in Firefox on your other devices"; the Czech omits both "in Firefox" and "other".
+- `Created %@` — `cs/firefox-ios.xliff` — "Created" is translated as "Uloženo" (Saved).
+    - Current: `Uloženo %@`
+    - Source: `Created %@`
+    - Suggest: `Vytvořeno %@`
+    - The developer comment says the label describes when the login was created, not saved.
+- `Logins will be removed from all connected devices.` — `cs/firefox-ios.xliff` — "connected devices" translated as "synchronizovaných zařízení" (synced devices).
+    - Current: `Přihlašovací údaje budou odstraněny ze všech synchronizovaných zařízení.`
+    - Source: `Logins will be removed from all connected devices.`
+    - Suggest: `Přihlašovací údaje budou odstraněny ze všech připojených zařízení.`
+    - The source says "all connected devices", not "synced devices"; the sibling string that does say "synced devices" uses the same Czech wording, losing the distinction.
+- _…and 5 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -548,39 +573,24 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
-- `Bookmarks.Menu.DeletedBookmark.v131` — `cs/firefox-ios.xliff` — Uses straight/English curly quotes instead of the Czech german-double quotes used elsewhere in the file.
-    - Current: `Smazáno “%@”`
-    - Source: `Deleted “%@”`
-    - Suggest: `Smazáno „%@“`
-    - The cs convention is german-double quotes („ “), as used in Bookmarks.Menu.SavedBookmarkToastLabel.v136 in the same file.
 - `ContextualHints.FeltDeletion.Body.v122` — `cs/firefox-ios.xliff` — Em dash of the source replaced with a hyphen.
     - Current: `soubory cookie - všechno`
     - Source: `Tap here to start a fresh private session. Delete your history, cookies — everything.`
     - Suggest: `soubory cookie – všechno`
     - The source uses a dash (—); a plain hyphen with spaces is not a valid dash in Czech typography.
-- `LiveActivity.Downloads.FileNameText.v138` — `cs/firefox-ios.xliff` — Straight/English-style quotes used instead of the Czech german-double quotes.
-    - Current: `Stahuje se “%@”`
-    - Source: `Downloading “%@”`
-    - Suggest: `Stahuje se „%@“`
-    - The locale convention is german-double quotes; the current string uses “ ” (English opening/closing pair).
 - `TopSites.RemovePage.Button` — `cs/firefox-ios.xliff` — Em dash from the source replaced with a hyphen.
     - Current: `Odebrat stránku - %@`
     - Source: `Remove page — %@`
     - Suggest: `Odebrat stránku — %@`
     - The en-US string uses an em dash "Remove page — %@"; a plain hyphen surrounded by spaces is not correct Czech typography.
-- `When Leaving Private Browsing` — `cs/firefox-ios.xliff` — Setting label starts with a lowercase letter where the source is a capitalized label.
-    - Current: `po opuštění anonymního prohlížení`
-    - Source: `When Leaving Private Browsing`
-    - Suggest: `Po opuštění anonymního prohlížení`
-    - Displayed in Settings as a label under 'Close Private Tabs'; sentence-initial capitalization is expected.
 
 ---
 
 ## 4. Appendix
 
-### Dismissed by hand (0)
+### Dismissed by hand (1)
 
-_Nothing dismissed._
+- `When Leaving Private Browsing` — `cs/firefox-ios.xliff` — lowercase is deliberate: shown under "Zavřít anonymní panely" and reads as its continuation
 
 _One line each in `locales/cs/dismissed.txt`. Delete the line and the finding returns._
 
@@ -594,6 +604,7 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (2)
 
-_Nothing fixed yet._
+- `Bookmarks.Menu.DeletedBookmark.v131` — `cs/firefox-ios.xliff` — fixed 2026-10-17
+- `LiveActivity.Downloads.FileNameText.v138` — `cs/firefox-ios.xliff` — fixed 2026-10-17

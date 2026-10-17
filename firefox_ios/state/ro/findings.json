@@ -26,6 +26,30 @@
  {
   "category": "B",
   "check": "llm",
+  "current": "%@ a fost importat",
+  "dismissed_because": "",
+  "fid": "62cd328e35be",
+  "file": "Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings",
+  "first_seen": "2026-10-17",
+  "impact": 2,
+  "last_seen": "2026-10-17",
+  "locale": "ro",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The developer comment says %@ is the import date, so the en-US 'Imported %@' means 'Imported (on) <date>'. The Romanian '%@ a fost importat' reads '<date> was imported', which turns the date into the subject. It is also odd as a folder name.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "8c0f012d",
+  "string_id": "BrowserDataTransfer.ImportedBookmarksFolder.Title.v160",
+  "suggest": "Importate %@",
+  "summary": "The folder name makes the date the thing that was imported (\"<date> was imported\") instead of labelling the folder as bookmarks imported on that date.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
   "current": "Fixează",
   "dismissed_because": "",
   "fid": "e3b51e040ee6",

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **Previous run** | 2026-10-07 @ `e7f33082c399` |
+| **Generated** | 2026-10-17 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 24 of 1,986 |
+| **Strings reviewed this run** | 13 of 1,915 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,102 +18,66 @@ Also for fa: [android](android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `QuickAnswers.ContentView.ResultHeader.v160` — `fa/firefox-ios.xliff` — The result header uses the plural feature name "Quick Answers" instead of the singular "Quick Answer" that labels the single answer below it.
+    - Current: `پاسخ‌های سریع`
+    - Source: `QUICK ANSWER`
+    - Suggest: `پاسخ سریع`
+    - The source says "QUICK ANSWER" (singular), and the comment says the header labels the text below it as a short answer. The plural "پاسخ‌های سریع" is the feature name and does not describe the single result. "پاسخ سریع" is already used in the ReturnPill string.
 
-### ✅ Fixed since the last run (18)
+### ✅ Fixed since the last run (10)
 
-- `Alerts.RestoreTabs.Title.v109.v2` — `fa/firefox-ios.xliff` — The word "crashed" is left untranslated and the rest is ungrammatical word salad.
-    - Current: `%@ crashed. بازیابی شما زبانه‌ها؟`
-    - Source: `%@ crashed. Restore your tabs?`
-    - Suggest: `%@ از کار افتاد. زبانه‌های شما بازیابی شود؟`
-    - The source "%@ crashed. Restore your tabs?" is only half-translated; "crashed" remains in English and "بازیابی شما زبانه‌ها؟" has wrong word order/possessive.
-- `Settings.AppIconSelection.AppIconNames.Fun.Cool.Title.146` — `fa/firefox-ios.xliff` — "Cool" (stylish, fox with sunglasses) translated as "خنک" (cool in temperature).
-    - Current: `خنک`
-    - Source: `Cool`
-    - Suggest: `باحال`
-    - The developer comment describes a fox with sunglasses, i.e. "cool" in the sense of stylish, not low temperature.
-- `Bookmarks.EmptyState.Root.Body.v135` — `fa/firefox-ios.xliff` — Translation is partially untranslated and garbled, leaving English fragments and broken grammar.
-    - Current: `ما’ll also grab نشانک‌ها از دیگر همگام‌شده دستگاه‌ها.`
-    - Source: `Save sites as you browse. We’ll also grab bookmarks from other synced devices.`
-    - Suggest: `ما نشانک‌ها را از دیگر دستگاه‌های همگام‌شده نیز دریافت می‌کنیم.`
-    - The en-US "We’ll also grab bookmarks from other synced devices." is left half-English ("’ll also grab") and the Persian word order is broken.
-- `Bookmarks.EmptyState.Root.BodySignedOut.v135` — `fa/firefox-ios.xliff` — Second sentence is left mostly in English and garbled.
-    - Current: `Sign در به grab نشانک‌ها از دیگر همگام‌شده دستگاه‌ها.`
-    - Source: `Save sites as you browse. Sign in to grab bookmarks from other synced devices.`
-    - Suggest: `برای دریافت نشانک‌ها از دیگر دستگاه‌های همگام‌شده وارد شوید.`
-    - The en-US "Sign in to grab bookmarks from other synced devices." is left untranslated/broken ("Sign در به grab").
-- `Bookmarks.Menu.EditBookmarkDesktopBookmarksLabel.v136` — `fa/firefox-ios.xliff` — "BOOKMARKS" is left in English and corrupted with the Persian word "تأیید" inserted.
-    - Current: `رومیزی BOتأییدMARKS`
-    - Source: `DESKTOP BOOKMARKS`
-    - Suggest: `نشانک‌های رومیزی`
-    - The source is "DESKTOP BOOKMARKS"; the target contains the garbled token "BOتأییدMARKS" instead of a translation of "BOOKMARKS".
-- `Bookmarks.Menu.EditBookmarkMobileBookmarksLabel.v154` — `fa/firefox-ios.xliff` — "BOOKMARKS" is left in English and corrupted with the Persian word "تأیید" inserted.
-    - Current: `تلفن همراه BOتأییدMARKS`
-    - Source: `MOBILE BOOKMARKS`
-    - Suggest: `نشانک‌های تلفن همراه`
-    - The source is "MOBILE BOOKMARKS"; the target contains the garbled token "BOتأییدMARKS" instead of a translation of "BOOKMARKS".
-- `Addresses.EditAddress.AutofillAddressPin.v129` — `fa/firefox-ios.xliff` — "Pin" (the Indian Postal Index Number) is translated as the verb "to pin/attach".
-    - Current: `سنجاق کردن`
-    - Source: `Pin`
-    - Suggest: `کد پستی (PIN)`
-    - The developer comment states this is the PIN (Postal Index Number) field used in India, not the action of pinning something.
-- `Addresses.EditAddress.AutofillAddressPostTown.v129` — `fa/firefox-ios.xliff` — "Post town" is left half-untranslated as "Post شهر".
-    - Current: `Post شهر`
-    - Source: `Post town`
-    - Suggest: `شهر پستی`
-    - The English word "Post" remains untranslated and mixed into the Persian text, producing a nonsensical label for the post town field.
-- `CreditCard.EditCard.ToggleToAllowAutofillTitle.v122` — `fa/firefox-ios.xliff` — "Save and Fill" is rendered as "ذخیره و پرکردن خودکار" (save and autofill), adding "automatic" not present in the source.
-    - Current: `ذخیره و پرکردن خودکار روش‌های پرداخت`
-    - Source: `Save and Fill Payment Methods`
-    - Suggest: `ذخیره و پرکردن روش‌های پرداخت`
-    - The en-US says "Save and Fill Payment Methods"; the translation adds "خودکار" (automatic), which the source label does not state.
-- `Menu.EnhancedTrackingProtection.Certificates.CommonName.v131` — `fa/firefox-ios.xliff` — "Common Name" is left half-untranslated as "Common نام", producing a nonsensical mixed-language label.
-    - Current: `Common نام`
-    - Source: `Common Name`
-    - Suggest: `نام مشترک (Common Name)`
-    - The source term "Common Name" is a certificate field; the translation mechanically renders only "Name" into Persian and leaves "Common" in English, which is not a valid Persian phrase.
-- `Onboarding.Welcome.Title.TreatementA.v120` — `fa/firefox-ios.xliff` — Title left partly in English and grammatically broken.
-    - Current: `ما love keeping شما امن`
-    - Source: `We love keeping you safe`
-    - Suggest: `ما عاشق این هستیم که شما را ایمن نگه داریم`
-    - "We love keeping you safe" is not translated; English words remain mid-sentence.
-- `QuickAnswers.OptInRedesign.NothingGetsSavedTitle.v158` — `fa/firefox-ios.xliff` — Mixed English/Persian garbled output 'خیرthing Gets ذخیرهd'.
-    - Current: `خیرthing Gets ذخیرهd`
-    - Source: `Nothing Gets Saved`
-    - Suggest: `هیچ‌چیز ذخیره نمی‌شود`
-    - Word fragments of the English source were substituted mid-word, producing nonsense text in the UI.
-- `TabToolbar.Accessibility.DataClearance.v122` — `fa/firefox-ios.xliff` — Target is corrupted: English word fragments spliced with Persian ('Datیک پاک کردنance').
-    - Current: `Datیک پاک کردنance`
-    - Source: `Data Clearance`
-    - Suggest: `پاک‌سازی داده‌ها`
-    - The accessibility label for 'Data Clearance' is mangled and unreadable for screen-reader users.
-- `Open articles in Reader View by tapping the book icon when it appears in the title bar.` — `fa/firefox-ios.xliff` — Spelling error: "وفتی" should be "وقتی".
-    - Current: `وفتی در عنوان بار نمایش داده شد`
-    - Source: `Open articles in Reader View by tapping the book icon when it appears in the title bar.`
-    - Suggest: `وقتی در نوار عنوان نمایش داده شد`
-    - Typo (و+ف instead of و+ق) and "عنوان بار" reverses the Persian word order for "title bar" (نوار عنوان).
-- `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.` — `fa/firefox-ios.xliff` — "tapping" rendered as "tapping and holding", and "book plus icon" loses the plus.
-    - Current: `با تپ کردن و نگه داشتن آیکون کتاب`
-    - Source: `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.`
-    - Suggest: `با تپ کردن آیکون کتاب به‌همراه علامت مثبت`
-    - The source says simply "tapping the book plus icon"; the translation instructs a tap-and-hold gesture, giving the user wrong instructions.
-- `Logins will be permanently removed.` — `fa/firefox-ios.xliff` — Future-tense warning rendered as past tense, telling the user the deletion already happened.
-    - Current: `ورود‌ها برای همیشه حذف شد.`
-    - Source: `Logins will be permanently removed.`
-    - Suggest: `ورودها برای همیشه حذف خواهند شد.`
-    - The en-US is a warning prompt before deletion ("will be permanently removed"); the Persian past tense «حذف شد» states the removal is already done.
-- `Logins will be removed from all connected devices.` — `fa/firefox-ios.xliff` — Future tense rendered as past tense and "connected devices" reduced to "all devices".
-    - Current: `ورود‌ها بر روی تمامی دستگاه‌ها حذف شد.`
-    - Source: `Logins will be removed from all connected devices.`
-    - Suggest: `ورودها از همه دستگاه‌های متصل حذف خواهند شد.`
-    - Source is a pre-deletion warning: "will be removed from all connected devices"; the translation uses past tense and drops "connected".
-- `WorldCup.GroupPhase.GroupD.Title.v151` — `fa/firefox-ios.xliff` — The group letter "D" is missing from the translation.
-    - Current: `گروه`
-    - Source: `Group D`
-    - Suggest: `گروه D`
-    - Source is "Group D"; the identifying letter was dropped, leaving an unidentifiable label.
+- `QuickAnswers.AccessibilityLabels.OpenQuickAnswers.v158` — `fa/firefox-ios.xliff` — Adjective-noun order reversed: "سریع پاسخ‌ها" instead of "پاسخ‌های سریع".
+    - Current: `باز کردن سریع پاسخ‌ها`
+    - Source: `Open Quick Answers`
+    - Suggest: `باز کردن پاسخ‌های سریع`
+    - Persian puts the adjective after the noun; the current text reads as "quickly opening answers".
+- `QuickAnswers.Errors.DailyLimitMessage.v158` — `fa/firefox-ios.xliff` — Word-by-word machine rendering with broken Persian word order and untranslated feature name structure.
+    - Current: `تلاش کنید سریع پاسخ‌ها دوباره فردا.`
+    - Source: `Try Quick Answers again tomorrow.`
+    - Suggest: `فردا دوباره پاسخ‌های سریع را امتحان کنید.`
+    - The en-US 'Try Quick Answers again tomorrow.' is rendered as ungrammatical Persian with English word order; 'سریع پاسخ‌ها' also reverses the Persian noun-adjective order.
+- `QuickAnswers.Errors.PermissionAlertTitle.v158` — `fa/firefox-ios.xliff` — Ungrammatical literal rendering of 'Change Settings to Use Quick Answers'.
+    - Current: `تغییر تنظیمات به استفاده سریع پاسخ‌ها`
+    - Source: `Change Settings to Use Quick Answers`
+    - Suggest: `برای استفاده از پاسخ‌های سریع، تنظیمات را تغییر دهید`
+    - 'به استفاده' is not valid Persian for the purpose clause, and 'سریع پاسخ‌ها' reverses Persian noun-adjective order.
+- `QuickAnswers.OptInRedesign.Title.v158` — `fa/firefox-ios.xliff` — 'تلاش کنید سریع پاسخ‌ها' is ungrammatical English word order for 'Try Quick Answers'.
+    - Current: `تلاش کنید سریع پاسخ‌ها`
+    - Source: `Try Quick Answers`
+    - Suggest: `پاسخ‌های سریع را امتحان کنید`
+    - Persian requires object before verb and noun before adjective; the current string is a word-by-word calque.
+- `QuickAnswers.QuickActions.Title.v158` — `fa/firefox-ios.xliff` — 'سریع پاسخ‌ها' reverses the Persian noun-adjective order for 'Quick Answers'.
+    - Current: `سریع پاسخ‌ها`
+    - Source: `Quick Answers`
+    - Suggest: `پاسخ‌های سریع`
+    - In Persian the adjective follows the noun with ezafe; the current form is an English-order calque.
+- `QuickAnswers.ReturnPill.ReturnToQuickAnswerAccessibilityLabel.v158` — `fa/firefox-ios.xliff` — English word 'Return' left untranslated and noun-adjective order reversed.
+    - Current: `Return به سریع پاسخ`
+    - Source: `Return to Quick Answer`
+    - Suggest: `بازگشت به پاسخ سریع`
+    - The source 'Return to Quick Answer' is only partially translated, leaving English in a VoiceOver label.
+- `QuickAnswers.Tip.Title.v158` — `fa/firefox-ios.xliff` — English word 'Ask' left untranslated and word order is a calque.
+    - Current: `Ask بیرون بلند برای سریع پاسخ‌ها`
+    - Source: `Ask Out Loud for Quick Answers`
+    - Suggest: `برای پاسخ‌های سریع با صدای بلند بپرسید`
+    - 'Ask Out Loud for Quick Answers' is only partially translated and 'بیرون بلند' is a literal non-idiomatic rendering of 'out loud'.
+- `QuickAnswers.Settings.EnableQuickAnswers.v158` — `fa/firefox-ios.xliff` — English adjective-noun order kept, yielding ungrammatical Persian.
+    - Current: `فعال کردن سریع پاسخ‌ها`
+    - Source: `Enable Quick Answers`
+    - Suggest: `فعال کردن پاسخ‌های سریع`
+    - "Quick Answers" must be rendered as پاسخ‌های سریع in Persian; the current order is not grammatical.
+- `QuickAnswers.Settings.Title.v158` — `fa/firefox-ios.xliff` — English word order kept; should be پاسخ‌های سریع.
+    - Current: `سریع پاسخ‌ها`
+    - Source: `Quick Answers`
+    - Suggest: `پاسخ‌های سریع`
+    - Persian places the adjective after the noun with ezafe; current form is ungrammatical.
+- `Settings.AIControls.AIPoweredFeaturesSection.QuickAnswersSection.Title.v154` — `fa/firefox-ios.xliff` — English word order kept; should be پاسخ‌های سریع.
+    - Current: `سریع پاسخ‌ها`
+    - Source: `Quick Answers`
+    - Suggest: `پاسخ‌های سریع`
+    - Persian adjective follows the noun with ezafe.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -123,9 +87,120 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (28)
 
-_Nothing retired._
+- `WorldCup.CountryPicker.Close.AccessibilityLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Ungrammatical English word order in "بستن World Cup کشور انتخاب‌گر".
+    - Current: `بستن World Cup کشور انتخاب‌گر`
+    - Suggest: `بستن انتخاب‌گر کشور جام جهانی`
+    - "Close World Cup country picker" requires Persian head-initial order; the current string stacks modifiers in English order and is unintelligible.
+- `WorldCup.CountryPicker.Confederation.CentralAmerica.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Adjective-noun order reversed; should be "آمریکای مرکزی".
+    - Current: `مرکزی آمریکا`
+    - Suggest: `آمریکای مرکزی`
+    - Persian places the modifier after the noun; "مرکزی آمریکا" is an English-order calque for "Central America".
+- `WorldCup.CountryPicker.Confederation.NorthAmerica.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "North" was corrupted into "خیرrth", producing a wrong region name.
+    - Current: `خیرrth آمریکا`
+    - Suggest: `آمریکای شمالی`
+    - "North America" must be "آمریکای شمالی"; the target contains a mangled half-translation of "No" plus leftover Latin letters.
+- `WorldCup.CountryPicker.Confederation.SouthAmerica.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Adjective-noun order reversed; should be "آمریکای جنوبی".
+    - Current: `جنوبی آمریکا`
+    - Suggest: `آمریکای جنوبی`
+    - Persian word order requires "آمریکای جنوبی" for "South America".
+- `WorldCup.CountryPicker.Title.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — English word order calque; possessive misplaced in "دنبال کردن شما تیم".
+    - Current: `دنبال کردن شما تیم`
+    - Suggest: `تیم خود را دنبال کنید`
+    - "Follow Your Team" requires the possessive after the noun in Persian; the current text is ungrammatical.
+- `WorldCup.GroupPhase.GroupA.Title.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Group letter "A" was translated as the number "یک" (one), inconsistent with the other group letters.
+    - Current: `گروه یک`
+    - Suggest: `گروه A`
+    - Source "Group A" is a letter label; all other groups keep the Latin letter, so "یک" names the wrong label.
+- `WorldCup.GroupPhase.GroupStageLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Word order reversed for "Group Stage".
+    - Current: `گروه مرحله`
+    - Suggest: `مرحله گروهی`
+    - Persian requires "مرحله گروهی"; the current text is an English-order calque.
+- `WorldCup.HomepageWidget.CountDown.DayLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Placeholder text "ترجمه‌نشده" shipped instead of a 1–2 character day abbreviation.
+    - Current: `ترجمه‌نشده`
+    - Suggest: `ر`
+    - The comment limits the string to 1–2 characters as an abbreviation for "Days"; the target is a literal "untranslated" marker that will be truncated to nonsense.
+- `WorldCup.HomepageWidget.EliminatedTeamSection.ChooseTeamButtonLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Choose Team" rendered as ungrammatical "انتخاب کنید تیم".
+    - Current: `انتخاب کنید تیم`
+    - Suggest: `انتخاب تیم`
+    - Verb-object order is wrong in Persian; should be "انتخاب تیم" or "تیم را انتخاب کنید".
+- `WorldCup.HomepageWidget.ErrorLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — String is largely untranslated/garbled, leaving English words and broken Persian word order.
+    - Current: `ما couldn’t بارگذاری مسابقه داده. لطفاً بازخوانی.`
+    - Suggest: `نتوانستیم اطلاعات مسابقه را بارگذاری کنیم. لطفاً بازخوانی کنید.`
+    - The en-US "We couldn’t load match data. Please refresh." is rendered with the English word "couldn’t" left in place and ungrammatical word-by-word Persian.
+- `WorldCup.HomepageWidget.ExtraTimeLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Extra time" is mangled into "Extrیک زمان", mixing Latin letters with Persian.
+    - Current: `Extrیک زمان`
+    - Suggest: `وقت اضافه`
+    - Apparently a bad find/replace of "a" with "یک"; the result is not a word in Persian and leaves Latin characters.
+- `WorldCup.HomepageWidget.FTLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Word-for-word reversed order: "کامل زمان" is not Persian for "Full Time".
+    - Current: `(کامل زمان)`
+    - Suggest: `(پایان بازی)`
+    - Persian noun-adjective order requires "زمان کامل"; the correct football term is "پایان بازی"/"وقت کامل".
+- `WorldCup.HomepageWidget.FTNoParenthesisLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Full Time" rendered with reversed word order as "کامل زمان".
+    - Current: `کامل زمان`
+    - Suggest: `پایان بازی`
+    - Ungrammatical literal word order; Persian requires noun first or the idiomatic football term.
+- `WorldCup.HomepageWidget.FirstHalfLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "First half" rendered with reversed word order as "اول نیمه".
+    - Current: `اول نیمه`
+    - Suggest: `نیمهٔ اول`
+    - Persian requires the noun before the ordinal with ezāfe: "نیمهٔ اول".
+- `WorldCup.HomepageWidget.FollowTeamCard.CTA.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Follow Your Team" rendered as ungrammatical word-by-word "دنبال کردن شما تیم".
+    - Current: `دنبال کردن شما تیم`
+    - Suggest: `دنبال کردن تیم خود`
+    - Persian possessive must follow the noun; "شما تیم" is not grammatical.
+- `WorldCup.HomepageWidget.FollowTeamCard.Description.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — English word "updates" left untranslated and word order is broken.
+    - Current: `دریافت زنده مسابقه updates و بیشتر.`
+    - Suggest: `به‌روزرسانی‌های زندهٔ مسابقه‌ها و بیشتر را دریافت کنید.`
+    - Source "Get live match updates and more." is partly untranslated, leaving the English noun in Persian text.
+- `WorldCup.HomepageWidget.FulltimePenaltiesScoreLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Full time" rendered with reversed word order as "کامل زمان".
+    - Current: `کامل زمان • ضربات پنالتی (%@)`
+    - Suggest: `پایان بازی • ضربات پنالتی (%@)`
+    - Ungrammatical literal word order for "Full time"; also inconsistent with proper Persian football terminology.
+- `WorldCup.HomepageWidget.GetCustomWallpaperLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Word-by-word order makes "دریافت سفارشی تصویر زمینه" ungrammatical.
+    - Current: `دریافت سفارشی تصویر زمینه`
+    - Suggest: `دریافت تصویر زمینهٔ سفارشی`
+    - Persian adjectives follow the noun; the current order is not grammatical.
+- `WorldCup.HomepageWidget.GroupPhase.RelatedMatchesLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Related matches" rendered with reversed word order as "مرتبط مسابقات".
+    - Current: `مرتبط مسابقات`
+    - Suggest: `مسابقه‌های مرتبط`
+    - Persian requires noun before adjective with ezāfe.
+- `WorldCup.HomepageWidget.HalfTimeLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Half time" rendered literally as "نیمه زمان", not Persian.
+    - Current: `نیمه زمان`
+    - Suggest: `بین دو نیمه`
+    - Word-by-word rendering; Persian for half time is "بین دو نیمه"/"استراحت بین دو نیمه".
+- `WorldCup.HomepageWidget.OfflineLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Largely untranslated: English words "Looks like", "’re" and broken syntax remain.
+    - Current: `Looks like شما’re آفلاین. بررسی شما اینترنت اتصال و تلاش کنید دوباره.`
+    - Suggest: `به نظر می‌رسد آفلاین هستید. اتصال اینترنت خود را بررسی کنید و دوباره تلاش کنید.`
+    - The en-US sentence is only partially translated, leaving English text visible to the user.
+- `WorldCup.HomepageWidget.RoundPhase.BronzeFinalLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "BRONZE FINAL" rendered with reversed word order as "برنز نهایی".
+    - Current: `برنز نهایی`
+    - Suggest: `ردهٔ سوم`
+    - Word-by-word order is ungrammatical in Persian; the bronze/third-place match is "ردهٔ سوم" or "فینال برنز".
+- `WorldCup.HomepageWidget.RoundPhase.Round16Label.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Stray standalone ezāfe diacritic with spaces in "دور ِ 16".
+    - Current: `دور ِ 16`
+    - Suggest: `دور ۱۶ تیمی`
+    - The kasra is written as a separate character surrounded by spaces, which is not valid Persian typography; the phrase for 'Round of 16' is "دور ۱۶ تیمی" / "یک‌هشتم نهایی".
+- `WorldCup.HomepageWidget.RoundPhase.Round32Label.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Stray standalone ezāfe diacritic with spaces in "دور ِ 32".
+    - Current: `دور ِ 32`
+    - Suggest: `دور ۳۲ تیمی`
+    - The kasra is written as a separate space-delimited character, which is invalid Persian typography.
+- `WorldCup.HomepageWidget.RoundPhase.ScrollIndicatorAccessibilityLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — English word "see" left untranslated and word order is broken.
+    - Current: `پیمایش به see قبلی یا بعدی مسابقات`
+    - Suggest: `برای دیدن مسابقه‌های قبلی یا بعدی پیمایش کنید`
+    - Source "Scroll to see previous or next matches" is partially untranslated with ungrammatical adjective order.
+- `WorldCup.HomepageWidget.RoundPhase.ThirdPlaceLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "THIRD PLACE" rendered with reversed word order as "سوم مقام".
+    - Current: `سوم مقام`
+    - Suggest: `مقام سوم`
+    - Persian requires "مقام سوم"; the current order is ungrammatical.
+- `WorldCup.HomepageWidget.RoundPhase.WinWorldCupLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "2026 WORLD CUP CHAMPIONS" rendered word-by-word as "2026 جهان جام قهرمانان".
+    - Current: `2026 جهان جام قهرمانان`
+    - Suggest: `قهرمانان جام جهانی ۲۰۲۶`
+    - The word order is ungrammatical and "جهان جام" is not the Persian name of the World Cup (جام جهانی), which is rendered correctly elsewhere in this file.
+- `WorldCup.HomepageWidget.SecondHalfLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Second half" rendered with reversed word order as "دوم نیمه".
+    - Current: `دوم نیمه`
+    - Suggest: `نیمهٔ دوم`
+    - Persian requires "نیمهٔ دوم"; the current form is ungrammatical.
 
 ---
 
@@ -133,11 +208,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 97 |
-| Strings | 1,986 |
-| Missing strings | 0 |
+| Files | 96 |
+| Strings | 1,915 |
+| Missing strings | 12 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -148,7 +223,16 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**12 strings** are not translated yet, concentrated in:
+
+- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings` — 11
+- `fa/firefox-ios.xliff` — 1
+
+**Files absent from the locale:**
+
+- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings`
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -157,8 +241,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-single` 8, `guillemet` 5, `curly-double` 3 | _mixed_ |
-| apostrophe | `typographic` 36 | **typographic** |
-| ellipsis | `char` 27 | **char** |
+| apostrophe | `typographic` 34 | **typographic** |
+| ellipsis | `char` 28 | **char** |
 | dash | `em` 1 | **em** |
 
 ---
@@ -169,7 +253,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (444)
+## 3. Open findings (407)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -183,18 +267,14 @@ _Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 1 |
-| 2 | Wrong content (says something other than the English) | 216 |
-| 3 | Degraded language (grammar, spelling, terminology) | 222 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
+| 2 | Wrong content (says something other than the English) | 208 |
+| 3 | Degraded language (grammar, spelling, terminology) | 194 |
 | 4 | Cosmetic (typography, spacing) | 5 |
 
 ### A. Functional, markup, variables & plurals
 
-- `WorldCup.HomepageWidget.CountDown.DayLabel.v151` — `fa/firefox-ios.xliff` — Placeholder text "ترجمه‌نشده" shipped instead of a 1–2 character day abbreviation.
-    - Current: `ترجمه‌نشده`
-    - Source: `D`
-    - Suggest: `ر`
-    - The comment limits the string to 1–2 characters as an abbreviation for "Days"; the target is a literal "untranslated" marker that will be truncated to nonsense.
+_Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -498,7 +578,7 @@ _Also listed under their own category below._
     - Source: `(no username)`
     - Suggest: `(بدون نام کاربری)`
     - The source means "no username saved"; "نه username" is ungrammatical and leaves the term in English.
-- _…and 136 more; see `state/` for the full list._
+- _…and 129 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -787,22 +867,22 @@ _Also listed under their own category below._
     - Source: `Trackers blocked this week: %@`
     - Suggest: `ردیاب‌های مسدودشده در این هفته: %@`
     - Same broken construction as the header label; not grammatical Persian.
-- `QuickAnswers.AccessibilityLabels.OpenQuickAnswers.v158` — `fa/firefox-ios.xliff` — Adjective-noun order reversed: "سریع پاسخ‌ها" instead of "پاسخ‌های سریع".
-    - Current: `باز کردن سریع پاسخ‌ها`
-    - Source: `Open Quick Answers`
-    - Suggest: `باز کردن پاسخ‌های سریع`
-    - Persian puts the adjective after the noun; the current text reads as "quickly opening answers".
 - `QuickAnswers.ContentView.SearchingSources.v158` — `fa/firefox-ios.xliff` — English "-ing" suffix appended to a Persian word.
     - Current: `جست‌و‌جوing منابع…`
     - Source: `Searching sources…`
     - Suggest: `در حال جست‌وجوی منابع…`
     - "جست‌و‌جوing" is a corrupted hybrid of Persian and English morphology.
-- `QuickAnswers.Errors.DailyLimitMessage.v158` — `fa/firefox-ios.xliff` — Word-by-word machine rendering with broken Persian word order and untranslated feature name structure.
-    - Current: `تلاش کنید سریع پاسخ‌ها دوباره فردا.`
-    - Source: `Try Quick Answers again tomorrow.`
-    - Suggest: `فردا دوباره پاسخ‌های سریع را امتحان کنید.`
-    - The en-US 'Try Quick Answers again tomorrow.' is rendered as ungrammatical Persian with English word order; 'سریع پاسخ‌ها' also reverses the Persian noun-adjective order.
-- _…and 165 more; see `state/` for the full list._
+- `QuickAnswers.Errors.DailyLimitTitle.v158` — `fa/firefox-ios.xliff` — Ungrammatical word-for-word rendering of 'Daily Limit Reached'.
+    - Current: `روزانه محدودیت رسیده`
+    - Source: `Daily Limit Reached`
+    - Suggest: `به محدودیت روزانه رسیدید`
+    - Persian requires noun before adjective and a proper verb phrase; the current text is literal English word order and not grammatical Persian.
+- `QuickAnswers.Errors.MicrophonePermissionMessage.v158` — `fa/firefox-ios.xliff` — 'اجازه دادن %@ به دسترسی میکروفون' is ungrammatical for 'Allow %@ to access the Microphone.'
+    - Current: `اجازه دادن %@ به دسترسی میکروفون.`
+    - Source: `Allow %@ to access the Microphone.`
+    - Suggest: `به %@ اجازه دسترسی به میکروفون را بدهید.`
+    - Persian needs the indirect-object marker 'به' before the app name and a finite verb; the current calque misassigns the roles.
+- _…and 138 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -889,16 +969,6 @@ _Also listed under their own category below._
     - Source: `Autofills & Passwords`
     - Suggest: `پرکردن‌های خودکار و گذرواژه‌ها`
     - In Persian the "&" is not used as a conjunction; it should be rendered as "و".
-- `WorldCup.HomepageWidget.RoundPhase.Round16Label.v151` — `fa/firefox-ios.xliff` — Stray standalone ezāfe diacritic with spaces in "دور ِ 16".
-    - Current: `دور ِ 16`
-    - Source: `ROUND OF 16`
-    - Suggest: `دور ۱۶ تیمی`
-    - The kasra is written as a separate character surrounded by spaces, which is not valid Persian typography; the phrase for 'Round of 16' is "دور ۱۶ تیمی" / "یک‌هشتم نهایی".
-- `WorldCup.HomepageWidget.RoundPhase.Round32Label.v151` — `fa/firefox-ios.xliff` — Stray standalone ezāfe diacritic with spaces in "دور ِ 32".
-    - Current: `دور ِ 32`
-    - Source: `ROUND OF 32`
-    - Suggest: `دور ۳۲ تیمی`
-    - The kasra is written as a separate space-delimited character, which is invalid Persian typography.
 - `ScanQRCode.Instructions.Label` — `fa/firefox-ios.xliff` — Missing space between "کد" and "QR".
     - Current: `کدQR`
     - Source: `Align QR code within frame to scan`
@@ -940,8 +1010,18 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (56)
+### Fixed to date (66)
 
+- `QuickAnswers.AccessibilityLabels.OpenQuickAnswers.v158` — `fa/firefox-ios.xliff` — fixed 2026-10-17
+- `QuickAnswers.Errors.DailyLimitMessage.v158` — `fa/firefox-ios.xliff` — fixed 2026-10-17
+- `QuickAnswers.Errors.PermissionAlertTitle.v158` — `fa/firefox-ios.xliff` — fixed 2026-10-17
+- `QuickAnswers.OptInRedesign.Title.v158` — `fa/firefox-ios.xliff` — fixed 2026-10-17
+- `QuickAnswers.QuickActions.Title.v158` — `fa/firefox-ios.xliff` — fixed 2026-10-17
+- `QuickAnswers.ReturnPill.ReturnToQuickAnswerAccessibilityLabel.v158` — `fa/firefox-ios.xliff` — fixed 2026-10-17
+- `QuickAnswers.Tip.Title.v158` — `fa/firefox-ios.xliff` — fixed 2026-10-17
+- `QuickAnswers.Settings.EnableQuickAnswers.v158` — `fa/firefox-ios.xliff` — fixed 2026-10-17
+- `QuickAnswers.Settings.Title.v158` — `fa/firefox-ios.xliff` — fixed 2026-10-17
+- `Settings.AIControls.AIPoweredFeaturesSection.QuickAnswersSection.Title.v154` — `fa/firefox-ios.xliff` — fixed 2026-10-17
 - `Alerts.RestoreTabs.Title.v109.v2` — `fa/firefox-ios.xliff` — fixed 2026-10-12
 - `Settings.AppIconSelection.AppIconNames.Fun.Cool.Title.146` — `fa/firefox-ios.xliff` — fixed 2026-10-12
 - `Bookmarks.EmptyState.Root.Body.v135` — `fa/firefox-ios.xliff` — fixed 2026-10-12
@@ -955,7 +1035,7 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `Onboarding.Welcome.Title.TreatementA.v120` — `fa/firefox-ios.xliff` — fixed 2026-10-12
 - `QuickAnswers.OptInRedesign.NothingGetsSavedTitle.v158` — `fa/firefox-ios.xliff` — fixed 2026-10-12
 - `TabToolbar.Accessibility.DataClearance.v122` — `fa/firefox-ios.xliff` — fixed 2026-10-12
-- `WorldCup.GroupPhase.GroupD.Title.v151` — `fa/firefox-ios.xliff` — fixed 2026-10-12
+- `WorldCup.GroupPhase.GroupD.Title.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — fixed 2026-10-12
 - `Open articles in Reader View by tapping the book icon when it appears in the title bar.` — `fa/firefox-ios.xliff` — fixed 2026-10-12
 - `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.` — `fa/firefox-ios.xliff` — fixed 2026-10-12
 - `Logins will be permanently removed.` — `fa/firefox-ios.xliff` — fixed 2026-10-12
@@ -972,13 +1052,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `Changes font type.` — `fa/firefox-ios.xliff` — fixed 2026-10-05
 - `ContextMenu.BookmarkLinkButtonTitle` — `fa/firefox-ios.xliff` — fixed 2026-10-05
 - `ContextMenu.CopyImageButtonTitle` — `fa/firefox-ios.xliff` — fixed 2026-10-05
-- `ContextMenu.OpenInNewTabButtonTitle` — `fa/firefox-ios.xliff` — fixed 2026-10-05
-- `CoverSheet.v24.ETP.Description` — `fa/firefox-ios.xliff` — fixed 2026-10-05
-- `Downloads.CancelDialog.Message` — `fa/firefox-ios.xliff` — fixed 2026-10-05
-- `Downloads.CancelDialog.Title` — `fa/firefox-ios.xliff` — fixed 2026-10-05
-- `Downloads.Toast.Cancelled.LabelText` — `fa/firefox-ios.xliff` — fixed 2026-10-05
-- `Downloads.Toast.Failed.LabelText` — `fa/firefox-ios.xliff` — fixed 2026-10-05
-- `Downloads.Toast.MultipleFiles.DescriptionText` — `fa/firefox-ios.xliff` — fixed 2026-10-05
-- `ErrorPages.VisitOnce.Button` — `fa/firefox-ios.xliff` — fixed 2026-10-05
-- `ExternalLink.AppStore.GenericConfirmationTitle` — `fa/firefox-ios.xliff` — fixed 2026-10-05
-- `HistoryPanel.ClearHistoryMenuOptionTheLastHour` — `fa/firefox-ios.xliff` — fixed 2026-10-05

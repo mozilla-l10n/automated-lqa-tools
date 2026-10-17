@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **Previous run** | 2026-10-05 @ `ef278c60f343` |
+| **Generated** | 2026-10-17 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,922 |
+| **Strings reviewed this run** | 0 of 1,848 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,24 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (4)
 
-_Nothing retired._
+- `WorldCup.HomepageWidget.ErrorLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Please refresh." is rendered as "actualiza la página" (refresh the page), adding a page that the source never mentions; the widget is refreshed, not a page.
+    - Current: `Por favor, actualiza la página.`
+    - Suggest: `Por favor, actualiza.`
+    - The source says only "Please refresh." referring to the widget's match data, not a web page.
+- `WorldCup.HomepageWidget.FulltimePenaltiesScoreLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Penalties" left in English instead of the Spanish football term "Penaltis".
+    - Current: `Penalties (%@)`
+    - Suggest: `Penaltis (%@)`
+    - The source term is a common noun, not a brand; es-ES uses "penaltis" for penalty shoot-out scores.
+- `WorldCup.HomepageWidget.MatchUnavailableLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Try refreshing" is rendered as "actualizar la página" (refresh the page), but the widget refreshes match data, not a page.
+    - Current: `Intenta actualizar la página en unos minutos.`
+    - Suggest: `Intenta actualizar en unos minutos.`
+    - The source says "Try refreshing in a few minutes"; the dev comment states the button retries loading match data in the widget, so adding "la página" asserts something the source does not.
+- `WorldCup.HomepageWidget.RoundPhase.BronzeFinalLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "BRONZE FINAL" (the match) and "THIRD PLACE" (the winner) are both rendered "TERCER PUESTO", losing the distinction between the two labels in the same widget.
+    - Current: `TERCER PUESTO`
+    - Suggest: `FINAL POR EL TERCER PUESTO`
+    - The source distinguishes the bronze-final match label from the third-place winner label; using the identical string for both makes the widget ambiguous. The dev comments explicitly mark one as the match and the other as the winner.
 
 ---
 
@@ -44,11 +59,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 96 |
-| Strings | 1,922 |
-| Missing strings | 64 |
+| Files | 95 |
+| Strings | 1,848 |
+| Missing strings | 79 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 2 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,16 +74,19 @@ _Nothing retired._
 
 ### Completeness
 
-**64 strings** are not translated yet, concentrated in:
+**79 strings** are not translated yet, concentrated in:
 
-- `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings` — 40
+- `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings` — 43
+- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings` — 11
 - `es-ES/firefox-ios.xliff` — 11
 - `es-ES/firefox-ios.xliff` — 7
 - `es-ES/firefox-ios.xliff` — 4
 - `es-ES/firefox-ios.xliff` — 2
+- `es-ES/firefox-ios.xliff` — 1
 
 **Files absent from the locale:**
 
+- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings`
 - `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
@@ -83,8 +101,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | apostrophe | `typographic` 2 | **typographic** |
 | ellipsis | `char` 22 | **char** |
 | dash | `em` 1 | **em** |
-| inverted marks | `open-question` 41, `open-exclamation` 8 | **open-question** |
-| register | `informal` 153, `formal` 4 | **informal** |
+| inverted marks | `open-question` 40, `open-exclamation` 8 | **open-question** |
+| register | `informal` 150, `formal` 4 | **informal** |
 
 ---
 
@@ -94,7 +112,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (63)
+## 3. Open findings (58)
 
 > **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -114,9 +132,9 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 33 |
-| 3 | Degraded language (grammar, spelling, terminology) | 28 |
-| 4 | Cosmetic (typography, spacing) | 2 |
+| 2 | Wrong content (says something other than the English) | 32 |
+| 3 | Degraded language (grammar, spelling, terminology) | 25 |
+| 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -183,16 +201,6 @@ _Also listed under their own category below._
     - Source: `Enhanced Tracking Protection setting for this site`
     - Suggest: `Ajustes de la protección antirrastreo mejorada para este sitio`
     - The source refers to the "Enhanced Tracking Protection" feature setting; as written, the feminine agreement of "mejorada" is ambiguous/attaches to "configuración" rather than to the feature name.
-- `WorldCup.HomepageWidget.ErrorLabel.v151` — `es-ES/firefox-ios.xliff` — "Please refresh." is rendered as "actualiza la página" (refresh the page), adding a page that the source never mentions; the widget is refreshed, not a page.
-    - Current: `Por favor, actualiza la página.`
-    - Source: `We couldn’t load match data. Please refresh.`
-    - Suggest: `Por favor, actualiza.`
-    - The source says only "Please refresh." referring to the widget's match data, not a web page.
-- `WorldCup.HomepageWidget.MatchUnavailableLabel.v151` — `es-ES/firefox-ios.xliff` — "Try refreshing" is rendered as "actualizar la página" (refresh the page), but the widget refreshes match data, not a page.
-    - Current: `Intenta actualizar la página en unos minutos.`
-    - Source: `Match info is not available right now. Try refreshing in a few minutes.`
-    - Suggest: `Intenta actualizar en unos minutos.`
-    - The source says "Try refreshing in a few minutes"; the dev comment states the button retries loading match data in the widget, so adding "la página" asserts something the source does not.
 - `AddPass.Error.Message` — `es-ES/firefox-ios.xliff` — "Wallet" is rendered as the obsolete brand name "Passbook".
     - Current: `Passbook`
     - Source: `An error occured while adding the pass to Wallet. Please try again later.`
@@ -394,16 +402,6 @@ _Also listed under their own category below._
     - Source: `There is no video`
     - Suggest: `No hay vídeo`
     - es-ES uses "vídeo"; the sibling string WebCompatReporter.SubOption.PlaybackFails.v154 uses "vídeo" on the same screen.
-- `WorldCup.HomepageWidget.FulltimePenaltiesScoreLabel.v151` — `es-ES/firefox-ios.xliff` — "Penalties" left in English instead of the Spanish football term "Penaltis".
-    - Current: `Penalties (%@)`
-    - Source: `Full time • Penalties (%@)`
-    - Suggest: `Penaltis (%@)`
-    - The source term is a common noun, not a brand; es-ES uses "penaltis" for penalty shoot-out scores.
-- `WorldCup.HomepageWidget.RoundPhase.BronzeFinalLabel.v151` — `es-ES/firefox-ios.xliff` — "BRONZE FINAL" (the match) and "THIRD PLACE" (the winner) are both rendered "TERCER PUESTO", losing the distinction between the two labels in the same widget.
-    - Current: `TERCER PUESTO`
-    - Source: `BRONZE FINAL`
-    - Suggest: `FINAL POR EL TERCER PUESTO`
-    - The source distinguishes the bronze-final match label from the third-place winner label; using the identical string for both makes the widget ambiguous. The dev comments explicitly mark one as the match and the other as the winner.
 - `ActivityStream.ContextMenu.UnpinTopsite` — `es-ES/firefox-ios.xliff` — "Unpin" is translated as "Desanclar" while the paired "Pin" is "Fijar", breaking terminology consistency.
     - Current: `Desanclar`
     - Source: `Unpin`
@@ -442,19 +440,14 @@ _Also listed under their own category below._
     - Source: `Remove page — %@`
     - Suggest: `Eliminar página — %@`
     - The locale convention is the em dash, and the source uses an em dash separator.
-- `PzSrmZ-2GqvPe` — `es-ES/firefox-ios.xliff` — Straight double quotes used instead of the typographic quotes present in the source.
-    - Current: `"Ir al enlace copiado"`
-    - Source: `Just to confirm, you wanted ‘Go to Copied Link’?`
-    - Suggest: `«Ir al enlace copiado»`
-    - The en-US source uses curly single quotes ‘…’; es-ES convention uses angular or curly quotes, not straight ASCII quotes.
 
 ---
 
 ## 4. Appendix
 
-### Dismissed by hand (0)
+### Dismissed by hand (1)
 
-_Nothing dismissed._
+- `PzSrmZ-2GqvPe` — `es-ES/firefox-ios.xliff` — straight "…" is what this file uses for every quoted menu item (all 6 PzSrmZ-*/fi3W24-* siblings); «…» appears nowhere in the locale
 
 _One line each in `locales/es-ES/dismissed.txt`. Delete the line and the finding returns._
 

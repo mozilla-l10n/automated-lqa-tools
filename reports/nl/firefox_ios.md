@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **Previous run** | 2026-10-05 @ `ef278c60f343` |
+| **Generated** | 2026-10-17 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 17 of 1,986 |
+| **Strings reviewed this run** | 6 of 1,918 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for nl: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `Onboarding.MultiDay.HomeScreenNotificationsPopup.BodyText.v159` — `nl/firefox-ios.xliff` — Missing definite article before ‘laatste nieuws’.
-    - Current: `Blijf op de hoogte van laatste nieuws over %@.`
-    - Source: `Stay up to date on %@’s latest news.`
-    - Suggest: `Blijf op de hoogte van het laatste nieuws over %@.`
-    - Dutch requires the article: ‘het laatste nieuws’; the source has the definite “%@’s latest news”.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -38,9 +34,24 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (4)
 
-_Nothing retired._
+- `WorldCup.HomepageWidget.FulltimePenaltiesScoreLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — ‘Full time’ is translated as ‘Gelijkspel’ (draw) instead of end of match.
+    - Current: `Gelijkspel • Penalty’s (%@)`
+    - Suggest: `Wedstrijd afgelopen • Penalty’s (%@)`
+    - The source says ‘Full time’, meaning the match has ended; ‘Gelijkspel’ means ‘draw’, a different statement about the result. Other strings in this file render ‘Full Time’ as ‘Wedstrijd afgelopen’, so it is also inconsistent.
+- `WorldCup.HomepageWidget.PenaltiesLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Dutch plural of 'penalty' is written 'penalty’s' — but here the football term should be 'Penalty’s' capitalized correctly; the apostrophe-s form is fine, however 'Penalties' should be rendered as 'Strafschoppen' or 'Penalty’s'.
+    - Current: `Penalty’s (%@)`
+    - Suggest: `Strafschoppen (%@)`
+    - Placeholder-only concern aside, the football phase 'Penalties' (penalty shoot-out) is normally 'Strafschoppen' in Dutch; 'Penalty’s' is the plural of a single penalty kick and reads oddly as a match-phase label.
+- `WorldCup.HomepageWidget.RoundPhase.QuarterFinalsLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Plural 'QUARTER-FINALS' rendered as singular 'KWARTFINALE'.
+    - Current: `KWARTFINALE`
+    - Suggest: `KWARTFINALES`
+    - The source is plural, and the parallel string SEMI-FINALS is correctly translated as the plural 'HALVE FINALES'; the singular is inconsistent and inaccurate.
+- `WorldCup.HomepageWidget.RoundPhase.Round16Label.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — 'ROUND OF 16' is literally translated as 'RONDE VAN 16' instead of the established Dutch term.
+    - Current: `RONDE VAN 16`
+    - Suggest: `ACHTSTE FINALES`
+    - In Dutch football terminology the round of 16 is called 'achtste finales'; 'ronde van 16' is a literal calque.
 
 ---
 
@@ -49,8 +60,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,986 |
-| Missing strings | 0 |
+| Strings | 1,918 |
+| Missing strings | 9 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,7 +74,12 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**9 strings** are not translated yet, concentrated in:
+
+- `nl/firefox-ios.xliff` — 8
+- `nl/firefox-ios.xliff` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -72,10 +88,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-single` 14 | **curly-single** |
-| apostrophe | `typographic` 31 | **typographic** |
-| ellipsis | `char` 27 | **char** |
+| apostrophe | `typographic` 29 | **typographic** |
+| ellipsis | `char` 28 | **char** |
 | dash | `en` 4 | **en** |
-| register | `formal` 302 | **formal** |
+| register | `formal` 296 | **formal** |
 
 ---
 
@@ -85,14 +101,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (55)
+## 3. Open findings (51)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 23 |
-| 3 | Degraded language (grammar, spelling, terminology) | 31 |
+| 2 | Wrong content (says something other than the English) | 22 |
+| 3 | Degraded language (grammar, spelling, terminology) | 28 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
@@ -196,11 +212,6 @@ _Nothing in this category._
     - Source: `Hostnames of trackers blocked on this page`
     - Suggest: `Hostnamen van trackers die op deze pagina zijn geblokkeerd`
     - Source is "Hostnames of trackers blocked on this page": the trackers were blocked on this page. The Dutch reads as "hostnames of trackers that were blocked on this page" only ambiguously; as written it modifies 'hostnamen', implying the hostnames are blocked on the page.
-- `WorldCup.HomepageWidget.FulltimePenaltiesScoreLabel.v151` — `nl/firefox-ios.xliff` — ‘Full time’ is translated as ‘Gelijkspel’ (draw) instead of end of match.
-    - Current: `Gelijkspel • Penalty’s (%@)`
-    - Source: `Full time • Penalties (%@)`
-    - Suggest: `Wedstrijd afgelopen • Penalty’s (%@)`
-    - The source says ‘Full time’, meaning the match has ended; ‘Gelijkspel’ means ‘draw’, a different statement about the result. Other strings in this file render ‘Full Time’ as ‘Wedstrijd afgelopen’, so it is also inconsistent.
 - `LibraryPanel.History.AllTimeOption.v138` — `nl/firefox-ios.xliff` — “All Time” (time range covering everything) is translated as “Altijd” (always), not the time-range sense.
     - Current: `Altijd`
     - Source: `All Time`
@@ -304,16 +315,6 @@ _Nothing in this category._
     - Source: `Translate To`
     - Suggest: `Vertalen naar`
     - This is a standalone cell label ("Translate To") without a language placeholder, so the trailing article is ungrammatical.
-- `WorldCup.HomepageWidget.PenaltiesLabel.v151` — `nl/firefox-ios.xliff` — Dutch plural of 'penalty' is written 'penalty’s' — but here the football term should be 'Penalty’s' capitalized correctly; the apostrophe-s form is fine, however 'Penalties' should be rendered as 'Strafschoppen' or 'Penalty’s'.
-    - Current: `Penalty’s (%@)`
-    - Source: `Penalties (%@)`
-    - Suggest: `Strafschoppen (%@)`
-    - Placeholder-only concern aside, the football phase 'Penalties' (penalty shoot-out) is normally 'Strafschoppen' in Dutch; 'Penalty’s' is the plural of a single penalty kick and reads oddly as a match-phase label.
-- `WorldCup.HomepageWidget.RoundPhase.QuarterFinalsLabel.v151` — `nl/firefox-ios.xliff` — Plural 'QUARTER-FINALS' rendered as singular 'KWARTFINALE'.
-    - Current: `KWARTFINALE`
-    - Source: `QUARTER-FINALS`
-    - Suggest: `KWARTFINALES`
-    - The source is plural, and the parallel string SEMI-FINALS is correctly translated as the plural 'HALVE FINALES'; the singular is inconsistent and inaccurate.
 - `Previous in-page result` — `nl/firefox-ios.xliff` — Wrong adjective inflection: “Vorige resultaat” should be “Vorig resultaat” with a neuter noun.
     - Current: `Vorige resultaat op pagina`
     - Source: `Previous in-page result`
@@ -367,11 +368,6 @@ _Nothing in this category._
     - Source: `Design is broken`
     - Suggest: `Ontwerp is kapot`
     - "defect" in Dutch describes faulty hardware/devices; for a broken site layout the established rendering is "kapot"/"werkt niet goed".
-- `WorldCup.HomepageWidget.RoundPhase.Round16Label.v151` — `nl/firefox-ios.xliff` — 'ROUND OF 16' is literally translated as 'RONDE VAN 16' instead of the established Dutch term.
-    - Current: `RONDE VAN 16`
-    - Source: `ROUND OF 16`
-    - Suggest: `ACHTSTE FINALES`
-    - In Dutch football terminology the round of 16 is called 'achtste finales'; 'ronde van 16' is a literal calque.
 - `Menu.TrackingProtectionBlockedContent.Title` — `nl/firefox-ios.xliff` — "Tracking content" is rendered as "Volginhoud", inconsistent with the "trackers" terminology used in the surrounding tracking-protection strings.
     - Current: `Volginhoud`
     - Source: `Tracking content`

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **Previous run** | 2026-10-05 @ `ef278c60f343` |
+| **Generated** | 2026-10-17 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 17 of 1,986 |
+| **Strings reviewed this run** | 3 of 1,915 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,23 +18,9 @@ Also for ja: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `Search.ResultsAbove.A11yAnnouncement.v158` — `ja/firefox-ios.xliff` — The translation drops "above", losing the positional information the VoiceOver announcement must convey and making it identical to the "below" string.
-    - Current: `検索候補: %d 件`
-    - Source: `Suggestions above: %d`
-    - Suggest: `上に検索候補: %d 件`
-    - The developer comment states the announcement tells the user the results are located above the address bar; "above" is unrendered, and the result is indistinguishable from the ResultsBelow string.
-- `Search.ResultsBelow.A11yAnnouncement.v158` — `ja/firefox-ios.xliff` — The translation drops "below", losing the positional information the VoiceOver announcement must convey and making it identical to the "above" string.
-    - Current: `検索候補: %d 件`
-    - Source: `Suggestions below: %d`
-    - Suggest: `下に検索候補: %d 件`
-    - The developer comment states the announcement tells the user the results are located below the address bar; "below" is unrendered, and the result is indistinguishable from the ResultsAbove string.
-- `Onboarding.MultiDay.SyncCard.AcceptButtonText.v159` — `ja/firefox-ios.xliff` — "Sign in to Sync" is rendered as "log in to Sync" rather than signing in to enable syncing.
-    - Current: `Sync にログイン`
-    - Source: `Sign in to Sync`
-    - Suggest: `ログインして同期`
-    - Per the developer comment the button directs the user to sign in to their Mozilla account in order to use sync; "Sync にログイン" states the user logs into a service called Sync.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -48,9 +34,20 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (3)
 
-_Nothing retired._
+- `WorldCup.HomepageWidget.CountDown.HourLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Two-character translation 「時間」 will be truncated to a misleading label; a single character is required.
+    - Current: `時間`
+    - Suggest: `時`
+    - The developer comment says the layout allows 1–2 characters and to use a single-character equivalent where one exists; Japanese has 「時」 for hours, and 「時間」 risks truncation issues.
+- `WorldCup.HomepageWidget.RoundPhase.UpcomingLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Upcoming" (an upcoming match) is translated as "近日公開", which means "coming soon" for a release/publication, not an upcoming match.
+    - Current: `近日公開`
+    - Suggest: `開催予定`
+    - The developer comment says this labels an upcoming match in the round phase. 「近日公開」 is used for releases (films, features) being published soon and is wrong for a scheduled match.
+- `WorldCup.HomepageWidget.TemporaryView.Description.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "as the World Cup approaches" is rendered as 「ワールドカップ開催についての」, attaching the phrase to the topic of the updates rather than the timing.
+    - Current: `ワールドカップ開催についての最新情報をお伝えします`
+    - Suggest: `ワールドカップ開催が近づくにつれて最新情報をお伝えします`
+    - The source says updates will be provided as the World Cup approaches; the translation says updates about the World Cup being held, losing the temporal meaning.
 
 ---
 
@@ -58,11 +55,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 97 |
-| Strings | 1,986 |
-| Missing strings | 0 |
+| Files | 96 |
+| Strings | 1,915 |
+| Missing strings | 12 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -73,7 +70,16 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**12 strings** are not translated yet, concentrated in:
+
+- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings` — 11
+- `ja/firefox-ios.xliff` — 1
+
+**Files absent from the locale:**
+
+- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings`
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -82,8 +88,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `corner` 11, `curly-double` 3 | **corner** |
-| ellipsis | `char` 11, `ascii` 16 | _mixed_ |
-| fullwidth | `punctuation` 419 | **punctuation** |
+| ellipsis | `char` 11, `ascii` 17 | _mixed_ |
+| fullwidth | `punctuation` 411 | **punctuation** |
 
 ---
 
@@ -93,7 +99,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (115)
+## 3. Open findings (112)
 
 > **Reads as a deliberate edit (8).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -143,17 +149,13 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 65 |
-| 3 | Degraded language (grammar, spelling, terminology) | 44 |
+| 2 | Wrong content (says something other than the English) | 63 |
+| 3 | Degraded language (grammar, spelling, terminology) | 43 |
 | 4 | Cosmetic (typography, spacing) | 6 |
 
 ### A. Functional, markup, variables & plurals
 
-- `WorldCup.HomepageWidget.CountDown.HourLabel.v151` — `ja/firefox-ios.xliff` — Two-character translation 「時間」 will be truncated to a misleading label; a single character is required.
-    - Current: `時間`
-    - Source: `H`
-    - Suggest: `時`
-    - The developer comment says the layout allows 1–2 characters and to use a single-character equivalent where one exists; Japanese has 「時」 for hours, and 「時間」 risks truncation issues.
+_Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -457,7 +459,7 @@ _Also listed under their own category below._
     - Source: `Browser is blocked or unsupported`
     - Suggest: `ブラウザーがブロックされている、またはサポートされていない`
     - Source is "Browser is blocked or unsupported"; the translation swaps the order of the alternatives.
-- _…and 31 more; see `state/` for the full list._
+- _…and 29 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

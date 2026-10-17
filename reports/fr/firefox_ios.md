@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `05c882bf36b5` |
-| **Previous run** | 2026-10-05 @ `ef278c60f343` |
+| **Generated** | 2026-10-17 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
+| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 17 of 1,986 |
+| **Strings reviewed this run** | 16 of 1,927 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,26 @@ Also for fr: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `BrowserDataTransfer.ImportSuccess.Title.v160` — `fr/firefox-ios.xliff` — The English word order is copied, so the title reads "Safari Importation terminée", which isn't grammatical French.
+    - Current: `%@ Importation terminée`
+    - Source: `%@ Import Complete`
+    - Suggest: `Importation depuis %@ terminée`
+    - %@ is the name of the other browser. In French a noun can't sit in front of "Importation" like this. The title needs a preposition so it reads "import from Safari complete".
+- `BrowserDataTransfer.ImportedBookmarksFolder.Title.v160` — `fr/firefox-ios.xliff` — "%@ importé" puts the date before the participle, so the folder name says the date was imported rather than that the bookmarks were imported on that date.
+    - Current: `%@ importé`
+    - Source: `Imported %@`
+    - Suggest: `Importé le %@`
+    - The comment says %@ is the import date. "12/03/2026 importé" means "imported 12/03/2026" in the sense of the date being the thing imported. French needs "Importé le <date>".
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `TopSites.RemovePage.Button` — `fr/firefox-ios.xliff` — Em dash from source replaced with a hyphen, contrary to the locale's em-dash convention.
+    - Current: `Supprimer la page - %@`
+    - Source: `Remove page — %@`
+    - Suggest: `Supprimer la page — %@`
+    - The en-US uses an em dash ("Remove page — %@") and the fr house dash is the em dash; a plain hyphen is a typography deviation.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,7 +58,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,986 |
+| Strings | 1,927 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -68,11 +81,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 18 | **guillemet** |
-| apostrophe | `typographic` 371 | **typographic** |
-| ellipsis | `char` 27 | **char** |
-| dash | `em` 3, `en` 1 | **em** |
-| nbsp | `total` 156, `before-punctuation` 98 | _mixed_ |
-| register | `formal` 317 | **formal** |
+| apostrophe | `typographic` 368 | **typographic** |
+| ellipsis | `char` 28 | **char** |
+| dash | `em` 4, `en` 1 | **em** |
+| nbsp | `total` 154, `before-punctuation` 97 | _mixed_ |
+| register | `formal` 314 | **formal** |
 
 ---
 
@@ -82,15 +95,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (47)
+## 3. Open findings (48)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 29 |
-| 3 | Degraded language (grammar, spelling, terminology) | 17 |
-| 4 | Cosmetic (typography, spacing) | 1 |
+| 3 | Degraded language (grammar, spelling, terminology) | 19 |
+| 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -271,6 +284,16 @@ _Nothing in this category._
     - Source: `Sunrise`
     - Suggest: `Lever de soleil`
     - French for sunrise is "lever de soleil" (noun "lever"), not "levé"; also contrasts with the correctly formed "Coucher de soleil" for Sunset.
+- `BrowserDataTransfer.ImportSuccess.Title.v160` — `fr/firefox-ios.xliff` — The English word order is copied, so the title reads "Safari Importation terminée", which isn't grammatical French.
+    - Current: `%@ Importation terminée`
+    - Source: `%@ Import Complete`
+    - Suggest: `Importation depuis %@ terminée`
+    - %@ is the name of the other browser. In French a noun can't sit in front of "Importation" like this. The title needs a preposition so it reads "import from Safari complete".
+- `BrowserDataTransfer.ImportedBookmarksFolder.Title.v160` — `fr/firefox-ios.xliff` — "%@ importé" puts the date before the participle, so the folder name says the date was imported rather than that the bookmarks were imported on that date.
+    - Current: `%@ importé`
+    - Source: `Imported %@`
+    - Suggest: `Importé le %@`
+    - The comment says %@ is the import date. "12/03/2026 importé" means "imported 12/03/2026" in the sense of the date being the thing imported. French needs "Importé le <date>".
 - `ContextualHints.FirefoxHomepage.JumpBackIn.SyncedTab.v106` — `fr/firefox-ios.xliff` — Missing "où" in the phrase "là où vous en étiez".
     - Current: `Reprenez là vous en étiez`
     - Source: `Your tabs are syncing! Pick up where you left off on your other device.`
@@ -337,11 +360,7 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
-- `TopSites.RemovePage.Button` — `fr/firefox-ios.xliff` — Em dash from source replaced with a hyphen, contrary to the locale's em-dash convention.
-    - Current: `Supprimer la page - %@`
-    - Source: `Remove page — %@`
-    - Suggest: `Supprimer la page — %@`
-    - The en-US uses an em dash ("Remove page — %@") and the fr house dash is the em dash; a plain hyphen is a typography deviation.
+_Nothing in this category._
 
 ---
 
@@ -363,6 +382,7 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (1)
+### Fixed to date (2)
 
+- `TopSites.RemovePage.Button` — `fr/firefox-ios.xliff` — fixed 2026-10-17
 - `QuickAnswers.ContentView.Footer.v158` — `fr/firefox-ios.xliff` — fixed 2026-09-28
