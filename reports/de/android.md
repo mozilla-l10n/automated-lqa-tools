@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a400fea340fd` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a400fea340fd` |
-| **Previous run** | 2026-10-05 @ `d82f35778c8b` |
+| **Generated** | 2026-10-18 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
+| **Previous run** | 2026-10-12 @ `a400fea340fd` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 11 of 2,793 |
+| **Strings reviewed this run** | 9 of 2,802 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for de: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `mozac_feature_listentopage_error_could_not_finish_playing_audio` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-de/strings.xml` — "konnte nicht beendet werden" reads as "playback could not be stopped" rather than "could not finish playing".
+    - Current: `Die Audiowiedergabe konnte nicht beendet werden.`
+    - Source: `Couldn’t finish playing audio. Try again.`
+    - Suggest: `Die Audiowiedergabe konnte nicht abgeschlossen werden.`
+    - Per the developer comment the error appears when playback fails partway through, i.e. the audio could not be played to the end. German "beenden" primarily means to stop/terminate, so the sentence suggests the user could not stop playback; "abschließen" conveys completing it.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,7 +49,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 45 |
-| Strings | 2,793 |
+| Strings | 2,802 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -74,7 +78,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | quotes | `german-double` 22, `curly-double` 1, `straight-double` 1 | **german-double** |
 | ellipsis | `char` 22 | **char** |
 | dash | `en` 6 | **en** |
-| register | `formal` 657 | **formal** |
+| register | `formal` 658 | **formal** |
 
 ---
 
@@ -84,13 +88,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (105)
+## 3. Open findings (106)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 60 |
+| 2 | Wrong content (says something other than the English) | 61 |
 | 3 | Degraded language (grammar, spelling, terminology) | 34 |
 | 4 | Cosmetic (typography, spacing) | 11 |
 
@@ -165,6 +169,11 @@ _Nothing in this category._
     - Source: `Read the text of all open tabs.`
     - Suggest: `Den Text aller offenen Tabs lesen.`
     - The source says "Read the text of all open tabs"; "zugreifen" (access) is used elsewhere for "access" permissions and blurs the distinction.
+- `mozac_feature_listentopage_error_could_not_finish_playing_audio` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-de/strings.xml` — "konnte nicht beendet werden" reads as "playback could not be stopped" rather than "could not finish playing".
+    - Current: `Die Audiowiedergabe konnte nicht beendet werden.`
+    - Source: `Couldn’t finish playing audio. Try again.`
+    - Suggest: `Die Audiowiedergabe konnte nicht abgeschlossen werden.`
+    - Per the developer comment the error appears when playback fails partway through, i.e. the audio could not be played to the end. German "beenden" primarily means to stop/terminate, so the sentence suggests the user could not stop playback; "abschließen" conveys completing it.
 - `mozac_protections_dashboard_empty_subtitle` — `mozilla-mobile/android-components/components/feature/protection-dashboard/src/main/res/values-de/strings.xml` — "You'll see them here" is rendered with "Sie" as the subject, reversing the sentence's meaning.
     - Current: `Sie werden sie hier sehen.`
     - Source: `You’ll see them here.`
@@ -395,12 +404,7 @@ _Nothing in this category._
     - Source: `Start your private browsing session, and we’ll block trackers and other bad stuff as you go.`
     - Suggest: `und wir blockieren dabei Tracker und andere schädliche Elemente`
     - The source says trackers and other bad stuff are blocked as you browse; the German implies blocking other bad stuff is a casual side effect ("bei der Gelegenheit auch noch"), which is not the source meaning.
-- `preference_performance_block_javascript_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — The modal "may" of "Pages may load faster" is dropped, turning a possibility into a statement of fact.
-    - Current: `Seiten laden schneller, verhalten sich aber möglicherweise unerwartet`
-    - Source: `Pages may load faster, but may also behave unexpectedly`
-    - Suggest: `Seiten laden möglicherweise schneller, verhalten sich aber eventuell unerwartet`
-    - Source says "Pages may load faster"; the German asserts they do load faster.
-- _…and 2 more; see `state/` for the full list._
+- _…and 3 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

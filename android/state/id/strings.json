@@ -146,6 +146,7 @@
   "mozac_cfr_dismiss_button_content_description": "24c52be0 b21634a9"
  },
  "mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml": {
+  "mozac_menu_banner_dismiss_description": "5c3e4ca8 7b9c61ad bb2c2c9b",
   "mozac_menu_item_new_indicator_label": "a7e3e782 2270dfc6 12033a76"
  },
  "mozilla-mobile/android-components/components/compose/tabstray/src/main/res/values/strings.xml": {
@@ -482,6 +483,9 @@
   "mozac_feature_listentopage_back_10_sec": "992b23d3 4c8f940a 5dcb52bf",
   "mozac_feature_listentopage_change_speed": "c3527779 d99c18af 99064290",
   "mozac_feature_listentopage_close": "24c52be0 0e7c6115 7d27781c",
+  "mozac_feature_listentopage_error_audio_not_available": "06ab8bd4 21e0b78d b2ec93d5",
+  "mozac_feature_listentopage_error_could_not_finish_playing_audio": "25a3446f 5ae13950 eae93e15",
+  "mozac_feature_listentopage_error_voice_options_not_available": "73465c23 7d14c350 b0d2098b",
   "mozac_feature_listentopage_forward_30_sec": "f00be119 dcce7739 8a4ffa91",
   "mozac_feature_listentopage_notification_playback_speed_0_25": "2e1a7618 bfafe990 a03b893d",
   "mozac_feature_listentopage_notification_playback_speed_0_5": "d144f1a7 5444c3c6 b4bf3e32",
@@ -495,7 +499,9 @@
   "mozac_feature_listentopage_notification_skip_forward": "963bb8bf acdd2528 520ab3e3",
   "mozac_feature_listentopage_pause": "5e91b4a1 c38c54ba e06f822f",
   "mozac_feature_listentopage_play": "0fd37710 7c46aa47 e4c30b48",
-  "mozac_feature_listentopage_playback_speed_1": "492199ed 3ac44663 1ce153f0"
+  "mozac_feature_listentopage_playback_speed_1": "492199ed 3ac44663 1ce153f0",
+  "mozac_feature_listentopage_playback_speed_option": "89fda22d 89fda22d 146c94aa",
+  "mozac_feature_listentopage_playback_speed_option_default": "2c44efdf 2f50d58f e78ef291"
  },
  "mozilla-mobile/android-components/components/feature/media/src/main/res/values/strings.xml": {
   "mozac_feature_media_notification_action_next": "3c22ac81 1badbe57",
@@ -1017,6 +1023,7 @@
   "browser_menu_bookmark_this_page_2": "094cf827 2d1a78b3",
   "browser_menu_customize_homepage": "c484707c 6b4a1101 c60c7efc",
   "browser_menu_customize_reader_view_2": "c0ec6ead 14ae82ac",
+  "browser_menu_default_banner_dismiss_promotion": "5c3e4ca8 7b9c61ad 09a513f3",
   "browser_menu_default_banner_subtitle_2": "30d4da4b 16b3e3e7",
   "browser_menu_default_banner_title": "2fed4e84 0b1e9f5e",
   "browser_menu_delete_browsing_data_on_quit": "c0ff2380 adf0a649",
@@ -1557,6 +1564,7 @@
   "library_desktop_bookmarks_unfiled": "08cec8f5 9f4b4987",
   "library_downloads": "3422c77a df1b11f5",
   "library_history": "eac5ce59 fede2e3e",
+  "library_item_selected_content_description": "6fba4798 d6785bd0 23cb060f",
   "library_recently_closed_tabs": "6d006a74 e3564742",
   "likert_scale_option_1": "80188f53 89199da3",
   "likert_scale_option_2": "df3d9d17 043c79f4",
@@ -2401,6 +2409,7 @@
   "tab_group_three_dot_menu_edit": "886f9a5c 79ccf84c b7b66d18",
   "tab_group_three_dot_menu_share": "5aed3214 2306250a b6d94881",
   "tab_group_three_dot_menu_ungroup": "7d0174ce 245698c2 4cc83adf",
+  "tab_groups_strip_expand_group_content_description": "8abc65fb e5a8c67f b898afee",
   "tab_indicator_media_playing": "363d8d28 0d3403fa e3341f20",
   "tab_manager_close_all_tabs_dialog_body": "8da05727 5da602b6",
   "tab_manager_close_all_tabs_dialog_cancel": "8a511819 871d661d",

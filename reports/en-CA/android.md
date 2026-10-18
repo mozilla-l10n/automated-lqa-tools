@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a400fea340fd` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a400fea340fd` |
-| **Previous run** | 2026-10-05 @ `d82f35778c8b` |
+| **Generated** | 2026-10-18 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
+| **Previous run** | 2026-10-12 @ `a400fea340fd` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,782 |
+| **Strings reviewed this run** | 20 of 2,802 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 45 |
-| Strings | 2,782 |
-| Missing strings | 11 |
+| Strings | 2,802 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,14 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**11 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-en-rCA/strings.xml` — 7
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-en-rCA/strings.xml` — 2
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-en-rCA/strings.xml` — 1
-- `mozilla-mobile/focus-android/app/src/main/res/values-en-rCA/strings.xml` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -79,7 +72,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 14, `curly-single` 1 | **curly-double** |
-| apostrophe | `typographic` 169 | **typographic** |
+| apostrophe | `typographic` 172 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 3 | **em** |
 

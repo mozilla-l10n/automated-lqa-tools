@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
-| **Previous run** | 2026-10-05 @ `d82f35778c8b` |
+| **Generated** | 2026-10-18 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
+| **Previous run** | 2026-10-12 @ `9d543f9ca798` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 14 of 2,793 |
+| **Strings reviewed this run** | 10 of 2,802 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,36 +18,17 @@ Also for fr: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `mozac_feature_listentopage_playback_speed_option` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — Multiplier and × symbol are reversed, producing "× 1,5" instead of "1,5×".
-    - Current: `× %1$s`
-    - Source: `%1$s×`
-    - Suggest: `%1$s×`
-    - The developer comment says the item shows the speed multiplier such as "1.5×", with %1$s being the number followed by the multiplication sign; placing × before the number reads as a mathematical operator, not a speed.
-- `mozac_feature_listentopage_playback_speed_option_default` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — The multiplier "1×" is rendered as "× 1", reversing number and symbol.
-    - Current: `× 1 (par défaut)`
-    - Source: `1× (Default)`
-    - Suggest: `1× (par défaut)`
-    - The comment explains "1×" means one times the normal speed; "× 1" inverts the notation and no longer reads as a playback speed.
+_No new findings._
 
-### ✅ Fixed since the last run (3)
+### ✅ Fixed since the last run (1)
 
-- `mozac_browser_errorpages_unknown_host_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fr/strings.xml` — List item ends with a semicolon instead of a period, deviating from the source punctuation and from the other list items.
-    - Current: `par exemple) ;{ </li> }`
-    - Source: `{ <p> }The browser could not find the host server for the provided address.{ </p> } { <ul> } { <li> }Check the address for typing errors such as { <strong> }ww{ </strong> }.example.com instead of { <strong> }www{ </stro…`
-    - Suggest: `par exemple).{ </li> }`
-    - The source sentence ends with a period, and the following list item in the same string ends with a period; the semicolon is inconsistent.
-- `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — A final period was added that is not in the source error message.
-    - Current: `L’adresse web doit contenir « https:// » ou « http:// ».`
-    - Source: `Web address must contain “https://” or “http://”`
-    - Suggest: `L’adresse web doit contenir « https:// » ou « http:// »`
-    - The en-US string "Web address must contain “https://” or “http://”" has no terminal punctuation, and the sibling error string add_login_hostname_invalid_text_2 has none either.
-- `firefox_labs_feature_conflict` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Wrong apostrophe character (U+2018 left single quotation mark) used instead of the typographic apostrophe.
-    - Current: `disponible à l‘essai`
-    - Source: `Feature isn’t available to try.`
-    - Suggest: `disponible à l’essai`
-    - The locale convention is the typographic apostrophe ’ (U+2019); here a left single quote ‘ is used.
+- `qualified_text` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — Missing space after "n°" abbreviation and French typography for the regulation number.
+    - Current: `n°2024/1183`
+    - Source: `Qualified as specified in Regulation (EU) 2024/1183.`
+    - Suggest: `no 2024/1183`
+    - In French typography the number abbreviation requires a space before the digits (and is properly "no" with superscript o); "n°2024/1183" is set without the required space.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -57,12 +38,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `preferences_inactive_tabs` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Move old tabs to inactive" is rendered as "Déplacer les onglets inactifs", losing the meaning of moving old tabs into the inactive section.
-    - Current: `Déplacer les onglets inactifs`
-    - Suggest: `Déplacer les anciens onglets vers les onglets inactifs`
-    - The source says old (unused) tabs get moved to the inactive state; the translation says "move the inactive tabs", which is a different statement.
+_Nothing retired._
 
 ---
 
@@ -71,7 +49,7 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 45 |
-| Strings | 2,793 |
+| Strings | 2,802 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -98,10 +76,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 23 | **guillemet** |
-| apostrophe | `typographic` 692 | **typographic** |
+| apostrophe | `typographic` 693 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 2 | **em** |
-| nbsp | `total` 210, `before-punctuation` 142, `space-before-punctuation` 64 | _mixed_ |
+| nbsp | `total` 211, `before-punctuation` 142, `space-before-punctuation` 64 | _mixed_ |
 | register | `formal` 442 | **formal** |
 
 ---
@@ -112,7 +90,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (74)
+## 3. Open findings (73)
 
 
 | Impact | Meaning | Count |
@@ -120,7 +98,7 @@ _Nothing reported._
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 54 |
 | 3 | Degraded language (grammar, spelling, terminology) | 19 |
-| 4 | Cosmetic (typography, spacing) | 1 |
+| 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -502,11 +480,7 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
-- `qualified_text` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — Missing space after "n°" abbreviation and French typography for the regulation number.
-    - Current: `n°2024/1183`
-    - Source: `Qualified as specified in Regulation (EU) 2024/1183.`
-    - Suggest: `no 2024/1183`
-    - In French typography the number abbreviation requires a space before the digits (and is properly "no" with superscript o); "n°2024/1183" is set without the required space.
+_Nothing in this category._
 
 ---
 
@@ -528,8 +502,9 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (8)
+### Fixed to date (9)
 
+- `qualified_text` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — fixed 2026-10-18
 - `mozac_browser_errorpages_unknown_host_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fr/strings.xml` — fixed 2026-10-12
 - `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — fixed 2026-10-12
 - `firefox_labs_feature_conflict` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — fixed 2026-10-12

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
-| **Previous run** | 2026-10-05 @ `d82f35778c8b` |
+| **Generated** | 2026-10-18 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
+| **Previous run** | 2026-10-12 @ `9d543f9ca798` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 11 of 2,793 |
+| **Strings reviewed this run** | 9 of 2,802 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for ru: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `mozac_menu_banner_dismiss_description` — `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-ru/strings.xml` — "Dismiss promotion" is rendered as "Hide the advertisement", calling the in-menu promotional banner an ad.
-    - Current: `Скрыть рекламу`
-    - Source: `Dismiss promotion`
-    - Suggest: `Закрыть промо-баннер`
-    - The source says "promotion" (a promotional banner in the menu); "реклама" means advertising, which mislabels the product's own banner as an ad.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -38,16 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (2)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `browser_menu_default_banner_dismiss_promotion` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "Dismiss promotion" is rendered as "Скрыть рекламу" (hide advertisement), which misstates the banner as an ad.
-    - Current: `Скрыть рекламу`
-    - Suggest: `Закрыть предложение`
-    - The banner promotes making the app default; "реклама" (advertisement) is not what the source means by "promotion".
-- `preferences_tab_view` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "Tab view" (the tab display style setting) is rendered as "Просмотр вкладок" (viewing tabs), an action rather than a view mode.
-    - Current: `Просмотр вкладок`
-    - Suggest: `Вид вкладок`
-    - The preference lets the user choose how tabs are displayed (list/grid); "Просмотр вкладок" reads as the act of browsing tabs, not the layout/view style.
+_Nothing retired._
 
 ---
 
@@ -56,7 +45,7 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 45 |
-| Strings | 2,793 |
+| Strings | 2,802 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -85,7 +74,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | quotes | `guillemet` 43, `straight-double` 2 | **guillemet** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 6 | **em** |
-| register | `informal` 146, `formal` 482 | **formal** |
+| register | `informal` 146, `formal` 484 | **formal** |
 
 ---
 

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
-| **Previous run** | 2026-10-07 @ `df6b5b99b499` |
+| **Generated** | 2026-10-18 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
+| **Previous run** | 2026-10-12 @ `9d543f9ca798` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 18 of 2,793 |
+| **Strings reviewed this run** | 12 of 2,793 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,76 +18,17 @@ Also for fa: [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (1)
 
-- `mozac_browser_errorpages_file_not_found_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — Arabic yeh "آيا" instead of Persian "آیا", misspelled "املائی", and colloquial "دیگه‌ی" in a formal error page.
-    - Current: `آيا در نشانی غلط املائی، حروف بزرگی و کوچکی یا مشکلات دیگه‌ی نوشتاری وجود دارد؟`
-    - Source: `{ <ul> } { <li> }Could the item have been renamed, removed, or relocated?{ </li> } { <li> }Is there a spelling, capitalization, or other typographical error in the address?{ </li> } { <li> }Do you have sufficient access…`
-    - Suggest: `آیا در نشانی غلط املایی، حروف بزرگ و کوچک یا مشکلات نوشتاری دیگری وجود دارد؟`
-    - The line uses the Arabic letter ي in «آيا» (other lines in the same string use the correct Persian ی), and «دیگه‌ی» is colloquial register inconsistent with the rest of the formal error text.
-- `preference_autocomplete_add_confirmation` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Spurious comma splits the noun phrase, changing the reading of "New custom URL added."
-    - Current: `نشانی اینترنتی، سفارشی جدید اضافه شد.`
-    - Source: `New custom URL added.`
-    - Suggest: `نشانی اینترنتی سفارشی جدید اضافه شد.`
-    - The comma after «نشانی اینترنتی» breaks the phrase "new custom URL" into two parts and makes the sentence ungrammatical.
+- `logins_password_copied` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — The password-copied snackbar says the URL (نشانی) was copied instead of the password.
+    - Current: `نشانی در تخته‌گیره رونوشت شد`
+    - Source: `Password copied to clipboard`
+    - Suggest: `گذرواژه در تخته‌گیره رونوشت شد`
+    - The source and comment say the password was copied. «نشانی» means address/URL, the same text as the URL-copied snackbar. It should be «گذرواژه», the term used in saved_logins_copy_password.
 
-### ✅ Fixed since the last run (11)
+### ✅ Fixed since the last run (0)
 
-- `mozac_browser_errorpages_file_not_found_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — Third bullet asks about access permissions to the "address" instead of to the requested item.
-    - Current: `آیا مجوزهای دسترسی کافی برای دست‌یابی به این نشانی را دارید؟`
-    - Source: `{ <ul> } { <li> }Could the item have been renamed, removed, or relocated?{ </li> } { <li> }Is there a spelling, capitalization, or other typographical error in the address?{ </li> } { <li> }Do you have sufficient access…`
-    - Suggest: `آیا مجوزهای دسترسی کافی برای دست‌یابی به مورد درخواستی را دارید؟`
-    - The source asks about sufficient access permissions to the requested item, not to the address.
-- `mozac_browser_errorpages_net_reset_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — First paragraph translates the net-interrupt message instead of "The network link was interrupted while negotiating a connection."
-    - Current: `مرورگر با موفقیت متصل شد ، اما هنگام انتقال اطلاعات ، اتصال قطع شد. لطفا دوباره امتحان کنید.`
-    - Source: `{ <p> }The network link was interrupted while negotiating a connection. Please try again.{ </p> } { <ul> } { <li> }The site could be temporarily unavailable or too busy. Try again in a few moments.{ </li> } { <li> }If y…`
-    - Suggest: `پیوند شبکه در هنگام برقراری اتّصال قطع شد. لطفاً دوباره تلاش کنید.`
-    - The source says the network link was interrupted while negotiating a connection; the target claims the browser connected successfully and the connection dropped while transferring information (text copied from the net_interrupt string).
-- `mozac_feature_addons_permissions_all_urls_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — Adds "all" to the data being accessed, which the source does not say.
-    - Current: `دسترسی به تمامی اطلاعات شما برای تمامی پایگاه های اینترنتی`
-    - Source: `Access your data for all websites`
-    - Suggest: `دسترسی به داده‌های شما برای همهٔ وب‌گاه‌ها`
-    - Source is "Access your data for all websites"; "all" modifies websites, not the user's data, so the translation claims a broader permission scope.
-- `content_description_reload` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Misspelling "بارگزاری" should be "بارگذاری".
-    - Current: `بارگزاری مجدد وب‌سایت`
-    - Source: `Reload website`
-    - Suggest: `بارگذاری مجدد وب‌سایت`
-    - Standard Persian spelling of "loading" is بارگذاری.
-- `content_description_stop` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Misspelling "بارگزاری" should be "بارگذاری".
-    - Current: `توقف بارگزاری وب‌سایت`
-    - Source: `Stop loading website`
-    - Suggest: `توقف بارگذاری وب‌سایت`
-    - Standard Persian spelling of "loading" is بارگذاری.
-- `firstrun_shortcut_title` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Ungrammatical phrase: object marker "را" misplaced, making "افزودن میان‌برها را به صفحه خانگی شما" incorrect Persian.
-    - Current: `افزودن میان‌برها را به صفحه خانگی شما`
-    - Source: `Add shortcuts to your home screen`
-    - Suggest: `افزودن میان‌بر به صفحهٔ خانگی`
-    - The source is "Add shortcuts to your home screen"; the Persian noun-phrase title cannot take the object marker "را" after the verbal noun, producing broken grammar.
-- `onboarding_first_screen_title` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Stray space after the ZWNJ in "خوش‌ آمدید".
-    - Current: `به %1$s خوش‌ آمدید`
-    - Source: `Welcome to %1$s`
-    - Suggest: `به %1$s خوش آمدید`
-    - The word contains both a ZWNJ and a space, producing incorrect spacing.
-- `preference_autocomplete_add_confirmation` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Spurious comma splits the noun phrase, changing the reading of "New custom URL added."
-    - Current: `نشانی اینترنتی، سفارشی جدید اضافه شد.`
-    - Source: `New custom URL added.`
-    - Suggest: `نشانی اینترنتی سفارشی جدید اضافه شد.`
-    - The comma after «نشانی اینترنتی» breaks the phrase "new custom URL" into two parts and makes the sentence ungrammatical.
-- `tab_crash_report_description` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — "we never save and cannot restore this tab" rendered as "we cannot save and restore this tab", losing the "never save" assertion.
-    - Current: `به عنوان یک مرورگر خصوصی نمی توانیم این زبانه را ذخیره و بازیابی کنیم.`
-    - Source: `As a private browser, we never save and cannot restore this tab.`
-    - Suggest: `به عنوان یک مرورگر خصوصی، ما هرگز این زبانه را ذخیره نمی‌کنیم و نمی‌توانیم آن را بازیابی کنیم.`
-    - The source distinguishes a deliberate policy (never save) from an inability (cannot restore); the translation states only inability, changing what the product says about its own behaviour.
-- `tab_crash_report_description` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Missing zero-width non-joiner in "نمی توانیم" (space instead of ZWNJ).
-    - Current: `نمی توانیم`
-    - Source: `As a private browser, we never save and cannot restore this tab.`
-    - Suggest: `نمی‌توانیم`
-    - Persian prefix "نمی" must join the verb with a ZWNJ, as done elsewhere in this batch (e.g. "می‌کنید").
-- `preference_autocomplete_add_confirmation` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Spurious comma splits the noun phrase, changing the reading of "New custom URL added."
-    - Current: `نشانی اینترنتی، سفارشی جدید اضافه شد.`
-    - Source: `New custom URL added.`
-    - Suggest: `نشانی اینترنتی سفارشی جدید اضافه شد.`
-    - The comma after «نشانی اینترنتی» breaks the phrase "new custom URL" into two parts and makes the sentence ungrammatical.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -109,7 +50,7 @@ _Nothing retired._
 |---|---|
 | Files | 45 |
 | Strings | 2,793 |
-| Missing strings | 0 |
+| Missing strings | 9 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -126,7 +67,12 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**9 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — 6
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fa/strings.xml` — 3
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -145,7 +91,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (120)
+## 3. Open findings (121)
 
 > **Reads as a deliberate edit (4).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -175,7 +121,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 51 |
+| 2 | Wrong content (says something other than the English) | 52 |
 | 3 | Degraded language (grammar, spelling, terminology) | 68 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
@@ -420,6 +366,11 @@ _Nothing in this category._
     - Source: `Looking this up`
     - Suggest: `در حال جست‌وجوی این مورد`
     - The source is an impersonal progress status shown under the image; the Persian uses first-person singular, making the app speak as "I", which is not the register used elsewhere (e.g. "در حال بررسی بایگانی").
+- `logins_password_copied` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — The password-copied snackbar says the URL (نشانی) was copied instead of the password.
+    - Current: `نشانی در تخته‌گیره رونوشت شد`
+    - Source: `Password copied to clipboard`
+    - Suggest: `گذرواژه در تخته‌گیره رونوشت شد`
+    - The source and comment say the password was copied. «نشانی» means address/URL, the same text as the URL-copied snackbar. It should be «گذرواژه», the term used in saved_logins_copy_password.
 - `microsurvey_describe_your_experience_title` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "Which best describes your experience" is rendered as "describes your experience better", losing the superlative selection sense.
     - Current: `کدام گزینه تجربهٔ شما را تا کنون بهتر توصیف می‌کند؟`
     - Source: `Help us improve Firefox. Which best describes your experience so far?`
@@ -480,12 +431,7 @@ _Nothing in this category._
     - Source: `A login with that username already exists`
     - Suggest: `ورودی با این نام کاربری از قبل وجود دارد ← «گذرواژه‌ای با این نام کاربری از قبل وجود دارد»`
     - "ورودی" means "entry/input" in Persian and does not convey a saved login credential; other strings in this surface use "ورود"/"گذرواژه".
-- `search_settings_google_lens_description` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — The brand name "Google" is transliterated as «گوگل» while the related title string keeps the Latin "Google Lens", creating brand inconsistency.
-    - Current: `ارسال تصاویر و عکس‌ها به گوگل برای جست‌وجوی بصری.`
-    - Source: `Sends images and photos to Google for visual search.`
-    - Suggest: `ارسال تصاویر و عکس‌ها به Google برای جست‌وجوی بصری.`
-    - Brand names must stay untranslated/untransliterated; the sibling string search_settings_google_lens_title uses "Google Lens" in Latin script.
-- _…and 14 more; see `state/` for the full list._
+- _…and 15 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

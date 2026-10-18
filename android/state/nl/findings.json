@@ -1128,6 +1128,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "C",
+  "check": "llm",
+  "current": "met afbeelding, privé en gesproken zoekopdrachten",
+  "dismissed_because": "",
+  "fid": "8207582afc76",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-10-18",
+  "impact": 3,
+  "last_seen": "2026-10-18",
+  "locale": "nl",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source lists three search types (image, private, voice). In Dutch, compound parts that share a head noun need a hyphen ('afbeeldingszoekopdrachten' becomes 'afbeeldings-'). Without it, 'afbeelding' reads as a separate item in the list, so the description names an image rather than image search.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "0c4ae6dd",
+  "string_id": "search_bar_with_lens_widget_description",
+  "suggest": "met afbeeldings-, privé- en gesproken zoekopdrachten",
+  "summary": "Without hyphens marking the shared compound part, 'afbeelding' reads as a separate noun, so the text says 'search bar with an image' rather than 'with image search'.",
+  "suppressed_by": ""
+ },
+ {
   "category": "B",
   "check": "llm",
   "current": "%s doorzoeken",
