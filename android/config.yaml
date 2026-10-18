@@ -84,7 +84,7 @@ variants:
 
 # The Firefox locale list, so the projects report on the same set of teams,
 # plus the top Android locales by Telemetry that desktop does not track
-# (es-CL, ko, ro, th) and (fa, hi-IN), which are tracked on mobile only.
+# (ko, ro, th) and (fa, hi-IN), which are tracked on mobile only.
 locales:
   - ar
   - cs

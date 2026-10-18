@@ -9,7 +9,7 @@ library they are built on.
 | Repository | [`mozilla-l10n/android-l10n`](https://github.com/mozilla-l10n/android-l10n) |
 | Source and locales | one repository — `res/values/` is the source, `res/values-<code>/` each locale |
 | Path mapping | `firefox.toml` and `focus.toml`, read with `moz.l10n.paths` |
-| Locales checked | listed in [`config.yaml`](config.yaml) |
+| Locales checked | 34 — ar, cs, de, el, en-CA, en-GB, es-AR, es-ES, es-MX, fa, fi, fr, fy-NL, hi-IN, hu, id, it, ja, ko, nl, pl, pt-BR, pt-PT, ro, ru, sk, sl, sv-SE, th, tr, uk, vi, zh-CN, zh-TW (from [`config.yaml`](config.yaml)) |
 | Format | Android XML string resources (`strings.xml`) |
 | Workflow | **Actions → Android l10n QA** |
 

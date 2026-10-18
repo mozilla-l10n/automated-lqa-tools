@@ -7,7 +7,7 @@ Localization quality review for **Firefox desktop**, plus the shared
 |---|---|
 | Localized strings | [`mozilla-l10n/firefox-l10n`](https://github.com/mozilla-l10n/firefox-l10n) — one directory per locale |
 | en-US reference | [`mozilla-l10n/firefox-l10n-source`](https://github.com/mozilla-l10n/firefox-l10n-source) — same relative paths |
-| Locales checked | 20, listed in [`config.yaml`](config.yaml) |
+| Locales checked | 29 — ar, cs, de, el, en-CA, en-GB, es-AR, es-ES, es-MX, fi, fr, fy-NL, hu, id, it, ja, nl, pl, pt-BR, pt-PT, ru, sk, sl, sv-SE, tr, uk, vi, zh-CN, zh-TW (from [`config.yaml`](config.yaml)) |
 | Formats | `.ftl`, `.properties`, `.ini` (no `.dtd` — that migration is done) |
 | Workflow | **Actions → Firefox l10n QA** |
 

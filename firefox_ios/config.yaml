@@ -76,8 +76,8 @@ variants:
   en-CA: en-US
 
 # The Firefox list minus fy-NL and uk, which have no iOS localization, plus
-# the top iOS locales by Telemetry that desktop does not track (da, es-CL,
-# ko, nb-NO, ro, th) and (fa, hi-IN), which are tracked on mobile only.
+# the top iOS locales by Telemetry that desktop does not track (da, ko,
+# nb-NO, ro, th) and (fa, hi-IN), which are tracked on mobile only.
 locales:
   - ar
   - cs

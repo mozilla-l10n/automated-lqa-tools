@@ -7,7 +7,7 @@ Localization quality review for **Firefox for iOS**.
 | Repository | [`mozilla-l10n/firefoxios-l10n`](https://github.com/mozilla-l10n/firefoxios-l10n) |
 | Format | XLIFF 1.2 — one `<locale>/firefox-ios.xliff` per locale |
 | Source | `en-US/firefox-ios.xliff` (the reference locale) |
-| Locales checked | listed in [`config.yaml`](config.yaml) |
+| Locales checked | 34 — ar, cs, da, de, el, en-CA, en-GB, es-AR, es-ES, es-MX, fa, fi, fr, hi-IN, hu, id, it, ja, ko, nb-NO, nl, pl, pt-BR, pt-PT, ro, ru, sk, sl, sv-SE, th, tr, vi, zh-CN, zh-TW (from [`config.yaml`](config.yaml)) |
 | Workflow | **Actions → Firefox iOS l10n QA** |
 
 Results arrive as a pull request on `l10n-qa/firefox_ios`, separate from the
