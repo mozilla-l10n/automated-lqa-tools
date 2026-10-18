@@ -1,0 +1,266 @@
+{
+ "project": "android",
+ "locale": "fy-NL",
+ "suggestions": [
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_permissions_user_scripts_extra_warning",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_permissions_user_scripts_extra_warning"
+    ]
+   },
+   "fids": [
+    "98db90ee4fb7"
+   ],
+   "findings": [
+    "Doubled apostrophe in \"dy’'t\" (typographic apostrophe followed by a straight one)."
+   ],
+   "source": "Unverified scripts can pose security and privacy risks. Only run scripts from extensions or sources you trust.",
+   "original": "Net ferifiearre scripts kinne befeiligings- en privacyrisiko’s foarmje. Fier allinnich scripts út fan útwreidingen of boarnen dy’'t jo fertrouwe.",
+   "text": "Net ferifiearre scripts kinne befeiligings- en privacyrisiko’s foarmje. Fier allinnich scripts út fan útwreidingen of boarnen dy’t jo fertrouwe.",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "connection_security_panel_verified_by",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "connection_security_panel_verified_by"
+    ]
+   },
+   "fids": [
+    "fe51eadc1c2a"
+   ],
+   "findings": [
+    "A colon was added that is not in the source, unlike the parallel string \"Utjûn oan %s\"."
+   ],
+   "source": "Verified by %s",
+   "original": "Ferifiearre troch: %s",
+   "text": "Ferifiearre troch %s",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "download_content_type_filter_video",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "download_content_type_filter_video"
+    ]
+   },
+   "fids": [
+    "a7d5ea61a39d"
+   ],
+   "findings": [
+    "`download_content_type_filter_video` uses a straight apostrophe"
+   ],
+   "source": "Videos",
+   "original": "Fideo's",
+   "text": "Fideo’s",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "etp_known_fingerprinters_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "etp_known_fingerprinters_description"
+    ]
+   },
+   "fids": [
+    "bc566d7949f3"
+   ],
+   "findings": [
+    "`etp_known_fingerprinters_description` uses a straight apostrophe"
+   ],
+   "source": "Stops uniquely identifiable data from being collected about your device that can be used for tracking purposes.",
+   "original": "Foarkomt dat unyk identifisearbere gegevens oer jo apparaat sammele wurde dy't brûkt wurde kinne foar folchdoeleinen.",
+   "text": "Foarkomt dat unyk identifisearbere gegevens oer jo apparaat sammele wurde dy’t brûkt wurde kinne foar folchdoeleinen.",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "nova_onboarding_marketing_body_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "nova_onboarding_marketing_body_2"
+    ]
+   },
+   "fids": [
+    "4eb5489489d8"
+   ],
+   "findings": [
+    "`nova_onboarding_marketing_body_2` uses a straight apostrophe"
+   ],
+   "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.",
+   "original": "Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht.",
+   "text": "Diel mei Mozilla’s marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht.",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "onboarding_marketing_body_1",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "onboarding_marketing_body_1"
+    ]
+   },
+   "fids": [
+    "89ebf63fc720"
+   ],
+   "findings": [
+    "`onboarding_marketing_body_1` uses a straight apostrophe"
+   ],
+   "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.",
+   "original": "Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht.",
+   "text": "Diel mei Mozilla’s marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht.",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "onboarding_marketing_redesign_opt_out_checkbox",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "onboarding_marketing_redesign_opt_out_checkbox"
+    ]
+   },
+   "fids": [
+    "7037193d2021"
+   ],
+   "findings": [
+    "`onboarding_marketing_redesign_opt_out_checkbox` uses a straight apostrophe"
+   ],
+   "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.",
+   "original": "Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht.",
+   "text": "Diel mei Mozilla’s marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht.",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preferences_marketing_data_description_4",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preferences_marketing_data_description_4"
+    ]
+   },
+   "fids": [
+    "3eccf7de8983"
+   ],
+   "findings": [
+    "`preferences_marketing_data_description_4` uses a straight apostrophe"
+   ],
+   "source": "Share how you discovered Firefox and that you use it with Mozilla’s marketing technology partners.",
+   "original": "Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke.",
+   "text": "Diel mei Mozilla’s marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke.",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "tab_tray_inactive_auto_close_body_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "tab_tray_inactive_auto_close_body_2"
+    ]
+   },
+   "fids": [
+    "890ea5d62268"
+   ],
+   "findings": [
+    "`tab_tray_inactive_auto_close_body_2` uses a straight apostrophe"
+   ],
+   "source": "%1$s can close tabs you haven’t viewed over the past month.",
+   "original": "%1$s kin ljepblêden dy't jo de ôfrûne moanne net besjoen hawwe slute.",
+   "text": "%1$s kin ljepblêden dy’t jo de ôfrûne moanne net besjoen hawwe slute.",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "uninstall_survey_option_4_v2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "uninstall_survey_option_4_v2"
+    ]
+   },
+   "fids": [
+    "dcca3443d317"
+   ],
+   "findings": [
+    "`uninstall_survey_option_4_v2` uses a straight apostrophe"
+   ],
+   "source": "Videos, downloads, or media didn’t work",
+   "original": "Fideo's, downloads of media wurken net",
+   "text": "Fideo’s, downloads of media wurken net",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  }
+ ]
+}

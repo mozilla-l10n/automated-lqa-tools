@@ -1,0 +1,110 @@
+{
+ "project": "android",
+ "locale": "fr",
+ "suggestions": [
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_errorpages_unknown_host_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_errorpages_unknown_host_message"
+    ]
+   },
+   "fids": [
+    "ed88ce0b6aee"
+   ],
+   "findings": [
+    "List item ends with a semicolon instead of a period, deviating from the source punctuation and from the other list items."
+   ],
+   "source": "{ <p> }The browser could not find the host server for the provided address.{ </p> }\n{ <ul> }\n{ <li> }Check the address for typing errors such as { <strong> }ww{ </strong> }.example.com instead of { <strong> }www{ </strong> }.example.com.{ </li> }\n{ <li> }If you are unable to load any pages, check your device’s data or Wi-Fi connection.{ </li> }\n{ </ul> }",
+   "original": "<p>Le navigateur n’a pas pu trouver le serveur hôte pour l’adresse indiquée.</p>\n<ul>\n<li>Vérifiez la syntaxe de l’adresse (saisie de <strong>ww</strong>.example.com au lieu de <strong>www</strong>.example.com par exemple) ;</li>\n<li>Si vous n’arrivez à naviguer sur aucun site, vérifiez la connexion données ou Wi-Fi de votre appareil.</li>\n</ul>",
+   "text": "<p>Le navigateur n’a pas pu trouver le serveur hôte pour l’adresse indiquée.</p>\n<ul>\n<li>Vérifiez la syntaxe de l’adresse (saisie de <strong>ww</strong>.example.com au lieu de <strong>www</strong>.example.com par exemple).</li>\n<li>Si vous n’arrivez à naviguer sur aucun site, vérifiez la connexion données ou Wi-Fi de votre appareil.</li>\n</ul>",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "add_login_hostname_invalid_text_3",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "add_login_hostname_invalid_text_3"
+    ]
+   },
+   "fids": [
+    "05ad3ecd4de2"
+   ],
+   "findings": [
+    "A final period was added that is not in the source error message."
+   ],
+   "source": "Web address must contain “https://” or “http://”",
+   "original": "L’adresse web doit contenir « https:// » ou « http:// ».",
+   "text": "L’adresse web doit contenir « https:// » ou « http:// »",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "firefox_labs_feature_conflict",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "firefox_labs_feature_conflict"
+    ]
+   },
+   "fids": [
+    "3bd37e04e4ad"
+   ],
+   "findings": [
+    "Wrong apostrophe character (U+2018 left single quotation mark) used instead of the typographic apostrophe."
+   ],
+   "source": "Feature isn’t available to try.",
+   "original": "Cette fonctionnalité n’est pas disponible à l‘essai.",
+   "text": "Cette fonctionnalité n’est pas disponible à l’essai.",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+   "string_id": "qualified_text",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "focus-for-android",
+    "resource": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+    "key": [
+     "qualified_text"
+    ]
+   },
+   "fids": [
+    "e209fe41f158"
+   ],
+   "findings": [
+    "Missing space after \"n°\" abbreviation and French typography for the regulation number."
+   ],
+   "source": "Qualified as specified in Regulation (EU) 2024/1183.",
+   "original": "Qualifié conformément au règlement (UE) n°2024/1183.",
+   "text": "Qualifié conformément au règlement (UE) n° 2024/1183.",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  }
+ ]
+}

@@ -101,6 +101,37 @@ writing them anywhere.
 So changing the checks is a human job: edit the tooling, re-run the
 project's self-test, commit. A run never improvises its own logic.
 
+### Pontoon suggestions
+
+The one automation that reaches outside the repository is
+[`pontoon-suggestions.yml`](.github/workflows/pontoon-suggestions.yml),
+run by hand with a project, locales and a finding group (each may be `all`).
+It drives [`lib/autosuggest.py`](lib/autosuggest.py): the model gives each
+open finding a verdict, and it gets no tools for this either, just a plain
+API request. A `fix` is applied to a scratch copy under `work/`, verified the
+way a person's edit is (`suggest.py`: it must parse and keep every
+placeholder), compared with Pontoon's current translation, and **submitted
+as a suggestion under the `PONTOON_TOKEN` owner's account** when the run
+happens. A `false_positive` becomes a line in the locale's `dismissed.txt`,
+and only when every open finding on that string got the same verdict.
+
+Each stored suggestion is recorded in `<project>/pontoon_suggestions/<locale>.json`
+with `status` (`pending`, `approved`, `rejected`), `status_date` and an
+optional `comment`. The skill's `suggest.py upload --submit` writes the same
+file, and `suggest.py backfill` rebuilt it from the submissions made before
+it existed. A string listed there, in any status, is never suggested again. Records and dismissals reach `main` through one pull
+request per project (`l10n-suggestions/<project>`), so nothing is hidden
+until a person has read why. The clone is never edited: findings close when
+an accepted suggestion reaches the repository and the next QA run sees the
+string move.
+
+Locally, the same script does a dry run unless given `--submit`:
+
+```bash
+.venv/bin/python lib/autosuggest.py run --project android --locales fr --group E \
+    --l10n-dir ~/github/android-l10n
+```
+
 ## Adding another automation
 
 Create a sibling directory with `config.yaml`, `prompts/`, `tools/checks.py`

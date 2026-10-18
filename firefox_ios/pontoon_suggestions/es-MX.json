@@ -1,0 +1,247 @@
+{
+ "project": "firefox_ios",
+ "locale": "es-MX",
+ "suggestions": [
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "Client/en-US.lproj/InfoPlist.strings",
+   "string_id": "NSFaceIDUsageDescription",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Client/en-US.lproj/InfoPlist.strings",
+     "NSFaceIDUsageDescription"
+    ]
+   },
+   "fids": [
+    "8cf7847a3d94"
+   ],
+   "findings": [
+    "Parenthetical gloss uses hyphens without surrounding spaces, producing \"facial-para\" with no space."
+   ],
+   "source": "Firefox requires Face ID to access your saved passwords and payment methods.",
+   "original": "Firefox requiere Face ID - reconocimiento facial-para acceder a tus contraseñas guardadas y métodos de pago.",
+   "text": "Firefox requiere Face ID — reconocimiento facial — para acceder a tus contraseñas guardadas y métodos de pago.",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "Shared/Supporting Files/en-US.lproj/AddressToolbar.strings",
+   "string_id": "AddressToolbar.PrivacyAndSecuriySettings.A11y.Label.v128",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/AddressToolbar.strings",
+     "AddressToolbar.PrivacyAndSecuriySettings.A11y.Label.v128"
+    ]
+   },
+   "fids": [
+    "84a0a433d122"
+   ],
+   "findings": [
+    "Ampersand kept instead of Spanish conjunction \"y\"."
+   ],
+   "source": "Privacy & Security Settings",
+   "original": "Ajustes de Privacidad & Seguridad",
+   "text": "Ajustes de Privacidad y Seguridad",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "Shared/Supporting Files/en-US.lproj/Bookmarks.strings",
+   "string_id": "Bookmarks.Menu.DeleteBookmark.v132",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Bookmarks.strings",
+     "Bookmarks.Menu.DeleteBookmark.v132"
+    ]
+   },
+   "fids": [
+    "eb7c01f2acc3"
+   ],
+   "findings": [
+    "Unnecessary capitalization of \"Marcador\", inconsistent with other bookmark strings in the same file."
+   ],
+   "source": "Delete Bookmark",
+   "original": "Eliminar Marcador",
+   "text": "Eliminar marcador",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "ContextMenu.ButtonToast.NewPrivateTabOpened.LabelText",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "ContextMenu.ButtonToast.NewPrivateTabOpened.LabelText"
+    ]
+   },
+   "fids": [
+    "17c30629694f"
+   ],
+   "findings": [
+    "Unnecessary title-case capitalization in Spanish."
+   ],
+   "source": "New Private Tab opened",
+   "original": "Nueva Pestaña Privada abierta",
+   "text": "Nueva pestaña privada abierta",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "Could not load page.",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "Could not load page."
+    ]
+   },
+   "fids": [
+    "1476aa5413f2"
+   ],
+   "findings": [
+    "Final period from the source sentence is missing."
+   ],
+   "source": "Could not load page.",
+   "original": "No se pudo cargar la página",
+   "text": "No se pudo cargar la página.",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "TopSites.RemovePage.Button",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "TopSites.RemovePage.Button"
+    ]
+   },
+   "fids": [
+    "77d955dcc3a0"
+   ],
+   "findings": [
+    "Em dash from the source replaced with a hyphen."
+   ],
+   "source": "Remove page — %@",
+   "original": "Eliminar página - %@",
+   "text": "Eliminar página — %@",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "Shared/en-US.lproj/LoginManager.strings",
+   "string_id": "Open & Fill",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/LoginManager.strings",
+     "Open & Fill"
+    ]
+   },
+   "fids": [],
+   "findings": [
+    "included without a finding: Same '&' for Spanish 'y' as AddressToolbar.PrivacyAndSecuriySettings.A11y.Label.v128 (84a0a433d122); the file writes 'y' for '&' in 6 strings. No finding raised."
+   ],
+   "source": "Open & Fill",
+   "original": "Abrir & Llenar",
+   "text": "Abrir y Llenar",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "WidgetKit/Base.lproj/WidgetIntents.intentdefinition",
+   "string_id": "PzSrmZ-eHmH1H",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "WidgetKit/Base.lproj/WidgetIntents.intentdefinition",
+     "PzSrmZ-eHmH1H"
+    ]
+   },
+   "fids": [
+    "751c42f767f1"
+   ],
+   "findings": [
+    "Straight double quotes used instead of the single curly quotation marks of the source."
+   ],
+   "source": "Just to confirm, you wanted ‘Clear Private Tabs’?",
+   "original": "Sólo para confirmar, ¿querías \"Limpiar Pestañas Privadas\"?",
+   "text": "Sólo para confirmar, ¿querías ‘Limpiar Pestañas Privadas’?",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "WidgetKit/Base.lproj/WidgetIntents.intentdefinition",
+   "string_id": "PzSrmZ-scEmjs",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "WidgetKit/Base.lproj/WidgetIntents.intentdefinition",
+     "PzSrmZ-scEmjs"
+    ]
+   },
+   "fids": [
+    "a66752fdd12b"
+   ],
+   "findings": [
+    "Straight double quotes used instead of the single curly quotation marks of the source."
+   ],
+   "source": "Just to confirm, you wanted ‘New Private Search’?",
+   "original": "Sólo para confirmar, ¿querías \"Nueva búsqueda privada\"?",
+   "text": "Sólo para confirmar, ¿querías ‘Nueva búsqueda privada’?",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  }
+ ]
+}

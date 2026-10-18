@@ -1,0 +1,266 @@
+{
+ "project": "android",
+ "locale": "es-MX",
+ "suggestions": [
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_errorpages_offline_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_errorpages_offline_message"
+    ]
+   },
+   "fids": [
+    "0214462b4206"
+   ],
+   "findings": [
+    "`mozac_browser_errorpages_offline_message` uses straight double quotes"
+   ],
+   "source": "{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> }\n{ <ul> }\n{ <li> }Is the device connected to an active network?{ </li> }\n{ <li> }Press “Try Again” to switch to online mode and reload the page.{ </li> }\n{ </ul> }",
+   "original": "<p>El navegador está operando en modo sin conexión y no puede conectarse con el elemento solicitado.</p>\n<ul>\n<li>¿Estás conectado el equipo a una red activa?</li>\n<li>Presiona \"Volver a intentarlo\" para pasar al modo con conexión y recargar la página.</li>\n</ul>",
+   "text": "<p>El navegador está operando en modo sin conexión y no puede conectarse con el elemento solicitado.</p>\n<ul>\n<li>¿Está conectado el equipo a una red activa?</li>\n<li>Presiona “Volver a intentarlo” para pasar al modo con conexión y recargar la página.</li>\n</ul>",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_prompts_identity_credentials_privacy_policy_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_prompts_identity_credentials_privacy_policy_description"
+    ]
+   },
+   "fids": [
+    "646343b3a85b"
+   ],
+   "findings": [
+    "A period was added after \"Términos de Servicio\" that is not in the source."
+   ],
+   "source": "Logging in to %1$s with a %2$s account is subject to their <a href=\"%3$s\">Privacy Policy{ </a> } and <a href=\"%4$s\">Terms of Service{ </a> }",
+   "original": "Iniciar sesión en %1$s con una cuenta de %2$s está sujeto a su <a href=\"%3$s\">Política de Privacidad</a> y <a href=\"%4$s\">Términos de Servicio.</a>",
+   "text": "Iniciar sesión en %1$s con una cuenta de %2$s está sujeto a su <a href=\"%3$s\">Política de privacidad</a> y <a href=\"%4$s\">Términos de Servicio</a>",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/android-components/components/feature/pwa/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_pwa_site_controls_notification_text",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/pwa/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_pwa_site_controls_notification_text"
+    ]
+   },
+   "fids": [
+    "72fa66ad2168"
+   ],
+   "findings": [
+    "Trailing period added that is not in the source."
+   ],
+   "source": "Tap to copy the URL for this app",
+   "original": "Toca para copiar la URL de esta aplicación.",
+   "text": "Toca para copiar la URL de esta aplicación",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/android-components/components/feature/summarize/src/main/res/values/strings.xml",
+   "string_id": "mozac_summarize_paywalled_content_error_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/summarize/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_summarize_paywalled_content_error_title"
+    ]
+   },
+   "fids": [
+    "f1681615b5df"
+   ],
+   "findings": [
+    "Trailing period added to a title that has none in the source."
+   ],
+   "source": "Can’t summarize paywalled content",
+   "original": "No se puede resumir el contenido de pago.",
+   "text": "No se puede resumir el contenido de pago",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "add_login_hostname_invalid_text_3",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "add_login_hostname_invalid_text_3"
+    ]
+   },
+   "fids": [
+    "c468b83e3ec5"
+   ],
+   "findings": [
+    "`add_login_hostname_invalid_text_3` uses straight double quotes"
+   ],
+   "source": "Web address must contain “https://” or “http://”",
+   "original": "La dirección web debe contener \"https://\" o \"http://\"",
+   "text": "La dirección web debe contener “https://” o “http://”",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "automatic_translation_header_preference",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "automatic_translation_header_preference"
+    ]
+   },
+   "fids": [
+    "3ea7c327e141"
+   ],
+   "findings": [
+    "Curly quotation marks are reversed (closing mark used to open and vice versa)."
+   ],
+   "source": "Select a language to manage ”always translate“ and ”never translate“ preferences.",
+   "original": "Selecciona un idioma para administrar las preferencias de ”siempre traducir“ y ”nunca traducir“.",
+   "text": "Selecciona un idioma para administrar las preferencias de “siempre traducir” y “nunca traducir”.",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "download_language_header_preference",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "download_language_header_preference"
+    ]
+   },
+   "fids": [
+    "101863b6f599"
+   ],
+   "findings": [
+    "Unnecessary capitalization of \"Idiomas\" copied from English title case."
+   ],
+   "source": "Download Languages",
+   "original": "Descargar Idiomas",
+   "text": "Descargar idiomas",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "micro_survey_privacy_notice_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "micro_survey_privacy_notice_2"
+    ]
+   },
+   "fids": [
+    "630b63b9cce4"
+   ],
+   "findings": [
+    "Unnecessary capitalization of \"Privacidad\" in a sentence-case link label."
+   ],
+   "source": "Privacy notice",
+   "original": "Aviso de Privacidad",
+   "text": "Aviso de privacidad",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preference_enhanced_tracking_protection_custom_description_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preference_enhanced_tracking_protection_custom_description_2"
+    ]
+   },
+   "fids": [
+    "905a05b00c36"
+   ],
+   "findings": [
+    "Final period from the source sentence is missing."
+   ],
+   "source": "Choose which trackers and scripts to block.",
+   "original": "Elige qué rastreadores y secuencias de comandos bloquear",
+   "text": "Elige qué rastreadores y secuencias de comandos bloquear.",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preference_summary_delete_browsing_data_on_quit_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preference_summary_delete_browsing_data_on_quit_2"
+    ]
+   },
+   "fids": [
+    "98a8fa193687"
+   ],
+   "findings": [
+    "`preference_summary_delete_browsing_data_on_quit_2` uses straight double quotes"
+   ],
+   "source": "Automatically deletes browsing data when you select “Quit” from the main menu",
+   "original": "Eliminar automáticamente los datos de navegación cuando selecciones \"Salir\" en el menú principal",
+   "text": "Eliminar automáticamente los datos de navegación cuando selecciones “Salir” en el menú principal",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  }
+ ]
+}

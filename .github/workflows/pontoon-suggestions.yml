@@ -1,0 +1,290 @@
+name: Pontoon suggestions
+
+# Fixes open findings with the model and submits the fixes to Pontoon as
+# suggestions, under the account that owns PONTOON_TOKEN. What it submitted is
+# recorded in <project>/pontoon_suggestions/<locale>.json, and what the model
+# judged a false positive is written to the locale's dismissed.txt. Both reach
+# `main` only through a pull request per project, so a person reviews every
+# dismissal before it hides anything. The suggestions themselves are published
+# when the run happens; Pontoon reviewers accept or reject them there.
+#
+# Manual only. Never scheduled: every run publishes under a person's name.
+on:
+  workflow_dispatch:
+    inputs:
+      product:
+        description: 'Project'
+        required: true
+        default: 'all'
+        type: choice
+        options: [all, firefox, android, firefox_ios]
+      locales:
+        description: 'Comma-separated locale codes, or "all"'
+        required: true
+        default: 'all'
+      group:
+        description: 'Finding group (A functional, B meaning, C grammar, D terminology, E typography)'
+        required: true
+        default: 'all'
+        type: choice
+        options: [all, A, B, C, D, E]
+      dry_run:
+        description: 'Show the fixes and dismissals, submit and write nothing'
+        required: false
+        default: false
+        type: boolean
+
+concurrency:
+  # One Pontoon token, one upload quota: never let two runs overlap.
+  group: pontoon-suggestions
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      jobs: ${{ steps.pick.outputs.jobs }}
+      projects: ${{ steps.pick.outputs.projects }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+      - run: pip install PyYAML
+      - id: pick
+        name: Resolve the project and locale lists
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os, yaml
+          product = os.environ["PRODUCT"]
+          requested = os.environ["REQUESTED"].strip()
+          projects = (["firefox", "android", "firefox_ios"]
+                      if product == "all" else [product])
+          wanted = (None if not requested or requested == "all"
+                    else [x.strip() for x in requested.split(",") if x.strip()])
+          jobs, seen = [], set()
+          for project in projects:
+              known = yaml.safe_load(open(f"{project}/config.yaml"))["locales"]
+              for locale in (known if wanted is None else wanted):
+                  if locale in known:
+                      jobs.append({"project": project, "locale": locale})
+                      seen.add(locale)
+          unknown = [x for x in wanted or [] if x not in seen]
+          if unknown:
+              raise SystemExit(
+                  f"not configured for {', '.join(projects)}: {', '.join(unknown)}"
+              )
+          if not jobs:
+              raise SystemExit("nothing to do")
+          print("jobs=" + json.dumps(jobs))
+          print("projects=" + json.dumps(sorted({j["project"] for j in jobs})))
+          PY
+        env:
+          PRODUCT: ${{ inputs.product }}
+          REQUESTED: ${{ inputs.locales }}
+
+  suggest:
+    needs: plan
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      # Serial on purpose: Pontoon's upload quota belongs to the token, and
+      # parallel jobs would share it while each paced itself as if alone.
+      max-parallel: 1
+      matrix:
+        include: ${{ fromJson(needs.plan.outputs.jobs) }}
+    env:
+      PROJECT: ${{ matrix.project }}
+      LOCALE: ${{ matrix.locale }}
+      BRANCH: l10n-suggestions/${{ matrix.project }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Check out the strings
+        # Fresh, shallow and blobless every time: `upload` compares each
+        # string with Pontoon and drops any the clone is behind on, so a
+        # stale clone only loses suggestions.
+        run: |
+          set -euo pipefail
+          case "$PROJECT" in
+            firefox)
+              git clone --depth 1 --filter=blob:none \
+                https://github.com/mozilla-l10n/firefox-l10n-source work/source
+              git clone --depth 1 --filter=blob:none --sparse \
+                https://github.com/mozilla-l10n/firefox-l10n work/l10n
+              git -C work/l10n sparse-checkout set --no-cone "/$LOCALE/"
+              ;;
+            android)
+              git clone --depth 1 --filter=blob:none \
+                https://github.com/mozilla-l10n/android-l10n work/l10n
+              ;;
+            firefox_ios)
+              git clone --depth 1 --filter=blob:none \
+                https://github.com/mozilla-l10n/firefoxios-l10n work/l10n
+              ;;
+          esac
+          [ -d work/source ] || ln -s l10n work/source
+
+      - name: Read what an open pull request already records
+        # This job reads `main`. Suggestions from an earlier run still waiting
+        # in an open pull request are not there yet, and without this they
+        # would be asked about and submitted again.
+        run: |
+          set -euo pipefail
+          tracker="$PROJECT/pontoon_suggestions/$LOCALE.json"
+          if gh pr view "$BRANCH" --json state --jq .state 2>/dev/null | grep -qx OPEN \
+             && git fetch --depth 1 origin "$BRANCH" 2>/dev/null \
+             && git show "FETCH_HEAD:$tracker" > /tmp/known.json 2>/dev/null; then
+            echo "KNOWN=--known /tmp/known.json" >> "$GITHUB_ENV"
+            echo "also skipping what the open pull request on $BRANCH records"
+          fi
+
+      - name: Fix and submit
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PONTOON_TOKEN: ${{ secrets.PONTOON_TOKEN }}
+          GROUP: ${{ inputs.group }}
+          SUBMIT: ${{ !inputs.dry_run && '--submit' || '' }}
+        run: |
+          python lib/autosuggest.py run --project "$PROJECT" --locales "$LOCALE" \
+            --group "$GROUP" --l10n-dir work/l10n --source-dir work/source \
+            ${KNOWN:-} $SUBMIT < /dev/null
+
+      - name: Collect the records
+        # Even after a failure: whatever was submitted before it is published
+        # and must be tracked.
+        if: ${{ always() && !inputs.dry_run }}
+        run: |
+          mkdir -p out
+          for f in "$PROJECT/pontoon_suggestions/$LOCALE.json" \
+                   "$PROJECT/locales/$LOCALE/dismissed.txt"; do
+            if [ -f "$f" ]; then cp --parents "$f" out/; fi
+          done
+
+      - name: Upload them
+        if: ${{ always() && !inputs.dry_run }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: suggestions-${{ matrix.project }}-${{ matrix.locale }}
+          path: out/
+          if-no-files-found: ignore
+          retention-days: 7
+
+  propose:
+    needs: [plan, suggest]
+    if: ${{ always() && !inputs.dry_run && needs.plan.result == 'success' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    strategy:
+      # Its own branch and pull request per project: different reviewers.
+      fail-fast: false
+      matrix:
+        project: ${{ fromJson(needs.plan.outputs.projects) }}
+    env:
+      PROJECT: ${{ matrix.project }}
+      BRANCH: l10n-suggestions/${{ matrix.project }}
+      BASE: ${{ github.ref_name }}
+      # See firefox-qa.yml: a pull request opened with GITHUB_TOKEN cannot
+      # start `Checks`, so a PAT is preferred when there is one.
+      GH_TOKEN: ${{ secrets.QA_PR_TOKEN || github.token }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.QA_PR_TOKEN || github.token }}
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+
+      - name: Collect this project's records
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          pattern: suggestions-${{ matrix.project }}-*
+          merge-multiple: true
+          path: incoming
+
+      - name: Switch to the suggestions branch
+        # Added to while its pull request is open; rebuilt from the base once
+        # it has been merged or closed, as the QA workflows do.
+        run: |
+          set -euo pipefail
+          git config user.name  'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          mkdir -p previous
+          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null 2>&1 \
+             && gh pr view "$BRANCH" --json state --jq .state 2>/dev/null | grep -qx OPEN; then
+            git fetch origin "$BRANCH"
+            git checkout -B "$BRANCH" "origin/$BRANCH"
+            if ! git merge --no-edit "origin/$BASE"; then
+              # Only the records can conflict. Take the base's copy and fold
+              # the branch's back in below: absorbing only ever adds, so
+              # neither side's entries are lost.
+              for f in $(git diff --name-only --diff-filter=U); do
+                mkdir -p "previous/$(dirname "$f")"
+                git show "HEAD:$f" > "previous/$f"
+                git checkout --theirs -- "$f"
+              done
+              git add -A -- . ':!previous' ':!incoming'
+              git commit --no-edit
+            fi
+          else
+            git checkout -B "$BRANCH" "origin/$BASE"
+          fi
+
+      - name: Apply them
+        id: apply
+        run: |
+          set -euo pipefail
+          python lib/autosuggest.py absorb previous $( [ -d incoming ] && echo incoming ) \
+            | tee /tmp/absorbed.txt
+          rm -rf previous incoming
+          # Only what exists: a run that only dismissed has no tracker
+          # directory, and `git add` fails on a pathspec that matches nothing.
+          for d in "$PROJECT/pontoon_suggestions" "$PROJECT/locales"; do
+            if [ -e "$d" ]; then git add -A -- "$d"; fi
+          done
+          if git diff --cached --quiet; then
+            echo "nothing new to record"
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git commit -m "Pontoon suggestions for $PROJECT ($(date -u +%Y-%m-%d))"
+          git push --force-with-lease origin "$BRANCH"
+          echo 'changed=true' >> "$GITHUB_OUTPUT"
+
+      - name: Open or update the pull request
+        if: steps.apply.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
+          python lib/autosuggest.py summary --project "$PROJECT" \
+            --base "origin/$BASE" \
+            --link-base "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/blob/$BRANCH" \
+            > /tmp/pr-body.md
+          if gh pr view "$BRANCH" --json state --jq .state 2>/dev/null | grep -qx OPEN; then
+            gh pr edit "$BRANCH" --body-file /tmp/pr-body.md
+          else
+            gh pr create --base "$BASE" --head "$BRANCH" \
+              --title "Pontoon suggestions: $PROJECT" --body-file /tmp/pr-body.md
+          fi
+          gh pr view "$BRANCH" --json url --jq .url >> "$GITHUB_STEP_SUMMARY"

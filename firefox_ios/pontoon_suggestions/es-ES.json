@@ -1,0 +1,33 @@
+{
+ "project": "firefox_ios",
+ "locale": "es-ES",
+ "suggestions": [
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "TopSites.RemovePage.Button",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "TopSites.RemovePage.Button"
+    ]
+   },
+   "fids": [
+    "b5bf86a7e017"
+   ],
+   "findings": [
+    "Em dash in the source replaced with a hyphen."
+   ],
+   "source": "Remove page — %@",
+   "original": "Eliminar página - %@",
+   "text": "Eliminar página — %@",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  }
+ ]
+}

@@ -40,10 +40,13 @@ from __future__ import annotations
 
 import argparse
 import datetime
+import glob
 import json
 import os
 import shutil
+import subprocess
 import sys
+import tempfile
 import time
 import urllib.error
 import urllib.parse
@@ -58,6 +61,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import config  # noqa: E402
 import findings as findings_mod  # noqa: E402
 import layout  # noqa: E402
+import parse  # noqa: E402
+import tracker  # noqa: E402
 
 from moz.l10n.formats import Format  # noqa: E402
 from moz.l10n.formats.fluent import fluent_serialize_message  # noqa: E402
@@ -76,6 +81,10 @@ DEFAULT_SERVER = "https://pontoon.mozilla.org"
 # The upload endpoint allows a burst of 30 calls a minute, and rejected
 # calls still count against the hourly quota, so stay well under it.
 UPLOAD_PAUSE_SECONDS = 2.5
+# Pontoon lists at most 100 failed and 100 undefined keys per response, so a
+# larger upload could reject strings it never names. Kept at that size, every
+# refusal is listed and `refused` can answer for each string.
+UPLOAD_MAX_STRINGS = 100
 
 
 # --- paths -------------------------------------------------------------------
@@ -271,6 +280,11 @@ def cmd_prepare(args) -> int:
         f for f in findings_mod.load(project, args.locale)
         if f.category == category and f.status in findings_mod.OPEN_STATUSES
     ]
+    # Already suggested, by any path and in any status: not again.
+    _, recorded = tracker.open_for(project, args.locale)
+    done = tracker.strings(recorded)
+    already = sorted({f.string_id for f in picked if f.key in done})
+    picked = [f for f in picked if f.key not in done]
 
     work, files, missing = [], {}, []
     localized_of = _localized_resolver(project, trees, args.l10n_dir)
@@ -329,6 +343,9 @@ def cmd_prepare(args) -> int:
         print(f"  {moved} on strings that moved since the finding was raised")
     if missing:
         print(f"  {len(missing)} skipped, not in the clone: {', '.join(missing)}")
+    if already:
+        print(f"  {len(already)} skipped, already suggested "
+              f"({os.path.relpath(tracker.path(project, args.locale))}): {', '.join(already)}")
     return 0
 
 
@@ -357,6 +374,9 @@ def cmd_include(args) -> int:
     if any((x["file"], x["string_id"]) == key for x in worklist["extras"]):
         print(f"{args.string_id} is already included")
         return 0
+    if key in tracker.strings(tracker.open_for(project, args.locale)[1]):
+        sys.exit(f"{args.string_id} already has a suggestion recorded in "
+                 f"{tracker.path(project, args.locale)}")
 
     localized = _localized_resolver(project, trees, l10n_dir)(key[0])
     if localized not in worklist["files"]:
@@ -472,6 +492,137 @@ def _partial_file(edit_path: str, keys: set[tuple]) -> str:
     return "".join(serialize_resource(res))
 
 
+def upload(project, locale: str, wdir: str, found: list[dict], *, server: str,
+           token: str | None, submit: bool, verify: bool = True,
+           log=print, on_sent=None, known: tuple = ()) -> list[dict]:
+    """Send ``found`` (from ``changes``) to Pontoon, one call per resource.
+
+    Returns one record per resource: its Pontoon ``project`` and
+    ``resource``, the changes it carried as ``items`` and, when submitted,
+    Pontoon's ``result``. Strings Pontoon has moved past are logged as
+    ``SKIP`` and left out. Without ``submit`` only the partial files are
+    written. ``on_sent`` is called with each record as soon as Pontoon has
+    answered for it, so a caller can persist what was published even if a
+    later call dies.
+
+    A string already in the locale's tracker -- or in one of the ``known``
+    trackers -- is skipped, read from disk here rather than trusted from
+    whenever the worklist was made: re-sending a suggestion a reviewer has
+    since rejected would un-reject it in Pontoon.
+    """
+    # Group by Pontoon resource, dropping strings Pontoon has moved past.
+    batches: dict[tuple[str, str, str], list[dict]] = {}
+    skipped = []
+    recorded = tracker.strings(tracker.open_for(project, locale)[1], *known)
+    for c in found:
+        if (c["file"], c["string_id"]) in recorded:
+            skipped.append((c, "already suggested; listed in "
+                               f"{os.path.relpath(tracker.path(project, locale))}"))
+            continue
+        slug, resource = _pontoon_target(project, c["file"])
+        if verify:
+            current, why = pontoon_current(
+                server, slug, resource, c["key"], locale, token
+            )
+            if current is None:
+                skipped.append((c, why))
+                continue
+            if current == c["new"]:
+                skipped.append((c, "Pontoon already has this translation"))
+                continue
+            if current != c["old"]:
+                skipped.append((c, f"Pontoon has moved on: {current}"))
+                continue
+        batches.setdefault((slug, resource, c["localized"]), []).append(c)
+
+    for c, why in skipped:
+        log(f"SKIP {c['string_id']}: {why}")
+
+    out_dir = os.path.join(wdir, "upload")
+    os.makedirs(out_dir, exist_ok=True)
+    sent = []
+    chunks = [
+        (slug, resource, localized, items[i:i + UPLOAD_MAX_STRINGS], i // UPLOAD_MAX_STRINGS)
+        for (slug, resource, localized), items in sorted(batches.items())
+        for i in range(0, len(items), UPLOAD_MAX_STRINGS)
+    ]
+    for slug, resource, localized, items, part in chunks:
+        content = _partial_file(
+            os.path.join(wdir, "files", localized), {tuple(c["key"]) for c in items}
+        )
+        filename = os.path.basename(resource)
+        partial = os.path.join(out_dir, *([f"part-{part + 1}"] if part else []),
+                               slug, resource)
+        os.makedirs(os.path.dirname(partial), exist_ok=True)
+        with open(partial, "w", encoding="utf-8") as fh:
+            fh.write(content)
+        log(f"{slug} {resource}: {len(items)} suggestions")
+        record = {"project": slug, "resource": resource, "items": items}
+        sent.append(record)
+        if not submit:
+            continue
+        # Paused before every call, not between them: a caller uploading
+        # several locales in a row shares the same quota.
+        time.sleep(UPLOAD_PAUSE_SECONDS)
+        body, ctype = _multipart(
+            {"project": slug, "locale": locale, "resource": resource},
+            filename, content.encode("utf-8"),
+        )
+        req = urllib.request.Request(
+            f"{server}/api/v2/upload/suggestions/", data=body, method="POST",
+            headers={"Authorization": f"Bearer {token}", "Content-Type": ctype,
+                     "Accept": "application/json"},
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=120) as resp:
+                result = json.load(resp)
+        except urllib.error.HTTPError as exc:
+            result = {"error": exc.code, "detail": exc.read().decode("utf-8", "replace")}
+        except urllib.error.URLError as exc:
+            result = {"error": "unreachable", "detail": str(exc.reason)}
+        log(f"  {json.dumps(result, ensure_ascii=False)}")
+        record["result"] = result
+        if on_sent:
+            on_sent(record)
+    return sent
+
+
+def refused(result: dict, key: list) -> str:
+    """Why Pontoon did not store the suggestion for ``key``, or "" if it did."""
+    if "error" in result:
+        return f"upload failed: {result['error']}"
+    for entry in result.get("failed_checks", []):
+        if list(entry.get("key", [])) == list(key):
+            return "failed Pontoon's checks: " + "; ".join(entry.get("errors", []))
+    undefined = result.get("undefined_keys", [])
+    if list(key) in [list(k) for k in undefined]:
+        return "no such string in Pontoon"
+    # Past 100 entries Pontoon only counts. A string missing from a truncated
+    # list may still have been refused, so it is not claimed as stored.
+    if (result.get("failed_checks_count", 0) > len(result.get("failed_checks", []))
+            or result.get("undefined_keys_count", 0) > len(undefined)):
+        return "Pontoon's answer was truncated; cannot tell whether it was stored"
+    return ""
+
+
+def _tracker_entry(worklist: dict, c: dict, record: dict, *, server: str,
+                   date: str) -> dict:
+    """The tracker record for change ``c``, sent in upload ``record``."""
+    fkey = (c["file"], c["string_id"])
+    works = [w for w in worklist["findings"] if (w["file"], w["string_id"]) == fkey]
+    extras = [x for x in worklist.get("extras", []) if (x["file"], x["string_id"]) == fkey]
+    return tracker.entry(
+        date=date, group=worklist["category"], file=c["file"],
+        string_id=c["string_id"], server=server, slug=record["project"],
+        resource=record["resource"], key=c["key"],
+        fids=[w["fid"] for w in works],
+        findings=[w["summary"] for w in works]
+        + [f"included without a finding: {x['reason']}" for x in extras],
+        source=(works or extras)[0]["source"] if works or extras else "",
+        original=c["old"], text=c["new"],
+    )
+
+
 def cmd_upload(args) -> int:
     project = config.load(args.project)
     category = args.category.upper()
@@ -490,68 +641,30 @@ def cmd_upload(args) -> int:
         print("nothing changed, nothing to upload")
         return 0
 
-    # Group by Pontoon resource, dropping strings Pontoon has moved past.
-    batches: dict[tuple[str, str, str], list[dict]] = {}
-    skipped = []
-    for c in found:
-        slug, resource = _pontoon_target(project, c["file"])
-        if not args.no_verify:
-            current, why = pontoon_current(
-                args.server, slug, resource, c["key"], args.locale, token
-            )
-            if current is None:
-                skipped.append((c, why))
-                continue
-            if current == c["new"]:
-                skipped.append((c, "Pontoon already has this translation"))
-                continue
-            if current != c["old"]:
-                skipped.append((c, f"Pontoon has moved on: {current}"))
-                continue
-        batches.setdefault((slug, resource, c["localized"]), []).append(c)
+    tpath, recorded = tracker.open_for(project, args.locale)
+    today = datetime.date.today().isoformat()
 
-    for c, why in skipped:
-        print(f"SKIP {c['string_id']}: {why}")
+    def on_sent(record: dict) -> None:
+        for c in record["items"]:
+            why = refused(record["result"], c["key"])
+            if why:
+                print(f"  NOT STORED {c['string_id']}: {why}")
+                continue
+            tracker.add(recorded, _tracker_entry(
+                worklist, c, record, server=args.server, date=today))
+        tracker.save(tpath, recorded)
 
-    out_dir = os.path.join(wdir, "upload")
-    os.makedirs(out_dir, exist_ok=True)
-    log = []
-    for n, ((slug, resource, localized), items) in enumerate(sorted(batches.items())):
-        content = _partial_file(
-            os.path.join(wdir, "files", localized), {tuple(c["key"]) for c in items}
-        )
-        filename = os.path.basename(resource)
-        partial = os.path.join(out_dir, slug, resource)
-        os.makedirs(os.path.dirname(partial), exist_ok=True)
-        with open(partial, "w", encoding="utf-8") as fh:
-            fh.write(content)
-        print(f"{slug} {resource}: {len(items)} suggestions")
-        if not args.submit:
-            continue
-        if n:
-            time.sleep(UPLOAD_PAUSE_SECONDS)
-        body, ctype = _multipart(
-            {"project": slug, "locale": args.locale, "resource": resource},
-            filename, content.encode("utf-8"),
-        )
-        req = urllib.request.Request(
-            f"{args.server}/api/v2/upload/suggestions/", data=body, method="POST",
-            headers={"Authorization": f"Bearer {token}", "Content-Type": ctype,
-                     "Accept": "application/json"},
-        )
-        try:
-            with urllib.request.urlopen(req, timeout=120) as resp:
-                result = json.load(resp)
-        except urllib.error.HTTPError as exc:
-            result = {"error": exc.code, "detail": exc.read().decode("utf-8", "replace")}
-        print(f"  {json.dumps(result, ensure_ascii=False)}")
-        log.append({"project": slug, "resource": resource,
-                    "strings": [c["string_id"] for c in items],
-                    "fids": [f for c in items for f in c["fids"]], "result": result})
-
+    sent = upload(project, args.locale, wdir, found, server=args.server,
+                  token=token, submit=args.submit, verify=not args.no_verify,
+                  on_sent=on_sent if args.submit else None)
     if not args.submit:
-        print(f"\ndry run: partial files in {out_dir}; pass --submit to send them")
+        print(f"\ndry run: partial files in {os.path.join(wdir, 'upload')}; "
+              "pass --submit to send them")
         return 0
+    log = [{"project": r["project"], "resource": r["resource"],
+            "strings": [c["string_id"] for c in r["items"]],
+            "fids": [f for c in r["items"] for f in c["fids"]],
+            "result": r["result"]} for r in sent]
     with open(os.path.join(wdir, "uploaded.json"), "a", encoding="utf-8") as fh:
         fh.write(json.dumps({"at": datetime.datetime.now().isoformat(timespec="seconds"),
                              "server": args.server, "uploads": log},
@@ -559,9 +672,123 @@ def cmd_upload(args) -> int:
     return 1 if any("error" in entry["result"] for entry in log) else 0
 
 
+# --- backfill ----------------------------------------------------------------
+
+def _text(entry) -> str:
+    """``Msg.text()`` for a bare entry: what ``worklist.json`` calls ``translation``."""
+    props = {"": parse.flatten(entry.value)}
+    for name, value in (entry.properties or {}).items():
+        props[name] = parse.flatten(value)
+    return parse.Msg(file="", id="", props=props).text()
+
+
+def _entry_at(l10n_dir: str, localized: str, at: str, key: tuple):
+    """The entry for ``key`` in the clone's last commit before ``at``, or None."""
+    rev = subprocess.run(
+        ["git", "-C", l10n_dir, "rev-list", "-1", f"--before={at}", "HEAD"],
+        capture_output=True, text=True,
+    ).stdout.strip()
+    if not rev:
+        return None
+    shown = subprocess.run(["git", "-C", l10n_dir, "show", f"{rev}:{localized}"],
+                           capture_output=True)
+    if shown.returncode:
+        return None
+    suffix = os.path.splitext(localized)[1]
+    with tempfile.TemporaryDirectory() as tmp:
+        path = os.path.join(tmp, "file" + suffix)
+        with open(path, "wb") as fh:
+            fh.write(shown.stdout)
+        return _entries(path)[1].get(key)
+
+
+def cmd_backfill(args) -> int:
+    """Record suggestions submitted before the tracker existed.
+
+    Rebuilt from each work directory's ``uploaded.json``: the submitted text
+    from the partial file that was sent, which must agree with the edited
+    copy, and the original from the clone's last commit before the upload,
+    which must agree with the translation ``prepare`` saw. A string that
+    fails either check is left out and listed, never guessed.
+    """
+    root = os.path.join(config.REPO_ROOT, "work", "suggestions")
+    left_out = []
+    for log in sorted(glob.glob(os.path.join(root, "*", "*", "*", "uploaded.json"))):
+        wdir = os.path.dirname(log)
+        project = config.load(os.path.relpath(wdir, root).split(os.sep)[0])
+        worklist = _load_worklist(wdir)
+        locale = worklist["locale"]
+        tpath, recorded = tracker.open_for(project, locale)
+        before = len(recorded["suggestions"])
+        candidates = worklist["findings"] + worklist.get("extras", [])
+        with open(log, encoding="utf-8") as fh:
+            submissions = [json.loads(line) for line in fh if line.strip()]
+        for sub in submissions:
+            date = sub["at"][:10]
+            for up in sub["uploads"]:
+                slug, resource = up["project"], up["resource"]
+                result = up["result"]
+                _, partial = _entries(os.path.join(wdir, "upload", slug, resource))
+                for sid in dict.fromkeys(up["strings"]):
+                    def skip(why, sid=sid):
+                        left_out.append(f"{project.name} {locale} {sid}: {why}")
+                    works = [w for w in candidates if w["string_id"] == sid
+                             and _pontoon_target(project, w["file"]) == (slug, resource)]
+                    if not works:
+                        skip("not in the worklist")
+                        continue
+                    fkey = (works[0]["file"], sid)
+                    localized = works[0]["localized"]
+                    keys = [k for k in partial
+                            if _finding_key(project, fkey[0], k) == fkey]
+                    if len(keys) != 1:
+                        skip("not found in the partial file that was sent")
+                        continue
+                    key = keys[0]
+                    if why := refused(result, list(key)):
+                        skip(f"not stored: {why}")
+                        continue
+                    res_fmt = parse_resource(
+                        os.path.join(wdir, "upload", slug, resource)).format
+                    sent = pontoon_preview(res_fmt, partial[key])
+                    edited = _entries(os.path.join(wdir, "files", localized))[1].get(key)
+                    if edited is None or pontoon_preview(res_fmt, edited) != sent:
+                        skip("the edited copy no longer matches what was sent")
+                        continue
+                    old = _entry_at(worklist["l10n_dir"], localized, sub["at"], key)
+                    if old is None:
+                        skip("no revision of the clone before the upload holds it")
+                        continue
+                    if _text(old) != works[0]["translation"]:
+                        skip("the clone's history does not match what `prepare` saw")
+                        continue
+                    original = pontoon_preview(res_fmt, old)
+                    if original == sent:
+                        skip("the original equals what was sent")
+                        continue
+                    record = {"project": slug, "resource": resource}
+                    change = {"file": fkey[0], "string_id": sid, "key": list(key),
+                              "old": original, "new": sent}
+                    tracker.add(recorded, _tracker_entry(
+                        worklist, change, record, server=sub["server"], date=date))
+        added = len(recorded["suggestions"]) - before
+        if added and args.write:
+            tracker.save(tpath, recorded)
+        print(f"{os.path.relpath(wdir, root)}: {added} recorded")
+    for line in left_out:
+        print(f"LEFT OUT {line}")
+    if not args.write:
+        print("\ndry run: pass --write to save the records")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     sub = ap.add_subparsers(dest="command", required=True)
+    backfill = sub.add_parser(
+        "backfill", help="record suggestions already submitted, from work/suggestions")
+    backfill.add_argument("--write", action="store_true",
+                          help="save the records; without it, only report")
     for name in ("prepare", "include", "diff", "upload"):
         p = sub.add_parser(name)
         p.add_argument("--project", required=True)
@@ -585,7 +812,7 @@ def main() -> int:
                            help="skip comparing each string with Pontoon first")
     args = ap.parse_args()
     return {"prepare": cmd_prepare, "include": cmd_include, "diff": cmd_diff,
-            "upload": cmd_upload}[args.command](args)
+            "upload": cmd_upload, "backfill": cmd_backfill}[args.command](args)
 
 
 if __name__ == "__main__":

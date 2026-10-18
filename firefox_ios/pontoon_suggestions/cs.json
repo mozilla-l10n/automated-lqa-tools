@@ -1,0 +1,60 @@
+{
+ "project": "firefox_ios",
+ "locale": "cs",
+ "suggestions": [
+  {
+   "date": "2026-10-13",
+   "group": "E",
+   "file": "Shared/Supporting Files/en-US.lproj/Bookmarks.strings",
+   "string_id": "Bookmarks.Menu.DeletedBookmark.v131",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Bookmarks.strings",
+     "Bookmarks.Menu.DeletedBookmark.v131"
+    ]
+   },
+   "fids": [
+    "20e136a5dc26"
+   ],
+   "findings": [
+    "Uses straight/English curly quotes instead of the Czech german-double quotes used elsewhere in the file."
+   ],
+   "source": "Deleted “%@”",
+   "original": "Smazáno “%@”",
+   "text": "Smazáno „%@“",
+   "status": "pending",
+   "status_date": "2026-10-13",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-13",
+   "group": "E",
+   "file": "Shared/Supporting Files/en-US.lproj/LiveActivity.strings",
+   "string_id": "LiveActivity.Downloads.FileNameText.v138",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/LiveActivity.strings",
+     "LiveActivity.Downloads.FileNameText.v138"
+    ]
+   },
+   "fids": [
+    "db9cb1667805"
+   ],
+   "findings": [
+    "Straight/English-style quotes used instead of the Czech german-double quotes."
+   ],
+   "source": "Downloading “%@”",
+   "original": "Stahuje se “%@”",
+   "text": "Stahuje se „%@“",
+   "status": "pending",
+   "status_date": "2026-10-13",
+   "comment": ""
+  }
+ ]
+}

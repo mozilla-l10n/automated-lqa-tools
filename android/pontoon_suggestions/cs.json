@@ -1,0 +1,292 @@
+{
+ "project": "android",
+ "locale": "cs",
+ "suggestions": [
+  {
+   "date": "2026-10-13",
+   "group": "E",
+   "file": "mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_prompt_folder_upload_confirm_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_prompt_folder_upload_confirm_message"
+    ]
+   },
+   "fids": [
+    "3e8fd1fd492d"
+   ],
+   "findings": [
+    "Straight/English-style double quotes used instead of Czech german-double quotes."
+   ],
+   "source": "Make sure you trust this site before you upload from “%1$s”.",
+   "original": "Ujistěte se, že tomuto serveru důvěřujete dříve, než z “%1$s” nahrajete soubor.",
+   "text": "Ujistěte se, že tomuto serveru důvěřujete dříve, než z „%1$s“ nahrajete soubor.",
+   "status": "pending",
+   "status_date": "2026-10-13",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-13",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "bookmark_saved_in_folder_snackbar",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "bookmark_saved_in_folder_snackbar"
+    ]
+   },
+   "fids": [
+    "3f959d05b50e"
+   ],
+   "findings": [
+    "Straight/English-style quotes used instead of Czech German-double quotes."
+   ],
+   "source": "Saved in “%s”",
+   "original": "Uloženo do “%s”",
+   "text": "Uloženo do „%s“",
+   "status": "pending",
+   "status_date": "2026-10-13",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-13",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "delete_all_history_group_prompt_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "delete_all_history_group_prompt_message"
+    ]
+   },
+   "fids": [
+    "47b909bc3777"
+   ],
+   "findings": [
+    "The quotation marks around the group name placeholder were dropped."
+   ],
+   "source": "Delete all sites in “%s”",
+   "original": "Smazat všechny stránky v %s",
+   "text": "Smazat všechny stránky v „%s“",
+   "status": "pending",
+   "status_date": "2026-10-13",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-13",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "download_delete_single_item_snackbar_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "download_delete_single_item_snackbar_2"
+    ]
+   },
+   "fids": [
+    "21cef3475d24"
+   ],
+   "findings": [
+    "Uses straight/English-style curly quotes instead of the Czech german-double quotes."
+   ],
+   "source": "Deleted “%1$s”",
+   "original": "Smazáno “%1$s”",
+   "text": "Smazáno „%1$s“",
+   "status": "pending",
+   "status_date": "2026-10-13",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-13",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preference_doh_provider_custom_dialog_error_https",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preference_doh_provider_custom_dialog_error_https"
+    ]
+   },
+   "fids": [
+    "6f40862a2a0d"
+   ],
+   "findings": [
+    "Quotation marks use English-style opening curly quotes instead of Czech german-double quotes."
+   ],
+   "source": "URL must start with “https://”",
+   "original": "URL musí začínat “https://”",
+   "text": "URL musí začínat „https://“",
+   "status": "pending",
+   "status_date": "2026-10-13",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-13",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "search_add_custom_engine_suggest_string_example_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "search_add_custom_engine_suggest_string_example_2"
+    ]
+   },
+   "fids": [
+    "37fe12b2a132"
+   ],
+   "findings": [
+    "Straight/English double quotes used instead of Czech low-high quotes as in the parallel string."
+   ],
+   "source": "Replace query with “%s”. Example:\nhttps://suggestqueries.google.com/complete/search?client=firefox&q=%s",
+   "original": "Text vyhledávání nahraďte výrazem “%s”. Například: \nhttps://suggestqueries.google.com/complete/search?client=firefox&q=%s",
+   "text": "Text vyhledávání nahraďte výrazem „%s“. Například: \nhttps://suggestqueries.google.com/complete/search?client=firefox&q=%s",
+   "status": "pending",
+   "status_date": "2026-10-13",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-13",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "snackbar_message_bookmarks_saved_in_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "snackbar_message_bookmarks_saved_in_2"
+    ]
+   },
+   "fids": [
+    "585bb8f09d16"
+   ],
+   "findings": [
+    "Straight/English double quotes used instead of Czech german-double quotes."
+   ],
+   "source": "Bookmarks saved in “%s”",
+   "original": "Záložky uloženy do složky “%s”",
+   "text": "Záložky uloženy do složky „%s“",
+   "status": "pending",
+   "status_date": "2026-10-13",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-13",
+   "group": "E",
+   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+   "string_id": "contextmenu_erased_images_note2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "focus-for-android",
+    "resource": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+    "key": [
+     "contextmenu_erased_images_note2"
+    ]
+   },
+   "fids": [
+    "49b507ba87e2"
+   ],
+   "findings": [
+    "Missing comma before the subordinate clause \"když\"."
+   ],
+   "source": "Saved and shared images { <b> }will not be{ </b> } deleted when you erase %1$s history",
+   "original": "Uložené a sdílené obrázky <b>nebudou</b> smazány když smažete historii aplikace %1$s",
+   "text": "Uložené a sdílené obrázky <b>nebudou</b> smazány, když smažete historii aplikace %1$s",
+   "status": "pending",
+   "status_date": "2026-10-13",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-13",
+   "group": "E",
+   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+   "string_id": "errorpage_httpsonly_message2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "focus-for-android",
+    "resource": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+    "key": [
+     "errorpage_httpsonly_message2"
+    ]
+   },
+   "fids": [
+    "f63a2a599772"
+   ],
+   "findings": [
+    "Path separator inconsistently rendered as \"->\" instead of \">\" in the settings path."
+   ],
+   "source": "%1$s tries to use an HTTPS connection whenever possible for more security. <a href=\"%2$s\">Learn more{ </a> } { <br/> }{ <br/> } Change this setting in Settings > Privacy &amp; Security > Security.",
+   "original": "%1$s se pro větší bezpečnost pokouší používat zabezpečené připojení skrze protokol HTTPS vždy, kdy je to možné. <a href=\"%2$s\">Dozvědět se více</a><br/><br/> Toto nastavení můžete změnit v části Nastavení -> Soukromí a zabezpečení > Zabezpečení.",
+   "text": "%1$s se pro větší bezpečnost pokouší používat zabezpečené připojení skrze protokol HTTPS vždy, kdy je to možné. <a href=\"%2$s\">Dozvědět se více</a><br/><br/> Toto nastavení můžete změnit v části Nastavení > Soukromí a zabezpečení > Zabezpečení.",
+   "status": "pending",
+   "status_date": "2026-10-13",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-13",
+   "group": "E",
+   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+   "string_id": "preference_remote_debugging",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "focus-for-android",
+    "resource": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+    "key": [
+     "preference_remote_debugging"
+    ]
+   },
+   "fids": [
+    "f3293a85e892"
+   ],
+   "findings": [
+    "Double slash typo between USB and Wi-Fi."
+   ],
+   "source": "Remote debugging via USB/Wi-Fi",
+   "original": "Vzdálené ladění pomocí USB//Wi-Fi",
+   "text": "Vzdálené ladění pomocí USB/Wi-Fi",
+   "status": "pending",
+   "status_date": "2026-10-13",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-13",
+   "group": "E",
+   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+   "string_id": "preference_switch_autocomplete_user_list",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "focus-for-android",
+    "resource": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+    "key": [
+     "preference_switch_autocomplete_user_list"
+    ]
+   },
+   "fids": [
+    "dd091bfe77e8"
+   ],
+   "findings": [
+    "Missing comma before the relative clause \"které přidáte\"."
+   ],
+   "source": "For sites you add",
+   "original": "Pro stránky které přidáte",
+   "text": "Pro stránky, které přidáte",
+   "status": "pending",
+   "status_date": "2026-10-13",
+   "comment": ""
+  }
+ ]
+}

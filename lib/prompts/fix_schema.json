@@ -1,0 +1,68 @@
+{
+  "name": "report_fixes",
+  "description": "Report a verdict for every finding and the edits for every string with a finding to fix. Call exactly once.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "strings": {
+        "type": "array",
+        "description": "One entry per string in the batch.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "ref": {
+              "type": "integer",
+              "description": "The string's number as given in the batch."
+            },
+            "edits": {
+              "type": "array",
+              "description": "Literal replacements that remove every defect judged `fix`. Empty when nothing is fixed.",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "find": {
+                    "type": "string",
+                    "description": "Text copied exactly from the translation, not touching any placeholder or markup."
+                  },
+                  "replace": {
+                    "type": "string",
+                    "description": "What replaces it."
+                  },
+                  "occurrences": {
+                    "type": "integer",
+                    "description": "How many times `find` appears in the whole string. All of them are replaced."
+                  }
+                },
+                "required": ["find", "replace", "occurrences"]
+              }
+            },
+            "findings": {
+              "type": "array",
+              "description": "One verdict per finding raised against this string.",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "fid": {
+                    "type": "string",
+                    "description": "The finding id as given."
+                  },
+                  "verdict": {
+                    "type": "string",
+                    "enum": ["fix", "false_positive", "skip"]
+                  },
+                  "reason": {
+                    "type": "string",
+                    "description": "One sentence. For false_positive, why the translation is correct, in terms a reviewer can check."
+                  }
+                },
+                "required": ["fid", "verdict", "reason"]
+              }
+            }
+          },
+          "required": ["ref", "edits", "findings"]
+        }
+      }
+    },
+    "required": ["strings"]
+  }
+}

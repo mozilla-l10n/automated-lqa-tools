@@ -195,6 +195,13 @@ request with no tools; the from-scratch reviewer runs with `Read,Grep,Glob`
 and an explicit deny-list. Keep it that way — changing the checks is a human
 commit that `selftest.py` re-pins.
 
+The exception is `pontoon-suggestions.yml` (`lib/autosuggest.py`), which
+publishes model-made fixes to Pontoon under the `PONTOON_TOKEN` owner's name
+and writes `<project>/pontoon_suggestions/<locale>.json` and `dismissed.txt`
+lines tagged `auto-suggest`, through its own pull request per project. It is
+manual only; never schedule it. Its fixer is a plain API request too, and
+every edit goes through `suggest.changes` before anything is sent.
+
 ## Adding a project
 
 Sibling directory with `config.yaml`, `prompts/`, `tools/checks.py`,

@@ -1,0 +1,87 @@
+{
+ "project": "firefox_ios",
+ "locale": "es-AR",
+ "suggestions": [
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "Shared/Supporting Files/en-US.lproj/LiveActivity.strings",
+   "string_id": "LiveActivity.Downloads.FileNameText.v138",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/LiveActivity.strings",
+     "LiveActivity.Downloads.FileNameText.v138"
+    ]
+   },
+   "fids": [
+    "88aa01742232"
+   ],
+   "findings": [
+    "Curly quotation marks from the source were replaced with straight double quotes."
+   ],
+   "source": "Downloading “%@”",
+   "original": "Descargando \"%@\"",
+   "text": "Descargando “%@”",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "TopSites.RemovePage.Button",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "TopSites.RemovePage.Button"
+    ]
+   },
+   "fids": [
+    "e79ed70c16c9"
+   ],
+   "findings": [
+    "Em dash from the source replaced with a hyphen."
+   ],
+   "source": "Remove page — %@",
+   "original": "Eliminar página - %@",
+   "text": "Eliminar página — %@",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "WidgetKit/Base.lproj/WidgetIntents.intentdefinition",
+   "string_id": "PzSrmZ-eHmH1H",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "WidgetKit/Base.lproj/WidgetIntents.intentdefinition",
+     "PzSrmZ-eHmH1H"
+    ]
+   },
+   "fids": [
+    "a57202f728c8"
+   ],
+   "findings": [
+    "Mismatched quotation marks: opening ‘ closed with ‘ instead of ’."
+   ],
+   "source": "Just to confirm, you wanted ‘Clear Private Tabs’?",
+   "original": "Solo para confirmar, ¿querías ‘Eliminar pestañas privadas‘?",
+   "text": "Solo para confirmar, ¿querías ‘Eliminar pestañas privadas’?",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  }
+ ]
+}

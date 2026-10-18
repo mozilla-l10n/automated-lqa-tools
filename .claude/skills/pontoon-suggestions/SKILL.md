@@ -35,7 +35,10 @@ This writes `worklist.json`: one entry per open finding with the full
 `suggest`, the `localized` file to edit, and `moved` (the string changed after
 the finding was raised, so re-read it before believing the finding). It
 refuses to overwrite an existing work directory, since that may hold edits.
-Pass `--reset` only if the user agrees to discard them.
+Pass `--reset` only if the user agrees to discard them. Strings already
+listed in `<project>/pontoon_suggestions/<locale>.json` are left out, whatever
+their status, and `include` refuses them: they have been suggested once,
+by this skill or by the `pontoon-suggestions` workflow.
 
 Before editing, read `<project>/locales/<locale>/conventions.md` and
 `<project>/state/<locale>/conventions.json`. What the tree measurably does is
@@ -122,8 +125,10 @@ PONTOON_TOKEN=... .venv/bin/python lib/suggest.py upload --project android \
 Each response reports `created`, `restored` (a previously rejected identical
 suggestion was revived), `unchanged`, `failed_checks` (rejected by Pontoon's
 checks; report each) and `undefined_keys`. A log is appended to
-`uploaded.json` in the work directory. Re-running is harmless, since identical
-suggestions come back as `unchanged`.
+`uploaded.json` in the work directory, and every suggestion Pontoon stored is
+recorded in `<project>/pontoon_suggestions/<locale>.json` (status `pending`).
+That file is the shared record: tell the user to commit it. Re-running is
+harmless, since identical suggestions come back as `unchanged`.
 
 Do not touch `state/`: findings close on their own when an accepted suggestion
 reaches the repository and the next run sees the string move.

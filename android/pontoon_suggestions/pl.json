@@ -1,0 +1,32 @@
+{
+ "project": "android",
+ "locale": "pl",
+ "suggestions": [
+  {
+   "date": "2026-10-13",
+   "group": "E",
+   "file": "mozilla-mobile/android-components/components/feature/pwa/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_pwa_copy_success",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/pwa/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_pwa_copy_success"
+    ]
+   },
+   "fids": [
+    "51db43135348"
+   ],
+   "findings": [
+    "The final period of the source sentence is missing in the translation."
+   ],
+   "source": "URL copied.",
+   "original": "Skopiowano adres",
+   "text": "Skopiowano adres.",
+   "status": "pending",
+   "status_date": "2026-10-13",
+   "comment": ""
+  }
+ ]
+}

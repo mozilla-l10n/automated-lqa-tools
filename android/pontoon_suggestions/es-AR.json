@@ -1,0 +1,188 @@
+{
+ "project": "android",
+ "locale": "es-AR",
+ "suggestions": [
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_errorpages_httpsonly_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_errorpages_httpsonly_message"
+    ]
+   },
+   "fids": [
+    "14609c959c72"
+   ],
+   "findings": [
+    "Extra spaces inserted inside the <em> markup around the placeholder."
+   ],
+   "source": "You’ve enabled HTTPS-Only Mode for enhanced security, and a HTTPS version of { <em> }%1$s{ </em> } is not available.",
+   "original": "Habilitaste el modo solo HTTPS para aumentar la seguridad y una versión HTTPS de <em> %1$s </em> no está disponible.",
+   "text": "Habilitaste el modo solo HTTPS para aumentar la seguridad y una versión HTTPS de <em>%1$s</em> no está disponible.",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/android-components/components/feature/pwa/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_pwa_site_controls_notification_text",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/pwa/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_pwa_site_controls_notification_text"
+    ]
+   },
+   "fids": [
+    "acc5c2baf109"
+   ],
+   "findings": [
+    "Translation adds a final period not present in the source."
+   ],
+   "source": "Tap to copy the URL for this app",
+   "original": "Tocá para copiar la URL de esta aplicación.",
+   "text": "Tocá para copiar la URL de esta aplicación",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "add_login_hostname_invalid_text_3",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "add_login_hostname_invalid_text_3"
+    ]
+   },
+   "fids": [
+    "12cd0bd6f07d"
+   ],
+   "findings": [
+    "`add_login_hostname_invalid_text_3` uses straight double quotes"
+   ],
+   "source": "Web address must contain “https://” or “http://”",
+   "original": "La dirección web debe contener \"https://\" o \"http://\"",
+   "text": "La dirección web debe contener “https://” o “http://”",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "automatic_translation_header_preference",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "automatic_translation_header_preference"
+    ]
+   },
+   "fids": [
+    "ad61cb95d917"
+   ],
+   "findings": [
+    "Quotation marks are reversed (closing mark used to open and vice versa)."
+   ],
+   "source": "Select a language to manage ”always translate“ and ”never translate“ preferences.",
+   "original": "Seleccioná un idioma para administrar las preferencias de ”traducir siempre“ y ”nunca traducir“.",
+   "text": "Seleccioná un idioma para administrar las preferencias de “traducir siempre” y “nunca traducir”.",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preference_summary_delete_browsing_data_on_quit_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preference_summary_delete_browsing_data_on_quit_2"
+    ]
+   },
+   "fids": [
+    "dd74abe18a88"
+   ],
+   "findings": [
+    "`preference_summary_delete_browsing_data_on_quit_2` uses straight double quotes"
+   ],
+   "source": "Automatically deletes browsing data when you select “Quit” from the main menu",
+   "original": "Elimina automáticamente los datos de navegación cuando seleccionás \"Salir\" en el menú principal",
+   "text": "Elimina automáticamente los datos de navegación cuando seleccionás “Salir” en el menú principal",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "search_add_custom_engine_search_string_example",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "search_add_custom_engine_search_string_example"
+    ]
+   },
+   "fids": [
+    "818057f9badc"
+   ],
+   "findings": [
+    "`search_add_custom_engine_search_string_example` uses straight double quotes"
+   ],
+   "source": "Replace query with “%s”. Example:\nhttps://www.google.com/search?q=%s",
+   "original": "Reemplazar la consulta con \"%s\". Ejemplo:\nhttps://www.google.com/search?q=%s",
+   "text": "Reemplazar la consulta con “%s”. Ejemplo:\nhttps://www.google.com/search?q=%s",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "top_sites_max_limit_confirmation_button",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "top_sites_max_limit_confirmation_button"
+    ]
+   },
+   "fids": [
+    "cbd726d47564"
+   ],
+   "findings": [
+    "Button label ends with a period that is not in the source."
+   ],
+   "source": "OK, Got It",
+   "original": "Listo, lo entendí.",
+   "text": "Listo, lo entendí",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  }
+ ]
+}

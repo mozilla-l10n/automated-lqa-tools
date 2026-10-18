@@ -1,0 +1,60 @@
+{
+ "project": "firefox_ios",
+ "locale": "pt-BR",
+ "suggestions": [
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "Keyboard.Shortcuts.RefreshWithoutCache.v108",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "Keyboard.Shortcuts.RefreshWithoutCache.v108"
+    ]
+   },
+   "fids": [
+    "06c3b767304f"
+   ],
+   "findings": [
+    "Stray capital letter mid-phrase in \"Recarregar Ignorando cache\"."
+   ],
+   "source": "Reload Ignoring Cache",
+   "original": "Recarregar Ignorando cache",
+   "text": "Recarregar ignorando cache",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  },
+  {
+   "date": "2026-10-12",
+   "group": "E",
+   "file": "Shared/en-US.lproj/Today.strings",
+   "string_id": "TodayWidget.MoreTabsLabel",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Today.strings",
+     "TodayWidget.MoreTabsLabel"
+    ]
+   },
+   "fids": [
+    "e6d97abfcebc"
+   ],
+   "findings": [
+    "The \"+\" sign placement produces \"Mais +5…\" instead of the intended \"+5 mais\"."
+   ],
+   "source": "+%d More…",
+   "original": "Mais +%d…",
+   "text": "+%d mais…",
+   "status": "pending",
+   "status_date": "2026-10-12",
+   "comment": ""
+  }
+ ]
+}
