@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a400fea340fd` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a400fea340fd` |
-| **Previous run** | 2026-10-05 @ `d82f35778c8b` |
+| **Generated** | 2026-10-18 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
+| **Previous run** | 2026-10-12 @ `a400fea340fd` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 11 of 2,793 |
 
@@ -22,9 +22,63 @@ Also for cs: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (11)
 
-_Nothing was fixed._
+- `mozac_feature_prompt_folder_upload_confirm_message` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-cs/strings.xml` — Straight/English-style double quotes used instead of Czech german-double quotes.
+    - Current: `z “%1$s” nahrajete`
+    - Source: `Make sure you trust this site before you upload from “%1$s”.`
+    - Suggest: `z „%1$s“ nahrajete`
+    - The locale convention is german-double quotes („…“); the string uses “…” taken from the source.
+- `bookmark_saved_in_folder_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — Straight/English-style quotes used instead of Czech German-double quotes.
+    - Current: `Uloženo do “%s”`
+    - Source: `Saved in “%s”`
+    - Suggest: `Uloženo do „%s“`
+    - The locale convention is german-double quotes („…“); the target keeps the English curly opening/closing pair.
+- `delete_all_history_group_prompt_message` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — The quotation marks around the group name placeholder were dropped.
+    - Current: `Smazat všechny stránky v %s`
+    - Source: `Delete all sites in “%s”`
+    - Suggest: `Smazat všechny stránky v „%s“`
+    - The source wraps the group name in typographic quotes; cs convention is german-double quotes, which should be preserved.
+- `download_delete_single_item_snackbar_2` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — Uses straight/English-style curly quotes instead of the Czech german-double quotes.
+    - Current: `Smazáno “%1$s”`
+    - Source: `Deleted “%1$s”`
+    - Suggest: `Smazáno „%1$s“`
+    - The cs convention is german-double quotes („…“); the target keeps the English opening/closing curly quotes.
+- `preference_doh_provider_custom_dialog_error_https` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — Quotation marks use English-style opening curly quotes instead of Czech german-double quotes.
+    - Current: `URL musí začínat “https://”`
+    - Source: `URL must start with “https://”`
+    - Suggest: `URL musí začínat „https://“`
+    - The cs locale convention is german-double quotes („…“); the target keeps the source's English curly quotes.
+- `search_add_custom_engine_suggest_string_example_2` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — Straight/English double quotes used instead of Czech low-high quotes as in the parallel string.
+    - Current: `výrazem “%s”`
+    - Source: `Replace query with “%s”. Example: https://suggestqueries.google.com/complete/search?client=firefox&q=%s`
+    - Suggest: `výrazem „%s“`
+    - The locale convention is german-double quotes („ “), used correctly in search_add_custom_engine_search_string_example.
+- `snackbar_message_bookmarks_saved_in_2` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — Straight/English double quotes used instead of Czech german-double quotes.
+    - Current: `Záložky uloženy do složky “%s”`
+    - Source: `Bookmarks saved in “%s”`
+    - Suggest: `Záložky uloženy do složky „%s“`
+    - The locale convention is german-double quotes („…“); the target keeps the English-style “…” pair.
+- `contextmenu_erased_images_note2` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — Missing comma before the subordinate clause "když".
+    - Current: `nebudou{ </b> } smazány když smažete historii`
+    - Source: `Saved and shared images { <b> }will not be{ </b> } deleted when you erase %1$s history`
+    - Suggest: `nebudou{ </b> } smazány, když smažete historii`
+    - Czech requires a comma before the subordinating conjunction "když".
+- `errorpage_httpsonly_message2` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — Path separator inconsistently rendered as "->" instead of ">" in the settings path.
+    - Current: `v části Nastavení -> Soukromí a zabezpečení > Zabezpečení`
+    - Source: `%1$s tries to use an HTTPS connection whenever possible for more security. <a href="%2$s">Learn more{ </a> } { <br/> }{ <br/> } Change this setting in Settings > Privacy &amp; Security > Security.`
+    - Suggest: `v části Nastavení > Soukromí a zabezpečení > Zabezpečení`
+    - Source uses "Settings > Privacy & Security > Security" with ">" throughout; the Czech text mixes "->" and ">".
+- `preference_remote_debugging` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — Double slash typo between USB and Wi-Fi.
+    - Current: `USB//Wi-Fi`
+    - Source: `Remote debugging via USB/Wi-Fi`
+    - Suggest: `USB/Wi-Fi`
+    - Source is "USB/Wi-Fi" with a single slash; the duplicated slash is a typo.
+- `preference_switch_autocomplete_user_list` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — Missing comma before the relative clause "které přidáte".
+    - Current: `Pro stránky které přidáte`
+    - Source: `For sites you add`
+    - Suggest: `Pro stránky, které přidáte`
+    - Czech requires a comma before a subordinate clause introduced by "které".
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -34,12 +88,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `preferences_inactive_tabs` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — Translation says "Moving inactive tabs" instead of "Move old tabs to inactive".
-    - Current: `Přesun neaktivních panelů`
-    - Suggest: `Přesouvat staré panely mezi neaktivní`
-    - The source describes moving old (unused) tabs into the inactive section; the Czech reverses it to moving tabs that are already inactive.
+_Nothing retired._
 
 ---
 
@@ -49,7 +100,7 @@ _Nothing to re-read._
 |---|---|
 | Files | 45 |
 | Strings | 2,793 |
-| Missing strings | 0 |
+| Missing strings | 9 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -66,7 +117,12 @@ _Nothing to re-read._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**9 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — 6
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-cs/strings.xml` — 3
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -74,7 +130,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `german-double` 14, `curly-double` 5 | _mixed_ |
+| quotes | `german-double` 20 | **german-double** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 1, `en` 4 | **en** |
 
@@ -86,7 +142,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (132)
+## 3. Open findings (121)
 
 
 | Impact | Meaning | Count |
@@ -94,7 +150,7 @@ _Nothing reported._
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 75 |
 | 3 | Degraded language (grammar, spelling, terminology) | 46 |
-| 4 | Cosmetic (typography, spacing) | 11 |
+| 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -614,61 +670,7 @@ _Nothing reported._
 
 ### E. Typography, punctuation & spacing
 
-- `mozac_feature_prompt_folder_upload_confirm_message` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-cs/strings.xml` — Straight/English-style double quotes used instead of Czech german-double quotes.
-    - Current: `z “%1$s” nahrajete`
-    - Source: `Make sure you trust this site before you upload from “%1$s”.`
-    - Suggest: `z „%1$s“ nahrajete`
-    - The locale convention is german-double quotes („…“); the string uses “…” taken from the source.
-- `bookmark_saved_in_folder_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — Straight/English-style quotes used instead of Czech German-double quotes.
-    - Current: `Uloženo do “%s”`
-    - Source: `Saved in “%s”`
-    - Suggest: `Uloženo do „%s“`
-    - The locale convention is german-double quotes („…“); the target keeps the English curly opening/closing pair.
-- `delete_all_history_group_prompt_message` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — The quotation marks around the group name placeholder were dropped.
-    - Current: `Smazat všechny stránky v %s`
-    - Source: `Delete all sites in “%s”`
-    - Suggest: `Smazat všechny stránky v „%s“`
-    - The source wraps the group name in typographic quotes; cs convention is german-double quotes, which should be preserved.
-- `download_delete_single_item_snackbar_2` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — Uses straight/English-style curly quotes instead of the Czech german-double quotes.
-    - Current: `Smazáno “%1$s”`
-    - Source: `Deleted “%1$s”`
-    - Suggest: `Smazáno „%1$s“`
-    - The cs convention is german-double quotes („…“); the target keeps the English opening/closing curly quotes.
-- `preference_doh_provider_custom_dialog_error_https` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — Quotation marks use English-style opening curly quotes instead of Czech german-double quotes.
-    - Current: `URL musí začínat “https://”`
-    - Source: `URL must start with “https://”`
-    - Suggest: `URL musí začínat „https://“`
-    - The cs locale convention is german-double quotes („…“); the target keeps the source's English curly quotes.
-- `search_add_custom_engine_suggest_string_example_2` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — Straight/English double quotes used instead of Czech low-high quotes as in the parallel string.
-    - Current: `výrazem “%s”`
-    - Source: `Replace query with “%s”. Example: https://suggestqueries.google.com/complete/search?client=firefox&q=%s`
-    - Suggest: `výrazem „%s“`
-    - The locale convention is german-double quotes („ “), used correctly in search_add_custom_engine_search_string_example.
-- `snackbar_message_bookmarks_saved_in_2` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — Straight/English double quotes used instead of Czech german-double quotes.
-    - Current: `Záložky uloženy do složky “%s”`
-    - Source: `Bookmarks saved in “%s”`
-    - Suggest: `Záložky uloženy do složky „%s“`
-    - The locale convention is german-double quotes („…“); the target keeps the English-style “…” pair.
-- `contextmenu_erased_images_note2` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — Missing comma before the subordinate clause "když".
-    - Current: `nebudou{ </b> } smazány když smažete historii`
-    - Source: `Saved and shared images { <b> }will not be{ </b> } deleted when you erase %1$s history`
-    - Suggest: `nebudou{ </b> } smazány, když smažete historii`
-    - Czech requires a comma before the subordinating conjunction "když".
-- `errorpage_httpsonly_message2` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — Path separator inconsistently rendered as "->" instead of ">" in the settings path.
-    - Current: `v části Nastavení -> Soukromí a zabezpečení > Zabezpečení`
-    - Source: `%1$s tries to use an HTTPS connection whenever possible for more security. <a href="%2$s">Learn more{ </a> } { <br/> }{ <br/> } Change this setting in Settings > Privacy &amp; Security > Security.`
-    - Suggest: `v části Nastavení > Soukromí a zabezpečení > Zabezpečení`
-    - Source uses "Settings > Privacy & Security > Security" with ">" throughout; the Czech text mixes "->" and ">".
-- `preference_remote_debugging` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — Double slash typo between USB and Wi-Fi.
-    - Current: `USB//Wi-Fi`
-    - Source: `Remote debugging via USB/Wi-Fi`
-    - Suggest: `USB/Wi-Fi`
-    - Source is "USB/Wi-Fi" with a single slash; the duplicated slash is a typo.
-- `preference_switch_autocomplete_user_list` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — Missing comma before the relative clause "které přidáte".
-    - Current: `Pro stránky které přidáte`
-    - Source: `For sites you add`
-    - Suggest: `Pro stránky, které přidáte`
-    - Czech requires a comma before a subordinate clause introduced by "které".
+_Nothing in this category._
 
 ---
 
@@ -691,6 +693,16 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (11)
 
-_Nothing fixed yet._
+- `mozac_feature_prompt_folder_upload_confirm_message` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-cs/strings.xml` — fixed 2026-10-18
+- `bookmark_saved_in_folder_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — fixed 2026-10-18
+- `delete_all_history_group_prompt_message` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — fixed 2026-10-18
+- `download_delete_single_item_snackbar_2` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — fixed 2026-10-18
+- `preference_doh_provider_custom_dialog_error_https` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — fixed 2026-10-18
+- `search_add_custom_engine_suggest_string_example_2` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — fixed 2026-10-18
+- `snackbar_message_bookmarks_saved_in_2` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — fixed 2026-10-18
+- `contextmenu_erased_images_note2` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — fixed 2026-10-18
+- `errorpage_httpsonly_message2` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — fixed 2026-10-18
+- `preference_remote_debugging` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — fixed 2026-10-18
+- `preference_switch_autocomplete_user_list` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — fixed 2026-10-18

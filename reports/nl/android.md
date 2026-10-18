@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
-| **Previous run** | 2026-10-05 @ `d82f35778c8b` |
+| **Generated** | 2026-10-18 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
+| **Previous run** | 2026-10-12 @ `9d543f9ca798` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 3 of 2,785 |
+| **Strings reviewed this run** | 17 of 2,802 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for nl: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `search_bar_with_lens_widget_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — Without hyphens marking the shared compound part, 'afbeelding' reads as a separate noun, so the text says 'search bar with an image' rather than 'with image search'.
+    - Current: `met afbeelding, privé en gesproken zoekopdrachten`
+    - Source: `Search bar with image, private and voice search`
+    - Suggest: `met afbeeldings-, privé- en gesproken zoekopdrachten`
+    - The source lists three search types (image, private, voice). In Dutch, compound parts that share a head noun need a hyphen ('afbeeldingszoekopdrachten' becomes 'afbeeldings-'). Without it, 'afbeelding' reads as a separate item in the list, so the description names an image rather than image search.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 45 |
-| Strings | 2,785 |
-| Missing strings | 8 |
+| Strings | 2,802 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,13 +67,7 @@ _Nothing retired._
 
 ### Completeness
 
-**8 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — 5
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-nl/strings.xml` — 2
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-nl/strings.xml` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -81,7 +79,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | apostrophe | `typographic` 46 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `en` 6 | **en** |
-| register | `formal` 435 | **formal** |
+| register | `formal` 436 | **formal** |
 
 ---
 
@@ -91,14 +89,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (63)
+## 3. Open findings (64)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 35 |
-| 3 | Degraded language (grammar, spelling, terminology) | 28 |
+| 3 | Degraded language (grammar, spelling, terminology) | 29 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -374,6 +372,11 @@ _Nothing reported._
     - Source: `One tap helps stop companies spying on your clicks.`
     - Suggest: `Met één tik voorkomt u dat bedrijven uw klikken bespioneren.`
     - The Dutch clause has no subject; "Met één tik voorkomen dat…" is not a well-formed sentence, unlike the source "One tap helps stop companies spying on your clicks."
+- `search_bar_with_lens_widget_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — Without hyphens marking the shared compound part, 'afbeelding' reads as a separate noun, so the text says 'search bar with an image' rather than 'with image search'.
+    - Current: `met afbeelding, privé en gesproken zoekopdrachten`
+    - Source: `Search bar with image, private and voice search`
+    - Suggest: `met afbeeldings-, privé- en gesproken zoekopdrachten`
+    - The source lists three search types (image, private, voice). In Dutch, compound parts that share a head noun need a hyphen ('afbeeldingszoekopdrachten' becomes 'afbeeldings-'). Without it, 'afbeelding' reads as a separate item in the list, so the description names an image rather than image search.
 - `terms_of_use_prompt_body_line_two_alternative` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — Sentence reads awkwardly/ungrammatically with the link placeholder inserted mid-sentence.
     - Current: `U vindt %1$s meer info.`
     - Source: `You can learn more %1$s.`

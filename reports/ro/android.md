@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `4d7697d1b89b` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `4d7697d1b89b` |
+| **Generated** | 2026-10-18 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
 | **Previous run** | 2026-10-16 @ `4d7697d1b89b` |
-| **Mode** | baseline |
-| **Strings reviewed this run** | 2,798 of 2,798 |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 1 of 2,798 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,309 +18,9 @@ Also for ro: [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (91)
+### 🆕 New findings (0)
 
-- `mozac_browser_errorpages_archive_description` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ro/strings.xml` — The genitive after the %2$s placeholder (the archive service's name) has no possessive article, so the phrase is ungrammatical.
-    - Current: `din %2$s Arhivei Internet`
-    - Source: `%1$s can look for an earlier version of this page from the Internet Archive’s %2$s.`
-    - Suggest: `din %2$s al Arhivei Internet`
-    - %2$s is a proper name with no article (the archive service's name), so the genitive that follows it needs the possessive article "al". As written, "din %2$s Arhivei Internet" is broken Romanian for "from the Internet Archive's %2$s".
-- `mozac_feature_addons_addons_manager` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ro/strings.xml` — "Add-ons" is rendered as "extensii" here but as "Suplimente" on the add-ons page title on the same surface.
-    - Current: `Manager de extensii`
-    - Source: `Add-ons Manager`
-    - Suggest: `Manager de suplimente`
-    - en-US uses the same term, "Add-ons", in both strings. mozac_feature_addons_addons translates it as "Suplimente", and the usual Romanian Firefox term for the manager is "Manager de suplimente". Using "extensii" here is inconsistent.
-- `mozac_feature_addons_migrated_from_a_previous_version_label` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ro/strings.xml` — The genitive article is missing before the app name, so "o versiune anterioară %1$s" is ungrammatical.
-    - Current: `de la o versiune anterioară %1$s`
-    - Source: `This add-on was migrated from a previous version of %1$s`
-    - Suggest: `de la o versiune anterioară a %1$s`
-    - The source says "a previous version of %1$s". In Romanian, a genitive after an indefinite noun phrase needs the possessive article "a". Without it the app name just hangs after the noun.
-- `mozac_feature_addons_permissions_data_collection_locationInfo_short_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ro/strings.xml` — Uses the cedilla ţ instead of the comma-below ț.
-    - Current: `locaţie`
-    - Source: `location`
-    - Suggest: `locație`
-    - Standard Romanian spelling uses the comma-below ț, and the rest of the batch does too (e.g. "îți"). The cedilla form is inconsistent with that.
-- `mozac_feature_addons_permissions_dialog_heading_required_data_collection` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ro/strings.xml` — The heading reads as "collection of the required data" rather than "data collection that is required".
-    - Current: `Colectarea datelor necesare:`
-    - Source: `Required data collection:`
-    - Suggest: `Colectare de date necesară:`
-    - In the source, "Required" describes the data collection (it is mandatory for the add-on). In the Romanian, "necesare" attaches to "datelor", so it says the data is required. The parallel heading for optional collection is rendered "Colectare nouă de date".
-- `mozac_feature_addons_permissions_tab_hide_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ro/strings.xml` — Uses cedilla 'ş' instead of the correct Romanian comma-below 'ș'.
-    - Current: `şi`
-    - Source: `Hide and show browser tabs.`
-    - Suggest: `și`
-    - Standard Romanian orthography uses ș (comma below); the rest of the batch uses ș, including the sibling string.
-- `mozac_feature_addons_permissions_management_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ro/strings.xml` — 'utilizarea extensiei' (use of the extension, singular) narrows 'extension usage', which refers to extensions generally.
-    - Current: `utilizarea extensiei`
-    - Source: `Monitor extension usage and manage themes.`
-    - Suggest: `utilizarea extensiilor`
-    - The management permission covers monitoring the usage of all extensions, and the non-update string says 'utilizarea de extensii'. The singular suggests a single extension.
-- `mozac_feature_addons_permissions_trial_ml_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ro/strings.xml` — Breaks the 'Să ...' subjunctive pattern used by all other permission descriptions and reads as a command or a statement of fact.
-    - Current: `Descarcă și rulează modele de inteligență artificială`
-    - Source: `Download and run AI models on your device.`
-    - Suggest: `Să descarce și să ruleze modele de inteligență artificială`
-    - Every other permission description, including the non-update version of this one, uses 'Să ...' to describe what the add-on may do. 'Descarcă și rulează' is inconsistent when these descriptions are appended together.
-- `mozac_feature_addons_supported_checker_notification_channel` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ro/strings.xml` — The adjective 'acceptat' agrees with 'verificator' instead of 'suplimente', so the phrase reads as 'accepted checker' rather than 'checker for supported add-ons'.
-    - Current: `Verificator de suplimente acceptat`
-    - Source: `Supported add-ons checker`
-    - Suggest: `Verificator de suplimente acceptate`
-    - In the source, 'supported' describes the add-ons. In Romanian the adjective must be feminine plural ('acceptate') to agree with 'suplimente'. The masculine singular 'acceptat' attaches it to 'verificator'.
-- `switch_to_tab_description` — `mozilla-mobile/android-components/components/feature/awesomebar/src/main/res/values-ro/strings.xml` — "Switch to tab" is rendered as "Switch to another tab", which is vague for a suggestion that stands for one particular open tab.
-    - Current: `Treci la o altă filă`
-    - Source: `Switch to tab`
-    - Suggest: `Treci la filă`
-    - The comment says this text describes a suggestion for one specific open tab. "o altă filă" (another tab) adds an indefinite "other" that the source doesn't have.
-- `mozac_feature_downloads_time_remaining_unknown` — `mozilla-mobile/android-components/components/feature/downloads/src/main/res/values-ro/strings.xml` — "oră necunoscută" means "unknown hour" (a time of day), but the string needs to say the remaining duration is unknown.
-    - Current: `oră necunoscută`
-    - Source: `unknown time`
-    - Suggest: `timp necunoscut`
-    - The developer comment says this replaces the estimated time remaining on an in-progress download, so it means an unknown duration. "Oră" refers to an hour or a time on the clock, not an amount of time; "timp" is the right word.
-- `mozac_feature_prompt_before_unload_dialog_body` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-ro/strings.xml` — The translation says entered data "will not be saved" where the source says it "may not be saved".
-    - Current: `nu vor fi salvate`
-    - Source: `Do you want to leave this site? Data you have entered may not be saved`
-    - Suggest: `s-ar putea să nu fie salvate`
-    - The en-US "may not be saved" only warns of a possible data loss. The ro states it as certain, which overstates what happens to the user's data.
-- `mozac_feature_prompts_expand_logins_content_description_2` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-ro/strings.xml` — Misspelled verb with 'â' instead of 'ă', and the wording doesn't match the sibling strings, which use 'Extinde'.
-    - Current: `Expandeazâ`
-    - Source: `Expand saved passwords`
-    - Suggest: `Extinde`
-    - 'Expandeazâ' is misspelled (the ending should be 'ă'). The other expand content descriptions in this prompt use 'Extinde'.
-- `mozac_feature_prompts_clear` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-ro/strings.xml` — Uses the cedilla letter 'Ş' instead of the correct Romanian comma-below 'Ș'.
-    - Current: `Şterge`
-    - Source: `Clear`
-    - Suggest: `Șterge`
-    - Correct Romanian spelling uses ș (comma below). The rest of the batch uses the comma form.
-- `mozac_feature_prompts_content_description_input_label` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-ro/strings.xml` — 'crearea' (creating) misrenders 'entering'; the label is for typing text into a field, not for creating one.
-    - Current: `crearea unui câmp de introducere text`
-    - Source: `Label for entering a text input field`
-    - Suggest: `introducerea textului într-un câmp de text`
-    - The source and the developer comment describe a label for the field where the user enters text in a prompt. The translation says the label is for creating a field.
-- `mozac_feature_prompts_manage_logins_2` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-ro/strings.xml` — Misspelling: "â" used instead of "ă" in the verb ending.
-    - Current: `Gestioneazâ`
-    - Source: `Manage passwords`
-    - Suggest: `Gestionează`
-    - The correct Romanian imperative is "Gestionează". "â" is a different letter, so the word is misspelled.
-- `mozac_feature_prompts_set_time` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-ro/strings.xml` — Misspelling: "â" used instead of "ă" in the verb ending.
-    - Current: `Seteazâ`
-    - Source: `Set time`
-    - Suggest: `Setează`
-    - The correct Romanian imperative is "Setează". "â" is a different letter, so the word is misspelled.
-- `mozac_feature_prompts_no_more_dialogs` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-ro/strings.xml` — Misspelled demonstrative: "acestă" should be "această".
-    - Current: `acestă pagină`
-    - Source: `Prevent this page from creating additional dialogs`
-    - Suggest: `această pagină`
-    - The feminine demonstrative in Romanian is spelled "această". "acestă" is not a word.
-- `mozac_feature_prompts_save_credit_card_prompt_title` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-ro/strings.xml` — Command-form verb used in a yes/no question; it should be the question form, as in the sibling titles.
-    - Current: `Salvează securizat acest card?`
-    - Source: `Securely save this card?`
-    - Suggest: `Salvezi securizat acest card?`
-    - The source is a question ("Securely save this card?"). "Salvează" is a command, which doesn't fit a question mark. The sibling title "Salvezi adresa?" uses the question form.
-- `mozac_feature_prompts_update_credit_card_prompt_title` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-ro/strings.xml` — Command-form verb used in a yes/no question; it should be the question form, as in the sibling titles.
-    - Current: `Actualizează data de expirare a cardului?`
-    - Source: `Update card expiration date?`
-    - Suggest: `Actualizezi data de expirare a cardului?`
-    - The source is a question ("Update card expiration date?"). "Actualizează" is a command, which doesn't fit a question mark. The sibling title "Actualizezi adresa?" uses the question form.
-- `mozac_feature_relay_email_masks_cfr` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-ro/strings.xml` — The placeholder holds the service name "Firefox Relay", but the translation treats it as a count, adding the numeral connector "(de)" and making the sentence ungrammatical.
-    - Current: `Acum sunt disponibile %s (de) măști de e-mail pe mobil.`
-    - Source: `New! %s email masks are now available on mobile.`
-    - Suggest: `Măștile de e-mail %s sunt acum disponibile pe mobil.`
-    - The developer comment says %s is "Firefox Relay". On screen this reads "disponibile Firefox Relay (de) măști de e-mail": "(de)" goes only between a number and a noun, so the result is broken Romanian.
-- `mozac_summarize_download_nano_consent_message` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ro/strings.xml` — The relative clause says the user controls the pages rather than the summaries.
-    - Current: `să rezume pagini pe care le controlezi tu`
-    - Source: `A one-time download lets %s create page summaries that stay in your control.`
-    - Suggest: `să creeze rezumate ale paginilor care rămân sub controlul tău`
-    - The source says the generated summaries stay in the user's control. In the ro, 'pe care le controlezi tu' attaches to 'pagini', so it reads as summarizing pages that the user controls.
-- `mozac_feature_sitepermissions_media_key_system_access_title` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-ro/strings.xml` — Uses the formal/plural 'Permiteți', but the other permission dialog titles use the informal 'Permiți'.
-    - Current: `Permiteți`
-    - Source: `Allow %1$s to play DRM-controlled content?`
-    - Suggest: `Permiți`
-    - Sibling permission titles (location, microphone, notifications, local network) address the user informally. This mixes forms of address on the same surface.
-- `mozac_feature_sitepermissions_persistent_storage_title` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-ro/strings.xml` — Uses the formal/plural 'Permiteți', but the other permission dialog titles use the informal 'Permiți'.
-    - Current: `Permiteți`
-    - Source: `Allow %1$s to store data in persistent storage?`
-    - Suggest: `Permiți`
-    - Mixes forms of address with the sibling permission dialog titles, which use the informal form.
-- `mozac_feature_sitepermissions_storage_access_title` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-ro/strings.xml` — Uses the formal/plural 'Permiteți', but the other permission dialog titles use the informal 'Permiți'.
-    - Current: `Permiteți`
-    - Source: `Allow %1$s to use its cookies on %2$s?`
-    - Suggest: `Permiți`
-    - Mixes forms of address with the sibling permission dialog titles, which use the informal form.
-- `mozac_feature_sitepermissions_storage_access_message` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-ro/strings.xml` — Uses the formal 'doriți să blocați', which doesn't match the informal address used in the rest of the permission dialogs.
-    - Current: `Poate doriți să blocați accesul`
-    - Source: `You may want to block access if it’s not clear why %s needs this data.`
-    - Suggest: `Poate vrei să blochezi accesul`
-    - The other site-permission strings address the user with informal 'tu' forms. This is inconsistent with them.
-- `mozac_lib_gathering_crash_data_in_progress` — `mozilla-mobile/android-components/components/lib/crash/src/main/res/values-ro/strings.xml` — "crash" is translated as "accidente" (physical accidents) instead of a software crash term.
-    - Current: `datelor despre accidente`
-    - Source: `Gathering crash data`
-    - Suggest: `datelor despre defecțiuni`
-    - In Romanian, "accidente" means road or physical accidents, not an app crash. The neighbouring strings in the same component use "defecțiune".
-- `a11y_completed_task_description` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — The singular "Completed task" is rendered in the plural.
-    - Current: `Sarcini finalizate`
-    - Source: `Completed task`
-    - Suggest: `Sarcină finalizată`
-    - The comment says this describes a check mark on a single completed task, but "Sarcini finalizate" means "completed tasks".
-- `my_longest_fox_is` — `mozilla-mobile/fenix/app/longfox/src/main/res/values-ro/strings.xml` — There is a double space before the score placeholder.
-    - Current: `este de  %1$d`
-    - Source: `My longest fox is %1$d! #longfox %2$s`
-    - Suggest: `este de %1$d`
-    - Users see the extra space in the shared text.
-- `add_to_exiting_tab_group_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — Misspelling "coloarea" instead of "culoarea".
-    - Current: `coloarea %3$s`
-    - Source: `{$quantity ->} [one] Add to %1$s tab group, %2$d tab, color %3$s [other] Add to %1$s tab group, %2$d tabs, color %3$s`
-    - Suggest: `culoarea %3$s`
-    - The Romanian word for "color" is "culoare", so with the article it is "culoarea". "coloarea" is not a word.
-- `add_to_exiting_tab_group_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — The few variant makes the group and the color plural, but the count is the number of tabs.
-    - Current: `Adaugă la %1$s grupuri de file, %2$d file, culorile %3$s`
-    - Source: `{$quantity ->} [one] Add to %1$s tab group, %2$d tab, color %3$s [other] Add to %1$s tab group, %2$d tabs, color %3$s`
-    - Suggest: `Adaugă la grupul de file %1$s, %2$d file, culoarea %3$s`
-    - In the source, the quantity only controls "tab/tabs". There is still one group (%1$s) with one color (%3$s), so "grupuri" and "culorile" are wrong.
-- `add_to_exiting_tab_group_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — The other variant makes the group and the color plural, but the count is the number of tabs.
-    - Current: `Adaugă la %1$s de grupuri de file, %2$d de file, culorile %3$s`
-    - Source: `{$quantity ->} [one] Add to %1$s tab group, %2$d tab, color %3$s [other] Add to %1$s tab group, %2$d tabs, color %3$s`
-    - Suggest: `Adaugă la grupul de file %1$s, %2$d de file, culoarea %3$s`
-    - In the source, the quantity only controls "tabs". The group name and its color are singular, and "de" after the group name is wrong.
-- `addresses_post_town` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — "Post town" is translated as "Oficiu poștal", which means "post office", not the town used for postal addressing.
-    - Current: `Oficiu poștal`
-    - Source: `Post town`
-    - Suggest: `Localitate poștală`
-    - A UK/Norway/Sweden post town is a town or locality name in the address, not a post office. The label would make users enter the wrong information.
-- `addons_permissions_heading_required_data_collection` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — The heading reads "collection of the required data" instead of "required data collection". In English, "required" describes the collection, not the data.
-    - Current: `Colectarea datelor necesare:`
-    - Source: `Required data collection:`
-    - Suggest: `Colectare de date necesară:`
-    - The section lists data collection that is required (as opposed to the optional section). In the Romanian, "necesare" agrees with "datelor", so it says the data are what is required.
-- `ai_controls_banner_headline` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — There are two spaces before the app name placeholder, where there should be one.
-    - Current: `în  %s`
-    - Source: `You always have a choice in %s`
-    - Suggest: `în %s`
-    - The source has one space before %s. The extra space appears in the banner headline that users see.
-- `alternative_app_icon_option_momo_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — The artist handle is misspelled as @heyheymodraws instead of @heyheymomodraws.
-    - Current: `@heyheymodraws`
-    - Source: `Created by @heyheymomodraws`
-    - Suggest: `@heyheymomodraws`
-    - The source and the developer comment both give the handle as @heyheymomodraws. The translation drops a 'mo', so the credit points to the wrong account.
-- `automatic_translation_option_offer_to_translate_title_preference` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — The option label is rendered as the noun 'Translation offer' instead of the action 'Offer to translate'.
-    - Current: `Ofertă de traducere`
-    - Source: `Offer to translate (default)`
-    - Suggest: `Oferă traducerea`
-    - This radio option describes the browser's behaviour ('offer to translate'), and its siblings use verbs ('Tradu întotdeauna', 'Nu tradu niciodată'). 'Ofertă de traducere' reads like a commercial offer.
-- `bookmark_add_new_folder_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — 'folder' is used here, while the other bookmark strings use 'dosar'.
-    - Current: `Adaugă un folder nou`
-    - Source: `Add a new folder`
-    - Suggest: `Adaugă un dosar nou`
-    - The bookmark strings in this batch translate 'folder' as 'dosar' ('Șterge dosarul', 'Dosarele implicite', 'Adaugă dosarul'). This one string switches to 'folder'.
-- `bookmark_add_folder` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — The screen title uses the definite form 'dosarul' ('the folder') for the generic 'Add folder'.
-    - Current: `Adaugă dosarul`
-    - Source: `Add folder`
-    - Suggest: `Adaugă dosar`
-    - The source is a generic screen title for creating a new folder. The definite article makes it read as adding a specific, already-known folder.
-- `browser_menu_signed_in_caption` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — Translation adds "files" (fișierele), which the source doesn't mention, and the phrasing makes "sync" read as a separate command.
-    - Current: `Gestionează fișierele pentru care faci backup și sincronizează`
-    - Source: `Manage what you back up and sync`
-    - Suggest: `Gestionează ce salvezi și sincronizezi`
-    - Source means 'Manage what you back up and sync' (data such as passwords and bookmarks); the ro speaks of 'files for which you make backup' and 'sincronizează' reads ambiguously as a separate command.
-- `browser_menu_translated` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — The adjective is plural ("Traduse") but it refers to the single current page (feminine singular).
-    - Current: `Traduse`
-    - Source: `Translated`
-    - Suggest: `Tradusă`
-    - The label indicates the current page (pagina, feminine singular) has been translated; the plural form does not agree.
-- `change_file_extension_confirm_button` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — Button label has a trailing full stop not present in the source.
-    - Current: `Da, schimbă-l.`
-    - Source: `Yes, change it`
-    - Suggest: `Da, schimbă-l`
-    - The source button label "Yes, change it" has no terminal punctuation; button labels should not end with a period.
-- `change_file_extension_description` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — A spaced hyphen is used as a dash instead of the locale's em dash.
-    - Current: `aplicație - ceea ce`
-    - Source: `This might open the file in a different app and be risky for your device.`
-    - Suggest: `aplicație — ceea ce`
-    - The ro convention is the em dash; a hyphen between spaces is used here as a sentence dash.
-- `debug_drawer_addresses_debug_locales_header` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — "Debug" is translated as an imperative verb, so the header reads "Debug the locales for activation" instead of "Debug locales to enable".
-    - Current: `Depanează setările regionale pentru activare`
-    - Source: `Debug locales to enable`
-    - Suggest: `Setări regionale de depanare de activat`
-    - The comment says this is a header over a list of debug locales that can be enabled or disabled. "Debug" describes the locales; it is not a command.
-- `debug_drawer_addons_tools_title` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — Two nouns are placed side by side with no genitive or preposition, which is ungrammatical and can be read as "supplementary tools".
-    - Current: `Instrumente suplimente`
-    - Source: `Add-ons Tools`
-    - Suggest: `Instrumente pentru suplimente`
-    - "Add-ons Tools" means tools for add-ons. Romanian needs a preposition or genitive to link the two nouns.
-- `debug_drawer_fab_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — Uses the formal/plural imperative "Deschideți", while the other action labels nearby use the singular imperative.
-    - Current: `Deschideți`
-    - Source: `Open debug drawer`
-    - Suggest: `Deschide`
-    - The other debug drawer actions use the singular imperative ("Adaugă", "Șterge", "Navighează"), so this label switches the form of address.
-- `download_item_in_progress_description_unknown_total_size` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — "unknown time" (unknown remaining duration) is rendered as "oră necunoscută", which means an unknown clock time.
-    - Current: `oră necunoscută`
-    - Source: `%1$s • unknown time`
-    - Suggest: `timp necunoscut`
-    - The developer comment says the estimated time remaining for the download is unknown. "Oră" refers to a clock time or an hour, not a duration, so the Romanian text says something different; "timp" is the word for an amount of time.
-- `felt_privacy_info_card_subtitle_3` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — "private tabs" is translated as "private windows".
-    - Current: `toate ferestrele private`
-    - Source: `%1$s deletes your cookies, history, and site data when you close all your private tabs.`
-    - Suggest: `toate filele private`
-    - The source says private tabs. Elsewhere in the batch, tabs are "file" and "ferestre" means windows.
-- `etp_redirect_trackers_title` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — The category title reads as "The redirection of trackers" instead of naming a type of tracker.
-    - Current: `Redirecționarea elementelor de urmărire`
-    - Source: `Redirect Trackers`
-    - Suggest: `Elemente de urmărire prin redirecționare`
-    - The comment says this is a category of trackers (redirect trackers). The translation describes an action instead.
-- `expanded_tab_group_header_description` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — The [few] and [other] variants make the group plural ("groups"), but the count applies only to tabs.
-    - Current: `[few] %1$s grupuri de file cu %2$d file, culoarea %3$s [other] %1$s de grupuri de file cu %2$d de file, culoarea %3$s`
-    - Source: `{$quantity ->} [one] %1$s tab group with %2$d tab, color %3$s [other] %1$s tab group with %2$d tabs, color %3$s`
-    - Suggest: `[few] %1$s grup de file cu %2$d file, culoarea %3$s [other] %1$s grup de file cu %2$d de file, culoarea %3$s`
-    - The source describes one tab group containing N tabs. The translation says multiple groups and puts "de" wrongly after the group name.
-- `fxa_tabs_closed_notification_title` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — "Tabs" is rendered as "tab-uri" here, while the same surface consistently uses "file".
-    - Current: `tab-uri închise`
-    - Source: `%1$s tabs closed: %2$d`
-    - Suggest: `file închise`
-    - Every other tab string in the batch, including the sibling notification strings, translates "tab" as "filă/file". The anglicism "tab-uri" breaks that terminology.
-- `inactive_tabs_auto_close_message_action` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — The direct object of the imperative is missing its definite article.
-    - Current: `PORNEȘTE ÎNCHIDERE AUTOMATĂ`
-    - Source: `TURN ON AUTO CLOSE`
-    - Suggest: `PORNEȘTE ÎNCHIDEREA AUTOMATĂ`
-    - In Romanian, a specific noun used as the object of "pornește" needs the definite article ("închiderea"). Without it the phrase is ungrammatical.
-- `ip_protection_data_reset_info` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — The verb needs the reflexive form; "Resetează" without "se" reads as an order or as a verb acting on an object.
-    - Current: `Resetează la`
-    - Source: `Resets to %1$.0f GB on the first of every month.`
-    - Suggest: `Se resetează la`
-    - In the source, "Resets" means the allowance resets by itself. Romanian needs the reflexive "se resetează" for that meaning.
-- `ip_protection_location_recommended_label` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — The plural "Recomandate" labels a single location option.
-    - Current: `Recomandate`
-    - Source: `Recommended`
-    - Suggest: `Recomandată`
-    - The label marks one automatic location option, so the adjective should be singular and agree with "locație".
-- `ip_protection_onboarding_body_promo` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — "through %1$s" (until the date) is rendered as "prin %1$s" (by means of), so the end date of the promotion is lost.
-    - Current: `prin %1$s`
-    - Source: `Turn it on to make your browsing more private and harder to trace. Try it now to get unlimited bandwidth through %1$s. %2$s`
-    - Suggest: `până pe %1$s`
-    - Per the developer comment, %1$s is the end date of the promotional period, so "through" here means "until". "Prin" means "through/via", which makes no sense with a date and doesn't say when the promotion ends.
-- `library_item_selected_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — The screen-reader label for a single selected item uses the plural feminine "Selectate" instead of the singular.
-    - Current: `Selectate`
-    - Source: `Selected`
-    - Suggest: `Selectat`
-    - The comment says this describes the check mark on one selected item. A singular form ("Selectat") is needed, not a plural.
-- `logins_warning_dialog_message_2` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — Translation adds "login data" to what is protected; source only mentions saved passwords.
-    - Current: `datele de autentificare și parolele salvate`
-    - Source: `Set up a device lock pattern, PIN, or password to protect your saved passwords from being accessed if someone else has your device.`
-    - Suggest: `parolele salvate`
-    - en-US says 'to protect your saved passwords'; the Romanian extends this to 'your login data and saved passwords', content not in the source.
-- `likert_scale_option_4` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — Uses cedilla ţ instead of the correct comma-below ț, inconsistent with sibling options.
-    - Current: `Nemulţumit(ă)`
-    - Source: `Dissatisfied`
-    - Suggest: `Nemulțumit(ă)`
-    - Romanian orthography uses ț (comma below); the other likert options use ț correctly.
-- `onboarding_redesign_tou_body_one_link_text` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — Link text lacks the definite article, so the composed sentence reads "ești de acord cu Condiții de utilizare Firefox" and differs from the parallel nova string.
-    - Current: `Condiții de utilizare Firefox`
-    - Source: `Firefox Terms of Use`
-    - Suggest: `Condițiile de utilizare Firefox`
-    - The text is inserted into "Prin continuare, ești de acord cu %1$s.", where Romanian needs the article ("the Firefox Terms of Use"). The equivalent nova_onboarding_tou_body_line_1_link_text already uses "Condițiile de utilizare Firefox".
-- `onboarding_redesign_tou_title` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — The Romanian says 'the latest version of the Android browser' where the source says 'the ultimate Android browser'.
-    - Current: `Lansează ultima versiune a browserului Android`
-    - Source: `Launch the ultimate Android browser`
-    - Suggest: `Lansează browserul Android suprem`
-    - 'Ultimate' here means the best possible browser. 'Ultima versiune' means the latest release, which is a different claim.
-- _…and 31 more._
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -346,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 45 |
 | Strings | 2,798 |
-| Missing strings | 0 |
+| Missing strings | 4 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -363,7 +63,11 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**4 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — 4
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 

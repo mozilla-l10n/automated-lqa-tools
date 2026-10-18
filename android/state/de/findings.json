@@ -608,7 +608,7 @@
   "file": "mozilla-mobile/android-components/components/feature/findinpage/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-10-12",
+  "last_seen": "2026-10-18",
   "locale": "de",
   "origin": {},
   "rationale": "The locale's quote convention is `german-double` (22 occurrences).",
@@ -619,6 +619,30 @@
   "string_id": "mozac_feature_findindpage_dismiss",
   "suggest": "„Seite durchsuchen“ schließen",
   "summary": "`mozac_feature_findindpage_dismiss` uses straight double quotes",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Die Audiowiedergabe konnte nicht beendet werden.",
+  "dismissed_because": "",
+  "fid": "f2a5f82c4c53",
+  "file": "mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml",
+  "first_seen": "2026-10-18",
+  "impact": 2,
+  "last_seen": "2026-10-18",
+  "locale": "de",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "Per the developer comment the error appears when playback fails partway through, i.e. the audio could not be played to the end. German \"beenden\" primarily means to stop/terminate, so the sentence suggests the user could not stop playback; \"abschließen\" conveys completing it.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "1939367f",
+  "string_id": "mozac_feature_listentopage_error_could_not_finish_playing_audio",
+  "suggest": "Die Audiowiedergabe konnte nicht abgeschlossen werden.",
+  "summary": "\"konnte nicht beendet werden\" reads as \"playback could not be stopped\" rather than \"could not finish playing\".",
   "suppressed_by": ""
  },
  {

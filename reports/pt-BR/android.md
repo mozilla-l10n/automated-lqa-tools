@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
-| **Previous run** | 2026-10-05 @ `d82f35778c8b` |
+| **Generated** | 2026-10-18 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
+| **Previous run** | 2026-10-12 @ `9d543f9ca798` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 6 of 2,788 |
+| **Strings reviewed this run** | 28 of 2,798 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,55 @@ Also for pt-BR: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `remote_improvements_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "between updates" is translated as "a cada atualização" (with each update), which reverses the point that improvements arrive without an app update.
+    - Current: `a cada atualização`
+    - Source: `Firefox will improve features, performance, and stability between updates. Changes applied remotely.`
+    - Suggest: `entre as atualizações`
+    - The en-US says Firefox improves features between updates, and the next sentence says the changes are applied remotely. "A cada atualização" means "with each update", so the improvements would come through app updates. That contradicts "Alterações são aplicadas remotamente" in the same string.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (8)
 
-_Nothing was fixed._
+- `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
+    - Current: `O endereço web deve conter "https://" ou "http://"`
+    - Source: `Web address must contain “https://” or “http://”`
+    - Suggest: `O endereço web deve conter “https://” ou “http://”`
+    - The locale's quote convention is `curly-double` (13 occurrences).
+- `connection_security_panel_local_pdf` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Translation adds a final period not present in the source.
+    - Current: `Esta página está armazenada em seu dispositivo.`
+    - Source: `This page is stored on your device`
+    - Suggest: `Esta página está armazenada em seu dispositivo`
+    - The en-US string "This page is stored on your device" has no terminating punctuation; the other panel strings mirror source punctuation.
+- `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Translation adds "selecionados abaixo" and says "ao tocar" instead of "quando você seleciona", altering the source meaning.
+    - Current: `Excluir automaticamente os dados de navegação selecionados abaixo ao tocar em "Sair" no menu principal`
+    - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
+    - Suggest: `Exclui automaticamente os dados de navegação quando você seleciona “Sair” no menu principal`
+    - The source is "Automatically deletes browsing data when you select “Quit” from the main menu" — there is no "selected below" qualifier, and the pt-BR quoting convention is curly double quotes.
+- `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — `preference_summary_delete_browsing_data_on_quit_2` uses straight double quotes
+    - Current: `Excluir automaticamente os dados de navegação selecionados abaixo ao tocar em "Sair" no menu principal`
+    - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
+    - The locale's quote convention is `curly-double` (13 occurrences).
+- `search_add_manually_example` — `mozilla-mobile/focus-android/app/src/main/res/values-pt-rBR/strings.xml` — A spurious space was inserted between "q=" and the %s placeholder, breaking the example URL format.
+    - Current: `example.com/search/?q= %s`
+    - Source: `Example: example.com/search/?q=%s`
+    - Suggest: `example.com/search/?q=%s`
+    - The source is "example.com/search/?q=%s" with no space; the example must show the exact URL format users have to match.
+- `remote_improvements_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "between updates" is translated as "a cada atualização" (with each update), which reverses the point that improvements arrive without an app update.
+    - Current: `a cada atualização`
+    - Source: `Firefox will improve features, performance, and stability between updates. Changes applied remotely.`
+    - Suggest: `entre as atualizações`
+    - The en-US says Firefox improves features between updates, and the next sentence says the changes are applied remotely. "A cada atualização" means "with each update", so the improvements would come through app updates. That contradicts "Alterações são aplicadas remotamente" in the same string.
+- `remote_improvements_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Double space between "Firefox" and "melhora".
+    - Current: `O Firefox  melhora`
+    - Source: `Firefox will improve features, performance, and stability between updates. Changes applied remotely.`
+    - Suggest: `O Firefox melhora`
+    - Extra whitespace not present in the source text.
+- `webcompat_reporter_reason_media2` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Double space between words in the translation.
+    - Current: `O vídeo não está sendo carregado ou  reproduzido`
+    - Source: `Video isn’t playing or loading`
+    - Suggest: `O vídeo não está sendo carregado ou reproduzido`
+    - There is an extra space before “reproduzido”; the source has no such spacing.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,8 +87,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 45 |
-| Strings | 2,788 |
-| Missing strings | 5 |
+| Strings | 2,798 |
+| Missing strings | 4 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -59,16 +101,13 @@ _Nothing retired._
 | Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 2 |
+| Typography deviations from this locale's own norm | 0 |
 
 ### Completeness
 
-**5 strings** are not translated yet, concentrated in:
+**4 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-pt-rBR/strings.xml` — 2
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-pt-rBR/strings.xml` — 1
-- `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — 1
-- `mozilla-mobile/focus-android/app/src/main/res/values-pt-rBR/strings.xml` — 1
+- `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — 4
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -78,9 +117,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 13, `straight-double` 2 | **curly-double** |
+| quotes | `curly-double` 14 | **curly-double** |
 | ellipsis | `char` 21 | **char** |
-| register | `informal` 231 | **informal** |
+| register | `informal` 229 | **informal** |
 
 ---
 
@@ -90,15 +129,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (114)
+## 3. Open findings (106)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 70 |
-| 3 | Degraded language (grammar, spelling, terminology) | 38 |
-| 4 | Cosmetic (typography, spacing) | 6 |
+| 2 | Wrong content (says something other than the English) | 68 |
+| 3 | Degraded language (grammar, spelling, terminology) | 37 |
+| 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -356,11 +395,6 @@ _Nothing in this category._
     - Source: `DRM-controlled content`
     - Suggest: `Conteúdo controlado por DRM`
     - The source refers specifically to DRM (digital rights management), not copyright; the established Mozilla pt-BR term is "conteúdo controlado por DRM".
-- `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Translation adds "selecionados abaixo" and says "ao tocar" instead of "quando você seleciona", altering the source meaning.
-    - Current: `Excluir automaticamente os dados de navegação selecionados abaixo ao tocar em "Sair" no menu principal`
-    - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
-    - Suggest: `Exclui automaticamente os dados de navegação quando você seleciona “Sair” no menu principal`
-    - The source is "Automatically deletes browsing data when you select “Quit” from the main menu" — there is no "selected below" qualifier, and the pt-BR quoting convention is curly double quotes.
 - `preferences_addresses_save_and_autofill_addresses_summary_2` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "Includes" (descriptive) rendered as the infinitive "Incluir" (an action).
     - Current: `Incluir números de telefone e endereços de email`
     - Source: `Includes phone numbers and email addresses`
@@ -371,11 +405,6 @@ _Nothing in this category._
     - Source: `To share this link with people nearby, have them scan the QR code below.`
     - Suggest: `peça que escaneiem o código QR abaixo`
     - The source says to scan the QR code; "capturar" (capture/take a picture) is not the established pt-BR term for scanning a QR code, which is "escanear"/"ler".
-- `remote_improvements_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "between updates" mistranslated as "a cada atualização" (with each update).
-    - Current: `melhora funcionalidades, desempenho e estabilidade a cada atualização`
-    - Source: `Firefox will improve features, performance, and stability between updates. Changes applied remotely.`
-    - Suggest: `melhora funcionalidades, desempenho e estabilidade entre atualizações`
-    - The source says improvements happen between updates (remotely, without an app update); the translation reverses this to say they happen with each update.
 - `saved_logins_sort_strategy_last_used` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "Last used" translated as "Data de uso" (usage date), losing the "last" qualifier.
     - Current: `Data de uso`
     - Source: `Last used`
@@ -406,7 +435,17 @@ _Nothing in this category._
     - Source: `Navigate back`
     - Suggest: `Voltar`
     - This is the back button on the Stories screen top app bar, not a web page navigation; the source is simply "Navigate back".
-- _…and 12 more; see `state/` for the full list._
+- `studies_active` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Section title "Active" (list of active studies) translated as "Ativado" (enabled), the same wording used for the on/off state string.
+    - Current: `Ativado`
+    - Source: `Active`
+    - Suggest: `Ativos`
+    - Per the developer comment this is the title of the section listing active studies, not an on/off state; "Ativado" duplicates studies_on and misrepresents the plural section heading.
+- `tab_manager_empty_tab_groups_page_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "saved here" was translated as "salvas lá" (saved there), reversing the deictic reference.
+    - Current: `Elas são salvas lá, prontas quando você precisar.`
+    - Source: `Select tabs to create a group. They’re saved here, ready when you are.`
+    - Suggest: `Elas são salvas aqui, prontas quando você precisar.`
+    - The source says the groups are saved "here" (on this page), not "there".
+- _…and 10 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -591,40 +630,11 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
-- `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
-    - Current: `O endereço web deve conter "https://" ou "http://"`
-    - Source: `Web address must contain “https://” or “http://”`
-    - Suggest: `O endereço web deve conter “https://” ou “http://”`
-    - The locale's quote convention is `curly-double` (13 occurrences).
-- `connection_security_panel_local_pdf` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Translation adds a final period not present in the source.
-    - Current: `Esta página está armazenada em seu dispositivo.`
-    - Source: `This page is stored on your device`
-    - Suggest: `Esta página está armazenada em seu dispositivo`
-    - The en-US string "This page is stored on your device" has no terminating punctuation; the other panel strings mirror source punctuation.
 - `enhanced_tracking_protection_blocked` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Added colon not present in the source header text.
     - Current: `Bloqueado:`
     - Source: `Blocked`
     - Suggest: `Bloqueado`
     - Source is the header "Blocked" with no punctuation; the trailing colon is added by the translation.
-- `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — `preference_summary_delete_browsing_data_on_quit_2` uses straight double quotes
-    - Current: `Excluir automaticamente os dados de navegação selecionados abaixo ao tocar em "Sair" no menu principal`
-    - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
-    - The locale's quote convention is `curly-double` (13 occurrences).
-- `remote_improvements_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Double space between "Firefox" and "melhora".
-    - Current: `O Firefox  melhora`
-    - Source: `Firefox will improve features, performance, and stability between updates. Changes applied remotely.`
-    - Suggest: `O Firefox melhora`
-    - Extra whitespace not present in the source text.
-- `webcompat_reporter_reason_media2` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Double space between words in the translation.
-    - Current: `O vídeo não está sendo carregado ou  reproduzido`
-    - Source: `Video isn’t playing or loading`
-    - Suggest: `O vídeo não está sendo carregado ou reproduzido`
-    - There is an extra space before “reproduzido”; the source has no such spacing.
-- `search_add_manually_example` — `mozilla-mobile/focus-android/app/src/main/res/values-pt-rBR/strings.xml` — A spurious space was inserted between "q=" and the %s placeholder, breaking the example URL format.
-    - Current: `example.com/search/?q= %s`
-    - Source: `Example: example.com/search/?q=%s`
-    - Suggest: `example.com/search/?q=%s`
-    - The source is "example.com/search/?q=%s" with no space; the example must show the exact URL format users have to match.
 
 ---
 
@@ -648,6 +658,13 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (8)
 
-_Nothing fixed yet._
+- `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — fixed 2026-10-18
+- `connection_security_panel_local_pdf` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — fixed 2026-10-18
+- `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — fixed 2026-10-18
+- `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — fixed 2026-10-18
+- `remote_improvements_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — fixed 2026-10-18
+- `remote_improvements_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — fixed 2026-10-18
+- `webcompat_reporter_reason_media2` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — fixed 2026-10-18
+- `search_add_manually_example` — `mozilla-mobile/focus-android/app/src/main/res/values-pt-rBR/strings.xml` — fixed 2026-10-18

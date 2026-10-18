@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `9d543f9ca798` |
-| **Previous run** | 2026-10-05 @ `d82f35778c8b` |
+| **Generated** | 2026-10-18 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
+| **Previous run** | 2026-10-12 @ `9d543f9ca798` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 60 of 2,788 |
+| **Strings reviewed this run** | 9 of 2,797 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,33 +18,9 @@ Also for zh-CN: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (5)
+### 🆕 New findings (0)
 
-- `mozac_feature_listentopage_notification_playback_speed_0_25` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-zh-rCN/strings.xml` — "75 percent slower" (0.25× speed) rendered as "降低至四分之一" is fine, but the parallel string 0.75 is mistranslated; here the wording is inconsistent with the faster ones — see rationale.
-    - Current: `播放速度降低至四分之一`
-    - Source: `Playback rate 75 percent slower`
-    - Suggest: `播放速度减慢 75%`
-    - Source says the rate is 75 percent slower; the Chinese says "reduced to one quarter". Although numerically equivalent, the sibling strings use "加快四分之一" (increased BY a quarter) for "25 percent faster", so "降低至" vs "加快" are inconsistent in form, and the 0.75 string is outright wrong. Aligning as a percentage keeps the set consistent.
-- `mozac_feature_listentopage_notification_playback_speed_0_75` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-zh-rCN/strings.xml` — "Playback rate 25 percent slower" is rendered as "降低至四分之三" but is inconsistent with the parallel "faster" strings which express the delta, not the resulting ratio.
-    - Current: `播放速度降低至四分之三`
-    - Source: `Playback rate 25 percent slower`
-    - Suggest: `播放速度减慢 25%`
-    - The source states the rate is 25 percent slower; the sibling "25 percent faster" is translated as "加快四分之一" (delta). Mixing "降低至" (resulting ratio) with "加快" (delta) across the set is inconsistent and misleading.
-- `mozac_feature_listentopage_notification_playback_speed_1_75` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-zh-rCN/strings.xml` — "Playback rate 75 percent faster" translated as "加快四分之三" uses a fraction where the source states a percentage, inconsistent with the adjacent 50 percent string rendered as "加快一半".
-    - Current: `播放速度加快四分之三`
-    - Source: `Playback rate 75 percent faster`
-    - Suggest: `播放速度加快 75%`
-    - The source gives a percentage increase; expressing it as 四分之三 is acceptable arithmetically but the set should state the percentage consistently as the source does.
-- `browser_menu_add_to_tab_group` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "group" (tab group) rendered as "群组", which in zh-CN means a social/chat group rather than a tab group.
-    - Current: `添加到群组`
-    - Source: `Add to group`
-    - Suggest: `添加到标签页组`
-    - In Firefox zh-CN, tab groups are rendered with 标签页组/分组; 群组 denotes a people group and is the wrong term here.
-- `sync_send_tab_empty_state_link` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "connect a device" is rendered as "connect a new device", adding "new" which the source does not say.
-    - Current: `了解如何连接新设备`
-    - Source: `Learn how to connect a device`
-    - Suggest: `了解如何连接设备`
-    - Source is "Learn how to connect a device"; 新 (new) is not in the source.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -69,7 +45,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 45 |
-| Strings | 2,788 |
+| Strings | 2,797 |
 | Missing strings | 5 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -89,9 +65,7 @@ _Nothing retired._
 
 **5 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-zh-rCN/strings.xml` — 2
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-zh-rCN/strings.xml` — 1
-- `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — 1
+- `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — 4
 - `mozilla-mobile/focus-android/app/src/main/res/values-zh-rCN/strings.xml` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
@@ -104,7 +78,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 75 | **curly-double** |
 | ellipsis | `char` 21 | **char** |
-| fullwidth | `punctuation` 1025 | **punctuation** |
+| fullwidth | `punctuation` 1027 | **punctuation** |
 | register | `informal` 3, `formal` 262 | **formal** |
 
 ---
