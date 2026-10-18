@@ -1,4 +1,4 @@
-moz.l10n[xml]~=0.14
-anthropic~=0.125
+moz.l10n[xml]~=0.15
+anthropic~=1.15
 PyYAML~=6.0
 babel~=2.18
