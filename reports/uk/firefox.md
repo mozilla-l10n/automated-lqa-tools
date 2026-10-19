@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-16 @ `db2cfca9d18c` |
+| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 81 of 15,270 |
+| **Strings reviewed this run** | 0 of 15,270 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,28 +18,9 @@ Also for uk: [android](android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (0)
 
-- `about-sync-log-search-input` — `toolkit/services/aboutSyncLog.ftl` — The preposition "в" falls between two consonants where Ukrainian requires "у".
-    - Current: `Пошук в журналах`
-    - Source: `aria-label: Search logs placeholder: Search logs`
-    - Suggest: `Пошук у журналах`
-    - Ukrainian euphony rules call for "у" between consonants. "Пошук" ends in a consonant and "журналах" starts with one, so "у журналах" is correct. This applies to both the aria-label and the placeholder.
-- `pdf-features-notification-message` — `toolkit/toolkit/about/pdfFeaturesNotification.ftl` — This string uses the typographic apostrophe, but the locale's convention is the straight apostrophe.
-    - Current: `об’єднання`
-    - Source: `Split, merge, and more. <a data-l10n-name="features-link">See PDF features</a>`
-    - Suggest: `об'єднання`
-    - The uk tree uses the straight apostrophe as its convention (717 straight vs 126 typographic).
-- `smartwindow-group-tabs-loading` — `browser/browser/autoTabGrouping.ftl` — The translation says the browser is checking whether groups by tab topic already exist, not that it is looking through the tabs for useful new groups.
-    - Current: `Перевірка наявності груп за темою вкладки…`
-    - Source: `Checking tabs for useful groups…`
-    - Suggest: `Пошук корисних груп серед вкладок…`
-    - The developer comment says the model is forming new groups from the open tabs and is explicitly not searching for tab groups that already exist. 'Перевірка наявності груп' means 'checking for the existence of groups', which is the reading the comment rules out. The word 'useful' is also missing.
-- `speech-recognition-model-download-progressbar` — `browser/browser/permissions.ftl` — 'Процес' ('process') is used where the English says 'progress' ('Прогрес'). It looks like a typo.
-    - Current: `Процес завантаження`
-    - Source: `aria-label: Speech recognition model download progress`
-    - Suggest: `Прогрес завантаження`
-    - The source says 'download progress'. This is the accessible name of a progress bar, so it should name the progress ('Прогрес' or 'Хід'), not the process.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

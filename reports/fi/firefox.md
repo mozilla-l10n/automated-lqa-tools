@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-16 @ `db2cfca9d18c` |
+| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 78 of 16,036 |
+| **Strings reviewed this run** | 0 of 16,036 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for fi: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `migration-no-permissions-instructions-step2-2` — `browser/browser/migrationWizard.ftl` — The macOS variant uses straight double quotes but the other variant of the same message uses curly quotes.
-    - Current: `"Avaa"`
-    - Source: `{$sel_1 ->} [macos] In the file picker, choose “Open” [other] In the file picker, navigate to <code>{ $permissionsPath }</code> and choose “Select”`
-    - Suggest: `“Avaa”`
-    - The en-US uses curly quotes in both variants, and so does the Finnish 'other' variant (“Valitse”). The macOS variant switches to straight quotes, so the two variants of one message don't match.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

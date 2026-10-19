@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-16 @ `db2cfca9d18c` |
+| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 65 of 16,520 |
+| **Strings reviewed this run** | 0 of 16,520 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,28 +18,9 @@ Also for zh-TW: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (0)
 
-- `bookmark-properties-title-add-folder` — `browser/browser/editBookmarkOverlay.ftl` — "Add bookmark folder" is translated as "Add bookmarks toolbar".
-    - Current: `新增書籤工具列`
-    - Source: `Add bookmark folder`
-    - Suggest: `新增書籤資料夾`
-    - In this locale 書籤工具列 means the Bookmarks Toolbar. The source says "bookmark folder", which elsewhere in this file is 資料夾.
-- `bookmark-properties-title-edit-folder` — `browser/browser/editBookmarkOverlay.ftl` — "Edit bookmark folder" is translated as "Edit bookmarks toolbar".
-    - Current: `編輯書籤工具列`
-    - Source: `Edit bookmark folder`
-    - Suggest: `編輯書籤資料夾`
-    - 書籤工具列 means the Bookmarks Toolbar, not a bookmark folder.
-- `ip-protection-not-opted-in-inclusions-enabled` — `browser/browser/ipProtection.ftl` — "免費" ("free") appears twice in the same sentence.
-    - Current: `每月免費獲得 { $maxUsage } GB 的免費流量`
-    - Source: `heading: Ready to try it? message: Get { $maxUsage } GB free each month and choose which sites use VPN.`
-    - Suggest: `每月免費獲得 { $maxUsage } GB 流量`
-    - Saying "free" twice ("get free … of free data") is redundant and reads awkwardly. The source says "free" only once.
-- `permission.register-protocol-handler.label` — `browser/chrome/browser/sitePermissions.properties` — The permission label says "ask me before opening app links" instead of "may the site ask to open app links".
-    - Current: `開啟應用程式鏈結前先問我`
-    - Source: `Ask to open app links`
-    - Suggest: `詢問是否可開啟應用程式鏈結`
-    - The developer comment says this permission controls whether the site may ask to open app links. The translation describes the browser asking the user before it opens app links, which is a different setting.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

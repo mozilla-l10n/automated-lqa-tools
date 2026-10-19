@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
+| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 43 of 16,351 |
+| **Strings reviewed this run** | 188 of 16,520 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,38 @@ Also for ja: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (6)
 
-- `site-data-clear-all-prompt-text` — `browser/browser/preferences/siteDataSettings.ftl` — The hedge "may" is dropped, so the Japanese says clearing data will definitely sign the user out and delete offline content.
-    - Current: `これにより、ウェブサイトからログアウトされ、オフラインのウェブコンテンツが削除されます。`
-    - Source: `Selecting ‘Clear Now’ will clear all cookies and site data stored by { -brand-short-name }. This may sign you out of websites and remove offline web content.`
-    - Suggest: `これにより、ウェブサイトからログアウトされたり、オフラインのウェブコンテンツが削除されたりする場合があります。`
-    - The en-US says "This may sign you out of websites and remove offline web content", which is only a possibility. The Japanese turns this into a certainty, which changes what the product says about what the action does.
+- `menu-share-mac-picker-multiple` — `browser/browser/browser.ftl` — The macOS app name "Mail" is left in English, but Japanese macOS calls it "メール", and "Messages" in the same label is localized.
+    - Current: `メッセージ、Mail、他...`
+    - Source: `accesskey: M label: Messages, Mail, and More…`
+    - Suggest: `メッセージ、メール、他...`
+    - The developer comment says "Messages" and "Mail" should match the macOS translation of those app names. The Japanese macOS Mail app is named "メール". The same label already localizes Messages as "メッセージ", so leaving Mail in English is inconsistent.
+- `fire-button-panel-choose-description` — `browser/browser/browser.ftl` — The Japanese tells the user to choose the data they want to keep, but the dialog is for choosing which data to delete.
+    - Current: `削除したくないデータがある場合は、そのデータの種類を選んでください。`
+    - Source: `If you don’t want to delete everything, choose specific data instead.`
+    - Suggest: `すべてを削除したくない場合は、代わりに削除するデータを選んでください。`
+    - The en-US says 'If you don't want to delete everything, choose specific data instead.' The developer comment on fire-button-panel-choose-link says the next dialog is where the user picks which kinds of data to delete. The Japanese says 'if there is data you don't want to delete, choose that data type', which turns the selection around: it tells the user to pick the data to keep.
+- `ip-protection-site-rule-duplicate-error` — `browser/browser/ipProtection.ftl` — "rule" is translated as "エラー" (error), so the message says the site already has an error set.
+    - Current: `このサイトはすでにエラーが設定されています。`
+    - Source: `This site already has a rule.`
+    - Suggest: `このサイトにはすでにルールが設定されています。`
+    - The en-US is "This site already has a rule.", and the comment says it is shown when the typed site already has a rule. The Japanese uses エラー instead of ルール, which garbles the message.
+- `policy-BlockAboutSupport2` — `browser/browser/policies/policies-descriptions.ftl` — There is an extra ASCII period after the closing 。.
+    - Current: `ブロックします。.`
+    - Source: `Block access to Troubleshooting Information (about:support).`
+    - Suggest: `ブロックします。`
+    - Under the locale convention a sentence ends with 。 alone. The trailing '.' doubles the sentence-ending punctuation, and the sibling policy strings don't have it.
+- `permissions-allow-app-links` — `browser/browser/preferences/preferences.ftl` — The checkbox label became a noun phrase ("sites that allow app links") instead of the action "Allow sites to ask to open app links".
+    - Current: `アプリを開くリンクを許可するサイト。`
+    - Source: `accesskey: A label: Allow sites to ask to open app links.`
+    - Suggest: `サイトがアプリを開くリンクの確認を求めることを許可する`
+    - The en-US is a checkbox that lets sites ask to open app links. The Japanese drops both the verb and the 'ask' part, so the setting's meaning is lost.
+- `settings-keyboard-shortcuts-addressbar-link` — `browser/browser/preferences/preferences.ftl` — "in Search" (the Search settings category) became "when searching".
+    - Current: `検索時のアドレスバーの設定をカスタマイズ`
+    - Source: `label: Customize address bar settings in Search`
+    - Suggest: `[検索] パネルでアドレスバーの設定をカスタマイズ`
+    - The developer comment says the link goes to the Search category of settings. "検索時の" means 'address bar settings during search', which is not where the link leads.
 
 ### ✅ Fixed since the last run (0)
 
@@ -48,11 +73,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 327 |
-| Strings | 16,351 |
-| Missing strings | 184 |
-| Obsolete strings | 15 |
-| Files absent from the locale | 1 |
+| Files | 328 |
+| Strings | 16,520 |
+| Missing strings | 0 |
+| Obsolete strings | 0 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -67,25 +92,6 @@ _Nothing retired._
 
 ### Completeness
 
-**184 strings** are not translated yet, concentrated in:
-
-- `browser/browser/ipProtection.ftl` — 34
-- `browser/browser/newtab/newtab.ftl` — 26
-- `browser/browser/browser.ftl` — 22
-- `browser/browser/autoTabGrouping.ftl` — 15
-- `browser/browser/newtab/onboarding.ftl` — 14
-- `browser/browser/policies/policies-descriptions.ftl` — 10
-- `browser/browser/preferences/preferences.ftl` — 9
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 8
-- `browser/browser/genai.ftl` — 7
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 5
-- `toolkit/toolkit/about/aboutGlean.ftl` — 4
-- `browser/browser/menubar.ftl` — 3
-
-**Files absent from the locale:**
-
-- `browser/browser/autoTabGrouping.ftl`
-
 **Files present but identical to en-US:**
 
 - `security/manager/chrome/pipnss/nsserrors.properties`
@@ -99,12 +105,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 440, `curly-single` 182, `straight-double` 120, `corner` 5 | _mixed_ |
+| quotes | `curly-double` 444, `curly-single` 182, `straight-double` 120, `corner` 5 | _mixed_ |
 | apostrophe | `typographic` 259, `straight` 11 | **typographic** |
-| ellipsis | `ascii` 391 | **ascii** |
+| ellipsis | `ascii` 397 | **ascii** |
 | dash | `em` 55, `en` 1 | **em** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 5 | _mixed_ |
-| fullwidth | `punctuation` 4989 | **punctuation** |
+| fullwidth | `punctuation` 5038 | **punctuation** |
 
 ---
 
@@ -114,7 +120,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (136)
+## 3. Open findings (142)
 
 > **Reads as a deliberate edit (7).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -159,9 +165,9 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 8 |
-| 2 | Wrong content (says something other than the English) | 61 |
-| 3 | Degraded language (grammar, spelling, terminology) | 37 |
-| 4 | Cosmetic (typography, spacing) | 30 |
+| 2 | Wrong content (says something other than the English) | 65 |
+| 3 | Degraded language (grammar, spelling, terminology) | 38 |
+| 4 | Cosmetic (typography, spacing) | 31 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -311,9 +317,19 @@ _Also listed under their own category below._
     - Source: `If one profile or instance updates while another is still open, the open one can be left on an older version. Restarting keeps everything on the same version.`
     - Suggest: `開いているものが古いバージョンのままになることがあります`
     - en-US uses "can be left"; the Japanese states it as a definite outcome.
+- `fire-button-panel-choose-description` — `browser/browser/browser.ftl` — The Japanese tells the user to choose the data they want to keep, but the dialog is for choosing which data to delete.
+    - Current: `削除したくないデータがある場合は、そのデータの種類を選んでください。`
+    - Source: `If you don’t want to delete everything, choose specific data instead.`
+    - Suggest: `すべてを削除したくない場合は、代わりに削除するデータを選んでください。`
+    - The en-US says 'If you don't want to delete everything, choose specific data instead.' The developer comment on fire-button-panel-choose-link says the next dialog is where the user picks which kinds of data to delete. The Japanese says 'if there is data you don't want to delete, choose that data type', which turns the selection around: it tells the user to pick the data to keep.
 - `trustpanel-blocker-description` — `browser/browser/browser.ftl` — trustpanel-blocker-description (browser.ftl) — text copied from trustpanel-etp-description-disabled, adding a condition absent from en-US. → …そのため、できるだけ多くのトラッカーをブロックします。
     - Source: `{ -brand-product-name } thinks companies should follow you less. So we block as many as we can.`
     - Suggest: `…そのため、できるだけ多くのトラッカーをブロックします。`
+- `ip-protection-site-rule-duplicate-error` — `browser/browser/ipProtection.ftl` — "rule" is translated as "エラー" (error), so the message says the site already has an error set.
+    - Current: `このサイトはすでにエラーが設定されています。`
+    - Source: `This site already has a rule.`
+    - Suggest: `このサイトにはすでにルールが設定されています。`
+    - The en-US is "This site already has a rule.", and the comment says it is shown when the typed site already has a rule. The Japanese uses エラー instead of ルール, which garbles the message.
 - `ip-protection-site-rules-button` — `browser/browser/ipProtection.ftl` — "sites that need extra privacy" mistranslated as "this site" and the meaning of the two options merged.
     - Current: `このサイトで追加のプライバシー強化を使用するか VPN をオフにするルールを設定します。`
     - Source: `description: Set rules for sites that need extra privacy or VPN turned off. label: Manage website rules`
@@ -422,6 +438,11 @@ _Also listed under their own category below._
     - Source: `Give our experimental features a try! They’re in development and evolving, which could impact how { -brand-short-name } works. We only receive data about your use of these features if you have <a data-l10n-name="data-co…`
     - Suggest: `現在開発中で変化し続けており、{ -brand-short-name } の動作に影響する可能性があります。`
     - en-US states a possibility ("could impact"); the Japanese states it as an expected outcome and omits "evolving".
+- `permissions-allow-app-links` — `browser/browser/preferences/preferences.ftl` — The checkbox label became a noun phrase ("sites that allow app links") instead of the action "Allow sites to ask to open app links".
+    - Current: `アプリを開くリンクを許可するサイト。`
+    - Source: `accesskey: A label: Allow sites to ask to open app links.`
+    - Suggest: `サイトがアプリを開くリンクの確認を求めることを許可する`
+    - The en-US is a checkbox that lets sites ask to open app links. The Japanese drops both the verb and the 'ask' part, so the setting's meaning is lost.
 - `preferences-doh-radio-group` — `browser/browser/preferences/preferences.ftl` — aria-label adds "次のレベルで" (at the following level), which the en-US "using:" does not say.
     - Current: `DNS over HTTPS を次のレベルで有効にします`
     - Source: `aria-label: Enable DNS over HTTPS using:`
@@ -429,6 +450,11 @@ _Also listed under their own category below._
     - en-US is "Enable DNS over HTTPS using:" — it refers to the provider/method used, not a protection level.
 - `security-privacy-issue-warning-safe-browsing` — `browser/browser/preferences/preferences.ftl` — "dangerous and deceptive content" is two categories; ja merges them into one modifier, unlike security-browsing-protection.
     - Source: `description: Your exposure to scams and malware from websites is increased. label: Dangerous and deceptive content is not blocked`
+- `settings-keyboard-shortcuts-addressbar-link` — `browser/browser/preferences/preferences.ftl` — "in Search" (the Search settings category) became "when searching".
+    - Current: `検索時のアドレスバーの設定をカスタマイズ`
+    - Source: `label: Customize address bar settings in Search`
+    - Suggest: `[検索] パネルでアドレスバーの設定をカスタマイズ`
+    - The developer comment says the link goes to the Search category of settings. "検索時の" means 'address bar settings during search', which is not where the link leads.
 - `tabs-group-header2` — `browser/browser/preferences/preferences.ftl` — en-US is the section header "Tabs" ("group" in the ID refers to the preferences groupbox); タブグループ now also collides with the real Tab Groups feature. → タブ Verified.
     - Current: `タブグループ`
     - Source: `label: Tabs`
@@ -517,21 +543,7 @@ _Also listed under their own category below._
 - `effective-content-sandbox-level` — `toolkit/toolkit/about/aboutSupport.ftl` — effective-content-sandbox-level (aboutSupport.ftl) — "Effective" (value in force) → 効果的な ("efficacious"). → 実効の Verified.
     - Source: `Effective Content Process Sandbox Level`
     - Suggest: `効果的な`
-- `virtual-monitor-disp` — `toolkit/toolkit/about/aboutSupport.ftl` — virtual-monitor-disp (aboutSupport.ftl) — "Virtual Monitor Display" → 仮想デスクトップ, an unrelated OS feature. → 仮想モニターの表示 Verified.
-    - Source: `Virtual Monitor Display`
-    - Suggest: `仮想デスクトップ`
-- `about-telemetry-keyed-scalar-section` — `toolkit/toolkit/about/aboutTelemetry.ftl` — "Keyed" read as "key/principal" (主要な). Keyed scalars are indexed by string keys. → キー付きスカラー / キー付きヒストグラム Verified.
-    - Current: `主要な`
-    - Source: `Keyed Scalars`
-    - Suggest: `キー付きスカラー`
-- `about-telemetry-show-subsession-data` — `toolkit/toolkit/about/aboutTelemetry.ftl` — "subsession" rendered as "submitted" (送信データ). → サブセッションデータを表示 Verified.
-    - Current: `送信データ`
-    - Source: `Show subsession data`
-    - Suggest: `サブセッションデータを表示`
-- `about-webauthn-auth-info-uv-modality` — `toolkit/toolkit/about/aboutWebauthn.ftl` — about-webauthn-auth-option-uv (+ -alwaysuv, -makecreduvnotrqd, about-webauthn-auth-info-uv-modality) — CTAP2 "user verification" (PIN or biometrics) → 生体認証 (biometrics only). → ユーザー検証 (UV) Verified.
-    - Source: `User verification modality`
-    - Suggest: `生体認証`
-- _…and 10 more; see `state/` for the full list._
+- _…and 14 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -586,6 +598,11 @@ _Also listed under their own category below._
 - `settings-data-toggle-encryption-label2` — `browser/browser/backupSettings.ftl` — same en-US sentence as settings-sensitive-data-encryption-description, but "Back up" → 保護. → バックアップし
     - Source: `description: Back up your passwords and payment methods, plus keep all your data safe with encryption. label: Back up your sensitive data`
     - Suggest: `保護`
+- `menu-share-mac-picker-multiple` — `browser/browser/browser.ftl` — The macOS app name "Mail" is left in English, but Japanese macOS calls it "メール", and "Messages" in the same label is localized.
+    - Current: `メッセージ、Mail、他...`
+    - Source: `accesskey: M label: Messages, Mail, and More…`
+    - Suggest: `メッセージ、メール、他...`
+    - The developer comment says "Messages" and "Mail" should match the macOS translation of those app names. The Japanese macOS Mail app is named "メール". The same label already localizes Messages as "メッセージ", so leaving Mail in English is inconsistent.
 - `default-browser-guidance-notification-body-instruction-win10` — `browser/browser/defaultBrowserNotification.ftl` — `default-browser-guidance-notification-body-instruction-win10` quotes “Web ブラウザー” but the string it names, `desktop-entry-generic-name`, reads “ウェブブラウザー”
     - Current: `ステップ 1: Windows の [設定] > [アプリ] > [既定のアプリ] を開きます ステップ 2: “Web ブラウザー” まで下へスクロールします ステップ 3: アイコンをクリックし、{ -brand-short-name } を選んでください`
     - Source: `Step 1: Go to Settings > Default apps Step 2: Scroll down to “Web browser” Step 3: Select and choose { -brand-short-name }`
@@ -650,6 +667,11 @@ _Also listed under their own category below._
     - Source: `Open the main menu <img data-l10n-name="chrome-icon-3dots"/> and go to Passwords and Autofill > Google Password Manager.`
 - `mr2022-onboarding-gratitude-subtitle` — `browser/browser/newtab/onboarding.ftl` — I10 — Duplicated text. spotlight-better-internet-body (browser/browser/newtab/asrouter.ftl) — すべての人にとって appears twice in one sentence (cf. mr2022-onboarding-gratitude-subtitle, correct).
     - Source: `Thank you for using { -brand-short-name }, backed by the Mozilla Foundation. With your support, we’re working to make the internet more open, accessible, and better for everyone.`
+- `policy-BlockAboutSupport2` — `browser/browser/policies/policies-descriptions.ftl` — There is an extra ASCII period after the closing 。.
+    - Current: `ブロックします。.`
+    - Source: `Block access to Troubleshooting Information (about:support).`
+    - Suggest: `ブロックします。`
+    - Under the locale convention a sentence ends with 。 alone. The trailing '.' doubles the sentence-ending punctuation, and the sibling policy strings don't have it.
 - `autofill-card-search-term-credit-cards` — `browser/browser/preferences/formAutofill.ftl` — Not a defect: autofill-card-search-term-credit-cards (browser/browser/preferences/formAutofill.ftl) also uses ASCII commas, but its dev comment says it is a never-displayed comma-separated keyword list. Verified.
     - Source: `credit cards, credit, cards, debit cards, debit, wallet, checkout`
 - `extension-controlled-enable` — `browser/browser/preferences/preferences.ftl` — translate-attribution, extension-controlled-enable, settings-translations-subpage-never-translate-sites-description, sync-mobile-promo — browser/browser/preferences/preferences.ftl. Verified (translate-attribution).

@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
+| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 156 of 16,477 |
+| **Strings reviewed this run** | 9 of 16,486 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for pl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `tabs-toolbar-list-all-tabs-2` — `browser/browser/browser.ftl` — The label and tooltip drop the "manage" part of "Search and manage tabs".
-    - Current: `Szukaj w kartach`
-    - Source: `label: Search and manage tabs tooltiptext: Search and manage tabs`
-    - Suggest: `Wyszukaj karty i zarządzaj nimi`
-    - The en-US says the button is for searching and managing tabs. The Polish only says "Search in tabs", so the management function is missing from both the label and the tooltip.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 328 |
-| Strings | 16,477 |
-| Missing strings | 43 |
+| Strings | 16,486 |
+| Missing strings | 34 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -67,20 +63,18 @@ _Nothing retired._
 
 ### Completeness
 
-**43 strings** are not translated yet, concentrated in:
+**34 strings** are not translated yet, concentrated in:
 
 - `browser/browser/browser.ftl` — 8
 - `browser/browser/ipProtection.ftl` — 8
 - `browser/browser/newtab/newtab.ftl` — 8
 - `browser/browser/sanitize.ftl` — 3
 - `toolkit/toolkit/about/aboutGlean.ftl` — 2
-- `browser/browser/sidebar.ftl` — 2
-- `browser/browser/preferences/permissions.ftl` — 2
-- `browser/browser/preferences/preferences.ftl` — 2
 - `toolkit/toolkit/global/videocontrols.ftl` — 1
 - `toolkit/toolkit/about/aboutProcesses.ftl` — 1
 - `browser/browser/confirmationHints.ftl` — 1
-- `browser/browser/genai.ftl` — 1
+- `browser/browser/webProtocolHandler.ftl` — 1
+- `browser/browser/preferences/formAutofill.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -90,11 +84,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `polish-double` 1434, `straight-double` 36, `german-double` 7, `curly-double` 2 | **polish-double** |
+| quotes | `polish-double` 1436, `straight-double` 36, `german-double` 7, `curly-double` 2 | **polish-double** |
 | apostrophe | `straight` 1 | **straight** |
 | ellipsis | `char` 405 | **char** |
-| dash | `em` 122, `en` 14 | **em** |
-| nbsp | `total` 4868, `narrow` 3, `before-punctuation` 39, `space-before-punctuation` 14 | **total** |
+| dash | `em` 123, `en` 14 | **em** |
+| nbsp | `total` 4880, `narrow` 3, `before-punctuation` 39, `space-before-punctuation` 14 | **total** |
 | register | `informal` 77 | **informal** |
 
 ---
@@ -494,11 +488,11 @@ _Also listed under their own category below._
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `Zdarzenie klawisza jest niedostępne dla GTK2: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (1434 occurrences).
+    - The locale's quote convention is `polish-double` (1436 occurrences).
 - `WinConflict2` — `dom/chrome/dom/dom.properties` — `WinConflict2` uses straight double quotes
     - Current: `Zdarzenie klawisza jest niedostępne przy niektórych układach klawiatury: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on some keyboard layouts: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (1434 occurrences).
+    - The locale's quote convention is `polish-double` (1436 occurrences).
 
 ---
 

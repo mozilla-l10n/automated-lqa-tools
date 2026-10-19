@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
+| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 132 of 16,768 |
+| **Strings reviewed this run** | 0 of 16,768 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,31 +18,13 @@ Also for it: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `ip-protection-site-rules-edit-button` — `browser/browser/ipProtection.ftl` — Ungrammatical preposition: "relativa per" should be "relativa a" (or just "per").
-    - Current: `la regola relativa per { $website }`
-    - Source: `aria-label: Edit the rule for { $website } title: Edit`
-    - Suggest: `la regola relativa a { $website }`
-    - "Relativa" takes the preposition "a"; "relativa per" is ungrammatical Italian. The sibling delete button uses plain "la regola per".
+_No new findings._
 
-### ✅ Fixed since the last run (3)
+### ✅ Fixed since the last run (0)
 
-- `toolbar-switcher-customizable-label-v2` — `browser/browser/aiWindow.ftl` — Tooltip adds "facilmente" (easily), which the source does not say, and ends with a period absent in the source.
-    - Current: `Passa facilmente tra finestre smart e classiche.`
-    - Source: `label: { -smart-window-brand-name } switcher tooltiptext: Switch between Smart and Classic Windows`
-    - Suggest: `Passa tra finestre smart e classiche`
-    - en-US is "Switch between Smart and Classic Windows" — no adverb and no final period in a tooltip.
-- `tab-groups-onboarding-saved-groups-title-3` — `browser/browser/newtab/onboarding.ftl` — Duplicated word "riaprirlo riaprirlo".
-    - Current: `puoi riaprirlo riaprirlo dal menu`
-    - Source: `When you close a tab group, reopen it from the List All Tabs menu anytime.`
-    - Suggest: `puoi riaprirlo dal menu`
-    - The verb is accidentally repeated; the source says "reopen it" once.
-- `sync-syncing-across-devices-heading-3` — `browser/browser/preferences/preferences.ftl` — "Data syncing on this device" rendered as "Dati sincronizzati" (already-synced data) instead of the activity of syncing.
-    - Current: `Dati sincronizzati su questo dispositivo`
-    - Source: `Data syncing on this device`
-    - Suggest: `Sincronizzazione dei dati su questo dispositivo`
-    - The source heading names the syncing activity/settings, not data that has already been synced.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

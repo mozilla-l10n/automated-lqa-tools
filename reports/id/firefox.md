@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
+| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 42 of 13,799 |
+| **Strings reviewed this run** | 0 of 13,799 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,36 +18,13 @@ Also for id: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (0)
 
-- `site-data-clear-all-prompt-text` — `browser/browser/preferences/siteDataSettings.ftl` — "This may sign you out" is rendered as a certainty ("akan" = will).
-    - Current: `Ini akan mengeluarkan Anda dari situs web`
-    - Source: `Selecting ‘Clear Now’ will clear all cookies and site data stored by { -brand-short-name }. This may sign you out of websites and remove offline web content.`
-    - Suggest: `Ini mungkin akan mengeluarkan Anda dari situs web`
-    - The en-US says clearing data *may* sign the user out. The Indonesian says it will, which turns a possible side effect into a certain outcome.
-- `appmenu-search-history` — `browser/browser/appmenu.ftl` — "Search History" (the action of searching your history) is translated as the noun phrase "history of searches".
-    - Current: `Riwayat pencarian`
-    - Source: `label: Search History`
-    - Suggest: `Cari Riwayat`
-    - The developer comment says this item lets the user search through the browser's history. "Riwayat pencarian" means "search history", i.e. a record of past searches.
-- `view-source-context-wrap-long-lines` — `toolkit/toolkit/global/viewSource.ftl` — "Wrap" is rendered as "Potong" (cut), which suggests long lines are truncated rather than wrapped.
-    - Current: `Potong Baris Panjang`
-    - Source: `label: Wrap Long Lines`
-    - Suggest: `Lipat Baris Panjang`
-    - Wrapping moves the overflow onto the next line. "Potong" means cut or truncate, which is a different behaviour.
-- `appmenu-clear-history` — `browser/browser/appmenu.ftl` — The ellipsis that shows a dialog will open is missing.
-    - Current: `Bersihkan Riwayat Terakhir`
-    - Source: `label: Clear Recent History…`
-    - Suggest: `Bersihkan Riwayat Terakhir…`
-    - The en-US label ends with "…" because the item opens a dialog, and the locale uses the ellipsis character elsewhere.
+_No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `appmenu-search-history` — `browser/browser/appmenu.ftl` — "Search history" (verb) rendered as the noun "search history"
-    - Current: `Riwayat pencarian`
-    - Source: `label: Search History`
-    - Suggest: `Cari riwayat`
-    - The dev comment says "This allows to search through the browser's history", so "Search" is a verb. "Riwayat pencarian" means "history of searches", i.e. a different concept.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

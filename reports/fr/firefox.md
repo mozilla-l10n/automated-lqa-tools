@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
+| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 139 of 16,742 |
+| **Strings reviewed this run** | 0 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,46 +18,13 @@ Also for fr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (0)
 
-- `ipprotection-site-inclusions-callout-description-1` — `browser/browser/ipProtection.ftl` — The end of the sentence means "where you don't have any" instead of "where you don't want/need it".
-    - Current: `là où vous n’en avez pas.`
-    - Source: `Turn on VPN when you want extra privacy or location-based browsing, and off where you don’t.`
-    - Suggest: `là où vous n’en avez pas besoin.`
-    - The en-US "and off where you don’t" means where you don't want the VPN on. The French "là où vous n’en avez pas" cuts off the verb and reads as "where you don't have any", which makes no sense here.
-- `view-source-invalid-input-text` — `toolkit/toolkit/global/viewSource.ftl` — "Line number" is rendered as "nombre" (an amount) with no mention of a line, and the final period is missing.
-    - Current: `Le nombre spécifié est invalide`
-    - Source: `The line number entered is invalid.`
-    - Suggest: `Le numéro de ligne saisi est invalide.`
-    - The source says "The line number entered is invalid." "Nombre" means a quantity, not an identifying number ("numéro"). The word "ligne" is dropped, which doesn't match the sibling string "Saisissez le numéro de ligne". The source also ends with a full stop.
-- `tab-groups-onboarding-session-restore-title-3` — `browser/browser/newtab/onboarding.ftl` — The phrase « à tout moment » appears twice in the same sentence.
-    - Current: `Rouvrez à tout moment vos groupes d’onglets depuis le menu « Rechercher et gérer les onglets » à tout moment.`
-    - Source: `Reopen your tab groups from the “Search and manage tabs” menu anytime.`
-    - Suggest: `Rouvrez à tout moment vos groupes d’onglets depuis le menu « Rechercher et gérer les onglets ».`
-    - The en-US has 'anytime' only once. Saying « à tout moment » twice is a redundancy error that makes the sentence ungrammatical in French.
-- `SpeechRecognitionLangDefaultedToUserLanguageWarning` — `dom/chrome/dom/dom.properties` — "user’s preferred language" is rendered as "la langue préférée utilisée", which drops the user and reads awkwardly.
-    - Current: `la langue préférée utilisée`
-    - Source: `SpeechRecognition.lang is unset and this document declares no language, so speech will be recognized in the user’s preferred language. Set SpeechRecognition.lang, or a lang attribute on the document’s root element.`
-    - Suggest: `la langue préférée de l’utilisateur`
-    - The en-US says speech is recognized in the user’s preferred language. The French "la langue préférée utilisée" ("the preferred language used") leaves out whose preference it is and is unidiomatic.
+_No new findings._
 
-### ✅ Fixed since the last run (3)
+### ✅ Fixed since the last run (0)
 
-- `genai-prompts-summarize-page` — `browser/browser/genai.ftl` — Redundant/incorrect phrasing "résumer l’adresse web à l’adresse" instead of summarizing the webpage at the URL.
-    - Current: `Veuillez résumer l’adresse web à l’adresse { $url }`
-    - Source: `Please summarize the webpage at { $url } using precise and concise language. Use headers and bulleted lists in the summary, to make it scannable. Maintain the meaning and factual accuracy.`
-    - Suggest: `Veuillez résumer la page web à l’adresse { $url }`
-    - The source asks to summarize the webpage at $url; the French says "summarize the web address at the address $url", duplicating "adresse" and naming the wrong object.
-- `SpeechRecognitionBlockedByAIControlsWarning` — `dom/chrome/dom/dom.properties` — "AI Controls" settings section name mangled into "d’IA Controls".
-    - Current: `les paramètres d’IA Controls de l’utilisateur`
-    - Source: `On-device speech recognition is turned off in the user’s AI Controls settings, so SpeechRecognition reports itself as unavailable and refuses to start.`
-    - Suggest: `les paramètres AI Controls de l’utilisateur`
-    - The developer comment says "AI Controls" is the name of a Firefox settings section; half-translating it to "IA Controls" produces a name that does not exist and is grammatically broken.
-- `about-sync-log-row-success` — `toolkit/services/aboutSyncLog.ftl` — Em dash replaced by a colon, inconsistent with the sibling error string.
-    - Current: `Succès : { $date }`
-    - Source: `heading: Success — { $date }`
-    - Suggest: `Succès — { $date }`
-    - en-US uses "Success — { $date }" and the parallel string about-sync-log-row-error keeps the em dash in French; the locale convention is the em dash.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

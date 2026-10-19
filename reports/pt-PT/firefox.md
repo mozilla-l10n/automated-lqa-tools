@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-16 @ `db2cfca9d18c` |
+| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 65 of 16,520 |
+| **Strings reviewed this run** | 0 of 16,520 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for pt-PT: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `fire-button-panel-choose-link` — `browser/browser/browser.ftl` — The label ends with three ASCII periods instead of the ellipsis character (…).
-    - Current: `Escolher...`
-    - Source: `Choose…`
-    - Suggest: `Escolher…`
-    - The locale convention is the single ellipsis character (char 371 vs ascii 27), and the en-US uses "…". The developer comment says the ellipsis tells the user that a dialog follows.
-- `permissions-allow-app-links` — `browser/browser/preferences/preferences.ftl` — "app links" is rendered as "ligações da aplicação" (the application's links), which changes the meaning and conflicts with the other renderings of the term.
-    - Current: `ligações da aplicação`
-    - Source: `accesskey: A label: Allow sites to ask to open app links.`
-    - Suggest: `ligações em aplicações`
-    - The developer comment says app links are links a website asks to open in an app, like mailto: links. They are not links belonging to the application. Related strings use "ligações de aplicações" and "ligações em aplicações".
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

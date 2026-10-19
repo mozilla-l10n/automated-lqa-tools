@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
+| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 132 of 16,520 |
+| **Strings reviewed this run** | 0 of 16,520 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,21 +18,13 @@ Also for en-GB: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `ip-protection-site-rule-website-field` — `browser/browser/ipProtection.ftl` — The placeholder puts a colon after "e.g.", which doubles the punctuation.
-    - Current: `e.g.: acme.com`
-    - Source: `label: Website placeholder: ex: acme.com`
-    - Suggest: `e.g. acme.com`
-    - The en-US "ex:" is short for "example" (per the developer comment). Replacing it with "e.g." is a sensible en-GB change, but "e.g." already ends in a full stop and is normally followed directly by the example, so the extra colon is redundant.
+_No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `main-context-menu-inspect-a11y-properties2` — `browser/browser/browserContext.ftl` — Access key changed from "y" to "I" although the label is identical to the source.
-    - Current: `accesskey: I`
-    - Source: `accesskey: y label: Inspect Accessibility Properties`
-    - Suggest: `accesskey: y`
-    - The label "Inspect Accessibility Properties" is unchanged from en-US, so the access key should remain "y"; changing it risks collisions with other menu items that use "I".
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

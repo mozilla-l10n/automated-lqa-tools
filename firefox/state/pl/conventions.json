@@ -1,15 +1,15 @@
 {
  "_meta": {
   "locale": "pl",
-  "prose_chunks": 17251,
-  "strings": 16477
+  "prose_chunks": 17260,
+  "strings": 16486
  },
  "apostrophe": {
   "straight": 1,
   "typographic": 0
  },
  "dash": {
-  "em": 122,
+  "em": 123,
   "en": 14
  },
  "ellipsis": {
@@ -27,12 +27,12 @@
   "before-punctuation": 39,
   "narrow": 3,
   "space-before-punctuation": 14,
-  "total": 4868
+  "total": 4880
  },
  "quotes": {
   "curly-double": 2,
   "german-double": 7,
-  "polish-double": 1434,
+  "polish-double": 1436,
   "straight-double": 36
  },
  "register": {

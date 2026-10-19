@@ -1037,6 +1037,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "削除したくないデータがある場合は、そのデータの種類を選んでください。",
+  "dismissed_because": "",
+  "fid": "4da36ec0e440",
+  "file": "browser/browser/browser.ftl",
+  "first_seen": "2026-10-19",
+  "impact": 2,
+  "last_seen": "2026-10-19",
+  "locale": "ja",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The en-US says 'If you don't want to delete everything, choose specific data instead.' The developer comment on fire-button-panel-choose-link says the next dialog is where the user picks which kinds of data to delete. The Japanese says 'if there is data you don't want to delete, choose that data type', which turns the selection around: it tells the user to pick the data to keep.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "9b368eb5",
+  "string_id": "fire-button-panel-choose-description",
+  "suggest": "すべてを削除したくない場合は、代わりに削除するデータを選んでください。",
+  "summary": "The Japanese tells the user to choose the data they want to keep, but the dialog is for choosing which data to delete.",
+  "suppressed_by": ""
+ },
+ {
   "category": "A",
   "check": "plurals",
   "current": "{$count ->} [one] リンクをコピー [other] { $count } 個のリンクをコピー",
@@ -1056,6 +1080,30 @@
   "string_id": "menu-share-copy-links",
   "suggest": "",
   "summary": "`menu-share-copy-links` (`.label`) has plural variant ['one'], which ja does not have",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
+  "current": "メッセージ、Mail、他...",
+  "dismissed_because": "",
+  "fid": "d318956ba9a1",
+  "file": "browser/browser/browser.ftl",
+  "first_seen": "2026-10-19",
+  "impact": 3,
+  "last_seen": "2026-10-19",
+  "locale": "ja",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The developer comment says \"Messages\" and \"Mail\" should match the macOS translation of those app names. The Japanese macOS Mail app is named \"メール\". The same label already localizes Messages as \"メッセージ\", so leaving Mail in English is inconsistent.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "cd05e91d",
+  "string_id": "menu-share-mac-picker-multiple",
+  "suggest": "メッセージ、メール、他...",
+  "summary": "The macOS app name \"Mail\" is left in English, but Japanese macOS calls it \"メール\", and \"Messages\" in the same label is localized.",
   "suppressed_by": ""
  },
  {
@@ -1650,6 +1698,30 @@
   "string_id": "ip-protection-bandwidth-left-gb",
   "suggest": "{ $maxUsage } GB 中、残り { $usageLeft } GB",
   "summary": "browser/browser/ipProtection.ftl — 残り attaches to $maxUsage, giving \"of the remaining {max} GB, {left} GB\". → { $maxUsage } GB 中、残り { $usageLeft } GB (the pattern already used correctly in ipprotection-message-bandwidth-warning.message).",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "このサイトはすでにエラーが設定されています。",
+  "dismissed_because": "",
+  "fid": "588390069f0a",
+  "file": "browser/browser/ipProtection.ftl",
+  "first_seen": "2026-10-19",
+  "impact": 2,
+  "last_seen": "2026-10-19",
+  "locale": "ja",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The en-US is \"This site already has a rule.\", and the comment says it is shown when the typed site already has a rule. The Japanese uses エラー instead of ルール, which garbles the message.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "b72afe94",
+  "string_id": "ip-protection-site-rule-duplicate-error",
+  "suggest": "このサイトにはすでにルールが設定されています。",
+  "summary": "\"rule\" is translated as \"エラー\" (error), so the message says the site already has an error set.",
   "suppressed_by": ""
  },
  {
@@ -3480,6 +3552,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "E",
+  "check": "llm",
+  "current": "ブロックします。.",
+  "dismissed_because": "",
+  "fid": "67faee9670e7",
+  "file": "browser/browser/policies/policies-descriptions.ftl",
+  "first_seen": "2026-10-19",
+  "impact": 4,
+  "last_seen": "2026-10-19",
+  "locale": "ja",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "Under the locale convention a sentence ends with 。 alone. The trailing '.' doubles the sentence-ending punctuation, and the sibling policy strings don't have it.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "79f1c265",
+  "string_id": "policy-BlockAboutSupport2",
+  "suggest": "ブロックします。",
+  "summary": "There is an extra ASCII period after the closing 。.",
+  "suppressed_by": ""
+ },
+ {
   "category": "C",
   "check": "legacy",
   "current": "ブラウザ",
@@ -4081,6 +4177,30 @@
  },
  {
   "category": "B",
+  "check": "llm",
+  "current": "アプリを開くリンクを許可するサイト。",
+  "dismissed_because": "",
+  "fid": "520ec351aea3",
+  "file": "browser/browser/preferences/preferences.ftl",
+  "first_seen": "2026-10-19",
+  "impact": 2,
+  "last_seen": "2026-10-19",
+  "locale": "ja",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The en-US is a checkbox that lets sites ask to open app links. The Japanese drops both the verb and the 'ask' part, so the setting's meaning is lost.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "56d41771",
+  "string_id": "permissions-allow-app-links",
+  "suggest": "サイトがアプリを開くリンクの確認を求めることを許可する",
+  "summary": "The checkbox label became a noun phrase (\"sites that allow app links\") instead of the action \"Allow sites to ask to open app links\".",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
   "check": "legacy",
   "current": "",
   "dismissed_because": "",
@@ -4601,6 +4721,30 @@
   "string_id": "security-privacy-status-pending-trackers-label",
   "suggest": "…ブロックしたトラッカーの数を確認しています",
   "summary": "a \"Looking up…\" loading state turned into an invitation (見てみる). → …ブロックしたトラッカーの数を確認しています Verified.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "検索時のアドレスバーの設定をカスタマイズ",
+  "dismissed_because": "",
+  "fid": "c42af2f1cf59",
+  "file": "browser/browser/preferences/preferences.ftl",
+  "first_seen": "2026-10-19",
+  "impact": 2,
+  "last_seen": "2026-10-19",
+  "locale": "ja",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The developer comment says the link goes to the Search category of settings. \"検索時の\" means 'address bar settings during search', which is not where the link leads.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "2144ebed",
+  "string_id": "settings-keyboard-shortcuts-addressbar-link",
+  "suggest": "[検索] パネルでアドレスバーの設定をカスタマイズ",
+  "summary": "\"in Search\" (the Search settings category) became \"when searching\".",
   "suppressed_by": ""
  },
  {

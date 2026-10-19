@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
+| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 118 of 16,477 |
+| **Strings reviewed this run** | 0 of 16,477 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,59 +18,13 @@ Also for pt-BR: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (8)
+### 🆕 New findings (0)
 
-- `policy-DisableProfileRefresh2` — `browser/browser/policies/policies-descriptions.ftl` — `policy-DisableProfileRefresh2` uses straight double quotes
-    - Current: `Desativar o botão "Restaurar o { -brand-short-name }" na página de informações para solução de problemas (about:support) e em support.mozilla.org, bem como o aviso que oferece restaurar o { -brand-short-name } quando nã…`
-    - Source: `Disable the Refresh { -brand-short-name } button in Troubleshooting Information (about:support) and on support.mozilla.org, as well as the prompt offering to refresh { -brand-short-name } when it hasn’t been used for a…`
-    - The locale's quote convention is `curly-double` (594 occurrences).
-- `policy-BlockAboutSupport2` — `browser/browser/policies/policies-descriptions.ftl` — "pagina" is missing its accent; it should be "página".
-    - Current: `à pagina de informações`
-    - Source: `Block access to Troubleshooting Information (about:support).`
-    - Suggest: `à página de informações`
-    - Spelling error: the noun is "página", with an accent.
-- `policy-DisableThirdPartyModuleBlocking2` — `browser/browser/policies/policies-descriptions.ftl` — "pagina" is missing its accent; it should be "página".
-    - Current: `a pagina de informações`
-    - Source: `Prevent the user from using Third-party Module Information (about:third-party) to block third-party modules injected into the { -brand-short-name } process.`
-    - Suggest: `a página de informações`
-    - Spelling error: the noun is "página", with an accent.
-- `policy-PasswordManagerEnabled2` — `browser/browser/policies/policies-descriptions.ftl` — The internal page is given as about:login, but the source says about:logins.
-    - Current: `(about:login)`
-    - Source: `Enable or disable saving passwords to the password manager. If disabled, Passwords (about:logins) is also blocked.`
-    - Suggest: `(about:logins)`
-    - about:logins is a fixed page identifier that must not change. about:login points to a page that does not exist.
-- `protocolhandler-add-handler-message` — `browser/browser/webProtocolHandler.ftl` — The message says "aplicação", but its own button says "aplicativo" for the same word.
-    - Current: `como uma aplicação para links`
-    - Source: `Add “{ $host }” as an application for { $protocol } links?`
-    - Suggest: `como um aplicativo para links`
-    - The same en-US word "application" appears in the same dialog. The button uses "aplicativo", the usual pt-BR term.
-- `ip-protection-site-rule-invalid-error` — `browser/browser/ipProtection.ftl` — "endereço do site válido" uses the definite article where a general phrase is needed, so it reads awkwardly.
-    - Current: `endereço do site válido`
-    - Source: `Enter a valid website address.`
-    - Suggest: `endereço de site válido`
-    - The source means any valid website address, which takes "de site". "do site" means "of the site" and attaches "válido" oddly.
-- `policy-DisableProfileRefresh2` — `browser/browser/policies/policies-descriptions.ftl` — Straight double quotes are used instead of the locale's curly double quotes.
-    - Current: `"Restaurar o { -brand-short-name }"`
-    - Source: `Disable the Refresh { -brand-short-name } button in Troubleshooting Information (about:support) and on support.mozilla.org, as well as the prompt offering to refresh { -brand-short-name } when it hasn’t been used for a…`
-    - Suggest: `“Restaurar o { -brand-short-name }”`
-    - Per the locale conventions, pt-BR uses curly double quotes.
-- `tab-group-editor-action-copy-links` — `browser/browser/tabbrowser.ftl` — “em grupo” reads as “collectively/as a group” rather than “the links belonging to the group”.
-    - Current: `Copiar { $linkCount } links em grupo`
-    - Source: `label: {$linkCount ->} [1] Copy link in group [other] Copy { $linkCount } links in group`
-    - Suggest: `Copiar { $linkCount } links do grupo`
-    - The en-US means copying the links contained in the tab group. In Portuguese “em grupo” usually means doing something together or as a group. “do grupo” (also “Copiar link do grupo” for the singular) says plainly that the links come from the group.
+_No new findings._
 
-### ✅ Fixed since the last run (3)
+### ✅ Fixed since the last run (0)
 
-- `pictureinpicture-subtitles-toggle` — `toolkit/toolkit/pictureinpicture/pictureinpicture.ftl` — "Subtítulos" is Spanish spelling; pt-BR is "Legendas".
-    - Current: `Subtítulos`
-    - Source: `label: Subtitles`
-    - Suggest: `Legendas`
-    - en-US "Subtitles" is rendered in pt-BR as "Legendas"; "Subtítulos" is not a Brazilian Portuguese term (it is Spanish).
-- `webauthn-related-origin-create-header` — `toolkit/toolkit/webauthnDialog.ftl` — webauthn-related-origin-create-header, webauthn-related-origin-use-header — webauthnDialog.ftl — "passkey" rendered as senha, conflicting with webauthn-a-passkey-label (chave de acesso). Suggest: chave de acesso
-    - Source: `{ $origin } wants to create a passkey for { $rpId }.`
-- `webauthn-related-origin-use-header` — `toolkit/toolkit/webauthnDialog.ftl` — webauthn-related-origin-create-header, webauthn-related-origin-use-header — webauthnDialog.ftl — "passkey" rendered as senha, conflicting with webauthn-a-passkey-label (chave de acesso). Suggest: chave de acesso
-    - Source: `{ $origin } wants to use a passkey for { $rpId }.`
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -941,15 +895,15 @@ _Nothing reported._
     - Current: `Desativar o botão "Restaurar o { -brand-short-name }" na página about:support.`
     - Source: `Disable the Refresh { -brand-short-name } button in the about:support page.`
     - The locale's quote convention is `curly-double` (594 occurrences).
-- `policy-DisableProfileRefresh2` — `browser/browser/policies/policies-descriptions.ftl` — `policy-DisableProfileRefresh2` uses straight double quotes
-    - Current: `Desativar o botão "Restaurar o { -brand-short-name }" na página de informações para solução de problemas (about:support) e em support.mozilla.org, bem como o aviso que oferece restaurar o { -brand-short-name } quando nã…`
-    - Source: `Disable the Refresh { -brand-short-name } button in Troubleshooting Information (about:support) and on support.mozilla.org, as well as the prompt offering to refresh { -brand-short-name } when it hasn’t been used for a…`
-    - The locale's quote convention is `curly-double` (594 occurrences).
 - `policy-DisableProfileRefresh2` — `browser/browser/policies/policies-descriptions.ftl` — Straight double quotes are used instead of the locale's curly double quotes.
     - Current: `"Restaurar o { -brand-short-name }"`
     - Source: `Disable the Refresh { -brand-short-name } button in Troubleshooting Information (about:support) and on support.mozilla.org, as well as the prompt offering to refresh { -brand-short-name } when it hasn’t been used for a…`
     - Suggest: `“Restaurar o { -brand-short-name }”`
     - Per the locale conventions, pt-BR uses curly double quotes.
+- `policy-DisableProfileRefresh2` — `browser/browser/policies/policies-descriptions.ftl` — `policy-DisableProfileRefresh2` uses straight double quotes
+    - Current: `Desativar o botão "Restaurar o { -brand-short-name }" na página de informações para solução de problemas (about:support) e em support.mozilla.org, bem como o aviso que oferece restaurar o { -brand-short-name } quando nã…`
+    - Source: `Disable the Refresh { -brand-short-name } button in Troubleshooting Information (about:support) and on support.mozilla.org, as well as the prompt offering to refresh { -brand-short-name } when it hasn’t been used for a…`
+    - The locale's quote convention is `curly-double` (594 occurrences).
 - `policy-Extensions` — `browser/browser/policies/policies-descriptions.ftl` — `policy-Extensions` uses straight double quotes
     - Current: `Instalar, desinstalar e bloquear extensões. A opção “Instalar” recebe URLs ou caminhos como parâmetros. As opções “Desinstalar” e "Bloqueado" usam IDs de extensões.`
     - Source: `Install, uninstall or lock extensions. The Install option takes URLs or paths as parameters. The Uninstall and Locked options take extension IDs.`

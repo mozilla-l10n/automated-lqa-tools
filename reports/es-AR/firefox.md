@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
+| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 139 of 16,490 |
+| **Strings reviewed this run** | 0 of 16,490 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for es-AR: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `site-data-clear-all-prompt-text` — `browser/browser/preferences/siteDataSettings.ftl` — The masculine demonstrative "Este" is used where the neuter "Esto" is needed.
-    - Current: `Este puede desconectarlo`
-    - Source: `Selecting ‘Clear Now’ will clear all cookies and site data stored by { -brand-short-name }. This may sign you out of websites and remove offline web content.`
-    - Suggest: `Esto puede desconectarlo`
-    - The subject refers to the whole preceding action ("This may sign you out") and has no masculine noun to agree with, so Spanish needs the neuter pronoun "Esto".
-- `PermissionsPolicyInvalidAllowValue` — `dom/chrome/security/security.properties` — The added "para" turns the placeholder from the unsupported allow value into the thing the value belongs to.
-    - Current: `el valor permitido no soportado para “%S”`
-    - Source: `Permissions Policy: Skipping unsupported allow value “%S”.`
-    - Suggest: `el valor permitido no soportado “%S”`
-    - In en-US, %S is the unsupported allow value itself ("Skipping unsupported allow value “%S”"). The translation says "value ... for “%S”", so the placeholder now reads as the feature rather than the value that was rejected.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

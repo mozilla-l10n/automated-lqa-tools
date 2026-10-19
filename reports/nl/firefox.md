@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
+| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 157 of 16,500 |
+| **Strings reviewed this run** | 0 of 16,500 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for nl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `smartwindow-group-tabs-empty` — `browser/browser/autoTabGrouping.ftl` — “Tab groups” is rendered as “tabbladengroepen” here but as “Tabbladgroepen” everywhere else in the same panel.
-    - Current: `tabbladengroepen`
-    - Source: `No tab groups to suggest right now. Check again later.`
-    - Suggest: `tabbladgroepen`
-    - The same en-US term “tab groups” is translated as “Tabbladgroepen” in smartwindow-group-tabs-view-tab-groups, smartwindow-group-tabs-groups-list and confirmation-hint-tab-group-saved. This string uses a different compound form, which is inconsistent within the same surface.
-- `policy-DisableProfileRefresh2` — `browser/browser/policies/policies-descriptions.ftl` — The Refresh feature is called 'opfrissen' for the button and 'verversen' for the prompt in the same sentence.
-    - Current: `{ -brand-short-name } te verversen`
-    - Source: `Disable the Refresh { -brand-short-name } button in Troubleshooting Information (about:support) and on support.mozilla.org, as well as the prompt offering to refresh { -brand-short-name } when it hasn’t been used for a…`
-    - Suggest: `{ -brand-short-name } op te frissen`
-    - The en-US uses the same term 'Refresh { -brand-short-name }' for both the button and the prompt. The Dutch names the feature 'opfrissen' in the button label, so switching to 'verversen' in the same sentence is inconsistent terminology.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

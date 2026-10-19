@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
+| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 55 of 15,224 |
+| **Strings reviewed this run** | 0 of 15,224 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,27 +18,9 @@ Also for es-ES: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (0)
 
-- `view-source-context-go-to-line` — `toolkit/toolkit/global/viewSource.ftl` — Access key `x` of `view-source-context-go-to-line` is not present in its label
-    - Current: `x`
-    - Source: `accesskey: L label: Go to Line…`
-    - The label is “Ir a la línea…”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `site-data-clear-all-prompt-text` — `browser/browser/preferences/siteDataSettings.ftl` — Straight single quotes used around the button name instead of the locale's curly quotes.
-    - Current: `'Limpiar ahora'`
-    - Source: `Selecting ‘Clear Now’ will clear all cookies and site data stored by { -brand-short-name }. This may sign you out of websites and remove offline web content.`
-    - Suggest: `“Limpiar ahora”`
-    - The en-US uses typographic quotes and es-ES convention is curly double quotes; straight ASCII apostrophes deviate from it.
-- `site-data-clear-all-prompt-text` — `browser/browser/preferences/siteDataSettings.ftl` — "datos del sitio" (singular, one site) misrenders "site data" for all sites stored by the browser.
-    - Current: `todas las cookies y datos del sitio guardados`
-    - Source: `Selecting ‘Clear Now’ will clear all cookies and site data stored by { -brand-short-name }. This may sign you out of websites and remove offline web content.`
-    - Suggest: `todas las cookies y datos de sitios guardados`
-    - The prompt clears data for every site; "del sitio" refers to a single specific site.
-- `site-data-clear-all-prompt-title` — `browser/browser/preferences/siteDataSettings.ftl` — "datos del sitio" implies one site, but the action clears data for all sites.
-    - Current: `datos del sitio`
-    - Source: `Clear all cookies and site data`
-    - Suggest: `datos de sitios`
-    - "Clear all cookies and site data" covers all sites; singular definite "del sitio" narrows it to one site.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

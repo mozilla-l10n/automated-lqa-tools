@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-16 @ `db2cfca9d18c` |
+| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 65 of 16,520 |
+| **Strings reviewed this run** | 0 of 16,520 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,23 +18,9 @@ Also for sv-SE: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `view-source-context-go-to-line` — `toolkit/toolkit/global/viewSource.ftl` — "Line" here is rendered as "linje", while the rest of View Source uses "rad" for a line of text.
-    - Current: `Gå till linje…`
-    - Source: `accesskey: L label: Go to Line…`
-    - Suggest: `Gå till rad…`
-    - The en-US means a line of source text, as in the dialog title "Gå till rad" and in "radnummer". "Linje" is a drawn line, so it is the wrong term and doesn't match the rest of the same feature.
-- `restore-session-startup-suggestion-message` — `browser/browser/newtab/asrouter.ftl` — Missing space between the bold heading and the following sentence.
-    - Current: `flikar?</strong>Du`
-    - Source: `<strong>Open previous tabs?</strong> You can restore your previous session from the { -brand-short-name } application menu <img data-l10n-name="icon"/>, under History.`
-    - Suggest: `flikar?</strong> Du`
-    - The en-US has a space after </strong>. Without it the rendered text reads "flikar?Du kan…" with the two sentences run together.
-- `permission.register-protocol-handler.label` — `browser/chrome/browser/sitePermissions.properties` — "Fråga för att öppna" means "ask in order to open", not "ask to open" (the site may ask whether to open app links).
-    - Current: `Fråga för att öppna applänkar`
-    - Source: `Ask to open app links`
-    - Suggest: `Fråga om att öppna applänkar`
-    - The comment says this permission controls whether the site may ask to open app links. "för att" expresses purpose, which changes the meaning. It is also inconsistent with "fråga om att öppna applänkar" in preferences.ftl.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

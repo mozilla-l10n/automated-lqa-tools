@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
+| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 44 of 15,868 |
+| **Strings reviewed this run** | 0 of 15,868 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for es-MX: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `view-source-go-to-line-text` — `toolkit/toolkit/global/viewSource.ftl` — Uses the formal imperative 'Introduzca', which doesn't match the locale's informal form of address.
-    - Current: `Introduzca número de línea`
-    - Source: `Enter line number`
-    - Suggest: `Introduce el número de línea`
-    - The es-MX locale mostly uses informal address (1359 informal vs 237 formal). 'Introduzca' is the formal usted imperative.
-- `protocolhandler-add-handler-button` — `browser/browser/webProtocolHandler.ftl` — The button says 'Añadir' while its own prompt says 'Agregar' for the same 'Add' action.
-    - Current: `Añadir aplicación`
-    - Source: `accesskey: A label: Add application`
-    - Suggest: `Agregar aplicación`
-    - The prompt protocolhandler-add-handler-message asks '¿Agregar … como una aplicación…?' but the button that answers it uses 'Añadir'. The two terms are inconsistent on the same surface, and 'Agregar' is the usual Mexican choice.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
