@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-18 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
-| **Previous run** | 2026-10-12 @ `9d543f9ca798` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `7ee8e61a4a7d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `7ee8e61a4a7d` |
+| **Previous run** | 2026-10-18 @ `dd8ca757b7dd` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 28 of 2,798 |
+| **Strings reviewed this run** | 0 of 2,798 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,55 +18,13 @@ Also for pt-BR: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `remote_improvements_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "between updates" is translated as "a cada atualização" (with each update), which reverses the point that improvements arrive without an app update.
-    - Current: `a cada atualização`
-    - Source: `Firefox will improve features, performance, and stability between updates. Changes applied remotely.`
-    - Suggest: `entre as atualizações`
-    - The en-US says Firefox improves features between updates, and the next sentence says the changes are applied remotely. "A cada atualização" means "with each update", so the improvements would come through app updates. That contradicts "Alterações são aplicadas remotamente" in the same string.
+_No new findings._
 
-### ✅ Fixed since the last run (8)
+### ✅ Fixed since the last run (0)
 
-- `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
-    - Current: `O endereço web deve conter "https://" ou "http://"`
-    - Source: `Web address must contain “https://” or “http://”`
-    - Suggest: `O endereço web deve conter “https://” ou “http://”`
-    - The locale's quote convention is `curly-double` (13 occurrences).
-- `connection_security_panel_local_pdf` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Translation adds a final period not present in the source.
-    - Current: `Esta página está armazenada em seu dispositivo.`
-    - Source: `This page is stored on your device`
-    - Suggest: `Esta página está armazenada em seu dispositivo`
-    - The en-US string "This page is stored on your device" has no terminating punctuation; the other panel strings mirror source punctuation.
-- `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Translation adds "selecionados abaixo" and says "ao tocar" instead of "quando você seleciona", altering the source meaning.
-    - Current: `Excluir automaticamente os dados de navegação selecionados abaixo ao tocar em "Sair" no menu principal`
-    - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
-    - Suggest: `Exclui automaticamente os dados de navegação quando você seleciona “Sair” no menu principal`
-    - The source is "Automatically deletes browsing data when you select “Quit” from the main menu" — there is no "selected below" qualifier, and the pt-BR quoting convention is curly double quotes.
-- `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — `preference_summary_delete_browsing_data_on_quit_2` uses straight double quotes
-    - Current: `Excluir automaticamente os dados de navegação selecionados abaixo ao tocar em "Sair" no menu principal`
-    - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
-    - The locale's quote convention is `curly-double` (13 occurrences).
-- `search_add_manually_example` — `mozilla-mobile/focus-android/app/src/main/res/values-pt-rBR/strings.xml` — A spurious space was inserted between "q=" and the %s placeholder, breaking the example URL format.
-    - Current: `example.com/search/?q= %s`
-    - Source: `Example: example.com/search/?q=%s`
-    - Suggest: `example.com/search/?q=%s`
-    - The source is "example.com/search/?q=%s" with no space; the example must show the exact URL format users have to match.
-- `remote_improvements_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "between updates" is translated as "a cada atualização" (with each update), which reverses the point that improvements arrive without an app update.
-    - Current: `a cada atualização`
-    - Source: `Firefox will improve features, performance, and stability between updates. Changes applied remotely.`
-    - Suggest: `entre as atualizações`
-    - The en-US says Firefox improves features between updates, and the next sentence says the changes are applied remotely. "A cada atualização" means "with each update", so the improvements would come through app updates. That contradicts "Alterações são aplicadas remotamente" in the same string.
-- `remote_improvements_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Double space between "Firefox" and "melhora".
-    - Current: `O Firefox  melhora`
-    - Source: `Firefox will improve features, performance, and stability between updates. Changes applied remotely.`
-    - Suggest: `O Firefox melhora`
-    - Extra whitespace not present in the source text.
-- `webcompat_reporter_reason_media2` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Double space between words in the translation.
-    - Current: `O vídeo não está sendo carregado ou  reproduzido`
-    - Source: `Video isn’t playing or loading`
-    - Suggest: `O vídeo não está sendo carregado ou reproduzido`
-    - There is an extra space before “reproduzido”; the source has no such spacing.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

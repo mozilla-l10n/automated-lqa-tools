@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-18 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
-| **Previous run** | 2026-10-12 @ `9d543f9ca798` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `57c409b04755` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `57c409b04755` |
+| **Previous run** | 2026-10-18 @ `dd8ca757b7dd` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 16 of 2,802 |
+| **Strings reviewed this run** | 2 of 2,802 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,43 +22,9 @@ Also for es-AR: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (7)
+### ✅ Fixed since the last run (0)
 
-- `mozac_browser_errorpages_httpsonly_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-es-rAR/strings.xml` — Extra spaces inserted inside the <em> markup around the placeholder.
-    - Current: `{ <em> } %1$s { </em> }`
-    - Source: `You’ve enabled HTTPS-Only Mode for enhanced security, and a HTTPS version of { <em> }%1$s{ </em> } is not available.`
-    - Suggest: `{ <em> }%1$s{ </em> }`
-    - The source has no spaces between the em tags and the placeholder; the added spaces render as stray spaces around the emphasized URL.
-- `mozac_feature_pwa_site_controls_notification_text` — `mozilla-mobile/android-components/components/feature/pwa/src/main/res/values-es-rAR/strings.xml` — Translation adds a final period not present in the source.
-    - Current: `Tocá para copiar la URL de esta aplicación.`
-    - Source: `Tap to copy the URL for this app`
-    - Suggest: `Tocá para copiar la URL de esta aplicación`
-    - Source "Tap to copy the URL for this app" has no terminal punctuation; the notification line should match.
-- `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-es-rAR/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
-    - Current: `La dirección web debe contener "https://" o "http://"`
-    - Source: `Web address must contain “https://” or “http://”`
-    - Suggest: `debe contener “https://” o “http://”`
-    - The locale's quote convention is `curly-double` (12 occurrences).
-- `automatic_translation_header_preference` — `mozilla-mobile/fenix/app/src/main/res/values-es-rAR/strings.xml` — Quotation marks are reversed (closing mark used to open and vice versa).
-    - Current: `”traducir siempre“ y ”nunca traducir“`
-    - Source: `Select a language to manage ”always translate“ and ”never translate“ preferences.`
-    - Suggest: `“traducir siempre” y “nunca traducir”`
-    - es-AR uses curly double quotes opening with “ and closing with ”; the target inverts them.
-- `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-es-rAR/strings.xml` — `preference_summary_delete_browsing_data_on_quit_2` uses straight double quotes
-    - Current: `Elimina automáticamente los datos de navegación cuando seleccionás "Salir" en el menú principal`
-    - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
-    - Suggest: `“Salir”`
-    - The locale's quote convention is `curly-double` (12 occurrences).
-- `search_add_custom_engine_search_string_example` — `mozilla-mobile/fenix/app/src/main/res/values-es-rAR/strings.xml` — `search_add_custom_engine_search_string_example` uses straight double quotes
-    - Current: `Reemplazar la consulta con "%s". Ejemplo: https://www.google.com/search?q=%s`
-    - Source: `Replace query with “%s”. Example: https://www.google.com/search?q=%s`
-    - Suggest: `Reemplazar la consulta con “%s”. Ejemplo:`
-    - The locale's quote convention is `curly-double` (12 occurrences).
-- `top_sites_max_limit_confirmation_button` — `mozilla-mobile/fenix/app/src/main/res/values-es-rAR/strings.xml` — Button label ends with a period that is not in the source.
-    - Current: `Listo, lo entendí.`
-    - Source: `OK, Got It`
-    - Suggest: `Listo, lo entendí`
-    - The source "OK, Got It" is a button caption with no final punctuation; button labels should not end in a period.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

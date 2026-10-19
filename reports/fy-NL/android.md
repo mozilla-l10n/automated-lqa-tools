@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-18 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
-| **Previous run** | 2026-10-12 @ `9d543f9ca798` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `57c409b04755` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `57c409b04755` |
+| **Previous run** | 2026-10-18 @ `dd8ca757b7dd` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 29 of 2,802 |
+| **Strings reviewed this run** | 0 of 2,802 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,76 +18,13 @@ Also for fy-NL: [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `sync_send_tab_empty_state_link` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Untdek" is missing the circumflex; the correct Frisian spelling is "Ûntdek".
-    - Current: `Untdek`
-    - Source: `Learn how to connect a device`
-    - Suggest: `Ûntdek`
-    - The Frisian verb ûntdekke is written with û, as in "ûntdutsen" elsewhere in this batch; "Untdek" is a misspelling.
+_No new findings._
 
-### ✅ Fixed since the last run (13)
+### ✅ Fixed since the last run (0)
 
-- `mozac_feature_addons_permissions_user_scripts_extra_warning` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — Doubled apostrophe in "dy’'t" (typographic apostrophe followed by a straight one).
-    - Current: `dy’'t`
-    - Source: `Unverified scripts can pose security and privacy risks. Only run scripts from extensions or sources you trust.`
-    - Suggest: `dy’t`
-    - The relative pronoun should be "dy’t"; the extra straight apostrophe is a stray character and breaks the locale's typographic apostrophe convention.
-- `connection_security_panel_verified_by` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — A colon was added that is not in the source, unlike the parallel string "Utjûn oan %s".
-    - Current: `Ferifiearre troch: %s`
-    - Source: `Verified by %s`
-    - Suggest: `Ferifiearre troch %s`
-    - Source "Verified by %s" has no colon; the sibling string "Issued to %s" is translated without one.
-- `download_content_type_filter_video` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `download_content_type_filter_video` uses a straight apostrophe
-    - Current: `Fideo's`
-    - Source: `Videos`
-    - The tree uses ’ 95 times against 8 straight.
-- `etp_known_fingerprinters_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `etp_known_fingerprinters_description` uses a straight apostrophe
-    - Current: `Foarkomt dat unyk identifisearbere gegevens oer jo apparaat sammele wurde dy't brûkt wurde kinne foar folchdoeleinen.`
-    - Source: `Stops uniquely identifiable data from being collected about your device that can be used for tracking purposes.`
-    - Suggest: `dy’t brûkt wurde kinne`
-    - The tree uses ’ 95 times against 8 straight.
-- `nova_onboarding_marketing_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "marketing partners" is rendered as "marketingtechnologypartners", adding a word not in the source.
-    - Current: `Mozilla's marketingtechnologypartners`
-    - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
-    - Suggest: `Mozilla’s marketingpartners`
-    - The source says "Mozilla’s marketing partners"; "technology" is not in the source. The straight apostrophe also deviates from the typographic-apostrophe convention.
-- `nova_onboarding_marketing_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `nova_onboarding_marketing_body_2` uses a straight apostrophe
-    - Current: `Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht.`
-    - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
-    - The tree uses ’ 95 times against 8 straight.
-- `onboarding_marketing_body_1` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "marketing partners" is rendered as "marketingtechnologypartners", adding a term not in the source.
-    - Current: `Mozilla's marketingtechnologypartners`
-    - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
-    - Suggest: `Mozilla’s marketingpartners`
-    - The source says "Mozilla’s marketing partners"; "marketingtechnologypartners" invents "technology" and is also an untranslated English compound element.
-- `onboarding_marketing_body_1` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `onboarding_marketing_body_1` uses a straight apostrophe
-    - Current: `Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht.`
-    - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
-    - Suggest: `Mozilla’s`
-    - The tree uses ’ 95 times against 8 straight.
-- `onboarding_marketing_redesign_opt_out_checkbox` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "marketing partners" is rendered as "marketingtechnologypartners", adding a term not in the source.
-    - Current: `Mozilla's marketingtechnologypartners`
-    - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
-    - Suggest: `Mozilla’s marketingpartners`
-    - The source says "Mozilla’s marketing partners"; "marketingtechnologypartners" invents "technology" and mixes untranslated English.
-- `onboarding_marketing_redesign_opt_out_checkbox` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `onboarding_marketing_redesign_opt_out_checkbox` uses a straight apostrophe
-    - Current: `Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht.`
-    - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
-    - Suggest: `Mozilla’s`
-    - The tree uses ’ 95 times against 8 straight.
-- `preferences_marketing_data_description_4` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `preferences_marketing_data_description_4` uses a straight apostrophe
-    - Current: `Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke.`
-    - Source: `Share how you discovered Firefox and that you use it with Mozilla’s marketing technology partners.`
-    - The tree uses ’ 95 times against 8 straight.
-- `tab_tray_inactive_auto_close_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `tab_tray_inactive_auto_close_body_2` uses a straight apostrophe
-    - Current: `%1$s kin ljepblêden dy't jo de ôfrûne moanne net besjoen hawwe slute.`
-    - Source: `%1$s can close tabs you haven’t viewed over the past month.`
-    - The tree uses ’ 95 times against 8 straight.
-- `uninstall_survey_option_4_v2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — `uninstall_survey_option_4_v2` uses a straight apostrophe
-    - Current: `Fideo's, downloads of media wurken net`
-    - Source: `Videos, downloads, or media didn’t work`
-    - The tree uses ’ 95 times against 8 straight.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

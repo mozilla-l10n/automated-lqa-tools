@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-18 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
-| **Previous run** | 2026-10-12 @ `a400fea340fd` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `57c409b04755` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `57c409b04755` |
+| **Previous run** | 2026-10-18 @ `dd8ca757b7dd` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 9 of 2,802 |
+| **Strings reviewed this run** | 0 of 2,802 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for de: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `mozac_feature_listentopage_error_could_not_finish_playing_audio` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-de/strings.xml` — "konnte nicht beendet werden" reads as "playback could not be stopped" rather than "could not finish playing".
-    - Current: `Die Audiowiedergabe konnte nicht beendet werden.`
-    - Source: `Couldn’t finish playing audio. Try again.`
-    - Suggest: `Die Audiowiedergabe konnte nicht abgeschlossen werden.`
-    - Per the developer comment the error appears when playback fails partway through, i.e. the audio could not be played to the end. German "beenden" primarily means to stop/terminate, so the sentence suggests the user could not stop playback; "abschließen" conveys completing it.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
