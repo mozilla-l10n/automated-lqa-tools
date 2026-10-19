@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-16 @ `db2cfca9d18c` |
+| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 65 of 16,520 |
+| **Strings reviewed this run** | 0 of 16,520 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for sk: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `migration-no-permissions-instructions-step2-2` — `browser/browser/migrationWizard.ftl` — The macOS variant tells the user to choose “Vybrať” (Select) when the source says “Open”.
-    - Current: `V dialógovom okne na výber súborov zvoľte “Vybrať”`
-    - Source: `{$sel_1 ->} [macos] In the file picker, choose “Open” [other] In the file picker, navigate to <code>{ $permissionsPath }</code> and choose “Select”`
-    - Suggest: `V dialógovom okne na výber súborov zvoľte “Otvoriť”`
-    - On macOS the en-US says to choose “Open”. Only the other variant says “Select”. With the wrong button name, the instruction points to a label that doesn't match the macOS picker.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

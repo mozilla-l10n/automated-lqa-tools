@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
+| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 133 of 16,477 |
+| **Strings reviewed this run** | 0 of 16,477 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,45 +18,13 @@ Also for fy-NL: [android](android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (6)
+### 🆕 New findings (0)
 
-- `view-source-out-of-range-title` — `toolkit/toolkit/global/viewSource.ftl` — 'Rige' is a typo for 'Rigel' (line), which the neighbouring strings use.
-    - Current: `Rige net fûn`
-    - Source: `Line not found`
-    - Suggest: `Rigel net fûn`
-    - The en-US 'Line not found' refers to a source line. Every other string in this file uses 'rigel' for line. 'Rige' means row or series, so this is a dropped letter.
-- `smartwindow-group-tabs-all-sorted` — `browser/browser/autoTabGrouping.ftl` — 'ljeplêden' is misspelled; it should be 'ljepblêden' (tabs).
-    - Current: `ljeplêden`
-    - Source: `Nice work organizing your tabs`
-    - Suggest: `ljepblêden`
-    - The locale's term for tabs is 'ljepblêden', which every other string in the file uses. Here the 'b' is missing.
-- `policy-BlockAboutProfiles2` — `browser/browser/policies/policies-descriptions.ftl` — The parentheses around about:profiles are missing.
-    - Current: `Oer profilen about:profiles blokkearje`
-    - Source: `Block access to About Profiles (about:profiles).`
-    - Suggest: `Oer profilen (about:profiles) blokkearje`
-    - The en-US puts the URL in parentheses, and the companion string policy-BlockAboutConfig2 keeps them. Without them the page name and the URL run together.
-- `genai-prompts-summarize-page` — `browser/browser/genai.ftl` — "webpage" is translated as "website", so the prompt asks for a summary of the whole site instead of the single page.
-    - Current: `Gearfetsje de website op { $url }`
-    - Source: `Please summarize the webpage at { $url } using precise and concise language. Use headers and bulleted lists in the summary, to make it scannable. Maintain the meaning and factual accuracy.`
-    - Suggest: `Gearfetsje de webside op { $url }`
-    - The source and the developer comment both refer to a single webpage at the given URL. In Frisian "website" means the whole site and "webside" means one page, and this prompt is sent to the AI chatbot as it stands.
-- `policy-PasswordManagerEnabled2` — `browser/browser/policies/policies-descriptions.ftl` — The internal page URL is given as about:login instead of about:logins.
-    - Current: `(about:login)`
-    - Source: `Enable or disable saving passwords to the password manager. If disabled, Passwords (about:logins) is also blocked.`
-    - Suggest: `(about:logins)`
-    - The en-US names the page about:logins. about:login is not the Passwords page, so the identifier must be kept exactly.
-- `policy-DisableThirdPartyModuleBlocking2` — `browser/browser/policies/policies-descriptions.ftl` — The page name 'Third-party Module Information' is rendered as 'external information about modules', so 'third-party' wrongly describes the information instead of the modules.
-    - Current: `eksterne ynformaasje oer modulen`
-    - Source: `Prevent the user from using Third-party Module Information (about:third-party) to block third-party modules injected into the { -brand-short-name } process.`
-    - Suggest: `Ynformaasje oer modulen fan tredden`
-    - In en-US, 'Third-party Module Information' is the title of the about:third-party page and means information about third-party modules. The Frisian says the information itself is external, which is wrong, and it doesn't match 'modulen fan tredden' later in the same sentence.
+_No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `appmenu-recently-closed-windows` — `browser/browser/appmenu.ftl` — Koartlyn sluten skermen → … finsters
-    - Current: `Koartlyn sluten skermen`
-    - Source: `label: Recently Closed Windows`
-    - Suggest: `… finsters`
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

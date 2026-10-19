@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
+| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 107 of 16,457 |
+| **Strings reviewed this run** | 3 of 16,460 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,23 +18,9 @@ Also for cs: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `bookmark-properties-title-add-multiple-bookmarks` — `browser/browser/editBookmarkOverlay.ftl` — The title "New Bookmarks" is rendered as "Add all tabs to bookmarks", which says something different from the source.
-    - Current: `Přidat všechny panely do záložek`
-    - Source: `New Bookmarks`
-    - Suggest: `Nové záložky`
-    - The en-US is "New Bookmarks", and the comment says the title is used when bookmarking multiple tabs at once, not necessarily all of them. The Czech names a different action, "all tabs", which is wrong when only selected tabs are bookmarked. It looks like a stale translation of the older "Bookmark All Tabs" string.
-- `policy-BlockAboutSupport2` — `browser/browser/policies/policies-descriptions.ftl` — Wrong case: the verb "zablokuje" needs the accusative "přístup", not the genitive "přístupu".
-    - Current: `Zablokuje přístupu ke stránce`
-    - Source: `Block access to Troubleshooting Information (about:support).`
-    - Suggest: `Zablokuje přístup ke stránce`
-    - "Zablokovat" takes the accusative, so it has to be "přístup". The sibling strings (BlockAboutConfig2, BlockAboutProfiles2) correctly use "přístup".
-- `safeb-report-false-deceptive-error-message` — `browser/browser/safebrowsing/blockedSite.ftl` — A double negative ("nelze nehlásit") reverses the meaning: the Czech says the error cannot not be reported.
-    - Current: `nelze nehlásit`
-    - Source: `It’s not possible to report this error at this time.`
-    - Suggest: `nelze nahlásit`
-    - The en-US says reporting is not possible right now. "nelze nehlásit" literally means "it is not possible to not report", which is the opposite. It should be "nahlásit".
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -59,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 328 |
-| Strings | 16,457 |
-| Missing strings | 63 |
+| Strings | 16,460 |
+| Missing strings | 60 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -77,9 +63,9 @@ _Nothing retired._
 
 ### Completeness
 
-**63 strings** are not translated yet, concentrated in:
+**60 strings** are not translated yet, concentrated in:
 
-- `browser/browser/ipProtection.ftl` — 21
+- `browser/browser/ipProtection.ftl` — 18
 - `browser/browser/autoTabGrouping.ftl` — 9
 - `browser/browser/newtab/newtab.ftl` — 9
 - `browser/browser/newtab/onboarding.ftl` — 8

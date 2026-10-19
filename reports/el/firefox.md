@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-16 @ `db2cfca9d18c` |
+| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 112 of 16,520 |
+| **Strings reviewed this run** | 0 of 16,520 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for el: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `permissions-site-app-links-desc` — `browser/browser/preferences/permissions.ftl` — "App links" is rendered as "συνδέσμων από εφαρμογές" (links from apps), which doesn't match the "συνδέσμων εφαρμογών" used in the window title and related strings.
-    - Current: `το άνοιγμα συνδέσμων από εφαρμογές`
-    - Source: `These sites are blocked from asking to open app links, like email (mailto:). Remove a site to allow it to ask again.`
-    - Suggest: `το άνοιγμα συνδέσμων εφαρμογών`
-    - App links are links that open an app (e.g. mailto:), not links that come from apps. The window title and permission strings use "συνδέσμων εφαρμογών". The "από" changes the meaning and makes the terminology inconsistent on the same surface.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
+| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 88 of 16,477 |
+| **Strings reviewed this run** | 0 of 16,477 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,36 +18,13 @@ Also for hu: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (0)
 
-- `bookmark-properties-title-edit-folder` — `browser/browser/editBookmarkOverlay.ftl` — "Edit bookmark folder" is translated as "Add bookmark folder".
-    - Current: `hozzáadása`
-    - Source: `Edit bookmark folder`
-    - Suggest: `szerkesztése`
-    - The en-US source means edit, but "hozzáadása" means "adding". The string looks copied from bookmark-properties-title-add-folder, so the add and edit dialogs now have the same title.
-- `genai-settings-chat-scout-links` — `browser/browser/genai.ftl` — The wrong definite article is used before "Yahoo".
-    - Current: `elfogadja az Yahoo`
-    - Source: `By choosing Yahoo Scout, you agree to the Yahoo <a data-l10n-name="link1">Terms of Service</a> and <a data-l10n-name="link2">Privacy Policy</a>.`
-    - Suggest: `elfogadja a Yahoo`
-    - "Yahoo" is pronounced with an initial consonant [j], so Hungarian needs the article "a", not "az". The same string already uses "A Yahoo Scout" correctly at the start.
-- `restore-session-startup-suggestion-button` — `browser/browser/newtab/asrouter.ftl` — Missing comma before the subordinate clause introduced by "hogyan".
-    - Current: `Mutassa meg hogyan`
-    - Source: `Show me how`
-    - Suggest: `Mutassa meg, hogyan`
-    - Hungarian punctuation rules require a comma between the main clause and the subordinate clause introduced by the interrogative "hogyan".
-- `appmenu-search-history` — `browser/browser/appmenu.ftl` — "Keresés előzményei" means "history of searches" instead of the action "search the history".
-    - Current: `Keresés előzményei`
-    - Source: `label: Search History`
-    - Suggest: `Előzmények keresése`
-    - The developer comment says this item lets you search through the browser's history. The Hungarian genitive structure instead names a history of searches, which is a different feature.
+_No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `appmenu-search-history` — `browser/browser/appmenu.ftl` — “Search history” (verb + object) is rendered as the noun “search history”.
-    - Current: `Keresés előzményei`
-    - Source: `label: Search History`
-    - Suggest: `Előzmények keresése`
-    - The developer comment says “This allows to search through the browser's history”, i.e. Search is a verb here.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

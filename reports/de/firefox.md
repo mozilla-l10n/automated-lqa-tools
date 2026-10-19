@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
+| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 130 of 16,742 |
+| **Strings reviewed this run** | 0 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,23 +18,9 @@ Also for de: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `ip-protection-site-rules-button-1` — `browser/browser/ipProtection.ftl` — Incorrect comma before "oder" joining two coordinated relative clauses.
-    - Current: `die mehr Datenschutz, oder die ein deaktiviertes VPN benötigen`
-    - Source: `description: Set rules for sites that need extra privacy or VPN turned off. label: Manage VPN rules`
-    - Suggest: `die mehr Datenschutz oder ein deaktiviertes VPN benötigen`
-    - German comma rules do not allow a comma before "oder" when it links parallel clause parts like these. The comma here is a punctuation error.
-- `permissions-allow-app-links` — `browser/browser/preferences/preferences.ftl` — The German drops "ask", so it says sites may open app links rather than ask to open them.
-    - Current: `Websites erlauben, App-Links zu öffnen.`
-    - Source: `accesskey: A label: Allow sites to ask to open app links.`
-    - Suggest: `Websites erlauben, das Öffnen von App-Links anzufragen.`
-    - The en-US "Allow sites to ask to open app links" grants permission to ask, which matches the related strings ("Fragen, ob App-Links geöffnet werden sollen"). The German claims sites may open app links directly, a wider permission than the setting gives.
-- `policy-PasswordManagerEnabled2` — `browser/browser/policies/policies-descriptions.ftl` — A full stop is missing between the two sentences.
-    - Current: `aktivieren oder deaktivieren Wenn`
-    - Source: `Enable or disable saving passwords to the password manager. If disabled, Passwords (about:logins) is also blocked.`
-    - Suggest: `aktivieren oder deaktivieren. Wenn`
-    - The en-US has two sentences. In the German the first runs into the second with no punctuation.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

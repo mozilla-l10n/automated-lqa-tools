@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
+| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 139 of 15,838 |
+| **Strings reviewed this run** | 0 of 15,838 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -348,7 +348,7 @@ _One line each in `locales/sl/dismissed.txt`. Delete the line and the finding re
 ### Suppressed as false positives (2)
 
 - **`sl-brand-case-params`** (2) — Brand terms carry a `sklon` case parameter; correct Slovenian.
-    - `firefox-relay-must-login-to-fxa`, `smartwindow-assistant-error-account-header`
+    - `smartwindow-assistant-error-account-header`, `firefox-relay-must-login-to-fxa`
 
 _Suppressions live in `locales/sl/suppressions.yaml`. Removing a rule brings its findings back._
 

@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
+| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 129 of 16,520 |
+| **Strings reviewed this run** | 0 of 16,520 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,58 +18,9 @@ Also for ru: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (10)
+### 🆕 New findings (0)
 
-- `fire-button-toolbar-button` — `browser/browser/browser.ftl` — "browsing data" is translated as "данные своего веб-сёрфинга" here but as "данные просмотра" in the panel strings this button opens.
-    - Current: `Удалите некоторые или все данные своего веб-сёрфинга`
-    - Source: `label: Delete some or all of your browsing data tooltiptext: Delete some or all of your browsing data`
-    - Suggest: `Удалите некоторые или все данные просмотра`
-    - The same en-US term "browsing data" is rendered as "данные просмотра" in fire-button-panel-heading and fire-button-panel-complete. The button that opens that panel uses the colloquial, non-standard "данные веб-сёрфинга", so the two don't match within one feature.
-- `ip-protection-site-rule-window` — `browser/browser/ipProtection.ftl` — Dialog title for setting a single rule is rendered in the plural.
-    - Current: `Установить правила`
-    - Source: `title: Set rule`
-    - Suggest: `Установить правило`
-    - en-US "Set rule" is singular; the dialog sets one rule, and the add button and edit window use the singular «правило».
-- `sidebar-history-import-promo` — `browser/browser/sidebar.ftl` — "Grab" is translated literally as «Захватить» (seize), and the bare infinitive reads as unnatural, not as an invitation.
-    - Current: `Отсутствует что-то? Захватить историю из другого браузера.`
-    - Source: `message: Missing something? Grab history from another browser.`
-    - Suggest: `Чего-то не хватает? Перенесите историю из другого браузера.`
-    - The promo invites the user to import history. «Захватить» means seize/capture, which is the wrong sense of the colloquial "grab". The invitation should use the formal imperative, following the locale's register.
-- `ip-protection-site-rules-list-section-1` — `browser/browser/ipProtection.ftl` — "Website rules" is rendered as the rules of one website, but the list holds rules for many sites.
-    - Current: `Правила веб-сайта`
-    - Source: `description: Set rules to turn VPN on or off automatically. label: Website rules`
-    - Suggest: `Правила для веб-сайтов`
-    - This section lists rules for multiple websites. The same term appears elsewhere as «правила для веб-сайтов» (ip-protection-delete-all-site-rules-message).
-- `newtab-horoscopes-widget-open-menu-button` — `browser/browser/newtab/newtab.ftl` — The word for horoscopes is misspelled as «горскопов» in both the aria-label and the title.
-    - Current: `Открыть меню горскопов`
-    - Source: `aria-label: Open horoscopes menu title: Open horoscopes menu`
-    - Suggest: `Открыть меню гороскопов`
-    - The genitive plural of «гороскоп» is «гороскопов». The missing «о» is a spelling error, and screen readers will read it out.
-- `policy-DisableSafeMode2` — `browser/browser/policies/policies-descriptions.ftl` — Troubleshoot Mode is translated as «безопасный режим», so the bracket just repeats the same name.
-    - Current: `в безопасном режиме (Безопасный режим)`
-    - Source: `Disable restarting in Troubleshoot Mode (Safe Mode).`
-    - Suggest: `в режиме устранения неполадок (Безопасный режим)`
-    - The en-US gives the current name, Troubleshoot Mode, and puts the old name, Safe Mode, in brackets. The Russian uses the old name twice, so it loses the current feature name and the bracket adds nothing.
-- `permissions-site-app-links-desc` — `browser/browser/preferences/permissions.ftl` — The instruction uses an infinitive («Удалить») where it needs the formal imperative.
-    - Current: `Удалить сайт, чтобы он мог запросить это снова.`
-    - Source: `These sites are blocked from asking to open app links, like email (mailto:). Remove a site to allow it to ask again.`
-    - Suggest: `Удалите сайт, чтобы он мог запросить это снова.`
-    - "Remove a site to allow it to ask again" tells the user what to do. In this sentence the infinitive is ungrammatical, and the locale addresses the user in the formal register.
-- `restore-session-startup-suggestion-button` — `browser/browser/newtab/asrouter.ftl` — There is no comma before the subordinate clause starting with «как».
-    - Current: `Показать мне как`
-    - Source: `Show me how`
-    - Suggest: `Показать мне, как`
-    - Russian punctuation requires a comma before «как» when it introduces a dependent clause ("show me how [to do it]").
-- `permissions-site-app-links-window` — `browser/browser/preferences/permissions.ftl` — The window title uses a hyphen-minus where the locale uses an em dash.
-    - Current: `Настройки - Заблокированные`
-    - Source: `style: { permissions-window2.style } title: Settings - Blocked Sites for App Links`
-    - Suggest: `Настройки — Заблокированные`
-    - The ru locale convention is an em dash. A spaced hyphen here is a typographic error.
-- `appmenu-search-history` — `browser/browser/appmenu.ftl` — The label is translated as "history of searches" when it should mean "search through history".
-    - Current: `Журнал поиска`
-    - Source: `label: Search History`
-    - Suggest: `Поиск по журналу`
-    - The developer comment says this item lets you search through the browser's history. "Журнал поиска" names a log of past searches, which is a different thing.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
