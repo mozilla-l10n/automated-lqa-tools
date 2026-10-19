@@ -3,14 +3,15 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
-| **Mode** | incremental |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cb086148c41a` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `3bdd70692916` |
+| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 15,838 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for sl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
@@ -46,9 +47,9 @@ _Nothing retired._
 |---|---|
 | Files | 327 |
 | Strings | 15,838 |
-| Missing strings | 682 |
+| Missing strings | 708 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 2 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,10 +64,10 @@ _Nothing retired._
 
 ### Completeness
 
-**682 strings** are not translated yet, concentrated in:
+**708 strings** are not translated yet, concentrated in:
 
 - `browser/browser/aiWindow.ftl` — 141
-- `browser/browser/ipProtection.ftl` — 85
+- `browser/browser/ipProtection.ftl` — 92
 - `browser/browser/aiWindowContent.ftl` — 58
 - `dom/chrome/dom/dom.properties` — 49
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 48
@@ -81,6 +82,7 @@ _Nothing retired._
 **Files absent from the locale:**
 
 - `browser/browser/autoTabGrouping.ftl`
+- `browser/browser/miniWindow.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -108,15 +110,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ## 3. Open findings (50)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `onboarding-refresh-terms-of-use-with-links` — `browser/browser/newtab/onboarding.ftl` — The purpose clause is mistranslated so that the sentence reads "To improve the { -brand-product-name } browser" and merges the subject, changing which product is being improved and who sends the data.
-    - Current: `Za izboljšanje brskalnika { -brand-product-name } { -vendor-short-name } pošilja diagnostične podatke in podatke o uporabi.`
-    - Source: `By continuing, you agree to the <a data-l10n-name="terms_of_use">{ -brand-product-name } Terms of Use</a> and our <a data-l10n-name="privacy_notice">Privacy Notice</a>. To help improve the browser, { -brand-product-name…`
-    - Suggest: `Za izboljšanje brskalnika { -brand-product-name } pošilja { -vendor-short-name } diagnostične podatke in podatke o uporabi.`
-    - In en-US the subject is { -brand-product-name } which sends data to { -vendor-short-name }; the Slovenian makes { -vendor-short-name } the sender and attaches the brand name to "brskalnika", reversing the roles and dropping the recipient.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|

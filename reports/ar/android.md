@@ -3,14 +3,15 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `57c409b04755` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `57c409b04755` |
-| **Previous run** | 2026-10-18 @ `dd8ca757b7dd` |
-| **Mode** | incremental |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ea17dbc84971` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ea17dbc84971` |
+| **Previous run** | 2026-10-19 @ `57c409b04755` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 2,638 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for ar: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
@@ -67,12 +68,12 @@ _Nothing retired._
 
 - `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — 114
 - `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml` — 23
-- `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ar/strings.xml` — 9
 - `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ar/strings.xml` — 9
+- `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ar/strings.xml` — 9
 - `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-ar/strings.xml` — 4
 - `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 2
-- `mozilla-mobile/android-components/components/feature/protection-dashboard/src/main/res/values-ar/strings.xml` — 1
 - `mozilla-mobile/android-components/components/feature/ipprotection/src/main/res/values-ar/strings.xml` — 1
+- `mozilla-mobile/android-components/components/feature/protection-dashboard/src/main/res/values-ar/strings.xml` — 1
 - `mozilla-mobile/focus-android/app/src/main/res/values-ar/strings.xml` — 1
 
 **Files absent from the locale:**
@@ -101,15 +102,10 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (142)
+## 3. Open findings (141)
 
-> **Reads as a deliberate edit (5).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (4).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
-- `inactive_tabs_auto_close_message_description` — `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — The Arabic says Firefox will close inactive tabs automatically, but the source only says it can.
-    - Current: `سيُغلق Firefox التبويبات التي لم تعرضها منذ شهر تلقائيًا.`
-    - Source: `Firefox can close tabs you haven’t viewed over the past month.`
-    - Suggest: `يمكن لـ Firefox إغلاق التبويبات التي لم تعرضها خلال الشهر الماضي.`
-    - This string describes an optional feature the user is being asked to turn on. The source says 'can close', but the Arabic tells the user Firefox will close their tabs, as if that is already happening.
 - `nova_onboarding_notifications_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — The subtitle promises the user will always be protected, where the source only says they will stay up to date on how to stay protected.
     - Current: `لتبقى محميًا دائمًا`
     - Source: `Discover the latest privacy features in Firefox so you’re always up to date on how to stay protected.`
@@ -136,7 +132,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 59 |
+| 2 | Wrong content (says something other than the English) | 58 |
 | 3 | Degraded language (grammar, spelling, terminology) | 75 |
 | 4 | Cosmetic (typography, spacing) | 8 |
 
@@ -291,11 +287,6 @@ _Nothing in this category._
     - Source: `Search history`
     - Suggest: `ابحث في التأريخ`
     - The comment says this is placeholder text in the history search bar, so "search" is a verb here. "سجل البحث" means "the record of searches", which is a different thing.
-- `inactive_tabs_auto_close_message_description` — `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — The Arabic says Firefox will close inactive tabs automatically, but the source only says it can.
-    - Current: `سيُغلق Firefox التبويبات التي لم تعرضها منذ شهر تلقائيًا.`
-    - Source: `Firefox can close tabs you haven’t viewed over the past month.`
-    - Suggest: `يمكن لـ Firefox إغلاق التبويبات التي لم تعرضها خلال الشهر الماضي.`
-    - This string describes an optional feature the user is being asked to turn on. The source says 'can close', but the Arabic tells the user Firefox will close their tabs, as if that is already happening.
 - `ip_protection_data_reset_info` — `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — "يُصفّر" means "is zeroed", so "zeroed to 50 GB" contradicts itself; the source means the allowance is reset to the full amount.
     - Current: `يُصفّر إلى`
     - Source: `Resets to %1$.0f GB on the first of every month.`
@@ -446,7 +437,11 @@ _Nothing in this category._
     - Source: `Block reported deceptive and attack sites, malware sites, and unwanted software sites.`
     - Suggest: `بأنها خدّاعة أو هجومية`
     - The source lists "deceptive and attack sites". The title string uses "خدّاعة" for "deceptive", but the summary uses "ضارة" (harmful), which is a different idea and repeats the later "ما هو ضار".
-- _…and 1 more; see `state/` for the full list._
+- `preference_show_search_suggestions_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-ar/strings.xml` — "الذي فضّله" (that he preferred) uses the wrong person and changes "your search engine" into the engine Focus preferred.
+    - Current: `الذي فضّله`
+    - Source: `%1$s will send what you type in the address bar to your search engine`
+    - Suggest: `الذي فضّلته`
+    - The source says "your search engine", meaning the one the user picked. The masculine third-person verb points back to %1$s (the app), so the sentence says the app picked the engine.
 
 ### C. Grammar, agreement & spelling
 

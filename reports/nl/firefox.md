@@ -3,14 +3,15 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
-| **Mode** | incremental |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cb086148c41a` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `3bdd70692916` |
+| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 16,500 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for nl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
@@ -46,9 +47,9 @@ _Nothing retired._
 |---|---|
 | Files | 328 |
 | Strings | 16,500 |
-| Missing strings | 20 |
+| Missing strings | 46 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,17 +64,24 @@ _Nothing retired._
 
 ### Completeness
 
-**20 strings** are not translated yet, concentrated in:
+**46 strings** are not translated yet, concentrated in:
 
-- `browser/browser/ipProtection.ftl` — 7
-- `browser/browser/browser.ftl` — 4
+- `browser/browser/miniWindow.ftl` — 15
+- `browser/browser/ipProtection.ftl` — 14
+- `browser/browser/browser.ftl` — 6
 - `browser/browser/preferences/permissions.ftl` — 2
 - `browser/browser/preferences/preferences.ftl` — 2
-- `toolkit/toolkit/global/videocontrols.ftl` — 1
+- `browser/browser/browserContext.ftl` — 1
 - `browser/browser/migrationWizard.ftl` — 1
 - `browser/browser/sanitize.ftl` — 1
 - `browser/browser/sidebar.ftl` — 1
+- `browser/browser/tabbrowser.ftl` — 1
 - `browser/browser/newtab/newtab.ftl` — 1
+- `toolkit/toolkit/global/videocontrols.ftl` — 1
+
+**Files absent from the locale:**
+
+- `browser/browser/miniWindow.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -98,22 +106,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (345)
+## 3. Open findings (344)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `restart-required-unsaved-work-answer` — `browser/browser/aboutRestartRequired.ftl` — "may not be restored" rendered as "kan niet worden hersteld", turning a possibility into a certainty that unsaved work cannot be restored.
-    - Current: `zoals tekst in een formulier, kan niet worden hersteld`
-    - Source: `Possibly, and we know that’s frustrating. { -brand-short-name } will reopen your tabs, but unsaved work inside webpages, like text in a form, may not be restored. Private Windows won’t reopen to protect your privacy.`
-    - Suggest: `zoals tekst in een formulier, kan mogelijk niet worden hersteld`
-    - The en-US says unsaved work "may not be restored" (possible loss); the Dutch asserts flatly that it cannot be restored.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 10 |
-| 2 | Wrong content (says something other than the English) | 117 |
+| 2 | Wrong content (says something other than the English) | 116 |
 | 3 | Degraded language (grammar, spelling, terminology) | 191 |
 | 4 | Cosmetic (typography, spacing) | 27 |
 
@@ -150,11 +149,6 @@ _Also listed under their own category below._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `restart-required-unsaved-work-answer` — `browser/browser/aboutRestartRequired.ftl` — "may not be restored" rendered as "kan niet worden hersteld", turning a possibility into a certainty that unsaved work cannot be restored.
-    - Current: `zoals tekst in een formulier, kan niet worden hersteld`
-    - Source: `Possibly, and we know that’s frustrating. { -brand-short-name } will reopen your tabs, but unsaved work inside webpages, like text in a form, may not be restored. Private Windows won’t reopen to protect your privacy.`
-    - Suggest: `zoals tekst in een formulier, kan mogelijk niet worden hersteld`
-    - The en-US says unsaved work "may not be restored" (possible loss); the Dutch asserts flatly that it cannot be restored.
 - `profiler-popup-presets-ml-description` — `browser/browser/appmenu.ftl` — perftools-presets-ml-description2, profiler-popup-presets-ml-description — client/perftools.ftl, browser/browser/appmenu.ftl — "machine learning" became "machine translation". Suggest: "…bugs in machinaal leren…"
     - Source: `Preset for investigating machine learning bugs in { -brand-shorter-name }.`
 - `other-backup-files-founds` — `browser/browser/backupSettings.ftl` — en-US "Note:". Current: "<b>Noot:</b>" → Suggest: "<b>Opmerking:</b>"
@@ -317,7 +311,9 @@ _Also listed under their own category below._
     - Suggest: `"Autoriteiten"`
 - `pkcs12-decode-err` — `security/manager/security/certificates/certManager.ftl` — "format" turned into "encrypted in the format". Suggest: "Het heeft niet de PKCS #12-indeling, is beschadigd, …"
     - Source: `Failed to decode the file. Either it is not in PKCS #12 format, has been corrupted, or the password you entered was incorrect.`
-- _…and 59 more; see `state/` for the full list._
+- `pippki-failed-pw-change` — `security/manager/security/pippki/pippki.ftl` — pippki-failed-pw-change, pippki-incorrect-pw, pippki-pw-erased-ok, pippki-pw-not-wanted, pippki-pw-change2empty-in-fips-mode — security/.../pippki.ftl — these belong to the device password dialog (change-device-password-window); en-US says plain "password", but nl says "hoofdwachtwoord" (Primary Password). Suggest: use "wachtwoord" in these five; keep "hoofdwachtwoord" only in the reset-primary-p…
+    - Source: `Unable to change password.`
+- _…and 58 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

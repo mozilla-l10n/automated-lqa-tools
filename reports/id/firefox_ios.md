@@ -5,12 +5,13 @@
 | **Generated** | 2026-10-19 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **Previous run** | 2026-10-17 @ `09d125f6a298` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 12 of 1,927 |
+| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 1,927 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for id: [android](android.md) · [firefox](firefox.md)
 
@@ -82,18 +83,13 @@ _Nothing reported._
 
 ## 3. Open findings (93)
 
-> **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `QuickAnswers.PrivacyBanner.Description.v158` — `id/firefox-ios.xliff` — The negation only applies to the first item, so the translation states that the app does use data to train AI models and uses the voice to identify the user.
     - Current: `%@ tidak menyimpan audio atau pertanyaan Anda, menggunakan data Anda untuk melatih model AI, atau menggunakan suara Anda untuk mengidentifikasi Anda.`
     - Source: `%@ doesn’t store your audio or questions, use your data to train AI models, or use your voice to identify you.`
     - Suggest: `%@ tidak menyimpan audio atau pertanyaan Anda, tidak menggunakan data Anda untuk melatih model AI, dan tidak menggunakan suara Anda untuk mengidentifikasi Anda.`
     - In English "doesn't" distributes over all three verbs; in Indonesian the negation must be repeated, otherwise the sentence reads as an affirmative claim that the app trains AI models on user data and identifies users by voice.
-- `Search.ThirdPartyEngines.DuplicateErrorMessage` — `id/firefox-ios.xliff` — Error message translated as a success ("has been successfully added") instead of stating the engine was already added.
-    - Current: `Mesin pencari dengan judul ini atau URL telah berhasil ditambahkan.`
-    - Source: `A search engine with this title or URL has already been added.`
-    - Suggest: `Mesin pencari dengan judul atau URL ini sudah pernah ditambahkan.`
-    - The source says a search engine with this title or URL "has already been added" — it is an error under the title "Failed". The Indonesian "telah berhasil ditambahkan" means "was successfully added", reversing the message into a success confirmation.
 - `Firefox won’t remember any of your history or cookies, but new bookmarks will be saved.` — `id/firefox-ios.xliff` — "won’t remember any of your history" is rendered as "tidak akan mengingat semua riwayat", which reads as "will not remember all history" (i.e. may remember some).
     - Current: `tidak akan mengingat semua riwayat atau kuki`
     - Source: `Firefox won’t remember any of your history or cookies, but new bookmarks will be saved.`

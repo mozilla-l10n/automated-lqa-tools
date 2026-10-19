@@ -1634,30 +1634,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "سيُغلق Firefox التبويبات التي لم تعرضها منذ شهر تلقائيًا.",
-  "dismissed_because": "",
-  "fid": "23278a7d4ddc",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "ar",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "This string describes an optional feature the user is being asked to turn on. The source says 'can close', but the Arabic tells the user Firefox will close their tabs, as if that is already happening.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "ba1e8ce5",
-  "string_id": "inactive_tabs_auto_close_message_description",
-  "suggest": "يمكن لـ Firefox إغلاق التبويبات التي لم تعرضها خلال الشهر الماضي.",
-  "summary": "The Arabic says Firefox will close inactive tabs automatically, but the source only says it can.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "يُصفّر إلى",
   "dismissed_because": "",
   "fid": "1f3aca603172",

@@ -5,12 +5,13 @@
 | **Generated** | 2026-10-19 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **Previous run** | 2026-10-17 @ `09d125f6a298` |
-| **Mode** | incremental |
+| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 1,848 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for es-ES: [android](android.md) · [firefox](firefox.md)
 
@@ -97,15 +98,10 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (58)
+## 3. Open findings (57)
 
-> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
-- `Menu.TrackingProtectionDescription.ContentTrackers` — `es-ES/firefox-ios.xliff` — "can make websites load faster" rendered as a certainty ("hará que").
-    - Current: `Bloquearlos hará que los sitios web carguen más rápido`
-    - Source: `Websites may load outside ads, videos, and other content that contains hidden trackers. Blocking this can make websites load faster, but some buttons, forms, and login fields, might not work.`
-    - Suggest: `Bloquearlos puede hacer que los sitios web carguen más rápido`
-    - The en-US hedges with "can make"; the Spanish asserts it as a guaranteed outcome.
 - `Menu.TrackingProtectionDescription.SocialNetworksNew` — `es-ES/firefox-ios.xliff` — The Spanish reverses the relationship (social networks place trackers ON other websites) and overstates the effect of blocking.
     - Current: `Las redes sociales colocan rastreadores para que otros sitios web construyan un perfil más completo dirigido a ti. Si bloqueas estos rastreadores, muchas empresas de medios sociales dejarán de tener acceso a tus datos y…`
     - Source: `Social networks place trackers on other websites to build a more complete and targeted profile of you. Blocking these trackers reduces how much social media companies can see what do you online.`
@@ -117,7 +113,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 32 |
+| 2 | Wrong content (says something other than the English) | 31 |
 | 3 | Degraded language (grammar, spelling, terminology) | 25 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
@@ -221,11 +217,6 @@ _Also listed under their own category below._
     - Source: `Forward`
     - Suggest: `Tamaño real`
     - Per the developer comment, "Actual Size" resets the page view to the standard viewing size; "Tamaño actual" is a false friend meaning "current size".
-- `Menu.TrackingProtectionDescription.ContentTrackers` — `es-ES/firefox-ios.xliff` — "can make websites load faster" rendered as a certainty ("hará que").
-    - Current: `Bloquearlos hará que los sitios web carguen más rápido`
-    - Source: `Websites may load outside ads, videos, and other content that contains hidden trackers. Blocking this can make websites load faster, but some buttons, forms, and login fields, might not work.`
-    - Suggest: `Bloquearlos puede hacer que los sitios web carguen más rápido`
-    - The en-US hedges with "can make"; the Spanish asserts it as a guaranteed outcome.
 - `Menu.TrackingProtectionDescription.CrossSiteNew` — `es-ES/firefox-ios.xliff` — "set by third parties such as advertisers and analytics companies" narrowed to only advertising and analytics companies.
     - Current: `Están configuradas por empresas externas de anuncios y de analítica web.`
     - Source: `These cookies follow you from site to site to gather data about what you do online. They are set by third parties such as advertisers and analytics companies.`

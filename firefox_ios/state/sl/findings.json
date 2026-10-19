@@ -746,30 +746,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "Morebitni modeli UI, ki so se že prenesli na napravo, bodo odstranjeni.",
-  "dismissed_because": "",
-  "fid": "c1c87e03e6f2",
-  "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "sl",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "en-US limits the model removal to on-device AI (\"For on-device AI, any downloaded models are removed.\"); the translation makes it a general statement about the product's behaviour.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "335db6a0",
-  "string_id": "Settings.AIControls.AIPoweredFeaturesSection.BlockedStatusDescriptionV2.v151",
-  "suggest": "Pri UI, ki se izvaja na napravi, bodo odstranjeni vsi preneseni modeli.",
-  "summary": "The qualifier \"For on-device AI\" is dropped, so the Slovenian states unconditionally that downloaded AI models will be removed.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "MOŽNOSTI UMETNE INTELIGENCE",
   "dismissed_because": "",
   "fid": "b2f0b50b2a89",

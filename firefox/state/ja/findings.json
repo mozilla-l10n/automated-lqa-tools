@@ -2158,30 +2158,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "{ -brand-short-name } が再インストールされ前回のプロファイルが残っています。新品の状態にリフレッシュしますか？",
-  "dismissed_because": "",
-  "fid": "5324b4956db7",
-  "file": "browser/browser/newtab/asrouter.ftl",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "ja",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "en-US only says \"Looks like you've reinstalled\"; the Japanese asserts as fact that a previous profile remains, which the source never states.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "5725538c",
-  "string_id": "refresh-reinstalled-profile-infobar-message",
-  "suggest": "{ -brand-short-name } を再インストールされたようです。新品のような状態にクリーンアップしましょうか？",
-  "summary": "Adds a claim about a leftover previous profile that the en-US does not make.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "お久しぶりです！ { -brand-short-name } はしばらく使われていないようです。プロファイルを掃除して新品のようにきれいにしますか？",
   "dismissed_because": "",
   "fid": "cb23d2af469f",
@@ -3337,7 +3313,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US header invites the user to import their data from another browser; the Japanese instead asserts that the product protects the user's personal data, which the source never says here.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "7a41387c",
@@ -3490,7 +3466,7 @@
    "confidence": "high"
   },
   "rationale": "en-US says the audio never leaves the device (not that it is retained on it), and \"~\" means approximately, not \"or less\".",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "139d1491",
@@ -4932,30 +4908,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "使用中のアプリまたはサービスは暗号化された通信を見ることができます。",
-  "dismissed_because": "",
-  "fid": "ece9ab422fec",
-  "file": "browser/browser/preferences/preferences.ftl",
-  "first_seen": "2026-09-07",
-  "impact": 2,
-  "last_seen": "2026-09-07",
-  "locale": "ja",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "en-US \"may see\" expresses possibility; the Japanese states it as a fact about the user's apps/services.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "e8233dc1",
-  "string_id": "tls-key-logging-notice-nav",
-  "suggest": "アプリまたはサービスが暗号化された通信を閲覧できる状態になっている可能性があります。",
-  "summary": "The source's hedged \"may see\" is rendered as a definite \"can see\", asserting that traffic is being read.",
-  "suppressed_by": ""
- },
- {
   "category": "E",
   "check": "legacy",
   "current": "",
@@ -5006,30 +4958,6 @@
   "string_id": "use-current-pages",
   "suggest": "現在のすべてのページを使用",
   "summary": "\"Use Current Pages\" means the currently open tabs, not a tab group; the [1] variant correctly says 現在のページを使用. Current 現在のタブグループを使用 → 現在のすべてのページを使用 Verified.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "これにより、ウェブサイトからログアウトされ、オフラインのウェブコンテンツが削除されます。",
-  "dismissed_because": "",
-  "fid": "a5e89551831e",
-  "file": "browser/browser/preferences/siteDataSettings.ftl",
-  "first_seen": "2026-10-19",
-  "impact": 2,
-  "last_seen": "2026-10-19",
-  "locale": "ja",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The en-US says \"This may sign you out of websites and remove offline web content\", which is only a possibility. The Japanese turns this into a certainty, which changes what the product says about what the action does.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "42a24429",
-  "string_id": "site-data-clear-all-prompt-text",
-  "suggest": "これにより、ウェブサイトからログアウトされたり、オフラインのウェブコンテンツが削除されたりする場合があります。",
-  "summary": "The hedge \"may\" is dropped, so the Japanese says clearing data will definitely sign the user out and delete offline content.",
   "suppressed_by": ""
  },
  {
@@ -8200,7 +8128,7 @@
    "confidence": "high"
   },
   "rationale": "The source describes what the logs are (diagnostic logs written by sync), not an action the page performs on them.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "5ae72220",

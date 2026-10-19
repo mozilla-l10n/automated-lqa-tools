@@ -962,30 +962,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "Los cambios se aplicaron remotamente.",
-  "dismissed_because": "",
-  "fid": "9d9f9f23c53a",
-  "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "es-AR",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The source states changes are applied remotely as a general behaviour, not that changes have already been applied.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "ed7400e8",
-  "string_id": "Settings.Rollouts.Message.v148",
-  "suggest": "Los cambios se aplican remotamente.",
-  "summary": "Present/future \"Changes applied remotely\" rendered in past tense, asserting changes were already applied.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "está habilitado en la parte superior",
   "dismissed_because": "",
   "fid": "8b85dd479985",

@@ -3,14 +3,15 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 188 of 16,520 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cb086148c41a` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `3bdd70692916` |
+| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 16,520 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for ja: [android](android.md) · [firefox_ios](firefox_ios.md)
 
@@ -18,38 +19,9 @@ Also for ja: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (6)
+### 🆕 New findings (0)
 
-- `menu-share-mac-picker-multiple` — `browser/browser/browser.ftl` — The macOS app name "Mail" is left in English, but Japanese macOS calls it "メール", and "Messages" in the same label is localized.
-    - Current: `メッセージ、Mail、他...`
-    - Source: `accesskey: M label: Messages, Mail, and More…`
-    - Suggest: `メッセージ、メール、他...`
-    - The developer comment says "Messages" and "Mail" should match the macOS translation of those app names. The Japanese macOS Mail app is named "メール". The same label already localizes Messages as "メッセージ", so leaving Mail in English is inconsistent.
-- `fire-button-panel-choose-description` — `browser/browser/browser.ftl` — The Japanese tells the user to choose the data they want to keep, but the dialog is for choosing which data to delete.
-    - Current: `削除したくないデータがある場合は、そのデータの種類を選んでください。`
-    - Source: `If you don’t want to delete everything, choose specific data instead.`
-    - Suggest: `すべてを削除したくない場合は、代わりに削除するデータを選んでください。`
-    - The en-US says 'If you don't want to delete everything, choose specific data instead.' The developer comment on fire-button-panel-choose-link says the next dialog is where the user picks which kinds of data to delete. The Japanese says 'if there is data you don't want to delete, choose that data type', which turns the selection around: it tells the user to pick the data to keep.
-- `ip-protection-site-rule-duplicate-error` — `browser/browser/ipProtection.ftl` — "rule" is translated as "エラー" (error), so the message says the site already has an error set.
-    - Current: `このサイトはすでにエラーが設定されています。`
-    - Source: `This site already has a rule.`
-    - Suggest: `このサイトにはすでにルールが設定されています。`
-    - The en-US is "This site already has a rule.", and the comment says it is shown when the typed site already has a rule. The Japanese uses エラー instead of ルール, which garbles the message.
-- `policy-BlockAboutSupport2` — `browser/browser/policies/policies-descriptions.ftl` — There is an extra ASCII period after the closing 。.
-    - Current: `ブロックします。.`
-    - Source: `Block access to Troubleshooting Information (about:support).`
-    - Suggest: `ブロックします。`
-    - Under the locale convention a sentence ends with 。 alone. The trailing '.' doubles the sentence-ending punctuation, and the sibling policy strings don't have it.
-- `permissions-allow-app-links` — `browser/browser/preferences/preferences.ftl` — The checkbox label became a noun phrase ("sites that allow app links") instead of the action "Allow sites to ask to open app links".
-    - Current: `アプリを開くリンクを許可するサイト。`
-    - Source: `accesskey: A label: Allow sites to ask to open app links.`
-    - Suggest: `サイトがアプリを開くリンクの確認を求めることを許可する`
-    - The en-US is a checkbox that lets sites ask to open app links. The Japanese drops both the verb and the 'ask' part, so the setting's meaning is lost.
-- `settings-keyboard-shortcuts-addressbar-link` — `browser/browser/preferences/preferences.ftl` — "in Search" (the Search settings category) became "when searching".
-    - Current: `検索時のアドレスバーの設定をカスタマイズ`
-    - Source: `label: Customize address bar settings in Search`
-    - Suggest: `[検索] パネルでアドレスバーの設定をカスタマイズ`
-    - The developer comment says the link goes to the Search category of settings. "検索時の" means 'address bar settings during search', which is not where the link leads.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -75,9 +47,9 @@ _Nothing retired._
 |---|---|
 | Files | 328 |
 | Strings | 16,520 |
-| Missing strings | 0 |
+| Missing strings | 26 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -91,6 +63,18 @@ _Nothing retired._
 | Typography deviations from this locale's own norm | 0 |
 
 ### Completeness
+
+**26 strings** are not translated yet, concentrated in:
+
+- `browser/browser/miniWindow.ftl` — 15
+- `browser/browser/ipProtection.ftl` — 7
+- `browser/browser/browser.ftl` — 2
+- `browser/browser/browserContext.ftl` — 1
+- `browser/browser/tabbrowser.ftl` — 1
+
+**Files absent from the locale:**
+
+- `browser/browser/miniWindow.ftl`
 
 **Files present but identical to en-US:**
 
@@ -120,52 +104,22 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (142)
+## 3. Open findings (139)
 
-> **Reads as a deliberate edit (7).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `about-private-browsing-spotlight-basics-no-sell-data` — `browser/browser/aboutPrivateBrowsing.ftl` — The translation says the browser checks site involvement and does not sell/share the user's data, instead of automatically asking participating sites not to sell or share it.
     - Current: `{ -brand-short-name } はサイトへの関与を自動的に確認し、あなたの個人データを販売または共有しません。`
     - Source: `{ -brand-short-name } automatically asks participating sites not to sell or share your personal data.`
     - Suggest: `{ -brand-short-name } は対応サイトに対して、あなたの個人データを販売または共有しないよう自動的に要求します。`
     - en-US: "automatically asks participating sites not to sell or share your personal data". The Japanese makes the browser itself the party that does not sell data and drops the request to participating sites.
-- `refresh-reinstalled-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — Adds a claim about a leftover previous profile that the en-US does not make.
-    - Current: `{ -brand-short-name } が再インストールされ前回のプロファイルが残っています。新品の状態にリフレッシュしますか？`
-    - Source: `Looks like you’ve reinstalled { -brand-short-name }. Want us to clean it up for a fresh, like-new experience?`
-    - Suggest: `{ -brand-short-name } を再インストールされたようです。新品のような状態にクリーンアップしましょうか？`
-    - en-US only says "Looks like you've reinstalled"; the Japanese asserts as fact that a previous profile remains, which the source never states.
-- `onboarding-refresh-fro-import-header` — `browser/browser/newtab/onboarding.ftl` — "Bring in your data" (import data) is rendered as "We protect your personal data".
-    - Current: `個人データを守ります`
-    - Source: `Bring in your data`
-    - Suggest: `データを引き継ぎましょう`
-    - The en-US header invites the user to import their data from another browser; the Japanese instead asserts that the product protects the user's personal data, which the source never says here.
-- `speech-recognition-model-download-message` — `browser/browser/permissions.ftl` — "the audio never leaves your device" is rendered as "the audio only remains on this device", and "~{ $sizeMB } MB" (approximately) is rendered as "{ $sizeMB } MB or less".
-    - Current: `音声はこの端末にしか残りません。セットアップを続けると、音声認識モデル ({ $sizeMB } MB 以下) のデータがダウンロードされます。`
-    - Source: `{ -brand-short-name } runs speech recognition locally, so the audio never leaves your device. To set this up, a ~{ $sizeMB } MB download will start when you continue.`
-    - Suggest: `音声が端末外に送信されることはありません。セットアップを続けると、音声認識モデル (約 { $sizeMB } MB) のデータがダウンロードされます。`
-    - en-US says the audio never leaves the device (not that it is retained on it), and "~" means approximately, not "or less".
-- `tls-key-logging-notice-nav` — `browser/browser/preferences/preferences.ftl` — The source's hedged "may see" is rendered as a definite "can see", asserting that traffic is being read.
-    - Current: `使用中のアプリまたはサービスは暗号化された通信を見ることができます。`
-    - Source: `label: An app or service may see your encrypted traffic.`
-    - Suggest: `アプリまたはサービスが暗号化された通信を閲覧できる状態になっている可能性があります。`
-    - en-US "may see" expresses possibility; the Japanese states it as a fact about the user's apps/services.
-- `site-data-clear-all-prompt-text` — `browser/browser/preferences/siteDataSettings.ftl` — The hedge "may" is dropped, so the Japanese says clearing data will definitely sign the user out and delete offline content.
-    - Current: `これにより、ウェブサイトからログアウトされ、オフラインのウェブコンテンツが削除されます。`
-    - Source: `Selecting ‘Clear Now’ will clear all cookies and site data stored by { -brand-short-name }. This may sign you out of websites and remove offline web content.`
-    - Suggest: `これにより、ウェブサイトからログアウトされたり、オフラインのウェブコンテンツが削除されたりする場合があります。`
-    - The en-US says "This may sign you out of websites and remove offline web content", which is only a possibility. The Japanese turns this into a certainty, which changes what the product says about what the action does.
-- `about-sync-log-page-header` — `toolkit/services/aboutSyncLog.ftl` — "Diagnostic logs written by sync." is translated as "diagnoses the logs written by sync", turning a noun phrase into an action.
-    - Current: `description: 同期機能により書き込まれたログを診断します。`
-    - Source: `description: Diagnostic logs written by sync. heading: Sync logs`
-    - Suggest: `description: 同期機能により書き込まれた診断ログです。`
-    - The source describes what the logs are (diagnostic logs written by sync), not an action the page performs on them.
 
 _Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 8 |
-| 2 | Wrong content (says something other than the English) | 65 |
+| 2 | Wrong content (says something other than the English) | 62 |
 | 3 | Degraded language (grammar, spelling, terminology) | 38 |
 | 4 | Cosmetic (typography, spacing) | 31 |
 
@@ -348,11 +302,6 @@ _Also listed under their own category below._
     - Source: `VPN is on for this site`
     - Suggest: `このサイトでは VPN はオンです`
     - The en-US "VPN is on for this site" describes the current state shown in the panel; the Japanese reads as "will turn the VPN on", an action.
-- `refresh-reinstalled-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — Adds a claim about a leftover previous profile that the en-US does not make.
-    - Current: `{ -brand-short-name } が再インストールされ前回のプロファイルが残っています。新品の状態にリフレッシュしますか？`
-    - Source: `Looks like you’ve reinstalled { -brand-short-name }. Want us to clean it up for a fresh, like-new experience?`
-    - Suggest: `{ -brand-short-name } を再インストールされたようです。新品のような状態にクリーンアップしましょうか？`
-    - en-US only says "Looks like you've reinstalled"; the Japanese asserts as fact that a previous profile remains, which the source never states.
 - `refresh-unused-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — The "welcome back" greeting is moved to the front and the original sentence order/content is altered.
     - Current: `お久しぶりです！ { -brand-short-name } はしばらく使われていないようです。プロファイルを掃除して新品のようにきれいにしますか？`
     - Source: `It looks like you haven’t started { -brand-short-name } in a while. Do you want to clean it up for a fresh, like-new experience? And by the way, welcome back!`
@@ -459,16 +408,6 @@ _Also listed under their own category below._
     - Current: `タブグループ`
     - Source: `label: Tabs`
     - Suggest: `タブ`
-- `tls-key-logging-notice-nav` — `browser/browser/preferences/preferences.ftl` — The source's hedged "may see" is rendered as a definite "can see", asserting that traffic is being read.
-    - Current: `使用中のアプリまたはサービスは暗号化された通信を見ることができます。`
-    - Source: `label: An app or service may see your encrypted traffic.`
-    - Suggest: `アプリまたはサービスが暗号化された通信を閲覧できる状態になっている可能性があります。`
-    - en-US "may see" expresses possibility; the Japanese states it as a fact about the user's apps/services.
-- `site-data-clear-all-prompt-text` — `browser/browser/preferences/siteDataSettings.ftl` — The hedge "may" is dropped, so the Japanese says clearing data will definitely sign the user out and delete offline content.
-    - Current: `これにより、ウェブサイトからログアウトされ、オフラインのウェブコンテンツが削除されます。`
-    - Source: `Selecting ‘Clear Now’ will clear all cookies and site data stored by { -brand-short-name }. This may sign you out of websites and remove offline web content.`
-    - Suggest: `これにより、ウェブサイトからログアウトされたり、オフラインのウェブコンテンツが削除されたりする場合があります。`
-    - The en-US says "This may sign you out of websites and remove offline web content", which is only a possibility. The Japanese turns this into a certainty, which changes what the product says about what the action does.
 - `monitor-breaches-unresolved-description` — `browser/browser/protections.ftl` — monitor-breaches-unresolved-description (protections.ftl) — "taking steps to protect your info" → 段階に進めます ("advance to a stage").
     - Source: `After reviewing breach details and taking steps to protect your info, you can mark breaches as resolved.`
     - Suggest: `段階に進めます`
@@ -543,7 +482,18 @@ _Also listed under their own category below._
 - `effective-content-sandbox-level` — `toolkit/toolkit/about/aboutSupport.ftl` — effective-content-sandbox-level (aboutSupport.ftl) — "Effective" (value in force) → 効果的な ("efficacious"). → 実効の Verified.
     - Source: `Effective Content Process Sandbox Level`
     - Suggest: `効果的な`
-- _…and 14 more; see `state/` for the full list._
+- `virtual-monitor-disp` — `toolkit/toolkit/about/aboutSupport.ftl` — virtual-monitor-disp (aboutSupport.ftl) — "Virtual Monitor Display" → 仮想デスクトップ, an unrelated OS feature. → 仮想モニターの表示 Verified.
+    - Source: `Virtual Monitor Display`
+    - Suggest: `仮想デスクトップ`
+- `about-telemetry-keyed-scalar-section` — `toolkit/toolkit/about/aboutTelemetry.ftl` — "Keyed" read as "key/principal" (主要な). Keyed scalars are indexed by string keys. → キー付きスカラー / キー付きヒストグラム Verified.
+    - Current: `主要な`
+    - Source: `Keyed Scalars`
+    - Suggest: `キー付きスカラー`
+- `about-telemetry-show-subsession-data` — `toolkit/toolkit/about/aboutTelemetry.ftl` — "subsession" rendered as "submitted" (送信データ). → サブセッションデータを表示 Verified.
+    - Current: `送信データ`
+    - Source: `Show subsession data`
+    - Suggest: `サブセッションデータを表示`
+- _…and 11 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

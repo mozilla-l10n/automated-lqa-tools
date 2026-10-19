@@ -5,12 +5,13 @@
 | **Generated** | 2026-10-19 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **Previous run** | 2026-10-17 @ `09d125f6a298` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 1,927 |
+| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 1,927 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for ru: [android](android.md) · [firefox](firefox.md)
 
@@ -80,22 +81,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (86)
+## 3. Open findings (85)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `NSFaceIDUsageDescription` — `ru/firefox-ios.xliff` — "saved passwords and payment methods" translated as "сохранённым логинам и зашифрованным картам" (saved logins and encrypted cards).
-    - Current: `Firefox требует Face ID для доступа к вашим сохранённым логинам и зашифрованным картам.`
-    - Source: `Firefox requires Face ID to access your saved passwords and payment methods.`
-    - Suggest: `Firefox требует Face ID для доступа к вашим сохранённым паролям и способам оплаты.`
-    - The source says "passwords" and "payment methods"; the translation says "logins" and "encrypted cards", asserting encryption the source never mentions and naming different data.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 39 |
+| 2 | Wrong content (says something other than the English) | 38 |
 | 3 | Degraded language (grammar, spelling, terminology) | 44 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
@@ -105,11 +97,6 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `NSFaceIDUsageDescription` — `ru/firefox-ios.xliff` — "saved passwords and payment methods" translated as "сохранённым логинам и зашифрованным картам" (saved logins and encrypted cards).
-    - Current: `Firefox требует Face ID для доступа к вашим сохранённым логинам и зашифрованным картам.`
-    - Source: `Firefox requires Face ID to access your saved passwords and payment methods.`
-    - Suggest: `Firefox требует Face ID для доступа к вашим сохранённым паролям и способам оплаты.`
-    - The source says "passwords" and "payment methods"; the translation says "logins" and "encrypted cards", asserting encryption the source never mentions and naming different data.
 - `Alerts.RestoreTabs.Button.Yes.v109` — `ru/firefox-ios.xliff` — Action button rendered as a noun phrase ("Restoring tabs") instead of the imperative "Restore tabs".
     - Current: `Восстановление вкладок`
     - Source: `Restore tabs`

@@ -3,14 +3,15 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `7ee8e61a4a7d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `7ee8e61a4a7d` |
-| **Previous run** | 2026-10-18 @ `dd8ca757b7dd` |
-| **Mode** | incremental |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ea17dbc84971` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ea17dbc84971` |
+| **Previous run** | 2026-10-19 @ `7ee8e61a4a7d` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 2,798 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for vi: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
@@ -87,25 +88,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (60)
+## 3. Open findings (59)
 
-> **Reads as a deliberate edit (5).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
-- `change_file_extension_description` — `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — The source says the change "might" open the file in a different app, but the Vietnamese says it "will" open it in a different app.
-    - Current: `Thao tác này sẽ mở tập tin bằng một ứng dụng khác`
-    - Source: `This might open the file in a different app and be risky for your device.`
-    - Suggest: `Thao tác này có thể mở tập tin bằng một ứng dụng khác`
-    - The en-US says "This might open the file in a different app". "sẽ mở" turns a possibility into a certainty about what the app does.
 - `nova_onboarding_marketing_body_line_three` — `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — "help Firefox win" is rendered as "so that Firefox can continue", which suggests Firefox's survival depends on the user's consent.
     - Current: `để Firefox có thể tiếp tục`
     - Source: `Please consider allowing to help Firefox win.`
     - Suggest: `để giúp Firefox chiến thắng`
     - The source asks the user to allow this to help Firefox win. The Vietnamese says it is needed for Firefox to be able to keep going, a claim about the product the source never makes.
-- `preference_enhanced_tracking_protection_custom_cookies_4` — `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — "will cause websites to break" is softened to "may break websites".
-    - Current: `(có thể làm hỏng các trang web)`
-    - Source: `All cookies (will cause websites to break)`
-    - Suggest: `(sẽ làm hỏng các trang web)`
-    - The source says blocking all cookies is certain to break sites. The translation copies the "may" wording from option 3, which plays down a definite warning.
 - `preference_enhanced_tracking_protection_explanation_2` — `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — "many of the most common trackers" loses "many of", so the text claims protection from the most common trackers without limit.
     - Current: `khỏi các trình theo dõi phổ biến nhất`
     - Source: `%s protects you from many of the most common trackers that follow what you do online.`
@@ -122,7 +113,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 31 |
+| 2 | Wrong content (says something other than the English) | 30 |
 | 3 | Degraded language (grammar, spelling, terminology) | 23 |
 | 4 | Cosmetic (typography, spacing) | 6 |
 
@@ -212,11 +203,6 @@ _Nothing in this category._
     - Source: `Item Menu for %s`
     - Suggest: `Menu mục cho %s`
     - Per the developer comment, this describes the overflow-menu button for a bookmark or folder: the menu of that item. In Vietnamese, "Mục menu" means an entry inside a menu, so a screen-reader user hears that this is a menu item, not the button that opens the item's menu.
-- `change_file_extension_description` — `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — The source says the change "might" open the file in a different app, but the Vietnamese says it "will" open it in a different app.
-    - Current: `Thao tác này sẽ mở tập tin bằng một ứng dụng khác`
-    - Source: `This might open the file in a different app and be risky for your device.`
-    - Suggest: `Thao tác này có thể mở tập tin bằng một ứng dụng khác`
-    - The en-US says "This might open the file in a different app". "sẽ mở" turns a possibility into a certainty about what the app does.
 - `collection_open_tabs` — `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — Button label meaning 'open the tabs' is translated as a noun phrase 'the currently open tabs'.
     - Current: `Các thẻ đang mở`
     - Source: `Open tabs`

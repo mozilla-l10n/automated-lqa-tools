@@ -3,14 +3,15 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 9 of 16,486 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cb086148c41a` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `3bdd70692916` |
+| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 16,520 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for pl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
@@ -45,10 +46,10 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 328 |
-| Strings | 16,486 |
-| Missing strings | 34 |
+| Strings | 16,520 |
+| Missing strings | 26 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,18 +64,17 @@ _Nothing retired._
 
 ### Completeness
 
-**34 strings** are not translated yet, concentrated in:
+**26 strings** are not translated yet, concentrated in:
 
-- `browser/browser/browser.ftl` — 8
-- `browser/browser/ipProtection.ftl` — 8
-- `browser/browser/newtab/newtab.ftl` — 8
-- `browser/browser/sanitize.ftl` — 3
-- `toolkit/toolkit/about/aboutGlean.ftl` — 2
-- `toolkit/toolkit/global/videocontrols.ftl` — 1
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 1
-- `browser/browser/confirmationHints.ftl` — 1
-- `browser/browser/webProtocolHandler.ftl` — 1
-- `browser/browser/preferences/formAutofill.ftl` — 1
+- `browser/browser/miniWindow.ftl` — 15
+- `browser/browser/ipProtection.ftl` — 7
+- `browser/browser/browser.ftl` — 2
+- `browser/browser/browserContext.ftl` — 1
+- `browser/browser/tabbrowser.ftl` — 1
+
+**Files absent from the locale:**
+
+- `browser/browser/miniWindow.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -86,9 +86,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `polish-double` 1436, `straight-double` 36, `german-double` 7, `curly-double` 2 | **polish-double** |
 | apostrophe | `straight` 1 | **straight** |
-| ellipsis | `char` 405 | **char** |
+| ellipsis | `char` 406 | **char** |
 | dash | `em` 123, `en` 14 | **em** |
-| nbsp | `total` 4880, `narrow` 3, `before-punctuation` 39, `space-before-punctuation` 14 | **total** |
+| nbsp | `total` 4895, `narrow` 3, `before-punctuation` 39, `space-before-punctuation` 14 | **total** |
 | register | `informal` 77 | **informal** |
 
 ---
@@ -99,22 +99,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (84)
+## 3. Open findings (83)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `credit-card-save-doorhanger-description-security-code` — `toolkit/toolkit/formautofill/formAutofill.ftl` — The Polish reverses the statement "only you can use them" into "nobody else can use them" — actually it drops the assurance that the user can use them.
-    - Current: `dzięki czemu nikt inny nie może używać ich do wypełniania formularzy płatności`
-    - Source: `{ -brand-short-name } encrypts your card number and security code, so only you can use them to fill payment forms.`
-    - Suggest: `dzięki czemu tylko Ty możesz używać ich do wypełniania formularzy płatności`
-    - en-US says "so only you can use them to fill payment forms"; the Polish asserts that no one else can use them, a claim about third parties the source frames as the user's exclusive ability.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 10 |
-| 2 | Wrong content (says something other than the English) | 48 |
+| 2 | Wrong content (says something other than the English) | 47 |
 | 3 | Degraded language (grammar, spelling, terminology) | 23 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
@@ -387,11 +378,6 @@ _Also listed under their own category below._
     - Source: `label: Media: JPEG XL`
     - Suggest: `Media: JPEG XL`
     - The developer comment says the experiment title should be kept in English; "Media" was changed to "Multimedia".
-- `credit-card-save-doorhanger-description-security-code` — `toolkit/toolkit/formautofill/formAutofill.ftl` — The Polish reverses the statement "only you can use them" into "nobody else can use them" — actually it drops the assurance that the user can use them.
-    - Current: `dzięki czemu nikt inny nie może używać ich do wypełniania formularzy płatności`
-    - Source: `{ -brand-short-name } encrypts your card number and security code, so only you can use them to fill payment forms.`
-    - Suggest: `dzięki czemu tylko Ty możesz używać ich do wypełniania formularzy płatności`
-    - en-US says "so only you can use them to fill payment forms"; the Polish asserts that no one else can use them, a claim about third parties the source frames as the user's exclusive ability.
 - `user-context-color-purple` — `toolkit/toolkit/global/contextual-identity.ftl` — "Fioletowy", identical to user-context-color-violet; two container swatches become indistinguishable, notably for screen-reader users. → purple = "Purpurowy", keep violet = "Fioletowy".
     - Source: `label: Purple`
     - Suggest: `purple`

@@ -686,7 +686,7 @@
    "confidence": "high"
   },
   "rationale": "The source says improvements happen remotely between updates, not at each update; this is the whole point of the remote rollouts setting.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0e8cddc8",
@@ -1646,7 +1646,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US setting is \"Block Pop-up Windows\"; the target drops \"pop-up\" and claims tabs are blocked too.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "6281703d",

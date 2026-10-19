@@ -718,30 +718,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "會使 %s 於載入頁面時變得很慢",
-  "dismissed_because": "",
-  "fid": "d2361680c135",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "zh-TW",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "Source says opening many tabs may slow down the app; target asserts it will make the app very slow, changing a possibility into a certainty about product behaviour.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "25beb4ce",
-  "string_id": "open_all_warning_message",
-  "suggest": "可能會使 %s 於載入頁面時變慢",
-  "summary": "Hedged 'may slow down' rendered as a certain 'will make very slow'.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "您可以設定使用 %1$s 自動開啟各應用程式當中的鏈結。",
   "dismissed_because": "",
   "fid": "82d4da3224a9",
@@ -857,30 +833,6 @@
   "string_id": "preference_enhanced_tracking_protection_explanation_2",
   "suggest": "%s 可保護您免於被許多最常見的追蹤器記錄您的上網行為。",
   "summary": "\"many of the most common trackers\" becomes \"common trackers\", which reads as protection against all common trackers.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "但某些網站會無法正常運作",
-  "dismissed_because": "",
-  "fid": "d7e2dee425e3",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "zh-TW",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The source says some sites \"may not work properly\". The translation turns a possibility into a certainty.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "5aa24af9",
-  "string_id": "preference_enhanced_tracking_protection_strict_description_4",
-  "suggest": "但某些網站可能會無法正常運作",
-  "summary": "The hedge \"may\" is dropped, so the text says some sites will definitely not work.",
   "suppressed_by": ""
  },
  {
@@ -1738,7 +1690,7 @@
    "confidence": "high"
   },
   "rationale": "The source says the user is already protected by the default settings. The translation suggests protection hasn't happened yet, which changes what the product says about its own state.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0176a0e8",

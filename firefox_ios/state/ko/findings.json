@@ -648,30 +648,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "%1$@는 사용자의 개인 정보를 보호합니다.",
-  "dismissed_because": "",
-  "fid": "8491ed78d323",
-  "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "ko",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The en-US says the app cares about the user's privacy. That is a statement of intent, not a guarantee. The Korean says the app protects the user's personal information, so it claims a protective outcome the source never promised.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "2292ab8e",
-  "string_id": "Onboarding.TermsOfService.PrivacyNoticeAgreement.v135",
-  "suggest": "%1$@는 사용자의 개인 정보를 소중히 여깁니다.",
-  "summary": "\"cares about your privacy\" is rendered as \"protects the user's personal information\", which is a stronger promise than the source makes.",
-  "suppressed_by": ""
- },
- {
   "category": "D",
   "check": "llm",
   "current": "한정판 바탕화면",
@@ -1053,30 +1029,6 @@
   "string_id": "Settings.Notifications.SystemNotificationsDisabledMessage.v112",
   "suggest": "%1$@ 알림을 모두 껐습니다.",
   "summary": "The counter '개' is attached to %1$@, which holds the app name, not a number.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "변경 사항이 원격으로 적용되었습니다.",
-  "dismissed_because": "",
-  "fid": "9b69bfd27854",
-  "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "ko",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "en-US 'Changes applied remotely' explains how changes are delivered (see the comment: Mozilla 'may change features remotely'). '적용되었습니다' tells the user that remote changes have already been made.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "34566ec7",
-  "string_id": "Settings.Rollouts.Message.v148",
-  "suggest": "변경 사항은 원격으로 적용됩니다.",
-  "summary": "The past tense says changes have already been applied remotely, while the source only describes how changes are applied.",
   "suppressed_by": ""
  },
  {

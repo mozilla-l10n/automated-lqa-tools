@@ -5,12 +5,13 @@
 | **Generated** | 2026-10-19 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **Previous run** | 2026-10-17 @ `09d125f6a298` |
-| **Mode** | incremental |
+| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 1,915 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for ja: [android](android.md) · [firefox](firefox.md)
 
@@ -88,45 +89,20 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (112)
+## 3. Open findings (108)
 
-> **Reads as a deliberate edit (8).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
-- `NSFaceIDUsageDescription` — `ja/firefox-ios.xliff` — "payment methods" is rendered as 「暗号化されたカード情報」 (encrypted card information), adding a claim not in the source.
-    - Current: `保存されたログイン情報と暗号化されたカード情報にアクセスするには Face ID が必要です。`
-    - Source: `Firefox requires Face ID to access your saved passwords and payment methods.`
-    - Suggest: `保存されたパスワードと支払い方法にアクセスするには Firefox は Face ID を必要とします。`
-    - The en-US says "your saved passwords and payment methods"; the Japanese asserts the card data is encrypted, which the source never states, and drops the Firefox subject.
-- `NSLocationWhenInUseUsageDescription` — `ja/firefox-ios.xliff` — "may request your location" is rendered as a present-tense assertion that visited sites are requesting your location.
-    - Current: `訪れたウェブサイトがあなたの位置情報を要求しています。`
-    - Source: `Websites you visit may request your location.`
-    - Suggest: `訪れたウェブサイトがあなたの位置情報を要求することがあります。`
-    - The en-US source states a possibility ("may request"), while the Japanese asserts that sites are currently requesting the location.
 - `FirefoxHomepage.FeltPrivacyUI.Title.v122` — `ja/firefox-ios.xliff` — "Leave no traces on this device" is rendered as "We won't let this device be tracked", which asserts something different from the source.
     - Current: `この端末を追跡させません`
     - Source: `Leave no traces on this device`
     - Suggest: `この端末に痕跡を残しません`
     - The en-US says no traces (cookies, history, site data) are left on the device; the Japanese claims the device will not be tracked, a different privacy claim the source never makes.
-- `Onboarding.Customization.Intro.Title.v123` — `ja/firefox-ios.xliff` — Title translated as "privacy protection" instead of "puts you in control".
-    - Current: `%@ でプライバシー保護`
-    - Source: `%@ puts you in control`
-    - Suggest: `%@ なら思いのまま`
-    - The en-US says "%@ puts you in control" (about customization control), not about privacy protection; the Japanese asserts a different product claim.
 - `Onboarding.Modern.BrandRefresh.TermsOfUse.ManagePreferenceAgreement.v148` — `ja/firefox-ios.xliff` — "interaction data" rendered as 「対話データ」 (dialogue/conversation data) instead of 利用状況データ/インタラクションデータ.
     - Current: `診断情報と対話データ`
     - Source: `To help improve the browser, %1$@ sends diagnostic and interaction data to %2$@. %3$@`
     - Suggest: `診断データとインタラクションデータ`
     - en-US "diagnostic and interaction data" refers to usage/interaction telemetry; 「対話データ」 implies conversation data, asserting the product collects something different from what the source says.
-- `QuickAnswers.OptInRedesign.NoTrainingDescription.v158` — `ja/firefox-ios.xliff` — "our systems" narrowed to "our AI systems".
-    - Current: `私たちの AI システムの学習`
-    - Source: `We don’t use your data to train our systems.`
-    - Suggest: `私たちのシステムの学習`
-    - The source says "train our systems" without limiting it to AI systems; the Japanese adds "AI", narrowing the commitment the product makes.
-- `WebCompatReporter.Preview.Data.PageLanguages.v155` — `ja/firefox-ios.xliff` — A bullet-point noun phrase is rendered as a past-tense sentence, changing the meaning.
-    - Current: `言語設定がこのページに送信されました`
-    - Source: `Language preferences sent to this page`
-    - Suggest: `このページに送信された言語設定`
-    - The source "Language preferences sent to this page" is a noun phrase listing data included in the report; the Japanese states as a completed fact that language preferences were sent to the page.
 - `Settings.TrackingProtection.ProtectionCellFooter` — `ja/firefox-ios.xliff` — "helps stop advertisers from tracking your browsing" is rendered as an absolute claim of blocking tracking ads.
     - Current: `ユーザーの行動を追跡する広告を阻止します`
     - Source: `Reduces targeted ads and helps stop advertisers from tracking your browsing.`
@@ -138,7 +114,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 63 |
+| 2 | Wrong content (says something other than the English) | 59 |
 | 3 | Degraded language (grammar, spelling, terminology) | 43 |
 | 4 | Cosmetic (typography, spacing) | 6 |
 
@@ -148,16 +124,6 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `NSFaceIDUsageDescription` — `ja/firefox-ios.xliff` — "payment methods" is rendered as 「暗号化されたカード情報」 (encrypted card information), adding a claim not in the source.
-    - Current: `保存されたログイン情報と暗号化されたカード情報にアクセスするには Face ID が必要です。`
-    - Source: `Firefox requires Face ID to access your saved passwords and payment methods.`
-    - Suggest: `保存されたパスワードと支払い方法にアクセスするには Firefox は Face ID を必要とします。`
-    - The en-US says "your saved passwords and payment methods"; the Japanese asserts the card data is encrypted, which the source never states, and drops the Firefox subject.
-- `NSLocationWhenInUseUsageDescription` — `ja/firefox-ios.xliff` — "may request your location" is rendered as a present-tense assertion that visited sites are requesting your location.
-    - Current: `訪れたウェブサイトがあなたの位置情報を要求しています。`
-    - Source: `Websites you visit may request your location.`
-    - Suggest: `訪れたウェブサイトがあなたの位置情報を要求することがあります。`
-    - The en-US source states a possibility ("may request"), while the Japanese asserts that sites are currently requesting the location.
 - `Settings.AppIconSelection.AppIconNames.DarkPurple.Title.v136` — `ja/firefox-ios.xliff` — "Dark Purple" is rendered as 小紫, which is not the color "dark purple".
     - Current: `小紫`
     - Source: `Dark Purple`
@@ -328,11 +294,6 @@ _Nothing in this category._
     - Source: `Listening, ask anything…`
     - Suggest: `聞き取り中です。何でも質問してください...`
     - The source "Listening, ask anything…" tells the user the microphone is active and listening; the Japanese only says "ask anything", making it identical to the non-listening placeholder string (Placeholder.v158) and losing the state information.
-- `QuickAnswers.OptInRedesign.NoTrainingDescription.v158` — `ja/firefox-ios.xliff` — "our systems" narrowed to "our AI systems".
-    - Current: `私たちの AI システムの学習`
-    - Source: `We don’t use your data to train our systems.`
-    - Suggest: `私たちのシステムの学習`
-    - The source says "train our systems" without limiting it to AI systems; the Japanese adds "AI", narrowing the commitment the product makes.
 - `CreditCard.RememberCard.SecondaryButtonTitle.v115` — `ja/firefox-ios.xliff` — "Not Now" is translated as "今回は記憶しない" ("Don't remember this time"), which states something the source does not.
     - Current: `今回は記憶しない`
     - Source: `Not Now`
@@ -438,17 +399,32 @@ _Nothing in this category._
     - Source: `New colors. New convenience. Same commitment to people over profits.`
     - Suggest: `利益よりも人を優先する変わらぬ姿勢。`
     - "Same" means the commitment is unchanged, not "equal (平等な)"; and "people over profits" means prioritizing people over profits, not "beyond profits".
-- `WebCompatReporter.Preview.Data.PageLanguages.v155` — `ja/firefox-ios.xliff` — A bullet-point noun phrase is rendered as a past-tense sentence, changing the meaning.
-    - Current: `言語設定がこのページに送信されました`
-    - Source: `Language preferences sent to this page`
-    - Suggest: `このページに送信された言語設定`
-    - The source "Language preferences sent to this page" is a noun phrase listing data included in the report; the Japanese states as a completed fact that language preferences were sent to the page.
 - `WebCompatReporter.SubOption.BrowserBlocked.v154` — `ja/firefox-ios.xliff` — Order of the two conditions is reversed relative to the source.
     - Current: `ブラウザーがサポートされていない、またはブロックされている`
     - Source: `Browser is blocked or unsupported`
     - Suggest: `ブラウザーがブロックされている、またはサポートされていない`
     - Source is "Browser is blocked or unsupported"; the translation swaps the order of the alternatives.
-- _…and 29 more; see `state/` for the full list._
+- `Menu.ZoomPage.DecreaseZoom.AccessibilityLabel.v113` — `ja/firefox-ios.xliff` — Adds "縮小する" not present in the source "Decrease Zoom Level".
+    - Current: `ズームレベルを下げて縮小する`
+    - Source: `Decrease Zoom Level`
+    - Suggest: `ズームレベルを下げる`
+    - The source is simply "Decrease Zoom Level"; the added 「縮小する」 is extra content not in the en-US string.
+- `Menu.ZoomPage.IncreaseZoom.AccessibilityLabel.v113` — `ja/firefox-ios.xliff` — Adds "拡大する" not present in the source "Increase Zoom Level".
+    - Current: `ズームレベルを上げて拡大する`
+    - Source: `Increase Zoom Level`
+    - Suggest: `ズームレベルを上げる`
+    - The source is simply "Increase Zoom Level"; the added 「拡大する」 is extra content not in the en-US string.
+- `Use your fingerprint to access Logins now.` — `ja/firefox-ios.xliff` — "access Logins" (the saved logins list) is mistranslated as performing a login.
+    - Current: `指紋認証を利用してログインする。`
+    - Source: `Use your fingerprint to access Logins now.`
+    - Suggest: `指紋認証を利用してログイン情報にアクセスします。`
+    - The source, per the developer comment, is a Touch ID prompt for accessing the saved logins list, not for signing in.
+- `DefaultBrowserCard.BetterInternet.Title.v108` — `ja/firefox-ios.xliff` — "Default to a Better Internet" loses the "default browser" wordplay and reads as merely "choose a better internet".
+    - Current: `より良いインターネットを選択する`
+    - Source: `Default to a Better Internet`
+    - Suggest: `より良いインターネットをデフォルトに`
+    - The source title plays on setting Firefox as the default; the translation drops the notion of "default" entirely.
+- _…and 25 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

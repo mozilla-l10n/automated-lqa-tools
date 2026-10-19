@@ -1605,30 +1605,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "{ -brand-short-name } demek her an, her yerde korunma demektir.",
-  "dismissed_because": "",
-  "fid": "a0c0cb143c59",
-  "file": "browser/browser/newtab/newtab.ftl",
-  "first_seen": "2026-09-02",
-  "impact": 2,
-  "last_seen": "2026-09-02",
-  "locale": "tr",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The source says choosing the browser means protection is on by default; \"her an, her yerde\" (anytime, anywhere) is a different claim not present in the en-US.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "95ab0143",
-  "string_id": "newtab-privacy-message-info-4",
-  "suggest": "{ -brand-short-name } demek varsayılan olarak korunma demektir.",
-  "summary": "\"protection by default\" rendered as \"protection anytime, anywhere\", dropping the default-setting meaning.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "Gerçek e-posta adresinizi gizli tutmanızı sağlayacak 50 e-posta maskesi ücretsiz.",
   "dismissed_because": "",
   "fid": "ea97296c73a3",
@@ -2176,7 +2152,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US says “Highlight, sign, and work with PDFs”; “düzenleyin” asserts editing capability that the source does not claim.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a5db4992",

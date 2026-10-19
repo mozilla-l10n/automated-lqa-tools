@@ -5,12 +5,13 @@
 | **Generated** | 2026-10-19 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **Previous run** | 2026-10-17 @ `09d125f6a298` |
-| **Mode** | incremental |
+| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 1,885 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for th: [android](android.md)
 
@@ -95,31 +96,22 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (37)
+## 3. Open findings (36)
 
-> **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `Onboarding.Modern.BrandRefresh.Marketing.Description.v148` — `th/firefox-ios.xliff` — "and that you use it" is rendered as "and how you use it", which says more data is shared with marketing partners than the source does.
     - Current: `และคุณใช้มันอย่างไรกับพันธมิตรด้านการตลาดของ %2$@`
     - Source: `Share how you discovered %1$@, and that you use it, with %2$@’s marketing partners. This data is never sold.`
     - Suggest: `และการที่คุณใช้งานอยู่ ให้กับพันธมิตรด้านการตลาดของ %2$@`
     - The source shares only the fact that the user uses the app, not how they use it. The Thai says details of how the user uses it are shared with Mozilla's marketing partners. That is a wider data-sharing claim than the source makes.
-- `ContextualHints.Summarize.Description.v142` — `th/firefox-ios.xliff` — The Thai adds a sentence saying summarization can be inaccurate; the source contextual hint has no such sentence.
-    - Current: `โปรดทราบ: การสรุปอาจเกิดความคลาดเคลื่อนได้`
-    - Source: `Tap to summarize this page. Touch and hold for Reader View.`
-    - The source is only 'Tap to summarize this page. Touch and hold for Reader View.' The added 'Note: summarization can be inaccurate' looks carried over from the footnote string, and it puts an admission into this hint that the source never makes.
-- `Menu.TrackingProtectionDescription.ContentTrackers` — `th/firefox-ios.xliff` — 'can make websites load faster' became 'will make websites load faster'.
-    - Current: `การปิดกั้นสิ่งนี้จะทำให้เว็บไซต์โหลดเร็วขึ้น`
-    - Source: `Websites may load outside ads, videos, and other content that contains hidden trackers. Blocking this can make websites load faster, but some buttons, forms, and login fields, might not work.`
-    - Suggest: `การปิดกั้นสิ่งนี้อาจทำให้เว็บไซต์โหลดเร็วขึ้น`
-    - The source hedges with 'can'. 'จะทำให้' turns it into a promise the product never made.
 
 _Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 19 |
+| 2 | Wrong content (says something other than the English) | 18 |
 | 3 | Degraded language (grammar, spelling, terminology) | 11 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
@@ -203,11 +195,6 @@ _Nothing in this category._
     - Source: `Removed from Shortcuts`
     - Suggest: `ลบออกจากคำสั่งลัดแล้ว`
     - The source is a past-tense confirmation toast ("Removed from Shortcuts"). The Thai matches the button label Menu.RemovedFromShortcuts.v99 word for word and reads as an instruction. The other confirmation toasts in this file end with แล้ว (e.g. เพิ่มไปยังคำสั่งลัดแล้ว, เอาออกจากรายการอ่านแล้ว).
-- `Menu.TrackingProtectionDescription.ContentTrackers` — `th/firefox-ios.xliff` — 'can make websites load faster' became 'will make websites load faster'.
-    - Current: `การปิดกั้นสิ่งนี้จะทำให้เว็บไซต์โหลดเร็วขึ้น`
-    - Source: `Websites may load outside ads, videos, and other content that contains hidden trackers. Blocking this can make websites load faster, but some buttons, forms, and login fields, might not work.`
-    - Suggest: `การปิดกั้นสิ่งนี้อาจทำให้เว็บไซต์โหลดเร็วขึ้น`
-    - The source hedges with 'can'. 'จะทำให้' turns it into a promise the product never made.
 - `Menu.TrackingProtectionDescription.CryptominersNew` — `th/firefox-ios.xliff` — 'secretly' is left out, so the Thai no longer says the computing power is used without the user knowing.
     - Current: `ตัวขุดเหรียญคริปโตดิจิตอลใช้พลังการคำนวณ`
     - Source: `Cryptominers secretly use your system’s computing power to mine digital money. Cryptomining scripts drain your battery, slow down your computer, and can increase your energy bill.`

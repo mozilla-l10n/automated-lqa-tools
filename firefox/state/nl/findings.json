@@ -310,30 +310,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "zoals tekst in een formulier, kan niet worden hersteld",
-  "dismissed_because": "",
-  "fid": "53423c314882",
-  "file": "browser/browser/aboutRestartRequired.ftl",
-  "first_seen": "2026-10-05",
-  "impact": 2,
-  "last_seen": "2026-10-05",
-  "locale": "nl",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The en-US says unsaved work \"may not be restored\" (possible loss); the Dutch asserts flatly that it cannot be restored.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "f0f9e411",
-  "string_id": "restart-required-unsaved-work-answer",
-  "suggest": "zoals tekst in een formulier, kan mogelijk niet worden hersteld",
-  "summary": "\"may not be restored\" rendered as \"kan niet worden hersteld\", turning a possibility into a certainty that unsaved work cannot be restored.",
-  "suppressed_by": ""
- },
- {
   "category": "C",
   "check": "legacy",
   "current": "broken verb cluster. \"Het volgende tabblad dat moet wordt gelost wordt gekozen…\"",

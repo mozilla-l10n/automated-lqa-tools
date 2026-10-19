@@ -37,17 +37,28 @@ has no way to tell a translation slip from an edit someone meant to make.
 "AI can make mistakes" rendered as "AI can tell lies" is impact 2 like any
 other mistranslation, but it is the product calling itself a liar.
 
-The bar is a **material** change to what the product asserts: whether
-something is certain, whether it has already happened, whether it is
-permitted, or what it is about. "helps stop advertisers from tracking you"
-rendered as "will prevent advertisers from tracking you" is a promise the
-product did not make. "changes are applied remotely" in the past tense
-tells the user work is already done. "all of your private data" rendered as
-"all of your data" claims a wider deletion than the product performs.
+The bar is a **material** change: a user reading only the {language} would
+come away believing something false that matters, about the product,
+Mozilla, or themselves. In practice that is one of these, and nothing else:
+
+- **a reversal** -- "only you can use them" rendered as "nobody else can
+  use them", "don't clear all of your data" rendered as "don't clear any of
+  your data";
+- **a different account of the user's data** -- what is collected, sent,
+  kept or deleted, and where it goes. "all of your private data" rendered
+  as "all of your data" claims a wider deletion than the product performs;
+  a rendering that drops "and uploads the audio" hides a transfer;
+- **a protection or guarantee the product does not give** -- "helps stop
+  advertisers from tracking you" rendered as "stops advertisers from
+  tracking you" is a promise the product did not make;
+- **an accusation, admission or disparagement** of the product, Mozilla,
+  websites or the user that the source does not contain -- "people over
+  profits" rendered as "people for profit", "thought-provoking" rendered as
+  "inciting".
 
 A localization is not a gloss, and re-wording to read naturally is its job.
-Phrasing that lands on the same fact is not this flag, and is not a finding
-at all:
+Phrasing that lands on the same fact is not this flag, and is usually not a
+finding at all:
 
 - a pronoun or possessive the source left implicit -- "your data" for
   "data", "sites you visit" for "sites";
@@ -56,6 +67,19 @@ at all:
   "the non-profit, trusted for 20 years";
 - a quantifier or hedge that does not move the fact -- "for over 20 years"
   where the source says "for 20 years";
+- tense or aspect -- "will block" for "blocks", "has a new look" for "is
+  getting a new look", a noun phrase turned into a sentence;
+- a positive or descriptive adjective, or warmer phrasing, that adds praise
+  rather than a checkable claim -- "a fast, free browser" for "a free
+  browser", "your tabs are perfectly organized" for "nice work organizing
+  your tabs";
+- a qualifier that is accurate in context -- "the Firefox browser" for
+  "Firefox", "our AI systems" where the surrounding strings are about AI;
+- a warning or explanation made more or less certain where nothing is
+  promised or hidden -- "this will sign you out" for "this may sign you
+  out", "this is because" for "this can happen when";
+- a wrong word in a label, title or feature name -- "share PDFs" for
+  "split PDFs" is a mistranslation to report normally, not an assertion;
 - idiom, voice, word order, or sentence split chosen to read naturally in
   {language};
 - a word added or dropped that the rest of the sentence already carries.
@@ -64,9 +88,10 @@ Set `reads_as_deliberate` to `true` only on a finding that clears the
 material bar, in addition to reporting it normally. The test is what a user
 seeing only the {language} would conclude, not what you think the
 translator intended -- do not speculate about motive, and do not use this
-to mark a defect you merely consider severe. If the rationale you would
-write turns on emphasis, nuance, tone, or wording that is slightly stronger
-or softer, the answer is `false` -- and usually silence.
+to mark a defect you merely consider severe. If you cannot name which of
+the four kinds above it is, the answer is `false`. If the rationale you
+would write turns on emphasis, nuance, tone, tense, or wording that is
+slightly stronger or softer, the answer is `false` -- and usually silence.
 
 `false` is the answer for almost every finding, including almost every
 mistranslation. A missing negation that makes an instruction wrong is a

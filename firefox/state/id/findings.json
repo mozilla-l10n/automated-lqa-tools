@@ -2924,30 +2924,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "Ini akan mengeluarkan Anda dari situs web",
-  "dismissed_because": "",
-  "fid": "7a27bf74187f",
-  "file": "browser/browser/preferences/siteDataSettings.ftl",
-  "first_seen": "2026-10-19",
-  "impact": 2,
-  "last_seen": "2026-10-19",
-  "locale": "id",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The en-US says clearing data *may* sign the user out. The Indonesian says it will, which turns a possible side effect into a certain outcome.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "1b305a65",
-  "string_id": "site-data-clear-all-prompt-text",
-  "suggest": "Ini mungkin akan mengeluarkan Anda dari situs web",
-  "summary": "\"This may sign you out\" is rendered as a certainty (\"akan\" = will).",
-  "suppressed_by": ""
- },
- {
   "category": "A",
   "check": "llm",
   "current": "Situs web ini menyimpan kuki dan data situs pada komputer Anda.",

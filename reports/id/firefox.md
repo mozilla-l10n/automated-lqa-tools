@@ -3,14 +3,15 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
-| **Mode** | incremental |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cb086148c41a` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `3bdd70692916` |
+| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 13,799 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for id: [android](android.md) · [firefox_ios](firefox_ios.md)
 
@@ -46,9 +47,9 @@ _Nothing retired._
 |---|---|
 | Files | 322 |
 | Strings | 13,799 |
-| Missing strings | 2,721 |
+| Missing strings | 2,747 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 6 |
+| Files absent from the locale | 7 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,24 +64,25 @@ _Nothing retired._
 
 ### Completeness
 
-**2,721 strings** are not translated yet, concentrated in:
+**2,747 strings** are not translated yet, concentrated in:
 
 - `browser/browser/newtab/newtab.ftl` — 501
 - `browser/browser/preferences/preferences.ftl` — 441
-- `browser/browser/ipProtection.ftl` — 154
+- `browser/browser/ipProtection.ftl` — 161
 - `browser/browser/newtab/onboarding.ftl` — 131
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 88
 - `browser/browser/newtab/asrouter.ftl` — 82
 - `toolkit/toolkit/about/aboutAddons.ftl` — 60
 - `browser/browser/featureCallout.ftl` — 57
 - `browser/browser/profiles.ftl` — 57
+- `browser/browser/browser.ftl` — 44
 - `toolkit/toolkit/about/aboutGlean.ftl` — 43
-- `browser/browser/browser.ftl` — 42
-- `browser/browser/tabbrowser.ftl` — 41
+- `browser/browser/tabbrowser.ftl` — 42
 
 **Files absent from the locale:**
 
 - `browser/browser/autoTabGrouping.ftl`
+- `browser/browser/miniWindow.ftl`
 - `browser/browser/sharePanel.ftl`
 - `toolkit/services/aboutSyncLog.ftl`
 - `toolkit/toolkit/about/pdfFeaturesNotification.ftl`
@@ -110,22 +112,13 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (282)
+## 3. Open findings (281)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `site-data-clear-all-prompt-text` — `browser/browser/preferences/siteDataSettings.ftl` — "This may sign you out" is rendered as a certainty ("akan" = will).
-    - Current: `Ini akan mengeluarkan Anda dari situs web`
-    - Source: `Selecting ‘Clear Now’ will clear all cookies and site data stored by { -brand-short-name }. This may sign you out of websites and remove offline web content.`
-    - Suggest: `Ini mungkin akan mengeluarkan Anda dari situs web`
-    - The en-US says clearing data *may* sign the user out. The Indonesian says it will, which turns a possible side effect into a certain outcome.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 66 |
-| 2 | Wrong content (says something other than the English) | 152 |
+| 2 | Wrong content (says something other than the English) | 151 |
 | 3 | Degraded language (grammar, spelling, terminology) | 47 |
 | 4 | Cosmetic (typography, spacing) | 16 |
 
@@ -506,11 +499,6 @@ _Also listed under their own category below._
     - Source: `Townland`
     - Suggest: `Townland`
     - Per the developer comment this is the Irish sublocality unit "townland", a rural land division, not a small town ("kota kecil"); it is normally kept as "Townland".
-- `site-data-clear-all-prompt-text` — `browser/browser/preferences/siteDataSettings.ftl` — "This may sign you out" is rendered as a certainty ("akan" = will).
-    - Current: `Ini akan mengeluarkan Anda dari situs web`
-    - Source: `Selecting ‘Clear Now’ will clear all cookies and site data stored by { -brand-short-name }. This may sign you out of websites and remove offline web content.`
-    - Suggest: `Ini mungkin akan mengeluarkan Anda dari situs web`
-    - The en-US says clearing data *may* sign the user out. The Indonesian says it will, which turns a possible side effect into a certain outcome.
 - `accessibility-text-label-issue-document-title` — `devtools/client/accessibility.ftl` — The HTML element name inside <code> was translated.
     - Current: `<code>judul</code>`
     - Source: `Documents must have a <code>title</code>. <a>Learn more</a>`

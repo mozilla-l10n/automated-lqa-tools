@@ -144,30 +144,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "Anonymní okna nelze z důvodu ochrany vašeho soukromí znovu otevřít.",
-  "dismissed_because": "",
-  "fid": "767cb637ffd8",
-  "file": "browser/browser/aboutRestartRequired.ftl",
-  "first_seen": "2026-10-05",
-  "impact": 2,
-  "last_seen": "2026-10-05",
-  "locale": "cs",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The source says the browser will not reopen private windows; the Czech asserts the user cannot reopen them at all, which is a different claim about product behaviour.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "c8a31530",
-  "string_id": "restart-required-unsaved-work-answer",
-  "suggest": "Anonymní okna se z důvodu ochrany vašeho soukromí znovu neotevřou.",
-  "summary": "\"Private Windows won’t reopen\" translated as \"Anonymní okna nelze znovu otevřít\" (private windows cannot be reopened), stating an impossibility rather than a choice.",
-  "suppressed_by": ""
- },
- {
   "category": "D",
   "check": "llm",
   "current": "nainstalovat nověřený doplněk",

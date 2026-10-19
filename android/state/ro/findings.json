@@ -264,30 +264,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "nu vor fi salvate",
-  "dismissed_because": "",
-  "fid": "c0ca555e726d",
-  "file": "mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "ro",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The en-US \"may not be saved\" only warns of a possible data loss. The ro states it as certain, which overstates what happens to the user's data.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "6320c6e0",
-  "string_id": "mozac_feature_prompt_before_unload_dialog_body",
-  "suggest": "s-ar putea să nu fie salvate",
-  "summary": "The translation says entered data \"will not be saved\" where the source says it \"may not be saved\".",
-  "suppressed_by": ""
- },
- {
   "category": "C",
   "check": "llm",
   "current": "Şterge",

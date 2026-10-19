@@ -376,7 +376,7 @@
    "confidence": "high"
   },
   "rationale": "In the source \"some\" qualifies the activity, not the sites, and the verb is \"be seen\", not \"track\"; the Russian moves the quantifier and states that these parties actively track the user.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "9f059859",
@@ -448,7 +448,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US describes an unwanted outcome (the still-open instance ends up running an older version); the Russian impersonal \"можно оставить\" says it is permissible to leave it on the older version.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "b1ebd0cc",
@@ -4467,30 +4467,6 @@
   "string_id": "nova-early-access-infobar-primary-button",
   "suggest": "",
   "summary": "nova-early-access-infobar-primary-button-class: ip-protection-not-opted-in-button and device-migration-fxa-spotlight--primary-button render \"Get started\" as the noun Начало работы where the siblings use Начать",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "<strong>Обновлён внешний вид { -brand-product-name }.</strong>",
-  "dismissed_because": "",
-  "fid": "9d220616c7fc",
-  "file": "browser/browser/newtab/asrouter.ftl",
-  "first_seen": "2026-09-02",
-  "impact": 2,
-  "last_seen": "2026-09-02",
-  "locale": "ru",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The en-US says the redesign is upcoming and the user is previewing it before the launch later this year; the Russian asserts the look has already been updated, contradicting the second sentence.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "7c087327",
-  "string_id": "nova-early-access-infobar-title",
-  "suggest": "<strong>У { -brand-product-name } скоро появится новый облик.</strong>",
-  "summary": "\"is getting a new look\" (future/ongoing) translated as a completed change \"Обновлён внешний вид\".",
   "suppressed_by": ""
  },
  {

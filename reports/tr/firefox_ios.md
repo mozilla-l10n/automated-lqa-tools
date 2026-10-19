@@ -5,12 +5,13 @@
 | **Generated** | 2026-10-19 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **Previous run** | 2026-10-17 @ `09d125f6a298` |
-| **Mode** | incremental |
+| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 1,927 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for tr: [android](android.md) · [firefox](firefox.md)
 
@@ -80,20 +81,10 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (83)
+## 3. Open findings (82)
 
-> **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
-- `Settings.AIControls.AIPoweredFeaturesSection.BlockedStatusDescriptionV2.v151` — `tr/firefox-ios.xliff` — "For on-device AI" qualifier dropped, so the Turkish asserts all downloaded AI models are removed.
-    - Current: `Cihaza indirilmiş yapay zekâ modelleri kaldırılacaktır.`
-    - Source: `**Blocked**: You won’t see and can’t use the feature. For on-device AI, any downloaded models are removed.`
-    - Suggest: `Cihaz üzerinde çalışan yapay zekâ için indirilmiş modeller kaldırılır.`
-    - The source restricts model removal to on-device AI features; the Turkish states it unconditionally, changing what the product says it does.
-- `Settings.Rollouts.Message.v148` — `tr/firefox-ios.xliff` — "between updates" is translated as "in every update", reversing the point that improvements happen without an update.
-    - Current: `%@ her güncellemede özellikleri`
-    - Source: `%@ will improve features, performance, and stability between updates. Changes applied remotely.`
-    - Suggest: `%@, güncellemeler arasında özellikleri`
-    - Source says changes are applied remotely between updates; "her güncellemede" (with every update) says the opposite.
 - `Settings.SendUsage.Message` — `tr/firefox-ios.xliff` — Turkish drops "to provide" and "for everyone", and uses "daha da geliştirmek" (improve further) only.
     - Current: `Mozilla, yalnızca Firefox’u daha da geliştirmek için ihtiyaç duyduğumuz verileri toplar.`
     - Source: `Mozilla strives to only collect what we need to provide and improve Firefox for everyone.`
@@ -105,7 +96,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 44 |
+| 2 | Wrong content (says something other than the English) | 43 |
 | 3 | Degraded language (grammar, spelling, terminology) | 35 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
@@ -244,11 +235,6 @@ _Also listed under their own category below._
     - Source: `Google Search`
     - Suggest: `Google araması`
     - This is a section header separating suggestion results, parallel to "%@ araması" for Search.EngineSection.Title; rendering it as a command is inconsistent and wrong in register for a header.
-- `Settings.AIControls.AIPoweredFeaturesSection.BlockedStatusDescriptionV2.v151` — `tr/firefox-ios.xliff` — "For on-device AI" qualifier dropped, so the Turkish asserts all downloaded AI models are removed.
-    - Current: `Cihaza indirilmiş yapay zekâ modelleri kaldırılacaktır.`
-    - Source: `**Blocked**: You won’t see and can’t use the feature. For on-device AI, any downloaded models are removed.`
-    - Suggest: `Cihaz üzerinde çalışan yapay zekâ için indirilmiş modeller kaldırılır.`
-    - The source restricts model removal to on-device AI features; the Turkish states it unconditionally, changing what the product says it does.
 - `Settings.DailyUsagePing.Message.v135` — `tr/firefox-ios.xliff` — The %@ company name is turned into a modifier of "users", so the sentence claims to count Mozilla's users instead of helping Mozilla estimate active users.
     - Current: `Bu sayede aktif %@ kullanıcılarının sayısını tahmin edebiliriz.`
     - Source: `This helps %@ to estimate active users.`

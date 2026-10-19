@@ -182,37 +182,13 @@
    "confidence": "high"
   },
   "rationale": "The source reports a connection reset error (failure); the target says the connection was successfully re-established, the opposite of an error condition.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "4865b9df",
   "string_id": "mozac_browser_errorpages_net_reset_title",
   "suggest": "اتصال بازنشانی شد",
   "summary": "\"The connection was reset\" is rendered as \"the connection was re-established\", reversing the meaning of the error.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "تنظیمات نادرست آن مانع از مرور وب می‌شود.",
-  "dismissed_because": "",
-  "fid": "5d72c7b47f4c",
-  "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
-  "first_seen": "2026-09-17",
-  "impact": 2,
-  "last_seen": "2026-09-17",
-  "locale": "fa",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The source hedges with \"can interfere\"; the target asserts that incorrect settings do prevent Web browsing.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "573fb6f8",
-  "string_id": "mozac_browser_errorpages_net_timeout_message",
-  "suggest": "تنظیمات نادرست می‌تواند در مرور وب اختلال ایجاد کند.",
-  "summary": "\"Incorrect settings can interfere with Web browsing\" rendered as a certainty (\"prevents Web browsing\").",
   "suppressed_by": ""
  },
  {
@@ -2126,7 +2102,7 @@
    "confidence": "medium"
   },
   "rationale": "Source: \"so we picked one for you to reuse\" — there is no statement that the pick was random; the translation asserts a random selection behaviour of the product.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "351b946d",
@@ -2438,7 +2414,7 @@
    "confidence": "high"
   },
   "rationale": "The source says Firefox is fast and private; the translation claims it is fast and secure, a different property claim about the product.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c6681b46",

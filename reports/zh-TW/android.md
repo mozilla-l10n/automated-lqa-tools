@@ -3,14 +3,15 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `7ee8e61a4a7d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `7ee8e61a4a7d` |
-| **Previous run** | 2026-10-18 @ `dd8ca757b7dd` |
-| **Mode** | incremental |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ea17dbc84971` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ea17dbc84971` |
+| **Previous run** | 2026-10-19 @ `7ee8e61a4a7d` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 2,802 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for zh-TW: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
@@ -83,9 +84,9 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (74)
+## 3. Open findings (72)
 
-> **Reads as a deliberate edit (13).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (10).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `nova_onboarding_marketing_body` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — "and that you use it" is rendered as "how you use it", which describes a much wider data share.
     - Current: `以及是如何使用的`
@@ -127,38 +128,23 @@ _Nothing reported._
     - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
     - Suggest: `以及您正在使用 Firefox 的事實`
     - The source only shares the fact that the user uses Firefox. The developer comment stresses that this setting does not increase data collection, but the translation says the user's usage details are shared.
-- `open_all_warning_message` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — Hedged 'may slow down' rendered as a certain 'will make very slow'.
-    - Current: `會使 %s 於載入頁面時變得很慢`
-    - Source: `Opening this many tabs may slow down %s while the pages are loading. Are you sure you want to continue?`
-    - Suggest: `可能會使 %s 於載入頁面時變慢`
-    - Source says opening many tabs may slow down the app; target asserts it will make the app very slow, changing a possibility into a certainty about product behaviour.
 - `preference_enhanced_tracking_protection_explanation_2` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — "many of the most common trackers" becomes "common trackers", which reads as protection against all common trackers.
     - Current: `%s 不讓常見的追蹤器記錄您的上網行為。`
     - Source: `%s protects you from many of the most common trackers that follow what you do online.`
     - Suggest: `%s 可保護您免於被許多最常見的追蹤器記錄您的上網行為。`
     - The source limits the claim to "many of" the most common trackers. The translation drops that limit and promises wider protection than the source makes.
-- `preference_enhanced_tracking_protection_strict_description_4` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — The hedge "may" is dropped, so the text says some sites will definitely not work.
-    - Current: `但某些網站會無法正常運作`
-    - Source: `Stronger tracking protection and faster performance, but some sites may not work properly.`
-    - Suggest: `但某些網站可能會無法正常運作`
-    - The source says some sites "may not work properly". The translation turns a possibility into a certainty.
 - `preferences_marketing_data_description_4` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — The text says the user shares how they use Firefox, but the source means only that they use it.
     - Current: `以及是如何使用`
     - Source: `Share how you discovered Firefox and that you use it with Mozilla’s marketing technology partners.`
     - Suggest: `以及您正在使用 Firefox 的事實`
     - The developer comment says 'that you use it' means only that the user keeps using Firefox after installing it, and does not mean Firefox tracks their usage. The translation turns this into sharing how the user uses Firefox, which describes a wider data collection than the product performs.
-- `tool_tip_title` — `mozilla-mobile/focus-android/app/src/main/res/values-zh-rTW/strings.xml` — "You're protected!" is rendered as "Let us protect you!", turning a statement of current protection into an offer.
-    - Current: `讓我們保護您！`
-    - Source: `You’re protected!`
-    - Suggest: `您已受到保護！`
-    - The source says the user is already protected by the default settings. The translation suggests protection hasn't happened yet, which changes what the product says about its own state.
 
 _Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 35 |
+| 2 | Wrong content (says something other than the English) | 33 |
 | 3 | Degraded language (grammar, spelling, terminology) | 18 |
 | 4 | Cosmetic (typography, spacing) | 21 |
 
@@ -245,11 +231,6 @@ _Also listed under their own category below._
     - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
     - Suggest: `以及您正在使用 Firefox 的事實`
     - The source only shares the fact that the user uses Firefox. The developer comment stresses that this setting does not increase data collection, but the translation says the user's usage details are shared.
-- `open_all_warning_message` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — Hedged 'may slow down' rendered as a certain 'will make very slow'.
-    - Current: `會使 %s 於載入頁面時變得很慢`
-    - Source: `Opening this many tabs may slow down %s while the pages are loading. Are you sure you want to continue?`
-    - Suggest: `可能會使 %s 於載入頁面時變慢`
-    - Source says opening many tabs may slow down the app; target asserts it will make the app very slow, changing a possibility into a certainty about product behaviour.
 - `open_in_app_cfr_info_message_2` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — Translation says Firefox opens links found inside apps, instead of Firefox opening links in (other) apps.
     - Current: `您可以設定使用 %1$s 自動開啟各應用程式當中的鏈結。`
     - Source: `You can set %1$s to automatically open links in apps.`
@@ -265,11 +246,6 @@ _Also listed under their own category below._
     - Source: `%s protects you from many of the most common trackers that follow what you do online.`
     - Suggest: `%s 可保護您免於被許多最常見的追蹤器記錄您的上網行為。`
     - The source limits the claim to "many of" the most common trackers. The translation drops that limit and promises wider protection than the source makes.
-- `preference_enhanced_tracking_protection_strict_description_4` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — The hedge "may" is dropped, so the text says some sites will definitely not work.
-    - Current: `但某些網站會無法正常運作`
-    - Source: `Stronger tracking protection and faster performance, but some sites may not work properly.`
-    - Suggest: `但某些網站可能會無法正常運作`
-    - The source says some sites "may not work properly". The translation turns a possibility into a certainty.
 - `preferences_android_autofill_description` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — The translation says "other apps on other devices" where the source says "other apps on your device".
     - Current: `使用其他裝置中的其他應用程式時也自動填寫使用者名稱與密碼。`
     - Source: `Fill usernames and passwords in other apps on your device.`

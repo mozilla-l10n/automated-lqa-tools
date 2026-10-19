@@ -3,14 +3,15 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `57c409b04755` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `57c409b04755` |
-| **Previous run** | 2026-10-18 @ `dd8ca757b7dd` |
-| **Mode** | incremental |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ea17dbc84971` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ea17dbc84971` |
+| **Previous run** | 2026-10-19 @ `57c409b04755` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 2,793 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for fa: [firefox_ios](firefox_ios.md)
 
@@ -87,37 +88,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (121)
+## 3. Open findings (120)
 
-> **Reads as a deliberate edit (4).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `mozac_browser_errorpages_net_reset_title` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — "The connection was reset" is rendered as "the connection was re-established", reversing the meaning of the error.
-    - Current: `اتصال از نو برقرار شد`
-    - Source: `The connection was reset`
-    - Suggest: `اتصال بازنشانی شد`
-    - The source reports a connection reset error (failure); the target says the connection was successfully re-established, the opposite of an error condition.
-- `mozac_browser_errorpages_net_timeout_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — "Incorrect settings can interfere with Web browsing" rendered as a certainty ("prevents Web browsing").
-    - Current: `تنظیمات نادرست آن مانع از مرور وب می‌شود.`
-    - Source: `{ <p> }The requested site did not respond to a connection request and the browser has stopped waiting for a reply.{ </p> } { <ul> } { <li> }Could the server be experiencing high demand or a temporary outage? Try again l…`
-    - Suggest: `تنظیمات نادرست می‌تواند در مرور وب اختلال ایجاد کند.`
-    - The source hedges with "can interfere"; the target asserts that incorrect settings do prevent Web browsing.
-- `email_masks_max_free_tier_reached` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — The translation adds "at random" which the source does not say.
-    - Current: `یکی از آن‌ها را به‌صورت تصادفی برای استفادهٔ مجدد انتخاب کردیم`
-    - Source: `You’ve used your 5 free email masks, so we picked one for you to reuse.`
-    - Suggest: `یکی از آن‌ها را برای استفادهٔ مجدد برایتان انتخاب کردیم`
-    - Source: "so we picked one for you to reuse" — there is no statement that the pick was random; the translation asserts a random selection behaviour of the product.
-- `nimbus_notification_default_browser_title` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "private" is rendered as "امن" (secure/safe) instead of "خصوصی" (private).
-    - Current: `‏Firefox سریع و امن است`
-    - Source: `Firefox is fast and private`
-    - Suggest: `‏Firefox سریع و خصوصی است`
-    - The source says Firefox is fast and private; the translation claims it is fast and secure, a different property claim about the product.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 52 |
+| 2 | Wrong content (says something other than the English) | 51 |
 | 3 | Degraded language (grammar, spelling, terminology) | 68 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
@@ -137,11 +114,6 @@ _Nothing in this category._
     - Source: `The connection was reset`
     - Suggest: `اتصال بازنشانی شد`
     - The source reports a connection reset error (failure); the target says the connection was successfully re-established, the opposite of an error condition.
-- `mozac_browser_errorpages_net_timeout_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — "Incorrect settings can interfere with Web browsing" rendered as a certainty ("prevents Web browsing").
-    - Current: `تنظیمات نادرست آن مانع از مرور وب می‌شود.`
-    - Source: `{ <p> }The requested site did not respond to a connection request and the browser has stopped waiting for a reply.{ </p> } { <ul> } { <li> }Could the server be experiencing high demand or a temporary outage? Try again l…`
-    - Suggest: `تنظیمات نادرست می‌تواند در مرور وب اختلال ایجاد کند.`
-    - The source hedges with "can interfere"; the target asserts that incorrect settings do prevent Web browsing.
 - `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — "device" translated as "رایانه" (computer) in a mobile component string.
     - Current: `آیا رایانه به یک شبکهٔ فعال متصل است؟`
     - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
@@ -427,7 +399,12 @@ _Nothing in this category._
     - Source: `A login with that username already exists`
     - Suggest: `ورودی با این نام کاربری از قبل وجود دارد ← «گذرواژه‌ای با این نام کاربری از قبل وجود دارد»`
     - "ورودی" means "entry/input" in Persian and does not convey a saved login credential; other strings in this surface use "ورود"/"گذرواژه".
-- _…and 15 more; see `state/` for the full list._
+- `search_settings_google_lens_description` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — The brand name "Google" is transliterated as «گوگل» while the related title string keeps the Latin "Google Lens", creating brand inconsistency.
+    - Current: `ارسال تصاویر و عکس‌ها به گوگل برای جست‌وجوی بصری.`
+    - Source: `Sends images and photos to Google for visual search.`
+    - Suggest: `ارسال تصاویر و عکس‌ها به Google برای جست‌وجوی بصری.`
+    - Brand names must stay untranslated/untransliterated; the sibling string search_settings_google_lens_title uses "Google Lens" in Latin script.
+- _…and 14 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

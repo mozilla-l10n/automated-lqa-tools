@@ -1502,7 +1502,7 @@
    "confidence": "high"
   },
   "rationale": "The source states that blocking all cookies will break websites, as a certainty. That is how it differs from the 'may cause websites to break' wording on the third-party option. The Korean now tells users it only might break sites.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "bbf98fd5",

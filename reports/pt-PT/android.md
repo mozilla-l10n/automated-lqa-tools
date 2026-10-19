@@ -3,14 +3,15 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `7ee8e61a4a7d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `7ee8e61a4a7d` |
-| **Previous run** | 2026-10-18 @ `dd8ca757b7dd` |
-| **Mode** | incremental |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ea17dbc84971` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ea17dbc84971` |
+| **Previous run** | 2026-10-19 @ `7ee8e61a4a7d` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 2,552 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for pt-PT: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
@@ -85,22 +86,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (74)
+## 3. Open findings (73)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `change_file_extension_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — The hedged "might… be risky" becomes the certain "é perigoso" (is dangerous).
-    - Current: `e é perigoso para o seu dispositivo`
-    - Source: `This might open the file in a different app and be risky for your device.`
-    - Suggest: `e ser arriscado para o seu dispositivo`
-    - The source says changing the file type might be risky. The translation says it is dangerous, so the product now makes a stronger warning than the source does.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 24 |
+| 2 | Wrong content (says something other than the English) | 23 |
 | 3 | Degraded language (grammar, spelling, terminology) | 40 |
 | 4 | Cosmetic (typography, spacing) | 10 |
 
@@ -170,11 +162,6 @@ _Nothing in this category._
     - Source: `Item Menu for %s`
     - Suggest: `Menu do item %s`
     - The developer comment says this describes the overflow menu for a bookmark item. The pt-PT text reads as "menu item for %s", so screen-reader users hear the wrong control described.
-- `change_file_extension_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — The hedged "might… be risky" becomes the certain "é perigoso" (is dangerous).
-    - Current: `e é perigoso para o seu dispositivo`
-    - Source: `This might open the file in a different app and be risky for your device.`
-    - Suggest: `e ser arriscado para o seu dispositivo`
-    - The source says changing the file type might be risky. The translation says it is dangerous, so the product now makes a stronger warning than the source does.
 - `debug_drawer_addresses_debug_locales_header` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — In this heading, "Debug" describes the locales, but the translation uses it as a verb ("Debug languages to activate").
     - Current: `Depurar idiomas para ativar`
     - Source: `Debug locales to enable`

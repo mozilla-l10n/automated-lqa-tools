@@ -2,14 +2,14 @@
 
 - **Generated:** 2026-10-19
 - **Locales tracked:** 34 (34 with recorded state)
-- **Findings:** 3,836 raised, 203 fixed (5%), 2,349 open
+- **Findings:** 3,821 raised, 203 fixed (5%), 2,334 open
 - **Closed by a person:** 29 dismissed, 52 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
 ## Read these first
 
-### Reads as a deliberate edit (66)
+### Reads as a deliberate edit (42)
 
 The translation makes the product assert something the en-US never said. Nothing here says the change was intended — that cannot be read off the text, which is exactly the problem, because a user cannot read it off either.
 
@@ -65,22 +65,10 @@ The translation makes the product assert something the en-US never said. Nothing
     - The Greek drops the hedge 'helps' and says the feature stops advertisers from tracking you outright.
     - Current: `εμποδίζει την καταγραφή της περιήγησής σας από διαφημιστές`
     - Suggest: `βοηθά στην αποτροπή της καταγραφής της περιήγησής σας από διαφημιστές`
-- **`es-AR`** `Settings.Rollouts.Message.v148` — `Shared/Supporting Files/en-US.lproj/Settings.strings`
-    - Present/future "Changes applied remotely" rendered in past tense, asserting changes were already applied.
-    - Current: `Los cambios se aplicaron remotamente.`
-    - Suggest: `Los cambios se aplican remotamente.`
-- **`es-ES`** `Menu.TrackingProtectionDescription.ContentTrackers` — `Shared/en-US.lproj/Localizable.strings`
-    - "can make websites load faster" rendered as a certainty ("hará que").
-    - Current: `Bloquearlos hará que los sitios web carguen más rápido`
-    - Suggest: `Bloquearlos puede hacer que los sitios web carguen más rápido`
 - **`es-ES`** `Menu.TrackingProtectionDescription.SocialNetworksNew` — `Shared/en-US.lproj/Localizable.strings`
     - The Spanish reverses the relationship (social networks place trackers ON other websites) and overstates the effect of blocking.
     - Current: `Las redes sociales colocan rastreadores para que otros sitios web construyan un perfil más completo dirigido a ti. Si bloqueas estos rastreadores, muchas empresas de medios sociales dejarán de tener…`
     - Suggest: `Las redes sociales colocan rastreadores en otros sitios web para crear un perfil tuyo más completo y segmentado. Bloquear estos rastreadores reduce lo que las empresas de redes sociales pueden ver de…`
-- **`fa`** `Well, this is embarrassing.` — `Shared/en-US.lproj/Localizable.strings`
-    - "this is embarrassing" is rendered as "we are very sorry", an apology the source does not make.
-    - Current: `راستش، بسیار متاسفیم.`
-    - Suggest: `خب، این شرم‌آور است.`
 - **`fi`** `Onboarding.Modern.BrandRefresh.Marketing.Description.v148` — `Shared/Supporting Files/en-US.lproj/Onboarding.strings`
     - "that you use it" is rendered as "how you use it", widening the data shared with marketing partners.
     - Current: `ja kuinka käytät sitä`
@@ -93,47 +81,59 @@ The translation makes the product assert something the en-US never said. Nothing
     - "that you use it" was rendered as "how you use it", making the product claim it shares usage details with marketing partners.
     - Current: `hogy miként fedezte fel, és hogyan használja a %1$@ot`
     - Suggest: `hogy miként fedezte fel a %1$@ot, és hogy használja azt`
-- **`hu`** `Menu.TrackingProtectionDescription.Fingerprinters` — `Shared/en-US.lproj/Localizable.strings`
-    - "can be used to track you" rendered as a definite statement "használnak" (they use it), dropping the modality.
-    - Current: `amelyet aztán a böngészése követésére használnak`
-    - Suggest: `amely aztán a böngészése követésére használható`
 - **`id`** `QuickAnswers.PrivacyBanner.Description.v158` — `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings`
     - The negation only applies to the first item, so the translation states that the app does use data to train AI models and uses the voice to identify the user.
     - Current: `%@ tidak menyimpan audio atau pertanyaan Anda, menggunakan data Anda untuk melatih model AI, atau menggunakan suara Anda untuk mengidentifikasi Anda.`
     - Suggest: `%@ tidak menyimpan audio atau pertanyaan Anda, tidak menggunakan data Anda untuk melatih model AI, dan tidak menggunakan suara Anda untuk mengidentifikasi Anda.`
-- **`id`** `Search.ThirdPartyEngines.DuplicateErrorMessage` — `Shared/en-US.lproj/Localizable.strings`
-    - Error message translated as a success ("has been successfully added") instead of stating the engine was already added.
-    - Current: `Mesin pencari dengan judul ini atau URL telah berhasil ditambahkan.`
-    - Suggest: `Mesin pencari dengan judul atau URL ini sudah pernah ditambahkan.`
 - **`id`** `Firefox won’t remember any of your history or cookies, but new bookmarks will be saved.` — `Shared/en-US.lproj/PrivateBrowsing.strings`
     - "won’t remember any of your history" is rendered as "tidak akan mengingat semua riwayat", which reads as "will not remember all history" (i.e. may remember some).
     - Current: `tidak akan mengingat semua riwayat atau kuki`
     - Suggest: `tidak akan mengingat riwayat atau kuki apa pun`
-- **`ja`** `NSFaceIDUsageDescription` — `Client/en-US.lproj/InfoPlist.strings`
-    - "payment methods" is rendered as 「暗号化されたカード情報」 (encrypted card information), adding a claim not in the source.
-    - Current: `保存されたログイン情報と暗号化されたカード情報にアクセスするには Face ID が必要です。`
-    - Suggest: `保存されたパスワードと支払い方法にアクセスするには Firefox は Face ID を必要とします。`
-- **`ja`** `NSLocationWhenInUseUsageDescription` — `Client/en-US.lproj/InfoPlist.strings`
-    - "may request your location" is rendered as a present-tense assertion that visited sites are requesting your location.
-    - Current: `訪れたウェブサイトがあなたの位置情報を要求しています。`
-    - Suggest: `訪れたウェブサイトがあなたの位置情報を要求することがあります。`
 - **`ja`** `FirefoxHomepage.FeltPrivacyUI.Title.v122` — `Shared/Supporting Files/en-US.lproj/FirefoxHomepage.strings`
     - "Leave no traces on this device" is rendered as "We won't let this device be tracked", which asserts something different from the source.
     - Current: `この端末を追跡させません`
     - Suggest: `この端末に痕跡を残しません`
-- **`ja`** `Onboarding.Customization.Intro.Title.v123` — `Shared/Supporting Files/en-US.lproj/Onboarding.strings`
-    - Title translated as "privacy protection" instead of "puts you in control".
-    - Current: `%@ でプライバシー保護`
-    - Suggest: `%@ なら思いのまま`
 - **`ja`** `Onboarding.Modern.BrandRefresh.TermsOfUse.ManagePreferenceAgreement.v148` — `Shared/Supporting Files/en-US.lproj/Onboarding.strings`
     - "interaction data" rendered as 「対話データ」 (dialogue/conversation data) instead of 利用状況データ/インタラクションデータ.
     - Current: `診断情報と対話データ`
     - Suggest: `診断データとインタラクションデータ`
-- **`ja`** `QuickAnswers.OptInRedesign.NoTrainingDescription.v158` — `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings`
-    - "our systems" narrowed to "our AI systems".
-    - Current: `私たちの AI システムの学習`
-    - Suggest: `私たちのシステムの学習`
-- _…and 36 more, in the per-locale reports linked below._
+- **`ja`** `Settings.TrackingProtection.ProtectionCellFooter` — `Shared/en-US.lproj/Localizable.strings`
+    - "helps stop advertisers from tracking your browsing" is rendered as an absolute claim of blocking tracking ads.
+    - Current: `ユーザーの行動を追跡する広告を阻止します`
+    - Suggest: `広告会社によるユーザーの閲覧の追跡を防ぐのに役立ちます`
+- **`ko`** `Onboarding.Modern.BrandRefresh.Marketing.Description.v148` — `Shared/Supporting Files/en-US.lproj/Onboarding.strings`
+    - "and that you use it" is translated as "and how you use it", which claims usage behaviour is shared with marketing partners.
+    - Current: `%1$@를 발견한 방법과 사용 방법을 공유하세요`
+    - Suggest: `%1$@를 발견한 방법과 %1$@를 사용한다는 사실을 공유하세요`
+- **`ko`** `CoverSheet.v24.ETP.Description` — `Shared/en-US.lproj/Localizable.strings`
+    - "helps stop ads from following you" is rendered as an unconditional claim that protection prevents ads from tracking the user.
+    - Current: `광고가 사용자를 추적하지 못하게합니다`
+    - Suggest: `광고가 사용자를 따라다니는 것을 막는 데 도움을 줍니다`
+- **`nb-NO`** `Onboarding.Welcome.Description.TreatementA.v120` — `Shared/Supporting Files/en-US.lproj/Onboarding.strings`
+    - 'helps stop' is rendered as 'forhindrer' (prevents), which makes an absolute promise the source does not make.
+    - Current: `forhindrer selskaper i å spore`
+    - Suggest: `bidrar til å hindre selskaper i å spore`
+- **`nb-NO`** `Onboarding.Welcome.Description.v120` — `Shared/Supporting Files/en-US.lproj/Onboarding.strings`
+    - 'helps stop' is rendered as 'forhindrer' (prevents), which makes an absolute promise the source does not make.
+    - Current: `forhindrer selskaper i å spore`
+    - Suggest: `bidrar til å hindre selskaper i å spore`
+- **`nb-NO`** `CoverSheet.v24.ETP.Description` — `Shared/en-US.lproj/Localizable.strings`
+    - The translation drops "helps", so a hedged claim about tracking protection becomes an absolute promise that it prevents ad tracking.
+    - Current: `forhindrer reklame i å spore aktivitetene dine på nettet`
+    - Suggest: `bidrar til å hindre reklame i å følge deg rundt på nettet`
+- **`pt-PT`** `Keyboard.Shortcuts.ClearRecentHistory` — `Shared/en-US.lproj/Localizable.strings`
+    - "Recent" is dropped, so the label says it clears the whole history.
+    - Current: `Limpar histórico`
+    - Suggest: `Limpar histórico recente`
+- **`sk`** `NSMicrophoneUsageDescription` — `Client/en-US.lproj/InfoPlist.strings`
+    - The translation leaves out that Firefox uploads the recorded audio; it only mentions recording.
+    - Current: `na nahrávanie zvuku`
+    - Suggest: `na nahrávanie a nahrávanie zvuku na server`
+- **`sk`** `Settings.TrackingProtection.ProtectionCellFooter` — `Shared/en-US.lproj/Localizable.strings`
+    - The hedged "helps stop advertisers from tracking" has been translated as a flat promise that the feature prevents tracking.
+    - Current: `zabraňuje inzerentom sledovať vás na internete`
+    - Suggest: `pomáha zabrániť inzerentom sledovať vás na internete`
+- _…and 12 more, in the per-locale reports linked below._
 
 ### Broken output — impact 1 (1)
 
@@ -146,7 +146,7 @@ The value does not render as intended: a blank string, broken markup, a variable
     - Current: `Mit %3$@ auf %2$@ übersetzen?`
     - Suggest: `Mit %3$@ in %2$@ übersetzen?`
 
-### Wrong content — impact 2 (1099)
+### Wrong content — impact 2 (1084)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/firefox_ios.md`.
 
@@ -159,35 +159,37 @@ Too many to list here; the per-locale counts are in the table below and every on
 | [el](el/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,922 | 5 | **51** | 10 | 0 | 0 | 0 |
 | [en-CA](en-CA/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,837 | 90 | **2** | 0 | 16 | 0 | 0 |
 | [en-GB](en-GB/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,927 | 0 | **9** | 4 | 3 | 0 | 50 |
-| [es-AR](es-AR/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,927 | 0 | **97** | 42 | 4 | 0 | 0 |
-| [es-ES](es-ES/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,848 | 79 | **58** | 32 | 0 | 1 | 0 |
+| [es-AR](es-AR/firefox_ios.md) | 2026-10-19 | checks-only | `ec61063c` | 1,927 | 0 | **96** | 41 | 4 | 0 | 0 |
+| [es-ES](es-ES/firefox_ios.md) | 2026-10-19 | checks-only | `ec61063c` | 1,848 | 79 | **57** | 31 | 0 | 1 | 0 |
 | [es-MX](es-MX/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,896 | 31 | **125** | 65 | 1 | 0 | 0 |
-| [fa](fa/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,915 | 12 | **407** | 208 | 66 | 0 | 0 |
+| [fa](fa/firefox_ios.md) | 2026-10-19 | checks-only | `ec61063c` | 1,915 | 12 | **406** | 207 | 66 | 0 | 0 |
 | [fi](fi/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,907 | 20 | **41** | 19 | 0 | 0 | 0 |
 | [fr](fr/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,927 | 0 | **48** | 29 | 2 | 0 | 0 |
 | [hi-IN](hi-IN/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,876 | 51 | **16** | 13 | 79 | 0 | 0 |
-| [hu](hu/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,915 | 12 | **90** | 38 | 0 | 0 | 0 |
-| [id](id/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,927 | 0 | **93** | 34 | 0 | 0 | 0 |
+| [hu](hu/firefox_ios.md) | 2026-10-19 | checks-only | `ec61063c` | 1,915 | 12 | **89** | 37 | 0 | 0 | 0 |
+| [id](id/firefox_ios.md) | 2026-10-19 | checks-only | `ec61063c` | 1,927 | 0 | **93** | 34 | 0 | 0 | 0 |
 | [it](it/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,927 | 0 | **2** | 1 | 21 | 21 | 2 |
-| [ja](ja/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,915 | 12 | **112** | 63 | 0 | 0 | 0 |
-| [ko](ko/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,927 | 0 | **95** | 44 | 0 | 0 | 0 |
+| [ja](ja/firefox_ios.md) | 2026-10-19 | checks-only | `ec61063c` | 1,915 | 12 | **108** | 59 | 0 | 0 | 0 |
+| [ko](ko/firefox_ios.md) | 2026-10-19 | checks-only | `ec61063c` | 1,927 | 0 | **93** | 42 | 0 | 0 | 0 |
 | [nb-NO](nb-NO/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,915 | 12 | **34** | 8 | 0 | 0 | 0 |
 | [nl](nl/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,918 | 9 | **51** | 22 | 0 | 0 | 0 |
-| [pl](pl/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,915 | 12 | **62** | 37 | 2 | 4 | 0 |
-| [pt-BR](pt-BR/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,927 | 0 | **51** | 33 | 3 | 2 | 0 |
+| [pl](pl/firefox_ios.md) | 2026-10-19 | checks-only | `ec61063c` | 1,915 | 12 | **61** | 36 | 2 | 4 | 0 |
+| [pt-BR](pt-BR/firefox_ios.md) | 2026-10-19 | checks-only | `ec61063c` | 1,927 | 0 | **51** | 33 | 3 | 2 | 0 |
 | [pt-PT](pt-PT/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,927 | 0 | **65** | 17 | 0 | 0 | 0 |
 | [ro](ro/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,927 | 0 | **40** | 21 | 0 | 0 | 0 |
-| [ru](ru/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,927 | 0 | **86** | 39 | 1 | 0 | 0 |
+| [ru](ru/firefox_ios.md) | 2026-10-19 | checks-only | `ec61063c` | 1,927 | 0 | **85** | 38 | 1 | 0 | 0 |
 | [sk](sk/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,927 | 0 | **36** | 15 | 0 | 0 | 0 |
-| [sl](sl/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,872 | 55 | **82** | 36 | 0 | 0 | 0 |
+| [sl](sl/firefox_ios.md) | 2026-10-19 | checks-only | `ec61063c` | 1,872 | 55 | **81** | 35 | 0 | 0 | 0 |
 | [sv-SE](sv-SE/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,927 | 0 | **49** | 17 | 0 | 0 | 0 |
-| [th](th/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,885 | 42 | **37** | 19 | 0 | 0 | 0 |
-| [tr](tr/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,927 | 0 | **83** | 44 | 0 | 0 | 0 |
+| [th](th/firefox_ios.md) | 2026-10-19 | checks-only | `ec61063c` | 1,885 | 42 | **36** | 18 | 0 | 0 | 0 |
+| [tr](tr/firefox_ios.md) | 2026-10-19 | checks-only | `ec61063c` | 1,927 | 0 | **82** | 43 | 0 | 0 | 0 |
 | [vi](vi/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,927 | 0 | **68** | 32 | 0 | 0 | 0 |
-| [zh-CN](zh-CN/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,909 | 18 | **67** | 40 | 1 | 0 | 0 |
+| [zh-CN](zh-CN/firefox_ios.md) | 2026-10-19 | checks-only | `ec61063c` | 1,909 | 18 | **67** | 40 | 1 | 0 | 0 |
 | [zh-TW](zh-TW/firefox_ios.md) | 2026-10-19 | incremental | `ec61063c` | 1,927 | 0 | **30** | 15 | 0 | 0 | 0 |
 
 **Impact 1–2** is the queue that matters: broken output and wrong content. Impact 3–4 is language polish and typography.
+
+**Not reviewed yet:** `es-AR`, `es-ES`, `fa`, `hu`, `id`, `ja`, `ko`, `pl`, `pt-BR`, `ru`, `sl`, `th`, `tr`, `zh-CN`. They have only been through the deterministic checks; the reviewer has not read them. The next run does the baseline.
 
 ## Adding a locale
 

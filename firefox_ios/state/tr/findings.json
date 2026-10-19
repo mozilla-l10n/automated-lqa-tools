@@ -866,30 +866,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "Cihaza indirilmiş yapay zekâ modelleri kaldırılacaktır.",
-  "dismissed_because": "",
-  "fid": "7880a03d791b",
-  "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "tr",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The source restricts model removal to on-device AI features; the Turkish states it unconditionally, changing what the product says it does.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "ae0aa2a4",
-  "string_id": "Settings.AIControls.AIPoweredFeaturesSection.BlockedStatusDescriptionV2.v151",
-  "suggest": "Cihaz üzerinde çalışan yapay zekâ için indirilmiş modeller kaldırılır.",
-  "summary": "\"For on-device AI\" qualifier dropped, so the Turkish asserts all downloaded AI models are removed.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "Bu sayede aktif %@ kullanıcılarının sayısını tahmin edebiliriz.",
   "dismissed_because": "",
   "fid": "adac0a7e118c",
@@ -974,7 +950,7 @@
    "confidence": "high"
   },
   "rationale": "Source says changes are applied remotely between updates; \"her güncellemede\" (with every update) says the opposite.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0e806970",

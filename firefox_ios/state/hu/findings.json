@@ -2976,30 +2976,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "amelyet aztán a böngészése követésére használnak",
-  "dismissed_because": "",
-  "fid": "6f3a46306d08",
-  "file": "Shared/en-US.lproj/Localizable.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "hu",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The en-US says the profile \"can be used\" to track; the Hungarian asserts that it is used, changing what the product states about tracking behaviour.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "e3c4221c",
-  "string_id": "Menu.TrackingProtectionDescription.Fingerprinters",
-  "suggest": "amely aztán a böngészése követésére használható",
-  "summary": "\"can be used to track you\" rendered as a definite statement \"használnak\" (they use it), dropping the modality.",
-  "suppressed_by": ""
- },
- {
   "category": "C",
   "check": "llm",
   "current": "A böngészője és számítógép beállításai egyediek.",

@@ -3,14 +3,15 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
-| **Mode** | incremental |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cb086148c41a` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `3bdd70692916` |
+| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 16,477 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for hu: [android](android.md) · [firefox_ios](firefox_ios.md)
 
@@ -46,9 +47,9 @@ _Nothing retired._
 |---|---|
 | Files | 328 |
 | Strings | 16,477 |
-| Missing strings | 43 |
+| Missing strings | 69 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,20 +64,24 @@ _Nothing retired._
 
 ### Completeness
 
-**43 strings** are not translated yet, concentrated in:
+**69 strings** are not translated yet, concentrated in:
 
-- `browser/browser/browser.ftl` — 8
-- `browser/browser/ipProtection.ftl` — 8
+- `browser/browser/ipProtection.ftl` — 15
+- `browser/browser/miniWindow.ftl` — 15
+- `browser/browser/browser.ftl` — 10
 - `browser/browser/newtab/newtab.ftl` — 8
 - `browser/browser/sanitize.ftl` — 3
-- `toolkit/toolkit/about/aboutGlean.ftl` — 2
 - `browser/browser/sidebar.ftl` — 2
 - `browser/browser/preferences/permissions.ftl` — 2
 - `browser/browser/preferences/preferences.ftl` — 2
-- `toolkit/toolkit/global/videocontrols.ftl` — 1
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 1
+- `toolkit/toolkit/about/aboutGlean.ftl` — 2
+- `browser/browser/browserContext.ftl` — 1
 - `browser/browser/confirmationHints.ftl` — 1
 - `browser/browser/genai.ftl` — 1
+
+**Files absent from the locale:**
+
+- `browser/browser/miniWindow.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -102,28 +107,13 @@ _Nothing reported._
 
 ## 3. Open findings (260)
 
-> **Reads as a deliberate edit (5).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `about-private-browsing-private-window-redesign-subheader` — `browser/browser/aboutPrivateBrowsing.ftl` — "is designed to protect your privacy" rendered as an unconditional "protects your privacy".
     - Current: `a beépített követés elleni védelmének köszönhetően megvédi a magánszféráját`
     - Source: `{ -brand-short-name } is designed to protect your privacy as you browse, with built-in tracking protections. Closing this window erases its history, cookies, and site data to keep your browsing private from others who u…`
     - Suggest: `úgy lett tervezve, hogy a beépített követés elleni védelemmel megvédje a magánszféráját böngészés közben`
     - The en-US hedges with "is designed to protect your privacy as you browse"; the Hungarian states outright that it protects the user's privacy, a stronger promise than the source makes, and also drops "as you browse".
-- `restart-required-intro2` — `browser/browser/aboutRestartRequired.ftl` — "needs to finish an update. Restart to..." rendered as statements that the browser finishes the update and will restart itself, dropping the instruction to the user.
-    - Current: `A { -brand-short-name } befejezi a frissítést. Újraindul, hogy a dolgok biztonságosak és zökkenőmentesek legyenek.`
-    - Source: `{ -brand-short-name } needs to finish an update. Restart to keep things secure and smooth.`
-    - Suggest: `A { -brand-short-name }nak be kell fejeznie a frissítést. Indítsa újra, hogy a dolgok biztonságosak és zökkenőmentesek legyenek.`
-    - The en-US asks the user to restart ("Restart to keep things secure"); the Hungarian asserts that the browser finishes the update and restarts by itself, removing the call to action.
-- `ip-protection-site-rules-button` — `browser/browser/ipProtection.ftl` — The description reverses who needs the extra privacy, asserting that the sites must provide privacy rather than that the user wants extra privacy on them.
-    - Current: `Állítson be szabályokat azokhoz a webhelyekhez, amelyeknek fokozott adatvédelmet kell biztosítaniuk, vagy ki kell kapcsolni a VPN-t.`
-    - Source: `description: Set rules for sites that need extra privacy or VPN turned off. label: Manage website rules`
-    - Suggest: `Állítson be szabályokat azokhoz a webhelyekhez, amelyeknél fokozott adatvédelemre van szükség, vagy amelyeknél ki kell kapcsolni a VPN-t.`
-    - en-US "sites that need extra privacy or VPN turned off" means sites for which the user needs extra privacy; the Hungarian says the sites are obliged to provide extra privacy.
-- `about-pdf-features-intro` — `toolkit/toolkit/about/aboutPDF.ftl` — "private" rendered as "biztonságos" (secure).
-    - Current: `Egyszerű, ingyenes és biztonságos.`
-    - Source: `Read, mark up, and sign PDFs right where you browse. It’s simple, free, and private.`
-    - Suggest: `Egyszerű, ingyenes és privát.`
-    - The source claims the tools are private; the Hungarian claims they are secure, a different assertion about the product.
 - `autofill-delete-payment-method-os-prompt-windows` — `toolkit/toolkit/formautofill/formAutofill.ftl` — "delete stored payment method information" was rendered as "akar használni" (wants to use) instead of "törölni akarja" (wants to delete).
     - Current: `A { -brand-short-name } tárolt fizetésimód-információkat akar használni.`
     - Source: `{ -brand-short-name } is trying to delete stored payment method information. Confirm access to this Windows account below.`

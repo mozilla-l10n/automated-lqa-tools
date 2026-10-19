@@ -122,30 +122,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "这是由于其他 { -brand-short-name } 配置文件或实例进行了更新",
-  "dismissed_because": "",
-  "fid": "39d1fa6287a4",
-  "file": "browser/browser/aboutRestartRequired.ftl",
-  "first_seen": "2026-10-12",
-  "impact": 2,
-  "last_seen": "2026-10-12",
-  "locale": "zh-CN",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "en-US hedges with \"can happen when\"; the Chinese states the cause as a fact.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "e5b206ab",
-  "string_id": "restart-required-why-now-answer",
-  "suggest": "出现这种情况，可能是由于其他 { -brand-short-name } 配置文件或实例进行了更新",
-  "summary": "\"This can happen when…\" (possible cause) is rendered as \"这是由于…\" (this is because), asserting a definite cause.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "校对邮件",
   "dismissed_because": "",
   "fid": "296f672bc587",

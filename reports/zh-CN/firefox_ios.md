@@ -5,12 +5,13 @@
 | **Generated** | 2026-10-19 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **Previous run** | 2026-10-17 @ `09d125f6a298` |
-| **Mode** | incremental |
+| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 1,909 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for zh-CN: [android](android.md) · [firefox](firefox.md)
 
@@ -94,18 +95,8 @@ _Nothing reported._
 
 ## 3. Open findings (67)
 
-> **Reads as a deliberate edit (5).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
-- `ContextualHints.FeltDeletion.Body.v122` — `zh-CN/firefox-ios.xliff` — The translation reverses the sequence/meaning: the source says tapping starts a fresh private session by deleting history and cookies, while the Chinese says to delete data after browsing.
-    - Current: `点按此处新建隐私浏览，浏览完毕后轻松删除历史记录和 Cookie 等数据。`
-    - Source: `Tap here to start a fresh private session. Delete your history, cookies — everything.`
-    - Suggest: `点按此处开始全新的隐私浏览会话。删除您的历史记录、Cookie 等一切数据。`
-    - en-US: "Tap here to start a fresh private session. Delete your history, cookies — everything." The added "浏览完毕后" (after you finish browsing) is not in the source and changes when deletion happens.
-- `Onboarding.Customization.Toolbar.Description.v123` — `zh-CN/firefox-ios.xliff` — "Keep searches within reach" is rendered as "holding the phone lightly can invoke search", which is not what the source says.
-    - Current: `轻松握持就可唤起搜索。`
-    - Source: `Keep searches within reach.`
-    - Suggest: `让搜索始终触手可及。`
-    - The en-US means the search bar stays easy to reach; the Chinese asserts that merely holding the device invokes search, which is a different (and false) behaviour claim.
 - `Onboarding.Welcome.Description.TreatementA.v120` — `zh-CN/firefox-ios.xliff` — "helps stop companies" rendered as "automatically blocks big corporations", overstating the product's behaviour.
     - Current: `会自动阻止大公司在网上偷偷跟踪您`
     - Source: `Our non-profit backed browser helps stop companies from secretly following you around the web.`

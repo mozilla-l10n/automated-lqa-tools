@@ -634,7 +634,7 @@
    "confidence": "high"
   },
   "rationale": "The source says Firefox is fast and private. The Slovak claims a different property, security, which the source never claimed.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "c79d8761",

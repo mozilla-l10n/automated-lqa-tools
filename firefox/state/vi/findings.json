@@ -5802,30 +5802,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "không còn được hỗ trợ",
-  "dismissed_because": "",
-  "fid": "cbb8e8311119",
-  "file": "dom/chrome/dom/dom.properties",
-  "first_seen": "2026-10-19",
-  "impact": 2,
-  "last_seen": "2026-10-19",
-  "locale": "vi",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The source says the timeout attribute is not supported in this mode. The translation says support was removed, which implies it once worked.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "12212c32",
-  "string_id": "TimeoutSyncXHRWarning",
-  "suggest": "không được hỗ trợ",
-  "summary": "\"No longer\" was added where the source just says \"not supported\".",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "với moz-extension URLs hoặc không: “%S”",
   "dismissed_because": "",
   "fid": "9cb187c76a02",

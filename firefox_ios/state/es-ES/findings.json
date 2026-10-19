@@ -1346,30 +1346,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "Bloquearlos hará que los sitios web carguen más rápido",
-  "dismissed_because": "",
-  "fid": "27af31a0f498",
-  "file": "Shared/en-US.lproj/Localizable.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "es-ES",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The en-US hedges with \"can make\"; the Spanish asserts it as a guaranteed outcome.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "5a28750a",
-  "string_id": "Menu.TrackingProtectionDescription.ContentTrackers",
-  "suggest": "Bloquearlos puede hacer que los sitios web carguen más rápido",
-  "summary": "\"can make websites load faster\" rendered as a certainty (\"hará que\").",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "Están configuradas por empresas externas de anuncios y de analítica web.",
   "dismissed_because": "",
   "fid": "f8db40134dd7",

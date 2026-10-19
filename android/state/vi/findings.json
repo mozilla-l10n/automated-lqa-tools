@@ -624,30 +624,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "Thao tác này sẽ mở tập tin bằng một ứng dụng khác",
-  "dismissed_because": "",
-  "fid": "9003897d41d7",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "vi",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The en-US says \"This might open the file in a different app\". \"sẽ mở\" turns a possibility into a certainty about what the app does.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "92dfabda",
-  "string_id": "change_file_extension_description",
-  "suggest": "Thao tác này có thể mở tập tin bằng một ứng dụng khác",
-  "summary": "The source says the change \"might\" open the file in a different app, but the Vietnamese says it \"will\" open it in a different app.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "Các thẻ đang mở",
   "dismissed_because": "",
   "fid": "037dbf089b33",
@@ -972,7 +948,7 @@
    "confidence": "high"
   },
   "rationale": "The source says blocking all cookies is certain to break sites. The translation copies the \"may\" wording from option 3, which plays down a definite warning.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "50a267de",

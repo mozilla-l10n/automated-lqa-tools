@@ -5725,30 +5725,6 @@
  },
  {
   "category": "B",
-  "check": "llm",
-  "current": "dzięki czemu nikt inny nie może używać ich do wypełniania formularzy płatności",
-  "dismissed_because": "",
-  "fid": "784d3455d4ac",
-  "file": "toolkit/toolkit/formautofill/formAutofill.ftl",
-  "first_seen": "2026-10-12",
-  "impact": 2,
-  "last_seen": "2026-10-12",
-  "locale": "pl",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "en-US says \"so only you can use them to fill payment forms\"; the Polish asserts that no one else can use them, a claim about third parties the source frames as the user's exclusive ability.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "c09ab27a",
-  "string_id": "credit-card-save-doorhanger-description-security-code",
-  "suggest": "dzięki czemu tylko Ty możesz używać ich do wypełniania formularzy płatności",
-  "summary": "The Polish reverses the statement \"only you can use them\" into \"nobody else can use them\" — actually it drops the assurance that the user can use them.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
   "check": "legacy",
   "current": "",
   "dismissed_because": "",

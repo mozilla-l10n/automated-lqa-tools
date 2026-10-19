@@ -5,12 +5,13 @@
 | **Generated** | 2026-10-19 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **Previous run** | 2026-10-17 @ `09d125f6a298` |
-| **Mode** | incremental |
+| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 1,872 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for sl: [android](android.md) · [firefox](firefox.md)
 
@@ -92,22 +93,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (82)
+## 3. Open findings (81)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `Settings.AIControls.AIPoweredFeaturesSection.BlockedStatusDescriptionV2.v151` — `sl/firefox-ios.xliff` — The qualifier "For on-device AI" is dropped, so the Slovenian states unconditionally that downloaded AI models will be removed.
-    - Current: `Morebitni modeli UI, ki so se že prenesli na napravo, bodo odstranjeni.`
-    - Source: `**Blocked**: You won’t see and can’t use the feature. For on-device AI, any downloaded models are removed.`
-    - Suggest: `Pri UI, ki se izvaja na napravi, bodo odstranjeni vsi preneseni modeli.`
-    - en-US limits the model removal to on-device AI ("For on-device AI, any downloaded models are removed."); the translation makes it a general statement about the product's behaviour.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 36 |
+| 2 | Wrong content (says something other than the English) | 35 |
 | 3 | Degraded language (grammar, spelling, terminology) | 38 |
 | 4 | Cosmetic (typography, spacing) | 8 |
 
@@ -212,11 +204,6 @@ _Nothing in this category._
     - Source: `Allow %@ to open?`
     - Suggest: `Ali dovolite, da %@ odpre povezavo?`
     - Per the comment, %@ is the app name and the prompt asks permission for the app to open a URL from the scanned QR code; the Slovenian instead asks permission to open the app itself.
-- `Settings.AIControls.AIPoweredFeaturesSection.BlockedStatusDescriptionV2.v151` — `sl/firefox-ios.xliff` — The qualifier "For on-device AI" is dropped, so the Slovenian states unconditionally that downloaded AI models will be removed.
-    - Current: `Morebitni modeli UI, ki so se že prenesli na napravo, bodo odstranjeni.`
-    - Source: `**Blocked**: You won’t see and can’t use the feature. For on-device AI, any downloaded models are removed.`
-    - Suggest: `Pri UI, ki se izvaja na napravi, bodo odstranjeni vsi preneseni modeli.`
-    - en-US limits the model removal to on-device AI ("For on-device AI, any downloaded models are removed."); the translation makes it a general statement about the product's behaviour.
 - `Settings.AIControls.AIPoweredFeaturesSection.Title.v151` — `sl/firefox-ios.xliff` — "AI-POWERED FEATURES" translated as "MOŽNOSTI UMETNE INTELIGENCE" (features of AI) instead of features powered by AI.
     - Current: `MOŽNOSTI UMETNE INTELIGENCE`
     - Source: `AI-POWERED FEATURES`

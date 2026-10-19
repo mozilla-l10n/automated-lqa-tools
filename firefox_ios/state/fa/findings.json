@@ -11282,30 +11282,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "راستش، بسیار متاسفیم.",
-  "dismissed_because": "",
-  "fid": "c090c309eefd",
-  "file": "Shared/en-US.lproj/Localizable.strings",
-  "first_seen": "2026-09-17",
-  "impact": 2,
-  "last_seen": "2026-09-17",
-  "locale": "fa",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The en-US expresses embarrassment about the situation, not an apology from the product.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "de2664b6",
-  "string_id": "Well, this is embarrassing.",
-  "suggest": "خب، این شرم‌آور است.",
-  "summary": "\"this is embarrassing\" is rendered as \"we are very sorry\", an apology the source does not make.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "شما هیچ‌گونه زبانه باز دیگری در فایرفاکس در دستگاه‌های دیگر ندارید.",
   "dismissed_because": "",
   "fid": "573f1263199e",

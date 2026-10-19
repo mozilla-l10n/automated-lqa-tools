@@ -3,14 +3,15 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
-| **Mode** | incremental |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cb086148c41a` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `3bdd70692916` |
+| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 16,520 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for ru: [android](android.md) · [firefox_ios](firefox_ios.md)
 
@@ -46,9 +47,9 @@ _Nothing retired._
 |---|---|
 | Files | 328 |
 | Strings | 16,520 |
-| Missing strings | 0 |
+| Missing strings | 26 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,7 +64,19 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**26 strings** are not translated yet, concentrated in:
+
+- `browser/browser/miniWindow.ftl` — 15
+- `browser/browser/ipProtection.ftl` — 7
+- `browser/browser/browser.ftl` — 2
+- `browser/browser/browserContext.ftl` — 1
+- `browser/browser/tabbrowser.ftl` — 1
+
+**Files absent from the locale:**
+
+- `browser/browser/miniWindow.ftl`
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -87,37 +100,22 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (589)
+## 3. Open findings (588)
 
-> **Reads as a deliberate edit (4).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
-- `about-private-browsing-spotlight-basics-activity-seen` — `browser/browser/aboutPrivateBrowsing.ftl` — "Some activity may still be seen by sites…" mistranslated as "Some sites … may track some activity".
-    - Current: `Некоторые сайты, поисковые системы, интернет-провайдеры или ваш работодатель могут отслеживать некоторую активность.`
-    - Source: `Some activity may still be seen by sites, search engines, internet providers, or your employer.`
-    - Suggest: `Некоторая активность всё же может быть видна сайтам, поисковым системам, интернет-провайдерам или вашему работодателю.`
-    - In the source "some" qualifies the activity, not the sites, and the verb is "be seen", not "track"; the Russian moves the quantifier and states that these parties actively track the user.
 - `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl` — "don’t clear all of your data" reversed into "do not delete any of your data".
     - Current: `не удаляют какие-либо ваши данные`
     - Source: `Private Windows help keep your browsing private from others on this device. They don’t make you anonymous or clear all of your data.`
     - Suggest: `не удаляют все ваши данные`
     - The en-US says private windows do not clear *all* of your data (i.e. some data is cleared); the Russian asserts that no data at all is deleted, which contradicts the product's behaviour.
-- `restart-required-multiple-instances-answer` — `browser/browser/aboutRestartRequired.ftl` — "the open one can be left on an older version" mistranslated as a permission/action "the open one can be left" addressed to the user.
-    - Current: `открытый можно оставить в более старой версии`
-    - Source: `If one profile or instance updates while another is still open, the open one can be left on an older version. Restarting keeps everything on the same version.`
-    - Suggest: `открытый может остаться на более старой версии`
-    - The en-US describes an unwanted outcome (the still-open instance ends up running an older version); the Russian impersonal "можно оставить" says it is permissible to leave it on the older version.
-- `nova-early-access-infobar-title` — `browser/browser/newtab/asrouter.ftl` — "is getting a new look" (future/ongoing) translated as a completed change "Обновлён внешний вид".
-    - Current: `<strong>Обновлён внешний вид { -brand-product-name }.</strong>`
-    - Source: `<strong>{ -brand-product-name } is getting a new look.</strong> You’re previewing an early, unpolished version before the launch later this year.`
-    - Suggest: `<strong>У { -brand-product-name } скоро появится новый облик.</strong>`
-    - The en-US says the redesign is upcoming and the user is previewing it before the launch later this year; the Russian asserts the look has already been updated, contradicting the second sentence.
 
 _Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 44 |
-| 2 | Wrong content (says something other than the English) | 265 |
+| 2 | Wrong content (says something other than the English) | 264 |
 | 3 | Degraded language (grammar, spelling, terminology) | 220 |
 | 4 | Cosmetic (typography, spacing) | 60 |
 
@@ -438,16 +436,15 @@ _Also listed under their own category below._
     - Current: `популярные подписи`
     - Source: `Draw, type, or upload your signature, then place it exactly where you want. Save your go-to signatures for next time.`
     - Suggest: `часто используемые подписи`
-- `nova-early-access-infobar-title` — `browser/browser/newtab/asrouter.ftl` — "is getting a new look" (future/ongoing) translated as a completed change "Обновлён внешний вид".
-    - Current: `<strong>Обновлён внешний вид { -brand-product-name }.</strong>`
-    - Source: `<strong>{ -brand-product-name } is getting a new look.</strong> You’re previewing an early, unpolished version before the launch later this year.`
-    - Suggest: `<strong>У { -brand-product-name } скоро появится новый облик.</strong>`
-    - The en-US says the redesign is upcoming and the user is previewing it before the launch later this year; the Russian asserts the look has already been updated, contradicting the second sentence.
 - `relay-50-masks-announcement-title` — `browser/browser/newtab/asrouter.ftl` — dev comment: "'on us' … means 'for free'". Current: 50 псевдонимов электронной почты на нас is a literal calque with no such meaning → Suggest: …— бесплатно
     - Current: `50 псевдонимов электронной почты на нас`
     - Source: `50 email masks, on us`
     - Suggest: `…— бесплатно`
-- _…and 209 more; see `state/` for the full list._
+- `windows-10-eos-challenger-callout-title` — `browser/browser/newtab/asrouter.ftl` — en-US "That's the point." Current: В этом ключ. (not an idiomatic Russian phrase) → Suggest: В этом и суть.
+    - Current: `В этом ключ.`
+    - Source: `{ -brand-product-name } isn’t preloaded like other Big Tech browsers. That’s the point.`
+    - Suggest: `В этом и суть.`
+- _…and 208 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

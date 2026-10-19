@@ -5,12 +5,13 @@
 | **Generated** | 2026-10-19 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **Previous run** | 2026-10-17 @ `09d125f6a298` |
-| **Mode** | incremental |
+| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 1,927 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for pt-BR: [android](android.md) · [firefox](firefox.md)
 
@@ -83,20 +84,6 @@ _Nothing reported._
 
 ## 3. Open findings (51)
 
-> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `Settings.Rollouts.Message.v148` — `pt-BR/firefox-ios.xliff` — "between updates" was rendered as "a cada atualização" (with each update), reversing the meaning.
-    - Current: `melhora funcionalidades, desempenho e estabilidade a cada atualização`
-    - Source: `%@ will improve features, performance, and stability between updates. Changes applied remotely.`
-    - Suggest: `melhora funcionalidades, desempenho e estabilidade entre atualizações`
-    - The source says improvements happen remotely between updates, not at each update; this is the whole point of the remote rollouts setting.
-- `Block Pop-up Windows` — `pt-BR/firefox-ios.xliff` — Translation adds "ou abas" (or tabs), which the source does not say.
-    - Current: `Bloquear abertura de janelas ou abas`
-    - Source: `Block Pop-up Windows`
-    - Suggest: `Bloquear janelas pop-up`
-    - The en-US setting is "Block Pop-up Windows"; the target drops "pop-up" and claims tabs are blocked too.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|

@@ -3,14 +3,15 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `7ee8e61a4a7d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `7ee8e61a4a7d` |
-| **Previous run** | 2026-10-18 @ `dd8ca757b7dd` |
-| **Mode** | incremental |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ea17dbc84971` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ea17dbc84971` |
+| **Previous run** | 2026-10-19 @ `7ee8e61a4a7d` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 2,802 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for sv-SE: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
@@ -85,15 +86,6 @@ _Nothing reported._
 
 ## 3. Open findings (78)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `extension_process_crash_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — "unsuccessfully tried to restart" is rendered as "did not try to restart", which reverses the meaning.
-    - Current: `%1$s försökte inte starta om tillägget.`
-    - Source: `One or more extensions stopped working, making your system unstable. %1$s unsuccessfully tried to restart the extension(s).  Extensions won’t be restarted during your current session.  Removing or disabling extensions m…`
-    - Suggest: `%1$s försökte utan framgång starta om tillägget/tilläggen.`
-    - The source says the app tried to restart the extensions and failed. The Swedish says the app made no attempt at all, which is a different claim about what the app did.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|

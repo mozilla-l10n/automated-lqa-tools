@@ -3,14 +3,15 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `7ee8e61a4a7d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `7ee8e61a4a7d` |
-| **Previous run** | 2026-10-18 @ `dd8ca757b7dd` |
-| **Mode** | incremental |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ea17dbc84971` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ea17dbc84971` |
+| **Previous run** | 2026-10-19 @ `7ee8e61a4a7d` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 2,802 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for ko: [firefox_ios](firefox_ios.md)
 
@@ -85,7 +86,7 @@ _Nothing reported._
 
 ## 3. Open findings (95)
 
-> **Reads as a deliberate edit (9).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (8).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `felt_privacy_desc_card_title` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — Dropping 'on this device' widens the claim to leaving no traces anywhere.
     - Current: `흔적 남기지 않기`
@@ -117,11 +118,6 @@ _Nothing reported._
     - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
     - Suggest: `Firefox를 발견한 방법과 Firefox를 사용한다는 사실을`
     - The source shares only the fact of use. The Korean claims usage behaviour is shared with Mozilla's marketing partners, and the developer comment stresses that data practices stay the same.
-- `preference_enhanced_tracking_protection_custom_cookies_4` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — "will cause websites to break" is softened to "may break" (깨질 수 있음), copying the wording of the third-party cookies option.
-    - Current: `웹 사이트가 깨질 수 있음`
-    - Source: `All cookies (will cause websites to break)`
-    - Suggest: `웹 사이트가 깨짐`
-    - The source states that blocking all cookies will break websites, as a certainty. That is how it differs from the 'may cause websites to break' wording on the third-party option. The Korean now tells users it only might break sites.
 - `preferences_marketing_data_description_4` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — "that you use it" is rendered as "사용 방법" (how you use it), which the developer comment explicitly rules out.
     - Current: `사용 방법을`
     - Source: `Share how you discovered Firefox and that you use it with Mozilla’s marketing technology partners.`

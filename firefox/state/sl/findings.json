@@ -810,7 +810,7 @@
    "confidence": "medium"
   },
   "rationale": "In en-US the subject is { -brand-product-name } which sends data to { -vendor-short-name }; the Slovenian makes { -vendor-short-name } the sender and attaches the brand name to \"brskalnika\", reversing the roles and dropping the recipient.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "a86debb4",

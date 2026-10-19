@@ -230,7 +230,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US asks the user to restart (\"Restart to keep things secure\"); the Hungarian asserts that the browser finishes the update and restarts by itself, removing the call to action.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "709f5a90",
@@ -1016,7 +1016,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US \"sites that need extra privacy or VPN turned off\" means sites for which the user needs extra privacy; the Hungarian says the sites are obliged to provide extra privacy.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "40551419",
@@ -5834,7 +5834,7 @@
    "confidence": "medium"
   },
   "rationale": "The source claims the tools are private; the Hungarian claims they are secure, a different assertion about the product.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "260d8a01",

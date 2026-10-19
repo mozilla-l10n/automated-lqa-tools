@@ -3,14 +3,15 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
-| **Mode** | incremental |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cb086148c41a` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `3bdd70692916` |
+| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for de: [android](android.md) · [firefox_ios](firefox_ios.md)
 
@@ -46,9 +47,9 @@ _Nothing retired._
 |---|---|
 | Files | 338 |
 | Strings | 16,742 |
-| Missing strings | 0 |
+| Missing strings | 26 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 10 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -62,6 +63,18 @@ _Nothing retired._
 | Typography deviations from this locale's own norm | 0 |
 
 ### Completeness
+
+**26 strings** are not translated yet, concentrated in:
+
+- `browser/browser/miniWindow.ftl` — 15
+- `browser/browser/ipProtection.ftl` — 7
+- `browser/browser/browser.ftl` — 2
+- `browser/browser/browserContext.ftl` — 1
+- `browser/browser/tabbrowser.ftl` — 1
+
+**Files absent from the locale:**
+
+- `browser/browser/miniWindow.ftl`
 
 **Files present but identical to en-US:**
 
@@ -105,32 +118,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (40)
+## 3. Open findings (39)
 
-> **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `smartwindow-group-tabs-all-sorted` — `browser/browser/autoTabGrouping.ftl` — "Nice work organizing your tabs" is turned into a factual claim that the user's tabs are now perfectly organized.
-    - Current: `Ihre Tabs sind jetzt bestens organisiert`
-    - Source: `Nice work organizing your tabs`
-    - Suggest: `Gut gemacht beim Organisieren Ihrer Tabs`
-    - The source praises the user's action; the German instead asserts a state ("your tabs are now optimally organized") that the source never claims.
-- `permissions-allow-app-links` — `browser/browser/preferences/preferences.ftl` — The German drops "ask", so it says sites may open app links rather than ask to open them.
-    - Current: `Websites erlauben, App-Links zu öffnen.`
-    - Source: `accesskey: A label: Allow sites to ask to open app links.`
-    - Suggest: `Websites erlauben, das Öffnen von App-Links anzufragen.`
-    - The en-US "Allow sites to ask to open app links" grants permission to ask, which matches the related strings ("Fragen, ob App-Links geöffnet werden sollen"). The German claims sites may open app links directly, a wider permission than the setting gives.
-- `pdf-features-notification-message` — `toolkit/toolkit/about/pdfFeaturesNotification.ftl` — "Split" (PDFs aufteilen/teilen in Einzeldokumente) is rendered as "PDFs teilen", which in German primarily means "share".
-    - Current: `PDFs teilen, zusammenführen und mehr.`
-    - Source: `Split, merge, and more. <a data-l10n-name="features-link">See PDF features</a>`
-    - Suggest: `PDFs aufteilen, zusammenführen und mehr.`
-    - en-US "Split, merge, and more" refers to splitting a PDF into parts; "teilen" reads as sharing, giving users a different feature claim.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 21 |
+| 2 | Wrong content (says something other than the English) | 20 |
 | 3 | Degraded language (grammar, spelling, terminology) | 16 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
@@ -158,11 +152,6 @@ _Also listed under their own category below._
     - Source: `This can happen when another { -brand-short-name } profile or instance updates, or when an update can’t wait until your next restart.`
     - Suggest: `wenn ein anderes { -brand-short-name }-Profil`
     - The en-US uses { -brand-short-name } for the profile reference; hardcoding "Firefox" breaks brand substitution for other builds.
-- `smartwindow-group-tabs-all-sorted` — `browser/browser/autoTabGrouping.ftl` — "Nice work organizing your tabs" is turned into a factual claim that the user's tabs are now perfectly organized.
-    - Current: `Ihre Tabs sind jetzt bestens organisiert`
-    - Source: `Nice work organizing your tabs`
-    - Suggest: `Gut gemacht beim Organisieren Ihrer Tabs`
-    - The source praises the user's action; the German instead asserts a state ("your tabs are now optimally organized") that the source never claims.
 - `smartwindow-group-tabs-loading` — `browser/browser/autoTabGrouping.ftl` — The German says tabs are being checked "for useful groups" in a way that implies searching for existing groups, contrary to the developer comment.
     - Current: `Tabs werden auf nützliche Gruppen überprüft…`
     - Source: `Checking tabs for useful groups…`

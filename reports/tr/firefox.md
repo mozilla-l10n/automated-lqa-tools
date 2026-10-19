@@ -3,14 +3,15 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
-| **Mode** | incremental |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cb086148c41a` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `3bdd70692916` |
+| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 16,520 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for tr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
@@ -46,9 +47,9 @@ _Nothing retired._
 |---|---|
 | Files | 328 |
 | Strings | 16,520 |
-| Missing strings | 0 |
+| Missing strings | 26 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,7 +64,19 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**26 strings** are not translated yet, concentrated in:
+
+- `browser/browser/miniWindow.ftl` — 15
+- `browser/browser/ipProtection.ftl` — 7
+- `browser/browser/browser.ftl` — 2
+- `browser/browser/browserContext.ftl` — 1
+- `browser/browser/tabbrowser.ftl` — 1
+
+**Files absent from the locale:**
+
+- `browser/browser/miniWindow.ftl`
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -86,27 +99,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (163)
+## 3. Open findings (162)
 
-> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `newtab-privacy-message-info-4` — `browser/browser/newtab/newtab.ftl` — "protection by default" rendered as "protection anytime, anywhere", dropping the default-setting meaning.
-    - Current: `{ -brand-short-name } demek her an, her yerde korunma demektir.`
-    - Source: `Choosing { -brand-short-name } means choosing protection by default.`
-    - Suggest: `{ -brand-short-name } demek varsayılan olarak korunma demektir.`
-    - The source says choosing the browser means protection is on by default; "her an, her yerde" (anytime, anywhere) is a different claim not present in the en-US.
-- `welcome-back-onboarding-card-label-pdf` — `browser/browser/newtab/onboarding.ftl` — "Highlight" is rendered as "işaretleyin" (mark) and "work with PDFs" as "düzenleyin" (edit).
-    - Current: `PDF’leri işaretleyin, imzalayın ve düzenleyin`
-    - Source: `Highlight, sign, and work with PDFs`
-    - Suggest: `PDF’leri vurgulayın, imzalayın ve PDF’lerle çalışın`
-    - en-US says “Highlight, sign, and work with PDFs”; “düzenleyin” asserts editing capability that the source does not claim.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 3 |
-| 2 | Wrong content (says something other than the English) | 58 |
+| 2 | Wrong content (says something other than the English) | 57 |
 | 3 | Degraded language (grammar, spelling, terminology) | 67 |
 | 4 | Cosmetic (typography, spacing) | 35 |
 
@@ -210,11 +209,6 @@ _Also listed under their own category below._
     - Source: `Save passwords in { -brand-short-name } to use strong, unique logins everywhere.`
     - Suggest: `güçlü ve benzersiz giriş bilgileri kullanmak`
     - "logins" refers to login credentials, not accounts ("hesaplar"); the Turkish changes the meaning of what the user is advised to use.
-- `newtab-privacy-message-info-4` — `browser/browser/newtab/newtab.ftl` — "protection by default" rendered as "protection anytime, anywhere", dropping the default-setting meaning.
-    - Current: `{ -brand-short-name } demek her an, her yerde korunma demektir.`
-    - Source: `Choosing { -brand-short-name } means choosing protection by default.`
-    - Suggest: `{ -brand-short-name } demek varsayılan olarak korunma demektir.`
-    - The source says choosing the browser means protection is on by default; "her an, her yerde" (anytime, anywhere) is a different claim not present in the en-US.
 - `newtab-privacy-message-promo-relay-3` — `browser/browser/newtab/newtab.ftl` — "email masks" translated as "e-posta maskesi" but the sentence drops the "keep private" agent structure and, more importantly, omits that the masks are the thing being obtained free — meaning shifted from "Get 50 free email masks" to a fragment.
     - Current: `Gerçek e-posta adresinizi gizli tutmanızı sağlayacak 50 e-posta maskesi ücretsiz.`
     - Source: `Get 50 free email masks to help keep your real email private.`

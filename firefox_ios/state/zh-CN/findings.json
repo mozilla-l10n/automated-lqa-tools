@@ -62,7 +62,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US: \"Tap here to start a fresh private session. Delete your history, cookies — everything.\" The added \"浏览完毕后\" (after you finish browsing) is not in the source and changes when deletion happens.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ff69b936",
@@ -278,7 +278,7 @@
    "confidence": "medium"
   },
   "rationale": "The en-US means the search bar stays easy to reach; the Chinese asserts that merely holding the device invokes search, which is a different (and false) behaviour claim.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "fef87a86",

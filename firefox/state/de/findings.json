@@ -248,30 +248,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "Ihre Tabs sind jetzt bestens organisiert",
-  "dismissed_because": "",
-  "fid": "b713fd0fd6d1",
-  "file": "browser/browser/autoTabGrouping.ftl",
-  "first_seen": "2026-10-12",
-  "impact": 2,
-  "last_seen": "2026-10-12",
-  "locale": "de",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The source praises the user's action; the German instead asserts a state (\"your tabs are now optimally organized\") that the source never claims.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "a5d5d3ea",
-  "string_id": "smartwindow-group-tabs-all-sorted",
-  "suggest": "Gut gemacht beim Organisieren Ihrer Tabs",
-  "summary": "\"Nice work organizing your tabs\" is turned into a factual claim that the user's tabs are now perfectly organized.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "Tabs werden auf nützliche Gruppen überprüft…",
   "dismissed_because": "",
   "fid": "33ee6f7e9b1c",
@@ -1761,7 +1737,7 @@
    "confidence": "high"
   },
   "rationale": "The en-US \"Allow sites to ask to open app links\" grants permission to ask, which matches the related strings (\"Fragen, ob App-Links geöffnet werden sollen\"). The German claims sites may open app links directly, a wider permission than the setting gives.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "86dee7ac",
@@ -2795,7 +2771,7 @@
    "confidence": "medium"
   },
   "rationale": "en-US \"Split, merge, and more\" refers to splitting a PDF into parts; \"teilen\" reads as sharing, giving users a different feature claim.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "560b12e3",

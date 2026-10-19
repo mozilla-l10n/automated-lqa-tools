@@ -5,12 +5,13 @@
 | **Generated** | 2026-10-19 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **Previous run** | 2026-10-17 @ `09d125f6a298` |
-| **Mode** | incremental |
+| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 1,915 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for pl: [android](android.md) · [firefox](firefox.md)
 
@@ -90,27 +91,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (62)
+## 3. Open findings (61)
 
-> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `Settings.Studies.Title.v148` — `pl/firefox-ios.xliff` — "Allow Feature Studies" is rendered as "Zezwól na badanie korzystania z funkcji", which says the app studies how the user uses features rather than allowing feature studies (experiments).
-    - Current: `Zezwól na badanie korzystania z funkcji`
-    - Source: `Allow Feature Studies`
-    - Suggest: `Zezwól na badania funkcji`
-    - The source refers to Mozilla's studies/experiments of features, not to monitoring the user's feature usage; the Polish asserts the product observes how the user uses features.
-- `Search.ThirdPartyEngines.AddMessage` — `pl/firefox-ios.xliff` — Translation adds a claim about managing the engine in settings that the source does not contain.
-    - Current: `Nowa wyszukiwarka pojawi się na pasku szybkiego wyszukiwania i będzie można nią zarządzać poprzez ustawienia.`
-    - Source: `The new search engine will appear in the quick search bar.`
-    - Suggest: `Nowa wyszukiwarka pojawi się na pasku szybkiego wyszukiwania.`
-    - The en-US only says "The new search engine will appear in the quick search bar."; the Polish adds "and it will be possible to manage it through settings".
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 37 |
+| 2 | Wrong content (says something other than the English) | 36 |
 | 3 | Degraded language (grammar, spelling, terminology) | 25 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -335,11 +322,6 @@ _Nothing in this category._
     - Source: `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.`
     - Suggest: `stukając ikonę książki z plusem w widoku`
     - The source names a specific "book plus" icon, which is not the plain book icon that opens Reader View (mentioned in the companion tip). Dropping "plus" points the user to the wrong icon.
-- `Search.ThirdPartyEngines.AddMessage` — `pl/firefox-ios.xliff` — Translation adds a claim about managing the engine in settings that the source does not contain.
-    - Current: `Nowa wyszukiwarka pojawi się na pasku szybkiego wyszukiwania i będzie można nią zarządzać poprzez ustawienia.`
-    - Source: `The new search engine will appear in the quick search bar.`
-    - Suggest: `Nowa wyszukiwarka pojawi się na pasku szybkiego wyszukiwania.`
-    - The en-US only says "The new search engine will appear in the quick search bar."; the Polish adds "and it will be possible to manage it through settings".
 - `SentTab_TabArrivingNotification_WithDevice_title` — `pl/firefox-ios.xliff` — %@ is a device name, but the Polish says "from the program %@".
     - Current: `Przychodząca karta z programu %@`
     - Source: `Tab received from %@`

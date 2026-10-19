@@ -3,14 +3,15 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `7ee8e61a4a7d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `7ee8e61a4a7d` |
-| **Previous run** | 2026-10-18 @ `dd8ca757b7dd` |
-| **Mode** | incremental |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ea17dbc84971` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ea17dbc84971` |
+| **Previous run** | 2026-10-19 @ `7ee8e61a4a7d` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 2,802 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for sk: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
@@ -87,15 +88,6 @@ _Nothing reported._
 
 ## 3. Open findings (57)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `nimbus_notification_default_browser_title` — `mozilla-mobile/fenix/app/src/main/res/values-sk/strings.xml` — "private" is translated as "bezpečný" (secure), so the product calls itself secure rather than private.
-    - Current: `rýchly a bezpečný`
-    - Source: `Firefox is fast and private`
-    - Suggest: `rýchly a súkromný`
-    - The source says Firefox is fast and private. The Slovak claims a different property, security, which the source never claimed.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|

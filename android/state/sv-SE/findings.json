@@ -974,7 +974,7 @@
    "confidence": "high"
   },
   "rationale": "The source says the app tried to restart the extensions and failed. The Swedish says the app made no attempt at all, which is a different claim about what the app did.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "ff53f54c",

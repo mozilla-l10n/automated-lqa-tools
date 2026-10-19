@@ -3,14 +3,15 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `7ee8e61a4a7d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `7ee8e61a4a7d` |
-| **Previous run** | 2026-10-18 @ `dd8ca757b7dd` |
-| **Mode** | incremental |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ea17dbc84971` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ea17dbc84971` |
+| **Previous run** | 2026-10-19 @ `7ee8e61a4a7d` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 2,798 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for ro: [firefox_ios](firefox_ios.md)
 
@@ -87,22 +88,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (91)
+## 3. Open findings (90)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `mozac_feature_prompt_before_unload_dialog_body` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-ro/strings.xml` — The translation says entered data "will not be saved" where the source says it "may not be saved".
-    - Current: `nu vor fi salvate`
-    - Source: `Do you want to leave this site? Data you have entered may not be saved`
-    - Suggest: `s-ar putea să nu fie salvate`
-    - The en-US "may not be saved" only warns of a possible data loss. The ro states it as certain, which overstates what happens to the user's data.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 30 |
+| 2 | Wrong content (says something other than the English) | 29 |
 | 3 | Degraded language (grammar, spelling, terminology) | 53 |
 | 4 | Cosmetic (typography, spacing) | 8 |
 
@@ -132,11 +124,6 @@ _Nothing in this category._
     - Source: `unknown time`
     - Suggest: `timp necunoscut`
     - The developer comment says this replaces the estimated time remaining on an in-progress download, so it means an unknown duration. "Oră" refers to an hour or a time on the clock, not an amount of time; "timp" is the right word.
-- `mozac_feature_prompt_before_unload_dialog_body` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-ro/strings.xml` — The translation says entered data "will not be saved" where the source says it "may not be saved".
-    - Current: `nu vor fi salvate`
-    - Source: `Do you want to leave this site? Data you have entered may not be saved`
-    - Suggest: `s-ar putea să nu fie salvate`
-    - The en-US "may not be saved" only warns of a possible data loss. The ro states it as certain, which overstates what happens to the user's data.
 - `mozac_feature_prompts_content_description_input_label` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-ro/strings.xml` — 'crearea' (creating) misrenders 'entering'; the label is for typing text into a field, not for creating one.
     - Current: `crearea unui câmp de introducere text`
     - Source: `Label for entering a text input field`

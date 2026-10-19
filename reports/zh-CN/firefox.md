@@ -3,14 +3,15 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
-| **Mode** | incremental |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cb086148c41a` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `3bdd70692916` |
+| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 16,126 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for zh-CN: [android](android.md) · [firefox_ios](firefox_ios.md)
 
@@ -46,9 +47,9 @@ _Nothing retired._
 |---|---|
 | Files | 326 |
 | Strings | 16,126 |
-| Missing strings | 394 |
+| Missing strings | 420 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 2 |
+| Files absent from the locale | 3 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,24 +64,25 @@ _Nothing retired._
 
 ### Completeness
 
-**394 strings** are not translated yet, concentrated in:
+**420 strings** are not translated yet, concentrated in:
 
-- `browser/browser/ipProtection.ftl` — 50
+- `browser/browser/ipProtection.ftl` — 57
 - `browser/browser/newtab/newtab.ftl` — 30
 - `browser/browser/newtab/onboarding.ftl` — 21
 - `toolkit/services/aboutSyncLog.ftl` — 20
 - `toolkit/toolkit/about/aboutPDF.ftl` — 19
 - `devtools/client/toolbox-options.ftl` — 18
+- `browser/browser/browser.ftl` — 16
 - `toolkit/toolkit/about/aboutNetworking.ftl` — 16
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 15
 - `browser/browser/autoTabGrouping.ftl` — 15
+- `browser/browser/miniWindow.ftl` — 15
 - `dom/chrome/dom/dom.properties` — 15
-- `browser/browser/browser.ftl` — 14
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 13
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 15
 
 **Files absent from the locale:**
 
 - `browser/browser/autoTabGrouping.ftl`
+- `browser/browser/miniWindow.ftl`
 - `toolkit/toolkit/about/pdfFeaturesNotification.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
@@ -107,22 +109,13 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (77)
+## 3. Open findings (76)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `restart-required-why-now-answer` — `browser/browser/aboutRestartRequired.ftl` — "This can happen when…" (possible cause) is rendered as "这是由于…" (this is because), asserting a definite cause.
-    - Current: `这是由于其他 { -brand-short-name } 配置文件或实例进行了更新`
-    - Source: `This can happen when another { -brand-short-name } profile or instance updates, or when an update can’t wait until your next restart.`
-    - Suggest: `出现这种情况，可能是由于其他 { -brand-short-name } 配置文件或实例进行了更新`
-    - en-US hedges with "can happen when"; the Chinese states the cause as a fact.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 4 |
-| 2 | Wrong content (says something other than the English) | 21 |
+| 2 | Wrong content (says something other than the English) | 20 |
 | 3 | Degraded language (grammar, spelling, terminology) | 17 |
 | 4 | Cosmetic (typography, spacing) | 35 |
 
@@ -188,11 +181,6 @@ _Also listed under their own category below._
     - Source: `This is really annoying! Is { -brand-short-name } working on a fix?`
     - Suggest: `这真的很烦人！{ -brand-short-name } 是否会解决这个问题？`
     - The en-US question contains two sentences; the localized string only renders the second, losing the user-voice complaint.
-- `restart-required-why-now-answer` — `browser/browser/aboutRestartRequired.ftl` — "This can happen when…" (possible cause) is rendered as "这是由于…" (this is because), asserting a definite cause.
-    - Current: `这是由于其他 { -brand-short-name } 配置文件或实例进行了更新`
-    - Source: `This can happen when another { -brand-short-name } profile or instance updates, or when an update can’t wait until your next restart.`
-    - Suggest: `出现这种情况，可能是由于其他 { -brand-short-name } 配置文件或实例进行了更新`
-    - en-US hedges with "can happen when"; the Chinese states the cause as a fact.
 - `aiwindow-starter-writing-proofread` — `browser/browser/aiWindow.ftl` — "message" rendered as "邮件" (email), narrowing the meaning.
     - Current: `校对邮件`
     - Source: `Proofread a message`

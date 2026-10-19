@@ -5,12 +5,13 @@
 | **Generated** | 2026-10-19 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **Previous run** | 2026-10-17 @ `09d125f6a298` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 15 of 1,927 |
+| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 1,927 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for ko: [android](android.md)
 
@@ -79,25 +80,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (95)
+## 3. Open findings (93)
 
-> **Reads as a deliberate edit (4).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `Onboarding.Modern.BrandRefresh.Marketing.Description.v148` — `ko/firefox-ios.xliff` — "and that you use it" is translated as "and how you use it", which claims usage behaviour is shared with marketing partners.
     - Current: `%1$@를 발견한 방법과 사용 방법을 공유하세요`
     - Source: `Share how you discovered %1$@, and that you use it, with %2$@’s marketing partners. This data is never sold.`
     - Suggest: `%1$@를 발견한 방법과 %1$@를 사용한다는 사실을 공유하세요`
     - The source shares only the fact that the user uses the app. '사용 방법' (how you use it) says detailed usage data goes to marketing partners, a wider data share than the product describes.
-- `Onboarding.TermsOfService.PrivacyNoticeAgreement.v135` — `ko/firefox-ios.xliff` — "cares about your privacy" is rendered as "protects the user's personal information", which is a stronger promise than the source makes.
-    - Current: `%1$@는 사용자의 개인 정보를 보호합니다.`
-    - Source: `%1$@ cares about your privacy. Read more in our %2$@`
-    - Suggest: `%1$@는 사용자의 개인 정보를 소중히 여깁니다.`
-    - The en-US says the app cares about the user's privacy. That is a statement of intent, not a guarantee. The Korean says the app protects the user's personal information, so it claims a protective outcome the source never promised.
-- `Settings.Rollouts.Message.v148` — `ko/firefox-ios.xliff` — The past tense says changes have already been applied remotely, while the source only describes how changes are applied.
-    - Current: `변경 사항이 원격으로 적용되었습니다.`
-    - Source: `%@ will improve features, performance, and stability between updates. Changes applied remotely.`
-    - Suggest: `변경 사항은 원격으로 적용됩니다.`
-    - en-US 'Changes applied remotely' explains how changes are delivered (see the comment: Mozilla 'may change features remotely'). '적용되었습니다' tells the user that remote changes have already been made.
 - `CoverSheet.v24.ETP.Description` — `ko/firefox-ios.xliff` — "helps stop ads from following you" is rendered as an unconditional claim that protection prevents ads from tracking the user.
     - Current: `광고가 사용자를 추적하지 못하게합니다`
     - Source: `Built-in Enhanced Tracking Protection helps stop ads from following you around. Turn on Strict to block even more trackers, ads, and popups.`
@@ -109,7 +100,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 44 |
+| 2 | Wrong content (says something other than the English) | 42 |
 | 3 | Degraded language (grammar, spelling, terminology) | 51 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -214,11 +205,6 @@ _Nothing in this category._
     - Source: `Pick your favorite theme or have %@ match your device, putting you in control.`
     - Suggest: `%@가 기기 테마를 따르도록 하여`
     - The source means letting the app follow the device's system theme. '연결하여' means connecting or linking the app to the device, which is a different action.
-- `Onboarding.TermsOfService.PrivacyNoticeAgreement.v135` — `ko/firefox-ios.xliff` — "cares about your privacy" is rendered as "protects the user's personal information", which is a stronger promise than the source makes.
-    - Current: `%1$@는 사용자의 개인 정보를 보호합니다.`
-    - Source: `%1$@ cares about your privacy. Read more in our %2$@`
-    - Suggest: `%1$@는 사용자의 개인 정보를 소중히 여깁니다.`
-    - The en-US says the app cares about the user's privacy. That is a statement of intent, not a guarantee. The Korean says the app protects the user's personal information, so it claims a protective outcome the source never promised.
 - `Onboarding.Welcome.Title.v114` — `ko/firefox-ios.xliff` — "Independent internet" is rendered as "나만의 인터넷" (your own internet), which changes the meaning.
     - Current: `나만의 인터넷에 오신 것을 환영합니다`
     - Source: `Welcome to an independent internet`
@@ -254,11 +240,6 @@ _Nothing in this category._
     - Source: `You turned off all %1$@ notifications. Turn them on by going to device Settings > Notifications > %2$@`
     - Suggest: `%1$@ 알림을 모두 껐습니다.`
     - The developer comment says %1$@ is the app name (e.g. Firefox), so the text renders as '모든 Firefox개의 알림', which treats the name as a count.
-- `Settings.Rollouts.Message.v148` — `ko/firefox-ios.xliff` — The past tense says changes have already been applied remotely, while the source only describes how changes are applied.
-    - Current: `변경 사항이 원격으로 적용되었습니다.`
-    - Source: `%@ will improve features, performance, and stability between updates. Changes applied remotely.`
-    - Suggest: `변경 사항은 원격으로 적용됩니다.`
-    - en-US 'Changes applied remotely' explains how changes are delivered (see the comment: Mozilla 'may change features remotely'). '적용되었습니다' tells the user that remote changes have already been made.
 - `Settings.ScrollToHideTabAndAddressBar.Title.v138` — `ko/firefox-ios.xliff` — The title reads as 'scroll toward hiding tab and address bar' instead of 'scroll to hide the tab and address bar'.
     - Current: `탭과 주소 표시줄 숨기기로 스크롤`
     - Source: `Scroll to Hide Tab and Address Bar`

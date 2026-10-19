@@ -764,30 +764,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "e é perigoso para o seu dispositivo",
-  "dismissed_because": "",
-  "fid": "0988d984e443",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "pt-PT",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The source says changing the file type might be risky. The translation says it is dangerous, so the product now makes a stronger warning than the source does.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "8cccf10c",
-  "string_id": "change_file_extension_description",
-  "suggest": "e ser arriscado para o seu dispositivo",
-  "summary": "The hedged \"might… be risky\" becomes the certain \"é perigoso\" (is dangerous).",
-  "suppressed_by": ""
- },
- {
   "category": "C",
   "check": "llm",
   "current": "Fechar depois um mês",

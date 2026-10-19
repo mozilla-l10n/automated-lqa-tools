@@ -662,7 +662,7 @@
    "confidence": "medium"
   },
   "rationale": "The source refers to Mozilla's studies/experiments of features, not to monitoring the user's feature usage; the Polish asserts the product observes how the user uses features.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "0bc66316",
@@ -2013,30 +2013,6 @@
   "string_id": "Save pages to your Reading List by tapping the book plus icon in the Reader View controls.",
   "suggest": "Zachowuj strony w czytelni, stukając ikonę książki",
   "summary": "Missing comma before the adverbial participle clause \"stukając\".",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "Nowa wyszukiwarka pojawi się na pasku szybkiego wyszukiwania i będzie można nią zarządzać poprzez ustawienia.",
-  "dismissed_because": "",
-  "fid": "db0182dee6dc",
-  "file": "Shared/en-US.lproj/Localizable.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "pl",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The en-US only says \"The new search engine will appear in the quick search bar.\"; the Polish adds \"and it will be possible to manage it through settings\".",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "548ac175",
-  "string_id": "Search.ThirdPartyEngines.AddMessage",
-  "suggest": "Nowa wyszukiwarka pojawi się na pasku szybkiego wyszukiwania.",
-  "summary": "Translation adds a claim about managing the engine in settings that the source does not contain.",
   "suppressed_by": ""
  },
  {

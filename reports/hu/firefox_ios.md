@@ -5,12 +5,13 @@
 | **Generated** | 2026-10-19 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **Previous run** | 2026-10-17 @ `09d125f6a298` |
-| **Mode** | incremental |
+| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 1,915 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for hu: [android](android.md) · [firefox](firefox.md)
 
@@ -88,27 +89,22 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (90)
+## 3. Open findings (89)
 
-> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `Onboarding.Modern.BrandRefresh.Marketing.Description.v148` — `hu/firefox-ios.xliff` — "that you use it" was rendered as "how you use it", making the product claim it shares usage details with marketing partners.
     - Current: `hogy miként fedezte fel, és hogyan használja a %1$@ot`
     - Source: `Share how you discovered %1$@, and that you use it, with %2$@’s marketing partners. This data is never sold.`
     - Suggest: `hogy miként fedezte fel a %1$@ot, és hogy használja azt`
     - The en-US says only the fact that the user uses the app is shared ("and that you use it"), not how they use it; the Hungarian asserts that usage behaviour is shared with marketing partners.
-- `Menu.TrackingProtectionDescription.Fingerprinters` — `hu/firefox-ios.xliff` — "can be used to track you" rendered as a definite statement "használnak" (they use it), dropping the modality.
-    - Current: `amelyet aztán a böngészése követésére használnak`
-    - Source: `The settings on your browser and computer are unique. Fingerprinters collect a variety of these unique settings to create a profile of you, which can be used to track you as you browse.`
-    - Suggest: `amely aztán a böngészése követésére használható`
-    - The en-US says the profile "can be used" to track; the Hungarian asserts that it is used, changing what the product states about tracking behaviour.
 
 _Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 38 |
+| 2 | Wrong content (says something other than the English) | 37 |
 | 3 | Degraded language (grammar, spelling, terminology) | 49 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
@@ -293,11 +289,6 @@ _Nothing in this category._
     - Source: `The owner of %@ has configured their website improperly. To protect your information from being stolen, Firefox has not connected to this website.`
     - Suggest: `Hogy megvédje az információit az ellopástól, a Firefox nem kapcsolódott ehhez a webhelyhez.`
     - The en-US states Firefox has not connected in order to protect the user's information; the Hungarian plural possessive "ellopásuktól" misattributes the theft and reads awkwardly.
-- `Menu.TrackingProtectionDescription.Fingerprinters` — `hu/firefox-ios.xliff` — "can be used to track you" rendered as a definite statement "használnak" (they use it), dropping the modality.
-    - Current: `amelyet aztán a böngészése követésére használnak`
-    - Source: `The settings on your browser and computer are unique. Fingerprinters collect a variety of these unique settings to create a profile of you, which can be used to track you as you browse.`
-    - Suggest: `amely aztán a böngészése követésére használható`
-    - The en-US says the profile "can be used" to track; the Hungarian asserts that it is used, changing what the product states about tracking behaviour.
 - `Search.ThirdPartyEngines.FailedMessage` — `hu/firefox-ios.xliff` — Past-tense failure statement rendered as a general present-tense possibility statement.
     - Current: `A keresési szolgáltató nem adható hozzá.`
     - Source: `The search provider could not be added.`

@@ -446,7 +446,7 @@
    "confidence": "high"
   },
   "rationale": "The source is only 'Tap to summarize this page. Touch and hold for Reader View.' The added 'Note: summarization can be inaccurate' looks carried over from the footnote string, and it puts an admission into this hint that the source never makes.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "28580586",
@@ -597,30 +597,6 @@
   "string_id": "Menu.RemovePin.Confirm2.v99",
   "suggest": "ลบออกจากคำสั่งลัดแล้ว",
   "summary": "The confirmation toast has no completion marker, so it reads as the command \"Remove from Shortcuts\" instead of saying the item was removed.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "การปิดกั้นสิ่งนี้จะทำให้เว็บไซต์โหลดเร็วขึ้น",
-  "dismissed_because": "",
-  "fid": "0f017b1c6d8f",
-  "file": "Shared/en-US.lproj/Localizable.strings",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "th",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The source hedges with 'can'. 'จะทำให้' turns it into a promise the product never made.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "201fa96c",
-  "string_id": "Menu.TrackingProtectionDescription.ContentTrackers",
-  "suggest": "การปิดกั้นสิ่งนี้อาจทำให้เว็บไซต์โหลดเร็วขึ้น",
-  "summary": "'can make websites load faster' became 'will make websites load faster'.",
   "suppressed_by": ""
  },
  {

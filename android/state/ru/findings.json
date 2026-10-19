@@ -206,7 +206,7 @@
    "confidence": "medium"
   },
   "rationale": "The source says \"promotion\" (a promotional banner in the menu); \"реклама\" means advertising, which mislabels the product's own banner as an ad.",
-  "reads_as_deliberate": true,
+  "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
   "string_hash": "e3ee7c11",
