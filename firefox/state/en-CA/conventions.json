@@ -1,12 +1,12 @@
 {
  "_meta": {
   "locale": "en-CA",
-  "prose_chunks": 17113,
-  "strings": 16354
+  "prose_chunks": 17337,
+  "strings": 16542
  },
  "apostrophe": {
   "straight": 4,
-  "typographic": 992
+  "typographic": 1002
  },
  "dash": {
   "em": 82,
@@ -14,7 +14,7 @@
  },
  "ellipsis": {
   "ascii": 0,
-  "char": 395
+  "char": 399
  },
  "fullwidth": {
   "punctuation": 0
@@ -30,7 +30,7 @@
   "total": 5
  },
  "quotes": {
-  "curly-double": 687,
+  "curly-double": 696,
   "curly-single": 64,
   "straight-double": 25
  }

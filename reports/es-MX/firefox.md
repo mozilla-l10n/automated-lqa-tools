@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
-| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
+| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 23 of 15,838 |
+| **Strings reviewed this run** | 44 of 15,868 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,18 @@ Also for es-MX: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (2)
 
-- `content-analysis-indicator-tooltip` — `browser/browser/browser.ftl` — Formal address ("Haga") used where the locale convention is informal, and "click" is left untranslated/misspelled.
-    - Current: `Haga click para saber más información.`
-    - Source: `tooltiptext: Data Loss Prevention (DLP) by { $agentName }. Click for more info.`
-    - Suggest: `Haz clic para saber más información.`
-    - es-MX convention is informal address (tú); also "click" should be "clic" in Spanish.
+- `view-source-go-to-line-text` — `toolkit/toolkit/global/viewSource.ftl` — Uses the formal imperative 'Introduzca', which doesn't match the locale's informal form of address.
+    - Current: `Introduzca número de línea`
+    - Source: `Enter line number`
+    - Suggest: `Introduce el número de línea`
+    - The es-MX locale mostly uses informal address (1359 informal vs 237 formal). 'Introduzca' is the formal usted imperative.
+- `protocolhandler-add-handler-button` — `browser/browser/webProtocolHandler.ftl` — The button says 'Añadir' while its own prompt says 'Agregar' for the same 'Add' action.
+    - Current: `Añadir aplicación`
+    - Source: `accesskey: A label: Add application`
+    - Suggest: `Agregar aplicación`
+    - The prompt protocolhandler-add-handler-message asks '¿Agregar … como una aplicación…?' but the button that answers it uses 'Añadir'. The two terms are inconsistent on the same surface, and 'Agregar' is the usual Mexican choice.
 
 ### ✅ Fixed since the last run (0)
 
@@ -48,9 +53,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 322 |
-| Strings | 15,838 |
-| Missing strings | 566 |
+| Files | 323 |
+| Strings | 15,868 |
+| Missing strings | 652 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 5 |
 | Files with no en-US counterpart | 0 |
@@ -67,20 +72,20 @@ _Nothing retired._
 
 ### Completeness
 
-**566 strings** are not translated yet, concentrated in:
+**652 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 118
-- `browser/browser/newtab/onboarding.ftl` — 30
+- `browser/browser/newtab/newtab.ftl` — 127
+- `browser/browser/ipProtection.ftl` — 52
+- `browser/browser/newtab/onboarding.ftl` — 33
 - `toolkit/services/aboutSyncLog.ftl` — 26
+- `browser/browser/preferences/preferences.ftl` — 24
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 23
-- `browser/browser/preferences/preferences.ftl` — 22
+- `browser/browser/browser.ftl` — 22
 - `toolkit/toolkit/main-window/autocomplete.ftl` — 21
 - `toolkit/toolkit/about/aboutPDF.ftl` — 21
 - `browser/browser/aboutRestartRequired.ftl` — 18
-- `browser/browser/ipProtection.ftl` — 18
 - `toolkit/toolkit/about/aboutAddons.ftl` — 17
 - `browser/browser/aboutPrivateBrowsing.ftl` — 16
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 13
 
 **Files absent from the locale:**
 
@@ -98,13 +103,13 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 461, `straight-double` 130, `curly-single` 78, `guillemet` 1 | **curly-double** |
-| apostrophe | `typographic` 90, `straight` 37 | _mixed_ |
-| ellipsis | `char` 366, `ascii` 19 | **char** |
+| quotes | `curly-double` 462, `straight-double` 130, `curly-single` 79, `guillemet` 1 | **curly-double** |
+| apostrophe | `typographic` 91, `straight` 37 | _mixed_ |
+| ellipsis | `char` 367, `ascii` 19 | **char** |
 | dash | `em` 50, `en` 1 | **em** |
 | nbsp | `total` 16, `narrow` 10, `before-punctuation` 12, `space-before-punctuation` 6 | _mixed_ |
-| inverted marks | `open-question` 316, `open-exclamation` 72 | **open-question** |
-| register | `informal` 1208, `formal` 206 | **informal** |
+| inverted marks | `open-question` 318, `open-exclamation` 72 | **open-question** |
+| register | `informal` 1210, `formal` 206 | **informal** |
 
 ---
 
@@ -117,14 +122,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (45)
+## 3. Open findings (47)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 15 |
-| 3 | Degraded language (grammar, spelling, terminology) | 24 |
+| 3 | Degraded language (grammar, spelling, terminology) | 26 |
 | 4 | Cosmetic (typography, spacing) | 6 |
 
 ### A. Functional, markup, variables & plurals
@@ -259,6 +264,11 @@ _Nothing in this category._
     - Source: `Known and suspected fingerprinters`
 - `content-blocking-known-fingerprinters-label` — `browser/browser/preferences/preferences.ftl` — Fingerprinters: "Huellas dactilares" (content-blocking-fingerprinters, content-blocking-fingerprinters-label) vs "Detectores de huellas digitales" (content-blocking-known-and-suspected-fingerprinters, content-blocking-known-fingerprinters-label).
     - Source: `accesskey: K label: Known fingerprinters`
+- `protocolhandler-add-handler-button` — `browser/browser/webProtocolHandler.ftl` — The button says 'Añadir' while its own prompt says 'Agregar' for the same 'Add' action.
+    - Current: `Añadir aplicación`
+    - Source: `accesskey: A label: Add application`
+    - Suggest: `Agregar aplicación`
+    - The prompt protocolhandler-add-handler-message asks '¿Agregar … como una aplicación…?' but the button that answers it uses 'Añadir'. The two terms are inconsistent on the same surface, and 'Agregar' is the usual Mexican choice.
 - `sidebar-item-session-history` — `devtools/client/application.ftl` — click: "haz clic" vs "da clic" (permissions.ftl); Subject (cert) certificate-viewer-subject-name "interesado" / certificate-viewer-subject-alt-names "sujeto" / certificate-viewer-subject-key-id "asunto"; Rating detail-rating "Clasificación" vs addon-detail-rating-label "Calificación"; Icon "Icono" vs "Ícono" (sidebar-item-session-history and siblings).
     - Source: `(value): Session History alt: Session History Icon title: Session History`
 - `noDomMutationBreakpoints.notice` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints.notice` quotes “Interrumpir en……” but the string it names, `watchpoints.submenu`, reads “Interrumpir en…”
@@ -293,6 +303,11 @@ _Nothing in this category._
     - Source: `label: Shopping`
     - Suggest: `Compras`
     - The sibling labels (Trabajo, Banca) are nouns naming a context; en-US "Shopping" is a noun here, not an action.
+- `view-source-go-to-line-text` — `toolkit/toolkit/global/viewSource.ftl` — Uses the formal imperative 'Introduzca', which doesn't match the locale's informal form of address.
+    - Current: `Introduzca número de línea`
+    - Source: `Enter line number`
+    - Suggest: `Introduce el número de línea`
+    - The es-MX locale mostly uses informal address (1359 informal vs 237 formal). 'Introduzca' is the formal usted imperative.
 - `settings-pp-erased-ok` — `toolkit/toolkit/preferences/preferences.ftl` — Primary Password: "contraseña primaria" vs "principal" vs "maestra" (pippki.ftl, fips-nonempty-primary-password-required, settings-pp-erased-ok, primary-password-required-by-policy).
     - Source: `You have deleted your Primary Password. Stored passwords and certificate private keys managed by { -brand-short-name } will not be protected.`
 

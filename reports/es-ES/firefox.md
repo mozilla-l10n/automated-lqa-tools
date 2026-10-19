@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
-| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
+| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 21 of 15,182 |
+| **Strings reviewed this run** | 55 of 15,224 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,27 @@ Also for es-ES: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (4)
 
-_No new findings._
+- `view-source-context-go-to-line` — `toolkit/toolkit/global/viewSource.ftl` — Access key `x` of `view-source-context-go-to-line` is not present in its label
+    - Current: `x`
+    - Source: `accesskey: L label: Go to Line…`
+    - The label is “Ir a la línea…”. An access key not in the label cannot be underlined and is unreachable by keyboard.
+- `site-data-clear-all-prompt-text` — `browser/browser/preferences/siteDataSettings.ftl` — Straight single quotes used around the button name instead of the locale's curly quotes.
+    - Current: `'Limpiar ahora'`
+    - Source: `Selecting ‘Clear Now’ will clear all cookies and site data stored by { -brand-short-name }. This may sign you out of websites and remove offline web content.`
+    - Suggest: `“Limpiar ahora”`
+    - The en-US uses typographic quotes and es-ES convention is curly double quotes; straight ASCII apostrophes deviate from it.
+- `site-data-clear-all-prompt-text` — `browser/browser/preferences/siteDataSettings.ftl` — "datos del sitio" (singular, one site) misrenders "site data" for all sites stored by the browser.
+    - Current: `todas las cookies y datos del sitio guardados`
+    - Source: `Selecting ‘Clear Now’ will clear all cookies and site data stored by { -brand-short-name }. This may sign you out of websites and remove offline web content.`
+    - Suggest: `todas las cookies y datos de sitios guardados`
+    - The prompt clears data for every site; "del sitio" refers to a single specific site.
+- `site-data-clear-all-prompt-title` — `browser/browser/preferences/siteDataSettings.ftl` — "datos del sitio" implies one site, but the action clears data for all sites.
+    - Current: `datos del sitio`
+    - Source: `Clear all cookies and site data`
+    - Suggest: `datos de sitios`
+    - "Clear all cookies and site data" covers all sites; singular definite "del sitio" narrows it to one site.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,9 +62,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 318 |
-| Strings | 15,182 |
-| Missing strings | 1,222 |
+| Files | 319 |
+| Strings | 15,224 |
+| Missing strings | 1,296 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 9 |
 | Files with no en-US counterpart | 0 |
@@ -57,26 +75,26 @@ _Nothing retired._
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 3 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 12 |
+| Access keys not in their label | 13 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 93 |
 
 ### Completeness
 
-**1,222 strings** are not translated yet, concentrated in:
+**1,296 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 221
+- `browser/browser/newtab/newtab.ftl` — 230
 - `browser/browser/aiWindow.ftl` — 136
 - `browser/browser/appmenu.ftl` — 65
-- `browser/browser/newtab/onboarding.ftl` — 53
+- `browser/browser/newtab/onboarding.ftl` — 56
 - `browser/browser/aiWindowContent.ftl` — 51
-- `browser/browser/browser.ftl` — 48
+- `browser/browser/browser.ftl` — 46
+- `browser/browser/ipProtection.ftl` — 41
 - `toolkit/toolkit/global/theme-picker.ftl` — 30
 - `devtools/client/toolbox-options.ftl` — 28
 - `toolkit/toolkit/about/url-classifier.ftl` — 26
 - `toolkit/services/aboutSyncLog.ftl` — 26
 - `browser/browser/firefoxView.ftl` — 24
-- `toolkit/toolkit/about/aboutPDF.ftl` — 22
 
 **Files absent from the locale:**
 
@@ -98,13 +116,13 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 444, `straight-double` 136, `curly-single` 42, `guillemet` 1 | **curly-double** |
-| apostrophe | `typographic` 57, `straight` 70 | _mixed_ |
-| ellipsis | `char` 374 | **char** |
+| quotes | `curly-double` 445, `straight-double` 136, `curly-single` 42, `guillemet` 1 | **curly-double** |
+| apostrophe | `typographic` 57, `straight` 71 | _mixed_ |
+| ellipsis | `char` 375 | **char** |
 | dash | `em` 55, `en` 1 | **em** |
 | nbsp | `total` 8, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| inverted marks | `open-question` 296, `open-exclamation` 66 | **open-question** |
-| register | `informal` 4, `formal` 1169 | **formal** |
+| inverted marks | `open-question` 298, `open-exclamation` 66 | **open-question** |
+| register | `informal` 4, `formal` 1170 | **formal** |
 
 ---
 
@@ -115,15 +133,15 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (36)
+## 3. Open findings (40)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 20 |
+| 2 | Wrong content (says something other than the English) | 23 |
 | 3 | Degraded language (grammar, spelling, terminology) | 16 |
-| 4 | Cosmetic (typography, spacing) | 0 |
+| 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -137,7 +155,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - The label is “Mantener los cambios”. An access key not in the label cannot be underlined and is unreachable by keyboard.
 - `appmenu-help-more-troubleshooting-info` — `browser/browser/appmenu.ftl` — Access key `T` of `appmenu-help-more-troubleshooting-info` is not present in its label
     - Current: `T`
-    - Source: `accesskey: t label: More troubleshooting information`
+    - Source: `accesskey: t label: More Troubleshooting Information`
     - The label is “Más información para solucionar problemas”. An access key not in the label cannot be underlined and is unreachable by keyboard.
 - `picture-in-picture-hide-toggle` — `browser/browser/browser.ftl` — Access key `H` of `picture-in-picture-hide-toggle` is not present in its label
     - Current: `H`
@@ -180,6 +198,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `b`
     - Source: `accesskey: p label: Unpin Tabs`
     - The label is “Soltar pestañas”. An access key not in the label cannot be underlined and is unreachable by keyboard.
+- `view-source-context-go-to-line` — `toolkit/toolkit/global/viewSource.ftl` — Access key `x` of `view-source-context-go-to-line` is not present in its label
+    - Current: `x`
+    - Source: `accesskey: L label: Go to Line…`
+    - The label is “Ir a la línea…”. An access key not in the label cannot be underlined and is unreachable by keyboard.
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -203,6 +225,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `style: { permissions-window2.style } title: Exceptions - Clear History on Shutdown`
     - Suggest: `Excepciones: Borrar el historial al cerrar`
     - The related description string clarifies it is "when { -brand-short-name } clears history on close"; "apagar el sistema" wrongly says the operating system shuts down.
+- `site-data-clear-all-prompt-text` — `browser/browser/preferences/siteDataSettings.ftl` — "datos del sitio" (singular, one site) misrenders "site data" for all sites stored by the browser.
+    - Current: `todas las cookies y datos del sitio guardados`
+    - Source: `Selecting ‘Clear Now’ will clear all cookies and site data stored by { -brand-short-name }. This may sign you out of websites and remove offline web content.`
+    - Suggest: `todas las cookies y datos de sitios guardados`
+    - The prompt clears data for every site; "del sitio" refers to a single specific site.
+- `site-data-clear-all-prompt-title` — `browser/browser/preferences/siteDataSettings.ftl` — "datos del sitio" implies one site, but the action clears data for all sites.
+    - Current: `datos del sitio`
+    - Source: `Clear all cookies and site data`
+    - Suggest: `datos de sitios`
+    - "Clear all cookies and site data" covers all sites; singular definite "del sitio" narrows it to one site.
 - `pdfjs-digital-signature-properties-timestamp` — `toolkit/toolkit/pdfviewer/viewer.ftl` — "Timestamp" translated as "Fecha" (date), losing the time component.
     - Current: `Fecha: { $dateObj }`
     - Source: `Timestamp: { $dateObj }`
@@ -284,7 +316,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### E. Typography, punctuation & spacing
 
-_Nothing in this category._
+- `site-data-clear-all-prompt-text` — `browser/browser/preferences/siteDataSettings.ftl` — Straight single quotes used around the button name instead of the locale's curly quotes.
+    - Current: `'Limpiar ahora'`
+    - Source: `Selecting ‘Clear Now’ will clear all cookies and site data stored by { -brand-short-name }. This may sign you out of websites and remove offline web content.`
+    - Suggest: `“Limpiar ahora”`
+    - The en-US uses typographic quotes and es-ES convention is curly double quotes; straight ASCII apostrophes deviate from it.
 
 ---
 

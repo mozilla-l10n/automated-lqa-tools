@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
-| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
+| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 71 of 16,404 |
+| **Strings reviewed this run** | 132 of 16,520 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -20,15 +20,19 @@ Also for en-GB: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ### 🆕 New findings (1)
 
-- `sync-syncing-across-devices-heading-3` — `browser/browser/preferences/preferences.ftl` — "Data syncing" rendered as "Data synchronising", which is ungrammatical; the noun form "synchronisation" is required.
-    - Current: `Data synchronising on this device`
-    - Source: `Data syncing on this device`
-    - Suggest: `Data synchronisation on this device`
-    - The en-US "Data syncing on this device" uses "syncing" as a gerund noun; "Data synchronising" is not grammatical English. The locale elsewhere uses "synchronisation" for this noun use (e.g. "Synchronisation is OFF").
+- `ip-protection-site-rule-website-field` — `browser/browser/ipProtection.ftl` — The placeholder puts a colon after "e.g.", which doubles the punctuation.
+    - Current: `e.g.: acme.com`
+    - Source: `label: Website placeholder: ex: acme.com`
+    - Suggest: `e.g. acme.com`
+    - The en-US "ex:" is short for "example" (per the developer comment). Replacing it with "e.g." is a sensible en-GB change, but "e.g." already ends in a full stop and is normally followed directly by the example, so the extra colon is redundant.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `main-context-menu-inspect-a11y-properties2` — `browser/browser/browserContext.ftl` — Access key changed from "y" to "I" although the label is identical to the source.
+    - Current: `accesskey: I`
+    - Source: `accesskey: y label: Inspect Accessibility Properties`
+    - Suggest: `accesskey: y`
+    - The label "Inspect Accessibility Properties" is unchanged from en-US, so the access key should remain "y"; changing it risks collisions with other menu items that use "I".
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -48,8 +52,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 327 |
-| Strings | 16,404 |
+| Files | 328 |
+| Strings | 16,520 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -75,9 +79,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 540, `curly-single` 93, `straight-double` 55 | **curly-double** |
-| apostrophe | `typographic` 1005, `straight` 43 | **typographic** |
-| ellipsis | `char` 397, `ascii` 1 | **char** |
+| quotes | `curly-double` 546, `curly-single` 94, `straight-double` 55 | **curly-double** |
+| apostrophe | `typographic` 1014, `straight` 43 | **typographic** |
+| ellipsis | `char` 399, `ascii` 1 | **char** |
 | dash | `em` 81, `en` 4 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
@@ -95,10 +99,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 6 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 5 |
 | 2 | Wrong content (says something other than the English) | 7 |
 | 3 | Degraded language (grammar, spelling, terminology) | 5 |
-| 4 | Cosmetic (typography, spacing) | 1 |
+| 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -112,11 +116,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `(value): Remove this top site accesskey: T`
     - Suggest: `accesskey: T`
     - The en-US access key is "T"; en-GB has no reason to alter the access key since the label text "Remove this top site" is identical.
-- `main-context-menu-inspect-a11y-properties2` — `browser/browser/browserContext.ftl` — Access key changed from "y" to "I" although the label is identical to the source.
-    - Current: `accesskey: I`
-    - Source: `accesskey: y label: Inspect Accessibility Properties`
-    - Suggest: `accesskey: y`
-    - The label "Inspect Accessibility Properties" is unchanged from en-US, so the access key should remain "y"; changing it risks collisions with other menu items that use "I".
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -203,6 +202,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### E. Typography, punctuation & spacing
 
+- `ip-protection-site-rule-website-field` — `browser/browser/ipProtection.ftl` — The placeholder puts a colon after "e.g.", which doubles the punctuation.
+    - Current: `e.g.: acme.com`
+    - Source: `label: Website placeholder: ex: acme.com`
+    - Suggest: `e.g. acme.com`
+    - The en-US "ex:" is short for "example" (per the developer comment). Replacing it with "e.g." is a sensible en-GB change, but "e.g." already ends in a full stop and is normally followed directly by the example, so the extra colon is redundant.
 - `migration-wizard-import-browser-no-browsers` — `browser/browser/migrationWizard.ftl` — "programs" over-corrected to "programmes", which in British English means broadcasts/schedules, not software.
     - Current: `couldn’t find any programmes that contain bookmark, history or password data`
     - Source: `{ -brand-short-name } couldn’t find any programs that contain bookmark, history or password data.`
@@ -240,8 +244,9 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (13)
+### Fixed to date (14)
 
+- `main-context-menu-inspect-a11y-properties2` — `browser/browser/browserContext.ftl` — fixed 2026-10-19
 - `urlbar-searchmode-dropmarker2` — `browser/browser/browser.ftl` — fixed 2026-09-14
 - `urlbar-popup-blocked2` — `browser/browser/browser.ftl` — fixed 2026-08-27
 - `mr2022-onboarding-colorway-description-dreamer` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-27

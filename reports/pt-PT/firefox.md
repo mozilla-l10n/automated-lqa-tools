@@ -2,25 +2,34 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `db2cfca9d18c` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `af4e7312bee1` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
 | **Previous run** | 2026-10-16 @ `db2cfca9d18c` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,456 |
+| **Strings reviewed this run** | 65 of 16,520 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-
+Also for pt-PT: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `fire-button-panel-choose-link` — `browser/browser/browser.ftl` — The label ends with three ASCII periods instead of the ellipsis character (…).
+    - Current: `Escolher...`
+    - Source: `Choose…`
+    - Suggest: `Escolher…`
+    - The locale convention is the single ellipsis character (char 371 vs ascii 27), and the en-US uses "…". The developer comment says the ellipsis tells the user that a dialog follows.
+- `permissions-allow-app-links` — `browser/browser/preferences/preferences.ftl` — "app links" is rendered as "ligações da aplicação" (the application's links), which changes the meaning and conflicts with the other renderings of the term.
+    - Current: `ligações da aplicação`
+    - Source: `accesskey: A label: Allow sites to ask to open app links.`
+    - Suggest: `ligações em aplicações`
+    - The developer comment says app links are links a website asks to open in an app, like mailto: links. They are not links belonging to the application. Related strings use "ligações de aplicações" and "ligações em aplicações".
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +53,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 327 |
-| Strings | 16,456 |
-| Missing strings | 61 |
-| Obsolete strings | 1 |
-| Files absent from the locale | 1 |
+| Files | 328 |
+| Strings | 16,520 |
+| Missing strings | 0 |
+| Obsolete strings | 0 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,30 +68,11 @@ _Nothing retired._
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 23 |
 | Markup & `data-l10n-name` defects | 3 |
-| Typography deviations from this locale's own norm | 40 |
+| Typography deviations from this locale's own norm | 41 |
 
 ### Completeness
 
-**61 strings** are not translated yet, concentrated in:
-
-- `toolkit/toolkit/global/viewSource.ftl` — 10
-- `browser/browser/editBookmarkOverlay.ftl` — 9
-- `browser/browser/ipProtection.ftl` — 9
-- `browser/browser/browser.ftl` — 8
-- `browser/browser/newtab/newtab.ftl` — 4
-- `browser/browser/sanitize.ftl` — 3
-- `browser/browser/sidebar.ftl` — 2
-- `browser/browser/preferences/permissions.ftl` — 2
-- `browser/browser/preferences/preferences.ftl` — 2
-- `browser/browser/newtab/asrouter.ftl` — 2
-- `toolkit/toolkit/about/aboutGlean.ftl` — 2
-- `browser/browser/confirmationHints.ftl` — 1
-
-**Files absent from the locale:**
-
-- `toolkit/toolkit/global/viewSource.ftl`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -90,9 +80,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 564, `curly-single` 114, `straight-double` 40 | **curly-double** |
+| quotes | `curly-double` 566, `curly-single` 114, `straight-double` 40 | **curly-double** |
 | apostrophe | `typographic` 124, `straight` 31 | **typographic** |
-| ellipsis | `char` 371, `ascii` 27 | **char** |
+| ellipsis | `char` 372, `ascii` 28 | **char** |
 | dash | `em` 64, `en` 8 | **em** |
 | nbsp | `total` 42, `before-punctuation` 2, `space-before-punctuation` 6 | **total** |
 
@@ -100,20 +90,20 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ## 2. Systemic items (decisions, not line items)
 
-- **typography — 40 strings** — 40 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
-    - Affected: `LenientThisWarning`, `PushMessageBadSenderKey`, `SSL_ERROR_SYM_KEY_UNWRAP_FAILURE`, `about-debugging-setup-usb-status-updating`, `about-debugging-sidebar-runtime-item-waiting-for-browser`, `about-logins-import-dialog-error-try-import-again`, `accessibility-text-label-issue-optgroup-label2`, `appmenu-fxa-setup-sync`, `browser-languages-downloading`, `browser-languages-search`, `browser-languages-searching`, `cfr-doorhanger-bookmark-fxa-link-text` …and 27 more
+- **typography — 41 strings** — 41 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
+    - Affected: `LenientThisWarning`, `PushMessageBadSenderKey`, `SSL_ERROR_SYM_KEY_UNWRAP_FAILURE`, `about-debugging-setup-usb-status-updating`, `about-debugging-sidebar-runtime-item-waiting-for-browser`, `about-logins-import-dialog-error-try-import-again`, `accessibility-text-label-issue-optgroup-label2`, `appmenu-fxa-setup-sync`, `browser-languages-downloading`, `browser-languages-search`, `browser-languages-searching`, `cfr-doorhanger-bookmark-fxa-link-text` …and 28 more
 
 ---
 
-## 3. Open findings (306)
+## 3. Open findings (308)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 184 |
 | 2 | Wrong content (says something other than the English) | 122 |
-| 3 | Degraded language (grammar, spelling, terminology) | 0 |
-| 4 | Cosmetic (typography, spacing) | 0 |
+| 3 | Degraded language (grammar, spelling, terminology) | 1 |
+| 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -1030,6 +1020,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `description: Choose what you want { -brand-short-name } to remember when you close the browser. label: History`
     - Suggest: `Escolha o que pretende que o { -brand-short-name } memorize quando fecha o navegador.`
     - en-US “Choose what you want { -brand-short-name } to remember…”; “Escolha o pretende” lacks the object pronoun “que”.
+- `permissions-allow-app-links` — `browser/browser/preferences/preferences.ftl` — "app links" is rendered as "ligações da aplicação" (the application's links), which changes the meaning and conflicts with the other renderings of the term.
+    - Current: `ligações da aplicação`
+    - Source: `accesskey: A label: Allow sites to ask to open app links.`
+    - Suggest: `ligações em aplicações`
+    - The developer comment says app links are links a website asks to open in an app, like mailto: links. They are not links belonging to the application. Related strings use "ligações de aplicações" and "ligações em aplicações".
 - `preferences-doh-default-detailed-desc-3` — `browser/browser/preferences/preferences.ftl` — Typo: “forncedor”.
     - Current: `Utilizar um forncedor local, se possível`
     - Source: `Use a local provider, if possible`
@@ -1145,12 +1140,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `<strong>{ $property }</strong> has no effect on internal table elements except table cells.`
     - Suggest: `exceção`
     - Under the current pt-PT orthography the word is “exceção”, as used elsewhere in the tree.
-- `inactive-css-not-grid-or-flex-item` — `devtools/client/tooltips.ftl` — Duplicated article “um um”.
-    - Current: `um um item grid ou flex`
-    - Source: `<strong>{ $property }</strong> has no effect on this element since it’s not a grid or flex item.`
-    - Suggest: `um item grid ou flex`
-    - Typo visible in the rule-view tooltip.
-- _…and 21 more; see `state/` for the full list._
+- _…and 22 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -1159,6 +1149,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Import from a File…`
     - Suggest: `Importar de um ficheiro…`
     - en-US is “Import from a File…”; the adjacent items in the same menu correctly end with “…”, which signals that a dialog follows.
+- `fire-button-panel-choose-link` — `browser/browser/browser.ftl` — The label ends with three ASCII periods instead of the ellipsis character (…).
+    - Current: `Escolher...`
+    - Source: `Choose…`
+    - Suggest: `Escolher…`
+    - The locale convention is the single ellipsis character (char 371 vs ascii 27), and the en-US uses "…". The developer comment says the ellipsis tells the user that a dialog follows.
 - `main-context-menu-edit-bookmark-with-shortcut-2` — `browser/browser/browserContext.ftl` — Missing space between the label and the shortcut in parentheses.
     - Current: `Editar marcador…({ $shortcut })`
     - Source: `aria-label: Edit Bookmark… tooltiptext: Edit bookmark ({ $shortcut })`

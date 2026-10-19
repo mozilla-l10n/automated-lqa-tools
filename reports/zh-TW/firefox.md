@@ -2,307 +2,44 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `db2cfca9d18c` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `af4e7312bee1` |
-| **Previous run** | _none — this is the baseline_ @ `—` |
-| **Mode** | baseline |
-| **Strings reviewed this run** | 16,456 of 16,456 |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
+| **Previous run** | 2026-10-16 @ `db2cfca9d18c` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 65 of 16,520 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-
+Also for zh-TW: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (232)
+### 🆕 New findings (4)
 
-- `fxa-menu-device-view-all-synced-tabs` — `browser/browser/appmenu.ftl` — `fxa-menu-device-view-all-synced-tabs` (`.label`) has plural variant ['one'], which zh-TW does not have
-    - Current: `{$tabCount ->} [one] 檢視 { $tabCount } 個同步的分頁 [other] 檢視全部 { $tabCount } 個同步的分頁`
-    - Source: `label: {$tabCount ->} [one] View { $tabCount } Synced Tab [other] View All { $tabCount } Synced Tabs`
-    - zh-TW has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `urlbar-result-dates-countdown` — `browser/browser/browser.ftl` — `urlbar-result-dates-countdown` has plural variant ['one'], which zh-TW does not have
-    - Current: `{$daysUntilStart ->} [one] { $name } · 明天 [other] { $name } · { $daysUntilStart } 天後`
-    - Source: `{$daysUntilStart ->} [one] { $name } · In { $daysUntilStart } day [other] { $name } · In { $daysUntilStart } days`
-    - zh-TW has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `urlbar-result-dates-countdown-range` — `browser/browser/browser.ftl` — `urlbar-result-dates-countdown-range` has plural variant ['one'], which zh-TW does not have
-    - Current: `{$daysUntilStart ->} [one] { $name } · 明天開始 [other] { $name } · { $daysUntilStart } 天後開始`
-    - Source: `{$daysUntilStart ->} [one] { $name } · Starts in { $daysUntilStart } day [other] { $name } · Starts in { $daysUntilStart } days`
-    - zh-TW has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `urlbar-result-dates-ongoing` — `browser/browser/browser.ftl` — `urlbar-result-dates-ongoing` has plural variant ['one'], which zh-TW does not have
-    - Current: `{$daysUntilEnd ->} [one] { $name } · 明天結束 [other] { $name } · { $daysUntilEnd } 天後結束`
-    - Source: `{$daysUntilEnd ->} [one] { $name } · Ends in { $daysUntilEnd } day [other] { $name } · Ends in { $daysUntilEnd } days`
-    - zh-TW has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `menu-share-copy-links` — `browser/browser/browser.ftl` — `menu-share-copy-links` (`.label`) has plural variant ['one'], which zh-TW does not have
-    - Current: `{$count ->} [one] 複製鏈結 [other] 複製 { $count } 個鏈結`
-    - Source: `accesskey: L label: {$count ->} [one] Copy Link [other] Copy { $count } Links`
-    - zh-TW has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `downloads-files-not-downloaded` — `browser/browser/downloads.ftl` — `downloads-files-not-downloaded` has plural variant ['one'], which zh-TW does not have
-    - Current: `{$num ->} [other] 未下載 { $num } 個檔案。 [one] 未下載檔案。`
-    - Source: `{$num ->} [one] File not downloaded. [other] { $num } files not downloaded.`
-    - zh-TW has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `migration-wizard-progress-success-history` — `browser/browser/migrationWizard.ftl` — `migration-wizard-progress-success-history` has plural variant ['one'], which zh-TW does not have
-    - Current: `{$maxAgeInDays ->} [one] 昨天以來 [other] 過去 { $maxAgeInDays } 天以來的資料`
-    - Source: `{$maxAgeInDays ->} [one] From the last day [other] From the last { $maxAgeInDays } days`
-    - zh-TW has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `security-visits-number` — `browser/browser/pageInfo.ftl` — `security-visits-number` has plural variant ['one'], which zh-TW does not have
-    - Current: `{$visits ->} [0] 沒有 [one] 有，1 次 [other] 有，{ $visits } 次`
-    - Source: `{$visits ->} [0] No [one] Yes, once [other] Yes, { $visits } times`
-    - zh-TW has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `site-permissions-open-blocked-popups` — `browser/browser/sitePermissions.ftl` — `site-permissions-open-blocked-popups` has plural variant ['one'], which zh-TW does not have
-    - Current: `{$count ->} [one] 開啟被封鎖的彈出型視窗… [other] 開啟 { $count } 個被封鎖的彈出型視窗…`
-    - Source: `{$count ->} [one] Open { $count } blocked pop-up… [other] Open { $count } blocked pop-ups…`
-    - zh-TW has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `home-prefs-sections-rows-option` — `browser/browser/preferences/preferences.ftl` — `home-prefs-sections-rows-option` (`.label`) has plural variant ['one'], which zh-TW does not have
-    - Current: `{$num ->} [one] { $num } 行 [other] { $num } 行`
-    - Source: `label: {$num ->} [one] { $num } row [other] { $num } rows`
-    - zh-TW has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `home-prefs-sections-rows-option-srd` — `browser/browser/newtab/newtab.ftl` — `home-prefs-sections-rows-option-srd` (`.label`) has plural variant ['one'], which zh-TW does not have
-    - Current: `{$num ->} [one] { $num } 行 [other] { $num } 行`
-    - Source: `label: {$num ->} [one] { $num } row [other] { $num } rows`
-    - zh-TW has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `newtab-custom-row-selector2` — `browser/browser/newtab/newtab.ftl` — `newtab-custom-row-selector2` (`.label`) has plural variant ['one'], which zh-TW does not have
-    - Current: `{$num ->} [one] { $num } 行 [other] { $num } 行`
-    - Source: `label: {$num ->} [one] { $num } row [other] { $num } rows`
-    - zh-TW has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `about-networking-ssl-tokens-summary-count` — `toolkit/toolkit/about/aboutNetworking.ftl` — `about-networking-ssl-tokens-summary-count` has plural variant ['one'], which zh-TW does not have
-    - Current: `{$count ->} [one] { $count } 個 token [other] { $count } 個 token`
-    - Source: `{$count ->} [one] { $count } token [other] { $count } tokens`
-    - zh-TW has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `preventedConsoleClear` — `devtools/shared/webconsole.properties` — `preventedConsoleClear` quotes “保存紀錄” but the string it names, `webconsole.console.settings.menu.item.enablePersistentLogs.label`, reads “保留紀錄”
-    - Current: `由於開啟「保存紀錄」功能，已防止執行 console.clear()`
-    - Source: `console.clear() was prevented due to “Persist Logs”`
-    - Suggest: `保留紀錄`
-    - In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `ImageMapRectBoundsError` — `dom/chrome/layout/layout_errors.properties` — `ImageMapRectBoundsError` uses straight double quotes
-    - Current: `<area shape="rect">的"coords" 屬性不是 "left,top,right,bottom" 格式。`
-    - Source: `The “coords” attribute of the <area shape="rect"> tag is not in the “left,top,right,bottom” format.`
-    - The locale's quote convention is `corner` (890 occurrences).
-- `ImageMapCircleWrongNumberOfCoords` — `dom/chrome/layout/layout_errors.properties` — `ImageMapCircleWrongNumberOfCoords` uses straight double quotes
-    - Current: `<area shape="circle"> 標籤中的 "coords" 屬性並不是 "center-x,center-y,radius" 的格式。`
-    - Source: `The “coords” attribute of the <area shape="circle"> tag is not in the “center-x,center-y,radius” format.`
-    - The locale's quote convention is `corner` (890 occurrences).
-- `ImageMapCircleNegativeRadius` — `dom/chrome/layout/layout_errors.properties` — `ImageMapCircleNegativeRadius` uses straight double quotes
-    - Current: `<area shape="circle"> 標籤中的 "coords" 屬性不能有負的半徑。`
-    - Source: `The “coords” attribute of the <area shape="circle"> tag has a negative radius.`
-    - The locale's quote convention is `corner` (890 occurrences).
-- `ImageMapPolyWrongNumberOfCoords` — `dom/chrome/layout/layout_errors.properties` — `ImageMapPolyWrongNumberOfCoords` uses straight double quotes
-    - Current: `<area shape="poly"> 標籤中的 "coords" 屬性並不是 "x1,y1,x2,y2,…" 的格式。`
-    - Source: `The “coords” attribute of the <area shape="poly"> tag is not in the “x1,y1,x2,y2 …” format.`
-    - The locale's quote convention is `corner` (890 occurrences).
-- `ImageMapPolyOddNumberOfCoords` — `dom/chrome/layout/layout_errors.properties` — `ImageMapPolyOddNumberOfCoords` uses straight double quotes
-    - Current: `<area shape="poly"> 標籤中的 "coords" 屬性少了最後的 y 座標 (正確格式是 "x1,y1,x2,y2,…")。`
-    - Source: `The “coords” attribute of the <area shape="poly"> tag is missing the last “y” coordinate (the correct format is “x1,y1,x2,y2 …”).`
-    - The locale's quote convention is `corner` (890 occurrences).
-- `appearance-browser-icon-entry-group` — `browser/browser/preferences/browserIcon.ftl` — The en-US says "taskbar", but the translation says 工具列, which means "toolbar".
-    - Current: `選擇要在工具列、桌面與開始選單顯示的自訂圖示。`
-    - Source: `description: Choose a custom icon for your taskbar, desktop and start menu. label: Browser icon`
-    - Suggest: `選擇要在工作列、桌面與開始選單顯示的自訂圖示。`
-    - The developer comment says the icon appears on the desktop, taskbar and Start Menu. The same file already uses 工作列 for taskbar in appearance-browser-icon-pin-button (釘選到工作列). 工具列 is the browser toolbar, which is a different thing.
-- `preferences-ai-controls-pdfjs-control` — `browser/browser/preferences/preferences.ftl` — "Accessible" (usable with assistive technology) is translated as 親和力, which means friendly or approachable.
-    - Current: `讓圖片更有親和力`
-    - Source: `description: When you add images to PDFs, this adds descriptions to make them accessible. label: Image alt text in { -brand-short-name } PDF viewer`
-    - Suggest: `讓圖片更容易使用輔助技術存取`
-    - This feature generates alt text so images can be read by assistive technology. 更有親和力 says the images become more approachable, which loses the accessibility meaning completely.
-- `connection-dns-over-https-url-item` — `browser/browser/preferences/preferences.ftl` — Typo: 使用者 ("user") is written where 使用 ("use") is meant.
-    - Current: `使用者此提供者進行 DNS over HTTPS 解析`
-    - Source: `label: { $name } tooltiptext: Use this provider for resolving DNS over HTTPS`
-    - Suggest: `使用此提供者進行 DNS over HTTPS 解析`
-    - The en-US is "Use this provider…". As written, the tooltip reads "user this provider…", which is ungrammatical. Compare the matching string in connection.ftl: 使用預設網址來解析 DNS over HTTPS.
-- `permissions-site-speaker-desc` — `browser/browser/preferences/permissions.ftl` — 允許 ("allow") appears twice, which makes the sentence ungrammatical.
-    - Current: `您可指定要允許哪些網站允許選擇音訊輸出裝置。`
-    - Source: `The following websites have requested to select an audio output device. You can specify which websites are allowed to select an audio output device.`
-    - Suggest: `您可指定要允許哪些網站選擇音訊輸出裝置。`
-    - The en-US is "You can specify which websites are allowed to select an audio output device." The second 允許 is redundant and garbles the sentence.
-- `preferences-ai-controls-description` — `browser/browser/preferences/preferences.ftl` — "Features enhanced with AI" is rendered as AI 擴充功能 ("AI extension features"), while the rest of the page uses AI 強化功能.
-    - Current: `是否使用 AI 擴充功能`
-    - Source: `You always have a choice in { -brand-short-name }, including whether to use features enhanced with AI. More controls coming soon.`
-    - Suggest: `是否使用 AI 強化功能`
-    - Every other string on the AI controls page uses 強化功能 for "enhancements" (for example 封鎖 AI 強化功能). In zh-TW, 擴充 suggests add-ons or extensions, which is a different concept in Firefox settings.
-- `preferences-ai-controls-tab-group-suggestions-control` — `browser/browser/preferences/preferences.ftl` — The translation says the feature manages the user's tabs, but the source only says it suggests names and organization.
-    - Current: `管理您的分頁，並提供名稱建議。`
-    - Source: `description: Get suggestions to name and organize your tabs. label: Tab group suggestions`
-    - Suggest: `取得為分頁命名與整理分頁的建議。`
-    - The en-US is "Get suggestions to name and organize your tabs." Both naming and organizing are suggestions. The translation instead states that the feature itself manages your tabs.
-- `space-alert-over-5gb-message2` — `browser/browser/preferences/preferences.ftl` — The menu path starts with the old name 選項 ("Options"), but the page is now called 設定 ("Settings").
-    - Current: `您可以到「選項 > 隱私權與安全性 > Cookie 與網站資料」清除目前儲存的網站資料。`
-    - Source: `<strong>{ -brand-short-name } is running out of disk space.</strong> Website contents may not display properly. You can clear stored data in Settings > Privacy & Security > Cookies and Site Data.`
-    - Suggest: `您可以到「設定 > 隱私權與安全性 > Cookie 與網站資料」清除目前儲存的網站資料。`
-    - The en-US path is Settings > Privacy & Security, and this locale names the page 設定 (settings-page-title, category-nav-heading). A user following 選項 would look for a menu entry that does not exist.
-- `MUI_UNTEXT_WELCOME_INFO_TEXT` — `browser/installer/mui.properties` — The uninstall wizard tells the user to close Firefox 'before installing' instead of before uninstalling
-    - Current: `安裝前請確定 $BrandFullNameDA 已經關閉。`
-    - Source: `This wizard will guide you through the uninstallation of $BrandFullNameDA.  Before starting the uninstallation, make sure $BrandFullNameDA is not running.  $_CLICK`
-    - Suggest: `開始移除前請確定 $BrandFullNameDA 已經關閉。`
-    - The en-US says 'Before starting the uninstallation, make sure … is not running.' This page belongs to the uninstall wizard, but the Chinese says 安裝前 (before installing).
-- `MUI_TEXT_WELCOME_INFO_TEXT` — `browser/installer/mui.properties` — The meaning is reversed: the en-US says closing other apps lets Setup avoid a reboot, but the Chinese says a reboot may be needed
-    - Current: `安裝前建議您關閉其他的常駐程式，為了更新相關的系統檔案可能必須重新啟動電腦。`
-    - Source: `This wizard will guide you through the installation of $BrandFullNameDA.  It is recommended that you close all other applications before starting Setup. This will make it possible to update relevant system files without…`
-    - Suggest: `安裝前建議您關閉其他所有程式，這樣就可以更新相關的系統檔案而不需要重新啟動電腦。`
-    - The en-US says 'This will make it possible to update relevant system files without having to reboot your computer.' The Chinese says the computer may have to be restarted to update system files, which is the opposite.
-- `policy-DisableThirdPartyModuleBlocking2` — `browser/browser/policies/policies-descriptions.ftl` — The policy's purpose is misdescribed: the Chinese says the page is blocked in order to block third-party modules
-    - Current: `防止使用者開啟第三方模組資訊（about:third-party）頁面，以封鎖第三方模組注入 { -brand-short-name } 程序。`
-    - Source: `Prevent the user from using Third-party Module Information (about:third-party) to block third-party modules injected into the { -brand-short-name } process.`
-    - Suggest: `防止使用者透過第三方模組資訊（about:third-party）頁面封鎖注入 { -brand-short-name } 程序的第三方模組。`
-    - The en-US says the policy stops the user from using about:third-party to block injected modules. The Chinese 以封鎖… turns module blocking into the purpose of the policy, which is the reverse of what it does.
-- `policy-OfferToSaveLoginsDefault` — `browser/browser/policies/policies-descriptions.ftl` — 'Set the default value for' is dropped, so this reads like an enforcing policy rather than a default
-    - Current: `允許 { -brand-short-name } 提供記住儲存登入帳號與密碼的功能。`
-    - Source: `Set the default value for allowing { -brand-short-name } to offer to remember saved logins and passwords. Both true and false values are accepted.`
-    - Suggest: `設定是否允許 { -brand-short-name } 提供記住登入資訊與密碼的預設值。`
-    - The en-US is 'Set the default value for allowing …'. Its sibling policy-OfferToSaveLogins enforces the setting. Without the word 'default', administrators cannot tell the two policies apart.
-- `policy-SkipTermsOfUse2` — `browser/browser/policies/policies-descriptions.ftl` — The legal representation is turned into an obligation to obtain authorization from every user
-    - Current: `您必須獲得您提供使用此瀏覽器的所有使用者授權，並代表他們同意使用條款。`
-    - Source: `Do not display the Terms of Use and Privacy Notice upon startup. You represent that you accept and have the authority to accept the Terms of Use on behalf of all individuals to whom you provide access to this browser.`
-    - Suggest: `您聲明您接受，並有權代表所有您提供此瀏覽器使用權限的人員接受使用條款。`
-    - The en-US says 'You represent that you accept and have the authority to accept…'. The developer comment says this means 'you confirm/declare'. The Chinese instead says you 'must obtain authorization from all users', which is a different legal statement.
-- `onboarding-easy-setup-security-and-privacy-subtitle` — `browser/browser/newtab/onboarding.ftl` — 'Helps stop companies' becomes 'automatically blocks the programs that let big companies follow you', which is an unhedged promise
-    - Current: `會自動封鎖讓大企業在網路上偷偷跟蹤您的程式`
-    - Source: `Our non-profit backed browser helps stop companies from secretly following you around the web.`
-    - Suggest: `可幫助防止企業在網路上偷偷跟蹤您`
-    - The en-US says the browser 'helps stop companies from secretly following you'. The Chinese drops the hedge and claims the browser automatically blocks this tracking. It also narrows 'companies' to 大企業 (big companies).
-- `newtab-wallpaper-error-upload-file-type` — `browser/browser/newtab/newtab.ftl` — This file-type error tells the user to retry later instead of telling them to use an image file
-    - Current: `請稍後再重新上傳圖片。`
-    - Source: `We couldn’t upload your file. Please try again with an image file.`
-    - Suggest: `請改用圖片檔案再試一次。`
-    - The en-US says 'Please try again with an image file.' The error is about the file type, so 'try again later' sends the user the wrong way.
-- `fxa-adoption-addresses-backup-title` — `browser/browser/newtab/asrouter.ftl` — Saved (postal) addresses are rendered as 網址 (web addresses/URLs)
-    - Current: `一起備份儲存的網址吧！`
-    - Source: `Let’s back up your saved addresses`
-    - Suggest: `一起備份儲存的地址吧！`
-    - This message is about saved autofill addresses. Its subtitle uses 地址, but the title says 網址, which means URLs.
-- `home-custom-homepage-delete-address-button` — `browser/browser/newtab/newtab.ftl` — A website address is called 地址 (postal address), while the neighbouring strings use 網址
-    - Current: `刪除地址`
-    - Source: `aria-label: Delete address title: Delete address`
-    - Suggest: `刪除網址`
-    - In the same subpage, 'Enter address' and 'Add address' are rendered 請輸入網址 and 新增網址. The delete button should match them.
-- `WARN_RESTART_REQUIRED_UNINSTALL` — `browser/installer/custom.properties` — 'A previous uninstall' is dropped, so it sounds like the current operation needs a reboot
-    - Current: `必須重新啟動電腦才能完成 $BrandShortName 的解除安裝程序。`
-    - Source: `Your computer must be restarted to complete a previous uninstall of $BrandShortName. Do you want to reboot now?`
-    - Suggest: `必須重新啟動電腦才能完成先前的 $BrandShortName 解除安裝程序。`
-    - The en-US says 'to complete a previous uninstall'. This dialog appears when an earlier operation is still pending.
-- `WARN_RESTART_REQUIRED_UPGRADE` — `browser/installer/custom.properties` — 'A previous upgrade' is dropped
-    - Current: `您的電腦必須重新啟動以完成升級 $BrandShortName。`
-    - Source: `Your computer must be restarted to complete a previous upgrade of $BrandShortName. Do you want to reboot now?`
-    - Suggest: `您的電腦必須重新啟動以完成先前的 $BrandShortName 升級。`
-    - The en-US says 'to complete a previous upgrade'. Without 'previous', the dialog seems to refer to the current upgrade.
-- `REG_APP_DESC` — `browser/installer/custom.properties` — 'Protection from online identity theft' becomes a 'new online scam-site detection feature'
-    - Current: `（包含新的線上辨識詐騙網站功能）`
-    - Source: `$BrandShortName delivers safe, easy web browsing. A familiar user interface, enhanced security features including protection from online identity theft, and integrated search let you get the most out of the web.`
-    - Suggest: `（包含線上身分盜用防護）`
-    - The en-US names protection from identity theft. The Chinese describes a different feature and adds 'new'.
-- `STUB_BLURB_FIRST3` — `browser/installer/nsisstrings.properties` — 'open web' is left in English, although the sibling string translates it
-    - Current: `準備好在 Open Web 中漫遊`
-    - Source: `Get ready to roam on the open web`
-    - Suggest: `準備好在開放的網路中漫遊`
-    - The sibling STUB_BLURB_FIRST2_DEVEDITION renders 'the open web' as 開放的網路環境. 'Open web' is a common phrase, not a brand.
-- `root-certificate-succession-infobar-january-message` — `browser/browser/newtab/asrouter.ftl` — 'Problems' is narrowed to 'startup problems', and the date is missing 日
-    - Current: `可能會在 2025 年 1 月 14 起遇到啟動問題`
-    - Source: `<strong>Older versions of { -brand-short-name } may start to have problems on January 14, 2025.</strong>`
-    - Suggest: `可能會在 2025 年 1 月 14 日起開始遇到問題`
-    - The en-US says only 'may start to have problems'; it does not say the problems are at startup. The sibling March message writes the date with 日.
-- `mr2022-onboarding-gratitude-subtitle` — `browser/browser/newtab/onboarding.ftl` — 'Backed by the Mozilla Foundation' becomes 'developed by the Mozilla Foundation'
-    - Current: `由 Mozilla 基金會開發的`
-    - Source: `Thank you for using { -brand-short-name }, backed by the Mozilla Foundation. With your support, we’re working to make the internet more open, accessible, and better for everyone.`
-    - Suggest: `由 Mozilla 基金會支持的`
-    - The en-US says Firefox is backed by the Foundation, not developed by it. The same change appears in onboarding-gratitude-security-and-privacy-subtitle.
-- `mr1-return-to-amo-addon-title` — `browser/browser/newtab/onboarding.ftl` — Typo: a stray 斯 after 隱私
-    - Current: `又快又有隱私斯的瀏覽器`
-    - Source: `You’ve got a fast, private browser at your fingertips. Now you can add <b>{ $addon-name }</b> and do even more with { -brand-short-name }.`
-    - Suggest: `又快又有隱私的瀏覽器`
-    - 斯 is a stray character that makes the phrase ungrammatical.
-- `onboarding-checklist-subtitle` — `browser/browser/newtab/onboarding.ftl` — The particle 的 is duplicated
-    - Current: `最完整的的上網體驗`
-    - Source: `Complete these steps to get the most out of your browsing experience.`
-    - Suggest: `最完整的上網體驗`
-    - Repeated particle.
-- `newtab-sports-widget-message-survey-widget-body` — `browser/browser/newtab/newtab.ftl` — A stray 在 makes the sentence ungrammatical
-    - Current: `幫助我們在改善未來的小工具功能`
-    - Source: `Share your feedback to help us improve future widgets. Then, try the new one in your lineup.`
-    - Suggest: `幫助我們改善未來的小工具功能`
-    - The 在 has no role here and breaks the verb phrase.
-- `newtab-privacy-message-info-10` — `browser/browser/newtab/newtab.ftl` — A preposition is missing before 任何網站
-    - Current: `即可任何網站都使用`
-    - Source: `Save passwords in { -brand-short-name } to use strong, unique logins everywhere.`
-    - Suggest: `即可在任何網站都使用`
-    - Without 在 the clause is ungrammatical.
-- `onboarding-checklist-pin` — `browser/browser/newtab/onboarding.ftl` — 'Taskbar' is rendered 工具列 (toolbar) instead of 工作列
-    - Current: `釘選到工具列`
-    - Source: `Pin { -brand-short-name } to taskbar`
-    - Suggest: `釘選到工作列`
-    - In zh-TW Windows the taskbar is 工作列. In Firefox, 工具列 is the browser toolbar, which is a different thing. Other strings that mean pinning to the taskbar already use 工作列: launch-on-login-spotlight-pin-taskbar-checkbox, spotlight-pin-primary-button, mr2022-upgrade-onboarding-pin-private-window-primary-button-label and ICONS_TASKBAR.
-- `mr2022-onboarding-pin-primary-button-label` — `browser/browser/newtab/onboarding.ftl` — 'Pin to taskbar' is rendered with 工具列 (toolbar)
-    - Current: `將 { -brand-short-name } 釘選到工具列`
-    - Source: `{$sel_1 ->} [macos] Keep { -brand-short-name } in Dock [other] Pin { -brand-short-name } to taskbar`
-    - Suggest: `將 { -brand-short-name } 釘選到工作列`
-    - The source is 'Pin … to taskbar' (the Windows taskbar, 工作列). 工具列 means the browser toolbar.
-- `mr2022-onboarding-pin-primary-button-label-msix` — `browser/browser/newtab/onboarding.ftl` — 'Taskbar' is rendered 工具列 (toolbar)
-    - Current: `釘選到工具列與開始選單`
-    - Source: `Pin { -brand-short-name } to taskbar and start menu`
-    - Suggest: `釘選到工作列與開始選單`
-    - Windows taskbar is 工作列.
-- `fx100-thank-you-pin-primary-button-label` — `browser/browser/newtab/onboarding.ftl` — 'Taskbar' is rendered 工具列 (toolbar)
-    - Current: `將 { -brand-short-name } 釘選到工具列`
-    - Source: `{$sel_1 ->} [macos] Keep { -brand-short-name } in Dock [other] Pin { -brand-short-name } to taskbar`
-    - Suggest: `將 { -brand-short-name } 釘選到工作列`
-    - The source is 'Pin … to taskbar'.
-- `onboarding-refresh-tou-pin` — `browser/browser/newtab/onboarding.ftl` — 'Taskbar' is rendered 工具列 (toolbar)
-    - Current: `將 { -brand-short-name } 新增到您的工具列`
-    - Source: `{$sel_1 ->} [macos] Keep { -brand-short-name } in Dock [other] Add { -brand-short-name } to your taskbar`
-    - Suggest: `將 { -brand-short-name } 新增到您的工作列`
-    - The source is 'Add … to your taskbar'.
-- `multi-cta-fox-doodle-pin-checkbox` — `browser/browser/newtab/asrouter.ftl` — 'Taskbar' is rendered 工具列 (toolbar)
-    - Current: `將 { -brand-short-name } 釘選到工具列`
-    - Source: `{$sel_1 ->} [macos] Keep { -brand-short-name } in Dock [other] Pin { -brand-short-name } to taskbar`
-    - Suggest: `將 { -brand-short-name } 釘選到工作列`
-    - The source is 'Pin … to taskbar'. The same file uses 工作列 in spotlight-pin-primary-button.
-- `multi-cta-fox-doodle-privacy-focused-subtitle` — `browser/browser/newtab/asrouter.ftl` — 'Taskbar' is rendered 工具列 (toolbar)
-    - Current: `並釘選至工具列。`
-    - Source: `{$sel_1 ->} [macos] Keep your favorite privacy-focused browser just one click away. Set { -brand-short-name } as your default browser for opening links and keep it in your Dock. [other] Keep your favorite privacy-focuse…`
-    - Suggest: `並釘選至工作列。`
-    - The source is 'pin it to your taskbar'.
-- `multi-cta-fox-doodle-msix-privacy-focused-subtitle` — `browser/browser/newtab/asrouter.ftl` — 'Taskbar' is rendered 工具列 (toolbar)
-    - Current: `並釘選至工具列與開始選單。`
-    - Source: `Keep your favorite privacy-focused browser just one click away. Set { -brand-short-name } as your default browser for opening links and pin it to your taskbar and Start menu.`
-    - Suggest: `並釘選至工作列與開始選單。`
-    - The source is 'pin it to your taskbar and Start menu'.
-- `windows-10-eos-challenger-pin-callout-subtitle` — `browser/browser/newtab/asrouter.ftl` — 'Taskbar' is rendered 工具列 (toolbar)
-    - Current: `釘選到工具列，`
-    - Source: `Pin { -brand-shorter-name } to your taskbar so the browser you chose is always there when you need it.`
-    - Suggest: `釘選到工作列，`
-    - The source is 'Pin … to your taskbar'.
-- `set-default-menu-message-row-layout-subtitle-variant` — `browser/browser/newtab/asrouter.ftl` — 'Taskbar' is rendered 工具列 (toolbar)
-    - Current: `保留在您的工具列`
-    - Source: `{$sel_1 ->} [macos] Keep { -brand-short-name } at your fingertips — make it your default and keep it in your Dock. [other] Keep { -brand-short-name } at your fingertips — make it your default and keep it in your taskbar.`
-    - Suggest: `保留在您的工作列`
-    - The source is 'keep it in your taskbar'.
-- `taskbar-tab-urlbar-button-open` — `browser/browser/taskbartabs.ftl` — 'Taskbar' is translated as 'toolbar' (工具列).
-    - Current: `將分頁新增到工具列`
-    - Source: `tooltiptext: Add tab to taskbar`
-    - Suggest: `將分頁新增到工作列`
-    - en-US is 'Add tab to taskbar'. This feature pins a site to the Windows taskbar (工作列). 工具列 is the browser's own toolbar, so the tooltip describes a different action.
-- `taskbar-tab-urlbar-button-close` — `browser/browser/taskbartabs.ftl` — 'Taskbar' is translated as 'sidebar' (側邊欄).
-    - Current: `從側邊欄移除分頁`
-    - Source: `tooltiptext: Remove tab from taskbar`
-    - Suggest: `從工作列移除分頁`
-    - en-US is 'Remove tab from taskbar'. The translation says the tab is removed from the sidebar, which is a different UI element.
-- `delete-profile-page-title-2` — `browser/browser/profiles.ftl` — 'Profile' is rendered as 原則 ('policy') in the delete page title.
-    - Current: `刪除「{ $profilename }」原則`
-    - Source: `Delete “{ $profilename }” profile`
-    - Suggest: `刪除「{ $profilename }」設定檔`
-    - en-US is 'Delete “{ $profilename }” profile'. 原則 means policy. Every other string in this file uses 設定檔 for profile, including delete-profile-header-2 right next to it.
-- `webrtc-allow-share-camera-unsafe-delegation` — `browser/browser/webrtcIndicator.ftl` — The camera-only delegation prompt also asks about the microphone.
-    - Current: `使用您的攝影機與麥克風嗎`
-    - Source: `Allow { $origin } to give { $thirdParty } access to your camera?`
-    - Suggest: `使用您的攝影機嗎`
-    - en-US is 'Allow { $origin } to give { $thirdParty } access to your camera?'. Adding 與麥克風 makes the user think they are also granting microphone access. A separate string exists for camera plus microphone.
-- `report-broken-site-panel-reason-adblocker-moz-box-button` — `browser/browser/reportBrokenSite.ftl` — 'Ad blocker' is translated as 'ad trackers' (廣告追蹤器).
-    - Current: `網站要求關閉廣告追蹤器`
-    - Source: `label: Site asked to turn off ad blocker`
-    - Suggest: `網站要求關閉廣告封鎖器`
-    - en-US is 'Site asked to turn off ad blocker'. 廣告追蹤器 means ad trackers, which is close to the opposite thing, so the report reason no longer makes sense.
-- _…and 172 more._
+- `bookmark-properties-title-add-folder` — `browser/browser/editBookmarkOverlay.ftl` — "Add bookmark folder" is translated as "Add bookmarks toolbar".
+    - Current: `新增書籤工具列`
+    - Source: `Add bookmark folder`
+    - Suggest: `新增書籤資料夾`
+    - In this locale 書籤工具列 means the Bookmarks Toolbar. The source says "bookmark folder", which elsewhere in this file is 資料夾.
+- `bookmark-properties-title-edit-folder` — `browser/browser/editBookmarkOverlay.ftl` — "Edit bookmark folder" is translated as "Edit bookmarks toolbar".
+    - Current: `編輯書籤工具列`
+    - Source: `Edit bookmark folder`
+    - Suggest: `編輯書籤資料夾`
+    - 書籤工具列 means the Bookmarks Toolbar, not a bookmark folder.
+- `ip-protection-not-opted-in-inclusions-enabled` — `browser/browser/ipProtection.ftl` — "免費" ("free") appears twice in the same sentence.
+    - Current: `每月免費獲得 { $maxUsage } GB 的免費流量`
+    - Source: `heading: Ready to try it? message: Get { $maxUsage } GB free each month and choose which sites use VPN.`
+    - Suggest: `每月免費獲得 { $maxUsage } GB 流量`
+    - Saying "free" twice ("get free … of free data") is redundant and reads awkwardly. The source says "free" only once.
+- `permission.register-protocol-handler.label` — `browser/chrome/browser/sitePermissions.properties` — The permission label says "ask me before opening app links" instead of "may the site ask to open app links".
+    - Current: `開啟應用程式鏈結前先問我`
+    - Source: `Ask to open app links`
+    - Suggest: `詢問是否可開啟應用程式鏈結`
+    - The developer comment says this permission controls whether the site may ask to open app links. The translation describes the browser asking the user before it opens app links, which is a different setting.
 
 ### ✅ Fixed since the last run (0)
 
@@ -326,11 +63,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 327 |
-| Strings | 16,456 |
-| Missing strings | 61 |
-| Obsolete strings | 1 |
-| Files absent from the locale | 1 |
+| Files | 328 |
+| Strings | 16,520 |
+| Missing strings | 0 |
+| Obsolete strings | 0 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -345,25 +82,6 @@ _Nothing retired._
 
 ### Completeness
 
-**61 strings** are not translated yet, concentrated in:
-
-- `toolkit/toolkit/global/viewSource.ftl` — 10
-- `browser/browser/editBookmarkOverlay.ftl` — 9
-- `browser/browser/ipProtection.ftl` — 9
-- `browser/browser/browser.ftl` — 8
-- `browser/browser/newtab/newtab.ftl` — 4
-- `browser/browser/sanitize.ftl` — 3
-- `browser/browser/sidebar.ftl` — 2
-- `browser/browser/preferences/permissions.ftl` — 2
-- `browser/browser/preferences/preferences.ftl` — 2
-- `browser/browser/newtab/asrouter.ftl` — 2
-- `toolkit/toolkit/about/aboutGlean.ftl` — 2
-- `browser/browser/confirmationHints.ftl` — 1
-
-**Files absent from the locale:**
-
-- `toolkit/toolkit/global/viewSource.ftl`
-
 **Files present but identical to en-US:**
 
 - `toolkit/toolkit/about/aboutMozilla.ftl`
@@ -376,12 +94,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `corner` 890, `straight-double` 34, `curly-single` 9, `curly-double` 6 | **corner** |
+| quotes | `corner` 893, `straight-double` 34, `curly-single` 9, `curly-double` 6 | **corner** |
 | apostrophe | `typographic` 9, `straight` 9 | _mixed_ |
-| ellipsis | `char` 400 | **char** |
+| ellipsis | `char` 402 | **char** |
 | dash | `em` 52, `en` 1 | **em** |
 | nbsp | `total` 1, `space-before-punctuation` 5 | **space-before-punctuation** |
-| fullwidth | `punctuation` 8324 | **punctuation** |
+| fullwidth | `punctuation` 8353 | **punctuation** |
 
 ---
 
@@ -391,14 +109,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (232)
+## 3. Open findings (236)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 141 |
-| 2 | Wrong content (says something other than the English) | 73 |
-| 3 | Degraded language (grammar, spelling, terminology) | 0 |
+| 2 | Wrong content (says something other than the English) | 76 |
+| 3 | Degraded language (grammar, spelling, terminology) | 1 |
 | 4 | Cosmetic (typography, spacing) | 18 |
 
 ### A. Functional, markup, variables & plurals
@@ -695,7 +413,21 @@ _Nothing reported._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-_Nothing in this category._
+- `bookmark-properties-title-add-folder` — `browser/browser/editBookmarkOverlay.ftl` — "Add bookmark folder" is translated as "Add bookmarks toolbar".
+    - Current: `新增書籤工具列`
+    - Source: `Add bookmark folder`
+    - Suggest: `新增書籤資料夾`
+    - In this locale 書籤工具列 means the Bookmarks Toolbar. The source says "bookmark folder", which elsewhere in this file is 資料夾.
+- `bookmark-properties-title-edit-folder` — `browser/browser/editBookmarkOverlay.ftl` — "Edit bookmark folder" is translated as "Edit bookmarks toolbar".
+    - Current: `編輯書籤工具列`
+    - Source: `Edit bookmark folder`
+    - Suggest: `編輯書籤資料夾`
+    - 書籤工具列 means the Bookmarks Toolbar, not a bookmark folder.
+- `permission.register-protocol-handler.label` — `browser/chrome/browser/sitePermissions.properties` — The permission label says "ask me before opening app links" instead of "may the site ask to open app links".
+    - Current: `開啟應用程式鏈結前先問我`
+    - Source: `Ask to open app links`
+    - Suggest: `詢問是否可開啟應用程式鏈結`
+    - The developer comment says this permission controls whether the site may ask to open app links. The translation describes the browser asking the user before it opens app links, which is a different setting.
 
 ### C. Grammar, agreement & spelling
 
@@ -704,6 +436,11 @@ _Nothing in this category._
     - Source: `I don’t use multiple profiles or instances. Why is this happening?`
     - Suggest: `安裝多種 { -brand-short-name }`
     - en-US: 'I don't use multiple profiles or instances.' The locale adds a literal 'Firefox', which will show in Nightly, Developer Edition and other branded builds. The sibling question uses { -brand-short-name }.
+- `ip-protection-not-opted-in-inclusions-enabled` — `browser/browser/ipProtection.ftl` — "免費" ("free") appears twice in the same sentence.
+    - Current: `每月免費獲得 { $maxUsage } GB 的免費流量`
+    - Source: `heading: Ready to try it? message: Get { $maxUsage } GB free each month and choose which sites use VPN.`
+    - Suggest: `每月免費獲得 { $maxUsage } GB 流量`
+    - Saying "free" twice ("get free … of free data") is redundant and reads awkwardly. The source says "free" only once.
 - `newtab-privacy-message-info-10` — `browser/browser/newtab/newtab.ftl` — A preposition is missing before 任何網站
     - Current: `即可任何網站都使用`
     - Source: `Save passwords in { -brand-short-name } to use strong, unique logins everywhere.`
@@ -1078,23 +815,23 @@ _Nothing in this category._
 - `ImageMapCircleNegativeRadius` — `dom/chrome/layout/layout_errors.properties` — `ImageMapCircleNegativeRadius` uses straight double quotes
     - Current: `<area shape="circle"> 標籤中的 "coords" 屬性不能有負的半徑。`
     - Source: `The “coords” attribute of the <area shape="circle"> tag has a negative radius.`
-    - The locale's quote convention is `corner` (890 occurrences).
+    - The locale's quote convention is `corner` (893 occurrences).
 - `ImageMapCircleWrongNumberOfCoords` — `dom/chrome/layout/layout_errors.properties` — `ImageMapCircleWrongNumberOfCoords` uses straight double quotes
     - Current: `<area shape="circle"> 標籤中的 "coords" 屬性並不是 "center-x,center-y,radius" 的格式。`
     - Source: `The “coords” attribute of the <area shape="circle"> tag is not in the “center-x,center-y,radius” format.`
-    - The locale's quote convention is `corner` (890 occurrences).
+    - The locale's quote convention is `corner` (893 occurrences).
 - `ImageMapPolyOddNumberOfCoords` — `dom/chrome/layout/layout_errors.properties` — `ImageMapPolyOddNumberOfCoords` uses straight double quotes
     - Current: `<area shape="poly"> 標籤中的 "coords" 屬性少了最後的 y 座標 (正確格式是 "x1,y1,x2,y2,…")。`
     - Source: `The “coords” attribute of the <area shape="poly"> tag is missing the last “y” coordinate (the correct format is “x1,y1,x2,y2 …”).`
-    - The locale's quote convention is `corner` (890 occurrences).
+    - The locale's quote convention is `corner` (893 occurrences).
 - `ImageMapPolyWrongNumberOfCoords` — `dom/chrome/layout/layout_errors.properties` — `ImageMapPolyWrongNumberOfCoords` uses straight double quotes
     - Current: `<area shape="poly"> 標籤中的 "coords" 屬性並不是 "x1,y1,x2,y2,…" 的格式。`
     - Source: `The “coords” attribute of the <area shape="poly"> tag is not in the “x1,y1,x2,y2 …” format.`
-    - The locale's quote convention is `corner` (890 occurrences).
+    - The locale's quote convention is `corner` (893 occurrences).
 - `ImageMapRectBoundsError` — `dom/chrome/layout/layout_errors.properties` — `ImageMapRectBoundsError` uses straight double quotes
     - Current: `<area shape="rect">的"coords" 屬性不是 "left,top,right,bottom" 格式。`
     - Source: `The “coords” attribute of the <area shape="rect"> tag is not in the “left,top,right,bottom” format.`
-    - The locale's quote convention is `corner` (890 occurrences).
+    - The locale's quote convention is `corner` (893 occurrences).
 - `BlockMixedDisplayContent` — `dom/chrome/security/security.properties` — 'mixed content' is written 混和 here but 混合 elsewhere in the same file.
     - Current: `已封鎖載入混和的顯示內容`
     - Source: `Blocked loading mixed display content “%1$S”`

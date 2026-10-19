@@ -1,20 +1,20 @@
 {
  "_meta": {
   "locale": "uk",
-  "prose_chunks": 15832,
-  "strings": 15193
+  "prose_chunks": 15913,
+  "strings": 15270
  },
  "apostrophe": {
   "straight": 717,
-  "typographic": 126
+  "typographic": 127
  },
  "dash": {
-  "em": 10,
+  "em": 12,
   "en": 99
  },
  "ellipsis": {
   "ascii": 4,
-  "char": 381
+  "char": 383
  },
  "fullwidth": {
   "punctuation": 0

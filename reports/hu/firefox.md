@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
-| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
+| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 71 of 16,404 |
+| **Strings reviewed this run** | 88 of 16,477 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -20,30 +20,34 @@ Also for hu: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ### 🆕 New findings (4)
 
-- `content-analysis-panel-text-styled2` — `browser/browser/browser.ftl` — Missing space after the bold agent name and stray spaces inside the link text.
-    - Current: `<b>{ $agentName }</b>segítségével szabályozza az érzékeny adatok megosztását. <a data-l10n-name="info"> Tudjon meg többet </a>`
-    - Source: `Your organization uses <b>{ $agentName }</b> to control how sensitive data may be shared. <a data-l10n-name="info">Learn more</a>`
-    - Suggest: `<b>{ $agentName }</b> segítségével szabályozza az érzékeny adatok megosztását. <a data-l10n-name="info">Tudjon meg többet</a>`
-    - The en-US has a space between the agent name and the following word, and no padding spaces inside the link; the Hungarian runs the words together and adds spaces inside the anchor text.
-- `default-browser-guidance-notification-auto-trigger-title` — `browser/browser/defaultBrowserNotification.ftl` — "Saját hivatkozások" is a wrong rendering of "your links" and the brand suffix lacks a hyphen.
-    - Current: `Saját hivatkozások megnyitása a { -brand-short-name }szal`
-    - Source: `Open your links with { -brand-short-name }`
-    - Suggest: `Hivatkozásai megnyitása a { -brand-short-name }-szal`
-    - In Hungarian the suffix attached to a proper/brand name placeable is joined with a hyphen (…-szal); also "Saját hivatkozások" reads as a list label rather than "your links".
-- `default-browser-guidance-notification-auto-trigger-body` — `browser/browser/defaultBrowserNotification.ftl` — Missing hyphen before the suffix attached to the brand name placeable.
-    - Current: `{ -brand-short-name }ot`
-    - Source: `Choose { -brand-short-name } as your default browser in Settings.`
-    - Suggest: `{ -brand-short-name }-ot`
-    - Hungarian orthography requires a hyphen when a case suffix is attached to a brand/proper name ending in a non-Hungarian form, as done elsewhere in the tree.
-- `policy-DisablePasswordReveal2` — `browser/browser/policies/policies-descriptions.ftl` — The "or password fields" part of the source is dropped from the translation.
-    - Current: `Ne engedje, hogy a mentett bejelentkezésekben szereplő jelszavak megjelenítésre kerüljenek.`
-    - Source: `Do not allow passwords to be revealed in saved logins or password fields.`
-    - Suggest: `Ne engedje, hogy a mentett bejelentkezésekben vagy jelszómezőkben lévő jelszavak megjelenítésre kerüljenek.`
-    - The en-US says "in saved logins or password fields"; the Hungarian omits the password fields, narrowing the policy's described scope.
+- `bookmark-properties-title-edit-folder` — `browser/browser/editBookmarkOverlay.ftl` — "Edit bookmark folder" is translated as "Add bookmark folder".
+    - Current: `hozzáadása`
+    - Source: `Edit bookmark folder`
+    - Suggest: `szerkesztése`
+    - The en-US source means edit, but "hozzáadása" means "adding". The string looks copied from bookmark-properties-title-add-folder, so the add and edit dialogs now have the same title.
+- `genai-settings-chat-scout-links` — `browser/browser/genai.ftl` — The wrong definite article is used before "Yahoo".
+    - Current: `elfogadja az Yahoo`
+    - Source: `By choosing Yahoo Scout, you agree to the Yahoo <a data-l10n-name="link1">Terms of Service</a> and <a data-l10n-name="link2">Privacy Policy</a>.`
+    - Suggest: `elfogadja a Yahoo`
+    - "Yahoo" is pronounced with an initial consonant [j], so Hungarian needs the article "a", not "az". The same string already uses "A Yahoo Scout" correctly at the start.
+- `restore-session-startup-suggestion-button` — `browser/browser/newtab/asrouter.ftl` — Missing comma before the subordinate clause introduced by "hogyan".
+    - Current: `Mutassa meg hogyan`
+    - Source: `Show me how`
+    - Suggest: `Mutassa meg, hogyan`
+    - Hungarian punctuation rules require a comma between the main clause and the subordinate clause introduced by the interrogative "hogyan".
+- `appmenu-search-history` — `browser/browser/appmenu.ftl` — "Keresés előzményei" means "history of searches" instead of the action "search the history".
+    - Current: `Keresés előzményei`
+    - Source: `label: Search History`
+    - Suggest: `Előzmények keresése`
+    - The developer comment says this item lets you search through the browser's history. The Hungarian genitive structure instead names a history of searches, which is a different feature.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `appmenu-search-history` — `browser/browser/appmenu.ftl` — “Search history” (verb + object) is rendered as the noun “search history”.
+    - Current: `Keresés előzményei`
+    - Source: `label: Search History`
+    - Suggest: `Előzmények keresése`
+    - The developer comment says “This allows to search through the browser's history”, i.e. Search is a verb here.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -53,12 +57,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `newtab-recent-searches-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Recent searches options" mistranslated as "recent search options" (options of the widget, not options for searching).
-    - Current: `aria-label: Legutóbbi keresési lehetőségek`
-    - Suggest: `aria-label: Legutóbbi keresések beállításai`
-    - The source names the options/menu of the "Recent searches" widget; the Hungarian reads as "recent search possibilities", changing the meaning.
+_Nothing retired._
 
 ---
 
@@ -66,9 +67,9 @@ _Nothing to re-read._
 
 | Check | Result |
 |---|---|
-| Files | 327 |
-| Strings | 16,404 |
-| Missing strings | 0 |
+| Files | 328 |
+| Strings | 16,477 |
+| Missing strings | 43 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -85,7 +86,22 @@ _Nothing to re-read._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**43 strings** are not translated yet, concentrated in:
+
+- `browser/browser/browser.ftl` — 8
+- `browser/browser/ipProtection.ftl` — 8
+- `browser/browser/newtab/newtab.ftl` — 8
+- `browser/browser/sanitize.ftl` — 3
+- `toolkit/toolkit/about/aboutGlean.ftl` — 2
+- `browser/browser/sidebar.ftl` — 2
+- `browser/browser/preferences/permissions.ftl` — 2
+- `browser/browser/preferences/preferences.ftl` — 2
+- `toolkit/toolkit/global/videocontrols.ftl` — 1
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 1
+- `browser/browser/confirmationHints.ftl` — 1
+- `browser/browser/genai.ftl` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -93,9 +109,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `polish-double` 800, `straight-double` 33, `german-double` 2, `curly-single` 1 | **polish-double** |
+| quotes | `polish-double` 805, `straight-double` 33, `german-double` 2, `curly-single` 1 | **polish-double** |
 | apostrophe | `typographic` 1, `straight` 1 | _mixed_ |
-| ellipsis | `char` 397, `ascii` 4 | **char** |
+| ellipsis | `char` 398, `ascii` 4 | **char** |
 | dash | `em` 2, `en` 130 | **en** |
 | nbsp | `total` 6, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
@@ -107,7 +123,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (257)
+## 3. Open findings (260)
 
 > **Reads as a deliberate edit (5).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -142,8 +158,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 26 |
-| 2 | Wrong content (says something other than the English) | 120 |
-| 3 | Degraded language (grammar, spelling, terminology) | 81 |
+| 2 | Wrong content (says something other than the English) | 121 |
+| 3 | Degraded language (grammar, spelling, terminology) | 83 |
 | 4 | Cosmetic (typography, spacing) | 26 |
 
 ### A. Functional, markup, variables & plurals
@@ -177,11 +193,6 @@ _Also listed under their own category below._
     - Current: `D`
     - Source: `buttonaccesskey: D buttonlabel: Download label: Update available secondarybuttonaccesskey: m secondarybuttonlabel: Dismiss`
     - The label is “Letöltés”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `appmenu-search-history` — `browser/browser/appmenu.ftl` — “Search history” (verb + object) is rendered as the noun “search history”.
-    - Current: `Keresés előzményei`
-    - Source: `label: Search history`
-    - Suggest: `Előzmények keresése`
-    - The developer comment says “This allows to search through the browser's history”, i.e. Search is a verb here.
 - `fxa-menu-device-recent-tabs-panel` — `browser/browser/appmenu.ftl` — The synced-device panel title “Recent tabs” is translated as “Recent tags”.
     - Current: `Legújabb címkék`
     - Source: `title: Recent tabs`
@@ -447,7 +458,12 @@ _Also listed under their own category below._
     - Source: `Cookie “%1$S” has been rejected for invalid path.`
     - Suggest: `A(z) „%1$S” süti elutasítva az érvénytelen útvonal miatt.`
     - en-US: “Cookie “%1$S” has been rejected for invalid path.” As translated it is identical to CookieRejectedInvalidPrefix, so developers get the wrong diagnosis.
-- _…and 31 more; see `state/` for the full list._
+- `completeStatus` — `toolkit/chrome/global/aboutStudies.properties` — The study status "Complete" was translated as "Full/entire".
+    - Current: `completeStatus = Teljes`
+    - Source: `Complete`
+    - Suggest: `completeStatus = Befejezett`
+    - The developer comment says this is displayed for a study that is already complete; the list heading in the same file uses "Befejezett tanulmányok". "Teljes" means "whole/full".
+- _…and 30 more; see `state/` for the full list._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -466,6 +482,16 @@ _Also listed under their own category below._
     - Source: `{ -brand-short-name } needs to finish an update. Restart to keep things secure and smooth.`
     - Suggest: `A { -brand-short-name }nak be kell fejeznie a frissítést. Indítsa újra, hogy a dolgok biztonságosak és zökkenőmentesek legyenek.`
     - The en-US asks the user to restart ("Restart to keep things secure"); the Hungarian asserts that the browser finishes the update and restarts by itself, removing the call to action.
+- `appmenu-search-history` — `browser/browser/appmenu.ftl` — "Keresés előzményei" means "history of searches" instead of the action "search the history".
+    - Current: `Keresés előzményei`
+    - Source: `label: Search History`
+    - Suggest: `Előzmények keresése`
+    - The developer comment says this item lets you search through the browser's history. The Hungarian genitive structure instead names a history of searches, which is a different feature.
+- `bookmark-properties-title-edit-folder` — `browser/browser/editBookmarkOverlay.ftl` — "Edit bookmark folder" is translated as "Add bookmark folder".
+    - Current: `hozzáadása`
+    - Source: `Edit bookmark folder`
+    - Suggest: `szerkesztése`
+    - The en-US source means edit, but "hozzáadása" means "adding". The string looks copied from bookmark-properties-title-add-folder, so the add and edit dialogs now have the same title.
 - `ip-protection-site-rules-button` — `browser/browser/ipProtection.ftl` — The description reverses who needs the extra privacy, asserting that the sites must provide privacy rather than that the user wants extra privacy on them.
     - Current: `Állítson be szabályokat azokhoz a webhelyekhez, amelyeknek fokozott adatvédelmet kell biztosítaniuk, vagy ki kell kapcsolni a VPN-t.`
     - Source: `description: Set rules for sites that need extra privacy or VPN turned off. label: Manage website rules`
@@ -649,11 +675,21 @@ _Also listed under their own category below._
     - Source: `By choosing Anthropic Claude, you agree to the Anthropic <a data-l10n-name="link1">Consumer Terms of Service</a>, <a data-l10n-name="link2">Usage Policy</a>, and <a data-l10n-name="link3">Privacy Policy</a>.`
     - Suggest: `és az <a data-l10n-name="link3">Adatvédelmi irányelveit</a>`
     - The other two coordinated objects are accusative (“feltételeit”, “irányelveket”); the third one is left in the nominative.
+- `genai-settings-chat-scout-links` — `browser/browser/genai.ftl` — The wrong definite article is used before "Yahoo".
+    - Current: `elfogadja az Yahoo`
+    - Source: `By choosing Yahoo Scout, you agree to the Yahoo <a data-l10n-name="link1">Terms of Service</a> and <a data-l10n-name="link2">Privacy Policy</a>.`
+    - Suggest: `elfogadja a Yahoo`
+    - "Yahoo" is pronounced with an initial consonant [j], so Hungarian needs the article "a", not "az". The same string already uses "A Yahoo Scout" correctly at the start.
 - `ipprotection-feature-introduction-link-text-privacy-1` — `browser/browser/ipProtection.ftl` — The definite article is duplicated before the link text.
     - Current: `A <a data-l10n-name="learn-more-vpn">A { -brand-product-name } beépített VPN-je</a>`
     - Source: `<a data-l10n-name="learn-more-vpn">{ -brand-product-name }’s built-in VPN</a> helps protect your browsing. Choose from several locations to keep where you browse more private.`
     - Suggest: `<a data-l10n-name="learn-more-vpn">A { -brand-product-name } beépített VPN-je</a>`
     - The article appears both outside and inside the link, producing “A A Firefox beépített VPN-je”; the -2 variant of the same string has it only once.
+- `restore-session-startup-suggestion-button` — `browser/browser/newtab/asrouter.ftl` — Missing comma before the subordinate clause introduced by "hogyan".
+    - Current: `Mutassa meg hogyan`
+    - Source: `Show me how`
+    - Suggest: `Mutassa meg, hogyan`
+    - Hungarian punctuation rules require a comma between the main clause and the subordinate clause introduced by the interrogative "hogyan".
 - `newtab-wallpaper-remove-image-numbered` — `browser/browser/newtab/newtab.ftl` — Missing ordinal period after the number in the tooltip.
     - Current: `title: { $number } kép eltávolítása`
     - Source: `aria-label: Remove image { $number } title: Remove image { $number }`
@@ -1149,7 +1185,7 @@ _Also listed under their own category below._
 - `Strings.InfoText` — `browser/updater/updater.ini` — `Strings.InfoText` uses three dots where this locale uses …
     - Current: `A %MOZ_APP_DISPLAYNAME% telepíti a frissítéseket, és pár pillanat múlva elindul...`
     - Source: `%MOZ_APP_DISPLAYNAME% is installing your updates and will start in a few moments…`
-    - The tree uses … 397 times against 4 ASCII runs.
+    - The tree uses … 398 times against 4 ASCII runs.
 - `heading` — `dom/chrome/accessibility/AccessFu.properties` — “heading” is translated as “fejléc”, the same word used for “header”, collapsing two distinct roles.
     - Current: `heading = fejléc`
     - Source: `heading`
@@ -1158,31 +1194,31 @@ _Also listed under their own category below._
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `A billentyűesemény nem érhető el GTK2 alatt: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (800 occurrences).
+    - The locale's quote convention is `polish-double` (805 occurrences).
 - `WinConflict2` — `dom/chrome/dom/dom.properties` — `WinConflict2` uses straight double quotes
     - Current: `A billentyűesemény nem érhető el egyes billentyűzetkiosztások esetén: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on some keyboard layouts: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (800 occurrences).
+    - The locale's quote convention is `polish-double` (805 occurrences).
 - `TooLargeDashedRadius` — `dom/chrome/layout/css.properties` — `TooLargeDashedRadius` uses straight double quotes
     - Current: `A szegélysugár túl nagy a "dashed" stílushoz (a korlát 100000px). Megjelenítés tömörként.`
     - Source: `Border radius is too large for ‘dashed’ style (the limit is 100000px). Rendering as solid.`
-    - The locale's quote convention is `polish-double` (800 occurrences).
+    - The locale's quote convention is `polish-double` (805 occurrences).
 - `TooLargeDottedRadius` — `dom/chrome/layout/css.properties` — `TooLargeDottedRadius` uses straight double quotes
     - Current: `A szegélysugár túl nagy a "dotted" stílushoz (a korlát 100000px). Megjelenítés tömörként.`
     - Source: `Border radius is too large for ‘dotted’ style (the limit is 100000px). Rendering as solid.`
-    - The locale's quote convention is `polish-double` (800 occurrences).
+    - The locale's quote convention is `polish-double` (805 occurrences).
 - `crashreporter-button-details` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-button-details` uses three dots where this locale uses …
     - Current: `Részletek...`
     - Source: `Details…`
-    - The tree uses … 397 times against 4 ASCII runs.
+    - The tree uses … 398 times against 4 ASCII runs.
 - `crashreporter-resubmit-status` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-resubmit-status` uses three dots where this locale uses …
     - Current: `A korábban sikertelenül elküldött bejelentések újraküldése...`
     - Source: `Resending reports that previously failed to send…`
-    - The tree uses … 397 times against 4 ASCII runs.
+    - The tree uses … 398 times against 4 ASCII runs.
 - `crashreporter-submit-in-progress` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-submit-in-progress` uses three dots where this locale uses …
     - Current: `Bejelentés elküldése...`
     - Source: `Submitting your report…`
-    - The tree uses … 397 times against 4 ASCII runs.
+    - The tree uses … 398 times against 4 ASCII runs.
 - `about-webrtc-consecutive-frames` — `toolkit/toolkit/about/aboutWebrtc.ftl` — Video "frames" rendered as "keretek" (borders) instead of "képkockák" used elsewhere in the file.
     - Current: `Egymást követő keretek`
     - Source: `Consecutive Frames`
@@ -1219,8 +1255,9 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (5)
+### Fixed to date (6)
 
+- `appmenu-search-history` — `browser/browser/appmenu.ftl` — fixed 2026-10-19
 - `pdfjs-editor-undo-bar-message-multiple` — `toolkit/toolkit/pdfviewer/viewer.ftl` — fixed 2026-09-14
 - `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — fixed 2026-09-01
 - `onboarding-new-user-survey-legal-link-label` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-09-01

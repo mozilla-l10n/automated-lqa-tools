@@ -1,15 +1,15 @@
 # Firefox (desktop + shared toolkit/dom strings) — l10n QA
 
-- **Generated:** 2026-10-16
+- **Generated:** 2026-10-19
 - **Locales tracked:** 29 (29 with recorded state)
-- **Findings:** 8,708 raised, 2,115 fixed (24%), 5,954 open
-- **Closed by a person:** 19 dismissed, 15 suppressed by rule
+- **Findings:** 8,989 raised, 2,128 fixed (23%), 6,221 open
+- **Closed by a person:** 19 dismissed, 16 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
 ## Read these first
 
-### Reads as a deliberate edit (25)
+### Reads as a deliberate edit (31)
 
 The translation makes the product assert something the en-US never said. Nothing here says the change was intended — that cannot be read off the text, which is exactly the problem, because a user cannot read it off either.
 
@@ -21,6 +21,10 @@ The translation makes the product assert something the en-US never said. Nothing
     - "Nice work organizing your tabs" is turned into a factual claim that the user's tabs are now perfectly organized.
     - Current: `Ihre Tabs sind jetzt bestens organisiert`
     - Suggest: `Gut gemacht beim Organisieren Ihrer Tabs`
+- **`de`** `permissions-allow-app-links` — `browser/browser/preferences/preferences.ftl`
+    - The German drops "ask", so it says sites may open app links rather than ask to open them.
+    - Current: `Websites erlauben, App-Links zu öffnen.`
+    - Suggest: `Websites erlauben, das Öffnen von App-Links anzufragen.`
 - **`de`** `pdf-features-notification-message` — `toolkit/toolkit/about/pdfFeaturesNotification.ftl`
     - "Split" (PDFs aufteilen/teilen in Einzeldokumente) is rendered as "PDFs teilen", which in German primarily means "share".
     - Current: `PDFs teilen, zusammenführen und mehr.`
@@ -45,6 +49,10 @@ The translation makes the product assert something the en-US never said. Nothing
     - "delete stored payment method information" was rendered as "akar használni" (wants to use) instead of "törölni akarja" (wants to delete).
     - Current: `A { -brand-short-name } tárolt fizetésimód-információkat akar használni.`
     - Suggest: `A { -brand-short-name } törölni akarja a tárolt fizetésimód-információkat.`
+- **`id`** `site-data-clear-all-prompt-text` — `browser/browser/preferences/siteDataSettings.ftl`
+    - "This may sign you out" is rendered as a certainty ("akan" = will).
+    - Current: `Ini akan mengeluarkan Anda dari situs web`
+    - Suggest: `Ini mungkin akan mengeluarkan Anda dari situs web`
 - **`it`** `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl`
     - "help keep your browsing private" rendered as an absolute "impediscono" (prevent), dropping the hedge.
     - Current: `Le finestre anonime impediscono agli altri utenti di questo dispositivo di vedere la tua attività di navigazione.`
@@ -69,6 +77,10 @@ The translation makes the product assert something the en-US never said. Nothing
     - The source's hedged "may see" is rendered as a definite "can see", asserting that traffic is being read.
     - Current: `使用中のアプリまたはサービスは暗号化された通信を見ることができます。`
     - Suggest: `アプリまたはサービスが暗号化された通信を閲覧できる状態になっている可能性があります。`
+- **`ja`** `site-data-clear-all-prompt-text` — `browser/browser/preferences/siteDataSettings.ftl`
+    - The hedge "may" is dropped, so the Japanese says clearing data will definitely sign the user out and delete offline content.
+    - Current: `これにより、ウェブサイトからログアウトされ、オフラインのウェブコンテンツが削除されます。`
+    - Suggest: `これにより、ウェブサイトからログアウトされたり、オフラインのウェブコンテンツが削除されたりする場合があります。`
 - **`ja`** `about-sync-log-page-header` — `toolkit/services/aboutSyncLog.ftl`
     - "Diagnostic logs written by sync." is translated as "diagnoses the logs written by sync", turning a noun phrase into an action.
     - Current: `description: 同期機能により書き込まれたログを診断します。`
@@ -109,16 +121,25 @@ The translation makes the product assert something the en-US never said. Nothing
     - "Highlight" is rendered as "işaretleyin" (mark) and "work with PDFs" as "düzenleyin" (edit).
     - Current: `PDF’leri işaretleyin, imzalayın ve düzenleyin`
     - Suggest: `PDF’leri vurgulayın, imzalayın ve PDF’lerle çalışın`
-- **`zh-CN`** `restart-required-why-now-answer` — `browser/browser/aboutRestartRequired.ftl`
-    - "This can happen when…" (possible cause) is rendered as "这是由于…" (this is because), asserting a definite cause.
-    - Current: `这是由于其他 { -brand-short-name } 配置文件或实例进行了更新`
-    - Suggest: `出现这种情况，可能是由于其他 { -brand-short-name } 配置文件或实例进行了更新`
+- **`vi`** `TimeoutSyncXHRWarning` — `dom/chrome/dom/dom.properties`
+    - "No longer" was added where the source just says "not supported".
+    - Current: `không còn được hỗ trợ`
+    - Suggest: `không được hỗ trợ`
+- **`vi`** `pageInfo_Privacy_Encrypted2` — `security/manager/chrome/pippki/pippki.properties`
+    - "It is unlikely that anyone read this page" was rendered as "no one could read this page", which turns a likelihood into a guarantee.
+    - Current: `Do đó, không ai có thể đọc trang này khi nó di chuyển trên mạng.`
+    - Suggest: `Do đó, khó có khả năng ai đó đã đọc được trang này khi nó di chuyển trên mạng.`
+- **`vi`** `reset-primary-password-text` — `security/manager/security/pippki/pippki.ftl`
+    - The translation adds "form data" to the list of things deleted when resetting the Primary Password, which the source never mentions.
+    - Current: `toàn bộ các mật khẩu web, email, dữ liệu biểu mẫu, chứng chỉ và khóa cá nhân đã lưu`
+    - Suggest: `toàn bộ các mật khẩu web và email, chứng chỉ cá nhân và khóa riêng đã lưu`
+- _…and 1 more, in the per-locale reports linked below._
 
-### Broken output — impact 1 (1755)
+### Broken output — impact 1 (1754)
 
 The value does not render as intended: a blank string, broken markup, a variable the source never passes.
 
-`vi` 214 · `sv-SE` 212 · `ar` 200 · `pt-PT` 184 · `sk` 152 · `el` 143 · `zh-TW` 141 · `uk` 112 · `fi` 108 · `id` 66 · `es-AR` 48 · `ru` 44 · `cs` 41 · `hu` 26 · `fy-NL` 12 · `pt-BR` 11 · `nl` 10 · `pl` 10 · `ja` 8 · `en-GB` 6 · `zh-CN` 4 · `tr` 3
+`vi` 214 · `sv-SE` 212 · `ar` 200 · `pt-PT` 184 · `sk` 152 · `el` 143 · `zh-TW` 141 · `uk` 112 · `fi` 108 · `id` 66 · `es-AR` 48 · `ru` 44 · `cs` 41 · `hu` 26 · `fy-NL` 12 · `pt-BR` 11 · `nl` 10 · `pl` 10 · `ja` 8 · `en-GB` 5 · `zh-CN` 4 · `tr` 3
 
 - **`ar`** `about-logins-import-report-row-description-modified2` — `browser/browser/aboutLogins.ftl`
     - Gender disagreement: feminine verb and adjective with the masculine noun “الولوج”.
@@ -146,10 +167,10 @@ The value does not render as intended: a blank string, broken markup, a variable
     - Access key changed from uppercase "T" to lowercase "t", which no longer matches the source's access key.
     - Current: `accesskey: t`
     - Suggest: `accesskey: T`
-- **`en-GB`** `main-context-menu-inspect-a11y-properties2` — `browser/browser/browserContext.ftl`
-    - Access key changed from "y" to "I" although the label is identical to the source.
-    - Current: `accesskey: I`
-    - Suggest: `accesskey: y`
+- **`en-GB`** `policy-AllowFileSelectionDialogs` — `browser/browser/policies/policies-descriptions.ftl`
+    - UI term "dialog" spelled "dialogues" here, against the tree's dominant "dialog".
+    - Current: `Allow file selection dialogues.`
+    - Suggest: `Allow file selection dialogs.`
 - **`es-AR`** `mathmltable` — `dom/chrome/accessibility/AccessFu.properties`
     - “math table” rendered as the truncated non-word “tabla mat”.
     - Current: `mathmltable = tabla mat`
@@ -174,47 +195,45 @@ The value does not render as intended: a blank string, broken markup, a variable
     - The singular branches say “passwords” instead of “password”.
     - Current: `[1] Ez eltávolítja a { -brand-short-name }ba mentett jelszavakat az összes szinkronizált eszközéről.`
     - Suggest: `[1] Ez eltávolítja a { -brand-short-name }ba mentett jelszót az összes szinkronizált eszközéről.`
-- _…and 1740 more, in the per-locale reports linked below._
+- _…and 1739 more, in the per-locale reports linked below._
 
-### Wrong content — impact 2 (2194)
+### Wrong content — impact 2 (2320)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/firefox.md`.
 
 | Locale | Last run | Mode | Commit | Strings | Missing | Open | Impact 1–2 | Fixed | Dismissed | Suppressed |
 |---|---|---|---|---|---|---|---|---|---|---|
-| [ar](ar/firefox.md) | 2026-10-16 | incremental | `db2cfca9` | 13,329 | 3,187 | **345** | 314 | 0 | 0 | 0 |
-| [cs](cs/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,363 | 41 | **246** | 161 | 4 | 0 | 0 |
-| [de](de/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,626 | 0 | **37** | 20 | 42 | 0 | 0 |
-| [el](el/firefox.md) | 2026-10-16 | incremental | `db2cfca9` | 16,408 | 108 | **210** | 208 | 0 | 0 | 0 |
-| [en-CA](en-CA/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,354 | 50 | **0** | 0 | 15 | 1 | 0 |
-| [en-GB](en-GB/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,404 | 0 | **19** | 13 | 13 | 0 | 12 |
-| [es-AR](es-AR/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,365 | 39 | **278** | 156 | 143 | 0 | 0 |
-| [es-ES](es-ES/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 15,182 | 1,222 | **36** | 20 | 113 | 0 | 0 |
-| [es-MX](es-MX/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 15,838 | 566 | **45** | 15 | 205 | 0 | 0 |
-| [fi](fi/firefox.md) | 2026-10-16 | incremental | `db2cfca9` | 15,958 | 558 | **154** | 145 | 0 | 0 | 0 |
-| [fr](fr/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,626 | 0 | **32** | 14 | 69 | 1 | 0 |
-| [fy-NL](fy-NL/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,358 | 46 | **465** | 132 | 274 | 4 | 0 |
-| [hu](hu/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,404 | 0 | **257** | 146 | 5 | 0 | 0 |
-| [id](id/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 13,770 | 2,634 | **279** | 216 | 1 | 0 | 0 |
-| [it](it/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,668 | 0 | **20** | 6 | 56 | 6 | 2 |
-| [ja](ja/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,325 | 98 | **135** | 68 | 273 | 0 | 0 |
-| [nl](nl/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,358 | 46 | **343** | 127 | 127 | 0 | 0 |
-| [pl](pl/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,358 | 46 | **83** | 57 | 168 | 2 | 0 |
-| [pt-BR](pt-BR/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,378 | 26 | **533** | 194 | 138 | 5 | 0 |
-| [pt-PT](pt-PT/firefox.md) | 2026-10-16 | incremental | `db2cfca9` | 16,456 | 61 | **306** | 306 | 0 | 0 | 0 |
-| [ru](ru/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,404 | 0 | **579** | 307 | 182 | 0 | 0 |
-| [sk](sk/firefox.md) | 2026-10-16 | incremental | `db2cfca9` | 16,456 | 61 | **219** | 219 | 0 | 0 | 0 |
-| [sl](sl/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 15,715 | 689 | **50** | 15 | 44 | 0 | 1 |
-| [sv-SE](sv-SE/firefox.md) | 2026-10-16 | incremental | `db2cfca9` | 16,456 | 61 | **326** | 307 | 0 | 0 | 0 |
-| [tr](tr/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,395 | 9 | **161** | 60 | 193 | 0 | 0 |
-| [uk](uk/firefox.md) | 2026-10-16 | incremental | `db2cfca9` | 15,193 | 1,323 | **196** | 193 | 0 | 0 | 0 |
-| [vi](vi/firefox.md) | 2026-10-16 | baseline | `db2cfca9` | 16,144 | 373 | **291** | 291 | 0 | 0 | 0 |
-| [zh-CN](zh-CN/firefox.md) | 2026-10-12 | incremental | `9b5f3e8c` | 16,096 | 308 | **77** | 25 | 50 | 0 | 0 |
-| [zh-TW](zh-TW/firefox.md) | 2026-10-16 | baseline | `db2cfca9` | 16,456 | 61 | **232** | 214 | 0 | 0 | 0 |
+| [ar](ar/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 13,351 | 3,169 | **345** | 314 | 0 | 0 | 0 |
+| [cs](cs/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 16,457 | 63 | **249** | 163 | 4 | 0 | 0 |
+| [de](de/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 16,742 | 0 | **40** | 21 | 42 | 0 | 0 |
+| [el](el/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 16,520 | 0 | **211** | 208 | 0 | 0 | 0 |
+| [en-CA](en-CA/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 16,542 | 0 | **0** | 0 | 15 | 1 | 0 |
+| [en-GB](en-GB/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 16,520 | 0 | **19** | 12 | 14 | 0 | 12 |
+| [es-AR](es-AR/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 16,490 | 30 | **280** | 157 | 143 | 0 | 0 |
+| [es-ES](es-ES/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 15,224 | 1,296 | **40** | 23 | 113 | 0 | 0 |
+| [es-MX](es-MX/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 15,868 | 652 | **47** | 15 | 205 | 0 | 0 |
+| [fi](fi/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 16,036 | 484 | **155** | 145 | 0 | 0 | 0 |
+| [fr](fr/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 16,742 | 0 | **33** | 15 | 72 | 1 | 0 |
+| [fy-NL](fy-NL/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 16,477 | 43 | **470** | 134 | 275 | 4 | 0 |
+| [hu](hu/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 16,477 | 43 | **260** | 147 | 6 | 0 | 0 |
+| [id](id/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 13,799 | 2,721 | **282** | 218 | 2 | 0 | 0 |
+| [it](it/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 16,768 | 0 | **18** | 6 | 59 | 6 | 2 |
+| [ja](ja/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 16,351 | 184 | **136** | 69 | 273 | 0 | 0 |
+| [nl](nl/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 16,500 | 20 | **345** | 127 | 127 | 0 | 0 |
+| [pl](pl/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 16,477 | 43 | **84** | 58 | 168 | 2 | 0 |
+| [pt-BR](pt-BR/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 16,477 | 43 | **538** | 193 | 141 | 5 | 0 |
+| [pt-PT](pt-PT/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 16,520 | 0 | **308** | 306 | 0 | 0 | 0 |
+| [ru](ru/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 16,520 | 0 | **589** | 309 | 182 | 0 | 0 |
+| [sk](sk/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 16,520 | 0 | **220** | 220 | 0 | 0 | 0 |
+| [sl](sl/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 15,838 | 682 | **50** | 15 | 44 | 0 | 2 |
+| [sv-SE](sv-SE/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 16,520 | 0 | **329** | 308 | 0 | 0 | 0 |
+| [tr](tr/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 16,520 | 0 | **163** | 61 | 193 | 0 | 0 |
+| [uk](uk/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 15,270 | 1,250 | **200** | 194 | 0 | 0 | 0 |
+| [vi](vi/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 16,165 | 355 | **497** | 394 | 0 | 0 | 0 |
+| [zh-CN](zh-CN/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 16,126 | 394 | **77** | 25 | 50 | 0 | 0 |
+| [zh-TW](zh-TW/firefox.md) | 2026-10-19 | incremental | `ba8eba58` | 16,520 | 0 | **236** | 217 | 0 | 0 | 0 |
 
 **Impact 1–2** is the queue that matters: broken output and wrong content. Impact 3–4 is language polish and typography.
-
-**Reviewed only in part:** `vi`. The reviewer stopped early; the strings it never reached are unreviewed. Each locale's own page says where it stopped.
 
 ## Adding a locale
 

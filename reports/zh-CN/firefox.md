@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
-| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
+| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 92 of 16,096 |
+| **Strings reviewed this run** | 47 of 16,126 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,51 +18,13 @@ Also for zh-CN: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (7)
+### 🆕 New findings (0)
 
-- `smartbar-mentions-list-tab-groups-label` — `browser/browser/aiWindow.ftl` — "Recent groups" refers to tab groups, not social groups.
-    - Current: `近期群组`
-    - Source: `Recent groups`
-    - Suggest: `最近的标签页组`
-    - The string id is smartbar-mentions-list-tab-groups-label, so "groups" means tab groups; 群组 means a group of people/chat group.
-- `about-private-browsing-spotlight-basics-no-sell-data` — `browser/browser/aboutPrivateBrowsing.ftl` — "参加网站" is not idiomatic Chinese for "participating sites".
-    - Current: `参加网站`
-    - Source: `{ -brand-short-name } automatically asks participating sites not to sell or share your personal data.`
-    - Suggest: `参与计划的网站`
-    - The developer comment explains participating sites are those honoring GPC signals; 参加网站 reads as a verb phrase "attend a site" and is ungrammatical as a noun phrase.
-- `appmenu-fxa-sign-in-promo-dismiss-button` — `browser/browser/appmenu.ftl` — The tooltip "Dismiss" is rendered as "知道了" (Got it) instead of a dismiss/close action.
-    - Current: `title: 知道了`
-    - Source: `aria-label: Dismiss sign-in promo title: Dismiss`
-    - Suggest: `title: 关闭`
-    - en-US title is "Dismiss", matching the aria-label; 知道了 means "Got it", a different label, and is inconsistent with the aria-label's 关闭.
-- `restart-required-fix-question` — `browser/browser/aboutRestartRequired.ftl` — The first sentence "This is really annoying!" is dropped from the translation.
-    - Current: `{ -brand-short-name } 是否会解决这个问题？`
-    - Source: `This is really annoying! Is { -brand-short-name } working on a fix?`
-    - Suggest: `这真的很烦人！{ -brand-short-name } 是否会解决这个问题？`
-    - The en-US question contains two sentences; the localized string only renders the second, losing the user-voice complaint.
-- `restart-required-why-now-answer` — `browser/browser/aboutRestartRequired.ftl` — "This can happen when…" (possible cause) is rendered as "这是由于…" (this is because), asserting a definite cause.
-    - Current: `这是由于其他 { -brand-short-name } 配置文件或实例进行了更新`
-    - Source: `This can happen when another { -brand-short-name } profile or instance updates, or when an update can’t wait until your next restart.`
-    - Suggest: `出现这种情况，可能是由于其他 { -brand-short-name } 配置文件或实例进行了更新`
-    - en-US hedges with "can happen when"; the Chinese states the cause as a fact.
-- `content-analysis-panel-title2` — `browser/browser/browser.ftl` — "Data loss prevention" rendered as "数据泄露防护" (data leak prevention) instead of 数据丢失防护.
-    - Current: `数据泄露防护`
-    - Source: `Data loss prevention`
-    - Suggest: `数据丢失防护`
-    - en-US "Data loss prevention" (DLP) refers to loss of data; 泄露 means leakage/disclosure, a different claim about what is being prevented.
-- `avatar-selector-icon-list` — `browser/browser/profiles.ftl` — "Choose an avatar" translated as 选择图标 (choose an icon) rather than 选择头像.
-    - Current: `选择图标`
-    - Source: `aria-label: Choose an avatar`
-    - Suggest: `选择头像`
-    - The developer comment says this is the list of profile avatars; 图标 means icon, not avatar, and is inconsistent with the avatar terminology.
+_No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `restart-required-heading2` — `browser/browser/aboutRestartRequired.ftl` — "a quick restart" is rendered as "立即重启" (restart immediately), changing the meaning from a brief restart to an immediate one.
-    - Current: `需要立即重启`
-    - Source: `Sorry, { -brand-short-name } needs a quick restart`
-    - Suggest: `需要快速重启一下`
-    - en-US says the browser needs a quick (short) restart, not that it must restart right now; 立即 asserts urgency the source does not state.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -72,16 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (2)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `user-context-add-container-panel-item` — `toolkit/toolkit/global/contextual-identity.ftl` — "container" rendered as "身份" instead of the established zh-CN term "身份标签"/"容器".
-    - Current: `添加新身份`
-    - Suggest: `添加新身份标签`
-    - en-US "Add new container" refers to the Container feature; "身份" alone means "identity" and loses the container concept, and is inconsistent with the feature's established zh-CN name.
-- `user-context-manage-containers-panel-item` — `toolkit/toolkit/global/contextual-identity.ftl` — "Manage containers" rendered as "管理身份", dropping the container terminology.
-    - Current: `管理身份`
-    - Suggest: `管理身份标签`
-    - en-US "containers" is the Container feature name; "身份" alone means "identity" and is inconsistent with the feature's established zh-CN rendering.
+_Nothing retired._
 
 ---
 
@@ -89,9 +44,9 @@ _Nothing to re-read._
 
 | Check | Result |
 |---|---|
-| Files | 325 |
-| Strings | 16,096 |
-| Missing strings | 308 |
+| Files | 326 |
+| Strings | 16,126 |
+| Missing strings | 394 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 2 |
 | Files with no en-US counterpart | 0 |
@@ -108,20 +63,20 @@ _Nothing to re-read._
 
 ### Completeness
 
-**308 strings** are not translated yet, concentrated in:
+**394 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 21
+- `browser/browser/ipProtection.ftl` — 50
+- `browser/browser/newtab/newtab.ftl` — 30
+- `browser/browser/newtab/onboarding.ftl` — 21
 - `toolkit/services/aboutSyncLog.ftl` — 20
 - `toolkit/toolkit/about/aboutPDF.ftl` — 19
-- `browser/browser/newtab/onboarding.ftl` — 18
 - `devtools/client/toolbox-options.ftl` — 18
 - `toolkit/toolkit/about/aboutNetworking.ftl` — 16
-- `browser/browser/ipProtection.ftl` — 16
 - `toolkit/toolkit/main-window/autocomplete.ftl` — 15
 - `browser/browser/autoTabGrouping.ftl` — 15
 - `dom/chrome/dom/dom.properties` — 15
+- `browser/browser/browser.ftl` — 14
 - `toolkit/toolkit/formautofill/formAutofill.ftl` — 13
-- `toolkit/toolkit/about/url-classifier.ftl` — 12
 
 **Files absent from the locale:**
 
@@ -136,12 +91,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 877, `straight-double` 45, `curly-single` 37 | **curly-double** |
+| quotes | `curly-double` 880, `straight-double` 45, `curly-single` 37 | **curly-double** |
 | apostrophe | `typographic` 42, `straight` 20 | _mixed_ |
-| ellipsis | `char` 376, `ascii` 12 | **char** |
+| ellipsis | `char` 377, `ascii` 12 | **char** |
 | dash | `em` 49, `en` 2 | **em** |
-| fullwidth | `punctuation` 8336 | **punctuation** |
-| register | `informal` 14, `formal` 1503 | **formal** |
+| fullwidth | `punctuation` 8346 | **punctuation** |
+| register | `informal` 14, `formal` 1506 | **formal** |
 
 ---
 

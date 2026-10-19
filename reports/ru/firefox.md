@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
-| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
+| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 71 of 16,404 |
+| **Strings reviewed this run** | 129 of 16,520 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,38 +18,58 @@ Also for ru: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (6)
+### 🆕 New findings (10)
 
-- `smartwindow-organize-tabs-button` — `browser/browser/autoTabGrouping.ftl` — Button label "Organize Tabs" rendered as an imperative addressed to the user instead of the noun-style action used for toolbar commands.
-    - Current: `label: Организуйте вкладки`
-    - Source: `label: Organize Tabs tooltiptext: Organize Tabs`
-    - Suggest: `label: Организовать вкладки`
-    - en-US "Organize Tabs" is a command label; Russian UI commands use the infinitive (compare "Создать все группы", "Разгруппировать вкладки" in the same file), not the imperative "Организуйте".
-- `smartwindow-group-tabs-panel-heading` — `browser/browser/autoTabGrouping.ftl` — Panel heading "Organize Tabs" rendered as an imperative sentence instead of an action/heading form.
-    - Current: `Организуйте вкладки`
-    - Source: `Organize Tabs`
-    - Suggest: `Организовать вкладки`
-    - The en-US is a heading/command, consistent with other infinitive action strings in the same panel; the imperative "Организуйте вкладки" addresses the user as instruction.
-- `smartwindow-group-tabs-just-created-heading` — `browser/browser/autoTabGrouping.ftl` — Heading for a list of groups uses singular masculine "Только что создан" where the source heads a list of several groups.
-    - Current: `Только что создан`
-    - Source: `Just created`
-    - Suggest: `Только что созданы`
-    - Developer comment says it heads the list of groups the user just created; the singular masculine participle does not agree with "группы".
-- `content-analysis-panel-text-styled2` — `browser/browser/browser.ftl` — Missing comma before the subordinate clause introduced by "чтобы".
-    - Current: `<b>{ $agentName }</b> чтобы контролировать`
-    - Source: `Your organization uses <b>{ $agentName }</b> to control how sensitive data may be shared. <a data-l10n-name="info">Learn more</a>`
-    - Suggest: `<b>{ $agentName }</b>, чтобы контролировать`
-    - Russian punctuation requires a comma before "чтобы" introducing a purpose clause.
-- `SafePromiseResolveReorderingWarning` — `dom/chrome/dom/dom.properties` — "reordered" was translated as "переименован" (renamed) instead of "изменён" (reordered).
-    - Current: `Порядок выполнения микрозадач на этой странице был переименован`
-    - Source: `The execution of microtasks on this page was reordered to avoid unsafe execution.`
-    - Suggest: `Порядок выполнения микрозадач на этой странице был изменён`
-    - en-US says the execution was reordered; "переименован" means "renamed", which is a different (and nonsensical) statement about the order.
-- `genai-prompts-summarize-page` — `browser/browser/genai.ftl` — "summarize the webpage" rendered as "опиши веб-страницу" (describe the webpage) and "scannable" as "удобочитаемой".
-    - Current: `опиши веб-страницу на { $url }`
-    - Source: `Please summarize the webpage at { $url } using precise and concise language. Use headers and bulleted lists in the summary, to make it scannable. Maintain the meaning and factual accuracy.`
-    - Suggest: `сделай краткую сводку веб-страницы на { $url }`
-    - The source asks the model to summarize, not to describe; the prompt's purpose per the comment is a summary at a glance.
+- `fire-button-toolbar-button` — `browser/browser/browser.ftl` — "browsing data" is translated as "данные своего веб-сёрфинга" here but as "данные просмотра" in the panel strings this button opens.
+    - Current: `Удалите некоторые или все данные своего веб-сёрфинга`
+    - Source: `label: Delete some or all of your browsing data tooltiptext: Delete some or all of your browsing data`
+    - Suggest: `Удалите некоторые или все данные просмотра`
+    - The same en-US term "browsing data" is rendered as "данные просмотра" in fire-button-panel-heading and fire-button-panel-complete. The button that opens that panel uses the colloquial, non-standard "данные веб-сёрфинга", so the two don't match within one feature.
+- `ip-protection-site-rule-window` — `browser/browser/ipProtection.ftl` — Dialog title for setting a single rule is rendered in the plural.
+    - Current: `Установить правила`
+    - Source: `title: Set rule`
+    - Suggest: `Установить правило`
+    - en-US "Set rule" is singular; the dialog sets one rule, and the add button and edit window use the singular «правило».
+- `sidebar-history-import-promo` — `browser/browser/sidebar.ftl` — "Grab" is translated literally as «Захватить» (seize), and the bare infinitive reads as unnatural, not as an invitation.
+    - Current: `Отсутствует что-то? Захватить историю из другого браузера.`
+    - Source: `message: Missing something? Grab history from another browser.`
+    - Suggest: `Чего-то не хватает? Перенесите историю из другого браузера.`
+    - The promo invites the user to import history. «Захватить» means seize/capture, which is the wrong sense of the colloquial "grab". The invitation should use the formal imperative, following the locale's register.
+- `ip-protection-site-rules-list-section-1` — `browser/browser/ipProtection.ftl` — "Website rules" is rendered as the rules of one website, but the list holds rules for many sites.
+    - Current: `Правила веб-сайта`
+    - Source: `description: Set rules to turn VPN on or off automatically. label: Website rules`
+    - Suggest: `Правила для веб-сайтов`
+    - This section lists rules for multiple websites. The same term appears elsewhere as «правила для веб-сайтов» (ip-protection-delete-all-site-rules-message).
+- `newtab-horoscopes-widget-open-menu-button` — `browser/browser/newtab/newtab.ftl` — The word for horoscopes is misspelled as «горскопов» in both the aria-label and the title.
+    - Current: `Открыть меню горскопов`
+    - Source: `aria-label: Open horoscopes menu title: Open horoscopes menu`
+    - Suggest: `Открыть меню гороскопов`
+    - The genitive plural of «гороскоп» is «гороскопов». The missing «о» is a spelling error, and screen readers will read it out.
+- `policy-DisableSafeMode2` — `browser/browser/policies/policies-descriptions.ftl` — Troubleshoot Mode is translated as «безопасный режим», so the bracket just repeats the same name.
+    - Current: `в безопасном режиме (Безопасный режим)`
+    - Source: `Disable restarting in Troubleshoot Mode (Safe Mode).`
+    - Suggest: `в режиме устранения неполадок (Безопасный режим)`
+    - The en-US gives the current name, Troubleshoot Mode, and puts the old name, Safe Mode, in brackets. The Russian uses the old name twice, so it loses the current feature name and the bracket adds nothing.
+- `permissions-site-app-links-desc` — `browser/browser/preferences/permissions.ftl` — The instruction uses an infinitive («Удалить») where it needs the formal imperative.
+    - Current: `Удалить сайт, чтобы он мог запросить это снова.`
+    - Source: `These sites are blocked from asking to open app links, like email (mailto:). Remove a site to allow it to ask again.`
+    - Suggest: `Удалите сайт, чтобы он мог запросить это снова.`
+    - "Remove a site to allow it to ask again" tells the user what to do. In this sentence the infinitive is ungrammatical, and the locale addresses the user in the formal register.
+- `restore-session-startup-suggestion-button` — `browser/browser/newtab/asrouter.ftl` — There is no comma before the subordinate clause starting with «как».
+    - Current: `Показать мне как`
+    - Source: `Show me how`
+    - Suggest: `Показать мне, как`
+    - Russian punctuation requires a comma before «как» when it introduces a dependent clause ("show me how [to do it]").
+- `permissions-site-app-links-window` — `browser/browser/preferences/permissions.ftl` — The window title uses a hyphen-minus where the locale uses an em dash.
+    - Current: `Настройки - Заблокированные`
+    - Source: `style: { permissions-window2.style } title: Settings - Blocked Sites for App Links`
+    - Suggest: `Настройки — Заблокированные`
+    - The ru locale convention is an em dash. A spaced hyphen here is a typographic error.
+- `appmenu-search-history` — `browser/browser/appmenu.ftl` — The label is translated as "history of searches" when it should mean "search through history".
+    - Current: `Журнал поиска`
+    - Source: `label: Search History`
+    - Suggest: `Поиск по журналу`
+    - The developer comment says this item lets you search through the browser's history. "Журнал поиска" names a log of past searches, which is a different thing.
 
 ### ✅ Fixed since the last run (0)
 
@@ -63,12 +83,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `newtab-stocks-widget-menu-button2` — `browser/browser/newtab/newtab.ftl` — "Finance options" (widget settings/options menu) is rendered as "Финансовые возможности" (financial opportunities).
-    - Current: `Финансовые возможности`
-    - Suggest: `Настройки финансов`
-    - "Options" here means the widget's options/settings button, not "possibilities"; the developer comment says it's the icon-only options button in the widget toolbar.
+_Nothing retired._
 
 ---
 
@@ -76,8 +93,8 @@ _Nothing to re-read._
 
 | Check | Result |
 |---|---|
-| Files | 327 |
-| Strings | 16,404 |
+| Files | 328 |
+| Strings | 16,520 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -89,7 +106,7 @@ _Nothing to re-read._
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 3 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 140 |
+| Access keys not in their label | 145 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 4 |
 
@@ -103,23 +120,23 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `guillemet` 1060, `straight-double` 27, `curly-single` 5, `curly-double` 4 | **guillemet** |
+| quotes | `guillemet` 1071, `straight-double` 27, `curly-single` 5, `curly-double` 4 | **guillemet** |
 | apostrophe | `typographic` 9, `straight` 15 | _mixed_ |
-| ellipsis | `char` 400, `ascii` 5 | **char** |
+| ellipsis | `char` 402, `ascii` 5 | **char** |
 | dash | `em` 128, `en` 5 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 7 | _mixed_ |
-| register | `informal` 948, `formal` 3167 | **formal** |
+| register | `informal` 952, `formal` 3191 | **formal** |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **accesskey — 140 strings** — 140 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
-    - Affected: `addon-install-or-update-from-file`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-showrecentsearches-option-2`, `appmenu-theme-installed`, `appmenu-update-available2`, `appmenu-update-manual2`, `autofill-addresses-checkbox-message`, `autofill-addresses-manage-addresses-button`, `autofill-payment-methods-manage-payments-button`, `autofill-reauth-payment-methods-checkbox-2`, `browser-containers-settings-2`, `browsing-picture-in-picture-enable-when-switching-tabs` …and 128 more
+- **accesskey — 145 strings** — 145 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
+    - Affected: `addon-install-or-update-from-file`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-showrecentsearches-option-2`, `appmenu-theme-installed`, `appmenu-update-available2`, `appmenu-update-manual2`, `autofill-addresses-checkbox-message`, `autofill-addresses-manage-addresses-button`, `autofill-payment-methods-manage-payments-button`, `autofill-reauth-payment-methods-checkbox-2`, `bookmark-panel-save-button2`, `browser-containers-settings-2` …and 133 more
 
 ---
 
-## 3. Open findings (579)
+## 3. Open findings (589)
 
 > **Reads as a deliberate edit (4).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -149,9 +166,9 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 44 |
-| 2 | Wrong content (says something other than the English) | 263 |
-| 3 | Degraded language (grammar, spelling, terminology) | 214 |
-| 4 | Cosmetic (typography, spacing) | 58 |
+| 2 | Wrong content (says something other than the English) | 265 |
+| 3 | Degraded language (grammar, spelling, terminology) | 220 |
+| 4 | Cosmetic (typography, spacing) | 60 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -324,6 +341,11 @@ _Also listed under their own category below._
     - Source: `accesskey: r label: Share { -brand-product-name }`
     - Suggest: `Поделитесь { -brand-product-name(case: "ablative") }`
     - The verb «поделиться» governs the instrumental case («поделиться Firefox'ом» / «поделиться браузером»); the brand term supports a $case parameter per the locale conventions, and omitting it produces an ungrammatical nominative form.
+- `appmenu-search-history` — `browser/browser/appmenu.ftl` — The label is translated as "history of searches" when it should mean "search through history".
+    - Current: `Журнал поиска`
+    - Source: `label: Search History`
+    - Suggest: `Поиск по журналу`
+    - The developer comment says this item lets you search through the browser's history. "Журнал поиска" names a log of past searches, which is a different thing.
 - `appmenuitem-help-and-report` — `browser/browser/appmenu.ftl` — appmenu.ftl — the "Report" half is dropped. Current: Помощь и поддержка → Suggest: Справка и жалобы
     - Current: `Помощь и поддержка`
     - Source: `label: Help and Report`
@@ -419,6 +441,16 @@ _Also listed under their own category below._
 - `ip-protection-bandwidth-warning-infobar-message-75` — `browser/browser/ipProtection.ftl` — several: ipprotection-summer-promo-offramp-generic-title ("built-in" modifies VPN, not the limits → Лимиты встроенного VPN…); ipprotection-feature-introduction-link-text-privacy-2 and ipprotection-location-selection-callout-description-1 hardcode "5 местоположений" where en-US says "multiple"/"several"; ipprotection-feature-introduction-link-text-captive-portal-1 drops and inverts the "hide where…
     - Source: `<strong>Getting close to your VPN limit.</strong> You have { $usageLeft } GB left. Your data will reset at the start of next month.`
     - Suggest: `Лимиты встроенного VPN…`
+- `ip-protection-site-rule-window` — `browser/browser/ipProtection.ftl` — Dialog title for setting a single rule is rendered in the plural.
+    - Current: `Установить правила`
+    - Source: `title: Set rule`
+    - Suggest: `Установить правило`
+    - en-US "Set rule" is singular; the dialog sets one rule, and the add button and edit window use the singular «правило».
+- `ip-protection-site-rules-list-section-1` — `browser/browser/ipProtection.ftl` — "Website rules" is rendered as the rules of one website, but the list holds rules for many sites.
+    - Current: `Правила веб-сайта`
+    - Source: `description: Set rules to turn VPN on or off automatically. label: Website rules`
+    - Suggest: `Правила для веб-сайтов`
+    - This section lists rules for multiple websites. The same term appears elsewhere as «правила для веб-сайтов» (ip-protection-delete-all-site-rules-message).
 - `ipprotection-feature-introduction-description-inclusions` — `browser/browser/ipProtection.ftl` — Imperative "Set the VPN on or off" rendered as a third-person statement "Turns VPN on or off".
     - Current: `Включает или выключает VPN для определенных сайтов.`
     - Source: `Help hide your location for <a data-l10n-name="learn-more-vpn">extra privacy</a> as you browse. Set the VPN on or off for certain sites.`
@@ -464,19 +496,7 @@ _Also listed under their own category below._
     - Current: `50 псевдонимов электронной почты на нас`
     - Source: `50 email masks, on us`
     - Suggest: `…— бесплатно`
-- `windows-10-eos-challenger-callout-title` — `browser/browser/newtab/asrouter.ftl` — en-US "That's the point." Current: В этом ключ. (not an idiomatic Russian phrase) → Suggest: В этом и суть.
-    - Current: `В этом ключ.`
-    - Source: `{ -brand-product-name } isn’t preloaded like other Big Tech browsers. That’s the point.`
-    - Suggest: `В этом и суть.`
-- `windows-10-eos-feature-toast-subtitle` — `browser/browser/newtab/asrouter.ftl` — Current: По популярным запросам, → Suggest: По многочисленным просьбам (and drop the comma)
-    - Current: `По популярным запросам,`
-    - Source: `By popular request, { -brand-product-name } just dropped new features to keep your browsing streamlined and focused.`
-    - Suggest: `По многочисленным просьбам`
-- `newtab-clock-city-id-makassar` — `browser/browser/newtab/newtab.ftl` — Current: Макасар → Suggest: Макассар
-    - Current: `Макасар`
-    - Source: `Makassar`
-    - Suggest: `Макассар`
-- _…and 204 more; see `state/` for the full list._
+- _…and 209 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -596,6 +616,11 @@ _Also listed under their own category below._
     - Source: `aria-label: Horoscopes options`
     - Suggest: `Настройки гороскопов`
     - "горскопов" is a typo; the correct Russian word is "гороскопов" (as used in newtab-custom-widget-horoscopes-toggle).
+- `newtab-horoscopes-widget-open-menu-button` — `browser/browser/newtab/newtab.ftl` — The word for horoscopes is misspelled as «горскопов» in both the aria-label and the title.
+    - Current: `Открыть меню горскопов`
+    - Source: `aria-label: Open horoscopes menu title: Open horoscopes menu`
+    - Suggest: `Открыть меню гороскопов`
+    - The genitive plural of «гороскоп» is «гороскопов». The missing «о» is a spelling error, and screen readers will read it out.
 - `newtab-picture-set-wallpaper` — `browser/browser/newtab/newtab.ftl` — newtab.ftl — a noun for an action button: Установка обоев → Установить обои (its own .aria-label already uses the verb)
     - Current: `Установка обоев`
     - Source: `aria-label: Set today’s picture as your wallpaper label: Set wallpaper title: Set wallpaper`
@@ -645,6 +670,11 @@ _Also listed under their own category below._
 - `policy-Bookmarks` — `browser/browser/policies/policies-descriptions.ftl` — Spurious comma: before a single или in elevation-more-elevated, pleaseSelect, policy-Bookmarks, safeb-blocked-phishing-page-error-desc-override, helpus-referrals, aiwindow-firstrun-memories-subtitle; before и in mr2022-onboarding-mobile-download-subtitle, newtab-wallpaper-feature-highlight-subtitle, details-notification-hard-blocked-other; after a leading prepositional phrase in abuse-report-sett…
     - Current: `или`
     - Source: `Create bookmarks in the Bookmarks toolbar, Bookmarks menu, or a specified folder inside them.`
+- `permissions-site-app-links-desc` — `browser/browser/preferences/permissions.ftl` — The instruction uses an infinitive («Удалить») where it needs the formal imperative.
+    - Current: `Удалить сайт, чтобы он мог запросить это снова.`
+    - Source: `These sites are blocked from asking to open app links, like email (mailto:). Remove a site to allow it to ask again.`
+    - Suggest: `Удалите сайт, чтобы он мог запросить это снова.`
+    - "Remove a site to allow it to ask again" tells the user what to do. In this sentence the infinitive is ungrammatical, and the locale addresses the user in the formal register.
 - `permissions-site-notification-desc` — `browser/browser/preferences/permissions.ftl` — Missing comma before a subordinate clause or participial phrase: permissions-site-notification-desc, -location-desc, -xr-desc, -camera-desc, -microphone-desc (permissions.ftl, 5 strings; the speaker and cookie siblings do it correctly); startup-cache-dialog-title2 (aboutSupport.ftl); about-logins-copy-password-os-auth-dialog-message-win and contextual-manager-passwords-copy-password-os-auth-dialo…
     - Source: `The following websites have requested to send you notifications. You can specify which websites are allowed to send you notifications. You can also block new requests asking to allow notifications.`
     - Suggest: `-location-desc`
@@ -690,13 +720,7 @@ _Also listed under their own category below._
 - `protections-panel-no-trackers-found` — `browser/browser/protectionsPanel.ftl` — Missing comma before a subordinate clause or participial phrase: permissions-site-notification-desc, -location-desc, -xr-desc, -camera-desc, -microphone-desc (permissions.ftl, 5 strings; the speaker and cookie siblings do it correctly); startup-cache-dialog-title2 (aboutSupport.ftl); about-logins-copy-password-os-auth-dialog-message-win and contextual-manager-passwords-copy-password-os-auth-dialo…
     - Source: `No trackers known to { -brand-short-name } were detected on this page.`
     - Suggest: `-location-desc`
-- `report-broken-site-panel-send-more-info-button` — `browser/browser/reportBrokenSite.ftl` — report-broken-site-panel-send-more-info-button (.label), -link, protections-panel-site-not-working-view-send-report, protections-panel-sitefixedsendreport-label — imperative Отправьте… on buttons/links where the siblings use the infinitive
-    - Source: `label: Send more info`
-    - Suggest: `.label`
-- `safeb-blocked-phishing-page-error-desc-override` — `browser/browser/safebrowsing/blockedSite.ftl` — Spurious comma: before a single или in elevation-more-elevated, pleaseSelect, policy-Bookmarks, safeb-blocked-phishing-page-error-desc-override, helpus-referrals, aiwindow-firstrun-memories-subtitle; before и in mr2022-onboarding-mobile-download-subtitle, newtab-wallpaper-feature-highlight-subtitle, details-notification-hard-blocked-other; after a leading prepositional phrase in abuse-report-sett…
-    - Current: `или`
-    - Source: `<span data-l10n-name='sitename'>{ $sitename }</span> has been <a data-l10n-name='error_desc_link'>reported as a deceptive site</a>. You can <a data-l10n-name='report_detection'>report a detection problem</a> or <a data-…`
-- _…and 81 more; see `state/` for the full list._
+- _…and 83 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -730,6 +754,11 @@ _Also listed under their own category below._
     - Source: `Click “Restore your data” and select this file`
     - Suggest: `Восстановите свои данные`
     - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `fire-button-toolbar-button` — `browser/browser/browser.ftl` — "browsing data" is translated as "данные своего веб-сёрфинга" here but as "данные просмотра" in the panel strings this button opens.
+    - Current: `Удалите некоторые или все данные своего веб-сёрфинга`
+    - Source: `label: Delete some or all of your browsing data tooltiptext: Delete some or all of your browsing data`
+    - Suggest: `Удалите некоторые или все данные просмотра`
+    - The same en-US term "browsing data" is rendered as "данные просмотра" in fire-button-panel-heading and fire-button-panel-complete. The button that opens that panel uses the colloquial, non-standard "данные веб-сёрфинга", so the two don't match within one feature.
 - `firefox-relay-offer-legal-notice` — `browser/browser/browser.ftl` — firefox-relay-offer-legal-notice Примечанием о конфиденциальности vs Уведомлением… in -notice-1 right below
     - Source: `By clicking “Use email mask”, you agree to the <label data-l10n-name="tos-url">Terms of Service</label> and <label data-l10n-name="privacy-url">Privacy Notice</label>.`
     - Suggest: `Примечанием о конфиденциальности`
@@ -878,9 +907,7 @@ _Also listed under their own category below._
     - Suggest: `...Dark.tooltip`
 - `rule.jumpDeclaration.title` — `devtools/shared/styleinspector.properties` — styleinspector.contextmenu.copyDeclaration and changes.contextmenu.copyDeclaration use декларацию where rule.jumpDeclaration.title uses объявление
     - Source: `Jump to declaration`
-- `styleinspector.contextmenu.copyDeclaration` — `devtools/shared/styleinspector.properties` — styleinspector.contextmenu.copyDeclaration and changes.contextmenu.copyDeclaration use декларацию where rule.jumpDeclaration.title uses объявление
-    - Source: `Copy Declaration`
-- _…and 12 more; see `state/` for the full list._
+- _…and 13 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -899,7 +926,7 @@ _Also listed under their own category below._
     - Current: `Выполняется резервное копирование...`
     - Source: `Backup in progress…`
     - Suggest: `…`
-    - The tree uses … 400 times against 5 ASCII runs.
+    - The tree uses … 402 times against 5 ASCII runs.
 - `content-analysis-panel-text-styled2` — `browser/browser/browser.ftl` — Missing comma before the subordinate clause introduced by "чтобы".
     - Current: `<b>{ $agentName }</b> чтобы контролировать`
     - Source: `Your organization uses <b>{ $agentName }</b> to control how sensitive data may be shared. <a data-l10n-name="info">Learn more</a>`
@@ -920,6 +947,11 @@ _Also listed under their own category below._
     - Source: `accesskey: S label: Share Ideas and Feedback…`
 - `nova-early-access-infobar-primary-button` — `browser/browser/newtab/asrouter.ftl` — nova-early-access-infobar-primary-button-class: ip-protection-not-opted-in-button and device-migration-fxa-spotlight--primary-button render "Get started" as the noun Начало работы where the siblings use Начать
     - Source: `(value): Got it accesskey: G`
+- `restore-session-startup-suggestion-button` — `browser/browser/newtab/asrouter.ftl` — There is no comma before the subordinate clause starting with «как».
+    - Current: `Показать мне как`
+    - Source: `Show me how`
+    - Suggest: `Показать мне, как`
+    - Russian punctuation requires a comma before «как» when it introduces a dependent clause ("show me how [to do it]").
 - `set-default-menu-message-split-layout-subtitle` — `browser/browser/newtab/asrouter.ftl` — Trailing period added or dropped vs en-US: dropped in policy-GenerativeAI, policy-LegacyProfiles, multi-profile-spotlight-body, set-default-menu-message-split-layout-subtitle ([macos]), security-privacy-issue-warning-ech2, blocked-mismatched-version, menu-help-share-ideas (.label, missing the source's ellipsis), permission-dialog-set-change-app-link; added in browsing-use-full-keyboard-navigation…
     - Source: `{$sel_1 ->} [macos] Make it your default and keep it in your Dock. [other] Get faster browsing and automatic privacy protection.`
 - `newtab-wallpaper-error-max-file-size` — `browser/browser/newtab/newtab.ftl` — Missing space between number and unit: timer.end (mobile/android/chrome/browser.properties), console-timer-end (geckoViewConsole.ftl), throttling.profile.label (network-throttling.properties — spaced in …description, unspaced here), newtab-wallpaper-error-max-file-size ({ $filesize }МБ), printprogresspercent (browser/pdfviewer/viewer.properties — space added before %), pdfjs-print-progress-percen…
@@ -940,13 +972,18 @@ _Also listed under their own category below._
     - Current: `Отключает команды отправки отзывов в меню Справка («Отправить отзыв...» и «Сообщить о поддельном сайте...»).`
     - Source: `Disable commands to send feedback from the Help menu (Submit Feedback and Report Deceptive Site).`
     - Suggest: `…`
-    - The tree uses … 400 times against 5 ASCII runs.
+    - The tree uses … 402 times against 5 ASCII runs.
 - `policy-GenerativeAI` — `browser/browser/policies/policies-descriptions.ftl` — Trailing period added or dropped vs en-US: dropped in policy-GenerativeAI, policy-LegacyProfiles, multi-profile-spotlight-body, set-default-menu-message-split-layout-subtitle ([macos]), security-privacy-issue-warning-ech2, blocked-mismatched-version, menu-help-share-ideas (.label, missing the source's ellipsis), permission-dialog-set-change-app-link; added in browsing-use-full-keyboard-navigation…
     - Source: `Configure generative AI features.`
 - `policy-LegacyProfiles` — `browser/browser/policies/policies-descriptions.ftl` — Trailing period added or dropped vs en-US: dropped in policy-GenerativeAI, policy-LegacyProfiles, multi-profile-spotlight-body, set-default-menu-message-split-layout-subtitle ([macos]), security-privacy-issue-warning-ech2, blocked-mismatched-version, menu-help-share-ideas (.label, missing the source's ellipsis), permission-dialog-set-change-app-link; added in browsing-use-full-keyboard-navigation…
     - Source: `Disable the feature enforcing a separate profile for each installation.`
 - `languages-code-format` — `browser/browser/preferences/languages.ftl` — Locale-only double spaces: community-exp (aboutDialog.ftl), inactive-css-no-size-containment-fix and -fix-1 (tooltips.ftl), rights-intro-point-1 (aboutRights.ftl), settings-pp-not-wanted (toolkit/preferences/preferences.ftl), perftools-onboarding-message (double space after the colon), genai-settings-chat-lechat-links (genai.ftl), languages-code-format (.label, languages.ftl), CSPROTrustedTypesPo…
     - Source: `label: { $locale } [{ $code }]`
+- `permissions-site-app-links-window` — `browser/browser/preferences/permissions.ftl` — The window title uses a hyphen-minus where the locale uses an em dash.
+    - Current: `Настройки - Заблокированные`
+    - Source: `style: { permissions-window2.style } title: Settings - Blocked Sites for App Links`
+    - Suggest: `Настройки — Заблокированные`
+    - The ru locale convention is an em dash. A spaced hyphen here is a typographic error.
 - `browsing-use-full-keyboard-navigation` — `browser/browser/preferences/preferences.ftl` — Trailing period added or dropped vs en-US: dropped in policy-GenerativeAI, policy-LegacyProfiles, multi-profile-spotlight-body, set-default-menu-message-split-layout-subtitle ([macos]), security-privacy-issue-warning-ech2, blocked-mismatched-version, menu-help-share-ideas (.label, missing the source's ellipsis), permission-dialog-set-change-app-link; added in browsing-use-full-keyboard-navigation…
     - Source: `accesskey: t label: Use the tab key to move focus between form controls and links`
 - `certs-thirdparty-toggle` — `browser/browser/preferences/preferences.ftl` — Trailing period added or dropped vs en-US: dropped in policy-GenerativeAI, policy-LegacyProfiles, multi-profile-spotlight-body, set-default-menu-message-split-layout-subtitle ([macos]), security-privacy-issue-warning-ech2, blocked-mismatched-version, menu-help-share-ideas (.label, missing the source's ellipsis), permission-dialog-set-change-app-link; added in browsing-use-full-keyboard-navigation…
@@ -968,7 +1005,7 @@ _Also listed under their own category below._
     - Current: `Вы ничего не синхронизируете... пока. Запустите синхронизацию, чтобы получить все ваши данные на всех ваших устройствах.`
     - Source: `description: You aren’t syncing anything… yet. Start syncing to get all of your data on all your devices. label: Manage synced data`
     - Suggest: `…`
-    - The tree uses … 400 times against 5 ASCII runs.
+    - The tree uses … 402 times against 5 ASCII runs.
 - `protections-vpn-header-content-subscribed` — `browser/browser/protections.ftl` — Stray space before punctuation: protections-vpn-header-content-subscribed (Apple App Store .), extension-controlled-enable and settings-translations-subpage-never-translate-sites-description (preferences.ftl), fp-certerror-not-yet-valid-why-dangerous-body (certError.ftl), PEAttSelNoBar and PEAttSelUnexpected (css.properties), networkMenu.ws.summary.framesCount2 and charts.totalSecondsNonBlocking…
     - Source: `{$count ->} [other] Using the { -mozilla-vpn-brand-name } encrypts all your traffic and hides your location — on up to { $count } devices. Get the most from your subscription — add it from the <a data-l10n-name="playsto…`
     - Suggest: `Apple App Store .`
@@ -1039,7 +1076,7 @@ _Also listed under their own category below._
     - Current: `Начните ввод...`
     - Source: `aria-label: Text Editor default-content: Start typing…`
     - Suggest: `…`
-    - The tree uses … 400 times against 5 ASCII runs.
+    - The tree uses … 402 times against 5 ASCII runs.
 - `pdfjs-print-progress-percent` — `toolkit/toolkit/pdfviewer/viewer.ftl` — Missing space between number and unit: timer.end (mobile/android/chrome/browser.properties), console-timer-end (geckoViewConsole.ftl), throttling.profile.label (network-throttling.properties — spaced in …description, unspaced here), newtab-wallpaper-error-max-file-size ({ $filesize }МБ), printprogresspercent (browser/pdfviewer/viewer.properties — space added before %), pdfjs-print-progress-percen…
     - Source: `{ $progress }%`
 

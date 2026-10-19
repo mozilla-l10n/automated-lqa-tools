@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
-| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
+| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 45 of 16,378 |
+| **Strings reviewed this run** | 118 of 16,477 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,17 +18,59 @@ Also for pt-BR: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (8)
+
+- `policy-DisableProfileRefresh2` — `browser/browser/policies/policies-descriptions.ftl` — `policy-DisableProfileRefresh2` uses straight double quotes
+    - Current: `Desativar o botão "Restaurar o { -brand-short-name }" na página de informações para solução de problemas (about:support) e em support.mozilla.org, bem como o aviso que oferece restaurar o { -brand-short-name } quando nã…`
+    - Source: `Disable the Refresh { -brand-short-name } button in Troubleshooting Information (about:support) and on support.mozilla.org, as well as the prompt offering to refresh { -brand-short-name } when it hasn’t been used for a…`
+    - The locale's quote convention is `curly-double` (594 occurrences).
+- `policy-BlockAboutSupport2` — `browser/browser/policies/policies-descriptions.ftl` — "pagina" is missing its accent; it should be "página".
+    - Current: `à pagina de informações`
+    - Source: `Block access to Troubleshooting Information (about:support).`
+    - Suggest: `à página de informações`
+    - Spelling error: the noun is "página", with an accent.
+- `policy-DisableThirdPartyModuleBlocking2` — `browser/browser/policies/policies-descriptions.ftl` — "pagina" is missing its accent; it should be "página".
+    - Current: `a pagina de informações`
+    - Source: `Prevent the user from using Third-party Module Information (about:third-party) to block third-party modules injected into the { -brand-short-name } process.`
+    - Suggest: `a página de informações`
+    - Spelling error: the noun is "página", with an accent.
+- `policy-PasswordManagerEnabled2` — `browser/browser/policies/policies-descriptions.ftl` — The internal page is given as about:login, but the source says about:logins.
+    - Current: `(about:login)`
+    - Source: `Enable or disable saving passwords to the password manager. If disabled, Passwords (about:logins) is also blocked.`
+    - Suggest: `(about:logins)`
+    - about:logins is a fixed page identifier that must not change. about:login points to a page that does not exist.
+- `protocolhandler-add-handler-message` — `browser/browser/webProtocolHandler.ftl` — The message says "aplicação", but its own button says "aplicativo" for the same word.
+    - Current: `como uma aplicação para links`
+    - Source: `Add “{ $host }” as an application for { $protocol } links?`
+    - Suggest: `como um aplicativo para links`
+    - The same en-US word "application" appears in the same dialog. The button uses "aplicativo", the usual pt-BR term.
+- `ip-protection-site-rule-invalid-error` — `browser/browser/ipProtection.ftl` — "endereço do site válido" uses the definite article where a general phrase is needed, so it reads awkwardly.
+    - Current: `endereço do site válido`
+    - Source: `Enter a valid website address.`
+    - Suggest: `endereço de site válido`
+    - The source means any valid website address, which takes "de site". "do site" means "of the site" and attaches "válido" oddly.
+- `policy-DisableProfileRefresh2` — `browser/browser/policies/policies-descriptions.ftl` — Straight double quotes are used instead of the locale's curly double quotes.
+    - Current: `"Restaurar o { -brand-short-name }"`
+    - Source: `Disable the Refresh { -brand-short-name } button in Troubleshooting Information (about:support) and on support.mozilla.org, as well as the prompt offering to refresh { -brand-short-name } when it hasn’t been used for a…`
+    - Suggest: `“Restaurar o { -brand-short-name }”`
+    - Per the locale conventions, pt-BR uses curly double quotes.
+- `tab-group-editor-action-copy-links` — `browser/browser/tabbrowser.ftl` — “em grupo” reads as “collectively/as a group” rather than “the links belonging to the group”.
+    - Current: `Copiar { $linkCount } links em grupo`
+    - Source: `label: {$linkCount ->} [1] Copy link in group [other] Copy { $linkCount } links in group`
+    - Suggest: `Copiar { $linkCount } links do grupo`
+    - The en-US means copying the links contained in the tab group. In Portuguese “em grupo” usually means doing something together or as a group. “do grupo” (also “Copiar link do grupo” for the singular) says plainly that the links come from the group.
+
+### ✅ Fixed since the last run (3)
 
 - `pictureinpicture-subtitles-toggle` — `toolkit/toolkit/pictureinpicture/pictureinpicture.ftl` — "Subtítulos" is Spanish spelling; pt-BR is "Legendas".
     - Current: `Subtítulos`
     - Source: `label: Subtitles`
     - Suggest: `Legendas`
     - en-US "Subtitles" is rendered in pt-BR as "Legendas"; "Subtítulos" is not a Brazilian Portuguese term (it is Spanish).
-
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
+- `webauthn-related-origin-create-header` — `toolkit/toolkit/webauthnDialog.ftl` — webauthn-related-origin-create-header, webauthn-related-origin-use-header — webauthnDialog.ftl — "passkey" rendered as senha, conflicting with webauthn-a-passkey-label (chave de acesso). Suggest: chave de acesso
+    - Source: `{ $origin } wants to create a passkey for { $rpId }.`
+- `webauthn-related-origin-use-header` — `toolkit/toolkit/webauthnDialog.ftl` — webauthn-related-origin-create-header, webauthn-related-origin-use-header — webauthnDialog.ftl — "passkey" rendered as senha, conflicting with webauthn-a-passkey-label (chave de acesso). Suggest: chave de acesso
+    - Source: `{ $origin } wants to use a passkey for { $rpId }.`
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -48,9 +90,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 327 |
-| Strings | 16,378 |
-| Missing strings | 26 |
+| Files | 328 |
+| Strings | 16,477 |
+| Missing strings | 43 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,22 +105,24 @@ _Nothing retired._
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 3 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 22 |
+| Typography deviations from this locale's own norm | 23 |
 
 ### Completeness
 
-**26 strings** are not translated yet, concentrated in:
+**43 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/onboarding.ftl` — 10
-- `browser/browser/genai.ftl` — 4
-- `browser/browser/preferences/preferences.ftl` — 3
-- `browser/browser/defaultBrowserNotification.ftl` — 2
-- `browser/browser/newtab/asrouter.ftl` — 2
-- `browser/browser/menubar.ftl` — 1
-- `browser/browser/policies/policies-descriptions.ftl` — 1
-- `browser/browser/newtab/newtab.ftl` — 1
-- `dom/chrome/dom/dom.properties` — 1
-- `dom/chrome/security/security.properties` — 1
+- `browser/browser/browser.ftl` — 8
+- `browser/browser/ipProtection.ftl` — 8
+- `browser/browser/newtab/newtab.ftl` — 8
+- `browser/browser/sanitize.ftl` — 3
+- `toolkit/toolkit/about/aboutGlean.ftl` — 2
+- `browser/browser/sidebar.ftl` — 2
+- `browser/browser/preferences/permissions.ftl` — 2
+- `browser/browser/preferences/preferences.ftl` — 2
+- `toolkit/toolkit/global/videocontrols.ftl` — 1
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 1
+- `browser/browser/confirmationHints.ftl` — 1
+- `browser/browser/genai.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -88,12 +132,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 588, `curly-single` 123, `straight-double` 63 | **curly-double** |
-| apostrophe | `typographic` 136, `straight` 106 | _mixed_ |
-| ellipsis | `char` 390, `ascii` 4 | **char** |
+| quotes | `curly-double` 594, `curly-single` 124, `straight-double` 64 | **curly-double** |
+| apostrophe | `typographic` 137, `straight` 106 | _mixed_ |
+| ellipsis | `char` 392, `ascii` 4 | **char** |
 | dash | `em` 47, `en` 1 | **em** |
 | nbsp | `total` 10, `narrow` 9, `before-punctuation` 5, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 1512 | **informal** |
+| register | `informal` 1518 | **informal** |
 
 ---
 
@@ -103,15 +147,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (533)
+## 3. Open findings (538)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 11 |
-| 2 | Wrong content (says something other than the English) | 183 |
-| 3 | Degraded language (grammar, spelling, terminology) | 256 |
-| 4 | Cosmetic (typography, spacing) | 83 |
+| 2 | Wrong content (says something other than the English) | 182 |
+| 3 | Degraded language (grammar, spelling, terminology) | 260 |
+| 4 | Cosmetic (typography, spacing) | 85 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -306,6 +350,11 @@ _Nothing reported._
     - Current: `Desativar criptografia.`
     - Source: `Disable ciphers.`
     - Suggest: `Desativar cifras.`
+- `policy-PasswordManagerEnabled2` — `browser/browser/policies/policies-descriptions.ftl` — The internal page is given as about:login, but the source says about:logins.
+    - Current: `(about:login)`
+    - Source: `Enable or disable saving passwords to the password manager. If disabled, Passwords (about:logins) is also blocked.`
+    - Suggest: `(about:logins)`
+    - about:logins is a fixed page identifier that must not change. about:login points to a page that does not exist.
 - `policy-PostQuantumKeyAgreementEnabled` — `browser/browser/policies/policies-descriptions.ftl` — "key agreement" is acordo de chaves in policy-CNSA2KeyAgreementEnabled. Current: Ativar aceitação de chave pós-quantum para TLS. → Suggest: Ativar acordo de chaves pós-quântico para TLS.
     - Current: `Ativar aceitação de chave pós-quantum para TLS.`
     - Source: `Enable post-quantum key agreement for TLS.`
@@ -351,6 +400,11 @@ _Nothing reported._
     - Source: `description: Invite someone to choose the browser that puts privacy first. label: Share { -brand-product-name }`
     - Suggest: `description: Convide alguém a escolher o navegador que põe a privacidade em primeiro lugar.`
     - en-US reads "Invite someone to choose the browser that puts privacy first"; the translation omits "someone" and replaces "choose" with "use", leaving an incomplete sentence without a direct object.
+- `tab-group-editor-action-copy-links` — `browser/browser/tabbrowser.ftl` — “em grupo” reads as “collectively/as a group” rather than “the links belonging to the group”.
+    - Current: `Copiar { $linkCount } links em grupo`
+    - Source: `label: {$linkCount ->} [1] Copy link in group [other] Copy { $linkCount } links in group`
+    - Suggest: `Copiar { $linkCount } links do grupo`
+    - The en-US means copying the links contained in the tab group. In Portuguese “em grupo” usually means doing something together or as a group. “do grupo” (also “Copiar link do grupo” for the singular) says plainly that the links come from the group.
 - `existing-user-tou-message` — `browser/browser/termsofuse.ftl` — en-US "take a moment". Current: Dê uma pausa para revisar e aceitar. → Suggest: Reserve um momento para revisar e aceitar.
     - Current: `Dê uma pausa para revisar e aceitar.`
     - Source: `<strong>Update</strong> We’ve introduced a { -brand-short-name } <a data-l10n-name="terms-of-use-link">Terms of Use</a> and updated our <a data-l10n-name="privacy-notice-link">Privacy Notice</a>. Please take a moment to…`
@@ -367,14 +421,6 @@ _Nothing reported._
     - Current: `Abrir janelas ou abas`
     - Source: `Open pop-up windows`
     - Suggest: `Abrir janelas popup`
-- `UN_SURVEY_CHECKBOX_LABEL` — `browser/installer/custom.properties` — UNSURVEYCHECKBOXLABEL (custom.properties) — indirect interrogative needs por que, and the brand article is missing: Fale para a Mozilla porque você desinstalou $BrandShortName → Diga à Mozilla por que você desinstalou o $BrandShortName
-    - Current: `Fale para a Mozilla porque você desinstalou $BrandShortName`
-    - Source: `Tell Mozilla why you uninstalled $BrandShortName`
-    - Suggest: `Diga à Mozilla por que você desinstalou o $BrandShortName`
-- `MUI_INNERTEXT_STARTMENU_TOP` — `browser/installer/mui.properties` — MUIINNERTEXTSTARTMENUTOP (mui.properties) — pasta do Menu Iniciar → pasta do menu Iniciar (lowercase in MUITEXTSTARTMENUTITLE/SUBTITLE and ICONSSTARTMENU)
-    - Current: `pasta do Menu Iniciar`
-    - Source: `Select the Start Menu folder in which you would like to create the program’s shortcuts. You can also enter a name to create a new folder.`
-    - Suggest: `pasta do menu Iniciar`
 - _…and 121 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
@@ -524,6 +570,11 @@ _Nothing reported._
 - `link-preview-setup-faster-next-time` — `browser/browser/genai.ftl` — link-preview-generation-error-missing-data-v2, link-preview-settings-key-points (.label), link-preview-optin-message, link-preview-key-points-header, link-preview-key-points-disclaimer, link-preview-setup-faster-next-time — genai.ftl — pontos chave / Pontos chave → pontos-chave / Pontos-chave (6 instances)
     - Current: `Pontos chave`
     - Source: `You’ll see key points more quickly next time.`
+- `ip-protection-site-rule-invalid-error` — `browser/browser/ipProtection.ftl` — "endereço do site válido" uses the definite article where a general phrase is needed, so it reads awkwardly.
+    - Current: `endereço do site válido`
+    - Source: `Enter a valid website address.`
+    - Suggest: `endereço de site válido`
+    - The source means any valid website address, which takes "de site". "do site" means "of the site" and attaches "válido" oddly.
 - `ipprotection-message-bandwidth-warning` — `browser/browser/ipProtection.ftl` — ipprotection-message-bandwidth-warning (.message), -mb (.message), ip-protection-bandwidth-warning-infobar-message-90, -90-mb — ipProtection.ftl — GB restante este mês → GB restantes este mês; Tem { $usageLeft } GB restante → Você tem { $usageLeft } GB restantes (the -75 sibling is correct)
     - Current: `GB restante este mês`
     - Source: `heading: Getting close to your VPN limit message: You have { $usageLeft } GB of { $maxUsage } GB left this month.`
@@ -604,11 +655,7 @@ _Nothing reported._
     - Source: `{ -brand-short-name } runs speech recognition locally, so the audio never leaves your device. To set this up, a ~{ $sizeMB } MB download will start when you continue.`
     - Suggest: `Para configurar, será iniciado o download de aproximadamente { $sizeMB } MB quando você continuar.`
     - The en-US says "To set this up, a ~{ $sizeMB } MB download will start when you continue." The pt-BR construction "Para ser configurado, começará a ser baixado aproximadamente X MB" is grammatically incorrect (subject/verb agreement and impersonal construction) and obscures the meaning.
-- `policy-Bookmarks` — `browser/browser/policies/policies-descriptions.ftl` — ou uma pasta especificada dentro deles → ou em uma pasta especificada dentro deles
-    - Current: `ou uma pasta especificada dentro deles`
-    - Source: `Create bookmarks in the Bookmarks toolbar, Bookmarks menu, or a specified folder inside them.`
-    - Suggest: `ou em uma pasta especificada dentro deles`
-- _…and 86 more; see `state/` for the full list._
+- _…and 88 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -794,7 +841,7 @@ _Nothing reported._
 - `reset-search-settings-message` — `browser/browser/search.ftl` — removed-search-engine-message/-message2 (vá em configurações) vs reset-search-settings-message (vá nas configurações)
     - Source: `Due to a technical issue, your default search engine has been changed back to { $newEngine }. To change the default search engine, go to settings.`
     - Suggest: `-message2`
-- _…and 52 more; see `state/` for the full list._
+- _…and 53 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -821,7 +868,7 @@ _Nothing reported._
 - `main-context-menu-pdfjs-save-page` — `browser/browser/browserContext.ftl` — `main-context-menu-pdfjs-save-page` uses three dots where this locale uses …
     - Current: `Salvar seleção como...`
     - Source: `label: Save selection as…`
-    - The tree uses … 390 times against 4 ASCII runs.
+    - The tree uses … 392 times against 4 ASCII runs.
 - `contextual-manager-passwords-no-passwords-message` — `browser/browser/contextual-manager.ftl` — Comma where a period belongs: contextual-manager-passwords-no-passwords-message (contextual-manager.ftl) — são criptografadas, Estamos atentos → criptografadas. Estamos atentos
     - Current: `são criptografadas, Estamos atentos`
     - Source: `All passwords are encrypted and we’ll watch out for breaches and alerts if you’re affected.`
@@ -858,7 +905,7 @@ _Nothing reported._
 - `newtab-discovery-empty-section-topstories-loading` — `browser/browser/newtab/newtab.ftl` — `newtab-discovery-empty-section-topstories-loading` uses three dots where this locale uses …
     - Current: `Carregando...`
     - Source: `Loading…`
-    - The tree uses … 390 times against 4 ASCII runs.
+    - The tree uses … 392 times against 4 ASCII runs.
 - `newtab-discovery-empty-section-topstories-loading` — `browser/browser/newtab/newtab.ftl` — main-context-menu-pdfjs-save-page (.label, browserContext.ftl), home-homepage-custom-url (.placeholder, preferences.ftl), newtab-discovery-empty-section-topstories-loading (newtab.ftl).
     - Source: `Loading…`
     - Suggest: `.label`
@@ -889,25 +936,34 @@ _Nothing reported._
 - `policy-DisableForgetButton` — `browser/browser/policies/policies-descriptions.ftl` — `policy-DisableForgetButton` uses straight double quotes
     - Current: `Impedir acesso ao botão "Esquecer".`
     - Source: `Prevent access to the Forget button.`
-    - The locale's quote convention is `curly-double` (588 occurrences).
+    - The locale's quote convention is `curly-double` (594 occurrences).
 - `policy-DisableProfileRefresh` — `browser/browser/policies/policies-descriptions.ftl` — `policy-DisableProfileRefresh` uses straight double quotes
     - Current: `Desativar o botão "Restaurar o { -brand-short-name }" na página about:support.`
     - Source: `Disable the Refresh { -brand-short-name } button in the about:support page.`
-    - The locale's quote convention is `curly-double` (588 occurrences).
+    - The locale's quote convention is `curly-double` (594 occurrences).
+- `policy-DisableProfileRefresh2` — `browser/browser/policies/policies-descriptions.ftl` — `policy-DisableProfileRefresh2` uses straight double quotes
+    - Current: `Desativar o botão "Restaurar o { -brand-short-name }" na página de informações para solução de problemas (about:support) e em support.mozilla.org, bem como o aviso que oferece restaurar o { -brand-short-name } quando nã…`
+    - Source: `Disable the Refresh { -brand-short-name } button in Troubleshooting Information (about:support) and on support.mozilla.org, as well as the prompt offering to refresh { -brand-short-name } when it hasn’t been used for a…`
+    - The locale's quote convention is `curly-double` (594 occurrences).
+- `policy-DisableProfileRefresh2` — `browser/browser/policies/policies-descriptions.ftl` — Straight double quotes are used instead of the locale's curly double quotes.
+    - Current: `"Restaurar o { -brand-short-name }"`
+    - Source: `Disable the Refresh { -brand-short-name } button in Troubleshooting Information (about:support) and on support.mozilla.org, as well as the prompt offering to refresh { -brand-short-name } when it hasn’t been used for a…`
+    - Suggest: `“Restaurar o { -brand-short-name }”`
+    - Per the locale conventions, pt-BR uses curly double quotes.
 - `policy-Extensions` — `browser/browser/policies/policies-descriptions.ftl` — `policy-Extensions` uses straight double quotes
     - Current: `Instalar, desinstalar e bloquear extensões. A opção “Instalar” recebe URLs ou caminhos como parâmetros. As opções “Desinstalar” e "Bloqueado" usam IDs de extensões.`
     - Source: `Install, uninstall or lock extensions. The Install option takes URLs or paths as parameters. The Uninstall and Locked options take extension IDs.`
-    - The locale's quote convention is `curly-double` (588 occurrences).
+    - The locale's quote convention is `curly-double` (594 occurrences).
 - `policy-GenerativeAI` — `browser/browser/policies/policies-descriptions.ftl` — Final period dropped: ipprotection-feature-introduction-link-text-captive-portal-1 (ipProtection.ftl), policy-GenerativeAI (policies-descriptions.ftl)
     - Source: `Configure generative AI features.`
 - `policy-HardwareAcceleration` — `browser/browser/policies/policies-descriptions.ftl` — `policy-HardwareAcceleration` uses straight double quotes
     - Current: `Caso definido como "false", desativar a aceleração de hardware.`
     - Source: `If false, turn off hardware acceleration.`
-    - The locale's quote convention is `curly-double` (588 occurrences).
+    - The locale's quote convention is `curly-double` (594 occurrences).
 - `policy-OfferToSaveLogins` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OfferToSaveLogins` uses straight double quotes
     - Current: `Impor as configurações para permitir que o { -brand-short-name } ofereça memorizar contas de acesso e senhas salvas. Tanto "true" como "false" são valores aceitos.`
     - Source: `Enforce the setting to allow { -brand-short-name } to offer to remember saved logins and passwords. Both true and false values are accepted.`
-    - The locale's quote convention is `curly-double` (588 occurrences).
+    - The locale's quote convention is `curly-double` (594 occurrences).
 - `connection-proxy-noproxy-localhost-desc-2` — `browser/browser/preferences/connection.ftl` — serial comma before "e" is not pt-BR usage: 127.0.0.1/8, e ::1 → 127.0.0.1/8 e ::1
     - Source: `Connections to localhost, 127.0.0.1/8, and ::1 are never proxied.`
 - `autofill-card-expires-year` — `browser/browser/preferences/formAutofill.ftl` — autofill-card-expires-month, autofill-card-expires-year — preferences/formAutofill.ftl — Mês de Expiração / Ano de Expiração → sentence case (the -2 variants are correct)
@@ -930,7 +986,7 @@ _Nothing reported._
 - `home-homepage-custom-url` — `browser/browser/preferences/preferences.ftl` — `home-homepage-custom-url` uses three dots where this locale uses …
     - Current: `Cole uma URL...`
     - Source: `placeholder: Paste a URL…`
-    - The tree uses … 390 times against 4 ASCII runs.
+    - The tree uses … 392 times against 4 ASCII runs.
 - `security-privacy-issue-warning-third-party-cookies` — `browser/browser/preferences/preferences.ftl` — Trailing period added where en-US has none: ipprotection-connection-status-blocked-error-title-1 (.aria-label too), security-privacy-issue-warning-third-party-cookies (.label, preferences.ftl), newtab-wallpaper-sky-with-pink-clouds, newtab-shortcuts-highlight-title, newtab-report-ads-reason-seen-it-too-many-times (.label) (newtab.ftl), windows-10-eos-callout-addons-title (asrouter.ftl), tab-group…
     - Source: `description: Third-party cookies are used to track you across websites. label: Third-party cookies are enabled`
     - Suggest: `.aria-label`
@@ -942,7 +998,7 @@ _Nothing reported._
 - `sync-syncing-across-devices-empty-state3` — `browser/browser/preferences/preferences.ftl` — `sync-syncing-across-devices-empty-state3` uses three dots where this locale uses …
     - Current: `Não está sincronizando nada... ainda. Escolha o que sincronizar neste dispositivo.`
     - Source: `description: You aren’t syncing anything… yet. Choose what to sync on this device. label: Manage synced data`
-    - The tree uses … 390 times against 4 ASCII runs.
+    - The tree uses … 392 times against 4 ASCII runs.
 - `update-setting-write-failure-message2` — `browser/browser/preferences/preferences.ftl` — restore-page-problem-desc (aboutSessionRestore.ftl), crashed-single-offer-help-message, crashed-multiple-offer-help-message (aboutTabCrashed.ftl), enable-devtools-popup-description2 (browser.ftl), pin-tabs-callout-1-subtitle, pin-tabs-callout-2-subtitle (featureCallout.ftl), permissions-exceptions-manage-etp-desc (preferences/permissions.ftl), update-setting-write-failure-message2 (preferences.ft…
     - Source: `{ -brand-short-name } encountered an error and didn’t save this change. Note that changing this update setting requires permission to write to the file below. You or a system administrator may be able to resolve the err…`
 - `tabbrowser-tab-label-tab-split-view-right` — `browser/browser/tabbrowser.ftl` — , Exibição dividida à direita → lowercase (the -left pair is lowercase)
@@ -960,7 +1016,7 @@ _Nothing reported._
 - `webrtc-indicator-menuitem-sharing-browser-with` — `browser/browser/webrtcIndicator.ftl` — `webrtc-indicator-menuitem-sharing-browser-with` uses straight double quotes
     - Current: `Compartilhando uma aba com "{ $streamTitle }"`
     - Source: `label: Sharing a Tab with “{ $streamTitle }”`
-    - The locale's quote convention is `curly-double` (588 occurrences).
+    - The locale's quote convention is `curly-double` (594 occurrences).
 - `storage-add-button` — `devtools/client/storage.ftl` — storage-add-button (.title), storage-context-menu-add-item (.label) — devtools/client/storage.ftl — Adicionar Item → Adicionar item
     - Current: `Adicionar Item`
     - Source: `title: Add Item`
@@ -988,17 +1044,8 @@ _Nothing reported._
 - `screenshotFilenameManual` — `devtools/shared/screenshot.properties` — `screenshotFilenameManual` uses straight double quotes
     - Current: `O nome do arquivo (deve ter extensão ".png") onde gravar a captura de tela.`
     - Source: `The name of the file (should have a ‘.png’ extension) to which we write the screenshot.`
-    - The locale's quote convention is `curly-double` (588 occurrences).
-- `FullscreenDeniedPermissionsPolicy` — `dom/chrome/dom/dom.properties` — Stray space before the final period.
-    - Current: `diretivas Permissions Policy .`
-    - Source: `Request for fullscreen was denied because of Permissions Policy directives.`
-    - Suggest: `diretivas Permissions Policy.`
-    - The en-US has no space before the period; the extra space is a typography defect in the user-visible text.
-- `MediaLoadUnsupportedMimeType` — `dom/chrome/dom/dom.properties` — `MediaLoadUnsupportedMimeType` uses straight double quotes
-    - Current: `O atributo HTTP "Content-Type" de "%1$S" não é suportado. Falha no carregamento do recurso de mídia %2$S.`
-    - Source: `HTTP “Content-Type” of “%1$S” is not supported. Load of media resource %2$S failed.`
-    - The locale's quote convention is `curly-double` (588 occurrences).
-- _…and 23 more; see `state/` for the full list._
+    - The locale's quote convention is `curly-double` (594 occurrences).
+- _…and 25 more; see `state/` for the full list._
 
 ---
 
@@ -1027,8 +1074,11 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (138)
+### Fixed to date (141)
 
+- `pictureinpicture-subtitles-toggle` — `toolkit/toolkit/pictureinpicture/pictureinpicture.ftl` — fixed 2026-10-19
+- `webauthn-related-origin-create-header` — `toolkit/toolkit/webauthnDialog.ftl` — fixed 2026-10-19
+- `webauthn-related-origin-use-header` — `toolkit/toolkit/webauthnDialog.ftl` — fixed 2026-10-19
 - `about-processes-utility-actor-hw-inference` — `toolkit/toolkit/about/aboutProcesses.ftl` — fixed 2026-09-14
 - `firefox-relay-offer-legal-notice-1` — `browser/browser/browser.ftl` — fixed 2026-08-24
 - `popup-warning-exceeded-with-redirect-message` — `browser/browser/browser.ftl` — fixed 2026-08-24
@@ -1066,6 +1116,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `perplexity-callout-theme-2-title` — `browser/browser/featureCallout.ftl` — fixed 2026-08-07
 - `firefoxview-closed-tabs-description2` — `browser/browser/firefoxView.ftl` — fixed 2026-08-07
 - `genai-chatbot-summarize-sidebar-generic-subtitle` — `browser/browser/genai.ftl` — fixed 2026-08-07
-- `genai-menu-ask-provider-2` — `browser/browser/genai.ftl` — fixed 2026-08-07
-- `genai-onboarding-copilot-learn` — `browser/browser/genai.ftl` — fixed 2026-08-07
-- `link-preview-first-time-setup-message` — `browser/browser/genai.ftl` — fixed 2026-08-07

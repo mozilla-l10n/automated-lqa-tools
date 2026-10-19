@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
-| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
+| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 82 of 16,626 |
+| **Strings reviewed this run** | 139 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,50 +18,46 @@ Also for fr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (4)
 
-- `toolbar-switcher-customizable-label-v2` — `browser/browser/aiWindow.ftl` — The tooltip omits the term "fenêtre" for the Classic window, producing the ungrammatical/incomplete "entre une { -smart-window-brand-name } et classique".
-    - Current: `Basculer entre une { -smart-window-brand-name } et classique`
-    - Source: `label: { -smart-window-brand-name } switcher tooltiptext: Switch between Smart and Classic Windows`
-    - Suggest: `Basculer entre les fenêtres { -smart-window-brand-name } et classiques`
-    - en-US says "Switch between Smart and Classic Windows"; the French drops the noun for the second item, leaving "et classique" dangling without a noun.
+- `ipprotection-site-inclusions-callout-description-1` — `browser/browser/ipProtection.ftl` — The end of the sentence means "where you don't have any" instead of "where you don't want/need it".
+    - Current: `là où vous n’en avez pas.`
+    - Source: `Turn on VPN when you want extra privacy or location-based browsing, and off where you don’t.`
+    - Suggest: `là où vous n’en avez pas besoin.`
+    - The en-US "and off where you don’t" means where you don't want the VPN on. The French "là où vous n’en avez pas" cuts off the verb and reads as "where you don't have any", which makes no sense here.
+- `view-source-invalid-input-text` — `toolkit/toolkit/global/viewSource.ftl` — "Line number" is rendered as "nombre" (an amount) with no mention of a line, and the final period is missing.
+    - Current: `Le nombre spécifié est invalide`
+    - Source: `The line number entered is invalid.`
+    - Suggest: `Le numéro de ligne saisi est invalide.`
+    - The source says "The line number entered is invalid." "Nombre" means a quantity, not an identifying number ("numéro"). The word "ligne" is dropped, which doesn't match the sibling string "Saisissez le numéro de ligne". The source also ends with a full stop.
+- `tab-groups-onboarding-session-restore-title-3` — `browser/browser/newtab/onboarding.ftl` — The phrase « à tout moment » appears twice in the same sentence.
+    - Current: `Rouvrez à tout moment vos groupes d’onglets depuis le menu « Rechercher et gérer les onglets » à tout moment.`
+    - Source: `Reopen your tab groups from the “Search and manage tabs” menu anytime.`
+    - Suggest: `Rouvrez à tout moment vos groupes d’onglets depuis le menu « Rechercher et gérer les onglets ».`
+    - The en-US has 'anytime' only once. Saying « à tout moment » twice is a redundancy error that makes the sentence ungrammatical in French.
+- `SpeechRecognitionLangDefaultedToUserLanguageWarning` — `dom/chrome/dom/dom.properties` — "user’s preferred language" is rendered as "la langue préférée utilisée", which drops the user and reads awkwardly.
+    - Current: `la langue préférée utilisée`
+    - Source: `SpeechRecognition.lang is unset and this document declares no language, so speech will be recognized in the user’s preferred language. Set SpeechRecognition.lang, or a lang attribute on the document’s root element.`
+    - Suggest: `la langue préférée de l’utilisateur`
+    - The en-US says speech is recognized in the user’s preferred language. The French "la langue préférée utilisée" ("the preferred language used") leaves out whose preference it is and is unidiomatic.
+
+### ✅ Fixed since the last run (3)
+
 - `genai-prompts-summarize-page` — `browser/browser/genai.ftl` — Redundant/incorrect phrasing "résumer l’adresse web à l’adresse" instead of summarizing the webpage at the URL.
     - Current: `Veuillez résumer l’adresse web à l’adresse { $url }`
     - Source: `Please summarize the webpage at { $url } using precise and concise language. Use headers and bulleted lists in the summary, to make it scannable. Maintain the meaning and factual accuracy.`
     - Suggest: `Veuillez résumer la page web à l’adresse { $url }`
     - The source asks to summarize the webpage at $url; the French says "summarize the web address at the address $url", duplicating "adresse" and naming the wrong object.
-- `appmenuitem-relay-description2` — `browser/browser/appmenu.ftl` — "Helps prevent spam" (descriptive, hedged) rendered as an imperative "Limitez le spam", dropping the "helps" hedge and changing the statement into a user instruction.
-    - Current: `Limitez le spam dans votre boîte de réception`
-    - Source: `Helps prevent spam in your inbox`
-    - Suggest: `Aide à limiter le spam dans votre boîte de réception`
-    - The en-US is a description of what the feature does, hedged with "Helps"; the French turns it into an imperative promise to the user.
-
-### ✅ Fixed since the last run (5)
-
-- `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl` — "help keep your browsing private from others on this device" loses the "from others" element, changing the claim.
-    - Current: `Les fenêtres privées permettent de garder votre navigation privée sur cet appareil.`
-    - Source: `Private Windows help keep your browsing private from others on this device. They don’t make you anonymous or clear all of your data.`
-    - Suggest: `Les fenêtres privées permettent de préserver la confidentialité de votre navigation vis-à-vis des autres personnes qui utilisent cet appareil.`
-    - The en-US scopes the privacy benefit to other users of the device; the French implies browsing is kept private on the device generally, a broader claim than the source makes.
-- `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl` — Wrong pronoun gender/agreement: "Ils" refers to "Les fenêtres privées" (feminine plural) and should be "Elles".
-    - Current: `Ils ne vous rendent pas anonyme`
-    - Source: `Private Windows help keep your browsing private from others on this device. They don’t make you anonymous or clear all of your data.`
-    - Suggest: `Elles ne vous rendent pas anonyme`
-    - The antecedent is "Les fenêtres privées", feminine plural, so the subject pronoun must be "Elles".
-- `sync-syncing-across-devices-empty-state3` — `browser/browser/preferences/preferences.ftl` — "You aren’t syncing anything… yet" is rendered as "you don't have to sync anything", changing the meaning.
-    - Current: `Vous ne devez rien synchroniser… pour l’instant.`
-    - Source: `description: You aren’t syncing anything… yet. Choose what to sync on this device. label: Manage synced data`
-    - Suggest: `Vous ne synchronisez rien… pour l’instant.`
-    - The en-US states a fact about the current state (nothing is being synced), not an absence of obligation.
-- `autocomplete-delete-address-entry` — `toolkit/toolkit/main-window/autocomplete.ftl` — `autocomplete-delete-address-entry` uses a straight apostrophe
-    - Current: `Supprimer l'adresse { $entry }`
-    - Source: `Delete address { $entry }`
-    - The tree uses ’ 5063 times against 11 straight.
-- `autocomplete-delete-address-entry` — `toolkit/toolkit/main-window/autocomplete.ftl` — Straight apostrophe used instead of the typographic apostrophe required by the locale.
-    - Current: `Supprimer l'adresse`
-    - Source: `Delete address { $entry }`
-    - Suggest: `Supprimer l’adresse`
-    - The locale convention is the typographic apostrophe ’ (5633 vs 10).
+- `SpeechRecognitionBlockedByAIControlsWarning` — `dom/chrome/dom/dom.properties` — "AI Controls" settings section name mangled into "d’IA Controls".
+    - Current: `les paramètres d’IA Controls de l’utilisateur`
+    - Source: `On-device speech recognition is turned off in the user’s AI Controls settings, so SpeechRecognition reports itself as unavailable and refuses to start.`
+    - Suggest: `les paramètres AI Controls de l’utilisateur`
+    - The developer comment says "AI Controls" is the name of a Firefox settings section; half-translating it to "IA Controls" produces a name that does not exist and is grammatically broken.
+- `about-sync-log-row-success` — `toolkit/services/aboutSyncLog.ftl` — Em dash replaced by a colon, inconsistent with the sibling error string.
+    - Current: `Succès : { $date }`
+    - Source: `heading: Success — { $date }`
+    - Suggest: `Succès — { $date }`
+    - en-US uses "Success — { $date }" and the parallel string about-sync-log-row-error keeps the em dash in French; the locale convention is the em dash.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -71,12 +67,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `newtab-stocks-widget-menu-button2` — `browser/browser/newtab/newtab.ftl` — "Finance options" mistranslated as "Options de financement" (funding options).
-    - Current: `Options de financement`
-    - Suggest: `Options de finance`
-    - "Finance" here names the finance/stocks widget; "financement" means funding, a different concept.
+_Nothing retired._
 
 ---
 
@@ -84,8 +77,8 @@ _Nothing to re-read._
 
 | Check | Result |
 |---|---|
-| Files | 337 |
-| Strings | 16,626 |
+| Files | 338 |
+| Strings | 16,742 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -126,12 +119,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `guillemet` 1037, `straight-double` 31, `curly-double` 2, `curly-single` 1 | **guillemet** |
-| apostrophe | `typographic` 5077, `straight` 10 | **typographic** |
-| ellipsis | `char` 407 | **char** |
-| dash | `em` 42, `en` 9 | **em** |
-| nbsp | `total` 3987, `before-punctuation` 1744 | _mixed_ |
-| register | `formal` 2843 | **formal** |
+| quotes | `guillemet` 1044, `straight-double` 31, `curly-double` 2, `curly-single` 1 | **guillemet** |
+| apostrophe | `typographic` 5118, `straight` 10 | **typographic** |
+| ellipsis | `char` 409 | **char** |
+| dash | `em` 43, `en` 9 | **em** |
+| nbsp | `total` 4012, `before-punctuation` 1753 | _mixed_ |
+| register | `formal` 2858 | **formal** |
 
 ---
 
@@ -141,15 +134,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (32)
+## 3. Open findings (33)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 14 |
-| 3 | Degraded language (grammar, spelling, terminology) | 13 |
-| 4 | Cosmetic (typography, spacing) | 5 |
+| 2 | Wrong content (says something other than the English) | 15 |
+| 3 | Degraded language (grammar, spelling, terminology) | 14 |
+| 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -172,6 +165,11 @@ _Nothing in this category._
     - Source: `Turn it on when you want extra privacy or location-based browsing, and off where you don’t.`
     - Suggest: `Activez-le lorsque vous souhaitez renforcer votre confidentialité ou naviguer en fonction de votre localisation`
     - The en-US says "when you want extra privacy or location-based browsing"; the French adds "sur les sites" and reinterprets it as accessing sites from another location.
+- `ipprotection-site-inclusions-callout-description-1` — `browser/browser/ipProtection.ftl` — The end of the sentence means "where you don't have any" instead of "where you don't want/need it".
+    - Current: `là où vous n’en avez pas.`
+    - Source: `Turn on VPN when you want extra privacy or location-based browsing, and off where you don’t.`
+    - Suggest: `là où vous n’en avez pas besoin.`
+    - The en-US "and off where you don’t" means where you don't want the VPN on. The French "là où vous n’en avez pas" cuts off the verb and reads as "where you don't have any", which makes no sense here.
 - `site-rules-status-heading` — `browser/browser/ipProtection.ftl` — "Your rule" translated as "Règle personnalisée" ("Custom rule") instead of a possessive referring to the user's rule.
     - Current: `Règle personnalisée`
     - Source: `Your rule`
@@ -197,11 +195,11 @@ _Nothing in this category._
     - Source: `label: An app or service may see your encrypted traffic.`
     - Suggest: `pourrait voir votre trafic chiffré`
     - en-US says an app or service may see the traffic; "accéder à" asserts access rather than visibility.
-- `SpeechRecognitionBlockedByAIControlsWarning` — `dom/chrome/dom/dom.properties` — "AI Controls" settings section name mangled into "d’IA Controls".
-    - Current: `les paramètres d’IA Controls de l’utilisateur`
-    - Source: `On-device speech recognition is turned off in the user’s AI Controls settings, so SpeechRecognition reports itself as unavailable and refuses to start.`
-    - Suggest: `les paramètres AI Controls de l’utilisateur`
-    - The developer comment says "AI Controls" is the name of a Firefox settings section; half-translating it to "IA Controls" produces a name that does not exist and is grammatically broken.
+- `SpeechRecognitionLangDefaultedToUserLanguageWarning` — `dom/chrome/dom/dom.properties` — "user’s preferred language" is rendered as "la langue préférée utilisée", which drops the user and reads awkwardly.
+    - Current: `la langue préférée utilisée`
+    - Source: `SpeechRecognition.lang is unset and this document declares no language, so speech will be recognized in the user’s preferred language. Set SpeechRecognition.lang, or a lang attribute on the document’s root element.`
+    - Suggest: `la langue préférée de l’utilisateur`
+    - The en-US says speech is recognized in the user’s preferred language. The French "la langue préférée utilisée" ("the preferred language used") leaves out whose preference it is and is unidiomatic.
 - `PermissionsPolicyInvalidAllowValue` — `dom/chrome/security/security.properties` — "Skipping" is dropped, so the message no longer says the unsupported value is ignored.
     - Current: `Permissions Policy : valeur allow non prise en charge « %S ».`
     - Source: `Permissions Policy: Skipping unsupported allow value “%S”.`
@@ -238,11 +236,11 @@ _Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
-- `genai-prompts-summarize-page` — `browser/browser/genai.ftl` — Redundant/incorrect phrasing "résumer l’adresse web à l’adresse" instead of summarizing the webpage at the URL.
-    - Current: `Veuillez résumer l’adresse web à l’adresse { $url }`
-    - Source: `Please summarize the webpage at { $url } using precise and concise language. Use headers and bulleted lists in the summary, to make it scannable. Maintain the meaning and factual accuracy.`
-    - Suggest: `Veuillez résumer la page web à l’adresse { $url }`
-    - The source asks to summarize the webpage at $url; the French says "summarize the web address at the address $url", duplicating "adresse" and naming the wrong object.
+- `tab-groups-onboarding-session-restore-title-3` — `browser/browser/newtab/onboarding.ftl` — The phrase « à tout moment » appears twice in the same sentence.
+    - Current: `Rouvrez à tout moment vos groupes d’onglets depuis le menu « Rechercher et gérer les onglets » à tout moment.`
+    - Source: `Reopen your tab groups from the “Search and manage tabs” menu anytime.`
+    - Suggest: `Rouvrez à tout moment vos groupes d’onglets depuis le menu « Rechercher et gérer les onglets ».`
+    - The en-US has 'anytime' only once. Saying « à tout moment » twice is a redundancy error that makes the sentence ungrammatical in French.
 - `about-pdf-feature-organize-description` — `toolkit/toolkit/about/aboutPDF.ftl` — Verb "exporter" is in the infinitive instead of the imperative, breaking the list of imperatives.
     - Current: `Réorganisez, supprimez, fusionnez et exporter des pages.`
     - Source: `Reorder, remove, merge, and export pages.`
@@ -277,28 +275,28 @@ _Nothing in this category._
 - `about-processes-cpu-almost-idle` — `toolkit/toolkit/about/aboutProcesses.ftl` — about-processes-cpu-almost-idle (.title) — toolkit/toolkit/about/aboutProcesses.ftl:167 — "Temps CPU total" vs "Temps total de CPU" (lines 161/170); align.
     - Source: `(value): < 0.1% title: Total CPU time: { $total }{ $unit }`
     - Suggest: `.title`
+- `view-source-invalid-input-text` — `toolkit/toolkit/global/viewSource.ftl` — "Line number" is rendered as "nombre" (an amount) with no mention of a line, and the final period is missing.
+    - Current: `Le nombre spécifié est invalide`
+    - Source: `The line number entered is invalid.`
+    - Suggest: `Le numéro de ligne saisi est invalide.`
+    - The source says "The line number entered is invalid." "Nombre" means a quantity, not an identifying number ("numéro"). The word "ligne" is dropped, which doesn't match the sibling string "Saisissez le numéro de ligne". The source also ends with a full stop.
 
 ### E. Typography, punctuation & spacing
 
 - `felt-error-warning-download-attempt-failed-contact-admin` — `browser/browser/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
     - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
-    - The tree uses ’ 5077 times against 10 straight.
+    - The tree uses ’ 5118 times against 10 straight.
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `L’évènement « key » n’est pas disponible dans GTK2 : key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `guillemet` (1037 occurrences).
+    - The locale's quote convention is `guillemet` (1044 occurrences).
 - `WinConflict2` — `dom/chrome/dom/dom.properties` — `WinConflict2` uses straight double quotes
     - Current: `L’évènement « key » n’est pas disponible pour certaines dispositions de clavier : key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on some keyboard layouts: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `guillemet` (1037 occurrences).
-- `about-sync-log-row-success` — `toolkit/services/aboutSyncLog.ftl` — Em dash replaced by a colon, inconsistent with the sibling error string.
-    - Current: `Succès : { $date }`
-    - Source: `heading: Success — { $date }`
-    - Suggest: `Succès — { $date }`
-    - en-US uses "Success — { $date }" and the parallel string about-sync-log-row-error keeps the em dash in French; the locale convention is the em dash.
+    - The locale's quote convention is `guillemet` (1044 occurrences).
 - `felt-error-warning-download-attempt-failed-contact-admin` — `toolkit/toolkit/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
     - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
-    - The tree uses ’ 5077 times against 10 straight.
+    - The tree uses ’ 5118 times against 10 straight.
 
 ---
 
@@ -320,8 +318,11 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (69)
+### Fixed to date (72)
 
+- `genai-prompts-summarize-page` — `browser/browser/genai.ftl` — fixed 2026-10-19
+- `SpeechRecognitionBlockedByAIControlsWarning` — `dom/chrome/dom/dom.properties` — fixed 2026-10-19
+- `about-sync-log-row-success` — `toolkit/services/aboutSyncLog.ftl` — fixed 2026-10-19
 - `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl` — fixed 2026-10-12
 - `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl` — fixed 2026-10-12
 - `sync-syncing-across-devices-empty-state3` — `browser/browser/preferences/preferences.ftl` — fixed 2026-10-12
@@ -359,6 +360,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `inactive-css-border-image` — `devtools/client/tooltips.ftl` — fixed 2026-08-24
 - `learn-more` — `devtools/client/tooltips.ftl` — fixed 2026-08-24
 - `support-remote-experiments-see-about-studies` — `toolkit/toolkit/about/aboutSupport.ftl` — fixed 2026-08-24
-- `third-party-detail-occurrences` — `toolkit/toolkit/about/aboutThirdParty.ftl` — fixed 2026-08-24
-- `migration-wizard-progress-success-bookmarks` — `browser/browser/migrationWizard.ftl` — fixed 2026-07-26
-- `newtab-privacy-message-info-7` — `browser/browser/newtab/newtab.ftl` — fixed 2026-07-26

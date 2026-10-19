@@ -2,25 +2,39 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `db2cfca9d18c` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `af4e7312bee1` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
 | **Previous run** | 2026-10-16 @ `db2cfca9d18c` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,456 |
+| **Strings reviewed this run** | 65 of 16,520 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-
+Also for sv-SE: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `view-source-context-go-to-line` — `toolkit/toolkit/global/viewSource.ftl` — "Line" here is rendered as "linje", while the rest of View Source uses "rad" for a line of text.
+    - Current: `Gå till linje…`
+    - Source: `accesskey: L label: Go to Line…`
+    - Suggest: `Gå till rad…`
+    - The en-US means a line of source text, as in the dialog title "Gå till rad" and in "radnummer". "Linje" is a drawn line, so it is the wrong term and doesn't match the rest of the same feature.
+- `restore-session-startup-suggestion-message` — `browser/browser/newtab/asrouter.ftl` — Missing space between the bold heading and the following sentence.
+    - Current: `flikar?</strong>Du`
+    - Source: `<strong>Open previous tabs?</strong> You can restore your previous session from the { -brand-short-name } application menu <img data-l10n-name="icon"/>, under History.`
+    - Suggest: `flikar?</strong> Du`
+    - The en-US has a space after </strong>. Without it the rendered text reads "flikar?Du kan…" with the two sentences run together.
+- `permission.register-protocol-handler.label` — `browser/chrome/browser/sitePermissions.properties` — "Fråga för att öppna" means "ask in order to open", not "ask to open" (the site may ask whether to open app links).
+    - Current: `Fråga för att öppna applänkar`
+    - Source: `Ask to open app links`
+    - Suggest: `Fråga om att öppna applänkar`
+    - The comment says this permission controls whether the site may ask to open app links. "för att" expresses purpose, which changes the meaning. It is also inconsistent with "fråga om att öppna applänkar" in preferences.ftl.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +58,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 327 |
-| Strings | 16,456 |
-| Missing strings | 61 |
-| Obsolete strings | 1 |
-| Files absent from the locale | 1 |
+| Files | 328 |
+| Strings | 16,520 |
+| Missing strings | 0 |
+| Obsolete strings | 0 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,26 +77,7 @@ _Nothing retired._
 
 ### Completeness
 
-**61 strings** are not translated yet, concentrated in:
-
-- `toolkit/toolkit/global/viewSource.ftl` — 10
-- `browser/browser/editBookmarkOverlay.ftl` — 9
-- `browser/browser/ipProtection.ftl` — 9
-- `browser/browser/browser.ftl` — 8
-- `browser/browser/newtab/newtab.ftl` — 4
-- `browser/browser/sanitize.ftl` — 3
-- `browser/browser/sidebar.ftl` — 2
-- `browser/browser/preferences/permissions.ftl` — 2
-- `browser/browser/preferences/preferences.ftl` — 2
-- `browser/browser/newtab/asrouter.ftl` — 2
-- `toolkit/toolkit/about/aboutGlean.ftl` — 2
-- `browser/browser/confirmationHints.ftl` — 1
-
-**Files absent from the locale:**
-
-- `toolkit/toolkit/global/viewSource.ftl`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -90,9 +85,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `straight-double` 303, `curly-double` 221, `curly-single` 122 | _mixed_ |
+| quotes | `straight-double` 305, `curly-double` 221, `curly-single` 122 | _mixed_ |
 | apostrophe | `typographic` 126, `straight` 42 | **typographic** |
-| ellipsis | `char` 383, `ascii` 16 | **char** |
+| ellipsis | `char` 385, `ascii` 16 | **char** |
 | dash | `em` 67, `en` 9 | **em** |
 | nbsp | `total` 9, `before-punctuation` 2, `space-before-punctuation` 7 | _mixed_ |
 
@@ -104,15 +99,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (326)
+## 3. Open findings (329)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 212 |
-| 2 | Wrong content (says something other than the English) | 95 |
-| 3 | Degraded language (grammar, spelling, terminology) | 1 |
-| 4 | Cosmetic (typography, spacing) | 18 |
+| 2 | Wrong content (says something other than the English) | 96 |
+| 3 | Degraded language (grammar, spelling, terminology) | 2 |
+| 4 | Cosmetic (typography, spacing) | 19 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -427,6 +422,11 @@ _Nothing reported._
     - Source: `Department`
     - Suggest: `Departement`
     - The comment marks this as the primary administrative subdivision in Nicaragua and Colombia; Swedish "Avdelning" means a department of a company or store, while the administrative unit is "departement".
+- `permission.register-protocol-handler.label` — `browser/chrome/browser/sitePermissions.properties` — "Fråga för att öppna" means "ask in order to open", not "ask to open" (the site may ask whether to open app links).
+    - Current: `Fråga för att öppna applänkar`
+    - Source: `Ask to open app links`
+    - Suggest: `Fråga om att öppna applänkar`
+    - The comment says this permission controls whether the site may ask to open app links. "för att" expresses purpose, which changes the meaning. It is also inconsistent with "fråga om att öppna applänkar" in preferences.ftl.
 - `language-name-se` — `toolkit/toolkit/intl/languageNames.ftl` — "Northern Sami" rendered as the name of the whole Sami language group.
     - Current: `Samiska`
     - Source: `Northern Sami`
@@ -962,7 +962,7 @@ _Nothing reported._
     - Source: `Animation cannot be run on the compositor because the area of the frame (%1$S) is too large relative to the viewport (larger than %2$S)`
     - Suggest: `eftersom området för ramen (%1$S) är för stort`
     - “område” is neuter and requires “stort”.
-- _…and 44 more; see `state/` for the full list._
+- _…and 45 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -977,7 +977,7 @@ _Nothing reported._
 - `ai-window-delete-all-memories-message` — `browser/browser/aiFeatures.ftl` — `ai-window-delete-all-memories-message` uses three dots where this locale uses …
     - Current: `Befintliga minnen raderas. Om du inte vill skapa några nya minnen, avmarkera alternativen för "Lär dig av..." i inställningarna för { -smart-window-brand-name }.`
     - Source: `Existing memories will be deleted. If you don’t want any new memories created, uncheck the options to “Learn from…” in { -smart-window-brand-name } settings.`
-    - The tree uses … 383 times against 16 ASCII runs.
+    - The tree uses … 385 times against 16 ASCII runs.
 - `smart-window-grouped-tabs-summary` — `browser/browser/aiWindowContent.ftl` — Missing space between "till" and the count in the singular variant, producing e.g. "la till1 flik".
     - Current: `och la till{ $count } flik.`
     - Source: `{$count ->} [one] Created the group “{ $label }” and added { $count } tab. [other] Created the group “{ $label }” and added { $count } tabs.`
@@ -986,15 +986,15 @@ _Nothing reported._
 - `appmenu-help-share-ideas` — `browser/browser/appmenu.ftl` — `appmenu-help-share-ideas` uses three dots where this locale uses …
     - Current: `Dela idéer och feedback...`
     - Source: `accesskey: S label: Share Ideas and Feedback…`
-    - The tree uses … 383 times against 16 ASCII runs.
+    - The tree uses … 385 times against 16 ASCII runs.
 - `edit-popup-settings2` — `browser/browser/browser.ftl` — `edit-popup-settings2` uses three dots where this locale uses …
     - Current: `Hantera popup-inställningar och omdirigeringsinställningar för tredje part...`
     - Source: `accesskey: M label: Manage pop-up and third-party redirect settings…`
-    - The tree uses … 383 times against 16 ASCII runs.
+    - The tree uses … 385 times against 16 ASCII runs.
 - `menu-share-mac-picker-multiple` — `browser/browser/browser.ftl` — `menu-share-mac-picker-multiple` uses three dots where this locale uses …
     - Current: `Meddelanden, Mail och mer...`
     - Source: `accesskey: M label: Messages, Mail, and More…`
-    - The tree uses … 383 times against 16 ASCII runs.
+    - The tree uses … 385 times against 16 ASCII runs.
 - `restore-session-startup-suggestion-message` — `browser/browser/browser.ftl` — Missing space after the bold question, so the two sentences run together in the visible text.
     - Current: `</strong>Du kan återställa`
     - Source: `<strong>Open previous tabs?</strong> You can restore your previous session from the { -brand-short-name } application menu <img data-l10n-name="icon"/>, under History.`
@@ -1003,7 +1003,7 @@ _Nothing reported._
 - `menu-help-share-ideas` — `browser/browser/menubar.ftl` — `menu-help-share-ideas` uses three dots where this locale uses …
     - Current: `Dela idéer och feedback...`
     - Source: `accesskey: S label: Share Ideas and Feedback…`
-    - The tree uses … 383 times against 16 ASCII runs.
+    - The tree uses … 385 times against 16 ASCII runs.
 - `migration-chrome-windows-password-import-step1` — `browser/browser/migrationWizard.ftl` — Missing space before the ">" separator in the menu path.
     - Current: `Lösenord och autofyll> Googles lösenordshantering.`
     - Source: `Open the main menu <img data-l10n-name="chrome-icon-3dots"/> and go to Passwords and Autofill > Google Password Manager.`
@@ -1012,11 +1012,16 @@ _Nothing reported._
 - `cfr-doorhanger-bookmark-fxa-link-text` — `browser/browser/newtab/asrouter.ftl` — `cfr-doorhanger-bookmark-fxa-link-text` uses three dots where this locale uses …
     - Current: `Synkronisera bokmärken nu...`
     - Source: `Sync bookmarks now…`
-    - The tree uses … 383 times against 16 ASCII runs.
+    - The tree uses … 385 times against 16 ASCII runs.
+- `restore-session-startup-suggestion-message` — `browser/browser/newtab/asrouter.ftl` — Missing space between the bold heading and the following sentence.
+    - Current: `flikar?</strong>Du`
+    - Source: `<strong>Open previous tabs?</strong> You can restore your previous session from the { -brand-short-name } application menu <img data-l10n-name="icon"/>, under History.`
+    - Suggest: `flikar?</strong> Du`
+    - The en-US has a space after </strong>. Without it the rendered text reads "flikar?Du kan…" with the two sentences run together.
 - `home-mode-choice-custom-srd` — `browser/browser/newtab/newtab.ftl` — `home-mode-choice-custom-srd` uses three dots where this locale uses …
     - Current: `Anpassade webbadresser...`
     - Source: `label: Custom URLs…`
-    - The tree uses … 383 times against 16 ASCII runs.
+    - The tree uses … 385 times against 16 ASCII runs.
 - `newtab-widget-section-minimize` — `browser/browser/newtab/newtab.ftl` — The English plural "widgets" is left untranslated in the tooltip while the rest of the surface uses "widgetar".
     - Current: `Minimera widgets`
     - Source: `aria-label: Collapse all widgets to compact size title: Minimize widgets`
@@ -1025,11 +1030,11 @@ _Nothing reported._
 - `places-edit-folder2` — `browser/browser/places.ftl` — `places-edit-folder2` uses three dots where this locale uses …
     - Current: `Redigera mapp...`
     - Source: `accesskey: E label: Edit Folder…`
-    - The tree uses … 383 times against 16 ASCII runs.
+    - The tree uses … 385 times against 16 ASCII runs.
 - `browser-languages-search` — `browser/browser/preferences/languages.ftl` — `browser-languages-search` uses three dots where this locale uses …
     - Current: `Sök efter fler språk...'`
     - Source: `Search for more languages…`
-    - The tree uses … 383 times against 16 ASCII runs.
+    - The tree uses … 385 times against 16 ASCII runs.
 - `browser-languages-search` — `browser/browser/preferences/languages.ftl` — Stray apostrophe at end of the string
     - Current: `Sök efter fler språk...'`
     - Source: `Search for more languages…`
@@ -1038,15 +1043,15 @@ _Nothing reported._
 - `browser-languages-searching` — `browser/browser/preferences/languages.ftl` — `browser-languages-searching` uses three dots where this locale uses …
     - Current: `Söker efter språk...`
     - Source: `label: Searching for languages…`
-    - The tree uses … 383 times against 16 ASCII runs.
+    - The tree uses … 385 times against 16 ASCII runs.
 - `home-mode-choice-custom` — `browser/browser/preferences/preferences.ftl` — `home-mode-choice-custom` uses three dots where this locale uses …
     - Current: `Anpassade webbadresser...`
     - Source: `label: Custom URLs…`
-    - The tree uses … 383 times against 16 ASCII runs.
+    - The tree uses … 385 times against 16 ASCII runs.
 - `sync-syncing-across-devices-empty-state2` — `browser/browser/preferences/preferences.ftl` — `sync-syncing-across-devices-empty-state2` uses three dots where this locale uses …
     - Current: `Du synkroniserar ingenting ... ännu. Börja synkronisera för att få all din data på alla dina enheter.`
     - Source: `description: You aren’t syncing anything… yet. Start syncing to get all of your data on all your devices. label: Manage synced data`
-    - The tree uses … 383 times against 16 ASCII runs.
+    - The tree uses … 385 times against 16 ASCII runs.
 - `safeb-blocked-malware-page-learn-more-sumo` — `browser/browser/safebrowsing/blockedSite.ftl` — English genitive apostrophe used on the brand term
     - Current: `{ -brand-short-name }’s skydd mot nätfiske och skadlig programvara`
     - Source: `Learn more about { -brand-short-name }’s Phishing and Malware Protection at <a data-l10n-name='firefox_support'>support.mozilla.org</a>.`
@@ -1085,11 +1090,11 @@ _Nothing reported._
 - `about-debugging-sidebar-runtime-item-waiting-for-browser` — `devtools/client/aboutdebugging.ftl` — `about-debugging-sidebar-runtime-item-waiting-for-browser` uses three dots where this locale uses …
     - Current: `Väntar på webbläsare...`
     - Source: `Waiting for browser…`
-    - The tree uses … 383 times against 16 ASCII runs.
+    - The tree uses … 385 times against 16 ASCII runs.
 - `manifest-loading` — `devtools/client/application.ftl` — `manifest-loading` uses three dots where this locale uses …
     - Current: `Laddar manifest...`
     - Source: `Loading manifest…`
-    - The tree uses … 383 times against 16 ASCII runs.
+    - The tree uses … 385 times against 16 ASCII runs.
 - `collapseSources` — `devtools/client/debugger.properties` — The Sources pane is called "resurs" here but "Källor" everywhere else in the debugger.
     - Current: `Fäll ihop resurs och konturpanel`
     - Source: `Collapse Sources and Outline panes`
@@ -1108,7 +1113,7 @@ _Nothing reported._
 - `sourceSearch.search` — `devtools/client/debugger.properties` — `sourceSearch.search` uses three dots where this locale uses …
     - Current: `Sök...`
     - Source: `Search sources…`
-    - The tree uses … 383 times against 16 ASCII runs.
+    - The tree uses … 385 times against 16 ASCII runs.
 - `inspectorBreakpointSubmenu.label` — `devtools/client/inspector.properties` — "Break on…" rendered as "Avbryt vid…" (cancel at…), while the debugger uses "Bryt vid…".
     - Current: `Avbryt vid…`
     - Source: `Break on…`
@@ -1157,7 +1162,7 @@ _Nothing reported._
 - `about-reader-loading` — `toolkit/toolkit/about/aboutReader.ftl` — `about-reader-loading` uses three dots where this locale uses …
     - Current: `Laddar...`
     - Source: `Loading…`
-    - The tree uses … 383 times against 16 ASCII runs.
+    - The tree uses … 385 times against 16 ASCII runs.
 - `about-reader-loading` — `toolkit/toolkit/about/aboutReader.ftl` — Three periods instead of an ellipsis character
     - Current: `Laddar...`
     - Source: `Loading…`

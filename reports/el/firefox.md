@@ -2,25 +2,29 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `db2cfca9d18c` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `af4e7312bee1` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
 | **Previous run** | 2026-10-16 @ `db2cfca9d18c` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,408 |
+| **Strings reviewed this run** | 112 of 16,520 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-
+Also for el: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `permissions-site-app-links-desc` — `browser/browser/preferences/permissions.ftl` — "App links" is rendered as "συνδέσμων από εφαρμογές" (links from apps), which doesn't match the "συνδέσμων εφαρμογών" used in the window title and related strings.
+    - Current: `το άνοιγμα συνδέσμων από εφαρμογές`
+    - Source: `These sites are blocked from asking to open app links, like email (mailto:). Remove a site to allow it to ask again.`
+    - Suggest: `το άνοιγμα συνδέσμων εφαρμογών`
+    - App links are links that open an app (e.g. mailto:), not links that come from apps. The window title and permission strings use "συνδέσμων εφαρμογών". The "από" changes the meaning and makes the terminology inconsistent on the same surface.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +48,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 327 |
-| Strings | 16,408 |
-| Missing strings | 108 |
+| Files | 328 |
+| Strings | 16,520 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,26 +67,7 @@ _Nothing retired._
 
 ### Completeness
 
-**108 strings** are not translated yet, concentrated in:
-
-- `browser/browser/ipProtection.ftl` — 23
-- `browser/browser/policies/policies-descriptions.ftl` — 10
-- `toolkit/toolkit/global/viewSource.ftl` — 10
-- `browser/browser/browser.ftl` — 9
-- `browser/browser/editBookmarkOverlay.ftl` — 9
-- `browser/browser/newtab/onboarding.ftl` — 7
-- `browser/browser/preferences/preferences.ftl` — 5
-- `browser/browser/autoTabGrouping.ftl` — 4
-- `browser/browser/genai.ftl` — 4
-- `browser/browser/newtab/asrouter.ftl` — 4
-- `browser/browser/newtab/newtab.ftl` — 4
-- `browser/browser/sanitize.ftl` — 3
-
-**Files absent from the locale:**
-
-- `toolkit/toolkit/global/viewSource.ftl`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -90,9 +75,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `guillemet` 1004, `curly-single` 94, `straight-double` 25, `curly-double` 2 | **guillemet** |
+| quotes | `guillemet` 1013, `curly-single` 94, `straight-double` 25, `curly-double` 2 | **guillemet** |
 | apostrophe | `typographic` 98, `straight` 5 | **typographic** |
-| ellipsis | `char` 395, `ascii` 2 | **char** |
+| ellipsis | `char` 398, `ascii` 2 | **char** |
 | dash | `em` 63, `en` 2 | **em** |
 | nbsp | `total` 15, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
@@ -104,14 +89,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (210)
+## 3. Open findings (211)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 143 |
 | 2 | Wrong content (says something other than the English) | 65 |
-| 3 | Degraded language (grammar, spelling, terminology) | 0 |
+| 3 | Degraded language (grammar, spelling, terminology) | 1 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
@@ -742,6 +727,11 @@ _Nothing in this category._
     - Source: `accesskey: g label: Use system Web Proxy Auto-Discovery setting`
     - Suggest: `Χρήση ρύθμισης αυτόματης εύρεσης διακομιστή μεσολάβησης ιστού συστήματος`
     - “εεύρεσης” is a typo for “εύρεσης”.
+- `permissions-site-app-links-desc` — `browser/browser/preferences/permissions.ftl` — "App links" is rendered as "συνδέσμων από εφαρμογές" (links from apps), which doesn't match the "συνδέσμων εφαρμογών" used in the window title and related strings.
+    - Current: `το άνοιγμα συνδέσμων από εφαρμογές`
+    - Source: `These sites are blocked from asking to open app links, like email (mailto:). Remove a site to allow it to ask again.`
+    - Suggest: `το άνοιγμα συνδέσμων εφαρμογών`
+    - App links are links that open an app (e.g. mailto:), not links that come from apps. The window title and permission strings use "συνδέσμων εφαρμογών". The "από" changes the meaning and makes the terminology inconsistent on the same surface.
 - `content-blocking-baseline-exceptions-3` — `browser/browser/preferences/preferences.ftl` — Misspelled gerund “άροντας”.
     - Current: `άροντας τον αποκλεισμό μόνο των βασικών στοιχείων`
     - Source: `description: Helps load sites and features by unblocking only essential elements that may contain trackers. Covers most common problems. label: Fix major site issues (recommended)`
@@ -908,7 +898,7 @@ _Nothing in this category._
 - `about-logins-menu-menuitem-export-logins2` — `browser/browser/aboutLogins.ftl` — `about-logins-menu-menuitem-export-logins2` uses three dots where this locale uses …
     - Current: `Εξαγωγή κωδικών πρόσβασης...`
     - Source: `Export Passwords…`
-    - The tree uses … 395 times against 2 ASCII runs.
+    - The tree uses … 398 times against 2 ASCII runs.
 - `bar-tooltip-social` — `browser/browser/protections.ftl` — The plural variant of the aria-label is missing the opening parenthesis before the percentage.
     - Current: `ιχνηλάτες κοινωνικών δικτύων { $percentage }%)`
     - Source: `aria-label: {$count ->} [one] { $count } social media tracker ({ $percentage }%) [other] { $count } social media trackers ({ $percentage }%) title: Social Media Trackers`
@@ -987,7 +977,7 @@ _Nothing in this category._
 - `unknowncontenttype-other` — `toolkit/toolkit/global/unknownContentType.ftl` — `unknowncontenttype-other` uses three dots where this locale uses …
     - Current: `Άλλο...`
     - Source: `label: Other…`
-    - The tree uses … 395 times against 2 ASCII runs.
+    - The tree uses … 398 times against 2 ASCII runs.
 
 ---
 

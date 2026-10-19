@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
-| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
+| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 58 of 13,770 |
+| **Strings reviewed this run** | 42 of 13,799 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,17 +18,36 @@ Also for id: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (4)
 
-- `toolbar-button-share-tab` — `browser/browser/browser.ftl` — Stray capitalization of "Ini" mid-sentence in the tooltip.
-    - Current: `Bagikan laman Ini`
-    - Source: `label: Share tooltiptext: Share this page`
-    - Suggest: `Bagikan laman ini`
-    - "ini" is a demonstrative in the middle of a sentence; capitalizing it is a spelling/capitalization error not present in the en-US sentence case.
+- `site-data-clear-all-prompt-text` — `browser/browser/preferences/siteDataSettings.ftl` — "This may sign you out" is rendered as a certainty ("akan" = will).
+    - Current: `Ini akan mengeluarkan Anda dari situs web`
+    - Source: `Selecting ‘Clear Now’ will clear all cookies and site data stored by { -brand-short-name }. This may sign you out of websites and remove offline web content.`
+    - Suggest: `Ini mungkin akan mengeluarkan Anda dari situs web`
+    - The en-US says clearing data *may* sign the user out. The Indonesian says it will, which turns a possible side effect into a certain outcome.
+- `appmenu-search-history` — `browser/browser/appmenu.ftl` — "Search History" (the action of searching your history) is translated as the noun phrase "history of searches".
+    - Current: `Riwayat pencarian`
+    - Source: `label: Search History`
+    - Suggest: `Cari Riwayat`
+    - The developer comment says this item lets the user search through the browser's history. "Riwayat pencarian" means "search history", i.e. a record of past searches.
+- `view-source-context-wrap-long-lines` — `toolkit/toolkit/global/viewSource.ftl` — "Wrap" is rendered as "Potong" (cut), which suggests long lines are truncated rather than wrapped.
+    - Current: `Potong Baris Panjang`
+    - Source: `label: Wrap Long Lines`
+    - Suggest: `Lipat Baris Panjang`
+    - Wrapping moves the overflow onto the next line. "Potong" means cut or truncate, which is a different behaviour.
+- `appmenu-clear-history` — `browser/browser/appmenu.ftl` — The ellipsis that shows a dialog will open is missing.
+    - Current: `Bersihkan Riwayat Terakhir`
+    - Source: `label: Clear Recent History…`
+    - Suggest: `Bersihkan Riwayat Terakhir…`
+    - The en-US label ends with "…" because the item opens a dialog, and the locale uses the ellipsis character elsewhere.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `appmenu-search-history` — `browser/browser/appmenu.ftl` — "Search history" (verb) rendered as the noun "search history"
+    - Current: `Riwayat pencarian`
+    - Source: `label: Search History`
+    - Suggest: `Cari riwayat`
+    - The dev comment says "This allows to search through the browser's history", so "Search" is a verb. "Riwayat pencarian" means "history of searches", i.e. a different concept.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -48,9 +67,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 321 |
-| Strings | 13,770 |
-| Missing strings | 2,634 |
+| Files | 322 |
+| Strings | 13,799 |
+| Missing strings | 2,721 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 6 |
 | Files with no en-US counterpart | 0 |
@@ -67,20 +86,20 @@ _Nothing retired._
 
 ### Completeness
 
-**2,634 strings** are not translated yet, concentrated in:
+**2,721 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 491
-- `browser/browser/preferences/preferences.ftl` — 439
-- `browser/browser/newtab/onboarding.ftl` — 128
-- `browser/browser/ipProtection.ftl` — 120
+- `browser/browser/newtab/newtab.ftl` — 501
+- `browser/browser/preferences/preferences.ftl` — 441
+- `browser/browser/ipProtection.ftl` — 154
+- `browser/browser/newtab/onboarding.ftl` — 131
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 88
 - `browser/browser/newtab/asrouter.ftl` — 82
 - `toolkit/toolkit/about/aboutAddons.ftl` — 60
 - `browser/browser/featureCallout.ftl` — 57
 - `browser/browser/profiles.ftl` — 57
-- `toolkit/toolkit/about/aboutGlean.ftl` — 41
+- `toolkit/toolkit/about/aboutGlean.ftl` — 43
+- `browser/browser/browser.ftl` — 42
 - `browser/browser/tabbrowser.ftl` — 41
-- `browser/browser/customkeys.ftl` — 40
 
 **Files absent from the locale:**
 
@@ -99,9 +118,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 410, `straight-double` 111, `curly-single` 78 | **curly-double** |
-| apostrophe | `typographic` 88, `straight` 41 | _mixed_ |
-| ellipsis | `char` 352, `ascii` 9 | **char** |
+| quotes | `curly-double` 411, `straight-double` 111, `curly-single` 79 | **curly-double** |
+| apostrophe | `typographic` 89, `straight` 41 | _mixed_ |
+| ellipsis | `char` 353, `ascii` 9 | **char** |
 | dash | `em` 50, `en` 1 | **em** |
 | nbsp | `total` 8, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
@@ -114,15 +133,24 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (279)
+## 3. Open findings (282)
 
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+
+- `site-data-clear-all-prompt-text` — `browser/browser/preferences/siteDataSettings.ftl` — "This may sign you out" is rendered as a certainty ("akan" = will).
+    - Current: `Ini akan mengeluarkan Anda dari situs web`
+    - Source: `Selecting ‘Clear Now’ will clear all cookies and site data stored by { -brand-short-name }. This may sign you out of websites and remove offline web content.`
+    - Suggest: `Ini mungkin akan mengeluarkan Anda dari situs web`
+    - The en-US says clearing data *may* sign the user out. The Indonesian says it will, which turns a possible side effect into a certain outcome.
+
+_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 66 |
-| 2 | Wrong content (says something other than the English) | 150 |
+| 2 | Wrong content (says something other than the English) | 152 |
 | 3 | Degraded language (grammar, spelling, terminology) | 47 |
-| 4 | Cosmetic (typography, spacing) | 15 |
+| 4 | Cosmetic (typography, spacing) | 16 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -134,11 +162,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `d`
     - Source: `accesskey: d label: This isn’t a deceptive site…`
     - The label is “Ini bukan situs tipuan…”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `appmenu-search-history` — `browser/browser/appmenu.ftl` — "Search history" (verb) rendered as the noun "search history"
-    - Current: `Riwayat pencarian`
-    - Source: `label: Search history`
-    - Suggest: `Cari riwayat`
-    - The dev comment says "This allows to search through the browser's history", so "Search" is a verb. "Riwayat pencarian" means "history of searches", i.e. a different concept.
 - `default-browser-agent-task-description` — `browser/browser/backgroundtasks/defaultagent.ftl` — "Default Browser Agent" rendered as "Agen Peramban Baru" (New Browser Agent) instead of "Baku" (default).
     - Current: `Tugas Agen Peramban Baru bertugas memeriksa`
     - Source: `The Default Browser Agent task checks when the default changes from { -brand-short-name } to another browser. If the change happens under suspicious circumstances, it will prompt users to change back to { -brand-short-n…`
@@ -407,7 +430,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Block`
     - Suggest: `Blok`
     - The comment says it refers to a block of code in the scopes pane; "Blokir" means "block/ban (something)".
-- _…and 65 more; see `state/` for the full list._
+- `sourceFooter.prettyPrint.hasSourceMapMessage` — `devtools/client/debugger.properties` — "valid sourcemaps" mistranslated as "valid sourced applications".
+    - Current: `aplikasi bersumber yang valid`
+    - Source: `Can’t pretty print generated sources with valid sourcemaps. Please use the original sources.`
+    - Suggest: `peta sumber yang valid`
+    - en-US is "Can’t pretty print generated sources with valid sourcemaps"; "aplikasi bersumber" introduces an "application" that does not exist in the source.
+- _…and 64 more; see `state/` for the full list._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -446,6 +474,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `accesskey: r label: Share { -brand-product-name }`
     - Suggest: `Bagikan { -brand-product-name }`
     - The en-US source is "Share { -brand-product-name }" and the developer comment says "Share" means recommending/referring the browser; "Sembunyikan" means "Hide". Other identical strings use "Bagikan".
+- `appmenu-search-history` — `browser/browser/appmenu.ftl` — "Search History" (the action of searching your history) is translated as the noun phrase "history of searches".
+    - Current: `Riwayat pencarian`
+    - Source: `label: Search History`
+    - Suggest: `Cari Riwayat`
+    - The developer comment says this item lets the user search through the browser's history. "Riwayat pencarian" means "search history", i.e. a record of past searches.
 - `backup-error-retry` — `browser/browser/backupSettings.ftl` — The translation adds "nanti" (later), which is not in the English "Please try again".
     - Current: `Silakan coba lagi nanti.`
     - Source: `Something went wrong. Please try again.`
@@ -496,6 +529,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Townland`
     - Suggest: `Townland`
     - Per the developer comment this is the Irish sublocality unit "townland", a rural land division, not a small town ("kota kecil"); it is normally kept as "Townland".
+- `site-data-clear-all-prompt-text` — `browser/browser/preferences/siteDataSettings.ftl` — "This may sign you out" is rendered as a certainty ("akan" = will).
+    - Current: `Ini akan mengeluarkan Anda dari situs web`
+    - Source: `Selecting ‘Clear Now’ will clear all cookies and site data stored by { -brand-short-name }. This may sign you out of websites and remove offline web content.`
+    - Suggest: `Ini mungkin akan mengeluarkan Anda dari situs web`
+    - The en-US says clearing data *may* sign the user out. The Indonesian says it will, which turns a possible side effect into a certain outcome.
 - `accessibility-text-label-issue-document-title` — `devtools/client/accessibility.ftl` — The HTML element name inside <code> was translated.
     - Current: `<code>judul</code>`
     - Source: `Documents must have a <code>title</code>. <a>Learn more</a>`
@@ -531,6 +569,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `:unblock URL_STRING  Stop blocking network requests    It accepts only one argument, the exact same string previously passed to :block.`
     - Suggest: `:unblock URL_STRING`
     - `:unblock` is a literal command name; ":buka blokir" is not a valid command and even contains a space, so it cannot be typed as shown.
+- `view-source-context-wrap-long-lines` — `toolkit/toolkit/global/viewSource.ftl` — "Wrap" is rendered as "Potong" (cut), which suggests long lines are truncated rather than wrapped.
+    - Current: `Potong Baris Panjang`
+    - Source: `label: Wrap Long Lines`
+    - Suggest: `Lipat Baris Panjang`
+    - Wrapping moves the overflow onto the next line. "Potong" means cut or truncate, which is a different behaviour.
 - `language-name-lo` — `toolkit/toolkit/intl/languageNames.ftl` — Lao is rendered "Laothia", which is not an Indonesian word or language name.
     - Current: `Laothia`
     - Source: `Lao`
@@ -1086,6 +1129,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `AI can make mistakes.`
     - Suggest: `AI bisa membuat kesalahan.`
     - en-US "AI can make mistakes." ends with a period; the translation drops the sentence-final punctuation.
+- `appmenu-clear-history` — `browser/browser/appmenu.ftl` — The ellipsis that shows a dialog will open is missing.
+    - Current: `Bersihkan Riwayat Terakhir`
+    - Source: `label: Clear Recent History…`
+    - Suggest: `Bersihkan Riwayat Terakhir…`
+    - The en-US label ends with "…" because the item opens a dialog, and the locale uses the ellipsis character elsewhere.
 - `desktop-to-mobile-subtitle` — `browser/browser/newtab/onboarding.ftl` — The quoted button name does not match the actual translated button label.
     - Current: `pilih “Sinkronkan ke seluler”`
     - Source: `Scan the QR code to download { -brand-product-name } for mobile. Once installed, select “Sync to mobile” to access your passwords, bookmarks, and more on the go.`
@@ -1183,6 +1231,7 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (1)
+### Fixed to date (2)
 
+- `appmenu-search-history` — `browser/browser/appmenu.ftl` — fixed 2026-10-19
 - `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — fixed 2026-09-01

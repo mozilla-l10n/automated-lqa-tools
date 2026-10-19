@@ -2,326 +2,325 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `db2cfca9d18c` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `af4e7312bee1` |
-| **Previous run** | _none — this is the baseline_ @ `—` |
-| **Mode** | baseline |
-| **Strings reviewed this run** | 14,524 of 16,144 |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
+| **Previous run** | 2026-10-16 @ `db2cfca9d18c` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 1,642 of 16,165 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not finish this run.** It did not review 1 of 9 partition(s): platform. Re-run with --partitions platform. What it read is here and is kept; the strings it never reached are unreviewed, and the next run resumes at the first of them.
 
-
+Also for vi: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (291)
+### 🆕 New findings (206)
 
-- `default-browser-guidance-notification-body-instruction-win10` — `browser/browser/defaultBrowserNotification.ftl` — `default-browser-guidance-notification-body-instruction-win10` quotes “Trình duyệt Web” but the string it names, `desktop-entry-generic-name`, reads “Trình duyệt web”
-    - Current: `Bước 1: Đi tới Cài đặt > Ứng dụng mặc định Bước 2: Cuộn xuống đến “Trình duyệt Web” Bước 3: Chọn { -brand-short-name }`
-    - Source: `Step 1: Go to Settings > Default apps Step 2: Scroll down to “Web browser” Step 3: Select and choose { -brand-short-name }`
-    - Suggest: `Trình duyệt web`
-    - In the source this string quotes “Web browser”, which is exactly the value of `desktop-entry-generic-name` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `splitview-onboarding-callout-subtitle-1` — `browser/browser/featureCallout.ftl` — `splitview-onboarding-callout-subtitle-1` quotes “Chế độ xem cửa sổ” but the string it names, `customkeys-view-add-split-view`, reads “Chế độ chia cửa sổ”
-    - Current: `Nhấp chuột phải vào thẻ này và chọn “Chế độ xem cửa sổ” để xem hai thẻ cùng một lúc.`
-    - Source: `Right-click this tab and choose “Add Split View” to see two tabs at once.`
-    - Suggest: `Chế độ chia cửa sổ`
-    - In the source this string quotes “Add Split View”, which is exactly the value of `customkeys-view-add-split-view` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `migration-chrome-windows-password-import-step3` — `browser/browser/migrationWizard.ftl` — `migration-chrome-windows-password-import-step3` quotes “Tải tệp xuống” but the string it names, `downloadFile.label`, reads “Tải tập tin”
-    - Current: `Chọn “Tải tệp xuống” và lưu vào thiết bị của bạn.`
-    - Source: `Choose “Download file” and save it to your device.`
-    - Suggest: `Tải tập tin`
-    - In the source this string quotes “Download file”, which is exactly the value of `downloadFile.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `toolbox-local-mode-notice` — `devtools/client/toolbox.ftl` — `toolbox-local-mode-notice` quotes “Local Mode” but the string it names, `options-local-mode-label`, reads “Chế độ cục bộ (local mode)”
-    - Current: `Document này cũng có thể được tải từ “{ $url }” bằng “Local Mode” của DevTools, có thể bật trong bảng cài đặt.`
-    - Source: `This document could also be loaded from “{ $url }” using DevTools “Local Mode”, which can be enabled in the settings panel.`
-    - Suggest: `Chế độ cục bộ (local mode)`
-    - In the source this string quotes “Local Mode”, which is exactly the value of `options-local-mode-label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `permissions-site-location-disable-desc` — `browser/browser/preferences/permissions.ftl` — The second sentence says 'Blocking notifications' when it should say 'Blocking access to your location'.
-    - Current: `Chặn thông báo có thể ảnh hưởng đến một số tính năng trang web.`
-    - Source: `This will prevent any websites not listed above from requesting permission to access your location. Blocking access to your location may break some website features.`
-    - Suggest: `Chặn quyền truy cập vị trí của bạn có thể ảnh hưởng đến một số tính năng trang web.`
-    - en-US: 'Blocking access to your location may break some website features.' The text looks copied from the notification dialog, so the location dialog warns about the wrong permission.
-- `permissions-site-camera-disable-desc` — `browser/browser/preferences/permissions.ftl` — The camera dialog warns about 'Blocking notifications' when it should say 'Blocking access to your camera'.
-    - Current: `Chặn thông báo có thể ảnh hưởng đến một số tính năng trang web.`
-    - Source: `This will prevent any websites not listed above from requesting permission to access your camera. Blocking access to your camera may break some website features.`
-    - Suggest: `Chặn quyền truy cập máy ảnh của bạn có thể ảnh hưởng đến một số tính năng trang web.`
-    - en-US: 'Blocking access to your camera may break some website features.' This is the same copy-paste from the notification string.
-- `permissions-site-microphone-disable-desc` — `browser/browser/preferences/permissions.ftl` — The microphone dialog warns about 'Blocking notifications' when it should say 'Blocking access to your microphone'.
-    - Current: `Chặn thông báo có thể ảnh hưởng đến một số tính năng trang web.`
-    - Source: `This will prevent any websites not listed above from requesting permission to access your microphone. Blocking access to your microphone may break some website features.`
-    - Suggest: `Chặn quyền truy cập micrô của bạn có thể ảnh hưởng đến một số tính năng trang web.`
-    - en-US: 'Blocking access to your microphone may break some website features.' This is the same copy-paste from the notification string.
-- `site-data-removing-header` — `browser/browser/preferences/siteDataSettings.ftl` — The header says the dialog removes 'cache' and site data, but it actually removes cookies and site data.
-    - Current: `Xóa cache và dữ liệu trang`
-    - Source: `Removing Cookies and Site Data`
-    - Suggest: `Xóa cookie và dữ liệu trang`
-    - en-US: 'Removing Cookies and Site Data'. The dialog's own description and table both talk about cookies. Clearing cache is a separate, harmless action, so this header misstates what is being deleted. It is also reused as the dialog title.
-- `sitedata-option-block-unvisited` — `browser/browser/preferences/preferences.ftl` — 'Unvisited websites' is translated as 'unwanted websites'.
-    - Current: `Cookie từ các trang web không mong muốn`
-    - Source: `label: Cookies from unvisited websites`
-    - Suggest: `Cookie từ các trang web chưa từng truy cập`
-    - en-US: 'Cookies from unvisited websites'. 'không mong muốn' means unwanted, which names a different blocking criterion. The locale itself uses 'chưa từng truy cập' in preferences-etp-custom-cookie-behavior-block-unvisited.
-- `content-blocking-unvisited-cookies` — `browser/browser/preferences/preferences.ftl` — 'Unvisited sites' is translated as 'unwanted sites'.
-    - Current: `Cookie từ các trang không mong muốn`
-    - Source: `Cookies from unvisited sites`
-    - Suggest: `Cookie từ các trang chưa từng truy cập`
-    - en-US: 'Cookies from unvisited sites'. 'không mong muốn' means unwanted, not unvisited.
-- `sitedata-option-block-all` — `browser/browser/preferences/preferences.ftl` — The warning that blocking all cookies 'will cause' websites to break has been softened to 'may cause'.
-    - Current: `(có thể khiến các trang web bị hỏng)`
-    - Source: `label: All cookies (will cause websites to break)`
-    - Suggest: `(sẽ khiến các trang web bị hỏng)`
-    - en-US deliberately separates 'may cause' (all cross-site cookies) from 'will cause' (all cookies). This rendering removes that distinction. The parallel string preferences-etp-custom-cookie-behavior-block-all correctly uses 'sẽ'.
-- `search-keyword-warning-title` — `browser/browser/preferences/preferences.ftl` — 'Duplicate' (an adjective) is translated as the verb 'clone', so the title reads 'Clone Keyword'.
-    - Current: `Nhân bản Từ khóa`
-    - Source: `Duplicate Keyword`
-    - Suggest: `Từ khóa trùng lặp`
-    - The developer comment says 'Duplicate' is an adjective here. The title warns that a keyword is already in use. 'Nhân bản' means to clone or replicate.
-- `update-application-warning-cross-user-setting-2` — `browser/browser/preferences/preferences.ftl` — 'Profiles using this installation' is translated as 'by means of using this setting'.
-    - Current: `bằng cách sử dụng cài đặt { -brand-short-name } này`
-    - Source: `message: This setting will apply to all Windows accounts and { -brand-short-name } profiles using this installation of { -brand-short-name }.`
-    - Suggest: `sử dụng bản cài đặt { -brand-short-name } này`
-    - en-US: 'all Windows accounts and Firefox profiles using this installation of Firefox'. 'bằng cách sử dụng' means 'by way of', and 'cài đặt' here reads as 'setting'. The sentence no longer says the change affects every profile sharing this installation.
-- `browsing-use-cursor-navigation` — `browser/browser/preferences/preferences.ftl` — 'Always use the cursor keys' became 'Allow using the cursor', which loses both 'always' and 'keys'.
-    - Current: `Cho phép dùng con trỏ để di chuyển bên trong trang`
-    - Source: `accesskey: k label: Always use the cursor keys to navigate within pages`
-    - Suggest: `Luôn dùng các phím mũi tên để di chuyển bên trong trang`
-    - This setting is caret browsing with the arrow (cursor) keys. 'con trỏ' alone suggests the mouse pointer, and 'Cho phép' (allow) is not 'Always'.
-- `privacy-header` — `browser/browser/preferences/preferences.ftl` — 'Browser Privacy' is translated as 'Private browsing', which is a different feature.
-    - Current: `Duyệt web riêng tư`
-    - Source: `Browser Privacy`
-    - Suggest: `Quyền riêng tư của trình duyệt`
-    - The locale uses 'duyệt web riêng tư' for private browsing mode (e.g. history-private-browsing-permanent), so this header names the wrong thing.
-- `forms-saved-passwords-searchkeywords` — `browser/browser/preferences/preferences.ftl` — 'Logins for the following sites are stored' is rendered as 'Log in so that the following sites are stored'.
-    - Current: `Đăng nhập để các trang web sau đây được lưu trữ trên máy tính của bạn`
-    - Source: `Logins for the following sites are stored on your computer`
-    - Suggest: `Thông tin đăng nhập cho các trang web sau đây được lưu trữ trên máy tính của bạn`
-    - The noun 'Logins' was read as the verb 'log in', which turns the sentence into nonsense. This string is only used as search keywords, so the impact is low.
-- `autofill-address-department` — `browser/browser/preferences/formAutofill.ftl` — The administrative region 'Department' (Colombia, Nicaragua) is translated as 'Sở', which means a government agency.
-    - Current: `Sở`
-    - Source: `Department`
-    - Suggest: `Tỉnh`
-    - The comment says this is the first-level division below the country. 'Sở' means a government department or office, not a territory.
-- `httpsonly-radio-enabled-pbm` — `browser/browser/preferences/preferences.ftl` — The feature name 'HTTPS-Only Mode' loses its 'Only' and becomes 'HTTPS mode'.
-    - Current: `Chỉ kích hoạt chế độ HTTPS trong các cửa sổ riêng tư`
-    - Source: `label: Enable HTTPS-Only Mode in private windows only`
-    - Suggest: `Chỉ kích hoạt chế độ chỉ HTTPS trong các cửa sổ riêng tư`
-    - Every sibling string uses 'chế độ chỉ HTTPS'. Here 'Chỉ' was moved to the front as 'only enable', so the feature name no longer matches.
-- `content-blocking-etp-standard-tcp-rollout-description` — `browser/browser/preferences/preferences.ftl` — 'Contains' is translated literally as 'chứa' (holds), but the comment says it means isolates or limits.
-    - Current: `Trình chống cookie chung chứa các cookie cho trang web bạn đang truy cập`
-    - Source: `Total Cookie Protection contains cookies to the site you’re on, so trackers can’t use them to follow you between sites.`
-    - Suggest: `Trình chống cookie chung giới hạn cookie trong trang web bạn đang truy cập`
-    - The developer comment says 'Contains' means 'isolates', 'limits'. 'chứa các cookie cho trang web' reads as 'holds cookies for the site', which does not explain the isolation.
-- `appearance-browser-icon-requirement` — `browser/browser/preferences/browserIcon.ftl` — The phrase 'bonus fox icons' is garbled into 'biểu tượng cáo nhận thêm'.
-    - Current: `các biểu tượng cáo nhận thêm`
-    - Source: `message: Complete and unlock bonus fox icons to personalize { -brand-short-name }.`
-    - Suggest: `các biểu tượng cáo bổ sung`
-    - 'cáo nhận thêm' does not parse. It looks like a broken edit of 'cáo' (fox) followed by stray words.
-- `download-private-browsing-delete2` — `browser/browser/preferences/preferences.ftl` — The word 'bị' is doubled, which makes the sentence ungrammatical.
-    - Current: `khi bị cửa sổ bị đóng`
-    - Source: `accesskey: D label: Delete private window downloads on close`
-    - Suggest: `khi cửa sổ bị đóng`
-    - The first 'bị' is stray.
-- `browser-containers-enabled-2` — `browser/browser/preferences/preferences.ftl` — Spelling: 'ngăng' should be 'ngăn'.
-    - Current: `ngăng chứa thẻ`
-    - Source: `accesskey: n label: Use Container Tabs`
-    - Suggest: `ngăn chứa thẻ`
-    - This is a typo of the locale's container term 'ngăn chứa'.
-- `update-application-heading` — `browser/browser/preferences/preferences.ftl` — Spelling: 'cải thiên' should be 'cải thiện'.
-    - Current: `cải thiên`
-    - Source: `description: Updates improve { -brand-short-name }’s speed, stability, and security. label: { -brand-short-name } updates`
-    - Suggest: `cải thiện`
-    - Wrong tone mark.
-- `sync-mobile-promo` — `browser/browser/preferences/preferences.ftl` — Spelling: 'đồng bị' should be 'đồng bộ'.
-    - Current: `đồng bị`
-    - Source: `Download Firefox for <img data-l10n-name="android-icon"/> <a data-l10n-name="android-link">Android</a> or <img data-l10n-name="ios-icon"/> <a data-l10n-name="ios-link">iOS</a> to sync with your mobile device.`
-    - Suggest: `đồng bộ`
-    - Typo in the word for 'sync'.
-- `data-collection-link` — `browser/browser/preferences/preferences.ftl` — Spelling: 'riêng tự' should be 'riêng tư'.
-    - Current: `quyền riêng tự`
-    - Source: `View Privacy Notice`
-    - Suggest: `quyền riêng tư`
-    - Wrong tone mark on 'tư' in the Privacy Notice link.
-- `content-blocking-fingerprinters` — `browser/browser/preferences/preferences.ftl` — The English gloss in parentheses is misspelled as 'Fingerprintng'.
-    - Current: `Fingerprintng`
-    - Source: `Fingerprinters`
-    - Suggest: `Fingerprinting`
-    - A letter is missing from the user-visible parenthetical.
-- `permissions-site-location-disable-label` — `browser/browser/preferences/permissions.ftl` — Spelling: 'tru cập' should be 'truy cập'.
-    - Current: `tru cập`
-    - Source: `label: Block new requests asking to access your location`
-    - Suggest: `truy cập`
-    - A letter is missing.
-- `permissions-site-camera-disable-label` — `browser/browser/preferences/permissions.ftl` — Spelling: 'tru cập' should be 'truy cập'.
-    - Current: `tru cập`
-    - Source: `label: Block new requests asking to access your camera`
-    - Suggest: `truy cập`
-    - A letter is missing.
-- `permissions-site-microphone-disable-label` — `browser/browser/preferences/permissions.ftl` — Spelling: 'tru cập' should be 'truy cập'.
-    - Current: `tru cập`
-    - Source: `label: Block new requests asking to access your microphone`
-    - Suggest: `truy cập`
-    - A letter is missing.
-- `site-data-settings-window` — `browser/browser/preferences/siteDataSettings.ftl` — The window title has a double space between 'cookie' and 'và'.
-    - Current: `cookie  và`
-    - Source: `title: Manage Cookies and Site Data`
-    - Suggest: `cookie và`
-    - The double space is visible in the window title.
-- `set-default-menu-message-simple-layout-title-variant` — `browser/browser/newtab/asrouter.ftl` — The negation is dropped. The menu message says Firefox IS the user's default browser.
-    - Current: `{ -brand-short-name } là trình duyệt mặc định của bạn`
-    - Source: `{ -brand-short-name } is not your primary browser`
-    - Suggest: `{ -brand-short-name } không phải là trình duyệt chính của bạn`
-    - The en-US is 'Firefox is not your primary browser'. This message is shown to users for whom Firefox is not the default, so the Vietnamese tells them something false about the state of their own system.
-- `onboarding-refresh-gratitude-subtitle` — `browser/browser/newtab/onboarding.ftl` — 'Only major browser backed by a non-profit' became 'the only browser backed by a non-profit'.
-    - Current: `trình duyệt duy nhất được hỗ trợ bởi một tổ chức phi lợi nhuận`
-    - Source: `Thank you for using { -brand-short-name }, the only major browser backed by a non-profit. With your support, we’re working to make the internet safer and more accessible for everyone.`
-    - Suggest: `trình duyệt lớn duy nhất được hỗ trợ bởi một tổ chức phi lợi nhuận`
-    - Dropping 'major' turns a qualified claim into an absolute one: that no other browser at all is backed by a non-profit. The same file and asrouter.ftl keep 'lớn' in the parallel strings (welcome-back-spotlight-subtitle, onboarding-refresh-tou-pin-unchecked).
-- `smartwindow-onboarding-subtitle` — `browser/browser/newtab/onboarding.ftl` — The idiom 'without missing a beat' was rendered as 'quickly and accurately', which adds an accuracy claim for the AI feature.
-    - Current: `một cách nhanh chóng và chính xác`
-    - Source: `Summarize, compare, and ask questions without missing a beat.`
-    - Suggest: `một cách nhanh chóng, liền mạch`
-    - The en-US only says the user can summarize and ask questions smoothly. 'chính xác' (accurately) makes the product promise that its AI answers are correct, which the source never says.
-- `newtab-section-header-stories` — `browser/browser/newtab/newtab.ftl` — 'Thought-provoking stories' was rendered as 'ideologically inciting stories'.
-    - Current: `Những câu chuyện kích động tư tưởng`
-    - Source: `Thought-provoking stories`
-    - Suggest: `Những câu chuyện đáng suy ngẫm`
-    - 'kích động' means to incite or agitate and is strongly negative. The header ends up describing the recommended content as inflammatory rather than thought-provoking.
-- `cfr-doorhanger-doh-body` — `browser/browser/newtab/asrouter.ftl` — 'Your privacy matters' was rendered as 'Your privacy problem'.
-    - Current: `Vấn đề riêng tư của bạn.`
-    - Source: `Your privacy matters. { -brand-short-name } now securely routes your DNS requests whenever possible to a partner service to protect you while you browse.`
-    - Suggest: `Quyền riêng tư của bạn rất quan trọng.`
-    - 'matters' (is important) was read as the noun 'matter/issue'. The Vietnamese opens with the meaningless fragment 'Your privacy issue.'
-- `newtab-wallpaper-feature-highlight-subtitle` — `browser/browser/newtab/newtab.ftl` — 'Choose your favorite' (wallpaper) became 'choose your favorite tab'.
-    - Current: `Hãy chọn thẻ yêu thích của bạn`
-    - Source: `Choose your favorite and make every new tab feel like home.`
-    - Suggest: `Hãy chọn hình nền yêu thích của bạn`
-    - This is the wallpaper feature highlight, and 'favorite' refers to a wallpaper. 'thẻ' means tab, so the instruction makes no sense here.
-- `newtab-sports-widget-follow-teams-title` — `browser/browser/newtab/newtab.ftl` — 'Follow up to N teams' lost 'up to' and uses 'nhóm' (group) instead of 'đội' (team).
-    - Current: `Theo dõi { $number } nhóm`
-    - Source: `{$number ->} [other] Follow up to { $number } teams`
-    - Suggest: `Theo dõi tối đa { $number } đội`
-    - The variable is a maximum, but the Vietnamese tells the user to follow exactly N. 'nhóm' also clashes with 'Theo dõi đội' used for teams elsewhere in the same widget.
-- `newtab-sports-widget-watch-stream-select-games-only` — `browser/browser/newtab/newtab.ftl` — 'Select games only' (the provider streams only some matches) was rendered as the imperative 'only choose matches'.
-    - Current: `Chỉ chọn trận đấu`
-    - Source: `Select games only`
-    - Suggest: `Chỉ một số trận đấu`
-    - The comment says this tag means the provider only streams some matches. The Vietnamese reads as an instruction to the user.
-- `newtab-sports-widget-loading-more` — `browser/browser/newtab/newtab.ftl` — 'Loading more matches' (sports games) was rendered as 'loading more matching results'.
-    - Current: `Đang tải thêm kết quả phù hợp…`
-    - Source: `Loading more matches…`
-    - Suggest: `Đang tải thêm trận đấu…`
-    - The comment says the status appears while more matches (games) are being fetched. 'kết quả phù hợp' means search matches.
-- `newtab-stocks-added-to-watchlist` — `browser/browser/newtab/newtab.ftl` — The past-tense confirmation 'Added X to watchlist' was rendered as the imperative 'Add X to watchlist'.
-    - Current: `Thêm { $name } vào danh sách theo dõi`
-    - Source: `Added { $name } to watchlist`
-    - Suggest: `Đã thêm { $name } vào danh sách theo dõi`
-    - The screen reader announces this after the action is done. Without 'Đã' it sounds like the button label, not a confirmation.
-- `newtab-stocks-removed-from-watchlist` — `browser/browser/newtab/newtab.ftl` — The past-tense confirmation 'Removed X from watchlist' was rendered as the imperative 'Remove X'.
-    - Current: `Xoá { $name } khỏi danh sách theo dõi`
-    - Source: `Removed { $name } from watchlist`
-    - Suggest: `Đã xoá { $name } khỏi danh sách theo dõi`
-    - The screen reader announces this after removal. As written it is identical to the remove button's label.
-- `newtab-privacy-message-daily-cap` — `browser/browser/newtab/newtab.ftl` — '100+' lost its '+' and now states exactly 100 trackers.
-    - Current: `(100 trình theo dõi đã bị chặn hôm nay.)`
-    - Source: `(100+ trackers blocked today.) Fewer trackers means more privacy.`
-    - Suggest: `(Hơn 100 trình theo dõi đã bị chặn hôm nay.)`
-    - The comment says this is shown when the count reaches the display cap, so the real count is 100 or more.
-- `mr2022-onboarding-set-default-title` — `browser/browser/newtab/onboarding.ftl` — 'go-to browser' was rendered literally as 'access browser'.
-    - Current: `trình duyệt truy cập của bạn`
-    - Source: `Make { -brand-short-name } your go-to browser`
-    - Suggest: `trình duyệt ưa thích của bạn`
-    - 'go-to' means preferred or most-used, not 'truy cập' (access). The resulting title makes no sense.
-- `onboarding-infrequent-import-subtitle` — `browser/browser/newtab/onboarding.ftl` — 'settling in' was rendered as 'giải quyết' (resolving/solving).
-    - Current: `Cho dù bạn đang giải quyết hay chỉ ghé qua`
-    - Source: `Whether you’re settling in or just stopping by, remember you can import your bookmarks, passwords, and more.`
-    - Suggest: `Cho dù bạn định ở lại lâu dài hay chỉ ghé qua`
-    - 'giải quyết' means to solve a problem. That is unrelated to settling in as a new user.
-- `newtab-carousel-play` — `browser/browser/newtab/newtab.ftl` — Spelling error: 'Tiêp' should be 'Tiếp'.
-    - Current: `Tiêp tục tự động phát`
-    - Source: `aria-label: Resume autoplay`
-    - Suggest: `Tiếp tục tự động phát`
-    - The accent is missing on 'Tiếp'.
-- `newtab-widget-section-show-less` — `browser/browser/newtab/newtab.ftl` — Typo: 'ích' should be 'ít' (fewer).
-    - Current: `Hiện ích widget hơn`
-    - Source: `label: Show fewer widgets`
-    - Suggest: `Hiện ít widget hơn`
-    - 'Show fewer widgets' needs 'ít'. 'ích' is a different word and the label reads as garbled.
-- `windows-10-eos-challenger-callout-title` — `browser/browser/newtab/asrouter.ftl` — Typo: 'điểm nhắn' should be 'điểm nhấn'.
-    - Current: `Đó chính là điểm nhắn.`
-    - Source: `{ -brand-product-name } isn’t preloaded like other Big Tech browsers. That’s the point.`
-    - Suggest: `Đó chính là điểm nhấn.`
-    - 'điểm nhấn' (the point/highlight) is what is meant. 'nhắn' means to send a message.
-- `smartwindow-switcher-callout` — `browser/browser/newtab/onboarding.ftl` — Typo: 'thông mình' should be 'thông minh'.
-    - Current: `cửa sổ thông mình`
-    - Source: `Switch between Smart and Classic Windows anytime.`
-    - Suggest: `cửa sổ thông minh`
-    - Misspelling of 'thông minh' (smart).
-- `smartwindow-existing-user-fx-tou-body` — `browser/browser/newtab/onboarding.ftl` — Typo: 'diều khoản' should be 'điều khoản'.
-    - Current: `diều khoản sử dụng`
-    - Source: `To use { -smart-window-brand-name }, please accept the <a data-l10n-name="terms_of_use">Terms of Use</a> and updated <a data-l10n-name="privacy_notice">Privacy Notice</a>.`
-    - Suggest: `điều khoản sử dụng`
-    - 'd' was typed in place of 'đ'.
-- `policy-SkipTermsOfUse2` — `browser/browser/policies/policies-descriptions.ftl` — Typo: 'diều khoản' should be 'điều khoản'.
-    - Current: `diều khoản sử dụng thay mặt`
-    - Source: `Do not display the Terms of Use and Privacy Notice upon startup. You represent that you accept and have the authority to accept the Terms of Use on behalf of all individuals to whom you provide access to this browser.`
-    - Suggest: `điều khoản sử dụng thay mặt`
-    - 'd' was typed in place of 'đ'. The first mention in the same string is spelled correctly.
-- `policy-DisableRemoteSettingsAndAcceptSecurityConsequences` — `browser/browser/policies/policies-descriptions.ftl` — Typo: 'tự xa' should be 'từ xa' (remote).
-    - Current: `cài đặt tự xa`
-    - Source: `Disable remote settings.`
-    - Suggest: `cài đặt từ xa`
-    - 'từ xa' means remote. 'tự xa' is not a word.
-- `newtab-custom-web-notifications-toggle` — `browser/browser/newtab/newtab.ftl` — New Tab shortcuts are called 'phím tắt' (keyboard shortcuts) here, but 'lối tắt' everywhere else.
-    - Current: `trên các phím tắt của chúng`
-    - Source: `description: Show notifications from your sites on their shortcuts label: Web notifications`
-    - Suggest: `trên các lối tắt của chúng`
-    - Every other string in newtab.ftl uses 'Lối tắt' for top-site shortcuts. 'phím tắt' means keyboard shortcut.
-- `search-tags` — `browser/browser/touchbar/touchbar.ftl` — 'Tags' was rendered as 'Thẻ', the word the locale uses for tabs.
-    - Current: `Thẻ`
-    - Source: `Tags`
-    - Suggest: `Nhãn`
-    - places.ftl translates bookmark tags as 'Nhãn'. 'Thẻ' is tabs, and this button sits right next to 'Thẻ đang mở' (Open Tabs).
-- `policy-NoDefaultBookmarks` — `browser/browser/policies/policies-descriptions.ftl` — 'Recent Tags' was rendered as 'thẻ gần đây' (recent tabs).
-    - Current: `thẻ gần đây`
-    - Source: `Disable creation of the default bookmarks bundled with { -brand-short-name }, and the Smart Bookmarks (Most Visited, Recent Tags). Note: this policy is only effective if used before the first run of the profile.`
-    - Suggest: `nhãn gần đây`
-    - Elsewhere the locale translates tags as 'Nhãn'. 'thẻ' means tabs, which is a different feature.
-- `onboarding-refresh-terms-of-use-with-links` — `browser/browser/newtab/onboarding.ftl` — 'Terms of Use' was rendered as 'Điều khoản dịch vụ' (Terms of Service) instead of the locale's 'Điều khoản sử dụng'.
-    - Current: `Điều khoản dịch vụ của { -brand-product-name }`
-    - Source: `By continuing, you agree to the <a data-l10n-name="terms_of_use">{ -brand-product-name } Terms of Use</a> and our <a data-l10n-name="privacy_notice">Privacy Notice</a>. To help improve the browser, { -brand-product-name…`
-    - Suggest: `Điều khoản sử dụng của { -brand-product-name }`
-    - The same file (smartwindow-existing-user-fx-tou-title) and policies use 'Điều khoản sử dụng' for this legal document. Terms of Service is a different document name.
-- `newtab-sports-widget-message-survey-title` — `browser/browser/newtab/newtab.ftl` — Widgets are called 'tiện ích' in the survey strings, but 'widget' throughout the rest of New Tab.
-    - Current: `Giúp chúng tôi cải thiện các tiện ích`
-    - Source: `Help us make widgets better`
-    - Suggest: `Giúp chúng tôi cải thiện các widget`
-    - newtab.ftl consistently uses 'widget', and the locale uses 'tiện ích' for add-ons/extensions. Users will think the survey is about extensions. The same issue appears in the survey-widget-title and survey-widget-body strings.
-- `policy-DisableDefaultBrowserAgent` — `browser/browser/policies/policies-descriptions.ftl` — 'default browser agent' was rendered as 'tác nhân người dùng' (user agent).
-    - Current: `Ngăn chặn tác nhân người dùng trình duyệt mặc định làm bất cứ điều gì. Chỉ dành cho Windows, không có tác nhân người dùng nào khả dụng cho các nền tảng khác.`
-    - Source: `Prevent the default browser agent from taking any actions. Only applicable to Windows; other platforms don’t have the agent.`
-    - Suggest: `Ngăn chặn tác nhân trình duyệt mặc định thực hiện bất kỳ hành động nào. Chỉ áp dụng cho Windows; các nền tảng khác không có tác nhân này.`
-    - 'User agent' is a different web concept. The newer policy-DisableDefaultBrowserAgent2 correctly says 'tác nhân trình duyệt mặc định'.
-- `policy-GenerativeAI` — `browser/browser/policies/policies-descriptions.ftl` — 'generative AI' was rendered as 'AI tạo ra' ('AI created / AI that is made').
-    - Current: `Cấu hình các tính năng AI tạo ra.`
-    - Source: `Configure generative AI features.`
-    - Suggest: `Cấu hình các tính năng AI tạo sinh.`
-    - The standard Vietnamese term for generative AI is 'AI tạo sinh'. 'AI tạo ra' is ambiguous and reads as 'features AI created'.
-- `policy-DisableSafeMode` — `browser/browser/policies/policies-descriptions.ftl` — 'Disable the feature to restart in Safe Mode' was rendered as 'Turn off this feature in order to restart in safe mode'.
-    - Current: `Tắt tính năng này để khởi động lại ở chế độ an toàn.`
-    - Source: `Disable the feature to restart in Safe Mode. Note: the Shift key to enter Safe Mode can only be disabled on Windows using Group Policy.`
-    - Suggest: `Tắt tính năng khởi động lại ở chế độ an toàn.`
-    - The Vietnamese turns the policy's object into a purpose clause, so it says the opposite of what the policy does.
-- `WARN_RESTART_REQUIRED_UNINSTALL` — `browser/installer/custom.properties` — 'a previous uninstall' lost 'previous', so the restart sounds like it is for the current operation.
-    - Current: `để hoàn tất việc gỡ bỏ $BrandShortName`
-    - Source: `Your computer must be restarted to complete a previous uninstall of $BrandShortName. Do you want to reboot now?`
-    - Suggest: `để hoàn tất việc gỡ bỏ $BrandShortName trước đó`
-    - The installer is asking for a restart to finish an earlier uninstall, not the one in progress. WARN_RESTART_REQUIRED_UPGRADE has the same omission ('việc nâng cấp' should be 'việc nâng cấp ... trước đó').
-- _…and 231 more._
+- `restore-session-startup-suggestion-message` — `browser/browser/newtab/asrouter.ftl` — "Open previous tabs?" is translated in the past tense as "Đã mở các thẻ trước đó?" ("Did you open the previous tabs?").
+    - Current: `Đã mở các thẻ trước đó?`
+    - Source: `<strong>Open previous tabs?</strong> You can restore your previous session from the { -brand-short-name } application menu <img data-l10n-name="icon"/>, under History.`
+    - Suggest: `Mở các thẻ trước đó?`
+    - The source is an invitation to reopen previous tabs. "Đã" turns it into a question about something that already happened.
+- `DirTitle` — `netwerk/necko.properties` — "Index of" in a directory listing is translated as "Chỉ số", which means a numeric index or indicator.
+    - Current: `Chỉ số của %1$S`
+    - Source: `Index of %1$S`
+    - Suggest: `Danh mục của %1$S`
+    - The developer comment says this is a directory listing title, so "index" means a listing of contents, not a numeric index.
+- `view-source-context-wrap-long-lines` — `toolkit/toolkit/global/viewSource.ftl` — "Wrap" is translated as "Cắt" ("cut"), which suggests long lines are truncated rather than wrapped.
+    - Current: `Cắt những dòng dài`
+    - Source: `label: Wrap Long Lines`
+    - Suggest: `Ngắt những dòng dài`
+    - Line wrapping moves long lines onto the next line. "Cắt" implies cutting them off.
+- `CookieRejectedEmptyNameAndValue` — `netwerk/necko.properties` — "and" is translated as "or", so the condition is wrong.
+    - Current: `tên rỗng hoặc giá trị rỗng`
+    - Source: `Cookie with an empty name and an empty value has been rejected.`
+    - Suggest: `tên rỗng và giá trị rỗng`
+    - The source rejects a cookie whose name and value are both empty. "hoặc" means "or", which makes it sound like either one being empty is enough.
+- `CookieRejectedPartitionedRequiresSecure` — `netwerk/necko.properties` — "thuộc tinh" is missing the accent on "tính".
+    - Current: `thuộc tinh`
+    - Source: `Cookie “%1$S” has been rejected because it has the “Partitioned” attribute but is missing the “secure” attribute.`
+    - Suggest: `thuộc tính`
+    - Spelling error. The correct word for "attribute" is "thuộc tính", and the same sentence spells it correctly earlier.
+- `CookieRejectedAttributeExpiryOversize` — `netwerk/necko.properties` — The cookie name is in straight quotes instead of curly quotes.
+    - Current: `Cookie "%1$S"`
+    - Source: `Cookie “%1$S” has been rejected because its expiration date is over the limit.`
+    - Suggest: `Cookie “%1$S”`
+    - The locale uses curly double quotes, and so do the source and every sibling string.
+- `CookieRejectedInvalidDomain` — `netwerk/necko.properties` — "for" is translated literally as "cho" ("to/given to") where the reason "because of" is meant.
+    - Current: `đã bị từ chối cho miền không hợp lệ`
+    - Source: `Cookie “%1$S” has been rejected for invalid domain.`
+    - Suggest: `đã bị từ chối vì miền không hợp lệ`
+    - In the source, "rejected for invalid domain" gives the reason. "cho" reads as "rejected to the invalid domain". The sibling strings correctly use "vì".
+- `xpath-bad-extension-function` — `dom/dom/xslt.ftl` — "unknown" is dropped, so the message just says an XPath extension function was called.
+    - Current: `Một hàm mở rộng XPath được gọi.`
+    - Source: `An unknown XPath extension function was called.`
+    - Suggest: `Một hàm mở rộng XPath không xác định đã được gọi.`
+    - en-US reports that an unknown extension function was called. Without 'unknown' the error message has no error left in it.
+- `xpath-bad-argument-count` — `dom/dom/xslt.ftl` — Typo: "Nột" should be "Một".
+    - Current: `Nột hàm XPath`
+    - Source: `An XPath function was called with the wrong number of arguments.`
+    - Suggest: `Một hàm XPath`
+    - Spelling error: the indefinite article is 'Một'.
+- `xslt-call-to-key-not-allowed` — `dom/dom/xslt.ftl` — "key function" (the XSLT key() function) is translated as "main function".
+    - Current: `hàm chính`
+    - Source: `Call to the key function not allowed.`
+    - Suggest: `hàm key`
+    - 'key' here is the name of the XSLT key() function, not the adjective 'main'. 'hàm chính' means 'main function'.
+- `xpath-unclosed-literal` — `dom/dom/xslt.ftl` — "unclosed literal" is garbled into "unclosed wrong character".
+    - Current: `chưa đóng kí tự sai`
+    - Source: `XPath parse failure: unclosed literal:`
+    - Suggest: `chuỗi ký tự chưa được đóng`
+    - en-US means a string literal was not closed. The target adds 'sai' (wrong) and turns the literal into a single character, so the sentence makes no sense.
+- `xpath-invalid-expression-evaluated` — `dom/dom/xslt.ftl` — "Evaluating" is rendered as "Định lượng" (quantify).
+    - Current: `Định lượng biểu thức`
+    - Source: `Evaluating an invalid expression.`
+    - Suggest: `Đánh giá biểu thức`
+    - Evaluating an expression means computing it. 'Định lượng' means quantifying or measuring an amount.
+- `xpath-paren-expected` — `dom/dom/xslt.ftl` — Straight single quotes are used where the source and the locale convention use curly ones.
+    - Current: `')'`
+    - Source: `XPath parse failure: ‘)’ expected:`
+    - Suggest: `‘)’`
+    - en-US uses ‘)’. The locale convention is typographic quotes.
+- `xpath-bracket-expected` — `dom/dom/xslt.ftl` — Straight single quotes are used where the source and the locale convention use curly ones.
+    - Current: `']'`
+    - Source: `XPath parse failure: ‘]’ expected:`
+    - Suggest: `‘]’`
+    - en-US uses ‘]’. The locale convention is typographic quotes.
+- `xpath-bad-colon` — `dom/dom/xslt.ftl` — Straight single quotes are used where the source and the locale convention use curly ones.
+    - Current: `':'`
+    - Source: `XPath parse failure: ‘:’ unexpected:`
+    - Suggest: `‘:’`
+    - en-US uses ‘:’. The locale convention is typographic quotes.
+- `xpath-bad-bang` — `dom/dom/xslt.ftl` — Straight single quotes are used where the source and the locale convention use curly ones.
+    - Current: `'!'`
+    - Source: `XPath parse failure: ‘!’ unexpected, negation is not():`
+    - Suggest: `‘!’`
+    - en-US uses ‘!’. The locale convention is typographic quotes.
+- `weakCryptoUsed` — `dom/chrome/appstrings.properties` — There is an extra negation: "khỏi không bị trộm cắp" literally means "protect from not being stolen".
+    - Current: `khỏi không bị trộm cắp`
+    - Source: `The owner of %S has configured their website improperly. To protect your information from being stolen, the connection to this website has not been established.`
+    - Suggest: `khỏi bị trộm cắp`
+    - The en-US says "To protect your information from being stolen". In Vietnamese, "bảo vệ … khỏi" already means "protect from", so adding "không" makes it a double negative. The sentence is ungrammatical and, read literally, says the opposite.
+- `LengthParsingError` — `dom/chrome/mathml/mathml.properties` — The translation is garbled: it reads as 'error parsing the MathML attribute value, such as a length error' instead of 'error parsing the value as a length'.
+    - Current: `Lỗi phân tích '%1$S' giá trị thuộc tính MathML chẳng hạn như lỗi độ dài.`
+    - Source: `Error in parsing MathML attribute value ‘%1$S’ as length.  Attribute ignored.`
+    - Suggest: `Lỗi phân tích giá trị thuộc tính MathML ‘%1$S’ dưới dạng độ dài.`
+    - The source says the value could not be parsed as a length. 'chẳng hạn như lỗi độ dài' means 'such as a length error', which is a different meaning.
+- `InvalidChild` — `dom/chrome/mathml/mathml.properties` — 'is not allowed as a child of' was translated as 'is not a child of'.
+    - Current: `không phải là con của`
+    - Source: `Invalid markup: <%1$S> is not allowed as a child of <%2$S>.`
+    - Suggest: `không được phép là con của`
+    - The source says the element is not permitted as a child. The translation instead states as a fact that it is not a child, so the constraint is lost.
+- `AttributeParsingErrorNoTag` — `dom/chrome/mathml/mathml.properties` — There is a stray space before the full stop.
+    - Current: `'%2$S' .`
+    - Source: `Error in parsing the value ‘%1$S’ for ‘%2$S’ attribute.  Attribute ignored.`
+    - Suggest: `‘%2$S’.`
+    - The en-US has no space before the period, and Vietnamese punctuation does not use one.
+- `AttributeParsingError` — `dom/chrome/mathml/mathml.properties` — Straight single quotes are used instead of the locale's curly quotes.
+    - Current: `'%1$S' cho thuộc tính '%2$S'`
+    - Source: `Error in parsing the value ‘%1$S’ for ‘%2$S’ attribute of <%3$S/>.  Attribute ignored.`
+    - Suggest: `‘%1$S’ cho thuộc tính ‘%2$S’`
+    - The developer comment asks for the locale's quote conventions, and the vi tree uses curly quotes; the source also uses ‘ ’.
+- `fileAlreadyExistsError` — `dom/chrome/nsWebBrowserPersist.properties` — Straight single quotes are used instead of curly quotes.
+    - Current: `'_files'`
+    - Source: `%S could not be saved, because a file already exists with the same name as the ‘_files’ directory.  Try saving to a different location.`
+    - Suggest: `‘_files’`
+    - The source uses ‘_files’, and the locale convention is curly quotes.
+- `switch` — `dom/chrome/accessibility/AccessFu.properties` — The role name "switch" (an on/off switch control) is translated as the verb "đổi" ("to change").
+    - Current: `đổi`
+    - Source: `switch`
+    - Suggest: `công tắc`
+    - In AccessFu, "switch" is the accessibility role of an on/off switch control, and screen readers announce it as a noun. "đổi" is a verb meaning to change or swap, so it names the wrong thing. The Vietnamese noun for this control is "công tắc".
+- `mathmlroot` — `dom/chrome/accessibility/AccessFu.properties` — MathML 'root' is translated as 'gốc', which means a tree root or origin, not the math root (radical).
+    - Current: `gốc`
+    - Source: `root`
+    - Suggest: `căn`
+    - In this MathML context 'root' means an nth root (radical). The Vietnamese math term is 'căn', and the neighbouring 'square root' string already uses 'căn bậc hai'.
+- `clickAncestor` — `dom/chrome/accessibility/mac/accessible.properties` — An action meaning 'click the ancestor element' is rendered as a noun phrase, roughly 'mouse-click container'.
+    - Current: `Vùng chứa nhấp chuột`
+    - Source: `Click ancestor`
+    - Suggest: `Nhấp vào vùng chứa`
+    - The developer comment describes an action that clicks an element through its container (ancestor). 'Vùng chứa nhấp chuột' names a thing instead of an action, unlike the other action strings ('Nhấp', 'Mở', ...).
+- `uncheck` — `dom/chrome/accessibility/mac/accessible.properties` — The second word is capitalized, against Vietnamese sentence-case.
+    - Current: `Bỏ Chọn`
+    - Source: `Uncheck`
+    - Suggest: `Bỏ chọn`
+    - Vietnamese doesn't title-case. Only the first word should be capitalized, as in the other labels here, such as 'Thu gọn' and 'Mở rộng'.
+- `marquee` — `dom/chrome/accessibility/mac/accessible.properties` — The ARIA marquee role (scrolling text region) is rendered as "vùng đánh dấu" (marked/highlighted region).
+    - Current: `vùng đánh dấu`
+    - Source: `marquee`
+    - Suggest: `vùng chữ chạy`
+    - The WAI-ARIA marquee role means a live region of scrolling, non-essential information (like a ticker). "vùng đánh dấu" means a marked region, so screen-reader users hear the wrong idea, closer to a highlight or selection.
+- `WindowCloseByScriptBlockedWarning` — `dom/chrome/dom/dom.properties` — "script" is left in English and the sentence narrows "opened by a script" to windows the script itself created.
+    - Current: `Một script chỉ được phép đóng cửa sổ do nó tạo ra.`
+    - Source: `Scripts may only close windows that were opened by a script.`
+    - Suggest: `Tập lệnh chỉ được phép đóng các cửa sổ được mở bởi tập lệnh.`
+    - The rest of dom.properties renders 'script' as 'tập lệnh'. The source says any window opened by a script, not only one opened by the same script.
+- `KillAddonScriptGlobalMessage` — `dom/chrome/dom/dom.properties` — "extension script" is rendered as "tập lệnh mở rộng" (expanded script) instead of using the locale's term for extension.
+    - Current: `Ngăn tập lệnh mở rộng chạy`
+    - Source: `Prevent the extension script from running on this page until it next reloads`
+    - Suggest: `Ngăn tập lệnh của tiện ích mở rộng chạy`
+    - The locale translates 'extension' as 'tiện ích mở rộng', as in KillAddonScriptMessage. On its own, 'tập lệnh mở rộng' reads as 'extended script'.
+- `uncheck` — `dom/chrome/accessibility/unix/accessible.properties` — The second word is wrongly capitalised.
+    - Current: `Bỏ Chọn`
+    - Source: `Uncheck`
+    - Suggest: `Bỏ chọn`
+    - Vietnamese uses sentence case. Every other action label here capitalises only the first word.
+- `FormValidationDateTimeRangeOverflow` — `dom/chrome/dom/dom.properties` — "value" is translated as "ngày" (date), which is wrong when %S is a time.
+    - Current: `Vui lòng chọn một ngày không muộn hơn %S.`
+    - Source: `Please select a value that is no later than %S.`
+    - Suggest: `Vui lòng chọn một giá trị không muộn hơn %S.`
+    - The developer comment says %S may be a date or a time. Saying "a date" gives the wrong instruction on time inputs.
+- `FormValidationDateTimeRangeUnderflow` — `dom/chrome/dom/dom.properties` — "value" is translated as "ngày" (date), which is wrong when %S is a time.
+    - Current: `Vui lòng chọn một ngày không sớm hơn %S.`
+    - Source: `Please select a value that is no earlier than %S.`
+    - Suggest: `Vui lòng chọn một giá trị không sớm hơn %S.`
+    - The developer comment says %S may be a date or a time. Saying "a date" gives the wrong instruction on time inputs.
+- `FullscreenDeniedContainerNotAllowed` — `dom/chrome/dom/dom.properties` — "The document's containing elements" is translated as "một trang" (a page).
+    - Current: `có ít nhất một trang không phải là iframe`
+    - Source: `Request for fullscreen was denied because at least one of the document’s containing elements is not an iframe or does not have an “allowfullscreen” attribute.`
+    - Suggest: `có ít nhất một phần tử chứa tài liệu không phải là iframe`
+    - The source is about the elements that contain the document, not a page.
+- `FullscreenDeniedContainerNotAllowed` — `dom/chrome/dom/dom.properties` — Straight double quotes are used where the locale uses curly quotes.
+    - Current: `"allowfullscreen"`
+    - Source: `Request for fullscreen was denied because at least one of the document’s containing elements is not an iframe or does not have an “allowfullscreen” attribute.`
+    - Suggest: `“allowfullscreen”`
+    - The source and the locale convention both use curly double quotes.
+- `FullscreenDeniedNotInDocument` — `dom/chrome/dom/dom.properties` — The sentence is garbled: it says "no longer requesting element in its document".
+    - Current: `vì không còn yêu cầu yếu tố trong tài liệu của nó`
+    - Source: `Request for fullscreen was denied because requesting element is no longer in its document.`
+    - Suggest: `vì phần tử yêu cầu không còn nằm trong tài liệu của nó`
+    - The source says the requesting element is no longer in its document. The translation's word order turns this into nonsense.
+- `FullscreenDeniedMovedDocument` — `dom/chrome/dom/dom.properties` — The sentence is garbled: it says "request element has moved document".
+    - Current: `vì yêu cầu yếu tố đã di chuyển tài liệu`
+    - Source: `Request for fullscreen was denied because requesting element has moved document.`
+    - Suggest: `vì phần tử yêu cầu đã chuyển sang tài liệu khác`
+    - The source means the requesting element moved to another document. The translation inverts the word order and reads as "requested that the element moved the document".
+- `MediaElementAudioSourceNodeCrossOrigin` — `dom/chrome/dom/dom.properties` — "Cross-origin" is translated as "có nhiều tài nguyên" (has many resources).
+    - Current: `có nhiều tài nguyên`
+    - Source: `The HTMLMediaElement passed to createMediaElementSource has a cross-origin resource, the node will output silence.`
+    - Suggest: `có tài nguyên khác nguồn gốc (cross-origin)`
+    - Cross-origin means the resource comes from a different origin. It has nothing to do with how many resources there are.
+- `MediaStreamAudioSourceNodeCrossOrigin` — `dom/chrome/dom/dom.properties` — The wrong API name, createMediaElementSource, is used instead of createMediaStreamSource.
+    - Current: `createMediaElementSource`
+    - Source: `The MediaStream passed to createMediaStreamSource has a cross-origin resource, the node will output silence.`
+    - Suggest: `createMediaStreamSource`
+    - The source and the developer comment name createMediaStreamSource, and the comment says it must not be translated.
+- `MediaStreamAudioSourceNodeCrossOrigin` — `dom/chrome/dom/dom.properties` — "Cross-origin" is translated as "có nhiều tài nguyên" (has many resources).
+    - Current: `có nhiều tài nguyên`
+    - Source: `The MediaStream passed to createMediaStreamSource has a cross-origin resource, the node will output silence.`
+    - Suggest: `có tài nguyên khác nguồn gốc (cross-origin)`
+    - Cross-origin means the resource comes from a different origin, not that there are many resources.
+- `MediaStreamTrackAudioSourceNodeCrossOrigin` — `dom/chrome/dom/dom.properties` — The wrong API name, createMediaElementSource, is used instead of createMediaStreamTrackSource.
+    - Current: `createMediaElementSource`
+    - Source: `The MediaStreamTrack passed to createMediaStreamTrackSource is a cross-origin resource, the node will output silence.`
+    - Suggest: `createMediaStreamTrackSource`
+    - The source and the developer comment name createMediaStreamTrackSource, and the comment says it must not be translated.
+- `MediaStreamTrackAudioSourceNodeCrossOrigin` — `dom/chrome/dom/dom.properties` — "Is a cross-origin resource" is translated as "có nhiều tài nguyên" (has many resources).
+    - Current: `có nhiều tài nguyên`
+    - Source: `The MediaStreamTrack passed to createMediaStreamTrackSource is a cross-origin resource, the node will output silence.`
+    - Suggest: `là tài nguyên khác nguồn gốc (cross-origin)`
+    - Cross-origin means the resource comes from a different origin, not that there are many resources.
+- `ResponseTypeSyncXHRWarning` — `dom/chrome/dom/dom.properties` — "No longer supported" lost the "no longer" ("còn").
+    - Current: `không được hỗ trợ ở chế độ đồng bộ`
+    - Source: `Use of XMLHttpRequest’s responseType attribute is no longer supported in the synchronous mode in window context.`
+    - Suggest: `không còn được hỗ trợ ở chế độ đồng bộ`
+    - The source says responseType is no longer supported, which means support was removed. The translation just says it is not supported.
+- `TimeoutSyncXHRWarning` — `dom/chrome/dom/dom.properties` — "No longer" was added where the source just says "not supported".
+    - Current: `không còn được hỗ trợ`
+    - Source: `Use of XMLHttpRequest’s timeout attribute is not supported in the synchronous mode in window context.`
+    - Suggest: `không được hỗ trợ`
+    - The source says the timeout attribute is not supported in this mode. The translation says support was removed, which implies it once worked.
+- `FullscreenDeniedNotFocusedTab` — `dom/chrome/dom/dom.properties` — "Element" is rendered as "yếu tố" instead of the usual "phần tử".
+    - Current: `yếu tố yêu cầu`
+    - Source: `Request for fullscreen was denied because requesting element is not in the currently focused tab.`
+    - Suggest: `phần tử yêu cầu`
+    - The same messages elsewhere use "phần tử" for a DOM element. "Yếu tố" means factor and is wrong here.
+- `RemovedFullscreenElement` — `dom/chrome/dom/dom.properties` — "Element" is rendered as "yếu tố" instead of the usual "phần tử".
+    - Current: `yếu tố toàn màn hình`
+    - Source: `Exited fullscreen because fullscreen element was removed from document.`
+    - Suggest: `phần tử toàn màn hình`
+    - The same messages elsewhere use "phần tử" for a DOM element. "Yếu tố" means factor and is wrong here.
+- `MediaUnsupportedLibavcodec` — `dom/chrome/dom/dom.properties` — Negation dropped: the translation says the video can be played.
+    - Current: `Video trên trang này có thể được phát.`
+    - Source: `The video on this page can’t be played. Your system has an unsupported version of libavcodec`
+    - Suggest: `Video trên trang này không thể phát.`
+    - en-US says the video can't be played, but 'có thể được phát' means 'can be played'. That reverses the meaning and contradicts the next sentence about an unsupported libavcodec.
+- `MediaLoadUnsupportedMimeType` — `dom/chrome/dom/dom.properties` — The translation says the server doesn't support the Content-Type, but it is the browser that doesn't support the type the server sent.
+    - Current: `Máy chủ không hỗ trợ HTTP "Content-Type" của "%1$S".`
+    - Source: `HTTP “Content-Type” of “%1$S” is not supported. Load of media resource %2$S failed.`
+    - Suggest: `HTTP “Content-Type” “%1$S” không được hỗ trợ.`
+    - Per the developer comment, %1$S is the MIME type the web server sends. en-US says that type is not supported (by the browser). The translation puts the lack of support on the server.
+- `MediaLoadUnsupportedMimeType` — `dom/chrome/dom/dom.properties` — Straight double quotes are used instead of the locale's curly double quotes.
+    - Current: `"Content-Type" của "%1$S"`
+    - Source: `HTTP “Content-Type” of “%1$S” is not supported. Load of media resource %2$S failed.`
+    - Suggest: `“Content-Type” của “%1$S”`
+    - The locale uses curly double quotes, and the en-US source has curly quotes here too.
+- `MediaLoadUnsupportedTypeAttribute` — `dom/chrome/dom/dom.properties` — Straight double quotes are used instead of the locale's curly double quotes.
+    - Current: `"%1$S"`
+    - Source: `Specified “type” attribute of “%1$S” is not supported. Load of media resource %2$S failed.`
+    - Suggest: `“%1$S”`
+    - The locale uses curly double quotes, and the en-US source has curly quotes here too.
+- `LenientThisWarning` — `dom/chrome/dom/dom.properties` — "set" (property setter) is translated as 'tập hợp' (a collection/set), and "is incorrect" is softened to "may be incorrect".
+    - Current: `Bỏ qua nhận hoặc tập hợp các thuộc tính có [LenientThis] bởi vì đối tượng “this” có thể không chính xác.`
+    - Source: `Ignoring get or set of property that has [LenientThis] because the “this” object is incorrect.`
+    - Suggest: `Bỏ qua việc nhận hoặc đặt thuộc tính có [LenientThis] bởi vì đối tượng “this” không chính xác.`
+    - en-US means getting or setting a property, so 'set' should be 'đặt', not 'tập hợp' (a set/collection). en-US also states the object is incorrect, but the translation adds the hedge 'có thể' (may be).
+- `InterceptedNonResponseWithURL` — `dom/chrome/dom/dom.properties` — "non-Response value" is rendered as "Response value that does not respond", which reverses the meaning.
+    - Current: `giá trị Response không phản hồi`
+    - Source: `Failed to load ‘%1$S’. A ServiceWorker passed a promise to FetchEvent.respondWith() that resolved with non-Response value ‘%2$S’.`
+    - Suggest: `giá trị không phải Response`
+    - The source says the promise resolved with a value that is not a Response. The Vietnamese calls it a Response value that "does not respond", which is garbled and gets the meaning backwards.
+- `ServiceWorkerGetClientStorageError` — `dom/chrome/dom/dom.properties` — The possessive is reversed: the Vietnamese says the clients' service worker could not be loaded, instead of the service worker's clients.
+    - Current: `Không tải được service worker của (các) máy khách`
+    - Source: `Failed to get service worker’s client(s): Storage access is restricted in this context due to user settings or private browsing mode.`
+    - Suggest: `Không lấy được (các) máy khách của service worker`
+    - en-US "Failed to get service worker's client(s)" means the clients belonging to the service worker. The Vietnamese says "failed to load the service worker of the client(s)".
+- `WebExtContentScriptModuleSourceNotAllowed` — `dom/chrome/dom/dom.properties` — 'and not' is translated as 'hoặc không' ('or not'), which reverses the meaning of the restriction.
+    - Current: `với moz-extension URLs hoặc không: “%S”`
+    - Source: `WebExtension content scripts may only load modules with moz-extension URLs and not: “%S”.`
+    - Suggest: `có URL moz-extension, không được tải: “%S”`
+    - The en-US says content scripts may load only moz-extension URLs, and the URL shown is not allowed. 'hoặc không' means 'or not', so the sentence no longer says the URL is rejected.
+- `IDBObjectStoreCreateIndexLocaleWarning` — `dom/chrome/dom/dom.properties` — The option name 'locale' was translated even though the developer comment says not to translate it.
+    - Current: `Tùy chọn ‘ngôn ngữ’`
+    - Source: `The ‘locale’ option for IDBObjectStore.createIndex() is deprecated.`
+    - Suggest: `Tùy chọn ‘locale’`
+    - The comment says: Do not translate "locale". It is the literal name of an API option.
+- `IDBObjectStoreCreateIndexLocaleWarning` — `dom/chrome/dom/dom.properties` — 'is deprecated' is rendered as 'đã bị loại bỏ' ('has been removed').
+    - Current: `đã bị loại bỏ`
+    - Source: `The ‘locale’ option for IDBObjectStore.createIndex() is deprecated.`
+    - Suggest: `đã dừng phát triển`
+    - Deprecated means the option still exists but is discouraged, not that it has been removed. Elsewhere in this file the locale uses 'đã dừng phát triển' for 'deprecated'.
+- `SVGDeselectAllWarning` — `dom/chrome/dom/dom.properties` — 'is deprecated' is rendered as 'đã bị loại bỏ' ('has been removed').
+    - Current: `đã bị loại bỏ`
+    - Source: `SVGSVGElement.deselectAll is deprecated as it duplicates functionality from the Selection API.`
+    - Suggest: `đã dừng phát triển`
+    - Deprecated means the method still exists but is discouraged, not that it has been removed. Elsewhere in this file the locale uses 'đã dừng phát triển' for 'deprecated'.
+- `InitMouseEventWarning` — `dom/chrome/dom/dom.properties` — Typo: "dừng" (stop) used instead of "dùng" (use), so the text says "no longer stopped".
+    - Current: `không còn được dừng nữa`
+    - Source: `initMouseEvent() is deprecated. Use the MouseEvent() constructor instead.`
+    - Suggest: `không còn được dùng nữa`
+    - en-US says initMouseEvent() is deprecated; the sibling string InitNSMouseEventWarning correctly uses "không còn được dùng nữa". "dừng" changes the meaning to "no longer stopped".
+- `DeprecatedTestingInterfaceWarning` — `dom/chrome/dom/dom.properties` — Message translated despite the developer note saying not to translate this testing-only string.
+    - Current: `TestingDeprecatedInterface là giao diện chỉ thử nghiệm và đây là thông báo thử nghiệm đã dừng phát triển.`
+    - Source: `TestingDeprecatedInterface is a testing-only interface and this is its testing deprecation message.`
+    - Suggest: `TestingDeprecatedInterface is a testing-only interface and this is its testing deprecation message.`
+    - Developer comment: "Do not translate this message. It's just testing only."
+- `DeprecatedTestingMethodWarning` — `dom/chrome/dom/dom.properties` — Message translated despite the developer note saying not to translate this testing-only string.
+    - Current: `TestingDeprecatedInterface.deprecatedMethod() là phương thức chỉ thử nghiệm và đây là thông báo thử nghiệm đã dừng phát triển.`
+    - Source: `TestingDeprecatedInterface.deprecatedMethod() is a testing-only method and this is its testing deprecation message.`
+    - Suggest: `TestingDeprecatedInterface.deprecatedMethod() is a testing-only method and this is its testing deprecation message.`
+    - Developer comment: "Do not translate this message. It's just testing only."
+- `DeprecatedTestingAttributeWarning` — `dom/chrome/dom/dom.properties` — Message translated despite the developer note saying not to translate this testing-only string.
+    - Current: `TestingDeprecatedInterface.deprecatedAttribute là thuộc tính chỉ thử nghiệm và đây là thông báo thử nghiệm đã dừng phát triển.`
+    - Source: `TestingDeprecatedInterface.deprecatedAttribute is a testing-only attribute and this is its testing deprecation message.`
+    - Suggest: `TestingDeprecatedInterface.deprecatedAttribute is a testing-only attribute and this is its testing deprecation message.`
+    - Developer comment: "Do not translate this message. It's just testing only."
+- _…and 146 more._
 
 ### ✅ Fixed since the last run (0)
 
@@ -345,11 +344,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 327 |
-| Strings | 16,144 |
-| Missing strings | 373 |
-| Obsolete strings | 1 |
-| Files absent from the locale | 1 |
+| Files | 328 |
+| Strings | 16,165 |
+| Missing strings | 355 |
+| Obsolete strings | 0 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -358,13 +357,13 @@ _Nothing retired._
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 4 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 548 |
+| Access keys not in their label | 549 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 73 |
 
 ### Completeness
 
-**373 strings** are not translated yet, concentrated in:
+**355 strings** are not translated yet, concentrated in:
 
 - `devtools/client/debugger.properties` — 57
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 40
@@ -377,11 +376,7 @@ _Nothing retired._
 - `toolkit/toolkit/about/aboutGlean.ftl` — 13
 - `devtools/client/perftools.ftl` — 11
 - `dom/chrome/accessibility/AccessFu.properties` — 10
-- `toolkit/toolkit/global/viewSource.ftl` — 10
-
-**Files absent from the locale:**
-
-- `toolkit/toolkit/global/viewSource.ftl`
+- `devtools/shared/webconsole.properties` — 9
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -393,7 +388,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 493, `curly-single` 133, `straight-double` 88 | **curly-double** |
 | apostrophe | `typographic` 134, `straight` 12 | **typographic** |
-| ellipsis | `char` 374, `ascii` 18 | **char** |
+| ellipsis | `char` 375, `ascii` 18 | **char** |
 | dash | `em` 67, `en` 3 | **em** |
 | nbsp | `space-before-punctuation` 6 | **space-before-punctuation** |
 
@@ -401,22 +396,41 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ## 2. Systemic items (decisions, not line items)
 
-- **accesskey — 548 strings** — 548 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
-    - Affected: `addon-install-accept-button`, `addon-install-cancel-button`, `addon-manage-extensions-shortcuts`, `addon-open-about-debugging`, `addon-updates-reset-updates-to-automatic`, `addon-updates-reset-updates-to-manual`, `addon-updates-update-addons-automatically`, `addon-updates-view-updates`, `addressbar-locbar-bookmarks-option`, `addressbar-locbar-clipboard-option`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-openpage-option` …and 529 more
+- **accesskey — 549 strings** — 549 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
+    - Affected: `addon-install-accept-button`, `addon-install-cancel-button`, `addon-manage-extensions-shortcuts`, `addon-open-about-debugging`, `addon-updates-reset-updates-to-automatic`, `addon-updates-reset-updates-to-manual`, `addon-updates-update-addons-automatically`, `addon-updates-view-updates`, `addressbar-locbar-bookmarks-option`, `addressbar-locbar-clipboard-option`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-openpage-option` …and 530 more
 - **typography — 73 strings** — 73 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
     - Affected: `BlockMixedActiveContent`, `BlockMixedDisplayContent`, `CookieRejectedAttributeExpiryOversize`, `FullscreenDeniedContainerNotAllowed`, `MediaLoadUnsupportedMimeType`, `MediaLoadUnsupportedTypeAttribute`, `MimeNotCss`, `MimeNotCssWarn`, `about-debugging-network-location-form-duplicate`, `about-debugging-network-location-form-invalid`, `about-debugging-setup-usb-status-updating`, `about-debugging-setup-usb-updating-button` …and 60 more
 
 ---
 
-## 3. Open findings (291)
+## 3. Open findings (497)
 
+> **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+
+- `TimeoutSyncXHRWarning` — `dom/chrome/dom/dom.properties` — "No longer" was added where the source just says "not supported".
+    - Current: `không còn được hỗ trợ`
+    - Source: `Use of XMLHttpRequest’s timeout attribute is not supported in the synchronous mode in window context.`
+    - Suggest: `không được hỗ trợ`
+    - The source says the timeout attribute is not supported in this mode. The translation says support was removed, which implies it once worked.
+- `pageInfo_Privacy_Encrypted2` — `security/manager/chrome/pippki/pippki.properties` — "It is unlikely that anyone read this page" was rendered as "no one could read this page", which turns a likelihood into a guarantee.
+    - Current: `Do đó, không ai có thể đọc trang này khi nó di chuyển trên mạng.`
+    - Source: `Encryption makes it difficult for unauthorized people to view information traveling between computers. It is therefore unlikely that anyone read this page as it traveled across the network.`
+    - Suggest: `Do đó, khó có khả năng ai đó đã đọc được trang này khi nó di chuyển trên mạng.`
+    - The en-US only says it is unlikely that someone read the page. The Vietnamese says nobody could read it, which is an absolute security promise the product does not make.
+- `reset-primary-password-text` — `security/manager/security/pippki/pippki.ftl` — The translation adds "form data" to the list of things deleted when resetting the Primary Password, which the source never mentions.
+    - Current: `toàn bộ các mật khẩu web, email, dữ liệu biểu mẫu, chứng chỉ và khóa cá nhân đã lưu`
+    - Source: `If you reset your Primary Password, all your stored web and e-mail passwords, personal certificates, and private keys will be forgotten. Are you sure you want to reset your Primary Password?`
+    - Suggest: `toàn bộ các mật khẩu web và email, chứng chỉ cá nhân và khóa riêng đã lưu`
+    - The en-US lists only stored web and e-mail passwords, personal certificates and private keys. The Vietnamese adds form data, so the dialog claims Firefox will delete more than it does.
+
+_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 214 |
-| 2 | Wrong content (says something other than the English) | 77 |
-| 3 | Degraded language (grammar, spelling, terminology) | 0 |
-| 4 | Cosmetic (typography, spacing) | 0 |
+| 2 | Wrong content (says something other than the English) | 180 |
+| 3 | Degraded language (grammar, spelling, terminology) | 60 |
+| 4 | Cosmetic (typography, spacing) | 43 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -724,7 +738,307 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-_Nothing in this category._
+- `restore-session-startup-suggestion-message` — `browser/browser/newtab/asrouter.ftl` — "Open previous tabs?" is translated in the past tense as "Đã mở các thẻ trước đó?" ("Did you open the previous tabs?").
+    - Current: `Đã mở các thẻ trước đó?`
+    - Source: `<strong>Open previous tabs?</strong> You can restore your previous session from the { -brand-short-name } application menu <img data-l10n-name="icon"/>, under History.`
+    - Suggest: `Mở các thẻ trước đó?`
+    - The source is an invitation to reopen previous tabs. "Đã" turns it into a question about something that already happened.
+- `mathmlroot` — `dom/chrome/accessibility/AccessFu.properties` — MathML 'root' is translated as 'gốc', which means a tree root or origin, not the math root (radical).
+    - Current: `gốc`
+    - Source: `root`
+    - Suggest: `căn`
+    - In this MathML context 'root' means an nth root (radical). The Vietnamese math term is 'căn', and the neighbouring 'square root' string already uses 'căn bậc hai'.
+- `switch` — `dom/chrome/accessibility/AccessFu.properties` — The role name "switch" (an on/off switch control) is translated as the verb "đổi" ("to change").
+    - Current: `đổi`
+    - Source: `switch`
+    - Suggest: `công tắc`
+    - In AccessFu, "switch" is the accessibility role of an on/off switch control, and screen readers announce it as a noun. "đổi" is a verb meaning to change or swap, so it names the wrong thing. The Vietnamese noun for this control is "công tắc".
+- `clickAncestor` — `dom/chrome/accessibility/mac/accessible.properties` — An action meaning 'click the ancestor element' is rendered as a noun phrase, roughly 'mouse-click container'.
+    - Current: `Vùng chứa nhấp chuột`
+    - Source: `Click ancestor`
+    - Suggest: `Nhấp vào vùng chứa`
+    - The developer comment describes an action that clicks an element through its container (ancestor). 'Vùng chứa nhấp chuột' names a thing instead of an action, unlike the other action strings ('Nhấp', 'Mở', ...).
+- `marquee` — `dom/chrome/accessibility/mac/accessible.properties` — The ARIA marquee role (scrolling text region) is rendered as "vùng đánh dấu" (marked/highlighted region).
+    - Current: `vùng đánh dấu`
+    - Source: `marquee`
+    - Suggest: `vùng chữ chạy`
+    - The WAI-ARIA marquee role means a live region of scrolling, non-essential information (like a ticker). "vùng đánh dấu" means a marked region, so screen-reader users hear the wrong idea, closer to a highlight or selection.
+- `DeprecatedTestingAttributeWarning` — `dom/chrome/dom/dom.properties` — Message translated despite the developer note saying not to translate this testing-only string.
+    - Current: `TestingDeprecatedInterface.deprecatedAttribute là thuộc tính chỉ thử nghiệm và đây là thông báo thử nghiệm đã dừng phát triển.`
+    - Source: `TestingDeprecatedInterface.deprecatedAttribute is a testing-only attribute and this is its testing deprecation message.`
+    - Suggest: `TestingDeprecatedInterface.deprecatedAttribute is a testing-only attribute and this is its testing deprecation message.`
+    - Developer comment: "Do not translate this message. It's just testing only."
+- `DeprecatedTestingInterfaceWarning` — `dom/chrome/dom/dom.properties` — Message translated despite the developer note saying not to translate this testing-only string.
+    - Current: `TestingDeprecatedInterface là giao diện chỉ thử nghiệm và đây là thông báo thử nghiệm đã dừng phát triển.`
+    - Source: `TestingDeprecatedInterface is a testing-only interface and this is its testing deprecation message.`
+    - Suggest: `TestingDeprecatedInterface is a testing-only interface and this is its testing deprecation message.`
+    - Developer comment: "Do not translate this message. It's just testing only."
+- `DeprecatedTestingMethodWarning` — `dom/chrome/dom/dom.properties` — Message translated despite the developer note saying not to translate this testing-only string.
+    - Current: `TestingDeprecatedInterface.deprecatedMethod() là phương thức chỉ thử nghiệm và đây là thông báo thử nghiệm đã dừng phát triển.`
+    - Source: `TestingDeprecatedInterface.deprecatedMethod() is a testing-only method and this is its testing deprecation message.`
+    - Suggest: `TestingDeprecatedInterface.deprecatedMethod() is a testing-only method and this is its testing deprecation message.`
+    - Developer comment: "Do not translate this message. It's just testing only."
+- `FormValidationDateTimeRangeOverflow` — `dom/chrome/dom/dom.properties` — "value" is translated as "ngày" (date), which is wrong when %S is a time.
+    - Current: `Vui lòng chọn một ngày không muộn hơn %S.`
+    - Source: `Please select a value that is no later than %S.`
+    - Suggest: `Vui lòng chọn một giá trị không muộn hơn %S.`
+    - The developer comment says %S may be a date or a time. Saying "a date" gives the wrong instruction on time inputs.
+- `FormValidationDateTimeRangeUnderflow` — `dom/chrome/dom/dom.properties` — "value" is translated as "ngày" (date), which is wrong when %S is a time.
+    - Current: `Vui lòng chọn một ngày không sớm hơn %S.`
+    - Source: `Please select a value that is no earlier than %S.`
+    - Suggest: `Vui lòng chọn một giá trị không sớm hơn %S.`
+    - The developer comment says %S may be a date or a time. Saying "a date" gives the wrong instruction on time inputs.
+- `FullscreenDeniedContainerNotAllowed` — `dom/chrome/dom/dom.properties` — "The document's containing elements" is translated as "một trang" (a page).
+    - Current: `có ít nhất một trang không phải là iframe`
+    - Source: `Request for fullscreen was denied because at least one of the document’s containing elements is not an iframe or does not have an “allowfullscreen” attribute.`
+    - Suggest: `có ít nhất một phần tử chứa tài liệu không phải là iframe`
+    - The source is about the elements that contain the document, not a page.
+- `FullscreenDeniedMovedDocument` — `dom/chrome/dom/dom.properties` — The sentence is garbled: it says "request element has moved document".
+    - Current: `vì yêu cầu yếu tố đã di chuyển tài liệu`
+    - Source: `Request for fullscreen was denied because requesting element has moved document.`
+    - Suggest: `vì phần tử yêu cầu đã chuyển sang tài liệu khác`
+    - The source means the requesting element moved to another document. The translation inverts the word order and reads as "requested that the element moved the document".
+- `FullscreenDeniedNotInDocument` — `dom/chrome/dom/dom.properties` — The sentence is garbled: it says "no longer requesting element in its document".
+    - Current: `vì không còn yêu cầu yếu tố trong tài liệu của nó`
+    - Source: `Request for fullscreen was denied because requesting element is no longer in its document.`
+    - Suggest: `vì phần tử yêu cầu không còn nằm trong tài liệu của nó`
+    - The source says the requesting element is no longer in its document. The translation's word order turns this into nonsense.
+- `IDBObjectStoreCreateIndexLocaleWarning` — `dom/chrome/dom/dom.properties` — The option name 'locale' was translated even though the developer comment says not to translate it.
+    - Current: `Tùy chọn ‘ngôn ngữ’`
+    - Source: `The ‘locale’ option for IDBObjectStore.createIndex() is deprecated.`
+    - Suggest: `Tùy chọn ‘locale’`
+    - The comment says: Do not translate "locale". It is the literal name of an API option.
+- `IDBObjectStoreCreateIndexLocaleWarning` — `dom/chrome/dom/dom.properties` — 'is deprecated' is rendered as 'đã bị loại bỏ' ('has been removed').
+    - Current: `đã bị loại bỏ`
+    - Source: `The ‘locale’ option for IDBObjectStore.createIndex() is deprecated.`
+    - Suggest: `đã dừng phát triển`
+    - Deprecated means the option still exists but is discouraged, not that it has been removed. Elsewhere in this file the locale uses 'đã dừng phát triển' for 'deprecated'.
+- `InterceptedNonResponseWithURL` — `dom/chrome/dom/dom.properties` — "non-Response value" is rendered as "Response value that does not respond", which reverses the meaning.
+    - Current: `giá trị Response không phản hồi`
+    - Source: `Failed to load ‘%1$S’. A ServiceWorker passed a promise to FetchEvent.respondWith() that resolved with non-Response value ‘%2$S’.`
+    - Suggest: `giá trị không phải Response`
+    - The source says the promise resolved with a value that is not a Response. The Vietnamese calls it a Response value that "does not respond", which is garbled and gets the meaning backwards.
+- `LenientThisWarning` — `dom/chrome/dom/dom.properties` — "set" (property setter) is translated as 'tập hợp' (a collection/set), and "is incorrect" is softened to "may be incorrect".
+    - Current: `Bỏ qua nhận hoặc tập hợp các thuộc tính có [LenientThis] bởi vì đối tượng “this” có thể không chính xác.`
+    - Source: `Ignoring get or set of property that has [LenientThis] because the “this” object is incorrect.`
+    - Suggest: `Bỏ qua việc nhận hoặc đặt thuộc tính có [LenientThis] bởi vì đối tượng “this” không chính xác.`
+    - en-US means getting or setting a property, so 'set' should be 'đặt', not 'tập hợp' (a set/collection). en-US also states the object is incorrect, but the translation adds the hedge 'có thể' (may be).
+- `LocChangeFloodingPrevented` — `dom/chrome/dom/dom.properties` — "Location" and "History" API names were translated even though the developer comment says not to.
+    - Current: `các API vị trí hoặc lịch sử`
+    - Source: `Too many calls to Location or History APIs within a short timeframe.`
+    - Suggest: `các API Location hoặc History`
+    - The developer comment says: Do not translate "Location" and "History". These are web API names.
+- `MediaElementAudioSourceNodeCrossOrigin` — `dom/chrome/dom/dom.properties` — "Cross-origin" is translated as "có nhiều tài nguyên" (has many resources).
+    - Current: `có nhiều tài nguyên`
+    - Source: `The HTMLMediaElement passed to createMediaElementSource has a cross-origin resource, the node will output silence.`
+    - Suggest: `có tài nguyên khác nguồn gốc (cross-origin)`
+    - Cross-origin means the resource comes from a different origin. It has nothing to do with how many resources there are.
+- `MediaLoadUnsupportedMimeType` — `dom/chrome/dom/dom.properties` — The translation says the server doesn't support the Content-Type, but it is the browser that doesn't support the type the server sent.
+    - Current: `Máy chủ không hỗ trợ HTTP "Content-Type" của "%1$S".`
+    - Source: `HTTP “Content-Type” of “%1$S” is not supported. Load of media resource %2$S failed.`
+    - Suggest: `HTTP “Content-Type” “%1$S” không được hỗ trợ.`
+    - Per the developer comment, %1$S is the MIME type the web server sends. en-US says that type is not supported (by the browser). The translation puts the lack of support on the server.
+- `MediaStreamAudioSourceNodeCrossOrigin` — `dom/chrome/dom/dom.properties` — The wrong API name, createMediaElementSource, is used instead of createMediaStreamSource.
+    - Current: `createMediaElementSource`
+    - Source: `The MediaStream passed to createMediaStreamSource has a cross-origin resource, the node will output silence.`
+    - Suggest: `createMediaStreamSource`
+    - The source and the developer comment name createMediaStreamSource, and the comment says it must not be translated.
+- `MediaStreamAudioSourceNodeCrossOrigin` — `dom/chrome/dom/dom.properties` — "Cross-origin" is translated as "có nhiều tài nguyên" (has many resources).
+    - Current: `có nhiều tài nguyên`
+    - Source: `The MediaStream passed to createMediaStreamSource has a cross-origin resource, the node will output silence.`
+    - Suggest: `có tài nguyên khác nguồn gốc (cross-origin)`
+    - Cross-origin means the resource comes from a different origin, not that there are many resources.
+- `MediaStreamTrackAudioSourceNodeCrossOrigin` — `dom/chrome/dom/dom.properties` — The wrong API name, createMediaElementSource, is used instead of createMediaStreamTrackSource.
+    - Current: `createMediaElementSource`
+    - Source: `The MediaStreamTrack passed to createMediaStreamTrackSource is a cross-origin resource, the node will output silence.`
+    - Suggest: `createMediaStreamTrackSource`
+    - The source and the developer comment name createMediaStreamTrackSource, and the comment says it must not be translated.
+- `MediaStreamTrackAudioSourceNodeCrossOrigin` — `dom/chrome/dom/dom.properties` — "Is a cross-origin resource" is translated as "có nhiều tài nguyên" (has many resources).
+    - Current: `có nhiều tài nguyên`
+    - Source: `The MediaStreamTrack passed to createMediaStreamTrackSource is a cross-origin resource, the node will output silence.`
+    - Suggest: `là tài nguyên khác nguồn gốc (cross-origin)`
+    - Cross-origin means the resource comes from a different origin, not that there are many resources.
+- `MediaUnsupportedLibavcodec` — `dom/chrome/dom/dom.properties` — Negation dropped: the translation says the video can be played.
+    - Current: `Video trên trang này có thể được phát.`
+    - Source: `The video on this page can’t be played. Your system has an unsupported version of libavcodec`
+    - Suggest: `Video trên trang này không thể phát.`
+    - en-US says the video can't be played, but 'có thể được phát' means 'can be played'. That reverses the meaning and contradicts the next sentence about an unsupported libavcodec.
+- `ResponseTypeSyncXHRWarning` — `dom/chrome/dom/dom.properties` — "No longer supported" lost the "no longer" ("còn").
+    - Current: `không được hỗ trợ ở chế độ đồng bộ`
+    - Source: `Use of XMLHttpRequest’s responseType attribute is no longer supported in the synchronous mode in window context.`
+    - Suggest: `không còn được hỗ trợ ở chế độ đồng bộ`
+    - The source says responseType is no longer supported, which means support was removed. The translation just says it is not supported.
+- `SVGDeselectAllWarning` — `dom/chrome/dom/dom.properties` — 'is deprecated' is rendered as 'đã bị loại bỏ' ('has been removed').
+    - Current: `đã bị loại bỏ`
+    - Source: `SVGSVGElement.deselectAll is deprecated as it duplicates functionality from the Selection API.`
+    - Suggest: `đã dừng phát triển`
+    - Deprecated means the method still exists but is discouraged, not that it has been removed. Elsewhere in this file the locale uses 'đã dừng phát triển' for 'deprecated'.
+- `ServiceWorkerGetClientStorageError` — `dom/chrome/dom/dom.properties` — The possessive is reversed: the Vietnamese says the clients' service worker could not be loaded, instead of the service worker's clients.
+    - Current: `Không tải được service worker của (các) máy khách`
+    - Source: `Failed to get service worker’s client(s): Storage access is restricted in this context due to user settings or private browsing mode.`
+    - Suggest: `Không lấy được (các) máy khách của service worker`
+    - en-US "Failed to get service worker's client(s)" means the clients belonging to the service worker. The Vietnamese says "failed to load the service worker of the client(s)".
+- `TimeoutSyncXHRWarning` — `dom/chrome/dom/dom.properties` — "No longer" was added where the source just says "not supported".
+    - Current: `không còn được hỗ trợ`
+    - Source: `Use of XMLHttpRequest’s timeout attribute is not supported in the synchronous mode in window context.`
+    - Suggest: `không được hỗ trợ`
+    - The source says the timeout attribute is not supported in this mode. The translation says support was removed, which implies it once worked.
+- `WebExtContentScriptModuleSourceNotAllowed` — `dom/chrome/dom/dom.properties` — 'and not' is translated as 'hoặc không' ('or not'), which reverses the meaning of the restriction.
+    - Current: `với moz-extension URLs hoặc không: “%S”`
+    - Source: `WebExtension content scripts may only load modules with moz-extension URLs and not: “%S”.`
+    - Suggest: `có URL moz-extension, không được tải: “%S”`
+    - The en-US says content scripts may load only moz-extension URLs, and the URL shown is not allowed. 'hoặc không' means 'or not', so the sentence no longer says the URL is rejected.
+- `PENeverMatchingHostSelector` — `dom/chrome/layout/css.properties` — 'not featureless' is rendered as 'không hữu dụng' (not useful).
+    - Current: `không hữu dụng`
+    - Source: `:host selector in ‘%S’ is not featureless and will never match. Maybe you intended to use :host()?`
+    - Suggest: `không phải featureless`
+    - Source says the :host selector is not featureless (it has compound selectors attached), not that it is useless.
+- `PESelectorGroupExtraCombinator` — `dom/chrome/layout/css.properties` — "Dangling combinator" is half left in English and the Vietnamese makes no sense.
+    - Current: `Kết hợp Dangling`
+    - Source: `Dangling combinator.`
+    - Suggest: `Bộ kết hợp bị treo.`
+    - The source means a combinator with no selector after it. "Kết hợp Dangling" keeps the English word "Dangling" and doesn't describe the error.
+- `EncMetaUserDefined` — `dom/chrome/layout/htmlparser.properties` — 'thay vì sự tương thích' means 'instead of compatibility', which reverses 'instead, for compatibility'.
+    - Current: `Nó cũng giống như việc khai báo một windows-1252 thay vì sự tương thích với các phông chữ truyền thống sai định dạng.`
+    - Source: `A meta tag was used to declare the character encoding as x-user-defined. This was interpreted as a windows-1252 declaration instead for compatibility with intentionally mis-encoded legacy fonts. This site should migrate…`
+    - Suggest: `Khai báo này được hiểu là windows-1252 để tương thích với các phông chữ cũ được cố ý mã hóa sai.`
+    - Source: interpreted as windows-1252 declaration instead, for compatibility with intentionally mis-encoded legacy fonts. The target says it is like declaring windows-1252 instead of compatibility, and it also drops 'intentionally'.
+- `errAlmostStandardsDoctypeVerbose` — `dom/chrome/layout/htmlparser.properties` — 'Almost Standards Mode' is rendered as 'almost in standards mode', which misstates which rendering mode the page uses.
+    - Current: `Trang này gần như đang ở chế độ tiêu chuẩn`
+    - Source: `This page is in Almost Standards Mode. Page layout may be impacted. For Standards Mode use “<!DOCTYPE html>”.`
+    - Suggest: `Trang này đang ở chế độ gần tiêu chuẩn`
+    - The source names a specific mode, Almost Standards Mode. The translation says the page is almost in standards mode, which is a different statement.
+- `errBadCharAfterLt` — `dom/chrome/layout/htmlparser.properties` — 'Try escaping it as &lt;' is rendered as 'try ending with &lt;'.
+    - Current: `Hãy thử kết thúc với “&lt;”`
+    - Source: `Bad character after “<”. Probable cause: Unescaped “<”. Try escaping it as “&lt;”.`
+    - Suggest: `Hãy thử thoát nó thành “&lt;”`
+    - 'kết thúc' means 'end/terminate', not 'escape'; other strings use 'thoát'.
+- `errBogusDoctype` — `dom/chrome/layout/htmlparser.properties` — 'Bogus doctype' is rendered as 'Doctype does not exist'.
+    - Current: `Doctype không tồn tại.`
+    - Source: `Bogus doctype.`
+    - Suggest: `Doctype không hợp lệ.`
+    - 'Bogus' means invalid/malformed, not nonexistent.
+- `errEndTagDidNotMatchCurrentOpenElement` — `dom/chrome/layout/htmlparser.properties` — "End tag" is translated as "start tag" (Thẻ mở đầu).
+    - Current: `Thẻ mở đầu “%1$S”`
+    - Source: `End tag “%1$S” did not match the name of the current open element (“%2$S”).`
+    - Suggest: `Thẻ kết thúc “%1$S”`
+    - The English says "End tag". "Thẻ mở đầu" means start tag, so the error describes the wrong tag.
+- `errGtInSystemId` — `dom/chrome/layout/htmlparser.properties` — The quoted “>” character was dropped, so the message no longer says what is wrong.
+    - Current: `thuộc về định danh hệ thống.`
+    - Source: `“>” in system identifier.`
+    - Suggest: `“>” trong định danh hệ thống.`
+    - Source reads '“>” in system identifier.'; without the character the error is meaningless.
+- `errPrematureEndOfComment` — `dom/chrome/layout/htmlparser.properties` — 'Premature end of comment' is rendered as 'comment has not been ended', which reverses the meaning.
+    - Current: `Ghi chú chưa được kết thúc.`
+    - Source: `Premature end of comment. Use “-->” to end a comment properly.`
+    - Suggest: `Ghi chú kết thúc quá sớm.`
+    - Source means the comment ended too early; the target says it never ended.
+- `errUnquotedAttributeEquals` — `dom/chrome/layout/htmlparser.properties` — The opening is garbled: the “=” character is mangled into the text 'Ký tự "'.
+    - Current: `“=Ký tự " xuất hiện`
+    - Source: `“=” in an unquoted attribute value. Probable causes: Attributes running together or a URL query string in an unquoted attribute value.`
+    - Suggest: `Ký tự “=” xuất hiện`
+    - Source names the “=” character; the target merges it into broken quoting, so the user cannot see which character the error is about.
+- `errUnquotedAttributeLt` — `dom/chrome/layout/htmlparser.properties` — The target says '“<” is an unquoted value' instead of '“<” appears in an unquoted attribute value'.
+    - Current: `"<" là một giá trị chưa được quoted`
+    - Source: `“<” in an unquoted attribute value. Probable cause: Missing “>” immediately before.`
+    - Suggest: `“<” xuất hiện trong giá trị thuộc tính unquoted`
+    - Source: “<” in an unquoted attribute value. The character is inside the value; it is not the value itself.
+- `errUnquotedAttributeStartEquals` — `dom/chrome/layout/htmlparser.properties` — Probable cause is translated as a missing pair of equals signs instead of a stray duplicate equals sign.
+    - Current: `Thiếu mất cặp dấu bằng`
+    - Source: `“=” at the start of an unquoted attribute value. Probable cause: Stray duplicate equals sign.`
+    - Suggest: `Dấu bằng bị lặp thừa`
+    - en-US says 'Stray duplicate equals sign' (an extra '='), the Vietnamese says a pair of '=' is missing — the opposite cause.
+- `ForcedLayoutStart` — `dom/chrome/layout/layout_errors.properties` — "Flash of unstyled content" is rendered as "content that is not edited", and "flash" is dropped.
+    - Current: `gây ra nội dung không được chỉnh sửa`
+    - Source: `Layout was forced before the page was fully loaded. If stylesheets are not yet loaded this may cause a flash of unstyled content.`
+    - Suggest: `gây ra hiện tượng nháy nội dung chưa được định kiểu`
+    - "Unstyled" means the content has no CSS styling, not that it hasn't been edited. The brief flash, which is the point of the warning, is missing.
+- `17` — `dom/chrome/layout/xmlparser.properties` — The translation drops 'or text declaration' and changes 'entity' to 'external entity'.
+    - Current: `khai báo của xml không ở đầu đối tượng bên ngoài`
+    - Source: `XML or text declaration not at start of entity`
+    - Suggest: `khai báo XML hoặc khai báo văn bản không ở đầu đối tượng`
+    - The source reads 'XML or text declaration not at start of entity'. The Vietnamese leaves out text declarations and says the entity is external, which the source does not say.
+- `38` — `dom/chrome/layout/xmlparser.properties` — The negation is lost: the translation says the xml prefix must be declared or bound to another namespace, the opposite of the source.
+    - Current: `phải được khai báo hoặc gắn với namespace khác`
+    - Source: `reserved prefix (xml) must not be undeclared or bound to another namespace name`
+    - Suggest: `không được bỏ khai báo hoặc gắn với tên namespace khác`
+    - The source reads 'must not be undeclared or bound to another namespace name'. The Vietnamese says 'must be declared or bound to another namespace', which tells the user that binding to another namespace is required when it is actually forbidden.
+- `InvalidChild` — `dom/chrome/mathml/mathml.properties` — 'is not allowed as a child of' was translated as 'is not a child of'.
+    - Current: `không phải là con của`
+    - Source: `Invalid markup: <%1$S> is not allowed as a child of <%2$S>.`
+    - Suggest: `không được phép là con của`
+    - The source says the element is not permitted as a child. The translation instead states as a fact that it is not a child, so the constraint is lost.
+- `LengthParsingError` — `dom/chrome/mathml/mathml.properties` — The translation is garbled: it reads as 'error parsing the MathML attribute value, such as a length error' instead of 'error parsing the value as a length'.
+    - Current: `Lỗi phân tích '%1$S' giá trị thuộc tính MathML chẳng hạn như lỗi độ dài.`
+    - Source: `Error in parsing MathML attribute value ‘%1$S’ as length.  Attribute ignored.`
+    - Suggest: `Lỗi phân tích giá trị thuộc tính MathML ‘%1$S’ dưới dạng độ dài.`
+    - The source says the value could not be parsed as a length. 'chẳng hạn như lỗi độ dài' means 'such as a length error', which is a different meaning.
+- `CheckLoadURIError` — `dom/chrome/security/caps.properties` — "may not load" (not permitted) is rendered as "might not load".
+    - Current: `có thể không tải hoặc liên kết đến`
+    - Source: `Security Error: Content at %S may not load or link to %S.`
+    - Suggest: `không được phép tải hoặc liên kết đến`
+    - In a security error, "may not" means the content is not allowed to load. "có thể không" means it might fail to load, which is a different statement.
+- `CheckSameOriginError` — `dom/chrome/security/caps.properties` — "may not load data" (not permitted) is rendered as "might not load data".
+    - Current: `có thể không tải dữ liệu từ`
+    - Source: `Security Error: Content at %S may not load data from %S.`
+    - Suggest: `không được phép tải dữ liệu từ`
+    - Here "may not" means not permitted. "có thể không" means "might not", which is a possibility, not a prohibition.
+- `CreateWrapperDenied` — `dom/chrome/security/caps.properties` — "object of class %S" is rendered as "object or class %S".
+    - Current: `đối tượng hoặc lớp %S`
+    - Source: `Permission denied to create wrapper for object of class %S`
+    - Suggest: `đối tượng của lớp %S`
+    - The source refers to an object belonging to class %S. "hoặc" means "or", which changes the meaning.
+- `ExternalDataError` — `dom/chrome/security/caps.properties` — "may not load external data" (not permitted) is rendered as "might not load external data".
+    - Current: `nhưng có thể không nạp dữ liệu bên ngoài`
+    - Source: `Security Error: Content at %S attempted to load %S, but may not load external data when being used as an image.`
+    - Suggest: `nhưng không được phép nạp dữ liệu bên ngoài`
+    - The source states a prohibition: content used as an image is not allowed to load external data. The translation says it might not load it.
+- `ignoringReportOnlyDirective` — `dom/chrome/security/csp.properties` — "report-only" is left out, so the condition (the directive comes in a report-only policy) is lost.
+    - Current: `khi gửi với chính sách ‘%1$S’`
+    - Source: `Ignoring sandbox directive when delivered in a report-only policy ‘%1$S’`
+    - Suggest: `khi được gửi trong chính sách report-only ‘%1$S’`
+    - The source says the sandbox directive is ignored only when it is delivered in a report-only policy. The translation drops "report-only", so it reads as if the directive is ignored under any policy.
+- `triedToSendReport` — `dom/chrome/security/csp.properties` — "Tried to" is dropped, so the message reads as an instruction to send the report rather than a report of a failed attempt.
+    - Current: `Gửi báo cáo đến URI không hợp lệ: "%1$S"`
+    - Source: `Tried to send report to invalid URI: “%1$S”`
+    - Suggest: `Đã thử gửi báo cáo đến URI không hợp lệ: “%1$S”`
+    - The en-US says the browser tried to send a report to an invalid URI. The Vietnamese reads as an imperative "Send report to invalid URI". It also uses straight quotes, which goes against the locale's curly-quote convention.
+- `BlockFileScriptWithWrongMimeType` — `dom/chrome/security/security.properties` — The URI scheme "file:" was translated as "tập tin:" even though the developer comment says not to.
+    - Current: `từ tập tin: URI`
+    - Source: `Loading script from file: URI (“%1$S”) was blocked because its MIME type (“%2$S”) is not a valid JavaScript MIME type.`
+    - Suggest: `từ file: URI`
+    - The localization note says: Do not translate "file: URI". It is a literal URI scheme.
+- `BlockJsonModuleWithWrongMimeType` — `dom/chrome/security/security.properties` — "JSON module" was translated as just "JSON", so the word "module" is missing.
+    - Current: `Đã chặn việc tải JSON từ`
+    - Source: `Loading JSON module from “%1$S” was blocked because of a disallowed MIME type (“%2$S”).`
+    - Suggest: `Đã chặn việc tải mô-đun JSON từ`
+    - The source says a JSON module was blocked, not generic JSON. The sibling string BlockModuleWithWrongMimeType translates "module" as "mô-đun".
+- `BlockRedirectToDataURI` — `dom/chrome/security/security.properties` — The URI scheme "data:" was translated as "dữ liệu:", which garbles the technical term.
+    - Current: `Chuyển hướng đến dữ liệu: URI`
+    - Source: `Redirecting to data: URI not allowed (Blocked loading of: “%1$S”)`
+    - Suggest: `Chuyển hướng đến data: URI`
+    - "data:" is a URI scheme and must stay literal, as the sibling string BlockTopLevelDataURINavigation tells translators ("Do not translate 'data: URI'"). "dữ liệu: URI" doesn't make sense.
+- `CORSNotSupportingCredentials` — `dom/chrome/security/security.properties` — "Credential" is translated as "Chứng chỉ" (certificate) rather than credentials or login information.
+    - Current: `Chứng chỉ không được hỗ trợ`
+    - Source: `Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at ‘%1$S’. (Reason: Credential is not supported if the CORS header ‘Access-Control-Allow-Origin’ is ‘*’).`
+    - Suggest: `Thông tin xác thực không được hỗ trợ`
+    - In CORS, credentials means cookies and HTTP authentication, not certificates. "Chứng chỉ" means certificate, which misleads developers.
+- `InsecureFormActionPasswordsPresent` — `dom/chrome/security/security.properties` — "form action" is rendered as "biểu mẫu hành động" ("action form"), with head and modifier reversed.
+    - Current: `với biểu mẫu hành động (http://) không an toàn`
+    - Source: `Password fields present in a form with an insecure (http://) form action. This is a security risk that allows user login credentials to be stolen.`
+    - Suggest: `có hành động biểu mẫu (http://) không an toàn`
+    - The en-US means the form's action attribute is insecure. "biểu mẫu hành động" means a form of type 'action', which is a different thing.
+- `WAICTFetchingManifest` — `dom/chrome/security/security.properties` — "integrity manifest" is translated as "the integrity of the manifest", which changes what is being fetched.
+    - Current: `Đang tải tính toàn vẹn của manifest từ`
+    - Source: `WAICT: Fetching integrity manifest from “%1$S”.`
+    - Suggest: `Đang tải manifest về tính toàn vẹn từ`
+    - The en-US says the browser is fetching the integrity manifest, a file. The Vietnamese says it is fetching the manifest's integrity, which is not something you can fetch.
+- `WAICTManifestFetchError` — `dom/chrome/security/security.properties` — "integrity manifest" is translated as "the integrity of the manifest".
+    - Current: `Không thể tải tính toàn vẹn của manifest từ`
+    - Source: `WAICT: Failed to fetch integrity manifest from “%1$S”.`
+    - Suggest: `Không thể tải manifest về tính toàn vẹn từ`
+    - The source means the integrity manifest file failed to fetch. The Vietnamese says fetching the manifest's integrity failed.
+- _…and 46 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -943,66 +1257,92 @@ _Nothing in this category._
     - Source: `#1 repeat;#1 repeats`
     - Suggest: `#1 lần lặp lại`
     - The tree uses 'lặp lại' for repeats, for example in animationinspector. 'lập' is the wrong word.
-- `addon-detail-rating-label` — `toolkit/toolkit/about/aboutAddons.ftl` — Spelling error: 'Xêp' should be 'Xếp'.
-    - Current: `Xêp hạng`
-    - Source: `Rating`
-    - Suggest: `Xếp hạng`
-    - The tone mark is wrong. Elsewhere in the same file the word is spelled 'Xếp hạng'.
-- `discopane-notice-recommendations2` — `toolkit/toolkit/about/aboutAddons.ftl` — The grammar is broken: 'khác' comes before the noun it modifies, giving 'dựa trên khác tiện ích mở rộng'.
-    - Current: `Nó dựa trên khác         tiện ích mở rộng mà bạn đã cài đặt`
-    - Source: `message: Some of these recommendations are personalized. They are based on other extensions you’ve installed, profile preferences, and usage statistics.`
-    - Suggest: `Chúng dựa trên các tiện ích mở rộng khác mà bạn đã cài đặt`
-    - In Vietnamese, 'khác' follows the noun. As written the sentence is ungrammatical.
-- `shortcuts-modifier-mac` — `toolkit/toolkit/about/aboutAddons.ftl` — A space is missing between 'Bao gồm' and 'Ctrl'.
-    - Current: `Bao gồmCtrl`
-    - Source: `Include Ctrl, Alt, or ⌘`
-    - Suggest: `Bao gồm Ctrl`
-    - The two words run together in the visible text.
-- `about-glean-label-for-log-pings` — `toolkit/toolkit/about/aboutGlean.ftl` — The word 'cần' is duplicated.
-    - Current: `Bạn sẽ cần phải cần`
-    - Source: `(Optional. Check the preceding box if you want pings to also be logged when they are submitted. You will additionally need to <a data-l10n-name="enable-logging-link">enable logging</a>.)`
-    - Suggest: `Bạn sẽ cần phải`
-    - This is a typo that makes the sentence ungrammatical.
-- `about-logging-preset-webcodecs-description` — `toolkit/toolkit/about/aboutLogging.ftl` — Spelling error: 'chuẩn đoán' should be 'chẩn đoán'.
-    - Current: `chuẩn đoán`
-    - Source: `Log modules to diagnose issues with WebCodecs audio/video decoders and encoders, and image decoders`
-    - Suggest: `chẩn đoán`
-    - The correct word for diagnose is 'chẩn đoán', and every other preset description in the file uses it.
-- `about-pdf-dropzone-privacy-hint` — `toolkit/toolkit/about/aboutPDF.ftl` — The syllable 'tin' is duplicated.
-    - Current: `Các tập tin tin được`
-    - Source: `Files stay private on your device.`
-    - Suggest: `Các tập tin được`
-    - This is a typo in user-facing text.
-- `about-telemetry-process` — `toolkit/toolkit/about/aboutTelemetry.ftl` — The word order follows English: the modifier comes before 'tiến trình'.
-    - Current: `{ $process } tiến trình`
-    - Source: `{ $process } process`
-    - Suggest: `Tiến trình { $process }`
-    - In Vietnamese the head noun comes first ('tiến trình nội dung'). As written it reads as '<type> processes'.
-- `about-telemetry-show-archived-ping-data` — `toolkit/toolkit/about/aboutTelemetry.ftl` — Diacritic error: 'đă' should be 'đã'.
-    - Current: `đă lưu trữ`
-    - Source: `Archived ping data`
-    - Suggest: `đã lưu trữ`
-    - The word has the wrong tone mark.
-- `third-party-intro` — `toolkit/toolkit/about/aboutThirdParty.ftl` — Misspelling 'moudle', repeated several times.
-    - Current: `Trang này hiển thị các moudle của bên thứ ba`
-    - Source: `This page shows the third-party modules which were injected into your { -brand-short-name }. Any module that is not signed by Microsoft or { -vendor-short-name } is considered to be a third-party module.`
-    - Suggest: `Trang này hiển thị các module của bên thứ ba`
-    - This is the same typo, repeated throughout the paragraph.
-- `third-party-message-empty` — `toolkit/toolkit/about/aboutThirdParty.ftl` — Misspelling: 'moudle' should be 'module'.
-    - Current: `Không có moudle`
-    - Source: `No third-party modules were detected.`
-    - Suggest: `Không có module`
-    - This is a typo.
-- `third-party-section-title` — `toolkit/toolkit/about/aboutThirdParty.ftl` — Misspelling: 'moudle' should be 'module'.
-    - Current: `moudle`
-    - Source: `List of third-party modules in { -brand-short-name }`
-    - Suggest: `module`
-    - This is a typo. The same file spells 'module' correctly elsewhere.
-- `-mdn-brand-name` — `toolkit/toolkit/branding/brandings.ftl` — The brand 'MDN Web Docs' is translated
-    - Current: `Tài liệu Web MDN`
-    - Source: `MDN Web Docs`
-    - Suggest: `MDN Web Docs`
-    - This term is in the block whose header says these names 'must be treated as a brand' and cannot be translated.
+- `uncheck` — `dom/chrome/accessibility/mac/accessible.properties` — The second word is capitalized, against Vietnamese sentence-case.
+    - Current: `Bỏ Chọn`
+    - Source: `Uncheck`
+    - Suggest: `Bỏ chọn`
+    - Vietnamese doesn't title-case. Only the first word should be capitalized, as in the other labels here, such as 'Thu gọn' and 'Mở rộng'.
+- `uncheck` — `dom/chrome/accessibility/unix/accessible.properties` — The second word is wrongly capitalised.
+    - Current: `Bỏ Chọn`
+    - Source: `Uncheck`
+    - Suggest: `Bỏ chọn`
+    - Vietnamese uses sentence case. Every other action label here capitalises only the first word.
+- `weakCryptoUsed` — `dom/chrome/appstrings.properties` — There is an extra negation: "khỏi không bị trộm cắp" literally means "protect from not being stolen".
+    - Current: `khỏi không bị trộm cắp`
+    - Source: `The owner of %S has configured their website improperly. To protect your information from being stolen, the connection to this website has not been established.`
+    - Suggest: `khỏi bị trộm cắp`
+    - The en-US says "To protect your information from being stolen". In Vietnamese, "bảo vệ … khỏi" already means "protect from", so adding "không" makes it a double negative. The sentence is ungrammatical and, read literally, says the opposite.
+- `InitMouseEventWarning` — `dom/chrome/dom/dom.properties` — Typo: "dừng" (stop) used instead of "dùng" (use), so the text says "no longer stopped".
+    - Current: `không còn được dừng nữa`
+    - Source: `initMouseEvent() is deprecated. Use the MouseEvent() constructor instead.`
+    - Suggest: `không còn được dùng nữa`
+    - en-US says initMouseEvent() is deprecated; the sibling string InitNSMouseEventWarning correctly uses "không còn được dùng nữa". "dừng" changes the meaning to "no longer stopped".
+- `ForgotFileEnctypeWarning` — `dom/chrome/layout/HtmlForm.properties` — "on the form" lost its noun, so the sentence ends in a dangling "trên."
+    - Current: `enctype=multipart/form-data trên.`
+    - Source: `Form contains a file input, but is missing method=POST and enctype=multipart/form-data on the form.  The file will not be sent.`
+    - Suggest: `enctype=multipart/form-data trên form.`
+    - The en-US says "on the form". The translation keeps only the preposition "trên" without its object, so the sentence is ungrammatical.
+- `EncMetaUtf16` — `dom/chrome/layout/htmlparser.properties` — Spelling error: 'sự dụng' should be 'sử dụng'.
+    - Current: `sự dụng`
+    - Source: `A meta tag was used to declare the character encoding as UTF-16. This was interpreted as an UTF-8 declaration instead.`
+    - Suggest: `sử dụng`
+    - Wrong tone mark; the correct word is 'sử dụng' (use).
+- `EncProtocolUnsupported` — `dom/chrome/layout/htmlparser.properties` — Spelling error: 'dữ liêu' should be 'dữ liệu'.
+    - Current: `dữ liêu`
+    - Source: `An unsupported character encoding was declared on the transfer protocol level. The declaration was ignored.`
+    - Suggest: `dữ liệu`
+    - The heavy (nặng) tone mark is missing from 'liệu'.
+- `errAlmostStandardsDoctype` — `dom/chrome/layout/htmlparser.properties` — Typo: 'đặt chuẩn' should be 'đạt chuẩn' (almost meeting the standard).
+    - Current: `gần đặt chuẩn`
+    - Source: `Almost standards mode doctype. Expected “<!DOCTYPE html>”.`
+    - Suggest: `gần đạt chuẩn`
+    - 'Almost standards' means nearly meeting the standard, which is 'đạt chuẩn'. 'đặt' (to place) is a spelling error here.
+- `errExpectedSystemId` — `dom/chrome/layout/htmlparser.properties` — Misspelling of 'định danh' as 'định dang'.
+    - Current: `định dang hệ thống`
+    - Source: `Expected a system identifier but the doctype ended.`
+    - Suggest: `định danh hệ thống`
+    - 'identifier' is 'định danh', as used in errEofInSystemId.
+- `errLtInAttributeName` — `dom/chrome/layout/htmlparser.properties` — Misspelling of 'dấu' as 'đấu'.
+    - Current: `Thiếu mất đấu`
+    - Source: `“<” in attribute name. Probable cause: “>” missing immediately before.`
+    - Suggest: `Thiếu mất dấu`
+    - 'đấu' (fight) is a typo for 'dấu' (sign/mark).
+- `errNcrZero` — `dom/chrome/layout/htmlparser.properties` — Missing 'thành', so it reads 'transforms the number 0' instead of 'expands to zero'.
+    - Current: `biến đổi số 0`
+    - Source: `Character reference expands to zero.`
+    - Suggest: `biến đổi thành số 0`
+    - en-US 'expands to zero'; sibling strings use 'biến đổi thành'.
+- `errNoNamedCharacterMatch` — `dom/chrome/layout/htmlparser.properties` — Misspelling of 'bắt đầu'.
+    - Current: `bắt đâu`
+    - Source: `“&” did not start a character reference. (“&” probably should have been escaped as “&amp;”.)`
+    - Suggest: `bắt đầu`
+    - 'đâu' is a wrong tone mark; 'start' is 'bắt đầu'.
+- `errNoSpaceBetweenPublicAndSystemIds` — `dom/chrome/layout/htmlparser.properties` — Misspelling of 'định danh' as 'định dang'.
+    - Current: `định dang hệ thống`
+    - Source: `No space between the doctype public and system identifiers.`
+    - Suggest: `định danh hệ thống`
+    - 'identifier' is 'định danh'.
+- `errStartTagWithSelectOpen` — `dom/chrome/layout/htmlparser.properties` — The sentence is garbled: it says the element 'starts a tag with select open'.
+    - Current: `“%1$S” bắt đầu thẻ với “select” mở.`
+    - Source: `“%1$S” start tag with “select” open.`
+    - Suggest: `Thẻ bắt đầu “%1$S” trong khi “select” đang mở.`
+    - The source means a start tag for %1$S appeared while select was open. The Vietnamese word order makes %1$S the subject of 'bắt đầu thẻ', so the sentence doesn't say that.
+- `CompositorAnimationWarningHasRenderingObserver` — `dom/chrome/layout/layout_errors.properties` — The words in "rendering observers" are in the wrong order, so the phrase reads as "has rendering the observer".
+    - Current: `có kết xuất trình quan sát`
+    - Source: `Animation cannot be run on the compositor because the element has rendering observers (-moz-element or SVG clipping/masking)`
+    - Suggest: `có trình quan sát kết xuất`
+    - In Vietnamese the head noun comes first, so "rendering observers" should be "trình quan sát kết xuất". The current order doesn't parse.
+- `xpath-bad-argument-count` — `dom/dom/xslt.ftl` — Typo: "Nột" should be "Một".
+    - Current: `Nột hàm XPath`
+    - Source: `An XPath function was called with the wrong number of arguments.`
+    - Suggest: `Một hàm XPath`
+    - Spelling error: the indefinite article is 'Một'.
+- `CookieRejectedInvalidDomain` — `netwerk/necko.properties` — "for" is translated literally as "cho" ("to/given to") where the reason "because of" is meant.
+    - Current: `đã bị từ chối cho miền không hợp lệ`
+    - Source: `Cookie “%1$S” has been rejected for invalid domain.`
+    - Suggest: `đã bị từ chối vì miền không hợp lệ`
+    - In the source, "rejected for invalid domain" gives the reason. "cho" reads as "rejected to the invalid domain". The sibling strings correctly use "vì".
+- _…and 24 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -1206,56 +1546,107 @@ _Nothing in this category._
     - Source: `Requests to URL containing “%S” are now blocked`
     - Suggest: `hiện đã bị chặn`
     - Request blocking is 'chặn' everywhere else, including the :block usage text and the netmonitor strings.
-- `crashreporter-comment-prompt` — `toolkit/crashreporter/crashreporter.ftl` — Spelling error: 'sễ' should be 'sẽ'
-    - Current: `sễ`
-    - Source: `Add a comment (comments are publicly visible)`
-    - Suggest: `sẽ`
-    - Wrong tone mark.
-- `about-webauthn-info-subsection-title` — `toolkit/toolkit/about/aboutWebauthn.ftl` — 'Authenticator info' is rendered with the same term the page uses for 'credentials'.
-    - Current: `Thông tin xác thực`
-    - Source: `Authenticator info`
-    - Suggest: `Thông tin trình xác thực`
-    - 'Thông tin xác thực' is also the page's term for credentials, for example in about-webauthn-credential-list-subsection-title. That makes the two sections hard to tell apart.
-- `about-webrtc-local-sdp-heading` — `toolkit/toolkit/about/aboutWebrtc.ftl` — 'Local' is rendered as 'nội bộ' (internal) in the SDP headings, but as 'Cục bộ' elsewhere on the same page.
-    - Current: `SDP nội bộ`
-    - Source: `Local SDP`
-    - Suggest: `SDP cục bộ`
-    - about-webrtc-type-local uses 'Cục bộ'. 'nội bộ' means internal, which is a different concept from local.
-- `about-config-search-input1` — `toolkit/toolkit/about/config.ftl` — 'preference' is rendered as 'tùy chỉnh', which this file uses for 'custom'. The placeholder reads as 'search custom name'.
-    - Current: `Tìm kiếm tên tùy chỉnh`
-    - Source: `placeholder: Search preference name`
-    - Suggest: `Tìm kiếm tên tùy chọn`
-    - The rest of the file uses 'tùy chọn' for preference and 'tùy chỉnh' for custom (see about-config-pref-accessible-value-custom).
-- `browser-utils-url-scheme` — `toolkit/toolkit/global/browser-utils.ftl` — English word order kept: the modifier comes before the noun
-    - Current: `{ $scheme } tài nguyên`
-    - Source: `{ $scheme } resource`
-    - Suggest: `Tài nguyên { $scheme }`
-    - In Vietnamese the noun comes before its modifier, so the current text reads as 'jar: resource' in English order.
-- `webext-perms-description-tabHide` — `toolkit/toolkit/global/extensionPermissions.ftl` — Spelling error: 'hiển thỉ' should be 'hiển thị'
-    - Current: `hiển thỉ`
-    - Source: `Hide and show browser tabs`
-    - Suggest: `hiển thị`
-    - Wrong tone mark.
-- `videocontrols-error-no-source` — `toolkit/toolkit/global/videocontrols.ftl` — Spelling error: 'định đạng' should be 'định dạng'
-    - Current: `định đạng`
-    - Source: `No video with supported format and MIME type found.`
-    - Suggest: `định dạng`
-    - Typo.
-- `sec-error-expired-issuer-certificate` — `toolkit/toolkit/neterror/nsserrors.ftl` — Spelling error: 'Chúng nhận' should be 'Chứng nhận'
-    - Current: `Chúng nhận`
-    - Source: `The certificate issuer’s certificate has expired. Check your system date and time.`
-    - Suggest: `Chứng nhận`
-    - Typo.
-- `ssl-error-decompression-failure-alert` — `toolkit/toolkit/neterror/nsserrors.ftl` — 'SSL' is misspelled as 'SLL'
-    - Current: `hồ sơ SLL`
-    - Source: `SSL peer was unable to successfully decompress an SSL record it received.`
-    - Suggest: `hồ sơ SSL`
-    - en-US has 'an SSL record'.
-- `ssl-error-rx-malformed-handshake` — `toolkit/toolkit/neterror/nsserrors.ftl` — Misspelled protocol term 'Handhshake'
-    - Current: `Handhshake`
-    - Source: `SSL received a malformed Handshake record.`
-    - Suggest: `Handshake`
-    - en-US has 'Handshake'.
+- `FullscreenDeniedNotFocusedTab` — `dom/chrome/dom/dom.properties` — "Element" is rendered as "yếu tố" instead of the usual "phần tử".
+    - Current: `yếu tố yêu cầu`
+    - Source: `Request for fullscreen was denied because requesting element is not in the currently focused tab.`
+    - Suggest: `phần tử yêu cầu`
+    - The same messages elsewhere use "phần tử" for a DOM element. "Yếu tố" means factor and is wrong here.
+- `KillAddonScriptGlobalMessage` — `dom/chrome/dom/dom.properties` — "extension script" is rendered as "tập lệnh mở rộng" (expanded script) instead of using the locale's term for extension.
+    - Current: `Ngăn tập lệnh mở rộng chạy`
+    - Source: `Prevent the extension script from running on this page until it next reloads`
+    - Suggest: `Ngăn tập lệnh của tiện ích mở rộng chạy`
+    - The locale translates 'extension' as 'tiện ích mở rộng', as in KillAddonScriptMessage. On its own, 'tập lệnh mở rộng' reads as 'extended script'.
+- `RemovedFullscreenElement` — `dom/chrome/dom/dom.properties` — "Element" is rendered as "yếu tố" instead of the usual "phần tử".
+    - Current: `yếu tố toàn màn hình`
+    - Source: `Exited fullscreen because fullscreen element was removed from document.`
+    - Suggest: `phần tử toàn màn hình`
+    - The same messages elsewhere use "phần tử" for a DOM element. "Yếu tố" means factor and is wrong here.
+- `WebExtensionUncheckedLastError` — `dom/chrome/dom/dom.properties` — The English verb "check" is left untranslated in the middle of a Vietnamese sentence.
+    - Current: `không được check`
+    - Source: `browser.runtime.lastError value was not checked: %S`
+    - Suggest: `không được kiểm tra`
+    - "checked" is ordinary prose, not an identifier. The locale translates it elsewhere as "kiểm tra".
+- `WindowCloseByScriptBlockedWarning` — `dom/chrome/dom/dom.properties` — "script" is left in English and the sentence narrows "opened by a script" to windows the script itself created.
+    - Current: `Một script chỉ được phép đóng cửa sổ do nó tạo ra.`
+    - Source: `Scripts may only close windows that were opened by a script.`
+    - Suggest: `Tập lệnh chỉ được phép đóng các cửa sổ được mở bởi tập lệnh.`
+    - The rest of dom.properties renders 'script' as 'tập lệnh'. The source says any window opened by a script, not only one opened by the same script.
+- `ImageTitleWithDimensions2` — `dom/chrome/layout/MediaDocument.properties` — Uses the English plural "pixels" and a plain "x", unlike the sibling string, which has "pixel" and "×".
+    - Current: `%Sx%S pixels`
+    - Source: `(%S Image, %S × %S pixels)`
+    - Suggest: `%S × %S pixel`
+    - The source has "%S × %S pixels", and ImageTitleWithDimensions2AndFile renders it as "%S × %S pixel". Vietnamese doesn't add a plural -s, so the two strings should match.
+- `errGarbageInColgroup` — `dom/chrome/layout/htmlparser.properties` — The English word 'Garbage' is left untranslated.
+    - Current: `Garbage trong mảnh`
+    - Source: `Garbage in “colgroup” fragment.`
+    - Suggest: `Dữ liệu rác trong mảnh`
+    - The rest of the string is translated, and 'Garbage' is an ordinary word, not a technical term.
+- `errNestedComment` — `dom/chrome/layout/htmlparser.properties` — HTML 'comment' is rendered inconsistently as 'bình luận' and 'Nhận xét' in the same message.
+    - Current: `Nhận xét lồng nhau`
+    - Source: `Saw “<!--” within a comment. Probable cause: Nested comment (not allowed).`
+    - Suggest: `Chú thích lồng nhau`
+    - The same term 'comment' gets two different words in one string; errEofInComment uses 'chú thích', which fits an HTML comment.
+- `errNonSpaceInColgroupInFragment` — `dom/chrome/layout/htmlparser.properties` — 'parse fragment' is left in English inside the Vietnamese sentence.
+    - Current: `khi parse fragment`
+    - Source: `Non-space in “colgroup” when parsing fragment.`
+    - Suggest: `khi phân tích mảnh`
+    - Elsewhere the locale translates 'fragment' as 'mảnh' and parsing as 'phân tích'.
+- `SEC_ERROR_BAD_KEY` — `security/manager/chrome/pipnss/nsserrors.properties` — "Public key" is rendered as "khoá chung" (shared key) instead of "khóa công khai", the term used elsewhere in this batch.
+    - Current: `Khoá chung`
+    - Source: `Peer’s public key is invalid.`
+    - Suggest: `Khóa công khai`
+    - "Khoá chung" suggests a shared or common key, which is a different cryptographic concept. SSL_ERROR_WEAK_SERVER_CERT_KEY uses "khóa công khai" for "public key".
+- `SEC_ERROR_PKCS12_IMPORTING_CERT_CHAIN` — `security/manager/chrome/pipnss/nsserrors.properties` — "certificate chain" is left in English.
+    - Current: `certificate chain`
+    - Source: `Unable to import. Error attempting to import certificate chain.`
+    - Suggest: `chuỗi chứng chỉ`
+    - The locale translates certificate as "chứng chỉ" throughout this file.
+- `SEC_ERROR_PKCS12_UNABLE_TO_EXPORT_KEY` — `security/manager/chrome/pipnss/nsserrors.properties` — "Private key" is left in English.
+    - Current: `Private key`
+    - Source: `Unable to export. Private Key could not be located and exported.`
+    - Suggest: `Khóa riêng`
+    - The locale translates key as "khóa" throughout this file.
+- `SEC_ERROR_PKCS12_UNABLE_TO_IMPORT_KEY` — `security/manager/chrome/pipnss/nsserrors.properties` — "private key" is left in English.
+    - Current: `private key`
+    - Source: `Unable to import. Error attempting to import private key.`
+    - Suggest: `khóa riêng`
+    - The locale translates key as "khóa" throughout this file.
+- `SSL_ERROR_CERT_KEA_MISMATCH` — `security/manager/chrome/pipnss/nsserrors.properties` — "key exchange" is translated as "chuyển đổi khoá" (key conversion) instead of "trao đổi khóa".
+    - Current: `thuật toán chuyển đổi khoá`
+    - Source: `The certificate provided cannot be used with the selected key exchange algorithm.`
+    - Suggest: `thuật toán trao đổi khóa`
+    - "Chuyển đổi" means convert. The correct term "trao đổi khóa" is used elsewhere in the same file.
+- `SSL_ERROR_CIPHER_DISALLOWED_FOR_VERSION` — `security/manager/chrome/pipnss/nsserrors.properties` — "peer" is left in English, unlike the rest of the file.
+    - Current: `SSL peer đã chọn`
+    - Source: `SSL peer selected a cipher suite disallowed for the selected protocol version.`
+    - Suggest: `Máy ngang hàng SSL đã chọn`
+    - Every other string in this file translates "peer" as "máy ngang hàng".
+- `SSL_ERROR_EXPORT_ONLY_SERVER` — `security/manager/chrome/pipnss/nsserrors.properties` — "Peer" is left in English, although the locale translates it as "máy ngang hàng" elsewhere.
+    - Current: `Peer không hỗ trợ`
+    - Source: `Unable to communicate securely. Peer does not support high-grade encryption.`
+    - Suggest: `Máy ngang hàng không hỗ trợ`
+    - Inconsistent terminology: other strings in this file render peer as "máy ngang hàng".
+- `SSL_ERROR_NO_SERVER_KEY_FOR_ALG` — `security/manager/chrome/pipnss/nsserrors.properties` — "key exchange" is translated as "chuyển đổi khoá" (key conversion) instead of "trao đổi khóa".
+    - Current: `thuật toán chuyển đổi khoá`
+    - Source: `Server has no key for the attempted key exchange algorithm.`
+    - Suggest: `thuật toán trao đổi khóa`
+    - "Chuyển đổi" means convert. The file already uses the correct term "trao đổi khóa" in SSL_ERROR_DECRYPT_ERROR_ALERT.
+- `SSL_ERROR_US_ONLY_SERVER` — `security/manager/chrome/pipnss/nsserrors.properties` — "Peer" is left in English, although the locale translates it as "máy ngang hàng" elsewhere.
+    - Current: `Peer yêu cầu`
+    - Source: `Unable to communicate securely. Peer requires high-grade encryption which is not supported.`
+    - Suggest: `Máy ngang hàng yêu cầu`
+    - Inconsistent terminology: other strings in this file render peer as "máy ngang hàng".
+- `XP_JAVA_CERT_NOT_EXISTS_ERROR` — `security/manager/chrome/pipnss/nsserrors.properties` — Certificate is rendered as "chứng nhận" instead of the file's term "chứng chỉ".
+    - Current: `chứng nhận`
+    - Source: `This principal doesn’t have a certificate`
+    - Suggest: `chứng chỉ`
+    - Every other string in this file translates certificate as "chứng chỉ".
+- `certErrorTrust_UnknownIssuer2` — `security/manager/chrome/pipnss/pipnss.properties` — "Certificate" is rendered as "chứng thực" ("authentication") instead of "chứng chỉ", which the surrounding error strings use.
+    - Current: `các chứng thực trung gian`
+    - Source: `The server might not be sending the appropriate intermediate certificates.`
+    - Suggest: `các chứng chỉ trung gian`
+    - The other certErrorTrust_* strings on the same error page use "chứng chỉ" for certificate. "Chứng thực" means authentication or attestation.
+- _…and 21 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -1304,6 +1695,206 @@ _Nothing in this category._
     - Source: `:block URL_STRING  Start blocking network requests    It accepts only one URL_STRING argument, an unquoted string which will be used to block all requests whose URL includes this string.   Use :unblock or the Network Mo…`
     - Suggest: `tham số URL_STRING`
     - The usage line above shows ':block URL_STRING', so the identifier in the description should match it exactly.
+- `FullscreenDeniedContainerNotAllowed` — `dom/chrome/dom/dom.properties` — Straight double quotes are used where the locale uses curly quotes.
+    - Current: `"allowfullscreen"`
+    - Source: `Request for fullscreen was denied because at least one of the document’s containing elements is not an iframe or does not have an “allowfullscreen” attribute.`
+    - Suggest: `“allowfullscreen”`
+    - The source and the locale convention both use curly double quotes.
+- `MediaLoadUnsupportedMimeType` — `dom/chrome/dom/dom.properties` — Straight double quotes are used instead of the locale's curly double quotes.
+    - Current: `"Content-Type" của "%1$S"`
+    - Source: `HTTP “Content-Type” of “%1$S” is not supported. Load of media resource %2$S failed.`
+    - Suggest: `“Content-Type” của “%1$S”`
+    - The locale uses curly double quotes, and the en-US source has curly quotes here too.
+- `MediaLoadUnsupportedTypeAttribute` — `dom/chrome/dom/dom.properties` — Straight double quotes are used instead of the locale's curly double quotes.
+    - Current: `"%1$S"`
+    - Source: `Specified “type” attribute of “%1$S” is not supported. Load of media resource %2$S failed.`
+    - Suggest: `“%1$S”`
+    - The locale uses curly double quotes, and the en-US source has curly quotes here too.
+- `TitleWithStatus` — `dom/chrome/layout/MediaDocument.properties` — A hyphen is used where the source and the locale's convention use an em dash.
+    - Current: `%S - %S`
+    - Source: `%S — %S`
+    - Suggest: `%S — %S`
+    - The source uses an em dash, and the locale's detected convention is em dash.
+- `MimeNotCss` — `dom/chrome/layout/css.properties` — Uses straight double quotes instead of the locale's curly double quotes.
+    - Current: `"%2$S", không phải là "text/css"`
+    - Source: `The stylesheet %1$S was not loaded because its MIME type, “%2$S”, is not “text/css”.`
+    - Suggest: `“%2$S”, không phải là “text/css”`
+    - The source uses curly quotes, and the locale's convention is curly-double.
+- `MimeNotCssWarn` — `dom/chrome/layout/css.properties` — Uses straight double quotes instead of the locale's curly double quotes.
+    - Current: `"%2$S", không phải là "text/css"`
+    - Source: `The stylesheet %1$S was loaded as CSS even though its MIME type, “%2$S”, is not “text/css”.`
+    - Suggest: `“%2$S”, không phải là “text/css”`
+    - The source uses curly quotes, and the locale's convention is curly-double.
+- `PEColorNotColor` — `dom/chrome/layout/css.properties` — Straight quotes where the source and the locale use curly quotes.
+    - Current: `'%1$S'`
+    - Source: `Expected color but found ‘%1$S’.`
+    - Suggest: `‘%1$S’`
+    - The locale convention is typographic quotes, and the source uses ‘’.
+- `PEMQExpectedFeatureName` — `dom/chrome/layout/css.properties` — Straight quotes where the source and the locale use curly quotes.
+    - Current: `'%1$S'`
+    - Source: `Expected media feature name but found ‘%1$S’.`
+    - Suggest: `‘%1$S’`
+    - The locale convention is typographic quotes, and the source uses ‘’.
+- `PEParseDeclarationDeclExpected` — `dom/chrome/layout/css.properties` — Straight quotes where the source and the locale use curly quotes.
+    - Current: `'%1$S'`
+    - Source: `Expected declaration but found ‘%1$S’.`
+    - Suggest: `‘%1$S’`
+    - The locale convention is typographic quotes, and the source uses ‘’.
+- `PEPseudoClassArgNotIdent` — `dom/chrome/layout/css.properties` — Straight quotes where the source and the locale use curly quotes.
+    - Current: `'%1$S'`
+    - Source: `Expected identifier for pseudo-class parameter but found ‘%1$S’.`
+    - Suggest: `‘%1$S’`
+    - The locale convention is typographic quotes, and the source uses ‘’.
+- `PEPseudoSelUnknown` — `dom/chrome/layout/css.properties` — Straight quotes where the source and the locale use curly quotes.
+    - Current: `'%1$S'`
+    - Source: `Unknown pseudo-class or pseudo-element ‘%1$S’.`
+    - Suggest: `‘%1$S’`
+    - The locale convention is typographic quotes, and the source uses ‘’.
+- `PEUnknownFontDesc` — `dom/chrome/layout/css.properties` — Straight quotes where the source and the locale use curly quotes.
+    - Current: `'%1$S'`
+    - Source: `Unknown descriptor ‘%1$S’ in @font-face rule.`
+    - Suggest: `‘%1$S’`
+    - The locale convention is typographic quotes, and the source uses ‘’.
+- `errEndTagAfterBody` — `dom/chrome/layout/htmlparser.properties` — Straight quotes are used instead of curly quotes.
+    - Current: `"body"`
+    - Source: `Saw an end tag after “body” had been closed.`
+    - Suggest: `“body”`
+    - The locale convention and the source both use curly double quotes.
+- `errEndTagSeenWithSelectOpen` — `dom/chrome/layout/htmlparser.properties` — Straight quotes are used instead of curly quotes.
+    - Current: `"select"`
+    - Source: `“%1$S” end tag with “select” open.`
+    - Suggest: `“select”`
+    - The locale convention and the source both use curly double quotes.
+- `errEndTagViolatesNestingRules` — `dom/chrome/layout/htmlparser.properties` — Uses straight double quotes instead of the curly quotes the locale uses.
+    - Current: `"%1$S"`
+    - Source: `End tag “%1$S” violates nesting rules.`
+    - Suggest: `“%1$S”`
+    - The English and the locale convention both use curly double quotes.
+- `errGarbageInColgroup` — `dom/chrome/layout/htmlparser.properties` — Straight quotes are used instead of curly quotes, and the final period is missing.
+    - Current: `"colgroup"`
+    - Source: `Garbage in “colgroup” fragment.`
+    - Suggest: `“colgroup”.`
+    - The locale convention and the source both use curly double quotes, and the source ends with a period.
+- `errGtInPublicId` — `dom/chrome/layout/htmlparser.properties` — Straight double quotes where the source and the locale use curly quotes.
+    - Current: `">"`
+    - Source: `“>” in public identifier.`
+    - Suggest: `“>”`
+    - The locale convention is curly double quotes, and the source uses “”.
+- `errImage` — `dom/chrome/layout/htmlparser.properties` — Straight quotes are used instead of curly quotes.
+    - Current: `"image"`
+    - Source: `Saw a start tag “image”.`
+    - Suggest: `“image”`
+    - The locale convention and the source both use curly double quotes.
+- `errNoDigitsInNCR` — `dom/chrome/layout/htmlparser.properties` — Double space between 'Không' and 'có'.
+    - Current: `Không  có`
+    - Source: `No digits in numeric character reference.`
+    - Suggest: `Không có`
+    - There is an extra space in the user-visible text.
+- `errNoSelectInTableScope` — `dom/chrome/layout/htmlparser.properties` — Straight quotes are used instead of curly quotes.
+    - Current: `"select"`
+    - Source: `No “select” in table scope.`
+    - Suggest: `“select”`
+    - The locale convention and the source both use curly double quotes.
+- `errNonSpaceInColgroupInFragment` — `dom/chrome/layout/htmlparser.properties` — Straight quotes are used instead of the curly quotes the locale uses.
+    - Current: `"colgroup"`
+    - Source: `Non-space in “colgroup” when parsing fragment.`
+    - Suggest: `“colgroup”`
+    - The locale convention and the source both use curly double quotes.
+- `errNonSpaceInNoscriptInHead` — `dom/chrome/layout/htmlparser.properties` — Straight quotes are used instead of curly quotes.
+    - Current: `"noscript" trong "head"`
+    - Source: `Non-space character inside “noscript” inside “head”.`
+    - Suggest: `“noscript” trong “head”`
+    - The locale convention and the source both use curly double quotes.
+- `errPrematureEndOfComment` — `dom/chrome/layout/htmlparser.properties` — Straight double quotes where the source and the locale use curly quotes.
+    - Current: `"-->"`
+    - Source: `Premature end of comment. Use “-->” to end a comment properly.`
+    - Suggest: `“-->”`
+    - The locale convention is curly double quotes, and the source uses “”.
+- `errUnclosedChildrenInRuby` — `dom/chrome/layout/htmlparser.properties` — Uses straight double quotes instead of the curly quotes the locale uses.
+    - Current: `"ruby"`
+    - Source: `Unclosed children in “ruby”.`
+    - Suggest: `“ruby”`
+    - The English and the locale convention both use curly double quotes.
+- `errUnquotedAttributeStartEquals` — `dom/chrome/layout/htmlparser.properties` — Mismatched quotes: curly opening quote paired with a straight closing quote.
+    - Current: `“="`
+    - Source: `“=” at the start of an unquoted attribute value. Probable cause: Stray duplicate equals sign.`
+    - Suggest: `“=”`
+    - Locale convention is curly double quotes; the pair is mismatched.
+- `AttributeParsingError` — `dom/chrome/mathml/mathml.properties` — Straight single quotes are used instead of the locale's curly quotes.
+    - Current: `'%1$S' cho thuộc tính '%2$S'`
+    - Source: `Error in parsing the value ‘%1$S’ for ‘%2$S’ attribute of <%3$S/>.  Attribute ignored.`
+    - Suggest: `‘%1$S’ cho thuộc tính ‘%2$S’`
+    - The developer comment asks for the locale's quote conventions, and the vi tree uses curly quotes; the source also uses ‘ ’.
+- `AttributeParsingErrorNoTag` — `dom/chrome/mathml/mathml.properties` — There is a stray space before the full stop.
+    - Current: `'%2$S' .`
+    - Source: `Error in parsing the value ‘%1$S’ for ‘%2$S’ attribute.  Attribute ignored.`
+    - Suggest: `‘%2$S’.`
+    - The en-US has no space before the period, and Vietnamese punctuation does not use one.
+- `fileAlreadyExistsError` — `dom/chrome/nsWebBrowserPersist.properties` — Straight single quotes are used instead of curly quotes.
+    - Current: `'_files'`
+    - Source: `%S could not be saved, because a file already exists with the same name as the ‘_files’ directory.  Try saving to a different location.`
+    - Suggest: `‘_files’`
+    - The source uses ‘_files’, and the locale convention is curly quotes.
+- `couldNotProcessUnknownDirective` — `dom/chrome/security/csp.properties` — Straight single quotes are used instead of typographic ones.
+    - Current: `'%1$S'`
+    - Source: `Couldn’t process unknown directive ‘%1$S’`
+    - Suggest: `‘%1$S’`
+    - The source uses ‘ ’, and the locale's convention is typographic quotes.
+- `ignoringSrcFromMetaCSP` — `dom/chrome/security/csp.properties` — There is a stray comma before the parenthesis.
+    - Current: `‘%1$S’, (Không`
+    - Source: `Ignoring source ‘%1$S’ (Not supported when delivered via meta element).`
+    - Suggest: `‘%1$S’ (Không`
+    - The source has no comma there. It is a punctuation error.
+- `BlockMixedActiveContent` — `dom/chrome/security/security.properties` — Straight double quotes are used instead of curly ones.
+    - Current: `"%1$S"`
+    - Source: `Blocked loading mixed active content “%1$S”`
+    - Suggest: `“%1$S”`
+    - The source uses curly quotes, and the locale's convention is curly double quotes.
+- `BlockMixedDisplayContent` — `dom/chrome/security/security.properties` — Straight double quotes are used instead of curly ones.
+    - Current: `"%1$S"`
+    - Source: `Blocked loading mixed display content “%1$S”`
+    - Suggest: `“%1$S”`
+    - The source uses curly quotes, and the locale's convention is curly double quotes.
+- `xpath-bad-bang` — `dom/dom/xslt.ftl` — Straight single quotes are used where the source and the locale convention use curly ones.
+    - Current: `'!'`
+    - Source: `XPath parse failure: ‘!’ unexpected, negation is not():`
+    - Suggest: `‘!’`
+    - en-US uses ‘!’. The locale convention is typographic quotes.
+- `xpath-bad-colon` — `dom/dom/xslt.ftl` — Straight single quotes are used where the source and the locale convention use curly ones.
+    - Current: `':'`
+    - Source: `XPath parse failure: ‘:’ unexpected:`
+    - Suggest: `‘:’`
+    - en-US uses ‘:’. The locale convention is typographic quotes.
+- `xpath-bracket-expected` — `dom/dom/xslt.ftl` — Straight single quotes are used where the source and the locale convention use curly ones.
+    - Current: `']'`
+    - Source: `XPath parse failure: ‘]’ expected:`
+    - Suggest: `‘]’`
+    - en-US uses ‘]’. The locale convention is typographic quotes.
+- `xpath-paren-expected` — `dom/dom/xslt.ftl` — Straight single quotes are used where the source and the locale convention use curly ones.
+    - Current: `')'`
+    - Source: `XPath parse failure: ‘)’ expected:`
+    - Suggest: `‘)’`
+    - en-US uses ‘)’. The locale convention is typographic quotes.
+- `CookieRejectedAttributeExpiryOversize` — `netwerk/necko.properties` — The cookie name is in straight quotes instead of curly quotes.
+    - Current: `Cookie "%1$S"`
+    - Source: `Cookie “%1$S” has been rejected because its expiration date is over the limit.`
+    - Suggest: `Cookie “%1$S”`
+    - The locale uses curly double quotes, and so do the source and every sibling string.
+- `edit-trust-ca` — `security/manager/security/certificates/certManager.ftl` — Straight double quotes are used instead of the locale's curly quotes.
+    - Current: `"{ $certName }"`
+    - Source: `The certificate “{ $certName }” represents a Certificate Authority.`
+    - Suggest: `“{ $certName }”`
+    - The locale convention is curly double quotes, and the source also uses curly quotes.
+- `load-module-help-root-certs-module-name` — `security/manager/security/certificates/deviceManager.ftl` — The quotes don't match: a curly opening quote is closed with a straight apostrophe.
+    - Current: `‘Root Certs'`
+    - Source: `value: ‘Root Certs‘ is reserved and cannot be used as the module name.`
+    - Suggest: `‘Root Certs’`
+    - The locale uses typographic quotes and apostrophes, and the closing mark here is a straight ASCII apostrophe.
+- `set-password-window` — `security/manager/security/pippki/pippki.ftl` — Title copies English title case, which Vietnamese does not use.
+    - Current: `Chọn một Mật khẩu Sao lưu Chứng chỉ`
+    - Source: `title: Choose a Certificate Backup Password`
+    - Suggest: `Chọn một mật khẩu sao lưu chứng chỉ`
+    - Vietnamese uses sentence case. Other titles in the same surface use it too, e.g. "Xác thực được bảo vệ" and "Trình quản lí chứng chỉ".
 - `about-webauthn-auth-info-false` — `toolkit/toolkit/about/aboutWebauthn.ftl` — 'False' is translated even though the developer comment says it should not be.
     - Current: `Sai`
     - Source: `False`

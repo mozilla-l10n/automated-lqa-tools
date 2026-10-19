@@ -2,17 +2,17 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `db2cfca9d18c` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `af4e7312bee1` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
 | **Previous run** | 2026-10-16 @ `db2cfca9d18c` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 13,329 |
+| **Strings reviewed this run** | 22 of 13,351 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-
+Also for ar: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ---
 
@@ -44,11 +44,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 323 |
-| Strings | 13,329 |
-| Missing strings | 3,187 |
+| Files | 324 |
+| Strings | 13,351 |
+| Missing strings | 3,169 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 5 |
+| Files absent from the locale | 4 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,9 +63,9 @@ _Nothing retired._
 
 ### Completeness
 
-**3,187 strings** are not translated yet, concentrated in:
+**3,169 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 358
+- `browser/browser/newtab/newtab.ftl` — 362
 - `dom/chrome/dom/dom.properties` — 214
 - `browser/browser/aiWindow.ftl` — 161
 - `devtools/client/tooltips.ftl` — 98
@@ -73,7 +73,7 @@ _Nothing retired._
 - `devtools/client/netmonitor.properties` — 92
 - `devtools/client/debugger.properties` — 83
 - `dom/chrome/security/security.properties` — 81
-- `browser/browser/ipProtection.ftl` — 80
+- `browser/browser/ipProtection.ftl` — 79
 - `toolkit/toolkit/about/aboutGlean.ftl` — 66
 - `toolkit/toolkit/about/aboutSupport.ftl` — 66
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 66
@@ -83,7 +83,6 @@ _Nothing retired._
 - `browser/browser/autoTabGrouping.ftl`
 - `toolkit/services/aboutSyncLog.ftl`
 - `toolkit/toolkit/about/pdfFeaturesNotification.ftl`
-- `toolkit/toolkit/global/viewSource.ftl`
 - `toolkit/toolkit/pdfviewer/embedFallback.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
@@ -96,7 +95,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `straight-double` 96, `curly-double` 74, `curly-single` 9, `guillemet` 3 | _mixed_ |
 | apostrophe | `typographic` 55 | **typographic** |
-| ellipsis | `char` 366, `ascii` 13 | **char** |
+| ellipsis | `char` 367, `ascii` 13 | **char** |
 | dash | `em` 35 | **em** |
 | nbsp | `total` 160, `space-before-punctuation` 3 | **total** |
 
@@ -935,19 +934,19 @@ _Nothing reported._
 - `appmenu-help-share-ideas` — `browser/browser/appmenu.ftl` — `appmenu-help-share-ideas` uses three dots where this locale uses …
     - Current: `شارك الأفكار والتعليقات...`
     - Source: `accesskey: S label: Share Ideas and Feedback…`
-    - The tree uses … 366 times against 13 ASCII runs.
+    - The tree uses … 367 times against 13 ASCII runs.
 - `menu-share-mac-picker-multiple` — `browser/browser/browser.ftl` — `menu-share-mac-picker-multiple` uses three dots where this locale uses …
     - Current: `الرسائل والبريد والمزيد...`
     - Source: `accesskey: M label: Messages, Mail, and More…`
-    - The tree uses … 366 times against 13 ASCII runs.
+    - The tree uses … 367 times against 13 ASCII runs.
 - `main-context-menu-pdfjs-save-page` — `browser/browser/browserContext.ftl` — `main-context-menu-pdfjs-save-page` uses three dots where this locale uses …
     - Current: `احفظ التحديد باسم...`
     - Source: `label: Save selection as…`
-    - The tree uses … 366 times against 13 ASCII runs.
+    - The tree uses … 367 times against 13 ASCII runs.
 - `content-sharing-modal-generating-page` — `browser/browser/contentSharing.ftl` — `content-sharing-modal-generating-page` uses three dots where this locale uses …
     - Current: `يولّد الصفحة...`
     - Source: `label: Generating page…`
-    - The tree uses … 366 times against 13 ASCII runs.
+    - The tree uses … 367 times against 13 ASCII runs.
 - `continuous-onboarding-firefox-view-tab-pickup-subtitle` — `browser/browser/featureCallout.ftl` — “bookmarks” rendered with a term the rest of the tree never uses.
     - Current: `الإشارات المرجعية`
     - Source: `Access your open tabs from any device. Plus sync your bookmarks, passwords, and more.`
@@ -966,15 +965,15 @@ _Nothing reported._
 - `ipprotection-connection-status-connecting-1` — `browser/browser/ipProtection.ftl` — `ipprotection-connection-status-connecting-1` uses three dots where this locale uses …
     - Current: `يتصل VPN...`
     - Source: `(value): VPN is connecting… aria-label: VPN is connecting…`
-    - The tree uses … 366 times against 13 ASCII runs.
+    - The tree uses … 367 times against 13 ASCII runs.
 - `menu-file-share-qrcode` — `browser/browser/menubar.ftl` — `menu-file-share-qrcode` uses three dots where this locale uses …
     - Current: `ولّد رمز QR...`
     - Source: `accesskey: Q label: Generate QR Code…`
-    - The tree uses … 366 times against 13 ASCII runs.
+    - The tree uses … 367 times against 13 ASCII runs.
 - `menu-help-share-ideas` — `browser/browser/menubar.ftl` — `menu-help-share-ideas` uses three dots where this locale uses …
     - Current: `شارك الأفكار والانطباعات...`
     - Source: `accesskey: S label: Share Ideas and Feedback…`
-    - The tree uses … 366 times against 13 ASCII runs.
+    - The tree uses … 367 times against 13 ASCII runs.
 - `menu-profiles-manage-profiles` — `browser/browser/menubar.ftl` — “Profiles” rendered as ملفات الإعدادات (settings files) in the same menu that uses ملفات شخصية.
     - Current: `أدِر ملفات الإعدادات`
     - Source: `label: Manage Profiles`
@@ -998,11 +997,11 @@ _Nothing reported._
 - `onboarding-live-language-installing` — `browser/browser/newtab/onboarding.ftl` — `onboarding-live-language-installing` uses three dots where this locale uses …
     - Current: `جارٍ تثبيت حزمة اللغة لـ{ $negotiatedLanguage }...`
     - Source: `Installing the language pack for { $negotiatedLanguage }…`
-    - The tree uses … 366 times against 13 ASCII runs.
+    - The tree uses … 367 times against 13 ASCII runs.
 - `onboarding-live-language-waiting-button` — `browser/browser/newtab/onboarding.ftl` — `onboarding-live-language-waiting-button` uses three dots where this locale uses …
     - Current: `جارٍ الحصول على اللغات المتاحة...`
     - Source: `Getting available languages…`
-    - The tree uses … 366 times against 13 ASCII runs.
+    - The tree uses … 367 times against 13 ASCII runs.
 - `panic-button-delete-history` — `browser/browser/panicButton.ftl` — “History” rendered as السجل where the locale uses التأريخ.
     - Current: `تحذف <strong>السجل</strong> الحديث`
     - Source: `Delete Recent <strong>History</strong>`
@@ -1021,11 +1020,11 @@ _Nothing reported._
 - `sync-syncing-across-devices-empty-state2` — `browser/browser/preferences/preferences.ftl` — `sync-syncing-across-devices-empty-state2` uses three dots where this locale uses …
     - Current: `أنت لا تُزامن أي شيء... حتى الآن. ابدأ المزامنة للحصول على جميع بياناتك على جميع أجهزتك.`
     - Source: `description: You aren’t syncing anything… yet. Start syncing to get all of your data on all your devices. label: Manage synced data`
-    - The tree uses … 366 times against 13 ASCII runs.
+    - The tree uses … 367 times against 13 ASCII runs.
 - `sync-syncing-across-devices-empty-state3` — `browser/browser/preferences/preferences.ftl` — `sync-syncing-across-devices-empty-state3` uses three dots where this locale uses …
     - Current: `لم تُزامِن أي شيء... حتى الآن. اختر ما تريد مُزامنته على هذا الجهاز.`
     - Source: `description: You aren’t syncing anything… yet. Choose what to sync on this device. label: Manage synced data`
-    - The tree uses … 366 times against 13 ASCII runs.
+    - The tree uses … 367 times against 13 ASCII runs.
 - `site-data-removing-header` — `browser/browser/preferences/siteDataSettings.ftl` — “Cookies” rendered as “ملفات تعريف الارتباط” in the Removing section while the rest of the same dialog uses “الكعكات”
     - Current: `إزالة ملفات تعريف الارتباط و بيانات المواقع`
     - Source: `Removing Cookies and Site Data`
@@ -1054,7 +1053,7 @@ _Nothing reported._
 - `sanitize-calculating-size` — `browser/browser/sanitize.ftl` — `sanitize-calculating-size` uses three dots where this locale uses …
     - Current: `يحسب...`
     - Source: `Calculating…`
-    - The tree uses … 366 times against 13 ASCII runs.
+    - The tree uses … 367 times against 13 ASCII runs.
 - `sanitize-dialog-title2` — `browser/browser/sanitize.ftl` — Dialog title calls cookies ملفات تعريف الارتباط while its own checkbox calls them الكعكات.
     - Current: `امحُ بيانات التصفح وملفات تعريف الارتباط`
     - Source: `style: min-width: 34em title: Clear browsing data and cookies`

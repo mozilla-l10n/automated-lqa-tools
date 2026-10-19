@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
-| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
+| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 21 of 15,715 |
+| **Strings reviewed this run** | 139 of 15,838 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -44,16 +44,16 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 326 |
-| Strings | 15,715 |
-| Missing strings | 689 |
+| Files | 327 |
+| Strings | 15,838 |
+| Missing strings | 682 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
-| Term parameter mismatches | 0 |
+| Term parameter mismatches | 1 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 4 |
 | Source-language spellings left unchanged | 0 |
@@ -63,18 +63,18 @@ _Nothing retired._
 
 ### Completeness
 
-**689 strings** are not translated yet, concentrated in:
+**682 strings** are not translated yet, concentrated in:
 
 - `browser/browser/aiWindow.ftl` — 141
-- `browser/browser/aiWindowContent.ftl` — 67
-- `browser/browser/ipProtection.ftl` — 51
+- `browser/browser/ipProtection.ftl` — 85
+- `browser/browser/aiWindowContent.ftl` — 58
 - `dom/chrome/dom/dom.properties` — 49
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 48
-- `browser/browser/newtab/newtab.ftl` — 36
+- `browser/browser/newtab/newtab.ftl` — 32
 - `browser/browser/aiFeatures.ftl` — 27
 - `dom/chrome/security/security.properties` — 26
-- `browser/browser/preferences/preferences.ftl` — 23
-- `toolkit/toolkit/about/aboutGlean.ftl` — 16
+- `browser/browser/preferences/preferences.ftl` — 24
+- `toolkit/toolkit/about/aboutGlean.ftl` — 18
 - `devtools/client/debugger.properties` — 16
 - `browser/browser/autoTabGrouping.ftl` — 15
 
@@ -90,12 +90,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 267, `straight-double` 258, `curly-single` 50, `guillemet` 5 | _mixed_ |
+| quotes | `curly-double` 268, `straight-double` 259, `curly-single` 50, `guillemet` 5 | _mixed_ |
 | apostrophe | `typographic` 50, `straight` 51 | _mixed_ |
-| ellipsis | `char` 359, `ascii` 33 | **char** |
-| dash | `em` 13, `en` 118 | **en** |
+| ellipsis | `char` 363, `ascii` 33 | **char** |
+| dash | `em` 13, `en` 119 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 8 | _mixed_ |
-| register | `informal` 8, `formal` 521 | **formal** |
+| register | `informal` 8, `formal` 531 | **formal** |
 
 ---
 
@@ -345,10 +345,10 @@ _Nothing dismissed._
 
 _One line each in `locales/sl/dismissed.txt`. Delete the line and the finding returns._
 
-### Suppressed as false positives (1)
+### Suppressed as false positives (2)
 
-- **`sl-brand-case-params`** (1) — Brand terms carry a `sklon` case parameter; correct Slovenian.
-    - `firefox-relay-must-login-to-fxa`
+- **`sl-brand-case-params`** (2) — Brand terms carry a `sklon` case parameter; correct Slovenian.
+    - `firefox-relay-must-login-to-fxa`, `smartwindow-assistant-error-account-header`
 
 _Suppressions live in `locales/sl/suppressions.yaml`. Removing a rule brings its findings back._
 

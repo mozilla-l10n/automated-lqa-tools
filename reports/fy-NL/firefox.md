@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
-| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
+| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 127 of 16,358 |
+| **Strings reviewed this run** | 133 of 16,477 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,52 +18,45 @@ Also for fy-NL: [android](android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (8)
+### 🆕 New findings (6)
 
-- `restart-required-single-instance-answer-2` — `browser/browser/aboutRestartRequired.ftl` — "wykst" is a misspelling of "wylst" (while/during).
-    - Current: `Dit kin barre wykst in lange navigaasjesesje`
-    - Source: `This can happen during a long browsing session, or when your operating system updates { -brand-short-name }. Restarting keeps { -brand-short-name } secure and working normally.`
-    - Suggest: `Dit kin barre by in lange navigaasjesesje`
-    - The en-US says "during a long browsing session"; "wykst" is not a Frisian word (typo for "wylst").
-- `restart-required-multiple-instances-question` — `browser/browser/aboutRestartRequired.ftl` — "Why" is rendered as "Hoe" (how).
-    - Current: `Hoe kin dit barre by meardere profilen`
-    - Source: `Why can this happen with multiple profiles or { -brand-short-name } instances?`
-    - Suggest: `Wêrom kin dit barre by meardere profilen`
-    - The source asks "Why can this happen…"; the Frisian asks "How can this happen".
-- `restart-required-multiple-instances-answer` — `browser/browser/aboutRestartRequired.ftl` — "the open one" (the open profile/instance) is rendered as "de iepen ferzje" (the open version).
-    - Current: `kin de iepen ferzje op in âldere ferzje hâlden wurde`
-    - Source: `If one profile or instance updates while another is still open, the open one can be left on an older version. Restarting keeps everything on the same version.`
-    - Suggest: `kin dejinge dy’t iepen is op in âldere ferzje bliuwe`
-    - The source refers to the still-open profile or instance, not to a "version"; the translation also repeats "ferzje" nonsensically.
-- `restart-required-unsaved-work-answer` — `browser/browser/aboutRestartRequired.ftl` — "inside webpages" translated as "binnen websites" (inside websites).
-    - Current: `net-bewarre wurk binnen websites`
-    - Source: `Possibly, and we know that’s frustrating. { -brand-short-name } will reopen your tabs, but unsaved work inside webpages, like text in a form, may not be restored. Private Windows won’t reopen to protect your privacy.`
-    - Suggest: `net-bewarre wurk binnen websiden`
-    - en-US says "webpages"; fy-NL uses "websiden" for pages, "websites" for sites.
-- `main-context-menu-edit-bookmark-2` — `browser/browser/browserContext.ftl` — Tooltip adds an ellipsis that the source does not have.
-    - Current: `tooltiptext: Blêdwizer bewurkje…`
-    - Source: `aria-label: Edit Bookmark… tooltiptext: Edit bookmark`
-    - Suggest: `tooltiptext: Blêdwizer bewurkje`
-    - The en-US tooltiptext is "Edit bookmark" without ellipsis (only the aria-label has one).
-- `main-context-menu-bookmark-page-2` — `browser/browser/browserContext.ftl` — Tooltip text has an ellipsis that the source does not have.
-    - Current: `tooltiptext: Blêdwizer foar side meitsje…`
-    - Source: `aria-label: Bookmark Page… tooltiptext: Bookmark page`
-    - Suggest: `tooltiptext: Blêdwizer foar side meitsje`
-    - en-US tooltiptext is "Bookmark page" without ellipsis; only the aria-label has one.
-- `genai-shortcut-button-3` — `browser/browser/genai.ftl` — "Ask about this text" is rendered as a noun phrase "Questions about this text" instead of the imperative verb.
-    - Current: `aria-label: Fragen oer dizze tekst`
-    - Source: `aria-label: Ask about this text tooltiptext: Ask about this text`
-    - Suggest: `aria-label: Freegje oer dizze tekst`
-    - The source is an imperative action label; "Fragen oer dizze tekst" reads as "Questions about this text".
-- `newtab-picture-widget-open-menu-button` — `browser/browser/newtab/newtab.ftl` — Mistranslated/misparsed compound: "Ofbylding fan it dei-menu" means "the day menu's picture" instead of "picture of the day menu"; also missing diacritic on "Ôfbylding".
-    - Current: `aria-label: Ofbylding fan it dei-menu iepenje`
-    - Source: `aria-label: Open picture of the day menu title: Open picture of the day menu`
-    - Suggest: `aria-label: Menu Ôfbylding fan de dei iepenje`
-    - Source means the menu of the "picture of the day" widget; the Frisian attaches "menu" to "dei", and the Frisian word is spelled "Ôfbylding".
+- `view-source-out-of-range-title` — `toolkit/toolkit/global/viewSource.ftl` — 'Rige' is a typo for 'Rigel' (line), which the neighbouring strings use.
+    - Current: `Rige net fûn`
+    - Source: `Line not found`
+    - Suggest: `Rigel net fûn`
+    - The en-US 'Line not found' refers to a source line. Every other string in this file uses 'rigel' for line. 'Rige' means row or series, so this is a dropped letter.
+- `smartwindow-group-tabs-all-sorted` — `browser/browser/autoTabGrouping.ftl` — 'ljeplêden' is misspelled; it should be 'ljepblêden' (tabs).
+    - Current: `ljeplêden`
+    - Source: `Nice work organizing your tabs`
+    - Suggest: `ljepblêden`
+    - The locale's term for tabs is 'ljepblêden', which every other string in the file uses. Here the 'b' is missing.
+- `policy-BlockAboutProfiles2` — `browser/browser/policies/policies-descriptions.ftl` — The parentheses around about:profiles are missing.
+    - Current: `Oer profilen about:profiles blokkearje`
+    - Source: `Block access to About Profiles (about:profiles).`
+    - Suggest: `Oer profilen (about:profiles) blokkearje`
+    - The en-US puts the URL in parentheses, and the companion string policy-BlockAboutConfig2 keeps them. Without them the page name and the URL run together.
+- `genai-prompts-summarize-page` — `browser/browser/genai.ftl` — "webpage" is translated as "website", so the prompt asks for a summary of the whole site instead of the single page.
+    - Current: `Gearfetsje de website op { $url }`
+    - Source: `Please summarize the webpage at { $url } using precise and concise language. Use headers and bulleted lists in the summary, to make it scannable. Maintain the meaning and factual accuracy.`
+    - Suggest: `Gearfetsje de webside op { $url }`
+    - The source and the developer comment both refer to a single webpage at the given URL. In Frisian "website" means the whole site and "webside" means one page, and this prompt is sent to the AI chatbot as it stands.
+- `policy-PasswordManagerEnabled2` — `browser/browser/policies/policies-descriptions.ftl` — The internal page URL is given as about:login instead of about:logins.
+    - Current: `(about:login)`
+    - Source: `Enable or disable saving passwords to the password manager. If disabled, Passwords (about:logins) is also blocked.`
+    - Suggest: `(about:logins)`
+    - The en-US names the page about:logins. about:login is not the Passwords page, so the identifier must be kept exactly.
+- `policy-DisableThirdPartyModuleBlocking2` — `browser/browser/policies/policies-descriptions.ftl` — The page name 'Third-party Module Information' is rendered as 'external information about modules', so 'third-party' wrongly describes the information instead of the modules.
+    - Current: `eksterne ynformaasje oer modulen`
+    - Source: `Prevent the user from using Third-party Module Information (about:third-party) to block third-party modules injected into the { -brand-short-name } process.`
+    - Suggest: `Ynformaasje oer modulen fan tredden`
+    - In en-US, 'Third-party Module Information' is the title of the about:third-party page and means information about third-party modules. The Frisian says the information itself is external, which is wrong, and it doesn't match 'modulen fan tredden' later in the same sentence.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `appmenu-recently-closed-windows` — `browser/browser/appmenu.ftl` — Koartlyn sluten skermen → … finsters
+    - Current: `Koartlyn sluten skermen`
+    - Source: `label: Recently Closed Windows`
+    - Suggest: `… finsters`
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -73,16 +66,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (2)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `newtab-recent-searches-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Recent searches options" is rendered as "Resinte-sykresultatenopsjes" (recent search *results* options) instead of "sykopdrachten" used consistently elsewhere.
-    - Current: `Resinte-sykresultatenopsjes`
-    - Suggest: `Opsjes foar resinte sykopdrachten`
-    - The widget is "Recent searches" = "Resinte sykopdrachten" in all other strings; "sykresultaten" means search results, a different thing.
-- `autocomplete-remove-payment-method-title` — `toolkit/toolkit/main-window/autocomplete.ftl` — "payment method" is rendered "Betelmetoade" here but "betellingsmetoade" in the neighbouring strings of the same dialog.
-    - Current: `Betelmetoade fuortsmite?`
-    - Suggest: `Betellingsmetoade fuortsmite?`
-    - autocomplete-edit-payment-method and autocomplete-delete-payment-method in the same file use "betellingsmetoade"; the inconsistent term appears in the same UI surface.
+_Nothing retired._
 
 ---
 
@@ -90,11 +76,11 @@ _Nothing to re-read._
 
 | Check | Result |
 |---|---|
-| Files | 326 |
-| Strings | 16,358 |
-| Missing strings | 46 |
+| Files | 328 |
+| Strings | 16,477 |
+| Missing strings | 43 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -109,24 +95,20 @@ _Nothing to re-read._
 
 ### Completeness
 
-**46 strings** are not translated yet, concentrated in:
+**43 strings** are not translated yet, concentrated in:
 
-- `browser/browser/autoTabGrouping.ftl` — 15
-- `browser/browser/newtab/onboarding.ftl` — 10
-- `browser/browser/browser.ftl` — 4
-- `browser/browser/genai.ftl` — 4
-- `browser/browser/preferences/preferences.ftl` — 3
-- `browser/browser/defaultBrowserNotification.ftl` — 2
-- `browser/browser/newtab/asrouter.ftl` — 2
-- `browser/browser/aiWindow.ftl` — 1
-- `browser/browser/menubar.ftl` — 1
-- `browser/browser/policies/policies-descriptions.ftl` — 1
-- `browser/browser/newtab/newtab.ftl` — 1
-- `dom/chrome/dom/dom.properties` — 1
-
-**Files absent from the locale:**
-
-- `browser/browser/autoTabGrouping.ftl`
+- `browser/browser/browser.ftl` — 8
+- `browser/browser/ipProtection.ftl` — 8
+- `browser/browser/newtab/newtab.ftl` — 8
+- `browser/browser/sanitize.ftl` — 3
+- `toolkit/toolkit/about/aboutGlean.ftl` — 2
+- `browser/browser/sidebar.ftl` — 2
+- `browser/browser/preferences/permissions.ftl` — 2
+- `browser/browser/preferences/preferences.ftl` — 2
+- `toolkit/toolkit/global/videocontrols.ftl` — 1
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 1
+- `browser/browser/confirmationHints.ftl` — 1
+- `browser/browser/genai.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -136,9 +118,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-single` 799, `straight-double` 26, `curly-double` 16 | **curly-single** |
-| apostrophe | `typographic` 1482 | **typographic** |
-| ellipsis | `char` 396 | **char** |
+| quotes | `curly-single` 806, `straight-double` 26, `curly-double` 16 | **curly-single** |
+| apostrophe | `typographic` 1499 | **typographic** |
+| ellipsis | `char` 399 | **char** |
 | dash | `em` 10, `en` 83 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 7 | _mixed_ |
 
@@ -150,15 +132,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (465)
+## 3. Open findings (470)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 12 |
-| 2 | Wrong content (says something other than the English) | 120 |
-| 3 | Degraded language (grammar, spelling, terminology) | 234 |
-| 4 | Cosmetic (typography, spacing) | 99 |
+| 2 | Wrong content (says something other than the English) | 122 |
+| 3 | Degraded language (grammar, spelling, terminology) | 236 |
+| 4 | Cosmetic (typography, spacing) | 100 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -249,10 +231,6 @@ _Nothing reported._
     - Current: `de ferwachte add-on { -brand-short-name }`
     - Source: `This add-on could not be installed because it does not match the add-on { -brand-short-name } expected.`
     - Suggest: `de add-on dy’t { -brand-short-name } ferwachte`
-- `appmenu-recently-closed-windows` — `browser/browser/appmenu.ftl` — Koartlyn sluten skermen → … finsters
-    - Current: `Koartlyn sluten skermen`
-    - Source: `label: Recently closed windows`
-    - Suggest: `… finsters`
 - `profiler-popup-presets-ml-description` — `browser/browser/appmenu.ftl` — masineoersettingsbugs → masinaal-learenbugs (ML ≠ MT)
     - Current: `masineoersettingsbugs`
     - Source: `Preset for investigating machine learning bugs in { -brand-shorter-name }.`
@@ -331,6 +309,11 @@ _Nothing reported._
     - Current: `is dit foar in part de gearfetting`
     - Source: `message: Since the page is long, this is a partial summary.`
     - Suggest: `is dit in dielgearfetting`
+- `genai-prompts-summarize-page` — `browser/browser/genai.ftl` — "webpage" is translated as "website", so the prompt asks for a summary of the whole site instead of the single page.
+    - Current: `Gearfetsje de website op { $url }`
+    - Source: `Please summarize the webpage at { $url } using precise and concise language. Use headers and bulleted lists in the summary, to make it scannable. Maintain the meaning and factual accuracy.`
+    - Suggest: `Gearfetsje de webside op { $url }`
+    - The source and the developer comment both refer to a single webpage at the given URL. In Frisian "website" means the whole site and "webside" means one page, and this prompt is sent to the AI chatbot as it stands.
 - `genai-shortcut-button-3` — `browser/browser/genai.ftl` — "Ask about this text" is rendered as a noun phrase "Questions about this text" instead of the imperative verb.
     - Current: `aria-label: Fragen oer dizze tekst`
     - Source: `aria-label: Ask about this text tooltiptext: Ask about this text`
@@ -384,9 +367,19 @@ _Nothing reported._
     - Current: `befeiligingsynstellingen`
     - Source: `Prevent the user from bypassing certain security warnings.`
     - Suggest: `befeiligingswarskôgingen`
+- `policy-DisableThirdPartyModuleBlocking2` — `browser/browser/policies/policies-descriptions.ftl` — The page name 'Third-party Module Information' is rendered as 'external information about modules', so 'third-party' wrongly describes the information instead of the modules.
+    - Current: `eksterne ynformaasje oer modulen`
+    - Source: `Prevent the user from using Third-party Module Information (about:third-party) to block third-party modules injected into the { -brand-short-name } process.`
+    - Suggest: `Ynformaasje oer modulen fan tredden`
+    - In en-US, 'Third-party Module Information' is the title of the about:third-party page and means information about third-party modules. The Frisian says the information itself is external, which is wrong, and it doesn't match 'modulen fan tredden' later in the same sentence.
 - `policy-OfferToSaveLoginsDefault` — `browser/browser/policies/policies-descriptions.ftl` — Spurious ôftwingje carried over from policy-OfferToSaveLogins
     - Current: `ôftwingje`
     - Source: `Set the default value for allowing { -brand-short-name } to offer to remember saved logins and passwords. Both true and false values are accepted.`
+- `policy-PasswordManagerEnabled2` — `browser/browser/policies/policies-descriptions.ftl` — The internal page URL is given as about:login instead of about:logins.
+    - Current: `(about:login)`
+    - Source: `Enable or disable saving passwords to the password manager. If disabled, Passwords (about:logins) is also blocked.`
+    - Suggest: `(about:logins)`
+    - The en-US names the page about:logins. about:login is not the Passwords page, so the identifier must be kept exactly.
 - `appearance-window-density-touch` — `browser/browser/preferences/preferences.ftl` — lykas klikdoelen → en klikdoelen
     - Current: `lykas klikdoelen`
     - Source: `description: Larger window elements and click targets, optimized for touch screens label: Touch`
@@ -437,16 +430,7 @@ _Nothing reported._
     - Current: `Mear ljepblêden slute`
     - Source: `accesskey: M label: Close Multiple Tabs`
     - Suggest: `Meardere ljepblêden slute`
-- `edit-controls.label` — `browser/chrome/browser/customizableui/customizableWidgets.properties` — "Edit controls" (the noun phrase naming the cut/copy/paste widget) is translated as the imperative "Edit the controls".
-    - Current: `Betsjinningen bewurkje`
-    - Source: `Edit controls`
-    - Suggest: `Bewurkingsbetsjinningen`
-    - In customizableWidgets, 'Edit controls' is the name of the toolbar widget containing Cut/Copy/Paste ('edit' is an attributive noun), not an instruction to edit controls.
-- `network-menu-summary-finish` — `devtools/client/netmonitor.ftl` — Foltôgje: (imperative) → Klear: (noun label)
-    - Current: `Foltôgje:`
-    - Source: `Finish: { $formattedTime }`
-    - Suggest: `Klear:`
-- _…and 63 more; see `state/` for the full list._
+- _…and 65 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -503,6 +487,11 @@ _Nothing reported._
     - Current: `ljepblêdsyngroanisaasje`
     - Source: `Turn on tab syncing to view a list of tabs from your other devices.`
     - Suggest: `ljepblêdsyngronisaasje`
+- `smartwindow-group-tabs-all-sorted` — `browser/browser/autoTabGrouping.ftl` — 'ljeplêden' is misspelled; it should be 'ljepblêden' (tabs).
+    - Current: `ljeplêden`
+    - Source: `Nice work organizing your tabs`
+    - Suggest: `ljepblêden`
+    - The locale's term for tabs is 'ljepblêden', which every other string in the file uses. Here the 'b' is missing.
 - `default-browser-agent-task-description` — `browser/browser/backgroundtasks/defaultagent.ftl` — Two occurrences of wannear → wannear’t
     - Current: `wannear`
     - Source: `The Default Browser Agent task checks when the default changes from { -brand-short-name } to another browser. If the change happens under suspicious circumstances, it will prompt users to change back to { -brand-short-n…`
@@ -682,11 +671,7 @@ _Nothing reported._
     - Current: `Blêdwizerakbalke`
     - Source: `Create bookmarks in the Bookmarks toolbar, Bookmarks menu, or a specified folder inside them.`
     - Suggest: `Blêdwizerarkbalke`
-- `policy-HttpsOnlyMode` — `browser/browser/policies/policies-descriptions.ftl` — tasean → tastean
-    - Current: `tasean`
-    - Source: `Allow HTTPS-Only Mode to be enabled.`
-    - Suggest: `tastean`
-- _…and 153 more; see `state/` for the full list._
+- _…and 155 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -861,6 +846,11 @@ _Nothing reported._
     - Source: `title: Frame Info — { $website }`
 - `page-info-page` — `browser/browser/pageInfo.ftl` — page-info-page, page-info-frame, tabbrowser-container-tab-title use - where the locale's house dash is – · tab-group-menu-closed-tab-group uses — while sibling tab-group strings use – · aboutdialog-update-downloading uses – while settings-update-downloading uses —.
     - Source: `title: Page Info — { $website }`
+- `policy-BlockAboutProfiles2` — `browser/browser/policies/policies-descriptions.ftl` — The parentheses around about:profiles are missing.
+    - Current: `Oer profilen about:profiles blokkearje`
+    - Source: `Block access to About Profiles (about:profiles).`
+    - Suggest: `Oer profilen (about:profiles) blokkearje`
+    - The en-US puts the URL in parentheses, and the companion string policy-BlockAboutConfig2 keeps them. Without them the page name and the URL run together.
 - `policy-DefaultDownloadDirectory` — `browser/browser/policies/policies-descriptions.ftl` — pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…
     - Source: `Set the default download directory.`
 - `policy-DisableThirdPartyModuleBlocking` — `browser/browser/policies/policies-descriptions.ftl` — pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…
@@ -893,9 +883,7 @@ _Nothing reported._
     - Source: `message: DNS over HTTPS is not working because we encountered an error ({ $reason }) while trying to use the local provider { $name }`
 - `settings-translations-subpage-never-translate-sites-description` — `browser/browser/preferences/preferences.ftl` — about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…
     - Source: `To add a site, open the <img data-l10n-name="translations-icon"/> translation panel, select <img data-l10n-name="settings-icon"/> translation settings, then choose “Never translate this site”`
-- `sync-mobile-promo` — `browser/browser/preferences/preferences.ftl` — about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…
-    - Source: `Download Firefox for <img data-l10n-name="android-icon"/> <a data-l10n-name="android-link">Android</a> or <img data-l10n-name="ios-icon"/> <a data-l10n-name="ios-link">iOS</a> to sync with your mobile device.`
-- _…and 39 more; see `state/` for the full list._
+- _…and 40 more; see `state/` for the full list._
 
 ---
 
@@ -939,8 +927,9 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (274)
+### Fixed to date (275)
 
+- `appmenu-recently-closed-windows` — `browser/browser/appmenu.ftl` — fixed 2026-10-19
 - `cfr-doorhanger-milestone-heading2` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-09-03
 - `language-name-br` — `toolkit/toolkit/intl/languageNames.ftl` — fixed 2026-09-03
 - `language-name-uz` — `toolkit/toolkit/intl/languageNames.ftl` — fixed 2026-09-03
@@ -980,4 +969,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `restore-page-restore-header` — `browser/browser/aboutSessionRestore.ftl` — fixed 2026-08-11
 - `restore-page-tab-title` — `browser/browser/aboutSessionRestore.ftl` — fixed 2026-08-11
 - `restore-page-try-again-button` — `browser/browser/aboutSessionRestore.ftl` — fixed 2026-08-11
-- `crashed-comment` — `browser/browser/aboutTabCrashed.ftl` — fixed 2026-08-11

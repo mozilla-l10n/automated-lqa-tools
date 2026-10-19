@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
-| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
+| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 31 of 16,363 |
+| **Strings reviewed this run** | 107 of 16,457 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,31 +18,27 @@ Also for cs: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (3)
 
-- `prefs-syncing-off-3` — `browser/browser/preferences/preferences.ftl` — "on this device" rendered as "na svém zařízení" (on your device), losing the reference to the current device.
-    - Current: `a další data na svém zařízení`
-    - Source: `description: Turn on sync to get your bookmarks, passwords, history, and more on this device. label: Syncing is OFF`
-    - Suggest: `a další data na tomto zařízení`
-    - The en-US says "on this device", and the developer comment makes clear the string is about the current device where sync is disabled; "na svém zařízení" is vague and loses that.
-- `urlbar-result-menu-remove-top-site` — `browser/browser/browser.ftl` — "top site" rendered as the anglicism "top stránka" instead of the established Czech term for Top Sites.
-    - Current: `Odebrat tuto top stránku`
-    - Source: `(value): Remove this top site accesskey: T`
-    - Suggest: `Odebrat tuto nejnavštěvovanější stránku`
-    - The cs locale translates "Top Sites" as "nejnavštěvovanější stránky"; "top stránka" is an inconsistent anglicism.
+- `bookmark-properties-title-add-multiple-bookmarks` — `browser/browser/editBookmarkOverlay.ftl` — The title "New Bookmarks" is rendered as "Add all tabs to bookmarks", which says something different from the source.
+    - Current: `Přidat všechny panely do záložek`
+    - Source: `New Bookmarks`
+    - Suggest: `Nové záložky`
+    - The en-US is "New Bookmarks", and the comment says the title is used when bookmarking multiple tabs at once, not necessarily all of them. The Czech names a different action, "all tabs", which is wrong when only selected tabs are bookmarked. It looks like a stale translation of the older "Bookmark All Tabs" string.
+- `policy-BlockAboutSupport2` — `browser/browser/policies/policies-descriptions.ftl` — Wrong case: the verb "zablokuje" needs the accusative "přístup", not the genitive "přístupu".
+    - Current: `Zablokuje přístupu ke stránce`
+    - Source: `Block access to Troubleshooting Information (about:support).`
+    - Suggest: `Zablokuje přístup ke stránce`
+    - "Zablokovat" takes the accusative, so it has to be "přístup". The sibling strings (BlockAboutConfig2, BlockAboutProfiles2) correctly use "přístup".
+- `safeb-report-false-deceptive-error-message` — `browser/browser/safebrowsing/blockedSite.ftl` — A double negative ("nelze nehlásit") reverses the meaning: the Czech says the error cannot not be reported.
+    - Current: `nelze nehlásit`
+    - Source: `It’s not possible to report this error at this time.`
+    - Suggest: `nelze nahlásit`
+    - The en-US says reporting is not possible right now. "nelze nehlásit" literally means "it is not possible to not report", which is the opposite. It should be "nahlásit".
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (0)
 
-- `urlbar-result-menu-remove-top-site` — `browser/browser/browser.ftl` — "top site" rendered as the anglicism "top stránka" instead of the established Czech term for Top Sites.
-    - Current: `Odebrat tuto top stránku`
-    - Source: `(value): Remove this top site accesskey: T`
-    - Suggest: `Odebrat tuto nejnavštěvovanější stránku`
-    - The cs locale translates "Top Sites" as "nejnavštěvovanější stránky"; "top stránka" is an inconsistent anglicism.
-- `urlbar-result-menu-remove-top-site` — `browser/browser/browser.ftl` — "top site" rendered as the anglicism "top stránka" instead of the established Czech term for Top Sites.
-    - Current: `Odebrat tuto top stránku`
-    - Source: `(value): Remove this top site accesskey: T`
-    - Suggest: `Odebrat tuto nejnavštěvovanější stránku`
-    - The cs locale translates "Top Sites" as "nejnavštěvovanější stránky"; "top stránka" is an inconsistent anglicism.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -52,12 +48,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `newtab-stocks-widget-open-menu-button` — `browser/browser/newtab/newtab.ftl` — Button label rendered in 3rd person ("Otevře") instead of the infinitive used for the parallel strings.
-    - Current: `aria-label: Otevře nabídku pro akcie`
-    - Suggest: `aria-label: Otevřít nabídku s akciemi`
-    - The parallel string newtab-picture-widget-open-menu-button uses "Otevřít nabídku…"; the inconsistent 3rd-person form is wrong for this action label.
+_Nothing retired._
 
 ---
 
@@ -65,9 +58,9 @@ _Nothing to re-read._
 
 | Check | Result |
 |---|---|
-| Files | 327 |
-| Strings | 16,363 |
-| Missing strings | 41 |
+| Files | 328 |
+| Strings | 16,457 |
+| Missing strings | 63 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -75,7 +68,7 @@ _Nothing to re-read._
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 3 |
-| Plural variants (dead or missing forms) | 68 |
+| Plural variants (dead or missing forms) | 69 |
 | Text quoting a UI label that no longer matches | 6 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 2 |
@@ -84,20 +77,16 @@ _Nothing to re-read._
 
 ### Completeness
 
-**41 strings** are not translated yet, concentrated in:
+**63 strings** are not translated yet, concentrated in:
 
-- `browser/browser/autoTabGrouping.ftl` — 13
-- `browser/browser/newtab/onboarding.ftl` — 10
-- `browser/browser/genai.ftl` — 4
-- `browser/browser/browser.ftl` — 3
+- `browser/browser/ipProtection.ftl` — 21
+- `browser/browser/autoTabGrouping.ftl` — 9
+- `browser/browser/newtab/newtab.ftl` — 9
+- `browser/browser/newtab/onboarding.ftl` — 8
+- `browser/browser/browser.ftl` — 7
+- `browser/browser/genai.ftl` — 6
 - `browser/browser/defaultBrowserNotification.ftl` — 2
-- `browser/browser/preferences/preferences.ftl` — 2
-- `browser/browser/newtab/asrouter.ftl` — 2
-- `browser/browser/aiWindow.ftl` — 1
-- `browser/browser/policies/policies-descriptions.ftl` — 1
-- `browser/browser/newtab/newtab.ftl` — 1
-- `dom/chrome/dom/dom.properties` — 1
-- `dom/chrome/security/security.properties` — 1
+- `browser/browser/sidebar.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -107,9 +96,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `german-double` 465, `curly-double` 215, `curly-single` 56, `straight-double` 43, `polish-double` 2 | _mixed_ |
+| quotes | `german-double` 470, `curly-double` 215, `curly-single` 56, `straight-double` 43, `polish-double` 2 | _mixed_ |
 | apostrophe | `typographic` 70, `straight` 9 | **typographic** |
-| ellipsis | `char` 387, `ascii` 3 | **char** |
+| ellipsis | `char` 390, `ascii` 3 | **char** |
 | dash | `em` 65, `en` 30 | _mixed_ |
 | nbsp | `total` 13, `before-punctuation` 3, `space-before-punctuation` 7 | _mixed_ |
 
@@ -117,12 +106,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ## 2. Systemic items (decisions, not line items)
 
-- **plurals — 68 strings** — 68 strings. The locale's plural variants differ from what the rest of its tree does. At this scale it is a convention to settle once, not a defect per string.
-    - Affected: `about-processes-active-threads`, `about-processes-inactive-threads`, `about-processes-profile-process`, `about-telemetry-histogram-stats`, `about-webrtc-channels`, `about-webrtc-frames`, `about-webrtc-lost-label`, `about-webrtc-received-label`, `about-webrtc-sent-label`, `accessibility-progress-progressbar`, `account-multiple-tabs-arriving-from-multiple-devices`, `account-multiple-tabs-arriving-from-single-device` …and 56 more
+- **plurals — 69 strings** — 69 strings. The locale's plural variants differ from what the rest of its tree does. At this scale it is a convention to settle once, not a defect per string.
+    - Affected: `about-processes-active-threads`, `about-processes-inactive-threads`, `about-processes-profile-process`, `about-processes-tab-count`, `about-telemetry-histogram-stats`, `about-webrtc-channels`, `about-webrtc-frames`, `about-webrtc-lost-label`, `about-webrtc-received-label`, `about-webrtc-sent-label`, `accessibility-progress-progressbar`, `account-multiple-tabs-arriving-from-multiple-devices` …and 57 more
 
 ---
 
-## 3. Open findings (246)
+## 3. Open findings (249)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -137,8 +126,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 41 |
-| 2 | Wrong content (says something other than the English) | 120 |
-| 3 | Degraded language (grammar, spelling, terminology) | 61 |
+| 2 | Wrong content (says something other than the English) | 122 |
+| 3 | Degraded language (grammar, spelling, terminology) | 62 |
 | 4 | Cosmetic (typography, spacing) | 19 |
 
 ### A. Functional, markup, variables & plurals
@@ -452,6 +441,11 @@ _Also listed under their own category below._
     - Source: `aria-label: Dismiss { $text } title: Dismiss { $text }`
     - Suggest: `Skrýt { $text }`
     - Per the developer comment the control dismisses a suggestion pill; "Zrušit" means cancelling an action, not dismissing a suggestion.
+- `bookmark-properties-title-add-multiple-bookmarks` — `browser/browser/editBookmarkOverlay.ftl` — The title "New Bookmarks" is rendered as "Add all tabs to bookmarks", which says something different from the source.
+    - Current: `Přidat všechny panely do záložek`
+    - Source: `New Bookmarks`
+    - Suggest: `Nové záložky`
+    - The en-US is "New Bookmarks", and the comment says the title is used when bookmarking multiple tabs at once, not necessarily all of them. The Czech names a different action, "all tabs", which is wrong when only selected tabs are bookmarked. It looks like a stale translation of the older "Bookmark All Tabs" string.
 - `ipprotection-feature-introduction-description-private-browsing-1` — `browser/browser/ipProtection.ftl` — "extra privacy" mistranslated as "zvlášť soukromí", which is not meaningful Czech.
     - Current: `<a data-l10n-name="learn-more-vpn">zvlášť soukromí</a>`
     - Source: `Help hide your location for <a data-l10n-name="learn-more-vpn">extra privacy</a> as you browse. Set rules to turn on the VPN for extra privacy or location-based browsing, and off where you don’t.`
@@ -492,6 +486,11 @@ _Also listed under their own category below._
     - Source: `description: Turn on sync to get your bookmarks, passwords, history, and more on this device. label: Syncing is OFF`
     - Suggest: `a další data na tomto zařízení`
     - The en-US says "on this device", and the developer comment makes clear the string is about the current device where sync is disabled; "na svém zařízení" is vague and loses that.
+- `safeb-report-false-deceptive-error-message` — `browser/browser/safebrowsing/blockedSite.ftl` — A double negative ("nelze nehlásit") reverses the meaning: the Czech says the error cannot not be reported.
+    - Current: `nelze nehlásit`
+    - Source: `It’s not possible to report this error at this time.`
+    - Suggest: `nelze nahlásit`
+    - The en-US says reporting is not possible right now. "nelze nehlásit" literally means "it is not possible to not report", which is the opposite. It should be "nahlásit".
 - `menu-view-resource-monitor` — `browser/browser/sidebar.ftl` — "Resource Monitor" is rendered as "Správce procesů" (Process Manager), naming a different feature.
     - Current: `Správce procesů`
     - Source: `label: Resource Monitor`
@@ -595,6 +594,11 @@ _Also listed under their own category below._
     - Source: `Start browsing`
     - Suggest: `Začít prohlížet`
     - Typo; every other "Start browsing" button in the file is "Začít prohlížet".
+- `policy-BlockAboutSupport2` — `browser/browser/policies/policies-descriptions.ftl` — Wrong case: the verb "zablokuje" needs the accusative "přístup", not the genitive "přístupu".
+    - Current: `Zablokuje přístupu ke stránce`
+    - Source: `Block access to Troubleshooting Information (about:support).`
+    - Suggest: `Zablokuje přístup ke stránce`
+    - "Zablokovat" takes the accusative, so it has to be "přístup". The sibling strings (BlockAboutConfig2, BlockAboutProfiles2) correctly use "přístup".
 - `fonts-langgroup-canadian` — `browser/browser/preferences/fonts.ftl` — "Unified Canadian Syllabary" is translated as "Kannadština" (Kannada), the same label already used for fonts-langgroup-kannada.
     - Current: `Kannadština`
     - Source: `label: Unified Canadian Syllabary`
@@ -1115,7 +1119,7 @@ _Also listed under their own category below._
 - `netmonitor.context.perfTools` — `devtools/client/netmonitor.properties` — `netmonitor.context.perfTools` uses three dots where this locale uses …
     - Current: `Zahájit analýzu výkonu...`
     - Source: `Start Performance Analysis…`
-    - The tree uses … 387 times against 3 ASCII runs.
+    - The tree uses … 390 times against 3 ASCII runs.
 - `styleeditor-stylesheet-rule-count` — `devtools/client/styleeditor.ftl` — Doubled period in the [few] plural variant
     - Current: `{ $ruleCount } pravidla..`
     - Source: `{$ruleCount ->} [one] { $ruleCount } rule. [other] { $ruleCount } rules.`
@@ -1124,7 +1128,7 @@ _Also listed under their own category below._
 - `crashreporter-submit-waiting-hardware-tests` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-submit-waiting-hardware-tests` uses three dots where this locale uses …
     - Current: `Probíhá kontrola problémů s hardwarem a konfigurací...`
     - Source: `Checking for hardware and configuration problems…`
-    - The tree uses … 387 times against 3 ASCII runs.
+    - The tree uses … 390 times against 3 ASCII runs.
 - `gpu-vendor-id` — `toolkit/toolkit/about/aboutSupport.ftl` — "Vendor" rendered as "prodejce" (seller), inconsistent with the rest of the page
     - Current: `ID prodejce`
     - Source: `Vendor ID`
@@ -1163,7 +1167,7 @@ _Also listed under their own category below._
 - `pdfjs-free-text2` — `toolkit/toolkit/pdfviewer/viewer.ftl` — `pdfjs-free-text2` uses three dots where this locale uses …
     - Current: `Začněte psát...`
     - Source: `aria-label: Text Editor default-content: Start typing…`
-    - The tree uses … 387 times against 3 ASCII runs.
+    - The tree uses … 390 times against 3 ASCII runs.
 
 ---
 

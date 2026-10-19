@@ -2,25 +2,29 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `db2cfca9d18c` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `af4e7312bee1` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
 | **Previous run** | 2026-10-16 @ `db2cfca9d18c` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,456 |
+| **Strings reviewed this run** | 65 of 16,520 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-
+Also for sk: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `migration-no-permissions-instructions-step2-2` — `browser/browser/migrationWizard.ftl` — The macOS variant tells the user to choose “Vybrať” (Select) when the source says “Open”.
+    - Current: `V dialógovom okne na výber súborov zvoľte “Vybrať”`
+    - Source: `{$sel_1 ->} [macos] In the file picker, choose “Open” [other] In the file picker, navigate to <code>{ $permissionsPath }</code> and choose “Select”`
+    - Suggest: `V dialógovom okne na výber súborov zvoľte “Otvoriť”`
+    - On macOS the en-US says to choose “Open”. Only the other variant says “Select”. With the wrong button name, the instruction points to a label that doesn't match the macOS picker.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,17 +48,17 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 327 |
-| Strings | 16,456 |
-| Missing strings | 61 |
-| Obsolete strings | 1 |
-| Files absent from the locale | 1 |
+| Files | 328 |
+| Strings | 16,520 |
+| Missing strings | 0 |
+| Obsolete strings | 0 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 0 |
-| Plural variants (dead or missing forms) | 86 |
+| Plural variants (dead or missing forms) | 87 |
 | Text quoting a UI label that no longer matches | 4 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 0 |
@@ -63,26 +67,7 @@ _Nothing retired._
 
 ### Completeness
 
-**61 strings** are not translated yet, concentrated in:
-
-- `toolkit/toolkit/global/viewSource.ftl` — 10
-- `browser/browser/editBookmarkOverlay.ftl` — 9
-- `browser/browser/ipProtection.ftl` — 9
-- `browser/browser/browser.ftl` — 8
-- `browser/browser/newtab/newtab.ftl` — 4
-- `browser/browser/sanitize.ftl` — 3
-- `browser/browser/sidebar.ftl` — 2
-- `browser/browser/preferences/permissions.ftl` — 2
-- `browser/browser/preferences/preferences.ftl` — 2
-- `browser/browser/newtab/asrouter.ftl` — 2
-- `toolkit/toolkit/about/aboutGlean.ftl` — 2
-- `browser/browser/confirmationHints.ftl` — 1
-
-**Files absent from the locale:**
-
-- `toolkit/toolkit/global/viewSource.ftl`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -90,30 +75,30 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 519, `curly-single` 79, `straight-double` 78, `german-double` 9 | **curly-double** |
+| quotes | `curly-double` 521, `curly-single` 79, `straight-double` 78, `german-double` 9 | **curly-double** |
 | apostrophe | `typographic` 89, `straight` 54 | _mixed_ |
-| ellipsis | `char` 399 | **char** |
-| dash | `em` 27, `en` 66 | _mixed_ |
-| nbsp | `total` 109, `before-punctuation` 3, `space-before-punctuation` 7 | **total** |
+| ellipsis | `char` 401 | **char** |
+| dash | `em` 27, `en` 67 | _mixed_ |
+| nbsp | `total` 110, `before-punctuation` 3, `space-before-punctuation` 7 | **total** |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **plurals — 86 strings** — 86 strings. The locale's plural variants differ from what the rest of its tree does. At this scale it is a convention to settle once, not a defect per string.
-    - Affected: `about-processes-active-threads`, `about-processes-inactive-threads`, `about-processes-profile-process`, `about-sync-log-clear-confirm-message`, `about-sync-log-count`, `about-telemetry-histogram-stats`, `about-webrtc-channels`, `about-webrtc-frames`, `about-webrtc-lost-label`, `about-webrtc-received-label`, `about-webrtc-sent-label`, `accessibility-progress-progressbar` …and 74 more
+- **plurals — 87 strings** — 87 strings. The locale's plural variants differ from what the rest of its tree does. At this scale it is a convention to settle once, not a defect per string.
+    - Affected: `about-processes-active-threads`, `about-processes-inactive-threads`, `about-processes-profile-process`, `about-processes-tab-count`, `about-sync-log-clear-confirm-message`, `about-sync-log-count`, `about-telemetry-histogram-stats`, `about-webrtc-channels`, `about-webrtc-frames`, `about-webrtc-lost-label`, `about-webrtc-received-label`, `about-webrtc-sent-label` …and 75 more
 - **typography — 42 strings** — 42 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
     - Affected: `CookieAttributeIgnored`, `ImageMapCircleNegativeRadius`, `ImageMapCircleWrongNumberOfCoords`, `ImageMapPolyOddNumberOfCoords`, `ImageMapPolyWrongNumberOfCoords`, `ImageMapRectBoundsError`, `LenientThisWarning`, `MediaLoadSourceMissingSrc`, `MediaLoadUnsupportedMimeType`, `MediaLoadUnsupportedTypeAttribute`, `MimeNotCss`, `MimeNotCssWarn` …and 30 more
 
 ---
 
-## 3. Open findings (219)
+## 3. Open findings (220)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 152 |
-| 2 | Wrong content (says something other than the English) | 67 |
+| 2 | Wrong content (says something other than the English) | 68 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -423,6 +408,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `migration-no-permissions-instructions-step2-2` — `browser/browser/migrationWizard.ftl` — The macOS variant tells the user to choose “Vybrať” (Select) when the source says “Open”.
+    - Current: `V dialógovom okne na výber súborov zvoľte “Vybrať”`
+    - Source: `{$sel_1 ->} [macos] In the file picker, choose “Open” [other] In the file picker, navigate to <code>{ $permissionsPath }</code> and choose “Select”`
+    - Suggest: `V dialógovom okne na výber súborov zvoľte “Otvoriť”`
+    - On macOS the en-US says to choose “Open”. Only the other variant says “Select”. With the wrong button name, the instruction points to a label that doesn't match the macOS picker.
 - `newtab-clock-city-br-brasilia` — `browser/browser/newtab/newtab.ftl` — The Brazilian capital Brasília is rendered with the Slovak name of the country Brazil.
     - Current: `Brazília`
     - Source: `Brasília`

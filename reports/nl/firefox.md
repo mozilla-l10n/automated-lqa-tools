@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
-| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
+| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 63 of 16,358 |
+| **Strings reviewed this run** | 157 of 16,500 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -20,16 +20,16 @@ Also for nl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ### 🆕 New findings (2)
 
-- `about-processes-unload-tab` — `toolkit/toolkit/about/aboutProcesses.ftl` — "Unload tab" is rendered as "Tabblad lossen", which means physically unloading/untying rather than freeing a tab from memory.
-    - Current: `Tabblad lossen`
-    - Source: `title: Unload tab`
-    - Suggest: `Tabblad ontladen`
-    - en-US "Unload tab" means releasing the tab from memory; Dutch "lossen" (to unload cargo/untie) is not the computing sense and is not understandable here.
-- `newtab-picture-widget-open-menu-button` — `browser/browser/newtab/newtab.ftl` — Wrong article/agreement in the compound: “Afbeelding van het dag-menu” should be “Afbeelding van de dag”.
-    - Current: `Afbeelding van het dag-menu openen`
-    - Source: `aria-label: Open picture of the day menu title: Open picture of the day menu`
-    - Suggest: `Menu Afbeelding van de dag openen`
-    - en-US “Open picture of the day menu”: the widget is “picture of the day” (afbeelding van de dag); “het dag” is ungrammatical and misparses the compound.
+- `smartwindow-group-tabs-empty` — `browser/browser/autoTabGrouping.ftl` — “Tab groups” is rendered as “tabbladengroepen” here but as “Tabbladgroepen” everywhere else in the same panel.
+    - Current: `tabbladengroepen`
+    - Source: `No tab groups to suggest right now. Check again later.`
+    - Suggest: `tabbladgroepen`
+    - The same en-US term “tab groups” is translated as “Tabbladgroepen” in smartwindow-group-tabs-view-tab-groups, smartwindow-group-tabs-groups-list and confirmation-hint-tab-group-saved. This string uses a different compound form, which is inconsistent within the same surface.
+- `policy-DisableProfileRefresh2` — `browser/browser/policies/policies-descriptions.ftl` — The Refresh feature is called 'opfrissen' for the button and 'verversen' for the prompt in the same sentence.
+    - Current: `{ -brand-short-name } te verversen`
+    - Source: `Disable the Refresh { -brand-short-name } button in Troubleshooting Information (about:support) and on support.mozilla.org, as well as the prompt offering to refresh { -brand-short-name } when it hasn’t been used for a…`
+    - Suggest: `{ -brand-short-name } op te frissen`
+    - The en-US uses the same term 'Refresh { -brand-short-name }' for both the button and the prompt. The Dutch names the feature 'opfrissen' in the button label, so switching to 'verversen' in the same sentence is inconsistent terminology.
 
 ### ✅ Fixed since the last run (0)
 
@@ -43,12 +43,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `newtab-recent-searches-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Recent searches options" is rendered as "Recente-zoekresultatenopties" (recent search results), inconsistent with "Recente zoekopdrachten" used elsewhere for the same widget.
-    - Current: `aria-label: Recente-zoekresultatenopties`
-    - Suggest: `aria-label: Opties voor recente zoekopdrachten`
-    - The en-US says "searches", not "search results"; all other strings for this widget use "Recente zoekopdrachten".
+_Nothing retired._
 
 ---
 
@@ -56,11 +53,11 @@ _Nothing to re-read._
 
 | Check | Result |
 |---|---|
-| Files | 326 |
-| Strings | 16,358 |
-| Missing strings | 46 |
+| Files | 328 |
+| Strings | 16,500 |
+| Missing strings | 20 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -75,24 +72,17 @@ _Nothing to re-read._
 
 ### Completeness
 
-**46 strings** are not translated yet, concentrated in:
+**20 strings** are not translated yet, concentrated in:
 
-- `browser/browser/autoTabGrouping.ftl` — 15
-- `browser/browser/newtab/onboarding.ftl` — 10
+- `browser/browser/ipProtection.ftl` — 7
 - `browser/browser/browser.ftl` — 4
-- `browser/browser/genai.ftl` — 4
-- `browser/browser/preferences/preferences.ftl` — 3
-- `browser/browser/defaultBrowserNotification.ftl` — 2
-- `browser/browser/newtab/asrouter.ftl` — 2
-- `browser/browser/aiWindow.ftl` — 1
-- `browser/browser/menubar.ftl` — 1
-- `browser/browser/policies/policies-descriptions.ftl` — 1
+- `browser/browser/preferences/permissions.ftl` — 2
+- `browser/browser/preferences/preferences.ftl` — 2
+- `toolkit/toolkit/global/videocontrols.ftl` — 1
+- `browser/browser/migrationWizard.ftl` — 1
+- `browser/browser/sanitize.ftl` — 1
+- `browser/browser/sidebar.ftl` — 1
 - `browser/browser/newtab/newtab.ftl` — 1
-- `dom/chrome/dom/dom.properties` — 1
-
-**Files absent from the locale:**
-
-- `browser/browser/autoTabGrouping.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -102,12 +92,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-single` 812, `straight-double` 25, `curly-double` 9 | **curly-single** |
-| apostrophe | `typographic` 1027 | **typographic** |
-| ellipsis | `char` 395 | **char** |
+| quotes | `curly-single` 819, `straight-double` 25, `curly-double` 9 | **curly-single** |
+| apostrophe | `typographic` 1036 | **typographic** |
+| ellipsis | `char` 399 | **char** |
 | dash | `en` 110 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `formal` 2699 | **formal** |
+| register | `formal` 2717 | **formal** |
 
 ---
 
@@ -117,7 +107,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (343)
+## 3. Open findings (345)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -133,7 +123,7 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 10 |
 | 2 | Wrong content (says something other than the English) | 117 |
-| 3 | Degraded language (grammar, spelling, terminology) | 189 |
+| 3 | Degraded language (grammar, spelling, terminology) | 191 |
 | 4 | Cosmetic (typography, spacing) | 27 |
 
 ### A. Functional, markup, variables & plurals
@@ -507,6 +497,11 @@ _Also listed under their own category below._
 - `about-logins-import-report-row-description-no-change2` — `browser/browser/aboutLogins.ftl` — about-logins-import-report-row-description-no-change2, -modified2, about-logins-import-report-no-change2 — aboutLogins.ftl — "entry" rendered three ways in one file: "invoer" (= data input, wrong), "vermelding", "item".
     - Source: `Duplicate: Exact match of existing entry`
     - Suggest: `-modified2`
+- `smartwindow-group-tabs-empty` — `browser/browser/autoTabGrouping.ftl` — “Tab groups” is rendered as “tabbladengroepen” here but as “Tabbladgroepen” everywhere else in the same panel.
+    - Current: `tabbladengroepen`
+    - Source: `No tab groups to suggest right now. Check again later.`
+    - Suggest: `tabbladgroepen`
+    - The same en-US term “tab groups” is translated as “Tabbladgroepen” in smartwindow-group-tabs-view-tab-groups, smartwindow-group-tabs-groups-list and confirmation-hint-tab-group-saved. This string uses a different compound form, which is inconsistent within the same surface.
 - `turn-on-scheduled-backups-error-default-dir-denied` — `browser/browser/backupSettings.ftl` — "back-upmap" while the file otherwise uses "reservekopie".
     - Source: `We couldn’t access your backup folder. Try picking a new location.`
 - `urlbar-result-action-switch-to-tabgroup` — `browser/browser/browser.ftl` — urlbar-result-action-switch-to-tabgroup, mr2022-onboarding-live-language-switch-to, firefoxview-opentabs-pinned-tab (.title) — "Switch to" rendered as "Omschakelen", "Overschakelen" and "Wisselen".
@@ -575,6 +570,11 @@ _Also listed under their own category below._
     - Source: `Define a list of external protocols that can be used from listed origins without prompting the user.`
 - `policy-DisableBuiltinPDFViewer` — `browser/browser/policies/policies-descriptions.ftl` — policy-DisableBuiltinPDFViewer vs policy-PDFjs — "PDF-viewer" vs "PDF-lezer" in adjacent policies.
     - Source: `Disable PDF.js, the built-in PDF viewer in { -brand-short-name }.`
+- `policy-DisableProfileRefresh2` — `browser/browser/policies/policies-descriptions.ftl` — The Refresh feature is called 'opfrissen' for the button and 'verversen' for the prompt in the same sentence.
+    - Current: `{ -brand-short-name } te verversen`
+    - Source: `Disable the Refresh { -brand-short-name } button in Troubleshooting Information (about:support) and on support.mozilla.org, as well as the prompt offering to refresh { -brand-short-name } when it hasn’t been used for a…`
+    - Suggest: `{ -brand-short-name } op te frissen`
+    - The en-US uses the same term 'Refresh { -brand-short-name }' for both the button and the prompt. The Dutch names the feature 'opfrissen' in the button label, so switching to 'verversen' in the same sentence is inconsistent terminology.
 - `policy-PDFjs` — `browser/browser/policies/policies-descriptions.ftl` — policy-DisableBuiltinPDFViewer vs policy-PDFjs — "PDF-viewer" vs "PDF-lezer" in adjacent policies.
     - Source: `Disable or configure PDF.js, the built-in PDF viewer in { -brand-short-name }.`
 - `permissions-exceptions-popup-window3` — `browser/browser/preferences/permissions.ftl` — permissions-exceptions-popup-window3 (.title) vs permissions-exceptions-popup-window2 — preferences/permissions.ftl — "Allowed Websites" as "Toegestane websites" vs "Websites met toestemming"; and -window3 uses "doorleidingen" where the whole tree otherwise uses "omleidingen" for third-party redirects (site-permissions-unblock-redirect, browser.ftl pop-up strings).
@@ -631,13 +631,7 @@ _Also listed under their own category below._
     - Source: `title: Size/transferred size of all requests`
 - `network-menu-summary-transferred` — `devtools/client/netmonitor.ftl` — network-menu-summary-transferred vs network-menu-summary-tooltip-transferred — "overgebracht" vs "overgedragen".
     - Source: `{ $formattedContentSize } / { $formattedTransferredSize } transferred`
-- `styleeditor-visibility-toggle-system` — `devtools/client/styleeditor.ftl` — styleeditor-visibility-toggle-system (.tooltiptext) — "Systeemstylesheets" while the file uses "stijlblad(en)".
-    - Source: `tooltiptext: System style sheets can’t be disabled`
-    - Suggest: `.tooltiptext`
-- `options-show-user-agent-shadow-dom-tooltip` — `devtools/client/toolbox-options.ftl` — options-show-user-agent-shadow-dom-tooltip (.title) — "schaduw-DOM-elementen" while its own label keeps "Shadow DOM".
-    - Source: `title: Turning this on will show Shadow DOM elements handled by the browser.`
-    - Suggest: `.title`
-- _…and 41 more; see `state/` for the full list._
+- _…and 43 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
