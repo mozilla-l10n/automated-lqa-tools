@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-17 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **Previous run** | 2026-10-17 @ `09d125f6a298` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 5 of 1,915 |
+| **Strings reviewed this run** | 3 of 1,918 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,18 +22,9 @@ Also for cs: [android](android.md) · [firefox](firefox.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (0)
 
-- `Bookmarks.Menu.DeletedBookmark.v131` — `cs/firefox-ios.xliff` — Uses straight/English curly quotes instead of the Czech german-double quotes used elsewhere in the file.
-    - Current: `Smazáno “%@”`
-    - Source: `Deleted “%@”`
-    - Suggest: `Smazáno „%@“`
-    - The cs convention is german-double quotes („ “), as used in Bookmarks.Menu.SavedBookmarkToastLabel.v136 in the same file.
-- `LiveActivity.Downloads.FileNameText.v138` — `cs/firefox-ios.xliff` — Straight/English-style quotes used instead of the Czech german-double quotes.
-    - Current: `Stahuje se “%@”`
-    - Source: `Downloading “%@”`
-    - Suggest: `Stahuje se „%@“`
-    - The locale convention is german-double quotes; the current string uses “ ” (English opening/closing pair).
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -43,20 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (3)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `WorldCup.HomepageWidget.MatchUnavailableLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Try refreshing in a few minutes" is translated as reloading the page rather than refreshing the widget data.
-    - Current: `Zkuste stránku za chvíli znovu načíst.`
-    - Suggest: `Zkuste to za pár minut znovu načíst.`
-    - The source refers to refreshing the widget's match data, not a page; the Czech adds "stránku" (the page), which the source never says.
-- `WorldCup.HomepageWidget.RoundPhase.ScrollIndicatorAccessibilityLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Accessibility label says "scroll the page" although the scrolling applies to the widget's match list.
-    - Current: `Posuňte stránku a podívejte se`
-    - Suggest: `Posunutím zobrazíte`
-    - The source says "Scroll to see previous or next matches"; "stránku" (the page) is not in the source and misdescribes the control.
-- `WorldCup.HomepageWidget.RoundPhase.WinWorldCupLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "2026 WORLD CUP CHAMPIONS" is rendered as just "MISTROVSTVÍ SVĚTA 2026" (World Cup 2026), losing the "champions" meaning.
-    - Current: `MISTROVSTVÍ SVĚTA 2026`
-    - Suggest: `MISTŘI SVĚTA 2026`
-    - The source labels the championship winner; the Czech only names the tournament, not the champions.
+_Nothing retired._
 
 ---
 
@@ -64,11 +44,11 @@ _Nothing to re-read._
 
 | Check | Result |
 |---|---|
-| Files | 96 |
-| Strings | 1,915 |
-| Missing strings | 12 |
+| Files | 97 |
+| Strings | 1,918 |
+| Missing strings | 9 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -79,14 +59,10 @@ _Nothing to re-read._
 
 ### Completeness
 
-**12 strings** are not translated yet, concentrated in:
+**9 strings** are not translated yet, concentrated in:
 
-- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings` — 11
+- `cs/firefox-ios.xliff` — 8
 - `cs/firefox-ios.xliff` — 1
-
-**Files absent from the locale:**
-
-- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

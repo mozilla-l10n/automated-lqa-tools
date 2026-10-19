@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-17 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **Previous run** | 2026-10-17 @ `09d125f6a298` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 22 of 1,915 |
+| **Strings reviewed this run** | 0 of 1,915 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,31 +18,13 @@ Also for pl: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `Onboarding.MultiDay.NotificationCard.BodyText.v159` — `pl/firefox-ios.xliff` — "Your privacy report" is rendered as generic "information about privacy", so the specific privacy report feature is lost.
-    - Current: `informacje o prywatności, ochronie i wskazówki`
-    - Source: `Get %@ protection updates, tips, and your privacy report.`
-    - Suggest: `informacje o ochronie, wskazówki i raport prywatności`
-    - The source lists three things: protection updates, tips and the user's privacy report. The Polish lists "information about privacy, protection, and tips", which drops the privacy report and is also an awkward coordination.
-- `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.` — `pl/firefox-ios.xliff` — "Book plus icon" is rendered as just "book icon", which points to a different control.
-    - Current: `stukając ikonę książki w widoku`
-    - Source: `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.`
-    - Suggest: `stukając ikonę książki z plusem w widoku`
-    - The source names a specific "book plus" icon, which is not the plain book icon that opens Reader View (mentioned in the companion tip). Dropping "plus" points the user to the wrong icon.
+_No new findings._
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (0)
 
-- `Open articles in Reader View by tapping the book icon when it appears in the title bar.` — `pl/firefox-ios.xliff` — Missing comma before the participial phrase "stukając".
-    - Current: `czytelności stukając ikonę`
-    - Source: `Open articles in Reader View by tapping the book icon when it appears in the title bar.`
-    - Suggest: `czytelności, stukając ikonę`
-    - Polish punctuation requires a comma before an adverbial participial clause (imiesłowowy równoważnik zdania).
-- `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.` — `pl/firefox-ios.xliff` — Missing comma before the adverbial participle clause "stukając".
-    - Current: `Zachowuj strony w czytelni stukając ikonę książki`
-    - Source: `Save pages to your Reading List by tapping the book plus icon in the Reader View controls.`
-    - Suggest: `Zachowuj strony w czytelni, stukając ikonę książki`
-    - Polish punctuation requires a comma before an imiesłów przysłówkowy clause.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -52,32 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (6)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `WorldCup.HomepageWidget.GetCustomWallpaperLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Get custom wallpaper" is rendered as "Ustaw piłkarską tapetę" ("Set a football wallpaper"), adding a meaning not in the source.
-    - Current: `Ustaw piłkarską tapetę`
-    - Suggest: `Pobierz własną tapetę`
-    - The source says "custom wallpaper", not "football wallpaper"; the translation both changes the verb and invents a descriptor.
-- `WorldCup.HomepageWidget.GroupPhase.RelatedMatchesLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Related matches" translated as "Pozostałe mecze" ("Remaining/other matches").
-    - Current: `Pozostałe mecze`
-    - Suggest: `Powiązane mecze`
-    - "Pozostałe" means remaining/other, which is a different set than "related" matches for the team's group.
-- `WorldCup.HomepageWidget.OfflineLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Check your internet connection" is translated as "Sprawdź poprawność połączenia" (check the correctness of the connection), altering the instruction.
-    - Current: `Sprawdź poprawność połączenia i spróbuj ponownie.`
-    - Suggest: `Sprawdź połączenie z Internetem i spróbuj ponownie.`
-    - The source asks the user to check the internet connection; the Polish asks to verify its "correctness" and drops "internet".
-- `WorldCup.HomepageWidget.RoundPhase.Round16Label.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "ROUND OF 16" is rendered as "Druga runda" (second round) instead of the established Polish term for the round of 16.
-    - Current: `Druga runda`
-    - Suggest: `1/8 finału`
-    - The source names the knockout stage with 16 teams; Polish football terminology is "1/8 finału" (or "runda 1/8 finału"). "Druga runda" merely says "second round" and does not identify the stage.
-- `WorldCup.HomepageWidget.RoundPhase.Round32Label.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "ROUND OF 32" is rendered as "Pierwsza runda" (first round) instead of the round-of-32 stage name.
-    - Current: `Pierwsza runda`
-    - Suggest: `1/16 finału`
-    - The source names the knockout stage with 32 teams; Polish uses "1/16 finału". "Pierwsza runda" says "first round", which is not the same stage designation.
-- `WorldCup.HomepageWidget.TemporaryView.Description.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Formal capitalized "Cię" used where the locale convention is informal address without honorific capitalization.
-    - Current: `Będziemy Cię informować`
-    - Suggest: `Będziemy cię informować`
-    - The pl locale uses informal register; capitalized "Cię" is the formal/courtesy form.
+_Nothing retired._
 
 ---
 

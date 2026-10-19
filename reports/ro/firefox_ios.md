@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-17 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **Previous run** | 2026-10-16 @ `8c3a631663df` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **Previous run** | 2026-10-17 @ `09d125f6a298` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 12 of 1,927 |
+| **Strings reviewed this run** | 0 of 1,927 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for ro: [android](android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `BrowserDataTransfer.ImportedBookmarksFolder.Title.v160` — `ro/firefox-ios.xliff` — The folder name makes the date the thing that was imported ("<date> was imported") instead of labelling the folder as bookmarks imported on that date.
-    - Current: `%@ a fost importat`
-    - Source: `Imported %@`
-    - Suggest: `Importate %@`
-    - The developer comment says %@ is the import date, so the en-US 'Imported %@' means 'Imported (on) <date>'. The Romanian '%@ a fost importat' reads '<date> was imported', which turns the date into the subject. It is also odd as a folder name.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

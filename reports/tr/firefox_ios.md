@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-17 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **Previous run** | 2026-10-17 @ `09d125f6a298` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 15 of 1,927 |
+| **Strings reviewed this run** | 0 of 1,927 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,24 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (4)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `WorldCup.GroupPhase.GroupStageLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Group Stage" is rendered as "Grup maçı" (group match) instead of the tournament phase name.
-    - Current: `Grup maçı`
-    - Suggest: `Grup aşaması`
-    - The source names the tournament phase (Group Stage), not a single match; the established Turkish football term is "grup aşaması".
-- `WorldCup.HomepageWidget.GetCustomWallpaperLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Get custom wallpaper" translated as "Kişisel duvar kâğıdını indir" (download your personal wallpaper).
-    - Current: `Kişisel duvar kâğıdını indir`
-    - Suggest: `Özel duvar kâğıdını edinin`
-    - "Custom" here means a special/themed wallpaper provided by the app, not the user's personal one; "kişisel" wrongly implies the user's own wallpaper.
-- `WorldCup.HomepageWidget.RoundPhase.Round16Label.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Vowel harmony/suffix error: "16’LI TUR" should be "16’LIK TUR" or, consistent with the Round-of-32 string, "16’LI" must match the pattern used elsewhere.
-    - Current: `16’LI TUR`
-    - Suggest: `16’LİK TUR`
-    - "16" (on altı) ends in the vowel ı, so the suffix is -lık, not -lı; the parallel string uses "32’Lİ TUR" (otuz iki → -lik), showing inconsistent suffixation.
-- `WorldCup.HomepageWidget.RoundPhase.WinWorldCupLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Plural "CHAMPIONS" rendered as singular "ŞAMPİYONU".
-    - Current: `2026 DÜNYA KUPASI ŞAMPİYONU`
-    - Suggest: `2026 DÜNYA KUPASI ŞAMPİYONLARI`
-    - The source says "2026 WORLD CUP CHAMPIONS" (plural, the winning team); the Turkish uses the singular form.
+_Nothing retired._
 
 ---
 

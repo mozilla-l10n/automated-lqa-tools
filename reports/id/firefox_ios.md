@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-17 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **Previous run** | 2026-10-17 @ `09d125f6a298` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 3 of 1,915 |
+| **Strings reviewed this run** | 12 of 1,927 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,28 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (5)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `WorldCup.HomepageWidget.FTLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Full Time" (end of match) is rendered as "Penuh Waktu", a literal word-for-word rendering meaning "full-time (employment)", not the football term for the end of the match.
-    - Current: `(Penuh Waktu)`
-    - Suggest: `(Selesai)`
-    - The developer comment says the label indicates the match has ended; the same concept is correctly translated as "Selesai" in WorldCup.HomepageWidget.FulltimePenaltiesScoreLabel.v151, making this both wrong and inconsistent.
-- `WorldCup.HomepageWidget.FTNoParenthesisLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Full Time" (end of match) is rendered as "Penuh Waktu", which means full-time employment, not the end of a match.
-    - Current: `Penuh Waktu`
-    - Suggest: `Selesai`
-    - The developer comment states the label indicates the match has ended; the same term is translated as "Selesai" in the penalties label, so this is wrong and inconsistent within the same screen.
-- `WorldCup.HomepageWidget.MatchUnavailableLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Match info" (football match) mistranslated as "Info kecocokan" (compatibility/similarity match).
-    - Current: `Info kecocokan tidak tersedia saat ini.`
-    - Suggest: `Info pertandingan tidak tersedia saat ini.`
-    - In the World Cup widget, "match" means a football game ("pertandingan", as used in the ScrollIndicator string), not "kecocokan" = compatibility/matching.
-- `WorldCup.HomepageWidget.RetryButtonLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Refresh" is translated inconsistently within the same widget: "Segarkan" elsewhere, "Muat ulang" here.
-    - Current: `Muat ulang`
-    - Suggest: `Segarkan`
-    - The identical source term "Refresh" in WorldCup.HomepageWidget.MatchUnavailableRefreshButtonLabel is "Segarkan"; both are refresh buttons in the same widget error state.
-- `WorldCup.HomepageWidget.RoundPhase.ThirdPlaceLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "THIRD PLACE" (ranking) rendered as "TEMPAT KETIGA" (third location/venue).
-    - Current: `TEMPAT KETIGA`
-    - Suggest: `PERINGKAT KETIGA`
-    - The comment says this labels the third-place winner; "tempat" means a physical place, while a ranking position is "peringkat"/"posisi ketiga".
+_Nothing retired._
 
 ---
 
@@ -63,11 +44,11 @@ _Nothing to re-read._
 
 | Check | Result |
 |---|---|
-| Files | 96 |
-| Strings | 1,915 |
-| Missing strings | 12 |
+| Files | 97 |
+| Strings | 1,927 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -78,16 +59,7 @@ _Nothing to re-read._
 
 ### Completeness
 
-**12 strings** are not translated yet, concentrated in:
-
-- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings` — 11
-- `id/firefox-ios.xliff` — 1
-
-**Files absent from the locale:**
-
-- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 

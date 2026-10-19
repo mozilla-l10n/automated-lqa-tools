@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-17 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **Previous run** | 2026-10-17 @ `09d125f6a298` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 3 of 1,915 |
+| **Strings reviewed this run** | 0 of 1,915 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,20 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (3)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `WorldCup.HomepageWidget.CountDown.HourLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Two-character translation 「時間」 will be truncated to a misleading label; a single character is required.
-    - Current: `時間`
-    - Suggest: `時`
-    - The developer comment says the layout allows 1–2 characters and to use a single-character equivalent where one exists; Japanese has 「時」 for hours, and 「時間」 risks truncation issues.
-- `WorldCup.HomepageWidget.RoundPhase.UpcomingLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Upcoming" (an upcoming match) is translated as "近日公開", which means "coming soon" for a release/publication, not an upcoming match.
-    - Current: `近日公開`
-    - Suggest: `開催予定`
-    - The developer comment says this labels an upcoming match in the round phase. 「近日公開」 is used for releases (films, features) being published soon and is wrong for a scheduled match.
-- `WorldCup.HomepageWidget.TemporaryView.Description.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "as the World Cup approaches" is rendered as 「ワールドカップ開催についての」, attaching the phrase to the topic of the updates rather than the timing.
-    - Current: `ワールドカップ開催についての最新情報をお伝えします`
-    - Suggest: `ワールドカップ開催が近づくにつれて最新情報をお伝えします`
-    - The source says updates will be provided as the World Cup approaches; the translation says updates about the World Cup being held, losing the temporal meaning.
+_Nothing retired._
 
 ---
 

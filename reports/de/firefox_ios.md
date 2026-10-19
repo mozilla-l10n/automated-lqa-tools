@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-17 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **Previous run** | 2026-10-17 @ `09d125f6a298` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 15 of 1,927 |
+| **Strings reviewed this run** | 0 of 1,927 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for de: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `QuickAnswers.ContentView.ResultHeader.v160` — `de/firefox-ios.xliff` — Singular header "QUICK ANSWER" is rendered in the plural.
-    - Current: `SCHNELLE ANTWORTEN`
-    - Source: `QUICK ANSWER`
-    - Suggest: `SCHNELLE ANTWORT`
-    - The comment says the header labels the text below as a single short answer to the user's question; the plural "Antworten" does not match the singular source.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -38,32 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (6)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `WorldCup.HomepageWidget.FollowTeamLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Wrong case: "folgen" governs the dative, so "Team folgen" needs an article or different wording.
-    - Current: `Team folgen`
-    - Suggest: `Einem Team folgen`
-    - German "folgen" takes a dative object; the bare accusative-looking "Team folgen" is ungrammatical, unlike the parallel "Team ändern"/"Team auswählen" which take the accusative.
-- `WorldCup.HomepageWidget.FulltimePenaltiesScoreLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Full time" is rendered as "Reguläre Spielzeit" here but as "Spielende" in the FT labels on the same widget.
-    - Current: `Reguläre Spielzeit • Elfmeterschießen (%@)`
-    - Suggest: `Spielende • Elfmeterschießen (%@)`
-    - The same source term "Full Time" is translated "Spielende" in WorldCup.HomepageWidget.FTLabel and FTNoParenthesisLabel; "Reguläre Spielzeit" (regular playing time) is inconsistent and also inaccurate since the match ended after penalties.
-- `WorldCup.HomepageWidget.GetCustomWallpaperLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Get custom wallpaper" is translated as "herunterladen" (download), adding a meaning the source does not have.
-    - Current: `Benutzerdefiniertes Hintergrundbild herunterladen`
-    - Suggest: `Benutzerdefiniertes Hintergrundbild erhalten`
-    - The source says "Get", not "Download"; the button selects/applies a wallpaper rather than downloading one.
-- `WorldCup.HomepageWidget.GroupPhase.RelatedMatchesLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Related matches" translated as "Verwandte Spiele" (kinship-related), the wrong sense of "related".
-    - Current: `Verwandte Spiele`
-    - Suggest: `Zugehörige Spiele`
-    - In this context "related matches" means the matches associated with the team's group; "verwandt" means related by kinship/similarity and reads wrong for sports fixtures.
-- `WorldCup.HomepageWidget.RoundPhase.Round16Label.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Round phase label is not in all caps unlike the source and the other round phase labels.
-    - Current: `Achtelfinale`
-    - Suggest: `ACHTELFINALE`
-    - Source is "ROUND OF 16" in caps, and sibling strings (VIERTELFINALE, HALBFINALE, FINALE) are capitalized; this one is not, breaking consistency on the same screen.
-- `WorldCup.HomepageWidget.RoundPhase.Round32Label.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Round phase label is not in all caps unlike the source and the other round phase labels.
-    - Current: `Runde der letzten 32`
-    - Suggest: `RUNDE DER LETZTEN 32`
-    - Source is "ROUND OF 32" in caps and the neighbouring round-phase labels are all caps in German; this one is mixed case.
+_Nothing retired._
 
 ---
 

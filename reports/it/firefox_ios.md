@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-17 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **Previous run** | 2026-10-17 @ `09d125f6a298` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 19 of 1,927 |
+| **Strings reviewed this run** | 1 of 1,927 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,28 +22,13 @@ Also for it: [android](android.md) · [firefox](firefox.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (4)
+### ✅ Fixed since the last run (1)
 
-- `ActivityStream.Library.Title` — `it/firefox-ios.xliff` — "Recently Saved" translated as "Aggiunti di recente" (recently added) rather than "Salvati di recente".
-    - Current: `Aggiunti di recente`
-    - Source: `Recently Saved`
-    - Suggest: `Salvati di recente`
-    - The section lists recently saved items (bookmarks/reading list); the Italian says "added" instead of "saved", diverging from the source term.
-- `Menu.TrackingProtectionDescription.Fingerprinters` — `it/firefox-ios.xliff` — "collect" rendered as "memorizzano" (store) instead of "raccolgono" (collect).
-    - Current: `I fingerprinter memorizzano vari tipi di impostazioni distintive`
-    - Source: `The settings on your browser and computer are unique. Fingerprinters collect a variety of these unique settings to create a profile of you, which can be used to track you as you browse.`
-    - Suggest: `I fingerprinter raccolgono vari tipi di impostazioni distintive`
-    - The source says fingerprinters collect these settings, not that they store them.
-- `PhotoLibrary.FirefoxWouldLikeAccessMessage` — `it/firefox-ios.xliff` — Singular "the image" rendered as plural "le immagini".
-    - Current: `Permette di salvare le immagini nel Rullino.`
-    - Source: `This allows you to save the image to your Camera Roll.`
-    - Suggest: `Permette di salvare l’immagine nel Rullino.`
-    - The en-US source refers to a single image ("save the image to your Camera Roll").
-- `Settings.Siri.SectionDescription` — `it/firefox-ios.xliff` — The translation drops "Siri shortcuts", turning "Use Siri shortcuts to quickly open Firefox via Siri" into "Use Siri to quickly open Firefox".
-    - Current: `Utilizza Siri per aprire velocemente Firefox`
-    - Source: `Use Siri shortcuts to quickly open Firefox via Siri`
-    - Suggest: `Utilizza i comandi di Siri per aprire velocemente Firefox con Siri`
-    - The source describes using Siri shortcuts; the Italian omits the shortcut concept, which is the subject of this settings section (see Settings.Siri.SectionName “Comandi di Siri”).
+- `Menu.TrackingProtectionCrossSiteTrackers.Title` — `it/firefox-ios.xliff` — "Cross-Site Trackers" translated as "Contenuti traccianti intersito", duplicating the wording used for "Tracking content" and adding "Contenuti".
+    - Current: `Contenuti traccianti intersito`
+    - Source: `Cross-Site Trackers`
+    - Suggest: `Traccianti intersito`
+    - The source says "Cross-Site Trackers" (trackers), not "tracking content"; the current wording collides with Menu.TrackingProtectionBlockedContent.Title ("Contenuti traccianti") on the same screen.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -100,13 +85,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (3)
+## 3. Open findings (2)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 2 |
+| 2 | Wrong content (says something other than the English) | 1 |
 | 3 | Degraded language (grammar, spelling, terminology) | 1 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -126,11 +111,6 @@ _Nothing in this category._
     - Source: `Today and Yesterday`
     - Suggest: `Oggi e ieri`
     - The source lists "Today and Yesterday"; the Italian inverts the order.
-- `Menu.TrackingProtectionCrossSiteTrackers.Title` — `it/firefox-ios.xliff` — "Cross-Site Trackers" translated as "Contenuti traccianti intersito", duplicating the wording used for "Tracking content" and adding "Contenuti".
-    - Current: `Contenuti traccianti intersito`
-    - Source: `Cross-Site Trackers`
-    - Suggest: `Traccianti intersito`
-    - The source says "Cross-Site Trackers" (trackers), not "tracking content"; the current wording collides with Menu.TrackingProtectionBlockedContent.Title ("Contenuti traccianti") on the same screen.
 
 ### C. Grammar, agreement & spelling
 
@@ -189,8 +169,9 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (20)
+### Fixed to date (21)
 
+- `Menu.TrackingProtectionCrossSiteTrackers.Title` — `it/firefox-ios.xliff` — fixed 2026-10-19
 - `ActivityStream.Library.Title` — `it/firefox-ios.xliff` — fixed 2026-10-17
 - `Menu.TrackingProtectionDescription.Fingerprinters` — `it/firefox-ios.xliff` — fixed 2026-10-17
 - `PhotoLibrary.FirefoxWouldLikeAccessMessage` — `it/firefox-ios.xliff` — fixed 2026-10-17

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-17 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **Previous run** | 2026-10-17 @ `09d125f6a298` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 15 of 1,927 |
+| **Strings reviewed this run** | 1 of 1,927 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,40 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (8)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `WorldCup.GroupPhase.GroupA.Title.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Group letter A rendered with Cyrillic "А" while all other groups keep Latin letters, breaking consistency.
-    - Current: `Группа А`
-    - Suggest: `Группа A`
-    - Groups B–L use the Latin letter; the Cyrillic А is inconsistent and may not match the official group labels.
-- `WorldCup.HomepageWidget.ErrorLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "match data" mistranslated as "данные о совпадениях" (data about matches/coincidences in the search sense) instead of football match data.
-    - Current: `данные о совпадениях`
-    - Suggest: `данные о матчах`
-    - In the World Cup context "match" means a football game (матч), not a text/search match (совпадение).
-- `WorldCup.HomepageWidget.FollowTeamCard.Description.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "live" was attached to the wrong element, producing "and other information live" instead of "live match updates".
-    - Current: `Получайте обновления по матчам и другую информацию в прямом эфире.`
-    - Suggest: `Получайте обновления матчей в прямом эфире и не только.`
-    - The source qualifies the match updates as live ("live match updates and more"); the translation shifts "в прямом эфире" to modify "другую информацию".
-- `WorldCup.HomepageWidget.FollowTeamCard.Title.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Keep Tabs on the World Cup" translated literally as browser tabs, which the developer comment explicitly forbids.
-    - Current: `Оставить вкладки о ЧМ`
-    - Suggest: `Следите за ЧМ`
-    - The comment says the idiom means staying informed and must not be translated literally as physical 'tabs'; "Оставить вкладки о ЧМ" means "Leave tabs about the World Cup" and loses the meaning.
-- `WorldCup.HomepageWidget.GetCustomWallpaperLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Get custom wallpaper" rendered as "Загрузить собственные обои" (upload your own wallpaper), changing the action.
-    - Current: `Загрузить собственные обои`
-    - Suggest: `Получить особые обои`
-    - The button selects a provided custom wallpaper, not uploads the user's own image; "собственные" plus "загрузить" implies the user supplies the file.
-- `WorldCup.HomepageWidget.MatchUnavailableLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Try refreshing" rendered as "обновить страницу" (refresh the page), but the widget refreshes match data, not a page.
-    - Current: `Попробуйте обновить страницу через несколько минут.`
-    - Suggest: `Попробуйте обновить через несколько минут.`
-    - The source says "Try refreshing in a few minutes" about the widget's match data; adding "страницу" asserts a page reload that doesn't exist here.
-- `WorldCup.HomepageWidget.RoundPhase.UpcomingLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Upcoming" for a single upcoming match is translated in the plural.
-    - Current: `Предстоящие`
-    - Suggest: `Предстоящий`
-    - The developer comment says the label is for an upcoming match (singular); the plural form does not agree.
-- `WorldCup.HomepageWidget.SettingsButtonAccessibilityLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "More options" translated as "Другие настройки" (other settings).
-    - Current: `Другие настройки`
-    - Suggest: `Другие параметры`
-    - The source is "More options" for a panel of actions (Share, Remove), not settings.
+_Nothing retired._
 
 ---
 

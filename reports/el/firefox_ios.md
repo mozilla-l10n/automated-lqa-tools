@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-17 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **Previous run** | 2026-10-16 @ `8c3a631663df` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **Previous run** | 2026-10-17 @ `09d125f6a298` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 11 of 1,922 |
+| **Strings reviewed this run** | 0 of 1,922 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for el: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `BrowserDataTransfer.ImportFailure.Message.v160` — `el/firefox-ios.xliff` — The verb form is ungrammatical: it is a subjunctive without "να" where an imperative is needed.
-    - Current: `Δοκιμάσετε ξανά αργότερα.`
-    - Source: `Try again later.`
-    - Suggest: `Δοκιμάστε ξανά αργότερα.`
-    - "Try again later" is an instruction, so the imperative "Δοκιμάστε" is required. "Δοκιμάσετε" on its own is not a correct Greek sentence.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
