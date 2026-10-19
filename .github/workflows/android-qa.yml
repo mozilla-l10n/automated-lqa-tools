@@ -206,6 +206,7 @@ jobs:
       - run: pip install -r requirements.txt
 
       - name: Switch to the rolling QA branch
+        id: switch
         # One long-lived branch, so runs accumulate into a single open pull
         # request instead of opening one per run. Done before the artifacts
         # are applied so there is nothing in the tree to stash.
@@ -240,6 +241,9 @@ jobs:
 
           if [ "$open_pr" = true ]; then
             echo "adding to the open pull request on $BRANCH"
+            # The previous run's tip, so the refresh comment can say what
+            # this run changed on top of it.
+            echo "prev=$(git rev-parse "origin/$BRANCH")" >> "$GITHUB_OUTPUT"
             git checkout -B "$BRANCH" "origin/$BRANCH"
             if ! git merge --no-edit "origin/$BASE"; then
               # Only generated files can conflict. Locale instructions are
@@ -298,17 +302,31 @@ jobs:
       - name: Open or update the pull request
         if: steps.commit.outputs.changed == 'true'
         env:
+          PREV: ${{ steps.switch.outputs.prev }}
           INPUTS_LOCALES: ${{ inputs.locales || 'all' }}
         run: |
           set -euo pipefail
           # Generated, not sliced out of the rendered page, so an edit to
           # that page cannot quietly change what a reviewer sees.
-          python lib/summary.py --project android --pr-body > /tmp/pr-body.md
+          # Compared with the base, which holds what was last merged: the
+          # backlog alone is the same from one day to the next and says
+          # nothing about the run being proposed.
+          python lib/summary.py --project android --pr-body \
+            --since "origin/$BASE" > /tmp/pr-body.md
 
           if gh pr view "$BRANCH" --json state --jq .state 2>/dev/null | grep -qx OPEN; then
             gh pr edit "$BRANCH" --body-file /tmp/pr-body.md
-            gh pr comment "$BRANCH" \
-              --body "Refreshed $(date -u +%Y-%m-%d) — locales: \`${INPUTS_LOCALES}\`"
+            {
+              echo "Refreshed $(date -u +%Y-%m-%d) — locales: \`${INPUTS_LOCALES}\`"
+              # Empty when the pull request was opened after this job began.
+              if [ -n "$PREV" ]; then
+                echo
+                echo "Changes since the previous run on this branch (\`${PREV:0:7}\`):"
+                echo
+                python lib/summary.py --project android --delta-table "$PREV"
+              fi
+            } > /tmp/pr-comment.md
+            gh pr comment "$BRANCH" --body-file /tmp/pr-comment.md
           else
             gh pr create \
               --base "$BASE" --head "$BRANCH" \

@@ -12,6 +12,7 @@ import argparse
 import datetime
 import json
 import os
+import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -64,7 +65,7 @@ def _code(text: str, limit: int = 200) -> str:
     return report.fence(report._esc(text, limit))
 
 
-def _one(f, locale: str) -> str:
+def _one(f, locale: str, was: bool = False) -> str:
     """One finding, self-contained: the PR body has no report around it.
 
     Detail lines are indented with :data:`report.SUB`, not two spaces, for
@@ -80,13 +81,17 @@ def _one(f, locale: str) -> str:
         f"\n{report.SUB}{f.summary}"
     ]
     if f.current:
-        bits.append(f"{report.SUB}Current: {_code(f.current)}")
-    if f.suggest and f.suggest != f.current:
+        # A closed finding's `current` is what the string said when it was
+        # raised, which is no longer current.
+        label = "Was" if was else "Current"
+        bits.append(f"{report.SUB}{label}: {_code(f.current)}")
+    if f.suggest and f.suggest != f.current and not was:
         bits.append(f"{report.SUB}Suggest: {_code(f.suggest)}")
     return "\n".join(bits)
 
 
-def _listing(items: list[tuple], cap: int, per_locale: int = 0) -> str:
+def _listing(items: list[tuple], cap: int, per_locale: int = 0,
+             was: bool = False) -> str:
     """Render a bounded sample, and say plainly what was left out.
 
     A silent truncation reads as "that was all of them", which is the one
@@ -103,7 +108,7 @@ def _listing(items: list[tuple], cap: int, per_locale: int = 0) -> str:
             break
         seen[loc] = seen.get(loc, 0) + 1
         shown.append((loc, f))
-    body = "\n".join(_one(f, loc) for loc, f in shown)
+    body = "\n".join(_one(f, loc, was) for loc, f in shown)
     if len(shown) < len(items):
         body += (
             f"\n- _…and {len(items) - len(shown)} more, in the per-locale "
@@ -222,6 +227,237 @@ def _highlights(rows: list[dict], project) -> str:
     return "\n".join(out)
 
 
+# --- what changed since the last merge -----------------------------------
+#
+# The backlog lists above answer "what is open"; a reviewer of the pull
+# request asks "what did this run change". These compare each locale's
+# findings with the same file at a git ref -- the base branch, which holds
+# whatever was last merged -- and sort the difference into the same
+# lifecycle buckets the per-locale reports use. Nothing is re-derived: the
+# statuses are the ones `resolve` recorded, so "fixed" here means exactly
+# what it means in state.
+
+# Closed-from-open transitions, in the order they are shown. "Closed by a
+# person" is one bucket: from the pull request's point of view dismissing
+# one string and suppressing a class are the same event.
+_CLOSED = (
+    ("fixed", "✅ Fixed", ("fixed",)),
+    ("withdrawn", "↩︎ Withdrawn — the check changed its mind, the string did not move",
+     ("withdrawn",)),
+    ("person", "🙅 Closed by a person — dismissed or suppressed",
+     ("dismissed", "suppressed")),
+    ("obsolete", "🗑 Retired — the string no longer exists upstream", ("obsolete",)),
+)
+
+
+def _git_show(ref: str, path: str):
+    """The file at ``ref``, or None when it did not exist there."""
+    rel = os.path.relpath(path, config.REPO_ROOT)
+    try:
+        return subprocess.run(
+            ["git", "-C", config.REPO_ROOT, "show", f"{ref}:{rel}"],
+            capture_output=True, text=True, check=True,
+        ).stdout
+    except subprocess.CalledProcessError:
+        return None
+
+
+def _load_at(project, locale: str, ref: str):
+    """Findings for ``locale`` at ``ref``; None if the locale had no state."""
+    text = _git_show(ref, findings_mod.path(project, locale))
+    if text is None:
+        return None
+    return [findings_mod.Finding(**row) for row in json.loads(text)]
+
+
+def _pair(before: list, after: list) -> tuple[list, list]:
+    """Match findings across the two states.
+
+    By ``fid`` first, then by ``rekey`` where exactly one candidate is left
+    on each side: rewording a check gives the same defect a new ``fid``, and
+    matching on ``fid`` alone would show it as one finding closed and an
+    identical one opened. Returns ``(pairs, gone)`` where a pair's first
+    element is None for a finding with no earlier record, and ``gone`` is
+    what the earlier state had and this one has dropped altogether.
+    """
+    by_fid = {f.fid: f for f in before}
+    pairs, unmatched = [], []
+    for f in after:
+        b = by_fid.pop(f.fid, None)
+        if b is None:
+            unmatched.append(f)
+        else:
+            pairs.append((b, f))
+    left = {}
+    for b in by_fid.values():
+        left.setdefault(b.rekey, []).append(b)
+    waiting = {}
+    for f in unmatched:
+        waiting.setdefault(f.rekey, []).append(f)
+    for key, fs in waiting.items():
+        bs = left.get(key, [])
+        if len(fs) == 1 and len(bs) == 1:
+            pairs.append((left.pop(key)[0], fs[0]))
+        else:
+            pairs += [(None, f) for f in fs]
+    gone = [b for bs in left.values() for b in bs]
+    return pairs, gone
+
+
+def delta(project, rows: list[dict], ref: str) -> dict:
+    """Per-locale lifecycle changes between ``ref`` and the working tree."""
+    out = {"locales": {}, "first_run": [], "new": [], "reopened": [],
+           "recheck": [], "gone": []}
+    for key, _, _ in _CLOSED:
+        out[key] = []
+    for r in rows:
+        if r["state"]:
+            continue
+        loc = r["locale"]
+        before = _load_at(project, loc, ref)
+        if before is None:
+            out["first_run"].append(loc)
+            before = []
+        pairs, gone = _pair(before, r["found"])
+        counts = {}
+
+        def put(bucket, f):
+            out[bucket].append((loc, f))
+            counts[bucket] = counts.get(bucket, 0) + 1
+
+        for b, f in pairs:
+            if b is None:
+                if f.is_open:
+                    put("new", f)
+            elif b.is_open and not f.is_open:
+                for key, _, statuses in _CLOSED:
+                    if f.status in statuses:
+                        put(key, f)
+            elif not b.is_open and f.is_open:
+                put("reopened", f)
+            elif b.status != "needs-recheck" and f.status == "needs-recheck":
+                put("recheck", f)
+        for b in gone:
+            if b.is_open:
+                put("gone", b)
+        was = sum(1 for f in before if f.is_open)
+        if counts or was != r["open"]:
+            out["locales"][loc] = dict(counts, net=r["open"] - was)
+    return out
+
+
+def _escalation_order(items: list[tuple]) -> list[tuple]:
+    """Deliberate edits first, then by impact, then by locale and file."""
+    return sorted(items, key=lambda p: (not p[1].reads_as_deliberate,
+                                        p[1].impact, p[0], p[1].file))
+
+
+def delta_table(d: dict) -> str:
+    """One row per locale that moved. Shared by the body and the comment."""
+    if not d["locales"]:
+        return "_No finding changed status._"
+    cols = [("new", "New"), ("reopened", "Reopened"), ("fixed", "Fixed"),
+            ("withdrawn", "Withdrawn"), ("person", "Dismissed / suppressed"),
+            ("obsolete", "Retired"), ("recheck", "Needs re-read")]
+    if d["gone"]:
+        cols.append(("gone", "Removed from state"))
+    out = ["| Locale | " + " | ".join(t for _, t in cols) + " | Open Δ |",
+           "|---|" + "---|" * (len(cols) + 1)]
+    for loc in sorted(d["locales"]):
+        c = d["locales"][loc]
+        cells = [str(c.get(k, 0) or "·") for k, _ in cols]
+        net = c["net"]
+        out.append(f"| {loc} | " + " | ".join(cells)
+                   + f" | {'+' if net > 0 else ''}{net} |")
+    return "\n".join(out)
+
+
+def _short(ref: str) -> str:
+    try:
+        return subprocess.run(
+            ["git", "-C", config.REPO_ROOT, "rev-parse", "--short", ref],
+            capture_output=True, text=True, check=True,
+        ).stdout.strip()
+    except subprocess.CalledProcessError:
+        return ""
+
+
+def _delta_section(d: dict, ref: str, project) -> str:
+    sha = _short(ref)
+    at = f" at `{sha}`" if sha and not ref.startswith(sha) else ""
+    out = [f"## Changes since the last merge (`{ref}`{at})", ""]
+    if d["first_run"]:
+        locs = ", ".join(f"`{loc}`" for loc in d["first_run"])
+        out += [
+            f"First run for {locs}: nothing to compare with, so "
+            f"{'their' if len(d['first_run']) > 1 else 'its'} whole backlog "
+            "counts as new below.",
+            "",
+        ]
+    out += [delta_table(d), ""]
+
+    raised = d["new"] + d["reopened"]
+    if raised:
+        loud = [p for p in raised
+                if p[1].reads_as_deliberate or p[1].impact == 1]
+        out += [f"### 🆕 New or reopened ({len(raised)})", ""]
+        n_wrong = sum(1 for _, f in raised if f.impact == 2
+                      and not f.reads_as_deliberate)
+        n_rest = sum(1 for _, f in raised if f.impact > 2)
+        out += [
+            f"{sum(1 for _, f in raised if f.reads_as_deliberate)} read as a "
+            f"deliberate edit · {sum(1 for _, f in raised if f.impact == 1)} "
+            f"broken output · {n_wrong} other wrong content · {n_rest} "
+            "language and typography.",
+            "",
+        ]
+        if d["reopened"]:
+            out += [
+                f"{len(d['reopened'])} of these were closed at `{ref}` and "
+                "have been raised again.",
+                "",
+            ]
+        if loud:
+            out += [_listing(_escalation_order(loud), 30, per_locale=5), ""]
+        quiet = [p for p in raised if p not in loud and p[1].impact == 2]
+        if quiet:
+            out += ["Wrong content:", "",
+                    _listing(_escalation_order(quiet), MAX_LISTED, per_locale=2),
+                    ""]
+
+    if d["recheck"]:
+        out += [
+            f"### 🔁 String changed, defect not verifiable ({len(d['recheck'])})",
+            "",
+            "Text matching cannot tell whether these survived the edit; "
+            "they are back in front of the reviewer.",
+            "",
+            _per_locale(d["recheck"]),
+            "",
+        ]
+
+    for key, title, _ in _CLOSED:
+        items = d[key]
+        if not items:
+            continue
+        out += [f"### {title} ({len(items)})", "", _per_locale(items), ""]
+        if key == "fixed":
+            out += [_listing(_escalation_order(items), MAX_LISTED,
+                             per_locale=2, was=True), ""]
+
+    if d["gone"]:
+        out += [
+            f"### Removed from state ({len(d['gone'])})",
+            "",
+            f"Open at `{ref}` and absent now — deleted by hand, not resolved "
+            "by a run.",
+            "",
+            _per_locale(d["gone"]),
+            "",
+        ]
+    return "\n".join(out)
+
+
 def render(project) -> str:
     rows = _rows(project)
     checked = [r for r in rows if not r["state"]]
@@ -293,30 +529,58 @@ def render(project) -> str:
     return "\n".join(out)
 
 
-def pr_body(project) -> str:
+def pr_body(project, since: str = "") -> str:
     """The body of the project's pull request.
 
     Generated rather than sliced out of the rendered page: the body used to
     be the page's first forty lines, so any edit to the header silently
     changed what the reviewer saw.
+
+    With ``since`` -- the base branch, in the workflows -- it leads with what
+    this pull request changes, and the whole open backlog follows folded
+    away: that backlog is the same from one day to the next, so on its own
+    it tells a reviewer nothing about the run they are approving.
     """
     rows = _rows(project)
-    return "\n".join([
+    out = [
         "Automated localization QA: findings, state and reports only. This "
         "workflow never modifies a locale file, and the review agent runs "
         "with read-only tools.",
         "",
-        "The branch is reused, so this describes everything open on it, not "
-        "only the latest commit.",
-        "",
-        "---",
-        "",
-        _highlights(rows, project),
+    ]
+    if since:
+        out += [
+            f"Compared with `{since}`, which holds what was last merged. The "
+            "branch is reused, so while this pull request stays open every "
+            "run on it is included.",
+            "",
+            "---",
+            "",
+            _delta_section(delta(project, rows, since), since, project),
+            "## Everything open on the branch",
+            "",
+            "<details><summary>The whole backlog, not only this run</summary>",
+            "",
+            _highlights(rows, project),
+            "</details>",
+            "",
+        ]
+    else:
+        out += [
+            "The branch is reused, so this describes everything open on it, "
+            "not only the latest commit.",
+            "",
+            "---",
+            "",
+            _highlights(rows, project),
+        ]
+    out += [
         _table(rows, project, prefix="reports/"),
         "",
         "Each locale links to its own report, which lists every open "
         "finding with the en-US source beside it.",
-    ])
+    ]
+    return "\n".join(out)
 
 
 def write(project) -> str:
@@ -334,11 +598,19 @@ def main(argv=None) -> int:
     ap.add_argument("--stdout", action="store_true")
     ap.add_argument("--pr-body", action="store_true",
                     help="print the pull request body instead of the page")
+    ap.add_argument("--since", metavar="REF", default="",
+                    help="with --pr-body, lead with what changed since this "
+                         "git ref")
+    ap.add_argument("--delta-table", metavar="REF",
+                    help="print only the per-locale changes since REF")
     args = ap.parse_args(argv)
 
     project = config.load(args.project)
+    if args.delta_table is not None:
+        print(delta_table(delta(project, _rows(project), args.delta_table)))
+        return 0
     if args.pr_body:
-        print(pr_body(project))
+        print(pr_body(project, args.since))
         return 0
     text = render(project)
     if args.stdout:

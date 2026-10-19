@@ -409,6 +409,36 @@ def run(l10n_dir, source_dir, project) -> int:
         check(f"| {n_fixed} |" in rendered or str(n_fixed) in rendered,
               f"the cross-locale page reports {locale}'s {n_fixed} fixed")
 
+    # The pull request body compares with the base branch. A check reworded
+    # between the two gives the same defect a new fid; matched on fid alone
+    # it would read as one finding fixed and an identical one raised.
+    def _f(**kw):
+        return Finding(locale="it", file="a.ftl", category="B", **kw)
+    before = [_f(string_id="s1", summary="old wording", check="markup"),
+              _f(string_id="s2", summary="x"),
+              _f(string_id="s3", summary="x"),
+              _f(string_id="s4", summary="x", status="fixed"),
+              _f(string_id="s5", summary="x")]
+    after = [_f(string_id="s1", summary="new wording", check="markup"),
+             _f(string_id="s2", summary="x", status="fixed"),
+             _f(string_id="s3", summary="x", status="withdrawn"),
+             _f(string_id="s4", summary="x"),
+             _f(string_id="s6", summary="x")]
+    _orig_load_at = _summary._load_at
+    _summary._load_at = lambda project, locale, ref: before
+    try:
+        d = _summary.delta(project, [{"locale": "it", "state": "",
+                                      "found": after, "open": 3}], "base")
+    finally:
+        _summary._load_at = _orig_load_at
+    got = {k: [f.string_id for _, f in d[k]]
+           for k in ("new", "reopened", "fixed", "withdrawn", "gone")}
+    check(got == {"new": ["s6"], "reopened": ["s4"], "fixed": ["s2"],
+                  "withdrawn": ["s3"], "gone": ["s5"]},
+          f"the PR delta sorts each finding by what happened to it: {got}")
+    check(d["locales"]["it"]["net"] == -1,
+          "and the open count moves by the difference, not by the new count")
+
     listed = [line.split("[", 1)[1].split("]", 1)[0]
               for line in _summary.render(project).splitlines()
               if line.startswith("| [")]
