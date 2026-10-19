@@ -144,6 +144,19 @@
  "Shared/Supporting Files/en-US.lproj/BottomSheet.strings": {
   "Addresses.BottomSheet.UseSavedAddressBottomSheet.v124": "8c873d4d a78ab860 b56cb9e0"
  },
+ "Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings": {
+  "BrowserDataTransfer.ImportFailure.DismissButton.v160": "b11bf815 b21634a9 ecd697d2",
+  "BrowserDataTransfer.ImportFailure.Message.v160": "e6ccd8b4 5f77c9f8 da9f3649",
+  "BrowserDataTransfer.ImportFailure.Title.v160": "57aea588 833c045e b24761ff",
+  "BrowserDataTransfer.ImportSuccess.GotItButton.v160": "3875e037 41cd3e20 600d26c1",
+  "BrowserDataTransfer.ImportSuccess.Message.v160": "6e8ce3bf 469f532a edc937f6",
+  "BrowserDataTransfer.ImportSuccess.Title.v160": "cfef50b0 1fe96e71 bdf9d80a",
+  "BrowserDataTransfer.ImportedBookmarksFolder.Title.v160": "384966a2 ebb4f638 a0508270",
+  "BrowserDataTransfer.Settings.ExportButton.v160": "fb66a750 7d444a32 84e6b1a9",
+  "BrowserDataTransfer.Settings.ImportButton.v160": "e0825f18 96bd6fd2 0e637a01",
+  "BrowserDataTransfer.Settings.SectionTitle.v160": "03052c74 a5b72aca 84ba8d13",
+  "BrowserDataTransfer.Settings.SupportedDataFooter.v160": "55b8f5eb d9ec6542 3320e51d"
+ },
  "Shared/Supporting Files/en-US.lproj/Camera.strings": {
   "CameraAccess.DisabledAlertMessage.v153": "37f4faa7 a6d5aa3e 22850307"
  },
@@ -817,9 +830,12 @@
   "QuickAnswers.AccessibilityLabels.OpenQuickAnswers.v158": "6dc79445 551ce079 e2f82871",
   "QuickAnswers.ContentView.AboutYourPrivacy.v158": "c80bc81b 7533760f 5a1b1589",
   "QuickAnswers.ContentView.Answering.v158": "baa1672b 9d1c4fa0 e4cbba5b",
+  "QuickAnswers.ContentView.FollowUpButton.v160": "77aef799 7bdf8904 3c1d883d",
   "QuickAnswers.ContentView.Footer.v158": "77ab2a98 2f8ace80 51573155",
   "QuickAnswers.ContentView.Listening.v158": "e9f9f2e7 647477fe 206365c4",
+  "QuickAnswers.ContentView.ListeningFollowUp.v160": "23d5cc76 58e05d3b 383d83dd",
   "QuickAnswers.ContentView.Placeholder.v158": "e9f9f2e7 07b487b5 d5c1aeb3",
+  "QuickAnswers.ContentView.ResultHeader.v160": "9856ae47 e2ed6049 0b132920",
   "QuickAnswers.ContentView.SearchingSources.v158": "b2e4e5a0 955b7c57 a6d3ccc8",
   "QuickAnswers.ContentView.Sources.v158": "9538f1da 5eb95cd9 2d3bdb88",
   "QuickAnswers.ContentView.Thinking.v158": "c705ab99 c2a5972a 17e9ea87",
@@ -1302,6 +1318,7 @@
   "Copy URL": "9b56f3d8 0ebf2b8b 111efe11",
   "Menu.SendLinkToDevice": "9f69c741 d015e941 2e440aaa",
   "Open Last Bookmark": "f64db2d2 881fe42a f5c732fb",
+  "QuickActions.CombineWindows.Title.v155": "17b4ebff 1e1ff656 c20aa1c1",
   "Send to Device": "f94b95e5 b6b743f8 749ef080",
   "TabPeek.RemoveBookmark.v146": "d101bdf0 02dc4436 304af0b9"
  },

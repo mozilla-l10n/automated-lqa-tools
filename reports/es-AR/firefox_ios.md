@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-17 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **Previous run** | 2026-10-17 @ `09d125f6a298` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 18 of 1,927 |
+| **Strings reviewed this run** | 0 of 1,927 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,23 +22,9 @@ Also for es-AR: [android](android.md) · [firefox](firefox.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (3)
+### ✅ Fixed since the last run (0)
 
-- `LiveActivity.Downloads.FileNameText.v138` — `es-AR/firefox-ios.xliff` — Curly quotation marks from the source were replaced with straight double quotes.
-    - Current: `Descargando "%@"`
-    - Source: `Downloading “%@”`
-    - Suggest: `Descargando “%@”`
-    - The en-US uses typographic double quotes around the file name; the translation uses straight quotes, deviating from the source's typography.
-- `TopSites.RemovePage.Button` — `es-AR/firefox-ios.xliff` — Em dash from the source replaced with a hyphen.
-    - Current: `Eliminar página - %@`
-    - Source: `Remove page — %@`
-    - Suggest: `Eliminar página — %@`
-    - The en-US uses an em dash separator ("Remove page — %@"); the translation uses a plain hyphen.
-- `PzSrmZ-eHmH1H` — `es-AR/firefox-ios.xliff` — Mismatched quotation marks: opening ‘ closed with ‘ instead of ’.
-    - Current: `‘Eliminar pestañas privadas‘`
-    - Source: `Just to confirm, you wanted ‘Clear Private Tabs’?`
-    - Suggest: `“Eliminar pestañas privadas”`
-    - The closing quote is a left single quotation mark, not a proper closing quote; other strings in the same file use straight double quotes.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -48,16 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (2)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `WorldCup.HomepageWidget.ErrorLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Please refresh." is rendered as the bare infinitive "Actualizar." instead of an instruction to the user.
-    - Current: `No pudimos cargar los datos de partidos. Actualizar.`
-    - Suggest: `No pudimos cargar los datos de partidos. Actualizá la página.`
-    - The source asks the user to refresh; "Actualizar." reads as a button label, not the imperative request, and breaks the voseo imperative used elsewhere in this file ("Elegí", "Conseguí").
-- `WorldCup.HomepageWidget.RoundPhase.BronzeFinalLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "BRONZE FINAL" is rendered as "TERCER PUESTO", which duplicates the separate "THIRD PLACE" label and loses the distinction between the match and the winner label.
-    - Current: `TERCER PUESTO`
-    - Suggest: `FINAL POR EL TERCER PUESTO`
-    - The source distinguishes the 'Bronze final' match (BRONZE FINAL) from the 'Third place' winner label (THIRD PLACE, translated as TERCER LUGAR); translating the match phase simply as "TERCER PUESTO" makes it a near-duplicate of the winner label instead of naming the match.
+_Nothing retired._
 
 ---
 

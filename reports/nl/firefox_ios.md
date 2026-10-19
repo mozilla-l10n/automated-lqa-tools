@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-17 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **Previous run** | 2026-10-17 @ `09d125f6a298` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 6 of 1,918 |
+| **Strings reviewed this run** | 0 of 1,918 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,24 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (4)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `WorldCup.HomepageWidget.FulltimePenaltiesScoreLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — ‘Full time’ is translated as ‘Gelijkspel’ (draw) instead of end of match.
-    - Current: `Gelijkspel • Penalty’s (%@)`
-    - Suggest: `Wedstrijd afgelopen • Penalty’s (%@)`
-    - The source says ‘Full time’, meaning the match has ended; ‘Gelijkspel’ means ‘draw’, a different statement about the result. Other strings in this file render ‘Full Time’ as ‘Wedstrijd afgelopen’, so it is also inconsistent.
-- `WorldCup.HomepageWidget.PenaltiesLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Dutch plural of 'penalty' is written 'penalty’s' — but here the football term should be 'Penalty’s' capitalized correctly; the apostrophe-s form is fine, however 'Penalties' should be rendered as 'Strafschoppen' or 'Penalty’s'.
-    - Current: `Penalty’s (%@)`
-    - Suggest: `Strafschoppen (%@)`
-    - Placeholder-only concern aside, the football phase 'Penalties' (penalty shoot-out) is normally 'Strafschoppen' in Dutch; 'Penalty’s' is the plural of a single penalty kick and reads oddly as a match-phase label.
-- `WorldCup.HomepageWidget.RoundPhase.QuarterFinalsLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Plural 'QUARTER-FINALS' rendered as singular 'KWARTFINALE'.
-    - Current: `KWARTFINALE`
-    - Suggest: `KWARTFINALES`
-    - The source is plural, and the parallel string SEMI-FINALS is correctly translated as the plural 'HALVE FINALES'; the singular is inconsistent and inaccurate.
-- `WorldCup.HomepageWidget.RoundPhase.Round16Label.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — 'ROUND OF 16' is literally translated as 'RONDE VAN 16' instead of the established Dutch term.
-    - Current: `RONDE VAN 16`
-    - Suggest: `ACHTSTE FINALES`
-    - In Dutch football terminology the round of 16 is called 'achtste finales'; 'ronde van 16' is a literal calque.
+_Nothing retired._
 
 ---
 

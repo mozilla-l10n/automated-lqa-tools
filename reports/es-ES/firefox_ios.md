@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-17 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **Previous run** | 2026-10-17 @ `09d125f6a298` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 1,848 |
 
@@ -34,24 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (4)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `WorldCup.HomepageWidget.ErrorLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Please refresh." is rendered as "actualiza la página" (refresh the page), adding a page that the source never mentions; the widget is refreshed, not a page.
-    - Current: `Por favor, actualiza la página.`
-    - Suggest: `Por favor, actualiza.`
-    - The source says only "Please refresh." referring to the widget's match data, not a web page.
-- `WorldCup.HomepageWidget.FulltimePenaltiesScoreLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Penalties" left in English instead of the Spanish football term "Penaltis".
-    - Current: `Penalties (%@)`
-    - Suggest: `Penaltis (%@)`
-    - The source term is a common noun, not a brand; es-ES uses "penaltis" for penalty shoot-out scores.
-- `WorldCup.HomepageWidget.MatchUnavailableLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Try refreshing" is rendered as "actualizar la página" (refresh the page), but the widget refreshes match data, not a page.
-    - Current: `Intenta actualizar la página en unos minutos.`
-    - Suggest: `Intenta actualizar en unos minutos.`
-    - The source says "Try refreshing in a few minutes"; the dev comment states the button retries loading match data in the widget, so adding "la página" asserts something the source does not.
-- `WorldCup.HomepageWidget.RoundPhase.BronzeFinalLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "BRONZE FINAL" (the match) and "THIRD PLACE" (the winner) are both rendered "TERCER PUESTO", losing the distinction between the two labels in the same widget.
-    - Current: `TERCER PUESTO`
-    - Suggest: `FINAL POR EL TERCER PUESTO`
-    - The source distinguishes the bronze-final match label from the third-place winner label; using the identical string for both makes the widget ambiguous. The dev comments explicitly mark one as the match and the other as the winner.
+_Nothing retired._
 
 ---
 

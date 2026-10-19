@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-17 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **Previous run** | 2026-10-17 @ `09d125f6a298` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 9 of 1,915 |
+| **Strings reviewed this run** | 0 of 1,915 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,24 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (4)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `WorldCup.HomepageWidget.EliminatedTeamSection.Title.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Still want to Follow Along?" translated as "Még mindig követi?", changing the meaning from a future intention to a present-state question.
-    - Current: `Még mindig követi?`
-    - Suggest: `Továbbra is követni szeretné?`
-    - The source asks whether the user still wants to follow along (after their team was eliminated); the Hungarian asks whether the user is still following, losing the volitional "want to".
-- `WorldCup.HomepageWidget.ErrorLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Missing comma after "Kérjük" in the Hungarian sentence.
-    - Current: `Kérjük frissítse.`
-    - Suggest: `Kérjük, frissítse.`
-    - Hungarian orthography requires a comma after the introductory "Kérjük" before the imperative clause.
-- `WorldCup.HomepageWidget.RoundPhase.WinWorldCupLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "2026 WORLD CUP CHAMPIONS" drops "World Cup", rendering only "2026-OS VILÁGBAJNOKOK".
-    - Current: `2026-OS VILÁGBAJNOKOK`
-    - Suggest: `2026-OS VILÁGBAJNOKSÁG GYŐZTESEI`
-    - The source names the World Cup explicitly; the translation omits the competition name.
-- `WorldCup.HomepageWidget.SettingsButtonAccessibilityLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "More options" is translated as "További beállítások" (More settings).
-    - Current: `További beállítások`
-    - Suggest: `További lehetőségek`
-    - The source says "More options", not "More settings"; the comment says the button shows more options related to the widget.
+_Nothing retired._
 
 ---
 

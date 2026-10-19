@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-17 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **Previous run** | 2026-10-17 @ `09d125f6a298` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 1,876 |
 
@@ -34,12 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `WorldCup.HomepageWidget.GroupPhase.RelatedMatchesLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Related matches" rendered as "similar matches".
-    - Current: `मिलते-जुलते मैच`
-    - Suggest: `संबंधित मैच`
-    - "मिलते-जुलते" means 'similar/resembling', not 'related'; the section lists a team's other matches in the group phase.
+_Nothing retired._
 
 ---
 

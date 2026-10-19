@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-17 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **Previous run** | 2026-10-17 @ `09d125f6a298` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 13 of 1,915 |
+| **Strings reviewed this run** | 0 of 1,915 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,66 +18,13 @@ Also for fa: [android](android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `QuickAnswers.ContentView.ResultHeader.v160` — `fa/firefox-ios.xliff` — The result header uses the plural feature name "Quick Answers" instead of the singular "Quick Answer" that labels the single answer below it.
-    - Current: `پاسخ‌های سریع`
-    - Source: `QUICK ANSWER`
-    - Suggest: `پاسخ سریع`
-    - The source says "QUICK ANSWER" (singular), and the comment says the header labels the text below it as a short answer. The plural "پاسخ‌های سریع" is the feature name and does not describe the single result. "پاسخ سریع" is already used in the ReturnPill string.
+_No new findings._
 
-### ✅ Fixed since the last run (10)
+### ✅ Fixed since the last run (0)
 
-- `QuickAnswers.AccessibilityLabels.OpenQuickAnswers.v158` — `fa/firefox-ios.xliff` — Adjective-noun order reversed: "سریع پاسخ‌ها" instead of "پاسخ‌های سریع".
-    - Current: `باز کردن سریع پاسخ‌ها`
-    - Source: `Open Quick Answers`
-    - Suggest: `باز کردن پاسخ‌های سریع`
-    - Persian puts the adjective after the noun; the current text reads as "quickly opening answers".
-- `QuickAnswers.Errors.DailyLimitMessage.v158` — `fa/firefox-ios.xliff` — Word-by-word machine rendering with broken Persian word order and untranslated feature name structure.
-    - Current: `تلاش کنید سریع پاسخ‌ها دوباره فردا.`
-    - Source: `Try Quick Answers again tomorrow.`
-    - Suggest: `فردا دوباره پاسخ‌های سریع را امتحان کنید.`
-    - The en-US 'Try Quick Answers again tomorrow.' is rendered as ungrammatical Persian with English word order; 'سریع پاسخ‌ها' also reverses the Persian noun-adjective order.
-- `QuickAnswers.Errors.PermissionAlertTitle.v158` — `fa/firefox-ios.xliff` — Ungrammatical literal rendering of 'Change Settings to Use Quick Answers'.
-    - Current: `تغییر تنظیمات به استفاده سریع پاسخ‌ها`
-    - Source: `Change Settings to Use Quick Answers`
-    - Suggest: `برای استفاده از پاسخ‌های سریع، تنظیمات را تغییر دهید`
-    - 'به استفاده' is not valid Persian for the purpose clause, and 'سریع پاسخ‌ها' reverses Persian noun-adjective order.
-- `QuickAnswers.OptInRedesign.Title.v158` — `fa/firefox-ios.xliff` — 'تلاش کنید سریع پاسخ‌ها' is ungrammatical English word order for 'Try Quick Answers'.
-    - Current: `تلاش کنید سریع پاسخ‌ها`
-    - Source: `Try Quick Answers`
-    - Suggest: `پاسخ‌های سریع را امتحان کنید`
-    - Persian requires object before verb and noun before adjective; the current string is a word-by-word calque.
-- `QuickAnswers.QuickActions.Title.v158` — `fa/firefox-ios.xliff` — 'سریع پاسخ‌ها' reverses the Persian noun-adjective order for 'Quick Answers'.
-    - Current: `سریع پاسخ‌ها`
-    - Source: `Quick Answers`
-    - Suggest: `پاسخ‌های سریع`
-    - In Persian the adjective follows the noun with ezafe; the current form is an English-order calque.
-- `QuickAnswers.ReturnPill.ReturnToQuickAnswerAccessibilityLabel.v158` — `fa/firefox-ios.xliff` — English word 'Return' left untranslated and noun-adjective order reversed.
-    - Current: `Return به سریع پاسخ`
-    - Source: `Return to Quick Answer`
-    - Suggest: `بازگشت به پاسخ سریع`
-    - The source 'Return to Quick Answer' is only partially translated, leaving English in a VoiceOver label.
-- `QuickAnswers.Tip.Title.v158` — `fa/firefox-ios.xliff` — English word 'Ask' left untranslated and word order is a calque.
-    - Current: `Ask بیرون بلند برای سریع پاسخ‌ها`
-    - Source: `Ask Out Loud for Quick Answers`
-    - Suggest: `برای پاسخ‌های سریع با صدای بلند بپرسید`
-    - 'Ask Out Loud for Quick Answers' is only partially translated and 'بیرون بلند' is a literal non-idiomatic rendering of 'out loud'.
-- `QuickAnswers.Settings.EnableQuickAnswers.v158` — `fa/firefox-ios.xliff` — English adjective-noun order kept, yielding ungrammatical Persian.
-    - Current: `فعال کردن سریع پاسخ‌ها`
-    - Source: `Enable Quick Answers`
-    - Suggest: `فعال کردن پاسخ‌های سریع`
-    - "Quick Answers" must be rendered as پاسخ‌های سریع in Persian; the current order is not grammatical.
-- `QuickAnswers.Settings.Title.v158` — `fa/firefox-ios.xliff` — English word order kept; should be پاسخ‌های سریع.
-    - Current: `سریع پاسخ‌ها`
-    - Source: `Quick Answers`
-    - Suggest: `پاسخ‌های سریع`
-    - Persian places the adjective after the noun with ezafe; current form is ungrammatical.
-- `Settings.AIControls.AIPoweredFeaturesSection.QuickAnswersSection.Title.v154` — `fa/firefox-ios.xliff` — English word order kept; should be پاسخ‌های سریع.
-    - Current: `سریع پاسخ‌ها`
-    - Source: `Quick Answers`
-    - Suggest: `پاسخ‌های سریع`
-    - Persian adjective follows the noun with ezafe.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -87,120 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (28)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `WorldCup.CountryPicker.Close.AccessibilityLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Ungrammatical English word order in "بستن World Cup کشور انتخاب‌گر".
-    - Current: `بستن World Cup کشور انتخاب‌گر`
-    - Suggest: `بستن انتخاب‌گر کشور جام جهانی`
-    - "Close World Cup country picker" requires Persian head-initial order; the current string stacks modifiers in English order and is unintelligible.
-- `WorldCup.CountryPicker.Confederation.CentralAmerica.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Adjective-noun order reversed; should be "آمریکای مرکزی".
-    - Current: `مرکزی آمریکا`
-    - Suggest: `آمریکای مرکزی`
-    - Persian places the modifier after the noun; "مرکزی آمریکا" is an English-order calque for "Central America".
-- `WorldCup.CountryPicker.Confederation.NorthAmerica.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "North" was corrupted into "خیرrth", producing a wrong region name.
-    - Current: `خیرrth آمریکا`
-    - Suggest: `آمریکای شمالی`
-    - "North America" must be "آمریکای شمالی"; the target contains a mangled half-translation of "No" plus leftover Latin letters.
-- `WorldCup.CountryPicker.Confederation.SouthAmerica.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Adjective-noun order reversed; should be "آمریکای جنوبی".
-    - Current: `جنوبی آمریکا`
-    - Suggest: `آمریکای جنوبی`
-    - Persian word order requires "آمریکای جنوبی" for "South America".
-- `WorldCup.CountryPicker.Title.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — English word order calque; possessive misplaced in "دنبال کردن شما تیم".
-    - Current: `دنبال کردن شما تیم`
-    - Suggest: `تیم خود را دنبال کنید`
-    - "Follow Your Team" requires the possessive after the noun in Persian; the current text is ungrammatical.
-- `WorldCup.GroupPhase.GroupA.Title.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Group letter "A" was translated as the number "یک" (one), inconsistent with the other group letters.
-    - Current: `گروه یک`
-    - Suggest: `گروه A`
-    - Source "Group A" is a letter label; all other groups keep the Latin letter, so "یک" names the wrong label.
-- `WorldCup.GroupPhase.GroupStageLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Word order reversed for "Group Stage".
-    - Current: `گروه مرحله`
-    - Suggest: `مرحله گروهی`
-    - Persian requires "مرحله گروهی"; the current text is an English-order calque.
-- `WorldCup.HomepageWidget.CountDown.DayLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Placeholder text "ترجمه‌نشده" shipped instead of a 1–2 character day abbreviation.
-    - Current: `ترجمه‌نشده`
-    - Suggest: `ر`
-    - The comment limits the string to 1–2 characters as an abbreviation for "Days"; the target is a literal "untranslated" marker that will be truncated to nonsense.
-- `WorldCup.HomepageWidget.EliminatedTeamSection.ChooseTeamButtonLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Choose Team" rendered as ungrammatical "انتخاب کنید تیم".
-    - Current: `انتخاب کنید تیم`
-    - Suggest: `انتخاب تیم`
-    - Verb-object order is wrong in Persian; should be "انتخاب تیم" or "تیم را انتخاب کنید".
-- `WorldCup.HomepageWidget.ErrorLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — String is largely untranslated/garbled, leaving English words and broken Persian word order.
-    - Current: `ما couldn’t بارگذاری مسابقه داده. لطفاً بازخوانی.`
-    - Suggest: `نتوانستیم اطلاعات مسابقه را بارگذاری کنیم. لطفاً بازخوانی کنید.`
-    - The en-US "We couldn’t load match data. Please refresh." is rendered with the English word "couldn’t" left in place and ungrammatical word-by-word Persian.
-- `WorldCup.HomepageWidget.ExtraTimeLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Extra time" is mangled into "Extrیک زمان", mixing Latin letters with Persian.
-    - Current: `Extrیک زمان`
-    - Suggest: `وقت اضافه`
-    - Apparently a bad find/replace of "a" with "یک"; the result is not a word in Persian and leaves Latin characters.
-- `WorldCup.HomepageWidget.FTLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Word-for-word reversed order: "کامل زمان" is not Persian for "Full Time".
-    - Current: `(کامل زمان)`
-    - Suggest: `(پایان بازی)`
-    - Persian noun-adjective order requires "زمان کامل"; the correct football term is "پایان بازی"/"وقت کامل".
-- `WorldCup.HomepageWidget.FTNoParenthesisLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Full Time" rendered with reversed word order as "کامل زمان".
-    - Current: `کامل زمان`
-    - Suggest: `پایان بازی`
-    - Ungrammatical literal word order; Persian requires noun first or the idiomatic football term.
-- `WorldCup.HomepageWidget.FirstHalfLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "First half" rendered with reversed word order as "اول نیمه".
-    - Current: `اول نیمه`
-    - Suggest: `نیمهٔ اول`
-    - Persian requires the noun before the ordinal with ezāfe: "نیمهٔ اول".
-- `WorldCup.HomepageWidget.FollowTeamCard.CTA.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Follow Your Team" rendered as ungrammatical word-by-word "دنبال کردن شما تیم".
-    - Current: `دنبال کردن شما تیم`
-    - Suggest: `دنبال کردن تیم خود`
-    - Persian possessive must follow the noun; "شما تیم" is not grammatical.
-- `WorldCup.HomepageWidget.FollowTeamCard.Description.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — English word "updates" left untranslated and word order is broken.
-    - Current: `دریافت زنده مسابقه updates و بیشتر.`
-    - Suggest: `به‌روزرسانی‌های زندهٔ مسابقه‌ها و بیشتر را دریافت کنید.`
-    - Source "Get live match updates and more." is partly untranslated, leaving the English noun in Persian text.
-- `WorldCup.HomepageWidget.FulltimePenaltiesScoreLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Full time" rendered with reversed word order as "کامل زمان".
-    - Current: `کامل زمان • ضربات پنالتی (%@)`
-    - Suggest: `پایان بازی • ضربات پنالتی (%@)`
-    - Ungrammatical literal word order for "Full time"; also inconsistent with proper Persian football terminology.
-- `WorldCup.HomepageWidget.GetCustomWallpaperLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Word-by-word order makes "دریافت سفارشی تصویر زمینه" ungrammatical.
-    - Current: `دریافت سفارشی تصویر زمینه`
-    - Suggest: `دریافت تصویر زمینهٔ سفارشی`
-    - Persian adjectives follow the noun; the current order is not grammatical.
-- `WorldCup.HomepageWidget.GroupPhase.RelatedMatchesLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Related matches" rendered with reversed word order as "مرتبط مسابقات".
-    - Current: `مرتبط مسابقات`
-    - Suggest: `مسابقه‌های مرتبط`
-    - Persian requires noun before adjective with ezāfe.
-- `WorldCup.HomepageWidget.HalfTimeLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Half time" rendered literally as "نیمه زمان", not Persian.
-    - Current: `نیمه زمان`
-    - Suggest: `بین دو نیمه`
-    - Word-by-word rendering; Persian for half time is "بین دو نیمه"/"استراحت بین دو نیمه".
-- `WorldCup.HomepageWidget.OfflineLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Largely untranslated: English words "Looks like", "’re" and broken syntax remain.
-    - Current: `Looks like شما’re آفلاین. بررسی شما اینترنت اتصال و تلاش کنید دوباره.`
-    - Suggest: `به نظر می‌رسد آفلاین هستید. اتصال اینترنت خود را بررسی کنید و دوباره تلاش کنید.`
-    - The en-US sentence is only partially translated, leaving English text visible to the user.
-- `WorldCup.HomepageWidget.RoundPhase.BronzeFinalLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "BRONZE FINAL" rendered with reversed word order as "برنز نهایی".
-    - Current: `برنز نهایی`
-    - Suggest: `ردهٔ سوم`
-    - Word-by-word order is ungrammatical in Persian; the bronze/third-place match is "ردهٔ سوم" or "فینال برنز".
-- `WorldCup.HomepageWidget.RoundPhase.Round16Label.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Stray standalone ezāfe diacritic with spaces in "دور ِ 16".
-    - Current: `دور ِ 16`
-    - Suggest: `دور ۱۶ تیمی`
-    - The kasra is written as a separate character surrounded by spaces, which is not valid Persian typography; the phrase for 'Round of 16' is "دور ۱۶ تیمی" / "یک‌هشتم نهایی".
-- `WorldCup.HomepageWidget.RoundPhase.Round32Label.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Stray standalone ezāfe diacritic with spaces in "دور ِ 32".
-    - Current: `دور ِ 32`
-    - Suggest: `دور ۳۲ تیمی`
-    - The kasra is written as a separate space-delimited character, which is invalid Persian typography.
-- `WorldCup.HomepageWidget.RoundPhase.ScrollIndicatorAccessibilityLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — English word "see" left untranslated and word order is broken.
-    - Current: `پیمایش به see قبلی یا بعدی مسابقات`
-    - Suggest: `برای دیدن مسابقه‌های قبلی یا بعدی پیمایش کنید`
-    - Source "Scroll to see previous or next matches" is partially untranslated with ungrammatical adjective order.
-- `WorldCup.HomepageWidget.RoundPhase.ThirdPlaceLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "THIRD PLACE" rendered with reversed word order as "سوم مقام".
-    - Current: `سوم مقام`
-    - Suggest: `مقام سوم`
-    - Persian requires "مقام سوم"; the current order is ungrammatical.
-- `WorldCup.HomepageWidget.RoundPhase.WinWorldCupLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "2026 WORLD CUP CHAMPIONS" rendered word-by-word as "2026 جهان جام قهرمانان".
-    - Current: `2026 جهان جام قهرمانان`
-    - Suggest: `قهرمانان جام جهانی ۲۰۲۶`
-    - The word order is ungrammatical and "جهان جام" is not the Persian name of the World Cup (جام جهانی), which is rendered correctly elsewhere in this file.
-- `WorldCup.HomepageWidget.SecondHalfLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Second half" rendered with reversed word order as "دوم نیمه".
-    - Current: `دوم نیمه`
-    - Suggest: `نیمهٔ دوم`
-    - Persian requires "نیمهٔ دوم"; the current form is ungrammatical.
+_Nothing retired._
 
 ---
 

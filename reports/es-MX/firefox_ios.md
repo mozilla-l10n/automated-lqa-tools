@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-17 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **Previous run** | 2026-10-17 @ `09d125f6a298` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 1,896 |
+| **Strings reviewed this run** | 0 of 1,896 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,16 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (2)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `WorldCup.HomepageWidget.FulltimePenaltiesScoreLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Full time" is rendered as "Tiempo completo" here but as "Finalizado" in the other Full Time strings in the same widget.
-    - Current: `Tiempo completo • Penales (%@)`
-    - Suggest: `Finalizado • Penales (%@)`
-    - WorldCup.HomepageWidget.FTLabel/FTNoParenthesisLabel translate the same source term "Full Time" as "Finalizado"; "Tiempo completo" is a literal rendering that means "full duration", not a finished match, and is inconsistent on the same screen.
-- `WorldCup.HomepageWidget.RoundPhase.BronzeFinalLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "BRONZE FINAL" (the match) is translated as "TERCER PUESTO", colliding with the separate "THIRD PLACE" label and using a non-Mexican term.
-    - Current: `TERCER PUESTO`
-    - Suggest: `PARTIDO POR EL TERCER LUGAR`
-    - The source distinguishes the bronze-final match label from the THIRD PLACE winner label (translated "TERCER LUGAR"); rendering the match as "TERCER PUESTO" is inconsistent within the same widget and "puesto" is not the es-MX term.
+_Nothing retired._
 
 ---
 

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-17 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **Previous run** | 2026-10-17 @ `09d125f6a298` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 17 of 1,909 |
+| **Strings reviewed this run** | 0 of 1,909 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,12 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `WorldCup.HomepageWidget.RoundPhase.Round32Label.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "ROUND OF 32" is rendered as 十六分之一决赛, which names the wrong stage.
-    - Current: `十六分之一决赛`
-    - Suggest: `三十二强赛`
-    - Round of 32 is the stage with 32 teams (32强/1/16 finals is ambiguous). In Chinese football usage, ROUND OF 16 = 八分之一决赛 (as translated above) and ROUND OF 32 should be 三十二强赛/十六分之一决赛 — but with Round of 16 already mapped to 八分之一决赛, labelling this 十六分之一决赛 is internally consistent; however the widely used term for the 2026 World Cup stage is 三十二强赛.
+_Nothing retired._
 
 ---
 

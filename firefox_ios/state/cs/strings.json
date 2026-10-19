@@ -144,6 +144,11 @@
  "Shared/Supporting Files/en-US.lproj/BottomSheet.strings": {
   "Addresses.BottomSheet.UseSavedAddressBottomSheet.v124": "3448aa79 a78ab860 b56cb9e0"
  },
+ "Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings": {
+  "BrowserDataTransfer.ImportFailure.DismissButton.v160": "4a2eb779 b21634a9 ecd697d2",
+  "BrowserDataTransfer.ImportFailure.Message.v160": "787c28a9 5f77c9f8 da9f3649",
+  "BrowserDataTransfer.ImportSuccess.GotItButton.v160": "88f1e760 41cd3e20 600d26c1"
+ },
  "Shared/Supporting Files/en-US.lproj/Camera.strings": {
   "CameraAccess.DisabledAlertMessage.v153": "1833fa20 a6d5aa3e 22850307"
  },

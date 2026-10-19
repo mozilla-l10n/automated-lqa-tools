@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-17 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **Previous run** | 2026-10-17 @ `09d125f6a298` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 16 of 1,927 |
+| **Strings reviewed this run** | 0 of 1,927 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,26 +18,13 @@ Also for fr: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `BrowserDataTransfer.ImportSuccess.Title.v160` — `fr/firefox-ios.xliff` — The English word order is copied, so the title reads "Safari Importation terminée", which isn't grammatical French.
-    - Current: `%@ Importation terminée`
-    - Source: `%@ Import Complete`
-    - Suggest: `Importation depuis %@ terminée`
-    - %@ is the name of the other browser. In French a noun can't sit in front of "Importation" like this. The title needs a preposition so it reads "import from Safari complete".
-- `BrowserDataTransfer.ImportedBookmarksFolder.Title.v160` — `fr/firefox-ios.xliff` — "%@ importé" puts the date before the participle, so the folder name says the date was imported rather than that the bookmarks were imported on that date.
-    - Current: `%@ importé`
-    - Source: `Imported %@`
-    - Suggest: `Importé le %@`
-    - The comment says %@ is the import date. "12/03/2026 importé" means "imported 12/03/2026" in the sense of the date being the thing imported. French needs "Importé le <date>".
+_No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `TopSites.RemovePage.Button` — `fr/firefox-ios.xliff` — Em dash from source replaced with a hyphen, contrary to the locale's em-dash convention.
-    - Current: `Supprimer la page - %@`
-    - Source: `Remove page — %@`
-    - Suggest: `Supprimer la page — %@`
-    - The en-US uses an em dash ("Remove page — %@") and the fr house dash is the em dash; a plain hyphen is a typography deviation.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

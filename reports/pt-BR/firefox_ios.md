@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-17 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `09d125f6a298` |
-| **Previous run** | 2026-10-12 @ `05c882bf36b5` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **Previous run** | 2026-10-17 @ `09d125f6a298` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 18 of 1,927 |
+| **Strings reviewed this run** | 0 of 1,927 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,23 +22,9 @@ Also for pt-BR: [android](android.md) · [firefox](firefox.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (3)
+### ✅ Fixed since the last run (0)
 
-- `QuickAnswers.OptInRedesign.PrivateByDesignTitle.v158` — `pt-BR/firefox-ios.xliff` — "Private By Design" is rendered as "Privativo por projeto" here but as "Projetado para privacidade" in the privacy banner title, an inconsistent and unidiomatic rendering.
-    - Current: `Privativo por projeto`
-    - Source: `Private By Design`
-    - Suggest: `Projetado para privacidade`
-    - The same source phrase "Private by Design" appears in QuickAnswers.PrivacyBanner.Title.v158 as "Projetado para privacidade"; "Privativo por projeto" is a literal, misleading rendering of the same term in the same feature.
-- `Keyboard.Shortcuts.RefreshWithoutCache.v108` — `pt-BR/firefox-ios.xliff` — Stray capital letter mid-phrase in "Recarregar Ignorando cache".
-    - Current: `Recarregar Ignorando cache`
-    - Source: `Reload Ignoring Cache`
-    - Suggest: `Recarregar ignorando cache`
-    - pt-BR uses sentence case in these shortcut labels (see the other entries, e.g. "Limpar histórico recente"); "Ignorando" should not be capitalized mid-sentence.
-- `TodayWidget.MoreTabsLabel` — `pt-BR/firefox-ios.xliff` — The "+" sign placement produces "Mais +5…" instead of the intended "+5 mais".
-    - Current: `Mais +%d…`
-    - Source: `+%d More…`
-    - Suggest: `+%d mais…`
-    - The developer comment states it becomes something like "+5 more"; placing "Mais" before "+5" reads oddly and capitalizes mid-label.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -48,24 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (4)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `WorldCup.HomepageWidget.RoundPhase.BronzeFinalLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "BRONZE FINAL" mistranslated as "FINAL DO BRONZE".
-    - Current: `FINAL DO BRONZE`
-    - Suggest: `FINAL DE BRONZE`
-    - The source names the bronze-medal match; "FINAL DO BRONZE" reads as "the final of the bronze" and is not the established Portuguese term (final de bronze / disputa do terceiro lugar).
-- `WorldCup.HomepageWidget.RoundPhase.Round16Label.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — Hyphenation is wrong in "OITAVAS-DE FINAL"; the standard form is "OITAVAS DE FINAL".
-    - Current: `OITAVAS-DE FINAL`
-    - Suggest: `OITAVAS DE FINAL`
-    - The Portuguese term for "Round of 16" is "oitavas de final" (cf. "QUARTAS DE FINAL" in the sibling string); the misplaced hyphen is a spelling error.
-- `WorldCup.HomepageWidget.RoundPhase.Round32Label.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "ROUND OF 32" rendered in sentence case and with inconsistent phrasing compared to the other round-phase labels.
-    - Current: `Fase dos 32`
-    - Suggest: `DEZESSEIS AVOS DE FINAL`
-    - All other round-phase labels are uppercase (QUARTAS DE FINAL, SEMIFINAIS, TERCEIRO LUGAR), matching the uppercase source; this one breaks the casing and terminology pattern on the same screen.
-- `WorldCup.HomepageWidget.RoundPhase.UpcomingLabel.v151` — `Shared/Supporting Files/en-US.lproj/WorldCup.strings` — "Upcoming" translated as "Seguintes" (following), not "upcoming/next".
-    - Current: `Seguintes`
-    - Suggest: `Em breve`
-    - The label marks a match that has not yet happened; "Seguintes" means "following ones" and does not convey "upcoming" for a single match.
+_Nothing retired._
 
 ---
 
