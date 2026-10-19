@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
-| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
+| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 141 of 16,358 |
+| **Strings reviewed this run** | 156 of 16,477 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,28 +18,13 @@ Also for pl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (1)
 
-- `credit-card-save-doorhanger-description-security-code` — `toolkit/toolkit/formautofill/formAutofill.ftl` — The Polish reverses the statement "only you can use them" into "nobody else can use them" — actually it drops the assurance that the user can use them.
-    - Current: `dzięki czemu nikt inny nie może używać ich do wypełniania formularzy płatności`
-    - Source: `{ -brand-short-name } encrypts your card number and security code, so only you can use them to fill payment forms.`
-    - Suggest: `dzięki czemu tylko Ty możesz używać ich do wypełniania formularzy płatności`
-    - en-US says "so only you can use them to fill payment forms"; the Polish asserts that no one else can use them, a claim about third parties the source frames as the user's exclusive ability.
-- `protections-panel-smartblock-blocking-toggle` — `browser/browser/protectionsPanel.ftl` — "Allow { $trackername }" rendered as "Zezwól z serwisu…", which is ungrammatical and changes the meaning of the toggle.
-    - Current: `Zezwól z serwisu { $trackername }`
-    - Source: `label: Allow { $trackername }`
-    - Suggest: `Zezwalaj na { $trackername }`
-    - The source is a toggle label allowing the named tracker; "Zezwól z serwisu X" is not a valid Polish construction (zezwolić requires "na") and does not say the tracker is allowed.
-- `sync-choose-what-to-sync-dialog4` — `browser/browser/preferences/preferences.ftl` — Dialog title "Manage what syncs…" translated as "Wybierz, co ma być synchronizowane…" (Choose what is synced).
-    - Current: `Wybierz, co ma być synchronizowane na wszystkich połączonych urządzeniach`
-    - Source: `buttonaccesskeyaccept: S buttonaccesskeyextra2: D buttonlabelaccept: Save buttonlabelextra2: Disconnect… style: min-width: 36em; title: Manage what syncs on all your connected devices`
-    - Suggest: `Zarządzaj tym, co jest synchronizowane na wszystkich połączonych urządzeniach`
-    - en-US says "Manage what syncs"; the Polish says "Choose", a leftover from the previous string version.
-- `onboarding-carousel-nav` — `browser/browser/newtab/onboarding.ftl` — "Feature highlights" (highlights of a feature) translated as "Najlepsze funkcje" (best features).
-    - Current: `Najlepsze funkcje`
-    - Source: `aria-label: Feature highlights`
-    - Suggest: `Najważniejsze informacje o funkcji`
-    - The developer comment states the string means "Highlights of a feature" (feature is a noun, singular); the Polish renders it as a list of the best features.
+- `tabs-toolbar-list-all-tabs-2` — `browser/browser/browser.ftl` — The label and tooltip drop the "manage" part of "Search and manage tabs".
+    - Current: `Szukaj w kartach`
+    - Source: `label: Search and manage tabs tooltiptext: Search and manage tabs`
+    - Suggest: `Wyszukaj karty i zarządzaj nimi`
+    - The en-US says the button is for searching and managing tabs. The Polish only says "Search in tabs", so the management function is missing from both the label and the tooltip.
 
 ### ✅ Fixed since the last run (0)
 
@@ -63,11 +48,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 326 |
-| Strings | 16,358 |
-| Missing strings | 46 |
+| Files | 328 |
+| Strings | 16,477 |
+| Missing strings | 43 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -82,24 +67,20 @@ _Nothing retired._
 
 ### Completeness
 
-**46 strings** are not translated yet, concentrated in:
+**43 strings** are not translated yet, concentrated in:
 
-- `browser/browser/autoTabGrouping.ftl` — 15
-- `browser/browser/newtab/onboarding.ftl` — 10
-- `browser/browser/browser.ftl` — 4
-- `browser/browser/genai.ftl` — 4
-- `browser/browser/preferences/preferences.ftl` — 3
-- `browser/browser/defaultBrowserNotification.ftl` — 2
-- `browser/browser/newtab/asrouter.ftl` — 2
-- `browser/browser/aiWindow.ftl` — 1
-- `browser/browser/menubar.ftl` — 1
-- `browser/browser/policies/policies-descriptions.ftl` — 1
-- `browser/browser/newtab/newtab.ftl` — 1
-- `dom/chrome/dom/dom.properties` — 1
-
-**Files absent from the locale:**
-
-- `browser/browser/autoTabGrouping.ftl`
+- `browser/browser/browser.ftl` — 8
+- `browser/browser/ipProtection.ftl` — 8
+- `browser/browser/newtab/newtab.ftl` — 8
+- `browser/browser/sanitize.ftl` — 3
+- `toolkit/toolkit/about/aboutGlean.ftl` — 2
+- `browser/browser/sidebar.ftl` — 2
+- `browser/browser/preferences/permissions.ftl` — 2
+- `browser/browser/preferences/preferences.ftl` — 2
+- `toolkit/toolkit/global/videocontrols.ftl` — 1
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 1
+- `browser/browser/confirmationHints.ftl` — 1
+- `browser/browser/genai.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -109,11 +90,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `polish-double` 1419, `straight-double` 36, `german-double` 7, `curly-double` 2 | **polish-double** |
+| quotes | `polish-double` 1434, `straight-double` 36, `german-double` 7, `curly-double` 2 | **polish-double** |
 | apostrophe | `straight` 1 | **straight** |
-| ellipsis | `char` 402 | **char** |
+| ellipsis | `char` 405 | **char** |
 | dash | `em` 122, `en` 14 | **em** |
-| nbsp | `total` 4821, `narrow` 3, `before-punctuation` 39, `space-before-punctuation` 14 | **total** |
+| nbsp | `total` 4868, `narrow` 3, `before-punctuation` 39, `space-before-punctuation` 14 | **total** |
 | register | `informal` 77 | **informal** |
 
 ---
@@ -124,7 +105,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (83)
+## 3. Open findings (84)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -139,7 +120,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 10 |
-| 2 | Wrong content (says something other than the English) | 47 |
+| 2 | Wrong content (says something other than the English) | 48 |
 | 3 | Degraded language (grammar, spelling, terminology) | 23 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
@@ -283,6 +264,11 @@ _Also listed under their own category below._
     - Source: `If you still want to close tabs, choose <strong>Retry</strong> and make your selection in the card that opens.`
     - Suggest: `wybierz <strong>Ponów</strong> i dokonaj wyboru w wyświetlonym oknie`
     - The message is about closing tabs (karty); rendering "card" as "karta" makes the sentence ambiguous/wrong — the user is told to make a selection "on the tab that opens" rather than in the card UI that appears.
+- `tabs-toolbar-list-all-tabs-2` — `browser/browser/browser.ftl` — The label and tooltip drop the "manage" part of "Search and manage tabs".
+    - Current: `Szukaj w kartach`
+    - Source: `label: Search and manage tabs tooltiptext: Search and manage tabs`
+    - Suggest: `Wyszukaj karty i zarządzaj nimi`
+    - The en-US says the button is for searching and managing tabs. The Polish only says "Search in tabs", so the management function is missing from both the label and the tooltip.
 - `main-context-menu-link-send-to-device` — `browser/browser/browserContext.ftl` — dangling preposition: "Wyślij stronę do" / "Wyślij odnośnik do". → "Wyślij stronę na urządzenie" / "Wyślij odnośnik na urządzenie" (cf. main-context-menu-send-to-device-2).
     - Source: `accesskey: n label: Send Link to Device`
 - `genai-settings-chat-lechat-links` — `browser/browser/genai.ftl` — "Mistral AI" is a company name and should not be translated. Current: "…zasady ochrony prywatności</a> sztucznej inteligencji Mistral." → Suggest: "…zasady ochrony prywatności</a> Mistral AI." (the sibling strings correctly keep OpenAI, Microsoft, Anthropic).
@@ -508,11 +494,11 @@ _Also listed under their own category below._
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `Zdarzenie klawisza jest niedostępne dla GTK2: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (1419 occurrences).
+    - The locale's quote convention is `polish-double` (1434 occurrences).
 - `WinConflict2` — `dom/chrome/dom/dom.properties` — `WinConflict2` uses straight double quotes
     - Current: `Zdarzenie klawisza jest niedostępne przy niektórych układach klawiatury: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on some keyboard layouts: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (1419 occurrences).
+    - The locale's quote convention is `polish-double` (1434 occurrences).
 
 ---
 

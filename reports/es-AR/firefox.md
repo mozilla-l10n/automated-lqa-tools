@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
-| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
+| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 79 of 16,365 |
+| **Strings reviewed this run** | 139 of 16,490 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,18 @@ Also for es-AR: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (2)
 
-- `genai-prompts-summarize-page` — `browser/browser/genai.ftl` — Imperative uses tuteo "Resume"/"Debes" while the rest of the locale (and this same file) uses the usted form.
-    - Current: `Resume la página web en { $url } usando un lenguaje preciso y conciso. Debes usar encabezados y listas con viñetas en el resumen para hacerlo escaneable. Debes mantener el significado y exactitud fáctica.`
-    - Source: `Please summarize the webpage at { $url } using precise and concise language. Use headers and bulleted lists in the summary, to make it scannable. Maintain the meaning and factual accuracy.`
-    - Suggest: `Resuma la página web en { $url } usando un lenguaje preciso y conciso. Use encabezados y listas con viñetas en el resumen para hacerlo escaneable. Mantenga el significado y la exactitud fáctica.`
-    - es-AR Firefox consistently addresses with usted (e.g. "Obtenga acceso rápido…", "Seleccione { -brand-short-name }…" in this batch); this string switches to tú/vos forms.
+- `site-data-clear-all-prompt-text` — `browser/browser/preferences/siteDataSettings.ftl` — The masculine demonstrative "Este" is used where the neuter "Esto" is needed.
+    - Current: `Este puede desconectarlo`
+    - Source: `Selecting ‘Clear Now’ will clear all cookies and site data stored by { -brand-short-name }. This may sign you out of websites and remove offline web content.`
+    - Suggest: `Esto puede desconectarlo`
+    - The subject refers to the whole preceding action ("This may sign you out") and has no masculine noun to agree with, so Spanish needs the neuter pronoun "Esto".
+- `PermissionsPolicyInvalidAllowValue` — `dom/chrome/security/security.properties` — The added "para" turns the placeholder from the unsupported allow value into the thing the value belongs to.
+    - Current: `el valor permitido no soportado para “%S”`
+    - Source: `Permissions Policy: Skipping unsupported allow value “%S”.`
+    - Suggest: `el valor permitido no soportado “%S”`
+    - In en-US, %S is the unsupported allow value itself ("Skipping unsupported allow value “%S”"). The translation says "value ... for “%S”", so the placeholder now reads as the feature rather than the value that was rejected.
 
 ### ✅ Fixed since the last run (0)
 
@@ -48,9 +53,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 327 |
-| Strings | 16,365 |
-| Missing strings | 39 |
+| Files | 328 |
+| Strings | 16,490 |
+| Missing strings | 30 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -67,20 +72,18 @@ _Nothing retired._
 
 ### Completeness
 
-**39 strings** are not translated yet, concentrated in:
+**30 strings** are not translated yet, concentrated in:
 
 - `browser/browser/newtab/newtab.ftl` — 11
 - `toolkit/toolkit/about/url-classifier.ftl` — 6
-- `browser/browser/preferences/preferences.ftl` — 5
 - `browser/browser/featureCallout.ftl` — 3
-- `dom/chrome/security/security.properties` — 3
-- `browser/browser/aboutPrivateBrowsing.ftl` — 2
-- `browser/browser/autoTabGrouping.ftl` — 2
+- `browser/browser/preferences/preferences.ftl` — 3
 - `browser/browser/newtab/asrouter.ftl` — 2
 - `toolkit/toolkit/global/processTypes.ftl` — 1
 - `toolkit/toolkit/about/aboutAddons.ftl` — 1
-- `browser/browser/aiWindow.ftl` — 1
 - `browser/browser/appmenu.ftl` — 1
+- `browser/browser/sidebar.ftl` — 1
+- `devtools/client/debugger.properties` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -90,12 +93,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 468, `straight-double` 137, `curly-single` 93 | **curly-double** |
-| apostrophe | `typographic` 105, `straight` 67 | _mixed_ |
-| ellipsis | `char` 395, `ascii` 1 | **char** |
+| quotes | `curly-double` 477, `straight-double` 137, `curly-single` 94 | **curly-double** |
+| apostrophe | `typographic` 106, `straight` 67 | _mixed_ |
+| ellipsis | `char` 398, `ascii` 1 | **char** |
 | dash | `em` 61, `en` 1 | **em** |
 | nbsp | `total` 5, `before-punctuation` 3, `space-before-punctuation` 7 | _mixed_ |
-| inverted marks | `open-question` 324, `open-exclamation` 69 | **open-question** |
+| inverted marks | `open-question` 331, `open-exclamation` 69 | **open-question** |
 
 ---
 
@@ -106,14 +109,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (278)
+## 3. Open findings (280)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 48 |
-| 2 | Wrong content (says something other than the English) | 108 |
-| 3 | Degraded language (grammar, spelling, terminology) | 88 |
+| 2 | Wrong content (says something other than the English) | 109 |
+| 3 | Degraded language (grammar, spelling, terminology) | 89 |
 | 4 | Cosmetic (typography, spacing) | 29 |
 
 ### A. Functional, markup, variables & plurals
@@ -540,6 +543,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Ignoring “%1$S” within %2$S: ‘strict-dynamic’ specified`
     - Suggest: `‘strict-dynamic’ especificado`
     - Developer comment: “'strict-dynamic' should not be localized”. The neighbouring string strictDynamicButNoHashOrNonce correctly keeps ‘strict-dynamic’.
+- `PermissionsPolicyInvalidAllowValue` — `dom/chrome/security/security.properties` — The added "para" turns the placeholder from the unsupported allow value into the thing the value belongs to.
+    - Current: `el valor permitido no soportado para “%S”`
+    - Source: `Permissions Policy: Skipping unsupported allow value “%S”.`
+    - Suggest: `el valor permitido no soportado “%S”`
+    - In en-US, %S is the unsupported allow value itself ("Skipping unsupported allow value “%S”"). The translation says "value ... for “%S”", so the placeholder now reads as the feature rather than the value that was rejected.
 - `crashreporter-comment-prompt` — `toolkit/crashreporter/crashreporter.ftl` — The parenthetical remark is rewritten as a separate "Note:" sentence with a stray period and double space.
     - Current: `Agregar un comentario.  Nota: Los comentarios son visibles públicamente`
     - Source: `Add a comment (comments are publicly visible)`
@@ -673,6 +681,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `description: See how connections stay secure, harmful software is blocked, and websites are verified. label: Connection and software security`
     - Suggest: `Vea cómo las conexiones`
     - In "See how connections stay secure" the indirect interrogative requires the accented "cómo".
+- `site-data-clear-all-prompt-text` — `browser/browser/preferences/siteDataSettings.ftl` — The masculine demonstrative "Este" is used where the neuter "Esto" is needed.
+    - Current: `Este puede desconectarlo`
+    - Source: `Selecting ‘Clear Now’ will clear all cookies and site data stored by { -brand-short-name }. This may sign you out of websites and remove offline web content.`
+    - Suggest: `Esto puede desconectarlo`
+    - The subject refers to the whole preceding action ("This may sign you out") and has no masculine noun to agree with, so Spanish needs the neuter pronoun "Esto".
 - `preonboarding-manage-and-read-header-v2` — `browser/browser/preonboarding.ftl` — Garbled duplicated word at the start of the string.
     - Current: `LeeLea los términos de uso`
     - Source: `Read Terms of Use and Privacy Notice. Manage additional settings.`
@@ -923,12 +936,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Some printing functionality is not implemented yet.`
     - Suggest: `todavía no está implementada`
     - Verb form requires the accent.
-- `ignoringStrictDynamic` — `dom/chrome/security/csp.properties` — Typo “Ingorando”.
-    - Current: `Ingorando fuente “%1$S”`
-    - Source: `Ignoring source “%1$S” (Only supported within script-src).`
-    - Suggest: `Ignorando fuente “%1$S”`
-    - Misspelling of “Ignorando”.
-- _…and 21 more; see `state/` for the full list._
+- _…and 22 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 

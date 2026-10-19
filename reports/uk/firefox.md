@@ -2,25 +2,44 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `db2cfca9d18c` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `af4e7312bee1` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
 | **Previous run** | 2026-10-16 @ `db2cfca9d18c` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 15,193 |
+| **Strings reviewed this run** | 81 of 15,270 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-
+Also for uk: [android](android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (4)
 
-_No new findings._
+- `about-sync-log-search-input` — `toolkit/services/aboutSyncLog.ftl` — The preposition "в" falls between two consonants where Ukrainian requires "у".
+    - Current: `Пошук в журналах`
+    - Source: `aria-label: Search logs placeholder: Search logs`
+    - Suggest: `Пошук у журналах`
+    - Ukrainian euphony rules call for "у" between consonants. "Пошук" ends in a consonant and "журналах" starts with one, so "у журналах" is correct. This applies to both the aria-label and the placeholder.
+- `pdf-features-notification-message` — `toolkit/toolkit/about/pdfFeaturesNotification.ftl` — This string uses the typographic apostrophe, but the locale's convention is the straight apostrophe.
+    - Current: `об’єднання`
+    - Source: `Split, merge, and more. <a data-l10n-name="features-link">See PDF features</a>`
+    - Suggest: `об'єднання`
+    - The uk tree uses the straight apostrophe as its convention (717 straight vs 126 typographic).
+- `smartwindow-group-tabs-loading` — `browser/browser/autoTabGrouping.ftl` — The translation says the browser is checking whether groups by tab topic already exist, not that it is looking through the tabs for useful new groups.
+    - Current: `Перевірка наявності груп за темою вкладки…`
+    - Source: `Checking tabs for useful groups…`
+    - Suggest: `Пошук корисних груп серед вкладок…`
+    - The developer comment says the model is forming new groups from the open tabs and is explicitly not searching for tab groups that already exist. 'Перевірка наявності груп' means 'checking for the existence of groups', which is the reading the comment rules out. The word 'useful' is also missing.
+- `speech-recognition-model-download-progressbar` — `browser/browser/permissions.ftl` — 'Процес' ('process') is used where the English says 'progress' ('Прогрес'). It looks like a typo.
+    - Current: `Процес завантаження`
+    - Source: `aria-label: Speech recognition model download progress`
+    - Suggest: `Прогрес завантаження`
+    - The source says 'download progress'. This is the accessible name of a progress bar, so it should name the progress ('Прогрес' or 'Хід'), not the process.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +63,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 322 |
-| Strings | 15,193 |
-| Missing strings | 1,323 |
+| Files | 326 |
+| Strings | 15,270 |
+| Missing strings | 1,250 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 6 |
+| Files absent from the locale | 2 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,28 +82,24 @@ _Nothing retired._
 
 ### Completeness
 
-**1,323 strings** are not translated yet, concentrated in:
+**1,250 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 373
-- `browser/browser/ipProtection.ftl` — 63
+- `browser/browser/newtab/newtab.ftl` — 377
+- `browser/browser/ipProtection.ftl` — 62
 - `browser/browser/newtab/onboarding.ftl` — 56
 - `browser/browser/preferences/preferences.ftl` — 40
-- `browser/browser/newtab/asrouter.ftl` — 36
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 36
+- `browser/browser/newtab/asrouter.ftl` — 34
 - `toolkit/toolkit/global/theme-picker.ftl` — 30
+- `toolkit/toolkit/about/url-classifier.ftl` — 26
 - `browser/browser/appmenu.ftl` — 26
 - `browser/browser/firefoxView.ftl` — 26
-- `toolkit/toolkit/about/url-classifier.ftl` — 26
-- `toolkit/services/aboutSyncLog.ftl` — 26
 - `toolkit/toolkit/about/aboutAddons.ftl` — 24
+- `toolkit/toolkit/neterror/netError.ftl` — 23
 
 **Files absent from the locale:**
 
-- `browser/browser/autoTabGrouping.ftl`
-- `toolkit/services/aboutSyncLog.ftl`
-- `toolkit/toolkit/about/pdfFeaturesNotification.ftl`
 - `toolkit/toolkit/global/theme-picker.ftl`
-- `toolkit/toolkit/global/viewSource.ftl`
 - `toolkit/toolkit/pdfviewer/embedFallback.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
@@ -96,9 +111,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 507, `straight-double` 128, `curly-single` 112 | **curly-double** |
-| apostrophe | `typographic` 126, `straight` 717 | **straight** |
-| ellipsis | `char` 381, `ascii` 4 | **char** |
-| dash | `em` 10, `en` 99 | **en** |
+| apostrophe | `typographic` 127, `straight` 717 | **straight** |
+| ellipsis | `char` 383, `ascii` 4 | **char** |
+| dash | `em` 12, `en` 99 | **en** |
 | nbsp | `total` 4, `space-before-punctuation` 7 | _mixed_ |
 
 ---
@@ -110,15 +125,15 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (196)
+## 3. Open findings (200)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 112 |
-| 2 | Wrong content (says something other than the English) | 81 |
-| 3 | Degraded language (grammar, spelling, terminology) | 2 |
-| 4 | Cosmetic (typography, spacing) | 1 |
+| 2 | Wrong content (says something other than the English) | 82 |
+| 3 | Degraded language (grammar, spelling, terminology) | 4 |
+| 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -424,6 +439,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `smartwindow-group-tabs-loading` — `browser/browser/autoTabGrouping.ftl` — The translation says the browser is checking whether groups by tab topic already exist, not that it is looking through the tabs for useful new groups.
+    - Current: `Перевірка наявності груп за темою вкладки…`
+    - Source: `Checking tabs for useful groups…`
+    - Suggest: `Пошук корисних груп серед вкладок…`
+    - The developer comment says the model is forming new groups from the open tabs and is explicitly not searching for tab groups that already exist. 'Перевірка наявності груп' means 'checking for the existence of groups', which is the reading the comment rules out. The word 'useful' is also missing.
 - `places-load-js-data-url-error` — `browser/browser/placesPrompts.ftl` — The scheme “javascript:” lost its colon.
     - Current: `URL “javascript” або “data:”`
     - Source: `For security reasons, “javascript:” or “data:” URLs cannot be loaded from the history window or sidebar.`
@@ -492,6 +512,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `value: { $type } Image`
     - Suggest: `Зображення { $type }`
     - Ukrainian places the type after the noun, as the sibling string media-animated-image-type already does (“Зображення { $type } (анімація…)”); the current order renders as e.g. “JPEG Зображення”.
+- `speech-recognition-model-download-progressbar` — `browser/browser/permissions.ftl` — 'Процес' ('process') is used where the English says 'progress' ('Прогрес'). It looks like a typo.
+    - Current: `Процес завантаження`
+    - Source: `aria-label: Speech recognition model download progress`
+    - Suggest: `Прогрес завантаження`
+    - The source says 'download progress'. This is the accessible name of a progress bar, so it should name the progress ('Прогрес' or 'Хід'), not the process.
 - `policy-StartDownloadsInTempDirectory` — `browser/browser/policies/policies-descriptions.ftl` — Double space inside the visible text.
     - Current: `в локальне тимчасове розташування,  а не в усталений каталог завантаження`
     - Source: `Force downloads to start off in a local, temporary location rather than the default download directory.`
@@ -547,6 +572,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `The resource from “%1$S” was not rendered due to an unknown, incorrect or missing MIME type (X-Content-Type-Options: nosniff).`
     - Suggest: `(X-Content-Type-Options: nosniff)`
     - The comment says do not translate “X-Content-Type-Options” or “nosniff”; MimeTypeMismatch2 in the same file keeps the header intact.
+- `about-sync-log-search-input` — `toolkit/services/aboutSyncLog.ftl` — The preposition "в" falls between two consonants where Ukrainian requires "у".
+    - Current: `Пошук в журналах`
+    - Source: `aria-label: Search logs placeholder: Search logs`
+    - Suggest: `Пошук у журналах`
+    - Ukrainian euphony rules call for "у" between consonants. "Пошук" ends in a consonant and "журналах" starts with one, so "у журналах" is correct. This applies to both the aria-label and the placeholder.
 - `autofill-card-network-amex` — `toolkit/toolkit/formautofill/formAutofill.ftl` — Brand name contains a Cyrillic homoglyph instead of a Latin letter.
     - Current: `Аmerican Express`
     - Source: `American Express`
@@ -938,6 +968,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Inc. Country`
     - Suggest: `Країна реєстрації компанії`
     - The comment explains Inc. means Incorporated; certificate-viewer-country already uses "Країна", so the two different rows become indistinguishable, unlike certificate-viewer-inc-locality which is differentiated.
+- `pdf-features-notification-message` — `toolkit/toolkit/about/pdfFeaturesNotification.ftl` — This string uses the typographic apostrophe, but the locale's convention is the straight apostrophe.
+    - Current: `об’єднання`
+    - Source: `Split, merge, and more. <a data-l10n-name="features-link">See PDF features</a>`
+    - Suggest: `об'єднання`
+    - The uk tree uses the straight apostrophe as its convention (717 straight vs 126 typographic).
 
 ---
 

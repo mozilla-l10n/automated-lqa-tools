@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
-| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
+| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 71 of 16,626 |
+| **Strings reviewed this run** | 130 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,43 +18,23 @@ Also for de: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (7)
+### 🆕 New findings (3)
 
-- `smartwindow-organize-tabs-button` — `browser/browser/autoTabGrouping.ftl` — "Organize Tabs" is rendered as "Tabs verwalten" (manage tabs) instead of "Tabs organisieren".
-    - Current: `label: Tabs verwalten`
-    - Source: `label: Organize Tabs tooltiptext: Organize Tabs`
-    - Suggest: `label: Tabs organisieren`
-    - The en-US "Organize" means arranging/grouping tabs (the feature clusters tabs into groups); "verwalten" is the established German rendering of "Manage", which is a different term used elsewhere (e.g. "Manage shortcuts" → "Tastenkombinationen verwalten").
-- `smartwindow-group-tabs-loading` — `browser/browser/autoTabGrouping.ftl` — The German says tabs are being checked "for useful groups" in a way that implies searching for existing groups, contrary to the developer comment.
-    - Current: `Tabs werden auf nützliche Gruppen überprüft…`
-    - Source: `Checking tabs for useful groups…`
-    - Suggest: `Tabs werden auf nützliche Gruppierungen geprüft…`
-    - The comment states the model is forming new groups from the tabs, not searching for groups that already exist; "Tabs werden auf … Gruppen überprüft" reads as inspecting tabs for groups they belong to.
-- `smartwindow-group-tabs-all-sorted` — `browser/browser/autoTabGrouping.ftl` — "Nice work organizing your tabs" is turned into a factual claim that the user's tabs are now perfectly organized.
-    - Current: `Ihre Tabs sind jetzt bestens organisiert`
-    - Source: `Nice work organizing your tabs`
-    - Suggest: `Gut gemacht beim Organisieren Ihrer Tabs`
-    - The source praises the user's action; the German instead asserts a state ("your tabs are now optimally organized") that the source never claims.
-- `prefs-syncing-off-3` — `browser/browser/preferences/preferences.ftl` — "get ... on this device" rendered as "auf dieses Gerät zu übertragen" (transfer onto this device) changes the stated action direction/claim of sync.
-    - Current: `um Ihre Lesezeichen, Passwörter, Chronik und mehr auf dieses Gerät zu übertragen`
-    - Source: `description: Turn on sync to get your bookmarks, passwords, history, and more on this device. label: Syncing is OFF`
-    - Suggest: `um Ihre Lesezeichen, Passwörter, Chronik und mehr auf diesem Gerät zu erhalten`
-    - The en-US says to get the data on this device (sync); the German says it will be transferred to this device, a one-directional claim not in the source.
-- `sync-syncing-across-devices-heading-3` — `browser/browser/preferences/preferences.ftl` — "Data syncing on this device" translated as "Auf diesem Gerät synchronisierte Daten" (data already synced), changing the heading's meaning.
-    - Current: `Auf diesem Gerät synchronisierte Daten`
-    - Source: `Data syncing on this device`
-    - Suggest: `Datensynchronisation auf diesem Gerät`
-    - The source is about the ongoing syncing of data on this device, not a list of data that has been synced; the German past participle asserts completed action.
-- `content-analysis-indicator-tooltip` — `browser/browser/browser.ftl` — Wrong preposition in "Verhinderung vor Datenverlust".
-    - Current: `Verhinderung vor Datenverlust (DLP)`
-    - Source: `tooltiptext: Data Loss Prevention (DLP) by { $agentName }. Click for more info.`
-    - Suggest: `Verhinderung von Datenverlust (DLP)`
-    - German "Verhinderung" takes the genitive/"von", not "vor"; "Verhinderung vor" is ungrammatical.
-- `SecureUpgradeRequest` — `dom/chrome/security/security.properties` — "insecure request" rendered as "nicht verschlüsselte Anfrage" (unencrypted), narrowing the meaning.
-    - Current: `Die nicht verschlüsselte Anfrage`
-    - Source: `%1$S: Upgrading insecure request “%2$S” to use “%3$S”.`
-    - Suggest: `Die unsichere Anfrage`
-    - The en-US says "insecure", which is the established term (unsicher); "nicht verschlüsselt" states a different, narrower fact about the request.
+- `ip-protection-site-rules-button-1` — `browser/browser/ipProtection.ftl` — Incorrect comma before "oder" joining two coordinated relative clauses.
+    - Current: `die mehr Datenschutz, oder die ein deaktiviertes VPN benötigen`
+    - Source: `description: Set rules for sites that need extra privacy or VPN turned off. label: Manage VPN rules`
+    - Suggest: `die mehr Datenschutz oder ein deaktiviertes VPN benötigen`
+    - German comma rules do not allow a comma before "oder" when it links parallel clause parts like these. The comma here is a punctuation error.
+- `permissions-allow-app-links` — `browser/browser/preferences/preferences.ftl` — The German drops "ask", so it says sites may open app links rather than ask to open them.
+    - Current: `Websites erlauben, App-Links zu öffnen.`
+    - Source: `accesskey: A label: Allow sites to ask to open app links.`
+    - Suggest: `Websites erlauben, das Öffnen von App-Links anzufragen.`
+    - The en-US "Allow sites to ask to open app links" grants permission to ask, which matches the related strings ("Fragen, ob App-Links geöffnet werden sollen"). The German claims sites may open app links directly, a wider permission than the setting gives.
+- `policy-PasswordManagerEnabled2` — `browser/browser/policies/policies-descriptions.ftl` — A full stop is missing between the two sentences.
+    - Current: `aktivieren oder deaktivieren Wenn`
+    - Source: `Enable or disable saving passwords to the password manager. If disabled, Passwords (about:logins) is also blocked.`
+    - Suggest: `aktivieren oder deaktivieren. Wenn`
+    - The en-US has two sentences. In the German the first runs into the second with no punctuation.
 
 ### ✅ Fixed since the last run (0)
 
@@ -78,8 +58,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 337 |
-| Strings | 16,626 |
+| Files | 338 |
+| Strings | 16,742 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -124,12 +104,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `straight-double` 732, `curly-double` 69, `german-double` 14, `curly-single` 2 | **straight-double** |
+| quotes | `straight-double` 741, `curly-double` 69, `german-double` 14, `curly-single` 2 | **straight-double** |
 | apostrophe | `typographic` 6, `straight` 114 | **straight** |
-| ellipsis | `char` 412 | **char** |
+| ellipsis | `char` 414 | **char** |
 | dash | `em` 17, `en` 69 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 12, `formal` 3926 | **formal** |
+| register | `informal` 12, `formal` 3965 | **formal** |
 
 ---
 
@@ -139,15 +119,20 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (37)
+## 3. Open findings (40)
 
-> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `smartwindow-group-tabs-all-sorted` — `browser/browser/autoTabGrouping.ftl` — "Nice work organizing your tabs" is turned into a factual claim that the user's tabs are now perfectly organized.
     - Current: `Ihre Tabs sind jetzt bestens organisiert`
     - Source: `Nice work organizing your tabs`
     - Suggest: `Gut gemacht beim Organisieren Ihrer Tabs`
     - The source praises the user's action; the German instead asserts a state ("your tabs are now optimally organized") that the source never claims.
+- `permissions-allow-app-links` — `browser/browser/preferences/preferences.ftl` — The German drops "ask", so it says sites may open app links rather than ask to open them.
+    - Current: `Websites erlauben, App-Links zu öffnen.`
+    - Source: `accesskey: A label: Allow sites to ask to open app links.`
+    - Suggest: `Websites erlauben, das Öffnen von App-Links anzufragen.`
+    - The en-US "Allow sites to ask to open app links" grants permission to ask, which matches the related strings ("Fragen, ob App-Links geöffnet werden sollen"). The German claims sites may open app links directly, a wider permission than the setting gives.
 - `pdf-features-notification-message` — `toolkit/toolkit/about/pdfFeaturesNotification.ftl` — "Split" (PDFs aufteilen/teilen in Einzeldokumente) is rendered as "PDFs teilen", which in German primarily means "share".
     - Current: `PDFs teilen, zusammenführen und mehr.`
     - Source: `Split, merge, and more. <a data-l10n-name="features-link">See PDF features</a>`
@@ -159,9 +144,9 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 20 |
-| 3 | Degraded language (grammar, spelling, terminology) | 15 |
-| 4 | Cosmetic (typography, spacing) | 2 |
+| 2 | Wrong content (says something other than the English) | 21 |
+| 3 | Degraded language (grammar, spelling, terminology) | 16 |
+| 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -217,6 +202,11 @@ _Also listed under their own category below._
     - Source: `Bring in your data`
     - Suggest: `Importieren Sie Ihre Daten`
     - The string heads the import step of onboarding; en-US means importing existing data, not typing data in.
+- `permissions-allow-app-links` — `browser/browser/preferences/preferences.ftl` — The German drops "ask", so it says sites may open app links rather than ask to open them.
+    - Current: `Websites erlauben, App-Links zu öffnen.`
+    - Source: `accesskey: A label: Allow sites to ask to open app links.`
+    - Suggest: `Websites erlauben, das Öffnen von App-Links anzufragen.`
+    - The en-US "Allow sites to ask to open app links" grants permission to ask, which matches the related strings ("Fragen, ob App-Links geöffnet werden sollen"). The German claims sites may open app links directly, a wider permission than the setting gives.
 - `prefs-syncing-off-3` — `browser/browser/preferences/preferences.ftl` — "get ... on this device" rendered as "auf dieses Gerät zu übertragen" (transfer onto this device) changes the stated action direction/claim of sync.
     - Current: `um Ihre Lesezeichen, Passwörter, Chronik und mehr auf dieses Gerät zu übertragen`
     - Source: `description: Turn on sync to get your bookmarks, passwords, history, and more on this device. label: Syncing is OFF`
@@ -280,6 +270,11 @@ _Also listed under their own category below._
     - Source: `description: Get extra privacy by hiding your location while browsing. label: Built-in VPN`
     - Suggest: `Sorgt für mehr Privatsphäre, indem Ihr Standort beim Surfen verborgen wird.`
     - In en-US the VPN hides the user's location; the German makes the user do the hiding, contradicting the impersonal subject of the main clause.
+- `ip-protection-site-rules-button-1` — `browser/browser/ipProtection.ftl` — Incorrect comma before "oder" joining two coordinated relative clauses.
+    - Current: `die mehr Datenschutz, oder die ein deaktiviertes VPN benötigen`
+    - Source: `description: Set rules for sites that need extra privacy or VPN turned off. label: Manage VPN rules`
+    - Suggest: `die mehr Datenschutz oder ein deaktiviertes VPN benötigen`
+    - German comma rules do not allow a comma before "oder" when it links parallel clause parts like these. The comma here is a punctuation error.
 - `speech-recognition-model-download-progress-message` — `browser/browser/permissions.ftl` — Progress message rendered as an imperative/infinitive instead of a status statement.
     - Current: `Spracherkennungsmodell herunterladen`
     - Source: `Downloading speech recognition model`
@@ -358,6 +353,11 @@ _Also listed under their own category below._
     - Source: `By continuing, you agree to the <a data-l10n-name="terms_of_use">{ -brand-product-name } Terms of Use</a> and our <a data-l10n-name="privacy_notice">Privacy Notice</a>. To help improve the browser, { -brand-product-name…`
     - Suggest: `<a data-l10n-name="privacy_notice">Datenschutzhinweis</a> zu`
     - The en-US link text is only "Privacy Notice"; including "zu " plus a trailing space in the linked text makes the hyperlink text wrong and leaves a space before the period.
+- `policy-PasswordManagerEnabled2` — `browser/browser/policies/policies-descriptions.ftl` — A full stop is missing between the two sentences.
+    - Current: `aktivieren oder deaktivieren Wenn`
+    - Source: `Enable or disable saving passwords to the password manager. If disabled, Passwords (about:logins) is also blocked.`
+    - Suggest: `aktivieren oder deaktivieren. Wenn`
+    - The en-US has two sentences. In the German the first runs into the second with no punctuation.
 
 ---
 

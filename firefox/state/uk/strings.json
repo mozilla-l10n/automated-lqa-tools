@@ -55,7 +55,7 @@
   "update-policy-disabled": "3f05efd8 00d81393",
   "update-restarting": "e35c220d fd268259",
   "update-unsupported": "e8dcd1cf cc941a15",
-  "update-updateButton": "db837290 b1c9c5ec",
+  "update-updateButton": "c7ab7b25 b1c9c5ec",
   "warningDesc-version": "0d0c30c5 019f6724"
  },
  "browser/browser/aboutLogins.ftl": {
@@ -920,6 +920,23 @@
   "profiler-popup-start-recording-button": "144d9ae0 097a3605",
   "profiler-popup-start-shortcut": "3554075d 3554075d"
  },
+ "browser/browser/autoTabGrouping.ftl": {
+  "smartwindow-group-tabs-all-sorted": "18d076b4 a98a6d71 00046ddf",
+  "smartwindow-group-tabs-close-duplicates": "f1c8d6e6 37b44f67 5f229043",
+  "smartwindow-group-tabs-create-all": "8d22b1e3 ad097ec3 699e7739",
+  "smartwindow-group-tabs-duplicates-list": "970d1e5c 64a515ed 6bb2728d",
+  "smartwindow-group-tabs-empty": "7f6276ea 3fabff10 6a80d218",
+  "smartwindow-group-tabs-flyout-list": "21bd2757 1c3a80a6 e96b59c0",
+  "smartwindow-group-tabs-groups-list": "f61fb0c9 5d209faa e5a24737",
+  "smartwindow-group-tabs-just-created-heading": "0828a83e b54aa714 7ef38413",
+  "smartwindow-group-tabs-loading": "718fb18a c953536e bc70009a",
+  "smartwindow-group-tabs-panel-heading": "3db41d8b 4a2177b1",
+  "smartwindow-group-tabs-suggested-heading": "d4e207a4 9cec2480",
+  "smartwindow-group-tabs-suggestion": "deed2cc4 68eab50e 5a9a4098",
+  "smartwindow-group-tabs-ungroup": "5c5b3c7a 0bbe475c 8d03be85",
+  "smartwindow-group-tabs-view-tab-groups": "834e2961 547e045d 3abceb31",
+  "smartwindow-organize-tabs-button": "19b7794c 4bfd7e16"
+ },
  "browser/browser/backgroundtasks/defaultagent.ftl": {
   "default-browser-agent-task-description": "78d6668c 013b2d00",
   "default-browser-notification-privacy-body-text": "f46bf019 b458c742",
@@ -978,6 +995,7 @@
   "password-rules-a11y-warning": "62fcbc8f 959e0fdf",
   "password-rules-disclaimer": "7ecb29b6 3be8509e",
   "password-rules-email-description": "b4a3a65b 486083f8",
+  "password-rules-email-description2": "c449b2ea eaba0cb2",
   "password-rules-header": "9253b631 411af59b",
   "password-rules-length-description": "ac6c01ae 7867dd66",
   "password-validity-do-not-match": "bddc90d7 842b80ca",
@@ -2149,7 +2167,16 @@
   "bookmark-overlay-tags-empty-description": "13d8263b a68bccfb",
   "bookmark-overlay-tags-expander-hide": "1d5720c7 f8a49ee4",
   "bookmark-overlay-tags-expander2": "fcf146e7 d7393eed",
-  "bookmark-overlay-url": "fd13ff52 c9928f2c"
+  "bookmark-overlay-url": "fd13ff52 c9928f2c",
+  "bookmark-properties-default-name-all-tabs-folder": "006a9f6f ce75e55e 1883ab01",
+  "bookmark-properties-default-name-bookmark": "dfda9723 f83550ca",
+  "bookmark-properties-default-name-folder": "7ff8dc35 bc5d31a6",
+  "bookmark-properties-save-button": "7eede398 cdfe587d",
+  "bookmark-properties-title-add-bookmark": "27ca9687 97182656",
+  "bookmark-properties-title-add-folder": "41e56264 88976f5f",
+  "bookmark-properties-title-add-multiple-bookmarks": "667c2517 ffb691ef ee9872fb",
+  "bookmark-properties-title-edit-bookmark": "4dfdbd98 61e18e4e",
+  "bookmark-properties-title-edit-folder": "659a3c62 0b70ac86"
  },
  "browser/browser/extensionsUI.ftl": {
   "addon-post-install-message": "f6953a23 2162c5f3 d66e74bc",
@@ -3062,6 +3089,8 @@
   "refresh-profile-infobar-button": "c8570520 1cd51448",
   "refresh-reinstalled-profile-infobar-message": "7403dacc 81242931",
   "refresh-unused-profile-infobar-message": "bfa51c0b 0d731cb0",
+  "restore-session-startup-suggestion-button": "da1d9a64 98b574e4",
+  "restore-session-startup-suggestion-message": "ee89b2a1 15c27516 a9797a0a",
   "root-certificate-succession-infobar-january-message": "0ce536a2 9d69d4b1",
   "root-certificate-succession-infobar-link": "2dc1c629 b14fe640",
   "root-certificate-succession-infobar-march-message": "1e83d228 78828878",
@@ -3467,6 +3496,7 @@
   "newtab-topsites-url-validation": "02d0dfd0 5f72d1bc",
   "newtab-topsites-use-custom-image-link": "b73b0251 8150ff9e",
   "newtab-topsites-use-image-link": "dfd07d40 81b99071",
+  "newtab-travel-menu-learn-more": "5c41cb88 d9b20450 77b3c826",
   "newtab-wallpaper-abstract-black-waves": "e70b8828 baee23c3",
   "newtab-wallpaper-abstract-blue": "99558514 229f995e",
   "newtab-wallpaper-abstract-blue-purple": "8b51635c c50e94d9",
@@ -4000,6 +4030,7 @@
   "security-view-privacy-passwords-value": "7d508788 7db5b93b",
   "security-view-privacy-sitedata-value": "d8d03fe3 a1b042cc",
   "security-view-privacy-viewpasswords": "14429a3c a5e50c76",
+  "security-view-qwac": "579a6168 1d6b8d8d",
   "security-view-technical": "7851052d addd11b8",
   "security-view-unknown": "ee132fe7 30684c4d",
   "security-visits-number": "641a449b 10ce9c0c 94e94f58",
@@ -4027,7 +4058,17 @@
   "panic-main-timeframe-desc": "08f02dfe d64e2f53"
  },
  "browser/browser/permissions.ftl": {
-  "perm-persistent-storage-remember": "3494e51b f0ee25b8"
+  "perm-persistent-storage-remember": "3494e51b f0ee25b8",
+  "speech-recognition-model-download-allow": "0861703b ddd787dc",
+  "speech-recognition-model-download-cancel": "86f6a89a 068db6a3",
+  "speech-recognition-model-download-complete-message": "e020ff99 e9a965f9",
+  "speech-recognition-model-download-failed-message": "b9c59b29 d86a72be",
+  "speech-recognition-model-download-header": "23cfefff 0f70093f",
+  "speech-recognition-model-download-message": "9f4a9e98 109edd5f f04e18e3",
+  "speech-recognition-model-download-not-now": "cc29e5fe ff7dd950",
+  "speech-recognition-model-download-ok": "4447ff86 4447ff86",
+  "speech-recognition-model-download-progress-message": "b77da0f5 99f83ff7",
+  "speech-recognition-model-download-progressbar": "7c6eaa19 feca850a 9b6492ec"
  },
  "browser/browser/places.ftl": {
   "managed-bookmarks": "ae2045ff 09ef46d7 df88dbca",
@@ -5944,7 +5985,7 @@
   "clear-time-duration-prefix": "5ea0a872 e3bc823c",
   "clear-time-duration-prefix2": "97b44c52 bf9f0c38",
   "clear-time-duration-suffix": "34e0447d 34e0447d",
-  "clear-time-duration-value-everything": "fe86bb69 77afff8e",
+  "clear-time-duration-value-everything": "a1de9503 77afff8e",
   "clear-time-duration-value-last-2-hours": "7f0f7b86 5f337b2d",
   "clear-time-duration-value-last-4-hours": "9d562488 a137b11c",
   "clear-time-duration-value-last-hour": "f0cc4983 901190cd",
@@ -9475,7 +9516,7 @@
   "remoteIncomingPromptServerEndpoint": "a32b746f 23f6e668 04ac3623",
   "remoteIncomingPromptTitle": "4d06001f c7b6935d 04a4f745",
   "serverReceiveOOBBody": "177562f4 3eab73b5 83750b81",
-  "serverReceiveOOBTitle": "5fa1e93d 4630c9cf d8a7c666"
+  "serverReceiveOOBTitle": "d5b76b5a 4630c9cf d8a7c666"
  },
  "devtools/shared/eyedropper.properties": {
   "colorValue.copied": "509be181 d75fb42f 6e7ecc36"
@@ -10902,7 +10943,7 @@
   "network-connection-status-read": "fe181264 a2eab66a",
   "network-connection-status-sending-request": "fa1c34a3 553a4cf8",
   "network-connection-status-tls-handshake": "9d87e5f5 fb103a65",
-  "network-connection-status-tls-handshake-finished": "7b392590 c0d9c507",
+  "network-connection-status-tls-handshake-finished": "3348d7b6 c0d9c507",
   "network-connection-status-transferring-data": "ddfd37d3 e318bd92",
   "network-connection-status-waiting": "c56873e3 cf9255c5",
   "network-connection-status-wrote": "53bcfc30 7182827d"
@@ -11925,6 +11966,34 @@
   "crashreporter-submit-success": "8f38de09 4cb45861",
   "crashreporter-submit-waiting-hardware-tests": "e5eb3336 6773b838",
   "crashreporter-view-report-title": "afe43a7d 8471e7e8"
+ },
+ "toolkit/services/aboutSyncLog.ftl": {
+  "about-sync-log-clear-button": "a4fe053b 89de395c",
+  "about-sync-log-clear-confirm-accept": "0cbe89c4 d438d1ec",
+  "about-sync-log-clear-confirm-message": "f2d33531 d3cd0355 8056db17",
+  "about-sync-log-clear-confirm-title": "2c65f757 918031c8",
+  "about-sync-log-count": "6447868f 0ef81eb9 9050c271",
+  "about-sync-log-download-button": "090deb1f 3f5cdd50",
+  "about-sync-log-empty": "2a514e5f fd1b5637",
+  "about-sync-log-empty-filtered": "1923cbe8 5874f14e",
+  "about-sync-log-filter-date": "2b965170 d4cf9f8a",
+  "about-sync-log-filter-date-30days": "195412ea be133b19",
+  "about-sync-log-filter-date-7days": "9c1da416 de4598d4",
+  "about-sync-log-filter-date-all": "ac030ecf bce0a29a",
+  "about-sync-log-filter-date-today": "088c21b8 4a67dbce",
+  "about-sync-log-filter-type": "c1cacd3d 86187d83",
+  "about-sync-log-filter-type-all": "a1de9503 6933b849",
+  "about-sync-log-filter-type-error": "3946c95d 9f779576",
+  "about-sync-log-filter-type-success": "fd8f897d 7e7d4ecd",
+  "about-sync-log-open-raw": "0262f804 fbb165cd da9205fd",
+  "about-sync-log-page-header": "a0fdca78 cd8ece9c",
+  "about-sync-log-refresh-button": "46f56c2c 6ce3904c",
+  "about-sync-log-row-error": "9c134622 4dbc2c00 5ba91968",
+  "about-sync-log-row-size": "73e309eb 73e309eb 6399a5b7",
+  "about-sync-log-row-success": "687029ce d17c3bf6 88114f61",
+  "about-sync-log-search-input": "7ab89069 462b58b8",
+  "about-sync-log-title": "d867af30 96bf7110",
+  "about-sync-log-view-error": "0c258153 6da784cf"
  },
  "toolkit/services/accounts.ftl": {
   "account-client-name": "592f83c5 2c7bd476 28bf5d97"
@@ -13407,6 +13476,10 @@
   "about-config-show-all": "ac5e6f80 5e896273",
   "about-config-show-only-modified": "5c45a622 b02463b1"
  },
+ "toolkit/toolkit/about/pdfFeaturesNotification.ftl": {
+  "pdf-features-notification": "c6ea9358 0e3ee91e",
+  "pdf-features-notification-message": "3ffb6aca 76325f63"
+ },
  "toolkit/toolkit/about/url-classifier.ftl": {
   "url-classifier-cache-clear-btn": "5e60e021 730cab26",
   "url-classifier-cache-entries": "c97e53c8 2c53d711",
@@ -14122,6 +14195,18 @@
   "videocontrols-status-picture-in-picture": "3f50b811 4ecd9add",
   "videocontrols-unmute-button": "1f24f036 29f9b7a4",
   "videocontrols-volume-control": "a9afed21 b31531e9"
+ },
+ "toolkit/toolkit/global/viewSource.ftl": {
+  "view-source-context-go-to-line": "414867af d7824e2e",
+  "view-source-context-highlight-syntax": "1be5e965 55a116a4",
+  "view-source-context-wrap-long-lines": "975693a7 a848ff4e",
+  "view-source-go-to-line-text": "076e262a 61ae0184",
+  "view-source-go-to-line-title": "1e1a6032 892a7169",
+  "view-source-invalid-input-text": "4ddd563b d47c9dd6",
+  "view-source-invalid-input-title": "b934039d e634a7e6",
+  "view-source-out-of-range-text": "5c0e48b8 a5fe2114",
+  "view-source-out-of-range-title": "b4c485fe 7a19015b",
+  "view-source-selection-title": "9408f0d4 4f0edb78 ef1c0097"
  },
  "toolkit/toolkit/global/wizard.ftl": {
   "wizard-linux-button-back": "e6bbd834 c28af57c",

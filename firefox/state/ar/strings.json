@@ -1803,7 +1803,16 @@
   "bookmark-overlay-tags-empty-description": "d047bf03 a68bccfb",
   "bookmark-overlay-tags-expander-hide": "cf8eb87e f8a49ee4",
   "bookmark-overlay-tags-expander2": "f51a621c d7393eed",
-  "bookmark-overlay-url": "efc54863 c9928f2c"
+  "bookmark-overlay-url": "efc54863 c9928f2c",
+  "bookmark-properties-default-name-all-tabs-folder": "2438c047 ce75e55e 1883ab01",
+  "bookmark-properties-default-name-bookmark": "bd77d092 f83550ca",
+  "bookmark-properties-default-name-folder": "ce198c4d bc5d31a6",
+  "bookmark-properties-save-button": "a587e2ce cdfe587d",
+  "bookmark-properties-title-add-bookmark": "6d7fe797 97182656",
+  "bookmark-properties-title-add-folder": "7e6c4c4a 88976f5f",
+  "bookmark-properties-title-add-multiple-bookmarks": "11b7ab8a ffb691ef ee9872fb",
+  "bookmark-properties-title-edit-bookmark": "dae17923 61e18e4e",
+  "bookmark-properties-title-edit-folder": "f9d5329e 0b70ac86"
  },
  "browser/browser/extensionsUI.ftl": {
   "addon-post-install-message": "dd13dd7c 2162c5f3 d66e74bc",
@@ -2679,6 +2688,8 @@
   "relay-50-masks-announcement-secondary-button": "ca352944 ea0ff508",
   "relay-50-masks-announcement-subtitle": "d068fd94 86532bfd",
   "relay-50-masks-announcement-title": "0237a9db ed0c67c1 b194fcfe",
+  "restore-session-startup-suggestion-button": "bc423bc1 98b574e4",
+  "restore-session-startup-suggestion-message": "d568fe6b 15c27516 a9797a0a",
   "root-certificate-succession-infobar-january-message": "48845e4a 9d69d4b1",
   "root-certificate-succession-infobar-link": "e5758c15 b14fe640",
   "root-certificate-succession-infobar-march-message": "5d84290e 78828878",
@@ -3109,6 +3120,7 @@
   "newtab-topsites-url-validation": "d9e35ed5 5f72d1bc",
   "newtab-topsites-use-custom-image-link": "0e072f74 8150ff9e",
   "newtab-topsites-use-image-link": "7b29e517 81b99071",
+  "newtab-travel-menu-learn-more": "c1e20928 d9b20450 77b3c826",
   "newtab-wallpaper-abstract-black-waves": "b0dfcf58 baee23c3",
   "newtab-wallpaper-abstract-blue": "df4b132f 229f995e",
   "newtab-wallpaper-abstract-blue-purple": "75dfd76d c50e94d9",
@@ -12204,6 +12216,18 @@
   "videocontrols-status-picture-in-picture": "851f8ef8 4ecd9add",
   "videocontrols-unmute-button": "eb5b278b 29f9b7a4",
   "videocontrols-volume-control": "8350a936 b31531e9"
+ },
+ "toolkit/toolkit/global/viewSource.ftl": {
+  "view-source-context-go-to-line": "2f5016be d7824e2e",
+  "view-source-context-highlight-syntax": "7079ebb1 55a116a4",
+  "view-source-context-wrap-long-lines": "4e831fb6 a848ff4e",
+  "view-source-go-to-line-text": "dc599b3b 61ae0184",
+  "view-source-go-to-line-title": "9911dda9 892a7169",
+  "view-source-invalid-input-text": "3a5706e4 d47c9dd6",
+  "view-source-invalid-input-title": "1199ced2 e634a7e6",
+  "view-source-out-of-range-text": "e2c6e2ec a5fe2114",
+  "view-source-out-of-range-title": "42ce1a17 7a19015b",
+  "view-source-selection-title": "2c4af3eb 4f0edb78 ef1c0097"
  },
  "toolkit/toolkit/global/wizard.ftl": {
   "wizard-linux-button-back": "97b41dc7 c28af57c",

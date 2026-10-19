@@ -2,25 +2,29 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `db2cfca9d18c` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `af4e7312bee1` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
 | **Previous run** | 2026-10-16 @ `db2cfca9d18c` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 15,958 |
+| **Strings reviewed this run** | 78 of 16,036 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-
+Also for fi: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `migration-no-permissions-instructions-step2-2` — `browser/browser/migrationWizard.ftl` — The macOS variant uses straight double quotes but the other variant of the same message uses curly quotes.
+    - Current: `"Avaa"`
+    - Source: `{$sel_1 ->} [macos] In the file picker, choose “Open” [other] In the file picker, navigate to <code>{ $permissionsPath }</code> and choose “Select”`
+    - Suggest: `“Avaa”`
+    - The en-US uses curly quotes in both variants, and so does the Finnish 'other' variant (“Valitse”). The macOS variant switches to straight quotes, so the two variants of one message don't match.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +48,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 326 |
-| Strings | 15,958 |
-| Missing strings | 558 |
+| Files | 328 |
+| Strings | 16,036 |
+| Missing strings | 484 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 2 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,25 +67,20 @@ _Nothing retired._
 
 ### Completeness
 
-**558 strings** are not translated yet, concentrated in:
+**484 strings** are not translated yet, concentrated in:
 
 - `dom/chrome/dom/dom.properties` — 71
 - `toolkit/toolkit/about/aboutGlean.ftl` — 62
-- `browser/browser/ipProtection.ftl` — 42
+- `browser/browser/ipProtection.ftl` — 41
 - `toolkit/toolkit/about/aboutLogging.ftl` — 40
 - `dom/chrome/security/csp.properties` — 34
 - `dom/chrome/security/security.properties` — 28
-- `browser/browser/newtab/newtab.ftl` — 22
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 22
 - `toolkit/toolkit/about/url-classifier.ftl` — 21
 - `toolkit/toolkit/about/aboutProcesses.ftl` — 17
-- `browser/browser/autoTabGrouping.ftl` — 15
+- `browser/browser/newtab/newtab.ftl` — 16
 - `toolkit/toolkit/about/aboutSupport.ftl` — 15
-
-**Files absent from the locale:**
-
-- `browser/browser/autoTabGrouping.ftl`
-- `toolkit/toolkit/global/viewSource.ftl`
+- `browser/browser/aboutPrivateBrowsing.ftl` — 13
 
 **Files present but identical to en-US:**
 
@@ -114,9 +113,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 308, `straight-double` 115, `curly-single` 70 | _mixed_ |
+| quotes | `curly-double` 309, `straight-double` 116, `curly-single` 70 | _mixed_ |
 | apostrophe | `typographic` 148, `straight` 33 | **typographic** |
-| ellipsis | `char` 395, `ascii` 1 | **char** |
+| ellipsis | `char` 399, `ascii` 1 | **char** |
 | dash | `em` 42, `en` 29 | _mixed_ |
 | nbsp | `total` 11, `before-punctuation` 3, `space-before-punctuation` 6 | _mixed_ |
 
@@ -128,7 +127,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (154)
+## 3. Open findings (155)
 
 
 | Impact | Meaning | Count |
@@ -136,7 +135,7 @@ _Nothing reported._
 | 1 | Broken output (blank value, broken markup, wrong variable) | 108 |
 | 2 | Wrong content (says something other than the English) | 37 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
-| 4 | Cosmetic (typography, spacing) | 9 |
+| 4 | Cosmetic (typography, spacing) | 10 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -799,6 +798,11 @@ _Nothing reported._
     - Source: `label: Retry`
     - Suggest: `Yritä uudelleen`
     - smartwindow-nl-retry-message and smartwindow-nl-retry-group-tabs-message instruct the user to choose "Yritä uudelleen", but this button is labelled "Yritä uudestaan" on the same surface.
+- `migration-no-permissions-instructions-step2-2` — `browser/browser/migrationWizard.ftl` — The macOS variant uses straight double quotes but the other variant of the same message uses curly quotes.
+    - Current: `"Avaa"`
+    - Source: `{$sel_1 ->} [macos] In the file picker, choose “Open” [other] In the file picker, navigate to <code>{ $permissionsPath }</code> and choose “Select”`
+    - Suggest: `“Avaa”`
+    - The en-US uses curly quotes in both variants, and so does the Finnish 'other' variant (“Valitse”). The macOS variant switches to straight quotes, so the two variants of one message don't match.
 - `home-prefs-widgets-header` — `browser/browser/newtab/newtab.ftl` — "Widgets" is left as "Widgetit" here while the whole surface uses "Pienoisohjelmat".
     - Current: `home-prefs-widgets-header =     .label = Widgetit`
     - Source: `label: Widgets`
@@ -875,7 +879,7 @@ _Nothing reported._
 - `headerFooterCustom` — `toolkit/chrome/global/printdialog.properties` — `headerFooterCustom` uses three dots where this locale uses …
     - Current: `Oma...`
     - Source: `Custom…`
-    - The tree uses … 395 times against 1 ASCII runs.
+    - The tree uses … 399 times against 1 ASCII runs.
 - `addon-category-dictionary` — `toolkit/toolkit/about/aboutAddons.ftl` — “Dictionaries” rendered as “Oikoluvut” while the rest of the page uses “sanastot”.
     - Current: `Oikoluvut`
     - Source: `Dictionaries`

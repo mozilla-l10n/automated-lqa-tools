@@ -420,7 +420,7 @@
   "file": "browser/browser/addonNotifications.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-10-12",
+  "last_seen": "2026-10-19",
   "locale": "nl",
   "origin": {},
   "rationale": "The label is “Verdachte website rapporteren”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
@@ -821,6 +821,30 @@
   "string_id": "profiler-popup-presets-ml-description",
   "suggest": "",
   "summary": "perftools-presets-ml-description2, profiler-popup-presets-ml-description — client/perftools.ftl, browser/browser/appmenu.ftl — \"machine learning\" became \"machine translation\". Suggest: \"…bugs in machinaal leren…\"",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
+  "current": "tabbladengroepen",
+  "dismissed_because": "",
+  "fid": "99cbb93d423d",
+  "file": "browser/browser/autoTabGrouping.ftl",
+  "first_seen": "2026-10-19",
+  "impact": 3,
+  "last_seen": "2026-10-19",
+  "locale": "nl",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The same en-US term “tab groups” is translated as “Tabbladgroepen” in smartwindow-group-tabs-view-tab-groups, smartwindow-group-tabs-groups-list and confirmation-hint-tab-group-saved. This string uses a different compound form, which is inconsistent within the same surface.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "29789d67",
+  "string_id": "smartwindow-group-tabs-empty",
+  "suggest": "tabbladgroepen",
+  "summary": "“Tab groups” is rendered as “tabbladengroepen” here but as “Tabbladgroepen” everywhere else in the same panel.",
   "suppressed_by": ""
  },
  {
@@ -4460,6 +4484,30 @@
   "string_id": "policy-DisableDefaultBrowserAgent",
   "suggest": "\"de standaardbrowseragent\"",
   "summary": "Current: \"de standaard browseragent\" → Suggest: \"de standaardbrowseragent\"",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
+  "current": "{ -brand-short-name } te verversen",
+  "dismissed_because": "",
+  "fid": "cfa38892117f",
+  "file": "browser/browser/policies/policies-descriptions.ftl",
+  "first_seen": "2026-10-19",
+  "impact": 3,
+  "last_seen": "2026-10-19",
+  "locale": "nl",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The en-US uses the same term 'Refresh { -brand-short-name }' for both the button and the prompt. The Dutch names the feature 'opfrissen' in the button label, so switching to 'verversen' in the same sentence is inconsistent terminology.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "637eaa00",
+  "string_id": "policy-DisableProfileRefresh2",
+  "suggest": "{ -brand-short-name } op te frissen",
+  "summary": "The Refresh feature is called 'opfrissen' for the button and 'verversen' for the prompt in the same sentence.",
   "suppressed_by": ""
  },
  {

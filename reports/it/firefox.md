@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
-| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
+| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 73 of 16,668 |
+| **Strings reviewed this run** | 132 of 16,768 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,7 +18,15 @@ Also for it: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (1)
+
+- `ip-protection-site-rules-edit-button` — `browser/browser/ipProtection.ftl` — Ungrammatical preposition: "relativa per" should be "relativa a" (or just "per").
+    - Current: `la regola relativa per { $website }`
+    - Source: `aria-label: Edit the rule for { $website } title: Edit`
+    - Suggest: `la regola relativa a { $website }`
+    - "Relativa" takes the preposition "a"; "relativa per" is ungrammatical Italian. The sibling delete button uses plain "la regola per".
+
+### ✅ Fixed since the last run (3)
 
 - `toolbar-switcher-customizable-label-v2` — `browser/browser/aiWindow.ftl` — Tooltip adds "facilmente" (easily), which the source does not say, and ends with a period absent in the source.
     - Current: `Passa facilmente tra finestre smart e classiche.`
@@ -36,10 +44,6 @@ Also for it: [android](android.md) · [firefox_ios](firefox_ios.md)
     - Suggest: `Sincronizzazione dei dati su questo dispositivo`
     - The source heading names the syncing activity/settings, not data that has already been synced.
 
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
-
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
 _Nothing withdrawn._
@@ -48,12 +52,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `newtab-stocks-widget-open-menu-button` — `browser/browser/newtab/newtab.ftl` — The Finance widget is called "Mercati finanziari" elsewhere, but here the menu button calls it "Azioni", creating an inconsistent widget name on the same surface.
-    - Current: `Apri menu per il widget Azioni`
-    - Suggest: `Apri menu per il widget Mercati finanziari`
-    - newtab-stocks-widget-menu-button2 and newtab-stocks-widget-title2 render the same widget as "Mercati finanziari"; using "Azioni" for the same widget's menu button is inconsistent (and "Azioni" is also ambiguous with "actions").
+_Nothing retired._
 
 ---
 
@@ -61,12 +62,12 @@ _Nothing to re-read._
 
 | Check | Result |
 |---|---|
-| Files | 337 |
-| Strings | 16,668 |
+| Files | 339 |
+| Strings | 16,768 |
 | Missing strings | 0 |
-| Obsolete strings | 42 |
+| Obsolete strings | 11 |
 | Files absent from the locale | 0 |
-| Files with no en-US counterpart | 10 |
+| Files with no en-US counterpart | 11 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
@@ -89,13 +90,14 @@ The locale is complete against the en-US source.
 - `browser/browser/enterprise/enterprise-policies-descriptions.ftl`
 - `browser/browser/enterprise/enterprise.ftl`
 - `browser/browser/enterprise/felt.ftl`
+- `browser/browser/miniWindow.ftl`
 - `browser/chrome/overrides/enterprise.properties`
 - `dom/chrome/enterprise.properties`
 - `toolkit/crashreporter/crashreporter-enterprise.ftl`
 - `toolkit/toolkit/enterprise/enterprise.ftl`
 - `toolkit/toolkit/enterprise/felt.ftl`
 
-_222 strings. These files exist in the locale tree but not in the en-US reference — they are maintained elsewhere. The model review is a comparison against en-US, so it skips them entirely; only the checks that need no reference ran. Nothing reported from these files means nothing was looked for, not that they are clean._
+_237 strings. These files exist in the locale tree but not in the en-US reference — they are maintained elsewhere. The model review is a comparison against en-US, so it skips them entirely; only the checks that need no reference ran. Nothing reported from these files means nothing was looked for, not that they are clean._
 
 ### Conventions detected in this locale
 
@@ -103,12 +105,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 958, `straight-double` 25 | **curly-double** |
-| apostrophe | `typographic` 1757, `straight` 6 | **typographic** |
-| ellipsis | `char` 415 | **char** |
+| quotes | `curly-double` 963, `straight-double` 25 | **curly-double** |
+| apostrophe | `typographic` 1761, `straight` 6 | **typographic** |
+| ellipsis | `char` 417 | **char** |
 | dash | `em` 51, `en` 17 | **em** |
 | nbsp | `total` 12, `before-punctuation` 4, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 722, `formal` 47 | **informal** |
+| register | `informal` 723, `formal` 47 | **informal** |
 
 ---
 
@@ -118,7 +120,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (20)
+## 3. Open findings (18)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -134,7 +136,7 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 6 |
-| 3 | Degraded language (grammar, spelling, terminology) | 12 |
+| 3 | Degraded language (grammar, spelling, terminology) | 10 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
@@ -166,11 +168,6 @@ _Also listed under their own category below._
     - Source: `This can happen during a long browsing session, or when your operating system updates { -brand-short-name }. Restarting keeps { -brand-short-name } secure and working normally.`
     - Suggest: `Il riavvio consente a { -brand-short-name } di restare sicuro e di funzionare normalmente.`
     - En-US: "Restarting keeps { -brand-short-name } secure and working normally." The Italian gerund construction leaves the subject of "continuerà" dangling and turns the statement into a promise that something will keep working, rather than that restarting keeps the browser secure.
-- `toolbar-switcher-customizable-label-v2` — `browser/browser/aiWindow.ftl` — Tooltip adds "facilmente" (easily), which the source does not say, and ends with a period absent in the source.
-    - Current: `Passa facilmente tra finestre smart e classiche.`
-    - Source: `label: { -smart-window-brand-name } switcher tooltiptext: Switch between Smart and Classic Windows`
-    - Suggest: `Passa tra finestre smart e classiche`
-    - en-US is "Switch between Smart and Classic Windows" — no adverb and no final period in a tooltip.
 - `urlbar-result-menu-remove-top-site` — `browser/browser/browser.ftl` — "Remove this top site" is rendered as "Rimuovi dai siti principali" (remove from top sites) instead of removing the site itself.
     - Current: `Rimuovi dai siti principali`
     - Source: `(value): Remove this top site accesskey: T`
@@ -191,11 +188,6 @@ _Also listed under their own category below._
     - Source: `A fox sitting on dark purple hills`
     - Suggest: `Una volpe seduta su colline viola scuro`
     - en-US says "A fox sitting on dark purple hills"; the companion string newtab-wallpaper-firefox-sitting-hill-light translates the same "sitting" as "seduta". "Accovacciata" means crouching.
-- `sync-syncing-across-devices-heading-3` — `browser/browser/preferences/preferences.ftl` — "Data syncing on this device" rendered as "Dati sincronizzati" (already-synced data) instead of the activity of syncing.
-    - Current: `Dati sincronizzati su questo dispositivo`
-    - Source: `Data syncing on this device`
-    - Suggest: `Sincronizzazione dei dati su questo dispositivo`
-    - The source heading names the syncing activity/settings, not data that has already been synced.
 - `jsonlScopeName` — `devtools/client/netmonitor.properties` — "JSON Lines" is a format name (JSONL/NDJSON) and should not be translated as "Righe JSON".
     - Current: `Righe JSON`
     - Source: `JSON Lines`
@@ -219,11 +211,11 @@ _Also listed under their own category below._
 
 ### C. Grammar, agreement & spelling
 
-- `tab-groups-onboarding-saved-groups-title-3` — `browser/browser/newtab/onboarding.ftl` — Duplicated word "riaprirlo riaprirlo".
-    - Current: `puoi riaprirlo riaprirlo dal menu`
-    - Source: `When you close a tab group, reopen it from the List All Tabs menu anytime.`
-    - Suggest: `puoi riaprirlo dal menu`
-    - The verb is accidentally repeated; the source says "reopen it" once.
+- `ip-protection-site-rules-edit-button` — `browser/browser/ipProtection.ftl` — Ungrammatical preposition: "relativa per" should be "relativa a" (or just "per").
+    - Current: `la regola relativa per { $website }`
+    - Source: `aria-label: Edit the rule for { $website } title: Edit`
+    - Suggest: `la regola relativa a { $website }`
+    - "Relativa" takes the preposition "a"; "relativa per" is ungrammatical Italian. The sibling delete button uses plain "la regola per".
 - `preferences-ai-controls-sidebar-chatbot-group-3` — `browser/browser/preferences/preferences.ftl` — Label uses singular "Fornitore" where the source is plural "providers".
     - Current: `label: Fornitore di chatbot IA nella barra laterale`
     - Source: `description: Keep a chatbot in view as you browse. Choose from multiple providers and switch anytime. label: AI chatbot providers in sidebar`
@@ -281,8 +273,11 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (56)
+### Fixed to date (59)
 
+- `toolbar-switcher-customizable-label-v2` — `browser/browser/aiWindow.ftl` — fixed 2026-10-19
+- `tab-groups-onboarding-saved-groups-title-3` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-10-19
+- `sync-syncing-across-devices-heading-3` — `browser/browser/preferences/preferences.ftl` — fixed 2026-10-19
 - `existing-user-privacy-notice-update-message` — `browser/browser/termsofuse.ftl` — fixed 2026-08-21
 - `select-translations-panel-try-another-language-label` — `browser/browser/translations.ftl` — fixed 2026-08-21
 - `noDomMutationBreakpoints` — `devtools/client/debugger.properties` — fixed 2026-08-21
@@ -320,6 +315,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `rights-webservices-term-unbranded` — `toolkit/toolkit/about/aboutRights.ftl` — fixed 2026-07-26
 - `rights-webservices-unbranded` — `toolkit/toolkit/about/aboutRights.ftl` — fixed 2026-07-26
 - `about-telemetry-page-subtitle` — `toolkit/toolkit/about/aboutTelemetry.ftl` — fixed 2026-07-26
-- `third-party-button-open` — `toolkit/toolkit/about/aboutThirdParty.ftl` — fixed 2026-07-26
-- `about-translations-policy-disabled-info-message` — `toolkit/toolkit/about/aboutTranslations.ftl` — fixed 2026-07-26
-- `about-webrtc-remote-send-ssrc` — `toolkit/toolkit/about/aboutWebrtc.ftl` — fixed 2026-07-26

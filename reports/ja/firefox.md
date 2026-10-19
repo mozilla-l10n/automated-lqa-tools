@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-12 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9b5f3e8ca0a3` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `8f8219b6abd0` |
-| **Previous run** | 2026-10-05 @ `ff2ee909fb8d` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ba8eba5819d0` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
+| **Previous run** | 2026-10-12 @ `9b5f3e8ca0a3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 21 of 16,325 |
+| **Strings reviewed this run** | 43 of 16,351 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for ja: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `site-data-clear-all-prompt-text` — `browser/browser/preferences/siteDataSettings.ftl` — The hedge "may" is dropped, so the Japanese says clearing data will definitely sign the user out and delete offline content.
+    - Current: `これにより、ウェブサイトからログアウトされ、オフラインのウェブコンテンツが削除されます。`
+    - Source: `Selecting ‘Clear Now’ will clear all cookies and site data stored by { -brand-short-name }. This may sign you out of websites and remove offline web content.`
+    - Suggest: `これにより、ウェブサイトからログアウトされたり、オフラインのウェブコンテンツが削除されたりする場合があります。`
+    - The en-US says "This may sign you out of websites and remove offline web content", which is only a possibility. The Japanese turns this into a certainty, which changes what the product says about what the action does.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,10 +48,10 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 326 |
-| Strings | 16,325 |
-| Missing strings | 98 |
-| Obsolete strings | 19 |
+| Files | 327 |
+| Strings | 16,351 |
+| Missing strings | 184 |
+| Obsolete strings | 15 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -63,20 +67,20 @@ _Nothing retired._
 
 ### Completeness
 
-**98 strings** are not translated yet, concentrated in:
+**184 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 17
+- `browser/browser/ipProtection.ftl` — 34
+- `browser/browser/newtab/newtab.ftl` — 26
+- `browser/browser/browser.ftl` — 22
 - `browser/browser/autoTabGrouping.ftl` — 15
-- `browser/browser/browser.ftl` — 12
-- `browser/browser/newtab/onboarding.ftl` — 11
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 7
-- `browser/browser/preferences/preferences.ftl` — 7
+- `browser/browser/newtab/onboarding.ftl` — 14
+- `browser/browser/policies/policies-descriptions.ftl` — 10
+- `browser/browser/preferences/preferences.ftl` — 9
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 8
+- `browser/browser/genai.ftl` — 7
 - `toolkit/toolkit/main-window/autocomplete.ftl` — 5
-- `browser/browser/genai.ftl` — 4
+- `toolkit/toolkit/about/aboutGlean.ftl` — 4
 - `browser/browser/menubar.ftl` — 3
-- `toolkit/toolkit/about/aboutGlean.ftl` — 2
-- `browser/browser/aiWindow.ftl` — 2
-- `browser/browser/browserSets.ftl` — 2
 
 **Files absent from the locale:**
 
@@ -95,12 +99,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 439, `curly-single` 182, `straight-double` 120, `corner` 5 | _mixed_ |
+| quotes | `curly-double` 440, `curly-single` 182, `straight-double` 120, `corner` 5 | _mixed_ |
 | apostrophe | `typographic` 259, `straight` 11 | **typographic** |
-| ellipsis | `ascii` 390 | **ascii** |
+| ellipsis | `ascii` 391 | **ascii** |
 | dash | `em` 55, `en` 1 | **em** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 5 | _mixed_ |
-| fullwidth | `punctuation` 4981 | **punctuation** |
+| fullwidth | `punctuation` 4989 | **punctuation** |
 
 ---
 
@@ -110,9 +114,9 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (135)
+## 3. Open findings (136)
 
-> **Reads as a deliberate edit (6).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (7).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `about-private-browsing-spotlight-basics-no-sell-data` — `browser/browser/aboutPrivateBrowsing.ftl` — The translation says the browser checks site involvement and does not sell/share the user's data, instead of automatically asking participating sites not to sell or share it.
     - Current: `{ -brand-short-name } はサイトへの関与を自動的に確認し、あなたの個人データを販売または共有しません。`
@@ -139,6 +143,11 @@ _Nothing reported._
     - Source: `label: An app or service may see your encrypted traffic.`
     - Suggest: `アプリまたはサービスが暗号化された通信を閲覧できる状態になっている可能性があります。`
     - en-US "may see" expresses possibility; the Japanese states it as a fact about the user's apps/services.
+- `site-data-clear-all-prompt-text` — `browser/browser/preferences/siteDataSettings.ftl` — The hedge "may" is dropped, so the Japanese says clearing data will definitely sign the user out and delete offline content.
+    - Current: `これにより、ウェブサイトからログアウトされ、オフラインのウェブコンテンツが削除されます。`
+    - Source: `Selecting ‘Clear Now’ will clear all cookies and site data stored by { -brand-short-name }. This may sign you out of websites and remove offline web content.`
+    - Suggest: `これにより、ウェブサイトからログアウトされたり、オフラインのウェブコンテンツが削除されたりする場合があります。`
+    - The en-US says "This may sign you out of websites and remove offline web content", which is only a possibility. The Japanese turns this into a certainty, which changes what the product says about what the action does.
 - `about-sync-log-page-header` — `toolkit/services/aboutSyncLog.ftl` — "Diagnostic logs written by sync." is translated as "diagnoses the logs written by sync", turning a noun phrase into an action.
     - Current: `description: 同期機能により書き込まれたログを診断します。`
     - Source: `description: Diagnostic logs written by sync. heading: Sync logs`
@@ -150,7 +159,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 8 |
-| 2 | Wrong content (says something other than the English) | 60 |
+| 2 | Wrong content (says something other than the English) | 61 |
 | 3 | Degraded language (grammar, spelling, terminology) | 37 |
 | 4 | Cosmetic (typography, spacing) | 30 |
 
@@ -429,6 +438,11 @@ _Also listed under their own category below._
     - Source: `label: An app or service may see your encrypted traffic.`
     - Suggest: `アプリまたはサービスが暗号化された通信を閲覧できる状態になっている可能性があります。`
     - en-US "may see" expresses possibility; the Japanese states it as a fact about the user's apps/services.
+- `site-data-clear-all-prompt-text` — `browser/browser/preferences/siteDataSettings.ftl` — The hedge "may" is dropped, so the Japanese says clearing data will definitely sign the user out and delete offline content.
+    - Current: `これにより、ウェブサイトからログアウトされ、オフラインのウェブコンテンツが削除されます。`
+    - Source: `Selecting ‘Clear Now’ will clear all cookies and site data stored by { -brand-short-name }. This may sign you out of websites and remove offline web content.`
+    - Suggest: `これにより、ウェブサイトからログアウトされたり、オフラインのウェブコンテンツが削除されたりする場合があります。`
+    - The en-US says "This may sign you out of websites and remove offline web content", which is only a possibility. The Japanese turns this into a certainty, which changes what the product says about what the action does.
 - `monitor-breaches-unresolved-description` — `browser/browser/protections.ftl` — monitor-breaches-unresolved-description (protections.ftl) — "taking steps to protect your info" → 段階に進めます ("advance to a stage").
     - Source: `After reviewing breach details and taking steps to protect your info, you can mark breaches as resolved.`
     - Suggest: `段階に進めます`
@@ -517,10 +531,7 @@ _Also listed under their own category below._
 - `about-webauthn-auth-info-uv-modality` — `toolkit/toolkit/about/aboutWebauthn.ftl` — about-webauthn-auth-option-uv (+ -alwaysuv, -makecreduvnotrqd, about-webauthn-auth-info-uv-modality) — CTAP2 "user verification" (PIN or biometrics) → 生体認証 (biometrics only). → ユーザー検証 (UV) Verified.
     - Source: `User verification modality`
     - Suggest: `生体認証`
-- `about-webauthn-auth-option-uv` — `toolkit/toolkit/about/aboutWebauthn.ftl` — about-webauthn-auth-option-uv (+ -alwaysuv, -makecreduvnotrqd, about-webauthn-auth-info-uv-modality) — CTAP2 "user verification" (PIN or biometrics) → 生体認証 (biometrics only). → ユーザー検証 (UV) Verified.
-    - Source: `User verification`
-    - Suggest: `生体認証`
-- _…and 9 more; see `state/` for the full list._
+- _…and 10 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
