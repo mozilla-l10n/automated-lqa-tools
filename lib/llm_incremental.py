@@ -115,8 +115,11 @@ def _close(node) -> None:
             _close(value)
 
 
-def _call(client, model, system, batch, tool, max_tokens, attempts=4):
+def _call(client, model, system, batch, tool, max_tokens, effort=None, attempts=4):
     last = None
+    # Opus 5.5 runs at `medium` when effort is omitted, one level below where
+    # Opus 5 ran. Configured, so the level a run used is a recorded choice.
+    extra = {"output_config": {"effort": effort}} if effort else {}
     for attempt in range(attempts):
         try:
             return client.messages.create(
@@ -125,6 +128,7 @@ def _call(client, model, system, batch, tool, max_tokens, attempts=4):
                 system=system,
                 tools=[tool],
                 messages=[{"role": "user", "content": batch}],
+                **extra,
             )
         except (anthropic.RateLimitError, anthropic.APIStatusError, anthropic.APIConnectionError) as exc:
             last = exc
@@ -239,7 +243,8 @@ def review(project, locale, keys, l10n, source, log=print) -> tuple[list[Finding
             continue
         log(f"    batch {index}/{len(batches)} ({len(batch_keys)} strings)")
         try:
-            response = _call(client, model, system, body, tool, max_tokens)
+            response = _call(client, model, system, body, tool, max_tokens,
+                             effort=cfg.get("effort"))
         except Exception as exc:  # noqa: BLE001 - keep what has been reviewed
             progress.stopped = f"stopped at batch {index} of {len(batches)}: {exc}"
             log(f"    {progress.stopped}")
@@ -256,7 +261,11 @@ def review(project, locale, keys, l10n, source, log=print) -> tuple[list[Finding
             log(f"      discarded {malformed} malformed item(s) in this batch; "
                 "these strings are not counted as cleanly reviewed")
         if not ok:
-            log("      the reply carried no readable findings list; "
+            # Thinking counts toward max_tokens and cannot be turned off, so a
+            # truncated reply and a refusal both arrive here without a tool
+            # call. The stop reason is what tells them apart.
+            log("      the reply carried no readable findings list "
+                f"(stop_reason: {getattr(response, 'stop_reason', None)}); "
                 "this batch is not counted as reviewed and will be retried")
     return out, usage, progress
 

@@ -31,6 +31,9 @@ exclude: []
 
 llm:
   model: claude-opus-5-5
+  # Explicit because Opus 5.5's default is `medium`, where Opus 5 ran at
+  # `high`. Read by the incremental reviewer and the auto-suggest fixer.
+  effort: medium
   batch_size: 40
   max_output_tokens: 16000
   baseline_model: claude-opus-5-5

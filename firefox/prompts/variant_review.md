@@ -79,11 +79,14 @@ finding at all:
 - a warning or explanation made more or less certain where nothing is
   promised or hidden -- "this will sign you out" for "this may sign you
   out", "this is because" for "this can happen when";
-- a wrong word in a label, title or feature name -- "share PDFs" for
-  "split PDFs" is a mistranslation to report normally, not an assertion;
 - idiom, voice, word order, or sentence split chosen to read naturally in
   {language};
 - a word added or dropped that the rest of the sentence already carries.
+
+A wrong word in a label, title or feature name is different: "share PDFs"
+for "split PDFs" does not land on the same fact, so report it as a
+mistranslation -- but it makes no claim about the product, so not with this
+flag.
 
 Set `reads_as_deliberate` to `true` only on a finding that clears the
 material bar, in addition to reporting it normally. The test is what a user

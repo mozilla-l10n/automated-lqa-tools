@@ -109,6 +109,13 @@ def _rules(project, locale: str) -> str:
     start = text.index("## What to report")
     end = text.index("## Categories")
     body = text[start:end]
+    # The agent reads the files themselves, not the flattened rendering an
+    # incremental batch shows. The section describing that notation would
+    # tell it the file's syntax is hidden and its placeable arguments
+    # dropped -- the opposite of what it is looking at.
+    rendered = body.find("## How `source:` and `target:` are rendered")
+    if rendered != -1:
+        body = body[:rendered] + body[body.index("\n## ", rendered) + 1:]
     conventions = project.conventions(locale).strip() or (
         "_No conventions recorded yet for this locale. Infer them by counting "
         "what the tree does, and do not impose conventions from outside it._"

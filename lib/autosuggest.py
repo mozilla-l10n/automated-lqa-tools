@@ -225,7 +225,8 @@ def ask(client, project, system: str, items: list[dict]) -> dict[int, dict]:
     """``{ref: answer}`` for one batch; strings with no readable answer are absent."""
     cfg = project.llm
     response = _call(client, cfg["model"], system, render_batch(items), _tool(),
-                     int(cfg.get("max_output_tokens", 16000)))
+                     int(cfg.get("max_output_tokens", 16000)),
+                     effort=cfg.get("effort"))
     for block in response.content:
         if getattr(block, "type", "") == "tool_use" and block.name == "report_fixes":
             return {s["ref"]: s for s in block.input.get("strings", [])
