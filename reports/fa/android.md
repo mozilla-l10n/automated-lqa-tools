@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-18 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
-| **Previous run** | 2026-10-12 @ `9d543f9ca798` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `57c409b04755` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `57c409b04755` |
+| **Previous run** | 2026-10-18 @ `dd8ca757b7dd` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 12 of 2,793 |
+| **Strings reviewed this run** | 0 of 2,793 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for fa: [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `logins_password_copied` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — The password-copied snackbar says the URL (نشانی) was copied instead of the password.
-    - Current: `نشانی در تخته‌گیره رونوشت شد`
-    - Source: `Password copied to clipboard`
-    - Suggest: `گذرواژه در تخته‌گیره رونوشت شد`
-    - The source and comment say the password was copied. «نشانی» means address/URL, the same text as the URL-copied snackbar. It should be «گذرواژه», the term used in saved_logins_copy_password.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

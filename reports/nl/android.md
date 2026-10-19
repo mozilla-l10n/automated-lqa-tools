@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-18 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
-| **Previous run** | 2026-10-12 @ `9d543f9ca798` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `7ee8e61a4a7d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `7ee8e61a4a7d` |
+| **Previous run** | 2026-10-18 @ `dd8ca757b7dd` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 17 of 2,802 |
+| **Strings reviewed this run** | 0 of 2,802 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for nl: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `search_bar_with_lens_widget_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — Without hyphens marking the shared compound part, 'afbeelding' reads as a separate noun, so the text says 'search bar with an image' rather than 'with image search'.
-    - Current: `met afbeelding, privé en gesproken zoekopdrachten`
-    - Source: `Search bar with image, private and voice search`
-    - Suggest: `met afbeeldings-, privé- en gesproken zoekopdrachten`
-    - The source lists three search types (image, private, voice). In Dutch, compound parts that share a head noun need a hyphen ('afbeeldingszoekopdrachten' becomes 'afbeeldings-'). Without it, 'afbeelding' reads as a separate item in the list, so the description names an image rather than image search.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

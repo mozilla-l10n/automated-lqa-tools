@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-18 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
-| **Previous run** | 2026-10-12 @ `9d543f9ca798` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `57c409b04755` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `57c409b04755` |
+| **Previous run** | 2026-10-18 @ `dd8ca757b7dd` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 16 of 2,761 |
+| **Strings reviewed this run** | 0 of 2,761 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,63 +22,9 @@ Also for es-MX: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (11)
+### ✅ Fixed since the last run (0)
 
-- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-es-rMX/strings.xml` — Ungrammatical question: "¿Estás conectado el equipo...?" mixes second person verb with third-person subject.
-    - Current: `¿Estás conectado el equipo a una red activa?`
-    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
-    - Suggest: `¿Está conectado el equipo a una red activa?`
-    - Source is "Is the device connected to an active network?"; the subject is "el equipo", so the verb must be "Está". The parallel string mozac_browser_errorpages_unknown_proxy_host_message correctly uses "¿Está conectado el equipo a una red activa?".
-- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-es-rMX/strings.xml` — `mozac_browser_errorpages_offline_message` uses straight double quotes
-    - Current: `{ <p> }El navegador está operando en modo sin conexión y no puede conectarse con el elemento solicitado.{ </p> } { <ul> } { <li> }¿Estás conectado el equipo a una red activa?{ </li> } { <li> }Presiona "Volver a intentar…`
-    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
-    - Suggest: `Presiona “Volver a intentarlo”`
-    - The locale's quote convention is `curly-double` (12 occurrences).
-- `mozac_feature_prompts_identity_credentials_privacy_policy_description` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-es-rMX/strings.xml` — A period was added after "Términos de Servicio" that is not in the source.
-    - Current: `Términos de Servicio.{ </a> }`
-    - Source: `Logging in to %1$s with a %2$s account is subject to their <a href="%3$s">Privacy Policy{ </a> } and <a href="%4$s">Terms of Service{ </a> }`
-    - Suggest: `Términos de Servicio{ </a> }`
-    - The source string has no final period inside the link text; the added period appears inside/next to the link markup.
-- `mozac_feature_pwa_site_controls_notification_text` — `mozilla-mobile/android-components/components/feature/pwa/src/main/res/values-es-rMX/strings.xml` — Trailing period added that is not in the source.
-    - Current: `Toca para copiar la URL de esta aplicación.`
-    - Source: `Tap to copy the URL for this app`
-    - Suggest: `Toca para copiar la URL de esta aplicación`
-    - The source "Tap to copy the URL for this app" has no final punctuation.
-- `mozac_summarize_paywalled_content_error_title` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-es-rMX/strings.xml` — Trailing period added to a title that has none in the source.
-    - Current: `No se puede resumir el contenido de pago.`
-    - Source: `Can’t summarize paywalled content`
-    - Suggest: `No se puede resumir el contenido de pago`
-    - The source is an error screen title without final punctuation; the added period deviates from the source's title styling.
-- `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
-    - Current: `La dirección web debe contener "https://" o "http://"`
-    - Source: `Web address must contain “https://” or “http://”`
-    - Suggest: `“https://” o “http://”`
-    - The locale's quote convention is `curly-double` (12 occurrences).
-- `automatic_translation_header_preference` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — Curly quotation marks are reversed (closing mark used to open and vice versa).
-    - Current: `las preferencias de ”siempre traducir“ y ”nunca traducir“`
-    - Source: `Select a language to manage ”always translate“ and ”never translate“ preferences.`
-    - Suggest: `las preferencias de “siempre traducir” y “nunca traducir”`
-    - The locale convention is curly double quotes; here the opening quote uses ” and the closing uses “, inverted from correct usage.
-- `download_language_header_preference` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — Unnecessary capitalization of "Idiomas" copied from English title case.
-    - Current: `Descargar Idiomas`
-    - Source: `Download Languages`
-    - Suggest: `Descargar idiomas`
-    - Spanish does not use English title case; the parallel string download_languages_translations_toolbar_title_preference is "Descargar idiomas".
-- `micro_survey_privacy_notice_2` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — Unnecessary capitalization of "Privacidad" in a sentence-case link label.
-    - Current: `Aviso de Privacidad`
-    - Source: `Privacy notice`
-    - Suggest: `Aviso de privacidad`
-    - Spanish uses sentence case; the source "Privacy notice" is not capitalized on the second word.
-- `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — `preference_summary_delete_browsing_data_on_quit_2` uses straight double quotes
-    - Current: `Eliminar automáticamente los datos de navegación cuando selecciones "Salir" en el menú principal`
-    - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
-    - Suggest: `“Salir”`
-    - The locale's quote convention is `curly-double` (12 occurrences).
-- `preference_enhanced_tracking_protection_custom_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — Final period from the source sentence is missing.
-    - Current: `Elige qué rastreadores y secuencias de comandos bloquear`
-    - Source: `Choose which trackers and scripts to block.`
-    - Suggest: `Elige qué rastreadores y secuencias de comandos bloquear.`
-    - The source "Choose which trackers and scripts to block." ends with a period, as do the sibling description strings.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-18 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
-| **Previous run** | 2026-10-16 @ `4d7697d1b89b` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `7ee8e61a4a7d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `7ee8e61a4a7d` |
+| **Previous run** | 2026-10-18 @ `dd8ca757b7dd` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 4 of 2,552 |
+| **Strings reviewed this run** | 0 of 2,552 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for pt-PT: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `search_bar_with_lens_widget_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — The translation says "com imagem" (with an image) instead of naming image search as one of the widget's search types.
-    - Current: `Barra de pesquisa com imagem, pesquisa privada e pesquisa por voz`
-    - Source: `Search bar with image, private and voice search`
-    - Suggest: `Barra de pesquisa com pesquisa por imagem, privada e por voz`
-    - The source and developer comment describe buttons for image search, private search and voice search. "com imagem" reads as a search bar that contains a picture, not one that offers image search.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

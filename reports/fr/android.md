@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-18 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `dd8ca757b7dd` |
-| **Previous run** | 2026-10-12 @ `9d543f9ca798` |
+| **Generated** | 2026-10-19 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `57c409b04755` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `57c409b04755` |
+| **Previous run** | 2026-10-18 @ `dd8ca757b7dd` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 10 of 2,802 |
+| **Strings reviewed this run** | 0 of 2,802 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,13 +22,9 @@ Also for fr: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `qualified_text` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — Missing space after "n°" abbreviation and French typography for the regulation number.
-    - Current: `n°2024/1183`
-    - Source: `Qualified as specified in Regulation (EU) 2024/1183.`
-    - Suggest: `no 2024/1183`
-    - In French typography the number abbreviation requires a space before the digits (and is properly "no" with superscript o); "n°2024/1183" is set without the required space.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
