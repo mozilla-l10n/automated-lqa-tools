@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **Previous run** | 2026-10-17 @ `09d125f6a298` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
+| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 1,847 |
 
@@ -46,9 +46,9 @@ _Nothing retired._
 |---|---|
 | Files | 95 |
 | Strings | 1,847 |
-| Missing strings | 80 |
+| Missing strings | 126 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 2 |
+| Files absent from the locale | 3 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,13 +59,14 @@ _Nothing retired._
 
 ### Completeness
 
-**80 strings** are not translated yet, concentrated in:
+**126 strings** are not translated yet, concentrated in:
 
 - `da/firefox-ios.xliff` — 34
+- `da/firefox-ios.xliff` — 28
+- `Shared/Supporting Files/en-US.lproj/VPN.strings` — 20
+- `da/firefox-ios.xliff` — 18
 - `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings` — 11
-- `da/firefox-ios.xliff` — 11
-- `da/firefox-ios.xliff` — 11
-- `da/firefox-ios.xliff` — 4
+- `da/firefox-ios.xliff` — 6
 - `da/firefox-ios.xliff` — 2
 - `da/firefox-ios.xliff` — 2
 - `da/firefox-ios.xliff` — 2
@@ -77,6 +78,7 @@ _Nothing retired._
 
 - `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings`
 - `Shared/Supporting Files/en-US.lproj/Camera.strings`
+- `Shared/Supporting Files/en-US.lproj/VPN.strings`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

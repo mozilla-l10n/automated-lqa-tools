@@ -1,8 +1,8 @@
 {
  "_meta": {
   "locale": "es-AR",
-  "prose_chunks": 1927,
-  "strings": 1927
+  "prose_chunks": 1973,
+  "strings": 1973
  },
  "apostrophe": {
   "straight": 0,
@@ -14,14 +14,14 @@
  },
  "ellipsis": {
   "ascii": 0,
-  "char": 28
+  "char": 31
  },
  "fullwidth": {
   "punctuation": 0
  },
  "inverted_marks": {
   "open-exclamation": 9,
-  "open-question": 41
+  "open-question": 42
  },
  "nbsp": {
   "before-punctuation": 0,

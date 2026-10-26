@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **Previous run** | 2026-10-17 @ `09d125f6a298` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
+| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 1,927 |
+| **Strings reviewed this run** | 6 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,13 +22,9 @@ Also for it: [android](android.md) · [firefox](firefox.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `Menu.TrackingProtectionCrossSiteTrackers.Title` — `it/firefox-ios.xliff` — "Cross-Site Trackers" translated as "Contenuti traccianti intersito", duplicating the wording used for "Tracking content" and adding "Contenuti".
-    - Current: `Contenuti traccianti intersito`
-    - Source: `Cross-Site Trackers`
-    - Suggest: `Traccianti intersito`
-    - The source says "Cross-Site Trackers" (trackers), not "tracking content"; the current wording collides with Menu.TrackingProtectionBlockedContent.Title ("Contenuti traccianti") on the same screen.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -48,8 +44,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 97 |
-| Strings | 1,927 |
+| Files | 98 |
+| Strings | 1,973 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -72,10 +68,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 15 | **curly-double** |
-| apostrophe | `typographic` 74 | **typographic** |
-| ellipsis | `char` 29 | **char** |
+| apostrophe | `typographic` 75 | **typographic** |
+| ellipsis | `char` 32 | **char** |
 | dash | `em` 1 | **em** |
-| register | `informal` 82, `formal` 4 | **informal** |
+| register | `informal` 86, `formal` 4 | **informal** |
 
 ---
 

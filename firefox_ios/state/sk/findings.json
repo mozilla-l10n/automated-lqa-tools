@@ -386,6 +386,30 @@
  {
   "category": "C",
   "check": "llm",
+  "current": "v prvý deň každý mesiac",
+  "dismissed_because": "",
+  "fid": "d14a3fd58cc7",
+  "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+  "first_seen": "2026-10-26",
+  "impact": 3,
+  "last_seen": "2026-10-26",
+  "locale": "sk",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "In Slovak, \"the first day of every month\" puts \"every month\" in the genitive. The current text is ungrammatical.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "60c337b8",
+  "string_id": "VPN.Settings.DataLimitResetFooter.v160",
+  "suggest": "v prvý deň každého mesiaca",
+  "summary": "Wrong case after \"v prvý deň\": it needs the genitive \"každého mesiaca\", not the nominative \"každý mesiac\".",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
   "current": "obsah tejto stránku",
   "dismissed_because": "",
   "fid": "63fa8d8ea033",

@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
 | **Previous run** | 2026-10-19 @ `ec61063c1c68` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 1,872 |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 15 of 1,887 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for sl: [android](android.md) · [firefox](firefox.md)
 
@@ -45,9 +44,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 96 |
-| Strings | 1,872 |
-| Missing strings | 55 |
+| Files | 97 |
+| Strings | 1,887 |
+| Missing strings | 86 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
@@ -60,11 +59,14 @@ _Nothing retired._
 
 ### Completeness
 
-**55 strings** are not translated yet, concentrated in:
+**86 strings** are not translated yet, concentrated in:
 
 - `sl/firefox-ios.xliff` — 36
+- `sl/firefox-ios.xliff` — 18
 - `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings` — 11
-- `sl/firefox-ios.xliff` — 5
+- `sl/firefox-ios.xliff` — 9
+- `sl/firefox-ios.xliff` — 7
+- `sl/firefox-ios.xliff` — 2
 - `sl/firefox-ios.xliff` — 2
 - `sl/firefox-ios.xliff` — 1
 
@@ -81,7 +83,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `straight-double` 13, `curly-double` 2 | **straight-double** |
-| ellipsis | `char` 22 | **char** |
+| ellipsis | `char` 23 | **char** |
 | dash | `en` 10 | **en** |
 | register | `informal` 2, `formal` 64 | **formal** |
 

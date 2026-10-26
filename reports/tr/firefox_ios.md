@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
 | **Previous run** | 2026-10-19 @ `ec61063c1c68` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 1,927 |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 33 of 1,960 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for tr: [android](android.md) · [firefox](firefox.md)
 
@@ -19,9 +18,13 @@ Also for tr: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `VPN.Settings.DataLimitResetFooter.v160` — `tr/firefox-ios.xliff` — "sıfırlanır" (is zeroed) can be read as the allowance going to zero, the opposite of resetting to the full amount.
+    - Current: `GB hakkınız sıfırlanır`
+    - Source: `Resets to %1$@ GB on the first of every month`
+    - Suggest: `GB hakkınız yenilenir`
+    - The source says the data allowance resets to %1$@ GB (is restored to full). "%1$@ GB hakkınız sıfırlanır" literally reads as "your %1$@ GB allowance is set to zero". "Yenilenir" (is renewed) gives the intended meaning.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,9 +48,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 97 |
-| Strings | 1,927 |
-| Missing strings | 0 |
+| Files | 98 |
+| Strings | 1,960 |
+| Missing strings | 13 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -60,7 +63,13 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**13 strings** are not translated yet, concentrated in:
+
+- `tr/firefox-ios.xliff` — 6
+- `tr/firefox-ios.xliff` — 5
+- `tr/firefox-ios.xliff` — 2
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -69,8 +78,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-single` 10, `curly-double` 6 | _mixed_ |
-| apostrophe | `typographic` 100 | **typographic** |
-| ellipsis | `char` 28 | **char** |
+| apostrophe | `typographic` 104 | **typographic** |
+| ellipsis | `char` 30 | **char** |
 | register | `formal` 7 | **formal** |
 
 ---
@@ -81,7 +90,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (82)
+## 3. Open findings (83)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -96,7 +105,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 43 |
+| 2 | Wrong content (says something other than the English) | 44 |
 | 3 | Degraded language (grammar, spelling, terminology) | 35 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
@@ -270,6 +279,11 @@ _Also listed under their own category below._
     - Source: `Translates pages to your top preferred language automatically.`
     - Suggest: `Sayfaları en çok tercih ettiğiniz dile otomatik olarak çevirir.`
     - The source specifies the top (first) preferred language in the preferred-languages list, not just any preferred language; the distinction matters on a screen where multiple preferred languages can be added.
+- `VPN.Settings.DataLimitResetFooter.v160` — `tr/firefox-ios.xliff` — "sıfırlanır" (is zeroed) can be read as the allowance going to zero, the opposite of resetting to the full amount.
+    - Current: `GB hakkınız sıfırlanır`
+    - Source: `Resets to %1$@ GB on the first of every month`
+    - Suggest: `GB hakkınız yenilenir`
+    - The source says the data allowance resets to %1$@ GB (is restored to full). "%1$@ GB hakkınız sıfırlanır" literally reads as "your %1$@ GB allowance is set to zero". "Yenilenir" (is renewed) gives the intended meaning.
 - `SentFromFirefox.SocialShare.ShareMessageA.Title.v134` — `tr/firefox-ios.xliff` — "Sent from %2$@" is rendered as "shared with/via %2$@" but the Turkish phrasing says the link was shared *with* the app rather than sent from Firefox.
     - Current: `%2$@ ile paylaşıldı`
     - Source: `%1$@ Sent from %2$@ 🦊 Try the mobile browser: %3$@`

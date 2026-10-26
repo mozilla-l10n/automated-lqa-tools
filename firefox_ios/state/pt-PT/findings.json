@@ -432,6 +432,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "C",
+  "check": "llm",
+  "current": "nop %1$@",
+  "dismissed_because": "",
+  "fid": "e4e9821f36e6",
+  "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+  "first_seen": "2026-10-26",
+  "impact": 3,
+  "last_seen": "2026-10-26",
+  "locale": "pt-PT",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "\"in %1$@\" (e.g. \"in Firefox\") should be \"no %1$@\" in Portuguese; \"nop\" is not a word.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "4ced090f",
+  "string_id": "VPN.Onboarding.WifiBody.v160",
+  "suggest": "no %1$@",
+  "summary": "Typo: the contraction \"no\" is misspelled as \"nop\".",
+  "suppressed_by": ""
+ },
+ {
   "category": "E",
   "check": "llm",
   "current": "perguntas, ou respostas",

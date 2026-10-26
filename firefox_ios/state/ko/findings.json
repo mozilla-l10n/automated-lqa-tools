@@ -1128,6 +1128,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "D",
+  "check": "llm",
+  "current": "GB 사용함",
+  "dismissed_because": "",
+  "fid": "4223a735f24d",
+  "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+  "first_seen": "2026-10-26",
+  "impact": 3,
+  "last_seen": "2026-10-26",
+  "locale": "ko",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The developer comment says this label is the same as the visible text but with 'gigabytes' written out instead of 'GB'. The translation is identical to the visible string.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "1b711953",
+  "string_id": "VPN.Settings.DataUsage.AccessibilityLabel.v160",
+  "suggest": "기가바이트 사용함",
+  "summary": "The VoiceOver label keeps the abbreviation 'GB', but the comment requires the unit to be written out.",
+  "suppressed_by": ""
+ },
+ {
   "category": "B",
   "check": "llm",
   "current": "%2$@ Shares에",
@@ -1221,6 +1245,78 @@
   "string_id": "TermsOfUse.Link.PrivacyNotice.v142",
   "suggest": "개인정보 고지",
   "summary": "'Privacy Notice' is translated '개인 정보 보호 정책' in the link but '개인정보 고지' in the description on the same sheet.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "1개 탭 닫기",
+  "dismissed_because": "",
+  "fid": "8814addb22fc",
+  "file": "Shared/Supporting Files/en-US.lproj/VPN.strings",
+  "first_seen": "2026-10-26",
+  "impact": 2,
+  "last_seen": "2026-10-26",
+  "locale": "ko",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "Per the comment, this is a confirmation shown after the tab was closed. '닫기' reads as a button or command. The plural string uses '닫음', which is the correct past/result form.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "9ecc5654",
+  "string_id": "VPN.ErrorBrowsingPopup.ClosedOneTab.v160",
+  "suggest": "1개 탭 닫음",
+  "summary": "The confirmation 'Closed 1 Tab' is translated as an action label ('Close 1 tab') instead of a completed action.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "1개 탭 닫기",
+  "dismissed_because": "",
+  "fid": "f4a6430d6da4",
+  "file": "Shared/Supporting Files/en-US.lproj/VPN.strings",
+  "first_seen": "2026-10-26",
+  "impact": 2,
+  "last_seen": "2026-10-26",
+  "locale": "ko",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The developer comment says this is a confirmation shown after the tab was closed. \"닫기\" is the form Korean uses for action buttons, so it reads as an instruction to close a tab, not as a statement that one was closed.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "9ecc5654",
+  "string_id": "VPN.ReachedDataLimitPopup.ClosedOneTab.v160",
+  "suggest": "탭 1개를 닫았습니다",
+  "summary": "The confirmation \"Closed 1 Tab\" is written as the command \"Close 1 tab\" (the button-label ~기 form) instead of saying the tab has been closed.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "%1$@개 탭 닫기",
+  "dismissed_because": "",
+  "fid": "bb957d95bded",
+  "file": "Shared/Supporting Files/en-US.lproj/VPN.strings",
+  "first_seen": "2026-10-26",
+  "impact": 2,
+  "last_seen": "2026-10-26",
+  "locale": "ko",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The developer comment says this is a confirmation shown after the tabs were closed. The ~기 form reads as a button that closes tabs, not as a past-tense confirmation.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "7e879554",
+  "string_id": "VPN.ReachedDataLimitPopup.ClosedXTabs.v160",
+  "suggest": "탭 %1$@개를 닫았습니다",
+  "summary": "The confirmation \"Closed %1$@ Tabs\" is written as the command \"Close %1$@ tabs\" instead of saying the tabs have been closed.",
   "suppressed_by": ""
  },
  {

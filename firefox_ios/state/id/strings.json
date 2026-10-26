@@ -617,7 +617,9 @@
   "NativeErrorPage.Wayback.Error.Search.v155": "5a8ab6eb 50fdc79d f60b10a8",
   "NativeErrorPage.Wayback.Error.SearchWayback.v155": "41077cb5 55e56d2c 4d9c8e7f",
   "NativeErrorPage.Wayback.Error.Title.v154": "5e260faa 09fe4418 225e49a3",
-  "NativeErrorPage.Wayback.Error.WaybackButtonA11yHint.v154": "71495a45 5c853c83 41cb4c56"
+  "NativeErrorPage.Wayback.Error.WaybackButtonA11yHint.v154": "71495a45 5c853c83 41cb4c56",
+  "VPN.ErrorPage.Body.v160": "bcc438a0 c1aca96f 19c107e0",
+  "VPN.ErrorPage.Title.v160": "3173590c 155c43d9 34e6d123"
  },
  "Shared/Supporting Files/en-US.lproj/Notification.strings": {
   "Notification.Fallback.Title.v113": "413dd449 e38877e5 1d128de3"
@@ -791,7 +793,10 @@
   "Onboarding.Welcome.Link.Action.v114": "ebfa0ed5 e22c5bd6 68ce2114",
   "Onboarding.Welcome.Skip.v114": "05dd9d7d dfb31eca 2527904c",
   "Onboarding.Welcome.Title.TreatementA.v120": "0c3a7b64 8edee85e 42b6b9a4",
-  "Onboarding.Welcome.Title.v114": "af69e4f0 309cad48 42b6b9a4"
+  "Onboarding.Welcome.Title.v114": "af69e4f0 309cad48 42b6b9a4",
+  "VPN.Onboarding.LimitBody.v160": "e5e50738 e7918393 395cc65b",
+  "VPN.Onboarding.LimitSubheading.v160": "83c939e9 9fddebc0 f3cdbd32",
+  "VPN.Onboarding.LocationsBody.v160": "d0778d49 d1dbad46 958e7087"
  },
  "Shared/Supporting Files/en-US.lproj/PasswordAutofill.strings": {
   "PasswordAutofill.LoginListCellNoUsername.v129": "f40e07ec 00ac2900 5441cc20",

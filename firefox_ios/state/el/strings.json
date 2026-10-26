@@ -615,7 +615,8 @@
   "NativeErrorPage.Wayback.Error.Search.v155": "19189f0d 50fdc79d f60b10a8",
   "NativeErrorPage.Wayback.Error.SearchWayback.v155": "c39cc494 55e56d2c 4d9c8e7f",
   "NativeErrorPage.Wayback.Error.Title.v154": "f3ebb0da 09fe4418 225e49a3",
-  "NativeErrorPage.Wayback.Error.WaybackButtonA11yHint.v154": "e46dddd3 5c853c83 41cb4c56"
+  "NativeErrorPage.Wayback.Error.WaybackButtonA11yHint.v154": "e46dddd3 5c853c83 41cb4c56",
+  "VPN.ErrorPage.Title.v160": "0e42dd4d 155c43d9 34e6d123"
  },
  "Shared/Supporting Files/en-US.lproj/Notification.strings": {
   "Notification.Fallback.Title.v113": "e6bf013f e38877e5 1d128de3"
@@ -694,7 +695,7 @@
   "Onboarding.Modern.Customization.Toolbar.Bottom.Action.v140": "699d81e1 cad5c3b3 3e99388a",
   "Onboarding.Modern.Customization.Toolbar.Bottom.Action.v145": "699d81e1 cad5c3b3 bd6522c3",
   "Onboarding.Modern.Customization.Toolbar.Continue.Action.v145": "489afd4f 5009bc49 57ecb618",
-  "Onboarding.Modern.Customization.Toolbar.Description.v145": "03777c86 25e54823 ed6db074",
+  "Onboarding.Modern.Customization.Toolbar.Description.v145": "45d3bce0 25e54823 ed6db074",
   "Onboarding.Modern.Customization.Toolbar.Title.v140": "47c155be 6c4d7433 4964b06d",
   "Onboarding.Modern.Customization.Toolbar.Title.v145": "071838b8 66118d11 17e0a5b1",
   "Onboarding.Modern.Customization.Toolbar.Top.Action.v140": "4d61a147 aa262dc8 4d545009",
@@ -1071,7 +1072,18 @@
   "Settings.Translation.SettingOn.v145": "45684cd3 201cd7a0 33647977",
   "Settings.Translation.Title.v145": "cfff8fd9 9afb9485 e8e90a78",
   "Settings.Translation.ToggleFooter.v151": "5ea7ee79 925a0171 a8fa2621",
-  "Settings.Translation.ToggleTitle.v145": "4f7d1f4e c640ad8b 22fa395f"
+  "Settings.Translation.ToggleTitle.v145": "4f7d1f4e c640ad8b 22fa395f",
+  "VPN.LocationPicker.FindingLocationsText.v160": "e0fa1db4 43b0b6a7 ae6285e2",
+  "VPN.LocationPicker.RecommendedMainText.v160": "f11d0154 40b5cb8f 1eb33093",
+  "VPN.LocationPicker.RecommendedSubText.v160": "97f1011f cce40e95 4da8d9f0",
+  "VPN.Settings.Connecting.v160": "7225853e 49447206 8b0ee67e",
+  "VPN.Settings.DataLimitTitle.v160": "424413a3 4c6e9549 a6cf0d3d",
+  "VPN.Settings.LearnMore.v160": "05de89db 8edf7739 65664dbb",
+  "VPN.Settings.LocationRecommended.v160": "f11d0154 40b5cb8f 2297934e",
+  "VPN.Settings.LocationTitle.v160": "ccb6ccb3 3d0aa4e0 1de5adea",
+  "VPN.Settings.StatusOff.v160": "2fd41036 4c5ca662 562e39ab",
+  "VPN.Settings.StatusOn.v160": "45684cd3 201cd7a0 01345c84",
+  "VPN.Settings.StatusPaused.v160": "c458ed69 2debda1f 310bdff1"
  },
  "Shared/Supporting Files/en-US.lproj/Share.strings": {
   "SendTo.NoDevicesFound.Message.v119": "0391bf8f 285cd0fc 13fc1cc8",
@@ -1209,7 +1221,7 @@
   "Translations.LanguagePicker.Title.v151": "067d109e 9b3040df 00ce2fe1",
   "Translations.Sheet.Button.v145": "cfff8fd9 37aed17c 7285c8e7",
   "Translations.Sheet.ChooseLanguage.v145": "81d8a6d0 aad08f28 1bd37ee4",
-  "Translations.Sheet.Error.GeneralSubtitle.v145": "7fd51372 2f27fc7c 943f34fa",
+  "Translations.Sheet.Error.GeneralSubtitle.v145": "6f3dd774 2f27fc7c 943f34fa",
   "Translations.Sheet.Error.GeneralTitle.v145": "277cd229 5b21b2cd 943f34fa",
   "Translations.Sheet.Error.RetryButton.v145": "71420056 67f53444 e96d7b73",
   "Translations.Sheet.Error.SubtitleLabel.v145": "b8dc968e f2387d4e 241aa3e7",
@@ -1239,6 +1251,20 @@
   "Upgrade.Welcome.Action.v114": "79d76194 be2e61de e2701915",
   "Upgrade.Welcome.Description.v114": "1bce104a 5adaa1ee f468827a",
   "Upgrade.Welcome.Title.v114": "81d33ad7 df7f4dbc a9213614"
+ },
+ "Shared/Supporting Files/en-US.lproj/VPN.strings": {
+  "VPN.ErrorBrowsingPopup.ClosedOneTab.v160": "b8c3b856 708e1251 d35af549",
+  "VPN.ErrorBrowsingPopup.ClosedXTabs.v160": "96f64264 819cf749 94973be0",
+  "VPN.ErrorBrowsingPopup.Continue.v160": "dd222b0d 54cfcf7b 52b7f4c5",
+  "VPN.ErrorBrowsingPopup.Title.v160": "88796b7e 0df91faf 4881e8b2",
+  "VPN.ErrorConnectingPopup.Body.v160": "0c6e6130 4dad2f2b 518c5e81",
+  "VPN.ErrorConnectingPopup.CloseButtonText.v160": "cbc41cb6 0e7c6115 70cb9732",
+  "VPN.ErrorConnectingPopup.RetryButtonText.v160": "71420056 67f53444 631d8583",
+  "VPN.ErrorConnectingPopup.Title.v160": "b1a3bfc2 dc30d148 ece5c8ec",
+  "VPN.ReachedDataLimitPopup.CloseAllTabs.v160": "15920376 5f9d1590 4802c44c",
+  "VPN.ReachedDataLimitPopup.CloseThisTab.v160": "b3673351 978267cd fa458859",
+  "VPN.ReachedDataLimitPopup.ClosedOneTab.v160": "b8c3b856 708e1251 886535ab",
+  "VPN.ReachedDataLimitPopup.ClosedXTabs.v160": "96f64264 819cf749 db106b11"
  },
  "Shared/Supporting Files/en-US.lproj/WebCompatReporter.strings": {
   "WebCompatReporter.AdditionalInfo.FooterText.v154": "e584927d 3076b2c4 d1b45d55",

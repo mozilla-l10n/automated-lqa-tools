@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **Previous run** | 2026-10-17 @ `09d125f6a298` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
+| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 3 of 1,918 |
+| **Strings reviewed this run** | 56 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for cs: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `QuickActions.CombineWindows.Title.v155` — `cs/firefox-ios.xliff` — "Windows" was left in English with a capital W, so it reads as the Microsoft Windows brand instead of Firefox browser windows.
+    - Current: `Sloučit Windows`
+    - Source: `Combine Windows`
+    - Suggest: `Sloučit okna`
+    - The developer comment says this action merges the tabs from all other open Firefox windows into the current window. "Windows" here is an ordinary noun and should be the Czech "okna". As written, the label reads as "Merge Windows" in the sense of the operating system.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,9 +48,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 97 |
-| Strings | 1,918 |
-| Missing strings | 9 |
+| Files | 98 |
+| Strings | 1,973 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -59,12 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**9 strings** are not translated yet, concentrated in:
-
-- `cs/firefox-ios.xliff` — 8
-- `cs/firefox-ios.xliff` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -73,7 +72,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `german-double` 15 | **german-double** |
-| ellipsis | `char` 28 | **char** |
+| ellipsis | `char` 31 | **char** |
 | dash | `em` 1, `en` 2 | _mixed_ |
 
 ---
@@ -84,7 +83,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (91)
+## 3. Open findings (92)
 
 > **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -109,7 +108,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 53 |
+| 2 | Wrong content (says something other than the English) | 54 |
 | 3 | Degraded language (grammar, spelling, terminology) | 35 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
@@ -269,6 +268,11 @@ _Nothing in this category._
     - Source: `There is no video`
     - Suggest: `Není zde žádné video`
     - The source says no video exists/no video track, parallel to "There is no audio" which was translated as "Není slyšet žádný zvuk"; the Czech instead claims the video fails to display.
+- `QuickActions.CombineWindows.Title.v155` — `cs/firefox-ios.xliff` — "Windows" was left in English with a capital W, so it reads as the Microsoft Windows brand instead of Firefox browser windows.
+    - Current: `Sloučit Windows`
+    - Source: `Combine Windows`
+    - Suggest: `Sloučit okna`
+    - The developer comment says this action merges the tabs from all other open Firefox windows into the current window. "Windows" here is an ordinary noun and should be the Czech "okna". As written, the label reads as "Merge Windows" in the sense of the operating system.
 - `This action will clear all of your private data, including history from your synced devices.` — `cs/firefox-ios.xliff` — "all of your private data" is rendered as "všechna vaše data", dropping "private"/soukromá.
     - Current: `Tato akce smaže všechna vaše data, včetně historie prohlížení ze všech synchronizovaných zařízení.`
     - Source: `This action will clear all of your private data, including history from your synced devices.`
@@ -414,12 +418,7 @@ _Nothing in this category._
     - Source: `Created %@`
     - Suggest: `Vytvořeno %@`
     - The developer comment says the label describes when the login was created, not saved.
-- `Logins will be removed from all connected devices.` — `cs/firefox-ios.xliff` — "connected devices" translated as "synchronizovaných zařízení" (synced devices).
-    - Current: `Přihlašovací údaje budou odstraněny ze všech synchronizovaných zařízení.`
-    - Source: `Logins will be removed from all connected devices.`
-    - Suggest: `Přihlašovací údaje budou odstraněny ze všech připojených zařízení.`
-    - The source says "all connected devices", not "synced devices"; the sibling string that does say "synced devices" uses the same Czech wording, losing the distinction.
-- _…and 5 more; see `state/` for the full list._
+- _…and 6 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

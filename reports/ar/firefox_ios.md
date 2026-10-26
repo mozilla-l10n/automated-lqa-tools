@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **Previous run** | 2026-10-17 @ `09d125f6a298` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
+| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 1,175 |
 
@@ -46,9 +46,9 @@ _Nothing retired._
 |---|---|
 | Files | 71 |
 | Strings | 1,175 |
-| Missing strings | 752 |
+| Missing strings | 798 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 26 |
+| Files absent from the locale | 27 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,20 +59,20 @@ _Nothing retired._
 
 ### Completeness
 
-**752 strings** are not translated yet, concentrated in:
+**798 strings** are not translated yet, concentrated in:
 
-- `ar/firefox-ios.xliff` — 141
-- `ar/firefox-ios.xliff` — 133
+- `ar/firefox-ios.xliff` — 150
+- `ar/firefox-ios.xliff` — 148
 - `ar/firefox-ios.xliff` — 81
 - `Shared/Supporting Files/en-US.lproj/WebCompatReporter.strings` — 52
 - `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings` — 43
-- `Shared/Supporting Files/en-US.lproj/NativeErrorPage.strings` — 36
+- `Shared/Supporting Files/en-US.lproj/NativeErrorPage.strings` — 38
 - `Shared/Supporting Files/en-US.lproj/Translations.strings` — 31
 - `Shared/Supporting Files/en-US.lproj/Summarizer.strings` — 21
+- `Shared/Supporting Files/en-US.lproj/VPN.strings` — 20
 - `ar/firefox-ios.xliff` — 16
 - `ar/firefox-ios.xliff` — 15
 - `Shared/Supporting Files/en-US.lproj/TermsOfUse.strings` — 15
-- `ar/firefox-ios.xliff` — 12
 
 **Files absent from the locale:**
 

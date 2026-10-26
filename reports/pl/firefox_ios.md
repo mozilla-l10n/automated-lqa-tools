@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
 | **Previous run** | 2026-10-19 @ `ec61063c1c68` |
-| **Mode** | checks-only |
+| **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 1,915 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for pl: [android](android.md) · [firefox](firefox.md)
 
@@ -47,9 +46,9 @@ _Nothing retired._
 |---|---|
 | Files | 96 |
 | Strings | 1,915 |
-| Missing strings | 12 |
+| Missing strings | 58 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 2 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -60,14 +59,19 @@ _Nothing retired._
 
 ### Completeness
 
-**12 strings** are not translated yet, concentrated in:
+**58 strings** are not translated yet, concentrated in:
 
+- `Shared/Supporting Files/en-US.lproj/VPN.strings` — 20
+- `pl/firefox-ios.xliff` — 17
 - `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings` — 11
+- `pl/firefox-ios.xliff` — 7
+- `pl/firefox-ios.xliff` — 2
 - `pl/firefox-ios.xliff` — 1
 
 **Files absent from the locale:**
 
 - `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings`
+- `Shared/Supporting Files/en-US.lproj/VPN.strings`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

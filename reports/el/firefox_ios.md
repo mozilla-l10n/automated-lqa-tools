@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **Previous run** | 2026-10-17 @ `09d125f6a298` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
+| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,922 |
+| **Strings reviewed this run** | 26 of 1,946 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,13 @@ Also for el: [android](android.md) · [firefox](firefox.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `Onboarding.Modern.Customization.Toolbar.Description.v145` — `el/firefox-ios.xliff` — Missing particle «να» after «για» makes the clause ungrammatical.
+    - Current: `για λάβετε`
+    - Source: `Start typing to get search suggestions, your top sites, bookmarks, history and search engines – all in one place.`
+    - Suggest: `για να λάβετε`
+    - Greek final clauses require «για να» + subjunctive; «για λάβετε» is a grammatical error.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -44,9 +48,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 97 |
-| Strings | 1,922 |
-| Missing strings | 5 |
+| Files | 98 |
+| Strings | 1,946 |
+| Missing strings | 27 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -59,10 +63,13 @@ _Nothing retired._
 
 ### Completeness
 
-**5 strings** are not translated yet, concentrated in:
+**27 strings** are not translated yet, concentrated in:
 
-- `el/firefox-ios.xliff` — 3
+- `el/firefox-ios.xliff` — 10
+- `el/firefox-ios.xliff` — 8
+- `el/firefox-ios.xliff` — 6
 - `el/firefox-ios.xliff` — 2
+- `el/firefox-ios.xliff` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -74,8 +81,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `guillemet` 17, `curly-single` 3 | **guillemet** |
 | apostrophe | `typographic` 3 | **typographic** |
-| ellipsis | `char` 29 | **char** |
-| dash | `en` 2 | **en** |
+| ellipsis | `char` 32 | **char** |
+| dash | `en` 1 | **en** |
 
 ---
 
@@ -85,7 +92,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (51)
+## 3. Open findings (50)
 
 > **Reads as a deliberate edit (5).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -121,7 +128,7 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 10 |
-| 3 | Degraded language (grammar, spelling, terminology) | 36 |
+| 3 | Degraded language (grammar, spelling, terminology) | 35 |
 | 4 | Cosmetic (typography, spacing) | 5 |
 
 ### A. Functional, markup, variables & plurals
@@ -208,11 +215,6 @@ _Nothing in this category._
     - Source: `The owner of %@ hasn’t set it up properly and a secure connection can’t be created.`
     - Suggest: `δεν το έχει ρυθμίσει`
     - The verb "έχει" appears twice around the clitic "το", which is ungrammatical Greek; the correct form is "δεν το έχει ρυθμίσει" (hasn't set it up).
-- `Onboarding.Modern.Customization.Toolbar.Description.v145` — `el/firefox-ios.xliff` — Missing particle «να» after «για» makes the clause ungrammatical.
-    - Current: `για λάβετε`
-    - Source: `Start typing to get search suggestions, your top sites, bookmarks, history and search engines – all in one place.`
-    - Suggest: `για να λάβετε`
-    - Greek final clauses require «για να» + subjunctive; «για λάβετε» is a grammatical error.
 - `Onboarding.Modern.TermsOfService.TermsOfUseLink.v145` — `el/firefox-ios.xliff` — The link text is nominative «Όροι», but it is inserted after «συμφωνείτε με τους», which needs the accusative «Όρους».
     - Current: `Όροι χρήσης %@.`
     - Source: `%@ Terms of Use.`
@@ -415,6 +417,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (1)
 
-_Nothing fixed yet._
+- `Onboarding.Modern.Customization.Toolbar.Description.v145` — `el/firefox-ios.xliff` — fixed 2026-10-26

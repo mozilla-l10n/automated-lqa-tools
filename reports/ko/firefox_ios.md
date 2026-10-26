@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
 | **Previous run** | 2026-10-19 @ `ec61063c1c68` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 1,927 |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 46 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for ko: [android](android.md)
 
@@ -19,9 +18,28 @@ Also for ko: [android](android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (4)
 
-_No new findings._
+- `VPN.ErrorBrowsingPopup.ClosedOneTab.v160` — `ko/firefox-ios.xliff` — The confirmation 'Closed 1 Tab' is translated as an action label ('Close 1 tab') instead of a completed action.
+    - Current: `1개 탭 닫기`
+    - Source: `Closed 1 Tab`
+    - Suggest: `1개 탭 닫음`
+    - Per the comment, this is a confirmation shown after the tab was closed. '닫기' reads as a button or command. The plural string uses '닫음', which is the correct past/result form.
+- `VPN.Settings.DataUsage.AccessibilityLabel.v160` — `ko/firefox-ios.xliff` — The VoiceOver label keeps the abbreviation 'GB', but the comment requires the unit to be written out.
+    - Current: `GB 사용함`
+    - Source: `%1$@ of %2$@ gigabytes used`
+    - Suggest: `기가바이트 사용함`
+    - The developer comment says this label is the same as the visible text but with 'gigabytes' written out instead of 'GB'. The translation is identical to the visible string.
+- `VPN.ReachedDataLimitPopup.ClosedOneTab.v160` — `ko/firefox-ios.xliff` — The confirmation "Closed 1 Tab" is written as the command "Close 1 tab" (the button-label ~기 form) instead of saying the tab has been closed.
+    - Current: `1개 탭 닫기`
+    - Source: `Closed 1 Tab`
+    - Suggest: `탭 1개를 닫았습니다`
+    - The developer comment says this is a confirmation shown after the tab was closed. "닫기" is the form Korean uses for action buttons, so it reads as an instruction to close a tab, not as a statement that one was closed.
+- `VPN.ReachedDataLimitPopup.ClosedXTabs.v160` — `ko/firefox-ios.xliff` — The confirmation "Closed %1$@ Tabs" is written as the command "Close %1$@ tabs" instead of saying the tabs have been closed.
+    - Current: `%1$@개 탭 닫기`
+    - Source: `Closed %1$@ Tabs`
+    - Suggest: `탭 %1$@개를 닫았습니다`
+    - The developer comment says this is a confirmation shown after the tabs were closed. The ~기 form reads as a button that closes tabs, not as a past-tense confirmation.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +63,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 97 |
-| Strings | 1,927 |
+| Files | 98 |
+| Strings | 1,973 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -70,7 +88,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-single` 10, `curly-double` 4 | _mixed_ |
 | apostrophe | `typographic` 10 | **typographic** |
-| ellipsis | `char` 28 | **char** |
+| ellipsis | `char` 31 | **char** |
 
 ---
 
@@ -80,7 +98,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (93)
+## 3. Open findings (97)
 
 > **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -100,8 +118,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 42 |
-| 3 | Degraded language (grammar, spelling, terminology) | 51 |
+| 2 | Wrong content (says something other than the English) | 45 |
+| 3 | Degraded language (grammar, spelling, terminology) | 52 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -270,6 +288,21 @@ _Nothing in this category._
     - Source: `You can learn more %@.`
     - Suggest: `%@에서 더 알아볼 수 있습니다.`
     - The source means learn more at the 'here' link; '에 대해' (about) is the wrong particle for the link text '여기' and makes the sentence nonsensical.
+- `VPN.ErrorBrowsingPopup.ClosedOneTab.v160` — `ko/firefox-ios.xliff` — The confirmation 'Closed 1 Tab' is translated as an action label ('Close 1 tab') instead of a completed action.
+    - Current: `1개 탭 닫기`
+    - Source: `Closed 1 Tab`
+    - Suggest: `1개 탭 닫음`
+    - Per the comment, this is a confirmation shown after the tab was closed. '닫기' reads as a button or command. The plural string uses '닫음', which is the correct past/result form.
+- `VPN.ReachedDataLimitPopup.ClosedOneTab.v160` — `ko/firefox-ios.xliff` — The confirmation "Closed 1 Tab" is written as the command "Close 1 tab" (the button-label ~기 form) instead of saying the tab has been closed.
+    - Current: `1개 탭 닫기`
+    - Source: `Closed 1 Tab`
+    - Suggest: `탭 1개를 닫았습니다`
+    - The developer comment says this is a confirmation shown after the tab was closed. "닫기" is the form Korean uses for action buttons, so it reads as an instruction to close a tab, not as a statement that one was closed.
+- `VPN.ReachedDataLimitPopup.ClosedXTabs.v160` — `ko/firefox-ios.xliff` — The confirmation "Closed %1$@ Tabs" is written as the command "Close %1$@ tabs" instead of saying the tabs have been closed.
+    - Current: `%1$@개 탭 닫기`
+    - Source: `Closed %1$@ Tabs`
+    - Suggest: `탭 %1$@개를 닫았습니다`
+    - The developer comment says this is a confirmation shown after the tabs were closed. The ~기 form reads as a button that closes tabs, not as a past-tense confirmation.
 - `Next in-page result` — `ko/firefox-ios.xliff` — "다음 페이지 결과" reads as "results of the next page" rather than "next result within the page".
     - Current: `다음 페이지 결과`
     - Source: `Next in-page result`
@@ -536,6 +569,11 @@ _Nothing in this category._
     - Source: `Show in Private Sessions`
     - Suggest: `비공개 세션에서 보기`
     - Settings.Search.PrivateSession.Description and Settings.Search.Suggest.PrivateSession.Description, which sit next to this toggle, both use '비공개 세션'.
+- `VPN.Settings.DataUsage.AccessibilityLabel.v160` — `ko/firefox-ios.xliff` — The VoiceOver label keeps the abbreviation 'GB', but the comment requires the unit to be written out.
+    - Current: `GB 사용함`
+    - Source: `%1$@ of %2$@ gigabytes used`
+    - Suggest: `기가바이트 사용함`
+    - The developer comment says this label is the same as the visible text but with 'gigabytes' written out instead of 'GB'. The translation is identical to the visible string.
 - `TermsOfUse.Link.PrivacyNotice.v142` — `ko/firefox-ios.xliff` — 'Privacy Notice' is translated '개인 정보 보호 정책' in the link but '개인정보 고지' in the description on the same sheet.
     - Current: `개인 정보 보호 정책`
     - Source: `Privacy Notice`
