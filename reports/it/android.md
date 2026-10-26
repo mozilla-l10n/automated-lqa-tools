@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `7ee8e61a4a7d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `7ee8e61a4a7d` |
-| **Previous run** | 2026-10-18 @ `dd8ca757b7dd` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
+| **Previous run** | 2026-10-19 @ `7ee8e61a4a7d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,802 |
+| **Strings reviewed this run** | 2 of 2,803 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,7 +45,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 45 |
-| Strings | 2,802 |
+| Strings | 2,803 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |

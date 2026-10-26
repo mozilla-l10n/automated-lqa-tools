@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ea17dbc84971` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ea17dbc84971` |
-| **Previous run** | 2026-10-19 @ `7ee8e61a4a7d` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 2,798 |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
+| **Previous run** | 2026-10-19 @ `ea17dbc84971` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 7 of 2,801 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for vi: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
@@ -19,9 +18,13 @@ Also for vi: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `compact_search_bar_widget_description` — `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — The widget name "Compact search bar" is translated as the command "Collapse the search bar".
+    - Current: `Thu gọn thanh tìm kiếm`
+    - Source: `Compact search bar`
+    - Suggest: `Thanh tìm kiếm thu gọn`
+    - The source is a noun phrase that names a widget in the widget picker. "Thu gọn thanh tìm kiếm" is verb first, so it reads as an instruction to collapse the search bar. Putting the modifier after the noun ("Thanh tìm kiếm thu gọn") makes it a name again.
 
 ### ✅ Fixed since the last run (0)
 
@@ -46,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 45 |
-| Strings | 2,798 |
-| Missing strings | 4 |
+| Strings | 2,801 |
+| Missing strings | 2 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -64,9 +67,9 @@ _Nothing retired._
 
 ### Completeness
 
-**4 strings** are not translated yet, concentrated in:
+**2 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — 4
+- `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — 2
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -88,7 +91,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (59)
+## 3. Open findings (60)
 
 > **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -113,7 +116,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 30 |
+| 2 | Wrong content (says something other than the English) | 31 |
 | 3 | Degraded language (grammar, spelling, terminology) | 23 |
 | 4 | Cosmetic (typography, spacing) | 6 |
 
@@ -208,6 +211,11 @@ _Nothing in this category._
     - Source: `Open tabs`
     - Suggest: `Mở các thẻ`
     - The developer comment says this is a button that opens the tabs of the selected collection; 'Các thẻ đang mở' means 'open (currently opened) tabs', not the action.
+- `compact_search_bar_widget_description` — `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — The widget name "Compact search bar" is translated as the command "Collapse the search bar".
+    - Current: `Thu gọn thanh tìm kiếm`
+    - Source: `Compact search bar`
+    - Suggest: `Thanh tìm kiếm thu gọn`
+    - The source is a noun phrase that names a widget in the widget picker. "Thu gọn thanh tìm kiếm" is verb first, so it reads as an instruction to collapse the search bar. Putting the modifier after the noun ("Thanh tìm kiếm thu gọn") makes it a name again.
 - `crash_reports_data_category` — `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — Header 'Crash Reports' is translated as 'Crash reporter' (the tool) instead of the reports.
     - Current: `Trình báo cáo lỗi`
     - Source: `Crash Reports`

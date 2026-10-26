@@ -464,7 +464,7 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-10-16",
   "impact": 4,
-  "last_seen": "2026-10-19",
+  "last_seen": "2026-10-26",
   "locale": "vi",
   "origin": {},
   "rationale": "The locale's quote convention is `curly-double` (13 occurrences).",
@@ -643,6 +643,30 @@
   "string_id": "collection_open_tabs",
   "suggest": "Mở các thẻ",
   "summary": "Button label meaning 'open the tabs' is translated as a noun phrase 'the currently open tabs'.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Thu gọn thanh tìm kiếm",
+  "dismissed_because": "",
+  "fid": "fbd40d0b3461",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-10-26",
+  "impact": 2,
+  "last_seen": "2026-10-26",
+  "locale": "vi",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The source is a noun phrase that names a widget in the widget picker. \"Thu gọn thanh tìm kiếm\" is verb first, so it reads as an instruction to collapse the search bar. Putting the modifier after the noun (\"Thanh tìm kiếm thu gọn\") makes it a name again.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "543e8afd",
+  "string_id": "compact_search_bar_widget_description",
+  "suggest": "Thanh tìm kiếm thu gọn",
+  "summary": "The widget name \"Compact search bar\" is translated as the command \"Collapse the search bar\".",
   "suppressed_by": ""
  },
  {
@@ -1038,7 +1062,7 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-10-16",
   "impact": 4,
-  "last_seen": "2026-10-19",
+  "last_seen": "2026-10-26",
   "locale": "vi",
   "origin": {},
   "rationale": "The locale's quote convention is `curly-double` (13 occurrences).",

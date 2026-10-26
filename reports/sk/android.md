@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `ea17dbc84971` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `ea17dbc84971` |
-| **Previous run** | 2026-10-19 @ `7ee8e61a4a7d` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 2,802 |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
+| **Previous run** | 2026-10-19 @ `ea17dbc84971` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 51 of 2,803 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for sk: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
@@ -19,13 +18,21 @@ Also for sk: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `preference_privacy_category_cookies` — `mozilla-mobile/focus-android/app/src/main/res/values-sk/strings.xml` — This string writes "súbory cookies", but the cookie options right next to it write "súbory cookie".
+    - Current: `súbory cookies`
+    - Source: `Block cookies`
+    - Suggest: `súbory cookie`
+    - The three cookie options under this heading all use "súbory cookie", which is the usual Slovak form. Only the category title uses the plural "cookies", so the same term appears two ways on one screen.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `search_settings_menu_item` — `mozilla-mobile/fenix/app/src/main/res/values-sk/strings.xml` — "Search settings" (settings for search) is translated as the action "Search in settings".
+    - Current: `Hľadať v nastaveniach`
+    - Source: `Search settings`
+    - Suggest: `Nastavenia vyhľadávania`
+    - The menu item opens the search settings; the target instead means 'search within settings'.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -46,7 +53,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 45 |
-| Strings | 2,802 |
+| Strings | 2,803 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -92,8 +99,8 @@ _Nothing reported._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 30 |
-| 3 | Degraded language (grammar, spelling, terminology) | 24 |
+| 2 | Wrong content (says something other than the English) | 29 |
+| 3 | Degraded language (grammar, spelling, terminology) | 25 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
@@ -219,11 +226,6 @@ _Nothing reported._
     - Source: `Search or enter address`
     - Suggest: `Hľadať alebo zadať adresu`
     - Source is 'Search or enter address'. The target only says 'Search', which is the same as search_hint_short and leaves out the address-entry hint.
-- `search_settings_menu_item` — `mozilla-mobile/fenix/app/src/main/res/values-sk/strings.xml` — "Search settings" (settings for search) is translated as the action "Search in settings".
-    - Current: `Hľadať v nastaveniach`
-    - Source: `Search settings`
-    - Suggest: `Nastavenia vyhľadávania`
-    - The menu item opens the search settings; the target instead means 'search within settings'.
 - `settings_search_title` — `mozilla-mobile/fenix/app/src/main/res/values-sk/strings.xml` — "Search" is translated as a noun, so the title reads "Settings for search" instead of "Search through settings".
     - Current: `Nastavenia vyhľadávania`
     - Source: `Search settings`
@@ -375,6 +377,11 @@ _Nothing reported._
     - Source: `{$quantity ->} [one] %1$d tracker blocked this week [other] %1$d trackers blocked this week`
     - Suggest: `bol zablokovaný %1$d sledovací prvok`
     - The source means a tracker. 'Zariadenie' means a hardware device. Within this one message, the 'few' form uses 'sledovacie prvky', and the rest of the tracker panel uses 'sledovací prvok'.
+- `preference_privacy_category_cookies` — `mozilla-mobile/focus-android/app/src/main/res/values-sk/strings.xml` — This string writes "súbory cookies", but the cookie options right next to it write "súbory cookie".
+    - Current: `súbory cookies`
+    - Source: `Block cookies`
+    - Suggest: `súbory cookie`
+    - The three cookie options under this heading all use "súbory cookie", which is the usual Slovak form. Only the category title uses the plural "cookies", so the same term appears two ways on one screen.
 
 ### E. Typography, punctuation & spacing
 
@@ -414,6 +421,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (1)
 
-_Nothing fixed yet._
+- `search_settings_menu_item` — `mozilla-mobile/fenix/app/src/main/res/values-sk/strings.xml` — fixed 2026-10-26
