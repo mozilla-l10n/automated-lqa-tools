@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cb086148c41a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `3bdd70692916` |
-| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 16,126 |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
+| **Previous run** | 2026-10-19 @ `cb086148c41a` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 50 of 16,153 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for zh-CN: [android](android.md) · [firefox_ios](firefox_ios.md)
 
@@ -45,9 +44,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 326 |
-| Strings | 16,126 |
-| Missing strings | 420 |
+| Files | 327 |
+| Strings | 16,153 |
+| Missing strings | 442 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 3 |
 | Files with no en-US counterpart | 0 |
@@ -64,20 +63,20 @@ _Nothing retired._
 
 ### Completeness
 
-**420 strings** are not translated yet, concentrated in:
+**442 strings** are not translated yet, concentrated in:
 
 - `browser/browser/ipProtection.ftl` — 57
-- `browser/browser/newtab/newtab.ftl` — 30
+- `browser/browser/newtab/newtab.ftl` — 33
+- `browser/browser/preferences/preferences.ftl` — 26
 - `browser/browser/newtab/onboarding.ftl` — 21
 - `toolkit/services/aboutSyncLog.ftl` — 20
 - `toolkit/toolkit/about/aboutPDF.ftl` — 19
 - `devtools/client/toolbox-options.ftl` — 18
-- `browser/browser/browser.ftl` — 16
 - `toolkit/toolkit/about/aboutNetworking.ftl` — 16
+- `dom/chrome/dom/dom.properties` — 16
 - `browser/browser/autoTabGrouping.ftl` — 15
+- `browser/browser/browser.ftl` — 15
 - `browser/browser/miniWindow.ftl` — 15
-- `dom/chrome/dom/dom.properties` — 15
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 15
 
 **Files absent from the locale:**
 
@@ -93,12 +92,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 880, `straight-double` 45, `curly-single` 37 | **curly-double** |
+| quotes | `curly-double` 881, `straight-double` 45, `curly-single` 37 | **curly-double** |
 | apostrophe | `typographic` 42, `straight` 20 | _mixed_ |
-| ellipsis | `char` 377, `ascii` 12 | **char** |
+| ellipsis | `char` 376, `ascii` 12 | **char** |
 | dash | `em` 49, `en` 2 | **em** |
-| fullwidth | `punctuation` 8346 | **punctuation** |
-| register | `informal` 14, `formal` 1506 | **formal** |
+| fullwidth | `punctuation` 8352 | **punctuation** |
+| register | `informal` 14, `formal` 1507 | **formal** |
 
 ---
 

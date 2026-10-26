@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
+| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 15,270 |
+| **Strings reviewed this run** | 53 of 15,315 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for uk: [android](android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `decoder-doctor-no-codecs-linux-message` — `browser/browser/browser.ftl` — The compound word "відео-кодеки" is spelled with a hyphen, but Ukrainian spelling writes it as one word: "відеокодеки".
+    - Current: `відео-кодеки`
+    - Source: `To play video, you may need to install the required video codecs.`
+    - Suggest: `відеокодеки`
+    - Under Ukrainian spelling rules, compounds that start with "відео-" are written as one word ("відеокодек", "відеофайл"), so the hyphen is a spelling error.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +48,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 326 |
-| Strings | 15,270 |
-| Missing strings | 1,250 |
+| Files | 327 |
+| Strings | 15,315 |
+| Missing strings | 1,280 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 2 |
+| Files absent from the locale | 3 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,12 +67,12 @@ _Nothing retired._
 
 ### Completeness
 
-**1,250 strings** are not translated yet, concentrated in:
+**1,280 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 377
-- `browser/browser/ipProtection.ftl` — 62
+- `browser/browser/newtab/newtab.ftl` — 364
+- `browser/browser/ipProtection.ftl` — 69
 - `browser/browser/newtab/onboarding.ftl` — 56
-- `browser/browser/preferences/preferences.ftl` — 40
+- `browser/browser/preferences/preferences.ftl` — 54
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 36
 - `browser/browser/newtab/asrouter.ftl` — 34
 - `toolkit/toolkit/global/theme-picker.ftl` — 30
@@ -80,6 +84,7 @@ _Nothing retired._
 
 **Files absent from the locale:**
 
+- `browser/browser/miniWindow.ftl`
 - `toolkit/toolkit/global/theme-picker.ftl`
 - `toolkit/toolkit/pdfviewer/embedFallback.ftl`
 
@@ -106,14 +111,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (200)
+## 3. Open findings (201)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 112 |
 | 2 | Wrong content (says something other than the English) | 82 |
-| 3 | Degraded language (grammar, spelling, terminology) | 4 |
+| 3 | Degraded language (grammar, spelling, terminology) | 5 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
@@ -483,6 +488,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `{$count ->} [other] <span>Errors:</span> <span data-l10n-name="count">{ $count }</span> <span data-l10n-name="meta">(not imported)</span>`
     - Suggest: `<span data-l10n-name="meta">(не імпортовано)</span>`
     - about-logins-import-dialog-items-no-change2 and the import-report strings all render the same phrase as "(не імпортовано)"; this one row shows English in an otherwise Ukrainian dialog.
+- `decoder-doctor-no-codecs-linux-message` — `browser/browser/browser.ftl` — The compound word "відео-кодеки" is spelled with a hyphen, but Ukrainian spelling writes it as one word: "відеокодеки".
+    - Current: `відео-кодеки`
+    - Source: `To play video, you may need to install the required video codecs.`
+    - Suggest: `відеокодеки`
+    - Under Ukrainian spelling rules, compounds that start with "відео-" are written as one word ("відеокодек", "відеофайл"), so the hyphen is a spelling error.
 - `genai-menu-open-generic` — `browser/browser/genai.ftl` — "Open AI Chatbot" was read as the brand "OpenAI", producing "OpenAI chatbot".
     - Current: `Чат-бот Open AI`
     - Source: `label: Open AI Chatbot`

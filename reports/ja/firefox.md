@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cb086148c41a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `3bdd70692916` |
-| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 16,520 |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
+| **Previous run** | 2026-10-19 @ `cb086148c41a` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 51 of 16,568 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for ja: [android](android.md) · [firefox_ios](firefox_ios.md)
 
@@ -19,13 +18,21 @@ Also for ja: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `narrate-rate-fast` — `toolkit/toolkit/global/narrate.ftl` — The wrong kanji is used for "speed up": 早く (early) is written where 速く (fast) is needed.
+    - Current: `ナレーションを早くする`
+    - Source: `title: Speed up narration`
+    - Suggest: `ナレーションを速くする`
+    - The en-US "Speed up narration" is about speaking rate, which Japanese writes as 速い/速く. 早い/早く refers to time (early or soon), so 早くする is a kanji misuse here.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `policy-BlockAboutSupport2` — `browser/browser/policies/policies-descriptions.ftl` — There is an extra ASCII period after the closing 。.
+    - Current: `ブロックします。.`
+    - Source: `Block access to Troubleshooting Information (about:support).`
+    - Suggest: `ブロックします。`
+    - Under the locale convention a sentence ends with 。 alone. The trailing '.' doubles the sentence-ending punctuation, and the sibling policy strings don't have it.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,10 +52,10 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 328 |
-| Strings | 16,520 |
-| Missing strings | 26 |
-| Obsolete strings | 0 |
+| Files | 329 |
+| Strings | 16,568 |
+| Missing strings | 50 |
+| Obsolete strings | 23 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -64,13 +71,20 @@ _Nothing retired._
 
 ### Completeness
 
-**26 strings** are not translated yet, concentrated in:
+**50 strings** are not translated yet, concentrated in:
 
 - `browser/browser/miniWindow.ftl` — 15
+- `browser/browser/preferences/preferences.ftl` — 14
 - `browser/browser/ipProtection.ftl` — 7
-- `browser/browser/browser.ftl` — 2
+- `browser/browser/newtab/newtab.ftl` — 4
+- `browser/chrome/browser/browser.properties` — 2
+- `dom/chrome/security/security.properties` — 2
+- `toolkit/toolkit/global/narrate.ftl` — 1
+- `browser/browser/browser.ftl` — 1
 - `browser/browser/browserContext.ftl` — 1
 - `browser/browser/tabbrowser.ftl` — 1
+- `browser/browser/policies/policies-descriptions.ftl` — 1
+- `dom/chrome/dom/dom.properties` — 1
 
 **Files absent from the locale:**
 
@@ -94,7 +108,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | ellipsis | `ascii` 397 | **ascii** |
 | dash | `em` 55, `en` 1 | **em** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 5 | _mixed_ |
-| fullwidth | `punctuation` 5038 | **punctuation** |
+| fullwidth | `punctuation` 5049 | **punctuation** |
 
 ---
 
@@ -120,8 +134,8 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 8 |
 | 2 | Wrong content (says something other than the English) | 62 |
-| 3 | Degraded language (grammar, spelling, terminology) | 38 |
-| 4 | Cosmetic (typography, spacing) | 31 |
+| 3 | Degraded language (grammar, spelling, terminology) | 39 |
+| 4 | Cosmetic (typography, spacing) | 30 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -534,6 +548,11 @@ _Also listed under their own category below._
     - Source: `delete stored payment method information`
     - Suggest: `保存した支払い方法情報を削除`
     - en-US is the fragment "delete stored payment method information"; the Japanese contains the misspelling 支払い時方法 (extra 時) and adds "しようとしています" which the OS-supplied prefix already provides.
+- `narrate-rate-fast` — `toolkit/toolkit/global/narrate.ftl` — The wrong kanji is used for "speed up": 早く (early) is written where 速く (fast) is needed.
+    - Current: `ナレーションを早くする`
+    - Source: `title: Speed up narration`
+    - Suggest: `ナレーションを速くする`
+    - The en-US "Speed up narration" is about speaking rate, which Japanese writes as 速い/速く. 早い/早く refers to time (early or soon), so 早くする is a kanji misuse here.
 
 ### D. Terminology, register & consistency
 
@@ -617,11 +636,6 @@ _Also listed under their own category below._
     - Source: `Open the main menu <img data-l10n-name="chrome-icon-3dots"/> and go to Passwords and Autofill > Google Password Manager.`
 - `mr2022-onboarding-gratitude-subtitle` — `browser/browser/newtab/onboarding.ftl` — I10 — Duplicated text. spotlight-better-internet-body (browser/browser/newtab/asrouter.ftl) — すべての人にとって appears twice in one sentence (cf. mr2022-onboarding-gratitude-subtitle, correct).
     - Source: `Thank you for using { -brand-short-name }, backed by the Mozilla Foundation. With your support, we’re working to make the internet more open, accessible, and better for everyone.`
-- `policy-BlockAboutSupport2` — `browser/browser/policies/policies-descriptions.ftl` — There is an extra ASCII period after the closing 。.
-    - Current: `ブロックします。.`
-    - Source: `Block access to Troubleshooting Information (about:support).`
-    - Suggest: `ブロックします。`
-    - Under the locale convention a sentence ends with 。 alone. The trailing '.' doubles the sentence-ending punctuation, and the sibling policy strings don't have it.
 - `autofill-card-search-term-credit-cards` — `browser/browser/preferences/formAutofill.ftl` — Not a defect: autofill-card-search-term-credit-cards (browser/browser/preferences/formAutofill.ftl) also uses ASCII commas, but its dev comment says it is a never-displayed comma-separated keyword list. Verified.
     - Source: `credit cards, credit, cards, debit cards, debit, wallet, checkout`
 - `extension-controlled-enable` — `browser/browser/preferences/preferences.ftl` — translate-attribution, extension-controlled-enable, settings-translations-subpage-never-translate-sites-description, sync-mobile-promo — browser/browser/preferences/preferences.ftl. Verified (translate-attribution).
@@ -665,8 +679,9 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (273)
+### Fixed to date (274)
 
+- `policy-BlockAboutSupport2` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-10-26
 - `newtab-stocks-search-button` — `browser/browser/newtab/newtab.ftl` — fixed 2026-10-05
 - `newtab-stocks-watchlist-empty-search` — `browser/browser/newtab/newtab.ftl` — fixed 2026-10-05
 - `tab-group-editor-action-ungroup` — `browser/browser/tabbrowser.ftl` — fixed 2026-09-14
@@ -706,4 +721,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `search-keyword-warning-engine` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
 - `security-enable-safe-browsing` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
 - `sync-currently-syncing-addresses` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
-- `sync-engine-addresses` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24

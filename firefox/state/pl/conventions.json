@@ -1,8 +1,8 @@
 {
  "_meta": {
   "locale": "pl",
-  "prose_chunks": 17302,
-  "strings": 16520
+  "prose_chunks": 17369,
+  "strings": 16570
  },
  "apostrophe": {
   "straight": 1,
@@ -14,7 +14,7 @@
  },
  "ellipsis": {
   "ascii": 0,
-  "char": 406
+  "char": 405
  },
  "fullwidth": {
   "punctuation": 0
@@ -27,12 +27,12 @@
   "before-punctuation": 39,
   "narrow": 3,
   "space-before-punctuation": 14,
-  "total": 4895
+  "total": 4896
  },
  "quotes": {
   "curly-double": 2,
   "german-double": 7,
-  "polish-double": 1436,
+  "polish-double": 1435,
   "straight-double": 36
  },
  "register": {

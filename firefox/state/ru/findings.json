@@ -1436,7 +1436,7 @@
   "file": "browser/browser/backupSettings.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-10-19",
+  "last_seen": "2026-10-26",
   "locale": "ru",
   "origin": {},
   "rationale": "In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -1458,7 +1458,7 @@
   "file": "browser/browser/backupSettings.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-10-19",
+  "last_seen": "2026-10-26",
   "locale": "ru",
   "origin": {},
   "rationale": "In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -1610,14 +1610,14 @@
   "file": "browser/browser/backupSettings.ftl",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-10-19",
+  "last_seen": "2026-10-26",
   "locale": "ru",
   "origin": {
    "report": "legacy",
    "section": "I. Typography",
    "severity": "S5"
   },
-  "rationale": "The tree uses … 402 times against 5 ASCII runs.",
+  "rationale": "The tree uses … 401 times against 5 ASCII runs.",
   "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
@@ -1649,6 +1649,30 @@
   "string_id": "content-analysis-panel-text-styled2",
   "suggest": "<b>{ $agentName }</b>, чтобы контролировать",
   "summary": "Missing comma before the subordinate clause introduced by \"чтобы\".",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "Мedia Feature Pack",
+  "dismissed_because": "",
+  "fid": "81b88f2c227c",
+  "file": "browser/browser/browser.ftl",
+  "first_seen": "2026-10-26",
+  "impact": 3,
+  "last_seen": "2026-10-26",
+  "locale": "ru",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "Microsoft's product name is Latin-script. A Cyrillic homoglyph misspells the brand and breaks searching for it.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "179c251a",
+  "string_id": "decoder-doctor-no-hw-acceleration-message",
+  "suggest": "Media Feature Pack",
+  "summary": "The product name \"Media Feature Pack\" appears to begin with a Cyrillic \"М\" instead of the Latin \"M\".",
   "suppressed_by": ""
  },
  {
@@ -3850,6 +3874,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "C",
+  "check": "llm",
+  "current": "Установите правила, включающие VPN, когда вы хотите",
+  "dismissed_because": "",
+  "fid": "883f2878629c",
+  "file": "browser/browser/ipProtection.ftl",
+  "first_seen": "2026-10-26",
+  "impact": 3,
+  "last_seen": "2026-10-26",
+  "locale": "ru",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "\"правила, включающие VPN … и выключать\" is ungrammatical. Both verbs need to be in the same form, e.g. \"чтобы включать … и выключать\".",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "a95bd414",
+  "string_id": "ipprotection-feature-introduction-description-private-browsing-3",
+  "suggest": "Установите правила, чтобы включать VPN, когда вы хотите",
+  "summary": "The two halves of a coordinated construction don't match: the sentence begins with a participle (\"правила, включающие VPN\") and continues with an infinitive (\"и выключать\").",
+  "suppressed_by": ""
+ },
+ {
   "category": "B",
   "check": "legacy",
   "current": "",
@@ -3893,8 +3941,8 @@
   },
   "rationale": "",
   "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
+  "resolved_on": "2026-10-26",
+  "status": "obsolete",
   "string_hash": "6ef89dad",
   "string_id": "ipprotection-feature-introduction-link-text-privacy-2",
   "suggest": "Лимиты встроенного VPN…",
@@ -4029,6 +4077,30 @@
   "string_id": "ipprotection-message-continuous-onboarding-site-settings",
   "suggest": "Лимиты встроенного VPN…",
   "summary": "several: ipprotection-summer-promo-offramp-generic-title (\"built-in\" modifies VPN, not the limits → Лимиты встроенного VPN…); ipprotection-feature-introduction-link-text-privacy-2 and ipprotection-location-selection-callout-description-1 hardcode \"5 местоположений\" where en-US says \"multiple\"/\"several\"; ipprotection-feature-introduction-link-text-captive-portal-1 drops and inverts the \"hide where…",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "местоположение в зависимости от местоположения",
+  "dismissed_because": "",
+  "fid": "c44b3f9d6229",
+  "file": "browser/browser/ipProtection.ftl",
+  "first_seen": "2026-10-26",
+  "impact": 2,
+  "last_seen": "2026-10-26",
+  "locale": "ru",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The en-US says the VPN can be turned on for location-based browsing. The Russian reads \"location depending on location\", which means nothing and does not convey the source.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "94534163",
+  "string_id": "ipprotection-site-inclusions-callout-description-lapsed-users",
+  "suggest": "веб-сёрфинг с учётом местоположения",
+  "summary": "\"location-based browsing\" is rendered as the nonsensical tautology \"местоположение в зависимости от местоположения\".",
   "suppressed_by": ""
  },
  {
@@ -6665,14 +6737,14 @@
   "file": "browser/browser/policies/policies-descriptions.ftl",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-10-19",
+  "last_seen": "2026-10-26",
   "locale": "ru",
   "origin": {
    "report": "legacy",
    "section": "I. Typography",
    "severity": "S5"
   },
-  "rationale": "The tree uses … 402 times against 5 ASCII runs.",
+  "rationale": "The tree uses … 401 times against 5 ASCII runs.",
   "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
@@ -8761,14 +8833,14 @@
   "file": "browser/browser/preferences/preferences.ftl",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-10-19",
+  "last_seen": "2026-10-26",
   "locale": "ru",
   "origin": {
    "report": "legacy",
    "section": "I. Typography",
    "severity": "S5"
   },
-  "rationale": "The tree uses … 402 times against 5 ASCII runs.",
+  "rationale": "The tree uses … 401 times against 5 ASCII runs.",
   "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
@@ -11925,7 +11997,7 @@
   "file": "devtools/client/debugger.properties",
   "first_seen": "2026-08-07",
   "impact": 3,
-  "last_seen": "2026-10-19",
+  "last_seen": "2026-10-26",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -15626,6 +15698,30 @@
   "string_id": "SpeechRecognitionIsolatedTrackWarning",
   "suggest": "SpeechRecognition.start()",
   "summary": "\"SpeechRecognition\" was replaced with the non-existent API name \"SpeechRecovery\", despite the developer comment saying not to translate it.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Настройки страницы будут блокировать %1$S.",
+  "dismissed_because": "",
+  "fid": "e7655239b22e",
+  "file": "dom/chrome/security/security.properties",
+  "first_seen": "2026-10-26",
+  "impact": 2,
+  "last_seen": "2026-10-26",
+  "locale": "ru",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "Report-Only policies never block; they only report what would have been blocked. The en-US uses \"would block\", so the Russian needs the conditional («заблокировали бы»), not the future tense.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "a0d8ec99",
+  "string_id": "ConnectionAllowlistReportOnlyBlocked",
+  "suggest": "Настройки страницы заблокировали бы %1$S.",
+  "summary": "The conditional \"would block\" in a Report-Only message is translated as the future \"will block\", which claims blocking will happen.",
   "suppressed_by": ""
  },
  {
@@ -19787,6 +19883,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "D",
+  "check": "llm",
+  "current": "Снять выделение",
+  "dismissed_because": "",
+  "fid": "a0c71a3cd02a",
+  "file": "toolkit/toolkit/global/textActions.ftl",
+  "first_seen": "2026-10-26",
+  "impact": 3,
+  "last_seen": "2026-10-26",
+  "locale": "ru",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The developer comment says this removes visibly highlighted text-fragment sections. The sibling string renders 'Highlight' as 'Подсветить', while 'Снять выделение' is the standard label for clearing a selection, which misleads the user.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "bead97e3",
+  "string_id": "text-action-remove-highlight-2",
+  "suggest": "Убрать подсветку",
+  "summary": "\"Снять выделение\" reads as \"Deselect\", not \"Remove Highlight\".",
+  "suppressed_by": ""
+ },
+ {
   "category": "B",
   "check": "legacy",
   "current": "По умолчанию",
@@ -20989,14 +21109,14 @@
   "file": "toolkit/toolkit/pdfviewer/viewer.ftl",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-10-19",
+  "last_seen": "2026-10-26",
   "locale": "ru",
   "origin": {
    "report": "legacy",
    "section": "I. Typography",
    "severity": "S5"
   },
-  "rationale": "The tree uses … 402 times against 5 ASCII runs.",
+  "rationale": "The tree uses … 401 times against 5 ASCII runs.",
   "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",

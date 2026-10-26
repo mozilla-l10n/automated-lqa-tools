@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cb086148c41a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `3bdd70692916` |
-| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 16,520 |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
+| **Previous run** | 2026-10-19 @ `cb086148c41a` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 100 of 16,595 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for ru: [android](android.md) · [firefox_ios](firefox_ios.md)
 
@@ -19,9 +18,33 @@ Also for ru: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (5)
 
-_No new findings._
+- `decoder-doctor-no-hw-acceleration-message` — `browser/browser/browser.ftl` — The product name "Media Feature Pack" appears to begin with a Cyrillic "М" instead of the Latin "M".
+    - Current: `Мedia Feature Pack`
+    - Source: `To improve video quality, you may need to install Microsoft’s Media Feature Pack.`
+    - Suggest: `Media Feature Pack`
+    - Microsoft's product name is Latin-script. A Cyrillic homoglyph misspells the brand and breaks searching for it.
+- `text-action-remove-highlight-2` — `toolkit/toolkit/global/textActions.ftl` — "Снять выделение" reads as "Deselect", not "Remove Highlight".
+    - Current: `Снять выделение`
+    - Source: `accesskey: h label: Remove Highlight`
+    - Suggest: `Убрать подсветку`
+    - The developer comment says this removes visibly highlighted text-fragment sections. The sibling string renders 'Highlight' as 'Подсветить', while 'Снять выделение' is the standard label for clearing a selection, which misleads the user.
+- `ipprotection-site-inclusions-callout-description-lapsed-users` — `browser/browser/ipProtection.ftl` — "location-based browsing" is rendered as the nonsensical tautology "местоположение в зависимости от местоположения".
+    - Current: `местоположение в зависимости от местоположения`
+    - Source: `Set rules to turn on VPN when you want extra privacy or location-based browsing, and off when you don’t.`
+    - Suggest: `веб-сёрфинг с учётом местоположения`
+    - The en-US says the VPN can be turned on for location-based browsing. The Russian reads "location depending on location", which means nothing and does not convey the source.
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The two halves of a coordinated construction don't match: the sentence begins with a participle ("правила, включающие VPN") and continues with an infinitive ("и выключать").
+    - Current: `Установите правила, включающие VPN, когда вы хотите`
+    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
+    - Suggest: `Установите правила, чтобы включать VPN, когда вы хотите`
+    - "правила, включающие VPN … и выключать" is ungrammatical. Both verbs need to be in the same form, e.g. "чтобы включать … и выключать".
+- `ConnectionAllowlistReportOnlyBlocked` — `dom/chrome/security/security.properties` — The conditional "would block" in a Report-Only message is translated as the future "will block", which claims blocking will happen.
+    - Current: `Настройки страницы будут блокировать %1$S.`
+    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block %1$S.`
+    - Suggest: `Настройки страницы заблокировали бы %1$S.`
+    - Report-Only policies never block; they only report what would have been blocked. The en-US uses "would block", so the Russian needs the conditional («заблокировали бы»), not the future tense.
 
 ### ✅ Fixed since the last run (0)
 
@@ -35,9 +58,10 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `ipprotection-feature-introduction-link-text-privacy-2` — `browser/browser/ipProtection.ftl` — several: ipprotection-summer-promo-offramp-generic-title ("built-in" modifies VPN, not the limits → Лимиты встроенного VPN…); ipprotection-feature-introduction-link-text-privacy-2 and ipprotection-location-selection-callout-description-1 hardcode "5 местоположений" where en-US says "multiple"/"several"; ipprotection-feature-introduction-link-text-captive-portal-1 drops and inverts the "hide where…
+    - Suggest: `Лимиты встроенного VPN…`
 
 ---
 
@@ -45,11 +69,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 328 |
-| Strings | 16,520 |
-| Missing strings | 26 |
+| Files | 330 |
+| Strings | 16,595 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -58,25 +82,13 @@ _Nothing retired._
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 3 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 145 |
+| Access keys not in their label | 147 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 4 |
 
 ### Completeness
 
-**26 strings** are not translated yet, concentrated in:
-
-- `browser/browser/miniWindow.ftl` — 15
-- `browser/browser/ipProtection.ftl` — 7
-- `browser/browser/browser.ftl` — 2
-- `browser/browser/browserContext.ftl` — 1
-- `browser/browser/tabbrowser.ftl` — 1
-
-**Files absent from the locale:**
-
-- `browser/browser/miniWindow.ftl`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -86,21 +98,21 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `guillemet` 1071, `straight-double` 27, `curly-single` 5, `curly-double` 4 | **guillemet** |
 | apostrophe | `typographic` 9, `straight` 15 | _mixed_ |
-| ellipsis | `char` 402, `ascii` 5 | **char** |
-| dash | `em` 128, `en` 5 | **em** |
+| ellipsis | `char` 401, `ascii` 5 | **char** |
+| dash | `em` 129, `en` 5 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 7 | _mixed_ |
-| register | `informal` 952, `formal` 3191 | **formal** |
+| register | `informal` 957, `formal` 3205 | **formal** |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **accesskey — 145 strings** — 145 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
-    - Affected: `addon-install-or-update-from-file`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-showrecentsearches-option-2`, `appmenu-theme-installed`, `appmenu-update-available2`, `appmenu-update-manual2`, `autofill-addresses-checkbox-message`, `autofill-addresses-manage-addresses-button`, `autofill-payment-methods-manage-payments-button`, `autofill-reauth-payment-methods-checkbox-2`, `bookmark-panel-save-button2`, `browser-containers-settings-2` …and 133 more
+- **accesskey — 147 strings** — 147 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
+    - Affected: `addon-install-or-update-from-file`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-showrecentsearches-option-2`, `appmenu-theme-installed`, `appmenu-update-available2`, `appmenu-update-manual2`, `autofill-addresses-checkbox-message`, `autofill-addresses-manage-addresses-button`, `autofill-payment-methods-manage-payments-button`, `autofill-reauth-payment-methods-checkbox-2`, `bookmark-panel-save-button2`, `browser-containers-settings-2` …and 135 more
 
 ---
 
-## 3. Open findings (588)
+## 3. Open findings (592)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -115,8 +127,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 44 |
-| 2 | Wrong content (says something other than the English) | 264 |
-| 3 | Degraded language (grammar, spelling, terminology) | 220 |
+| 2 | Wrong content (says something other than the English) | 265 |
+| 3 | Degraded language (grammar, spelling, terminology) | 223 |
 | 4 | Cosmetic (typography, spacing) | 60 |
 
 ### A. Functional, markup, variables & plurals
@@ -408,9 +420,6 @@ _Also listed under their own category below._
 - `ipprotection-feature-introduction-link-text-captive-portal-1` — `browser/browser/ipProtection.ftl` — several: ipprotection-summer-promo-offramp-generic-title ("built-in" modifies VPN, not the limits → Лимиты встроенного VPN…); ipprotection-feature-introduction-link-text-privacy-2 and ipprotection-location-selection-callout-description-1 hardcode "5 местоположений" where en-US says "multiple"/"several"; ipprotection-feature-introduction-link-text-captive-portal-1 drops and inverts the "hide where…
     - Source: `Get <a data-l10n-name="learn-more-vpn">extra privacy</a> by choosing from several locations to hide where you browse.`
     - Suggest: `Лимиты встроенного VPN…`
-- `ipprotection-feature-introduction-link-text-privacy-2` — `browser/browser/ipProtection.ftl` — several: ipprotection-summer-promo-offramp-generic-title ("built-in" modifies VPN, not the limits → Лимиты встроенного VPN…); ipprotection-feature-introduction-link-text-privacy-2 and ipprotection-location-selection-callout-description-1 hardcode "5 местоположений" where en-US says "multiple"/"several"; ipprotection-feature-introduction-link-text-captive-portal-1 drops and inverts the "hide where…
-    - Source: `<a data-l10n-name="learn-more-vpn">{ -brand-product-name }’s built-in VPN</a> helps protect your browsing. Choose from multiple locations to keep where you browse more private.`
-    - Suggest: `Лимиты встроенного VPN…`
 - `ipprotection-location-selection-callout-description-1` — `browser/browser/ipProtection.ftl` — several: ipprotection-summer-promo-offramp-generic-title ("built-in" modifies VPN, not the limits → Лимиты встроенного VPN…); ipprotection-feature-introduction-link-text-privacy-2 and ipprotection-location-selection-callout-description-1 hardcode "5 местоположений" where en-US says "multiple"/"several"; ipprotection-feature-introduction-link-text-captive-portal-1 drops and inverts the "hide where…
     - Source: `<a data-l10n-name="learn-more-vpn">{ -brand-product-name }’s built-in VPN</a> lets you choose from several browsing locations, or let us pick the fastest one for you.`
     - Suggest: `Лимиты встроенного VPN…`
@@ -420,6 +429,11 @@ _Also listed under their own category below._
 - `ipprotection-message-continuous-onboarding-site-settings` — `browser/browser/ipProtection.ftl` — several: ipprotection-summer-promo-offramp-generic-title ("built-in" modifies VPN, not the limits → Лимиты встроенного VPN…); ipprotection-feature-introduction-link-text-privacy-2 and ipprotection-location-selection-callout-description-1 hardcode "5 местоположений" where en-US says "multiple"/"several"; ipprotection-feature-introduction-link-text-captive-portal-1 drops and inverts the "hide where…
     - Source: `{ -brand-short-name } will remember which websites you’ve set to use VPN. Update these in <a data-l10n-name="setting-link">settings</a> anytime.`
     - Suggest: `Лимиты встроенного VPN…`
+- `ipprotection-site-inclusions-callout-description-lapsed-users` — `browser/browser/ipProtection.ftl` — "location-based browsing" is rendered as the nonsensical tautology "местоположение в зависимости от местоположения".
+    - Current: `местоположение в зависимости от местоположения`
+    - Source: `Set rules to turn on VPN when you want extra privacy or location-based browsing, and off when you don’t.`
+    - Suggest: `веб-сёрфинг с учётом местоположения`
+    - The en-US says the VPN can be turned on for location-based browsing. The Russian reads "location depending on location", which means nothing and does not convey the source.
 - `ipprotection-site-inclusions-callout-title-existing-users` — `browser/browser/ipProtection.ftl` — "Set built-in VPN rules" mistranslated as "Set built-in VPN rules" with the adjective attached to "rules".
     - Current: `Установите встроенные правила VPN`
     - Source: `Set built-in VPN rules, then browse on`
@@ -444,7 +458,7 @@ _Also listed under their own category below._
     - Current: `В этом ключ.`
     - Source: `{ -brand-product-name } isn’t preloaded like other Big Tech browsers. That’s the point.`
     - Suggest: `В этом и суть.`
-- _…and 208 more; see `state/` for the full list._
+- _…and 209 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -493,6 +507,11 @@ _Also listed under their own category below._
     - Developer comment says it heads the list of groups the user just created; the singular masculine participle does not agree with "группы".
 - `restore-from-backup-profiles-disabled-message` — `browser/browser/backupSettings.ftl` — smartwindow-nl-retry-message, restore-from-backup-profiles-disabled-message, smart-window-block-description-chats — see §3.H for the ё issues in these
     - Source: `This will replace all your current { -brand-short-name } data with your backup.`
+- `decoder-doctor-no-hw-acceleration-message` — `browser/browser/browser.ftl` — The product name "Media Feature Pack" appears to begin with a Cyrillic "М" instead of the Latin "M".
+    - Current: `Мedia Feature Pack`
+    - Source: `To improve video quality, you may need to install Microsoft’s Media Feature Pack.`
+    - Suggest: `Media Feature Pack`
+    - Microsoft's product name is Latin-script. A Cyrillic homoglyph misspells the brand and breaks searching for it.
 - `trustpanel-insecure-description` — `browser/browser/browser.ftl` — the pronoun does not agree with данные. Current: Его можно просмотреть → Suggest: Их можно просмотреть
     - Current: `Его можно просмотреть`
     - Source: `The data you’re sending to this site isn’t encrypted. It could be viewed, stolen, or altered.`
@@ -537,6 +556,11 @@ _Also listed under their own category below._
     - Source: `Help hide your location for <a data-l10n-name="learn-more-vpn">extra privacy</a> as you browse. Set the VPN on or off for certain sites.`
     - Suggest: `своё местоположение`
     - Russian spelling requires ё in "своё"; the locale otherwise uses ё consistently.
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The two halves of a coordinated construction don't match: the sentence begins with a participle ("правила, включающие VPN") and continues with an infinitive ("и выключать").
+    - Current: `Установите правила, включающие VPN, когда вы хотите`
+    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
+    - Suggest: `Установите правила, чтобы включать VPN, когда вы хотите`
+    - "правила, включающие VPN … и выключать" is ungrammatical. Both verbs need to be in the same form, e.g. "чтобы включать … и выключать".
 - `ipprotection-locations-subview-promo` — `browser/browser/ipProtection.ftl` — ipprotection-locations-subview-promo (.message) and ip-protection-vpn-upgrade-link-1 (.description) — ipProtection.ftl — the ungrammatical на до 5 устройствах → Suggest: не более чем на 5 устройствах
     - Current: `на до 5 устройствах`
     - Source: `heading: Take protection further with { -mozilla-vpn-brand-name } message: Choose from 300+ locations and protect all your apps on up to 5 devices.`
@@ -662,13 +686,7 @@ _Also listed under their own category below._
 - `info-known-breaches-resolved` — `browser/browser/protections.ftl` — Missing comma before a subordinate clause or participial phrase: permissions-site-notification-desc, -location-desc, -xr-desc, -camera-desc, -microphone-desc (permissions.ftl, 5 strings; the speaker and cookie siblings do it correctly); startup-cache-dialog-title2 (aboutSupport.ftl); about-logins-copy-password-os-auth-dialog-message-win and contextual-manager-passwords-copy-password-os-auth-dialo…
     - Source: `{$count ->} [one] Known data breach marked as resolved [other] Known data breaches marked as resolved`
     - Suggest: `-location-desc`
-- `privacy-metrics-cookies` — `browser/browser/protections.ftl` — privacy-metrics-cookies ([one], [few]) — protections.ftl — gender and number are wrong and inconsistent with bar-tooltip-cookie in the same file
-    - Source: `{$count ->} [one] { $count } tracking cookie [other] { $count } tracking cookies`
-    - Suggest: `[one]`
-- `protections-panel-no-trackers-found` — `browser/browser/protectionsPanel.ftl` — Missing comma before a subordinate clause or participial phrase: permissions-site-notification-desc, -location-desc, -xr-desc, -camera-desc, -microphone-desc (permissions.ftl, 5 strings; the speaker and cookie siblings do it correctly); startup-cache-dialog-title2 (aboutSupport.ftl); about-logins-copy-password-os-auth-dialog-message-win and contextual-manager-passwords-copy-password-os-auth-dialo…
-    - Source: `No trackers known to { -brand-short-name } were detected on this page.`
-    - Suggest: `-location-desc`
-- _…and 83 more; see `state/` for the full list._
+- _…and 85 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -855,7 +873,7 @@ _Also listed under their own category below._
     - Suggest: `...Dark.tooltip`
 - `rule.jumpDeclaration.title` — `devtools/shared/styleinspector.properties` — styleinspector.contextmenu.copyDeclaration and changes.contextmenu.copyDeclaration use декларацию where rule.jumpDeclaration.title uses объявление
     - Source: `Jump to declaration`
-- _…and 13 more; see `state/` for the full list._
+- _…and 14 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -874,7 +892,7 @@ _Also listed under their own category below._
     - Current: `Выполняется резервное копирование...`
     - Source: `Backup in progress…`
     - Suggest: `…`
-    - The tree uses … 402 times against 5 ASCII runs.
+    - The tree uses … 401 times against 5 ASCII runs.
 - `content-analysis-panel-text-styled2` — `browser/browser/browser.ftl` — Missing comma before the subordinate clause introduced by "чтобы".
     - Current: `<b>{ $agentName }</b> чтобы контролировать`
     - Source: `Your organization uses <b>{ $agentName }</b> to control how sensitive data may be shared. <a data-l10n-name="info">Learn more</a>`
@@ -920,7 +938,7 @@ _Also listed under their own category below._
     - Current: `Отключает команды отправки отзывов в меню Справка («Отправить отзыв...» и «Сообщить о поддельном сайте...»).`
     - Source: `Disable commands to send feedback from the Help menu (Submit Feedback and Report Deceptive Site).`
     - Suggest: `…`
-    - The tree uses … 402 times against 5 ASCII runs.
+    - The tree uses … 401 times against 5 ASCII runs.
 - `policy-GenerativeAI` — `browser/browser/policies/policies-descriptions.ftl` — Trailing period added or dropped vs en-US: dropped in policy-GenerativeAI, policy-LegacyProfiles, multi-profile-spotlight-body, set-default-menu-message-split-layout-subtitle ([macos]), security-privacy-issue-warning-ech2, blocked-mismatched-version, menu-help-share-ideas (.label, missing the source's ellipsis), permission-dialog-set-change-app-link; added in browsing-use-full-keyboard-navigation…
     - Source: `Configure generative AI features.`
 - `policy-LegacyProfiles` — `browser/browser/policies/policies-descriptions.ftl` — Trailing period added or dropped vs en-US: dropped in policy-GenerativeAI, policy-LegacyProfiles, multi-profile-spotlight-body, set-default-menu-message-split-layout-subtitle ([macos]), security-privacy-issue-warning-ech2, blocked-mismatched-version, menu-help-share-ideas (.label, missing the source's ellipsis), permission-dialog-set-change-app-link; added in browsing-use-full-keyboard-navigation…
@@ -953,7 +971,7 @@ _Also listed under their own category below._
     - Current: `Вы ничего не синхронизируете... пока. Запустите синхронизацию, чтобы получить все ваши данные на всех ваших устройствах.`
     - Source: `description: You aren’t syncing anything… yet. Start syncing to get all of your data on all your devices. label: Manage synced data`
     - Suggest: `…`
-    - The tree uses … 402 times against 5 ASCII runs.
+    - The tree uses … 401 times against 5 ASCII runs.
 - `protections-vpn-header-content-subscribed` — `browser/browser/protections.ftl` — Stray space before punctuation: protections-vpn-header-content-subscribed (Apple App Store .), extension-controlled-enable and settings-translations-subpage-never-translate-sites-description (preferences.ftl), fp-certerror-not-yet-valid-why-dangerous-body (certError.ftl), PEAttSelNoBar and PEAttSelUnexpected (css.properties), networkMenu.ws.summary.framesCount2 and charts.totalSecondsNonBlocking…
     - Source: `{$count ->} [other] Using the { -mozilla-vpn-brand-name } encrypts all your traffic and hides your location — on up to { $count } devices. Get the most from your subscription — add it from the <a data-l10n-name="playsto…`
     - Suggest: `Apple App Store .`
@@ -1024,7 +1042,7 @@ _Also listed under their own category below._
     - Current: `Начните ввод...`
     - Source: `aria-label: Text Editor default-content: Start typing…`
     - Suggest: `…`
-    - The tree uses … 402 times against 5 ASCII runs.
+    - The tree uses … 401 times against 5 ASCII runs.
 - `pdfjs-print-progress-percent` — `toolkit/toolkit/pdfviewer/viewer.ftl` — Missing space between number and unit: timer.end (mobile/android/chrome/browser.properties), console-timer-end (geckoViewConsole.ftl), throttling.profile.label (network-throttling.properties — spaced in …description, unspaced here), newtab-wallpaper-error-max-file-size ({ $filesize }МБ), printprogresspercent (browser/pdfviewer/viewer.properties — space added before %), pdfjs-print-progress-percen…
     - Source: `{ $progress }%`
 

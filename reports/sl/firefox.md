@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cb086148c41a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `3bdd70692916` |
-| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 15,838 |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
+| **Previous run** | 2026-10-19 @ `cb086148c41a` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 52 of 15,867 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for sl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
@@ -19,9 +18,13 @@ Also for sl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `decoder-doctor-unsupported-libavcodec-message` — `browser/browser/browser.ftl` — "is not supported" is translated as "is not updated".
+    - Current: `ni posodobljen`
+    - Source: `libavcodec may be vulnerable or is not supported, and should be updated to play video.`
+    - Suggest: `ni podprt`
+    - The en-US says libavcodec "is not supported", but "ni posodobljen" means "is not updated", which is a different condition. The update instruction is already in the following sentence.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,9 +48,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 327 |
-| Strings | 15,838 |
-| Missing strings | 708 |
+| Files | 328 |
+| Strings | 15,867 |
+| Missing strings | 728 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 2 |
 | Files with no en-US counterpart | 0 |
@@ -64,17 +67,17 @@ _Nothing retired._
 
 ### Completeness
 
-**708 strings** are not translated yet, concentrated in:
+**728 strings** are not translated yet, concentrated in:
 
-- `browser/browser/aiWindow.ftl` — 141
-- `browser/browser/ipProtection.ftl` — 92
+- `browser/browser/aiWindow.ftl` — 140
+- `browser/browser/ipProtection.ftl` — 91
 - `browser/browser/aiWindowContent.ftl` — 58
-- `dom/chrome/dom/dom.properties` — 49
+- `dom/chrome/dom/dom.properties` — 50
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 48
-- `browser/browser/newtab/newtab.ftl` — 32
+- `browser/browser/preferences/preferences.ftl` — 38
+- `browser/browser/newtab/newtab.ftl` — 36
+- `dom/chrome/security/security.properties` — 28
 - `browser/browser/aiFeatures.ftl` — 27
-- `dom/chrome/security/security.properties` — 26
-- `browser/browser/preferences/preferences.ftl` — 24
 - `toolkit/toolkit/about/aboutGlean.ftl` — 18
 - `devtools/client/debugger.properties` — 16
 - `browser/browser/autoTabGrouping.ftl` — 15
@@ -94,7 +97,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 268, `straight-double` 259, `curly-single` 50, `guillemet` 5 | _mixed_ |
 | apostrophe | `typographic` 50, `straight` 51 | _mixed_ |
-| ellipsis | `char` 363, `ascii` 33 | **char** |
+| ellipsis | `char` 362, `ascii` 33 | **char** |
 | dash | `em` 13, `en` 119 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 8 | _mixed_ |
 | register | `informal` 8, `formal` 531 | **formal** |
@@ -108,13 +111,13 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (50)
+## 3. Open findings (51)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 15 |
+| 2 | Wrong content (says something other than the English) | 16 |
 | 3 | Degraded language (grammar, spelling, terminology) | 28 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
@@ -129,6 +132,11 @@ _Nothing in this category._
     - Source: `Sync your data everywhere`
     - Suggest: `Sinhronizirajte svoje podatke povsod`
     - en-US "Sync your data everywhere" means across all devices; "kjerkoli" means "anywhere", shifting the meaning.
+- `decoder-doctor-unsupported-libavcodec-message` — `browser/browser/browser.ftl` — "is not supported" is translated as "is not updated".
+    - Current: `ni posodobljen`
+    - Source: `libavcodec may be vulnerable or is not supported, and should be updated to play video.`
+    - Suggest: `ni podprt`
+    - The en-US says libavcodec "is not supported", but "ni posodobljen" means "is not updated", which is a different condition. The update instruction is already in the following sentence.
 - `refresh-reinstalled-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — "you’ve reinstalled" rendered impersonally as "je nameščen na novo" (it has been newly installed), dropping the user as agent.
     - Current: `Kaže, da je { -brand-short-name } nameščen na novo.`
     - Source: `Looks like you’ve reinstalled { -brand-short-name }. Want us to clean it up for a fresh, like-new experience?`

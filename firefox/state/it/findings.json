@@ -334,7 +334,7 @@
   "file": "browser/browser/defaultBrowserNotification.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-10-19",
+  "last_seen": "2026-10-26",
   "locale": "it",
   "origin": {},
   "rationale": "In the source this string quotes “Web browser”, which is exactly the value of `desktop-entry-generic-name` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -371,6 +371,30 @@
   "string_id": "perplexity-callout-theme-1-subtitle-2",
   "suggest": "risposte",
   "summary": "risposte risposte → risposte — ✅",
+  "suppressed_by": ""
+ },
+ {
+  "category": "E",
+  "check": "llm",
+  "current": "protetta da { -brand-short-name }",
+  "dismissed_because": "",
+  "fid": "eac8edea0ba4",
+  "file": "browser/browser/featureCallout.ftl",
+  "first_seen": "2026-10-26",
+  "impact": 4,
+  "last_seen": "2026-10-26",
+  "locale": "it",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The en-US ends with a period, and every other taskbar-tabs callout subtitle in this batch ends with one in Italian. This string alone drops it.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "0a43bd1e",
+  "string_id": "taskbar-tabs-social-callout-subtitle",
+  "suggest": "protetta da { -brand-short-name }.",
+  "summary": "The sentence has no final full stop, unlike the en-US source and the other callout subtitles in this batch.",
   "suppressed_by": ""
  },
  {
@@ -419,6 +443,30 @@
   "string_id": "ip-protection-site-rules-edit-button",
   "suggest": "la regola relativa a { $website }",
   "summary": "Ungrammatical preposition: \"relativa per\" should be \"relativa a\" (or just \"per\").",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Nascondi la tua posizione mentre navighi.",
+  "dismissed_because": "",
+  "fid": "f9eeebfaa96c",
+  "file": "browser/browser/ipProtection.ftl",
+  "first_seen": "2026-10-26",
+  "impact": 2,
+  "last_seen": "2026-10-26",
+  "locale": "it",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "en-US 'Help hide your location' is a hedged claim. 'Nascondi la tua posizione' promises full concealment, which is a protection the product does not guarantee.",
+  "reads_as_deliberate": true,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "5a4c011d",
+  "string_id": "ipprotection-feature-introduction-description-private-browsing-3",
+  "suggest": "Aiuta a nascondere la tua posizione mentre navighi.",
+  "summary": "The hedge 'Help' is dropped, so the Italian claims the VPN hides the user's location outright.",
   "suppressed_by": ""
  },
  {
@@ -474,6 +522,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "D",
+  "check": "llm",
+  "current": "Utilizza finestra ridotta",
+  "dismissed_because": "",
+  "fid": "c55ea591a108",
+  "file": "browser/browser/miniWindow.ftl",
+  "first_seen": "2026-10-26",
+  "impact": 3,
+  "last_seen": "2026-10-26",
+  "locale": "it",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The feature is called 'Mini finestra' in this string's own label and in every other Mini Window string. The tooltip names it differently, so the two are inconsistent.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "bd54f1d2",
+  "string_id": "toolbar-button-mini-window",
+  "suggest": "Utilizza mini finestra",
+  "summary": "The tooltip renders the feature name 'Mini Window' as 'finestra ridotta' instead of the 'mini finestra' used everywhere else.",
+  "suppressed_by": ""
+ },
+ {
   "category": "E",
   "check": "legacy",
   "current": "",
@@ -515,8 +587,8 @@
   },
   "rationale": "The source says \"Search options\"; \"Impostazioni\" means settings, and the sibling string \"More options\" is correctly rendered \"Altre opzioni\", making the terminology inconsistent.",
   "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
+  "resolved_on": "2026-10-26",
+  "status": "obsolete",
   "string_hash": "8fc34380",
   "string_id": "newtab-search-widget-menu-button",
   "suggest": "Opzioni di ricerca",
@@ -1432,7 +1504,7 @@
   "file": "toolkit/toolkit/about/aboutAddons.ftl",
   "first_seen": "2026-09-03",
   "impact": 2,
-  "last_seen": "2026-10-19",
+  "last_seen": "2026-10-26",
   "locale": "it",
   "origin": {},
   "rationale": "The label is “Fai una donazione”. An access key not in the label cannot be underlined and is unreachable by keyboard.",

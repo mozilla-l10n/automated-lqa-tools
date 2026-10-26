@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
+| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,768 |
+| **Strings reviewed this run** | 109 of 16,836 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,23 @@ Also for it: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The hedge 'Help' is dropped, so the Italian claims the VPN hides the user's location outright.
+    - Current: `Nascondi la tua posizione mentre navighi.`
+    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
+    - Suggest: `Aiuta a nascondere la tua posizione mentre navighi.`
+    - en-US 'Help hide your location' is a hedged claim. 'Nascondi la tua posizione' promises full concealment, which is a protection the product does not guarantee.
+- `toolbar-button-mini-window` — `browser/browser/miniWindow.ftl` — The tooltip renders the feature name 'Mini Window' as 'finestra ridotta' instead of the 'mini finestra' used everywhere else.
+    - Current: `Utilizza finestra ridotta`
+    - Source: `label: Mini Window tooltiptext: Use Mini Window`
+    - Suggest: `Utilizza mini finestra`
+    - The feature is called 'Mini finestra' in this string's own label and in every other Mini Window string. The tooltip names it differently, so the two are inconsistent.
+- `taskbar-tabs-social-callout-subtitle` — `browser/browser/featureCallout.ftl` — The sentence has no final full stop, unlike the en-US source and the other callout subtitles in this batch.
+    - Current: `protetta da { -brand-short-name }`
+    - Source: `Launch your social sites like an app in a streamlined window protected by { -brand-short-name }.`
+    - Suggest: `protetta da { -brand-short-name }.`
+    - The en-US ends with a period, and every other taskbar-tabs callout subtitle in this batch ends with one in Italian. This string alone drops it.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,9 +48,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `newtab-search-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Search options" translated as "Impostazioni di ricerca" (search settings) instead of "Opzioni di ricerca".
+    - Current: `Impostazioni di ricerca`
+    - Suggest: `Opzioni di ricerca`
+    - The source says "Search options"; "Impostazioni" means settings, and the sibling string "More options" is correctly rendered "Altre opzioni", making the terminology inconsistent.
 
 ---
 
@@ -44,12 +61,12 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 339 |
-| Strings | 16,768 |
+| Files | 340 |
+| Strings | 16,836 |
 | Missing strings | 0 |
-| Obsolete strings | 11 |
+| Obsolete strings | 19 |
 | Files absent from the locale | 0 |
-| Files with no en-US counterpart | 11 |
+| Files with no en-US counterpart | 10 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
@@ -72,14 +89,13 @@ The locale is complete against the en-US source.
 - `browser/browser/enterprise/enterprise-policies-descriptions.ftl`
 - `browser/browser/enterprise/enterprise.ftl`
 - `browser/browser/enterprise/felt.ftl`
-- `browser/browser/miniWindow.ftl`
 - `browser/chrome/overrides/enterprise.properties`
 - `dom/chrome/enterprise.properties`
 - `toolkit/crashreporter/crashreporter-enterprise.ftl`
 - `toolkit/toolkit/enterprise/enterprise.ftl`
 - `toolkit/toolkit/enterprise/felt.ftl`
 
-_237 strings. These files exist in the locale tree but not in the en-US reference — they are maintained elsewhere. The model review is a comparison against en-US, so it skips them entirely; only the checks that need no reference ran. Nothing reported from these files means nothing was looked for, not that they are clean._
+_222 strings. These files exist in the locale tree but not in the en-US reference — they are maintained elsewhere. The model review is a comparison against en-US, so it skips them entirely; only the checks that need no reference ran. Nothing reported from these files means nothing was looked for, not that they are clean._
 
 ### Conventions detected in this locale
 
@@ -88,11 +104,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 963, `straight-double` 25 | **curly-double** |
-| apostrophe | `typographic` 1761, `straight` 6 | **typographic** |
-| ellipsis | `char` 417 | **char** |
+| apostrophe | `typographic` 1764, `straight` 6 | **typographic** |
+| ellipsis | `char` 416 | **char** |
 | dash | `em` 51, `en` 17 | **em** |
 | nbsp | `total` 12, `before-punctuation` 4, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 723, `formal` 47 | **informal** |
+| register | `informal` 722, `formal` 47 | **informal** |
 
 ---
 
@@ -102,24 +118,29 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (18)
+## 3. Open findings (20)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl` — "help keep your browsing private" rendered as an absolute "impediscono" (prevent), dropping the hedge.
     - Current: `Le finestre anonime impediscono agli altri utenti di questo dispositivo di vedere la tua attività di navigazione.`
     - Source: `Private Windows help keep your browsing private from others on this device. They don’t make you anonymous or clear all of your data.`
     - Suggest: `Le finestre anonime aiutano a nascondere la tua attività di navigazione agli altri utenti di questo dispositivo.`
     - The source says Private Windows "help keep" browsing private; the Italian asserts they outright prevent other users from seeing the activity, a stronger promise than the product makes.
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The hedge 'Help' is dropped, so the Italian claims the VPN hides the user's location outright.
+    - Current: `Nascondi la tua posizione mentre navighi.`
+    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
+    - Suggest: `Aiuta a nascondere la tua posizione mentre navighi.`
+    - en-US 'Help hide your location' is a hedged claim. 'Nascondi la tua posizione' promises full concealment, which is a protection the product does not guarantee.
 
 _Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 6 |
+| 2 | Wrong content (says something other than the English) | 7 |
 | 3 | Degraded language (grammar, spelling, terminology) | 10 |
-| 4 | Cosmetic (typography, spacing) | 2 |
+| 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -155,11 +176,11 @@ _Also listed under their own category below._
     - Source: `(value): Remove this top site accesskey: T`
     - Suggest: `Rimuovi questo sito principale`
     - The en-US action removes this top site entry; the Italian states removal from the top sites list, which changes the object of the action.
-- `newtab-search-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Search options" translated as "Impostazioni di ricerca" (search settings) instead of "Opzioni di ricerca".
-    - Current: `Impostazioni di ricerca`
-    - Source: `aria-label: Search options`
-    - Suggest: `Opzioni di ricerca`
-    - The source says "Search options"; "Impostazioni" means settings, and the sibling string "More options" is correctly rendered "Altre opzioni", making the terminology inconsistent.
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The hedge 'Help' is dropped, so the Italian claims the VPN hides the user's location outright.
+    - Current: `Nascondi la tua posizione mentre navighi.`
+    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
+    - Suggest: `Aiuta a nascondere la tua posizione mentre navighi.`
+    - en-US 'Help hide your location' is a hedged claim. 'Nascondi la tua posizione' promises full concealment, which is a protection the product does not guarantee.
 - `newtab-stocks-search-hint` — `browser/browser/newtab/newtab.ftl` — "Search for symbols" is translated as "Cerca azioni" (search for stocks) instead of ticker symbols.
     - Current: `Cerca azioni o aziende da aggiungere alla tua lista`
     - Source: `Search for symbols or companies to add to your watchlist`
@@ -206,6 +227,11 @@ _Also listed under their own category below._
 
 ### D. Terminology, register & consistency
 
+- `toolbar-button-mini-window` — `browser/browser/miniWindow.ftl` — The tooltip renders the feature name 'Mini Window' as 'finestra ridotta' instead of the 'mini finestra' used everywhere else.
+    - Current: `Utilizza finestra ridotta`
+    - Source: `label: Mini Window tooltiptext: Use Mini Window`
+    - Suggest: `Utilizza mini finestra`
+    - The feature is called 'Mini finestra' in this string's own label and in every other Mini Window string. The tooltip names it differently, so the two are inconsistent.
 - `newtab-wallpaper-firefox-hills-light` — `browser/browser/newtab/newtab.ftl` — "light hills" rendered as "colline chiare" here but "colline luminose" in the other light-hills strings.
     - Current: `Una volpe corre su colline chiare`
     - Source: `A fox running over light hills`
@@ -219,6 +245,11 @@ _Also listed under their own category below._
 
 ### E. Typography, punctuation & spacing
 
+- `taskbar-tabs-social-callout-subtitle` — `browser/browser/featureCallout.ftl` — The sentence has no final full stop, unlike the en-US source and the other callout subtitles in this batch.
+    - Current: `protetta da { -brand-short-name }`
+    - Source: `Launch your social sites like an app in a streamlined window protected by { -brand-short-name }.`
+    - Suggest: `protetta da { -brand-short-name }.`
+    - The en-US ends with a period, and every other taskbar-tabs callout subtitle in this batch ends with one in Italian. This string alone drops it.
 - `ip-protection-site-rules-button` — `browser/browser/ipProtection.ftl` — Double space and missing article in the button label.
     - Current: `Gestisci  regole per i siti web`
     - Source: `description: Set rules for sites that need extra privacy or VPN turned off. label: Manage website rules`

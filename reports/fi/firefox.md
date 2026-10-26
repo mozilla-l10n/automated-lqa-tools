@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
+| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,036 |
+| **Strings reviewed this run** | 96 of 16,106 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for fi: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `screenshots-component-mini-window-cancel-button` — `browser/browser/miniWindow.ftl` — The macOS variant of the title renders "Cancel" as "Kumoa" (Undo), while the other variant and the label use "Peruuta".
+    - Current: `Kumoa (esc)`
+    - Source: `(value): Cancel aria-label: Cancel title: {$sel_1 ->} [macos] Cancel (esc) [other] Cancel (Esc)`
+    - Suggest: `Peruuta (esc)`
+    - The en-US says "Cancel" in both variants, and the comment says the button dismisses the selection overlay. "Kumoa" means "Undo", which is a different action, and it contradicts "Peruuta" in the label and the other variant.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,9 +48,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 328 |
-| Strings | 16,036 |
-| Missing strings | 484 |
+| Files | 330 |
+| Strings | 16,106 |
+| Missing strings | 489 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +67,20 @@ _Nothing retired._
 
 ### Completeness
 
-**484 strings** are not translated yet, concentrated in:
+**489 strings** are not translated yet, concentrated in:
 
-- `dom/chrome/dom/dom.properties` — 71
+- `dom/chrome/dom/dom.properties` — 72
 - `toolkit/toolkit/about/aboutGlean.ftl` — 62
-- `browser/browser/ipProtection.ftl` — 41
+- `browser/browser/ipProtection.ftl` — 48
 - `toolkit/toolkit/about/aboutLogging.ftl` — 40
 - `dom/chrome/security/csp.properties` — 34
-- `dom/chrome/security/security.properties` — 28
+- `dom/chrome/security/security.properties` — 30
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 22
 - `toolkit/toolkit/about/url-classifier.ftl` — 21
 - `toolkit/toolkit/about/aboutProcesses.ftl` — 17
 - `browser/browser/newtab/newtab.ftl` — 16
 - `toolkit/toolkit/about/aboutSupport.ftl` — 15
-- `browser/browser/aboutPrivateBrowsing.ftl` — 13
+- `netwerk/necko.properties` — 13
 
 **Files present but identical to en-US:**
 
@@ -111,7 +115,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 309, `straight-double` 116, `curly-single` 70 | _mixed_ |
 | apostrophe | `typographic` 148, `straight` 33 | **typographic** |
-| ellipsis | `char` 399, `ascii` 1 | **char** |
+| ellipsis | `char` 398, `ascii` 1 | **char** |
 | dash | `em` 42, `en` 29 | _mixed_ |
 | nbsp | `total` 11, `before-punctuation` 3, `space-before-punctuation` 6 | _mixed_ |
 
@@ -123,13 +127,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (155)
+## 3. Open findings (156)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 108 |
-| 2 | Wrong content (says something other than the English) | 37 |
+| 2 | Wrong content (says something other than the English) | 38 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
 | 4 | Cosmetic (typography, spacing) | 10 |
 
@@ -399,6 +403,11 @@ _Nothing reported._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `screenshots-component-mini-window-cancel-button` — `browser/browser/miniWindow.ftl` — The macOS variant of the title renders "Cancel" as "Kumoa" (Undo), while the other variant and the label use "Peruuta".
+    - Current: `Kumoa (esc)`
+    - Source: `(value): Cancel aria-label: Cancel title: {$sel_1 ->} [macos] Cancel (esc) [other] Cancel (Esc)`
+    - Suggest: `Peruuta (esc)`
+    - The en-US says "Cancel" in both variants, and the comment says the button dismisses the selection overlay. "Kumoa" means "Undo", which is a different action, and it contradicts "Peruuta" in the label and the other variant.
 - `set-default-menu-message-row-layout-subtitle-variant` — `browser/browser/newtab/asrouter.ftl` — macOS "Dock" is translated as "telakka", while every other string keeps "Dock".
     - Current: `kiinnitä se telakkaan`
     - Source: `{$sel_1 ->} [macos] Keep { -brand-short-name } at your fingertips — make it your default and keep it in your Dock. [other] Keep { -brand-short-name } at your fingertips — make it your default and keep it in your taskbar.`
@@ -875,7 +884,7 @@ _Nothing reported._
 - `headerFooterCustom` — `toolkit/chrome/global/printdialog.properties` — `headerFooterCustom` uses three dots where this locale uses …
     - Current: `Oma...`
     - Source: `Custom…`
-    - The tree uses … 399 times against 1 ASCII runs.
+    - The tree uses … 398 times against 1 ASCII runs.
 - `addon-category-dictionary` — `toolkit/toolkit/about/aboutAddons.ftl` — “Dictionaries” rendered as “Oikoluvut” while the rest of the page uses “sanastot”.
     - Current: `Oikoluvut`
     - Source: `Dictionaries`

@@ -1,8 +1,8 @@
 {
  "_meta": {
   "locale": "es-MX",
-  "prose_chunks": 16556,
-  "strings": 15868
+  "prose_chunks": 16592,
+  "strings": 15897
  },
  "apostrophe": {
   "straight": 37,
@@ -14,14 +14,14 @@
  },
  "ellipsis": {
   "ascii": 19,
-  "char": 367
+  "char": 366
  },
  "fullwidth": {
   "punctuation": 0
  },
  "inverted_marks": {
-  "open-exclamation": 72,
-  "open-question": 318
+  "open-exclamation": 71,
+  "open-question": 317
  },
  "nbsp": {
   "before-punctuation": 12,
@@ -37,6 +37,6 @@
  },
  "register": {
   "formal": 206,
-  "informal": 1210
+  "informal": 1208
  }
 }

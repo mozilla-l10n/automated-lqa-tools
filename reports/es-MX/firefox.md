@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
+| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 15,868 |
+| **Strings reviewed this run** | 50 of 15,897 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,38 @@ Also for es-MX: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (6)
 
-_No new findings._
+- `toolbar-button-forget` — `browser/browser/browser.ftl` — Tooltip drops "some", claiming the button forgets the browsing history as a whole.
+    - Current: `Olvidar el historial de navegación`
+    - Source: `label: Forget tooltiptext: Forget about some browsing history`
+    - Suggest: `Olvidar parte del historial de navegación`
+    - en-US says "Forget about some browsing history". The Forget button only clears a chosen recent time range, so the Spanish claims a wider deletion than the product performs.
+- `text-action-copy-link-to-highlight-2` — `toolkit/toolkit/global/textActions.ftl` — "para resaltar" (in order to highlight) misreads "Copy Link to Highlight", which copies a link to the highlighted text.
+    - Current: `Copiar enlace para resaltar`
+    - Source: `accesskey: h label: Copy Link to Highlight`
+    - Suggest: `Copiar enlace al resaltado`
+    - The developer comment says this copies a Text Fragment link to the current selection. It does not copy a link so that something can be highlighted.
+- `text-action-copy-clean-link-to-highlight-2` — `toolkit/toolkit/global/textActions.ftl` — Same misreading: "para resaltar" instead of a link to the highlighted text.
+    - Current: `Copiar enlace limpio para resaltar`
+    - Source: `accesskey: k label: Copy Clean Link to Highlight`
+    - Suggest: `Copiar enlace limpio al resaltado`
+    - The developer comment says this creates a link to the current selection with trackers removed. "para resaltar" means "in order to highlight".
+- `toolbar-edit-controls` — `browser/browser/browser.ftl` — "Editar controles" means "edit the controls"; the source names the group of editing controls (cut/copy/paste).
+    - Current: `Editar controles`
+    - Source: `label: Edit controls title: Edit controls`
+    - Suggest: `Controles de edición`
+    - This is the toolbar item that holds the Cut/Copy/Paste buttons, parallel to "Zoom Controls". "Edit" is a modifier here, not a verb.
+- `narrate-start` — `toolkit/toolkit/global/narrate.ftl` — "Inicio" (beginning/home) is a noun; the button tooltip is the command to start narration.
+    - Current: `Inicio ({ $shortcut })`
+    - Source: `title: Start ({ $shortcut })`
+    - Suggest: `Iniciar ({ $shortcut })`
+    - It sits next to "Detener" (Stop), so it should be a verb. "Inicio" reads as "go to the beginning" or "home".
+- `customize-mode-toolbarspring` — `browser/browser/customizeMode.ftl` — English-style title case: Spanish capitalizes only the first word of a label.
+    - Current: `Espacio Flexible`
+    - Source: `title: Flexible Space`
+    - Suggest: `Espacio flexible`
+    - Spanish capitalization rules don't use title case, so 'Flexible' shouldn't be capitalized in this toolbar item title.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,9 +63,16 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (2)
 
-_Nothing retired._
+- `genai-shortcut-button-2` — `browser/browser/genai.ftl` — "Preguntar { $provider }" lacks the preposition "a" required before the provider name in Spanish.
+    - Current: `Preguntar { $provider }`
+    - Suggest: `Preguntar a { $provider }`
+    - In Spanish the person/entity asked takes the preposition "a"; "Preguntar Claude" is ungrammatical for en-US "Ask { $provider }".
+- `newtab-sports-widget-message-survey-widget-body` — `browser/browser/newtab/newtab.ftl` — "try the new one in your lineup" rendered as "prueba el nuevo widget destacado" (the new featured widget).
+    - Current: `prueba el nuevo widget destacado`
+    - Suggest: `prueba el nuevo widget de tu selección`
+    - en-US refers to the new widget in the user's lineup; "destacado" (featured) invents a qualifier not in the source.
 
 ---
 
@@ -44,11 +80,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 323 |
-| Strings | 15,868 |
-| Missing strings | 652 |
+| Files | 324 |
+| Strings | 15,897 |
+| Missing strings | 698 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 5 |
+| Files absent from the locale | 6 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,23 +99,24 @@ _Nothing retired._
 
 ### Completeness
 
-**652 strings** are not translated yet, concentrated in:
+**698 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 127
-- `browser/browser/ipProtection.ftl` — 52
+- `browser/browser/newtab/newtab.ftl` — 128
+- `browser/browser/ipProtection.ftl` — 59
+- `browser/browser/preferences/preferences.ftl` — 38
 - `browser/browser/newtab/onboarding.ftl` — 33
 - `toolkit/services/aboutSyncLog.ftl` — 26
-- `browser/browser/preferences/preferences.ftl` — 24
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 23
-- `browser/browser/browser.ftl` — 22
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 21
+- `browser/browser/browser.ftl` — 23
 - `toolkit/toolkit/about/aboutPDF.ftl` — 21
+- `toolkit/toolkit/main-window/autocomplete.ftl` — 20
 - `browser/browser/aboutRestartRequired.ftl` — 18
 - `toolkit/toolkit/about/aboutAddons.ftl` — 17
 - `browser/browser/aboutPrivateBrowsing.ftl` — 16
 
 **Files absent from the locale:**
 
+- `browser/browser/miniWindow.ftl`
 - `browser/browser/sharePanel.ftl`
 - `toolkit/services/aboutSyncLog.ftl`
 - `toolkit/toolkit/about/pdfFeaturesNotification.ftl`
@@ -96,11 +133,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 462, `straight-double` 130, `curly-single` 79, `guillemet` 1 | **curly-double** |
 | apostrophe | `typographic` 91, `straight` 37 | _mixed_ |
-| ellipsis | `char` 367, `ascii` 19 | **char** |
+| ellipsis | `char` 366, `ascii` 19 | **char** |
 | dash | `em` 50, `en` 1 | **em** |
 | nbsp | `total` 16, `narrow` 10, `before-punctuation` 12, `space-before-punctuation` 6 | _mixed_ |
-| inverted marks | `open-question` 318, `open-exclamation` 72 | **open-question** |
-| register | `informal` 1210, `formal` 206 | **informal** |
+| inverted marks | `open-question` 317, `open-exclamation` 71 | **open-question** |
+| register | `informal` 1208, `formal` 206 | **informal** |
 
 ---
 
@@ -113,15 +150,24 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (47)
+## 3. Open findings (51)
 
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+
+- `toolbar-button-forget` — `browser/browser/browser.ftl` — Tooltip drops "some", claiming the button forgets the browsing history as a whole.
+    - Current: `Olvidar el historial de navegación`
+    - Source: `label: Forget tooltiptext: Forget about some browsing history`
+    - Suggest: `Olvidar parte del historial de navegación`
+    - en-US says "Forget about some browsing history". The Forget button only clears a chosen recent time range, so the Spanish claims a wider deletion than the product performs.
+
+_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 15 |
-| 3 | Degraded language (grammar, spelling, terminology) | 26 |
-| 4 | Cosmetic (typography, spacing) | 6 |
+| 2 | Wrong content (says something other than the English) | 19 |
+| 3 | Degraded language (grammar, spelling, terminology) | 25 |
+| 4 | Cosmetic (typography, spacing) | 7 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -129,6 +175,16 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `toolbar-button-forget` — `browser/browser/browser.ftl` — Tooltip drops "some", claiming the button forgets the browsing history as a whole.
+    - Current: `Olvidar el historial de navegación`
+    - Source: `label: Forget tooltiptext: Forget about some browsing history`
+    - Suggest: `Olvidar parte del historial de navegación`
+    - en-US says "Forget about some browsing history". The Forget button only clears a chosen recent time range, so the Spanish claims a wider deletion than the product performs.
+- `toolbar-edit-controls` — `browser/browser/browser.ftl` — "Editar controles" means "edit the controls"; the source names the group of editing controls (cut/copy/paste).
+    - Current: `Editar controles`
+    - Source: `label: Edit controls title: Edit controls`
+    - Suggest: `Controles de edición`
+    - This is the toolbar item that holds the Cut/Copy/Paste buttons, parallel to "Zoom Controls". "Edit" is a modifier here, not a verb.
 - `ipprotection-site-inclusions-callout-secondary-button-lapsed-users` — `browser/browser/ipProtection.ftl` — "Dismiss" translated as "Ahora no" (Not now), duplicating the other button's label.
     - Current: `No ahora`
     - Source: `Dismiss`
@@ -149,11 +205,6 @@ _Nothing in this category._
     - Source: `Make { -brand-short-name } your go-to browser for built-in privacy.`
     - Suggest: `Haz de { -brand-short-name } tu navegador de referencia por su privacidad integrada.`
     - The en-US says to make Firefox your go-to browser thanks to its built-in privacy, not to set it as the system default browser (though the CTA is "Make default", the message itself does not say "predeterminado"); the Spanish also reverses the causal relation, stating the purpose is to get privacy protection.
-- `newtab-sports-widget-message-survey-widget-body` — `browser/browser/newtab/newtab.ftl` — "try the new one in your lineup" rendered as "prueba el nuevo widget destacado" (the new featured widget).
-    - Current: `prueba el nuevo widget destacado`
-    - Source: `Share your feedback to help us improve future widgets. Then, try the new one in your lineup.`
-    - Suggest: `prueba el nuevo widget de tu selección`
-    - en-US refers to the new widget in the user's lineup; "destacado" (featured) invents a qualifier not in the source.
 - `smartwindow-onboarding-title` — `browser/browser/newtab/onboarding.ftl` — "Make it your go-to" mistranslated as "use it as a starting point".
     - Current: `Utiliza { -smart-window-brand-name } como punto de partida`
     - Source: `Make { -smart-window-brand-name } your go-to`
@@ -206,14 +257,29 @@ _Nothing in this category._
     - Source: `Opens in a new tab`
     - Suggest: `Se abre en una nueva pestaña`
     - The en-US string describes the link's behavior (third person, "Opens in a new tab"), typically used as an accessible label; the Spanish infinitive reads as an action command, changing the meaning.
+- `narrate-start` — `toolkit/toolkit/global/narrate.ftl` — "Inicio" (beginning/home) is a noun; the button tooltip is the command to start narration.
+    - Current: `Inicio ({ $shortcut })`
+    - Source: `title: Start ({ $shortcut })`
+    - Suggest: `Iniciar ({ $shortcut })`
+    - It sits next to "Detener" (Stop), so it should be a verb. "Inicio" reads as "go to the beginning" or "home".
+- `text-action-copy-clean-link-to-highlight-2` — `toolkit/toolkit/global/textActions.ftl` — Same misreading: "para resaltar" instead of a link to the highlighted text.
+    - Current: `Copiar enlace limpio para resaltar`
+    - Source: `accesskey: k label: Copy Clean Link to Highlight`
+    - Suggest: `Copiar enlace limpio al resaltado`
+    - The developer comment says this creates a link to the current selection with trackers removed. "para resaltar" means "in order to highlight".
+- `text-action-copy-link-to-highlight-2` — `toolkit/toolkit/global/textActions.ftl` — "para resaltar" (in order to highlight) misreads "Copy Link to Highlight", which copies a link to the highlighted text.
+    - Current: `Copiar enlace para resaltar`
+    - Source: `accesskey: h label: Copy Link to Highlight`
+    - Suggest: `Copiar enlace al resaltado`
+    - The developer comment says this copies a Text Fragment link to the current selection. It does not copy a link so that something can be highlighted.
 
 ### C. Grammar, agreement & spelling
 
-- `genai-shortcut-button-2` — `browser/browser/genai.ftl` — "Preguntar { $provider }" lacks the preposition "a" required before the provider name in Spanish.
-    - Current: `Preguntar { $provider }`
-    - Source: `aria-label: Ask { $provider } tooltiptext: Ask { $provider }`
-    - Suggest: `Preguntar a { $provider }`
-    - In Spanish the person/entity asked takes the preposition "a"; "Preguntar Claude" is ungrammatical for en-US "Ask { $provider }".
+- `customize-mode-toolbarspring` — `browser/browser/customizeMode.ftl` — English-style title case: Spanish capitalizes only the first word of a label.
+    - Current: `Espacio Flexible`
+    - Source: `title: Flexible Space`
+    - Suggest: `Espacio flexible`
+    - Spanish capitalization rules don't use title case, so 'Flexible' shouldn't be capitalized in this toolbar item title.
 - `launch-on-login-autostart-infobar-message` — `browser/browser/newtab/asrouter.ftl` — "mas" is missing its accent; should be "más adelante".
     - Current: `Puedes cambiar esta preferencia mas adelante en los ajustes.`
     - Source: `{ -brand-short-name } now starts up when you sign in to Windows. You can always change this later in settings.`

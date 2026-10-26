@@ -396,7 +396,7 @@
   "file": "browser/browser/addonNotifications.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-10-19",
+  "last_seen": "2026-10-26",
   "locale": "nl",
   "origin": {},
   "rationale": "The label is “Verdachte website rapporteren”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
@@ -505,8 +505,8 @@
   },
   "rationale": "",
   "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
+  "resolved_on": "2026-10-26",
+  "status": "obsolete",
   "string_hash": "689982bc",
   "string_id": "toolbar-switcher-customizable-label",
   "suggest": ".tooltiptext",
@@ -1082,6 +1082,30 @@
   "string_id": "trustpanel-description-disabled",
   "suggest": "\"…staat niet op wacht.\"",
   "summary": "en-US \"is off-duty\", losing the contrast with trustpanel-header-enabled (\"staat op wacht\"). Current: \"…heeft geen dienst.\" → Suggest: \"…staat niet op wacht.\"",
+  "suppressed_by": ""
+ },
+ {
+  "category": "E",
+  "check": "llm",
+  "current": "Plakken & Gaan",
+  "dismissed_because": "",
+  "fid": "58fa393bb845",
+  "file": "browser/browser/browser.ftl",
+  "first_seen": "2026-10-26",
+  "impact": 3,
+  "last_seen": "2026-10-26",
+  "locale": "nl",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The nl conventions use sentence case for labels, and the parallel menu item 'Paste and Search' is rendered 'Plakken en zoeken'.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "2c39bbb9",
+  "string_id": "urlbar-menuitem-paste-and-go",
+  "suggest": "Plakken en gaan",
+  "summary": "Label capitalises 'Gaan' and uses '&', breaking sentence case and the 'en' used in the sibling 'Plakken en zoeken'.",
   "suppressed_by": ""
  },
  {
@@ -2102,6 +2126,30 @@
   "string_id": "menu-view-enter-full-screen",
   "suggest": "",
   "summary": "\"Schermvullende weergave\" while its siblings menu-view-exit-full-screen / menu-view-full-screen use \"Volledig scherm\".",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "Hij blijft tijdens het surfen bovenaan staan.",
+  "dismissed_because": "",
+  "fid": "377e411af5a3",
+  "file": "browser/browser/miniWindow.ftl",
+  "first_seen": "2026-10-26",
+  "impact": 3,
+  "last_seen": "2026-10-26",
+  "locale": "nl",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "'It' in the en-US means the Mini Window. 'Minivenster' is a neuter de/het noun ('het venster'), and so is 'gebied', so the pronoun must be 'het', not the common-gender 'hij'.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "aca1d175",
+  "string_id": "mini-window-overlay-instructions",
+  "suggest": "Het blijft tijdens het surfen bovenaan staan.",
+  "summary": "The pronoun 'Hij' has the wrong gender: it refers to the neuter noun 'minivenster' (or 'gebied'), so it should be 'Het'.",
   "suppressed_by": ""
  },
  {
@@ -3262,8 +3310,8 @@
   },
   "rationale": "",
   "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
+  "resolved_on": "2026-10-26",
+  "status": "obsolete",
   "string_hash": "34833657",
   "string_id": "newtab-stocks-widget-menu-button",
   "suggest": "lowercase",
@@ -11951,6 +11999,30 @@
   "string_id": "moz-breadcrumb-group-nav",
   "suggest": "\"Kruimelpad\"",
   "summary": "Current: \"Broodkruimels\" → Suggest: \"Kruimelpad\"",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
+  "current": "Hardop lezen",
+  "dismissed_because": "",
+  "fid": "2c577a344b50",
+  "file": "toolkit/toolkit/global/narrate.ftl",
+  "first_seen": "2026-10-26",
+  "impact": 3,
+  "last_seen": "2026-10-26",
+  "locale": "nl",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The same en-US term on the same feature surface is translated two ways. 'Voorlezen' (reading to someone) is the term used in the header and in the rate tooltips.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "b33466bd",
+  "string_id": "narrate-toggle-label",
+  "suggest": "Hardop voorlezen",
+  "summary": "'Read aloud' is rendered 'Hardop lezen' on the button but 'Hardop voorlezen' in the menu header it opens.",
   "suppressed_by": ""
  },
  {

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
+| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,520 |
+| **Strings reviewed this run** | 208 of 16,595 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,36 @@ Also for sk: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `decoder-doctor-no-pulse-audio-message` — `browser/browser/browser.ftl` — "audio" is translated as "hudby" (music), which narrows the meaning to music only.
+    - Current: `Na prehrávanie hudby`
+    - Source: `To play audio, you may need to install the required PulseAudio software.`
+    - Suggest: `Na prehrávanie zvuku`
+    - The en-US says "To play audio", meaning any sound. PulseAudio is needed for all audio, not just music, and the sibling DRM strings translate audio as "zvuk".
+- `pending-reports` — `toolkit/toolkit/about/aboutSupport.ftl` — The [few] and [other] variants have a double space between "hlásenia" and "o zlyhaní".
+    - Current: `Všetky hlásenia  o zlyhaní`
+    - Source: `{$reports ->} [one] All Crash Reports (including { $reports } pending crash in the given time range) [other] All Crash Reports (including { $reports } pending crashes in the given time range)`
+    - Suggest: `Všetky hlásenia o zlyhaní`
+    - Users will see the extra space in the text. The [one] variant and the other crash-report strings use a single space.
+- `more-from-moz-solo-title-2` — `browser/browser/preferences/moreFromMozilla.ftl` — A plain hyphen with spaces on both sides is used as a dash instead of an en dash.
+    - Current: `{ -solo-ai-brand-name } - tvorca`
+    - Source: `{ -solo-ai-brand-name } AI Website Creator`
+    - Suggest: `{ -solo-ai-brand-name } – tvorca`
+    - In Slovak, a dash with spaces around it should be an en dash (the locale's most common dash), not a hyphen-minus.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (2)
 
-_Nothing was fixed._
+- `home-prefs-recommended-by-option-sponsored-stories` — `browser/browser/preferences/preferences.ftl` — “Sponsored stories” translated as “Sponsored sites”, inconsistent with the Stories section it belongs to.
+    - Current: `Sponzorované stránky`
+    - Source: `label: Sponsored stories`
+    - Suggest: `Sponzorované príbehy`
+    - The adjacent strings render “stories” as “príbehy” (home-prefs-stories-header = Príbehy, home-prefs-recommended-by-header-generic = Odporúčané príbehy), and “Sponzorované stránky” duplicates the separate shortcuts option (home-prefs-shortcuts-by-option-sponsored = Sponzorované skratky) by naming sites instead of stories.
+- `pdfjs-editor-add-signature-type-button` — `toolkit/toolkit/pdfviewer/viewer.ftl` — “Type” translated as the noun “kind/type” instead of the verb.
+    - Current: `Typ`
+    - Source: `(value): Type title: Type`
+    - Suggest: `Napísať`
+    - The developer comment says “Type is a verb (you can type your name as signature)”; the tab label “Typ” reads as a category, not an action, next to the sibling tabs “Kresliť” and “Obrázok”.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -44,8 +67,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 328 |
-| Strings | 16,520 |
+| Files | 330 |
+| Strings | 16,595 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -54,7 +77,7 @@ _Nothing retired._
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 0 |
-| Plural variants (dead or missing forms) | 87 |
+| Plural variants (dead or missing forms) | 88 |
 | Text quoting a UI label that no longer matches | 4 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 0 |
@@ -73,30 +96,30 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 521, `curly-single` 79, `straight-double` 78, `german-double` 9 | **curly-double** |
 | apostrophe | `typographic` 89, `straight` 54 | _mixed_ |
-| ellipsis | `char` 401 | **char** |
+| ellipsis | `char` 400 | **char** |
 | dash | `em` 27, `en` 67 | _mixed_ |
-| nbsp | `total` 110, `before-punctuation` 3, `space-before-punctuation` 7 | **total** |
+| nbsp | `total` 116, `before-punctuation` 3, `space-before-punctuation` 7 | **total** |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **plurals — 87 strings** — 87 strings. The locale's plural variants differ from what the rest of its tree does. At this scale it is a convention to settle once, not a defect per string.
-    - Affected: `about-processes-active-threads`, `about-processes-inactive-threads`, `about-processes-profile-process`, `about-processes-tab-count`, `about-sync-log-clear-confirm-message`, `about-sync-log-count`, `about-telemetry-histogram-stats`, `about-webrtc-channels`, `about-webrtc-frames`, `about-webrtc-lost-label`, `about-webrtc-received-label`, `about-webrtc-sent-label` …and 75 more
+- **plurals — 88 strings** — 88 strings. The locale's plural variants differ from what the rest of its tree does. At this scale it is a convention to settle once, not a defect per string.
+    - Affected: `about-processes-active-threads`, `about-processes-inactive-threads`, `about-processes-profile-process`, `about-processes-tab-count`, `about-sync-log-clear-confirm-message`, `about-sync-log-count`, `about-telemetry-histogram-stats`, `about-webrtc-channels`, `about-webrtc-frames`, `about-webrtc-lost-label`, `about-webrtc-received-label`, `about-webrtc-sent-label` …and 76 more
 - **typography — 42 strings** — 42 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
     - Affected: `CookieAttributeIgnored`, `ImageMapCircleNegativeRadius`, `ImageMapCircleWrongNumberOfCoords`, `ImageMapPolyOddNumberOfCoords`, `ImageMapPolyWrongNumberOfCoords`, `ImageMapRectBoundsError`, `LenientThisWarning`, `MediaLoadSourceMissingSrc`, `MediaLoadUnsupportedMimeType`, `MediaLoadUnsupportedTypeAttribute`, `MimeNotCss`, `MimeNotCssWarn` …and 30 more
 
 ---
 
-## 3. Open findings (220)
+## 3. Open findings (221)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 152 |
-| 2 | Wrong content (says something other than the English) | 68 |
+| 2 | Wrong content (says something other than the English) | 67 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
-| 4 | Cosmetic (typography, spacing) | 0 |
+| 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -210,11 +233,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `label: Most recent download`
     - Suggest: `Posledné stiahnutie`
     - The option shows only the single most recent download; the plural changes what the row claims to display.
-- `home-prefs-recommended-by-option-sponsored-stories` — `browser/browser/preferences/preferences.ftl` — “Sponsored stories” translated as “Sponsored sites”, inconsistent with the Stories section it belongs to.
-    - Current: `Sponzorované stránky`
-    - Source: `label: Sponsored stories`
-    - Suggest: `Sponzorované príbehy`
-    - The adjacent strings render “stories” as “príbehy” (home-prefs-stories-header = Príbehy, home-prefs-recommended-by-header-generic = Odporúčané príbehy), and “Sponzorované stránky” duplicates the separate shortcuts option (home-prefs-shortcuts-by-option-sponsored = Sponzorované skratky) by naming sites instead of stories.
 - `preferences-doh-overview-custom` — `browser/browser/preferences/preferences.ftl` — Custom DoH description asserts the DNS is not controlled by your provider instead of saying you control the provider and fallback.
     - Current: `Vždy sa použije zabezpečené DNS, ktoré nie je kontrolované vaším poskytovateľom.`
     - Source: `description: Always use secure DNS with control over your provider and fallback behavior. label: Custom`
@@ -400,10 +418,20 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `couldn’t parse report URI: %1$S`
     - Suggest: `Nebolo možné spracovať adresu URI správy: %1$S`
     - The placeholder is the report URI (see the developer comment); the sk drops "URI" so the message blames the report itself.
-- _…and 41 more; see `state/` for the full list._
+- `xpath-bad-bang` — `dom/dom/xslt.ftl` — "negation is not()" rendered as the broken phrase "negation is not ()".
+    - Current: `neočakávaný '!', negácia nie je ():`
+    - Source: `XPath parse failure: ‘!’ unexpected, negation is not():`
+    - Suggest: `neočakávaný '!', negácia sa zapisuje ako not():`
+    - The en-US names the XPath function not(); the sk reads as "negation is not ()", which states nothing and loses the hint about which function to use.
+- _…and 39 more; see `state/` for the full list._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `decoder-doctor-no-pulse-audio-message` — `browser/browser/browser.ftl` — "audio" is translated as "hudby" (music), which narrows the meaning to music only.
+    - Current: `Na prehrávanie hudby`
+    - Source: `To play audio, you may need to install the required PulseAudio software.`
+    - Suggest: `Na prehrávanie zvuku`
+    - The en-US says "To play audio", meaning any sound. PulseAudio is needed for all audio, not just music, and the sibling DRM strings translate audio as "zvuk".
 - `migration-no-permissions-instructions-step2-2` — `browser/browser/migrationWizard.ftl` — The macOS variant tells the user to choose “Vybrať” (Select) when the source says “Open”.
     - Current: `V dialógovom okne na výber súborov zvoľte “Vybrať”`
     - Source: `{$sel_1 ->} [macos] In the file picker, choose “Open” [other] In the file picker, navigate to <code>{ $permissionsPath }</code> and choose “Select”`
@@ -918,6 +946,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Your break is over`
     - Suggest: `Vaša prestávka sa skončila`
     - The identical message newtab-widget-timer-notification-break uses "Vaša prestávka sa skončila"; the locale consistently addresses the user with the formal "vy" form.
+- `more-from-moz-solo-title-2` — `browser/browser/preferences/moreFromMozilla.ftl` — A plain hyphen with spaces on both sides is used as a dash instead of an en dash.
+    - Current: `{ -solo-ai-brand-name } - tvorca`
+    - Source: `{ -solo-ai-brand-name } AI Website Creator`
+    - Suggest: `{ -solo-ai-brand-name } – tvorca`
+    - In Slovak, a dash with spaces around it should be an en dash (the locale's most common dash), not a hyphen-minus.
 - `preferences-doh-radio-off` — `browser/browser/preferences/preferences.ftl` — “DNS resolver” left in English where the same term is translated elsewhere in the file.
     - Current: `Použite predvolený DNS resolver`
     - Source: `description: Use your default DNS resolver label: Off`
@@ -983,6 +1016,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `title: Unload tabs and kill process`
     - Suggest: `Uvoľniť karty a ukončiť proces`
     - In the same tooltip group about-processes-unload-tab renders “Unload tab” as “Uvoľniť kartu”, about-processes-shutdown-tab renders “Close tab” as “Zavrieť kartu”, and about-processes-kill-process renders “Kill process” as “Ukončiť proces”; here “unload” becomes “close” and “kill” becomes “cancel”, so the icons no longer match their descriptions.
+- `pending-reports` — `toolkit/toolkit/about/aboutSupport.ftl` — The [few] and [other] variants have a double space between "hlásenia" and "o zlyhaní".
+    - Current: `Všetky hlásenia  o zlyhaní`
+    - Source: `{$reports ->} [one] All Crash Reports (including { $reports } pending crash in the given time range) [other] All Crash Reports (including { $reports } pending crashes in the given time range)`
+    - Suggest: `Všetky hlásenia o zlyhaní`
+    - Users will see the extra space in the text. The [one] variant and the other crash-report strings use a single space.
 - `about-telemetry-show-archived-ping-data` — `toolkit/toolkit/about/aboutTelemetry.ftl` — “ping” treated as a command (“príkaz ping”) although the page otherwise uses it as a data payload.
     - Current: `Archivované údaje príkazu ping`
     - Source: `Archived ping data`
@@ -1029,6 +1067,7 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (2)
 
-_Nothing fixed yet._
+- `home-prefs-recommended-by-option-sponsored-stories` — `browser/browser/preferences/preferences.ftl` — fixed 2026-10-26
+- `pdfjs-editor-add-signature-type-button` — `toolkit/toolkit/pdfviewer/viewer.ftl` — fixed 2026-10-26
