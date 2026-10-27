@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cb086148c41a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `3bdd70692916` |
-| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 16,165 |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
+| **Previous run** | 2026-10-19 @ `cb086148c41a` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 118 of 16,256 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for vi: [android](android.md) · [firefox_ios](firefox_ios.md)
 
@@ -19,9 +18,23 @@ Also for vi: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `view-source-context-wrap-long-lines-2` — `toolkit/toolkit/global/viewSource.ftl` — "Wrap Long Lines" is rendered as "cut long lines", which sounds like truncating rather than wrapping.
+    - Current: `Cắt những dòng dài`
+    - Source: `accesskey: o label: Wrap Long Lines`
+    - Suggest: `Ngắt dòng dài`
+    - The en-US option wraps long lines onto the next line. "Cắt" means cut, so the label suggests lines are trimmed. "Ngắt dòng" is the usual Vietnamese term for line wrapping.
+- `decoder-doctor-decode-error-message` — `browser/browser/browser.ftl` — "decoding" is translated as "mã hóa" (encoding) instead of "giải mã".
+    - Current: `khi mã hóa một tài nguyên`
+    - Source: `An error occurred while decoding a media resource.`
+    - Suggest: `khi giải mã một tài nguyên`
+    - The en-US says the error happened while decoding a media resource. "Mã hóa" means encoding or encrypting, which is the opposite operation.
+- `decoder-doctor-decode-warning-message` — `browser/browser/browser.ftl` — The sentence says "the recovery had an error while encoding" instead of "a recoverable error occurred while decoding".
+    - Current: `Việc khôi phục đã xảy ra lỗi khi mã hóa`
+    - Source: `A recoverable error occurred while decoding a media resource.`
+    - Suggest: `Đã xảy ra lỗi có thể khôi phục khi giải mã`
+    - In the source, "recoverable" describes the error. The Vietnamese turns it into a recovery process that hit an error, and it also uses "mã hóa" (encoding) where the source says decoding.
 
 ### ✅ Fixed since the last run (0)
 
@@ -35,9 +48,20 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (3)
 
-_Nothing retired._
+- `newtab-sports-widget-loading-more` — `browser/browser/newtab/newtab.ftl` — 'Loading more matches' (sports games) was rendered as 'loading more matching results'.
+    - Current: `Đang tải thêm kết quả phù hợp…`
+    - Suggest: `Đang tải thêm trận đấu…`
+    - The comment says the status appears while more matches (games) are being fetched. 'kết quả phù hợp' means search matches.
+- `newtab-sports-widget-message-survey-title` — `browser/browser/newtab/newtab.ftl` — Widgets are called 'tiện ích' in the survey strings, but 'widget' throughout the rest of New Tab.
+    - Current: `Giúp chúng tôi cải thiện các tiện ích`
+    - Suggest: `Giúp chúng tôi cải thiện các widget`
+    - newtab.ftl consistently uses 'widget', and the locale uses 'tiện ích' for add-ons/extensions. Users will think the survey is about extensions. The same issue appears in the survey-widget-title and survey-widget-body strings.
+- `view-source-context-wrap-long-lines` — `toolkit/toolkit/global/viewSource.ftl` — "Wrap" is translated as "Cắt" ("cut"), which suggests long lines are truncated rather than wrapped.
+    - Current: `Cắt những dòng dài`
+    - Suggest: `Ngắt những dòng dài`
+    - Line wrapping moves long lines onto the next line. "Cắt" implies cutting them off.
 
 ---
 
@@ -45,11 +69,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 328 |
-| Strings | 16,165 |
-| Missing strings | 381 |
+| Files | 330 |
+| Strings | 16,256 |
+| Missing strings | 339 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -58,30 +82,26 @@ _Nothing retired._
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 4 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 549 |
+| Access keys not in their label | 558 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 73 |
 
 ### Completeness
 
-**381 strings** are not translated yet, concentrated in:
+**339 strings** are not translated yet, concentrated in:
 
 - `devtools/client/debugger.properties` — 57
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 40
-- `dom/chrome/dom/dom.properties` — 29
+- `dom/chrome/dom/dom.properties` — 30
 - `devtools/client/tooltips.ftl` — 28
 - `dom/chrome/security/csp.properties` — 18
 - `toolkit/toolkit/about/aboutWebrtc.ftl` — 17
 - `toolkit/toolkit/about/url-classifier.ftl` — 16
-- `browser/browser/ipProtection.ftl` — 15
-- `browser/browser/miniWindow.ftl` — 15
 - `dom/chrome/layout/htmlparser.properties` — 15
+- `browser/browser/preferences/preferences.ftl` — 14
 - `toolkit/toolkit/about/aboutGlean.ftl` — 13
 - `devtools/client/perftools.ftl` — 11
-
-**Files absent from the locale:**
-
-- `browser/browser/miniWindow.ftl`
+- `dom/chrome/accessibility/AccessFu.properties` — 10
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -91,7 +111,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 493, `curly-single` 133, `straight-double` 88 | **curly-double** |
+| quotes | `curly-double` 495, `curly-single` 133, `straight-double` 88 | **curly-double** |
 | apostrophe | `typographic` 134, `straight` 12 | **typographic** |
 | ellipsis | `char` 375, `ascii` 18 | **char** |
 | dash | `em` 67, `en` 3 | **em** |
@@ -101,8 +121,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ## 2. Systemic items (decisions, not line items)
 
-- **accesskey — 549 strings** — 549 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
-    - Affected: `addon-install-accept-button`, `addon-install-cancel-button`, `addon-manage-extensions-shortcuts`, `addon-open-about-debugging`, `addon-updates-reset-updates-to-automatic`, `addon-updates-reset-updates-to-manual`, `addon-updates-update-addons-automatically`, `addon-updates-view-updates`, `addressbar-locbar-bookmarks-option`, `addressbar-locbar-clipboard-option`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-openpage-option` …and 530 more
+- **accesskey — 558 strings** — 558 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
+    - Affected: `addon-install-accept-button`, `addon-install-cancel-button`, `addon-manage-extensions-shortcuts`, `addon-open-about-debugging`, `addon-updates-reset-updates-to-automatic`, `addon-updates-reset-updates-to-manual`, `addon-updates-update-addons-automatically`, `addon-updates-view-updates`, `addressbar-locbar-bookmarks-option`, `addressbar-locbar-clipboard-option`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-openpage-option` …and 539 more
 - **typography — 73 strings** — 73 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
     - Affected: `BlockMixedActiveContent`, `BlockMixedDisplayContent`, `CookieRejectedAttributeExpiryOversize`, `FullscreenDeniedContainerNotAllowed`, `MediaLoadUnsupportedMimeType`, `MediaLoadUnsupportedTypeAttribute`, `MimeNotCss`, `MimeNotCssWarn`, `about-debugging-network-location-form-duplicate`, `about-debugging-network-location-form-invalid`, `about-debugging-setup-usb-status-updating`, `about-debugging-setup-usb-updating-button` …and 60 more
 
@@ -127,8 +147,8 @@ _Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 214 |
-| 2 | Wrong content (says something other than the English) | 179 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 212 |
+| 2 | Wrong content (says something other than the English) | 181 |
 | 3 | Degraded language (grammar, spelling, terminology) | 60 |
 | 4 | Cosmetic (typography, spacing) | 43 |
 
@@ -259,11 +279,6 @@ _Also listed under their own category below._
     - Source: `{$number ->} [other] Follow up to { $number } teams`
     - Suggest: `Theo dõi tối đa { $number } đội`
     - The variable is a maximum, but the Vietnamese tells the user to follow exactly N. 'nhóm' also clashes with 'Theo dõi đội' used for teams elsewhere in the same widget.
-- `newtab-sports-widget-loading-more` — `browser/browser/newtab/newtab.ftl` — 'Loading more matches' (sports games) was rendered as 'loading more matching results'.
-    - Current: `Đang tải thêm kết quả phù hợp…`
-    - Source: `Loading more matches…`
-    - Suggest: `Đang tải thêm trận đấu…`
-    - The comment says the status appears while more matches (games) are being fetched. 'kết quả phù hợp' means search matches.
 - `newtab-sports-widget-watch-stream-select-games-only` — `browser/browser/newtab/newtab.ftl` — 'Select games only' (the provider streams only some matches) was rendered as the imperative 'only choose matches'.
     - Current: `Chỉ chọn trận đấu`
     - Source: `Select games only`
@@ -434,10 +449,25 @@ _Also listed under their own category below._
     - Source: `{ -brand-short-name } blocked this page because it might try to install dangerous apps that steal or delete your information (for example, photos, passwords, messages and credit cards).`
     - Suggest: `vì nó có thể cố gắng cài ứng dụng nguy hiểm`
     - The en-US only says the page might try this. The Vietnamese states it as fact.
-- _…and 108 more; see `state/` for the full list._
+- `safeb-blocked-unwanted-page-short-desc` — `browser/browser/safebrowsing/blockedSite.ftl` — 'because it might try to trick you' became 'because it tries to trick you', so the hedge is gone.
+    - Current: `bởi vì nó cố lừa bạn`
+    - Source: `{ -brand-short-name } blocked this page because it might try to trick you into installing programs that harm your browsing experience (for example, by changing your homepage or showing extra ads on sites you visit).`
+    - Suggest: `bởi vì nó có thể cố lừa bạn`
+    - The en-US says the page might try to trick the user. The Vietnamese states it as fact.
+- _…and 107 more; see `state/` for the full list._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `decoder-doctor-decode-error-message` — `browser/browser/browser.ftl` — "decoding" is translated as "mã hóa" (encoding) instead of "giải mã".
+    - Current: `khi mã hóa một tài nguyên`
+    - Source: `An error occurred while decoding a media resource.`
+    - Suggest: `khi giải mã một tài nguyên`
+    - The en-US says the error happened while decoding a media resource. "Mã hóa" means encoding or encrypting, which is the opposite operation.
+- `decoder-doctor-decode-warning-message` — `browser/browser/browser.ftl` — The sentence says "the recovery had an error while encoding" instead of "a recoverable error occurred while decoding".
+    - Current: `Việc khôi phục đã xảy ra lỗi khi mã hóa`
+    - Source: `A recoverable error occurred while decoding a media resource.`
+    - Suggest: `Đã xảy ra lỗi có thể khôi phục khi giải mã`
+    - In the source, "recoverable" describes the error. The Vietnamese turns it into a recovery process that hit an error, and it also uses "mã hóa" (encoding) where the source says decoding.
 - `restore-session-startup-suggestion-message` — `browser/browser/newtab/asrouter.ftl` — "Open previous tabs?" is translated in the past tense as "Đã mở các thẻ trước đó?" ("Did you open the previous tabs?").
     - Current: `Đã mở các thẻ trước đó?`
     - Source: `<strong>Open previous tabs?</strong> You can restore your previous session from the { -brand-short-name } application menu <img data-l10n-name="icon"/>, under History.`
@@ -728,17 +758,7 @@ _Also listed under their own category below._
     - Source: `WAICT: Fetching integrity manifest from “%1$S”.`
     - Suggest: `Đang tải manifest về tính toàn vẹn từ`
     - The en-US says the browser is fetching the integrity manifest, a file. The Vietnamese says it is fetching the manifest's integrity, which is not something you can fetch.
-- `WAICTManifestFetchError` — `dom/chrome/security/security.properties` — "integrity manifest" is translated as "the integrity of the manifest".
-    - Current: `Không thể tải tính toàn vẹn của manifest từ`
-    - Source: `WAICT: Failed to fetch integrity manifest from “%1$S”.`
-    - Suggest: `Không thể tải manifest về tính toàn vẹn từ`
-    - The source means the integrity manifest file failed to fetch. The Vietnamese says fetching the manifest's integrity failed.
-- `WAICTResourceNotInManifest` — `dom/chrome/security/security.properties` — "in the integrity manifest" is translated as "in the integrity of the manifest".
-    - Current: `trong integrity của manifest`
-    - Source: `WAICT: The resource “%1$S” with the computed hash “%2$S” was not found in the integrity manifest.`
-    - Suggest: `trong manifest về tính toàn vẹn`
-    - The resource was not found in the integrity manifest. The Vietnamese says it was not found in the manifest's integrity, which makes no sense.
-- _…and 45 more; see `state/` for the full list._
+- _…and 47 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -777,11 +797,6 @@ _Also listed under their own category below._
     - Source: `description: Show notifications from your sites on their shortcuts label: Web notifications`
     - Suggest: `trên các lối tắt của chúng`
     - Every other string in newtab.ftl uses 'Lối tắt' for top-site shortcuts. 'phím tắt' means keyboard shortcut.
-- `newtab-sports-widget-message-survey-title` — `browser/browser/newtab/newtab.ftl` — Widgets are called 'tiện ích' in the survey strings, but 'widget' throughout the rest of New Tab.
-    - Current: `Giúp chúng tôi cải thiện các tiện ích`
-    - Source: `Help us make widgets better`
-    - Suggest: `Giúp chúng tôi cải thiện các widget`
-    - newtab.ftl consistently uses 'widget', and the locale uses 'tiện ích' for add-ons/extensions. Users will think the survey is about extensions. The same issue appears in the survey-widget-title and survey-widget-body strings.
 - `onboarding-refresh-terms-of-use-with-links` — `browser/browser/newtab/onboarding.ftl` — 'Terms of Use' was rendered as 'Điều khoản dịch vụ' (Terms of Service) instead of the locale's 'Điều khoản sử dụng'.
     - Current: `Điều khoản dịch vụ của { -brand-product-name }`
     - Source: `By continuing, you agree to the <a data-l10n-name="terms_of_use">{ -brand-product-name } Terms of Use</a> and our <a data-l10n-name="privacy_notice">Privacy Notice</a>. To help improve the browser, { -brand-product-name…`
@@ -1042,7 +1057,12 @@ _Also listed under their own category below._
     - Source: `Cookie “%1$S” has been rejected for invalid domain.`
     - Suggest: `đã bị từ chối vì miền không hợp lệ`
     - In the source, "rejected for invalid domain" gives the reason. "cho" reads as "rejected to the invalid domain". The sibling strings correctly use "vì".
-- _…and 24 more; see `state/` for the full list._
+- `CookieRejectedPartitionedRequiresSecure` — `netwerk/necko.properties` — "thuộc tinh" is missing the accent on "tính".
+    - Current: `thuộc tinh`
+    - Source: `Cookie “%1$S” has been rejected because it has the “Partitioned” attribute but is missing the “secure” attribute.`
+    - Suggest: `thuộc tính`
+    - Spelling error. The correct word for "attribute" is "thuộc tính", and the same sentence spells it correctly earlier.
+- _…and 23 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 

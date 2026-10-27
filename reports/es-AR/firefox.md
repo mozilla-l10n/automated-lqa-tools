@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
+| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,490 |
+| **Strings reviewed this run** | 99 of 16,564 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,23 @@ Also for es-AR: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `decoder-doctor-learn-how-link` — `browser/browser/browser.ftl` — Missing accent on the interrogative "cómo".
+    - Current: `Aprender como`
+    - Source: `Learn how`
+    - Suggest: `Aprender cómo`
+    - In "Learn how", "how" is an indirect interrogative, so Spanish requires the accented "cómo".
+- `ipprotection-site-inclusions-callout-description-lapsed-users` — `browser/browser/ipProtection.ftl` — Typo in the verb: "Establezcam" should be "Establezca".
+    - Current: `Establezcam`
+    - Source: `Set rules to turn on VPN when you want extra privacy or location-based browsing, and off when you don’t.`
+    - Suggest: `Establezca`
+    - "Establezcam" is not a word. The rest of the sentence uses the usted form ("quiera"), so the verb should be "Establezca".
+- `notifications-filter` — `browser/browser/preferences/preferences.ftl` — "sitios Web" is capitalized, inconsistent with "sitios web" used in the adjacent strings of the same panel.
+    - Current: `Buscar sitios Web`
+    - Source: `placeholder: Search websites`
+    - Suggest: `Buscar sitios web`
+    - The same settings panel renders "website(s)" as "sitio web" / "sitios web" in lowercase (header, empty-state, card label); standard Spanish spelling writes "web" in lowercase here.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,9 +48,16 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (2)
 
-_Nothing retired._
+- `newtab-picture-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — The .title and .aria-label of the same button say different things (singular vs plural).
+    - Current: `.title = Opción de foto del día`
+    - Suggest: `.title = Opciones de foto del día`
+    - Both attributes render “Picture of the day options” in en-US; the tooltip says “Opción” (one option) while the aria-label says “Opciones de fotos del día”.
+- `newtab-sports-widget-loading-more` — `browser/browser/newtab/newtab.ftl` — “matches” (football games) translated as search “coincidencias”.
+    - Current: `Cargando más coincidencias…`
+    - Suggest: `Cargando más partidos…`
+    - Developer comment: “Status shown when more matches are being fetched.” The rest of the sports widget consistently uses “partidos”.
 
 ---
 
@@ -44,9 +65,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 328 |
-| Strings | 16,490 |
-| Missing strings | 30 |
+| Files | 330 |
+| Strings | 16,564 |
+| Missing strings | 31 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,17 +84,18 @@ _Nothing retired._
 
 ### Completeness
 
-**30 strings** are not translated yet, concentrated in:
+**31 strings** are not translated yet, concentrated in:
 
 - `browser/browser/newtab/newtab.ftl` — 11
 - `toolkit/toolkit/about/url-classifier.ftl` — 6
+- `browser/browser/preferences/preferences.ftl` — 4
 - `browser/browser/featureCallout.ftl` — 3
-- `browser/browser/preferences/preferences.ftl` — 3
-- `browser/browser/newtab/asrouter.ftl` — 2
+- `toolkit/toolkit/global/narrate.ftl` — 1
 - `toolkit/toolkit/global/processTypes.ftl` — 1
 - `toolkit/toolkit/about/aboutAddons.ftl` — 1
-- `browser/browser/appmenu.ftl` — 1
-- `browser/browser/sidebar.ftl` — 1
+- `browser/browser/ipProtection.ftl` — 1
+- `browser/browser/newtab/asrouter.ftl` — 1
+- `dom/chrome/dom/dom.properties` — 1
 - `devtools/client/debugger.properties` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
@@ -100,15 +122,15 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (280)
+## 3. Open findings (281)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 48 |
-| 2 | Wrong content (says something other than the English) | 109 |
-| 3 | Degraded language (grammar, spelling, terminology) | 89 |
-| 4 | Cosmetic (typography, spacing) | 29 |
+| 2 | Wrong content (says something other than the English) | 108 |
+| 3 | Degraded language (grammar, spelling, terminology) | 92 |
+| 4 | Cosmetic (typography, spacing) | 28 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -160,16 +182,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `You are caught up!`
     - Suggest: `¡Estás al día!`
     - “caught up” means having read everything; “atrapado” means trapped/caught, reversing the intended positive meaning.
-- `newtab-picture-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — The .title and .aria-label of the same button say different things (singular vs plural).
-    - Current: `.title = Opción de foto del día`
-    - Source: `aria-label: Picture of the day options title: Picture of the day options`
-    - Suggest: `.title = Opciones de foto del día`
-    - Both attributes render “Picture of the day options” in en-US; the tooltip says “Opción” (one option) while the aria-label says “Opciones de fotos del día”.
-- `newtab-sports-widget-loading-more` — `browser/browser/newtab/newtab.ftl` — “matches” (football games) translated as search “coincidencias”.
-    - Current: `Cargando más coincidencias…`
-    - Source: `Loading more matches…`
-    - Suggest: `Cargando más partidos…`
-    - Developer comment: “Status shown when more matches are being fetched.” The rest of the sports widget consistently uses “partidos”.
 - `newtab-widget-timer-label-play` — `browser/browser/newtab/newtab.ftl` — Timer “Play” control translated as “let's play” (a game).
     - Current: `A jugar`
     - Source: `label: Play`
@@ -410,7 +422,17 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Blocked loading mixed active content “%1$S”`
     - Suggest: `Bloqueado al cargar contenido activo mixto “%1$S”`
     - en-US: “Blocked loading mixed active content”. As translated it is identical to BlockMixedDisplayContent, so the two distinct security conditions are indistinguishable.
-- _…and 43 more; see `state/` for the full list._
+- `XTCOWithMIMEValueMissing` — `dom/chrome/security/security.properties` — Says the resource was blocked for a MIME mismatch instead of not rendered due to unknown/incorrect/missing MIME type.
+    - Current: `El recurso de “%1$S” fue bloqueado por diferencia de tipo MIME (X-Content-Type-Options: nosniff).`
+    - Source: `The resource from “%1$S” was not rendered due to an unknown, incorrect or missing MIME type (X-Content-Type-Options: nosniff).`
+    - Suggest: `El recurso de “%1$S” no se procesó debido a un tipo MIME desconocido, incorrecto o faltante (X-Content-Type-Options: nosniff).`
+    - en-US: “The resource from “%1$S” was not rendered due to an unknown, incorrect or missing MIME type…”. As translated it duplicates MimeTypeMismatch2.
+- `SSL_ERROR_BAD_SERVER` — `security/manager/chrome/pipnss/nsserrors.properties` — Says the server encountered bad data from the server; en-US says the client encountered bad data from the server.
+    - Current: `El servidor encontró datos erróneos del servidor.`
+    - Source: `The client has encountered bad data from the server.`
+    - Suggest: `El cliente encontró datos erróneos del servidor.`
+    - en-US: “The client has encountered bad data from the server.” The subject is wrong, and the string becomes identical in sense to SSL_ERROR_BAD_CLIENT.
+- _…and 41 more; see `state/` for the full list._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -632,6 +654,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `heading: Grab your mobile tabs`
     - Suggest: `Traé las pestañas del dispositivo móvil`
     - The en-US "Grab your mobile tabs" is an imperative; "A traer…" is ungrammatical/odd as a heading.
+- `decoder-doctor-learn-how-link` — `browser/browser/browser.ftl` — Missing accent on the interrogative "cómo".
+    - Current: `Aprender como`
+    - Source: `Learn how`
+    - Suggest: `Aprender cómo`
+    - In "Learn how", "how" is an indirect interrogative, so Spanish requires the accented "cómo".
+- `ipprotection-site-inclusions-callout-description-lapsed-users` — `browser/browser/ipProtection.ftl` — Typo in the verb: "Establezcam" should be "Establezca".
+    - Current: `Establezcam`
+    - Source: `Set rules to turn on VPN when you want extra privacy or location-based browsing, and off when you don’t.`
+    - Suggest: `Establezca`
+    - "Establezcam" is not a word. The rest of the sentence uses the usted form ("quiera"), so the verb should be "Establezca".
 - `migration-no-selected-data-label` — `browser/browser/migrationWizard.ftl` — Accented "sé" used instead of the reflexive pronoun "se".
     - Current: `No sé seleccionaron datos a importar`
     - Source: `No data selected for import`
@@ -917,17 +949,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `The character encoding of an HTML document was declared using the XML declaration syntax. This is non-conforming, and declaring the encoding using a meta tag at the start of the head part is more efficient.`
     - Suggest: `declarada usando la sintaxis de XML`
     - Typo producing a nonsense token.
-- `errNoSpaceBetweenPublicAndSystemIds` — `dom/chrome/layout/htmlparser.properties` — Typo “identficadores”.
-    - Current: `entre los identficadores públicos y de sistema`
-    - Source: `No space between the doctype public and system identifiers.`
-    - Suggest: `entre los identificadores públicos y de sistema`
-    - Misspelling of “identificadores”.
-- `PERR_NOT_IMPLEMENTED` — `dom/chrome/layout/printing.properties` — Missing accent on “está”.
-    - Current: `todavía no esta implementada`
-    - Source: `Some printing functionality is not implemented yet.`
-    - Suggest: `todavía no está implementada`
-    - Verb form requires the accent.
-- _…and 22 more; see `state/` for the full list._
+- _…and 24 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -946,6 +968,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
     - Suggest: `Qué hay de nuevo`
     - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `notifications-filter` — `browser/browser/preferences/preferences.ftl` — "sitios Web" is capitalized, inconsistent with "sitios web" used in the adjacent strings of the same panel.
+    - Current: `Buscar sitios Web`
+    - Source: `placeholder: Search websites`
+    - Suggest: `Buscar sitios web`
+    - The same settings panel renders "website(s)" as "sitio web" / "sitios web" in lowercase (header, empty-state, card label); standard Spanish spelling writes "web" in lowercase here.
 - `preferences-ai-controls-sidebar-chatbot-group-3` — `browser/browser/preferences/preferences.ftl` — Uses the peninsular "usted" imperative "Mantenga" instead of the es-AR voseo/impersonal register used elsewhere in the string.
     - Current: `Mantenga un chatbot a la vista mientras se navega.`
     - Source: `description: Keep a chatbot in view as you browse. Choose from multiple providers and switch anytime. label: AI chatbot providers in sidebar`

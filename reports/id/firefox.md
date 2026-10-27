@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cb086148c41a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `3bdd70692916` |
-| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 13,799 |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
+| **Previous run** | 2026-10-19 @ `cb086148c41a` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 49 of 13,841 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for id: [android](android.md) · [firefox_ios](firefox_ios.md)
 
@@ -19,9 +18,23 @@ Also for id: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `text-action-copy-clean-link-to-highlight-2` — `toolkit/toolkit/global/textActions.ftl` — "Clean" was dropped, so the label is the same as the plain "Copy Link to Highlight" item.
+    - Current: `Salin Tautan ke Sorotan`
+    - Source: `accesskey: k label: Copy Clean Link to Highlight`
+    - Suggest: `Salin Tautan Bersih ke Sorotan`
+    - The source says "Copy Clean Link to Highlight", a variant that strips trackers. Without "Bersih", the menu shows two items with the same name that do different things.
+- `toolbar-edit-controls` — `browser/browser/browser.ftl` — "Edit Kontrol" uses English word order and reads as the instruction "edit the controls".
+    - Current: `Edit Kontrol`
+    - Source: `label: Edit controls title: Edit controls`
+    - Suggest: `Kontrol Edit`
+    - This labels the group of edit buttons (cut/copy/paste). An Indonesian noun phrase puts the head noun first, so it should be "Kontrol Edit". The current order reads as a verb phrase.
+- `toolbar-button-history` — `browser/browser/browser.ftl` — There is no space before the parenthesised shortcut.
+    - Current: `Anda({ $shortcut })`
+    - Source: `label: History tooltiptext: Show your history ({ $shortcut })`
+    - Suggest: `Anda ({ $shortcut })`
+    - The source has a space before the parenthesis, and every other tooltip in the batch keeps it.
 
 ### ✅ Fixed since the last run (0)
 
@@ -35,9 +48,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `view-source-context-wrap-long-lines` — `toolkit/toolkit/global/viewSource.ftl` — "Wrap" is rendered as "Potong" (cut), which suggests long lines are truncated rather than wrapped.
+    - Current: `Potong Baris Panjang`
+    - Suggest: `Lipat Baris Panjang`
+    - Wrapping moves the overflow onto the next line. "Potong" means cut or truncate, which is a different behaviour.
 
 ---
 
@@ -45,9 +61,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 322 |
-| Strings | 13,799 |
-| Missing strings | 2,747 |
+| Files | 323 |
+| Strings | 13,841 |
+| Missing strings | 2,754 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 7 |
 | Files with no en-US counterpart | 0 |
@@ -64,19 +80,19 @@ _Nothing retired._
 
 ### Completeness
 
-**2,747 strings** are not translated yet, concentrated in:
+**2,754 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 501
-- `browser/browser/preferences/preferences.ftl` — 441
-- `browser/browser/ipProtection.ftl` — 161
+- `browser/browser/newtab/newtab.ftl` — 488
+- `browser/browser/preferences/preferences.ftl` — 455
+- `browser/browser/ipProtection.ftl` — 162
 - `browser/browser/newtab/onboarding.ftl` — 131
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 88
 - `browser/browser/newtab/asrouter.ftl` — 82
 - `toolkit/toolkit/about/aboutAddons.ftl` — 60
 - `browser/browser/featureCallout.ftl` — 57
 - `browser/browser/profiles.ftl` — 57
-- `browser/browser/browser.ftl` — 44
 - `toolkit/toolkit/about/aboutGlean.ftl` — 43
+- `browser/browser/browser.ftl` — 43
 - `browser/browser/tabbrowser.ftl` — 42
 
 **Files absent from the locale:**
@@ -112,15 +128,15 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (281)
+## 3. Open findings (283)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 66 |
 | 2 | Wrong content (says something other than the English) | 151 |
-| 3 | Degraded language (grammar, spelling, terminology) | 47 |
-| 4 | Cosmetic (typography, spacing) | 16 |
+| 3 | Degraded language (grammar, spelling, terminology) | 48 |
+| 4 | Cosmetic (typography, spacing) | 17 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -534,11 +550,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `:unblock URL_STRING  Stop blocking network requests    It accepts only one argument, the exact same string previously passed to :block.`
     - Suggest: `:unblock URL_STRING`
     - `:unblock` is a literal command name; ":buka blokir" is not a valid command and even contains a space, so it cannot be typed as shown.
-- `view-source-context-wrap-long-lines` — `toolkit/toolkit/global/viewSource.ftl` — "Wrap" is rendered as "Potong" (cut), which suggests long lines are truncated rather than wrapped.
-    - Current: `Potong Baris Panjang`
-    - Source: `label: Wrap Long Lines`
-    - Suggest: `Lipat Baris Panjang`
-    - Wrapping moves the overflow onto the next line. "Potong" means cut or truncate, which is a different behaviour.
+- `text-action-copy-clean-link-to-highlight-2` — `toolkit/toolkit/global/textActions.ftl` — "Clean" was dropped, so the label is the same as the plain "Copy Link to Highlight" item.
+    - Current: `Salin Tautan ke Sorotan`
+    - Source: `accesskey: k label: Copy Clean Link to Highlight`
+    - Suggest: `Salin Tautan Bersih ke Sorotan`
+    - The source says "Copy Clean Link to Highlight", a variant that strips trackers. Without "Bersih", the menu shows two items with the same name that do different things.
 - `language-name-lo` — `toolkit/toolkit/intl/languageNames.ftl` — Lao is rendered "Laothia", which is not an Indonesian word or language name.
     - Current: `Laothia`
     - Source: `Lao`
@@ -582,6 +598,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `label: Share tooltiptext: Share this page`
     - Suggest: `Bagikan laman ini`
     - "ini" is a demonstrative in the middle of a sentence; capitalizing it is a spelling/capitalization error not present in the en-US sentence case.
+- `toolbar-edit-controls` — `browser/browser/browser.ftl` — "Edit Kontrol" uses English word order and reads as the instruction "edit the controls".
+    - Current: `Edit Kontrol`
+    - Source: `label: Edit controls title: Edit controls`
+    - Suggest: `Kontrol Edit`
+    - This labels the group of edit buttons (cut/copy/paste). An Indonesian noun phrase puts the head noun first, so it should be "Kontrol Edit". The current order reads as a verb phrase.
 - `urlbar-result-explanation-last-visited-absolute` — `browser/browser/browser.ftl` — Passive/active mismatch: "Terakhir Anda kunjungi" is ungrammatical mixing of active and passive forms.
     - Current: `Terakhir Anda kunjungi pada { $date }`
     - Source: `You last visited on { $date }`
@@ -1099,6 +1120,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `label: Clear Recent History…`
     - Suggest: `Bersihkan Riwayat Terakhir…`
     - The en-US label ends with "…" because the item opens a dialog, and the locale uses the ellipsis character elsewhere.
+- `toolbar-button-history` — `browser/browser/browser.ftl` — There is no space before the parenthesised shortcut.
+    - Current: `Anda({ $shortcut })`
+    - Source: `label: History tooltiptext: Show your history ({ $shortcut })`
+    - Suggest: `Anda ({ $shortcut })`
+    - The source has a space before the parenthesis, and every other tooltip in the batch keeps it.
 - `desktop-to-mobile-subtitle` — `browser/browser/newtab/onboarding.ftl` — The quoted button name does not match the actual translated button label.
     - Current: `pilih “Sinkronkan ke seluler”`
     - Source: `Scan the QR code to download { -brand-product-name } for mobile. Once installed, select “Sync to mobile” to access your passwords, bookmarks, and more on the go.`

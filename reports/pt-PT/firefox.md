@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
+| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,520 |
+| **Strings reviewed this run** | 102 of 16,595 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for pt-PT: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `toolbar-edit-controls` — `browser/browser/browser.ftl` — "Controlos de editar" uses an infinitive where a noun is required; it should be "Controlos de edição".
+    - Current: `Controlos de editar`
+    - Source: `label: Edit controls title: Edit controls`
+    - Suggest: `Controlos de edição`
+    - The en-US "Edit controls" names a group of editing controls. In Portuguese, "de" followed by an infinitive does not work as a noun modifier here. The natural form is "Controlos de edição", which matches "Controlos de zoom" next to it.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,9 +38,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `toolbar-switcher-customizable-label` — `browser/browser/aiWindow.ftl` — “Smart windows” translated as “janelas Inteligentes” in one tooltip and left as “Janelas Smart” in the v2 variant of the same button.
+    - Current: `Alternar entre as janelas Inteligentes e Clássicas.`
+    - Suggest: `Alternar entre as Janelas Smart e Clássicas.`
+    - The two tooltips label the same switcher button; one of them must be wrong, and “Inteligentes” diverges from the Smart Window brand used everywhere else in the file.
 
 ---
 
@@ -44,8 +51,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 328 |
-| Strings | 16,520 |
+| Files | 330 |
+| Strings | 16,595 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -73,7 +80,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 566, `curly-single` 114, `straight-double` 40 | **curly-double** |
 | apostrophe | `typographic` 124, `straight` 31 | **typographic** |
-| ellipsis | `char` 372, `ascii` 28 | **char** |
+| ellipsis | `char` 371, `ascii` 28 | **char** |
 | dash | `em` 64, `en` 8 | **em** |
 | nbsp | `total` 42, `before-punctuation` 2, `space-before-punctuation` 6 | **total** |
 
@@ -91,9 +98,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 184 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 183 |
 | 2 | Wrong content (says something other than the English) | 122 |
-| 3 | Degraded language (grammar, spelling, terminology) | 1 |
+| 3 | Degraded language (grammar, spelling, terminology) | 2 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
@@ -548,11 +555,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### C. Grammar, agreement & spelling
 
-- `toolbar-switcher-customizable-label` — `browser/browser/aiWindow.ftl` — “Smart windows” translated as “janelas Inteligentes” in one tooltip and left as “Janelas Smart” in the v2 variant of the same button.
-    - Current: `Alternar entre as janelas Inteligentes e Clássicas.`
-    - Source: `label: { -smart-window-brand-name } switcher tooltiptext: Switch between Smart and Classic windows.`
-    - Suggest: `Alternar entre as Janelas Smart e Clássicas.`
-    - The two tooltips label the same switcher button; one of them must be wrong, and “Inteligentes” diverges from the Smart Window brand used everywhere else in the file.
 - `appmenu-addon-post-install-message3` — `browser/browser/appMenuNotifications.ftl` — “add-ons” rendered as “extensões”, narrowing the term the tree renders as “complementos”.
     - Current: `Controle as suas extensões e temas através do menu da aplicação.`
     - Source: `Manage your add-ons and themes through the application menu.`
@@ -568,6 +570,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `The Default Browser Agent task checks when the default changes from { -brand-short-name } to another browser. If the change happens under suspicious circumstances, it will prompt users to change back to { -brand-short-n…`
     - Suggest: `se altera do { -brand-short-name } para outro navegador`
     - Two spaces appear between "do" and the brand name in the rendered sentence shown in the Windows Task Scheduler description.
+- `toolbar-edit-controls` — `browser/browser/browser.ftl` — "Controlos de editar" uses an infinitive where a noun is required; it should be "Controlos de edição".
+    - Current: `Controlos de editar`
+    - Source: `label: Edit controls title: Edit controls`
+    - Suggest: `Controlos de edição`
+    - The en-US "Edit controls" names a group of editing controls. In Portuguese, "de" followed by an infinitive does not work as a noun modifier here. The natural form is "Controlos de edição", which matches "Controlos de zoom" next to it.
 - `trustpanel-list-label-fingerprinter` — `browser/browser/browser.ftl` — “Fingerprinters” rendered as “known identifiers”, inconsistent with “identificadores digitais” used for the same term elsewhere in the same panel.
     - Current: `{ $count } identificador conhecido`
     - Source: `{$count ->} [one] { $count } Fingerprinters [other] { $count } Fingerprinters`

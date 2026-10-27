@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cb086148c41a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `3bdd70692916` |
-| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 16,500 |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
+| **Previous run** | 2026-10-19 @ `cb086148c41a` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 95 of 16,570 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for nl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
@@ -19,9 +18,23 @@ Also for nl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `urlbar-menuitem-paste-and-go` — `browser/browser/browser.ftl` — Label capitalises 'Gaan' and uses '&', breaking sentence case and the 'en' used in the sibling 'Plakken en zoeken'.
+    - Current: `Plakken & Gaan`
+    - Source: `accesskey: G label: Paste and Go`
+    - Suggest: `Plakken en gaan`
+    - The nl conventions use sentence case for labels, and the parallel menu item 'Paste and Search' is rendered 'Plakken en zoeken'.
+- `narrate-toggle-label` — `toolkit/toolkit/global/narrate.ftl` — 'Read aloud' is rendered 'Hardop lezen' on the button but 'Hardop voorlezen' in the menu header it opens.
+    - Current: `Hardop lezen`
+    - Source: `Read aloud ({ $shortcut })`
+    - Suggest: `Hardop voorlezen`
+    - The same en-US term on the same feature surface is translated two ways. 'Voorlezen' (reading to someone) is the term used in the header and in the rate tooltips.
+- `mini-window-overlay-instructions` — `browser/browser/miniWindow.ftl` — The pronoun 'Hij' has the wrong gender: it refers to the neuter noun 'minivenster' (or 'gebied'), so it should be 'Het'.
+    - Current: `Hij blijft tijdens het surfen bovenaan staan.`
+    - Source: `Drag or click to select an area to move to a Mini Window. It’ll stay on top while you browse.`
+    - Suggest: `Het blijft tijdens het surfen bovenaan staan.`
+    - 'It' in the en-US means the Mini Window. 'Minivenster' is a neuter de/het noun ('het venster'), and so is 'gebied', so the pronoun must be 'het', not the common-gender 'hij'.
 
 ### ✅ Fixed since the last run (0)
 
@@ -35,9 +48,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (2)
 
-_Nothing retired._
+- `toolbar-switcher-customizable-label` — `browser/browser/aiWindow.ftl` — toolbar-switcher-customizable-label (.tooltiptext) — aiWindow.ftl; smartwindow-switcher-callout — newtab/onboarding.ftl — mid-sentence "Slimme" capitalised in one half of a coordination only.
+    - Suggest: `.tooltiptext`
+- `newtab-stocks-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — newtab/newtab.ftl — "Opties voor Aandelenwidget" → lowercase
+    - Suggest: `lowercase`
 
 ---
 
@@ -45,11 +61,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 328 |
-| Strings | 16,500 |
-| Missing strings | 46 |
+| Files | 330 |
+| Strings | 16,570 |
+| Missing strings | 25 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -64,24 +80,15 @@ _Nothing retired._
 
 ### Completeness
 
-**46 strings** are not translated yet, concentrated in:
+**25 strings** are not translated yet, concentrated in:
 
-- `browser/browser/miniWindow.ftl` — 15
-- `browser/browser/ipProtection.ftl` — 14
-- `browser/browser/browser.ftl` — 6
-- `browser/browser/preferences/permissions.ftl` — 2
-- `browser/browser/preferences/preferences.ftl` — 2
-- `browser/browser/browserContext.ftl` — 1
-- `browser/browser/migrationWizard.ftl` — 1
-- `browser/browser/sanitize.ftl` — 1
-- `browser/browser/sidebar.ftl` — 1
-- `browser/browser/tabbrowser.ftl` — 1
-- `browser/browser/newtab/newtab.ftl` — 1
-- `toolkit/toolkit/global/videocontrols.ftl` — 1
-
-**Files absent from the locale:**
-
-- `browser/browser/miniWindow.ftl`
+- `browser/browser/preferences/preferences.ftl` — 14
+- `browser/browser/ipProtection.ftl` — 4
+- `browser/chrome/browser/browser.properties` — 2
+- `dom/chrome/security/security.properties` — 2
+- `toolkit/toolkit/global/narrate.ftl` — 1
+- `browser/browser/policies/policies-descriptions.ftl` — 1
+- `dom/chrome/dom/dom.properties` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -91,12 +98,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-single` 819, `straight-double` 25, `curly-double` 9 | **curly-single** |
-| apostrophe | `typographic` 1036 | **typographic** |
-| ellipsis | `char` 399 | **char** |
-| dash | `en` 110 | **en** |
+| quotes | `curly-single` 821, `straight-double` 25, `curly-double` 9 | **curly-single** |
+| apostrophe | `typographic` 1038 | **typographic** |
+| ellipsis | `char` 398 | **char** |
+| dash | `en` 111 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `formal` 2717 | **formal** |
+| register | `formal` 2726 | **formal** |
 
 ---
 
@@ -106,14 +113,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (344)
+## 3. Open findings (345)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 10 |
 | 2 | Wrong content (says something other than the English) | 116 |
-| 3 | Degraded language (grammar, spelling, terminology) | 191 |
+| 3 | Degraded language (grammar, spelling, terminology) | 192 |
 | 4 | Cosmetic (typography, spacing) | 27 |
 
 ### A. Functional, markup, variables & plurals
@@ -333,9 +340,6 @@ _Nothing reported._
 - `aiwindow-ai-chat-grid-list-view` — `browser/browser/aiWindow.ftl` — "Modus wisselen: Lijstweergave" → lowercase (cf. -grid-view)
     - Source: `aria-label: Switch mode: List View tooltiptext: List View`
     - Suggest: `-grid-view`
-- `toolbar-switcher-customizable-label` — `browser/browser/aiWindow.ftl` — toolbar-switcher-customizable-label (.tooltiptext) — aiWindow.ftl; smartwindow-switcher-callout — newtab/onboarding.ftl — mid-sentence "Slimme" capitalised in one half of a coordination only.
-    - Source: `label: { -smart-window-brand-name } switcher tooltiptext: Switch between Smart and Classic windows.`
-    - Suggest: `.tooltiptext`
 - `aiwindow-manage-memories` — `browser/browser/aiWindowContent.ftl` — no hyphen between these two Dutch nouns. Current: "Herinnering-instellingen" → Suggest: "Herinneringsinstellingen"
     - Source: `label: Memory settings`
     - Suggest: `"Herinneringsinstellingen"`
@@ -374,6 +378,11 @@ _Nothing reported._
 - `menu-tools-extensions-and-themes` — `browser/browser/menubar.ftl` — "Extensies en Thema's" → "Extensies en thema's". (See also S-2.)
     - Source: `accesskey: E label: Extensions and Themes`
     - Suggest: `"Extensies en thema's".`
+- `mini-window-overlay-instructions` — `browser/browser/miniWindow.ftl` — The pronoun 'Hij' has the wrong gender: it refers to the neuter noun 'minivenster' (or 'gebied'), so it should be 'Het'.
+    - Current: `Hij blijft tijdens het surfen bovenaan staan.`
+    - Source: `Drag or click to select an area to move to a Mini Window. It’ll stay on top while you browse.`
+    - Suggest: `Het blijft tijdens het surfen bovenaan staan.`
+    - 'It' in the en-US means the Mini Window. 'Minivenster' is a neuter de/het noun ('het venster'), and so is 'gebied', so the pronoun must be 'het', not the common-gender 'hij'.
 - `launch-on-login-infobar-final-message` — `browser/browser/newtab/asrouter.ftl` — launch-on-login-infobar-message, launch-on-login-infobar-final-message — newtab/asrouter.ftl — "telkens dat" is not standard Dutch. Suggest: "telkens wanneer" (as in launch-options-spotlight-title-launch-on-login)
     - Source: `<strong>Open { -brand-short-name } every time you restart your computer?</strong> To manage your Startup preferences, search “startup” in settings.`
 - `launch-on-login-infobar-message` — `browser/browser/newtab/asrouter.ftl` — launch-on-login-infobar-message, launch-on-login-infobar-final-message — newtab/asrouter.ftl — "telkens dat" is not standard Dutch. Suggest: "telkens wanneer" (as in launch-options-spotlight-title-launch-on-login)
@@ -398,9 +407,6 @@ _Nothing reported._
 - `newtab-privacy-trackers-blocked-today` — `browser/browser/newtab/newtab.ftl` — newtab-privacy-trackers-blocked-today ([one]) — newtab/newtab.ftl — the singular variant uses the plural noun, so the distinction is lost. Current: "Trackers vandaag geblokkeerd" → Suggest: "Tracker vandaag geblokkeerd"
     - Source: `{$count ->} [one] Tracker blocked today [other] Trackers blocked today`
     - Suggest: `"Tracker vandaag geblokkeerd"`
-- `newtab-stocks-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — newtab/newtab.ftl — "Opties voor Aandelenwidget" → lowercase
-    - Source: `aria-label: Stocks widget options title: Stocks widget options`
-    - Suggest: `lowercase`
 - `newtab-wallpaper-suspension-bridge` — `browser/browser/newtab/newtab.ftl` — plural noun for a single image, and "full-suspension" mistranslated. Suggest: "Foto van een grijze hangbrug bij daglicht"
     - Source: `Grey full-suspension bridge photography during daytime`
 - `places-forward-button` — `browser/browser/places.ftl` — Current: "Vooruit gaan" → Suggest: "Vooruitgaan" (cf. sibling "Teruggaan")
@@ -474,7 +480,9 @@ _Nothing reported._
     - Suggest: `"Naar regel springen…"`
 - `whypaused-get-watchpoint` — `devtools/shared/debugger-paused-reasons.ftl` — devtools/shared/debugger-paused-reasons.ftl — the get/set pair is broken: one translated, one keeps the English keyword. Suggest: "Gepauzeerd bij property get" / "Gepauzeerd bij property set"
     - Source: `Paused on property get`
-- _…and 25 more; see `state/` for the full list._
+- `whypaused-set-watchpoint` — `devtools/shared/debugger-paused-reasons.ftl` — devtools/shared/debugger-paused-reasons.ftl — the get/set pair is broken: one translated, one keeps the English keyword. Suggest: "Gepauzeerd bij property get" / "Gepauzeerd bij property set"
+    - Source: `Paused on property set`
+- _…and 24 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -618,13 +626,18 @@ _Nothing reported._
     - Source: `title: Size/transferred size of all requests`
 - `network-menu-summary-transferred` — `devtools/client/netmonitor.ftl` — network-menu-summary-transferred vs network-menu-summary-tooltip-transferred — "overgebracht" vs "overgedragen".
     - Source: `{ $formattedContentSize } / { $formattedTransferredSize } transferred`
-- _…and 43 more; see `state/` for the full list._
+- _…and 44 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
 - `popup-trigger-redirect-menuitem` — `browser/browser/browser.ftl` — uses ‘…’ while its sibling popup-show-popup-menuitem and en-US both use “…”.
     - Source: `label: Show “{ $redirectURI }”`
     - Suggest: `.label`
+- `urlbar-menuitem-paste-and-go` — `browser/browser/browser.ftl` — Label capitalises 'Gaan' and uses '&', breaking sentence case and the 'en' used in the sibling 'Plakken en zoeken'.
+    - Current: `Plakken & Gaan`
+    - Source: `accesskey: G label: Paste and Go`
+    - Suggest: `Plakken en gaan`
+    - The nl conventions use sentence case for labels, and the parallel menu item 'Paste and Search' is rendered 'Plakken en zoeken'.
 - `ip-protection-vpn-upgrade-link-1` — `browser/browser/ipProtection.ftl` — Superfluous sentence-final period (absent in en-US and in the sibling strings): home-prefs-weather-description (preferences/preferences.ftl; newtab-custom-weather-toggle.description has none), preferences-doh-radio-default (.description), preferences-doh-radio-off (.description), ip-protection-vpn-upgrade-link-1 (.description) vs ipprotection-locations-subview-promo.
     - Source: `description: Choose from 300+ locations and protect all your apps on up to 5 devices. label: Take protection further with { -mozilla-vpn-brand-name }`
 - `ipprotection-locations-subview-promo` — `browser/browser/ipProtection.ftl` — Superfluous sentence-final period (absent in en-US and in the sibling strings): home-prefs-weather-description (preferences/preferences.ftl; newtab-custom-weather-toggle.description has none), preferences-doh-radio-default (.description), preferences-doh-radio-off (.description), ip-protection-vpn-upgrade-link-1 (.description) vs ipprotection-locations-subview-promo.

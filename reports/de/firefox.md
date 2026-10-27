@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cb086148c41a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `3bdd70692916` |
-| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 16,742 |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
+| **Previous run** | 2026-10-19 @ `cb086148c41a` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 101 of 16,817 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for de: [android](android.md) · [firefox_ios](firefox_ios.md)
 
@@ -19,9 +18,18 @@ Also for de: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — "Help hide your location" is rendered as an unconditional "Verbergen Sie Ihren Standort", which drops the hedge.
+    - Current: `Verbergen Sie Ihren Standort beim Surfen.`
+    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
+    - Suggest: `Helfen Sie dabei, Ihren Standort beim Surfen zu verbergen.`
+    - The en-US only says the VPN helps hide your location. The German promises that it hides it, which is a guarantee the product does not give.
+- `ipprotection-site-inclusions-callout-description-lapsed-users` — `browser/browser/ipProtection.ftl` — "und aus" does not fit grammatically after "um VPN zu aktivieren".
+    - Current: `und aus, wenn Sie dies nicht tun`
+    - Source: `Set rules to turn on VPN when you want extra privacy or location-based browsing, and off when you don’t.`
+    - Suggest: `und zu deaktivieren, wenn Sie dies nicht tun`
+    - The infinitive clause "um VPN zu aktivieren" cannot continue with the bare particle "aus", so the sentence is broken. It needs a parallel infinitive.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,11 +53,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 338 |
-| Strings | 16,742 |
-| Missing strings | 26 |
+| Files | 340 |
+| Strings | 16,817 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 10 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,18 +71,6 @@ _Nothing retired._
 | Typography deviations from this locale's own norm | 0 |
 
 ### Completeness
-
-**26 strings** are not translated yet, concentrated in:
-
-- `browser/browser/miniWindow.ftl` — 15
-- `browser/browser/ipProtection.ftl` — 7
-- `browser/browser/browser.ftl` — 2
-- `browser/browser/browserContext.ftl` — 1
-- `browser/browser/tabbrowser.ftl` — 1
-
-**Files absent from the locale:**
-
-- `browser/browser/miniWindow.ftl`
 
 **Files present but identical to en-US:**
 
@@ -103,12 +99,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `straight-double` 741, `curly-double` 69, `german-double` 14, `curly-single` 2 | **straight-double** |
-| apostrophe | `typographic` 6, `straight` 114 | **straight** |
-| ellipsis | `char` 414 | **char** |
+| quotes | `straight-double` 742, `curly-double` 69, `german-double` 14, `curly-single` 2 | **straight-double** |
+| apostrophe | `typographic` 6, `straight` 115 | **straight** |
+| ellipsis | `char` 413 | **char** |
 | dash | `em` 17, `en` 69 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 12, `formal` 3965 | **formal** |
+| register | `informal` 12, `formal` 3976 | **formal** |
 
 ---
 
@@ -118,14 +114,23 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (39)
+## 3. Open findings (41)
 
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — "Help hide your location" is rendered as an unconditional "Verbergen Sie Ihren Standort", which drops the hedge.
+    - Current: `Verbergen Sie Ihren Standort beim Surfen.`
+    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
+    - Suggest: `Helfen Sie dabei, Ihren Standort beim Surfen zu verbergen.`
+    - The en-US only says the VPN helps hide your location. The German promises that it hides it, which is a guarantee the product does not give.
+
+_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 20 |
-| 3 | Degraded language (grammar, spelling, terminology) | 16 |
+| 2 | Wrong content (says something other than the English) | 21 |
+| 3 | Degraded language (grammar, spelling, terminology) | 17 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
@@ -162,6 +167,11 @@ _Nothing reported._
     - Source: `label: Organize Tabs tooltiptext: Organize Tabs`
     - Suggest: `label: Tabs organisieren`
     - The en-US "Organize" means arranging/grouping tabs (the feature clusters tabs into groups); "verwalten" is the established German rendering of "Manage", which is a different term used elsewhere (e.g. "Manage shortcuts" → "Tastenkombinationen verwalten").
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — "Help hide your location" is rendered as an unconditional "Verbergen Sie Ihren Standort", which drops the hedge.
+    - Current: `Verbergen Sie Ihren Standort beim Surfen.`
+    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
+    - Suggest: `Helfen Sie dabei, Ihren Standort beim Surfen zu verbergen.`
+    - The en-US only says the VPN helps hide your location. The German promises that it hides it, which is a guarantee the product does not give.
 - `ipprotection-site-inclusions-callout-title-lapsed-users` — `browser/browser/ipProtection.ftl` — "Try built-in VPN, now site by site" loses "site by site" nuance, rendered as "gezielt für einzelne Websites testen".
     - Current: `Integriertes VPN jetzt gezielt für einzelne Websites testen`
     - Source: `Try built-in VPN, now site by site`
@@ -250,6 +260,11 @@ _Nothing reported._
     - Source: `description: Set rules for sites that need extra privacy or VPN turned off. label: Manage VPN rules`
     - Suggest: `die mehr Datenschutz oder ein deaktiviertes VPN benötigen`
     - German comma rules do not allow a comma before "oder" when it links parallel clause parts like these. The comma here is a punctuation error.
+- `ipprotection-site-inclusions-callout-description-lapsed-users` — `browser/browser/ipProtection.ftl` — "und aus" does not fit grammatically after "um VPN zu aktivieren".
+    - Current: `und aus, wenn Sie dies nicht tun`
+    - Source: `Set rules to turn on VPN when you want extra privacy or location-based browsing, and off when you don’t.`
+    - Suggest: `und zu deaktivieren, wenn Sie dies nicht tun`
+    - The infinitive clause "um VPN zu aktivieren" cannot continue with the bare particle "aus", so the sentence is broken. It needs a parallel infinitive.
 - `speech-recognition-model-download-progress-message` — `browser/browser/permissions.ftl` — Progress message rendered as an imperative/infinitive instead of a status statement.
     - Current: `Spracherkennungsmodell herunterladen`
     - Source: `Downloading speech recognition model`

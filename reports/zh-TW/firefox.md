@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
+| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,520 |
+| **Strings reviewed this run** | 102 of 16,595 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,33 @@ Also for zh-TW: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (5)
 
-_No new findings._
+- `decoder-doctor-no-codecs-linux-message` — `browser/browser/browser.ftl` — 必須的 is used where 必需的 is meant ("required").
+    - Current: `必須的視訊解碼器`
+    - Source: `To play video, you may need to install the required video codecs.`
+    - Suggest: `必需的視訊解碼器`
+    - en-US says "required video codecs". The adjective for "needed" is 必需; 必須 is an adverb meaning "must", so 必須的 is wrong here.
+- `narrate-skip-previous` — `toolkit/toolkit/global/narrate.ftl` — "Back" in the narration controls is translated as "previous page", but narration skips by paragraph, not by page.
+    - Current: `上一頁`
+    - Source: `title: Back ({ $shortcut })`
+    - Suggest: `上一段`
+    - The Read Aloud back/forward buttons move narration to the previous or next paragraph. 上一頁 tells the user they will go to the previous page, which is not what happens.
+- `narrate-skip-next` — `toolkit/toolkit/global/narrate.ftl` — "Forward" in the narration controls is translated as "next page", but narration skips by paragraph, not by page.
+    - Current: `下一頁`
+    - Source: `title: Forward ({ $shortcut })`
+    - Suggest: `下一段`
+    - The Read Aloud forward button moves narration to the next paragraph, not the next page.
+- `customize-mode-toolbarspring` — `browser/browser/customizeMode.ftl` — Flexible Space is rendered as 靈活空間, which doesn't match the 空白 used for the Space item.
+    - Current: `靈活空間`
+    - Source: `title: Flexible Space`
+    - Suggest: `彈性空白`
+    - The toolbar Space item is translated 空白. The flexible version should use the same noun (the established zh-TW term is 彈性空白). 空間 means physical space or room, not a blank gap.
+- `main-context-menu-use-mini-window` — `browser/browser/miniWindow.ftl` — "Section" is translated as 段落 (paragraph), but the feature selects an area of the page.
+    - Current: `將段落移動到迷你視窗`
+    - Source: `accesskey: w label: Move Section to Mini Window`
+    - Suggest: `將區域移動到迷你視窗`
+    - The tool selects a rectangular region of the page, and the overlay header already calls it 區域. 段落 means a text paragraph.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,9 +58,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `newtab-sports-widget-message-survey-widget-body` — `browser/browser/newtab/newtab.ftl` — A stray 在 makes the sentence ungrammatical
+    - Current: `幫助我們在改善未來的小工具功能`
+    - Suggest: `幫助我們改善未來的小工具功能`
+    - The 在 has no role here and breaks the verb phrase.
 
 ---
 
@@ -44,8 +71,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 328 |
-| Strings | 16,520 |
+| Files | 330 |
+| Strings | 16,595 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -75,12 +102,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `corner` 893, `straight-double` 34, `curly-single` 9, `curly-double` 6 | **corner** |
+| quotes | `corner` 892, `straight-double` 34, `curly-single` 9, `curly-double` 6 | **corner** |
 | apostrophe | `typographic` 9, `straight` 9 | _mixed_ |
-| ellipsis | `char` 402 | **char** |
+| ellipsis | `char` 401 | **char** |
 | dash | `em` 52, `en` 1 | **em** |
 | nbsp | `total` 1, `space-before-punctuation` 5 | **space-before-punctuation** |
-| fullwidth | `punctuation` 8353 | **punctuation** |
+| fullwidth | `punctuation` 8387 | **punctuation** |
 
 ---
 
@@ -90,14 +117,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (236)
+## 3. Open findings (240)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 141 |
-| 2 | Wrong content (says something other than the English) | 76 |
-| 3 | Degraded language (grammar, spelling, terminology) | 1 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 140 |
+| 2 | Wrong content (says something other than the English) | 79 |
+| 3 | Degraded language (grammar, spelling, terminology) | 3 |
 | 4 | Cosmetic (typography, spacing) | 18 |
 
 ### A. Functional, markup, variables & plurals
@@ -404,11 +431,26 @@ _Nothing reported._
     - Source: `Edit bookmark folder`
     - Suggest: `編輯書籤資料夾`
     - 書籤工具列 means the Bookmarks Toolbar, not a bookmark folder.
+- `main-context-menu-use-mini-window` — `browser/browser/miniWindow.ftl` — "Section" is translated as 段落 (paragraph), but the feature selects an area of the page.
+    - Current: `將段落移動到迷你視窗`
+    - Source: `accesskey: w label: Move Section to Mini Window`
+    - Suggest: `將區域移動到迷你視窗`
+    - The tool selects a rectangular region of the page, and the overlay header already calls it 區域. 段落 means a text paragraph.
 - `permission.register-protocol-handler.label` — `browser/chrome/browser/sitePermissions.properties` — The permission label says "ask me before opening app links" instead of "may the site ask to open app links".
     - Current: `開啟應用程式鏈結前先問我`
     - Source: `Ask to open app links`
     - Suggest: `詢問是否可開啟應用程式鏈結`
     - The developer comment says this permission controls whether the site may ask to open app links. The translation describes the browser asking the user before it opens app links, which is a different setting.
+- `narrate-skip-next` — `toolkit/toolkit/global/narrate.ftl` — "Forward" in the narration controls is translated as "next page", but narration skips by paragraph, not by page.
+    - Current: `下一頁`
+    - Source: `title: Forward ({ $shortcut })`
+    - Suggest: `下一段`
+    - The Read Aloud forward button moves narration to the next paragraph, not the next page.
+- `narrate-skip-previous` — `toolkit/toolkit/global/narrate.ftl` — "Back" in the narration controls is translated as "previous page", but narration skips by paragraph, not by page.
+    - Current: `上一頁`
+    - Source: `title: Back ({ $shortcut })`
+    - Suggest: `上一段`
+    - The Read Aloud back/forward buttons move narration to the previous or next paragraph. 上一頁 tells the user they will go to the previous page, which is not what happens.
 
 ### C. Grammar, agreement & spelling
 
@@ -417,6 +459,11 @@ _Nothing reported._
     - Source: `I don’t use multiple profiles or instances. Why is this happening?`
     - Suggest: `安裝多種 { -brand-short-name }`
     - en-US: 'I don't use multiple profiles or instances.' The locale adds a literal 'Firefox', which will show in Nightly, Developer Edition and other branded builds. The sibling question uses { -brand-short-name }.
+- `decoder-doctor-no-codecs-linux-message` — `browser/browser/browser.ftl` — 必須的 is used where 必需的 is meant ("required").
+    - Current: `必須的視訊解碼器`
+    - Source: `To play video, you may need to install the required video codecs.`
+    - Suggest: `必需的視訊解碼器`
+    - en-US says "required video codecs". The adjective for "needed" is 必需; 必須 is an adverb meaning "must", so 必須的 is wrong here.
 - `ip-protection-not-opted-in-inclusions-enabled` — `browser/browser/ipProtection.ftl` — "免費" ("free") appears twice in the same sentence.
     - Current: `每月免費獲得 { $maxUsage } GB 的免費流量`
     - Source: `heading: Ready to try it? message: Get { $maxUsage } GB free each month and choose which sites use VPN.`
@@ -427,11 +474,6 @@ _Nothing reported._
     - Source: `Save passwords in { -brand-short-name } to use strong, unique logins everywhere.`
     - Suggest: `即可在任何網站都使用`
     - Without 在 the clause is ungrammatical.
-- `newtab-sports-widget-message-survey-widget-body` — `browser/browser/newtab/newtab.ftl` — A stray 在 makes the sentence ungrammatical
-    - Current: `幫助我們在改善未來的小工具功能`
-    - Source: `Share your feedback to help us improve future widgets. Then, try the new one in your lineup.`
-    - Suggest: `幫助我們改善未來的小工具功能`
-    - The 在 has no role here and breaks the verb phrase.
 - `mr1-return-to-amo-addon-title` — `browser/browser/newtab/onboarding.ftl` — Typo: a stray 斯 after 隱私
     - Current: `又快又有隱私斯的瀏覽器`
     - Source: `You’ve got a fast, private browser at your fingertips. Now you can add <b>{ $addon-name }</b> and do even more with { -brand-short-name }.`
@@ -540,6 +582,11 @@ _Nothing reported._
     - Source: `Turn on HTTPS upgrades for this site if you want { -brand-short-name } to upgrade the connection when possible.`
     - Suggest: `請對此網站開啟 HTTPS 升級`
     - en-US: 'Turn on HTTPS upgrades for this site...'. Without 開啟 the sentence has no action verb. The sibling turn-off string correctly says 關閉 HTTPS 升級.
+- `customize-mode-toolbarspring` — `browser/browser/customizeMode.ftl` — Flexible Space is rendered as 靈活空間, which doesn't match the 空白 used for the Space item.
+    - Current: `靈活空間`
+    - Source: `title: Flexible Space`
+    - Suggest: `彈性空白`
+    - The toolbar Space item is translated 空白. The flexible version should use the same noun (the established zh-TW term is 彈性空白). 空間 means physical space or room, not a blank gap.
 - `customkeys-dev-profiler-capture` — `browser/browser/customkeys.ftl` — Typo: 補捉 should be 捕捉.
     - Current: `補捉效能檢測檔`
     - Source: `Capture a Performance Profile`
@@ -796,23 +843,23 @@ _Nothing reported._
 - `ImageMapCircleNegativeRadius` — `dom/chrome/layout/layout_errors.properties` — `ImageMapCircleNegativeRadius` uses straight double quotes
     - Current: `<area shape="circle"> 標籤中的 "coords" 屬性不能有負的半徑。`
     - Source: `The “coords” attribute of the <area shape="circle"> tag has a negative radius.`
-    - The locale's quote convention is `corner` (893 occurrences).
+    - The locale's quote convention is `corner` (892 occurrences).
 - `ImageMapCircleWrongNumberOfCoords` — `dom/chrome/layout/layout_errors.properties` — `ImageMapCircleWrongNumberOfCoords` uses straight double quotes
     - Current: `<area shape="circle"> 標籤中的 "coords" 屬性並不是 "center-x,center-y,radius" 的格式。`
     - Source: `The “coords” attribute of the <area shape="circle"> tag is not in the “center-x,center-y,radius” format.`
-    - The locale's quote convention is `corner` (893 occurrences).
+    - The locale's quote convention is `corner` (892 occurrences).
 - `ImageMapPolyOddNumberOfCoords` — `dom/chrome/layout/layout_errors.properties` — `ImageMapPolyOddNumberOfCoords` uses straight double quotes
     - Current: `<area shape="poly"> 標籤中的 "coords" 屬性少了最後的 y 座標 (正確格式是 "x1,y1,x2,y2,…")。`
     - Source: `The “coords” attribute of the <area shape="poly"> tag is missing the last “y” coordinate (the correct format is “x1,y1,x2,y2 …”).`
-    - The locale's quote convention is `corner` (893 occurrences).
+    - The locale's quote convention is `corner` (892 occurrences).
 - `ImageMapPolyWrongNumberOfCoords` — `dom/chrome/layout/layout_errors.properties` — `ImageMapPolyWrongNumberOfCoords` uses straight double quotes
     - Current: `<area shape="poly"> 標籤中的 "coords" 屬性並不是 "x1,y1,x2,y2,…" 的格式。`
     - Source: `The “coords” attribute of the <area shape="poly"> tag is not in the “x1,y1,x2,y2 …” format.`
-    - The locale's quote convention is `corner` (893 occurrences).
+    - The locale's quote convention is `corner` (892 occurrences).
 - `ImageMapRectBoundsError` — `dom/chrome/layout/layout_errors.properties` — `ImageMapRectBoundsError` uses straight double quotes
     - Current: `<area shape="rect">的"coords" 屬性不是 "left,top,right,bottom" 格式。`
     - Source: `The “coords” attribute of the <area shape="rect"> tag is not in the “left,top,right,bottom” format.`
-    - The locale's quote convention is `corner` (893 occurrences).
+    - The locale's quote convention is `corner` (892 occurrences).
 - `BlockMixedDisplayContent` — `dom/chrome/security/security.properties` — 'mixed content' is written 混和 here but 混合 elsewhere in the same file.
     - Current: `已封鎖載入混和的顯示內容`
     - Source: `Blocked loading mixed display content “%1$S”`

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
+| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,520 |
+| **Strings reviewed this run** | 102 of 16,595 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,43 @@ Also for sv-SE: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (7)
 
-_No new findings._
+- `decoder-doctor-no-pulse-audio-message` — `browser/browser/browser.ftl` — The sentence starts with "Att" where it needs "För att", so it is ungrammatical.
+    - Current: `Att spela upp ljud, kan du behöva installera PulseAudio programvara som krävs.`
+    - Source: `To play audio, you may need to install the required PulseAudio software.`
+    - Suggest: `För att spela upp ljud kan du behöva installera den PulseAudio-programvara som krävs.`
+    - The source says "To play audio, ...", which is a purpose clause. In Swedish that needs "För att". The sibling strings use "För att" correctly.
+- `toolbar-edit-controls` — `browser/browser/browser.ftl` — "Redigera kontroller" is an order to edit the controls, not a name for the group of editing buttons.
+    - Current: `Redigera kontroller`
+    - Source: `label: Edit controls title: Edit controls`
+    - Suggest: `Redigeringskontroller`
+    - "Edit controls" is the label for the group of Cut/Copy/Paste buttons. The Swedish uses the verb form, so it reads as an instruction to edit some controls.
+- `narrate-rate-slow` — `toolkit/toolkit/global/narrate.ftl` — "berättarröst" needs the definite form here and doesn't match the paired string, which says "berättarrösten".
+    - Current: `Sakta ner berättarröst`
+    - Source: `title: Slow down narration`
+    - Suggest: `Sakta ner berättarrösten`
+    - This phrase needs the definite form, and the matching "Speed up narration" string uses "Snabba upp berättarrösten".
+- `decoder-doctor-decode-error-message` — `browser/browser/browser.ftl` — Missing preposition "av" after "avkodning".
+    - Current: `vid avkodning en mediaresurs`
+    - Source: `An error occurred while decoding a media resource.`
+    - Suggest: `vid avkodning av en mediaresurs`
+    - "avkodning" needs "av" before its object. As written, the sentence is ungrammatical.
+- `decoder-doctor-decode-warning-message` — `browser/browser/browser.ftl` — Missing preposition "av" after "avkodning".
+    - Current: `vid avkodning en mediaresurs`
+    - Source: `A recoverable error occurred while decoding a media resource.`
+    - Suggest: `vid avkodning av en mediaresurs`
+    - "avkodning" needs "av" before its object. As written, the sentence is ungrammatical.
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — "Help hide your location" is rendered as a plain "Hide your location", which turns a hedged claim into a guarantee.
+    - Current: `Dölj din plats när du surfar.`
+    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
+    - Suggest: `Hjälp till att dölja din plats när du surfar.`
+    - The en-US says the VPN *helps* hide the user's location. The Swedish drops the hedge and promises that the location is hidden, a protection the product does not claim to give.
+- `set-desktop-background-filename` — `browser/browser/setDesktopBackground.ftl` — The filename "Desktop Background" is translated as "Firefox-bakgrund" (Firefox background) instead of desktop background.
+    - Current: `Firefox-bakgrund`
+    - Source: `Desktop Background`
+    - Suggest: `Skrivbordsbakgrund`
+    - The en-US and the developer comment both describe the file used as the desktop background. "Firefox-bakgrund" names a different thing, so the saved file gets the wrong name.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,9 +68,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `newtab-sports-widget-loading-more` — `browser/browser/newtab/newtab.ftl` — "Loading more matches" rendered with "matchningar" (matchings/pairings) instead of football matches.
+    - Current: `Laddar fler matchningar…`
+    - Suggest: `Laddar fler matcher…`
+    - The developer comment says this is shown when more matches are being fetched. "Matchningar" means matchings/correspondences, not sports matches, which the rest of the widget calls "matcher".
 
 ---
 
@@ -44,8 +81,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 328 |
-| Strings | 16,520 |
+| Files | 330 |
+| Strings | 16,595 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -85,14 +122,23 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (329)
+## 3. Open findings (335)
 
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — "Help hide your location" is rendered as a plain "Hide your location", which turns a hedged claim into a guarantee.
+    - Current: `Dölj din plats när du surfar.`
+    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
+    - Suggest: `Hjälp till att dölja din plats när du surfar.`
+    - The en-US says the VPN *helps* hide the user's location. The Swedish drops the hedge and promises that the location is hidden, a protection the product does not claim to give.
+
+_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 212 |
-| 2 | Wrong content (says something other than the English) | 96 |
-| 3 | Degraded language (grammar, spelling, terminology) | 2 |
+| 2 | Wrong content (says something other than the English) | 98 |
+| 3 | Degraded language (grammar, spelling, terminology) | 6 |
 | 4 | Cosmetic (typography, spacing) | 19 |
 
 ### A. Functional, markup, variables & plurals
@@ -170,11 +216,6 @@ _Nothing reported._
     - Source: `Recommended Extension`
     - Suggest: `Rekommenderat tillägg`
     - The doorhanger heads a single add-on recommendation; the parallel string cfr-doorhanger-feature-heading is correctly singular ("Rekommenderad funktion").
-- `newtab-sports-widget-loading-more` — `browser/browser/newtab/newtab.ftl` — "Loading more matches" rendered with "matchningar" (matchings/pairings) instead of football matches.
-    - Current: `Laddar fler matchningar…`
-    - Source: `Loading more matches…`
-    - Suggest: `Laddar fler matcher…`
-    - The developer comment says this is shown when more matches are being fetched. "Matchningar" means matchings/correspondences, not sports matches, which the rest of the widget calls "matcher".
 - `newtab-sports-widget-team-name-label-eng` — `browser/browser/newtab/newtab.ftl` — The FIFA team name "England" is rendered as "Storbritannien" (Great Britain), naming a different entity.
     - Current: `Storbritannien`
     - Source: `label: England`
@@ -394,20 +435,40 @@ _Nothing reported._
     - Source: `Filter Request Parameters`
     - Suggest: `Filtrera förfrågningsparametrar`
     - The string is the filter input placeholder in the request tab; the Swedish turns "filter" into part of a noun phrase and loses the action.
-- _…and 69 more; see `state/` for the full list._
+- `perftools-presets-networking-description` — `devtools/client/perftools.ftl` — The Networking preset is described as being for audio and video bugs.
+    - Current: `Förinställd för att undersöka ljud- och videobuggar i { -brand-shorter-name }.`
+    - Source: `Preset for investigating networking bugs in { -brand-shorter-name }.`
+    - Suggest: `Förinställd för att undersöka nätverksbuggar i { -brand-shorter-name }.`
+    - The description was copied from the Media preset; en-US says "networking bugs", so the preset describes the wrong purpose.
+- _…and 68 more; see `state/` for the full list._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `toolbar-edit-controls` — `browser/browser/browser.ftl` — "Redigera kontroller" is an order to edit the controls, not a name for the group of editing buttons.
+    - Current: `Redigera kontroller`
+    - Source: `label: Edit controls title: Edit controls`
+    - Suggest: `Redigeringskontroller`
+    - "Edit controls" is the label for the group of Cut/Copy/Paste buttons. The Swedish uses the verb form, so it reads as an instruction to edit some controls.
 - `genai-settings-chat-claude-links` — `browser/browser/genai.ftl` — The brand name Anthropic is misspelled twice as "Antropic"/"Antropics".
     - Current: `Genom att välja Antropic Claude, godkänner du`
     - Source: `By choosing Anthropic Claude, you agree to the Anthropic <a data-l10n-name="link1">Consumer Terms of Service</a>, <a data-l10n-name="link2">Usage Policy</a>, and <a data-l10n-name="link3">Privacy Policy</a>.`
     - Suggest: `Genom att välja Anthropic Claude godkänner du`
     - The same brand is spelled correctly in genai-onboarding-claude-tooltip ("Anthropic Claude"); brand names must not be altered.
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — "Help hide your location" is rendered as a plain "Hide your location", which turns a hedged claim into a guarantee.
+    - Current: `Dölj din plats när du surfar.`
+    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
+    - Suggest: `Hjälp till att dölja din plats när du surfar.`
+    - The en-US says the VPN *helps* hide the user's location. The Swedish drops the hedge and promises that the location is hidden, a protection the product does not claim to give.
 - `autofill-address-department` — `browser/browser/preferences/formAutofill.ftl` — Administrative "Department" rendered as an organizational division
     - Current: `Avdelning`
     - Source: `Department`
     - Suggest: `Departement`
     - The comment marks this as the primary administrative subdivision in Nicaragua and Colombia; Swedish "Avdelning" means a department of a company or store, while the administrative unit is "departement".
+- `set-desktop-background-filename` — `browser/browser/setDesktopBackground.ftl` — The filename "Desktop Background" is translated as "Firefox-bakgrund" (Firefox background) instead of desktop background.
+    - Current: `Firefox-bakgrund`
+    - Source: `Desktop Background`
+    - Suggest: `Skrivbordsbakgrund`
+    - The en-US and the developer comment both describe the file used as the desktop background. "Firefox-bakgrund" names a different thing, so the saved file gets the wrong name.
 - `permission.register-protocol-handler.label` — `browser/chrome/browser/sitePermissions.properties` — "Fråga för att öppna" means "ask in order to open", not "ask to open" (the site may ask whether to open app links).
     - Current: `Fråga för att öppna applänkar`
     - Source: `Ask to open app links`
@@ -456,6 +517,21 @@ _Nothing reported._
     - Source: `Protect and access your bookmarks, passwords, and more anywhere.`
     - Suggest: `Skydda och kom åt dina bokmärken`
     - Both verbs render the same imperative in en-US ("Protect and access"); the coordination is ungrammatical as written.
+- `decoder-doctor-decode-error-message` — `browser/browser/browser.ftl` — Missing preposition "av" after "avkodning".
+    - Current: `vid avkodning en mediaresurs`
+    - Source: `An error occurred while decoding a media resource.`
+    - Suggest: `vid avkodning av en mediaresurs`
+    - "avkodning" needs "av" before its object. As written, the sentence is ungrammatical.
+- `decoder-doctor-decode-warning-message` — `browser/browser/browser.ftl` — Missing preposition "av" after "avkodning".
+    - Current: `vid avkodning en mediaresurs`
+    - Source: `A recoverable error occurred while decoding a media resource.`
+    - Suggest: `vid avkodning av en mediaresurs`
+    - "avkodning" needs "av" before its object. As written, the sentence is ungrammatical.
+- `decoder-doctor-no-pulse-audio-message` — `browser/browser/browser.ftl` — The sentence starts with "Att" where it needs "För att", so it is ungrammatical.
+    - Current: `Att spela upp ljud, kan du behöva installera PulseAudio programvara som krävs.`
+    - Source: `To play audio, you may need to install the required PulseAudio software.`
+    - Suggest: `För att spela upp ljud kan du behöva installera den PulseAudio-programvara som krävs.`
+    - The source says "To play audio, ...", which is a purpose clause. In Swedish that needs "För att". The sibling strings use "För att" correctly.
 - `identity-permissions-storage-access-hint` — `browser/browser/browser.ftl` — Missing plural agreement: "global kakor" instead of "globala kakor".
     - Current: `kan använda global kakor`
     - Source: `These parties can use cross-site cookies and site data while you are on this site.`
@@ -641,6 +717,11 @@ _Nothing reported._
     - Source: `{$sel_1 ->} [macos] To learn more about a webpage before you click, hover over a link and press Shift (⇧) plus Option (⌥) or Alt. Previews can include details like title and reading time. For some webpages, AI can also…`
     - Suggest: `tryck på Shift (⇧) plus Option (⌥) eller Alt`
     - Keyboard key names are shown as printed on the keyboard; experimental-features-link-previews-description-no-ai keeps "Option (⌥)".
+- `narrate-rate-slow` — `toolkit/toolkit/global/narrate.ftl` — "berättarröst" needs the definite form here and doesn't match the paired string, which says "berättarrösten".
+    - Current: `Sakta ner berättarröst`
+    - Source: `title: Slow down narration`
+    - Suggest: `Sakta ner berättarrösten`
+    - This phrase needs the definite form, and the matching "Speed up narration" string uses "Snabba upp berättarrösten".
 - `region-name-cc` — `toolkit/toolkit/intl/regionNames.ftl` — Territory name left in English although every neighbouring island group is translated.
     - Current: `Cocos (Keeling) Islands`
     - Suggest: `Kokosöarna`

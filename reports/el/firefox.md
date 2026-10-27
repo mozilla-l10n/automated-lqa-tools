@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
+| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,520 |
+| **Strings reviewed this run** | 141 of 16,580 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for el: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `decoder-doctor-unsupported-libavcodec-message` — `browser/browser/browser.ftl` — The hedge "may be vulnerable" is rendered as a definite statement that libavcodec has security vulnerabilities.
+    - Current: `παρουσιάζει ευπάθειες ασφάλειας`
+    - Source: `libavcodec may be vulnerable or is not supported, and should be updated to play video.`
+    - Suggest: `ενδέχεται να παρουσιάζει ευπάθειες`
+    - en-US says libavcodec "may be vulnerable or is not supported"; the Greek asserts it is vulnerable, stating as fact what the source presents only as a possibility.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,9 +48,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 328 |
-| Strings | 16,520 |
-| Missing strings | 0 |
+| Files | 330 |
+| Strings | 16,580 |
+| Missing strings | 15 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,7 +67,17 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**15 strings** are not translated yet, concentrated in:
+
+- `browser/browser/ipProtection.ftl` — 4
+- `browser/browser/miniWindow.ftl` — 3
+- `browser/browser/preferences/preferences.ftl` — 3
+- `dom/chrome/security/security.properties` — 2
+- `toolkit/toolkit/global/narrate.ftl` — 1
+- `browser/browser/policies/policies-descriptions.ftl` — 1
+- `dom/chrome/dom/dom.properties` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -73,7 +87,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `guillemet` 1013, `curly-single` 94, `straight-double` 25, `curly-double` 2 | **guillemet** |
 | apostrophe | `typographic` 98, `straight` 5 | **typographic** |
-| ellipsis | `char` 398, `ascii` 2 | **char** |
+| ellipsis | `char` 397, `ascii` 2 | **char** |
 | dash | `em` 63, `en` 2 | **em** |
 | nbsp | `total` 15, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
@@ -85,13 +99,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (211)
+## 3. Open findings (212)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 143 |
-| 2 | Wrong content (says something other than the English) | 65 |
+| 2 | Wrong content (says something other than the English) | 66 |
 | 3 | Degraded language (grammar, spelling, terminology) | 1 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
@@ -401,7 +415,11 @@ _Nothing reported._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-_Nothing in this category._
+- `decoder-doctor-unsupported-libavcodec-message` — `browser/browser/browser.ftl` — The hedge "may be vulnerable" is rendered as a definite statement that libavcodec has security vulnerabilities.
+    - Current: `παρουσιάζει ευπάθειες ασφάλειας`
+    - Source: `libavcodec may be vulnerable or is not supported, and should be updated to play video.`
+    - Suggest: `ενδέχεται να παρουσιάζει ευπάθειες`
+    - en-US says libavcodec "may be vulnerable or is not supported"; the Greek asserts it is vulnerable, stating as fact what the source presents only as a possibility.
 
 ### C. Grammar, agreement & spelling
 
@@ -894,7 +912,7 @@ _Nothing in this category._
 - `about-logins-menu-menuitem-export-logins2` — `browser/browser/aboutLogins.ftl` — `about-logins-menu-menuitem-export-logins2` uses three dots where this locale uses …
     - Current: `Εξαγωγή κωδικών πρόσβασης...`
     - Source: `Export Passwords…`
-    - The tree uses … 398 times against 2 ASCII runs.
+    - The tree uses … 397 times against 2 ASCII runs.
 - `bar-tooltip-social` — `browser/browser/protections.ftl` — The plural variant of the aria-label is missing the opening parenthesis before the percentage.
     - Current: `ιχνηλάτες κοινωνικών δικτύων { $percentage }%)`
     - Source: `aria-label: {$count ->} [one] { $count } social media tracker ({ $percentage }%) [other] { $count } social media trackers ({ $percentage }%) title: Social Media Trackers`
@@ -973,7 +991,7 @@ _Nothing in this category._
 - `unknowncontenttype-other` — `toolkit/toolkit/global/unknownContentType.ftl` — `unknowncontenttype-other` uses three dots where this locale uses …
     - Current: `Άλλο...`
     - Source: `label: Other…`
-    - The tree uses … 398 times against 2 ASCII runs.
+    - The tree uses … 397 times against 2 ASCII runs.
 
 ---
 

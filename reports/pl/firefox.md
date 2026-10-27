@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cb086148c41a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `3bdd70692916` |
-| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 16,520 |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
+| **Previous run** | 2026-10-19 @ `cb086148c41a` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 113 of 16,570 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for pl: [android](android.md) · [firefox_ios](firefox_ios.md)
 
@@ -35,9 +34,16 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (2)
 
-_Nothing retired._
+- `newtab-privacy-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Privacy options" rendered as "Opcje widżetu prywatności" (privacy widget options), adding "widżetu" not present in the source.
+    - Current: `Opcje widżetu prywatności`
+    - Suggest: `Opcje prywatności`
+    - The en-US string is "Privacy options"; the other widget menu button (Clock options) is translated literally as "Opcje zegara", so the added "widżetu" is inconsistent and not in the source.
+- `newtab-search-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Search options" rendered with a plural noun "Opcje wyszukiwań" (options of searches).
+    - Current: `aria-label: Opcje wyszukiwań`
+    - Suggest: `aria-label: Opcje wyszukiwania`
+    - The source is "Search options"; standard Firefox pl terminology is "wyszukiwania" in the genitive singular, as in "Ustawienia wyszukiwania".
 
 ---
 
@@ -45,11 +51,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 328 |
-| Strings | 16,520 |
-| Missing strings | 26 |
+| Files | 330 |
+| Strings | 16,570 |
+| Missing strings | 25 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -64,17 +70,15 @@ _Nothing retired._
 
 ### Completeness
 
-**26 strings** are not translated yet, concentrated in:
+**25 strings** are not translated yet, concentrated in:
 
-- `browser/browser/miniWindow.ftl` — 15
-- `browser/browser/ipProtection.ftl` — 7
-- `browser/browser/browser.ftl` — 2
-- `browser/browser/browserContext.ftl` — 1
-- `browser/browser/tabbrowser.ftl` — 1
-
-**Files absent from the locale:**
-
-- `browser/browser/miniWindow.ftl`
+- `browser/browser/preferences/preferences.ftl` — 14
+- `browser/browser/ipProtection.ftl` — 4
+- `browser/chrome/browser/browser.properties` — 2
+- `dom/chrome/security/security.properties` — 2
+- `toolkit/toolkit/global/narrate.ftl` — 1
+- `browser/browser/policies/policies-descriptions.ftl` — 1
+- `dom/chrome/dom/dom.properties` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -84,11 +88,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `polish-double` 1436, `straight-double` 36, `german-double` 7, `curly-double` 2 | **polish-double** |
+| quotes | `polish-double` 1435, `straight-double` 36, `german-double` 7, `curly-double` 2 | **polish-double** |
 | apostrophe | `straight` 1 | **straight** |
-| ellipsis | `char` 406 | **char** |
+| ellipsis | `char` 405 | **char** |
 | dash | `em` 123, `en` 14 | **em** |
-| nbsp | `total` 4895, `narrow` 3, `before-punctuation` 39, `space-before-punctuation` 14 | **total** |
+| nbsp | `total` 4896, `narrow` 3, `before-punctuation` 39, `space-before-punctuation` 14 | **total** |
 | register | `informal` 77 | **informal** |
 
 ---
@@ -99,14 +103,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (83)
+## 3. Open findings (81)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 10 |
 | 2 | Wrong content (says something other than the English) | 47 |
-| 3 | Degraded language (grammar, spelling, terminology) | 23 |
+| 3 | Degraded language (grammar, spelling, terminology) | 21 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
@@ -273,16 +277,6 @@ _Nothing reported._
     - Source: `See a running tally here.`
     - Suggest: `Tutaj zobaczysz rosnącą liczbę zablokowanych elementów.`
     - The developer comment explicitly explains "a running tally" is a total that keeps updating as the user browses; the Polish renders it as a static count.
-- `newtab-privacy-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Privacy options" rendered as "Opcje widżetu prywatności" (privacy widget options), adding "widżetu" not present in the source.
-    - Current: `Opcje widżetu prywatności`
-    - Source: `aria-label: Privacy options title: Privacy options`
-    - Suggest: `Opcje prywatności`
-    - The en-US string is "Privacy options"; the other widget menu button (Clock options) is translated literally as "Opcje zegara", so the added "widżetu" is inconsistent and not in the source.
-- `newtab-search-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Search options" rendered with a plural noun "Opcje wyszukiwań" (options of searches).
-    - Current: `aria-label: Opcje wyszukiwań`
-    - Source: `aria-label: Search options`
-    - Suggest: `aria-label: Opcje wyszukiwania`
-    - The source is "Search options"; standard Firefox pl terminology is "wyszukiwania" in the genitive singular, as in "Ustawienia wyszukiwania".
 - `newtab-search-widget-title` — `browser/browser/newtab/newtab.ftl` — "Search" (widget heading, a noun naming the search feature) rendered as plural "Wyszukiwania".
     - Current: `Wyszukiwania`
     - Source: `Search`
@@ -474,11 +468,11 @@ _Nothing reported._
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `Zdarzenie klawisza jest niedostępne dla GTK2: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (1436 occurrences).
+    - The locale's quote convention is `polish-double` (1435 occurrences).
 - `WinConflict2` — `dom/chrome/dom/dom.properties` — `WinConflict2` uses straight double quotes
     - Current: `Zdarzenie klawisza jest niedostępne przy niektórych układach klawiatury: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on some keyboard layouts: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (1436 occurrences).
+    - The locale's quote convention is `polish-double` (1435 occurrences).
 
 ---
 

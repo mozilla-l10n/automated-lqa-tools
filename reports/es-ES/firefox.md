@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
+| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 15,224 |
+| **Strings reviewed this run** | 67 of 15,286 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `ipprotection-feature-introduction-link-text-privacy-2` — `browser/browser/ipProtection.ftl` — The link text scope was changed: the source links the whole phrase "{ -brand-product-name }'s built-in VPN" while the target links only the brand name.
+    - Current: `La VPN integrada de <a data-l10n-name="learn-more-vpn">{ -brand-product-name }</a>`
+    - Suggest: `<a data-l10n-name="learn-more-vpn">La VPN integrada de { -brand-product-name }</a>`
+    - In en-US the anchor wraps "{ -brand-product-name }’s built-in VPN"; moving the tag so it wraps only the brand name changes the clickable text.
 
 ---
 
@@ -44,11 +47,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 319 |
-| Strings | 15,224 |
-| Missing strings | 1,296 |
+| Files | 320 |
+| Strings | 15,286 |
+| Missing strings | 1,309 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 9 |
+| Files absent from the locale | 10 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,24 +66,25 @@ _Nothing retired._
 
 ### Completeness
 
-**1,296 strings** are not translated yet, concentrated in:
+**1,309 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 230
-- `browser/browser/aiWindow.ftl` — 136
+- `browser/browser/newtab/newtab.ftl` — 217
+- `browser/browser/aiWindow.ftl` — 135
 - `browser/browser/appmenu.ftl` — 65
 - `browser/browser/newtab/onboarding.ftl` — 56
 - `browser/browser/aiWindowContent.ftl` — 51
-- `browser/browser/browser.ftl` — 46
-- `browser/browser/ipProtection.ftl` — 41
+- `browser/browser/ipProtection.ftl` — 48
+- `browser/browser/browser.ftl` — 47
+- `browser/browser/preferences/preferences.ftl` — 35
 - `toolkit/toolkit/global/theme-picker.ftl` — 30
 - `devtools/client/toolbox-options.ftl` — 28
 - `toolkit/toolkit/about/url-classifier.ftl` — 26
 - `toolkit/services/aboutSyncLog.ftl` — 26
-- `browser/browser/firefoxView.ftl` — 24
 
 **Files absent from the locale:**
 
 - `browser/browser/autoTabGrouping.ftl`
+- `browser/browser/miniWindow.ftl`
 - `browser/browser/preferences/browserIcon.ftl`
 - `browser/browser/sharePanel.ftl`
 - `toolkit/services/aboutSyncLog.ftl`
@@ -104,7 +108,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | dash | `em` 55, `en` 1 | **em** |
 | nbsp | `total` 8, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 | inverted marks | `open-question` 298, `open-exclamation` 66 | **open-question** |
-| register | `informal` 4, `formal` 1170 | **formal** |
+| register | `informal` 4, `formal` 1182 | **formal** |
 
 ---
 
@@ -115,13 +119,13 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (40)
+## 3. Open findings (39)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 23 |
+| 2 | Wrong content (says something other than the English) | 22 |
 | 3 | Degraded language (grammar, spelling, terminology) | 16 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
@@ -147,11 +151,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `w`
     - Source: `accesskey: w label: Always Open In System Viewer`
     - The label is “Abrir siempre en el visor del sistema”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `ipprotection-feature-introduction-link-text-privacy-2` — `browser/browser/ipProtection.ftl` — The link text scope was changed: the source links the whole phrase "{ -brand-product-name }'s built-in VPN" while the target links only the brand name.
-    - Current: `La VPN integrada de <a data-l10n-name="learn-more-vpn">{ -brand-product-name }</a>`
-    - Source: `<a data-l10n-name="learn-more-vpn">{ -brand-product-name }’s built-in VPN</a> helps protect your browsing. Choose from multiple locations to keep where you browse more private.`
-    - Suggest: `<a data-l10n-name="learn-more-vpn">La VPN integrada de { -brand-product-name }</a>`
-    - In en-US the anchor wraps "{ -brand-product-name }’s built-in VPN"; moving the tag so it wraps only the brand name changes the clickable text.
 - `menu-edit-find-in-page` — `browser/browser/menubar.ftl` — Access key `F` of `menu-edit-find-in-page` is not present in its label
     - Current: `F`
     - Source: `accesskey: F label: Find in Page…`

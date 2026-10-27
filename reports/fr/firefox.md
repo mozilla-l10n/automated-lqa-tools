@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
+| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,742 |
+| **Strings reviewed this run** | 104 of 16,813 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,21 @@ Also for fr: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `text-action-copy-clean-link-to-highlight-2` — `toolkit/toolkit/global/textActions.ftl` — « lien nettoyé à surligner » means a link to be highlighted, not a clean link pointing to the highlighted text.
+    - Current: `Copier le lien nettoyé à surligner`
+    - Source: `accesskey: k label: Copy Clean Link to Highlight`
+    - Suggest: `Copier le lien nettoyé du surlignage`
+    - The developer comment says this creates a link with a text fragment pointing to the current selection, with trackers removed. « à surligner » reads as 'to be highlighted'. It also doesn't match the sibling string « Copier le lien du surlignage ».
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `ipprotection-site-inclusions-callout-description-1` — `browser/browser/ipProtection.ftl` — The end of the sentence means "where you don't have any" instead of "where you don't want/need it".
+    - Current: `là où vous n’en avez pas.`
+    - Source: `Turn on VPN when you want extra privacy or location-based browsing, and off where you don’t.`
+    - Suggest: `là où vous n’en avez pas besoin.`
+    - The en-US "and off where you don’t" means where you don't want the VPN on. The French "là où vous n’en avez pas" cuts off the verb and reads as "where you don't have any", which makes no sense here.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -44,9 +52,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 338 |
-| Strings | 16,742 |
-| Missing strings | 0 |
+| Files | 340 |
+| Strings | 16,813 |
+| Missing strings | 4 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 10 |
@@ -63,7 +71,13 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**4 strings** are not translated yet, concentrated in:
+
+- `browser/browser/ipProtection.ftl` — 2
+- `browser/browser/miniWindow.ftl` — 1
+- `browser/browser/policies/policies-descriptions.ftl` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Files with no en-US counterpart
 
@@ -86,12 +100,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `guillemet` 1044, `straight-double` 31, `curly-double` 2, `curly-single` 1 | **guillemet** |
-| apostrophe | `typographic` 5118, `straight` 10 | **typographic** |
-| ellipsis | `char` 409 | **char** |
+| quotes | `guillemet` 1045, `straight-double` 31, `curly-double` 2, `curly-single` 1 | **guillemet** |
+| apostrophe | `typographic` 5130, `straight` 10 | **typographic** |
+| ellipsis | `char` 408 | **char** |
 | dash | `em` 43, `en` 9 | **em** |
-| nbsp | `total` 4012, `before-punctuation` 1753 | _mixed_ |
-| register | `formal` 2858 | **formal** |
+| nbsp | `total` 4016, `before-punctuation` 1754 | _mixed_ |
+| register | `formal` 2864 | **formal** |
 
 ---
 
@@ -132,11 +146,6 @@ _Nothing in this category._
     - Source: `Turn it on when you want extra privacy or location-based browsing, and off where you don’t.`
     - Suggest: `Activez-le lorsque vous souhaitez renforcer votre confidentialité ou naviguer en fonction de votre localisation`
     - The en-US says "when you want extra privacy or location-based browsing"; the French adds "sur les sites" and reinterprets it as accessing sites from another location.
-- `ipprotection-site-inclusions-callout-description-1` — `browser/browser/ipProtection.ftl` — The end of the sentence means "where you don't have any" instead of "where you don't want/need it".
-    - Current: `là où vous n’en avez pas.`
-    - Source: `Turn on VPN when you want extra privacy or location-based browsing, and off where you don’t.`
-    - Suggest: `là où vous n’en avez pas besoin.`
-    - The en-US "and off where you don’t" means where you don't want the VPN on. The French "là où vous n’en avez pas" cuts off the verb and reads as "where you don't have any", which makes no sense here.
 - `site-rules-status-heading` — `browser/browser/ipProtection.ftl` — "Your rule" translated as "Règle personnalisée" ("Custom rule") instead of a possessive referring to the user's rule.
     - Current: `Règle personnalisée`
     - Source: `Your rule`
@@ -200,6 +209,11 @@ _Nothing in this category._
     - Source: `Open PDF Attachments Inline`
     - Suggest: `Ouvrir les pièces jointes PDF de façon intégrée`
     - The source "Open PDF Attachments Inline" refers to opening attachments inline in the viewer, not within messages.
+- `text-action-copy-clean-link-to-highlight-2` — `toolkit/toolkit/global/textActions.ftl` — « lien nettoyé à surligner » means a link to be highlighted, not a clean link pointing to the highlighted text.
+    - Current: `Copier le lien nettoyé à surligner`
+    - Source: `accesskey: k label: Copy Clean Link to Highlight`
+    - Suggest: `Copier le lien nettoyé du surlignage`
+    - The developer comment says this creates a link with a text fragment pointing to the current selection, with trackers removed. « à surligner » reads as 'to be highlighted'. It also doesn't match the sibling string « Copier le lien du surlignage ».
 
 ### C. Grammar, agreement & spelling
 
@@ -252,18 +266,18 @@ _Nothing in this category._
 
 - `felt-error-warning-download-attempt-failed-contact-admin` — `browser/browser/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
     - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
-    - The tree uses ’ 5118 times against 10 straight.
+    - The tree uses ’ 5130 times against 10 straight.
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `L’évènement « key » n’est pas disponible dans GTK2 : key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `guillemet` (1044 occurrences).
+    - The locale's quote convention is `guillemet` (1045 occurrences).
 - `WinConflict2` — `dom/chrome/dom/dom.properties` — `WinConflict2` uses straight double quotes
     - Current: `L’évènement « key » n’est pas disponible pour certaines dispositions de clavier : key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on some keyboard layouts: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `guillemet` (1044 occurrences).
+    - The locale's quote convention is `guillemet` (1045 occurrences).
 - `felt-error-warning-download-attempt-failed-contact-admin` — `toolkit/toolkit/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
     - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
-    - The tree uses ’ 5118 times against 10 straight.
+    - The tree uses ’ 5130 times against 10 straight.
 
 ---
 
@@ -285,8 +299,9 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (72)
+### Fixed to date (73)
 
+- `ipprotection-site-inclusions-callout-description-1` — `browser/browser/ipProtection.ftl` — fixed 2026-10-26
 - `genai-prompts-summarize-page` — `browser/browser/genai.ftl` — fixed 2026-10-19
 - `SpeechRecognitionBlockedByAIControlsWarning` — `dom/chrome/dom/dom.properties` — fixed 2026-10-19
 - `about-sync-log-row-success` — `toolkit/services/aboutSyncLog.ftl` — fixed 2026-10-19
@@ -326,4 +341,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `urlbar-translations-button2` — `browser/browser/translations.ftl` — fixed 2026-08-24
 - `inactive-css-border-image` — `devtools/client/tooltips.ftl` — fixed 2026-08-24
 - `learn-more` — `devtools/client/tooltips.ftl` — fixed 2026-08-24
-- `support-remote-experiments-see-about-studies` — `toolkit/toolkit/about/aboutSupport.ftl` — fixed 2026-08-24

@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cb086148c41a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `3bdd70692916` |
-| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 16,460 |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
+| **Previous run** | 2026-10-19 @ `cb086148c41a` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 160 of 16,595 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for cs: [android](android.md) · [firefox_ios](firefox_ios.md)
 
@@ -19,9 +18,38 @@ Also for cs: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (6)
 
-_No new findings._
+- `toolbar-edit-controls` — `browser/browser/browser.ftl` — The title "Edit controls" (a noun phrase naming the edit button group) is translated as a verb phrase meaning "will edit the controls".
+    - Current: `Upraví ovládání`
+    - Source: `label: Edit controls title: Edit controls`
+    - Suggest: `Ovládání úprav`
+    - In en-US, "Edit controls" names the toolbar group holding Cut/Copy/Paste. "Upraví ovládání" reads as an action ("Edits the controls"), which says something different from the source.
+- `decoder-doctor-no-pulse-audio-message` — `browser/browser/browser.ftl` — "To play audio" is translated as "to play music" (hudby).
+    - Current: `Pro přehrávání hudby`
+    - Source: `To play audio, you may need to install the required PulseAudio software.`
+    - Suggest: `Pro přehrávání zvuku`
+    - en-US says audio in general; "hudba" means music only, which narrows the meaning. Elsewhere in the batch "audio" is rendered as "audia".
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The hedge "Help hide your location" is dropped, so the text promises outright to hide the user's location.
+    - Current: `Skryjte při prohlížení svou polohu.`
+    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
+    - Suggest: `Pomozte si při prohlížení skrýt svou polohu.`
+    - The source deliberately says the VPN only helps hide the location. "Skryjte svou polohu" states it as a guarantee the product does not give.
+- `ip-protection-site-rule-intro` — `browser/browser/ipProtection.ftl` — There's a comma before "a poté", which Czech punctuation rules don't allow.
+    - Current: `Zadejte stránku, a poté vyberte`
+    - Source: `Enter a site, then select its VPN status.`
+    - Suggest: `Zadejte stránku a poté vyberte`
+    - Czech doesn't put a comma before a plain "a" that joins two steps in sequence. Here it links two imperative clauses with no contrast or result, so the comma is a punctuation error.
+- `notifications-entry-card-header` — `browser/browser/preferences/preferences.ftl` — "strány" is a misspelling of the plural "strany".
+    - Current: `které strány mohou`
+    - Source: `description: Choose which websites can send notifications, and how those alerts show up. label: Notifications`
+    - Suggest: `které stránky mohou`
+    - The plural of "strana" is "strany" without the accent; "strány" is not a Czech word. The rest of the surface uses "stránky" for websites, so the suggestion uses that word too.
+- `newtab-stocks-widget-open-menu-button2` — `browser/browser/newtab/newtab.ftl` — "nabídku finance" needs the genitive plural, "financí".
+    - Current: `nabídku finance`
+    - Source: `aria-label: Open finance menu title: Open finance menu`
+    - Suggest: `nabídku financí`
+    - "nabídka" takes a genitive complement, and "finance" (a plural-only noun) is "financí" in the genitive. The current form is ungrammatical, in both the aria-label and the title.
 
 ### ✅ Fixed since the last run (0)
 
@@ -35,9 +63,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `ipprotection-feature-introduction-link-text-privacy-2` — `browser/browser/ipProtection.ftl` — Missing space before the brand placeholder, rendering “VPNFirefoxu”.
+    - Current: `Integrovaná služba VPN{ -brand-product-name(case: "gen") }`
+    - Suggest: `Integrovaná služba VPN { -brand-product-name(case: "gen") }`
+    - The no-cases branch of the same message has the space; without it the brand name is glued to “VPN”.
 
 ---
 
@@ -45,17 +76,17 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 328 |
-| Strings | 16,460 |
-| Missing strings | 86 |
+| Files | 330 |
+| Strings | 16,595 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 3 |
-| Plural variants (dead or missing forms) | 69 |
+| Plural variants (dead or missing forms) | 72 |
 | Text quoting a UI label that no longer matches | 6 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 2 |
@@ -64,25 +95,7 @@ _Nothing retired._
 
 ### Completeness
 
-**86 strings** are not translated yet, concentrated in:
-
-- `browser/browser/ipProtection.ftl` — 25
-- `browser/browser/miniWindow.ftl` — 15
-- `browser/browser/autoTabGrouping.ftl` — 9
-- `browser/browser/browser.ftl` — 9
-- `browser/browser/newtab/newtab.ftl` — 9
-- `browser/browser/newtab/onboarding.ftl` — 8
-- `browser/browser/genai.ftl` — 6
-- `browser/browser/defaultBrowserNotification.ftl` — 2
-- `browser/browser/browserContext.ftl` — 1
-- `browser/browser/sidebar.ftl` — 1
-- `browser/browser/tabbrowser.ftl` — 1
-
-**Files absent from the locale:**
-
-- `browser/browser/miniWindow.ftl`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -90,7 +103,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `german-double` 470, `curly-double` 215, `curly-single` 56, `straight-double` 43, `polish-double` 2 | _mixed_ |
+| quotes | `german-double` 473, `curly-double` 215, `curly-single` 56, `straight-double` 43, `polish-double` 2 | _mixed_ |
 | apostrophe | `typographic` 70, `straight` 9 | **typographic** |
 | ellipsis | `char` 390, `ascii` 3 | **char** |
 | dash | `em` 65, `en` 30 | _mixed_ |
@@ -100,19 +113,28 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ## 2. Systemic items (decisions, not line items)
 
-- **plurals — 69 strings** — 69 strings. The locale's plural variants differ from what the rest of its tree does. At this scale it is a convention to settle once, not a defect per string.
-    - Affected: `about-processes-active-threads`, `about-processes-inactive-threads`, `about-processes-profile-process`, `about-processes-tab-count`, `about-telemetry-histogram-stats`, `about-webrtc-channels`, `about-webrtc-frames`, `about-webrtc-lost-label`, `about-webrtc-received-label`, `about-webrtc-sent-label`, `accessibility-progress-progressbar`, `account-multiple-tabs-arriving-from-multiple-devices` …and 57 more
+- **plurals — 72 strings** — 72 strings. The locale's plural variants differ from what the rest of its tree does. At this scale it is a convention to settle once, not a defect per string.
+    - Affected: `about-processes-active-threads`, `about-processes-inactive-threads`, `about-processes-profile-process`, `about-processes-tab-count`, `about-telemetry-histogram-stats`, `about-webrtc-channels`, `about-webrtc-frames`, `about-webrtc-lost-label`, `about-webrtc-received-label`, `about-webrtc-sent-label`, `accessibility-progress-progressbar`, `account-multiple-tabs-arriving-from-multiple-devices` …and 60 more
 
 ---
 
-## 3. Open findings (248)
+## 3. Open findings (253)
 
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The hedge "Help hide your location" is dropped, so the text promises outright to hide the user's location.
+    - Current: `Skryjte při prohlížení svou polohu.`
+    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
+    - Suggest: `Pomozte si při prohlížení skrýt svou polohu.`
+    - The source deliberately says the VPN only helps hide the location. "Skryjte svou polohu" states it as a guarantee the product does not give.
+
+_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 41 |
-| 2 | Wrong content (says something other than the English) | 121 |
-| 3 | Degraded language (grammar, spelling, terminology) | 62 |
+| 2 | Wrong content (says something other than the English) | 123 |
+| 3 | Degraded language (grammar, spelling, terminology) | 65 |
 | 4 | Cosmetic (typography, spacing) | 19 |
 
 ### A. Functional, markup, variables & plurals
@@ -421,6 +443,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `aria-label: Dismiss { $text } title: Dismiss { $text }`
     - Suggest: `Skrýt { $text }`
     - Per the developer comment the control dismisses a suggestion pill; "Zrušit" means cancelling an action, not dismissing a suggestion.
+- `decoder-doctor-no-pulse-audio-message` — `browser/browser/browser.ftl` — "To play audio" is translated as "to play music" (hudby).
+    - Current: `Pro přehrávání hudby`
+    - Source: `To play audio, you may need to install the required PulseAudio software.`
+    - Suggest: `Pro přehrávání zvuku`
+    - en-US says audio in general; "hudba" means music only, which narrows the meaning. Elsewhere in the batch "audio" is rendered as "audia".
+- `toolbar-edit-controls` — `browser/browser/browser.ftl` — The title "Edit controls" (a noun phrase naming the edit button group) is translated as a verb phrase meaning "will edit the controls".
+    - Current: `Upraví ovládání`
+    - Source: `label: Edit controls title: Edit controls`
+    - Suggest: `Ovládání úprav`
+    - In en-US, "Edit controls" names the toolbar group holding Cut/Copy/Paste. "Upraví ovládání" reads as an action ("Edits the controls"), which says something different from the source.
 - `bookmark-properties-title-add-multiple-bookmarks` — `browser/browser/editBookmarkOverlay.ftl` — The title "New Bookmarks" is rendered as "Add all tabs to bookmarks", which says something different from the source.
     - Current: `Přidat všechny panely do záložek`
     - Source: `New Bookmarks`
@@ -431,6 +463,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Help hide your location for <a data-l10n-name="learn-more-vpn">extra privacy</a> as you browse. Set rules to turn on the VPN for extra privacy or location-based browsing, and off where you don’t.`
     - Suggest: `<a data-l10n-name="learn-more-vpn">větší soukromí</a>`
     - "extra privacy" means more privacy; the sibling string renders it as "větší soukromí". "zvlášť soukromí" is ungrammatical and inconsistent.
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The hedge "Help hide your location" is dropped, so the text promises outright to hide the user's location.
+    - Current: `Skryjte při prohlížení svou polohu.`
+    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
+    - Suggest: `Pomozte si při prohlížení skrýt svou polohu.`
+    - The source deliberately says the VPN only helps hide the location. "Skryjte svou polohu" states it as a guarantee the product does not give.
 - `newtab-recent-searches-empty-recent` — `browser/browser/newtab/newtab.ftl` — "pick them up again" (resume/reuse the searches) is rendered as "znovu obnovit" (restore again), and the number disagrees with the pronoun.
     - Current: `Nedávné vyhledávání se zobrazí zde, takže je můžete kdykoli znovu obnovit.`
     - Source: `Recent searches will show here so you can pick them up again anytime.`
@@ -519,6 +556,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Set as primary browser`
     - Suggest: `Nastavit jako hlavní prohlížeč`
     - en-US “Set as primary browser”; the prompt title and default-browser-prompt-button-primary-pin use “hlavní prohlížeč”, while default-browser-prompt-button-primary-alt (“Set as default browser”) already uses “výchozí prohlížeč”, so the two distinct actions become identical.
+- `ip-protection-site-rule-intro` — `browser/browser/ipProtection.ftl` — There's a comma before "a poté", which Czech punctuation rules don't allow.
+    - Current: `Zadejte stránku, a poté vyberte`
+    - Source: `Enter a site, then select its VPN status.`
+    - Suggest: `Zadejte stránku a poté vyberte`
+    - Czech doesn't put a comma before a plain "a" that joins two steps in sequence. Here it links two imperative clauses with no contrast or result, so the comma is a punctuation error.
 - `home-custom-homepage-replace-with-prompt` — `browser/browser/newtab/newtab.ftl` — "Nahradit s" is a calque of "Replace with"; Czech "nahradit" takes the instrumental without "s".
     - Current: `Nahradit s`
     - Source: `label: Replace with`
@@ -539,6 +581,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Get a new wallpaper for the semi-finals`
     - Suggest: `Získejte novou tapetu pro semifinále`
     - Czech spells it "semifinále" as one word; the same file already uses "Semifinále" in newtab-sports-widget-semi-finals.
+- `newtab-stocks-widget-open-menu-button2` — `browser/browser/newtab/newtab.ftl` — "nabídku finance" needs the genitive plural, "financí".
+    - Current: `nabídku finance`
+    - Source: `aria-label: Open finance menu title: Open finance menu`
+    - Suggest: `nabídku financí`
+    - "nabídka" takes a genitive complement, and "finance" (a plural-only noun) is "financí" in the genitive. The current form is ungrammatical, in both the aria-label and the title.
 - `newtab-wallpaper-suspension-bridge` — `browser/browser/newtab/newtab.ftl` — The wallpaper description is grammatically broken and does not parse as Czech.
     - Current: `Šedivé fotografování celé visuté můstky během dne`
     - Source: `Grey full-suspension bridge photography during daytime`
@@ -594,6 +641,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `accesskey: c label: Save security codes`
     - Suggest: `Ukládat bezpečnostní kódy`
     - "Security codes" is "bezpečnostní kódy"; "bezpečností" is the instrumental of the noun "bezpečnost" and is a spelling error here.
+- `notifications-entry-card-header` — `browser/browser/preferences/preferences.ftl` — "strány" is a misspelling of the plural "strany".
+    - Current: `které strány mohou`
+    - Source: `description: Choose which websites can send notifications, and how those alerts show up. label: Notifications`
+    - Suggest: `které stránky mohou`
+    - The plural of "strana" is "strany" without the accent; "strány" is not a Czech word. The rest of the surface uses "stránky" for websites, so the suggestion uses that word too.
 - `preonboarding-terms-of-use-header-button-title-b-v2` — `browser/browser/preonboarding.ftl` — "Terms of Use" appears as "Podmínky použití" here but as "Podmínky používání" everywhere else on the same screen.
     - Current: `Podmínky použití`
     - Source: `Terms of Use`
@@ -1036,11 +1088,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `This key is already used by “{ $conflict }” and cannot be used.`
     - Suggest: `Tato klávesa je již použita pro akci „{ $conflict }“ a není možné ji použít.`
     - customkeys-conflict-confirm-body, shown in the same dialog family, uses „{ $conflict }“.
-- `ipprotection-feature-introduction-link-text-privacy-2` — `browser/browser/ipProtection.ftl` — Missing space before the brand placeholder, rendering “VPNFirefoxu”.
-    - Current: `Integrovaná služba VPN{ -brand-product-name(case: "gen") }`
-    - Source: `<a data-l10n-name="learn-more-vpn">{ -brand-product-name }’s built-in VPN</a> helps protect your browsing. Choose from multiple locations to keep where you browse more private.`
-    - Suggest: `Integrovaná služba VPN { -brand-product-name(case: "gen") }`
-    - The no-cases branch of the same message has the space; without it the brand name is glued to “VPN”.
 - `launch-on-login-infobar-final-message` — `browser/browser/newtab/asrouter.ftl` — Uses ASCII straight quotes where the file otherwise uses Czech quotation marks.
     - Current: `vyhledejte v nastavení položku "spuštění"`
     - Source: `<strong>Open { -brand-short-name } every time you restart your computer?</strong> To manage your Startup preferences, search “startup” in settings.`

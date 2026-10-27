@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `9ea69c4843c5` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `2d5e7eb1f225` |
-| **Previous run** | 2026-10-19 @ `ba8eba5819d0` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
+| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,477 |
+| **Strings reviewed this run** | 118 of 16,570 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,43 @@ Also for fy-NL: [android](android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (7)
 
-_No new findings._
+- `decoder-doctor-decode-error-message` — `browser/browser/browser.ftl` — "wylst" is a conjunction but is followed by a noun phrase, which makes the sentence ungrammatical.
+    - Current: `wylst it dekodearjen fan in mediaboarne`
+    - Source: `An error occurred while decoding a media resource.`
+    - Suggest: `by it dekodearjen fan in mediaboarne`
+    - Frisian "wylst" means "while" as a conjunction and needs a full clause after it. Before a noun phrase the preposition "by" is needed ("by it dekodearjen" = "while decoding").
+- `decoder-doctor-decode-warning-message` — `browser/browser/browser.ftl` — "wylst" is a conjunction but is followed by a noun phrase, which makes the sentence ungrammatical.
+    - Current: `wylst it dekodearjen fan in mediaboarne`
+    - Source: `A recoverable error occurred while decoding a media resource.`
+    - Suggest: `by it dekodearjen fan in mediaboarne`
+    - Frisian "wylst" needs a full clause after it. Before a noun phrase the preposition "by" is needed.
+- `site-rules-inclusion-prompt` — `browser/browser/ipProtection.ftl` — "ynkseakelje" is a typo for "ynskeakelje".
+    - Current: `ynkseakelje`
+    - Source: `heading: Always turn on VPN for { $website }? message: Update your rules anytime in settings.`
+    - Suggest: `ynskeakelje`
+    - The letters are swapped. Elsewhere in the same file the word is correctly spelled "Ynskeakelje".
+- `ipprotection-button-turn-vpn-off-1` — `browser/browser/ipProtection.ftl` — "Utskeakelje" is missing the accent on Ú.
+    - Current: `Utskeakelje`
+    - Source: `Turn off`
+    - Suggest: `Útskeakelje`
+    - The Frisian word is "út", so this verb is spelled "útskeakelje". The capital needs the accent too.
+- `newtab-picture-header-date` — `browser/browser/newtab/newtab.ftl` — "Ofbylding" is missing the circumflex; the Frisian spelling is "Ôfbylding".
+    - Current: `Ofbylding fan de dei`
+    - Source: `Picture of the day: { $date }`
+    - Suggest: `Ôfbylding fan de dei`
+    - The Frisian word is "ôfbylding", and the circumflex stays on the capital letter. The same batch writes "ôfbylding" in newtab-picture-set-wallpaper2 and newtab-picture-menu-hide-photo2.
+- `newtab-picture-menu-show-photo2` — `browser/browser/newtab/newtab.ftl` — "Ofbylding" is missing the circumflex; the Frisian spelling is "Ôfbylding".
+    - Current: `Ofbylding toane`
+    - Source: `Show picture`
+    - Suggest: `Ôfbylding toane`
+    - The Frisian word is "ôfbylding", and the circumflex stays on the capital letter. The same batch writes "ôfbylding" in other strings.
+- `newtab-picture-show-button2` — `browser/browser/newtab/newtab.ftl` — "Ofbylding" is missing the circumflex in the aria-label and title; the Frisian spelling is "Ôfbylding".
+    - Current: `Ofbylding toane`
+    - Source: `aria-label: Show picture title: Show picture`
+    - Suggest: `Ôfbylding toane`
+    - The Frisian word is "ôfbylding", and the circumflex stays on the capital letter. The same batch writes "ôfbylding" in other strings.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,9 +68,11 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `newtab-sports-widget-loading-more` — `browser/browser/newtab/newtab.ftl` — Mear oerienkomsten lade… → Mear wedstriden lade…
+    - Current: `Mear oerienkomsten lade…`
+    - Suggest: `Mear wedstriden lade…`
 
 ---
 
@@ -44,9 +80,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 328 |
-| Strings | 16,477 |
-| Missing strings | 43 |
+| Files | 330 |
+| Strings | 16,570 |
+| Missing strings | 25 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +99,15 @@ _Nothing retired._
 
 ### Completeness
 
-**43 strings** are not translated yet, concentrated in:
+**25 strings** are not translated yet, concentrated in:
 
-- `browser/browser/browser.ftl` — 8
-- `browser/browser/ipProtection.ftl` — 8
-- `browser/browser/newtab/newtab.ftl` — 8
-- `browser/browser/sanitize.ftl` — 3
-- `toolkit/toolkit/about/aboutGlean.ftl` — 2
-- `browser/browser/sidebar.ftl` — 2
-- `browser/browser/preferences/permissions.ftl` — 2
-- `browser/browser/preferences/preferences.ftl` — 2
-- `toolkit/toolkit/global/videocontrols.ftl` — 1
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 1
-- `browser/browser/confirmationHints.ftl` — 1
-- `browser/browser/genai.ftl` — 1
+- `browser/browser/preferences/preferences.ftl` — 14
+- `browser/browser/ipProtection.ftl` — 4
+- `browser/chrome/browser/browser.properties` — 2
+- `dom/chrome/security/security.properties` — 2
+- `toolkit/toolkit/global/narrate.ftl` — 1
+- `browser/browser/policies/policies-descriptions.ftl` — 1
+- `dom/chrome/dom/dom.properties` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -86,10 +117,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-single` 806, `straight-double` 26, `curly-double` 16 | **curly-single** |
-| apostrophe | `typographic` 1499 | **typographic** |
+| quotes | `curly-single` 808, `straight-double` 26, `curly-double` 16 | **curly-single** |
+| apostrophe | `typographic` 1500 | **typographic** |
 | ellipsis | `char` 399 | **char** |
-| dash | `em` 10, `en` 83 | **en** |
+| dash | `em` 10, `en` 84 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 7 | _mixed_ |
 
 ---
@@ -100,14 +131,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (470)
+## 3. Open findings (476)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 12 |
-| 2 | Wrong content (says something other than the English) | 122 |
-| 3 | Degraded language (grammar, spelling, terminology) | 236 |
+| 2 | Wrong content (says something other than the English) | 121 |
+| 3 | Degraded language (grammar, spelling, terminology) | 243 |
 | 4 | Cosmetic (typography, spacing) | 100 |
 
 ### A. Functional, markup, variables & plurals
@@ -305,10 +336,6 @@ _Nothing reported._
     - Current: `foar de hân`
     - Source: `Your favorites at your fingertips`
     - Suggest: `by de hân`
-- `newtab-sports-widget-loading-more` — `browser/browser/newtab/newtab.ftl` — Mear oerienkomsten lade… → Mear wedstriden lade…
-    - Current: `Mear oerienkomsten lade…`
-    - Source: `Loading more matches…`
-    - Suggest: `Mear wedstriden lade…`
 - `newtab-wallpaper-your-images-folder` — `browser/browser/newtab/newtab.ftl` — The accessible name changes "Your images, wallpapers that you have saved" into "Your saved images and wallpapers", turning an appositive description into two separate categories.
     - Current: `Jo bewarre ôfbyldingen en eftergrûnen`
     - Source: `aria-label: Your images, wallpapers that you have saved`
@@ -398,7 +425,12 @@ _Nothing reported._
     - Current: `Mear ljepblêden slute`
     - Source: `accesskey: M label: Close Multiple Tabs`
     - Suggest: `Meardere ljepblêden slute`
-- _…and 65 more; see `state/` for the full list._
+- `edit-controls.label` — `browser/chrome/browser/customizableui/customizableWidgets.properties` — "Edit controls" (the noun phrase naming the cut/copy/paste widget) is translated as the imperative "Edit the controls".
+    - Current: `Betsjinningen bewurkje`
+    - Source: `Edit controls`
+    - Suggest: `Bewurkingsbetsjinningen`
+    - In customizableWidgets, 'Edit controls' is the name of the toolbar widget containing Cut/Copy/Paste ('edit' is an attributive noun), not an instruction to edit controls.
+- _…and 64 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -468,6 +500,16 @@ _Nothing reported._
     - Current: `ferstjoerd`
     - Source: `{ -brand-short-name } automatically sends some data to { -vendor-short-name } so that we can improve your experience.`
     - Suggest: `ferstjoert`
+- `decoder-doctor-decode-error-message` — `browser/browser/browser.ftl` — "wylst" is a conjunction but is followed by a noun phrase, which makes the sentence ungrammatical.
+    - Current: `wylst it dekodearjen fan in mediaboarne`
+    - Source: `An error occurred while decoding a media resource.`
+    - Suggest: `by it dekodearjen fan in mediaboarne`
+    - Frisian "wylst" means "while" as a conjunction and needs a full clause after it. Before a noun phrase the preposition "by" is needed ("by it dekodearjen" = "while decoding").
+- `decoder-doctor-decode-warning-message` — `browser/browser/browser.ftl` — "wylst" is a conjunction but is followed by a noun phrase, which makes the sentence ungrammatical.
+    - Current: `wylst it dekodearjen fan in mediaboarne`
+    - Source: `A recoverable error occurred while decoding a media resource.`
+    - Suggest: `by it dekodearjen fan in mediaboarne`
+    - Frisian "wylst" needs a full clause after it. Before a noun phrase the preposition "by" is needed.
 - `onboarding-aw-finish-setup-button` — `browser/browser/browser.ftl` — Ynstellen { -brand-short-name } → Ynstellen fan { -brand-short-name }
     - Current: `Ynstellen { -brand-short-name }`
     - Source: `label: Finish setup tooltiptext: Finish setting up { -brand-short-name }`
@@ -522,6 +564,11 @@ _Nothing reported._
     - Current: `krekten`
     - Source: `label: Proofread value: Please proofread the selection for spelling and grammar errors. Identify any mistakes and provide a corrected version of the text. Maintain the meaning and factual accuracy and output the list of…`
     - Suggest: `krektens`
+- `ipprotection-button-turn-vpn-off-1` — `browser/browser/ipProtection.ftl` — "Utskeakelje" is missing the accent on Ú.
+    - Current: `Utskeakelje`
+    - Source: `Turn off`
+    - Suggest: `Útskeakelje`
+    - The Frisian word is "út", so this verb is spelled "útskeakelje". The capital needs the accent too.
 - `ipprotection-connection-status-blocked-error-description-1` — `browser/browser/ipProtection.ftl` — Comma splits subject from verb
     - Source: `Local laws and restrictions limit where you can use VPN. <a data-l10n-name="learn-more-link">Learn more</a>`
 - `ipprotection-connection-status-network-error-description` — `browser/browser/ipProtection.ftl` — dernei → dêrnei
@@ -532,6 +579,11 @@ _Nothing reported._
     - Current: `Fyn`
     - Source: `Finds the fastest location`
     - Suggest: `Fynt`
+- `site-rules-inclusion-prompt` — `browser/browser/ipProtection.ftl` — "ynkseakelje" is a typo for "ynskeakelje".
+    - Current: `ynkseakelje`
+    - Source: `heading: Always turn on VPN for { $website }? message: Update your rules anytime in settings.`
+    - Suggest: `ynskeakelje`
+    - The letters are swapped. Elsewhere in the same file the word is correctly spelled "Ynskeakelje".
 - `menu-application-hide-other` — `browser/browser/menubar.ftl` — Oare ferstopje → Oaren ferstopje
     - Current: `Oare ferstopje`
     - Source: `label: Hide Others`
@@ -564,6 +616,21 @@ _Nothing reported._
     - Current: `Kin jo net wachtsje?`
     - Source: `You’ve caught up. Check back later for more stories. Can’t wait? Select a popular topic to find more great stories from around the web.`
     - Suggest: `Kinne jo net wachtsje?`
+- `newtab-picture-header-date` — `browser/browser/newtab/newtab.ftl` — "Ofbylding" is missing the circumflex; the Frisian spelling is "Ôfbylding".
+    - Current: `Ofbylding fan de dei`
+    - Source: `Picture of the day: { $date }`
+    - Suggest: `Ôfbylding fan de dei`
+    - The Frisian word is "ôfbylding", and the circumflex stays on the capital letter. The same batch writes "ôfbylding" in newtab-picture-set-wallpaper2 and newtab-picture-menu-hide-photo2.
+- `newtab-picture-menu-show-photo2` — `browser/browser/newtab/newtab.ftl` — "Ofbylding" is missing the circumflex; the Frisian spelling is "Ôfbylding".
+    - Current: `Ofbylding toane`
+    - Source: `Show picture`
+    - Suggest: `Ôfbylding toane`
+    - The Frisian word is "ôfbylding", and the circumflex stays on the capital letter. The same batch writes "ôfbylding" in other strings.
+- `newtab-picture-show-button2` — `browser/browser/newtab/newtab.ftl` — "Ofbylding" is missing the circumflex in the aria-label and title; the Frisian spelling is "Ôfbylding".
+    - Current: `Ofbylding toane`
+    - Source: `aria-label: Show picture title: Show picture`
+    - Suggest: `Ôfbylding toane`
+    - The Frisian word is "ôfbylding", and the circumflex stays on the capital letter. The same batch writes "ôfbylding" in other strings.
 - `newtab-picture-widget-open-menu-button` — `browser/browser/newtab/newtab.ftl` — Mistranslated/misparsed compound: "Ofbylding fan it dei-menu" means "the day menu's picture" instead of "picture of the day menu"; also missing diacritic on "Ôfbylding".
     - Current: `aria-label: Ofbylding fan it dei-menu iepenje`
     - Source: `aria-label: Open picture of the day menu title: Open picture of the day menu`
@@ -609,37 +676,7 @@ _Nothing reported._
     - Current: `sybalkeynstellingen`
     - Source: `Switch it up whenever you want in the sidebar settings.`
     - Suggest: `sidebalkeynstellingen`
-- `smartwindow-sidebar-auto-open-callout-body` — `browser/browser/newtab/onboarding.ftl` — jo it nedich binne → jo it nedich hawwe
-    - Current: `jo it nedich binne`
-    - Source: `You can still open it whenever you need it.`
-    - Suggest: `jo it nedich hawwe`
-- `panic-button-thankyou-msg1` — `browser/browser/panelUI.ftl` — is wiskje → is wiske
-    - Current: `is wiskje`
-    - Source: `Your recent history is cleared.`
-    - Suggest: `is wiske`
-- `speech-recognition-model-download-complete-message` — `browser/browser/permissions.ftl` — Past participle missing: "download" should be "download(e)" as a finished action, i.e. "downloaden"/"ynladen".
-    - Current: `Spraakwerkenningsmodel download.`
-    - Source: `Speech recognition model downloaded.`
-    - Suggest: `Spraakwerkenningsmodel download. `
-    - en-US "Speech recognition model downloaded." states completion; the Frisian lacks a past participle form, reading as a noun/infinitive rather than "is downloaden".
-- `places-locked-prompt` — `browser/browser/places.ftl` — "ien de bestannen fan" is ungrammatical; should be "ien fan de bestannen fan" (one of the files).
-    - Current: `omdat ien de bestannen fan { -brand-short-name } yn gebrûk is`
-    - Source: `The bookmarks and history system will not be functional because one of { -brand-short-name }’s files is in use by another application. Some security software can cause this problem.`
-    - Suggest: `omdat ien fan de bestannen fan { -brand-short-name } yn gebrûk is`
-    - en-US says "one of { -brand-short-name }’s files"; the partitive "fan" is missing, making the clause grammatically broken.
-- `places-bookmarks-backup-title` — `browser/browser/placesPrompts.ftl` — Betânsnamme → Bestânsnamme
-    - Current: `Betânsnamme`
-    - Source: `Bookmarks backup filename`
-    - Suggest: `Bestânsnamme`
-- `policy-AutofillCreditCardEnabled` — `browser/browser/policies/policies-descriptions.ftl` — beteelingsmetoaden → betelmetoaden
-    - Current: `beteelingsmetoaden`
-    - Source: `Enable autofill for payment methods.`
-    - Suggest: `betelmetoaden`
-- `policy-Bookmarks` — `browser/browser/policies/policies-descriptions.ftl` — Blêdwizerakbalke → Blêdwizerarkbalke
-    - Current: `Blêdwizerakbalke`
-    - Source: `Create bookmarks in the Bookmarks toolbar, Bookmarks menu, or a specified folder inside them.`
-    - Suggest: `Blêdwizerarkbalke`
-- _…and 155 more; see `state/` for the full list._
+- _…and 162 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
