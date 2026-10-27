@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `57c409b04755` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `57c409b04755` |
-| **Previous run** | 2026-10-18 @ `dd8ca757b7dd` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
+| **Previous run** | 2026-10-19 @ `57c409b04755` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,703 |
+| **Strings reviewed this run** | 3 of 2,703 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -46,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 45 |
 | Strings | 2,703 |
-| Missing strings | 99 |
+| Missing strings | 100 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,10 +63,10 @@ _Nothing retired._
 
 ### Completeness
 
-**99 strings** are not translated yet, concentrated in:
+**100 strings** are not translated yet, concentrated in:
 
 - `mozilla-mobile/focus-android/app/src/main/res/values-hi-rIN/strings.xml` — 80
-- `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — 13
+- `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — 14
 - `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-hi-rIN/strings.xml` — 5
 - `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-hi-rIN/strings.xml` — 1
 

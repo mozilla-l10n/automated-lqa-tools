@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `7ee8e61a4a7d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `7ee8e61a4a7d` |
-| **Previous run** | 2026-10-18 @ `dd8ca757b7dd` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
+| **Previous run** | 2026-10-19 @ `7ee8e61a4a7d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 2,800 |
+| **Strings reviewed this run** | 2 of 2,801 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,7 +45,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 45 |
-| Strings | 2,800 |
+| Strings | 2,801 |
 | Missing strings | 2 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -78,7 +78,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | quotes | `polish-double` 84 | **polish-double** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 2, `en` 3 | _mixed_ |
-| nbsp | `total` 722, `before-punctuation` 20 | **total** |
+| nbsp | `total` 724, `before-punctuation` 20 | **total** |
 | register | `informal` 9 | **informal** |
 
 ---

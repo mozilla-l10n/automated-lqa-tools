@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `57c409b04755` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `57c409b04755` |
-| **Previous run** | 2026-10-18 @ `dd8ca757b7dd` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
+| **Previous run** | 2026-10-19 @ `57c409b04755` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 2,732 |
 
@@ -46,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 44 |
 | Strings | 2,732 |
-| Missing strings | 70 |
+| Missing strings | 71 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
@@ -63,9 +63,9 @@ _Nothing retired._
 
 ### Completeness
 
-**70 strings** are not translated yet, concentrated in:
+**71 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — 42
+- `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — 43
 - `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml` — 23
 - `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-es-rES/strings.xml` — 3
 - `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-es-rES/strings.xml` — 1
