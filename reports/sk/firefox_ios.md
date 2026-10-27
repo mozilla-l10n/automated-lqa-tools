@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **Previous run** | 2026-10-17 @ `09d125f6a298` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
+| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,927 |
+| **Strings reviewed this run** | 55 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for sk: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `VPN.Settings.DataLimitResetFooter.v160` — `sk/firefox-ios.xliff` — Wrong case after "v prvý deň": it needs the genitive "každého mesiaca", not the nominative "každý mesiac".
+    - Current: `v prvý deň každý mesiac`
+    - Source: `Resets to %1$@ GB on the first of every month`
+    - Suggest: `v prvý deň každého mesiaca`
+    - In Slovak, "the first day of every month" puts "every month" in the genitive. The current text is ungrammatical.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,8 +48,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 97 |
-| Strings | 1,927 |
+| Files | 98 |
+| Strings | 1,973 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -69,8 +73,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-single` 10, `curly-double` 4 | _mixed_ |
 | apostrophe | `typographic` 10 | **typographic** |
-| ellipsis | `char` 28 | **char** |
+| ellipsis | `char` 31 | **char** |
 | dash | `en` 5 | **en** |
+| nbsp | `total` 6 | **total** |
 
 ---
 
@@ -80,7 +85,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (36)
+## 3. Open findings (37)
 
 > **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -101,7 +106,7 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 15 |
-| 3 | Degraded language (grammar, spelling, terminology) | 18 |
+| 3 | Degraded language (grammar, spelling, terminology) | 19 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
@@ -213,6 +218,11 @@ _Nothing in this category._
     - Source: `Agree and continue`
     - Suggest: `Súhlasiť a pokračovať`
     - Coordinated verbs in a button label must share the same form; other buttons in this file use the infinitive (e.g. 'Uložiť a začať prehliadať').
+- `VPN.Settings.DataLimitResetFooter.v160` — `sk/firefox-ios.xliff` — Wrong case after "v prvý deň": it needs the genitive "každého mesiaca", not the nominative "každý mesiac".
+    - Current: `v prvý deň každý mesiac`
+    - Source: `Resets to %1$@ GB on the first of every month`
+    - Suggest: `v prvý deň každého mesiaca`
+    - In Slovak, "the first day of every month" puts "every month" in the genitive. The current text is ungrammatical.
 - `ContextualHints.Summarize.Description.v142` — `sk/firefox-ios.xliff` — Case error: the genitive after "obsah" requires "tejto stránky", not "tejto stránku".
     - Current: `obsah tejto stránku`
     - Source: `Tap to summarize this page. Touch and hold for Reader View.`

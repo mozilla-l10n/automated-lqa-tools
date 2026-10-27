@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **Previous run** | 2026-10-17 @ `09d125f6a298` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
+| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,927 |
+| **Strings reviewed this run** | 46 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for pt-PT: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `VPN.Onboarding.WifiBody.v160` — `pt-PT/firefox-ios.xliff` — Typo: the contraction "no" is misspelled as "nop".
+    - Current: `nop %1$@`
+    - Source: `Add extra protection in %1$@ when you browse on the go.`
+    - Suggest: `no %1$@`
+    - "in %1$@" (e.g. "in Firefox") should be "no %1$@" in Portuguese; "nop" is not a word.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,8 +48,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 97 |
-| Strings | 1,927 |
+| Files | 98 |
+| Strings | 1,973 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -69,7 +73,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-single` 10, `curly-double` 4 | _mixed_ |
 | apostrophe | `typographic` 10 | **typographic** |
-| ellipsis | `char` 28 | **char** |
+| ellipsis | `char` 31 | **char** |
 | dash | `em` 1, `en` 4 | **en** |
 
 ---
@@ -80,7 +84,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (65)
+## 3. Open findings (66)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -96,7 +100,7 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 17 |
-| 3 | Degraded language (grammar, spelling, terminology) | 35 |
+| 3 | Degraded language (grammar, spelling, terminology) | 36 |
 | 4 | Cosmetic (typography, spacing) | 13 |
 
 ### A. Functional, markup, variables & plurals
@@ -248,6 +252,11 @@ _Nothing in this category._
     - Source: `If you’re on a corporate network, your support team might have more info.`
     - Suggest: `Se está numa rede empresarial`
     - The en-US says "If you're on a corporate network". Portuguese needs the contraction "numa" (em + uma) here. Without it, "Se está uma rede empresarial" is ungrammatical.
+- `VPN.Onboarding.WifiBody.v160` — `pt-PT/firefox-ios.xliff` — Typo: the contraction "no" is misspelled as "nop".
+    - Current: `nop %1$@`
+    - Source: `Add extra protection in %1$@ when you browse on the go.`
+    - Suggest: `no %1$@`
+    - "in %1$@" (e.g. "in Firefox") should be "no %1$@" in Portuguese; "nop" is not a word.
 - `TermsOfUse.ReviewAndAcceptText.v142` — `pt-PT/firefox-ios.xliff` — "despender" takes a direct object; "despenda de um momento" is ungrammatical.
     - Current: `despenda de um momento`
     - Source: `Please take a moment to review and accept. Learn more`

@@ -1058,6 +1058,30 @@
  {
   "category": "B",
   "check": "llm",
+  "current": "GB hakkınız sıfırlanır",
+  "dismissed_because": "",
+  "fid": "dc42288dabdd",
+  "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+  "first_seen": "2026-10-26",
+  "impact": 2,
+  "last_seen": "2026-10-26",
+  "locale": "tr",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source says the data allowance resets to %1$@ GB (is restored to full). \"%1$@ GB hakkınız sıfırlanır\" literally reads as \"your %1$@ GB allowance is set to zero\". \"Yenilenir\" (is renewed) gives the intended meaning.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "9e70a34d",
+  "string_id": "VPN.Settings.DataLimitResetFooter.v160",
+  "suggest": "GB hakkınız yenilenir",
+  "summary": "\"sıfırlanır\" (is zeroed) can be read as the allowance going to zero, the opposite of resetting to the full amount.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
   "current": "%2$@ ile paylaşıldı",
   "dismissed_because": "",
   "fid": "6027f9c6a3ac",

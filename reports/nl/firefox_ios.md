@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **Previous run** | 2026-10-17 @ `09d125f6a298` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
+| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,918 |
+| **Strings reviewed this run** | 9 of 1,927 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,10 +45,10 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,918 |
-| Missing strings | 9 |
+| Strings | 1,927 |
+| Missing strings | 46 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,10 +59,16 @@ _Nothing retired._
 
 ### Completeness
 
-**9 strings** are not translated yet, concentrated in:
+**46 strings** are not translated yet, concentrated in:
 
-- `nl/firefox-ios.xliff` — 8
-- `nl/firefox-ios.xliff` — 1
+- `Shared/Supporting Files/en-US.lproj/VPN.strings` — 20
+- `nl/firefox-ios.xliff` — 17
+- `nl/firefox-ios.xliff` — 7
+- `nl/firefox-ios.xliff` — 2
+
+**Files absent from the locale:**
+
+- `Shared/Supporting Files/en-US.lproj/VPN.strings`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -76,7 +82,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | apostrophe | `typographic` 29 | **typographic** |
 | ellipsis | `char` 28 | **char** |
 | dash | `en` 4 | **en** |
-| register | `formal` 296 | **formal** |
+| register | `formal` 298 | **formal** |
 
 ---
 

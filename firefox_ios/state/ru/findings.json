@@ -912,6 +912,78 @@
   "suppressed_by": ""
  },
  {
+  "category": "C",
+  "check": "llm",
+  "current": "Рекомендуемые",
+  "dismissed_because": "",
+  "fid": "eb593bc8d15b",
+  "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+  "first_seen": "2026-10-26",
+  "impact": 3,
+  "last_seen": "2026-10-26",
+  "locale": "ru",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "This is one option that lets the app pick the fastest server location. It should agree with \"местоположение\" (neuter singular), as the subtitle \"находит самое быстрое местоположение\" does.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "38d3cae6",
+  "string_id": "VPN.LocationPicker.RecommendedMainText.v160",
+  "suggest": "Рекомендуемое",
+  "summary": "\"Рекомендуемые\" is plural, but it is a single option in the location list (the recommended location).",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "Рекомендуемые",
+  "dismissed_because": "",
+  "fid": "9a0abbd17fa9",
+  "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+  "first_seen": "2026-10-26",
+  "impact": 3,
+  "last_seen": "2026-10-26",
+  "locale": "ru",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The comment says this is the recommended location (a single choice). The plural adjective does not agree with \"местоположение\" and reads like a list category.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "38d3cae6",
+  "string_id": "VPN.Settings.LocationRecommended.v160",
+  "suggest": "Рекомендуемое",
+  "summary": "\"Рекомендуемые\" is plural, but it stands for one recommended location shown as the value of the Location row.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
+  "current": "Расположение",
+  "dismissed_because": "",
+  "fid": "da635917371a",
+  "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+  "first_seen": "2026-10-26",
+  "impact": 3,
+  "last_seen": "2026-10-26",
+  "locale": "ru",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "This string is the title of the location picker. On that same screen the strings say \"Поиск местоположений…\" and \"находит самое быстрое местоположение\", and onboarding also uses \"местоположение VPN\". The term should be the same throughout.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "b800a912",
+  "string_id": "VPN.Settings.LocationTitle.v160",
+  "suggest": "Местоположение",
+  "summary": "\"Location\" is translated as \"Расположение\", while the same screen and the other VPN strings use \"местоположение\".",
+  "suppressed_by": ""
+ },
+ {
   "category": "B",
   "check": "llm",
   "current": "когда вы делитесь ссылкой на %2$@",

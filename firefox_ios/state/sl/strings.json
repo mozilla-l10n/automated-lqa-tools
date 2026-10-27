@@ -1022,7 +1022,11 @@
   "Settings.Translation.SettingOn.v145": "753a6470 201cd7a0 33647977",
   "Settings.Translation.Title.v145": "0e2adaf2 9afb9485 e8e90a78",
   "Settings.Translation.ToggleFooter.v151": "4e652220 925a0171 a8fa2621",
-  "Settings.Translation.ToggleTitle.v145": "70e4204c c640ad8b 22fa395f"
+  "Settings.Translation.ToggleTitle.v145": "70e4204c c640ad8b 22fa395f",
+  "VPN.Settings.LearnMore.v160": "cdf41269 8edf7739 65664dbb",
+  "VPN.Settings.LocationRecommended.v160": "b10a6b8a 40b5cb8f 2297934e",
+  "VPN.Settings.Title.v160": "7284ba1a 2c0cc769 a9e95dd7",
+  "VPN.Settings.ToggleTitle.v160": "ba165965 ba165965 96d00464"
  },
  "Shared/Supporting Files/en-US.lproj/Share.strings": {
   "SendTo.NoDevicesFound.Message.v119": "897ba3f4 285cd0fc 13fc1cc8",
@@ -1190,6 +1194,19 @@
   "Upgrade.Welcome.Action.v114": "2b478381 be2e61de e2701915",
   "Upgrade.Welcome.Description.v114": "4ee42980 5adaa1ee f468827a",
   "Upgrade.Welcome.Title.v114": "1d246835 df7f4dbc a9213614"
+ },
+ "Shared/Supporting Files/en-US.lproj/VPN.strings": {
+  "VPN.ErrorBrowsingPopup.CloseAllTabs.v160": "a05994b1 5f9d1590 9f42bc84",
+  "VPN.ErrorBrowsingPopup.CloseThisTab.v160": "f444b751 978267cd 2699c015",
+  "VPN.ErrorBrowsingPopup.Continue.v160": "e3a76c02 54cfcf7b 52b7f4c5",
+  "VPN.ErrorBrowsingPopup.Title.v160": "680efe45 0df91faf 4881e8b2",
+  "VPN.ErrorConnectingPopup.Body.v160": "f762974e 4dad2f2b 518c5e81",
+  "VPN.ErrorConnectingPopup.CloseButtonText.v160": "f8fcf016 0e7c6115 70cb9732",
+  "VPN.ErrorConnectingPopup.RetryButtonText.v160": "6b9cdc54 67f53444 631d8583",
+  "VPN.ErrorConnectingPopup.Title.v160": "dc22bdcf dc30d148 ece5c8ec",
+  "VPN.ReachedDataLimitPopup.CloseAllTabs.v160": "a05994b1 5f9d1590 4802c44c",
+  "VPN.ReachedDataLimitPopup.CloseThisTab.v160": "f444b751 978267cd fa458859",
+  "VPN.ReachedDataLimitPopup.ClosedOneTab.v160": "f44370dc 708e1251 886535ab"
  },
  "Shared/Supporting Files/en-US.lproj/WebCompatReporter.strings": {
   "WebCompatReporter.AdditionalInfo.FooterText.v154": "c24dbdab 3076b2c4 d1b45d55",

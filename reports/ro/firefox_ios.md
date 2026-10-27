@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **Previous run** | 2026-10-17 @ `09d125f6a298` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
+| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 1,927 |
 
@@ -46,9 +46,9 @@ _Nothing retired._
 |---|---|
 | Files | 97 |
 | Strings | 1,927 |
-| Missing strings | 0 |
+| Missing strings | 46 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,7 +59,18 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**46 strings** are not translated yet, concentrated in:
+
+- `Shared/Supporting Files/en-US.lproj/VPN.strings` — 20
+- `ro/firefox-ios.xliff` — 17
+- `ro/firefox-ios.xliff` — 7
+- `ro/firefox-ios.xliff` — 2
+
+**Files absent from the locale:**
+
+- `Shared/Supporting Files/en-US.lproj/VPN.strings`
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 

@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
 | **Previous run** | 2026-10-19 @ `ec61063c1c68` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 1,927 |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 5 of 1,932 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for id: [android](android.md) · [firefox](firefox.md)
 
@@ -46,10 +45,10 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 97 |
-| Strings | 1,927 |
-| Missing strings | 0 |
+| Strings | 1,932 |
+| Missing strings | 41 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -60,7 +59,17 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**41 strings** are not translated yet, concentrated in:
+
+- `Shared/Supporting Files/en-US.lproj/VPN.strings` — 20
+- `id/firefox-ios.xliff` — 17
+- `id/firefox-ios.xliff` — 4
+
+**Files absent from the locale:**
+
+- `Shared/Supporting Files/en-US.lproj/VPN.strings`
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 

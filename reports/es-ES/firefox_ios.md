@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
 | **Previous run** | 2026-10-19 @ `ec61063c1c68` |
-| **Mode** | checks-only |
+| **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 1,848 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for es-ES: [android](android.md) · [firefox](firefox.md)
 
@@ -47,9 +46,9 @@ _Nothing retired._
 |---|---|
 | Files | 95 |
 | Strings | 1,848 |
-| Missing strings | 79 |
+| Missing strings | 125 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 2 |
+| Files absent from the locale | 3 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -60,13 +59,14 @@ _Nothing retired._
 
 ### Completeness
 
-**79 strings** are not translated yet, concentrated in:
+**125 strings** are not translated yet, concentrated in:
 
 - `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings` — 43
+- `es-ES/firefox-ios.xliff` — 24
+- `Shared/Supporting Files/en-US.lproj/VPN.strings` — 20
+- `es-ES/firefox-ios.xliff` — 18
 - `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings` — 11
-- `es-ES/firefox-ios.xliff` — 11
-- `es-ES/firefox-ios.xliff` — 7
-- `es-ES/firefox-ios.xliff` — 4
+- `es-ES/firefox-ios.xliff` — 6
 - `es-ES/firefox-ios.xliff` — 2
 - `es-ES/firefox-ios.xliff` — 1
 
@@ -74,6 +74,7 @@ _Nothing retired._
 
 - `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings`
 - `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings`
+- `Shared/Supporting Files/en-US.lproj/VPN.strings`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-19 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `ec61063c1c68` |
+| **Generated** | 2026-10-26 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
 | **Previous run** | 2026-10-19 @ `ec61063c1c68` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 1,927 |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 46 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for ru: [android](android.md) · [firefox](firefox.md)
 
@@ -19,9 +18,23 @@ Also for ru: [android](android.md) · [firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `VPN.Settings.LocationRecommended.v160` — `ru/firefox-ios.xliff` — "Рекомендуемые" is plural, but it stands for one recommended location shown as the value of the Location row.
+    - Current: `Рекомендуемые`
+    - Source: `Recommended`
+    - Suggest: `Рекомендуемое`
+    - The comment says this is the recommended location (a single choice). The plural adjective does not agree with "местоположение" and reads like a list category.
+- `VPN.LocationPicker.RecommendedMainText.v160` — `ru/firefox-ios.xliff` — "Рекомендуемые" is plural, but it is a single option in the location list (the recommended location).
+    - Current: `Рекомендуемые`
+    - Source: `Recommended`
+    - Suggest: `Рекомендуемое`
+    - This is one option that lets the app pick the fastest server location. It should agree with "местоположение" (neuter singular), as the subtitle "находит самое быстрое местоположение" does.
+- `VPN.Settings.LocationTitle.v160` — `ru/firefox-ios.xliff` — "Location" is translated as "Расположение", while the same screen and the other VPN strings use "местоположение".
+    - Current: `Расположение`
+    - Source: `Location`
+    - Suggest: `Местоположение`
+    - This string is the title of the location picker. On that same screen the strings say "Поиск местоположений…" and "находит самое быстрое местоположение", and onboarding also uses "местоположение VPN". The term should be the same throughout.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +58,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 97 |
-| Strings | 1,927 |
+| Files | 98 |
+| Strings | 1,973 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -69,9 +82,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 23 | **guillemet** |
-| ellipsis | `char` 28 | **char** |
+| ellipsis | `char` 31 | **char** |
 | dash | `em` 6, `en` 1 | **em** |
-| register | `informal` 89, `formal` 287 | **formal** |
+| register | `informal` 89, `formal` 295 | **formal** |
 
 ---
 
@@ -81,14 +94,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (85)
+## 3. Open findings (88)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 38 |
-| 3 | Degraded language (grammar, spelling, terminology) | 44 |
+| 3 | Degraded language (grammar, spelling, terminology) | 47 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
@@ -405,6 +418,16 @@ _Nothing in this category._
     - Source: `Turn this off to remove translation from the toolbar and menu.`
     - Suggest: `удалить перевод с панели инструментов и из меню`
     - "Remove from the toolbar and menu" requires "из меню"; "с ... меню" is ungrammatical.
+- `VPN.LocationPicker.RecommendedMainText.v160` — `ru/firefox-ios.xliff` — "Рекомендуемые" is plural, but it is a single option in the location list (the recommended location).
+    - Current: `Рекомендуемые`
+    - Source: `Recommended`
+    - Suggest: `Рекомендуемое`
+    - This is one option that lets the app pick the fastest server location. It should agree with "местоположение" (neuter singular), as the subtitle "находит самое быстрое местоположение" does.
+- `VPN.Settings.LocationRecommended.v160` — `ru/firefox-ios.xliff` — "Рекомендуемые" is plural, but it stands for one recommended location shown as the value of the Location row.
+    - Current: `Рекомендуемые`
+    - Source: `Recommended`
+    - Suggest: `Рекомендуемое`
+    - The comment says this is the recommended location (a single choice). The plural adjective does not agree with "местоположение" and reads like a list category.
 - `Summarizer.Footnote.Label.v144` — `ru/firefox-ios.xliff` — Capital letter after a colon mid-sentence: "Примечание: При резюмировании".
     - Current: `Примечание: При резюмировании могут быть ошибки.`
     - Source: `Note: Summarization can make errors.`
@@ -493,6 +516,11 @@ _Nothing in this category._
     - Source: `Show in Private Sessions`
     - Suggest: `Показывать в приватных сеансах`
     - The source says "Private Sessions"; the adjacent descriptions (Settings.Search.PrivateSession.Description.v125, Settings.Search.Suggest.PrivateSession.Description.v125) use «приватных сеансах» on the same screen.
+- `VPN.Settings.LocationTitle.v160` — `ru/firefox-ios.xliff` — "Location" is translated as "Расположение", while the same screen and the other VPN strings use "местоположение".
+    - Current: `Расположение`
+    - Source: `Location`
+    - Suggest: `Местоположение`
+    - This string is the title of the location picker. On that same screen the strings say "Поиск местоположений…" and "находит самое быстрое местоположение", and onboarding also uses "местоположение VPN". The term should be the same throughout.
 - `Summarizer.Error.RateLimited.Message.v142` — `ru/firefox-ios.xliff` — "Can't handle this one at the moment" rendered in the first person "Не могу справиться с этим сейчас", making the app speak as "I".
     - Current: `Не могу справиться с этим сейчас.`
     - Source: `Can’t handle this one at the moment. Try again later!`
