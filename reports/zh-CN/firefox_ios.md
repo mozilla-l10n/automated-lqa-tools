@@ -2,17 +2,18 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
-| **Mode** | incremental |
+| **Previous run** | 2026-10-26 @ `7f349c067169` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 1,909 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for zh-CN: [android](android.md) · [firefox](firefox.md)
+Also for zh-CN: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -95,7 +96,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (67)
+## 3. Open findings (65)
 
 > **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -120,7 +121,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 40 |
+| 2 | Wrong content (says something other than the English) | 38 |
 | 3 | Degraded language (grammar, spelling, terminology) | 22 |
 | 4 | Cosmetic (typography, spacing) | 5 |
 
@@ -145,11 +146,6 @@ _Nothing in this category._
     - Source: `Townland`
     - Suggest: `乡村地区`
     - The developer comment specifies a townland is "a specific type of land division used in rural areas", distinct from 镇/乡镇 already used for Village or Township in Addresses.EditAddress.AutofillAddressVillageTownship.v129; using 镇 both mistranslates and creates a within-screen terminology clash.
-- `Menu.EnhancedTrackingProtection.Details.Trackers.Analytics.v132` — `zh-CN/firefox-ios.xliff` — "Tracking content" is translated but the developer comment/label concerns analytics trackers; more importantly the unit counter is fine — the issue is the string renders "Tracking content" consistently, but count suffix ok
-    - Current: `跟踪性内容：%@ 项`
-    - Source: `Tracking content: %@`
-    - Suggest: `跟踪性内容：%@`
-    - The source has no measure word/unit after the number; adding 项 is acceptable style, however here it mismatches other entries — low value.
 - `FirefoxHomepage.Pocket.Footer.Title.v116` — `zh-CN/firefox-ios.xliff` — The Pocket footer title reverses the meaning: the source says Pocket powers the section and is part of the Firefox family, but the target says the Firefox family product line provides Pocket in an odd merged sentence.
     - Current: `由 %2$@ 系列产品 - %1$@ 提供。`
     - Source: `Powered by %1$@. Part of the %2$@ family.`
@@ -260,11 +256,6 @@ _Nothing in this category._
     - Source: `A note from %@`
     - Suggest: `来自 %@ 的说明`
     - The source is a title meaning a note/message from the app, not a reminder to the user.
-- `Use your fingerprint to access Logins now.` — `zh-CN/firefox-ios.xliff` — "Use your fingerprint" mistranslated as "验证您的指纹" is fine, but "Enter passcode" string uses 密码 for passcode — see separate finding.
-    - Current: `验证您的指纹以访问登录信息。`
-    - Source: `Use your fingerprint to access Logins now.`
-    - Suggest: `请使用您的指纹访问登录信息。`
-    - Minor, but the source asks the user to use their fingerprint now; the rendering is acceptable. (skip)
 - `Closing tab` — `zh-CN/firefox-ios.xliff` — Progressive "Closing tab" notification rendered as the imperative/plain "关闭标签页" (Close tab), losing the in-progress meaning.
     - Current: `关闭标签页`
     - Source: `Closing tab`

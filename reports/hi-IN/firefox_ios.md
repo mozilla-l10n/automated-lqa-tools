@@ -2,17 +2,18 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
-| **Mode** | incremental |
+| **Previous run** | 2026-10-26 @ `7f349c067169` |
+| **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 1,876 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for hi-IN: [android](android.md)
+Also for hi-IN: [Firefox for Android](android.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -96,13 +97,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (16)
+## 3. Open findings (15)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 13 |
+| 2 | Wrong content (says something other than the English) | 12 |
 | 3 | Degraded language (grammar, spelling, terminology) | 3 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -142,11 +143,6 @@ _Nothing in this category._
     - Source: `%@ will improve features, performance, and stability between updates. Changes applied remotely.`
     - Suggest: `%@ अपडेट के बीच फ़ीचर्स, प्रदर्शन और स्थिरता में सुधार करेगा।`
     - The source says improvements happen between updates; the Hindi's "अलग-अलग अपडेट दिए जाने के बीच" is a wordy re-reading, but the main issue is the awkward paraphrase; meaning is largely preserved.
-- `Summarizer.Error.RateLimited.Message.v142` — `hi-IN/firefox-ios.xliff` — Rate-limit message says "cannot handle this" but source hedges with "at the moment" — the Hindi drops the temporal hedge into "अभी नहीं संभाल सकते" which is fine; however "इसे" loses reference to page.
-    - Current: `इसे अभी नहीं संभाल सकते। बाद में फिर कोशिश करें!`
-    - Source: `Can’t handle this one at the moment. Try again later!`
-    - Suggest: `इसे इस समय नहीं संभाल सकते। बाद में फिर कोशिश करें!`
-    - Minor; the hedge "at the moment" is retained via "अभी".
 - `ContextualHints.Toolbar.Bottom.Description.v107` — `hi-IN/firefox-ios.xliff` — "if that's more your style" is rendered as "if you like more", losing the meaning.
     - Current: `अगर आपको ज़्यादा पसंद हो, तो टूलबार को सबसे ऊपर ले जाएं।`
     - Source: `Move the toolbar to the top if that’s more your style.`

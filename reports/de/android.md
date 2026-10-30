@@ -5,7 +5,7 @@
 | **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
 | **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 2,553 |
 
@@ -87,7 +87,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (99)
+## 3. Open findings (98)
 
 
 | Impact | Meaning | Count |
@@ -95,7 +95,7 @@ _Nothing reported._
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 56 |
 | 3 | Degraded language (grammar, spelling, terminology) | 33 |
-| 4 | Cosmetic (typography, spacing) | 10 |
+| 4 | Cosmetic (typography, spacing) | 9 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -602,11 +602,6 @@ _Nothing in this category._
     - Source: `Bookmarks saved in “%s”`
     - Suggest: `Lesezeichen in „%s“ gespeichert`
     - The de convention is german-double quotes („…“), as used elsewhere (e.g. preference_summary_delete_browsing_data_on_quit_2).
-- `sync_syncing_in_progress` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Missing space before ellipsis is fine, but the ellipsis follows a word without the locale's spacing convention—actually the issue is the missing space is correct; flagged for character use.
-    - Current: `Synchronisation läuft…`
-    - Source: `Syncing…`
-    - Suggest: `Synchronisation läuft …`
-    - German typography convention (Duden) requires a space before the ellipsis when it follows a complete word.
 
 ---
 

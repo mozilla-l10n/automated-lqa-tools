@@ -72,30 +72,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "ce qui signifie que { <b> }%2$s{ </b> } doit impérativement établir une connexion sécurisée pour y accéder",
-  "dismissed_because": "",
-  "fid": "fd7bbf463f53",
-  "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-21",
-  "impact": 2,
-  "last_seen": "2026-08-21",
-  "locale": "fr",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "Source: \"%2$s can only connect to it securely\"; the French wording is acceptable in meaning but the phrasing \"doit impérativement établir une connexion sécurisée\" is a rendering, not a reversal — however it drops the exclusivity nuance of \"only\".",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "99fe535c",
-  "string_id": "mozac_browser_errorpages_security_bad_hsts_cert_techInfo2",
-  "suggest": "ce qui signifie que { <b> }%2$s{ </b> } ne peut s’y connecter que de manière sécurisée",
-  "summary": "The HSTS explanation reverses which party can only connect securely.",
-  "suppressed_by": ""
- },
- {
   "category": "E",
   "check": "llm",
   "current": "par exemple) ;{ </li> }",

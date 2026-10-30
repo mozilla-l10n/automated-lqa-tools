@@ -2688,30 +2688,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "Naprej",
-  "dismissed_because": "",
-  "fid": "b0761a6ff046",
-  "file": "Shared/en-US.lproj/Localizable.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "sl",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The paired Back shortcut is \"Nazaj\"; \"Naprej\" is acceptable but the developer comment describes switching to a subsequent tab. Low-risk ambiguity.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "aad33ab8",
-  "string_id": "Hotkeys.Forward.DiscoveryTitle",
-  "suggest": "Naprej (po zgodovini)",
-  "summary": "Ambiguous/wrong rendering: source \"Forward\" refers to navigating forward in session history, and the translation reads as \"Next\"; however per the comment context it should be navigation forward.",
-  "suppressed_by": ""
- },
- {
   "category": "D",
   "check": "llm",
   "current": "Deli",
@@ -3141,30 +3117,6 @@
   "string_id": "ContextMenu.OpenInNewPrivateTabButtonTitle",
   "suggest": "Odpri v novem zasebnem zavihku",
   "summary": "\"New\" is dropped, so the option reads \"Open in private tab\" instead of \"Open in New Private Tab\".",
-  "suppressed_by": ""
- },
- {
-  "category": "C",
-  "check": "llm",
-  "current": "Firefox ne bo hranil vaše zgodovine in piškotkov, novi zaznamki pa bodo shranjeni.",
-  "dismissed_because": "",
-  "fid": "32d0e69199fa",
-  "file": "Shared/en-US.lproj/PrivateBrowsing.strings",
-  "first_seen": "2026-09-14",
-  "impact": 3,
-  "last_seen": "2026-09-14",
-  "locale": "sl",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "Source contrasts with \"but\"; the Slovenian uses only \"pa\" which is acceptable, so this should not be reported.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "69efaac7",
-  "string_id": "Firefox won’t remember any of your history or cookies, but new bookmarks will be saved.",
-  "suggest": "Firefox ne bo hranil vaše zgodovine in piškotkov, novi zaznamki pa bodo shranjeni",
-  "summary": "Missing contrastive conjunction \"vendar\"/\"a\" before the second clause; two clauses are joined by a comma only.",
   "suppressed_by": ""
  },
  {

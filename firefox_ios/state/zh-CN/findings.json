@@ -98,30 +98,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "跟踪性内容：%@ 项",
-  "dismissed_because": "",
-  "fid": "0499c8401ff8",
-  "file": "Shared/Supporting Files/en-US.lproj/EnhancedTrackingProtection.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "zh-CN",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The source has no measure word/unit after the number; adding 项 is acceptable style, however here it mismatches other entries — low value.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "1c0834d6",
-  "string_id": "Menu.EnhancedTrackingProtection.Details.Trackers.Analytics.v132",
-  "suggest": "跟踪性内容：%@",
-  "summary": "\"Tracking content\" is translated but the developer comment/label concerns analytics trackers; more importantly the unit counter is fine — the issue is the string renders \"Tracking content\" consistently, but count suffix ok",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "由 %2$@ 系列产品 - %1$@ 提供。",
   "dismissed_because": "",
   "fid": "21b982616216",
@@ -1605,30 +1581,6 @@
   "string_id": "Menu.ZoomPage.IncreaseZoom.AccessibilityLabel.v113",
   "suggest": "增大缩放比例",
   "summary": "\"放大缩放比例\" is an incorrect collocation and inconsistent with the paired \"减小缩放比例\".",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "验证您的指纹以访问登录信息。",
-  "dismissed_because": "",
-  "fid": "f0c0c12fadd5",
-  "file": "Shared/en-US.lproj/AuthenticationManager.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "zh-CN",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "Minor, but the source asks the user to use their fingerprint now; the rendering is acceptable. (skip)",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "3e67e970",
-  "string_id": "Use your fingerprint to access Logins now.",
-  "suggest": "请使用您的指纹访问登录信息。",
-  "summary": "\"Use your fingerprint\" mistranslated as \"验证您的指纹\" is fine, but \"Enter passcode\" string uses 密码 for passcode — see separate finding.",
   "suppressed_by": ""
  },
  {

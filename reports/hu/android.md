@@ -5,7 +5,7 @@
 | **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
 | **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 2,553 |
 
@@ -86,14 +86,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (131)
+## 3. Open findings (130)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 66 |
-| 3 | Degraded language (grammar, spelling, terminology) | 58 |
+| 3 | Degraded language (grammar, spelling, terminology) | 57 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
 ### A. Functional, markup, variables & plurals
@@ -606,11 +606,6 @@ _Nothing in this category._
     - Source: `here`
     - Suggest: `itt`
     - The source "here" is lowercase and the placeholder is embedded in a sentence ("You can learn more %1$s."), so a capital letter is wrong.
-- `trackers_blocked_panel_num_cross_site_cookies` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — The compound modifier is in plural ("webhelyek közötti") but should agree as "webhelyek közötti" is acceptable; the singular counted noun phrase reads awkwardly with the number.
-    - Current: `%1$d webhelyek közötti nyomkövető süti`
-    - Source: `{$quantity ->} [one] %1$d cross-site tracking cookie [other] %1$d cross-site tracking cookies`
-    - Suggest: `%1$d webhelyközi nyomkövető süti`
-    - In Hungarian a numeral is followed by a singular noun phrase; "webhelyek közötti" after a numeral is grammatically inconsistent.
 - `webcompat_reporter_problem_description_placeholder_text_2` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — Incorrect case/agreement: "Adjon meg a lépéseket" should be "Adja meg a lépéseket".
     - Current: `Adjon meg a lépéseket a probléma reprodukálásához.`
     - Source: `What happened? What did you expect to happen? Please provide steps to reproduce the issue.`

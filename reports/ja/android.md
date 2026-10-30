@@ -5,7 +5,7 @@
 | **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
 | **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 2,552 |
 
@@ -90,13 +90,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (141)
+## 3. Open findings (139)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 109 |
+| 2 | Wrong content (says something other than the English) | 107 |
 | 3 | Degraded language (grammar, spelling, terminology) | 25 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
@@ -204,11 +204,6 @@ _Nothing reported._
     - Source: `VPN isn’t working right now so your location may be visible. Continue browsing without VPN, or choose tabs to close.`
     - Suggest: `閉じるタブを選択してください`
     - The source offers the option of choosing which tabs to close (the companion button leads to the tabs tray to select sensitive tabs); the translation just orders closing tabs.
-- `mozac_feature_listentopage_notification_playback_speed_0_5` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-ja/strings.xml` — "half speed" rendered as "0.5 倍" is fine, but the sibling speed strings use "%" phrasing; however the real issue is the inconsistent construction
-    - Current: `再生速度を 0.5 倍に設定します`
-    - Source: `Playback set to half speed`
-    - Suggest: `再生速度を 0.5 倍 (半分) に設定します`
-    - Placeholder finding
 - `mozac_feature_prompts_suggest_strong_password_message` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-ja/strings.xml` — Dialog title "Use strong password: %1$s" is rendered as an imperative request to the user rather than a label introducing the generated password.
     - Current: `強固なパスワードを使用してください: %1$s`
     - Source: `Use strong password: %1$s`
@@ -409,7 +404,12 @@ _Nothing reported._
     - Source: `Leave no traces on this device`
     - Suggest: `この端末に痕跡を残しません`
     - The source says no traces are left on the device; the translation says the device is prevented from tracking, which is a different meaning.
-- _…and 52 more; see `state/` for the full list._
+- `firefox_labs_website_isolation_description` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "An extra barrier between websites" is rendered vaguely as "追加機能", losing the barrier-between-websites meaning.
+    - Current: `タブ間でデータ保護を強化する追加機能です。`
+    - Source: `An extra barrier between websites that helps protect your data across tabs. May affect performance, stability, website compatibility, and how browsing history is saved.`
+    - Suggest: `ウェブサイト間に追加の隔壁を設け、タブをまたいだデータの保護を助けます。`
+    - The source describes a barrier between websites protecting data across tabs; the translation omits "between websites" and replaces "barrier" with a generic "additional feature".
+- _…and 50 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

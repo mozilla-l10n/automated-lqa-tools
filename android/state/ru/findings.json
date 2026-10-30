@@ -2996,30 +2996,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "C",
-  "check": "llm",
-  "current": "Почти готово! Выполнено 2 шага, остался 1.",
-  "dismissed_because": "",
-  "fid": "ca68746f439c",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-21",
-  "impact": 3,
-  "last_seen": "2026-08-21",
-  "locale": "ru",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "\"остался 1\" without the noun is elliptical and reads awkwardly in Russian; the source \"1 to go\" refers to a remaining step.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "863a0898",
-  "string_id": "setup_checklist_subtitle_3_steps_second_step",
-  "suggest": "Почти готово! Выполнено 2 шага, остался 1 шаг.",
-  "summary": "Numeral–noun agreement error: \"Выполнено 2 шага\" is fine but the parallel structure is inconsistent; actual error is missing comma-free clause—see rationale.",
-  "suppressed_by": ""
- },
- {
   "category": "B",
   "check": "llm",
   "current": "Выполните все 5 шагов по настройке %1$s для наилучшей работы в Интернете.",

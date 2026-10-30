@@ -2228,30 +2228,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "E",
-  "check": "llm",
-  "current": "Synchronisation läuft…",
-  "dismissed_because": "",
-  "fid": "0184118c338a",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-21",
-  "impact": 4,
-  "last_seen": "2026-08-21",
-  "locale": "de",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "German typography convention (Duden) requires a space before the ellipsis when it follows a complete word.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "21bde75f",
-  "string_id": "sync_syncing_in_progress",
-  "suggest": "Synchronisation läuft …",
-  "summary": "Missing space before ellipsis is fine, but the ellipsis follows a word without the locale's spacing convention—actually the issue is the missing space is correct; flagged for character use.",
-  "suppressed_by": ""
- },
- {
   "category": "C",
   "check": "llm",
   "current": "Hier",

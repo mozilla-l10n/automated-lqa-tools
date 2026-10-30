@@ -1,8 +1,8 @@
 # Firefox (desktop + shared toolkit/dom strings) — l10n QA
 
-- **Generated:** 2026-10-26
+- **Generated:** 2026-10-30
 - **Locales tracked:** 29 (29 with recorded state)
-- **Findings:** 9,075 raised, 2,132 fixed (23%), 6,278 open
+- **Findings:** 9,074 raised, 2,132 fixed (23%), 6,277 open
 - **Closed by a person:** 19 dismissed, 16 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
@@ -124,7 +124,7 @@ The value does not render as intended: a blank string, broken markup, a variable
     - Suggest: `[1] Ez eltávolítja a { -brand-short-name }ba mentett jelszót az összes szinkronizált eszközéről.`
 - _…and 1735 more, in the per-locale reports linked below._
 
-### Wrong content — impact 2 (2336)
+### Wrong content — impact 2 (2335)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/firefox.md`.
 
@@ -144,7 +144,7 @@ Too many to list here; the per-locale counts are in the table below and every on
 | [fy-NL](fy-NL/firefox.md) | 2026-10-26 | incremental | `6c76c457` | 16,570 | 25 | **476** | 133 | 275 | 4 | 0 |
 | [hu](hu/firefox.md) | 2026-10-26 | incremental | `6c76c457` | 16,595 | 0 | **268** | 153 | 6 | 0 | 0 |
 | [id](id/firefox.md) | 2026-10-26 | incremental | `6c76c457` | 13,841 | 2,754 | **283** | 217 | 2 | 0 | 0 |
-| [it](it/firefox.md) | 2026-10-26 | incremental | `6c76c457` | 16,836 | 0 | **20** | 7 | 59 | 6 | 2 |
+| [it](it/firefox.md) | 2026-10-30 | checks-only | `6c76c457` | 16,836 | 0 | **19** | 6 | 59 | 6 | 2 |
 | [ja](ja/firefox.md) | 2026-10-26 | incremental | `6c76c457` | 16,568 | 50 | **139** | 70 | 274 | 0 | 0 |
 | [nl](nl/firefox.md) | 2026-10-26 | incremental | `6c76c457` | 16,570 | 25 | **345** | 126 | 127 | 0 | 0 |
 | [pl](pl/firefox.md) | 2026-10-26 | incremental | `6c76c457` | 16,570 | 25 | **81** | 57 | 168 | 2 | 0 |
@@ -161,6 +161,8 @@ Too many to list here; the per-locale counts are in the table below and every on
 | [zh-TW](zh-TW/firefox.md) | 2026-10-26 | incremental | `6c76c457` | 16,595 | 0 | **240** | 219 | 0 | 0 | 0 |
 
 **Impact 1–2** is the queue that matters: broken output and wrong content. Impact 3–4 is language polish and typography.
+
+**Not reviewed yet:** `it`. It has only been through the deterministic checks; the reviewer has not read it. The next run does the baseline.
 
 ## Adding a locale
 

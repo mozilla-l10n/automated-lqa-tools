@@ -3166,30 +3166,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "C",
-  "check": "llm",
-  "current": "%1$d webhelyek közötti nyomkövető süti",
-  "dismissed_because": "",
-  "fid": "15648848dbfc",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-21",
-  "impact": 3,
-  "last_seen": "2026-08-21",
-  "locale": "hu",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "In Hungarian a numeral is followed by a singular noun phrase; \"webhelyek közötti\" after a numeral is grammatically inconsistent.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "cf5ae223",
-  "string_id": "trackers_blocked_panel_num_cross_site_cookies",
-  "suggest": "%1$d webhelyközi nyomkövető süti",
-  "summary": "The compound modifier is in plural (\"webhelyek közötti\") but should agree as \"webhelyek közötti\" is acceptable; the singular counted noun phrase reads awkwardly with the number.",
-  "suppressed_by": ""
- },
- {
   "category": "B",
   "check": "llm",
   "current": "%1$d ujjlenyomat",

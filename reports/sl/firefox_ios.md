@@ -2,17 +2,18 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 15 of 1,887 |
+| **Previous run** | 2026-10-26 @ `7f349c067169` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 1,887 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for sl: [android](android.md) · [firefox](firefox.md)
+Also for sl: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -95,14 +96,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (81)
+## 3. Open findings (79)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 35 |
-| 3 | Degraded language (grammar, spelling, terminology) | 38 |
+| 2 | Wrong content (says something other than the English) | 34 |
+| 3 | Degraded language (grammar, spelling, terminology) | 37 |
 | 4 | Cosmetic (typography, spacing) | 8 |
 
 ### A. Functional, markup, variables & plurals
@@ -271,11 +272,6 @@ _Nothing in this category._
     - Source: `This Connection is Untrusted`
     - Suggest: `Ta povezava ni zaupanja vredna`
     - The en-US says the connection is untrusted; the Slovenian asserts it is not private, a different claim.
-- `Hotkeys.Forward.DiscoveryTitle` — `sl/firefox-ios.xliff` — Ambiguous/wrong rendering: source "Forward" refers to navigating forward in session history, and the translation reads as "Next"; however per the comment context it should be navigation forward.
-    - Current: `Naprej`
-    - Source: `Forward`
-    - Suggest: `Naprej (po zgodovini)`
-    - The paired Back shortcut is "Nazaj"; "Naprej" is acceptable but the developer comment describes switching to a subsequent tab. Low-risk ambiguity.
 - `Menu.TrackingProtectionCrossSiteTrackers.Title` — `sl/firefox-ios.xliff` — "Cross-Site Trackers" is rendered as "Spletni sledilci" (web trackers), losing the cross-site meaning.
     - Current: `Spletni sledilci`
     - Source: `Cross-Site Trackers`
@@ -404,11 +400,6 @@ _Nothing in this category._
     - Source: `Firefox Account`
     - Suggest: `Firefoxov račun`
     - "Firefox Račun" is an ungrammatical calque of English title case; Slovenian requires "Firefoxov račun" (cf. "Firefoxova domača stran" used elsewhere in this batch).
-- `Firefox won’t remember any of your history or cookies, but new bookmarks will be saved.` — `sl/firefox-ios.xliff` — Missing contrastive conjunction "vendar"/"a" before the second clause; two clauses are joined by a comma only.
-    - Current: `Firefox ne bo hranil vaše zgodovine in piškotkov, novi zaznamki pa bodo shranjeni.`
-    - Source: `Firefox won’t remember any of your history or cookies, but new bookmarks will be saved.`
-    - Suggest: `Firefox ne bo hranil vaše zgodovine in piškotkov, novi zaznamki pa bodo shranjeni`
-    - Source contrasts with "but"; the Slovenian uses only "pa" which is acceptable, so this should not be reported.
 
 ### D. Terminology, register & consistency
 

@@ -5,7 +5,7 @@
 | **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
 | **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 2,545 |
 
@@ -90,13 +90,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (108)
+## 3. Open findings (107)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 46 |
+| 2 | Wrong content (says something other than the English) | 45 |
 | 3 | Degraded language (grammar, spelling, terminology) | 61 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
@@ -376,11 +376,6 @@ _Nothing in this category._
     - Source: `Allows Mozilla to install and run studies`
     - Suggest: `اجازه به Mozilla برای نصب و اجرای مطالعات`
     - Source: "Allows Mozilla to install and run studies"; the related title preference_experiments_2 translates "Studies" as "مطالعات" only.
-- `preference_option_autoplay_allowed_wifi_only2` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — The translation drops "only" applying to cellular data and misplaces it, saying "block audio and video only on mobile internet" vs. source "Block audio and video on cellular data only".
-    - Current: `مسدود کردن صدا و تصویر فقط روی اینترنت همراه`
-    - Source: `Block audio and video on cellular data only`
-    - Suggest: `مسدود کردن صدا و تصویر فقط روی داده‌های تلفن همراه`
-    - Minor: source means blocking occurs only on cellular data; the Persian ordering is acceptable, but "اینترنت همراه" vs "داده تلفن همراه" terminology.
 - `preferences_inactive_tabs_toggle_title` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "Inactive tabs" is translated as "broken/out-of-order tabs".
     - Current: `زبانه‌های ازکار افتاده`
     - Source: `Inactive tabs`
@@ -406,7 +401,12 @@ _Nothing in this category._
     - Source: `Sends images and photos to Google for visual search.`
     - Suggest: `ارسال تصاویر و عکس‌ها به Google برای جست‌وجوی بصری.`
     - Brand names must stay untranslated/untransliterated; the sibling string search_settings_google_lens_title uses "Google Lens" in Latin script.
-- _…and 7 more; see `state/` for the full list._
+- `synced_tabs_no_tabs` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — Translation adds "دیگری" (other/any other tab), changing "any tabs open" into "any other open tab".
+    - Current: `شما هیچ زبانهٔ باز دیگری در Firefox روی سایر دستگاه‌های خود ندارید.`
+    - Source: `You don’t have any tabs open in Firefox on your other devices.`
+    - Suggest: `شما هیچ زبانهٔ بازی در Firefox روی سایر دستگاه‌های خود ندارید.`
+    - The source says the user has no tabs open in Firefox on their other devices; "دیگری" implies "no other open tabs", suggesting some tabs are open.
+- _…and 6 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

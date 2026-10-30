@@ -626,30 +626,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "播放速度降低至四分之一",
-  "dismissed_because": "",
-  "fid": "6feb474971b2",
-  "file": "mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml",
-  "first_seen": "2026-10-12",
-  "impact": 2,
-  "last_seen": "2026-10-12",
-  "locale": "zh-CN",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "Source says the rate is 75 percent slower; the Chinese says \"reduced to one quarter\". Although numerically equivalent, the sibling strings use \"加快四分之一\" (increased BY a quarter) for \"25 percent faster\", so \"降低至\" vs \"加快\" are inconsistent in form, and the 0.75 string is outright wrong. Aligning as a percentage keeps the set consistent.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "5adb472d",
-  "string_id": "mozac_feature_listentopage_notification_playback_speed_0_25",
-  "suggest": "播放速度减慢 75%",
-  "summary": "\"75 percent slower\" (0.25× speed) rendered as \"降低至四分之一\" is fine, but the parallel string 0.75 is mistranslated; here the wording is inconsistent with the faster ones — see rationale.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "播放速度降低至四分之三",
   "dismissed_because": "",
   "fid": "c3eff52e460f",
@@ -3331,30 +3307,6 @@
   "string_id": "translation_toolbar_expand_action",
   "suggest": "打开翻译面板",
   "summary": "\"translation sheet\" (bottom sheet panel) is mistranslated as 表单 (form).",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "选择其他原始语言",
-  "dismissed_because": "",
-  "fid": "af6a3afe2b0c",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-21",
-  "impact": 2,
-  "last_seen": "2026-08-21",
-  "locale": "zh-CN",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "Source says \"Try another source language\"; the translation says \"Select another source language\".",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "73e90cb0",
-  "string_id": "translations_bottom_sheet_translate_from_unsupported_language",
-  "suggest": "试试其他原始语言",
-  "summary": "\"Try another source language\" is rendered as \"选择其他原始语言\" (select), losing the \"try\" nuance but more importantly this is fine—actual issue is none.",
   "suppressed_by": ""
  },
  {

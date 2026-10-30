@@ -5,7 +5,7 @@
 | **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
 | **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 2,553 |
 
@@ -89,13 +89,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (69)
+## 3. Open findings (68)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 52 |
+| 2 | Wrong content (says something other than the English) | 51 |
 | 3 | Degraded language (grammar, spelling, terminology) | 17 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -120,11 +120,6 @@ _Nothing in this category._
     - Source: `Malware site issue`
     - Suggest: `Problème de site malveillant`
     - Source is "Malware site issue"; the other titles in the same family ("Problème de site indésirable", "Problème de site dangereux", "Problème de site trompeur") keep "site", so dropping it here is inconsistent and loses the meaning.
-- `mozac_browser_errorpages_security_bad_hsts_cert_techInfo2` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fr/strings.xml` — The HSTS explanation reverses which party can only connect securely.
-    - Current: `ce qui signifie que { <b> }%2$s{ </b> } doit impérativement établir une connexion sécurisée pour y accéder`
-    - Source: `{ <label> } { <b> }%1$s{ </b> } has a security policy called HTTP Strict Transport Security (HSTS), which means that { <b> }%2$s{ </b> } can only connect to it securely. You can’t add an exception to visit this site. {…`
-    - Suggest: `ce qui signifie que { <b> }%2$s{ </b> } ne peut s’y connecter que de manière sécurisée`
-    - Source: "%2$s can only connect to it securely"; the French wording is acceptable in meaning but the phrasing "doit impérativement établir une connexion sécurisée" is a rendering, not a reversal — however it drops the exclusivity nuance of "only".
 - `mozac_browser_menu_highlighted` — `mozilla-mobile/android-components/components/browser/menu/src/main/res/values-fr/strings.xml` — "Highlighted" (menu item has a highlight) is rendered as "Sélectionné" (selected), which conveys a different state.
     - Current: `Sélectionné`
     - Source: `Highlighted`

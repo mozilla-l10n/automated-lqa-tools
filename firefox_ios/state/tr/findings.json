@@ -698,30 +698,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "Dinliyorum. İstediğinizi sorun…",
-  "dismissed_because": "",
-  "fid": "0392647611a7",
-  "file": "Shared/Supporting Files/en-US.lproj/QuickAnswers.strings",
-  "first_seen": "2026-10-05",
-  "impact": 2,
-  "last_seen": "2026-10-05",
-  "locale": "tr",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "Minor punctuation split; en-US uses a single clause separated by a comma.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "b6084a83",
-  "string_id": "QuickAnswers.ContentView.Listening.v158",
-  "suggest": "Dinliyorum, istediğinizi sorun…",
-  "summary": "\"ask anything\" translated as \"İstediğinizi sorun\" is acceptable, but \"Listening,\" turned into a separate sentence \"Dinliyorum.\" — not a defect; the real issue is none.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "Hayır",
   "dismissed_because": "",
   "fid": "e6e7be3c7749",
@@ -1197,30 +1173,6 @@
   "string_id": "Summarizer.Error.UnsafeWebsite.Message.v142",
   "suggest": "çoğunlukla görsel ağırlıklı olabilir",
   "summary": "Redundant/awkward wording \"görsel içerik içeriyor\" duplicates the noun \"içerik\".",
-  "suppressed_by": ""
- },
- {
-  "category": "C",
-  "check": "llm",
-  "current": "%@’tan bir not",
-  "dismissed_because": "",
-  "fid": "eda8bc0eacc9",
-  "file": "Shared/Supporting Files/en-US.lproj/TermsOfUse.strings",
-  "first_seen": "2026-09-14",
-  "impact": 3,
-  "last_seen": "2026-09-14",
-  "locale": "tr",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The app name is Firefox; the ablative suffix after front-vowel final syllable \"-fox\"... Turkish convention for Firefox is \"Firefox’tan\"? Actually Firefox is pronounced with back vowel 'o', so \"Firefox’tan\" is used across Mozilla tr. Flagging only if inconsistent.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "3d9c5971",
-  "string_id": "TermsOfUse.TitleValue2.v147",
-  "suggest": "%@’ten bir not",
-  "summary": "Wrong apostrophe suffix vowel harmony for \"Firefox\": should be ’ten, not ’tan.",
   "suppressed_by": ""
  },
  {

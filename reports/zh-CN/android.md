@@ -5,7 +5,7 @@
 | **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
 | **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 2,547 |
 
@@ -91,13 +91,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (131)
+## 3. Open findings (129)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 89 |
+| 2 | Wrong content (says something other than the English) | 87 |
 | 3 | Degraded language (grammar, spelling, terminology) | 34 |
 | 4 | Cosmetic (typography, spacing) | 8 |
 
@@ -207,11 +207,6 @@ _Nothing in this category._
     - Source: `VPN isn’t working right now so your location may be visible. Continue browsing without VPN, or choose tabs to close.`
     - Suggest: `或者选择要关闭的标签页`
     - The source means the user picks which tabs to close; the Chinese reads as "select a tab in order to close", which is ambiguous/incorrect.
-- `mozac_feature_listentopage_notification_playback_speed_0_25` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-zh-rCN/strings.xml` — "75 percent slower" (0.25× speed) rendered as "降低至四分之一" is fine, but the parallel string 0.75 is mistranslated; here the wording is inconsistent with the faster ones — see rationale.
-    - Current: `播放速度降低至四分之一`
-    - Source: `Playback rate 75 percent slower`
-    - Suggest: `播放速度减慢 75%`
-    - Source says the rate is 75 percent slower; the Chinese says "reduced to one quarter". Although numerically equivalent, the sibling strings use "加快四分之一" (increased BY a quarter) for "25 percent faster", so "降低至" vs "加快" are inconsistent in form, and the 0.75 string is outright wrong. Aligning as a percentage keeps the set consistent.
 - `mozac_feature_listentopage_notification_playback_speed_0_75` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-zh-rCN/strings.xml` — "Playback rate 25 percent slower" is rendered as "降低至四分之三" but is inconsistent with the parallel "faster" strings which express the delta, not the resulting ratio.
     - Current: `播放速度降低至四分之三`
     - Source: `Playback rate 25 percent slower`
@@ -407,7 +402,12 @@ _Nothing in this category._
     - Source: `Items: %d`
     - Suggest: `项目：%d`
     - The source is a label-colon-value format; the translation restructures it, losing the label form.
-- _…and 37 more; see `state/` for the full list._
+- `ip_protection_data_limit_reached_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "Access will reset next month" is mistranslated as "使用权限将于下个月重置" — acceptable — but "已用完" states data is exhausted while source says "used"; actually the snackbar signals the limit is reached, so retain, however "流量已用完" drops the amount semantics.
+    - Current: `%1$d GB VPN 流量已用完，使用权限将于下个月重置。`
+    - Source: `%1$d GB of VPN data used. Access will reset next month.`
+    - Suggest: `已用完 %1$d GB VPN 流量，使用权限将于下个月重置。`
+    - The source reads "%1$d GB of VPN data used"; the Chinese word order makes "%1$d GB VPN 流量" the subject of "已用完" awkwardly and reads as a fragment. Reordering keeps the meaning and grammar.
+- _…and 35 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

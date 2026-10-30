@@ -2,29 +2,26 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 33 of 1,960 |
+| **Previous run** | 2026-10-26 @ `7f349c067169` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 1,960 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for tr: [android](android.md) · [firefox](firefox.md)
+Also for tr: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `VPN.Settings.DataLimitResetFooter.v160` — `tr/firefox-ios.xliff` — "sıfırlanır" (is zeroed) can be read as the allowance going to zero, the opposite of resetting to the full amount.
-    - Current: `GB hakkınız sıfırlanır`
-    - Source: `Resets to %1$@ GB on the first of every month`
-    - Suggest: `GB hakkınız yenilenir`
-    - The source says the data allowance resets to %1$@ GB (is restored to full). "%1$@ GB hakkınız sıfırlanır" literally reads as "your %1$@ GB allowance is set to zero". "Yenilenir" (is renewed) gives the intended meaning.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -90,7 +87,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (83)
+## 3. Open findings (81)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -105,8 +102,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 44 |
-| 3 | Degraded language (grammar, spelling, terminology) | 35 |
+| 2 | Wrong content (says something other than the English) | 43 |
+| 3 | Degraded language (grammar, spelling, terminology) | 34 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
@@ -219,11 +216,6 @@ _Also listed under their own category below._
     - Source: `Powered by %@ · Answers can contain mistakes.`
     - Suggest: `%@ tarafından sağlanıyor · Yanıtlar hatalı olabilir.`
     - The source credits the provider ("Powered by"); "Model:" states the model name instead, which is a different statement about the attribution.
-- `QuickAnswers.ContentView.Listening.v158` — `tr/firefox-ios.xliff` — "ask anything" translated as "İstediğinizi sorun" is acceptable, but "Listening," turned into a separate sentence "Dinliyorum." — not a defect; the real issue is none.
-    - Current: `Dinliyorum. İstediğinizi sorun…`
-    - Source: `Listening, ask anything…`
-    - Suggest: `Dinliyorum, istediğinizi sorun…`
-    - Minor punctuation split; en-US uses a single clause separated by a comma.
 - `SecondaryButton.Label.v112` — `tr/firefox-ios.xliff` — "No Thanks" rendered as just "Hayır", dropping the "thanks" politeness element.
     - Current: `Hayır`
     - Source: `No Thanks`
@@ -422,11 +414,6 @@ _Also listed under their own category below._
     - Source: `Limited content detected. This page may be restricted or mostly visual.`
     - Suggest: `çoğunlukla görsel ağırlıklı olabilir`
     - The source reads "may be restricted or mostly visual"; the Turkish repeats "içerik ... içeriyor", which is ungrammatical-sounding repetition.
-- `TermsOfUse.TitleValue2.v147` — `tr/firefox-ios.xliff` — Wrong apostrophe suffix vowel harmony for "Firefox": should be ’ten, not ’tan.
-    - Current: `%@’tan bir not`
-    - Source: `A note from %@`
-    - Suggest: `%@’ten bir not`
-    - The app name is Firefox; the ablative suffix after front-vowel final syllable "-fox"... Turkish convention for Firefox is "Firefox’tan"? Actually Firefox is pronounced with back vowel 'o', so "Firefox’tan" is used across Mozilla tr. Flagging only if inconsistent.
 - `WebCompatReporter.AdditionalInfo.FooterText.v154` — `tr/firefox-ios.xliff` — Ungrammatical double construction "iyileştirmemize için" in the footer text.
     - Current: `böylece uygulamayı herkes için iyileştirmemize için yardımcı oluyor`
     - Source: `Your report helps us understand and fix issues in %1$@ to make it better for everyone. %2$@`

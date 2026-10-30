@@ -5,7 +5,7 @@
 | **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
 | **Mode** | checks-only |
 | **Strings reviewed this run** | 0 of 2,553 |
 
@@ -87,14 +87,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (140)
+## 3. Open findings (139)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 77 |
-| 3 | Degraded language (grammar, spelling, terminology) | 58 |
+| 3 | Degraded language (grammar, spelling, terminology) | 57 |
 | 4 | Cosmetic (typography, spacing) | 5 |
 
 ### A. Functional, markup, variables & plurals
@@ -522,11 +522,6 @@ _Nothing in this category._
     - Source: `Firefox cares about your privacy. Learn more in our %1$s.`
     - Suggest: `Узнайте больше в нашем Уведомлении о конфиденциальности.`
     - The link text for this string is "Уведомление о конфиденциальности" in the nominative, so the composed sentence reads "в нашем Уведомление о конфиденциальности" — case/agreement mismatch.
-- `setup_checklist_subtitle_3_steps_second_step` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — Numeral–noun agreement error: "Выполнено 2 шага" is fine but the parallel structure is inconsistent; actual error is missing comma-free clause—see rationale.
-    - Current: `Почти готово! Выполнено 2 шага, остался 1.`
-    - Source: `Almost there! Two steps finished and 1 to go.`
-    - Suggest: `Почти готово! Выполнено 2 шага, остался 1 шаг.`
-    - "остался 1" without the noun is elliptical and reads awkwardly in Russian; the source "1 to go" refers to a remaining step.
 - `shortcuts_update_error` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — Imperative instruction rendered as infinitives instead of imperatives.
     - Current: `Удалить существующие ярлыки и попробовать снова.`
     - Source: `Failed to update the app icon. Remove existing shortcuts and try again.`

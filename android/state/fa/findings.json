@@ -2618,30 +2618,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "مسدود کردن صدا و تصویر فقط روی اینترنت همراه",
-  "dismissed_because": "",
-  "fid": "325ecc8d19b0",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-09-17",
-  "impact": 2,
-  "last_seen": "2026-09-17",
-  "locale": "fa",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "Minor: source means blocking occurs only on cellular data; the Persian ordering is acceptable, but \"اینترنت همراه\" vs \"داده تلفن همراه\" terminology.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "7bde6b3d",
-  "string_id": "preference_option_autoplay_allowed_wifi_only2",
-  "suggest": "مسدود کردن صدا و تصویر فقط روی داده‌های تلفن همراه",
-  "summary": "The translation drops \"only\" applying to cellular data and misplaces it, saying \"block audio and video only on mobile internet\" vs. source \"Block audio and video on cellular data only\".",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "زبانه‌های ازکار افتاده",
   "dismissed_because": "",
   "fid": "c813a8fe41d9",

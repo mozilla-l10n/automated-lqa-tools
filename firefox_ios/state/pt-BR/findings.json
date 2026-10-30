@@ -362,30 +362,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "Navegar ficou ainda melhor.",
-  "dismissed_because": "",
-  "fid": "3e567f6131d5",
-  "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "pt-BR",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The source says browsing just got better, not \"even better\"; the added intensifier changes the claim.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "d9d585f2",
-  "string_id": "Onboarding.Modern.BrandRefresh.TermsOfUse.Description.v148",
-  "suggest": "Navegar ficou melhor.",
-  "summary": "\"Browsing just got better\" rendered as \"Navegar ficou ainda melhor\" adds \"ainda\" (even better), a minor shift; main issue is acceptable — see rationale.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "Agora não",
   "dismissed_because": "",
   "fid": "c3fa8d6139e5",

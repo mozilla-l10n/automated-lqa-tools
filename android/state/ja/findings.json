@@ -602,30 +602,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "再生速度を 0.5 倍に設定します",
-  "dismissed_because": "",
-  "fid": "8eb008c74db8",
-  "file": "mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml",
-  "first_seen": "2026-09-28",
-  "impact": 2,
-  "last_seen": "2026-09-28",
-  "locale": "ja",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "Placeholder finding",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "81615ae1",
-  "string_id": "mozac_feature_listentopage_notification_playback_speed_0_5",
-  "suggest": "再生速度を 0.5 倍 (半分) に設定します",
-  "summary": "\"half speed\" rendered as \"0.5 倍\" is fine, but the sibling speed strings use \"%\" phrasing; however the real issue is the inconsistent construction",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "強固なパスワードを使用してください: %1$s",
   "dismissed_because": "",
   "fid": "3e7140129d0d",
@@ -3379,30 +3355,6 @@
   "string_id": "tab_manager_empty_tab_groups_page_header",
   "suggest": "タブグループを使うと、スクロールを減らして、やりたいことに集中できます",
   "summary": "\"less scrolling, more doing\" is mistranslated as \"navigate efficiently without scrolling\".",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "1 か月以上表示していないタブ",
-  "dismissed_because": "",
-  "fid": "ee68c5e67b1b",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-21",
-  "impact": 2,
-  "last_seen": "2026-08-21",
-  "locale": "ja",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "Source: tabs you haven’t viewed over the past month.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "9f9d9f25",
-  "string_id": "tab_tray_inactive_auto_close_body_2",
-  "suggest": "過去 1 か月間表示していないタブ",
-  "summary": "\"over the past month\" is rendered as \"1 か月以上\" but the title string uses one month; more importantly the source means tabs not viewed during the past month, and the phrasing here is acceptable—however \"1 か月以上表示していない\" reverses nothing.",
   "suppressed_by": ""
  },
  {

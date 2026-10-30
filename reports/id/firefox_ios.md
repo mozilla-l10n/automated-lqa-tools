@@ -2,17 +2,18 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 5 of 1,932 |
+| **Previous run** | 2026-10-26 @ `7f349c067169` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 1,932 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for id: [android](android.md) · [firefox](firefox.md)
+Also for id: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -90,7 +91,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (93)
+## 3. Open findings (92)
 
 > **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -111,7 +112,7 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 34 |
-| 3 | Degraded language (grammar, spelling, terminology) | 47 |
+| 3 | Degraded language (grammar, spelling, terminology) | 46 |
 | 4 | Cosmetic (typography, spacing) | 12 |
 
 ### A. Functional, markup, variables & plurals
@@ -254,11 +255,6 @@ _Also listed under their own category below._
     - Source: `Tracking content`
     - Suggest: `Konten pelacak`
     - The source refers to content containing trackers, not to the act of tracking content; the Indonesian reverses the head noun.
-- `Menu.TrackingProtectionDescription.CryptominersNew` — `id/firefox-ios.xliff` — "energy bill" narrowed to "tagihan listrik"... acceptable; but "increase your energy bill" is fine — instead flag none.
-    - Current: `tagihan listrik Anda`
-    - Source: `Cryptominers secretly use your system’s computing power to mine digital money. Cryptomining scripts drain your battery, slow down your computer, and can increase your energy bill.`
-    - Suggest: `tagihan energi Anda`
-    - Source says energy bill; electricity bill is a plausible rendering but narrows the meaning.
 - `Open Tabs` — `id/firefox-ios.xliff` — "Open Tabs" (noun, sync setting) translated as the imperative "Buka Tab" (open a tab).
     - Current: `Buka Tab`
     - Source: `Open Tabs`

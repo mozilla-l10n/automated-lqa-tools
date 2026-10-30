@@ -242,30 +242,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "इसे अभी नहीं संभाल सकते। बाद में फिर कोशिश करें!",
-  "dismissed_because": "",
-  "fid": "131fb5e174cb",
-  "file": "Shared/Supporting Files/en-US.lproj/Summarizer.strings",
-  "first_seen": "2026-09-28",
-  "impact": 2,
-  "last_seen": "2026-09-28",
-  "locale": "hi-IN",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "Minor; the hedge \"at the moment\" is retained via \"अभी\".",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "3ca340a3",
-  "string_id": "Summarizer.Error.RateLimited.Message.v142",
-  "suggest": "इसे इस समय नहीं संभाल सकते। बाद में फिर कोशिश करें!",
-  "summary": "Rate-limit message says \"cannot handle this\" but source hedges with \"at the moment\" — the Hindi drops the temporal hedge into \"अभी नहीं संभाल सकते\" which is fine; however \"इसे\" loses reference to page.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "अगर आपको ज़्यादा पसंद हो, तो टूलबार को सबसे ऊपर ले जाएं।",
   "dismissed_because": "",
   "fid": "1006cc75f770",

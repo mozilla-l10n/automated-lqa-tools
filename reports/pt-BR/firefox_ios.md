@@ -2,17 +2,18 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 46 of 1,973 |
+| **Previous run** | 2026-10-26 @ `7f349c067169` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for pt-BR: [android](android.md) · [firefox](firefox.md)
+Also for pt-BR: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -81,13 +82,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (51)
+## 3. Open findings (50)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 33 |
+| 2 | Wrong content (says something other than the English) | 32 |
 | 3 | Degraded language (grammar, spelling, terminology) | 18 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -137,11 +138,6 @@ _Nothing in this category._
     - Source: `Indie. Non-profit. For good.`
     - Suggest: `Independente. Sem fins lucrativos. Para o bem de todos.`
     - In context (indie, non-profit), "For good" means for the benefit of people, not "forever"; the pt-BR asserts a permanence claim the source never made.
-- `Onboarding.Modern.BrandRefresh.TermsOfUse.Description.v148` — `pt-BR/firefox-ios.xliff` — "Browsing just got better" rendered as "Navegar ficou ainda melhor" adds "ainda" (even better), a minor shift; main issue is acceptable — see rationale.
-    - Current: `Navegar ficou ainda melhor.`
-    - Source: `Speedy, safe, and won’t sell you out. Browsing just got better.`
-    - Suggest: `Navegar ficou melhor.`
-    - The source says browsing just got better, not "even better"; the added intensifier changes the claim.
 - `Onboarding.Modern.General.Skip.v145` — `pt-BR/firefox-ios.xliff` — "Skip" translated as "Agora não" ("Not now") instead of "Pular".
     - Current: `Agora não`
     - Source: `Skip`
