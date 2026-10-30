@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-30 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3b1e357fad9d` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `2eb8d2e6cb72` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `36e745f2f7d9` |
-| **Previous run** | 2026-10-30 @ `6c76c457ee95` |
+| **Previous run** | 2026-10-30 @ `3b1e357fad9d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 86 of 16,961 |
+| **Strings reviewed this run** | 8 of 16,961 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,60 +18,42 @@ Also for it: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
+_No new findings._
+
+### ✅ Fixed since the last run (6)
+
+- `restart-required-single-instance-answer-2` — `browser/browser/aboutRestartRequired.ftl` — The security claim is attached to the wrong subject and the sentence structure changes the meaning ("Riavviando { -brand-short-name }, continuerà..." implies the OS/browser continues).
+    - Current: `Riavviando { -brand-short-name }, continuerà a funzionare normalmente e in sicurezza.`
+    - Source: `This can happen during a long browsing session, or when your operating system updates { -brand-short-name }. Restarting keeps { -brand-short-name } secure and working normally.`
+    - Suggest: `Il riavvio consente a { -brand-short-name } di restare sicuro e di funzionare normalmente.`
+    - En-US: "Restarting keeps { -brand-short-name } secure and working normally." The Italian gerund construction leaves the subject of "continuerà" dangling and turns the statement into a promise that something will keep working, rather than that restarting keeps the browser secure.
+- `urlbar-result-menu-remove-top-site` — `browser/browser/browser.ftl` — "Remove this top site" is rendered as "Rimuovi dai siti principali" (remove from top sites) instead of removing the site itself.
+    - Current: `Rimuovi dai siti principali`
+    - Source: `(value): Remove this top site accesskey: T`
+    - Suggest: `Rimuovi questo sito principale`
+    - The en-US action removes this top site entry; the Italian states removal from the top sites list, which changes the object of the action.
+- `newtab-stocks-search-hint` — `browser/browser/newtab/newtab.ftl` — "Search for symbols" is translated as "Cerca azioni" (search for stocks) instead of ticker symbols.
+    - Current: `Cerca azioni o aziende da aggiungere alla tua lista`
+    - Source: `Search for symbols or companies to add to your watchlist`
+    - Suggest: `Cerca simboli o aziende da aggiungere alla tua lista di controllo`
+    - En-US says "symbols or companies"; the sibling strings correctly render "symbol" as "simbolo" ("Cerca per nome o simbolo"), so "azioni" is inconsistent and drops the ticker-symbol meaning.
+- `newtab-wallpaper-firefox-sitting-hill-dark` — `browser/browser/newtab/newtab.ftl` — "sitting" rendered as "accovacciata" (crouching), inconsistent with the parallel string which uses "seduta".
+    - Current: `Una volpe accovacciata su colline viola scuro`
+    - Source: `A fox sitting on dark purple hills`
+    - Suggest: `Una volpe seduta su colline viola scuro`
+    - en-US says "A fox sitting on dark purple hills"; the companion string newtab-wallpaper-firefox-sitting-hill-light translates the same "sitting" as "seduta". "Accovacciata" means crouching.
 - `item-cookies-site-data-description2` — `browser/browser/sanitize.ftl` — The phrase "dai siti" appears twice in a row.
     - Current: `Ti disconnette dai siti dai siti`
     - Source: `Signs you out and may clear shopping carts`
     - Suggest: `Ti disconnette dai siti`
     - The repeated words are a typo. The en-US says only "Signs you out".
-
-### ✅ Fixed since the last run (9)
-
-- `ip-protection-site-rules-edit-button` — `browser/browser/ipProtection.ftl` — Ungrammatical preposition: "relativa per" should be "relativa a" (or just "per").
-    - Current: `la regola relativa per { $website }`
-    - Source: `aria-label: Edit the rule for { $website } title: Edit`
-    - Suggest: `la regola relativa a { $website }`
-    - "Relativa" takes the preposition "a"; "relativa per" is ungrammatical Italian. The sibling delete button uses plain "la regola per".
-- `toolbar-button-mini-window` — `browser/browser/miniWindow.ftl` — The tooltip renders the feature name 'Mini Window' as 'finestra ridotta' instead of the 'mini finestra' used everywhere else.
-    - Current: `Utilizza finestra ridotta`
-    - Source: `label: Mini Window tooltiptext: Use Mini Window`
-    - Suggest: `Utilizza mini finestra`
-    - The feature is called 'Mini finestra' in this string's own label and in every other Mini Window string. The tooltip names it differently, so the two are inconsistent.
-- `newtab-wallpaper-firefox-hills-light` — `browser/browser/newtab/newtab.ftl` — "light hills" rendered as "colline chiare" here but "colline luminose" in the other light-hills strings.
-    - Current: `Una volpe corre su colline chiare`
-    - Source: `A fox running over light hills`
-    - Suggest: `Una volpe corre su colline luminose`
-    - The same en-US term "light hills" is translated inconsistently across newtab-wallpaper-firefox-sitting-hill-light and newtab-wallpaper-firefox-sky-light ("colline luminose") within the same surface.
-- `preferences-ai-controls-sidebar-chatbot-group-3` — `browser/browser/preferences/preferences.ftl` — Label uses singular "Fornitore" where the source is plural "providers".
-    - Current: `label: Fornitore di chatbot IA nella barra laterale`
-    - Source: `description: Keep a chatbot in view as you browse. Choose from multiple providers and switch anytime. label: AI chatbot providers in sidebar`
-    - Suggest: `label: Fornitori di chatbot IA nella barra laterale`
-    - en-US "AI chatbot providers in sidebar" is plural, and the accompanying description mentions choosing among multiple providers ("diversi fornitori").
-- `jsonlScopeName` — `devtools/client/netmonitor.properties` — "JSON Lines" is a format name (JSONL/NDJSON) and should not be translated as "Righe JSON".
-    - Current: `Righe JSON`
-    - Source: `JSON Lines`
-    - Suggest: `JSON Lines`
-    - The developer comment identifies it as the JSON Lines (JSONL/NDJSON) payload format name; format names are kept in English in DevTools panel labels (e.g. JSON, XML).
-- `about-sync-log-count` — `toolkit/services/aboutSyncLog.ftl` — "log/logs" translated as "registrazione/registrazioni" instead of the "registro/registri" used consistently elsewhere in the same page.
-    - Current: `[one] { $count } registrazione [other] { $count } registrazioni`
-    - Source: `{$count ->} [one] { $count } log [other] { $count } logs`
-    - Suggest: `[one] { $count } registro [other] { $count } registri`
-    - Every other string in this file renders "log(s)" as "registro/registri"; "registrazione" means a recording, an inconsistent term on the same surface.
-- `detail-contributions-button` — `toolkit/toolkit/about/aboutAddons.ftl` — Access key `C` of `detail-contributions-button` is not present in its label
-    - Current: `C`
-    - Source: `(value): Contribute accesskey: C title: Contribute to the development of this add-on`
-    - The label is “Fai una donazione”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `taskbar-tabs-social-callout-subtitle` — `browser/browser/featureCallout.ftl` — The sentence has no final full stop, unlike the en-US source and the other callout subtitles in this batch.
-    - Current: `protetta da { -brand-short-name }`
-    - Source: `Launch your social sites like an app in a streamlined window protected by { -brand-short-name }.`
-    - Suggest: `protetta da { -brand-short-name }.`
-    - The en-US ends with a period, and every other taskbar-tabs callout subtitle in this batch ends with one in Italian. This string alone drops it.
-- `ip-protection-site-rules-button` — `browser/browser/ipProtection.ftl` — Double space and missing article in the button label.
-    - Current: `Gestisci  regole per i siti web`
-    - Source: `description: Set rules for sites that need extra privacy or VPN turned off. label: Manage website rules`
-    - Suggest: `Gestisci le regole per i siti web`
-    - The label contains a doubled space between "Gestisci" and "regole" and drops the article used in the identical string ip-protection-site-rules-header ("Gestisci le regole per i siti web").
+- `neterror-search-cta-search-button` — `toolkit/toolkit/neterror/netError.ftl` — Tooltip translated as an imperative command instead of a description of what the button does.
+    - Current: `tooltiptext: Apri i risultati di ricerca in una nuova scheda`
+    - Source: `accesskey: c label: Search tooltiptext: Opens search results in a new tab`
+    - Suggest: `tooltiptext: Apre i risultati di ricerca in una nuova scheda`
+    - The en-US "Opens search results in a new tab" is descriptive (it doubles as the accessible description, per the developer comment), not an instruction to the user.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -152,28 +134,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (11)
+## 3. Open findings (1)
 
-> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl` — "help keep your browsing private" rendered as an absolute "impediscono" (prevent), dropping the hedge.
-    - Current: `Le finestre anonime impediscono agli altri utenti di questo dispositivo di vedere la tua attività di navigazione.`
-    - Source: `Private Windows help keep your browsing private from others on this device. They don’t make you anonymous or clear all of your data.`
-    - Suggest: `Le finestre anonime aiutano a nascondere la tua attività di navigazione agli altri utenti di questo dispositivo.`
-    - The source says Private Windows "help keep" browsing private; the Italian asserts they outright prevent other users from seeing the activity, a stronger promise than the product makes.
-- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The hedge 'Help' is dropped, so the Italian claims the VPN hides the user's location outright.
-    - Current: `Nascondi la tua posizione mentre navighi.`
-    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
-    - Suggest: `Aiuta a nascondere la tua posizione mentre navighi.`
-    - en-US 'Help hide your location' is a hedged claim. 'Nascondi la tua posizione' promises full concealment, which is a protection the product does not guarantee.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 4 |
-| 3 | Degraded language (grammar, spelling, terminology) | 7 |
+| 2 | Wrong content (says something other than the English) | 0 |
+| 3 | Degraded language (grammar, spelling, terminology) | 1 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -187,59 +155,10 @@ _Nothing in this category._
     - Source: `Switch to Strict in settings for stronger tracking protections.`
     - Suggest: `per una protezione antitracciamento più efficace`
     - The source says the protection is stronger, not more aggressive; "aggressiva" carries a different connotation than en-US "stronger".
-- `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl` — "help keep your browsing private" rendered as an absolute "impediscono" (prevent), dropping the hedge.
-    - Current: `Le finestre anonime impediscono agli altri utenti di questo dispositivo di vedere la tua attività di navigazione.`
-    - Source: `Private Windows help keep your browsing private from others on this device. They don’t make you anonymous or clear all of your data.`
-    - Suggest: `Le finestre anonime aiutano a nascondere la tua attività di navigazione agli altri utenti di questo dispositivo.`
-    - The source says Private Windows "help keep" browsing private; the Italian asserts they outright prevent other users from seeing the activity, a stronger promise than the product makes.
-- `restart-required-single-instance-answer-2` — `browser/browser/aboutRestartRequired.ftl` — The security claim is attached to the wrong subject and the sentence structure changes the meaning ("Riavviando { -brand-short-name }, continuerà..." implies the OS/browser continues).
-    - Current: `Riavviando { -brand-short-name }, continuerà a funzionare normalmente e in sicurezza.`
-    - Source: `This can happen during a long browsing session, or when your operating system updates { -brand-short-name }. Restarting keeps { -brand-short-name } secure and working normally.`
-    - Suggest: `Il riavvio consente a { -brand-short-name } di restare sicuro e di funzionare normalmente.`
-    - En-US: "Restarting keeps { -brand-short-name } secure and working normally." The Italian gerund construction leaves the subject of "continuerà" dangling and turns the statement into a promise that something will keep working, rather than that restarting keeps the browser secure.
-- `urlbar-result-menu-remove-top-site` — `browser/browser/browser.ftl` — "Remove this top site" is rendered as "Rimuovi dai siti principali" (remove from top sites) instead of removing the site itself.
-    - Current: `Rimuovi dai siti principali`
-    - Source: `(value): Remove this top site accesskey: T`
-    - Suggest: `Rimuovi questo sito principale`
-    - The en-US action removes this top site entry; the Italian states removal from the top sites list, which changes the object of the action.
-- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The hedge 'Help' is dropped, so the Italian claims the VPN hides the user's location outright.
-    - Current: `Nascondi la tua posizione mentre navighi.`
-    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
-    - Suggest: `Aiuta a nascondere la tua posizione mentre navighi.`
-    - en-US 'Help hide your location' is a hedged claim. 'Nascondi la tua posizione' promises full concealment, which is a protection the product does not guarantee.
-- `newtab-stocks-search-hint` — `browser/browser/newtab/newtab.ftl` — "Search for symbols" is translated as "Cerca azioni" (search for stocks) instead of ticker symbols.
-    - Current: `Cerca azioni o aziende da aggiungere alla tua lista`
-    - Source: `Search for symbols or companies to add to your watchlist`
-    - Suggest: `Cerca simboli o aziende da aggiungere alla tua lista di controllo`
-    - En-US says "symbols or companies"; the sibling strings correctly render "symbol" as "simbolo" ("Cerca per nome o simbolo"), so "azioni" is inconsistent and drops the ticker-symbol meaning.
-- `newtab-wallpaper-firefox-sitting-hill-dark` — `browser/browser/newtab/newtab.ftl` — "sitting" rendered as "accovacciata" (crouching), inconsistent with the parallel string which uses "seduta".
-    - Current: `Una volpe accovacciata su colline viola scuro`
-    - Source: `A fox sitting on dark purple hills`
-    - Suggest: `Una volpe seduta su colline viola scuro`
-    - en-US says "A fox sitting on dark purple hills"; the companion string newtab-wallpaper-firefox-sitting-hill-light translates the same "sitting" as "seduta". "Accovacciata" means crouching.
-- `about-sync-log-empty` — `toolkit/services/aboutSyncLog.ftl` — "No sync logs have been recorded" rendered as "no log was found", changing the meaning from recording to searching.
-    - Current: `Non è stato trovato alcun registro di sincronizzazione.`
-    - Source: `No sync logs have been recorded.`
-    - Suggest: `Non è stato registrato alcun registro di sincronizzazione.`
-    - The en-US says logs have not been recorded, not that a search failed to find them.
-- `about-logging-preset-vpn-description` — `toolkit/toolkit/about/aboutLogging.ftl` — "Log modules" (verb + object: log the modules) rendered as the noun phrase "Moduli di registrazione".
-    - Current: `Moduli di registrazione per diagnosticare problemi con la VPN integrata (IP Protection).`
-    - Source: `Log modules to diagnose IP Protection (VPN) issues`
-    - Suggest: `Registra i moduli per diagnosticare problemi con IP Protection (VPN).`
-    - The en-US is an imperative describing the preset action ("Log modules to diagnose…"), not a noun phrase; also "IP Protection (VPN)" is reversed and expanded to "VPN integrata (IP Protection)".
-- `neterror-search-cta-search-button` — `toolkit/toolkit/neterror/netError.ftl` — Tooltip translated as an imperative command instead of a description of what the button does.
-    - Current: `tooltiptext: Apri i risultati di ricerca in una nuova scheda`
-    - Source: `accesskey: c label: Search tooltiptext: Opens search results in a new tab`
-    - Suggest: `tooltiptext: Apre i risultati di ricerca in una nuova scheda`
-    - The en-US "Opens search results in a new tab" is descriptive (it doubles as the accessible description, per the developer comment), not an instruction to the user.
 
 ### C. Grammar, agreement & spelling
 
-- `item-cookies-site-data-description2` — `browser/browser/sanitize.ftl` — The phrase "dai siti" appears twice in a row.
-    - Current: `Ti disconnette dai siti dai siti`
-    - Source: `Signs you out and may clear shopping carts`
-    - Suggest: `Ti disconnette dai siti`
-    - The repeated words are a typo. The en-US says only "Signs you out".
+_Nothing in this category._
 
 ### D. Terminology, register & consistency
 
@@ -253,10 +172,14 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (6)
+### Dismissed by hand (10)
 
+- `about-logging-preset-vpn-description` — `toolkit/toolkit/about/aboutLogging.ftl` — Correct as is
+- `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl` — On purpose, because the alternative is hard to read "nascondere a qualcuno".
+- `about-sync-log-empty` — `toolkit/services/aboutSyncLog.ftl` — Clearer as is
 - `default-browser-guidance-notification-body-instruction-win10` — `browser/browser/defaultBrowserNotification.ftl` — That's the OS string.
 - `imported-safari-reading-list` — `browser/browser/migration.ftl` — Elenco lettura is correct
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — On purpose for better flow
 - `migration-imported-safari-reading-list` — `browser/browser/migrationWizard.ftl` — Elenco lettura is correct
 - `noDomMutationBreakpoints` — `devtools/client/debugger.properties` — Element is there
 - `noDomMutationBreakpoints.notice` — `devtools/client/debugger.properties` — Element is there
@@ -279,17 +202,23 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (68)
+### Fixed to date (74)
 
+- `restart-required-single-instance-answer-2` — `browser/browser/aboutRestartRequired.ftl` — fixed 2026-10-30
+- `urlbar-result-menu-remove-top-site` — `browser/browser/browser.ftl` — fixed 2026-10-30
 - `taskbar-tabs-social-callout-subtitle` — `browser/browser/featureCallout.ftl` — fixed 2026-10-30
 - `ip-protection-site-rules-button` — `browser/browser/ipProtection.ftl` — fixed 2026-10-30
 - `ip-protection-site-rules-edit-button` — `browser/browser/ipProtection.ftl` — fixed 2026-10-30
 - `toolbar-button-mini-window` — `browser/browser/miniWindow.ftl` — fixed 2026-10-30
+- `newtab-stocks-search-hint` — `browser/browser/newtab/newtab.ftl` — fixed 2026-10-30
 - `newtab-wallpaper-firefox-hills-light` — `browser/browser/newtab/newtab.ftl` — fixed 2026-10-30
+- `newtab-wallpaper-firefox-sitting-hill-dark` — `browser/browser/newtab/newtab.ftl` — fixed 2026-10-30
 - `preferences-ai-controls-sidebar-chatbot-group-3` — `browser/browser/preferences/preferences.ftl` — fixed 2026-10-30
+- `item-cookies-site-data-description2` — `browser/browser/sanitize.ftl` — fixed 2026-10-30
 - `jsonlScopeName` — `devtools/client/netmonitor.properties` — fixed 2026-10-30
 - `about-sync-log-count` — `toolkit/services/aboutSyncLog.ftl` — fixed 2026-10-30
 - `detail-contributions-button` — `toolkit/toolkit/about/aboutAddons.ftl` — fixed 2026-10-30
+- `neterror-search-cta-search-button` — `toolkit/toolkit/neterror/netError.ftl` — fixed 2026-10-30
 - `toolbar-switcher-customizable-label-v2` — `browser/browser/aiWindow.ftl` — fixed 2026-10-19
 - `tab-groups-onboarding-saved-groups-title-3` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-10-19
 - `sync-syncing-across-devices-heading-3` — `browser/browser/preferences/preferences.ftl` — fixed 2026-10-19
@@ -315,9 +244,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `protections-panel-etp-on-header` — `browser/browser/protectionsPanel.ftl` — fixed 2026-07-26
 - `recently-closed-window-panel-tooltip` — `browser/browser/recentlyClosed.ftl` — fixed 2026-07-26
 - `add-engine-no-url` — `browser/browser/search.ftl` — fixed 2026-07-26
-- `open-desktop-prefs` — `browser/browser/setDesktopBackground.ftl` — fixed 2026-07-26
-- `protections-milestone` — `browser/browser/siteProtections.ftl` — fixed 2026-07-26
-- `tab-note-preview-expand` — `browser/browser/tabbrowser.ftl` — fixed 2026-07-26
-- `tabbrowser-container-tab-title` — `browser/browser/tabbrowser.ftl` — fixed 2026-07-26
-- `select-translations-panel-init-failure-message` — `browser/browser/translations.ftl` — fixed 2026-07-26
-- `about-debugging-runtime-service-workers-not-compatible` — `devtools/client/aboutdebugging.ftl` — fixed 2026-07-26
