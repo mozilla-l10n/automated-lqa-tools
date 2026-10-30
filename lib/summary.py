@@ -304,6 +304,24 @@ def _pair(before: list, after: list) -> tuple[list, list]:
     return pairs, gone
 
 
+def rows_at(project, ref: str) -> list[dict]:
+    """The rows :func:`delta` needs, read from ``ref`` instead of the disk.
+
+    For the QA digest, which compares a pull request's head with the base
+    before merging it, and must not check either out over the working tree
+    to do so.
+    """
+    rows = []
+    for locale in project.locales:
+        found = _load_at(project, locale, ref)
+        if found is None:
+            rows.append({"locale": locale, "state": "not yet checked"})
+            continue
+        rows.append({"locale": locale, "state": "", "found": found,
+                     "open": sum(1 for f in found if f.is_open)})
+    return rows
+
+
 def delta(project, rows: list[dict], ref: str) -> dict:
     """Per-locale lifecycle changes between ``ref`` and the working tree."""
     out = {"locales": {}, "first_run": [], "new": [], "reopened": [],

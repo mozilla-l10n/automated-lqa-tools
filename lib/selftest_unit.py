@@ -404,6 +404,47 @@ def run(suite) -> None:
         "protocol-relative remote images are refused too",
     )
 
+    # --- the QA digest -----------------------------------------------------
+    suite.section("The digest merges only what needs no person")
+    import digest
+    ok = [{"__typename": "CheckRun", "name": "checks", "status": "COMPLETED",
+           "conclusion": "SUCCESS"},
+          {"__typename": "CheckRun", "name": "semgrep", "status": "COMPLETED",
+           "conclusion": "SKIPPED"}]
+    check(digest.check_problems(ok) == [], "green checks allow a merge")
+    check(digest.check_problems([]),
+          "no checks at all is not a pass: `checks` is required")
+    waiting = [dict(ok[0], conclusion="ACTION_REQUIRED")]
+    check(any("approve" in p for p in digest.check_problems(waiting)),
+          "a run waiting for approval says so, rather than 'failed'")
+    check(digest.check_problems([dict(ok[0], status="IN_PROGRESS",
+                                      conclusion=None)]),
+          "a check still running blocks the merge")
+    check(digest.check_problems(ok + [{"__typename": "StatusContext",
+                                       "context": "x", "state": "FAILURE"}]),
+          "and so does any other failing status, not only `checks`")
+
+    suite.section("The digest email cannot be injected into either")
+    fx = config.load("firefox")
+    bad = Finding(locale="it", file="a.ftl", string_id="s", category="B",
+                  impact=1, summary="ok",
+                  current='<img src="https://evil.example/t.png"><script>x</script>')
+    empty = {k: [] for k in ("first_run", "new", "reopened", "recheck", "gone",
+                             "fixed", "withdrawn", "person", "obsolete")}
+    held = digest.Outcome(fx, pr={"number": 1, "url": "https://example/1"},
+                          reasons=["it changes locale instructions"],
+                          delta=dict(empty, locales={}))
+    done = digest.Outcome(fx, pr={"number": 2, "url": "https://example/2"},
+                          delta=dict(empty, locales={"it": {"new": 1, "net": 1}},
+                                     new=[("it", bad)]), merged=True)
+    subject, body = digest.compose([held, done], dry_run=False, today="x")
+    check("not merged" in subject and body.index("Needs a person")
+          < body.index("merged [#2]"),
+          "a pull request left open leads the email and the subject")
+    page = digest.to_html(body)
+    check("<img" not in page and "<script" not in page and "&lt;img" in page,
+          "a quoted translation reaches the HTML part as text")
+
 
 def _site():
     import importlib.util
