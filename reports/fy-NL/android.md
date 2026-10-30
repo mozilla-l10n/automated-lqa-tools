@@ -1,18 +1,19 @@
-# Android l10n QA — fy-NL
+# Firefox for Android l10n QA — fy-NL
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-19 @ `57c409b04755` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 2,802 |
+| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 2,552 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for fy-NL: [firefox](firefox.md)
+Also for fy-NL: [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -44,8 +45,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 45 |
-| Strings | 2,802 |
+| Files | 44 |
+| Strings | 2,552 |
 | Missing strings | 1 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -73,6 +74,8 @@ _Completeness is reported, never raised as a finding: a missing string needs tra
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
 
+The count includes Focus for Android's strings for this locale, which the same team translates, so both projects infer the same conventions. Nothing there is checked here.
+
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-single` 16 | **curly-single** |
@@ -88,14 +91,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (166)
+## 3. Open findings (146)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 56 |
-| 3 | Degraded language (grammar, spelling, terminology) | 109 |
+| 2 | Wrong content (says something other than the English) | 46 |
+| 3 | Degraded language (grammar, spelling, terminology) | 99 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
@@ -339,56 +342,6 @@ _Nothing in this category._
     - Source: `Browser is blocked or unsupported`
     - Suggest: `Browser wurdt blokkearre of net stipe`
     - Source is “Browser is blocked or unsupported”; the translation reverses the order and reads as “not supported or blocked”, where “net” no longer applies to “blokkearre”.
-- `content_description_dismiss_input` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — "Dismiss" is translated as "Fuortsmite" (delete/throw away) instead of dismissing/closing the overlay.
-    - Current: `Fuortsmite`
-    - Source: `Dismiss`
-    - Suggest: `Slute`
-    - Per the developer comment the action dismisses the overlay and returns to the browser; ‘Fuortsmite’ means to discard/delete, which suggests data removal.
-- `dismiss_no_suggestions_prompt_button` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — "Dismiss" (close/hide the message) is translated as "Fuortsmite" (delete).
-    - Current: `Fuortsmite`
-    - Source: `Dismiss`
-    - Suggest: `Slute`
-    - The developer comment says the button dismisses a message; "Fuortsmite" means delete/remove, which conveys a destructive action not present in the source.
-- `exit_fullscreen_with_back_button_short` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Back-button instruction wrongly says "press the back gesture" instead of pressing the back button, duplicating the gesture string.
-    - Current: `druk it gebear werom`
-    - Source: `Drag from top & press back to exit`
-    - Suggest: `druk op de weromknop`
-    - Source is "press back to exit" (hardware/back button), not a gesture; the gesture wording belongs to exit_fullscreen_with_gesture_short.
-- `feedback_erase_custom_tab` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Singular "Tab's browsing history" rendered as plural "of the tabs".
-    - Current: `Jo sneupskiednis fan de ljepblêden is wiske.`
-    - Source: `Tab’s browsing history has been erased.`
-    - Suggest: `De sneupskiednis fan it ljepblêd is wiske.`
-    - Source refers to a single tab's browsing history; the translation says the history of the tabs (plural) and adds "Jo" (your).
-- `firstrun_shortcut_title` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — "shortcuts" translated as "keppelingen" (links) instead of "fluchkeppelingen" (shortcuts).
-    - Current: `Foegje keppelingen ta oan jo startskerm`
-    - Source: `Add shortcuts to your home screen`
-    - Suggest: `Foegje fluchkeppelingen ta oan jo startskerm`
-    - Source says "Add shortcuts to your home screen"; elsewhere (menu_add_to_shortcuts) "Shortcuts" is "fluchkeppelingen", while "keppelingen" means links.
-- `preference_advanced_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — "Developer tools" is rendered as "Untwikkelersark" (singular/odd form) — should be the plural "Untwikkeldersark"/"Ark foar ûntwikkelers", and the word is misspelled without the initial circumflex.
-    - Current: `Untwikkelersark`
-    - Source: `Developer tools`
-    - Suggest: `Ûntwikkelersark`
-    - Frisian "ûntwikkelder/ûntwikkeler" starts with û (circumflex); "Untwikkelersark" is a spelling error.
-- `preference_crashes` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — "Crashes" (app crash reports) is translated as "Ungelokken" (accidents), the wrong sense, and also lacks the Frisian accented initial letter.
-    - Current: `Ungelokken`
-    - Source: `Crashes`
-    - Suggest: `Fêstrinnen`
-    - The developer comment says this links to Focus crash reports; "ûngelokken" means real-world accidents, not software crashes. Also the initial U should be Û.
-- `preference_privacy_should_block_cookies_third_party_only_option` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — The verb "blokkearje" (block) is missing, so the option reads "Only third-party cookies" instead of "Block 3rd-party cookies only".
-    - Current: `Allinnich cookies fan tredden`
-    - Source: `Block 3rd-party cookies only`
-    - Suggest: `Allinnich cookies fan tredden blokkearje`
-    - Source is "Block 3rd-party cookies only"; the parallel option string for tracker cookies correctly ends in "blokkearje".
-- `preference_privacy_stealth_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Coordination makes "apps" and "taking screenshots" both objects of switching, distorting the meaning.
-    - Current: `Websiden ferstopje by wikseljen fan apps en meitsjen fan skermôfdrukken blokkearje.`
-    - Source: `Hide webpages when switching apps and block taking screenshots.`
-    - Suggest: `Websiden ferstopje by it wikseljen fan apps en it meitsjen fan skermôfdrukken blokkearje.`
-    - Source: hide webpages when switching apps AND block taking screenshots; current wording reads as "switching apps and taking screenshots".
-- `preference_security_biometric_summary2` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — "Shortcuts" (pinned website shortcuts) is rendered as "fluchtoetsen" (keyboard shortcuts).
-    - Current: `fluchtoetsen`
-    - Source: `Unlock using fingerprint if you’ve added Shortcuts or when a website is already open in %s.`
-    - Suggest: `fluchkeppelingen`
-    - The developer comment explains Shortcuts are pinned favourite websites, not keyboard shortcuts.
 
 ### C. Grammar, agreement & spelling
 
@@ -692,7 +645,7 @@ _Nothing in this category._
     - Source: `File is removed from your download history, but is still saved on your device`
     - Suggest: `downloadskiednis`
     - The word for history is "skiednis"; other strings in the same group use "downloadskiednis".
-- _…and 34 more; see `state/` for the full list._
+- _…and 25 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -766,11 +719,6 @@ _Nothing in this category._
     - Source: `Terms of Use`
     - Suggest: `Brûkersbetingsten`
     - The same source term on the same surface is rendered two different ways, creating terminology inconsistency.
-- `search_add_error_format` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — "search string" rendered as "sykterm" here but "syksterm" in search_add_error_empty_search on the same screen.
-    - Current: `sykterm`
-    - Source: `Check that search string matches Example format`
-    - Suggest: `syksterm`
-    - The same source term "search string" is translated inconsistently within the same settings surface (search_add_error_empty_search uses "syksterm").
 
 ### E. Typography, punctuation & spacing
 

@@ -1,18 +1,19 @@
-# Android l10n QA — ja
+# Firefox for Android l10n QA — ja
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-19 @ `7ee8e61a4a7d` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 9 of 2,801 |
+| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 2,552 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for ja: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
+Also for ja: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -44,9 +45,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 45 |
-| Strings | 2,801 |
-| Missing strings | 2 |
+| Files | 44 |
+| Strings | 2,552 |
+| Missing strings | 1 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,16 +64,17 @@ _Nothing retired._
 
 ### Completeness
 
-**2 strings** are not translated yet, concentrated in:
+**1 strings** are not translated yet, concentrated in:
 
 - `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — 1
-- `mozilla-mobile/focus-android/app/src/main/res/values-ja/strings.xml` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
+
+The count includes Focus for Android's strings for this locale, which the same team translates, so both projects infer the same conventions. Nothing there is checked here.
 
 | Convention | Counts | Inferred |
 |---|---|---|
@@ -88,13 +90,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (150)
+## 3. Open findings (141)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 118 |
+| 2 | Wrong content (says something other than the English) | 109 |
 | 3 | Degraded language (grammar, spelling, terminology) | 25 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
@@ -407,7 +409,7 @@ _Nothing reported._
     - Source: `Leave no traces on this device`
     - Suggest: `この端末に痕跡を残しません`
     - The source says no traces are left on the device; the translation says the device is prevented from tracking, which is a different meaning.
-- _…and 61 more; see `state/` for the full list._
+- _…and 52 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

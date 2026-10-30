@@ -1,0 +1,39 @@
+{
+ "_meta": {
+  "locale": "pl",
+  "prose_chunks": 2801,
+  "strings": 2801
+ },
+ "apostrophe": {
+  "straight": 0,
+  "typographic": 0
+ },
+ "dash": {
+  "em": 2,
+  "en": 3
+ },
+ "ellipsis": {
+  "ascii": 0,
+  "char": 21
+ },
+ "fullwidth": {
+  "punctuation": 0
+ },
+ "inverted_marks": {
+  "open-exclamation": 0,
+  "open-question": 0
+ },
+ "nbsp": {
+  "before-punctuation": 20,
+  "narrow": 0,
+  "space-before-punctuation": 0,
+  "total": 724
+ },
+ "quotes": {
+  "polish-double": 84
+ },
+ "register": {
+  "formal": 0,
+  "informal": 9
+ }
+}

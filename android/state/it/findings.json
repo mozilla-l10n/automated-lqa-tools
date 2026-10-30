@@ -1412,53 +1412,5 @@
   "suggest": "Traduzione in corso",
   "summary": "\"Translating\" (action in progress) is translated as the noun \"Traduzione\", losing the in-progress meaning.",
   "suppressed_by": ""
- },
- {
-  "category": "E",
-  "check": "llm",
-  "current": "Numero di tracciamenti bloccati",
-  "dismissed_because": "",
-  "fid": "d382910441ab",
-  "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-20",
-  "impact": 2,
-  "last_seen": "2026-08-20",
-  "locale": "it",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The same surface uses \"Traccianti bloccati\" (menu_trackers_blocked_title) and \"Elementi traccianti bloccati\" (trackers_count_note); \"tracciamenti\" denotes tracking actions, not trackers.",
-  "reads_as_deliberate": false,
-  "resolved_on": "2026-08-20",
-  "status": "fixed",
-  "string_hash": "4f8f6cd7",
-  "string_id": "content_description_trackers_blocked",
-  "suggest": "Numero di elementi traccianti bloccati",
-  "summary": "\"trackers\" rendered as \"tracciamenti\" (tracking events) instead of the term used everywhere else in the file.",
-  "suppressed_by": ""
- },
- {
-  "category": "D",
-  "check": "llm",
-  "current": "Trova un app per aprire il link",
-  "dismissed_because": "",
-  "fid": "9b4980593f55",
-  "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-20",
-  "impact": 3,
-  "last_seen": "2026-08-20",
-  "locale": "it",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "\"App\" is feminine in Italian, so the article must be elided as \"un’app\"; \"un app\" is a spelling/agreement error.",
-  "reads_as_deliberate": false,
-  "resolved_on": "2026-08-20",
-  "status": "fixed",
-  "string_hash": "0c2db4cd",
-  "string_id": "external_app_prompt_no_app_title",
-  "suggest": "Trova un’app per aprire il link",
-  "summary": "Missing elision/wrong article before the feminine noun \"app\".",
-  "suppressed_by": ""
  }
 ]

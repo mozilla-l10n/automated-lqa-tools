@@ -1,18 +1,19 @@
-# Android l10n QA — es-MX
+# Firefox for Android l10n QA — es-MX
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-19 @ `57c409b04755` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,761 |
+| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 2,512 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for es-MX: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
+Also for es-MX: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -44,9 +45,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 45 |
-| Strings | 2,761 |
-| Missing strings | 42 |
+| Files | 44 |
+| Strings | 2,512 |
+| Missing strings | 41 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,17 +64,18 @@ _Nothing retired._
 
 ### Completeness
 
-**42 strings** are not translated yet, concentrated in:
+**41 strings** are not translated yet, concentrated in:
 
 - `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — 25
 - `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-es-rMX/strings.xml` — 16
-- `mozilla-mobile/focus-android/app/src/main/res/values-es-rMX/strings.xml` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
+
+The count includes Focus for Android's strings for this locale, which the same team translates, so both projects infer the same conventions. Nothing there is checked here.
 
 | Convention | Counts | Inferred |
 |---|---|---|
@@ -91,14 +93,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (145)
+## 3. Open findings (130)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 84 |
-| 3 | Degraded language (grammar, spelling, terminology) | 61 |
+| 2 | Wrong content (says something other than the English) | 75 |
+| 3 | Degraded language (grammar, spelling, terminology) | 55 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -407,7 +409,7 @@ _Nothing in this category._
     - Source: `Known Fingerprinters`
     - Suggest: `Detectores de huellas digitales conocidos`
     - Fingerprinters are scripts/entities that perform digital fingerprinting; "huellas dactilares" (physical fingerprints) names the wrong thing.
-- _…and 29 more; see `state/` for the full list._
+- _…and 18 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -551,16 +553,6 @@ _Nothing in this category._
     - Source: `Videos, downloads, or media didn’t work`
     - Suggest: `No funcionaban los videos, descargas o archivos multimedia`
     - Source "Videos, downloads, or media didn’t work" is past tense; translation uses present tense.
-- `download_firefox` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rMX/strings.xml` — "Download Firefox" is a list item label and should be an infinitive, not the imperative/indicative "Descarga".
-    - Current: `Descarga Firefox`
-    - Source: `Download Firefox`
-    - Suggest: `Descargar Firefox`
-    - The developer comment says this is an item in a list of browsers; Spanish UI list/action labels use the infinitive, and "Descarga Firefox" reads as a sentence.
-- `preference_search_restore` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rMX/strings.xml` — Word order breaks the noun phrase: "motores predeterminados de búsqueda" instead of "motores de búsqueda predeterminados".
-    - Current: `Restaurar motores predeterminados de búsqueda`
-    - Source: `Restore default search engines`
-    - Suggest: `Restaurar los motores de búsqueda predeterminados`
-    - "Motor de búsqueda" is a fixed compound; the adjective must follow the whole phrase, as in the other strings in this file.
 
 ### D. Terminology, register & consistency
 
@@ -684,16 +676,6 @@ _Nothing in this category._
     - Source: `You have an unsent crash report related to crashes being investigated. Sending it will help us improve %1$s. Closing this notification will ignore this report.`
     - Suggest: `Tienes un informe de fallo sin enviar sobre fallas bajo investigación.`
     - Same feature (unsubmitted crash dialogs) uses "reporte de fallo" in unsubmitted_crash_dialog_positive_button; "error" vs "fallo" is inconsistent for "crash".
-- `a11y_link_available` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rMX/strings.xml` — "Link" left in English instead of the standard Spanish term "enlace" used elsewhere in the same file.
-    - Current: `Link disponible`
-    - Source: `Link available`
-    - Suggest: `Enlace disponible`
-    - Other strings (add_custom_autocomplete_label, biometric_auth_open_link_new_session) translate "link" as "enlace"; leaving it as "Link" is inconsistent terminology.
-- `errorpage_httpsonly_message2` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rMX/strings.xml` — The ampersand in the settings path is left untranslated instead of using "y".
-    - Current: `Privacidad &amp; Seguridad`
-    - Source: `%1$s tries to use an HTTPS connection whenever possible for more security. <a href="%2$s">Learn more{ </a> } { <br/> }{ <br/> } Change this setting in Settings > Privacy &amp; Security > Security.`
-    - Suggest: `Privacidad y seguridad`
-    - Spanish does not use "&" as a conjunction in menu paths; the en-US "Privacy & Security" should be rendered with "y".
 
 ### E. Typography, punctuation & spacing
 

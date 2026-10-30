@@ -1,38 +1,31 @@
-# Android l10n QA — sk
+# Firefox for Android l10n QA — sk
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-19 @ `ea17dbc84971` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 51 of 2,803 |
+| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 2,553 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for sk: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
+Also for sk: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `preference_privacy_category_cookies` — `mozilla-mobile/focus-android/app/src/main/res/values-sk/strings.xml` — This string writes "súbory cookies", but the cookie options right next to it write "súbory cookie".
-    - Current: `súbory cookies`
-    - Source: `Block cookies`
-    - Suggest: `súbory cookie`
-    - The three cookie options under this heading all use "súbory cookie", which is the usual Slovak form. Only the category title uses the plural "cookies", so the same term appears two ways on one screen.
+_No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `search_settings_menu_item` — `mozilla-mobile/fenix/app/src/main/res/values-sk/strings.xml` — "Search settings" (settings for search) is translated as the action "Search in settings".
-    - Current: `Hľadať v nastaveniach`
-    - Source: `Search settings`
-    - Suggest: `Nastavenia vyhľadávania`
-    - The menu item opens the search settings; the target instead means 'search within settings'.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -52,8 +45,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 45 |
-| Strings | 2,803 |
+| Files | 44 |
+| Strings | 2,553 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -77,6 +70,8 @@ The locale is complete against the en-US source.
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
 
+The count includes Focus for Android's strings for this locale, which the same team translates, so both projects infer the same conventions. Nothing there is checked here.
+
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 8, `german-double` 7, `straight-double` 4 | _mixed_ |
@@ -93,14 +88,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (57)
+## 3. Open findings (49)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 29 |
-| 3 | Degraded language (grammar, spelling, terminology) | 25 |
+| 2 | Wrong content (says something other than the English) | 26 |
+| 3 | Degraded language (grammar, spelling, terminology) | 20 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
@@ -251,21 +246,6 @@ _Nothing reported._
     - Source: `Can’t pay, check out or shop`
     - Suggest: `dokončiť objednávku`
     - In the source, "check out" means completing the order or payment. It does not mean viewing the cart, which "zobraziť košík" says.
-- `firstrun_search_title` — `mozilla-mobile/focus-android/app/src/main/res/values-sk/strings.xml` — "Your search, your way" is translated as "Browsing your way", replacing search with browsing.
-    - Current: `Prehliadanie podľa vás`
-    - Source: `Your search, your way`
-    - Suggest: `Vyhľadávanie podľa vás`
-    - The source title refers to search (this is the Search page of the first-run tour), but "Prehliadanie" means browsing, so the title is about the wrong feature.
-- `notification_browsing_session_channel_description` — `mozilla-mobile/focus-android/app/src/main/res/values-sk/strings.xml` — The Slovak drops the clause "or see what's running in your browser" and changes "session" to "history".
-    - Current: `Nemusíte ani otvárať aplikáciu.`
-    - Source: `Notifications let you erase your %1$s session with a tap. You don’t need to open the app or see what’s running in your browser.`
-    - Suggest: `Nemusíte otvárať aplikáciu ani vidieť, čo je spustené vo vašom prehliadači.`
-    - The source says the user does not need to open the app or see what is running in the browser. The translation keeps only the first part, so content that conveys the discreet-erase benefit is missing.
-- `preference_privacy_block_analytics_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-sk/strings.xml` — The translation leaves out "measure" and the "tapping" example from the source.
-    - Current: `na zbieranie a analýzu údajov o aktivitách, napríklad o posúvaní sa na stránke`
-    - Source: `Used to collect, analyze and measure activities like tapping and scrolling`
-    - Suggest: `na zbieranie, analýzu a meranie aktivít, ako je ťukanie a posúvanie`
-    - The source says "collect, analyze and measure activities like tapping and scrolling"; the Slovak keeps only collecting/analysis and only scrolling.
 
 ### C. Grammar, agreement & spelling
 
@@ -334,26 +314,6 @@ _Nothing reported._
     - Source: `%s will stop syncing with your account, but won’t delete any of your browsing data on this device.`
     - Suggest: `s vaším účtom`
     - The instrumental singular masculine of 'váš' is 'vaším' (long í). 'vašim' is the dative plural form.
-- `about_content` — `mozilla-mobile/focus-android/app/src/main/res/values-sk/strings.xml` — Possessive pronoun in instrumental singular is misspelled as "Našim" instead of "Naším".
-    - Current: `Našim poslaním`
-    - Source: `{ <p> }%1$s puts you in control.{ </p> } { <p> }Use it as a private browser: { <ul> } { <li> }Search and browse right in the app{ </li> } { <li> }Block trackers (or update settings to allow trackers){ </li> } { <li> }Er…`
-    - Suggest: `Naším poslaním`
-    - Instrumental singular of "náš" is "naším" (long í); "našim" is the dative plural form.
-- `preference_privacy_block_ads_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-sk/strings.xml` — Missing comma before the subordinate clause "aj keď".
-    - Current: `Niektoré reklamy vás sledujú aj keď na ne nekliknete`
-    - Source: `Some ads track site visits, even if you don’t click the ads`
-    - Suggest: `Niektoré reklamy vás sledujú, aj keď na ne nekliknete`
-    - Slovak punctuation rules require a comma before the conjunction "aj keď" that introduces a subordinate clause.
-- `preference_privacy_stealth_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-sk/strings.xml` — Genitive plural 'aplikácii' is misspelled; it should be 'aplikácií'.
-    - Current: `nedávnych aplikácii`
-    - Source: `Hide webpages when switching apps and block taking screenshots.`
-    - Suggest: `nedávnych aplikácií`
-    - The genitive plural after 'nedávnych' needs the long í ending, so it is 'aplikácií'.
-- `promote_search_widget_button_text` — `mozilla-mobile/focus-android/app/src/main/res/values-sk/strings.xml` — The button label uses the third-person 'Pridá' ('it adds') instead of the infinitive used for actions.
-    - Current: `Pridá miniaplikáciu`
-    - Source: `Add widget to home screen`
-    - Suggest: `Pridať miniaplikáciu`
-    - This is a button label for an action. Slovak UI uses the infinitive for actions, as in other strings here ('Pridať ďalší vyhľadávací modul').
 
 ### D. Terminology, register & consistency
 
@@ -377,11 +337,6 @@ _Nothing reported._
     - Source: `{$quantity ->} [one] %1$d tracker blocked this week [other] %1$d trackers blocked this week`
     - Suggest: `bol zablokovaný %1$d sledovací prvok`
     - The source means a tracker. 'Zariadenie' means a hardware device. Within this one message, the 'few' form uses 'sledovacie prvky', and the rest of the tracker panel uses 'sledovací prvok'.
-- `preference_privacy_category_cookies` — `mozilla-mobile/focus-android/app/src/main/res/values-sk/strings.xml` — This string writes "súbory cookies", but the cookie options right next to it write "súbory cookie".
-    - Current: `súbory cookies`
-    - Source: `Block cookies`
-    - Suggest: `súbory cookie`
-    - The three cookie options under this heading all use "súbory cookie", which is the usual Slovak form. Only the category title uses the plural "cookies", so the same term appears two ways on one screen.
 
 ### E. Typography, punctuation & spacing
 

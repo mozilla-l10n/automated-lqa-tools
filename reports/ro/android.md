@@ -1,18 +1,19 @@
-# Android l10n QA — ro
+# Firefox for Android l10n QA — ro
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-19 @ `ea17dbc84971` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 8 of 2,802 |
+| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 2,552 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for ro: [firefox_ios](firefox_ios.md)
+Also for ro: [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -44,8 +45,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 45 |
-| Strings | 2,802 |
+| Files | 44 |
+| Strings | 2,552 |
 | Missing strings | 1 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -73,6 +74,8 @@ _Completeness is reported, never raised as a finding: a missing string needs tra
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
 
+The count includes Focus for Android's strings for this locale, which the same team translates, so both projects infer the same conventions. Nothing there is checked here.
+
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `polish-double` 18 | **polish-double** |
@@ -87,15 +90,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (90)
+## 3. Open findings (88)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 29 |
-| 3 | Degraded language (grammar, spelling, terminology) | 53 |
-| 4 | Cosmetic (typography, spacing) | 8 |
+| 3 | Degraded language (grammar, spelling, terminology) | 52 |
+| 4 | Cosmetic (typography, spacing) | 7 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -446,16 +449,6 @@ _Nothing in this category._
     - Source: `Edit website URL`
     - Suggest: `site-ului`
     - Romanian norms (DOOM) write inflected forms of 'site' with a hyphen; the same batch uses 'Site-ul'.
-- `dialog_addtohomescreen_tracking_protection2` — `mozilla-mobile/focus-android/app/src/main/res/values-ro/strings.xml` — "protecţia" uses the cedilla letter ţ (U+0163) instead of the correct comma-below ț (U+021B).
-    - Current: `protecţia`
-    - Source: `Shortcut will open with Enhanced Tracking Protection disabled`
-    - Suggest: `protecția`
-    - Romanian spelling uses comma-below ț, and the rest of the locale spells it that way (e.g. "Protecție îmbunătățită" in enhanced_tracking_protection). The cedilla form is a legacy encoding error.
-- `preference_block_autoplay_audio_only_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-ro/strings.xml` — The summary for a single option uses the feminine plural "Recomandate" instead of the singular.
-    - Current: `Recomandate`
-    - Source: `Recommended`
-    - Suggest: `Recomandat`
-    - "Recommended" is the summary of one option ("Block audio only"). The plural form does not agree with a single option.
 
 ### D. Terminology, register & consistency
 

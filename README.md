@@ -21,7 +21,8 @@ reports/it/android.md
 | Project | What it covers | |
 |---|---|---|
 | [`firefox/`](firefox/) | Firefox desktop, plus shared `toolkit` and `dom` strings | [README](firefox/README.md) · [reports](reports/firefox.md) |
-| [`android/`](android/) | Firefox for Android, Focus, and Android Components | [README](android/README.md) · [reports](reports/android.md) |
+| [`android/`](android/) | Firefox for Android, and the Android Components it is built on | [README](android/README.md) · [reports](reports/android.md) |
+| [`focus_android/`](focus_android/) | Focus for Android | [README](focus_android/README.md) · [reports](reports/focus_android.md) |
 | [`firefox_ios/`](firefox_ios/) | Firefox for iOS | [README](firefox_ios/README.md) · [reports](reports/firefox_ios.md) |
 
 Each has its own workflow and opens its own pull request, so a reviewer only
@@ -152,6 +153,12 @@ Give it its own workflow in `.github/workflows/` and its own README.
 - **`baseline`** — `agent` hands whole files to a subagent, which catches
   drift across a surface; `batched` sends strings through the API, which is
   what you need when a single file is too large for one agent to read.
+
+Two projects can share a repository and a team, as Firefox for Android and
+Focus do. `context:` then lets one read the other's strings without
+checking them: counted towards the locale's conventions, so neither infers a
+majority from a few hundred strings, or offered to `ui_references` as labels
+a string may quote.
 
 The library was extracted when the second project arrived rather than
 designed up front, so its seams follow the differences that actually turned

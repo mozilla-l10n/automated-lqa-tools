@@ -1,18 +1,19 @@
-# Android l10n QA — ru
+# Firefox for Android l10n QA — ru
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-19 @ `ea17dbc84971` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 2,803 |
+| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 2,553 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for ru: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
+Also for ru: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -44,8 +45,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 45 |
-| Strings | 2,803 |
+| Files | 44 |
+| Strings | 2,553 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -69,6 +70,8 @@ The locale is complete against the en-US source.
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
 
+The count includes Focus for Android's strings for this locale, which the same team translates, so both projects infer the same conventions. Nothing there is checked here.
+
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 43, `straight-double` 2 | **guillemet** |
@@ -84,14 +87,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (154)
+## 3. Open findings (140)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 87 |
-| 3 | Degraded language (grammar, spelling, terminology) | 62 |
+| 2 | Wrong content (says something other than the English) | 77 |
+| 3 | Degraded language (grammar, spelling, terminology) | 58 |
 | 4 | Cosmetic (typography, spacing) | 5 |
 
 ### A. Functional, markup, variables & plurals
@@ -400,7 +403,7 @@ _Nothing in this category._
     - Source: `Show in private sessions`
     - Suggest: `Показывать в приватных сессиях`
     - The source says "sessions", not "windows"; Android Firefox has no windows.
-- _…and 31 more; see `state/` for the full list._
+- _…and 20 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -554,11 +557,6 @@ _Nothing in this category._
     - Source: `Overrides offers to translate`
     - Suggest: `Переопределяет предложения перевода`
     - "Offers to translate" is rendered elsewhere as "предлагать перевод"; "предложения на перевод" is ungrammatical in Russian.
-- `preference_autocomplete_user_list_summary2` — `mozilla-mobile/focus-android/app/src/main/res/values-ru/strings.xml` — Placeholder for the app name is left ungoverned, producing "автодополнение Firefox Focus URL ваших любимых сайтов", which garbles the sentence.
-    - Current: `Включить автодополнение %s URL ваших любимых сайтов.`
-    - Source: `Enable to have %s autocomplete your favorite URLs.`
-    - Suggest: `Включите, чтобы %s автоматически дополнял URL ваших любимых сайтов.`
-    - The source says "Enable to have %s autocomplete your favorite URLs"; the Russian juxtaposes the app name and "URL" without any grammatical link, unlike the parallel string preference_autocomplete_topsite_summary2 which uses "в %s".
 
 ### D. Terminology, register & consistency
 
@@ -692,16 +690,6 @@ _Nothing in this category._
     - Source: `Add new collection`
     - Suggest: `Создать новую подборку`
     - tab_manager_multiselect_menu_item_add_to_collection renders "collection" as "подборка"; using "сборник" on the same surface is inconsistent terminology.
-- `content_description_forward` — `mozilla-mobile/focus-android/app/src/main/res/values-ru/strings.xml` — "Navigate forward" translated as bare "Вперёд", inconsistent with "Перейти назад" used for the paired back button.
-    - Current: `Вперёд`
-    - Source: `Navigate forward`
-    - Suggest: `Перейти вперёд`
-    - The paired string content_description_back uses "Перейти назад" for "Navigate back"; the forward counterpart drops the verb, breaking consistency on the same surface.
-- `preference_switch_autocomplete_topsites` — `mozilla-mobile/focus-android/app/src/main/res/values-ru/strings.xml` — "top sites" translated as colloquial "топ сайтов" instead of the established term.
-    - Current: `Для топа сайтов`
-    - Source: `For top sites`
-    - Suggest: `Для топ сайтов`
-    - "Top sites" is a UI feature name; "топа сайтов" is colloquial and inconsistent with the term used elsewhere (top site strings).
 
 ### E. Typography, punctuation & spacing
 

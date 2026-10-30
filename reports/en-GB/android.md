@@ -1,18 +1,19 @@
-# Android l10n QA — en-GB
+# Firefox for Android l10n QA — en-GB
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-19 @ `57c409b04755` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 2,803 |
+| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 2,553 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for en-GB: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
+Also for en-GB: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -44,8 +45,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 45 |
-| Strings | 2,803 |
+| Files | 44 |
+| Strings | 2,553 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -68,6 +69,8 @@ The locale is complete against the en-US source.
 ### Conventions detected in this locale
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
+
+The count includes Focus for Android's strings for this locale, which the same team translates, so both projects infer the same conventions. Nothing there is checked here.
 
 | Convention | Counts | Inferred |
 |---|---|---|
@@ -122,24 +125,23 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (3)
+### Dismissed by hand (2)
 
-- `cookie_banner_exception_panel_description_state_on_for_site` — `mozilla-mobile/focus-android/app/src/main/res/values-en-rGB/strings.xml` — "shopping baskets" is the house form here; reviewed and accepted
 - `mozac_feature_prompts_no_more_dialogs` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-en-rGB/strings.xml` — "dialogues" is the house form here; reviewed and accepted
 - `share_hiscore` — `mozilla-mobile/fenix/app/longfox/src/main/res/values-en-rGB/strings.xml` — "hi-score" is the house form here; reviewed and accepted
 
 _One line each in `locales/en-GB/dismissed.txt`. Delete the line and the finding returns._
 
-### Suppressed as false positives (64)
+### Suppressed as false positives (55)
 
-- **`en-GB-backwards-forwards`** (11) — "Backwards" and "Forwards" are the en-GB house forms for the en-US "Back" and "Forward", in navigation labels and accessibility descriptions alike. See conventions.md.
-    - `add_login_navigate_back_button_content_description`, `bookmark_navigate_back_button_content_description`, `debug_drawer_back_button_content_description`, `edit_login_navigate_back_button_content_description`, `ip_protection_locations_navigate_back_button_content_description`, `ip_protection_navigate_back_button_content_description`, `login_details_navigate_back_button_content_description`, `stories_back_button_content_description`, `content_description_back`, `content_description_forward` …and 1 more
+- **`en-GB-backwards-forwards`** (8) — "Backwards" and "Forwards" are the en-GB house forms for the en-US "Back" and "Forward", in navigation labels and accessibility descriptions alike. See conventions.md.
+    - `add_login_navigate_back_button_content_description`, `bookmark_navigate_back_button_content_description`, `debug_drawer_back_button_content_description`, `edit_login_navigate_back_button_content_description`, `ip_protection_locations_navigate_back_button_content_description`, `ip_protection_navigate_back_button_content_description`, `login_details_navigate_back_button_content_description`, `stories_back_button_content_description`
 - **`en-GB-post-code`** (1) — "Post Code" is the deliberate en-GB rendering of the en-US "Postal Code"; "Postcode" must not be suggested in its place. See conventions.md.
     - `addresses_postal_code`
 - **`en-GB-sync-expanded-form-accepted`** (6) — "synchronise" / "synchronised" / "synchronising" / "synchronisation" are accepted en-GB renderings of the en-US "sync" family, so a suggestion to shorten one back to "sync" must never be accepted -- including one arguing that "Sync" is a feature name. See conventions.md.
     - `bookmark_empty_list_guest_cta`, `delete_history_prompt_body_2`, `nova_onboarding_sync_button`, `onboarding_redesign_sync_positive_button`, `tab_manager_empty_synced_tabs_page_description`, `tabs_header_synced_tabs_counter_title`
-- **`en-GB-web-site-two-words`** (46) — "web site" / "web sites" is the en-GB house form; a suggestion to close it up to the en-US "website" must never be accepted. See conventions.md.
-    - `mozac_browser_errorpages_content_crashed_message`, `mozac_browser_errorpages_corrupted_content_message`, `mozac_browser_errorpages_invalid_content_encoding_message`, `mozac_browser_errorpages_security_bad_cert_techInfo`, `mozac_browser_errorpages_security_bad_hsts_cert_message`, `mozac_browser_errorpages_security_bad_hsts_cert_title`, `mozac_browser_errorpages_security_ssl_message`, `mozac_browser_errorpages_unsafe_content_type_message`, `mozac_feature_addons_permissions_all_urls_description`, `mozac_feature_addons_permissions_all_urls_description_for_update` …and 36 more
+- **`en-GB-web-site-two-words`** (40) — "web site" / "web sites" is the en-GB house form; a suggestion to close it up to the en-US "website" must never be accepted. See conventions.md.
+    - `mozac_browser_errorpages_content_crashed_message`, `mozac_browser_errorpages_corrupted_content_message`, `mozac_browser_errorpages_invalid_content_encoding_message`, `mozac_browser_errorpages_security_bad_cert_techInfo`, `mozac_browser_errorpages_security_bad_hsts_cert_message`, `mozac_browser_errorpages_security_bad_hsts_cert_title`, `mozac_browser_errorpages_security_ssl_message`, `mozac_browser_errorpages_unsafe_content_type_message`, `mozac_feature_addons_permissions_all_urls_description`, `mozac_feature_addons_permissions_all_urls_description_for_update` …and 30 more
 
 _Suppressions live in `locales/en-GB/suppressions.yaml`. Removing a rule brings its findings back._
 

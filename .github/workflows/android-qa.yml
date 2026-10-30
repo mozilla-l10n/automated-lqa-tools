@@ -1,11 +1,12 @@
-name: Android l10n QA
+name: Firefox for Android l10n QA
 
 # Separate from the Firefox workflow on purpose: different reviewers, a
 # different repository, and its own pull request on l10n-qa/android, so
-# neither team has to read the other's findings.
+# neither team has to read the other's findings. Focus reads the same
+# repository but has its own workflow and pull request: focus_android-qa.yml.
 #
 # Weekly rather than daily: findings are a backlog a locale team works
-# through over weeks, and the pull request is cumulative anyway. The three
+# through over weeks, and the pull request is cumulative anyway. The four
 # projects are staggered because they share one API key and one runner pool.
 on:
   workflow_dispatch:
@@ -325,7 +326,7 @@ jobs:
             echo 'changed=false' >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          git commit -m "Android l10n QA: ${INPUTS_LOCALES} ($(date -u +%Y-%m-%d))"
+          git commit -m "Firefox for Android l10n QA: ${INPUTS_LOCALES} ($(date -u +%Y-%m-%d))"
           git push --force-with-lease origin "$BRANCH"
           echo 'changed=true' >> "$GITHUB_OUTPUT"
         env:
@@ -370,7 +371,7 @@ jobs:
       - name: Summarize the run
         run: |
           {
-            echo '## Android l10n QA'
+            echo '## Firefox for Android l10n QA'
             echo
             sed -n '1,40p' reports/android.md
           } >> "$GITHUB_STEP_SUMMARY"

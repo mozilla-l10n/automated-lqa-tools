@@ -1,0 +1,63 @@
+{
+  "name": "report_findings",
+  "description": "Report every concrete localization defect found in this batch. Call exactly once, with an empty list if the batch is clean.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "findings": {
+        "type": "array",
+        "description": "One entry per defect. Empty when nothing is wrong.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "string_id": {
+              "type": "string",
+              "description": "The exact string id as given in the batch, including any attribute suffix."
+            },
+            "file": {
+              "type": "string",
+              "description": "The exact file path as given in the batch."
+            },
+            "category": {
+              "type": "string",
+              "enum": ["A", "B", "C", "D", "E"],
+              "description": "A functional/markup, B mistranslation/wrong name/brand, C grammar/spelling, D terminology/register, E typography."
+            },
+            "impact": {
+              "type": "integer",
+              "enum": [1, 2, 3, 4],
+              "description": "1 broken output, 2 wrong content, 3 degraded language, 4 cosmetic."
+            },
+            "summary": {
+              "type": "string",
+              "description": "One sentence stating the defect. No preamble."
+            },
+            "current": {
+              "type": "string",
+              "description": "The exact defective fragment copied verbatim from the localized string. Used to verify later whether the defect is gone, so it must appear literally in the current text."
+            },
+            "suggest": {
+              "type": "string",
+              "description": "The corrected text for that fragment."
+            },
+            "rationale": {
+              "type": "string",
+              "description": "Why it is wrong, referring to the en-US meaning or the developer comment."
+            },
+            "confidence": {
+              "type": "string",
+              "enum": ["high", "medium"],
+              "description": "Use medium only if you would still stand behind reporting it; anything lower should not be reported at all."
+            },
+            "reads_as_deliberate": {
+              "type": "boolean",
+              "description": "True only when the localized text makes the product assert something the source never said about itself, its users or its behaviour, so a reader could take it for an intentional edit rather than a translation slip. Judge the fact asserted, not the wording: a re-worded rendering that lands on the same fact -- an added pronoun or possessive, a hedge or quantifier that does not move the claim, a change of tense, an added positive adjective, a qualifier that is accurate in context, an idiom, a passive turned active -- is false. True only for a reversal, a different account of what happens to the user's data, a protection or guarantee the product does not give, or an accusation, admission or disparagement the source does not contain, and usually not a finding at all. False for almost every finding, including almost every mistranslation."
+            }
+          },
+          "required": ["string_id", "file", "category", "impact", "summary", "current", "suggest", "rationale", "confidence", "reads_as_deliberate"]
+        }
+      }
+    },
+    "required": ["findings"]
+  }
+}

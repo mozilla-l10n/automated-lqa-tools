@@ -324,6 +324,38 @@ def run(suite) -> None:
           "Firefox-only checks do not leak into Android")
     check("escaping" in android_checks and "escaping" not in firefox_checks,
           "Android-only checks do not leak into Firefox")
+    focus_checks = runner.load_checks(config.load("focus_android")).CHECKS
+    check(focus_checks["escaping"] is android_checks["escaping"],
+          "the two Android projects share one escaping check, not two copies")
+
+    suite.section("Context strings are looked up, never checked")
+    import common_checks as _cc
+
+    def _m(file, ident, text):
+        return Msg(file=file, id=ident, props={"": text})
+
+    # Focus quotes an Android Components button. Focus does not own that
+    # string, so it arrives as context: a candidate the label can name,
+    # never a string a finding is raised on.
+    ac = "ac/values/strings.xml"
+    own = "focus/values/strings.xml"
+    src = {(own, "tip"): _m(own, "tip", "Select \u201cTry Again\u201d to retry")}
+    loc = {(own, "tip"): _m(own, "tip", "Seleziona \u201cRiprova\u201d per riprovare")}
+    ctx_src = {(ac, "retry"): _m(ac, "retry", "Try Again")}
+    ctx_loc = {(ac, "retry"): _m(ac, "retry", "Riprovare")}
+    found = _cc.check_ui_references("it", loc, src, ctx_loc, ctx_src)
+    check([f.string_id for f in found] == ["tip"],
+          "a label quoting a context string is checked against it")
+    check(not _cc.check_ui_references("it", loc, src),
+          "without the context there is nothing to point at, and nothing is said")
+    found = _cc.check_ui_references("it", ctx_loc, ctx_src, loc, src)
+    check(not found, "a context string is never the one a finding is raised on")
+
+    from layout import Trees
+    t = Trees(l10n={(own, "a"): _m(own, "a", "uno")},
+              context_conventions={(ac, "b"): _m(ac, "b", "due")})
+    check(set(t.measured()) == {(own, "a"), (ac, "b")} and set(t.l10n) == {(own, "a")},
+          "conventions count the context, and the checked tree does not grow")
     missing = type("Project", (), {
         "tools_dir": "/definitely-not-a-project/tools", "name": "missing"
     })()

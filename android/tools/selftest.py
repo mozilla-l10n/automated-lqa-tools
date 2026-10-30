@@ -95,6 +95,12 @@ def run(l10n_dir, project) -> int:
     sample = next(iter(trees.locale_paths.values()))
     check("values-it/" in sample, f"the Android locale directory is used ({sample.split('/')[-2]})")
     check(len(trees.source) > 2000, f"the source side loaded ({len(trees.source)} strings)")
+    # Focus is its own project (focus_android/): counted towards this
+    # locale's conventions, never checked or reviewed here.
+    check(not any("/focus-android/" in f for f in trees.l10n_files | trees.source_files),
+          "no Focus file is checked here")
+    check(any("/focus-android/" in f for f, _ in trees.context_conventions),
+          "but Focus is counted towards the locale's conventions")
 
     suite.section("Placeholders render as the file writes them")
     key = next(
@@ -107,7 +113,7 @@ def run(l10n_dir, project) -> int:
     selftest_lib.must_be_silent(suite, results, MUST_BE_SILENT)
 
     suite.section("Android check internals")
-    from checks import _unescaped
+    from android_checks import _unescaped
     from common_checks import PRINTF
 
     check([m[4] for m in PRINTF.findall("%1$s and %2$,d")] == ["s", "d"],

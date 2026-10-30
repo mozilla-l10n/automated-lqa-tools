@@ -19,6 +19,14 @@ TOML files. The locale segment also uses Android's own codes, where
 ``pt-BR`` becomes ``pt-rBR``. ``moz.l10n.paths`` already reads those configs
 and does that conversion, so this module delegates rather than reimplements.
 
+A project may also read part of a neighbouring project as **context**:
+strings that are measured or looked up but never checked, reviewed or
+reported, because another project owns them. Focus and Firefox for Android
+are translated by the same team in the same repository, so conventions are
+counted over both -- Focus alone has too few strings for a majority to mean
+anything -- and Focus quotes Android Components labels, which Firefox for
+Android owns. Only the android layout has a neighbour so far.
+
 Everything downstream is written against :class:`Trees`, so a new project
 adds a loader here instead of touching the pipeline. A message is keyed by
 ``(file, id)`` where ``file`` is the **reference** path relative to the
@@ -55,6 +63,23 @@ class Trees:
     # ask this doubled every run -- and for the XLIFF layout, where many keys
     # resolve to one large file, it re-read that file once per key.
     syntax_errors: dict = field(default_factory=dict)
+    # Strings another project owns, counted towards this locale's
+    # conventions -- typography and a variant's spelling -- and nothing else.
+    # See the module docstring.
+    context_conventions: dict = field(default_factory=dict)
+    context_conventions_source: dict = field(default_factory=dict)
+    # Strings another project owns that a quoted UI label may name. Both
+    # sides, because `ui_references` compares the two.
+    context_l10n: dict = field(default_factory=dict)
+    context_source: dict = field(default_factory=dict)
+
+    def measured(self) -> dict:
+        """What the locale's conventions are counted over."""
+        return {**self.context_conventions, **self.l10n}
+
+    def measured_source(self) -> dict:
+        """The source side of :meth:`measured`."""
+        return {**self.context_conventions_source, **self.source}
 
 
 def load(project, locale: str, l10n_root: str, source_root: str) -> Trees:
@@ -86,35 +111,63 @@ def _mirrored(project, locale, l10n_root, source_root) -> Trees:
     )
 
 
-def _config_paths(project, root: str):
+def _config_paths(project, root: str, names):
     from moz.l10n.paths import L10nConfigPaths
 
-    for name in project.data.get("configs", []):
+    for name in names:
         path = os.path.join(root, name)
         if not os.path.exists(path):
             raise RuntimeError(f"missing path config: {path}")
         yield L10nConfigPaths(path)
 
 
-def _android(project, locale, root) -> Trees:
-    trees = Trees(root=root)
-    for paths in _config_paths(project, root):
-        for (ref, target), locales in paths.all().items():
+def _android_configs(project, locale, root, names, trees: Trees, paths=None):
+    """Load the files the named configs map, optionally only under `paths`."""
+    for config in _config_paths(project, root, names):
+        for (ref, target), locales in config.all().items():
             if locales and locale not in locales:
                 continue
             rel = os.path.relpath(ref, root)
             if project.exclude and parse.is_excluded(rel, project.exclude):
                 continue
+            if paths is not None and not any(rel.startswith(p) for p in paths):
+                continue
             if os.path.exists(ref):
                 trees.source_files.add(rel)
                 for msg in parse.parse_file(ref, rel, trees.source_errors):
                     trees.source[msg.key] = msg
-            localized = paths.format_target_path(target, locale)
+            localized = config.format_target_path(target, locale)
             if os.path.exists(localized):
                 trees.l10n_files.add(rel)
                 trees.locale_paths[rel] = os.path.relpath(localized, root)
                 for msg in parse.parse_file(localized, rel, trees.syntax_errors):
                     trees.l10n[msg.key] = msg
+
+
+def _android(project, locale, root) -> Trees:
+    trees = Trees(root=root)
+    _android_configs(project, locale, root, project.data.get("configs", []), trees)
+
+    context = project.data.get("context") or {}
+    names = context.get("conventions") or []
+    if names:
+        other = Trees(root=root)
+        _android_configs(project, locale, root, names, other)
+        trees.context_conventions = {
+            k: v for k, v in other.l10n.items() if k not in trees.l10n
+        }
+        trees.context_conventions_source = {
+            k: v for k, v in other.source.items() if k not in trees.source
+        }
+    refs = context.get("references") or {}
+    if refs.get("configs"):
+        other = Trees(root=root)
+        _android_configs(
+            project, locale, root, refs["configs"], other, refs.get("paths") or None
+        )
+        own = set(trees.source) | set(trees.l10n)
+        trees.context_source = {k: v for k, v in other.source.items() if k not in own}
+        trees.context_l10n = {k: v for k, v in other.l10n.items() if k not in own}
     return trees
 
 

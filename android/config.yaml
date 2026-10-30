@@ -1,6 +1,7 @@
-# Android l10n QA configuration.
+# Firefox for Android l10n QA configuration.
 project: android
-name: Firefox for Android, Focus, and the shared Android Components
+name: Firefox for Android and the shared Android Components
+display_name: Firefox for Android
 
 # Source and every locale live in one repository, side by side as
 # res/values/ and res/values-<android_locale>/. The mapping comes from
@@ -10,7 +11,16 @@ layout: android
 
 configs:
   - firefox.toml   # android-components + fenix
-  - focus.toml     # focus-android
+
+# Read, never checked. Focus (focus_android/) lives in the same repository
+# and is translated by the same team, so a locale's conventions are counted
+# over both trees: Focus alone is a few hundred strings, too few for a
+# majority to mean anything, and counting both keeps the two projects
+# agreeing on what the locale does. Focus's strings are not checked or
+# reviewed here. See lib/layout.py.
+context:
+  conventions: [focus.toml]
+  conventions_from: Focus for Android
 
 repos:
   l10n:
@@ -67,16 +77,13 @@ systemic_threshold: 25
 baseline: batched
 
 # Used when a from-scratch review is forced onto the agent strategy with
-# --baseline-strategy agent. One partition per app: a reviewer only spots
-# terminology drift within what it can see at once, and the three apps have
-# separate string sets and separate teams.
+# --baseline-strategy agent. One partition per component: a reviewer only
+# spots terminology drift within what it can see at once.
 partitions:
   - name: android-components
     paths: ["mozilla-mobile/android-components/"]
   - name: fenix
     paths: ["mozilla-mobile/fenix/"]
-  - name: focus
-    paths: ["mozilla-mobile/focus-android/"]
 
 # Locales that are variants of the source language rather than
 # translations of it: most strings are identical to en-US and correct, so
@@ -129,7 +136,5 @@ locales:
 # Android Components is localized inside the Firefox for Android project.
 pontoon:
   projects:
-    - slug: focus-for-android
-      paths: ["mozilla-mobile/focus-android/*"]
     - slug: firefox-for-android
       paths: ["mozilla-mobile/fenix/*", "mozilla-mobile/android-components/*"]

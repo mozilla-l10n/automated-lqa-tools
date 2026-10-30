@@ -1,17 +1,17 @@
-# Android l10n QA
+# Firefox for Android l10n QA
 
-Localization quality review for Mozilla's Android applications: **Firefox
-for Android** (fenix), **Focus**, and the shared **Android Components**
-library they are built on.
+Localization quality review for **Firefox for Android** (fenix) and the
+shared **Android Components** library it is built on. Focus lives in the
+same repository but is its own project: [`../focus_android/`](../focus_android/).
 
 | | |
 |---|---|
 | Repository | [`mozilla-l10n/android-l10n`](https://github.com/mozilla-l10n/android-l10n) |
 | Source and locales | one repository — `res/values/` is the source, `res/values-<code>/` each locale |
-| Path mapping | `firefox.toml` and `focus.toml`, read with `moz.l10n.paths` |
+| Path mapping | `firefox.toml`, read with `moz.l10n.paths`; `focus.toml` is read for conventions only |
 | Locales checked | 34 — ar, cs, de, el, en-CA, en-GB, es-AR, es-ES, es-MX, fa, fi, fr, fy-NL, hi-IN, hu, id, it, ja, ko, nl, pl, pt-BR, pt-PT, ro, ru, sk, sl, sv-SE, th, tr, uk, vi, zh-CN, zh-TW (from [`config.yaml`](config.yaml)) |
 | Format | Android XML string resources (`strings.xml`) |
-| Workflow | **Actions → Android l10n QA** |
+| Workflow | **Actions → Firefox for Android l10n QA** |
 
 Results arrive as a pull request on `l10n-qa/android`, separate from the
 Firefox one so the two teams do not have to read each other's findings.
@@ -40,7 +40,7 @@ path, because that is the file you would edit.
 `%1$s` where the source says `%1$d` throws at runtime rather than rendering
 wrong, and mixing `%s` with `%1$s` in one string throws too. The shared
 variable check compares argument *names* and cannot see a retyped
-placeholder, so `tools/checks.py` adds one that compares the literal specs.
+placeholder, so the shared `placeholders` check compares the literal specs.
 The shared `variables` check is switched off here: it reports the same
 defects in terms of moz.l10n's derived `arg1` names rather than the `%1$s`
 actually in the file, and it was verified to catch nothing extra across
@@ -48,7 +48,14 @@ fourteen locales.
 
 **Escaping.** A bare apostrophe or double quote in a string body fails the
 Android build. moz.l10n unescapes on parse, so the check reads the file
-rather than the model.
+rather than the model. It lives in `lib/android_checks.py`, shared with
+Focus.
+
+**Conventions are counted with Focus.** The same team translates both apps,
+and Focus alone is too small to show a majority, so both projects count a
+locale's typography and variant spelling over the two trees together and
+always agree. Focus's strings are never checked or reviewed here; the
+`context:` block in [`config.yaml`](config.yaml) says so.
 
 There is no access-key or Fluent-term check here, and no
 `translatable="false"` check — the repository exports only translatable
@@ -79,13 +86,13 @@ read. Unlike Fluent, an Android string carries its context in its own
 developer comment rather than in neighbouring entries, so little is lost.
 
 `--baseline-strategy agent` forces the file-reading agent instead, which
-works well for `android-components` and `focus` and needs no API key, only
-an authenticated `claude` CLI:
+works well for `android-components` and needs no API key, only an
+authenticated `claude` CLI:
 
 ```bash
 .venv/bin/python lib/run.py --project android --locale it \
     --mode baseline --baseline-strategy agent \
-    --partitions android-components --partitions focus \
+    --partitions android-components \
     --l10n-dir ~/github/android-l10n --source-dir ~/github/android-l10n
 ```
 
@@ -95,8 +102,9 @@ an authenticated `claude` CLI:
 .venv/bin/python android/tools/selftest.py --l10n-dir ~/github/android-l10n
 ```
 
-23 assertions: the layout resolves, placeholders survive parsing verbatim,
-the checks catch real defects that exist in other locales today (`cs` and
-`ar` drop a placeholder, `de` swapped `%s` for `%1$s`, `zh-CN` invented one,
-`ja` has an unreachable `one` plural), and they stay silent on the locales
-that are correct.
+The layout resolves with no Focus file in it, placeholders survive parsing
+verbatim, and the checks catch real defects that exist today (`cs` drops a
+placeholder, `ja` has an unreachable `one` plural). They stay silent where
+a locale is correct, including the placeholder forms that used to be
+misreported: `de` and `fy-NL` numbering one en-US left bare, `zh-CN` and
+`ar` writing the count into different plural categories from en-US.

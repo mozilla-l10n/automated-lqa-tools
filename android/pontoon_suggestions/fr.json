@@ -91,36 +91,6 @@
    "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=336503",
    "outcome": "approved",
    "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
-  },
-  {
-   "date": "2026-10-12",
-   "group": "E",
-   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
-   "string_id": "qualified_text",
-   "pontoon": {
-    "server": "https://pontoon.mozilla.org",
-    "project": "focus-for-android",
-    "resource": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
-    "key": [
-     "qualified_text"
-    ]
-   },
-   "fids": [
-    "e209fe41f158"
-   ],
-   "findings": [
-    "Missing space after \"n°\" abbreviation and French typography for the regulation number."
-   ],
-   "source": "Qualified as specified in Regulation (EU) 2024/1183.",
-   "original": "Qualifié conformément au règlement (UE) n°2024/1183.",
-   "text": "Qualifié conformément au règlement (UE) n° 2024/1183.",
-   "status": "approved",
-   "status_date": "2026-10-12",
-   "comment": "",
-   "pontoon_pk": 12280302,
-   "pontoon_url": "https://pontoon.mozilla.org/fr/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=331690",
-   "outcome": "approved",
-   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   }
  ]
 }

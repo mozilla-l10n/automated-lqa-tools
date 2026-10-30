@@ -269,6 +269,16 @@ def _reviewer_warning(meta) -> str:
     )
 
 
+def _display_name(name: str) -> str:
+    """A project's heading name, or its directory name if it has no config."""
+    import config
+
+    try:
+        return config.load(name).display_name
+    except (OSError, SystemExit):
+        return name
+
+
 def _siblings(locale: str, project: str) -> str:
     """Links to the same locale's reports for the other projects.
 
@@ -286,7 +296,7 @@ def _siblings(locale: str, project: str) -> str:
     )
     if not others:
         return ""
-    links = " · ".join(f"[{name}]({name}.md)" for name in others)
+    links = " · ".join(f"[{_display_name(name)}]({name}.md)" for name in others)
     return f"Also for {locale}: {links}"
 
 
@@ -385,6 +395,16 @@ def render(locale, meta, health, findings, systemic, delta_report, counts_conv, 
         "**own** majority, so a convention that reads _mixed_ produces no "
         "findings at all.",
         "",
+    ]
+    shared = (meta.get("conventions_shared_with") or "").strip()
+    if shared:
+        lines += [
+            f"The count includes {shared}'s strings for this locale, which the "
+            "same team translates, so both projects infer the same conventions. "
+            "Nothing there is checked here.",
+            "",
+        ]
+    lines += [
         conv.render(counts_conv),
         "",
         "---",

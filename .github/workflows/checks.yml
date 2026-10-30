@@ -3,7 +3,7 @@ name: Checks
 # Deliberately cheap and hermetic: no API key, no upstream clone, nothing
 # written anywhere.
 #
-# The three project self-tests cannot run here: they pin real defects
+# The four project self-tests cannot run here: they pin real defects
 # against real strings, so they need firefox-l10n, android-l10n and
 # firefoxios-l10n on disk, and firefox-l10n alone is 1.6 GB. Run them
 # locally before changing anything in lib/. What runs here is the part of

@@ -1,18 +1,19 @@
-# Android l10n QA — nl
+# Firefox for Android l10n QA — nl
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-19 @ `7ee8e61a4a7d` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 2,802 |
+| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 2,552 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for nl: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
+Also for nl: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -44,8 +45,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 45 |
-| Strings | 2,802 |
+| Files | 44 |
+| Strings | 2,552 |
 | Missing strings | 1 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -73,6 +74,8 @@ _Completeness is reported, never raised as a finding: a missing string needs tra
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
 
+The count includes Focus for Android's strings for this locale, which the same team translates, so both projects infer the same conventions. Nothing there is checked here.
+
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-single` 15 | **curly-single** |
@@ -89,14 +92,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (64)
+## 3. Open findings (60)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 35 |
-| 3 | Degraded language (grammar, spelling, terminology) | 29 |
+| 2 | Wrong content (says something other than the English) | 32 |
+| 3 | Degraded language (grammar, spelling, terminology) | 28 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -314,21 +317,6 @@ _Nothing reported._
     - Source: `Browser is blocked or unsupported`
     - Suggest: `Browser is geblokkeerd of wordt niet ondersteund`
     - Source is "Browser is blocked or unsupported"; the Dutch reverses the order of the two conditions.
-- `content_description_dismiss_input` — `mozilla-mobile/focus-android/app/src/main/res/values-nl/strings.xml` — "Dismiss" (close/return to browser) is translated as "Verwijderen" (delete).
-    - Current: `Verwijderen`
-    - Source: `Dismiss`
-    - Suggest: `Sluiten`
-    - Per the developer comment, tapping the overlay dismisses typing mode and returns to the browser; "Verwijderen" means "delete", which describes a destructive action, not dismissing.
-- `dismiss_no_suggestions_prompt_button` — `mozilla-mobile/focus-android/app/src/main/res/values-nl/strings.xml` — "Dismiss" is translated as "Verwijderen" (delete), which means something different.
-    - Current: `Verwijderen`
-    - Source: `Dismiss`
-    - Suggest: `Sluiten`
-    - The button dismisses/closes a message; "Verwijderen" means "Delete", implying data removal rather than dismissing the prompt.
-- `firstrun_shortcut_title` — `mozilla-mobile/focus-android/app/src/main/res/values-nl/strings.xml` — ‘Shortcuts’ is translated as ‘koppelingen’ (links) instead of ‘snelkoppelingen’ (shortcuts).
-    - Current: `Voeg koppelingen toe aan uw startscherm`
-    - Source: `Add shortcuts to your home screen`
-    - Suggest: `Voeg snelkoppelingen toe aan uw startscherm`
-    - The source says 'Add shortcuts to your home screen'; 'koppelingen' means links, and elsewhere in this batch 'Shortcuts' is rendered as 'snelkoppelingen' (menu_add_to_shortcuts).
 
 ### C. Grammar, agreement & spelling
 
@@ -387,11 +375,6 @@ _Nothing reported._
     - Source: `You have an unsent crash report related to crashes being investigated. Sending it will help us improve %1$s. Closing this notification will ignore this report.`
     - Suggest: `Als u dit verzendt, helpt u ons %1$s te verbeteren.`
     - Source: "Sending it will help us improve %1$s." The Dutch mixes an implicit subject with "het"; the parallel plural string correctly uses "Als u deze verzendt, helpt u ons…".
-- `promote_search_widget_dialog_subtitle` — `mozilla-mobile/focus-android/app/src/main/res/values-nl/strings.xml` — Comma splice and misplaced/duplicated adverb make the sentence ungrammatical and awkward.
-    - Current: `We laten u nu verdergaan met uw privénavigatie, u kunt de volgende keer sneller van start gaan nu met de %1$s-widget op uw startscherm.`
-    - Source: `We’ll leave you to your private browsing, but get a quicker start next time with the %1$s widget on your Home screen.`
-    - Suggest: `We laten u verdergaan met uw privénavigatie, maar u kunt de volgende keer sneller van start gaan met de %1$s-widget op uw startscherm.`
-    - The source uses ‘but’ to join the clauses; the Dutch joins two main clauses with only a comma and repeats ‘nu’ in an ungrammatical position (‘van start gaan nu met’).
 
 ### D. Terminology, register & consistency
 

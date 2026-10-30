@@ -1,18 +1,19 @@
-# Android l10n QA — de
+# Firefox for Android l10n QA — de
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-19 @ `57c409b04755` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 2,803 |
+| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 2,553 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for de: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
+Also for de: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -44,8 +45,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 45 |
-| Strings | 2,803 |
+| Files | 44 |
+| Strings | 2,553 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -69,6 +70,8 @@ The locale is complete against the en-US source.
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
 
+The count includes Focus for Android's strings for this locale, which the same team translates, so both projects infer the same conventions. Nothing there is checked here.
+
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `german-double` 22, `curly-double` 1, `straight-double` 1 | **german-double** |
@@ -84,15 +87,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (106)
+## 3. Open findings (99)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 61 |
-| 3 | Degraded language (grammar, spelling, terminology) | 34 |
-| 4 | Cosmetic (typography, spacing) | 11 |
+| 2 | Wrong content (says something other than the English) | 56 |
+| 3 | Degraded language (grammar, spelling, terminology) | 33 |
+| 4 | Cosmetic (typography, spacing) | 10 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -390,17 +393,6 @@ _Nothing in this category._
     - Source: `Can’t pay, check out or shop`
     - Suggest: `Ich kann nicht bezahlen, den Kauf abschließen oder einkaufen`
     - The source "Can’t pay, check out or shop" refers to completing the checkout process, not emptying the cart.
-- `about_content` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — "Search and browse right in the app" is translated as "Suchen und blättern Sie in der App", where "blättern" means paging/leafing rather than web browsing.
-    - Current: `Suchen und blättern Sie in der App`
-    - Source: `{ <p> }%1$s puts you in control.{ </p> } { <p> }Use it as a private browser: { <ul> } { <li> }Search and browse right in the app{ </li> } { <li> }Block trackers (or update settings to allow trackers){ </li> } { <li> }Er…`
-    - Suggest: `Suchen und surfen Sie direkt in der App`
-    - "browse" here means browsing the web; "blättern" is the wrong sense and "right in the app" (direkt) is dropped.
-- `cfr_for_start_browsing` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — "as you go" is mistranslated as "bei der Gelegenheit auch noch", which changes the meaning.
-    - Current: `und wir blockieren Tracker und bei der Gelegenheit auch noch andere schädliche Elemente`
-    - Source: `Start your private browsing session, and we’ll block trackers and other bad stuff as you go.`
-    - Suggest: `und wir blockieren dabei Tracker und andere schädliche Elemente`
-    - The source says trackers and other bad stuff are blocked as you browse; the German implies blocking other bad stuff is a casual side effect ("bei der Gelegenheit auch noch"), which is not the source meaning.
-- _…and 3 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -469,11 +461,6 @@ _Nothing in this category._
     - Source: `Submit feedback and uninstall`
     - Suggest: `Feedback übermitteln und deinstallieren`
     - "deinstallieren" here is an infinitive verb parallel to "übermitteln", not a noun, so it must be lowercase.
-- `mozac_browser_errorpages_security_bad_cert_techInfo` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — Misspelling of "Aussteller" as "Austeller".
-    - Current: `das Zertifikat vom Austeller selbst signiert wurde`
-    - Source: `{ <label> }Someone could be trying to impersonate the site and continuing could be risky.{ </label> } { <br> }{ <br> } { <label> }%1$s does not trust { <b> }%2$s{ </b> } because its certificate issuer is unknown, the ce…`
-    - Suggest: `das Zertifikat vom Aussteller selbst signiert wurde`
-    - "Austeller" is a typo; the correct German spelling is "Aussteller", as used earlier in the same string ("der Aussteller des Zertifikats").
 
 ### D. Terminology, register & consistency
 
@@ -620,11 +607,6 @@ _Nothing in this category._
     - Source: `Syncing…`
     - Suggest: `Synchronisation läuft …`
     - German typography convention (Duden) requires a space before the ellipsis when it follows a complete word.
-- `menu_open_with_a_browser2` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — Missing space before the ellipsis, inconsistent with the German convention used in menu_share ("Teilen …").
-    - Current: `Öffnen in…`
-    - Source: `Open in…`
-    - Suggest: `Öffnen in …`
-    - German typography (and the sibling string menu_share) places a space before the ellipsis character.
 
 ---
 

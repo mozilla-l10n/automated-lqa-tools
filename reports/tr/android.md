@@ -1,18 +1,19 @@
-# Android l10n QA — tr
+# Firefox for Android l10n QA — tr
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-19 @ `7ee8e61a4a7d` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 2,803 |
+| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 2,553 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for tr: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
+Also for tr: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -44,8 +45,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 45 |
-| Strings | 2,803 |
+| Files | 44 |
+| Strings | 2,553 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -69,6 +70,8 @@ The locale is complete against the en-US source.
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
 
+The count includes Focus for Android's strings for this locale, which the same team translates, so both projects infer the same conventions. Nothing there is checked here.
+
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 14, `straight-double` 2 | **curly-double** |
@@ -84,14 +87,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (138)
+## 3. Open findings (121)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 75 |
-| 3 | Degraded language (grammar, spelling, terminology) | 57 |
+| 2 | Wrong content (says something other than the English) | 67 |
+| 3 | Degraded language (grammar, spelling, terminology) | 48 |
 | 4 | Cosmetic (typography, spacing) | 6 |
 
 ### A. Functional, markup, variables & plurals
@@ -400,7 +403,7 @@ _Nothing in this category._
     - Source: `Firefox will improve features, performance, and stability between updates. Changes applied remotely.`
     - Suggest: `Firefox, güncellemeler arasında özellikleri`
     - The source says improvements happen between updates (remotely, without an update), whereas the target says they happen with each update — the opposite point.
-- _…and 24 more; see `state/` for the full list._
+- _…and 15 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -469,21 +472,6 @@ _Nothing in this category._
     - Source: `Your report helps us understand and fix issues in %1$s to make it better for everyone. %2$s`
     - Suggest: `herkes için iyileştirmemize yardımcı oluyor`
     - "iyileştirmemize için" combines a dative nominalization with "için"; only one is grammatical.
-- `mozac_browser_errorpages_security_bad_cert_techInfo` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — Typo: "doğu" instead of "doğru".
-    - Current: `sunucu doğu ara sertifikaları göndermiyor`
-    - Source: `{ <label> }Someone could be trying to impersonate the site and continuing could be risky.{ </label> } { <br> }{ <br> } { <label> }%1$s does not trust { <b> }%2$s{ </b> } because its certificate issuer is unknown, the ce…`
-    - Suggest: `sunucu doğru ara sertifikaları göndermiyor`
-    - "correct intermediate certificates" should be "doğru ara sertifikalar"; "doğu" means "east" and is a misspelling.
-- `preference_show_search_suggestions_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — Mixed person: informal "yazdıklarını" with formal "arama motorunuza" in the same sentence.
-    - Current: `%1$s, adres çubuğuna yazdıklarını arama motorunuza gönderecektir`
-    - Source: `%1$s will send what you type in the address bar to your search engine`
-    - Suggest: `%1$s, adres çubuğuna yazdıklarınızı arama motorunuza gönderecektir`
-    - Source is "what you type"; the Turkish switches between informal and formal second person within one string, which is inconsistent and ungrammatical in agreement.
-- `tool_tip_message` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — Wrong case suffix: "ihtiyaçlarınızı göre" should be "ihtiyaçlarınıza göre".
-    - Current: `ihtiyaçlarınızı göre`
-    - Source: `These default settings offer strong protection. But it’s easy to tweak the settings to meet your specific needs.`
-    - Suggest: `ihtiyaçlarınıza göre`
-    - The postposition "göre" requires the dative case (-a/-e), not the accusative; "ihtiyaçlarınızı göre" is ungrammatical.
 
 ### D. Terminology, register & consistency
 
@@ -622,31 +610,6 @@ _Nothing in this category._
     - Source: `Send list of items blocked by tracking protection`
     - Suggest: `İzleyici koruması tarafından engellenen öğelerin listesini gönder`
     - Mozilla tr consistently uses "izleyici koruması" (Gelişmiş İzleyici Koruması) for "tracking protection"; "izlenme koruması" is inconsistent with the rest of the product.
-- `preference_autocomplete_menu_remove` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — "Remove" is translated as "Sil" (delete) instead of "Kaldır".
-    - Current: `Sil`
-    - Source: `Remove`
-    - Suggest: `Kaldır`
-    - The source distinguishes Remove from Delete; Turkish standard for "Remove" is "Kaldır", and "Sil" means "Delete".
-- `preference_autocomplete_title_remove` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — "Remove custom URLs" rendered with "sil" (delete) instead of "kaldır".
-    - Current: `Özel adresleri sil`
-    - Source: `Remove custom URLs`
-    - Suggest: `Özel adresleri kaldır`
-    - Source says "Remove"; Turkish equivalent is "kaldır", while "sil" corresponds to "delete".
-- `preference_security_biometric` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — First-person possessive "parmak izimi" breaks the formal second-person register used elsewhere.
-    - Current: `Uygulama kilidini açmak için parmak izimi kullan`
-    - Source: `Use fingerprint to unlock app`
-    - Suggest: `Uygulama kilidini açmak için parmak izini kullan`
-    - The source is a neutral setting title ("Use fingerprint to unlock app"); the locale convention is formal address, not first-person "my fingerprint".
-- `preference_security_biometric_summary2` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — First-person "eklediysem" contradicts the second-person source and the formal register.
-    - Current: `Kısayollar eklediysem veya %s tarayıcısında bir web sitesi açıksa kilidi parmak iziyle aç.`
-    - Source: `Unlock using fingerprint if you’ve added Shortcuts or when a website is already open in %s.`
-    - Suggest: `Kısayollar eklediyseniz veya %s tarayıcısında bir web sitesi açıksa kilidi parmak iziyle açın.`
-    - The source uses second person ("if you’ve added Shortcuts"); the tr tree convention is formal second-person address.
-- `preference_switch_autocomplete_user_list` — `mozilla-mobile/focus-android/app/src/main/res/values-tr/strings.xml` — First-person "Eklediğim" instead of second-person address used in the source.
-    - Current: `Eklediğim sitelerde`
-    - Source: `For sites you add`
-    - Suggest: `Eklediğiniz sitelerde`
-    - Source is "For sites you add"; the locale convention is formal second-person address, not first person.
 
 ### E. Typography, punctuation & spacing
 

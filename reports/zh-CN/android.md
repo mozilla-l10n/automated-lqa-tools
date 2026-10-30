@@ -1,18 +1,19 @@
-# Android l10n QA — zh-CN
+# Firefox for Android l10n QA — zh-CN
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-19 @ `7ee8e61a4a7d` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,796 |
+| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 2,547 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for zh-CN: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
+Also for zh-CN: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -44,9 +45,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 45 |
-| Strings | 2,796 |
-| Missing strings | 7 |
+| Files | 44 |
+| Strings | 2,547 |
+| Missing strings | 6 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,16 +64,17 @@ _Nothing retired._
 
 ### Completeness
 
-**7 strings** are not translated yet, concentrated in:
+**6 strings** are not translated yet, concentrated in:
 
 - `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — 6
-- `mozilla-mobile/focus-android/app/src/main/res/values-zh-rCN/strings.xml` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
+
+The count includes Focus for Android's strings for this locale, which the same team translates, so both projects infer the same conventions. Nothing there is checked here.
 
 | Convention | Counts | Inferred |
 |---|---|---|
@@ -89,14 +91,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (149)
+## 3. Open findings (131)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 102 |
-| 3 | Degraded language (grammar, spelling, terminology) | 39 |
+| 2 | Wrong content (says something other than the English) | 89 |
+| 3 | Degraded language (grammar, spelling, terminology) | 34 |
 | 4 | Cosmetic (typography, spacing) | 8 |
 
 ### A. Functional, markup, variables & plurals
@@ -405,7 +407,7 @@ _Nothing in this category._
     - Source: `Items: %d`
     - Suggest: `项目：%d`
     - The source is a label-colon-value format; the translation restructures it, losing the label form.
-- _…and 50 more; see `state/` for the full list._
+- _…and 37 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -537,31 +539,6 @@ _Nothing in this category._
     - Source: `Connect another device.`
     - Suggest: `连接其他设备。`
     - Same source phrase is translated inconsistently on the same sync surface; 连接 is the established rendering.
-- `biometric_prompt_subtitle` — `mozilla-mobile/focus-android/app/src/main/res/values-zh-rCN/strings.xml` — Uses informal "你" while the locale convention is the formal "您".
-    - Current: `你可以验证指纹以继续当前应用会话。`
-    - Source: `You can use your fingerprint to continue your current app session.`
-    - Suggest: `您可以验证指纹以继续当前应用会话。`
-    - zh-CN register convention for this tree is formal (您); neighboring strings such as cfr_cookie_banner and cfr_for_start_browsing use 您.
-- `dialog_addtohomescreen_tracking_protection2` — `mozilla-mobile/focus-android/app/src/main/res/values-zh-rCN/strings.xml` — "Enhanced Tracking Protection" is translated as "跟踪保护", losing "Enhanced" and diverging from the established term 增强型跟踪保护.
-    - Current: `将禁用跟踪保护功能`
-    - Source: `Shortcut will open with Enhanced Tracking Protection disabled`
-    - Suggest: `将禁用增强型跟踪保护功能`
-    - The same term is rendered 增强型跟踪保护 in enhanced_tracking_protection; here "Enhanced" is dropped.
-- `firstrun_search_title` — `mozilla-mobile/focus-android/app/src/main/res/values-zh-rCN/strings.xml` — Uses informal "你" while the locale convention is the formal "您".
-    - Current: `用你的方式搜你所寻`
-    - Source: `Your search, your way`
-    - Suggest: `用您的方式搜您所寻`
-    - The zh-CN tree is established as formal register (您); neighboring first-run strings such as firstrun_privacy_text and firstrun_shortcut_text use 您.
-- `preference_performance_block_webfonts` — `mozilla-mobile/focus-android/app/src/main/res/values-zh-rCN/strings.xml` — "Block" is rendered as "拦截" here but as "阻止" in the neighboring Block JavaScript preference, an inconsistency on the same settings screen.
-    - Current: `拦截网络字体`
-    - Source: `Block web fonts`
-    - Suggest: `阻止网络字体`
-    - preference_performance_block_javascript translates "Block" as "阻止"; the same term on the same surface should be consistent.
-- `preference_privacy_category_cookies` — `mozilla-mobile/focus-android/app/src/main/res/values-zh-rCN/strings.xml` — "Block" is translated as 阻止 here but as 拦截 in the neighbouring cookie-blocking option strings.
-    - Current: `阻止 Cookie`
-    - Source: `Block cookies`
-    - Suggest: `拦截 Cookie`
-    - On the same settings screen preference_privacy_should_block_cookies_cross_site_option uses 拦截跨站 Cookie, so the category title should use the same verb.
 
 ### E. Typography, punctuation & spacing
 

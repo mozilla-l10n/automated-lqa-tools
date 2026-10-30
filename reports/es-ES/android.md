@@ -1,18 +1,19 @@
-# Android l10n QA — es-ES
+# Firefox for Android l10n QA — es-ES
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-19 @ `57c409b04755` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,732 |
+| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 2,483 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for es-ES: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
+Also for es-ES: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -44,9 +45,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 44 |
-| Strings | 2,732 |
-| Missing strings | 71 |
+| Files | 43 |
+| Strings | 2,483 |
+| Missing strings | 70 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
@@ -63,13 +64,12 @@ _Nothing retired._
 
 ### Completeness
 
-**71 strings** are not translated yet, concentrated in:
+**70 strings** are not translated yet, concentrated in:
 
 - `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — 43
 - `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml` — 23
 - `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-es-rES/strings.xml` — 3
 - `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-es-rES/strings.xml` — 1
-- `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — 1
 
 **Files absent from the locale:**
 
@@ -80,6 +80,8 @@ _Completeness is reported, never raised as a finding: a missing string needs tra
 ### Conventions detected in this locale
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
+
+The count includes Focus for Android's strings for this locale, which the same team translates, so both projects infer the same conventions. Nothing there is checked here.
 
 | Convention | Counts | Inferred |
 |---|---|---|
@@ -97,14 +99,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (120)
+## 3. Open findings (110)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 52 |
-| 3 | Degraded language (grammar, spelling, terminology) | 61 |
+| 2 | Wrong content (says something other than the English) | 48 |
+| 3 | Degraded language (grammar, spelling, terminology) | 55 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
 ### A. Functional, markup, variables & plurals
@@ -363,26 +365,6 @@ _Nothing in this category._
     - Source: `Dismiss tab group onboarding`
     - Suggest: `Descartar la introducción a los grupos de pestañas`
     - The source refers to dismissing the onboarding (introductory) card for tab groups; "incorporación al grupo de pestañas" reads as being added to a tab group, which is a different meaning.
-- `dialog_addtohomescreen_tracking_protection2` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — The translation drops the word "disabled", reversing the meaning of the warning.
-    - Current: `El acceso directo se abrirá con la protección mejorada contra el rastreo`
-    - Source: `Shortcut will open with Enhanced Tracking Protection disabled`
-    - Suggest: `El acceso directo se abrirá con la protección mejorada contra el rastreo desactivada`
-    - Source says the shortcut will open with Enhanced Tracking Protection *disabled*; the Spanish says it opens with the protection (implicitly enabled), reversing the warning.
-- `preference_autocomplete_title_add` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — "URL to add" (label for the input field) is rendered as "Agregar URL" ("Add URL"), which is the action, not the field label.
-    - Current: `Agregar URL`
-    - Source: `Add custom URL`
-    - Suggest: `URL a añadir`
-    - The developer comment says this is the label for the "custom autocomplete URL" input field; the source is the noun phrase "URL to add", not an imperative action. It also collides with preference_autocomplete_action_add2.
-- `preference_mozilla_telemetry2` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — "usage data" mistranslated as "datos de consumo" (consumption data).
-    - Current: `Enviar datos de consumo`
-    - Source: `Send usage data`
-    - Suggest: `Enviar datos de uso`
-    - The source refers to usage/telemetry data; "datos de consumo" suggests data consumption, and other strings use "uso" (e.g. "Ping de uso diario").
-- `promote_search_widget_dialog_picture_content_description` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — "Search widget" (a noun phrase naming the widget) is translated as the imperative "Buscar widget" ("Search for widget").
-    - Current: `Buscar widget`
-    - Source: `Search widget`
-    - Suggest: `Widget de búsqueda`
-    - The developer comment says this describes a picture of the search widget; the source is a noun phrase, not a command. Other strings in the same dialog use "widget" as a noun.
 
 ### C. Grammar, agreement & spelling
 
@@ -451,26 +433,6 @@ _Nothing in this category._
     - Source: `Can’t sign in or register`
     - Suggest: `No se puede iniciar sesión ni registrarse`
     - The source "Can’t sign in or register" uses one consistent subject; the Spanish mixes an impersonal passive with a first-person reflexive pronoun, which is ungrammatical.
-- `cfr_for_toolbar_shield_icon2` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — Misspelling of "sitio" as "sito".
-    - Current: `este sito web`
-    - Source: `Got ‘em! We stopped this site from spying on you. Tap the shield any time to see what we’re blocking.`
-    - Suggest: `este sitio web`
-    - "sito" is a typo for "sitio".
-- `enable_search_suggestions_yes` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — "Si" is missing the accent; the affirmative adverb is "Sí".
-    - Current: `Si`
-    - Source: `Yes`
-    - Suggest: `Sí`
-    - Source is "Yes"; without the accent "si" means "if" in Spanish.
-- `preference_privacy_should_block_cookies_third_party_only_option` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — "sólo" is written with an obsolete accent, inconsistent with "solo" used in the neighbouring option string.
-    - Current: `Bloquear sólo cookies de terceros`
-    - Source: `Block 3rd-party cookies only`
-    - Suggest: `Bloquear solo cookies de terceros`
-    - RAE no longer accents the adverb "solo", and the sibling string preference_privacy_should_block_cookies_third_party_tracker_cookies_option uses "solo" unaccented, creating an inconsistency.
-- `preference_search_add3` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — Action label uses an imperative verb form instead of the infinitive used in the parallel string preference_search_add2.
-    - Current: `Añade otro motor de búsqueda`
-    - Source: `Add another search engine`
-    - Suggest: `Añadir otro motor de búsqueda`
-    - "Add another search engine" is an action label; es-ES uses the infinitive for actions, as in preference_search_add2 ("+ Añadir otro motor de búsqueda").
 
 ### D. Terminology, register & consistency
 
@@ -674,16 +636,6 @@ _Nothing in this category._
     - Source: `You have unsent crash reports (%1$d) related to crashes being investigated. Sending them will help us improve %2$s. Closing this notification will ignore these reports.`
     - Suggest: `Tienes informes de fallos sin enviar`
     - es-ES convention is informal (tú); the rest of the UI addresses the user informally.
-- `preference_exceptions_description` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — Formal address used where the locale convention is informal (tú).
-    - Current: `Ha desactivado el bloqueo de contenido para estos sitios.`
-    - Source: `You have disabled content blocking for these websites.`
-    - Suggest: `Has desactivado el bloqueo de contenido para estos sitios.`
-    - es-ES convention is the informal register; other strings in this batch use "Elige", "tu navegador".
-- `preference_mozilla_telemetry_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rES/strings.xml` — "Learn more" translated inconsistently with the same source string elsewhere in the file.
-    - Current: `Descubrir más`
-    - Source: `Learn more`
-    - Suggest: `Saber más`
-    - preference_daily_usage_ping_learn_more renders the identical source "Learn more" as "Saber más" on the same settings surface.
 
 ### E. Typography, punctuation & spacing
 

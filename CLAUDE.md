@@ -1,8 +1,9 @@
 # Working in this repository
 
 LLM-assisted localization QA. `lib/` is the pipeline; each project directory
-(`firefox/`, `android/`, `firefox_ios/`) holds only what differs. Read
-`README.md` first for the shape of a run, then the project's own README.
+(`firefox/`, `android/`, `focus_android/`, `firefox_ios/`) holds only what
+differs. Read `README.md` first for the shape of a run, then the project's
+own README.
 
 ## Commands
 
@@ -19,15 +20,16 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python lib/run.py --project android --locale it \
     --l10n-dir ~/github/android-l10n --source-dir ~/github/android-l10n
 
-# the tests — run all three after touching anything in lib/
+# the tests — run all four after touching anything in lib/
 .venv/bin/python firefox/tools/selftest.py
 .venv/bin/python android/tools/selftest.py
+.venv/bin/python focus_android/tools/selftest.py
 .venv/bin/python firefox_ios/tools/selftest.py
 ```
 
 Local clones are used exactly as they are on disk; nothing is fetched. Pull
-them yourself. Android and iOS pass the same path twice: the repository is
-its own reference.
+them yourself. Android, Focus and iOS pass the same path twice: the
+repository is its own reference.
 
 ## The rule that matters most
 
@@ -240,12 +242,21 @@ source files — `mirrored`, `android`, `xliff`; add a loader in
 `lib/layout.py` for a new shape), `checks` (ordered; an unknown name fails
 loudly), `baseline` (`agent` hands whole files to a subagent, `batched`
 sends strings through the API — use `batched` when one file is too large for
-an agent to read), and `display_name` where the directory name would render
-badly in a heading.
+an agent to read), `display_name` where the directory name would render
+badly in a heading, and `context` where a sibling project shares the
+repository and the team.
 
-**Delete a check that cannot fire.** Android's `translatable` and iOS's
-`plurals`/`markup` were dropped after checking the repository, not assumed
-away. A check that never fires reads as coverage and is only noise waiting
+**Read a sibling, never check it.** Focus was split from `android/` and
+both read android-l10n. Each lists the other under `context:` so a locale's
+conventions are counted over both trees: measured on its few hundred
+strings alone, 25 Focus locales inferred a convention from one or two
+characters, and en-GB and en-CA learned no spelling rules at all. Focus
+also offers Android Components, which it is built on (Fenix is not), to
+`ui_references`. Context strings are never checked, reviewed or reported.
+
+**Delete a check that cannot fire.** Android's `translatable`, Focus's
+`plurals`/`selectors` and iOS's `plurals`/`markup` were dropped after
+checking the repository, not assumed away. A check that never fires reads as coverage and is only noise waiting
 to happen — record the absence and the evidence in the project's
 `tools/checks.py` docstring.
 

@@ -1,18 +1,19 @@
-# Android l10n QA — hu
+# Firefox for Android l10n QA — hu
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-19 @ `57c409b04755` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 2,803 |
+| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 2,553 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for hu: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
+Also for hu: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -44,8 +45,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 45 |
-| Strings | 2,803 |
+| Files | 44 |
+| Strings | 2,553 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -69,6 +70,8 @@ The locale is complete against the en-US source.
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
 
+The count includes Focus for Android's strings for this locale, which the same team translates, so both projects infer the same conventions. Nothing there is checked here.
+
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `polish-double` 16 | **polish-double** |
@@ -83,14 +86,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (148)
+## 3. Open findings (131)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 77 |
-| 3 | Degraded language (grammar, spelling, terminology) | 64 |
+| 2 | Wrong content (says something other than the English) | 66 |
+| 3 | Degraded language (grammar, spelling, terminology) | 58 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
 ### A. Functional, markup, variables & plurals
@@ -399,7 +402,7 @@ _Nothing in this category._
     - Source: `Firefox will improve features, performance, and stability between updates. Changes applied remotely.`
     - Suggest: `A Firefox javítja a funkciókat, a teljesítményt és a stabilitást a frissítések között.`
     - "improve features, performance, and stability" is not "install modifications affecting …"; the meaning is altered.
-- _…and 18 more; see `state/` for the full list._
+- _…and 7 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -613,21 +616,6 @@ _Nothing in this category._
     - Source: `What happened? What did you expect to happen? Please provide steps to reproduce the issue.`
     - Suggest: `Adja meg a lépéseket a probléma reprodukálásához.`
     - With a definite object ("a lépéseket"), the verb must take the definite conjugation: "Adja meg", not the indefinite "Adjon meg".
-- `crash_report_send_crash_label` — `mozilla-mobile/focus-android/app/src/main/res/values-hu/strings.xml` — Grammatical error: duplicated possessive suffix in "Összeomlási jelentése elküldése".
-    - Current: `Összeomlási jelentése elküldése a Mozillának`
-    - Source: `Send crash report to Mozilla`
-    - Suggest: `Összeomlási jelentés elküldése a Mozillának`
-    - "jelentése elküldése" is ungrammatical; the source is "Send crash report to Mozilla".
-- `preference_autocomplete_add_hint` — `mozilla-mobile/focus-android/app/src/main/res/values-hu/strings.xml` — Wrong definite article before a consonant-initial word.
-    - Current: `Illessze be, vagy adja meg az webcímet`
-    - Source: `Paste or enter URL`
-    - Suggest: `Illessze be, vagy adja meg a webcímet`
-    - Hungarian uses "a" before consonant-initial words; "az webcímet" is ungrammatical.
-- `qualified_text` — `mozilla-mobile/focus-android/app/src/main/res/values-hu/strings.xml` — Misspelled "rendeleteben" and the word "Qualified" (minősített) is dropped from the sentence.
-    - Current: `Az (EU) 2024/1183 rendeleteben meghatározottak szerint.`
-    - Source: `Qualified as specified in Regulation (EU) 2024/1183.`
-    - Suggest: `Minősített az (EU) 2024/1183 rendeletben meghatározottak szerint.`
-    - "rendeleteben" should be "rendeletben"; also the source states the certificate is "Qualified as specified in…", which the target omits.
 
 ### D. Terminology, register & consistency
 
@@ -706,21 +694,6 @@ _Nothing in this category._
     - Source: `More options`
     - Suggest: `További lehetőségek`
     - "Options" here refers to menu options, not settings ("beállítások"); the established rendering for the three-dot menu content description is "További lehetőségek".
-- `snackbar_added_to_shortcuts` — `mozilla-mobile/focus-android/app/src/main/res/values-hu/strings.xml` — "shortcuts" is rendered as "indítóikonokhoz" (launcher icons) instead of the consistent term for shortcuts.
-    - Current: `Hozzáadva az indítóikonokhoz.`
-    - Source: `Added to shortcuts!`
-    - Suggest: `Hozzáadva a parancsikonokhoz.`
-    - Other Focus strings use "parancsikon" for shortcuts; "indítóikon" is inconsistent terminology on the same surface.
-- `tab_crash_report_headline` — `mozilla-mobile/focus-android/app/src/main/res/values-hu/strings.xml` — "Sorry." is translated in first person singular ("Sajnálom"), while the app speaks as "we" in the same string set.
-    - Current: `Sajnálom. Probléma van ezzel a lapon.`
-    - Source: `Sorry. We’re having a problem with this tab.`
-    - Suggest: `Sajnáljuk. Probléma van ezzel a lappal.`
-    - Source "We’re having a problem with this tab" uses first person plural; also "probléma van ezzel a lapon" should be "ezzel a lappal" (problem with the tab, not on the tab).
-- `trackers_count_note` — `mozilla-mobile/focus-android/app/src/main/res/values-hu/strings.xml` — "Trackers" is rendered as "nyomkövetők" here while the neighbouring string uses "követők".
-    - Current: `Blokkolt nyomkövetők %s óta`
-    - Source: `Trackers blocked since %s`
-    - Suggest: `Blokkolt követők %s óta`
-    - The adjacent string trackers_and_scripts translates "Trackers" as "követők"; using "nyomkövetők" on the same tracking-protection surface is inconsistent terminology.
 
 ### E. Typography, punctuation & spacing
 

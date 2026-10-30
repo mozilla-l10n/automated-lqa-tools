@@ -1,18 +1,19 @@
-# Android l10n QA — pl
+# Firefox for Android l10n QA — pl
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-19 @ `7ee8e61a4a7d` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 2,801 |
+| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 2,551 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for pl: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
+Also for pl: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -44,8 +45,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 45 |
-| Strings | 2,801 |
+| Files | 44 |
+| Strings | 2,551 |
 | Missing strings | 2 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -73,6 +74,8 @@ _Completeness is reported, never raised as a finding: a missing string needs tra
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
 
+The count includes Focus for Android's strings for this locale, which the same team translates, so both projects infer the same conventions. Nothing there is checked here.
+
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `polish-double` 84 | **polish-double** |
@@ -89,15 +92,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (83)
+## 3. Open findings (78)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 58 |
+| 2 | Wrong content (says something other than the English) | 54 |
 | 3 | Degraded language (grammar, spelling, terminology) | 24 |
-| 4 | Cosmetic (typography, spacing) | 1 |
+| 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -400,12 +403,6 @@ _Nothing in this category._
     - Source: `Can’t pay, check out or shop`
     - Suggest: `Nie można zapłacić, sfinalizować zamówienia ani zrobić zakupów`
     - The source lists three distinct actions: pay, check out, shop. The Polish repeats "pay" twice and drops the checkout step.
-- `crash_report_send_crash_label` — `mozilla-mobile/focus-android/app/src/main/res/values-pl/strings.xml` — The translation says "report the crash to Mozilla" using a form that reads as reporting Mozilla itself/omits "report" object correctly.
-    - Current: `Zgłoś awarię Mozilli`
-    - Source: `Send crash report to Mozilla`
-    - Suggest: `Wyślij zgłoszenie awarii do Mozilli`
-    - Source is "Send crash report to Mozilla"; "Zgłoś awarię Mozilli" reads as "Report Mozilla's crash" (genitive attached to awaria) rather than sending the report to Mozilla, and it is a checkbox label, not an action command.
-- _…and 3 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -510,19 +507,15 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
-- `mozac_feature_pwa_copy_success` — `mozilla-mobile/android-components/components/feature/pwa/src/main/res/values-pl/strings.xml` — The final period of the source sentence is missing in the translation.
-    - Current: `Skopiowano adres`
-    - Source: `URL copied.`
-    - Suggest: `Skopiowano adres.`
-    - Source "URL copied." ends with a period; the toast text drops it.
+_Nothing in this category._
 
 ---
 
 ## 4. Appendix
 
-### Dismissed by hand (0)
+### Dismissed by hand (1)
 
-_Nothing dismissed._
+- `mozac_feature_pwa_copy_success` — `mozilla-mobile/android-components/components/feature/pwa/src/main/res/values-pl/strings.xml` — pontoon-rejected (2026-10-15): rejected in Pontoon without comment; single-sentence toasts may omit the closing period in pl (see conventions.md)
 
 _One line each in `locales/pl/dismissed.txt`. Delete the line and the finding returns._
 
@@ -530,9 +523,9 @@ _One line each in `locales/pl/dismissed.txt`. Delete the line and the finding re
 
 _No suppression rules have matched._
 
-### Withdrawn to date (1)
+### Withdrawn to date (0)
 
-- `firstrun_shortcut_text` — `mozilla-mobile/focus-android/app/src/main/res/values-pl/strings.xml` — raised by `placeholders`, withdrawn 2026-08-24
+_Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 

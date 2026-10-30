@@ -1,18 +1,19 @@
-# Android l10n QA — fa
+# Firefox for Android l10n QA — fa
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-19 @ `ea17dbc84971` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 5 of 2,795 |
+| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 2,545 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for fa: [firefox_ios](firefox_ios.md)
+Also for fa: [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -44,8 +45,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 45 |
-| Strings | 2,795 |
+| Files | 44 |
+| Strings | 2,545 |
 | Missing strings | 8 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -74,6 +75,8 @@ _Completeness is reported, never raised as a finding: a missing string needs tra
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
 
+The count includes Focus for Android's strings for this locale, which the same team translates, so both projects infer the same conventions. Nothing there is checked here.
+
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 16 | **guillemet** |
@@ -87,14 +90,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (120)
+## 3. Open findings (108)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 51 |
-| 3 | Degraded language (grammar, spelling, terminology) | 68 |
+| 2 | Wrong content (says something other than the English) | 46 |
+| 3 | Degraded language (grammar, spelling, terminology) | 61 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
@@ -403,7 +406,7 @@ _Nothing in this category._
     - Source: `Sends images and photos to Google for visual search.`
     - Suggest: `ارسال تصاویر و عکس‌ها به Google برای جست‌وجوی بصری.`
     - Brand names must stay untranslated/untransliterated; the sibling string search_settings_google_lens_title uses "Google Lens" in Latin script.
-- _…and 14 more; see `state/` for the full list._
+- _…and 7 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -537,26 +540,6 @@ _Nothing in this category._
     - Source: `Terms of Use`
     - Suggest: `شرایط استفاده`
     - The source is the standalone link text "Terms of Use"; "شرایط استفاده از" ends with the preposition "از" ("of/from") which requires a following noun, so the link reads as truncated. The parallel string terms_of_use_prompt_title_option_a correctly uses "شرایط استفاده".
-- `about_content` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — "ماموریت ما تا رواج یک اینترنت سالم و باز است" is ungrammatical: "تا" should be a verbal noun construction.
-    - Current: `ماموریت ما تا رواج یک اینترنت سالم و باز است`
-    - Source: `{ <p> }%1$s puts you in control.{ </p> } { <p> }Use it as a private browser: { <ul> } { <li> }Search and browse right in the app{ </li> } { <li> }Block trackers (or update settings to allow trackers){ </li> } { <li> }Er…`
-    - Suggest: `مأموریت ما ترویج اینترنتی سالم و باز است`
-    - "تا" is not grammatical here; the sentence "Our mission is to foster a healthy, open Internet" needs a noun/infinitive phrase.
-- `notification_action_erase_and_open` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Imperative verb form mixed with noun form: "حذف و باز کن" is inconsistent and ungrammatical as a notification action label.
-    - Current: `حذف و باز کن`
-    - Source: `Erase and Open`
-    - Suggest: `پاک کردن و باز کردن`
-    - The parallel action notification_action_open uses the verbal noun باز کردن; this string mixes a noun (حذف) with an imperative (باز کن).
-- `onboarding_second_screen_subtitle_one` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Missing zero-width non-joiner in verb forms: "می بندید" and "می کنیم".
-    - Current: `وقتی برنامه را می بندید، سابقه شما را پاک می کنیم`
-    - Source: `We clear your history when you close the app for extra privacy.`
-    - Suggest: `وقتی برنامه را می‌بندید، سابقهٔ شما را پاک می‌کنیم`
-    - Persian prefix می must be joined with ZWNJ (می‌بندید, می‌کنیم), as done elsewhere in the batch.
-- `preference_exceptions_description` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — Plural "these websites" rendered as singular "this site".
-    - Current: `برای این سایت`
-    - Source: `You have disabled content blocking for these websites.`
-    - Suggest: `برای این سایت‌ها`
-    - Source says "for these websites" (plural); the translation uses the singular "این سایت".
 
 ### D. Terminology, register & consistency
 
@@ -635,11 +618,6 @@ _Nothing in this category._
     - Source: `Common myths about private browsing`
     - Suggest: `باورهای نادرست و رایج دربارهٔ مرور ناشناس`
     - private_browsing_a11y_session_announcement translates "Private browsing session" as «نشست مرور ناشناس»; the same feature name should be consistent.
-- `onboarding_first_screen_privacy_notice_link_2` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — "Privacy Notice" is rendered as "privacy tips/points" instead of the legal document name.
-    - Current: `نکات حفظ حریم خصوصی`
-    - Source: `Privacy Notice`
-    - Suggest: `اعلامیهٔ حریم خصوصی`
-    - The link points to Mozilla's Privacy Notice, a legal notice; «نکات» means tips/points and misnames the document.
 
 ### E. Typography, punctuation & spacing
 
@@ -665,18 +643,11 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (36)
+### Fixed to date (18)
 
 - `mozac_browser_errorpages_file_not_found_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — fixed 2026-10-12
 - `mozac_browser_errorpages_net_reset_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — fixed 2026-10-12
 - `mozac_feature_addons_permissions_all_urls_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — fixed 2026-10-12
-- `content_description_reload` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-12
-- `content_description_stop` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-12
-- `firstrun_shortcut_title` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-12
-- `onboarding_first_screen_title` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-12
-- `preference_autocomplete_add_confirmation` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-12
-- `tab_crash_report_description` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-12
-- `tab_crash_report_description` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-12
 - `mozac_browser_errorpages_archive_description` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — fixed 2026-10-07
 - `mozac_browser_errorpages_port_blocked_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — fixed 2026-10-07
 - `mozac_browser_errorpages_safe_browsing_malware_uri_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — fixed 2026-10-07
@@ -692,14 +663,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `mozac_feature_addons_user_rating_count_2` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — fixed 2026-10-07
 - `mozac_feature_prompt_update_confirmation` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fa/strings.xml` — fixed 2026-10-07
 - `webauthn_related_origin_use_message` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fa/strings.xml` — fixed 2026-10-07
-- `download_firefox` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-07
-- `feedback_erase_custom_tab` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-07
-- `notification_browsing_session_channel_name` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-07
-- `preference_mozilla_telemetry_summary2` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-07
-- `preference_performance_block_javascript_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-07
-- `preference_privacy_notice` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-07
-- `custom_tab_copy_url_action` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-05
-- `preference_exceptions` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-05
-- `preference_remote_debugging` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-05
-- `preference_safe_browsing_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-05
-- `text_selection_search_action_focus_beta` — `mozilla-mobile/focus-android/app/src/main/res/values-fa/strings.xml` — fixed 2026-10-05

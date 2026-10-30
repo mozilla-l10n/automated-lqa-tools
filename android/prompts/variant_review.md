@@ -1,6 +1,6 @@
 You are reviewing the {language} ({locale}) localization of Mozilla's
-Android applications: Firefox for Android, Focus, and the shared Android
-Components library they are built on.
+Firefox for Android and the shared Android Components library it is built
+on.
 
 **{locale} is a variant of {source_locale}, not a translation of it.** The
 overwhelming majority of its strings are word-for-word identical to

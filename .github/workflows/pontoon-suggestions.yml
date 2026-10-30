@@ -23,7 +23,7 @@ on:
         required: true
         default: 'all'
         type: choice
-        options: [all, firefox, android, firefox_ios]
+        options: [all, firefox, android, focus_android, firefox_ios]
       locales:
         description: 'Comma-separated locale codes, or "all"'
         required: true
@@ -69,7 +69,7 @@ jobs:
           import json, os, sys, yaml
           product = os.environ["PRODUCT"]
           requested = os.environ["REQUESTED"].strip()
-          projects = (["firefox", "android", "firefox_ios"]
+          projects = (["firefox", "android", "focus_android", "firefox_ios"]
                       if product == "all" else [product])
           wanted = (None if not requested or requested == "all"
                     else [x.strip() for x in requested.split(",") if x.strip()])
@@ -145,7 +145,7 @@ jobs:
                 https://github.com/mozilla-l10n/firefox-l10n work/l10n
               git -C work/l10n sparse-checkout set --no-cone "/$LOCALE/"
               ;;
-            android)
+            android|focus_android)
               git clone --depth 1 --filter=blob:none \
                 https://github.com/mozilla-l10n/android-l10n work/l10n
               ;;

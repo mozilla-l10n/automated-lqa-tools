@@ -1,0 +1,50 @@
+[
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "protecţia",
+  "dismissed_because": "",
+  "fid": "f145787cadf1",
+  "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-10-16",
+  "impact": 4,
+  "last_seen": "2026-10-16",
+  "locale": "ro",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "Romanian spelling uses comma-below ț, and the rest of the locale spells it that way (e.g. \"Protecție îmbunătățită\" in enhanced_tracking_protection). The cedilla form is a legacy encoding error.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "3f20cbb5",
+  "string_id": "dialog_addtohomescreen_tracking_protection2",
+  "suggest": "protecția",
+  "summary": "\"protecţia\" uses the cedilla letter ţ (U+0163) instead of the correct comma-below ț (U+021B).",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "Recomandate",
+  "dismissed_because": "",
+  "fid": "73f1c5eb4a61",
+  "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-10-16",
+  "impact": 3,
+  "last_seen": "2026-10-16",
+  "locale": "ro",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "\"Recommended\" is the summary of one option (\"Block audio only\"). The plural form does not agree with a single option.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "1e5e966f",
+  "string_id": "preference_block_autoplay_audio_only_summary",
+  "suggest": "Recomandat",
+  "summary": "The summary for a single option uses the feminine plural \"Recomandate\" instead of the singular.",
+  "suppressed_by": ""
+ }
+]
