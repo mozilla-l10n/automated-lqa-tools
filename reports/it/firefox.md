@@ -3,15 +3,14 @@
 | | |
 |---|---|
 | **Generated** | 2026-10-30 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 16,836 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3b1e357fad9d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `36e745f2f7d9` |
+| **Previous run** | 2026-10-30 @ `6c76c457ee95` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 86 of 16,961 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for it: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
@@ -19,13 +18,60 @@ Also for it: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `item-cookies-site-data-description2` — `browser/browser/sanitize.ftl` — The phrase "dai siti" appears twice in a row.
+    - Current: `Ti disconnette dai siti dai siti`
+    - Source: `Signs you out and may clear shopping carts`
+    - Suggest: `Ti disconnette dai siti`
+    - The repeated words are a typo. The en-US says only "Signs you out".
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (9)
 
-_Nothing was fixed._
+- `ip-protection-site-rules-edit-button` — `browser/browser/ipProtection.ftl` — Ungrammatical preposition: "relativa per" should be "relativa a" (or just "per").
+    - Current: `la regola relativa per { $website }`
+    - Source: `aria-label: Edit the rule for { $website } title: Edit`
+    - Suggest: `la regola relativa a { $website }`
+    - "Relativa" takes the preposition "a"; "relativa per" is ungrammatical Italian. The sibling delete button uses plain "la regola per".
+- `toolbar-button-mini-window` — `browser/browser/miniWindow.ftl` — The tooltip renders the feature name 'Mini Window' as 'finestra ridotta' instead of the 'mini finestra' used everywhere else.
+    - Current: `Utilizza finestra ridotta`
+    - Source: `label: Mini Window tooltiptext: Use Mini Window`
+    - Suggest: `Utilizza mini finestra`
+    - The feature is called 'Mini finestra' in this string's own label and in every other Mini Window string. The tooltip names it differently, so the two are inconsistent.
+- `newtab-wallpaper-firefox-hills-light` — `browser/browser/newtab/newtab.ftl` — "light hills" rendered as "colline chiare" here but "colline luminose" in the other light-hills strings.
+    - Current: `Una volpe corre su colline chiare`
+    - Source: `A fox running over light hills`
+    - Suggest: `Una volpe corre su colline luminose`
+    - The same en-US term "light hills" is translated inconsistently across newtab-wallpaper-firefox-sitting-hill-light and newtab-wallpaper-firefox-sky-light ("colline luminose") within the same surface.
+- `preferences-ai-controls-sidebar-chatbot-group-3` — `browser/browser/preferences/preferences.ftl` — Label uses singular "Fornitore" where the source is plural "providers".
+    - Current: `label: Fornitore di chatbot IA nella barra laterale`
+    - Source: `description: Keep a chatbot in view as you browse. Choose from multiple providers and switch anytime. label: AI chatbot providers in sidebar`
+    - Suggest: `label: Fornitori di chatbot IA nella barra laterale`
+    - en-US "AI chatbot providers in sidebar" is plural, and the accompanying description mentions choosing among multiple providers ("diversi fornitori").
+- `jsonlScopeName` — `devtools/client/netmonitor.properties` — "JSON Lines" is a format name (JSONL/NDJSON) and should not be translated as "Righe JSON".
+    - Current: `Righe JSON`
+    - Source: `JSON Lines`
+    - Suggest: `JSON Lines`
+    - The developer comment identifies it as the JSON Lines (JSONL/NDJSON) payload format name; format names are kept in English in DevTools panel labels (e.g. JSON, XML).
+- `about-sync-log-count` — `toolkit/services/aboutSyncLog.ftl` — "log/logs" translated as "registrazione/registrazioni" instead of the "registro/registri" used consistently elsewhere in the same page.
+    - Current: `[one] { $count } registrazione [other] { $count } registrazioni`
+    - Source: `{$count ->} [one] { $count } log [other] { $count } logs`
+    - Suggest: `[one] { $count } registro [other] { $count } registri`
+    - Every other string in this file renders "log(s)" as "registro/registri"; "registrazione" means a recording, an inconsistent term on the same surface.
+- `detail-contributions-button` — `toolkit/toolkit/about/aboutAddons.ftl` — Access key `C` of `detail-contributions-button` is not present in its label
+    - Current: `C`
+    - Source: `(value): Contribute accesskey: C title: Contribute to the development of this add-on`
+    - The label is “Fai una donazione”. An access key not in the label cannot be underlined and is unreachable by keyboard.
+- `taskbar-tabs-social-callout-subtitle` — `browser/browser/featureCallout.ftl` — The sentence has no final full stop, unlike the en-US source and the other callout subtitles in this batch.
+    - Current: `protetta da { -brand-short-name }`
+    - Source: `Launch your social sites like an app in a streamlined window protected by { -brand-short-name }.`
+    - Suggest: `protetta da { -brand-short-name }.`
+    - The en-US ends with a period, and every other taskbar-tabs callout subtitle in this batch ends with one in Italian. This string alone drops it.
+- `ip-protection-site-rules-button` — `browser/browser/ipProtection.ftl` — Double space and missing article in the button label.
+    - Current: `Gestisci  regole per i siti web`
+    - Source: `description: Set rules for sites that need extra privacy or VPN turned off. label: Manage website rules`
+    - Suggest: `Gestisci le regole per i siti web`
+    - The label contains a doubled space between "Gestisci" and "regole" and drops the article used in the identical string ip-protection-site-rules-header ("Gestisci le regole per i siti web").
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -46,9 +92,9 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 340 |
-| Strings | 16,836 |
-| Missing strings | 0 |
-| Obsolete strings | 19 |
+| Strings | 16,961 |
+| Missing strings | 4 |
+| Obsolete strings | 69 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 10 |
 | Fluent / properties syntax errors | 0 |
@@ -58,13 +104,17 @@ _Nothing retired._
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 1 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 1 |
+| Access keys not in their label | 0 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 0 |
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**4 strings** are not translated yet, concentrated in:
+
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 4
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Files with no en-US counterpart
 
@@ -87,12 +137,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 963, `straight-double` 25 | **curly-double** |
-| apostrophe | `typographic` 1764, `straight` 6 | **typographic** |
-| ellipsis | `char` 416 | **char** |
-| dash | `em` 51, `en` 17 | **em** |
+| quotes | `curly-double` 965, `straight-double` 25 | **curly-double** |
+| apostrophe | `typographic` 1769, `straight` 6 | **typographic** |
+| ellipsis | `char` 418 | **char** |
+| dash | `em` 53, `en` 17 | **em** |
 | nbsp | `total` 12, `before-punctuation` 4, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 722, `formal` 47 | **informal** |
+| register | `informal` 731, `formal` 47 | **informal** |
 
 ---
 
@@ -102,7 +152,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (19)
+## 3. Open findings (11)
 
 > **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -122,16 +172,13 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 6 |
-| 3 | Degraded language (grammar, spelling, terminology) | 10 |
-| 4 | Cosmetic (typography, spacing) | 3 |
+| 2 | Wrong content (says something other than the English) | 4 |
+| 3 | Degraded language (grammar, spelling, terminology) | 7 |
+| 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
 
-- `detail-contributions-button` — `toolkit/toolkit/about/aboutAddons.ftl` — Access key `C` of `detail-contributions-button` is not present in its label
-    - Current: `C`
-    - Source: `(value): Contribute accesskey: C title: Contribute to the development of this add-on`
-    - The label is “Fai una donazione”. An access key not in the label cannot be underlined and is unreachable by keyboard.
+_Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -170,11 +217,6 @@ _Also listed under their own category below._
     - Source: `A fox sitting on dark purple hills`
     - Suggest: `Una volpe seduta su colline viola scuro`
     - en-US says "A fox sitting on dark purple hills"; the companion string newtab-wallpaper-firefox-sitting-hill-light translates the same "sitting" as "seduta". "Accovacciata" means crouching.
-- `jsonlScopeName` — `devtools/client/netmonitor.properties` — "JSON Lines" is a format name (JSONL/NDJSON) and should not be translated as "Righe JSON".
-    - Current: `Righe JSON`
-    - Source: `JSON Lines`
-    - Suggest: `JSON Lines`
-    - The developer comment identifies it as the JSON Lines (JSONL/NDJSON) payload format name; format names are kept in English in DevTools panel labels (e.g. JSON, XML).
 - `about-sync-log-empty` — `toolkit/services/aboutSyncLog.ftl` — "No sync logs have been recorded" rendered as "no log was found", changing the meaning from recording to searching.
     - Current: `Non è stato trovato alcun registro di sincronizzazione.`
     - Source: `No sync logs have been recorded.`
@@ -193,47 +235,19 @@ _Also listed under their own category below._
 
 ### C. Grammar, agreement & spelling
 
-- `ip-protection-site-rules-edit-button` — `browser/browser/ipProtection.ftl` — Ungrammatical preposition: "relativa per" should be "relativa a" (or just "per").
-    - Current: `la regola relativa per { $website }`
-    - Source: `aria-label: Edit the rule for { $website } title: Edit`
-    - Suggest: `la regola relativa a { $website }`
-    - "Relativa" takes the preposition "a"; "relativa per" is ungrammatical Italian. The sibling delete button uses plain "la regola per".
-- `preferences-ai-controls-sidebar-chatbot-group-3` — `browser/browser/preferences/preferences.ftl` — Label uses singular "Fornitore" where the source is plural "providers".
-    - Current: `label: Fornitore di chatbot IA nella barra laterale`
-    - Source: `description: Keep a chatbot in view as you browse. Choose from multiple providers and switch anytime. label: AI chatbot providers in sidebar`
-    - Suggest: `label: Fornitori di chatbot IA nella barra laterale`
-    - en-US "AI chatbot providers in sidebar" is plural, and the accompanying description mentions choosing among multiple providers ("diversi fornitori").
+- `item-cookies-site-data-description2` — `browser/browser/sanitize.ftl` — The phrase "dai siti" appears twice in a row.
+    - Current: `Ti disconnette dai siti dai siti`
+    - Source: `Signs you out and may clear shopping carts`
+    - Suggest: `Ti disconnette dai siti`
+    - The repeated words are a typo. The en-US says only "Signs you out".
 
 ### D. Terminology, register & consistency
 
-- `toolbar-button-mini-window` — `browser/browser/miniWindow.ftl` — The tooltip renders the feature name 'Mini Window' as 'finestra ridotta' instead of the 'mini finestra' used everywhere else.
-    - Current: `Utilizza finestra ridotta`
-    - Source: `label: Mini Window tooltiptext: Use Mini Window`
-    - Suggest: `Utilizza mini finestra`
-    - The feature is called 'Mini finestra' in this string's own label and in every other Mini Window string. The tooltip names it differently, so the two are inconsistent.
-- `newtab-wallpaper-firefox-hills-light` — `browser/browser/newtab/newtab.ftl` — "light hills" rendered as "colline chiare" here but "colline luminose" in the other light-hills strings.
-    - Current: `Una volpe corre su colline chiare`
-    - Source: `A fox running over light hills`
-    - Suggest: `Una volpe corre su colline luminose`
-    - The same en-US term "light hills" is translated inconsistently across newtab-wallpaper-firefox-sitting-hill-light and newtab-wallpaper-firefox-sky-light ("colline luminose") within the same surface.
-- `about-sync-log-count` — `toolkit/services/aboutSyncLog.ftl` — "log/logs" translated as "registrazione/registrazioni" instead of the "registro/registri" used consistently elsewhere in the same page.
-    - Current: `[one] { $count } registrazione [other] { $count } registrazioni`
-    - Source: `{$count ->} [one] { $count } log [other] { $count } logs`
-    - Suggest: `[one] { $count } registro [other] { $count } registri`
-    - Every other string in this file renders "log(s)" as "registro/registri"; "registrazione" means a recording, an inconsistent term on the same surface.
+_Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
-- `taskbar-tabs-social-callout-subtitle` — `browser/browser/featureCallout.ftl` — The sentence has no final full stop, unlike the en-US source and the other callout subtitles in this batch.
-    - Current: `protetta da { -brand-short-name }`
-    - Source: `Launch your social sites like an app in a streamlined window protected by { -brand-short-name }.`
-    - Suggest: `protetta da { -brand-short-name }.`
-    - The en-US ends with a period, and every other taskbar-tabs callout subtitle in this batch ends with one in Italian. This string alone drops it.
-- `ip-protection-site-rules-button` — `browser/browser/ipProtection.ftl` — Double space and missing article in the button label.
-    - Current: `Gestisci  regole per i siti web`
-    - Source: `description: Set rules for sites that need extra privacy or VPN turned off. label: Manage website rules`
-    - Suggest: `Gestisci le regole per i siti web`
-    - The label contains a doubled space between "Gestisci" and "regole" and drops the article used in the identical string ip-protection-site-rules-header ("Gestisci le regole per i siti web").
+_Nothing in this category._
 
 ---
 
@@ -265,8 +279,17 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (59)
+### Fixed to date (68)
 
+- `taskbar-tabs-social-callout-subtitle` — `browser/browser/featureCallout.ftl` — fixed 2026-10-30
+- `ip-protection-site-rules-button` — `browser/browser/ipProtection.ftl` — fixed 2026-10-30
+- `ip-protection-site-rules-edit-button` — `browser/browser/ipProtection.ftl` — fixed 2026-10-30
+- `toolbar-button-mini-window` — `browser/browser/miniWindow.ftl` — fixed 2026-10-30
+- `newtab-wallpaper-firefox-hills-light` — `browser/browser/newtab/newtab.ftl` — fixed 2026-10-30
+- `preferences-ai-controls-sidebar-chatbot-group-3` — `browser/browser/preferences/preferences.ftl` — fixed 2026-10-30
+- `jsonlScopeName` — `devtools/client/netmonitor.properties` — fixed 2026-10-30
+- `about-sync-log-count` — `toolkit/services/aboutSyncLog.ftl` — fixed 2026-10-30
+- `detail-contributions-button` — `toolkit/toolkit/about/aboutAddons.ftl` — fixed 2026-10-30
 - `toolbar-switcher-customizable-label-v2` — `browser/browser/aiWindow.ftl` — fixed 2026-10-19
 - `tab-groups-onboarding-saved-groups-title-3` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-10-19
 - `sync-syncing-across-devices-heading-3` — `browser/browser/preferences/preferences.ftl` — fixed 2026-10-19
@@ -298,12 +321,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `tabbrowser-container-tab-title` — `browser/browser/tabbrowser.ftl` — fixed 2026-07-26
 - `select-translations-panel-init-failure-message` — `browser/browser/translations.ftl` — fixed 2026-07-26
 - `about-debugging-runtime-service-workers-not-compatible` — `devtools/client/aboutdebugging.ftl` — fixed 2026-07-26
-- `inactive-scroll-padding-when-not-scroll-container` — `devtools/client/tooltips.ftl` — fixed 2026-07-26
-- `xslt-call-to-key-not-allowed` — `dom/dom/xslt.ftl` — fixed 2026-07-26
-- `delete-ssl-override-impact` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-07-26
-- `crashreporter-plea` — `toolkit/crashreporter/crashreporter.ftl` — fixed 2026-07-26
-- `rights-intro-point-5-unbranded` — `toolkit/toolkit/about/aboutRights.ftl` — fixed 2026-07-26
-- `rights-webservices-term-3` — `toolkit/toolkit/about/aboutRights.ftl` — fixed 2026-07-26
-- `rights-webservices-term-unbranded` — `toolkit/toolkit/about/aboutRights.ftl` — fixed 2026-07-26
-- `rights-webservices-unbranded` — `toolkit/toolkit/about/aboutRights.ftl` — fixed 2026-07-26
-- `about-telemetry-page-subtitle` — `toolkit/toolkit/about/aboutTelemetry.ftl` — fixed 2026-07-26
