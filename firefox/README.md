@@ -60,7 +60,7 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
     --source-dir ~/mozilla/git/firefox-quarantine
 
 # the real thing, against clones you already have
-export ANTHROPIC_API_KEY=...
+# keys in secrets.env (copy secrets.env-dist), or export them
 .venv/bin/python lib/run.py --project firefox --locale it \
     --l10n-dir ~/mozilla/git/firefox-l10n \
     --source-dir ~/mozilla/git/firefox-quarantine

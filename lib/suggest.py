@@ -59,6 +59,7 @@ from json import dumps
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import config  # noqa: E402
+import local_secrets  # noqa: E402
 import findings as findings_mod  # noqa: E402
 import layout  # noqa: E402
 import parse  # noqa: E402
@@ -783,6 +784,7 @@ def cmd_backfill(args) -> int:
 
 
 def main() -> int:
+    local_secrets.load("PONTOON_TOKEN")
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     sub = ap.add_subparsers(dest="command", required=True)
     backfill = sub.add_parser(

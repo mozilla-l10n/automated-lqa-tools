@@ -540,6 +540,30 @@ def run(suite) -> None:
         check("pontoon-rejected" not in text and "a person's own line" in text,
               "withdrawing a Pontoon dismissal leaves a person's line alone")
 
+    suite.section("Local secrets fill gaps and never override the environment")
+    import local_secrets
+    with tempfile.TemporaryDirectory() as tmp:
+        path = os.path.join(tmp, "secrets.env")
+        with open(path, "w", encoding="utf-8") as fh:
+            fh.write("# c\nexport _LQA_A='from file'\n_LQA_B=from file\n"
+                     "_LQA_C=\n_LQA_D=unasked\n")
+        saved = {k: os.environ.pop(k, None) for k in ("_LQA_A", "_LQA_B", "_LQA_C", "_LQA_D")}
+        os.environ["_LQA_B"] = "from env"
+        try:
+            local_secrets.load("_LQA_A", "_LQA_B", "_LQA_C", path=path)
+            check(os.environ.get("_LQA_A") == "from file",
+                  "an unset name is read from the file, quotes and `export` dropped")
+            check(os.environ["_LQA_B"] == "from env",
+                  "a name already in the environment wins, as in CI")
+            check("_LQA_C" not in os.environ, "an empty value sets nothing")
+            check("_LQA_D" not in os.environ,
+                  "a name the script did not ask for stays out of its environment")
+        finally:
+            for k, v in saved.items():
+                os.environ.pop(k, None)
+                if v is not None:
+                    os.environ[k] = v
+
 
 def _site():
     import importlib.util

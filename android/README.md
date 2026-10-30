@@ -64,7 +64,7 @@ From the repository root:
     --l10n-dir ~/github/android-l10n --source-dir ~/github/android-l10n
 
 # the real thing
-export ANTHROPIC_API_KEY=...
+# keys in secrets.env (copy secrets.env-dist), or export them
 .venv/bin/python lib/run.py --project android --locale it \
     --l10n-dir ~/github/android-l10n --source-dir ~/github/android-l10n
 ```

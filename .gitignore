@@ -5,3 +5,4 @@ __pycache__/
 /work/
 _site/
 .claude/settings.local.json
+/secrets.env

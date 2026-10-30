@@ -52,6 +52,7 @@ from email.mime.text import MIMEText
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import config  # noqa: E402
+import local_secrets  # noqa: E402
 import summary  # noqa: E402
 import tracker  # noqa: E402
 
@@ -352,6 +353,7 @@ def _github_output(key: str, value: str) -> None:
 
 
 def main(argv=None) -> int:
+    local_secrets.load("SMTP_USER", "SMTP_PASSWORD", "SMTP_SERVER", "SMTP_PORT")
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--merge", action="store_true",
                     help="merge every pull request that needs no person")

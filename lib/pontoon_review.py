@@ -61,6 +61,7 @@ import urllib.parse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import config  # noqa: E402
+import local_secrets  # noqa: E402
 import dismiss  # noqa: E402
 import findings as findings_mod  # noqa: E402
 import layout  # noqa: E402
@@ -354,6 +355,7 @@ def reconcile(project, locale: str, *, l10n_dir: str, source_dir: str,
 
 
 def main(argv=None) -> int:
+    local_secrets.load("ANTHROPIC_API_KEY", "PONTOON_TOKEN")
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--project", required=True)
     ap.add_argument("--locale", action="append", required=True,

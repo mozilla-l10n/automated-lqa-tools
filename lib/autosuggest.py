@@ -51,6 +51,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import anthropic  # noqa: E402
 
 import config  # noqa: E402
+import local_secrets  # noqa: E402
 import dismiss  # noqa: E402
 import findings as findings_mod  # noqa: E402
 import layout  # noqa: E402
@@ -611,6 +612,7 @@ def cmd_summary(args) -> int:
 
 
 def main() -> int:
+    local_secrets.load("ANTHROPIC_API_KEY", "PONTOON_TOKEN")
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     sub = ap.add_subparsers(dest="command", required=True)
     run = sub.add_parser("run", help="fix findings and submit them")
