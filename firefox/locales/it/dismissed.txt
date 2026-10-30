@@ -21,3 +21,5 @@ imported-safari-reading-list — Elenco lettura is correct
 migration-imported-safari-reading-list — Elenco lettura is correct
 noDomMutationBreakpoints — Element is there
 noDomMutationBreakpoints.notice — Element is there
+restart-required-fix-question @ browser/browser/aboutRestartRequired.ftl — auto-suggest (2026-10-30): The Italian mirrors the en-US subject exactly (the brand is working on a fix), and "davvero" is present.
+urlbar-result-menu-remove-top-site @ browser/browser/browser.ftl — auto-suggest (2026-10-30): Removing a top site means removing it from the top sites list; "Rimuovi dai siti principali" expresses the same action and the accesskey d matches the label.
