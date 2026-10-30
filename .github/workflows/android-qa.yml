@@ -146,25 +146,37 @@ jobs:
         env:
           PONTOON_TOKEN: ${{ secrets.PONTOON_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          LOCALE: ${{ matrix.locale }}
+          NO_LLM: ${{ inputs.no_llm }}
         run: |
+          extra=()
+          if [ "$NO_LLM" = 'true' ]; then extra+=(--no-llm); fi
           python lib/pontoon_review.py --project android \
-            --locale '${{ matrix.locale }}' \
+            --locale "$LOCALE" \
             --l10n-dir work/l10n \
             --source-dir work/l10n \
-            ${{ inputs.no_llm && '--no-llm' || '' }} \
+            "${extra[@]}" \
             --write < /dev/null
 
       - name: Review
+        # Inputs reach the script through the environment, never pasted into
+        # it with an expression: interpolated text is shell code.
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          LOCALE: ${{ matrix.locale }}
+          MODE: ${{ inputs.mode || 'auto' }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          NO_LLM: ${{ inputs.no_llm }}
         run: |
+          extra=()
+          if [ "$DRY_RUN" = 'true' ]; then extra+=(--dry-run); fi
+          if [ "$NO_LLM" = 'true' ]; then extra+=(--no-llm); fi
           python lib/run.py --project android \
-            --locale '${{ matrix.locale }}' \
-            --mode '${{ inputs.mode || 'auto' }}' \
+            --locale "$LOCALE" \
+            --mode "$MODE" \
             --l10n-dir work/l10n \
             --source-dir work/l10n \
-            ${{ inputs.dry_run && '--dry-run' || '' }} \
-            ${{ inputs.no_llm && '--no-llm' || '' }} \
+            "${extra[@]}" \
             < /dev/null
 
       - name: Upload this locale's state and report
