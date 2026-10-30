@@ -157,8 +157,10 @@ deliberate and easy to undo by accident:
   into a public page; a stripping sanitiser would delete the text the
   finding is about. Escaping shows it as text, which is what a reviewer
   needs.
-- The artifact is built from `reports/` alone. `firefox/state` is 24 MB and
-  must not be published.
+- The artifact is built from `reports/`, plus weekly counts the landing
+  page reads from `*/pontoon_suggestions/` and `*/state/*/findings.json`
+  (`site/bot.py`, `site/progress.py`). Only those counts leave `state/`:
+  `firefox/state` is 24 MB and must not be published.
 
 `node site/selftest.mjs` covers the dropdown logic, which is where the real
 complexity is: coverage is ragged, so the project list depends on the locale

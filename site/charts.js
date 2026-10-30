@@ -1,4 +1,5 @@
-/* The landing page's two charts, drawn with Chart.js from bot.json.
+/* The landing page's charts, drawn with Chart.js from bot.json: the
+ * suggestion bot's two, and the findings raised and fixed per week.
  *
  * Loaded by app.js only when the landing page is shown, after
  * vendor/chart.umd.min.js. Colours come from style.css's custom properties,
@@ -133,19 +134,52 @@
     });
   }
 
+  function findingsChart(canvas, c) {
+    const f = data.findings;
+    const options = common(c);
+    options.scales.y.ticks.precision = 0;
+    options.plugins.tooltip.callbacks = {
+      title: (items) => `Week of ${f.weeks[items[0].dataIndex]}`,
+    };
+    const bars = (label, key) => ({
+      label,
+      data: f[key],
+      backgroundColor: c[key],
+      maxBarThickness: 16,
+      // A 2px surface gap between the week's two bars.
+      borderColor: c.surface,
+      borderWidth: { left: 1, right: 1 },
+      borderSkipped: "start",
+      borderRadius: { topLeft: 4, topRight: 4 },
+    });
+    return new Chart(canvas, {
+      type: "bar",
+      data: {
+        labels: f.weeks.map(weekLabel),
+        datasets: [bars("Raised", "raised"), bars("Fixed", "fixed")],
+      },
+      options,
+    });
+  }
+
   function draw() {
     while (live.length) live.pop().destroy();
+    if (!data) return;
     const sent = document.getElementById("chart-sent");
     const rate = document.getElementById("chart-rate");
-    if (!sent || !rate || !data) return;
+    const findings = document.getElementById("chart-findings");
     const c = {
       approved: css("--approved"), rejected: css("--rejected"), pending: css("--pending"),
+      raised: css("--raised"), fixed: css("--fixed"),
       surface: css("--bg"), muted: css("--muted"), tick: css("--tick"),
       grid: css("--grid"), axis: css("--axis"),
     };
     Chart.defaults.font.family = 'system-ui, -apple-system, "Segoe UI", sans-serif';
     Chart.defaults.color = c.muted;
-    live.push(sentChart(sent, c), rateChart(rate, c));
+    // The bot's charts are absent until a suggestion has been sent, and the
+    // findings chart until a finding has been recorded.
+    if (sent && rate) live.push(sentChart(sent, c), rateChart(rate, c));
+    if (findings && data.findings) live.push(findingsChart(findings, c));
   }
 
   window.drawBotCharts = async function () {

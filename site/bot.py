@@ -13,6 +13,8 @@ and fill in as reviewers get to them -- the page says so rather than quoting
 a rate over answered suggestions only, which would read as final while most
 of the week is still open.
 
+Below it, `site/progress.py` adds the QA findings raised and fixed per week.
+
 The tiles and tables are rendered here; the charts are Chart.js, drawn by
 `site/charts.js` from `bot.json`. Chart.js is vendored under `site/vendor/`
 rather than loaded from a CDN, so the page's CSP still allows scripts from
@@ -27,6 +29,8 @@ import glob
 import html
 import json
 import os
+
+import progress
 
 _ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -227,6 +231,14 @@ def render(s: dict, user: str, projects: dict) -> str:
 
 
 def build(projects: dict, today: datetime.date | None = None) -> tuple:
-    """The page fragment and the data its charts are drawn from."""
-    s = stats(collect(), today or datetime.date.today())
-    return render(s, bot_user(), projects), chart_data(s)
+    """The page fragment and the data its charts are drawn from.
+
+    The findings section (`site/progress.py`) follows the bot's own, and its
+    chart data rides along in the same `bot.json` under ``findings``.
+    """
+    today = today or datetime.date.today()
+    s = stats(collect(), today)
+    findings_page, findings_data = progress.build(projects, _row, today)
+    data = chart_data(s)
+    data["findings"] = findings_data
+    return render(s, bot_user(), projects) + "\n" + findings_page, data

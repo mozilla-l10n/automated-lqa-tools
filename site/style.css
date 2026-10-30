@@ -100,14 +100,17 @@ h2:focus, h3:focus { outline: none; }
 /* The suggestion bot page (site/bot.py). Outcome colours are categorical
    slots 1 and 2 of the dataviz reference palette, validated for colour
    blindness in both modes; "awaiting review" is the absence of an answer,
-   so it gets neutral grey rather than a hue. */
+   so it gets neutral grey rather than a hue. Raised and fixed findings
+   (site/progress.py) reuse the same validated pair. */
 :root {
   --approved: #2a78d6; --rejected: #eb6834; --pending: #b1b1bd;
+  --raised: #2a78d6; --fixed: #eb6834;
   --grid: #e1e0d9; --axis: #c3c2b7; --tick: #6f6e69;
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --approved: #3987e5; --rejected: #d95926; --pending: #5b5b66;
+    --raised: #3987e5; --fixed: #d95926;
     --grid: #2c2c2a; --axis: #4a4954; --tick: #a3a29b;
   }
 }
