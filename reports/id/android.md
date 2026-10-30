@@ -1,18 +1,19 @@
-# Android l10n QA — id
+# Firefox for Android l10n QA — id
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-19 @ `7ee8e61a4a7d` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 2,793 |
+| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 2,552 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for id: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
+Also for id: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -44,9 +45,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 45 |
-| Strings | 2,793 |
-| Missing strings | 10 |
+| Files | 44 |
+| Strings | 2,552 |
+| Missing strings | 1 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,9 +64,8 @@ _Nothing retired._
 
 ### Completeness
 
-**10 strings** are not translated yet, concentrated in:
+**1 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/focus-android/app/src/main/res/values-in/strings.xml` — 9
 - `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
@@ -73,6 +73,8 @@ _Completeness is reported, never raised as a finding: a missing string needs tra
 ### Conventions detected in this locale
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
+
+The count includes Focus for Android's strings for this locale, which the same team translates, so both projects infer the same conventions. Nothing there is checked here.
 
 | Convention | Counts | Inferred |
 |---|---|---|
@@ -88,14 +90,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (165)
+## 3. Open findings (150)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 91 |
-| 3 | Degraded language (grammar, spelling, terminology) | 70 |
+| 2 | Wrong content (says something other than the English) | 84 |
+| 3 | Degraded language (grammar, spelling, terminology) | 62 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
@@ -404,7 +406,7 @@ _Nothing in this category._
     - Source: `Speedy, safe, and won’t sell you out. Browsing just got better.`
     - Suggest: `tidak akan mengkhianati Anda`
     - "Sell you out" means betray/give away your data, not literally selling the user; the literal rendering conveys a different meaning.
-- _…and 35 more; see `state/` for the full list._
+- _…and 26 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -523,21 +525,6 @@ _Nothing in this category._
     - Source: `Navigate back`
     - Suggest: `Navigasi kembali`
     - The source is an action content description meaning "go back"; Indonesian uses "kembali" for back navigation, "balik" is incorrect/colloquial here.
-- `mozac_browser_errorpages_security_bad_cert_techInfo` — `mozilla-mobile/focus-android/app/src/main/res/values-in/strings.xml` — Duplicated word "menyamar menyamar" and missing preposition in the Indonesian sentence.
-    - Current: `Seseorang mungkin berusaha menyamar menyamar laman ini`
-    - Source: `{ <label> }Someone could be trying to impersonate the site and continuing could be risky.{ </label> } { <br> }{ <br> } { <label> }%1$s does not trust { <b> }%2$s{ </b> } because its certificate issuer is unknown, the ce…`
-    - Suggest: `Seseorang mungkin berusaha menyamar sebagai situs ini`
-    - Source reads "Someone could be trying to impersonate the site"; the target repeats "menyamar" and lacks the preposition, producing ungrammatical text.
-- `preference_autocomplete_title_remove` — `mozilla-mobile/focus-android/app/src/main/res/values-in/strings.xml` — English plural "URLs" left in Indonesian text where plurality is not marked with -s.
-    - Current: `Hapus URLs ubahsuai`
-    - Source: `Remove custom URLs`
-    - Suggest: `Hapus URL ubahsuai`
-    - Indonesian does not form plurals with -s; other strings in the same screen use "URL ubahsuai".
-- `preference_autocomplete_user_list_summary2` — `mozilla-mobile/focus-android/app/src/main/res/values-in/strings.xml` — Missing "agar" makes the sentence read "Enable %s" instead of "Enable to have %s autocomplete...".
-    - Current: `Aktifkan %s melengkapi otomatis URL favorit Anda.`
-    - Source: `Enable to have %s autocomplete your favorite URLs.`
-    - Suggest: `Aktifkan agar %s melengkapi otomatis URL favorit Anda.`
-    - The parallel string preference_autocomplete_topsite_summary2 correctly uses "Aktifkan agar %s melengkapi otomatis..."; without "agar" the clause is ungrammatical.
 
 ### D. Terminology, register & consistency
 
@@ -726,21 +713,6 @@ _Nothing in this category._
     - Source: `Report Preview`
     - Suggest: `Pratinjau Laporan`
     - Same term "Preview Report"/"Report Preview" on the same surface must use one form; the standard Firefox term is "Pratinjau".
-- `analytics` — `mozilla-mobile/focus-android/app/src/main/res/values-in/strings.xml` — Tracker category "Analytics" rendered with the adjective "Analitis" instead of the noun "Analitik".
-    - Current: `Analitis`
-    - Source: `Analytics`
-    - Suggest: `Analitik`
-    - The string is a tracker category name (a noun, parallel to "Periklanan", "Konten"); "analitis" is the adjective "analytical".
-- `cfr_for_toolbar_shield_icon2` — `mozilla-mobile/focus-android/app/src/main/res/values-in/strings.xml` — Informal second-person "memata-mataimu" breaks the formal "Anda" address used elsewhere in the app.
-    - Current: `memata-mataimu`
-    - Source: `Got ‘em! We stopped this site from spying on you. Tap the shield any time to see what we’re blocking.`
-    - Suggest: `memata-matai Anda`
-    - Other Focus strings (e.g. cfr_for_start_browsing, biometric_prompt_subtitle) consistently use the formal "Anda"; the -mu clitic is an informal register violation.
-- `preference_category_search` — `mozilla-mobile/focus-android/app/src/main/res/values-in/strings.xml` — Category heading "Search" translated as the verb "Cari" instead of the noun "Pencarian".
-    - Current: `Cari`
-    - Source: `Search`
-    - Suggest: `Pencarian`
-    - This is a preference category title (a noun), so the noun form "Pencarian" is required rather than the imperative verb "Cari".
 
 ### E. Typography, punctuation & spacing
 

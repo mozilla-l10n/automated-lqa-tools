@@ -180,7 +180,7 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
         )
     log(f"  parsed {len(l10n):,} strings from {len(trees.l10n_files)} files, mode={mode}")
 
-    counts_conv = conventions.detect(locale, l10n)
+    counts_conv = conventions.detect(locale, trees.measured())
     current = snapshot.build(l10n, source)
     delta = snapshot.diff(previous, current)
     log(f"  delta: {delta.summary()}")
@@ -403,6 +403,9 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
         "suppressed": sum(1 for f in stored if f.status == "suppressed"),
         "dismissed": sum(1 for f in stored if f.status == "dismissed"),
     }
+    shared = (project.data.get("context") or {}).get("conventions_from")
+    if shared and trees.context_conventions:
+        new_meta["conventions_shared_with"] = shared
     if incomplete:
         # Only present when it happened, so it does not add a line to every
         # meta.json in the tree. The next run overwrites meta wholesale, so

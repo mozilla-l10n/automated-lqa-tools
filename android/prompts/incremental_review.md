@@ -1,6 +1,6 @@
 You are reviewing the {language} ({locale}) localization of Mozilla's
-Android applications: Firefox for Android, Focus, and the shared Android
-Components library they are built on. You are given strings that changed
+Firefox for Android and the shared Android Components library it is built
+on. You are given strings that changed
 since the last review, each with its source string and, where one exists,
 the developer comment.
 

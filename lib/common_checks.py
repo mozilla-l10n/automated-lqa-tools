@@ -6,8 +6,8 @@ completeness, variables, plural selectors, plural categories, typography
 against the locale's own conventions, and the source-language variant check.
 
 Format-specific checks live with their project -- Fluent terms and access
-keys in `firefox/tools/checks.py`, Android escaping and `translatable` in
-`android/tools/checks.py`. Each project declares which checks it runs, and
+keys in `firefox/tools/checks.py`, Android escaping in `lib/android_checks.py`
+(two projects read that format). Each project declares which checks it runs, and
 in what order, under `checks:` in its config.
 
 These are ports of phase 1 of the manual runbook, plus the three checks the
@@ -699,7 +699,8 @@ def check_placeholders(locale, l10n, source) -> list[Finding]:
     return out
 
 
-def check_ui_references(locale, l10n, source) -> list[Finding]:
+def check_ui_references(locale, l10n, source, context_l10n=None,
+                        context_source=None) -> list[Finding]:
     """A string that quotes another string's text, where the two disagree.
 
     "Select \u201cTry Again\u201d to go back online" only works while the button
@@ -718,9 +719,15 @@ def check_ui_references(locale, l10n, source) -> list[Finding]:
     Deliberately conservative: the quoted text must look like a label rather
     than a technical token, and must match exactly one other string, because
     an ambiguous match says nothing.
+
+    ``context_*`` are strings another project owns that a label here may
+    name: Focus quotes Android Components buttons. They are candidates
+    only; nothing in them is reported on.
     """
+    context_l10n = context_l10n or {}
+    context_source = context_source or {}
     by_value: dict[str, list] = {}
-    for key, msg in source.items():
+    for key, msg in {**context_source, **source}.items():
         value = msg.text().strip()
         if _is_label(value) and len(value) <= 40:
             by_value.setdefault(value.casefold(), []).append(key)
@@ -739,7 +746,7 @@ def check_ui_references(locale, l10n, source) -> list[Finding]:
             if target is None:
                 continue  # nothing to point at, or too ambiguous to judge
             targets = [target]
-            referenced = l10n.get(target)
+            referenced = l10n.get(target) or context_l10n.get(target)
             if referenced is None:
                 continue
             label = referenced.text().strip()
@@ -949,7 +956,8 @@ def check_plurals(locale, l10n, source) -> list[Finding]:
     return out
 
 
-def check_variant_spelling(project, locale, l10n, source) -> list[Finding]:
+def check_variant_spelling(project, locale, l10n, source, measured=None,
+                           measured_source=None) -> list[Finding]:
     """Strings a language variant left identical when they should not be.
 
     Only meaningful for a variant of the source language, and silent for
@@ -957,10 +965,14 @@ def check_variant_spelling(project, locale, l10n, source) -> list[Finding]:
     divergences rather than from a word list, so nothing here encodes an
     opinion about British versus American English -- it reports only where
     the locale contradicts itself.
+
+    The rules are learned from ``measured`` when given -- this tree plus any
+    context counted towards conventions -- and applied to ``l10n`` alone.
+    Focus by itself has too few strings to show a single substitution.
     """
     if not project.is_variant(locale):
         return []
-    rules = variants.learn(l10n, source)
+    rules = variants.learn(measured or l10n, measured_source or source)
     if not rules:
         return []
     out = []
@@ -1061,12 +1073,17 @@ CHECKS = {
     "plurals": lambda c: check_plurals(c.locale, c.l10n, c.source),
     "markup": lambda c: check_markup(c.locale, c.l10n, c.source),
     "placeholders": lambda c: check_placeholders(c.locale, c.l10n, c.source),
-    "ui_references": lambda c: check_ui_references(c.locale, c.l10n, c.source),
+    "ui_references": lambda c: check_ui_references(
+        c.locale, c.l10n, c.source,
+        getattr(c.trees, "context_l10n", None), getattr(c.trees, "context_source", None),
+    ),
     "typography": lambda c: check_typography(
         c.project, c.locale, c.l10n, c.counts, c.source
     ),
     "variant_spelling": lambda c: check_variant_spelling(
-        c.project, c.locale, c.l10n, c.source
+        c.project, c.locale, c.l10n, c.source,
+        c.trees.measured() if c.trees else None,
+        c.trees.measured_source() if c.trees else None,
     ),
 }
 

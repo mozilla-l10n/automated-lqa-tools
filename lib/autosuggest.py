@@ -62,7 +62,7 @@ from llm_incremental import _call, _close, language_of  # noqa: E402
 from moz.l10n.model import PatternMessage  # noqa: E402
 from moz.l10n.resource import serialize_resource  # noqa: E402
 
-PROJECTS = ("android", "firefox", "firefox_ios")
+PROJECTS = ("android", "firefox", "firefox_ios", "focus_android")
 BATCH_SIZE = 10
 DISMISS_TAG = "auto-suggest"
 

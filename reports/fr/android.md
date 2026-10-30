@@ -1,18 +1,19 @@
-# Android l10n QA — fr
+# Firefox for Android l10n QA — fr
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-19 @ `57c409b04755` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 3 of 2,803 |
+| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 2,553 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for fr: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
+Also for fr: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -44,8 +45,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 45 |
-| Strings | 2,803 |
+| Files | 44 |
+| Strings | 2,553 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -69,6 +70,8 @@ The locale is complete against the en-US source.
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
 
+The count includes Focus for Android's strings for this locale, which the same team translates, so both projects infer the same conventions. Nothing there is checked here.
+
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 23 | **guillemet** |
@@ -86,14 +89,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (73)
+## 3. Open findings (69)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 54 |
-| 3 | Degraded language (grammar, spelling, terminology) | 19 |
+| 2 | Wrong content (says something other than the English) | 52 |
+| 3 | Degraded language (grammar, spelling, terminology) | 17 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -372,21 +375,6 @@ _Nothing in this category._
     - Source: `Report broken site`
     - Suggest: `Signaler un site défectueux`
     - The source names the action of reporting a broken site; the plural "des problèmes" and the longer wording change the meaning of the toolbar title.
-- `content_description_back` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — "Navigate back" is rendered as the label "Précédent" instead of an action description, inconsistent with content_description_forward ("Avancer dans l’historique").
-    - Current: `Précédent`
-    - Source: `Navigate back`
-    - Suggest: `Reculer dans l’historique`
-    - The source is an action content description read by screen readers; the sibling string content_description_forward is translated as "Avancer dans l’historique", so "Précédent" is both inconsistent and not describing the action.
-- `firstrun_privacy_title` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — "Make privacy a habit" is translated as "Reprenez votre vie privée en main" (take back control of your privacy), a different meaning.
-    - Current: `Reprenez votre vie privée en main`
-    - Source: `Make privacy a habit`
-    - Suggest: `Faites de la vie privée une habitude`
-    - The source urges making privacy a habit, not regaining control of it.
-- `preference_phone_feature_notification` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — Singular "Notification" (a site-permission category label) is rendered in the plural.
-    - Current: `Notifications`
-    - Source: `Notification`
-    - Suggest: `Notification`
-    - The source is the singular permission name "Notification", matching the other site-permission entries; the French pluralises it.
 
 ### C. Grammar, agreement & spelling
 
@@ -468,11 +456,6 @@ _Nothing in this category._
     - Source: `Send report`
     - Suggest: `Envoyer le signalement`
     - Neighbouring strings (webcompat_reporter_description_3, preview_bottom_sheet_header, success_snackbar_text_2) all use "signalement" for "report"; this is an inconsistency on the same screen.
-- `preference_switch_autocomplete_topsites` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — "top sites" rendered as "sites les plus populaires" instead of the established "sites les plus visités" used elsewhere for top sites.
-    - Current: `Pour les sites les plus populaires`
-    - Source: `For top sites`
-    - Suggest: `Pour les sites les plus visités`
-    - "Top sites" in Mozilla French is consistently "sites les plus visités"; "populaires" changes the meaning (popularity vs. the user's own most-visited sites).
 
 ### E. Typography, punctuation & spacing
 
@@ -498,9 +481,8 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (9)
+### Fixed to date (8)
 
-- `qualified_text` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — fixed 2026-10-18
 - `mozac_browser_errorpages_unknown_host_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fr/strings.xml` — fixed 2026-10-12
 - `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — fixed 2026-10-12
 - `firefox_labs_feature_conflict` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — fixed 2026-10-12

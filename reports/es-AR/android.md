@@ -1,18 +1,19 @@
-# Android l10n QA — es-AR
+# Firefox for Android l10n QA — es-AR
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-19 @ `57c409b04755` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 2,803 |
+| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 2,553 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for es-AR: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
+Also for es-AR: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -44,8 +45,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 45 |
-| Strings | 2,803 |
+| Files | 44 |
+| Strings | 2,553 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -69,6 +70,8 @@ The locale is complete against the en-US source.
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
 
+The count includes Focus for Android's strings for this locale, which the same team translates, so both projects infer the same conventions. Nothing there is checked here.
+
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 15 | **curly-double** |
@@ -83,14 +86,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (115)
+## 3. Open findings (102)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 44 |
-| 3 | Degraded language (grammar, spelling, terminology) | 71 |
+| 2 | Wrong content (says something other than the English) | 41 |
+| 3 | Degraded language (grammar, spelling, terminology) | 61 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -309,26 +312,6 @@ _Nothing in this category._
     - Source: `%1$s can close tabs you haven’t viewed over the past month.`
     - Suggest: `pestañas que no viste durante el último mes`
     - The source says tabs you haven't viewed, not tabs you haven't opened; the sibling string tab_tray_inactive_onboarding_message correctly uses "no se vieron".
-- `cfr_for_toolbar_shield_icon2` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — "site" is translated as "página web" (web page) while the rest of the file uses "sitio web", and "any time" is dropped.
-    - Current: `Evitamos que esta página web te espíe. Presioná el escudo para ver lo que estamos bloqueando.`
-    - Source: `Got ‘em! We stopped this site from spying on you. Tap the shield any time to see what we’re blocking.`
-    - Suggest: `Evitamos que este sitio web te espíe. Presioná el escudo en cualquier momento para ver lo que estamos bloqueando.`
-    - The source says "this site" (elsewhere rendered "sitio web", e.g. content_description_reload) and "Tap the shield any time"; the time qualifier is omitted.
-- `preference_autocomplete_title_remove` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — Plural "custom URLs" rendered as singular.
-    - Current: `Borrar URL personalizada`
-    - Source: `Remove custom URLs`
-    - Suggest: `Borrar URL personalizadas`
-    - The source is "Remove custom URLs" (plural, screen for removing multiple URLs), but the target reads as a single URL, identical in form to the singular add-title string.
-- `preference_category_switching_apps` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — "Switching Apps" (changing between apps) is rendered as "Intercambio de aplicaciones" (exchange of apps).
-    - Current: `Intercambio de aplicaciones`
-    - Source: `Switching Apps`
-    - Suggest: `Cambio entre aplicaciones`
-    - The developer comment says the category covers stealth settings while switching between apps, not exchanging apps.
-- `qualified_text` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — "Regulation (EU)" is rendered as "Regulación (EU)" instead of the official Spanish name "Reglamento (UE)".
-    - Current: `la Regulación (EU) 2024/1183`
-    - Source: `Qualified as specified in Regulation (EU) 2024/1183.`
-    - Suggest: `el Reglamento (UE) 2024/1183`
-    - The EU legal instrument "Regulation" is officially "Reglamento" in Spanish and the country code is "UE", not "EU"; the current text names the instrument incorrectly.
 
 ### C. Grammar, agreement & spelling
 
@@ -467,16 +450,6 @@ _Nothing in this category._
     - Source: `You have an unsent crash report related to crashes being investigated. Sending it will help us improve %1$s. Closing this notification will ignore this report.`
     - Suggest: `Enviarlo nos ayudará a mejorar %1$s.`
     - In Spanish the subject of "ayudará" must be a noun/infinitive, not a gerund; the parallel plural string correctly uses "Enviarlos nos ayudará".
-- `mozac_browser_errorpages_security_bad_cert_message` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — "Ésto" is misspelled; the neuter demonstrative "esto" never takes an accent.
-    - Current: `Ésto podría ser un problema`
-    - Source: `This could be a problem with the server’s configuration, or it could be someone trying to impersonate the server. { <br/> }{ <br/> } If you’ve connected to this server successfully in the past, the error may be temporar…`
-    - Suggest: `Esto podría ser un problema`
-    - Per RAE, the neuter demonstrative pronoun "esto" is never accented.
-- `preference_security_biometric` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — Extra preposition "de" makes the phrase ungrammatical.
-    - Current: `Usar la huella digital de para desbloquear la aplicación`
-    - Source: `Use fingerprint to unlock app`
-    - Suggest: `Usar la huella digital para desbloquear la aplicación`
-    - Source is "Use fingerprint to unlock app"; the stray "de" before "para" is a typo.
 
 ### D. Terminology, register & consistency
 
@@ -645,41 +618,6 @@ _Nothing in this category._
     - Source: `Failed to open the system uninstall prompt, please use the system uninstall action directly.`
     - Suggest: `No se pudo abrir el diálogo de desinstalación del sistema`
     - The source refers to the system uninstall prompt (a dialog); "indicador" means an indicator/gauge and misleads the user.
-- `placeholder_rename_top_site` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — "Shortcut" is rendered as "atajo" here but as "acceso directo" in menu_remove_from_shortcuts on the same surface.
-    - Current: `Nombre del atajo`
-    - Source: `Shortcut name`
-    - Suggest: `Nombre del acceso directo`
-    - Inconsistent terminology for the same source term "Shortcut" within the same app/feature (shortcuts on the home screen).
-- `preference_autocomplete_add_error` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — Uses "usted" form while the surrounding autocomplete strings use the "vos/tú" informal form required for es-AR.
-    - Current: `Verifique la URL que escribió.`
-    - Source: `Double-check the URL you entered.`
-    - Suggest: `Verificá la URL que escribiste.`
-    - Neighboring strings (preference_autocomplete_explanation_text "Tu lista", preference_autocomplete_user_list_summary2 "tus URLs") use informal address; this string switches to formal register, an inconsistency on the same surface.
-- `preference_autocomplete_add_hint` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — Formal "usted" imperative conflicts with the informal register used in the same settings screen.
-    - Current: `Pegue o escriba una URL`
-    - Source: `Paste or enter URL`
-    - Suggest: `Pegá o escribí una URL`
-    - The same autocomplete screen addresses the user informally ("Tu lista de autocompletado", "tus URLs favoritas"); this hint uses the formal form.
-- `preference_category_tracking_protection3` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — "Enhanced Tracking Protection" uses a non-standard rendering instead of the established Mozilla term.
-    - Current: `Protección de rastreo aumentada`
-    - Source: `Enhanced Tracking Protection`
-    - Suggest: `Protección contra el rastreo mejorada`
-    - Mozilla's established es-AR term for Enhanced Tracking Protection is "Protección contra el rastreo mejorada"; "aumentada" is inconsistent terminology.
-- `preference_switch_autocomplete_user_list` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — Uses "usted" verb form instead of the voseo/tuteo register used elsewhere in es-AR.
-    - Current: `Para los sitios que agrega`
-    - Source: `For sites you add`
-    - Suggest: `Para los sitios que agregás`
-    - The es-AR locale addresses the user with voseo (e.g. "Te dejaremos con tu navegación privada... podés" in promote_search_widget_dialog_subtitle); "agrega" is the usted form and breaks the established form of address.
-- `shortcut_erase_and_open_short_label` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — "Erase" is translated as "Eliminar" here while the parallel erase shortcut strings use "Borrar".
-    - Current: `Eliminar y abrir`
-    - Source: `Erase & open`
-    - Suggest: `Borrar y abrir`
-    - shortcut_erase_short_label renders "Erase" as "Borrar"; using "Eliminar" for the same source term in the same shortcut group is inconsistent.
-- `tab_crash_report_headline` — `mozilla-mobile/focus-android/app/src/main/res/values-es-rAR/strings.xml` — Uses the formal "usted" imperative "Disculpe" while the locale's established address form is voseo/tuteo (used elsewhere in this batch: "Conseguí", "tus necesidades", "¡Estás protegido!").
-    - Current: `Disculpe.`
-    - Source: `Sorry. We’re having a problem with this tab.`
-    - Suggest: `Disculpá.`
-    - Register inconsistency: es-AR Focus strings address the user informally (voseo), e.g. "Conseguí acceso…", "¡Estás protegido!"; this string switches to formal usted.
 
 ### E. Typography, punctuation & spacing
 

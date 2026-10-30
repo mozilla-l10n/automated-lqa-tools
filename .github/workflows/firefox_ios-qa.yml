@@ -5,7 +5,7 @@ name: Firefox iOS l10n QA
 # no team has to read another's findings.
 #
 # Weekly rather than daily: findings are a backlog a locale team works
-# through over weeks, and the pull request is cumulative anyway. The three
+# through over weeks, and the pull request is cumulative anyway. The four
 # projects are staggered because they share one API key and one runner pool.
 on:
   workflow_dispatch:

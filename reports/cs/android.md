@@ -1,18 +1,19 @@
-# Android l10n QA — cs
+# Firefox for Android l10n QA — cs
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-19 @ `57c409b04755` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 2,803 |
+| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 2,553 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for cs: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
+Also for cs: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -44,8 +45,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 45 |
-| Strings | 2,803 |
+| Files | 44 |
+| Strings | 2,553 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -69,6 +70,8 @@ The locale is complete against the en-US source.
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
 
+The count includes Focus for Android's strings for this locale, which the same team translates, so both projects infer the same conventions. Nothing there is checked here.
+
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `german-double` 20 | **german-double** |
@@ -83,14 +86,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (121)
+## 3. Open findings (103)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 75 |
-| 3 | Degraded language (grammar, spelling, terminology) | 46 |
+| 2 | Wrong content (says something other than the English) | 64 |
+| 3 | Degraded language (grammar, spelling, terminology) | 39 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -406,7 +409,7 @@ _Nothing reported._
     - Source: `Deleted %1$s from history`
     - Suggest: `%1$s bylo smazáno z historie`
     - The developer comment says %1$s is the shortened URL OR the actual deleted search term; prefixing with "Adresa" (address) makes the message wrong for search terms.
-- _…and 20 more; see `state/` for the full list._
+- _…and 9 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -515,26 +518,6 @@ _Nothing reported._
     - Source: `Your report helps us understand and fix issues in %1$s to make it better for everyone. %2$s`
     - Suggest: `aby byla pro všechny co nejlepší`
     - The subject is "aplikace %1$s", which is feminine in Czech, so the past participle must be "byla" and the adjective agreement follows.
-- `biometric_auth_image_description` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — Content description uses accusative case instead of nominative for "Fingerprint icon".
-    - Current: `Ikonu otisku prstu`
-    - Source: `Fingerprint icon`
-    - Suggest: `Ikona otisku prstu`
-    - The source is a noun phrase label "Fingerprint icon"; Czech should use nominative "Ikona otisku prstu", not accusative "Ikonu".
-- `mozac_browser_errorpages_security_bad_cert_techInfo` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — Misspelling "pokračovaní" and missing reflexive/preposition in "vydávat za zmiňovaný server"; source also says "site", not "server".
-    - Current: `Někdo se může snažit vydávat za zmiňovaný server a pokračovaní může být riskantní.`
-    - Source: `{ <label> }Someone could be trying to impersonate the site and continuing could be risky.{ </label> } { <br> }{ <br> } { <label> }%1$s does not trust { <b> }%2$s{ </b> } because its certificate issuer is unknown, the ce…`
-    - Suggest: `Někdo se může snažit vydávat za tento server a pokračování může být riskantní.`
-    - "pokračovaní" is a spelling error (correct: "pokračování"); "zmiňovaný" has no counterpart in the source.
-- `preference_privacy_block_analytics_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — Misspelling "shromážďování" and missing comma before "jako".
-    - Current: `Slouží k shromážďování, analýze a měření aktivit jako je klepnutí nebo posouvání`
-    - Source: `Used to collect, analyze and measure activities like tapping and scrolling`
-    - Suggest: `Slouží ke shromažďování, analýze a měření aktivit, jako je klepnutí nebo posouvání`
-    - Correct Czech spelling is "shromažďování"; a comma is required before the comparative clause "jako je…".
-- `qualified_text` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — Wrong abbreviation for the European Union: "EÚ" is Slovak, Czech uses "EU".
-    - Current: `(EÚ)`
-    - Source: `Qualified as specified in Regulation (EU) 2024/1183.`
-    - Suggest: `(EU)`
-    - The source reads "Regulation (EU) 2024/1183"; the Czech abbreviation of Evropská unie is "EU", not the Slovak "EÚ".
 
 ### D. Terminology, register & consistency
 
@@ -593,21 +576,6 @@ _Nothing reported._
     - Source: `Allow audio and video`
     - Suggest: `Povolit automatické přehrávání zvuků i videí`
     - The two related autoplay options are translated as "Blokovat automatické přehrávání zvuků"/"...zvuků i videí"; this one drops the autoplay notion, so the same setting group uses inconsistent terminology.
-- `preference_category_search` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — Preference category title "Search" rendered as a verb ("Hledat") instead of a noun heading.
-    - Current: `Hledat`
-    - Source: `Search`
-    - Suggest: `Vyhledávání`
-    - This is a settings category heading alongside nouns like "Výkon", "Soukromí", "Zabezpečení"; the imperative verb form is inconsistent and wrong for a category label.
-- `preference_privacy_block_analytics` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — "analytic trackers" translated as "analytické prvky", dropping the "tracker" term used consistently in sibling strings.
-    - Current: `Blokovat analytické prvky`
-    - Source: `Block analytic trackers`
-    - Suggest: `Blokovat analytické sledovací prvky`
-    - Neighbouring settings render "trackers" as "sledovací prvky"; here the tracking notion is lost.
-- `preference_site_permissions` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — "Site permissions" rendered as "Oprávnění serverů" instead of the site terminology used elsewhere.
-    - Current: `Oprávnění serverů`
-    - Source: `Site permissions`
-    - Suggest: `Oprávnění stránek`
-    - Elsewhere in this file "sites" is consistently translated as "stránky" (e.g. "Blokovat potenciálně nebezpečné a podvodné stránky"); "servery" means servers.
 
 ### E. Typography, punctuation & spacing
 
@@ -634,7 +602,7 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (11)
+### Fixed to date (7)
 
 - `mozac_feature_prompt_folder_upload_confirm_message` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-cs/strings.xml` — fixed 2026-10-18
 - `bookmark_saved_in_folder_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — fixed 2026-10-18
@@ -643,7 +611,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `preference_doh_provider_custom_dialog_error_https` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — fixed 2026-10-18
 - `search_add_custom_engine_suggest_string_example_2` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — fixed 2026-10-18
 - `snackbar_message_bookmarks_saved_in_2` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — fixed 2026-10-18
-- `contextmenu_erased_images_note2` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — fixed 2026-10-18
-- `errorpage_httpsonly_message2` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — fixed 2026-10-18
-- `preference_remote_debugging` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — fixed 2026-10-18
-- `preference_switch_autocomplete_user_list` — `mozilla-mobile/focus-android/app/src/main/res/values-cs/strings.xml` — fixed 2026-10-18

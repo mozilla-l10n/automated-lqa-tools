@@ -1,0 +1,22 @@
+{
+ "conventions_shared_with": "Firefox for Android",
+ "dismissed": 0,
+ "display_name": "Focus for Android l10n",
+ "fixed_total": 0,
+ "l10n_repo": "https://github.com/mozilla-l10n/android-l10n",
+ "l10n_sha": "f1e4f5447b8d",
+ "last_run": "2026-10-30",
+ "locale": "id",
+ "missing": 9,
+ "mode": "checks-only",
+ "open": 15,
+ "previous_run": "2026-10-26",
+ "previous_sha": "f1e4f5447b8d",
+ "project": "focus_android",
+ "reviewed": 0,
+ "source_repo": "https://github.com/mozilla-l10n/android-l10n",
+ "source_sha": "f1e4f5447b8d",
+ "strings": 241,
+ "suppressed": 0,
+ "withdrawn_total": 0
+}

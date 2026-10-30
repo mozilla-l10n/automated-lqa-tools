@@ -329,66 +329,6 @@
    "pontoon_url": "https://pontoon.mozilla.org/fa/firefox-for-android/mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml/?string=207312",
    "outcome": "approved",
    "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
-  },
-  {
-   "date": "2026-10-07",
-   "group": "E",
-   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
-   "string_id": "onboarding_first_screen_title",
-   "pontoon": {
-    "server": "https://pontoon.mozilla.org",
-    "project": "focus-for-android",
-    "resource": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
-    "key": [
-     "onboarding_first_screen_title"
-    ]
-   },
-   "fids": [
-    "ed9809c1d7d1"
-   ],
-   "findings": [
-    "Stray space after the ZWNJ in \"خوش‌ آمدید\"."
-   ],
-   "source": "Welcome to %1$s",
-   "original": "به %1$s خوش‌ آمدید",
-   "text": "به %1$s خوش آمدید",
-   "status": "approved",
-   "status_date": "2026-10-07",
-   "comment": "",
-   "pontoon_pk": 12271413,
-   "pontoon_url": "https://pontoon.mozilla.org/fa/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=261490",
-   "outcome": "approved",
-   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
-  },
-  {
-   "date": "2026-10-07",
-   "group": "E",
-   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
-   "string_id": "preference_autocomplete_add_confirmation",
-   "pontoon": {
-    "server": "https://pontoon.mozilla.org",
-    "project": "focus-for-android",
-    "resource": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
-    "key": [
-     "preference_autocomplete_add_confirmation"
-    ]
-   },
-   "fids": [
-    "2994005b8e43"
-   ],
-   "findings": [
-    "Missing sentence-final period present in the source."
-   ],
-   "source": "New custom URL added.",
-   "original": "نشانی سفارشی جدید اضافه شد",
-   "text": "نشانی سفارشی جدید اضافه شد.",
-   "status": "rejected",
-   "status_date": "2026-10-07",
-   "comment": "",
-   "pontoon_pk": 12271412,
-   "pontoon_url": "https://pontoon.mozilla.org/fa/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=224054",
-   "outcome": "moved",
-   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   }
  ]
 }

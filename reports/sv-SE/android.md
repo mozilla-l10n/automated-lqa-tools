@@ -1,18 +1,19 @@
-# Android l10n QA — sv-SE
+# Firefox for Android l10n QA — sv-SE
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-19 @ `ea17dbc84971` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 5 of 2,803 |
+| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 2,553 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for sv-SE: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
+Also for sv-SE: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -44,8 +45,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 45 |
-| Strings | 2,803 |
+| Files | 44 |
+| Strings | 2,553 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -69,6 +70,8 @@ The locale is complete against the en-US source.
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
 
+The count includes Focus for Android's strings for this locale, which the same team translates, so both projects infer the same conventions. Nothing there is checked here.
+
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `straight-double` 9, `curly-double` 6 | _mixed_ |
@@ -83,14 +86,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (78)
+## 3. Open findings (73)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 30 |
-| 3 | Degraded language (grammar, spelling, terminology) | 48 |
+| 2 | Wrong content (says something other than the English) | 29 |
+| 3 | Degraded language (grammar, spelling, terminology) | 44 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -244,11 +247,6 @@ _Nothing in this category._
     - Source: `Site asked to turn off ad blocker`
     - Suggest: `Webbplatsen bad mig stänga av annonsblockeraren`
     - Source: 'Site asked to turn off ad blocker' means the site made the request. 'ombeds' is passive ('is asked'), so it reverses who is asking whom.
-- `preference_privacy_should_block_cookies_cross_site_option` — `mozilla-mobile/focus-android/app/src/main/res/values-sv-rSE/strings.xml` — "Cross-site cookies" is rendered as "globala kakor" (global cookies), which names the wrong thing.
-    - Current: `globala kakor`
-    - Source: `Block cross-site cookies`
-    - Suggest: `kakor mellan webbplatser`
-    - The source says cross-site, meaning cookies shared between different sites, not 'global' cookies. Firefox sv-SE elsewhere uses 'mellan webbplatser'.
 
 ### C. Grammar, agreement & spelling
 
@@ -452,21 +450,6 @@ _Nothing in this category._
     - Source: `Privacy or security concerns`
     - Suggest: `Sekretess- eller säkerhetsproblem`
     - In Swedish, when two compounds share the same final part ("sekretessproblem" and "säkerhetsproblem"), the first must end in a hyphen. Without it, "Sekretess" stands on its own as a separate noun, which is a spelling error and changes the reading of the source "Privacy or security concerns".
-- `about_content` — `mozilla-mobile/focus-android/app/src/main/res/values-sv-rSE/strings.xml` — Ungrammatical phrase: "för" is missing before "att" in the purpose clause.
-    - Current: `uppdatera inställningar att tillåta trackers`
-    - Source: `{ <p> }%1$s puts you in control.{ </p> } { <p> }Use it as a private browser: { <ul> } { <li> }Search and browse right in the app{ </li> } { <li> }Block trackers (or update settings to allow trackers){ </li> } { <li> }Er…`
-    - Suggest: `uppdatera inställningar för att tillåta spårare`
-    - 'update settings to allow trackers' needs 'för att' in Swedish. 'uppdatera inställningar att tillåta' is ungrammatical.
-- `onboarding_first_screen_terms_of_use_link_2` — `mozilla-mobile/focus-android/app/src/main/res/values-sv-rSE/strings.xml` — The link text is in the indefinite form but is inserted into a sentence that needs the definite form.
-    - Current: `användarvillkor för Firefox`
-    - Source: `Firefox Terms of Use`
-    - Suggest: `användarvillkoren för Firefox`
-    - This link is substituted into 'Genom att fortsätta godkänner du %1$s.', which gives 'godkänner du användarvillkor för Firefox'. The source refers to the specific Firefox Terms of Use ('agree to the Firefox Terms of Use'), so Swedish needs the definite form 'användarvillkoren'.
-- `preference_privacy_stealth_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-sv-rSE/strings.xml` — The imperative 'Dölj' is paired with the present-tense 'blockerar', so the two verbs don't match.
-    - Current: `och blockerar skärmdumpar`
-    - Source: `Hide webpages when switching apps and block taking screenshots.`
-    - Suggest: `och blockera skärmdumpar`
-    - The source uses two parallel imperatives ('Hide ... and block ...'), so the second verb should also be in the imperative.
 
 ### D. Terminology, register & consistency
 
@@ -490,11 +473,6 @@ _Nothing in this category._
     - Source: `Font size will match your Android settings. Disable to manage font size here.`
     - Suggest: `Teckenstorlek matchar`
     - The same term should be rendered the same way on one surface. The title preference_accessibility_font_size_title uses 'Teckenstorlek', and the compound as written is misspelled (it would be 'teckensnittsstorlek').
-- `about_content` — `mozilla-mobile/focus-android/app/src/main/res/values-sv-rSE/strings.xml` — The English word 'trackers' is used, but the same app uses 'spårare' elsewhere.
-    - Current: `Blockera trackers`
-    - Source: `{ <p> }%1$s puts you in control.{ </p> } { <p> }Use it as a private browser: { <ul> } { <li> }Search and browse right in the app{ </li> } { <li> }Block trackers (or update settings to allow trackers){ </li> } { <li> }Er…`
-    - Suggest: `Blockera spårare`
-    - cfr_for_start_browsing in Focus renders trackers as 'spårare'. The About text keeps the English loanword, so the term is inconsistent within the same app.
 
 ### E. Typography, punctuation & spacing
 

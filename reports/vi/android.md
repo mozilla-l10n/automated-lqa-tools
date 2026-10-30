@@ -1,30 +1,27 @@
-# Android l10n QA — vi
+# Firefox for Android l10n QA — vi
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-19 @ `ea17dbc84971` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 7 of 2,801 |
+| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 2,551 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for vi: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
+Also for vi: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `compact_search_bar_widget_description` — `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — The widget name "Compact search bar" is translated as the command "Collapse the search bar".
-    - Current: `Thu gọn thanh tìm kiếm`
-    - Source: `Compact search bar`
-    - Suggest: `Thanh tìm kiếm thu gọn`
-    - The source is a noun phrase that names a widget in the widget picker. "Thu gọn thanh tìm kiếm" is verb first, so it reads as an instruction to collapse the search bar. Putting the modifier after the noun ("Thanh tìm kiếm thu gọn") makes it a name again.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -48,8 +45,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 45 |
-| Strings | 2,801 |
+| Files | 44 |
+| Strings | 2,551 |
 | Missing strings | 2 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -77,6 +74,8 @@ _Completeness is reported, never raised as a finding: a missing string needs tra
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
 
+The count includes Focus for Android's strings for this locale, which the same team translates, so both projects infer the same conventions. Nothing there is checked here.
+
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 13, `straight-double` 2 | **curly-double** |
@@ -91,9 +90,9 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (60)
+## 3. Open findings (52)
 
-> **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `nova_onboarding_marketing_body_line_three` — `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — "help Firefox win" is rendered as "so that Firefox can continue", which suggests Firefox's survival depends on the user's consent.
     - Current: `để Firefox có thể tiếp tục`
@@ -105,19 +104,14 @@ _Nothing reported._
     - Source: `%s protects you from many of the most common trackers that follow what you do online.`
     - Suggest: `khỏi nhiều trình theo dõi phổ biến nhất`
     - The source limits the claim to "many of" the most common trackers. Without that limit, the translation promises wider protection than the product offers.
-- `preference_mozilla_telemetry_summary2` — `mozilla-mobile/focus-android/app/src/main/res/values-vi/strings.xml` — The Vietnamese drops "strives to", so an effort becomes a flat statement that Mozilla collects only what it needs.
-    - Current: `Mozilla chỉ thu thập những gì chúng tôi cần cung cấp`
-    - Source: `Mozilla strives to collect only what we need to provide and improve %1$s for everyone.`
-    - Suggest: `Mozilla cố gắng chỉ thu thập những gì chúng tôi cần để cung cấp`
-    - The source says Mozilla strives to collect only what it needs. The Vietnamese leaves out the effort and states it as fact, which changes how certain the claim about data collection is.
 
 _Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 31 |
-| 3 | Degraded language (grammar, spelling, terminology) | 23 |
+| 2 | Wrong content (says something other than the English) | 28 |
+| 3 | Degraded language (grammar, spelling, terminology) | 18 |
 | 4 | Cosmetic (typography, spacing) | 6 |
 
 ### A. Functional, markup, variables & plurals
@@ -281,31 +275,6 @@ _Nothing in this category._
     - Source: `Search settings`
     - Suggest: `Tìm kiếm cài đặt`
     - The developer comment states 'Search' is a verb here (the screen searches through settings). 'Cài đặt tìm kiếm' means 'search settings' as in configuration of search, a different screen.
-- `about_content` — `mozilla-mobile/focus-android/app/src/main/res/values-vi/strings.xml` — "produced by Mozilla" is translated as "founded by Mozilla" (được sáng lập bởi).
-    - Current: `được sáng lập bởi Mozilla`
-    - Source: `{ <p> }%1$s puts you in control.{ </p> } { <p> }Use it as a private browser: { <ul> } { <li> }Search and browse right in the app{ </li> } { <li> }Block trackers (or update settings to allow trackers){ </li> } { <li> }Er…`
-    - Suggest: `được phát triển bởi Mozilla`
-    - "sáng lập" means to found an organisation, not to make a product. The source says Focus is produced (made) by Mozilla.
-- `cfr_for_toolbar_delete_icon2` — `mozilla-mobile/focus-android/app/src/main/res/values-vi/strings.xml` — "start fresh" is rendered as "bắt đầu làm mới", which reads as "start refreshing".
-    - Current: `bắt đầu làm mới trên một thẻ mới`
-    - Source: `Tap here to trash it all — history, cookies, everything — and start fresh on a new tab.`
-    - Suggest: `bắt đầu lại từ đầu trên một thẻ mới`
-    - In browser UI, "làm mới" is the usual term for refresh/reload. The source means starting over with a clean slate in a new tab, not refreshing anything.
-- `errorpage_httpsonly_message2` — `mozilla-mobile/focus-android/app/src/main/res/values-vi/strings.xml` — The general "tries to use" is rendered in the past tense as "đã thử" ("tried").
-    - Current: `%1$s đã thử kết nối HTTPS bất cứ khi nào có thể`
-    - Source: `%1$s tries to use an HTTPS connection whenever possible for more security. <a href="%2$s">Learn more{ </a> } { <br/> }{ <br/> } Change this setting in Settings > Privacy &amp; Security > Security.`
-    - Suggest: `%1$s luôn cố gắng sử dụng kết nối HTTPS bất cứ khi nào có thể`
-    - The source describes the app's usual behaviour ("whenever possible"), not a single attempt in the past. A past-tense verb clashes with "bất cứ khi nào có thể" ("whenever possible").
-- `preference_mozilla_telemetry_summary2` — `mozilla-mobile/focus-android/app/src/main/res/values-vi/strings.xml` — The Vietnamese drops "strives to", so an effort becomes a flat statement that Mozilla collects only what it needs.
-    - Current: `Mozilla chỉ thu thập những gì chúng tôi cần cung cấp`
-    - Source: `Mozilla strives to collect only what we need to provide and improve %1$s for everyone.`
-    - Suggest: `Mozilla cố gắng chỉ thu thập những gì chúng tôi cần để cung cấp`
-    - The source says Mozilla strives to collect only what it needs. The Vietnamese leaves out the effort and states it as fact, which changes how certain the claim about data collection is.
-- `preference_phone_feature_media_key_system_access` — `mozilla-mobile/focus-android/app/src/main/res/values-vi/strings.xml` — "Nội dung DRM được kiểm soát" reads as "controlled DRM content", not "content controlled by DRM".
-    - Current: `Nội dung DRM được kiểm soát`
-    - Source: `DRM-controlled content`
-    - Suggest: `Nội dung được kiểm soát bằng DRM`
-    - The source means content that DRM controls (EME access). The Vietnamese word order makes "được kiểm soát" describe DRM content, which changes the meaning.
 
 ### C. Grammar, agreement & spelling
 
@@ -369,21 +338,6 @@ _Nothing in this category._
     - Source: `Send list of items blocked by tracking protection`
     - Suggest: `tính năng chống theo dõi`
     - "tính năng" (feature) and "trình chống theo dõi" (tracking protector) both name the same thing. Putting them together reads like an unfinished edit and is ungrammatical. The source simply says "tracking protection".
-- `onboarding_second_screen_subtitle_two` — `mozilla-mobile/focus-android/app/src/main/res/values-vi/strings.xml` — Typo "trifnh" instead of "trình" in "trình duyệt".
-    - Current: `trifnh duyệt`
-    - Source: `Make %1$s your default to protect your data with every link you open.`
-    - Suggest: `trình duyệt`
-    - "trifnh" is not a Vietnamese word. It is a Telex input slip for "trình" (browser = "trình duyệt").
-- `preference_search_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-vi/strings.xml` — Misspelling: "tự đồng điền" should be "tự động điền" (autocomplete).
-    - Current: `tự đồng điền`
-    - Source: `Set default, autocomplete`
-    - Suggest: `tự động điền`
-    - "đồng" is a typo for "động"; the term for autocomplete is "tự động điền".
-- `preference_subitem_autocomplete` — `mozilla-mobile/focus-android/app/src/main/res/values-vi/strings.xml` — Word order makes it mean "a URL that autofills" instead of the feature that autocompletes URLs.
-    - Current: `URL tự động điền`
-    - Source: `URL Autocomplete`
-    - Suggest: `Tự động điền URL`
-    - Vietnamese puts the head word first, so "URL tự động điền" describes a kind of URL. The setting is the URL autocomplete feature, which is "Tự động điền URL".
 
 ### D. Terminology, register & consistency
 

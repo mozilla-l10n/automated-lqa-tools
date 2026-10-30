@@ -1,18 +1,19 @@
-# Android l10n QA — el
+# Firefox for Android l10n QA — el
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-19 @ `57c409b04755` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 14 of 2,803 |
+| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 2,553 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for el: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
+Also for el: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -44,8 +45,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 45 |
-| Strings | 2,803 |
+| Files | 44 |
+| Strings | 2,553 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -69,6 +70,8 @@ The locale is complete against the en-US source.
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
 
+The count includes Focus for Android's strings for this locale, which the same team translates, so both projects infer the same conventions. Nothing there is checked here.
+
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 45 | **guillemet** |
@@ -83,9 +86,9 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (41)
+## 3. Open findings (32)
 
-> **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `firefox_labs_website_isolation_description` — `mozilla-mobile/fenix/app/src/main/res/values-el/strings.xml` — The hedge "helps protect" is rendered as a flat claim that the feature protects your data.
     - Current: `που προστατεύει τα δεδομένα σας`
@@ -97,19 +100,14 @@ _Nothing reported._
     - Source: `One tap helps stop companies spying on your clicks.`
     - Suggest: `Ένα πάτημα βοηθά να εμποδίσετε τις εταιρείες`
     - The source says one tap 'helps stop' companies spying. The Greek ('εμποδίζει', 'stops') turns that into an unconditional guarantee of protection the product does not make.
-- `preference_safe_browsing_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-el/strings.xml` — The translation drops "reported", so it claims Focus blocks all deceptive, attack, malware and unwanted-software sites, not just reported ones.
-    - Current: `Φραγή ιστοτόπων εξαπάτησης`
-    - Source: `Block reported deceptive and attack sites, malware sites, and unwanted software sites.`
-    - Suggest: `Φραγή αναφερόμενων ιστοτόπων εξαπάτησης`
-    - The source limits blocking to sites that have been reported. Without that limit, the Greek promises more protection than the feature gives.
 
 _Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 17 |
-| 3 | Degraded language (grammar, spelling, terminology) | 22 |
+| 2 | Wrong content (says something other than the English) | 15 |
+| 3 | Degraded language (grammar, spelling, terminology) | 15 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
@@ -193,16 +191,6 @@ _Nothing in this category._
     - Source: `Restore tab`
     - Suggest: `Επαναφορά καρτέλας`
     - The source and developer comment refer to restoring the single crashed tab on the crash page. «καρτελών» is genitive plural, so the button reads "Restore tabs". The sibling string tab_crash_close correctly uses the singular «καρτέλας».
-- `preference_safe_browsing_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-el/strings.xml` — The translation drops "reported", so it claims Focus blocks all deceptive, attack, malware and unwanted-software sites, not just reported ones.
-    - Current: `Φραγή ιστοτόπων εξαπάτησης`
-    - Source: `Block reported deceptive and attack sites, malware sites, and unwanted software sites.`
-    - Suggest: `Φραγή αναφερόμενων ιστοτόπων εξαπάτησης`
-    - The source limits blocking to sites that have been reported. Without that limit, the Greek promises more protection than the feature gives.
-- `tab_crash_report_description` — `mozilla-mobile/focus-android/app/src/main/res/values-el/strings.xml` — The source's reason, "As a private browser", is rendered as "For security reasons".
-    - Current: `Για λόγους ασφαλείας, δεν αποθηκεύουμε`
-    - Source: `As a private browser, we never save and cannot restore this tab.`
-    - Suggest: `Ως ιδιωτικό πρόγραμμα περιήγησης, δεν αποθηκεύουμε ποτέ`
-    - The en-US explains that the tab can't be restored because Focus is a private browser that never saves tabs. The Greek gives a different reason (security) and drops "never".
 
 ### C. Grammar, agreement & spelling
 
@@ -261,26 +249,6 @@ _Nothing in this category._
     - Source: `%s is on guard`
     - Suggest: `Το %s`
     - The Greek neuter article must use Greek Tau and omicron. Latin look-alikes are misspelt, break search and are misread by screen readers.
-- `dialog_addtohomescreen_action_add` — `mozilla-mobile/focus-android/app/src/main/res/values-el/strings.xml` — Missing accent in «Προσθηκη».
-    - Current: `Προσθηκη`
-    - Source: `Add`
-    - Suggest: `Προσθήκη`
-    - Mixed-case Greek requires the tonos; the correct spelling is «Προσθήκη», as used elsewhere (e.g. menu_add_to_home_screen).
-- `dialog_addtohomescreen_action_cancel` — `mozilla-mobile/focus-android/app/src/main/res/values-el/strings.xml` — Missing accent in «Ακυρωση».
-    - Current: `Ακυρωση`
-    - Source: `Cancel`
-    - Suggest: `Ακύρωση`
-    - Mixed-case Greek requires the tonos; correct spelling is «Ακύρωση».
-- `enable_search_suggestions_no` — `mozilla-mobile/focus-android/app/src/main/res/values-el/strings.xml` — Missing accent on capital initial in «Οχι».
-    - Current: `Οχι`
-    - Source: `No`
-    - Suggest: `Όχι`
-    - In mixed case, an initial capital vowel keeps its tonos; correct spelling is «Όχι».
-- `search_add_manually_save` — `mozilla-mobile/focus-android/app/src/main/res/values-el/strings.xml` — Missing accent in "Αποθηκευση".
-    - Current: `Αποθηκευση`
-    - Source: `Save`
-    - Suggest: `Αποθήκευση`
-    - Greek spelling needs the accent on the antepenultimate syllable: Αποθήκευση.
 
 ### D. Terminology, register & consistency
 
@@ -304,21 +272,6 @@ _Nothing in this category._
     - Source: `Always request desktop site`
     - Suggest: `Πάντα αίτημα έκδοσης υπολογιστή`
     - The source means asking a website for its desktop version. "απαίτηση" means a requirement or demand. Firefox uses "αίτημα" for requesting the desktop site.
-- `exit_fullscreen_with_gesture_short` — `mozilla-mobile/focus-android/app/src/main/res/values-el/strings.xml` — Translation is 78 characters, exceeding the 68-character limit set in the developer comment.
-    - Current: `Σύρετε από το πάνω μέρος και χρησιμοποιήστε τη χειρονομία επιστροφής για έξοδο`
-    - Source: `Drag from top & use back gesture to exit`
-    - Suggest: `Σύρετε από πάνω και κάντε χειρονομία επιστροφής για έξοδο`
-    - Developer comment: 'This text should be as short as possible, max 68 chars'; the current text is 78 characters and may be truncated.
-- `qualified_text` — `mozilla-mobile/focus-android/app/src/main/res/values-el/strings.xml` — "Qualified" in the eIDAS sense is translated as "Πιστοποιημένο" ("certified") instead of the regulation's Greek term "εγκεκριμένο".
-    - Current: `Πιστοποιημένο όπως ορίζει`
-    - Source: `Qualified as specified in Regulation (EU) 2024/1183.`
-    - Suggest: `Εγκεκριμένο όπως ορίζει`
-    - The developer comment says this is the eIDAS term "qualified" (as in QWAC). As I understand it, the Greek text of the regulation uses "εγκεκριμένο" (e.g. "εγκεκριμένο πιστοποιητικό"), so "πιστοποιημένο" doesn't match the legal wording.
-- `shortcut_erase_and_open_short_label` — `mozilla-mobile/focus-android/app/src/main/res/values-el/strings.xml` — The short shortcut label is 20 characters, double the 10-character maximum set in the developer comment.
-    - Current: `Διαγραφή και άνοιγμα`
-    - Source: `Erase & open`
-    - Suggest: `Διαγρ./άνοιγμα`
-    - The developer comment says Android recommends at most 10 characters for this launcher label. The Greek is 20 characters and will be cut off on the home screen.
 
 ### E. Typography, punctuation & spacing
 

@@ -1,18 +1,19 @@
-# Android l10n QA — en-CA
+# Firefox for Android l10n QA — en-CA
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-19 @ `57c409b04755` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 2,802 |
+| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 2,552 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for en-CA: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
+Also for en-CA: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -44,8 +45,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 45 |
-| Strings | 2,802 |
+| Files | 44 |
+| Strings | 2,552 |
 | Missing strings | 1 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -72,6 +73,8 @@ _Completeness is reported, never raised as a finding: a missing string needs tra
 ### Conventions detected in this locale
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
+
+The count includes Focus for Android's strings for this locale, which the same team translates, so both projects infer the same conventions. Nothing there is checked here.
 
 | Convention | Counts | Inferred |
 |---|---|---|
@@ -138,6 +141,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (1)
+### Fixed to date (0)
 
-- `preference_privacy_block_analytics_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-en-rCA/strings.xml` — fixed 2026-08-21
+_Nothing fixed yet._

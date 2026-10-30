@@ -1,0 +1,377 @@
+name: Focus for Android l10n QA
+
+# Separate from the Firefox for Android workflow (android-qa.yml) although
+# both read android-l10n: Focus is its own Pontoon project with its own
+# reviewers, and gets its own pull request on l10n-qa/focus_android, so
+# neither has to read the other's findings.
+#
+# Weekly rather than daily: findings are a backlog a locale team works
+# through over weeks, and the pull request is cumulative anyway. The four
+# projects are staggered because they share one API key and one runner pool.
+on:
+  workflow_dispatch:
+    inputs:
+      locales:
+        description: 'Comma-separated locale codes, or "all"'
+        required: false
+        default: 'all'
+      mode:
+        description: 'auto = baseline for a new locale, incremental otherwise'
+        required: false
+        default: 'auto'
+        type: choice
+        options: [auto, incremental, baseline]
+      dry_run:
+        description: 'Run everything but write nothing'
+        required: false
+        default: false
+        type: boolean
+      no_llm:
+        description: 'Deterministic checks only; no API calls'
+        required: false
+        default: false
+        type: boolean
+  schedule:
+    - cron: '05 8 * * 1'   # Monday, 08:05 UTC
+
+concurrency:
+  # Runs push to a shared branch, so never let two overlap.
+  group: focus_android-l10n-qa
+  cancel-in-progress: false
+
+# Read-only by default. A job-level block replaces this one rather than
+# adding to it, so nothing here can widen a job that does not ask.
+permissions:
+  contents: read
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      locales: ${{ steps.pick.outputs.locales }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+      - run: pip install PyYAML
+      - id: pick
+        name: Resolve the locale list
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os, yaml
+          requested = os.environ["REQUESTED"].strip()
+          config = yaml.safe_load(open("focus_android/config.yaml"))
+          known = config["locales"]
+          if not requested or requested == "all":
+              picked = known
+          else:
+              picked = [x.strip() for x in requested.split(",") if x.strip()]
+              unknown = [x for x in picked if x not in known]
+              if unknown:
+                  raise SystemExit(
+                      f"not in focus_android/config.yaml: {', '.join(unknown)}"
+                  )
+          print("locales=" + json.dumps(picked))
+          PY
+        env:
+          REQUESTED: ${{ inputs.locales || 'all' }}
+
+  review:
+    needs: plan
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    timeout-minutes: 180
+    strategy:
+      # One locale per job so a single failure cannot take the rest down, and
+      # so a slow baseline does not block the incremental runs.
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        locale: ${{ fromJson(needs.plan.outputs.locales) }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Cache the upstream clones
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: work
+          # Keyed by project as well as locale: every workflow caches the
+          # same `work` path, and an unnamespaced key let one project's
+          # clone be restored into another's and fetched as if it were its.
+          key: repos-focus_android-${{ matrix.locale }}-${{ github.run_id }}
+          restore-keys: |
+            repos-focus_android-${{ matrix.locale }}-
+
+      - name: Check out android-l10n
+        # One repository holds the source and every locale side by side, and
+        # it is small enough (~600 KB of XML per locale) not to need the
+        # sparse tricks the Firefox workflow uses.
+        run: |
+          set -euo pipefail
+          # Reuse the restored clone only if it is actually this repository.
+          # A cache holding some other tree must be discarded, not fetched
+          # into: the run would otherwise succeed against the wrong strings.
+          if [ -d work/l10n/.git ] && \
+             [ "$(git -C work/l10n remote get-url origin)" \
+               != "https://github.com/mozilla-l10n/android-l10n" ]; then
+            echo "cached work/l10n is not android-l10n; discarding it"
+            rm -rf work/l10n
+          fi
+          if [ -d work/l10n/.git ]; then
+            git -C work/l10n fetch --depth 1 origin main
+            git -C work/l10n reset --hard origin/main
+          else
+            git clone --depth 1 --filter=blob:none \
+              https://github.com/mozilla-l10n/android-l10n work/l10n
+          fi
+          du -sh work/l10n
+
+      - name: Record Pontoon's review of submitted suggestions
+        # Before the review, so a rejection that dismisses a finding takes
+        # effect in this run. Reads the last two weeks of the submitting
+        # account's translations; a locale with no suggestions recorded makes
+        # no call. The token is scoped to this step, never the review's. It
+        # never fails the job: an unreachable Pontoon leaves records pending.
+        if: ${{ !inputs.dry_run }}
+        env:
+          PONTOON_TOKEN: ${{ secrets.PONTOON_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          LOCALE: ${{ matrix.locale }}
+          NO_LLM: ${{ inputs.no_llm }}
+        run: |
+          extra=()
+          if [ "$NO_LLM" = 'true' ]; then extra+=(--no-llm); fi
+          python lib/pontoon_review.py --project focus_android \
+            --locale "$LOCALE" \
+            --l10n-dir work/l10n \
+            --source-dir work/l10n \
+            "${extra[@]}" \
+            --write < /dev/null
+
+      - name: Review
+        # Inputs reach the script through the environment, never pasted into
+        # it with an expression: interpolated text is shell code.
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          LOCALE: ${{ matrix.locale }}
+          MODE: ${{ inputs.mode || 'auto' }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          NO_LLM: ${{ inputs.no_llm }}
+        run: |
+          extra=()
+          if [ "$DRY_RUN" = 'true' ]; then extra+=(--dry-run); fi
+          if [ "$NO_LLM" = 'true' ]; then extra+=(--no-llm); fi
+          python lib/run.py --project focus_android \
+            --locale "$LOCALE" \
+            --mode "$MODE" \
+            --l10n-dir work/l10n \
+            --source-dir work/l10n \
+            "${extra[@]}" \
+            < /dev/null
+
+      - name: Upload this locale's state and report
+        if: ${{ !inputs.dry_run }}
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: result-${{ matrix.locale }}
+          path: |
+            focus_android/state/${{ matrix.locale }}/
+            reports/${{ matrix.locale }}/focus_android.md
+            focus_android/locales/${{ matrix.locale }}/
+            focus_android/pontoon_suggestions/${{ matrix.locale }}.json
+          if-no-files-found: ignore
+          retention-days: 7
+
+  propose:
+    needs: review
+    # Propose whatever succeeded, even if some locales failed.
+    if: ${{ always() && !inputs.dry_run }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    env:
+      BRANCH: l10n-qa/focus_android
+      BASE: ${{ github.ref_name }}
+      # A push or pull request made with GITHUB_TOKEN cannot start a workflow
+      # run, so `Checks` on the QA pull request sits at "action_required"
+      # until somebody approves it by hand. No setting lifts that; the actor
+      # has to be something other than github-actions[bot]. QA_PR_TOKEN is a
+      # fine-grained PAT with contents:write and pull-requests:write on this
+      # repository alone. It falls back to github.token so a run still
+      # proposes its findings when the secret is missing or expired.
+      GH_TOKEN: ${{ secrets.QA_PR_TOKEN || github.token }}
+    steps:
+      - name: Say which identity is proposing
+        # Tested through the environment, not interpolated into the script:
+        # a secret pasted into a shell line is one quote away from being a
+        # syntax error.
+        env:
+          HAVE_PAT: ${{ secrets.QA_PR_TOKEN != '' }}
+        run: |
+          if [ "$HAVE_PAT" = 'true' ]; then
+            echo "proposing as the QA_PR_TOKEN owner; the PR's checks will run"
+          else
+            echo "::warning::QA_PR_TOKEN is not set; falling back to GITHUB_TOKEN. The pull request is still opened, but its checks will need approving by hand."
+          fi
+
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          # Kept for the `git push` below, which reuses this credential.
+          token: ${{ secrets.QA_PR_TOKEN || github.token }}
+
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+
+      - name: Switch to the rolling QA branch
+        id: switch
+        # One long-lived branch, so runs accumulate into a single open pull
+        # request instead of opening one per run. Done before the artifacts
+        # are applied so there is nothing in the tree to stash.
+        #
+        # Accumulating is only honest while that pull request is still open.
+        # These are squash-merged, so no commit on this branch ever becomes
+        # an ancestor of the base: once one is merged -- or closed unmerged
+        # -- the branch still carries the runs it already proposed, and the
+        # next run proposes them again. A one-locale run then arrives as a
+        # pull request touching every locale the last full run did, dates
+        # and all, for work that has already landed or been turned down.
+        # The review jobs read the base's state, too, so the locale that ran
+        # would be sitting on state from the base while every other locale
+        # kept the branch's. So unless there is an open pull request to add
+        # to, the branch is rebuilt from the base.
+        run: |
+          set -euo pipefail
+          git config user.name  'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+
+          open_pr=false
+          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null 2>&1; then
+            # Fetched either way: the `git push --force-with-lease` below
+            # needs an up-to-date remote-tracking ref, and refuses with
+            # "stale info" when it has none.
+            git fetch origin "$BRANCH"
+            if gh pr view "$BRANCH" --json state --jq .state 2>/dev/null \
+                 | grep -qx OPEN; then
+              open_pr=true
+            fi
+          fi
+
+          if [ "$open_pr" = true ]; then
+            echo "adding to the open pull request on $BRANCH"
+            # The previous run's tip, so the refresh comment can say what
+            # this run changed on top of it.
+            echo "prev=$(git rev-parse "origin/$BRANCH")" >> "$GITHUB_OUTPUT"
+            git checkout -B "$BRANCH" "origin/$BRANCH"
+            if ! git merge --no-edit "origin/$BASE"; then
+              # Only generated files can conflict. Locale instructions are
+              # human-edited, so the base wins those; state and reports are
+              # rewritten by this run anyway, so the branch keeps them.
+              git checkout --theirs -- focus_android/locales 2>/dev/null || true
+              git checkout --ours   -- focus_android/state focus_android/pontoon_suggestions reports 2>/dev/null || true
+              git add -A
+              git commit --no-edit
+            fi
+          else
+            echo "nothing open on $BRANCH: rebuilding it from $BASE"
+            git checkout -B "$BRANCH" "origin/$BASE"
+          fi
+
+      - name: Collect the per-locale results
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          pattern: result-*
+          merge-multiple: true
+          path: incoming
+
+      - name: Apply them
+        run: |
+          set -euo pipefail
+          if [ ! -d incoming ]; then
+            echo "no artifacts produced; nothing to propose"
+            exit 0
+          fi
+          # upload-artifact roots each artifact at the common ancestor of the
+          # paths it was given. Those are now `focus_android/state`, `focus_android/locales`
+          # and `reports/`, which diverge at the top, so the artifact carries
+          # full workspace-relative paths and unpacks at the root.
+          cp -R incoming/. ./
+          rm -rf incoming
+
+      - name: Refresh the cross-locale summary
+        run: python lib/summary.py --project focus_android
+
+      - name: Commit
+        id: commit
+        run: |
+          set -euo pipefail
+          git add focus_android/state reports focus_android/locales
+          git add focus_android/pontoon_suggestions 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "no changes: every locale is where it was"
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git commit -m "Focus for Android l10n QA: ${INPUTS_LOCALES} ($(date -u +%Y-%m-%d))"
+          git push --force-with-lease origin "$BRANCH"
+          echo 'changed=true' >> "$GITHUB_OUTPUT"
+        env:
+          INPUTS_LOCALES: ${{ inputs.locales || 'all' }}
+
+      - name: Open or update the pull request
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          PREV: ${{ steps.switch.outputs.prev }}
+          INPUTS_LOCALES: ${{ inputs.locales || 'all' }}
+        run: |
+          set -euo pipefail
+          # Generated, not sliced out of the rendered page, so an edit to
+          # that page cannot quietly change what a reviewer sees.
+          # Compared with the base, which holds what was last merged: the
+          # backlog alone is the same from one day to the next and says
+          # nothing about the run being proposed.
+          python lib/summary.py --project focus_android --pr-body \
+            --since "origin/$BASE" > /tmp/pr-body.md
+
+          if gh pr view "$BRANCH" --json state --jq .state 2>/dev/null | grep -qx OPEN; then
+            gh pr edit "$BRANCH" --body-file /tmp/pr-body.md
+            {
+              echo "Refreshed $(date -u +%Y-%m-%d) — locales: \`${INPUTS_LOCALES}\`"
+              # Empty when the pull request was opened after this job began.
+              if [ -n "$PREV" ]; then
+                echo
+                echo "Changes since the previous run on this branch (\`${PREV:0:7}\`):"
+                echo
+                python lib/summary.py --project focus_android --delta-table "$PREV"
+              fi
+            } > /tmp/pr-comment.md
+            gh pr comment "$BRANCH" --body-file /tmp/pr-comment.md
+          else
+            gh pr create \
+              --base "$BASE" --head "$BRANCH" \
+              --title "Focus for Android l10n QA" \
+              --body-file /tmp/pr-body.md
+          fi
+          gh pr view "$BRANCH" --json url --jq .url >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Summarize the run
+        run: |
+          {
+            echo '## Focus for Android l10n QA'
+            echo
+            sed -n '1,40p' reports/focus_android.md
+          } >> "$GITHUB_STEP_SUMMARY"

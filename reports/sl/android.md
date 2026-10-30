@@ -1,18 +1,19 @@
-# Android l10n QA — sl
+# Firefox for Android l10n QA — sl
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-19 @ `7ee8e61a4a7d` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 5 of 2,784 |
+| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 2,534 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for sl: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
+Also for sl: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -44,8 +45,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 45 |
-| Strings | 2,784 |
+| Files | 44 |
+| Strings | 2,534 |
 | Missing strings | 19 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -68,14 +69,16 @@ _Nothing retired._
 - `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-sl/strings.xml` — 8
 - `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-sl/strings.xml` — 5
 - `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — 4
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-sl/strings.xml` — 1
 - `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-sl/strings.xml` — 1
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-sl/strings.xml` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
+
+The count includes Focus for Android's strings for this locale, which the same team translates, so both projects infer the same conventions. Nothing there is checked here.
 
 | Convention | Counts | Inferred |
 |---|---|---|
@@ -92,15 +95,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (117)
+## 3. Open findings (99)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 65 |
-| 3 | Degraded language (grammar, spelling, terminology) | 42 |
-| 4 | Cosmetic (typography, spacing) | 10 |
+| 2 | Wrong content (says something other than the English) | 57 |
+| 3 | Degraded language (grammar, spelling, terminology) | 34 |
+| 4 | Cosmetic (typography, spacing) | 8 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -398,17 +401,6 @@ _Nothing in this category._
     - Source: `Clear selected reason`
     - Suggest: `Počisti izbrani razlog`
     - The source means clearing the selection in the field; "Prekliči" means "cancel" (and is already used for the Cancel button), not "clear".
-- `dismiss_no_suggestions_prompt_button` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — "Dismiss" is translated as "V redu" (OK), which is a different action label.
-    - Current: `V redu`
-    - Source: `Dismiss`
-    - Suggest: `Opusti`
-    - The source button dismisses the message; "V redu" means "OK", not "dismiss".
-- `preference_auto_battery_theme` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — "Set by Battery Saver" is rendered as an imperative "Set the battery saver", reversing the meaning.
-    - Current: `Nastavi ohranjevalnik baterije`
-    - Source: `Set by Battery Saver`
-    - Suggest: `Nastavi ohranjevalnik baterije → "Nastavi ohranjevalnik baterije" naj bo "Nastavi varčevanje z baterijo" (tj. "Določi ohranjevalnik baterije")`
-    - The source means the theme is determined by the Battery Saver setting; the Slovenian reads as a command to set/configure the battery saver, i.e. the battery saver becomes the object rather than the agent.
-- _…and 7 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -477,26 +469,6 @@ _Nothing in this category._
     - Source: `About translations in %1$s`
     - Suggest: `O prevodih v brskalniku %1$s`
     - %1$s is the app name (e.g. Firefox); appending the locative ending directly to the placeholder yields incorrect and unnatural output.
-- `notification_browsing_session_channel_description` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — "ni potrebno" should be "ni treba" in standard Slovenian.
-    - Current: `Aplikacije vam ni potrebno niti odpreti`
-    - Source: `Notifications let you erase your %1$s session with a tap. You don’t need to open the app or see what’s running in your browser.`
-    - Suggest: `Aplikacije vam ni treba niti odpreti`
-    - With an infinitive the correct impersonal construction is "ni treba"; "ni potrebno" is a well-known non-standard usage.
-- `preference_autocomplete_title_remove` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — Plural "custom URLs" translated as singular.
-    - Current: `Odstrani URL po meri`
-    - Source: `Remove custom URLs`
-    - Suggest: `Odstrani URL-je po meri`
-    - Source is "Remove custom URLs" (plural, screen for removing multiple URLs); the target is singular.
-- `preference_safe_browsing_title` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — Adjective agreement error: "Zavrni morebitne nevarne" should be "morebiti nevarne", and the verb form is inconsistent with the other block-preference titles.
-    - Current: `Zavrni morebitne nevarne in zavajajoče strani`
-    - Source: `Block potentially dangerous and deceptive sites`
-    - Suggest: `Zavračaj morebitno nevarne in zavajajoče strani`
-    - "morebitne nevarne" stacks two adjectives ungrammatically; the intended sense is "potentially dangerous" ("morebiti/morebitno nevarne"). Other Block* titles use the imperfective "Zavračaj".
-- `share_dialog_title` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — "preko" with genitive is a non-standard preposition use; standard Slovene is "prek".
-    - Current: `Deli preko`
-    - Source: `Share via`
-    - Suggest: `Deli prek`
-    - Slovene style guides prefer "prek"; "Deli preko" is a colloquialism.
 
 ### D. Terminology, register & consistency
 
@@ -600,21 +572,6 @@ _Nothing in this category._
     - Source: `Allow feature studies`
     - Suggest: `Dovoli raziskave funkcij`
     - "Features" in Mozilla sl is rendered as "funkcije"; "značilnosti" is a different concept (characteristics).
-- `preference_privacy_secure_mode` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — "Stealth" is translated as "Skrivni način" (secret mode) rather than a stealth/hidden-mode term matching the feature name.
-    - Current: `Skrivni način`
-    - Source: `Stealth`
-    - Suggest: `Prikrit način`
-    - The developer comment describes Stealth mode as hiding app content; "skrivni" (secret) suggests private browsing, which is a different Focus concept.
-- `preference_switch_autocomplete_topsites` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — "Top sites" is translated as "glavne strani", inconsistent with the top-site strings elsewhere in the file.
-    - Current: `Za glavne strani`
-    - Source: `For top sites`
-    - Suggest: `Za glavne strani (priljubljene strani)`
-    - Terminology for "top sites" should be consistent across the Top Sites section (remove_top_site/rename_top_site context).
-- `social` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — Tracker category "Social" is rendered with the masculine adjective "Družbeni" instead of the established category noun.
-    - Current: `Družbeni`
-    - Source: `Social`
-    - Suggest: `Družbena omrežja`
-    - This is a tracker category label; "Družbeni" alone is an incomplete adjective with no noun and does not name the category the way other categories do.
 
 ### E. Typography, punctuation & spacing
 
@@ -658,16 +615,6 @@ _Nothing in this category._
     - Source: `Extension collection modified. Quitting the application to apply changes…`
     - Suggest: `Zapiranje aplikacije za uveljavitev sprememb…`
     - Source ends with '…' directly attached; other strings such as 'Prevajanje …' show the locale style, but a stray space before the ellipsis after a full clause deviates from the source typography.
-- `menu_share` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — Space inserted before the ellipsis character.
-    - Current: `Deli …`
-    - Source: `Share…`
-    - Suggest: `Deli…`
-    - The source "Share…" has no space before the ellipsis; Slovenian typography also attaches the ellipsis directly to the word.
-- `preference_https_only_title` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — Uses straight double quotes where the source has none and Slovenian typography would use „ “ or none at all.
-    - Current: `Način "samo HTTPS"`
-    - Source: `HTTPS-Only Mode`
-    - Suggest: `Način samo HTTPS`
-    - The source title "HTTPS-Only Mode" contains no quotation marks; the added quotes are gratuitous.
 
 ---
 
@@ -683,9 +630,9 @@ _One line each in `locales/sl/dismissed.txt`. Delete the line and the finding re
 
 _No suppression rules have matched._
 
-### Withdrawn to date (1)
+### Withdrawn to date (0)
 
-- `onboarding_first_screen_title` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — raised by `placeholders`, withdrawn 2026-08-24
+_Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 

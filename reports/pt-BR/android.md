@@ -1,18 +1,19 @@
-# Android l10n QA — pt-BR
+# Firefox for Android l10n QA — pt-BR
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-19 @ `7ee8e61a4a7d` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 6 of 2,803 |
+| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 2,553 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for pt-BR: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
+Also for pt-BR: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -44,8 +45,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 45 |
-| Strings | 2,803 |
+| Files | 44 |
+| Strings | 2,553 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -69,6 +70,8 @@ The locale is complete against the en-US source.
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
 
+The count includes Focus for Android's strings for this locale, which the same team translates, so both projects infer the same conventions. Nothing there is checked here.
+
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 14 | **curly-double** |
@@ -83,15 +86,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (106)
+## 3. Open findings (94)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 68 |
-| 3 | Degraded language (grammar, spelling, terminology) | 37 |
-| 4 | Cosmetic (typography, spacing) | 1 |
+| 2 | Wrong content (says something other than the English) | 61 |
+| 3 | Degraded language (grammar, spelling, terminology) | 33 |
+| 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -399,7 +402,7 @@ _Nothing in this category._
     - Source: `Select tabs to create a group. They’re saved here, ready when you are.`
     - Suggest: `Elas são salvas aqui, prontas quando você precisar.`
     - The source says the groups are saved "here" (on this page), not "there".
-- _…and 10 more; see `state/` for the full list._
+- _…and 2 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -493,16 +496,6 @@ _Nothing in this category._
     - Source: `Turn off in settings`
     - Suggest: `Desativar nas configurações`
     - Source "Turn off in settings" is a sentence-case action label; the pt-BR text lacks the initial capital.
-- `preference_safe_browsing_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-pt-rBR/strings.xml` — Redundant/incorrect wording "com contendo" in the safe browsing summary.
-    - Current: `sites com contendo software indesejado`
-    - Source: `Block reported deceptive and attack sites, malware sites, and unwanted software sites.`
-    - Suggest: `sites com software indesejado`
-    - "com contendo" is ungrammatical; the source reads "unwanted software sites".
-- `qualified_text` — `mozilla-mobile/focus-android/app/src/main/res/values-pt-rBR/strings.xml` — The EU abbreviation is written "EU" instead of the Portuguese "UE" in the regulation reference.
-    - Current: `Regulamento (EU) 2024/1183`
-    - Source: `Qualified as specified in Regulation (EU) 2024/1183.`
-    - Suggest: `Regulamento (UE) 2024/1183`
-    - In Portuguese the European Union regulation designation is "(UE)"; "EU" is the English abbreviation and in pt means "I".
 
 ### D. Terminology, register & consistency
 
@@ -576,27 +569,19 @@ _Nothing in this category._
     - Source: `QR Code`
     - Suggest: `QR Code`
     - pt-BR Mozilla products use "QR code"/"QR Code"; "Código QR" is the pt-PT/es form and is inconsistent with the locale's terminology.
-- `search_add_error_format` — `mozilla-mobile/focus-android/app/src/main/res/values-pt-rBR/strings.xml` — "search string" translated as "código de pesquisa", inconsistent with "termo de pesquisa" used elsewhere.
-    - Current: `código de pesquisa`
-    - Source: `Check that search string matches Example format`
-    - Suggest: `termo de pesquisa`
-    - Same source term "search string" is rendered as "termo de pesquisa" in search_add_manually_string; "código" (code) is not the meaning.
 
 ### E. Typography, punctuation & spacing
 
-- `enhanced_tracking_protection_blocked` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Added colon not present in the source header text.
-    - Current: `Bloqueado:`
-    - Source: `Blocked`
-    - Suggest: `Bloqueado`
-    - Source is the header "Blocked" with no punctuation; the trailing colon is added by the translation.
+_Nothing in this category._
 
 ---
 
 ## 4. Appendix
 
-### Dismissed by hand (3)
+### Dismissed by hand (4)
 
 - `change_file_extension_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — the exclamation mark is a wanted change
+- `enhanced_tracking_protection_blocked` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — pontoon-rejected (2026-10-12): rejected in Pontoon without comment; reason unclear
 - `ip_protection_onboarding_body` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "WiFi" is the spelling pt-BR uses throughout (9 strings, no "Wi-Fi"); intended
 - `ip_protection_promo_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — "WiFi" is the spelling pt-BR uses throughout (9 strings, no "Wi-Fi"); intended
 
@@ -612,7 +597,7 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (8)
+### Fixed to date (7)
 
 - `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — fixed 2026-10-18
 - `connection_security_panel_local_pdf` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — fixed 2026-10-18
@@ -621,4 +606,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `remote_improvements_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — fixed 2026-10-18
 - `remote_improvements_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — fixed 2026-10-18
 - `webcompat_reporter_reason_media2` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — fixed 2026-10-18
-- `search_add_manually_example` — `mozilla-mobile/focus-android/app/src/main/res/values-pt-rBR/strings.xml` — fixed 2026-10-18

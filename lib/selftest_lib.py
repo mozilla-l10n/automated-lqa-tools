@@ -57,7 +57,7 @@ def load_results(project, checks, l10n_dir, source_dir, locales) -> dict:
     results = {}
     for locale in sorted(set(locales)):
         trees = layout.load(project, locale, l10n_dir, source_dir)
-        counts = conventions.detect(locale, trees.l10n)
+        counts = conventions.detect(locale, trees.measured())
         health, found = checks.run_all(project, locale, trees, counts)
         results[locale] = (health, found, trees)
     return results

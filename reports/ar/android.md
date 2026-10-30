@@ -1,18 +1,19 @@
-# Android l10n QA — ar
+# Firefox for Android l10n QA — ar
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
+| **Generated** | 2026-10-30 |
 | **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
 | **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-19 @ `ea17dbc84971` |
-| **Mode** | incremental |
-| **Strings reviewed this run** | 4 of 2,639 |
+| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
+| **Mode** | checks-only |
+| **Strings reviewed this run** | 0 of 2,390 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
+> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
-Also for ar: [firefox](firefox.md) · [firefox_ios](firefox_ios.md)
+Also for ar: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -44,9 +45,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 43 |
-| Strings | 2,639 |
-| Missing strings | 164 |
+| Files | 42 |
+| Strings | 2,390 |
+| Missing strings | 163 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 2 |
 | Files with no en-US counterpart | 0 |
@@ -63,17 +64,16 @@ _Nothing retired._
 
 ### Completeness
 
-**164 strings** are not translated yet, concentrated in:
+**163 strings** are not translated yet, concentrated in:
 
 - `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — 114
 - `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml` — 23
-- `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ar/strings.xml` — 9
 - `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ar/strings.xml` — 9
+- `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ar/strings.xml` — 9
 - `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-ar/strings.xml` — 4
 - `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 2
-- `mozilla-mobile/android-components/components/feature/protection-dashboard/src/main/res/values-ar/strings.xml` — 1
 - `mozilla-mobile/android-components/components/feature/ipprotection/src/main/res/values-ar/strings.xml` — 1
-- `mozilla-mobile/focus-android/app/src/main/res/values-ar/strings.xml` — 1
+- `mozilla-mobile/android-components/components/feature/protection-dashboard/src/main/res/values-ar/strings.xml` — 1
 
 **Files absent from the locale:**
 
@@ -85,6 +85,8 @@ _Completeness is reported, never raised as a finding: a missing string needs tra
 ### Conventions detected in this locale
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
+
+The count includes Focus for Android's strings for this locale, which the same team translates, so both projects infer the same conventions. Nothing there is checked here.
 
 | Convention | Counts | Inferred |
 |---|---|---|
@@ -101,7 +103,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (141)
+## 3. Open findings (124)
 
 > **Reads as a deliberate edit (4).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -131,9 +133,9 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 58 |
-| 3 | Degraded language (grammar, spelling, terminology) | 75 |
-| 4 | Cosmetic (typography, spacing) | 8 |
+| 2 | Wrong content (says something other than the English) | 52 |
+| 3 | Degraded language (grammar, spelling, terminology) | 67 |
+| 4 | Cosmetic (typography, spacing) | 5 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -406,41 +408,6 @@ _Nothing in this category._
     - Source: `View options`
     - Suggest: `اعرض الخيارات`
     - The button opens Settings so the user can see the auto-close options. "خيارات العرض" means view/display settings, which is a different thing.
-- `cfr_for_toolbar_delete_icon2` — `mozilla-mobile/focus-android/app/src/main/res/values-ar/strings.xml` — "start fresh" is translated literally as "start with a refreshment".
-    - Current: `وابدأ بانتعاشة`
-    - Source: `Tap here to trash it all — history, cookies, everything — and start fresh on a new tab.`
-    - Suggest: `وابدأ من جديد`
-    - "Start fresh" is an idiom for starting over. "بانتعاشة" (with a refreshment/freshness) does not convey that meaning.
-- `exit_fullscreen_with_back_button_short` — `mozilla-mobile/focus-android/app/src/main/res/values-ar/strings.xml` — "press back" is translated as pressing the delete button.
-    - Current: `زر الحذف`
-    - Source: `Drag from top & press back to exit`
-    - Suggest: `زر الرجوع`
-    - The source tells the user to press the back button to exit fullscreen. "زر الحذف" means "delete button", so the instruction is wrong.
-- `preference_autocomplete_user_list_summary2` — `mozilla-mobile/focus-android/app/src/main/res/values-ar/strings.xml` — "Your favorite URLs" is rendered as "URLs in Favorites", which suggests bookmarks rather than the user-defined autocomplete list.
-    - Current: `المسارات في المفضّلة`
-    - Source: `Enable to have %s autocomplete your favorite URLs.`
-    - Suggest: `مساراتك المفضّلة`
-    - The source means the user's own custom list of preferred URLs. "في المفضّلة" names the Favorites/bookmarks feature, which is a different data source.
-- `preference_mozilla_telemetry_summary2` — `mozilla-mobile/focus-android/app/src/main/res/values-ar/strings.xml` — Brand name Mozilla is transliterated into Arabic script.
-    - Current: `تحاول موزيلا`
-    - Source: `Mozilla strives to collect only what we need to provide and improve %1$s for everyone.`
-    - Suggest: `تحاول Mozilla`
-    - Mozilla is a brand that stays untranslated; other strings in the same file keep it in Latin script.
-- `preference_privacy_and_security_header` — `mozilla-mobile/focus-android/app/src/main/res/values-ar/strings.xml` — "Security" is rendered as "السريّة" (confidentiality) instead of "الأمان".
-    - Current: `الخصوصية والسريّة`
-    - Source: `Privacy & Security`
-    - Suggest: `الخصوصية والأمان`
-    - السريّة means secrecy/confidentiality; security is الأمان, as used elsewhere in this batch (preference_https_only_summary3).
-- `preference_safe_browsing_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-ar/strings.xml` — "Deceptive" is translated as "ضارة" (harmful), so deceptive sites are no longer mentioned.
-    - Current: `بأنها ضارة أو هجومية`
-    - Source: `Block reported deceptive and attack sites, malware sites, and unwanted software sites.`
-    - Suggest: `بأنها خدّاعة أو هجومية`
-    - The source lists "deceptive and attack sites". The title string uses "خدّاعة" for "deceptive", but the summary uses "ضارة" (harmful), which is a different idea and repeats the later "ما هو ضار".
-- `preference_show_search_suggestions_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-ar/strings.xml` — "الذي فضّله" (that he preferred) uses the wrong person and changes "your search engine" into the engine Focus preferred.
-    - Current: `الذي فضّله`
-    - Source: `%1$s will send what you type in the address bar to your search engine`
-    - Suggest: `الذي فضّلته`
-    - The source says "your search engine", meaning the one the user picked. The masculine third-person verb points back to %1$s (the app), so the sentence says the app picked the engine.
 
 ### C. Grammar, agreement & spelling
 
@@ -689,31 +656,6 @@ _Nothing in this category._
     - Source: `You have an unsent crash report related to crashes being investigated. Sending it will help us improve %1$s. Closing this notification will ignore this report.`
     - Suggest: `سيساعدنا إرساله`
     - This string is about a single report (تقرير, masculine singular), so the pronoun must be masculine. The feminine form belongs to the plural version of this string.
-- `notification_action_erase_and_open` — `mozilla-mobile/focus-android/app/src/main/res/values-ar/strings.xml` — The conjunction و is written as a separate word.
-    - Current: `امسح و افتح`
-    - Source: `Erase and Open`
-    - Suggest: `امسح وافتح`
-    - In Arabic orthography the conjunction و attaches to the following word.
-- `notification_browsing_session_channel_name` — `mozilla-mobile/focus-android/app/src/main/res/values-ar/strings.xml` — The phrase breaks noun–adjective agreement: "تصفح" has no article but the adjective "الخاص" does.
-    - Current: `جلسة تصفح الخاص`
-    - Source: `Private browsing session`
-    - Suggest: `جلسة التصفح الخاص`
-    - "Private browsing" needs the definite noun to match the definite adjective; "تصفح الخاص" is ungrammatical.
-- `onboarding_second_screen_subtitle_two` — `mozilla-mobile/focus-android/app/src/main/res/values-ar/strings.xml` — Imperative verb misspelled with hamzat qat', turning "Make" into "I make".
-    - Current: `أجعل`
-    - Source: `Make %1$s your default to protect your data with every link you open.`
-    - Suggest: `اجعل`
-    - The source is an imperative ("Make %1$s your default"); the imperative of جعل takes hamzat wasl (اجعل), while أجعل is first-person present.
-- `preference_category_cookies` — `mozilla-mobile/focus-android/app/src/main/res/values-ar/strings.xml` — The conjunction و is written as a separate word instead of attached to the following word.
-    - Current: `الكعكات و بيانات المواقع`
-    - Source: `Cookies and Site Data`
-    - Suggest: `الكعكات وبيانات المواقع`
-    - In Arabic orthography the conjunction و must be joined to the next word; a space after it is a spelling error.
-- `preference_performance_block_javascript_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-ar/strings.xml` — "تتحمّل" means "endure/bear", not "load".
-    - Current: `قد تتحمّل الصفحات`
-    - Source: `Pages may load faster, but may also behave unexpectedly`
-    - Suggest: `قد تُحمَّل الصفحات`
-    - Source says pages may load faster; the verb for loading is the passive تُحمَّل, while تتحمّل means to bear or withstand.
 
 ### D. Terminology, register & consistency
 
@@ -802,16 +744,6 @@ _Nothing in this category._
     - Source: `Send crash report`
     - Suggest: `أرسِل تقرير العطل`
     - The same source term, crash report, appears as تقارير الأعطال in this dialog's body and checkbox. Using a different term on the button is inconsistent.
-- `cfr_for_toolbar_delete_icon2` — `mozilla-mobile/focus-android/app/src/main/res/values-ar/strings.xml` — "history" is rendered as "التاريخ" (usually "date"), unlike "تأريخ" in the other strings.
-    - Current: `التاريخ وملفات`
-    - Source: `Tap here to trash it all — history, cookies, everything — and start fresh on a new tab.`
-    - Suggest: `التأريخ وملفات`
-    - Elsewhere in this batch, browsing history is "تأريخ التصفح". "التاريخ" is ambiguous and commonly read as "date".
-- `promote_search_widget_dialog_subtitle` — `mozilla-mobile/focus-android/app/src/main/res/values-ar/strings.xml` — "Widget" is spelled "ودجت" here but "ويدجت" in the button and picture description of the same dialog.
-    - Current: `ودجت %1$s`
-    - Source: `We’ll leave you to your private browsing, but get a quicker start next time with the %1$s widget on your Home screen.`
-    - Suggest: `ويدجت %1$s`
-    - The same term should be spelled the same way on one dialog. promote_search_widget_button_text and promote_search_widget_dialog_picture_content_description both use "ويدجت".
 
 ### E. Typography, punctuation & spacing
 
@@ -840,21 +772,6 @@ _Nothing in this category._
     - Source: `Are you sure you want to turn off fixes?`
     - Suggest: `تريد تعطيل`
     - The extra space is visible to users in the dialog title.
-- `cfr_for_toolbar_delete_icon2` — `mozilla-mobile/focus-android/app/src/main/res/values-ar/strings.xml` — Hyphens are used where the source and the locale convention use em dashes.
-    - Current: `كل شيء - التاريخ`
-    - Source: `Tap here to trash it all — history, cookies, everything — and start fresh on a new tab.`
-    - Suggest: `كل شيء — التاريخ`
-    - The source uses em dashes, and the locale's convention is the em dash.
-- `preference_mozilla_telemetry_summary2` — `mozilla-mobile/focus-android/app/src/main/res/values-ar/strings.xml` — Conjunction و is written apart from the next word.
-    - Current: `و تحسينه`
-    - Source: `Mozilla strives to collect only what we need to provide and improve %1$s for everyone.`
-    - Suggest: `وتحسينه`
-    - In Arabic orthography the conjunction و attaches to the following word.
-- `preference_privacy_and_security_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-ar/strings.xml` — Conjunction و is written apart from the following words.
-    - Current: `التّعقّب، و الكعكات، و اختيار البيانات`
-    - Source: `Tracking, cookies, data choices`
-    - Suggest: `التّعقّب، والكعكات، واختيار البيانات`
-    - In Arabic orthography the conjunction و attaches to the following word.
 
 ---
 
