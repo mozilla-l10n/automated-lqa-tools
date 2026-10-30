@@ -21,3 +21,8 @@ imported-safari-reading-list — Elenco lettura is correct
 migration-imported-safari-reading-list — Elenco lettura is correct
 noDomMutationBreakpoints — Element is there
 noDomMutationBreakpoints.notice — Element is there
+about-private-browsing-spotlight-basics-subtitle — On purpose, because the alternative is hard to read "nascondere a qualcuno".
+ipprotection-feature-introduction-description-private-browsing-3 — On purpose for better flow
+browser/browser/aboutPrivateBrowsing.ftl — Stronger is not more effective
+about-sync-log-empty — Clearer as is
+about-logging-preset-vpn-description — Correct as is
