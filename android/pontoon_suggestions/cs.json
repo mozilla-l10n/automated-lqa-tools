@@ -128,9 +128,13 @@
    "source": "URL must start with “https://”",
    "original": "URL musí začínat “https://”",
    "text": "URL musí začínat „https://“",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-13",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12282684,
+   "pontoon_url": "https://pontoon.mozilla.org/cs/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=315833",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-13",
@@ -284,9 +288,13 @@
    "source": "For sites you add",
    "original": "Pro stránky které přidáte",
    "text": "Pro stránky, které přidáte",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-13",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12282686,
+   "pontoon_url": "https://pontoon.mozilla.org/cs/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=223910",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   }
  ]
 }

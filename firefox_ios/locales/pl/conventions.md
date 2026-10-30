@@ -22,3 +22,8 @@ written here is what the model is told to treat as correct._
 - The en dash is the house dash; do not suggest an em dash.
 - "Primary Password" is deliberately translated with the legacy term.
 -->
+
+- Toast and snackbar messages that are a single short sentence (e.g.
+  "Skopiowano adres" for "URL copied.") may omit the closing period of the
+  en-US source. Never flag a missing final period in them, and never suggest
+  adding one. A message of two or more sentences keeps its periods as usual.

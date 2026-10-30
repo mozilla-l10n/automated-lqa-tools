@@ -15,3 +15,4 @@
 # recurring across strings -- a house convention, a term that is correct
 # everywhere -- write a rule in suppressions.yaml instead, or better, a
 # sentence in conventions.md so the reviewer never raises it.
+mozac_feature_pwa_copy_success @ mozilla-mobile/android-components/components/feature/pwa/src/main/res/values/strings.xml — pontoon-rejected (2026-10-15): rejected in Pontoon without comment; single-sentence toasts may omit the closing period in pl (see conventions.md)

@@ -24,9 +24,13 @@
    "source": "Unverified scripts can pose security and privacy risks. Only run scripts from extensions or sources you trust.",
    "original": "Net ferifiearre scripts kinne befeiligings- en privacyrisiko’s foarmje. Fier allinnich scripts út fan útwreidingen of boarnen dy’'t jo fertrouwe.",
    "text": "Net ferifiearre scripts kinne befeiligings- en privacyrisiko’s foarmje. Fier allinnich scripts út fan útwreidingen of boarnen dy’t jo fertrouwe.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12280309,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=315284",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-12",
@@ -76,9 +80,13 @@
    "source": "Videos",
    "original": "Fideo's",
    "text": "Fideo’s",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12280315,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=316333",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-12",
@@ -102,9 +110,13 @@
    "source": "Stops uniquely identifiable data from being collected about your device that can be used for tracking purposes.",
    "original": "Foarkomt dat unyk identifisearbere gegevens oer jo apparaat sammele wurde dy't brûkt wurde kinne foar folchdoeleinen.",
    "text": "Foarkomt dat unyk identifisearbere gegevens oer jo apparaat sammele wurde dy’t brûkt wurde kinne foar folchdoeleinen.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12280316,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=309028",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-12",
@@ -128,9 +140,13 @@
    "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.",
    "original": "Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht.",
    "text": "Diel mei Mozilla’s marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12280313,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=334024",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-12",
@@ -154,9 +170,13 @@
    "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.",
    "original": "Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht.",
    "text": "Diel mei Mozilla’s marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12280312,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=316002",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-12",
@@ -180,9 +200,13 @@
    "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.",
    "original": "Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht.",
    "text": "Diel mei Mozilla’s marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12280311,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=323545",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-12",
@@ -206,9 +230,13 @@
    "source": "Share how you discovered Firefox and that you use it with Mozilla’s marketing technology partners.",
    "original": "Diel mei Mozilla's marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke.",
    "text": "Diel mei Mozilla’s marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12280314,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=315223",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-12",
@@ -258,9 +286,13 @@
    "source": "Videos, downloads, or media didn’t work",
    "original": "Fideo's, downloads of media wurken net",
    "text": "Fideo’s, downloads of media wurken net",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12280318,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=336843",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   }
  ]
 }

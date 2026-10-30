@@ -76,9 +76,13 @@
    "source": "Tap to copy the URL for this app",
    "original": "Toca para copiar la URL de esta aplicación.",
    "text": "Toca para copiar la URL de esta aplicación",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12281765,
+   "pontoon_url": "https://pontoon.mozilla.org/es-MX/firefox-for-android/mozilla-mobile/android-components/components/feature/pwa/src/main/res/values/strings.xml/?string=213822",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-12",
@@ -102,9 +106,13 @@
    "source": "Can’t summarize paywalled content",
    "original": "No se puede resumir el contenido de pago.",
    "text": "No se puede resumir el contenido de pago",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12281766,
+   "pontoon_url": "https://pontoon.mozilla.org/es-MX/firefox-for-android/mozilla-mobile/android-components/components/feature/summarize/src/main/res/values/strings.xml/?string=339302",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-10-12",
@@ -128,9 +136,13 @@
    "source": "Web address must contain “https://” or “http://”",
    "original": "La dirección web debe contener \"https://\" o \"http://\"",
    "text": "La dirección web debe contener “https://” o “http://”",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12281769,
+   "pontoon_url": "https://pontoon.mozilla.org/es-MX/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=232144",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-12",
@@ -154,9 +166,13 @@
    "source": "Select a language to manage ”always translate“ and ”never translate“ preferences.",
    "original": "Selecciona un idioma para administrar las preferencias de ”siempre traducir“ y ”nunca traducir“.",
    "text": "Selecciona un idioma para administrar las preferencias de “siempre traducir” y “nunca traducir”.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12281770,
+   "pontoon_url": "https://pontoon.mozilla.org/es-MX/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=292106",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-12",
@@ -180,9 +196,13 @@
    "source": "Download Languages",
    "original": "Descargar Idiomas",
    "text": "Descargar idiomas",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12281771,
+   "pontoon_url": "https://pontoon.mozilla.org/es-MX/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=292101",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-12",
@@ -206,9 +226,13 @@
    "source": "Privacy notice",
    "original": "Aviso de Privacidad",
    "text": "Aviso de privacidad",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12281772,
+   "pontoon_url": "https://pontoon.mozilla.org/es-MX/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=306783",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-12",
@@ -232,9 +256,13 @@
    "source": "Choose which trackers and scripts to block.",
    "original": "Elige qué rastreadores y secuencias de comandos bloquear",
    "text": "Elige qué rastreadores y secuencias de comandos bloquear.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12281768,
+   "pontoon_url": "https://pontoon.mozilla.org/es-MX/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=212334",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-12",
@@ -258,9 +286,13 @@
    "source": "Automatically deletes browsing data when you select “Quit” from the main menu",
    "original": "Eliminar automáticamente los datos de navegación cuando selecciones \"Salir\" en el menú principal",
    "text": "Eliminar automáticamente los datos de navegación cuando selecciones “Salir” en el menú principal",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12281767,
+   "pontoon_url": "https://pontoon.mozilla.org/es-MX/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=203369",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   }
  ]
 }

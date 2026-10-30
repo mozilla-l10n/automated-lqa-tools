@@ -79,9 +79,13 @@
    "source": "Just to confirm, you wanted ‘Clear Private Tabs’?",
    "original": "Solo para confirmar, ¿querías ‘Eliminar pestañas privadas‘?",
    "text": "Solo para confirmar, ¿querías ‘Eliminar pestañas privadas’?",
-   "status": "pending",
-   "status_date": "2026-10-12",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-10-16",
+   "comment": "",
+   "pontoon_pk": 12281775,
+   "pontoon_url": "https://pontoon.mozilla.org/es-AR/firefox-for-ios/firefox-ios.xliff/?string=220662",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   }
  ]
 }

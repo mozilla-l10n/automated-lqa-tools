@@ -23,9 +23,13 @@
    "source": "Open articles in Reader View by tapping the book icon when it appears in the title bar.",
    "original": "Otwieraj artykuły w widoku poprawionej czytelności stukając ikonę książki, kiedy pojawi się w pasku adresu.",
    "text": "Otwieraj artykuły w widoku poprawionej czytelności, stukając ikonę książki, kiedy pojawi się w pasku adresu.",
-   "status": "pending",
-   "status_date": "2026-10-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-10-15",
+   "comment": "",
+   "pontoon_pk": 12282701,
+   "pontoon_url": "https://pontoon.mozilla.org/pl/firefox-for-ios/firefox-ios.xliff/?string=68481",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-13",
@@ -50,9 +54,13 @@
    "source": "Save pages to your Reading List by tapping the book plus icon in the Reader View controls.",
    "original": "Zachowuj strony w czytelni stukając ikonę książki w widoku poprawionej czytelności.",
    "text": "Zachowuj strony w czytelni, stukając ikonę książki w widoku poprawionej czytelności.",
-   "status": "pending",
-   "status_date": "2026-10-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-10-15",
+   "comment": "",
+   "pontoon_pk": 12282702,
+   "pontoon_url": "https://pontoon.mozilla.org/pl/firefox-for-ios/firefox-ios.xliff/?string=68482",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   }
  ]
 }

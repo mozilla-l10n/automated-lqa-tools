@@ -50,9 +50,13 @@
    "source": "Web address must contain “https://” or “http://”",
    "original": "L’adresse web doit contenir « https:// » ou « http:// ».",
    "text": "L’adresse web doit contenir « https:// » ou « http:// »",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12280300,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=232144",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-12",
@@ -76,9 +80,13 @@
    "source": "Feature isn’t available to try.",
    "original": "Cette fonctionnalité n’est pas disponible à l‘essai.",
    "text": "Cette fonctionnalité n’est pas disponible à l’essai.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12280301,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=336503",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-12",
@@ -102,9 +110,13 @@
    "source": "Qualified as specified in Regulation (EU) 2024/1183.",
    "original": "Qualifié conformément au règlement (UE) n°2024/1183.",
    "text": "Qualifié conformément au règlement (UE) n° 2024/1183.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12280302,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=331690",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   }
  ]
 }
