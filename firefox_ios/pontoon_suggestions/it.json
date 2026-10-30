@@ -1,0 +1,33 @@
+{
+ "project": "firefox_ios",
+ "locale": "it",
+ "suggestions": [
+  {
+   "date": "2026-10-30",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+   "string_id": "Settings.Studies.Message.v148",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Settings.strings",
+     "Settings.Studies.Message.v148"
+    ]
+   },
+   "fids": [
+    "98c94e2a8d8e"
+   ],
+   "findings": [
+    "Translation adds \"del browser\" (of the browser), which the source does not say."
+   ],
+   "source": "%@ randomly selects users to test features, which improves quality for everyone.",
+   "original": "%@ seleziona utenti in modo casuale per provare nuove funzionalità, contribuendo così a migliorare la qualità del browser per tutti.",
+   "text": "%@ seleziona utenti in modo casuale per provare nuove funzionalità, contribuendo così a migliorare la qualità per tutti.",
+   "status": "pending",
+   "status_date": "2026-10-30",
+   "comment": ""
+  }
+ ]
+}
