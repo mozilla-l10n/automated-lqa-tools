@@ -25,9 +25,13 @@
    "source": "Deleted “%@”",
    "original": "Smazáno “%@”",
    "text": "Smazáno „%@“",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-13",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12282689,
+   "pontoon_url": "https://pontoon.mozilla.org/cs/firefox-for-ios/firefox-ios.xliff/?string=309601",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-13",
@@ -52,9 +56,13 @@
    "source": "Downloading “%@”",
    "original": "Stahuje se “%@”",
    "text": "Stahuje se „%@“",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-13",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12282690,
+   "pontoon_url": "https://pontoon.mozilla.org/cs/firefox-for-ios/firefox-ios.xliff/?string=316173",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   }
  ]
 }

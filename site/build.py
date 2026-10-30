@@ -44,6 +44,9 @@ import sys
 _HERE = os.path.dirname(os.path.abspath(__file__))
 _ROOT = os.path.dirname(_HERE)
 sys.path.insert(0, os.path.join(_ROOT, "lib"))
+# `lib/digest.py` imports this file from outside site/, where `bot` is not
+# on the path by default.
+sys.path.insert(0, _HERE)
 
 import config  # noqa: E402
 import bot  # noqa: E402

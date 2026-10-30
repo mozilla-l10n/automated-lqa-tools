@@ -67,7 +67,7 @@ import tracker  # noqa: E402
 
 from moz.l10n.formats import Format  # noqa: E402
 from moz.l10n.formats.fluent import fluent_serialize_message  # noqa: E402
-from moz.l10n.formats.mf2 import mf2_serialize_message  # noqa: E402
+from moz.l10n.formats.mf2 import mf2_parse_message, mf2_serialize_message  # noqa: E402
 from moz.l10n.model import (  # noqa: E402
     CatchallKey,
     Entry,
@@ -165,6 +165,22 @@ def pontoon_preview(fmt, entry) -> str:
             )
         return fluent_serialize_message(PatternMessage(_simple_pattern(msg)))
     return "".join(_preview_part(p) for p in _simple_pattern(entry.value))
+
+
+def preview_of_api(string: str) -> str | None:
+    """A translation as Pontoon's API returns it, in `pontoon_preview` form.
+
+    The API answers in MessageFormat 2 for every non-Fluent format:
+    `Smazáno „{$arg1 :string @source=|%1$s|}“`, `{|<b>| :html}`. What was
+    sent, and what the records hold, is the preview form -- `Smazáno „%1$s“`
+    -- so the two only compare equal for a string with no placeholder or
+    markup in it. ``None`` when the string is not MF2 at all (Fluent).
+    """
+    try:
+        msg = mf2_parse_message(string)
+    except Exception:
+        return None
+    return "".join(_preview_part(p) for p in _simple_pattern(msg))
 
 
 def _placeables(entry) -> Counter:

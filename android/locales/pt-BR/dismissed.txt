@@ -18,3 +18,4 @@
 ip_protection_onboarding_body — "WiFi" is the spelling pt-BR uses throughout (9 strings, no "Wi-Fi"); intended
 ip_protection_promo_body_2 — "WiFi" is the spelling pt-BR uses throughout (9 strings, no "Wi-Fi"); intended
 change_file_extension_description — the exclamation mark is a wanted change
+enhanced_tracking_protection_blocked @ mozilla-mobile/fenix/app/src/main/res/values/strings.xml — pontoon-rejected (2026-10-12): rejected in Pontoon without comment; reason unclear

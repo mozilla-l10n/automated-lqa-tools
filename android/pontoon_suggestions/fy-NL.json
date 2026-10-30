@@ -54,9 +54,13 @@
    "source": "Verified by %s",
    "original": "Ferifiearre troch: %s",
    "text": "Ferifiearre troch %s",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12280317,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=315667",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-12",
@@ -260,9 +264,13 @@
    "source": "%1$s can close tabs you haven’t viewed over the past month.",
    "original": "%1$s kin ljepblêden dy't jo de ôfrûne moanne net besjoen hawwe slute.",
    "text": "%1$s kin ljepblêden dy’t jo de ôfrûne moanne net besjoen hawwe slute.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12280310,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=242757",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-12",

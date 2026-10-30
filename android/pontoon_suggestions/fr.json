@@ -24,9 +24,13 @@
    "source": "{ <p> }The browser could not find the host server for the provided address.{ </p> }\n{ <ul> }\n{ <li> }Check the address for typing errors such as { <strong> }ww{ </strong> }.example.com instead of { <strong> }www{ </strong> }.example.com.{ </li> }\n{ <li> }If you are unable to load any pages, check your device’s data or Wi-Fi connection.{ </li> }\n{ </ul> }",
    "original": "<p>Le navigateur n’a pas pu trouver le serveur hôte pour l’adresse indiquée.</p>\n<ul>\n<li>Vérifiez la syntaxe de l’adresse (saisie de <strong>ww</strong>.example.com au lieu de <strong>www</strong>.example.com par exemple) ;</li>\n<li>Si vous n’arrivez à naviguer sur aucun site, vérifiez la connexion données ou Wi-Fi de votre appareil.</li>\n</ul>",
    "text": "<p>Le navigateur n’a pas pu trouver le serveur hôte pour l’adresse indiquée.</p>\n<ul>\n<li>Vérifiez la syntaxe de l’adresse (saisie de <strong>ww</strong>.example.com au lieu de <strong>www</strong>.example.com par exemple).</li>\n<li>Si vous n’arrivez à naviguer sur aucun site, vérifiez la connexion données ou Wi-Fi de votre appareil.</li>\n</ul>",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12280299,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml/?string=196858",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-12",

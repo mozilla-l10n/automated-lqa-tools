@@ -516,6 +516,48 @@ def run(suite) -> None:
           "and so does an unreviewed suggestion")
     check(pr.match(rec, [res("rejected", string="altro")]) is None,
           "a different suggestion on the same string is not this one")
+    # Real cs answers from 2026-10-13: approved in Pontoon, read as pending.
+    held = dict(rec, text="Smazáno „%1$s“ <b>teď</b>")
+    check(pr.match(held, [res("approved", string=(
+        "Smazáno „{$arg1 :string @source=|%1$s|}“ {|<b>| :html}teď{|</b>| :html}"))]),
+          "Pontoon's MF2 placeholders and markup match the text that was sent")
+    check(pr.match(held, [res("approved", string=(
+        "Smazáno „{$arg1 :string @source=|%2$s|}“ {|<b>| :html}teď{|</b>| :html}"))]) is None,
+          "but a different placeholder inside them does not")
+    # An upload whose text Pontoon already had: pt-BR, 2026-10-12. Pontoon
+    # revived the older translation rather than storing one by the bot, and
+    # the reviewer rejected that.
+    def act(kind, pk, string, user=31119, implicit=False, when="2026-10-12T08:00:00Z",
+            key=("s",), locale="it"):
+        return {"type": f"translation:{kind}", "is_implicit_action": implicit,
+                "date": when, "user": {"pk": user}, "locale": {"code": locale},
+                "entity": {"key": list(key)}, "resource": {"path": "a.xml"},
+                "translation": {"pk": pk, "string": string}}
+    own = [dict(res("unreviewed"), translation_pk=9, entity="other")]
+    anchor = act("created", 9, "x", key=("other",))
+    revival = act("unrejected", 5, "nuovo")
+    review = act("rejected", 5, "nuovo", user=377, when="2026-10-12T09:00:00Z")
+    got = pr.revived(rec, "it", own, [anchor, revival], [anchor, revival, review])
+    check(got and got["status"] == "rejected" and got["translation_pk"] == 5,
+          "a revived translation's review is the suggestion's answer")
+    check(pr.decide(rec, got, "vecchio", {"f1"})["outcome"] == "dismissed",
+          "and is decided like any other rejection")
+    check(pr.revived(rec, "it", own, [anchor, revival], [anchor, revival]) is None,
+          "a revival nobody has reviewed yet stays pending")
+    check(pr.revived(rec, "it", own, [anchor, revival],
+                     [anchor, revival, dict(review, is_implicit_action=True)]) is None,
+          "and an implicit rejection -- another translation approved -- is not an answer")
+    check(pr.revived(rec, "it", own, [anchor, act("unrejected", 5, "nuovo", user=8)],
+                     [anchor, review]) is None,
+          "someone else reviving the same text is not the bot's suggestion")
+    check(pr.revived(rec, "it", [], [revival], [revival, review]) is None,
+          "with nothing of its own in the feed the bot cannot be told apart: pending")
+    check(pr.revived(rec, "it", own, [anchor, act("unrejected", 5, "altro")],
+                     [anchor, review]) is None,
+          "a revival of different text is not this suggestion")
+    check(pr.revived(rec, "it", own + [res("unreviewed")], [anchor, revival],
+                     [anchor, revival, review]) is None,
+          "and a string the bot's own feed has a row for is left to match()")
     ios = dict(rec, pontoon=dict(rec["pontoon"], key=["Shared/x.strings", "s"]))
     check(pr.match(ios, [res("rejected", entity="s • Shared/x.strings")]),
           "a two-part key matches Pontoon's innermost-first entity")

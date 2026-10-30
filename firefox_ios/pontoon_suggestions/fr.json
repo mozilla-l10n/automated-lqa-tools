@@ -25,9 +25,13 @@
    "source": "Remove page — %@",
    "original": "Supprimer la page - %@",
    "text": "Supprimer la page — %@",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12280306,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-ios/firefox-ios.xliff/?string=152655",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   }
  ]
 }

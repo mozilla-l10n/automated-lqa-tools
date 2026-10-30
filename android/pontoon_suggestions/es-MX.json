@@ -24,9 +24,13 @@
    "source": "{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> }\n{ <ul> }\n{ <li> }Is the device connected to an active network?{ </li> }\n{ <li> }Press “Try Again” to switch to online mode and reload the page.{ </li> }\n{ </ul> }",
    "original": "<p>El navegador está operando en modo sin conexión y no puede conectarse con el elemento solicitado.</p>\n<ul>\n<li>¿Estás conectado el equipo a una red activa?</li>\n<li>Presiona \"Volver a intentarlo\" para pasar al modo con conexión y recargar la página.</li>\n</ul>",
    "text": "<p>El navegador está operando en modo sin conexión y no puede conectarse con el elemento solicitado.</p>\n<ul>\n<li>¿Está conectado el equipo a una red activa?</li>\n<li>Presiona “Volver a intentarlo” para pasar al modo con conexión y recargar la página.</li>\n</ul>",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12281763,
+   "pontoon_url": "https://pontoon.mozilla.org/es-MX/firefox-for-android/mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml/?string=196910",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-12",
@@ -50,9 +54,13 @@
    "source": "Logging in to %1$s with a %2$s account is subject to their <a href=\"%3$s\">Privacy Policy{ </a> } and <a href=\"%4$s\">Terms of Service{ </a> }",
    "original": "Iniciar sesión en %1$s con una cuenta de %2$s está sujeto a su <a href=\"%3$s\">Política de Privacidad</a> y <a href=\"%4$s\">Términos de Servicio.</a>",
    "text": "Iniciar sesión en %1$s con una cuenta de %2$s está sujeto a su <a href=\"%3$s\">Política de privacidad</a> y <a href=\"%4$s\">Términos de Servicio</a>",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12281764,
+   "pontoon_url": "https://pontoon.mozilla.org/es-MX/firefox-for-android/mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml/?string=281520",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-12",

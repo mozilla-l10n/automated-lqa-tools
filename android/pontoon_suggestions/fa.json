@@ -24,9 +24,13 @@
    "source": "{ <p> }The requested address specified a port (e.g., { <q> }mozilla.org:80{ </q> } for port 80 on mozilla.org) normally used for purposes { <em> }other{ </em> } than Web browsing. The browser has canceled the request for your protection and security.{ </p> }",
    "original": "<p>نشانی درخواست مشخصا(به عنوان مثال<q>mozilla.org:80</q>برای درگاه ۸۰ بر روی mozilla.org) ازدرگاهی استفاده می کندکه در حالت عادی به عنوان کاربردی <em>به غیر</em> از وبگردی استفاده می شود.مرورگر برای حفاظت و امنیت شما این درخواست را لغوکرد.</p>",
    "text": "<p>نشانی درخواست مشخصا (به عنوان مثال <q>mozilla.org:80</q> برای درگاه ۸۰ بر روی mozilla.org) از درگاهی استفاده می کند که در حالت عادی به عنوان کاربردی <em>به غیر</em> از وبگردی استفاده می شود. مرورگر برای حفاظت و امنیت شما این درخواست را لغو کرد.</p>",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-10-07",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12271401,
+   "pontoon_url": "https://pontoon.mozilla.org/fa/firefox-for-android/mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml/?string=196884",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-10-07",
@@ -50,9 +54,13 @@
    "source": "{ <p> }The site at %1$s has been reported as an attack site and has been blocked based on your security preferences.{ </p> }",
    "original": "<p>پایگاه%1$s به عنوان یک وب‌گاه تهاجمی گزارش شده و بر اساس ترجیحات امنیتی شما مسدود شده است.</p>",
    "text": "<p>پایگاه %1$s به عنوان یک وب‌گاه تهاجمی گزارش شده و بر اساس ترجیحات امنیتی شما مسدود شده است.</p>",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-10-07",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12271403,
+   "pontoon_url": "https://pontoon.mozilla.org/fa/firefox-for-android/mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml/?string=196843",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-10-07",
@@ -74,9 +82,13 @@
    "source": "{ <p> }The site at %1$s has been reported as a potentially harmful site and has been blocked based on your security preferences.{ </p> }",
    "original": "<p>پایگاه%1$s به عنوان یک وب‌گاه تهاجمی گزارش شده و بر اساس ترجیحات امنیتی شما مسدود شده است.</p>",
    "text": "<p>پایگاه %1$s به عنوان یک وب‌گاه تهاجمی گزارش شده و بر اساس ترجیحات امنیتی شما مسدود شده است.</p>",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-10-07",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12271404,
+   "pontoon_url": "https://pontoon.mozilla.org/fa/firefox-for-android/mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml/?string=196853",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-10-07",
@@ -100,9 +112,13 @@
    "source": "{ <p> }The address specifies a protocol (e.g., { <q> }wxyz://{ </q> }) the browser does not recognize, so the browser cannot properly connect to the site.{ </p> }\n{ <ul> }\n{ <li> }Are you trying to access multimedia or other non-text services? Check the site for extra requirements.{ </li> }\n{ <li> }Some protocols may require third-party software or plugins before the browser can recognize them.{ </li> }\n{ </ul> }",
    "original": "<p>نشانی قراردادی مثلا (e.g. <q>wxyz://</q>)‏ را مشخص کرده است که مرورگر قادر به شناسایی آن نیست، بنابراین نمی‌تواند به شیوه صحیح به وب‌گاه متصل شود.</p><ul><li>آیا در حال تلاش برای دسترسی به خدمات چندرسانه‌ای یا غیر متنی هستید؟ این وب‌گاه را برای یافتن ملزومات اضافی جست‌وجو کنید.</li><li>برخی قراردادها ممکن است برای شناسایی نیاز به نرم‌افزار یا افزایه های دیگری جهت شناسایی داشته باشند.</li></ul>",
    "text": "<p>نشانی قراردادی (مثلا <q>wxyz://</q>)‏ را مشخص کرده است که مرورگر قادر به شناسایی آن نیست، بنابراین نمی‌تواند به شیوه صحیح به وب‌گاه متصل شود.</p><ul><li>آیا در حال تلاش برای دسترسی به خدمات چندرسانه‌ای یا غیر متنی هستید؟ این وب‌گاه را برای یافتن ملزومات اضافی جست‌وجو کنید.</li><li>برخی قراردادها ممکن است برای شناسایی نیاز به نرم‌افزار یا افزایه های دیگری جهت شناسایی داشته باشند.</li></ul>",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-10-07",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12271402,
+   "pontoon_url": "https://pontoon.mozilla.org/fa/firefox-for-android/mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml/?string=196902",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-10-07",
@@ -156,9 +172,13 @@
    "source": "Failed to remove %1$s",
    "original": "شکست در حذف%1$s",
    "text": "شکست در حذف %1$s",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-10-07",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12271409,
+   "pontoon_url": "https://pontoon.mozilla.org/fa/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=207404",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-10-07",
@@ -182,9 +202,13 @@
    "source": "Successfully installed %1$s",
    "original": "%1$sبا موفقیت نصب شد",
    "text": "%1$s با موفقیت نصب شد",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-07",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12271407,
+   "pontoon_url": "https://pontoon.mozilla.org/fa/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=207394",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-07",
@@ -208,9 +232,13 @@
    "source": "Successfully removed %1$s",
    "original": "%1$sبا موفقیت حذف شد",
    "text": "%1$s با موفقیت حذف شد",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-07",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12271408,
+   "pontoon_url": "https://pontoon.mozilla.org/fa/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=207405",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-07",
@@ -264,9 +292,13 @@
    "source": "Reviews: %1$s",
    "original": "بررسی‌های:%1$s",
    "text": "بررسی‌ها: %1$s",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-07",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12271406,
+   "pontoon_url": "https://pontoon.mozilla.org/fa/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=214870",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-07",
@@ -320,9 +352,13 @@
    "source": "Welcome to %1$s",
    "original": "به %1$s خوش‌ آمدید",
    "text": "به %1$s خوش آمدید",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-07",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12271413,
+   "pontoon_url": "https://pontoon.mozilla.org/fa/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=261490",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-07",

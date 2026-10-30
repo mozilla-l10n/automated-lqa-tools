@@ -56,9 +56,13 @@
    "source": "+%d More…",
    "original": "Mais +%d…",
    "text": "+%d mais…",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12280292,
+   "pontoon_url": "https://pontoon.mozilla.org/pt-BR/firefox-for-ios/firefox-ios.xliff/?string=214763",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   }
  ]
 }

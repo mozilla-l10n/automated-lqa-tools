@@ -24,9 +24,13 @@
    "source": "You’ve enabled HTTPS-Only Mode for enhanced security, and a HTTPS version of { <em> }%1$s{ </em> } is not available.",
    "original": "Habilitaste el modo solo HTTPS para aumentar la seguridad y una versión HTTPS de <em> %1$s </em> no está disponible.",
    "text": "Habilitaste el modo solo HTTPS para aumentar la seguridad y una versión HTTPS de <em>%1$s</em> no está disponible.",
-   "status": "pending",
-   "status_date": "2026-10-12",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-10-16",
+   "comment": "",
+   "pontoon_pk": 12281749,
+   "pontoon_url": "https://pontoon.mozilla.org/es-AR/firefox-for-android/mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml/?string=236699",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-12",
@@ -170,9 +174,13 @@
    "source": "Replace query with “%s”. Example:\nhttps://www.google.com/search?q=%s",
    "original": "Reemplazar la consulta con \"%s\". Ejemplo:\nhttps://www.google.com/search?q=%s",
    "text": "Reemplazar la consulta con “%s”. Ejemplo:\nhttps://www.google.com/search?q=%s",
-   "status": "pending",
-   "status_date": "2026-10-12",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-10-16",
+   "comment": "",
+   "pontoon_pk": 12281752,
+   "pontoon_url": "https://pontoon.mozilla.org/es-AR/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=205607",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-12",
