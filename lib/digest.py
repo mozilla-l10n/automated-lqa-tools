@@ -12,6 +12,8 @@ when nothing about it needs a person:
 - it touches nothing under `<project>/locales/`. Those files are written by
   people, and a run only adds there on the first sight of a locale -- a
   draft `conventions.md` that would go straight into the reviewer's prompt.
+  The one exception is `dismissed.txt` lines tagged `pontoon-rejected`:
+  those record a Pontoon reviewer's rejection, already a person's answer.
 
 Anything left open is named at the top of the email with the reason, so a
 skipped pull request cannot pass for a quiet week.
@@ -39,6 +41,7 @@ import glob
 import importlib.util
 import json
 import os
+import re
 import smtplib
 import subprocess
 import sys
@@ -50,6 +53,12 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import config  # noqa: E402
 import summary  # noqa: E402
+import tracker  # noqa: E402
+
+# Must match `pontoon_review.PONTOON_TAG`; not imported, because that module
+# pulls in the whole parsing stack and this one needs none of it.
+PONTOON_TAG = "pontoon-rejected"
+_TAGGED = re.compile(rf"^.+ @ .+ — {re.escape(PONTOON_TAG)} \(\d{{4}}-\d{{2}}-\d{{2}}\): ")
 
 RECIPIENTS = ["flodolo+l10nqa@mozilla.com"]
 SITE = "https://mozilla-l10n.github.io/automated-lqa-tools/"
@@ -66,6 +75,7 @@ class Outcome:
     reasons: list = field(default_factory=list)
     notes: list = field(default_factory=list)
     delta: dict | None = None
+    pontoon: list = field(default_factory=list)
     merged: bool = False
 
     @property
@@ -154,8 +164,10 @@ def assess(project) -> Outcome:
     out.reasons += check_problems(pr.get("statusCheckRollup"))
 
     locales = os.path.relpath(project.root, config.REPO_ROOT) + "/locales/"
-    touched = _run("git", "diff", "--name-only", f"origin/{BASE}...{head}",
-                   "--", locales).split()
+    touched = [p for p in _run("git", "diff", "--name-only",
+                               f"origin/{BASE}...{head}", "--", locales).split()
+               if not only_pontoon_dismissals(
+                   _run("git", "diff", "-U0", f"origin/{BASE}...{head}", "--", p))]
     if touched:
         shown = ", ".join(f"`{p}`" for p in touched[:5])
         more = f" and {len(touched) - 5} more" if len(touched) > 5 else ""
@@ -166,7 +178,34 @@ def assess(project) -> Outcome:
 
     out.delta = summary.delta(project, summary.rows_at(project, head),
                               f"origin/{BASE}")
+    out.pontoon = tracker.changes(project, f"origin/{BASE}", head)
     return out
+
+
+def only_pontoon_dismissals(diff: str) -> bool:
+    """Whether a `git diff -U0` of a locale file is nothing a person must read.
+
+    True for a `dismissed.txt` change made only of lines `pontoon_review`
+    writes and withdraws -- a Pontoon reviewer's rejection, already a
+    person's decision -- plus the comment header a new file starts with.
+    Anything else under `locales/` reaches the reviewer's prompt or is a
+    person's own dismissal, and holds the pull request.
+    """
+    lines = diff.splitlines()
+    if not lines or not any(x.startswith("+++ ") and x.endswith("/dismissed.txt")
+                            for x in lines):
+        return False
+    for x in lines:
+        if x.startswith(("diff ", "index ", "--- ", "+++ ", "@@", "new file mode")):
+            continue
+        body = x[1:]
+        if x.startswith("+") and (not body.strip() or body.startswith("#")
+                                  or _TAGGED.match(body)):
+            continue
+        if x.startswith("-") and _TAGGED.match(body):
+            continue
+        return False
+    return True
 
 
 def merge(out: Outcome) -> None:
@@ -219,6 +258,8 @@ def _section(out: Outcome, dry_run: bool) -> list[str]:
         lines += [f"### Read as a deliberate edit, or broken output ({len(loud)})",
                   "", summary._listing(summary._escalation_order(loud), 30,
                                        per_locale=5), ""]
+    if out.pontoon:
+        lines += [summary.pontoon_section(out.pontoon, heading="###")]
     lines += [
         f"Everything else is in the pull request {_pr_link(out)} and in the "
         f"[{project.display_name} report]({SITE}#/all/{project.name}).",

@@ -85,27 +85,10 @@ def _dismissed(entries: dict, f) -> bool:
 
 
 def _dismiss_line(f, reason: str, today: str) -> str:
-    reason = " ".join(reason.split())
-    return f"{f.string_id} @ {f.file} — {DISMISS_TAG} ({today}): {reason}"
+    return dismiss.line(f.string_id, f.file, DISMISS_TAG, today, reason)
 
 
-def append_dismissals(path: str, lines: list[str]) -> int:
-    """Add the lines ``path`` does not already hold; return how many."""
-    existing = set()
-    if os.path.exists(path):
-        with open(path, encoding="utf-8") as fh:
-            existing = {line.strip() for line in fh}
-    new = [line for line in lines if line.strip() not in existing]
-    if not new:
-        return 0
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    fresh = not os.path.exists(path)
-    with open(path, "a", encoding="utf-8") as fh:
-        if fresh:
-            fh.write(dismiss.TEMPLATE)
-        for line in new:
-            fh.write(line + "\n")
-    return len(new)
+append_dismissals = dismiss.append
 
 
 # --- editing a parsed message ------------------------------------------------

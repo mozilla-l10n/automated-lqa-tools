@@ -445,6 +445,101 @@ def run(suite) -> None:
     check("<img" not in page and "<script" not in page and "&lt;img" in page,
           "a quoted translation reaches the HTML part as text")
 
+    header = ("diff --git a/x/locales/it/dismissed.txt b/x/locales/it/dismissed.txt\n"
+              "--- a/x/locales/it/dismissed.txt\n+++ b/x/locales/it/dismissed.txt\n"
+              "@@ -5,0 +6 @@\n")
+    tagged = "s @ a.xml — pontoon-rejected (2026-10-20): rejected in Pontoon: no"
+    check(digest.only_pontoon_dismissals(header + "+" + tagged),
+          "appended Pontoon dismissals do not hold the pull request")
+    check(not digest.only_pontoon_dismissals(header + "+" + tagged + "\n+t — fine"),
+          "but a person's own line alongside them does")
+    check(not digest.only_pontoon_dismissals(
+        header.replace("dismissed.txt", "conventions.md") + "+" + tagged),
+          "and so does any other file under locales/")
+
+    # --- Pontoon review outcomes ---------------------------------------------
+    suite.section("A Pontoon review moves a suggestion on only as far as it shows")
+    import datetime
+    import tempfile
+
+    import dismiss as dismiss_mod
+    import pontoon_review as pr
+    rec = {"file": "a.xml", "string_id": "s", "fids": ["f1"], "status": "pending",
+           "original": "vecchio", "text": "nuovo",
+           "pontoon": {"server": "https://p", "project": "fx", "resource": "a.xml",
+                       "key": ["s"]}}
+
+    def res(status, string="nuovo", comments=(), entity="s"):
+        return {"translation_pk": 1, "string": string, "status": status,
+                "date": "2026-10-10T00:00:00Z", "approved_date": None,
+                "rejected_date": "2026-10-20T00:00:00Z" if status == "rejected" else None,
+                "entity": entity, "resource": "a.xml", "project": "fx",
+                "locale": "it", "url": "https://p/x", "comments": list(comments)}
+
+    check(pr.decide(rec, None, "vecchio", {"f1"}) is None,
+          "no answer from Pontoon leaves the record pending")
+    check(pr.decide(rec, res("unreviewed"), "vecchio", {"f1"}) is None,
+          "and so does an unreviewed suggestion")
+    check(pr.match(rec, [res("rejected", string="altro")]) is None,
+          "a different suggestion on the same string is not this one")
+    ios = dict(rec, pontoon=dict(rec["pontoon"], key=["Shared/x.strings", "s"]))
+    check(pr.match(ios, [res("rejected", entity="s • Shared/x.strings")]),
+          "a two-part key matches Pontoon's innermost-first entity")
+    approved = pr.decide(rec, dict(res("approved"), approved_date="2026-10-21T0"),
+                         "vecchio", {"f1"})
+    check(approved["outcome"] == "approved" and not approved["dismiss"],
+          "an approval is recorded and closes nothing")
+    check(pr.decide(rec, res("rejected"), "nuovo", {"f1"})["outcome"] == "adopted",
+          "rejected, but the repository has the text anyway: not dismissed")
+    moved = pr.decide(rec, res("rejected"), "diverso", {"f1"})
+    check(moved["outcome"] == "moved" and not moved["dismiss"],
+          "rejected after the string moved: the finding stays open")
+    check(pr.decide(rec, res("rejected"), None, {"f1"})["outcome"] == "obsolete",
+          "rejected, string gone: left to the lifecycle")
+    kept = pr.decide(rec, res("rejected"), "vecchio", {"f1", "f2"})
+    check(kept["outcome"] == "kept" and not kept["dismiss"],
+          "another open finding on the string blocks the dismissal")
+    check(pr.decide(dict(rec, fids=[]), res("rejected"), "vecchio", set())["outcome"]
+          == "kept", "a suggestion sent without a finding dismisses nothing")
+    plain = pr.decide(rec, res("rejected"), "vecchio", {"f1"})
+    check(plain["dismiss"] and plain["needs_reason"] and plain["status_date"] == "2026-10-20",
+          "rejected, unchanged, no comment: dismissed, and a reason is wanted")
+    said = pr.decide(rec, res("rejected", comments=[
+        {"author": {"username": "rev"}, "content": "keep  it"}]), "vecchio", {"f1"})
+    check(said["dismiss"] and not said["needs_reason"]
+          and pr.reason_for(said, None) == "rejected in Pontoon: rev: keep it",
+          "with a comment, the comment is the reason")
+    check("(inferred)" in pr.reason_for(plain, "too formal")
+          and "reason unclear" in pr.reason_for(plain, "Unclear.")
+          and "reason unclear" in pr.reason_for(plain, None),
+          "an inferred reason says so, and 'unclear' is never dressed up")
+    check(pr.decide(dict(rec, status="rejected", outcome="dismissed"),
+                    res("rejected"), "vecchio", {"f1"}) is None,
+          "an outcome already recorded is not decided again")
+
+    span = pr.windows(datetime.date(2026, 8, 1), datetime.date(2026, 10, 30))
+    check(len(span) == 3 and all((b - a).days <= pr.MAX_DAYS for a, b in span)
+          and span[0][0] == datetime.date(2026, 8, 1)
+          and span[-1][1] == datetime.date(2026, 10, 30),
+          "a long range is read in windows Pontoon accepts, end to end")
+    pages = {"1": {"results": [res("approved")], "next": "2"},
+             "2": {"results": [dict(res("rejected"), translation_pk=2)], "next": None}}
+    seen = pr.fetch("https://p", "bot", "fx", "it", datetime.date(2026, 10, 1),
+                    datetime.date(2026, 10, 10), "t",
+                    get=lambda url, tok: pages["2" if url == "2" else "1"])
+    check(len(seen) == 2, "every page of the answer is read")
+
+    with tempfile.TemporaryDirectory() as tmp:
+        path = os.path.join(tmp, "dismissed.txt")
+        dismiss_mod.append(path, ["s @ a.xml — pontoon-rejected (2026-10-20): x"])
+        with open(path, "a", encoding="utf-8") as fh:
+            fh.write("s — a person's own line\n")
+        dismiss_mod.remove(path, [pr._prefix(rec)])
+        with open(path, encoding="utf-8") as fh:
+            text = fh.read()
+        check("pontoon-rejected" not in text and "a person's own line" in text,
+              "withdrawing a Pontoon dismissal leaves a person's line alone")
+
 
 def _site():
     import importlib.util

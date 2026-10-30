@@ -137,6 +137,24 @@ jobs:
           fi
           du -sh work/l10n
 
+      - name: Record Pontoon's review of submitted suggestions
+        # Before the review, so a rejection that dismisses a finding takes
+        # effect in this run. Reads the last two weeks of the submitting
+        # account's translations; a locale with no suggestions recorded makes
+        # no call. The token is scoped to this step, never the review's. It
+        # never fails the job: an unreachable Pontoon leaves records pending.
+        if: ${{ !inputs.dry_run }}
+        env:
+          PONTOON_TOKEN: ${{ secrets.PONTOON_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python lib/pontoon_review.py --project firefox_ios \
+            --locale '${{ matrix.locale }}' \
+            --l10n-dir work/l10n \
+            --source-dir work/l10n \
+            ${{ inputs.no_llm && '--no-llm' || '' }} \
+            --write < /dev/null
+
       - name: Review
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -159,6 +177,7 @@ jobs:
             firefox_ios/state/${{ matrix.locale }}/
             reports/${{ matrix.locale }}/firefox_ios.md
             firefox_ios/locales/${{ matrix.locale }}/
+            firefox_ios/pontoon_suggestions/${{ matrix.locale }}.json
           if-no-files-found: ignore
           retention-days: 7
 
@@ -251,7 +270,7 @@ jobs:
               # human-edited, so the base wins those; state and reports are
               # rewritten by this run anyway, so the branch keeps them.
               git checkout --theirs -- firefox_ios/locales 2>/dev/null || true
-              git checkout --ours   -- firefox_ios/state reports 2>/dev/null || true
+              git checkout --ours   -- firefox_ios/state firefox_ios/pontoon_suggestions reports 2>/dev/null || true
               git add -A
               git commit --no-edit
             fi
@@ -289,6 +308,7 @@ jobs:
         run: |
           set -euo pipefail
           git add firefox_ios/state reports firefox_ios/locales
+          git add firefox_ios/pontoon_suggestions 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "no changes: every locale is where it was"
             echo 'changed=false' >> "$GITHUB_OUTPUT"
