@@ -19,6 +19,14 @@ string id exists in more than one file, qualify it:
 recent_tabs_header @ mozilla-mobile/fenix/ — fine in this context
 ```
 
+Lines tagged `pontoon-rejected (<date>)` are written by the QA run
+(`lib/pontoon_review.py`): a suggestion we sent to Pontoon was rejected and
+the translation was left exactly as it was, so the reviewer has answered the
+finding. The reason is the reviewer's comment or, when there was none, one
+the model inferred and labelled as such. The run withdraws its own line if
+the outcome changes or the string later moves; delete one yourself to bring
+the finding back. Lines without the tag are never touched by it.
+
 The text after the dash is kept with the finding and printed in the report,
 so the next person can see why it was dropped.
 

@@ -9,14 +9,22 @@ waiting on a reviewer, ``approved`` is done, and ``rejected`` was a person's
 answer.
 
 Only suggestions Pontoon actually stored are recorded, each with its review
-``status`` (``pending`` until somebody updates it), the ``status_date`` it
-last changed and an optional ``comment``, typically why it was rejected.
+``status`` (``pending`` until Pontoon answers), the ``status_date`` it last
+changed and an optional ``comment``, typically why it was rejected.
+
+``pontoon_review.py`` moves ``status`` on, from Pontoon's own record of the
+review, and adds what it did about it: ``outcome`` (``approved``,
+``adopted``, ``moved``, ``kept``, ``dismissed`` or ``obsolete``), a ``note``
+saying why, ``pontoon_pk``/``pontoon_url``, and for a dismissal the
+``dismissal`` line it wrote. Records written before that have none of these
+fields; read them with ``.get``.
 """
 
 from __future__ import annotations
 
 import json
 import os
+import subprocess
 
 TRACKER_DIR = "pontoon_suggestions"
 STATUSES = ("pending", "approved", "rejected")
@@ -88,3 +96,29 @@ def open_for(project, locale: str) -> tuple[str, dict]:
     data.setdefault("project", project.name)
     data.setdefault("locale", locale)
     return file, data
+
+
+def at(project, locale: str, ref: str) -> dict:
+    """The locale's records at git ``ref``; empty if it had none there."""
+    rel = os.path.relpath(path(project, locale), os.path.dirname(project.root))
+    shown = subprocess.run(
+        ["git", "-C", os.path.dirname(project.root), "show", f"{ref}:{rel}"],
+        capture_output=True, text=True,
+    )
+    if shown.returncode:
+        return {"suggestions": []}
+    return json.loads(shown.stdout)
+
+
+def changes(project, before: str, after: str | None = None) -> list[tuple[str, dict]]:
+    """``(locale, record)`` for every Pontoon outcome new since ``before``.
+
+    ``after`` is a git ref, or the working tree when None.
+    """
+    out = []
+    for locale in project.locales:
+        now = at(project, locale, after) if after else load(path(project, locale))
+        was = {identity(s): s.get("outcome") for s in at(project, locale, before)["suggestions"]}
+        out += [(locale, s) for s in now["suggestions"]
+                if s.get("outcome") and was.get(identity(s)) != s.get("outcome")]
+    return out

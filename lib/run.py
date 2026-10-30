@@ -28,6 +28,7 @@ import traceback
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import config  # noqa: E402
+import local_secrets  # noqa: E402
 import dismiss  # noqa: E402
 import layout  # noqa: E402
 import conventions  # noqa: E402
@@ -489,6 +490,7 @@ def resolve_trees(project, args, log):
 
 
 def main(argv=None) -> int:
+    local_secrets.load("ANTHROPIC_API_KEY")
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--project", default="firefox",
                     help="the project directory to run: firefox, android, ...")

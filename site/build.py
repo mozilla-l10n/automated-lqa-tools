@@ -165,11 +165,27 @@ def _with_toc(body: str, toc: str) -> str:
 
 def render(path: str, locale: str | None) -> str:
     """One report as an HTML fragment, safe to inject."""
-    import markdown
-    from markdown.extensions.toc import TocExtension
-
     with open(path, encoding="utf-8") as fh:
         source = fh.read()
+    body = render_text(source)
+
+    def route(match: re.Match) -> str:
+        where, project = match.group(1), match.group(2)
+        # A bare `android.md` inside reports/it/ means this same locale.
+        return f'href="#/{where or locale or "all"}/{project}"'
+
+    return _LINK.sub(route, body)
+
+
+def render_text(source: str, toc: bool = True) -> str:
+    """Markdown to HTML with every quoted string kept as text.
+
+    Shared with the QA digest email (`lib/digest.py`), which quotes the same
+    translations and must not let them become markup in a mail client
+    either.
+    """
+    import markdown
+    from markdown.extensions.toc import TocExtension
 
     md = markdown.Markdown(
         extensions=[
@@ -179,19 +195,14 @@ def render(path: str, locale: str | None) -> str:
         ],
         output_format="html5",
     )
-    body = _with_toc(md.convert(html.escape(source)), md.toc)
+    body = md.convert(html.escape(source))
+    if toc:
+        body = _with_toc(body, md.toc)
 
     body = _CODE.sub(
         lambda m: f"<code>{_DOUBLED.sub(r'&\1;', m.group(1))}</code>", body
     )
-    body = sanitize_urls(body)
-
-    def route(match: re.Match) -> str:
-        where, project = match.group(1), match.group(2)
-        # A bare `android.md` inside reports/it/ means this same locale.
-        return f'href="#/{where or locale or "all"}/{project}"'
-
-    return _LINK.sub(route, body)
+    return sanitize_urls(body)
 
 
 # Written into every directory this script generates. Its presence is what

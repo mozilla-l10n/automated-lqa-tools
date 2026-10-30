@@ -52,7 +52,7 @@ jobs:
       locales: ${{ steps.pick.outputs.locales }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: '3.12'
       - run: pip install PyYAML
@@ -94,7 +94,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: '3.12'
           cache: pip
@@ -137,17 +137,47 @@ jobs:
           fi
           du -sh work/l10n
 
-      - name: Review
+      - name: Record Pontoon's review of submitted suggestions
+        # Before the review, so a rejection that dismisses a finding takes
+        # effect in this run. Reads the last two weeks of the submitting
+        # account's translations; a locale with no suggestions recorded makes
+        # no call. The token is scoped to this step, never the review's. It
+        # never fails the job: an unreachable Pontoon leaves records pending.
+        if: ${{ !inputs.dry_run }}
         env:
+          PONTOON_TOKEN: ${{ secrets.PONTOON_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          LOCALE: ${{ matrix.locale }}
+          NO_LLM: ${{ inputs.no_llm }}
         run: |
-          python lib/run.py --project firefox_ios \
-            --locale '${{ matrix.locale }}' \
-            --mode '${{ inputs.mode || 'auto' }}' \
+          extra=()
+          if [ "$NO_LLM" = 'true' ]; then extra+=(--no-llm); fi
+          python lib/pontoon_review.py --project firefox_ios \
+            --locale "$LOCALE" \
             --l10n-dir work/l10n \
             --source-dir work/l10n \
-            ${{ inputs.dry_run && '--dry-run' || '' }} \
-            ${{ inputs.no_llm && '--no-llm' || '' }} \
+            "${extra[@]}" \
+            --write < /dev/null
+
+      - name: Review
+        # Inputs reach the script through the environment, never pasted into
+        # it with an expression: interpolated text is shell code.
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          LOCALE: ${{ matrix.locale }}
+          MODE: ${{ inputs.mode || 'auto' }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          NO_LLM: ${{ inputs.no_llm }}
+        run: |
+          extra=()
+          if [ "$DRY_RUN" = 'true' ]; then extra+=(--dry-run); fi
+          if [ "$NO_LLM" = 'true' ]; then extra+=(--no-llm); fi
+          python lib/run.py --project firefox_ios \
+            --locale "$LOCALE" \
+            --mode "$MODE" \
+            --l10n-dir work/l10n \
+            --source-dir work/l10n \
+            "${extra[@]}" \
             < /dev/null
 
       - name: Upload this locale's state and report
@@ -159,6 +189,7 @@ jobs:
             firefox_ios/state/${{ matrix.locale }}/
             reports/${{ matrix.locale }}/firefox_ios.md
             firefox_ios/locales/${{ matrix.locale }}/
+            firefox_ios/pontoon_suggestions/${{ matrix.locale }}.json
           if-no-files-found: ignore
           retention-days: 7
 
@@ -201,7 +232,7 @@ jobs:
           # Kept for the `git push` below, which reuses this credential.
           token: ${{ secrets.QA_PR_TOKEN || github.token }}
 
-      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: '3.12'
       - run: pip install -r requirements.txt
@@ -251,7 +282,7 @@ jobs:
               # human-edited, so the base wins those; state and reports are
               # rewritten by this run anyway, so the branch keeps them.
               git checkout --theirs -- firefox_ios/locales 2>/dev/null || true
-              git checkout --ours   -- firefox_ios/state reports 2>/dev/null || true
+              git checkout --ours   -- firefox_ios/state firefox_ios/pontoon_suggestions reports 2>/dev/null || true
               git add -A
               git commit --no-edit
             fi
@@ -289,6 +320,7 @@ jobs:
         run: |
           set -euo pipefail
           git add firefox_ios/state reports firefox_ios/locales
+          git add firefox_ios/pontoon_suggestions 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "no changes: every locale is where it was"
             echo 'changed=false' >> "$GITHUB_OUTPUT"

@@ -126,9 +126,13 @@
    "source": "Close",
    "original": "بستن‌",
    "text": "بستن",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-07",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12271405,
+   "pontoon_url": "https://pontoon.mozilla.org/fa/firefox-for-android/mozilla-mobile/android-components/components/compose/base/src/main/res/values/strings.xml/?string=327462",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-07",
@@ -230,9 +234,13 @@
    "source": "Last attempt:",
    "original": "آخرین تلاش",
    "text": "آخرین تلاش:",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-07",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12271410,
+   "pontoon_url": "https://pontoon.mozilla.org/fa/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=208862",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-07",
@@ -282,9 +290,13 @@
    "source": "Update",
    "original": "به‌روزرسانی‌",
    "text": "به‌روزرسانی",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-07",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12271411,
+   "pontoon_url": "https://pontoon.mozilla.org/fa/firefox-for-android/mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml/?string=207312",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-07",
@@ -334,9 +346,13 @@
    "source": "New custom URL added.",
    "original": "نشانی سفارشی جدید اضافه شد",
    "text": "نشانی سفارشی جدید اضافه شد.",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-10-07",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12271412,
+   "pontoon_url": "https://pontoon.mozilla.org/fa/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=224054",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   }
  ]
 }

@@ -58,6 +58,49 @@ def load(project, locale: str) -> dict[tuple[str, str | None], str]:
     return entries
 
 
+def line(string_id: str, file: str, tag: str, date: str, reason: str) -> str:
+    """A dismissal written by a tool, ``tag`` saying which one and ``date`` when."""
+    reason = " ".join(reason.split())
+    return f"{string_id} @ {file} — {tag} ({date}): {reason}"
+
+
+def append(path: str, lines: list[str]) -> int:
+    """Add the lines ``path`` does not already hold; return how many."""
+    existing = set()
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as fh:
+            existing = {line.strip() for line in fh}
+    new = [line for line in lines if line.strip() not in existing]
+    if not new:
+        return 0
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    fresh = not os.path.exists(path)
+    with open(path, "a", encoding="utf-8") as fh:
+        if fresh:
+            fh.write(TEMPLATE)
+        for line in new:
+            fh.write(line + "\n")
+    return len(new)
+
+
+def remove(path: str, prefixes: list[str]) -> int:
+    """Delete the lines starting with any of ``prefixes``; return how many.
+
+    Only ever called with a tool's own tag in the prefix, so a line a person
+    wrote is never touched.
+    """
+    if not prefixes or not os.path.exists(path):
+        return 0
+    with open(path, encoding="utf-8") as fh:
+        lines = fh.readlines()
+    kept = [x for x in lines if not x.strip().startswith(tuple(prefixes))]
+    if len(kept) == len(lines):
+        return 0
+    with open(path, "w", encoding="utf-8") as fh:
+        fh.writelines(kept)
+    return len(lines) - len(kept)
+
+
 def apply(entries: dict, findings: list) -> dict[str, int]:
     """Mark listed findings dismissed, and restore ones no longer listed."""
     counts: dict[str, int] = {}

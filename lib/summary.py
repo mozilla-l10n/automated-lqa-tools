@@ -20,6 +20,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import config  # noqa: E402
 import findings as findings_mod  # noqa: E402
 import report  # noqa: E402
+import tracker  # noqa: E402
 
 
 def _rows(project) -> list[dict]:
@@ -304,6 +305,24 @@ def _pair(before: list, after: list) -> tuple[list, list]:
     return pairs, gone
 
 
+def rows_at(project, ref: str) -> list[dict]:
+    """The rows :func:`delta` needs, read from ``ref`` instead of the disk.
+
+    For the QA digest, which compares a pull request's head with the base
+    before merging it, and must not check either out over the working tree
+    to do so.
+    """
+    rows = []
+    for locale in project.locales:
+        found = _load_at(project, locale, ref)
+        if found is None:
+            rows.append({"locale": locale, "state": "not yet checked"})
+            continue
+        rows.append({"locale": locale, "state": "", "found": found,
+                     "open": sum(1 for f in found if f.is_open)})
+    return rows
+
+
 def delta(project, rows: list[dict], ref: str) -> dict:
     """Per-locale lifecycle changes between ``ref`` and the working tree."""
     out = {"locales": {}, "first_run": [], "new": [], "reopened": [],
@@ -529,6 +548,45 @@ def render(project) -> str:
     return "\n".join(out)
 
 
+_OUTCOMES = (
+    ("moved", "rejected; the translation has changed since, so the finding "
+              "stays open for the next review"),
+    ("kept", "rejected; not dismissed (see the note on each record)"),
+    ("approved", "approved; the finding closes as fixed once the repository "
+                 "has the text"),
+    ("adopted", "rejected, but the repository has the suggested text anyway"),
+    ("obsolete", "rejected; the string is gone"),
+)
+
+
+def pontoon_section(items: list[tuple[str, dict]], heading: str = "##") -> str:
+    """What Pontoon's reviewers did with our suggestions, dismissals first.
+
+    A dismissal is the one outcome that hides a finding, and the reason may
+    be an inference, so each is listed in full; the rest are counted.
+    """
+    if not items:
+        return ""
+    out = [f"{heading} Pontoon review of submitted suggestions ({len(items)})", ""]
+    dismissed = [(loc, r) for loc, r in items if r["outcome"] == "dismissed"]
+    if dismissed:
+        out += [f"Rejected with the translation unchanged, so the finding was "
+                f"dismissed ({len(dismissed)}):", ""]
+        for loc, r in sorted(dismissed, key=lambda p: (p[0], p[1]["file"])):
+            reason = r.get("dismissal", "").split("): ", 1)[-1]
+            link = f" · [Pontoon]({r['pontoon_url']})" if r.get("pontoon_url") else ""
+            out += [f"- **`{loc}`** `{r['string_id']}` — `{r['file']}`",
+                    f"{report.SUB}{reason}",
+                    f"{report.SUB}Suggested: {_code(r['text'])}{link}"]
+        out.append("")
+    for key, label in _OUTCOMES:
+        some = [(loc, r) for loc, r in items if r["outcome"] == key]
+        if some:
+            out.append(f"- {len(some)} {label}: {_per_locale(some)}")
+    out.append("")
+    return "\n".join(out)
+
+
 def pr_body(project, since: str = "") -> str:
     """The body of the project's pull request.
 
@@ -557,6 +615,7 @@ def pr_body(project, since: str = "") -> str:
             "---",
             "",
             _delta_section(delta(project, rows, since), since, project),
+            pontoon_section(tracker.changes(project, since)),
             "## Everything open on the branch",
             "",
             "<details><summary>The whole backlog, not only this run</summary>",

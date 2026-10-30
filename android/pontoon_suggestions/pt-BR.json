@@ -24,9 +24,13 @@
    "source": "Web address must contain “https://” or “http://”",
    "original": "O endereço web deve conter \"https://\" ou \"http://\"",
    "text": "O endereço web deve conter “https://” ou “http://”",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12280287,
+   "pontoon_url": "https://pontoon.mozilla.org/pt-BR/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=232144",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-12",
@@ -50,9 +54,13 @@
    "source": "This page is stored on your device",
    "original": "Esta página está armazenada em seu dispositivo.",
    "text": "Esta página está armazenada em seu dispositivo",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12280288,
+   "pontoon_url": "https://pontoon.mozilla.org/pt-BR/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=323046",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-12",
@@ -102,9 +110,13 @@
    "source": "Automatically deletes browsing data when you select “Quit” from the main menu",
    "original": "Excluir automaticamente os dados de navegação selecionados abaixo ao tocar em \"Sair\" no menu principal",
    "text": "Excluir automaticamente os dados de navegação selecionados abaixo ao tocar em “Sair” no menu principal",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12280286,
+   "pontoon_url": "https://pontoon.mozilla.org/pt-BR/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=203369",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-12",
@@ -128,9 +140,13 @@
    "source": "Firefox will improve features, performance, and stability between updates. Changes applied remotely.",
    "original": "O Firefox  melhora funcionalidades, desempenho e estabilidade a cada atualização. Alterações são aplicadas remotamente.",
    "text": "O Firefox melhora funcionalidades, desempenho e estabilidade a cada atualização. Alterações são aplicadas remotamente.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12280283,
+   "pontoon_url": "https://pontoon.mozilla.org/pt-BR/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=328556",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-12",
@@ -154,9 +170,13 @@
    "source": "Video isn’t playing or loading",
    "original": "O vídeo não está sendo carregado ou  reproduzido",
    "text": "O vídeo não está sendo carregado ou reproduzido",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-10-12",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12280285,
+   "pontoon_url": "https://pontoon.mozilla.org/pt-BR/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=318909",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-10-12",

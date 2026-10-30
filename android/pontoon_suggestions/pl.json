@@ -24,9 +24,14 @@
    "source": "URL copied.",
    "original": "Skopiowano adres",
    "text": "Skopiowano adres.",
-   "status": "pending",
-   "status_date": "2026-10-13",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-10-15",
+   "comment": "",
+   "dismissal": "mozac_feature_pwa_copy_success @ mozilla-mobile/android-components/components/feature/pwa/src/main/res/values/strings.xml — pontoon-rejected (2026-10-15): rejected in Pontoon without comment; single-sentence toasts may omit the closing period in pl (see conventions.md)",
+   "pontoon_pk": 12282703,
+   "pontoon_url": "https://pontoon.mozilla.org/pl/firefox-for-android/mozilla-mobile/android-components/components/feature/pwa/src/main/res/values/strings.xml/?string=213842",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   }
  ]
 }

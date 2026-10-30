@@ -1,0 +1,74 @@
+name: QA digest
+
+# Merges the weekly QA pull requests and emails what they changed, so the
+# three of them do not have to be read and merged by hand. lib/digest.py
+# decides, and its docstring says why each rule is there: a pull request is
+# left open -- and named at the top of the email -- when its checks have not
+# passed, its QA run is still going, or it touches a project's locales/.
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Decide and print the email; merge and send nothing'
+        required: false
+        default: false
+        type: boolean
+  schedule:
+    # Monday, after the three QA runs (07:05, 07:25, 07:45 UTC). One that is
+    # still going is reported, not waited for; dispatch this again later.
+    - cron: '0 13 * * 1'
+
+concurrency:
+  group: qa-digest
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write       # merging, when QA_PR_TOKEN is missing
+      pull-requests: write
+      actions: write        # reading the QA runs; dispatching pages.yml
+      checks: read
+      statuses: read
+    env:
+      # Merged as the QA_PR_TOKEN owner, like the pull requests are opened:
+      # a merge made with GITHUB_TOKEN starts no workflow, so pages.yml would
+      # not deploy it. The fallback merges anyway and dispatches the site
+      # build explicitly below.
+      GH_TOKEN: ${{ secrets.QA_PR_TOKEN || github.token }}
+      HAVE_PAT: ${{ secrets.QA_PR_TOKEN != '' }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+
+      # markdown renders the HTML part with the site's own escaping renderer.
+      - run: pip install -r requirements.txt 'markdown~=3.7'
+
+      - name: Merge and send
+        id: digest
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          if [ "$DRY_RUN" = 'true' ]; then
+            python lib/digest.py
+          else
+            python lib/digest.py --merge --send
+          fi
+
+      - name: Publish the site
+        if: steps.digest.outputs.merged == 'true' && env.HAVE_PAT != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref main
