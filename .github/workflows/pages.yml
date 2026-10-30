@@ -1,13 +1,15 @@
 name: Publish reports
 
-# Reports only reach `main` when a QA pull request is merged, so that is
-# when the site should rebuild. Path-filtered so unrelated commits to lib/
-# or state/ do not trigger a deploy.
+# Reports reach `main` when a QA pull request is merged, and the suggestion
+# records behind the landing page when a QA or suggestion pull request is, so
+# that is when the site should rebuild. Path-filtered so unrelated commits to
+# lib/ or state/ do not trigger a deploy.
 on:
   push:
     branches: [main]
     paths:
       - 'reports/**'
+      - '*/pontoon_suggestions/**'
       - 'site/**'
       - '*/config.yaml'
       - '.github/workflows/pages.yml'

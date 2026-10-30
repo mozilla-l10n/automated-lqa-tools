@@ -8,7 +8,8 @@ files that make up the page itself.
 Two decisions are worth knowing about.
 
 **Markdown is rendered here, not in the browser.** The page then needs no
-parser, no CDN and no third-party JavaScript, and a report opens as fast as
+parser and no CDN -- the one third-party script, Chart.js, is vendored and
+only loaded for the landing page's charts -- and a report opens as fast as
 the network can hand over one fragment.
 
 **The source is HTML-escaped before it is rendered.** Reports quote the
@@ -45,8 +46,9 @@ _ROOT = os.path.dirname(_HERE)
 sys.path.insert(0, os.path.join(_ROOT, "lib"))
 
 import config  # noqa: E402
+import bot  # noqa: E402
 
-STATIC = ("index.html", "app.js", "style.css")
+STATIC = ("index.html", "app.js", "charts.js", "style.css")
 
 # Headings that go into a page's table of contents, and how many it needs
 # before one is worth the space. A locale report has about twenty `##`/`###`
@@ -281,6 +283,15 @@ def build(out: str) -> dict:
             manifest["locales"].setdefault(locale, []).append(project.name)
             written += 1
 
+    # The landing page. Fixed name: app.js routes `#/bot` to it.
+    page, chart_data = bot.build(manifest["projects"])
+    with open(os.path.join(out, "r", "bot.html"), "w", encoding="utf-8") as fh:
+        fh.write(page)
+    with open(os.path.join(out, "bot.json"), "w", encoding="utf-8") as fh:
+        json.dump(chart_data, fh, indent=1)
+        fh.write("\n")
+    written += 1
+
     manifest["summaries"].sort()
     manifest["locales"] = {k: sorted(v) for k, v in sorted(manifest["locales"].items())}
 
@@ -290,6 +301,7 @@ def build(out: str) -> dict:
 
     for name in STATIC:
         shutil.copy(os.path.join(_HERE, name), os.path.join(out, name))
+    shutil.copytree(os.path.join(_HERE, "vendor"), os.path.join(out, "vendor"))
 
     # Pages would otherwise hand the tree to Jekyll, which ignores anything
     # starting with an underscore and would rather we did not.

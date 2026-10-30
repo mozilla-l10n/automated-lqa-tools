@@ -24,6 +24,7 @@ if (!fs.existsSync(BASE + 'index.json')) {
 }
 const mk = (tag) => ({tag, children:[], value:'', textContent:'', disabled:false,
   replaceChildren(...c){this.children=c;}, appendChild(c){this.children.push(c);},
+  prepend(c){this.children.unshift(c);},
   addEventListener(n,f){(this.on ||= {})[n]=f;}, get options(){return this.children;}});
 const els = {locale:mk('select'), project:mk('select'), report:mk('main'),
              status:mk('span'), generated:mk('span')};
@@ -68,7 +69,12 @@ console.log('Initial state');
 check(opts(els.locale)[0]==='all', 'locale dropdown leads with "all"');
 check(opts(els.locale).length===covered.length+1,
       `${covered.length} locales plus All (${opts(els.locale).length})`);
-check(location.hash===`#/all/${PROJECTS[0]}`, `defaults to a summary (${location.hash})`);
+check(location.hash==='#/bot', `lands on the suggestion bot page (${location.hash})`);
+check(els.report.innerHTML.includes('Pontoon suggestion bot'), 'and renders it');
+check(els.project.value==='' && !els.project.disabled,
+      'the project dropdown waits for a choice instead of preselecting one');
+els.project.value=PROJECTS[0]; await els.project.on.change(); await new Promise(r=>setTimeout(r,200));
+check(location.hash===`#/all/${PROJECTS[0]}`, `choosing a project opens its summary (${location.hash})`);
 
 console.log('\nRagged coverage');
 if (!FULL || !PARTIAL) {

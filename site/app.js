@@ -6,10 +6,14 @@
  * has Italian -- so the options depend on the locale chosen, and switching
  * to a locale that lacks the current project has to fall back rather than
  * ask for a report that does not exist.
+ *
+ * The landing page, `#/bot`, is the Pontoon suggestion bot's statistics:
+ * one more pre-rendered fragment, outside the locale/project grid.
  */
 "use strict";
 
 const ALL = "all";
+const BOT = "#/bot";
 const els = {
   locale: document.getElementById("locale"),
   project: document.getElementById("project"),
@@ -65,11 +69,16 @@ function href(locale, project) {
 let latestRequest = 0;
 
 async function show(locale, project) {
-  const url = href(locale, project);
+  return load(href(locale, project),
+    `No report for <code>${locale}</code> / <code>${project}</code>. ` +
+    "It may not have been run yet.");
+}
+
+async function load(url, missing) {
   const token = ++latestRequest;
   if (cache.has(url)) {
     els.report.innerHTML = cache.get(url);
-    return;
+    return true;
   }
   els.status.textContent = "Loading…";
   try {
@@ -77,13 +86,13 @@ async function show(locale, project) {
     if (!res.ok) throw new Error(`${res.status}`);
     const body = await res.text();
     cache.set(url, body);
-    if (token !== latestRequest) return;
+    if (token !== latestRequest) return false;
     els.report.innerHTML = body;
+    return true;
   } catch (err) {
     if (token !== latestRequest) return;
-    els.report.innerHTML =
-      `<p class="placeholder">No report for <code>${locale}</code> / ` +
-      `<code>${project}</code>. It may not have been run yet.</p>`;
+    els.report.innerHTML = `<p class="placeholder">${missing}</p>`;
+    return false;
   } finally {
     if (token === latestRequest) els.status.textContent = "";
   }
@@ -100,7 +109,48 @@ function readHash() {
   }
 }
 
+// Chart.js is only needed by the landing page, so it is fetched the first
+// time that page is shown rather than with every report.
+let chartScripts = null;
+
+function script(src) {
+  return new Promise((resolve, reject) => {
+    const el = document.createElement("script");
+    el.src = src;
+    el.onload = resolve;
+    el.onerror = reject;
+    document.head.appendChild(el);
+  });
+}
+
+function drawCharts() {
+  chartScripts ||= script("vendor/chart.umd.min.js").then(() => script("charts.js"));
+  chartScripts
+    .then(() => window.drawBotCharts())
+    .catch(() => {
+      chartScripts = null; // let the next visit try again
+    });
+}
+
+/** The landing page. The dropdowns offer a way into the reports from here,
+ * so the project list gets a placeholder: otherwise its first entry would
+ * already be selected and choosing it would fire no change. */
+function showBot({ push = true } = {}) {
+  els.locale.value = ALL;
+  fillProjects(ALL);
+  els.project.prepend(option("", "Choose a report…"));
+  els.project.value = "";
+  els.project.disabled = false;
+  if (location.hash !== BOT) {
+    (push ? history.pushState : history.replaceState).call(history, null, "", BOT);
+  }
+  document.title = "Pontoon suggestion bot · Localization QA";
+  load("r/bot.html", "The suggestion statistics have not been built.")
+    .then((painted) => { if (painted) drawCharts(); });
+}
+
 function apply(route, { push = true } = {}) {
+  if (!route) return showBot({ push });
   let locale = route && (route.locale === ALL || manifest.locales[route.locale])
     ? route.locale
     : ALL;

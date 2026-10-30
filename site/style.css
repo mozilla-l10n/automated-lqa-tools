@@ -35,6 +35,7 @@ header {
 }
 .bar h1 { font-size: 1rem; margin: 0 auto 0 0; font-weight: 600; }
 .bar h1 a { color: inherit; text-decoration: none; }
+.bar .nav { font-size: .85rem; margin-right: .5rem; }
 .bar label { color: var(--muted); font-size: .85rem; }
 select {
   font: inherit; padding: .3rem .5rem;
@@ -95,6 +96,37 @@ h2:focus, h3:focus { outline: none; }
   background: var(--bg); border: 1px solid var(--line); border-radius: 999px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
 }
+
+/* The suggestion bot page (site/bot.py). Outcome colours are categorical
+   slots 1 and 2 of the dataviz reference palette, validated for colour
+   blindness in both modes; "awaiting review" is the absence of an answer,
+   so it gets neutral grey rather than a hue. */
+:root {
+  --approved: #2a78d6; --rejected: #eb6834; --pending: #b1b1bd;
+  --grid: #e1e0d9; --axis: #c3c2b7; --tick: #6f6e69;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --approved: #3987e5; --rejected: #d95926; --pending: #5b5b66;
+    --grid: #2c2c2a; --axis: #4a4954; --tick: #a3a29b;
+  }
+}
+.muted { color: var(--muted); font-size: .9rem; }
+.tiles {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: .75rem; margin: 1rem 0;
+}
+.tile {
+  display: flex; flex-direction: column; padding: .7rem .9rem;
+  border: 1px solid var(--line); border-radius: 6px;
+}
+.tile .label { color: var(--muted); font-size: .85rem; }
+.tile .figure { font-size: 1.6rem; font-weight: 600; line-height: 1.3; }
+.tile .note { color: var(--muted); font-size: .8rem; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+figure.viz { margin: .5rem 0 1.5rem; position: relative; }
+details { margin: 1rem 0; }
+summary { cursor: pointer; color: var(--accent); }
 
 li { margin: .2rem 0; }
 li > ul { margin: .2rem 0; }
