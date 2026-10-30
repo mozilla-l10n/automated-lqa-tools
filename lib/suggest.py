@@ -264,8 +264,16 @@ def changes(project, worklist: dict, l10n_dir: str) -> tuple[list[dict], list[st
 
 # --- prepare -----------------------------------------------------------------
 
+def _refuse_readonly(project, locale: str) -> None:
+    if project.pontoon_readonly(locale):
+        sys.exit(f"{locale} is read-only in Pontoon for {project.name} "
+                 f"(pontoon.readonly_locales in {project.name}/config.yaml); "
+                 "nothing can be suggested")
+
+
 def cmd_prepare(args) -> int:
     project = config.load(args.project)
+    _refuse_readonly(project, args.locale)
     category = args.category.upper()
     if category not in findings_mod.CATEGORIES:
         sys.exit(f"unknown category {category!r}; one of {', '.join(findings_mod.CATEGORIES)}")
@@ -626,6 +634,7 @@ def _tracker_entry(worklist: dict, c: dict, record: dict, *, server: str,
 
 def cmd_upload(args) -> int:
     project = config.load(args.project)
+    _refuse_readonly(project, args.locale)
     category = args.category.upper()
     wdir = work_dir(project, args.locale, category)
     worklist = _load_worklist(wdir)

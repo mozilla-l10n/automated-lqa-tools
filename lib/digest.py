@@ -45,6 +45,7 @@ import re
 import smtplib
 import subprocess
 import sys
+import time
 from dataclasses import dataclass, field
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -219,6 +220,43 @@ def merge(out: Outcome) -> None:
         out.reasons.append(f"merging failed: {last[-1] if last else 'no output'}")
 
 
+# --- merging one pull request when it is green --------------------------------
+
+# Problems that only mean "not yet": anything else stops the wait.
+_PENDING = ("has not finished", "has not run on it", "is pending")
+
+
+def wait_and_merge(branch: str, head: str, timeout: float = 1500,
+                   every: float = 20, view=None, sleep=time.sleep,
+                   now=time.monotonic) -> str:
+    """Squash-merge ``branch``'s pull request once every check on ``head`` passed.
+
+    For the Pontoon suggestions workflow, which merges its own pull request
+    right after pushing it. Returns "" once merged, or why it was left open:
+    a failed or unapproved check stops at once, the branch moving stops at
+    once, and checks still running past ``timeout`` seconds stop the wait.
+    """
+    view = view or (lambda: _gh_json("pr", "view", branch, "--json",
+                                     "number,state,headRefOid,statusCheckRollup"))
+    deadline = now() + timeout
+    while True:
+        pr = view()
+        if pr["state"] != "OPEN":
+            return f"the pull request is {pr['state'].lower()}"
+        if pr["headRefOid"] != head:
+            return "the branch moved after this run pushed it"
+        problems = check_problems(pr.get("statusCheckRollup"))
+        if not problems:
+            out = Outcome(project=None, pr=pr)
+            merge(out)
+            return "; ".join(out.reasons)
+        if not all(p.endswith(_PENDING) for p in problems):
+            return "; ".join(problems)
+        if now() > deadline:
+            return "timed out waiting for " + "; ".join(problems)
+        sleep(every)
+
+
 # --- the email --------------------------------------------------------------
 
 def _counts(d: dict) -> str:
@@ -359,7 +397,23 @@ def main(argv=None) -> int:
                     help="merge every pull request that needs no person")
     ap.add_argument("--send", action="store_true",
                     help=f"email the digest to {', '.join(RECIPIENTS)}")
+    ap.add_argument("--wait-merge", metavar="BRANCH",
+                    help="instead: merge BRANCH's pull request once its checks "
+                         "on --head pass (the suggestions workflow)")
+    ap.add_argument("--head", help="with --wait-merge, the commit just pushed")
     args = ap.parse_args(argv)
+
+    if args.wait_merge:
+        if not args.head:
+            ap.error("--wait-merge needs --head")
+        why = wait_and_merge(args.wait_merge, args.head)
+        if why:
+            # A warning, not a failure: the pull request is still there for a
+            # person, and what it records was already published.
+            print(f"::warning::{args.wait_merge} left open: {why}")
+        else:
+            print(f"merged {args.wait_merge}")
+        return 0
 
     outcomes = [assess(p) for p in projects()]
     if args.merge:

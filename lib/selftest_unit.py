@@ -424,6 +424,40 @@ def run(suite) -> None:
                                        "context": "x", "state": "FAILURE"}]),
           "and so does any other failing status, not only `checks`")
 
+    suite.section("The suggestions workflow merges only a green, unmoved head")
+    green = {"number": 9, "state": "OPEN", "headRefOid": "abc", "statusCheckRollup": ok}
+    pending = dict(green, statusCheckRollup=[dict(ok[0], status="IN_PROGRESS",
+                                                  conclusion=None)])
+    merged = []
+    real_merge = digest.merge
+    digest.merge = lambda out: merged.append(out.pr["number"])
+    try:
+        views = iter([dict(green, statusCheckRollup=[]), pending, green])
+        why = digest.wait_and_merge("b", "abc", view=lambda: next(views),
+                                    sleep=lambda s: None)
+        check(why == "" and merged == [9],
+              "it waits through checks not yet started or running, then merges")
+        merged.clear()
+        why = digest.wait_and_merge("b", "abc", view=lambda: dict(
+            green, statusCheckRollup=waiting), sleep=lambda s: None)
+        check(not merged and "approve" in why,
+              "a run waiting for approval is not waited on, and not merged")
+        why = digest.wait_and_merge("b", "abc", view=lambda: dict(green, headRefOid="def"),
+                                    sleep=lambda s: None)
+        check(not merged and "moved" in why, "a branch that moved is not merged")
+        clock = iter([0, 0, 10_000])
+        why = digest.wait_and_merge("b", "abc", timeout=60, view=lambda: pending,
+                                    sleep=lambda s: None, now=lambda: next(clock))
+        check(not merged and "timed out" in why, "and the wait has an end")
+    finally:
+        digest.merge = real_merge
+
+    suite.section("A locale read-only in Pontoon is never worked on")
+    check(config.load("firefox").pontoon_readonly("it"),
+          "Italian is read-only for Firefox in Pontoon")
+    check(not config.load("firefox_ios").pontoon_readonly("it"),
+          "but not for iOS, where its suggestions were stored")
+
     suite.section("The digest email cannot be injected into either")
     fx = config.load("firefox")
     bad = Finding(locale="it", file="a.ftl", string_id="s", category="B",

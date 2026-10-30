@@ -125,7 +125,12 @@ systemic_threshold: 25
 # matches the reference path wins; that path is also the resource path. The
 # enterprise files are synced from another repository and localized in a
 # project of their own.
+#
+# `readonly_locales` are read-only in Pontoon, so nothing can be suggested for
+# them: lib/autosuggest.py and lib/suggest.py skip them before doing any work.
+# Pontoon's API does not expose this; an upload is just refused with 403.
 pontoon:
+  readonly_locales: [it, ja]
   projects:
     - slug: firefox-enterprise
       paths: ["*/enterprise/*", "*-enterprise.ftl"]

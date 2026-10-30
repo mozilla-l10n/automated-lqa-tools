@@ -62,6 +62,15 @@ class Project:
     def is_variant(self, locale: str) -> bool:
         return self.variant_of(locale) is not None
 
+    def pontoon_readonly(self, locale: str) -> bool:
+        """Whether the locale is read-only in this project's Pontoon projects.
+
+        Pontoon's API does not say: an upload is simply refused with 403. So
+        it is listed in config, and nothing is asked of the model for a
+        locale whose fixes could never be sent.
+        """
+        return locale in (self.data.get("pontoon") or {}).get("readonly_locales", [])
+
     def check_skipped(self, check: str, locale: str) -> bool:
         ov = self.data.get("check_overrides", {}).get(check, {})
         return locale in ov.get("skip_locales", [])

@@ -198,8 +198,13 @@ commit that `selftest.py` re-pins.
 The exception is `pontoon-suggestions.yml` (`lib/autosuggest.py`), which
 publishes model-made fixes to Pontoon under the `PONTOON_TOKEN` owner's name
 and writes `<project>/pontoon_suggestions/<locale>.json` and `dismissed.txt`
-lines tagged `auto-suggest`, through its own pull request per project. It is
-manual only; never schedule it. Its fixer is a plain API request too, and
+lines tagged `auto-suggest`, through its own pull request per project,
+which it squash-merges itself once every check on it has passed
+(`digest.py --wait-merge`). It skips locales listed in a project's
+`pontoon.readonly_locales` before the model is asked anything: Pontoon's API
+does not report read-only locales, an upload is just refused, and a run that
+could only dismiss would hide findings nobody can fix there. It is manual
+only; never schedule it. Its fixer is a plain API request too, and
 every edit goes through `suggest.changes` before anything is sent.
 
 The QA runs read those suggestions back (`lib/pontoon_review.py`, before the
@@ -215,7 +220,7 @@ reviewer's comment is the reason. Without one, the model infers a reason
 and the line says it is inferred. The tool removes only its own tagged
 lines.
 
-`qa-digest.yml` (`lib/digest.py`) is the only thing that merges. On Monday
+`qa-digest.yml` (`lib/digest.py`) merges the QA pull requests. On Monday
 afternoon it squash-merges each `l10n-qa/<project>` pull request and emails
 `digest.RECIPIENTS` what changed, over SMTP, the way `mozl10n-linter` sends
 its failure emails. It leaves a pull request open, and puts it at the top of

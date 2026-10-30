@@ -239,6 +239,11 @@ def run_locale(project, locale: str, groups: list[str], l10n_dir: str,
     """Fix, verify and (with --submit) send one locale. Returns an error count."""
     today = datetime.date.today().isoformat()
     print(f"\n== {project.name} {locale} ({', '.join(groups)})")
+    if project.pontoon_readonly(locale):
+        # Before the model is asked anything: a run that could only dismiss
+        # would hide findings for a locale nobody can fix through Pontoon.
+        print(f"  read-only in Pontoon ({project.name}/config.yaml); skipped")
+        return 0
     all_findings = findings_mod.load(project, locale)
     open_findings = [f for f in all_findings if f.status in findings_mod.OPEN_STATUSES]
     tpath, record_data = tracker.open_for(project, locale)
@@ -538,8 +543,9 @@ def cmd_summary(args) -> int:
         "and **have already been submitted to Pontoon** as suggestions, where "
         "the locale's reviewers accept or reject them; merging this records "
         f"them in `{project.name}/{tracker.TRACKER_DIR}/`. Findings it judged false "
-        "positives are added to `dismissed.txt` and are hidden **only once this "
-        "is merged**: read each one, and delete any line you disagree with."
+        "positives are added to `dismissed.txt`, and are hidden once this is "
+        "merged. The workflow merges it **as soon as its checks pass**; to "
+        "undo a dismissal afterwards, delete its line."
     )
     head.append("")
 

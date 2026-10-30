@@ -4,9 +4,15 @@ name: Pontoon suggestions
 # suggestions, under the account that owns PONTOON_TOKEN. What it submitted is
 # recorded in <project>/pontoon_suggestions/<locale>.json, and what the model
 # judged a false positive is written to the locale's dismissed.txt. Both reach
-# `main` only through a pull request per project, so a person reviews every
-# dismissal before it hides anything. The suggestions themselves are published
-# when the run happens; Pontoon reviewers accept or reject them there.
+# `main` through a pull request per project, which this workflow squash-merges
+# itself once every check on it has passed; one that fails or needs approving
+# is left open. A dismissal is undone by deleting its line. The suggestions
+# themselves are published when the run happens; Pontoon reviewers accept or
+# reject them there.
+#
+# Locales read-only in Pontoon (`pontoon.readonly_locales` in a project's
+# config.yaml) are skipped in the plan: nothing could be sent for them, and a
+# run that could only dismiss would hide findings nobody can fix there.
 #
 # Manual only. Never scheduled: every run publishes under a person's name.
 on:
@@ -60,7 +66,7 @@ jobs:
         name: Resolve the project and locale lists
         run: |
           python - <<'PY' >> "$GITHUB_OUTPUT"
-          import json, os, yaml
+          import json, os, sys, yaml
           product = os.environ["PRODUCT"]
           requested = os.environ["REQUESTED"].strip()
           projects = (["firefox", "android", "firefox_ios"]
@@ -69,18 +75,26 @@ jobs:
                     else [x.strip() for x in requested.split(",") if x.strip()])
           jobs, seen = [], set()
           for project in projects:
-              known = yaml.safe_load(open(f"{project}/config.yaml"))["locales"]
+              conf = yaml.safe_load(open(f"{project}/config.yaml"))
+              known = conf["locales"]
+              readonly = (conf.get("pontoon") or {}).get("readonly_locales", [])
               for locale in (known if wanted is None else wanted):
-                  if locale in known:
-                      jobs.append({"project": project, "locale": locale})
-                      seen.add(locale)
+                  if locale not in known:
+                      continue
+                  seen.add(locale)
+                  if locale in readonly:
+                      print(f"::notice::{project} {locale}: read-only in "
+                            "Pontoon; skipped", file=sys.stderr)
+                      continue
+                  jobs.append({"project": project, "locale": locale})
           unknown = [x for x in wanted or [] if x not in seen]
           if unknown:
               raise SystemExit(
                   f"not configured for {', '.join(projects)}: {', '.join(unknown)}"
               )
           if not jobs:
-              raise SystemExit("nothing to do")
+              raise SystemExit("nothing to do: every locale requested is "
+                               "read-only in Pontoon or has no project")
           print("jobs=" + json.dumps(jobs))
           print("projects=" + json.dumps(sorted({j["project"] for j in jobs})))
           PY
@@ -288,3 +302,13 @@ jobs:
               --title "Pontoon suggestions: $PROJECT" --body-file /tmp/pr-body.md
           fi
           gh pr view "$BRANCH" --json url --jq .url >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Merge it once its checks pass
+        # The exact commit pushed above, and only when every check on it
+        # passed: the merging token is an admin's, which `main`'s ruleset lets
+        # through, so the checks are tested here (lib/digest.py). A failure,
+        # a run waiting for approval, or a branch that moved leaves the pull
+        # request open with a warning.
+        if: steps.apply.outputs.changed == 'true'
+        timeout-minutes: 30
+        run: python lib/digest.py --wait-merge "$BRANCH" --head "$(git rev-parse HEAD)"
