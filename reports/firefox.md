@@ -2,14 +2,14 @@
 
 - **Generated:** 2026-10-30
 - **Locales tracked:** 29 (29 with recorded state)
-- **Findings:** 9,075 raised, 2,141 fixed (23%), 6,269 open
-- **Closed by a person:** 19 dismissed, 16 suppressed by rule
+- **Findings:** 9,075 raised, 2,147 fixed (23%), 6,259 open
+- **Closed by a person:** 23 dismissed, 16 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
 ## Read these first
 
-### Reads as a deliberate edit (12)
+### Reads as a deliberate edit (10)
 
 The translation makes the product assert something the en-US never said. Nothing here says the change was intended — that cannot be read off the text, which is exactly the problem, because a user cannot read it off either.
 
@@ -33,14 +33,6 @@ The translation makes the product assert something the en-US never said. Nothing
     - "delete stored payment method information" was rendered as "akar használni" (wants to use) instead of "törölni akarja" (wants to delete).
     - Current: `A { -brand-short-name } tárolt fizetésimód-információkat akar használni.`
     - Suggest: `A { -brand-short-name } törölni akarja a tárolt fizetésimód-információkat.`
-- **`it`** `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl`
-    - "help keep your browsing private" rendered as an absolute "impediscono" (prevent), dropping the hedge.
-    - Current: `Le finestre anonime impediscono agli altri utenti di questo dispositivo di vedere la tua attività di navigazione.`
-    - Suggest: `Le finestre anonime aiutano a nascondere la tua attività di navigazione agli altri utenti di questo dispositivo.`
-- **`it`** `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl`
-    - The hedge 'Help' is dropped, so the Italian claims the VPN hides the user's location outright.
-    - Current: `Nascondi la tua posizione mentre navighi.`
-    - Suggest: `Aiuta a nascondere la tua posizione mentre navighi.`
 - **`ja`** `about-private-browsing-spotlight-basics-no-sell-data` — `browser/browser/aboutPrivateBrowsing.ftl`
     - The translation says the browser checks site involvement and does not sell/share the user's data, instead of automatically asking participating sites not to sell or share it.
     - Current: `{ -brand-short-name } はサイトへの関与を自動的に確認し、あなたの個人データを販売または共有しません。`
@@ -124,7 +116,7 @@ The value does not render as intended: a blank string, broken markup, a variable
     - Suggest: `[1] Ez eltávolítja a { -brand-short-name }ba mentett jelszót az összes szinkronizált eszközéről.`
 - _…and 1735 more, in the per-locale reports linked below._
 
-### Wrong content — impact 2 (2333)
+### Wrong content — impact 2 (2329)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/firefox.md`.
 
@@ -144,7 +136,7 @@ Too many to list here; the per-locale counts are in the table below and every on
 | [fy-NL](fy-NL/firefox.md) | 2026-10-26 | incremental | `6c76c457` | 16,570 | 25 | **476** | 133 | 275 | 4 | 0 |
 | [hu](hu/firefox.md) | 2026-10-26 | incremental | `6c76c457` | 16,595 | 0 | **268** | 153 | 6 | 0 | 0 |
 | [id](id/firefox.md) | 2026-10-26 | incremental | `6c76c457` | 13,841 | 2,754 | **283** | 217 | 2 | 0 | 0 |
-| [it](it/firefox.md) | 2026-10-30 | incremental | `3b1e357f` | 16,961 | 4 | **11** | 4 | 68 | 6 | 2 |
+| [it](it/firefox.md) | 2026-10-30 | incremental | `2eb8d2e6` | 16,961 | 4 | **1** | 0 | 74 | 10 | 2 |
 | [ja](ja/firefox.md) | 2026-10-26 | incremental | `6c76c457` | 16,568 | 50 | **139** | 70 | 274 | 0 | 0 |
 | [nl](nl/firefox.md) | 2026-10-26 | incremental | `6c76c457` | 16,570 | 25 | **345** | 126 | 127 | 0 | 0 |
 | [pl](pl/firefox.md) | 2026-10-26 | incremental | `6c76c457` | 16,570 | 25 | **81** | 57 | 168 | 2 | 0 |
