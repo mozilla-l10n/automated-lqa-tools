@@ -91,6 +91,552 @@
    "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=336503",
    "outcome": "approved",
    "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_errorpages_offline_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_errorpages_offline_message"
+    ]
+   },
+   "fids": [
+    "45b415ae40c7"
+   ],
+   "findings": [
+    "\"Press “Try Again”\" is rendered as \"Cliquez sur le bouton\" (click), which is wrong on a touch-based mobile component."
+   ],
+   "source": "{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> }\n{ <ul> }\n{ <li> }Is the device connected to an active network?{ </li> }\n{ <li> }Press “Try Again” to switch to online mode and reload the page.{ </li> }\n{ </ul> }",
+   "original": "<p>Le navigateur est en mode hors connexion et ne peut pas se connecter à l’adresse indiquée.</p>\n<ul>\n<li>L’appareil est-il connecté au réseau ?</li>\n<li>Cliquez sur le bouton « Réessayer » pour revenir en mode connecté et recharger la page.</li>\n</ul>",
+   "text": "<p>Le navigateur est en mode hors connexion et ne peut pas se connecter à l’adresse indiquée.</p>\n<ul>\n<li>L’appareil est-il connecté au réseau ?</li>\n<li>Appuyez sur le bouton « Réessayer » pour revenir en mode connecté et recharger la page.</li>\n</ul>",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/browser/menu/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_menu_highlighted",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/menu/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_menu_highlighted"
+    ]
+   },
+   "fids": [
+    "6789db5b0561"
+   ],
+   "findings": [
+    "\"Highlighted\" (menu item has a highlight) is rendered as \"Sélectionné\" (selected), which conveys a different state."
+   ],
+   "source": "Highlighted",
+   "original": "Sélectionné",
+   "text": "Mis en évidence",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/browser/menu2/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_menu2_highlighted",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/menu2/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_menu2_highlighted"
+    ]
+   },
+   "fids": [
+    "6360b52265db"
+   ],
+   "findings": [
+    "\"Highlighted\" (menu item has a highlight) is rendered as \"Sélectionné\" (selected), which conveys a different state."
+   ],
+   "source": "Highlighted",
+   "original": "Sélectionné",
+   "text": "Mis en évidence",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_permissions_devtools_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_permissions_devtools_description"
+    ]
+   },
+   "fids": [
+    "cbfaccc29503"
+   ],
+   "findings": [
+    "\"Extend developer tools\" is mistranslated as \"Ouvrir les outils de développement\" (open developer tools)."
+   ],
+   "source": "Extend developer tools to access your data in open tabs",
+   "original": "Ouvrir les outils de développement afin d’accéder à vos données dans les onglets ouverts",
+   "text": "Étendre les outils de développement afin d’accéder à vos données dans les onglets ouverts",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_permissions_devtools_description_for_update",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_permissions_devtools_description_for_update"
+    ]
+   },
+   "fids": [
+    "c57a11ebc974"
+   ],
+   "findings": [
+    "\"Extend developer tools\" is mistranslated as \"Ouvrir les outils de développement\" (open developer tools)."
+   ],
+   "source": "Extend developer tools to access your data in open tabs.",
+   "original": "Ouvrir les outils de développement afin d’accéder à vos données dans les onglets ouverts.",
+   "text": "Étendre les outils de développement afin d’accéder à vos données dans les onglets ouverts.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_permissions_extra_domains_description_plural_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_permissions_extra_domains_description_plural_2"
+    ]
+   },
+   "fids": [
+    "0f1c5725037a"
+   ],
+   "findings": [
+    "\"Access your data on other domains\" drops the possessive \"your data\"."
+   ],
+   "source": "Access your data on other domains",
+   "original": "Accéder aux données d’autres domaines",
+   "text": "Accéder à vos données sur d’autres domaines",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_permissions_pkcs11_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_permissions_pkcs11_description"
+    ]
+   },
+   "fids": [
+    "95658937816b"
+   ],
+   "findings": [
+    "\"cryptographic authentication services\" is rendered as \"authentification chiffrée\" (encrypted authentication), changing the meaning."
+   ],
+   "source": "Provide cryptographic authentication services",
+   "original": "Fournir des services d’authentification chiffrée",
+   "text": "Fournir des services d’authentification cryptographique",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_permissions_pkcs11_description_for_update",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_permissions_pkcs11_description_for_update"
+    ]
+   },
+   "fids": [
+    "ee056108adf9"
+   ],
+   "findings": [
+    "\"cryptographic authentication services\" is rendered as \"authentification chiffrée\" (encrypted authentication), changing the meaning."
+   ],
+   "source": "Provide cryptographic authentication services.",
+   "original": "Fournir des services d’authentification chiffrée.",
+   "text": "Fournir des services d’authentification cryptographique.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_prompts_content_description_input_label",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_prompts_content_description_input_label"
+    ]
+   },
+   "fids": [
+    "823f9986d31a"
+   ],
+   "findings": [
+    "\"entering a text input field\" (saisie dans un champ) is rendered as \"création\" (creating)."
+   ],
+   "source": "Label for entering a text input field",
+   "original": "Libellé pour la création d’un champ de saisie de texte",
+   "text": "Libellé pour la saisie dans un champ de texte",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "D",
+   "file": "mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_prompts_suggest_strong_password_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_prompts_suggest_strong_password_2"
+    ]
+   },
+   "fids": [
+    "035f420f5826"
+   ],
+   "findings": [
+    "\"strong password\" is rendered \"mot de passe compliqué\" here but \"mot de passe fort\" in the sibling content description."
+   ],
+   "source": "Use strong password",
+   "original": "Utilisez un mot de passe compliqué",
+   "text": "Utilisez un mot de passe fort",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "D",
+   "file": "mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_prompts_suggest_strong_password_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_prompts_suggest_strong_password_title"
+    ]
+   },
+   "fids": [
+    "2421ef1a7b47"
+   ],
+   "findings": [
+    "\"strong password\" is rendered as « mot de passe compliqué », inconsistent with the other strings in the same dialog which use « fort »/« robuste »."
+   ],
+   "source": "Use strong password?",
+   "original": "Utiliser un mot de passe compliqué ?",
+   "text": "Utiliser un mot de passe fort ?",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/feature/readerview/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_readerview_serif_font",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/readerview/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_readerview_serif_font"
+    ]
+   },
+   "fids": [
+    "90b043a5ee30"
+   ],
+   "findings": [
+    "\"Serif\" font option is translated as \"Empattement\" (the serif itself) instead of \"Avec empattement\"."
+   ],
+   "source": "Serif",
+   "original": "Empattement",
+   "text": "Avec empattement",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "addresses_department",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "addresses_department"
+    ]
+   },
+   "fids": [
+    "613f1cdb7a4d"
+   ],
+   "findings": [
+    "\"Department\" as an administrative division (Nicaragua, Colombia) is translated as \"Service\" (a company department)."
+   ],
+   "source": "Department",
+   "original": "Service",
+   "text": "Département",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preferences_google_lens_availability_caption",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preferences_google_lens_availability_caption"
+    ]
+   },
+   "fids": [
+    "f55df7093fb1"
+   ],
+   "findings": [
+    "\"your active search engine\" is translated as \"moteur de recherche principal\" (default/primary) instead of active/current."
+   ],
+   "source": "Available only when Google is enabled above and is your active search engine while browsing.",
+   "original": "Disponible uniquement si Google est activé ci-dessus et défini comme moteur de recherche principal lors de la navigation.",
+   "text": "Disponible uniquement si Google est activé ci-dessus et défini comme moteur de recherche actif lors de la navigation.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "setup_checklist_task_search_widget_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "setup_checklist_task_search_widget_2"
+    ]
+   },
+   "fids": [
+    "459e27fb4bc2"
+   ],
+   "findings": [
+    "Singular \"search widget\" is rendered as plural \"les widgets de recherche\"."
+   ],
+   "source": "Explore search widget",
+   "original": "Découvrir les widgets de recherche",
+   "text": "Découvrir le widget de recherche",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "share_error_snackbar",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "share_error_snackbar"
+    ]
+   },
+   "fids": [
+    "5c9d0cbc3793"
+   ],
+   "findings": [
+    "The French says sharing this application is impossible, whereas the source means sharing to this app fails."
+   ],
+   "source": "Cannot share to this app",
+   "original": "Impossible de partager cette application",
+   "text": "Impossible de partager avec cette application",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "sync_failed_never_synced_summary",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "sync_failed_never_synced_summary"
+    ]
+   },
+   "fids": [
+    "053cba73f3c0"
+   ],
+   "findings": [
+    "\"Last synced: never\" is rendered as \"Dernier succès : jamais\" (last success), duplicating the wording of sync_failed_summary."
+   ],
+   "source": "Sync failed. Last synced: never",
+   "original": "La synchronisation a échoué. Dernier succès : jamais",
+   "text": "La synchronisation a échoué. Dernière synchronisation : jamais",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "tab_tray_close_tabs_banner_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "tab_tray_close_tabs_banner_message"
+    ]
+   },
+   "fids": [
+    "213ac9e71429"
+   ],
+   "findings": [
+    "\"in the past day, week, or month\" is mistranslated as plural periods \"les derniers jours, semaines ou mois\"."
+   ],
+   "source": "Set open tabs to close automatically that haven’t been viewed in the past day, week, or month.",
+   "original": "Configurez les onglets ouverts pour qu’ils se ferment automatiquement lorsqu’ils n’ont pas été vus depuis les derniers jours, semaines ou mois.",
+   "text": "Configurez les onglets ouverts pour qu’ils se ferment automatiquement lorsqu’ils n’ont pas été vus depuis un jour, une semaine ou un mois.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "translation_option_bottom_sheet_close_content_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "translation_option_bottom_sheet_close_content_description"
+    ]
+   },
+   "fids": [
+    "3a292ca5099a"
+   ],
+   "findings": [
+    "\"Translations sheet\" (bottom sheet / panneau) is rendered as \"onglet\" (tab)."
+   ],
+   "source": "Close Translations sheet",
+   "original": "Fermer l’onglet Traductions",
+   "text": "Fermer le panneau Traductions",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "D",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "translations_bottom_sheet_positive_button_error",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "translations_bottom_sheet_positive_button_error"
+    ]
+   },
+   "fids": [
+    "33353572b49a"
+   ],
+   "findings": [
+    "Button label \"Try again\" is translated as a polite sentence \"Veuillez réessayer\" instead of a concise action label."
+   ],
+   "source": "Try again",
+   "original": "Veuillez réessayer",
+   "text": "Réessayer",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "D",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "webcompat_reporter_send_report",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "webcompat_reporter_send_report"
+    ]
+   },
+   "fids": [
+    "bbec86f0829a"
+   ],
+   "findings": [
+    "\"report\" is translated as \"rapport\" here while the rest of the feature uses \"signalement\"."
+   ],
+   "source": "Send report",
+   "original": "Envoyer le rapport",
+   "text": "Envoyer le signalement",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
   }
  ]
 }
