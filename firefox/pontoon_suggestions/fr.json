@@ -1,0 +1,266 @@
+{
+ "project": "firefox",
+ "locale": "fr",
+ "suggestions": [
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "browser/browser/newtab/newtab.ftl",
+   "string_id": "newtab-custom-widget-crossword-toggle",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/newtab.ftl",
+    "key": [
+     "newtab-custom-widget-crossword-toggle"
+    ]
+   },
+   "fids": [
+    "78d6d9f2e154"
+   ],
+   "findings": [
+    "\"Crossword\" translated as \"Mots fléchés\" (arrow-word puzzle), a different puzzle type."
+   ],
+   "source": "label: Crossword",
+   "original": "Mots fléchés",
+   "text": "Mots croisés",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "D",
+   "file": "browser/browser/translations.ftl",
+   "string_id": "urlbar-translations-button-intro",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/translations.ftl",
+    "key": [
+     "urlbar-translations-button-intro"
+    ]
+   },
+   "fids": [
+    "1dd72bf072d7"
+   ],
+   "findings": [
+    "browser/browser/translations.ftl:12,16 — FR: \"Bêta\" → Beta (comment: must stay untranslated to match the un-localized BETA icon)."
+   ],
+   "source": "tooltiptext: Try private translations in { -brand-shorter-name } - Beta",
+   "original": "Essayez le système de traduction respectueux de la vie privée dans { -brand-shorter-name } - Bêta",
+   "text": "Essayez le système de traduction respectueux de la vie privée dans { -brand-shorter-name } - Beta",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "D",
+   "file": "devtools/client/aboutdebugging.ftl",
+   "string_id": "about-debugging-worker-status-running",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/aboutdebugging.ftl",
+    "key": [
+     "about-debugging-worker-status-running"
+    ]
+   },
+   "fids": [
+    "0305e2e7400b"
+   ],
+   "findings": [
+    "serviceworker-worker-status-running vs about-debugging-worker-status-running — devtools/client/application.ftl:43 vs devtools/client/aboutdebugging.ftl:312 — \"En cours d'exécution\" vs \"Exécution\" for the same \"Running\" status; align."
+   ],
+   "source": "Running",
+   "original": "Exécution",
+   "text": "En cours d’exécution",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "dom/chrome/dom/dom.properties",
+   "string_id": "SpeechRecognitionLangDefaultedToUserLanguageWarning",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/dom/dom.properties",
+    "key": [
+     "SpeechRecognitionLangDefaultedToUserLanguageWarning"
+    ]
+   },
+   "fids": [
+    "2d459c9a5ab3"
+   ],
+   "findings": [
+    "\"user’s preferred language\" is rendered as \"la langue préférée utilisée\", which drops the user and reads awkwardly."
+   ],
+   "source": "SpeechRecognition.lang is unset and this document declares no language, so speech will be recognized in the user’s preferred language. Set SpeechRecognition.lang, or a lang attribute on the document’s root element.",
+   "original": "SpeechRecognition.lang n’est pas défini et ce document ne déclare pas de langue. La voix sera donc reconnue dans la langue préférée utilisée. Définissez SpeechRecognition.lang, ou un attribut lang sur l’élément racine du document.",
+   "text": "SpeechRecognition.lang n’est pas défini et ce document ne déclare pas de langue. La voix sera donc reconnue dans la langue préférée de l’utilisateur. Définissez SpeechRecognition.lang, ou un attribut lang sur l’élément racine du document.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "dom/chrome/security/security.properties",
+   "string_id": "PermissionsPolicyInvalidAllowValue",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/security/security.properties",
+    "key": [
+     "PermissionsPolicyInvalidAllowValue"
+    ]
+   },
+   "fids": [
+    "e94f842739a6"
+   ],
+   "findings": [
+    "\"Skipping\" is dropped, so the message no longer says the unsupported value is ignored."
+   ],
+   "source": "Permissions Policy: Skipping unsupported allow value “%S”.",
+   "original": "Permissions Policy : valeur allow non prise en charge « %S ».",
+   "text": "Permissions Policy : valeur allow non prise en charge ignorée « %S ».",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "dom/chrome/security/security.properties",
+   "string_id": "PermissionsPolicyInvalidEmptyAllowValue",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/security/security.properties",
+    "key": [
+     "PermissionsPolicyInvalidEmptyAllowValue"
+    ]
+   },
+   "fids": [
+    "223ace79acde"
+   ],
+   "findings": [
+    "The verb \"Skipping\" (ignored) is dropped, so the message no longer states the list is being skipped."
+   ],
+   "source": "Permissions Policy: Skipping empty allow list for feature: “%S”.",
+   "original": "Permissions Policy : liste allow vide pour la fonctionnalité « %S ».",
+   "text": "Permissions Policy : liste allow vide ignorée pour la fonctionnalité « %S ».",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "toolkit/toolkit/about/aboutGlean.ftl",
+   "string_id": "about-glean-metrics-table-settings-timelines-vertical-line-x-offset",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutGlean.ftl",
+    "key": [
+     "about-glean-metrics-table-settings-timelines-vertical-line-x-offset"
+    ]
+   },
+   "fids": [
+    "36789604113a"
+   ],
+   "findings": [
+    "toolkit/toolkit/about/aboutGlean.ftl:133,135 — both say \"axe des abscisses\" but EN references the Y-axis → axe des ordonnées; line 135 is also internally contradictory (\"décalage vertical … abscisses\")."
+   ],
+   "source": "Y-axis X offset",
+   "original": "Décalage horizontal de l’axe des abscisses",
+   "text": "Décalage horizontal de l’axe des ordonnées",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "C",
+   "file": "toolkit/toolkit/about/aboutPDF.ftl",
+   "string_id": "about-pdf-feature-organize-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutPDF.ftl",
+    "key": [
+     "about-pdf-feature-organize-description"
+    ]
+   },
+   "fids": [
+    "796dd5a3e744"
+   ],
+   "findings": [
+    "Verb \"exporter\" is in the infinitive instead of the imperative, breaking the list of imperatives."
+   ],
+   "source": "Reorder, remove, merge, and export pages.",
+   "original": "Réorganisez, supprimez, fusionnez et exporter des pages.",
+   "text": "Réorganisez, supprimez, fusionnez et exportez des pages.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "toolkit/toolkit/about/aboutPDF.ftl",
+   "string_id": "about-pdf-features-intro",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutPDF.ftl",
+    "key": [
+     "about-pdf-features-intro"
+    ]
+   },
+   "fids": [
+    "fd707cee9fb4"
+   ],
+   "findings": [
+    "\"right where you browse\" (in the browser itself) is rendered as \"où que vous soyez\" (wherever you are)."
+   ],
+   "source": "Read, mark up, and sign PDFs right where you browse. It’s simple, free, and private.",
+   "original": "Lisez, annotez et signez des fichiers PDF où que vous soyez. C’est simple, gratuit et privé.",
+   "text": "Lisez, annotez et signez des fichiers PDF directement dans votre navigateur. C’est simple, gratuit et privé.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "D",
+   "file": "toolkit/toolkit/global/viewSource.ftl",
+   "string_id": "view-source-invalid-input-text",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/global/viewSource.ftl",
+    "key": [
+     "view-source-invalid-input-text"
+    ]
+   },
+   "fids": [
+    "45201ad05f20"
+   ],
+   "findings": [
+    "\"Line number\" is rendered as \"nombre\" (an amount) with no mention of a line, and the final period is missing."
+   ],
+   "source": "The line number entered is invalid.",
+   "original": "Le nombre spécifié est invalide",
+   "text": "Le numéro de ligne spécifié est invalide.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  }
+ ]
+}
