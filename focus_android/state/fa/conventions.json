@@ -1,8 +1,8 @@
 {
  "_meta": {
   "locale": "fa",
-  "prose_chunks": 2795,
-  "strings": 2795
+  "prose_chunks": 2798,
+  "strings": 2798
  },
  "apostrophe": {
   "straight": 0,
@@ -30,6 +30,6 @@
   "total": 0
  },
  "quotes": {
-  "guillemet": 16
+  "guillemet": 21
  }
 }
