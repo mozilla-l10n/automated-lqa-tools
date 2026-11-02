@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 36 of 2,583 |
+| **Strings reviewed this run** | 21 of 2,604 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for it: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `mozac_feature_listentopage_dropdown_voice_collapsed` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-it/strings.xml` — The 'Collapsed' state of a closed dropdown is translated as 'Raggruppato', which means 'grouped'.
-    - Current: `Raggruppato`
-    - Source: `Collapsed`
-    - Suggest: `Compresso`
-    - The comment says this is what the screen reader announces while the menu is closed. In Italian that state is called 'compresso' (the usual pair is espanso/compresso). 'Raggruppato' means 'grouped' and gives the wrong state.
-- `mozac_feature_listentopage_playback_speed_collapsed` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-it/strings.xml` — 'collapsed' is translated as 'raggruppato' ('grouped') instead of the menu state 'compresso'.
-    - Current: `%1$s, raggruppato`
-    - Source: `%1$s, collapsed`
-    - Suggest: `%1$s, compresso`
-    - The comment says this is the screen reader state while the menu is closed. 'Raggruppato' means 'grouped', not 'collapsed', and it doesn't match the 'Espanso' used for the open state.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -54,7 +45,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,583 |
+| Strings | 2,604 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -83,7 +74,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 22 | **curly-double** |
-| apostrophe | `typographic` 171 | **typographic** |
+| apostrophe | `typographic` 173 | **typographic** |
 | ellipsis | `char` 23 | **char** |
 | dash | `em` 2 | **em** |
 | register | `informal` 91, `formal` 4 | **informal** |

@@ -3988,5 +3988,53 @@
   "suggest": "Browser wurdt blokkearre of net stipe",
   "summary": "The order of the two conditions is swapped relative to the source.",
   "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "Utsteld",
+  "dismissed_because": "",
+  "fid": "651b211262a2",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-02",
+  "impact": 3,
+  "last_seen": "2026-11-02",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The Frisian prefix is 'út' (with acute accent); 'Utsteld' is misspelled.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "03a8011a",
+  "string_id": "wrex_widget_match_postponed",
+  "suggest": "Útsteld",
+  "summary": "Missing acute accent: Frisian 'út' is capitalized 'Út', so the word is 'Útsteld'.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "Underbrutsen",
+  "dismissed_because": "",
+  "fid": "5f0710f93283",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-02",
+  "impact": 3,
+  "last_seen": "2026-11-02",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The Frisian prefix is 'ûnder' (with circumflex); dropping the accent is a spelling error.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "42f56527",
+  "string_id": "wrex_widget_match_suspended",
+  "suggest": "Ûnderbrutsen",
+  "summary": "Missing circumflex: Frisian 'ûnder' is capitalized 'Ûnder', not 'Under'.",
+  "suppressed_by": ""
  }
 ]

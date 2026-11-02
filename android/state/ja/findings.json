@@ -386,6 +386,54 @@
  {
   "category": "B",
   "check": "llm",
+  "current": "%1$s を新しい設定に更新する必要があります。",
+  "dismissed_because": "",
+  "fid": "a80ada0a09cf",
+  "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "ja",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source means the update can't go ahead until new permission settings are approved. The Japanese reads as 'need to update %1$s to new settings', which gets the relationship backwards.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "dc6f3f55",
+  "string_id": "mozac_feature_addons_update_requires_new_settings",
+  "suggest": "%1$s を更新するには新しい設定が必要です。",
+  "summary": "The translation says the extension must be updated to new settings, not that its update needs new settings first.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "この拡張機能を新しい設定に更新する必要があります。",
+  "dismissed_because": "",
+  "fid": "8d0fc918b485",
+  "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "ja",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source says the update needs new settings to be approved. The Japanese says the extension needs to be updated to new settings.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "81adf85b",
+  "string_id": "mozac_feature_addons_update_requires_new_settings_this_extension",
+  "suggest": "この拡張機能を更新するには新しい設定が必要です。",
+  "summary": "The translation says the extension must be updated to new settings, not that its update needs new settings first.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
   "current": "最終確認日:",
   "dismissed_because": "",
   "fid": "0d8dfd7420d7",
@@ -405,6 +453,30 @@
   "string_id": "mozac_feature_addons_updater_dialog_last_attempt",
   "suggest": "前回の試行:",
   "summary": "\"Last attempt:\" is rendered as \"last check date\", adding \"日\" (date) and changing \"attempt\" to \"check\".",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "%1$s を新しい設定に更新する必要があります",
+  "dismissed_because": "",
+  "fid": "fbf96deb333a",
+  "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "ja",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "Same misreading as the banner: the source says updating needs new permissions to be approved, not that the extension is updated to new settings.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "0c209de0",
+  "string_id": "mozac_feature_addons_updater_permissions_dialog_title",
+  "suggest": "%1$s を更新するには新しい設定が必要です",
+  "summary": "The dialog title says the extension must be updated to new settings, not that its update needs new settings first.",
   "suppressed_by": ""
  },
  {

@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 6 of 2,551 |
+| **Strings reviewed this run** | 2 of 2,551 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -46,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 44 |
 | Strings | 2,551 |
-| Missing strings | 32 |
+| Missing strings | 53 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,11 +63,12 @@ _Nothing retired._
 
 ### Completeness
 
-**32 strings** are not translated yet, concentrated in:
+**53 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-uk/strings.xml` — 16
+- `mozilla-mobile/fenix/app/src/main/res/values-uk/strings.xml` — 30
 - `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-uk/strings.xml` — 9
 - `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-uk/strings.xml` — 7
+- `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-uk/strings.xml` — 7
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -92,27 +93,22 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (50)
+## 3. Open findings (49)
 
-> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `nova_onboarding_notifications_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-uk/strings.xml` — "So you're always up to date on how to stay protected" became "so you're always protected", a guarantee of protection the source doesn't make.
     - Current: `щоб завжди бути захищеними`
     - Source: `Discover the latest privacy features in Firefox so you’re always up to date on how to stay protected.`
     - Suggest: `щоб завжди знати, як залишатися захищеними`
     - The source only promises information about how to stay protected. The Ukrainian promises the user will always be protected.
-- `onboarding_redesign_set_default_browser_body` — `mozilla-mobile/fenix/app/src/main/res/values-uk/strings.xml` — The hedge "helps stop" became the absolute "Forbid companies from tracking", and "one tap" was dropped.
-    - Current: `Забороніть компаніям стежити за вашими діями онлайн.`
-    - Source: `One tap helps stop companies spying on your clicks.`
-    - Suggest: `Один дотик допомагає завадити компаніям стежити за вашими діями онлайн.`
-    - The en-US only says one tap helps stop companies spying on clicks. The Ukrainian tells users they can forbid tracking outright, which promises more protection than the product claims.
 
 _Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 23 |
+| 2 | Wrong content (says something other than the English) | 22 |
 | 3 | Degraded language (grammar, spelling, terminology) | 14 |
 | 4 | Cosmetic (typography, spacing) | 13 |
 
@@ -177,11 +173,6 @@ _Nothing in this category._
     - Source: `Discover the latest privacy features in Firefox so you’re always up to date on how to stay protected.`
     - Suggest: `щоб завжди знати, як залишатися захищеними`
     - The source only promises information about how to stay protected. The Ukrainian promises the user will always be protected.
-- `onboarding_redesign_set_default_browser_body` — `mozilla-mobile/fenix/app/src/main/res/values-uk/strings.xml` — The hedge "helps stop" became the absolute "Forbid companies from tracking", and "one tap" was dropped.
-    - Current: `Забороніть компаніям стежити за вашими діями онлайн.`
-    - Source: `One tap helps stop companies spying on your clicks.`
-    - Suggest: `Один дотик допомагає завадити компаніям стежити за вашими діями онлайн.`
-    - The en-US only says one tap helps stop companies spying on clicks. The Ukrainian tells users they can forbid tracking outright, which promises more protection than the product claims.
 - `preference_doh_default_protection_info_4` — `mozilla-mobile/fenix/app/src/main/res/values-uk/strings.xml` — The translation says "VPN policies" are active, but the source means a VPN itself is active.
     - Current: `якщо є активні політики VPN, батьківський контроль або корпоративні політики`
     - Source: `Turn off when VPN, parental control, or enterprise policies are active`

@@ -356,6 +356,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "ani kontextové informácie o nich",
+  "dismissed_because": "",
+  "fid": "36c1af16fd1f",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-02",
+  "impact": 3,
+  "last_seen": "2026-11-02",
+  "locale": "sk",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source says \"pop-ups about them\". \"Kontextové informácie\" means contextual information, not pop-ups. The sibling string ai_controls_block_ai_description translates the same concept as \"kontextové okná\".",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "8112366e",
+  "string_id": "ai_controls_block_dialog_body",
+  "suggest": "ani kontextové okná o nich",
+  "summary": "\"Pop-ups\" is rendered as \"kontextové informácie\" (contextual information) instead of pop-up windows, and doesn't match the term used in the sibling string.",
+  "suppressed_by": ""
+ },
+ {
   "category": "C",
   "check": "llm",
   "current": "Pridanie priečinku",

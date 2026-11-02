@@ -1050,8 +1050,10 @@
   "browser_menu_discover_more_extensions": "5e3dad84 8f9f92e9",
   "browser_menu_edit_bookmark": "0ac7aac6 61e18e4e",
   "browser_menu_extension_plus_icon_content_description_2": "a456d5e5 6d2ec6d6",
+  "browser_menu_extension_review_update_description": "cc87a308 d83d95e6 1a838265",
   "browser_menu_extensions": "c9b6bcbb e1e546f1",
   "browser_menu_extensions_disabled_description": "f2e09b2f 4253329e",
+  "browser_menu_extensions_review_update_description": "3895d139 05882f58 3a7d8c97",
   "browser_menu_find_in_page": "ae346a14 e846cb9a",
   "browser_menu_forward": "c2013054 d22fcf47",
   "browser_menu_homepage": "dcdfcb9b 9e90592c",
@@ -2057,6 +2059,7 @@
   "preferences_marketing_data_learn_more": "592359e3 cbe97fe8",
   "preferences_marketing_data_title": "4ee34135 ad828344",
   "preferences_media_category": "3676481e 205cadbc 2b7bd576",
+  "preferences_menu": "eb059028 1403380f 6b228f1d",
   "preferences_not_take_survey": "491adf57 cc2288ad",
   "preferences_notifications": "5b49332a d0da86d5",
   "preferences_open_links_in_a_private_tab": "b27431c7 94497274",
@@ -2668,6 +2671,16 @@
   "webcompat_reporter_send_report": "16c0d0ad 7f6493b2",
   "webcompat_reporter_success_snackbar_text_2": "f8beed63 b1241ac9",
   "webcompat_reporter_url_error_invalid": "f3a6b5f1 c6233b4e",
-  "widget_picket_description": "2c7a1b59 42c21c47"
+  "widget_picket_description": "2c7a1b59 42c21c47",
+  "wrex_widget_live_game_content_description": "9e8aac14 1c1eb416 e1385996",
+  "wrex_widget_match_delayed": "cd8ad23a 0b0694cd d8bcda65",
+  "wrex_widget_match_live": "2c2df7c3 67dd663e 2c6a24d8",
+  "wrex_widget_match_postponed": "ee9eedac 8fcd388c 562fbc86",
+  "wrex_widget_match_suspended": "1d3526c4 64397c7b 61ba89dd",
+  "wrex_widget_more_options_content_description": "0c205bab 3e880fe9 e6324258",
+  "wrex_widget_page_position_content_description": "26c46272 8f2f0541 be36c1ac",
+  "wrex_widget_remove_widget": "5ecbb657 2e5547bc f64142eb",
+  "wrex_widget_results": "3819c367 ba9addbc c93629a2",
+  "wrex_widget_wallpapers": "80eb5009 2f55ec96 3ebcb6b6"
  }
 }

@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 36 of 2,583 |
+| **Strings reviewed this run** | 21 of 2,604 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for de: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `pdf_tools_signature_adding_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — The loading-indicator description is translated as an action label ("Add signature") instead of a status in progress.
-    - Current: `Signatur hinzufügen`
-    - Source: `Adding signature`
-    - Suggest: `Signatur wird hinzugefügt`
-    - The developer comment says this describes a loading indicator while a signature is being added. The infinitive "Signatur hinzufügen" reads like a button for the screen-reader user, when it should say the action is in progress.
-- `lens_camera_image_load_failed_v2` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — The full stop at the end of the source sentence is missing.
-    - Current: `Diese Grafik konnte nicht geladen werden`
-    - Source: `Couldn’t load this image.`
-    - Suggest: `Diese Grafik konnte nicht geladen werden.`
-    - The source "Couldn’t load this image." ends with a full stop, and this snackbar message is a complete sentence.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -54,7 +45,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,583 |
+| Strings | 2,604 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -85,7 +76,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 | quotes | `german-double` 22, `curly-double` 1, `straight-double` 1 | **german-double** |
 | ellipsis | `char` 22 | **char** |
 | dash | `en` 6 | **en** |
-| register | `formal` 666 | **formal** |
+| register | `formal` 668 | **formal** |
 
 ---
 

@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 36 of 2,583 |
+| **Strings reviewed this run** | 2 of 2,583 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for ko: [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `pdf_tools_signature_adding_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — The loading-indicator description is translated as the action "Add signature" instead of the in-progress state "Adding signature".
-    - Current: `서명 추가`
-    - Source: `Adding signature`
-    - Suggest: `서명 추가 중`
-    - The developer comment says this is read by screen readers for a loading indicator while a signature is being added. "서명 추가" sounds like a button label, not an ongoing operation.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -50,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 44 |
 | Strings | 2,583 |
-| Missing strings | 0 |
+| Missing strings | 21 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -67,7 +63,12 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**21 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — 14
+- `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ko/strings.xml` — 7
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -89,20 +90,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (81)
+## 3. Open findings (80)
 
-> **Reads as a deliberate edit (7).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (6).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `felt_privacy_desc_card_title` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — Dropping 'on this device' widens the claim to leaving no traces anywhere.
     - Current: `흔적 남기지 않기`
     - Source: `Leave no traces on this device`
     - Suggest: `이 기기에 흔적 남기지 않기`
     - The source limits the claim to this device. Private browsing does not hide activity from websites or networks, so the unqualified Korean promises more than the product does.
-- `firefox_labs_website_isolation_description` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — 'Helps protect your data' becomes a flat claim that the feature prevents data leakage between tabs.
-    - Current: `탭 간 데이터 유출을 방지합니다`
-    - Source: `An extra barrier between websites that helps protect your data across tabs. May affect performance, stability, website compatibility, and how browsing history is saved.`
-    - Suggest: `탭 간 데이터를 보호하는 데 도움이 됩니다`
-    - The source hedges ('helps protect'). The Korean asserts that leakage is prevented, a guarantee the product does not make.
 - `nova_onboarding_marketing_body` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — "and that you use it" is rendered as "how you use it" (사용 방법), which claims usage details are shared.
     - Current: `Firefox를 발견한 방법과 사용 방법을`
     - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold. %1$s`
@@ -134,7 +130,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 39 |
+| 2 | Wrong content (says something other than the English) | 38 |
 | 3 | Degraded language (grammar, spelling, terminology) | 34 |
 | 4 | Cosmetic (typography, spacing) | 8 |
 
@@ -244,11 +240,6 @@ _Nothing in this category._
     - Source: `Leave no traces on this device`
     - Suggest: `이 기기에 흔적 남기지 않기`
     - The source limits the claim to this device. Private browsing does not hide activity from websites or networks, so the unqualified Korean promises more than the product does.
-- `firefox_labs_website_isolation_description` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — 'Helps protect your data' becomes a flat claim that the feature prevents data leakage between tabs.
-    - Current: `탭 간 데이터 유출을 방지합니다`
-    - Source: `An extra barrier between websites that helps protect your data across tabs. May affect performance, stability, website compatibility, and how browsing history is saved.`
-    - Suggest: `탭 간 데이터를 보호하는 데 도움이 됩니다`
-    - The source hedges ('helps protect'). The Korean asserts that leakage is prevented, a guarantee the product does not make.
 - `ip_protection_settings_description` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — "more private" is rendered as "더 안전하고" (safer), changing the claimed benefit from privacy to safety.
     - Current: `탐색을 더 안전하고`
     - Source: `Turn VPN on to make your browsing more private and harder to trace.`

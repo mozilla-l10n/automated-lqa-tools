@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 6 of 2,551 |
+| **Strings reviewed this run** | 2 of 2,551 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,13 +22,9 @@ Also for vi: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 _No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `lens_camera_upload_failed` — `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — The translation says no results were found, but the source reports that results could not be retrieved because of an error.
-    - Current: `Không tìm thấy kết quả`
-    - Source: `Couldn’t get results from Google Lens`
-    - Suggest: `Không thể nhận kết quả`
-    - The developer comment says this message appears after a network problem or a Google Lens error. "Không tìm thấy kết quả" means the search ran and found nothing. The user would wrongly think the image has no matches, when in fact the request failed and a retry may work.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -50,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 44 |
 | Strings | 2,551 |
-| Missing strings | 32 |
+| Missing strings | 53 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -67,11 +63,12 @@ _Nothing retired._
 
 ### Completeness
 
-**32 strings** are not translated yet, concentrated in:
+**53 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — 16
+- `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — 30
 - `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-vi/strings.xml` — 9
 - `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-vi/strings.xml` — 7
+- `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-vi/strings.xml` — 7
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 22 of 2,568 |
+| **Strings reviewed this run** | 27 of 2,595 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for nl: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `mozac_menu_customize_reset_to_default` — `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-nl/strings.xml` — Button label drops the action 'reset' and reads only as 'Default values'.
+    - Current: `Standaardwaarden`
+    - Source: `Reset to default`
+    - Suggest: `Standaardwaarden herstellen`
+    - Source 'Reset to default' is a button that resets the menu configuration; 'Standaardwaarden' is just a noun ('default values') and does not convey the reset action.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,568 |
-| Missing strings | 15 |
+| Strings | 2,595 |
+| Missing strings | 9 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,10 +67,11 @@ _Nothing retired._
 
 ### Completeness
 
-**15 strings** are not translated yet, concentrated in:
+**9 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — 8
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-nl/strings.xml` — 7
+- `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-nl/strings.xml` — 5
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-nl/strings.xml` — 2
+- `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — 2
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -82,7 +87,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 | apostrophe | `typographic` 46 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `en` 6 | **en** |
-| register | `formal` 436 | **formal** |
+| register | `formal` 440 | **formal** |
 
 ---
 
@@ -92,13 +97,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (60)
+## 3. Open findings (61)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 32 |
+| 2 | Wrong content (says something other than the English) | 33 |
 | 3 | Degraded language (grammar, spelling, terminology) | 28 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -137,6 +142,11 @@ _Nothing reported._
     - Source: `{ <p> }The browser is configured to use a proxy server, but the proxy could not be found.{ </p> } { <ul> } { <li> }Is the browser’s proxy configuration correct? Check the settings and try again.{ </li> } { <li> }Is the…`
     - Suggest: `Is het apparaat verbonden met een actief netwerk?`
     - Source: “Is the device connected to an active network?”; “computer” is the wrong referent on Android.
+- `mozac_menu_customize_reset_to_default` — `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-nl/strings.xml` — Button label drops the action 'reset' and reads only as 'Default values'.
+    - Current: `Standaardwaarden`
+    - Source: `Reset to default`
+    - Suggest: `Standaardwaarden herstellen`
+    - Source 'Reset to default' is a button that resets the menu configuration; 'Standaardwaarden' is just a noun ('default values') and does not convey the reset action.
 - `bookmark_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Navigate back" is rendered as "Terug bladeren", which means "browse back" rather than navigating back.
     - Current: `Terug bladeren`
     - Source: `Navigate back`

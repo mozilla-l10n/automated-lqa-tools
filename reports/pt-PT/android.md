@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 36 of 2,583 |
+| **Strings reviewed this run** | 23 of 2,604 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for pt-PT: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `browser_menu_extension_review_update_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — "Rever definições a atualizar" means "review settings that are to be updated" rather than "review settings in order to update".
+    - Current: `Rever definições a atualizar`
+    - Source: `Review settings to update`
+    - Suggest: `Rever definições para atualizar`
+    - The source and comment mean the user must review the extension's settings so the update can go ahead. "a atualizar" changes this to settings that are pending update. Other strings in the batch already use "para atualizar" for "to update".
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,7 +49,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,583 |
+| Strings | 2,604 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -85,13 +89,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (73)
+## 3. Open findings (74)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 23 |
+| 2 | Wrong content (says something other than the English) | 24 |
 | 3 | Degraded language (grammar, spelling, terminology) | 40 |
 | 4 | Cosmetic (typography, spacing) | 10 |
 
@@ -161,6 +165,11 @@ _Nothing in this category._
     - Source: `Item Menu for %s`
     - Suggest: `Menu do item %s`
     - The developer comment says this describes the overflow menu for a bookmark item. The pt-PT text reads as "menu item for %s", so screen-reader users hear the wrong control described.
+- `browser_menu_extension_review_update_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — "Rever definições a atualizar" means "review settings that are to be updated" rather than "review settings in order to update".
+    - Current: `Rever definições a atualizar`
+    - Source: `Review settings to update`
+    - Suggest: `Rever definições para atualizar`
+    - The source and comment mean the user must review the extension's settings so the update can go ahead. "a atualizar" changes this to settings that are pending update. Other strings in the batch already use "para atualizar" for "to update".
 - `debug_drawer_addresses_debug_locales_header` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — In this heading, "Debug" describes the locales, but the translation uses it as a verb ("Debug languages to activate").
     - Current: `Depurar idiomas para ativar`
     - Source: `Debug locales to enable`
